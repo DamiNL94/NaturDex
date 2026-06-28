@@ -1,0 +1,18 @@
+# sistema
+.DS_Store
+
+# dependencias
+node_modules/
+
+# entorno local
+.env
+
+# logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# cache
+__pycache__/
