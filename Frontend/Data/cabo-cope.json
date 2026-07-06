@@ -1,0 +1,353 @@
+{
+    "park": {
+        "slug": "cabo-cope-puntas-calnegre",
+        "name": "Cabo Cope y Puntas de Calnegre",
+        "category": "Parque Regional",
+        "region": "Región de Murcia",
+        "province": "Murcia",
+        "municipalities": [
+            "Águilas",
+            "Lorca"
+        ],
+        "center": [
+            37.5016,
+            -1.44925
+        ],
+        "coastlineKm": 17,
+        "summary": "Guía virtual del parque piloto de NaturDex: hábitats, especies, puntos de interés y progreso de visita."
+    },
+    "habitats": [
+        {
+            "id": "posidonia",
+            "code": "1120",
+            "name": "Praderas de Posidonia oceanica",
+            "type": "Marino",
+            "priority": true,
+            "coordinates": [
+                37.4912,
+                -1.4777
+            ],
+            "color": "#1f6f8b",
+            "description": "Praderas submarinas frente al litoral rocoso y las calas, esenciales para la biodiversidad marina y la protección de la costa.",
+            "speciesIds": [
+                1,
+                8
+            ]
+        },
+        {
+            "id": "acantilados",
+            "code": "1240",
+            "name": "Acantilados mediterráneos",
+            "type": "Litoral",
+            "priority": false,
+            "coordinates": [
+                37.4878,
+                -1.4708
+            ],
+            "color": "#8b5e34",
+            "description": "Franja de cantiles, roquedos y vegetación litoral adaptada al salitre, el viento y la insolación.",
+            "speciesIds": [
+                3,
+                8
+            ]
+        },
+        {
+            "id": "matorral-semiarido",
+            "code": "5330",
+            "name": "Matorral semiárido termomediterráneo",
+            "type": "Terrestre",
+            "priority": false,
+            "coordinates": [
+                37.5075,
+                -1.4422
+            ],
+            "color": "#2f6f4e",
+            "description": "Matorral bajo, tomillares y arbustos iberoafricanos característicos del sureste árido.",
+            "speciesIds": [
+                2,
+                4,
+                5,
+                7
+            ]
+        },
+        {
+            "id": "azufaifar",
+            "code": "5220",
+            "name": "Matorrales arborescentes de Ziziphus",
+            "type": "Terrestre",
+            "priority": true,
+            "coordinates": [
+                37.5099,
+                -1.4631
+            ],
+            "color": "#6f8f3a",
+            "description": "Formaciones de azufaifo ligadas a ambientes cálidos y secos, con alto valor como refugio de fauna.",
+            "speciesIds": [
+                2,
+                4,
+                6
+            ]
+        }
+    ],
+    "pointsOfInterest": [
+        {
+            "id": "torre-cope",
+            "name": "Torre de Cope",
+            "type": "Cultural",
+            "coordinates": [
+                37.4219,
+                -1.5035
+            ],
+            "description": "Torre vigía costera catalogada como Bien de Interés Cultural, vinculada a la defensa histórica del litoral."
+        },
+        {
+            "id": "cabo-cope",
+            "name": "Cabo Cope",
+            "type": "Paisajístico",
+            "coordinates": [
+                37.4209,
+                -1.4917
+            ],
+            "description": "Promontorio litoral de referencia visual del parque y mirador natural hacia la bahía."
+        },
+        {
+            "id": "puntas-calnegre",
+            "name": "Puntas de Calnegre",
+            "type": "Paisajístico",
+            "coordinates": [
+                37.5446,
+                -1.3975
+            ],
+            "description": "Núcleo litoral y tramo de costa con playas, gravas, calas y vistas abiertas al Mediterráneo."
+        },
+        {
+            "id": "playa-calnegre",
+            "name": "Playa de Calnegre",
+            "type": "Paisajístico",
+            "coordinates": [
+                37.5389,
+                -1.4037
+            ],
+            "description": "Cala de arena y grava dentro del entorno protegido, útil como punto de acceso a la ruta litoral."
+        },
+        {
+            "id": "cala-blanca",
+            "name": "Cala Blanca",
+            "type": "Geológico",
+            "coordinates": [
+                37.5292,
+                -1.4166
+            ],
+            "description": "Tramo costero de interés geomorfológico por sus materiales claros, barrancos y contacto con el mar."
+        },
+        {
+            "id": "lomo-bas",
+            "name": "Lomo de Bas",
+            "type": "Geológico",
+            "coordinates": [
+                37.4864,
+                -1.4332
+            ],
+            "description": "Relieve interior que ayuda a leer el contraste entre sierras litorales, ramblas y costa semiárida."
+        }
+    ],
+    "species": [
+        {
+            "id": 1,
+            "commonName": "Posidonia oceánica",
+            "scientificName": "Posidonia oceanica",
+            "kingdom": "flora",
+            "group": "Planta marina",
+            "conservationStatus": "Hábitat prioritario UE",
+            "rarityScore": 5,
+            "featured": true,
+            "habitatIds": [
+                "posidonia"
+            ],
+            "coordinates": [
+                37.4912,
+                -1.4777
+            ],
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Posidonia_oceanica.jpg/640px-Posidonia_oceanica.jpg",
+            "description": "Planta marina formadora de praderas submarinas esenciales para la biodiversidad costera y la protección del litoral.",
+            "tips": [
+                "Hojas largas en forma de cinta",
+                "Restos fibrosos acumulados en orilla",
+                "Indicadora de aguas bien conservadas"
+            ]
+        },
+        {
+            "id": 2,
+            "commonName": "Tortuga mora",
+            "scientificName": "Testudo graeca",
+            "kingdom": "fauna",
+            "group": "Reptil",
+            "conservationStatus": "Amenazada",
+            "rarityScore": 5,
+            "featured": true,
+            "habitatIds": [
+                "matorral-semiarido",
+                "azufaifar"
+            ],
+            "coordinates": [
+                37.5075,
+                -1.4422
+            ],
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Testudo_graeca_Lambert_01.jpg/640px-Testudo_graeca_Lambert_01.jpg",
+            "description": "Reptil terrestre emblemático de ambientes áridos, matorrales mediterráneos y zonas abiertas del sureste ibérico.",
+            "tips": [
+                "Caparazón abombado",
+                "Actividad en horas templadas",
+                "No manipular ni desplazar ejemplares"
+            ]
+        },
+        {
+            "id": 3,
+            "commonName": "Águila perdicera",
+            "scientificName": "Aquila fasciata",
+            "kingdom": "fauna",
+            "group": "Ave rapaz",
+            "conservationStatus": "Amenazada",
+            "rarityScore": 5,
+            "featured": true,
+            "habitatIds": [
+                "acantilados",
+                "matorral-semiarido"
+            ],
+            "coordinates": [
+                37.5202,
+                -1.426
+            ],
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Bonellis_Eagle_Aquila_fasciata_by_Dr._Raju_Kasambe_DSCN1709_%2810%29.jpg/640px-Bonellis_Eagle_Aquila_fasciata_by_Dr._Raju_Kasambe_DSCN1709_%2810%29.jpg",
+            "description": "Rapaz mediterránea asociada a sierras, cortados y territorios de campeo amplios.",
+            "tips": [
+                "Silueta grande y vuelo potente",
+                "Observar a distancia",
+                "Evitar molestias en zonas de nidificación"
+            ]
+        },
+        {
+            "id": 4,
+            "commonName": "Camachuelo trompetero",
+            "scientificName": "Bucanetes githagineus",
+            "kingdom": "fauna",
+            "group": "Ave esteparia",
+            "conservationStatus": "Interés especial",
+            "rarityScore": 4,
+            "featured": true,
+            "habitatIds": [
+                "matorral-semiarido",
+                "azufaifar"
+            ],
+            "coordinates": [
+                37.5155,
+                -1.4565
+            ],
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Bucanetes_githagineus_2.jpg/640px-Bucanetes_githagineus_2.jpg",
+            "description": "Ave ligada a paisajes semiáridos, con gran valor como indicador de biodiversidad esteparia.",
+            "tips": [
+                "Pico robusto",
+                "Tonos rosados discretos",
+                "Suele moverse en pequeños grupos"
+            ]
+        },
+        {
+            "id": 5,
+            "commonName": "Sabina negral",
+            "scientificName": "Juniperus phoenicea",
+            "kingdom": "flora",
+            "group": "Arbusto o arbolillo",
+            "conservationStatus": "Interés botánico",
+            "rarityScore": 4,
+            "featured": false,
+            "habitatIds": [
+                "matorral-semiarido",
+                "acantilados"
+            ],
+            "coordinates": [
+                37.5001,
+                -1.4384
+            ],
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Juniperus_phoenicea_001.JPG/640px-Juniperus_phoenicea_001.JPG",
+            "description": "Conífera mediterránea resistente a viento, sequía y suelos pobres, con poblaciones de interés en Cabo Cope.",
+            "tips": [
+                "Hojas escamosas",
+                "Frutos redondeados",
+                "Porte compacto"
+            ]
+        },
+        {
+            "id": 6,
+            "commonName": "Azufaifo",
+            "scientificName": "Ziziphus lotus",
+            "kingdom": "flora",
+            "group": "Arbusto espinoso",
+            "conservationStatus": "Hábitat prioritario UE",
+            "rarityScore": 4,
+            "featured": false,
+            "habitatIds": [
+                "azufaifar"
+            ],
+            "coordinates": [
+                37.5099,
+                -1.4631
+            ],
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Ziziphus_lotus_%28fruit%29.jpg/640px-Ziziphus_lotus_%28fruit%29.jpg",
+            "description": "Arbusto espinoso de ambientes cálidos y secos, importante para refugio de fauna y estructura del paisaje.",
+            "tips": [
+                "Ramas en zigzag",
+                "Espinas visibles",
+                "Porte almohadillado"
+            ]
+        },
+        {
+            "id": 7,
+            "commonName": "Cornical",
+            "scientificName": "Periploca angustifolia",
+            "kingdom": "flora",
+            "group": "Arbusto iberoafricano",
+            "conservationStatus": "Interés botánico",
+            "rarityScore": 3,
+            "featured": false,
+            "habitatIds": [
+                "matorral-semiarido"
+            ],
+            "coordinates": [
+                37.4967,
+                -1.4528
+            ],
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Periploca_angustifolia_kz1.jpg/640px-Periploca_angustifolia_kz1.jpg",
+            "description": "Arbusto característico de zonas cálidas del sureste ibérico, con gran interés biogeográfico.",
+            "tips": [
+                "Hojas estrechas",
+                "Frutos alargados",
+                "Aspecto leñoso y abierto"
+            ]
+        },
+        {
+            "id": 8,
+            "commonName": "Cormorán moñudo",
+            "scientificName": "Gulosus aristotelis",
+            "kingdom": "fauna",
+            "group": "Ave marina",
+            "conservationStatus": "Protección especial",
+            "rarityScore": 4,
+            "featured": false,
+            "habitatIds": [
+                "acantilados",
+                "posidonia"
+            ],
+            "coordinates": [
+                37.487,
+                -1.4714
+            ],
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/European_shag_%28Phalacrocorax_aristotelis%29.jpg/640px-European_shag_%28Phalacrocorax_aristotelis%29.jpg",
+            "description": "Ave marina de costas rocosas, islotes y aguas someras donde busca alimento.",
+            "tips": [
+                "Plumaje oscuro",
+                "Nada bajo sobre el agua",
+                "Penacho visible en época nupcial"
+            ]
+        }
+    ]
+}

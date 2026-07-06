@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NaturDex | Cabo Cope</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="Css/styles.css">
+</head>
+<body>
+    <main class="app-shell">
+        <aside class="sidebar" aria-label="Panel de exploración NaturDex">
+            <section class="park-summary">
+                <p class="eyebrow">NaturDex piloto</p>
+                <h1>Cabo Cope y Puntas de Calnegre</h1>
+                <p id="parkSummary">Guía viva de especies, hábitats y puntos de observación.</p>
+                <div class="summary-grid" aria-label="Resumen del parque">
+                    <div><strong id="speciesCount">0</strong><span>especies</span></div>
+                    <div><strong id="habitatCount">0</strong><span>hábitats</span></div>
+                    <div><strong id="coastlineKm">17 km</strong><span>costa</span></div>
+                </div>
+            </section>
+            <section class="controls" aria-label="Filtros del catálogo">
+                <label for="searchInput">Buscar especie</label>
+                <input id="searchInput" type="search" placeholder="Nombre común o científico">
+                <div class="segmented" role="group" aria-label="Filtrar por tipo">
+                    <button class="filter-button active" data-filter="all" type="button">Todas</button>
+                    <button class="filter-button" data-filter="fauna" type="button">Fauna</button>
+                    <button class="filter-button" data-filter="flora" type="button">Flora</button>
+                </div>
+            </section>
+            <section class="species-panel" aria-label="Catálogo de especies">
+                <div class="section-title"><h2>Catálogo</h2><span id="resultCount">0 resultados</span></div>
+                <div id="speciesList" class="species-list"></div>
+            </section>
+        </aside>
+        <section class="map-stage" aria-label="Mapa y ficha de especie">
+            <div id="map"></div>
+            <article id="detailPanel" class="detail-panel" aria-live="polite"></article>
+        </section>
+    </main>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="Js/app.js"></script>
+</body>
+</html>

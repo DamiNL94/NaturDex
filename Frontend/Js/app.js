@@ -1,22 +1,25 @@
-const map = L.map('map').setView([40.4168, -3.7038], 6);
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap'
-}).addTo(map);
-
-// Cargar parques desde API
-fetch("http://localhost/naturadex/backend/api/parks.php")
-    .then(res => res.json())
-    .then(parques => {
-
-        parques.forEach(parque => {
-
-            const marker = L.marker([parque.latitude, parque.longitude]).addTo(map);
-
-            marker.bindPopup(`
-                <b>${parque.name}</b><br>
-                ${parque.description}
-            `);
-        });
-
-    });
+const state = { data: null, filter: 'all', query: '', selectedId: null, markers: new Map() };
+const map = L.map('map', { zoomControl: false }).setView([37.5016, -1.44925], 12);
+L.control.zoom({ position: 'bottomright' }).addTo(map);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+const speciesList = document.querySelector('#speciesList');
+const detailPanel = document.querySelector('#detailPanel');
+const searchInput = document.querySelector('#searchInput');
+const resultCount = document.querySelector('#resultCount');
+const speciesCount = document.querySelector('#speciesCount');
+const habitatCount = document.querySelector('#habitatCount');
+const coastlineKm = document.querySelector('#coastlineKm');
+const parkSummary = document.querySelector('#parkSummary');
+function escapeHtml(value) { return String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\"/g, '&quot;').replace(/'/g, '&#039;'); }
+function normalize(value) { return String(value ?? '').toLocaleLowerCase('es-ES'); }
+function getFilteredSpecies() { return state.data.species.filter(species => { const matchesFilter = state.filter === 'all' || species.kingdom === state.filter; const text = normalize([species.commonName, species.scientificName, species.group, species.habitat].join(' ')); return matchesFilter && text.includes(normalize(state.query)); }); }
+function renderSummary() { speciesCount.textContent = state.data.species.length; habitatCount.textContent = state.data.habitats.length; coastlineKm.textContent = state.data.park.coastlineKm + ' km'; parkSummary.textContent = state.data.park.summary; }
+function renderSpeciesList() { const species = getFilteredSpecies(); resultCount.textContent = species.length === 1 ? '1 resultado' : species.length + ' resultados'; speciesList.innerHTML = species.map(item => '<button class="species-card ' + (item.id === state.selectedId ? 'active' : '') + '" type="button" data-id="' + item.id + '"><img src="' + escapeHtml(item.image) + '" alt="' + escapeHtml(item.commonName) + '" loading="lazy"><span><span class="card-meta"><span class="badge ' + item.kingdom + '">' + escapeHtml(item.kingdom) + '</span>' + (item.featured ? '<span class="badge alert">prioritaria</span>' : '') + '</span><h3>' + escapeHtml(item.commonName) + '</h3><em>' + escapeHtml(item.scientificName) + '</em></span></button>').join(''); }
+function renderDetail() { const species = state.data.species.find(item => item.id === state.selectedId) ?? state.data.species[0]; if (!species) { detailPanel.innerHTML = ''; return; } detailPanel.innerHTML = '<img src="' + escapeHtml(species.image) + '" alt="' + escapeHtml(species.commonName) + '"><div class="detail-body"><span class="card-meta"><span class="badge ' + species.kingdom + '">' + escapeHtml(species.kingdom) + '</span><span class="badge alert">' + escapeHtml(species.conservationStatus) + '</span></span><h2>' + escapeHtml(species.commonName) + '</h2><em>' + escapeHtml(species.scientificName) + '</em><p>' + escapeHtml(species.description) + '</p><ul class="detail-list">' + species.tips.map(tip => '<li>' + escapeHtml(tip) + '</li>').join('') + '</ul><div class="detail-facts"><div><span>Hábitat</span><strong>' + escapeHtml(species.habitat) + '</strong></div><div><span>Temporada</span><strong>' + escapeHtml(species.seasonality) + '</strong></div><div><span>Grupo</span><strong>' + escapeHtml(species.group) + '</strong></div><div><span>Rareza</span><strong>' + '★'.repeat(species.rarityScore) + '☆'.repeat(5 - species.rarityScore) + '</strong></div></div></div>'; }
+function renderMarkers() { state.markers.forEach(marker => marker.remove()); state.markers.clear(); state.data.species.forEach(species => { const marker = L.marker(species.coordinates).addTo(map); marker.bindPopup('<strong>' + escapeHtml(species.commonName) + '</strong><br>' + escapeHtml(species.scientificName)); marker.on('click', () => selectSpecies(species.id, false)); state.markers.set(species.id, marker); }); }
+function selectSpecies(id, focusMap = true) { state.selectedId = Number(id); renderSpeciesList(); renderDetail(); const species = state.data.species.find(item => item.id === state.selectedId); const marker = state.markers.get(state.selectedId); if (species && marker && focusMap) { map.setView(species.coordinates, 14, { animate: true }); marker.openPopup(); } }
+speciesList.addEventListener('click', event => { const card = event.target.closest('.species-card'); if (card) selectSpecies(card.dataset.id); });
+document.querySelectorAll('.filter-button').forEach(button => { button.addEventListener('click', () => { document.querySelectorAll('.filter-button').forEach(item => item.classList.remove('active')); button.classList.add('active'); state.filter = button.dataset.filter; renderSpeciesList(); }); });
+searchInput.addEventListener('input', event => { state.query = event.target.value; renderSpeciesList(); });
+async function loadData() { const localResponse = await fetch('Data/cabo-cope.json'); state.data = await localResponse.json(); try { const apiResponse = await fetch('../Backend/Api/species.php?park=cabo-cope-puntas-calnegre'); if (apiResponse.ok) { const apiData = await apiResponse.json(); if (apiData?.species?.length) state.data = apiData; } } catch (error) { console.info('Using bundled Cabo Cope demo data.', error); } }
+loadData().then(() => { state.selectedId = state.data.species[0]?.id ?? null; renderSummary(); renderMarkers(); renderSpeciesList(); renderDetail(); map.setView(state.data.park.center, 12); }).catch(error => { detailPanel.innerHTML = '<div class="detail-body"><h2>No se pudieron cargar los datos</h2><p>Revisa que el archivo de datos o la API estén disponibles.</p></div>'; console.error(error); });
