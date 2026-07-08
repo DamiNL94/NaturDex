@@ -14,7 +14,74 @@
             -1.44925
         ],
         "coastlineKm": 17,
-        "summary": "Guía virtual del parque piloto de NaturDex: hábitats, especies, puntos de interés y progreso de visita."
+        "summary": "Guía virtual del parque piloto de NaturDex: hábitats, especies, puntos de interés y progreso de visita.",
+        "boundary": [
+            [
+                37.549,
+                -1.393
+            ],
+            [
+                37.5446,
+                -1.3975
+            ],
+            [
+                37.5389,
+                -1.4037
+            ],
+            [
+                37.5292,
+                -1.4166
+            ],
+            [
+                37.51,
+                -1.435
+            ],
+            [
+                37.487,
+                -1.4714
+            ],
+            [
+                37.4855,
+                -1.475
+            ],
+            [
+                37.4209,
+                -1.4917
+            ],
+            [
+                37.4219,
+                -1.5035
+            ],
+            [
+                37.413,
+                -1.509
+            ],
+            [
+                37.423,
+                -1.485
+            ],
+            [
+                37.456,
+                -1.465
+            ],
+            [
+                37.4864,
+                -1.4332
+            ],
+            [
+                37.505,
+                -1.42
+            ],
+            [
+                37.53,
+                -1.405
+            ],
+            [
+                37.549,
+                -1.393
+            ]
+        ],
+        "boundaryNote": "Límite aproximado guiado por el plano del folleto oficial 'Calnegre y Cabo Cope' (CARM, murcianatural.carm.es) y por referencias textuales y puntos conocidos del parque (Calabardina, Torre de Cope, Cabo Cope, Lomo de Bas, Puntas de Calnegre). Es un trazado deliberadamente provisional: el propio folleto muestra el límite del Parque Regional y el de la Red Natura 2000 como dos líneas distintas, y existen conflictos legales aún no resueltos entre ambas delimitaciones (el LIC ES6200031 Cabo Cope, por ejemplo, ocupa solo 241 ha, muy inferior a la extensión completa del Parque Regional). Se sustituirá por la cartografía oficial y definitiva cuando esté disponible el proyecto QGIS."
     },
     "habitats": [
         {
@@ -48,7 +115,12 @@
             "description": "Franja de cantiles, roquedos y vegetación litoral adaptada al salitre, el viento y la insolación.",
             "speciesIds": [
                 3,
-                8
+                5,
+                8,
+                11,
+                12,
+                22,
+                32
             ]
         },
         {
@@ -65,9 +137,32 @@
             "description": "Matorral bajo, tomillares y arbustos iberoafricanos característicos del sureste árido.",
             "speciesIds": [
                 2,
+                3,
                 4,
                 5,
-                7
+                7,
+                9,
+                10,
+                13,
+                14,
+                15,
+                17,
+                20,
+                21,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42
             ]
         },
         {
@@ -85,7 +180,292 @@
             "speciesIds": [
                 2,
                 4,
-                6
+                6,
+                7,
+                18,
+                39
+            ]
+        },
+        {
+            "id": "banco-arena",
+            "code": "1110",
+            "name": "Bancos de arena cubiertos permanentemente por agua marina poco profunda",
+            "type": "Marino",
+            "priority": false,
+            "coordinates": [
+                37.483,
+                -1.478
+            ],
+            "color": "#3a8fae",
+            "description": "Fondos arenosos someros frente al litoral del parque, hábitat de interés comunitario ligado a la dinámica sedimentaria costera.",
+            "speciesIds": [
+                19
+            ]
+        },
+        {
+            "id": "arrecifes",
+            "code": "1170",
+            "name": "Arrecifes",
+            "type": "Marino",
+            "priority": false,
+            "coordinates": [
+                37.48,
+                -1.474
+            ],
+            "color": "#0f5f78",
+            "description": "Sustratos rocosos submarinos e intermareales que sostienen comunidades bentónicas de gran diversidad.",
+            "speciesIds": [
+                19
+            ]
+        },
+        {
+            "id": "matorral-halofilo",
+            "code": "1420",
+            "name": "Matorrales halófilos mediterráneos y termoatlánticos",
+            "type": "Terrestre",
+            "priority": false,
+            "coordinates": [
+                37.473,
+                -1.481
+            ],
+            "color": "#7a6a3a",
+            "description": "Vegetación adaptada a los suelos salinos de la marina de Cope, con especies como el albardín, el cambrón y la salsola.",
+            "speciesIds": [
+                23,
+                26,
+                27,
+                28,
+                29,
+                32,
+                34
+            ]
+        },
+        {
+            "id": "matorral-halonitrofilo",
+            "code": "1430",
+            "name": "Matorrales halo-nitrófilos",
+            "type": "Terrestre",
+            "priority": false,
+            "coordinates": [
+                37.478,
+                -1.469
+            ],
+            "color": "#9a7b3f",
+            "description": "Comunidades arbustivas de suelos salinos alterados y bordes de caminos litorales.",
+            "speciesIds": [
+                22,
+                23,
+                24,
+                25
+            ]
+        },
+        {
+            "id": "galeria-ribera",
+            "code": "92D0",
+            "name": "Galerías y matorrales ribereños termomediterráneos",
+            "type": "Terrestre",
+            "priority": false,
+            "coordinates": [
+                37.499,
+                -1.461
+            ],
+            "color": "#3f7a5a",
+            "description": "Vegetación ligada a ramblas y cursos de agua estacionales que atraviesan el parque.",
+            "speciesIds": [
+                16,
+                34,
+                44
+            ]
+        },
+        {
+            "id": "veg-anual-desechos-marinos",
+            "code": "1210",
+            "name": "Vegetación anual sobre desechos marinos acumulados",
+            "type": "Litoral",
+            "priority": false,
+            "rarity": "Muy raro",
+            "coordinates": [
+                37.539,
+                -1.404
+            ],
+            "color": "#c9a66b",
+            "description": "Comunidades pioneras de plantas anuales (quenopodiáceas nitrófilas) que colonizan la línea de acumulación de restos marinos (posidonia, algas) en las playas del parque.",
+            "speciesIds": []
+        },
+        {
+            "id": "estepas-salinas-albardinal",
+            "code": "1510",
+            "name": "Estepas salinas mediterráneas (Limonietalia)",
+            "type": "Terrestre",
+            "priority": true,
+            "rarity": "Raro",
+            "coordinates": [
+                37.4735,
+                -1.4845
+            ],
+            "color": "#b3577a",
+            "description": "Pastizal de albardín (Lygeum spartum) sobre suelos salinos profundos de la marina de Cope, asociado a siemprevivas del género Limonium; asociación descrita como Limonio insignis-Lygeetum sparti. Hábitat prioritario de la Directiva 92/43/CEE.",
+            "speciesIds": [
+                23,
+                32
+            ]
+        },
+        {
+            "id": "dunas-embrionarias",
+            "code": "2110",
+            "name": "Dunas móviles embrionarias",
+            "type": "Litoral",
+            "priority": false,
+            "rarity": "Muy raro",
+            "coordinates": [
+                37.541,
+                -1.4008
+            ],
+            "color": "#e0c56a",
+            "description": "Primer cordón dunar en formación activa junto a la orilla, con vegetación psamófila pionera que fija arena de forma incipiente.",
+            "speciesIds": [
+                43
+            ]
+        },
+        {
+            "id": "dunas-malcomietalia",
+            "code": "2230",
+            "name": "Dunas con céspedes del Malcomietalia",
+            "type": "Litoral",
+            "priority": false,
+            "rarity": "Muy raro",
+            "coordinates": [
+                37.5405,
+                -1.401
+            ],
+            "color": "#d9b97e",
+            "description": "Céspedes anuales de pequeño porte sobre arenas dunares estabilizadas, propios de claros entre matorral dunar.",
+            "speciesIds": []
+        },
+        {
+            "id": "dunas-brachypodietalia",
+            "code": "2240",
+            "name": "Dunas con céspedes del Brachypodietalia y de plantas anuales",
+            "type": "Litoral",
+            "priority": false,
+            "rarity": "Sin determinar",
+            "coordinates": [
+                37.54,
+                -1.4015
+            ],
+            "color": "#cdae7a",
+            "description": "Pastizales dunares algo más consolidados, con gramíneas vivaces y anuales sobre arenas semifijas del litoral del parque.",
+            "speciesIds": []
+        },
+        {
+            "id": "rios-glaucium",
+            "code": "3250",
+            "name": "Ríos mediterráneos de caudal permanente con Glaucium flavum",
+            "type": "Terrestre",
+            "priority": false,
+            "rarity": "Muy raro",
+            "coordinates": [
+                37.4925,
+                -1.4575
+            ],
+            "color": "#6f9270",
+            "description": "Cauces y ramblas con lámina de agua permanente o semipermanente, colonizados por la amapola marina (Glaucium flavum) y vegetación de gravas fluviales.",
+            "speciesIds": []
+        },
+        {
+            "id": "rios-paspalo-agrostidion",
+            "code": "3280",
+            "name": "Ríos mediterráneos de caudal permanente del Paspalo-Agrostidion, con cortinas de Salix y Populus",
+            "type": "Terrestre",
+            "priority": false,
+            "rarity": "Muy raro",
+            "coordinates": [
+                37.495,
+                -1.4595
+            ],
+            "color": "#557a5c",
+            "description": "Vegetación herbácea higrófila de márgenes de rambla con caudal permanente, en contacto con galerías arboladas de sauces y álamos donde estas se conservan.",
+            "speciesIds": []
+        },
+        {
+            "id": "sabinar-juniperus",
+            "code": "5210",
+            "name": "Matorrales arborescentes de Juniperus spp.",
+            "type": "Terrestre",
+            "priority": false,
+            "rarity": "No raro",
+            "coordinates": [
+                37.5001,
+                -1.4384
+            ],
+            "color": "#3f6b4a",
+            "description": "Formación arborescente de sabina negral (Juniperus phoenicea), Chamaeropo humilis-Juniperetum phoeniceae, sobre laderas y cerros del interior del parque.",
+            "speciesIds": [
+                5,
+                20,
+                40
+            ]
+        },
+        {
+            "id": "prados-alysso-sedion",
+            "code": "6110",
+            "name": "Prados calcáreos cársticos o basófilos del Alysso-Sedion albi",
+            "type": "Terrestre",
+            "priority": true,
+            "rarity": "Raro",
+            "coordinates": [
+                37.5035,
+                -1.446
+            ],
+            "color": "#9c8a5e",
+            "description": "Pastizales abiertos de terófitos y crasuláceas sobre rellanos y suelos esqueléticos calcáreos de los cerros carbonatados. Hábitat prioritario de la Directiva 92/43/CEE.",
+            "speciesIds": []
+        },
+        {
+            "id": "subestepa-thero-brachypodietea",
+            "code": "6220",
+            "name": "Zonas subestépicas de gramíneas y anuales del Thero-Brachypodietea",
+            "type": "Terrestre",
+            "priority": true,
+            "rarity": "No raro",
+            "coordinates": [
+                37.508,
+                -1.44
+            ],
+            "color": "#b0a066",
+            "description": "Pastizales terofíticos mediterráneos sobre suelos oligotróficos, con gramíneas anuales y matorral disperso; hábitat prioritario de la Directiva 92/43/CEE muy extendido en los llanos y laderas abiertas del parque.",
+            "speciesIds": []
+        },
+        {
+            "id": "turberas-cladium",
+            "code": "7210",
+            "name": "Turberas calcáreas de Cladium mariscus",
+            "type": "Terrestre",
+            "priority": false,
+            "rarity": "Muy raro",
+            "coordinates": [
+                37.4995,
+                -1.462
+            ],
+            "color": "#4a7a6a",
+            "description": "Formación higrófila puntual dominada por el mansiego (Cladium mariscus) en puntos encharcados o de surgencia junto a ramblas del parque.",
+            "speciesIds": []
+        },
+        {
+            "id": "roquedos-casmofiticos",
+            "code": "8210",
+            "name": "Pendientes rocosas calcícolas con vegetación casmofítica",
+            "type": "Terrestre",
+            "priority": false,
+            "rarity": "Raro",
+            "coordinates": [
+                37.4945,
+                -1.4595
+            ],
+            "color": "#8a7a6a",
+            "description": "Roquedos y cortados calcáreos con vegetación fisurícola especializada; asociación Cosentinio bivalentis-Teucrietum freynii, con el teucrio de Freyn (Teucrium freynii) como especie característica.",
+            "speciesIds": [
+                35
             ]
         }
     ],
@@ -153,36 +533,24 @@
     ],
     "species": [
         {
-            "id": 1,
-            "commonName": "Posidonia oceánica",
-            "scientificName": "Posidonia oceanica",
-            "kingdom": "flora",
-            "group": "Planta marina",
-            "conservationStatus": "Hábitat prioritario UE",
-            "rarityScore": 5,
-            "featured": true,
-            "habitatIds": [
-                "posidonia"
-            ],
-            "coordinates": [
-                37.4912,
-                -1.4777
-            ],
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Posidonia_oceanica.jpg/640px-Posidonia_oceanica.jpg",
-            "description": "Planta marina formadora de praderas submarinas esenciales para la biodiversidad costera y la protección del litoral.",
-            "tips": [
-                "Hojas largas en forma de cinta",
-                "Restos fibrosos acumulados en orilla",
-                "Indicadora de aguas bien conservadas"
-            ]
-        },
-        {
             "id": 2,
             "commonName": "Tortuga mora",
             "scientificName": "Testudo graeca",
             "kingdom": "fauna",
             "group": "Reptil",
+            "taxonomy": {
+                "kingdom": "Animalia",
+                "phylum": "Chordata",
+                "class": "Reptilia",
+                "order": "Testudines",
+                "family": "Testudinidae",
+                "genus": "Testudo"
+            },
+            "habitat": "Matorral termomediterráneo semiárido",
             "conservationStatus": "Amenazada",
+            "iucnGlobal": "VU A1cd (evaluación IUCN de 1996; pendiente de reevaluación global reciente)",
+            "spainStatus": "Catálogo Español de Especies Amenazadas / LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+            "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: En peligro de extinción",
             "rarityScore": 5,
             "featured": true,
             "habitatIds": [
@@ -199,7 +567,10 @@
                 "Caparazón abombado",
                 "Actividad en horas templadas",
                 "No manipular ni desplazar ejemplares"
-            ]
+            ],
+            "seasonality": "Primavera y otoño",
+            "source": "Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre",
+            "reviewNote": null
         },
         {
             "id": 3,
@@ -207,7 +578,19 @@
             "scientificName": "Aquila fasciata",
             "kingdom": "fauna",
             "group": "Ave rapaz",
+            "taxonomy": {
+                "kingdom": "Animalia",
+                "phylum": "Chordata",
+                "class": "Aves",
+                "order": "Accipitriformes",
+                "family": "Accipitridae",
+                "genus": "Aquila"
+            },
+            "habitat": "Cortados y áreas abiertas",
             "conservationStatus": "Amenazada",
+            "iucnGlobal": "LC (población global amplia en Asia y África pese al declive europeo)",
+            "spainStatus": "Catálogo Español de Especies Amenazadas: Vulnerable; Libro Rojo de las Aves de España (SEO/BirdLife, 2004/2021)",
+            "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: En peligro de extinción (población reproductora muy reducida)",
             "rarityScore": 5,
             "featured": true,
             "habitatIds": [
@@ -224,7 +607,10 @@
                 "Silueta grande y vuelo potente",
                 "Observar a distancia",
                 "Evitar molestias en zonas de nidificación"
-            ]
+            ],
+            "seasonality": "Todo el año",
+            "source": "Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre; Libro Rojo de las Aves de España, SEO/BirdLife 2004",
+            "reviewNote": "Estatus regional (Murcia) estimado por tamaño poblacional conocido; confirmar categoría exacta en el catálogo autonómico vigente."
         },
         {
             "id": 4,
@@ -232,7 +618,19 @@
             "scientificName": "Bucanetes githagineus",
             "kingdom": "fauna",
             "group": "Ave esteparia",
+            "taxonomy": {
+                "kingdom": "Animalia",
+                "phylum": "Chordata",
+                "class": "Aves",
+                "order": "Passeriformes",
+                "family": "Fringillidae",
+                "genus": "Bucanetes"
+            },
+            "habitat": "Paisaje árido y matorral bajo",
             "conservationStatus": "Interés especial",
+            "iucnGlobal": "LC",
+            "spainStatus": "Catalogado como Vulnerable en el Libro Rojo de las Aves de España (población ibérica escasa y localizada)",
+            "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
             "rarityScore": 4,
             "featured": true,
             "habitatIds": [
@@ -249,80 +647,10 @@
                 "Pico robusto",
                 "Tonos rosados discretos",
                 "Suele moverse en pequeños grupos"
-            ]
-        },
-        {
-            "id": 5,
-            "commonName": "Sabina negral",
-            "scientificName": "Juniperus phoenicea",
-            "kingdom": "flora",
-            "group": "Arbusto o arbolillo",
-            "conservationStatus": "Interés botánico",
-            "rarityScore": 4,
-            "featured": false,
-            "habitatIds": [
-                "matorral-semiarido",
-                "acantilados"
             ],
-            "coordinates": [
-                37.5001,
-                -1.4384
-            ],
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Juniperus_phoenicea_001.JPG/640px-Juniperus_phoenicea_001.JPG",
-            "description": "Conífera mediterránea resistente a viento, sequía y suelos pobres, con poblaciones de interés en Cabo Cope.",
-            "tips": [
-                "Hojas escamosas",
-                "Frutos redondeados",
-                "Porte compacto"
-            ]
-        },
-        {
-            "id": 6,
-            "commonName": "Azufaifo",
-            "scientificName": "Ziziphus lotus",
-            "kingdom": "flora",
-            "group": "Arbusto espinoso",
-            "conservationStatus": "Hábitat prioritario UE",
-            "rarityScore": 4,
-            "featured": false,
-            "habitatIds": [
-                "azufaifar"
-            ],
-            "coordinates": [
-                37.5099,
-                -1.4631
-            ],
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Ziziphus_lotus_%28fruit%29.jpg/640px-Ziziphus_lotus_%28fruit%29.jpg",
-            "description": "Arbusto espinoso de ambientes cálidos y secos, importante para refugio de fauna y estructura del paisaje.",
-            "tips": [
-                "Ramas en zigzag",
-                "Espinas visibles",
-                "Porte almohadillado"
-            ]
-        },
-        {
-            "id": 7,
-            "commonName": "Cornical",
-            "scientificName": "Periploca angustifolia",
-            "kingdom": "flora",
-            "group": "Arbusto iberoafricano",
-            "conservationStatus": "Interés botánico",
-            "rarityScore": 3,
-            "featured": false,
-            "habitatIds": [
-                "matorral-semiarido"
-            ],
-            "coordinates": [
-                37.4967,
-                -1.4528
-            ],
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Periploca_angustifolia_kz1.jpg/640px-Periploca_angustifolia_kz1.jpg",
-            "description": "Arbusto característico de zonas cálidas del sureste ibérico, con gran interés biogeográfico.",
-            "tips": [
-                "Hojas estrechas",
-                "Frutos alargados",
-                "Aspecto leñoso y abierto"
-            ]
+            "seasonality": "Primavera y verano",
+            "source": "Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre",
+            "reviewNote": null
         },
         {
             "id": 8,
@@ -330,7 +658,19 @@
             "scientificName": "Gulosus aristotelis",
             "kingdom": "fauna",
             "group": "Ave marina",
+            "taxonomy": {
+                "kingdom": "Animalia",
+                "phylum": "Chordata",
+                "class": "Aves",
+                "order": "Suliformes",
+                "family": "Phalacrocoracidae",
+                "genus": "Gulosus"
+            },
+            "habitat": "Litoral rocoso",
             "conservationStatus": "Protección especial",
+            "iucnGlobal": "LC",
+            "spainStatus": "Subespecie mediterránea (desmarestii) catalogada Vulnerable en el Catálogo Español de Especies Amenazadas",
+            "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
             "rarityScore": 4,
             "featured": false,
             "habitatIds": [
@@ -347,7 +687,1587 @@
                 "Plumaje oscuro",
                 "Nada bajo sobre el agua",
                 "Penacho visible en época nupcial"
-            ]
+            ],
+            "seasonality": "Todo el año",
+            "source": "Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre",
+            "reviewNote": "Reclasificado taxonómicamente de Phalacrocorax aristotelis a Gulosus aristotelis; confirmar si la población litoral pertenece a la subespecie desmarestii."
+        },
+        {
+            "id": 9,
+            "commonName": "Lagarto ocelado",
+            "scientificName": "Timon lepidus",
+            "kingdom": "fauna",
+            "group": "Reptil",
+            "taxonomy": {
+                "kingdom": "Animalia",
+                "phylum": "Chordata",
+                "class": "Reptilia",
+                "order": "Squamata",
+                "family": "Lacertidae",
+                "genus": "Timon"
+            },
+            "habitat": "Matorral termomediterráneo semiárido",
+            "conservationStatus": "Protección especial",
+            "iucnGlobal": "NT (Casi Amenazado, evaluación de 2009 por declive poblacional en parte de su área)",
+            "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+            "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+            "rarityScore": 3,
+            "featured": false,
+            "habitatIds": [
+                "matorral-semiarido"
+            ],
+            "coordinates": [
+                37.5041,
+                -1.4489
+            ],
+            "image": "",
+            "description": "Uno de los mayores lagartos de Europa, ligado a roquedos soleados y matorral mediterráneo bien conservado.",
+            "tips": [
+                "Coloración verde con ocelos azules",
+                "Adultos de gran tamaño (hasta 60 cm)",
+                "Muy territorial y termorregulador"
+            ],
+            "seasonality": "Primavera a otoño",
+            "source": "Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre",
+            "reviewNote": null
+        },
+        {
+            "id": 10,
+            "commonName": "Eslizón ibérico",
+            "scientificName": "Chalcides bedriagai",
+            "kingdom": "fauna",
+            "group": "Reptil",
+            "taxonomy": {
+                "kingdom": "Animalia",
+                "phylum": "Chordata",
+                "class": "Reptilia",
+                "order": "Squamata",
+                "family": "Scincidae",
+                "genus": "Chalcides"
+            },
+            "habitat": "Matorral termomediterráneo semiárido",
+            "conservationStatus": "Protección especial",
+            "iucnGlobal": "LC",
+            "spainStatus": "LESRPE",
+            "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+            "rarityScore": 4,
+            "featured": false,
+            "habitatIds": [
+                "matorral-semiarido"
+            ],
+            "coordinates": [
+                37.5058,
+                -1.4448
+            ],
+            "image": "",
+            "description": "Reptil endémico ibérico de hábitos fosoriales, ligado a suelos sueltos y pedregosos con vegetación rala.",
+            "tips": [
+                "Cuerpo alargado y patas muy cortas",
+                "Se desplaza reptando entre hojarasca y piedras",
+                "Difícil de observar, muy escurridizo"
+            ],
+            "seasonality": "Primavera y verano",
+            "source": "Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre",
+            "reviewNote": null
+        },
+        {
+            "id": 11,
+            "commonName": "Búho real",
+            "scientificName": "Bubo bubo",
+            "kingdom": "fauna",
+            "group": "Ave rapaz nocturna",
+            "taxonomy": {
+                "kingdom": "Animalia",
+                "phylum": "Chordata",
+                "class": "Aves",
+                "order": "Strigiformes",
+                "family": "Strigidae",
+                "genus": "Bubo"
+            },
+            "habitat": "Cortados y áreas abiertas",
+            "conservationStatus": "Protección especial",
+            "iucnGlobal": "LC",
+            "spainStatus": "LESRPE",
+            "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+            "rarityScore": 4,
+            "featured": false,
+            "habitatIds": [
+                "acantilados"
+            ],
+            "coordinates": [
+                37.5188,
+                -1.4275
+            ],
+            "image": "",
+            "description": "Rapaz nocturna de gran tamaño que nidifica en cortados y roquedos del parque.",
+            "tips": [
+                "Gran tamaño y penachos auriculares",
+                "Actividad crepuscular y nocturna",
+                "Ulular grave audible al atardecer"
+            ],
+            "seasonality": "Todo el año",
+            "source": "Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre",
+            "reviewNote": null
+        },
+        {
+            "id": 12,
+            "commonName": "Halcón peregrino",
+            "scientificName": "Falco peregrinus",
+            "kingdom": "fauna",
+            "group": "Ave rapaz",
+            "taxonomy": {
+                "kingdom": "Animalia",
+                "phylum": "Chordata",
+                "class": "Aves",
+                "order": "Falconiformes",
+                "family": "Falconidae",
+                "genus": "Falco"
+            },
+            "habitat": "Cortados y áreas abiertas",
+            "conservationStatus": "Protección especial",
+            "iucnGlobal": "LC",
+            "spainStatus": "LESRPE",
+            "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+            "rarityScore": 4,
+            "featured": false,
+            "habitatIds": [
+                "acantilados"
+            ],
+            "coordinates": [
+                37.521,
+                -1.4245
+            ],
+            "image": "",
+            "description": "Rapaz de vuelo veloz asociada a cortados costeros, donde caza aves en pleno vuelo.",
+            "tips": [
+                "Vuelo rápido en picado",
+                "Silueta compacta de alas puntiagudas",
+                "Nidifica en repisas de acantilado"
+            ],
+            "seasonality": "Todo el año",
+            "source": "Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre",
+            "reviewNote": null
+        },
+        {
+            "id": 13,
+            "commonName": "Alcaraván",
+            "scientificName": "Burhinus oedicnemus",
+            "kingdom": "fauna",
+            "group": "Ave esteparia",
+            "taxonomy": {
+                "kingdom": "Animalia",
+                "phylum": "Chordata",
+                "class": "Aves",
+                "order": "Charadriiformes",
+                "family": "Burhinidae",
+                "genus": "Burhinus"
+            },
+            "habitat": "Paisaje árido y matorral bajo",
+            "conservationStatus": "Interés especial",
+            "iucnGlobal": "LC",
+            "spainStatus": "LESRPE",
+            "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+            "rarityScore": 3,
+            "featured": false,
+            "habitatIds": [
+                "matorral-semiarido"
+            ],
+            "coordinates": [
+                37.5162,
+                -1.451
+            ],
+            "image": "",
+            "description": "Ave de hábitos crepusculares ligada a los llanos abiertos de la marina de Cope.",
+            "tips": [
+                "Ojos grandes y amarillos",
+                "Canto nocturno característico",
+                "Camuflaje excelente en suelo pedregoso"
+            ],
+            "seasonality": "Primavera y verano",
+            "source": "Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre",
+            "reviewNote": null
+        },
+        {
+            "id": 14,
+            "commonName": "Curruca cabecinegra",
+            "scientificName": "Curruca melanocephala",
+            "kingdom": "fauna",
+            "group": "Ave",
+            "taxonomy": {
+                "kingdom": "Animalia",
+                "phylum": "Chordata",
+                "class": "Aves",
+                "order": "Passeriformes",
+                "family": "Sylviidae",
+                "genus": "Curruca"
+            },
+            "habitat": "Matorral litoral y laderas secas",
+            "conservationStatus": "Interés especial",
+            "iucnGlobal": "LC",
+            "spainStatus": "No catalogada (especie común y estable en España)",
+            "murciaStatus": "No catalogada regionalmente",
+            "rarityScore": 2,
+            "featured": false,
+            "habitatIds": [
+                "matorral-semiarido"
+            ],
+            "coordinates": [
+                37.502,
+                -1.439
+            ],
+            "image": "",
+            "description": "Pequeña ave residente muy común en los matorrales mediterráneos del parque.",
+            "tips": [
+                "Capirote negro contrastado",
+                "Canto parlanchín y áspero",
+                "Se mueve entre el matorral bajo"
+            ],
+            "seasonality": "Todo el año",
+            "source": "Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre",
+            "reviewNote": "Reclasificada taxonómicamente del género Sylvia al género Curruca (Sylvia melanocephala = Curruca melanocephala); se mantiene el nombre científico tradicional entre paréntesis en caso de duda."
+        },
+        {
+            "id": 15,
+            "commonName": "Cogujada común",
+            "scientificName": "Galerida cristata",
+            "kingdom": "fauna",
+            "group": "Ave",
+            "taxonomy": {
+                "kingdom": "Animalia",
+                "phylum": "Chordata",
+                "class": "Aves",
+                "order": "Passeriformes",
+                "family": "Alaudidae",
+                "genus": "Galerida"
+            },
+            "habitat": "Paisaje árido y matorral bajo",
+            "conservationStatus": "Interés especial",
+            "iucnGlobal": "LC",
+            "spainStatus": "No catalogada (especie común)",
+            "murciaStatus": "No catalogada regionalmente",
+            "rarityScore": 2,
+            "featured": false,
+            "habitatIds": [
+                "matorral-semiarido"
+            ],
+            "coordinates": [
+                37.5145,
+                -1.4552
+            ],
+            "image": "",
+            "description": "Ave de zonas abiertas y cultivos marginales, reconocible por su cresta puntiaguda.",
+            "tips": [
+                "Cresta erguida característica",
+                "Vuelo bajo y ondulado",
+                "Camina en vez de saltar"
+            ],
+            "seasonality": "Todo el año",
+            "source": "Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre",
+            "reviewNote": null
+        },
+        {
+            "id": 16,
+            "commonName": "Sapo corredor",
+            "scientificName": "Epidalea calamita",
+            "kingdom": "fauna",
+            "group": "Anfibio",
+            "taxonomy": {
+                "kingdom": "Animalia",
+                "phylum": "Chordata",
+                "class": "Amphibia",
+                "order": "Anura",
+                "family": "Bufonidae",
+                "genus": "Epidalea"
+            },
+            "habitat": "Ramblas y zonas húmedas estacionales",
+            "conservationStatus": "Interés especial",
+            "iucnGlobal": "LC",
+            "spainStatus": "LESRPE",
+            "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+            "rarityScore": 3,
+            "featured": false,
+            "habitatIds": [
+                "galeria-ribera"
+            ],
+            "coordinates": [
+                37.4985,
+                -1.4602
+            ],
+            "image": "",
+            "description": "Anfibio adaptado a ambientes áridos, ligado a charcas temporales y ramblas tras las lluvias.",
+            "tips": [
+                "Línea dorsal amarillenta",
+                "Carrera en vez de salto",
+                "Activo tras lluvias y de noche"
+            ],
+            "seasonality": "Otoño e invierno lluviosos",
+            "source": "Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre (citado como Bufo calamita)",
+            "reviewNote": null
+        },
+        {
+            "id": 17,
+            "commonName": "Zorro",
+            "scientificName": "Vulpes vulpes",
+            "kingdom": "fauna",
+            "group": "Mamífero",
+            "taxonomy": {
+                "kingdom": "Animalia",
+                "phylum": "Chordata",
+                "class": "Mammalia",
+                "order": "Carnivora",
+                "family": "Canidae",
+                "genus": "Vulpes"
+            },
+            "habitat": "Matorral termomediterráneo semiárido",
+            "conservationStatus": "Preocupación menor",
+            "iucnGlobal": "LC",
+            "spainStatus": "No catalogada (especie cinegética común)",
+            "murciaStatus": "No catalogada regionalmente",
+            "rarityScore": 1,
+            "featured": false,
+            "habitatIds": [
+                "matorral-semiarido"
+            ],
+            "coordinates": [
+                37.509,
+                -1.446
+            ],
+            "image": "",
+            "description": "Mamífero generalista y de amplia distribución que recorre todos los ambientes del parque.",
+            "tips": [
+                "Cola larga con punta blanca",
+                "Hábitos crepusculares y nocturnos",
+                "Huellas ovaladas de cuatro dedos"
+            ],
+            "seasonality": "Todo el año",
+            "source": "Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre; Wikipedia",
+            "reviewNote": null
+        },
+        {
+            "id": 18,
+            "commonName": "Jabalí",
+            "scientificName": "Sus scrofa",
+            "kingdom": "fauna",
+            "group": "Mamífero",
+            "taxonomy": {
+                "kingdom": "Animalia",
+                "phylum": "Chordata",
+                "class": "Mammalia",
+                "order": "Artiodactyla",
+                "family": "Suidae",
+                "genus": "Sus"
+            },
+            "habitat": "Matorrales arborescentes de Ziziphus",
+            "conservationStatus": "Preocupación menor",
+            "iucnGlobal": "LC",
+            "spainStatus": "No catalogada (especie cinegética común)",
+            "murciaStatus": "No catalogada regionalmente",
+            "rarityScore": 1,
+            "featured": false,
+            "habitatIds": [
+                "azufaifar"
+            ],
+            "coordinates": [
+                37.511,
+                -1.4655
+            ],
+            "image": "",
+            "description": "Mamífero omnívoro presente en los matorrales más densos y zonas de vegetación cerrada del parque.",
+            "tips": [
+                "Huellas hendidas grandes",
+                "Rastros de hozadura en el suelo",
+                "Más activo al anochecer"
+            ],
+            "seasonality": "Todo el año",
+            "source": "Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre; Wikipedia",
+            "reviewNote": null
+        },
+        {
+            "id": 19,
+            "commonName": "Pardela cenicienta",
+            "scientificName": "Calonectris diomedea",
+            "kingdom": "fauna",
+            "group": "Ave marina",
+            "taxonomy": {
+                "kingdom": "Animalia",
+                "phylum": "Chordata",
+                "class": "Aves",
+                "order": "Procellariiformes",
+                "family": "Procellariidae",
+                "genus": "Calonectris"
+            },
+            "habitat": "Litoral rocoso y aguas costeras",
+            "conservationStatus": "Vulnerable",
+            "iucnGlobal": "LC",
+            "spainStatus": "Catálogo Español de Especies Amenazadas: Vulnerable (colonias reproductoras reducidas y localizadas)",
+            "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+            "rarityScore": 3,
+            "featured": false,
+            "habitatIds": [
+                "arrecifes",
+                "banco-arena"
+            ],
+            "coordinates": [
+                37.4855,
+                -1.475
+            ],
+            "image": "",
+            "description": "Ave marina pelágica que sobrevuela las aguas frente al litoral del parque en busca de alimento.",
+            "tips": [
+                "Vuelo rasante sobre el agua",
+                "Alas largas y rígidas",
+                "Se observa mejor desde miradores costeros"
+            ],
+            "seasonality": "Primavera a otoño",
+            "source": "Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre (citada como \"pardela\")",
+            "reviewNote": "La especie se observa en aguas del parque en paso/alimentación; confirmar si existe colonia reproductora local o si la presencia es solo de forrajeo."
+        },
+        {
+            "id": 1,
+            "commonName": "Posidonia oceánica",
+            "scientificName": "Posidonia oceanica",
+            "kingdom": "flora",
+            "group": "Planta marina",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Liliopsida",
+                "order": "Alismatales",
+                "family": "Posidoniaceae",
+                "genus": "Posidonia"
+            },
+            "habitat": "Praderas de Posidonia oceanica",
+            "conservationStatus": "Hábitat prioritario UE",
+            "iucnGlobal": "LC",
+            "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española 2008 (protegida vía hábitat prioritario, no como taxón individual)",
+            "murciaStatus": "Protegida indirectamente por ser especie formadora del hábitat prioritario 1120*",
+            "rarityScore": 5,
+            "featured": true,
+            "habitatIds": [
+                "posidonia"
+            ],
+            "coordinates": [
+                37.4912,
+                -1.4777
+            ],
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Posidonia_oceanica.jpg/640px-Posidonia_oceanica.jpg",
+            "description": "Planta marina formadora de praderas submarinas esenciales para la biodiversidad costera y la protección del litoral.",
+            "tips": [
+                "Hojas largas en forma de cinta",
+                "Restos fibrosos acumulados en orilla",
+                "Indicadora de aguas bien conservadas"
+            ],
+            "seasonality": "Todo el año",
+            "source": "Red Natura 2000 - LIC ES6200031 Cabo Cope / Directiva Hábitats 92/43/CEE (MITECO)",
+            "reviewNote": null
+        },
+        {
+            "id": 5,
+            "commonName": "Sabina negral",
+            "scientificName": "Juniperus phoenicea",
+            "kingdom": "flora",
+            "group": "Arbusto o arbolillo",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Pinopsida",
+                "order": "Pinales",
+                "family": "Cupressaceae",
+                "genus": "Juniperus"
+            },
+            "habitat": "Matorral litoral y laderas secas",
+            "conservationStatus": "Interés botánico",
+            "iucnGlobal": "LC",
+            "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
+            "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida; población de Cabo Cope señalada por su interés biogeográfico (aislada del resto de su área)",
+            "rarityScore": 4,
+            "featured": false,
+            "habitatIds": [
+                "matorral-semiarido",
+                "acantilados",
+                "sabinar-juniperus"
+            ],
+            "coordinates": [
+                37.5001,
+                -1.4384
+            ],
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Juniperus_phoenicea_001.JPG/640px-Juniperus_phoenicea_001.JPG",
+            "description": "Conífera mediterránea resistente a viento, sequía y suelos pobres, con poblaciones de interés en Cabo Cope.",
+            "tips": [
+                "Hojas escamosas",
+                "Frutos redondeados",
+                "Porte compacto"
+            ],
+            "seasonality": "Todo el año",
+            "source": "Región de Murcia Digital (CARM) - Flora de Cabo Cope y Puntas de Calnegre; Wikipedia",
+            "reviewNote": null
+        },
+        {
+            "id": 6,
+            "commonName": "Azufaifo",
+            "scientificName": "Ziziphus lotus",
+            "kingdom": "flora",
+            "group": "Arbusto espinoso",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Magnoliopsida",
+                "order": "Rosales",
+                "family": "Rhamnaceae",
+                "genus": "Ziziphus"
+            },
+            "habitat": "Matorrales arborescentes de Ziziphus",
+            "conservationStatus": "Hábitat prioritario UE / Vulnerable",
+            "iucnGlobal": "NE (no evaluada a nivel global)",
+            "spainStatus": "Incluida en la Lista Roja de la Flora Vascular Española 2008 (categoría exacta pendiente de confirmar en listaroja.conservacionvegetal.org)",
+            "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+            "rarityScore": 4,
+            "featured": false,
+            "habitatIds": [
+                "azufaifar"
+            ],
+            "coordinates": [
+                37.5099,
+                -1.4631
+            ],
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Ziziphus_lotus_%28fruit%29.jpg/640px-Ziziphus_lotus_%28fruit%29.jpg",
+            "description": "Arbusto espinoso de ambientes cálidos y secos, importante para refugio de fauna y estructura del paisaje.",
+            "tips": [
+                "Ramas en zigzag",
+                "Espinas visibles",
+                "Porte almohadillado"
+            ],
+            "seasonality": "Primavera a otoño",
+            "source": "Directiva Hábitats 92/43/CEE, hábitat prioritario 5220*; Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia; Decreto 50/2003 (BORM), Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia; base científica: Sánchez Gómez et al. 2002, Libro Rojo de la Flora Silvestre Protegida de la Región de Murcia",
+            "reviewNote": null
+        },
+        {
+            "id": 7,
+            "commonName": "Cornical",
+            "scientificName": "Periploca angustifolia",
+            "kingdom": "flora",
+            "group": "Arbusto iberoafricano",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Magnoliopsida",
+                "order": "Gentianales",
+                "family": "Apocynaceae",
+                "genus": "Periploca"
+            },
+            "habitat": "Matorral termófilo",
+            "conservationStatus": "Vulnerable",
+            "iucnGlobal": "NE (no evaluada a nivel global)",
+            "spainStatus": "Pendiente de confirmar presencia y categoría en la Lista Roja de la Flora Vascular Española 2008",
+            "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+            "rarityScore": 3,
+            "featured": false,
+            "habitatIds": [
+                "matorral-semiarido",
+                "azufaifar"
+            ],
+            "coordinates": [
+                37.4967,
+                -1.4528
+            ],
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Periploca_angustifolia_kz1.jpg/640px-Periploca_angustifolia_kz1.jpg",
+            "description": "Arbusto característico de zonas cálidas del sureste ibérico, con gran interés biogeográfico. Forma los 'cornicales', matorrales dominantes en laderas silicatadas del parque.",
+            "tips": [
+                "Hojas estrechas",
+                "Frutos alargados",
+                "Aspecto leñoso y abierto"
+            ],
+            "seasonality": "Floración primaveral",
+            "source": "Región de Murcia Digital (CARM) - Flora de Cabo Cope y Puntas de Calnegre; Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia; Decreto 50/2003 (BORM), Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia; base científica: Sánchez Gómez et al. 2002, Libro Rojo de la Flora Silvestre Protegida de la Región de Murcia",
+            "reviewNote": null
+        },
+        {
+            "id": 20,
+            "commonName": "Espino negro",
+            "scientificName": "Rhamnus lycioides subsp. borgiae",
+            "kingdom": "flora",
+            "group": "Arbusto espinoso",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Magnoliopsida",
+                "order": "Rosales",
+                "family": "Rhamnaceae",
+                "genus": "Rhamnus"
+            },
+            "habitat": "Matorral litoral y laderas secas",
+            "conservationStatus": "Interés especial",
+            "iucnGlobal": "NE (no evaluada a nivel global)",
+            "spainStatus": "No confirmada presencia en la Lista Roja de la Flora Vascular Española 2008",
+            "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (citada como Rhamnus hispanorum)",
+            "rarityScore": 2,
+            "featured": false,
+            "habitatIds": [
+                "matorral-semiarido",
+                "sabinar-juniperus"
+            ],
+            "coordinates": [
+                37.5008,
+                -1.4405
+            ],
+            "image": "",
+            "description": "Arbusto espinoso perennifolio típico del matorral mediterráneo costero, importante como refugio de fauna.",
+            "tips": [
+                "Ramas espinosas entrelazadas",
+                "Hojas pequeñas y coriáceas",
+                "Frutos globosos oscuros en otoño"
+            ],
+            "seasonality": "Todo el año",
+            "source": "Región de Murcia Digital (CARM) - Flora de Cabo Cope y Puntas de Calnegre; Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia; Decreto 50/2003 (BORM), Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia; base científica: Sánchez Gómez et al. 2002, Libro Rojo de la Flora Silvestre Protegida de la Región de Murcia",
+            "reviewNote": "El decreto regional cita el taxón como 'Rhamnus hispanorum', tratado aquí como sinónimo de Rhamnus lycioides subsp. borgiae; confirmar equivalencia nomenclatural vigente."
+        },
+        {
+            "id": 21,
+            "commonName": "Acebuche",
+            "scientificName": "Olea europaea var. sylvestris",
+            "kingdom": "flora",
+            "group": "Árbol o arbusto",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Magnoliopsida",
+                "order": "Lamiales",
+                "family": "Oleaceae",
+                "genus": "Olea"
+            },
+            "habitat": "Matorral litoral y laderas secas",
+            "conservationStatus": "Interés botánico / aprovechamiento regulado",
+            "iucnGlobal": "LC",
+            "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
+            "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): aprovechamiento sujeto a autorización previa (poblaciones silvestres)",
+            "rarityScore": 2,
+            "featured": false,
+            "habitatIds": [
+                "matorral-semiarido"
+            ],
+            "coordinates": [
+                37.4995,
+                -1.442
+            ],
+            "image": "",
+            "description": "Forma silvestre del olivo, presente en los matorrales costeros mejor conservados del parque.",
+            "tips": [
+                "Hojas pequeñas grisáceas",
+                "Porte arbustivo denso y espinoso en ejemplares jóvenes",
+                "Frutos pequeños (acebuchinas)"
+            ],
+            "seasonality": "Todo el año",
+            "source": "Región de Murcia Digital (CARM) - Flora de Cabo Cope y Puntas de Calnegre; Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia",
+            "reviewNote": null
+        },
+        {
+            "id": 22,
+            "commonName": "Margarita de mar",
+            "scientificName": "Asteriscus maritimus",
+            "kingdom": "flora",
+            "group": "Planta litoral",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Magnoliopsida",
+                "order": "Asterales",
+                "family": "Asteraceae",
+                "genus": "Asteriscus"
+            },
+            "habitat": "Playas y dunas fósiles del litoral",
+            "conservationStatus": "Interés botánico",
+            "iucnGlobal": "NE (no evaluada a nivel global)",
+            "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
+            "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida",
+            "rarityScore": 2,
+            "featured": false,
+            "habitatIds": [
+                "matorral-halonitrofilo",
+                "acantilados"
+            ],
+            "coordinates": [
+                37.4865,
+                -1.4695
+            ],
+            "image": "",
+            "description": "Pequeña planta almohadillada de flores amarillas, característica de roquedos y acantilados costeros.",
+            "tips": [
+                "Flores amarillas tipo margarita",
+                "Hojas carnosas grisáceas",
+                "Forma cojinetes sobre roca litoral"
+            ],
+            "seasonality": "Todo el año, floración prolongada",
+            "source": "Región de Murcia Digital (CARM) - Flora de Cabo Cope y Puntas de Calnegre",
+            "reviewNote": null
+        },
+        {
+            "id": 23,
+            "commonName": "Albardín",
+            "scientificName": "Lygeum spartum",
+            "kingdom": "flora",
+            "group": "Gramínea",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Liliopsida",
+                "order": "Poales",
+                "family": "Poaceae",
+                "genus": "Lygeum"
+            },
+            "habitat": "Saladar y albardinal de la marina de Cope",
+            "conservationStatus": "Interés botánico",
+            "iucnGlobal": "LC",
+            "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
+            "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida",
+            "rarityScore": 3,
+            "featured": false,
+            "habitatIds": [
+                "matorral-halofilo",
+                "estepas-salinas-albardinal",
+                "matorral-halonitrofilo"
+            ],
+            "coordinates": [
+                37.472,
+                -1.483
+            ],
+            "image": "",
+            "description": "Gramínea perenne que forma el albardinal, comunidad vegetal característica de los suelos salinos de la marina de Cope.",
+            "tips": [
+                "Hojas rígidas y punzantes enrolladas",
+                "Inflorescencia envuelta en brácteas",
+                "Forma matas aisladas en suelo salino"
+            ],
+            "seasonality": "Todo el año",
+            "source": "Región de Murcia Digital (CARM) - Flora de Cabo Cope y Puntas de Calnegre; Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia",
+            "reviewNote": null
+        },
+        {
+            "id": 24,
+            "commonName": "Cambrón",
+            "scientificName": "Lycium intricatum",
+            "kingdom": "flora",
+            "group": "Arbusto espinoso",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Magnoliopsida",
+                "order": "Solanales",
+                "family": "Solanaceae",
+                "genus": "Lycium"
+            },
+            "habitat": "Matorral halófilo de la marina de Cope",
+            "conservationStatus": "Interés especial",
+            "iucnGlobal": "NE (no evaluada a nivel global)",
+            "spainStatus": "No confirmada presencia en la Lista Roja de la Flora Vascular Española 2008",
+            "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+            "rarityScore": 3,
+            "featured": false,
+            "habitatIds": [
+                "matorral-halonitrofilo"
+            ],
+            "coordinates": [
+                37.4735,
+                -1.4795
+            ],
+            "image": "",
+            "description": "Arbusto espinoso de suelos salinos y semiáridos, propio de los matorrales costeros de la marina de Cope.",
+            "tips": [
+                "Ramas muy ramificadas y espinosas",
+                "Hojas pequeñas y carnosas",
+                "Frutos rojos pequeños"
+            ],
+            "seasonality": "Todo el año",
+            "source": "Región de Murcia Digital (CARM) - Flora de Cabo Cope y Puntas de Calnegre; Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia; Decreto 50/2003 (BORM), Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia; base científica: Sánchez Gómez et al. 2002, Libro Rojo de la Flora Silvestre Protegida de la Región de Murcia",
+            "reviewNote": null
+        },
+        {
+            "id": 25,
+            "commonName": "Chumberillo de lobo",
+            "scientificName": "Caralluma europaea",
+            "kingdom": "flora",
+            "group": "Planta suculenta",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Magnoliopsida",
+                "order": "Gentianales",
+                "family": "Apocynaceae",
+                "genus": "Caralluma"
+            },
+            "habitat": "Matorral halonitrófilo costero",
+            "conservationStatus": "Vulnerable / En Peligro (España)",
+            "iucnGlobal": "NE (no evaluada a nivel global; distribución principal fuera de Europa, en el norte de África)",
+            "spainStatus": "Lista Roja de la Flora Vascular Española 2008: EN (En Peligro), criterio B1ab(i,iii,iv,v)c(ii,iii,iv)+2ab(i,iii,iv,v)c(ii,iii,iv)",
+            "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+            "rarityScore": 5,
+            "featured": true,
+            "habitatIds": [
+                "matorral-halonitrofilo"
+            ],
+            "coordinates": [
+                37.478,
+                -1.468
+            ],
+            "image": "",
+            "description": "Pequeña planta suculenta de aspecto cactiforme, catalogada En Peligro a nivel nacional y Vulnerable en la Región de Murcia.",
+            "tips": [
+                "Tallos carnosos angulosos sin espinas",
+                "Flores pequeñas de olor desagradable",
+                "Muy localizada y difícil de encontrar"
+            ],
+            "seasonality": "Verano y otoño (floración)",
+            "source": "Lista Roja de la Flora Vascular Española 2008; Decreto 50/2003 (BORM), Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia; base científica: Sánchez Gómez et al. 2002, Libro Rojo de la Flora Silvestre Protegida de la Región de Murcia; Wikipedia",
+            "reviewNote": null
+        },
+        {
+            "id": 26,
+            "commonName": "Centaurio de Rigual",
+            "scientificName": "Centaurium rigualii",
+            "kingdom": "flora",
+            "group": "Planta herbácea endémica",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Magnoliopsida",
+                "order": "Gentianales",
+                "family": "Gentianaceae",
+                "genus": "Centaurium"
+            },
+            "habitat": "Saladar y albardinal de la marina de Cope",
+            "conservationStatus": "Estatus taxonómico dudoso - en revisión",
+            "iucnGlobal": "NE",
+            "spainStatus": "Excluida del Catálogo Nacional de Especies Amenazadas (CNEA) desde el año 2000 por dudas sobre su validez taxonómica",
+            "murciaStatus": "Pendiente de confirmar en el Catálogo Regional vigente",
+            "rarityScore": 5,
+            "featured": true,
+            "habitatIds": [
+                "matorral-halofilo"
+            ],
+            "coordinates": [
+                37.4705,
+                -1.4855
+            ],
+            "image": "",
+            "description": "Planta herbácea citada como endemismo del sureste ibérico en fuentes de divulgación, aunque su validez taxonómica actual es objeto de debate.",
+            "tips": [
+                "Porte herbáceo bajo",
+                "Flores rosadas en pequeños grupos",
+                "Ligada a suelos salinos poco alterados"
+            ],
+            "seasonality": "Primavera",
+            "source": "Referencias de divulgación (a contrastar); Wikipedia",
+            "reviewNote": "REVISAR: fuentes recientes indican que Centaurium rigualii fue excluida del Catálogo Nacional de Especies Amenazadas en 2000 por problemas de validez taxonómica (posible sinónimo de otro Centaurium). No se ha podido confirmar su presencia documentada específicamente en Cabo Cope con una fuente primaria fiable dentro de esta sesión. Recomendable verificar con un botánico antes de mantenerla en el catálogo definitivo."
+        },
+        {
+            "id": 27,
+            "commonName": "Ajo de flor oscura",
+            "scientificName": "Allium melananthum",
+            "kingdom": "flora",
+            "group": "Planta bulbosa",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Liliopsida",
+                "order": "Asparagales",
+                "family": "Amaryllidaceae",
+                "genus": "Allium"
+            },
+            "habitat": "Espartales de la marina de Cope",
+            "conservationStatus": "Vulnerable",
+            "iucnGlobal": "NE (no evaluada a nivel global)",
+            "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+            "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+            "rarityScore": 5,
+            "featured": true,
+            "habitatIds": [
+                "matorral-halofilo",
+                "matorral-semiarido"
+            ],
+            "coordinates": [
+                37.475,
+                -1.478
+            ],
+            "image": "",
+            "description": "Ajo silvestre de flores muy oscuras, abundante en los espartales de la Marina de Cope; una de las especies más notables del área por su rareza.",
+            "tips": [
+                "Flores de color muy oscuro, casi negro",
+                "Crece entre espartales (Lygeum/Stipa)",
+                "Floración llamativa a finales de primavera"
+            ],
+            "seasonality": "Primavera",
+            "source": "Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia",
+            "reviewNote": null
+        },
+        {
+            "id": 28,
+            "commonName": "Anabasis",
+            "scientificName": "Anabasis hispanica",
+            "kingdom": "flora",
+            "group": "Planta suculenta halófila",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Magnoliopsida",
+                "order": "Caryophyllales",
+                "family": "Amaranthaceae",
+                "genus": "Anabasis"
+            },
+            "habitat": "Saladar y albardinal de la marina de Cope",
+            "conservationStatus": "Interés especial",
+            "iucnGlobal": "NE",
+            "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
+            "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+            "rarityScore": 4,
+            "featured": false,
+            "habitatIds": [
+                "matorral-halofilo",
+                "matorral-semiarido"
+            ],
+            "coordinates": [
+                37.4715,
+                -1.484
+            ],
+            "image": "",
+            "description": "Pequeña planta suculenta de suelos salinos, propia de los saladares de la Marina de Cope.",
+            "tips": [
+                "Tallos articulados suculentos",
+                "Aspecto de matorral bajo y compacto",
+                "Suelos salinos y yesosos"
+            ],
+            "seasonality": "Verano-otoño",
+            "source": "Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia",
+            "reviewNote": "Especie poco conocida fuera de círculos botánicos especializados; confirmar identificación en campo por su similitud con otras quenopodiáceas suculentas."
+        },
+        {
+            "id": 29,
+            "commonName": "Salsola",
+            "scientificName": "Salsola papillosa",
+            "kingdom": "flora",
+            "group": "Planta halófila",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Magnoliopsida",
+                "order": "Caryophyllales",
+                "family": "Amaranthaceae",
+                "genus": "Salsola"
+            },
+            "habitat": "Saladar y albardinal de la marina de Cope",
+            "conservationStatus": "Vulnerable",
+            "iucnGlobal": "NE",
+            "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+            "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+            "rarityScore": 5,
+            "featured": true,
+            "habitatIds": [
+                "matorral-halofilo",
+                "matorral-semiarido"
+            ],
+            "coordinates": [
+                37.4698,
+                -1.486
+            ],
+            "image": "",
+            "description": "Quenopodiácea halófila de distribución muy restringida, catalogada Vulnerable en la Región de Murcia; citada como 'patagusanos'.",
+            "tips": [
+                "Aspecto de matorral bajo grisáceo",
+                "Ligada a suelos salinos costeros",
+                "Muy localizada"
+            ],
+            "seasonality": "Verano-otoño",
+            "source": "Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia; Decreto 50/2003 (BORM), Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia; base científica: Sánchez Gómez et al. 2002, Libro Rojo de la Flora Silvestre Protegida de la Región de Murcia",
+            "reviewNote": null
+        },
+        {
+            "id": 30,
+            "commonName": "Espartilla de Persia",
+            "scientificName": "Enneapogon persicus",
+            "kingdom": "flora",
+            "group": "Gramínea",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Liliopsida",
+                "order": "Poales",
+                "family": "Poaceae",
+                "genus": "Enneapogon"
+            },
+            "habitat": "Litosuelos cálidos del piso termomediterráneo",
+            "conservationStatus": "Interés especial / En Peligro Crítico (España)",
+            "iucnGlobal": "NE (no evaluada a nivel global; especie de amplia distribución en Asia y África, rara en el extremo de su área ibérica)",
+            "spainStatus": "Lista Roja de la Flora Vascular Española 2008: CR (En Peligro Crítico)",
+            "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+            "rarityScore": 5,
+            "featured": true,
+            "habitatIds": [
+                "matorral-semiarido"
+            ],
+            "coordinates": [
+                37.5135,
+                -1.4498
+            ],
+            "image": "",
+            "description": "Gramínea perenne en penacho de litosuelos cálidos, catalogada En Peligro Crítico a nivel nacional por su rareza y distribución marginal en la península.",
+            "tips": [
+                "Forma matas densas de 10-50 cm",
+                "Tallos ligeramente pubescentes",
+                "Litosuelos cálidos semiáridos"
+            ],
+            "seasonality": "Verano",
+            "source": "Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia; Lista Roja de la Flora Vascular Española 2008 (floraprotegida.es)",
+            "reviewNote": null
+        },
+        {
+            "id": 31,
+            "commonName": "Lechuguilla lanosa",
+            "scientificName": "Launaea lanifera",
+            "kingdom": "flora",
+            "group": "Planta herbácea",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Magnoliopsida",
+                "order": "Asterales",
+                "family": "Asteraceae",
+                "genus": "Launaea"
+            },
+            "habitat": "Matorral árido y bordes de rambla",
+            "conservationStatus": "Interés especial",
+            "iucnGlobal": "NE",
+            "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
+            "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+            "rarityScore": 4,
+            "featured": false,
+            "habitatIds": [
+                "matorral-semiarido"
+            ],
+            "coordinates": [
+                37.512,
+                -1.452
+            ],
+            "image": "",
+            "description": "Planta herbácea perenne de aspecto lanoso, propia de ambientes áridos del sureste ibérico.",
+            "tips": [
+                "Pelosidad blanquecina y lanosa",
+                "Hojas en roseta basal",
+                "Ambientes áridos y pedregosos"
+            ],
+            "seasonality": "Primavera-verano",
+            "source": "Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia",
+            "reviewNote": null
+        },
+        {
+            "id": 32,
+            "commonName": "Siempreviva insigne",
+            "scientificName": "Limonium insigne",
+            "kingdom": "flora",
+            "group": "Planta litoral",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Magnoliopsida",
+                "order": "Caryophyllales",
+                "family": "Plumbaginaceae",
+                "genus": "Limonium"
+            },
+            "habitat": "Saladar y acantilados de la marina de Cope",
+            "conservationStatus": "Interés especial / aprovechamiento regulado",
+            "iucnGlobal": "NE (no evaluada a nivel global; género con numerosos microendemismos ibéricos)",
+            "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 con este nombre (pendiente de confirmar sinonimia)",
+            "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial; aprovechamiento sujeto a autorización previa",
+            "rarityScore": 4,
+            "featured": false,
+            "habitatIds": [
+                "matorral-halofilo",
+                "acantilados",
+                "estepas-salinas-albardinal",
+                "matorral-semiarido"
+            ],
+            "coordinates": [
+                37.4895,
+                -1.4735
+            ],
+            "image": "",
+            "description": "Siempreviva litoral que tapiza de color los saladares y zonas afectadas por la brisa marina a finales de primavera.",
+            "tips": [
+                "Flores lilas-azuladas en panícula",
+                "Hojas basales coriáceas",
+                "Saladares y roquedos costeros"
+            ],
+            "seasonality": "Final de primavera",
+            "source": "Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia",
+            "reviewNote": "El género Limonium tiene una taxonomía muy compleja con numerosos microendemismos; confirmar la identificación exacta de la población de Cabo Cope frente a especies afines (L. lobatum, L. cossonianum)."
+        },
+        {
+            "id": 33,
+            "commonName": "Cuerno de cabra",
+            "scientificName": "Notoceras bicorne",
+            "kingdom": "flora",
+            "group": "Planta herbácea",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Magnoliopsida",
+                "order": "Brassicales",
+                "family": "Brassicaceae",
+                "genus": "Notoceras"
+            },
+            "habitat": "Matorral árido y claros de vegetación",
+            "conservationStatus": "Interés especial",
+            "iucnGlobal": "NE",
+            "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
+            "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+            "rarityScore": 4,
+            "featured": false,
+            "habitatIds": [
+                "matorral-semiarido"
+            ],
+            "coordinates": [
+                37.5165,
+                -1.4435
+            ],
+            "image": "",
+            "description": "Crucífera muy escasa en el continente europeo, de flores pequeñas y fruto característico curvado.",
+            "tips": [
+                "Fruto en forma de cuerno curvado",
+                "Planta anual de pequeño tamaño",
+                "Claros de matorral árido"
+            ],
+            "seasonality": "Primavera",
+            "source": "Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia",
+            "reviewNote": null
+        },
+        {
+            "id": 34,
+            "commonName": "Taray",
+            "scientificName": "Tamarix africana",
+            "kingdom": "flora",
+            "group": "Árbol o arbusto",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Magnoliopsida",
+                "order": "Caryophyllales",
+                "family": "Tamaricaceae",
+                "genus": "Tamarix"
+            },
+            "habitat": "Saladar junto a la playa del Sombrerico",
+            "conservationStatus": "Interés especial",
+            "iucnGlobal": "LC",
+            "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
+            "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (citado como Tamarix sp. pl.)",
+            "rarityScore": 3,
+            "featured": false,
+            "habitatIds": [
+                "matorral-halofilo",
+                "galeria-ribera"
+            ],
+            "coordinates": [
+                37.474,
+                -1.478
+            ],
+            "image": "",
+            "description": "Arbusto o arbolillo que forma los bosquetes de taray de mayor biomasa de la zona, como el rodal junto a la playa del Sombrerico.",
+            "tips": [
+                "Ramas finas y flexibles",
+                "Flores rosadas en espigas",
+                "Forma bosquetes junto a saladares"
+            ],
+            "seasonality": "Primavera-verano",
+            "source": "Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia",
+            "reviewNote": null
+        },
+        {
+            "id": 35,
+            "commonName": "Teucrio de Freyn",
+            "scientificName": "Teucrium freynii",
+            "kingdom": "flora",
+            "group": "Planta aromática",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Magnoliopsida",
+                "order": "Lamiales",
+                "family": "Lamiaceae",
+                "genus": "Teucrium"
+            },
+            "habitat": "Ramblas y cerros carbonatados",
+            "conservationStatus": "Interés especial",
+            "iucnGlobal": "NE",
+            "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
+            "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+            "rarityScore": 4,
+            "featured": false,
+            "habitatIds": [
+                "roquedos-casmofiticos"
+            ],
+            "coordinates": [
+                37.4945,
+                -1.4595
+            ],
+            "image": "",
+            "description": "Labiada de distribución restringida, ligada a ambientes rocosos y de rambla del sureste ibérico.",
+            "tips": [
+                "Hojas aromáticas de labiada",
+                "Porte arbustivo bajo",
+                "Ambientes rocosos y ramblas"
+            ],
+            "seasonality": "Primavera-verano",
+            "source": "Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia",
+            "reviewNote": null
+        },
+        {
+            "id": 36,
+            "commonName": "Zamarrilla lanuda",
+            "scientificName": "Teucrium lanigerum",
+            "kingdom": "flora",
+            "group": "Planta aromática",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Magnoliopsida",
+                "order": "Lamiales",
+                "family": "Lamiaceae",
+                "genus": "Teucrium"
+            },
+            "habitat": "Cerros carbonatados",
+            "conservationStatus": "Interés especial",
+            "iucnGlobal": "NE",
+            "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
+            "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+            "rarityScore": 4,
+            "featured": true,
+            "habitatIds": [
+                "matorral-semiarido"
+            ],
+            "coordinates": [
+                37.503,
+                -1.4455
+            ],
+            "image": "",
+            "description": "Una de las plantas más vistosas de la zona, de porte lanoso y flores llamativas, más abundante en cerros carbonatados.",
+            "tips": [
+                "Aspecto lanoso y plateado",
+                "Flores vistosas",
+                "Más abundante en sustratos carbonatados"
+            ],
+            "seasonality": "Primavera",
+            "source": "Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia",
+            "reviewNote": null
+        },
+        {
+            "id": 37,
+            "commonName": "Arto",
+            "scientificName": "Maytenus senegalensis subsp. europaea",
+            "kingdom": "flora",
+            "group": "Arbusto espinoso",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Magnoliopsida",
+                "order": "Celastrales",
+                "family": "Celastraceae",
+                "genus": "Maytenus"
+            },
+            "habitat": "Matorral litoral y laderas secas",
+            "conservationStatus": "Interés botánico",
+            "iucnGlobal": "NE",
+            "spainStatus": "Presente en el listado nacional de la Lista Roja de la Flora Vascular Española 2008 (categoría exacta pendiente de confirmar)",
+            "murciaStatus": "Pendiente de confirmar categoría exacta en el Catálogo Regional vigente",
+            "rarityScore": 3,
+            "featured": false,
+            "habitatIds": [
+                "matorral-semiarido"
+            ],
+            "coordinates": [
+                37.501,
+                -1.4368
+            ],
+            "image": "",
+            "description": "Arbusto espinoso iberoafricano citado por su nombre común ('arto') entre los matorrales costeros del parque.",
+            "tips": [
+                "Ramas espinosas muy ramificadas",
+                "Hojas pequeñas coriáceas",
+                "Matorral costero denso"
+            ],
+            "seasonality": "Todo el año",
+            "source": "Región de Murcia Digital (CARM) - Flora de Cabo Cope y Puntas de Calnegre (mención por nombre común 'arto')",
+            "reviewNote": "La fuente consultada menciona el nombre común 'arto' sin indicar el binomio científico; la equivalencia con Maytenus senegalensis subsp. europaea es la habitual en floras del sureste ibérico, pero no se ha podido confirmar con una fuente que use el nombre científico explícitamente para Cabo Cope. Revisar identificación en campo."
+        },
+        {
+            "id": 38,
+            "commonName": "Rabogato",
+            "scientificName": "Sideritis ibanyezii",
+            "kingdom": "flora",
+            "group": "Planta aromática",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Magnoliopsida",
+                "order": "Lamiales",
+                "family": "Lamiaceae",
+                "genus": "Sideritis"
+            },
+            "habitat": "Cerros carbonatados",
+            "conservationStatus": "Aprovechamiento regulado",
+            "iucnGlobal": "NE",
+            "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 con este nombre",
+            "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): aprovechamiento sujeto a autorización previa",
+            "rarityScore": 3,
+            "featured": false,
+            "habitatIds": [
+                "matorral-semiarido"
+            ],
+            "coordinates": [
+                37.5045,
+                -1.4475
+            ],
+            "image": "",
+            "description": "Labiada aromática más abundante sobre sustratos carbonatados, citada por su nombre común 'rabogato'.",
+            "tips": [
+                "Aspecto de matorral aromático bajo",
+                "Más abundante en sustrato carbonatado",
+                "Flores amarillentas en espiga"
+            ],
+            "seasonality": "Primavera-verano",
+            "source": "Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia",
+            "reviewNote": null
+        },
+        {
+            "id": 39,
+            "commonName": "Lentisco",
+            "scientificName": "Pistacia lentiscus",
+            "kingdom": "flora",
+            "group": "Arbusto",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Magnoliopsida",
+                "order": "Sapindales",
+                "family": "Anacardiaceae",
+                "genus": "Pistacia"
+            },
+            "habitat": "Matorral mediterráneo litoral",
+            "conservationStatus": "Aprovechamiento regulado",
+            "iucnGlobal": "LC",
+            "spainStatus": "No catalogada (especie común mediterránea)",
+            "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): aprovechamiento sujeto a autorización previa",
+            "rarityScore": 1,
+            "featured": false,
+            "habitatIds": [
+                "matorral-semiarido",
+                "azufaifar"
+            ],
+            "coordinates": [
+                37.5062,
+                -1.4512
+            ],
+            "image": "",
+            "description": "Arbusto perennifolio muy común del matorral mediterráneo, con frutos apreciados por la fauna.",
+            "tips": [
+                "Hojas compuestas paripinnadas",
+                "Frutos en racimo rojos a negros",
+                "Resinoso y aromático al frotar"
+            ],
+            "seasonality": "Todo el año",
+            "source": "Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia",
+            "reviewNote": null
+        },
+        {
+            "id": 40,
+            "commonName": "Pino carrasco",
+            "scientificName": "Pinus halepensis",
+            "kingdom": "flora",
+            "group": "Árbol",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Pinopsida",
+                "order": "Pinales",
+                "family": "Pinaceae",
+                "genus": "Pinus"
+            },
+            "habitat": "Laderas y cerros del interior del parque",
+            "conservationStatus": "Aprovechamiento regulado",
+            "iucnGlobal": "LC",
+            "spainStatus": "No catalogada (especie forestal común)",
+            "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): aprovechamiento sujeto a autorización previa",
+            "rarityScore": 1,
+            "featured": false,
+            "habitatIds": [
+                "matorral-semiarido",
+                "sabinar-juniperus"
+            ],
+            "coordinates": [
+                37.5083,
+                -1.4398
+            ],
+            "image": "",
+            "description": "Conífera mediterránea de amplia distribución, presente en laderas y zonas de repoblación del interior del parque.",
+            "tips": [
+                "Copa irregular y abierta",
+                "Piñas asimétricas persistentes",
+                "Corteza rojiza agrietada"
+            ],
+            "seasonality": "Todo el año",
+            "source": "Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia",
+            "reviewNote": null
+        },
+        {
+            "id": 41,
+            "commonName": "Tomillo de invierno",
+            "scientificName": "Thymus hyemalis",
+            "kingdom": "flora",
+            "group": "Planta aromática",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Magnoliopsida",
+                "order": "Lamiales",
+                "family": "Lamiaceae",
+                "genus": "Thymus"
+            },
+            "habitat": "Tomillares sobre sustrato carbonatado",
+            "conservationStatus": "Aprovechamiento regulado",
+            "iucnGlobal": "NE",
+            "spainStatus": "Una subespecie afín (Thymus hyemalis subsp. millefloris) figura en la Lista Roja de la Flora Vascular Española 2008; confirmar si aplica a la población del parque",
+            "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): aprovechamiento sujeto a autorización previa",
+            "rarityScore": 2,
+            "featured": false,
+            "habitatIds": [
+                "matorral-semiarido"
+            ],
+            "coordinates": [
+                37.5108,
+                -1.4525
+            ],
+            "image": "",
+            "description": "Tomillo endémico del sureste ibérico, característico de los tomillares sobre sustratos carbonatados del parque.",
+            "tips": [
+                "Matas bajas y aromáticas",
+                "Hojas pequeñas y estrechas",
+                "Sustratos carbonatados"
+            ],
+            "seasonality": "Todo el año, floración primaveral",
+            "source": "Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia",
+            "reviewNote": "Existe una subespecie (millefloris) con presencia confirmada en la Lista Roja nacional; verificar a qué subespecie/población corresponden los ejemplares de Cabo Cope."
+        },
+        {
+            "id": 42,
+            "commonName": "Alcaparra",
+            "scientificName": "Capparis sicula subsp. sicula",
+            "kingdom": "flora",
+            "group": "Arbusto",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Magnoliopsida",
+                "order": "Brassicales",
+                "family": "Capparaceae",
+                "genus": "Capparis"
+            },
+            "habitat": "Roquedos y muros del matorral litoral",
+            "conservationStatus": "Aprovechamiento regulado",
+            "iucnGlobal": "NE",
+            "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
+            "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): aprovechamiento sujeto a autorización previa",
+            "rarityScore": 2,
+            "featured": false,
+            "habitatIds": [
+                "matorral-semiarido"
+            ],
+            "coordinates": [
+                37.4978,
+                -1.446
+            ],
+            "image": "",
+            "description": "Arbusto trepador o rastrero de roquedos, conocido por sus botones florales comestibles (alcaparras).",
+            "tips": [
+                "Hojas redondeadas y carnosas",
+                "Flores blancas vistosas de corta duración",
+                "Roquedos y taludes soleados"
+            ],
+            "seasonality": "Verano",
+            "source": "Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia",
+            "reviewNote": null
+        },
+        {
+            "id": 43,
+            "commonName": "Azucena de mar",
+            "scientificName": "Pancratium maritimum",
+            "kingdom": "flora",
+            "group": "Planta bulbosa litoral",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Liliopsida",
+                "order": "Asparagales",
+                "family": "Amaryllidaceae",
+                "genus": "Pancratium"
+            },
+            "habitat": "Dunas y playas del litoral",
+            "conservationStatus": "Aprovechamiento regulado",
+            "iucnGlobal": "LC",
+            "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008 (especie común pero sensible a la degradación de playas)",
+            "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): aprovechamiento sujeto a autorización previa",
+            "rarityScore": 3,
+            "featured": true,
+            "habitatIds": [
+                "dunas-embrionarias"
+            ],
+            "coordinates": [
+                37.541,
+                -1.4005
+            ],
+            "image": "",
+            "description": "Bulbosa litoral de grandes flores blancas y aromáticas, propia de playas y dunas bien conservadas.",
+            "tips": [
+                "Flores blancas grandes y aromáticas",
+                "Hojas glaucas en roseta",
+                "Dunas y arenales costeros"
+            ],
+            "seasonality": "Verano",
+            "source": "Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia",
+            "reviewNote": "Reclasificada al hábitat oficial 2110 (dunas móviles embrionarias) por ser una especie característica de dunas costeras; esta asignación es una inferencia ecológica mía, ya que ni el Plan de Gestión del LIC Cabo Cope ni el Anexo I del PORN citan expresamente Pancratium maritimum entre las especies indicadoras de esa asociación (que mencionan Elymus farctus y Sporobolus pungens). Confirmar si procede."
+        },
+        {
+            "id": 44,
+            "commonName": "Coloquíntida",
+            "scientificName": "Citrullus colocynthis",
+            "kingdom": "flora",
+            "group": "Planta rastrera",
+            "taxonomy": {
+                "kingdom": "Plantae",
+                "phylum": "Tracheophyta",
+                "class": "Magnoliopsida",
+                "order": "Cucurbitales",
+                "family": "Cucurbitaceae",
+                "genus": "Citrullus"
+            },
+            "habitat": "Ramblas y zonas incultas",
+            "conservationStatus": "No catalogada, citada por su rareza",
+            "iucnGlobal": "NE",
+            "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
+            "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida",
+            "rarityScore": 4,
+            "featured": false,
+            "habitatIds": [
+                "galeria-ribera"
+            ],
+            "coordinates": [
+                37.4925,
+                -1.457
+            ],
+            "image": "",
+            "description": "Cucurbitácea rastrera de frutos parecidos a pequeños melones, citada por su rareza en ramblas y zonas incultas de la Marina de Cope.",
+            "tips": [
+                "Frutos redondos tipo melón pequeño",
+                "Planta rastrera en ramblas",
+                "Zonas incultas y bordes de cultivo"
+            ],
+            "seasonality": "Verano-otoño",
+            "source": "Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia",
+            "reviewNote": "No figura en ninguna de las tres categorías del Catálogo Regional (Decreto 50/2003); se incluye únicamente por citarse expresamente como notable/rara en la fuente de la Marina de Cope."
         }
     ]
 }

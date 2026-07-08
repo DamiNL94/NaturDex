@@ -19,23 +19,44 @@
                     <div><strong id="habitatCount">0</strong><span>hábitats</span></div>
                     <div><strong id="coastlineKm">17 km</strong><span>costa</span></div>
                 </div>
+                <div class="progress-wrap" aria-label="Progreso de descubrimiento">
+                    <div id="progressTrack" class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
+                    <span id="progressLabel" class="progress-label">0 / 0 especies descubiertas</span>
+                </div>
             </section>
-            <section class="controls" aria-label="Filtros del catálogo">
+            <div class="view-tabs" role="tablist" aria-label="Vistas de NaturDex">
+                <button class="view-tab active" type="button" data-view="catalog" role="tab" aria-selected="true">Catálogo</button>
+                <button class="view-tab" type="button" data-view="progress" role="tab" aria-selected="false">Progreso</button>
+            </div>
+            <section class="controls" id="catalogControls" aria-label="Filtros del catálogo">
                 <label for="searchInput">Buscar especie</label>
                 <input id="searchInput" type="search" placeholder="Nombre común o científico">
                 <div class="segmented" role="group" aria-label="Filtrar por tipo">
                     <button class="filter-button active" data-filter="all" type="button">Todas</button>
                     <button class="filter-button" data-filter="fauna" type="button">Fauna</button>
                     <button class="filter-button" data-filter="flora" type="button">Flora</button>
+                    <button class="filter-button" data-filter="seen" type="button">Vistas</button>
+                </div>
+                <div class="habitat-filter-chip" id="habitatFilterChip" hidden>
+                    <span id="habitatFilterLabel"></span>
+                    <button type="button" id="habitatFilterClear">Quitar filtro ✕</button>
                 </div>
             </section>
-            <section class="species-panel" aria-label="Catálogo de especies">
+            <section class="species-panel" id="catalogPanel" aria-label="Catálogo de especies">
                 <div class="section-title"><h2>Catálogo</h2><span id="resultCount">0 resultados</span></div>
                 <div id="speciesList" class="species-list"></div>
             </section>
+            <section class="progress-panel" id="progressPanel" aria-label="Progreso de exploración" hidden></section>
         </aside>
         <section class="map-stage" aria-label="Mapa y ficha de especie">
             <div id="map"></div>
+            <div class="map-legend" aria-hidden="true">
+                <span><i class="legend-dot fauna"></i>Fauna</span>
+                <span><i class="legend-dot flora"></i>Flora</span>
+                <span><i class="legend-dot poi"></i>Punto de interés</span>
+                <span><i class="legend-dot habitat"></i>Hábitat</span>
+                <span><i class="legend-line"></i>Límite del parque (aproximado)</span>
+            </div>
             <article id="detailPanel" class="detail-panel" aria-live="polite"></article>
         </section>
     </main>

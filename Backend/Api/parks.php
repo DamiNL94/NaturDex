@@ -1,5 +1,6 @@
 <?php
 header("Content-Type: application/json; charset=utf-8");
+header("Access-Control-Allow-Origin: *");
 require_once __DIR__ . "/../Config/db.php";
 
 $sql = "SELECT id, slug, name, category, region, province, municipality, description, latitude, longitude FROM parks ORDER BY name";

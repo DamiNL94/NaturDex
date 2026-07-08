@@ -7,6 +7,9 @@ node_modules/
 # entorno local
 .env
 
+# estado de progreso del usuario (se regenera en tiempo de ejecución)
+Backend/Data/progress.json
+
 # logs
 *.log
 

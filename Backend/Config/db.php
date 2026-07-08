@@ -5,15 +5,20 @@ $user = "root";
 $pass = "";
 $charset = "utf8mb4";
 
-$conn = new mysqli($host, $user, $pass, $db);
+mysqli_report(MYSQLI_REPORT_OFF);
+$conn = @new mysqli($host, $user, $pass, $db);
 
 if ($conn->connect_error) {
     http_response_code(500);
-    die("Database connection error.");
+    header("Content-Type: application/json; charset=utf-8");
+    echo json_encode(["error" => "Database connection error.", "detail" => $conn->connect_error]);
+    exit;
 }
 
 if (!$conn->set_charset($charset)) {
     http_response_code(500);
-    die("Database charset error.");
+    header("Content-Type: application/json; charset=utf-8");
+    echo json_encode(["error" => "Database charset error."]);
+    exit;
 }
 ?>
