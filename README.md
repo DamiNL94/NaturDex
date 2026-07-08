@@ -17,6 +17,7 @@ El primer parque piloto es el Parque Regional de Cabo Cope y Puntas de Calnegre,
 - `Frontend/Css/styles.css`: diseño responsive de la experiencia NaturDex.
 - `Frontend/Js/app.js`: mapa, filtros, catálogo, ficha de especie y progreso tipo pokédex.
 - `Frontend/Data/cabo-cope.json`: datos semilla del parque piloto (respaldo sin backend).
+- `Frontend/Img/species/`: fotografías locales de especies (servidas desde el propio proyecto, no hotlinkeadas).
 - `Backend/Api/parks.php`: endpoint de parques.
 - `Backend/Api/species.php`: endpoint agregado para parque, hábitats, puntos de interés y especies.
 - `Backend/Api/progress.php`: endpoint GET/POST para marcar especies y puntos de interés como vistos (persistido en `Backend/Data/progress.json`).
@@ -24,7 +25,7 @@ El primer parque piloto es el Parque Regional de Cabo Cope y Puntas de Calnegre,
 
 ## Catálogo de datos
 
-El catálogo semilla incluye 44 especies (15 fauna, 29 flora), 21 hábitats de interés comunitario (Directiva 92/43/CEE) y 6 puntos de interés del Parque Regional de Cabo Cope y Puntas de Calnegre. Cada especie incluye:
+El catálogo incluye 78 especies (34 fauna, 44 flora), 21 hábitats de interés comunitario (Directiva 92/43/CEE) y 6 puntos de interés del Parque Regional de Cabo Cope y Puntas de Calnegre. Cada especie incluye:
 
 - Taxonomía completa (reino, filo/división, clase, orden, familia, género).
 - Estado de conservación en tres escalas: **UICN (evaluación global)**, **España** (Catálogo Español de Especies Amenazadas / Lista Roja de la Flora Vascular Española 2008 para flora) y **Región de Murcia** (Catálogo Regional de Especies Amenazadas de la Fauna Silvestre / Catálogo Regional de Flora Silvestre Protegida, Decreto 50/2003).
@@ -40,25 +41,36 @@ Fuentes consultadas:
 - IUCN Red List of Threatened Species (evaluación global) - iucnredlist.org.
 - Baraza Martínez, F. 1999. "Los hábitats comunitarios en la Región de Murcia", DGMN-CARM.
 
-Este catálogo es un punto de partida para el prototipo: los datos deben contrastarse en campo y con las fuentes primarias (PORN/PRUG del parque, inventarios oficiales de la CARM y el MITECO) antes de un uso definitivo. Las especies añadidas en esta y la ronda anterior no tienen todavía fotografía verificada; el frontend muestra un icono de marcador de posición hasta incorporar imágenes con licencia confirmada.
+Este catálogo es un punto de partida para el prototipo: los datos deben contrastarse en campo y con las fuentes primarias (PORN/PRUG del parque, inventarios oficiales de la CARM y el MITECO) antes de un uso definitivo. Muchas especies añadidas no tienen todavía fotografía; el frontend muestra un icono de marcador de posición hasta incorporar imágenes con licencia confirmada.
+
+### Fotografías de flora (florasilvestre.es)
+
+Se han incorporado **13 fotografías de especies vegetales** descargadas de [florasilvestre.es](https://www.florasilvestre.es/mediterranea/sudeste.htm) (galería de flora del sureste ibérico), coincidencias exactas por nombre científico: *Allium melananthum*, *Caralluma europaea*, *Citrullus colocynthis*, *Cynomorium coccineum*, *Lafuentea rotundifolia*, *Lavandula multifida*, *Limonium insigne*, *Lycium intricatum*, *Maytenus senegalensis* subsp. *europaea*, *Notoceras bicorne*, *Salsola papillosa*, *Senecio flavus* y *Teucrium freynii*. Consideraciones:
+
+- Las imágenes se guardan **localmente** en `Frontend/Img/species/` y se sirven desde el propio proyecto (no se hotlinkea, porque el sitio verifica el *referer*). Cada ficha lleva la atribución `Foto: florasilvestre.es` en su campo `source`.
+- Solo se usaron **coincidencias exactas de género + especie**; no se sustituyó ninguna especie por la foto de otra afín del mismo género (evita identificaciones erróneas). Por eso el resto de la flora del sitio no se incorporó.
+- **Aviso de licencia**: las fotos son propiedad de florasilvestre.es y se usan aquí solo en el contexto de este prototipo educativo. Antes de cualquier uso público/definitivo hay que **confirmar la licencia o el permiso con el autor del sitio**, o sustituirlas por imágenes de licencia libre (p. ej. Wikimedia Commons).
 
 ### Especies marcadas para revisión personal
 
-No todas las categorías de conservación ni identificaciones pudieron verificarse de forma independiente en esta sesión. Cada una de estas 11 especies incluye un campo `reviewNote`/`review_note` visible en la ficha de la app (etiqueta "a revisar") con el detalle concreto de la duda:
+De las 11 especies marcadas inicialmente como "a revisar", una ronda de investigación adicional (fuentes oficiales y bibliográficas) permitió resolver 5 con confianza razonable; se les quitó el campo `reviewNote`/`review_note` y su fuente quedó ampliada con la referencia que resuelve la duda:
 
-1. **Águila perdicera** (*Aquila fasciata*) - estatus regional (Murcia) estimado, confirmar categoría exacta vigente.
-2. **Cormorán moñudo** (*Gulosus aristotelis*) - confirmar si la población es de la subespecie mediterránea *desmarestii*.
-3. **Curruca cabecinegra** (*Curruca melanocephala*) - cambio taxonómico reciente de género (antes *Sylvia*).
-4. **Pardela cenicienta** (*Calonectris diomedea*) - confirmar si hay colonia reproductora local o solo presencia en alimentación.
-5. **Espino negro** (*Rhamnus lycioides* subsp. *borgiae*) - equivalencia con el nombre "Rhamnus hispanorum" del decreto regional.
-6. **Centaurio de Rigual** (*Centaurium rigualii*) - **atención especial**: posible taxón inválido, excluido del Catálogo Nacional de Especies Amenazadas desde 2000; no se pudo confirmar con fuente primaria su presencia específica en Cabo Cope.
-7. **Anabasis** (*Anabasis hispanica*) - confirmar identificación en campo.
-8. **Siempreviva insigne** (*Limonium insigne*) - género con taxonomía compleja, confirmar frente a especies afines.
-9. **Arto** (*Maytenus senegalensis* subsp. *europaea*) - la fuente solo cita el nombre común "arto"; el binomio científico es la equivalencia habitual pero no está confirmada para Cabo Cope.
-10. **Tomillo de invierno** (*Thymus hyemalis*) - verificar si corresponde a la subespecie *millefloris* (única con categoría nacional confirmada).
-11. **Coloquíntida** (*Citrullus colocynthis*) - no catalogada oficialmente, incluida solo por citarse expresamente como notable/rara en la fuente.
+- **Águila perdicera** (*Aquila fasciata*) - confirmado: la Ley 7/1995 de Fauna Silvestre de la Región de Murcia (Anexo I) la cataloga "en peligro de extinción" a nivel regional, coincidiendo con el dato ya presente en el catálogo.
+- **Curruca cabecinegra** (*Curruca melanocephala*) - confirmado: el género *Curruca* (en vez de *Sylvia*) es el estándar taxonómico vigente según la IOC World Bird List.
+- **Pardela cenicienta** (*Calonectris diomedea*) - confirmado: no hay colonia reproductora conocida en Cabo Cope; la única colonia murciana documentada está en la Isla de las Palomas (San Pedro del Pinatar), por lo que la presencia en el parque es de paso/alimentación.
+- **Espino negro** (*Rhamnus lycioides* subsp. *borgiae*) - confirmado: "Rhamnus hispanorum" (nombre usado en el decreto regional) es sinónimo de este taxón según World Flora Online.
+- **Arto** (*Maytenus senegalensis* subsp. *europaea*) - confirmado: una ficha oficial del Ayuntamiento de Cartagena usa exactamente ese binomio para la especie común "arto", resolviendo la equivalencia de nombre.
 
-Por favor revisa estos 11 casos y avísame de cualquier corrección; actualizaré el catálogo en consecuencia.
+Las 6 especies restantes siguen sin poder verificarse de forma independiente y mantienen su `reviewNote`/`review_note` visible en la app (etiqueta "a revisar"):
+
+1. **Cormorán moñudo** (*Gulosus aristotelis*) - la subespecie mediterránea *desmarestii* es la esperable en el litoral murciano, pero la fuente consultada (RegMurcia) solo confirma nidificación en Isla Grosa, no en Cabo Cope, y da la categoría regional como "especie vulnerable" (Ley 7/95), distinta de "interés especial" que figura hoy en el catálogo; pendiente de decidir si se corrige.
+2. **Centaurio de Rigual** (*Centaurium rigualii*) - **atención especial**: fuentes taxonómicas (Kew/POWO) lo tratan como sinónimo o forma de *Centaurium quadrifolium*, reforzando la sospecha de que no es un taxón válido independiente; sigue sin confirmarse con fuente primaria su presencia específica en Cabo Cope.
+3. **Anabasis** (*Anabasis hispanica*) - su presencia regional y el hábitat (suelos margosos/salinos) son coherentes con el catálogo, pero la identificación de campo frente a otras quenopodiáceas suculentas sigue sin confirmar.
+4. **Siempreviva insigne** (*Limonium insigne*) - hay indicios de que tiene distribución óptima específicamente en el territorio de Cabo Cope, lo que reduce la duda de presencia, pero la complejidad taxonómica del género frente a especies afines (*L. lobatum*, *L. cossonianum*) sigue sin resolverse.
+5. **Tomillo de invierno** (*Thymus hyemalis*) - la subespecie amenazada *millefloris* parece documentada solo en Almería; lo más probable es que la población de Cabo Cope sea la subsp. *hyemalis* típica, pero falta confirmarlo antes de ajustar `spainStatus`.
+6. **Coloquíntida** (*Citrullus colocynthis*) - no catalogada oficialmente; no se encontraron fuentes que confirmen ni descarten su presencia específica en Cabo Cope (solo hay referencias a Mula/Yecla, en el interior de Murcia, y a Cabo de Gata, en Almería).
+
+Por favor revisa estos 6 casos y avísame de cualquier corrección; actualizaré el catálogo en consecuencia.
 
 ## Mapa: límite del parque y hábitats geolocalizados
 
@@ -107,6 +119,25 @@ Se comparó el texto libre `habitat` y las coordenadas de cada una de las 44 esp
 - **Margarita de mar** (*Asteriscus maritimus*): se añade "Acantilados" (su descripción cita literalmente "roquedos y acantilados costeros" y sus coordenadas están a ~150 m del centro de ese hábitat), manteniendo el matorral halonitrófilo original.
 
 Limitación detectada de paso: la *Azucena de mar* (*Pancratium maritimum*) vive en dunas y playas, pero el catálogo de 9 hábitats no incluye ningún hábitat dunar/de playa; se mantiene en "Matorral halonitrófilo" por ser la opción más cercana disponible. Si se añade cartografía de hábitats más detallada, valdría la pena crear un hábitat de dunas litorales.
+
+## Actualización a partir del PORN de Calnegre y Cabo Cope (documento previo, CARM 2021)
+
+Se ha contrastado el catálogo contra el [Documento previo del PORN de Calnegre y Cabo Cope](https://transparencia.carm.es/wres/transparencia/doc/Organos-colegiados/Consejo_Asesor_Regional_Medio_Ambiente/2021-02-18/PORN_CALNEGRE_Documento_previo_CARMA.pdf) (CARM, 2021), el instrumento de planificación ambiental más autorizado disponible para este espacio. Es un documento *previo* de 28 páginas: solo su apartado "Patrimonio natural y biodiversidad" tiene contenido sustantivo (hábitats, especies catalogadas, fauna); el límite del parque y la zonificación por usos todavía no están redactados en esta versión, así que el límite del mapa sigue siendo el aproximado de siempre.
+
+- **22 especies nuevas** incorporadas al catálogo (66 especies en total, antes 44): 3 de flora del Catálogo Regional de Flora Silvestre Protegida citadas expresamente para la zona y ausentes hasta ahora (*Centaurea saxicola* -cardo amarillo de roca-, *Lafuentea rotundifolia* -orejilla de roca- y *Senecio flavus*) y 19 de fauna citadas en el documento (mamíferos carnívoros: gato montés, gineta, garduña, tejón; aves de matorral, saladar y playa: terrera marismeña, terrera común, cogujada montesina, curruca rabilarga, collalba negra, mochuelo europeo, perdiz roja, chorlitejo patinegro, correlimos tridáctilo, vuelvepiedras, ostrero euroasiático, charrancito común; reptiles: lagartija colilarga, culebra bastarda, lagartija colirroja). Todas incluyen `reviewNote` indicando que el PORN cita su presencia sin detallar categoría de protección regional exacta ni, en el caso de *Senecio flavus*, hábitat o nombre común.
+- *Ziziphus lotus* (Azufaifo) **ya existía** en el catálogo (no se duplicó); solo se amplió su fuente con la cita del PORN, que confirma su categoría Vulnerable.
+- **6 especies ya existentes confirmadas** con categoría oficial exacta y cita añadida a su fuente: Cornical, Chumberillo de lobo, Ajo de flor oscura y Salsola (las cuatro ya estaban como Vulnerable, ahora con respaldo directo del PORN) y dos correcciones de categoría: **Arto** (*Maytenus senegalensis* subsp. *europaea*) pasa de "pendiente de confirmar" a **Vulnerable**, y **Espartilla de Persia** (*Enneapogon persicus*) pasa de "de interés especial" a **en peligro de extinción** en el Catálogo Regional de Murcia (categoría distinta de su "en peligro crítico" nacional, que no cambia).
+- **Conflicto de recuento de hábitats sin resolver**: el PORN dice que los LIC de Calnegre y Cabo Cope suman **15 tipos de hábitat** (4 prioritarios), no 21. Coincide con 15 de los 21 códigos ya catalogados; los 6 restantes (1110, 1120\*, 1170, 2240, 3280, 7210) no aparecen en esta lista oficial "de los LIC de Calnegre y Cabo Cope". El documento sí menciona que el LIC Cabo Cope linda con la ZEC marina "Franja Litoral Sumergida de la Región de Murcia" (ES6200029), lo que podría explicar los 3 hábitats marinos (1110, 1120\*, 1170) como pertenecientes a esa zona adyacente y no al LIC en sí; los otros 3 (2240, 3280, 7210) quedan sin explicación por ahora. Se mantienen los 21 en el catálogo por precaución, pero conviene revisar el Standard Data Form u otra fuente que justificara originalmente esos 6 códigos antes de darlos por buenos.
+
+### Completado del catálogo de flora protegida (Anexo I del proyecto de PORN, ANSE)
+
+La flora vascular total del parque se estima en **322 especies y subespecies** (dato de Wikipedia, atribuido a Alcaraz Ariza, *"La Marina de Cope: ¿los últimos días de un paraíso botánico?"*, *Eubacteria* nº5, Universidad de Murcia; el [Anexo I del proyecto de PORN](https://www.asociacionanse.org/wp-content/uploads/2020/12/ANEXO-I_PROYECTO_PORN_COPE.pdf) de ANSE lo corrobora como ">320 taxones de flora vascular" solo en las ~800 ha de vegetación natural de la Marina de Cope). **Ese inventario florístico completo no está publicado en ninguna fuente accesible en línea**: ni el documento previo del PORN, ni el Anexo I de ANSE, ni Wikipedia ni RegMurcia enumeran las 322; solo publican la tabla de flora protegida (~40 taxones), una lista de especies invasoras y algunos ejemplos en prosa. El catálogo de la app **no pretende, por tanto, cubrir las 322**, sino el subconjunto realmente documentado.
+
+Sí se ha completado la **lista oficial de flora protegida del parque** (~40 taxones del Catálogo Regional de Flora Silvestre Protegida, Decreto 50/2003, según el Anexo I de ANSE). De esos ~40, 26 ya estaban en el catálogo y se han añadido los **12 taxones que faltaban** (78 especies en total, antes 66): *Chamaerops humilis* (palmito), *Cynomorium coccineum* (cinomorio), *Eragrostis papposa*, *Erodium sanguis-christi*, *Lavandula dentata* (cantueso dentado), *Lavandula multifida* (alhucema), *Leucanthemum decipiens*, *Limonium cossonianum* (siempreviva de Cosson, especie dominante de los acantilados según la asociación *Limonio cossoniani-Lycietum intricati*), *Osyris lanceolata* (bayón), *Quercus coccifera* (coscoja), *Sarcocapnos enneaphylla* subsp. *saetabensis* (zapatito de la Virgen, del hábitat rocoso 8210) y *Serratula mucronata*. Notas:
+
+- Se descartaron *Rhamnus hispanorum* (sinónimo del Espino negro ya catalogado, *Rhamnus lycioides* subsp. *borgiae*) y *Tamarix canariensis* (co-citada con el Taray, *Tamarix africana*, ya presente).
+- La tabla del PDF del Anexo tiene los **nombres comunes descolocados de columna** (etiqueta a *Cynomorium* como "palmito", que en realidad es *Chamaerops*, etc.); se han usado los nombres científicos y nombres comunes correctos, no los del PDF.
+- Para *Chamaerops humilis*, *Osyris lanceolata*, *Limonium cossonianum* y *Sarcocapnos enneaphylla* subsp. *saetabensis* el hábitat se apoya en la asociación fitosociológica citada por las fuentes oficiales; para las 8 restantes la asignación de hábitat es una **inferencia ecológica** (marcada con `reviewNote`) y las coordenadas son representativas, no de una localización verificada en campo.
 
 ## Pestaña "Progreso"
 
