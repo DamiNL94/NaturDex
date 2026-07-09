@@ -17,6 +17,7 @@ El primer parque piloto es el Parque Regional de Cabo Cope y Puntas de Calnegre,
 - `Frontend/Css/styles.css`: diseño responsive de la experiencia NaturDex.
 - `Frontend/Js/app.js`: mapa, filtros, catálogo, ficha de especie y progreso tipo pokédex.
 - `Frontend/Data/cabo-cope.json`: datos semilla del parque piloto (respaldo sin backend).
+- `Frontend/Data/geo/`: geometría del mapa en GeoJSON (límite del parque y hábitats) + su README con el flujo de sustitución por cartografía real de QGIS.
 - `Frontend/Img/species/`: fotografías locales de especies (servidas desde el propio proyecto, no hotlinkeadas).
 - `Backend/Api/parks.php`: endpoint de parques.
 - `Backend/Api/species.php`: endpoint agregado para parque, hábitats, puntos de interés y especies.
@@ -72,13 +73,75 @@ Las 6 especies restantes siguen sin poder verificarse de forma independiente y m
 
 Por favor revisa estos 6 casos y avísame de cualquier corrección; actualizaré el catálogo en consecuencia.
 
-## Mapa: límite del parque y hábitats geolocalizados
+## Mapa: zonas protegidas oficiales, capas base y hábitats
 
-El mapa dibuja ahora un límite aproximado del Parque Regional de Cabo Cope y Puntas de Calnegre (línea discontinua roja) y un círculo por cada uno de los 21 hábitats de interés comunitario, con su código y estado de prioridad UE.
+El mapa muestra ahora la **geometría oficial real** de las figuras de protección, dos capas base
+conmutables y los hábitats, todo activable/desactivable desde el control de capas (arriba a la derecha).
 
-- El límite es **provisional**, guiado por el plano del folleto oficial "Calnegre y Cabo Cope" (CARM, murcianatural.carm.es) y por referencias textuales y puntos conocidos del parque (Calabardina, Torre de Cope, Cabo Cope, Lomo de Bas, Puntas de Calnegre), no de cartografía vectorial oficial. El propio folleto muestra el límite del Parque Regional y el de la Red Natura 2000 como dos líneas distintas en su leyenda, y existen conflictos legales aún no resueltos entre ambas delimitaciones (por ejemplo, el LIC ES6200031 Cabo Cope ocupa solo 241 ha según su Plan de Gestión, muy por debajo de la extensión completa del Parque Regional). Tanto `Frontend/Data/cabo-cope.json` como `Backend/Api/species.php` incluyen un campo `boundaryNote` con este aviso. Cuando se resuelva el conflicto legal y esté disponible el proyecto QGIS, este trazado debe sustituirse por la geometría real (lo más sencillo será servir un GeoJSON en vez de un array de puntos fijo).
-- Cada hábitat tiene una posición representativa (no su extensión real) y un color propio. Al hacer clic se abre un popup con el recuento de especies vistas en ese hábitat y un botón para filtrar el catálogo a esas especies.
-- La relación especie-hábitat es muchos-a-muchos (una especie puede vivir en varios hábitats): en el JSON de respaldo son los campos `habitatIds` (por especie) y `speciesIds` (por hábitat); en la base de datos es la tabla `species_habitats`, calculada por `species.php` a partir de nombre científico + slug de hábitat.
+### Zonas protegidas con geometría oficial (IMIDA/CARM)
+
+El límite aproximado de puntos que había antes se ha sustituido por geometría vectorial oficial,
+descargada del servicio ArcGIS REST del IMIDA/CARM (`geoportal.imida.es/.../OISMA/MapServer`),
+reproyectada a EPSG:4326 y generalizada para peso web (ver `Frontend/Data/geo/README.md`). Cada
+figura es una capa propia, con su estilo y un popup con nombre, código y superficie:
+
+- **Parque Regional** de Calnegre y Cabo Cope (Ley 4/1992; 2.665 ha) — línea verde continua. Es el
+  límite legal, el mismo que representa el folleto oficial (ya no un trazado aproximado).
+- **LIC · Red Natura 2000** — `ES6200031` Cabo Cope (240 ha) y `ES6200012` Calnegre (781 ha); línea
+  azul-teal discontinua.
+- **ZEPA · Red Natura 2000** — `ES0000261` Almenara-Moreras-Cabo Cope (22.201 ha); línea púrpura
+  punteada (se extiende bastante al norte del parque). Los LIC y la ZEPA juntos constituyen la Red
+  Natura 2000. Vienen apagados por defecto para no saturar el mapa; se activan desde el control de capas.
+
+### La ubicación de una especie la aporta el GPS al marcarla como vista
+
+Los marcadores de especies **ya no aparecen pre-cargados** en el mapa. La localización es parte de la
+mecánica tipo pokédex y proviene del **GPS del dispositivo**: al marcar una especie como vista, el
+navegador pide la posición (`navigator.geolocation.getCurrentPosition`) y el marcador se coloca **donde
+el usuario realmente la ha visto**. Al desmarcar, el marcador y su ubicación desaparecen.
+
+- La ubicación del avistamiento se persiste en el backend (`progress.php` → `Backend/Data/progress.json`,
+  campo `sightings` con `{lat, lng, at}` por especie) y se restaura al recargar.
+- Si el usuario **deniega el permiso** o el dispositivo no tiene GPS, la especie se marca igualmente como
+  vista y el marcador cae en la coordenada representativa del catálogo, indicándolo en el popup
+  ("Ubicación aproximada (sin GPS)" frente a "Ubicación registrada por GPS").
+- La geolocalización del navegador requiere contexto seguro (HTTPS o `localhost`).
+
+### Senderos del parque (GR-92)
+
+Se dibuja el trazado real del **GR-92 / Sendero del Mediterráneo** a su paso por el parque (capa
+*Senderos*, línea naranja), extraído de **OpenStreetMap** (© OpenStreetMap contributors, ODbL) y guardado
+en `Frontend/Data/geo/trails.geojson`. Recorre el litoral entre Calabardina y Puntas de Calnegre. Los
+senderos locales señalizados (PR/SL) se pueden añadir al mismo fichero cuando se disponga de su trazado.
+
+### Puntos de interés con coordenadas verificadas
+
+Los 6 puntos de interés se han **corregido con topónimos de OpenStreetMap** (varios estaban desplazados:
+la Torre de Cope ~1,5 km y Cala Blanca ~5 km) y se han añadido 2 nuevos: **Calabardina** (puerta de
+entrada meridional) y **Playa del Sombrerico** (por su tarayal, hábitat 92D0, citado en el PORN). Son 8
+en total, aplicados al JSON, la base de datos y `schema.sql`.
+
+### Capas base y clústeres
+
+- **Dos capas base** conmutables: *Mapa* (OpenStreetMap) y *Satélite (PNOA)* — ortofoto aérea del
+  Instituto Geográfico Nacional por WMTS (`OI.OrthoimageCoverage`, cuadrícula `GoogleMapsCompatible`).
+- **Agrupación de marcadores** (Leaflet.markercluster): las especies vistas próximas se agrupan en un
+  clúster con su recuento y se despliegan al hacer zoom. Al seleccionar una especie ya vista desde el
+  catálogo, el mapa hace zoom hasta sacar su marcador del clúster y abre el popup.
+
+### Hábitats: círculos aproximados, listos para polígonos reales
+
+- Cada uno de los 21 hábitats de interés comunitario se dibuja como un **círculo en una posición
+  representativa** (no su extensión real), con su código, prioridad UE y color. Al hacer clic se abre un
+  popup con el recuento de especies vistas en ese hábitat y un botón para filtrar el catálogo a esas especies.
+- La geometría de hábitats vive en `Frontend/Data/geo/habitats.geojson` (plantilla vacía por ahora). Es la
+  **fontanería lista para QGIS**: `app.js` dibuja el polígono real de un hábitat en cuanto se añade a ese
+  fichero un `Feature` con `properties.slug`, sin tocar código. No se localizó un servicio oficial de
+  Hábitats de Interés Comunitario accesible como vector para esta zona; habrá que exportarlo de QGIS a
+  partir de la cartografía de HIC de MITECO.
+- La relación especie-hábitat es muchos-a-muchos (una especie puede vivir en varios hábitats): en el JSON de
+  respaldo son los campos `habitatIds` (por especie) y `speciesIds` (por hábitat); en la base de datos es la
+  tabla `species_habitats`, calculada por `species.php` a partir de nombre científico + slug de hábitat.
 
 ### Reconstrucción del catálogo de hábitats (9 → 21, fuente Red Natura 2000)
 
@@ -122,7 +185,7 @@ Limitación detectada de paso: la *Azucena de mar* (*Pancratium maritimum*) vive
 
 ## Actualización a partir del PORN de Calnegre y Cabo Cope (documento previo, CARM 2021)
 
-Se ha contrastado el catálogo contra el [Documento previo del PORN de Calnegre y Cabo Cope](https://transparencia.carm.es/wres/transparencia/doc/Organos-colegiados/Consejo_Asesor_Regional_Medio_Ambiente/2021-02-18/PORN_CALNEGRE_Documento_previo_CARMA.pdf) (CARM, 2021), el instrumento de planificación ambiental más autorizado disponible para este espacio. Es un documento *previo* de 28 páginas: solo su apartado "Patrimonio natural y biodiversidad" tiene contenido sustantivo (hábitats, especies catalogadas, fauna); el límite del parque y la zonificación por usos todavía no están redactados en esta versión, así que el límite del mapa sigue siendo el aproximado de siempre.
+Se ha contrastado el catálogo contra el [Documento previo del PORN de Calnegre y Cabo Cope](https://transparencia.carm.es/wres/transparencia/doc/Organos-colegiados/Consejo_Asesor_Regional_Medio_Ambiente/2021-02-18/PORN_CALNEGRE_Documento_previo_CARMA.pdf) (CARM, 2021), el instrumento de planificación ambiental más autorizado disponible para este espacio. Es un documento *previo* de 28 páginas: solo su apartado "Patrimonio natural y biodiversidad" tiene contenido sustantivo (hábitats, especies catalogadas, fauna); la zonificación por usos todavía no está redactada en esta versión. (El límite del mapa **sí** se ha actualizado después a la geometría oficial del Parque Regional y de la Red Natura 2000 — ver "Mapa: zonas protegidas oficiales" más arriba.)
 
 - **22 especies nuevas** incorporadas al catálogo (66 especies en total, antes 44): 3 de flora del Catálogo Regional de Flora Silvestre Protegida citadas expresamente para la zona y ausentes hasta ahora (*Centaurea saxicola* -cardo amarillo de roca-, *Lafuentea rotundifolia* -orejilla de roca- y *Senecio flavus*) y 19 de fauna citadas en el documento (mamíferos carnívoros: gato montés, gineta, garduña, tejón; aves de matorral, saladar y playa: terrera marismeña, terrera común, cogujada montesina, curruca rabilarga, collalba negra, mochuelo europeo, perdiz roja, chorlitejo patinegro, correlimos tridáctilo, vuelvepiedras, ostrero euroasiático, charrancito común; reptiles: lagartija colilarga, culebra bastarda, lagartija colirroja). Todas incluyen `reviewNote` indicando que el PORN cita su presencia sin detallar categoría de protección regional exacta ni, en el caso de *Senecio flavus*, hábitat o nombre común.
 - *Ziziphus lotus* (Azufaifo) **ya existía** en el catálogo (no se duplicó); solo se amplió su fuente con la cita del PORN, que confirma su categoría Vulnerable.

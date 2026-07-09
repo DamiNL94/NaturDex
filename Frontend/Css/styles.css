@@ -8,3 +8,14 @@
 .species-marker span{display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:999px;font-size:14px;box-shadow:0 2px 8px rgba(0,0,0,.25);border:2px solid #fff}.species-marker.seen span{box-shadow:0 0 0 2px var(--sun),0 2px 8px rgba(0,0,0,.25)}
 .poi-marker span{display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:6px;background:var(--sun);color:#fff;font-size:13px;box-shadow:0 2px 8px rgba(0,0,0,.25);border:2px solid #fff}.poi-marker.seen span{background:var(--leaf);box-shadow:0 0 0 2px var(--sun),0 2px 8px rgba(0,0,0,.25)}
 .popup-type{display:inline-block;margin:2px 0 6px;color:var(--muted);font-size:.75rem;text-transform:uppercase;font-weight:700}.poi-seen-btn{margin-top:6px;min-height:32px;padding:0 10px;border:1px solid var(--leaf);border-radius:6px;background:#fff;color:var(--leaf);font-weight:700;cursor:pointer}@media(max-width:900px){.app-shell{height:auto;overflow:visible;grid-template-columns:1fr}.sidebar{height:auto;min-height:auto;overflow:visible;border-right:0}.map-stage{height:auto;flex-direction:column;min-height:72vh;overflow:visible}.species-panel{max-height:360px}.detail-panel{width:auto;height:auto;flex-shrink:1;margin:0;max-height:none;border-left:0;border-top:1px solid var(--line)}#map{flex:none;width:100%;min-height:72vh}}@media(max-width:520px){.park-summary,.controls{padding-left:18px;padding-right:18px}.species-panel{padding-left:18px}.summary-grid,.detail-facts{grid-template-columns:1fr}.species-card{grid-template-columns:64px 1fr}.species-card img{width:64px;height:64px}}
+.leaflet-control-layers{border:none;border-radius:10px;box-shadow:0 8px 24px rgba(23,33,27,.14);padding:8px 10px;font-size:.8rem}
+.leaflet-control-layers-expanded{color:var(--ink)}
+.leaflet-control-layers-selector{margin-right:6px}
+.leaflet-control-layers label{display:flex;align-items:center;margin:3px 0}
+.leaflet-control-layers-separator{border-top:1px solid var(--line)}
+.marker-cluster-small,.marker-cluster-medium,.marker-cluster-large{background:rgba(47,111,78,.25)}
+.marker-cluster-small div,.marker-cluster-medium div,.marker-cluster-large div{background:rgba(47,111,78,.9);color:#fff;font-weight:600}
+.legend-line.parque{border-top:3px solid var(--leaf)}
+.legend-line.lic{border-top:2px dashed var(--sea)}
+.legend-line.zepa{border-top:2px dotted #7b4fa0}
+.legend-line.trail{border-top:3px solid #c0662a}

@@ -180,22 +180,27 @@ ON DUPLICATE KEY UPDATE name = VALUES(name), habitat_type = VALUES(habitat_type)
     slug = VALUES(slug);
 
 -- Puntos de observación/interés del parque piloto.
--- Fuente: Región de Murcia Digital (CARM) - Cabo Cope y Puntas de Calnegre.
+-- Coordenadas verificadas/corregidas con topónimos de OpenStreetMap (© OpenStreetMap contributors, ODbL);
+-- descripciones basadas en Región de Murcia Digital (CARM) - Cabo Cope y Puntas de Calnegre.
 INSERT INTO points_of_interest (park_id, slug, name, type, description, latitude, longitude)
 SELECT p.id, poi.slug, poi.name, poi.type, poi.description, poi.latitude, poi.longitude
 FROM parks p
 JOIN (
-    SELECT 'torre-cope' slug, 'Torre de Cope' name, 'Cultural' type, 'Torre vigía costera catalogada como Bien de Interés Cultural, vinculada a la defensa histórica del litoral.' description, 37.4219 latitude, -1.5035 longitude
+    SELECT 'torre-cope' slug, 'Torre de Cope' name, 'Cultural' type, 'Torre vigía costera catalogada como Bien de Interés Cultural, vinculada a la defensa histórica del litoral.' description, 37.43695 latitude, -1.48441 longitude
     UNION ALL
-    SELECT 'cabo-cope' slug, 'Cabo Cope' name, 'Paisajístico' type, 'Promontorio litoral de referencia visual del parque y mirador natural hacia la bahía.' description, 37.4209 latitude, -1.4917 longitude
+    SELECT 'cabo-cope' slug, 'Cabo Cope' name, 'Paisajístico' type, 'Promontorio litoral de referencia visual del parque y mirador natural hacia la bahía.' description, 37.42283 latitude, -1.49217 longitude
     UNION ALL
-    SELECT 'puntas-calnegre' slug, 'Puntas de Calnegre' name, 'Paisajístico' type, 'Núcleo litoral y tramo de costa con playas, gravas, calas y vistas abiertas al Mediterráneo.' description, 37.5446 latitude, -1.3975 longitude
+    SELECT 'puntas-calnegre' slug, 'Puntas de Calnegre' name, 'Paisajístico' type, 'Núcleo litoral y tramo de costa con playas, gravas, calas y vistas abiertas al Mediterráneo.' description, 37.51058 latitude, -1.40198 longitude
     UNION ALL
-    SELECT 'playa-calnegre' slug, 'Playa de Calnegre' name, 'Paisajístico' type, 'Cala de arena y grava dentro del entorno protegido, útil como punto de acceso a la ruta litoral.' description, 37.5389 latitude, -1.4037 longitude
+    SELECT 'playa-calnegre' slug, 'Playa de Calnegre' name, 'Paisajístico' type, 'Cala de arena y grava dentro del entorno protegido, útil como punto de acceso a la ruta litoral.' description, 37.51155 latitude, -1.40063 longitude
     UNION ALL
-    SELECT 'cala-blanca' slug, 'Cala Blanca' name, 'Geológico' type, 'Tramo costero de interés geomorfológico por sus materiales claros, barrancos y contacto con el mar.' description, 37.5292 latitude, -1.4166 longitude
+    SELECT 'cala-blanca' slug, 'Cala Blanca' name, 'Geológico' type, 'Tramo costero de interés geomorfológico por sus materiales claros, barrancos y contacto con el mar.' description, 37.48348 latitude, -1.46224 longitude
     UNION ALL
-    SELECT 'lomo-bas' slug, 'Lomo de Bas' name, 'Geológico' type, 'Relieve interior que ayuda a leer el contraste entre sierras litorales, ramblas y costa semiárida.' description, 37.4864 latitude, -1.4332 longitude
+    SELECT 'lomo-bas' slug, 'Lomo de Bas' name, 'Geológico' type, 'Relieve interior que ayuda a leer el contraste entre sierras litorales, ramblas y costa semiárida.' description, 37.5073 latitude, -1.46446 longitude
+    UNION ALL
+    SELECT 'calabardina' slug, 'Calabardina' name, 'Acceso' type, 'Núcleo costero de Águilas que funciona como puerta de entrada meridional al parque, al pie del macizo de Cabo Cope.' description, 37.43452 latitude, -1.50347 longitude
+    UNION ALL
+    SELECT 'playa-sombrerico' slug, 'Playa del Sombrerico' name, 'Natural' type, 'Playa con uno de los mejores tarayales (Tamarix) del litoral murciano; el PORN la cita por su bosque de tarais, hábitat 92D0.' description, 37.44479 latitude, -1.48198 longitude
 ) poi
 WHERE p.slug = 'cabo-cope-puntas-calnegre'
 ON DUPLICATE KEY UPDATE name = VALUES(name), description = VALUES(description), type = VALUES(type), latitude = VALUES(latitude), longitude = VALUES(longitude);

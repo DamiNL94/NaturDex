@@ -12,16 +12,19 @@ if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") {
 $dataFile = __DIR__ . "/../Data/progress.json";
 
 function readProgress($path) {
+    $empty = ["seenSpeciesIds" => [], "seenPoiIds" => [], "sightings" => (object) [], "updatedAt" => null];
     if (!file_exists($path)) {
-        return ["seenSpeciesIds" => [], "seenPoiIds" => [], "updatedAt" => null];
+        return $empty;
     }
     $raw = file_get_contents($path);
     $decoded = json_decode($raw, true);
     if (!is_array($decoded)) {
-        return ["seenSpeciesIds" => [], "seenPoiIds" => [], "updatedAt" => null];
+        return $empty;
     }
     $decoded["seenSpeciesIds"] = array_values(array_unique($decoded["seenSpeciesIds"] ?? []));
     $decoded["seenPoiIds"] = array_values(array_unique($decoded["seenPoiIds"] ?? []));
+    // sightings: mapa id -> { lat, lng, at } con la ubicación GPS donde el usuario vio la especie.
+    $decoded["sightings"] = isset($decoded["sightings"]) && is_array($decoded["sightings"]) ? $decoded["sightings"] : [];
     return $decoded;
 }
 
@@ -80,6 +83,25 @@ if ($method === "POST") {
     }
 
     $progress[$key] = $current;
+
+    // Ubicación GPS del avistamiento (solo especies). Se guarda si el navegador la aporta al marcar
+    // como vista; se elimina al desmarcar. La clave del mapa es el id como string.
+    if (!is_array($progress["sightings"])) {
+        $progress["sightings"] = [];
+    }
+    if ($type === "species") {
+        $sightKey = (string) $normalizedId;
+        $lat = isset($body["lat"]) && is_numeric($body["lat"]) ? (float) $body["lat"] : null;
+        $lng = isset($body["lng"]) && is_numeric($body["lng"]) ? (float) $body["lng"] : null;
+        if ($seen && $lat !== null && $lng !== null) {
+            $progress["sightings"][$sightKey] = ["lat" => $lat, "lng" => $lng, "at" => gmdate("c")];
+        } elseif (!$seen) {
+            unset($progress["sightings"][$sightKey]);
+        }
+    }
+    if (empty($progress["sightings"])) {
+        $progress["sightings"] = (object) [];
+    }
     $progress["updatedAt"] = gmdate("c");
 
     if (!writeProgress($dataFile, $progress)) {

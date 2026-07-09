@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NaturDex | Cabo Cope</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
     <link rel="stylesheet" href="Css/styles.css">
 </head>
 <body>
@@ -51,16 +53,20 @@
         <section class="map-stage" aria-label="Mapa y ficha de especie">
             <div id="map"></div>
             <div class="map-legend" aria-hidden="true">
-                <span><i class="legend-dot fauna"></i>Fauna</span>
-                <span><i class="legend-dot flora"></i>Flora</span>
+                <span><i class="legend-dot fauna"></i>Fauna vista</span>
+                <span><i class="legend-dot flora"></i>Flora vista</span>
                 <span><i class="legend-dot poi"></i>Punto de interés</span>
-                <span><i class="legend-dot habitat"></i>Hábitat</span>
-                <span><i class="legend-line"></i>Límite del parque (aproximado)</span>
+                <span><i class="legend-dot habitat"></i>Hábitat (aprox.)</span>
+                <span><i class="legend-line parque"></i>Parque Regional</span>
+                <span><i class="legend-line lic"></i>LIC (Red Natura 2000)</span>
+                <span><i class="legend-line zepa"></i>ZEPA (Red Natura 2000)</span>
+                <span><i class="legend-line trail"></i>Sendero GR-92</span>
             </div>
             <article id="detailPanel" class="detail-panel" aria-live="polite"></article>
         </section>
     </main>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
     <script src="Js/app.js"></script>
 </body>
 </html>

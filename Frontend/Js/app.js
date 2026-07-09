@@ -13,13 +13,53 @@ const state = {
   habitatLayers: new Map(),
   seenSpecies: new Set(),
   seenPois: new Set(),
+  sightings: new Map(),
   progressReady: false,
   parkWasComplete: false
 };
 
-const map = L.map('map', { zoomControl: false }).setView([37.5016, -1.44925], 12);
+// Capas base: mapa callejero (OSM) y ortofoto aérea (PNOA del IGN, vía WMTS en cuadrícula
+// GoogleMapsCompatible = mismo esquema z/x/y que las teselas XYZ de Leaflet).
+const baseOSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors', maxZoom: 19
+});
+const basePNOA = L.tileLayer(
+  'https://www.ign.es/wmts/pnoa-ma?layer=OI.OrthoimageCoverage&style=default&tilematrixset=GoogleMapsCompatible&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fjpeg&TileMatrix={z}&TileCol={x}&TileRow={y}',
+  { attribution: '&copy; Instituto Geográfico Nacional de España (PNOA)', maxZoom: 19 }
+);
+
+const map = L.map('map', { zoomControl: false, layers: [baseOSM] }).setView([37.5016, -1.44925], 12);
 L.control.zoom({ position: 'bottomright' }).addTo(map);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+
+// Grupos superponibles (cada uno se puede activar/desactivar desde el control de capas).
+// Zonas protegidas con geometría oficial (IMIDA/CARM). Parque Regional visible por defecto;
+// LIC y ZEPA quedan disponibles pero apagadas para no saturar el mapa de inicio.
+state.parqueLayer = L.layerGroup().addTo(map);
+state.licLayer = L.layerGroup();
+state.zepaLayer = L.layerGroup();
+state.trailLayer = L.layerGroup().addTo(map);
+state.habitatGroup = L.layerGroup().addTo(map);
+state.poiGroup = L.layerGroup().addTo(map);
+state.speciesCluster = L.markerClusterGroup({
+  maxClusterRadius: 50,
+  showCoverageOnHover: false,
+  spiderfyOnMaxZoom: true,
+  disableClusteringAtZoom: 16
+}).addTo(map);
+
+L.control.layers(
+  { 'Mapa': baseOSM, 'Satélite (PNOA)': basePNOA },
+  {
+    '🟩 Parque Regional': state.parqueLayer,
+    '🟦 LIC · Red Natura 2000': state.licLayer,
+    '🟪 ZEPA · Red Natura 2000': state.zepaLayer,
+    '🥾 Senderos (GR-92)': state.trailLayer,
+    '🌿 Hábitats': state.habitatGroup,
+    '⭐ Puntos de interés': state.poiGroup,
+    '🐾 Especies vistas': state.speciesCluster
+  },
+  { position: 'topright', collapsed: false }
+).addTo(map);
 
 const speciesList = document.querySelector('#speciesList');
 const detailPanel = document.querySelector('#detailPanel');
@@ -195,24 +235,39 @@ function poiDivIcon(seen) {
   });
 }
 
+function speciesLatLng(species) {
+  // La ubicación del avistamiento la aporta el GPS del móvil; si no la hay, se usa la coordenada
+  // representativa del catálogo como aproximación.
+  const s = state.sightings.get(species.id);
+  return s ? [s.lat, s.lng] : species.coordinates;
+}
+
 function renderMarkers() {
-  state.markers.forEach(marker => marker.remove());
+  // La ubicación de una especie en el mapa se revela solo cuando el usuario la marca como vista
+  // (es parte de la mecánica tipo pokédex, no un inventario de localizaciones pre-cargado).
+  state.speciesCluster.clearLayers();
   state.markers.clear();
   state.data.species.forEach(species => {
-    const marker = L.marker(species.coordinates, { icon: speciesDivIcon(species) }).addTo(map);
-    marker.bindPopup('<strong>' + escapeHtml(species.commonName) + '</strong><br>' + escapeHtml(species.scientificName));
+    if (!state.seenSpecies.has(species.id)) return;
+    const fromGps = state.sightings.has(species.id);
+    const marker = L.marker(speciesLatLng(species), { icon: speciesDivIcon(species) });
+    marker.bindPopup(
+      '<strong>' + escapeHtml(species.commonName) + '</strong><br>' + escapeHtml(species.scientificName)
+      + '<br><small>' + (fromGps ? '📍 Ubicación registrada por GPS' : '📍 Ubicación aproximada (sin GPS)') + '</small>'
+    );
     marker.on('click', () => selectSpecies(species.id, false));
+    state.speciesCluster.addLayer(marker);
     state.markers.set(species.id, marker);
   });
 }
 
 function renderPoiMarkers() {
-  state.poiMarkers.forEach(marker => marker.remove());
+  state.poiGroup.clearLayers();
   state.poiMarkers.clear();
   const pois = state.data.pointsOfInterest || [];
   pois.forEach(poi => {
     const seen = state.seenPois.has(poi.id);
-    const marker = L.marker(poi.coordinates, { icon: poiDivIcon(seen) }).addTo(map);
+    const marker = L.marker(poi.coordinates, { icon: poiDivIcon(seen) }).addTo(state.poiGroup);
     marker.bindPopup(
       '<strong>' + escapeHtml(poi.name) + '</strong><br>'
       + '<span class="popup-type">' + escapeHtml(poi.type) + '</span>'
@@ -227,18 +282,59 @@ function renderPoiMarkers() {
   });
 }
 
-function renderBoundary() {
-  const park = state.data.park;
-  if (!park || !park.boundary || !park.boundary.length) return;
-  L.polygon(park.boundary, {
-    color: '#b8533f',
-    weight: 2,
-    dashArray: '6 6',
-    fill: true,
-    fillColor: '#b8533f',
-    fillOpacity: 0.04,
-    interactive: false
-  }).addTo(map);
+// Estilos por figura de protección (geometría oficial de IMIDA/CARM).
+const PROTECTED_STYLES = {
+  parque: { color: '#2f6f4e', weight: 3, fill: true, fillColor: '#2f6f4e', fillOpacity: 0.04 },
+  lic: { color: '#1f6f8b', weight: 2, dashArray: '5 4', fill: true, fillColor: '#1f6f8b', fillOpacity: 0.06 },
+  zepa: { color: '#7b4fa0', weight: 2, dashArray: '2 5', fill: true, fillColor: '#7b4fa0', fillOpacity: 0.05 }
+};
+
+function protectedPopup(figura, nombre, codigo, ha) {
+  return '<strong>' + escapeHtml(nombre) + '</strong><br>'
+    + '<span class="popup-type">' + escapeHtml(figura) + (codigo ? ' · ' + escapeHtml(codigo) : '') + '</span>'
+    + (ha ? '<p>' + Math.round(ha).toLocaleString('es-ES') + ' ha</p>' : '');
+}
+
+function addProtectedLayer(group, geojson, style, popupFor) {
+  if (!geojson) return;
+  L.geoJSON(geojson, {
+    style,
+    onEachFeature: (feature, layer) => {
+      const p = feature.properties || {};
+      layer.bindPopup(popupFor(p));
+    }
+  }).addTo(group);
+}
+
+function renderTrails() {
+  if (!state.geo || !state.trailLayer) return;
+  state.trailLayer.clearLayers();
+  if (!state.geo.trails) return;
+  L.geoJSON(state.geo.trails, {
+    style: { color: '#c0662a', weight: 3, opacity: 0.9, lineJoin: 'round', lineCap: 'round' },
+    onEachFeature: (feature, layer) => {
+      const p = feature.properties || {};
+      layer.bindPopup(
+        '<strong>' + escapeHtml(p.name || 'Sendero') + '</strong><br>'
+        + '<span class="popup-type">' + escapeHtml(p.tipo || '') + '</span>'
+        + (p.descripcion ? '<p>' + escapeHtml(p.descripcion) + '</p>' : '')
+        + (p.source ? '<small>' + escapeHtml(p.source) + '</small>' : '')
+      );
+    }
+  }).addTo(state.trailLayer);
+}
+
+function renderProtectedAreas() {
+  if (!state.geo) return;
+  state.parqueLayer.clearLayers();
+  state.licLayer.clearLayers();
+  state.zepaLayer.clearLayers();
+  addProtectedLayer(state.parqueLayer, state.geo.parque, PROTECTED_STYLES.parque,
+    p => protectedPopup('Parque Regional', p.nombre || 'Calnegre y Cabo Cope', null, p.Hectareas));
+  addProtectedLayer(state.licLayer, state.geo.lic, PROTECTED_STYLES.lic,
+    p => protectedPopup('LIC (Red Natura 2000)', p.SITE_NAME || 'LIC', p.SITE_CODE, p.HECTARES));
+  addProtectedLayer(state.zepaLayer, state.geo.zepa, PROTECTED_STYLES.zepa,
+    p => protectedPopup('ZEPA (Red Natura 2000)', p.site_name || 'ZEPA', p.site_code, p.hectares));
 }
 
 function habitatSpeciesSeenCount(habitat) {
@@ -250,33 +346,55 @@ function isHabitatComplete(habitat) {
   return total > 0 && habitatSpeciesSeenCount(habitat) === total;
 }
 
+function bindHabitatPopup(layer, habitat) {
+  const complete = isHabitatComplete(habitat);
+  const seenCount = habitatSpeciesSeenCount(habitat);
+  const total = (habitat.speciesIds || []).length;
+  layer.bindPopup(
+    '<strong>' + escapeHtml(habitat.name) + '</strong><br>'
+    + '<span class="popup-type">' + escapeHtml(habitat.type || '') + (habitat.priority ? ' · prioritario UE' : '') + (habitat.code ? ' · cód. ' + escapeHtml(habitat.code) : '') + '</span>'
+    + '<p>' + escapeHtml(habitat.description) + '</p>'
+    + '<p class="habitat-progress-line">Especies vistas: <strong>' + seenCount + ' / ' + total + '</strong>' + (complete ? ' · ¡Hábitat completo! 🏅' : '') + '</p>'
+    + '<button type="button" class="habitat-filter-btn" data-habitat="' + escapeHtml(habitat.id) + '">Ver especies de este hábitat</button>'
+  );
+  layer.on('popupopen', event => {
+    const button = event.popup.getElement().querySelector('.habitat-filter-btn');
+    if (button) button.addEventListener('click', () => focusHabitat(habitat.id));
+  });
+}
+
 function renderHabitatZones() {
-  state.habitatLayers.forEach(layer => layer.remove());
+  state.habitatGroup.clearLayers();
   state.habitatLayers.clear();
   (state.data.habitats || []).forEach(habitat => {
-    if (!habitat.coordinates) return;
     const complete = isHabitatComplete(habitat);
-    const seenCount = habitatSpeciesSeenCount(habitat);
-    const total = (habitat.speciesIds || []).length;
-    const circle = L.circle(habitat.coordinates, {
-      radius: 420,
-      color: complete ? '#d89b30' : (habitat.color || '#2f6f4e'),
-      weight: complete ? 3 : 2,
-      fillColor: habitat.color || '#2f6f4e',
-      fillOpacity: 0.16
-    }).addTo(map);
-    circle.bindPopup(
-      '<strong>' + escapeHtml(habitat.name) + '</strong><br>'
-      + '<span class="popup-type">' + escapeHtml(habitat.type || '') + (habitat.priority ? ' · prioritario UE' : '') + (habitat.code ? ' · cód. ' + escapeHtml(habitat.code) : '') + '</span>'
-      + '<p>' + escapeHtml(habitat.description) + '</p>'
-      + '<p class="habitat-progress-line">Especies vistas: <strong>' + seenCount + ' / ' + total + '</strong>' + (complete ? ' · ¡Hábitat completo! 🏅' : '') + '</p>'
-      + '<button type="button" class="habitat-filter-btn" data-habitat="' + escapeHtml(habitat.id) + '">Ver especies de este hábitat</button>'
-    );
-    circle.on('popupopen', event => {
-      const button = event.popup.getElement().querySelector('.habitat-filter-btn');
-      if (button) button.addEventListener('click', () => focusHabitat(habitat.id));
-    });
-    state.habitatLayers.set(habitat.id, circle);
+    const geom = state.geo && state.geo.habitatGeom ? state.geo.habitatGeom[habitat.id] : null;
+    let layer;
+    if (geom) {
+      // Geometría real (polígono) servida desde Data/geo/habitats.geojson.
+      layer = L.geoJSON(geom, {
+        style: {
+          color: complete ? '#d89b30' : (habitat.color || '#2f6f4e'),
+          weight: complete ? 3 : 2,
+          fillColor: habitat.color || '#2f6f4e',
+          fillOpacity: 0.16
+        }
+      });
+    } else if (habitat.coordinates) {
+      // Sin polígono todavía: círculo aproximado en la posición representativa del hábitat.
+      layer = L.circle(habitat.coordinates, {
+        radius: 420,
+        color: complete ? '#d89b30' : (habitat.color || '#2f6f4e'),
+        weight: complete ? 3 : 2,
+        fillColor: habitat.color || '#2f6f4e',
+        fillOpacity: 0.16
+      });
+    } else {
+      return;
+    }
+    bindHabitatPopup(layer, habitat);
+    layer.addTo(state.habitatGroup);
+    state.habitatLayers.set(habitat.id, layer);
   });
 }
 
@@ -304,17 +422,24 @@ function selectSpecies(id, focusMap = true) {
   const species = state.data.species.find(item => item.id === state.selectedId);
   const marker = state.markers.get(state.selectedId);
   if (species && marker && focusMap) {
-    map.setView(species.coordinates, 14, { animate: true });
-    marker.openPopup();
+    // Si el marcador está dentro de un clúster, abrimos el clúster hasta mostrarlo y luego el popup.
+    if (map.hasLayer(state.speciesCluster) && typeof state.speciesCluster.zoomToShowLayer === 'function') {
+      state.speciesCluster.zoomToShowLayer(marker, () => marker.openPopup());
+    } else {
+      map.setView(speciesLatLng(species), 14, { animate: true });
+      marker.openPopup();
+    }
   }
 }
 
-async function persistProgress(type, id, seen) {
+async function persistProgress(type, id, seen, coords) {
   try {
+    const payload = { type, id, seen };
+    if (coords) { payload.lat = coords.lat; payload.lng = coords.lng; }
     const response = await fetch(API_BASE + '/progress.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ type, id, seen })
+      body: JSON.stringify(payload)
     });
     if (!response.ok) throw new Error('progress endpoint unavailable');
     state.progressReady = true;
@@ -323,17 +448,46 @@ async function persistProgress(type, id, seen) {
   }
 }
 
-function toggleSpeciesSeen(id) {
-  const numericId = Number(id);
-  const nowSeen = !state.seenSpecies.has(numericId);
-  if (nowSeen) state.seenSpecies.add(numericId); else state.seenSpecies.delete(numericId);
+function afterSeenChange() {
   renderSpeciesList();
   renderDetail();
   renderMarkers();
   renderHabitatZones();
   renderProgress();
   if (state.view === 'progress') renderProgressTab();
-  persistProgress('species', numericId, nowSeen);
+}
+
+// Al marcar una especie como vista, la ubicación del avistamiento la aporta el GPS del dispositivo.
+// Si el usuario deniega el permiso o no hay GPS, se marca igualmente como vista y el marcador cae
+// en la coordenada representativa del catálogo (con aviso en el popup).
+function captureSighting(numericId) {
+  const finish = (coords) => {
+    if (coords) state.sightings.set(numericId, coords);
+    renderMarkers();
+    if (state.selectedId === numericId) renderDetail();
+    persistProgress('species', numericId, true, coords);
+  };
+  if (!('geolocation' in navigator)) { finish(null); return; }
+  navigator.geolocation.getCurrentPosition(
+    pos => finish({ lat: pos.coords.latitude, lng: pos.coords.longitude }),
+    () => finish(null),
+    { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+  );
+}
+
+function toggleSpeciesSeen(id) {
+  const numericId = Number(id);
+  const nowSeen = !state.seenSpecies.has(numericId);
+  if (nowSeen) {
+    state.seenSpecies.add(numericId);
+    afterSeenChange();
+    captureSighting(numericId);
+  } else {
+    state.seenSpecies.delete(numericId);
+    state.sightings.delete(numericId);
+    afterSeenChange();
+    persistProgress('species', numericId, false);
+  }
 }
 
 function togglePoiSeen(id) {
@@ -468,6 +622,42 @@ async function loadData() {
   }
 }
 
+async function loadGeoFile(path) {
+  try {
+    const r = await fetch(path);
+    if (r.ok) return await r.json();
+  } catch (error) {
+    console.info('No se pudo cargar ' + path, error);
+  }
+  return null;
+}
+
+async function loadGeo() {
+  // Geometría del mapa desde GeoJSON. Las zonas protegidas son geometría oficial (IMIDA/CARM);
+  // los hábitats son opcionales (si no hay polígonos, se dibujan círculos aproximados).
+  state.geo = { parque: null, lic: null, zepa: null, trails: null, habitatGeom: {} };
+  const [parque, lic, zepa, trails, habitats] = await Promise.all([
+    loadGeoFile('Data/geo/parque-regional.geojson'),
+    loadGeoFile('Data/geo/lic.geojson'),
+    loadGeoFile('Data/geo/zepa.geojson'),
+    loadGeoFile('Data/geo/trails.geojson'),
+    loadGeoFile('Data/geo/habitats.geojson')
+  ]);
+  state.geo.parque = parque;
+  state.geo.lic = lic;
+  state.geo.zepa = zepa;
+  state.geo.trails = trails;
+  if (habitats) {
+    (habitats.features || []).forEach(f => {
+      const slug = f.properties && f.properties.slug;
+      const type = f.geometry && f.geometry.type;
+      if (slug && (type === 'Polygon' || type === 'MultiPolygon')) {
+        state.geo.habitatGeom[slug] = f.geometry;
+      }
+    });
+  }
+}
+
 async function loadProgress() {
   try {
     const response = await fetch(API_BASE + '/progress.php');
@@ -475,17 +665,26 @@ async function loadProgress() {
     const progress = await response.json();
     state.seenSpecies = new Set((progress.seenSpeciesIds || []).map(Number));
     state.seenPois = new Set(progress.seenPoiIds || []);
+    state.sightings = new Map();
+    const sightings = progress.sightings || {};
+    Object.keys(sightings).forEach(key => {
+      const s = sightings[key];
+      if (s && typeof s.lat === 'number' && typeof s.lng === 'number') {
+        state.sightings.set(Number(key), { lat: s.lat, lng: s.lng });
+      }
+    });
     state.progressReady = true;
   } catch (error) {
     console.info('Sin backend de progreso disponible; se registrará solo en esta sesión.', error);
   }
 }
 
-Promise.all([loadData(), loadProgress()])
+Promise.all([loadData(), loadProgress(), loadGeo()])
   .then(() => {
     state.selectedId = state.data.species[0]?.id ?? null;
     renderSummary();
-    renderBoundary();
+    renderProtectedAreas();
+    renderTrails();
     renderHabitatZones();
     renderMarkers();
     renderPoiMarkers();

@@ -515,8 +515,8 @@
             "name": "Torre de Cope",
             "type": "Cultural",
             "coordinates": [
-                37.4219,
-                -1.5035
+                37.43695,
+                -1.48441
             ],
             "description": "Torre vigía costera catalogada como Bien de Interés Cultural, vinculada a la defensa histórica del litoral."
         },
@@ -525,8 +525,8 @@
             "name": "Cabo Cope",
             "type": "Paisajístico",
             "coordinates": [
-                37.4209,
-                -1.4917
+                37.42283,
+                -1.49217
             ],
             "description": "Promontorio litoral de referencia visual del parque y mirador natural hacia la bahía."
         },
@@ -535,8 +535,8 @@
             "name": "Puntas de Calnegre",
             "type": "Paisajístico",
             "coordinates": [
-                37.5446,
-                -1.3975
+                37.51058,
+                -1.40198
             ],
             "description": "Núcleo litoral y tramo de costa con playas, gravas, calas y vistas abiertas al Mediterráneo."
         },
@@ -545,8 +545,8 @@
             "name": "Playa de Calnegre",
             "type": "Paisajístico",
             "coordinates": [
-                37.5389,
-                -1.4037
+                37.51155,
+                -1.40063
             ],
             "description": "Cala de arena y grava dentro del entorno protegido, útil como punto de acceso a la ruta litoral."
         },
@@ -555,8 +555,8 @@
             "name": "Cala Blanca",
             "type": "Geológico",
             "coordinates": [
-                37.5292,
-                -1.4166
+                37.48348,
+                -1.46224
             ],
             "description": "Tramo costero de interés geomorfológico por sus materiales claros, barrancos y contacto con el mar."
         },
@@ -565,10 +565,30 @@
             "name": "Lomo de Bas",
             "type": "Geológico",
             "coordinates": [
-                37.4864,
-                -1.4332
+                37.5073,
+                -1.46446
             ],
             "description": "Relieve interior que ayuda a leer el contraste entre sierras litorales, ramblas y costa semiárida."
+        },
+        {
+            "id": "calabardina",
+            "name": "Calabardina",
+            "type": "Acceso",
+            "description": "Núcleo costero de Águilas que funciona como puerta de entrada meridional al parque, al pie del macizo de Cabo Cope.",
+            "coordinates": [
+                37.43452,
+                -1.50347
+            ]
+        },
+        {
+            "id": "playa-sombrerico",
+            "name": "Playa del Sombrerico",
+            "type": "Natural",
+            "description": "Playa con uno de los mejores tarayales (Tamarix) del litoral murciano; el PORN la cita por su bosque de tarais, hábitat 92D0.",
+            "coordinates": [
+                37.44479,
+                -1.48198
+            ]
         }
     ],
     "species": [
