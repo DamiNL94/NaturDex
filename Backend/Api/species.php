@@ -15,7 +15,7 @@ if (!$park) {
     exit;
 }
 
-$habitatStmt = $conn->prepare("SELECT id, slug, code, name, habitat_type, description, is_priority, latitude, longitude, color FROM habitats WHERE park_id = ? ORDER BY name");
+$habitatStmt = $conn->prepare("SELECT id, slug, code, name, habitat_type, description, is_priority, latitude, longitude, color, review_note FROM habitats WHERE park_id = ? ORDER BY name");
 $habitatStmt->bind_param("i", $park["id"]);
 $habitatStmt->execute();
 $habitatResult = $habitatStmt->get_result();
@@ -38,6 +38,11 @@ while ($row = $habitatResult->fetch_assoc()) {
             ? [(float) $row["latitude"], (float) $row["longitude"]]
             : null,
         "color" => $row["color"],
+        // Foto del hábitat por convención (Img/habitats/<slug>.jpg), igual que en el park.json
+        // empaquetado. Si el archivo aún no existe, el frontend muestra una portada temática
+        // generada; en cuanto se suba la foto con ese nombre, aparece automáticamente.
+        "image" => "Img/habitats/" . $slug . ".jpg",
+        "reviewNote" => $row["review_note"],
         "speciesIds" => []
     ];
 }
@@ -98,7 +103,7 @@ while ($row = $result->fetch_assoc()) {
     ];
 }
 
-$poiStmt = $conn->prepare("SELECT slug, name, type, description, latitude, longitude FROM points_of_interest WHERE park_id = ? ORDER BY name");
+$poiStmt = $conn->prepare("SELECT slug, name, type, description, latitude, longitude, image_url, source, is_approx FROM points_of_interest WHERE park_id = ? ORDER BY name");
 $poiStmt->bind_param("i", $park["id"]);
 $poiStmt->execute();
 $poiResult = $poiStmt->get_result();
@@ -109,7 +114,10 @@ while ($row = $poiResult->fetch_assoc()) {
         "name" => $row["name"],
         "type" => $row["type"],
         "description" => $row["description"],
-        "coordinates" => [(float) $row["latitude"], (float) $row["longitude"]]
+        "coordinates" => [(float) $row["latitude"], (float) $row["longitude"]],
+        "image" => $row["image_url"],
+        "source" => $row["source"],
+        "approx" => (bool) $row["is_approx"]
     ];
 }
 

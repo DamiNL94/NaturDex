@@ -85,31 +85,15 @@
     },
     "habitats": [
         {
-            "id": "posidonia",
-            "code": "1120",
-            "name": "Praderas de Posidonia oceanica",
-            "type": "Marino",
-            "priority": true,
-            "coordinates": [
-                37.4912,
-                -1.4777
-            ],
-            "color": "#1f6f8b",
-            "description": "Praderas submarinas frente al litoral rocoso y las calas, esenciales para la biodiversidad marina y la protección de la costa.",
-            "speciesIds": [
-                1,
-                8
-            ]
-        },
-        {
             "id": "acantilados",
+            "image": "Img\/habitats\/acantilados.jpg",
             "code": "1240",
             "name": "Acantilados mediterráneos",
             "type": "Litoral",
             "priority": false,
             "coordinates": [
-                37.4878,
-                -1.4708
+                37.423855,
+                -1.494704
             ],
             "color": "#8b5e34",
             "description": "Franja de cantiles, roquedos y vegetación litoral adaptada al salitre, el viento y la insolación.",
@@ -123,17 +107,20 @@
                 32,
                 74,
                 75
-            ]
+            ],
+            "reviewNote": null,
+            "areaHa": 21.9
         },
         {
             "id": "matorral-semiarido",
+            "image": "Img\/habitats\/matorral-semiarido.jpg",
             "code": "5330",
             "name": "Matorral semiárido termomediterráneo",
             "type": "Terrestre",
             "priority": false,
             "coordinates": [
-                37.5075,
-                -1.4422
+                37.501195,
+                -1.449516
             ],
             "color": "#2f6f4e",
             "description": "Matorral bajo, tomillares y arbustos iberoafricanos característicos del sureste árido.",
@@ -183,17 +170,20 @@
                 76,
                 77,
                 79
-            ]
+            ],
+            "reviewNote": null,
+            "areaHa": 1256.5
         },
         {
             "id": "azufaifar",
+            "image": "Img\/habitats\/azufaifar.jpg",
             "code": "5220",
             "name": "Matorrales arborescentes de Ziziphus",
             "type": "Terrestre",
             "priority": true,
             "coordinates": [
-                37.5099,
-                -1.4631
+                37.501195,
+                -1.449516
             ],
             "color": "#6f8f3a",
             "description": "Formaciones de azufaifo ligadas a ambientes cálidos y secos, con alto valor como refugio de fauna.",
@@ -204,49 +194,20 @@
                 7,
                 18,
                 39
-            ]
-        },
-        {
-            "id": "banco-arena",
-            "code": "1110",
-            "name": "Bancos de arena cubiertos permanentemente por agua marina poco profunda",
-            "type": "Marino",
-            "priority": false,
-            "coordinates": [
-                37.483,
-                -1.478
             ],
-            "color": "#3a8fae",
-            "description": "Fondos arenosos someros frente al litoral del parque, hábitat de interés comunitario ligado a la dinámica sedimentaria costera.",
-            "speciesIds": [
-                19
-            ]
-        },
-        {
-            "id": "arrecifes",
-            "code": "1170",
-            "name": "Arrecifes",
-            "type": "Marino",
-            "priority": false,
-            "coordinates": [
-                37.48,
-                -1.474
-            ],
-            "color": "#0f5f78",
-            "description": "Sustratos rocosos submarinos e intermareales que sostienen comunidades bentónicas de gran diversidad.",
-            "speciesIds": [
-                19
-            ]
+            "reviewNote": null,
+            "areaHa": 1218
         },
         {
             "id": "matorral-halofilo",
+            "image": "Img\/habitats\/matorral-halofilo.jpg",
             "code": "1420",
             "name": "Matorrales halófilos mediterráneos y termoatlánticos",
             "type": "Terrestre",
             "priority": false,
             "coordinates": [
-                37.473,
-                -1.481
+                37.482116,
+                -1.464183
             ],
             "color": "#7a6a3a",
             "description": "Vegetación adaptada a los suelos salinos de la marina de Cope, con especies como el albardín, el cambrón y la salsola.",
@@ -262,17 +223,20 @@
                 54,
                 69,
                 75
-            ]
+            ],
+            "reviewNote": null,
+            "areaHa": 14.9
         },
         {
             "id": "matorral-halonitrofilo",
+            "image": "Img\/habitats\/matorral-halonitrofilo.jpg",
             "code": "1430",
             "name": "Matorrales halo-nitrófilos",
             "type": "Terrestre",
             "priority": false,
             "coordinates": [
-                37.478,
-                -1.469
+                37.464167,
+                -1.480269
             ],
             "color": "#9a7b3f",
             "description": "Comunidades arbustivas de suelos salinos alterados y bordes de caminos litorales.",
@@ -281,17 +245,20 @@
                 23,
                 24,
                 25
-            ]
+            ],
+            "reviewNote": null,
+            "areaHa": 251.5
         },
         {
             "id": "galeria-ribera",
+            "image": "Img\/habitats\/galeria-ribera.jpg",
             "code": "92D0",
             "name": "Galerías y matorrales ribereños termomediterráneos",
             "type": "Terrestre",
             "priority": false,
             "coordinates": [
-                37.499,
-                -1.461
+                37.439468,
+                -1.487286
             ],
             "color": "#3f7a5a",
             "description": "Vegetación ligada a ramblas y cursos de agua estacionales que atraviesan el parque.",
@@ -299,18 +266,21 @@
                 16,
                 34,
                 44
-            ]
+            ],
+            "reviewNote": null,
+            "areaHa": 33.8
         },
         {
             "id": "veg-anual-desechos-marinos",
+            "image": "Img\/habitats\/veg-anual-desechos-marinos.jpg",
             "code": "1210",
             "name": "Vegetación anual sobre desechos marinos acumulados",
             "type": "Litoral",
             "priority": false,
             "rarity": "Muy raro",
             "coordinates": [
-                37.539,
-                -1.404
+                37.466605,
+                -1.473536
             ],
             "color": "#c9a66b",
             "description": "Comunidades pioneras de plantas anuales (quenopodiáceas nitrófilas) que colonizan la línea de acumulación de restos marinos (posidonia, algas) en las playas del parque.",
@@ -320,113 +290,98 @@
                 62,
                 63,
                 64
-            ]
+            ],
+            "reviewNote": null,
+            "areaHa": 2.6
         },
         {
             "id": "estepas-salinas-albardinal",
+            "image": "Img\/habitats\/estepas-salinas-albardinal.jpg",
             "code": "1510",
             "name": "Estepas salinas mediterráneas (Limonietalia)",
             "type": "Terrestre",
             "priority": true,
             "rarity": "Raro",
             "coordinates": [
-                37.4735,
-                -1.4845
+                37.50201,
+                -1.42999
             ],
             "color": "#b3577a",
             "description": "Pastizal de albardín (Lygeum spartum) sobre suelos salinos profundos de la marina de Cope, asociado a siemprevivas del género Limonium; asociación descrita como Limonio insignis-Lygeetum sparti. Hábitat prioritario de la Directiva 92\/43\/CEE.",
             "speciesIds": [
                 23,
                 32
-            ]
+            ],
+            "reviewNote": null,
+            "areaHa": 9.5
         },
         {
             "id": "dunas-embrionarias",
+            "image": "Img\/habitats\/dunas-embrionarias.jpg",
             "code": "2110",
             "name": "Dunas móviles embrionarias",
             "type": "Litoral",
             "priority": false,
             "rarity": "Muy raro",
             "coordinates": [
-                37.541,
-                -1.4008
+                37.466605,
+                -1.473536
             ],
             "color": "#e0c56a",
             "description": "Primer cordón dunar en formación activa junto a la orilla, con vegetación psamófila pionera que fija arena de forma incipiente.",
             "speciesIds": [
                 43
-            ]
+            ],
+            "reviewNote": null,
+            "areaHa": 2.6
         },
         {
             "id": "dunas-malcomietalia",
+            "image": "Img\/habitats\/dunas-malcomietalia.jpg",
             "code": "2230",
             "name": "Dunas con céspedes del Malcomietalia",
             "type": "Litoral",
             "priority": false,
             "rarity": "Muy raro",
             "coordinates": [
-                37.5405,
-                -1.401
+                37.507063,
+                -1.416075
             ],
             "color": "#d9b97e",
             "description": "Céspedes anuales de pequeño porte sobre arenas dunares estabilizadas, propios de claros entre matorral dunar.",
-            "speciesIds": []
-        },
-        {
-            "id": "dunas-brachypodietalia",
-            "code": "2240",
-            "name": "Dunas con céspedes del Brachypodietalia y de plantas anuales",
-            "type": "Litoral",
-            "priority": false,
-            "rarity": "Sin determinar",
-            "coordinates": [
-                37.54,
-                -1.4015
-            ],
-            "color": "#cdae7a",
-            "description": "Pastizales dunares algo más consolidados, con gramíneas vivaces y anuales sobre arenas semifijas del litoral del parque.",
-            "speciesIds": []
+            "speciesIds": [],
+            "reviewNote": "Cartografiado con una fuente distinta a la del resto de hábitats: la cartografía de hábitats terrestres de la Región de Murcia (CARM, 2020), porque este código no aparece en los recintos del Inventario Español de Hábitats (INB) dentro del parque. Su presencia y delimitación exactas dentro del parque quedan pendientes de revisión.",
+            "areaHa": 3.8
         },
         {
             "id": "rios-glaucium",
+            "image": "Img\/habitats\/rios-glaucium.jpg",
             "code": "3250",
             "name": "Ríos mediterráneos de caudal permanente con Glaucium flavum",
             "type": "Terrestre",
             "priority": false,
             "rarity": "Muy raro",
             "coordinates": [
-                37.4925,
-                -1.4575
+                37.500643,
+                -1.478322
             ],
             "color": "#6f9270",
             "description": "Cauces y ramblas con lámina de agua permanente o semipermanente, colonizados por la amapola marina (Glaucium flavum) y vegetación de gravas fluviales.",
-            "speciesIds": []
-        },
-        {
-            "id": "rios-paspalo-agrostidion",
-            "code": "3280",
-            "name": "Ríos mediterráneos de caudal permanente del Paspalo-Agrostidion, con cortinas de Salix y Populus",
-            "type": "Terrestre",
-            "priority": false,
-            "rarity": "Muy raro",
-            "coordinates": [
-                37.495,
-                -1.4595
-            ],
-            "color": "#557a5c",
-            "description": "Vegetación herbácea higrófila de márgenes de rambla con caudal permanente, en contacto con galerías arboladas de sauces y álamos donde estas se conservan.",
-            "speciesIds": []
+            "speciesIds": [],
+            "reviewNote": "Cartografiado con una fuente distinta a la del resto de hábitats: la cartografía de hábitats terrestres de la Región de Murcia (CARM, 2020), porque este código no aparece en los recintos del Inventario Español de Hábitats (INB) dentro del parque. Su presencia y delimitación exactas dentro del parque quedan pendientes de revisión.",
+            "areaHa": 2.7
         },
         {
             "id": "sabinar-juniperus",
+            "image": "Img\/habitats\/sabinar-juniperus.jpg",
             "code": "5210",
             "name": "Matorrales arborescentes de Juniperus spp.",
             "type": "Terrestre",
             "priority": false,
             "rarity": "No raro",
             "coordinates": [
-                37.5001,
-                -1.4384
+                37.427725,
+                -1.486042
             ],
             "color": "#3f6b4a",
             "description": "Formación arborescente de sabina negral (Juniperus phoenicea), Chamaeropo humilis-Juniperetum phoeniceae, sobre laderas y cerros del interior del parque.",
@@ -437,66 +392,60 @@
                 68,
                 76,
                 77
-            ]
+            ],
+            "reviewNote": "Cartografiado con una fuente distinta a la del resto de hábitats: la cartografía de hábitats terrestres de la Región de Murcia (CARM, 2020), porque este código no aparece en los recintos del Inventario Español de Hábitats (INB) dentro del parque. Su presencia y delimitación exactas dentro del parque quedan pendientes de revisión.",
+            "areaHa": 115.3
         },
         {
             "id": "prados-alysso-sedion",
+            "image": "Img\/habitats\/prados-alysso-sedion.jpg",
             "code": "6110",
             "name": "Prados calcáreos cársticos o basófilos del Alysso-Sedion albi",
             "type": "Terrestre",
             "priority": true,
             "rarity": "Raro",
             "coordinates": [
-                37.5035,
-                -1.446
+                37.427725,
+                -1.486042
             ],
             "color": "#9c8a5e",
             "description": "Pastizales abiertos de terófitos y crasuláceas sobre rellanos y suelos esqueléticos calcáreos de los cerros carbonatados. Hábitat prioritario de la Directiva 92\/43\/CEE.",
-            "speciesIds": []
+            "speciesIds": [],
+            "reviewNote": "Cartografiado con una fuente distinta a la del resto de hábitats: la cartografía de hábitats terrestres de la Región de Murcia (CARM, 2020), porque este código no aparece en los recintos del Inventario Español de Hábitats (INB) dentro del parque. Su presencia y delimitación exactas dentro del parque quedan pendientes de revisión.",
+            "areaHa": 82.6
         },
         {
             "id": "subestepa-thero-brachypodietea",
+            "image": "Img\/habitats\/subestepa-thero-brachypodietea.jpg",
             "code": "6220",
             "name": "Zonas subestépicas de gramíneas y anuales del Thero-Brachypodietea",
             "type": "Terrestre",
             "priority": true,
             "rarity": "No raro",
             "coordinates": [
-                37.508,
-                -1.44
+                37.429269,
+                -1.489635
             ],
             "color": "#b0a066",
             "description": "Pastizales terofíticos mediterráneos sobre suelos oligotróficos, con gramíneas anuales y matorral disperso; hábitat prioritario de la Directiva 92\/43\/CEE muy extendido en los llanos y laderas abiertas del parque.",
             "speciesIds": [
                 70,
                 71
-            ]
-        },
-        {
-            "id": "turberas-cladium",
-            "code": "7210",
-            "name": "Turberas calcáreas de Cladium mariscus",
-            "type": "Terrestre",
-            "priority": false,
-            "rarity": "Muy raro",
-            "coordinates": [
-                37.4995,
-                -1.462
             ],
-            "color": "#4a7a6a",
-            "description": "Formación higrófila puntual dominada por el mansiego (Cladium mariscus) en puntos encharcados o de surgencia junto a ramblas del parque.",
-            "speciesIds": []
+            "reviewNote": null,
+            "areaHa": 61.6
         },
         {
             "id": "roquedos-casmofiticos",
+            "image": "Img\/habitats\/roquedos-casmofiticos.jpg",
             "code": "8210",
             "name": "Pendientes rocosas calcícolas con vegetación casmofítica",
             "type": "Terrestre",
             "priority": false,
             "rarity": "Raro",
             "coordinates": [
-                37.4945,
-                -1.4595
+                37.426388,
+                -1.487499
             ],
             "color": "#8a7a6a",
             "description": "Roquedos y cortados calcáreos con vegetación fisurícola especializada; asociación Cosentinio bivalentis-Teucrietum freynii, con el teucrio de Freyn (Teucrium freynii) como especie característica.",
@@ -506,7 +455,9 @@
                 46,
                 74,
                 78
-            ]
+            ],
+            "reviewNote": null,
+            "areaHa": 145.1
         }
     ],
     "pointsOfInterest": [
@@ -514,81 +465,209 @@
             "id": "torre-cope",
             "name": "Torre de Cope",
             "type": "Cultural",
+            "description": "Torre vigía costera del siglo XVI, construida para la defensa frente a la piratería berberisca que asolaba el litoral murciano. Catalogada como Bien de Interés Cultural. Junto a ella se levantó la Ermita de Cope, que daba servicio religioso a su guarnición.",
             "coordinates": [
                 37.43695,
                 -1.48441
             ],
-            "description": "Torre vigía costera catalogada como Bien de Interés Cultural, vinculada a la defensa histórica del litoral."
+            "image": "Img\/poi\/torre-cope.jpg",
+            "source": "OpenStreetMap contributors (ODbL); Wikimedia Commons (foto: Jose Lorca, dominio público); Región de Murcia Digital (CARM)",
+            "approx": false
         },
         {
             "id": "cabo-cope",
             "name": "Cabo Cope",
             "type": "Paisajístico",
+            "description": "Promontorio litoral y mirador natural sobre la bahía de Mazarrón. El macizo calizo de Cabo Cope está catalogado como Lugar de Interés Geológico: en él aflora muy bien representado el Complejo Maláguide (calizas, micaesquistos y cuarcitas), con interés geomorfológico, estratigráfico y neotectónico, además de su interés cultural.",
             "coordinates": [
                 37.42283,
                 -1.49217
             ],
-            "description": "Promontorio litoral de referencia visual del parque y mirador natural hacia la bahía."
+            "image": "Img\/poi\/cabo-cope.jpg",
+            "source": "Anexo I del proyecto de PORN del Parque Regional Calnegre y Cabo Cope (ANSE\/CARM); Wikimedia Commons (foto: J.Alberto, CC BY-SA 4.0)",
+            "approx": false
         },
         {
             "id": "puntas-calnegre",
             "name": "Puntas de Calnegre",
             "type": "Paisajístico",
+            "description": "Núcleo litoral en el extremo norte del parque, con playas, gravas, calas y vistas abiertas al Mediterráneo, en el tramo donde Lomo de Bas termina en el mar.",
             "coordinates": [
                 37.51058,
                 -1.40198
             ],
-            "description": "Núcleo litoral y tramo de costa con playas, gravas, calas y vistas abiertas al Mediterráneo."
+            "image": "Img\/poi\/puntas-calnegre.jpg",
+            "source": "OpenStreetMap contributors (ODbL); Wikimedia Commons (foto: Pau lopezca, CC BY-SA 3.0 ES); Región de Murcia Digital (CARM)",
+            "approx": false
         },
         {
             "id": "playa-calnegre",
             "name": "Playa de Calnegre",
             "type": "Paisajístico",
+            "description": "Cala de arena y grava dentro del entorno protegido, punto de acceso habitual a la ruta litoral del GR-92 hacia Puntas de Calnegre.",
             "coordinates": [
                 37.51155,
                 -1.40063
             ],
-            "description": "Cala de arena y grava dentro del entorno protegido, útil como punto de acceso a la ruta litoral."
+            "image": "Img\/poi\/playa-calnegre.jpg",
+            "source": "OpenStreetMap contributors (ODbL); Wikimedia Commons (foto: Mueca, CC BY-SA 4.0)",
+            "approx": false
         },
         {
             "id": "cala-blanca",
             "name": "Cala Blanca",
             "type": "Geológico",
+            "description": "Tramo costero de interés geomorfológico. Aquí afloran cuarcitas, micaesquistos, filitas y conglomerados triásicos del Complejo Alpujárride, visibles en los barrancos y el contacto con el mar.",
             "coordinates": [
                 37.48348,
                 -1.46224
             ],
-            "description": "Tramo costero de interés geomorfológico por sus materiales claros, barrancos y contacto con el mar."
+            "image": "",
+            "source": "Anexo I del proyecto de PORN del Parque Regional Calnegre y Cabo Cope (ANSE\/CARM)",
+            "approx": false
         },
         {
             "id": "lomo-bas",
             "name": "Lomo de Bas",
             "type": "Geológico",
+            "description": "Relieve interior que ayuda a leer el contraste entre las sierras litorales, las ramblas y la costa semiárida. Sus laderas suaves enlazan geomorfológicamente con la unidad de la Marina de Cope.",
             "coordinates": [
                 37.5073,
                 -1.46446
             ],
-            "description": "Relieve interior que ayuda a leer el contraste entre sierras litorales, ramblas y costa semiárida."
+            "image": "Img\/poi\/lomo-bas.jpg",
+            "source": "Anexo I del proyecto de PORN del Parque Regional Calnegre y Cabo Cope (ANSE\/CARM); Wikimedia Commons (foto: Mabelcalabuig, CC BY-SA 3.0 ES)",
+            "approx": false
         },
         {
             "id": "calabardina",
             "name": "Calabardina",
             "type": "Acceso",
-            "description": "Núcleo costero de Águilas que funciona como puerta de entrada meridional al parque, al pie del macizo de Cabo Cope.",
+            "description": "Núcleo costero de Águilas que funciona como puerta de entrada meridional al parque, al pie del macizo de Cabo Cope. En época púnica y romana funcionó como fondeadero protegido de los vientos de levante; la zona ha dado hallazgos continuos de ánforas de origen púnico y de todos los periodos romanos por su buen abrigo natural.",
             "coordinates": [
                 37.43452,
                 -1.50347
-            ]
+            ],
+            "image": "Img\/poi\/calabardina.jpg",
+            "source": "Región de Murcia Digital (CARM) - Águilas, Yacimientos; Wikimedia Commons (foto: Rietje Swart, CC BY-SA 2.0)",
+            "approx": false
         },
         {
             "id": "playa-sombrerico",
             "name": "Playa del Sombrerico",
             "type": "Natural",
-            "description": "Playa con uno de los mejores tarayales (Tamarix) del litoral murciano; el PORN la cita por su bosque de tarais, hábitat 92D0.",
+            "description": "Playa con uno de los mejores tarayales (Tamarix) del litoral murciano; el PORN la cita por su bosque de tarais, representativo del hábitat de interés comunitario 92D0 (galerías y matorrales ribereños termomediterráneos).",
             "coordinates": [
                 37.44479,
                 -1.48198
-            ]
+            ],
+            "image": "",
+            "source": "Documento previo del PORN de Calnegre y Cabo Cope (CARM, 2021); OpenStreetMap contributors (ODbL)",
+            "approx": false
+        },
+        {
+            "id": "ermita-cope",
+            "name": "Ermita de Cope",
+            "type": "Religioso",
+            "description": "Ermita del siglo XVIII que daba servicio religioso a la guarnición de la Torre de Cope, junto a la que se levanta. Según la tradición local recogida en fuentes de turismo regional, fue destruida por un incendio provocado en un ataque pirata, salvándose solo la talla de la cabeza del Cristo, hoy muy venerada; este episodio concreto está pendiente de contrastar con una fuente documental primaria.",
+            "coordinates": [
+                37.43563,
+                -1.48484
+            ],
+            "image": "",
+            "source": "OpenStreetMap contributors (ODbL); tradición oral recogida en fuentes de turismo regional (episodio del incendio pendiente de contrastar con fuente documental primaria)",
+            "approx": false
+        },
+        {
+            "id": "cueva-c6",
+            "name": "Cueva C.6",
+            "type": "Arqueológico",
+            "description": "Cavidad kárstica costera inundada hace miles de años, en la ladera del macizo de Cope más expuesta a los temporales de levante. Conserva restos cerámicos del tránsito Neolítico final-Edad del Bronce (c. 3000 a.C.), el registro arqueológico más antiguo conocido en el macizo, similar a otras cuevas sumergidas del litoral Cartagena-Mazarrón.",
+            "coordinates": [
+                37.427,
+                -1.493
+            ],
+            "image": "",
+            "source": "cuevasdemurcia.com - Cueva C.6 (Águilas); Región de Murcia Digital - Águilas, Yacimientos",
+            "approx": true
+        },
+        {
+            "id": "dunas-fosiles-cope",
+            "name": "Dunas fósiles de Cabo Cope",
+            "type": "Geológico",
+            "description": "Playas y dunas fósiles del Eutirreniense (Pleistoceno), formadas por calcarenitas de origen marino litoral muy erosionables por la acción del agua, que han originado numerosas oquedades y cavidades costeras. El Anexo I del proyecto de PORN las señala como uno de los valores geomorfológicos y paleogeográficos más singulares de la línea de costa del parque.",
+            "coordinates": [
+                37.441,
+                -1.4855
+            ],
+            "image": "",
+            "source": "Anexo I del proyecto de PORN del Parque Regional Calnegre y Cabo Cope (ANSE\/CARM)",
+            "approx": true
+        },
+        {
+            "id": "yacimientos-garrobillo",
+            "name": "Yacimientos paleontológicos de Garrobillo",
+            "type": "Paleontológico",
+            "description": "Garrobillo 1 y Garrobillo 2, parte de la Cuenca de Cope (Arco de Águilas, Zonas Internas Béticas). Garrobillo 1 muestra el contacto de los materiales neógenos con el basamento metamórfico bético; Garrobillo 2 conserva calcarenitas bioclásticas con concentraciones del foraminífero Lenticulina spp. y de pectínidos de origen tormentoso.",
+            "coordinates": [
+                37.494,
+                -1.498
+            ],
+            "image": "",
+            "source": "Anexo I del proyecto de PORN del Parque Regional Calnegre y Cabo Cope (ANSE\/CARM). Posición representativa del paraje El Garrobillo; las coordenadas exactas de cada yacimiento no están publicadas.",
+            "approx": true
+        },
+        {
+            "id": "yacimientos-cope-galera",
+            "name": "Yacimientos paleontológicos de Galera-Cope",
+            "type": "Paleontológico",
+            "description": "Galera-1, Cope 1 y Cope 2, en el extremo sur de la Cuenca de Cope. Galera-1 documenta la transgresión pliocena mediante facies excepcionales de washover fans; Cope 1 y Cope 2, junto al saladar, aportan marcadores bioestratigráficos que sitúan temporalmente los eventos de la cuenca durante el Plioceno.",
+            "coordinates": [
+                37.474,
+                -1.475
+            ],
+            "image": "",
+            "source": "Anexo I del proyecto de PORN del Parque Regional Calnegre y Cabo Cope (ANSE\/CARM). Posición representativa junto al saladar y la Playa de la Galera; las coordenadas exactas de cada yacimiento no están publicadas.",
+            "approx": true
+        },
+        {
+            "id": "fuente-piratas",
+            "name": "Fuente de los piratas",
+            "type": "Natural",
+            "description": "Ensenada de la Fuente, cala al este de Cabo Cope que toma su nombre de un manantial de agua dulce junto al que se levanta la Torre de Cope. Fue punto de aguada para la guarnición de la torre y, según la tradición oral recogida en fuentes de turismo regional, también lo usaban las embarcaciones berberiscas que hostigaban la costa (de ahí el nombre popular).",
+            "coordinates": [
+                37.4368,
+                -1.4855
+            ],
+            "image": "",
+            "source": "Wikipedia - \"Cabo Cope\"; descubriendomurcia.com; tradición oral recogida en fuentes de turismo regional (nombre popular pendiente de confirmar con fuente documental primaria)",
+            "approx": true
+        },
+        {
+            "id": "punta-cabricas",
+            "name": "Punta de las Cabricas",
+            "type": "Paisajístico",
+            "description": "Saliente rocoso del litoral entre Cabo Cope y Calabardina, con acantilados característicos de este tramo costero del parque y buenas vistas hacia el macizo de Cope.",
+            "coordinates": [
+                37.43294,
+                -1.47693
+            ],
+            "image": "",
+            "source": "OpenStreetMap contributors (ODbL)",
+            "approx": false
+        },
+        {
+            "id": "ruinas-garrobillo",
+            "name": "Ruinas de la aldea de El Garrobillo",
+            "type": "Cultural",
+            "description": "Restos de El Garrobillo, antigua pedanía agrícola del término de Lorca en la Marina de Cope, hoy despoblada. Junto a Ramonete, forma parte de los núcleos rurales tradicionales vinculados al aprovechamiento agrícola histórico de esta zona del parque.",
+            "coordinates": [
+                37.49241,
+                -1.49957
+            ],
+            "image": "",
+            "source": "OpenStreetMap contributors (ODbL) - topónimo \"El Garrobillo\"; referencias generales a las pedanías históricas de Ramonete y El Garrobillo en el término de Lorca. Ubicación aproximada (posición del paraje, no de una edificación concreta verificada en campo).",
+            "approx": true
         }
     ],
     "species": [
@@ -734,8 +813,7 @@
             "rarityScore": 4,
             "featured": false,
             "habitatIds": [
-                "acantilados",
-                "posidonia"
+                "acantilados"
             ],
             "coordinates": [
                 37.487,
@@ -1140,85 +1218,6 @@
             ],
             "seasonality": "Todo el año",
             "source": "Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre; Wikipedia",
-            "reviewNote": null
-        },
-        {
-            "id": 19,
-            "commonName": "Pardela cenicienta",
-            "scientificName": "Calonectris diomedea",
-            "kingdom": "fauna",
-            "group": "Ave marina",
-            "taxonomy": {
-                "kingdom": "Animalia",
-                "phylum": "Chordata",
-                "class": "Aves",
-                "order": "Procellariiformes",
-                "family": "Procellariidae",
-                "genus": "Calonectris"
-            },
-            "habitat": "Litoral rocoso y aguas costeras",
-            "conservationStatus": "Vulnerable",
-            "iucnGlobal": "LC",
-            "spainStatus": "Catálogo Español de Especies Amenazadas: Vulnerable (colonias reproductoras reducidas y localizadas)",
-            "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
-            "rarityScore": 3,
-            "featured": false,
-            "habitatIds": [
-                "arrecifes",
-                "banco-arena"
-            ],
-            "coordinates": [
-                37.4855,
-                -1.475
-            ],
-            "image": "",
-            "description": "Ave marina pelágica que sobrevuela las aguas frente al litoral del parque en busca de alimento. No se conoce colonia reproductora en el parque: la única colonia murciana confirmada está en la Isla de las Palomas (San Pedro del Pinatar), por lo que la presencia aquí corresponde a individuos en paso o alimentación.",
-            "tips": [
-                "Vuelo rasante sobre el agua",
-                "Alas largas y rígidas",
-                "Se observa mejor desde miradores costeros"
-            ],
-            "seasonality": "Primavera a otoño",
-            "source": "Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre (citada como \"pardela\"); vertebradosibericos.org - Pardela cenicienta mediterránea (reproducción)",
-            "reviewNote": null
-        },
-        {
-            "id": 1,
-            "commonName": "Posidonia oceánica",
-            "scientificName": "Posidonia oceanica",
-            "kingdom": "flora",
-            "group": "Planta marina",
-            "taxonomy": {
-                "kingdom": "Plantae",
-                "phylum": "Tracheophyta",
-                "class": "Liliopsida",
-                "order": "Alismatales",
-                "family": "Posidoniaceae",
-                "genus": "Posidonia"
-            },
-            "habitat": "Praderas de Posidonia oceanica",
-            "conservationStatus": "Hábitat prioritario UE",
-            "iucnGlobal": "LC",
-            "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española 2008 (protegida vía hábitat prioritario, no como taxón individual)",
-            "murciaStatus": "Protegida indirectamente por ser especie formadora del hábitat prioritario 1120*",
-            "rarityScore": 5,
-            "featured": true,
-            "habitatIds": [
-                "posidonia"
-            ],
-            "coordinates": [
-                37.4912,
-                -1.4777
-            ],
-            "image": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/6\/63\/Posidonia_oceanica.jpg\/640px-Posidonia_oceanica.jpg",
-            "description": "Planta marina formadora de praderas submarinas esenciales para la biodiversidad costera y la protección del litoral.",
-            "tips": [
-                "Hojas largas en forma de cinta",
-                "Restos fibrosos acumulados en orilla",
-                "Indicadora de aguas bien conservadas"
-            ],
-            "seasonality": "Todo el año",
-            "source": "Red Natura 2000 - LIC ES6200031 Cabo Cope \/ Directiva Hábitats 92\/43\/CEE (MITECO)",
             "reviewNote": null
         },
         {

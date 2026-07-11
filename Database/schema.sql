@@ -44,6 +44,7 @@ ALTER TABLE habitats
     ADD COLUMN IF NOT EXISTS latitude DECIMAL(10,6) NULL,
     ADD COLUMN IF NOT EXISTS longitude DECIMAL(10,6) NULL,
     ADD COLUMN IF NOT EXISTS color VARCHAR(20) NULL,
+    ADD COLUMN IF NOT EXISTS review_note TEXT NULL,
     ADD UNIQUE INDEX IF NOT EXISTS unique_habitat_slug_per_park (park_id, slug);
 
 CREATE TABLE IF NOT EXISTS species (
@@ -105,6 +106,12 @@ CREATE TABLE IF NOT EXISTS points_of_interest (
     UNIQUE KEY unique_poi_per_park (park_id, slug)
 );
 
+-- Foto, cita de fuente y aviso de coordenada aproximada por punto de interés.
+ALTER TABLE points_of_interest
+    ADD COLUMN IF NOT EXISTS image_url VARCHAR(500) NULL,
+    ADD COLUMN IF NOT EXISTS source VARCHAR(500) NULL,
+    ADD COLUMN IF NOT EXISTS is_approx TINYINT(1) NOT NULL DEFAULT 0;
+
 CREATE TABLE IF NOT EXISTS observations (
     id INT AUTO_INCREMENT PRIMARY KEY,
     species_id INT NOT NULL,
@@ -123,87 +130,111 @@ VALUES ('cabo-cope-puntas-calnegre','Cabo Cope y Puntas de Calnegre','Parque Reg
 ON DUPLICATE KEY UPDATE name = VALUES(name), description = VALUES(description), coastline_km = VALUES(coastline_km), updated_at = CURRENT_TIMESTAMP;
 
 -- Hábitats de interés comunitario (Directiva 92/43/CEE) presentes en el Parque Regional Calnegre
--- y Cabo Cope: catálogo oficial completo de 21 hábitats (18 terrestres + 3 marinos), reconstruido
--- a partir del Anexo I del proyecto de PORN del parque y del Standard Data Form / Plan de Gestión
--- del LIC ES6200031 Cabo Cope (fuente: asociacionanse.org, documentos oficiales CARM Red Natura 2000).
+-- y Cabo Cope: lista oficial de 15 hábitats (11 terrestres + 4 litorales) que el documento previo
+-- del PORN (CARM, 2021) atribuye a los LIC de Calnegre y Cabo Cope. Se depuró un catálogo previo más
+-- amplio dejando solo estos 15; quedan fuera 6 códigos que no figuran en esa lista oficial: 3 marinos
+-- (1120 Posidonia, 1110 bancos de arena, 1170 arrecifes, probablemente de la ZEC marina adyacente
+-- ES6200029) y 3 solo documentados en el Anexo I del proyecto de PORN/ANSE (2240, 3280, 7210).
 -- Las coordenadas son un punto representativo del hábitat dentro del parque (para el círculo del
 -- mapa), no su extensión real; se sustituirán por polígonos cuando llegue la cartografía QGIS.
-INSERT INTO habitats (park_id, slug, code, name, habitat_type, description, is_priority, latitude, longitude, color)
-SELECT p.id, h.slug, h.code, h.name, h.habitat_type, h.description, h.is_priority, h.latitude, h.longitude, h.color
+INSERT INTO habitats (park_id, slug, code, name, habitat_type, description, is_priority, latitude, longitude, color, review_note)
+SELECT p.id, h.slug, h.code, h.name, h.habitat_type, h.description, h.is_priority, h.latitude, h.longitude, h.color, h.review_note
 FROM parks p
 JOIN (
-    SELECT 'posidonia' slug, '1120' code, 'Praderas de Posidonia oceanica' name, 'Marino' habitat_type, 'marino del parque piloto' description, TRUE is_priority, 37.4912 latitude, -1.4777 longitude, '#1f6f8b' color
+    SELECT 'acantilados' slug, '1240' code, 'Acantilados mediterráneos con Limonium' name, 'Litoral' habitat_type, 'litoral del parque piloto' description, FALSE is_priority, 37.423855 latitude, -1.494704 longitude, '#8b5e34' color, NULL review_note
     UNION ALL
-    SELECT 'acantilados' slug, '1240' code, 'Acantilados mediterráneos con Limonium' name, 'Litoral' habitat_type, 'litoral del parque piloto' description, FALSE is_priority, 37.4878 latitude, -1.4708 longitude, '#8b5e34' color
+    SELECT 'matorral-semiarido' slug, '5330' code, 'Matorral termomediterráneo semiárido' name, 'Terrestre' habitat_type, 'terrestre del parque piloto' description, FALSE is_priority, 37.501195 latitude, -1.449516 longitude, '#2f6f4e' color, NULL review_note
     UNION ALL
-    SELECT 'matorral-semiarido' slug, '5330' code, 'Matorral termomediterráneo semiárido' name, 'Terrestre' habitat_type, 'terrestre del parque piloto' description, FALSE is_priority, 37.5075 latitude, -1.4422 longitude, '#2f6f4e' color
+    SELECT 'azufaifar' slug, '5220' code, 'Matorrales arborescentes de Ziziphus' name, 'Terrestre' habitat_type, 'terrestre del parque piloto' description, TRUE is_priority, 37.501195 latitude, -1.449516 longitude, '#6f8f3a' color, NULL review_note
     UNION ALL
-    SELECT 'azufaifar' slug, '5220' code, 'Matorrales arborescentes de Ziziphus' name, 'Terrestre' habitat_type, 'terrestre del parque piloto' description, TRUE is_priority, 37.5099 latitude, -1.4631 longitude, '#6f8f3a' color
+    SELECT 'matorral-halofilo' slug, '1420' code, 'Matorrales halófilos mediterráneos y termoatlánticos' name, 'Terrestre' habitat_type, 'terrestre del parque piloto, marina de Cope' description, FALSE is_priority, 37.482116 latitude, -1.464183 longitude, '#7a6a3a' color, NULL review_note
     UNION ALL
-    SELECT 'banco-arena' slug, '1110' code, 'Bancos de arena cubiertos permanentemente por agua marina poco profunda' name, 'Marino' habitat_type, 'marino del parque piloto' description, FALSE is_priority, 37.4830 latitude, -1.4780 longitude, '#3a8fae' color
+    SELECT 'matorral-halonitrofilo' slug, '1430' code, 'Matorrales halo-nitrófilos' name, 'Terrestre' habitat_type, 'terrestre del parque piloto, marina de Cope' description, FALSE is_priority, 37.464167 latitude, -1.480269 longitude, '#9a7b3f' color, NULL review_note
     UNION ALL
-    SELECT 'arrecifes' slug, '1170' code, 'Arrecifes' name, 'Marino' habitat_type, 'marino del parque piloto' description, FALSE is_priority, 37.4800 latitude, -1.4740 longitude, '#0f5f78' color
+    SELECT 'galeria-ribera' slug, '92D0' code, 'Galerías y matorrales ribereños termomediterráneos' name, 'Terrestre' habitat_type, 'terrestre del parque piloto, ramblas' description, FALSE is_priority, 37.439468 latitude, -1.487286 longitude, '#3f7a5a' color, NULL review_note
     UNION ALL
-    SELECT 'matorral-halofilo' slug, '1420' code, 'Matorrales halófilos mediterráneos y termoatlánticos' name, 'Terrestre' habitat_type, 'terrestre del parque piloto, marina de Cope' description, FALSE is_priority, 37.4730 latitude, -1.4810 longitude, '#7a6a3a' color
+    SELECT 'veg-anual-desechos-marinos' slug, '1210' code, 'Vegetación anual sobre desechos marinos acumulados' name, 'Litoral' habitat_type, 'comunidades pioneras sobre la línea de acumulación de restos marinos en las playas del parque' description, FALSE is_priority, 37.466605 latitude, -1.473536 longitude, '#c9a66b' color, NULL review_note
     UNION ALL
-    SELECT 'matorral-halonitrofilo' slug, '1430' code, 'Matorrales halo-nitrófilos' name, 'Terrestre' habitat_type, 'terrestre del parque piloto, marina de Cope' description, FALSE is_priority, 37.4780 latitude, -1.4690 longitude, '#9a7b3f' color
+    SELECT 'estepas-salinas-albardinal' slug, '1510' code, 'Estepas salinas mediterráneas (Limonietalia)' name, 'Terrestre' habitat_type, 'albardinal (Lygeum spartum) sobre suelos salinos de la marina de Cope, asociado a Limonium insigne' description, TRUE is_priority, 37.50201 latitude, -1.42999 longitude, '#b3577a' color, NULL review_note
     UNION ALL
-    SELECT 'galeria-ribera' slug, '92D0' code, 'Galerías y matorrales ribereños termomediterráneos' name, 'Terrestre' habitat_type, 'terrestre del parque piloto, ramblas' description, FALSE is_priority, 37.4990 latitude, -1.4610 longitude, '#3f7a5a' color
+    SELECT 'dunas-embrionarias' slug, '2110' code, 'Dunas móviles embrionarias' name, 'Litoral' habitat_type, 'primer cordón dunar en formación activa junto a la orilla' description, FALSE is_priority, 37.466605 latitude, -1.473536 longitude, '#e0c56a' color, NULL review_note
     UNION ALL
-    SELECT 'veg-anual-desechos-marinos' slug, '1210' code, 'Vegetación anual sobre desechos marinos acumulados' name, 'Litoral' habitat_type, 'comunidades pioneras sobre la línea de acumulación de restos marinos en las playas del parque' description, FALSE is_priority, 37.5390 latitude, -1.4040 longitude, '#c9a66b' color
+    SELECT 'dunas-malcomietalia' slug, '2230' code, 'Dunas con céspedes del Malcomietalia' name, 'Litoral' habitat_type, 'céspedes anuales sobre arenas dunares estabilizadas' description, FALSE is_priority, 37.507063 latitude, -1.416075 longitude, '#d9b97e' color, 'Cartografiado con una fuente distinta a la del resto de hábitats: la cartografía de hábitats terrestres de la Región de Murcia (CARM, 2020), porque este código no aparece en los recintos del Inventario Español de Hábitats (INB) dentro del parque. Su presencia y delimitación exactas dentro del parque quedan pendientes de revisión.' review_note
     UNION ALL
-    SELECT 'estepas-salinas-albardinal' slug, '1510' code, 'Estepas salinas mediterráneas (Limonietalia)' name, 'Terrestre' habitat_type, 'albardinal (Lygeum spartum) sobre suelos salinos de la marina de Cope, asociado a Limonium insigne' description, TRUE is_priority, 37.4735 latitude, -1.4845 longitude, '#b3577a' color
+    SELECT 'rios-glaucium' slug, '3250' code, 'Ríos mediterráneos de caudal permanente con Glaucium flavum' name, 'Terrestre' habitat_type, 'cauces y ramblas con lámina de agua permanente colonizados por la amapola marina' description, FALSE is_priority, 37.500643 latitude, -1.478322 longitude, '#6f9270' color, 'Cartografiado con una fuente distinta a la del resto de hábitats: la cartografía de hábitats terrestres de la Región de Murcia (CARM, 2020), porque este código no aparece en los recintos del Inventario Español de Hábitats (INB) dentro del parque. Su presencia y delimitación exactas dentro del parque quedan pendientes de revisión.' review_note
     UNION ALL
-    SELECT 'dunas-embrionarias' slug, '2110' code, 'Dunas móviles embrionarias' name, 'Litoral' habitat_type, 'primer cordón dunar en formación activa junto a la orilla' description, FALSE is_priority, 37.5410 latitude, -1.4008 longitude, '#e0c56a' color
+    SELECT 'sabinar-juniperus' slug, '5210' code, 'Matorrales arborescentes de Juniperus spp.' name, 'Terrestre' habitat_type, 'sabinar (Juniperus phoenicea) sobre laderas y cerros del interior del parque' description, FALSE is_priority, 37.427725 latitude, -1.486042 longitude, '#3f6b4a' color, 'Cartografiado con una fuente distinta a la del resto de hábitats: la cartografía de hábitats terrestres de la Región de Murcia (CARM, 2020), porque este código no aparece en los recintos del Inventario Español de Hábitats (INB) dentro del parque. Su presencia y delimitación exactas dentro del parque quedan pendientes de revisión.' review_note
     UNION ALL
-    SELECT 'dunas-malcomietalia' slug, '2230' code, 'Dunas con céspedes del Malcomietalia' name, 'Litoral' habitat_type, 'céspedes anuales sobre arenas dunares estabilizadas' description, FALSE is_priority, 37.5405 latitude, -1.4010 longitude, '#d9b97e' color
+    SELECT 'prados-alysso-sedion' slug, '6110' code, 'Prados calcáreos cársticos o basófilos del Alysso-Sedion albi' name, 'Terrestre' habitat_type, 'pastizales de terófitos y crasuláceas sobre suelos esqueléticos calcáreos de los cerros carbonatados' description, TRUE is_priority, 37.427725 latitude, -1.486042 longitude, '#9c8a5e' color, 'Cartografiado con una fuente distinta a la del resto de hábitats: la cartografía de hábitats terrestres de la Región de Murcia (CARM, 2020), porque este código no aparece en los recintos del Inventario Español de Hábitats (INB) dentro del parque. Su presencia y delimitación exactas dentro del parque quedan pendientes de revisión.' review_note
     UNION ALL
-    SELECT 'dunas-brachypodietalia' slug, '2240' code, 'Dunas con céspedes del Brachypodietalia y de plantas anuales' name, 'Litoral' habitat_type, 'pastizales dunares semifijos con gramíneas vivaces y anuales' description, FALSE is_priority, 37.5400 latitude, -1.4015 longitude, '#cdae7a' color
+    SELECT 'subestepa-thero-brachypodietea' slug, '6220' code, 'Zonas subestépicas de gramíneas y anuales del Thero-Brachypodietea' name, 'Terrestre' habitat_type, 'pastizales terofíticos mediterráneos sobre suelos oligotróficos de llanos y laderas abiertas' description, TRUE is_priority, 37.429269 latitude, -1.489635 longitude, '#b0a066' color, NULL review_note
     UNION ALL
-    SELECT 'rios-glaucium' slug, '3250' code, 'Ríos mediterráneos de caudal permanente con Glaucium flavum' name, 'Terrestre' habitat_type, 'cauces y ramblas con lámina de agua permanente colonizados por la amapola marina' description, FALSE is_priority, 37.4925 latitude, -1.4575 longitude, '#6f9270' color
-    UNION ALL
-    SELECT 'rios-paspalo-agrostidion' slug, '3280' code, 'Ríos mediterráneos de caudal permanente del Paspalo-Agrostidion' name, 'Terrestre' habitat_type, 'márgenes higrófilos de rambla con caudal permanente, en contacto con galerías de sauces y álamos' description, FALSE is_priority, 37.4950 latitude, -1.4595 longitude, '#557a5c' color
-    UNION ALL
-    SELECT 'sabinar-juniperus' slug, '5210' code, 'Matorrales arborescentes de Juniperus spp.' name, 'Terrestre' habitat_type, 'sabinar (Juniperus phoenicea) sobre laderas y cerros del interior del parque' description, FALSE is_priority, 37.5001 latitude, -1.4384 longitude, '#3f6b4a' color
-    UNION ALL
-    SELECT 'prados-alysso-sedion' slug, '6110' code, 'Prados calcáreos cársticos o basófilos del Alysso-Sedion albi' name, 'Terrestre' habitat_type, 'pastizales de terófitos y crasuláceas sobre suelos esqueléticos calcáreos de los cerros carbonatados' description, TRUE is_priority, 37.5035 latitude, -1.4460 longitude, '#9c8a5e' color
-    UNION ALL
-    SELECT 'subestepa-thero-brachypodietea' slug, '6220' code, 'Zonas subestépicas de gramíneas y anuales del Thero-Brachypodietea' name, 'Terrestre' habitat_type, 'pastizales terofíticos mediterráneos sobre suelos oligotróficos de llanos y laderas abiertas' description, TRUE is_priority, 37.5080 latitude, -1.4400 longitude, '#b0a066' color
-    UNION ALL
-    SELECT 'turberas-cladium' slug, '7210' code, 'Turberas calcáreas de Cladium mariscus' name, 'Terrestre' habitat_type, 'formación higrófila con mansiego en puntos encharcados o de surgencia junto a ramblas' description, FALSE is_priority, 37.4995 latitude, -1.4620 longitude, '#4a7a6a' color
-    UNION ALL
-    SELECT 'roquedos-casmofiticos' slug, '8210' code, 'Pendientes rocosas calcícolas con vegetación casmofítica' name, 'Terrestre' habitat_type, 'roquedos y cortados calcáreos con vegetación fisurícola, con Teucrium freynii como especie característica' description, FALSE is_priority, 37.4945 latitude, -1.4595 longitude, '#8a7a6a' color
+    SELECT 'roquedos-casmofiticos' slug, '8210' code, 'Pendientes rocosas calcícolas con vegetación casmofítica' name, 'Terrestre' habitat_type, 'roquedos y cortados calcáreos con vegetación fisurícola, con Teucrium freynii como especie característica' description, FALSE is_priority, 37.426388 latitude, -1.487499 longitude, '#8a7a6a' color, NULL review_note
 ) h
 WHERE p.slug = 'cabo-cope-puntas-calnegre'
 ON DUPLICATE KEY UPDATE name = VALUES(name), habitat_type = VALUES(habitat_type), description = VALUES(description),
     is_priority = VALUES(is_priority), latitude = VALUES(latitude), longitude = VALUES(longitude), color = VALUES(color),
-    slug = VALUES(slug);
+    slug = VALUES(slug), review_note = VALUES(review_note);
+
+-- Poda de hábitats fuera de la lista oficial de 15 del PORN (CARM, 2021) para los LIC de Calnegre
+-- y Cabo Cope. El catálogo anterior llegó a tener 21; se retiran 6 códigos que no figuran en esa
+-- lista (3 marinos —1120/1110/1170, probablemente de la ZEC marina adyacente ES6200029— y 3 solo
+-- del Anexo I del proyecto de PORN/ANSE —2240/3280/7210—). Necesario porque el INSERT idempotente
+-- de arriba no elimina filas ya existentes en la base de datos. Los enlaces en species_habitats
+-- se borran solos por la FK ON DELETE CASCADE.
+DELETE h FROM habitats h
+JOIN parks p ON p.id = h.park_id
+WHERE p.slug = 'cabo-cope-puntas-calnegre'
+  AND h.slug IN ('posidonia', 'banco-arena', 'arrecifes', 'dunas-brachypodietalia', 'rios-paspalo-agrostidion', 'turberas-cladium');
 
 -- Puntos de observación/interés del parque piloto.
 -- Coordenadas verificadas/corregidas con topónimos de OpenStreetMap (© OpenStreetMap contributors, ODbL);
--- descripciones basadas en Región de Murcia Digital (CARM) - Cabo Cope y Puntas de Calnegre.
-INSERT INTO points_of_interest (park_id, slug, name, type, description, latitude, longitude)
-SELECT p.id, poi.slug, poi.name, poi.type, poi.description, poi.latitude, poi.longitude
+-- fotos de Wikimedia Commons con atribución en el campo source; los sitios geológicos/arqueológicos/
+-- paleontológicos citan el Anexo I del proyecto de PORN (ANSE) u otras fuentes primarias. is_approx=1
+-- marca posiciones representativas/estimadas, no coordenadas de campo verificadas. Ver README para el
+-- aviso sobre 4 puntos históricos (Puntas de Calnegre, Playa de Calnegre, Lomo de Bas, Calabardina) que,
+-- pese a estar geolocalizados correctamente, caen entre 200 y 660 m fuera del polígono oficial del
+-- Parque Regional (núcleos urbanos y cumbres justo en su límite).
+INSERT INTO points_of_interest (park_id, slug, name, type, description, latitude, longitude, image_url, source, is_approx)
+SELECT p.id, poi.slug, poi.name, poi.type, poi.description, poi.latitude, poi.longitude, poi.image_url, poi.source, poi.is_approx
 FROM parks p
 JOIN (
-    SELECT 'torre-cope' slug, 'Torre de Cope' name, 'Cultural' type, 'Torre vigía costera catalogada como Bien de Interés Cultural, vinculada a la defensa histórica del litoral.' description, 37.43695 latitude, -1.48441 longitude
+    SELECT 'torre-cope' slug, 'Torre de Cope' name, 'Cultural' type, 'Torre vigía costera del siglo XVI, construida para la defensa frente a la piratería berberisca que asolaba el litoral murciano. Catalogada como Bien de Interés Cultural. Junto a ella se levantó la Ermita de Cope, que daba servicio religioso a su guarnición.' description, 37.43695 latitude, -1.48441 longitude, 'Img/poi/torre-cope.jpg' image_url, 'OpenStreetMap contributors (ODbL); Wikimedia Commons (foto: Jose Lorca, dominio público); Región de Murcia Digital (CARM)' source, FALSE is_approx
     UNION ALL
-    SELECT 'cabo-cope' slug, 'Cabo Cope' name, 'Paisajístico' type, 'Promontorio litoral de referencia visual del parque y mirador natural hacia la bahía.' description, 37.42283 latitude, -1.49217 longitude
+    SELECT 'cabo-cope' slug, 'Cabo Cope' name, 'Paisajístico' type, 'Promontorio litoral y mirador natural sobre la bahía de Mazarrón. El macizo calizo de Cabo Cope está catalogado como Lugar de Interés Geológico: en él aflora muy bien representado el Complejo Maláguide (calizas, micaesquistos y cuarcitas), con interés geomorfológico, estratigráfico y neotectónico, además de su interés cultural.' description, 37.42283 latitude, -1.49217 longitude, 'Img/poi/cabo-cope.jpg' image_url, 'Anexo I del proyecto de PORN del Parque Regional Calnegre y Cabo Cope (ANSE/CARM); Wikimedia Commons (foto: J.Alberto, CC BY-SA 4.0)' source, FALSE is_approx
     UNION ALL
-    SELECT 'puntas-calnegre' slug, 'Puntas de Calnegre' name, 'Paisajístico' type, 'Núcleo litoral y tramo de costa con playas, gravas, calas y vistas abiertas al Mediterráneo.' description, 37.51058 latitude, -1.40198 longitude
+    SELECT 'puntas-calnegre' slug, 'Puntas de Calnegre' name, 'Paisajístico' type, 'Núcleo litoral en el extremo norte del parque, con playas, gravas, calas y vistas abiertas al Mediterráneo, en el tramo donde Lomo de Bas termina en el mar.' description, 37.51058 latitude, -1.40198 longitude, 'Img/poi/puntas-calnegre.jpg' image_url, 'OpenStreetMap contributors (ODbL); Wikimedia Commons (foto: Pau lopezca, CC BY-SA 3.0 ES); Región de Murcia Digital (CARM)' source, FALSE is_approx
     UNION ALL
-    SELECT 'playa-calnegre' slug, 'Playa de Calnegre' name, 'Paisajístico' type, 'Cala de arena y grava dentro del entorno protegido, útil como punto de acceso a la ruta litoral.' description, 37.51155 latitude, -1.40063 longitude
+    SELECT 'playa-calnegre' slug, 'Playa de Calnegre' name, 'Paisajístico' type, 'Cala de arena y grava dentro del entorno protegido, punto de acceso habitual a la ruta litoral del GR-92 hacia Puntas de Calnegre.' description, 37.51155 latitude, -1.40063 longitude, 'Img/poi/playa-calnegre.jpg' image_url, 'OpenStreetMap contributors (ODbL); Wikimedia Commons (foto: Mueca, CC BY-SA 4.0)' source, FALSE is_approx
     UNION ALL
-    SELECT 'cala-blanca' slug, 'Cala Blanca' name, 'Geológico' type, 'Tramo costero de interés geomorfológico por sus materiales claros, barrancos y contacto con el mar.' description, 37.48348 latitude, -1.46224 longitude
+    SELECT 'cala-blanca' slug, 'Cala Blanca' name, 'Geológico' type, 'Tramo costero de interés geomorfológico. Aquí afloran cuarcitas, micaesquistos, filitas y conglomerados triásicos del Complejo Alpujárride, visibles en los barrancos y el contacto con el mar.' description, 37.48348 latitude, -1.46224 longitude, NULL image_url, 'Anexo I del proyecto de PORN del Parque Regional Calnegre y Cabo Cope (ANSE/CARM)' source, FALSE is_approx
     UNION ALL
-    SELECT 'lomo-bas' slug, 'Lomo de Bas' name, 'Geológico' type, 'Relieve interior que ayuda a leer el contraste entre sierras litorales, ramblas y costa semiárida.' description, 37.5073 latitude, -1.46446 longitude
+    SELECT 'lomo-bas' slug, 'Lomo de Bas' name, 'Geológico' type, 'Relieve interior que ayuda a leer el contraste entre las sierras litorales, las ramblas y la costa semiárida. Sus laderas suaves enlazan geomorfológicamente con la unidad de la Marina de Cope.' description, 37.5073 latitude, -1.46446 longitude, 'Img/poi/lomo-bas.jpg' image_url, 'Anexo I del proyecto de PORN del Parque Regional Calnegre y Cabo Cope (ANSE/CARM); Wikimedia Commons (foto: Mabelcalabuig, CC BY-SA 3.0 ES)' source, FALSE is_approx
     UNION ALL
-    SELECT 'calabardina' slug, 'Calabardina' name, 'Acceso' type, 'Núcleo costero de Águilas que funciona como puerta de entrada meridional al parque, al pie del macizo de Cabo Cope.' description, 37.43452 latitude, -1.50347 longitude
+    SELECT 'calabardina' slug, 'Calabardina' name, 'Acceso' type, 'Núcleo costero de Águilas que funciona como puerta de entrada meridional al parque, al pie del macizo de Cabo Cope. En época púnica y romana funcionó como fondeadero protegido de los vientos de levante; la zona ha dado hallazgos continuos de ánforas de origen púnico y de todos los periodos romanos por su buen abrigo natural.' description, 37.43452 latitude, -1.50347 longitude, 'Img/poi/calabardina.jpg' image_url, 'Región de Murcia Digital (CARM) - Águilas, Yacimientos; Wikimedia Commons (foto: Rietje Swart, CC BY-SA 2.0)' source, FALSE is_approx
     UNION ALL
-    SELECT 'playa-sombrerico' slug, 'Playa del Sombrerico' name, 'Natural' type, 'Playa con uno de los mejores tarayales (Tamarix) del litoral murciano; el PORN la cita por su bosque de tarais, hábitat 92D0.' description, 37.44479 latitude, -1.48198 longitude
+    SELECT 'playa-sombrerico' slug, 'Playa del Sombrerico' name, 'Natural' type, 'Playa con uno de los mejores tarayales (Tamarix) del litoral murciano; el PORN la cita por su bosque de tarais, representativo del hábitat de interés comunitario 92D0 (galerías y matorrales ribereños termomediterráneos).' description, 37.44479 latitude, -1.48198 longitude, NULL image_url, 'Documento previo del PORN de Calnegre y Cabo Cope (CARM, 2021); OpenStreetMap contributors (ODbL)' source, FALSE is_approx
+    UNION ALL
+    SELECT 'ermita-cope' slug, 'Ermita de Cope' name, 'Religioso' type, 'Ermita del siglo XVIII que daba servicio religioso a la guarnición de la Torre de Cope, junto a la que se levanta. Según la tradición local recogida en fuentes de turismo regional, fue destruida por un incendio provocado en un ataque pirata, salvándose solo la talla de la cabeza del Cristo, hoy muy venerada; este episodio concreto está pendiente de contrastar con una fuente documental primaria.' description, 37.43563 latitude, -1.48484 longitude, NULL image_url, 'OpenStreetMap contributors (ODbL); tradición oral recogida en fuentes de turismo regional (episodio del incendio pendiente de contrastar con fuente documental primaria)' source, FALSE is_approx
+    UNION ALL
+    SELECT 'cueva-c6' slug, 'Cueva C.6' name, 'Arqueológico' type, 'Cavidad kárstica costera inundada hace miles de años, en la ladera del macizo de Cope más expuesta a los temporales de levante. Conserva restos cerámicos del tránsito Neolítico final-Edad del Bronce (c. 3000 a.C.), el registro arqueológico más antiguo conocido en el macizo, similar a otras cuevas sumergidas del litoral Cartagena-Mazarrón.' description, 37.427 latitude, -1.493 longitude, NULL image_url, 'cuevasdemurcia.com - Cueva C.6 (Águilas); Región de Murcia Digital - Águilas, Yacimientos' source, TRUE is_approx
+    UNION ALL
+    SELECT 'dunas-fosiles-cope' slug, 'Dunas fósiles de Cabo Cope' name, 'Geológico' type, 'Playas y dunas fósiles del Eutirreniense (Pleistoceno), formadas por calcarenitas de origen marino litoral muy erosionables por la acción del agua, que han originado numerosas oquedades y cavidades costeras. El Anexo I del proyecto de PORN las señala como uno de los valores geomorfológicos y paleogeográficos más singulares de la línea de costa del parque.' description, 37.441 latitude, -1.4855 longitude, NULL image_url, 'Anexo I del proyecto de PORN del Parque Regional Calnegre y Cabo Cope (ANSE/CARM)' source, TRUE is_approx
+    UNION ALL
+    SELECT 'yacimientos-garrobillo' slug, 'Yacimientos paleontológicos de Garrobillo' name, 'Paleontológico' type, 'Garrobillo 1 y Garrobillo 2, parte de la Cuenca de Cope (Arco de Águilas, Zonas Internas Béticas). Garrobillo 1 muestra el contacto de los materiales neógenos con el basamento metamórfico bético; Garrobillo 2 conserva calcarenitas bioclásticas con concentraciones del foraminífero Lenticulina spp. y de pectínidos de origen tormentoso.' description, 37.494 latitude, -1.498 longitude, NULL image_url, 'Anexo I del proyecto de PORN del Parque Regional Calnegre y Cabo Cope (ANSE/CARM). Posición representativa del paraje El Garrobillo; las coordenadas exactas de cada yacimiento no están publicadas.' source, TRUE is_approx
+    UNION ALL
+    SELECT 'yacimientos-cope-galera' slug, 'Yacimientos paleontológicos de Galera-Cope' name, 'Paleontológico' type, 'Galera-1, Cope 1 y Cope 2, en el extremo sur de la Cuenca de Cope. Galera-1 documenta la transgresión pliocena mediante facies excepcionales de washover fans; Cope 1 y Cope 2, junto al saladar, aportan marcadores bioestratigráficos que sitúan temporalmente los eventos de la cuenca durante el Plioceno.' description, 37.474 latitude, -1.475 longitude, NULL image_url, 'Anexo I del proyecto de PORN del Parque Regional Calnegre y Cabo Cope (ANSE/CARM). Posición representativa junto al saladar y la Playa de la Galera; las coordenadas exactas de cada yacimiento no están publicadas.' source, TRUE is_approx
+    UNION ALL
+    SELECT 'fuente-piratas' slug, 'Fuente de los piratas' name, 'Natural' type, 'Ensenada de la Fuente, cala al este de Cabo Cope que toma su nombre de un manantial de agua dulce junto al que se levanta la Torre de Cope. Fue punto de aguada para la guarnición de la torre y, según la tradición oral recogida en fuentes de turismo regional, también lo usaban las embarcaciones berberiscas que hostigaban la costa (de ahí el nombre popular).' description, 37.4368 latitude, -1.4855 longitude, NULL image_url, 'Wikipedia - "Cabo Cope"; descubriendomurcia.com; tradición oral recogida en fuentes de turismo regional (nombre popular pendiente de confirmar con fuente documental primaria)' source, TRUE is_approx
+    UNION ALL
+    SELECT 'punta-cabricas' slug, 'Punta de las Cabricas' name, 'Paisajístico' type, 'Saliente rocoso del litoral entre Cabo Cope y Calabardina, con acantilados característicos de este tramo costero del parque y buenas vistas hacia el macizo de Cope.' description, 37.43294 latitude, -1.47693 longitude, NULL image_url, 'OpenStreetMap contributors (ODbL)' source, FALSE is_approx
+    UNION ALL
+    SELECT 'ruinas-garrobillo' slug, 'Ruinas de la aldea de El Garrobillo' name, 'Cultural' type, 'Restos de El Garrobillo, antigua pedanía agrícola del término de Lorca en la Marina de Cope, hoy despoblada. Junto a Ramonete, forma parte de los núcleos rurales tradicionales vinculados al aprovechamiento agrícola histórico de esta zona del parque.' description, 37.49241 latitude, -1.49957 longitude, NULL image_url, 'OpenStreetMap contributors (ODbL) - topónimo "El Garrobillo"; referencias generales a las pedanías históricas de Ramonete y El Garrobillo en el término de Lorca. Ubicación aproximada (posición del paraje, no de una edificación concreta verificada en campo).' source, TRUE is_approx
 ) poi
 WHERE p.slug = 'cabo-cope-puntas-calnegre'
-ON DUPLICATE KEY UPDATE name = VALUES(name), description = VALUES(description), type = VALUES(type), latitude = VALUES(latitude), longitude = VALUES(longitude);
+ON DUPLICATE KEY UPDATE name = VALUES(name), description = VALUES(description), type = VALUES(type),
+    latitude = VALUES(latitude), longitude = VALUES(longitude), image_url = VALUES(image_url),
+    source = VALUES(source), is_approx = VALUES(is_approx);
 
 -- Catálogo de especies semilla, con taxonomía completa y tres niveles de estatus de conservación
 -- (IUCN Global, Lista Roja/Catálogo nacional español, Catálogo Regional de Murcia), citando fuente por registro.
@@ -250,10 +281,6 @@ JOIN (
     SELECT 'Zorro' common_name, 'Vulpes vulpes' scientific_name, 'fauna' kingdom, 'Mamífero' family, 'Matorral termomediterráneo semiárido' primary_habitat, 'Preocupación menor' conservation_status, 'Mamífero generalista y de amplia distribución que recorre todos los ambientes del parque.' description, 'Cola larga con punta blanca; Hábitos crepusculares y nocturnos; Huellas ovaladas de cuatro dedos' identification_tips, 'Todo el año' seasonality, NULL image_url, 37.509 latitude, -1.446 longitude, 1 rarity_score, FALSE is_featured, 'Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre; Wikipedia' source, 'Chordata' taxon_phylum, 'Mammalia' taxon_class, 'Carnivora' taxon_order, 'Canidae' taxon_family, 'Vulpes' taxon_genus, 'LC' iucn_global, 'No catalogada (especie cinegética común)' spain_status, 'No catalogada regionalmente' murcia_status, NULL review_note
     UNION ALL
     SELECT 'Jabalí' common_name, 'Sus scrofa' scientific_name, 'fauna' kingdom, 'Mamífero' family, 'Matorrales arborescentes de Ziziphus' primary_habitat, 'Preocupación menor' conservation_status, 'Mamífero omnívoro presente en los matorrales más densos y zonas de vegetación cerrada del parque.' description, 'Huellas hendidas grandes; Rastros de hozadura en el suelo; Más activo al anochecer' identification_tips, 'Todo el año' seasonality, NULL image_url, 37.511 latitude, -1.4655 longitude, 1 rarity_score, FALSE is_featured, 'Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre; Wikipedia' source, 'Chordata' taxon_phylum, 'Mammalia' taxon_class, 'Artiodactyla' taxon_order, 'Suidae' taxon_family, 'Sus' taxon_genus, 'LC' iucn_global, 'No catalogada (especie cinegética común)' spain_status, 'No catalogada regionalmente' murcia_status, NULL review_note
-    UNION ALL
-    SELECT 'Pardela cenicienta' common_name, 'Calonectris diomedea' scientific_name, 'fauna' kingdom, 'Ave marina' family, 'Litoral rocoso y aguas costeras' primary_habitat, 'Vulnerable' conservation_status, 'Ave marina pelágica que sobrevuela las aguas frente al litoral del parque en busca de alimento. No se conoce colonia reproductora en el parque: la única colonia murciana confirmada está en la Isla de las Palomas (San Pedro del Pinatar), por lo que la presencia aquí corresponde a individuos en paso o alimentación.' description, 'Vuelo rasante sobre el agua; Alas largas y rígidas; Se observa mejor desde miradores costeros' identification_tips, 'Primavera a otoño' seasonality, NULL image_url, 37.4855 latitude, -1.475 longitude, 3 rarity_score, FALSE is_featured, 'Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre (citada como "pardela"); vertebradosibericos.org - Pardela cenicienta mediterránea (reproducción)' source, 'Chordata' taxon_phylum, 'Aves' taxon_class, 'Procellariiformes' taxon_order, 'Procellariidae' taxon_family, 'Calonectris' taxon_genus, 'LC' iucn_global, 'Catálogo Español de Especies Amenazadas: Vulnerable (colonias reproductoras reducidas y localizadas)' spain_status, 'Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial' murcia_status, NULL review_note
-    UNION ALL
-    SELECT 'Posidonia oceánica' common_name, 'Posidonia oceanica' scientific_name, 'flora' kingdom, 'Planta marina' family, 'Praderas de Posidonia oceanica' primary_habitat, 'Hábitat prioritario UE' conservation_status, 'Planta marina formadora de praderas submarinas esenciales para la biodiversidad costera y la protección del litoral.' description, 'Hojas largas en forma de cinta; Restos fibrosos acumulados en orilla; Indicadora de aguas bien conservadas' identification_tips, 'Todo el año' seasonality, 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Posidonia_oceanica.jpg/640px-Posidonia_oceanica.jpg' image_url, 37.4912 latitude, -1.4777 longitude, 5 rarity_score, TRUE is_featured, 'Red Natura 2000 - LIC ES6200031 Cabo Cope / Directiva Hábitats 92/43/CEE (MITECO)' source, 'Tracheophyta' taxon_phylum, 'Liliopsida' taxon_class, 'Alismatales' taxon_order, 'Posidoniaceae' taxon_family, 'Posidonia' taxon_genus, 'LC' iucn_global, 'No incluida en la Lista Roja de la Flora Vascular Española 2008 (protegida vía hábitat prioritario, no como taxón individual)' spain_status, 'Protegida indirectamente por ser especie formadora del hábitat prioritario 1120*' murcia_status, NULL review_note
     UNION ALL
     SELECT 'Sabina negral' common_name, 'Juniperus phoenicea' scientific_name, 'flora' kingdom, 'Arbusto o arbolillo' family, 'Matorral litoral y laderas secas' primary_habitat, 'Interés botánico' conservation_status, 'Conífera mediterránea resistente a viento, sequía y suelos pobres, con poblaciones de interés en Cabo Cope.' description, 'Hojas escamosas; Frutos redondeados; Porte compacto' identification_tips, 'Todo el año' seasonality, 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Juniperus_phoenicea_001.JPG/640px-Juniperus_phoenicea_001.JPG' image_url, 37.5001 latitude, -1.4384 longitude, 4 rarity_score, FALSE is_featured, 'Región de Murcia Digital (CARM) - Flora de Cabo Cope y Puntas de Calnegre; Wikipedia' source, 'Tracheophyta' taxon_phylum, 'Pinopsida' taxon_class, 'Pinales' taxon_order, 'Cupressaceae' taxon_family, 'Juniperus' taxon_genus, 'LC' iucn_global, 'No catalogada en la Lista Roja de la Flora Vascular Española 2008' spain_status, 'No incluida en el Catálogo Regional de Flora Silvestre Protegida; población de Cabo Cope señalada por su interés biogeográfico (aislada del resto de su área)' murcia_status, NULL review_note
     UNION ALL
@@ -340,8 +367,6 @@ UNION ALL
 UNION ALL
     SELECT 'Gulosus aristotelis' scientific_name, 'acantilados' habitat_slug
 UNION ALL
-    SELECT 'Gulosus aristotelis' scientific_name, 'posidonia' habitat_slug
-UNION ALL
     SELECT 'Timon lepidus' scientific_name, 'matorral-semiarido' habitat_slug
 UNION ALL
     SELECT 'Chalcides bedriagai' scientific_name, 'matorral-semiarido' habitat_slug
@@ -361,12 +386,6 @@ UNION ALL
     SELECT 'Vulpes vulpes' scientific_name, 'matorral-semiarido' habitat_slug
 UNION ALL
     SELECT 'Sus scrofa' scientific_name, 'azufaifar' habitat_slug
-UNION ALL
-    SELECT 'Calonectris diomedea' scientific_name, 'arrecifes' habitat_slug
-UNION ALL
-    SELECT 'Calonectris diomedea' scientific_name, 'banco-arena' habitat_slug
-UNION ALL
-    SELECT 'Posidonia oceanica' scientific_name, 'posidonia' habitat_slug
 UNION ALL
     SELECT 'Juniperus phoenicea' scientific_name, 'matorral-semiarido' habitat_slug
 UNION ALL
@@ -820,3 +839,28 @@ WHERE sp.scientific_name = 'Cynomorium coccineum';
 UPDATE species sp JOIN parks p ON p.id = sp.park_id AND p.slug = "cabo-cope-puntas-calnegre"
 SET sp.image_url = 'Img/species/lavandula-multifida.jpg', sp.source = 'Anexo I del proyecto de PORN del Parque Regional costero-litoral de Cabo Cope (ANSE / CARM) - Catálogo de Flora Silvestre Protegida (Decreto 50/2003); Foto: florasilvestre.es (galería de flora del sureste ibérico)'
 WHERE sp.scientific_name = 'Lavandula multifida';
+
+-- ================================================================================================
+-- Cuentas de usuario y progreso por usuario (login del prototipo).
+-- Las contraseñas se guardan con hash (password_hash de PHP), nunca en claro.
+-- ================================================================================================
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    display_name VARCHAR(120),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Progreso por usuario y por parque. payload es un JSON con la misma forma que antes tenía
+-- progress.json: { seenSpeciesIds, seenPoiIds, sightings, updatedAt }. Así cada cuenta lleva su
+-- propio descubrimiento en cada parque, y el modelo escala a todos los parques de España.
+CREATE TABLE IF NOT EXISTS user_progress (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    park_slug VARCHAR(120) NOT NULL,
+    payload TEXT,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    UNIQUE KEY unique_user_park (user_id, park_slug)
+);

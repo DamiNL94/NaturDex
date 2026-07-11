@@ -27,5 +27,27 @@ while ($row = $result->fetch_assoc()) {
     ];
 }
 
-echo json_encode($parks, JSON_UNESCAPED_UNICODE);
+// Agrupación por comunidad autónoma (region) -> provincia, pensada para escalar el selector de
+// parques cuando haya más de uno. En este prototipo solo devuelve Cabo Cope y Puntas de Calnegre.
+$byRegion = [];
+foreach ($parks as $park) {
+    $region = $park["region"] ?: "Sin comunidad";
+    $province = $park["province"] ?: "Sin provincia";
+    if (!isset($byRegion[$region])) $byRegion[$region] = [];
+    if (!isset($byRegion[$region][$province])) $byRegion[$region][$province] = [];
+    $byRegion[$region][$province][] = $park;
+}
+$communities = [];
+foreach ($byRegion as $regionName => $provinces) {
+    $provList = [];
+    foreach ($provinces as $provName => $provParks) {
+        $provList[] = ["name" => $provName, "parks" => $provParks];
+    }
+    $communities[] = ["name" => $regionName, "provinces" => $provList];
+}
+
+echo json_encode([
+    "parks" => $parks,
+    "communities" => $communities
+], JSON_UNESCAPED_UNICODE);
 ?>

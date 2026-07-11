@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "updatedAt": null,
+    "_comment": "Registro de parques de NaturDex, organizado por comunidad autónoma y provincia. status: 'available' (con datos) o 'planned' (pendiente). Para añadir un parque nuevo: crear Data/parks/<provincia>/<slug>/ con park.json, manifest.json y geo/, y añadir su entrada aquí. En este prototipo solo Cabo Cope y Puntas de Calnegre está 'available'.",
+    "defaultPark": "cabo-cope-puntas-calnegre",
+    "communities": [
+        {
+            "slug": "region-de-murcia",
+            "name": "Región de Murcia",
+            "provinces": [
+                {
+                    "slug": "murcia",
+                    "name": "Murcia",
+                    "parks": [
+                        {
+                            "slug": "cabo-cope-puntas-calnegre",
+                            "name": "Cabo Cope y Puntas de Calnegre",
+                            "category": "Parque Regional",
+                            "status": "available",
+                            "center": [37.5016, -1.44925],
+                            "path": "Data/parks/murcia/cabo-cope-puntas-calnegre",
+                            "manifest": "Data/parks/murcia/cabo-cope-puntas-calnegre/manifest.json"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -15,14 +15,18 @@ El primer parque piloto es el Parque Regional de Cabo Cope y Puntas de Calnegre,
 
 - `Frontend/index.html`: interfaz principal del prototipo.
 - `Frontend/Css/styles.css`: diseño responsive de la experiencia NaturDex.
-- `Frontend/Js/app.js`: mapa, filtros, catálogo, ficha de especie y progreso tipo pokédex.
-- `Frontend/Data/cabo-cope.json`: datos semilla del parque piloto (respaldo sin backend).
-- `Frontend/Data/geo/`: geometría del mapa en GeoJSON (límite del parque y hábitats) + su README con el flujo de sustitución por cartografía real de QGIS.
-- `Frontend/Img/species/`: fotografías locales de especies (servidas desde el propio proyecto, no hotlinkeadas).
-- `Backend/Api/parks.php`: endpoint de parques.
+- `Frontend/Js/app.js`: mapa, filtros, catálogo, ficha de especie y progreso tipo pokédex (la experiencia de un parque).
+- `Frontend/Js/auth.js`: flujo de pantallas (portada → login → mapa de España → parque), autenticación y selector de parque.
+- `Frontend/Js/offline.js`: capa de almacenamiento local y funcionamiento sin conexión (ver más abajo).
+- `Frontend/sw.js`: Service Worker que cachea el armazón de la app y los datos del parque para offline.
+- `Frontend/Data/parks-index.json`: registro global de parques por comunidad autónoma y provincia.
+- `Frontend/Data/parks/<provincia>/<parque>/`: datos de cada parque (`park.json`), su `manifest.json` de activos y su carpeta `geo/`. Ver `Frontend/Data/parks/README.md`.
+- `Frontend/Img/species/` y `Frontend/Img/poi/`: fotografías locales de especies y puntos de interés (servidas desde el propio proyecto, no hotlinkeadas).
+- `Backend/Api/auth.php`: registro, login, logout y comprobación de sesión (cuentas reales con contraseña hasheada y sesión PHP).
+- `Backend/Api/parks.php`: endpoint de parques (lista plana + agrupación por comunidad/provincia).
 - `Backend/Api/species.php`: endpoint agregado para parque, hábitats, puntos de interés y especies.
-- `Backend/Api/progress.php`: endpoint GET/POST para marcar especies y puntos de interés como vistos (persistido en `Backend/Data/progress.json`).
-- `Database/schema.sql`: modelo escalable (parques, hábitats, especies, puntos de interés, observaciones, relación muchos-a-muchos especie-hábitat).
+- `Backend/Api/progress.php`: endpoint GET/POST del progreso **por usuario y por parque** (requiere sesión); marca especies/POIs vistos y registra la ubicación GPS de cada avistamiento (persistido en la tabla `user_progress`).
+- `Database/schema.sql`: modelo escalable (parques, hábitats, especies, puntos de interés, observaciones, relación especie-hábitat, y **`users` + `user_progress`** para las cuentas).
 
 ## Catálogo de datos
 
@@ -82,7 +86,7 @@ conmutables y los hábitats, todo activable/desactivable desde el control de cap
 
 El límite aproximado de puntos que había antes se ha sustituido por geometría vectorial oficial,
 descargada del servicio ArcGIS REST del IMIDA/CARM (`geoportal.imida.es/.../OISMA/MapServer`),
-reproyectada a EPSG:4326 y generalizada para peso web (ver `Frontend/Data/geo/README.md`). Cada
+reproyectada a EPSG:4326 y generalizada para peso web (ver `Frontend/Data/parks/murcia/cabo-cope-puntas-calnegre/geo/README.md`). Cada
 figura es una capa propia, con su estilo y un popup con nombre, código y superficie:
 
 - **Parque Regional** de Calnegre y Cabo Cope (Ley 4/1992; 2.665 ha) — línea verde continua. Es el
@@ -111,15 +115,63 @@ el usuario realmente la ha visto**. Al desmarcar, el marcador y su ubicación de
 
 Se dibuja el trazado real del **GR-92 / Sendero del Mediterráneo** a su paso por el parque (capa
 *Senderos*, línea naranja), extraído de **OpenStreetMap** (© OpenStreetMap contributors, ODbL) y guardado
-en `Frontend/Data/geo/trails.geojson`. Recorre el litoral entre Calabardina y Puntas de Calnegre. Los
+en `Frontend/Data/parks/murcia/cabo-cope-puntas-calnegre/geo/trails.geojson`. Recorre el litoral entre Calabardina y Puntas de Calnegre. Los
 senderos locales señalizados (PR/SL) se pueden añadir al mismo fichero cuando se disponga de su trazado.
 
-### Puntos de interés con coordenadas verificadas
+### Puntos de interés: iconos por tipo, fotos y 16 en total
 
-Los 6 puntos de interés se han **corregido con topónimos de OpenStreetMap** (varios estaban desplazados:
-la Torre de Cope ~1,5 km y Cala Blanca ~5 km) y se han añadido 2 nuevos: **Calabardina** (puerta de
-entrada meridional) y **Playa del Sombrerico** (por su tarayal, hábitat 92D0, citado en el PORN). Son 8
-en total, aplicados al JSON, la base de datos y `schema.sql`.
+Los 6 puntos de interés originales se corrigieron con topónimos de OpenStreetMap (varios estaban
+desplazados: la Torre de Cope ~1,5 km y Cala Blanca ~5 km) y se han ampliado a **16**, con un icono
+distinto por tipo en el mapa (🏰 Cultural, 🏞️ Paisajístico, 🌋 Geológico, 🚪 Acceso, 🌊 Natural,
+🏺 Arqueológico, 🦖 Paleontológico, ⛪ Religioso) y foto en el popup cuando existe (`Frontend/Img/poi/`,
+con atribución en el campo `source`).
+
+> **Corrección de iconos**: los tipos Geológico y Paleontológico usaban 🪨 y 🦴, dos emoji Unicode
+> recientes (13.1 y 11) sin glifo a color en el motor de render probado — se veían como un bloque negro
+> sólido. Se verificó con un canvas offscreen (recuento de píxeles de color) antes de decidir el
+> reemplazo: 🌋 y 🦖 sí renderizan a todo color.
+
+Los 8 nuevos, con fuentes primarias del Anexo I del proyecto de PORN (ANSE), OpenStreetMap y otras fuentes documentales:
+
+- **Ermita de Cope** (Religioso) — capilla del siglo XVIII junto a la Torre de Cope; el episodio del
+  incendio pirata que se le atribuye en fuentes de turismo queda marcado como pendiente de contrastar
+  con fuente documental primaria.
+- **Cueva C.6** (Arqueológico) — cavidad kárstica costera con restos del Neolítico final/Edad del Bronce
+  (c. 3000 a.C.), el registro arqueológico más antiguo conocido del macizo de Cope. Coordenada **estimada**
+  por triangulación textual (ladera norte del macizo, ~1 km al oeste de la Playa del Sombrerico), marcada
+  `approx: true`.
+- **Dunas fósiles de Cabo Cope** (Geológico) — calcarenitas eutirrenienses (Pleistoceno) que el Anexo I
+  del PORN destaca como valor geomorfológico y paleogeográfico singular de la costa del parque. Reubicadas
+  entre la Playa del Sombrerico y la Torre de Cope (donde de verdad están, según la corrección del usuario),
+  no junto al propio Cabo Cope como se puso por error en la ronda anterior. Coordenada representativa,
+  `approx: true`.
+- **Yacimientos paleontológicos de Garrobillo** y **de Galera-Cope** (Paleontológico) — los cinco
+  yacimientos oficiales de la Cuenca de Cope citados por el Anexo I del PORN (Garrobillo 1 y 2; Galera-1;
+  Cope 1 y 2), agrupados en dos puntos representativos porque el documento no publica la coordenada exacta
+  de cada uno. Ambos `approx: true`.
+- **Fuente de los piratas** (Natural) — la Ensenada/Cala de la Fuente, junto a la Torre de Cope, llamada
+  así por un manantial de agua dulce que servía de aguada a la guarnición de la torre y, según tradición
+  oral de fuentes de turismo, también a embarcaciones berberiscas. `approx: true` (no hay coordenada
+  publicada del manantial en sí, se sitúa junto a la torre).
+- **Punta de las Cabricas** (Paisajístico) — saliente rocoso entre Cabo Cope y Calabardina, topónimo OSM
+  verificado, coordenada exacta.
+- **Ruinas de la aldea de El Garrobillo** (Cultural) — antigua pedanía agrícola despoblada del término de
+  Lorca en la Marina de Cope. `approx: true`: se usa la posición del paraje "El Garrobillo" de OSM, no la
+  de una edificación concreta verificada en campo (no se encontró ninguna ruina con esa referencia exacta
+  en fuentes abiertas).
+
+**Verificación de "Cabo Cope"**: se revisó expresamente si el punto de interés homónimo estaba mal situado.
+Su coordenada (37.42283, -1.49217) coincide exactamente con el único nodo de OpenStreetMap etiquetado
+`natural=cape` con `name=Cabo Cope`, así que se mantiene: es la referencia geográfica real del cabo. Lo que
+sí estaba mal era la ubicación de las dunas fósiles (corregida arriba), que antes se solapaba visualmente
+con este punto y podía dar la impresión de que ambos estaban mal.
+
+**Aviso honesto sobre el límite del parque**: al comprobar los puntos contra el polígono oficial del Parque
+Regional (el mismo GeoJSON real de la sección anterior), **4 caen fuera** por entre 227 y 656 m: Puntas de
+Calnegre, Playa de Calnegre, Lomo de Bas y Calabardina. Sus coordenadas son correctas (verificadas con
+OpenStreetMap); simplemente son núcleos urbanos o cumbres situados justo en el borde o inmediatamente fuera
+del límite legal del parque (Calabardina, por ejemplo, es precisamente la puerta de entrada *adyacente*, no
+un punto dentro). Se mantienen porque son referencias reales y bien establecidas, no un error de datos.
 
 ### Capas base y clústeres
 
@@ -134,14 +186,44 @@ en total, aplicados al JSON, la base de datos y `schema.sql`.
 - Cada uno de los 21 hábitats de interés comunitario se dibuja como un **círculo en una posición
   representativa** (no su extensión real), con su código, prioridad UE y color. Al hacer clic se abre un
   popup con el recuento de especies vistas en ese hábitat y un botón para filtrar el catálogo a esas especies.
-- La geometría de hábitats vive en `Frontend/Data/geo/habitats.geojson` (plantilla vacía por ahora). Es la
+- La geometría de hábitats vive en `Frontend/Data/parks/murcia/cabo-cope-puntas-calnegre/geo/habitats.geojson` (plantilla vacía por ahora). Es la
   **fontanería lista para QGIS**: `app.js` dibuja el polígono real de un hábitat en cuanto se añade a ese
-  fichero un `Feature` con `properties.slug`, sin tocar código. No se localizó un servicio oficial de
-  Hábitats de Interés Comunitario accesible como vector para esta zona; habrá que exportarlo de QGIS a
-  partir de la cartografía de HIC de MITECO.
+  fichero un `Feature` con `properties.slug`, sin tocar código.
+- **Se intentó de nuevo conseguir la extensión real** de los 21 hábitats antes de dejarlos como círculos,
+  probando: (1) el WMS de MITECO "Tipos de Hábitat de Interés Comunitario" y el de "Distribución de Hábitat
+  Artículo 17" — ambos devuelven un error interno del servidor (`NullReferenceException` en su proxy
+  ArcGIS), caídos en el lado de MITECO, no un problema de nuestra petición; y aunque funcionaran, el
+  Artículo 17 es una malla de 10×10 km, demasiado basta para este mapa; (2) el catálogo CSW de IDERM/CARM y
+  todas las carpetas del geoportal del IMIDA (el mismo servicio que sí dio la geometría real del Parque
+  Regional, LIC y ZEPA) — sin ninguna capa de hábitats. Existe **SIOSE** (uso/cobertura del suelo, ese sí
+  con geometría real y detallada) como aproximación indirecta, pero sus categorías son de uso del suelo
+  genérico ("matorral", "arbolado"), no los códigos de la Directiva de Hábitats: usarlo haría pasar por
+  "hábitat oficial" algo que no lo es, así que se descartó en vez de forzarlo. Conclusión: no hay hoy una
+  fuente vectorial oficial y accesible para esto; sigue pendiente de la cartografía QGIS/HIC de MITECO.
 - La relación especie-hábitat es muchos-a-muchos (una especie puede vivir en varios hábitats): en el JSON de
   respaldo son los campos `habitatIds` (por especie) y `speciesIds` (por hábitat); en la base de datos es la
   tabla `species_habitats`, calculada por `species.php` a partir de nombre científico + slug de hábitat.
+
+### Revisión a fondo: ¿los 21 hábitats existen todos en este parque?
+
+Se contrastaron uno a uno los 21 códigos contra las dos fuentes oficiales ya usadas (el documento previo del
+PORN, CARM 2021, y el Anexo I del proyecto de PORN, ANSE). El PORN previo es explícito: **los LIC de Calnegre
+y Cabo Cope suman 15 tipos de hábitat**, no 21. Los 6 que sobran ahora llevan un campo `reviewNote` propio
+(visible como badge "a revisar" en su tarjeta del catálogo, igual que en las especies), en vez de quedar solo
+documentados en este README:
+
+- **`posidonia` (1120), `banco-arena` (1110), `arrecifes` (1170)** — los 3 son marinos. El PORN previo
+  menciona que el LIC Cabo Cope linda con la ZEC marina "Franja Litoral Sumergida de la Región de Murcia"
+  (ES6200029); es plausible que pertenezcan a esa zona adyacente y no al LIC del parque en sí, pero no hay
+  confirmación directa. Nota: pendiente de contrastar con el Plan de Gestión de esa ZEC.
+- **`dunas-brachypodietalia` (2240), `rios-paspalo-agrostidion` (3280), `turberas-cladium` (7210)** — los 3
+  son terrestres y sí figuraban en el Anexo I de ANSE, pero no en la lista de 15 del PORN previo. Nota:
+  pendiente de una fuente primaria adicional que confirme su presencia específica en este parque.
+
+Los otros 15 (1210, 1240, 1420, 1430, 1510\*, 2110, 2230, 3250, 5210, 5220\*, 5330, 6110\*, 6220\*, 8210, 92D0)
+coinciden exactamente entre ambas fuentes, con la misma rareza/prioridad, así que se consideran confirmados
+sin reserva. No se ha quitado ningún hábitat del catálogo: se ha preferido dejar la duda anotada y visible
+para que se resuelva con calma, en vez de borrar algo que podría ser correcto.
 
 ### Reconstrucción del catálogo de hábitats (9 → 21, fuente Red Natura 2000)
 
@@ -201,6 +283,115 @@ Sí se ha completado la **lista oficial de flora protegida del parque** (~40 tax
 - Se descartaron *Rhamnus hispanorum* (sinónimo del Espino negro ya catalogado, *Rhamnus lycioides* subsp. *borgiae*) y *Tamarix canariensis* (co-citada con el Taray, *Tamarix africana*, ya presente).
 - La tabla del PDF del Anexo tiene los **nombres comunes descolocados de columna** (etiqueta a *Cynomorium* como "palmito", que en realidad es *Chamaerops*, etc.); se han usado los nombres científicos y nombres comunes correctos, no los del PDF.
 - Para *Chamaerops humilis*, *Osyris lanceolata*, *Limonium cossonianum* y *Sarcocapnos enneaphylla* subsp. *saetabensis* el hábitat se apoya en la asociación fitosociológica citada por las fuentes oficiales; para las 8 restantes la asignación de hábitat es una **inferencia ecológica** (marcada con `reviewNote`) y las coordenadas son representativas, no de una localización verificada en campo.
+
+## Catálogo organizado por hábitat
+
+La pestaña Catálogo ya no empieza con las 78 especies en una lista plana: empieza mostrando los **21
+hábitats** (con su código, prioridad UE, color y recuento de especies vistas/total). Al pulsar uno se
+entra a la lista de especies que viven ahí, con los mismos filtros y buscador de siempre, y un enlace
+"← Hábitats" arriba para volver. Sigue habiendo un acceso directo "Ver todas las especies" para quien
+prefiera la lista completa sin pasar por ningún hábitat. Este cambio de orden refleja mejor cómo se
+explora el parque en la práctica: primero se está *en* un hábitat, y dentro de él se buscan sus especies,
+no al revés.
+
+La misma lista de hábitats es también la entrada a las 6 fichas marcadas para revisión (ver más arriba):
+se ven con el badge "a revisar" desde el primer vistazo, igual que ya pasaba con las especies dudosas.
+
+## Modo explorador y hoja de ruta hacia la app móvil
+
+NaturDex está pensado para acabar siendo una **app móvil que funcione como guía ambiental virtual**: en vez
+de que el usuario busque cosas en una lista, la propia app le va mostrando lo que tiene alrededor a medida
+que camina por el parque, registrando su posición en tiempo real.
+
+Como primer paso concreto en esa dirección se ha añadido el **modo explorador** (botón "📍 Modo explorador"
+sobre el mapa): activa el GPS del dispositivo de forma continua (`navigator.geolocation.watchPosition`),
+sitúa un punto azul pulsante en la posición real del usuario y muestra un panel "Cerca de ti" con los
+puntos de interés y hábitats ordenados por distancia (metros o km), marcando "¡Estás aquí!" cuando se está
+a menos de 60 m de uno de ellos. Es la misma infraestructura de geolocalización que ya usa el registro de
+avistamientos de especies (ver más arriba), reutilizada aquí para orientación en vez de para guardar una
+ubicación puntual.
+
+Esto dista todavía de una app nativa con geofencing en segundo plano, pero deja sentada la lógica central
+(distancia en tiempo real a cada elemento del catálogo) que una futura app solo tendría que envolver en:
+notificaciones push cuando se entra en el radio de un punto, desbloqueo automático de fichas/logros al
+pasar por una zona, y registro de recorrido en vez de solo del punto de avistamiento.
+
+También se ha hecho un pase de diseño gráfico: icono distinto por tipo de punto de interés (ver arriba),
+foto con recorte en los popups del mapa, tarjetas con elevación sutil al pasar el ratón, control de capas
+que arranca colapsado en pantallas estrechas para no solapar con el panel "Cerca de ti", y un marcador de
+usuario animado. El diseño sigue usando la misma paleta y tipografía de siempre; el cambio es de pulido
+(sombras, transiciones, jerarquía visual), no una reestructuración.
+
+## Flujo de entrada: portada → login → mapa de España → parque
+
+La app ya no arranca directamente en Cabo Cope. Es una **app de una sola página con pantallas** (no
+páginas HTML separadas, para mantener el offline y la futura app móvil simples), gestionadas por
+`auth.js`:
+
+1. **Portada** con el nombre de la app y un botón *Comenzar*.
+2. **Login / registro** (`Backend/Api/auth.php`): **cuentas reales** en MySQL (tabla `users`), con
+   contraseñas hasheadas (`password_hash`/`password_verify`) y **sesión PHP**. Si ya hay sesión
+   iniciada, este paso se salta.
+3. **Mapa de España** (selector ligero): un mapa centrado en España con un marcador por cada parque
+   *disponible* y un **desplegable agrupado por comunidad autónoma y provincia** (leído de
+   `parks-index.json`). Incluye un botón **"Ir al parque más cercano a mí"** que usa el GPS y calcula
+   por distancia (haversine) el parque disponible más próximo. En este prototipo solo aparece Cabo
+   Cope; la estructura ya admite el resto de España sin tocar código.
+4. **Parque**: al elegirlo, `auth.js` llama a `startParkExperience(slug, user)` de `app.js`, que carga
+   **solo entonces** todo lo pesado del parque (datos, geometría, imágenes). Así el mapa no se satura ni
+   se cargan todos los parques de golpe. Dentro del parque hay un "← Parques" para volver al selector y
+   un botón de cerrar sesión.
+
+**Progreso por usuario**: cada cuenta guarda su propio descubrimiento en cada parque. El progreso se
+persiste en la tabla `user_progress` (una fila por usuario y parque, con el mismo JSON de antes) y,
+en el dispositivo, en `localStorage` con una clave que combina usuario + parque (`u<id>:<slug>`), de
+modo que ni las cuentas ni los parques se mezclan. El endpoint `progress.php` exige sesión (responde
+401 si no la hay). Nota de prototipo: para producción, servir por HTTPS y endurecer la sesión.
+
+## Arquitectura escalable a toda España (por provincias)
+
+El proyecto se ha reestructurado para poder crecer a **todos los parques naturales y nacionales de España**
+sin rehacer nada, manteniendo el foco actual **solo en Cabo Cope y Puntas de Calnegre** (es el único parque
+con datos; el resto queda como estructura vacía lista para rellenar, sin inventar nada).
+
+- **Registro de parques** (`Frontend/Data/parks-index.json`): árbol *comunidad autónoma → provincia →
+  parques*, cada parque con su `status` (`available` / `planned`) y las rutas a sus ficheros. Hay un
+  `defaultPark` que es el que abre la app.
+- **Un directorio por parque** bajo su provincia: `Frontend/Data/parks/<provincia>/<parque>/` con
+  `park.json` (datos), `manifest.json` (lista de activos) y `geo/` (GeoJSON). El paso de `cabo-cope.json`
+  + `Data/geo/` sueltos a esta estructura ya está hecho para el parque piloto. Cómo añadir uno nuevo:
+  `Frontend/Data/parks/README.md`.
+- **Cargador agnóstico al parque**: `app.js` ya no tiene rutas fijas. Lee el registro, resuelve el parque
+  activo, carga su manifiesto y de ahí saca datos y geometría. Cambiar de parque en el futuro será elegir
+  otro slug, sin tocar código.
+- **Backend ya multi-parque**: la base de datos indexa todo por `park_id` y `species.php?park=<slug>` sirve
+  cualquiera; `parks.php` devuelve además la agrupación por comunidad/provincia para un futuro selector.
+
+## Funcionamiento sin conexión (para la app móvil)
+
+Muchos parques no tienen cobertura, así que la app está preparada para **guardar un parque en el
+dispositivo y usarlo sin internet**. La estrategia es por capas, de más garantizada a más completa
+(`Frontend/Js/offline.js`):
+
+1. **Caché automática en `localStorage`** de todo JSON que se descarga (registro, manifiesto, datos del
+   parque y los 5 GeoJSON). Con **visitar un parque online una sola vez**, sus datos y sus mapas vectoriales
+   (límite, LIC, ZEPA, senderos, hábitats) quedan disponibles offline la próxima vez. No necesita nada más.
+2. **Botón "Guardar sin conexión"** (barra bajo el resumen del parque): además de lo anterior, descarga las
+   **imágenes** (binarias) a la Cache Storage del navegador y marca el parque como guardado. Así las fotos
+   también funcionan offline, no solo el icono de reserva.
+3. **Service Worker** (`sw.js`): cachea el **armazón de la app** (HTML/CSS/JS) para que arranque sin red.
+   Usa estrategia **network-first en todo**: estando online sirve siempre la versión fresca de la red (la
+   caché es solo respaldo para cuando no hay conexión), de modo que la app nunca se queda "atascada" en una
+   versión antigua. Es una mejora progresiva: si el navegador no lo admite, las capas 1 y 2 siguen funcionando.
+
+Además, el **progreso del usuario es local-first**: se guarda siempre en el dispositivo (`localStorage`) y,
+cuando hay backend, se sincroniza con el servidor por unión (nunca se pierde un "visto" registrado sin
+cobertura). Un **indicador de conexión** ("En línea" / "Sin conexión · parque guardado") avisa del estado.
+
+**Lo único que aún no funciona offline** son las teselas del mapa base (OSM/PNOA): son de otro dominio y
+demasiado voluminosas para cachearlas enteras. Offline se ve toda la geometría del parque sobre un fondo
+vacío. La solución futura, ya prevista en el `manifest.json` (campo `tiles`), es empaquetar un juego de
+teselas por parque (formato PMTiles/MBTiles) que se descargue con el resto.
 
 ## Pestaña "Progreso"
 

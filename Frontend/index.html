@@ -3,70 +3,148 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NaturDex | Cabo Cope</title>
+    <title>NaturDex</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
     <link rel="stylesheet" href="Css/styles.css">
 </head>
 <body>
-    <main class="app-shell">
-        <aside class="sidebar" aria-label="Panel de exploración NaturDex">
-            <section class="park-summary">
-                <p class="eyebrow">NaturDex piloto</p>
-                <h1>Cabo Cope y Puntas de Calnegre</h1>
-                <p id="parkSummary">Guía viva de especies, hábitats y puntos de observación.</p>
-                <div class="summary-grid" aria-label="Resumen del parque">
-                    <div><strong id="speciesCount">0</strong><span>especies</span></div>
-                    <div><strong id="habitatCount">0</strong><span>hábitats</span></div>
-                    <div><strong id="coastlineKm">17 km</strong><span>costa</span></div>
-                </div>
-                <div class="progress-wrap" aria-label="Progreso de descubrimiento">
-                    <div id="progressTrack" class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
-                    <span id="progressLabel" class="progress-label">0 / 0 especies descubiertas</span>
-                </div>
-            </section>
-            <div class="view-tabs" role="tablist" aria-label="Vistas de NaturDex">
-                <button class="view-tab active" type="button" data-view="catalog" role="tab" aria-selected="true">Catálogo</button>
-                <button class="view-tab" type="button" data-view="progress" role="tab" aria-selected="false">Progreso</button>
+    <!-- ===================== Pantalla: portada ===================== -->
+    <section id="screen-cover" class="screen screen-center screen-cover">
+        <div class="cover-inner">
+            <div class="cover-mark">🌿</div>
+            <p class="eyebrow">Guía ambiental virtual</p>
+            <h1 class="cover-title">NaturDex</h1>
+            <p class="cover-sub">Explora, identifica y cataloga la flora y la fauna de los parques naturales y nacionales de España.</p>
+            <button id="coverStart" type="button" class="btn-primary">Comenzar</button>
+            <p class="cover-foot">Prototipo · Parque piloto: Cabo Cope y Puntas de Calnegre</p>
+        </div>
+    </section>
+
+    <!-- ===================== Pantalla: login / registro ===================== -->
+    <section id="screen-auth" class="screen screen-center" hidden>
+        <div class="auth-card">
+            <p class="eyebrow">NaturDex</p>
+            <div class="auth-tabs" role="tablist">
+                <button class="auth-tab active" type="button" data-mode="login" role="tab">Entrar</button>
+                <button class="auth-tab" type="button" data-mode="register" role="tab">Crear cuenta</button>
             </div>
-            <section class="controls" id="catalogControls" aria-label="Filtros del catálogo">
-                <label for="searchInput">Buscar especie</label>
-                <input id="searchInput" type="search" placeholder="Nombre común o científico">
-                <div class="segmented" role="group" aria-label="Filtrar por tipo">
-                    <button class="filter-button active" data-filter="all" type="button">Todas</button>
-                    <button class="filter-button" data-filter="fauna" type="button">Fauna</button>
-                    <button class="filter-button" data-filter="flora" type="button">Flora</button>
-                    <button class="filter-button" data-filter="seen" type="button">Vistas</button>
-                </div>
-                <div class="habitat-filter-chip" id="habitatFilterChip" hidden>
-                    <span id="habitatFilterLabel"></span>
-                    <button type="button" id="habitatFilterClear">Quitar filtro ✕</button>
-                </div>
-            </section>
-            <section class="species-panel" id="catalogPanel" aria-label="Catálogo de especies">
-                <div class="section-title"><h2>Catálogo</h2><span id="resultCount">0 resultados</span></div>
-                <div id="speciesList" class="species-list"></div>
-            </section>
-            <section class="progress-panel" id="progressPanel" aria-label="Progreso de exploración" hidden></section>
-        </aside>
-        <section class="map-stage" aria-label="Mapa y ficha de especie">
-            <div id="map"></div>
-            <div class="map-legend" aria-hidden="true">
-                <span><i class="legend-dot fauna"></i>Fauna vista</span>
-                <span><i class="legend-dot flora"></i>Flora vista</span>
-                <span><i class="legend-dot poi"></i>Punto de interés</span>
-                <span><i class="legend-dot habitat"></i>Hábitat (aprox.)</span>
-                <span><i class="legend-line parque"></i>Parque Regional</span>
-                <span><i class="legend-line lic"></i>LIC (Red Natura 2000)</span>
-                <span><i class="legend-line zepa"></i>ZEPA (Red Natura 2000)</span>
-                <span><i class="legend-line trail"></i>Sendero GR-92</span>
+            <form id="authForm" novalidate>
+                <label id="nameField" class="auth-field" hidden>Nombre
+                    <input type="text" id="authName" autocomplete="name" placeholder="Tu nombre">
+                </label>
+                <label class="auth-field">Email
+                    <input type="email" id="authEmail" required autocomplete="email" placeholder="tu@email.com">
+                </label>
+                <label class="auth-field">Contraseña
+                    <input type="password" id="authPassword" required autocomplete="current-password" minlength="6" placeholder="Mínimo 6 caracteres">
+                </label>
+                <p class="auth-error" id="authError" hidden></p>
+                <button type="submit" class="btn-primary" id="authSubmit">Entrar</button>
+            </form>
+            <button class="link-btn" type="button" id="authBack">← Volver a la portada</button>
+        </div>
+    </section>
+
+    <!-- ===================== Pantalla: selección de parque (mapa de España) ===================== -->
+    <section id="screen-select" class="screen screen-select" hidden>
+        <div class="select-panel">
+            <div class="select-head">
+                <div><p class="eyebrow">NaturDex</p><h2>Elige un parque</h2></div>
+                <div class="park-user"><span id="userNameSelect" class="user-name"></span><button id="logoutBtnSelect" class="icon-btn" type="button" title="Cerrar sesión" aria-label="Cerrar sesión">⏻</button></div>
             </div>
-            <article id="detailPanel" class="detail-panel" aria-live="polite"></article>
-        </section>
-    </main>
+            <p class="select-hint">Selecciónalo en el mapa o en la lista. Así solo se carga la información del parque que vas a explorar, sin saturar el mapa.</p>
+            <label class="select-field">Parque
+                <select id="parkSelect"><option value="">Cargando…</option></select>
+            </label>
+            <button id="geoLocateBtn" type="button" class="btn-secondary">📍 Ir al parque más cercano a mí</button>
+            <p class="select-status" id="selectStatus" hidden></p>
+            <button id="enterParkBtn" type="button" class="btn-primary" disabled>Entrar al parque</button>
+        </div>
+        <div id="spain-map" class="spain-map"></div>
+    </section>
+
+    <!-- ===================== Pantalla: parque (la app completa) ===================== -->
+    <section id="screen-park" class="screen" hidden>
+        <main class="app-shell">
+            <aside class="sidebar" aria-label="Panel de exploración NaturDex">
+                <div class="park-nav">
+                    <button type="button" id="backToParks" class="link-btn">← Parques</button>
+                    <div class="park-user"><span id="userName" class="user-name"></span><button id="logoutBtn" class="icon-btn" type="button" title="Cerrar sesión" aria-label="Cerrar sesión">⏻</button></div>
+                </div>
+                <section class="park-summary">
+                    <p class="eyebrow">NaturDex piloto</p>
+                    <h1 id="parkTitle">Cabo Cope y Puntas de Calnegre</h1>
+                    <p id="parkSummary">Guía viva de especies, hábitats y puntos de observación.</p>
+                    <div class="summary-grid" aria-label="Resumen del parque">
+                        <div><strong id="speciesCount">0</strong><span>especies</span></div>
+                        <div><strong id="habitatCount">0</strong><span>hábitats</span></div>
+                        <div><strong id="coastlineKm">17 km</strong><span>costa</span></div>
+                    </div>
+                    <div class="progress-wrap" aria-label="Progreso de descubrimiento">
+                        <div id="progressTrack" class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
+                        <span id="progressLabel" class="progress-label">0 / 0 especies descubiertas</span>
+                    </div>
+                    <div class="offline-bar" aria-label="Estado de conexión y datos sin conexión">
+                        <span id="connStatus" class="conn-status">En línea</span>
+                        <button type="button" id="saveOfflineBtn" class="save-offline-btn" title="Descarga este parque para poder usarlo sin cobertura">⬇️ Guardar sin conexión</button>
+                    </div>
+                </section>
+                <div class="view-tabs" role="tablist" aria-label="Vistas de NaturDex">
+                    <button class="view-tab active" type="button" data-view="catalog" role="tab" aria-selected="true">Catálogo</button>
+                    <button class="view-tab" type="button" data-view="progress" role="tab" aria-selected="false">Progreso</button>
+                </div>
+                <div class="catalog-crumb" id="catalogCrumb" hidden>
+                    <button type="button" id="backToHabitats">← Hábitats</button>
+                    <span id="catalogCrumbLabel"></span>
+                </div>
+                <section class="controls" id="catalogControls" aria-label="Filtros del catálogo">
+                    <label for="searchInput" id="searchLabel">Buscar especie</label>
+                    <input id="searchInput" type="search" placeholder="Nombre común o científico">
+                    <div class="segmented" role="group" aria-label="Filtrar por tipo" id="speciesFilterGroup">
+                        <button class="filter-button active" data-filter="all" type="button">Todas</button>
+                        <button class="filter-button" data-filter="fauna" type="button">Fauna</button>
+                        <button class="filter-button" data-filter="flora" type="button">Flora</button>
+                        <button class="filter-button" data-filter="seen" type="button">Vistas</button>
+                    </div>
+                </section>
+                <section class="species-panel" id="catalogPanel" aria-label="Catálogo de especies">
+                    <div class="section-title"><h2 id="catalogTitle">Hábitats</h2><span id="resultCount">0 resultados</span></div>
+                    <div id="speciesList" class="species-list"></div>
+                </section>
+                <section class="progress-panel" id="progressPanel" aria-label="Progreso de exploración" hidden></section>
+            </aside>
+            <section class="map-stage" aria-label="Mapa y ficha de especie">
+                <div id="map"></div>
+                <div class="map-legend" aria-hidden="true">
+                    <span><i class="legend-dot fauna"></i>Fauna vista</span>
+                    <span><i class="legend-dot flora"></i>Flora vista</span>
+                    <span><i class="legend-dot poi"></i>Punto de interés</span>
+                    <span><i class="legend-dot habitat"></i>Hábitat (aprox.)</span>
+                    <span><i class="legend-line parque"></i>Parque Regional</span>
+                    <span><i class="legend-line lic"></i>LIC (Red Natura 2000)</span>
+                    <span><i class="legend-line zepa"></i>ZEPA (Red Natura 2000)</span>
+                    <span><i class="legend-line trail"></i>Sendero GR-92</span>
+                </div>
+                <article id="detailPanel" class="detail-panel" aria-live="polite"></article>
+                <button type="button" id="explorerToggle" class="explorer-toggle" title="Activa tu GPS para descubrir qué tienes cerca">📍 Modo explorador</button>
+                <aside id="nearbyPanel" class="nearby-panel" hidden aria-label="Puntos cercanos a tu posición">
+                    <div class="nearby-header">
+                        <h3>Cerca de ti</h3>
+                        <button type="button" id="nearbyClose" aria-label="Desactivar modo explorador">✕</button>
+                    </div>
+                    <p id="nearbyStatus" class="nearby-status">Buscando tu posición…</p>
+                    <ul id="nearbyList" class="nearby-list"></ul>
+                </aside>
+            </section>
+        </main>
+    </section>
+
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <script src="Js/offline.js"></script>
     <script src="Js/app.js"></script>
+    <script src="Js/auth.js"></script>
 </body>
 </html>
