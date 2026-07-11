@@ -26,7 +26,10 @@ El primer parque piloto es el Parque Regional de Cabo Cope y Puntas de Calnegre,
 - `Backend/Api/parks.php`: endpoint de parques (lista plana + agrupación por comunidad/provincia).
 - `Backend/Api/species.php`: endpoint agregado para parque, hábitats, puntos de interés y especies.
 - `Backend/Api/progress.php`: endpoint GET/POST del progreso **por usuario y por parque** (requiere sesión); marca especies/POIs vistos y registra la ubicación GPS de cada avistamiento (persistido en la tabla `user_progress`).
-- `Database/schema.sql`: modelo escalable (parques, hábitats, especies, puntos de interés, observaciones, relación especie-hábitat, y **`users` + `user_progress`** para las cuentas).
+- `Database/schema.sql`: **solo la estructura** (DDL) del modelo escalable: parques, hábitats, especies, puntos de interés, observaciones, relación especie-hábitat, y **`users` + `user_progress`** para las cuentas.
+- `Database/seed.sql`: **los datos** del parque piloto (15 hábitats, 76 especies, 16 POIs y sus relaciones). Idempotente.
+- `Database/migrations.sql`: `ALTER` idempotentes para **actualizar instalaciones antiguas** (en una instalación limpia no hace falta).
+- Instalación limpia: `mysql < Database/schema.sql` y luego `mysql < Database/seed.sql`. Validación de los datos empaquetados del frontend: `npm run validate`.
 
 ## Catálogo de datos
 
@@ -408,7 +411,7 @@ La barra lateral tiene ahora dos pestañas: **Catálogo** (vista de siempre) y *
 
 ## Próximos pasos recomendados
 
-1. Recargar `Database/schema.sql` en MySQL: añade `slug`/`habitat_type`/`latitude`/`longitude`/`color` a `habitats` y crea la tabla `species_habitats` (usa `ADD COLUMN IF NOT EXISTS`, así que es seguro volver a ejecutarlo sobre una base de datos ya existente; requiere MySQL 8.0.29+ o MariaDB 10.5+).
+1. Base de datos: instalación limpia con `mysql < Database/schema.sql` (estructura) y `mysql < Database/seed.sql` (datos). Para poner al día una instalación antigua, ejecutar antes `mysql < Database/migrations.sql` (`ADD COLUMN IF NOT EXISTS`, idempotente; requiere MySQL 8.0.29+ o MariaDB 10.5+).
 2. Abrir `Frontend/index.html` desde el servidor local del proyecto.
 3. Sustituir el límite aproximado del parque y las posiciones de hábitat por la cartografía real en cuanto esté lista en QGIS (idealmente sirviendo un GeoJSON desde el backend).
 4. Sustituir progresivamente las citas genéricas por referencias documentales concretas (informes PORN/PRUG, fichas de especie oficiales) y curar fotografías con licencia verificada.

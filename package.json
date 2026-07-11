@@ -1,0 +1,10 @@
+{
+  "name": "naturdex",
+  "version": "0.1.0",
+  "private": true,
+  "description": "NaturDex — guía ambiental virtual de parques (prototipo, orientado a móvil/PWA).",
+  "scripts": {
+    "validate": "node Tools/validate-park-data.js",
+    "export:park": "php Tools/export-park.php"
+  }
+}
