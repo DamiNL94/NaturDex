@@ -100,6 +100,28 @@ function escapeHtml(value) {
   return String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
 }
 
+// Plantilla etiquetada para construir HTML escapando automáticamente cada interpolación (${...}),
+// de modo que sea imposible olvidar escapeHtml con datos de la BD/red (defensa contra XSS). Los
+// valores que ya son HTML de confianza (resultado de otro html`` o de raw()) no se re-escapan; los
+// arrays se concatenan; null/false/undefined se omiten. Uso: el.innerHTML = html`<h2>${dato}</h2>`.
+class SafeHtml {
+  constructor(value) { this.value = value; }
+  toString() { return this.value; }
+}
+function htmlValue(v) {
+  if (v == null || v === false) return '';
+  if (v instanceof SafeHtml) return v.value;
+  if (Array.isArray(v)) return v.map(htmlValue).join('');
+  return escapeHtml(String(v));
+}
+function html(strings, ...values) {
+  let out = strings[0];
+  for (let i = 0; i < values.length; i++) out += htmlValue(values[i]) + strings[i + 1];
+  return new SafeHtml(out);
+}
+// Marca un fragmento como HTML de confianza (ya escapado o estático). Úsalo con cuidado.
+function raw(value) { return new SafeHtml(String(value)); }
+
 function normalize(value) {
   return String(value ?? '').toLocaleLowerCase('es-ES');
 }
@@ -197,24 +219,13 @@ function getFilteredHabitats() {
 function renderHabitatCatalog() {
   const habitats = getFilteredHabitats();
   resultCount.textContent = habitats.length === 1 ? '1 hábitat' : habitats.length + ' hábitats';
-  speciesList.innerHTML = '<button class="habitat-all-link" type="button" id="viewAllSpeciesBtn">Ver todas las especies (' + state.data.species.length + ')</button>'
-    + habitats.map(h => {
-      const total = (h.speciesIds || []).length;
-      const seen = habitatSpeciesSeenCount(h);
-      const complete = isHabitatComplete(h);
-      return '<button class="habitat-card' + (complete ? ' complete' : '') + '" type="button" data-habitat="' + escapeHtml(h.id) + '">'
-        + '<span class="habitat-card-dot" style="background:' + escapeHtml(h.color || '#2f6f4e') + '"></span>'
-        + '<span class="habitat-card-body">'
-        + '<span class="habitat-card-meta">'
-        + '<span class="badge habitat-code">' + escapeHtml(h.code || '') + '</span>'
-        + (h.priority ? '<span class="badge alert">prioritario UE</span>' : '')
-        + (h.reviewNote ? '<span class="badge review">a revisar</span>' : '')
-        + '</span>'
-        + '<strong>' + escapeHtml(h.name) + '</strong>'
-        + '<span class="habitat-card-count">' + seen + ' / ' + total + ' especies vistas' + (complete && total > 0 ? ' · completo 🏅' : '') + '</span>'
-        + '</span>'
-        + '</button>';
-    }).join('');
+  const cards = habitats.map(h => {
+    const total = (h.speciesIds || []).length;
+    const seen = habitatSpeciesSeenCount(h);
+    const complete = isHabitatComplete(h);
+    return html`<button class="habitat-card${complete ? ' complete' : ''}" type="button" data-habitat="${h.id}"><span class="habitat-card-dot" style="background:${h.color || '#2f6f4e'}"></span><span class="habitat-card-body"><span class="habitat-card-meta"><span class="badge habitat-code">${h.code || ''}</span>${h.priority ? html`<span class="badge alert">prioritario UE</span>` : ''}${h.reviewNote ? html`<span class="badge review">a revisar</span>` : ''}</span><strong>${h.name}</strong><span class="habitat-card-count">${seen} / ${total} especies vistas${complete && total > 0 ? ' · completo 🏅' : ''}</span></span></button>`;
+  });
+  speciesList.innerHTML = html`<button class="habitat-all-link" type="button" id="viewAllSpeciesBtn">Ver todas las especies (${state.data.species.length})</button>${cards}`;
 }
 
 function enterHabitat(habitatId) {
@@ -280,23 +291,16 @@ function renderProgress() {
 function renderSpeciesList() {
   const species = getFilteredSpecies();
   resultCount.textContent = species.length === 1 ? '1 resultado' : species.length + ' resultados';
-  speciesList.innerHTML = species.map(item => {
+  const cards = species.map(item => {
     const seen = state.seenSpecies.has(item.id);
-    return '<button class="species-card ' + (item.id === state.selectedId ? 'active' : '') + (seen ? ' seen' : '') + '" type="button" data-id="' + item.id + '">'
-      + '<span class="card-thumb">'
-      + '<img src="' + escapeHtml(speciesImageSrc(item)) + '" alt="' + escapeHtml(item.commonName) + '" loading="lazy" onerror="window.__imgFallback(this,' + item.id + ')">'
-      + (seen ? '<span class="seen-badge" title="Visto">✓</span>' : '')
-      + '</span>'
-      + '<span><span class="card-meta"><span class="badge ' + item.kingdom + '">' + escapeHtml(item.kingdom) + '</span>'
-      + (item.featured ? '<span class="badge alert">prioritaria</span>' : '')
-      + (item.reviewNote ? '<span class="badge review">a revisar</span>' : '') + '</span>'
-      + '<h3>' + escapeHtml(item.commonName) + '</h3><em>' + escapeHtml(item.scientificName) + '</em></span></button>';
-  }).join('');
+    return html`<button class="species-card ${item.id === state.selectedId ? 'active' : ''}${seen ? ' seen' : ''}" type="button" data-id="${item.id}"><span class="card-thumb"><img src="${speciesImageSrc(item)}" alt="${item.commonName}" loading="lazy" onerror="window.__imgFallback(this,${item.id})">${seen ? html`<span class="seen-badge" title="Visto">✓</span>` : ''}</span><span><span class="card-meta"><span class="badge ${item.kingdom}">${item.kingdom}</span>${item.featured ? html`<span class="badge alert">prioritaria</span>` : ''}${item.reviewNote ? html`<span class="badge review">a revisar</span>` : ''}</span><h3>${item.commonName}</h3><em>${item.scientificName}</em></span></button>`;
+  });
+  speciesList.innerHTML = html`${cards}`;
 }
 
 function renderTaxonomyRow(label, value) {
   if (!value) return '';
-  return '<div><span>' + label + '</span><strong>' + escapeHtml(value) + '</strong></div>';
+  return html`<div><span>${label}</span><strong>${value}</strong></div>`;
 }
 
 // El panel de detalle de la derecha muestra o bien la etiqueta de una especie o bien la de un
@@ -319,40 +323,34 @@ function renderHabitatDetail() {
     const s = (state.data.species || []).find(item => item.id === id);
     if (!s) return '';
     const wasSeen = state.seenSpecies.has(s.id);
-    return '<button type="button" class="habitat-species-chip' + (wasSeen ? ' seen' : '') + '" data-species-chip="' + s.id + '">'
-      + '<span>' + kingdomEmoji(s) + '</span>' + escapeHtml(s.commonName) + (wasSeen ? ' ✓' : '')
-      + '</button>';
-  }).join('');
-  detailPanel.innerHTML = '<div class="detail-image-wrap habitat-detail-image">'
-    + '<img src="' + escapeHtml(habitatImageSrc(habitat)) + '" alt="' + escapeHtml(habitat.name) + '" onerror="window.__habitatImgFallback(this,\'' + escapeHtml(habitat.id) + '\')">'
-    + '<span class="habitat-detail-kind">Hábitat</span>'
-    + '</div>'
-    + '<div class="detail-body">'
-    + '<span class="card-meta">'
-    + '<span class="badge habitat-code">' + escapeHtml(habitat.code || '') + '</span>'
-    + '<span class="badge">' + escapeHtml(habitat.type || '') + '</span>'
-    + (habitat.priority ? '<span class="badge alert">prioritario UE</span>' : '')
-    + (habitat.reviewNote ? '<span class="badge review">a revisar</span>' : '')
-    + (complete && total > 0 ? '<span class="badge">completo 🏅</span>' : '')
-    + '</span>'
-    + '<h2>' + escapeHtml(habitat.name) + '</h2>'
-    + '<p>' + escapeHtml(habitat.description) + '</p>'
-    + '<div class="detail-facts">'
-    + '<div><span>Código Natura 2000</span><strong>' + escapeHtml(habitat.code || '—') + '</strong></div>'
-    + '<div><span>Superficie en el parque</span><strong>' + (area || 'Sin cartografiar') + '</strong></div>'
-    + '</div>'
-    + '<div class="habitat-detail-progress">'
-    + '<div class="progress-track big"><div class="progress-fill" style="width:' + pct + '%"></div></div>'
-    + '<span class="progress-caption">' + seen + ' / ' + total + ' especies vistas en este hábitat</span>'
-    + '</div>'
-    + (total > 0
-      ? '<h3 class="detail-subtitle">Especies de este hábitat</h3><div class="habitat-species-chips">' + chips + '</div>'
-      : '')
-    + (habitat.reviewNote ? '<div class="review-note"><strong>Pendiente de revisión:</strong> ' + escapeHtml(habitat.reviewNote) + '</div>' : '')
-    + '<button class="seen-toggle" type="button" data-view-habitat-species="' + escapeHtml(habitat.id) + '">'
-    + 'Ver ' + (total === 1 ? 'la especie' : 'las ' + total + ' especies') + ' en el catálogo'
-    + '</button>'
-    + '</div>';
+    return html`<button type="button" class="habitat-species-chip${wasSeen ? ' seen' : ''}" data-species-chip="${s.id}"><span>${kingdomEmoji(s)}</span>${s.commonName}${wasSeen ? ' ✓' : ''}</button>`;
+  });
+  detailPanel.innerHTML = html`<div class="detail-image-wrap habitat-detail-image">
+    <img src="${habitatImageSrc(habitat)}" alt="${habitat.name}" onerror="window.__habitatImgFallback(this,'${habitat.id}')">
+    <span class="habitat-detail-kind">Hábitat</span>
+    </div>
+    <div class="detail-body">
+    <span class="card-meta">
+    <span class="badge habitat-code">${habitat.code || ''}</span>
+    <span class="badge">${habitat.type || ''}</span>
+    ${habitat.priority ? html`<span class="badge alert">prioritario UE</span>` : ''}
+    ${habitat.reviewNote ? html`<span class="badge review">a revisar</span>` : ''}
+    ${complete && total > 0 ? html`<span class="badge">completo 🏅</span>` : ''}
+    </span>
+    <h2>${habitat.name}</h2>
+    <p>${habitat.description}</p>
+    <div class="detail-facts">
+    <div><span>Código Natura 2000</span><strong>${habitat.code || '—'}</strong></div>
+    <div><span>Superficie en el parque</span><strong>${area || 'Sin cartografiar'}</strong></div>
+    </div>
+    <div class="habitat-detail-progress">
+    <div class="progress-track big"><div class="progress-fill" style="width:${pct}%"></div></div>
+    <span class="progress-caption">${seen} / ${total} especies vistas en este hábitat</span>
+    </div>
+    ${total > 0 ? html`<h3 class="detail-subtitle">Especies de este hábitat</h3><div class="habitat-species-chips">${chips}</div>` : ''}
+    ${habitat.reviewNote ? html`<div class="review-note"><strong>Pendiente de revisión:</strong> ${habitat.reviewNote}</div>` : ''}
+    <button class="seen-toggle" type="button" data-view-habitat-species="${habitat.id}">Ver ${total === 1 ? 'la especie' : 'las ' + total + ' especies'} en el catálogo</button>
+    </div>`;
 }
 
 function renderSpeciesDetail() {
@@ -360,44 +358,43 @@ function renderSpeciesDetail() {
   if (!species) { detailPanel.innerHTML = ''; return; }
   const seen = state.seenSpecies.has(species.id);
   const tx = species.taxonomy || {};
-  detailPanel.innerHTML = '<div class="detail-image-wrap">'
-    + '<img src="' + escapeHtml(speciesImageSrc(species)) + '" alt="' + escapeHtml(species.commonName) + '" onerror="window.__imgFallback(this,' + species.id + ')">'
-    + '</div>'
-    + '<div class="detail-body">'
-    + '<span class="card-meta"><span class="badge ' + species.kingdom + '">' + escapeHtml(species.kingdom) + '</span>'
-    + '<span class="badge alert">' + escapeHtml(species.conservationStatus) + '</span>'
-    + (species.reviewNote ? '<span class="badge review">a revisar</span>' : '')
-    + '</span>'
-    + '<h2>' + escapeHtml(species.commonName) + '</h2><em>' + escapeHtml(species.scientificName) + '</em>'
-    + '<p>' + escapeHtml(species.description) + '</p>'
-    + '<ul class="detail-list">' + species.tips.map(tip => '<li>' + escapeHtml(tip) + '</li>').join('') + '</ul>'
-    + '<div class="detail-facts">'
-    + '<div><span>Hábitat</span><strong>' + escapeHtml(species.habitat) + '</strong></div>'
-    + '<div><span>Temporada</span><strong>' + escapeHtml(species.seasonality) + '</strong></div>'
-    + '<div><span>Grupo</span><strong>' + escapeHtml(species.group) + '</strong></div>'
-    + '<div><span>Rareza</span><strong>' + '★'.repeat(species.rarityScore) + '☆'.repeat(5 - species.rarityScore) + '</strong></div>'
-    + '</div>'
-    + '<h3 class="detail-subtitle">Taxonomía</h3>'
-    + '<div class="detail-facts detail-taxonomy">'
-    + renderTaxonomyRow('Reino', tx.kingdom)
-    + renderTaxonomyRow('Filo/División', tx.phylum)
-    + renderTaxonomyRow('Clase', tx.class)
-    + renderTaxonomyRow('Orden', tx.order)
-    + renderTaxonomyRow('Familia', tx.family)
-    + renderTaxonomyRow('Género', tx.genus)
-    + '</div>'
-    + '<h3 class="detail-subtitle">Estado de conservación</h3>'
-    + '<ul class="status-list">'
-    + '<li><span>UICN (global)</span>' + escapeHtml(species.iucnGlobal || 'No evaluada') + '</li>'
-    + '<li><span>España</span>' + escapeHtml(species.spainStatus || 'Sin dato') + '</li>'
-    + '<li><span>Región de Murcia</span>' + escapeHtml(species.murciaStatus || 'Sin dato') + '</li>'
-    + '</ul>'
-    + (species.reviewNote ? '<div class="review-note"><strong>Pendiente de revisión:</strong> ' + escapeHtml(species.reviewNote) + '</div>' : '')
-    + (species.source ? '<p class="detail-source">Fuente: ' + escapeHtml(species.source) + '</p>' : '')
-    + '<button class="seen-toggle ' + (seen ? 'is-seen' : '') + '" type="button" data-toggle-seen="' + species.id + '">'
-    + (seen ? '✓ Visto' : 'Marcar como visto')
-    + '</button>'
-    + '</div>';
+  const stars = '★'.repeat(species.rarityScore) + '☆'.repeat(5 - species.rarityScore);
+  detailPanel.innerHTML = html`<div class="detail-image-wrap">
+    <img src="${speciesImageSrc(species)}" alt="${species.commonName}" onerror="window.__imgFallback(this,${species.id})">
+    </div>
+    <div class="detail-body">
+    <span class="card-meta"><span class="badge ${species.kingdom}">${species.kingdom}</span>
+    <span class="badge alert">${species.conservationStatus}</span>
+    ${species.reviewNote ? html`<span class="badge review">a revisar</span>` : ''}
+    </span>
+    <h2>${species.commonName}</h2><em>${species.scientificName}</em>
+    <p>${species.description}</p>
+    <ul class="detail-list">${species.tips.map(tip => html`<li>${tip}</li>`)}</ul>
+    <div class="detail-facts">
+    <div><span>Hábitat</span><strong>${species.habitat}</strong></div>
+    <div><span>Temporada</span><strong>${species.seasonality}</strong></div>
+    <div><span>Grupo</span><strong>${species.group}</strong></div>
+    <div><span>Rareza</span><strong>${stars}</strong></div>
+    </div>
+    <h3 class="detail-subtitle">Taxonomía</h3>
+    <div class="detail-facts detail-taxonomy">
+    ${renderTaxonomyRow('Reino', tx.kingdom)}
+    ${renderTaxonomyRow('Filo/División', tx.phylum)}
+    ${renderTaxonomyRow('Clase', tx.class)}
+    ${renderTaxonomyRow('Orden', tx.order)}
+    ${renderTaxonomyRow('Familia', tx.family)}
+    ${renderTaxonomyRow('Género', tx.genus)}
+    </div>
+    <h3 class="detail-subtitle">Estado de conservación</h3>
+    <ul class="status-list">
+    <li><span>UICN (global)</span>${species.iucnGlobal || 'No evaluada'}</li>
+    <li><span>España</span>${species.spainStatus || 'Sin dato'}</li>
+    <li><span>Región de Murcia</span>${species.murciaStatus || 'Sin dato'}</li>
+    </ul>
+    ${species.reviewNote ? html`<div class="review-note"><strong>Pendiente de revisión:</strong> ${species.reviewNote}</div>` : ''}
+    ${species.source ? html`<p class="detail-source">Fuente: ${species.source}</p>` : ''}
+    <button class="seen-toggle ${seen ? 'is-seen' : ''}" type="button" data-toggle-seen="${species.id}">${seen ? '✓ Visto' : 'Marcar como visto'}</button>
+    </div>`;
 }
 
 function speciesDivIcon(species) {
@@ -470,8 +467,7 @@ function renderMarkers() {
     const fromGps = state.sightings.has(species.id);
     const marker = L.marker(speciesLatLng(species), { icon: speciesDivIcon(species) });
     marker.bindPopup(
-      '<strong>' + escapeHtml(species.commonName) + '</strong><br>' + escapeHtml(species.scientificName)
-      + '<br><small>' + (fromGps ? '📍 Ubicación registrada por GPS' : '📍 Ubicación aproximada (sin GPS)') + '</small>'
+      String(html`<strong>${species.commonName}</strong><br>${species.scientificName}<br><small>${fromGps ? '📍 Ubicación registrada por GPS' : '📍 Ubicación aproximada (sin GPS)'}</small>`)
     );
     marker.on('click', () => selectSpecies(species.id, false));
     state.speciesCluster.addLayer(marker);
@@ -487,13 +483,7 @@ function renderPoiMarkers() {
     const seen = state.seenPois.has(poi.id);
     const marker = L.marker(poi.coordinates, { icon: poiDivIcon(poi, seen) }).addTo(state.poiGroup);
     marker.bindPopup(
-      '<div class="poi-popup-image"><img src="' + escapeHtml(poiImageSrc(poi)) + '" alt="' + escapeHtml(poi.name) + '" loading="lazy"></div>'
-      + '<strong>' + escapeHtml(poi.name) + '</strong><br>'
-      + '<span class="popup-type">' + escapeHtml(poi.type) + '</span>'
-      + (poi.approx ? '<span class="badge review poi-approx-badge">ubicación aproximada</span>' : '')
-      + '<p>' + escapeHtml(poi.description) + '</p>'
-      + (poi.source ? '<p class="detail-source">Fuente: ' + escapeHtml(poi.source) + '</p>' : '')
-      + '<button type="button" class="poi-seen-btn" data-poi="' + escapeHtml(poi.id) + '">' + (seen ? '✓ Visitado' : 'Marcar como visitado') + '</button>',
+      String(html`<div class="poi-popup-image"><img src="${poiImageSrc(poi)}" alt="${poi.name}" loading="lazy"></div><strong>${poi.name}</strong><br><span class="popup-type">${poi.type}</span>${poi.approx ? html`<span class="badge review poi-approx-badge">ubicación aproximada</span>` : ''}<p>${poi.description}</p>${poi.source ? html`<p class="detail-source">Fuente: ${poi.source}</p>` : ''}<button type="button" class="poi-seen-btn" data-poi="${poi.id}">${seen ? '✓ Visitado' : 'Marcar como visitado'}</button>`),
       { maxWidth: 260 }
     );
     marker.on('popupopen', event => {
@@ -512,9 +502,7 @@ const PROTECTED_STYLES = {
 };
 
 function protectedPopup(figura, nombre, codigo, ha) {
-  return '<strong>' + escapeHtml(nombre) + '</strong><br>'
-    + '<span class="popup-type">' + escapeHtml(figura) + (codigo ? ' · ' + escapeHtml(codigo) : '') + '</span>'
-    + (ha ? '<p>' + Math.round(ha).toLocaleString('es-ES') + ' ha</p>' : '');
+  return String(html`<strong>${nombre}</strong><br><span class="popup-type">${figura}${codigo ? ' · ' + codigo : ''}</span>${ha ? html`<p>${Math.round(ha).toLocaleString('es-ES')} ha</p>` : ''}`);
 }
 
 function addProtectedLayer(group, geojson, style, popupFor) {
@@ -537,10 +525,7 @@ function renderTrails() {
     onEachFeature: (feature, layer) => {
       const p = feature.properties || {};
       layer.bindPopup(
-        '<strong>' + escapeHtml(p.name || 'Sendero') + '</strong><br>'
-        + '<span class="popup-type">' + escapeHtml(p.tipo || '') + '</span>'
-        + (p.descripcion ? '<p>' + escapeHtml(p.descripcion) + '</p>' : '')
-        + (p.source ? '<small>' + escapeHtml(p.source) + '</small>' : '')
+        String(html`<strong>${p.name || 'Sendero'}</strong><br><span class="popup-type">${p.tipo || ''}</span>${p.descripcion ? html`<p>${p.descripcion}</p>` : ''}${p.source ? html`<small>${p.source}</small>` : ''}`)
       );
     }
   }).addTo(state.trailLayer);
@@ -581,12 +566,7 @@ function bindHabitatPopup(layer, habitat) {
   const total = (habitat.speciesIds || []).length;
   const area = habitatAreaLabel(habitat);
   layer.bindPopup(
-    '<strong>' + escapeHtml(habitat.name) + '</strong><br>'
-    + '<span class="popup-type">' + escapeHtml(habitat.type || '') + (habitat.priority ? ' · prioritario UE' : '') + (habitat.code ? ' · cód. ' + escapeHtml(habitat.code) : '') + '</span>'
-    + (area ? '<p class="habitat-area-line">Superficie en el parque: <strong>' + area + '</strong></p>' : '')
-    + '<p>' + escapeHtml(habitat.description) + '</p>'
-    + '<p class="habitat-progress-line">Especies vistas: <strong>' + seenCount + ' / ' + total + '</strong>' + (complete ? ' · ¡Hábitat completo! 🏅' : '') + '</p>'
-    + '<button type="button" class="habitat-filter-btn" data-habitat="' + escapeHtml(habitat.id) + '">Ver especies de este hábitat</button>'
+    String(html`<strong>${habitat.name}</strong><br><span class="popup-type">${habitat.type || ''}${habitat.priority ? ' · prioritario UE' : ''}${habitat.code ? ' · cód. ' + habitat.code : ''}</span>${area ? html`<p class="habitat-area-line">Superficie en el parque: <strong>${area}</strong></p>` : ''}<p>${habitat.description}</p><p class="habitat-progress-line">Especies vistas: <strong>${seenCount} / ${total}</strong>${complete ? ' · ¡Hábitat completo! 🏅' : ''}</p><button type="button" class="habitat-filter-btn" data-habitat="${habitat.id}">Ver especies de este hábitat</button>`)
   );
   layer.on('popupopen', event => {
     const button = event.popup.getElement().querySelector('.habitat-filter-btn');
@@ -760,47 +740,18 @@ function renderProgressTab() {
   const speciesPct = progress.speciesTotal ? Math.round((progress.speciesSeen / progress.speciesTotal) * 100) : 0;
   const poiPct = progress.poisTotal ? Math.round((progress.poisSeen / progress.poisTotal) * 100) : 0;
 
-  const habitatsHtml = progress.habitatProgress.map(h => (
-    '<li class="progress-row' + (h.complete ? ' complete' : '') + '">'
-    + '<span class="progress-row-label"><span class="dot" style="background:' + (h.color || '#2f6f4e') + '"></span>' + escapeHtml(h.name) + '</span>'
-    + '<span class="progress-row-value">' + h.seen + '/' + h.total + (h.complete ? ' ✓' : '') + '</span>'
-    + '</li>'
-  )).join('');
+  const habitatsHtml = progress.habitatProgress.map(h =>
+    html`<li class="progress-row${h.complete ? ' complete' : ''}"><span class="progress-row-label"><span class="dot" style="background:${h.color || '#2f6f4e'}"></span>${h.name}</span><span class="progress-row-value">${h.seen}/${h.total}${h.complete ? ' ✓' : ''}</span></li>`);
 
-  const poisHtml = (state.data.pointsOfInterest || []).map(p => (
-    '<li class="progress-row' + (state.seenPois.has(p.id) ? ' complete' : '') + '">'
-    + '<span class="progress-row-label">' + escapeHtml(p.name) + '</span>'
-    + '<span class="progress-row-value">' + (state.seenPois.has(p.id) ? 'Visitado ✓' : 'Pendiente') + '</span>'
-    + '</li>'
-  )).join('');
+  const poisHtml = (state.data.pointsOfInterest || []).map(p =>
+    html`<li class="progress-row${state.seenPois.has(p.id) ? ' complete' : ''}"><span class="progress-row-label">${p.name}</span><span class="progress-row-value">${state.seenPois.has(p.id) ? 'Visitado ✓' : 'Pendiente'}</span></li>`);
 
   const justUnlocked = progress.parkComplete && !state.parkWasComplete;
   state.parkWasComplete = progress.parkComplete;
 
-  progressPanel.innerHTML =
-    '<div class="progress-section">'
-    + '<h3>Especies</h3>'
-    + '<div class="progress-track big"><div class="progress-fill" style="width:' + speciesPct + '%"></div></div>'
-    + '<span class="progress-caption">' + progress.speciesSeen + ' / ' + progress.speciesTotal + ' especies vistas</span>'
-    + '</div>'
-    + '<div class="progress-section">'
-    + '<h3>Hábitats</h3>'
-    + '<ul class="progress-list">' + habitatsHtml + '</ul>'
-    + '</div>'
-    + '<div class="progress-section">'
-    + '<h3>Puntos de interés</h3>'
-    + '<div class="progress-track big"><div class="progress-fill" style="width:' + poiPct + '%"></div></div>'
-    + '<span class="progress-caption">' + progress.poisSeen + ' / ' + progress.poisTotal + ' puntos visitados</span>'
-    + '<ul class="progress-list">' + poisHtml + '</ul>'
-    + '</div>'
-    + '<div class="achievement-card ' + (progress.parkComplete ? 'unlocked' : 'locked') + (justUnlocked ? ' just-unlocked' : '') + '">'
-    + '<span class="achievement-icon">' + (progress.parkComplete ? '🏆' : '🔒') + '</span>'
-    + '<div><strong>' + escapeHtml(ACHIEVEMENT_NAME) + '</strong>'
-    + '<p>' + (progress.parkComplete
+  progressPanel.innerHTML = html`<div class="progress-section"><h3>Especies</h3><div class="progress-track big"><div class="progress-fill" style="width:${speciesPct}%"></div></div><span class="progress-caption">${progress.speciesSeen} / ${progress.speciesTotal} especies vistas</span></div><div class="progress-section"><h3>Hábitats</h3><ul class="progress-list">${habitatsHtml}</ul></div><div class="progress-section"><h3>Puntos de interés</h3><div class="progress-track big"><div class="progress-fill" style="width:${poiPct}%"></div></div><span class="progress-caption">${progress.poisSeen} / ${progress.poisTotal} puntos visitados</span><ul class="progress-list">${poisHtml}</ul></div><div class="achievement-card ${progress.parkComplete ? 'unlocked' : 'locked'}${justUnlocked ? ' just-unlocked' : ''}"><span class="achievement-icon">${progress.parkComplete ? '🏆' : '🔒'}</span><div><strong>${ACHIEVEMENT_NAME}</strong><p>${progress.parkComplete
       ? 'Logro desbloqueado: has completado todos los hábitats y puntos de interés de Cabo Cope y Puntas de Calnegre.'
-      : 'Completa todos los hábitats (viendo todas sus especies) y visita todos los puntos de interés para desbloquear este logro.')
-    + '</p></div>'
-    + '</div>';
+      : 'Completa todos los hábitats (viendo todas sus especies) y visita todos los puntos de interés para desbloquear este logro.'}</p></div></div>`;
 }
 
 speciesList.addEventListener('click', event => {
@@ -896,15 +847,11 @@ function updateNearby(lat, lng) {
   withDist.sort((a, b) => a.dist - b.dist);
   const nearest = withDist.slice(0, 8);
   nearbyStatus.textContent = 'Ordenado por distancia a tu posición actual.';
-  nearbyList.innerHTML = nearest.map(t => {
+  nearbyList.innerHTML = html`${nearest.map(t => {
     const distLabel = t.dist < 1000 ? Math.round(t.dist) + ' m' : (t.dist / 1000).toFixed(1) + ' km';
     const here = t.dist < 60;
-    return '<li class="nearby-item' + (here ? ' here' : '') + '" data-kind="' + t.kind + '" data-id="' + escapeHtml(String(t.id)) + '">'
-      + '<span class="nearby-icon">' + t.icon + '</span>'
-      + '<span class="nearby-name">' + escapeHtml(t.name) + (t.visited ? ' ✓' : '') + (here ? '<br><strong>¡Estás aquí!</strong>' : '') + '</span>'
-      + '<span class="nearby-dist">' + distLabel + '</span>'
-      + '</li>';
-  }).join('');
+    return html`<li class="nearby-item${here ? ' here' : ''}" data-kind="${t.kind}" data-id="${String(t.id)}"><span class="nearby-icon">${t.icon}</span><span class="nearby-name">${t.name}${t.visited ? ' ✓' : ''}${here ? html`<br><strong>¡Estás aquí!</strong>` : ''}</span><span class="nearby-dist">${distLabel}</span></li>`;
+  })}`;
 }
 
 function startExplorerMode() {
