@@ -1,41 +1,25 @@
 import {
-  html, normalize, kingdomEmoji,
+  html, kingdomEmoji,
   placeholderImage, speciesImageSrc,
   habitatImageSrc, habitatPlaceholderImage,
   poiEmoji, poiImageSrc, haversineMeters
 } from './util.js';
-
-const API_BASE = '../Backend/Api';
-const ACHIEVEMENT_NAME = '¡Más aguileño que un pijo lobo!';
-
-const state = {
-  data: null,
-  filter: 'all',
-  query: '',
-  selectedId: null,
-  view: 'catalog',
-  catalogMode: 'habitats',
-  habitatFocus: null,
-  detailMode: 'habitat',
-  selectedHabitatId: null,
-  markers: new Map(),
-  poiMarkers: new Map(),
-  habitatLayers: new Map(),
-  seenSpecies: new Set(),
-  seenPois: new Set(),
-  sightings: new Map(),
-  progressReady: false,
-  parkWasComplete: false,
-  activeParkSlug: null,
-  manifest: null,
-  dataFromCache: false,
-  userId: null,
-  userName: null,
-  explorerActive: false,
-  explorerWatchId: null,
-  userMarker: null,
-  userAccuracyCircle: null
-};
+import {
+  API_BASE, ACHIEVEMENT_NAME, DEFAULT_PARK_SLUG, PARK_INDEX_PATH,
+  state, getFilteredSpecies, getFilteredHabitats,
+  habitatSpeciesSeenCount, habitatAreaLabel, isHabitatComplete,
+  computeProgress, speciesLatLng
+} from './state.js';
+import {
+  speciesList, searchInput, resultCount, catalogControls, catalogPanel,
+  catalogCrumb, catalogCrumbLabel, backToHabitatsBtn, catalogTitle,
+  speciesFilterGroup, searchLabel,
+  parkTitle, speciesCount, habitatCount, coastlineKm, parkSummary,
+  progressTrack, progressFill, progressLabel,
+  progressPanel, detailPanel,
+  explorerToggle, nearbyPanel, nearbyStatus, nearbyList, nearbyClose,
+  saveOfflineBtn, connStatus
+} from './dom.js';
 
 // Capas base: mapa callejero (OSM) y ortofoto aérea (PNOA del IGN, vía WMTS en cuadrícula
 // GoogleMapsCompatible = mismo esquema z/x/y que las teselas XYZ de Leaflet).
@@ -82,27 +66,6 @@ L.control.layers(
   { position: 'topright', collapsed: window.innerWidth <= 900 }
 ).addTo(map);
 
-const speciesList = document.querySelector('#speciesList');
-const detailPanel = document.querySelector('#detailPanel');
-const searchInput = document.querySelector('#searchInput');
-const resultCount = document.querySelector('#resultCount');
-const speciesCount = document.querySelector('#speciesCount');
-const habitatCount = document.querySelector('#habitatCount');
-const coastlineKm = document.querySelector('#coastlineKm');
-const parkSummary = document.querySelector('#parkSummary');
-const progressTrack = document.querySelector('#progressTrack');
-const progressFill = document.querySelector('#progressFill');
-const progressLabel = document.querySelector('#progressLabel');
-const catalogControls = document.querySelector('#catalogControls');
-const catalogPanel = document.querySelector('#catalogPanel');
-const progressPanel = document.querySelector('#progressPanel');
-const catalogCrumb = document.querySelector('#catalogCrumb');
-const catalogCrumbLabel = document.querySelector('#catalogCrumbLabel');
-const backToHabitatsBtn = document.querySelector('#backToHabitats');
-const catalogTitle = document.querySelector('#catalogTitle');
-const speciesFilterGroup = document.querySelector('#speciesFilterGroup');
-const searchLabel = document.querySelector('#searchLabel');
-
 window.__imgFallback = function (imgEl, speciesId) {
   const species = state.data.species.find(item => item.id === Number(speciesId));
   if (!species || !imgEl) return;
@@ -116,28 +79,6 @@ window.__habitatImgFallback = function (imgEl, habitatId) {
   imgEl.onerror = null;
   imgEl.src = habitatPlaceholderImage(habitat);
 };
-
-function getFilteredSpecies() {
-  return state.data.species.filter(species => {
-    const matchesFilter = state.filter === 'all'
-      || (state.filter === 'seen' && state.seenSpecies.has(species.id))
-      || species.kingdom === state.filter;
-    const matchesHabitat = !state.habitatFocus || (species.habitatIds || []).includes(state.habitatFocus);
-    const text = normalize([species.commonName, species.scientificName, species.group, species.habitat].join(' '));
-    return matchesFilter && matchesHabitat && text.includes(normalize(state.query));
-  });
-}
-
-// --- Catálogo organizado por hábitat: se navega primero por hábitat (donde viven las especies) y
-// solo al entrar en uno se muestran sus fichas. Es más fácil de recorrer que una lista plana de
-// 78 especies, y refuerza la idea de que cada especie pertenece a un ecosistema concreto.
-function getFilteredHabitats() {
-  const q = normalize(state.query);
-  return (state.data.habitats || []).filter(h => {
-    if (!q) return true;
-    return normalize([h.name, h.code, h.type].join(' ')).includes(q);
-  });
-}
 
 function renderHabitatCatalog() {
   const habitats = getFilteredHabitats();
@@ -343,13 +284,6 @@ function poiDivIcon(poi, seen) {
   });
 }
 
-function speciesLatLng(species) {
-  // La ubicación del avistamiento la aporta el GPS del móvil; si no la hay, se usa la coordenada
-  // representativa del catálogo como aproximación.
-  const s = state.sightings.get(species.id);
-  return s ? [s.lat, s.lng] : species.coordinates;
-}
-
 function renderMarkers() {
   // La ubicación de una especie en el mapa se revela solo cuando el usuario la marca como vista
   // (es parte de la mecánica tipo pokédex, no un inventario de localizaciones pre-cargado).
@@ -435,22 +369,6 @@ function renderProtectedAreas() {
     p => protectedPopup('LIC (Red Natura 2000)', p.SITE_NAME || 'LIC', p.SITE_CODE, p.HECTARES));
   addProtectedLayer(state.zepaLayer, state.geo.zepa, PROTECTED_STYLES.zepa,
     p => protectedPopup('ZEPA (Red Natura 2000)', p.site_name || 'ZEPA', p.site_code, p.hectares));
-}
-
-function habitatSpeciesSeenCount(habitat) {
-  return (habitat.speciesIds || []).filter(id => state.seenSpecies.has(id)).length;
-}
-
-// Superficie del hábitat dentro del parque, si se conoce (de los recintos del INB). Devuelve '' si no.
-function habitatAreaLabel(habitat) {
-  const ha = state.geo && state.geo.habitatArea ? state.geo.habitatArea[habitat.id] : null;
-  if (typeof ha !== 'number') return '';
-  return ha >= 100 ? Math.round(ha).toLocaleString('es-ES') + ' ha' : ha.toLocaleString('es-ES') + ' ha';
-}
-
-function isHabitatComplete(habitat) {
-  const total = (habitat.speciesIds || []).length;
-  return total > 0 && habitatSpeciesSeenCount(habitat) === total;
 }
 
 function bindHabitatPopup(layer, habitat) {
@@ -595,25 +513,6 @@ function togglePoiSeen(id) {
   persistProgress('poi', id, nowSeen);
 }
 
-function computeProgress() {
-  const species = state.data.species || [];
-  const habitats = state.data.habitats || [];
-  const pois = state.data.pointsOfInterest || [];
-  const speciesTotal = species.length;
-  const speciesSeen = state.seenSpecies.size;
-  const habitatProgress = habitats.map(h => {
-    const total = (h.speciesIds || []).length;
-    const seen = habitatSpeciesSeenCount(h);
-    return { id: h.id, name: h.name, code: h.code, color: h.color, total, seen, complete: total > 0 && seen === total };
-  });
-  const poisTotal = pois.length;
-  const poisSeen = pois.filter(p => state.seenPois.has(p.id)).length;
-  const habitatsComplete = habitatProgress.length > 0 && habitatProgress.every(h => h.complete);
-  const poisComplete = poisTotal > 0 && poisSeen === poisTotal;
-  const parkComplete = habitatsComplete && poisComplete;
-  return { speciesTotal, speciesSeen, habitatProgress, poisTotal, poisSeen, parkComplete };
-}
-
 function setView(view) {
   state.view = view;
   document.querySelectorAll('.view-tab').forEach(btn => {
@@ -690,12 +589,6 @@ backToHabitatsBtn.addEventListener('click', backToHabitats);
 // distancia, los puntos de interés y hábitats más cercanos a la posición real del usuario. Es la
 // base sobre la que, en la futura app móvil, se irán "activando" fichas y logros a medida que el
 // usuario se pasea físicamente por el parque, en vez de tener que buscarlos en una lista.
-const explorerToggle = document.querySelector('#explorerToggle');
-const nearbyPanel = document.querySelector('#nearbyPanel');
-const nearbyStatus = document.querySelector('#nearbyStatus');
-const nearbyList = document.querySelector('#nearbyList');
-const nearbyClose = document.querySelector('#nearbyClose');
-
 function nearbyTargets() {
   const targets = [];
   (state.data.pointsOfInterest || []).forEach(poi => targets.push({
@@ -800,9 +693,6 @@ searchInput.addEventListener('input', event => {
 // --- Carga por parque: registro (por provincia) -> manifiesto -> datos/geo -----------------------
 // Todo pasa por NaturDexOffline.fetchJsonCached, que cachea cada JSON en el dispositivo: con visitar
 // un parque online una vez, sus datos y mapas vectoriales quedan disponibles sin conexión.
-const DEFAULT_PARK_SLUG = 'cabo-cope-puntas-calnegre';
-const PARK_INDEX_PATH = 'Data/parks-index.json';
-
 function resolveActivePark(registry) {
   const wanted = state.activeParkSlug || (registry && registry.defaultPark) || DEFAULT_PARK_SLUG;
   let firstAvailable = null;
@@ -931,8 +821,8 @@ async function loadProgress() {
 
 // --- UI de estado offline (indicador de conexión + botón "Guardar sin conexión") -----------------
 function initOfflineUI() {
-  const btn = document.querySelector('#saveOfflineBtn');
-  const status = document.querySelector('#connStatus');
+  const btn = saveOfflineBtn;
+  const status = connStatus;
   if (!btn || !status) return;
 
   const refresh = () => {
@@ -984,8 +874,7 @@ async function startParkExperience(slug, user) {
 
   await Promise.all([loadData(manifest), loadGeo(manifest), loadProgress()]);
 
-  const titleEl = document.querySelector('#parkTitle');
-  if (titleEl && state.data.park && state.data.park.name) titleEl.textContent = state.data.park.name;
+  if (parkTitle && state.data.park && state.data.park.name) parkTitle.textContent = state.data.park.name;
 
   state.selectedId = state.data.species[0]?.id ?? null;
   // Al entrar al parque, el panel de detalle de la derecha muestra por defecto la etiqueta de un
