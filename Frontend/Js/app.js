@@ -23,7 +23,7 @@ import {
 } from './data.js';
 import {
   speciesList, searchInput, catalogControls, catalogPanel,
-  backToHabitatsBtn, parkTitle, progressPanel, detailPanel,
+  backToHabitatsBtn, catalogCrumbLabel, parkTitle, progressPanel, detailPanel, sheetClose,
   explorerToggle, nearbyPanel, nearbyStatus, nearbyList, nearbyClose,
   saveOfflineBtn, connStatus
 } from './dom.js';
@@ -65,6 +65,7 @@ function backToHabitats() {
 
 function focusHabitat(habitatId) {
   // Entrada al catálogo de especies de un hábitat desde su popup en el mapa.
+  closeDetailSheet();
   setView('catalog');
   enterHabitat(habitatId);
 }
@@ -85,6 +86,7 @@ function selectSpecies(id, focusMap = true) {
       marker.openPopup();
     }
   }
+  openDetailSheet(); // en móvil, la ficha se muestra como bottom-sheet
 }
 
 // --- Marcar visto / visitado ------------------------------------------------------------------------
@@ -159,7 +161,52 @@ function setView(view) {
   progressPanel.hidden = view !== 'progress';
   if (view === 'progress') renderProgressTab();
   else renderCatalogBody();
+  syncMobileNav(view); // catálogo y progreso también son pestañas de la nav inferior móvil
 }
+
+// --- Vistas móviles: nav inferior + ficha como bottom-sheet -------------------------------------
+// En ≤900px la app funciona por pantallas completas (Catálogo / Mapa / Progreso) conmutadas por la
+// nav inferior (body[data-mtab] en CSS), y la ficha de detalle se desliza como bottom-sheet
+// (body.sheet-open). En escritorio estas funciones son inofensivas: la nav está oculta y la clase
+// sheet-open solo tiene efecto dentro de la media query móvil.
+const mobileMedia = window.matchMedia('(max-width: 900px)');
+
+function syncMobileNav(tab) {
+  document.body.dataset.mtab = tab;
+  document.querySelectorAll('.mobile-nav-btn').forEach(btn => {
+    const active = btn.dataset.mtab === tab;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-selected', active ? 'true' : 'false');
+  });
+}
+
+function setMobileTab(tab) {
+  if (tab === 'map') {
+    syncMobileNav('map');
+    closeDetailSheet();
+    ensureMapSized(); // el mapa estaba display:none; Leaflet debe recalcular el tamaño del contenedor
+  } else {
+    setView(tab); // 'catalog' | 'progress' — setView ya sincroniza la nav inferior
+  }
+}
+
+function openDetailSheet() {
+  if (mobileMedia.matches) document.body.classList.add('sheet-open');
+}
+
+function closeDetailSheet() {
+  document.body.classList.remove('sheet-open');
+}
+
+document.querySelectorAll('.mobile-nav-btn').forEach(btn => {
+  btn.addEventListener('click', () => setMobileTab(btn.dataset.mtab));
+});
+if (sheetClose) sheetClose.addEventListener('click', closeDetailSheet);
+// La miga de pan del catálogo abre la ficha del hábitat en el que se está navegando.
+catalogCrumbLabel.addEventListener('click', () => {
+  if (state.habitatFocus) { selectHabitat(state.habitatFocus); openDetailSheet(); }
+});
+syncMobileNav('catalog'); // pestaña inicial
 
 // --- Delegación de eventos ------------------------------------------------------------------------------
 speciesList.addEventListener('click', event => {

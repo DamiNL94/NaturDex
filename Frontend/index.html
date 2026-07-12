@@ -127,7 +127,15 @@
                     <span><i class="legend-line zepa"></i>ZEPA (Red Natura 2000)</span>
                     <span><i class="legend-line trail"></i>Sendero GR-92</span>
                 </div>
-                <article id="detailPanel" class="detail-panel" aria-live="polite"></article>
+                <!-- En escritorio la ficha es la columna derecha; en móvil, .detail-dock se
+                     convierte en una bottom-sheet deslizante sobre la vista activa. -->
+                <div class="detail-dock">
+                    <div class="sheet-bar">
+                        <span class="sheet-grip" aria-hidden="true"></span>
+                        <button type="button" id="sheetClose" class="sheet-close" aria-label="Cerrar ficha">✕</button>
+                    </div>
+                    <article id="detailPanel" class="detail-panel" aria-live="polite"></article>
+                </div>
                 <button type="button" id="explorerToggle" class="explorer-toggle" title="Activa tu GPS para descubrir qué tienes cerca">📍 Modo explorador</button>
                 <aside id="nearbyPanel" class="nearby-panel" hidden aria-label="Puntos cercanos a tu posición">
                     <div class="nearby-header">
@@ -139,6 +147,12 @@
                 </aside>
             </section>
         </main>
+        <!-- Nav inferior (solo móvil): Catálogo / Mapa / Progreso a pantalla completa -->
+        <nav class="mobile-nav" aria-label="Secciones de NaturDex">
+            <button type="button" class="mobile-nav-btn active" data-mtab="catalog" aria-selected="true"><span aria-hidden="true">📖</span>Catálogo</button>
+            <button type="button" class="mobile-nav-btn" data-mtab="map" aria-selected="false"><span aria-hidden="true">🗺️</span>Mapa</button>
+            <button type="button" class="mobile-nav-btn" data-mtab="progress" aria-selected="false"><span aria-hidden="true">🏅</span>Progreso</button>
+        </nav>
     </section>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

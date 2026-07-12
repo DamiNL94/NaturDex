@@ -7,7 +7,7 @@
 .map-legend{position:absolute;left:16px;bottom:16px;display:flex;flex-direction:column;gap:6px;padding:10px 12px;border-radius:8px;background:rgba(255,255,255,.92);box-shadow:0 8px 24px rgba(23,33,27,.14);font-size:.72rem;color:var(--muted);z-index:400}.legend-dot{display:inline-block;width:10px;height:10px;border-radius:999px;margin-right:6px;background:var(--leaf)}.legend-dot.fauna{background:var(--sea)}.legend-dot.poi{background:var(--sun);border-radius:3px}.legend-dot.habitat{background:transparent;border:2px solid var(--leaf)}.legend-line{display:inline-block;width:16px;height:0;margin-right:6px;border-top:2px dashed var(--danger)}.filter-button{min-height:34px;border:0;border-radius:6px;color:var(--muted);background:transparent;cursor:pointer}.filter-button.active{color:#fff;background:var(--leaf)}.species-panel{min-height:0;display:flex;flex:1;flex-direction:column;padding:18px 18px 18px 28px}.section-title{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-right:10px}.section-title h2{margin-bottom:12px;font-size:1rem}.section-title span{color:var(--muted);font-size:.82rem}.species-list{overflow:auto;padding-right:10px}.species-card{width:100%;display:grid;grid-template-columns:72px 1fr;gap:12px;margin-bottom:10px;padding:10px;border:1px solid var(--line);border-radius:8px;text-align:left;color:inherit;background:#fff;cursor:pointer}.species-card.active{border-color:var(--leaf);box-shadow:0 0 0 2px rgba(47,111,78,.16)}.species-card.seen{border-color:#bcd6c4}.card-thumb{position:relative;width:72px;height:72px}.species-card img{width:72px;height:72px;object-fit:cover;border-radius:6px;background:#dfe8dc}.seen-badge{position:absolute;top:-6px;right:-6px;width:20px;height:20px;display:flex;align-items:center;justify-content:center;border-radius:999px;background:var(--leaf);color:#fff;font-size:.7rem;font-weight:800;box-shadow:0 2px 6px rgba(0,0,0,.2)}.card-meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:5px}.badge{display:inline-flex;align-items:center;min-height:22px;padding:0 8px;border-radius:999px;color:var(--leaf);background:#e4f0e7;font-size:.72rem;font-weight:800}.badge.fauna{color:var(--sea);background:#e1eef5}.badge.alert{color:var(--danger);background:#f7e8e3}.badge.review{color:#8a5a00;background:#fbeecb}.species-card h3{margin-bottom:2px;font-size:.98rem}.species-card em{display:block;color:var(--muted);font-size:.82rem}.map-stage{position:relative;display:flex;min-width:0;height:100%;overflow:hidden}#map{flex:1;min-width:0;position:relative;background:#c9ddd7}.detail-panel{position:relative;flex-shrink:0;width:380px;height:100%;overflow:auto;border-left:1px solid var(--line);background:#fff;box-shadow:none;border-radius:0}.detail-panel img{width:100%;height:220px;object-fit:cover;display:block;background:#dfe8dc}.detail-body{padding:18px}.detail-body h2{margin-bottom:2px;font-size:1.5rem}.detail-body em{color:var(--muted)}.detail-body p{margin:14px 0;line-height:1.55}.detail-list{display:grid;gap:8px;margin:0;padding-left:18px;color:var(--muted)}.detail-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:14px}.detail-facts div{padding:10px;border:1px solid var(--line);border-radius:8px}.detail-facts span{display:block;color:var(--muted);font-size:.75rem}.detail-facts strong{display:block;margin-top:2px;font-size:.88rem}.detail-subtitle{margin:18px 0 8px;font-size:.86rem;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}.detail-taxonomy{grid-template-columns:repeat(3,1fr)}.detail-taxonomy div{padding:8px}.detail-taxonomy span{font-size:.68rem}.detail-taxonomy strong{font-size:.8rem}.status-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}.status-list li{padding:10px;border:1px solid var(--line);border-radius:8px;font-size:.82rem;line-height:1.45}.status-list li span{display:block;margin-bottom:3px;color:var(--muted);font-size:.72rem;font-weight:800;text-transform:uppercase}.review-note{margin-top:12px;padding:10px 12px;border:1px solid #f0d38a;border-radius:8px;background:#fbf3de;color:#6b4a00;font-size:.78rem;line-height:1.5}.detail-source{margin:12px 0 0;color:var(--muted);font-size:.72rem;line-height:1.4}.seen-toggle{width:100%;margin-top:14px;min-height:42px;border:1px solid var(--leaf);border-radius:8px;background:#fff;color:var(--leaf);font-weight:800;cursor:pointer}.seen-toggle.is-seen{background:var(--leaf);color:#fff}
 .species-marker span{display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:999px;font-size:14px;box-shadow:0 2px 8px rgba(0,0,0,.25);border:2px solid #fff}.species-marker.seen span{box-shadow:0 0 0 2px var(--sun),0 2px 8px rgba(0,0,0,.25)}
 .poi-marker span{display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:6px;background:var(--sun);color:#fff;font-size:13px;box-shadow:0 2px 8px rgba(0,0,0,.25);border:2px solid #fff}.poi-marker.seen span{background:var(--leaf);box-shadow:0 0 0 2px var(--sun),0 2px 8px rgba(0,0,0,.25)}
-.popup-type{display:inline-block;margin:2px 0 6px;color:var(--muted);font-size:.75rem;text-transform:uppercase;font-weight:700}.poi-seen-btn{margin-top:6px;min-height:32px;padding:0 10px;border:1px solid var(--leaf);border-radius:6px;background:#fff;color:var(--leaf);font-weight:700;cursor:pointer}@media(max-width:900px){.app-shell{height:auto;overflow:visible;grid-template-columns:1fr}.sidebar{height:auto;min-height:auto;overflow:visible;border-right:0}.map-stage{height:auto;flex-direction:column;min-height:72vh;overflow:visible}.species-panel{max-height:360px}.detail-panel{width:auto;height:auto;flex-shrink:1;margin:0;max-height:none;border-left:0;border-top:1px solid var(--line)}#map{flex:none;width:100%;min-height:72vh}}@media(max-width:520px){.park-summary,.controls{padding-left:18px;padding-right:18px}.species-panel{padding-left:18px}.summary-grid,.detail-facts{grid-template-columns:1fr}.species-card{grid-template-columns:64px 1fr}.species-card img{width:64px;height:64px}}
+.popup-type{display:inline-block;margin:2px 0 6px;color:var(--muted);font-size:.75rem;text-transform:uppercase;font-weight:700}.poi-seen-btn{margin-top:6px;min-height:32px;padding:0 10px;border:1px solid var(--leaf);border-radius:6px;background:#fff;color:var(--leaf);font-weight:700;cursor:pointer}@media(max-width:520px){.park-summary,.controls{padding-left:18px;padding-right:18px}.species-panel{padding-left:18px}.summary-grid,.detail-facts{grid-template-columns:1fr}.species-card{grid-template-columns:64px 1fr}.species-card img{width:64px;height:64px}}
 .leaflet-control-layers{border:none;border-radius:10px;box-shadow:0 8px 24px rgba(23,33,27,.14);padding:8px 10px;font-size:.8rem}
 .leaflet-control-layers-expanded{color:var(--ink)}
 .leaflet-control-layers-selector{margin-right:6px}
@@ -206,9 +206,48 @@
 /* La cabecera del catálogo (título + nº de resultados) se queda fija al hacer scroll la lista */
 .species-panel .section-title{position:sticky;top:0;z-index:2;background:var(--panel)}
 
-/* Móvil: catálogo más alto y utilizable, título algo mayor para jerarquía */
+/* Móvil: título algo mayor para jerarquía */
 @media(max-width:900px){
   #parkTitle{font-size:1.5rem}
-  .species-panel{max-height:62vh}
   .park-summary{padding:14px 18px 12px}
+}
+
+/* ===================== Vistas móviles: nav inferior + ficha como bottom-sheet ================= */
+/* En escritorio estos elementos no existen visualmente: la ficha es la columna derecha de 380px
+   (display:contents deja a .detail-panel como hijo directo del flex de .map-stage) y la nav
+   inferior está oculta. En ≤900px la app pasa a pantallas completas conmutadas por la nav
+   inferior (body[data-mtab]) y la ficha se convierte en una hoja deslizante (body.sheet-open). */
+.detail-dock{display:contents}
+.sheet-bar{display:none}
+.mobile-nav{display:none}
+
+@media(max-width:900px){
+  :root{--mnav-h:58px}
+  .app-shell{height:100dvh;grid-template-columns:1fr;padding-bottom:calc(var(--mnav-h) + env(safe-area-inset-bottom))}
+  .sidebar{border-right:0}
+  .view-tabs{display:none} /* las pestañas Catálogo/Progreso las sustituye la nav inferior */
+
+  /* Solo la sección activa es visible (el mapa sigue montado: display none + invalidateSize al volver) */
+  body[data-mtab="map"] .sidebar{display:none}
+  body[data-mtab="catalog"] .map-stage,body[data-mtab="progress"] .map-stage{display:none}
+  .map-stage{height:100%}
+  #map{width:100%;height:100%}
+
+  /* Nav inferior */
+  .mobile-nav{position:fixed;left:0;right:0;bottom:0;z-index:800;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px 10px calc(6px + env(safe-area-inset-bottom));background:var(--panel);border-top:1px solid var(--line)}
+  .mobile-nav-btn{display:flex;flex-direction:column;align-items:center;gap:2px;min-height:46px;border:0;border-radius:10px;background:transparent;color:var(--muted);font-size:.7rem;font-weight:800;cursor:pointer}
+  .mobile-nav-btn span{font-size:1.15rem;line-height:1}
+  .mobile-nav-btn.active{background:#eef4ec;color:var(--leaf)}
+
+  /* Ficha como bottom-sheet: se desliza desde abajo por encima de la vista activa y de la nav */
+  .detail-dock{position:fixed;left:0;right:0;bottom:0;z-index:900;display:flex;flex-direction:column;max-height:78dvh;background:#fff;border-radius:16px 16px 0 0;box-shadow:0 -12px 40px rgba(23,33,27,.28);transform:translateY(110%);transition:transform .28s ease;padding-bottom:env(safe-area-inset-bottom)}
+  body.sheet-open .detail-dock{transform:translateY(0)}
+  .sheet-bar{display:flex;align-items:center;justify-content:center;position:relative;padding:10px 12px;flex:0 0 auto}
+  .sheet-grip{width:44px;height:5px;border-radius:999px;background:var(--line)}
+  .sheet-close{position:absolute;right:10px;top:7px;width:32px;height:32px;border:0;border-radius:999px;background:#f0f2ec;color:var(--muted);font-size:1rem;line-height:1;cursor:pointer}
+  .detail-panel{width:100%;height:auto;flex:1;min-height:0;overflow:auto;border-left:0}
+  .detail-panel img{height:190px}
+
+  /* La miga de pan del catálogo abre la ficha del hábitat actual (afordancia táctil) */
+  .catalog-crumb span{text-decoration:underline dotted;text-underline-offset:3px}
 }
