@@ -34,6 +34,7 @@ import {
   renderMarkers, renderPoiMarkers, renderTrails, renderProtectedAreas, renderHabitatZones
 } from './map.js';
 import { initExplorer } from './explorer.js';
+import { initLayersPanel, refreshLayersPanel } from './layers.js';
 
 // --- Navegación del catálogo ----------------------------------------------------------------------
 function enterHabitat(habitatId) {
@@ -258,6 +259,9 @@ initExplorer({
   onShowHabitatSpecies: focusHabitat
 });
 
+// Panel de capas del mapa (layers.js): bases, capas con leyenda y hábitats individuales.
+initLayersPanel();
+
 // --- UI de estado offline (indicador de conexión + botón "Guardar sin conexión") -----------------
 function initOfflineUI() {
   const btn = saveOfflineBtn;
@@ -324,6 +328,7 @@ async function startParkExperience(slug, user) {
     || (state.data.habitats || [])[0];
   state.selectedHabitatId = defaultHabitat ? defaultHabitat.id : null;
   state.detailMode = 'habitat';
+  state.hiddenHabitats.clear(); // al (re)entrar a un parque, todos sus hábitats parten visibles
   renderSummary();
   renderProtectedAreas();
   renderTrails();
@@ -332,6 +337,7 @@ async function startParkExperience(slug, user) {
   renderPoiMarkers();
   renderCatalogBody();
   renderDetail();
+  refreshLayersPanel();
   state.parkWasComplete = computeProgress().parkComplete;
   map.setView(state.data.park.center, 12);
   // Leaflet cachea el tamaño del contenedor al crearse; si el layout aún no estaba listo (0 de

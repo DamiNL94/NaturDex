@@ -122,15 +122,11 @@
             </aside>
             <section class="map-stage" aria-label="Mapa y ficha de especie">
                 <div id="map"></div>
-                <div class="map-legend" aria-hidden="true">
-                    <span><i class="legend-dot fauna"></i>Fauna vista</span>
-                    <span><i class="legend-dot flora"></i>Flora vista</span>
-                    <span><i class="legend-dot poi"></i>Punto de interés</span>
-                    <span><i class="legend-dot habitat"></i>Hábitat (aprox.)</span>
-                    <span><i class="legend-line parque"></i>Parque Regional</span>
-                    <span><i class="legend-line lic"></i>LIC (Red Natura 2000)</span>
-                    <span><i class="legend-line zepa"></i>ZEPA (Red Natura 2000)</span>
-                    <span><i class="legend-line trail"></i>Sendero GR-92</span>
+                <!-- Panel de capas propio (layers.js): control + leyenda unificados, con
+                     subsección de hábitats para verlos por separado. -->
+                <div class="layers-control">
+                    <button type="button" id="layersToggle" class="layers-toggle" aria-expanded="false" aria-controls="layersPanel">🗺️ Capas</button>
+                    <div id="layersPanel" class="layers-panel" hidden aria-label="Capas y leyenda del mapa"></div>
                 </div>
                 <!-- En escritorio la ficha es la columna derecha; en móvil, .detail-dock se
                      convierte en una bottom-sheet deslizante sobre la vista activa. -->

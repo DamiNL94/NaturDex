@@ -30,6 +30,7 @@ export const state = {
   markers: new Map(),
   poiMarkers: new Map(),
   habitatLayers: new Map(),
+  hiddenHabitats: new Set(),
   seenSpecies: new Set(),
   seenPois: new Set(),
   sightings: new Map(),

@@ -42,6 +42,10 @@ export const nearbyList = document.querySelector('#nearbyList');
 export const nearbyClose = document.querySelector('#nearbyClose');
 export const explorerHint = document.querySelector('#explorerHint');
 
+// Panel de capas del mapa
+export const layersToggle = document.querySelector('#layersToggle');
+export const layersPanel = document.querySelector('#layersPanel');
+
 // Barra de estado offline
 export const saveOfflineBtn = document.querySelector('#saveOfflineBtn');
 export const connStatus = document.querySelector('#connStatus');

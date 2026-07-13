@@ -23,10 +23,10 @@ export function setMapHandlers(h) { Object.assign(handlers, h); }
 // --- Mapa y capas base ----------------------------------------------------------------------------
 // Capas base: mapa callejero (OSM) y ortofoto aérea (PNOA del IGN, vía WMTS en cuadrícula
 // GoogleMapsCompatible = mismo esquema z/x/y que las teselas XYZ de Leaflet).
-const baseOSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+export const baseOSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors', maxZoom: 19
 });
-const basePNOA = L.tileLayer(
+export const basePNOA = L.tileLayer(
   'https://www.ign.es/wmts/pnoa-ma?layer=OI.OrthoimageCoverage&style=default&tilematrixset=GoogleMapsCompatible&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fjpeg&TileMatrix={z}&TileCol={x}&TileRow={y}',
   { attribution: '&copy; Instituto Geográfico Nacional de España (PNOA)', maxZoom: 19 }
 );
@@ -50,21 +50,8 @@ state.speciesCluster = L.markerClusterGroup({
   disableClusteringAtZoom: 16
 }).addTo(map);
 
-L.control.layers(
-  { 'Mapa': baseOSM, 'Satélite (PNOA)': basePNOA },
-  {
-    '🟩 Parque Regional': state.parqueLayer,
-    '🟦 LIC · Red Natura 2000': state.licLayer,
-    '🟪 ZEPA · Red Natura 2000': state.zepaLayer,
-    '🥾 Senderos (GR-92)': state.trailLayer,
-    '🌿 Hábitats': state.habitatGroup,
-    '⭐ Puntos de interés': state.poiGroup,
-    '🐾 Especies vistas': state.speciesCluster
-  },
-  // En pantallas estrechas (futura app móvil) el control arranca colapsado para no solapar con
-  // el panel "Cerca de ti" del modo explorador, que también vive en la franja superior del mapa.
-  { position: 'topright', collapsed: window.innerWidth <= 900 }
-).addTo(map);
+// El control de capas y la leyenda son un panel propio (layers.js): el control nativo de Leaflet
+// no admite subsecciones y aquí hace falta poder encender/apagar cada hábitat por separado.
 
 // --- Iconos ---------------------------------------------------------------------------------------
 function speciesDivIcon(species) {
@@ -227,9 +214,31 @@ export function renderHabitatZones() {
       return;
     }
     bindHabitatPopup(layer, habitat);
-    layer.addTo(state.habitatGroup);
+    // La visibilidad por hábitat la gobierna el panel de capas (layers.js): la capa se crea
+    // siempre (los popups y el zoom desde otras vistas la necesitan) pero solo se añade al grupo
+    // si el usuario no la tiene apagada.
+    if (!state.hiddenHabitats.has(habitat.id)) layer.addTo(state.habitatGroup);
     state.habitatLayers.set(habitat.id, layer);
   });
+}
+
+export function setHabitatVisible(habitatId, visible) {
+  const layer = state.habitatLayers.get(habitatId);
+  if (visible) state.hiddenHabitats.delete(habitatId);
+  else state.hiddenHabitats.add(habitatId);
+  if (!layer) return;
+  if (visible) { if (!state.habitatGroup.hasLayer(layer)) layer.addTo(state.habitatGroup); }
+  else state.habitatGroup.removeLayer(layer);
+}
+
+// Encuadra un hábitat en el mapa (y abre su popup si se pide). Lo usan el panel de capas y el
+// panel "cerca de ti" del explorador.
+export function focusHabitatOnMap(habitatId, openPopup = false) {
+  const layer = state.habitatLayers.get(habitatId);
+  if (!layer) return;
+  const bounds = layer.getBounds ? layer.getBounds() : null;
+  if (bounds) map.fitBounds(bounds, { maxZoom: 15 });
+  if (openPopup && layer.openPopup) layer.openPopup();
 }
 
 // --- Posición del usuario (modo explorador) ---------------------------------------------------------
