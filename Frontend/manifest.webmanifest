@@ -1,0 +1,17 @@
+{
+  "name": "NaturDex — guía ambiental de parques",
+  "short_name": "NaturDex",
+  "description": "Explora, identifica y cataloga la flora y la fauna de los parques naturales y nacionales de España.",
+  "lang": "es",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f7f8f2",
+  "theme_color": "#2f6f4e",
+  "icons": [
+    { "src": "Img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "Img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "Img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
