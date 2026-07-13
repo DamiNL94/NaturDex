@@ -55,6 +55,18 @@ export function refreshLayersPanel() {
 }
 
 export function initLayersPanel() {
+  // El contenedor se monta como control nativo de Leaflet (esquina superior derecha DEL MAPA):
+  // anclado a .map-stage quedaba sobre la columna de la ficha en escritorio, no sobre el mapa.
+  // Leaflet además se encarga de que los clics y el scroll del panel no muevan ni acerquen el mapa.
+  const container = layersToggle.closest('.layers-control');
+  const control = L.control({ position: 'topright' });
+  control.onAdd = () => {
+    L.DomEvent.disableClickPropagation(container);
+    L.DomEvent.disableScrollPropagation(container);
+    return container;
+  };
+  control.addTo(map);
+
   layersToggle.addEventListener('click', () => {
     const open = layersPanel.hidden;
     layersPanel.hidden = !open;

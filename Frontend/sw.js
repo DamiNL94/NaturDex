@@ -9,7 +9,7 @@
  * Es opcional: si el navegador no admite Service Workers, la app sigue funcionando con la caché en
  * localStorage y Cache Storage que gestiona offline.js.
  */
-var VERSION = 'v11';
+var VERSION = 'v12';
 var RUNTIME_CACHE = 'naturdex-runtime-' + VERSION;
 
 // Armazón mínimo que se intenta precachear en la instalación (best-effort).

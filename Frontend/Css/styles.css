@@ -54,7 +54,7 @@
 .nearby-name strong{color:#8a5a00}
 .nearby-dist{color:var(--muted);font-weight:800;font-size:.72rem;white-space:nowrap}
 /* Panel de capas propio (control + leyenda unificados, hábitats individuales) */
-.layers-control{position:absolute;top:16px;right:16px;z-index:450;display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.layers-control{display:flex;flex-direction:column;align-items:flex-end;gap:8px;margin:16px 16px 0 0 !important;pointer-events:auto}
 .layers-toggle{min-height:40px;padding:0 16px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);font-weight:800;font-size:.82rem;box-shadow:var(--shadow-sm);cursor:pointer}
 .layers-toggle[aria-expanded="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
 .layers-panel{width:280px;max-height:min(64vh,520px);overflow:auto;padding:14px;border-radius:var(--radius-md);background:rgba(255,255,255,.97);box-shadow:var(--shadow)}
