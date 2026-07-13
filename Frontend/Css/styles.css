@@ -266,6 +266,13 @@
   .sidebar{border-right:0}
   .view-tabs{display:none} /* las pestañas Catálogo/Progreso las sustituye la nav inferior */
 
+  /* El catálogo se desliza como UNA columna (cabecera incluida), no en una ventanita interior:
+     en escritorio la lista tiene su propio scroll, pero en móvil eso dejaba a las tarjetas un
+     hueco de ~120px y el resto de la pantalla no respondía al gesto (parecía "no deslizar"). */
+  .sidebar{overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .species-panel,.progress-panel{flex:none;min-height:auto;overflow:visible}
+  .species-list{overflow:visible;padding-right:0}
+
   /* Solo la sección activa es visible (el mapa sigue montado: display none + invalidateSize al volver) */
   body[data-mtab="map"] .sidebar{display:none}
   body[data-mtab="catalog"] .map-stage,body[data-mtab="progress"] .map-stage{display:none}
