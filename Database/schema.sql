@@ -127,6 +127,10 @@ CREATE TABLE IF NOT EXISTS users (
     email VARCHAR(255) NOT NULL UNIQUE,
     password_hash VARCHAR(255) NOT NULL,
     display_name VARCHAR(120),
+    -- 'user' (por defecto) o 'admin'. Los administradores acceden al panel de administración
+    -- (Frontend/admin.html + Backend/Api/admin.php) para editar el contenido ambiental.
+    -- Promocionar a mano: UPDATE users SET role='admin' WHERE email='...';
+    role VARCHAR(20) NOT NULL DEFAULT 'user',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 

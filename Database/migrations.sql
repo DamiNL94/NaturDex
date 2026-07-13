@@ -23,3 +23,8 @@ ALTER TABLE points_of_interest
     ADD COLUMN IF NOT EXISTS image_url VARCHAR(500) NULL,
     ADD COLUMN IF NOT EXISTS source VARCHAR(500) NULL,
     ADD COLUMN IF NOT EXISTS is_approx TINYINT(1) NOT NULL DEFAULT 0;
+
+-- Rol de usuario para el panel de administración ('user' por defecto, 'admin' para editar
+-- contenido). Promocionar a mano: UPDATE users SET role='admin' WHERE email='...';
+ALTER TABLE users
+    ADD COLUMN IF NOT EXISTS role VARCHAR(20) NOT NULL DEFAULT 'user';

@@ -1,0 +1,67 @@
+/* ================================================================================================
+   admin.css — estilos del panel de administración (Frontend/admin.html).
+   Reutiliza las variables y componentes base de styles.css (tarjeta de login, botones, badges).
+   ================================================================================================ */
+
+.admin-body{background:var(--paper)}
+
+/* Cabecera */
+.admin-top{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:18px 24px 12px;border-bottom:1px solid var(--line);background:var(--panel)}
+.admin-title h1{margin:0;font-size:1.4rem;line-height:1.15}
+.admin-top-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.admin-park-field{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:.8rem;font-weight:700}
+.admin-park-field select{height:38px;padding:0 10px;border:1px solid var(--line);border-radius:8px;background:#fff;font-size:.86rem}
+.admin-back-link{display:block;margin:16px auto 0;text-align:center}
+
+/* Pestañas */
+.admin-tabs{display:flex;gap:6px;padding:10px 24px 0;background:var(--panel);border-bottom:1px solid var(--line)}
+.admin-tab{min-height:38px;padding:0 16px;border:1px solid var(--line);border-bottom:0;border-radius:8px 8px 0 0;background:#f2f6f0;color:var(--muted);font-weight:800;font-size:.84rem;cursor:pointer}
+.admin-tab.active{background:#fff;color:var(--ink);box-shadow:0 2px 0 #fff}
+
+/* Estructura principal: lista + formulario */
+.admin-main{display:grid;grid-template-columns:minmax(280px,360px) 1fr;gap:0;min-height:calc(100vh - 140px)}
+.admin-list-pane{border-right:1px solid var(--line);background:var(--panel);display:flex;flex-direction:column;min-height:0}
+.admin-list-head{display:flex;gap:8px;padding:12px}
+.admin-list-head input{flex:1;height:38px;padding:0 10px;border:1px solid var(--line);border-radius:8px}
+.admin-new-btn{min-height:38px;padding:0 14px;font-size:.82rem}
+.admin-list{flex:1;overflow:auto;padding:0 12px 12px;display:flex;flex-direction:column;gap:6px}
+.admin-item{display:flex;align-items:center;gap:8px;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;text-align:left;cursor:pointer;font:inherit;font-size:.82rem;color:inherit}
+.admin-item:hover{border-color:#c7d9c9}
+.admin-item.active{border-color:var(--leaf);box-shadow:0 0 0 2px rgba(47,111,78,.16)}
+.admin-item .admin-item-sub{display:block;color:var(--muted);font-size:.72rem;font-style:italic}
+.admin-item .badge{margin-left:auto;flex:0 0 auto}
+
+/* Formulario */
+.admin-form-pane{padding:18px 24px;overflow:auto}
+.admin-fields{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.admin-field{display:flex;flex-direction:column;gap:4px;font-size:.76rem;font-weight:700;color:var(--muted)}
+.admin-field input[type="text"],.admin-field input[type="number"],.admin-field input[type="url"],.admin-field select,.admin-field textarea{height:38px;padding:0 10px;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:.84rem;font-weight:400;color:var(--ink);background:#fff}
+.admin-field textarea{height:auto;min-height:84px;padding:8px 10px;resize:vertical;line-height:1.45}
+.admin-field.wide{grid-column:1/-1}
+.admin-field .admin-hint{font-weight:400;font-size:.7rem;color:var(--muted)}
+.admin-check{flex-direction:row;align-items:center;gap:8px;font-size:.8rem;color:var(--ink)}
+.admin-check input{width:16px;height:16px;accent-color:var(--leaf)}
+.admin-rel{grid-column:1/-1;border:1px solid var(--line);border-radius:8px;padding:10px 12px;background:#fbfcf8}
+.admin-rel-title{margin:0 0 8px;font-size:.76rem;font-weight:800;color:var(--muted);text-transform:uppercase}
+.admin-rel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:4px}
+.admin-rel label{display:flex;align-items:center;gap:6px;font-size:.78rem;padding:3px 0;cursor:pointer}
+.admin-rel input{accent-color:var(--leaf)}
+.admin-form-actions{display:flex;gap:10px;margin-top:18px;padding-top:14px;border-top:1px solid var(--line)}
+.btn-danger{min-height:46px;padding:0 18px;border:1px solid var(--danger);border-radius:999px;background:#fff;color:var(--danger);font-weight:800;font-size:.86rem;cursor:pointer}
+.btn-danger:hover{background:#f7e8e3}
+.admin-empty{padding:40px;text-align:center;color:var(--muted)}
+
+/* Toast de estado */
+.admin-toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:900;padding:10px 18px;border-radius:999px;background:var(--ink);color:#fff;font-size:.82rem;font-weight:700;box-shadow:var(--shadow);max-width:min(92vw,560px)}
+.admin-toast.error{background:var(--danger)}
+.admin-toast[hidden]{display:none}
+
+/* Móvil: lista encima del formulario */
+@media(max-width:900px){
+  .admin-main{grid-template-columns:1fr;min-height:0}
+  .admin-list-pane{border-right:0;border-bottom:1px solid var(--line)}
+  .admin-list{max-height:38vh}
+  .admin-top{padding:14px 16px 10px}
+  .admin-tabs{padding:8px 16px 0}
+  .admin-form-pane{padding:14px 16px}
+}

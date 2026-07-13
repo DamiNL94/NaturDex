@@ -21,12 +21,19 @@ function respond($data, $code = 200) {
 
 function currentUser($conn) {
     if (empty($_SESSION["user_id"])) return null;
-    $stmt = $conn->prepare("SELECT id, email, display_name FROM users WHERE id = ? LIMIT 1");
+    $stmt = $conn->prepare("SELECT id, email, display_name, role FROM users WHERE id = ? LIMIT 1");
     $stmt->bind_param("i", $_SESSION["user_id"]);
     $stmt->execute();
     $user = $stmt->get_result()->fetch_assoc();
     if (!$user) return null;
-    return ["id" => (int) $user["id"], "email" => $user["email"], "name" => $user["display_name"]];
+    return [
+        "id" => (int) $user["id"],
+        "email" => $user["email"],
+        "name" => $user["display_name"],
+        // El panel de administración (admin.html) usa este flag para saber si puede entrar;
+        // la autoridad real la comprueba siempre el servidor (admin.php exige role='admin').
+        "isAdmin" => ($user["role"] ?? "user") === "admin"
+    ];
 }
 
 $method = $_SERVER["REQUEST_METHOD"];
