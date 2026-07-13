@@ -74,6 +74,11 @@
 .layers-solo:hover{border-color:var(--sea);color:var(--sea)}
 @media(max-width:900px){.layers-panel{width:min(86vw,320px);max-height:52vh}}
 
+/* Botón "seguirme" (🎯): el mapa se mueve con la posición del usuario */
+.follow-toggle{width:44px;height:44px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:1.15rem;line-height:1;box-shadow:var(--shadow-sm);cursor:pointer;transition:background-color .15s ease,border-color .15s ease}
+.follow-toggle:hover{border-color:var(--sea)}
+.follow-toggle.active{background:var(--sea);border-color:var(--sea);box-shadow:0 0 0 3px rgba(31,111,139,.25),var(--shadow-sm)}
+
 /* Aviso de descubrimiento por proximidad (POI al alcance / hábitat pisado) */
 .explorer-hint{position:absolute;top:16px;left:50%;transform:translateX(-50%);z-index:460;display:flex;align-items:center;gap:10px;max-width:min(92%,440px);padding:10px 12px;border-radius:12px;border:1px solid var(--sun);background:#fff8e8;box-shadow:var(--shadow);animation:hint-in .25s ease}
 .explorer-hint[hidden]{display:none}

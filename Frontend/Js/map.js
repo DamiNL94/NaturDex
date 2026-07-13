@@ -190,29 +190,24 @@ export function renderHabitatZones() {
   (state.data.habitats || []).forEach(habitat => {
     const complete = isHabitatComplete(habitat);
     const geom = state.geo && state.geo.habitatGeom ? state.geo.habitatGeom[habitat.id] : null;
+    const baseStyle = {
+      color: complete ? '#d89b30' : (habitat.color || '#2f6f4e'),
+      weight: complete ? 3 : 2,
+      fillColor: habitat.color || '#2f6f4e',
+      fillOpacity: 0.16
+    };
     let layer;
     if (geom) {
       // Geometría real (polígono) servida desde el habitats.geojson del parque (ver manifiesto).
-      layer = L.geoJSON(geom, {
-        style: {
-          color: complete ? '#d89b30' : (habitat.color || '#2f6f4e'),
-          weight: complete ? 3 : 2,
-          fillColor: habitat.color || '#2f6f4e',
-          fillOpacity: 0.16
-        }
-      });
+      layer = L.geoJSON(geom, { style: baseStyle });
     } else if (habitat.coordinates) {
       // Sin polígono todavía: círculo aproximado en la posición representativa del hábitat.
-      layer = L.circle(habitat.coordinates, {
-        radius: 420,
-        color: complete ? '#d89b30' : (habitat.color || '#2f6f4e'),
-        weight: complete ? 3 : 2,
-        fillColor: habitat.color || '#2f6f4e',
-        fillOpacity: 0.16
-      });
+      layer = L.circle(habitat.coordinates, { radius: 420, ...baseStyle });
     } else {
       return;
     }
+    // Se guarda el estilo base para poder deshacer el resaltado "estás pisando este hábitat".
+    layer._naturdexBaseStyle = baseStyle;
     bindHabitatPopup(layer, habitat);
     // La visibilidad por hábitat la gobierna el panel de capas (layers.js): la capa se crea
     // siempre (los popups y el zoom desde otras vistas la necesitan) pero solo se añade al grupo
@@ -220,6 +215,30 @@ export function renderHabitatZones() {
     if (!state.hiddenHabitats.has(habitat.id)) layer.addTo(state.habitatGroup);
     state.habitatLayers.set(habitat.id, layer);
   });
+  // Los re-renders (marcar especie vista) recrean las capas: se re-aplica el resaltado vigente.
+  if (highlightedHabitatId) applyHighlight(highlightedHabitatId);
+}
+
+// --- Resaltado del hábitat que el usuario está pisando (modo explorador) ---------------------------
+// Los límites entre hábitats son difíciles de leer para quien no es experto: cuando el GPS sitúa
+// al usuario dentro de un hábitat, su polígono se engrosa y rellena más para que el "dónde estoy"
+// sea evidente, y se atenúa al salir.
+let highlightedHabitatId = null;
+
+function applyHighlight(habitatId) {
+  const layer = state.habitatLayers.get(habitatId);
+  if (!layer || !layer._naturdexBaseStyle) return;
+  layer.setStyle({ ...layer._naturdexBaseStyle, weight: 5, opacity: 1, fillOpacity: 0.32 });
+  if (layer.bringToFront) layer.bringToFront();
+}
+
+export function highlightHabitat(habitatId) {
+  if (highlightedHabitatId && highlightedHabitatId !== habitatId) {
+    const prev = state.habitatLayers.get(highlightedHabitatId);
+    if (prev && prev._naturdexBaseStyle) prev.setStyle(prev._naturdexBaseStyle);
+  }
+  highlightedHabitatId = habitatId || null;
+  if (highlightedHabitatId) applyHighlight(highlightedHabitatId);
 }
 
 export function setHabitatVisible(habitatId, visible) {

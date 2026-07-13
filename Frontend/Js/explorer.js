@@ -14,9 +14,9 @@
 import { html, poiEmoji, haversineMeters, pointInGeometry } from './util.js';
 import { state, isHabitatComplete } from './state.js';
 import {
-  explorerToggle, nearbyPanel, nearbyStatus, nearbyList, nearbyClose, explorerHint
+  explorerToggle, nearbyPanel, nearbyStatus, nearbyList, nearbyClose, explorerHint, followToggle
 } from './dom.js';
-import { map, placeUserMarker } from './map.js';
+import { map, placeUserMarker, highlightHabitat } from './map.js';
 
 // Umbrales de proximidad. El de POI coincide con el "¡Estás aquí!" del panel cercano; el círculo
 // de hábitat es el mismo radio que dibuja map.js cuando un hábitat no tiene polígono todavía.
@@ -32,6 +32,34 @@ const handlers = {
 let shownKeys = new Set();
 let currentHabitatId = null;
 
+// --- Seguimiento: el mapa se mueve contigo ----------------------------------------------------------
+// Activo, cada posición del GPS re-centra el mapa (manteniendo el zoom que el usuario elija).
+// Arrastrar el mapa a mano lo desactiva (el usuario "toma el mando"); el botón 🎯 lo reactiva.
+let followActive = false;
+let lastFix = null;
+
+function setFollow(on) {
+  if (on && !state.explorerActive) startExplorerMode(); // seguir implica explorar: enciende el GPS
+  if (on && !state.explorerActive) on = false;          // sin geolocalización no hay seguimiento
+  followActive = on;
+  followToggle.classList.toggle('active', on);
+  followToggle.setAttribute('aria-pressed', on ? 'true' : 'false');
+  // Al activar, acércate a la última posición conocida (zoom 16: los límites de hábitat se ven).
+  // Sin animación: los fixes del GPS llegan cada pocos segundos y encadenar animaciones produce
+  // "efecto goma" (cada fix cancela la anterior a medias); el recentrado instantáneo es lo preciso.
+  if (on && lastFix) map.setView([lastFix.lat, lastFix.lng], Math.max(map.getZoom(), 16), { animate: false });
+}
+
+// Los límites de hábitat piden ver la posición con su precisión: se informa del margen del GPS y
+// se avisa cuando la señal es demasiado imprecisa para fiarse de en qué lado del límite se está.
+function accuracyLabel(accuracy) {
+  if (typeof accuracy !== 'number') return '';
+  const rounded = Math.round(accuracy);
+  return accuracy > 40
+    ? `GPS ±${rounded} m (señal imprecisa: tómate los límites de hábitat con cautela)`
+    : `GPS ±${rounded} m`;
+}
+
 // --- Panel "cerca de ti" (lista ordenada por distancia) -------------------------------------------
 function nearbyTargets() {
   const targets = [];
@@ -45,11 +73,12 @@ function nearbyTargets() {
   return targets;
 }
 
-function updateNearby(lat, lng) {
+function updateNearby(lat, lng, accuracy) {
   const withDist = nearbyTargets().map(t => ({ ...t, dist: haversineMeters(lat, lng, t.coords[0], t.coords[1]) }));
   withDist.sort((a, b) => a.dist - b.dist);
   const nearest = withDist.slice(0, 8);
-  nearbyStatus.textContent = 'Ordenado por distancia a tu posición actual.';
+  const acc = accuracyLabel(accuracy);
+  nearbyStatus.textContent = (acc ? acc + ' · ' : '') + 'Ordenado por distancia a tu posición.';
   nearbyList.innerHTML = html`${nearest.map(t => {
     const distLabel = t.dist < 1000 ? Math.round(t.dist) + ' m' : (t.dist / 1000).toFixed(1) + ' km';
     const here = t.dist < POI_NEAR_METERS;
@@ -97,6 +126,9 @@ function checkDiscoveries(lat, lng) {
   const habitatId = habitat ? habitat.id : null;
   if (habitatId !== currentHabitatId) {
     currentHabitatId = habitatId;
+    // El polígono del hábitat pisado se resalta (y se atenúa al salir): los límites entre
+    // hábitats dejan de depender del ojo experto.
+    highlightHabitat(habitatId);
     if (habitat) {
       const total = (habitat.speciesIds || []).length;
       const unseen = (habitat.speciesIds || []).filter(id => !state.seenSpecies.has(id)).length;
@@ -125,14 +157,18 @@ function startExplorerMode() {
   currentHabitatId = null;
   state.explorerWatchId = navigator.geolocation.watchPosition(
     pos => {
-      placeUserMarker(pos.coords.latitude, pos.coords.longitude, pos.coords.accuracy);
-      updateNearby(pos.coords.latitude, pos.coords.longitude);
-      checkDiscoveries(pos.coords.latitude, pos.coords.longitude);
+      const { latitude: lat, longitude: lng, accuracy } = pos.coords;
+      lastFix = { lat, lng };
+      placeUserMarker(lat, lng, accuracy);
+      if (followActive) map.setView([lat, lng], map.getZoom(), { animate: false }); // el mapa te acompaña
+      updateNearby(lat, lng, accuracy);
+      checkDiscoveries(lat, lng);
     },
     error => {
       nearbyStatus.textContent = 'No se pudo obtener tu posición (' + (error.message || 'permiso denegado') + ').';
     },
-    { enableHighAccuracy: true, maximumAge: 15000, timeout: 20000 }
+    // maximumAge bajo: para seguir el paso del usuario hacen falta posiciones frescas, no cacheadas.
+    { enableHighAccuracy: true, maximumAge: 3000, timeout: 20000 }
   );
 }
 
@@ -142,6 +178,10 @@ function stopExplorerMode() {
   explorerToggle.textContent = '📍 Modo explorador';
   nearbyPanel.hidden = true;
   hideHint();
+  setFollow(false);
+  lastFix = null;
+  currentHabitatId = null;
+  highlightHabitat(null);
   if (state.explorerWatchId != null) navigator.geolocation.clearWatch(state.explorerWatchId);
   state.explorerWatchId = null;
   if (state.userMarker) { state.userMarker.remove(); state.userMarker = null; }
@@ -154,6 +194,17 @@ export function initExplorer(h) {
 
   explorerToggle.addEventListener('click', () => { state.explorerActive ? stopExplorerMode() : startExplorerMode(); });
   nearbyClose.addEventListener('click', stopExplorerMode);
+
+  // Botón 🎯 "seguirme" como control Leaflet, junto al zoom (esquina inferior derecha del mapa).
+  const followControl = L.control({ position: 'bottomright' });
+  followControl.onAdd = () => {
+    L.DomEvent.disableClickPropagation(followToggle);
+    return followToggle;
+  };
+  followControl.addTo(map);
+  followToggle.addEventListener('click', () => setFollow(!followActive));
+  // Arrastrar el mapa a mano = tomar el mando: el seguimiento se apaga solo.
+  map.on('dragstart', () => { if (followActive) setFollow(false); });
 
   nearbyList.addEventListener('click', event => {
     const item = event.target.closest('.nearby-item');

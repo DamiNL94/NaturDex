@@ -41,6 +41,7 @@ export const nearbyStatus = document.querySelector('#nearbyStatus');
 export const nearbyList = document.querySelector('#nearbyList');
 export const nearbyClose = document.querySelector('#nearbyClose');
 export const explorerHint = document.querySelector('#explorerHint');
+export const followToggle = document.querySelector('#followToggle');
 
 // Panel de capas del mapa
 export const layersToggle = document.querySelector('#layersToggle');
