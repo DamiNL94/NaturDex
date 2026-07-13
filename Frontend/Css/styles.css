@@ -53,6 +53,19 @@
 .nearby-name{line-height:1.3}
 .nearby-name strong{color:#8a5a00}
 .nearby-dist{color:var(--muted);font-weight:800;font-size:.72rem;white-space:nowrap}
+/* Aviso de descubrimiento por proximidad (POI al alcance / hábitat pisado) */
+.explorer-hint{position:absolute;top:16px;left:50%;transform:translateX(-50%);z-index:460;display:flex;align-items:center;gap:10px;max-width:min(92%,440px);padding:10px 12px;border-radius:12px;border:1px solid var(--sun);background:#fff8e8;box-shadow:var(--shadow);animation:hint-in .25s ease}
+.explorer-hint[hidden]{display:none}
+.hint-icon{font-size:1.4rem;line-height:1}
+.hint-body{display:flex;flex-direction:column;gap:1px;min-width:0}
+.hint-body strong{font-size:.86rem;line-height:1.25}
+.hint-body span{color:var(--muted);font-size:.74rem}
+.hint-actions{display:flex;align-items:center;gap:6px;margin-left:auto}
+.hint-primary{min-height:34px;padding:0 12px;border:1px solid var(--leaf);border-radius:999px;background:var(--leaf);color:#fff;font-weight:800;font-size:.76rem;cursor:pointer;white-space:nowrap}
+.hint-close{width:28px;height:28px;border:0;border-radius:999px;background:transparent;color:var(--muted);font-size:.9rem;line-height:1;cursor:pointer}
+@keyframes hint-in{from{opacity:0;transform:translateX(-50%) translateY(-8px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+@media(max-width:900px){.explorer-hint{top:12px;width:calc(100% - 24px);flex-wrap:wrap}.hint-actions{margin-left:auto}}
+
 .user-marker span{display:block;width:16px;height:16px;border-radius:999px;background:var(--sea);border:3px solid #fff;box-shadow:0 0 0 3px rgba(31,111,139,.35),0 2px 6px rgba(0,0,0,.3);animation:user-pulse 2s ease-in-out infinite}
 @keyframes user-pulse{0%,100%{box-shadow:0 0 0 3px rgba(31,111,139,.35),0 2px 6px rgba(0,0,0,.3)}50%{box-shadow:0 0 0 7px rgba(31,111,139,.15),0 2px 6px rgba(0,0,0,.3)}}
 @media(max-width:520px){.nearby-panel{width:calc(100vw - 32px);max-width:320px}}

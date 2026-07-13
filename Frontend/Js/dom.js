@@ -40,6 +40,7 @@ export const nearbyPanel = document.querySelector('#nearbyPanel');
 export const nearbyStatus = document.querySelector('#nearbyStatus');
 export const nearbyList = document.querySelector('#nearbyList');
 export const nearbyClose = document.querySelector('#nearbyClose');
+export const explorerHint = document.querySelector('#explorerHint');
 
 // Barra de estado offline
 export const saveOfflineBtn = document.querySelector('#saveOfflineBtn');

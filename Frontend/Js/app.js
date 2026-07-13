@@ -2,9 +2,9 @@
 // app.js — orquestador de la experiencia del parque.
 // ------------------------------------------------------------------------------------------------
 // Módulo ES de entrada. Los detalles viven en los demás módulos: estado y selectores (state.js),
-// referencias DOM (dom.js), capa de datos (data.js), pintado del DOM (render.js) y Leaflet
-// (map.js). Aquí queda la navegación entre vistas, la delegación de eventos, el modo explorador,
-// la UI offline y el arranque del parque.
+// referencias DOM (dom.js), capa de datos (data.js), pintado del DOM (render.js), Leaflet (map.js)
+// y modo explorador (explorer.js). Aquí queda la navegación entre vistas, la delegación de
+// eventos, la UI offline y el arranque del parque.
 //
 // API global (scripts clásicos auth.js/offline.js dependen de ella):
 //   window.startParkExperience(slug, user) — auth.js la llama al elegir parque.
@@ -12,10 +12,9 @@
 //   window.__imgFallback / window.__habitatImgFallback — las publica render.js (onerror inline).
 // ================================================================================================
 
-import { html, poiEmoji, haversineMeters } from './util.js';
 import {
   DEFAULT_PARK_SLUG, PARK_INDEX_PATH,
-  state, isHabitatComplete, computeProgress, speciesLatLng
+  state, computeProgress, speciesLatLng
 } from './state.js';
 import {
   resolveActivePark, loadManifest, loadData, loadGeo,
@@ -24,7 +23,6 @@ import {
 import {
   speciesList, searchInput, catalogControls, catalogPanel,
   backToHabitatsBtn, catalogCrumbLabel, parkTitle, progressPanel, detailPanel, sheetClose,
-  explorerToggle, nearbyPanel, nearbyStatus, nearbyList, nearbyClose,
   saveOfflineBtn, connStatus
 } from './dom.js';
 import {
@@ -32,9 +30,10 @@ import {
   renderSummary, renderProgress, renderDetail, renderProgressTab
 } from './render.js';
 import {
-  map, setMapHandlers, ensureMapSized, placeUserMarker,
+  map, setMapHandlers, ensureMapSized,
   renderMarkers, renderPoiMarkers, renderTrails, renderProtectedAreas, renderHabitatZones
 } from './map.js';
+import { initExplorer } from './explorer.js';
 
 // --- Navegación del catálogo ----------------------------------------------------------------------
 function enterHabitat(habitatId) {
@@ -252,87 +251,11 @@ searchInput.addEventListener('input', event => {
   if (state.catalogMode === 'species') renderSpeciesList(); else renderHabitatCatalog();
 });
 
-// --- Modo explorador: primer paso hacia la guía ambiental móvil ---------------------------------
-// Activa el GPS del dispositivo de forma continua (watchPosition) y muestra, ordenados por
-// distancia, los puntos de interés y hábitats más cercanos a la posición real del usuario. Es la
-// base sobre la que, en la futura app móvil, se irán "activando" fichas y logros a medida que el
-// usuario se pasea físicamente por el parque, en vez de tener que buscarlos en una lista.
-function nearbyTargets() {
-  const targets = [];
-  (state.data.pointsOfInterest || []).forEach(poi => targets.push({
-    kind: 'poi', id: poi.id, name: poi.name, icon: poiEmoji(poi), coords: poi.coordinates, visited: state.seenPois.has(poi.id)
-  }));
-  (state.data.habitats || []).forEach(h => {
-    if (!h.coordinates) return;
-    targets.push({ kind: 'habitat', id: h.id, name: h.name, icon: '🌿', coords: h.coordinates, visited: isHabitatComplete(h) });
-  });
-  return targets;
-}
-
-function updateNearby(lat, lng) {
-  const withDist = nearbyTargets().map(t => ({ ...t, dist: haversineMeters(lat, lng, t.coords[0], t.coords[1]) }));
-  withDist.sort((a, b) => a.dist - b.dist);
-  const nearest = withDist.slice(0, 8);
-  nearbyStatus.textContent = 'Ordenado por distancia a tu posición actual.';
-  nearbyList.innerHTML = html`${nearest.map(t => {
-    const distLabel = t.dist < 1000 ? Math.round(t.dist) + ' m' : (t.dist / 1000).toFixed(1) + ' km';
-    const here = t.dist < 60;
-    return html`<li class="nearby-item${here ? ' here' : ''}" data-kind="${t.kind}" data-id="${String(t.id)}"><span class="nearby-icon">${t.icon}</span><span class="nearby-name">${t.name}${t.visited ? ' ✓' : ''}${here ? html`<br><strong>¡Estás aquí!</strong>` : ''}</span><span class="nearby-dist">${distLabel}</span></li>`;
-  })}`;
-}
-
-function startExplorerMode() {
-  if (!('geolocation' in navigator)) {
-    nearbyPanel.hidden = false;
-    nearbyStatus.textContent = 'Tu navegador no admite geolocalización.';
-    return;
-  }
-  state.explorerActive = true;
-  explorerToggle.classList.add('active');
-  explorerToggle.textContent = '📍 Explorando…';
-  nearbyPanel.hidden = false;
-  nearbyStatus.textContent = 'Buscando tu posición…';
-  nearbyList.innerHTML = '';
-  state.explorerWatchId = navigator.geolocation.watchPosition(
-    pos => {
-      placeUserMarker(pos.coords.latitude, pos.coords.longitude, pos.coords.accuracy);
-      updateNearby(pos.coords.latitude, pos.coords.longitude);
-    },
-    error => {
-      nearbyStatus.textContent = 'No se pudo obtener tu posición (' + (error.message || 'permiso denegado') + ').';
-    },
-    { enableHighAccuracy: true, maximumAge: 15000, timeout: 20000 }
-  );
-}
-
-function stopExplorerMode() {
-  state.explorerActive = false;
-  explorerToggle.classList.remove('active');
-  explorerToggle.textContent = '📍 Modo explorador';
-  nearbyPanel.hidden = true;
-  if (state.explorerWatchId != null) navigator.geolocation.clearWatch(state.explorerWatchId);
-  state.explorerWatchId = null;
-  if (state.userMarker) { state.userMarker.remove(); state.userMarker = null; }
-  if (state.userAccuracyCircle) { state.userAccuracyCircle.remove(); state.userAccuracyCircle = null; }
-}
-
-explorerToggle.addEventListener('click', () => { state.explorerActive ? stopExplorerMode() : startExplorerMode(); });
-nearbyClose.addEventListener('click', stopExplorerMode);
-nearbyList.addEventListener('click', event => {
-  const item = event.target.closest('.nearby-item');
-  if (!item) return;
-  const { kind, id } = item.dataset;
-  if (kind === 'poi') {
-    const marker = state.poiMarkers.get(id);
-    if (marker) { map.setView(marker.getLatLng(), 16, { animate: true }); marker.openPopup(); }
-  } else if (kind === 'habitat') {
-    const layer = state.habitatLayers.get(id);
-    if (layer) {
-      const bounds = layer.getBounds ? layer.getBounds() : null;
-      if (bounds) map.fitBounds(bounds, { maxZoom: 15 });
-      if (layer.openPopup) layer.openPopup();
-    }
-  }
+// --- Modo explorador (explorer.js): GPS continuo, "cerca de ti" y descubrimiento por proximidad --
+// Las acciones que el explorador dispara sobre la app se inyectan aquí, igual que con map.js.
+initExplorer({
+  onTogglePoiSeen: togglePoiSeen,
+  onShowHabitatSpecies: focusHabitat
 });
 
 // --- UI de estado offline (indicador de conexión + botón "Guardar sin conexión") -----------------

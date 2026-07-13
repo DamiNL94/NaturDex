@@ -124,6 +124,32 @@ export function poiImageSrc(poi) {
   return poi.image && poi.image.trim() ? poi.image : poiPlaceholderImage(poi);
 }
 
+// --- Punto en polígono (ray casting) ------------------------------------------------------------
+// ¿Cae la coordenada dentro de una geometría GeoJSON Polygon/MultiPolygon? Se usa para saber en
+// qué hábitat está físicamente el usuario (modo explorador). GeoJSON guarda [lng, lat]; el primer
+// anillo es el contorno y los siguientes son agujeros.
+function ringContains(ring, lat, lng) {
+  let inside = false;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const xi = ring[i][0], yi = ring[i][1];
+    const xj = ring[j][0], yj = ring[j][1];
+    const intersects = ((yi > lat) !== (yj > lat)) && (lng < ((xj - xi) * (lat - yi)) / (yj - yi) + xi);
+    if (intersects) inside = !inside;
+  }
+  return inside;
+}
+
+export function pointInGeometry(lat, lng, geometry) {
+  if (!geometry) return false;
+  const polygons = geometry.type === 'Polygon' ? [geometry.coordinates]
+    : geometry.type === 'MultiPolygon' ? geometry.coordinates : [];
+  return polygons.some(rings => {
+    if (!rings.length || !ringContains(rings[0], lat, lng)) return false;
+    for (let i = 1; i < rings.length; i++) if (ringContains(rings[i], lat, lng)) return false;
+    return true;
+  });
+}
+
 // --- Geodistancia (Haversine, en metros) --------------------------------------------------------
 export function haversineMeters(lat1, lng1, lat2, lng2) {
   const R = 6371000;
