@@ -9,6 +9,15 @@
 
 import { API_BASE, DEFAULT_PARK_SLUG, state } from './state.js';
 
+// Señal de corte para las llamadas a la API: si el backend no responde en 3 s se aborta y se sigue
+// con los datos locales (offline-first). Medido con MySQL caído: sin esto, entrar al parque tardaba
+// ~10 s porque los fetch fallidos se esperaban en serie. AbortSignal.timeout no existe en
+// navegadores antiguos: en ese caso se devuelve undefined y el fetch va sin límite, como antes.
+const API_TIMEOUT_MS = 3000;
+function apiSignal() {
+  return (typeof AbortSignal !== 'undefined' && AbortSignal.timeout) ? AbortSignal.timeout(API_TIMEOUT_MS) : undefined;
+}
+
 // --- Registro de parques --------------------------------------------------------------------------
 export function resolveActivePark(registry) {
   const wanted = state.activeParkSlug || (registry && registry.defaultPark) || DEFAULT_PARK_SLUG;
@@ -39,7 +48,7 @@ export async function loadData(manifest) {
   // 2) Si hay backend accesible, sus datos (desde la base de datos) tienen prioridad y refrescan
   //    la copia offline con la versión más completa.
   try {
-    const apiResponse = await fetch(API_BASE + '/species.php?park=' + encodeURIComponent(manifest.apiSlug));
+    const apiResponse = await fetch(API_BASE + '/species.php?park=' + encodeURIComponent(manifest.apiSlug), { signal: apiSignal() });
     if (apiResponse.ok) {
       const apiData = await apiResponse.json();
       if (apiData?.species?.length) {
@@ -120,7 +129,7 @@ export async function loadProgress() {
   applyProgress(NaturDexOffline.loadProgressLocal(progressScope()));
   // Luego, si hay backend y sesión, se fusiona por unión (nunca se pierde un "visto" offline).
   try {
-    const response = await fetch(API_BASE + '/progress.php?park=' + encodeURIComponent(state.activeParkSlug));
+    const response = await fetch(API_BASE + '/progress.php?park=' + encodeURIComponent(state.activeParkSlug), { signal: apiSignal() });
     if (!response.ok) throw new Error('progress endpoint unavailable');
     const server = await response.json();
     (server.seenSpeciesIds || []).forEach(id => state.seenSpecies.add(Number(id)));
@@ -147,7 +156,8 @@ export async function persistProgress(type, id, seen, coords) {
     const response = await fetch(API_BASE + '/progress.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
+      body: JSON.stringify(payload),
+      signal: apiSignal()
     });
     if (!response.ok) throw new Error('progress endpoint unavailable');
     state.progressReady = true;

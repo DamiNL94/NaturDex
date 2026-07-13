@@ -41,6 +41,9 @@
   async function api(action, method, body) {
     var opts = { method: method, headers: { 'Content-Type': 'application/json' } };
     if (body) opts.body = JSON.stringify(body);
+    // Si el backend no responde en 3 s se aborta: así "Comenzar" no se queda colgado sin conexión
+    // y se cae enseguida a la sesión cacheada (mismo criterio que data.js).
+    if (typeof AbortSignal !== 'undefined' && AbortSignal.timeout) opts.signal = AbortSignal.timeout(3000);
     var res = await fetch(API_BASE + '/auth.php?action=' + action, opts);
     var data = await res.json().catch(function () { return {}; });
     if (!res.ok) throw new Error(data.error || ('HTTP ' + res.status));
