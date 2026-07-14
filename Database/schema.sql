@@ -40,6 +40,10 @@ CREATE TABLE IF NOT EXISTS habitats (
     longitude DECIMAL(10,6),
     color VARCHAR(20),
     review_note TEXT,
+    -- Audioguía explicativa del hábitat: URL/ruta del fichero de audio y su transcripción
+    -- (alternativa textual obligatoria por accesibilidad, WCAG 1.2.1).
+    audio_url VARCHAR(500),
+    audio_transcript TEXT,
     FOREIGN KEY (park_id) REFERENCES parks(id) ON DELETE CASCADE,
     UNIQUE KEY unique_habitat_per_park (park_id, code),
     UNIQUE KEY unique_habitat_slug_per_park (park_id, slug)
@@ -62,15 +66,18 @@ CREATE TABLE IF NOT EXISTS species (
     longitude DECIMAL(10,6),
     rarity_score TINYINT UNSIGNED DEFAULT 1,
     is_featured BOOLEAN DEFAULT FALSE,
-    source VARCHAR(500),
+    -- Campos de cita/estado de conservación: TEXT (no VARCHAR) porque las atribuciones y los
+    -- estados con referencia pueden superar los 500 caracteres. Con MySQL en modo estricto un
+    -- VARCHAR corto abortaría la carga del seed en lugar de truncar en silencio.
+    source TEXT,
     taxon_phylum VARCHAR(120),
     taxon_class VARCHAR(120),
     taxon_order VARCHAR(120),
     taxon_family VARCHAR(120),
     taxon_genus VARCHAR(120),
-    iucn_global VARCHAR(400),
-    spain_status VARCHAR(500),
-    murcia_status VARCHAR(500),
+    iucn_global TEXT,
+    spain_status TEXT,
+    murcia_status TEXT,
     review_note TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -100,8 +107,11 @@ CREATE TABLE IF NOT EXISTS points_of_interest (
     latitude DECIMAL(10,6),
     longitude DECIMAL(10,6),
     image_url VARCHAR(500),
-    source VARCHAR(500),
+    source TEXT,
     is_approx TINYINT(1) NOT NULL DEFAULT 0,
+    -- Audioguía explicativa del punto de interés (misma pareja de campos que habitats).
+    audio_url VARCHAR(500),
+    audio_transcript TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (park_id) REFERENCES parks(id) ON DELETE CASCADE,
     UNIQUE KEY unique_poi_per_park (park_id, slug)

@@ -14,9 +14,12 @@ mysqli_report(MYSQLI_REPORT_OFF);
 $conn = @new mysqli($host, $user, $pass, $db, $port);
 
 if ($conn->connect_error) {
+    // El detalle del error (host, motivo) se registra en el log del servidor, NO se devuelve al
+    // cliente: filtrarlo revelaría información interna de la infraestructura.
+    error_log("NaturDex: error de conexión a MySQL: " . $conn->connect_error);
     http_response_code(500);
     header("Content-Type: application/json; charset=utf-8");
-    echo json_encode(["error" => "Database connection error.", "detail" => $conn->connect_error]);
+    echo json_encode(["error" => "Database connection error."]);
     exit;
 }
 

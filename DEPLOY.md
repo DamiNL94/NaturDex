@@ -52,6 +52,29 @@ docker compose exec -T db sh -c 'mysql -u root -p"$MYSQL_ROOT_PASSWORD" --defaul
 
 O, para empezar de cero: `docker compose down -v && docker compose up -d --build`.
 
+## Seguridad aplicada
+
+El despliegue ya incluye estas medidas:
+
+- **Solo el frontend y la API son accesibles por web.** Apache deniega el acceso directo a la
+  configuración con credenciales (`Backend/Config`), las librerías (`Backend/Lib`), los volcados SQL
+  (`Database`), las utilidades (`Tools`) y los datos de runtime (`Backend/Data`). Además, esos
+  directorios ni siquiera viajan dentro de la imagen web (ver `.dockerignore`).
+- **La base de datos no se publica al host:** solo es accesible desde la red interna de Docker.
+- **La app se conecta con un usuario dedicado** (no `root`), con privilegios solo sobre su BD.
+- **Contraseñas obligatorias:** sin `.env` con contraseñas definidas, el arranque falla (no hay
+  credenciales débiles por defecto).
+- **PHP endurecido:** `display_errors` off (los errores van al log, no a las respuestas),
+  `expose_php` off, cookie de sesión `HttpOnly` + `SameSite=Lax` + `use_strict_mode`.
+- **Sin fugas de versión** de Apache/PHP en las cabeceras.
+- **`no-new-privileges`** en ambos contenedores.
+
+Pendiente de decisión tuya (fuera del alcance de este Docker):
+
+- Los endpoints de la API mandan `Access-Control-Allow-Origin: *`. Los navegadores ya bloquean las
+  peticiones con credenciales (cookies) desde otros orígenes con `*`, así que la sesión no queda
+  expuesta a sitios de terceros, pero conviene restringirlo al origen propio cuando fijes el dominio.
+
 ## Producción: HTTPS y sesión
 
 El login usa cookies de sesión de PHP. Para un servidor público:
