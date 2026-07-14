@@ -1,8 +1,13 @@
 # Despliegue de NaturDex con Docker
 
-Despliegue sencillo y portable: un contenedor **web** (PHP 8.2 + Apache) que sirve el frontend y la
-API, y un contenedor **db** (MySQL 8) que se autoimporta el catálogo la primera vez. Funciona igual
-en tu PC y en cualquier VPS (Hetzner, DigitalOcean, etc.).
+Despliegue sencillo y portable: un contenedor **web** (Apache + PHP 8.2 sobre **Alpine**) que sirve
+el frontend y la API, y un contenedor **db** (MySQL 8) que se autoimporta el catálogo la primera
+vez. Funciona igual en tu PC y en cualquier VPS (Hetzner, DigitalOcean, etc.).
+
+La imagen web se construye sobre Alpine (base mínima) en lugar de la imagen Debian oficial
+`php:apache`: eso reduce las CVE de sistema de la imagen web de ~1200 a prácticamente 0. La imagen
+de MySQL sí arrastra las CVE propias de la imagen oficial de Oracle; mantenla al día con
+`docker pull mysql:8.0` antes de reconstruir.
 
 ## Requisitos
 
