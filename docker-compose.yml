@@ -1,0 +1,46 @@
+# NaturDex — despliegue sencillo con Docker Compose.
+#   1. cp .env.example .env   (y cambia las contraseñas)
+#   2. docker compose up -d --build
+#   3. Abre http://localhost:8080
+#
+# La primera vez, MySQL importa automáticamente Database/schema.sql y Database/seed.sql (el catálogo
+# del parque piloto). Los datos persisten en el volumen db_data entre reinicios.
+services:
+  db:
+    image: mysql:8.0
+    restart: unless-stopped
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-naturdex_root}
+      MYSQL_DATABASE: naturadex
+      MYSQL_USER: ${DB_USER:-naturdex}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-naturdex}
+    volumes:
+      - db_data:/var/lib/mysql
+      # Los .sql se importan en orden alfabético SOLO en el primer arranque (BD vacía). Ambos crean
+      # su propia BD (CREATE DATABASE naturadex), así que son autosuficientes.
+      - ./Database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ./Database/seed.sql:/docker-entrypoint-initdb.d/02-seed.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-p${DB_ROOT_PASSWORD:-naturdex_root}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  web:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_NAME: naturadex
+      DB_USER: ${DB_USER:-naturdex}
+      DB_PASS: ${DB_PASSWORD:-naturdex}
+    ports:
+      - "${WEB_PORT:-8080}:80"
+
+volumes:
+  db_data:

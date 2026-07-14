@@ -1,0 +1,11 @@
+# No incluir en la imagen web lo que no sirve el servidor.
+.git
+.gitignore
+.env
+.env.example
+node_modules
+memory
+*.md
+docker-compose.yml
+Dockerfile
+.dockerignore
