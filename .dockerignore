@@ -1,0 +1,24 @@
+# No incluir en la imagen web lo que no sirve el servidor ni debe viajar en ella.
+.git
+.gitignore
+.env
+.env.example
+node_modules
+memory
+
+# Volcados SQL: solo los usa el contenedor de MySQL (por bind-mount desde el host), nunca la imagen
+# web. Fuera de la imagen para que no puedan descargarse.
+Database
+
+# Utilidades de línea de comandos (export/validación): no se ejecutan por web.
+Tools
+
+# Datos de runtime: se regeneran; no deben viajar en la imagen.
+Backend/Data
+
+# Ficheros de despliegue y documentación. (La carpeta docker/ SÍ entra en el contexto porque el
+# Dockerfile copia su config; se elimina del webroot en el propio Dockerfile tras copiarla.)
+Dockerfile
+.dockerignore
+docker-compose.yml
+*.md

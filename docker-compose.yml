@@ -1,0 +1,57 @@
+# NaturDex — despliegue sencillo con Docker Compose.
+#   1. cp .env.example .env   (y define contraseñas fuertes: son OBLIGATORIAS)
+#   2. docker compose up -d --build
+#   3. Abre http://localhost:8080
+#
+# La primera vez, MySQL importa automáticamente Database/schema.sql y Database/seed.sql (el catálogo
+# del parque piloto). Los datos persisten en el volumen db_data entre reinicios.
+services:
+  db:
+    image: mysql:8.4
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    environment:
+      # Contraseñas OBLIGATORIAS: si no están en .env, `docker compose up` falla con un mensaje
+      # claro en vez de arrancar con credenciales débiles conocidas.
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:?Define DB_ROOT_PASSWORD en .env}
+      MYSQL_DATABASE: naturadex
+      MYSQL_USER: ${DB_USER:-naturdex}
+      MYSQL_PASSWORD: ${DB_PASSWORD:?Define DB_PASSWORD en .env}
+    volumes:
+      - db_data:/var/lib/mysql
+      # Los .sql se importan en orden alfabético SOLO en el primer arranque (BD vacía). Ambos crean
+      # su propia BD (CREATE DATABASE naturadex), así que son autosuficientes. Montados de solo
+      # lectura. El puerto de MySQL NO se publica al host: la BD solo es accesible desde la red
+      # interna de compose (el contenedor web).
+      - ./Database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ./Database/seed.sql:/docker-entrypoint-initdb.d/02-seed.sql:ro
+    healthcheck:
+      # La contraseña se pasa por variable de entorno (MYSQL_PWD), no como argumento visible en la
+      # lista de procesos.
+      test: ["CMD-SHELL", "MYSQL_PWD=\"$$MYSQL_ROOT_PASSWORD\" mysqladmin ping -h 127.0.0.1 -u root --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  web:
+    build: .
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_NAME: naturadex
+      # La app se conecta con un usuario dedicado (no root) con privilegios solo sobre su BD.
+      DB_USER: ${DB_USER:-naturdex}
+      DB_PASS: ${DB_PASSWORD:?Define DB_PASSWORD en .env}
+    ports:
+      - "${WEB_PORT:-8080}:80"
+
+volumes:
+  db_data:

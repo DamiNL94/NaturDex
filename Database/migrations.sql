@@ -28,3 +28,24 @@ ALTER TABLE points_of_interest
 -- contenido). Promocionar a mano: UPDATE users SET role='admin' WHERE email='...';
 ALTER TABLE users
     ADD COLUMN IF NOT EXISTS role VARCHAR(20) NOT NULL DEFAULT 'user';
+
+-- Audioguías explicativas (accesibilidad UNE-EN 301549): audio + transcripción por hábitat y por
+-- punto de interés. Las rutas (senderos) llevan su audio en las propiedades del trails.geojson.
+ALTER TABLE habitats
+    ADD COLUMN IF NOT EXISTS audio_url VARCHAR(500) NULL,
+    ADD COLUMN IF NOT EXISTS audio_transcript TEXT NULL;
+ALTER TABLE points_of_interest
+    ADD COLUMN IF NOT EXISTS audio_url VARCHAR(500) NULL,
+    ADD COLUMN IF NOT EXISTS audio_transcript TEXT NULL;
+
+-- Campos de cita/estado a TEXT: las atribuciones y los estados de conservación con referencia
+-- pueden superar los 500 caracteres. En MySQL con modo estricto (STRICT_TRANS_TABLES, por defecto
+-- en 8.0) un VARCHAR corto ABORTA la carga del seed en lugar de truncar en silencio como hace la
+-- configuración laxa de XAMPP. MODIFY es idempotente (se puede reejecutar sin efecto).
+ALTER TABLE species
+    MODIFY COLUMN source TEXT,
+    MODIFY COLUMN iucn_global TEXT,
+    MODIFY COLUMN spain_status TEXT,
+    MODIFY COLUMN murcia_status TEXT;
+ALTER TABLE points_of_interest
+    MODIFY COLUMN source TEXT;
