@@ -72,7 +72,7 @@ function numOrNull($item, $key) {
 // ====================================================================================================
 if ($method === "GET" && $action === "overview") {
     $parks = [];
-    $res = $conn->query("SELECT p.id, p.slug, p.name,
+    $res = $conn->query("SELECT p.id, p.slug, p.name, p.latitude, p.longitude,
         (SELECT COUNT(*) FROM species s WHERE s.park_id = p.id) AS species_count,
         (SELECT COUNT(*) FROM habitats h WHERE h.park_id = p.id) AS habitats_count,
         (SELECT COUNT(*) FROM points_of_interest x WHERE x.park_id = p.id) AS pois_count
@@ -80,6 +80,9 @@ if ($method === "GET" && $action === "overview") {
     while ($row = $res->fetch_assoc()) {
         $parks[] = [
             "slug" => $row["slug"], "name" => $row["name"],
+            // Centro del parque: el panel lo usa para encuadrar el mini-mapa de coordenadas.
+            "latitude" => $row["latitude"] !== null ? (float) $row["latitude"] : null,
+            "longitude" => $row["longitude"] !== null ? (float) $row["longitude"] : null,
             "species" => (int) $row["species_count"],
             "habitats" => (int) $row["habitats_count"],
             "pois" => (int) $row["pois_count"]
@@ -96,13 +99,13 @@ if ($method === "GET" && $action === "list") {
     if (!$parkId) respond(["error" => "Parque no encontrado."], 404);
 
     if ($resource === "habitats") {
-        $stmt = $conn->prepare("SELECT id, slug, code, name, habitat_type, description, is_priority, latitude, longitude, color, review_note FROM habitats WHERE park_id = ? ORDER BY name");
+        $stmt = $conn->prepare("SELECT id, slug, code, name, habitat_type, description, is_priority, latitude, longitude, color, review_note, audio_url, audio_transcript FROM habitats WHERE park_id = ? ORDER BY name");
         $stmt->bind_param("i", $parkId);
         $stmt->execute();
         respond(["items" => $stmt->get_result()->fetch_all(MYSQLI_ASSOC)]);
     }
     if ($resource === "pois") {
-        $stmt = $conn->prepare("SELECT id, slug, name, type, description, latitude, longitude, image_url, source, is_approx FROM points_of_interest WHERE park_id = ? ORDER BY name");
+        $stmt = $conn->prepare("SELECT id, slug, name, type, description, latitude, longitude, image_url, source, is_approx, audio_url, audio_transcript FROM points_of_interest WHERE park_id = ? ORDER BY name");
         $stmt->bind_param("i", $parkId);
         $stmt->execute();
         respond(["items" => $stmt->get_result()->fetch_all(MYSQLI_ASSOC)]);
@@ -141,12 +144,13 @@ if ($method === "POST" && $action === "save") {
         $desc = sOrNull($item, "description"); $prio = !empty($item["is_priority"]) ? 1 : 0;
         $lat = numOrNull($item, "latitude"); $lng = numOrNull($item, "longitude");
         $color = sOrNull($item, "color"); $note = sOrNull($item, "review_note");
+        $audio = sOrNull($item, "audio_url"); $audioTx = sOrNull($item, "audio_transcript");
         if ($id > 0) {
-            $stmt = $conn->prepare("UPDATE habitats SET slug=?, code=?, name=?, habitat_type=?, description=?, is_priority=?, latitude=?, longitude=?, color=?, review_note=? WHERE id=? AND park_id=?");
-            $stmt->bind_param("sssssiddssii", $slug, $code, $name, $type, $desc, $prio, $lat, $lng, $color, $note, $id, $parkId);
+            $stmt = $conn->prepare("UPDATE habitats SET slug=?, code=?, name=?, habitat_type=?, description=?, is_priority=?, latitude=?, longitude=?, color=?, review_note=?, audio_url=?, audio_transcript=? WHERE id=? AND park_id=?");
+            $stmt->bind_param("sssssiddssssii", $slug, $code, $name, $type, $desc, $prio, $lat, $lng, $color, $note, $audio, $audioTx, $id, $parkId);
         } else {
-            $stmt = $conn->prepare("INSERT INTO habitats (park_id, slug, code, name, habitat_type, description, is_priority, latitude, longitude, color, review_note) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
-            $stmt->bind_param("isssssiddss", $parkId, $slug, $code, $name, $type, $desc, $prio, $lat, $lng, $color, $note);
+            $stmt = $conn->prepare("INSERT INTO habitats (park_id, slug, code, name, habitat_type, description, is_priority, latitude, longitude, color, review_note, audio_url, audio_transcript) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)");
+            $stmt->bind_param("isssssiddssss", $parkId, $slug, $code, $name, $type, $desc, $prio, $lat, $lng, $color, $note, $audio, $audioTx);
         }
         if (!$stmt->execute()) respond(["error" => "No se pudo guardar el hábitat: " . $conn->error], 500);
         respond(["ok" => true, "id" => $id > 0 ? $id : $conn->insert_id]);
@@ -159,12 +163,13 @@ if ($method === "POST" && $action === "save") {
         $lat = numOrNull($item, "latitude"); $lng = numOrNull($item, "longitude");
         $img = sOrNull($item, "image_url"); $src = sOrNull($item, "source");
         $approx = !empty($item["is_approx"]) ? 1 : 0;
+        $audio = sOrNull($item, "audio_url"); $audioTx = sOrNull($item, "audio_transcript");
         if ($id > 0) {
-            $stmt = $conn->prepare("UPDATE points_of_interest SET slug=?, name=?, type=?, description=?, latitude=?, longitude=?, image_url=?, source=?, is_approx=? WHERE id=? AND park_id=?");
-            $stmt->bind_param("ssssddssiii", $slug, $name, $type, $desc, $lat, $lng, $img, $src, $approx, $id, $parkId);
+            $stmt = $conn->prepare("UPDATE points_of_interest SET slug=?, name=?, type=?, description=?, latitude=?, longitude=?, image_url=?, source=?, is_approx=?, audio_url=?, audio_transcript=? WHERE id=? AND park_id=?");
+            $stmt->bind_param("ssssddssissii", $slug, $name, $type, $desc, $lat, $lng, $img, $src, $approx, $audio, $audioTx, $id, $parkId);
         } else {
-            $stmt = $conn->prepare("INSERT INTO points_of_interest (park_id, slug, name, type, description, latitude, longitude, image_url, source, is_approx) VALUES (?,?,?,?,?,?,?,?,?,?)");
-            $stmt->bind_param("issssddssi", $parkId, $slug, $name, $type, $desc, $lat, $lng, $img, $src, $approx);
+            $stmt = $conn->prepare("INSERT INTO points_of_interest (park_id, slug, name, type, description, latitude, longitude, image_url, source, is_approx, audio_url, audio_transcript) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
+            $stmt->bind_param("issssddssiss", $parkId, $slug, $name, $type, $desc, $lat, $lng, $img, $src, $approx, $audio, $audioTx);
         }
         if (!$stmt->execute()) respond(["error" => "No se pudo guardar el punto de interés: " . $conn->error], 500);
         respond(["ok" => true, "id" => $id > 0 ? $id : $conn->insert_id]);

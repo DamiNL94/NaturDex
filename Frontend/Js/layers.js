@@ -28,10 +28,10 @@ function habitatRows() {
   return (state.data && state.data.habitats ? state.data.habitats : []).map(h => {
     const visible = !state.hiddenHabitats.has(h.id);
     return html`<div class="layers-row">
-      <input type="checkbox" data-habitat-check="${h.id}" id="lyr-hab-${h.id}" ${visible ? raw('checked') : ''}>
+      <input type="checkbox" data-habitat-check="${h.id}" id="lyr-hab-${h.id}" aria-label="Mostrar ${h.name} en el mapa" ${visible ? raw('checked') : ''}>
       <span class="lg-dot" style="background:${h.color || '#2f6f4e'}"></span>
       <button type="button" class="layers-habitat-name" data-habitat-zoom="${h.id}" title="Ver este hábitat en el mapa">${h.name}</button>
-      <button type="button" class="layers-solo" data-habitat-solo="${h.id}" title="Mostrar solo este hábitat">Solo</button>
+      <button type="button" class="layers-solo" data-habitat-solo="${h.id}" title="Mostrar solo este hábitat" aria-label="Mostrar solo ${h.name}">Solo</button>
       </div>`;
   });
 }

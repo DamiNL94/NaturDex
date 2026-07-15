@@ -17,10 +17,26 @@
   var currentUser = readCachedUser();
 
   // --- Utilidades de pantalla -----------------------------------------------------------------
+  var screenShownOnce = false;
   function showScreen(id) {
     var screens = document.querySelectorAll('.screen');
-    for (var i = 0; i < screens.length; i++) screens[i].hidden = (screens[i].id !== id);
+    var shown = null;
+    for (var i = 0; i < screens.length; i++) {
+      screens[i].hidden = (screens[i].id !== id);
+      if (screens[i].id === id) shown = screens[i];
+    }
     window.scrollTo(0, 0);
+    // Accesibilidad (2.4.3): al cambiar de "pantalla" en esta SPA, el foco se lleva al encabezado
+    // de la nueva vista para que el lector de pantalla siga el hilo. En la carga inicial no se
+    // mueve el foco (el usuario aún no ha interactuado).
+    if (screenShownOnce && shown) {
+      var heading = shown.querySelector('h1, h2');
+      if (heading) {
+        if (!heading.hasAttribute('tabindex')) heading.setAttribute('tabindex', '-1');
+        heading.focus({ preventScroll: true });
+      }
+    }
+    screenShownOnce = true;
   }
   function $(sel) { return document.querySelector(sel); }
 
@@ -63,7 +79,11 @@
   var authMode = 'login';
   function setAuthMode(mode) {
     authMode = mode;
-    document.querySelectorAll('.auth-tab').forEach(function (t) { t.classList.toggle('active', t.dataset.mode === mode); });
+    document.querySelectorAll('.auth-tab').forEach(function (t) {
+      var active = t.dataset.mode === mode;
+      t.classList.toggle('active', active);
+      t.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
     $('#nameField').hidden = mode !== 'register';
     $('#authSubmit').textContent = mode === 'register' ? 'Crear cuenta' : 'Entrar';
     $('#authPassword').setAttribute('autocomplete', mode === 'register' ? 'new-password' : 'current-password');

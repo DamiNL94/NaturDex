@@ -11,7 +11,7 @@
 // inyecta app.js en initExplorer(), igual que hace map.js con setMapHandlers().
 // ================================================================================================
 
-import { html, poiEmoji, haversineMeters, pointInGeometry } from './util.js';
+import { html, poiEmoji, haversineMeters, pointInGeometry, iconMarkup, icon } from './util.js';
 import { state, isHabitatComplete } from './state.js';
 import {
   explorerToggle, nearbyPanel, nearbyStatus, nearbyList, nearbyClose, explorerHint, followToggle
@@ -79,10 +79,11 @@ function updateNearby(lat, lng, accuracy) {
   const nearest = withDist.slice(0, 8);
   const acc = accuracyLabel(accuracy);
   nearbyStatus.textContent = (acc ? acc + ' · ' : '') + 'Ordenado por distancia a tu posición.';
+  // Cada elemento es un <button> real (no un <li> clicable): navegable y activable con teclado.
   nearbyList.innerHTML = html`${nearest.map(t => {
     const distLabel = t.dist < 1000 ? Math.round(t.dist) + ' m' : (t.dist / 1000).toFixed(1) + ' km';
     const here = t.dist < POI_NEAR_METERS;
-    return html`<li class="nearby-item${here ? ' here' : ''}" data-kind="${t.kind}" data-id="${String(t.id)}"><span class="nearby-icon">${t.icon}</span><span class="nearby-name">${t.name}${t.visited ? ' ✓' : ''}${here ? html`<br><strong>¡Estás aquí!</strong>` : ''}</span><span class="nearby-dist">${distLabel}</span></li>`;
+    return html`<li><button type="button" class="nearby-item${here ? ' here' : ''}" data-kind="${t.kind}" data-id="${String(t.id)}"><span class="nearby-icon" aria-hidden="true">${t.icon}</span><span class="nearby-name">${t.name}${t.visited ? html` <span aria-hidden="true">✓</span><span class="sr-only">(visitado)</span>` : ''}${here ? html`<br><strong>¡Estás aquí!</strong>` : ''}</span><span class="nearby-dist">${distLabel}</span></button></li>`;
   })}`;
 }
 
@@ -118,7 +119,7 @@ function checkDiscoveries(lat, lng) {
     .filter(x => x.dist <= POI_NEAR_METERS)
     .sort((a, b) => a.dist - b.dist)[0];
   if (poiHit) {
-    showHint('poi:' + poiHit.p.id, html`<span class="hint-icon">${poiEmoji(poiHit.p)}</span><span class="hint-body"><strong>¡Estás junto a ${poiHit.p.name}!</strong><span>Punto de interés a ${Math.round(poiHit.dist)} m</span></span><span class="hint-actions"><button type="button" class="hint-primary" data-hint-poi="${poiHit.p.id}">✓ Marcar visitado</button><button type="button" class="hint-close" data-hint-close aria-label="Cerrar aviso">✕</button></span>`);
+    showHint('poi:' + poiHit.p.id, html`<span class="hint-icon" aria-hidden="true">${poiEmoji(poiHit.p)}</span><span class="hint-body"><strong>¡Estás junto a ${poiHit.p.name}!</strong><span>Punto de interés a ${Math.round(poiHit.dist)} m</span></span><span class="hint-actions"><button type="button" class="hint-primary" data-hint-poi="${poiHit.p.id}">✓ Marcar visitado</button><button type="button" class="hint-close" data-hint-close aria-label="Cerrar aviso">${icon('close', 14)}</button></span>`);
     return;
   }
   // Sin POI cerca: ¿en qué hábitat está pisando?
@@ -135,7 +136,7 @@ function checkDiscoveries(lat, lng) {
       const caption = unseen > 0
         ? unseen + (unseen === 1 ? ' especie por descubrir aquí' : ' especies por descubrir aquí')
         : (total > 0 ? '¡Hábitat completo! 🏅' : 'Sin especies catalogadas todavía');
-      showHint('hab:' + habitat.id, html`<span class="hint-icon">🌿</span><span class="hint-body"><strong>Estás en ${habitat.name}</strong><span>${caption}</span></span><span class="hint-actions">${unseen > 0 ? html`<button type="button" class="hint-primary" data-hint-habitat="${habitat.id}">Ver especies</button>` : ''}<button type="button" class="hint-close" data-hint-close aria-label="Cerrar aviso">✕</button></span>`);
+      showHint('hab:' + habitat.id, html`<span class="hint-icon" aria-hidden="true">🌿</span><span class="hint-body"><strong>Estás en ${habitat.name}</strong><span>${caption}</span></span><span class="hint-actions">${unseen > 0 ? html`<button type="button" class="hint-primary" data-hint-habitat="${habitat.id}">Ver especies</button>` : ''}<button type="button" class="hint-close" data-hint-close aria-label="Cerrar aviso">${icon('close', 14)}</button></span>`);
     }
   }
 }
@@ -149,7 +150,7 @@ function startExplorerMode() {
   }
   state.explorerActive = true;
   explorerToggle.classList.add('active');
-  explorerToggle.textContent = '📍 Explorando…';
+  explorerToggle.innerHTML = iconMarkup('pin', 14) + ' Explorando…';
   nearbyPanel.hidden = false;
   nearbyStatus.textContent = 'Buscando tu posición…';
   nearbyList.innerHTML = '';
@@ -175,7 +176,7 @@ function startExplorerMode() {
 function stopExplorerMode() {
   state.explorerActive = false;
   explorerToggle.classList.remove('active');
-  explorerToggle.textContent = '📍 Modo explorador';
+  explorerToggle.innerHTML = iconMarkup('pin', 14) + ' Modo explorador';
   nearbyPanel.hidden = true;
   hideHint();
   setFollow(false);

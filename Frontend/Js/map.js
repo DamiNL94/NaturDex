@@ -7,7 +7,8 @@
 // setMapHandlers(). Así render/app pueden cambiar sin tocar este módulo y no hay imports cíclicos.
 // ================================================================================================
 
-import { html, kingdomEmoji, poiEmoji, poiImageSrc } from './util.js';
+import { html, escapeHtml, kingdomEmoji, poiEmoji, poiImageSrc } from './util.js';
+import { audioBlock } from './audio.js';
 import {
   state, habitatSpeciesSeenCount, habitatAreaLabel, isHabitatComplete, speciesLatLng
 } from './state.js';
@@ -57,9 +58,11 @@ state.speciesCluster = L.markerClusterGroup({
 function speciesDivIcon(species) {
   const seen = state.seenSpecies.has(species.id);
   const color = species.kingdom === 'flora' ? '#2f6f4e' : '#1f6f8b';
+  // role="img" + aria-label: los marcadores son alcanzables con el teclado (Leaflet les pone
+  // tabindex) y el lector de pantalla debe anunciar qué son, no el emoji literal.
   return L.divIcon({
     className: 'species-marker' + (seen ? ' seen' : ''),
-    html: '<span style="background:' + color + '">' + kingdomEmoji(species) + '</span>',
+    html: '<span role="img" aria-label="' + escapeHtml(species.commonName) + '" style="background:' + color + '">' + kingdomEmoji(species) + '</span>',
     iconSize: [28, 28],
     iconAnchor: [14, 14],
     popupAnchor: [0, -14]
@@ -70,7 +73,7 @@ function speciesDivIcon(species) {
 function poiDivIcon(poi, seen) {
   return L.divIcon({
     className: 'poi-marker' + (seen ? ' seen' : ''),
-    html: '<span>' + poiEmoji(poi) + '</span>',
+    html: '<span role="img" aria-label="' + escapeHtml(poi.name) + (seen ? ' (visitado)' : '') + '">' + poiEmoji(poi) + '</span>',
     iconSize: [26, 26],
     iconAnchor: [13, 13],
     popupAnchor: [0, -13]
@@ -108,7 +111,7 @@ export function renderPoiMarkers() {
     const seen = state.seenPois.has(poi.id);
     const marker = L.marker(poi.coordinates, { icon: poiDivIcon(poi, seen) }).addTo(state.poiGroup);
     marker.bindPopup(
-      String(html`<div class="poi-popup-image"><img src="${poiImageSrc(poi)}" alt="${poi.name}" loading="lazy"></div><strong>${poi.name}</strong><br><span class="popup-type">${poi.type}</span>${poi.approx ? html`<span class="badge review poi-approx-badge">ubicación aproximada</span>` : ''}<p>${poi.description}</p>${poi.source ? html`<p class="detail-source">Fuente: ${poi.source}</p>` : ''}<button type="button" class="poi-seen-btn" data-poi="${poi.id}">${seen ? '✓ Visitado' : 'Marcar como visitado'}</button>`),
+      String(html`<div class="poi-popup-image"><img src="${poiImageSrc(poi)}" alt="" loading="lazy"></div><strong>${poi.name}</strong><br><span class="popup-type">${poi.type}</span>${poi.approx ? html`<span class="badge review poi-approx-badge">ubicación aproximada</span>` : ''}<p>${poi.description}</p>${audioBlock(poi, 'Audioguía del punto de interés')}${poi.source ? html`<p class="detail-source">Fuente: ${poi.source}</p>` : ''}<button type="button" class="poi-seen-btn" data-poi="${poi.id}" aria-pressed="${seen ? 'true' : 'false'}">${seen ? '✓ Visitado' : 'Marcar como visitado'}</button>`),
       { maxWidth: 260 }
     );
     marker.on('popupopen', event => {
@@ -149,8 +152,10 @@ export function renderTrails() {
     style: { color: '#c0662a', weight: 3, opacity: 0.9, lineJoin: 'round', lineCap: 'round' },
     onEachFeature: (feature, layer) => {
       const p = feature.properties || {};
+      // Las rutas (senderos) admiten audioguía: propiedades `audio`/`audioTranscript` en el
+      // feature del trails.geojson (mismas claves que hábitats y POIs).
       layer.bindPopup(
-        String(html`<strong>${p.name || 'Sendero'}</strong><br><span class="popup-type">${p.tipo || ''}</span>${p.descripcion ? html`<p>${p.descripcion}</p>` : ''}${p.source ? html`<small>${p.source}</small>` : ''}`)
+        String(html`<strong>${p.name || 'Sendero'}</strong><br><span class="popup-type">${p.tipo || ''}</span>${p.descripcion ? html`<p>${p.descripcion}</p>` : ''}${audioBlock(p, 'Audioguía de la ruta')}${p.source ? html`<small>${p.source}</small>` : ''}`)
       );
     }
   }).addTo(state.trailLayer);

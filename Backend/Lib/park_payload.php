@@ -22,7 +22,7 @@ function buildParkPayload($conn, $parkSlug) {
     if (!$park) return null;
 
     // --- Hábitats ---------------------------------------------------------------------------------
-    $habitatStmt = $conn->prepare("SELECT id, slug, code, name, habitat_type, description, is_priority, latitude, longitude, color, review_note FROM habitats WHERE park_id = ? ORDER BY name");
+    $habitatStmt = $conn->prepare("SELECT id, slug, code, name, habitat_type, description, is_priority, latitude, longitude, color, review_note, audio_url, audio_transcript FROM habitats WHERE park_id = ? ORDER BY name");
     $habitatStmt->bind_param("i", $park["id"]);
     $habitatStmt->execute();
     $habitatResult = $habitatStmt->get_result();
@@ -50,6 +50,9 @@ function buildParkPayload($conn, $parkSlug) {
             // aparece automáticamente.
             "image" => "Img/habitats/" . $slug . ".jpg",
             "reviewNote" => $row["review_note"],
+            // Audioguía del hábitat (opcional): ruta del audio + transcripción accesible.
+            "audio" => $row["audio_url"],
+            "audioTranscript" => $row["audio_transcript"],
             "speciesIds" => []
         ];
     }
@@ -113,7 +116,7 @@ function buildParkPayload($conn, $parkSlug) {
     }
 
     // --- Puntos de interés ------------------------------------------------------------------------
-    $poiStmt = $conn->prepare("SELECT slug, name, type, description, latitude, longitude, image_url, source, is_approx FROM points_of_interest WHERE park_id = ? ORDER BY name");
+    $poiStmt = $conn->prepare("SELECT slug, name, type, description, latitude, longitude, image_url, source, is_approx, audio_url, audio_transcript FROM points_of_interest WHERE park_id = ? ORDER BY name");
     $poiStmt->bind_param("i", $park["id"]);
     $poiStmt->execute();
     $poiResult = $poiStmt->get_result();
@@ -127,7 +130,10 @@ function buildParkPayload($conn, $parkSlug) {
             "coordinates" => [(float) $row["latitude"], (float) $row["longitude"]],
             "image" => $row["image_url"],
             "source" => $row["source"],
-            "approx" => (bool) $row["is_approx"]
+            "approx" => (bool) $row["is_approx"],
+            // Audioguía del punto de interés (opcional).
+            "audio" => $row["audio_url"],
+            "audioTranscript" => $row["audio_transcript"]
         ];
     }
 

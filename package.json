@@ -5,6 +5,11 @@
   "description": "NaturDex — guía ambiental virtual de parques (prototipo, orientado a móvil/PWA).",
   "scripts": {
     "validate": "node Tools/validate-park-data.js",
-    "export:park": "php Tools/export-park.php"
+    "export:park": "php Tools/export-park.php",
+    "db:status": "node Tools/db-sync/db-sync.js status",
+    "db:pull": "node Tools/db-sync/db-sync.js pull",
+    "db:push": "node Tools/db-sync/db-sync.js push",
+    "db:backup": "node Tools/db-sync/db-sync.js backup",
+    "hooks:install": "git config core.hooksPath .githooks"
   }
 }

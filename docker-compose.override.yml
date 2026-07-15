@@ -1,0 +1,17 @@
+# Override de DESARROLLO LOCAL. Compose lo carga automáticamente al hacer `docker compose up`,
+# así que el flujo local de siempre no cambia: la web queda en http://localhost:8080 (o WEB_PORT).
+#
+# En producción NO se usa este fichero: se pasa explícitamente el de producción y este se ignora
+# (docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build).
+services:
+  web:
+    ports:
+      - "${WEB_PORT:-8080}:80"
+    # Desarrollo en vivo: el código se monta desde la carpeta del proyecto, así que los cambios en
+    # Frontend/ y Backend/ se ven al recargar el navegador, sin reconstruir la imagen. Solo hace
+    # falta `docker compose up -d --build` cuando cambie el Dockerfile o la config de docker/.
+    # (En producción no aplica: este fichero se ignora y el código viaja copiado en la imagen.)
+    volumes:
+      - ./Frontend:/var/www/html/Frontend
+      - ./Backend:/var/www/html/Backend
+      - ./Database:/var/www/html/Database

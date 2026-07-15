@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# NaturDex · hook de pre-commit — pull automático de la BD.
+# ------------------------------------------------------------------------------------------------
+# Antes de cada commit, vuelca el estado VIVO del contenedor MySQL a Database/snapshot.sql y lo
+# incluye en el commit. Así cada commit captura automáticamente lo que hayas cambiado en la BD
+# desde la app (panel de administración, etc.).
+#
+# Es tolerante a fallos: si Docker o el contenedor no están activos, NO bloquea el commit.
+# Se activa con:  git config core.hooksPath .githooks   (o  npm run hooks:install)
+# Para saltarlo puntualmente:  git commit --no-verify
+# ------------------------------------------------------------------------------------------------
+set -u
+
+ROOT="$(git rev-parse --show-toplevel)"
+
+# Localizar Node (en Windows puede no estar en el PATH de git).
+NODE="$(command -v node || true)"
+if [ -z "$NODE" ] && [ -x "/c/Program Files/nodejs/node.exe" ]; then
+  NODE="/c/Program Files/nodejs/node.exe"
+fi
+if [ -z "$NODE" ]; then
+  echo "[db-sync] Node no disponible; omito el pull automático."
+  exit 0
+fi
+
+# pull tolerante: si el contenedor no está en marcha, sale sin error.
+if ! "$NODE" "$ROOT/Tools/db-sync/db-sync.js" pull --if-running; then
+  echo "[db-sync] el pull automático falló; el commit continúa sin bloquearse."
+  exit 0
+fi
+
+# Incluir el snapshot actualizado en el commit (si cambió).
+if [ -f "$ROOT/Database/snapshot.sql" ]; then
+  git add "$ROOT/Database/snapshot.sql"
+fi
+
+exit 0

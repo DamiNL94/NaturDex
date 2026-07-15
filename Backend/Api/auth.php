@@ -5,9 +5,8 @@
 // (cookie Secure/SameSite, límites de intentos, verificación de email, etc.).
 session_start();
 header("Content-Type: application/json; charset=utf-8");
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type");
+require_once __DIR__ . "/../Lib/api_cors.php";
+apiCorsHeaders();
 
 if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") { http_response_code(204); exit; }
 
@@ -30,7 +29,7 @@ function currentUser($conn) {
         "id" => (int) $user["id"],
         "email" => $user["email"],
         "name" => $user["display_name"],
-        // El panel de administración (admin.html) usa este flag para saber si puede entrar;
+        // El panel de administración (Frontend/admin/) usa este flag para saber si puede entrar;
         // la autoridad real la comprueba siempre el servidor (admin.php exige role='admin').
         "isAdmin" => ($user["role"] ?? "user") === "admin"
     ];

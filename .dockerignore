@@ -13,6 +13,10 @@ Database
 # Utilidades de línea de comandos (export/validación): no se ejecutan por web.
 Tools
 
+# Código fuente del panel de administración: en la imagen solo debe viajar su build
+# (Frontend/admin/), que se compila en el host con `npm run build` (ver AdminPanel/README.md).
+AdminPanel
+
 # Datos de runtime: se regeneran; no deben viajar en la imagen.
 Backend/Data
 
@@ -21,4 +25,6 @@ Backend/Data
 Dockerfile
 .dockerignore
 docker-compose.yml
+docker-compose.*.yml
+docker-compose.override.yml
 *.md

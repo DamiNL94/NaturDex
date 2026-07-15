@@ -1,0 +1,17 @@
+/* ================================================================================================
+   index.css — Tailwind CSS v4 (configuración en CSS, sin tailwind.config.js).
+   ------------------------------------------------------------------------------------------------
+   Se define la fuente Inter (la misma que usa la app pública) y un par de detalles globales.
+   El resto del estilo vive en las clases de utilidad de los componentes.
+   ================================================================================================ */
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Barras de desplazamiento discretas en los paneles con scroll propio */
+.scroll-slim {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-stone-300) transparent;
+}

@@ -9,8 +9,9 @@
 
 import {
   html, kingdomEmoji, placeholderImage, speciesImageSrc,
-  habitatImageSrc, habitatPlaceholderImage
+  habitatImageSrc, habitatPlaceholderImage, icon
 } from './util.js';
+import { audioBlock } from './audio.js';
 import {
   ACHIEVEMENT_NAME, state, getFilteredSpecies, getFilteredHabitats,
   habitatSpeciesSeenCount, habitatAreaLabel, isHabitatComplete, computeProgress
@@ -57,7 +58,7 @@ export function renderSpeciesList() {
   resultCount.textContent = species.length === 1 ? '1 resultado' : species.length + ' resultados';
   const cards = species.map(item => {
     const seen = state.seenSpecies.has(item.id);
-    return html`<button class="species-card ${item.id === state.selectedId ? 'active' : ''}${seen ? ' seen' : ''}" type="button" data-id="${item.id}"><span class="card-thumb"><img src="${speciesImageSrc(item)}" alt="${item.commonName}" loading="lazy" onerror="window.__imgFallback(this,${item.id})">${seen ? html`<span class="seen-badge" title="Visto">✓</span>` : ''}</span><span><span class="card-meta"><span class="badge ${item.kingdom}">${item.kingdom}</span>${item.featured ? html`<span class="badge alert">prioritaria</span>` : ''}${item.reviewNote ? html`<span class="badge review">a revisar</span>` : ''}</span><h3>${item.commonName}</h3><em>${item.scientificName}</em></span></button>`;
+    return html`<button class="species-card ${item.id === state.selectedId ? 'active' : ''}${seen ? ' seen' : ''}" type="button" data-id="${item.id}"${item.id === state.selectedId ? html` aria-current="true"` : ''}><span class="card-thumb"><img src="${speciesImageSrc(item)}" alt="" loading="lazy" onerror="window.__imgFallback(this,${item.id})">${seen ? html`<span class="seen-badge" aria-hidden="true">${icon('check', 12)}</span>` : ''}</span><span><span class="card-meta"><span class="badge ${item.kingdom}">${item.kingdom}</span>${item.featured ? html`<span class="badge alert">prioritaria</span>` : ''}${item.reviewNote ? html`<span class="badge review">a revisar</span>` : ''}</span><h3>${item.commonName}</h3><em>${item.scientificName}</em>${seen ? html`<span class="sr-only">Especie vista.</span>` : ''}</span></button>`;
   });
   speciesList.innerHTML = html`${cards}`;
 }
@@ -94,6 +95,7 @@ export function renderProgress() {
   const seen = state.seenSpecies.size;
   const pct = total ? Math.round((seen / total) * 100) : 0;
   progressFill.style.width = pct + '%';
+  progressTrack.setAttribute('aria-valuenow', String(pct));
   progressLabel.textContent = seen + ' / ' + total + ' especies descubiertas';
 }
 
@@ -123,7 +125,7 @@ function renderHabitatDetail() {
     const s = (state.data.species || []).find(item => item.id === id);
     if (!s) return '';
     const wasSeen = state.seenSpecies.has(s.id);
-    return html`<button type="button" class="habitat-species-chip${wasSeen ? ' seen' : ''}" data-species-chip="${s.id}"><span>${kingdomEmoji(s)}</span>${s.commonName}${wasSeen ? ' ✓' : ''}</button>`;
+    return html`<button type="button" class="habitat-species-chip${wasSeen ? ' seen' : ''}" data-species-chip="${s.id}"><span aria-hidden="true">${kingdomEmoji(s)}</span>${s.commonName}${wasSeen ? html` <span aria-hidden="true">✓</span><span class="sr-only">(vista)</span>` : ''}</button>`;
   });
   detailPanel.innerHTML = html`<div class="detail-image-wrap habitat-detail-image">
     <img src="${habitatImageSrc(habitat)}" alt="${habitat.name}" onerror="window.__habitatImgFallback(this,'${habitat.id}')">
@@ -139,12 +141,13 @@ function renderHabitatDetail() {
     </span>
     <h2>${habitat.name}</h2>
     <p>${habitat.description}</p>
+    ${audioBlock(habitat, 'Audioguía del hábitat')}
     <div class="detail-facts">
     <div><span>Código Natura 2000</span><strong>${habitat.code || '—'}</strong></div>
     <div><span>Superficie en el parque</span><strong>${area || 'Sin cartografiar'}</strong></div>
     </div>
     <div class="habitat-detail-progress">
-    <div class="progress-track big"><div class="progress-fill" style="width:${pct}%"></div></div>
+    <div class="progress-track big" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}" aria-label="Especies vistas en este hábitat"><div class="progress-fill" style="width:${pct}%"></div></div>
     <span class="progress-caption">${seen} / ${total} especies vistas en este hábitat</span>
     </div>
     ${total > 0 ? html`<h3 class="detail-subtitle">Especies de este hábitat</h3><div class="habitat-species-chips">${chips}</div>` : ''}
@@ -174,7 +177,7 @@ function renderSpeciesDetail() {
     <div><span>Hábitat</span><strong>${species.habitat}</strong></div>
     <div><span>Temporada</span><strong>${species.seasonality}</strong></div>
     <div><span>Grupo</span><strong>${species.group}</strong></div>
-    <div><span>Rareza</span><strong>${stars}</strong></div>
+    <div><span>Rareza</span><strong><span role="img" aria-label="${species.rarityScore} de 5">${stars}</span></strong></div>
     </div>
     <h3 class="detail-subtitle">Taxonomía</h3>
     <div class="detail-facts detail-taxonomy">
@@ -193,7 +196,7 @@ function renderSpeciesDetail() {
     </ul>
     ${species.reviewNote ? html`<div class="review-note"><strong>Pendiente de revisión:</strong> ${species.reviewNote}</div>` : ''}
     ${species.source ? html`<p class="detail-source">Fuente: ${species.source}</p>` : ''}
-    <button class="seen-toggle ${seen ? 'is-seen' : ''}" type="button" data-toggle-seen="${species.id}">${seen ? '✓ Visto' : 'Marcar como visto'}</button>
+    <button class="seen-toggle ${seen ? 'is-seen' : ''}" type="button" data-toggle-seen="${species.id}" aria-pressed="${seen ? 'true' : 'false'}">${seen ? '✓ Visto' : 'Marcar como visto'}</button>
     </div>`;
 }
 
@@ -212,7 +215,7 @@ export function renderProgressTab() {
   const justUnlocked = progress.parkComplete && !state.parkWasComplete;
   state.parkWasComplete = progress.parkComplete;
 
-  progressPanel.innerHTML = html`<div class="progress-section"><h3>Especies</h3><div class="progress-track big"><div class="progress-fill" style="width:${speciesPct}%"></div></div><span class="progress-caption">${progress.speciesSeen} / ${progress.speciesTotal} especies vistas</span></div><div class="progress-section"><h3>Hábitats</h3><ul class="progress-list">${habitatsHtml}</ul></div><div class="progress-section"><h3>Puntos de interés</h3><div class="progress-track big"><div class="progress-fill" style="width:${poiPct}%"></div></div><span class="progress-caption">${progress.poisSeen} / ${progress.poisTotal} puntos visitados</span><ul class="progress-list">${poisHtml}</ul></div><div class="achievement-card ${progress.parkComplete ? 'unlocked' : 'locked'}${justUnlocked ? ' just-unlocked' : ''}"><span class="achievement-icon">${progress.parkComplete ? '🏆' : '🔒'}</span><div><strong>${ACHIEVEMENT_NAME}</strong><p>${progress.parkComplete
+  progressPanel.innerHTML = html`<div class="progress-section"><h3>Especies</h3><div class="progress-track big" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${speciesPct}" aria-label="Especies vistas"><div class="progress-fill" style="width:${speciesPct}%"></div></div><span class="progress-caption">${progress.speciesSeen} / ${progress.speciesTotal} especies vistas</span></div><div class="progress-section"><h3>Hábitats</h3><ul class="progress-list">${habitatsHtml}</ul></div><div class="progress-section"><h3>Puntos de interés</h3><div class="progress-track big" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${poiPct}" aria-label="Puntos de interés visitados"><div class="progress-fill" style="width:${poiPct}%"></div></div><span class="progress-caption">${progress.poisSeen} / ${progress.poisTotal} puntos visitados</span><ul class="progress-list">${poisHtml}</ul></div><div class="achievement-card ${progress.parkComplete ? 'unlocked' : 'locked'}${justUnlocked ? ' just-unlocked' : ''}"><span class="achievement-icon" aria-hidden="true">${progress.parkComplete ? icon('trophy', 22) : icon('lock', 22)}</span><div><strong>${ACHIEVEMENT_NAME}</strong><p>${progress.parkComplete
       ? 'Logro desbloqueado: has completado todos los hábitats y puntos de interés de Cabo Cope y Puntas de Calnegre.'
       : 'Completa todos los hábitats (viendo todas sus especies) y visita todos los puntos de interés para desbloquear este logro.'}</p></div></div>`;
 }

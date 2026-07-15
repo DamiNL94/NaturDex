@@ -16,6 +16,7 @@ import {
   DEFAULT_PARK_SLUG, PARK_INDEX_PATH,
   state, computeProgress, speciesLatLng
 } from './state.js';
+import { iconMarkup } from './util.js';
 import {
   resolveActivePark, loadManifest, loadData, loadGeo,
   loadProgress, persistProgress
@@ -23,7 +24,7 @@ import {
 import {
   speciesList, searchInput, catalogControls, catalogPanel,
   backToHabitatsBtn, catalogCrumbLabel, parkTitle, progressPanel, detailPanel, sheetClose,
-  saveOfflineBtn, connStatus
+  saveOfflineBtn, connStatus, layersToggle, layersPanel
 } from './dom.js';
 import {
   renderHabitatCatalog, renderSpeciesList, renderCatalogBody,
@@ -154,7 +155,7 @@ function setView(view) {
   document.querySelectorAll('.view-tab').forEach(btn => {
     const active = btn.dataset.view === view;
     btn.classList.toggle('active', active);
-    btn.setAttribute('aria-selected', active ? 'true' : 'false');
+    btn.setAttribute('aria-pressed', active ? 'true' : 'false');
   });
   catalogControls.hidden = view !== 'catalog';
   catalogPanel.hidden = view !== 'catalog';
@@ -176,7 +177,8 @@ function syncMobileNav(tab) {
   document.querySelectorAll('.mobile-nav-btn').forEach(btn => {
     const active = btn.dataset.mtab === tab;
     btn.classList.toggle('active', active);
-    btn.setAttribute('aria-selected', active ? 'true' : 'false');
+    // aria-current marca la sección activa de la navegación (los botones no son pestañas ARIA)
+    if (active) btn.setAttribute('aria-current', 'true'); else btn.removeAttribute('aria-current');
   });
 }
 
@@ -191,12 +193,29 @@ function setMobileTab(tab) {
 }
 
 function openDetailSheet() {
-  if (mobileMedia.matches) document.body.classList.add('sheet-open');
+  if (mobileMedia.matches) {
+    document.body.classList.add('sheet-open');
+    // El foco entra en la ficha (tabindex="-1" en el HTML): el lector de pantalla anuncia el
+    // contenido recién abierto y Escape/el botón ✕ quedan al alcance del teclado.
+    detailPanel.focus({ preventScroll: true });
+  }
 }
 
 function closeDetailSheet() {
   document.body.classList.remove('sheet-open');
 }
+
+// Escape cierra lo que esté superpuesto (bottom-sheet de la ficha o panel de capas), devolviendo
+// el foco a un lugar coherente. Complementa a los botones ✕ para el uso con teclado.
+document.addEventListener('keydown', event => {
+  if (event.key !== 'Escape') return;
+  if (document.body.classList.contains('sheet-open')) { closeDetailSheet(); return; }
+  if (layersPanel && !layersPanel.hidden) {
+    layersPanel.hidden = true;
+    layersToggle.setAttribute('aria-expanded', 'false');
+    layersToggle.focus();
+  }
+});
 
 document.querySelectorAll('.mobile-nav-btn').forEach(btn => {
   btn.addEventListener('click', () => setMobileTab(btn.dataset.mtab));
@@ -234,8 +253,12 @@ detailPanel.addEventListener('click', event => {
 
 document.querySelectorAll('.filter-button').forEach(button => {
   button.addEventListener('click', () => {
-    document.querySelectorAll('.filter-button').forEach(item => item.classList.remove('active'));
+    document.querySelectorAll('.filter-button').forEach(item => {
+      item.classList.remove('active');
+      item.setAttribute('aria-pressed', 'false');
+    });
     button.classList.add('active');
+    button.setAttribute('aria-pressed', 'true');
     state.filter = button.dataset.filter;
     renderSpeciesList();
   });
@@ -273,7 +296,7 @@ function initOfflineUI() {
     const saved = NaturDexOffline.isParkSaved(state.activeParkSlug);
     status.textContent = online ? 'En línea' : (saved ? 'Sin conexión · parque guardado' : 'Sin conexión');
     status.classList.toggle('offline', !online);
-    if (saved) { btn.textContent = '✓ Guardado sin conexión'; btn.classList.add('saved'); }
+    if (saved) { btn.innerHTML = iconMarkup('check', 14) + ' Guardado sin conexión'; btn.classList.add('saved'); }
   };
   refresh();
   NaturDexOffline.onConnectivityChange(refresh);
@@ -287,10 +310,10 @@ function initOfflineUI() {
       await NaturDexOffline.saveParkOffline(state.manifest, (done, tot) => {
         btn.textContent = 'Guardando… ' + done + '/' + tot;
       });
-      btn.textContent = '✓ Guardado sin conexión';
+      btn.innerHTML = iconMarkup('check', 14) + ' Guardado sin conexión';
       btn.classList.add('saved');
     } catch (e) {
-      btn.textContent = '⬇️ Guardar sin conexión';
+      btn.innerHTML = iconMarkup('download', 14) + ' Guardar sin conexión';
       console.info('No se pudo guardar el parque sin conexión', e);
     } finally {
       btn.disabled = false;

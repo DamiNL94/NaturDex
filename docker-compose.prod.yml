@@ -1,0 +1,41 @@
+# Override de PRODUCCIÓN: pone un proxy inverso Caddy delante del contenedor web, con certificado
+# TLS automático (Let's Encrypt) y redirección HTTP→HTTPS. Ver DEPLOY.md.
+#
+#   docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+#
+# Requisitos: DOMAIN definido en .env apuntando (DNS tipo A) a la IP pública del servidor, y los
+# puertos 80 y 443 abiertos. Para probar en local sin dominio: DOMAIN=localhost (Caddy emite un
+# certificado con su CA interna; el navegador avisará de que no es de confianza, es normal).
+services:
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    depends_on:
+      - web
+    environment:
+      # El dominio es OBLIGATORIO en producción (mismo criterio que las contraseñas de la BD).
+      DOMAIN: ${DOMAIN:?Define DOMAIN en .env (p. ej. naturdex.example.com; o localhost para probar)}
+    ports:
+      # Caddy toma los puertos públicos: 80 (solo para redirigir a HTTPS y para el reto ACME de
+      # Let's Encrypt) y 443 (TCP para HTTP/1.1-HTTP/2, UDP para HTTP/3).
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./docker/Caddyfile:/etc/caddy/Caddyfile:ro
+      # Certificados y estado de Caddy: persisten entre reinicios para no volver a pedir el
+      # certificado a Let's Encrypt en cada arranque (tiene límites de emisión).
+      - caddy_data:/data
+      - caddy_config:/config
+
+  web:
+    # Por HTTPS, la cookie de sesión debe llevar el atributo Secure. Se activa montando un ini
+    # extra SOLO en producción (en local por HTTP no se monta y el login sigue funcionando).
+    volumes:
+      - ./docker/php-https.ini:/etc/php82/conf.d/zzz-naturdex-https.ini:ro
+
+volumes:
+  caddy_data:
+  caddy_config:

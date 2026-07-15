@@ -48,9 +48,10 @@
         "Img/habitats/subestepa-thero-brachypodietea.jpg",
         "Img/habitats/roquedos-casmofiticos.jpg"
     ],
+    "audio": [],
     "tiles": null,
     "counts": {
-        "species": 76,
+        "species": 124,
         "habitats": 15,
         "pointsOfInterest": 16,
         "images": 34

@@ -9,11 +9,11 @@
  * Es opcional: si el navegador no admite Service Workers, la app sigue funcionando con la caché en
  * localStorage y Cache Storage que gestiona offline.js.
  */
-var VERSION = 'v14';
+var VERSION = 'v15';
 var RUNTIME_CACHE = 'naturdex-runtime-' + VERSION;
 
 // Armazón mínimo que se intenta precachear en la instalación (best-effort).
-var SHELL_ASSETS = ['index.html', 'Css/styles.css', 'manifest.webmanifest', 'Img/icon-192.png', 'Img/icon-512.png', 'Js/offline.js', 'Js/util.js', 'Js/state.js', 'Js/dom.js', 'Js/data.js', 'Js/render.js', 'Js/map.js', 'Js/layers.js', 'Js/explorer.js', 'Js/app.js', 'Js/auth.js'];
+var SHELL_ASSETS = ['index.html', 'Css/styles.css', 'manifest.webmanifest', 'Img/icon-192.png', 'Img/icon-512.png', 'Js/offline.js', 'Js/util.js', 'Js/state.js', 'Js/dom.js', 'Js/data.js', 'Js/render.js', 'Js/map.js', 'Js/layers.js', 'Js/explorer.js', 'Js/audio.js', 'Js/app.js', 'Js/auth.js'];
 
 self.addEventListener('install', function (event) {
   event.waitUntil(

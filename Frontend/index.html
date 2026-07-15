@@ -9,6 +9,12 @@
     <meta name="theme-color" content="#2f6f4e">
     <link rel="icon" type="image/png" href="Img/icon-192.png">
     <link rel="apple-touch-icon" href="Img/icon-192.png">
+    <!-- Tipografía Inter: la hoja de estilos ya la declaraba como preferida (font-family), pero sin
+         cargarla nunca se veía la fuente del sistema. font-display:swap evita texto invisible mientras
+         carga; si no hay red, cae directamente a la pila de system-ui ya prevista en styles.css. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
@@ -16,9 +22,9 @@
 </head>
 <body>
     <!-- ===================== Pantalla: portada ===================== -->
-    <section id="screen-cover" class="screen screen-center screen-cover">
+    <section id="screen-cover" class="screen screen-center screen-cover" aria-label="Portada de NaturDex">
         <div class="cover-inner">
-            <div class="cover-mark">🌿</div>
+            <div class="cover-mark" aria-hidden="true">🌿</div>
             <p class="eyebrow">Guía ambiental virtual</p>
             <h1 class="cover-title">NaturDex</h1>
             <p class="cover-sub">Explora, identifica y cataloga la flora y la fauna de los parques naturales y nacionales de España.</p>
@@ -28,12 +34,14 @@
     </section>
 
     <!-- ===================== Pantalla: login / registro ===================== -->
-    <section id="screen-auth" class="screen screen-center" hidden>
+    <section id="screen-auth" class="screen screen-center" hidden aria-label="Acceso a NaturDex">
         <div class="auth-card">
             <p class="eyebrow">NaturDex</p>
-            <div class="auth-tabs" role="tablist">
-                <button class="auth-tab active" type="button" data-mode="login" role="tab">Entrar</button>
-                <button class="auth-tab" type="button" data-mode="register" role="tab">Crear cuenta</button>
+            <h2 class="sr-only">Entrar o crear cuenta</h2>
+            <!-- Conmutador de modo (no son pestañas ARIA: el panel es el mismo formulario) -->
+            <div class="auth-tabs" role="group" aria-label="Modo de acceso">
+                <button class="auth-tab active" type="button" data-mode="login" aria-pressed="true">Entrar</button>
+                <button class="auth-tab" type="button" data-mode="register" aria-pressed="false">Crear cuenta</button>
             </div>
             <form id="authForm" novalidate>
                 <label id="nameField" class="auth-field" hidden>Nombre
@@ -45,7 +53,7 @@
                 <label class="auth-field">Contraseña
                     <input type="password" id="authPassword" required autocomplete="current-password" minlength="6" placeholder="Mínimo 6 caracteres">
                 </label>
-                <p class="auth-error" id="authError" hidden></p>
+                <p class="auth-error" id="authError" role="alert" hidden></p>
                 <button type="submit" class="btn-primary" id="authSubmit">Entrar</button>
             </form>
             <button class="link-btn" type="button" id="authBack">← Volver a la portada</button>
@@ -53,30 +61,31 @@
     </section>
 
     <!-- ===================== Pantalla: selección de parque (mapa de España) ===================== -->
-    <section id="screen-select" class="screen screen-select" hidden>
+    <section id="screen-select" class="screen screen-select" hidden aria-label="Selección de parque">
         <div class="select-panel">
             <div class="select-head">
                 <div><p class="eyebrow">NaturDex</p><h2>Elige un parque</h2></div>
-                <div class="park-user"><span id="userNameSelect" class="user-name"></span><button id="logoutBtnSelect" class="icon-btn" type="button" title="Cerrar sesión" aria-label="Cerrar sesión">⏻</button></div>
+                <div class="park-user"><span id="userNameSelect" class="user-name"></span><button id="logoutBtnSelect" class="icon-btn" type="button" title="Cerrar sesión" aria-label="Cerrar sesión"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg></button></div>
             </div>
             <p class="select-hint">Selecciónalo en el mapa o en la lista. Así solo se carga la información del parque que vas a explorar, sin saturar el mapa.</p>
             <label class="select-field">Parque
                 <select id="parkSelect"><option value="">Cargando…</option></select>
             </label>
-            <button id="geoLocateBtn" type="button" class="btn-secondary">📍 Ir al parque más cercano a mí</button>
-            <p class="select-status" id="selectStatus" hidden></p>
+            <button id="geoLocateBtn" type="button" class="btn-secondary"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></svg> Ir al parque más cercano a mí</button>
+            <p class="select-status" id="selectStatus" role="status" hidden></p>
             <button id="enterParkBtn" type="button" class="btn-primary" disabled>Entrar al parque</button>
         </div>
-        <div id="spain-map" class="spain-map"></div>
+        <div id="spain-map" class="spain-map" aria-label="Mapa de España con los parques disponibles"></div>
     </section>
 
     <!-- ===================== Pantalla: parque (la app completa) ===================== -->
     <section id="screen-park" class="screen" hidden>
         <main class="app-shell">
+            <a class="skip-link" href="#map">Saltar al mapa</a>
             <aside class="sidebar" aria-label="Panel de exploración NaturDex">
                 <div class="park-nav">
                     <button type="button" id="backToParks" class="link-btn">← Parques</button>
-                    <div class="park-user"><span id="userName" class="user-name"></span><button id="logoutBtn" class="icon-btn" type="button" title="Cerrar sesión" aria-label="Cerrar sesión">⏻</button></div>
+                    <div class="park-user"><span id="userName" class="user-name"></span><button id="logoutBtn" class="icon-btn" type="button" title="Cerrar sesión" aria-label="Cerrar sesión"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg></button></div>
                 </div>
                 <section class="park-summary">
                     <p class="eyebrow">NaturDex piloto</p>
@@ -88,64 +97,66 @@
                         <div><strong id="coastlineKm">17 km</strong><span>costa</span></div>
                     </div>
                     <div class="progress-wrap" aria-label="Progreso de descubrimiento">
-                        <div id="progressTrack" class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
+                        <div id="progressTrack" class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-labelledby="progressLabel"><div id="progressFill" class="progress-fill"></div></div>
                         <span id="progressLabel" class="progress-label">0 / 0 especies descubiertas</span>
                     </div>
                     <div class="offline-bar" aria-label="Estado de conexión y datos sin conexión">
-                        <span id="connStatus" class="conn-status">En línea</span>
-                        <button type="button" id="saveOfflineBtn" class="save-offline-btn" title="Descarga este parque para poder usarlo sin cobertura">⬇️ Guardar sin conexión</button>
+                        <span id="connStatus" class="conn-status" role="status">En línea</span>
+                        <button type="button" id="saveOfflineBtn" class="save-offline-btn" title="Descarga este parque para poder usarlo sin cobertura"><svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 15v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Guardar sin conexión</button>
                     </div>
                 </section>
-                <div class="view-tabs" role="tablist" aria-label="Vistas de NaturDex">
-                    <button class="view-tab active" type="button" data-view="catalog" role="tab" aria-selected="true">Catálogo</button>
-                    <button class="view-tab" type="button" data-view="progress" role="tab" aria-selected="false">Progreso</button>
+                <!-- Conmutador de vistas (botones con estado, no pestañas ARIA: los paneles se
+                     muestran/ocultan enteros y no hay relación tab/tabpanel navegable) -->
+                <div class="view-tabs" role="group" aria-label="Vistas de NaturDex">
+                    <button class="view-tab active" type="button" data-view="catalog" aria-pressed="true">Catálogo</button>
+                    <button class="view-tab" type="button" data-view="progress" aria-pressed="false">Progreso</button>
                 </div>
                 <div class="catalog-crumb" id="catalogCrumb" hidden>
                     <button type="button" id="backToHabitats">← Hábitats</button>
-                    <span id="catalogCrumbLabel"></span>
+                    <button type="button" id="catalogCrumbLabel" class="crumb-label" title="Abrir la ficha de este hábitat"></button>
                 </div>
                 <section class="controls" id="catalogControls" aria-label="Filtros del catálogo">
                     <label for="searchInput" id="searchLabel">Buscar especie</label>
                     <input id="searchInput" type="search" placeholder="Nombre común o científico">
                     <div class="segmented" role="group" aria-label="Filtrar por tipo" id="speciesFilterGroup">
-                        <button class="filter-button active" data-filter="all" type="button">Todas</button>
-                        <button class="filter-button" data-filter="fauna" type="button">Fauna</button>
-                        <button class="filter-button" data-filter="flora" type="button">Flora</button>
-                        <button class="filter-button" data-filter="seen" type="button">Vistas</button>
+                        <button class="filter-button active" data-filter="all" type="button" aria-pressed="true">Todas</button>
+                        <button class="filter-button" data-filter="fauna" type="button" aria-pressed="false">Fauna</button>
+                        <button class="filter-button" data-filter="flora" type="button" aria-pressed="false">Flora</button>
+                        <button class="filter-button" data-filter="seen" type="button" aria-pressed="false">Vistas</button>
                     </div>
                 </section>
                 <section class="species-panel" id="catalogPanel" aria-label="Catálogo de especies">
-                    <div class="section-title"><h2 id="catalogTitle">Hábitats</h2><span id="resultCount">0 resultados</span></div>
+                    <div class="section-title"><h2 id="catalogTitle">Hábitats</h2><span id="resultCount" role="status">0 resultados</span></div>
                     <div id="speciesList" class="species-list"></div>
                 </section>
                 <section class="progress-panel" id="progressPanel" aria-label="Progreso de exploración" hidden></section>
             </aside>
             <section class="map-stage" aria-label="Mapa y ficha de especie">
-                <div id="map"></div>
+                <div id="map" aria-label="Mapa interactivo del parque"></div>
                 <!-- Panel de capas propio (layers.js): control + leyenda unificados, con
                      subsección de hábitats para verlos por separado. -->
                 <div class="layers-control">
-                    <button type="button" id="layersToggle" class="layers-toggle" aria-expanded="false" aria-controls="layersPanel">🗺️ Capas</button>
-                    <div id="layersPanel" class="layers-panel" hidden aria-label="Capas y leyenda del mapa"></div>
+                    <button type="button" id="layersToggle" class="layers-toggle" aria-expanded="false" aria-controls="layersPanel"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg> Capas</button>
+                    <div id="layersPanel" class="layers-panel" role="group" hidden aria-label="Capas y leyenda del mapa"></div>
                 </div>
                 <!-- En escritorio la ficha es la columna derecha; en móvil, .detail-dock se
                      convierte en una bottom-sheet deslizante sobre la vista activa. -->
                 <div class="detail-dock">
                     <div class="sheet-bar">
                         <span class="sheet-grip" aria-hidden="true"></span>
-                        <button type="button" id="sheetClose" class="sheet-close" aria-label="Cerrar ficha">✕</button>
+                        <button type="button" id="sheetClose" class="sheet-close" aria-label="Cerrar ficha"><svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
                     </div>
-                    <article id="detailPanel" class="detail-panel" aria-live="polite"></article>
+                    <article id="detailPanel" class="detail-panel" aria-live="polite" tabindex="-1" aria-label="Ficha de detalle"></article>
                 </div>
-                <button type="button" id="explorerToggle" class="explorer-toggle" title="Activa tu GPS para descubrir qué tienes cerca">📍 Modo explorador</button>
+                <button type="button" id="explorerToggle" class="explorer-toggle" title="Activa tu GPS para descubrir qué tienes cerca"><svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></svg> Modo explorador</button>
                 <!-- Aviso de descubrimiento por proximidad (modo explorador): POI al alcance o hábitat pisado -->
                 <div id="explorerHint" class="explorer-hint" role="status" hidden></div>
                 <!-- Seguimiento: el mapa se mueve contigo (explorer.js lo monta como control Leaflet) -->
-                <button type="button" id="followToggle" class="follow-toggle" title="Seguir mi posición: el mapa se mueve contigo" aria-pressed="false">🎯</button>
+                <button type="button" id="followToggle" class="follow-toggle" title="Seguir mi posición: el mapa se mueve contigo" aria-label="Seguir mi posición en el mapa" aria-pressed="false"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></button>
                 <aside id="nearbyPanel" class="nearby-panel" hidden aria-label="Puntos cercanos a tu posición">
                     <div class="nearby-header">
                         <h3>Cerca de ti</h3>
-                        <button type="button" id="nearbyClose" aria-label="Desactivar modo explorador">✕</button>
+                        <button type="button" id="nearbyClose" aria-label="Desactivar modo explorador"><svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
                     </div>
                     <p id="nearbyStatus" class="nearby-status">Buscando tu posición…</p>
                     <ul id="nearbyList" class="nearby-list"></ul>
@@ -154,9 +165,9 @@
         </main>
         <!-- Nav inferior (solo móvil): Catálogo / Mapa / Progreso a pantalla completa -->
         <nav class="mobile-nav" aria-label="Secciones de NaturDex">
-            <button type="button" class="mobile-nav-btn active" data-mtab="catalog" aria-selected="true"><span aria-hidden="true">📖</span>Catálogo</button>
-            <button type="button" class="mobile-nav-btn" data-mtab="map" aria-selected="false"><span aria-hidden="true">🗺️</span>Mapa</button>
-            <button type="button" class="mobile-nav-btn" data-mtab="progress" aria-selected="false"><span aria-hidden="true">🏅</span>Progreso</button>
+            <button type="button" class="mobile-nav-btn active" data-mtab="catalog" aria-current="true"><span aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg></span>Catálogo</button>
+            <button type="button" class="mobile-nav-btn" data-mtab="map"><span aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></span>Mapa</button>
+            <button type="button" class="mobile-nav-btn" data-mtab="progress"><span aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="6"/><polyline points="8.5 13.5 7 22 12 19 17 22 15.5 13.5"/></svg></span>Progreso</button>
         </nav>
     </section>
 

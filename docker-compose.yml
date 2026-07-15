@@ -3,6 +3,11 @@
 #   2. docker compose up -d --build
 #   3. Abre http://localhost:8080
 #
+# Este fichero es la base común. Compose lo combina automáticamente con docker-compose.override.yml
+# (desarrollo local: publica el puerto 8080 por HTTP). Para producción con HTTPS se usa en su lugar
+# docker-compose.prod.yml (proxy Caddy con certificado automático), ver DEPLOY.md:
+#   docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+#
 # La primera vez, MySQL importa automáticamente Database/schema.sql y Database/seed.sql (el catálogo
 # del parque piloto). Los datos persisten en el volumen db_data entre reinicios.
 services:
@@ -50,8 +55,9 @@ services:
       # La app se conecta con un usuario dedicado (no root) con privilegios solo sobre su BD.
       DB_USER: ${DB_USER:-naturdex}
       DB_PASS: ${DB_PASSWORD:?Define DB_PASSWORD en .env}
-    ports:
-      - "${WEB_PORT:-8080}:80"
+    # El puerto NO se publica aquí: en local lo publica docker-compose.override.yml (8080→80) y en
+    # producción no se publica en absoluto (solo Caddy es accesible desde fuera, ver
+    # docker-compose.prod.yml).
 
 volumes:
   db_data:

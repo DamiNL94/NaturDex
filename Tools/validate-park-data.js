@@ -142,6 +142,31 @@ function validatePark(entry) {
   images.forEach(rel => { if (!fs.existsSync(path.join(FRONTEND, rel))) missing++; });
   if (missing) warn(scope, missing + '/' + images.length + ' imágenes de manifest.images aún no existen en disco (p. ej. fotos de hábitat pendientes de subir)');
 
+  // 9) Audioguías (accesibilidad UNE-EN 301549) ---------------------------------------------------
+  // Todo audio explicativo necesita transcripción (WCAG 1.2.1) y debería figurar en manifest.audio
+  // para que "Guardar sin conexión" lo descargue. También en las rutas del trails.geojson.
+  const audioAssets = manifest.audio || [];
+  const checkAudio = (kind, id, item) => {
+    if (!item.audio) return;
+    if (!item.audioTranscript || !String(item.audioTranscript).trim())
+      err(scope, kind + ' "' + id + '" tiene audioguía sin transcripción (obligatoria por WCAG 1.2.1)');
+    const local = !/^https?:\/\//i.test(item.audio);
+    if (local && !audioAssets.includes(item.audio))
+      warn(scope, 'la audioguía de ' + kind + ' "' + id + '" no está en manifest.audio (no se guardará sin conexión)');
+    if (local && !fs.existsSync(path.join(FRONTEND, item.audio)))
+      warn(scope, 'la audioguía de ' + kind + ' "' + id + '" aún no existe en disco: ' + item.audio);
+  };
+  habitats.forEach(h => checkAudio('hábitat', h.id, h));
+  pois.forEach(p => checkAudio('POI', p.id, p));
+  const trailsRel = manifest.geo && manifest.geo.trails;
+  if (trailsRel && fs.existsSync(path.join(FRONTEND, trailsRel))) {
+    const trails = readJson(path.join(FRONTEND, trailsRel));
+    (trails.features || []).forEach((f, i) => {
+      const p = f.properties || {};
+      checkAudio('ruta', p.name || ('feature #' + i), { audio: p.audio, audioTranscript: p.audioTranscript });
+    });
+  }
+
   if (errors === 0) ok('coherencia OK: ' + habitats.length + ' hábitats, ' + species.length + ' especies, ' + pois.length + ' POIs');
 }
 

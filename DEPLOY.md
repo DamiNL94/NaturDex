@@ -15,7 +15,7 @@ interno); mantenla al día con `docker pull mysql:8.4` antes de reconstruir.
 - [Docker](https://docs.docker.com/get-docker/) con Docker Compose v2 (`docker compose`, ya incluido
   en Docker Desktop y en las versiones recientes de Docker Engine).
 
-## Puesta en marcha (local o servidor)
+## Puesta en marcha en local (HTTP)
 
 ```bash
 # 1. Configura las contraseñas
@@ -28,6 +28,10 @@ docker compose up -d --build
 # 3. Abre la app
 #    http://localhost:8080   (o el WEB_PORT que hayas puesto)
 ```
+
+> Compose combina automáticamente `docker-compose.yml` (base) con `docker-compose.override.yml`
+> (desarrollo local: publica el 8080 por HTTP). Para producción con HTTPS se usa
+> `docker-compose.prod.yml` en su lugar — ver [Producción](#producción-https-con-dominio-propio).
 
 La primera vez, MySQL importa `Database/schema.sql` (estructura) y `Database/seed.sql` (parque piloto
 Cabo Cope y su catálogo) automáticamente. Los datos quedan en el volumen `db_data` y sobreviven a
@@ -73,25 +77,77 @@ El despliegue ya incluye estas medidas:
 - **PHP endurecido:** `display_errors` off (los errores van al log, no a las respuestas),
   `expose_php` off, cookie de sesión `HttpOnly` + `SameSite=Lax` + `use_strict_mode`.
 - **Sin fugas de versión** de Apache/PHP en las cabeceras.
-- **`no-new-privileges`** en ambos contenedores.
+- **`no-new-privileges`** en todos los contenedores.
+- **CORS restringido al origen propio:** la API pública ya no manda `Access-Control-Allow-Origin: *`
+  sino el origen con el que se está viendo la app (`Backend/Lib/api_cors.php`). Otras webs no pueden
+  leer respuestas de la API desde el navegador del usuario. `admin.php` sigue sin cabeceras CORS
+  (solo mismo origen).
+- **Cookie de sesión `Secure` en producción:** con el despliegue HTTPS, la cookie solo viaja cifrada
+  (`docker/php-https.ini`, montado solo por `docker-compose.prod.yml`).
 
-Pendiente de decisión tuya (fuera del alcance de este Docker):
+## Producción: HTTPS con dominio propio
 
-- Los endpoints de la API mandan `Access-Control-Allow-Origin: *`. Los navegadores ya bloquean las
-  peticiones con credenciales (cookies) desde otros orígenes con `*`, así que la sesión no queda
-  expuesta a sitios de terceros, pero conviene restringirlo al origen propio cuando fijes el dominio.
+En producción, un proxy inverso **Caddy** se pone delante del contenedor web: obtiene y renueva solo
+el certificado de **Let's Encrypt**, redirige HTTP→HTTPS y es lo único expuesto a internet (el
+puerto 8080 de `web` deja de publicarse; la web interna solo es accesible desde Caddy). HTTPS
+desbloquea en el móvil el **GPS/modo explorador** y la **instalación como PWA** (los navegadores
+exigen contexto seguro), requisito previo para generar el APK (TWA/PWABuilder).
 
-## Producción: HTTPS y sesión
+### Qué necesitas contratar/configurar (una vez)
 
-El login usa cookies de sesión de PHP. Para un servidor público:
+1. **Un VPS** con IP pública y Docker instalado (Hetzner, DigitalOcean, OVH… los planes básicos de
+   ~4-6 €/mes sobran para esta app). Sistema recomendado: Ubuntu LTS + Docker Engine.
+2. **Un dominio** (~10-15 €/año en Namecheap, Cloudflare, OVH, DonDominio…). Vale también un
+   subdominio si ya tienes dominio.
+3. **DNS:** crea un registro `A` del dominio (o subdominio, p. ej. `naturdex.tudominio.com`)
+   apuntando a la IP pública del VPS. Comprueba que resuelve antes de arrancar
+   (`nslookup naturdex.tudominio.com`).
+4. **Puertos 80 y 443 abiertos** en el firewall del VPS (y en el panel del proveedor si tiene
+   firewall propio). El 80 hace falta aunque todo redirija a HTTPS: lo usa Let's Encrypt para
+   validar el dominio.
 
-1. Pon un proxy inverso con TLS delante (Caddy, Traefik o Nginx con Let's Encrypt) apuntando al
-   puerto de `web`. Caddy es el más simple: obtiene el certificado solo.
-2. Una vez sirvas por **HTTPS**, descomenta `session.cookie_secure = 1` en
-   [`docker/php.ini`](docker/php.ini) y reconstruye (`docker compose up -d --build`). Así la cookie
-   de sesión solo viaja cifrada.
-3. Cambia las contraseñas de `.env` por valores fuertes y no subas `.env` al repositorio
-   (ya está en `.gitignore`).
+### Arrancar en producción
+
+```bash
+# En el VPS, con el repositorio clonado:
+cp .env.example .env
+#    edita .env: contraseñas fuertes + DOMAIN=naturdex.tudominio.com
+
+docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+```
+
+Caddy pide el certificado en el primer arranque (segundos). Comprueba:
+
+```bash
+curl -I http://TU_DOMINIO     # → 308 Permanent Redirect a https://
+curl -I https://TU_DOMINIO    # → 302 a /Frontend/index.html, certificado válido
+docker compose -f docker-compose.yml -f docker-compose.prod.yml logs -f caddy   # logs del proxy
+```
+
+Los certificados persisten en el volumen `caddy_data`: reiniciar o reconstruir no vuelve a pedirlos
+(Let's Encrypt tiene límites de emisión). Para parar/actualizar, usa siempre los dos `-f` para que
+Compose no mezcle el override local.
+
+### Probar el despliegue de producción en tu PC (sin dominio)
+
+Con `DOMAIN=localhost` en `.env`, Caddy usa su **CA interna** en vez de Let's Encrypt: obtienes el
+mismo HTTPS + redirección en `https://localhost`, solo que el navegador avisará de que el
+certificado no es de confianza (acepta el aviso, o usa `curl -k`). Sirve para verificar el flujo
+completo (redirección, cookie `Secure`, login) antes de tener servidor.
+
+```bash
+DOMAIN=localhost docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+curl -kI https://localhost
+```
+
+### Sesión y contraseñas
+
+- La cookie de sesión lleva `Secure` automáticamente en este despliegue (lo monta
+  `docker-compose.prod.yml`); no hay que editar `docker/php.ini`.
+- Cambia las contraseñas de `.env` por valores fuertes y no subas `.env` al repositorio
+  (ya está en `.gitignore`).
+- Cuando el dominio sea definitivo, valora descomentar la cabecera `Strict-Transport-Security` en
+  [`docker/Caddyfile`](docker/Caddyfile).
 
 ## Notas
 
@@ -99,7 +155,9 @@ El login usa cookies de sesión de PHP. Para un servidor público:
   por ruta relativa). La raíz `/` redirige a `/Frontend/index.html`.
 - El progreso de cada usuario se guarda en la tabla `user_progress` de MySQL (no en ficheros), así
   que persiste en el volumen `db_data`.
-- El panel de administración (`/Frontend/admin.html`) requiere una cuenta con `role = 'admin'` en la
-  base de datos.
+- El panel de administración (`/Frontend/admin/`) requiere una cuenta con `role = 'admin'` en la
+  base de datos. Es una aplicación React (código fuente en `AdminPanel/`) compilada a
+  `Frontend/admin/`; el resultado compilado va en el repositorio, así que solo hay que recompilar
+  (`npm run build` dentro de `AdminPanel/`) cuando se toque su código (ver `AdminPanel/README.md`).
 - Las teselas del mapa base (OpenStreetMap / PNOA) y Leaflet se cargan desde sus CDNs: el servidor
   necesita salida a internet para que el mapa se vea (la geometría del parque sí es local).

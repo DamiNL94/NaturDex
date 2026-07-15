@@ -78,23 +78,25 @@
   }
 
   /**
-   * Guarda un parque para uso sin conexión: cachea su manifiesto y descarga las imágenes a la
-   * Cache Storage. Los JSON (datos y geo) ya se cachean solos al cargarse (capa 1).
-   * onProgress(hecho, total) opcional.
+   * Guarda un parque para uso sin conexión: cachea su manifiesto y descarga los binarios
+   * declarados en él (imágenes y audioguías) a la Cache Storage. Los JSON (datos y geo) ya se
+   * cachean solos al cargarse (capa 1). onProgress(hecho, total) opcional.
    */
   async function saveParkOffline(manifest, onProgress) {
     if (!manifest || !manifest.slug) throw new Error('manifiesto inválido');
     setJSON(key('manifest', manifest.slug), manifest);
 
-    var images = manifest.images || [];
-    var total = images.length;
+    // Las audioguías (manifest.audio) pesan como las fotos y se descargan igual: sin ellas, el
+    // modo sin conexión perdería justo el contenido pensado para escucharse en campo.
+    var assets = (manifest.images || []).concat(manifest.audio || []);
+    var total = assets.length;
     var done = 0;
     if (typeof onProgress === 'function') onProgress(done, total);
 
     if (global.caches && total) {
       var cache = await global.caches.open(NS + '-park-' + manifest.slug);
-      for (var i = 0; i < images.length; i++) {
-        try { await cache.add(images[i]); } catch (e) { /* imagen no crítica */ }
+      for (var i = 0; i < assets.length; i++) {
+        try { await cache.add(assets[i]); } catch (e) { /* activo no crítico */ }
         done++;
         if (typeof onProgress === 'function') onProgress(done, total);
       }

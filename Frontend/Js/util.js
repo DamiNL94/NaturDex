@@ -33,6 +33,40 @@ export function html(strings, ...values) {
 // Marca un fragmento como HTML de confianza (ya escapado o estático). Úsalo con cuidado.
 export function raw(value) { return new SafeHtml(String(value)); }
 
+// --- Iconos SVG inline ---------------------------------------------------------------------------
+// Sustituyen a los emoji nativos en los controles de interfaz (botones, pestañas, insignias): mismo
+// trazo (Feather/Lucide, stroke=currentColor) en toda la app, sin depender de qué emoji dibuje cada
+// sistema operativo/navegador. Los emoji de contenido (tipo de especie/hábitat/POI en util.js más
+// abajo, y los que aparecen dentro de frases) se mantienen: ahí funcionan como ilustración, no como
+// icono de interfaz.
+const ICON_PATHS = {
+  power: '<path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/>',
+  close: '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>',
+  check: '<polyline points="20 6 9 17 4 12"/>',
+  target: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>',
+  map: '<polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/>',
+  book: '<path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/>',
+  award: '<circle cx="12" cy="8" r="6"/><polyline points="8.5 13.5 7 22 12 19 17 22 15.5 13.5"/>',
+  pin: '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="2.5"/>',
+  download: '<path d="M20 15v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>',
+  save: '<path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/>',
+  trash: '<polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/>',
+  volume: '<polygon points="10 5 5 9 2 9 2 15 5 15 10 19 10 5"/><path d="M17.5 5a11 11 0 0 1 0 14M14.5 8a6.5 6.5 0 0 1 0 8"/>',
+  trophy: '<path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M7 5H4a3 3 0 0 0 3 5"/><path d="M17 5h3a3 3 0 0 1-3 5"/>',
+  lock: '<rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>'
+};
+
+/** Marcado del icono `name` como string (para innerHTML/textContent directo, fuera de html``). */
+export function iconMarkup(name, size = 18) {
+  const inner = ICON_PATHS[name];
+  if (!inner) return '';
+  return '<svg class="icon" width="' + size + '" height="' + size + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+    + 'stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">' + inner + '</svg>';
+}
+
+/** Icono `name` listo para interpolar en una plantilla html`` (no se re-escapa). */
+export function icon(name, size = 18) { return raw(iconMarkup(name, size)); }
+
 // --- Texto --------------------------------------------------------------------------------------
 export function normalize(value) {
   return String(value ?? '').toLocaleLowerCase('es-ES');

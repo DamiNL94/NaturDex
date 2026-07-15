@@ -1,0 +1,3 @@
+# Las copias de seguridad de la BD son locales; no se versionan (pueden contener datos personales).
+*
+!.gitignore
