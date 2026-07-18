@@ -1,0 +1,5 @@
+# Salidas generadas por build-habitats.js / merge-habitats.js: se regeneran desde la fuente
+# oficial del MITECO, no se versionan. Lo que sí se versiona es el habitats.geojson del parque
+# (en Frontend/Data/parks/...), una vez revisada y adoptada la fusión.
+*
+!.gitignore
