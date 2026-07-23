@@ -42,11 +42,25 @@ CREATE TABLE IF NOT EXISTS habitats (
     latitude DECIMAL(10,6),
     longitude DECIMAL(10,6),
     color VARCHAR(20),
+    -- Geometría del área del hábitat en formato GeoJSON (objeto Polygon o MultiPolygon, coords
+    -- lon/lat en CRS84). Es la fuente de verdad del polígono dibujado en el mapa: el panel la edita
+    -- y el export regenera el habitats.geojson a partir de aquí. NULL = sin polígono todavía (la app
+    -- dibuja un círculo aproximado en latitude/longitude).
+    geometry JSON,
     review_note TEXT,
+    -- Catálogo de hábitats (Directiva 92/43/CEE). `code` es el código HIC de referencia del hábitat;
+    -- `hic_subtipos` es la lista de subtipos HIC concretos presentes (p. ej. 5330→["5334"]) y
+    -- `fitosociologia` la lista de asociaciones fitosociológicas oficiales (Cartografía de Hábitats
+    -- MITECO/BDN + planes de gestión). JSON (array de strings) para migrar limpio a jsonb en Postgres.
+    hic_subtipos JSON,
+    fitosociologia JSON,
     -- Audioguía explicativa del hábitat: URL/ruta del fichero de audio y su transcripción
     -- (alternativa textual obligatoria por accesibilidad, WCAG 1.2.1).
     audio_url VARCHAR(500),
     audio_transcript TEXT,
+    -- Foto del hábitat: URL externa (p. ej. Wikimedia Commons) o ruta local. Si es NULL, el export
+    -- cae en la convención de archivo local Img/habitats/<slug>.jpg.
+    image_url VARCHAR(500),
     FOREIGN KEY (park_id) REFERENCES parks(id) ON DELETE CASCADE,
     UNIQUE KEY unique_habitat_per_park (park_id, code),
     UNIQUE KEY unique_habitat_slug_per_park (park_id, slug)
@@ -65,6 +79,9 @@ CREATE TABLE IF NOT EXISTS species (
     identification_tips TEXT,
     seasonality VARCHAR(160),
     image_url VARCHAR(500),
+    -- Atribución de la foto (autor + licencia + fuente), obligatoria para cumplir CC-BY/CC-BY-SA/
+    -- CC-BY-NC cuando la imagen procede de GBIF/iNaturalist/Wikimedia. NULL si la foto es propia.
+    image_attribution VARCHAR(300),
     latitude DECIMAL(10,6),
     longitude DECIMAL(10,6),
     rarity_score TINYINT UNSIGNED DEFAULT 1,
@@ -82,12 +99,25 @@ CREATE TABLE IF NOT EXISTS species (
     spain_status TEXT,
     murcia_status TEXT,
     review_note TEXT,
+    -- Claves maestras de reconciliación taxonómica (las 3 fuentes reclasifican y usan nomenclaturas
+    -- distintas). EIDOS (IEPNB) es la nomenclatura CANÓNICA: `eidos_taxonid` es su clave estable; el
+    -- `gbif_species_key` (BIGINT: los usageKey de GBIF exceden INT) liga las ocurrencias de GBIF. No
+    -- son UNIQUE: a escala nacional la misma especie se repite por parque (una fila por parque).
+    eidos_taxonid INT,
+    gbif_species_key BIGINT,
+    -- Aves de la Red Natura 2000: código del espacio ZEPA (Zona de Especial Protección para las Aves,
+    -- p. ej. 'ES0000261') en cuya lista oficial de especies (EEA/BISE) figura esta ave. NULL = no es un
+    -- ave de la ZEPA. Las aves no se asignan a hábitats concretos (vuelan): la app las muestra en un
+    -- apartado propio de parque, no en el catálogo de hábitats.
+    zepa_site_code VARCHAR(20),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (park_id) REFERENCES parks(id) ON DELETE CASCADE,
     UNIQUE KEY unique_species_per_park (park_id, scientific_name),
     INDEX idx_species_park_kingdom (park_id, kingdom),
-    INDEX idx_species_scientific_name (scientific_name)
+    INDEX idx_species_scientific_name (scientific_name),
+    INDEX idx_species_eidos_taxonid (eidos_taxonid),
+    INDEX idx_species_gbif_key (gbif_species_key)
 );
 
 -- Relación muchos-a-muchos: una especie puede clasificarse en varios hábitats
@@ -95,6 +125,14 @@ CREATE TABLE IF NOT EXISTS species (
 CREATE TABLE IF NOT EXISTS species_habitats (
     species_id INT NOT NULL,
     habitat_id INT NOT NULL,
+    -- Procedencia del vínculo especie↔hábitat (ningún dato oficial dice "la especie X vive en el
+    -- polígono Y": el enlace SIEMPRE es derivado, y aquí se guarda de dónde sale). Valores:
+    -- 'caracteristica' (especie característica de la asociación fitosociológica del HIC),
+    -- 'observada_gbif' (ocurrencia GBIF dentro del polígono) o 'zepa' (lista oficial Natura 2000).
+    -- VARCHAR (no ENUM/SET) para migrar limpio a Postgres. `gbif_occurrences` = métrica de la
+    -- evidencia empírica (nº de ocurrencias GBIF en el polígono) cuando evidence='observada_gbif'.
+    evidence VARCHAR(40),
+    gbif_occurrences INT,
     PRIMARY KEY (species_id, habitat_id),
     FOREIGN KEY (species_id) REFERENCES species(id) ON DELETE CASCADE,
     FOREIGN KEY (habitat_id) REFERENCES habitats(id) ON DELETE CASCADE
@@ -158,4 +196,58 @@ CREATE TABLE IF NOT EXISTS user_progress (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
     UNIQUE KEY unique_user_park (user_id, park_slug)
+);
+
+-- Glosario divulgativo (NACIONAL, no por parque). Términos del léxico científico que aparecen en las
+-- descripciones (hábitats, especies) con su definición en lenguaje llano; el frontend los resalta y
+-- muestra la definición al pulsarlos. Es contenido editorial (no derivado de una fuente oficial de
+-- especies), por eso vive en su propia tabla global y no lleva park_id.
+-- Especies exóticas INVASORAS (NACIONAL, por comunidad autónoma). Catálogo oficial: Catálogo Español
+-- de Especies Exóticas Invasoras (RD 630/2013). No son especies del parque: la app las muestra en un
+-- apartado propio, por territorio (la CCAA del parque), para que el visitante sepa reconocerlas.
+-- Una fila por (especie, CCAA); a escala nacional una misma especie tendrá varias filas (una por CCAA
+-- donde está registrada). `gbif_occurrences` (nº de ocurrencias GBIF en la CCAA) ordena las "más comunes".
+CREATE TABLE IF NOT EXISTS especies_invasoras (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    scientific_name VARCHAR(255) NOT NULL,
+    common_name VARCHAR(255),
+    -- Grupo taxonómico de EIDOS (Aves, Plantas vasculares, Mamíferos, Invertebrados...).
+    taxon_group VARCHAR(80),
+    kingdom ENUM('flora','fauna','fungi','other') NOT NULL DEFAULT 'other',
+    -- Comunidad autónoma donde está registrada (coincide con parks.region para filtrar por parque).
+    ccaa VARCHAR(120) NOT NULL,
+    -- Descripción para reconocerla, origen (distribución nativa) y hábitat: texto oficial de EIDOS
+    -- (IEPNB, v_atributos_pliniancore).
+    description TEXT,
+    origin TEXT,
+    habitat TEXT,
+    catalogo VARCHAR(120),
+    eidos_taxonid INT,
+    gbif_species_key BIGINT,
+    gbif_occurrences INT,
+    -- Foto para reconocerla + su atribución (GBIF/iNaturalist, licencia Creative Commons).
+    image_url VARCHAR(500),
+    image_attribution VARCHAR(300),
+    source TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    UNIQUE KEY unique_invasora_ccaa (scientific_name, ccaa),
+    INDEX idx_invasora_ccaa (ccaa)
+);
+
+CREATE TABLE IF NOT EXISTS glosario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    -- Término canónico (el que se muestra como título de la definición).
+    term VARCHAR(80) NOT NULL UNIQUE,
+    -- Definición en lenguaje común, para un ciudadano sin formación científica.
+    definition TEXT NOT NULL,
+    -- Familia del término (botánica, geología, ecología, conservación...) para agrupar/filtrar.
+    category VARCHAR(60),
+    -- Variantes que también deben resaltarse en el texto (género/número: "casmofítico",
+    -- "casmofítica", "casmofíticas"...). JSON (array de strings) para migrar limpio a jsonb.
+    aliases JSON,
+    -- Fuente o adaptación de la definición, si procede (glosarios oficiales, Atlas de Hábitats...).
+    source VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );

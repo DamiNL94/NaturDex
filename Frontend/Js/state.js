@@ -27,6 +27,8 @@ export const state = {
   habitatFocus: null,
   detailMode: 'habitat',
   selectedHabitatId: null,
+  // Nombre científico de la invasora cuya ficha se muestra en el panel de detalle (detailMode='invasora').
+  selectedInvasora: null,
   markers: new Map(),
   poiMarkers: new Map(),
   habitatLayers: new Map(),
@@ -70,6 +72,25 @@ export function getFilteredHabitats() {
   });
 }
 
+// --- Selectores: identidad de especie (progreso compartido entre hábitats) ------------------------
+// Una misma especie puede vivir en varios hábitats del parque. Ya sea modelada como una sola ficha
+// con varios hábitats (relación N:M) o como fichas separadas por hábitat, el nombre científico es su
+// identidad real: marcarla vista debe reflejarse en TODAS sus apariciones dentro del parque. La clave
+// de agrupación es el nombre científico normalizado (misma normalización que el buscador).
+export function speciesGroupKey(species) {
+  return species ? normalize(species.scientificName || '') : '';
+}
+
+// Ids de todas las especies del parque que representan la MISMA especie que la dada (incluida ella).
+// Si no tiene nombre científico, se agrupa solo consigo misma (no se funde con otras sin nombre).
+export function relatedSpeciesIds(speciesId) {
+  const all = (state.data && state.data.species) || [];
+  const target = all.find(s => s.id === speciesId);
+  const key = speciesGroupKey(target);
+  if (!target || !key) return [speciesId];
+  return all.filter(s => speciesGroupKey(s) === key).map(s => s.id);
+}
+
 // --- Selectores: hábitats y progreso --------------------------------------------------------------
 export function habitatSpeciesSeenCount(habitat) {
   return (habitat.speciesIds || []).filter(id => state.seenSpecies.has(id)).length;
@@ -101,9 +122,17 @@ export function computeProgress() {
   const poisTotal = pois.length;
   const poisSeen = pois.filter(p => state.seenPois.has(p.id)).length;
   const habitatsComplete = habitatProgress.length > 0 && habitatProgress.every(h => h.complete);
+  const habitatsCompleteCount = habitatProgress.filter(h => h.complete).length;
   const poisComplete = poisTotal > 0 && poisSeen === poisTotal;
   const parkComplete = habitatsComplete && poisComplete;
-  return { speciesTotal, speciesSeen, habitatProgress, poisTotal, poisSeen, parkComplete };
+  // Colección de aves de la ZEPA (Red Natura 2000): logro propio, ya que no cuelgan de hábitats.
+  const zepaSpecies = species.filter(s => s.zepaSiteCode);
+  const zepaTotal = zepaSpecies.length;
+  const zepaSeen = zepaSpecies.filter(s => state.seenSpecies.has(s.id)).length;
+  return {
+    speciesTotal, speciesSeen, habitatProgress, habitatsCompleteCount, poisTotal, poisSeen,
+    poisComplete, zepaTotal, zepaSeen, parkComplete
+  };
 }
 
 // --- Selectores: mapa -----------------------------------------------------------------------------

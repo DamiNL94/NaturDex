@@ -51,4 +51,3 @@ echo json_encode([
     "parks" => $parks,
     "communities" => $communities
 ], JSON_UNESCAPED_UNICODE);
-?>

@@ -1,5 +1,8 @@
 # Despliegue de NaturDex con Docker
 
+> ¿Solo quieres un enlace gratis para enseñar la demo (sin backend, sin VPS)? Ver
+> `Docs/DESPLIEGUE_ESTATICO.md`. Esta guía es para el despliegue completo (frontend + API + MySQL).
+
 Despliegue sencillo y portable: un contenedor **web** (Apache + PHP 8.2 sobre **Alpine**) que sirve
 el frontend y la API, y un contenedor **db** (MySQL 8) que se autoimporta el catálogo la primera
 vez. Funciona igual en tu PC y en cualquier VPS (Hetzner, DigitalOcean, etc.).

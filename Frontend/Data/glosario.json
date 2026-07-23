@@ -1,0 +1,850 @@
+[
+    {
+        "term": "albardinal",
+        "definition": "Formación vegetal dominada por el albardín, una hierba robusta propia de estepas y saladares del sureste español.",
+        "category": "botánica",
+        "aliases": [
+            "albardín"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "alóctono",
+        "definition": "Traído de otra región por el ser humano; no es natural del lugar donde ahora aparece.",
+        "category": "biogeografía",
+        "aliases": [
+            "alóctona",
+            "alóctonos",
+            "alóctonas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "antrópico",
+        "definition": "Causado o influido por la actividad humana.",
+        "category": "ecología",
+        "aliases": [
+            "antrópica",
+            "antrópicos",
+            "antrópicas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "anual",
+        "definition": "Planta que completa su ciclo de vida en un año y pasa la estación desfavorable en forma de semilla.",
+        "category": "botánica",
+        "aliases": [
+            "anuales",
+            "terófito",
+            "terófitos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "aquenio",
+        "definition": "Fruto seco que no se abre y contiene una sola semilla, como la 'pipa' del girasol.",
+        "category": "botánica",
+        "aliases": [
+            "aquenios"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "azufaifar",
+        "definition": "Matorral dominado por el azufaifo (arto), arbusto espinoso típico de zonas áridas del litoral mediterráneo.",
+        "category": "botánica",
+        "aliases": [
+            "azufaifo",
+            "arto"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "baya",
+        "definition": "Fruto carnoso con varias semillas en su interior, como el tomate o la uva.",
+        "category": "botánica",
+        "aliases": [
+            "bayas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "bienal",
+        "definition": "Planta que vive dos años: el primero crece y el segundo florece y muere.",
+        "category": "botánica",
+        "aliases": [
+            "bienales"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "biogeografía",
+        "definition": "Estudio de cómo se distribuyen los seres vivos por el planeta y de las causas de esa distribución.",
+        "category": "ciencia",
+        "aliases": [
+            "biogeográfico",
+            "biogeográfica"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "bráctea",
+        "definition": "Hoja modificada, a veces coloreada, situada junto a las flores.",
+        "category": "botánica",
+        "aliases": [
+            "brácteas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "bulbo",
+        "definition": "Tallo subterráneo engrosado que almacena reservas, como el de la cebolla.",
+        "category": "botánica",
+        "aliases": [
+            "bulbos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "caducifolio",
+        "definition": "Que pierde las hojas en la estación desfavorable (otoño-invierno).",
+        "category": "botánica",
+        "aliases": [
+            "caducifolia",
+            "caducifolios"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "cáliz",
+        "definition": "Envoltura externa de la flor, formada por los sépalos (normalmente verdes).",
+        "category": "botánica",
+        "aliases": [
+            "cálices"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "capítulo",
+        "definition": "Inflorescencia con muchas flores pequeñas apretadas en una cabezuela, como en la margarita o el cardo.",
+        "category": "botánica",
+        "aliases": [
+            "capítulos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "cápsula",
+        "definition": "Fruto seco que se abre al madurar para soltar las semillas.",
+        "category": "botánica",
+        "aliases": [
+            "cápsulas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "Casi Amenazado (NT)",
+        "definition": "Categoría UICN. No está amenazada ahora mismo, pero está cerca de estarlo y podría pasar pronto a una categoría de amenaza.",
+        "category": "conservación (UICN)",
+        "aliases": [
+            "NT",
+            "Casi amenazado",
+            "Casi amenazada"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "casmofítico",
+        "definition": "Que vive en las grietas y fisuras de las rocas, donde arraiga la vegetación.",
+        "category": "ecología",
+        "aliases": [
+            "casmofítica",
+            "casmofíticos",
+            "casmofíticas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "CEEA",
+        "definition": "Catálogo Español de Especies Amenazadas: lista legal de las especies protegidas en España por estar en peligro, con dos categorías: En peligro de extinción y Vulnerable.",
+        "category": "conservación",
+        "aliases": [
+            "Catálogo Español de Especies Amenazadas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "coriáceo",
+        "definition": "De consistencia dura y resistente, parecida al cuero.",
+        "category": "botánica",
+        "aliases": [
+            "coriácea",
+            "coriáceos",
+            "coriáceas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "corola",
+        "definition": "Conjunto de los pétalos de la flor, a menudo la parte más vistosa y coloreada.",
+        "category": "botánica",
+        "aliases": [
+            "corolas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "Datos Insuficientes (DD)",
+        "definition": "Categoría UICN. No hay información suficiente para evaluar su riesgo de extinción; no significa que esté a salvo.",
+        "category": "conservación (UICN)",
+        "aliases": [
+            "DD",
+            "Datos insuficientes"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "dehiscente",
+        "definition": "(Fruto) que se abre por sí solo al madurar para liberar las semillas.",
+        "category": "botánica",
+        "aliases": [
+            "dehiscentes",
+            "dehiscencia"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "drupa",
+        "definition": "Fruto carnoso con un hueso duro dentro, como la aceituna o la almendra.",
+        "category": "botánica",
+        "aliases": [
+            "drupas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "En Peligro (EN)",
+        "definition": "Categoría UICN. Riesgo muy alto de extinción en estado silvestre; la especie está claramente amenazada.",
+        "category": "conservación (UICN)",
+        "aliases": [
+            "EN",
+            "En Peligro"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "En Peligro Crítico (CR)",
+        "definition": "Categoría UICN. Riesgo extremadamente alto de extinción en estado silvestre: la categoría de amenaza más grave antes de la extinción.",
+        "category": "conservación (UICN)",
+        "aliases": [
+            "CR"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "endemismo",
+        "definition": "Especie que solo vive de forma natural en un territorio concreto y en ningún otro lugar del mundo.",
+        "category": "biogeografía",
+        "aliases": [
+            "endémico",
+            "endémica",
+            "endémicos",
+            "endémicas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "esclerófilo",
+        "definition": "De hojas duras, gruesas y perennes, adaptadas a resistir la sequía; muy típico de la vegetación mediterránea.",
+        "category": "botánica",
+        "aliases": [
+            "esclerófila",
+            "esclerófilos",
+            "esclerófilas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "espartal",
+        "definition": "Pradera de esparto, hierba de hojas duras que forma extensas manchas en el sureste árido; se usó para cordelería.",
+        "category": "botánica",
+        "aliases": [
+            "esparto",
+            "atochar"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "espiga",
+        "definition": "Inflorescencia alargada con flores pegadas, sin rabillo, a lo largo de un eje.",
+        "category": "botánica",
+        "aliases": [
+            "espigas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "espinescente",
+        "definition": "Que termina en espina o está armado de espinas.",
+        "category": "botánica",
+        "aliases": [
+            "espinescentes",
+            "espinoso",
+            "espinosa"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "Extinto (EX)",
+        "definition": "Categoría de la Lista Roja de la UICN. No queda ningún individuo vivo de la especie: se ha extinguido por completo.",
+        "category": "conservación (UICN)",
+        "aliases": [
+            "EX",
+            "Extinto",
+            "Extinta"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "Extinto a nivel regional (RE)",
+        "definition": "Categoría UICN de ámbito regional. La especie ha desaparecido de una región concreta, aunque sobreviva en otras zonas.",
+        "category": "conservación (UICN)",
+        "aliases": [
+            "RE"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "Extinto en estado silvestre (EW)",
+        "definition": "Categoría UICN. Solo sobrevive en cultivo, cautividad o en poblaciones fuera de su área natural; ya no vive libre en la naturaleza.",
+        "category": "conservación (UICN)",
+        "aliases": [
+            "EW"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "fitosociología",
+        "definition": "Disciplina que clasifica la vegetación en comunidades de especies que suelen aparecer juntas; a cada comunidad se le asigna un nombre científico.",
+        "category": "botánica",
+        "aliases": [
+            "fitosociológica",
+            "fitosociológico",
+            "asociación fitosociológica"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "foliolo",
+        "definition": "Cada una de las piezas en que se divide una hoja compuesta.",
+        "category": "botánica",
+        "aliases": [
+            "foliolos",
+            "folíolo",
+            "folíolos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "freatófito",
+        "definition": "Planta con raíces largas capaces de alcanzar el agua subterránea del subsuelo.",
+        "category": "botánica",
+        "aliases": [
+            "freatófita",
+            "freatófitos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "garriga",
+        "definition": "Matorral mediterráneo bajo y denso sobre suelos calizos, con plantas aromáticas y espinosas.",
+        "category": "botánica",
+        "aliases": [
+            "garrigas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "gipsícola",
+        "definition": "Que crece sobre suelos de yeso, a los que la mayoría de plantas no logra adaptarse.",
+        "category": "ecología",
+        "aliases": [
+            "gipsícolas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "glabro",
+        "definition": "Sin pelos, de superficie lisa.",
+        "category": "botánica",
+        "aliases": [
+            "glabra",
+            "glabros",
+            "glabras"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "glauco",
+        "definition": "De color verde azulado, a menudo por una fina capa cerosa.",
+        "category": "botánica",
+        "aliases": [
+            "glauca",
+            "glaucos",
+            "glaucas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "hábitat de interés comunitario",
+        "definition": "Tipo de hábitat que la Unión Europea considera valioso y protege mediante la Directiva Hábitats (92\/43\/CEE).",
+        "category": "conservación",
+        "aliases": [
+            "HIC",
+            "hábitats de interés comunitario"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "hábitat prioritario",
+        "definition": "Hábitat de interés comunitario en peligro de desaparición, al que la UE otorga máxima prioridad de conservación (Anexo I de la Directiva Hábitats).",
+        "category": "conservación",
+        "aliases": [
+            "prioritario",
+            "prioritarios"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "halófilo",
+        "definition": "Que tolera o necesita suelos con mucha sal, como los de marismas y saladares del litoral.",
+        "category": "ecología",
+        "aliases": [
+            "halófila",
+            "halófilos",
+            "halófilas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "halonitrófilo",
+        "definition": "Propio de suelos a la vez salinos y ricos en nitrógeno, frecuentes donde se acumulan restos orgánicos cerca del mar.",
+        "category": "ecología",
+        "aliases": [
+            "halonitrófila",
+            "halonitrófilos",
+            "halonitrófilas",
+            "halo-nitrófilo"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "herbáceo",
+        "definition": "Planta de tallos blandos y verdes, no leñosos.",
+        "category": "botánica",
+        "aliases": [
+            "herbácea",
+            "herbáceos",
+            "herbáceas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "inflorescencia",
+        "definition": "Conjunto de flores agrupadas en una misma estructura (espiga, umbela, racimo...).",
+        "category": "botánica",
+        "aliases": [
+            "inflorescencias"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "lanceolado",
+        "definition": "(Hoja) estrecha y puntiaguda, con forma de punta de lanza.",
+        "category": "botánica",
+        "aliases": [
+            "lanceolada",
+            "lanceolados",
+            "lanceoladas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "legumbre",
+        "definition": "Fruto seco alargado que se abre por dos costuras, propio de las leguminosas.",
+        "category": "botánica",
+        "aliases": [
+            "legumbres"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "LESRPE",
+        "definition": "Listado de Especies Silvestres en Régimen de Protección Especial: catálogo español de especies protegidas por ley.",
+        "category": "conservación",
+        "aliases": [],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "Libro Rojo",
+        "definition": "Obra que evalúa y publica el grado de amenaza de las especies de un territorio, siguiendo los criterios de la UICN.",
+        "category": "conservación",
+        "aliases": [],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "LIC",
+        "definition": "Lugar de Importancia Comunitaria (LIC) y Zona Especial de Conservación (ZEC): espacios de la Red Natura 2000 protegidos por la UE.",
+        "category": "conservación",
+        "aliases": [
+            "ZEC"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "lineal",
+        "definition": "(Hoja) muy estrecha y alargada, de lados casi paralelos.",
+        "category": "botánica",
+        "aliases": [
+            "linear",
+            "lineales"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "litoral",
+        "definition": "De la costa o de la franja de tierra y mar cercana a ella.",
+        "category": "geografía",
+        "aliases": [
+            "litorales"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "nitrófilo",
+        "definition": "Que crece bien en suelos ricos en nitrógeno, como los alterados por el ganado o la actividad humana.",
+        "category": "ecología",
+        "aliases": [
+            "nitrófila",
+            "nitrófilos",
+            "nitrófilas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "No Evaluada (NE)",
+        "definition": "Categoría UICN. Todavía no se ha analizado con los criterios de la Lista Roja.",
+        "category": "conservación (UICN)",
+        "aliases": [
+            "NE",
+            "No evaluada"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "palmeado",
+        "definition": "(Hoja) dividida en lóbulos que salen de un mismo punto, como los dedos de una mano.",
+        "category": "botánica",
+        "aliases": [
+            "palmeada",
+            "palmeados",
+            "palmeadas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "peciolo",
+        "definition": "El rabillo que une la hoja al tallo.",
+        "category": "botánica",
+        "aliases": [
+            "peciolos",
+            "pecíolo",
+            "pecíolos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "perenne",
+        "definition": "Planta que vive varios años, en lugar de morir tras florecer una sola temporada.",
+        "category": "botánica",
+        "aliases": [
+            "perennes",
+            "vivaz",
+            "vivaces"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "perennifolio",
+        "definition": "Que mantiene las hojas verdes durante todo el año.",
+        "category": "botánica",
+        "aliases": [
+            "perennifolia",
+            "perennifolios"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "pétalo",
+        "definition": "Cada una de las piezas, a menudo coloreadas, que forman la corola de la flor.",
+        "category": "botánica",
+        "aliases": [
+            "pétalos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "pinnado",
+        "definition": "(Hoja) dividida en foliolos dispuestos a ambos lados del nervio, como una pluma.",
+        "category": "botánica",
+        "aliases": [
+            "pinnada",
+            "pinnados",
+            "pinnadas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "Preocupación Menor (LC)",
+        "definition": "Categoría UICN. Especie abundante y extendida, con bajo riesgo de extinción; es la categoría más favorable.",
+        "category": "conservación (UICN)",
+        "aliases": [
+            "LC",
+            "Preocupación menor"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "psamófilo",
+        "definition": "Adaptado a vivir sobre la arena móvil de las dunas.",
+        "category": "ecología",
+        "aliases": [
+            "psamófila",
+            "psamófilos",
+            "psamófilas",
+            "dunar"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "pubescente",
+        "definition": "Cubierto de pelillos finos y suaves.",
+        "category": "botánica",
+        "aliases": [
+            "pubescentes"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "racimo",
+        "definition": "Inflorescencia alargada con flores unidas al eje por un rabillo, como en la uva.",
+        "category": "botánica",
+        "aliases": [
+            "racimos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "Red Natura 2000",
+        "definition": "Red europea de espacios naturales protegidos para conservar los hábitats y especies más valiosos del continente.",
+        "category": "conservación",
+        "aliases": [
+            "Natura 2000"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "relicto",
+        "definition": "Superviviente de una flora o fauna antigua, hoy reducida a pequeñas zonas aisladas.",
+        "category": "biogeografía",
+        "aliases": [
+            "relíctico",
+            "relíctica",
+            "relictos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "rizoma",
+        "definition": "Tallo subterráneo horizontal del que brotan raíces y nuevos tallos.",
+        "category": "botánica",
+        "aliases": [
+            "rizomas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "roseta",
+        "definition": "Hojas dispuestas muy juntas y en círculo a ras del suelo.",
+        "category": "botánica",
+        "aliases": [
+            "rosetas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "ruderal",
+        "definition": "Propia de terrenos alterados por el ser humano: bordes de caminos, escombreras o cultivos abandonados.",
+        "category": "ecología",
+        "aliases": [
+            "ruderales"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "rupícola",
+        "definition": "Que vive sobre las rocas y los roquedos.",
+        "category": "ecología",
+        "aliases": [
+            "rupícolas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "sabinar",
+        "definition": "Bosque o matorral dominado por sabinas y enebros (género Juniperus), muy resistentes a la sequía.",
+        "category": "botánica",
+        "aliases": [
+            "sabina",
+            "enebro"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "saladar",
+        "definition": "Terreno llano y encharcadizo con suelo muy salino, típico de marismas y depresiones litorales.",
+        "category": "ecología",
+        "aliases": [
+            "saladares"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "semiárido",
+        "definition": "Clima con lluvias muy escasas e irregulares, en el límite de lo árido; característico del sureste peninsular.",
+        "category": "clima",
+        "aliases": [
+            "semiárida"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "sépalo",
+        "definition": "Cada una de las piezas, normalmente verdes, que protegen la flor cuando está cerrada.",
+        "category": "botánica",
+        "aliases": [
+            "sépalos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "sésil",
+        "definition": "Que carece de rabillo y se une directamente al tallo (hoja o flor).",
+        "category": "botánica",
+        "aliases": [
+            "sésiles"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "suculento",
+        "definition": "De hojas o tallos gruesos y carnosos que almacenan agua, como en los cactus.",
+        "category": "botánica",
+        "aliases": [
+            "suculenta",
+            "suculentos",
+            "suculentas",
+            "craso",
+            "crasa"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "termomediterráneo",
+        "definition": "Del piso más cálido del clima mediterráneo, cerca de la costa y prácticamente sin heladas.",
+        "category": "biogeografía",
+        "aliases": [
+            "termomediterránea"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "tomentoso",
+        "definition": "Cubierto de pelillos cortos y densos, con aspecto afieltrado.",
+        "category": "botánica",
+        "aliases": [
+            "tomentosa",
+            "tomentosos",
+            "tomentosas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "tomillar",
+        "definition": "Matorral bajo dominado por tomillos y otras plantas leñosas aromáticas.",
+        "category": "botánica",
+        "aliases": [
+            "tomillares"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "tubérculo",
+        "definition": "Engrosamiento subterráneo del tallo que almacena reservas, como la patata.",
+        "category": "botánica",
+        "aliases": [
+            "tubérculos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "UICN",
+        "definition": "Unión Internacional para la Conservación de la Naturaleza; publica la Lista Roja, que clasifica el riesgo de extinción de cada especie en categorías (de LC, preocupación menor, a EX, extinta).",
+        "category": "conservación",
+        "aliases": [
+            "IUCN",
+            "Lista Roja"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "umbela",
+        "definition": "Inflorescencia en la que los rabillos de las flores salen todos de un mismo punto y quedan a la misma altura, como las varillas de un paraguas.",
+        "category": "botánica",
+        "aliases": [
+            "umbelas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "Vulnerable (VU)",
+        "definition": "Categoría UICN. Riesgo alto de extinción en estado silvestre: amenazada, aunque menos que En Peligro.",
+        "category": "conservación (UICN)",
+        "aliases": [
+            "VU",
+            "Vulnerable"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "xerófilo",
+        "definition": "Adaptado a vivir con muy poca agua, propio de ambientes secos.",
+        "category": "ecología",
+        "aliases": [
+            "xerófila",
+            "xerófilos",
+            "xerófilas",
+            "xerófito",
+            "xerófita"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "ZEPA",
+        "definition": "Zona de Especial Protección para las Aves: espacio protegido por la UE por su importancia para las aves.",
+        "category": "conservación",
+        "aliases": [],
+        "source": "NaturDex (divulgacion)"
+    }
+]

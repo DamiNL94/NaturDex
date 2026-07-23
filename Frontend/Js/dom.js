@@ -31,8 +31,10 @@ export const progressLabel = document.querySelector('#progressLabel');
 
 // Pestaña de progreso y panel de detalle
 export const progressPanel = document.querySelector('#progressPanel');
+export const invasorasPanel = document.querySelector('#invasorasPanel');
 export const detailPanel = document.querySelector('#detailPanel');
 export const sheetClose = document.querySelector('#sheetClose'); // cierre de la bottom-sheet (móvil)
+export const sheetScrim = document.querySelector('#sheetScrim'); // velo tras la bottom-sheet (móvil)
 
 // Modo explorador ("cerca de ti")
 export const explorerToggle = document.querySelector('#explorerToggle');

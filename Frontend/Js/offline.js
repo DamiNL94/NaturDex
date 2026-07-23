@@ -121,10 +121,34 @@
   }
 
   // --- Service Worker (mejora progresiva, capa 3) ----------------------------------------------
+  // Se registra una sola vez aunque se llame desde varios sitios (auth.js y app.js lo invocan).
+  var swRegistered = false;
   function registerServiceWorker() {
     if (!('serviceWorker' in global.navigator)) return Promise.resolve(null);
-    return global.navigator.serviceWorker.register('sw.js')
-      .then(function (reg) { console.info('NaturDexOffline: Service Worker registrado'); return reg; })
+    if (swRegistered) return Promise.resolve(null);
+    swRegistered = true;
+    var swc = global.navigator.serviceWorker;
+
+    // Cuando ENTRA en control una versión NUEVA del SW (tras skipWaiting + clients.claim en sw.js),
+    // se recarga una vez para servir el armazón fresco. Clave en el móvil: sin esto la página seguía
+    // corriendo el HTML/JS ya cargado hasta que el usuario cerraba y reabría. En la PRIMERA
+    // instalación no había controlador previo, así que no se recarga (la carga ya fue de red).
+    var hadController = !!swc.controller;
+    var reloaded = false;
+    swc.addEventListener('controllerchange', function () {
+      if (reloaded || !hadController) return;
+      reloaded = true;
+      global.location.reload();
+    });
+
+    // updateViaCache:'none' evita que el navegador sirva el propio sw.js desde su caché HTTP: sin
+    // esto, un móvil podía no detectar nunca la versión nueva del Service Worker.
+    return swc.register('sw.js', { updateViaCache: 'none' })
+      .then(function (reg) {
+        console.info('NaturDexOffline: Service Worker registrado');
+        try { reg.update(); } catch (e) {} // fuerza comprobación de actualización al arrancar
+        return reg;
+      })
       .catch(function (e) { console.info('NaturDexOffline: Service Worker no disponible', e); return null; });
   }
 

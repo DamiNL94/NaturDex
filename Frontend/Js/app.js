@@ -14,28 +14,30 @@
 
 import {
   DEFAULT_PARK_SLUG, PARK_INDEX_PATH,
-  state, computeProgress, speciesLatLng
+  state, computeProgress, speciesLatLng, relatedSpeciesIds
 } from './state.js';
-import { iconMarkup } from './util.js';
+import { iconMarkup, geoUnavailableReason } from './util.js';
 import {
   resolveActivePark, loadManifest, loadData, loadGeo,
   loadProgress, persistProgress
 } from './data.js';
 import {
   speciesList, searchInput, catalogControls, catalogPanel,
-  backToHabitatsBtn, catalogCrumbLabel, parkTitle, progressPanel, detailPanel, sheetClose,
+  backToHabitatsBtn, catalogCrumbLabel, parkTitle, progressPanel, invasorasPanel, detailPanel, sheetClose, sheetScrim,
   saveOfflineBtn, connStatus, layersToggle, layersPanel
 } from './dom.js';
 import {
   renderHabitatCatalog, renderSpeciesList, renderCatalogBody,
-  renderSummary, renderProgress, renderDetail, renderProgressTab
+  renderSummary, renderProgress, renderDetail, renderProgressTab, renderInvasoras
 } from './render.js';
 import {
-  map, setMapHandlers, ensureMapSized,
+  map, setMapHandlers, ensureMapSized, soloHabitat,
   renderMarkers, renderPoiMarkers, renderTrails, renderProtectedAreas, renderHabitatZones
 } from './map.js';
 import { initExplorer } from './explorer.js';
 import { initLayersPanel, refreshLayersPanel } from './layers.js';
+import { loadGlossary, initGlossaryPopover } from './glossary.js';
+import { initTutorial } from './tutorial.js';
 
 // --- Navegación del catálogo ----------------------------------------------------------------------
 function enterHabitat(habitatId) {
@@ -49,11 +51,37 @@ function enterHabitat(habitatId) {
   renderCatalogBody();
 }
 
-// Muestra la etiqueta (ficha) de un hábitat en el panel de detalle de la derecha.
+// Pestaña de invasoras: lista a la izquierda + ficha en el panel de detalle de la derecha (como especies).
+function invasorasList() {
+  const region = state.data.park && state.data.park.region;
+  return (state.data.invasoras || []).filter(i => !region || i.ccaa === region);
+}
+function showInvasoras() {
+  const list = invasorasList();
+  if (!list.some(i => i.scientificName === state.selectedInvasora)) {
+    state.selectedInvasora = list.length ? list[0].scientificName : null;
+  }
+  state.detailMode = 'invasora';
+  renderInvasoras();
+  renderDetail(); // muestra la ficha por defecto en la derecha (en escritorio siempre visible)
+}
+function selectInvasora(scientificName) {
+  state.selectedInvasora = scientificName;
+  state.detailMode = 'invasora';
+  renderInvasoras();
+  renderDetail();
+  openDetailSheet(); // en móvil, la ficha se desliza como bottom-sheet
+}
+
+// Muestra la etiqueta (ficha) de un hábitat en el panel de detalle de la derecha y lo aísla en el
+// mapa: al elegir un hábitat en el catálogo se apagan los demás y solo se ve este (el usuario puede
+// reactivar el resto desde el panel de capas). Se refresca dicho panel para que sus casillas cuadren.
 function selectHabitat(habitatId) {
   state.selectedHabitatId = habitatId;
   state.detailMode = 'habitat';
   renderDetail();
+  soloHabitat(habitatId);
+  refreshLayersPanel();
 }
 
 function backToHabitats() {
@@ -103,15 +131,20 @@ function afterSeenChange() {
 
 // Al marcar una especie como vista, la ubicación del avistamiento la aporta el GPS del dispositivo.
 // Si el usuario deniega el permiso o no hay GPS, se marca igualmente como vista y el marcador cae
-// en la coordenada representativa del catálogo (con aviso en el popup).
-function captureSighting(numericId) {
+// en la coordenada representativa del catálogo (con aviso en el popup). `alsoSeen` son las demás
+// apariciones de la misma especie (otros hábitats): se marcan vistas también, pero sin avistamiento
+// GPS propio (cada una usa su coordenada representativa en el mapa).
+function captureSighting(numericId, alsoSeen = []) {
   const finish = (coords) => {
     if (coords) state.sightings.set(numericId, coords);
     renderMarkers();
     if (state.selectedId === numericId) renderDetail();
     persistProgress('species', numericId, true, coords);
+    alsoSeen.forEach(rid => persistProgress('species', rid, true));
   };
-  if (!('geolocation' in navigator)) { finish(null); return; }
+  // Sin geolocalización posible (navegador sin API o contexto no seguro) el avistamiento se marca
+  // igual, solo que sin coordenada GPS propia — no bloquea al usuario.
+  if (geoUnavailableReason()) { finish(null); return; }
   navigator.geolocation.getCurrentPosition(
     pos => finish({ lat: pos.coords.latitude, lng: pos.coords.longitude }),
     () => finish(null),
@@ -122,15 +155,19 @@ function captureSighting(numericId) {
 function toggleSpeciesSeen(id) {
   const numericId = Number(id);
   const nowSeen = !state.seenSpecies.has(numericId);
+  // La misma especie puede aparecer en varios hábitats del parque: el "visto" se propaga a todas
+  // sus apariciones (por nombre científico), así el progreso del catálogo, de cada hábitat y del
+  // parque cuadra estén como estén modeladas las fichas.
+  const related = relatedSpeciesIds(numericId);
+  const others = related.filter(rid => rid !== numericId);
   if (nowSeen) {
-    state.seenSpecies.add(numericId);
+    related.forEach(rid => state.seenSpecies.add(rid));
     afterSeenChange();
-    captureSighting(numericId);
+    captureSighting(numericId, others);
   } else {
-    state.seenSpecies.delete(numericId);
-    state.sightings.delete(numericId);
+    related.forEach(rid => { state.seenSpecies.delete(rid); state.sightings.delete(rid); });
     afterSeenChange();
-    persistProgress('species', numericId, false);
+    related.forEach(rid => persistProgress('species', rid, false));
   }
 }
 
@@ -160,9 +197,11 @@ function setView(view) {
   catalogControls.hidden = view !== 'catalog';
   catalogPanel.hidden = view !== 'catalog';
   progressPanel.hidden = view !== 'progress';
+  if (invasorasPanel) invasorasPanel.hidden = view !== 'invasoras';
   if (view === 'progress') renderProgressTab();
+  else if (view === 'invasoras') showInvasoras();
   else renderCatalogBody();
-  syncMobileNav(view); // catálogo y progreso también son pestañas de la nav inferior móvil
+  syncMobileNav(view); // catálogo, invasoras y progreso también son pestañas de la nav inferior móvil
 }
 
 // --- Vistas móviles: nav inferior + ficha como bottom-sheet -------------------------------------
@@ -221,6 +260,8 @@ document.querySelectorAll('.mobile-nav-btn').forEach(btn => {
   btn.addEventListener('click', () => setMobileTab(btn.dataset.mtab));
 });
 if (sheetClose) sheetClose.addEventListener('click', closeDetailSheet);
+// Tocar el velo (fondo atenuado) también cierra la ficha, como en cualquier bottom-sheet.
+if (sheetScrim) sheetScrim.addEventListener('click', closeDetailSheet);
 // La miga de pan del catálogo abre la ficha del hábitat en el que se está navegando.
 catalogCrumbLabel.addEventListener('click', () => {
   if (state.habitatFocus) { selectHabitat(state.habitatFocus); openDetailSheet(); }
@@ -234,6 +275,12 @@ speciesList.addEventListener('click', event => {
   const habitatCard = event.target.closest('.habitat-card');
   if (habitatCard) { enterHabitat(habitatCard.dataset.habitat); return; }
   if (event.target.closest('#viewAllSpeciesBtn')) enterHabitat(null);
+});
+
+// Tarjetas de invasoras: abren su ficha en el panel de detalle de la derecha.
+if (invasorasPanel) invasorasPanel.addEventListener('click', event => {
+  const card = event.target.closest('[data-invasora]');
+  if (card) selectInvasora(card.dataset.invasora);
 });
 
 detailPanel.addEventListener('click', event => {
@@ -284,6 +331,9 @@ initExplorer({
 
 // Panel de capas del mapa (layers.js): bases, capas con leyenda y hábitats individuales.
 initLayersPanel();
+
+// Tutorial de bienvenida (tutorial.js): botones "?" y API por window para auth.js.
+initTutorial();
 
 // --- UI de estado offline (indicador de conexión + botón "Guardar sin conexión") -----------------
 function initOfflineUI() {
@@ -339,7 +389,14 @@ async function startParkExperience(slug, user) {
   const manifest = await loadManifest(parkEntry);
   state.manifest = manifest;
 
-  await Promise.all([loadData(manifest), loadGeo(manifest), loadProgress()]);
+  await Promise.all([loadData(manifest), loadGeo(manifest), loadProgress(), loadGlossary()]);
+
+  // Especies invasoras (dato nacional por CCAA, empaquetado offline). renderInvasoras filtra por
+  // región. fetchJsonCached lo cachea en localStorage (capa 1): disponible sin conexión aunque el
+  // Service Worker no esté activo, como el resto de datos del parque.
+  try {
+    state.data.invasoras = (await NaturDexOffline.fetchJsonCached('Data/invasoras.json')).data;
+  } catch (e) { /* sin invasoras: la pestaña muestra el aviso de "sin datos" */ }
 
   if (parkTitle && state.data.park && state.data.park.name) parkTitle.textContent = state.data.park.name;
 
@@ -367,7 +424,7 @@ async function startParkExperience(slug, user) {
   // alto), el mapa no dibuja capas ni teselas (ver ensureMapSized en map.js).
   ensureMapSized();
 
-  if (!parkExperienceInited) { initOfflineUI(); parkExperienceInited = true; }
+  if (!parkExperienceInited) { initOfflineUI(); initGlossaryPopover(); parkExperienceInited = true; }
 }
 window.startParkExperience = startParkExperience;
 window.naturdexInvalidateMap = ensureMapSized; // auth.js lo llama al mostrar la pantalla del parque

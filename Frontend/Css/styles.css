@@ -1,10 +1,10 @@
 :root{--ink:#17211b;--muted:#637064;--line:#dbe4d7;--paper:#f7f8f2;--panel:#fff;--leaf:#2f6f4e;--sea:#1f6f8b;--sun:#d89b30;--danger:#b8533f;--shadow:0 18px 60px rgba(23,33,27,.14)}*{box-sizing:border-box}html,body{height:100%}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper)}button,input{font:inherit}.app-shell{height:100vh;overflow:hidden;display:grid;grid-template-columns:minmax(360px,420px) 1fr}.sidebar{height:100%;min-height:0;overflow:hidden;display:flex;flex-direction:column;border-right:1px solid var(--line);background:var(--panel)}.park-summary{padding:28px 28px 22px;border-bottom:1px solid var(--line)}.eyebrow{margin:0 0 8px;color:var(--sea);font-size:.78rem;font-weight:800;text-transform:uppercase}h1,h2,h3,p{margin-top:0}h1{margin-bottom:12px;font-size:clamp(2rem,4vw,3.4rem);line-height:.96}.park-summary p{margin-bottom:18px;color:var(--muted);line-height:1.5}.summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.summary-grid div{padding:12px;border:1px solid var(--line);border-radius:8px;background:#fbfcf8}.summary-grid strong{display:block;font-size:1.25rem}.summary-grid span{display:block;color:var(--muted);font-size:.78rem}.controls{padding:18px 28px;border-bottom:1px solid var(--line)}.controls label{display:block;margin-bottom:8px;color:var(--muted);font-size:.84rem;font-weight:700}.controls input{width:100%;height:42px;padding:0 12px;border:1px solid var(--line);border-radius:8px}.progress-wrap{margin-top:14px}.progress-track{height:8px;border-radius:999px;background:#e4ece0;overflow:hidden}.progress-track.big{height:12px}.progress-fill{height:100%;width:0;background:var(--leaf);border-radius:999px;transition:width .3s ease}.progress-label,.progress-caption{display:block;margin-top:6px;color:var(--muted);font-size:.78rem}.segmented{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:12px;padding:4px;border:1px solid var(--line);border-radius:8px;background:#eef4ec}
-.view-tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:14px 28px 0}.view-tab{min-height:38px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--muted);font-weight:800;cursor:pointer}.view-tab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.view-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:14px 28px 0}.view-tab{min-height:38px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--muted);font-weight:800;cursor:pointer}.view-tab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
 .habitat-filter-chip{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:10px;padding:8px 10px;border-radius:8px;background:#eef4ec;color:var(--leaf);font-size:.78rem;font-weight:700}.habitat-filter-chip[hidden]{display:none}.habitat-filter-chip button{border:0;background:transparent;color:var(--leaf);font-weight:800;cursor:pointer}
 .progress-panel{flex:1;min-height:0;overflow:auto;padding:18px 18px 18px 28px;display:flex;flex-direction:column;gap:20px}.species-panel[hidden],.progress-panel[hidden],.controls[hidden]{display:none}.progress-section h3{margin:0 0 8px;font-size:.9rem;color:var(--ink)}.progress-list{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}.progress-row{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;font-size:.8rem}.progress-row.complete{border-color:var(--leaf);background:#eef6ef}.progress-row-label{display:flex;align-items:center;gap:8px}.progress-row .dot{display:inline-block;width:10px;height:10px;border-radius:999px}.progress-row-value{font-weight:800;color:var(--muted)}.progress-row.complete .progress-row-value{color:var(--leaf)}
 .achievement-card{display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:10px;border:1px solid var(--line);background:#fbfcf8}.achievement-card.locked{opacity:.6}.achievement-card.unlocked{border-color:var(--sun);background:#fff8e8}.achievement-card.just-unlocked{animation:achievement-pulse 1.2s ease}.achievement-icon{font-size:2rem;line-height:1}.achievement-card strong{display:block;margin-bottom:4px;font-size:.95rem}.achievement-card p{margin:0;color:var(--muted);font-size:.78rem;line-height:1.45}
 @keyframes achievement-pulse{0%{transform:scale(1)}30%{transform:scale(1.04)}100%{transform:scale(1)}}
-.legend-dot{display:inline-block;width:10px;height:10px;border-radius:999px;margin-right:6px;background:var(--leaf)}.legend-dot.fauna{background:var(--sea)}.legend-dot.poi{background:var(--sun);border-radius:3px}.legend-dot.habitat{background:transparent;border:2px solid var(--leaf)}.legend-line{display:inline-block;width:16px;height:0;margin-right:6px;border-top:2px dashed var(--danger)}.filter-button{min-height:34px;border:0;border-radius:6px;color:var(--muted);background:transparent;cursor:pointer}.filter-button.active{color:#fff;background:var(--leaf)}.species-panel{min-height:0;display:flex;flex:1;flex-direction:column;padding:18px 18px 18px 28px}.section-title{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-right:10px}.section-title h2{margin-bottom:12px;font-size:1rem}.section-title span{color:var(--muted);font-size:.82rem}.species-list{overflow:auto;padding-right:10px}.species-card{width:100%;display:grid;grid-template-columns:72px 1fr;gap:12px;margin-bottom:10px;padding:10px;border:1px solid var(--line);border-radius:8px;text-align:left;color:inherit;background:#fff;cursor:pointer}.species-card.active{border-color:var(--leaf);box-shadow:0 0 0 2px rgba(47,111,78,.16)}.species-card.seen{border-color:#bcd6c4}.card-thumb{position:relative;width:72px;height:72px}.species-card img{width:72px;height:72px;object-fit:cover;border-radius:6px;background:#dfe8dc}.seen-badge{position:absolute;top:-6px;right:-6px;width:20px;height:20px;display:flex;align-items:center;justify-content:center;border-radius:999px;background:var(--leaf);color:#fff;font-size:.7rem;font-weight:800;box-shadow:0 2px 6px rgba(0,0,0,.2)}.card-meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:5px}.badge{display:inline-flex;align-items:center;min-height:22px;padding:0 8px;border-radius:999px;color:var(--leaf);background:#e4f0e7;font-size:.72rem;font-weight:800}.badge.fauna{color:var(--sea);background:#e1eef5}.badge.alert{color:var(--danger);background:#f7e8e3}.badge.review{color:#8a5a00;background:#fbeecb}.species-card h3{margin-bottom:2px;font-size:.98rem}.species-card em{display:block;color:var(--muted);font-size:.82rem}.map-stage{position:relative;display:flex;min-width:0;height:100%;overflow:hidden}#map{flex:1;min-width:0;position:relative;background:#c9ddd7}.detail-panel{position:relative;flex-shrink:0;width:460px;height:100%;overflow:auto;border-left:1px solid var(--line);background:#fff;box-shadow:none;border-radius:0}.detail-panel img{width:100%;height:340px;object-fit:cover;display:block;background:#dfe8dc}.detail-body{padding:18px}.detail-body h2{margin-bottom:2px;font-size:1.5rem}.detail-body em{color:var(--muted)}.detail-body p{margin:14px 0;line-height:1.55}.detail-list{display:grid;gap:8px;margin:0;padding-left:18px;color:var(--muted)}.detail-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:14px}.detail-facts div{padding:10px;border:1px solid var(--line);border-radius:8px}.detail-facts span{display:block;color:var(--muted);font-size:.75rem}.detail-facts strong{display:block;margin-top:2px;font-size:.88rem}.detail-subtitle{margin:18px 0 8px;font-size:.86rem;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}.detail-taxonomy{grid-template-columns:repeat(3,1fr)}.detail-taxonomy div{padding:8px}.detail-taxonomy span{font-size:.68rem}.detail-taxonomy strong{font-size:.8rem}.status-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}.status-list li{padding:10px;border:1px solid var(--line);border-radius:8px;font-size:.82rem;line-height:1.45}.status-list li span{display:block;margin-bottom:3px;color:var(--muted);font-size:.72rem;font-weight:800;text-transform:uppercase}.review-note{margin-top:12px;padding:10px 12px;border:1px solid #f0d38a;border-radius:8px;background:#fbf3de;color:#6b4a00;font-size:.78rem;line-height:1.5}.detail-source{margin:12px 0 0;color:var(--muted);font-size:.72rem;line-height:1.4}.seen-toggle{width:100%;margin-top:14px;min-height:42px;border:1px solid var(--leaf);border-radius:8px;background:#fff;color:var(--leaf);font-weight:800;cursor:pointer}.seen-toggle.is-seen{background:var(--leaf);color:#fff}
+.legend-dot{display:inline-block;width:10px;height:10px;border-radius:999px;margin-right:6px;background:var(--leaf)}.legend-dot.fauna{background:var(--sea)}.legend-dot.poi{background:var(--sun);border-radius:3px}.legend-dot.habitat{background:transparent;border:2px solid var(--leaf)}.legend-line{display:inline-block;width:16px;height:0;margin-right:6px;border-top:2px dashed var(--danger)}.filter-button{min-height:34px;border:0;border-radius:6px;color:var(--muted);background:transparent;cursor:pointer}.filter-button.active{color:#fff;background:var(--leaf)}.species-panel{min-height:0;display:flex;flex:1;flex-direction:column;padding:18px 18px 18px 28px}.section-title{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-right:10px}.section-title h2{margin-bottom:12px;font-size:1rem}.section-title span{color:var(--muted);font-size:.82rem}.species-list{overflow:auto;padding-right:10px}.species-card{width:100%;display:grid;grid-template-columns:72px 1fr;gap:12px;margin-bottom:10px;padding:10px;border:1px solid var(--line);border-radius:8px;text-align:left;color:inherit;background:#fff;cursor:pointer}.species-card.active{border-color:var(--leaf);box-shadow:0 0 0 2px rgba(47,111,78,.16)}.species-card.seen{border-color:#bcd6c4}.card-thumb{position:relative;width:72px;height:72px}.species-card img{width:72px;height:72px;object-fit:cover;border-radius:6px;background:#dfe8dc}.seen-badge{position:absolute;top:-6px;right:-6px;width:20px;height:20px;display:flex;align-items:center;justify-content:center;border-radius:999px;background:var(--leaf);color:#fff;font-size:.7rem;font-weight:800;box-shadow:0 2px 6px rgba(0,0,0,.2)}.card-meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:5px}.badge{display:inline-flex;align-items:center;min-height:22px;padding:0 8px;border-radius:999px;color:var(--leaf);background:#e4f0e7;font-size:.72rem;font-weight:800}.badge.fauna{color:var(--sea);background:#e1eef5}.badge.alert{color:var(--danger);background:#f7e8e3}.badge.review{color:#8a5a00;background:#fbeecb}.species-card h3{margin-bottom:2px;font-size:.98rem}.species-card em{display:block;color:var(--muted);font-size:.82rem}.map-stage{position:relative;display:flex;min-width:0;height:100%;overflow:hidden}#map{flex:1;min-width:0;position:relative;background:#c9ddd7}.detail-panel{position:relative;flex-shrink:0;width:460px;height:100%;overflow:auto;border-left:1px solid var(--line);background:#fff;box-shadow:none;border-radius:0}.detail-panel img{width:100%;height:340px;object-fit:contain;object-position:center;display:block;background:#eef1ea}.detail-body{padding:18px}.detail-body h2{margin-bottom:2px;font-size:1.5rem}.detail-body em{color:var(--muted)}.detail-body p{margin:14px 0;line-height:1.55}.detail-list{display:grid;gap:8px;margin:0;padding-left:18px;color:var(--muted)}.detail-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:14px}.detail-facts div{padding:10px;border:1px solid var(--line);border-radius:8px}.detail-facts span{display:block;color:var(--muted);font-size:.75rem}.detail-facts strong{display:block;margin-top:2px;font-size:.88rem}.detail-subtitle{margin:18px 0 8px;font-size:.86rem;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}.detail-taxonomy{grid-template-columns:repeat(3,1fr)}.detail-taxonomy div{padding:8px}.detail-taxonomy span{font-size:.68rem}.detail-taxonomy strong{font-size:.8rem}.status-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}.status-list li{padding:10px;border:1px solid var(--line);border-radius:8px;font-size:.82rem;line-height:1.45}.status-list li span{display:block;margin-bottom:3px;color:var(--muted);font-size:.72rem;font-weight:800;text-transform:uppercase}.review-note{margin-top:12px;padding:10px 12px;border:1px solid #f0d38a;border-radius:8px;background:#fbf3de;color:#6b4a00;font-size:.78rem;line-height:1.5}.detail-source{margin:12px 0 0;color:var(--muted);font-size:.72rem;line-height:1.4}.seen-toggle{width:100%;margin-top:14px;min-height:42px;border:1px solid var(--leaf);border-radius:8px;background:#fff;color:var(--leaf);font-weight:800;cursor:pointer}.seen-toggle.is-seen{background:var(--leaf);color:#fff}
 .species-marker span{display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:999px;font-size:14px;box-shadow:0 2px 8px rgba(0,0,0,.25);border:2px solid #fff}.species-marker.seen span{box-shadow:0 0 0 2px var(--sun),0 2px 8px rgba(0,0,0,.25)}
 .poi-marker span{display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:6px;background:var(--sun);color:#fff;font-size:13px;box-shadow:0 2px 8px rgba(0,0,0,.25);border:2px solid #fff}.poi-marker.seen span{background:var(--leaf);box-shadow:0 0 0 2px var(--sun),0 2px 8px rgba(0,0,0,.25)}
 .popup-type{display:inline-block;margin:2px 0 6px;color:var(--muted);font-size:.75rem;text-transform:uppercase;font-weight:700}.poi-seen-btn{margin-top:6px;min-height:32px;padding:0 10px;border:1px solid var(--leaf);border-radius:6px;background:#fff;color:var(--leaf);font-weight:700;cursor:pointer}@media(max-width:520px){.park-summary,.controls{padding-left:18px;padding-right:18px}.species-panel{padding-left:18px}.summary-grid,.detail-facts{grid-template-columns:1fr}.species-card{grid-template-columns:64px 1fr}.species-card img{width:64px;height:64px}}
@@ -32,7 +32,7 @@
 .leaflet-popup-content strong{font-size:.92rem}
 
 /* --- Foto y aviso de aproximación en popups de puntos de interés ----------------------------- */
-.poi-popup-image{margin:-13px -15px 8px;border-radius:var(--radius-md) var(--radius-md) 0 0;overflow:hidden;height:110px;background:#efe6d4}
+.poi-popup-image{margin:-13px -15px 8px;border-radius:var(--radius-md) var(--radius-md) 0 0;overflow:hidden;height:180px;background:#efe6d4}
 .poi-popup-image img{width:100%;height:100%;object-fit:cover;display:block}
 .poi-approx-badge{margin-left:6px}
 
@@ -91,6 +91,21 @@
 .hint-close{width:28px;height:28px;border:0;border-radius:999px;background:transparent;color:var(--muted);font-size:.9rem;line-height:1;cursor:pointer}
 @keyframes hint-in{from{opacity:0;transform:translateX(-50%) translateY(-8px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
 @media(max-width:900px){.explorer-hint{top:12px;width:calc(100% - 24px);flex-wrap:wrap}.hint-actions{margin-left:auto}}
+
+/* Pregunta de hábitat (explorer.js): diálogo modal "¿Quieres ver las especies?" al pisar un hábitat */
+.habitat-prompt{position:fixed;inset:0;z-index:2500}
+.habitat-prompt[hidden]{display:none}
+.habitat-prompt-backdrop{position:absolute;inset:0;background:rgba(23,33,27,.45)}
+.habitat-prompt-card{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(92vw,360px);padding:20px 20px 16px;background:var(--panel);color:var(--ink);border:1px solid var(--sun);border-radius:var(--radius-md);box-shadow:var(--shadow);text-align:center;outline:none;animation:prompt-in .22s ease}
+.habitat-prompt-icon{display:block;font-size:2rem;line-height:1;margin-bottom:8px}
+.habitat-prompt-card h3{margin:0 0 6px;font-size:1.05rem;font-weight:800}
+.habitat-prompt-card p{margin:0 0 14px;color:var(--muted);font-size:.88rem;line-height:1.5}
+.habitat-prompt-actions{display:flex;justify-content:center;gap:10px}
+.habitat-prompt-no{min-height:38px;padding:0 14px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);font-weight:800;font-size:.8rem;cursor:pointer}
+.habitat-prompt-yes{min-height:38px;padding:0 16px;border:0;border-radius:999px;background:var(--leaf);color:#fff;font-weight:800;font-size:.8rem;cursor:pointer}
+@keyframes prompt-in{from{opacity:0;transform:translate(-50%,-50%) scale(.94)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+/* En móvil el diálogo baja a la zona del pulgar, sobre la nav inferior (como la tarjeta del tutorial) */
+@media(max-width:900px){.habitat-prompt-card{top:auto;left:12px;right:12px;bottom:calc(70px + env(safe-area-inset-bottom));transform:none;width:auto;border-radius:16px;animation:none}}
 
 .user-marker span{display:block;width:16px;height:16px;border-radius:999px;background:var(--sea);border:3px solid #fff;box-shadow:0 0 0 3px rgba(31,111,139,.35),0 2px 6px rgba(0,0,0,.3);animation:user-pulse 2s ease-in-out infinite}
 @keyframes user-pulse{0%,100%{box-shadow:0 0 0 3px rgba(31,111,139,.35),0 2px 6px rgba(0,0,0,.3)}50%{box-shadow:0 0 0 7px rgba(31,111,139,.15),0 2px 6px rgba(0,0,0,.3)}}
@@ -167,6 +182,7 @@
 .cover-title{font-size:clamp(3rem,10vw,5.5rem);line-height:.9;margin:8px 0 14px}
 .cover-sub{color:var(--muted);font-size:1.05rem;line-height:1.55;margin-bottom:26px}
 .cover-foot{margin-top:22px;color:var(--muted);font-size:.75rem}
+.cover-inner .link-btn{display:block;margin:14px auto 0}
 
 /* Login / registro */
 .auth-card{width:100%;max-width:400px;padding:28px;border:1px solid var(--line);border-radius:14px;background:var(--panel);box-shadow:var(--shadow)}
@@ -259,10 +275,20 @@
    inferior (body[data-mtab]) y la ficha se convierte en una hoja deslizante (body.sheet-open). */
 .detail-dock{display:contents}
 .sheet-bar{display:none}
+.sheet-scrim{display:none}
 .mobile-nav{display:none}
 
 @media(max-width:900px){
   :root{--mnav-h:58px}
+  /* La pantalla del parque mide EXACTAMENTE el viewport dinámico y no desborda: sin esto heredaba
+     .screen{min-height:100vh} y 100vh es el viewport GRANDE (como si la barra de URL estuviese
+     oculta), mientras .app-shell usa 100dvh (el actual). Con la barra de URL visible la página
+     quedaba ~60px más alta que lo visible y podía desplazarse entera: al deslizar hasta el tope el
+     navegador ocultaba la barra, dvh crecía de golpe y .app-shell (100dvh) y la ficha (78dvh) se
+     redimensionaban en caliente -> el botón de cerrar se descuadraba y el catálogo se movía.
+     Fijando la pantalla al viewport dinámico la página ya no scrollea, así que la barra de URL no
+     se oculta al deslizar y dvh se mantiene estable. */
+  #screen-park{min-height:0;height:100dvh;overflow:hidden}
   .app-shell{height:100dvh;grid-template-columns:1fr;padding-bottom:calc(var(--mnav-h) + env(safe-area-inset-bottom))}
   .sidebar{border-right:0}
   .view-tabs{display:none} /* las pestañas Catálogo/Progreso las sustituye la nav inferior */
@@ -270,29 +296,59 @@
   /* El catálogo se desliza como UNA columna (cabecera incluida), no en una ventanita interior:
      en escritorio la lista tiene su propio scroll, pero en móvil eso dejaba a las tarjetas un
      hueco de ~120px y el resto de la pantalla no respondía al gesto (parecía "no deslizar"). */
-  .sidebar{overflow-y:auto;-webkit-overflow-scrolling:touch}
+  /* overscroll-behavior:contain corta el encadenamiento del scroll: al llegar al tope de la lista el
+     gesto ya no se propaga al contenedor de detrás (era el otro motivo por el que "se movía el
+     catálogo" al deslizar la ficha hasta el final). */
+  .sidebar{overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
   .species-panel,.progress-panel{flex:none;min-height:auto;overflow:visible}
   .species-list{overflow:visible;padding-right:0}
+  /* La cabecera del catálogo (título del hábitat + nº de resultados) NO se fija en móvil: aquí la
+     lista no tiene scroll propio (lo hace toda la barra lateral), así que un sticky dejaba el nombre
+     del hábitat congelado arriba al deslizar. Además la miga de pan justo encima ya muestra ese
+     nombre, con lo que quedaba duplicado. En móvil se desliza con el contenido. */
+  .species-panel .section-title{position:static}
 
-  /* Solo la sección activa es visible (el mapa sigue montado: display none + invalidateSize al volver) */
+  /* Solo la sección activa es visible. El mapa NO puede ocultarse con display:none: la ficha
+     (.detail-dock) vive dentro de .map-stage y debe poder abrirse como bottom-sheet también
+     sobre el Catálogo y el Progreso (ver una especie y marcarla como vista desde el catálogo).
+     Se aparta con visibility + position:fixed (sale del flujo y no pinta ni recibe toques) y la
+     ficha se re-activa; de paso Leaflet conserva el tamaño real del contenedor estando oculto. */
   body[data-mtab="map"] .sidebar{display:none}
-  body[data-mtab="catalog"] .map-stage,body[data-mtab="progress"] .map-stage{display:none}
+  /* z-index:850 sube TODO el contexto de .map-stage por encima de la nav inferior (z-index:800):
+     al pasar a position:fixed, .map-stage crea un contexto de apilamiento propio y, sin este
+     z-index, la ficha (z-index:900 dentro) quedaba atrapada por debajo de la nav, que la tapaba
+     justo donde está el botón "Marcar como visto". Estando la hoja cerrada sigue oculto e inerte
+     (visibility:hidden + pointer-events:none), así que la nav se ve y se pulsa con normalidad. */
+  body[data-mtab="catalog"] .map-stage,body[data-mtab="progress"] .map-stage,body[data-mtab="invasoras"] .map-stage{position:fixed;inset:0;z-index:850;visibility:hidden;pointer-events:none}
+  body[data-mtab="catalog"] .map-stage .detail-dock,body[data-mtab="progress"] .map-stage .detail-dock,body[data-mtab="invasoras"] .map-stage .detail-dock{visibility:visible;pointer-events:auto}
   .map-stage{height:100%}
   #map{width:100%;height:100%}
 
   /* Nav inferior */
-  .mobile-nav{position:fixed;left:0;right:0;bottom:0;z-index:800;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:6px 10px calc(6px + env(safe-area-inset-bottom));background:var(--panel);border-top:1px solid var(--line)}
+  .mobile-nav{position:fixed;left:0;right:0;bottom:0;z-index:800;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:6px 10px calc(6px + env(safe-area-inset-bottom));background:var(--panel);border-top:1px solid var(--line)}
   .mobile-nav-btn{display:flex;flex-direction:column;align-items:center;gap:2px;min-height:46px;border:0;border-radius:10px;background:transparent;color:var(--muted);font-size:.7rem;font-weight:800;cursor:pointer}
   .mobile-nav-btn span{font-size:1.15rem;line-height:1}
   .mobile-nav-btn.active{background:#eef4ec;color:var(--leaf)}
 
-  /* Ficha como bottom-sheet: se desliza desde abajo por encima de la vista activa y de la nav */
+  /* Velo (scrim): atenúa el fondo (catálogo/progreso o mapa) detrás de la hoja para que el nombre
+     del hábitat y el buscador que asoman por arriba se lean como fondo, no como algo superpuesto.
+     z-index:850 lo deja por encima de la nav (800) y por debajo de la ficha (900). Al tocarlo se
+     cierra la hoja (app.js). */
+  .sheet-scrim{display:block;position:fixed;inset:0;z-index:850;background:rgba(23,33,27,.5);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .28s ease,visibility .28s ease}
+  body.sheet-open .sheet-scrim{opacity:1;visibility:visible;pointer-events:auto}
+
+  /* Ficha como bottom-sheet: se desliza desde abajo por encima de la vista activa, del velo y de la nav */
   .detail-dock{position:fixed;left:0;right:0;bottom:0;z-index:900;display:flex;flex-direction:column;max-height:78dvh;background:#fff;border-radius:16px 16px 0 0;box-shadow:0 -12px 40px rgba(23,33,27,.28);transform:translateY(110%);transition:transform .28s ease;padding-bottom:env(safe-area-inset-bottom)}
   body.sheet-open .detail-dock{transform:translateY(0)}
-  .sheet-bar{display:flex;align-items:center;justify-content:center;position:relative;padding:10px 12px;flex:0 0 auto}
+  /* Cabecera de la hoja: franja sólida (fondo #fff + z-index) por encima del contenido que scrollea.
+     Antes era transparente y de solo ~25px: la "X" (32px) sobresalía hacia abajo y, como la barra y
+     el panel son ambos position:relative sin z-index, la imagen (posterior en el DOM) pintaba encima
+     y tapaba la mitad inferior de la X. min-height:46px hace que la X quepa entera dentro de la barra
+     y la imagen empiece justo debajo. El redondeo superior acompaña al de la propia hoja. */
+  .sheet-bar{display:flex;align-items:center;justify-content:center;position:relative;z-index:2;min-height:46px;padding:10px 12px;flex:0 0 auto;background:#fff;border-radius:16px 16px 0 0}
   .sheet-grip{width:44px;height:5px;border-radius:999px;background:var(--line)}
-  .sheet-close{position:absolute;right:10px;top:7px;width:32px;height:32px;border:0;border-radius:999px;background:#f0f2ec;color:var(--muted);font-size:1rem;line-height:1;cursor:pointer}
-  .detail-panel{width:100%;height:auto;flex:1;min-height:0;overflow:auto;border-left:0}
+  .sheet-close{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:32px;height:32px;display:flex;align-items:center;justify-content:center;border:0;border-radius:999px;background:#f0f2ec;color:var(--muted);font-size:1rem;line-height:1;cursor:pointer}
+  .detail-panel{width:100%;height:auto;flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;border-left:0}
   .detail-panel img{height:240px}
 
   /* La miga de pan del catálogo abre la ficha del hábitat actual (afordancia táctil) */
@@ -357,3 +413,67 @@
 .audio-transcript summary{cursor:pointer;color:var(--sea);font-size:.78rem;font-weight:800}
 .audio-transcript p{margin:8px 0 0;color:var(--muted);font-size:.8rem;line-height:1.5}
 .leaflet-popup-content .audio-block{margin-top:8px;padding:8px}
+
+/* Glosario divulgativo: término resaltado en las descripciones + popover con su definición. */
+.glossary-term{appearance:none;font:inherit;color:var(--leaf);background:transparent;border:0;padding:0;cursor:help;border-bottom:1px dashed var(--leaf);line-height:inherit}
+.glossary-term:hover,.glossary-term:focus-visible{background:#e4f0e7;outline:none}
+.glossary-popover{position:absolute;z-index:2000;max-width:280px;padding:12px 14px;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:var(--radius-md);box-shadow:var(--shadow,0 8px 24px rgba(23,33,27,.18));font-size:.85rem;line-height:1.5}
+.glossary-popover[hidden]{display:none}
+.glossary-popover-term{display:block;margin-bottom:4px;color:var(--leaf);font-size:.9rem;font-weight:800;text-transform:none}
+.glossary-popover-def{margin:0;color:var(--ink)}
+
+/* Tarjeta "Aves de la ZEPA" en el catálogo de hábitats (apartado propio de aves de la Red Natura 2000). */
+.zepa-card .habitat-card-dot{border-radius:999px}
+.zepa-card{border-color:#bcd0e6}
+.zepa-card:hover{border-color:#2b6cb0}
+
+/* Barra de progreso por hábitat en la pestaña de progreso (subdivisión + logros por hábitat). */
+.habitat-goal-bar{flex:1;max-width:120px}
+.progress-row.habitat-goal.complete{border-color:#bcd6c4;background:#f2f8f3}
+
+/* Pestaña de especies invasoras (apartado propio, aparte de flora/hábitats). */
+.invasoras-intro{margin:0 0 14px;font-size:.85rem;line-height:1.55;color:var(--ink)}
+.invasora-thumb{display:flex;align-items:center;justify-content:center;font-size:1.9rem;background:#f7e8e3}
+.invasora-desc{margin:8px 0 0;font-size:.82rem;line-height:1.5;color:var(--ink)}
+
+/* Ficha de invasora en el panel de detalle derecho (portada con emoji + aviso destacado). */
+.invasora-detail-hero{position:relative;height:200px;display:flex;align-items:center;justify-content:center;background:#f7e8e3}
+.invasora-hero-emoji{font-size:5rem;line-height:1}
+.invasora-warning{border-color:#e3b6ac;background:#f7e8e3;color:#7a2e1c}
+
+/* Foto de la invasora en la portada de su ficha (cubre el hueco; si falla, se ve el emoji del grupo). */
+.invasora-detail-hero img{width:100%;height:100%;object-fit:cover;object-position:center}
+
+/* Insignia de ave migratoria (aves de la ZEPA) en las tarjetas y fichas de fauna. */
+.badge.migratoria{color:#0b6b7a;background:#d9f0f2}
+
+/* Tutorial de bienvenida (tutorial.js): recorte "spotlight" sobre la UI real + tarjeta guiada.
+   z-index 3000: por encima de todo lo existente (glosario 2000, skip-link 1200, ficha móvil 900). */
+.tutorial-overlay{position:fixed;inset:0;z-index:3000}
+.tutorial-overlay[hidden]{display:none}
+.tutorial-backdrop{position:absolute;inset:0}
+.tutorial-backdrop.dim{background:rgba(23,33,27,.55)}
+/* El atenuado del fondo lo pinta la sombra gigante del recorte: así el elemento resaltado queda
+   "iluminado" sin necesidad de recortar el fondo con máscaras. */
+.tutorial-spot{position:fixed;border-radius:var(--radius-md);box-shadow:0 0 0 9999px rgba(23,33,27,.55);outline:2px solid var(--sun);outline-offset:2px;pointer-events:none;transition:top .25s ease,left .25s ease,width .25s ease,height .25s ease}
+.tutorial-spot[hidden]{display:none}
+.tutorial-card{position:fixed;width:min(92vw,340px);padding:16px 18px 14px;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:var(--radius-md);box-shadow:var(--shadow);outline:none}
+.tutorial-card h3{margin:0 26px 6px 0;font-size:1rem;font-weight:800}
+.tutorial-card p{margin:0 0 12px;color:var(--muted);font-size:.85rem;line-height:1.55}
+.tutorial-close{position:absolute;top:8px;right:8px;display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--muted);cursor:pointer}
+.tutorial-close:hover{color:var(--danger);border-color:var(--danger)}
+.tutorial-foot{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.tutorial-dots{display:flex;gap:5px;flex:0 0 auto}
+.tutorial-dot{width:7px;height:7px;border-radius:999px;background:var(--line)}
+.tutorial-dot.active{background:var(--leaf)}
+.tutorial-actions{display:flex;align-items:center;gap:8px}
+.tutorial-actions button{cursor:pointer}
+.tutorial-skip{border:0;background:transparent;color:var(--muted);font-size:.78rem;font-weight:700;text-decoration:underline;padding:0}
+.tutorial-back{min-height:34px;padding:0 12px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);font-weight:800;font-size:.78rem}
+.tutorial-next{min-height:34px;padding:0 14px;border:0;border-radius:999px;background:var(--leaf);color:#fff;font-weight:800;font-size:.78rem}
+.tutorial-actions button[hidden]{display:none}
+/* En móvil la tarjeta es una hoja inferior fija (mismo aire que .detail-dock), dejando libre la
+   nav inferior por si es justo lo que se está resaltando. */
+@media(max-width:900px){
+  .tutorial-card{top:auto!important;left:12px!important;right:12px;bottom:calc(70px + env(safe-area-inset-bottom));width:auto;border-radius:16px;box-shadow:0 -12px 40px rgba(23,33,27,.28)}
+}

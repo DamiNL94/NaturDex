@@ -11,6 +11,8 @@ import { api, type Item, type Resource } from './api';
 import { FIELDS, itemTitle, type FieldDef } from './fields';
 import { useToast } from './toast';
 import CoordPicker from './CoordPicker';
+import HabitatEditor from './HabitatEditor';
+import type { PolygonGeometry } from './api';
 
 const SINGULAR: Record<Resource, string> = { species: 'especie', habitats: 'hábitat', pois: 'punto de interés' };
 
@@ -158,6 +160,25 @@ export default function ItemForm({ resource, park, item, habitats, parkCenter, o
           return node;
         })}
       </div>
+
+      {/* Editor del área (polígono) del hábitat: la BD es la fuente de verdad de la geometría. */}
+      {resource === 'habitats' && (
+        isNew ? (
+          <p className="mt-5 rounded-xl border border-dashed border-stone-300 bg-white p-4 text-sm text-stone-500">
+            Guarda primero la ficha del hábitat para poder dibujar su área en el mapa.
+          </p>
+        ) : (
+          <div className="mt-5">
+            <HabitatEditor
+              park={park}
+              habitatId={item.id}
+              color={String(draft.color ?? '') || null}
+              geometry={(item.geometry as PolygonGeometry | null) ?? null}
+              parkCenter={parkCenter}
+            />
+          </div>
+        )
+      )}
 
       {/* Relación especie ↔ hábitats: casillas con todos los hábitats del parque */}
       {resource === 'species' && (

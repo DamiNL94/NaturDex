@@ -12,6 +12,7 @@ import { RESOURCE_LABELS } from './fields';
 import { useToast } from './toast';
 import ItemList from './ItemList';
 import ItemForm from './ItemForm';
+import ParkForm from './ParkForm';
 
 const RESOURCES: Resource[] = ['species', 'habitats', 'pois'];
 
@@ -33,6 +34,8 @@ export default function Panel({ overview }: { overview: Overview }) {
   const [tab, setTab] = useState<Resource>('species');
   const [selected, setSelected] = useState<number | 'new' | null>(null);
   const [query, setQuery] = useState('');
+  // Editor de parque: 'new' = alta, un slug = edición del parque activo, null = cerrado.
+  const [parkEditor, setParkEditor] = useState<'new' | 'edit' | null>(null);
 
   const lists: Record<Resource, ReturnType<typeof useList>> = {
     species: useList('species', park),
@@ -41,6 +44,15 @@ export default function Panel({ overview }: { overview: Overview }) {
   };
 
   const parkInfo = overview.parks.find(p => p.slug === park) ?? null;
+  // Parques agrupados por figura de protección (categoría) para el <optgroup> del selector; se
+  // preserva el orden que envía el backend (ya viene ordenado por categoría y nombre).
+  const parksByCategory: [string, typeof overview.parks][] = [];
+  for (const p of overview.parks) {
+    const label = p.category || 'Otros';
+    const group = parksByCategory.find(([c]) => c === label);
+    if (group) group[1].push(p);
+    else parksByCategory.push([label, [p]]);
+  }
   const items = lists[tab].data ?? [];
   const item = selected === 'new' ? ({ id: 0 } as Item) : (items.find(i => i.id === selected) ?? null);
 
@@ -79,22 +91,49 @@ export default function Panel({ overview }: { overview: Overview }) {
         <div className="min-w-0">
           <p className="text-[11px] font-bold tracking-widest text-emerald-700 uppercase">NaturDex · Administración</p>
           <h1 className="truncate text-lg font-extrabold text-stone-900">{parkInfo?.name ?? '—'}</h1>
+          {parkInfo?.category && (
+            <p className="truncate text-xs font-semibold text-stone-500">{parkInfo.category}</p>
+          )}
         </div>
         <div className="ml-auto flex flex-wrap items-center gap-3">
-          {overview.parks.length > 1 && (
+          {overview.parks.length > 0 && (
             <label className="flex items-center gap-2 text-sm font-semibold text-stone-600">
               Parque
               <select
                 value={park ?? ''}
                 onChange={e => switchPark(e.target.value)}
-                className="rounded-lg border border-stone-300 bg-white px-2 py-1.5 text-sm font-normal"
+                disabled={overview.parks.length < 2}
+                title={overview.parks.length < 2 ? 'Solo hay un parque disponible' : 'Elige el parque a administrar'}
+                className="rounded-lg border border-stone-300 bg-white px-2 py-1.5 text-sm font-normal disabled:opacity-60"
               >
-                {overview.parks.map(p => (
-                  <option key={p.slug} value={p.slug}>{p.name}</option>
+                {parksByCategory.map(([category, parks]) => (
+                  <optgroup key={category} label={category}>
+                    {parks.map(p => (
+                      <option key={p.slug} value={p.slug}>{p.name}</option>
+                    ))}
+                  </optgroup>
                 ))}
               </select>
             </label>
           )}
+          {parkInfo && (
+            <button
+              type="button"
+              onClick={() => setParkEditor('edit')}
+              title="Editar la ficha de este parque (nombre, figura, superficie, centro…)"
+              className="rounded-lg border border-stone-300 px-3 py-1.5 text-sm font-bold text-stone-600 transition hover:bg-stone-100"
+            >
+              Editar parque
+            </button>
+          )}
+          <button
+            type="button"
+            onClick={() => setParkEditor('new')}
+            title="Crear un parque nuevo para empezar a cargar su catálogo"
+            className="rounded-lg border border-emerald-700 px-3 py-1.5 text-sm font-bold text-emerald-800 transition hover:bg-emerald-50"
+          >
+            ＋ Nuevo parque
+          </button>
           <button
             type="button"
             onClick={() => exportPark.mutate()}
@@ -177,6 +216,25 @@ export default function Panel({ overview }: { overview: Overview }) {
           )}
         </section>
       </main>
+
+      {parkEditor && (
+        <ParkForm
+          park={parkEditor === 'edit' ? parkInfo : null}
+          overview={overview}
+          onClose={() => setParkEditor(null)}
+          onSaved={slug => {
+            setParkEditor(null);
+            switchPark(slug);
+          }}
+          onDeleted={() => {
+            setParkEditor(null);
+            const next = overview.parks.find(p => p.slug !== park)?.slug ?? null;
+            setPark(next);
+            setSelected(null);
+            setQuery('');
+          }}
+        />
+      )}
     </div>
   );
 }

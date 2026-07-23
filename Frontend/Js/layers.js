@@ -16,7 +16,7 @@ import { map, baseOSM, basePNOA, setHabitatVisible, focusHabitatOnMap } from './
 // Capas generales (las de hábitats van en su propia subsección). El swatch reutiliza las clases
 // de la antigua leyenda (.legend-dot/.legend-line) para que la simbología siga siendo la misma.
 const OVERLAYS = [
-  { key: 'parque', label: 'Parque Regional', swatch: '<i class="legend-line parque"></i>', group: () => state.parqueLayer },
+  { key: 'parque', label: 'Límite del parque', swatch: '<i class="legend-line parque"></i>', group: () => state.parqueLayer },
   { key: 'lic', label: 'LIC · Red Natura 2000', swatch: '<i class="legend-line lic"></i>', group: () => state.licLayer },
   { key: 'zepa', label: 'ZEPA · Red Natura 2000', swatch: '<i class="legend-line zepa"></i>', group: () => state.zepaLayer },
   { key: 'trails', label: 'Senderos (GR-92)', swatch: '<i class="legend-line trail"></i>', group: () => state.trailLayer },

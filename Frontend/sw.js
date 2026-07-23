@@ -9,11 +9,11 @@
  * Es opcional: si el navegador no admite Service Workers, la app sigue funcionando con la caché en
  * localStorage y Cache Storage que gestiona offline.js.
  */
-var VERSION = 'v15';
+var VERSION = 'v37';
 var RUNTIME_CACHE = 'naturdex-runtime-' + VERSION;
 
 // Armazón mínimo que se intenta precachear en la instalación (best-effort).
-var SHELL_ASSETS = ['index.html', 'Css/styles.css', 'manifest.webmanifest', 'Img/icon-192.png', 'Img/icon-512.png', 'Js/offline.js', 'Js/util.js', 'Js/state.js', 'Js/dom.js', 'Js/data.js', 'Js/render.js', 'Js/map.js', 'Js/layers.js', 'Js/explorer.js', 'Js/audio.js', 'Js/app.js', 'Js/auth.js'];
+var SHELL_ASSETS = ['index.html', 'Css/styles.css', 'manifest.webmanifest', 'Img/icon-192.png', 'Img/icon-512.png', 'Js/offline.js', 'Js/util.js', 'Js/state.js', 'Js/dom.js', 'Js/data.js', 'Js/render.js', 'Js/map.js', 'Js/layers.js', 'Js/explorer.js', 'Js/audio.js', 'Js/glossary.js', 'Js/tutorial.js', 'Js/app.js', 'Js/auth.js', 'Data/glosario.json', 'Data/invasoras.json'];
 
 self.addEventListener('install', function (event) {
   event.waitUntil(
@@ -49,9 +49,19 @@ self.addEventListener('fetch', function (event) {
   // Peticiones a otros dominios (teselas del mapa, CDN de Leaflet): directas a la red, sin gestionar.
   if (url.origin !== self.location.origin) return;
 
+  // El armazón (HTML/CSS/JS) se revalida SIEMPRE contra el servidor (cache: 'no-cache'): sin esto,
+  // la caché HTTP del navegador del móvil podía seguir sirviendo un styles.css / app.js viejo aunque
+  // el Service Worker fuese network-first, y la app "no se actualizaba". Los datos e imágenes usan
+  // la caché normal (rápida). Se detecta por el tipo de destino de la petición.
+  var isShell = req.mode === 'navigate' ||
+                req.destination === 'document' ||
+                req.destination === 'script' ||
+                req.destination === 'style';
+  var netReq = isShell ? new Request(req, { cache: 'no-cache' }) : req;
+
   // Network-first: red si hay; si falla, lo que haya en caché; y para navegaciones, index.html.
   event.respondWith(
-    fetch(req).then(function (res) {
+    fetch(netReq).then(function (res) {
       if (res && res.ok) {
         var copy = res.clone();
         caches.open(RUNTIME_CACHE).then(function (cache) { cache.put(req, copy); });

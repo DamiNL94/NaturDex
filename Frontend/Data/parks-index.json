@@ -20,6 +20,15 @@
                             "center": [37.5016, -1.44925],
                             "path": "Data/parks/murcia/cabo-cope-puntas-calnegre",
                             "manifest": "Data/parks/murcia/cabo-cope-puntas-calnegre/manifest.json"
+                        },
+                        {
+                            "slug": "cuatro-calas",
+                            "name": "Cuatro Calas",
+                            "category": "Paisaje Protegido",
+                            "status": "available",
+                            "center": [37.3825, -1.632],
+                            "path": "Data/parks/murcia/cuatro-calas",
+                            "manifest": "Data/parks/murcia/cuatro-calas/manifest.json"
                         }
                     ]
                 }

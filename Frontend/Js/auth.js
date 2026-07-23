@@ -191,8 +191,32 @@
     return R * 2 * Math.atan2(Math.sqrt(s), Math.sqrt(1 - s));
   }
 
+  // Versión local del diagnóstico de geolocalización de util.js (este script no es un módulo ES y
+  // no puede importarlo). Los navegadores móviles bloquean el GPS sin HTTPS fallando con "permiso
+  // denegado" sin enseñar el diálogo; sin este aviso el usuario no sabe qué tiene que arreglar.
+  function geoBlockedReason() {
+    if (!('geolocation' in navigator)) return 'Este navegador no tiene geolocalización.';
+    if (window.isSecureContext === false) {
+      return 'El navegador bloquea la ubicación porque la app no se está sirviendo por HTTPS. '
+        + 'Abre la app desde una dirección https:// para usar el GPS.';
+    }
+    return null;
+  }
+
+  function geoErrorText(err) {
+    if (err && err.code === 1) {
+      return geoBlockedReason() || ('Permiso de ubicación denegado. Tócalo en el icono de candado/ajustes '
+        + 'junto a la dirección → Permisos → Ubicación → Permitir. Si no aparece, en Android ve a '
+        + 'Ajustes → Aplicaciones → tu navegador → Permisos → Ubicación → Permitir.');
+    }
+    if (err && err.code === 2) return 'No hay señal de ubicación. Comprueba que la ubicación (GPS) del dispositivo está activada.';
+    if (err && err.code === 3) return 'La ubicación tardó demasiado en llegar. Muévete a cielo abierto e inténtalo de nuevo.';
+    return 'No se pudo obtener tu ubicación' + (err && err.message ? ' (' + err.message + ')' : '') + '.';
+  }
+
   function geolocateNearest() {
-    if (!('geolocation' in navigator)) { setSelectStatus('Tu navegador no tiene geolocalización.', true); return; }
+    var blocked = geoBlockedReason();
+    if (blocked) { setSelectStatus(blocked, true); return; }
     setSelectStatus('Buscando tu ubicación…');
     navigator.geolocation.getCurrentPosition(function (pos) {
       var parks = availableParks(registry).filter(function (i) { return i.park.center; });
@@ -206,7 +230,7 @@
       setSelectStatus('Parque más cercano: ' + nearest.park.name + ' (a ' + km + ' km). Cargando…');
       enterPark(nearest.park.slug);
     }, function (err) {
-      setSelectStatus('No se pudo obtener tu ubicación (' + (err.message || 'permiso denegado') + ').', true);
+      setSelectStatus(geoErrorText(err), true);
     }, { enableHighAccuracy: true, timeout: 15000, maximumAge: 60000 });
   }
 
@@ -218,6 +242,8 @@
       showScreen('screen-park');
       if (window.naturdexInvalidateMap) window.naturdexInvalidateMap();
       setSelectStatus('');
+      // Tramo del tutorial dentro del parque: solo la primera vez que este usuario entra a uno.
+      if (window.naturdexTutorial) window.naturdexTutorial.maybeAutoStart('park', currentUser && currentUser.id);
     } catch (e) {
       setSelectStatus('No se pudo cargar el parque. Si estás sin conexión, ábrelo antes una vez con internet.', true);
       console.error(e);
@@ -236,6 +262,8 @@
     // Preselección: si solo hay un parque disponible, dejarlo elegido.
     var avail = availableParks(registry);
     if (avail.length === 1) choosePark(avail[0].park.slug);
+    // Tramo del tutorial de selección de parque: solo la primera vez que este usuario llega aquí.
+    if (window.naturdexTutorial) window.naturdexTutorial.maybeAutoStart('select', currentUser && currentUser.id);
   }
 
   async function goFromCover() {
@@ -244,9 +272,21 @@
     if (currentUser) goToSelect(); else showScreen('screen-auth');
   }
 
+  // --- Invitado (sin cuenta, sin backend) ------------------------------------------------------
+  // Formaliza como usuario real el caso que refreshSession() ya trataba de forma implícita en
+  // offline: un usuario cacheado sin llamar a la API. Sin `id`, progressScope() (data.js) usa el
+  // ámbito 'anon', así que el progreso del invitado es siempre local y nunca intenta sincronizar
+  // con el backend. Es la ruta que hace que la demo funcione en hosting estático (sin Backend/Api).
+  function enterAsGuest() {
+    setUser({ name: 'Invitado' });
+    goToSelect();
+  }
+
   // --- Cableado -------------------------------------------------------------------------------
   function wire() {
     $('#coverStart').addEventListener('click', goFromCover);
+    $('#guestStart').addEventListener('click', enterAsGuest);
+    $('#guestStartAuth').addEventListener('click', enterAsGuest);
     $('#authBack').addEventListener('click', function () { showScreen('screen-cover'); });
     document.querySelectorAll('.auth-tab').forEach(function (t) { t.addEventListener('click', function () { setAuthMode(t.dataset.mode); }); });
     $('#authForm').addEventListener('submit', submitAuth);

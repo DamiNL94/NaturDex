@@ -92,6 +92,8 @@ export function renderMarkers() {
   state.markers.clear();
   state.data.species.forEach(species => {
     if (!state.seenSpecies.has(species.id)) return;
+    // Las especies sin coordenadas (p. ej. las aves de la ZEPA, que vuelan) no llevan marcador.
+    if (!species.coordinates) return;
     const fromGps = state.sightings.has(species.id);
     const marker = L.marker(speciesLatLng(species), { icon: speciesDivIcon(species) });
     marker.bindPopup(
@@ -112,7 +114,7 @@ export function renderPoiMarkers() {
     const marker = L.marker(poi.coordinates, { icon: poiDivIcon(poi, seen) }).addTo(state.poiGroup);
     marker.bindPopup(
       String(html`<div class="poi-popup-image"><img src="${poiImageSrc(poi)}" alt="" loading="lazy"></div><strong>${poi.name}</strong><br><span class="popup-type">${poi.type}</span>${poi.approx ? html`<span class="badge review poi-approx-badge">ubicación aproximada</span>` : ''}<p>${poi.description}</p>${audioBlock(poi, 'Audioguía del punto de interés')}${poi.source ? html`<p class="detail-source">Fuente: ${poi.source}</p>` : ''}<button type="button" class="poi-seen-btn" data-poi="${poi.id}" aria-pressed="${seen ? 'true' : 'false'}">${seen ? '✓ Visitado' : 'Marcar como visitado'}</button>`),
-      { maxWidth: 260 }
+      { maxWidth: 300 }
     );
     marker.on('popupopen', event => {
       const button = event.popup.getElement().querySelector('.poi-seen-btn');
@@ -167,7 +169,9 @@ export function renderProtectedAreas() {
   state.licLayer.clearLayers();
   state.zepaLayer.clearLayers();
   addProtectedLayer(state.parqueLayer, state.geo.parque, PROTECTED_STYLES.parque,
-    p => protectedPopup('Parque Regional', p.nombre || 'Calnegre y Cabo Cope', null, p.Hectareas));
+    // La figura sale de la propiedad `Figura` del propio GeoJSON (Parque Regional, Paisaje Protegido…),
+    // no hardcodeada: este módulo es compartido por todos los parques.
+    p => protectedPopup(p.Figura || 'Espacio protegido', p.nombre || '', null, p.Hectareas));
   addProtectedLayer(state.licLayer, state.geo.lic, PROTECTED_STYLES.lic,
     p => protectedPopup('LIC (Red Natura 2000)', p.SITE_NAME || 'LIC', p.SITE_CODE, p.HECTARES));
   addProtectedLayer(state.zepaLayer, state.geo.zepa, PROTECTED_STYLES.zepa,
@@ -253,6 +257,15 @@ export function setHabitatVisible(habitatId, visible) {
   if (!layer) return;
   if (visible) { if (!state.habitatGroup.hasLayer(layer)) layer.addTo(state.habitatGroup); }
   else state.habitatGroup.removeLayer(layer);
+}
+
+// Aísla un hábitat en el mapa: apaga todos los demás y deja visible solo este (los polígonos se
+// solapan y vistos todos a la vez confunden). El resto queda en state.hiddenHabitats y el usuario
+// puede reactivarlos desde el panel de capas ("Todos" o cada casilla). Lo llama el catálogo al
+// seleccionar un hábitat; el panel de capas hace lo mismo con su botón "Solo".
+export function soloHabitat(habitatId) {
+  (state.data.habitats || []).forEach(h => setHabitatVisible(h.id, h.id === habitatId));
+  if (!map.hasLayer(state.habitatGroup)) state.habitatGroup.addTo(map);
 }
 
 // Encuadra un hábitat en el mapa (y abre su popup si se pide). Lo usan el panel de capas y el

@@ -12,6 +12,7 @@
 //   GET  overview                         → usuario + lista de parques con contadores
 //   GET  list&resource=<r>&park=<slug>    → filas de species|habitats|pois (forma de la BD)
 //   POST save&resource=<r>                → body {park, item:{...}} (item.id>0 actualiza; si no, crea)
+//   POST save_geometry&resource=habitats  → body {park, id, geometry}: guarda/borra el polígono
 //   POST delete&resource=<r>              → body {id}
 //   POST export                           → body {park}: regenera park.json + contadores (offline)
 // ================================================================================================
@@ -60,6 +61,52 @@ function parkIdBySlug($conn, $slug) {
     return $row ? (int) $row["id"] : null;
 }
 function sOrNull($item, $key) { $v = trim((string) ($item[$key] ?? "")); return $v === "" ? null : $v; }
+
+// Convierte un texto (nombre del parque, o un slug tecleado a mano) en un slug seguro para URL/BD:
+// minúsculas ASCII, acentos y ñ transliterados, y cualquier otra cosa colapsada a guiones. Se usa
+// para la clave `slug` de los parques (misma convención que 'cabo-cope-puntas-calnegre'). No depende
+// de la configuración de locale de iconv: la tabla de acentos es explícita para no fallar en Docker.
+function slugify($text) {
+    $text = trim((string) $text);
+    if ($text === "") return "";
+    $from = ['á','à','ä','â','ã','é','è','ë','ê','í','ì','ï','î','ó','ò','ö','ô','õ','ú','ù','ü','û','ñ','ç','Á','À','Ä','Â','Ã','É','È','Ë','Ê','Í','Ì','Ï','Î','Ó','Ò','Ö','Ô','Õ','Ú','Ù','Ü','Û','Ñ','Ç'];
+    $to   = ['a','a','a','a','a','e','e','e','e','i','i','i','i','o','o','o','o','o','u','u','u','u','n','c','a','a','a','a','a','e','e','e','e','i','i','i','i','o','o','o','o','o','u','u','u','u','n','c'];
+    $text = str_replace($from, $to, $text);
+    $text = mb_strtolower($text, "UTF-8");
+    $text = preg_replace('/[^a-z0-9]+/', '-', $text);
+    return trim($text, '-');
+}
+
+// Comprueba que un anillo/estructura de coordenadas GeoJSON sea numérica hasta las hojas [lon,lat].
+// La profundidad esperada: Polygon = 3 ([[[x,y]...]]), MultiPolygon = 4 ([[[[x,y]...]]]).
+function coordsAllNumeric($node, $depth) {
+    if (!is_array($node) || count($node) === 0) return false;
+    if ($depth === 0) {
+        // Hoja: par [lon, lat] con al menos dos números finitos.
+        if (count($node) < 2) return false;
+        foreach ($node as $n) { if (!is_int($n) && !is_float($n)) return false; if (!is_finite($n)) return false; }
+        return true;
+    }
+    foreach ($node as $child) { if (!coordsAllNumeric($child, $depth - 1)) return false; }
+    return true;
+}
+
+// Valida una geometría GeoJSON de área (Polygon o MultiPolygon) con coordenadas numéricas. Devuelve
+// la geometría saneada (solo type + coordinates) o aborta con 400 si no es válida.
+function validatePolygonGeometry($geom) {
+    if (!is_array($geom)) respond(["error" => "La geometría debe ser un objeto GeoJSON."], 400);
+    $type = $geom["type"] ?? "";
+    $coords = $geom["coordinates"] ?? null;
+    if ($type === "Polygon") {
+        if (!coordsAllNumeric($coords, 2)) respond(["error" => "Coordenadas de Polygon no válidas."], 400);
+    } elseif ($type === "MultiPolygon") {
+        if (!coordsAllNumeric($coords, 3)) respond(["error" => "Coordenadas de MultiPolygon no válidas."], 400);
+    } else {
+        respond(["error" => "La geometría debe ser Polygon o MultiPolygon."], 400);
+    }
+    // Se guarda solo la geometría (type + coordinates), sin propiedades ajenas que pudieran colarse.
+    return ["type" => $type, "coordinates" => $coords];
+}
 function numOrNull($item, $key) {
     $v = $item[$key] ?? null;
     if ($v === null || $v === "") return null;
@@ -72,14 +119,24 @@ function numOrNull($item, $key) {
 // ====================================================================================================
 if ($method === "GET" && $action === "overview") {
     $parks = [];
-    $res = $conn->query("SELECT p.id, p.slug, p.name, p.latitude, p.longitude,
+    $res = $conn->query("SELECT p.id, p.slug, p.name, p.category, p.region, p.province, p.municipality,
+        p.description, p.area_hectares, p.coastline_km, p.latitude, p.longitude,
         (SELECT COUNT(*) FROM species s WHERE s.park_id = p.id) AS species_count,
         (SELECT COUNT(*) FROM habitats h WHERE h.park_id = p.id) AS habitats_count,
         (SELECT COUNT(*) FROM points_of_interest x WHERE x.park_id = p.id) AS pois_count
-        FROM parks p ORDER BY p.name");
+        FROM parks p ORDER BY p.category, p.name");
     while ($row = $res->fetch_assoc()) {
         $parks[] = [
+            "id" => (int) $row["id"],
             "slug" => $row["slug"], "name" => $row["name"],
+            // Figura de protección (Parque Natural / Regional / Nacional…): el panel agrupa el
+            // selector por categoría para que el administrador elija el parque correcto de un vistazo.
+            "category" => $row["category"],
+            // Resto de la ficha del parque: el panel las usa para el formulario de edición del parque.
+            "region" => $row["region"], "province" => $row["province"], "municipality" => $row["municipality"],
+            "description" => $row["description"],
+            "area_hectares" => $row["area_hectares"] !== null ? (float) $row["area_hectares"] : null,
+            "coastline_km" => $row["coastline_km"] !== null ? (float) $row["coastline_km"] : null,
             // Centro del parque: el panel lo usa para encuadrar el mini-mapa de coordenadas.
             "latitude" => $row["latitude"] !== null ? (float) $row["latitude"] : null,
             "longitude" => $row["longitude"] !== null ? (float) $row["longitude"] : null,
@@ -99,10 +156,14 @@ if ($method === "GET" && $action === "list") {
     if (!$parkId) respond(["error" => "Parque no encontrado."], 404);
 
     if ($resource === "habitats") {
-        $stmt = $conn->prepare("SELECT id, slug, code, name, habitat_type, description, is_priority, latitude, longitude, color, review_note, audio_url, audio_transcript FROM habitats WHERE park_id = ? ORDER BY name");
+        $stmt = $conn->prepare("SELECT id, slug, code, name, habitat_type, description, is_priority, latitude, longitude, color, geometry, review_note, audio_url, audio_transcript FROM habitats WHERE park_id = ? ORDER BY name");
         $stmt->bind_param("i", $parkId);
         $stmt->execute();
-        respond(["items" => $stmt->get_result()->fetch_all(MYSQLI_ASSOC)]);
+        $rows = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        // La geometría vive como JSON en la BD: se entrega ya parseada (objeto GeoJSON o null) para
+        // que el editor de polígonos del panel la consuma sin volver a parsear.
+        foreach ($rows as &$row) $row["geometry"] = $row["geometry"] !== null ? json_decode($row["geometry"]) : null;
+        respond(["items" => $rows]);
     }
     if ($resource === "pois") {
         $stmt = $conn->prepare("SELECT id, slug, name, type, description, latitude, longitude, image_url, source, is_approx, audio_url, audio_transcript FROM points_of_interest WHERE park_id = ? ORDER BY name");
@@ -226,6 +287,38 @@ if ($method === "POST" && $action === "save") {
 }
 
 // ====================================================================================================
+// POST save_geometry — guarda (o borra) el polígono de un hábitat. La BD es la fuente de verdad de
+// la geometría; el habitats.geojson se regenera desde aquí al "Publicar cambios offline".
+// ====================================================================================================
+if ($method === "POST" && $action === "save_geometry") {
+    if ($resource !== "habitats") respond(["error" => "Solo los hábitats tienen geometría."], 400);
+    $parkId = parkIdBySlug($conn, $body["park"] ?? "");
+    if (!$parkId) respond(["error" => "Parque no encontrado."], 404);
+    $id = (int) ($body["id"] ?? 0);
+    if ($id <= 0) respond(["error" => "Falta el id del hábitat."], 400);
+
+    // geometry ausente o null borra el polígono; en otro caso se valida y se guarda saneada.
+    $raw = $body["geometry"] ?? null;
+    if ($raw === null) {
+        $json = null;
+    } else {
+        $json = json_encode(validatePolygonGeometry($raw), JSON_UNESCAPED_UNICODE);
+    }
+
+    $stmt = $conn->prepare("UPDATE habitats SET geometry = ? WHERE id = ? AND park_id = ?");
+    $stmt->bind_param("sii", $json, $id, $parkId);
+    if (!$stmt->execute()) respond(["error" => "No se pudo guardar la geometría: " . $conn->error], 500);
+    if ($stmt->affected_rows === 0) {
+        // Ni error de SQL ni filas afectadas: el hábitat no existe en ese parque (o no cambió nada).
+        $check = $conn->prepare("SELECT 1 FROM habitats WHERE id = ? AND park_id = ? LIMIT 1");
+        $check->bind_param("ii", $id, $parkId);
+        $check->execute();
+        if (!$check->get_result()->fetch_row()) respond(["error" => "Hábitat no encontrado en este parque."], 404);
+    }
+    respond(["ok" => true, "id" => $id]);
+}
+
+// ====================================================================================================
 // POST delete — por id, siempre acotado al recurso (las FK limpian las relaciones en cascada)
 // ====================================================================================================
 if ($method === "POST" && $action === "delete") {
@@ -236,6 +329,81 @@ if ($method === "POST" && $action === "delete") {
     $stmt = $conn->prepare("DELETE FROM " . $tables[$resource] . " WHERE id = ?");
     $stmt->bind_param("i", $id);
     if (!$stmt->execute()) respond(["error" => "No se pudo eliminar: " . $conn->error], 500);
+    respond(["ok" => true, "deleted" => $stmt->affected_rows]);
+}
+
+// ====================================================================================================
+// POST save_park — crea (id vacío) o actualiza (id>0) la ficha de un parque. Es la raíz de la que
+// cuelgan hábitats/especies/POIs: darlo de alta aquí lo hace aparecer en el selector del panel para
+// rellenar su catálogo desde la GUI. `slug` se normaliza (slugify) y es único entre parques.
+// ====================================================================================================
+if ($method === "POST" && $action === "save_park") {
+    $item = is_array($body["item"] ?? null) ? $body["item"] : [];
+    $id = (int) ($item["id"] ?? 0);
+
+    $name = sOrNull($item, "name");
+    if (!$name) respond(["error" => "El nombre del parque es obligatorio."], 400);
+    // slug: si el administrador teclea uno, se sanea; si lo deja vacío, se deriva del nombre.
+    $slug = slugify(sOrNull($item, "slug") ?? $name);
+    if ($slug === "") respond(["error" => "El slug del parque no es válido (usa letras o números)."], 400);
+    $category = sOrNull($item, "category");
+    if (!$category) respond(["error" => "La figura de protección (categoría) es obligatoria."], 400);
+    $region = sOrNull($item, "region");
+    if (!$region) respond(["error" => "La comunidad autónoma es obligatoria."], 400);
+    $province = sOrNull($item, "province");
+    if (!$province) respond(["error" => "La provincia es obligatoria."], 400);
+    $municipality = sOrNull($item, "municipality");
+    $description = sOrNull($item, "description");
+    $area = numOrNull($item, "area_hectares");
+    $coast = numOrNull($item, "coastline_km");
+    $lat = numOrNull($item, "latitude");
+    $lng = numOrNull($item, "longitude");
+    if ($lat === null || $lng === null) respond(["error" => "El centro del parque (latitud y longitud) es obligatorio."], 400);
+    if ($lat < -90 || $lat > 90 || $lng < -180 || $lng > 180) respond(["error" => "Las coordenadas están fuera de rango."], 400);
+
+    // Unicidad del slug: no puede chocar con OTRO parque (id distinto).
+    $dup = $conn->prepare("SELECT id FROM parks WHERE slug = ? AND id <> ? LIMIT 1");
+    $dup->bind_param("si", $slug, $id);
+    $dup->execute();
+    if ($dup->get_result()->fetch_row()) respond(["error" => "Ya existe un parque con el slug '$slug'. Elige otro."], 409);
+
+    if ($id > 0) {
+        $stmt = $conn->prepare("UPDATE parks SET slug=?, name=?, category=?, region=?, province=?, municipality=?, description=?, area_hectares=?, coastline_km=?, latitude=?, longitude=? WHERE id=?");
+        $stmt->bind_param("sssssssddddi", $slug, $name, $category, $region, $province, $municipality, $description, $area, $coast, $lat, $lng, $id);
+        if (!$stmt->execute()) respond(["error" => "No se pudo guardar el parque: " . $conn->error], 500);
+        if ($stmt->affected_rows === 0) {
+            $chk = $conn->prepare("SELECT 1 FROM parks WHERE id = ? LIMIT 1");
+            $chk->bind_param("i", $id);
+            $chk->execute();
+            if (!$chk->get_result()->fetch_row()) respond(["error" => "Parque no encontrado."], 404);
+        }
+        respond(["ok" => true, "id" => $id, "slug" => $slug]);
+    }
+    $stmt = $conn->prepare("INSERT INTO parks (slug, name, category, region, province, municipality, description, area_hectares, coastline_km, latitude, longitude) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
+    $stmt->bind_param("sssssssdddd", $slug, $name, $category, $region, $province, $municipality, $description, $area, $coast, $lat, $lng);
+    if (!$stmt->execute()) respond(["error" => "No se pudo crear el parque: " . $conn->error], 500);
+    respond(["ok" => true, "id" => $conn->insert_id, "slug" => $slug]);
+}
+
+// ====================================================================================================
+// POST delete_park — elimina un parque, pero SOLO si está vacío. La FK ON DELETE CASCADE borraría en
+// silencio todo su catálogo (hábitats/especies/POIs y sus relaciones), así que se exige vaciarlo
+// antes a mano: es una salvaguarda contra borrar el trabajo de un parque por un clic accidental.
+// ====================================================================================================
+if ($method === "POST" && $action === "delete_park") {
+    $parkId = parkIdBySlug($conn, $body["park"] ?? "");
+    if (!$parkId) respond(["error" => "Parque no encontrado."], 404);
+    $tables = ["especies" => "species", "hábitats" => "habitats", "puntos de interés" => "points_of_interest"];
+    foreach ($tables as $label => $table) {
+        $c = $conn->prepare("SELECT COUNT(*) AS n FROM $table WHERE park_id = ?");
+        $c->bind_param("i", $parkId);
+        $c->execute();
+        $n = (int) $c->get_result()->fetch_assoc()["n"];
+        if ($n > 0) respond(["error" => "El parque todavía tiene contenido ($n $label). Vacíalo antes de eliminarlo."], 409);
+    }
+    $stmt = $conn->prepare("DELETE FROM parks WHERE id = ?");
+    $stmt->bind_param("i", $parkId);
+    if (!$stmt->execute()) respond(["error" => "No se pudo eliminar el parque: " . $conn->error], 500);
     respond(["ok" => true, "deleted" => $stmt->affected_rows]);
 }
 

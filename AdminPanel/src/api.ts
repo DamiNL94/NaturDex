@@ -35,8 +35,18 @@ export async function api<T>(path: string, body?: unknown): Promise<T> {
 export type Resource = 'species' | 'habitats' | 'pois';
 
 export interface Park {
+  /** id de la BD: identifica el parque en save_park al editar (id>0). */
+  id: number;
   slug: string;
   name: string;
+  /** Figura de protección (Parque Natural / Regional / Nacional…): agrupa el selector de parque. */
+  category: string;
+  region: string;
+  province: string;
+  municipality: string | null;
+  description: string | null;
+  area_hectares: number | null;
+  coastline_km: number | null;
   /** Centro del parque (null si no está definido en la BD): encuadre del mini-mapa. */
   latitude: number | null;
   longitude: number | null;
@@ -45,13 +55,36 @@ export interface Park {
   pois: number;
 }
 
+/** Campos editables de un parque enviados a save_park (id 0 = alta). */
+export interface ParkInput {
+  id: number;
+  slug: string;
+  name: string;
+  category: string;
+  region: string;
+  province: string;
+  municipality: string;
+  description: string;
+  area_hectares: string;
+  coastline_km: string;
+  latitude: string;
+  longitude: string;
+}
+
 export interface Overview {
   user: { email: string; name: string };
   parks: Park[];
 }
 
+/** Geometría GeoJSON de área de un hábitat (lo único que se guarda en habitats.geometry). */
+export interface PolygonGeometry {
+  type: 'Polygon' | 'MultiPolygon';
+  // Polygon: number[][][]  ·  MultiPolygon: number[][][][]. Se deja laxo para no duplicar el tipo.
+  coordinates: unknown;
+}
+
 /** Fila cruda de la BD: columnas variables según el recurso (mismos nombres que en MySQL). */
-export type Item = { id: number; habitat_ids?: number[] } & Record<string, unknown>;
+export type Item = { id: number; habitat_ids?: number[]; geometry?: PolygonGeometry | null } & Record<string, unknown>;
 
 export interface ExportResult {
   ok: boolean;

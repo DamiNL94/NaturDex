@@ -96,4 +96,3 @@ if ($action === "login") {
 }
 
 respond(["error" => "Acción no reconocida."], 400);
-?>

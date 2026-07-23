@@ -6,10 +6,22 @@
   "scripts": {
     "validate": "node Tools/validate-park-data.js",
     "export:park": "php Tools/export-park.php",
+    "export:glossary": "php Tools/export-glossary.php",
+    "export:invasoras": "php Tools/export-invasoras.php",
     "db:status": "node Tools/db-sync/db-sync.js status",
     "db:pull": "node Tools/db-sync/db-sync.js pull",
     "db:push": "node Tools/db-sync/db-sync.js push",
     "db:backup": "node Tools/db-sync/db-sync.js backup",
-    "hooks:install": "git config core.hooksPath .githooks"
+    "hooks:install": "git config core.hooksPath .githooks",
+    "habitats:build": "node Tools/catalogo-nacional/build-habitats.js",
+    "habitats:merge": "node Tools/catalogo-nacional/merge-habitats.js",
+    "atlas:hic": "node Tools/catalogo-nacional/atlas-hic-especies.js",
+    "invasoras:eei": "node Tools/catalogo-nacional/invasoras-eei.js",
+    "eidos:diff": "node Tools/eidos-diff.js",
+    "gbif:habitats": "node Tools/gbif-habitats.js"
+  },
+  "//dependencies": "polygon-clipping es la ÚNICA dependencia del repo. La usa el pipeline geográfico de Tools/catalogo-nacional (recorte de hábitats contra el límite del parque). Un recorte propio (Greiner-Hormann) falla con los tramos de costa colineales; ver Tools/catalogo-nacional/README.md. El resto del tooling sigue siendo zero-dep y la app (Frontend) no depende de nada.",
+  "dependencies": {
+    "polygon-clipping": "^0.15.7"
   }
 }

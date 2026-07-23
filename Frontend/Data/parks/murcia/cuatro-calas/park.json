@@ -1,0 +1,23 @@
+{
+  "park": {
+    "slug": "cuatro-calas",
+    "name": "Cuatro Calas",
+    "category": "Paisaje Protegido",
+    "region": "Región de Murcia",
+    "province": "Murcia",
+    "municipalities": [
+      "Águilas"
+    ],
+    "center": [
+      37.3825,
+      -1.632
+    ],
+    "coastlineKm": 0,
+    "summary": "Paisaje Protegido del litoral suroccidental de Águilas: cuatro calas vírgenes (Calarreona, La Higuerica, La Carolina y Los Cocedores) con ramblas y lomas semidesérticas, en el límite con la provincia de Almería.",
+    "boundary": [],
+    "boundaryNote": "Límite oficial del Paisaje Protegido servido en geo/parque.geojson (IMIDA/CARM, 222 ha, ENP000007)."
+  },
+  "habitats": [],
+  "pointsOfInterest": [],
+  "species": []
+}

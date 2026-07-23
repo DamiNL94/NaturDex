@@ -29,6 +29,7 @@
             <h1 class="cover-title">NaturDex</h1>
             <p class="cover-sub">Explora, identifica y cataloga la flora y la fauna de los parques naturales y nacionales de España.</p>
             <button id="coverStart" type="button" class="btn-primary">Comenzar</button>
+            <button id="guestStart" type="button" class="link-btn">Explorar como invitado, sin cuenta →</button>
             <p class="cover-foot">Prototipo · Parque piloto: Cabo Cope y Puntas de Calnegre</p>
         </div>
     </section>
@@ -56,6 +57,7 @@
                 <p class="auth-error" id="authError" role="alert" hidden></p>
                 <button type="submit" class="btn-primary" id="authSubmit">Entrar</button>
             </form>
+            <button class="link-btn" type="button" id="guestStartAuth">Explorar como invitado, sin cuenta →</button>
             <button class="link-btn" type="button" id="authBack">← Volver a la portada</button>
         </div>
     </section>
@@ -65,7 +67,7 @@
         <div class="select-panel">
             <div class="select-head">
                 <div><p class="eyebrow">NaturDex</p><h2>Elige un parque</h2></div>
-                <div class="park-user"><span id="userNameSelect" class="user-name"></span><button id="logoutBtnSelect" class="icon-btn" type="button" title="Cerrar sesión" aria-label="Cerrar sesión"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg></button></div>
+                <div class="park-user"><span id="userNameSelect" class="user-name"></span><button id="tutorialBtnSelect" class="icon-btn" type="button" title="Ver el tutorial" aria-label="Ver el tutorial"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></button><button id="logoutBtnSelect" class="icon-btn" type="button" title="Cerrar sesión" aria-label="Cerrar sesión"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg></button></div>
             </div>
             <p class="select-hint">Selecciónalo en el mapa o en la lista. Así solo se carga la información del parque que vas a explorar, sin saturar el mapa.</p>
             <label class="select-field">Parque
@@ -85,7 +87,7 @@
             <aside class="sidebar" aria-label="Panel de exploración NaturDex">
                 <div class="park-nav">
                     <button type="button" id="backToParks" class="link-btn">← Parques</button>
-                    <div class="park-user"><span id="userName" class="user-name"></span><button id="logoutBtn" class="icon-btn" type="button" title="Cerrar sesión" aria-label="Cerrar sesión"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg></button></div>
+                    <div class="park-user"><span id="userName" class="user-name"></span><button id="tutorialBtn" class="icon-btn" type="button" title="Ver el tutorial" aria-label="Ver el tutorial"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></button><button id="logoutBtn" class="icon-btn" type="button" title="Cerrar sesión" aria-label="Cerrar sesión"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg></button></div>
                 </div>
                 <section class="park-summary">
                     <p class="eyebrow">NaturDex piloto</p>
@@ -109,6 +111,7 @@
                      muestran/ocultan enteros y no hay relación tab/tabpanel navegable) -->
                 <div class="view-tabs" role="group" aria-label="Vistas de NaturDex">
                     <button class="view-tab active" type="button" data-view="catalog" aria-pressed="true">Catálogo</button>
+                    <button class="view-tab" type="button" data-view="invasoras" aria-pressed="false">Invasoras</button>
                     <button class="view-tab" type="button" data-view="progress" aria-pressed="false">Progreso</button>
                 </div>
                 <div class="catalog-crumb" id="catalogCrumb" hidden>
@@ -130,6 +133,7 @@
                     <div id="speciesList" class="species-list"></div>
                 </section>
                 <section class="progress-panel" id="progressPanel" aria-label="Progreso de exploración" hidden></section>
+                <section class="species-panel invasoras-panel" id="invasorasPanel" aria-label="Especies exóticas invasoras" hidden></section>
             </aside>
             <section class="map-stage" aria-label="Mapa y ficha de especie">
                 <div id="map" aria-label="Mapa interactivo del parque"></div>
@@ -140,7 +144,10 @@
                     <div id="layersPanel" class="layers-panel" role="group" hidden aria-label="Capas y leyenda del mapa"></div>
                 </div>
                 <!-- En escritorio la ficha es la columna derecha; en móvil, .detail-dock se
-                     convierte en una bottom-sheet deslizante sobre la vista activa. -->
+                     convierte en una bottom-sheet deslizante sobre la vista activa. El velo
+                     (.sheet-scrim) atenúa el fondo detrás de la hoja en móvil y, al tocarlo, la
+                     cierra. En escritorio no existe (display:none). -->
+                <div class="sheet-scrim" id="sheetScrim" aria-hidden="true"></div>
                 <div class="detail-dock">
                     <div class="sheet-bar">
                         <span class="sheet-grip" aria-hidden="true"></span>
@@ -167,6 +174,7 @@
         <nav class="mobile-nav" aria-label="Secciones de NaturDex">
             <button type="button" class="mobile-nav-btn active" data-mtab="catalog" aria-current="true"><span aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg></span>Catálogo</button>
             <button type="button" class="mobile-nav-btn" data-mtab="map"><span aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></span>Mapa</button>
+            <button type="button" class="mobile-nav-btn" data-mtab="invasoras"><span aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>Invasoras</button>
             <button type="button" class="mobile-nav-btn" data-mtab="progress"><span aria-hidden="true"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="6"/><polyline points="8.5 13.5 7 22 12 19 17 22 15.5 13.5"/></svg></span>Progreso</button>
         </nav>
     </section>

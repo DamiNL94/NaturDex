@@ -111,4 +111,3 @@ if ($method === "POST") {
 
 http_response_code(405);
 echo json_encode(["error" => "Método no permitido. Usa GET o POST."]);
-?>

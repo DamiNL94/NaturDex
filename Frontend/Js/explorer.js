@@ -3,15 +3,16 @@
 // ------------------------------------------------------------------------------------------------
 // Módulo ES importado por app.js. Sigue la posición real del usuario (watchPosition) y, además de
 // listar lo más cercano ordenado por distancia, DETECTA dónde está: si entra en el radio de un
-// punto de interés (~60 m) ofrece marcarlo como visitado con un toque, y si está dentro del
-// polígono de un hábitat le dice qué especies puede descubrir ahí. Es la mecánica pokédex en
-// campo: pasear por el parque hace que la app reaccione, en vez de tener que buscar en listas.
+// punto de interés (~60 m) ofrece marcarlo como visitado con un toque, y si entra en el polígono
+// de un hábitat le pregunta con un diálogo si quiere ver las especies de ese hábitat. Es la
+// mecánica pokédex en campo: pasear por el parque hace que la app reaccione, en vez de tener que
+// buscar en listas.
 //
 // No conoce la lógica de vistas: las acciones (marcar POI, abrir el catálogo de un hábitat) las
 // inyecta app.js en initExplorer(), igual que hace map.js con setMapHandlers().
 // ================================================================================================
 
-import { html, poiEmoji, haversineMeters, pointInGeometry, iconMarkup, icon } from './util.js';
+import { html, poiEmoji, haversineMeters, pointInGeometry, iconMarkup, icon, geoUnavailableReason, geoErrorMessage } from './util.js';
 import { state, isHabitatComplete } from './state.js';
 import {
   explorerToggle, nearbyPanel, nearbyStatus, nearbyList, nearbyClose, explorerHint, followToggle
@@ -25,7 +26,7 @@ const HABITAT_CIRCLE_METERS = 420;
 
 const handlers = {
   onTogglePoiSeen: null,      // (poiId) desde el botón "Marcar visitado" del aviso
-  onShowHabitatSpecies: null  // (habitatId) desde el botón "Ver especies" del aviso
+  onShowHabitatSpecies: null  // (habitatId) desde el "Sí, ver especies" del diálogo de hábitat
 };
 
 // Avisos ya mostrados en esta sesión de exploración (para no repetir el mismo al ritmo del GPS).
@@ -111,6 +112,80 @@ function hideHint() {
   explorerHint.hidden = true;
 }
 
+// --- Pregunta de hábitat -----------------------------------------------------------------------------
+// Al pisar un hábitat con especies catalogadas la app pregunta de frente (diálogo modal con Sí/No)
+// si se quiere abrir su catálogo, en vez del banner discreto que se reserva para los POI. El
+// overlay se crea perezosamente la primera vez (mismo patrón que el tutorial).
+let habitatPromptEl = null;
+let habitatPromptOpener = null;
+
+function ensureHabitatPrompt() {
+  if (habitatPromptEl) return habitatPromptEl;
+  habitatPromptEl = document.createElement('div');
+  habitatPromptEl.className = 'habitat-prompt';
+  habitatPromptEl.hidden = true;
+  habitatPromptEl.innerHTML =
+    '<div class="habitat-prompt-backdrop" data-prompt-close></div>' +
+    '<div class="habitat-prompt-card" role="dialog" aria-modal="true" aria-labelledby="habitatPromptTitle" aria-describedby="habitatPromptText" tabindex="-1">' +
+      '<span class="habitat-prompt-icon" aria-hidden="true">🌿</span>' +
+      '<h3 id="habitatPromptTitle"></h3>' +
+      '<p id="habitatPromptText"></p>' +
+      '<div class="habitat-prompt-actions">' +
+        '<button type="button" class="habitat-prompt-no" data-prompt-close>Ahora no</button>' +
+        '<button type="button" class="habitat-prompt-yes">Sí, ver especies</button>' +
+      '</div>' +
+    '</div>';
+  document.body.appendChild(habitatPromptEl);
+
+  habitatPromptEl.addEventListener('click', event => {
+    const yes = event.target.closest('.habitat-prompt-yes');
+    if (yes) {
+      const id = yes.dataset.habitatId;
+      hideHabitatPrompt();
+      if (handlers.onShowHabitatSpecies) handlers.onShowHabitatSpecies(id);
+      return;
+    }
+    if (event.target.closest('[data-prompt-close]')) hideHabitatPrompt();
+  });
+  habitatPromptEl.addEventListener('keydown', event => {
+    if (event.key === 'Escape') { event.preventDefault(); hideHabitatPrompt(); return; }
+    if (event.key !== 'Tab') return;
+    // Diálogo modal con dos botones: el foco rebota entre ellos y no se escapa al mapa de detrás.
+    const noBtn = habitatPromptEl.querySelector('.habitat-prompt-no');
+    const yesBtn = habitatPromptEl.querySelector('.habitat-prompt-yes');
+    if (event.shiftKey && document.activeElement !== yesBtn) { event.preventDefault(); yesBtn.focus(); }
+    else if (!event.shiftKey && document.activeElement === yesBtn) { event.preventDefault(); noBtn.focus(); }
+  });
+  return habitatPromptEl;
+}
+
+function askHabitatSpecies(habitat, unseen, total) {
+  const key = 'hab:' + habitat.id;
+  if (shownKeys.has(key)) return; // cada hábitat pregunta una vez por sesión de exploración
+  shownKeys.add(key);
+  const el = ensureHabitatPrompt();
+  el.querySelector('#habitatPromptTitle').textContent = 'Estás en ' + habitat.name;
+  el.querySelector('#habitatPromptText').textContent = unseen > 0
+    ? '¿Quieres ver las especies de este hábitat? Te ' + (unseen === 1 ? 'queda 1' : 'quedan ' + unseen) + ' de ' + total + ' por descubrir.'
+    : '¡Hábitat completo! 🏅 ¿Quieres repasar sus ' + total + ' especies?';
+  el.querySelector('.habitat-prompt-yes').dataset.habitatId = String(habitat.id);
+  // El foco pasa al diálogo y al cerrarlo vuelve a donde estaba: la pregunta no puede pasar
+  // desapercibida, que es justo lo que la distingue del banner de los POI.
+  habitatPromptOpener = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+  el.hidden = false;
+  el.querySelector('.habitat-prompt-card').focus({ preventScroll: true });
+  if (navigator.vibrate) navigator.vibrate(80);
+}
+
+function hideHabitatPrompt() {
+  if (!habitatPromptEl || habitatPromptEl.hidden) return;
+  habitatPromptEl.hidden = true;
+  if (habitatPromptOpener && document.contains(habitatPromptOpener) && habitatPromptOpener.getClientRects().length) {
+    habitatPromptOpener.focus({ preventScroll: true });
+  }
+  habitatPromptOpener = null;
+}
+
 function checkDiscoveries(lat, lng) {
   // Prioridad al POI (es lo más concreto): el más cercano sin visitar dentro del radio.
   const poiHit = (state.data.pointsOfInterest || [])
@@ -133,19 +208,22 @@ function checkDiscoveries(lat, lng) {
     if (habitat) {
       const total = (habitat.speciesIds || []).length;
       const unseen = (habitat.speciesIds || []).filter(id => !state.seenSpecies.has(id)).length;
-      const caption = unseen > 0
-        ? unseen + (unseen === 1 ? ' especie por descubrir aquí' : ' especies por descubrir aquí')
-        : (total > 0 ? '¡Hábitat completo! 🏅' : 'Sin especies catalogadas todavía');
-      showHint('hab:' + habitat.id, html`<span class="hint-icon" aria-hidden="true">🌿</span><span class="hint-body"><strong>Estás en ${habitat.name}</strong><span>${caption}</span></span><span class="hint-actions">${unseen > 0 ? html`<button type="button" class="hint-primary" data-hint-habitat="${habitat.id}">Ver especies</button>` : ''}<button type="button" class="hint-close" data-hint-close aria-label="Cerrar aviso">${icon('close', 14)}</button></span>`);
+      if (total > 0) {
+        askHabitatSpecies(habitat, unseen, total);
+      } else {
+        // Sin especies catalogadas no hay pregunta que hacer: basta el aviso discreto de siempre.
+        showHint('hab:' + habitat.id, html`<span class="hint-icon" aria-hidden="true">🌿</span><span class="hint-body"><strong>Estás en ${habitat.name}</strong><span>Sin especies catalogadas todavía</span></span><span class="hint-actions"><button type="button" class="hint-close" data-hint-close aria-label="Cerrar aviso">${icon('close', 14)}</button></span>`);
+      }
     }
   }
 }
 
 // --- Arranque / parada del modo explorador ----------------------------------------------------------
 function startExplorerMode() {
-  if (!('geolocation' in navigator)) {
+  const blocked = geoUnavailableReason();
+  if (blocked) {
     nearbyPanel.hidden = false;
-    nearbyStatus.textContent = 'Tu navegador no admite geolocalización.';
+    nearbyStatus.textContent = blocked;
     return;
   }
   state.explorerActive = true;
@@ -166,7 +244,7 @@ function startExplorerMode() {
       checkDiscoveries(lat, lng);
     },
     error => {
-      nearbyStatus.textContent = 'No se pudo obtener tu posición (' + (error.message || 'permiso denegado') + ').';
+      nearbyStatus.textContent = geoErrorMessage(error);
     },
     // maximumAge bajo: para seguir el paso del usuario hacen falta posiciones frescas, no cacheadas.
     { enableHighAccuracy: true, maximumAge: 3000, timeout: 20000 }
@@ -179,6 +257,7 @@ function stopExplorerMode() {
   explorerToggle.innerHTML = iconMarkup('pin', 14) + ' Modo explorador';
   nearbyPanel.hidden = true;
   hideHint();
+  hideHabitatPrompt();
   setFollow(false);
   lastFix = null;
   currentHabitatId = null;
@@ -228,12 +307,6 @@ export function initExplorer(h) {
     const poiBtn = event.target.closest('[data-hint-poi]');
     if (poiBtn) {
       if (handlers.onTogglePoiSeen) handlers.onTogglePoiSeen(poiBtn.dataset.hintPoi);
-      hideHint();
-      return;
-    }
-    const habBtn = event.target.closest('[data-hint-habitat]');
-    if (habBtn) {
-      if (handlers.onShowHabitatSpecies) handlers.onShowHabitatSpecies(habBtn.dataset.hintHabitat);
       hideHint();
       return;
     }

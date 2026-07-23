@@ -184,6 +184,41 @@ export function pointInGeometry(lat, lng, geometry) {
   });
 }
 
+// --- Geolocalización: diagnóstico ---------------------------------------------------------------
+// Los navegadores móviles (Chrome/Android sobre todo) bloquean la geolocalización si la página no
+// se sirve en contexto seguro (HTTPS o localhost): fallan al instante con "permission denied" SIN
+// mostrar el diálogo de permiso, lo que despista por completo. Estas dos funciones traducen cada
+// caso a un mensaje accionable en castellano, para que el usuario sepa si tiene que cambiar la URL,
+// tocar los permisos de Android o simplemente salir a cielo abierto.
+
+/** Motivo por el que la geolocalización no puede funcionar aquí, o null si sí puede intentarse. */
+export function geoUnavailableReason() {
+  if (!('geolocation' in navigator)) return 'Este navegador no tiene geolocalización.';
+  if (window.isSecureContext === false) {
+    return 'El navegador bloquea la ubicación porque la app no se está sirviendo por HTTPS. '
+      + 'Abre la app desde una dirección https:// para usar el GPS.';
+  }
+  return null;
+}
+
+/** Mensaje accionable a partir del GeolocationPositionError (códigos 1/2/3). */
+export function geoErrorMessage(error) {
+  const code = error && error.code;
+  if (code === 1) { // PERMISSION_DENIED
+    if (window.isSecureContext === false) return geoUnavailableReason();
+    return 'Permiso de ubicación denegado. Tócalo en el icono de candado/ajustes junto a la '
+      + 'dirección → Permisos → Ubicación → Permitir. Si no aparece, en Android ve a '
+      + 'Ajustes → Aplicaciones → tu navegador → Permisos → Ubicación → Permitir.';
+  }
+  if (code === 2) { // POSITION_UNAVAILABLE
+    return 'No hay señal de ubicación. Comprueba que la ubicación (GPS) del dispositivo está activada.';
+  }
+  if (code === 3) { // TIMEOUT
+    return 'La ubicación tardó demasiado en llegar. Muévete a cielo abierto e inténtalo de nuevo.';
+  }
+  return 'No se pudo obtener tu posición' + (error && error.message ? ' (' + error.message + ')' : '') + '.';
+}
+
 // --- Geodistancia (Haversine, en metros) --------------------------------------------------------
 export function haversineMeters(lat1, lng1, lat2, lng2) {
   const R = 6371000;

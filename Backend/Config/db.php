@@ -29,4 +29,3 @@ if (!$conn->set_charset($charset)) {
     echo json_encode(["error" => "Database charset error."]);
     exit;
 }
-?>

@@ -22,7 +22,7 @@ function buildParkPayload($conn, $parkSlug) {
     if (!$park) return null;
 
     // --- Hábitats ---------------------------------------------------------------------------------
-    $habitatStmt = $conn->prepare("SELECT id, slug, code, name, habitat_type, description, is_priority, latitude, longitude, color, review_note, audio_url, audio_transcript FROM habitats WHERE park_id = ? ORDER BY name");
+    $habitatStmt = $conn->prepare("SELECT id, slug, code, name, habitat_type, description, is_priority, latitude, longitude, color, review_note, hic_subtipos, fitosociologia, audio_url, audio_transcript, image_url FROM habitats WHERE park_id = ? ORDER BY name");
     $habitatStmt->bind_param("i", $park["id"]);
     $habitatStmt->execute();
     $habitatResult = $habitatStmt->get_result();
@@ -45,10 +45,14 @@ function buildParkPayload($conn, $parkSlug) {
                 ? [(float) $row["latitude"], (float) $row["longitude"]]
                 : null,
             "color" => $row["color"],
-            // Foto del hábitat por convención (Img/habitats/<slug>.jpg). Si el archivo aún no existe,
-            // el frontend muestra una portada temática generada; al subir la foto con ese nombre,
-            // aparece automáticamente.
-            "image" => "Img/habitats/" . $slug . ".jpg",
+            // Foto del hábitat. Si la BD tiene una image_url (URL externa o ruta), se usa esa; si no,
+            // se cae en la convención de archivo local Img/habitats/<slug>.jpg. Cuando no existe ni la
+            // URL ni el archivo, el frontend muestra una portada temática generada.
+            "image" => (!empty($row["image_url"]) ? $row["image_url"] : "Img/habitats/" . $slug . ".jpg"),
+            // Subtipos HIC y asociaciones fitosociológicas oficiales (Cartografía de Hábitats
+            // MITECO/BDN + planes de gestión). El frontend las pinta en el detalle del hábitat.
+            "hicSubtipos" => $row["hic_subtipos"] !== null ? json_decode($row["hic_subtipos"], true) : null,
+            "fitosociologia" => $row["fitosociologia"] !== null ? json_decode($row["fitosociologia"], true) : null,
             "reviewNote" => $row["review_note"],
             // Audioguía del hábitat (opcional): ruta del audio + transcripción accesible.
             "audio" => $row["audio_url"],
@@ -77,7 +81,7 @@ function buildParkPayload($conn, $parkSlug) {
     }
 
     // --- Especies ---------------------------------------------------------------------------------
-    $speciesStmt = $conn->prepare("SELECT id, common_name, scientific_name, kingdom, family, primary_habitat, conservation_status, description, identification_tips, seasonality, image_url, latitude, longitude, rarity_score, is_featured, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, spain_status, murcia_status, review_note FROM species WHERE park_id = ? ORDER BY is_featured DESC, common_name ASC");
+    $speciesStmt = $conn->prepare("SELECT id, common_name, scientific_name, kingdom, family, primary_habitat, conservation_status, description, identification_tips, seasonality, image_url, image_attribution, latitude, longitude, rarity_score, is_featured, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, spain_status, murcia_status, review_note, eidos_taxonid, gbif_species_key, zepa_site_code FROM species WHERE park_id = ? ORDER BY is_featured DESC, common_name ASC");
     $speciesStmt->bind_param("i", $park["id"]);
     $speciesStmt->execute();
     $result = $speciesStmt->get_result();
@@ -95,7 +99,12 @@ function buildParkPayload($conn, $parkSlug) {
             "tips" => array_values(array_filter(array_map("trim", explode(";", $row["identification_tips"] ?? "")))),
             "seasonality" => $row["seasonality"],
             "image" => $row["image_url"],
-            "coordinates" => [(float) $row["latitude"], (float) $row["longitude"]],
+            "imageAttribution" => $row["image_attribution"] ?? null,
+            // Coordenadas null para las especies sin punto fijo (p. ej. las aves de la ZEPA, que
+            // vuelan): la app no les pinta marcador en el mapa y las muestra en su apartado propio.
+            "coordinates" => ($row["latitude"] !== null && $row["longitude"] !== null)
+                ? [(float) $row["latitude"], (float) $row["longitude"]]
+                : null,
             "rarityScore" => (int) $row["rarity_score"],
             "featured" => (bool) $row["is_featured"],
             "source" => $row["source"],
@@ -111,6 +120,12 @@ function buildParkPayload($conn, $parkSlug) {
             "spainStatus" => $row["spain_status"],
             "murciaStatus" => $row["murcia_status"],
             "reviewNote" => $row["review_note"],
+            // Claves maestras de reconciliación taxonómica (trazabilidad, también en la copia offline):
+            // EIDOS (IEPNB) canónica; GBIF speciesKey liga las ocurrencias. null si la fuente no cubre.
+            "eidosTaxonId" => $row["eidos_taxonid"] !== null ? (int) $row["eidos_taxonid"] : null,
+            "gbifSpeciesKey" => $row["gbif_species_key"] !== null ? (int) $row["gbif_species_key"] : null,
+            // Código del espacio ZEPA si el ave figura en su lista oficial (EEA/BISE); null si no aplica.
+            "zepaSiteCode" => $row["zepa_site_code"],
             "habitatIds" => $speciesIdToHabitatSlugs[(int) $row["id"]] ?? []
         ];
     }

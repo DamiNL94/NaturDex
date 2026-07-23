@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NaturDex · capa de hábitats fusionada (oficial + curada)</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+  :root { --bg:#0f172a; --panel:#111c33; --ink:#e5edf7; --muted:#93a4bd; }
+  html,body { margin:0; height:100%; background:var(--bg); color:var(--ink); font:14px/1.4 system-ui,sans-serif; }
+  #wrap { display:grid; grid-template-columns: 320px 1fr; height:100vh; }
+  #side { background:var(--panel); padding:16px; overflow:auto; border-right:1px solid #22304d; }
+  #map { height:100vh; background:#0b1526; }
+  .leaflet-container { background:#0b1526; }
+  h1 { font-size:16px; margin:0 0 4px; }
+  .sub { color:var(--muted); font-size:12px; margin:0 0 14px; }
+  .legend h2 { font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); margin:14px 0 6px; }
+  .row { display:flex; align-items:center; gap:8px; padding:3px 0; font-size:13px; }
+  .sw { width:14px; height:14px; border-radius:3px; flex:0 0 auto; border:1px solid rgba(255,255,255,.25); }
+  .star { color:#fbbf24; }
+  .badge { display:inline-block; font-size:10px; padding:1px 6px; border-radius:999px; background:#1e3a5f; color:#cfe3ff; margin-left:4px; }
+  .stat { display:flex; gap:10px; flex-wrap:wrap; margin:8px 0 4px; }
+  .stat div { background:#0c1730; border:1px solid #22304d; border-radius:8px; padding:6px 10px; }
+  .stat b { font-size:18px; display:block; }
+  .leaflet-popup-content { font:13px/1.45 system-ui,sans-serif; }
+  .pp h3 { margin:0 0 4px; font-size:14px; }
+  .pp .k { color:#556; font-size:11px; text-transform:uppercase; letter-spacing:.04em; margin-top:6px; }
+  .pp .fito { font-style:italic; color:#334; }
+  .pp .tag { display:inline-block; background:#eef3fb; border-radius:4px; padding:1px 6px; margin:2px 3px 0 0; font-size:12px; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <div id="side">
+    <h1>Hábitats · Cabo Cope y Puntas de Calnegre</h1>
+    <p class="sub">Capa <b>fusionada</b>: oficial MITECO (Directiva 92/43, HIC + asociación + prioridad)
+      enriqueciendo la capa curada. Pincha un polígono para ver su ficha.</p>
+    <div class="stat" id="stats"></div>
+    <div class="legend">
+      <h2>Tipo de hábitat</h2>
+      <div id="legType"></div>
+      <h2>Hábitats (★ = prioritario Anexo I)</h2>
+      <div id="legList"></div>
+    </div>
+  </div>
+  <div id="map"></div>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+// Lee el geojson REAL ya adoptado en los datos del parque (producción), no una copia.
+const MERGED = '/Frontend/Data/parks/murcia/cabo-cope-puntas-calnegre/geo/habitats.geojson';
+const BOUND  = '/Frontend/Data/parks/murcia/cabo-cope-puntas-calnegre/geo/parque-regional.geojson';
+const COLORS = { 'Litoral':'#38bdf8', 'Terrestre':'#84cc16', 'Marino':'#a78bfa', 'Salino':'#f59e0b',
+  'Dunas':'#fcd34d', 'Matorral':'#65a30d', 'Roquedos':'#f472b6', 'Pastos':'#a3e635', 'Ribera':'#22d3ee',
+  'Acuático':'#60a5fa', 'Bosque':'#16a34a', 'Hábitat':'#94a3b8' };
+
+const map = L.map('map', { zoomControl:true });
+// Sin tiles externos (evita depender de red para renderizar): los hábitats se pintan sobre fondo sólido.
+// Para volver a un basemap real, descomenta:
+// L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap',maxZoom:19}).addTo(map);
+
+Promise.all([fetch(MERGED).then(r=>r.json()), fetch(BOUND).then(r=>r.json())]).then(([merged, bound])=>{
+  // Límite del parque
+  const boundary = L.geoJSON(bound, { style:{ color:'#e5edf7', weight:2, dashArray:'6 4', fill:false } }).addTo(map);
+
+  const style = f => {
+    const c = COLORS[f.properties.type] || COLORS['Hábitat'];
+    return { color: f.properties.priority ? '#fbbf24' : c, weight: f.properties.priority ? 2.5 : 1,
+             fillColor: c, fillOpacity: f.properties.origen ? 0.75 : 0.5 };
+  };
+  const layer = L.geoJSON(merged, {
+    style,
+    onEachFeature: (f, lyr) => {
+      const p = f.properties;
+      const fito = (p.fitosociologia||[]).map(s=>`<div class="fito">· ${s}</div>`).join('') || '<span style="color:#889">—</span>';
+      const sub = (p.hic_subtipos||[p.code]).map(s=>`<span class="tag">${s}</span>`).join('');
+      lyr.bindPopup(`<div class="pp">
+        <h3>${p.priority?'★ ':''}${p.name||p.code}</h3>
+        <div><b>HIC ${p.code}</b> · ${p.type||''} ${p.origen?'<span class="badge">añadido oficial</span>':(p.solo_curada?'<span class="badge">curada</span>':'<span class="badge">enriquecido</span>')}</div>
+        <div class="k">Subtipos HIC</div>${sub}
+        <div class="k">Asociación fitosociológica (oficial)</div>${fito}
+        <div class="k">Superficie</div>${p.hectares!=null?p.hectares+' ha':'—'}
+      </div>`);
+      lyr.on('mouseover', ()=>lyr.setStyle({ weight:3 }));
+      lyr.on('mouseout', ()=>layer.resetStyle(lyr));
+    }
+  }).addTo(map);
+
+  map.fitBounds(boundary.getBounds(), { padding:[20,20] });
+
+  // Panel lateral
+  const feats = merged.features;
+  const nPri = feats.filter(f=>f.properties.priority).length;
+  const nAdd = feats.filter(f=>f.properties.origen).length;
+  const nEnr = feats.filter(f=>!f.properties.origen && !f.properties.solo_curada).length;
+  document.getElementById('stats').innerHTML =
+    `<div><b>${feats.length}</b> hábitats</div><div><b>${nEnr}</b> enriquecidos</div>`+
+    `<div><b>${nAdd}</b> añadido</div><div><b>${nPri}</b> ★ prioritarios</div>`;
+  const types = [...new Set(feats.map(f=>f.properties.type))];
+  document.getElementById('legType').innerHTML = types.map(t=>
+    `<div class="row"><span class="sw" style="background:${COLORS[t]||COLORS['Hábitat']}"></span>${t}</div>`).join('');
+  document.getElementById('legList').innerHTML = feats
+    .slice().sort((a,b)=>(a.properties.code>b.properties.code?1:-1))
+    .map(f=>{const p=f.properties; return `<div class="row"><span class="sw" style="background:${COLORS[p.type]||COLORS['Hábitat']}"></span>`+
+      `${p.priority?'<span class="star">★</span>':''} <b>${p.code}</b> ${(p.name||'').slice(0,30)}`+
+      `${p.origen?' <span class="badge">nuevo</span>':''}</div>`;}).join('');
+});
+</script>
+</body>
+</html>
