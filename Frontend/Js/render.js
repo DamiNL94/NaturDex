@@ -13,6 +13,7 @@ import {
 } from './util.js';
 import { audioBlock } from './audio.js';
 import { highlightGlossary } from './glossary.js';
+import { isInvasiveSeenLocally, loadAchievementsCatalog, refreshAccountProgress } from './achievements.js';
 import {
   ACHIEVEMENT_NAME, state, getFilteredSpecies, getFilteredHabitats,
   habitatSpeciesSeenCount, habitatAreaLabel, isHabitatComplete, computeProgress
@@ -22,7 +23,8 @@ import {
   speciesCount, habitatCount, coastlineKm, parkSummary,
   progressTrack, progressFill, progressLabel,
   catalogCrumb, catalogCrumbLabel, catalogTitle,
-  speciesFilterGroup, searchLabel, progressPanel, invasorasPanel
+  speciesFilterGroup, searchLabel, progressPanel, invasorasPanel, basicNotice,
+  accountProgressBody
 } from './dom.js';
 
 // Fallbacks de imagen usados por el HTML generado (onerror inline): forman parte de la API global
@@ -94,12 +96,88 @@ export function renderCatalogBody() {
 }
 
 // --- Cabecera del parque (resumen + barra de progreso) -----------------------------------------------
+// Tolerante con los espacios de ficha base (status "basic"): sus arrays están vacíos y no tienen
+// dato de costa. app.js oculta la rejilla de contadores en ese caso, pero aquí no se asume nada.
 export function renderSummary() {
-  speciesCount.textContent = state.data.species.length;
-  habitatCount.textContent = state.data.habitats.length;
-  coastlineKm.textContent = state.data.park.coastlineKm + ' km';
-  parkSummary.textContent = state.data.park.summary;
+  const park = (state.data && state.data.park) || {};
+  speciesCount.textContent = (state.data.species || []).length;
+  habitatCount.textContent = (state.data.habitats || []).length;
+  coastlineKm.textContent = (typeof park.coastlineKm === 'number' && park.coastlineKm > 0)
+    ? park.coastlineKm + ' km' : '—';
+  parkSummary.textContent = park.summary || '';
   renderProgress();
+}
+
+// --- Ficha base (espacios con status "basic") ---------------------------------------------------
+// Un espacio N1 tiene límite oficial y códigos Natura 2000, pero todavía no catálogo de especies ni
+// hábitats. En vez de dejar el catálogo vacío y los contadores a cero sin explicación, la barra
+// lateral muestra un aviso y el panel de detalle la ficha administrativa: solo dato verificado del
+// park.json y de la geometría oficial, nada inventado.
+
+// Códigos de la Red Natura 2000 leídos de la propia geometría (LIC/ZEC y ZEPA). Las capas del IEPNB
+// no usan siempre la misma capitalización en las propiedades, así que se prueban ambas variantes.
+function natura2000Sites() {
+  const out = [];
+  const collect = (geo, kind) => {
+    ((geo && geo.features) || []).forEach(f => {
+      const p = f.properties || {};
+      const code = p.SITE_CODE || p.site_code || p.codigo || null;
+      const name = p.SITE_NAME || p.site_name || p.nombre || '';
+      if (code) out.push({ kind, code, name });
+    });
+  };
+  collect(state.geo && state.geo.lic, 'LIC/ZEC');
+  collect(state.geo && state.geo.zepa, 'ZEPA');
+  return out;
+}
+
+// Superficie oficial del espacio, si viene en las propiedades del límite (ha).
+function boundaryHectares() {
+  const feats = (state.geo && state.geo.parque && state.geo.parque.features) || [];
+  let total = 0;
+  feats.forEach(f => {
+    const p = f.properties || {};
+    const ha = typeof p.Hectareas === 'number' ? p.Hectareas : (typeof p.hectares === 'number' ? p.hectares : null);
+    if (ha != null) total += ha;
+  });
+  return total > 0 ? Math.round(total).toLocaleString('es-ES') + ' ha' : null;
+}
+
+function factRow(label, value) {
+  if (!value) return '';
+  return html`<div><span>${label}</span><strong>${value}</strong></div>`;
+}
+
+export function renderBasicPark() {
+  const park = (state.data && state.data.park) || {};
+  const sites = natura2000Sites();
+  const municipios = (park.municipalities || []).join(', ');
+  const area = boundaryHectares();
+  const sitesLabel = sites.length ? sites.map(s => s.kind + ' ' + s.code).join(' · ') : null;
+
+  if (basicNotice) {
+    basicNotice.innerHTML = html`<div class="section-title"><h2>Catálogo en preparación</h2><span class="badge">Ficha base</span></div>
+      <p class="basic-lead">De este espacio ya tenemos su <strong>límite oficial</strong> y sus <strong>códigos de la Red Natura 2000</strong>: puedes verlos dibujados en el mapa y activarlos desde el panel de capas.</p>
+      <p class="basic-lead"><strong>El catálogo de especies y hábitats está en preparación para este espacio.</strong> Todavía no hay fichas que explorar aquí, y por eso no se muestran contadores ni progreso: preferimos un hueco declarado a un dato inventado.</p>
+      <p class="basic-foot">Mientras tanto, desde <strong>← Parques</strong> puedes entrar a los espacios que ya tienen el catálogo completo.</p>`;
+  }
+
+  detailPanel.innerHTML = html`<div class="detail-body basic-detail">
+    <span class="card-meta"><span class="badge">${park.category || 'Espacio protegido'}</span><span class="badge review">ficha base</span></span>
+    <h2>${park.name || ''}</h2>
+    <p class="detail-prose">${park.summary || ''}</p>
+    <div class="detail-facts">
+    ${factRow('Figura de protección', park.category)}
+    ${factRow('Comunidad autónoma', park.region)}
+    ${factRow('Provincia', park.province)}
+    ${factRow('Municipios', municipios)}
+    ${factRow('Superficie', area)}
+    ${factRow('Red Natura 2000', sitesLabel)}
+    </div>
+    ${sites.length ? html`<h3 class="detail-subtitle">Sitios de la Red Natura 2000</h3><ul class="status-list">${sites.map(s => html`<li class="detail-prose"><span>${s.kind} · ${s.code}</span>${s.name || 'Sin nombre en la fuente'}</li>`)}</ul>` : ''}
+    ${park.boundaryNote ? html`<p class="detail-source">Fuente del límite: ${park.boundaryNote}</p>` : ''}
+    </div>`;
+  highlightGlossary(detailPanel);
 }
 
 export function renderProgress() {
@@ -254,6 +332,7 @@ function renderInvasoraDetail() {
   if (!inv) { detailPanel.innerHTML = ''; return; }
   const emoji = invasoraEmoji(inv.group);
   const hasPhoto = inv.image && /^https?:/.test(inv.image);
+  const identified = isInvasiveSeenLocally(inv.scientificName);
   detailPanel.innerHTML = html`<div class="detail-image-wrap invasora-detail-hero">
     ${hasPhoto
       ? html`<img src="${inv.image}" alt="${inv.commonName || inv.scientificName}" data-emoji="${emoji}" onerror="window.__invImgFallback(this)">`
@@ -274,6 +353,7 @@ function renderInvasoraDetail() {
     </ul>
     ${hasPhoto && inv.imageAttribution ? html`<p class="detail-source">Foto: ${inv.imageAttribution}</p>` : ''}
     ${inv.source ? html`<p class="detail-source">Fuente: ${inv.source}</p>` : ''}
+    <button class="seen-toggle ${identified ? 'is-seen' : ''}" type="button" data-mark-invasive="${inv.scientificName}" data-invasive-ccaa="${inv.ccaa || ''}" aria-pressed="${identified ? 'true' : 'false'}"${identified ? ' disabled' : ''}>${identified ? '✓ Identificada' : 'Marcar como identificada'}</button>
     </div>`;
   highlightGlossary(detailPanel);
 }
@@ -321,4 +401,59 @@ export function renderProgressTab() {
     : '';
 
   progressPanel.innerHTML = html`<div class="progress-section"><h3>Especies</h3><div class="progress-track big" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${speciesPct}" aria-label="Especies vistas"><div class="progress-fill" style="width:${speciesPct}%"></div></div><span class="progress-caption">${progress.speciesSeen} / ${progress.speciesTotal} especies vistas</span></div><div class="progress-section"><h3>Hábitats</h3><span class="progress-caption">${progress.habitatsCompleteCount} / ${nHab} hábitats completados 🏅</span><ul class="progress-list">${habitatsHtml}</ul></div>${zepaSection}<div class="progress-section"><h3>Puntos de interés</h3><div class="progress-track big" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${poiPct}" aria-label="Puntos de interés visitados"><div class="progress-fill" style="width:${poiPct}%"></div></div><span class="progress-caption">${progress.poisSeen} / ${progress.poisTotal} puntos visitados</span><ul class="progress-list">${poisHtml}</ul></div><div class="progress-section"><h3>Logros</h3>${logros}</div>`;
+}
+
+// --- Progreso de CUENTA (ámbito estatal, pantalla "screen-account", fuera de un parque concreto) ----
+function accountStat(value, label) {
+  return html`<div class="account-stat"><strong>${value ?? 0}</strong><span>${label}</span></div>`;
+}
+
+function achievementCardHtml(ach, entry, totals) {
+  const unlocked = !!entry;
+  const value = (totals && totals[ach.metric] !== undefined) ? Number(totals[ach.metric]) || 0 : 0;
+  const showBar = !unlocked && ach.threshold > 1;
+  const pct = showBar ? Math.max(0, Math.min(100, Math.round((value / ach.threshold) * 100))) : 0;
+  return html`<div class="achievement-card rarity-${ach.rarity} ${unlocked ? 'unlocked' : 'locked'}">
+    <span class="achievement-icon" aria-hidden="true">${unlocked ? ach.icon : icon('lock', 20)}</span>
+    <div class="achievement-card-body">
+    <strong>${ach.title}</strong>
+    <p>${ach.description}</p>
+    ${showBar ? html`<div class="achievement-progress"><span class="progress-track"><span class="progress-fill" style="width:${pct}%"></span></span><span class="achievement-progress-label">${Math.min(value, ach.threshold)} / ${ach.threshold}</span></div>`
+      : (!unlocked ? html`<p class="achievement-progress-label">Aún no conseguido</p>` : '')}
+    </div>
+    </div>`;
+}
+
+export async function renderAccountProgress() {
+  if (!accountProgressBody) return;
+  accountProgressBody.innerHTML = html`<p class="select-hint">Cargando tu progreso…</p>`;
+  await refreshAccountProgress();
+  const catalog = await loadAchievementsCatalog();
+  const totals = state.account.totals || {};
+  const achievementsMap = state.account.achievements;
+
+  const totalsGrid = html`<div class="account-totals-grid">
+    ${accountStat(totals.speciesSeen, 'especies vistas')}
+    ${accountStat(totals.parksVisited, 'parques visitados')}
+    ${accountStat(totals.parksCompleted, 'parques completados')}
+    ${accountStat(totals.regionsVisited, 'comunidades autónomas')}
+    ${accountStat(totals.provincesVisited, 'provincias')}
+    ${accountStat(totals.habitatsCompleted, 'hábitats completados')}
+    ${accountStat(totals.poisSeen, 'puntos de interés')}
+    ${accountStat(totals.gpsSightings, 'avistamientos GPS')}
+  </div>`;
+
+  const regionsHtml = (totals.regionsList && totals.regionsList.length)
+    ? html`<div class="account-section"><h3>Comunidades autónomas exploradas</h3><div class="account-chips">${totals.regionsList.map(r => html`<span class="badge">${r}</span>`)}</div></div>`
+    : '';
+
+  const sections = (catalog.categories || []).map(cat => {
+    const items = (catalog.achievements || []).filter(a => a.category === cat.key);
+    if (!items.length) return '';
+    const unlockedCount = items.filter(a => achievementsMap.has(a.id)).length;
+    const cards = items.map(a => achievementCardHtml(a, achievementsMap.get(a.id), totals));
+    return html`<div class="account-section"><h3>${cat.icon} ${cat.label} <span class="account-section-count">${unlockedCount}/${items.length}</span></h3><div class="achievement-grid">${cards}</div></div>`;
+  });
+
+  accountProgressBody.innerHTML = html`${totalsGrid}${regionsHtml}${sections}`;
 }

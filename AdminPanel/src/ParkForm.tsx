@@ -8,14 +8,16 @@
 // ================================================================================================
 import { useMemo, useState, type FormEvent } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { api, type Overview, type Park, type ParkInput } from './api';
+import { api, PARK_STATUS_LABELS, type Overview, type Park, type ParkInput, type ParkStatus } from './api';
 import { useToast } from './toast';
 import CoordPicker from './CoordPicker';
 
-// Valores por defecto de un parque nuevo (la app nace centrada en la Región de Murcia).
+// Valores por defecto de un parque nuevo (la app nace centrada en la Región de Murcia). Nace como
+// ficha base: es lo honesto mientras no tenga catálogo, y es el flujo del rollout nacional.
 const BLANK: ParkInput = {
   id: 0, slug: '', name: '', category: '', region: 'Región de Murcia', province: 'Murcia',
-  municipality: '', description: '', area_hectares: '', coastline_km: '', latitude: '', longitude: ''
+  municipality: '', description: '', area_hectares: '', coastline_km: '', latitude: '', longitude: '',
+  status: 'basic'
 };
 
 function toInput(p: Park): ParkInput {
@@ -25,7 +27,8 @@ function toInput(p: Park): ParkInput {
     area_hectares: p.area_hectares != null ? String(p.area_hectares) : '',
     coastline_km: p.coastline_km != null ? String(p.coastline_km) : '',
     latitude: p.latitude != null ? String(p.latitude) : '',
-    longitude: p.longitude != null ? String(p.longitude) : ''
+    longitude: p.longitude != null ? String(p.longitude) : '',
+    status: p.status ?? 'basic'
   };
 }
 
@@ -51,6 +54,11 @@ export default function ParkForm({ park, overview, onClose, onSaved, onDeleted }
     () => [...new Set(overview.parks.map(p => p.category).filter(Boolean))].sort(),
     [overview.parks]
   );
+
+  // Marcar como "completo" un espacio sin nada dentro es justo lo que el nivel de ficha base viene a
+  // evitar: se avisa (no se bloquea; puede estar a medio cargar y quererse publicar igualmente).
+  const emptyButAvailable =
+    draft.status === 'available' && !!park && park.species === 0 && park.habitats === 0 && park.pois === 0;
 
   function set<K extends keyof ParkInput>(k: K, v: ParkInput[K]) {
     setDraft(d => ({ ...d, [k]: v }));
@@ -138,6 +146,31 @@ export default function ParkForm({ park, overview, onClose, onSaved, onDeleted }
             <span className="mt-0.5 block text-xs font-normal text-stone-500">
               Identificador en la URL y la BD. Si lo dejas vacío se deriva del nombre.
             </span>
+          </label>
+
+          {/* Nivel de dato: decide qué experiencia ve el visitante. Al publicar, este valor se
+              escribe en Frontend/Data/parks-index.json, que es lo que lee la app pública. */}
+          <label className={`${labelCls} sm:col-span-2`}>
+            Nivel de dato *
+            <select
+              value={draft.status}
+              onChange={e => set('status', e.target.value as ParkStatus)}
+              className={inputCls}
+            >
+              {(Object.keys(PARK_STATUS_LABELS) as ParkStatus[]).map(s => (
+                <option key={s} value={s}>{PARK_STATUS_LABELS[s]}</option>
+              ))}
+            </select>
+            <span className="mt-0.5 block text-xs font-normal text-stone-500">
+              Se aplica a la app pública al pulsar «Publicar cambios offline».
+            </span>
+            {emptyButAvailable && (
+              <span className="mt-1 block rounded-md bg-amber-50 px-2 py-1 text-xs font-normal text-amber-800">
+                Este espacio está marcado como <strong>completo</strong> pero no tiene hábitats, especies
+                ni puntos de interés: la app enseñaría un catálogo vacío. Déjalo en <strong>ficha base</strong>
+                {' '}hasta que tenga contenido.
+              </span>
+            )}
           </label>
 
           <label className={labelCls}>

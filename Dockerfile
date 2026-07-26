@@ -6,16 +6,18 @@
 FROM alpine:3.22
 
 # Apache con mod_php y solo las extensiones que usa la app:
-#   mysqli  -> acceso a la BD (la API usa mysqli, no PDO)
-#   session -> login/sesión (auth.php, progress.php)
-#   opcache -> rendimiento
-# (json y filter van compilados en el core de PHP 8 en Alpine; no necesitan paquete aparte.)
+#   mysqli    -> acceso a la BD (la API usa mysqli, no PDO)
+#   session   -> login/sesión (auth.php, progress.php)
+#   opcache   -> rendimiento
+#   mbstring  -> slugify() en admin.php usa mb_strtolower(); en Alpine, a diferencia de json/filter,
+#                mbstring NO va compilado en el core de PHP 8 y necesita este paquete aparte.
 RUN apk add --no-cache \
         apache2 \
         php82-apache2 \
         php82-mysqli \
         php82-session \
         php82-opcache \
+        php82-mbstring \
     && mkdir -p /run/apache2
 
 # Config de Apache (DocumentRoot, redirección a /Frontend/, reglas de seguridad) y de PHP

@@ -26,8 +26,16 @@ CREATE TABLE IF NOT EXISTS parks (
     coastline_km DECIMAL(6,2),
     latitude DECIMAL(10,6) NOT NULL,
     longitude DECIMAL(10,6) NOT NULL,
+    -- Nivel de dato del espacio (rollout nacional, Docs/prompts/e-rollout-nacional.md):
+    --   'basic'     ficha base (N1): límite oficial y códigos Natura 2000, sin catálogo.
+    --   'available' completo (N2): hábitats, especies, POIs, fotos y audioguías.
+    --   'planned'   anunciado, todavía sin datos.
+    -- Todo espacio nace 'basic' y asciende cuando se le hace el catálogo. Es un ENUM para que la
+    -- propia base de datos rechace un valor que el frontend no sabría interpretar.
+    status ENUM('basic','available','planned') NOT NULL DEFAULT 'basic',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX idx_parks_status (status)
 );
 
 CREATE TABLE IF NOT EXISTS habitats (
@@ -182,6 +190,10 @@ CREATE TABLE IF NOT EXISTS users (
     -- (Frontend/admin/ + Backend/Api/admin.php) para editar el contenido ambiental.
     -- Promocionar a mano: UPDATE users SET role='admin' WHERE email='...';
     role VARCHAR(20) NOT NULL DEFAULT 'user',
+    -- Preferencias de la app (tema, tamaño de texto, mapa base, GPS...). El dispositivo manda: el
+    -- frontend las aplica desde localStorage sin esperar a la red y aquí solo se espejan para que
+    -- la misma cuenta las recupere en otro dispositivo. Ver Backend/Api/account.php?action=prefs.
+    prefs JSON NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -250,4 +262,78 @@ CREATE TABLE IF NOT EXISTS glosario (
     source VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- ================================================================================================
+-- Progreso de CUENTA (ámbito estatal, agregado sobre todos los parques) + logros.
+-- ------------------------------------------------------------------------------------------------
+-- El progreso "de siempre" (user_progress) es por parque. Esta capa vive por encima: agrega lo
+-- visto en todos los parques de una cuenta y guarda qué logros ha desbloqueado, para siempre, sin
+-- importar que luego el usuario desmarque especies. Ver Backend/Lib/account_progress.php.
+-- ================================================================================================
+
+-- Agregados de cuenta (especies estatales distintas, parques visitados/completados, CCAA/provincias
+-- pisadas, etc.). SIEMPRE derivable desde cero a partir de user_progress + user_activity_log +
+-- user_invasive_sightings + user_glossary_views (ver Tools/recalculate-account-progress.php): esta
+-- tabla es una caché de lectura, no una fuente de verdad adicional.
+CREATE TABLE IF NOT EXISTS user_account_progress (
+    user_id INT NOT NULL PRIMARY KEY,
+    payload JSON NOT NULL,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- Logros desbloqueados. Un logro desbloqueado NUNCA se borra ni se recalcula a "bloqueado" aunque el
+-- usuario pierda progreso después (evaluate_achievements en account_progress.php solo añade filas).
+-- `celebrated_at` separa "desbloqueado" de "ya visto por el usuario": el recálculo retroactivo (alta
+-- de usuarios con progreso previo, Tools/recalculate-account-progress.php) rellena unlocked_at pero
+-- deja celebrated_at NULL, para que el frontend muestre un resumen único en vez de N carteles
+-- animados de golpe. Vive en servidor (no solo en localStorage) para que "ya celebrado" no dependa
+-- del dispositivo. `context` guarda detalles para el texto del cartel (p. ej. {"park":"...","count":42}).
+CREATE TABLE IF NOT EXISTS user_achievements (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    -- Id estable del catálogo compartido (Frontend/Data/achievements.json), p. ej. 'species_15'.
+    achievement_id VARCHAR(60) NOT NULL,
+    unlocked_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    celebrated_at TIMESTAMP NULL,
+    context JSON NULL,
+    UNIQUE KEY unique_user_achievement (user_id, achievement_id),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    INDEX idx_user_achievements_user (user_id)
+);
+
+-- Registro de actividad (día en que el usuario marcó algo visto en un parque concreto). Es la ÚNICA
+-- pieza de este bloque que no se puede recalcular desde user_progress: su payload sobrescribe
+-- updated_at en cada UPSERT, así que no queda historial de qué días hubo actividad. Tabla pequeña y
+-- de solo-inserción (INSERT IGNORE con la fecha de hoy en cada POST a progress.php); de aquí salen
+-- "días de salida distintos", "racha de semanas" y "volver al mismo parque en varias fechas".
+CREATE TABLE IF NOT EXISTS user_activity_log (
+    user_id INT NOT NULL,
+    park_slug VARCHAR(120) NOT NULL,
+    activity_date DATE NOT NULL,
+    PRIMARY KEY (user_id, park_slug, activity_date),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- Especies invasoras que el usuario ha marcado como identificadas (ficha vista/reconocida). Es dato
+-- propio (no derivable): especies_invasoras es un catálogo nacional de solo lectura, sin ningún otro
+-- rastro de interacción del usuario.
+CREATE TABLE IF NOT EXISTS user_invasive_sightings (
+    user_id INT NOT NULL,
+    invasive_id INT NOT NULL,
+    seen_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (user_id, invasive_id),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (invasive_id) REFERENCES especies_invasoras(id) ON DELETE CASCADE
+);
+
+-- Términos del glosario que el usuario ha consultado (abierto su popover al menos una vez).
+CREATE TABLE IF NOT EXISTS user_glossary_views (
+    user_id INT NOT NULL,
+    term_id INT NOT NULL,
+    viewed_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (user_id, term_id),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (term_id) REFERENCES glosario(id) ON DELETE CASCADE
 );

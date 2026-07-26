@@ -17,6 +17,9 @@
   var currentUser = readCachedUser();
 
   // --- Utilidades de pantalla -----------------------------------------------------------------
+  // Expuesta para que app.js (módulo ES, sin acceso a este cierre) pueda mostrar la pantalla de
+  // progreso de cuenta sin duplicar la lógica de mostrar/ocultar `.screen` ni el manejo de foco.
+  window.naturdexShowScreen = showScreen;
   var screenShownOnce = false;
   function showScreen(id) {
     var screens = document.querySelectorAll('.screen');
@@ -47,6 +50,9 @@
     currentUser = user;
     try { user ? localStorage.setItem(USER_KEY, JSON.stringify(user)) : localStorage.removeItem(USER_KEY); } catch (e) {}
     updateUserLabels();
+    // Las preferencias son por cuenta y prefs.js deduce el ámbito de este mismo `naturdex.user`:
+    // al entrar, salir o cambiar de cuenta hay que releerlas y reaplicarlas (tema, tamaño…).
+    if (window.NaturDexPrefs) window.NaturDexPrefs.reload();
   }
   function updateUserLabels() {
     var name = currentUser ? (currentUser.name || currentUser.email) : '';
@@ -120,17 +126,75 @@
     showScreen('screen-cover');
   }
 
+  // --- Perfil y ajustes -------------------------------------------------------------------------
+  // La pantalla de perfil se abre desde dos sitios (el selector de parque y el parque) y "← Volver"
+  // debe devolver a donde estabas, no siempre al selector: si estás explorando un parque y entras a
+  // cambiar un ajuste, volver al selector te haría recargar el parque entero.
+  var profileReturnTo = 'screen-select';
+
+  function visibleScreenId() {
+    var screens = document.querySelectorAll('.screen');
+    for (var i = 0; i < screens.length; i++) if (!screens[i].hidden) return screens[i].id;
+    return 'screen-select';
+  }
+
+  function openProfile() {
+    profileReturnTo = visibleScreenId();
+    if (window.naturdexShowProfile) window.naturdexShowProfile(currentUser);
+  }
+
+  function closeProfile() {
+    // Volver al parque exige recalcular el tamaño del mapa: estuvo oculto (display:none) mientras
+    // el perfil estaba abierto y Leaflet no dibuja capas si midió el contenedor a cero.
+    showScreen(profileReturnTo);
+    if (profileReturnTo === 'screen-park' && window.naturdexInvalidateMap) window.naturdexInvalidateMap();
+  }
+
+  // Abre el formulario de acceso en el modo pedido ('login' o 'register'). Lo usa el botón "Crear
+  // una cuenta" que profile.js ofrece al invitado.
+  function goToAuth(mode) {
+    setAuthMode(mode === 'register' ? 'register' : 'login');
+    showScreen('screen-auth');
+  }
+
+  // API para los módulos ES (profile.js), que no comparten este cierre. Mismo patrón que
+  // window.naturdexShowScreen: auth.js sigue siendo el dueño de la sesión y de la navegación.
+  window.naturdexAuth = {
+    getUser: function () { return currentUser; },
+    setUser: setUser,
+    logout: logout,
+    goToSelect: function () { goToSelect(); },
+    goToAuth: goToAuth
+  };
+
   // --- Selección de parque (mapa de España) ---------------------------------------------------
+  // Tres niveles de dato en parks-index.json (ver su `_comment`):
+  //   'available' → catálogo completo (N2). 'basic' → ficha base (N1): límite oficial y Red Natura
+  //   2000, sin especies ni hábitats. 'planned' → anunciado, sin datos.
+  // Los dos primeros son SELECCIONABLES: un espacio con ficha base ya tiene mapa que enseñar y el
+  // frontend avisa de que su catálogo está en preparación. 'planned' sigue deshabilitado.
+  function isSelectable(park) {
+    return park && (park.status === 'available' || park.status === 'basic');
+  }
+
+  // Espacios que el usuario puede abrir (los usa el mapa de España, el "más cercano" y la
+  // preselección). El nombre se mantiene por compatibilidad con el resto del fichero.
   function availableParks(reg) {
     var out = [];
     ((reg && reg.communities) || []).forEach(function (c) {
       (c.provinces || []).forEach(function (p) {
         (p.parks || []).forEach(function (park) {
-          if (park.status === 'available') out.push({ community: c.name, province: p.name, park: park });
+          if (isSelectable(park)) out.push({ community: c.name, province: p.name, park: park });
         });
       });
     });
     return out;
+  }
+
+  function parkOptionSuffix(park) {
+    if (park.status === 'basic') return ' (ficha base)';
+    if (park.status !== 'available') return ' (próximamente)';
+    return '';
   }
 
   function buildParkDropdown(reg) {
@@ -143,8 +207,8 @@
         (p.parks || []).forEach(function (park) {
           var opt = document.createElement('option');
           opt.value = park.slug;
-          opt.textContent = park.name + (park.status !== 'available' ? ' (próximamente)' : '');
-          if (park.status !== 'available') opt.disabled = true;
+          opt.textContent = park.name + parkOptionSuffix(park);
+          if (!isSelectable(park)) opt.disabled = true;
           group.appendChild(opt);
         });
         if (group.children.length) select.appendChild(group);
@@ -155,12 +219,14 @@
   function initSpainMap(reg) {
     if (spainMap) return;
     spainMap = L.map('spain-map', { zoomControl: true, scrollWheelZoom: true }).setView([40.0, -3.7], 5);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors', maxZoom: 19 }).addTo(spainMap);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors', maxZoom: 19, className: 'tile-osm' }).addTo(spainMap);
     availableParks(reg).forEach(function (item) {
       var c = item.park.center;
       if (!c) return;
       var marker = L.marker(c).addTo(spainMap);
+      var basic = item.park.status === 'basic';
       marker.bindPopup('<strong>' + item.park.name + '</strong><br><span class="popup-type">' + (item.park.category || '') + ' · ' + item.province + '</span>'
+        + (basic ? '<p>Ficha base: límite oficial y Red Natura 2000. Catálogo de especies y hábitats en preparación.</p>' : '')
         + '<br><button type="button" class="popup-enter" data-slug="' + item.park.slug + '">Entrar al parque</button>');
       marker.on('click', function () { choosePark(item.park.slug); });
     });
@@ -173,7 +239,9 @@
     $('#enterParkBtn').disabled = !slug;
     var found = availableParks(registry).find(function (i) { return i.park.slug === slug; });
     if (found && found.park.center && spainMap) spainMap.setView(found.park.center, 11, { animate: true });
-    setSelectStatus(found ? 'Seleccionado: ' + found.park.name : '');
+    setSelectStatus(found
+      ? 'Seleccionado: ' + found.park.name + (found.park.status === 'basic' ? ' · ficha base, catálogo en preparación' : '')
+      : '');
   }
 
   function setSelectStatus(msg, isError) {
@@ -293,9 +361,14 @@
     $('#parkSelect').addEventListener('change', function (e) { choosePark(e.target.value); });
     $('#enterParkBtn').addEventListener('click', function () { enterPark(selectedSlug); });
     $('#geoLocateBtn').addEventListener('click', geolocateNearest);
-    $('#logoutBtn').addEventListener('click', logout);
-    $('#logoutBtnSelect').addEventListener('click', logout);
+    // Cerrar sesión ya no es un icono suelto en cada cabecera: vive dentro de Perfil y ajustes,
+    // junto al resto de lo que se administra de la cuenta.
+    $('#profileBtn').addEventListener('click', openProfile);
+    $('#profileBtnSelect').addEventListener('click', openProfile);
+    $('#backFromProfile').addEventListener('click', closeProfile);
     $('#backToParks').addEventListener('click', goToSelect);
+    $('#accountProgressBtn').addEventListener('click', function () { if (window.naturdexShowAccountProgress) window.naturdexShowAccountProgress(currentUser); });
+    $('#backToSelectFromAccount').addEventListener('click', goToSelect);
     // Botón "Entrar al parque" dentro del popup del mapa de España.
     document.addEventListener('click', function (e) {
       var b = e.target.closest && e.target.closest('.popup-enter');

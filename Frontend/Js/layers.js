@@ -11,7 +11,7 @@
 import { html, raw } from './util.js';
 import { state } from './state.js';
 import { layersToggle, layersPanel } from './dom.js';
-import { map, baseOSM, basePNOA, setHabitatVisible, focusHabitatOnMap } from './map.js';
+import { map, setHabitatVisible, focusHabitatOnMap, hasParkBaseLayer, applyBaseChoice, activeBaseKind } from './map.js';
 
 // Capas generales (las de hábitats van en su propia subsección). El swatch reutiliza las clases
 // de la antigua leyenda (.legend-dot/.legend-line) para que la simbología siga siendo la misma.
@@ -37,12 +37,15 @@ function habitatRows() {
 }
 
 export function refreshLayersPanel() {
-  const pnoaActive = map.hasLayer(basePNOA);
+  // El mapa del parque solo se ofrece si ese parque trae paquete de teselas; los otros dos necesitan
+  // cobertura, así que se etiqueta cuál es el que funciona sin ella.
+  const activeBase = activeBaseKind();
   layersPanel.innerHTML = html`
     <section class="layers-section">
     <h4>Mapa base</h4>
-    <label class="layers-row"><input type="radio" name="baseLayer" value="osm" ${!pnoaActive ? raw('checked') : ''}> Mapa</label>
-    <label class="layers-row"><input type="radio" name="baseLayer" value="pnoa" ${pnoaActive ? raw('checked') : ''}> Satélite (PNOA)</label>
+    <label class="layers-row"><input type="radio" name="baseLayer" value="osm" ${activeBase === 'osm' ? raw('checked') : ''}> Mapa</label>
+    <label class="layers-row"><input type="radio" name="baseLayer" value="pnoa" ${activeBase === 'pnoa' ? raw('checked') : ''}> Satélite (PNOA)</label>
+    ${hasParkBaseLayer() ? html`<label class="layers-row"><input type="radio" name="baseLayer" value="parque" ${activeBase === 'parque' ? raw('checked') : ''}> Mapa del parque <span class="layers-hint">sin conexión</span></label>` : ''}
     </section>
     <section class="layers-section">
     <h4>Capas</h4>
@@ -77,8 +80,8 @@ export function initLayersPanel() {
   layersPanel.addEventListener('change', event => {
     const base = event.target.closest('input[name="baseLayer"]');
     if (base) {
-      if (base.value === 'pnoa') { map.removeLayer(baseOSM); basePNOA.addTo(map); }
-      else { map.removeLayer(basePNOA); baseOSM.addTo(map); }
+      // `true`: la elección es del usuario, así que al recuperar cobertura no se le deshace.
+      applyBaseChoice(base.value, true);
       return;
     }
     const overlay = event.target.closest('input[data-overlay]');

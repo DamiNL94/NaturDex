@@ -19,3 +19,14 @@ Backend/Data/progress.json
 
 # cache
 __pycache__/
+
+# fuentes descargadas del IDE del MITECO (binarios pesados, ~200 MB)
+# el registro reproducible de qué se descarga y de dónde está en
+# Tools/catalogo-nacional/fuentes/FUENTES.json, que SÍ se versiona
+# CLI de terceros que solo necesita quien GENERA paquetes de teselas (go-pmtiles, ~59 MB).
+# Se instala a mano desde https://github.com/protomaps/go-pmtiles/releases; ver Tools/build-park-tiles.js
+Tools/bin/
+
+Tools/catalogo-nacional/fuentes/miteco-ide/
+Tools/catalogo-nacional/fuentes/habitats-provinciales/
+Tools/catalogo-nacional/fuentes/iepnb/

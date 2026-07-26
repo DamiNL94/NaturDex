@@ -9,6 +9,8 @@
 // elementos con clase `.detail-prose` (las descripciones), no sobre insignias, taxonomía, etc.
 // ================================================================================================
 
+import { reportGlossaryView } from './achievements.js';
+
 let TERMS = null;      // [{ term, definition, category, aliases, source }]
 let MATCHER = null;    // { regex, byForm: Map(formaEnMinúsculas -> { term, definition }) }
 let popoverEl = null;
@@ -137,6 +139,7 @@ function togglePopover(termEl) {
   const el = ensurePopover();
   if (el.dataset.for === termEl.dataset.glossTerm && !el.hidden) { hidePopover(); return; }
   el.dataset.for = termEl.dataset.glossTerm;
+  reportGlossaryView(termEl.dataset.glossTerm);
   el.textContent = '';
   const h = document.createElement('strong');
   h.className = 'glossary-popover-term';

@@ -1,0 +1,89 @@
+{
+    "version": 1,
+    "_comment": "Catálogo de logros de CUENTA (ámbito estatal, agregado sobre todos los parques). Fichero único leído tanto por el backend (Backend/Lib/account_progress.php, evalúa qué se desbloquea) como por el frontend (Frontend/Js/achievements.js, predice en offline y pinta la rejilla de logros): así ninguno de los dos lados puede desincronizarse de las reglas. Añadir un logro nuevo es añadir una entrada aquí, sin tocar código en ninguno de los dos lados (ver Docs/two-layer-progress.md).",
+    "_fields": "id (estable, no reordenar/reutilizar) · category (agrupa la rejilla) · metric (clave del payload agregado, ver account_progress.php) · threshold (valor de la métrica que desbloquea) · title/description (tono divulgativo, español de España) · icon (emoji) · rarity ('comun'|'poco-comun'|'raro'|'legendario', gradúa el color de la tarjeta y la intensidad del confeti al celebrar)",
+    "categories": [
+        { "key": "species", "label": "Especies vistas", "icon": "🔎" },
+        { "key": "parks_visited", "label": "Parques visitados", "icon": "🗺️" },
+        { "key": "parks_completed", "label": "Parques completados", "icon": "🏆" },
+        { "key": "regions", "label": "Comunidades autónomas", "icon": "🇪🇸" },
+        { "key": "provinces", "label": "Provincias", "icon": "📍" },
+        { "key": "habitats", "label": "Hábitats completados", "icon": "🌿" },
+        { "key": "pois", "label": "Puntos de interés", "icon": "📌" },
+        { "key": "gps", "label": "Avistamientos con GPS", "icon": "📡" },
+        { "key": "invasive", "label": "Invasoras identificadas", "icon": "🚨" },
+        { "key": "glossary", "label": "Glosario consultado", "icon": "📖" },
+        { "key": "activity", "label": "Constancia", "icon": "📅" },
+        { "key": "flavor", "label": "De sabor", "icon": "🎖️" }
+    ],
+    "achievements": [
+        { "id": "species_1", "category": "species", "metric": "speciesSeen", "threshold": 1, "rarity": "comun", "icon": "🔎", "title": "Primer descubrimiento", "description": "Has fichado tu primera especie. Así empieza todo." },
+        { "id": "species_5", "category": "species", "metric": "speciesSeen", "threshold": 5, "rarity": "comun", "icon": "🌱", "title": "Cuaderno de campo", "description": "5 especies distintas en tu haber, en cualquier parque." },
+        { "id": "species_15", "category": "species", "metric": "speciesSeen", "threshold": 15, "rarity": "comun", "icon": "🧭", "title": "Buena salida", "description": "15 especies distintas: ya tienes el ojo entrenado." },
+        { "id": "species_30", "category": "species", "metric": "speciesSeen", "threshold": 30, "rarity": "poco-comun", "icon": "🔭", "title": "Ojo de naturalista", "description": "30 especies distintas repartidas por donde has ido." },
+        { "id": "species_60", "category": "species", "metric": "speciesSeen", "threshold": 60, "rarity": "poco-comun", "icon": "📔", "title": "Cuaderno lleno", "description": "60 especies distintas. Empiezas a conocerte el terreno." },
+        { "id": "species_120", "category": "species", "metric": "speciesSeen", "threshold": 120, "rarity": "raro", "icon": "🦉", "title": "Naturalista veterano", "description": "120 especies distintas: aquí ya llega poca gente." },
+        { "id": "species_250", "category": "species", "metric": "speciesSeen", "threshold": 250, "rarity": "raro", "icon": "📚", "title": "Enciclopedia con patas", "description": "250 especies distintas de toda España. Nivel enciclopedia." },
+        { "id": "species_500", "category": "species", "metric": "speciesSeen", "threshold": 500, "rarity": "legendario", "icon": "🌍", "title": "Quien todo lo ha visto", "description": "500 especies distintas. El catálogo nacional entero te suena." },
+
+        { "id": "parks_visited_1", "category": "parks_visited", "metric": "parksVisited", "threshold": 1, "rarity": "comun", "icon": "🚪", "title": "Primera puerta", "description": "Has entrado a tu primer espacio protegido." },
+        { "id": "parks_visited_3", "category": "parks_visited", "metric": "parksVisited", "threshold": 3, "rarity": "poco-comun", "icon": "🥾", "title": "De parque en parque", "description": "3 espacios distintos visitados." },
+        { "id": "parks_visited_5", "category": "parks_visited", "metric": "parksVisited", "threshold": 5, "rarity": "poco-comun", "icon": "🎒", "title": "Coleccionista de paisajes", "description": "5 espacios distintos visitados." },
+        { "id": "parks_visited_10", "category": "parks_visited", "metric": "parksVisited", "threshold": 10, "rarity": "raro", "icon": "🗺️", "title": "Mapa personal", "description": "10 espacios distintos visitados. Ya tienes tu propio mapa de España." },
+        { "id": "parks_visited_25", "category": "parks_visited", "metric": "parksVisited", "threshold": 25, "rarity": "legendario", "icon": "🚐", "title": "Trotamontes", "description": "25 espacios distintos visitados. ¿Vives en la carretera?" },
+
+        { "id": "parks_completed_1", "category": "parks_completed", "metric": "parksCompleted", "threshold": 1, "rarity": "poco-comun", "icon": "🏅", "title": "Parque en el bolsillo", "description": "Has completado tu primer parque entero: todos sus hábitats y puntos de interés." },
+        { "id": "parks_completed_3", "category": "parks_completed", "metric": "parksCompleted", "threshold": 3, "rarity": "raro", "icon": "🏆", "title": "Coleccionista completista", "description": "3 parques completados de cabo a rabo." },
+        { "id": "parks_completed_10", "category": "parks_completed", "metric": "parksCompleted", "threshold": 10, "rarity": "legendario", "icon": "👑", "title": "Leyenda del catálogo", "description": "10 parques completados enteros. Esto ya es vocación." },
+
+        { "id": "regions_1", "category": "regions", "metric": "regionsVisited", "threshold": 1, "rarity": "comun", "icon": "🏳️", "title": "Primera comunidad", "description": "Has explorado espacios de tu primera comunidad autónoma." },
+        { "id": "regions_3", "category": "regions", "metric": "regionsVisited", "threshold": 3, "rarity": "poco-comun", "icon": "🧳", "title": "Cambio de aires", "description": "3 comunidades autónomas distintas pisadas." },
+        { "id": "regions_6", "category": "regions", "metric": "regionsVisited", "threshold": 6, "rarity": "raro", "icon": "🚗", "title": "Recorriendo España", "description": "6 comunidades autónomas distintas pisadas." },
+        { "id": "regions_10", "category": "regions", "metric": "regionsVisited", "threshold": 10, "rarity": "raro", "icon": "🧭", "title": "Media España", "description": "10 comunidades autónomas distintas pisadas." },
+        { "id": "regions_17", "category": "regions", "metric": "regionsVisited", "threshold": 17, "rarity": "legendario", "icon": "🇪🇸", "title": "España entera", "description": "Las 17 comunidades autónomas, todas. El logro leyenda." },
+
+        { "id": "provinces_1", "category": "provinces", "metric": "provincesVisited", "threshold": 1, "rarity": "comun", "icon": "📍", "title": "Tu provincia", "description": "Has explorado un espacio de tu primera provincia." },
+        { "id": "provinces_5", "category": "provinces", "metric": "provincesVisited", "threshold": 5, "rarity": "poco-comun", "icon": "🗾", "title": "Vecino de varias", "description": "5 provincias distintas pisadas." },
+        { "id": "provinces_15", "category": "provinces", "metric": "provincesVisited", "threshold": 15, "rarity": "raro", "icon": "🧩", "title": "Un buen puzle", "description": "15 provincias distintas pisadas." },
+        { "id": "provinces_30", "category": "provinces", "metric": "provincesVisited", "threshold": 30, "rarity": "raro", "icon": "🚙", "title": "Kilómetros de sobra", "description": "30 provincias distintas pisadas." },
+        { "id": "provinces_52", "category": "provinces", "metric": "provincesVisited", "threshold": 52, "rarity": "legendario", "icon": "🏁", "title": "Ni un rincón se te escapa", "description": "Las 52 provincias (con Ceuta y Melilla). Completo total." },
+
+        { "id": "habitats_1", "category": "habitats", "metric": "habitatsCompleted", "threshold": 1, "rarity": "comun", "icon": "🌾", "title": "Tu primer hábitat", "description": "Has completado tu primer hábitat: todas sus especies vistas." },
+        { "id": "habitats_5", "category": "habitats", "metric": "habitatsCompleted", "threshold": 5, "rarity": "poco-comun", "icon": "🌳", "title": "Conoces el terreno", "description": "5 hábitats completados, en cualquier parque." },
+        { "id": "habitats_15", "category": "habitats", "metric": "habitatsCompleted", "threshold": 15, "rarity": "raro", "icon": "🏔️", "title": "Explorador de ecosistemas", "description": "15 hábitats completados." },
+        { "id": "habitats_40", "category": "habitats", "metric": "habitatsCompleted", "threshold": 40, "rarity": "legendario", "icon": "🌐", "title": "Atlas viviente", "description": "40 hábitats completados. Un ecosistema para cada ocasión." },
+
+        { "id": "pois_1", "category": "pois", "metric": "poisSeen", "threshold": 1, "rarity": "comun", "icon": "📌", "title": "Primera parada", "description": "Has visitado tu primer punto de interés." },
+        { "id": "pois_10", "category": "pois", "metric": "poisSeen", "threshold": 10, "rarity": "poco-comun", "icon": "🚏", "title": "De ruta", "description": "10 puntos de interés visitados." },
+        { "id": "pois_30", "category": "pois", "metric": "poisSeen", "threshold": 30, "rarity": "raro", "icon": "🏛️", "title": "Guía del territorio", "description": "30 puntos de interés visitados." },
+        { "id": "pois_75", "category": "pois", "metric": "poisSeen", "threshold": 75, "rarity": "legendario", "icon": "🧭", "title": "No hay hito que se te resista", "description": "75 puntos de interés visitados." },
+
+        { "id": "gps_1", "category": "gps", "metric": "gpsSightings", "threshold": 1, "rarity": "comun", "icon": "📡", "title": "Marca en el mapa", "description": "Has registrado tu primer avistamiento con tu ubicación GPS." },
+        { "id": "gps_10", "category": "gps", "metric": "gpsSightings", "threshold": 10, "rarity": "poco-comun", "icon": "📍", "title": "Cazador de coordenadas", "description": "10 avistamientos registrados con GPS." },
+        { "id": "gps_50", "category": "gps", "metric": "gpsSightings", "threshold": 50, "rarity": "raro", "icon": "🛰️", "title": "Tu propio mapa de campo", "description": "50 avistamientos registrados con GPS." },
+        { "id": "gps_150", "category": "gps", "metric": "gpsSightings", "threshold": 150, "rarity": "legendario", "icon": "🌐", "title": "Cartógrafo de bolsillo", "description": "150 avistamientos registrados con GPS." },
+
+        { "id": "invasive_1", "category": "invasive", "metric": "invasiveSeen", "threshold": 1, "rarity": "comun", "icon": "🚨", "title": "Ojo avizor", "description": "Has identificado tu primera especie invasora. Reconocerlas también es cuidar el medio." },
+        { "id": "invasive_5", "category": "invasive", "metric": "invasiveSeen", "threshold": 5, "rarity": "poco-comun", "icon": "🕵️", "title": "Vigilante del territorio", "description": "5 especies invasoras identificadas." },
+        { "id": "invasive_15", "category": "invasive", "metric": "invasiveSeen", "threshold": 15, "rarity": "raro", "icon": "🛡️", "title": "Guardián de la biodiversidad", "description": "15 especies invasoras identificadas. Participación ciudadana en estado puro." },
+
+        { "id": "glossary_5", "category": "glossary", "metric": "glossaryViewed", "threshold": 5, "rarity": "comun", "icon": "📖", "title": "Curioso del lenguaje", "description": "Has consultado 5 términos del glosario." },
+        { "id": "glossary_25", "category": "glossary", "metric": "glossaryViewed", "threshold": 25, "rarity": "poco-comun", "icon": "🧠", "title": "Se te pega el vocabulario", "description": "25 términos del glosario consultados." },
+        { "id": "glossary_75", "category": "glossary", "metric": "glossaryViewed", "threshold": 75, "rarity": "raro", "icon": "🎓", "title": "Casi un manual de campo", "description": "75 términos del glosario consultados." },
+
+        { "id": "days_2", "category": "activity", "metric": "activeDays", "threshold": 2, "rarity": "comun", "icon": "📅", "title": "Repites", "description": "Has salido a explorar en 2 días distintos." },
+        { "id": "days_7", "category": "activity", "metric": "activeDays", "threshold": 7, "rarity": "poco-comun", "icon": "🗓️", "title": "Se te ha cogido el gusto", "description": "7 días distintos de actividad." },
+        { "id": "days_20", "category": "activity", "metric": "activeDays", "threshold": 20, "rarity": "raro", "icon": "📆", "title": "Ya es costumbre", "description": "20 días distintos de actividad." },
+        { "id": "days_50", "category": "activity", "metric": "activeDays", "threshold": 50, "rarity": "legendario", "icon": "🔁", "title": "Un hábito de verdad", "description": "50 días distintos de actividad." },
+
+        { "id": "streak_2", "category": "activity", "metric": "weekStreak", "threshold": 2, "rarity": "comun", "icon": "🔥", "title": "Dos semanas seguidas", "description": "Al menos una salida por semana, dos semanas seguidas." },
+        { "id": "streak_4", "category": "activity", "metric": "weekStreak", "threshold": 4, "rarity": "poco-comun", "icon": "🔥", "title": "Un mes sin fallar", "description": "Racha de 4 semanas seguidas con actividad." },
+        { "id": "streak_12", "category": "activity", "metric": "weekStreak", "threshold": 12, "rarity": "raro", "icon": "🔥", "title": "Racha de temporada", "description": "Racha de 12 semanas seguidas con actividad." },
+
+        { "id": "revisit_3", "category": "activity", "metric": "maxParkRevisitDays", "threshold": 3, "rarity": "poco-comun", "icon": "🔂", "title": "Tu rincón", "description": "Has vuelto al mismo parque en 3 fechas distintas. Ya es tuyo." },
+
+        { "id": "flavor_early_bird", "category": "flavor", "metric": "earlyBird", "threshold": 1, "rarity": "poco-comun", "icon": "🌅", "title": "Madrugas más que las cabras montesas", "description": "Marcaste una especie como vista antes de las 8 de la mañana." },
+        { "id": "flavor_winter_outing", "category": "flavor", "metric": "winterOuting", "threshold": 1, "rarity": "poco-comun", "icon": "🧣", "title": "Ni el frío te para", "description": "Has salido a explorar en pleno invierno." },
+        { "id": "flavor_no_search_habitat", "category": "flavor", "metric": "noSearchHabitat", "threshold": 1, "rarity": "raro", "icon": "🧠", "title": "Te lo sabes de memoria", "description": "Completaste un hábitat entero sin usar el buscador ni una vez." }
+    ]
+}

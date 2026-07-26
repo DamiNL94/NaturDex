@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
-# NaturDex · hook de pre-commit — pull automático de la BD.
+# NaturDex · hook de pre-commit — pull automático de la BD + validación de los datos de parques.
 # ------------------------------------------------------------------------------------------------
-# Antes de cada commit, vuelca el estado VIVO del contenedor MySQL a Database/snapshot.sql y lo
-# incluye en el commit. Así cada commit captura automáticamente lo que hayas cambiado en la BD
-# desde la app (panel de administración, etc.).
+# 1) Antes de cada commit, vuelca el estado VIVO del contenedor MySQL a Database/snapshot.sql y lo
+#    incluye en el commit. Así cada commit captura automáticamente lo que hayas cambiado en la BD
+#    desde la app (panel de administración, etc.). Es TOLERANTE a fallos: si Docker o el contenedor
+#    no están activos, NO bloquea el commit.
 #
-# Es tolerante a fallos: si Docker o el contenedor no están activos, NO bloquea el commit.
+# 2) Después ejecuta `npm run validate` (Tools/validate-park-data.js) sobre los datos empaquetados
+#    de los parques. Esto sí BLOQUEA el commit si hay errores: es la red de seguridad que evita
+#    subir un parque con contadores descuadrados, referencias rotas o un límite mal proyectado.
+#    Los avisos (⚠) no bloquean.
+#
 # Se activa con:  git config core.hooksPath .githooks   (o  npm run hooks:install)
 # Para saltarlo puntualmente:  git commit --no-verify
 # ------------------------------------------------------------------------------------------------
@@ -19,19 +24,27 @@ if [ -z "$NODE" ] && [ -x "/c/Program Files/nodejs/node.exe" ]; then
   NODE="/c/Program Files/nodejs/node.exe"
 fi
 if [ -z "$NODE" ]; then
-  echo "[db-sync] Node no disponible; omito el pull automático."
+  echo "[pre-commit] Node no disponible; omito el pull de la BD y la validación."
   exit 0
 fi
 
-# pull tolerante: si el contenedor no está en marcha, sale sin error.
-if ! "$NODE" "$ROOT/Tools/db-sync/db-sync.js" pull --if-running; then
+# --- 1) Pull de la BD (tolerante) ---------------------------------------------------------------
+# Si el contenedor no está en marcha, se avisa y se sigue: nunca bloquea el commit.
+if "$NODE" "$ROOT/Tools/db-sync/db-sync.js" pull --if-running; then
+  # Incluir el snapshot actualizado en el commit (si cambió).
+  if [ -f "$ROOT/Database/snapshot.sql" ]; then
+    git add "$ROOT/Database/snapshot.sql"
+  fi
+else
   echo "[db-sync] el pull automático falló; el commit continúa sin bloquearse."
-  exit 0
 fi
 
-# Incluir el snapshot actualizado en el commit (si cambió).
-if [ -f "$ROOT/Database/snapshot.sql" ]; then
-  git add "$ROOT/Database/snapshot.sql"
+# --- 2) Validación de los datos de parques (bloqueante) -----------------------------------------
+if ! "$NODE" "$ROOT/Tools/validate-park-data.js"; then
+  echo ""
+  echo "[validate] ✗ Los datos de parques tienen errores: el commit se ha detenido."
+  echo "[validate]   Corrígelos y vuelve a intentarlo, o usa 'git commit --no-verify' si sabes lo que haces."
+  exit 1
 fi
 
 exit 0

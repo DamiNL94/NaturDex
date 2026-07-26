@@ -15,7 +15,7 @@
 import { html, poiEmoji, haversineMeters, pointInGeometry, iconMarkup, icon, geoUnavailableReason, geoErrorMessage } from './util.js';
 import { state, isHabitatComplete } from './state.js';
 import {
-  explorerToggle, nearbyPanel, nearbyStatus, nearbyList, nearbyClose, explorerHint, followToggle
+  explorerToggle, nearbyPanel, nearbyStatus, nearbyList, nearbyClose, explorerHint
 } from './dom.js';
 import { map, placeUserMarker, highlightHabitat } from './map.js';
 
@@ -34,21 +34,49 @@ let shownKeys = new Set();
 let currentHabitatId = null;
 
 // --- Seguimiento: el mapa se mueve contigo ----------------------------------------------------------
-// Activo, cada posición del GPS re-centra el mapa (manteniendo el zoom que el usuario elija).
-// Arrastrar el mapa a mano lo desactiva (el usuario "toma el mando"); el botón 🎯 lo reactiva.
+// Explorar y seguir son la misma cosa (ambos viven del mismo watchPosition), así que los gobierna un
+// único botón: el del modo explorador. Activo el seguimiento, cada posición del GPS re-centra el mapa
+// manteniendo el zoom que el usuario elija. Arrastrar el mapa a mano lo desactiva (el usuario "toma
+// el mando") sin apagar el GPS, y el botón pasa a ofrecer "Centrar en mí" para recuperarlo.
 let followActive = false;
+let followZoomed = false; // ¿ya se hizo el acercamiento inicial de esta sesión de seguimiento?
 let lastFix = null;
 
+// Zoom mínimo al empezar a seguir: a 16 se ven los límites de hábitat.
+const FOLLOW_ZOOM = 16;
+
+// Sin animación: los fixes del GPS llegan cada pocos segundos y encadenar animaciones produce
+// "efecto goma" (cada fix cancela la anterior a medias); el recentrado instantáneo es lo preciso.
+function centerOn(lat, lng) {
+  const zoom = followZoomed ? map.getZoom() : Math.max(map.getZoom(), FOLLOW_ZOOM);
+  followZoomed = true;
+  map.setView([lat, lng], zoom, { animate: false });
+}
+
 function setFollow(on) {
-  if (on && !state.explorerActive) startExplorerMode(); // seguir implica explorar: enciende el GPS
-  if (on && !state.explorerActive) on = false;          // sin geolocalización no hay seguimiento
-  followActive = on;
-  followToggle.classList.toggle('active', on);
-  followToggle.setAttribute('aria-pressed', on ? 'true' : 'false');
-  // Al activar, acércate a la última posición conocida (zoom 16: los límites de hábitat se ven).
-  // Sin animación: los fixes del GPS llegan cada pocos segundos y encadenar animaciones produce
-  // "efecto goma" (cada fix cancela la anterior a medias); el recentrado instantáneo es lo preciso.
-  if (on && lastFix) map.setView([lastFix.lat, lastFix.lng], Math.max(map.getZoom(), 16), { animate: false });
+  followActive = on && state.explorerActive; // sin GPS encendido no hay seguimiento que valga
+  if (!followActive) followZoomed = false;
+  renderExplorerToggle();
+  if (followActive && lastFix) centerOn(lastFix.lat, lastFix.lng);
+}
+
+// --- El botón todo-en-uno ---------------------------------------------------------------------------
+// Tres estados: apagado · explorando y siguiendo · explorando con el mapa suelto (invita a centrar).
+function renderExplorerToggle() {
+  const active = state.explorerActive;
+  explorerToggle.classList.toggle('active', active);
+  explorerToggle.classList.toggle('recenter', active && !followActive);
+  explorerToggle.setAttribute('aria-pressed', active ? 'true' : 'false');
+  if (!active) {
+    explorerToggle.innerHTML = iconMarkup('pin', 14) + ' Modo explorador';
+    explorerToggle.title = 'Activa tu GPS: el mapa te sigue y te avisamos de lo que tienes cerca';
+  } else if (followActive) {
+    explorerToggle.innerHTML = iconMarkup('target', 14) + ' Explorando…';
+    explorerToggle.title = 'El mapa te sigue. Toca para salir del modo explorador';
+  } else {
+    explorerToggle.innerHTML = iconMarkup('target', 14) + ' Centrar en mí';
+    explorerToggle.title = 'Has movido el mapa a mano. Toca para que vuelva a seguirte';
+  }
 }
 
 // Los límites de hábitat piden ver la posición con su precisión: se informa del margen del GPS y
@@ -227,19 +255,18 @@ function startExplorerMode() {
     return;
   }
   state.explorerActive = true;
-  explorerToggle.classList.add('active');
-  explorerToggle.innerHTML = iconMarkup('pin', 14) + ' Explorando…';
   nearbyPanel.hidden = false;
   nearbyStatus.textContent = 'Buscando tu posición…';
   nearbyList.innerHTML = '';
   shownKeys = new Set();
   currentHabitatId = null;
+  setFollow(true); // encender el explorador es también empezar a seguir: es el mismo gesto
   state.explorerWatchId = navigator.geolocation.watchPosition(
     pos => {
       const { latitude: lat, longitude: lng, accuracy } = pos.coords;
       lastFix = { lat, lng };
       placeUserMarker(lat, lng, accuracy);
-      if (followActive) map.setView([lat, lng], map.getZoom(), { animate: false }); // el mapa te acompaña
+      if (followActive) centerOn(lat, lng); // el mapa te acompaña (y el primer fix te acerca)
       updateNearby(lat, lng, accuracy);
       checkDiscoveries(lat, lng);
     },
@@ -247,18 +274,24 @@ function startExplorerMode() {
       nearbyStatus.textContent = geoErrorMessage(error);
     },
     // maximumAge bajo: para seguir el paso del usuario hacen falta posiciones frescas, no cacheadas.
-    { enableHighAccuracy: true, maximumAge: 3000, timeout: 20000 }
+    // La alta precisión es una preferencia (Perfil y ajustes): da mejor lectura de en qué hábitat
+    // estás, a cambio de batería, y hay quien prefiere lo segundo en una ruta larga.
+    { enableHighAccuracy: highAccuracyPref(), maximumAge: 3000, timeout: 20000 }
   );
+  // "Seguirme al explorar": arrancar ya con el mapa acompañando, sin tener que pulsar el 🎯.
+  if (!followActive && window.NaturDexPrefs && window.NaturDexPrefs.get('followByDefault')) setFollow(true);
+}
+
+function highAccuracyPref() {
+  return !window.NaturDexPrefs || window.NaturDexPrefs.get('highAccuracyGps') !== false;
 }
 
 function stopExplorerMode() {
   state.explorerActive = false;
-  explorerToggle.classList.remove('active');
-  explorerToggle.innerHTML = iconMarkup('pin', 14) + ' Modo explorador';
   nearbyPanel.hidden = true;
   hideHint();
   hideHabitatPrompt();
-  setFollow(false);
+  setFollow(false); // también repinta el botón (vuelve a "Modo explorador")
   lastFix = null;
   currentHabitatId = null;
   highlightHabitat(null);
@@ -272,24 +305,25 @@ function stopExplorerMode() {
 export function initExplorer(h) {
   Object.assign(handlers, h);
 
-  explorerToggle.addEventListener('click', () => { state.explorerActive ? stopExplorerMode() : startExplorerMode(); });
+  // Un solo botón para las tres cosas: encender el GPS, recuperar el seguimiento si el usuario ha
+  // movido el mapa, y apagarlo todo. Salir también se puede por la × del panel "Cerca de ti".
+  explorerToggle.addEventListener('click', () => {
+    if (!state.explorerActive) startExplorerMode();
+    else if (!followActive) setFollow(true); // recentrar sin salir del modo explorador
+    else stopExplorerMode();
+  });
   nearbyClose.addEventListener('click', stopExplorerMode);
 
-  // Botón 🎯 "seguirme" como control Leaflet, junto al zoom (esquina inferior derecha del mapa).
-  const followControl = L.control({ position: 'bottomright' });
-  followControl.onAdd = () => {
-    L.DomEvent.disableClickPropagation(followToggle);
-    return followToggle;
-  };
-  followControl.addTo(map);
-  followToggle.addEventListener('click', () => setFollow(!followActive));
-  // Arrastrar el mapa a mano = tomar el mando: el seguimiento se apaga solo.
+  // Arrastrar el mapa a mano = tomar el mando: el seguimiento se apaga solo (el GPS sigue vivo).
   map.on('dragstart', () => { if (followActive) setFollow(false); });
 
   nearbyList.addEventListener('click', event => {
     const item = event.target.closest('.nearby-item');
     if (!item) return;
     const { kind, id } = item.dataset;
+    // Ir a un punto de la lista también es tomar el mando: si no, el siguiente fix del GPS
+    // devolvería el mapa a tu posición de golpe. El botón queda en "Centrar en mí".
+    if (followActive) setFollow(false);
     if (kind === 'poi') {
       const marker = state.poiMarkers.get(id);
       if (marker) { map.setView(marker.getLatLng(), 16, { animate: true }); marker.openPopup(); }

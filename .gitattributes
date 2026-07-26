@@ -1,0 +1,86 @@
+# ================================================================================================
+# NaturDex · normalización de finales de línea
+# ------------------------------------------------------------------------------------------------
+# El repositorio se desarrolla en Windows pero se despliega en Linux (contenedor PHP/Apache). Sin
+# este fichero, cada máquina decide por su cuenta (core.autocrlf) y acaba pasando lo que ya pasó
+# aquí: 108 ficheros marcados como modificados sin un solo cambio real, solo por el CR final.
+#
+# La regla es una: **en el repositorio y en el disco todo va con LF**. `text=auto eol=lf` normaliza
+# al hacer commit y fuerza LF al hacer checkout, en cualquier sistema operativo. Los editores
+# actuales (VS Code, Visual Studio, Notepad++, el Bloc de notas de Windows 10+) abren LF sin
+# problema, así que no se pierde nada por el camino.
+#
+# Las dos excepciones de abajo son las que sí importan:
+#   · los scripts de shell y el hook de git DEBEN ir en LF (con CRLF, bash falla con
+#     "bad interpreter: /usr/bin/env bash^M");
+#   · PowerShell y los .bat son de Windows y se dejan en CRLF, que es su convención.
+#
+# Si al aplicar esto siguen apareciendo ficheros modificados, se normaliza una sola vez con:
+#     git add --renormalize .
+#     git commit -m "Normalizar finales de línea (LF) con .gitattributes"
+# ================================================================================================
+
+# Por defecto: git detecta qué es texto y lo guarda y saca con LF.
+* text=auto eol=lf
+
+# --- Texto explícito (por si la heurística duda con ficheros grandes o poco habituales) ----------
+*.js       text eol=lf
+*.mjs      text eol=lf
+*.ts       text eol=lf
+*.tsx      text eol=lf
+*.json     text eol=lf
+*.geojson  text eol=lf
+*.php      text eol=lf
+*.sql      text eol=lf
+*.html     text eol=lf
+*.css      text eol=lf
+*.md       text eol=lf
+*.yml      text eol=lf
+*.yaml     text eol=lf
+*.ini      text eol=lf
+*.conf     text eol=lf
+*.webmanifest text eol=lf
+*.example  text eol=lf
+Dockerfile text eol=lf
+Caddyfile  text eol=lf
+.gitignore text eol=lf
+.dockerignore text eol=lf
+
+# --- Scripts: el final de línea es funcional, no cosmético --------------------------------------
+# Bash y el hook de pre-commit se ejecutan en Linux (y en Git Bash): CRLF los rompe.
+*.sh              text eol=lf
+.githooks/*       text eol=lf
+# PowerShell y los .bat son nativos de Windows: se quedan en CRLF.
+*.ps1             text eol=crlf
+*.bat             text eol=crlf
+*.cmd             text eol=crlf
+
+# --- Binarios: git no debe tocarlos ni intentar hacerles diff -----------------------------------
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.webp  binary
+*.gif   binary
+*.ico   binary
+*.pdf   binary
+*.xlsx  binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+*.mp3   binary
+*.zip   binary
+# Paquetes de mapa base sin conexión (Tools/build-park-tiles.js). Sin esta línea, `text=auto` los
+# normalizaría a LF y el archivo quedaría corrupto: son datos binarios, no texto.
+*.pmtiles binary
+
+# --- Artefactos generados: no son trabajo humano, no ensucian la revisión -----------------------
+# `linguist-generated` los colapsa en los diffs de GitHub; `-diff` evita imprimir miles de líneas
+# minificadas en `git diff` local. Se siguen versionando (el panel compilado se despliega tal cual).
+Frontend/admin/assets/** linguist-generated=true -diff
+# Librerías de terceros copiadas tal cual (ver Frontend/Vendor/README.md): son bundles minificados,
+# no trabajo humano, y no deben contar como código del proyecto ni ensuciar los diffs.
+Frontend/Vendor/**       linguist-vendored=true -diff
+package-lock.json        linguist-generated=true -diff
+AdminPanel/package-lock.json linguist-generated=true -diff
+Database/snapshot.sql    linguist-generated=true -diff
+Tools/db-sync/backups/** linguist-generated=true -diff

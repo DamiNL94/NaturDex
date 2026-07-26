@@ -190,9 +190,90 @@ CREATE TABLE IF NOT EXISTS glosario (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
+-- ------------------------------------------------------------------------------------------------
+-- Nivel de dato de cada espacio protegido (rollout nacional).
+-- 'basic' = ficha base (límite oficial + Natura 2000, sin catálogo) · 'available' = completo ·
+-- 'planned' = anunciado sin datos. Hasta ahora este dato solo vivía en Frontend/Data/parks-index.json
+-- y la BD no lo conocía; al escalar a cientos de espacios eso eran dos verdades que se separan.
+-- El DEFAULT es 'basic' porque es el estado en el que nace todo espacio nuevo; a continuación se
+-- corrige el de los que ya tienen catálogo completo (los que tienen especies cargadas).
+-- ------------------------------------------------------------------------------------------------
+-- Las comillas van dobladas ('') en vez de usar comillas dobles porque el procedimiento monta la
+-- definición dentro de un CONCAT + PREPARE: con sql_mode=ANSI_QUOTES, "…" sería un identificador y
+-- el ALTER fallaría. Doblarlas es el escapado estándar y funciona con cualquier sql_mode.
+CALL naturdex_add_column('parks', 'status',
+                         'ENUM(''basic'',''available'',''planned'') NOT NULL DEFAULT ''basic''');
+CALL naturdex_add_index ('parks', 'idx_parks_status',
+                         'INDEX idx_parks_status (status)');
+
+-- Un espacio que ya tiene especies cargadas no es una ficha base: es un catálogo completo. Se
+-- deduce así en vez de listar slugs a mano, para que la migración valga en cualquier instalación.
+UPDATE parks p
+   SET p.status = 'available'
+ WHERE p.status = 'basic'
+   AND EXISTS (SELECT 1 FROM species s WHERE s.park_id = p.id);
+
+-- ------------------------------------------------------------------------------------------------
+-- Preferencias de la cuenta (pantalla "Perfil y ajustes").
+-- Tema, tamaño de texto, mapa base por defecto, GPS... El dispositivo manda: el frontend las aplica
+-- desde localStorage sin esperar a la red (prefs.js) y esta columna solo las espeja para que la
+-- misma cuenta las recupere en otro dispositivo. Ver Backend/Api/account.php?action=prefs.
+-- ------------------------------------------------------------------------------------------------
+CALL naturdex_add_column('users', 'prefs', 'JSON NULL');
+
 -- Limpieza de los procedimientos auxiliares.
 DROP PROCEDURE IF EXISTS naturdex_add_column;
 DROP PROCEDURE IF EXISTS naturdex_add_index;
 
 -- Limpieza de coordenadas de especies: la localización la aporta el usuario (GPS).
 UPDATE species SET latitude = NULL, longitude = NULL;
+
+-- ------------------------------------------------------------------------------------------------
+-- Progreso de CUENTA (ámbito estatal) + logros. Tablas nuevas e independientes; CREATE TABLE
+-- IF NOT EXISTS es válido en MySQL 8.4. Ver el bloque equivalente (con comentarios completos) en
+-- Database/schema.sql y Backend/Lib/account_progress.php.
+-- ------------------------------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS user_account_progress (
+    user_id INT NOT NULL PRIMARY KEY,
+    payload JSON NOT NULL,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS user_achievements (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    achievement_id VARCHAR(60) NOT NULL,
+    unlocked_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    celebrated_at TIMESTAMP NULL,
+    context JSON NULL,
+    UNIQUE KEY unique_user_achievement (user_id, achievement_id),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    INDEX idx_user_achievements_user (user_id)
+);
+
+CREATE TABLE IF NOT EXISTS user_activity_log (
+    user_id INT NOT NULL,
+    park_slug VARCHAR(120) NOT NULL,
+    activity_date DATE NOT NULL,
+    PRIMARY KEY (user_id, park_slug, activity_date),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS user_invasive_sightings (
+    user_id INT NOT NULL,
+    invasive_id INT NOT NULL,
+    seen_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (user_id, invasive_id),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (invasive_id) REFERENCES especies_invasoras(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS user_glossary_views (
+    user_id INT NOT NULL,
+    term_id INT NOT NULL,
+    viewed_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (user_id, term_id),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (term_id) REFERENCES glosario(id) ON DELETE CASCADE
+);

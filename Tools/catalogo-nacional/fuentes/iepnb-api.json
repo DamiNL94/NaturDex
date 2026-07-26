@@ -1,0 +1,98 @@
+{
+  "_comment": "API PostgREST del IEPNB (Inventario Español del Patrimonio Natural y de la Biodiversidad). Sin autenticación, sin clave, devuelve JSON. Es la vía preferente para rellenar la base de datos de especies: en vez de descargar y parsear XLSX, se consulta por especie o por lote. Verificado el 2026-07-25: responde correctamente y los campos listados aquí están copiados de respuestas reales.",
+  "base": "https://iepnb.gob.es/api/catalogo/",
+  "protocolo": "PostgREST — admite ?limit=, ?offset=, ?select=, ?campo=eq.valor, ?campo=ilike.*texto*, ?campo=gt.0 y Prefer: count=exact",
+  "licencia": "Uso libre y gratuito con atribución. Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico».",
+  "paginaOrigen": "https://www.miteco.gob.es/es/biodiversidad/servicios/banco-datos-naturaleza/informacion-disponible/bdn_listas_patron.html",
+  "respaldoNormativo": [
+    "Resolución de 17 de febrero de 2017, SE de Medio Ambiente (3 listas patrón) — https://www.boe.es/eli/es/res/2017/02/17/(4)",
+    "Resolución de 3 de diciembre de 2020, SE de Medio Ambiente (revisión y ampliación) — https://www.boe.es/eli/es/res/2020/12/03/(3)"
+  ],
+  "avisoVersion": "La lista vigente es la revisión de 2020, con corrección de moluscos de 18/05/2021 (propuesta por la Sociedad Española de Malacología). Citar esa versión, no «2017».",
+  "vistas": [
+    {
+      "id": "v_listapatronespecie",
+      "titulo": "Lista patrón de las especies silvestres presentes en España",
+      "endpoint": "https://iepnb.gob.es/api/catalogo/v_listapatronespecie?idtaxon=gt.0",
+      "xlsx": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/recursos/listas/lista-patron-especies-silvestres.xlsx",
+      "usoEnNaturDex": "Tabla maestra de especies. `idtaxon` es la clave estable oficial y debe convertirse en la clave primaria del catálogo nacional (hoy el piloto usa eidos_taxonid). Rellena taxonomía completa y nombre común de una sola vez.",
+      "camposClave": ["idtaxon", "idnombre", "ScientificName", "taxonConceptID", "kingdom", "phylum", "class", "order", "family", "genus", "specificepithet", "infraspecificepithet", "taxonRank", "WithoutAutorship", "ScientificNameAuthorship", "Vernacular Name", "Origen", "Environment", "Grupo taxonómico", "nameAccordingto", "namePublishedIn", "namePublishedInYear"],
+      "notas": "`Origen` distingue nativa/introducida — sirve para marcar exóticas sin cruzar con otra fuente. `Environment` separa terrestre de marino. Los campos `LP <grupo>` son banderas 0/1 del grupo taxonómico."
+    },
+    {
+      "id": "v_listapatronespecie_sinonimos",
+      "titulo": "Lista patrón con sinonimias",
+      "endpoint": "https://iepnb.gob.es/api/catalogo/v_listapatronespecie_sinonimos",
+      "xlsx": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/recursos/listas/lista-patron-especies-silvestres-con-sinonimos.xlsx",
+      "usoEnNaturDex": "Resuelve automáticamente los casos de sinonimia que hoy están abiertos a mano en el README del piloto: Rhamnus hispanorum ↔ R. lycioides subsp. borgiae, Sylvia ↔ Curruca, Centaurium rigualii ↔ C. quadrifolium. Un lookup por nombre antiguo devuelve el taxón aceptado.",
+      "notas": "Es la vía correcta para no duplicar fichas al reutilizar especies entre parques."
+    },
+    {
+      "id": "v_listapatronespecie_normas",
+      "titulo": "Lista patrón con normativa y categorías de protección",
+      "endpoint": "https://iepnb.gob.es/api/catalogo/v_listapatronespecie_normas",
+      "xlsx": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/recursos/listas/lista-patron-especies-silvestres-con-normativa.xlsx",
+      "usoEnNaturDex": "LA PIEZA QUE FALTABA para spainStatus y el estado regional. Devuelve una fila por (taxón × norma) con la norma citada literalmente, la categoría dentro de esa norma, el ámbito y el año. Permite rellenar el estado de conservación con procedencia legal exacta en vez de bibliografía suelta.",
+      "camposClave": ["idtaxon", "ScientificName", "Nombre en normativa", "Normativa", "Categoría", "Observaciones población", "Ámbito normativa", "Año normativa"],
+      "notas": "`Ámbito normativa` toma valores UE / estatal / autonómico, así que de aquí salen a la vez el estado español y el regional (p. ej. el Decreto 50/2003 de Murcia). Ojo: hay VARIAS filas por taxón (una por norma y anexo); agrupar por idtaxon al cargar. `Nombre en normativa` conserva el binomio tal cual aparece en el BOE, que puede diferir del aceptado — útil para auditar."
+    },
+    {
+      "id": "v_listapatronespecie_codigos",
+      "titulo": "Lista patrón con pasarelas a otras clasificaciones",
+      "endpoint": "https://iepnb.gob.es/api/catalogo/v_listapatronespecie_codigos",
+      "xlsx": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/recursos/listas/lista-patron-especies-silvestres-pasarela.xlsx",
+      "usoEnNaturDex": "Tabla de reconciliación oficial. Da «Código RED NATURA» (el código de especie de los formularios Natura 2000) y «Código UICN» (el assessment id de la Red List). Sustituye parcialmente al reconcile-taxa.js perdido que describe Docs/rollout/ESTADO.md §7.1.",
+      "camposClave": ["idtaxon", "ScientificName", "Código RED NATURA", "Código UICN", "taxonConceptID"],
+      "notas": "LIMITACIÓN: no trae gbifSpeciesKey. La reconciliación con GBIF sigue necesitando la API de GBIF. Pero «Código UICN» permite enlazar directo a iucnredlist.org sin búsqueda por nombre, y «Código RED NATURA» cruza con la lista de especies por espacio (BISE Site_Species_List) usando el mismo código."
+    }
+  ],
+  "fuentesExternasEnlazadas": [
+    {
+      "id": "iucn-red-list",
+      "titulo": "IUCN Red List of Threatened Species",
+      "url": "https://www.iucnredlist.org/",
+      "usoEnNaturDex": "Única fuente válida para el campo `iucnGlobal`. La evaluación de la UICN es científica y de ámbito MUNDIAL: no sustituye ni equivale al estado legal (LESRPE, CEEA, catálogos autonómicos), que sale del IEPNB. En el catálogo son campos distintos y deben rellenarse por separado.",
+      "comoSeEnlaza": "La pasarela `v_listapatronespecie_codigos` del IEPNB devuelve el campo «Código UICN» de cada taxón: es el identificador del *assessment* en la Red List. Sirve para dos cosas: (a) saber si una especie ESTÁ evaluada sin buscar por nombre, y (b) enlazar la ficha oficial.",
+      "consultaPractica": "https://www.iucnredlist.org/search?query=<Género especie>&searchType=species — la página de resultados muestra la categoría (lc, nt, vu, en, cr) y la tendencia poblacional. Requiere un navegador que ejecute JavaScript: la web es una SPA y web_fetch devuelve solo el armazón.",
+      "avisoRuta": "La URL directa /species/<id> NO resuelve: el enlace canónico necesita taxonid Y assessmentid, y la pasarela del IEPNB solo da uno de los dos. Por eso se usa la búsqueda por nombre.",
+      "avisoTaxonomia": "La UICN puede publicar bajo un nombre aceptado distinto al de la Lista Patrón española (ejemplo verificado: Saccharum ravennae en la Lista Patrón se publica como Tripidium ravennae en la Red List). La clave maestra del proyecto sigue siendo `idtaxon`; el nombre de la UICN se anota, no se adopta.",
+      "licencia": "Los datos de la Red List tienen condiciones de uso propias, distintas de las del MITECO. Antes de publicar categorías de forma masiva conviene revisar https://www.iucnredlist.org/terms/terms-of-use. Citar como: IUCN Red List of Threatened Species, con el año de la versión consultada.",
+      "apiOficial": "https://api.iucnredlist.org/ — requiere token gratuito previa solicitud. Es la vía correcta si se quiere automatizar el barrido en lugar de consultar la web."
+    }
+  ],
+  "otrosRecursos": [
+    {
+      "titulo": "Lista controlada de los Espacios Protegidos de España",
+      "csv": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/recursos/listas/listaespaciosprotegidos.csv",
+      "xlsx": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/recursos/listas/listaespaciosprotegidos.xlsx",
+      "usoEnNaturDex": "Nomenclatura y código oficial de cada espacio protegido. Es la referencia para fijar park.json.name y park.json.category literales, y para que los slugs se generen desde el nombre oficial y no desde uno inventado. Complementa al shapefile ENP (que da la geometría) con la lista normalizada de nombres."
+    },
+    {
+      "titulo": "Lista patrón de los hábitats terrestres de España (con pasarela EUNIS)",
+      "xlsx": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/recursos/listas/eunis-lpeht.xlsx",
+      "docx": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/recursos/listas/lpeht.docx",
+      "usoEnNaturDex": "Correspondencias entre los códigos HIC de la Directiva Hábitats y la clasificación europea EUNIS. Permite enriquecer Tools/catalogo-nacional/data/hic-nombres.json con nomenclatura normalizada y describir hábitats que no son HIC."
+    },
+    {
+      "titulo": "Diccionario de datos de la cartografía de Hábitats 1997",
+      "xls": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/habitatdirectiva_1997_dd_tcm30-199477.xls",
+      "usoEnNaturDex": "Define los campos de DirectivaHabitat<NN>.shp y de Habi<NN>.dbf. Conviene leerlo antes de tocar build-habitats.js para otra provincia."
+    },
+    {
+      "titulo": "Modelo de datos común de las listas patrón de especies",
+      "xlsx": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/modelodedatoslpespecies_tcm30-485236.xlsx",
+      "usoEnNaturDex": "Esquema oficial de las listas. Útil para alinear Database/schema.sql con la nomenclatura del IEPNB (Darwin Core) en vez de con nombres propios."
+    },
+    {
+      "titulo": "Fuentes de referencia de la lista patrón 2020",
+      "xlsx": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/fuentesref_2020_tcm30-518287.xlsx",
+      "usoEnNaturDex": "Bibliografía que respalda cada grupo taxonómico. Alimenta el campo `source` de las fichas."
+    }
+  ],
+  "restriccionEntorno": {
+    "_comment": "Detalle operativo importante para futuras sesiones.",
+    "sandboxBash": "El proxy del entorno de ejecución BLOQUEA iepnb.gob.es, mapama.gob.es y pypi.org (403 blocked-by-allowlist). curl/pip no funcionan desde el sandbox.",
+    "webFetch": "La herramienta web_fetch SÍ alcanza iepnb.gob.es y devuelve el JSON íntegro. Para consultas puntuales o por lotes pequeños es la vía válida.",
+    "descargasBinarias": "Los .zip y .xlsx no pasan por web_fetch (devuelve vacío). Hay que descargarlos con el navegador del usuario."
+  }
+}

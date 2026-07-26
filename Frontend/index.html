@@ -15,10 +15,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+    <!-- Leaflet y markercluster van vendorizados en Vendor/ (no unpkg): el Service Worker ignora a
+         propósito todo lo que no sea del mismo origen, así que desde un CDN nunca llegaban a la
+         caché y sin cobertura la app no arrancaba (map.js usa L al importarse). Ver Vendor/README.md. -->
+    <link rel="stylesheet" href="Vendor/leaflet/leaflet.css">
+    <link rel="stylesheet" href="Vendor/markercluster/MarkerCluster.css">
+    <link rel="stylesheet" href="Vendor/markercluster/MarkerCluster.Default.css">
     <link rel="stylesheet" href="Css/styles.css">
+    <!-- Preferencias del usuario (tema, tamaño de texto, movimiento). Script clásico y SÍNCRONO en
+         el <head> a propósito: el tema tiene que estar puesto en <html> antes del primer pintado o
+         se vería un fogonazo blanco al abrir la app en modo oscuro. -->
+    <script src="Js/prefs.js"></script>
 </head>
 <body>
     <!-- ===================== Pantalla: portada ===================== -->
@@ -67,7 +74,7 @@
         <div class="select-panel">
             <div class="select-head">
                 <div><p class="eyebrow">NaturDex</p><h2>Elige un parque</h2></div>
-                <div class="park-user"><span id="userNameSelect" class="user-name"></span><button id="tutorialBtnSelect" class="icon-btn" type="button" title="Ver el tutorial" aria-label="Ver el tutorial"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></button><button id="logoutBtnSelect" class="icon-btn" type="button" title="Cerrar sesión" aria-label="Cerrar sesión"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg></button></div>
+                <div class="park-user"><span id="userNameSelect" class="user-name"></span><button id="accountProgressBtn" class="icon-btn" type="button" title="Tu progreso estatal" aria-label="Ver tu progreso estatal"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="6"/><polyline points="8.5 13.5 7 22 12 19 17 22 15.5 13.5"/></svg></button><button id="tutorialBtnSelect" class="icon-btn" type="button" title="Ver el tutorial" aria-label="Ver el tutorial"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></button><button id="profileBtnSelect" class="icon-btn primary" type="button" title="Perfil y ajustes" aria-label="Perfil y ajustes"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button></div>
             </div>
             <p class="select-hint">Selecciónalo en el mapa o en la lista. Así solo se carga la información del parque que vas a explorar, sin saturar el mapa.</p>
             <label class="select-field">Parque
@@ -80,6 +87,33 @@
         <div id="spain-map" class="spain-map" aria-label="Mapa de España con los parques disponibles"></div>
     </section>
 
+    <!-- ===================== Pantalla: progreso de cuenta (ámbito estatal) ===================== -->
+    <section id="screen-account" class="screen screen-account" hidden aria-label="Tu progreso estatal">
+        <div class="account-panel">
+            <div class="select-head">
+                <div><p class="eyebrow">NaturDex</p><h2>Tu progreso estatal</h2></div>
+                <button id="backToSelectFromAccount" class="link-btn" type="button">← Parques</button>
+            </div>
+            <p class="select-hint">Lo que has descubierto en todos los parques de tu cuenta, sumado. Un logro, una vez conseguido, no se pierde.</p>
+            <div id="accountProgressBody" class="account-progress-body"></div>
+        </div>
+    </section>
+
+    <!-- ===================== Pantalla: perfil y ajustes ===================== -->
+    <!-- Todo lo que el usuario administra de SU cuenta y SU experiencia: identidad, contraseña,
+         preferencias, datos guardados y ayuda. La pinta Frontend/Js/profile.js. Se llega con el
+         botón de perfil de las cabeceras (selector de parque y parque) y "← Volver" devuelve a la
+         pantalla desde la que se entró. -->
+    <section id="screen-profile" class="screen screen-profile" hidden aria-label="Perfil y ajustes">
+        <div class="profile-panel">
+            <div class="select-head">
+                <div><p class="eyebrow">NaturDex</p><h2>Perfil y ajustes</h2></div>
+                <button id="backFromProfile" class="link-btn" type="button">← Volver</button>
+            </div>
+            <div id="profileBody" class="profile-body"></div>
+        </div>
+    </section>
+
     <!-- ===================== Pantalla: parque (la app completa) ===================== -->
     <section id="screen-park" class="screen" hidden>
         <main class="app-shell">
@@ -87,18 +121,18 @@
             <aside class="sidebar" aria-label="Panel de exploración NaturDex">
                 <div class="park-nav">
                     <button type="button" id="backToParks" class="link-btn">← Parques</button>
-                    <div class="park-user"><span id="userName" class="user-name"></span><button id="tutorialBtn" class="icon-btn" type="button" title="Ver el tutorial" aria-label="Ver el tutorial"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></button><button id="logoutBtn" class="icon-btn" type="button" title="Cerrar sesión" aria-label="Cerrar sesión"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg></button></div>
+                    <div class="park-user"><span id="userName" class="user-name"></span><button id="tutorialBtn" class="icon-btn" type="button" title="Ver el tutorial" aria-label="Ver el tutorial"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></button><button id="profileBtn" class="icon-btn primary" type="button" title="Perfil y ajustes" aria-label="Perfil y ajustes"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button></div>
                 </div>
                 <section class="park-summary">
-                    <p class="eyebrow">NaturDex piloto</p>
+                    <p class="eyebrow" id="parkEyebrow">NaturDex piloto</p>
                     <h1 id="parkTitle">Cabo Cope y Puntas de Calnegre</h1>
                     <p id="parkSummary">Guía viva de especies, hábitats y puntos de observación.</p>
-                    <div class="summary-grid" aria-label="Resumen del parque">
+                    <div class="summary-grid" id="parkStats" aria-label="Resumen del parque">
                         <div><strong id="speciesCount">0</strong><span>especies</span></div>
                         <div><strong id="habitatCount">0</strong><span>hábitats</span></div>
                         <div><strong id="coastlineKm">17 km</strong><span>costa</span></div>
                     </div>
-                    <div class="progress-wrap" aria-label="Progreso de descubrimiento">
+                    <div class="progress-wrap" id="parkProgressWrap" aria-label="Progreso de descubrimiento">
                         <div id="progressTrack" class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-labelledby="progressLabel"><div id="progressFill" class="progress-fill"></div></div>
                         <span id="progressLabel" class="progress-label">0 / 0 especies descubiertas</span>
                     </div>
@@ -114,6 +148,11 @@
                     <button class="view-tab" type="button" data-view="invasoras" aria-pressed="false">Invasoras</button>
                     <button class="view-tab" type="button" data-view="progress" aria-pressed="false">Progreso</button>
                 </div>
+                <!-- Ficha base (status "basic"): el espacio tiene límite oficial y Red Natura 2000,
+                     pero todavía no catálogo de especies ni hábitats. En vez de dejar el catálogo
+                     vacío y los contadores a cero sin explicación, se sustituye por este aviso con
+                     los datos administrativos que sí están verificados. Lo rellena render.js. -->
+                <section class="basic-notice" id="basicNotice" hidden aria-label="Estado del catálogo de este espacio"></section>
                 <div class="catalog-crumb" id="catalogCrumb" hidden>
                     <button type="button" id="backToHabitats">← Hábitats</button>
                     <button type="button" id="catalogCrumbLabel" class="crumb-label" title="Abrir la ficha de este hábitat"></button>
@@ -155,11 +194,12 @@
                     </div>
                     <article id="detailPanel" class="detail-panel" aria-live="polite" tabindex="-1" aria-label="Ficha de detalle"></article>
                 </div>
-                <button type="button" id="explorerToggle" class="explorer-toggle" title="Activa tu GPS para descubrir qué tienes cerca"><svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></svg> Modo explorador</button>
+                <!-- Control único de GPS: activa el modo explorador Y el seguimiento del mapa. Sus tres
+                     estados (apagado / explorando y siguiendo / explorando sin seguir) los pinta
+                     explorer.js · renderExplorerToggle(). -->
+                <button type="button" id="explorerToggle" class="explorer-toggle" aria-pressed="false" title="Activa tu GPS: el mapa te sigue y te avisamos de lo que tienes cerca"><svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></svg> Modo explorador</button>
                 <!-- Aviso de descubrimiento por proximidad (modo explorador): POI al alcance o hábitat pisado -->
                 <div id="explorerHint" class="explorer-hint" role="status" hidden></div>
-                <!-- Seguimiento: el mapa se mueve contigo (explorer.js lo monta como control Leaflet) -->
-                <button type="button" id="followToggle" class="follow-toggle" title="Seguir mi posición: el mapa se mueve contigo" aria-label="Seguir mi posición en el mapa" aria-pressed="false"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></button>
                 <aside id="nearbyPanel" class="nearby-panel" hidden aria-label="Puntos cercanos a tu posición">
                     <div class="nearby-header">
                         <h3>Cerca de ti</h3>
@@ -179,8 +219,12 @@
         </nav>
     </section>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <script src="Vendor/leaflet/leaflet.js"></script>
+    <script src="Vendor/markercluster/leaflet.markercluster.js"></script>
+    <!-- Mapa base sin conexión: trae dentro el lector de .pmtiles, el renderizador vectorial y las
+         paletas. Solo lo usa el parque que declare `tiles` en su manifiesto; sin él o sin paquete,
+         map.js degrada a OSM/PNOA y al fondo vacío de siempre. -->
+    <script src="Vendor/protomaps/protomaps-leaflet.js"></script>
     <script src="Js/offline.js"></script>
     <script type="module" src="Js/app.js"></script>
     <script src="Js/auth.js"></script>

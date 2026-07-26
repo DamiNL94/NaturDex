@@ -9,11 +9,15 @@
  * Es opcional: si el navegador no admite Service Workers, la app sigue funcionando con la caché en
  * localStorage y Cache Storage que gestiona offline.js.
  */
-var VERSION = 'v37';
+var VERSION = 'v40';
 var RUNTIME_CACHE = 'naturdex-runtime-' + VERSION;
 
 // Armazón mínimo que se intenta precachear en la instalación (best-effort).
-var SHELL_ASSETS = ['index.html', 'Css/styles.css', 'manifest.webmanifest', 'Img/icon-192.png', 'Img/icon-512.png', 'Js/offline.js', 'Js/util.js', 'Js/state.js', 'Js/dom.js', 'Js/data.js', 'Js/render.js', 'Js/map.js', 'Js/layers.js', 'Js/explorer.js', 'Js/audio.js', 'Js/glossary.js', 'Js/tutorial.js', 'Js/app.js', 'Js/auth.js', 'Data/glosario.json', 'Data/invasoras.json'];
+// Vendor/* son Leaflet y markercluster (antes en unpkg). Van aquí porque el `fetch` de más abajo
+// ignora a propósito todo lo que no es del mismo origen: desde un CDN jamás llegaban a la caché y,
+// como map.js usa `L` al importarse, la app no arrancaba sin cobertura. Los PNG de leaflet/images
+// hacen falta de verdad: el mapa de España (auth.js) usa el marcador por defecto de Leaflet.
+var SHELL_ASSETS = ['index.html', 'Css/styles.css', 'manifest.webmanifest', 'Img/icon-192.png', 'Img/icon-512.png', 'Vendor/leaflet/leaflet.js', 'Vendor/leaflet/leaflet.css', 'Vendor/leaflet/images/marker-icon.png', 'Vendor/leaflet/images/marker-icon-2x.png', 'Vendor/leaflet/images/marker-shadow.png', 'Vendor/leaflet/images/layers.png', 'Vendor/leaflet/images/layers-2x.png', 'Vendor/markercluster/leaflet.markercluster.js', 'Vendor/markercluster/MarkerCluster.css', 'Vendor/markercluster/MarkerCluster.Default.css', 'Vendor/protomaps/protomaps-leaflet.js', 'Js/offline.js', 'Js/prefs.js', 'Js/util.js', 'Js/state.js', 'Js/dom.js', 'Js/data.js', 'Js/render.js', 'Js/map.js', 'Js/layers.js', 'Js/explorer.js', 'Js/audio.js', 'Js/glossary.js', 'Js/tutorial.js', 'Js/achievements.js', 'Js/notice.js', 'Js/profile.js', 'Js/app.js', 'Js/auth.js', 'Data/glosario.json', 'Data/invasoras.json', 'Data/achievements.json'];
 
 self.addEventListener('install', function (event) {
   event.waitUntil(
@@ -62,17 +66,56 @@ self.addEventListener('fetch', function (event) {
   // Network-first: red si hay; si falla, lo que haya en caché; y para navegaciones, index.html.
   event.respondWith(
     fetch(netReq).then(function (res) {
-      if (res && res.ok) {
+      // Las respuestas parciales (206) no se pueden meter en la Cache Storage: cache.put lanza un
+      // TypeError. Llegan de las peticiones por rangos del mapa base .pmtiles, que ya viaja entero
+      // en la caché del parque (lo guarda offline.js), así que no hay nada que cachear aquí.
+      if (res && res.ok && res.status !== 206 && !req.headers.get('range')) {
         var copy = res.clone();
-        caches.open(RUNTIME_CACHE).then(function (cache) { cache.put(req, copy); });
+        caches.open(RUNTIME_CACHE).then(function (cache) { cache.put(req, copy); })
+          .catch(function () { /* cuota llena o respuesta no almacenable: no es crítico */ });
       }
       return res;
     }).catch(function () {
       return caches.match(req).then(function (cached) {
-        if (cached) return cached;
+        if (cached) return sliceIfRangeRequest(req, cached);
         if (req.mode === 'navigate') return caches.match('index.html');
         return Promise.reject(new Error('sin red y sin caché para ' + req.url));
       });
     })
   );
 });
+
+/**
+ * El mapa base sin conexión (.pmtiles) se lee por rangos HTTP: el lector pide "bytes=N-M" y exige
+ * un 206 con Content-Length correcto — si le devuelves el fichero entero con un 200, aborta. En la
+ * Cache Storage el .pmtiles está guardado completo, así que aquí se recorta a mano el trozo pedido.
+ * Sin esto el mapa base offline no llega ni a arrancar.
+ */
+function sliceIfRangeRequest(req, cached) {
+  var range = req.headers.get('range');
+  if (!range) return cached;
+  var match = /^bytes=(\d+)-(\d*)$/.exec(range.trim());
+  if (!match) return cached;
+
+  return cached.arrayBuffer().then(function (buffer) {
+    var total = buffer.byteLength;
+    var start = parseInt(match[1], 10);
+    var end = match[2] === '' ? total - 1 : Math.min(parseInt(match[2], 10), total - 1);
+    if (isNaN(start) || start > end || start >= total) {
+      return new Response(null, {
+        status: 416,
+        headers: { 'Content-Range': 'bytes */' + total }
+      });
+    }
+    var slice = buffer.slice(start, end + 1);
+    return new Response(slice, {
+      status: 206,
+      statusText: 'Partial Content',
+      headers: {
+        'Content-Type': cached.headers.get('Content-Type') || 'application/octet-stream',
+        'Content-Length': String(slice.byteLength),
+        'Content-Range': 'bytes ' + start + '-' + end + '/' + total
+      }
+    });
+  });
+}

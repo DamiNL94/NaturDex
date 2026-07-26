@@ -120,7 +120,7 @@ function numOrNull($item, $key) {
 if ($method === "GET" && $action === "overview") {
     $parks = [];
     $res = $conn->query("SELECT p.id, p.slug, p.name, p.category, p.region, p.province, p.municipality,
-        p.description, p.area_hectares, p.coastline_km, p.latitude, p.longitude,
+        p.description, p.area_hectares, p.coastline_km, p.latitude, p.longitude, p.status,
         (SELECT COUNT(*) FROM species s WHERE s.park_id = p.id) AS species_count,
         (SELECT COUNT(*) FROM habitats h WHERE h.park_id = p.id) AS habitats_count,
         (SELECT COUNT(*) FROM points_of_interest x WHERE x.park_id = p.id) AS pois_count
@@ -140,6 +140,8 @@ if ($method === "GET" && $action === "overview") {
             // Centro del parque: el panel lo usa para encuadrar el mini-mapa de coordenadas.
             "latitude" => $row["latitude"] !== null ? (float) $row["latitude"] : null,
             "longitude" => $row["longitude"] !== null ? (float) $row["longitude"] : null,
+            // Nivel de dato: 'basic' (ficha base), 'available' (catálogo completo) o 'planned'.
+            "status" => $row["status"],
             "species" => (int) $row["species_count"],
             "habitats" => (int) $row["habitats_count"],
             "pois" => (int) $row["pois_count"]
@@ -361,6 +363,16 @@ if ($method === "POST" && $action === "save_park") {
     if ($lat === null || $lng === null) respond(["error" => "El centro del parque (latitud y longitud) es obligatorio."], 400);
     if ($lat < -90 || $lat > 90 || $lng < -180 || $lng > 180) respond(["error" => "Las coordenadas están fuera de rango."], 400);
 
+    // Nivel de dato del espacio. Se valida contra la lista cerrada antes de tocar la BD: el ENUM de
+    // MySQL rechazaría un valor inválido, pero en modo no estricto lo guardaría como cadena vacía y
+    // el espacio desaparecería del selector sin que nadie supiera por qué. Un espacio nuevo nace
+    // 'basic' (ficha base) mientras no se diga lo contrario.
+    $status = sOrNull($item, "status") ?? "basic";
+    $allowedStatus = ["basic", "available", "planned"];
+    if (!in_array($status, $allowedStatus, true)) {
+        respond(["error" => "Nivel de dato no válido: '$status'. Valores admitidos: " . implode(", ", $allowedStatus) . "."], 400);
+    }
+
     // Unicidad del slug: no puede chocar con OTRO parque (id distinto).
     $dup = $conn->prepare("SELECT id FROM parks WHERE slug = ? AND id <> ? LIMIT 1");
     $dup->bind_param("si", $slug, $id);
@@ -368,8 +380,8 @@ if ($method === "POST" && $action === "save_park") {
     if ($dup->get_result()->fetch_row()) respond(["error" => "Ya existe un parque con el slug '$slug'. Elige otro."], 409);
 
     if ($id > 0) {
-        $stmt = $conn->prepare("UPDATE parks SET slug=?, name=?, category=?, region=?, province=?, municipality=?, description=?, area_hectares=?, coastline_km=?, latitude=?, longitude=? WHERE id=?");
-        $stmt->bind_param("sssssssddddi", $slug, $name, $category, $region, $province, $municipality, $description, $area, $coast, $lat, $lng, $id);
+        $stmt = $conn->prepare("UPDATE parks SET slug=?, name=?, category=?, region=?, province=?, municipality=?, description=?, area_hectares=?, coastline_km=?, latitude=?, longitude=?, status=? WHERE id=?");
+        $stmt->bind_param("sssssssddddsi", $slug, $name, $category, $region, $province, $municipality, $description, $area, $coast, $lat, $lng, $status, $id);
         if (!$stmt->execute()) respond(["error" => "No se pudo guardar el parque: " . $conn->error], 500);
         if ($stmt->affected_rows === 0) {
             $chk = $conn->prepare("SELECT 1 FROM parks WHERE id = ? LIMIT 1");
@@ -379,8 +391,8 @@ if ($method === "POST" && $action === "save_park") {
         }
         respond(["ok" => true, "id" => $id, "slug" => $slug]);
     }
-    $stmt = $conn->prepare("INSERT INTO parks (slug, name, category, region, province, municipality, description, area_hectares, coastline_km, latitude, longitude) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
-    $stmt->bind_param("sssssssdddd", $slug, $name, $category, $region, $province, $municipality, $description, $area, $coast, $lat, $lng);
+    $stmt = $conn->prepare("INSERT INTO parks (slug, name, category, region, province, municipality, description, area_hectares, coastline_km, latitude, longitude, status) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
+    $stmt->bind_param("sssssssdddds", $slug, $name, $category, $region, $province, $municipality, $description, $area, $coast, $lat, $lng, $status);
     if (!$stmt->execute()) respond(["error" => "No se pudo crear el parque: " . $conn->error], 500);
     respond(["ok" => true, "id" => $conn->insert_id, "slug" => $slug]);
 }

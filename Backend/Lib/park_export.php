@@ -121,12 +121,58 @@ function regenerateHabitatsGeojson($conn, $frontendDir, $manifest, $parkSlug) {
     return $written !== false;
 }
 
+// --- Sincronización del nivel de dato (status) BD → registro -------------------------------------
+// `status` vive en dos sitios: la columna parks.status (lo que edita el panel) y el
+// Frontend/Data/parks-index.json (lo que lee la app pública, también sin conexión). Dos verdades que
+// se separan en cuanto alguien cambie una sola. La regla es: **manda la base de datos**, y al
+// publicar se escribe su valor en el registro. Así el ascenso de una ficha base a catálogo completo
+// es un cambio en un único sitio.
+//
+// El fichero se reescribe entero con JSON_PRETTY_PRINT (4 espacios, igual que ahora) y luego se
+// recompactan los arrays `center` a una línea, que es como están hoy: sin esto, cada publicación
+// generaría un diff de cientos de líneas puramente cosmético.
+//
+// @return bool|null  true si se escribió, false si falló la escritura, null si no había que cambiar nada.
+function syncParkStatusInRegistry($frontendDir, $parkSlug, $status) {
+    $registryPath = $frontendDir . "/Data/parks-index.json";
+    $registry = json_decode(@file_get_contents($registryPath), true);
+    if (!$registry) return false;
+
+    $changed = false;
+    foreach (($registry["communities"] ?? []) as $ci => $c) {
+        foreach (($c["provinces"] ?? []) as $pi => $p) {
+            foreach (($p["parks"] ?? []) as $ki => $park) {
+                if (($park["slug"] ?? "") !== $parkSlug) continue;
+                if (($park["status"] ?? "") === $status) return null; // ya coincide: no se toca el fichero
+                $registry["communities"][$ci]["provinces"][$pi]["parks"][$ki]["status"] = $status;
+                $changed = true;
+                break 3;
+            }
+        }
+    }
+    if (!$changed) return false;
+
+    $json = json_encode($registry, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+    // "center": [\n  37.5,\n  -1.4\n ]  →  "center": [37.5, -1.4]
+    $json = preg_replace_callback(
+        '/"center":\s*\[\s*(-?[\d.]+),\s*(-?[\d.]+)\s*\]/',
+        fn($m) => '"center": [' . $m[1] . ', ' . $m[2] . ']',
+        $json
+    );
+    return file_put_contents($registryPath, $json . "\n") !== false;
+}
+
 /**
- * Exporta un parque "available" del registro al park.json de su manifiesto.
+ * Exporta un espacio del registro al park.json de su manifiesto.
+ *
+ * Vale para los dos niveles de dato: un espacio "available" vuelca su catálogo completo y uno
+ * "basic" vuelca su ficha base (bloque `park` y arrays vacíos). Los "planned" no tienen carpeta de
+ * datos, así que se rechazan. El `status` del registro se pone al día con el de la base de datos.
+ *
  * @param mysqli $conn         Conexión abierta.
  * @param string $frontendDir  Ruta absoluta a Frontend/ (donde viven Data/ y los manifiestos).
  * @param string $parkSlug     Slug del parque en el registro.
- * @return array               ["ok" => bool, "error" => str?, "counts" => [...]?, "dataPath" => str?]
+ * @return array               ["ok" => bool, "error" => str?, "counts" => [...]?, "dataPath" => str?, "status" => str?]
  */
 function exportParkToJson($conn, $frontendDir, $parkSlug) {
     $registry = json_decode(@file_get_contents($frontendDir . "/Data/parks-index.json"), true);
@@ -141,7 +187,21 @@ function exportParkToJson($conn, $frontendDir, $parkSlug) {
         }
     }
     if (!$entry) return ["ok" => false, "error" => "El parque '$parkSlug' no está en el registro."];
-    if (($entry["status"] ?? "") !== "available") return ["ok" => false, "error" => "El parque '$parkSlug' no está disponible."];
+
+    // Nivel de dato según la BD (manda ella). Si la instalación aún no tiene la columna, se cae al
+    // valor del registro para no romper la exportación antes de aplicar la migración.
+    $statusStmt = $conn->prepare("SELECT status FROM parks WHERE slug = ? LIMIT 1");
+    $dbStatus = null;
+    if ($statusStmt) {
+        $statusStmt->bind_param("s", $parkSlug);
+        $statusStmt->execute();
+        $row = $statusStmt->get_result()->fetch_assoc();
+        $dbStatus = $row["status"] ?? null;
+    }
+    $status = $dbStatus ?? ($entry["status"] ?? "basic");
+    if ($status === "planned") {
+        return ["ok" => false, "error" => "El espacio '$parkSlug' está marcado como 'planned' (todavía sin datos): no hay nada que exportar."];
+    }
 
     $manifestPath = $frontendDir . "/" . $entry["manifest"];
     if (!is_file($manifestPath)) return ["ok" => false, "error" => "Manifiesto no encontrado: " . $entry["manifest"]];
@@ -169,5 +229,11 @@ function exportParkToJson($conn, $frontendDir, $parkSlug) {
     $manifest["counts"] = array_merge($manifest["counts"] ?? [], $counts);
     file_put_contents($manifestPath, json_encode($manifest, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . "\n");
 
-    return ["ok" => true, "counts" => $counts, "dataPath" => $manifest["data"]];
+    // 4) nivel de dato: se propaga el de la BD al registro que lee la app pública.
+    $synced = syncParkStatusInRegistry($frontendDir, $parkSlug, $status);
+    if ($synced === false) {
+        return ["ok" => false, "error" => "No se pudo actualizar el status en parks-index.json (¿permisos en Frontend/Data?)."];
+    }
+
+    return ["ok" => true, "counts" => $counts, "dataPath" => $manifest["data"], "status" => $status, "statusSynced" => $synced === true];
 }

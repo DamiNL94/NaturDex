@@ -24,16 +24,141 @@ export function setMapHandlers(h) { Object.assign(handlers, h); }
 // --- Mapa y capas base ----------------------------------------------------------------------------
 // Capas base: mapa callejero (OSM) y ortofoto aérea (PNOA del IGN, vía WMTS en cuadrícula
 // GoogleMapsCompatible = mismo esquema z/x/y que las teselas XYZ de Leaflet).
+// className 'tile-osm': el tema oscuro atenúa SOLO este callejero (el PNOA es una ortofoto real y
+// alterarla falsearía lo que se ve del terreno). Ver styles.css, bloque del tema oscuro.
 export const baseOSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; OpenStreetMap contributors', maxZoom: 19
+  attribution: '&copy; OpenStreetMap contributors', maxZoom: 19, className: 'tile-osm'
 });
 export const basePNOA = L.tileLayer(
   'https://www.ign.es/wmts/pnoa-ma?layer=OI.OrthoimageCoverage&style=default&tilematrixset=GoogleMapsCompatible&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fjpeg&TileMatrix={z}&TileCol={x}&TileRow={y}',
   { attribution: '&copy; Instituto Geográfico Nacional de España (PNOA)', maxZoom: 19 }
 );
 
-export const map = L.map('map', { zoomControl: false, layers: [baseOSM] }).setView([37.5016, -1.44925], 12);
+// --- Mapa base sin conexión (paquete .pmtiles del parque) -----------------------------------------
+// OSM y PNOA se sirven desde sus propios dominios, así que sin cobertura el mapa se queda en blanco
+// y solo se ve la geometría del parque flotando. Este tercer base lo resuelve: cada parque puede
+// traer su propio recorte del basemap de Protomaps (teselas vectoriales derivadas de OSM, ODbL),
+// servido desde NUESTRO origen y guardado en la caché del parque, así que funciona igual sin red.
+//
+// Por qué vectorial y no un recorte ráster: la política de teselas de OSM prohíbe expresamente el
+// prefetch y el uso sin conexión de tile.openstreetmap.org, y el mismo parque en ráster hasta z17
+// serían decenas de MB frente a ~1 MB en vectorial, que además escala más allá de su zoom máximo.
+let baseParque = null;      // capa Leaflet del parque activo (null si no trae paquete)
+let baseParqueSlug = null;  // para no reconstruirla en cada render del mismo parque
+let baseParqueTiles = null; // descriptor `tiles` del manifiesto, para poder rehacer la capa
+let userPickedBase = null;  // 'osm' | 'pnoa' | 'parque' si el usuario eligió a mano en «Capas»
+
+function darkFlavor() {
+  return document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+}
+
+/**
+ * Construye (o descarta) la capa base del parque a partir de su manifiesto. Degrada en silencio:
+ * sin paquete declarado, sin librería vendorizada o con un navegador que no la soporte, se sigue
+ * con OSM/PNOA y el fondo vacío de siempre, sin ruido en consola.
+ */
+export function setupParkBaseLayer(manifest) {
+  const tiles = manifest && manifest.tiles;
+  if (baseParque && baseParqueSlug !== (manifest && manifest.slug)) {
+    if (map.hasLayer(baseParque)) map.removeLayer(baseParque);
+    baseParque = null;
+    baseParqueSlug = null;
+  }
+  if (!tiles || !tiles.pmtiles) return null;
+  if (typeof protomapsL === 'undefined') return null;
+  if (baseParque && baseParqueSlug === manifest.slug) return baseParque;
+
+  try {
+    baseParque = protomapsL.leafletLayer({
+      url: tiles.pmtiles,
+      // El tema es un nombre, no un objeto: protomaps-leaflet trae sus propias paletas, así que no
+      // hace falta vendorizar además @protomaps/basemaps.
+      flavor: darkFlavor(),
+      lang: 'es',
+      maxDataZoom: tiles.maxzoom || 15,
+      // La atribución es obligatoria (ODbL) y tiene que verse TAMBIÉN sin conexión, que es
+      // justo cuando esta capa se usa: por eso viaja en el manifiesto y no en un texto remoto.
+      attribution: tiles.attribution
+    });
+    baseParqueSlug = manifest.slug;
+    baseParqueTiles = tiles;
+    return baseParque;
+  } catch (e) {
+    baseParque = null;
+    baseParqueSlug = null;
+    baseParqueTiles = null;
+    return null;
+  }
+}
+
+export function hasParkBaseLayer() { return !!baseParque; }
+export function parkBaseLayer() { return baseParque; }
+
+/** Deja activa una sola capa base. `remember` marca que la elección fue del usuario. */
+export function applyBaseChoice(kind, remember) {
+  const wanted = kind === 'pnoa' ? basePNOA : (kind === 'parque' ? baseParque : baseOSM);
+  if (!wanted) return;
+  [baseOSM, basePNOA, baseParque].forEach(layer => {
+    if (layer && layer !== wanted && map.hasLayer(layer)) map.removeLayer(layer);
+  });
+  if (!map.hasLayer(wanted)) wanted.addTo(map);
+  if (remember) userPickedBase = kind;
+}
+
+export function activeBaseKind() {
+  if (baseParque && map.hasLayer(baseParque)) return 'parque';
+  return map.hasLayer(basePNOA) ? 'pnoa' : 'osm';
+}
+
+// Sin cobertura, OSM y PNOA no pintan nada: si el parque trae paquete propio se conmuta solo, y al
+// volver la red se recupera la base de antes salvo que el usuario haya elegido la del parque a mano.
+if (window.NaturDexOffline) {
+  window.NaturDexOffline.onConnectivityChange(online => {
+    if (!baseParque) return;
+    if (!online) { if (activeBaseKind() !== 'parque') applyBaseChoice('parque', false); }
+    else if (userPickedBase !== 'parque' && activeBaseKind() === 'parque') {
+      applyBaseChoice(userPickedBase || preferredBaseKind(), false);
+    }
+  });
+}
+
+// Capa base de arranque: la que el usuario haya elegido en Perfil y ajustes (prefs.js). Sigue
+// pudiendo cambiarla sobre la marcha desde el panel de «Capas»; esto solo decide con cuál se abre.
+function preferredBaseKind() {
+  return (window.NaturDexPrefs && window.NaturDexPrefs.get('mapBase') === 'pnoa') ? 'pnoa' : 'osm';
+}
+function preferredBase() {
+  return preferredBaseKind() === 'pnoa' ? basePNOA : baseOSM;
+}
+
+export const map = L.map('map', { zoomControl: false, layers: [preferredBase()] }).setView([37.5016, -1.44925], 12);
 L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+// Cambiar la preferencia con la app abierta se refleja en el acto. Se compara con el valor anterior
+// a propósito: el listener salta con CUALQUIER preferencia que cambie (tema, texto…) y, sin esta
+// guarda, tocar el tema desharía la capa base que el usuario acabase de elegir a mano en «Capas».
+if (window.NaturDexPrefs) {
+  let lastBasePref = window.NaturDexPrefs.get('mapBase');
+  let lastTheme = document.documentElement.dataset.theme;
+  window.NaturDexPrefs.onChange(prefs => {
+    // El tema del mapa del parque va en las propias teselas (colores vectoriales), no en un filtro
+    // CSS como el callejero de OSM: cambiar de claro a oscuro obliga a rehacer la capa.
+    const theme = document.documentElement.dataset.theme;
+    if (theme !== lastTheme) {
+      lastTheme = theme;
+      if (baseParque) {
+        const wasActive = map.hasLayer(baseParque);
+        const manifest = { slug: baseParqueSlug, tiles: baseParqueTiles };
+        map.removeLayer(baseParque);
+        baseParque = null; baseParqueSlug = null;
+        if (setupParkBaseLayer(manifest) && wasActive) applyBaseChoice('parque', false);
+      }
+    }
+    if (prefs.mapBase === lastBasePref) return;
+    lastBasePref = prefs.mapBase;
+    applyBaseChoice(preferredBaseKind(), false);
+  });
+}
 
 // Grupos superponibles (cada uno se puede activar/desactivar desde el control de capas).
 // Zonas protegidas con geometría oficial (IMIDA/CARM). Parque Regional visible por defecto;

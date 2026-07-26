@@ -19,19 +19,55 @@ Data/
           habitats.geojson
 ```
 
-En este prototipo solo existe **Región de Murcia › Murcia › `cabo-cope-puntas-calnegre`**. Es el único
-parque con `status: "available"` en `parks-index.json`; el resto de España queda como estructura lista
-para rellenar en el futuro (no se ha inventado ningún dato de otros parques).
+## Dos niveles de dato: ficha base (N1) y catálogo completo (N2)
 
-## Cómo añadir un parque nuevo
+El rollout nacional (`Docs/prompts/e-rollout-nacional.md`) separa el trabajo en dos niveles, y eso se
+refleja en el campo `status` de cada entrada de `parks-index.json`:
 
-1. Crear `Data/parks/<provincia-slug>/<parque-slug>/` con:
+| `status` | Nivel | Qué tiene | Qué ve el usuario |
+|---|---|---|---|
+| `basic` | **N1 · ficha base** | Bloque `park` completo + `geo/parque.geojson` (límite oficial) y, si los hay, `lic`/`zepa`. Los arrays `habitats`, `species` y `pointsOfInterest` están **vacíos**. | El espacio es seleccionable y se etiqueta «(ficha base)». Entra al mapa con su límite y sus capas Natura 2000; en lugar del catálogo aparece el aviso «catálogo de especies y hábitats en preparación». Sin contadores, sin barra de progreso, sin pestaña de progreso ni modo explorador. |
+| `available` | **N2 · completo** | Todo lo del piloto: hábitats HIC recortados, especies con evidencia y estado de conservación, POIs, fotos y audioguías. | La experiencia completa. |
+| `planned` | — | Nada: no hay carpeta de datos. | Aparece en la lista deshabilitado, como «(próximamente)». |
+
+Todo espacio **nace `basic` y asciende a `available`** cuando se le hace el catálogo. El validador
+(`npm run validate`) comprueba los dos niveles, con reglas relajadas para `basic`: exige el bloque
+`park` completo y un límite oficial válido (GeoJSON de polígonos en WGS84 dentro de España), y que
+los contadores del manifiesto cuadren —a cero si están a cero—, pero **no** exige hábitats, especies,
+POIs ni imágenes.
+
+### Quién manda sobre el `status`
+
+El nivel de dato vive en dos sitios y eso podría convertirse en dos verdades que se separan, así que
+hay una regla única: **manda la base de datos** (columna `parks.status`, un `ENUM` de los tres
+valores). Este `parks-index.json` es la copia que lee la app pública —también sin conexión, por eso
+tiene que estar empaquetada— y se pone al día sola: al pulsar «Publicar cambios offline» en el panel
+de administración (o al ejecutar `php Tools/export-park.php`), `Backend/Lib/park_export.php` escribe
+aquí el `status` que tenga la BD. Se edita, por tanto, desde el panel; tocarlo a mano en este fichero
+funciona, pero la siguiente publicación lo sobrescribirá con lo que diga la base de datos.
+
+Los espacios dados de alta a mano durante el rollout (Fase 1) todavía no están en la BD: ahí el
+registro es lo único que hay, y es correcto escribir su `status` directamente.
+
+Espacios cargados hoy: **Región de Murcia › Murcia › `cabo-cope-puntas-calnegre`** (N2, el piloto) y
+**`cuatro-calas`** (N1). El resto de España queda como estructura lista para rellenar (no se ha
+inventado ningún dato de otros espacios).
+
+## Cómo añadir un espacio nuevo
+
+1. Crear `Data/parks/<provincia-slug>/<espacio-slug>/` con:
    - `park.json` — misma forma que el actual (`park`, `habitats`, `species`, `pointsOfInterest`).
-   - `geo/` — los GeoJSON que tengas (todos opcionales; si falta `habitats.geojson` se dibujan círculos).
-   - `manifest.json` — declara las rutas (relativas a `Frontend/`) de `data`, `geo` e `images`.
-2. Añadir la entrada del parque en `parks-index.json`, dentro de su comunidad y provincia, con
-   `status: "available"` y las rutas `path` y `manifest`.
-3. (Opcional, para el backend) cargar sus filas en la base de datos con el mismo modelo de
+     Para una ficha base, los tres últimos son arrays vacíos, y el bloque `park` debe llevar `slug`,
+     `name`, `category` (la figura oficial literal), `region`, `province`, `municipalities`, `center`,
+     `summary` y `boundaryNote` con la procedencia del límite.
+   - `geo/` — los GeoJSON que tengas. `parque.geojson` es **obligatorio** (es lo único que promete una
+     ficha base); el resto son opcionales y si falta `habitats.geojson` se dibujan círculos.
+   - `manifest.json` — declara las rutas (relativas a `Frontend/`) de `data`, `geo` e `images`, y los
+     `counts` (a cero en una ficha base).
+2. Añadir la entrada en `parks-index.json`, dentro de su comunidad y provincia, con el `status` que
+   corresponda (`basic` o `available`) y las rutas `path` y `manifest`.
+3. Ejecutar `npm run validate` (el hook de pre-commit lo hace por ti y bloquea el commit si falla).
+4. (Opcional, para el backend) cargar sus filas en la base de datos con el mismo modelo de
    `Database/schema.sql`, usando su propio `park_id`. La API ya es multi-parque (`species.php?park=<slug>`).
 
 No hace falta tocar `app.js`: el cargador es agnóstico al parque (lee el registro, resuelve el parque

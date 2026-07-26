@@ -114,3 +114,75 @@ constituida y, en el caso de ENISA, porque es deuda, no subvención.
 *(Orientación general para priorizar la búsqueda, no asesoría formal de subvenciones ni legal.
 Antes de presentar cualquier solicitud, confirmar bases reguladoras completas y plazos exactos en
 la fuente oficial enlazada — algunas fechas circulan con variaciones entre medios secundarios.)*
+
+## 6. Cuánto pedir: presupuesto justificado vs. valor del proyecto
+
+**Primero, el reencuadre importante:** esto es una subvención, no una ronda de inversión. No se
+pide "lo que vale la app" (eso es lógica de valoración para ENISA/CDTI o un inversor) — se pide
+**un presupuesto justificado (memoria económica)** que cubra el coste real de ejecutar el proyecto
+durante el periodo de la ayuda, con cada partida trazable a facturas/nóminas. Pedir de más sin
+poder justificarlo baja la puntuación técnica; pedir de menos dificulta que el proyecto se sostenga
+year uno. El ancla es la propia convocatoria: la línea de digitalización de FB fija **mínimo 50.000€
+y máximo 300.000€ por proyecto** — ese es el rango real donde moverse, no un valor de mercado
+inventado.
+
+### Desglose de costes (proyecto de ~18 meses, alineado con el plazo de ejecución que suele dar FB)
+
+| Partida | Base de cálculo | Importe estimado |
+|---|---|---|
+| **Tu trabajo (dirección técnica + desarrollo)** | ~1.000 h a 30-35 €/h — tarifa de mercado 2026 para fullstack con perfil GIS/PWA, ni junior ni tarifa de consultora | 30.000 – 35.000 € |
+| **Colaborador/a naturalista** (curación de especies, QA taxonómico, ampliación a 2º/3er parque) | ~150 h a 30 €/h | 4.000 – 5.000 € |
+| **Fotografía/ilustración** (especies sin imagen CC de calidad) | Encargo puntual | 1.000 – 2.000 € |
+| **Infraestructura** (Postgres+PostGIS gestionado, CDN/object storage, tiles MapTiler/Protomaps, auth gestionada, dominio/monitorización) 18 meses | El mayor comodín es **tiles de mapa**; el resto es barato a este tamaño | 4.500 – 7.000 € |
+| **Licencias** (alta Google Play, imágenes de stock puntuales) | — | 500 – 1.000 € |
+| **Cuota RETA** (si facturas como autónomo) 18 meses | ~250 €/mes de media en tramos bajos-medios | ~4.500 € |
+| **Gestoría/asesoría fiscal** 18 meses | ~60 €/mes | ~1.100 € |
+| **Contingencia (10%)** | Sobre el subtotal, cubre IVA no deducible y desviaciones de tiles/infra | ~4.500 – 5.500 € |
+| **TOTAL** | | **≈ 50.000 – 60.000 €** |
+
+### Recomendación de cifra a pedir
+
+**Pide en la banda de 55.000-65.000 €.** Razones:
+
+- Cae dentro del rango mínimo-máximo de la propia convocatoria FB (50k-300k), sin forzar el límite
+  inferior (que daría poco margen si algo se desvía) ni acercarte al máximo (que compite con
+  consorcios de varias entidades y presupuestos de I+D grandes — un solicitante nuevo y solo pidiendo
+  cerca del máximo genera más escrutinio, no menos).
+- Es una cifra que puedes justificar partida por partida con facturas propias (autónomo) o de
+  colaboradores — nada de "coste estimado de una app así" genérico, que es lo que penaliza en
+  evaluación técnica.
+- Dejas margen de contingencia real para el ítem más impredecible (tiles de mapa a escala nacional),
+  en vez de infrapresupuestarlo y quedarte sin servicio a mitad de proyecto.
+
+Si la vía de entrada acaba siendo CARM u otra convocatoria más pequeña (sin suelo de 50k), el mismo
+desglose se recorta a **15.000-25.000 €** cubriendo solo 6-9 meses y un parque, en vez de la
+expansión a varios.
+
+### El "valor" de la app: cómo argumentarlo sin caer en valoración de startup
+
+Aquí NO aplica una lógica de "vale X porque una empresa similar se vendió por Y" — eso es para
+inversores (ENISA/CDTI), y ya vimos que esa vía no es realista todavía porque exige empresa
+constituida. Para un financiador público, el argumento de valor es **coste-eficiencia e impacto**,
+no valoración de mercado:
+
+- **Coste de sustitución:** si el MITECO o la CARM encargasen a una consultora externa un producto
+  equivalente (PWA offline-first + panel de administración + pipeline de datos oficiales +
+  backend geoespacial), el presupuesto de mercado real estaría en **80.000-200.000 €** (tarifas de
+  consultora ~400-600 €/día, más los tiempos de coordinación de un equipo frente a un desarrollador
+  solo). Pedir 55-65k por un producto que ya existe en demo funcional y solo necesita escalar es,
+  en términos de coste público, una ganga — ese es el argumento a poner en la memoria, no una
+  valoración abstracta.
+- **Impacto por euro:** frente al coste, lo que aporta la memoria de impacto son datos concretos —
+  visitantes/año del parque piloto, cobertura potencial si se replica a otros espacios Natura 2000
+  de Murcia o de España, y el hecho de que es difusión gratuita de datos que el propio Estado ya
+  paga por generar (IEPNB, EIDOS) pero que hoy casi nadie fuera de la administración consulta. Eso
+  es lo que puntúa en una convocatoria de biodiversidad/educación ambiental, no una valoración de
+  empresa.
+- **Guardar la lógica de valoración de mercado para más adelante:** si en el futuro decides
+  mercantilizar NaturDex (SL) para entrar en ENISA/CDTI o buscar inversión, ahí sí aplicaría
+  valorar por múltiplos de ingresos o coste de reproducción — pero eso es una etapa posterior y
+  distinta a esta ronda de subvención.
+
+*(De nuevo, orientación general para armar la memoria económica — no sustituye la revisión de un
+gestor/asesor fiscal antes de presentar cifras definitivas, especialmente en lo relativo a IVA
+deducible según la figura jurídica que elijas.)*

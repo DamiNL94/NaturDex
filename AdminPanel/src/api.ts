@@ -50,10 +50,26 @@ export interface Park {
   /** Centro del parque (null si no está definido en la BD): encuadre del mini-mapa. */
   latitude: number | null;
   longitude: number | null;
+  /** Nivel de dato del espacio: manda la BD y se propaga a parks-index.json al publicar. */
+  status: ParkStatus;
   species: number;
   habitats: number;
   pois: number;
 }
+
+/**
+ * Nivel de dato de un espacio protegido (columna parks.status y campo `status` del registro):
+ *   'basic'     ficha base — límite oficial y Red Natura 2000, sin catálogo. Es donde nace todo.
+ *   'available' completo — hábitats, especies, POIs, fotos y audioguías.
+ *   'planned'   anunciado, sin datos ni carpeta; no es seleccionable en la app.
+ */
+export type ParkStatus = 'basic' | 'available' | 'planned';
+
+export const PARK_STATUS_LABELS: Record<ParkStatus, string> = {
+  basic: 'Ficha base — límite oficial, catálogo en preparación',
+  available: 'Completo — con catálogo de especies y hábitats',
+  planned: 'Previsto — anunciado, todavía sin datos'
+};
 
 /** Campos editables de un parque enviados a save_park (id 0 = alta). */
 export interface ParkInput {
@@ -69,6 +85,7 @@ export interface ParkInput {
   coastline_km: string;
   latitude: string;
   longitude: string;
+  status: ParkStatus;
 }
 
 export interface Overview {

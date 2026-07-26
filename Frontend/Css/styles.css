@@ -38,7 +38,10 @@
 
 /* --- Modo explorador: botón, panel "cerca de ti" y marcador de posición del usuario ---------- */
 .explorer-toggle{position:absolute;top:16px;left:16px;z-index:450;min-height:40px;padding:0 16px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);font-weight:800;font-size:.82rem;box-shadow:var(--shadow-sm);cursor:pointer}
+/* Explorando y siguiendo: relleno lleno. Explorando con el mapa suelto ("Centrar en mí"): mismo
+   color pero en contorno, para que se lea como "encendido, pero esperando que lo recuperes". */
 .explorer-toggle.active{background:var(--sea);color:#fff;border-color:var(--sea)}
+.explorer-toggle.active.recenter{background:#fff;color:var(--sea);border-color:var(--sea);box-shadow:0 0 0 3px rgba(31,111,139,.2),var(--shadow-sm)}
 .nearby-panel{position:absolute;top:64px;left:16px;z-index:450;width:260px;max-height:min(60vh,420px);overflow:auto;padding:14px;border-radius:var(--radius-md);background:rgba(255,255,255,.97);box-shadow:var(--shadow)}
 .nearby-panel[hidden]{display:none}
 .nearby-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
@@ -73,11 +76,6 @@
 .layers-solo{flex:0 0 auto;border:1px solid var(--line);background:#fff;border-radius:999px;font-size:.64rem;font-weight:800;color:var(--muted);padding:2px 8px;cursor:pointer}
 .layers-solo:hover{border-color:var(--sea);color:var(--sea)}
 @media(max-width:900px){.layers-panel{width:min(86vw,320px);max-height:52vh}}
-
-/* Botón "seguirme" (🎯): el mapa se mueve con la posición del usuario */
-.follow-toggle{width:44px;height:44px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:1.15rem;line-height:1;box-shadow:var(--shadow-sm);cursor:pointer;transition:background-color .15s ease,border-color .15s ease}
-.follow-toggle:hover{border-color:var(--sea)}
-.follow-toggle.active{background:var(--sea);border-color:var(--sea);box-shadow:0 0 0 3px rgba(31,111,139,.25),var(--shadow-sm)}
 
 /* Aviso de descubrimiento por proximidad (POI al alcance / hábitat pisado) */
 .explorer-hint{position:absolute;top:16px;left:50%;transform:translateX(-50%);z-index:460;display:flex;align-items:center;gap:10px;max-width:min(92%,440px);padding:10px 12px;border-radius:12px;border:1px solid var(--sun);background:#fff8e8;box-shadow:var(--shadow);animation:hint-in .25s ease}
@@ -396,7 +394,7 @@
    los que son solo icono (logout, cerrar, seguirme…) quedan centrados en su caja. */
 .icon{display:inline-block;vertical-align:-3px;flex-shrink:0}
 .btn-primary,.btn-danger,.save-offline-btn,.layers-toggle,.explorer-toggle{display:inline-flex;align-items:center;justify-content:center;gap:6px}
-.icon-btn,.follow-toggle,.sheet-close,.nearby-header button,.hint-close{display:inline-flex;align-items:center;justify-content:center}
+.icon-btn,.sheet-close,.nearby-header button,.hint-close{display:inline-flex;align-items:center;justify-content:center}
 .audio-block figcaption{display:flex;align-items:center;gap:6px}
 .audio-block figcaption .icon{vertical-align:0}
 /* Insignia de logro (parque completo / bloqueado): antes era un emoji a tamaño de fuente 2rem. */
@@ -477,3 +475,303 @@
 @media(max-width:900px){
   .tutorial-card{top:auto!important;left:12px!important;right:12px;bottom:calc(70px + env(safe-area-inset-bottom));width:auto;border-radius:16px;box-shadow:0 -12px 40px rgba(23,33,27,.28)}
 }
+
+/* ================================================================================================
+   Ficha base (espacios con status "basic": límite oficial + Red Natura 2000, sin catálogo todavía).
+   Sustituye al catálogo en la barra lateral; el panel de detalle muestra la ficha administrativa.
+   ================================================================================================ */
+.basic-notice{flex:1;min-height:0;overflow:auto;padding:18px 18px 18px 28px}
+.basic-notice[hidden]{display:none}
+.basic-notice .section-title{align-items:center}
+.basic-lead{margin:0 0 12px;color:var(--muted);font-size:.88rem;line-height:1.55}
+.basic-lead strong{color:var(--ink)}
+.basic-foot{margin:16px 0 0;padding:12px 14px;border:1px dashed var(--line);border-radius:8px;color:var(--muted);font-size:.8rem;line-height:1.5}
+.basic-detail .detail-facts{grid-template-columns:1fr 1fr}
+.basic-detail>.card-meta{margin-bottom:8px}
+/* Sin fotos de catálogo, la ficha base no tiene imagen de cabecera: el cuerpo empieza arriba. */
+.basic-detail{padding-top:22px}
+@media(max-width:900px){.basic-notice{padding:12px 14px 14px 20px}}
+
+/* El atributo `hidden` no basta en estos controles: sus reglas ya fijan un `display`, que gana a la
+   hoja del navegador. Se apagan explícitamente para poder ocultar la pestaña de progreso y el modo
+   explorador en los espacios de ficha base. */
+.view-tab[hidden],.mobile-nav-btn[hidden],.explorer-toggle[hidden]{display:none}
+/* Y las rejillas de pestañas se recolocan para no dejar el hueco de la pestaña que falta. */
+body[data-park-level="basic"] .view-tabs{grid-template-columns:repeat(2,1fr)}
+body[data-park-level="basic"] .mobile-nav{grid-template-columns:repeat(3,1fr)}
+
+/* ================================================================================================
+   Progreso de CUENTA (ámbito estatal, "screen-account"): mismo patrón visual que el selector de
+   parque (.select-panel/.select-head/.select-hint) para que se sienta la misma app, no una sección
+   aparte. Totales + desglose por CCAA + rejilla de logros agrupada por categoría.
+   ================================================================================================ */
+.screen-account{height:100vh;overflow:auto;background:var(--paper)}
+.account-panel{max-width:920px;margin:0 auto;padding:28px;display:flex;flex-direction:column;gap:22px}
+.account-progress-body{display:flex;flex-direction:column;gap:26px}
+.account-totals-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.account-stat{padding:14px 12px;border:1px solid var(--line);border-radius:var(--radius-md);background:var(--panel);text-align:center}
+.account-stat strong{display:block;font-size:1.4rem}
+.account-stat span{display:block;margin-top:2px;color:var(--muted);font-size:.74rem}
+.account-section h3{display:flex;align-items:center;gap:8px;margin:0 0 12px;font-size:.95rem}
+.account-section-count{margin-left:auto;color:var(--muted);font-size:.76rem;font-weight:700}
+.account-chips{display:flex;flex-wrap:wrap;gap:8px}
+@media(max-width:640px){.account-panel{padding:18px}.account-totals-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* Rejilla de logros: misma tarjeta .achievement-card que la pestaña de progreso del parque, con
+   variantes de color por rareza (gradúan también la intensidad del confeti al celebrar, ver JS) y
+   una barra de progreso parcial para los bloqueados con umbral > 1 ("18 / 25 especies"). */
+.achievement-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+.achievement-card.rarity-poco-comun.unlocked{border-color:var(--sea);background:#eaf4f7}
+.achievement-card.rarity-raro.unlocked{border-color:#7b4fa0;background:#f3ecf8}
+.achievement-card.rarity-legendario.unlocked{border-color:var(--sun);background:linear-gradient(135deg,#fff8e8,#fbeecb)}
+.achievement-progress{display:flex;align-items:center;gap:8px;margin-top:8px}
+.achievement-progress .progress-track{flex:1}
+.achievement-progress-label{flex:0 0 auto;color:var(--muted);font-size:.72rem;font-weight:700}
+p.achievement-progress-label{margin:8px 0 0}
+
+/* ================================================================================================
+   Cartel de celebración de logro (toast animado). Región fija, por encima del resto de la UI en
+   uso normal pero por DEBAJO del tutorial (3000, ver más arriba) para no taparlo si coincidieran.
+   No es un modal: no hay velo ni bloqueo de interacción, y aria-live anuncia sin robar el foco.
+   ================================================================================================ */
+.achievement-toast-region{position:fixed;z-index:2600;top:calc(12px + env(safe-area-inset-top));right:12px;left:12px;display:flex;flex-direction:column;align-items:flex-end;gap:10px;pointer-events:none}
+.achievement-toast{pointer-events:auto;position:relative;overflow:hidden;display:flex;align-items:flex-start;gap:12px;width:min(360px,100%);padding:14px 16px;border-radius:var(--radius-md);border:1px solid var(--line);background:var(--panel);box-shadow:var(--shadow);opacity:0;transform:translateY(-14px) scale(.96);transition:opacity .32s ease,transform .32s cubic-bezier(.34,1.56,.64,1)}
+.achievement-toast.in{opacity:1;transform:translateY(0) scale(1)}
+.achievement-toast.out{opacity:0;transform:translateY(-8px) scale(.98)}
+.achievement-toast.rarity-poco-comun{border-color:var(--sea)}
+.achievement-toast.rarity-raro{border-color:#7b4fa0}
+.achievement-toast.rarity-legendario{border-color:var(--sun);background:linear-gradient(135deg,#fff8e8,#fbeecb)}
+.achievement-toast.discreet{border-style:dashed}
+.achievement-toast.grouped{cursor:pointer}
+.achievement-toast-icon{flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;background:#fff8e8;font-size:1.5rem;box-shadow:0 0 0 3px rgba(216,155,48,.18)}
+.achievement-toast.in:not(.reduced) .achievement-toast-icon{animation:achievement-toast-glow 1.1s ease}
+@keyframes achievement-toast-glow{0%{box-shadow:0 0 0 0 rgba(216,155,48,.55)}70%{box-shadow:0 0 0 14px rgba(216,155,48,0)}100%{box-shadow:0 0 0 3px rgba(216,155,48,.18)}}
+.achievement-toast-body{flex:1;min-width:0}
+.achievement-toast-eyebrow{margin:0 0 2px;color:var(--sun);font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.03em}
+.achievement-toast-body strong{display:block;font-size:.92rem}
+.achievement-toast-body p{margin:2px 0 0;color:var(--muted);font-size:.8rem;line-height:1.4}
+.achievement-toast-actions{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:4px}
+.achievement-toast-sound,.achievement-toast-close{border:0;background:transparent;color:var(--muted);cursor:pointer;font-size:.9rem;line-height:1;padding:2px}
+.achievement-toast-close:hover,.achievement-toast-sound:hover{color:var(--ink)}
+/* Botón de los avisos de notice.js ("Actualizar ahora", "Guardar sin conexión"): el aviso es
+   discreto, pero su acción tiene que verse como pulsable y llegar al mínimo táctil. */
+/* Coletilla del panel de capas ("sin conexión" junto al mapa base del parque). */
+.layers-hint{margin-left:4px;padding:1px 6px;border-radius:999px;background:#eef4ec;color:var(--leaf);font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.03em}
+:root[data-theme="dark"] .layers-hint{background:rgba(47,111,78,.28)}
+.notice-action{margin-top:8px;min-height:32px;padding:6px 12px;border:1px solid var(--leaf);border-radius:999px;background:transparent;color:var(--leaf);font-size:.78rem;font-weight:800;cursor:pointer}
+.notice-action:hover{background:var(--leaf);color:#fff}
+@media(max-width:640px){
+  /* En móvil, el cartel entra desde abajo (mismo patrón que el bottom-sheet de la ficha), no desde
+     la esquina superior: así se siente nativo y no tapa la nav inferior al aparecer. */
+  .achievement-toast-region{top:auto;bottom:calc(70px + env(safe-area-inset-bottom));left:12px;right:12px;align-items:stretch}
+  .achievement-toast{width:100%;transform:translateY(24px) scale(.98)}
+  .achievement-toast.in{transform:translateY(0) scale(1)}
+  .achievement-toast.out{transform:translateY(16px) scale(.98)}
+}
+
+/* Confeti ligero hecho a mano con CSS (sin librerías): tiras que caen y giran desde arriba del
+   icono. Se omite por completo en JS cuando prefers-reduced-motion está activo. */
+.achievement-confetti{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.confetti-piece{position:absolute;top:-10px;width:6px;height:12px;border-radius:1px;opacity:.9;animation:achievement-confetti-fall 1.1s ease-in forwards}
+@keyframes achievement-confetti-fall{0%{transform:translateY(-10px) rotate(0deg);opacity:.95}100%{transform:translateY(140px) rotate(340deg);opacity:0}}
+
+/* ================================================================================================
+   Perfil y ajustes ("screen-profile", Frontend/Js/profile.js)
+   ------------------------------------------------------------------------------------------------
+   Mismo patrón visual que el progreso estatal y el selector de parque (.select-head/.select-hint):
+   una columna centrada de tarjetas. Cada bloque es una <section> con su título y su icono.
+   ================================================================================================ */
+.screen-profile{height:100vh;overflow:auto;background:var(--paper)}
+.profile-panel{max-width:760px;margin:0 auto;padding:28px;display:flex;flex-direction:column;gap:20px}
+.profile-body{display:flex;flex-direction:column;gap:18px}
+
+/* Cabecera de identidad: inicial, nombre, email y etiquetas de estado. */
+.profile-identity{display:flex;align-items:center;gap:16px;padding:18px;border:1px solid var(--line);border-radius:var(--radius-md);background:var(--panel);box-shadow:var(--shadow-sm)}
+.profile-avatar{flex:0 0 auto;width:60px;height:60px;display:flex;align-items:center;justify-content:center;border-radius:999px;background:var(--leaf);color:#fff;font-size:1.4rem;font-weight:800}
+.profile-identity-body{min-width:0}
+.profile-name{margin:0 0 2px;font-size:1.3rem;overflow-wrap:anywhere}
+.profile-email{margin:0 0 8px;color:var(--muted);font-size:.85rem;overflow-wrap:anywhere}
+.profile-chips{display:flex;flex-wrap:wrap;gap:6px}
+
+/* Bloques */
+.profile-section{padding:18px;border:1px solid var(--line);border-radius:var(--radius-md);background:var(--panel);box-shadow:var(--shadow-sm)}
+.profile-section h3{display:flex;align-items:center;gap:8px;margin:0 0 4px;font-size:1rem}
+.profile-section-icon{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;flex:0 0 auto;border-radius:999px;background:var(--paper);color:var(--leaf)}
+.profile-subtitle{margin:20px 0 8px;display:flex;align-items:center;gap:6px;font-size:.82rem;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+.profile-hint{margin:0 0 14px;color:var(--muted);font-size:.82rem;line-height:1.5}
+.profile-hint:last-child{margin-bottom:0}
+.profile-totals{margin-bottom:14px}
+
+/* Filas de ajuste: descripción a la izquierda, control a la derecha. */
+.profile-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 0;border-top:1px solid var(--line)}
+.profile-section .profile-row:first-of-type{border-top:0}
+.profile-row-text{min-width:0}
+.profile-row-text strong{display:block;font-size:.9rem}
+.profile-row-text span{display:block;margin-top:2px;color:var(--muted);font-size:.76rem;line-height:1.45}
+.profile-choices{flex:0 0 auto;display:flex;gap:4px;padding:4px;border:1px solid var(--line);border-radius:999px;background:var(--paper)}
+.profile-choice{min-height:32px;padding:0 12px;border:0;border-radius:999px;background:transparent;color:var(--muted);font-size:.8rem;font-weight:800;cursor:pointer;transition:background-color .15s ease,color .15s ease}
+.profile-choice.active{background:var(--leaf);color:#fff}
+
+/* Interruptor: checkbox real (accesible con teclado y lector) con la casilla nativa transparente
+   encima de la pista deslizante, para que el objetivo táctil siga siendo el control entero. */
+.profile-switch{flex:0 0 auto;position:relative;display:inline-flex;align-items:center;cursor:pointer}
+.profile-switch input{position:absolute;opacity:0;width:46px;height:26px;margin:0;cursor:pointer}
+.profile-switch-track{width:46px;height:26px;border-radius:999px;background:var(--line);transition:background-color .15s ease;position:relative}
+.profile-switch-track::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:999px;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:transform .15s ease}
+.profile-switch input:checked+.profile-switch-track{background:var(--leaf)}
+.profile-switch input:checked+.profile-switch-track::after{transform:translateX(20px)}
+.profile-switch input:focus-visible+.profile-switch-track{outline:3px solid var(--sea);outline-offset:2px}
+
+/* Formularios y avisos */
+.profile-form{margin:0 0 6px}
+.profile-form .auth-field{margin-bottom:12px}
+.profile-form .auth-field[hidden]{display:none}
+.profile-msg{margin:0 0 12px;padding:8px 10px;border-radius:8px;background:#eef6ef;color:var(--leaf);font-size:.8rem;font-weight:700;line-height:1.45}
+.profile-msg.error{background:#f7e8e3;color:var(--danger-ink)}
+.profile-msg[hidden]{display:none}
+.profile-warning{margin:0 0 14px;padding:12px;border:1px solid var(--sun);border-radius:8px;background:#fff8e8;color:var(--ink);font-size:.82rem;line-height:1.5}
+.profile-warning .icon{vertical-align:-3px;margin-right:4px;color:var(--sun)}
+.profile-actions{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.profile-list{list-style:none;margin:0 0 14px;padding:0;display:grid;gap:6px}
+.profile-list li{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px;border:1px solid var(--line);border-radius:8px;font-size:.82rem}
+.link-btn.danger{color:var(--danger-ink)}
+.profile-logout{align-self:flex-start}
+.btn-danger{min-height:44px;padding:0 18px;border:1px solid var(--danger);border-radius:999px;background:transparent;color:var(--danger-ink);font-weight:800;font-size:.86rem;cursor:pointer;transition:background-color .15s ease,color .15s ease}
+.btn-danger:hover{background:var(--danger);color:#fff}
+/* El bloque de baja se distingue del resto: es el único destructivo e irreversible. */
+#profile-danger{border-color:var(--danger)}
+#profile-danger .profile-section-icon{color:var(--danger)}
+/* Botón de perfil en las cabeceras: es la entrada principal a la cuenta, no un icono más. */
+.icon-btn.primary{border-color:var(--leaf);color:var(--leaf)}
+.icon-btn.primary:hover{background:var(--leaf);color:#fff;border-color:var(--leaf)}
+
+@media(max-width:640px){
+  .profile-panel{padding:18px}
+  .profile-identity{gap:12px;padding:14px}
+  .profile-avatar{width:48px;height:48px;font-size:1.1rem}
+  /* En pantalla estrecha, el control va debajo de su descripción: los tres botones de tema no
+     caben junto al texto sin comprimirse por debajo del objetivo táctil mínimo. */
+  .profile-row{flex-direction:column;align-items:flex-start;gap:8px}
+  .profile-choices{width:100%}
+  /* Con el dedo, los tres botones reparten el ancho y ganan alto de objetivo táctil. */
+  .profile-choice{flex:1;min-height:40px}
+  .profile-actions .btn-secondary{width:100%}
+}
+
+/* ================================================================================================
+   Preferencias de presentación (prefs.js escribe estos atributos en <html>)
+   ================================================================================================ */
+/* Tamaño del texto: se escala la RAÍZ y, como toda la hoja está en rem, se agranda la interfaz
+   entera (botones y espaciados incluidos), no solo las descripciones. */
+:root[data-text-size="grande"]{font-size:112.5%}
+:root[data-text-size="enorme"]{font-size:125%}
+
+/* "Menos movimiento" desde los ajustes de la app: mismo efecto que @media (prefers-reduced-motion)
+   para quien no quiere (o no sabe) tocar la configuración de su sistema. */
+:root[data-motion="reduce"] *,
+:root[data-motion="reduce"] *::before,
+:root[data-motion="reduce"] *::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
+
+/* ================================================================================================
+   Tema oscuro (data-theme="dark" en <html>; lo pone prefs.js antes del primer pintado)
+   ------------------------------------------------------------------------------------------------
+   Se repinta la paleta de variables y, después, las superficies que llevaban un color claro fijo
+   (#fff y sus tintes) desde antes de que existiera el tema. color-scheme avisa al navegador para
+   que las barras de scroll y los controles nativos (audio, casillas, select) salgan también oscuros.
+   ================================================================================================ */
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ink:#e7efe8;--muted:#9fb0a3;--line:#2c3a31;--line-strong:#7c8f81;--paper:#0f1712;--panel:#18211b;
+  --leaf:#63b085;--sea:#6cb6d2;--sun:#e3b463;--danger:#e59279;--danger-ink:#f0a68f;
+  --shadow:0 18px 60px rgba(0,0,0,.55);--shadow-sm:0 4px 14px rgba(0,0,0,.45);
+  /* Superficie elevada sobre --panel (tarjetas dentro de tarjetas, campos, chips). */
+  --tint:#1f2a23
+}
+/* Superficies que eran blancas. */
+:root[data-theme="dark"] .detail-panel,
+:root[data-theme="dark"] .detail-dock,
+:root[data-theme="dark"] .sheet-bar,
+:root[data-theme="dark"] .species-card,
+:root[data-theme="dark"] .habitat-card,
+:root[data-theme="dark"] .habitat-species-chip,
+:root[data-theme="dark"] .summary-grid div,
+:root[data-theme="dark"] .achievement-card,
+:root[data-theme="dark"] .achievement-icon,
+:root[data-theme="dark"] .audio-block,
+:root[data-theme="dark"] .icon-btn,
+:root[data-theme="dark"] .btn-secondary,
+:root[data-theme="dark"] .view-tab,
+:root[data-theme="dark"] .seen-toggle,
+:root[data-theme="dark"] .poi-seen-btn,
+:root[data-theme="dark"] .popup-enter,
+:root[data-theme="dark"] .save-offline-btn,
+:root[data-theme="dark"] .explorer-toggle,
+:root[data-theme="dark"] .explorer-hint,
+:root[data-theme="dark"] .follow-toggle,
+:root[data-theme="dark"] .layers-toggle,
+:root[data-theme="dark"] .layers-panel,
+:root[data-theme="dark"] .layers-solo,
+:root[data-theme="dark"] .nearby-panel,
+:root[data-theme="dark"] .nearby-item,
+:root[data-theme="dark"] .glossary-popover,
+:root[data-theme="dark"] .habitat-prompt-card,
+:root[data-theme="dark"] .habitat-prompt-no,
+:root[data-theme="dark"] .auth-tab.active,
+:root[data-theme="dark"] .tutorial-close,
+:root[data-theme="dark"] .tutorial-back,
+:root[data-theme="dark"] .select-field select{background:var(--panel);color:var(--ink)}
+/* Fondos tintados de apoyo (barras, agrupadores, miniaturas). */
+:root[data-theme="dark"] .segmented,
+:root[data-theme="dark"] .auth-tabs,
+:root[data-theme="dark"] .habitat-filter-chip,
+:root[data-theme="dark"] .mobile-nav-btn.active,
+:root[data-theme="dark"] .sheet-close,
+:root[data-theme="dark"] .progress-track,
+:root[data-theme="dark"] .species-card img,
+:root[data-theme="dark"] .detail-panel img,
+:root[data-theme="dark"] .badge.habitat-code,
+:root[data-theme="dark"] .poi-popup-image,
+:root[data-theme="dark"] .profile-section-icon,
+:root[data-theme="dark"] .profile-choices{background:var(--tint)}
+:root[data-theme="dark"] #map{background:#0b120e}
+/* Insignias y avisos: fondo oscuro teñido de la familia de color, texto en el tono vivo. */
+:root[data-theme="dark"] .badge{color:var(--leaf);background:#1d3126}
+:root[data-theme="dark"] .badge.fauna{color:var(--sea);background:#152a33}
+:root[data-theme="dark"] .badge.alert{color:var(--danger-ink);background:#33201a}
+:root[data-theme="dark"] .badge.review{color:#e8c67a;background:#332a15}
+:root[data-theme="dark"] .badge.migratoria{color:#7fd0d6;background:#142e30}
+:root[data-theme="dark"] .achievement-card.unlocked,
+:root[data-theme="dark"] .achievement-toast-icon,
+:root[data-theme="dark"] .nearby-item.here,
+:root[data-theme="dark"] .habitat-card.complete,
+:root[data-theme="dark"] .profile-warning{background:#2b2415;border-color:var(--sun)}
+:root[data-theme="dark"] .achievement-card.rarity-poco-comun.unlocked{background:#152a33}
+:root[data-theme="dark"] .achievement-card.rarity-raro.unlocked{background:#241d33}
+:root[data-theme="dark"] .achievement-card.rarity-legendario.unlocked,
+:root[data-theme="dark"] .achievement-toast.rarity-legendario{background:linear-gradient(135deg,#2f2716,#3a2f18)}
+:root[data-theme="dark"] .review-note{background:#2b2415;border-color:#5c4a1c;color:#e8d5a3}
+:root[data-theme="dark"] .auth-error,
+:root[data-theme="dark"] .invasora-thumb,
+:root[data-theme="dark"] .invasora-detail-hero,
+:root[data-theme="dark"] .invasora-warning,
+:root[data-theme="dark"] .profile-msg.error{background:#33201a}
+:root[data-theme="dark"] .progress-row.complete,
+:root[data-theme="dark"] .progress-row.habitat-goal.complete,
+:root[data-theme="dark"] .habitat-species-chip.seen,
+:root[data-theme="dark"] .save-offline-btn.saved,
+:root[data-theme="dark"] .profile-msg{background:#1b2c22}
+/* La pestaña activa usaba --ink de fondo con texto blanco: en oscuro sería blanco sobre blanco,
+   así que pasa a usar el verde de marca. */
+:root[data-theme="dark"] .view-tab.active,
+:root[data-theme="dark"] .layers-toggle[aria-expanded="true"]{background:var(--leaf);color:#fff;border-color:var(--leaf)}
+:root[data-theme="dark"] .screen-cover{background:radial-gradient(1200px 600px at 70% -10%,#16281d 0%,var(--paper) 60%)}
+/* Leaflet: popups, controles y atribución son blancos de serie. */
+:root[data-theme="dark"] .leaflet-popup-content-wrapper,
+:root[data-theme="dark"] .leaflet-popup-tip,
+:root[data-theme="dark"] .leaflet-control-layers,
+:root[data-theme="dark"] .leaflet-bar a,
+:root[data-theme="dark"] .leaflet-control-attribution{background:var(--panel);color:var(--ink)}
+:root[data-theme="dark"] .leaflet-control-attribution a{color:var(--sea)}
+/* El callejero de OSM es una imagen clara: se atenúa para que no deslumbre dentro del tema oscuro.
+   La ortofoto del PNOA NO se toca: alterarla falsearía lo que se está viendo del terreno. */
+:root[data-theme="dark"] .tile-osm{filter:brightness(.72) saturate(.85) contrast(1.06)}

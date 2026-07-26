@@ -15,6 +15,7 @@ export const API_BASE = '../Backend/Api';
 export const ACHIEVEMENT_NAME = '¡Más aguileño que un pijo lobo!';
 export const DEFAULT_PARK_SLUG = 'cabo-cope-puntas-calnegre';
 export const PARK_INDEX_PATH = 'Data/parks-index.json';
+export const ACHIEVEMENTS_CATALOG_PATH = 'Data/achievements.json';
 
 // --- Estado mutable -------------------------------------------------------------------------------
 export const state = {
@@ -39,6 +40,11 @@ export const state = {
   progressReady: false,
   parkWasComplete: false,
   activeParkSlug: null,
+  // Nivel de dato del parque activo, tomado del `status` de parks-index.json:
+  //   'full'  → status "available": catálogo completo (hábitats, especies, POIs).
+  //   'basic' → status "basic": ficha base (límite oficial + Red Natura 2000), sin catálogo.
+  // El frontend usa esto para no enseñar catálogos vacíos ni contadores a cero sin explicación.
+  parkLevel: 'full',
   manifest: null,
   dataFromCache: false,
   userId: null,
@@ -46,7 +52,17 @@ export const state = {
   explorerActive: false,
   explorerWatchId: null,
   userMarker: null,
-  userAccuracyCircle: null
+  userAccuracyCircle: null,
+  // Progreso de CUENTA (ámbito estatal, por encima del progreso por parque de arriba). Lo llena
+  // achievements.js: `totals` son los agregados (especies estatales, parques visitados...) y
+  // `achievements` es un Map id -> { unlockedAt, celebratedAt, context }. `ready` indica que ya se
+  // cargó al menos una vez (local u online) y la rejilla de logros puede pintarse sin parpadeo.
+  account: { totals: null, achievements: new Map(), ready: false },
+  // Se pone a `true` en cuanto el usuario escribe algo en el buscador del catálogo, en cualquier
+  // parque de esta sesión; lo usa el logro de sabor "hábitat completado sin buscador" (app.js
+  // comprueba este flag la primera vez que un hábitat se completa). Vive aquí porque, como
+  // `parkWasComplete`, es UI-state efímero de esta sesión, no progreso persistido.
+  searchUsedThisSession: false
 };
 
 // --- Selectores: catálogo -------------------------------------------------------------------------

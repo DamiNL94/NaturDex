@@ -13,6 +13,7 @@
     "db:push": "node Tools/db-sync/db-sync.js push",
     "db:backup": "node Tools/db-sync/db-sync.js backup",
     "hooks:install": "git config core.hooksPath .githooks",
+    "tiles:build": "node Tools/build-park-tiles.js",
     "habitats:build": "node Tools/catalogo-nacional/build-habitats.js",
     "habitats:merge": "node Tools/catalogo-nacional/merge-habitats.js",
     "atlas:hic": "node Tools/catalogo-nacional/atlas-hic-especies.js",

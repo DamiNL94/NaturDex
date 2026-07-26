@@ -21,13 +21,19 @@ export const searchLabel = document.querySelector('#searchLabel');
 
 // Cabecera del parque (resumen y progreso)
 export const parkTitle = document.querySelector('#parkTitle');
+export const parkEyebrow = document.querySelector('#parkEyebrow');
 export const speciesCount = document.querySelector('#speciesCount');
 export const habitatCount = document.querySelector('#habitatCount');
 export const coastlineKm = document.querySelector('#coastlineKm');
 export const parkSummary = document.querySelector('#parkSummary');
+export const parkStats = document.querySelector('#parkStats');
+export const parkProgressWrap = document.querySelector('#parkProgressWrap');
 export const progressTrack = document.querySelector('#progressTrack');
 export const progressFill = document.querySelector('#progressFill');
 export const progressLabel = document.querySelector('#progressLabel');
+
+// Aviso de "ficha base" (parques con status "basic": sin catálogo de especies ni hábitats)
+export const basicNotice = document.querySelector('#basicNotice');
 
 // Pestaña de progreso y panel de detalle
 export const progressPanel = document.querySelector('#progressPanel');
@@ -36,14 +42,13 @@ export const detailPanel = document.querySelector('#detailPanel');
 export const sheetClose = document.querySelector('#sheetClose'); // cierre de la bottom-sheet (móvil)
 export const sheetScrim = document.querySelector('#sheetScrim'); // velo tras la bottom-sheet (móvil)
 
-// Modo explorador ("cerca de ti")
+// Modo explorador ("cerca de ti"). El mismo botón enciende el GPS y el seguimiento del mapa.
 export const explorerToggle = document.querySelector('#explorerToggle');
 export const nearbyPanel = document.querySelector('#nearbyPanel');
 export const nearbyStatus = document.querySelector('#nearbyStatus');
 export const nearbyList = document.querySelector('#nearbyList');
 export const nearbyClose = document.querySelector('#nearbyClose');
 export const explorerHint = document.querySelector('#explorerHint');
-export const followToggle = document.querySelector('#followToggle');
 
 // Panel de capas del mapa
 export const layersToggle = document.querySelector('#layersToggle');
@@ -52,3 +57,9 @@ export const layersPanel = document.querySelector('#layersPanel');
 // Barra de estado offline
 export const saveOfflineBtn = document.querySelector('#saveOfflineBtn');
 export const connStatus = document.querySelector('#connStatus');
+
+// Progreso de cuenta (ámbito estatal, pantalla propia fuera de un parque)
+export const accountProgressBody = document.querySelector('#accountProgressBody');
+
+// Perfil y ajustes (pantalla propia: cuenta, preferencias, datos y ayuda)
+export const profileBody = document.querySelector('#profileBody');

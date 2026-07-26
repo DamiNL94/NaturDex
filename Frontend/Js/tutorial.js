@@ -13,6 +13,9 @@
 // en móvil (≤900px) es una tarjeta inferior fija, como la bottom-sheet de la ficha (.detail-dock).
 // ================================================================================================
 
+import { state } from './state.js';
+import { formatBytes } from './util.js';
+
 const SEEN_KEY_PREFIX = 'naturdex.tutorial.';
 const mobileMedia = window.matchMedia('(max-width: 900px)');
 
@@ -33,12 +36,29 @@ const STAGES = {
     { target: '#speciesList', mobileTab: 'catalog', title: 'Hábitats y especies', text: 'Toca un hábitat para ver sus plantas y animales. Con «← Hábitats» vuelves a la lista de paisajes del parque.' },
     { target: '#detailPanel', mobileTab: 'catalog', title: 'Marca lo que veas', text: 'Al abrir la ficha de una especie verás el botón «Marcar como visto». Púlsalo cuando la encuentres de verdad: así vas completando tu colección del parque.' },
     { target: '#layersToggle', mobileTab: 'map', title: 'Capas del mapa', text: 'Aquí enciendes o apagas lo que se pinta en el mapa (hábitats, senderos, puntos de interés…) y consultas la leyenda de colores.' },
-    { target: '#followToggle', mobileTab: 'map', title: 'Tu posición en el mapa', text: 'Este botón centra el mapa donde estás y hace que te siga mientras caminas.' },
-    { target: '#explorerToggle', mobileTab: 'map', title: 'Modo explorador', text: 'Actívalo durante la ruta: con el GPS te avisamos de lo que tienes cerca (especies, hábitats, miradores) para que no se te escape nada.' },
+    { target: '#explorerToggle', mobileTab: 'map', title: 'Modo explorador', text: 'Actívalo durante la ruta: el mapa te sigue mientras caminas y, con el GPS, te avisamos de lo que tienes cerca (especies, hábitats, miradores) para que no se te escape nada. Si mueves el mapa a mano, el mismo botón te vuelve a centrar.' },
     { target: ['.mobile-nav-btn[data-mtab="progress"]', '.view-tab[data-view="progress"]'], title: 'Tu progreso', text: 'Aquí ves cuántas especies llevas descubiertas en este parque, como un álbum que se va completando.' },
-    { mobileTab: 'catalog', title: 'Y un último apunte', text: 'También puedes buscar y filtrar especies, ver la pestaña «Invasoras» (especies que no deberían estar aquí) y guardar el parque para usarlo sin cobertura. Si quieres repetir este tutorial, pulsa el botón «?» junto a tu nombre. ¡A explorar!' }
+    // El botón vive en la cabecera del parque, dentro de la barra lateral: en móvil eso es la
+    // pestaña "Catálogo" (con data-mtab="map" el CSS oculta la barra entera y no se vería).
+    // El texto se calcula al mostrarlo porque el tamaño depende del parque en el que estés.
+    {
+      target: '#saveOfflineBtn', mobileTab: 'catalog', title: 'Llévate el parque en el bolsillo',
+      text: () => 'En muchos parques no hay cobertura, y sin ella la app no puede descargar nada. Pulsa aquí '
+        + 'estando en casa con wifi, antes de salir de ruta, y te llevas el parque entero: las fichas, las '
+        + 'fotos, las audioguías y el mapa'
+        + (offlineSizeLabel() ? ' (unos ' + offlineSizeLabel() + ' de espacio en el móvil)' : '')
+        + '. Una vez descargado, funciona en mitad del monte igual que aquí.'
+    },
+    { mobileTab: 'catalog', title: 'Y un último apunte', text: 'También puedes buscar y filtrar especies y ver la pestaña «Invasoras» (especies que no deberían estar aquí). Si quieres repetir este tutorial, pulsa el botón «?» junto a tu nombre. ¡A explorar!' }
   ]
 };
+
+// Peso de la descarga del parque activo, si el manifiesto lo declara. Sin paquete de teselas ni
+// contador de activos no se inventa una cifra: el paso simplemente no la menciona.
+function offlineSizeLabel() {
+  if (!state.manifest || !window.NaturDexOffline) return '';
+  return formatBytes(window.NaturDexOffline.parkDownloadBytes(state.manifest));
+}
 
 // --- Persistencia del "ya visto" ----------------------------------------------------------------
 let scopeUserId = null; // lo actualiza maybeAutoStart() con el usuario actual (null = invitado)
@@ -149,6 +169,24 @@ function firstVisible(target) {
   return null;
 }
 
+/**
+ * ¿Este paso tiene sentido en la pantalla actual? Un paso que señala un control que la app ha
+ * ocultado (p. ej. "Tu progreso" en un espacio de ficha base, donde applyParkLevel esconde la
+ * pestaña) se saltaría entero: se descarta ANTES de arrancar, para que "Paso N de M" y los puntos
+ * indicadores cuenten solo lo que el usuario va a ver de verdad.
+ *
+ * Se mira el atributo [hidden], no la visibilidad real: en móvil media UI está oculta por CSS según
+ * la pestaña activa, y esos pasos sí valen porque showStep abre antes su pestaña (mobileTab).
+ */
+function stepIsApplicable(step) {
+  if (!step.target) return true;
+  const selectors = Array.isArray(step.target) ? step.target : [step.target];
+  return selectors.some(sel => {
+    const el = document.querySelector(sel);
+    return el && !el.hidden && !el.closest('[hidden]');
+  });
+}
+
 function clamp(v, min, max) { return Math.max(min, Math.min(max, v)); }
 
 function showStep(index) {
@@ -162,7 +200,8 @@ function showStep(index) {
   }
 
   titleEl.textContent = step.title;
-  textEl.textContent = step.text;
+  // El texto puede ser una función cuando depende del parque activo (p. ej. cuánto ocupa guardarlo).
+  textEl.textContent = typeof step.text === 'function' ? step.text() : step.text;
   stepCountEl.textContent = 'Paso ' + (stepIndex + 1) + ' de ' + steps.length;
   dotsEl.innerHTML = steps.map((s, i) =>
     '<span class="tutorial-dot' + (i === stepIndex ? ' active' : '') + '"></span>').join('');
@@ -229,7 +268,8 @@ export function startTutorial(stage) {
   if (!STAGES[stage]) return;
   ensureOverlay();
   activeStage = stage;
-  steps = STAGES[stage];
+  steps = STAGES[stage].filter(stepIsApplicable);
+  if (!steps.length) return;
   openerEl = document.activeElement; // para devolver el foco al cerrar
   overlay.hidden = false;
   showStep(0);
@@ -242,6 +282,13 @@ export function maybeAutoStart(stage, userId) {
   if (readSeen()[stage] || isOpen()) return;
   // Pequeño respiro para que el layout (mapas Leaflet incluidos) termine de asentarse.
   setTimeout(() => { if (!isOpen()) startTutorial(stage); }, 400);
+}
+
+// Olvida el "ya visto" de este usuario, de modo que los dos tramos vuelvan a salir solos la próxima
+// vez que llegue a cada pantalla. Lo usa "Que vuelva a salir solo" en Perfil y ajustes.
+export function resetTutorial(userId) {
+  if (userId != null) scopeUserId = userId;
+  try { localStorage.removeItem(storageKey()); } catch (e) { /* sin localStorage: nada que olvidar */ }
 }
 
 function close() {
@@ -271,5 +318,5 @@ export function initTutorial() {
   if (btnPark) btnPark.addEventListener('click', () => startTutorial('park'));
   if (btnSelect) btnSelect.addEventListener('click', () => startTutorial('select'));
   // auth.js es un script clásico (no módulo): expone la API por window, como startParkExperience.
-  window.naturdexTutorial = { start: startTutorial, maybeAutoStart };
+  window.naturdexTutorial = { start: startTutorial, maybeAutoStart, reset: resetTutorial };
 }

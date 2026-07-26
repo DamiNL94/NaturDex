@@ -389,12 +389,31 @@ dispositivo y usarlo sin internet**. La estrategia es por capas, de más garanti
 
 Además, el **progreso del usuario es local-first**: se guarda siempre en el dispositivo (`localStorage`) y,
 cuando hay backend, se sincroniza con el servidor por unión (nunca se pierde un "visto" registrado sin
-cobertura). Un **indicador de conexión** ("En línea" / "Sin conexión · parque guardado") avisa del estado.
+cobertura). Lo marcado sin red entra en una **cola de pendientes** persistida que se vacía al recuperar
+conexión y al arrancar; es idempotente (`progress.php` acepta lotes y trabaja por unión), así que
+reintentar nunca duplica. Un **indicador de conexión** ("En línea" / "Sin conexión · parque guardado")
+avisa del estado.
 
-**Lo único que aún no funciona offline** son las teselas del mapa base (OSM/PNOA): son de otro dominio y
-demasiado voluminosas para cachearlas enteras. Offline se ve toda la geometría del parque sobre un fondo
-vacío. La solución futura, ya prevista en el `manifest.json` (campo `tiles`), es empaquetar un juego de
-teselas por parque (formato PMTiles/MBTiles) que se descargue con el resto.
+### Mapa base sin conexión
+
+Cada parque puede traer su propio **paquete de teselas** (`manifest.tiles` → `tiles/base.pmtiles`), que se
+descarga con el resto al pulsar "Guardar sin conexión" y se sirve desde nuestro dominio. Sin cobertura la
+app conmuta sola a esa capa, así que se ve un mapa de verdad en lugar del fondo vacío de antes.
+
+Se genera con `npm run tiles:build <slug>`, que recorta el basemap de Protomaps al **límite oficial del
+parque** (no al bbox: en un parque costero medio bbox es mar). Pesa ~1 MB por parque frente a las decenas
+que costaría el mismo ámbito en ráster, y al ser vectorial sigue siendo legible más allá de su zoom máximo.
+
+**Por qué Protomaps y no OSM directamente:** la [política de teselas de OSM](https://operations.osmfoundation.org/policies/tiles/)
+prohíbe expresamente el prefetch y el uso sin conexión de sus servidores, así que empaquetar desde ahí no
+es una opción. El basemap de Protomaps es una *Produced Work* de OSM bajo ODbL: se puede redistribuir
+exigiendo atribución `© OpenStreetMap`, que viaja en el propio manifiesto para poder pintarla también sin
+red. El PNOA del IGN (CC BY 4.0) **sigue siendo solo online**: una ortofoto no se puede vectorizar y
+empaquetarla exigiría un pipeline aparte desde el Centro de Descargas del CNIG.
+
+El validador comprueba que el paquete existe, que `bytes` cuadra con el fichero, que hay atribución y que
+el parque cabe en el **presupuesto de 25 MB** (mapa + fotos + audio); el botón anuncia el peso antes de
+descargar ("Guardar sin conexión · 2,9 MB") y pide confirmación por encima de 20 MB.
 
 ## Pestaña "Progreso"
 

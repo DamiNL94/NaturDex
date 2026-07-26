@@ -5,8 +5,11 @@
 // La lógica real vive en Backend/Lib/park_export.php (compartida con el botón "Publicar cambios
 // offline" del panel de administración). Este script solo recorre el registro y la invoca.
 //
-// Uso:  php Tools/export-park.php            (todos los parques "available")
-//       php Tools/export-park.php <slug>     (solo ese parque)
+// Recorre los espacios con datos en disco: los "available" (catálogo completo) y los "basic"
+// (ficha base). Los "planned" no tienen carpeta, así que se saltan.
+//
+// Uso:  php Tools/export-park.php            (todos los espacios con datos)
+//       php Tools/export-park.php <slug>     (solo ese espacio)
 // ================================================================================================
 require_once __DIR__ . "/../Backend/Config/db.php";
 require_once __DIR__ . "/../Backend/Lib/park_export.php";
@@ -21,13 +24,15 @@ $exported = 0;
 foreach (($registry["communities"] ?? []) as $c) {
     foreach (($c["provinces"] ?? []) as $p) {
         foreach (($p["parks"] ?? []) as $park) {
-            if (($park["status"] ?? "") !== "available") continue;
+            if (!in_array($park["status"] ?? "", ["available", "basic"], true)) continue;
             if ($onlySlug && $park["slug"] !== $onlySlug) continue;
             $res = exportParkToJson($conn, $FRONTEND, $park["slug"]);
             if (!$res["ok"]) { fwrite(STDERR, "  ✗ " . $park["slug"] . ": " . $res["error"] . "\n"); continue; }
-            echo "  ✓ " . $park["slug"] . ": " . $res["counts"]["habitats"] . " hábitats, "
+            $nivel = $res["status"] === "basic" ? " [ficha base]" : "";
+            echo "  ✓ " . $park["slug"] . $nivel . ": " . $res["counts"]["habitats"] . " hábitats, "
                 . $res["counts"]["species"] . " especies, " . $res["counts"]["pointsOfInterest"] . " POIs -> "
                 . $res["dataPath"] . "\n";
+            if (!empty($res["statusSynced"])) echo "    · status actualizado a '" . $res["status"] . "' en parks-index.json\n";
             $exported++;
         }
     }

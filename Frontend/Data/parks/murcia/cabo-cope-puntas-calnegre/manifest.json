@@ -50,11 +50,26 @@
     "Img/habitats/praderas-posidonia.jpg"
   ],
   "audio": [],
-  "tiles": null,
+  "tiles": {
+    "pmtiles": "Data/parks/murcia/cabo-cope-puntas-calnegre/tiles/base.pmtiles",
+    "bbox": [
+      -1.51041,
+      37.42143,
+      -1.40125,
+      37.51231
+    ],
+    "minzoom": 0,
+    "maxzoom": 15,
+    "bytes": 1037604,
+    "attribution": "<a href=\"https://protomaps.com\">Protomaps</a> &copy; <a href=\"https://openstreetmap.org/copyright\">OpenStreetMap</a>",
+    "source": "https://build.protomaps.com/20260726.pmtiles",
+    "builtAt": "2026-07-26"
+  },
   "counts": {
     "species": 174,
     "habitats": 15,
     "pointsOfInterest": 15,
-    "images": 35
+    "images": 35,
+    "assetBytes": 2040976
   }
 }
