@@ -3,28 +3,46 @@
  * NaturDex · catalogo-nacional/build-habitats
  * ------------------------------------------------------------------------------------------------
  * CAPA 2 del catálogo nacional: construye la capa OFICIAL de hábitats de un parque a partir de la
- * Cartografía de Hábitats de la Directiva 92/43/CEE del MITECO/BDN.
+ * cartografía de hábitats del MITECO/BDN.
  *
- *   shapefile (recintos, ETRS89 UTM)  +  Habi<NN>.dbf (HIC/asociación/prioridad por recinto)
- *        │  reproyecta UTM<zona> → WGS84
- *        │  une por CODIGO  (un recinto puede tener VARIOS HIC = mosaico)
+ *   shapefile (recintos, ETRS89 UTM)  +  tabla de hábitats por recinto
+ *        │  reproyecta UTM<zona> → WGS84   (la zona se LEE del .prj, no se asume)
+ *        │  une por la clave del recinto   (un recinto puede tener VARIOS hábitats = mosaico)
  *        │  recorta al límite del parque
  *        ▼
- *   <slug>-oficial.geojson  (un Feature por recinto, con su combinación HIC)
+ *   <slug>-oficial.geojson  (un Feature por recinto, con su mosaico de hábitats)
+ *
+ * DOS FUENTES POSIBLES, autodetectadas por los campos de la tabla:
+ *
+ *   atlas2005  ← PREFERENTE. «Atlas y Manual de los Hábitats Naturales y Seminaturales de España»
+ *                (2005). Une por HAB_LAY. Trae el código HIC en CODUE —vacío si el hábitat no es
+ *                de interés comunitario— y además nombre común, genérico, descripción oficial,
+ *                alianza, especies características, naturalidad y % de cobertura.
+ *                Es un SUPERCONJUNTO de la de 1997: incluye hábitats seminaturales que la
+ *                Directiva no recoge, marcados con esHIC=false.
+ *                Ficheros: INB_Habitat<NN>_ETRS89_H30.shp + Datos<NN>.dbf
+ *
+ *   hic1997    ← heredada. Cartografía de Hábitats de Interés Comunitario (Directiva 92/43/CEE),
+ *                actualización de 1997. Une por CODIGO. Solo hábitats del Anexo I y con subtipos
+ *                españoles (8211, 5334) en vez de los códigos UE de 4 dígitos.
+ *                Ficheros: DirectivaHabitat<NN>_1997.shp + Habi<NN>.dbf
  *
  * Es SOLO LECTURA sobre los datos del repo: no toca la BD, ni el seed, ni el habitats.geojson
  * curado. Escribe únicamente su fichero de salida.
  *
- * Descarga previa (manual, por región NN = código de provincia; Murcia = 30) desde
- * https://www.miteco.gob.es/es/biodiversidad/servicios/banco-datos-naturaleza/informacion-disponible/habitat_descargas_2.html
- *   - DirectivaHabitat<NN>_1997_*.zip  → shapefile (.shp + .dbf)
- *   - directivadatos_<NN>_*.zip        → Habi<NN>.dbf
+ * Manifiestos de descarga y procedencia:
+ *   Tools/catalogo-nacional/fuentes/atlas-habitats-2005-provincias.json  (52 provincias)
+ *   Tools/catalogo-nacional/fuentes/habitat-provincias.json              (50 provincias, 1997)
+ * Análisis de la diferencia entre ambas:
+ *   Tools/catalogo-nacional/out/fusion-habitats-1997-atlas2005.md
  *
  * Uso:
  *   node Tools/catalogo-nacional/build-habitats.js --park <slug> --shp <ruta.shp> \
- *        --habi <ruta/Habi30.dbf> --zone 30 [--boundary <ruta.geojson>] [--out <salida.geojson>]
+ *        --datos <ruta/Datos30.dbf> [--boundary <ruta.geojson>] [--out <salida.geojson>]
  *
- * Ojo: el huso UTM depende de la región (28N Canarias, 29N, 30N, 31N). Ver README.md.
+ *   --datos    tabla de hábitats por recinto (Datos<NN>.dbf o Habi<NN>.dbf). `--habi` es su alias.
+ *   --fuente   fuerza atlas2005 | hic1997. Por defecto se autodetecta por los campos de la tabla.
+ *   --zone     fuerza el huso UTM. Por defecto se lee del .prj del shapefile.
  * ================================================================================================
  */
 'use strict';
@@ -65,20 +83,57 @@ const die = (m) => { console.error('✖ ' + m); process.exit(1); };
 
 const PARK = flag('--park');
 const SHP = flag('--shp');
-const HABI = flag('--habi');
-const ZONE = parseInt(flag('--zone', '30'), 10);
+const HABI = flag('--datos') || flag('--habi');   // --habi se mantiene por compatibilidad
 const BOUNDARY = flag('--boundary');
 const OUT = flag('--out');
+const FUENTE_FORZADA = flag('--fuente');
 
 if (ARGV.includes('--help')) { console.log(fs.readFileSync(__filename, 'utf8').split('*/')[0]); process.exit(0); }
-if (!SHP || !HABI) die('Faltan --shp y/o --habi. Ver: node Tools/catalogo-nacional/build-habitats.js --help');
+if (!SHP || !HABI) die('Faltan --shp y/o --datos. Ver: node Tools/catalogo-nacional/build-habitats.js --help');
 if (!fs.existsSync(SHP)) die(`No existe el shapefile: ${SHP}`);
-if (!fs.existsSync(HABI)) die(`No existe la tabla Habi: ${HABI}`);
-if (!Number.isInteger(ZONE) || ZONE < 27 || ZONE > 31) die(`--zone debe ser un huso UTM válido (28..31). Recibido: ${ZONE}`);
+if (!fs.existsSync(HABI)) die(`No existe la tabla de hábitats: ${HABI}`);
+if (FUENTE_FORZADA && !['atlas2005', 'hic1997'].includes(FUENTE_FORZADA)) die(`--fuente debe ser atlas2005 o hic1997. Recibido: ${FUENTE_FORZADA}`);
 
 // El .dbf de atributos del shapefile es el hermano del .shp.
 const SHP_DBF = SHP.replace(/\.shp$/i, '.dbf');
 if (!fs.existsSync(SHP_DBF)) die(`No encuentro el .dbf del shapefile junto a ${SHP}`);
+
+// El huso UTM se LEE del .prj. Asumirlo es el error clásico de esta cartografía: en la de 1997 el
+// huso es propio de cada provincia, y en el Atlas 2005 son 30N (península y Baleares) y 28N
+// (Canarias). --zone sigue existiendo como anulación manual.
+function husoDelPrj(shpPath) {
+  const prj = shpPath.replace(/\.shp$/i, '.prj');
+  if (!fs.existsSync(prj)) return null;
+  const m = fs.readFileSync(prj, 'latin1').match(/UTM[_\s]*Zone[_\s]*(\d{1,2})\s*N/i);
+  return m ? parseInt(m[1], 10) : null;
+}
+const ZONE_PRJ = husoDelPrj(SHP);
+const ZONE = flag('--zone') ? parseInt(flag('--zone'), 10) : ZONE_PRJ;
+if (!Number.isInteger(ZONE) || ZONE < 27 || ZONE > 31)
+  die(`No he podido determinar el huso UTM. El .prj no lo declara de forma reconocible: pásalo con --zone. Valor obtenido: ${ZONE}`);
+
+// Autodetección de la fuente por los campos de la tabla. Es más fiable que fiarse del nombre del
+// fichero o de una bandera que se puede olvidar.
+function detectaFuente(campos) {
+  const n = new Set(campos.map(c => c.name));
+  if (n.has('CODUE') && n.has('HAB_LAY')) return 'atlas2005';
+  if (n.has('CODIGO_UE') && n.has('CODIGO')) return 'hic1997';
+  return null;
+}
+
+// Perfil de cada fuente: qué clave une, de qué campo sale cada cosa y cómo se llama en la salida.
+const PERFILES = {
+  atlas2005: {
+    clave: 'HAB_LAY',
+    etiqueta: 'Atlas y Manual de los Hábitats Naturales y Seminaturales de España (2005)',
+    manifiesto: 'fuentes/atlas-habitats-2005-provincias.json',
+  },
+  hic1997: {
+    clave: 'CODIGO',
+    etiqueta: 'Cartografía Hábitat Directiva 92/43/CEE (1997)',
+    manifiesto: 'fuentes/habitat-provincias.json',
+  },
+};
 
 // --- Programa ---------------------------------------------------------------------------------
 
@@ -95,12 +150,22 @@ function main() {
   console.log(`Parque: ${park.name} (${park.slug}) · huso UTM ${ZONE}N · límite: ${path.relative(REPO_ROOT, boundaryPath)}`);
 
   const recs = readPolygons(SHP);
-  const attrs = readDbf(SHP_DBF).rows;      // CODIGO por índice de registro
-  const habiRows = readDbf(HABI).rows;      // CODIGO -> N filas (mosaico de HIC)
-  console.log(`Fuente: ${recs.length} recintos en el shapefile · ${habiRows.length} filas de hábitat en ${path.basename(HABI)}`);
+  const attrs = readDbf(SHP_DBF).rows;      // atributos del recinto, por índice de registro
+  const tabla = readDbf(HABI);              // tabla de hábitats: clave -> N filas (mosaico)
+
+  const fuente = FUENTE_FORZADA || detectaFuente(tabla.fields);
+  if (!fuente) die(`No reconozco el formato de ${path.basename(HABI)}. Campos: ${tabla.fields.map(f => f.name).join(', ')}. Fuérzalo con --fuente.`);
+  const perfil = PERFILES[fuente];
+  const CLAVE = perfil.clave;
+
+  if (!attrs.length || !(CLAVE in attrs[0]))
+    die(`El .dbf del shapefile no tiene el campo "${CLAVE}" que necesita la fuente ${fuente}. ¿Has emparejado shapefile y tabla de la misma fuente?`);
+
+  console.log(`Fuente: ${fuente} — ${perfil.etiqueta}`);
+  console.log(`  ${recs.length} recintos · ${tabla.nRec} filas de hábitat en ${path.basename(HABI)} · unión por ${CLAVE}`);
 
   const byCod = new Map();
-  for (const h of habiRows) { if (!byCod.has(h.CODIGO)) byCod.set(h.CODIGO, []); byCod.get(h.CODIGO).push(h); }
+  for (const h of tabla.rows) { const k = h[CLAVE]; if (!byCod.has(k)) byCod.set(k, []); byCod.get(k).push(h); }
 
   const features = [];
   let skipNoHic = 0, clipped = 0;
@@ -111,28 +176,38 @@ function main() {
     const ll = rings.map(r => r.map(([x, y]) => utmToLonLat(x, y, ZONE)));
     if (!bboxOverlap(bbox(ll[0]), pbb)) continue;
 
-    const habs = habitatsOf(byCod, attrs[i] && attrs[i].CODIGO);
+    const idRecinto = attrs[i] && attrs[i][CLAVE];
+    const habs = fuente === 'atlas2005' ? habitatsAtlas(byCod, idRecinto) : habitatsHic1997(byCod, idRecinto);
     if (habs.length === 0) { skipNoHic++; continue; } // marco/artefactos sin atributos
 
     // Recorta el recinto (como MultiPolygon con sus agujeros) contra el límite del parque.
     let inter;
     try { inter = pc.intersection(recintoMultiPolygon(ll), parkPoly); }
-    catch (e) { console.warn(`  ⚠ recinto ${attrs[i].CODIGO}: fallo al recortar (${e.message}), se omite`); continue; }
+    catch (e) { console.warn(`  ⚠ recinto ${idRecinto}: fallo al recortar (${e.message}), se omite`); continue; }
     if (!inter || inter.length === 0) continue;
     clipped++;
 
     const coords = inter.map(poly => poly.map(ring => ring.map(([x, y]) => [+x.toFixed(6), +y.toFixed(6)])));
     const geometry = coords.length === 1 ? { type: 'Polygon', coordinates: coords[0] } : { type: 'MultiPolygon', coordinates: coords };
-    const dominante = habs.slice().sort((a, b) => b.cobertura - a.cobertura)[0];
+    // El hábitat dominante es el de mayor cobertura DENTRO de los que son HIC: si el recinto tiene
+    // alguno comunitario, ése es el que interesa etiquetar. Si no lo hay, manda el de más cobertura.
+    const conHic = habs.filter(h => h.hic);
+    const dominante = (conHic.length ? conHic : habs).slice().sort((a, b) => b.cobertura - a.cobertura)[0];
     features.push({
       type: 'Feature',
       properties: {
-        recinto: attrs[i].CODIGO,
+        recinto: idRecinto,
         hic_dominante: dominante.hic,
         n_habitats: habs.length,
+        // ¿el recinto contiene algún hábitat de interés comunitario?
+        esHIC: habs.some(h => h.esHIC),
+        n_hic: conHic.length,
         habitats: habs,
-        prioritario_1997: habs.some(h => h.prioritario_1997),
-        fuente: `MITECO/BDN — Cartografía Hábitat Directiva 92/43/CEE (1997); recinto recortado al límite del parque y reproyectado ETRS89 UTM${ZONE}N→WGS84`,
+        // Bandera de prioridad tal y como la declara la FUENTE. La definitiva la asigna
+        // merge-habitats.js desde data/hic-prioritarios.json, que es el Anexo I de la Directiva.
+        prioritario_fuente: habs.some(h => h.prioritario_fuente),
+        fuenteId: fuente,
+        fuente: `MITECO/BDN — ${perfil.etiqueta}; recinto recortado al límite del parque y reproyectado UTM${ZONE}N→WGS84`,
       },
       geometry,
     });
@@ -151,29 +226,75 @@ function main() {
       if (!dentroDelLimite(x, y, parkPolys) && (x < pbb[0] - 1e-4 || x > pbb[2] + 1e-4 || y < pbb[1] - 1e-4 || y > pbb[3] + 1e-4)) outside++;
     }
   }
-  const hic = new Map();
-  for (const f of features) for (const h of f.properties.habitats) hic.set(h.hic || '(sin HIC)', (hic.get(h.hic || '(sin HIC)') || 0) + 1);
+  const hic = new Map(), semi = new Map();
+  for (const f of features) for (const h of f.properties.habitats) {
+    if (h.esHIC) hic.set(h.hic, (hic.get(h.hic) || 0) + 1);
+    else { const k = h.generico || h.nombre_comun || '(sin nombre)'; semi.set(k, (semi.get(k) || 0) + 1); }
+  }
+  const orden = (m) => [...m.entries()].sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k}:${v}`).join('  ');
   console.log(`\nRecintos en el parque: ${features.length} (recortados: ${clipped}) · descartados sin atributos: ${skipNoHic}`);
+  console.log(`  de ellos con algún HIC: ${features.filter(f => f.properties.esHIC).length} · solo seminaturales: ${features.filter(f => !f.properties.esHIC).length}`);
   console.log(`Validación · vértices fuera del parque: ${outside}/${totV} ${outside === 0 ? '✔' : '✖'}`);
-  console.log(`HIC presentes: ${[...hic.entries()].sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k}:${v}`).join('  ')}`);
+  console.log(`HIC presentes (${hic.size}): ${orden(hic) || '—'}`);
+  if (semi.size) console.log(`Seminaturales, no HIC (${semi.size}): ${orden(semi)}`);
   console.log(`\n→ ${path.relative(REPO_ROOT, outPath)}`);
 }
 
+const texto = (s) => { const v = s == null ? '' : String(s).replace(/\s+/g, ' ').trim(); return v || null; };
+
+// --- Atlas 2005 (fuente preferente) ------------------------------------------------------------
+// Filas de Datos<NN> para un recinto, deduplicadas por CODUE+CODHAB.
+//
+// La diferencia de fondo con 1997: aquí CODUE puede venir VACÍO. Eso no es un dato que falte, es la
+// afirmación de que ese hábitat NO es de interés comunitario —un seminatural, p. ej. un espartal—.
+// Por eso `esHIC` es un booleano derivado y no una ausencia.
+function habitatsAtlas(byCod, clave) {
+  const rows = byCod.get(clave) || [];
+  const seen = new Set(), out = [];
+  for (const r of rows) {
+    const hic = texto(r.CODUE);
+    const key = (hic || '') + '|' + (r.CODHAB || '');
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push({
+      hic,                                  // código UE de 4 dígitos, o null si no es comunitario
+      esHIC: Boolean(hic),
+      cod_habitat: texto(r.CODHAB),
+      // `concepto` se mantiene con este nombre porque merge-habitats.js lo consume.
+      concepto: texto(r.NOM_HABITA),        // asociación fitosociológica
+      nombre_comun: texto(r.NOM_COMUN),     // «Espartales manchegos sudorientales»
+      generico: texto(r.GENERICO),          // «Espartales»
+      descripcion: texto(r.DESCRIPCIO),     // descripción oficial del HIC (vacía en seminaturales)
+      alianza: texto(r.ALIANZA),
+      especies_alianza: texto(r.SPSALIANZA) ? texto(r.SPSALIANZA).split(/\s*,\s*/).filter(Boolean) : [],
+      naturalidad: Number.isFinite(parseFloat(r.NATURALIDA)) ? Math.round(parseFloat(r.NATURALIDA)) : null,
+      // Un hábitat seminatural nunca es prioritario: PRIORITARI viene vacío y eso es `false`,
+      // no «desconocido».
+      prioritario_fuente: texto(r.PRIORITARI) === '*',
+      cobertura: parseFloat(r.PORCENTAJE) || 0,   // % del recinto que ocupa este hábitat
+    });
+  }
+  return out;
+}
+
+// --- HIC 1997 (heredada) -----------------------------------------------------------------------
 // Filas de Habi<NN> para un recinto, deduplicadas por HIC+código de hábitat.
-function habitatsOf(byCod, codigo) {
+// Aquí TODO recinto con atributos es de interés comunitario: la fuente solo cartografía el Anexo I.
+function habitatsHic1997(byCod, codigo) {
   const rows = byCod.get(codigo) || [];
   const seen = new Set(), out = [];
   for (const r of rows) {
     const key = r.CODIGO_UE + '|' + r.CODHABITAT;
     if (seen.has(key)) continue;
     seen.add(key);
+    const hic = texto(r.CODIGO_UE);
     out.push({
-      hic: r.CODIGO_UE || null,
-      cod_habitat: r.CODHABITAT || null,
+      hic,
+      esHIC: Boolean(hic),
+      cod_habitat: texto(r.CODHABITAT),
       concepto: limpiaConcepto(r.CONCEPTO),
       // Flag original de la fuente 1997: poco fiable, se conserva solo por trazabilidad.
-      // La prioridad real la asigna merge-habitats.js desde data/hic-prioritarios.json.
-      prioritario_1997: r.PRIORITARI === '*',
+      prioritario_fuente: r.PRIORITARI === '*',
       cobertura: parseFloat(r.COBERTURA) || 0,
     });
   }

@@ -13,13 +13,341 @@
       "Totana"
     ],
     "center": [
-      37.86853,
+      37.86854,
       -1.54939
     ],
     "summary": "Parque Regional de la Región de Murcia, con una superficie oficial de 17.693,2 ha en los términos municipales de Aledo, Alhama de Murcia, Lorca, Mula y Totana. Solapa con el espacio de la Red Natura 2000 LIC/ZEC y ZEPA ES0000173 «Sierra Espuña».",
-    "boundaryNote": "Límite oficial servido en geo/parque.geojson, recortado de la capa de Espacios Naturales Protegidos del Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Código ENP oficial ES620013 (CDDA 4745), superficie oficial 17.693,2 ha. La capa se publica proyectada en ETRS89 UTM 30N (EPSG:25830): la geometría se ha reproyectado a WGS84 y generalizada con tolerancia de 1 m para uso web (superficie resultante 17.693,3 ha, desviación del 0,00 %). Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM (ver Tools/catalogo-nacional/data/murcia-enp-municipios.json). Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico»."
+    "boundaryNote": "Límite oficial servido en geo/parque.geojson, descargado del geoportal del IMIDA/CARM (servicio PROYECTOS/OISMA, capa de Parque Regional, registros con Caracter «Firme»), identificador interno ENP000001. Código ENP oficial ES620013, superficie oficial 17.693,2 ha según el Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Geometría en WGS84, sin generalizar (6329 vértices, superficie resultante 17.729,9 ha, desviación del 0,21 %). Sustituye a la delimitación de la capa ENP nacional del MITECO, que es un producto generalizado. Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM. Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico» (código y superficie oficiales) e IMIDA/CARM (geometría)."
   },
-  "habitats": [],
+  "habitats": [
+    {
+      "id": "matorrales-arborescentes-de-5210",
+      "code": "5210",
+      "name": "Matorrales arborescentes de Juniperus spp.",
+      "type": "Matorral",
+      "priority": false,
+      "hicSubtipos": [
+        "5210"
+      ],
+      "fitosociologia": [
+        "Rhamno lycioidis-Quercetum cocciferae Br.-Bl. & O. Bolòs 1954 (comunidades de Juniperus)"
+      ],
+      "description": "",
+      "coordinates": [
+        37.865473,
+        -1.557929
+      ],
+      "color": "#9acd32",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "matorrales-mediterraneos-y-4090",
+      "code": "4090",
+      "name": "Matorrales mediterráneos y oromediterráneos primarios y secundarios con dominio frecuente de genisteas",
+      "type": "Matorral",
+      "priority": false,
+      "hicSubtipos": [
+        "4090"
+      ],
+      "fitosociologia": [
+        "Erinaceo anthyllidis-Genistetum longipedis O. Bolòs & Rigual in O. Bolòs 1967",
+        "Lavandulo-Genistion boissieri Rivas Goday & Rivas-Martínez 1969",
+        "Teucrio webbiani-Helianthemetum origanifolii Esteve 1973"
+      ],
+      "description": "",
+      "coordinates": [
+        37.872213,
+        -1.563033
+      ],
+      "color": "#4f7942",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "zonas-subestepicas-de-6220",
+      "code": "6220",
+      "name": "Zonas subestépicas de gramíneas y anuales del Thero-Brachypodietea",
+      "type": "Pastos",
+      "priority": true,
+      "hicSubtipos": [
+        "6220"
+      ],
+      "fitosociologia": [
+        "Pilosello capitatae-Brachypodietum retusi Alcaraz, P. Sánchez, De la Torre, Ríos & J. Alvarez 1991",
+        "Teucrio pseudochamaepityos-Brachypodietum ramosi O. Bolòs 1957"
+      ],
+      "description": "",
+      "coordinates": [
+        37.872423,
+        -1.559928
+      ],
+      "color": "#66cdaa",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "encinares-de-quercus-9340",
+      "code": "9340",
+      "name": "Encinares de Quercus ilex y Quercus rotundifolia",
+      "type": "Bosque",
+      "priority": false,
+      "hicSubtipos": [
+        "9340"
+      ],
+      "fitosociologia": [
+        "Berberido hispanicae-Quercetum rotundifoliae Rivas-Martínez 1987",
+        "Quercetum rotundifoliae Br.-Bl. & O. Bolòs in Vives 1956"
+      ],
+      "description": "",
+      "coordinates": [
+        37.868219,
+        -1.54985
+      ],
+      "color": "#6b8e23",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "bosques-endemicos-de-9560",
+      "code": "9560",
+      "name": "Bosques endémicos de Juniperus spp.",
+      "type": "Bosque",
+      "priority": true,
+      "hicSubtipos": [
+        "9560"
+      ],
+      "fitosociologia": [
+        "Chamaeropo humilis-Juniperetum phoeniceae Rivas-Martínez in Alcaraz, T.E. Díaz, Rivas-Martínez & P. Sánchez 1989",
+        "Rhamno lycioidis-Juniperetum phoeniceae Rivas-Martínez & G. López in G. López 1976"
+      ],
+      "description": "",
+      "coordinates": [
+        37.910434,
+        -1.519031
+      ],
+      "color": "#9acd32",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "matorrales-termomediterraneos-y-5330",
+      "code": "5330",
+      "name": "Matorrales termomediterráneos y pre-estépicos",
+      "type": "Matorral",
+      "priority": false,
+      "hicSubtipos": [
+        "5330"
+      ],
+      "fitosociologia": [
+        "Genistetum valentinae Alcaraz, P. Sánchez, De la Torre, Ríos & J. Alvarez 1991 (matorrales de genisteas)",
+        "Rhamno lycioidis-Genistetum murcicae Peinado, Alcaraz & Martínez-Parras 1992",
+        "Saturejo canescentis-Cistetum albidi Rivas Goday 1954 corr. Alcaraz, T.E. Díaz, Rivas-Martínez & P. Sánchez 1989"
+      ],
+      "description": "",
+      "coordinates": [
+        37.853394,
+        -1.528318
+      ],
+      "color": "#daa520",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "galerias-y-matorrales-92D0",
+      "code": "92D0",
+      "name": "Galerías y matorrales ribereños termomediterráneos (Nerio-Tamaricetea)",
+      "type": "Ribera",
+      "priority": false,
+      "hicSubtipos": [
+        "92D0"
+      ],
+      "fitosociologia": [
+        "Rubo ulmifolii-Nerietum oleandri O. Bolòs 1956"
+      ],
+      "description": "",
+      "coordinates": [
+        37.83215,
+        -1.490368
+      ],
+      "color": "#2e8b57",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "prados-humedos-mediterraneos-6420",
+      "code": "6420",
+      "name": "Prados húmedos mediterráneos de hierbas altas del Molinion-Holoschoenion",
+      "type": "Pastos",
+      "priority": false,
+      "hicSubtipos": [
+        "6420"
+      ],
+      "fitosociologia": [
+        "Holoschoenetum vulgaris Br.-Bl. ex Tchou 1948",
+        "Lysimachio ephemeri-Holoschoenetum Rivas Goday & Borja 1961"
+      ],
+      "description": "",
+      "coordinates": [
+        37.859793,
+        -1.531608
+      ],
+      "color": "#8b5e34",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "prados-calcareos-carsticos-6110",
+      "code": "6110",
+      "name": "Prados calcáreos cársticos o basófilos del Alysso-Sedion albi",
+      "type": "Pastos",
+      "priority": true,
+      "hicSubtipos": [
+        "6110"
+      ],
+      "fitosociologia": [
+        "Sedetum micrantho-sediformis O. Bolòs & Masalles in O. Bolòs 1981"
+      ],
+      "description": "",
+      "coordinates": [
+        37.891995,
+        -1.601697
+      ],
+      "color": "#9acd32",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "pendientes-rocosas-calcicolas-8210",
+      "code": "8210",
+      "name": "Pendientes rocosas calcícolas con vegetación casmofítica",
+      "type": "Roquedos",
+      "priority": false,
+      "hicSubtipos": [
+        "8210"
+      ],
+      "fitosociologia": [
+        "Chaenorhino villosi-Athamanthetum hispanicae Rigual, Esteve & Rivas Goday 1963",
+        "Fumano ericoidis-Hypericetum ericoidis O. Bolòs 1957",
+        "Hormatophyllo spinosae-Erodietum saxatilis P. Sánchez, Alcaraz & De la Torre in P. Sánchez & Alcaraz 1993",
+        "Hypericion ericoidis Esteve ex Costa & Peris 1985",
+        "Jasonio glutinosae-Teucrietum thymifolii Rigual, Esteve & Rivas Goday 1963 corr. Alcaraz & De la Torre 1988",
+        "Lafuenteo rotundifoliae-Centaureetum saxicolae Rigual, Esteve & Rivas Goday 1963",
+        "Resedo paui-Sarcocapnetum saetabensis Sánchez Gómez & Alcaráz 1993",
+        "Rhamno borgiae-Teucrietum rivasii Mateo & Figuerola 1987 corr. M.B. Crespo 1993"
+      ],
+      "description": "",
+      "coordinates": [
+        37.868631,
+        -1.559844
+      ],
+      "color": "#daa520",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "prados-alpinos-y-6170",
+      "code": "6170",
+      "name": "Prados alpinos y subalpinos calcáreos",
+      "type": "Pastos",
+      "priority": false,
+      "hicSubtipos": [
+        "6170"
+      ],
+      "fitosociologia": [
+        "Festucetum hystricis Font Quer 1954"
+      ],
+      "description": "",
+      "coordinates": [
+        37.870192,
+        -1.579297
+      ],
+      "color": "#a0522d",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "robledales-ibericos-de-9240",
+      "code": "9240",
+      "name": "Robledales ibéricos de Quercus faginea y Quercus canariensis",
+      "type": "Bosque",
+      "priority": false,
+      "hicSubtipos": [
+        "9240"
+      ],
+      "fitosociologia": [
+        "Daphno latifoliae-Aceretum granatensis Rivas-Martínez 1965 (quejigares)"
+      ],
+      "description": "",
+      "coordinates": [
+        37.878961,
+        -1.550537
+      ],
+      "color": "#556b2f",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "bosques-galeria-de-92A0",
+      "code": "92A0",
+      "name": "Bosques galería de Salix alba y Populus alba",
+      "type": "Ribera",
+      "priority": false,
+      "hicSubtipos": [
+        "92A0"
+      ],
+      "fitosociologia": [
+        "Erico mediterraneae-Salicetum pedicellatae Esteve 1973"
+      ],
+      "description": "",
+      "coordinates": [
+        37.859793,
+        -1.531608
+      ],
+      "color": "#6b8e23",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    }
+  ],
   "pointsOfInterest": [],
   "species": []
 }

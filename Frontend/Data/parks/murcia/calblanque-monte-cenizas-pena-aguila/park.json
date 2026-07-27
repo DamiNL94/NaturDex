@@ -10,11 +10,11 @@
       "La Unión"
     ],
     "center": [
-      37.60294,
-      -0.78015
+      37.60257,
+      -0.78109
     ],
     "summary": "Parque Regional de la Región de Murcia, con una superficie oficial de 2466,3 ha en los términos municipales de Cartagena y La Unión. Solapa con los espacios de la Red Natura 2000 ZEPA ES0000260 «Mar Menor» y LIC/ZEC ES6200001 «Calblanque, Monte de las Cenizas y Peña del Águila».",
-    "boundaryNote": "Límite oficial servido en geo/parque.geojson, recortado de la capa de Espacios Naturales Protegidos del Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Código ENP oficial ES620011 (CDDA 71229), superficie oficial 2466,3 ha. La capa se publica proyectada en ETRS89 UTM 30N (EPSG:25830): la geometría se ha reproyectado a WGS84 y generalizada con tolerancia de 1 m para uso web (superficie resultante 2466,2 ha, desviación del 0,00 %). Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM (ver Tools/catalogo-nacional/data/murcia-enp-municipios.json). Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico»."
+    "boundaryNote": "Límite oficial servido en geo/parque.geojson, descargado del geoportal del IMIDA/CARM (servicio PROYECTOS/OISMA, capa de Parque Regional, registros con Caracter «Firme»), identificador interno ENP000005. Código ENP oficial ES620011, superficie oficial 2466,3 ha según el Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Geometría en WGS84, sin generalizar (4832 vértices, superficie resultante 2476,2 ha, desviación del 0,40 %). Sustituye a la delimitación de la capa ENP nacional del MITECO, que es un producto generalizado. El IMIDA publica 2 delimitaciones firmes de este espacio; se ha escogido la de mayor detalle (4901 vértices, 2472,3 ha) frente a 2077 vértices / 2466,3 ha. Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM. Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico» (código y superficie oficiales) e IMIDA/CARM (geometría)."
   },
   "habitats": [],
   "pointsOfInterest": [],

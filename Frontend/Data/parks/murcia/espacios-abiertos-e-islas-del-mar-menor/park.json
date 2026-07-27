@@ -12,10 +12,10 @@
     ],
     "center": [
       37.69623,
-      -0.84112
+      -0.84113
     ],
     "summary": "Paisaje Protegido de la Región de Murcia, con una superficie oficial de 1307,4 ha en los términos municipales de Cartagena, Los Alcázares y San Javier. Solapa con los espacios de la Red Natura 2000 ZEPA ES0000260 «Mar Menor», LIC/ZEC ES6200006 «Espacios Abiertos e Islas del Mar Menor» y LIC/ZEC ES6200030 «Mar Menor».",
-    "boundaryNote": "Límite oficial servido en geo/parque.geojson, recortado de la capa de Espacios Naturales Protegidos del Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Código ENP oficial ES620015 (CDDA 348881), superficie oficial 1307,4 ha. La capa se publica proyectada en ETRS89 UTM 30N (EPSG:25830): la geometría se ha reproyectado a WGS84 y generalizada con tolerancia de 1 m para uso web (superficie resultante 1307,5 ha, desviación del 0,01 %). Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM (ver Tools/catalogo-nacional/data/murcia-enp-municipios.json). Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico»."
+    "boundaryNote": "Límite oficial servido en geo/parque.geojson, descargado del geoportal del IMIDA/CARM (servicio PROYECTOS/OISMA, capa de Paisaje Protegido, registros con Caracter «Firme»), identificador interno ENP000008. Código ENP oficial ES620015, superficie oficial 1307,4 ha según el Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Geometría en WGS84, sin generalizar (3532 vértices, superficie resultante 1308,9 ha, desviación del 0,12 %). Sustituye a la delimitación de la capa ENP nacional del MITECO, que es un producto generalizado. El IMIDA publica este espacio en 2 piezas (80,1 ha + 1227,3 ha), cuya suma es la superficie oficial; se han unido todas. Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM. Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico» (código y superficie oficiales) e IMIDA/CARM (geometría)."
   },
   "habitats": [],
   "pointsOfInterest": [],

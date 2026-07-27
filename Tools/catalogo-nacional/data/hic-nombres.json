@@ -2,7 +2,8 @@
   "_nota": "Nombre y tipo por código HIC (Anexo I), para nombrar los hábitats añadidos desde la fuente oficial. Sembrado con los códigos de la región de Murcia (30); extensible. Si falta un código, la herramienta usa 'HIC <código>' y tipo 'Hábitat'.",
   "_fuente_nombres": "Los nombres son literales del «Atlas y Manual de los Hábitats de España» (MITECO), tabla de correspondencia HIC↔LPEH. Extraer con: pdftotext -layout -enc UTF-8 'Docs/Atlas y Manual de los Habitat de Espana.pdf' atlas.txt — el flag -layout es IMPRESCINDIBLE: sin él el PDF se refluye a dos columnas y mezcla el nombre de un código con el del siguiente.",
   "_tipo": "El campo `type` NO es dato oficial: es la categoría divulgativa con la que la app agrupa los hábitats (Marino, Litoral, Salino, Matorral, Dunas, Acuático, Ribera, Pastos, Roquedos, Bosque).",
-  "_sin_nombre_en_la_fuente": "5334 y 5335 NO tienen nombre en la tabla del Atlas: sus filas del índice vienen vacías ('5334/ 4334/ *' sin descripción). Aparecen en Sierra Espuña (7 y 9 recintos). No se rellenan a ojo; se quedan con el fallback 'HIC <código>' hasta encontrar fuente oficial que los nombre.",
+  "_subtipos_1997": "8211, 6175, 9561 (y 5334/5335, sin nombre) son SUBTIPOS ESPAÑOLES que solo aparecen si se procesa la cartografía de 1997. El Atlas 2005 usa códigos UE de 4 dígitos y el pipeline los normaliza (8211→8210, 6175→6170, 9561→9560, 5334/5335→5330), así que con la fuente preferente no se usan. Se conservan por si se vuelve a la fuente de 1997.",
+  "_sin_nombre_en_la_fuente": "5334 y 5335 NO tienen nombre en la tabla del Atlas: sus filas del índice vienen vacías ('5334/ 4334/ *' sin descripción). Solo salen con la fuente de 1997; con el Atlas normalizan a 5330, que sí está nombrado.",
   "codigos": {
     "1120": { "name": "Praderas de Posidonia (Posidonion oceanicae)", "type": "Marino" },
     "1150": { "name": "Lagunas costeras", "type": "Litoral" },
@@ -27,6 +28,7 @@
     "5330": { "name": "Matorrales termomediterráneos y pre-estépicos", "type": "Matorral" },
     "6110": { "name": "Prados calcáreos cársticos o basófilos del Alysso-Sedion albi", "type": "Pastos" },
     "6220": { "name": "Zonas subestépicas de gramíneas y anuales del Thero-Brachypodietea", "type": "Pastos" },
+    "6170": { "name": "Prados alpinos y subalpinos calcáreos", "type": "Pastos" },
     "6175": { "name": "Pastizales orocantábricos orotemplados calcícolas", "type": "Pastos" },
     "6420": { "name": "Prados húmedos mediterráneos de hierbas altas del Molinion-Holoschoenion", "type": "Pastos" },
     "8210": { "name": "Pendientes rocosas calcícolas con vegetación casmofítica", "type": "Roquedos" },

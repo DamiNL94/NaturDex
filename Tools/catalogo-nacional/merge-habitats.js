@@ -70,10 +70,16 @@ function parseReconcile(s) {
 
 function main() {
   const park = resolvePark(REPO_ROOT, PARK);
-  const cur = JSON.parse(fs.readFileSync(park.habitatsPath, 'utf8'));
+  // La capa curada es OPCIONAL. Un parque que asciende de N1 a N2 todavía no tiene ninguna: es esta
+  // ejecución la que se la crea. Sin esto ningún espacio nuevo del rollout nacional podía fusionarse
+  // (fallaba con ENOENT), y todos los del rollout empiezan igual: sin capa curada.
+  const hayCurada = fs.existsSync(park.habitatsPath);
+  const cur = hayCurada
+    ? JSON.parse(fs.readFileSync(park.habitatsPath, 'utf8'))
+    : { type: 'FeatureCollection', features: [] };
   const off = JSON.parse(fs.readFileSync(OFFICIAL, 'utf8'));
   const latRef = readBoundaryRing(park.boundaryPath).reduce((s, p, _, a) => s + p[1] / a.length, 0);
-  console.log(`Parque: ${park.name} (${park.slug}) · curada: ${cur.features.length} hábitats · oficial: ${off.features.length} recintos`);
+  console.log(`Parque: ${park.name} (${park.slug}) · curada: ${hayCurada ? cur.features.length + ' hábitats' : 'NO EXISTE (se crea entera desde la oficial)'} · oficial: ${off.features.length} recintos`);
   if (Object.keys(RECONCILE).length) console.log(`Reconciliación aplicada: ${Object.entries(RECONCILE).map(([a, b]) => `${a}→${b}`).join(', ')}`);
 
   // Índice del oficial por familia HIC.

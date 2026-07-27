@@ -11,7 +11,7 @@
   "generado": "2026-07-27",
   "avisos": [
     "Los límites municipales proceden del CNIG servidos por el IMIDA, generalizados a 150 m para la consulta: suficiente para decidir qué municipios toca un espacio, no para medir superficies por municipio.",
-    "Salto del Usero (ES620026) queda SIN municipios: no figura como Firme en el IMIDA."
+    "Salto del Usero (ES620026) ya NO queda sin municipios (resuelto el 2026-07-27, ver su nota): no figurar en la capa ENP del IMIDA sólo le quita la geometría regional, no el municipio, que sale de cruzar contra los límites municipales."
   ],
   "espacios": [
     {
@@ -289,8 +289,10 @@
       "codigoIMIDA": null,
       "supHaImida": null,
       "desvioPct": null,
-      "municipios": [],
-      "nota": "No aparece con carácter Firme en el servicio del IMIDA. Municipio pendiente de confirmar en fuente oficial: NO rellenar a ojo."
+      "municipios": [
+        "Bullas"
+      ],
+      "nota": "No aparece en el servicio de ENP del IMIDA, así que no tiene código IMIDA ni geometría regional: su límite es el del MITECO. RESUELTO el 2026-07-27: el municipio no dependía de esa capa. Se obtuvo con el mismo método que el resto —intersección geométrica contra los límites municipales del CNIG— usando la geometría del MITECO (centroide 38.026203, -1.673310). El servicio devuelve un único municipio: Bullas (INE 30012)."
     }
   ]
 }

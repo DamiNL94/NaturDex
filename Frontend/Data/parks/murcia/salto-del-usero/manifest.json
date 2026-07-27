@@ -1,0 +1,21 @@
+{
+  "slug": "salto-del-usero",
+  "name": "Salto del Usero",
+  "apiSlug": "salto-del-usero",
+  "version": 1,
+  "updatedAt": "2026-07-27",
+  "data": "Data/parks/murcia/salto-del-usero/park.json",
+  "geo": {
+    "parque": "Data/parks/murcia/salto-del-usero/geo/parque.geojson",
+    "lic": "Data/parks/murcia/salto-del-usero/geo/lic.geojson"
+  },
+  "images": [],
+  "audio": [],
+  "counts": {
+    "species": 0,
+    "habitats": 0,
+    "pointsOfInterest": 0,
+    "images": 0,
+    "assetBytes": 0
+  }
+}

@@ -17,7 +17,7 @@
                             "name": "Cabo Cope y Puntas de Calnegre",
                             "category": "Parque Regional",
                             "status": "available",
-                            "center": [37.5016, -1.44925],
+                            "center": [37.47595, -1.47759],
                             "path": "Data/parks/murcia/cabo-cope-puntas-calnegre",
                             "manifest": "Data/parks/murcia/cabo-cope-puntas-calnegre/manifest.json"
                         },
@@ -35,7 +35,7 @@
                             "name": "Sierra Espuña",
                             "category": "Parque Regional",
                             "status": "basic",
-                            "center": [37.86853, -1.54939],
+                            "center": [37.86854, -1.54939],
                             "path": "Data/parks/murcia/sierra-espuna",
                             "manifest": "Data/parks/murcia/sierra-espuna/manifest.json"
                         },
@@ -71,7 +71,7 @@
                             "name": "Calblanque, Monte de las Cenizas y Peña del Águila",
                             "category": "Parque Regional",
                             "status": "basic",
-                            "center": [37.60294, -0.78015],
+                            "center": [37.60257, -0.78109],
                             "path": "Data/parks/murcia/calblanque-monte-cenizas-pena-aguila",
                             "manifest": "Data/parks/murcia/calblanque-monte-cenizas-pena-aguila/manifest.json"
                         },
@@ -80,7 +80,7 @@
                             "name": "Sierra de Salinas",
                             "category": "Paisaje Protegido",
                             "status": "basic",
-                            "center": [38.49334, -1.0449],
+                            "center": [38.49335, -1.04485],
                             "path": "Data/parks/murcia/sierra-de-salinas",
                             "manifest": "Data/parks/murcia/sierra-de-salinas/manifest.json"
                         },
@@ -116,7 +116,7 @@
                             "name": "Espacios Abiertos e Islas del Mar Menor",
                             "category": "Paisaje Protegido",
                             "status": "basic",
-                            "center": [37.69623, -0.84112],
+                            "center": [37.69623, -0.84113],
                             "path": "Data/parks/murcia/espacios-abiertos-e-islas-del-mar-menor",
                             "manifest": "Data/parks/murcia/espacios-abiertos-e-islas-del-mar-menor/manifest.json"
                         },
@@ -125,7 +125,7 @@
                             "name": "Salinas y Arenales de San Pedro del Pinatar",
                             "category": "Parque Regional",
                             "status": "basic",
-                            "center": [37.81266, -0.76233],
+                            "center": [37.81265, -0.76233],
                             "path": "Data/parks/murcia/salinas-arenales-san-pedro-pinatar",
                             "manifest": "Data/parks/murcia/salinas-arenales-san-pedro-pinatar/manifest.json"
                         },
@@ -134,7 +134,7 @@
                             "name": "Monte Arabí",
                             "category": "Monumento Natural",
                             "status": "basic",
-                            "center": [38.69333, -1.29062],
+                            "center": [38.69334, -1.29062],
                             "path": "Data/parks/murcia/monte-arabi",
                             "manifest": "Data/parks/murcia/monte-arabi/manifest.json"
                         },
@@ -152,9 +152,18 @@
                             "name": "Sotos y bosques de ribera de Cañaverosa",
                             "category": "Reserva Natural",
                             "status": "basic",
-                            "center": [38.28027, -1.71833],
+                            "center": [38.28027, -1.71834],
                             "path": "Data/parks/murcia/sotos-y-bosques-de-ribera-de-canaverosa",
                             "manifest": "Data/parks/murcia/sotos-y-bosques-de-ribera-de-canaverosa/manifest.json"
+                        },
+                        {
+                            "slug": "salto-del-usero",
+                            "name": "Salto del Usero",
+                            "category": "Monumento Natural",
+                            "status": "basic",
+                            "center": [38.0262, -1.67331],
+                            "path": "Data/parks/murcia/salto-del-usero",
+                            "manifest": "Data/parks/murcia/salto-del-usero/manifest.json"
                         }
                     ]
                 }

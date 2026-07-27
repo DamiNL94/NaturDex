@@ -521,6 +521,22 @@ function elegirTolerancia(construir, pesar, presupuesto, avisos, etiqueta) {
       retirar.push({ cod, slug, dir: path.join(FRONTEND, 'Data', 'parks', cfg.provinciaSlug, slug) });
       continue;
     }
+    // Un límite ya refinado desde el IMIDA es MEJOR que el que produce este generador (la capa ENP
+    // nacional viene generalizada). Regenerarlo lo empeoraría en silencio, así que ese espacio se
+    // deja intacto. Marca inequívoca: `CodigoIMIDA` en las propiedades, que sólo escribe
+    // refina-limites-imida.js. Para rehacerlo de cero, borrar su carpeta.
+    const slugPrevio = slugificar(e.props.SITE_NAME);
+    const geoPrevio = path.join(FRONTEND, 'Data', 'parks', cfg.provinciaSlug, slugPrevio, 'geo', 'parque.geojson');
+    if (fs.existsSync(geoPrevio)) {
+      try {
+        const g = JSON.parse(fs.readFileSync(geoPrevio, 'utf8'));
+        if (((g.features || [])[0] || {}).properties && g.features[0].properties.CodigoIMIDA) {
+          fuera.push({ cod, nombre: e.props.SITE_NAME, motivo: `límite ya refinado desde el IMIDA (\`${slugPrevio}\`): no se regenera para no empeorarlo` });
+          continue;
+        }
+      } catch { /* ilegible: que lo regenere */ }
+    }
+
     const muni = porCodigo.get(cod);
     if (!muni) { fuera.push({ cod, nombre: e.props.SITE_NAME, motivo: 'sin entrada en el fichero de municipios' }); continue; }
     // validate-park-data.js exige `municipalities` no vacío: sin municipio la ficha no se sostiene,

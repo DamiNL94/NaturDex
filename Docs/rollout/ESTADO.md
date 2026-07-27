@@ -25,12 +25,152 @@
 | Región de Murcia | Murcia | Sima de la Higuera | Monumento Natural | — | **descartado** | 2026-07 | ENP **ES620024**, 49,0 ha. Geológico fuera de territorio protegido (3,5 km de Sierra Espuña) |
 | Región de Murcia | Murcia | Capa Negra de Caravaca de la Cruz | Monumento Natural | — | **descartado** | 2026-07 | ENP **ES620025**, 24,0 ha. Geológico fuera de territorio protegido (18,5 km del ENP más cercano) |
 | Región de Murcia | Murcia | Gredas de Bolnuevo | Monumento Natural | — | **descartado** | 2026-07 | ENP **ES620021**, 2,4 ha. Geológico fuera de territorio protegido. **POI pendiente de `sierra-de-las-moreras`** |
-| Región de Murcia | Murcia | Salto del Usero | Monumento Natural | — | **bloqueado** | 2026-07 | ENP **ES620026**, 1,7 ha. Sin municipios en fuente oficial: no figura con carácter Firme en el IMIDA y `validate-park-data.js` exige `municipalities`. Ver §"Salto del Usero" |
+| Región de Murcia | Murcia | Salto del Usero | Monumento Natural | `salto-del-usero` | N1 | 2026-07 | ENP **ES620026**, 1,7 ha, **Bullas**. LIC/ZEC ES6200045 (50 % de solape). Límite del MITECO: es el único espacio que **no está en la capa ENP del IMIDA** |
 
 > **Murcia tiene 21 espacios protegidos** según la capa ENP oficial (diciembre 2025). Al cierre del
-> 2026-07-27 hay **16 dados de alta** (1 en N2 + 15 fichas base), **4 descartados** por las reglas de
-> producto y **1 bloqueado** por falta de dato oficial. El listado completo con código y superficie
-> está en `Tools/catalogo-nacional/out/inventario-fuentes-bdn.md`.
+> 2026-07-27 hay **17 dados de alta** (1 en N2 + 16 fichas base) y **4 descartados** por las reglas de
+> producto. **No queda ninguno bloqueado.** El listado completo con código y superficie está en
+> `Tools/catalogo-nacional/out/inventario-fuentes-bdn.md`.
+
+### Salto del Usero: desbloqueado (2026-07-27)
+
+Estaba fuera por no tener municipio, y el motivo registrado era «no figura con carácter Firme en el
+IMIDA». **Ese razonamiento era erróneo**: el municipio nunca salió de la capa ENP del IMIDA, sale de
+cruzar la geometría contra los **límites municipales del CNIG**, que es otro servicio. Aplicado el
+mismo método que a los otros 20 sobre la geometría del MITECO (centroide 38.026203, −1.673310), el
+servicio devuelve **un único municipio: Bullas (INE 30012)**.
+
+Lo que sí se confirma es que **no está en la capa ENP del IMIDA**: es el único espacio de Murcia sin
+delimitación regional, así que conserva el límite del MITECO y no pasa por
+`refina-limites-imida.js`.
+
+> **Guardián nuevo en `build-n1-espacios.js`.** Al dar de alta Salto del Usero, el generador
+> **regeneró y empeoró los 14 límites ya refinados** desde el IMIDA (Calblanque volvió de 4.832 a
+> 1.489 vértices), porque reconstruye `geo/parque.geojson` desde la capa nacional para todos sus
+> objetivos. Ahora detecta la marca `CodigoIMIDA` —que sólo escribe el refinador— y **deja intacto**
+> el espacio, avisando. Para rehacer uno de cero hay que borrar su carpeta.
+
+---
+
+## 2026-07-27 — Capa de hábitats curada (Atlas 2005) en Cabo Cope y Sierra Espuña
+
+Adoptado por fin el `<slug>-merged.geojson` como capa real del parque: es el punto **§7.3** de la
+deuda técnica, que llevaba abierto desde el piloto (la fusión se generaba en `out/` y nadie la
+llevaba a `Frontend/`). Herramienta nueva: **`Tools/catalogo-nacional/adopt-habitats.js`** (`--dry`).
+
+| | Cabo Cope | Sierra Espuña |
+|---|---|---|
+| Hábitats | 15 → **16** | 0 → **13** |
+| Prioritarios | 5 | 3 |
+| Cobertura del parque (unión real) | 21 % → **53 %** (1.404 ha) | **91 %** (16.067 ha) |
+| Recintos recortados | 28 → 38 | 53 |
+| Vértices fuera del límite | **0** ✔ | **0** ✔ |
+
+`adopt-habitats.js` **conserva lo curado a mano** (descripción, coordenadas, color, imagen, audio,
+`speciesIds`) y refresca desde la fuente oficial solo lo que es dato (código, nombre, tipo,
+prioridad, subtipos, fitosociología). Un hábitat curado que la fuente ya no respalde **no se borra en
+silencio**: se conserva y se avisa.
+
+### La regla marina también aplica a los hábitats
+
+**1120 «Praderas de Posidonia» queda fuera de Cabo Cope.** La cartografía oficial lo recorta dentro
+del parque, pero está sumergido y la app no es útil en el mar. El filtro es por `type: "Marino"` de
+`hic-nombres.json`, y cada exclusión se informa. Es la misma regla de producto que sacó a los
+espacios marinos, aplicada un nivel más abajo.
+
+### Dos arreglos de herramienta
+
+- **`merge-habitats.js` exigía una capa curada previa** y moría con `ENOENT` si no existía — es decir,
+  **ningún parque nuevo del rollout podía fusionarse**, y todos empiezan sin capa curada. Ahora es
+  opcional: sin ella, la capa se crea entera desde la oficial. Regresión: Cabo Cope sale idéntico.
+- **`hic-nombres.json`**: añadido **6170** «Prados alpinos y subalpinos calcáreos», confirmado por dos
+  vías independientes (índice del Atlas y campo `DESCRIPCIO` del propio dato de Murcia). Documentado
+  que 8211/6175/9561/5334/5335 son **subtipos españoles de 1997** que el Atlas normaliza a códigos UE
+  (→8210/6170/9560/5330), así que solo hacen falta si se vuelve a la fuente vieja.
+
+> **8230 queda resuelto de rebote.** El Atlas 2005 no registra 8230 en toda la provincia de Murcia,
+> lo que respalda que la asignación de 1997 era errónea. Al usar el Atlas, el caso dudoso desaparece
+> sin necesidad de reconciliar a mano: ni Cabo Cope ni Sierra Espuña lo llevan ya.
+
+### Pendiente
+
+Sierra Espuña tiene hábitats pero **sigue en `status: "basic"`** y el validador avisa («la ficha base
+ya trae contenido, ¿toca pasarla a available?»). No se ha cambiado a propósito: sin catálogo de
+especies, la app mostraría un parque «completo» con 0 especies. Pasa a `available` cuando esté la
+Capa 3.
+
+---
+
+## 2026-07-27 — Límites reimportados del IMIDA: los 15 espacios, sin generalizar
+
+Los límites N1 salían de la capa ENP nacional del MITECO, que es un producto **generalizado**. El
+geoportal del IMIDA/CARM sirve la misma delimitación oficial con 2 a 15 veces más detalle. Ya
+constaba para `cuatro-calas` («se conserva la del IMIDA por ser la de mayor detalle») pero no se
+había generalizado al resto. **Hecho** con
+`Tools/catalogo-nacional/refina-limites-imida.js` (`--dry`, `--solo`), que cachea las descargas en
+`fuentes/imida-enp/`.
+
+| Espacio | antes (MITECO) | ahora (IMIDA) | desvío sup. |
+|---|---|---|---|
+| Cabo Cope y Puntas de Calnegre | 449 | **6.566** | 0,18 % |
+| Barrancos de Gebas | 2.283 | **6.358** | 0,20 % |
+| Sierra Espuña | 2.514 | **6.329** | 0,21 % |
+| Calblanque | 1.489 | **4.832** | 0,40 % |
+| Sierra de la Pila | 1.471 | **3.759** | 0,18 % |
+| Espacios Abiertos e Islas del Mar Menor | 1.843 | **3.532** | 0,12 % |
+| Humedal del Ajauque y Rambla Salada | 1.553 | **3.530** | 0,18 % |
+| Sotos de Cañaverosa | 550 | **2.167** | 2,49 % † |
+| Carrascoy y El Valle | 1.305 | **2.100** | 0,19 % |
+| Salinas de San Pedro del Pinatar | 482 | **1.234** | 0,16 % |
+| Monte Arabí | 774 | **1.174** | 0,25 % |
+| Sierra de las Moreras | 672 | **1.159** | 0,20 % |
+| Sierra de Salinas | 116 | **872** | 0,35 % |
+| Sierra de El Carche | 724 | **851** | 0,17 % |
+| Cabezo Gordo | 177 | **365** | 0,18 % |
+
+**Los 15 caben con tolerancia 0 m**: no se ha generalizado nada. El mayor pesa 140 KB, muy por
+debajo del presupuesto de 300 KB.
+
+† Cañaverosa **no es un fallo**: es la discrepancia MITECO↔IMIDA ya conocida (248,8 vs 242,1 ha). La
+geometría nueva da 242,6 ha, que casa con la cifra del propio IMIDA. Consta en su `boundaryNote`.
+
+`cuatro-calas` se deja fuera a propósito (`INTOCABLES` en el script): su límite ya venía del IMIDA y
+se dio por cerrado.
+
+### Tres trampas de esta importación
+
+1. **La densidad de vértices NO sirve para detectar los límites malos.** Calblanque era de los más
+   densos que teníamos (31,2 vért/km) y aun así 3,3 veces más basto que su original. El problema
+   estaba en la fuente, no en la generalización del generador N1.
+2. **Varios registros `Firme` del mismo espacio son dos cosas distintas**, y confundirlas rompe el
+   límite:
+   - *alternativas* — cada una cubre el espacio entero (**Calblanque**: 2.472 y 2.466 ha). Se coge
+     **la de más vértices**, decidido explícitamente.
+   - *piezas* — juntas forman el espacio (**Espacios Abiertos del Mar Menor**: 1.227,3 + 80,1 =
+     1.307,4 ha, la superficie oficial exacta). Hay que **unirlas todas**; quedarse con la mayor
+     dejaba el límite un **6 % corto**, que es lo que pasó en la primera pasada.
+
+     El discriminante es la suma: si suma la superficie oficial son piezas; si cada una ya la
+     alcanza, son alternativas.
+3. **ArcGIS entrega los anillos planos** y con la orientación contraria a GeoJSON (exterior horario,
+   agujeros antihorario). Hay que reagrupar cada agujero dentro de su exterior — y con el **más
+   pequeño** que lo contenga, o una isla dentro de una bahía acaba asignada al polígono equivocado.
+
+Las `Provisional` no entran: Carrascoy publica una de 17.420 ha (14.608 vértices) frente a las
+16.686 ha firmes.
+
+### Efecto sobre los hábitats
+
+Los hábitats se recortan **contra el límite**, así que al afinarlo hubo que rehacer la Capa 2 de los
+dos parques curados. Cabo Cope gana un recinto y un hábitat (38→39 recintos, 16→17 hábitats); Sierra
+Espuña se mantiene en 13. **0 vértices fuera del límite** en ambos.
+
+Capas del servicio por figura: **1** Parques Regionales · **2** Reservas Naturales · **3** Paisajes
+Protegidos · **4** Monumentos Naturales · **5** Otros ENP. El emparejamiento con nuestros códigos
+oficiales se hace por `CodigoENP` del IMIDA usando `data/murcia-enp-municipios.json`. **Cuidado al
+normalizar ese código**: viene con erratas (`EN0000018`), distinto número de ceros y en un caso con
+una aclaración detrás («ENP000008 (dos piezas…)»), así que hay que quedarse con el primer grupo de
+dígitos y quitar los ceros a la izquierda.
 
 ---
 
@@ -236,14 +376,28 @@ contadores a cero y **sin bloque `tiles`**, más la entrada `status: "basic"` en
 - Barrido final: **ninguna capa de los espacios generados contiene un sitio marino** (única
   excepción, `cuatro-calas`, conservada a propósito y documentada arriba).
 
-### Fase 1 de la Región de Murcia: CERRADA
+> Las cifras de este apartado son las de esa pasada (16 espacios). El estado final de la comunidad,
+> tras desbloquear Salto del Usero, es el del bloque de cierre de aquí abajo.
 
-De los 21 espacios de la capa oficial: **16 en la app** (1 en N2 + 15 fichas base), 4 descartados por
-las reglas de producto y 1 bloqueado por falta de dato oficial. No queda nada pendiente de esta fase.
+### Fase 1 de la Región de Murcia: CERRADA (estado final, 2026-07-28)
 
-Lo único que falta por generar en estos 15 espacios son los **paquetes de mapa sin conexión**
-(`npm run tiles:build <slug>`), que son opcionales y van aparte: sin ellos la app funciona, pero su
-mapa base sale vacío sin cobertura. Es el origen de los 46 avisos del validador.
+De los 21 espacios de la capa oficial:
+
+| | |
+|---|---|
+| En la app | **17** — 1 completo (N2) + 16 fichas base |
+| Descartados por las reglas de producto | **4**, decisión confirmada: se quedan fuera |
+| Bloqueados | **0** |
+
+Los 4 descartados —`Islas e Islotes del Litoral Mediterráneo` (marino) y los tres Monumentos
+Naturales geológicos fuera de territorio protegido (`Gredas de Bolnuevo`, `Sima de la Higuera`,
+`Capa Negra de Caravaca`)— **no se van a dar de alta**. Está confirmado, no es un pendiente: si
+alguna vez se quisiera revertir, basta quitarlos de `excluidos` en `build-n1-espacios.js` y el
+proceso es determinista, pero **no hay que hacerlo por iniciativa propia**.
+
+**No queda nada pendiente de la Fase 1 en esta comunidad.** Lo único opcional son los paquetes de
+mapa sin conexión (`npm run tiles:build <slug>`), que van aparte y son el origen de los avisos del
+validador: sin ellos la app funciona, pero el mapa base sale vacío sin cobertura.
 
 ### Salto del Usero (ES620026) — el único bloqueado
 

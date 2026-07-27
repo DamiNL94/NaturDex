@@ -11,8 +11,8 @@
       "Lorca"
     ],
     "center": [
-      37.5016,
-      -1.44925
+      37.47595,
+      -1.47759
     ],
     "coastlineKm": 17,
     "summary": "Espacio litoral protegido con calas, acantilados, matorral semiárido y praderas marinas. Este parque es el piloto de NaturDex.",
@@ -82,7 +82,7 @@
         -1.393
       ]
     ],
-    "boundaryNote": "Límite oficial del Parque Regional (Ley 4/1992), servido en geo/parque-regional.geojson. Geometría descargada del servicio ArcGIS REST del IMIDA/CARM, reproyectada de ETRS89 UTM30N a WGS84 y generalizada para peso web. Código ENP oficial ES620007 (CDDA 196276), superficie 2.665,68 ha. Contrastado con la capa oficial ENP del Banco de Datos de la Naturaleza (MITECO, diciembre 2025). La superficie del IMIDA (2.665,67714849 ha) y la del MITECO (2.665,67714806 ha) coinciden hasta el sexto decimal, lo que confirma que ambas sirven la misma geometría oficial."
+    "boundaryNote": "Límite oficial servido en geo/parque.geojson, descargado del geoportal del IMIDA/CARM (servicio PROYECTOS/OISMA, capa de Parque Regional, registros con Caracter «Firme»), identificador interno ENP000010. Código ENP oficial ES620007, superficie oficial 2665,7 ha según el Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Geometría en WGS84, sin generalizar (6566 vértices, superficie resultante 2671,3 ha, desviación del 0,21 %). Sustituye a la delimitación de la capa ENP nacional del MITECO, que es un producto generalizado. Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM. Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico» (código y superficie oficiales) e IMIDA/CARM (geometría)."
   },
   "habitats": [
     {
@@ -102,7 +102,7 @@
         "1240"
       ],
       "fitosociologia": [
-        "Limonio cymuliferi-Lycietum intricati Esteve 1973"
+        "Limonio cossoniani-Lycietum intricati Esteve 1973 corr. Alcaraz, P. Sánchez, De la Torre, Ríos & J. Alvarez 1991"
       ],
       "reviewNote": null,
       "audio": null,
@@ -169,7 +169,7 @@
         "2110"
       ],
       "fitosociologia": [
-        "Cypero mucronati-Agropyretum juncei (Kühnholtz-Lordat 1923) Br.-Bl. 1933"
+        "Cypero mucronati-Agropyretum juncei Kühnholtz ex Br.-Bl. 1933"
       ],
       "reviewNote": null,
       "audio": null,
@@ -200,8 +200,12 @@
       ],
       "color": "#b3577a",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lygeum_spartum_Closeup_12July2009_LagunadelaMata.jpg",
-      "hicSubtipos": null,
-      "fitosociologia": null,
+      "hicSubtipos": [
+        "1510"
+      ],
+      "fitosociologia": [
+        "Limonio insignis-Lygeetum sparti Alcaraz, P. Sánchez & De la Torre 1989"
+      ],
       "reviewNote": null,
       "audio": null,
       "audioTranscript": null,
@@ -233,7 +237,7 @@
         "92D0"
       ],
       "fitosociologia": [
-        "Inulo crithmoidis-Tamaricetum boveanae Izco, Fernández-González & A. Molina 1984"
+        "Agrostio stoloniferae-Tamaricetum canariensis Cirujano 1981"
       ],
       "reviewNote": null,
       "audio": null,
@@ -263,11 +267,13 @@
       "color": "#2f6f4e",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/-0591_Anabasis_articulata,_d%C3%A9sert_d%27Almeria,_Espagne_P1110397.JPG",
       "hicSubtipos": [
-        "5334"
+        "5330"
       ],
       "fitosociologia": [
-        "Limonio insignis-Anabasietum hispanicae Rivas Goday & Esteve 1965",
-        "Teucrio lanigeri-Sideritetum ibanyezii Rivas Goday & Esteve 1966 corr. Alcaraz, T.E. Díaz, Rivas-Martínez & Sánchez Gómez 1989"
+        "Chamaeropo humilis-Rhamnetum lycioidis O. Bolòs 1957",
+        "Limonio insignis-Anabasietum hispanicae Rivas Goday & Esteve 1968",
+        "Rhamno lycioidis-Genistetum murcicae Peinado, Alcaraz & Martínez-Parras 1992",
+        "Teucrio lanigeri-Sideritidetum ibanyezii Rivas Goday in Rivas Goday & Esteve 1968 corr. Alcaraz, T.E. Díaz, Rivas-Martínez & P. Sánchez 1989"
       ],
       "reviewNote": null,
       "audio": null,
@@ -390,7 +396,8 @@
         "5220"
       ],
       "fitosociologia": [
-        "Mayteno-Periplocetum angustifoliae Rivas Goday & Esteve in Rivas Goday 1959 corr. Rivas-Martínez 1975"
+        "Mayteno europaei-Periplocetum angustifoliae Rivas Goday & Esteve in Rivas Goday in Rivas Goday, Borja, Esteve, Galiano, Rigual & Rivas-Martínez 1960 corr. Rivas-Martínez 1975",
+        "Ziziphetum loti Rivas Goday & Bellot 1944"
       ],
       "reviewNote": null,
       "audio": null,
@@ -427,7 +434,9 @@
       ],
       "fitosociologia": [
         "Atriplicetum glauco-halimi Rivas-Martínez & Alcaraz in Alcaraz 1984",
-        "Atriplici glaucae-Suaedetum pruinosae Rigual 1972"
+        "Atriplici glaucae-Suaedetum pruinosae Rigual 1972",
+        "Salsolo oppositifoliae-Suaedetum verae Rivas Goday & Rigual 1958 corr. Alcaraz, T.E. Díaz, Rivas-Martínez & Sánchez-Gómez",
+        "Withanio frutescentis-Lycietum intricati Alcaraz, P. Sánchez, De la Torre, Ríos & J. Alvarez 1991"
       ],
       "reviewNote": null,
       "audio": null,
@@ -466,7 +475,7 @@
         "1420"
       ],
       "fitosociologia": [
-        "Cistancho luteae-Arthrocnemetum fruticosi Géhu & Géhu-Franck 1977"
+        "Cistancho phelypaeae-Arthrocnemetum fruticosi Géhu ex Géhu & Géhu-Franck 1977"
       ],
       "reviewNote": null,
       "audio": null,
@@ -507,13 +516,11 @@
       "color": "#8a7a6a",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sarcocapnos_enneaphylla_saetabensis.jpg",
       "hicSubtipos": [
-        "8211",
-        "8230"
+        "8210"
       ],
       "fitosociologia": [
-        "Cosentinio bivalentis-Teucrietum freynii Rivas Goday, Esteve & Rigual 1962 corr. Alcaraz, T.E. Díaz, Rivas-Martínez & Sánchez Gómez 1989",
-        "Hypericion ericoidis Esteve 1967",
-        "Resedo paui-Sarcocapnetum saetabensis Sánchez Gómez & Alcaraz 1993"
+        "Cosentinio bivalentis-Teucrietum freynii Rigual, Esteve & Rivas Goday 1962 corr. Alcaraz, T.E. Díaz, Rivas-Martínez & P. Sánchez 1989",
+        "Resedo paui-Sarcocapnetum saetabensis Sánchez Gómez & Alcaráz 1993"
       ],
       "reviewNote": null,
       "audio": null,
@@ -606,7 +613,7 @@
         "1210"
       ],
       "fitosociologia": [
-        "Salsolo kali-Cakiletum maritimae Costa & Mansanet 1981 corr. Rivas-Martínez, Costa & Loidi 1992"
+        "Salsolo kali-Cakiletum aegyptiacae Costa & Mansanet 1981"
       ],
       "reviewNote": null,
       "audio": null,
@@ -640,7 +647,7 @@
         "6220"
       ],
       "fitosociologia": [
-        "Teucrio pseudochamaepytis-Brachypodietum retusi O. Bolòs 1957"
+        "Teucrio pseudochamaepityos-Brachypodietum ramosi O. Bolòs 1957"
       ],
       "reviewNote": null,
       "audio": null,
@@ -662,6 +669,54 @@
         244,
         248
       ]
+    },
+    {
+      "id": "bosques-endemicos-de-9560",
+      "code": "9560",
+      "name": "Bosques endémicos de Juniperus spp.",
+      "type": "Bosque",
+      "priority": true,
+      "hicSubtipos": [
+        "9560"
+      ],
+      "fitosociologia": [
+        "Chamaeropo humilis-Juniperetum phoeniceae Rivas-Martínez in Alcaraz, T.E. Díaz, Rivas-Martínez & P. Sánchez 1989"
+      ],
+      "description": "",
+      "coordinates": [
+        37.429218,
+        -1.489728
+      ],
+      "color": "#9acd32",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "hic-1110-1110",
+      "code": "1110",
+      "name": "HIC 1110",
+      "type": "Hábitat",
+      "priority": false,
+      "hicSubtipos": [
+        "1110"
+      ],
+      "fitosociologia": [
+        "Syringodio-Thalassion testudinum Borhidi 1996"
+      ],
+      "description": "",
+      "coordinates": [
+        37.433107,
+        -1.4801
+      ],
+      "color": "#556b2f",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
     }
   ],
   "pointsOfInterest": [
