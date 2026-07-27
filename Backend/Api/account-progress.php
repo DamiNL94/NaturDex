@@ -1,7 +1,6 @@
 <?php
 // Progreso de CUENTA (ámbito estatal, agregado sobre todos los parques) + logros. Complementa a
 // progress.php (que sigue siendo por parque y no cambia su contrato). Requiere sesión (auth.php).
-session_start();
 header("Content-Type: application/json; charset=utf-8");
 require_once __DIR__ . "/../Lib/api_cors.php";
 apiCorsHeaders();
@@ -9,7 +8,9 @@ apiCorsHeaders();
 if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") { http_response_code(204); exit; }
 
 require_once __DIR__ . "/../Config/db.php";
+require_once __DIR__ . "/../Lib/session.php";
 require_once __DIR__ . "/../Lib/account_progress.php";
+naturdexSessionStart($conn);
 
 if (empty($_SESSION["user_id"])) {
     http_response_code(401);

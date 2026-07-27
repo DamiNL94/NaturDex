@@ -197,6 +197,30 @@ CREATE TABLE IF NOT EXISTS users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Tokens de "seguir conectado" (uno por dispositivo). Mantienen la sesión entre aperturas de la
+-- app: la cookie de sesión de PHP muere al cerrar el navegador y los ficheros de sesión del
+-- servidor desaparecen en cada redespliegue, así que sin esto habría que volver a entrar sin parar.
+-- Patrón selector/validador: el selector va en claro (es por lo que se busca) y del validador solo
+-- se guarda el hash SHA-256, de modo que esta tabla, robada, no permite suplantar a nadie.
+-- Ver Backend/Lib/session.php, que es quien los emite, rota y revoca.
+CREATE TABLE IF NOT EXISTS user_auth_tokens (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    selector CHAR(18) NOT NULL UNIQUE,
+    validator_hash CHAR(64) NOT NULL,
+    -- Validador anterior + cuándo se rotó: se acepta unos segundos más para que las peticiones que
+    -- el frontend lanza en paralelo al abrir la app no se pisen entre ellas.
+    previous_hash CHAR(64) NULL,
+    rotated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    last_used_at TIMESTAMP NULL,
+    -- Caducidad deslizante: se renueva en cada uso, así que solo expira por inactividad.
+    expires_at TIMESTAMP NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    INDEX idx_user_auth_tokens_user (user_id),
+    INDEX idx_user_auth_tokens_expires (expires_at)
+);
+
 -- Progreso por usuario y por parque. payload es un JSON con la misma forma que antes tenía
 -- progress.json: { seenSpeciesIds, seenPoiIds, sightings, updatedAt }. Así cada cuenta lleva su
 -- propio descubrimiento en cada parque, y el modelo escala a todos los parques de España.

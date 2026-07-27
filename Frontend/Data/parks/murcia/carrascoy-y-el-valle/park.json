@@ -1,0 +1,23 @@
+{
+  "park": {
+    "slug": "carrascoy-y-el-valle",
+    "name": "Carrascoy y El Valle",
+    "category": "Parque Regional",
+    "region": "Región de Murcia",
+    "province": "Murcia",
+    "municipalities": [
+      "Alhama de Murcia",
+      "Fuente Álamo de Murcia",
+      "Murcia"
+    ],
+    "center": [
+      37.85809,
+      -1.23518
+    ],
+    "summary": "Parque Regional de la Región de Murcia, con una superficie oficial de 16.685,8 ha en los términos municipales de Alhama de Murcia, Fuente Álamo de Murcia y Murcia. Solapa con los espacios de la Red Natura 2000 ZEPA ES0000269 «Monte El Valle y Sierras de Altaona y Escalona» y LIC/ZEC ES6200002 «Carrascoy y El Valle».",
+    "boundaryNote": "Límite oficial servido en geo/parque.geojson, recortado de la capa de Espacios Naturales Protegidos del Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Código ENP oficial ES620008 (CDDA 349130), superficie oficial 16.685,8 ha. La capa se publica proyectada en ETRS89 UTM 30N (EPSG:25830): la geometría se ha reproyectado a WGS84 y generalizada con tolerancia de 1 m para uso web (superficie resultante 16.685,8 ha, desviación del 0,00 %). Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM (ver Tools/catalogo-nacional/data/murcia-enp-municipios.json). Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico»."
+  },
+  "habitats": [],
+  "pointsOfInterest": [],
+  "species": []
+}

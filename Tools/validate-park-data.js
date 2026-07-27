@@ -51,6 +51,11 @@ function listParks(registry) {
 
 // Coordenada [lat, lng] bien formada.
 const badCoord = c => !Array.isArray(c) || c.length !== 2 || c.some(n => typeof n !== 'number');
+// ¿La coordenada [lat, lng] cae fuera de la caja de España (SPAIN_BBOX, más abajo)? Caza el [0, 0]
+// y el lat/lng intercambiado, que están bien formados pero no señalan a ningún sitio del catálogo.
+const outsideSpain = c =>
+  c[0] < SPAIN_BBOX.latMin || c[0] > SPAIN_BBOX.latMax ||
+  c[1] < SPAIN_BBOX.lngMin || c[1] > SPAIN_BBOX.lngMax;
 
 // --- Ficha base (status "basic") ------------------------------------------------------------------
 // Nivel N1 del rollout nacional (Docs/prompts/e-rollout-nacional.md): el espacio existe en el mapa
@@ -282,9 +287,20 @@ function validatePark(entry) {
   });
 
   // 6) Coordenadas bien formadas ------------------------------------------------------------------
+  // Además del formato se comprueba el encuadre: un [0, 0] es sintácticamente válido pero cae en el
+  // golfo de Guinea, y así es como se colaban los POIs sin ubicar (NULL en la BD casteado a 0.0).
   if (badCoord(park.park && park.park.center)) err(scope, 'park.center mal formado');
-  habitats.forEach(h => { if (h.coordinates && badCoord(h.coordinates)) err(scope, 'coordinates de hábitat "' + h.id + '" mal formadas'); });
-  species.forEach(s => { if (s.coordinates && badCoord(s.coordinates)) err(scope, 'coordinates de especie #' + s.id + ' mal formadas'); });
+  const checkCoord = (c, what) => {
+    if (badCoord(c)) { err(scope, 'coordinates de ' + what + ' mal formadas'); return; }
+    if (outsideSpain(c)) err(scope, 'coordinates de ' + what + ' fuera de España: [' + c.join(', ') + ']');
+  };
+  habitats.forEach(h => { if (h.coordinates) checkCoord(h.coordinates, 'hábitat "' + h.id + '"'); });
+  species.forEach(s => { if (s.coordinates) checkCoord(s.coordinates, 'especie #' + s.id); });
+  // Un POI siempre va ubicado (a diferencia de hábitats y especies, donde la coordenada es opcional).
+  pois.forEach(p => {
+    if (!p.coordinates) { err(scope, 'el punto de interés "' + p.id + '" no tiene coordenadas (son obligatorias)'); return; }
+    checkCoord(p.coordinates, 'punto de interés "' + p.id + '"');
+  });
 
   // 7) GeoJSON de hábitats ------------------------------------------------------------------------
   const geoRel = manifest.geo && manifest.geo.habitats;

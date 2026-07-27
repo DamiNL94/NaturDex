@@ -1,9 +1,13 @@
 <?php
 // Autenticación del prototipo: registro, login, logout y comprobación de sesión.
 // Cuentas reales en MySQL, contraseñas con hash (password_hash/password_verify), sesión PHP.
-// Nota de prototipo: en producción esto debe servirse por HTTPS y endurecer la sesión
-// (cookie Secure/SameSite, límites de intentos, verificación de email, etc.).
-session_start();
+//
+// La sesión no se abre con session_start() a pelo, sino con naturdexSessionStart() (Lib/session.php):
+// además de endurecer la cookie (HttpOnly, Secure tras el proxy TLS, SameSite=Lax, modo estricto),
+// recupera la sesión del token de "seguir conectado" si la cookie de sesión ya no está. Sin eso el
+// usuario tendría que volver a entrar cada vez que cierra la app o cada vez que se redespliega.
+//
+// Nota de prototipo: aquí no hay límite de intentos de login ni verificación de email.
 header("Content-Type: application/json; charset=utf-8");
 require_once __DIR__ . "/../Lib/api_cors.php";
 apiCorsHeaders();
@@ -11,6 +15,8 @@ apiCorsHeaders();
 if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") { http_response_code(204); exit; }
 
 require_once __DIR__ . "/../Config/db.php";
+require_once __DIR__ . "/../Lib/session.php";
+naturdexSessionStart($conn);
 
 function respond($data, $code = 200) {
     http_response_code($code);
@@ -51,6 +57,8 @@ $body = json_decode(file_get_contents("php://input"), true);
 if (!is_array($body)) $body = [];
 
 if ($action === "logout") {
+    // Solo este dispositivo: el token de los demás sigue vivo (ver naturdexForgetRemembered).
+    naturdexForgetRemembered($conn);
     $_SESSION = [];
     session_destroy();
     respond(["ok" => true]);
@@ -76,6 +84,8 @@ if ($action === "register") {
     if (!$ins->execute()) respond(["error" => "No se pudo crear la cuenta."], 500);
 
     $_SESSION["user_id"] = $conn->insert_id;
+    session_regenerate_id(true);
+    naturdexRememberUser($conn, $_SESSION["user_id"]);
     respond(["user" => currentUser($conn)]);
 }
 
@@ -92,6 +102,10 @@ if ($action === "login") {
         respond(["error" => "Email o contraseña incorrectos."], 401);
     }
     $_SESSION["user_id"] = (int) $row["id"];
+    // Identificador de sesión nuevo al autenticar (fijación de sesión) y token para no tener que
+    // volver a pedir la contraseña en las próximas aperturas de la app.
+    session_regenerate_id(true);
+    naturdexRememberUser($conn, $_SESSION["user_id"]);
     respond(["user" => currentUser($conn)]);
 }
 

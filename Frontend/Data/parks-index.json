@@ -29,6 +29,132 @@
                             "center": [37.3825, -1.632],
                             "path": "Data/parks/murcia/cuatro-calas",
                             "manifest": "Data/parks/murcia/cuatro-calas/manifest.json"
+                        },
+                        {
+                            "slug": "sierra-espuna",
+                            "name": "Sierra Espuña",
+                            "category": "Parque Regional",
+                            "status": "basic",
+                            "center": [37.86853, -1.54939],
+                            "path": "Data/parks/murcia/sierra-espuna",
+                            "manifest": "Data/parks/murcia/sierra-espuna/manifest.json"
+                        },
+                        {
+                            "slug": "carrascoy-y-el-valle",
+                            "name": "Carrascoy y El Valle",
+                            "category": "Parque Regional",
+                            "status": "basic",
+                            "center": [37.85809, -1.23518],
+                            "path": "Data/parks/murcia/carrascoy-y-el-valle",
+                            "manifest": "Data/parks/murcia/carrascoy-y-el-valle/manifest.json"
+                        },
+                        {
+                            "slug": "sierra-de-la-pila",
+                            "name": "Sierra de la Pila",
+                            "category": "Parque Regional",
+                            "status": "basic",
+                            "center": [38.26383, -1.23433],
+                            "path": "Data/parks/murcia/sierra-de-la-pila",
+                            "manifest": "Data/parks/murcia/sierra-de-la-pila/manifest.json"
+                        },
+                        {
+                            "slug": "sierra-de-el-carche",
+                            "name": "Sierra de El Carche",
+                            "category": "Parque Regional",
+                            "status": "basic",
+                            "center": [38.42965, -1.16784],
+                            "path": "Data/parks/murcia/sierra-de-el-carche",
+                            "manifest": "Data/parks/murcia/sierra-de-el-carche/manifest.json"
+                        },
+                        {
+                            "slug": "calblanque-monte-cenizas-pena-aguila",
+                            "name": "Calblanque, Monte de las Cenizas y Peña del Águila",
+                            "category": "Parque Regional",
+                            "status": "basic",
+                            "center": [37.60294, -0.78015],
+                            "path": "Data/parks/murcia/calblanque-monte-cenizas-pena-aguila",
+                            "manifest": "Data/parks/murcia/calblanque-monte-cenizas-pena-aguila/manifest.json"
+                        },
+                        {
+                            "slug": "sierra-de-salinas",
+                            "name": "Sierra de Salinas",
+                            "category": "Paisaje Protegido",
+                            "status": "basic",
+                            "center": [38.49334, -1.0449],
+                            "path": "Data/parks/murcia/sierra-de-salinas",
+                            "manifest": "Data/parks/murcia/sierra-de-salinas/manifest.json"
+                        },
+                        {
+                            "slug": "barrancos-de-gebas",
+                            "name": "Barrancos de Gebas",
+                            "category": "Paisaje Protegido",
+                            "status": "basic",
+                            "center": [37.89624, -1.40231],
+                            "path": "Data/parks/murcia/barrancos-de-gebas",
+                            "manifest": "Data/parks/murcia/barrancos-de-gebas/manifest.json"
+                        },
+                        {
+                            "slug": "sierra-de-las-moreras",
+                            "name": "Sierra de las Moreras",
+                            "category": "Paisaje Protegido",
+                            "status": "basic",
+                            "center": [37.57516, -1.34435],
+                            "path": "Data/parks/murcia/sierra-de-las-moreras",
+                            "manifest": "Data/parks/murcia/sierra-de-las-moreras/manifest.json"
+                        },
+                        {
+                            "slug": "humedal-del-ajauque-y-rambla-salada",
+                            "name": "Humedal del Ajauque y Rambla Salada",
+                            "category": "Paisaje Protegido",
+                            "status": "basic",
+                            "center": [38.14418, -1.09368],
+                            "path": "Data/parks/murcia/humedal-del-ajauque-y-rambla-salada",
+                            "manifest": "Data/parks/murcia/humedal-del-ajauque-y-rambla-salada/manifest.json"
+                        },
+                        {
+                            "slug": "espacios-abiertos-e-islas-del-mar-menor",
+                            "name": "Espacios Abiertos e Islas del Mar Menor",
+                            "category": "Paisaje Protegido",
+                            "status": "basic",
+                            "center": [37.69623, -0.84112],
+                            "path": "Data/parks/murcia/espacios-abiertos-e-islas-del-mar-menor",
+                            "manifest": "Data/parks/murcia/espacios-abiertos-e-islas-del-mar-menor/manifest.json"
+                        },
+                        {
+                            "slug": "salinas-arenales-san-pedro-pinatar",
+                            "name": "Salinas y Arenales de San Pedro del Pinatar",
+                            "category": "Parque Regional",
+                            "status": "basic",
+                            "center": [37.81266, -0.76233],
+                            "path": "Data/parks/murcia/salinas-arenales-san-pedro-pinatar",
+                            "manifest": "Data/parks/murcia/salinas-arenales-san-pedro-pinatar/manifest.json"
+                        },
+                        {
+                            "slug": "monte-arabi",
+                            "name": "Monte Arabí",
+                            "category": "Monumento Natural",
+                            "status": "basic",
+                            "center": [38.69333, -1.29062],
+                            "path": "Data/parks/murcia/monte-arabi",
+                            "manifest": "Data/parks/murcia/monte-arabi/manifest.json"
+                        },
+                        {
+                            "slug": "cabezo-gordo",
+                            "name": "Cabezo Gordo",
+                            "category": "Paisaje Protegido",
+                            "status": "basic",
+                            "center": [37.80144, -0.90788],
+                            "path": "Data/parks/murcia/cabezo-gordo",
+                            "manifest": "Data/parks/murcia/cabezo-gordo/manifest.json"
+                        },
+                        {
+                            "slug": "sotos-y-bosques-de-ribera-de-canaverosa",
+                            "name": "Sotos y bosques de ribera de Cañaverosa",
+                            "category": "Reserva Natural",
+                            "status": "basic",
+                            "center": [38.28027, -1.71833],
+                            "path": "Data/parks/murcia/sotos-y-bosques-de-ribera-de-canaverosa",
+                            "manifest": "Data/parks/murcia/sotos-y-bosques-de-ribera-de-canaverosa/manifest.json"
                         }
                     ]
                 }

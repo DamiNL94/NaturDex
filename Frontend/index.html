@@ -36,7 +36,12 @@
             <h1 class="cover-title">NaturDex</h1>
             <p class="cover-sub">Explora, identifica y cataloga la flora y la fauna de los parques naturales y nacionales de España.</p>
             <button id="coverStart" type="button" class="btn-primary">Comenzar</button>
+            <!-- Modo invitado desactivado por ahora: ya se pueden crear cuentas reales contra el
+                 backend, y el progreso solo se conserva de verdad si está asociado a una. Para
+                 reactivarlo hay que devolver este botón y su gemelo de la pantalla de acceso, y
+                 volver a cablearlos en auth.js (enterAsGuest sigue ahí).
             <button id="guestStart" type="button" class="link-btn">Explorar como invitado, sin cuenta →</button>
+            -->
             <p class="cover-foot">Prototipo · Parque piloto: Cabo Cope y Puntas de Calnegre</p>
         </div>
     </section>
@@ -64,7 +69,9 @@
                 <p class="auth-error" id="authError" role="alert" hidden></p>
                 <button type="submit" class="btn-primary" id="authSubmit">Entrar</button>
             </form>
+            <!-- Modo invitado desactivado por ahora (ver la nota de la portada).
             <button class="link-btn" type="button" id="guestStartAuth">Explorar como invitado, sin cuenta →</button>
+            -->
             <button class="link-btn" type="button" id="authBack">← Volver a la portada</button>
         </div>
     </section>

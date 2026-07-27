@@ -1,0 +1,25 @@
+{
+  "park": {
+    "slug": "sierra-de-la-pila",
+    "name": "Sierra de la Pila",
+    "category": "Parque Regional",
+    "region": "Región de Murcia",
+    "province": "Murcia",
+    "municipalities": [
+      "Abarán",
+      "Blanca",
+      "Fortuna",
+      "Jumilla",
+      "Molina de Segura"
+    ],
+    "center": [
+      38.26383,
+      -1.23433
+    ],
+    "summary": "Parque Regional de la Región de Murcia, con una superficie oficial de 8851,0 ha en los términos municipales de Abarán, Blanca, Fortuna, Jumilla y Molina de Segura. Solapa con los espacios de la Red Natura 2000 ZEPA ES0000174 «Sierra de la Pila» y LIC/ZEC ES6200003 «Sierra de la Pila».",
+    "boundaryNote": "Límite oficial servido en geo/parque.geojson, recortado de la capa de Espacios Naturales Protegidos del Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Código ENP oficial ES620018 (CDDA 71230), superficie oficial 8851,0 ha. La capa se publica proyectada en ETRS89 UTM 30N (EPSG:25830): la geometría se ha reproyectado a WGS84 y generalizada con tolerancia de 1 m para uso web (superficie resultante 8851,0 ha, desviación del 0,00 %). Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM (ver Tools/catalogo-nacional/data/murcia-enp-municipios.json). Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico»."
+  },
+  "habitats": [],
+  "pointsOfInterest": [],
+  "species": []
+}

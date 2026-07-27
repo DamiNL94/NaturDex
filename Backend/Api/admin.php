@@ -16,10 +16,11 @@
 //   POST delete&resource=<r>              → body {id}
 //   POST export                           → body {park}: regenera park.json + contadores (offline)
 // ================================================================================================
-session_start();
 header("Content-Type: application/json; charset=utf-8");
 
 require_once __DIR__ . "/../Config/db.php";
+require_once __DIR__ . "/../Lib/session.php";
+naturdexSessionStart($conn);
 
 function respond($data, $code = 200) {
     http_response_code($code);
@@ -223,7 +224,11 @@ if ($method === "POST" && $action === "save") {
         $name = sOrNull($item, "name"); $slug = sOrNull($item, "slug");
         if (!$name || !$slug) respond(["error" => "El punto de interés necesita nombre y slug."], 400);
         $type = sOrNull($item, "type"); $desc = sOrNull($item, "description");
+        // Un punto de interés es, por definición, un punto: sin coordenadas no se puede pintar ni
+        // descubrir por proximidad. A diferencia de las especies (las aves de la ZEPA vuelan y
+        // adquieren ubicación cuando el usuario las marca) aquí las coordenadas son obligatorias.
         $lat = numOrNull($item, "latitude"); $lng = numOrNull($item, "longitude");
+        if ($lat === null || $lng === null) respond(["error" => "El punto de interés necesita latitud y longitud: usa el mini-mapa para situarlo."], 400);
         $img = sOrNull($item, "image_url"); $src = sOrNull($item, "source");
         $approx = !empty($item["is_approx"]) ? 1 : 0;
         $audio = sOrNull($item, "audio_url"); $audioTx = sOrNull($item, "audio_transcript");

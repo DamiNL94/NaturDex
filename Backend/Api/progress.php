@@ -2,7 +2,6 @@
 // Progreso del usuario (especies/POIs vistos y avistamientos GPS), ahora POR USUARIO y POR PARQUE.
 // Requiere sesión iniciada (auth.php). Se guarda en la tabla user_progress como un JSON con la
 // misma forma que antes: { seenSpeciesIds, seenPoiIds, sightings, updatedAt }.
-session_start();
 header("Content-Type: application/json; charset=utf-8");
 require_once __DIR__ . "/../Lib/api_cors.php";
 apiCorsHeaders();
@@ -10,7 +9,9 @@ apiCorsHeaders();
 if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") { http_response_code(204); exit; }
 
 require_once __DIR__ . "/../Config/db.php";
+require_once __DIR__ . "/../Lib/session.php";
 require_once __DIR__ . "/../Lib/account_progress.php";
+naturdexSessionStart($conn);
 
 if (empty($_SESSION["user_id"])) {
     http_response_code(401);

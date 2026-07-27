@@ -82,7 +82,7 @@
         -1.393
       ]
     ],
-    "boundaryNote": "Límite aproximado dibujado a partir de referencias textuales y puntos conocidos del parque (Calabardina, Torre de Cope, Cabo Cope, Lomo de Bas, Puntas de Calnegre). Es un trazado provisional: se sustituirá por la cartografía oficial cuando esté disponible el proyecto QGIS."
+    "boundaryNote": "Límite oficial del Parque Regional (Ley 4/1992), servido en geo/parque-regional.geojson. Geometría descargada del servicio ArcGIS REST del IMIDA/CARM, reproyectada de ETRS89 UTM30N a WGS84 y generalizada para peso web. Código ENP oficial ES620007 (CDDA 196276), superficie 2.665,68 ha. Contrastado con la capa oficial ENP del Banco de Datos de la Naturaleza (MITECO, diciembre 2025). La superficie del IMIDA (2.665,67714849 ha) y la del MITECO (2.665,67714806 ha) coinciden hasta el sexto decimal, lo que confirma que ambas sirven la misma geometría oficial."
   },
   "habitats": [
     {

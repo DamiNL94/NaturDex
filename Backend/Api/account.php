@@ -15,7 +15,6 @@
 // Secure/SameSite y límite de intentos. Aquí no hay verificación de email: cambiar el email surte
 // efecto de inmediato.
 // ================================================================================================
-session_start();
 header("Content-Type: application/json; charset=utf-8");
 require_once __DIR__ . "/../Lib/api_cors.php";
 apiCorsHeaders();
@@ -23,6 +22,8 @@ apiCorsHeaders();
 if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") { http_response_code(204); exit; }
 
 require_once __DIR__ . "/../Config/db.php";
+require_once __DIR__ . "/../Lib/session.php";
+naturdexSessionStart($conn);
 
 function respond($data, $code = 200) {
     http_response_code($code);
@@ -87,7 +88,9 @@ $method = $_SERVER["REQUEST_METHOD"];
 $action = $_GET["action"] ?? "";
 $row = userRow($conn, $userId);
 if (!$row) {
-    // Sesión que apunta a una cuenta ya borrada (p. ej. baja desde otro dispositivo).
+    // Sesión que apunta a una cuenta ya borrada (p. ej. baja desde otro dispositivo). El token de
+    // "seguir conectado" se fue con ella (ON DELETE CASCADE); aquí solo queda retirar la cookie.
+    naturdexClearRememberCookie();
     $_SESSION = [];
     session_destroy();
     respond(["error" => "La cuenta ya no existe."], 401);
@@ -206,6 +209,11 @@ if ($action === "password") {
 
     // Identificador de sesión nuevo tras cambiar la credencial (fijación de sesión).
     session_regenerate_id(true);
+    // Si la contraseña se cambia porque alguien pudo entrar, dejar vivos los "seguir conectado"
+    // antiguos haría inútil el cambio: se revocan TODOS y se emite uno nuevo para este dispositivo,
+    // que es el único que acaba de demostrar que sabe la contraseña.
+    naturdexForgetAllForUser($conn, $userId);
+    naturdexRememberUser($conn, $userId);
     respond(["ok" => true]);
 }
 
@@ -242,6 +250,9 @@ if ($action === "delete") {
     $del->bind_param("i", $userId);
     if (!$del->execute()) respond(["error" => "No se pudo borrar la cuenta."], 500);
 
+    // Los tokens de todos sus dispositivos cuelgan de users con ON DELETE CASCADE y ya se han ido
+    // con el DELETE; aquí solo hay que retirar la cookie de este.
+    naturdexClearRememberCookie();
     $_SESSION = [];
     session_destroy();
     respond(["ok" => true]);

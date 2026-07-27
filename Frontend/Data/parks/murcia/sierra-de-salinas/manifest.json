@@ -1,0 +1,22 @@
+{
+  "slug": "sierra-de-salinas",
+  "name": "Sierra de Salinas",
+  "apiSlug": "sierra-de-salinas",
+  "version": 1,
+  "updatedAt": "2026-07-27",
+  "data": "Data/parks/murcia/sierra-de-salinas/park.json",
+  "geo": {
+    "parque": "Data/parks/murcia/sierra-de-salinas/geo/parque.geojson",
+    "lic": "Data/parks/murcia/sierra-de-salinas/geo/lic.geojson",
+    "zepa": "Data/parks/murcia/sierra-de-salinas/geo/zepa.geojson"
+  },
+  "images": [],
+  "audio": [],
+  "counts": {
+    "species": 0,
+    "habitats": 0,
+    "pointsOfInterest": 0,
+    "images": 0,
+    "assetBytes": 0
+  }
+}

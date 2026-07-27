@@ -1,0 +1,22 @@
+{
+  "park": {
+    "slug": "sierra-de-el-carche",
+    "name": "Sierra de El Carche",
+    "category": "Parque Regional",
+    "region": "Región de Murcia",
+    "province": "Murcia",
+    "municipalities": [
+      "Jumilla",
+      "Yecla"
+    ],
+    "center": [
+      38.42965,
+      -1.16784
+    ],
+    "summary": "Parque Regional de la Región de Murcia, con una superficie oficial de 5869,1 ha en los términos municipales de Jumilla y Yecla. Solapa con el espacio de la Red Natura 2000 LIC/ZEC ES6200009 «Sierra del Carche».",
+    "boundaryNote": "Límite oficial servido en geo/parque.geojson, recortado de la capa de Espacios Naturales Protegidos del Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Código ENP oficial ES620017 (CDDA 349448), superficie oficial 5869,1 ha. La capa se publica proyectada en ETRS89 UTM 30N (EPSG:25830): la geometría se ha reproyectado a WGS84 y generalizada con tolerancia de 1 m para uso web (superficie resultante 5869,1 ha, desviación del 0,00 %). Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM (ver Tools/catalogo-nacional/data/murcia-enp-municipios.json). Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico»."
+  },
+  "habitats": [],
+  "pointsOfInterest": [],
+  "species": []
+}

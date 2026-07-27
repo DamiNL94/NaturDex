@@ -35,7 +35,26 @@ const pc = require('polygon-clipping');
 const { readDbf } = require('./lib/dbf');
 const { readPolygons, utmToLonLat } = require('./lib/shapefile');
 const { bbox, bboxOverlap, inRing, signedArea } = require('./lib/geo');
-const { resolvePark, readBoundaryRing } = require('./lib/registry');
+const { resolvePark, readBoundaryPolygons } = require('./lib/registry');
+
+// Caja envolvente de un MultiPolygon (todas las piezas), y punto dentro del límite teniendo en
+// cuenta piezas y agujeros: el equivalente multiparte de bbox()/inRing() para el límite del parque.
+function bboxDePolys(polys) {
+  let a = [Infinity, Infinity, -Infinity, -Infinity];
+  for (const poly of polys) for (const [x, y] of poly[0]) {
+    if (x < a[0]) a[0] = x; if (y < a[1]) a[1] = y; if (x > a[2]) a[2] = x; if (y > a[3]) a[3] = y;
+  }
+  return a;
+}
+function dentroDelLimite(x, y, polys) {
+  for (const poly of polys) {
+    if (!inRing(x, y, poly[0])) continue;
+    let enAgujero = false;
+    for (let i = 1; i < poly.length; i++) if (inRing(x, y, poly[i])) { enAgujero = true; break; }
+    if (!enAgujero) return true;
+  }
+  return false;
+}
 
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
 
@@ -67,9 +86,12 @@ function main() {
   const park = resolvePark(REPO_ROOT, PARK);
   const boundaryPath = BOUNDARY || park.boundaryPath;
   if (!fs.existsSync(boundaryPath)) die(`No existe el límite del parque: ${boundaryPath}. Pásalo con --boundary.`);
-  const parkRing = readBoundaryRing(boundaryPath);
-  const parkPoly = [parkRing];
-  const pbb = bbox(parkRing);
+  // El límite se usa ENTERO: todas sus piezas y todos sus agujeros. La mayoría de los espacios
+  // protegidos son multiparte y con enclaves excluidos, y recortar contra un solo anillo exterior
+  // mete dentro del parque lo que está en un agujero y deja fuera las piezas menores.
+  const parkPolys = readBoundaryPolygons(boundaryPath);
+  const parkPoly = parkPolys;                       // coordenadas de MultiPolygon para polygon-clipping
+  const pbb = bboxDePolys(parkPolys);
   console.log(`Parque: ${park.name} (${park.slug}) · huso UTM ${ZONE}N · límite: ${path.relative(REPO_ROOT, boundaryPath)}`);
 
   const recs = readPolygons(SHP);
@@ -126,7 +148,7 @@ function main() {
     const polys = f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates;
     for (const poly of polys) for (const [x, y] of poly[0]) {
       totV++;
-      if (!inRing(x, y, parkRing) && (x < pbb[0] - 1e-4 || x > pbb[2] + 1e-4 || y < pbb[1] - 1e-4 || y > pbb[3] + 1e-4)) outside++;
+      if (!dentroDelLimite(x, y, parkPolys) && (x < pbb[0] - 1e-4 || x > pbb[2] + 1e-4 || y < pbb[1] - 1e-4 || y > pbb[3] + 1e-4)) outside++;
     }
   }
   const hic = new Map();

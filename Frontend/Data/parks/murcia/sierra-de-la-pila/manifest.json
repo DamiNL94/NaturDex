@@ -1,0 +1,22 @@
+{
+  "slug": "sierra-de-la-pila",
+  "name": "Sierra de la Pila",
+  "apiSlug": "sierra-de-la-pila",
+  "version": 1,
+  "updatedAt": "2026-07-27",
+  "data": "Data/parks/murcia/sierra-de-la-pila/park.json",
+  "geo": {
+    "parque": "Data/parks/murcia/sierra-de-la-pila/geo/parque.geojson",
+    "lic": "Data/parks/murcia/sierra-de-la-pila/geo/lic.geojson",
+    "zepa": "Data/parks/murcia/sierra-de-la-pila/geo/zepa.geojson"
+  },
+  "images": [],
+  "audio": [],
+  "counts": {
+    "species": 0,
+    "habitats": 0,
+    "pointsOfInterest": 0,
+    "images": 0,
+    "assetBytes": 0
+  }
+}

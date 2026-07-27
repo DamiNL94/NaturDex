@@ -80,6 +80,50 @@ cartografía de ese inventario, lo publicado es la de los HIC del Anexo I **en s
 fuente estatal vigente. El complemento oficial es el *Atlas y Manual de los Hábitats Naturales y
 Seminaturales de España* (2005), cuyo PDF ya está en `Docs/`.
 
+## El endpoint del IDE está muerto — usar el del BDN
+
+Comprobado el 2026-07-25: los enlaces que publica la página de descargas del **IDE**
+(`https://www.mapama.gob.es/app/descargas/descargafichero.aspx?f=<algo>.zip`) devuelven **HTTP
+404** para todos los conjuntos. La página sigue online y los enlaces siguen visibles, pero no
+sirven ningún fichero.
+
+Las URLs válidas están en las páginas de descarga del **Banco de Datos de la Naturaleza (BDN)**,
+bajo `/content/dam/`. Todas verificadas con HTTP 200 y su tamaño real:
+
+| Conjunto | Formato | Tamaño real |
+|---|---|---|
+| ENP | GeoJSON | 63,3 MB |
+| ENP | SHP | 52,3 MB |
+| Red Natura 2000 | GeoJSON | 185,8 MB |
+| Red Natura 2000 | SHP | 126,3 MB |
+
+**Preferir el GeoJSON**, pero **no porque evite reproyectar** — eso era un error. Comprobado al
+inspeccionar los ficheros: el MITECO publica el GeoJSON **proyectado en UTM** (EPSG:25830 en
+península y Baleares, EPSG:32628 en Canarias), declarado en el miembro `crs`. Sigue haciendo falta
+`utmToLonLat()`. La ventaja real es que no hay que parsear el binario del shapefile ni su `.dbf`, y
+que el huso viene declarado en el propio fichero en vez de haber que deducirlo del `.prj`.
+
+Cada conjunto viene **partido en dos ficheros**: península+Baleares y Canarias, cada uno con su
+huso. Hay que procesar los dos.
+
+Inventario completo de esquemas y contenido: `Tools/catalogo-nacional/out/inventario-fuentes-bdn.md`.
+Se genera con `inspect-geojson.js`, que lee por streaming (870 MB en ~5 s) porque el mayor de los
+ficheros pesa 620 MB y viene en una sola línea: un `JSON.parse` lo reventaría.
+
+### Dos correcciones de metadatos
+
+La ficha del BDN es más reciente que la del IDE y las cifras no coinciden. Prevalece el BDN:
+
+- **Red Natura 2000**: escala **1:25.000** (no 1:50.000) y contenido de **diciembre de 2025**,
+  remitido a la Comisión Europea en febrero de 2026 (no diciembre de 2024).
+- **ENP**: proyección declarada **EPSG:25830** en península y Baleares, **EPSG:32628** en Canarias.
+
+### Cifras oficiales útiles para el rollout
+
+La página del ENP publica el recuento a diciembre de 2025: **1.785 espacios** en España, 7.256.462
+ha terrestres, el **14,33 %** del territorio. La **Región de Murcia tiene 21 espacios** — de los que
+NaturDex lleva 2.
+
 ## Reponer las descargas
 
 Los ficheros no están en el repo. Para volver a tenerlos, descargar cada `descarga` de

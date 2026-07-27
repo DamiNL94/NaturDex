@@ -1,0 +1,22 @@
+{
+  "park": {
+    "slug": "calblanque-monte-cenizas-pena-aguila",
+    "name": "Calblanque, Monte de las Cenizas y Peña del Águila",
+    "category": "Parque Regional",
+    "region": "Región de Murcia",
+    "province": "Murcia",
+    "municipalities": [
+      "Cartagena",
+      "La Unión"
+    ],
+    "center": [
+      37.60294,
+      -0.78015
+    ],
+    "summary": "Parque Regional de la Región de Murcia, con una superficie oficial de 2466,3 ha en los términos municipales de Cartagena y La Unión. Solapa con los espacios de la Red Natura 2000 ZEPA ES0000260 «Mar Menor» y LIC/ZEC ES6200001 «Calblanque, Monte de las Cenizas y Peña del Águila».",
+    "boundaryNote": "Límite oficial servido en geo/parque.geojson, recortado de la capa de Espacios Naturales Protegidos del Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Código ENP oficial ES620011 (CDDA 71229), superficie oficial 2466,3 ha. La capa se publica proyectada en ETRS89 UTM 30N (EPSG:25830): la geometría se ha reproyectado a WGS84 y generalizada con tolerancia de 1 m para uso web (superficie resultante 2466,2 ha, desviación del 0,00 %). Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM (ver Tools/catalogo-nacional/data/murcia-enp-municipios.json). Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico»."
+  },
+  "habitats": [],
+  "pointsOfInterest": [],
+  "species": []
+}

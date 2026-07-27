@@ -8,42 +8,60 @@
     "habitat-provincias.json": "Las 50 provincias de la cartografía de Hábitats de Interés Comunitario (1997), con URL literal de shapefile y tabla de atributos. Fuente de los POLÍGONOS de hábitats para cualquier parque.",
     "iepnb-api.json": "API PostgREST del IEPNB (sin autenticación): Lista Patrón de especies silvestres en JSON, con normativa de protección, sinonimias y pasarelas de códigos. Fuente para RELLENAR la base de datos de especies.",
     "fetch-lista-patron.js": "Descargador de las 4 vistas del IEPNB. Ejecutar fuera del sandbox.",
-    "inspect-fuentes.js": "Inventario de los shapefiles extraídos: CRS del .prj, registros y esquema de campos."
+    "inspect-fuentes.js": "Inventario de los shapefiles extraídos: CRS del .prj, registros y esquema de campos.",
+    "atlas-habitats-2005-provincias.json": "Atlas y Manual de los Hábitats Naturales y Seminaturales de España (2005), las 52 provincias (incluye Ceuta y Melilla). Amplía la cartografía HIC de 1997 a hábitats seminaturales. 104 ficheros, 388,5 MB.",
+    "descargar-atlas-2005.ps1": "Descargador reanudable del Atlas 2005, generado desde su manifiesto. Verifica el tamaño contra el servidor y extrae."
   },
   "conjuntos": [
     {
       "id": "enp",
       "titulo": "Espacios Naturales Protegidos (ENP)",
       "usoEnNaturDex": "FASE 1 (N1) del rollout nacional: inventario y límite oficial de todos los espacios protegidos de España. Alimenta park.json (name, category, region, province, municipalities, center) y geo/parque.geojson.",
-      "paginaFicha": "https://www.miteco.gob.es/es/cartografia-y-sig/ide/descargas/biodiversidad/enp.html",
-      "descarga": "https://www.mapama.gob.es/app/descargas/descargafichero.aspx?f=enp.zip",
-      "fichero": "miteco-ide/enp.zip",
-      "formato": "Shapefile (.shp)",
-      "tamanoDeclarado": "59,6 MB",
+      "paginaFicha": "https://www.miteco.gob.es/es/biodiversidad/servicios/banco-datos-naturaleza/informacion-disponible/enp_descargas.html",
+      "descarga": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/enp/Enp2025_geojson.zip",
+      "fichero": "miteco-ide/Enp2025_geojson.zip",
+      "formato": "GeoJSON (recomendado: evita reproyectar) — alternativas .shp/.kmz/.gml",
+      "tamanoVerificado": "63,3 MB (GeoJSON) · 52,3 MB (SHP) — HTTP 200 comprobado el 2026-07-25",
+      "alternativas": {
+        "shp": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/enp/Enp2025_shp.zip",
+        "kmz": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/enp/Enp2025_kmz.zip",
+        "gml": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/enp/PS_Natda2025_gml.zip"
+      },
+      "diccionarioDeDatos": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/enp/enp_dd_2025.xlsx",
+      "tablaResumen": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/enp/tablawebdic2025.xlsx",
+      "mapaPDF": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/enp/ENPDINA_Diciembre2025.pdf",
       "ambito": "Nacional",
       "escala": "1:50.000",
-      "actualizacion": "2025-12-31",
-      "metadatos": "https://www.mapama.gob.es/ide/metadatos/index.html?srv=metadata.show&uuid=cb550555-548b-450f-bee1-4435a4c40b6c",
-      "descripcionServicio": "https://sig.mapama.gob.es/Docs/PDFServicios/ENP.pdf",
-      "alternativaGML": "https://www.mapama.gob.es/app/descargas/descargafichero.aspx?f=gml_enp.zip",
-      "notas": "Complementado con la base Nationally designated areas (NatDA) de la AEMA. La Ley 42/2007 prevé 5 figuras, pero la normativa autonómica eleva la tipología a más de 40: el campo de figura debe copiarse literal a park.json.category."
+      "actualizacion": "Diciembre 2025",
+      "proyeccion": "EPSG:25830 (península y Baleares) · EPSG:32628 (Canarias)",
+      "metadatos": "https://www.mapama.gob.es/ide/metadatos/srv/spa/catalog.search#/metadata/cb550555-548b-450f-bee1-4435a4c40b6c",
+      "cifrasOficiales": "1.785 espacios en España (7.256.462,35 ha terrestres, 14,33 % del territorio). Región de Murcia: 21 espacios, 65.343,20 ha.",
+      "notas": "Complementado con la base Nationally designated areas (NatDA) de la AEMA. La Ley 42/2007 prevé 5 figuras, pero la normativa autonómica eleva la tipología a más de 40: el campo de figura debe copiarse literal a park.json.category.",
+      "avisoUrlAntigua": "El enlace que publica la página del IDE (https://www.mapama.gob.es/app/descargas/descargafichero.aspx?f=enp.zip) devuelve HTTP 404. Ese endpoint está MUERTO para todos los conjuntos. Las URLs válidas son las de /content/dam/ que recoge la página de descargas del BDN."
     },
     {
       "id": "rn2000",
       "titulo": "Red Natura 2000 (LIC/ZEC + ZEPA)",
       "usoEnNaturDex": "FASE 1 (N1): códigos de sitio ES… que solapan cada espacio. Alimenta geo/lic.geojson y geo/zepa.geojson, y es la clave de entrada a BISE Site_Species_List en la CAPA 3.",
-      "paginaFicha": "https://www.miteco.gob.es/es/cartografia-y-sig/ide/descargas/biodiversidad/rn2000.html",
-      "descarga": "https://www.mapama.gob.es/app/descargas/descargafichero.aspx?f=rn2000.zip",
-      "fichero": "miteco-ide/rn2000.zip",
-      "formato": "Shapefile (.shp)",
-      "tamanoDeclarado": "127 MB",
+      "paginaFicha": "https://www.miteco.gob.es/es/biodiversidad/servicios/banco-datos-naturaleza/informacion-disponible/rednatura_2000_desc.html",
+      "descarga": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/3-rn2000/n2000_2025_GeoJson.zip",
+      "fichero": "miteco-ide/n2000_2025_GeoJson.zip",
+      "formato": "GeoJSON (recomendado) — alternativas .shp/.gml",
+      "tamanoVerificado": "185,8 MB (GeoJSON) · 126,3 MB (SHP) — HTTP 200 comprobado el 2026-07-25",
+      "alternativas": {
+        "shp": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/3-rn2000/n2000_2025_shp.zip",
+        "gml": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/3-rn2000/PS.Natura2000_2025_gml.zip"
+      },
+      "diccionarioDeDatos": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/3-rn2000/rn2000-dd.xlsx",
+      "mapaPDF": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/3-rn2000/RN2000_Dic2025.pdf",
+      "buscadorZEC": "https://www.miteco.gob.es/es/biodiversidad/servicios/buscador_zec.html",
       "ambito": "Nacional",
-      "escala": "1:50.000 (entrega oficial a la Comisión Europea a 1:100.000)",
-      "actualizacion": "2025-12-31",
-      "metadatos": "https://www.mapama.gob.es/ide/metadatos/index.html?srv=metadata.show&uuid=0d427e21-be52-4723-b78e-8b00a43319cb",
-      "descripcionServicio": "https://sig.mapama.gob.es/Docs/PDFServicios/RedNatura2000.pdf",
-      "alternativaGML": "https://www.mapama.gob.es/app/descargas/descargafichero.aspx?f=gml_natura2000.zip",
-      "notas": "AVISO de la propia ficha: el contenido corresponde a diciembre de 2024, según lo remitido a la Comisión Europea hasta esa fecha. Los LIC solo son oficiales cuando la Comisión aprueba las listas biogeográficas. Registrar esa salvedad en boundaryNote."
+      "escala": "1:25.000",
+      "actualizacion": "Diciembre 2025, remitida a la Comisión Europea en febrero de 2026",
+      "metadatos": "https://www.mapama.gob.es/ide/metadatos/srv/spa/catalog.search#/metadata/0d427e21-be52-4723-b78e-8b00a43319cb",
+      "notas": "Los LIC solo adquieren carácter oficial cuando la Comisión Europea aprueba las respectivas listas biogeográficas. Registrar esa salvedad en boundaryNote.",
+      "correccionRespectoAlIDE": "La página del IDE daba escala 1:50.000 y contenido a diciembre de 2024. La página del BDN, más reciente, da 1:25.000 y diciembre de 2025 (remitida en febrero de 2026). Prevalece el BDN.",
+      "avisoUrlAntigua": "El enlace del IDE (descargafichero.aspx?f=rn2000.zip) devuelve HTTP 404."
     },
     {
       "id": "habitat-art17-distribucion",
@@ -97,10 +115,30 @@
     }
   ],
   "descartadoDeMomento": [
-    { "titulo": "Hábitat Artículo 17 (2007-2012)", "motivo": "Periodo superado por 2013-2018.", "url": "https://www.miteco.gob.es/es/cartografia-y-sig/ide/descargas/biodiversidad/habitat-art17-2007_2012.html" },
-    { "titulo": "Regiones Biogeográficas", "motivo": "Capa de contexto; necesaria solo al interpretar el estado de conservación por región.", "url": "https://www.miteco.gob.es/es/cartografia-y-sig/ide/descargas/biodiversidad/regiones-biogeograficas.html" },
-    { "titulo": "Mapa Forestal de España MFE25 (IFN4)", "motivo": "Muy pesado; útil para vegetación pero no bloquea el rollout.", "url": "https://www.miteco.gob.es/es/cartografia-y-sig/ide/descargas/biodiversidad/mfe.html" },
-    { "titulo": "Red General de Vías Pecuarias", "motivo": "Candidata futura para la capa de senderos (hoy OpenStreetMap).", "url": "https://www.miteco.gob.es/es/cartografia-y-sig/ide/descargas/biodiversidad/vias_pecuarias.html" },
-    { "titulo": "Reservas de la Biosfera (MaB), RAMSAR, ZEPIM, OSPAR, RAMPE, IBA, IEZH", "motivo": "Figuras internacionales; se incorporan cuando N1 cubra ya los ENP estatales.", "url": "https://www.miteco.gob.es/es/cartografia-y-sig/ide/descargas/biodiversidad.html" }
+    {
+      "titulo": "Hábitat Artículo 17 (2007-2012)",
+      "motivo": "Periodo superado por 2013-2018.",
+      "url": "https://www.miteco.gob.es/es/cartografia-y-sig/ide/descargas/biodiversidad/habitat-art17-2007_2012.html"
+    },
+    {
+      "titulo": "Regiones Biogeográficas",
+      "motivo": "Capa de contexto; necesaria solo al interpretar el estado de conservación por región.",
+      "url": "https://www.miteco.gob.es/es/cartografia-y-sig/ide/descargas/biodiversidad/regiones-biogeograficas.html"
+    },
+    {
+      "titulo": "Mapa Forestal de España MFE25 (IFN4)",
+      "motivo": "Muy pesado; útil para vegetación pero no bloquea el rollout.",
+      "url": "https://www.miteco.gob.es/es/cartografia-y-sig/ide/descargas/biodiversidad/mfe.html"
+    },
+    {
+      "titulo": "Red General de Vías Pecuarias",
+      "motivo": "Candidata futura para la capa de senderos (hoy OpenStreetMap).",
+      "url": "https://www.miteco.gob.es/es/cartografia-y-sig/ide/descargas/biodiversidad/vias_pecuarias.html"
+    },
+    {
+      "titulo": "Reservas de la Biosfera (MaB), RAMSAR, ZEPIM, OSPAR, RAMPE, IBA, IEZH",
+      "motivo": "Figuras internacionales; se incorporan cuando N1 cubra ya los ENP estatales.",
+      "url": "https://www.miteco.gob.es/es/cartografia-y-sig/ide/descargas/biodiversidad.html"
+    }
   ]
 }

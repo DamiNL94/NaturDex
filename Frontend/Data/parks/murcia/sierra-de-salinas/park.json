@@ -1,0 +1,21 @@
+{
+  "park": {
+    "slug": "sierra-de-salinas",
+    "name": "Sierra de Salinas",
+    "category": "Paisaje Protegido",
+    "region": "Región de Murcia",
+    "province": "Murcia",
+    "municipalities": [
+      "Yecla"
+    ],
+    "center": [
+      38.49334,
+      -1.0449
+    ],
+    "summary": "Paisaje Protegido de la Región de Murcia, con una superficie oficial de 2395,4 ha en el término municipal de Yecla. Solapa con los espacios de la Red Natura 2000 ZEPA ES0000457 «Sierra de Salinas (ZEPA)», LIC/ZEC ES5213039 «Sierra de Salinas» y LIC/ZEC ES6200008 «Sierra de Salinas».",
+    "boundaryNote": "Límite oficial servido en geo/parque.geojson, recortado de la capa de Espacios Naturales Protegidos del Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Código ENP oficial ES620027 (CDDA 555774228), superficie oficial 2395,4 ha. La capa se publica proyectada en ETRS89 UTM 30N (EPSG:25830): la geometría se ha reproyectado a WGS84 y generalizada con tolerancia de 1 m para uso web (superficie resultante 2395,4 ha, desviación del 0,00 %). Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM (ver Tools/catalogo-nacional/data/murcia-enp-municipios.json). Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico»."
+  },
+  "habitats": [],
+  "pointsOfInterest": [],
+  "species": []
+}

@@ -65,8 +65,10 @@ export const FIELDS: Record<Resource, FieldDef[]> = {
     { k: 'name', label: 'Nombre', req: true },
     { k: 'slug', label: 'Slug (identificador)', req: true },
     { k: 'type', label: 'Tipo (Cultural, Paisajístico, Geológico…)' },
-    { k: 'latitude', label: 'Latitud', type: 'number' },
-    { k: 'longitude', label: 'Longitud', type: 'number' },
+    // Obligatorias: un POI sin coordenadas no se puede pintar ni descubrir por proximidad
+    // (admin.php rechaza el guardado). El mini-mapa de abajo las rellena con un clic.
+    { k: 'latitude', label: 'Latitud', type: 'number', req: true },
+    { k: 'longitude', label: 'Longitud', type: 'number', req: true },
     { k: 'image_url', label: 'Foto (URL o ruta Img/…)' },
     { k: 'source', label: 'Fuente' },
     { k: 'is_approx', label: 'Ubicación aproximada (aviso en el popup)', type: 'checkbox' },

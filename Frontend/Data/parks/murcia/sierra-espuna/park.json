@@ -1,0 +1,25 @@
+{
+  "park": {
+    "slug": "sierra-espuna",
+    "name": "Sierra Espuña",
+    "category": "Parque Regional",
+    "region": "Región de Murcia",
+    "province": "Murcia",
+    "municipalities": [
+      "Aledo",
+      "Alhama de Murcia",
+      "Lorca",
+      "Mula",
+      "Totana"
+    ],
+    "center": [
+      37.86853,
+      -1.54939
+    ],
+    "summary": "Parque Regional de la Región de Murcia, con una superficie oficial de 17.693,2 ha en los términos municipales de Aledo, Alhama de Murcia, Lorca, Mula y Totana. Solapa con el espacio de la Red Natura 2000 LIC/ZEC y ZEPA ES0000173 «Sierra Espuña».",
+    "boundaryNote": "Límite oficial servido en geo/parque.geojson, recortado de la capa de Espacios Naturales Protegidos del Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Código ENP oficial ES620013 (CDDA 4745), superficie oficial 17.693,2 ha. La capa se publica proyectada en ETRS89 UTM 30N (EPSG:25830): la geometría se ha reproyectado a WGS84 y generalizada con tolerancia de 1 m para uso web (superficie resultante 17.693,3 ha, desviación del 0,00 %). Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM (ver Tools/catalogo-nacional/data/murcia-enp-municipios.json). Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico»."
+  },
+  "habitats": [],
+  "pointsOfInterest": [],
+  "species": []
+}

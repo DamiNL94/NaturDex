@@ -44,7 +44,15 @@
   function $(sel) { return document.querySelector(sel); }
 
   function readCachedUser() {
-    try { var v = localStorage.getItem(USER_KEY); return v ? JSON.parse(v) : null; } catch (e) { return null; }
+    try {
+      var v = localStorage.getItem(USER_KEY);
+      var u = v ? JSON.parse(v) : null;
+      // Con el modo invitado desactivado, una sesión cacheada sin `id` es un invitado de antes del
+      // cambio: no hay cuenta detrás, así que se descarta y la app pide entrar. Su progreso local
+      // sigue guardado en el ámbito 'anon' por si el modo vuelve.
+      if (u && u.id == null) { localStorage.removeItem(USER_KEY); return null; }
+      return u;
+    } catch (e) { return null; }
   }
   function setUser(user) {
     currentUser = user;
@@ -341,6 +349,10 @@
   }
 
   // --- Invitado (sin cuenta, sin backend) ------------------------------------------------------
+  // DESACTIVADO por ahora: el backend ya sirve cuentas reales y el progreso solo se conserva de
+  // verdad asociado a una. Los botones de entrada están comentados en index.html y sin cablear más
+  // abajo; la función se conserva para poder reactivarlo sin rehacerlo.
+  //
   // Formaliza como usuario real el caso que refreshSession() ya trataba de forma implícita en
   // offline: un usuario cacheado sin llamar a la API. Sin `id`, progressScope() (data.js) usa el
   // ámbito 'anon', así que el progreso del invitado es siempre local y nunca intenta sincronizar
@@ -353,8 +365,8 @@
   // --- Cableado -------------------------------------------------------------------------------
   function wire() {
     $('#coverStart').addEventListener('click', goFromCover);
-    $('#guestStart').addEventListener('click', enterAsGuest);
-    $('#guestStartAuth').addEventListener('click', enterAsGuest);
+    // Modo invitado desactivado: sus dos botones están comentados en index.html, así que aquí no
+    // hay nada que cablear (ver enterAsGuest más arriba para reactivarlo).
     $('#authBack').addEventListener('click', function () { showScreen('screen-cover'); });
     document.querySelectorAll('.auth-tab').forEach(function (t) { t.addEventListener('click', function () { setAuthMode(t.dataset.mode); }); });
     $('#authForm').addEventListener('submit', submitAuth);

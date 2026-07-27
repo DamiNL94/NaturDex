@@ -142,7 +142,12 @@ function buildParkPayload($conn, $parkSlug) {
             "name" => $row["name"],
             "type" => $row["type"],
             "description" => $row["description"],
-            "coordinates" => [(float) $row["latitude"], (float) $row["longitude"]],
+            // Un POI SIEMPRE va ubicado (admin.php lo exige al guardar), pero si una fila antigua
+            // tiene la coordenada a NULL hay que emitir null, no [0,0]: `(float) null` es 0.0 y eso
+            // plantaba el punto en el golfo de Guinea en cuanto la API pisaba al park.json.
+            "coordinates" => ($row["latitude"] !== null && $row["longitude"] !== null)
+                ? [(float) $row["latitude"], (float) $row["longitude"]]
+                : null,
             "image" => $row["image_url"],
             "source" => $row["source"],
             "approx" => (bool) $row["is_approx"],

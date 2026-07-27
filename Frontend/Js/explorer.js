@@ -92,9 +92,14 @@ function accuracyLabel(accuracy) {
 // --- Panel "cerca de ti" (lista ordenada por distancia) -------------------------------------------
 function nearbyTargets() {
   const targets = [];
-  (state.data.pointsOfInterest || []).forEach(poi => targets.push({
-    kind: 'poi', id: poi.id, name: poi.name, icon: poiEmoji(poi), coords: poi.coordinates, visited: state.seenPois.has(poi.id)
-  }));
+  (state.data.pointsOfInterest || []).forEach(poi => {
+    // Mismo criterio que los hábitats: sin coordenadas no hay distancia que ordenar (y leer
+    // coords[0] de un null tumbaría el panel entero al llegar la primera posición del GPS).
+    if (!poi.coordinates) return;
+    targets.push({
+      kind: 'poi', id: poi.id, name: poi.name, icon: poiEmoji(poi), coords: poi.coordinates, visited: state.seenPois.has(poi.id)
+    });
+  });
   (state.data.habitats || []).forEach(h => {
     if (!h.coordinates) return;
     targets.push({ kind: 'habitat', id: h.id, name: h.name, icon: '🌿', coords: h.coordinates, visited: isHabitatComplete(h) });

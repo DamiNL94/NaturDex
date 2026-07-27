@@ -1,0 +1,21 @@
+{
+  "park": {
+    "slug": "cabezo-gordo",
+    "name": "Cabezo Gordo",
+    "category": "Paisaje Protegido",
+    "region": "Región de Murcia",
+    "province": "Murcia",
+    "municipalities": [
+      "Torre-Pacheco"
+    ],
+    "center": [
+      37.80144,
+      -0.90788
+    ],
+    "summary": "Paisaje Protegido de la Región de Murcia, con una superficie oficial de 271,8 ha en el término municipal de Torre-Pacheco. Solapa con el espacio de la Red Natura 2000 LIC/ZEC ES6200013 «Cabezo Gordo».",
+    "boundaryNote": "Límite oficial servido en geo/parque.geojson, recortado de la capa de Espacios Naturales Protegidos del Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Código ENP oficial ES620022 (CDDA 555691750), superficie oficial 271,8 ha. La capa se publica proyectada en ETRS89 UTM 30N (EPSG:25830): la geometría se ha reproyectado a WGS84 y generalizada con tolerancia de 1 m para uso web (superficie resultante 271,8 ha, desviación del 0,02 %). Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM (ver Tools/catalogo-nacional/data/murcia-enp-municipios.json). Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico»."
+  },
+  "habitats": [],
+  "pointsOfInterest": [],
+  "species": []
+}

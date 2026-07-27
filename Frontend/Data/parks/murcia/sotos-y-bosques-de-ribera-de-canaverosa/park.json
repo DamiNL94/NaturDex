@@ -1,0 +1,22 @@
+{
+  "park": {
+    "slug": "sotos-y-bosques-de-ribera-de-canaverosa",
+    "name": "Sotos y bosques de ribera de Cañaverosa",
+    "category": "Reserva Natural",
+    "region": "Región de Murcia",
+    "province": "Murcia",
+    "municipalities": [
+      "Calasparra",
+      "Moratalla"
+    ],
+    "center": [
+      38.28027,
+      -1.71833
+    ],
+    "summary": "Reserva Natural de la Región de Murcia, con una superficie oficial de 248,8 ha en los términos municipales de Calasparra y Moratalla. Solapa con el espacio de la Red Natura 2000 LIC/ZEC ES6200004 «Sierras y Vega Alta del Segura y Ríos Alhárabe y Moratalla».",
+    "boundaryNote": "Límite oficial servido en geo/parque.geojson, recortado de la capa de Espacios Naturales Protegidos del Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Código ENP oficial ES620009 (CDDA 151301), superficie oficial 248,8 ha. La capa se publica proyectada en ETRS89 UTM 30N (EPSG:25830): la geometría se ha reproyectado a WGS84 y generalizada con tolerancia de 1 m para uso web (superficie resultante 248,4 ha, desviación del 0,15 %). La cartografía del IMIDA/CARM da 242,1 ha para este mismo espacio, un 2,69 % menos; se conserva la del MITECO por ser la fuente de la geometría aquí servida. Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM (ver Tools/catalogo-nacional/data/murcia-enp-municipios.json). Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico»."
+  },
+  "habitats": [],
+  "pointsOfInterest": [],
+  "species": []
+}

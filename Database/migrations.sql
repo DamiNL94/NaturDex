@@ -277,3 +277,22 @@ CREATE TABLE IF NOT EXISTS user_glossary_views (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
     FOREIGN KEY (term_id) REFERENCES glosario(id) ON DELETE CASCADE
 );
+
+-- ------------------------------------------------------------------------------------------------
+-- Tokens de "seguir conectado" (uno por dispositivo). Tabla nueva e independiente; ver el bloque
+-- equivalente, con los comentarios completos, en Database/schema.sql y Backend/Lib/session.php.
+-- ------------------------------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS user_auth_tokens (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    selector CHAR(18) NOT NULL UNIQUE,
+    validator_hash CHAR(64) NOT NULL,
+    previous_hash CHAR(64) NULL,
+    rotated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    last_used_at TIMESTAMP NULL,
+    expires_at TIMESTAMP NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    INDEX idx_user_auth_tokens_user (user_id),
+    INDEX idx_user_auth_tokens_expires (expires_at)
+);

@@ -1,0 +1,296 @@
+{
+  "_comment": "Municipios de cada Espacio Natural Protegido de la Región de Murcia, obtenidos por INTERSECCIÓN GEOMÉTRICA, no copiados a mano. Necesario porque la capa ENP del MITECO no incluye municipios y validate-park-data.js los exige en las fichas N1.",
+  "metodo": "Para cada ENP del servicio ArcGIS REST del IMIDA/CARM (capas 1-5 de PROYECTOS/OISMA, solo geometrías con Caracter=\"Firme\", generalizadas a 150 m) se lanzó una consulta espacial esriSpatialRelIntersects contra la capa \"Límites municipales CNIG\" (1_04_UNIDADES_ADMINISTRATIVAS/Unidades_administrativas_Murcia, capa 0). Ambas en EPSG:25830.",
+  "emparejamiento": "Los códigos del IMIDA (ENP0000NN) y los del MITECO (ES6200NN) son distintos y no hay tabla de equivalencia publicada. Se emparejaron por superficie con tolerancia del 5 %.",
+  "fuentes": [
+    "https://geoportal.imida.es/gis/rest/services/PROYECTOS/OISMA/MapServer",
+    "https://geoportal.imida.es/gis/rest/services/1_04_UNIDADES_ADMINISTRATIVAS/Unidades_administrativas_Murcia/MapServer",
+    "Capa ENP del Banco de Datos de la Naturaleza (MITECO, diciembre 2025)"
+  ],
+  "licencia": "Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico» (ENP) y IMIDA/CARM (límites municipales CNIG).",
+  "generado": "2026-07-27",
+  "avisos": [
+    "Los límites municipales proceden del CNIG servidos por el IMIDA, generalizados a 150 m para la consulta: suficiente para decidir qué municipios toca un espacio, no para medir superficies por municipio.",
+    "Salto del Usero (ES620026) queda SIN municipios: no figura como Firme en el IMIDA."
+  ],
+  "espacios": [
+    {
+      "codigoENP": "ES620007",
+      "figura": "Parque Regional",
+      "nombre": "Cabo Cope y Puntas de Calnegre",
+      "supHaMiteco": 2665.68,
+      "codigoIMIDA": "ENP000010",
+      "supHaImida": 2665.7,
+      "desvioPct": 0,
+      "municipios": [
+        "Lorca",
+        "Águilas"
+      ]
+    },
+    {
+      "codigoENP": "ES620004",
+      "figura": "Paisaje Protegido",
+      "nombre": "Cuatro Calas",
+      "supHaMiteco": 220.99,
+      "codigoIMIDA": "ENP000007",
+      "supHaImida": 221.7,
+      "desvioPct": 0.32,
+      "municipios": [
+        "Águilas"
+      ]
+    },
+    {
+      "codigoENP": "ES620013",
+      "figura": "Parque Regional",
+      "nombre": "Sierra Espuña",
+      "supHaMiteco": 17693.2,
+      "codigoIMIDA": "ENP000001",
+      "supHaImida": 17693.3,
+      "desvioPct": 0,
+      "municipios": [
+        "Aledo",
+        "Alhama de Murcia",
+        "Lorca",
+        "Mula",
+        "Totana"
+      ]
+    },
+    {
+      "codigoENP": "ES620008",
+      "figura": "Parque Regional",
+      "nombre": "Carrascoy y El Valle",
+      "supHaMiteco": 16685.8,
+      "codigoIMIDA": "ENP000002",
+      "supHaImida": 16685.9,
+      "desvioPct": 0,
+      "municipios": [
+        "Alhama de Murcia",
+        "Fuente Álamo de Murcia",
+        "Murcia"
+      ]
+    },
+    {
+      "codigoENP": "ES620018",
+      "figura": "Parque Regional",
+      "nombre": "Sierra de la Pila",
+      "supHaMiteco": 8851,
+      "codigoIMIDA": "ENP000003",
+      "supHaImida": 8851,
+      "desvioPct": 0,
+      "municipios": [
+        "Abarán",
+        "Blanca",
+        "Fortuna",
+        "Jumilla",
+        "Molina de Segura"
+      ]
+    },
+    {
+      "codigoENP": "ES620017",
+      "figura": "Parque Regional",
+      "nombre": "Sierra de El Carche",
+      "supHaMiteco": 5869.1,
+      "codigoIMIDA": "ENP000014",
+      "supHaImida": 5869.1,
+      "desvioPct": 0,
+      "municipios": [
+        "Jumilla",
+        "Yecla"
+      ]
+    },
+    {
+      "codigoENP": "ES620011",
+      "figura": "Parque Regional",
+      "nombre": "Calblanque, Monte de las Cenizas y Peña del Águila",
+      "supHaMiteco": 2466.3,
+      "codigoIMIDA": "ENP000005",
+      "supHaImida": 2466.3,
+      "desvioPct": 0,
+      "municipios": [
+        "Cartagena",
+        "Unión, La"
+      ]
+    },
+    {
+      "codigoENP": "ES620012",
+      "figura": "Parque Regional",
+      "nombre": "Salinas y Arenales de San Pedro del Pinatar",
+      "supHaMiteco": 850.5,
+      "codigoIMIDA": "ENP000004",
+      "supHaImida": 850.5,
+      "desvioPct": 0,
+      "municipios": [
+        "San Javier",
+        "San Pedro del Pinatar"
+      ]
+    },
+    {
+      "codigoENP": "ES620027",
+      "figura": "Paisaje Protegido",
+      "nombre": "Sierra de Salinas",
+      "supHaMiteco": 2395.4,
+      "codigoIMIDA": "ENP000019",
+      "supHaImida": 2400,
+      "desvioPct": 0.19,
+      "municipios": [
+        "Yecla"
+      ]
+    },
+    {
+      "codigoENP": "ES620010",
+      "figura": "Paisaje Protegido",
+      "nombre": "Barrancos de Gebas",
+      "supHaMiteco": 1908.8,
+      "codigoIMIDA": "ENP000017",
+      "supHaImida": 1908.8,
+      "desvioPct": 0,
+      "municipios": [
+        "Alhama de Murcia",
+        "Librilla",
+        "Mula"
+      ]
+    },
+    {
+      "codigoENP": "ES620005",
+      "figura": "Paisaje Protegido",
+      "nombre": "Sierra de las Moreras",
+      "supHaMiteco": 1712.6,
+      "codigoIMIDA": "ENP000009",
+      "supHaImida": 1712.6,
+      "desvioPct": 0,
+      "municipios": [
+        "Mazarrón"
+      ]
+    },
+    {
+      "codigoENP": "ES620016",
+      "figura": "Paisaje Protegido",
+      "nombre": "Humedal del Ajauque y Rambla Salada",
+      "supHaMiteco": 1621.9,
+      "codigoIMIDA": "ENP000006",
+      "supHaImida": 1621.9,
+      "desvioPct": 0,
+      "municipios": [
+        "Abanilla",
+        "Fortuna",
+        "Molina de Segura",
+        "Murcia",
+        "Santomera"
+      ]
+    },
+    {
+      "codigoENP": "ES620015",
+      "figura": "Paisaje Protegido",
+      "nombre": "Espacios Abiertos e Islas del Mar Menor",
+      "supHaMiteco": 1307.4,
+      "codigoIMIDA": "ENP000008 (dos piezas: 1227,3 + 80,1 ha = 1307,4)",
+      "supHaImida": 1307.4,
+      "desvioPct": 0,
+      "municipios": [
+        "Alcázares, Los",
+        "Cartagena",
+        "San Javier"
+      ],
+      "nota": "El IMIDA lo publica en dos polígonos cuya suma coincide exactamente con la superficie del MITECO."
+    },
+    {
+      "codigoENP": "ES620022",
+      "figura": "Paisaje Protegido",
+      "nombre": "Cabezo Gordo",
+      "supHaMiteco": 271.8,
+      "codigoIMIDA": "EN0000018",
+      "supHaImida": 271.8,
+      "desvioPct": 0,
+      "municipios": [
+        "Torre-Pacheco"
+      ]
+    },
+    {
+      "codigoENP": "ES620023",
+      "figura": "Paisaje Protegido",
+      "nombre": "Islas e Islotes del Litoral Mediterráneo",
+      "supHaMiteco": 39.5,
+      "codigoIMIDA": "EN0000015",
+      "supHaImida": 39.5,
+      "desvioPct": 0,
+      "municipios": [
+        "Cartagena",
+        "Mazarrón",
+        "San Javier",
+        "Águilas"
+      ]
+    },
+    {
+      "codigoENP": "ES620009",
+      "figura": "Reserva Natural",
+      "nombre": "Sotos y bosques de ribera de Cañaverosa",
+      "supHaMiteco": 248.8,
+      "codigoIMIDA": "ENP000011",
+      "supHaImida": 242.1,
+      "desvioPct": 2.69,
+      "municipios": [
+        "Calasparra",
+        "Moratalla"
+      ]
+    },
+    {
+      "codigoENP": "ES620020",
+      "figura": "Monumento Natural",
+      "nombre": "Monte Arabí",
+      "supHaMiteco": 582.4,
+      "codigoIMIDA": "ENP000020",
+      "supHaImida": 582.8,
+      "desvioPct": 0.07,
+      "municipios": [
+        "Yecla"
+      ]
+    },
+    {
+      "codigoENP": "ES620024",
+      "figura": "Monumento Natural",
+      "nombre": "Sima de la Higuera",
+      "supHaMiteco": 49,
+      "codigoIMIDA": "ENP000022",
+      "supHaImida": 49,
+      "desvioPct": 0,
+      "municipios": [
+        "Pliego"
+      ]
+    },
+    {
+      "codigoENP": "ES620025",
+      "figura": "Monumento Natural",
+      "nombre": "Capa Negra de Caravaca de la Cruz",
+      "supHaMiteco": 24,
+      "codigoIMIDA": "ENP000023",
+      "supHaImida": 24,
+      "desvioPct": 0,
+      "municipios": [
+        "Caravaca de la Cruz"
+      ]
+    },
+    {
+      "codigoENP": "ES620021",
+      "figura": "Monumento Natural",
+      "nombre": "Gredas de Bolnuevo",
+      "supHaMiteco": 2.4,
+      "codigoIMIDA": "ENP000021",
+      "supHaImida": 2.4,
+      "desvioPct": 0,
+      "municipios": [
+        "Mazarrón"
+      ]
+    },
+    {
+      "codigoENP": "ES620026",
+      "figura": "Monumento Natural",
+      "nombre": "Salto del Usero",
+      "supHaMiteco": 1.7,
+      "codigoIMIDA": null,
+      "supHaImida": null,
+      "desvioPct": null,
+      "municipios": [],
+      "nota": "No aparece con carácter Firme en el servicio del IMIDA. Municipio pendiente de confirmar en fuente oficial: NO rellenar a ojo."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "slug": "sierra-de-las-moreras",
+  "name": "Sierra de las Moreras",
+  "apiSlug": "sierra-de-las-moreras",
+  "version": 1,
+  "updatedAt": "2026-07-27",
+  "data": "Data/parks/murcia/sierra-de-las-moreras/park.json",
+  "geo": {
+    "parque": "Data/parks/murcia/sierra-de-las-moreras/geo/parque.geojson",
+    "lic": "Data/parks/murcia/sierra-de-las-moreras/geo/lic.geojson",
+    "zepa": "Data/parks/murcia/sierra-de-las-moreras/geo/zepa.geojson"
+  },
+  "images": [],
+  "audio": [],
+  "counts": {
+    "species": 0,
+    "habitats": 0,
+    "pointsOfInterest": 0,
+    "images": 0,
+    "assetBytes": 0
+  }
+}

@@ -217,10 +217,13 @@ export function renderMarkers() {
   state.markers.clear();
   state.data.species.forEach(species => {
     if (!state.seenSpecies.has(species.id)) return;
-    // Las especies sin coordenadas (p. ej. las aves de la ZEPA, que vuelan) no llevan marcador.
-    if (!species.coordinates) return;
+    // Las especies sin coordenada de catálogo (p. ej. las aves de la ZEPA, que vuelan) no tienen
+    // un punto fijo, pero SÍ adquieren ubicación cuando el usuario las marca como vistas con GPS:
+    // speciesLatLng antepone el avistamiento. Solo se quedan sin marcador si tampoco hay eso.
+    const latLng = speciesLatLng(species);
+    if (!latLng) return;
     const fromGps = state.sightings.has(species.id);
-    const marker = L.marker(speciesLatLng(species), { icon: speciesDivIcon(species) });
+    const marker = L.marker(latLng, { icon: speciesDivIcon(species) });
     marker.bindPopup(
       String(html`<strong>${species.commonName}</strong><br>${species.scientificName}<br><small>${fromGps ? '📍 Ubicación registrada por GPS' : '📍 Ubicación aproximada (sin GPS)'}</small>`)
     );
@@ -235,6 +238,9 @@ export function renderPoiMarkers() {
   state.poiMarkers.clear();
   const pois = state.data.pointsOfInterest || [];
   pois.forEach(poi => {
+    // Un POI siempre debería venir ubicado, pero una ficha antigua sin coordenadas haría reventar
+    // a L.marker(null). Se salta: mejor que falte un marcador a que se caiga el mapa entero.
+    if (!poi.coordinates) return;
     const seen = state.seenPois.has(poi.id);
     const marker = L.marker(poi.coordinates, { icon: poiDivIcon(poi, seen) }).addTo(state.poiGroup);
     marker.bindPopup(

@@ -1,0 +1,699 @@
+{
+  "_comment": "Atlas y Manual de los Hábitats Naturales y Seminaturales de España (2005). Complementa a la cartografía de Hábitats de Interés Comunitario de 1997 (habitat-provincias.json): usa aquélla como base pero la actualiza y AMPLÍA a hábitats seminaturales, que la Directiva 92/43/CEE no recoge. Descarga por provincia: cada una necesita su par shapefile + tabla de datos.",
+  "fuente": "https://www.miteco.gob.es/es/biodiversidad/servicios/banco-datos-naturaleza/informacion-disponible/index_atlas_manual_habitats.html",
+  "paginasOrigen": [
+    "https://www.miteco.gob.es/es/biodiversidad/servicios/banco-datos-naturaleza/informacion-disponible/atlas_habitats_alava_lleida.html",
+    "https://www.miteco.gob.es/es/biodiversidad/servicios/banco-datos-naturaleza/informacion-disponible/atlas_manual_rioja_zaragoza.html"
+  ],
+  "diccionarioDeDatos": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/habitat_inb_2005_dd_tcm30-199583.xlsx",
+  "mapaHabitatsPrioritarios": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/presenciahabitatprioritario2005_tcm30-199584.pdf",
+  "actualizacion": "2005",
+  "licencia": "Uso libre y gratuito con atribución. Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico».",
+  "totalFicheros": 104,
+  "tamanoTotalMB": 388.5,
+  "reglaURL": "tcm del shapefile = 199585+(NN-1)*2 para NN<=25, y 199636+(NN-26)*2 para NN>=26. El de datos es ese +1. Verificado contra las 104 URL publicadas: coincidencia total. AUN ASÍ las URL van escritas literalmente aquí, porque el patrón ya falló una vez con el conjunto de 1997.",
+  "avisos": [
+    "A DIFERENCIA del conjunto de 1997, éste cubre 52 provincias: incluye Ceuta (51) y Melilla (52).",
+    "Erratas del MITECO conservadas: la provincia 01 usa minúsculas (inb_habitat01_2005) y la 04 escribe IBN en vez de INB (IBN_HABITAT04_2005). No normalizar.",
+    "El huso UTM es propio de cada provincia y NO se debe asumir: leerlo del .prj tras extraer.",
+    "Es cartografía de 2005 basada en la de 1997: al cruzarla con habitat-provincias.json hay que decidir cuál manda por recinto, no mezclarlas sin criterio."
+  ],
+  "provincias": [
+    {
+      "codigoINE": "01",
+      "provincia": "Álava",
+      "shp": {
+        "fichero": "INB_Habitat01.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_habitat01_2005_tcm30-199585.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos01.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos01_tcm30-199586.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "02",
+      "provincia": "Albacete",
+      "shp": {
+        "fichero": "INB_Habitat02.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT02_2005_tcm30-199587.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos02.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos02_tcm30-199588.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "03",
+      "provincia": "Alicante/Alacant",
+      "shp": {
+        "fichero": "INB_Habitat03.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT03_2005_tcm30-199589.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos03.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos03_tcm30-199590.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "04",
+      "provincia": "Almería",
+      "shp": {
+        "fichero": "INB_Habitat04.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/IBN_HABITAT04_2005_tcm30-199591.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos04.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos04_tcm30-199592.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "05",
+      "provincia": "Ávila",
+      "shp": {
+        "fichero": "INB_Habitat05.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT05_2005_tcm30-199593.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos05.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos05_tcm30-199594.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "06",
+      "provincia": "Badajoz",
+      "shp": {
+        "fichero": "INB_Habitat06.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT06_2005_tcm30-199595.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos06.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos06_tcm30-199596.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "07",
+      "provincia": "Illes Balears",
+      "shp": {
+        "fichero": "INB_Habitat07.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT07_2005_tcm30-199597.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos07.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos07_tcm30-199598.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "08",
+      "provincia": "Barcelona",
+      "shp": {
+        "fichero": "INB_Habitat08.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT08_2005_tcm30-199599.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos08.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos08_tcm30-199600.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "09",
+      "provincia": "Burgos",
+      "shp": {
+        "fichero": "INB_Habitat09.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT09_2005_tcm30-199601.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos09.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos09_tcm30-199602.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "10",
+      "provincia": "Cáceres",
+      "shp": {
+        "fichero": "INB_Habitat10.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT10_2005_tcm30-199603.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos10.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos10_tcm30-199604.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "11",
+      "provincia": "Cádiz",
+      "shp": {
+        "fichero": "INB_Habitat11.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT11_2005_tcm30-199605.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos11.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos11_tcm30-199606.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "12",
+      "provincia": "Castellón/Castelló",
+      "shp": {
+        "fichero": "INB_Habitat12.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT12_2005_tcm30-199607.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos12.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos12_tcm30-199608.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "13",
+      "provincia": "Ciudad Real",
+      "shp": {
+        "fichero": "INB_Habitat13.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT13_2005_tcm30-199609.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos13.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos13_tcm30-199610.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "14",
+      "provincia": "Córdoba",
+      "shp": {
+        "fichero": "INB_Habitat14.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT14_2005_tcm30-199611.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos14.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos14_tcm30-199612.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "15",
+      "provincia": "A Coruña",
+      "shp": {
+        "fichero": "INB_Habitat15.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT15_2005_tcm30-199613.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos15.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos15_tcm30-199614.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "16",
+      "provincia": "Cuenca",
+      "shp": {
+        "fichero": "INB_Habitat16.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT16_2005_tcm30-199615.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos16.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos16_tcm30-199616.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "17",
+      "provincia": "Girona",
+      "shp": {
+        "fichero": "INB_Habitat17.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT17_2005_tcm30-199617.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos17.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos17_tcm30-199618.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "18",
+      "provincia": "Granada",
+      "shp": {
+        "fichero": "INB_Habitat18.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT18_2005_tcm30-199619.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos18.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos18_tcm30-199620.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "19",
+      "provincia": "Guadalajara",
+      "shp": {
+        "fichero": "INB_Habitat19.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT19_2005_tcm30-199621.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos19.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos19_tcm30-199622.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "20",
+      "provincia": "Guipúzcoa",
+      "shp": {
+        "fichero": "INB_Habitat20.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT20_2005_tcm30-199623.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos20.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos20_tcm30-199624.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "21",
+      "provincia": "Huelva",
+      "shp": {
+        "fichero": "INB_Habitat21.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT21_2005_tcm30-199625.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos21.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos21_tcm30-199626.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "22",
+      "provincia": "Huesca",
+      "shp": {
+        "fichero": "INB_Habitat22.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT22_2005_tcm30-199627.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos22.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos22_tcm30-199628.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "23",
+      "provincia": "Jaén",
+      "shp": {
+        "fichero": "INB_Habitat23.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT23_2005_tcm30-199629.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos23.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos23_tcm30-199630.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "24",
+      "provincia": "León",
+      "shp": {
+        "fichero": "INB_Habitat24.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT24_2005_tcm30-199631.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos24.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos24_tcm30-199632.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "25",
+      "provincia": "Lleida",
+      "shp": {
+        "fichero": "INB_Habitat25.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT25_2005_tcm30-199633.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos25.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos25_tcm30-199634.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "26",
+      "provincia": "La Rioja",
+      "shp": {
+        "fichero": "INB_Habitat26.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT26_2005_tcm30-199636.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos26.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos26_tcm30-199637.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "27",
+      "provincia": "Lugo",
+      "shp": {
+        "fichero": "INB_Habitat27.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT27_2005_tcm30-199638.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos27.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos27_tcm30-199639.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "28",
+      "provincia": "Madrid",
+      "shp": {
+        "fichero": "INB_Habitat28.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT28_2005_tcm30-199640.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos28.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos28_tcm30-199641.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "29",
+      "provincia": "Málaga",
+      "shp": {
+        "fichero": "INB_Habitat29.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT29_2005_tcm30-199642.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos29.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos29_tcm30-199643.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "30",
+      "provincia": "Murcia",
+      "shp": {
+        "fichero": "INB_Habitat30.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT30_2005_tcm30-199644.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos30.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos30_tcm30-199645.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "31",
+      "provincia": "Navarra",
+      "shp": {
+        "fichero": "INB_Habitat31.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT31_2005_tcm30-199646.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos31.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos31_tcm30-199647.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "32",
+      "provincia": "Ourense",
+      "shp": {
+        "fichero": "INB_Habitat32.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT32_2005_tcm30-199648.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos32.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos32_tcm30-199649.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "33",
+      "provincia": "Asturias",
+      "shp": {
+        "fichero": "INB_Habitat33.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT33_2005_tcm30-199650.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos33.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos33_tcm30-199651.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "34",
+      "provincia": "Palencia",
+      "shp": {
+        "fichero": "INB_Habitat34.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT34_2005_tcm30-199652.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos34.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos34_tcm30-199653.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "35",
+      "provincia": "Las Palmas",
+      "shp": {
+        "fichero": "INB_Habitat35.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT35_2005_tcm30-199654.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos35.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos35_tcm30-199655.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "36",
+      "provincia": "Pontevedra",
+      "shp": {
+        "fichero": "INB_Habitat36.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT36_2005_tcm30-199656.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos36.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos36_tcm30-199657.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "37",
+      "provincia": "Salamanca",
+      "shp": {
+        "fichero": "INB_Habitat37.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT37_2005_tcm30-199658.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos37.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos37_tcm30-199659.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "38",
+      "provincia": "Santa Cruz de Tenerife",
+      "shp": {
+        "fichero": "INB_Habitat38.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT38_2005_tcm30-199660.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos38.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos38_tcm30-199661.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "39",
+      "provincia": "Cantabria",
+      "shp": {
+        "fichero": "INB_Habitat39.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT39_2005_tcm30-199662.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos39.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos39_tcm30-199663.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "40",
+      "provincia": "Segovia",
+      "shp": {
+        "fichero": "INB_Habitat40.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT40_2005_tcm30-199664.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos40.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos40_tcm30-199665.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "41",
+      "provincia": "Sevilla",
+      "shp": {
+        "fichero": "INB_Habitat41.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT41_2005_tcm30-199666.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos41.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos41_tcm30-199667.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "42",
+      "provincia": "Soria",
+      "shp": {
+        "fichero": "INB_Habitat42.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT42_2005_tcm30-199668.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos42.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos42_tcm30-199669.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "43",
+      "provincia": "Tarragona",
+      "shp": {
+        "fichero": "INB_Habitat43.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT43_2005_tcm30-199670.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos43.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos43_tcm30-199671.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "44",
+      "provincia": "Teruel",
+      "shp": {
+        "fichero": "INB_Habitat44.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT44_2005_tcm30-199672.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos44.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos44_tcm30-199673.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "45",
+      "provincia": "Toledo",
+      "shp": {
+        "fichero": "INB_Habitat45.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT45_2005_tcm30-199674.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos45.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos45_tcm30-199675.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "46",
+      "provincia": "Valencia/València",
+      "shp": {
+        "fichero": "INB_Habitat46.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT46_2005_tcm30-199676.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos46.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos46_tcm30-199677.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "47",
+      "provincia": "Valladolid",
+      "shp": {
+        "fichero": "INB_Habitat47.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT47_2005_tcm30-199678.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos47.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos47_tcm30-199679.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "48",
+      "provincia": "Vizcaya",
+      "shp": {
+        "fichero": "INB_Habitat48.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT48_2005_tcm30-199680.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos48.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos48_tcm30-199681.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "49",
+      "provincia": "Zamora",
+      "shp": {
+        "fichero": "INB_Habitat49.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT49_2005_tcm30-199682.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos49.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos49_tcm30-199683.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "50",
+      "provincia": "Zaragoza",
+      "shp": {
+        "fichero": "INB_Habitat50.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT50_2005_tcm30-199684.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos50.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos50_tcm30-199685.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "51",
+      "provincia": "Ceuta",
+      "shp": {
+        "fichero": "INB_Habitat51.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT51_2005_tcm30-199686.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos51.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos51_tcm30-199687.zip"
+      },
+      "husoUTM": null
+    },
+    {
+      "codigoINE": "52",
+      "provincia": "Melilla",
+      "shp": {
+        "fichero": "INB_Habitat52.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/INB_HABITAT52_2005_tcm30-199688.zip"
+      },
+      "dbf": {
+        "fichero": "INB_Datos52.zip",
+        "url": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/inb_datos52_tcm30-199689.zip"
+      },
+      "husoUTM": null
+    }
+  ]
+}
