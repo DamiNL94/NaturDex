@@ -8,7 +8,8 @@
   "geo": {
     "parque": "Data/parks/murcia/sierra-de-las-moreras/geo/parque.geojson",
     "lic": "Data/parks/murcia/sierra-de-las-moreras/geo/lic.geojson",
-    "zepa": "Data/parks/murcia/sierra-de-las-moreras/geo/zepa.geojson"
+    "zepa": "Data/parks/murcia/sierra-de-las-moreras/geo/zepa.geojson",
+    "trails": "Data/parks/murcia/sierra-de-las-moreras/geo/trails.geojson"
   },
   "images": [],
   "audio": [],
@@ -18,5 +19,20 @@
     "pointsOfInterest": 0,
     "images": 0,
     "assetBytes": 0
+  },
+  "tiles": {
+    "pmtiles": "Data/parks/murcia/sierra-de-las-moreras/tiles/base.pmtiles",
+    "bbox": [
+      -1.383484,
+      37.555367,
+      -1.3003,
+      37.590033
+    ],
+    "minzoom": 0,
+    "maxzoom": 15,
+    "bytes": 825665,
+    "attribution": "<a href=\"https://protomaps.com\">Protomaps</a> &copy; <a href=\"https://openstreetmap.org/copyright\">OpenStreetMap</a>",
+    "source": "https://build.protomaps.com/20260727.pmtiles",
+    "builtAt": "2026-07-28"
   }
 }

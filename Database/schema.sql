@@ -94,6 +94,11 @@ CREATE TABLE IF NOT EXISTS species (
     longitude DECIMAL(10,6),
     rarity_score TINYINT UNSIGNED DEFAULT 1,
     is_featured BOOLEAN DEFAULT FALSE,
+    -- Catálogo público: FALSE oculta la especie del listado/contadores sin borrar el dato ni sus
+    -- referencias en species_habitats (criterio: pocas ocurrencias GBIF Y sin figura en ningún
+    -- catálogo/anexo oficial de protección). NULL/TRUE = visible, igual que las especies previas a
+    -- esta columna (aditivo, no rompe parques ya cargados). Ver Frontend/Js/data.js `applyVisibility`.
+    is_visible BOOLEAN DEFAULT TRUE,
     -- Campos de cita/estado de conservación: TEXT (no VARCHAR) porque las atribuciones y los
     -- estados con referencia pueden superar los 500 caracteres. Con MySQL en modo estricto un
     -- VARCHAR corto abortaría la carga del seed en lugar de truncar en silencio.

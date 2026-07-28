@@ -46,11 +46,30 @@ export async function loadManifest(parkEntry) {
   return res.data;
 }
 
+// Especies con `visible: false` (evidencia insuficiente: pocas ocurrencias GBIF y sin figura en
+// ningún catálogo/anexo oficial) no se listan ni cuentan en el catálogo público, aunque el dato
+// sigue documentado en el JSON/BD para no perder el trabajo de curación. Se retiran también de
+// `habitat.speciesIds` para que el contador y las chips de cada hábitat cuadren con lo que
+// realmente se puede ver. Especies sin el campo `visible` (todos los parques anteriores a esta
+// función) se tratan como visibles: el filtro es aditivo y no cambia nada donde no se use.
+function applyVisibility(data) {
+  if (!data || !Array.isArray(data.species)) return data;
+  const hiddenIds = new Set(data.species.filter(s => s.visible === false).map(s => s.id));
+  if (!hiddenIds.size) return data;
+  data.species = data.species.filter(s => s.visible !== false);
+  if (Array.isArray(data.habitats)) {
+    for (const h of data.habitats) {
+      if (Array.isArray(h.speciesIds)) h.speciesIds = h.speciesIds.filter(id => !hiddenIds.has(id));
+    }
+  }
+  return data;
+}
+
 // --- Datos del parque (especies, hábitats, POIs) ---------------------------------------------------
 export async function loadData(manifest) {
   // 1) Fichero de datos del parque (cacheado para offline).
   const res = await NaturDexOffline.fetchJsonCached(manifest.data);
-  state.data = res.data;
+  state.data = applyVisibility(res.data);
   state.dataFromCache = res.fromCache;
   // 2) Si hay backend accesible, sus datos (desde la base de datos) tienen prioridad y refrescan
   //    la copia offline con la versión más completa.
@@ -59,7 +78,7 @@ export async function loadData(manifest) {
     if (apiResponse.ok) {
       const apiData = await apiResponse.json();
       if (apiData?.species?.length) {
-        state.data = apiData;
+        state.data = applyVisibility(apiData);
         NaturDexOffline.cacheResource(manifest.data, apiData);
       }
     }

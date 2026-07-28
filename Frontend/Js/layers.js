@@ -15,14 +15,39 @@ import { map, setHabitatVisible, focusHabitatOnMap, hasParkBaseLayer, applyBaseC
 
 // Capas generales (las de hábitats van en su propia subsección). El swatch reutiliza las clases
 // de la antigua leyenda (.legend-dot/.legend-line) para que la simbología siga siendo la misma.
+// `label` puede ser una función: la de senderos varía según el parque (GR-92 en el litoral, GR-250
+// en Carrascoy…), y no todos los parques tienen uno — `visible` la oculta si no hay ninguno cargado,
+// así la leyenda nunca anuncia un sendero que no pasa por el parque abierto.
 const OVERLAYS = [
   { key: 'parque', label: 'Límite del parque', swatch: '<i class="legend-line parque"></i>', group: () => state.parqueLayer },
   { key: 'lic', label: 'LIC · Red Natura 2000', swatch: '<i class="legend-line lic"></i>', group: () => state.licLayer },
   { key: 'zepa', label: 'ZEPA · Red Natura 2000', swatch: '<i class="legend-line zepa"></i>', group: () => state.zepaLayer },
-  { key: 'trails', label: 'Senderos (GR-92)', swatch: '<i class="legend-line trail"></i>', group: () => state.trailLayer },
+  { key: 'trails', label: trailsLabel, swatch: '<i class="legend-line trail"></i>', group: () => state.trailLayer, visible: hasTrails },
   { key: 'pois', label: 'Puntos de interés', swatch: '<i class="legend-dot poi"></i>', group: () => state.poiGroup },
   { key: 'species', label: 'Especies vistas', swatch: '<i class="legend-dot fauna"></i>', group: () => state.speciesCluster }
 ];
+
+// Los senderos de gran recorrido (GR) de un parque salen de su trails.geojson (ver
+// Tools/build-park-trails.js), no de una lista fija: un parque puede no tener ninguno, uno o varios
+// (p. ej. Cuatro Calas tiene tramos de GR-92 y GR-253).
+function trailFeatures() {
+  const trails = state.geo && state.geo.trails;
+  return (trails && trails.features) || [];
+}
+
+function hasTrails() {
+  return trailFeatures().length > 0;
+}
+
+function trailsLabel() {
+  const refs = trailFeatures().map(f => {
+    const name = (f.properties && f.properties.name) || '';
+    const m = name.match(/GR-?\s?\d+/i);
+    return m ? m[0].toUpperCase().replace(/^GR\s?/, 'GR-') : name;
+  }).filter(Boolean);
+  const unique = [...new Set(refs)];
+  return unique.length ? 'Senderos (' + unique.join(' · ') + ')' : 'Senderos';
+}
 
 function habitatRows() {
   return (state.data && state.data.habitats ? state.data.habitats : []).map(h => {
@@ -49,7 +74,7 @@ export function refreshLayersPanel() {
     </section>
     <section class="layers-section">
     <h4>Capas</h4>
-    ${OVERLAYS.map(o => html`<label class="layers-row"><input type="checkbox" data-overlay="${o.key}" ${map.hasLayer(o.group()) ? raw('checked') : ''}>${raw(o.swatch)}${o.label}</label>`)}
+    ${OVERLAYS.filter(o => !o.visible || o.visible()).map(o => html`<label class="layers-row"><input type="checkbox" data-overlay="${o.key}" ${map.hasLayer(o.group()) ? raw('checked') : ''}>${raw(o.swatch)}${typeof o.label === 'function' ? o.label() : o.label}</label>`)}
     </section>
     <section class="layers-section">
     <h4>Hábitats <span class="layers-mini-actions"><button type="button" data-habitats-all>Todos</button><button type="button" data-habitats-none>Ninguno</button></span></h4>

@@ -155,15 +155,6 @@
                             "center": [38.28027, -1.71834],
                             "path": "Data/parks/murcia/sotos-y-bosques-de-ribera-de-canaverosa",
                             "manifest": "Data/parks/murcia/sotos-y-bosques-de-ribera-de-canaverosa/manifest.json"
-                        },
-                        {
-                            "slug": "salto-del-usero",
-                            "name": "Salto del Usero",
-                            "category": "Monumento Natural",
-                            "status": "basic",
-                            "center": [38.0262, -1.67331],
-                            "path": "Data/parks/murcia/salto-del-usero",
-                            "manifest": "Data/parks/murcia/salto-del-usero/manifest.json"
                         }
                     ]
                 }

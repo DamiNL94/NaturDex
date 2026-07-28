@@ -135,6 +135,11 @@ CALL naturdex_add_column('habitats', 'image_url', 'VARCHAR(500) NULL');
 -- las imágenes de GBIF/iNaturalist/Wikimedia (CC-BY / CC-BY-SA / CC-BY-NC).
 CALL naturdex_add_column('species', 'image_attribution', 'VARCHAR(300) NULL');
 
+-- Visibilidad en el catálogo público: FALSE oculta la especie (poca evidencia GBIF y sin figura en
+-- ningún catálogo/anexo oficial) sin borrar el dato. DEFAULT TRUE mantiene visibles todas las
+-- especies ya cargadas. Ver Frontend/Js/data.js `applyVisibility`.
+CALL naturdex_add_column('species', 'is_visible', 'BOOLEAN NOT NULL DEFAULT TRUE');
+
 -- ------------------------------------------------------------------------------------------------
 -- Campos de cita/estado a TEXT: las atribuciones y los estados de conservación con referencia
 -- pueden superar los 500 caracteres. En MySQL con modo estricto (STRICT_TRANS_TABLES, por defecto

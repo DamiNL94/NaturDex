@@ -81,7 +81,7 @@ function buildParkPayload($conn, $parkSlug) {
     }
 
     // --- Especies ---------------------------------------------------------------------------------
-    $speciesStmt = $conn->prepare("SELECT id, common_name, scientific_name, kingdom, family, primary_habitat, conservation_status, description, identification_tips, seasonality, image_url, image_attribution, latitude, longitude, rarity_score, is_featured, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, spain_status, murcia_status, review_note, eidos_taxonid, gbif_species_key, zepa_site_code FROM species WHERE park_id = ? ORDER BY is_featured DESC, common_name ASC");
+    $speciesStmt = $conn->prepare("SELECT id, common_name, scientific_name, kingdom, family, primary_habitat, conservation_status, description, identification_tips, seasonality, image_url, image_attribution, latitude, longitude, rarity_score, is_featured, is_visible, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, spain_status, murcia_status, review_note, eidos_taxonid, gbif_species_key, zepa_site_code FROM species WHERE park_id = ? ORDER BY is_featured DESC, common_name ASC");
     $speciesStmt->bind_param("i", $park["id"]);
     $speciesStmt->execute();
     $result = $speciesStmt->get_result();
@@ -107,6 +107,9 @@ function buildParkPayload($conn, $parkSlug) {
                 : null,
             "rarityScore" => (int) $row["rarity_score"],
             "featured" => (bool) $row["is_featured"],
+            // false = oculta del catálogo público (poca evidencia GBIF y sin figura oficial), pero
+            // el dato se conserva. Ver Frontend/Js/data.js `applyVisibility`.
+            "visible" => (bool) $row["is_visible"],
             "source" => $row["source"],
             "taxonomy" => [
                 "kingdom" => $row["kingdom"] === "flora" ? "Plantae" : "Animalia",

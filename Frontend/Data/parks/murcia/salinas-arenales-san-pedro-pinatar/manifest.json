@@ -8,7 +8,8 @@
   "geo": {
     "parque": "Data/parks/murcia/salinas-arenales-san-pedro-pinatar/geo/parque.geojson",
     "lic": "Data/parks/murcia/salinas-arenales-san-pedro-pinatar/geo/lic.geojson",
-    "zepa": "Data/parks/murcia/salinas-arenales-san-pedro-pinatar/geo/zepa.geojson"
+    "zepa": "Data/parks/murcia/salinas-arenales-san-pedro-pinatar/geo/zepa.geojson",
+    "trails": "Data/parks/murcia/salinas-arenales-san-pedro-pinatar/geo/trails.geojson"
   },
   "images": [],
   "audio": [],
@@ -18,5 +19,20 @@
     "pointsOfInterest": 0,
     "images": 0,
     "assetBytes": 0
+  },
+  "tiles": {
+    "pmtiles": "Data/parks/murcia/salinas-arenales-san-pedro-pinatar/tiles/base.pmtiles",
+    "bbox": [
+      -0.777613,
+      37.777728,
+      -0.74284,
+      37.84332
+    ],
+    "minzoom": 0,
+    "maxzoom": 15,
+    "bytes": 1046737,
+    "attribution": "<a href=\"https://protomaps.com\">Protomaps</a> &copy; <a href=\"https://openstreetmap.org/copyright\">OpenStreetMap</a>",
+    "source": "https://build.protomaps.com/20260727.pmtiles",
+    "builtAt": "2026-07-28"
   }
 }

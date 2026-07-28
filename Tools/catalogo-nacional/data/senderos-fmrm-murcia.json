@@ -1,0 +1,206 @@
+{
+  "_comment": "Red de senderos homologados por la Federación de Montañismo de la Región de Murcia (FMRM), filtrada a los espacios protegidos que NaturDex tiene dados de alta en Murcia. Cubre los tres tipos: GR (Gran Recorrido), PR-MU (Pequeño Recorrido) y SL-MU (Sendero Local). Es un catálogo de REFERENCIA: no contiene geometría, y hay un motivo de licencia detrás (ver avisoLicencia).",
+  "sustituyeA": "senderos-pr-mu-murcia.json (solo cubría los PR-MU)",
+  "extraido": "2026-07-27",
+  "fuentes": {
+    "GR": "https://www.fmrm.net/comites/comite-de-senderos/red-de-senderos-de-la-region-de-murcia/gran-recorrido-gr",
+    "PR": "https://www.fmrm.net/index.php/comites/comite-de-senderos/red-de-senderos-de-la-region-de-murcia/pequeno-recorrido-pr",
+    "SL": "https://www.fmrm.net/comites/comite-de-senderos/red-de-senderos-de-la-region-de-murcia/senderos-locales-sl"
+  },
+  "totalesEnLaFuente": { "GR": 9, "PR": 126, "SL": 17 },
+
+  "avisoNomenclatura": "No existen los códigos «GR-MU»: los grandes recorridos de la región usan la numeración estatal (GR-7, GR-92, GR-127, GR-250…). Los que sí llevan sufijo regional son PR-MU y SL-MU.",
+
+  "avisoLicencia": {
+    "problema": "La FMRM no publica tracks propios: cada sendero enlaza a una traza alojada en Wikiloc y subida por usuarios. Sus condiciones no permiten descargar en bloque ni redistribuir, así que NO se pueden empaquetar en la app.",
+    "queSePuedeUsar": "El código, el nombre oficial y la homologación por la FMRM son datos factuales y sí se pueden citar. El `wikiloc` de cada entrada es una REFERENCIA para verificar a mano, no un origen de datos.",
+    "deDondeSacarLaGeometria": "OpenStreetMap, que es la vía que el proyecto YA usa para el GR-92 en Cabo Cope (© OpenStreetMap contributors, ODbL).",
+    "consultaOverpass": "[out:json][timeout:90];rel[\"route\"=\"hiking\"][\"ref\"~\"^(GR|PR-MU|SL-MU)\"](37.3,-2.4,38.9,-0.6);out geom;",
+    "verificacionObligatoria": "Comprobar que el `ref` de OSM coincide con el código de este catálogo y que la traza discurre dentro o junto al límite del espacio. OSM no es fuente de homologación; la oficial es la FMRM y este fichero es el puente entre ambas."
+  },
+
+  "criterioDeConfianza": {
+    "alta": "El nombre cita expresamente el espacio protegido o un paraje inequívocamente suyo.",
+    "media": "Coincide el municipio y es plausible, pero el nombre no lo confirma. Verificar con la traza.",
+    "baja": "Solo coincide el municipio y hay indicios de que discurre fuera.",
+    "requiereGeometria": "Reservado a los GR: son rutas de largo recorrido que atraviesan la región y solo la traza dice por qué espacios pasa realmente."
+  },
+
+  "granRecorrido": {
+    "_nota": "9 GR en la región. Al ser lineales y de decenas o cientos de kilómetros, NO se les puede asignar espacio por el nombre: hay que intersecar la traza con cada límite. Se listan enteros porque cualquiera puede cruzar varios parques.",
+    "senderos": [
+      { "codigo": "GR-7", "nombre": "Región de Murcia (sendero europeo E-4)", "wikiloc": 1232353, "confianza": "requiereGeometria" },
+      { "codigo": "GR-7.1", "nombre": "Sendero de la Cruz", "wikiloc": 1232462, "confianza": "requiereGeometria" },
+      { "codigo": "GR-7.2", "nombre": "Camino de la Cruz del Campo", "wikiloc": 1232484, "confianza": "requiereGeometria" },
+      { "codigo": "GR-92", "nombre": "Región de Murcia (Sendero del Mediterráneo)", "wikiloc": 1232505, "confianza": "requiereGeometria",
+        "nota": "CONFIRMADO en cabo-cope-puntas-calnegre: su traza ya está servida desde OpenStreetMap en geo/trails.geojson. Al ser el sendero litoral, es candidato en todos los espacios costeros." },
+      { "codigo": "GR-127", "nombre": "Río Segura", "wikiloc": 1232511, "confianza": "requiereGeometria",
+        "nota": "Sigue el Segura, que atraviesa la Reserva Natural de Cañaverosa. Candidato claro, pero hay que confirmarlo con la traza." },
+      { "codigo": "GR-250", "nombre": "Camino del Apóstol", "wikiloc": 1232544, "confianza": "requiereGeometria" },
+      { "codigo": "GR-251", "nombre": "Camino de la Cruz del altiplano", "wikiloc": 1232521, "confianza": "requiereGeometria" },
+      { "codigo": "GR-252", "nombre": "Camino de la Cruz del bajo Guadalentín", "wikiloc": 1232530, "confianza": "requiereGeometria" },
+      { "codigo": "GR-253", "nombre": "Camino de la Cruz del alto Guadalentín", "wikiloc": 1232534, "confianza": "requiereGeometria" }
+    ]
+  },
+
+  "espacios": [
+    {
+      "slug": "sierra-espuna",
+      "nombre": "Sierra Espuña",
+      "senderos": [
+        { "codigo": "PR-MU 57", "nombre": "Barranco de Leiva", "tipo": "PR", "confianza": "alta", "wikiloc": 1874441 },
+        { "codigo": "PR-MU 59", "nombre": "Umbría de Peña Apartada", "tipo": "PR", "confianza": "alta", "wikiloc": 1874447 },
+        { "codigo": "PR-MU 60", "nombre": "Senda del Barranco Ballesteros", "tipo": "PR", "confianza": "alta", "wikiloc": 1874477 },
+        { "codigo": "PR-MU 61", "nombre": "Senda del Lentisco", "tipo": "PR", "confianza": "alta", "wikiloc": 1874479 },
+        { "codigo": "PR-MU 62", "nombre": "Sendero del Purgatorio", "tipo": "PR", "confianza": "alta", "wikiloc": 1874480 },
+        { "codigo": "PR-MU 63", "nombre": "Sendero del Pedro López", "tipo": "PR", "confianza": "alta", "wikiloc": 1874483 },
+        { "codigo": "PR-MU 64", "nombre": "Sendero de la Santa (Totana)", "tipo": "PR", "confianza": "alta", "wikiloc": 1874501 },
+        { "codigo": "PR-MU 64.1", "nombre": "Variante a Aledo", "tipo": "PR", "confianza": "alta", "wikiloc": 1874503 },
+        { "codigo": "PR-MU 79", "nombre": "El Berro - El Sanatorio", "tipo": "PR", "confianza": "alta", "wikiloc": 1874540 },
+        { "codigo": "SL-MU 1", "nombre": "Sendero Ricardo Codorníu", "tipo": "SL", "confianza": "alta", "wikiloc": 1825093 },
+        { "codigo": "SL-MU 2", "nombre": "Senda de las Alquerías", "tipo": "SL", "confianza": "alta", "wikiloc": 1832511 },
+        { "codigo": "SL-MU 3", "nombre": "Sendero de Santa Eulalia y Corazón de Jesús", "tipo": "SL", "confianza": "alta", "wikiloc": 1832570 },
+        { "codigo": "PR-MU 76", "nombre": "Fuente Alta (Alhama de Murcia)", "tipo": "PR", "confianza": "media", "wikiloc": 1874537 },
+        { "codigo": "PR-MU 111", "nombre": "Sendero Fuente del Borrego (Alhama de Murcia)", "tipo": "PR", "confianza": "media", "wikiloc": null },
+        { "codigo": "PR-MU 93", "nombre": "(Alhama de Murcia)", "tipo": "PR", "confianza": "media", "wikiloc": null, "nota": "La fuente publica el código sin nombre. Resolver antes de usarlo." },
+        { "codigo": "PR-MU 102", "nombre": "Sendero del Cerro de la Selva (Zarzadilla de Totana - Lorca)", "tipo": "PR", "confianza": "baja", "wikiloc": 11101360, "nota": "Probablemente fuera del parque, al oeste." }
+      ]
+    },
+    {
+      "slug": "carrascoy-y-el-valle",
+      "nombre": "Carrascoy y El Valle",
+      "senderos": [
+        { "codigo": "PR-MU 21", "nombre": "Veteranos 92 (El Valle)", "tipo": "PR", "confianza": "alta", "wikiloc": 980980 },
+        { "codigo": "PR-MU 21.1", "nombre": "Variante Veteranos 92", "tipo": "PR", "confianza": "alta", "wikiloc": 980983 },
+        { "codigo": "PR-MU 22", "nombre": "Umbrías de Santo Ángel (El Valle)", "tipo": "PR", "confianza": "alta", "wikiloc": 982170 },
+        { "codigo": "PR-MU 22.1", "nombre": "Variante Umbrías de Santo Ángel", "tipo": "PR", "confianza": "alta", "wikiloc": 982171 },
+        { "codigo": "PR-MU 23", "nombre": "Sendero Antonio Pérez Nortes (El Valle)", "tipo": "PR", "confianza": "alta", "wikiloc": 982174 },
+        { "codigo": "PR-MU 23.1", "nombre": "Variante Sendero Antonio Pérez Nortes", "tipo": "PR", "confianza": "alta", "wikiloc": 982179 },
+        { "codigo": "SL-MU 7", "nombre": "Sendero local del Valle", "tipo": "SL", "confianza": "alta", "wikiloc": 1853231 },
+        { "codigo": "SL-MU 17", "nombre": "Sendero Cultural de El Valle", "tipo": "SL", "confianza": "alta", "wikiloc": 13827515 }
+      ]
+    },
+    {
+      "slug": "sierra-de-la-pila",
+      "nombre": "Sierra de la Pila",
+      "senderos": [
+        { "codigo": "PR-MU 120", "nombre": "Sendero Barranco del Sordo (Abarán)", "tipo": "PR", "confianza": "alta", "wikiloc": null },
+        { "codigo": "PR-MU 123", "nombre": "Sendero Barranco del Mulo (Fortuna)", "tipo": "PR", "confianza": "alta", "wikiloc": null },
+        { "codigo": "PR-MU 124", "nombre": "Sendero de la Cueva de la Encantada (Fortuna)", "tipo": "PR", "confianza": "alta", "wikiloc": null },
+        { "codigo": "PR-MU 126", "nombre": "La Pila y Picos Los Cenajos desde la iglesia de La Garapacha", "tipo": "PR", "confianza": "alta", "wikiloc": null },
+        { "codigo": "PR-MU 127", "nombre": "Sendero Umbría de La Pila", "tipo": "PR", "confianza": "alta", "wikiloc": null },
+        { "codigo": "PR-MU 127.1", "nombre": "Variante Umbría de La Pila", "tipo": "PR", "confianza": "alta", "wikiloc": null }
+      ]
+    },
+    {
+      "slug": "calblanque-monte-cenizas-pena-aguila",
+      "nombre": "Calblanque, Monte de las Cenizas y Peña del Águila",
+      "senderos": [
+        { "codigo": "PR-MU 1", "nombre": "Vuelta al Cabezo de la Fuente (Calblanque)", "tipo": "PR", "confianza": "alta", "wikiloc": 644771 },
+        { "codigo": "PR-MU 2", "nombre": "Monte de las Cenizas (Portmán)", "tipo": "PR", "confianza": "alta", "wikiloc": 980964 },
+        { "codigo": "PR-MU 3", "nombre": "Llano del Beal", "tipo": "PR", "confianza": "media", "wikiloc": 980967 },
+        { "codigo": "PR-MU 4", "nombre": "Vuelta a la Atalaya", "tipo": "PR", "confianza": "media", "wikiloc": 980968 }
+      ]
+    },
+    {
+      "slug": "cabo-cope-puntas-calnegre",
+      "nombre": "Cabo Cope y Puntas de Calnegre",
+      "nota": "Parque piloto. Ya sirve el GR-92 desde OpenStreetMap en geo/trails.geojson; estos serían la segunda capa.",
+      "senderos": [
+        { "codigo": "PR-MU 104", "nombre": "Sendero de Cabo Cope (Águilas)", "tipo": "PR", "confianza": "alta", "wikiloc": 15436338 },
+        { "codigo": "PR-MU 112", "nombre": "Sendero del Baladre (Águilas)", "tipo": "PR", "confianza": "media", "wikiloc": null },
+        { "codigo": "PR-MU 112.1", "nombre": "Variante Barranco del Baladre", "tipo": "PR", "confianza": "media", "wikiloc": null },
+        { "codigo": "PR-MU 113", "nombre": "Sendero del Agua (Águilas)", "tipo": "PR", "confianza": "media", "wikiloc": null },
+        { "codigo": "PR-MU 117", "nombre": "Sendero Cuesta Gos - Los Mayorales (Águilas)", "tipo": "PR", "confianza": "media", "wikiloc": null }
+      ]
+    },
+    {
+      "slug": "sotos-y-bosques-de-ribera-de-canaverosa",
+      "nombre": "Sotos y bosques de ribera de Cañaverosa",
+      "nota": "Ninguno cita la reserva; todos son de Calasparra o Moratalla, sus municipios. Verificar traza a traza.",
+      "senderos": [
+        { "codigo": "SL-MU 13", "nombre": "Senda del Castillo (Calasparra)", "tipo": "SL", "confianza": "media", "wikiloc": 1853168 },
+        { "codigo": "PR-MU 25", "nombre": "Almadenes - Almorchón", "tipo": "PR", "confianza": "media", "wikiloc": null, "nota": "El Cañón de los Almadenes es contiguo pero es otro espacio." },
+        { "codigo": "PR-MU 85", "nombre": "Sendero de los Romeros (Calasparra)", "tipo": "PR", "confianza": "media", "wikiloc": 1874558 },
+        { "codigo": "PR-MU 86", "nombre": "Sendero del Santuario por el Vivero (Calasparra)", "tipo": "PR", "confianza": "media", "wikiloc": 1874559 },
+        { "codigo": "PR-MU 87", "nombre": "Sendero de los Peregrinos (Calasparra)", "tipo": "PR", "confianza": "media", "wikiloc": 1874563 },
+        { "codigo": "PR-MU 109", "nombre": "Sendero de la Huertecica (Calasparra)", "tipo": "PR", "confianza": "media", "wikiloc": null },
+        { "codigo": "PR-MU 110", "nombre": "Sendero de Bolvonegro (Moratalla)", "tipo": "PR", "confianza": "baja", "wikiloc": null }
+      ]
+    },
+    {
+      "slug": "barrancos-de-gebas",
+      "nombre": "Barrancos de Gebas",
+      "senderos": [
+        { "codigo": "PR-MU 92", "nombre": "Senda de los Azagadores (Gebas, Alhama de Murcia)", "tipo": "PR", "confianza": "alta", "wikiloc": null },
+        { "codigo": "SL-MU 16", "nombre": "Sendero de las Ermitas de Gebas (Alhama de Murcia)", "tipo": "SL", "confianza": "alta", "wikiloc": 10757042 }
+      ]
+    },
+    {
+      "slug": "monte-arabi",
+      "nombre": "Monte Arabí",
+      "senderos": [
+        { "codigo": "PR-MU 91", "nombre": "Sendero del Monte Arabí (Yecla)", "tipo": "PR", "confianza": "alta", "wikiloc": 17824780 }
+      ]
+    },
+    {
+      "slug": "cuatro-calas",
+      "nombre": "Cuatro Calas",
+      "nota": "No tenía ningún PR. El SL-MU 18 lo cubre entero.",
+      "senderos": [
+        { "codigo": "SL-MU 18", "nombre": "Sendero de Cuatro Calas (Águilas)", "tipo": "SL", "confianza": "alta", "wikiloc": 17037634 }
+      ]
+    },
+    {
+      "slug": "cabezo-gordo",
+      "nombre": "Cabezo Gordo",
+      "nota": "No tenía ningún PR.",
+      "senderos": [
+        { "codigo": "SL-MU 11", "nombre": "Cabezo Gordo (Torre Pacheco)", "tipo": "SL", "confianza": "alta", "wikiloc": 1853165 }
+      ]
+    },
+    {
+      "slug": "espacios-abiertos-e-islas-del-mar-menor",
+      "nombre": "Espacios Abiertos e Islas del Mar Menor",
+      "nota": "No tenía ningún PR. El Carmolí es una de las unidades que integran este Paisaje Protegido.",
+      "senderos": [
+        { "codigo": "SL-MU 8", "nombre": "Sendero del Carmolí (Los Urrutias, Cartagena)", "tipo": "SL", "confianza": "alta", "wikiloc": 1853154 }
+      ]
+    },
+    {
+      "slug": "salinas-arenales-san-pedro-pinatar",
+      "nombre": "Salinas y Arenales de San Pedro del Pinatar",
+      "nota": "No tenía ningún PR.",
+      "senderos": [
+        { "codigo": "SL-MU 9", "nombre": "Senda del Coterillo (San Pedro del Pinatar)", "tipo": "SL", "confianza": "alta", "wikiloc": 1853156 }
+      ]
+    }
+  ],
+
+  "espaciosSinSendero": [
+    "sierra-de-el-carche",
+    "sierra-de-salinas",
+    "sierra-de-las-moreras",
+    "humedal-del-ajauque-y-rambla-salada"
+  ],
+
+  "descartadosPorFalsoPositivo": [
+    { "codigo": "PR-MU 31", "nombre": "Sendero de la Atalaya (Bullas)", "motivo": "Coincidía con «Atalaya» de Calblanque, pero Bullas está a más de 80 km." },
+    { "codigo": "PR-MU 29", "nombre": "Sendero de las Brujas (Alcantarilla)", "motivo": "Coincidencia espuria con «Alcázares» del Mar Menor." },
+    { "codigo": "PR-MU 123 / 124", "nombre": "Barranco del Mulo y Cueva de la Encantada", "motivo": "Los reclamaba el Humedal del Ajauque por el municipio de Fortuna; son de la Sierra de la Pila, donde quedan asignados." }
+  ],
+
+  "senderosSinEspacio": {
+    "_nota": "Homologados en la región pero fuera de los espacios que NaturDex tiene dados de alta. Se listan para no volver a analizarlos.",
+    "SL": ["SL-MU 4 Sendero urbano de Cehegín", "SL-MU 6 Mirador de la Cruz (Pliego)", "SL-MU 10 Camina 10.000 Pasos (Murcia)", "SL-MU 12 Muela de Albudeite", "SL-MU 14 Camina 10.000 Pasos (La Manga)", "SL-MU 15 Sendero en Familia (Murcia)"]
+  },
+
+  "siguientesPasos": [
+    "1. Lanzar la consulta Overpass y quedarse con las relaciones cuyo `ref` esté en este catálogo.",
+    "2. Para los GR, intersecar la traza con el límite de CADA espacio: es la única forma de saber por cuáles pasa.",
+    "3. Comprobar que cada traza cae dentro o junto al límite, con el mismo criterio que usa build-habitats.js.",
+    "4. Escribir geo/senderos.geojson por parque con codigo, nombre, tipo, homologado=true, fuente FMRM y atribución OSM.",
+    "5. Declararlo en manifest.json y pintarlo como capa conmutable, igual que el GR-92 del piloto.",
+    "6. Resolver los `wikiloc: null` y el nombre ausente del PR-MU 93."
+  ]
+}

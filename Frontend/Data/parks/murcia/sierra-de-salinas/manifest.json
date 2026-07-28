@@ -18,5 +18,20 @@
     "pointsOfInterest": 0,
     "images": 0,
     "assetBytes": 0
+  },
+  "tiles": {
+    "pmtiles": "Data/parks/murcia/sierra-de-salinas/tiles/base.pmtiles",
+    "bbox": [
+      -1.071689,
+      38.453181,
+      -1.013646,
+      38.529204
+    ],
+    "minzoom": 0,
+    "maxzoom": 15,
+    "bytes": 1120626,
+    "attribution": "<a href=\"https://protomaps.com\">Protomaps</a> &copy; <a href=\"https://openstreetmap.org/copyright\">OpenStreetMap</a>",
+    "source": "https://build.protomaps.com/20260727.pmtiles",
+    "builtAt": "2026-07-28"
   }
 }

@@ -9,15 +9,31 @@
     "parque": "Data/parks/murcia/sierra-espuna/geo/parque.geojson",
     "lic": "Data/parks/murcia/sierra-espuna/geo/lic.geojson",
     "zepa": "Data/parks/murcia/sierra-espuna/geo/zepa.geojson",
-    "habitats": "Data/parks/murcia/sierra-espuna/geo/habitats.geojson"
+    "habitats": "Data/parks/murcia/sierra-espuna/geo/habitats.geojson",
+    "trails": "Data/parks/murcia/sierra-espuna/geo/trails.geojson"
   },
   "images": [],
   "audio": [],
   "counts": {
-    "species": 414,
+    "species": 191,
     "habitats": 13,
     "pointsOfInterest": 0,
     "images": 0,
     "assetBytes": 0
+  },
+  "tiles": {
+    "pmtiles": "Data/parks/murcia/sierra-espuna/tiles/base.pmtiles",
+    "bbox": [
+      -1.666282,
+      37.794626,
+      -1.448695,
+      37.943379
+    ],
+    "minzoom": 0,
+    "maxzoom": 15,
+    "bytes": 3496645,
+    "attribution": "<a href=\"https://protomaps.com\">Protomaps</a> &copy; <a href=\"https://openstreetmap.org/copyright\">OpenStreetMap</a>",
+    "source": "https://build.protomaps.com/20260727.pmtiles",
+    "builtAt": "2026-07-28"
   }
 }

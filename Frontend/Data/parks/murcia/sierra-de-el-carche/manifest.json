@@ -17,5 +17,20 @@
     "pointsOfInterest": 0,
     "images": 0,
     "assetBytes": 0
+  },
+  "tiles": {
+    "pmtiles": "Data/parks/murcia/sierra-de-el-carche/tiles/base.pmtiles",
+    "bbox": [
+      -1.249614,
+      38.388377,
+      -1.091994,
+      38.46393
+    ],
+    "minzoom": 0,
+    "maxzoom": 15,
+    "bytes": 1350982,
+    "attribution": "<a href=\"https://protomaps.com\">Protomaps</a> &copy; <a href=\"https://openstreetmap.org/copyright\">OpenStreetMap</a>",
+    "source": "https://build.protomaps.com/20260727.pmtiles",
+    "builtAt": "2026-07-28"
   }
 }

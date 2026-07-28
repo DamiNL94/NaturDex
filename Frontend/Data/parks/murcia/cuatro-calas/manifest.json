@@ -8,7 +8,8 @@
   "geo": {
     "parque": "Data/parks/murcia/cuatro-calas/geo/parque.geojson",
     "lic": "Data/parks/murcia/cuatro-calas/geo/lic.geojson",
-    "zepa": "Data/parks/murcia/cuatro-calas/geo/zepa.geojson"
+    "zepa": "Data/parks/murcia/cuatro-calas/geo/zepa.geojson",
+    "trails": "Data/parks/murcia/cuatro-calas/geo/trails.geojson"
   },
   "images": [],
   "audio": [],

@@ -17,5 +17,20 @@
     "pointsOfInterest": 0,
     "images": 0,
     "assetBytes": 0
+  },
+  "tiles": {
+    "pmtiles": "Data/parks/murcia/cabezo-gordo/tiles/base.pmtiles",
+    "bbox": [
+      -0.92411,
+      37.795216,
+      -0.889829,
+      37.807951
+    ],
+    "minzoom": 0,
+    "maxzoom": 15,
+    "bytes": 957885,
+    "attribution": "<a href=\"https://protomaps.com\">Protomaps</a> &copy; <a href=\"https://openstreetmap.org/copyright\">OpenStreetMap</a>",
+    "source": "https://build.protomaps.com/20260727.pmtiles",
+    "builtAt": "2026-07-28"
   }
 }

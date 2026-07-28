@@ -16,5 +16,20 @@
     "pointsOfInterest": 0,
     "images": 0,
     "assetBytes": 0
+  },
+  "tiles": {
+    "pmtiles": "Data/parks/murcia/monte-arabi/tiles/base.pmtiles",
+    "bbox": [
+      -1.310618,
+      38.676953,
+      -1.273095,
+      38.708232
+    ],
+    "minzoom": 0,
+    "maxzoom": 15,
+    "bytes": 981384,
+    "attribution": "<a href=\"https://protomaps.com\">Protomaps</a> &copy; <a href=\"https://openstreetmap.org/copyright\">OpenStreetMap</a>",
+    "source": "https://build.protomaps.com/20260727.pmtiles",
+    "builtAt": "2026-07-28"
   }
 }

@@ -7,7 +7,7 @@
 |---|---|---|---|---|---|---|---|
 | Región de Murcia | Murcia | Cabo Cope y Puntas de Calnegre | Parque Regional | `cabo-cope-puntas-calnegre` | N2 | 2026-07 | Piloto. ENP **ES620007**. Fotos de florasilvestre.es pendientes de licencia |
 | Región de Murcia | Murcia | Cuatro Calas | Paisaje Protegido | `cuatro-calas` | N1 | 2026-07 | Límite IMIDA/CARM. ENP **ES620004** (`ENP000007` es el id interno del IMIDA, no el código oficial) |
-| Región de Murcia | Murcia | Sierra Espuña | Parque Regional | `sierra-espuna` | N2 | 2026-07-28 | ENP **ES620013**, 17.693,2 ha. LIC/ZEC ES0000173 · ZEPA ES0000173. 13 hábitats, **414 especies** (344 flora, 70 fauna incl. 48 aves ZEPA/LIC y 9 quirópteros), 138 con foto, 0 POIs (hueco documentado). Ver informe de cierre §"Sierra Espuña: Fase 2 cerrada" |
+| Región de Murcia | Murcia | Sierra Espuña | Parque Regional | `sierra-espuna` | N2 | 2026-07-28 | ENP **ES620013**, 17.693,2 ha. LIC/ZEC ES0000173 · ZEPA ES0000173. 13 hábitats, **191 especies** tras el recorte a catálogo oficial + evidencia GBIF (121 flora, 70 fauna incl. 48 aves y 9 quirópteros), 155 con foto (149 de Wikipedia/Commons), 0 POIs (hueco documentado). Ver informe de cierre §"Sierra Espuña: Fase 2 cerrada" y §"Sierra Espuña: recorte a especies con respaldo oficial" |
 | Región de Murcia | Murcia | Carrascoy y El Valle | Parque Regional | `carrascoy-y-el-valle` | N1 | 2026-07 | ENP **ES620008**, 16.685,8 ha. LIC/ZEC ES6200002 · ZEPA ES0000269 |
 | Región de Murcia | Murcia | Sierra de la Pila | Parque Regional | `sierra-de-la-pila` | N1 | 2026-07 | ENP **ES620018**, 8851,0 ha. LIC/ZEC ES6200003 · ZEPA ES0000174 |
 | Región de Murcia | Murcia | Sierra de El Carche | Parque Regional | `sierra-de-el-carche` | N1 | 2026-07 | ENP **ES620017**, 5869,1 ha. LIC/ZEC ES6200009 |
@@ -25,12 +25,12 @@
 | Región de Murcia | Murcia | Sima de la Higuera | Monumento Natural | — | **descartado** | 2026-07 | ENP **ES620024**, 49,0 ha. Geológico fuera de territorio protegido (3,5 km de Sierra Espuña) |
 | Región de Murcia | Murcia | Capa Negra de Caravaca de la Cruz | Monumento Natural | — | **descartado** | 2026-07 | ENP **ES620025**, 24,0 ha. Geológico fuera de territorio protegido (18,5 km del ENP más cercano) |
 | Región de Murcia | Murcia | Gredas de Bolnuevo | Monumento Natural | — | **descartado** | 2026-07 | ENP **ES620021**, 2,4 ha. Geológico fuera de territorio protegido. **POI pendiente de `sierra-de-las-moreras`** |
-| Región de Murcia | Murcia | Salto del Usero | Monumento Natural | `salto-del-usero` | N1 | 2026-07 | ENP **ES620026**, 1,7 ha, **Bullas**. LIC/ZEC ES6200045 (50 % de solape). Límite del MITECO: es el único espacio que **no está en la capa ENP del IMIDA** |
+| Región de Murcia | Murcia | Salto del Usero | Monumento Natural | — | **retirado** | 2026-07-28 | ENP **ES620026**, 1,7 ha, **Bullas**. Se dio de alta el 2026-07-27 (ver «desbloqueado» más abajo) y se retiró al día siguiente por decisión explícita. Municipio y demás datos siguen resueltos y documentados por si se retoma |
 
 > **Murcia tiene 21 espacios protegidos** según la capa ENP oficial (diciembre 2025). Al cierre del
-> 2026-07-27 hay **17 dados de alta** (1 en N2 + 16 fichas base) y **4 descartados** por las reglas de
-> producto. **No queda ninguno bloqueado.** El listado completo con código y superficie está en
-> `Tools/catalogo-nacional/out/inventario-fuentes-bdn.md`.
+> 2026-07-28 hay **16 dados de alta** (2 en N2 + 14 fichas base), **4 descartados** por las reglas de
+> producto y **1 retirado** tras haber estado dado de alta (Salto del Usero). El listado completo con
+> código y superficie está en `Tools/catalogo-nacional/out/inventario-fuentes-bdn.md`.
 
 ### Salto del Usero: desbloqueado (2026-07-27)
 
@@ -49,6 +49,127 @@ delimitación regional, así que conserva el límite del MITECO y no pasa por
 > 1.489 vértices), porque reconstruye `geo/parque.geojson` desde la capa nacional para todos sus
 > objetivos. Ahora detecta la marca `CodigoIMIDA` —que sólo escribe el refinador— y **deja intacto**
 > el espacio, avisando. Para rehacer uno de cero hay que borrar su carpeta.
+
+---
+
+## 2026-07-28 — Salto del Usero retirado de la lista de parques
+
+Se había desbloqueado y dado de alta el día anterior (ver «Salto del Usero: desbloqueado» más
+abajo). Retirado por decisión explícita: quitado de `Frontend/Data/parks-index.json` y borrada su
+carpeta `Frontend/Data/parks/murcia/salto-del-usero/` (park.json, manifest.json, geo/ y el paquete
+de teselas offline que se le había generado — nada de eso era trabajo curado, todo regenerable).
+
+El trabajo de investigación no se pierde: el municipio (**Bullas**, INE 30012) sigue documentado en
+`data/murcia-enp-municipios.json`, y el **guardián de `build-n1-espacios.js`** que evita que se
+regeneren límites ya refinados del IMIDA es un arreglo real que se queda, independiente de si este
+espacio concreto está o no en la app. Si se retoma, `node Tools/catalogo-nacional/build-n1-espacios.js
+--nuts2 62 --solo ES620026` lo reconstruye igual que la primera vez.
+
+`npm run validate` en verde tras el borrado.
+
+---
+
+## 2026-07-28 — Sierra Espuña: recorte a especies con respaldo oficial + fotos/nombres de Wikipedia
+
+Segunda pasada sobre el catálogo de la sesión anterior (414 especies), a petición explícita: **priorizar
+catálogos oficiales** y recortar el resto por evidencia real de presencia. Regla aplicada, especie por
+especie:
+
+> Se mantiene si **(está en algún catálogo/anexo oficial** — LESRPE, CEEA, Anexos II/IV/V Directiva
+> Hábitats, Anexo I Directiva Aves, CITES, Berna, Bonn, Decreto 50/2003 de Murcia o cualquier catálogo
+> autonómico de otra CCAA — **Y tiene algún avistamiento GBIF dentro del parque)**, **O tiene más de 50
+> avistamientos GBIF dentro del parque aunque no esté en ningún catálogo oficial**.
+
+### Método
+
+1. **"Avistamientos GBIF"** recalculado de cero y de forma uniforme para las 414 (incluidas las 74 que
+   antes no pasaban por conteo GBIF — reutilizadas de Cabo Cope y las 48 aves, que llegaron por BISE
+   documental): `occurrence/search?taxonKey=…&limit=0` restringido al bbox del parque, un conteo
+   agregado (no el reparto por hábitat de la sesión anterior, que podía contar la misma ocurrencia en
+   más de un hábitat solapado y sobreestimaba el número).
+2. **"Catálogo oficial"** recalculado de cero para las 414 por `eidosTaxonId`: `v_estadolegal` con
+   `idvigente=1`, cualquier ámbito. 187/414 tenían alguna figura.
+3. Filtro aplicado → **177 especies** (121 flora, 56 fauna, 44 aves). **237 descartadas.**
+
+Ambas consultas tropezaron con `HTTP 429` de las APIs bajo el volumen del lote (77 especies en el
+primer intento de GBIF, luego 0 tras reintento con backoff) — es el mismo patrón de rate-limit que las
+llamadas a Wikipedia más abajo, con la misma solución (backoff exponencial, reintento por lote).
+
+### Efecto colateral que conviene tener presente
+
+La regla se aplicó literalmente, y eso **saca del catálogo protagonistas del propio LIC/ZEPA que no
+tienen ni un registro GBIF dentro del parque**: los 9 murciélagos Anexo II (sin foto/observación
+ciudadana pública de sus refugios cársticos, esperable en quirópteros), el galápago leproso *Mauremys
+leprosa*, y 4 aves oficiales de la ZEPA (*Melanocorypha calandra*, *Tichodroma muraria*, *Saxicola
+rubetra*, *Curruca cantillans*). Están en la lista oficial del espacio (BISE) pero sin avistamiento
+GBIF verificable en él, así que la regla —tal y como se pidió— los deja fuera. Si se prefiere que la
+designación LIC/ZEPA baste por sí sola para las 48 aves y los quirópteros (que es lo que hacía el
+catálogo antes de este recorte), es cuestión de relajar la regla para ese subconjunto; no se ha hecho
+por iniciativa propia porque la instrucción pedía justo lo contrario.
+
+### Nombres comunes y fotos (Wikipedia/Wikimedia Commons)
+
+Para las 177 supervivientes: búsqueda en `es.wikipedia.org` (API REST `page/summary`, fallback a
+`en.wikipedia.org`), con reintento en `HTTP 429` — sin él, el primer intento sobre el lote completo
+devolvía "no encontrada" para el 78 % de las especies **por error de red, no porque no existiera la
+página** (se comprobó a mano: *Vulpes vulpes*, *Falco tinnunculus*… tienen página y fallaban solo por
+volumen de peticiones).
+
+- **152/177 con página en Wikipedia** (86 %), **149 con foto**.
+- **Nombres comunes**: solo se rellenó cuando el campo ya existente era el propio binomio latino (no
+  se sobrescribió ningún nombre común ya bueno de EIDOS o reutilizado de Cabo Cope). 4 de 19 casos así
+  resueltos automáticamente por regex sobre el extracto ("El/La *nombre* es una especie…"); 2 más a
+  mano (*Epipactis atrorubens* → Heleborina rojo oscuro, *Quercus lusitanica* → Quejigueta, ambos
+  verificados en el propio texto del extracto). **15 especies siguen sin nombre común** — comprobado
+  que Wikipedia tampoco les da uno distinto del binomio (son en su mayoría flora endémica sin nombre
+  vernáculo registrado), hueco real, no un fallo de la búsqueda.
+- **Fotos**: se sustituyó la fuente GBIF/EIDOS anterior por la de Wikipedia siempre que esta tenía
+  imagen, con atribución real extraída de Commons (`imageinfo`/`extmetadata`: autor + licencia corta).
+  **1 imagen incorrecta detectada y corregida**: *Cormus domestica* devolvía como "foto" el mapa de
+  distribución SVG del artículo (*Sorbus domestica_range.svg*), no una fotografía — se retiró
+  (`image: null`) en vez de dejar un dato erróneo.
+- **14 imágenes con atribución "Autor desconocido" tras dos reintentos**: la llamada a `page/summary`
+  triunfa pero la de `imageinfo` a Commons para esa misma imagen sigue sin resolver el campo `Artist`
+  (algunos ficheros de Commons realmente no lo declaran). No se ha inventado un autor.
+
+### Resultado (primera pasada, ver corrección más abajo)
+
+**177 especies** (antes 414): 121 flora, 56 fauna (44 aves + 12 otra fauna). **155 con foto** (149 de
+Wikipedia/Commons, con autor y licencia reales). `npm run validate` en verde (33 avisos). Contadores
+de `manifest.json` actualizados a 177.
+
+### Corrección: reincorporadas las 14 especies oficiales sin avistamiento GBIF
+
+A petición explícita ("si están en el anexo, añádelos"), se revierte para este subconjunto el
+requisito de avistamiento GBIF: **basta la designación oficial** (LIC/ZEC/ZEPA vía BISE, o Anexo/
+catálogo vía EIDOS). Reincorporados los 14 descartados en la pasada anterior por tener
+`enCatalogoOficial=true` y 0 avistamientos GBIF en el bbox:
+
+- **9 quirópteros** Anexo II Directiva Hábitats (*Miniopterus schreibersii*, *Myotis blythii*,
+  *M. capaccinii*, *M. emarginatus*, *M. myotis*, *Rhinolophus euryale*, *R. ferrumequinum*,
+  *R. hipposideros*, *R. mehelyi*).
+- **Galápago leproso** (*Mauremys leprosa*).
+- **4 aves ZEPA**: *Melanocorypha calandra* (calandria), *Tichodroma muraria* (treparriscos),
+  *Saxicola rubetra* (tarabilla norteña), *Curruca cantillans* (curruca carrasqueña).
+
+Se marcan con `gbifBboxSightings: 0` (trazabilidad: están por designación oficial, no por evidencia
+observacional) frente al resto del catálogo, que si tiene avistamientos los lleva anotados con el
+mismo campo.
+
+**Identificación de los murciélagos.** Se pidió además que sus descripciones permitan distinguirlos
+entre sí a simple vista. Añadida una frase por especie con los rasgos diagnósticos, extraída literal
+o casi literalmente del propio texto oficial de EIDOS (`v_atributos_pliniancore`, "Descripción de la
+especie" — ya en caché de la sesión anterior, no ha hecho falta redescargar nada ni inventar ningún
+rasgo): forma y proporción de la hoja nasal en los 4 *Rhinolophus* (el rasgo de familia que los separa
+de los *Myotis*/*Miniopterus*, que no la tienen), tamaño relativo, color del pelaje, forma de las
+orejas, y las notas de confusión que el propio EIDOS ya documenta entre pares de especies (p. ej.
+*Myotis blythii* vs *M. myotis*: la mancha blanca frontal presente en el 95 % de *M. blythii* y ausente
+en *M. myotis*).
+
+### Resultado final
+
+**191 especies**: 121 flora, 70 fauna (48 aves + 22 otra fauna, incluidos los 9 quirópteros y el
+galápago). `npm run validate` en verde (33 avisos). Contadores de `manifest.json` actualizados a 191.
 
 ---
 
@@ -489,8 +610,9 @@ contadores a cero y **sin bloque `tiles`**, más la entrada `status: "basic"` en
 - Barrido final: **ninguna capa de los espacios generados contiene un sitio marino** (única
   excepción, `cuatro-calas`, conservada a propósito y documentada arriba).
 
-> Las cifras de este apartado son las de esa pasada (16 espacios). El estado final de la comunidad,
-> tras desbloquear Salto del Usero, es el del bloque de cierre de aquí abajo.
+> Las cifras de este apartado son las de esa pasada (16 espacios, contando entonces a Salto del
+> Usero). El estado final de la comunidad, tras su desbloqueo y posterior retirada, es el del
+> bloque de cierre de aquí abajo.
 
 ### Fase 1 de la Región de Murcia: CERRADA (estado final, 2026-07-28)
 
@@ -498,8 +620,9 @@ De los 21 espacios de la capa oficial:
 
 | | |
 |---|---|
-| En la app | **17** — 1 completo (N2) + 16 fichas base |
+| En la app | **16** — 2 completos (N2: cabo-cope-puntas-calnegre, sierra-espuna) + 14 fichas base |
 | Descartados por las reglas de producto | **4**, decisión confirmada: se quedan fuera |
+| Retirado tras estar dado de alta | **1** (Salto del Usero) |
 | Bloqueados | **0** |
 
 Los 4 descartados —`Islas e Islotes del Litoral Mediterráneo` (marino) y los tres Monumentos
@@ -507,6 +630,11 @@ Naturales geológicos fuera de territorio protegido (`Gredas de Bolnuevo`, `Sima
 `Capa Negra de Caravaca`)— **no se van a dar de alta**. Está confirmado, no es un pendiente: si
 alguna vez se quisiera revertir, basta quitarlos de `excluidos` en `build-n1-espacios.js` y el
 proceso es determinista, pero **no hay que hacerlo por iniciativa propia**.
+
+**Salto del Usero** es un caso distinto: no está descartado por ninguna regla de producto, sólo
+retirado. Su municipio quedó resuelto (Bullas) y el generador lo reconstruye igual que la primera
+vez si se decide retomarlo — ver «Salto del Usero retirado de la lista de parques» al principio del
+documento.
 
 **No queda nada pendiente de la Fase 1 en esta comunidad.** Lo único opcional son los paquetes de
 mapa sin conexión (`npm run tiles:build <slug>`), que van aparte y son el origen de los avisos del

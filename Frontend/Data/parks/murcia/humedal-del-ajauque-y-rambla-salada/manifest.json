@@ -18,5 +18,20 @@
     "pointsOfInterest": 0,
     "images": 0,
     "assetBytes": 0
+  },
+  "tiles": {
+    "pmtiles": "Data/parks/murcia/humedal-del-ajauque-y-rambla-salada/tiles/base.pmtiles",
+    "bbox": [
+      -1.137322,
+      38.092033,
+      -1.071132,
+      38.208088
+    ],
+    "minzoom": 0,
+    "maxzoom": 15,
+    "bytes": 1192713,
+    "attribution": "<a href=\"https://protomaps.com\">Protomaps</a> &copy; <a href=\"https://openstreetmap.org/copyright\">OpenStreetMap</a>",
+    "source": "https://build.protomaps.com/20260727.pmtiles",
+    "builtAt": "2026-07-28"
   }
 }
