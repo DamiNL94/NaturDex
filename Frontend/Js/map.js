@@ -277,18 +277,43 @@ function addProtectedLayer(group, geojson, style, popupFor) {
   }).addTo(group);
 }
 
+// Los senderos vienen en tres rangos de la red señalizada (GR, PR y SL) y un parque puede tener
+// casi veinte a la vez: pintados todos del mismo naranja resultaban una maraña en la que no se
+// distinguía la travesía que cruza la sierra del sendero local de una hora. Se mantienen dentro de
+// la misma familia de color —siguen leyéndose como "senderos", que es una sola capa— y se separan
+// por grosor y trazo, que es justo la jerarquía que tienen sobre el terreno.
+export const TRAIL_STYLES = {
+  GR: { color: '#b4531f', weight: 4 },
+  PR: { color: '#d98032', weight: 3 },
+  SL: { color: '#d98032', weight: 3, dashArray: '7 5' }
+};
+
+export function trailKind(properties) {
+  const m = String((properties && (properties.codigo || properties.name)) || '').match(/\b(GR|PR|SL)\b/i);
+  return m ? m[1].toUpperCase() : 'GR';
+}
+
 export function renderTrails() {
   if (!state.geo || !state.trailLayer) return;
   state.trailLayer.clearLayers();
   if (!state.geo.trails) return;
   L.geoJSON(state.geo.trails, {
-    style: { color: '#c0662a', weight: 3, opacity: 0.9, lineJoin: 'round', lineCap: 'round' },
+    style: feature => Object.assign(
+      { opacity: 0.9, lineJoin: 'round', lineCap: 'round' },
+      TRAIL_STYLES[trailKind(feature.properties)] || TRAIL_STYLES.GR
+    ),
     onEachFeature: (feature, layer) => {
       const p = feature.properties || {};
+      // `longitudKm` son los kilómetros DENTRO del parque, no los de la ruta completa: se rotula
+      // así para no dar a entender que el GR-92 mide 15 km. `homologado` solo se afirma cuando
+      // consta en el catálogo de la FMRM (ver Tools/build-park-trails.js), nunca se niega.
+      const km = typeof p.longitudKm === 'number'
+        ? p.longitudKm.toLocaleString('es-ES', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' km dentro del parque'
+        : '';
       // Las rutas (senderos) admiten audioguía: propiedades `audio`/`audioTranscript` en el
       // feature del trails.geojson (mismas claves que hábitats y POIs).
       layer.bindPopup(
-        String(html`<strong>${p.name || 'Sendero'}</strong><br><span class="popup-type">${p.tipo || ''}</span>${p.descripcion ? html`<p>${p.descripcion}</p>` : ''}${audioBlock(p, 'Audioguía de la ruta')}${p.source ? html`<small>${p.source}</small>` : ''}`)
+        String(html`<strong>${p.name || 'Sendero'}</strong><br><span class="popup-type">${p.tipo || ''}${km ? ' · ' + km : ''}</span>${p.homologado ? html`<span class="badge">homologado</span>` : ''}${p.descripcion ? html`<p>${p.descripcion}</p>` : ''}${audioBlock(p, 'Audioguía de la ruta')}${p.source ? html`<small>${p.source}</small>` : ''}`)
       );
     }
   }).addTo(state.trailLayer);

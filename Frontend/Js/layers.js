@@ -11,7 +11,7 @@
 import { html, raw } from './util.js';
 import { state } from './state.js';
 import { layersToggle, layersPanel } from './dom.js';
-import { map, setHabitatVisible, focusHabitatOnMap, hasParkBaseLayer, applyBaseChoice, activeBaseKind } from './map.js';
+import { map, setHabitatVisible, focusHabitatOnMap, hasParkBaseLayer, applyBaseChoice, activeBaseKind, trailKind } from './map.js';
 
 // Capas generales (las de hábitats van en su propia subsección). El swatch reutiliza las clases
 // de la antigua leyenda (.legend-dot/.legend-line) para que la simbología siga siendo la misma.
@@ -22,14 +22,14 @@ const OVERLAYS = [
   { key: 'parque', label: 'Límite del parque', swatch: '<i class="legend-line parque"></i>', group: () => state.parqueLayer },
   { key: 'lic', label: 'LIC · Red Natura 2000', swatch: '<i class="legend-line lic"></i>', group: () => state.licLayer },
   { key: 'zepa', label: 'ZEPA · Red Natura 2000', swatch: '<i class="legend-line zepa"></i>', group: () => state.zepaLayer },
-  { key: 'trails', label: trailsLabel, swatch: '<i class="legend-line trail"></i>', group: () => state.trailLayer, visible: hasTrails },
+  { key: 'trails', label: trailsLabel, swatch: trailsSwatch, group: () => state.trailLayer, visible: hasTrails },
   { key: 'pois', label: 'Puntos de interés', swatch: '<i class="legend-dot poi"></i>', group: () => state.poiGroup },
   { key: 'species', label: 'Especies vistas', swatch: '<i class="legend-dot fauna"></i>', group: () => state.speciesCluster }
 ];
 
-// Los senderos de gran recorrido (GR) de un parque salen de su trails.geojson (ver
-// Tools/build-park-trails.js), no de una lista fija: un parque puede no tener ninguno, uno o varios
-// (p. ej. Cuatro Calas tiene tramos de GR-92 y GR-253).
+// Los senderos señalizados (GR, PR y SL) de un parque salen de su trails.geojson (ver
+// Tools/build-park-trails.js), no de una lista fija: un parque puede no tener ninguno, uno o casi
+// veinte (Carrascoy y El Valle tiene 18 entre el GR-250 y su malla de PR-MU).
 function trailFeatures() {
   const trails = state.geo && state.geo.trails;
   return (trails && trails.features) || [];
@@ -39,14 +39,36 @@ function hasTrails() {
   return trailFeatures().length > 0;
 }
 
+// Con uno o dos senderos el código en la etiqueta es la información útil ("Senderos (GR-92)").
+// A partir de ahí la lista completa desborda la fila del panel, así que se pasa al recuento: los
+// códigos siguen estando, uno a uno, en el popup de cada traza.
+const TRAIL_CODES_INLINE = 3;
+
+function trailCodes() {
+  return [...new Set(trailFeatures().map(f => {
+    const p = f.properties || {};
+    return p.codigo || (String(p.name || '').match(/\b(?:GR|PR|SL)[-\s][\w.]+/i) || [''])[0];
+  }).filter(Boolean))];
+}
+
 function trailsLabel() {
-  const refs = trailFeatures().map(f => {
-    const name = (f.properties && f.properties.name) || '';
-    const m = name.match(/GR-?\s?\d+/i);
-    return m ? m[0].toUpperCase().replace(/^GR\s?/, 'GR-') : name;
-  }).filter(Boolean);
-  const unique = [...new Set(refs)];
-  return unique.length ? 'Senderos (' + unique.join(' · ') + ')' : 'Senderos';
+  const count = trailFeatures().length;
+  if (!count) return 'Senderos';
+  const codes = trailCodes();
+  return codes.length && codes.length <= TRAIL_CODES_INLINE
+    ? 'Senderos (' + codes.join(' · ') + ')'
+    : 'Senderos (' + count + ')';
+}
+
+// La muestra deja de ser un único trazo naranja en cuanto el parque mezcla rangos: enseña uno por
+// cada tipo presente, en el mismo orden y con el mismo trazo con que se pintan en el mapa, para que
+// el panel siga siendo la leyenda de lo que se ve.
+function trailsSwatch() {
+  const kinds = ['GR', 'PR', 'SL'].filter(k => trailFeatures().some(f => trailKind(f.properties) === k));
+  // Envueltos: .layers-row es un flex con gap de 8 px, y sueltos los trazos se separarían tanto
+  // que parecerían capas distintas en vez de una sola muestra.
+  return '<span class="legend-trails">' + (kinds.length ? kinds : ['GR'])
+    .map(k => '<i class="legend-line trail trail-' + k.toLowerCase() + '"></i>').join('') + '</span>';
 }
 
 function habitatRows() {
@@ -74,7 +96,7 @@ export function refreshLayersPanel() {
     </section>
     <section class="layers-section">
     <h4>Capas</h4>
-    ${OVERLAYS.filter(o => !o.visible || o.visible()).map(o => html`<label class="layers-row"><input type="checkbox" data-overlay="${o.key}" ${map.hasLayer(o.group()) ? raw('checked') : ''}>${raw(o.swatch)}${typeof o.label === 'function' ? o.label() : o.label}</label>`)}
+    ${OVERLAYS.filter(o => !o.visible || o.visible()).map(o => html`<label class="layers-row"><input type="checkbox" data-overlay="${o.key}" ${map.hasLayer(o.group()) ? raw('checked') : ''}>${raw(typeof o.swatch === 'function' ? o.swatch() : o.swatch)}${typeof o.label === 'function' ? o.label() : o.label}</label>`)}
     </section>
     <section class="layers-section">
     <h4>Hábitats <span class="layers-mini-actions"><button type="button" data-habitats-all>Todos</button><button type="button" data-habitats-none>Ninguno</button></span></h4>

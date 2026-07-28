@@ -177,12 +177,19 @@
     }
   ],
 
-  "espaciosSinSendero": [
-    "sierra-de-el-carche",
-    "sierra-de-salinas",
-    "sierra-de-las-moreras",
-    "humedal-del-ajauque-y-rambla-salada"
-  ],
+  "espaciosSinSendero": {
+    "_nota": "Espacios a los que este catálogo no pudo asignar ningún sendero POR EL NOMBRE. No es lo mismo que no tener senderos: la asignación definitiva la da la traza, y al intersecar contra el límite oficial apareció el GR-92 en Sierra de las Moreras, que aquí figuraba como vacía. Ver `estadoDeLaConstruccion`.",
+    "sinSenderoTrasCruzarGeometria": [
+      "sierra-de-el-carche",
+      "sierra-de-salinas",
+      "humedal-del-ajauque-y-rambla-salada",
+      "monte-arabi",
+      "cabezo-gordo"
+    ],
+    "resueltosPorLaTraza": {
+      "sierra-de-las-moreras": "GR-92 (2,95 km dentro del límite)"
+    }
+  },
 
   "descartadosPorFalsoPositivo": [
     { "codigo": "PR-MU 31", "nombre": "Sendero de la Atalaya (Bullas)", "motivo": "Coincidía con «Atalaya» de Calblanque, pero Bullas está a más de 80 km." },
@@ -195,12 +202,36 @@
     "SL": ["SL-MU 4 Sendero urbano de Cehegín", "SL-MU 6 Mirador de la Cruz (Pliego)", "SL-MU 10 Camina 10.000 Pasos (Murcia)", "SL-MU 12 Muela de Albudeite", "SL-MU 14 Camina 10.000 Pasos (La Manga)", "SL-MU 15 Sendero en Familia (Murcia)"]
   },
 
+  "estadoDeLaConstruccion": {
+    "_nota": "Los pasos 1-5 de `siguientesPasos` están hechos: Tools/build-park-trails.js ya construye geo/trails.geojson para los 16 espacios de Murcia cruzando las relaciones GR/PR/SL de OpenStreetMap con el límite oficial de cada uno. El fichero se llamó trails.geojson y no senderos.geojson, que era el nombre previsto, porque es el que ya usaba el piloto y el que leen manifest.geo.trails, Frontend/Js/data.js y Frontend/Js/map.js.",
+    "hecho": "2026-07-28",
+    "espaciosConSenderos": 11,
+    "senderosServidos": 55,
+    "matizSobreHomologado": "La propiedad `homologado` de cada feature solo se AFIRMA cuando el código consta en este catálogo; nunca se pone a false. Este fichero recoge 53 de los 143 PR/SL de la FMRM (los que se cruzaron con los espacios dados de alta), así que ausencia aquí no es prueba de no homologación.",
+    "senderosDelCatalogoQueOSM_NO_tiene": {
+      "_nota": "32 senderos homologados por la FMRM sin relación en OpenStreetMap, o con ella fuera del límite oficial. No se pueden servir: la traza de la FMRM está en Wikiloc y no es redistribuible (ver avisoLicencia). La vía para incorporarlos es mapearlos en OSM, no descargarlos.",
+      "sierra-espuna": ["PR-MU 64.1", "SL-MU 2", "SL-MU 3", "PR-MU 111", "PR-MU 93", "PR-MU 102"],
+      "sotos-y-bosques-de-ribera-de-canaverosa": ["SL-MU 13", "PR-MU 25", "PR-MU 85", "PR-MU 86", "PR-MU 87", "PR-MU 109", "PR-MU 110"],
+      "cabo-cope-puntas-calnegre": ["PR-MU 104", "PR-MU 112", "PR-MU 112.1", "PR-MU 113", "PR-MU 117"],
+      "sierra-de-la-pila": ["PR-MU 120", "PR-MU 123", "PR-MU 124", "PR-MU 127", "PR-MU 127.1"],
+      "carrascoy-y-el-valle": ["SL-MU 7", "SL-MU 17"],
+      "calblanque-monte-cenizas-pena-aguila": ["PR-MU 4"],
+      "barrancos-de-gebas": ["SL-MU 16"],
+      "monte-arabi": ["PR-MU 91"],
+      "cuatro-calas": ["SL-MU 18"],
+      "cabezo-gordo": ["SL-MU 11"],
+      "salinas-arenales-san-pedro-pinatar": ["SL-MU 9"]
+    },
+    "senderosServidosQueEsteCatalogoNoListaba": "La traza encontró en los espacios ~30 códigos más de los que este catálogo les había asignado por el nombre (todos los GR, más PR-MU 34/35/49/50/52/53/54/55, 41, 69, 131, 65, 73, 93, 111 y sus variantes). Es el resultado esperado: la asignación por nombre era una aproximación y la geometría es la que manda."
+  },
+
   "siguientesPasos": [
-    "1. Lanzar la consulta Overpass y quedarse con las relaciones cuyo `ref` esté en este catálogo.",
-    "2. Para los GR, intersecar la traza con el límite de CADA espacio: es la única forma de saber por cuáles pasa.",
-    "3. Comprobar que cada traza cae dentro o junto al límite, con el mismo criterio que usa build-habitats.js.",
-    "4. Escribir geo/senderos.geojson por parque con codigo, nombre, tipo, homologado=true, fuente FMRM y atribución OSM.",
-    "5. Declararlo en manifest.json y pintarlo como capa conmutable, igual que el GR-92 del piloto.",
-    "6. Resolver los `wikiloc: null` y el nombre ausente del PR-MU 93."
+    "1. HECHO — Consulta Overpass por relaciones route=hiking|foot con ref GR/PR/SL (Tools/build-park-trails.js).",
+    "2. HECHO — Intersección de cada traza con el límite oficial de CADA espacio, no solo para los GR.",
+    "3. HECHO — Recorte contra el polígono con margen de ~150 m, como el resto del pipeline geográfico.",
+    "4. HECHO — geo/trails.geojson por parque con codigo, nombre, tipo, longitudKm, homologado y atribución OSM.",
+    "5. HECHO — Declarado en manifest.geo.trails y pintado como capa conmutable, con simbología propia por tipo (GR/PR/SL).",
+    "6. PENDIENTE — Resolver los `wikiloc: null` y el nombre ausente del PR-MU 93.",
+    "7. PENDIENTE — Los 32 senderos de `estadoDeLaConstruccion.senderosDelCatalogoQueOSM_NO_tiene`: se incorporarán solos en cuanto existan en OSM, sin tocar código, volviendo a lanzar la herramienta."
   ]
 }

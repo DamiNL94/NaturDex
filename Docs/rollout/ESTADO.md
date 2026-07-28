@@ -272,6 +272,10 @@ galápago sí se asigna a los dos hábitats de ribera (92D0, 92A0), verificable 
   público; el geoportal IMIDA tiene la capa "PORN y PRUG Sierra Espuña" (id 35 del servicio
   PROYECTOS/OISMA) pero es zonificación de plan, no puntos de interés). Pendiente de una sesión
   dedicada a extraer POIs del PRUG en PDF o de la capa de zonificación.
+  **Actualización (2026-07-28):** la *red de senderos* sí está resuelta, por otra vía —
+  `Tools/build-park-trails.js` recorta las relaciones GR/PR/SL de OpenStreetMap contra el límite
+  oficial y Sierra Espuña sirve 17 senderos (`geo/trails.geojson`). No cierra este hueco: son trazas
+  lineales, no POIs, y el PRUG sigue siendo la fuente pendiente para puntos de interés.
 - **276/414 especies sin foto con licencia válida** — la mayoría flora poco fotografiada en GBIF/
   iNaturalist con licencia abierta; no se ha rebajado el criterio de licencia para forzar cobertura.
 - **60 especies sin `habitatIds`** (documentado y es un aviso del validador, no error): 48 aves +

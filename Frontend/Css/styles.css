@@ -19,6 +19,12 @@
 .legend-line.lic{border-top:2px dashed var(--sea)}
 .legend-line.zepa{border-top:2px dotted #7b4fa0}
 .legend-line.trail{border-top:3px solid #c0662a}
+/* Los tres rangos de la red señalizada, con el mismo trazo con que los pinta map.js (TRAIL_STYLES):
+   la muestra del panel de capas es la leyenda real de lo que se ve sobre el mapa. */
+.legend-trails{display:inline-flex;align-items:center;gap:3px}
+.legend-line.trail-gr{width:14px;border-top:4px solid #b4531f}
+.legend-line.trail-pr{width:14px;border-top:3px solid #d98032}
+.legend-line.trail-sl{width:14px;border-top:3px dashed #d98032}
 
 /* --- Pase de diseño: pulido general de tarjetas, popups y controles ------------------------- */
 :root{--radius-sm:6px;--radius-md:10px;--shadow-sm:0 4px 14px rgba(23,33,27,.10)}

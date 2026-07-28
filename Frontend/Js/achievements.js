@@ -276,15 +276,30 @@ async function evaluateLocally(aggregates) {
 }
 
 // --- Núcleo: recalcula (local u online), evalúa y refresca state.account -------------------------
+// `evaluateLocally` compara contra `state.account.achievements`, que arranca vacío en CADA carga de
+// página (state.js). Así que, nada más recargar o volver a entrar, todo logro ya ganado con
+// anterioridad "parece" recién desbloqueado desde el punto de vista de este Map en memoria. Sin
+// distinguir eso de un desbloqueo genuino, se volvería a celebrar con cartel animado cada vez que se
+// abre la app — el bug de "saltan logros todo el rato". `getCelebratedIds()` (persistente, por
+// dispositivo) es la fuente de verdad de "esto ya se le enseñó a la persona": solo se celebra lo que
+// NO esté ahí, aunque se siga añadiendo TODO lo que cumple el umbral a state.account.achievements
+// para que la pantalla de progreso no se quede corta mientras no hay red para reconciliar con el
+// servidor.
 async function refreshLocal() {
   const aggregates = await computeLocalAggregates();
   state.account.totals = aggregates;
   const newlyLocal = await evaluateLocally(aggregates);
   const now = new Date().toISOString();
-  newlyLocal.forEach(id => state.account.achievements.set(id, { unlockedAt: now, celebratedAt: null, context: null, local: true }));
+  const celebratedBefore = getCelebratedIds();
+  const toCelebrate = [];
+  newlyLocal.forEach(id => {
+    const alreadyCelebrated = celebratedBefore.has(id);
+    state.account.achievements.set(id, { unlockedAt: now, celebratedAt: alreadyCelebrated ? now : null, context: null, local: true });
+    if (!alreadyCelebrated) toCelebrate.push(id);
+  });
   state.account.ready = true;
-  if (newlyLocal.length) celebrate(newlyLocal);
-  return newlyLocal;
+  if (toCelebrate.length) celebrate(toCelebrate);
+  return toCelebrate;
 }
 
 // Conjunto de logros que el servidor devuelve como recién desbloqueados (progress.php POST o

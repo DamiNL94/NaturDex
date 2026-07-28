@@ -1,21 +1,35 @@
 #!/usr/bin/env node
 // ================================================================================================
-// build-park-trails.js — busca senderos de Gran Recorrido (GR) que pasan por un parque y genera
-// su geo/trails.geojson.
+// build-park-trails.js — busca los senderos señalizados (GR, PR y SL) que pasan por un parque y
+// genera su geo/trails.geojson.
 // ------------------------------------------------------------------------------------------------
 //   node Tools/build-park-trails.js <slug> [--dry-run]
 //   node Tools/build-park-trails.js --all [--dry-run]
 //
 // Por qué existe: Cabo Cope tenía su trails.geojson hecho a mano (GR-92 recortado a su bbox desde
-// Overpass). Este script generaliza ese proceso a cualquier parque: consulta Overpass API por
-// relaciones route=hiking cuyo ref contenga "GR", y de las que de verdad CRUZAN el polígono oficial
-// del parque (no solo su bbox, que en parques con varios recintos dispersos —p. ej. islas del Mar
-// Menor— puede abarcar kilómetros de costa por los que el GR pasa sin tocar el espacio protegido).
-// El recorte final es contra el polígono, con un margen pequeño para no cortar un sendero que roza
-// el límite. Si ningún GR pasa de verdad por el parque, no se escribe trails.geojson ni se toca el
-// manifiesto: así el panel de capas (Frontend/Js/layers.js) no ofrece una capa de senderos vacía.
+// Overpass). Este script generaliza ese proceso a cualquier parque y a los tres tipos de la red
+// señalizada española: GR (Gran Recorrido), PR (Pequeño Recorrido) y SL (Sendero Local). Antes solo
+// traía los GR, que son rutas de decenas o cientos de kilómetros y dejaban fuera precisamente los
+// senderos que se recorren dentro del parque en una mañana.
 //
-// Fuente: OpenStreetMap vía Overpass API (© OpenStreetMap contributors, ODbL).
+// Criterio de pertenencia: que la traza CRUCE de verdad el polígono oficial del parque, no su bbox
+// —en parques con varios recintos dispersos (p. ej. islas del Mar Menor) el bbox abarca kilómetros
+// de costa por los que un sendero pasa sin tocar el espacio protegido—. El recorte final es contra
+// el polígono, con un margen pequeño para no cortar un sendero que roza el límite. Si ningún
+// sendero pasa de verdad por el parque no se escribe trails.geojson ni se toca el manifiesto: así
+// el panel de capas (Frontend/Js/layers.js) no ofrece una capa de senderos vacía.
+//
+// Homologación: la geometría sale de OpenStreetMap, pero la autoridad sobre qué senderos están
+// homologados y cómo se llaman oficialmente es la Federación de Montañismo de la Región de Murcia.
+// Su catálogo (Tools/catalogo-nacional/data/senderos-fmrm-murcia.json) no trae trazas —sus enlaces
+// van a Wikiloc y no son redistribuibles—, así que se usa como puente: si el `ref` de OSM está en
+// el catálogo, el sendero se marca `homologado` y se le pone el nombre oficial. La marca solo se
+// afirma, nunca se niega: el catálogo recoge una parte de la red (los senderos que se cruzaron con
+// los espacios dados de alta), y los de provincias vecinas (PR-CV, PR-AB…) que entran en un parque
+// fronterizo ni siquiera son competencia de la FMRM. Un sendero sin la marca es un sendero sobre el
+// que no consta la homologación, no uno que no esté homologado.
+//
+// Fuente de geometría: OpenStreetMap vía Overpass API (© OpenStreetMap contributors, ODbL).
 // ================================================================================================
 
 'use strict';
@@ -25,11 +39,12 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const FRONTEND = path.join(ROOT, 'Frontend');
 const REGISTRY = path.join(FRONTEND, 'Data', 'parks-index.json');
+const FMRM_CATALOG = path.join(__dirname, 'catalogo-nacional', 'data', 'senderos-fmrm-murcia.json');
 // El endpoint principal es un servicio público compartido: cuando está saturado devuelve 504
 // ("the server is probably too busy"), no un fallo de la consulta. Se reintenta con espera y, si
 // sigue caído, se prueba el mirror francés antes de rendirse.
 const OVERPASS_URLS = ['https://overpass-api.de/api/interpreter', 'https://overpass.openstreetmap.fr/api/interpreter'];
-const UA = 'NaturDex-Tool/1.0 (+https://github.com/DamiNL94/NaturDex; senderos GR)';
+const UA = 'NaturDex-Tool/1.0 (+https://github.com/DamiNL94/NaturDex; senderos)';
 
 // Margen alrededor del bbox del parque al consultar Overpass: un sendero que discurre justo por el
 // límite necesita nodos algo más allá para que el recorte por polígono (más abajo) tenga con qué
@@ -37,6 +52,12 @@ const UA = 'NaturDex-Tool/1.0 (+https://github.com/DamiNL94/NaturDex; senderos G
 // va justo por fuera (frecuente en bordes de acantilado o carretera) sigue contando como "del parque".
 const QUERY_PAD_DEG = 0.02;   // ~2 km
 const POLY_BUFFER_DEG = 0.0015; // ~150 m
+// Precisión de salida: 5 decimales ≈ 1 m. OSM sirve 7 (≈1 cm), que en un sendero de montaña es
+// ruido y multiplica por dos el peso del fichero, que aquí importa: estos GeoJSON se descargan
+// enteros al guardar el parque sin conexión.
+const COORD_DECIMALS = 5;
+// Un tramo recortado más corto que esto es un roce del límite, no un paso por el parque.
+const MIN_SEGMENT_DEG = 0.00005; // ~5 m
 
 const red = s => '\x1b[31m' + s + '\x1b[0m';
 const green = s => '\x1b[32m' + s + '\x1b[0m';
@@ -54,6 +75,57 @@ function findParkEntry(registry, slug) {
     }
   }
   return null;
+}
+
+// --- Códigos de sendero -------------------------------------------------------------------------
+// OSM escribe el mismo sendero de muchas formas ("GR 92", "GR-92", "GR 92 E21"). Se normaliza a la
+// nomenclatura de la FMRM para poder cruzarlo con el catálogo y para no pintar dos veces el mismo
+// sendero cuando OSM lo tiene partido en varias relaciones (los tramos europeos E21/E22 del GR-92
+// son eso: trozos del GR-92).
+function normalizeCode(ref) {
+  const raw = String(ref || '').trim();
+  const regional = raw.match(/^(PR|SL)[\s-]*([A-Z]{1,2})[\s-]*(\d+(?:\.\d+)?)/i);
+  if (regional) return regional[1].toUpperCase() + '-' + regional[2].toUpperCase() + ' ' + regional[3];
+  const gr = raw.match(/^GR[\s-]*(\d+(?:\.\d+)?)/i);
+  if (gr) return 'GR-' + gr[1];
+  return raw;
+}
+
+const TIPOS = {
+  GR: 'Sendero de Gran Recorrido',
+  PR: 'Sendero de Pequeño Recorrido',
+  SL: 'Sendero Local'
+};
+
+function tipoOf(code) {
+  const m = String(code).match(/^(GR|PR|SL)/i);
+  return m ? TIPOS[m[1].toUpperCase()] : 'Sendero señalizado';
+}
+
+// Catálogo FMRM aplanado a código -> nombre oficial. Cubre los GR (lista propia) y los PR-MU/SL-MU
+// (repartidos por espacio). Un código puede repetirse en dos espacios: el nombre es el mismo.
+function loadFmrmCatalog() {
+  if (!fs.existsSync(FMRM_CATALOG)) return new Map();
+  const cat = readJson(FMRM_CATALOG);
+  const byCode = new Map();
+  const add = s => {
+    const code = normalizeCode(s.codigo);
+    if (code && !byCode.has(code)) byCode.set(code, (s.nombre || '').trim());
+  };
+  // La FMRM lista los GR con el ámbito por delante ("Región de Murcia (Sendero del Mediterráneo)")
+  // porque su página es un índice regional de rutas que atraviesan varias comunidades. Como nombre
+  // de sendero en la app eso sobra: se queda el paréntesis, que es el nombre propio de la ruta.
+  const unwrapAmbito = s => {
+    const m = String(s.nombre || '').match(/^Región de Murcia\s*\((.+)\)$/i);
+    if (!m) return s;
+    const inner = m[1].trim();
+    return { ...s, nombre: inner.charAt(0).toUpperCase() + inner.slice(1) };
+  };
+  ((cat.granRecorrido && cat.granRecorrido.senderos) || []).map(unwrapAmbito).forEach(add);
+  for (const key of Object.keys(cat.espacios || {})) {
+    ((cat.espacios[key] || {}).senderos || []).forEach(add);
+  }
+  return byCode;
 }
 
 // --- Geometría del límite oficial (misma lógica que build-park-tiles.js) --------------------------
@@ -171,6 +243,31 @@ function lineLengthDeg(coords) {
   return len;
 }
 
+// Longitud en km (equirectangular a la latitud media del segmento: a esta escala el error es
+// despreciable y evita arrastrar una dependencia). Es informativa: se publica en el popup para que
+// se vea cuánto sendero hay DENTRO del parque, que casi nunca es la longitud total de la ruta.
+function lineLengthKm(coords) {
+  let len = 0;
+  for (let i = 1; i < coords.length; i++) {
+    const latMid = (coords[i][1] + coords[i - 1][1]) / 2 * Math.PI / 180;
+    const dx = (coords[i][0] - coords[i - 1][0]) * Math.cos(latMid) * 111.32;
+    const dy = (coords[i][1] - coords[i - 1][1]) * 110.57;
+    len += Math.hypot(dx, dy);
+  }
+  return len;
+}
+
+function roundCoords(coords) {
+  const f = Math.pow(10, COORD_DECIMALS);
+  const out = [];
+  for (const [lon, lat] of coords) {
+    const p = [Math.round(lon * f) / f, Math.round(lat * f) / f];
+    const last = out[out.length - 1];
+    if (!last || last[0] !== p[0] || last[1] !== p[1]) out.push(p); // el redondeo puede fundir nodos
+  }
+  return out;
+}
+
 // --- Overpass ---------------------------------------------------------------------------------------
 async function overpass(query, attempt = 1) {
   // 2 intentos en el endpoint principal, luego se prueba el mirror.
@@ -199,48 +296,29 @@ async function overpass(query, attempt = 1) {
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
-// Normaliza "GR 92", "GR92", "GR-92" -> "GR-92" para las etiquetas.
-function normalizeRef(ref) {
-  const m = String(ref || '').match(/GR[\s-]?(\d+)/i);
-  return m ? 'GR-' + m[1] : String(ref || '').trim();
-}
-
-async function findGrRelations(bbox) {
+// Una sola consulta por parque: las relaciones con sus miembros (`out body`, que ya dice qué ways
+// forman cada sendero) y la geometría de esos ways dentro del bbox. La versión anterior necesitaba
+// una llamada extra POR RELACIÓN solo para averiguar la pertenencia; con `out body` sobra, y eso
+// importa ahora que los candidatos pasan de uno o dos GR a decenas de PR y SL.
+async function fetchTrails(bbox) {
   const [minLon, minLat, maxLon, maxLat] = bbox;
-  const q = `[out:json][timeout:60];\nrel["route"="hiking"]["ref"~"GR",i](${minLat},${minLon},${maxLat},${maxLon});\nout tags;`;
+  const area = `(${minLat},${minLon},${maxLat},${maxLon})`;
+  const q = `[out:json][timeout:180];\n` +
+    `rel["route"~"^(hiking|foot)$"]["ref"~"^(GR|PR|SL)",i]${area}->.r;\n` +
+    `.r out body;\n` +
+    `way(r.r)${area};\n` +
+    `out geom;`;
   const data = await overpass(q);
-  return (data.elements || []).filter(e => e.type === 'relation');
-}
-
-async function fetchWaysForRelations(relIds, bbox) {
-  if (!relIds.length) return [];
-  const [minLon, minLat, maxLon, maxLat] = bbox;
-  const ids = relIds.join(',');
-  const q = `[out:json][timeout:60];\nrel(id:${ids});\nway(r)(${minLat},${minLon},${maxLat},${maxLon});\nout geom;`;
-  const data = await overpass(q);
-  return (data.elements || []).filter(e => e.type === 'way' && e.geometry);
-}
-
-// Averigua a qué relaciones (GR) pertenece cada way devuelto, para poder agrupar los tramos por
-// sendero cuando hay más de un GR candidato. Se hace con una llamada por relación (son pocas por
-// parque) en vez de una única consulta combinada, porque Overpass QL no deja anotar de forma
-// sencilla "a qué relación pertenece" dentro de un `out geom` de ways sueltos.
-async function relationsOfWays(wayIds, relIds) {
-  if (!wayIds.length) return {};
-  const idsWay = wayIds.join(',');
-  const map = {};
-  for (const relId of relIds) {
-    const qq = `[out:json][timeout:60];\nrel(${relId});\nway(r)->.w;\nway.w(id:${idsWay});\nout ids;`;
-    const data = await overpass(qq);
-    for (const el of data.elements || []) {
-      if (el.type === 'way') { (map[el.id] = map[el.id] || []).push(relId); }
-    }
-    await sleep(400);
+  const relations = [], ways = new Map();
+  for (const el of data.elements || []) {
+    if (el.type === 'relation') relations.push(el);
+    else if (el.type === 'way' && el.geometry) ways.set(el.id, el);
   }
-  return map;
+  return { relations, ways };
 }
 
-async function buildTrailsForPark(slug, registry, opts) {
+// --- Construcción de un parque --------------------------------------------------------------------
+async function buildTrailsForPark(slug, registry, catalog) {
   const entry = findParkEntry(registry, slug);
   if (!entry) { console.error(red('  el slug "' + slug + '" no está en parks-index.json')); return null; }
 
@@ -255,86 +333,144 @@ async function buildTrailsForPark(slug, registry, opts) {
   const bbox = bboxOfGeometry(geometry);
   const queryBbox = [bbox[0] - QUERY_PAD_DEG, bbox[1] - QUERY_PAD_DEG, bbox[2] + QUERY_PAD_DEG, bbox[3] + QUERY_PAD_DEG];
 
-  console.log('▶ ' + slug + ' · buscando senderos GR en Overpass…');
-  const relations = await findGrRelations(queryBbox);
-  await sleep(500);
-  if (!relations.length) { console.log(yellow('  sin candidatos GR en la zona')); return { slug, features: [] }; }
+  console.log('▶ ' + slug + ' · buscando senderos GR/PR/SL en Overpass…');
+  const { relations, ways } = await fetchTrails(queryBbox);
+  if (!relations.length) { console.log(yellow('  sin candidatos en la zona')); return { slug, manifestPath, manifest, features: [] }; }
+  console.log('  candidatos: ' + relations.length + ' relación(es) — ' +
+    [...new Set(relations.map(r => normalizeCode(r.tags.ref)))].sort().join(', '));
 
-  const relIds = relations.map(r => r.id);
-  console.log('  candidatos: ' + relations.map(r => (r.tags && (r.tags.ref || r.tags.name)) || r.id).join(', '));
+  // Agrupa por código normalizado, no por relación: OSM parte algunos senderos en varias relaciones
+  // (los tramos E21/E22 del GR-92) y son el mismo sendero sobre el terreno.
+  const byCode = new Map();
+  for (const rel of relations) {
+    const code = normalizeCode(rel.tags.ref);
+    if (!code) continue;
+    const wayIds = (rel.members || []).filter(m => m.type === 'way').map(m => m.ref);
+    const segments = [];
+    for (const wayId of wayIds) {
+      const way = ways.get(wayId);
+      if (!way) continue; // miembro fuera del bbox consultado
+      const coords = way.geometry.map(pt => [pt.lon, pt.lat]);
+      for (const seg of clipLineToPolygon(coords, geometry)) {
+        if (lineLengthDeg(seg) > MIN_SEGMENT_DEG) segments.push(seg);
+      }
+    }
+    if (!segments.length) continue;
+    if (!byCode.has(code)) byCode.set(code, { code, segments: [], osmNames: new Map() });
+    const bucket = byCode.get(code);
+    bucket.segments.push(...segments);
+    const osmName = (rel.tags['name:es'] || rel.tags.name || '').trim();
+    if (osmName) bucket.osmNames.set(osmName, (bucket.osmNames.get(osmName) || 0) + segments.length);
+  }
 
-  const ways = await fetchWaysForRelations(relIds, queryBbox);
-  await sleep(500);
-  if (!ways.length) { console.log(yellow('  el/los GR candidato(s) no tienen tramo cerca del parque')); return { slug, features: [] }; }
-
-  const wayOwners = relations.length > 1
-    ? await relationsOfWays(ways.map(w => w.id), relIds)
-    : Object.fromEntries(ways.map(w => [w.id, [relIds[0]]]));
-
-  // Agrupa por relación (= por sendero), recorta cada way contra el polígono real del parque y
-  // descarta lo que no llega a tocarlo.
-  const byRelation = new Map();
-  for (const way of ways) {
-    const coords = way.geometry.map(pt => [pt.lon, pt.lat]);
-    const clipped = clipLineToPolygon(coords, geometry);
-    const meaningful = clipped.filter(seg => lineLengthDeg(seg) > 0.00005); // > ~5 m
-    if (!meaningful.length) continue;
-    const owners = wayOwners[way.id] || relIds;
-    for (const relId of owners) {
-      if (!byRelation.has(relId)) byRelation.set(relId, []);
-      byRelation.get(relId).push(...meaningful);
+  for (const rel of relations) {
+    const code = normalizeCode(rel.tags.ref);
+    if (code && !byCode.has(code)) {
+      console.log(yellow('  ' + code + ': no cruza el polígono oficial, descartado'));
     }
   }
 
-  const features = [];
   const parkName = manifest.name || slug;
-  for (const rel of relations) {
-    const segs = byRelation.get(rel.id);
-    if (!segs || !segs.length) {
-      console.log(yellow('  ' + (rel.tags.ref || rel.id) + ': no cruza el polígono oficial, descartado'));
-      continue;
-    }
-    const ref = normalizeRef(rel.tags.ref);
-    const spanishName = rel.tags['name:es'] || rel.tags.name || ref;
-    const label = spanishName.toLowerCase().includes(ref.toLowerCase().replace('-', ' ')) || spanishName.includes(ref)
-      ? spanishName
-      : spanishName + ' (' + ref + ')';
+  const features = [];
+  for (const bucket of byCode.values()) {
+    const segments = bucket.segments.map(roundCoords).filter(s => s.length > 1);
+    if (!segments.length) continue;
+    const km = segments.reduce((n, s) => n + lineLengthKm(s), 0);
+    const oficial = catalog.get(bucket.code) || '';
+    // El nombre de OSM más repetido entre los tramos que caen dentro: es el que mejor describe el
+    // sendero tal y como se recorre por el parque.
+    const osmName = [...bucket.osmNames.entries()].sort((a, b) => b[1] - a[1]).map(e => e[0])[0] || '';
+    const baseName = oficial || osmName || bucket.code;
+    // El código no se repite si el nombre ya lo lleva ("GR 92 Sendero del Mediterráneo").
+    const name = baseName.replace(/[\s-]/g, '').toUpperCase().includes(bucket.code.replace(/[\s-]/g, '').toUpperCase())
+      ? baseName
+      : baseName + ' (' + bucket.code + ')';
+    const tipo = tipoOf(bucket.code);
+    // `homologado` solo se afirma cuando el código consta en el catálogo FMRM, y NUNCA se niega:
+    // ese catálogo recoge 53 de los 143 PR/SL de la federación (los que se cruzaron con los espacios
+    // dados de alta), así que "no está en el catálogo" no significa "no homologado". Poner
+    // `homologado: false` sería publicar como dato algo que no consta.
+    const homologado = catalog.has(bucket.code);
     features.push({
       type: 'Feature',
       properties: {
-        name: label,
-        tipo: 'Sendero de Gran Recorrido',
-        descripcion: 'Tramo del ' + ref + (rel.tags.name ? ' / ' + rel.tags.name : '') + ' a su paso por ' + parkName + '.',
-        source: 'OpenStreetMap contributors (ODbL)'
+        codigo: bucket.code,
+        name,
+        tipo,
+        // Kilómetros DENTRO del parque, no de la ruta entera: el frontend lo formatea y lo rotula
+        // como tal en el popup (map.js). Va como número, igual que las hectáreas de los límites.
+        longitudKm: Math.round(km * 100) / 100,
+        ...(homologado ? { homologado: true } : {}),
+        descripcion: 'Tramo del ' + bucket.code + ' a su paso por ' + parkName + '.' +
+          (homologado ? ' Sendero homologado por la Federación de Montañismo de la Región de Murcia.' : ''),
+        source: 'OpenStreetMap contributors (ODbL)' + (homologado ? ' · homologación: FMRM' : '')
       },
-      geometry: { type: 'MultiLineString', coordinates: segs }
+      geometry: { type: 'MultiLineString', coordinates: segments }
     });
-    console.log(green('  ✓ ' + ref + ': ' + segs.length + ' tramo(s) dentro del parque'));
+  }
+
+  // De más a menos recorrido dentro del parque: el primero es el que de verdad lo vertebra.
+  features.sort((a, b) => b.properties.longitudKm - a.properties.longitudKm);
+  for (const f of features) {
+    console.log(green('  ✓ ' + f.properties.codigo.padEnd(11) + f.properties.longitudKm.toFixed(2).padStart(7) + ' km · ' +
+      f.geometry.coordinates.length + ' tramo(s)' + (f.properties.homologado ? '' : yellow(' · sin confirmar en el catálogo FMRM'))));
   }
 
   return { slug, manifestPath, manifest, features };
 }
 
+// Las audioguías de ruta se escriben a mano sobre el trails.geojson (propiedades `audio` /
+// `audioTranscript`, ver Tools/validate-park-data.js). Regenerar el fichero no puede tirarlas:
+// se recuperan del anterior emparejando por código de sendero.
+function preserveAuthoredProps(features, outPath) {
+  if (!fs.existsSync(outPath)) return;
+  let previous;
+  try { previous = readJson(outPath); } catch { return; }
+  const before = new Map();
+  for (const f of previous.features || []) {
+    const p = f.properties || {};
+    const code = p.codigo || normalizeCode((String(p.name || '').match(/(GR|PR|SL)[\s-][\w\s.]*/) || [''])[0]);
+    if (code) before.set(code, p);
+  }
+  for (const f of features) {
+    const old = before.get(f.properties.codigo);
+    if (!old) continue;
+    for (const key of ['audio', 'audioTranscript']) if (old[key]) f.properties[key] = old[key];
+  }
+}
+
+// Serialización compacta: la estructura queda legible y diffeable feature a feature, pero cada
+// tramo va en una línea. Con 4 espacios de indentación por coordenada, Sierra Espuña (17 senderos,
+// ~340 tramos) pesaba varios megas, y estos ficheros se descargan enteros al guardar sin conexión.
+function stringifyTrails(fc) {
+  const featureText = fc.features.map(f => {
+    const props = JSON.stringify(f.properties, null, 2).split('\n').map((l, i) => i ? '      ' + l : l).join('\n');
+    const lines = f.geometry.coordinates.map(seg => '        ' + JSON.stringify(seg)).join(',\n');
+    return '    {\n      "type": "Feature",\n      "properties": ' + props +
+      ',\n      "geometry": {\n        "type": "MultiLineString",\n        "coordinates": [\n' + lines + '\n        ]\n      }\n    }';
+  }).join(',\n');
+  return '{\n  "type": "FeatureCollection",\n  "name": "trails",\n' +
+    '  "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },\n' +
+    '  "features": [\n' + featureText + '\n  ]\n}\n';
+}
+
 function writeTrails(result, dryRun) {
   const { slug, manifestPath, manifest, features } = result;
   if (!features.length) {
-    console.log(yellow('  → sin GR dentro de ' + slug + ', no se escribe trails.geojson'));
+    console.log(yellow('  → sin senderos dentro de ' + slug + ', no se escribe trails.geojson'));
     return;
   }
-  if (dryRun) { console.log(yellow('  (--dry-run: no se ha escrito nada)')); return; }
-
   const outRel = path.posix.join('Data', 'parks', ...manifest.geo.parque.split(/[\\/]/).slice(2, -1), 'trails.geojson');
   const outPath = path.join(FRONTEND, outRel);
-  const fc = {
-    type: 'FeatureCollection',
-    name: 'trails',
-    crs: { type: 'name', properties: { name: 'urn:ogc:def:crs:OGC:1.3:CRS84' } },
-    features
-  };
-  fs.writeFileSync(outPath, JSON.stringify(fc, null, 4) + '\n');
+  preserveAuthoredProps(features, outPath);
+  if (dryRun) { console.log(yellow('  (--dry-run: no se ha escrito nada)')); return; }
+
+  const text = stringifyTrails({ type: 'FeatureCollection', name: 'trails', features });
+  fs.writeFileSync(outPath, text);
   manifest.geo.trails = outRel.replace(/\\/g, '/');
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + '\n');
-  console.log(green('  ✓ ' + outRel + ' escrito (' + features.length + ' sendero(s)) y manifest.geo.trails actualizado'));
+  console.log(green('  ✓ ' + outRel + ' escrito (' + features.length + ' sendero(s), ' +
+    (Buffer.byteLength(text) / 1024).toFixed(0) + ' KB) y manifest.geo.trails actualizado'));
 }
 
 async function main() {
@@ -346,6 +482,7 @@ async function main() {
   if (!all && !slugArg) fail('uso: node Tools/build-park-trails.js <slug>|--all [--dry-run]');
 
   const registry = readJson(REGISTRY);
+  const catalog = loadFmrmCatalog();
   let slugs;
   if (all) {
     slugs = [];
@@ -356,7 +493,7 @@ async function main() {
 
   for (const slug of slugs) {
     try {
-      const result = await buildTrailsForPark(slug, registry);
+      const result = await buildTrailsForPark(slug, registry, catalog);
       if (result) writeTrails(result, dryRun);
     } catch (e) {
       console.error(red('  error en ' + slug + ': ' + e.message));

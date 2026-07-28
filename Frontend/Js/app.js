@@ -506,8 +506,19 @@ function initOfflineUI() {
  * Si el manifiesto del servidor va por delante de lo guardado en el dispositivo, se ofrece
  * reponerlo. Se ofrece, no se hace: pueden ser decenas de MB sobre datos móviles.
  */
+// Se llama tanto al entrar al parque (directo) como ~2s después desde la sincronización de arranque
+// (syncNow, que también corre en cada reconexión): sin protección, las dos llamadas de la entrada al
+// primer parque de la sesión caen sobre el mismo aviso con pocos segundos de diferencia y el cartel
+// se cierra y se vuelve a abrir solo mientras el usuario lo está leyendo. Se ignora una repetición
+// para el mismo parque si ya se ofreció hace menos de 5s; pasado ese margen (reconexión real, cambio
+// de parque) se vuelve a ofrecer con normalidad.
+let revalidationOfferedFor = null;
 async function maybeOfferRevalidation() {
   if (!state.manifest || !NaturDexOffline.parkNeedsRevalidation(state.manifest)) return;
+  const slug = state.manifest.slug;
+  const now = Date.now();
+  if (revalidationOfferedFor && revalidationOfferedFor.slug === slug && now - revalidationOfferedFor.at < 5000) return;
+  revalidationOfferedFor = { slug, at: now };
   const size = formatBytes(NaturDexOffline.parkDownloadBytes(state.manifest));
   showNotice({
     key: 'offline-revalidate', icon: '🔄',

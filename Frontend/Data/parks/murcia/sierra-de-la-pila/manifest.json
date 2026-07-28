@@ -8,7 +8,8 @@
   "geo": {
     "parque": "Data/parks/murcia/sierra-de-la-pila/geo/parque.geojson",
     "lic": "Data/parks/murcia/sierra-de-la-pila/geo/lic.geojson",
-    "zepa": "Data/parks/murcia/sierra-de-la-pila/geo/zepa.geojson"
+    "zepa": "Data/parks/murcia/sierra-de-la-pila/geo/zepa.geojson",
+    "trails": "Data/parks/murcia/sierra-de-la-pila/geo/trails.geojson"
   },
   "images": [],
   "audio": [],
