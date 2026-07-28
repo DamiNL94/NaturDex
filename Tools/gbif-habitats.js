@@ -64,7 +64,10 @@ function resolvePark() {
   for (const community of registry.communities || []) {
     for (const province of community.provinces || []) {
       for (const park of province.parks || []) {
-        if ((park.status || '') !== 'available' || !park.manifest) continue;
+        // Acepta 'available' (N2) y 'basic' (N1 ascendiendo a N2, que es justo el caso de uso:
+        // todavía no tiene status 'available' pero ya tiene habitats.geojson). Mismo fix que
+        // lib/registry.js el 2026-07-27.
+        if (!['available', 'basic'].includes(park.status || '') || !park.manifest) continue;
         const manifestPath = path.join(FRONTEND_DIR, park.manifest);
         if (!fs.existsSync(manifestPath)) continue;
         const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));

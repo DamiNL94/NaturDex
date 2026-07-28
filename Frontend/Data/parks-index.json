@@ -34,7 +34,7 @@
                             "slug": "sierra-espuna",
                             "name": "Sierra Espuña",
                             "category": "Parque Regional",
-                            "status": "basic",
+                            "status": "available",
                             "center": [37.86854, -1.54939],
                             "path": "Data/parks/murcia/sierra-espuna",
                             "manifest": "Data/parks/murcia/sierra-espuna/manifest.json"

@@ -7,7 +7,7 @@
 |---|---|---|---|---|---|---|---|
 | Región de Murcia | Murcia | Cabo Cope y Puntas de Calnegre | Parque Regional | `cabo-cope-puntas-calnegre` | N2 | 2026-07 | Piloto. ENP **ES620007**. Fotos de florasilvestre.es pendientes de licencia |
 | Región de Murcia | Murcia | Cuatro Calas | Paisaje Protegido | `cuatro-calas` | N1 | 2026-07 | Límite IMIDA/CARM. ENP **ES620004** (`ENP000007` es el id interno del IMIDA, no el código oficial) |
-| Región de Murcia | Murcia | Sierra Espuña | Parque Regional | `sierra-espuna` | N1 | 2026-07 | ENP **ES620013**, 17.693,2 ha. LIC/ZEC ES0000173 · ZEPA ES0000173 |
+| Región de Murcia | Murcia | Sierra Espuña | Parque Regional | `sierra-espuna` | N2 | 2026-07-28 | ENP **ES620013**, 17.693,2 ha. LIC/ZEC ES0000173 · ZEPA ES0000173. 13 hábitats, **414 especies** (344 flora, 70 fauna incl. 48 aves ZEPA/LIC y 9 quirópteros), 138 con foto, 0 POIs (hueco documentado). Ver informe de cierre §"Sierra Espuña: Fase 2 cerrada" |
 | Región de Murcia | Murcia | Carrascoy y El Valle | Parque Regional | `carrascoy-y-el-valle` | N1 | 2026-07 | ENP **ES620008**, 16.685,8 ha. LIC/ZEC ES6200002 · ZEPA ES0000269 |
 | Región de Murcia | Murcia | Sierra de la Pila | Parque Regional | `sierra-de-la-pila` | N1 | 2026-07 | ENP **ES620018**, 8851,0 ha. LIC/ZEC ES6200003 · ZEPA ES0000174 |
 | Región de Murcia | Murcia | Sierra de El Carche | Parque Regional | `sierra-de-el-carche` | N1 | 2026-07 | ENP **ES620017**, 5869,1 ha. LIC/ZEC ES6200009 |
@@ -51,6 +51,119 @@ delimitación regional, así que conserva el límite del MITECO y no pasa por
 > el espacio, avisando. Para rehacer uno de cero hay que borrar su carpeta.
 
 ---
+
+## 2026-07-28 — Sierra Espuña: Fase 2 cerrada (Capa 3, catálogo de especies)
+
+Sierra Espuña asciende de N1 (`basic`) a N2 (`available`). La Capa 2 (13 hábitats) ya estaba cerrada
+desde el 2026-07-27; esta sesión solo trabaja la Capa 3. `npm run validate` en verde (48 avisos, todos
+esperables: especies sin hábitat documentadas más abajo, y "sin manifest.tiles" en todos los N1).
+
+### Método (orden real de trabajo, no el ideal del §4 del rollout)
+
+El procedimiento del rollout asume que ya hay un catálogo de especies contra el que cruzar el Atlas
+(paso 2 antes que GBIF, paso 4). Para un parque que arranca de cero eso no es posible: se invirtió el
+orden real —
+
+1. **Atlas de Hábitats** (`Docs/Atlas y Manual de los Habitat de Espana.pdf`, extraído con
+   `pdftotext -layout`) → lista nacional de "Especies características" por cada uno de los 13 HIC del
+   parque. **Bug encontrado y corregido en la extracción** (no en `atlas-hic-especies.js`, que asume
+   texto sin `-layout`): con `-layout` el bloque de especies queda en las líneas SIGUIENTES al título
+   "Especies características", no en la misma línea, y la distancia entre el código HIC (bajo
+   "Directiva de Hábitat") y su ficha puede superar las 12 líneas que asumía el guion original —
+   hubo que ampliar la ventana de búsqueda a 60 líneas con parada en la ficha anterior.
+   **Dos códigos sin ficha propia en el Atlas**: 9340 (encinares) hereda de 5210 (misma alianza
+   Quercion ilicis, la ficha 5210 dice explícitamente "puede presentarse... como encinares"); 9560
+   hereda de 5110 (que incluye expresamente la asociación *Chamaeropo humilis-Juniperetum
+   phoeniceae* 856121, la misma que cataloga Sierra Espuña para el 9560).
+2. **GBIF ∩ polígonos de hábitat** (`gbif-habitats.js`, corregido para aceptar parques `basic` además
+   de `available` — mismo bug que `lib/registry.js` el 2026-07-27, ahora en la otra herramienta que
+   lo necesitaba). 28.789 ocurrencias en el bbox, 21.448 dentro de algún hábitat, **2.117 especies
+   distintas** (140 Aves, 1.977 no-Aves).
+3. **Reutilización** contra el catálogo de Cabo Cope (174 especies) por nombre científico, cruzada con
+   el respaldo del Atlas y la observación GBIF real dentro de Sierra Espuña.
+4. **EIDOS** (taxonomía + UICN por ámbito + estado legal + nombre común) para toda especie nueva.
+5. **BISE** (Discodata, `Site_Species_List` por `site_code=ES0000173`) para el apartado de fauna del
+   espacio (aves + murciélagos + galápago), aparte de las especies ligadas a hábitat.
+6. `reconcile-taxa.js` para la tabla maestra `eidos_taxonid`↔`gbif_speciesKey`.
+
+### Alcance del catálogo: decisión explícita, no un límite técnico
+
+GBIF devolvió 2.117 especies distintas; la mayoría es ruido de cordura filtrable (Lepidoptera,
+hongos, arácnidos) o singletons. **Se preguntó al usuario qué nivel de cobertura quería** y se optó
+por el de máxima fidelidad: todas las especies con respaldo del Atlas (independientemente del nº de
+ocurrencias — el Atlas ya certifica el vínculo especie↔HIC a nivel nacional) + solo-GBIF con **≥15
+ocurrencias** en los hábitats del parque. Con esos criterios:
+
+- **414 especies** (344 flora, 70 fauna): 51 flora/fauna + 23 aves reutilizadas literalmente de
+  Cabo Cope (mismo `eidosTaxonId`, texto sin reescribir); 340 nuevas.
+- **Alcance flora + vertebrados**, igual que el piloto (Cabo Cope tampoco cataloga insectos/hongos/
+  arácnidos pese a tenerlos en su propia fauna registrada). Sierra Espuña tiene una comunidad de
+  Lepidoptera muy rica en el GBIF descargado (~90 especies con decenas-cientos de ocurrencias,
+  p. ej. *Zygaena fausta*, *Melanargia lachesis*, *Iphiclides feisthamelii*): **queda fuera a
+  propósito**, documentado aquí como ampliación futura si el producto decide abrir una categoría de
+  insectos.
+- **9 especies descartadas** pese a coincidir de nombre: 3 quenopodiáceas de saladar
+  (*Caroxylon genistoides*, *Nitrosalsola vermiculata*, *Canarosalsola divaricata*, géneros propios
+  del split moderno de *Salsola*) y otras 5 halófitas/de grava fluvial reutilizables de Cabo Cope
+  (*Suaeda vera*, *Beta maritima*, *Lygeum spartum*, *Limonium delicatulum*, *Halocnemum
+  strobilaceum*, *Glaucium flavum*, *Scrophularia canina*, *Atriplex halimus*, *Artemisia
+  barrelieri*) sin ningún hábitat afín entre los 13 de Sierra Espuña (macizo interior, sin saladar ni
+  cauces de grava tipo HIC 3250) — probable ruido de bbox/geocodificación, no litoral. 2 híbridos
+  naturales (*Pistacia* × *saportae*, *Rhamnus* × *colmeiroi*) descartados por redundantes con la
+  especie parental ya incluida. 2 nombres sin resolver en EIDOS pese a variantes de búsqueda
+  (*Lophiolepis echinata*, *Helianthemum helianthemoides*) — hueco documentado, no se ha inventado su
+  taxonomía.
+
+### Aves y fauna LIC/ZEPA (sin hábitat, apartado propio)
+
+**48 aves** de la lista oficial BISE del sitio ES0000173 (23 reutilizadas de Cabo Cope, 25 nuevas).
+3 reclasificaciones confirmadas en EIDOS respecto al nombre de BISE: *Sylvia cantillans* → *Curruca
+cantillans*, *Sylvia conspicillata* → *Curruca conspicillata*, *Saxicola torquatus* → *Saxicola
+rubicola* (esta última coincide exactamente con la reclasificación ya documentada en el piloto,
+12325→16387, confirmando que es el mismo caso).
+
+**9 quirópteros + 1 galápago leproso** (*Mauremys leprosa*) de la misma lista BISE, especies Anexo II
+de la Directiva Hábitats ligadas al complejo cárstico y a los cursos de agua del macizo. Los
+murciélagos **no se asignan a hábitat vegetal** (ninguno de los 13 HIC catalogados es una cueva o
+grieta cartografiada como tal) — mismo criterio que las aves, documentado en su `description`. El
+galápago sí se asigna a los dos hábitats de ribera (92D0, 92A0), verificable en su ecología.
+
+### Dos bugs de herramienta corregidos en esta sesión
+
+1. **`Tools/gbif-habitats.js`** solo resolvía parques `status: "available"`: para un parque `basic`
+   ascendiendo (justo el caso de uso) era imposible ejecutarlo. Mismo síntoma que tuvo
+   `lib/registry.js` el 2026-07-27 y mismo arreglo (acepta `available` y `basic`).
+2. **`Tools/catalogo-nacional/enrich-images.js`** fallaba en silencio: la vista EIDOS descubierta por
+   heurística (`v_imagenes`) usa la columna `id_taxon`, no `idtaxon` como el resto de vistas de EIDOS,
+   así que PostgREST devolvía un objeto de error en vez de un array, `for...of` lanzaba "no es
+   iterable" dentro de `fromEidos`, y `pool()` lo capturaba como `{error}` **sin `sp` asociado** — el
+   informe final mostraba "0 rellenadas / 0 sin foto" sin ningún aviso, como si no hubiera nada que
+   hacer. Corregido con guarda `Array.isArray(rows)` + contador de errores reales visible en el
+   informe. Tras el arreglo: **138/414 especies con foto** (33%), con GBIF (país ES, CC0/CC-BY/CC-BY-
+   SA/CC-BY-NC marcada) como única fuente real — la vista EIDOS nunca devolvió fotos utilizables para
+   ninguna especie del catálogo. Informe completo en
+   `Tools/catalogo-nacional/out/sierra-espuna-fotos.md`.
+
+### Huecos conocidos (documentados, no inventados)
+
+- **0 POIs.** No se encontró en esta sesión una fuente geográfica oficial con coordenadas descargables
+  para la red de senderos (murcianatural.carm.es lista 11 senderos oficiales pero sin GPX/KML
+  público; el geoportal IMIDA tiene la capa "PORN y PRUG Sierra Espuña" (id 35 del servicio
+  PROYECTOS/OISMA) pero es zonificación de plan, no puntos de interés). Pendiente de una sesión
+  dedicada a extraer POIs del PRUG en PDF o de la capa de zonificación.
+- **276/414 especies sin foto con licencia válida** — la mayoría flora poco fotografiada en GBIF/
+  iNaturalist con licencia abierta; no se ha rebajado el criterio de licencia para forzar cobertura.
+- **60 especies sin `habitatIds`** (documentado y es un aviso del validador, no error): 48 aves +
+  9 quirópteros (fauna LIC/ZEPA sin hábitat vegetal por diseño) + 3 especies reutilizadas de Cabo Cope
+  con evidencia GBIF/Atlas insuficiente en Sierra Espuña para asignarlas con confianza a un hábitat
+  concreto (*Fagonia cretica*, *Ziziphus lotus*, *Osyris lanceolata*).
+- **254 especies con `conservationStatus: "NE"`** (no evaluada UICN a escala mundial) — sobre todo
+  flora, mismo patrón que en el piloto (~54/124 sin dato UICN allí).
+- Contraste de campo recomendado: la lista de aves BISE recuperó 48/48 por diseño (fuente documental,
+  no observación), pero el cruce GBIF-observado de esas mismas aves no se ha hecho (evidencia
+  'zepa', no 'observada_gbif' — ver README §1, es una limitación conocida del modelo, no de esta
+  sesión). Los 9 quirópteros son de designación LIC (roosts) y no se han verificado ocurrencias GBIF
+  específicas dentro del parque, más allá de su inclusión en la lista oficial del sitio.
 
 ## 2026-07-27 — Capa de hábitats curada (Atlas 2005) en Cabo Cope y Sierra Espuña
 

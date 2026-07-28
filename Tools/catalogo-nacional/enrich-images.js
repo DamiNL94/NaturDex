@@ -103,7 +103,12 @@ async function fromEidos(idtaxon) {
   let rows;
   try { rows = await get('iepnb.gob.es', `/api/especie/${view}?idtaxon=eq.${encodeURIComponent(idtaxon)}&limit=20`); }
   catch (_) { return null; }
-  for (const r of (rows || [])) {
+  // PostgREST devuelve un objeto de error (no un array) si la vista descubierta no tiene columna
+  // "idtaxon" (p.ej. v_imagenes la llama "id_taxon"): sin esta guarda, `for...of` sobre ese objeto
+  // lanza "no es iterable" y pool() lo traga como {error}, sin sp asociado — así que la ejecución
+  // completa se queda en 0 rellenadas / 0 "sin foto" sin ningún aviso visible en el informe.
+  if (!Array.isArray(rows)) return null;
+  for (const r of rows) {
     const url = Object.values(r).find(v => typeof v === 'string' && /^https?:\/\/\S+\.(jpe?g|png|webp)(\?|$)/i.test(v));
     if (!url) continue;
     const licRaw = Object.entries(r).find(([k]) => /licen/i.test(k));
@@ -181,7 +186,9 @@ function sqlEscape(s) { return String(s).replace(/'/g, "''"); }
     `-- Parque: ${SLUG} · modo: ${MODE} · NC ${ALLOW_NC ? 'permitido' : 'excluido'} · ${new Date().toISOString()}`,
     '-- Correr DESPUÉS del INSERT INTO species (igual que el bloque de fotos del seed).', ''
   ];
+  const failed = [];
   for (const r of results) {
+    if (r && r.error) { failed.push(r.error); continue; } // fallo real (red/parseo) — no lo cuentes como "sin foto"
     if (!r || !r.hit || !r.hit.url) { missing.push(r ? r.sp : null); continue; }
     const { sp, hit } = r;
     const attribution = `${hit.creator || 'Autor desconocido'} (${hit.license.short}) · ${hit.source}`;
@@ -235,4 +242,5 @@ function sqlEscape(s) { return String(s).replace(/'/g, "''"); }
 
   console.log(`OK · rellenadas ${filled.length} / ${targets.length} · SQL -> ${OUT} · informe -> ${REPORT}`);
   if (nc.length) console.log(`   (${nc.length} CC-BY-NC marcadas)`);
+  if (failed.length) console.log(`   ⚠️ ${failed.length} especies fallaron por error de red/parseo (no "sin foto", error real): ${[...new Set(failed)].slice(0, 3).join(' | ')}`);
 })();
