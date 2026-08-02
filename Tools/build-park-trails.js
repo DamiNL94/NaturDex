@@ -48,16 +48,29 @@ const UA = 'NaturDex-Tool/1.0 (+https://github.com/DamiNL94/NaturDex; senderos)'
 
 // Margen alrededor del bbox del parque al consultar Overpass: un sendero que discurre justo por el
 // límite necesita nodos algo más allá para que el recorte por polígono (más abajo) tenga con qué
-// trabajar. Margen de recorte final contra el polígono: un sendero que roza el límite oficial pero
-// va justo por fuera (frecuente en bordes de acantilado o carretera) sigue contando como "del parque".
+// trabajar.
 const QUERY_PAD_DEG = 0.02;   // ~2 km
-const POLY_BUFFER_DEG = 0.0015; // ~150 m
+// Tolerancia de "esto es del parque": un sendero que roza el límite oficial pero va justo por fuera
+// (frecuente en bordes de acantilado o de carretera, y en cualquier traza de OSM contra un límite
+// administrativo digitalizado aparte) sigue contando. Antes era de 150 m y era demasiado: sembraba
+// de migajas el exterior del parque. Los rodeos de verdad no los cubre esta tolerancia sino
+// BRIDGE_MAX_KM, que es mucho más generoso.
+const POLY_BUFFER_DEG = 0.0005; // ~50 m
+// Un sendero que se sale del parque y vuelve a entrar antes de este kilometraje se conserva ENTERO,
+// rodeo incluido: sobre el terreno es el mismo camino y cortarlo dejaba el sendero troceado en
+// trozos que no llevaban a ninguna parte. Pasado ese umbral ya no es un rodeo: el sendero se ha ido
+// a otra parte y ahí sí se corta.
+// El valor sale de los dos casos reales que hay que separar: el GR-127 recorre la ribera del Segura
+// por la reserva de Cañaverosa y se sale del límite cuatro veces, la mayor de 1,25 km, y debe salir
+// de un trazo; el PR-MU 92 de Gebas, en cambio, se marcha 2,4 km fuera del paisaje protegido, y eso
+// ya no es el mismo recorrido. 1,5 km cae entre ambos con margen por los dos lados.
+const BRIDGE_MAX_KM = 1.5;
 // Precisión de salida: 5 decimales ≈ 1 m. OSM sirve 7 (≈1 cm), que en un sendero de montaña es
 // ruido y multiplica por dos el peso del fichero, que aquí importa: estos GeoJSON se descargan
 // enteros al guardar el parque sin conexión.
 const COORD_DECIMALS = 5;
-// Un tramo recortado más corto que esto es un roce del límite, no un paso por el parque.
-const MIN_SEGMENT_DEG = 0.00005; // ~5 m
+// Una traza resultante más corta que esto es un roce del límite, no un paso por el parque.
+const MIN_KEPT_KM = 0.1;
 
 const red = s => '\x1b[31m' + s + '\x1b[0m';
 const green = s => '\x1b[32m' + s + '\x1b[0m';
@@ -195,8 +208,8 @@ function distToPolygonBoundary(pt, geometry) {
   return min;
 }
 
-// "Dentro" con margen: de verdad dentro del polígono, o a menos de POLY_BUFFER_DEG de su borde.
-function insideWithBuffer(pt, geometry) {
+// Dentro del polígono de verdad, agujeros incluidos.
+function insidePolygon(pt, geometry) {
   const polys = geometry.type === 'Polygon' ? [geometry.coordinates] : geometry.coordinates;
   for (const rings of polys) {
     if (!rings.length) continue;
@@ -206,41 +219,118 @@ function insideWithBuffer(pt, geometry) {
       if (!inHole) return true;
     }
   }
-  return distToPolygonBoundary(pt, geometry) <= POLY_BUFFER_DEG;
+  return false;
 }
 
-// --- Recorte de una polilínea contra el polígono (con el margen de arriba) -------------------------
-function bisectCrossing(p0, p1, in0, geometry) {
-  let a = p0, b = p1;
+// "Dentro" con margen: de verdad dentro, o a menos de POLY_BUFFER_DEG del borde.
+// OJO a la diferencia de papeles entre las dos, que es lo que evita los senderos fantasma:
+// esta tolerancia decide hasta dónde LLEGA una traza y si sigue siendo continua cuando el límite
+// serpentea, pero NO decide si el sendero es del parque. Eso lo decide `insidePolygon`: una traza
+// que se pasa sus 800 m enteros a 50 m del borde sin entrar nunca no es un sendero del parque,
+// aunque la tolerancia la abrace (era el caso de un trozo del PR-MU 92 en Gebas, a 1,6 km del
+// resto del sendero y sin tocar el paisaje protegido).
+function insideWithBuffer(pt, geometry) {
+  return insidePolygon(pt, geometry) || distToPolygonBoundary(pt, geometry) <= POLY_BUFFER_DEG;
+}
+
+// --- Cosido de la ruta ------------------------------------------------------------------------------
+// Una relación de OSM no es una línea: es una bolsa de `way` sin orden garantizado, cada uno con su
+// sentido, y partidos donde a quien los mapeó le vino bien (un cambio de superficie, un cruce…).
+// Recortar way a way, como se hacía antes, heredaba ese troceado: el GR-252 salía en 95 trozos que
+// en realidad se tocan de punta a punta. Peor aún, impedía razonar sobre el sendero como recorrido,
+// que es lo que hace falta para distinguir "se sale del parque y vuelve" de "esto es una migaja
+// suelta". Así que primero se cose la ruta encadenando los ways por sus extremos comunes, y solo
+// después se decide qué parte se queda.
+const endKey = p => p[0].toFixed(7) + ',' + p[1].toFixed(7);
+
+function stitchWays(lines) {
+  const pending = new Map();
+  lines.forEach((c, i) => { if (c && c.length > 1) pending.set(i, c); });
+  const byEnd = new Map();
+  const addEnd = (k, id) => { if (!byEnd.has(k)) byEnd.set(k, []); byEnd.get(k).push(id); };
+  for (const [id, c] of pending) { addEnd(endKey(c[0]), id); addEnd(endKey(c[c.length - 1]), id); }
+
+  const chains = [];
+  while (pending.size) {
+    const startId = pending.keys().next().value;
+    let chain = pending.get(startId).slice();
+    pending.delete(startId);
+    // Se extiende por los dos extremos hasta que ningún way pendiente encaje. En un nudo (una
+    // variante que arranca de la traza principal) la elección es arbitraria y da igual: lo único
+    // que se busca es continuidad, y el way no elegido arrancará su propia cadena.
+    let grew = true;
+    while (grew) {
+      grew = false;
+      for (const side of ['tail', 'head']) {
+        const pt = side === 'tail' ? chain[chain.length - 1] : chain[0];
+        const next = (byEnd.get(endKey(pt)) || []).find(id => pending.has(id));
+        if (next === undefined) continue;
+        const piece = pending.get(next).slice();
+        pending.delete(next);
+        if (side === 'tail') {
+          if (endKey(piece[0]) !== endKey(pt)) piece.reverse();
+          chain = chain.concat(piece.slice(1));
+        } else {
+          if (endKey(piece[piece.length - 1]) !== endKey(pt)) piece.reverse();
+          chain = piece.slice(0, -1).concat(chain);
+        }
+        grew = true;
+      }
+    }
+    chains.push(chain);
+  }
+  return chains;
+}
+
+// --- Qué parte de la ruta cosida se queda -----------------------------------------------------------
+function bisectCrossing(pIn, pOut, geometry) {
+  let a = pIn, b = pOut;
   for (let i = 0; i < 22; i++) {
     const mid = [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
-    if (insideWithBuffer(mid, geometry) === in0) a = mid; else b = mid;
+    if (insideWithBuffer(mid, geometry)) a = mid; else b = mid;
   }
   return [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
 }
 
-function clipLineToPolygon(coords, geometry) {
-  const lines = [];
-  let current = [];
-  let prevPt = null, prevIn = null;
-  for (const p of coords) {
-    const isIn = insideWithBuffer(p, geometry);
-    if (prevPt && isIn !== prevIn) {
-      const c = bisectCrossing(prevPt, p, prevIn, geometry);
-      if (prevIn) { current.push(c); lines.push(current); current = []; }
-      else { current = [c]; }
-    }
-    if (isIn) current.push(p);
-    prevPt = p; prevIn = isIn;
-  }
-  if (current.length > 1) lines.push(current);
-  return lines;
-}
+// Recorre la ruta cosida y devuelve los trozos que son "del parque":
+//   · si NINGÚN vértice toca el parque, la ruta entera se descarta — ahí mueren los fragmentos
+//     sueltos que quedaban flotando fuera del límite sin conectar con nada;
+//   · lo de antes del primer vértice dentro y lo de después del último se recorta, para que la traza
+//     no siga colgando hacia el monte de al lado;
+//   · una salida del parque que vuelve a entrar antes de BRIDGE_MAX_KM se conserva entera, así el
+//     sendero se dibuja de un trazo en vez de trocearse en cada mordisco del límite;
+//   · y al final cada trozo tiene que entrar de verdad en el polígono (no basta con quedarse dentro
+//     de la tolerancia) y medir al menos MIN_KEPT_KM.
+function keepParkPortion(coords, geometry) {
+  const inside = coords.map(p => insideWithBuffer(p, geometry));
+  const first = inside.indexOf(true);
+  if (first === -1) return [];
+  const last = inside.lastIndexOf(true);
 
-function lineLengthDeg(coords) {
-  let len = 0;
-  for (let i = 1; i < coords.length; i++) len += Math.hypot(coords[i][0] - coords[i - 1][0], coords[i][1] - coords[i - 1][1]);
-  return len;
+  const pieces = [];
+  // Arranque: si venía de fuera, se empieza exactamente en el borde en vez de en el primer nodo.
+  let current = first > 0 ? [bisectCrossing(coords[first], coords[first - 1], geometry), coords[first]] : [coords[first]];
+  let i = first + 1;
+  while (i <= last) {
+    if (inside[i]) { current.push(coords[i]); i++; continue; }
+    let j = i;
+    while (j <= last && !inside[j]) j++; // `last` está dentro, así que j siempre para en un vértice dentro
+    const detour = coords.slice(i - 1, j + 1);
+    if (lineLengthKm(detour) <= BRIDGE_MAX_KM) {
+      for (let k = i; k <= j; k++) current.push(coords[k]);
+    } else {
+      current.push(bisectCrossing(coords[i - 1], coords[i], geometry));
+      pieces.push(current);
+      current = [bisectCrossing(coords[j], coords[j - 1], geometry), coords[j]];
+    }
+    i = j + 1;
+  }
+  // Cierre simétrico al arranque.
+  if (last < coords.length - 1) current.push(bisectCrossing(coords[last], coords[last + 1], geometry));
+  pieces.push(current);
+  return pieces.filter(p => p.length > 1 &&
+    lineLengthKm(p) >= MIN_KEPT_KM &&
+    p.some(pt => insidePolygon(pt, geometry))); // ha de entrar en el parque, no solo rozarlo
 }
 
 // Longitud en km (equirectangular a la latitud media del segmento: a esta escala el error es
@@ -341,32 +431,32 @@ async function buildTrailsForPark(slug, registry, catalog) {
 
   // Agrupa por código normalizado, no por relación: OSM parte algunos senderos en varias relaciones
   // (los tramos E21/E22 del GR-92) y son el mismo sendero sobre el terreno.
+  // Primero se juntan los ways de todas las relaciones que comparten código y solo después se cose:
+  // los tramos europeos E21/E22 del GR-92 son relaciones distintas que continúan la una a la otra,
+  // y cosiéndolas por separado quedaba una costura artificial en la frontera entre ambas.
+  // Los ids se deduplican en el camino: hay relaciones que listan el mismo way dos veces —el
+  // PR-MU 69 repite 18 de sus 55 miembros, por ser ida y vuelta por el mismo camino— y sin esto su
+  // geometría se recortaba y se dibujaba dos veces, una encima de la otra.
   const byCode = new Map();
   for (const rel of relations) {
     const code = normalizeCode(rel.tags.ref);
     if (!code) continue;
-    const wayIds = (rel.members || []).filter(m => m.type === 'way').map(m => m.ref);
-    const segments = [];
-    for (const wayId of wayIds) {
-      const way = ways.get(wayId);
-      if (!way) continue; // miembro fuera del bbox consultado
-      const coords = way.geometry.map(pt => [pt.lon, pt.lat]);
-      for (const seg of clipLineToPolygon(coords, geometry)) {
-        if (lineLengthDeg(seg) > MIN_SEGMENT_DEG) segments.push(seg);
-      }
-    }
-    if (!segments.length) continue;
-    if (!byCode.has(code)) byCode.set(code, { code, segments: [], osmNames: new Map() });
+    if (!byCode.has(code)) byCode.set(code, { code, wayIds: new Set(), osmNames: new Map(), segments: [] });
     const bucket = byCode.get(code);
-    bucket.segments.push(...segments);
+    for (const m of rel.members || []) if (m.type === 'way') bucket.wayIds.add(m.ref);
     const osmName = (rel.tags['name:es'] || rel.tags.name || '').trim();
-    if (osmName) bucket.osmNames.set(osmName, (bucket.osmNames.get(osmName) || 0) + segments.length);
+    if (osmName) bucket.osmNames.set(osmName, (bucket.osmNames.get(osmName) || 0) + 1);
   }
 
-  for (const rel of relations) {
-    const code = normalizeCode(rel.tags.ref);
-    if (code && !byCode.has(code)) {
-      console.log(yellow('  ' + code + ': no cruza el polígono oficial, descartado'));
+  for (const bucket of byCode.values()) {
+    const wayLines = [...bucket.wayIds].map(id => ways.get(id))
+      .filter(Boolean) // miembro fuera del bbox consultado
+      .map(w => w.geometry.map(pt => [pt.lon, pt.lat]));
+    bucket.chains = stitchWays(wayLines);
+    bucket.segments = bucket.chains.flatMap(chain => keepParkPortion(chain, geometry));
+    if (!bucket.segments.length) {
+      byCode.delete(bucket.code);
+      console.log(yellow('  ' + bucket.code + ': no cruza el polígono oficial, descartado'));
     }
   }
 
@@ -377,9 +467,12 @@ async function buildTrailsForPark(slug, registry, catalog) {
     if (!segments.length) continue;
     const km = segments.reduce((n, s) => n + lineLengthKm(s), 0);
     const oficial = catalog.get(bucket.code) || '';
-    // El nombre de OSM más repetido entre los tramos que caen dentro: es el que mejor describe el
-    // sendero tal y como se recorre por el parque.
-    const osmName = [...bucket.osmNames.entries()].sort((a, b) => b[1] - a[1]).map(e => e[0])[0] || '';
+    // El nombre de OSM más repetido y, a igualdad, el más corto: cuando un código agrupa varias
+    // relaciones (GR-92 con sus tramos E21 y E22) el corto es el del sendero y el largo el del
+    // subtramo europeo. Empatar por longitud además hace la elección determinista.
+    const osmName = [...bucket.osmNames.entries()]
+      .sort((a, b) => b[1] - a[1] || a[0].length - b[0].length)
+      .map(e => e[0])[0] || '';
     const baseName = oficial || osmName || bucket.code;
     // El código no se repite si el nombre ya lo lleva ("GR 92 Sendero del Mediterráneo").
     const name = baseName.replace(/[\s-]/g, '').toUpperCase().includes(bucket.code.replace(/[\s-]/g, '').toUpperCase())
@@ -405,15 +498,21 @@ async function buildTrailsForPark(slug, registry, catalog) {
           (homologado ? ' Sendero homologado por la Federación de Montañismo de la Región de Murcia.' : ''),
         source: 'OpenStreetMap contributors (ODbL)' + (homologado ? ' · homologación: FMRM' : '')
       },
-      geometry: { type: 'MultiLineString', coordinates: segments }
+      geometry: { type: 'MultiLineString', coordinates: segments },
+      // Solo para el informe en pantalla, no llega al fichero.
+      _stats: { ways: bucket.wayIds.size, chains: bucket.chains.length }
     });
   }
 
   // De más a menos recorrido dentro del parque: el primero es el que de verdad lo vertebra.
   features.sort((a, b) => b.properties.longitudKm - a.properties.longitudKm);
   for (const f of features) {
+    const s = f._stats;
+    delete f._stats;
     console.log(green('  ✓ ' + f.properties.codigo.padEnd(11) + f.properties.longitudKm.toFixed(2).padStart(7) + ' km · ' +
-      f.geometry.coordinates.length + ' tramo(s)' + (f.properties.homologado ? '' : yellow(' · sin confirmar en el catálogo FMRM'))));
+      String(f.geometry.coordinates.length).padStart(2) + ' traza(s)') +
+      '  (' + s.ways + ' ways de OSM cosidos en ' + s.chains + ')' +
+      (f.properties.homologado ? '' : yellow(' · sin confirmar en el catálogo FMRM')));
   }
 
   return { slug, manifestPath, manifest, features };
@@ -466,11 +565,28 @@ function writeTrails(result, dryRun) {
   if (dryRun) { console.log(yellow('  (--dry-run: no se ha escrito nada)')); return; }
 
   const text = stringifyTrails({ type: 'FeatureCollection', name: 'trails', features });
+  const declaredPath = outRel.replace(/\\/g, '/');
+  const geometryChanged = !fs.existsSync(outPath) || fs.readFileSync(outPath, 'utf8') !== text;
+  const manifestChanged = manifest.geo.trails !== declaredPath;
+  if (!geometryChanged && !manifestChanged) {
+    console.log('  = ' + outRel + ' sin cambios (' + features.length + ' sendero(s)), no se toca nada');
+    return;
+  }
+
   fs.writeFileSync(outPath, text);
-  manifest.geo.trails = outRel.replace(/\\/g, '/');
+  manifest.geo.trails = declaredPath;
+  // Quien ya tenga el parque guardado sin conexión conserva su copia hasta que el manifiesto diga
+  // que hay algo nuevo: offline.js compara `version` y `updatedAt` (parkNeedsRevalidation) y solo
+  // entonces ofrece reponer los ficheros. Sin subirlos, una corrección de la geometría no llegaría
+  // nunca a quien más la necesita, que es justo el que camina el sendero sin cobertura.
+  if (geometryChanged) {
+    manifest.version = Number.isFinite(Number(manifest.version)) ? Number(manifest.version) + 1 : 1;
+    manifest.updatedAt = new Date().toISOString().slice(0, 10);
+  }
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + '\n');
   console.log(green('  ✓ ' + outRel + ' escrito (' + features.length + ' sendero(s), ' +
-    (Buffer.byteLength(text) / 1024).toFixed(0) + ' KB) y manifest.geo.trails actualizado'));
+    (Buffer.byteLength(text) / 1024).toFixed(0) + ' KB)') +
+    (geometryChanged ? ' · manifest v' + manifest.version + ' (' + manifest.updatedAt + ')' : ' · manifest.geo.trails declarado'));
 }
 
 async function main() {

@@ -22,7 +22,7 @@ function buildParkPayload($conn, $parkSlug) {
     if (!$park) return null;
 
     // --- Hábitats ---------------------------------------------------------------------------------
-    $habitatStmt = $conn->prepare("SELECT id, slug, code, name, habitat_type, description, is_priority, latitude, longitude, color, review_note, hic_subtipos, fitosociologia, audio_url, audio_transcript, image_url FROM habitats WHERE park_id = ? ORDER BY name");
+    $habitatStmt = $conn->prepare("SELECT id, slug, code, name, habitat_type, description, is_priority, latitude, longitude, color, review_note, hic_subtipos, fitosociologia, audio_url, audio_transcript, image_url, image_attribution, image_note FROM habitats WHERE park_id = ? ORDER BY name");
     $habitatStmt->bind_param("i", $park["id"]);
     $habitatStmt->execute();
     $habitatResult = $habitatStmt->get_result();
@@ -45,10 +45,15 @@ function buildParkPayload($conn, $parkSlug) {
                 ? [(float) $row["latitude"], (float) $row["longitude"]]
                 : null,
             "color" => $row["color"],
-            // Foto del hábitat. Si la BD tiene una image_url (URL externa o ruta), se usa esa; si no,
-            // se cae en la convención de archivo local Img/habitats/<slug>.jpg. Cuando no existe ni la
-            // URL ni el archivo, el frontend muestra una portada temática generada.
-            "image" => (!empty($row["image_url"]) ? $row["image_url"] : "Img/habitats/" . $slug . ".jpg"),
+            // Foto del hábitat: URL externa (Wikimedia Commons, GBIF) o ruta local del repositorio.
+            // Si no hay ninguna se emite null y el frontend dibuja su portada temática. Antes se caía
+            // en "Img/habitats/<slug>.jpg" aunque ese archivo no existiera, lo que provocaba un 404
+            // por cada hábitat sin foto antes de que el onerror lo sustituyera por la portada.
+            "image" => !empty($row["image_url"]) ? $row["image_url"] : null,
+            // Autor + licencia de esa foto (CC-BY obliga a citarlos) y con qué especie diagnóstica se
+            // ilustra el hábitat, que no es lo mismo que una vista general del hábitat.
+            "imageAttribution" => $row["image_attribution"] ?? null,
+            "imageNote" => $row["image_note"] ?? null,
             // Subtipos HIC y asociaciones fitosociológicas oficiales (Cartografía de Hábitats
             // MITECO/BDN + planes de gestión). El frontend las pinta en el detalle del hábitat.
             "hicSubtipos" => $row["hic_subtipos"] !== null ? json_decode($row["hic_subtipos"], true) : null,

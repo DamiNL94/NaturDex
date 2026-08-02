@@ -2,8 +2,8 @@
   "slug": "cabo-cope-puntas-calnegre",
   "name": "Cabo Cope y Puntas de Calnegre",
   "apiSlug": "cabo-cope-puntas-calnegre",
-  "version": 1,
-  "updatedAt": "2026-07-17",
+  "version": 3,
+  "updatedAt": "2026-08-01",
   "data": "Data/parks/murcia/cabo-cope-puntas-calnegre/park.json",
   "geo": {
     "parque": "Data/parks/murcia/cabo-cope-puntas-calnegre/geo/parque-regional.geojson",
@@ -18,36 +18,7 @@
     "Img/poi/lomo-bas.jpg",
     "Img/poi/playa-calnegre.jpg",
     "Img/poi/puntas-calnegre.jpg",
-    "Img/poi/torre-cope.jpg",
-    "Img/species/allium-melananthum.jpg",
-    "Img/species/caralluma-europaea.jpg",
-    "Img/species/citrullus-colocynthis.jpg",
-    "Img/species/cynomorium-coccineum.jpg",
-    "Img/species/lafuentea-rotundifolia.jpg",
-    "Img/species/lavandula-multifida.jpg",
-    "Img/species/limonium-insigne.jpg",
-    "Img/species/lycium-intricatum.jpg",
-    "Img/species/maytenus-senegalensis-europaea.jpg",
-    "Img/species/notoceras-bicorne.jpg",
-    "Img/species/salsola-papillosa.jpg",
-    "Img/species/senecio-flavus.jpg",
-    "Img/species/teucrium-freynii.jpg",
-    "Img/habitats/acantilados.jpg",
-    "Img/habitats/matorral-semiarido.jpg",
-    "Img/habitats/azufaifar.jpg",
-    "Img/habitats/matorral-halofilo.jpg",
-    "Img/habitats/matorral-halonitrofilo.jpg",
-    "Img/habitats/galeria-ribera.jpg",
-    "Img/habitats/veg-anual-desechos-marinos.jpg",
-    "Img/habitats/estepas-salinas-albardinal.jpg",
-    "Img/habitats/dunas-embrionarias.jpg",
-    "Img/habitats/dunas-malcomietalia.jpg",
-    "Img/habitats/rios-glaucium.jpg",
-    "Img/habitats/sabinar-juniperus.jpg",
-    "Img/habitats/prados-alysso-sedion.jpg",
-    "Img/habitats/subestepa-thero-brachypodietea.jpg",
-    "Img/habitats/roquedos-casmofiticos.jpg",
-    "Img/habitats/praderas-posidonia.jpg"
+    "Img/poi/torre-cope.jpg"
   ],
   "audio": [],
   "tiles": {
@@ -66,10 +37,10 @@
     "builtAt": "2026-07-26"
   },
   "counts": {
-    "species": 174,
-    "habitats": 17,
+    "species": 175,
+    "habitats": 15,
     "pointsOfInterest": 15,
-    "images": 35,
-    "assetBytes": 2040976
+    "images": 6,
+    "assetBytes": 740763
   }
 }

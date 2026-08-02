@@ -135,6 +135,13 @@ CALL naturdex_add_column('habitats', 'image_url', 'VARCHAR(500) NULL');
 -- las imágenes de GBIF/iNaturalist/Wikimedia (CC-BY / CC-BY-SA / CC-BY-NC).
 CALL naturdex_add_column('species', 'image_attribution', 'VARCHAR(300) NULL');
 
+-- Lo mismo para la foto del hábitat, que hasta ahora se guardaba sin autor ni licencia. `image_note`
+-- explica con qué especie diagnóstica se ilustra el hábitat (la portada no es una vista general del
+-- hábitat, sino una planta concreta que lo caracteriza). Lo rellena
+-- Tools/catalogo-nacional/habitat-images.js.
+CALL naturdex_add_column('habitats', 'image_attribution', 'VARCHAR(300) NULL');
+CALL naturdex_add_column('habitats', 'image_note', 'VARCHAR(400) NULL');
+
 -- Visibilidad en el catálogo público: FALSE oculta la especie (poca evidencia GBIF y sin figura en
 -- ningún catálogo/anexo oficial) sin borrar el dato. DEFAULT TRUE mantiene visibles todas las
 -- especies ya cargadas. Ver Frontend/Js/data.js `applyVisibility`.
@@ -165,6 +172,8 @@ CREATE TABLE IF NOT EXISTS especies_invasoras (
     description TEXT,
     origin TEXT,
     habitat TEXT,
+    impact TEXT,
+    pathway TEXT,
     catalogo VARCHAR(120),
     eidos_taxonid INT,
     gbif_species_key BIGINT,
@@ -181,6 +190,9 @@ CREATE TABLE IF NOT EXISTS especies_invasoras (
 CALL naturdex_add_column('especies_invasoras', 'origin',            'TEXT NULL');
 CALL naturdex_add_column('especies_invasoras', 'habitat',           'TEXT NULL');
 CALL naturdex_add_column('especies_invasoras', 'image_attribution', 'VARCHAR(300) NULL');
+-- Impacto y vía de entrada: las rellena Database/invasoras-contenido.sql (generado desde EIDOS).
+CALL naturdex_add_column('especies_invasoras', 'impact',            'TEXT NULL');
+CALL naturdex_add_column('especies_invasoras', 'pathway',           'TEXT NULL');
 
 -- Glosario divulgativo nacional (términos científicos → definición en lenguaje llano). Tabla nueva
 -- e independiente; CREATE TABLE IF NOT EXISTS es válido en MySQL 8.4 (no necesita los procs aux).
@@ -301,3 +313,41 @@ CREATE TABLE IF NOT EXISTS user_auth_tokens (
     INDEX idx_user_auth_tokens_user (user_id),
     INDEX idx_user_auth_tokens_expires (expires_at)
 );
+
+-- ------------------------------------------------------------------------------------------------
+-- Esparto: unificación del nombre científico (Stipa tenacissima -> Macrochloa tenacissima).
+-- El taxón es uno solo —eidosTaxonId 27376 en la Lista Patrón del IEPNB, que acepta Macrochloa—,
+-- pero Cabo Cope lo tenía dado de alta con el basónimo y los otros dos parques con el nombre
+-- aceptado. Como el catálogo universal de especies se indexa por nombre científico, el taxón
+-- generaba DOS fichas y contaba doble en los totales nacionales; el validador no lo veía porque
+-- compara precisamente por scientific_name.
+--
+-- Hay que renombrar en la BD viva, no solo en seed.sql: Database/species-universal.sql localiza
+-- cada fila por (parks.slug, species.scientific_name), así que sin este UPDATE sus sentencias no
+-- casarían con la fila vieja y la API seguiría sirviendo la ficha duplicada. Y reejecutar seed.sql
+-- sin renombrar antes insertaría una fila NUEVA junto a la vieja en vez de actualizarla.
+--
+-- De paso se corrige gbif_species_key: 3073 no es el esparto, es la clave de la FAMILIA Poaceae
+-- (comprobado en api.gbif.org/v1/species/3073). La del taxón es 4127897.
+--
+-- Idempotente: la subconsulta evita renombrar si ese parque ya tiene la ficha con el nombre
+-- aceptado. Va envuelta en una tabla derivada porque MySQL no deja leer en un subquery la misma
+-- tabla que se está actualizando (ERROR 1093).
+-- ------------------------------------------------------------------------------------------------
+UPDATE species s
+   SET s.scientific_name  = 'Macrochloa tenacissima',
+       s.taxon_genus      = 'Macrochloa',
+       s.gbif_species_key = 4127897
+ WHERE s.scientific_name = 'Stipa tenacissima'
+   AND s.eidos_taxonid = 27376
+   AND NOT EXISTS (
+         SELECT 1
+           FROM (SELECT park_id FROM species WHERE scientific_name = 'Macrochloa tenacissima') ya
+          WHERE ya.park_id = s.park_id
+       );
+
+-- Los parques que ya usaban el nombre aceptado pero arrastraban la clave de familia.
+UPDATE species s
+   SET s.gbif_species_key = 4127897
+ WHERE s.scientific_name = 'Macrochloa tenacissima'
+   AND s.gbif_species_key = 3073;

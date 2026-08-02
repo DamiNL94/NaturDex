@@ -49,6 +49,26 @@ Geometría de hábitats — **cartografía real** (dos fuentes):
   > del parque quedan PENDIENTES DE REVISIÓN**, por proceder de una fuente y metodología
   > distintas a las del resto y no estar contrastadas con el INB ni con trabajo de campo.
 
+### Dos códigos de la BDN 1997 que NO se cartografían aquí (2026-08-01)
+
+El cruce con la **cartografía de hábitats de la BDN de 1997** (`merge-habitats.js`) recorta dentro
+del parque dos recintos más, **9560** y **1110**, que llegaron a publicarse y se han retirado. Ni uno
+ni otro figura en el formulario normalizado Natura 2000 de los LIC del parque (`ES6200031` Cabo Cope
+y `ES6200012` Calnegre), que declaran 12 HIC cada uno:
+
+- **1110** «Bancos de arena cubiertos permanentemente por agua marina, poco profunda» — hábitat
+  **marino**, y por tanto fuera por la regla de producto. Aquí eran 2 esquirlas de orilla de 18
+  vértices y **0 ha**, residuo de recortar el recinto marino contra la línea de costa. Se coló porque
+  el código no estaba en `hic-nombres.json` y sin ficha el tipo cae a `Hábitat`, que salta el filtro
+  marino; ya está dado de alta como `Marino`.
+- **9560** «Bosques endémicos de *Juniperus* spp.» — el sabinar de sabina mora de Cabo Cope está
+  declarado como **5210**, que ya se cartografía. El recinto de 1997 lleva la asociación
+  *Chamaeropo humilis-Juniperetum phoeniceae* (la del 5210 aquí) y **solapa 46,7 de sus 61,2 ha** con
+  el polígono del 5210: era el mismo sabinar contado dos veces por dos fuentes.
+
+Ambos están anotados en `Tools/catalogo-nacional/data/hic-excluidos.json`, así que una nueva pasada
+de `adopt-habitats.js` los descarta con su motivo en vez de volver a añadirlos.
+
 ## Cómo actualizar / regenerar
 
 Las zonas protegidas se pueden volver a descargar (por si cambian los límites oficiales) con

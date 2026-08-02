@@ -72,11 +72,24 @@ async function pool(items, n, fn) {
 // --- Licencias: normalización, ranking y etiqueta corta -----------------------------------------
 function licenseInfo(raw) {
   const s = String(raw || '').toLowerCase();
+  // Primero lo que NO se puede usar. Cuidado con el `by` suelto: la licencia de las fotos de
+  // naturgucker es literalmente «Copyright by the creator. For license and creator details, see …»,
+  // y el patrón /by\b/ la daba por CC BY 4.0 — justo la foto con derechos reservados que este
+  // script existe para no coger.
+  if (/all rights reserved|todos los derechos|copyright by|derechos reservados|©/.test(s)) {
+    return { rank: 9, short: null, nc: true };
+  }
   if (/cc0|zero|publicdomain|public domain/.test(s)) return { rank: 0, short: 'CC0', nc: false };
+  // -ND antes que -NC: `by-nc-nd` casaba con /by-nc/ y la ficha acababa citando «CC BY-NC» una foto
+  // que en realidad es sin obra derivada. La atribución tiene que decir la licencia REAL.
+  if (/by-nc-nd/.test(s)) return { rank: 5, short: 'CC BY-NC-ND 4.0', nc: true };
+  if (/by-nd/.test(s)) return { rank: 6, short: 'CC BY-ND 4.0', nc: false };
   if (/by-sa/.test(s)) return { rank: 2, short: 'CC BY-SA 4.0', nc: false };
   if (/by-nc-sa/.test(s)) return { rank: 4, short: 'CC BY-NC-SA 4.0', nc: true };
   if (/by-nc/.test(s)) return { rank: 3, short: 'CC BY-NC 4.0', nc: true };
-  if (/by\b|\/by\//.test(s)) return { rank: 1, short: 'CC BY 4.0', nc: false };
+  // Anclado a la forma real de una licencia CC («cc by», «cc-by», «/licenses/by/…»): un `by` suelto
+  // en una frase en inglés no es una licencia.
+  if (/cc[ _-]?by|\/licenses\/by/.test(s)) return { rank: 1, short: 'CC BY 4.0', nc: false };
   return { rank: 9, short: null, nc: true }; // desconocida / todos los derechos → descartar
 }
 
@@ -127,6 +140,16 @@ async function gbifKey(sp) {
   try { const m = await get('api.gbif.org', `/v1/species/match?name=${encodeURIComponent(sp.scientificName)}`); return (m && m.matchType !== 'NONE') ? (m.speciesKey || m.usageKey) : null; }
   catch (_) { return null; }
 }
+// Un PLIEGO DE HERBARIO no sirve como foto de ficha: es la planta seca, prensada y cosida a una
+// cartulina con su etiqueta y su escala de color. Los herbarios digitalizan con licencia CC0/CC-BY,
+// así que por licencia SIEMPRE ganaban a las fotos de campo de iNaturalist (CC-BY-NC) — *Ammochloa
+// palaestina* y *Sphenopus divaricatus* acabaron ilustradas con sendos pliegos del Smithsonian.
+// Es el mismo criterio que ya aplica lib/wikimedia.js al descartar `herbarium|specimen|sheet`.
+const ESPECIMEN = /PRESERVED_SPECIMEN|FOSSIL_SPECIMEN|MATERIAL_SAMPLE|MATERIAL_CITATION/i;
+const esPliego = oc => ESPECIMEN.test(oc.basisOfRecord || '')
+  || /herbari|herbier|museum|botanic garden|natural history|nmnh|naturalis/i.test(
+    (oc.datasetName || '') + ' ' + (oc.institutionCode || '') + ' ' + (oc.publisher || ''));
+
 function pickFromOccurrences(list) {
   let best = null;
   for (const oc of (list || [])) {
@@ -135,11 +158,16 @@ function pickFromOccurrences(list) {
       const li = licenseInfo(m.license || oc.license);
       if (li.rank === 9) continue;
       if (li.nc && !ALLOW_NC) continue;
+      const pliego = esPliego(oc);
       const cand = { url: m.identifier, license: li, creator: m.creator || m.rightsHolder || oc.recordedBy || null,
-        source: (m.publisher ? m.publisher + '/' : '') + 'GBIF', country: oc.countryCode || null };
-      // mejor = menor rank de licencia; a igualdad, preferimos país objetivo
-      if (!best || li.rank < best.license.rank || (li.rank === best.license.rank && cand.country === COUNTRY && best.country !== COUNTRY)) best = cand;
-      if (best && best.license.rank === 0 && best.country === COUNTRY) return best; // CC0 + país: inmejorable
+        source: (m.publisher ? m.publisher + '/' : '') + 'GBIF', country: oc.countryCode || null, pliego };
+      // Orden de preferencia: foto de campo antes que pliego; luego licencia; luego país objetivo.
+      const mejor = !best
+        || (best.pliego && !pliego)
+        || (best.pliego === pliego && (li.rank < best.license.rank
+          || (li.rank === best.license.rank && cand.country === COUNTRY && best.country !== COUNTRY)));
+      if (mejor) best = cand;
+      if (best && !best.pliego && best.license.rank === 0 && best.country === COUNTRY) return best; // inmejorable
     }
   }
   return best;

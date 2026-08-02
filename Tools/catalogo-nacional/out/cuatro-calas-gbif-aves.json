@@ -1,0 +1,660 @@
+{
+  "park": "cuatro-calas",
+  "birdSpecies": 109,
+  "birds": [
+    {
+      "speciesKey": 9413670,
+      "name": "Larus michahellis",
+      "occurrences": 331,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 5231236,
+      "name": "Oenanthe leucura",
+      "occurrences": 306,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 5231190,
+      "name": "Passer domesticus",
+      "occurrences": 240,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 9990095,
+      "name": "Curruca melanocephala",
+      "occurrences": 187,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 6100954,
+      "name": "Coloeus monedula",
+      "occurrences": 146,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2481890,
+      "name": "Phalacrocorax carbo",
+      "occurrences": 144,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 6065824,
+      "name": "Chroicocephalus ridibundus",
+      "occurrences": 144,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 4408759,
+      "name": "Saxicola rubicola",
+      "occurrences": 143,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 9687165,
+      "name": "Motacilla alba",
+      "occurrences": 138,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2480311,
+      "name": "Charadrius alexandrinus",
+      "occurrences": 135,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 5739315,
+      "name": "Phoenicurus ochruros",
+      "occurrences": 129,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2481800,
+      "name": "Actitis hypoleucos",
+      "occurrences": 115,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 9566659,
+      "name": "Charadrius hiaticula",
+      "occurrences": 111,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2493012,
+      "name": "Cettia cetti",
+      "occurrences": 100,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2490719,
+      "name": "Turdus merula",
+      "occurrences": 96,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 9616058,
+      "name": "Falco tinnunculus",
+      "occurrences": 96,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2489104,
+      "name": "Sturnus unicolor",
+      "occurrences": 90,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 9515886,
+      "name": "Hirundo rustica",
+      "occurrences": 88,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2493091,
+      "name": "Phylloscopus collybita",
+      "occurrences": 85,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2481240,
+      "name": "Thalasseus sandvicensis",
+      "occurrences": 81,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 9701857,
+      "name": "Motacilla flava",
+      "occurrences": 80,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2493118,
+      "name": "Acrocephalus scirpaceus",
+      "occurrences": 79,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 9330514,
+      "name": "Galerida theklae",
+      "occurrences": 75,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4408796,
+      "name": "Ptyonoprogne rupestris",
+      "occurrences": 71,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2480876,
+      "name": "Egretta garzetta",
+      "occurrences": 70,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2481861,
+      "name": "Phalacrocorax aristotelis",
+      "occurrences": 67,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 9761484,
+      "name": "Anas platyrhynchos",
+      "occurrences": 66,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 5845582,
+      "name": "Chloris chloris",
+      "occurrences": 64,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2490310,
+      "name": "Motacilla cinerea",
+      "occurrences": 62,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2494200,
+      "name": "Serinus serinus",
+      "occurrences": 61,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2490266,
+      "name": "Anthus pratensis",
+      "occurrences": 56,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 5228695,
+      "name": "Apus pallidus",
+      "occurrences": 52,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2490669,
+      "name": "Galerida cristata",
+      "occurrences": 50,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2480964,
+      "name": "Morus bassanus",
+      "occurrences": 48,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2492462,
+      "name": "Erithacus rubecula",
+      "occurrences": 47,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2490955,
+      "name": "Monticola solitarius",
+      "occurrences": 45,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2498415,
+      "name": "Upupa epops",
+      "occurrences": 43,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2495696,
+      "name": "Streptopelia decaocto",
+      "occurrences": 39,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2495455,
+      "name": "Columba palumbus",
+      "occurrences": 39,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7406504,
+      "name": "Ichthyaetus audouinii",
+      "occurrences": 38,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 4408732,
+      "name": "Luscinia svecica",
+      "occurrences": 38,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2481728,
+      "name": "Tringa ochropus",
+      "occurrences": 38,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 8277073,
+      "name": "Alca torda",
+      "occurrences": 36,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7660710,
+      "name": "Luscinia megarhynchos",
+      "occurrences": 35,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2494686,
+      "name": "Carduelis carduelis",
+      "occurrences": 33,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5229490,
+      "name": "Pica pica",
+      "occurrences": 29,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2477411,
+      "name": "Tachymarptis melba",
+      "occurrences": 27,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 8104397,
+      "name": "Linaria cannabina",
+      "occurrences": 26,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 9797180,
+      "name": "Ardea cinerea",
+      "occurrences": 24,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5228676,
+      "name": "Apus apus",
+      "occurrences": 24,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 8151548,
+      "name": "Ichthyaetus melanocephalus",
+      "occurrences": 24,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2489214,
+      "name": "Delichon urbicum",
+      "occurrences": 24,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7341500,
+      "name": "Lanius meridionalis",
+      "occurrences": 23,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2475532,
+      "name": "Alcedo atthis",
+      "occurrences": 21,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2481759,
+      "name": "Calidris alpina",
+      "occurrences": 20,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2492867,
+      "name": "Lanius senator",
+      "occurrences": 20,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2481047,
+      "name": "Falco peregrinus",
+      "occurrences": 18,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2481819,
+      "name": "Gallinago gallinago",
+      "occurrences": 18,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2492956,
+      "name": "Sylvia atricapilla",
+      "occurrences": 18,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 8012314,
+      "name": "Jynx torquilla",
+      "occurrences": 15,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2480726,
+      "name": "Pandion haliaetus",
+      "occurrences": 15,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2496464,
+      "name": "Clamator glandarius",
+      "occurrences": 15,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2495414,
+      "name": "Columba livia",
+      "occurrences": 15,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2492606,
+      "name": "Ficedula hypoleuca",
+      "occurrences": 14,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2475443,
+      "name": "Merops apiaster",
+      "occurrences": 13,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 10700636,
+      "name": "Curruca iberiae",
+      "occurrences": 12,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2492949,
+      "name": "Sylvia undata",
+      "occurrences": 12,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2480830,
+      "name": "Bubulcus ibis",
+      "occurrences": 12,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2481174,
+      "name": "Larus fuscus",
+      "occurrences": 11,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 7634625,
+      "name": "Emberiza calandra",
+      "occurrences": 11,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2492822,
+      "name": "Cisticola juncidis",
+      "occurrences": 10,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 5229360,
+      "name": "Puffinus mauretanicus",
+      "occurrences": 9,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2480482,
+      "name": "Circus aeruginosus",
+      "occurrences": 9,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2481784,
+      "name": "Numenius phaeopus",
+      "occurrences": 9,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 9705453,
+      "name": "Parus major",
+      "occurrences": 9,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2493052,
+      "name": "Phylloscopus trochilus",
+      "occurrences": 9,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 6092830,
+      "name": "Spinus spinus",
+      "occurrences": 9,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2493128,
+      "name": "Acrocephalus arundinaceus",
+      "occurrences": 9,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5228199,
+      "name": "Gallinula chloropus",
+      "occurrences": 8,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2480327,
+      "name": "Pluvialis squatarola",
+      "occurrences": 8,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 4352332,
+      "name": "Phoenicopterus roseus",
+      "occurrences": 6,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5231240,
+      "name": "Oenanthe oenanthe",
+      "occurrences": 6,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2495708,
+      "name": "Streptopelia turtur",
+      "occurrences": 6,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2489160,
+      "name": "Riparia riparia",
+      "occurrences": 6,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2494394,
+      "name": "Bucanetes githagineus",
+      "occurrences": 6,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5739317,
+      "name": "Phoenicurus phoenicurus",
+      "occurrences": 6,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2493214,
+      "name": "Hippolais polyglotta",
+      "occurrences": 6,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2474051,
+      "name": "Alectoris rufa",
+      "occurrences": 6,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5788860,
+      "name": "Erythropygia galactotes",
+      "occurrences": 6,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2493551,
+      "name": "Locustella luscinioides",
+      "occurrences": 5,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2492960,
+      "name": "Sylvia curruca",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5229126,
+      "name": "Himantopus himantopus",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2493129,
+      "name": "Acrocephalus schoenobaenus",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2480863,
+      "name": "Nycticorax nycticorax",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2498009,
+      "name": "Tadorna tadorna",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2492576,
+      "name": "Muscicapa striata",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2494422,
+      "name": "Fringilla coelebs",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2480685,
+      "name": "Hieraaetus pennatus",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2492959,
+      "name": "Sylvia conspicillata",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2481342,
+      "name": "Uria aalge",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2480332,
+      "name": "Pluvialis apricaria",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2481714,
+      "name": "Tringa totanus",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 8077224,
+      "name": "Alauda arvensis",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2482492,
+      "name": "Corvus corax",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5229167,
+      "name": "Milvus migrans",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2481743,
+      "name": "Calidris maritima",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 9411857,
+      "name": "Caprimulgus ruficollis",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2482100,
+      "name": "Burhinus oedicnemus",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 9752617,
+      "name": "Ardea alba",
+      "occurrences": 3,
+      "habitats": 3
+    }
+  ]
+}

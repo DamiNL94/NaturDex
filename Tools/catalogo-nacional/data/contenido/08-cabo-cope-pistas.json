@@ -1,0 +1,336 @@
+{
+  "_comentario": [
+    "Fichas cuyas pistas de identificación no servían para identificar: repetían el hábitat («Dunas y",
+    "arenales costeros»), daban consejos de conducta («Observar a distancia», «No manipular») o",
+    "afirmaban rareza («Muy localizada y difícil de encontrar»). Todo eso ya está en `habitat`, en el",
+    "estado de conservación o sobra. Aquí las tres pistas son siempre rasgos observables en campo."
+  ],
+
+  "Aquila fasciata": {
+    "habitat": "Sierras con cortados rocosos y amplias zonas abiertas de matorral y cultivo para cazar",
+    "description": "Águila mediana de alas largas y cola larga, con el vientre blanco finamente rayado y una mancha blanca en la espalda que se ve bien en vuelo. Caza a gran velocidad y a poca altura, sorprendiendo a perdices, conejos y palomas. Las parejas ocupan el mismo cortado durante años.",
+    "tips": [
+      "Mancha blanca en el centro de la espalda, visible desde arriba",
+      "Vientre claro y muy rayado, con una banda oscura en el borde del ala",
+      "Vuelo bajo y rápido cuando caza, no en círculos altos"
+    ]
+  },
+  "Pancratium maritimum": {
+    "description": "Bulbosa de dunas con flores blancas grandes, en forma de trompeta y con una corona membranosa entre los estambres. Se abren al atardecer y despiden un perfume intenso que atrae a polillas nocturnas. Sus hojas son acintadas y de un verde azulado, y a menudo se secan antes de la floración.",
+    "tips": [
+      "Flores blancas en trompeta con una corona membranosa dentro",
+      "Se abren al atardecer y huelen intensamente",
+      "Hojas acintadas y de verde azulado, saliendo de la arena"
+    ]
+  },
+  "Bucanetes githagineus": {
+    "habitat": "Ramblas, laderas peladas y llanos pedregosos de clima muy árido",
+    "description": "Pequeño fringílido de aspecto discreto y pardo arenoso, con un pico corto, muy grueso y de color rojo coral en primavera. El macho tiene además el pecho y el obispillo teñidos de rosa. Su reclamo es un zumbido nasal inconfundible, como una trompeta de juguete.",
+    "tips": [
+      "Pico corto y muy grueso, rojo coral en primavera",
+      "Reclamo nasal y zumbante, como una corneta pequeña",
+      "Tonos rosados en pecho y obispillo del macho"
+    ]
+  },
+  "Caralluma europaea": {
+    "description": "Suculenta de aspecto cactiforme, con tallos carnosos de cuatro caras y dientes blandos, sin espinas verdaderas. Sus flores, en corona, son de un pardo amarillento jaspeado y desprenden olor a carroña para atraer moscas, que son sus polinizadoras.",
+    "tips": [
+      "Tallos carnosos de sección cuadrada, con dientes blandos",
+      "Flores jaspeadas en pardo y amarillo, dispuestas en corona",
+      "Olor desagradable, a carne pasada, en floración"
+    ]
+  },
+  "Enneapogon persicus": {
+    "description": "Gramínea perenne que forma pequeñas matas densas en suelos pedregosos y muy cálidos. Sus espiguillas rematan en nueve aristas plumosas, un rasgo que da nombre al género y que la distingue de cualquier otra gramínea del entorno.",
+    "tips": [
+      "Nueve aristas plumosas en cada espiguilla",
+      "Mata compacta y baja, de hasta medio metro",
+      "Tallos y hojas cubiertos de pelusa corta"
+    ]
+  },
+  "Testudo graeca": {
+    "description": "Tortuga terrestre de caparazón abombado con dibujo de placas amarillas y negras, la única silvestre del sureste peninsular. Se reconoce por un tubérculo córneo a cada lado de la cola —el «espolón»— y por no tener el peto articulado. Pasa el verano y el invierno inactiva, refugiada bajo matas y madrigueras.",
+    "tips": [
+      "Un tubérculo córneo a cada lado de la base de la cola",
+      "Caparazón abombado con placas amarillas y negras",
+      "Peto sin bisagra: no puede cerrarse del todo"
+    ]
+  },
+  "Teucrium lanigerum": {
+    "habitat": "Matorral y cerros sobre suelos calizos y margosos secos",
+    "description": "Mata cubierta por una lana blanca y espesa que la hace destacar en el matorral. Sus flores, rosadas o purpúreas, se agrupan en cabezuelas terminales y carecen de labio superior, con los estambres al descubierto. Es un endemismo del sureste ibérico.",
+    "tips": [
+      "Toda la planta cubierta de lana blanca y espesa",
+      "Flores sin labio superior, con los estambres asomando",
+      "Cabezuelas apretadas en el extremo de las ramas"
+    ]
+  },
+  "Capparis sicula subsp. sicula": {
+    "description": "Arbusto de ramas colgantes que crece en roquedos y muros, con hojas redondeadas y carnosas y estípulas transformadas en espinas curvas. Sus flores, grandes y blancas con un penacho de estambres violáceos, se abren al amanecer y duran un solo día. Los botones en salmuera son las alcaparras.",
+    "tips": [
+      "Un par de espinas curvas en la base de cada hoja",
+      "Flores blancas con muchos estambres largos y violáceos",
+      "Cada flor dura un solo día"
+    ]
+  },
+  "Ziziphus lotus": {
+    "description": "Arbusto espinoso que forma cúpulas densas de varios metros, un microhábitat en sí mismo: bajo su copa se refugian aves, reptiles y mamíferos, y la humedad y el suelo son distintos que fuera. Sus ramas zigzaguean con dos espinas en cada nudo, una recta y otra ganchuda.",
+    "tips": [
+      "Ramas en zigzag con dos espinas por nudo, una recta y otra curva",
+      "Porte en cúpula o almohadón, muy denso",
+      "Frutos redondos que pasan de verde a pardo amarillento"
+    ]
+  },
+  "Lavandula dentata": {
+    "description": "Lavanda de hojas estrechas con el borde recortado en dientes redondeados, muy aromática. Su espiga violácea remata en un penacho de brácteas del mismo color, más corto que el del cantueso común. Florece durante buena parte del año en clima cálido.",
+    "tips": [
+      "Bordes de la hoja recortados en dientes romos",
+      "Penacho de brácteas violetas en lo alto de la espiga",
+      "Aroma intenso, entre lavanda y alcanfor"
+    ]
+  },
+  "Centaurea saxicola": {
+    "description": "Compuesta rupícola que crece colgando de las fisuras de los cantiles calizos, con hojas divididas y algo carnosas y capítulos amarillos rodeados de brácteas con apéndices espinosos. Es un endemismo del sureste ibérico ligado a paredes de roca costeras y de interior.",
+    "tips": [
+      "Capítulos amarillos con brácteas de apéndice espinoso",
+      "Hojas divididas y algo carnosas, en roseta colgante",
+      "Crece encajada en la grieta, no en el suelo"
+    ]
+  },
+  "Galerida cristata": {
+    "habitat": "Cultivos, caminos, eriales y bordes de poblado con suelo desnudo",
+    "description": "Alondra parda de cresta alta y puntiaguda, muy ligada a caminos, cunetas y descampados junto a los pueblos. Camina en vez de saltar y, al volar, deja ver el forro rojizo de las alas y la cola con los bordes canela.",
+    "tips": [
+      "Cresta larga y puntiaguda, casi siempre erguida",
+      "Forro de las alas rojizo, visible al levantar el vuelo",
+      "Camina por el suelo en vez de saltar"
+    ]
+  },
+  "Oenanthe leucura": {
+    "description": "La mayor de las collalbas, enteramente negra salvo el obispillo y la base de la cola, blancos. Vive en cortados y laderas rocosas, donde construye junto al nido una plataforma de piedrecitas que acarrea una a una. Su canto es potente y melodioso.",
+    "tips": [
+      "Cuerpo negro con obispillo blanco muy contrastado",
+      "«T» negra invertida en la cola blanca al volar",
+      "Montoncitos de piedrecitas junto a la grieta del nido"
+    ]
+  },
+  "Notoceras bicorne": {
+    "description": "Crucífera anual y menuda, de tallos tendidos y hojas pequeñas, con flores blanquecinas poco vistosas. Lo característico son los frutos: pequeñas silículas rematadas por dos cuernecillos divergentes que le dan el nombre.",
+    "tips": [
+      "Frutos con dos cuernecillos divergentes en la punta",
+      "Planta anual diminuta y tendida por el suelo",
+      "Flores blanquecinas muy pequeñas, casi inapreciables"
+    ]
+  },
+  "Malpolon monspessulanus": {
+    "description": "La culebra más grande de la península, de hasta dos metros y medio, con un aspecto inconfundible: ojos grandes de pupila redonda bajo unas escamas salientes que le dan «cejas» y expresión de enfado. Es diurna, muy rápida y venenosa, pero con los colmillos al fondo de la boca, por lo que no supone riesgo si no se la manipula.",
+    "tips": [
+      "Escamas prominentes sobre los ojos, como cejas",
+      "Ojo grande con pupila redonda y iris amarillento",
+      "Adultos de dorso pardo oliváceo uniforme; jóvenes muy manchados"
+    ]
+  },
+  "Eragrostis papposa": {
+    "description": "Gramínea de panícula muy abierta y ligera, con espiguillas diminutas sostenidas por ramas finísimas que tiemblan con el viento. Es una planta de estirpe saharo-arábiga que en Europa solo aparece en los enclaves más áridos del sureste ibérico.",
+    "tips": [
+      "Panícula muy abierta y difusa, casi transparente",
+      "Espiguillas diminutas colgando de ramas capilares",
+      "Mata pequeña, de menos de medio metro"
+    ]
+  },
+  "Chalcides bedriagai": {
+    "description": "Eslizón de cuerpo cilíndrico y brillante, con las patas tan reducidas que apenas se usan: se desplaza reptando y buceando entre la arena y la hojarasca. Su dorso, dorado o bronceado, lleva hileras de ocelos oscuros con el centro claro.",
+    "tips": [
+      "Patas diminutas, casi inútiles para caminar",
+      "Cuerpo cilíndrico y muy brillante, como pulido",
+      "Hileras de ocelos oscuros de centro claro en el dorso"
+    ]
+  },
+  "Rhamnus lycioides subsp. borgiae": {
+    "description": "Arbusto muy ramificado cuyas ramillas terminan todas en una espina rígida, formando una maraña impenetrable. Sus hojas son pequeñas, estrechas y agrupadas en manojos, y sus frutos, drupas que pasan de rojo a negro y consumen muchas aves.",
+    "tips": [
+      "Todas las ramillas rematadas en espina rígida",
+      "Hojas pequeñas y estrechas agrupadas en manojitos",
+      "Frutos que viran de rojo a negro al madurar"
+    ]
+  },
+  "Falco peregrinus": {
+    "description": "Halcón robusto de alas puntiagudas y cola corta, capaz de superar los 300 km/h en el picado con que abate a otras aves en pleno vuelo. Se reconoce por la ancha bigotera negra que baja desde el ojo sobre un pecho claro y barrado.",
+    "tips": [
+      "Bigotera negra ancha bajo el ojo, como un casco",
+      "Silueta de ancla: alas puntiagudas y cola corta",
+      "Pecho claro con barrado fino en horizontal"
+    ]
+  },
+  "Psammodromus algirus": {
+    "description": "Lagartija esbelta de escamas grandes, quilladas y brillantes, con dos líneas claras muy marcadas a cada lado del dorso. La cola puede medir el doble que el cuerpo. Los machos lucen en primavera manchas azules en el hombro y las mejillas anaranjadas.",
+    "tips": [
+      "Dos líneas claras nítidas a lo largo de cada costado",
+      "Escamas grandes y quilladas, de aspecto brillante",
+      "Cola larguísima, hasta el doble que el cuerpo"
+    ]
+  },
+  "Acanthodactylus erythrurus": {
+    "description": "Lagartija de suelos arenosos, de cuerpo aplanado y dedos con escamas laterales en forma de peine que le sirven de raqueta sobre la arena suelta. Los jóvenes tienen la cola y las patas traseras de un rojo intenso que se apaga en los adultos.",
+    "tips": [
+      "Dedos con flecos de escamas a los lados, como peines",
+      "Jóvenes con cola y patas traseras rojo intenso",
+      "Cuerpo aplanado, con rayas y ocelos claros en el dorso"
+    ]
+  },
+  "Timon lepidus": {
+    "description": "El lagarto más grande de Europa, de hasta 60 cm con la cola incluida. Su dorso es verde con un fino reticulado negro y, en los costados, hileras de ocelos de un azul intenso. Los machos viejos tienen una cabeza enorme y maciza. Es diurno y muy desconfiado.",
+    "tips": [
+      "Ocelos azules alineados en los costados",
+      "Dorso verde con retícula negra muy fina",
+      "Tamaño grande y cabeza maciza en los machos adultos"
+    ]
+  },
+  "Launaea lanifera": {
+    "description": "Compuesta de aspecto blanquecino por la lana que cubre tallos y hojas, con una roseta basal y capítulos amarillos tipo diente de león. Suelta látex blanco al romperse. Es una planta iberoafricana ligada a los ambientes más áridos.",
+    "tips": [
+      "Lana blanca cubriendo tallos y base de las hojas",
+      "Capítulos amarillos tipo diente de león",
+      "Látex blanco al partir un tallo"
+    ]
+  },
+  "Pistacia lentiscus": {
+    "description": "Arbusto perennifolio de hojas compuestas sin foliolo terminal y con el raquis alado, un detalle que lo separa de la cornicabra. Al frotarlo huele intensamente a resina. Sus frutos, en racimo, pasan de rojo a negro y son alimento clave para aves en otoño.",
+    "tips": [
+      "Hoja compuesta con número par de foliolos, sin uno terminal",
+      "Raquis de la hoja con dos alas laterales",
+      "Olor fuerte a resina al frotar las hojas"
+    ]
+  },
+  "Loeflingia hispanica": {
+    "description": "Planta anual diminuta, de apenas unos centímetros, con hojas lineares terminadas en punta y estípulas membranosas. Sus flores son minúsculas y verdosas. Forma parte de los pastizales efímeros que aparecen sobre arenas tras las lluvias.",
+    "tips": [
+      "Planta de pocos centímetros, pegada al suelo",
+      "Hojas lineares con estípulas blancas y membranosas",
+      "Flores verdosas minúsculas, casi sin pétalos"
+    ]
+  },
+  "Asteriscus maritimus": {
+    "description": "Mata que forma cojines sobre la roca litoral, con hojas espatuladas, carnosas y ásperas al tacto. Sus capítulos amarillos, casi sentados sobre el follaje, están rodeados de brácteas verdes que sobresalen entre las lígulas. Florece durante casi todo el año.",
+    "tips": [
+      "Cojines densos sobre roca costera",
+      "Brácteas verdes asomando entre los pétalos amarillos",
+      "Hojas espatuladas, carnosas y ásperas"
+    ]
+  },
+  "Athene noctua": {
+    "description": "Búho pequeño y rechoncho, de cabeza plana y ojos amarillos con un ceño que le da expresión severa. Es el más diurno de nuestros búhos: se ve posado en postes y ruinas a plena luz. Vuela con un ondulado marcado, a golpes de aleteo y planeo.",
+    "tips": [
+      "Cabeza plana y ancha, sin penachos",
+      "Cejas blancas marcadas que le dan aspecto ceñudo",
+      "Vuelo ondulado, a rachas de aleteo y planeo"
+    ]
+  },
+  "Lafuentea rotundifolia": {
+    "description": "Planta rupícola de hojas redondeadas, dentadas y algo carnosas, que forma matas colgantes en las paredes calizas. Sus flores, blanquecinas con toques amarillos, se agrupan en racimos erguidos. Es un endemismo iberoafricano restringido al sureste peninsular y al norte de África.",
+    "tips": [
+      "Hojas redondas y dentadas, casi como monedas",
+      "Racimos de flores blanquecinas erguidos sobre el follaje",
+      "Forma matas colgantes en pared caliza"
+    ]
+  },
+  "Haematopus ostralegus": {
+    "description": "Limícola grande, blanco y negro, con un pico rojo largo y aplanado que usa como cuña para abrir mejillones y berberechos. Sus patas son rosadas y su reclamo, un silbido agudo y penetrante que delata su presencia antes de verlo.",
+    "tips": [
+      "Pico rojo largo, recto y aplanado lateralmente",
+      "Contraste tajante entre el negro y el blanco",
+      "Silbido agudo y repetido, muy sonoro"
+    ]
+  },
+  "Sideritis ibanyezii": {
+    "habitat": "Tomillares y matorral raso sobre margas y suelos yesosos",
+    "description": "Rabogato endémico del sureste ibérico, de tallos blanquecinos y lanudos y flores amarillentas dispuestas en verticilos a lo largo de la espiga. Bajo cada grupo de flores hay brácteas anchas y punzantes que persisten secas mucho tiempo.",
+    "tips": [
+      "Tallos y hojas cubiertos de pelusa blanca",
+      "Flores amarillentas en anillos separados a lo largo del tallo",
+      "Brácteas anchas y punzantes bajo cada verticilo"
+    ]
+  },
+  "Epidalea calamita": {
+    "description": "Sapo de patas cortas que corre en vez de saltar, con una línea amarilla nítida a lo largo del centro del lomo. Se reproduce en charcas efímeras que se llenan con las lluvias, y los machos forman coros de un canto vibrante y estridente que se oye a kilómetros.",
+    "tips": [
+      "Raya amarilla continua por el centro del lomo",
+      "Corre a cuatro patas en vez de saltar",
+      "Canto nocturno vibrante y muy sonoro tras las lluvias"
+    ]
+  },
+  "Sedum dasyphyllum": {
+    "description": "Crasulácea diminuta de hojas gruesas, casi esféricas y de un gris azulado, dispuestas de dos en dos y cubiertas de pelillos glandulosos que la hacen pegajosa. Forma almohadillas en grietas y muros y da flores blancas con venas rosadas.",
+    "tips": [
+      "Hojas casi esféricas, opuestas y de gris azulado",
+      "Tacto pegajoso por los pelillos glandulosos",
+      "Flores blancas con finas venas rosadas"
+    ]
+  },
+  "Serratula mucronata": {
+    "description": "Compuesta de tallos erguidos y hojas de borde aserrado con cada diente rematado en una punta rígida. Sus capítulos, purpúreos y sin lígulas, recuerdan a un cardo sin espinas. Es una planta escasa y de distribución fragmentada.",
+    "tips": [
+      "Capítulos purpúreos sin pétalos radiales, como pinceles",
+      "Hojas aserradas con la punta de cada diente rígida",
+      "Tallos erguidos y poco ramificados"
+    ]
+  },
+  "Teucrium freynii": {
+    "habitat": "Roquedos, pedregales y ramblas sobre suelos calizos secos",
+    "description": "Teucrio endémico del sureste ibérico, de porte bajo y aspecto blanquecino, con hojas pequeñas y enrolladas y flores rosadas o blanquecinas sin labio superior. Como todas las labiadas, tiene el tallo de sección cuadrada y desprende aroma al frotarlo.",
+    "tips": [
+      "Flores sin labio superior, con los estambres asomando",
+      "Tallo de sección cuadrada, típico de labiada",
+      "Hojas pequeñas y enrolladas, de aspecto grisáceo"
+    ]
+  },
+  "Arenaria interpres": {
+    "description": "Limícola robusta de patas naranjas y pico corto y algo respingón, que se gana la vida volteando piedras, conchas y algas para capturar lo que hay debajo. En vuelo muestra un llamativo diseño blanco y negro en alas y espalda.",
+    "tips": [
+      "Voltea piedras y algas con el pico corto y cuneiforme",
+      "Patas de color naranja vivo",
+      "Diseño blanco y negro muy contrastado en vuelo"
+    ]
+  },
+  "Cutandia maritima": {
+    "description": "Gramínea anual de arenas costeras, con una panícula rígida y quebradiza cuyas ramas salen casi en ángulo recto. Se agosta pronto y sus fragmentos ruedan por la playa dispersando las semillas.",
+    "tips": [
+      "Panícula rígida con ramas casi en ángulo recto",
+      "Se quiebra con facilidad al tocarla",
+      "Planta anual sobre arena suelta, de porte bajo"
+    ]
+  },
+  "Salsola genistoides": {
+    "description": "Mata en forma de escoba, con ramas verdes, largas y erguidas, casi sin hojas, que florece a final de verano. Sus frutos van rodeados de alas membranosas rosadas que la vuelven muy vistosa en otoño. Es un endemismo del sureste ibérico.",
+    "tips": [
+      "Porte en escoba, con ramas verdes largas y erectas",
+      "Hojas reducidas casi a escamas",
+      "Frutos con alas membranosas rosadas en otoño"
+    ]
+  },
+  "Atriplex glauca": {
+    "description": "Mata baja y extendida, de hojas pequeñas, grisáceas y cubiertas de escamas harinosas que reflejan la luz. Marca los suelos con sal y exceso de nitrógeno, como los antiguos apriscos. Sus frutos van encerrados entre dos valvas endurecidas.",
+    "tips": [
+      "Hojas pequeñas, grises y harinosas al tacto",
+      "Porte bajo y muy extendido, casi tendido",
+      "Frutos entre dos valvas duras y dentadas"
+    ]
+  },
+  "Hammada articulata": {
+    "description": "Mata de tallos articulados y suculentos, sin hojas visibles, con los segmentos separados por nudos bien marcados. Vive en los suelos más áridos y salinos, donde tiene poca competencia. Es una planta de raíz sahariana muy escasa en Europa.",
+    "tips": [
+      "Tallos articulados con nudos muy marcados",
+      "Sin hojas visibles, solo escamas en cada nudo",
+      "Porte bajo y ramificado, de color verde grisáceo"
+    ]
+  },
+  "Emberiza calandra": {
+    "habitat": "Cultivos de secano, pastizales y llanos abiertos con posaderos",
+    "description": "Escribano grande y rechoncho, pardo y rayado, sin marcas llamativas. Canta desde un cable o una mata con una frase acelerada que suena como un manojo de llaves agitado, y vuela distancias cortas dejando las patas colgando.",
+    "tips": [
+      "Canto como un manojo de llaves agitándose",
+      "Vuela con las patas colgando, sin recogerlas",
+      "Aspecto pesado y pardo, sin marcas vistosas"
+    ]
+  }
+}

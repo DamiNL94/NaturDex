@@ -66,9 +66,16 @@ CREATE TABLE IF NOT EXISTS habitats (
     -- (alternativa textual obligatoria por accesibilidad, WCAG 1.2.1).
     audio_url VARCHAR(500),
     audio_transcript TEXT,
-    -- Foto del hábitat: URL externa (p. ej. Wikimedia Commons) o ruta local. Si es NULL, el export
-    -- cae en la convención de archivo local Img/habitats/<slug>.jpg.
+    -- Foto del hábitat: URL externa (p. ej. Wikimedia Commons) o ruta local. NULL = sin foto; la app
+    -- dibuja entonces su portada temática (degradado del color del hábitat + emoji + código HIC).
     image_url VARCHAR(500),
+    -- Autor + licencia + fuente de esa foto. Obligatorio para cumplir CC-BY/CC-BY-SA, igual que en
+    -- species.image_attribution.
+    image_attribution VARCHAR(300),
+    -- Un hábitat no es un taxón y no tiene "su" foto: se ilustra con su especie diagnóstica. Aquí se
+    -- explica con cuál y por qué, para que el lector sepa que la portada es una planta concreta y no
+    -- una vista general del hábitat. Lo rellena Tools/catalogo-nacional/habitat-images.js.
+    image_note VARCHAR(400),
     FOREIGN KEY (park_id) REFERENCES parks(id) ON DELETE CASCADE,
     UNIQUE KEY unique_habitat_per_park (park_id, code),
     UNIQUE KEY unique_habitat_slug_per_park (park_id, slug)
@@ -262,6 +269,10 @@ CREATE TABLE IF NOT EXISTS especies_invasoras (
     description TEXT,
     origin TEXT,
     habitat TEXT,
+    -- Qué daño hace (EIDOS «Invasividad») y cómo llegó y se propaga (EIDOS «Ruta» + «Vector»). Son
+    -- las dos únicas cosas que el visitante puede accionar: reconocerla y no ayudarla a extenderse.
+    impact TEXT,
+    pathway TEXT,
     catalogo VARCHAR(120),
     eidos_taxonid INT,
     gbif_species_key BIGINT,

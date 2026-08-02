@@ -140,3 +140,120 @@ Se probó en el navegador que **cada imagen carga de verdad** (no solo que exist
 - `Backend/Lib/park_payload.php` — prioriza `image_url` del hábitat y emite `imageAttribution` de especie
 - `Frontend/Data/parks/.../park.json` — 9 imágenes de hábitat + 2 de especie con atribución
 - `Tools/catalogo-nacional/enrich-images.js` — **nuevo** script de enriquecimiento EIDOS+GBIF (ejecutar en local)
+
+---
+
+# Repaso completo de las fotos (2026-07-31)
+
+Se revisó de dónde sale **cada** imagen de los dos parques con catálogo (Cabo Cope y Sierra Espuña)
+y se corrigió todo lo que no cargaba, lo que no estaba atribuido y lo que no era una foto del taxón.
+
+## Lo que estaba roto y por qué
+
+**1. Enlaces a derivados cacheados de Wikimedia.** La foto de la Tortuga mora apuntaba a
+`upload.wikimedia.org/.../thumb/f/f8/Testudo_graeca_Lambert_01.jpg/640px-...`. Esa URL no señala al
+archivo, señala a un *thumb generado*: si el archivo se renombra o el thumb no está, devuelve 400 y
+la ficha se queda con la portada de emoji. Le pasaba también al Camachuelo trompetero.
+
+La URL correcta y estable es `commons.wikimedia.org/wiki/Special:FilePath/Archivo.jpg?width=1280`,
+una redirección servida por MediaWiki que sobrevive a los renombrados. Ahora la usan las 294 fotos de
+Commons del catálogo, y `Tools/validate-park-data.js` da **error** si alguien vuelve a meter un thumb.
+
+**2. Servidores que bloquean el enlace directo.** Cinco fotos existían pero no cargaban en el
+navegador: pliegos de herbario servidos por Naturalis, el Natural History Museum, RBGE, JACQ y
+observation.org, que rechazan el *hotlink* aunque respondan a un `fetch` desde Node. Se sustituyeron
+por fotos de campo; las dos que no tenían alternativa (*Anabasis hispanica* y *Athamanta hispanica*,
+sin ninguna fotografía libre de campo publicada) se **descargaron al repositorio**, que es lo que
+permiten sus licencias CC0 y CC BY.
+
+**3. Fotos que no eran fotos.** La resolución automática elegía el primer archivo de la categoría de
+Commons, y el orden alfabético no tiene nada que ver con la calidad: el murciélago mediano de
+herradura tenía un **mapa de distribución**, el ratonero grande una **figura de artículo**, el
+murciélago grande de herradura un **audiograma**, el jabalí una **postal de 1898** y varias plantas
+**láminas botánicas del XIX**. El *Allium melananthum* ibérico mostraba un *Allium melanantherum* de
+los Balcanes: otra especie.
+
+Se corrigió la cadena de resolución de `Tools/catalogo-nacional/wikimedia-images.js`:
+
+1. **Wikidata** por declaración exacta `P225 = <nombre científico>` → imagen `P18`.
+2. **Wikipedia** (es → en → ca) enlazada desde ese elemento: imagen principal del artículo.
+3. **Wikipedia buscada directamente por nombre científico**. Hacía falta porque no todo taxón tiene
+   elemento con `P225`: *Sus scrofa* no aparece, y sin este paso caía a la categoría de Commons.
+4. **Categoría de Commons**, ordenando por binomio exacto antes que por género.
+5. **Búsqueda en Commons**, exigiendo género y epíteto en el nombre del archivo. Se marca «a revisar».
+
+Además se descartan por nombre los mapas, figuras, audiogramas, láminas, grabados y pliegos, y se
+comprueba que la URL final devuelve de verdad una imagen antes de escribirla.
+
+**4. Atribución ausente.** 98 fotos de especie y 15 de hábitat no decían autor ni licencia, que es
+justo lo que exigen CC-BY y CC-BY-SA. Ahora se recupera de la propia ficha de Commons y **se muestra
+en la ficha** («Foto: Autor (Licencia) · Wikimedia Commons»), tanto en especies como en hábitats.
+
+**5. Fotos de procedencia dudosa.** Trece fotos locales venían de `florasilvestre.es` con la
+advertencia «confirmar permiso antes de cualquier uso público». Doce se sustituyeron por equivalentes
+de Commons con licencia comprobable; la restante (*Maytenus senegalensis* subsp. *europaea*) por una
+foto CC BY-SA de Commons. **Los trece ficheros siguen en `Frontend/Img/species/` sin que nada los
+use**: conviene borrarlos.
+
+## Estado final
+
+- **363 de 364 especies con foto.** La única sin ella es *Sideritis bourgaeana*: no hay ninguna
+  imagen con licencia libre de ese taxón ni en Wikimedia ni en GBIF.
+- **25 de 30 hábitats con foto.** Los cinco restantes se quedan con su portada temática porque no
+  tienen ninguna especie diagnóstica con foto entre las suyas (tres ni siquiera tienen especies
+  asignadas). Cada portada de hábitat dice ahora con qué especie se ilustra y por qué.
+- **400 de 400 imágenes verificadas cargando en un navegador real** (especies + hábitats + POIs).
+  La comprobación con `fetch` desde Node no vale: da 429 en cuanto pides varias seguidas y, al
+  revés, acepta servidores que el navegador rechaza por *hotlink*.
+- **Todas con autor y licencia.** Reparto: 294 Wikimedia Commons, 60 GBIF/iNaturalist, 6 herbarios y
+  agregadores, 2 copias locales.
+- Licencias: 226 CC-BY-SA, 72 CC-BY, 21 dominio público, 20 CC-BY-NC (**no permiten uso comercial**:
+  hay que decidir si se retiran antes de publicar en una tienda de aplicaciones), 18 CC0, 4 FAL/GFDL
+  y 2 con atribución genérica.
+
+## Herramientas
+
+```bash
+node Tools/catalogo-nacional/wikimedia-images.js --canonicalize --missing --write
+```
+
+```bash
+node Tools/catalogo-nacional/habitat-images.js --write --sql Database/habitats-imagenes.sql
+```
+
+`--canonicalize` convierte cualquier URL de Wikimedia a `Special:FilePath` y recupera la atribución;
+`--missing` rellena las que falten o no carguen; `--only-local` cambia una foto local por su
+equivalente de Commons; `--only "<nombres científicos ; separados>"` rehace fichas concretas.
+
+Para los taxones que Wikimedia no cubre sigue estando
+`Tools/catalogo-nacional/enrich-images.js` (EIDOS → GBIF), que es de donde salen las 60 fotos de
+iNaturalist.
+
+## Segunda pasada (2026-08-01)
+
+Revisión dirigida de 15 fichas y alta de una especie nueva (*Cistanche phelypaea*, «pijolobo»).
+
+**Los once animales** (calandria, cormorán moñudo, garceta, treparriscos, zampullín, roquero
+solitario, avión roquero, salamanquesa rosada, culebra de herradura, conejo y erizo moruno) tenían
+observaciones sueltas de iNaturalist. Se han sustituido por la imagen principal del artículo de
+Wikipedia en español, que es una foto elegida y revisada por editores. Se revisó **una a una**: la
+primera candidata para la salamanquesa rosada mostraba el animal sujeto en la mano de una persona
+—mala imagen para una guía de campo y peor ejemplo con un reptil protegido—, y se cambió por otra
+del animal sobre un muro.
+
+**Las cuatro plantas** tenían pliegos de herbario. Tres se han cambiado por fotografías de campo, y
+para dos hubo que buscarlas bajo un nombre distinto del que usa el catálogo:
+
+| Especie | Buscada como | Resultado |
+| --- | --- | --- |
+| _Erodium sanguis-christi_ | — | Foto de campo, España (CC BY-NC) |
+| _Leucanthemum decipiens_ | _Mauranthemum decipiens_ | Foto de campo, España (CC BY-NC) |
+| _Serratula mucronata_ | _Klasea flavescens_ subsp. _mucronata_ | Foto de campo, **Murcia** (CC BY-NC) |
+| _Anabasis hispanica_ | — | **No existe ninguna** |
+
+De *Anabasis hispanica* no hay una sola fotografía de campo publicada con licencia libre: cero
+observaciones con multimedia en iNaturalist, categoría vacía en Wikimedia Commons y, en GBIF, solo
+pliegos. El del herbario MA (Real Jardín Botánico–CSIC) sería de mejor procedencia que el
+estadounidense que hay ahora, pero su servidor **solo sirve el escaneo original de 24 MB** (no
+admite parámetro de tamaño), así que se mantiene la copia local del pliego del Smithsonian, de
+800 kB. Queda anotado en el `reviewNote` de la ficha.

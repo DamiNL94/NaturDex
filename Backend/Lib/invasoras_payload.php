@@ -14,7 +14,7 @@
  * @return array
  */
 function buildInvasorasPayload($conn, $ccaa = null) {
-    $cols = "scientific_name, common_name, taxon_group, kingdom, ccaa, description, origin, habitat, catalogo, eidos_taxonid, gbif_species_key, gbif_occurrences, image_url, image_attribution";
+    $cols = "scientific_name, common_name, taxon_group, kingdom, ccaa, description, origin, habitat, impact, pathway, catalogo, eidos_taxonid, gbif_species_key, gbif_occurrences, image_url, image_attribution, source";
     if ($ccaa !== null && $ccaa !== '') {
         $stmt = $conn->prepare("SELECT $cols FROM especies_invasoras WHERE ccaa = ? ORDER BY gbif_occurrences DESC, common_name ASC");
         $stmt->bind_param("s", $ccaa);
@@ -39,12 +39,17 @@ function buildInvasorasPayload($conn, $ccaa = null) {
                 "description" => $row["description"],
                 "origin" => $row["origin"],
                 "habitat" => $row["habitat"],
+                // Qué daño hace y cómo llega: es lo que convierte la ficha en algo accionable
+                // ("no la plantes, no la sueltes") en vez de en una descripción más.
+                "impact" => $row["impact"],
+                "pathway" => $row["pathway"],
                 "catalogo" => $row["catalogo"],
                 "eidosTaxonId" => $row["eidos_taxonid"] !== null ? (int) $row["eidos_taxonid"] : null,
                 "gbifSpeciesKey" => $row["gbif_species_key"] !== null ? (int) $row["gbif_species_key"] : null,
                 "gbifOccurrences" => $row["gbif_occurrences"] !== null ? (int) $row["gbif_occurrences"] : null,
                 "image" => $row["image_url"] ?: ("Img/invasoras/" . $slug . ".jpg"),
                 "imageAttribution" => $row["image_attribution"],
+                "source" => $row["source"],
             ];
         }
     }

@@ -4,7 +4,9 @@
   "_tipo": "El campo `type` NO es dato oficial: es la categoría divulgativa con la que la app agrupa los hábitats (Marino, Litoral, Salino, Matorral, Dunas, Acuático, Ribera, Pastos, Roquedos, Bosque).",
   "_subtipos_1997": "8211, 6175, 9561 (y 5334/5335, sin nombre) son SUBTIPOS ESPAÑOLES que solo aparecen si se procesa la cartografía de 1997. El Atlas 2005 usa códigos UE de 4 dígitos y el pipeline los normaliza (8211→8210, 6175→6170, 9561→9560, 5334/5335→5330), así que con la fuente preferente no se usan. Se conservan por si se vuelve a la fuente de 1997.",
   "_sin_nombre_en_la_fuente": "5334 y 5335 NO tienen nombre en la tabla del Atlas: sus filas del índice vienen vacías ('5334/ 4334/ *' sin descripción). Solo salen con la fuente de 1997; con el Atlas normalizan a 5330, que sí está nombrado.",
+  "_codigo_ausente_es_un_riesgo": "Un código que falte aquí NO se queda sólo sin nombre: cae al tipo 'Hábitat' y con eso se SALTA el filtro marino de adopt-habitats.js. Así entró el 1110 en Cabo Cope (0 ha, dos esquirlas de orilla) — ver Docs/rollout/ESTADO.md, 2026-08-01. Todo código marino que aparezca en un espacio litoral debe estar aquí con type 'Marino'.",
   "codigos": {
+    "1110": { "name": "Bancos de arena cubiertos permanentemente por agua marina, poco profunda", "type": "Marino" },
     "1120": { "name": "Praderas de Posidonia (Posidonion oceanicae)", "type": "Marino" },
     "1150": { "name": "Lagunas costeras", "type": "Litoral" },
     "1210": { "name": "Vegetación anual sobre desechos marinos acumulados", "type": "Litoral" },

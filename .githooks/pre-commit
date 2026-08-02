@@ -47,4 +47,10 @@ if ! "$NODE" "$ROOT/Tools/validate-park-data.js"; then
   exit 1
 fi
 
+# --- 3) Cobertura del glosario divulgativo (informativo) ----------------------------------------
+# Cada alta de especies trae vocabulario científico nuevo a las descripciones. Esto avisa de los
+# tecnicismos que han entrado y todavía no tienen definición en la tabla `glosario`. NO bloquea:
+# redactar la definición es trabajo editorial, no un error de datos. Ver Docs/glosario-divulgativo.md.
+"$NODE" "$ROOT/Tools/glossary-coverage.js" || true
+
 exit 0

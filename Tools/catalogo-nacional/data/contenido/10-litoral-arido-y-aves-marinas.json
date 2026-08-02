@@ -1,0 +1,588 @@
+{
+  "_comment": "Tanda 10 · flora del matorral semiárido y de los saladares litorales, y aves marinas de la Red Natura 2000. Texto universal: no puede nombrar ningún espacio concreto (ver README.md de esta carpeta).",
+
+  "Salsola oppositifolia": {
+    "commonName": "Salao negro",
+    "group": "Mata",
+    "habitat": "Ramblas, taludes y matorrales sobre suelos salinos o removidos, en clima muy seco",
+    "seasonality": "Floración de verano a otoño",
+    "description": "Mata leñosa y ramosa, de hasta metro y medio, con hojas carnosas cortas y opuestas —de ahí el nombre— que dan a la planta un aspecto de escobilla gris azulada. Aguanta suelos salinos y alterados donde casi nada más prospera, y sus flores, diminutas, se reconocen porque el fruto queda envuelto en un ala membranosa circular.",
+    "tips": [
+      "Hojas carnosas y cortas dispuestas por pares, una frente a otra",
+      "Frutos con un ala redonda y translúcida, como una moneda de papel",
+      "Porte de escobilla gris azulada en taludes y bordes de rambla"
+    ]
+  },
+
+  "Thymelaea hirsuta": {
+    "commonName": "Bolaga",
+    "group": "Mata",
+    "habitat": "Matorral costero y semiárido, arenas y suelos pedregosos con influencia marina",
+    "seasonality": "Floración de otoño a primavera",
+    "description": "Mata de ramas largas y flexibles cubiertas de hojitas escamosas, apretadas contra el tallo como las tejas de un tejado, con el envés blanco y peludo. Las flores son verdosas y pasan desapercibidas, pero su corteza es tan fibrosa y resistente que se ha usado tradicionalmente como cuerda.",
+    "tips": [
+      "Hojas minúsculas y solapadas, cubriendo el tallo como escamas",
+      "La rama no se rompe al doblarla: la corteza es fibrosa y correosa",
+      "Flores verde-amarillentas pegadas a la rama, sin pétalos vistosos"
+    ]
+  },
+
+  "Zygophyllum fabago": {
+    "commonName": "Morsana",
+    "group": "Hierba",
+    "habitat": "Suelos removidos, cunetas, ramblas y bordes de saladar en clima árido",
+    "seasonality": "Floración de primavera a verano",
+    "description": "Hierba perenne de tallos gruesos y quebradizos con hojas carnosas partidas en dos folíolos redondeados, como dos gotas verdes enfrentadas. Coloniza suelos pisoteados y salinos, y sus frutos alargados, en forma de cápsula estriada, cuelgan durante buena parte del verano.",
+    "tips": [
+      "Hojas de solo dos folíolos carnosos y redondeados",
+      "Tallos hinchados en los nudos, que se quiebran con facilidad",
+      "Cápsulas alargadas y acostilladas colgando tras la floración"
+    ]
+  },
+
+  "Helianthemum motae": {
+    "commonName": "Jarilla de Mota",
+    "group": "Mata",
+    "habitat": "Matorrales abiertos y pastizales sobre suelos margosos y yesosos del sureste árido",
+    "seasonality": "Floración en primavera",
+    "description": "Jarilla pequeña y grisácea, de hojas estrechas cubiertas de pelo blanquecino que reflejan la luz y le ahorran agua. Es un endemismo del sureste ibérico de área muy reducida, ligado a los suelos margosos de las zonas más áridas de la península.",
+    "tips": [
+      "Mata baja de aspecto plateado por el fieltro de pelos",
+      "Flores amarillas de cinco pétalos que duran un solo día",
+      "Hojas estrechas y enrolladas hacia el envés"
+    ]
+  },
+
+  "Bupleurum semicompositum": {
+    "commonName": "Perfollada anual",
+    "group": "Hierba",
+    "habitat": "Pastizales anuales, claros de matorral y suelos margosos secos",
+    "seasonality": "Primavera",
+    "description": "Umbelífera anual diminuta, de pocos centímetros, con hojas estrechas de un verde azulado y umbelas tan pequeñas que parecen botones. Es una de esas plantas efímeras que germinan con las lluvias, florecen deprisa y desaparecen antes del verano.",
+    "tips": [
+      "Planta anual muy pequeña, de aspecto rígido y verde azulado",
+      "Hojas lineares sin dientes, atravesadas por nervios paralelos",
+      "Umbelas minúsculas con brácteas que sobrepasan a las flores"
+    ]
+  },
+
+  "Limonium lobatum": {
+    "commonName": "Saladilla anual",
+    "group": "Hierba",
+    "habitat": "Saladares, arenas litorales y suelos salinos secos",
+    "seasonality": "Primavera",
+    "description": "Saladilla anual —a diferencia de la mayoría de sus parientes, que son perennes— con una roseta de hojas lobuladas pegada al suelo y tallos alados que rematan en espigas de flores azuladas o violáceas. Sus flores conservan el color al secarse, un truco común en el género.",
+    "tips": [
+      "Roseta basal de hojas con lóbulos redondeados",
+      "Tallos con alas o costillas, no cilíndricos",
+      "Flores azuladas agrupadas en espiguillas de un solo lado"
+    ]
+  },
+
+  "Reichardia tingitana": {
+    "commonName": "Cerrajón",
+    "group": "Hierba",
+    "habitat": "Suelos arenosos, ramblas y terrenos removidos en clima cálido y seco",
+    "seasonality": "Primavera",
+    "description": "Hierba anual de aspecto lampiño con capítulos amarillos que llevan en el centro una mancha oscura, casi negra, como un ojo. Al cortar el tallo suelta látex blanco, rasgo compartido con las cerrajas y los dientes de león.",
+    "tips": [
+      "Capítulo amarillo con el centro oscuro, casi negro",
+      "Látex blanco al partir el tallo o una hoja",
+      "Brácteas anchas y membranosas en el borde, bajo la flor"
+    ]
+  },
+
+  "Mesembryanthemum nodiflorum": {
+    "commonName": "Algazul",
+    "group": "Planta suculenta",
+    "habitat": "Saladares, arenas litorales y suelos salinos removidos",
+    "seasonality": "Primavera",
+    "description": "Planta rastrera de hojas cilíndricas y carnosas cubiertas de papilas que brillan al sol como gotas de agua. Acumula sal en sus tejidos y, al secarse en verano, toma tonos rojizos que tiñen el suelo del saladar; se quemaba para obtener sosa, de ahí su nombre.",
+    "tips": [
+      "Hojas gruesas, cilíndricas y con aspecto escarchado",
+      "Porte tendido, formando alfombras pegadas al suelo",
+      "Vira a rojo intenso al agostarse, en pleno verano"
+    ]
+  },
+
+  "Filago mareotica": {
+    "commonName": "Algodonosa",
+    "group": "Hierba",
+    "habitat": "Pastizales anuales sobre arenas y suelos secos y sueltos",
+    "seasonality": "Primavera",
+    "description": "Hierba anual pequeña, cubierta por completo de un fieltro blanco y lanoso que la protege del sol. Sus capítulos son minúsculos y se agrupan en glomérulos apretados en las horquillas del tallo, difíciles de ver si no se busca de cerca.",
+    "tips": [
+      "Toda la planta blanquecina y algodonosa al tacto",
+      "Capítulos diminutos apiñados en las bifurcaciones del tallo",
+      "Porte erguido de pocos centímetros, ramificado en horquilla"
+    ]
+  },
+
+  "Genista umbellata": {
+    "commonName": "Bolina",
+    "group": "Mata",
+    "habitat": "Matorrales secos y soleados sobre suelos pobres del sureste ibérico",
+    "seasonality": "Floración de invierno a primavera",
+    "description": "Mata en forma de bola, densa y ramosa, con ramillas finas y estriadas que hacen la fotosíntesis porque las hojas duran muy poco. En pleno invierno se cubre de flores amarillas agrupadas en el extremo de las ramas, en umbelas apretadas.",
+    "tips": [
+      "Mata redondeada de ramillas verdes, finas y sin espinas",
+      "Flores amarillas reunidas al final de la rama, como un ramillete",
+      "Hojas diminutas y caedizas: casi siempre parece desnuda"
+    ]
+  },
+
+  "Carrichtera annua": {
+    "commonName": "Cuchareta",
+    "group": "Hierba",
+    "habitat": "Pastizales anuales, eriales y suelos margosos removidos en clima árido",
+    "seasonality": "Primavera",
+    "description": "Crucífera anual de flores blanquecinas con nervios violáceos, inconfundible por su fruto: una vainita corta rematada por una lengüeta plana y curvada que recuerda a una cuchara. Los frutos secos persisten sobre la planta y son la mejor pista para identificarla.",
+    "tips": [
+      "Frutos con una pala plana en el extremo, como cucharillas",
+      "Hojas muy divididas, de segmentos estrechos",
+      "Planta anual pelosa, de pocos decímetros, en suelo pelado"
+    ]
+  },
+
+  "Fumana ericoides": {
+    "commonName": "Jarilla de brezo",
+    "group": "Mata",
+    "habitat": "Matorrales y pastizales pedregosos sobre calizas, en solanas secas",
+    "seasonality": "Primavera",
+    "description": "Matita leñosa de hojas estrechas y punzantes parecidas a las del brezo, de donde le viene el nombre. Sus flores amarillas, de cinco pétalos delicados, se abren por la mañana y pierden los pétalos el mismo día.",
+    "tips": [
+      "Hojas lineares, rígidas y puntiagudas, como agujas cortas",
+      "Flores amarillas efímeras, con pétalos arrugados",
+      "Mata baja y leñosa en la base, muy ramificada"
+    ]
+  },
+
+  "Anthyllis terniflora": {
+    "commonName": "Albaida fina",
+    "group": "Mata",
+    "habitat": "Matorrales áridos y espartales sobre suelos pobres del sureste ibérico",
+    "seasonality": "Floración de invierno a primavera",
+    "description": "Mata blanquecina, cubierta de pelos sedosos, con las flores agrupadas de tres en tres a lo largo de las ramas, que es lo que le da nombre. Es una leguminosa del extremo árido del sureste peninsular y del norte de África, adaptada a suelos yesosos y margas.",
+    "tips": [
+      "Flores en grupos de tres, dispuestas a lo largo de la rama",
+      "Follaje sedoso y plateado por el pelo tumbado",
+      "Cáliz hinchado y peludo que envuelve la flor"
+    ]
+  },
+
+  "Mesembryanthemum crystallinum": {
+    "commonName": "Escarchada",
+    "group": "Planta suculenta",
+    "habitat": "Suelos salinos y arenosos, taludes y bordes de saladar en clima cálido",
+    "seasonality": "Primavera",
+    "description": "Planta carnosa y tendida cuyas hojas están cubiertas de vesículas transparentes llenas de agua salada: al sol parecen cristales de hielo o gotas de rocío que no se secan. Esas vesículas almacenan la sal que la planta extrae del suelo y le permiten vivir donde el terreno es demasiado salino para otras.",
+    "tips": [
+      "Hojas anchas cubiertas de ampollitas brillantes, como escarcha",
+      "Porte rastrero, formando manchas amplias sobre suelo desnudo",
+      "Tonos rosados o rojizos al final de su ciclo"
+    ]
+  },
+
+  "Squilla maritima": {
+    "commonName": "Cebolla albarrana",
+    "group": "Planta bulbosa",
+    "habitat": "Matorrales secos, laderas pedregosas y arenas litorales en clima cálido",
+    "seasonality": "Hojas en invierno; floración a final de verano",
+    "description": "Bulbo enorme, del tamaño de un puño o mayor, que asoma medio enterrado y que en pleno agosto emite un tallo desnudo de más de un metro rematado por una larga espiga de flores blancas. Las hojas, anchas y correosas, aparecen después y desaparecen antes de florecer, así que rara vez se ven flores y hojas a la vez. Es tóxica y también se cita como Drimia maritima o Urginea maritima.",
+    "tips": [
+      "Bulbo grande y visible, asomando entre las piedras",
+      "Vara floral alta y desnuda, sin hojas, a final de verano",
+      "Roseta de hojas anchas y carnosas en invierno, sin flor"
+    ]
+  },
+
+  "Sonchus tenerrimus": {
+    "commonName": "Cerraja fina",
+    "group": "Hierba",
+    "habitat": "Muros, taludes, cunetas y pies de roca en ambientes secos y alterados",
+    "seasonality": "Casi todo el año",
+    "description": "Cerraja de hojas muy divididas en segmentos estrechos, casi filiformes, que la distinguen de sus parientes de hoja ancha. Brota en cualquier grieta o talud, suelta látex blanco al partirla y florece prácticamente todo el año en clima cálido.",
+    "tips": [
+      "Hojas partidas en segmentos muy estrechos y separados",
+      "Látex blanco abundante al romper el tallo",
+      "Capítulos amarillo pálido y vilanos sedosos y blancos"
+    ]
+  },
+
+  "Lysimachia arvensis": {
+    "commonName": "Murajes",
+    "group": "Hierba",
+    "habitat": "Cultivos, cunetas, claros y suelos removidos",
+    "seasonality": "Primavera",
+    "description": "Hierbecilla tendida de tallos cuadrangulares y hojas enfrentadas, con flores solitarias que salen de la axila de cada hoja. Las hay de color naranja asalmonado y de color azul intenso, y ambas cierran los pétalos cuando el cielo se nubla, de ahí que se la llamara «hierba del buen tiempo».",
+    "tips": [
+      "Flores solitarias sobre un pedúnculo largo y fino",
+      "Tallos de sección cuadrada, tendidos por el suelo",
+      "Pétalos que se cierran al nublarse o a media tarde"
+    ]
+  },
+
+  "Crucianella maritima": {
+    "commonName": "Rubia marina",
+    "group": "Mata",
+    "habitat": "Dunas y arenas litorales estabilizadas",
+    "seasonality": "Primavera y principio de verano",
+    "description": "Matita rígida de las arenas costeras, con las hojas dispuestas en verticilos de cuatro que envuelven el tallo formando una columna geométrica de un verde glauco. Sus flores amarillentas se abren en espigas terminales apretadas, y sus tallos leñosos fijan la arena a su alrededor.",
+    "tips": [
+      "Hojas en anillos de cuatro alrededor del tallo, muy regulares",
+      "Aspecto rígido y azulado, casi de plástico, sobre arena",
+      "Espigas terminales de flores pequeñas y amarillentas"
+    ]
+  },
+
+  "Limonium echioides": {
+    "commonName": "Acelguilla espinosa",
+    "group": "Hierba",
+    "habitat": "Pastizales secos, suelos margosos y salinos en clima árido",
+    "seasonality": "Primavera",
+    "description": "Saladilla anual pequeña, con una roseta de hojas ásperas al tacto y tallos ramificados en zigzag que llevan las flores en espiguillas cortas. Las flores, blanquecinas o violáceas, conservan el cáliz seco y papiráceo mucho después de marchitarse.",
+    "tips": [
+      "Hojas de la roseta ásperas, con pelillos duros",
+      "Tallos en zigzag, con ramas divaricadas",
+      "Cálices secos y papiráceos persistiendo tras la flor"
+    ]
+  },
+
+  "Suaeda maritima": {
+    "commonName": "Sosa blanca",
+    "group": "Hierba",
+    "habitat": "Marismas, saladares y orillas de aguas salobres",
+    "seasonality": "Verano y otoño",
+    "description": "Hierba anual de hojas cilíndricas y carnosas que crece en los suelos más encharcados y salinos del saladar, donde el agua sube y baja. Al final del ciclo toma tonos rojizos o purpúreos que delatan su presencia a distancia.",
+    "tips": [
+      "Hojas carnosas, cilíndricas y de punta roma",
+      "Flores diminutas y verdosas en la axila de las hojas",
+      "Coloración rojiza al final del verano, en suelo salino húmedo"
+    ]
+  },
+
+  "Frankenia pulverulenta": {
+    "commonName": "Albohol",
+    "group": "Hierba",
+    "habitat": "Saladares, depresiones salinas y suelos arcillosos que se encharcan en invierno",
+    "seasonality": "Primavera",
+    "description": "Hierba anual tendida, de hojas pequeñas y enfrentadas con el envés cubierto de un polvillo blanco de sal que la planta expulsa por glándulas propias. Forma alfombras bajas y ralas en los claros del saladar, con flores rosadas de cinco pétalos diminutos.",
+    "tips": [
+      "Envés de las hojas blanquecino, como espolvoreado",
+      "Porte tendido y menudo, pegado al suelo salino",
+      "Flores rosadas muy pequeñas, en la axila de las hojas"
+    ]
+  },
+
+  "Tamarix gallica": {
+    "commonName": "Taraje",
+    "group": "Árbol",
+    "habitat": "Ramblas, cauces salinos, márgenes de saladar y arenas húmedas",
+    "seasonality": "Floración de primavera a verano",
+    "description": "Arbolillo de porte ligero y ramas colgantes cubiertas de hojas escamosas diminutas, con un follaje que de lejos parece humo verde. Tolera la sal como pocos árboles: la excreta por sus hojas, y sus espigas rosadas de flores minúsculas cubren la copa en primavera.",
+    "tips": [
+      "Hojas escamosas de un par de milímetros, pegadas a la ramilla",
+      "Ramas finas y péndulas, de aspecto plumoso",
+      "Espigas densas de florecillas rosadas o blanquecinas"
+    ]
+  },
+
+  "Ammochloa palaestina": {
+    "commonName": "Grama de arena",
+    "group": "Gramínea",
+    "habitat": "Arenas litorales y suelos sueltos y secos",
+    "seasonality": "Primavera",
+    "description": "Gramínea anual enana que forma una mata apretada a ras de suelo, con la inflorescencia reducida a una cabezuela compacta casi sin tallo, medio escondida entre las hojas. Vive en arenas móviles, donde su ciclo relámpago aprovecha la humedad de las lluvias.",
+    "tips": [
+      "Inflorescencia en cabezuela apretada, casi sentada sobre la mata",
+      "Planta enana, de pocos centímetros, sobre arena suelta",
+      "Hojas cortas y rígidas, agrupadas en la base"
+    ]
+  },
+
+  "Allium subvillosum": {
+    "commonName": "Ajo porro",
+    "group": "Planta bulbosa",
+    "habitat": "Arenas litorales, pastizales secos y claros de matorral",
+    "seasonality": "Primavera",
+    "description": "Ajo silvestre de flores blancas agrupadas en una umbela laxa sobre un tallo fino, con las hojas estrechas y con el borde y el nervio ligeramente pelosos. Como todos los ajos, delata su identidad en cuanto se estruja una hoja.",
+    "tips": [
+      "Umbela de flores blancas con nervio verdoso en cada pétalo",
+      "Hojas estrechas con pelillos en el margen",
+      "Olor claro a ajo al frotar las hojas o el bulbo"
+    ]
+  },
+
+  "Reichardia gaditana": {
+    "commonName": "Cerraja gaditana",
+    "group": "Hierba",
+    "habitat": "Arenas litorales, suelos salinos y eriales cercanos a la costa",
+    "seasonality": "Primavera",
+    "description": "Pariente cercana del cerrajón, anual y de hojas carnosas abrazadas al tallo, con capítulos amarillos y látex blanco. Es propia de suelos arenosos y algo salinos del suroeste y del sureste peninsular.",
+    "tips": [
+      "Hojas basales carnosas, con dientes anchos y triangulares",
+      "Capítulos amarillos con brácteas de borde membranoso",
+      "Látex blanco al partir cualquier parte de la planta"
+    ]
+  },
+
+  "Eryngium ilicifolium": {
+    "commonName": "Cardo mancaperros",
+    "group": "Hierba",
+    "habitat": "Pastizales secos, eriales y suelos margosos pisoteados",
+    "seasonality": "Primavera y verano",
+    "description": "Cardo corredor anual, muy espinoso y rígido, con hojas duras parecidas a las de la encina —de ahí el nombre— y cabezuelas espinosas azuladas rodeadas de brácteas punzantes. Al secarse se vuelve leñoso y persiste todo el verano pinchando a quien pase.",
+    "tips": [
+      "Hojas rígidas y espinosas, recortadas como las de la encina",
+      "Cabezuelas con brácteas largas y punzantes en estrella",
+      "Tonos azulados en las brácteas durante la floración"
+    ]
+  },
+
+  "Aizoanthemopsis hispanica": {
+    "commonName": "Cosco",
+    "group": "Planta suculenta",
+    "habitat": "Suelos salinos y margosos desnudos, en depresiones áridas",
+    "seasonality": "Primavera",
+    "description": "Anual carnosa y tendida, cubierta de papilas que le dan aspecto áspero y blanquecino, con flores pequeñas sin pétalos que se abren estrelladas al sol. Es una planta de los suelos más pobres y salinos, donde forma manchas dispersas sobre el barro desnudo.",
+    "tips": [
+      "Ramas carnosas y tendidas, ásperas y grisáceas",
+      "Flores sin pétalos, con sépalos que se abren en estrella",
+      "Crece sobre suelo desnudo, salino o margoso"
+    ]
+  },
+
+  "Crassula tillaea": {
+    "commonName": "Crásula enana",
+    "group": "Planta suculenta",
+    "habitat": "Claros arenosos y suelos someros que se encharcan brevemente en invierno",
+    "seasonality": "Final de invierno y primavera",
+    "description": "Una de las plantas con flor más pequeñas de la península: apenas un centímetro de tallos carnosos con hojitas apretadas en pares, que al madurar se tiñen de rojo intenso y colorean el suelo. Hay que agacharse mucho para verla, pero cuando abunda pinta manchas rojizas inconfundibles.",
+    "tips": [
+      "Planta minúscula, de menos de dos centímetros",
+      "Hojas carnosas opuestas y apretadas a lo largo del tallo",
+      "Vira a rojo intenso al madurar, tiñendo el suelo"
+    ]
+  },
+
+  "Sphenopus divaricatus": {
+    "commonName": "Grama salada",
+    "group": "Gramínea",
+    "habitat": "Saladares, depresiones salinas y suelos arcillosos con sal",
+    "seasonality": "Primavera",
+    "description": "Gramínea anual delicada, de tallos finísimos y panícula muy abierta con las ramas separadas casi en ángulo recto, que en conjunto parece una nube. Es una de las pocas gramíneas capaces de completar su ciclo en los suelos salinos del saladar.",
+    "tips": [
+      "Panícula muy abierta, con ramas separadas en ángulo recto",
+      "Planta anual grácil, de tallos capilares",
+      "Espiguillas diminutas en el extremo de las ramas"
+    ]
+  },
+
+  "Alcedo atthis": {
+    "commonName": "Martín pescador",
+    "group": "Ave acuática",
+    "habitat": "Ríos, ramblas con pozas, canales y láminas de agua con posaderos y taludes terrosos",
+    "seasonality": "Todo el año",
+    "description": "Pájaro rechoncho de color azul turquesa iridiscente por encima y naranja por debajo, con un pico largo y recto desproporcionado. Pesca lanzándose en picado desde una rama sobre el agua y anida en un túnel que excava en taludes de tierra.",
+    "tips": [
+      "Destello azul eléctrico volando bajo y recto sobre el agua",
+      "Silbido agudo y penetrante, casi siempre antes de verlo",
+      "Posado inmóvil en una rama sobre el agua, cabeza gacha"
+    ]
+  },
+
+  "Himantopus himantopus": {
+    "commonName": "Cigüeñuela",
+    "group": "Ave limícola",
+    "habitat": "Salinas, marismas, charcas someras y humedales salobres",
+    "seasonality": "Sobre todo de primavera a verano",
+    "description": "Limícola blanca y negra de patas rosadas larguísimas, desproporcionadas para su tamaño, que le permiten caminar por aguas someras picoteando insectos en la superficie. Es ruidosa y muy territorial cerca del nido, y sobrevuela en círculos a quien se acerca.",
+    "tips": [
+      "Patas rojizas extremadamente largas, que sobresalen en vuelo",
+      "Contraste limpio de blanco y negro, con pico fino y recto",
+      "Reclamo insistente y chillón al sobrevolar al intruso"
+    ]
+  },
+
+  "Alca torda": {
+    "commonName": "Alca común",
+    "group": "Ave marina",
+    "habitat": "Mar abierto y aguas costeras fuera de la época de cría",
+    "seasonality": "Invierno",
+    "description": "Ave marina compacta, negra por arriba y blanca por debajo, con un pico grueso y comprimido lateralmente cruzado por una línea blanca. Vuela bajo y rápido, rozando el agua, y bucea propulsándose con las alas para perseguir peces pequeños.",
+    "tips": [
+      "Pico grueso y aplanado de lado, con una raya blanca vertical",
+      "Vuelo rápido a ras de agua, con aleteo rígido",
+      "Se zambulle desde la superficie, sin lanzarse desde el aire"
+    ]
+  },
+
+  "Calonectris diomedea": {
+    "commonName": "Pardela cenicienta mediterránea",
+    "group": "Ave marina",
+    "habitat": "Mar abierto; cría en islotes e islas del Mediterráneo",
+    "seasonality": "De primavera a otoño",
+    "description": "Pardela grande de dorso pardo ceniciento y vientre blanco, con pico amarillento, que planea largamente sobre las olas alternando ascensos y descensos casi sin batir las alas. Cría en colonias en islotes rocosos y se acerca a ellos de noche, con reclamos que recuerdan a un llanto.",
+    "tips": [
+      "Vuelo planeado en arcos largos, casi sin aletear",
+      "Dorso pardo ceniciento sin capucha oscura marcada",
+      "Pico amarillento con la punta oscura"
+    ]
+  },
+
+  "Calonectris borealis": {
+    "commonName": "Pardela cenicienta atlántica",
+    "group": "Ave marina",
+    "habitat": "Mar abierto; cría en islas atlánticas y se ve en paso por el Mediterráneo occidental",
+    "seasonality": "De verano a otoño",
+    "description": "Gemela de la pardela cenicienta mediterránea, algo mayor y más robusta, con el mismo vuelo planeador en arcos sobre el mar. Cría en el Atlántico —Canarias, Azores, Madeira— y entra en el Mediterráneo occidental fuera de la época de cría.",
+    "tips": [
+      "Silueta grande y pesada planeando en arcos sobre las olas",
+      "Dorso pardo uniforme y vientre blanco limpio",
+      "Alas más anchas y batido más lento que en gaviotas"
+    ]
+  },
+
+  "Chlidonias niger": {
+    "commonName": "Fumarel común",
+    "group": "Ave acuática",
+    "habitat": "Humedales, lagunas y costas someras durante el paso migratorio",
+    "seasonality": "Pasos de primavera y otoño",
+    "description": "Charrán pequeño y oscuro que en plumaje nupcial es casi negro con las alas grises, y en invierno gris y blanco con una mancha oscura en el lado del pecho. No se zambulle como los charranes marinos: vuela errático sobre el agua y picotea la superficie al pasar.",
+    "tips": [
+      "Vuelo errático y buceante sobre el agua, sin zambullirse",
+      "Mancha oscura a los lados del pecho en plumaje de invierno",
+      "Cola poco ahorquillada, más corta que la de los charranes"
+    ]
+  },
+
+  "Hydrobates pelagicus": {
+    "commonName": "Paíño europeo",
+    "group": "Ave marina",
+    "habitat": "Mar abierto; cría en grietas y cuevas de islotes",
+    "seasonality": "Sobre todo de primavera a otoño",
+    "description": "El ave marina más pequeña del Mediterráneo, apenas del tamaño de un gorrión, negruzca con una banda blanca muy marcada en la rabadilla. Revolotea a ras de agua como una mariposa, con las patas colgando y rozando la superficie.",
+    "tips": [
+      "Tamaño diminuto, negruzco, con obispillo blanco evidente",
+      "Vuelo aleteado y errático, casi pegado al agua",
+      "Patas colgando que rozan la superficie al alimentarse"
+    ]
+  },
+
+  "Larus fuscus": {
+    "commonName": "Gaviota sombría",
+    "group": "Ave marina",
+    "habitat": "Costas, puertos, playas y vertederos, sobre todo en invierno",
+    "seasonality": "Otoño e invierno",
+    "description": "Gaviota grande de dorso gris oscuro o casi negro y patas amarillas, que cría en el norte de Europa e inverna en gran número en las costas ibéricas. Se mezcla con la patiamarilla, de la que se distingue por el manto mucho más oscuro y el porte algo más estilizado.",
+    "tips": [
+      "Manto gris pizarra oscuro, mucho más que en la patiamarilla",
+      "Patas amarillas y pico amarillo con mancha roja",
+      "Presente sobre todo en invierno, en bandos mixtos"
+    ]
+  },
+
+  "Larus melanocephalus": {
+    "commonName": "Gaviota cabecinegra",
+    "group": "Ave marina",
+    "habitat": "Costas, playas, salinas y lagunas litorales",
+    "seasonality": "Otoño e invierno, con paso en primavera",
+    "description": "Gaviota mediana de alas blanquecinas sin puntas negras, pico rojo coral y capucha negra completa en primavera. En vuelo destaca por sus primarias sin marcas oscuras, un rasgo que la separa de la reidora aun de lejos.",
+    "tips": [
+      "Alas blancas sin puntas negras, muy pálidas en vuelo",
+      "Pico rojo intenso y grueso, con anillo ocular blanco",
+      "Capucha negra completa en primavera; mancha en la oreja en invierno"
+    ]
+  },
+
+  "Morus bassanus": {
+    "commonName": "Alcatraz atlántico",
+    "group": "Ave marina",
+    "habitat": "Mar abierto y aguas costeras en invierno",
+    "seasonality": "Otoño e invierno",
+    "description": "Ave marina grande y blanca con las puntas de las alas negras y la cabeza teñida de amarillo, de silueta afilada como una lanza. Pesca lanzándose en picado desde decenas de metros y entrando en el agua como un arpón, en zambullidas que se ven desde la costa.",
+    "tips": [
+      "Silueta blanca en cruz, con las puntas de las alas negras",
+      "Zambullidas verticales espectaculares desde gran altura",
+      "Cabeza y cuello con tinte amarillento en los adultos"
+    ]
+  },
+
+  "Stercorarius parasiticus": {
+    "commonName": "Págalo parásito",
+    "group": "Ave marina",
+    "habitat": "Mar abierto y aguas costeras durante los pasos migratorios",
+    "seasonality": "Pasos de primavera y otoño",
+    "description": "Ave marina de vuelo rápido y ágil, con aspecto de gaviota estilizada y las dos plumas centrales de la cola alargadas en punta. Se alimenta persiguiendo a charranes y gaviotas hasta obligarlos a soltar la presa, un comportamiento llamado cleptoparasitismo.",
+    "tips": [
+      "Persigue a otras aves marinas en vuelo, acosándolas",
+      "Dos plumas centrales de la cola alargadas y puntiagudas",
+      "Manchas blancas en la base de las primarias, visibles en vuelo"
+    ]
+  },
+
+  "Stercorarius pomarinus": {
+    "commonName": "Págalo pomarino",
+    "group": "Ave marina",
+    "habitat": "Mar abierto, en paso migratorio frente a las costas",
+    "seasonality": "Pasos de otoño y primavera",
+    "description": "Págalo grande y robusto, de pecho ancho y vuelo potente, con las plumas centrales de la cola ensanchadas y retorcidas en cuchara cuando es adulto. Como sus parientes, roba comida a otras aves marinas y sigue a los barcos de pesca.",
+    "tips": [
+      "Plumas centrales de la cola anchas y retorcidas en el adulto",
+      "Cuerpo pesado y pecho ancho, más que en el págalo parásito",
+      "Vuelo directo y potente, con aleteo profundo"
+    ]
+  },
+
+  "Stercorarius skua": {
+    "commonName": "Págalo grande",
+    "group": "Ave marina",
+    "habitat": "Mar abierto y aguas costeras en invierno",
+    "seasonality": "Otoño e invierno",
+    "description": "El mayor de los págalos, pardo y macizo, del tamaño de una gaviota grande, con manchas blancas muy llamativas en la base de las alas que destellan a cada aleteo. Es un pirata consumado: acosa a alcatraces y gaviotas y también captura presas directamente.",
+    "tips": [
+      "Manchas blancas conspicuas en la base de las primarias",
+      "Plumaje pardo uniforme y cuerpo macizo, de gaviota grande",
+      "Vuelo pesado que se vuelve ágil al perseguir a otras aves"
+    ]
+  },
+
+  "Sterna hirundo": {
+    "commonName": "Charrán común",
+    "group": "Ave marina",
+    "habitat": "Costas, salinas, deltas y lagunas litorales",
+    "seasonality": "De primavera a otoño",
+    "description": "Charrán esbelto de alas estrechas y cola muy ahorquillada, gris pálido por encima, con capirote negro y pico rojo de punta oscura. Pesca cerniéndose sobre el agua y lanzándose en picado corto, y su reclamo áspero delata las colonias a distancia.",
+    "tips": [
+      "Pico rojo con la punta negra en primavera y verano",
+      "Cola muy ahorquillada, con las plumas externas largas",
+      "Se cierne y se lanza en picado corto sobre el agua"
+    ]
+  },
+
+  "Puffinus mauretanicus": {
+    "commonName": "Pardela balear",
+    "group": "Ave marina",
+    "habitat": "Mar abierto y aguas costeras; cría solo en las Baleares",
+    "seasonality": "Sobre todo de final de invierno a verano",
+    "description": "Pardela mediana, parda por arriba y sucia por debajo, que vuela en bandos bajos y rasantes alternando planeos y series de aleteos rápidos. Es el ave marina más amenazada de Europa: cría únicamente en las Baleares y su población total se cuenta por miles.",
+    "tips": [
+      "Vuelo bajo y rasante, alternando planeo y aleteos rápidos",
+      "Partes inferiores pardo sucio, sin blanco limpio",
+      "Suele verse en bandos que siguen la línea de costa"
+    ]
+  },
+
+  "Larus michahellis": {
+    "commonName": "Gaviota patiamarilla",
+    "group": "Ave marina",
+    "habitat": "Costas, puertos, playas, acantilados y basureros",
+    "seasonality": "Todo el año",
+    "description": "La gaviota grande más común del Mediterráneo: manto gris claro, patas amarillas y un pico robusto con una mancha roja en la mandíbula inferior. Es oportunista hasta el extremo —pesca, roba, carroñea y frecuenta puertos y vertederos— y sus colonias ocupan islotes y cortados costeros.",
+    "tips": [
+      "Patas amarillas y pico amarillo con mancha roja",
+      "Manto gris claro con puntas de las alas negras y espejos blancos",
+      "Los jóvenes son pardos moteados y tardan cuatro años en cambiar"
+    ]
+  }
+}

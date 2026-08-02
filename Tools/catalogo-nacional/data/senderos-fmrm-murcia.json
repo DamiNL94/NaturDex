@@ -206,10 +206,20 @@
     "_nota": "Los pasos 1-5 de `siguientesPasos` están hechos: Tools/build-park-trails.js ya construye geo/trails.geojson para los 16 espacios de Murcia cruzando las relaciones GR/PR/SL de OpenStreetMap con el límite oficial de cada uno. El fichero se llamó trails.geojson y no senderos.geojson, que era el nombre previsto, porque es el que ya usaba el piloto y el que leen manifest.geo.trails, Frontend/Js/data.js y Frontend/Js/map.js.",
     "hecho": "2026-07-28",
     "espaciosConSenderos": 11,
-    "senderosServidos": 55,
+    "senderosServidos": 54,
+    "trazas": 72,
+    "kmDentroDeEspaciosProtegidos": 322.9,
+    "criterioDeRecorte": {
+      "_nota": "La primera versión recortaba way a way y heredaba el troceado de OSM: 500 fragmentos en total, con migajas sueltas fuera del límite que no llevaban a ninguna parte. Ahora la ruta se cose antes de recortarse y se decide sobre el recorrido completo.",
+      "cosido": "Los ways de todas las relaciones que comparten código se encadenan por sus extremos comunes antes de recortar. El GR-252 pasó de 95 fragmentos a 3 trazas; el total de 500 a 72.",
+      "toleranciaDeBorde": "50 m. Absorbe el desfase entre la traza de OSM y el límite oficial del IMIDA, que son dos digitalizaciones distintas. Antes eran 150 m, que no es un desfase de digitalización sino una separación real, y sembraba de senderos fantasma el exterior del parque.",
+      "puenteoDeSalidas": "1,5 km. Una salida del límite más corta se conserva entera para que el sendero se dibuje de un trazo (el GR-127 de Cañaverosa se sale 4 veces, la mayor de 1,25 km, y sale de una pieza). Más larga se corta: el PR-MU 92 de Gebas se marcha 2,4 km y eso ya no es el mismo recorrido.",
+      "pertenencia": "La tolerancia decide hasta dónde llega una traza, NO si el sendero es del parque: cada trazo tiene que entrar de verdad en el polígono. Por eso se cayó el GR-253 de Cuatro Calas, que tocaba el límite en un solo nodo y con los 150 m de antes fingía 170 m de sendero.",
+      "duplicados": "Los ids de way se deduplican: el PR-MU 69 repite 18 de sus 55 miembros por ser ida y vuelta, y se dibujaba dos veces."
+    },
     "matizSobreHomologado": "La propiedad `homologado` de cada feature solo se AFIRMA cuando el código consta en este catálogo; nunca se pone a false. Este fichero recoge 53 de los 143 PR/SL de la FMRM (los que se cruzaron con los espacios dados de alta), así que ausencia aquí no es prueba de no homologación.",
     "senderosDelCatalogoQueOSM_NO_tiene": {
-      "_nota": "32 senderos homologados por la FMRM sin relación en OpenStreetMap, o con ella fuera del límite oficial. No se pueden servir: la traza de la FMRM está en Wikiloc y no es redistribuible (ver avisoLicencia). La vía para incorporarlos es mapearlos en OSM, no descargarlos.",
+      "_nota": "31 senderos homologados por la FMRM sin relación en OpenStreetMap, o con ella fuera del límite oficial. No se pueden servir: la traza de la FMRM está en Wikiloc y no es redistribuible (ver avisoLicencia). La vía para incorporarlos es mapearlos en OSM, no descargarlos.",
       "sierra-espuna": ["PR-MU 64.1", "SL-MU 2", "SL-MU 3", "PR-MU 111", "PR-MU 93", "PR-MU 102"],
       "sotos-y-bosques-de-ribera-de-canaverosa": ["SL-MU 13", "PR-MU 25", "PR-MU 85", "PR-MU 86", "PR-MU 87", "PR-MU 109", "PR-MU 110"],
       "cabo-cope-puntas-calnegre": ["PR-MU 104", "PR-MU 112", "PR-MU 112.1", "PR-MU 113", "PR-MU 117"],
@@ -222,7 +232,7 @@
       "cabezo-gordo": ["SL-MU 11"],
       "salinas-arenales-san-pedro-pinatar": ["SL-MU 9"]
     },
-    "senderosServidosQueEsteCatalogoNoListaba": "La traza encontró en los espacios ~30 códigos más de los que este catálogo les había asignado por el nombre (todos los GR, más PR-MU 34/35/49/50/52/53/54/55, 41, 69, 131, 65, 73, 93, 111 y sus variantes). Es el resultado esperado: la asignación por nombre era una aproximación y la geometría es la que manda."
+    "senderosServidosQueEsteCatalogoNoListaba": "La traza encontró 31 asignaciones (27 códigos distintos) que este catálogo no había hecho por el nombre: todos los GR (GR-92, GR-127, GR-250, GR-252, GR-252.1) más PR-MU 34/35/41/49/50/52/53/54/55/65/69/73/93/111 y sus variantes. Es el resultado esperado: la asignación por nombre era una aproximación y la geometría es la que manda."
   },
 
   "siguientesPasos": [
@@ -232,6 +242,6 @@
     "4. HECHO — geo/trails.geojson por parque con codigo, nombre, tipo, longitudKm, homologado y atribución OSM.",
     "5. HECHO — Declarado en manifest.geo.trails y pintado como capa conmutable, con simbología propia por tipo (GR/PR/SL).",
     "6. PENDIENTE — Resolver los `wikiloc: null` y el nombre ausente del PR-MU 93.",
-    "7. PENDIENTE — Los 32 senderos de `estadoDeLaConstruccion.senderosDelCatalogoQueOSM_NO_tiene`: se incorporarán solos en cuanto existan en OSM, sin tocar código, volviendo a lanzar la herramienta."
+    "7. PENDIENTE — Los 31 senderos de `estadoDeLaConstruccion.senderosDelCatalogoQueOSM_NO_tiene`: se incorporarán solos en cuanto existan en OSM, sin tocar código, volviendo a lanzar la herramienta."
   ]
 }

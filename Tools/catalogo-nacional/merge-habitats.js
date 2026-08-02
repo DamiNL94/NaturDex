@@ -78,6 +78,11 @@ function main() {
     ? JSON.parse(fs.readFileSync(park.habitatsPath, 'utf8'))
     : { type: 'FeatureCollection', features: [] };
   const off = JSON.parse(fs.readFileSync(OFFICIAL, 'utf8'));
+  // La procedencia se LEE de la capa oficial (build-habitats la escribe por recinto y distingue
+  // atlas2005 de hic1997): antes iba escrita a mano como «Directiva 92/43/CEE (1997)» y un parque
+  // construido con el Atlas de 2005 acababa citando la cartografía equivocada.
+  const FUENTE_OFICIAL = (off.features[0] && off.features[0].properties && off.features[0].properties.fuente)
+    || 'MITECO/BDN — Cartografía Hábitat Directiva 92/43/CEE (1997); recintos recortados al parque, ETRS89 UTM→WGS84';
   const latRef = readBoundaryRing(park.boundaryPath).reduce((s, p, _, a) => s + p[1] / a.length, 0);
   console.log(`Parque: ${park.name} (${park.slug}) · curada: ${hayCurada ? cur.features.length + ' hábitats' : 'NO EXISTE (se crea entera desde la oficial)'} · oficial: ${off.features.length} recintos`);
   if (Object.keys(RECONCILE).length) console.log(`Reconciliación aplicada: ${Object.entries(RECONCILE).map(([a, b]) => `${a}→${b}`).join(', ')}`);
@@ -108,7 +113,7 @@ function main() {
       const e = idx.get(k); enriched++; usadas.add(k);
       p.hic_subtipos = [...e.codes].sort();
       p.fitosociologia = [...e.concepts].sort();
-      p.fuentes = [p.source, 'MITECO/BDN Directiva Hábitat 1997 (HIC, asociación fitosociológica)'].filter(Boolean);
+      p.fuentes = [p.source, FUENTE_OFICIAL].filter(Boolean);
     } else {
       kept++;
       p.solo_curada = true; // sin equivalente en el dato oficial (típicamente aportado por la CCAA)
@@ -135,7 +140,7 @@ function main() {
         hic_subtipos: [...e.codes].sort(),
         fitosociologia: [...e.concepts].sort(),
         origen: 'anadido_desde_oficial',
-        source: 'MITECO/BDN — Cartografía Hábitat Directiva 92/43/CEE (1997); recintos disueltos y recortados al parque, ETRS89 UTM→WGS84',
+        source: FUENTE_OFICIAL,
       },
       geometry,
     });

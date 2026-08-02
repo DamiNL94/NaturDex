@@ -1,0 +1,321 @@
+{
+  "Beta maritima": {
+    "group": "Hierba",
+    "habitat": "Playas de cantos, pie de acantilado y suelos removidos con sal cerca del mar",
+    "seasonality": "Primavera y verano",
+    "description": "Antepasada silvestre de la acelga y la remolacha, con hojas gruesas, lustrosas y algo carnosas que aguantan la sal y el viento. Crece donde el mar deja restos orgánicos acumulados. Sus flores son verdosas y pasan desapercibidas, dispuestas en largas espigas.",
+    "tips": [
+      "Hojas gruesas y brillantes, como de acelga pequeña",
+      "Tallos rojizos tumbados en la arena o entre cantos",
+      "Espigas largas de flores verdes sin pétalos vistosos"
+    ]
+  },
+  "Anthyllis cytisoides": {
+    "group": "Mata",
+    "habitat": "Matorral seco y soleado sobre margas y suelos pobres",
+    "seasonality": "Primavera",
+    "description": "Mata de aspecto blanquecino por la fina pelusa que cubre hojas y tallos, un recurso frente al sol y la sequía. En primavera se llena de espigas de flores amarillas que atraen a muchos insectos. Es una de las leguminosas que primero coloniza laderas degradadas y taludes.",
+    "tips": [
+      "Aspecto grisáceo y aterciopelado al tacto",
+      "Flores amarillas pequeñas en espigas apretadas",
+      "Hojas divididas en tres, la del centro más larga"
+    ]
+  },
+  "Launaea arborescens": {
+    "group": "Mata",
+    "habitat": "Matorral árido, ramblas y bordes de camino en clima muy seco",
+    "seasonality": "Primavera",
+    "description": "Mata en forma de bola formada por ramas verdes, rígidas y terminadas en pincho, casi sin hojas: la fotosíntesis la hacen los propios tallos. Al romper una rama suelta un látex blanco. Sus flores amarillas recuerdan a las del diente de león en miniatura.",
+    "tips": [
+      "Matorral redondo de ramas verdes y espinosas, casi sin hojas",
+      "Suelta látex blanco al partir un tallo",
+      "Flores amarillas tipo diente de león"
+    ]
+  },
+  "Nerium oleander": {
+    "group": "Arbusto",
+    "habitat": "Cauces de rambla y ramblizos con humedad subterránea y crecidas",
+    "seasonality": "Primavera y verano",
+    "description": "Arbusto de hojas coriáceas, alargadas y opuestas, que forma masas densas en el lecho de las ramblas y aguanta las riadas gracias a su raigambre. Florece en rosa intenso durante buena parte del verano. Toda la planta es muy tóxica, savia incluida.",
+    "tips": [
+      "Hojas duras y lanceoladas con el nervio central marcado",
+      "Flores rosas grandes en el extremo de las ramas",
+      "Frutos en vaina larga que se abre soltando semillas con vilano"
+    ]
+  },
+  "Stipa capensis": {
+    "group": "Gramínea",
+    "habitat": "Pastizales anuales sobre suelos secos y pedregosos",
+    "seasonality": "Primavera",
+    "description": "Gramínea anual que agosta pronto y cubre los claros de matorral de un rubio pajizo. Cada semilla lleva una arista larga y retorcida que gira con los cambios de humedad y va enroscándose hasta clavarla en el suelo. Es la responsable de las «agujas» que se enganchan en los calcetines.",
+    "tips": [
+      "Aristas largas y retorcidas, en espiral al secarse",
+      "Planta anual: en verano queda seca y pajiza",
+      "Las semillas se clavan en la ropa y el pelaje"
+    ]
+  },
+  "Salsola kali": {
+    "group": "Hierba",
+    "habitat": "Arenas y gravas del primer cordón de playa y suelos removidos salinos",
+    "seasonality": "Verano y otoño",
+    "description": "Hierba anual muy ramificada, de hojas carnosas rematadas en un pincho fino, que forma una bola. Al secarse se desprende del suelo y rueda con el viento dispersando las semillas. Coloniza la línea donde el mar deja restos de algas y madera.",
+    "tips": [
+      "Hojas carnosas terminadas en una punta pinchuda",
+      "Forma una mata redondeada que rueda al secarse",
+      "Tallos con finas líneas rojizas o rosadas"
+    ]
+  },
+  "Ephedra fragilis": {
+    "group": "Arbusto",
+    "habitat": "Roquedos, matorral seco y pie de acantilado en clima cálido",
+    "seasonality": "Primavera",
+    "description": "Arbusto de aspecto extraño: un manojo de tallos verdes, articulados y colgantes, casi sin hojas, que se quiebran con facilidad por los nudos. No es una planta con flores, sino un pariente lejano de las coníferas; sus semillas van envueltas en una cubierta roja y carnosa.",
+    "tips": [
+      "Tallos verdes articulados que se rompen por los nudos",
+      "Sin hojas visibles, solo escamas en cada nudo",
+      "Frutos rojos carnosos con una semilla dentro"
+    ]
+  },
+  "Asparagus albus": {
+    "group": "Arbusto",
+    "habitat": "Matorral seco, ribazos y bajo arbustos en clima cálido",
+    "seasonality": "Otoño (floración)",
+    "description": "Esparraguera de tallos blanquecinos y muy espinosos que pierde el follaje en verano y florece en otoño, al revés que casi todo el matorral. Lo que parecen hojas son ramillas finas agrupadas en haces. Sus brotes tiernos son los espárragos silvestres de recolección tradicional.",
+    "tips": [
+      "Tallos claros, casi blancos, con espinas fuertes",
+      "Ramillas finas agrupadas en manojitos",
+      "Florece en otoño, con flores blancas y olorosas"
+    ]
+  },
+  "Fagonia cretica": {
+    "group": "Hierba",
+    "habitat": "Suelos pedregosos, ramblas y litosuelos de clima árido",
+    "seasonality": "Primavera",
+    "description": "Planta baja y tendida, de tallos angulosos, hojas divididas en tres y estípulas convertidas en espinas finas. Sus flores tienen cinco pétalos de un lila rosado que se abren durante las horas centrales del día. Es de estirpe norteafricana y aquí vive en el extremo de su área.",
+    "tips": [
+      "Porte tendido y desordenado, pegado al suelo",
+      "Hojas de tres foliolos con espinas en la base",
+      "Flores lila con cinco pétalos bien separados"
+    ]
+  },
+  "Asphodelus fistulosus": {
+    "group": "Hierba",
+    "habitat": "Pastizales secos, bordes de camino y terrenos removidos",
+    "seasonality": "Primavera",
+    "description": "Gamón pequeño de hojas cilíndricas y huecas —de ahí su nombre— que salen todas de la base. Levanta un tallo ramificado con flores blancas de nervio rosado, que se abren de forma escalonada durante semanas. Es una de las primeras plantas en colonizar cunetas y baldíos.",
+    "tips": [
+      "Hojas finas, cilíndricas y huecas por dentro",
+      "Flores blancas con una raya rosa en cada pétalo",
+      "Cápsulas redondas y pequeñas al fructificar"
+    ]
+  },
+  "Crithmum maritimum": {
+    "group": "Hierba",
+    "habitat": "Grietas de acantilados y rocas batidas por el salpicón del mar",
+    "seasonality": "Verano y otoño",
+    "description": "Planta carnosa de acantilado, con hojas gruesas divididas en segmentos cilíndricos que almacenan agua y toleran la sal. Sus flores, amarillo verdoso, se agrupan en umbelas planas. Se ha consumido tradicionalmente encurtida, con un sabor intenso a mar y a hinojo.",
+    "tips": [
+      "Hojas carnosas divididas en segmentos como deditos",
+      "Umbelas planas de florecillas verde amarillentas",
+      "Solo en la roca costera, al alcance de la salpicadura"
+    ]
+  },
+  "Helianthemum almeriense": {
+    "group": "Mata",
+    "habitat": "Tomillares y matorral abierto sobre suelos secos y pedregosos",
+    "seasonality": "Primavera",
+    "description": "Jarilla enana de hojas pequeñas y blanquecinas, cubiertas de pelos que reflejan la luz y reducen la pérdida de agua. En primavera se cubre de flores blancas con el centro amarillo, cuyos pétalos duran apenas una mañana. Sus raíces se asocian con hongos comestibles del desierto.",
+    "tips": [
+      "Mata baja y grisácea, de hojas muy pequeñas",
+      "Flores blancas con el centro amarillo, efímeras",
+      "Pétalos arrugados, como de papel de seda"
+    ]
+  },
+  "Ballota hirsuta": {
+    "group": "Mata aromática",
+    "habitat": "Ribazos, taludes y matorral nitrificado en clima seco",
+    "seasonality": "Primavera y verano",
+    "description": "Mata de la familia de la menta, cubierta por completo de una pelusa blanca y áspera que le da aspecto grisáceo. Las flores, rosadas y agrupadas en verticilos alrededor del tallo, salen de un cáliz en forma de embudo con dientes. Al frotarla desprende un olor fuerte y poco agradable.",
+    "tips": [
+      "Toda la planta cubierta de pelusa blanca y áspera",
+      "Flores en anillos alrededor del tallo cuadrado",
+      "Olor fuerte y desagradable al frotar las hojas"
+    ]
+  },
+  "Phagnalon saxatile": {
+    "group": "Mata",
+    "habitat": "Roquedos, muros, taludes y grietas soleadas",
+    "seasonality": "Primavera y verano",
+    "description": "Mata pequeña y leñosa en la base que crece agarrada a la roca y a los muros. Sus hojas son estrechas y blanquecinas por el envés. Las cabezuelas, solitarias sobre tallos largos y desnudos, están rodeadas de brácteas secas y pardas que persisten mucho tiempo.",
+    "tips": [
+      "Cabezuelas pardas y secas al final de tallos largos y pelados",
+      "Hojas estrechas, verdes arriba y blancas por debajo",
+      "Casi siempre sobre roca, muro o talud"
+    ]
+  },
+  "Melica minuta": {
+    "group": "Gramínea",
+    "habitat": "Grietas de roquedos calizos, cornisas y pies de cantil sombreados",
+    "seasonality": "Primavera",
+    "description": "Gramínea perenne y grácil que crece en repisas y fisuras de roca, formando matas laxas de hojas finas. Su inflorescencia es una panícula abierta y ligera, con espiguillas nacaradas que brillan a contraluz. Es una de las pocas gramíneas que prospera en pared vertical.",
+    "tips": [
+      "Panícula muy laxa, casi transparente al trasluz",
+      "Espiguillas brillantes y algo nacaradas",
+      "Crece en grietas de roca, colgando de la pared"
+    ]
+  },
+  "Atriplex halimus": {
+    "group": "Arbusto",
+    "habitat": "Suelos salinos y nitrificados, ramblas y bordes de saladar",
+    "seasonality": "Verano y otoño",
+    "description": "Arbusto de color gris plateado, cubierto de escamas microscópicas que reflejan la luz y ayudan a expulsar sal. Sus hojas son de forma romboidal y algo carnosas. Aguanta suelos que casi ninguna otra planta tolera, por lo que se usa para restaurar terrenos degradados.",
+    "tips": [
+      "Follaje gris plateado, harinoso al tacto",
+      "Hojas con forma de rombo o de punta de flecha",
+      "Frutos rodeados de dos valvas membranosas"
+    ]
+  },
+  "Withania frutescens": {
+    "group": "Arbusto",
+    "habitat": "Matorral cálido, roquedos y ramblas de clima muy seco",
+    "seasonality": "Primavera y otoño",
+    "description": "Arbusto de la familia del tomate y la belladona, con hojas ovaladas algo carnosas y flores verdosas discretas. Los frutos son bayas rojas y brillantes envueltas en el cáliz. Es una especie de raíz norteafricana que en la península solo vive en los rincones más cálidos del sureste.",
+    "tips": [
+      "Bayas rojas pequeñas asomando del cáliz",
+      "Hojas ovales, algo carnosas y de verde apagado",
+      "Flores verde amarillentas, poco vistosas"
+    ]
+  },
+  "Halimione portulacoides": {
+    "group": "Mata",
+    "habitat": "Saladares y marismas, en la franja que la marea o la escorrentía encharca",
+    "seasonality": "Verano",
+    "description": "Mata tendida de hojas opuestas, carnosas y de un gris azulado inconfundible, que forma alfombras en el borde de los saladares. Marca con bastante precisión la zona que se encharca con agua salada. Sus flores son diminutas y de color pardo dorado.",
+    "tips": [
+      "Hojas opuestas, carnosas y de gris azulado",
+      "Porte tendido, formando manchas continuas",
+      "Siempre en el borde encharcable del saladar"
+    ]
+  },
+  "Cistus clusii": {
+    "group": "Mata",
+    "habitat": "Tomillares y matorral seco sobre calizas y margas",
+    "seasonality": "Primavera",
+    "description": "Jara pequeña de hojas muy estrechas y enrolladas por los bordes, verdes arriba y blancas por debajo, que a distancia recuerdan al romero. Se distingue enseguida al florecer: da grupos de flores blancas de cinco pétalos, mucho mayores que las del romero.",
+    "tips": [
+      "Hojas estrechas enrolladas, blancas por el envés",
+      "Flores blancas de cinco pétalos, varias juntas",
+      "Sin el olor a romero, aunque se le parezca de lejos"
+    ]
+  },
+  "Salvia rosmarinus": {
+    "group": "Mata aromática",
+    "habitat": "Matorral seco y soleado sobre suelos calizos y pedregosos",
+    "seasonality": "Todo el año, con máximo de floración en invierno y primavera",
+    "description": "Arbusto aromático de hojas estrechas como agujas, verde oscuro por el haz y blanquecinas por el envés, con los bordes enrollados hacia abajo. Florece casi todo el año en azul pálido, y en pleno invierno es una de las pocas fuentes de néctar del matorral.",
+    "tips": [
+      "Hojas como agujas, blancas por debajo",
+      "Olor inconfundible al frotar entre los dedos",
+      "Flores azul claro repartidas por las ramas casi todo el año"
+    ]
+  },
+  "Cakile maritima": {
+    "group": "Hierba",
+    "habitat": "Arena suelta de la primera línea de playa, sobre restos orgánicos del mar",
+    "seasonality": "Primavera a otoño",
+    "description": "Crucífera anual y carnosa que coloniza la arena batida donde el mar deposita algas. Sus hojas son gruesas y recortadas y sus flores, lilas o blancas, tienen los cuatro pétalos en cruz de la familia. El fruto se parte en dos: una mitad queda en la planta y la otra flota y viaja por mar.",
+    "tips": [
+      "Hojas carnosas y recortadas, algo azuladas",
+      "Flores lilas o blancas de cuatro pétalos en cruz",
+      "Frutos duros en dos piezas, como pequeños barrilitos"
+    ]
+  },
+  "Salsola vermiculata": {
+    "group": "Mata",
+    "habitat": "Suelos salinos y nitrificados, ramblas, majadas y bordes de camino",
+    "seasonality": "Verano y otoño",
+    "description": "Mata muy ramificada de hojas cortas, gruesas y algo peludas que en verano se vuelven grisáceas. Es de las mejores indicadoras de suelos con sal y con exceso de nitrógeno, como los antiguos apriscos de ganado. Al fructificar, cada semilla se rodea de alas membranosas.",
+    "tips": [
+      "Hojitas cortas, gruesas y con pelusa",
+      "Frutos con alas membranosas rosadas o pajizas",
+      "Aparece donde ha habido ganado o remoción del suelo"
+    ]
+  },
+  "Arthrocnemum macrostachyum": {
+    "group": "Planta suculenta",
+    "habitat": "Saladares y marismas con encharcamiento salino prolongado",
+    "seasonality": "Verano y otoño",
+    "description": "Planta sin hojas aparentes: sus tallos son cilíndricos, carnosos y divididos en segmentos que parecen articulaciones. Vive donde la sal se acumula y en otoño se tiñe de tonos rojizos y anaranjados que cambian el color de todo el saladar.",
+    "tips": [
+      "Tallos carnosos articulados, como collares de cuentas",
+      "Sin hojas visibles",
+      "Vira a rojo y naranja en otoño"
+    ]
+  },
+  "Suaeda vera": {
+    "group": "Mata",
+    "habitat": "Bordes de saladar y suelos salinos algo más secos y elevados",
+    "seasonality": "Verano",
+    "description": "Mata leñosa de hojas carnosas, cilíndricas y de un verde azulado, que ocupa la orla algo más alta y seca del saladar. Se diferencia de sus vecinas en que sí tiene hojas bien visibles y no tallos articulados. Sus flores son minúsculas y verdosas, en las axilas de las hojas.",
+    "tips": [
+      "Hojas carnosas y cilíndricas, verde azuladas",
+      "Base leñosa y ramificada, no herbácea",
+      "En la parte más seca y alta del saladar"
+    ]
+  },
+  "Sarcocornia fruticosa": {
+    "group": "Planta suculenta",
+    "habitat": "Saladares con encharcamiento salino frecuente",
+    "seasonality": "Verano y otoño",
+    "description": "Planta de tallos suculentos y articulados, de base leñosa y porte erguido, que forma matas densas en el saladar. Como su parienta la sosa alacranera, es difícil de separar a simple vista: la clave está en el porte y en la longitud de los segmentos. En otoño toma tonos rojizos.",
+    "tips": [
+      "Tallos verdes articulados, erguidos y ramificados",
+      "Base leñosa, no herbácea",
+      "Cambia a tonos rojizos al final del verano"
+    ]
+  },
+  "Limonium delicatulum": {
+    "group": "Hierba",
+    "habitat": "Saladares, estepas salinas y suelos margosos con sal",
+    "seasonality": "Verano",
+    "description": "Siempreviva de saladar con una roseta basal de hojas en la base y tallos muy ramificados que sostienen espiguillas de flores diminutas. Los pétalos son lilas o blanquecinos y el cáliz, seco y papiráceo, aguanta meses en la planta: de ahí el nombre de «siempreviva».",
+    "tips": [
+      "Roseta de hojas en la base y tallos ramificados desnudos",
+      "Flores diminutas en espiguillas de un solo lado",
+      "El cáliz seco persiste mucho después de la floración"
+    ]
+  },
+  "Teucrium capitatum": {
+    "group": "Mata aromática",
+    "habitat": "Tomillares y matorral raso sobre suelo calizo pedregoso",
+    "seasonality": "Primavera y verano",
+    "description": "Mata pequeña y grisácea, de hojas estrechas con el borde enrollado, que remata sus tallos en cabezuelas apretadas de flores blancas o crema. Es una de las plantas más constantes del tomillar y una fuente de néctar importante en pleno verano.",
+    "tips": [
+      "Cabezuelas redondas y compactas al final del tallo",
+      "Aspecto general blanquecino o grisáceo",
+      "Flores sin labio superior, típicas del género"
+    ]
+  },
+  "Plantago albicans": {
+    "group": "Hierba",
+    "habitat": "Pastizales secos, ribazos y claros de matorral sobre suelos margosos",
+    "seasonality": "Primavera",
+    "description": "Llantén de aspecto plateado, cubierto de pelos sedosos, con hojas estrechas que salen todas de la base. Levanta espigas cilíndricas y densas en las que las flores se abren de abajo arriba, dejando ver unos estambres largos y colgantes. Resiste bien el pisoteo y la sequía.",
+    "tips": [
+      "Hojas estrechas y plateadas, todas desde la base",
+      "Espigas cilíndricas apretadas sobre tallos largos",
+      "Estambres largos y colgantes durante la floración"
+    ]
+  },
+  "Dittrichia viscosa": {
+    "group": "Mata",
+    "habitat": "Cunetas, taludes, ramblas y suelos removidos",
+    "seasonality": "Verano y otoño",
+    "description": "Mata pegajosa y de olor penetrante que florece cuando casi todo lo demás está seco, cubriéndose de cabezuelas amarillas a finales de verano. Esa floración tardía la convierte en un refugio clave para insectos. Sus hojas dejan las manos resinosas al tocarlas.",
+    "tips": [
+      "Hojas pegajosas y aromáticas al tacto",
+      "Florece amarillo en pleno final de verano y otoño",
+      "Abundante en cunetas y terrenos alterados"
+    ]
+  }
+}

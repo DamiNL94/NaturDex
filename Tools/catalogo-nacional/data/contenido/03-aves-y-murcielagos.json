@@ -1,0 +1,366 @@
+{
+  "Anthus campestris": {
+    "group": "Ave",
+    "habitat": "Llanos secos, pastizales ralos y claros pedregosos con poca vegetación",
+    "seasonality": "Primavera y verano (estival)",
+    "description": "Bisbita grande, esbelto y de tonos arena, con muy poco rayado en el pecho comparado con sus parientes. Camina por el suelo desnudo moviendo la cola arriba y abajo. Anida entre piedras y matas bajas, y su canto es una frase corta y monótona que emite en vuelo.",
+    "tips": [
+      "Pecho casi liso, sin el rayado denso de otros bisbitas",
+      "Camina en vez de saltar, meneando la cola",
+      "Ceja clara marcada y patas largas y pálidas"
+    ]
+  },
+  "Anthus spinoletta": {
+    "group": "Ave",
+    "habitat": "Pastos de montaña en verano; orillas, ramblas y encharcados en invierno",
+    "seasonality": "Otoño e invierno fuera de la alta montaña",
+    "description": "Bisbita robusto de patas oscuras que cría en la alta montaña y en invierno baja a orillas de agua y campos húmedos. En plumaje nupcial adquiere un pecho rosado y sin rayas; en invierno queda pardo grisáceo con el pecho listado.",
+    "tips": [
+      "Patas oscuras, no rosadas como en otros bisbitas",
+      "Ceja blanca clara sobre el ojo",
+      "En invierno, casi siempre junto a agua o suelo húmedo"
+    ]
+  },
+  "Buteo buteo": {
+    "group": "Ave rapaz",
+    "habitat": "Mosaicos de bosque y campo abierto, con arbolado para nidificar",
+    "seasonality": "Todo el año",
+    "description": "La rapaz mediana más frecuente y variable de plumaje: los hay casi blancos y casi negros. Pasa mucho tiempo posado en postes y en el suelo, y planea en círculos con las alas ligeramente levantadas. Su reclamo es un maullido lastimero muy reconocible.",
+    "tips": [
+      "Planea en círculos con las alas en «V» poco marcada",
+      "Maullido agudo y quejumbroso al volar",
+      "Muy variable: desde ejemplares claros a muy oscuros"
+    ]
+  },
+  "Caprimulgus europaeus": {
+    "group": "Ave",
+    "habitat": "Claros de bosque, brezales y matorral con suelo desnudo",
+    "seasonality": "Primavera y verano (estival)",
+    "description": "Ave nocturna de plumaje jaspeado que descansa de día tumbada a lo largo de una rama o en el suelo, confundida con la corteza. Caza polillas al vuelo con la boca enorme. Su canto es un ronroneo continuo y mecánico que puede durar minutos sin pausa.",
+    "tips": [
+      "Canto como un motor lejano, continuo y vibrante",
+      "Vuela al anochecer con giros silenciosos y bruscos",
+      "El macho muestra manchas blancas en alas y cola"
+    ]
+  },
+  "Certhia brachydactyla": {
+    "group": "Ave",
+    "habitat": "Bosques y arboledas con troncos gruesos y corteza resquebrajada",
+    "seasonality": "Todo el año",
+    "description": "Pájaro diminuto y críptico que sube por los troncos en espiral, apoyándose en la cola rígida, y baja volando a la base del árbol siguiente para empezar de nuevo. Extrae insectos de las grietas de la corteza con un pico fino y curvado.",
+    "tips": [
+      "Trepa siempre hacia arriba, nunca cabeza abajo",
+      "Dorso jaspeado como corteza y vientre blanco",
+      "Pico fino y curvo, como una aguja doblada"
+    ]
+  },
+  "Circus pygargus": {
+    "group": "Ave rapaz",
+    "habitat": "Cerealistas, herbazales y matorral bajo en zonas llanas",
+    "seasonality": "Primavera y verano (estival)",
+    "description": "Aguilucho grácil y de alas largas y estrechas que patrulla a poca altura, basculando con el viento y con las alas en «V». El macho es gris ceniza con las puntas negras; la hembra, parda y listada, con un obispillo blanco. Cría en el suelo, entre la vegetación.",
+    "tips": [
+      "Vuelo bajo y balanceante, con las alas en «V»",
+      "Macho gris ceniza con una barra negra en el ala",
+      "Alas muy largas y estrechas en proporción al cuerpo"
+    ]
+  },
+  "Coturnix coturnix": {
+    "group": "Ave",
+    "habitat": "Cereales, herbazales altos y pastizales densos",
+    "seasonality": "Primavera y verano (estival)",
+    "description": "La más pequeña de nuestras gallináceas y la única migradora. Es mucho más fácil de oír que de ver: su canto trisilábico —el clásico «pal-pa-lá»— se emite desde el interior del cereal. Solo levanta el vuelo cuando se la pisa casi encima, y lo hace en línea recta y rasante.",
+    "tips": [
+      "Canto trisilábico repetido desde dentro del herbazal",
+      "Vuela raso y en línea recta al levantarse",
+      "Del tamaño de un puño, mucho menor que una perdiz"
+    ]
+  },
+  "Falco columbarius": {
+    "group": "Ave rapaz",
+    "habitat": "Llanos abiertos, marismas y pastizales durante la invernada",
+    "seasonality": "Otoño e invierno",
+    "description": "El halcón más pequeño de Europa, poco mayor que un mirlo, con vuelo rápido y bajo pegado al terreno para sorprender a pequeñas aves. El macho es gris azulado por encima; la hembra, parda. No se ciñe como el cernícalo: siempre está en movimiento.",
+    "tips": [
+      "Muy pequeño y compacto, con aleteo rápido",
+      "Vuela bajo y en línea recta, casi rozando el suelo",
+      "Sin bigotera marcada, a diferencia del peregrino"
+    ]
+  },
+  "Falco subbuteo": {
+    "group": "Ave rapaz",
+    "habitat": "Campo abierto con arbolado disperso, cerca de zonas húmedas",
+    "seasonality": "Primavera y verano (estival)",
+    "description": "Halcón esbelto con silueta de vencejo gigante: alas muy largas y afiladas y cola corta. Caza libélulas e incluso vencejos en pleno vuelo, con una agilidad extraordinaria. Los adultos tienen los «calzones» y la zona anal de un rojo ladrillo característico.",
+    "tips": [
+      "Silueta de hoz, como un vencejo enorme",
+      "Calzones y bajo vientre rojizos en el adulto",
+      "Bigotera negra ancha sobre garganta blanca"
+    ]
+  },
+  "Fringilla coelebs": {
+    "group": "Ave",
+    "habitat": "Bosques, arboledas, huertos y jardines con arbolado",
+    "seasonality": "Todo el año",
+    "description": "Uno de los pájaros más abundantes de Europa. El macho luce el pecho vinoso y la nuca gris azulada; la hembra es parda. Ambos comparten dos barras alares blancas muy visibles en vuelo. Su canto es una frase descendente que acaba en un floreo, repetida sin descanso en primavera.",
+    "tips": [
+      "Dos barras blancas bien marcadas en cada ala",
+      "Bordes blancos en la cola, visibles al volar",
+      "Canto en frase descendente que remata en un adorno"
+    ]
+  },
+  "Gyps fulvus": {
+    "group": "Ave rapaz",
+    "habitat": "Sierras con cortados para criar; se alimenta en campo abierto",
+    "seasonality": "Todo el año",
+    "description": "Buitre grande y pardo, con la cabeza y el cuello cubiertos de plumón blanco y una gorguera de plumas en la base del cuello. Planea horas sin batir las alas aprovechando las térmicas, y localiza los cadáveres vigilando lo que hacen los demás buitres a kilómetros de distancia.",
+    "tips": [
+      "Alas enormes y rectangulares, con los «dedos» separados",
+      "Cabeza pálida y pequeña en proporción al cuerpo",
+      "Planea en círculos sin apenas batir las alas"
+    ]
+  },
+  "Loxia curvirostra": {
+    "group": "Ave",
+    "habitat": "Pinares y masas de coníferas con producción de piñas",
+    "seasonality": "Todo el año",
+    "description": "Fringílido de pico único: las dos mandíbulas se cruzan en la punta, una herramienta para abrir las escamas de las piñas y sacar el piñón. El macho es rojo ladrillo y la hembra verde oliva. Cría incluso en invierno si hay piñas, y se mueve en bandos ruidosos de copa en copa.",
+    "tips": [
+      "Puntas del pico cruzadas, visibles de cerca",
+      "Macho rojizo, hembra verde amarillenta",
+      "Reclamo metálico «chip-chip» de los bandos en vuelo"
+    ]
+  },
+  "Lullula arborea": {
+    "group": "Ave",
+    "habitat": "Claros de bosque, dehesas y laderas con matorral y árboles dispersos",
+    "seasonality": "Todo el año",
+    "description": "Alondra pequeña de cola muy corta y cresta discreta, con una ceja blanca ancha que se une en la nuca. Canta en vuelo circular, sobre todo al amanecer y en noches claras, con una frase melancólica y descendente de una belleza reconocida.",
+    "tips": [
+      "Cola muy corta, silueta rechoncha en vuelo",
+      "Cejas blancas que se juntan por detrás de la cabeza",
+      "Marca blanca y negra en el borde delantero del ala"
+    ]
+  },
+  "Monticola saxatilis": {
+    "group": "Ave",
+    "habitat": "Pastos y roquedos de montaña por encima del bosque",
+    "seasonality": "Primavera y verano (estival)",
+    "description": "El macho en primavera es de los pájaros más vistosos de la montaña: cabeza azul, pecho naranja y una mancha blanca en la espalda. La hembra es parda y escamada. Ambos comparten la cola rojiza que destaca al volar. Es esquivo y suele verse a distancia sobre una roca.",
+    "tips": [
+      "Cola rojo anaranjado, llamativa en vuelo",
+      "Macho con cabeza azul y pecho naranja",
+      "Mancha blanca en la espalda del macho"
+    ]
+  },
+  "Oenanthe oenanthe": {
+    "group": "Ave",
+    "habitat": "Pastizales pedregosos, canchales y zonas abiertas de montaña",
+    "seasonality": "Paso migratorio y cría en montaña",
+    "description": "Collalba de dorso gris en el macho, con antifaz negro y alas oscuras. Como todas las collalbas, delata su identidad al volar: obispillo blanco y cola blanca con una «T» negra invertida. Se posa erguida en piedras y hace carreras cortas por el suelo.",
+    "tips": [
+      "Obispillo blanco y «T» negra en la cola",
+      "Macho con antifaz negro y dorso gris",
+      "Carreras cortas por el suelo entre piedra y piedra"
+    ]
+  },
+  "Otus scops": {
+    "group": "Ave rapaz nocturna",
+    "habitat": "Arboledas, sotos, huertos y parques con árboles viejos",
+    "seasonality": "Primavera y verano (estival)",
+    "description": "El búho más pequeño de Europa, apenas mayor que un puño, con un plumaje jaspeado que lo hace invisible pegado a un tronco. Se detecta por el oído: un silbido monótono y flautado que repite cada dos o tres segundos durante toda la noche de primavera.",
+    "tips": [
+      "Silbido corto y flautado repetido de forma monótona",
+      "Diminuto, con dos penachos de plumas en la cabeza",
+      "Plumaje veteado que imita la corteza"
+    ]
+  },
+  "Phoenicurus phoenicurus": {
+    "group": "Ave",
+    "habitat": "Bosques abiertos, sotos y arboledas con huecos para criar",
+    "seasonality": "Paso migratorio",
+    "description": "Pájaro elegante con la cola de un naranja encendido que hace vibrar sin parar al posarse. El macho tiene la garganta negra, la frente blanca y el pecho anaranjado; la hembra es parda pero conserva la misma cola vibrante, que es la mejor pista para identificarlos.",
+    "tips": [
+      "Cola naranja que tiembla constantemente",
+      "Macho con frente blanca y garganta negra",
+      "Se posa en ramas bajas y baja al suelo a por insectos"
+    ]
+  },
+  "Prunella collaris": {
+    "group": "Ave",
+    "habitat": "Roquedos y pedreras de alta montaña; en invierno baja a cortados",
+    "seasonality": "Otoño e invierno en cotas bajas",
+    "description": "Pájaro robusto de montaña, pardo y discreto salvo por dos detalles: los flancos con listas castañas y una garganta blanca finamente moteada de negro. Camina entre las rocas buscando insectos y semillas, y en invierno desciende a cortados y construcciones.",
+    "tips": [
+      "Flancos con anchas listas castañas",
+      "Garganta blanca con motas negras, como un babero",
+      "Base del pico amarilla"
+    ]
+  },
+  "Sylvia undata": {
+    "group": "Ave",
+    "habitat": "Matorral bajo y denso, jarales, brezales y tomillares",
+    "seasonality": "Todo el año",
+    "description": "Curruca pequeña, oscura y de cola muy larga que suele llevar levantada. El macho tiene el vientre vinoso y el ojo rojo rodeado de un anillo del mismo color. Es muy inquieta y rara vez se deja ver más de unos segundos antes de volver a hundirse en la mata.",
+    "tips": [
+      "Cola larga y erguida, casi vertical al posarse",
+      "Ojo y anillo ocular rojos",
+      "Vientre de color vinoso, con motitas blancas en la garganta"
+    ]
+  },
+  "Turdus torquatus": {
+    "group": "Ave",
+    "habitat": "Montaña con matorral y pastos; en paso, sierras con enebros y bayas",
+    "seasonality": "Paso migratorio e invernada en montaña",
+    "description": "Mirlo de montaña que se distingue del común por una banda blanca en forma de media luna sobre el pecho y por las plumas del ala ribeteadas de claro, que dan un aspecto escamado. Es muy desconfiado y se aleja en cuanto detecta movimiento.",
+    "tips": [
+      "Media luna blanca en el pecho",
+      "Alas con aspecto escamado y plateado",
+      "Mucho más esquivo que el mirlo común"
+    ]
+  },
+  "Lanius meridionalis": {
+    "group": "Ave",
+    "habitat": "Campo abierto con matorral disperso, cables y posaderos altos",
+    "seasonality": "Todo el año",
+    "description": "Alcaudón grande, gris por encima y con un antifaz negro que le cruza el ojo. Caza al acecho desde un posadero alto y tiene la costumbre de empalar sus presas —insectos, lagartijas, ratones— en espinas y alambres, formando pequeñas despensas.",
+    "tips": [
+      "Antifaz negro sobre fondo gris claro",
+      "Siempre en lo alto de un cable, poste o mata",
+      "Presas empaladas en espinos cerca de su territorio"
+    ]
+  },
+  "Saxicola rubetra": {
+    "group": "Ave",
+    "habitat": "Herbazales, prados altos y cultivos con tallos donde posarse",
+    "seasonality": "Paso migratorio",
+    "description": "Tarabilla migradora que solo se ve en los pasos. Se distingue de la europea por una ceja blanca ancha y muy marcada y por las bases blancas de la cola. Como su parienta, se posa en lo alto de tallos y matas y baja al suelo a cazar insectos.",
+    "tips": [
+      "Ceja blanca ancha y bien marcada",
+      "Base de la cola blanca a ambos lados",
+      "Pecho anaranjado que va difuminándose hacia el vientre"
+    ]
+  },
+  "Curruca cantillans": {
+    "group": "Ave",
+    "habitat": "Matorral alto, jarales, encinares aclarados y bordes de bosque",
+    "seasonality": "Primavera y verano (estival)",
+    "description": "Curruca de tamaño medio, con el macho de dorso gris, garganta y pecho color teja y un bigote blanco muy nítido que separa ambos. El anillo ocular es rojo. Canta desde el interior del matorral y hace vuelos cortos de exhibición sobre las matas.",
+    "tips": [
+      "Bigote blanco que bordea la garganta rojiza",
+      "Anillo ocular rojo anaranjado",
+      "Prefiere matorral alto, no el raso"
+    ]
+  },
+  "Mauremys leprosa": {
+    "group": "Reptil",
+    "habitat": "Ríos, charcas, balsas y tramos remansados con vegetación y soleaderos",
+    "seasonality": "Primavera a otoño (inactivo en invierno)",
+    "description": "Galápago de agua con el caparazón aplanado y de color verde oliva a pardo, a menudo cubierto de algas. Los ejemplares jóvenes muestran manchas anaranjadas en el cuello y en los lados de la cabeza que se van apagando con la edad. Toma el sol sobre piedras y troncos y se lanza al agua al menor ruido.",
+    "tips": [
+      "Manchas anaranjadas en el cuello, más vivas de joven",
+      "Caparazón bajo y aplanado, a menudo con algas",
+      "Se tira al agua en cuanto detecta movimiento en la orilla"
+    ]
+  },
+
+  "Rhinolophus ferrumequinum": {
+    "group": "Murciélago",
+    "habitat": "Cuevas, minas y desvanes para refugiarse; caza en mosaicos de bosque y pasto",
+    "seasonality": "Todo el año (hiberna en invierno)",
+    "description": "El mayor de los murciélagos de herradura ibéricos. Debe el nombre a la hoja nasal en forma de herradura con la que emite el sonar por la nariz, no por la boca. Al reposar se envuelve por completo en las alas, como en una capa, y cuelga libre del techo.",
+    "tips": [
+      "Al dormir se envuelve entero en las alas",
+      "Hoja nasal en forma de herradura alrededor de las fosas",
+      "Cuelga separado del techo, no metido en una grieta"
+    ]
+  },
+  "Rhinolophus hipposideros": {
+    "group": "Murciélago",
+    "habitat": "Cuevas, minas y edificios; caza en bosque, sotos y setos",
+    "seasonality": "Todo el año (hiberna en invierno)",
+    "description": "El más pequeño de los murciélagos de herradura europeos: colgado y envuelto en sus alas no llega al tamaño de una ciruela. Vuela bajo y muy cerca de la vegetación, con revoloteo de mariposa. Es muy sensible a las molestias en sus refugios de cría e invernada.",
+    "tips": [
+      "Tamaño minúsculo, como una ciruela colgando",
+      "Vuelo bajo y revoloteante junto a setos y muros",
+      "Se envuelve en las alas al reposar, como sus parientes"
+    ]
+  },
+  "Rhinolophus euryale": {
+    "group": "Murciélago",
+    "habitat": "Cuevas cálidas; caza en bosque mediterráneo y mosaicos arbolados",
+    "seasonality": "Todo el año (hiberna en invierno)",
+    "description": "Murciélago de herradura de tamaño medio, de costumbres muy cavernícolas, que forma colonias de cría densas junto a otras especies. Vuela muy pegado a la vegetación, capturando polillas entre las ramas. Sus colonias son muy vulnerables a la visita de cuevas en primavera.",
+    "tips": [
+      "Talla intermedia entre el grande y el pequeño de herradura",
+      "Apéndice superior de la nariz apuntado y algo curvado",
+      "Forma colonias apretadas en cueva, con otras especies"
+    ]
+  },
+  "Rhinolophus mehelyi": {
+    "group": "Murciélago",
+    "habitat": "Cuevas cálidas del ámbito mediterráneo; caza en matorral y bosque abierto",
+    "seasonality": "Todo el año (hiberna en invierno)",
+    "description": "Murciélago de herradura mediterráneo, uno de los más escasos y amenazados de Europa. Se reconoce por un antifaz oscuro alrededor de los ojos y por el contraste neto entre el dorso pardo grisáceo y el vientre casi blanco. Depende por completo de un puñado de cuevas.",
+    "tips": [
+      "Antifaz oscuro marcado alrededor de los ojos",
+      "Contraste fuerte entre dorso gris pardo y vientre blanquecino",
+      "Hoja nasal ancha en la base que se estrecha de golpe"
+    ]
+  },
+  "Miniopterus schreibersii": {
+    "group": "Murciélago",
+    "habitat": "Cuevas y minas; caza en vuelo alto sobre bosque, campo y láminas de agua",
+    "seasonality": "Todo el año, con desplazamientos estacionales entre cuevas",
+    "description": "Murciélago de alas largas y estrechas y vuelo rápido y alto, casi como el de un vencejo. Tiene la frente muy abombada y el pelo corto y erizado en la cabeza. Recorre decenas de kilómetros entre las cuevas de cría, de tránsito y de invernada.",
+    "tips": [
+      "Frente muy abombada y pelo corto y de punta",
+      "Alas largas y estrechas; vuelo veloz y alto",
+      "Forma colonias enormes y muy apretadas en cueva"
+    ]
+  },
+  "Myotis myotis": {
+    "group": "Murciélago",
+    "habitat": "Cuevas y desvanes; caza escarabajos en pastos, claros y bosque sin sotobosque",
+    "seasonality": "Todo el año (hiberna en invierno)",
+    "description": "Uno de los murciélagos más grandes de Europa, con orejas largas y anchas y hocico de aspecto perruno. Caza cerca del suelo, capturando escarabajos que localiza por el ruido que hacen al andar, no solo con el sonar. Cría en colonias numerosas en cuevas y bajo cubiertas.",
+    "tips": [
+      "Talla grande y orejas largas y anchas",
+      "Hocico ancho, de aspecto casi perruno",
+      "Caza a ras de suelo, en zonas despejadas"
+    ]
+  },
+  "Myotis blythii": {
+    "group": "Murciélago",
+    "habitat": "Cuevas y desvanes; caza saltamontes en pastizales y herbazales",
+    "seasonality": "Todo el año (hiberna en invierno)",
+    "description": "Casi idéntico al ratonero grande, con el que a menudo comparte colonia, pero algo menor y con el hocico más estrecho y una mancha clara en la frente. Está especializado en cazar saltamontes en pastizales altos, lo que reparte el alimento entre ambas especies.",
+    "tips": [
+      "Muy parecido al ratonero grande, pero algo menor",
+      "Mancha clara difusa entre los ojos",
+      "Hocico más fino y estrecho"
+    ]
+  },
+  "Myotis capaccinii": {
+    "group": "Murciélago",
+    "habitat": "Cuevas próximas a ríos y balsas; caza rozando la lámina de agua",
+    "seasonality": "Todo el año (hiberna en invierno)",
+    "description": "Murciélago ligado al agua: caza volando a pocos centímetros de la superficie de ríos y balsas y captura insectos —e incluso pececillos— con sus pies desproporcionadamente grandes y peludos. Esa dependencia del agua limpia lo hace muy vulnerable.",
+    "tips": [
+      "Pies muy grandes y peludos en proporción al cuerpo",
+      "Vuela rozando la lámina de agua",
+      "Membrana del ala insertada en el tobillo, no en el dedo"
+    ]
+  },
+  "Myotis emarginatus": {
+    "group": "Murciélago",
+    "habitat": "Cuevas y desvanes; caza arañas e insectos en el follaje de bosques y sotos",
+    "seasonality": "Todo el año (hiberna en invierno)",
+    "description": "Murciélago de pelaje lanoso y rojizo, con una escotadura muy marcada en el borde de la oreja que le da nombre. Recoge sus presas directamente del follaje y de las paredes, cerniéndose frente a ellas, en vez de capturarlas en pleno vuelo.",
+    "tips": [
+      "Muesca clara en el borde externo de la oreja",
+      "Pelaje lanoso y de tono rojizo",
+      "Se ciñe frente a hojas y muros para capturar arañas"
+    ]
+  }
+}

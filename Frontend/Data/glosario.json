@@ -1,10 +1,65 @@
 [
     {
+        "term": "acícula",
+        "definition": "Hoja larga, fina y rígida con forma de aguja, típica de los pinos.",
+        "category": "botánica",
+        "aliases": [
+            "acículas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "acuminado",
+        "definition": "Que se estrecha en el extremo formando una punta alargada y fina.",
+        "category": "botánica",
+        "aliases": [
+            "acuminada",
+            "acuminados",
+            "acuminadas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "afieltrado",
+        "definition": "Cubierto de pelos entrelazados muy densos, que le dan tacto y aspecto de fieltro.",
+        "category": "botánica",
+        "aliases": [
+            "afieltrada",
+            "afieltrados",
+            "afieltradas",
+            "fieltro"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "agalla",
+        "definition": "Bulto que forma la planta como reacción a la picadura de un insecto, que se cría dentro.",
+        "category": "botánica",
+        "aliases": [
+            "agallas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "agostarse",
+        "definition": "Secarse la planta al llegar el calor del verano, una vez completado su ciclo.",
+        "category": "botánica",
+        "aliases": [
+            "agosta",
+            "agostan",
+            "agostado",
+            "agostada",
+            "agostados"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "albardinal",
         "definition": "Formación vegetal dominada por el albardín, una hierba robusta propia de estepas y saladares del sureste español.",
         "category": "botánica",
         "aliases": [
-            "albardín"
+            "albardín",
+            "albardinales"
         ],
         "source": "NaturDex (divulgacion)"
     },
@@ -16,6 +71,15 @@
             "alóctona",
             "alóctonos",
             "alóctonas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "amento",
+        "definition": "Espiga colgante y flexible de flores diminutas sin pétalos, como la del sauce o el chopo.",
+        "category": "botánica",
+        "aliases": [
+            "amentos"
         ],
         "source": "NaturDex (divulgacion)"
     },
@@ -51,12 +115,66 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "arborícola",
+        "definition": "Que vive en los árboles.",
+        "category": "zoología",
+        "aliases": [
+            "arborícolas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "arenal",
+        "definition": "Terreno de arena suelta, en la playa o tierra adentro.",
+        "category": "geografía",
+        "aliases": [
+            "arenales"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "aserrado",
+        "definition": "De borde con dientes finos y agudos inclinados hacia la punta, como los de una sierra.",
+        "category": "botánica",
+        "aliases": [
+            "aserrada",
+            "aserrados",
+            "aserradas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "autóctono",
+        "definition": "Propio del territorio en el que vive, sin haber sido traído por el ser humano; lo contrario de introducido.",
+        "category": "ecología",
+        "aliases": [
+            "autóctona",
+            "autóctonos",
+            "autóctonas",
+            "nativo",
+            "nativa",
+            "nativos",
+            "nativas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "azufaifar",
         "definition": "Matorral dominado por el azufaifo (arto), arbusto espinoso típico de zonas áridas del litoral mediterráneo.",
         "category": "botánica",
         "aliases": [
             "azufaifo",
-            "arto"
+            "arto",
+            "azufaifares"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "barbecho",
+        "definition": "Campo de cultivo que se deja sin sembrar una temporada para que el suelo se recupere; muchas aves esteparias dependen de él.",
+        "category": "geografía",
+        "aliases": [
+            "barbechos"
         ],
         "source": "NaturDex (divulgacion)"
     },
@@ -102,7 +220,20 @@
         "definition": "Tallo subterráneo engrosado que almacena reservas, como el de la cebolla.",
         "category": "botánica",
         "aliases": [
-            "bulbos"
+            "bulbos",
+            "bulbosa",
+            "bulboso",
+            "bulbosas",
+            "bulbosos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "cabezuela",
+        "definition": "Grupo compacto de flores diminutas apretadas que en conjunto parece una sola flor; es lo mismo que un capítulo.",
+        "category": "botánica",
+        "aliases": [
+            "cabezuelas"
         ],
         "source": "NaturDex (divulgacion)"
     },
@@ -117,11 +248,46 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "calcícola",
+        "definition": "Que crece sobre suelos calizos, ricos en cal.",
+        "category": "ecología",
+        "aliases": [
+            "calcícolas",
+            "basófilo",
+            "basófila",
+            "basófilos",
+            "basófilas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "cáliz",
         "definition": "Envoltura externa de la flor, formada por los sépalos (normalmente verdes).",
         "category": "botánica",
         "aliases": [
             "cálices"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "canchal",
+        "definition": "Acumulación de bloques de piedra sueltos al pie de un roquedo.",
+        "category": "geografía",
+        "aliases": [
+            "canchales",
+            "pedrera",
+            "pedreras"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "cantil",
+        "definition": "Pared de roca vertical, en la costa o en la montaña.",
+        "category": "geografía",
+        "aliases": [
+            "cantiles",
+            "cortado",
+            "cortados"
         ],
         "source": "NaturDex (divulgacion)"
     },
@@ -144,6 +310,27 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "carnívoro",
+        "definition": "Que se alimenta principalmente de carne.",
+        "category": "zoología",
+        "aliases": [
+            "carnívora",
+            "carnívoros",
+            "carnívoras"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "carrizal",
+        "definition": "Masa densa de carrizo, caña alta que crece con las raíces dentro del agua o en suelos encharcados.",
+        "category": "botánica",
+        "aliases": [
+            "carrizales",
+            "carrizo"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "Casi Amenazado (NT)",
         "definition": "Categoría UICN. No está amenazada ahora mismo, pero está cerca de estarlo y podría pasar pronto a una categoría de amenaza.",
         "category": "conservación (UICN)",
@@ -161,7 +348,18 @@
         "aliases": [
             "casmofítica",
             "casmofíticos",
-            "casmofíticas"
+            "casmofíticas",
+            "fisurícola",
+            "fisurícolas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "cavernícola",
+        "definition": "Que vive en cuevas y cavidades.",
+        "category": "zoología",
+        "aliases": [
+            "cavernícolas"
         ],
         "source": "NaturDex (divulgacion)"
     },
@@ -171,6 +369,85 @@
         "category": "conservación",
         "aliases": [
             "Catálogo Español de Especies Amenazadas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "cernirse",
+        "definition": "Mantenerse un ave suspendida en el mismo punto del aire batiendo las alas, con la cabeza inmóvil.",
+        "category": "zoología",
+        "aliases": [
+            "cerniéndose",
+            "cernir",
+            "se cierne"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "cespitoso",
+        "definition": "Que crece formando céspedes o matas densas de muchos tallos juntos.",
+        "category": "botánica",
+        "aliases": [
+            "cespitosa",
+            "cespitosos",
+            "cespitosas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "ciperácea",
+        "definition": "Planta parecida a una hierba pero de tallo macizo y de sección triangular, propia de suelos húmedos.",
+        "category": "botánica",
+        "aliases": [
+            "ciperáceas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "cladodio",
+        "definition": "Tallo aplanado o con forma de hoja que hace la fotosíntesis en lugar de las hojas, como en las esparragueras.",
+        "category": "botánica",
+        "aliases": [
+            "cladodios"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "cleptoparasitismo",
+        "definition": "Estrategia de algunas aves marinas que consiste en acosar a otras en vuelo hasta que sueltan la presa que llevan, y quedársela.",
+        "category": "zoología",
+        "aliases": [
+            "cleptoparásito",
+            "cleptoparásita",
+            "cleptoparasitar"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "clorofila",
+        "definition": "Pigmento verde con el que las plantas captan la luz; las plantas parásitas lo han perdido y no son verdes.",
+        "category": "botánica",
+        "aliases": [],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "cojín",
+        "definition": "Porte compacto y redondeado, en forma de almohadilla, con el que algunas plantas se defienden del viento, el frío y la sequía.",
+        "category": "botánica",
+        "aliases": [
+            "cojines",
+            "almohadón",
+            "almohadilla",
+            "porte en cojín"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "conífera",
+        "definition": "Árbol o arbusto sin flores verdaderas, con las semillas en piñas o gálbulos: pinos, sabinas y enebros.",
+        "category": "botánica",
+        "aliases": [
+            "coníferas"
         ],
         "source": "NaturDex (divulgacion)"
     },
@@ -186,11 +463,56 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "corimbo",
+        "definition": "Inflorescencia en la que todas las flores quedan a la misma altura aunque nazcan a alturas distintas del tallo.",
+        "category": "botánica",
+        "aliases": [
+            "corimbos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "corola",
         "definition": "Conjunto de los pétalos de la flor, a menudo la parte más vistosa y coloreada.",
         "category": "botánica",
         "aliases": [
             "corolas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "crasulácea",
+        "definition": "Planta de la familia de las siemprevivas y los uñas de gato, de hojas gruesas que almacenan agua.",
+        "category": "botánica",
+        "aliases": [
+            "crasuláceas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "crepuscular",
+        "definition": "Activo al amanecer y al anochecer, en la penumbra.",
+        "category": "zoología",
+        "aliases": [
+            "crepusculares"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "crucífera",
+        "definition": "Planta de la familia de la col y el rábano, con cuatro pétalos dispuestos en cruz.",
+        "category": "botánica",
+        "aliases": [
+            "crucíferas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "cúpula",
+        "definition": "Envoltura escamosa que sujeta la base de la bellota en encinas, coscojas y robles.",
+        "category": "botánica",
+        "aliases": [
+            "cúpulas"
         ],
         "source": "NaturDex (divulgacion)"
     },
@@ -215,11 +537,31 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "dentado",
+        "definition": "De borde con pequeños dientes, como los de una sierra.",
+        "category": "botánica",
+        "aliases": [
+            "dentada",
+            "dentados",
+            "dentadas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "drupa",
         "definition": "Fruto carnoso con un hueso duro dentro, como la aceituna o la almendra.",
         "category": "botánica",
         "aliases": [
             "drupas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "duna embrionaria",
+        "definition": "Primer cordón de arena que se forma junto a la playa, aún bajo y móvil, donde se instalan las plantas pioneras que lo fijan.",
+        "category": "geografía",
+        "aliases": [
+            "dunas embrionarias"
         ],
         "source": "NaturDex (divulgacion)"
     },
@@ -255,6 +597,26 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "envés",
+        "definition": "Cara inferior de la hoja; en muchas plantas mediterráneas es más clara o está cubierta de pelos que frenan la pérdida de agua.",
+        "category": "botánica",
+        "aliases": [
+            "enveses"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "erial",
+        "definition": "Terreno sin cultivar ni edificar, cubierto de vegetación pobre y espontánea.",
+        "category": "geografía",
+        "aliases": [
+            "eriales",
+            "baldío",
+            "baldíos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "esclerófilo",
         "definition": "De hojas duras, gruesas y perennes, adaptadas a resistir la sequía; muy típico de la vegetación mediterránea.",
         "category": "botánica",
@@ -271,7 +633,42 @@
         "category": "botánica",
         "aliases": [
             "esparto",
-            "atochar"
+            "atochar",
+            "espartales",
+            "atochares"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "espata",
+        "definition": "Bráctea grande que envuelve la inflorescencia como una funda o capuchón.",
+        "category": "botánica",
+        "aliases": [
+            "espatas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "espatulado",
+        "definition": "Con forma de espátula: estrecho en la base y ensanchado y redondeado en la punta.",
+        "category": "botánica",
+        "aliases": [
+            "espatulada",
+            "espatulados",
+            "espatuladas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "especie exótica invasora",
+        "definition": "Especie traída de otra región que se reproduce sin control y desplaza a las nativas.",
+        "category": "conservación",
+        "aliases": [
+            "invasora",
+            "invasoras",
+            "invasor",
+            "exótica invasora",
+            "EEI"
         ],
         "source": "NaturDex (divulgacion)"
     },
@@ -285,6 +682,15 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "espiguilla",
+        "definition": "Unidad básica de la inflorescencia de las gramíneas: unas pocas flores protegidas por brácteas.",
+        "category": "botánica",
+        "aliases": [
+            "espiguillas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "espinescente",
         "definition": "Que termina en espina o está armado de espinas.",
         "category": "botánica",
@@ -292,6 +698,55 @@
             "espinescentes",
             "espinoso",
             "espinosa"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "espolón",
+        "definition": "Prolongación hueca en forma de cuerno; en las flores guarda el néctar y en algunos animales es una púa dura.",
+        "category": "botánica",
+        "aliases": [
+            "espolones"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "estambre",
+        "definition": "Órgano masculino de la flor: un filamento rematado por la bolsa que produce el polen.",
+        "category": "botánica",
+        "aliases": [
+            "estambres"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "estepa",
+        "definition": "Llanura de vegetación baja y abierta, sin árboles, propia de climas secos.",
+        "category": "geografía",
+        "aliases": [
+            "estepas",
+            "estepario",
+            "esteparia",
+            "esteparios",
+            "esteparias"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "estípula",
+        "definition": "Pequeño apéndice situado en la base del rabillo de la hoja; a veces se transforma en espina.",
+        "category": "botánica",
+        "aliases": [
+            "estípulas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "estival",
+        "definition": "Que solo está presente en verano: llega en primavera para criar y pasa el invierno en África.",
+        "category": "zoología",
+        "aliases": [
+            "estivales"
         ],
         "source": "NaturDex (divulgacion)"
     },
@@ -347,6 +802,38 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "folíolo",
+        "definition": "Cada una de las hojitas independientes en que se divide una hoja compuesta.",
+        "category": "botánica",
+        "aliases": [
+            "folíolos",
+            "foliolo",
+            "foliolos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "fotosíntesis",
+        "definition": "Proceso con el que las plantas fabrican su alimento a partir de luz, agua y dióxido de carbono.",
+        "category": "botánica",
+        "aliases": [
+            "fotosintética",
+            "fotosintético"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "freático",
+        "definition": "Relativo al agua subterránea acumulada en el suelo; cuando está somera, las raíces la alcanzan aunque la superficie esté seca.",
+        "category": "ecología",
+        "aliases": [
+            "freática",
+            "capa freática",
+            "nivel freático"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "freatófito",
         "definition": "Planta con raíces largas capaces de alcanzar el agua subterránea del subsuelo.",
         "category": "botánica",
@@ -357,11 +844,48 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "fronde",
+        "definition": "Hoja de un helecho, normalmente dividida en muchos segmentos.",
+        "category": "botánica",
+        "aliases": [
+            "frondes"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "gálbulo",
+        "definition": "Falso fruto carnoso y redondeado de sabinas y enebros, parecido a una baya pero derivado de una piña.",
+        "category": "botánica",
+        "aliases": [
+            "gálbulos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "gallinácea",
+        "definition": "Ave del grupo de la perdiz, la codorniz y el faisán: cuerpo rechoncho, patas fuertes y vuelo corto y ruidoso.",
+        "category": "zoología",
+        "aliases": [
+            "gallináceas",
+            "gallináceo"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "garriga",
         "definition": "Matorral mediterráneo bajo y denso sobre suelos calizos, con plantas aromáticas y espinosas.",
         "category": "botánica",
         "aliases": [
             "garrigas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "geraniácea",
+        "definition": "Planta de la familia de los geranios y las agujas de pastor.",
+        "category": "botánica",
+        "aliases": [
+            "geraniáceas"
         ],
         "source": "NaturDex (divulgacion)"
     },
@@ -386,6 +910,21 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "glanduloso",
+        "definition": "Cubierto de pelos o puntos diminutos que segregan sustancias pegajosas o aromáticas.",
+        "category": "botánica",
+        "aliases": [
+            "glandulosa",
+            "glandulosos",
+            "glandulosas",
+            "glandular",
+            "glandulares",
+            "glándula",
+            "glándulas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "glauco",
         "definition": "De color verde azulado, a menudo por una fina capa cerosa.",
         "category": "botánica",
@@ -397,8 +936,48 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "glomérulo",
+        "definition": "Grupo compacto de flores o de capítulos apretados unos contra otros.",
+        "category": "botánica",
+        "aliases": [
+            "glomérulos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "gramínea",
+        "definition": "Planta de la familia de las hierbas y los cereales: tallos huecos, hojas estrechas y flores poco vistosas.",
+        "category": "botánica",
+        "aliases": [
+            "gramíneas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "granívoro",
+        "definition": "Que se alimenta principalmente de semillas y granos.",
+        "category": "zoología",
+        "aliases": [
+            "granívora",
+            "granívoros",
+            "granívoras"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "gregario",
+        "definition": "Que vive y se desplaza en grupo en vez de en solitario.",
+        "category": "zoología",
+        "aliases": [
+            "gregaria",
+            "gregarios",
+            "gregarias"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "hábitat de interés comunitario",
-        "definition": "Tipo de hábitat que la Unión Europea considera valioso y protege mediante la Directiva Hábitats (92\/43\/CEE).",
+        "definition": "Tipo de hábitat que la Unión Europea considera valioso y protege mediante la Directiva Hábitats (92/43/CEE).",
         "category": "conservación",
         "aliases": [
             "HIC",
@@ -440,6 +1019,35 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "haz",
+        "definition": "Cara superior de la hoja, la que mira al cielo; la de abajo es el envés.",
+        "category": "botánica",
+        "aliases": [
+            "haces"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "hemicriptófito",
+        "definition": "Planta que pasa la estación desfavorable con las yemas a ras de suelo, protegidas por la hojarasca.",
+        "category": "botánica",
+        "aliases": [
+            "hemicriptófitos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "hemiparásito",
+        "definition": "Planta que hace la fotosíntesis por su cuenta pero además conecta sus raíces a las de otra para robarle agua y sales.",
+        "category": "ecología",
+        "aliases": [
+            "hemiparásita",
+            "hemiparásitos",
+            "hemiparásitas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "herbáceo",
         "definition": "Planta de tallos blandos y verdes, no leñosos.",
         "category": "botánica",
@@ -451,11 +1059,125 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "herbívoro",
+        "definition": "Que se alimenta de plantas.",
+        "category": "zoología",
+        "aliases": [
+            "herbívora",
+            "herbívoros",
+            "herbívoras"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "hidromorfo",
+        "definition": "(Suelo) que permanece encharcado o saturado de agua buena parte del año.",
+        "category": "ecología",
+        "aliases": [
+            "hidromorfos",
+            "hidromorfa",
+            "hidromorfas",
+            "hidromorfía"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "imbricado",
+        "definition": "Con las piezas superpuestas unas sobre otras, como las tejas de un tejado.",
+        "category": "botánica",
+        "aliases": [
+            "imbricada",
+            "imbricados",
+            "imbricadas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "inflorescencia",
         "definition": "Conjunto de flores agrupadas en una misma estructura (espiga, umbela, racimo...).",
         "category": "botánica",
         "aliases": [
             "inflorescencias"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "insectívoro",
+        "definition": "Que se alimenta principalmente de insectos.",
+        "category": "zoología",
+        "aliases": [
+            "insectívora",
+            "insectívoros",
+            "insectívoras"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "invernante",
+        "definition": "Que pasa aquí el invierno pero cría en otro lugar, normalmente más al norte.",
+        "category": "zoología",
+        "aliases": [
+            "invernantes",
+            "invernada"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "involucro",
+        "definition": "Corona de brácteas que rodea la base de un capítulo o de una umbela.",
+        "category": "botánica",
+        "aliases": [
+            "involucros",
+            "involucral"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "jaral",
+        "definition": "Matorral dominado por las jaras, que se extiende tras los incendios y en suelos degradados.",
+        "category": "botánica",
+        "aliases": [
+            "jarales",
+            "jara",
+            "jaras"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "jaspeado",
+        "definition": "Con manchas y vetas irregulares entremezcladas, un dibujo que ayuda a pasar desapercibido.",
+        "category": "zoología",
+        "aliases": [
+            "jaspeada",
+            "jaspeados",
+            "jaspeadas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "labelo",
+        "definition": "Pétalo mayor y distinto de las orquídeas, que hace de pista de aterrizaje para los insectos.",
+        "category": "botánica",
+        "aliases": [
+            "labelos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "labiada",
+        "definition": "Planta de la familia del tomillo y el romero: tallo de sección cuadrada, olor aromático y flor partida en dos labios.",
+        "category": "botánica",
+        "aliases": [
+            "labiadas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "lagomorfo",
+        "definition": "Mamífero del grupo de los conejos y las liebres, con dos pares de incisivos en la mandíbula superior.",
+        "category": "zoología",
+        "aliases": [
+            "lagomorfos"
         ],
         "source": "NaturDex (divulgacion)"
     },
@@ -471,6 +1193,26 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "lanoso",
+        "definition": "Cubierto de pelos largos y blandos que forman una capa parecida a la lana.",
+        "category": "botánica",
+        "aliases": [
+            "lanosa",
+            "lanosos",
+            "lanosas",
+            "lanuginoso",
+            "blanco-lanosa"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "látex",
+        "definition": "Jugo lechoso que sueltan algunas plantas al romperse; suele ser irritante o tóxico.",
+        "category": "botánica",
+        "aliases": [],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "legumbre",
         "definition": "Fruto seco alargado que se abre por dos costuras, propio de las leguminosas.",
         "category": "botánica",
@@ -480,10 +1222,50 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "leguminosa",
+        "definition": "Planta de la familia de las habas y los guisantes, de fruto en vaina y raíces que fijan el nitrógeno del aire.",
+        "category": "botánica",
+        "aliases": [
+            "leguminosas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "leñoso",
+        "definition": "De tejidos duros y persistentes como los de la madera; lo contrario de herbáceo.",
+        "category": "botánica",
+        "aliases": [
+            "leñosa",
+            "leñosos",
+            "leñosas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "LESRPE",
         "definition": "Listado de Especies Silvestres en Régimen de Protección Especial: catálogo español de especies protegidas por ley.",
         "category": "conservación",
         "aliases": [],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "letrina",
+        "definition": "Lugar fijo donde un animal deja siempre sus excrementos, que le sirve para marcar el territorio.",
+        "category": "zoología",
+        "aliases": [
+            "letrinas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "liana",
+        "definition": "Planta trepadora de tallos largos y flexibles que se apoya en otras para alcanzar la luz.",
+        "category": "botánica",
+        "aliases": [
+            "lianas",
+            "lianoide",
+            "lianoides"
+        ],
         "source": "NaturDex (divulgacion)"
     },
     {
@@ -503,6 +1285,28 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "lígula",
+        "definition": "Cada una de las piezas alargadas del borde de un capítulo, los falsos «pétalos» de una margarita.",
+        "category": "botánica",
+        "aliases": [
+            "lígulas",
+            "ligulado",
+            "ligulada",
+            "ligulados",
+            "liguladas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "limícola",
+        "definition": "Ave de patas y pico largos que se alimenta hurgando en el barro y la arena de las orillas.",
+        "category": "zoología",
+        "aliases": [
+            "limícolas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "lineal",
         "definition": "(Hoja) muy estrecha y alargada, de lados casi paralelos.",
         "category": "botánica",
@@ -518,6 +1322,111 @@
         "category": "geografía",
         "aliases": [
             "litorales"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "lobulado",
+        "definition": "De borde con entrantes y salientes redondeados que dividen la hoja en lóbulos.",
+        "category": "botánica",
+        "aliases": [
+            "lobulada",
+            "lobulados",
+            "lobuladas",
+            "lóbulo",
+            "lóbulos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "marcescente",
+        "definition": "Que conserva las hojas secas en el árbol durante el invierno y no las suelta hasta que brotan las nuevas.",
+        "category": "botánica",
+        "aliases": [
+            "marcescentes",
+            "marcescencia"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "marga",
+        "definition": "Roca blanda, mezcla de arcilla y caliza, que forma suelos deleznables y pobres donde la vegetación se abre.",
+        "category": "geología",
+        "aliases": [
+            "margas",
+            "margoso",
+            "margosa",
+            "margosos",
+            "margosas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "melífero",
+        "definition": "Rico en néctar y muy visitado por las abejas.",
+        "category": "botánica",
+        "aliases": [
+            "melífera",
+            "melíferos",
+            "melíferas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "migratorio",
+        "definition": "Que se desplaza cada año entre dos territorios, uno de cría y otro de invernada.",
+        "category": "zoología",
+        "aliases": [
+            "migratoria",
+            "migratorios",
+            "migratorias",
+            "migrador",
+            "migradora",
+            "migración"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "mimetismo",
+        "definition": "Parecido de un animal con su entorno o con otra especie, que lo hace pasar inadvertido.",
+        "category": "zoología",
+        "aliases": [
+            "mimético",
+            "mimética",
+            "miméticos",
+            "miméticas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "nanofanerófito",
+        "definition": "Arbusto que mantiene las yemas por encima del suelo, entre medio metro y dos metros de altura.",
+        "category": "botánica",
+        "aliases": [
+            "nanofanerófitos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "nidificar",
+        "definition": "Construir el nido y sacar adelante los pollos en un lugar determinado.",
+        "category": "zoología",
+        "aliases": [
+            "nidifica",
+            "nidifican",
+            "nidificación"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "nitrificado",
+        "definition": "Enriquecido en nitrógeno por el ganado, los abonos o la acumulación de residuos.",
+        "category": "ecología",
+        "aliases": [
+            "nitrificados",
+            "nitrificada",
+            "nitrificadas",
+            "nitrificación"
         ],
         "source": "NaturDex (divulgacion)"
     },
@@ -543,6 +1452,77 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "obispillo",
+        "definition": "Zona del lomo del ave inmediatamente anterior a la cola; su color suele ser clave para identificarla en vuelo.",
+        "category": "zoología",
+        "aliases": [
+            "obispillos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "obovado",
+        "definition": "Con forma de huevo invertida: más ancho por la punta que por la base.",
+        "category": "botánica",
+        "aliases": [
+            "obovada",
+            "obovados",
+            "obovadas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "ocelo",
+        "definition": "Mancha redonda con aspecto de ojo en la piel, las alas o el plumaje de un animal.",
+        "category": "zoología",
+        "aliases": [
+            "ocelos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "omnívoro",
+        "definition": "Que come de todo, tanto materia vegetal como animal.",
+        "category": "zoología",
+        "aliases": [
+            "omnívora",
+            "omnívoros",
+            "omnívoras"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "orla",
+        "definition": "Franja de matorral y arbustos que bordea un bosque, un cauce o un saladar y lo separa del terreno abierto.",
+        "category": "ecología",
+        "aliases": [
+            "orlas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "ovado",
+        "definition": "Con forma de huevo: más ancho por la base que por la punta.",
+        "category": "botánica",
+        "aliases": [
+            "ovada",
+            "ovados",
+            "ovadas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "ovoide",
+        "definition": "Con forma de huevo.",
+        "category": "botánica",
+        "aliases": [
+            "ovoides",
+            "obovoide",
+            "obovoides"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "palmeado",
         "definition": "(Hoja) dividida en lóbulos que salen de un mismo punto, como los dedos de una mano.",
         "category": "botánica",
@@ -554,6 +1534,53 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "panícula",
+        "definition": "Inflorescencia muy ramificada, con las flores repartidas por ramas que a su vez se dividen.",
+        "category": "botánica",
+        "aliases": [
+            "panículas",
+            "paniculada",
+            "paniculado"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "papila",
+        "definition": "Abultamiento diminuto de la superficie de una hoja o un tallo; cuando están llenas de agua brillan al sol como gotas.",
+        "category": "botánica",
+        "aliases": [
+            "papilas",
+            "papiloso",
+            "papilosa",
+            "papilosos",
+            "papilosas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "papiráceo",
+        "definition": "De consistencia fina, seca y quebradiza, como el papel.",
+        "category": "botánica",
+        "aliases": [
+            "papirácea",
+            "papiráceos",
+            "papiráceas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "parásito",
+        "definition": "Ser vivo que se alimenta de otro al que perjudica, sin llegar normalmente a matarlo.",
+        "category": "ecología",
+        "aliases": [
+            "parásita",
+            "parásitos",
+            "parásitas",
+            "parasitismo"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "peciolo",
         "definition": "El rabillo que une la hoja al tallo.",
         "category": "botánica",
@@ -561,6 +1588,28 @@
             "peciolos",
             "pecíolo",
             "pecíolos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "pedicelo",
+        "definition": "Rabillo de cada flor concreta dentro de un grupo de flores.",
+        "category": "botánica",
+        "aliases": [
+            "pedicelos",
+            "pediceladas",
+            "pedicelado"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "pedúnculo",
+        "definition": "Rabillo que sostiene una flor o todo un grupo de flores.",
+        "category": "botánica",
+        "aliases": [
+            "pedúnculos",
+            "pedunculado",
+            "pedunculada"
         ],
         "source": "NaturDex (divulgacion)"
     },
@@ -606,12 +1655,60 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "planta pionera",
+        "definition": "La primera en instalarse en un terreno desnudo o alterado, que prepara el suelo para las que vienen detrás.",
+        "category": "ecología",
+        "aliases": [
+            "pionera",
+            "pioneras",
+            "pionero",
+            "pioneros",
+            "colonizadora",
+            "colonizador"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "polinizador",
+        "definition": "Animal que traslada el polen de una flor a otra y hace posible que se formen frutos y semillas.",
+        "category": "ecología",
+        "aliases": [
+            "polinizadora",
+            "polinizadores",
+            "polinizadoras",
+            "polinización",
+            "poliniza"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "posadero",
+        "definition": "Punto elevado y fijo desde el que un ave otea, canta o vigila.",
+        "category": "zoología",
+        "aliases": [
+            "posaderos",
+            "percha",
+            "perchas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "Preocupación Menor (LC)",
         "definition": "Categoría UICN. Especie abundante y extendida, con bajo riesgo de extinción; es la categoría más favorable.",
         "category": "conservación (UICN)",
         "aliases": [
             "LC",
             "Preocupación menor"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "primarias",
+        "definition": "Las plumas más largas del extremo del ala, las que dibujan la punta negra o clara que sirve para identificar a gaviotas y aves marinas en vuelo.",
+        "category": "zoología",
+        "aliases": [
+            "pluma primaria",
+            "plumas primarias"
         ],
         "source": "NaturDex (divulgacion)"
     },
@@ -623,7 +1720,8 @@
             "psamófila",
             "psamófilos",
             "psamófilas",
-            "dunar"
+            "dunar",
+            "dunares"
         ],
         "source": "NaturDex (divulgacion)"
     },
@@ -637,11 +1735,90 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "quenopodiácea",
+        "definition": "Planta de la familia de las sosas y los sapillos, de hojas carnosas y propia de suelos salinos.",
+        "category": "botánica",
+        "aliases": [
+            "quenopodiáceas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "quilla",
+        "definition": "Pieza en forma de barca formada por los dos pétalos inferiores de las flores de las leguminosas.",
+        "category": "botánica",
+        "aliases": [
+            "quillas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "quillado",
+        "definition": "Con una arista o resalte central, como la quilla de un barco; se dice de las escamas de muchos reptiles.",
+        "category": "zoología",
+        "aliases": [
+            "quillada",
+            "quillados",
+            "quilladas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "racimo",
         "definition": "Inflorescencia alargada con flores unidas al eje por un rabillo, como en la uva.",
         "category": "botánica",
         "aliases": [
             "racimos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "rambla",
+        "definition": "Cauce ancho y seco casi todo el año que solo lleva agua tras las lluvias fuertes; su fondo de gravas alberga vegetación propia.",
+        "category": "geografía",
+        "aliases": [
+            "ramblas",
+            "ramblizo",
+            "ramblizos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "rapaz",
+        "definition": "Ave cazadora de pico ganchudo y garras fuertes: águilas, halcones, ratoneros y búhos.",
+        "category": "zoología",
+        "aliases": [
+            "rapaces"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "raquis",
+        "definition": "Eje central del que salen los foliolos de una hoja compuesta o las flores de una espiga.",
+        "category": "botánica",
+        "aliases": [],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "rastrero",
+        "definition": "De tallos que se extienden pegados al suelo en vez de levantarse.",
+        "category": "botánica",
+        "aliases": [
+            "rastrera",
+            "rastreros",
+            "rastreras",
+            "postrado",
+            "postrada",
+            "decumbente"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "reclamo",
+        "definition": "Voz breve con la que un ave se comunica o avisa, distinta del canto con el que defiende el territorio.",
+        "category": "zoología",
+        "aliases": [
+            "reclamos"
         ],
         "source": "NaturDex (divulgacion)"
     },
@@ -666,11 +1843,51 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "rémige",
+        "definition": "Cada una de las plumas grandes del ala con las que el ave se sostiene en vuelo.",
+        "category": "zoología",
+        "aliases": [
+            "rémiges"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "residente",
+        "definition": "Que vive todo el año en el mismo territorio, sin migrar.",
+        "category": "zoología",
+        "aliases": [
+            "residentes",
+            "sedentario",
+            "sedentaria"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "ribazo",
+        "definition": "Talud herboso entre dos bancales o al borde de un camino.",
+        "category": "geografía",
+        "aliases": [
+            "ribazos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "rizoma",
         "definition": "Tallo subterráneo horizontal del que brotan raíces y nuevos tallos.",
         "category": "botánica",
         "aliases": [
             "rizomas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "rizomatoso",
+        "definition": "Que se extiende por medio de rizomas, tallos subterráneos de los que brotan nuevos pies.",
+        "category": "botánica",
+        "aliases": [
+            "rizomatosa",
+            "rizomatosos",
+            "rizomatosas"
         ],
         "source": "NaturDex (divulgacion)"
     },
@@ -707,7 +1924,10 @@
         "category": "botánica",
         "aliases": [
             "sabina",
-            "enebro"
+            "enebro",
+            "sabinas",
+            "enebros",
+            "sabinares"
         ],
         "source": "NaturDex (divulgacion)"
     },
@@ -721,11 +1941,22 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "sámara",
+        "definition": "Fruto seco con un ala membranosa que lo hace girar al caer, como el del arce o el olmo.",
+        "category": "botánica",
+        "aliases": [
+            "sámaras"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "semiárido",
         "definition": "Clima con lluvias muy escasas e irregulares, en el límite de lo árido; característico del sureste peninsular.",
         "category": "clima",
         "aliases": [
-            "semiárida"
+            "semiárida",
+            "semiáridos",
+            "semiáridas"
         ],
         "source": "NaturDex (divulgacion)"
     },
@@ -748,6 +1979,38 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "silíceo",
+        "definition": "De suelo pobre en cal, formado sobre rocas como el granito, la pizarra o la arenisca.",
+        "category": "geología",
+        "aliases": [
+            "silíceos",
+            "silícea",
+            "silíceas",
+            "descarbonatado",
+            "descarbonatados"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "sotobosque",
+        "definition": "Vegetación de arbustos y hierbas que crece bajo las copas de los árboles.",
+        "category": "ecología",
+        "aliases": [
+            "sotobosques"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "subespecie",
+        "definition": "Población de una especie con rasgos propios y un área geográfica distinta, que aún puede cruzarse con las demás.",
+        "category": "ciencia",
+        "aliases": [
+            "subespecies",
+            "subsp."
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "suculento",
         "definition": "De hojas o tallos gruesos y carnosos que almacenan agua, como en los cactus.",
         "category": "botánica",
@@ -761,11 +2024,67 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "sustrato",
+        "definition": "Material sobre el que se asienta y arraiga la vegetación: suelo, arena, gravas o roca desnuda.",
+        "category": "geología",
+        "aliases": [
+            "sustratos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "talud",
+        "definition": "Ladera muy inclinada, natural o abierta por una obra, como el corte de una carretera.",
+        "category": "geografía",
+        "aliases": [
+            "taludes"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "tarayal",
+        "definition": "Bosquete de tarays, arbolillos que resisten la sal y crecen en ramblas, saladares y bordes de cauce.",
+        "category": "botánica",
+        "aliases": [
+            "tarayales",
+            "taray",
+            "tarays",
+            "tarajal",
+            "tarajales"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "taxón",
+        "definition": "Cada uno de los grupos en que se clasifica a los seres vivos: especie, género, familia, orden...",
+        "category": "ciencia",
+        "aliases": [
+            "taxones",
+            "taxonómico",
+            "taxonómica",
+            "taxonómicamente"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "termófilo",
+        "definition": "Que necesita calor y no soporta las heladas, por lo que se refugia en las zonas más cálidas.",
+        "category": "ecología",
+        "aliases": [
+            "termófila",
+            "termófilos",
+            "termófilas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "termomediterráneo",
         "definition": "Del piso más cálido del clima mediterráneo, cerca de la costa y prácticamente sin heladas.",
         "category": "biogeografía",
         "aliases": [
-            "termomediterránea"
+            "termomediterránea",
+            "termomediterráneos",
+            "termomediterráneas"
         ],
         "source": "NaturDex (divulgacion)"
     },
@@ -818,6 +2137,66 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "umbelífera",
+        "definition": "Planta de la familia del hinojo y la zanahoria, con las flores agrupadas en umbelas, a modo de paraguas.",
+        "category": "botánica",
+        "aliases": [
+            "umbelíferas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "umbría",
+        "definition": "Ladera orientada al norte, que recibe poco sol y conserva más humedad y frescor.",
+        "category": "geografía",
+        "aliases": [
+            "umbrías",
+            "umbrío",
+            "umbríos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "ungulado",
+        "definition": "Mamífero que camina apoyado en pezuñas, como la cabra montés, el arruí o el jabalí.",
+        "category": "zoología",
+        "aliases": [
+            "ungulados"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "vaina",
+        "definition": "Fruto alargado de las leguminosas, que se abre por dos costuras para soltar las semillas.",
+        "category": "botánica",
+        "aliases": [
+            "vainas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "verticilo",
+        "definition": "Conjunto de hojas o flores que nacen a la misma altura del tallo y lo rodean en círculo.",
+        "category": "botánica",
+        "aliases": [
+            "verticilos",
+            "verticilado",
+            "verticilada",
+            "verticilados",
+            "verticiladas"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "vilano",
+        "definition": "Penacho de pelos del fruto de muchas compuestas, que hace de paracaídas para que el viento lo lleve lejos.",
+        "category": "botánica",
+        "aliases": [
+            "vilanos"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "Vulnerable (VU)",
         "definition": "Categoría UICN. Riesgo alto de extinción en estado silvestre: amenazada, aunque menos que En Peligro.",
         "category": "conservación (UICN)",
@@ -837,6 +2216,31 @@
             "xerófilas",
             "xerófito",
             "xerófita"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "yesoso",
+        "definition": "De suelo con yeso, un sustrato muy restrictivo al que solo se adaptan plantas especializadas.",
+        "category": "geología",
+        "aliases": [
+            "yesosa",
+            "yesosos",
+            "yesosas",
+            "yesífero",
+            "yeso",
+            "yesos",
+            "yesar",
+            "yesares"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
+        "term": "zarcillo",
+        "definition": "Órgano en forma de hilo enrollado con el que algunas plantas se agarran para trepar.",
+        "category": "botánica",
+        "aliases": [
+            "zarcillos"
         ],
         "source": "NaturDex (divulgacion)"
     },

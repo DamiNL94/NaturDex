@@ -9,7 +9,8 @@
 
 import {
   html, kingdomEmoji, placeholderImage, speciesImageSrc,
-  habitatImageSrc, habitatPlaceholderImage, icon
+  habitatImageSrc, habitatPlaceholderImage, icon,
+  invasoraEmoji, invasoraImageSrc, invasoraPlaceholderImage
 } from './util.js';
 import { audioBlock } from './audio.js';
 import { highlightGlossary } from './glossary.js';
@@ -43,7 +44,8 @@ window.__habitatImgFallback = function (imgEl, habitatId) {
   imgEl.src = habitatPlaceholderImage(habitat);
 };
 
-// Foto de invasora rota (p. ej. sin conexión o URL de GBIF caída) → se sustituye por el emoji del grupo.
+// Foto de invasora rota (p. ej. sin conexión) en la portada de la ficha → emoji del grupo a tamaño
+// grande, que es lo que la portada tenía antes de haber foto.
 window.__invImgFallback = function (imgEl) {
   if (!imgEl) return;
   imgEl.onerror = null;
@@ -52,6 +54,14 @@ window.__invImgFallback = function (imgEl) {
   span.setAttribute('aria-hidden', 'true');
   span.textContent = imgEl.dataset.emoji || '🌿';
   imgEl.replaceWith(span);
+};
+
+// La misma foto rota, pero en la miniatura de la lista: ahí no se puede sustituir el <img> por un
+// span (rompería la rejilla de 72 px de la tarjeta), así que se cambia por la portada generada.
+window.__invThumbFallback = function (imgEl) {
+  if (!imgEl) return;
+  imgEl.onerror = null;
+  imgEl.src = invasoraPlaceholderImage({ group: imgEl.dataset.group || '' });
 };
 
 // --- Catálogo ---------------------------------------------------------------------------------------
@@ -248,6 +258,7 @@ function renderHabitatDetail() {
     </div>
     ${total > 0 ? html`<h3 class="detail-subtitle">Especies de este hábitat</h3><div class="habitat-species-chips">${chips}</div>` : ''}
     ${habitat.reviewNote ? html`<div class="review-note"><strong>Pendiente de revisión:</strong> ${habitat.reviewNote}</div>` : ''}
+    ${habitat.image && habitat.imageAttribution ? html`<p class="detail-source">Foto: ${habitat.imageAttribution}${habitat.imageNote ? ' — ' + habitat.imageNote : ''}</p>` : ''}
     <button class="seen-toggle" type="button" data-view-habitat-species="${habitat.id}">Ver ${total === 1 ? 'la especie' : 'las ' + total + ' especies'} en el catálogo</button>
     </div>`;
 }
@@ -269,7 +280,7 @@ function renderSpeciesDetail() {
     </span>
     <h2>${species.commonName}</h2><em>${species.scientificName}</em>
     <p class="detail-prose">${species.description}</p>
-    <ul class="detail-list">${species.tips.map(tip => html`<li>${tip}</li>`)}</ul>
+    <ul class="detail-list detail-prose">${species.tips.map(tip => html`<li>${tip}</li>`)}</ul>
     <div class="detail-facts">
     <div><span>Hábitat</span><strong>${species.habitat}</strong></div>
     <div><span>Temporada</span><strong>${species.seasonality}</strong></div>
@@ -292,22 +303,13 @@ function renderSpeciesDetail() {
     <li class="detail-prose"><span>Región de Murcia</span>${species.murciaStatus || 'Sin dato'}</li>
     </ul>
     ${species.reviewNote ? html`<div class="review-note"><strong>Pendiente de revisión:</strong> ${species.reviewNote}</div>` : ''}
+    ${species.image && species.imageAttribution ? html`<p class="detail-source">Foto: ${species.imageAttribution}</p>` : ''}
     ${species.source ? html`<p class="detail-source">Fuente: ${species.source}</p>` : ''}
     <button class="seen-toggle ${seen ? 'is-seen' : ''}" type="button" data-toggle-seen="${species.id}" aria-pressed="${seen ? 'true' : 'false'}">${seen ? '✓ Visto' : 'Marcar como visto'}</button>
     </div>`;
 }
 
 // --- Pestaña de invasoras -----------------------------------------------------------------------------
-function invasoraEmoji(group) {
-  const g = (group || '').toLowerCase();
-  if (g.includes('ave')) return '🐦';
-  if (g.includes('mamíf') || g.includes('mamif')) return '🦔';
-  if (g.includes('invertebrad') || g.includes('molusc') || g.includes('artróp')) return '🐛';
-  if (g.includes('reptil') || g.includes('anfib')) return '🦎';
-  if (g.includes('pez') || g.includes('peces')) return '🐟';
-  return '🌿';
-}
-
 // Lista de invasoras del parque (filtradas por la CCAA de la región).
 function invasorasForPark() {
   const region = state.data.park && state.data.park.region;
@@ -318,8 +320,9 @@ export function renderInvasoras() {
   if (!invasorasPanel) return;
   const region = state.data.park && state.data.park.region;
   const list = invasorasForPark();
-  // Tarjetas compactas y clicables (como las de especies); la ficha completa se abre a la derecha.
-  const cards = list.map(i => html`<button class="species-card invasora-card${i.scientificName === state.selectedInvasora ? ' active' : ''}" type="button" data-invasora="${i.scientificName}"${i.scientificName === state.selectedInvasora ? html` aria-current="true"` : ''}><span class="card-thumb invasora-thumb" aria-hidden="true">${invasoraEmoji(i.group)}</span><span><span class="card-meta"><span class="badge alert">Invasora</span><span class="badge">${i.group || ''}</span></span><h3>${i.commonName || i.scientificName}</h3><em>${i.scientificName}</em></span></button>`);
+  // Tarjetas compactas y clicables (como las de especies): miniatura de la foto —que es justo lo
+  // que hay que reconocer en el campo— y, si la foto falla, la portada con el emoji del grupo.
+  const cards = list.map(i => html`<button class="species-card invasora-card${i.scientificName === state.selectedInvasora ? ' active' : ''}" type="button" data-invasora="${i.scientificName}"${i.scientificName === state.selectedInvasora ? html` aria-current="true"` : ''}><span class="card-thumb invasora-thumb"><img src="${invasoraImageSrc(i)}" alt="" loading="lazy" data-group="${i.group || ''}" onerror="window.__invThumbFallback(this)"></span><span><span class="card-meta"><span class="badge alert">Invasora</span><span class="badge">${i.group || ''}</span></span><h3>${i.commonName || i.scientificName}</h3><em>${i.scientificName}</em></span></button>`);
   const intro = list.length
     ? html`<p class="invasoras-intro">Especies exóticas <strong>invasoras</strong> registradas en ${region || 'esta zona'} (Catálogo Español de EEI, RD 630/2013). No son parte de la fauna y flora del parque: apréndelas a reconocer y <strong>no las plantes, transportes ni sueltes</strong> en el medio natural. Pulsa una para ver su ficha.</p>`
     : html`<p class="invasoras-intro">No hay invasoras catalogadas para esta zona todavía.</p>`;
@@ -343,10 +346,13 @@ function renderInvasoraDetail() {
     <span class="card-meta"><span class="badge alert">Especie invasora</span><span class="badge">${inv.group || ''}</span></span>
     <h2>${inv.commonName || inv.scientificName}</h2><em>${inv.scientificName}</em>
     <p class="detail-prose">${inv.description || ''}</p>
+    <div class="review-note invasora-warning"><strong>Especie exótica invasora.</strong> Introducirla en el medio natural, transportarla o comerciar con ella está prohibido (RD 630/2013). Si la tienes en el jardín, no tires los restos de poda al campo.</div>
+    ${inv.impact ? html`<h3 class="detail-subtitle">Por qué es un problema</h3><p class="detail-prose">${inv.impact}</p>` : ''}
+    ${inv.pathway ? html`<h3 class="detail-subtitle">Cómo llegó y cómo se propaga</h3><p class="detail-prose">${inv.pathway}</p>` : ''}
     <h3 class="detail-subtitle">Ficha</h3>
     <ul class="status-list">
     ${inv.origin ? html`<li class="detail-prose"><span>Origen</span>${inv.origin}</li>` : ''}
-    ${inv.habitat ? html`<li class="detail-prose"><span>Hábitat</span>${inv.habitat}</li>` : ''}
+    ${inv.habitat ? html`<li class="detail-prose"><span>Dónde vive</span>${inv.habitat}</li>` : ''}
     <li><span>Grupo</span>${inv.group || 'Sin dato'}</li>
     <li><span>Catálogo oficial</span>${inv.catalogo || 'Catálogo Español de EEI (RD 630/2013)'}</li>
     <li><span>Presencia en ${inv.ccaa || 'la zona'}</span>${inv.gbifOccurrences ? inv.gbifOccurrences + ' registros (GBIF)' : 'Registrada'}</li>

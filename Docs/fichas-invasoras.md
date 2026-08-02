@@ -1,0 +1,306 @@
+# Contenido de las invasoras (EIDOS)
+
+## Cotorra de Kramer — _Psittacula krameri_
+
+**Descripción** · Cotorra de color verde pálido, con la cara y alas de un verde más intenso, la barbilla negra y la nuca un poco azulada. La cola, muy larga y afilada, es de un tono verde más oscuro, con las plumas centrales azuladas y la punta verde amarillento. El pico es corto y ganchudo, con la mandíbula superior de color rojo intenso y la inferior negra. Los machos adultos tienen un característico collar rosáceo o rojizo, con una banda negra. Las hembras carecen de la línea negra en la cara que presentan los machos (aunque portan, en la misma zona, un área sombreada), y de la banda rosada en el pico. Los juveniles carecen de collar. Estas aves pueden llegar a medir hasta 40 cm y pesar unos 140 gramos. El colorido indicado es el original; sin embargo han aparecido mutaciones que han dado ejemplares con tonalidades azuladas, amarillas, blancas, etc.
+
+**Origen** · Originaria de África subsahariana e India.
+
+**Hábitat** · En los países donde la especie ha sido introducida, la presencia de árboles con cavidades propicias para nidificar parece ser un factor limitante para la expansión de la población, tal como se ha demostrado en Bélgica En España se ha citado la nidificación de la especie en troncos de: plátanos (Platanus hybrida), palmeras, álamo blanco (Populus alba) y también árbol del caucho (Coussapoa dealbata). La especie ocupa casi exclusivamente hábitats urbanos o suburbanos, aunque en Canarias se puede encontrar también frecuentemente en zonas rurales.
+
+**Impacto** · Sobre el hábitat: alteraciones en la estructura de la vegetación de las especies objetivo sobre las que se desplaza. Sobre las especies: (1) Competencia por nidos con murciélagos, rapaces nocturnas (autillo) y pájaros carpinteros (Picidae). (2) Competencia trófica con el mirlo (Turdus merula), curruca capirotada (Sylvia atricapilla) y con otros granívoros y frugívoros. Sobre los recursos económicos asociados al uso del patrimonio natural: (1) Daños a cultivos. Especie responsable de importantes daños en agricultura en Pakistan e India. En áreas cultivadas, se alimenta también de cosechas de diversos cereales como arroz, maíz y mijo, de frutales y de plantas de café, pudiendo ocasionar pérdidas importantes. Puede incluso llegar a alimentarse de grano almacenado.
+
+**Vía de entrada** · Introducción intencional como especie ornamental. Escapes o liberaciones voluntarias de individuos mantenidos en cautividad.
+
+## Cotorra argentina — _Myiopsitta monachus_
+
+**Descripción** · Robusta cotorra de tamaño medio, de unos 30 cm de longitud total, una envergadura de unos 53 cm y un peso que oscila entre los 90 y los 120 gramos. El color del cuerpo es principalmente verde brillante, con las alas verde azuladas, y la cara, mejillas, garganta y pecho de color gris o blanquecino. Las plumas de cuello y abdomen están bordeadas de un gris más claro, dándole un aspecto festoneado o escamoso. Las plumas del abdomen son de color verde, convirtiéndose en amarillentas en la parte inferior, patas y debajo de la cola. La cola es larga y puntiaguda, con las plumas de color verde. En las alas presenta plumas de color azul-negro. Los ojos son marrones, el pico marrón rosado claro, y las patas de color gris. Los juveniles presentan un colorido similar, con la salvedad de presentar una coloración gris verdosa en la frente.
+
+**Origen** · Sudamérica. Desde Bolivia Central y el sur de Brasil hasta Argentina Central, Paraguay y Uruguay.
+
+**Hábitat** · Debido a su gran resistencia y adaptabilidad algunos animales liberados o fugados lograron establecer sus colonias en varios tipos de ambientes, como bosques, zonas de cultivos, parques y jardines. Todos ellos con la presencia de masas de agua corriente o estancada. - La especie ocupa generalmente medios urbanos, frecuentando parques, jardines y arboledas tanto dentro de las zonas habitadas como en su periferia.
+
+**Impacto** · Sobre las especies: (1) Competencia trófica con otras especies, gregarismo y agresividad. (2) Depredación de huevos y pollos de especies más pequeñas, como el mirlo común. (3) Desplaza a especies autóctonas como el mirlo (Turdus merula) y la urraca (Pica pica). Sobre los recursos económicos asociados al uso del patrimonio natural: (1) Daños a cultivos. Se han descrito daños ocasionales especialmente sobre árboles frutales. En la provincia de Barcelona, en el año 2001, se han referenciado daños sobre cultivos de tomates que afectaron a la producción de unos 50.000 frutos. (2) Instalación de nidos en postes de alta tensión lo que conlleva riesgos asociados. (3) En el medio urbano, problemas por ruido asociados a la proximidad de los nidos.
+
+**Vía de entrada** · Comercio de especies ornamentales/mascotas. Introducción accidental (escapes) o intencional (liberaciones voluntarias) a partir de individuos mantenidos en cautividad.
+
+## Pico de coral — _Estrilda astrild_
+
+> ⚠ Corrección aplicada: EIDOS trae en «Distribución» texto de otra especie (un ave esteparia ibérica).
+
+**Descripción** · Se caracteriza por su diminuto tamaño y su peculiar morfología, con cabeza pequeña, alas redondeadas muy cortas y cola en cuña. El plumaje del macho adulto en todas las épocas presenta color pardo mate en las zonas superiores y ocre en las inferiores, aunque ambas partes están finamente franjeadas en pardo oscuro. Tiene la garganta lisa, la parte inferior de la cola negra y la zona central del vientre roja. En la cara destacan su pico y un pequeño antifaz, ambos de un rojo intenso. La hembra, muy similar al macho, está menos rayada en el pecho, que es casi liso; además exhibe color rojo tenue en el antifaz y el pico, y carece de rojo en el vientre. El joven muestra la parte inferior de la cola blanca, posee pico amarillento, tiene el antifaz rojo muy reducido y carece de rayas en el cuerpo. La presencia de grupos compactos de pájaros muy pequeños, con vuelos muy rápidos y directos, súbitos despegues y tendencia a moverse a saltitos en el suelo, resulta muy característica de esta especie. Podría confundirse con otros congéneres similares frecuentes en cautividad y proclives a escapes (Estrilda troglodytes, E. rhodopyga, E. melpoda).
+
+**Origen** · Originaria de África subsahariana.
+
+**Hábitat** · —
+
+**Impacto** · —
+
+**Vía de entrada** · —
+
+## Ardilla moruna — _Atlantoxerus getulus_
+
+**Descripción** · Se trata de una ardilla terrestre cuyo aspecto es muy semejante al de la mayoría de las ardillas de suelo. Su cuerpo y cola están recorridos longitudinalmente por cuatro bandas negras y dos blancas. El pelo es corto, salvo la cola que es muy poblada, de pelo largo y denso, y con bandas longitudinales de colores pardo y oscuro. La cabeza de color pardo-rojiza resulta proporcionalmente grande en relación al resto del cuerpo. El hocico es oscuro y las mandíbulas casi blancas, mientras que las orejas son pequeñas, casi inexistentes, y no poseen penachos. Las hembras presentan cuatro pares de mamas que se reparten desde la zona genital hasta cubrir las tres cuartas partes de la distancia entre las extremidades posteriores y las anteriores. Los machos son algo mayores que las hembras, CC: 170,0-200,0 mm; C: 130,0 -140,0 mm; P: 45,0-48,0 mm; Ps: 232,0-280,0 g (machos), 209,0-250,0 g (hembras). Fórmula dentaria: 1.0.2.3/1.0.1.3. Número de cromosomas (2n) = 38.
+
+**Origen** · Su rango nativo de distribución comprende el extremo noroeste de África: Marruecos, Gran y Medio Atlas, desde el sur de Agadir hasta el norte del Sahara y noroeste de Argelia. En España sólo vive en la isla de Fuerteventura, donde fue introducida en 1965, y en la que actualmente está ampliamente distribuida.
+
+**Hábitat** · En Fuerteventura ocupa todos los hábitats de la isla, estando presente desde altitudes a nivel del mar hasta las zonas más altas (en torno a 800 m) y siendo sólo significativamente menos abundante en las áreas ocupadas por jable (grandes extensiones formadas por arenas de origen orgánico). Es más abundante en zonas con presencia de estructuras que les sirvan de refugios (muros y acúmulos de piedra, terrenos oradados, etc), independientemente del tipo de hábitat. No obstante, las zonas cercanas a cultivos, los barrancos y las áreas de malpaís (extensiones volcánicas recientes) suelen ser más favorables para la especie.
+
+**Impacto** · Aunque el impacto socioeconómico de la ardilla moruna en Fuerteventura fue considerado escaso y de poca importancia en el momento de su introducción, en la actualidad son numerosas las quejas que realizan los agricultores por los daños que este roedor provoca en sus cosechas, pues no sólo se alimenta de cultivos, sino porque la conservación de los muros de los mismos se ve afectada por la fabricación de sus madrigueras. Por otra parte, es frecuente que los habitantes de la isla la consideren como la causa principal del declive de algunas especies de la avifauna tales como la perdiz, de gran interés social por la importante actividad de cacería que se desarrolla sobre ella. No obstante, sería necesario corroborar estas afirmaciones, pues no se ha demostrado aún esta afección.
+
+**Vía de entrada** · —
+
+## Tabaco moro — _Nicotiana glauca_
+
+**Descripción** · Arbusto o pequeño árbol perennifolio generalmente de unos 3 m, aunque puede alcanzar hasta 7 m de altura. Es completamente glabro (no pubescente), con hojas gruesas de forma ovada a lanceolada de 5-25 cm de longitud, margen entero y color verde glauco, pecioladas y en disposición alterna. Las flores son amarillas y tubulares, de 3-4 cm de longitud, en panícula terminal. Frutos en cápsula de dos valvas, ovoides, de 7-10 mm de longitud. Producen numerosas semillas muy pequeñas, de color negro (Sanz et al., 2004, Ntelios et al., 2013, Swearingen & Bargeron, 2016; Lusweti et al., 2011; GISD, 2020, CABI, 2020). Pertenece al mismo género que la planta del tabaco (N. tabacum), de la que se distingue por sus hojas glabras y sus flores amarillas (Ntelios et al., 2013; Bogdanovic et al., 2006, CABI, 2020). Todas sus partes son extremadamente venenosas y se han descrito numerosos usos medicinales, antifúngicos e insecticidas (Ntelios et al., 2013, Swearingen & Bargeron, 2016; Rinez et al., 2012; Steenkamp et al., 2002). Es una popular planta ornamental (Ollerton et al., 2012) y tiene potencial para ser usada como biocombustible (Mortimer et al., 2012) y en fitorremediación, ya que puede crecer en tierra contaminada y acumular metales pesados (Barazani et al., 2004). Sin embargo, estos usos no pueden compensar los impactos negativos de la planta (Lusweti et al., 2011).
+
+**Origen** · Especie nativa del sur de Bolivia y noroeste de Argentina (Swearingen & Bargeron, 2016; Ollerton et al., 2012; CABI, 2020).
+
+**Hábitat** · Como invasora se encuentra en áreas semiáridas alteradas en todo el mundo (CABI, 2020), en zonas climáticas templadas o subtropicales (Bogdanovic et al., 2006). Invade vertederos, lechos secos de ríos, bordes de carreteras y orillas de ríos a altitudes de hasta 3000 m (Cronk & Fuller, 2001; Bogdanovic et al., 2006). Por ejemplo, en Israel está ampliamente distribuida desde ambientes mésicos hasta áridos, incluyendo el desierto de Negev (Barazani et al., 2004), y se encuentra a lo largo de muros, en escombros o creciendo a lo largo de áreas arenosas (Furer et al. 2011).
+
+**Impacto** · N. glauca es considerada una especie invasora de categoría 3, es decir, que invade hábitats naturales o seminaturales de algún interés en conservación (Cronk & Fuller, 2001; Bogdanovic et al., 2006). Está incluida en el “Global Compendium of Weeds” como maleza agrícola y ambiental (GCW, 2013). Ha sido clasificada entre las 12 especies vegetales más nocivas en el Top 100 de la flora y fauna invasora en la Macaronesia (Azores, Madeira y Canarias) (Silva et. al., 2008). En un análisis de riesgos desarrollado para las Islas de Hawaii (PIER, 2013), donde está catalogada como planta invasora o potencialmente invasora (Staples et al., 2000), se consideró de alto riesgo. En EEUU también está catalogada como especie exótica invasora en los ecosistemas sureños forestales y de pradera (CABI, 2020).
+
+**Vía de entrada** · —
+
+## Tórtola doméstica — _Streptopelia roseogrisea_
+
+**Descripción** · Tórtola con una longitud de unos 26-28 cm y un peso de unos 150 gramos. El plumaje puede variar del blanco al crema pálido o presentar tonalidades oscuras. Tiene un característico semi-collar estrecho de color negro ribeteado de blanco en el cuello. La cabeza es de color crema ligeramente rosada, el pecho de color crema rosado o blanco, cola crema grisácea por el dorso, con la punta y los bordes blancos por debajo y una ancha banda terminal blanca. El dorso y gran parte del ala es de color marrón arena pálido. Bajo las alas la coloración es blanquecina. El ojo es de color rojo oscuro, el pico es grisáceo o negro, y las patas rojizas o gris oscuro. Los juveniles son similares a los adultos, aunque más pálidos, con el collar no tan evidente como en los adultos, el ojo marrón amarillento pálido y las patas marrón grisáceo.
+
+**Origen** · Benin; Burkina Faso; Camerún; Chad; Djibouti; Egipto; Eritrea; Etiopia; Gambia; Kuwait; Mali; Mauritania; Níger; Nigeria; Arabia Saudí; Senegal; Somalia; Sudan; Western Sahara; Yemen.
+
+**Hábitat** · Habita zonas urbanas (áreas ajardinadas abiertas con arbolado) y periurbanas, próximas a viviendas rurales. Especie sedentaria pero que coloniza al igual que la Tórtola Turca áreas próximas a las de su asentamiento inicial. Los únicos desplazamientos constatados corresponden a dos ejemplares juveniles marcados en Valencia, y que fueron controlados a 15 y 17 km de distancia en dirección oeste y SO, respectivamente. También en zonas ajardinadas abiertas, arboledas y parques en ciudades costeras. En ocasiones también en ambientes rurales.
+
+**Impacto** · Sobre el hábitat: (1) Principalmente granívora, en entornos antropizados es oportunista. Consume semillas, vegetales ruderales, insectos y caracoles. Plantas consumidas en África: Panicum laetum, Tribulus terrestris, Gisekia pharmacioides, Colocynthis, Arachis, Cocculus, Tinospora, Boscia, Salvadora y Commiphora. (2) Alteraciones en la estructura, abundancia relativa o en los patrones de sucesión naturales de la vegetación natural. Sobre las especies: (1) Competencia e hibridación con la Tórtola Turca (Streptopelia decaocto), con la que tiene grandes similitudes. (2) Los ejemplares procedentes de cautividad pueden transmitir enfermedades a otras especies. Sobre los recursos económicos asociados al uso del patrimonio natural: (1) Daños a cultivos. (2) Competencia con especies autóctonas cinegéticas.
+
+**Vía de entrada** · Introducción intencional como especie ornamental, de granja o introducida junto con palomas deportivas. Escapes o liberaciones voluntarias de ejemplares mantenidos en cautividad.
+
+## Ricino — _Ricinus communis_
+
+**Descripción** · Arbusto o pequeño arbolillo robusto, glabro, de hasta 3 metros de alto, con el tallo hueco, generalmente glauco o de color púrpura, cubierto de pruína. Las hojas son grandes, de 10-50 cm de diámetro, de color verde oscuro o glaucas (cuando son jóvenes suelen ser de color rojo oscuro), glabras, palmeadas, con (5)7-9 lóbulos desiguales de bordes irregularmente dentados con el ápice agudo. Cada lóbulo tiene un nervio centra prominente. Los peciolos son rojizos, y tienen glándulas apicales de unos 2 mm. Las inflorescencias aparecen en cimas bracteadas reunidas en panículas terminales. Las flores son unisexuales, las masculinas con 5 tépalos soldados de color amarillento, situadas en la parte inferior de la inflorescencia, y las femeninas, en la parte superior, con 3 o 5 tépalos linear-lanceolados de color rojizo. El fruto es una cápsula globosa trilobulada, de color verdoso que se torna a rojo al madurar, cubierta de abundantes espinas romas y suaves, glabra, que contiene las semillas elipsoidales, lisas, lustrosas y jaspeadas, provistas de una excrecencia apical.
+
+**Origen** · África tropical.
+
+**Hábitat** · Terrenos de cultivos y zonas verdes de origen antrópico. Matorrales de ambientes costeros no excesivamente halófilos. Matorrales de medianías (palmerales). Zonas urbanizadas. Cauces de barrancos de zonas medias y bajas. Eriales y matorrales desérticos.
+
+**Impacto** · Sobre el hábitat: alteraciones en la estructura y abundancia relativa de especies nativas o endémicas, y en los patrones de sucesión natural de la vegetación nativa. Sobre las especies: competencia, reducción o alteración por el espacio o los recursos. Impiden o dificultan la regeneración de especies endémicas o nativas. Se trata de una especie tóxica para el ser humano y el ganado.
+
+**Vía de entrada** · Introducida intencionalmente como especie medicinal y ornamental. Las semillas se liberan de forma explosiva al madurar el fruto. Pueden ser dispersadas por el agua, por roedores, en residuos de jardinería, barro, maquinaria contaminada, etc.
+
+## Vinagrera — _Oxalis pes-caprae_
+
+> ⚠ Corrección aplicada: EIDOS describe en «Hábitat» una planta acuática, que no es la vinagrera.
+
+**Descripción** · Planta herbácea perenne, cespitosa, que crece cada año a partir de un bulbo (en general menor de 2,5 cm) profundamente enterrado del que emerge un rizoma anual, ascendente, portador bulbillos y que acaba en una roseta basal de hojas situada al nivel del suelo. Las hojas tienen el limbo trifoliado (como un trébol), con foliolos verdes (a veces con una marca marrón o púrpura) de 8-20 x 12-30 mm, en forma de corazón, profundamente emarginados. Tienen largos peciolos de hasta 20 cm de longitud. Las flores son de color amarillo brillante, relativamente grandes, y nacen en racimos sueltos (cada uno con 3-25 flores) sobre un pedúnculo erecto y cilíndrico de 10-30 cm, ligeramente pubescente. El cáliz está formado por 5 sépalos libres, oblongos o lanceolados, de 6-7 mm. La corola es dialipétala (perianto doble y pétalos separados o libres entre sí), en forma de embudo, con 5 pétalos de 2-3 cm, a veces dobles, 10 estambres y un ovario con 5 estilos. El fruto es una cápsula oblonga, corta, que raramente llega a madurar, pero que si lo hace se abre expulsando violentamente las semillas.
+
+**Origen** · Especie originaria de la región del Cabo, en Sudáfrica.
+
+**Hábitat** · —
+
+**Impacto** · Sobre el hábitat: aunque su efecto sobre los ecosistemas naturales en España no ha sido estudiado, sí existen datos referentes a otras zonas con afinidades climáticas. En los ecosistemas dunares además de la exclusión competitiva directa, cuando se instala en zonas desnudas genera un efecto muy negativo, estabilizando las arenas y enriqueciendo el suelo en nutrientes, con lo que se propicia la entrada de especies ruderales desplazan a las comunidades naturales. En nuestro país está presente en varios espacios naturales protegidos: P. N. de Doñana, P. N. Marítimo-Terrestre del Archipiélago de Cabrera, P. Nat del Delta del Ebro, P. Nat. de la Sierra de Grazalema, etc. Sobre las especies: en las zonas invadidas forma cubiertas densas que acaparan la luz y el espacio, desplazando a la flora nativa, además de inhibir la germinación de sus semillas.
+
+**Vía de entrada** · Introducción involuntaria por las vías propias de las malas hierbas agrícolas (contaminación de partidas de semillas, presencia de diásporas en los productos agrarios, transporte de cítricos, etc.). Dispersión por el viento, agua, aves o por medio de sustratos contaminados (residuos de jardinería, movimientos de suelos contaminados, etc.).
+
+## Ageratina — _Ageratina adenophora_
+
+**Descripción** · Hierba perenne de 1 a 2 metros de altura. Los tallos son de color verde, rojizo o púrpura cuando son jóvenes, volviéndose más marrones al envejecer; son numerosos, erectos, lisos y cilíndricos, poco ramificados hacia el ápice. Están cubiertos de pelos pegajosos (glandulares) cuando son jóvenes. Surgen de un corto y grueso rizoma de color amarillo pálido y de olor similar al de una zanahoria al partirlo. Las hojas son de color verde oscuro, con forma de diamante o triangular, dispuestas en los tallos de forma opuesta; miden de 5 a 8 cm de largo y de 3 a 7,5 de ancho; tienen los bordes dentados, estrechándose hacia el ápice, glabras o ligeramente pubescentes, dentadas en los márgenes apicales. Los peciolos son de color marrón, de 1 a 6 cm de largo, generalmente cubiertos de pelos pegajosos. Las flores son tubulares, de color blanco, de unos 3,5 mm de largo, agrupadas en capítulos de 5-10 mm de diámetro, dentro de una fila de brácteas verdes y dispuestas en racimos planos de hasta 10 cm de ancho, en el extremo de las ramas. Las semillas son marrón oscuro o negras, delgadas y angulosas, con 4 o 5 costillas ligeras longitudinales, glabras, coronadas por un vilano de 5-10 pelos blancos y finos de unos 4 mm de largo.
+
+**Origen** · Originaria de México y América Central
+
+**Hábitat** · Ambientes riparios de interior (sistemas artificiales de conducción, manantiales, rezumaderos y otros enclaves húmedos y charcas y estanques). Bosques montanos húmedos (brezales y fayal-brezales arbustivos, monteverde arbóreo higrofítico y monteverde arbóreo mesofítico). Matorrales de medianías. Zonas urbanizadas. Terrenos de cultivos y zonas verdes de origen antrópico.
+
+**Impacto** · Sobre el hábitat: (1) Alteraciones en la estructura y abundancia relativa de especies nativas o endémicas, y alteraciones en los patrones de sucesión naturales de la vegetación nativa. (2) Especialmente preocupante es la situación existente en el Parque Nacional de la Caldera de Taburiente, en la isla de La Palma (Canarias), donde se ha estimado que se encuentra invadido el 80 % de su superficie, aunque no aparece por encima de los 1.800 m de altitud. También se encuentra en el Parque Nacional de Garajonay, en La Gomera, donde invade pinares de pino canario y laurisilva degradada. (3) En la costa de Andalucía oriental invade ambientes riparios y ruderales, llegando a penetrar en el Parque Natural de las Sierras de Tejeda y Almijara. Sobre las especies: competencia, reducción o alteración por el espacio o los recursos.
+
+**Vía de entrada** · Introducción accidental (probablemente desde Gran Bretaña, donde se introdujo como ornamental). Como contaminante de productos agrícolas, arenas o gravas, en barro pegado a animales, por el viento o el agua, etc. Una vez introducida, se expande de forma natural.
+
+## Pita — _Agave americana_
+
+**Descripción** · Es una planta perenne, de porte robusto y rizomatosa. El tronco es casi inexistente o bien está ausente. Las hojas (que pueden medir hasta 2 metros de largo y 25 cm de ancho) crecen desde el suelo formando grandes rosetas, dispuestas hacia arriba y llegando a curvarse en el extremo hacia el suelo; son carnosas, robustas, en forma de lanza, y con espinas de casi 2 cm (muy agudas y finas, dando al margen un aspecto aserrado) en los márgenes y ápice (de unos 5 cm); su color es verde azulado o gris azulado. Las flores, grandes (6-10 cm), aparecen a partir de los 10 años de edad de la planta en una panícula en el extremo de uno de los tallos (a 5-8 m de altura, verdosos con brácteas dispuestas de forma alterna) y son de color amarillo pálido algo verdoso; están formadas por 6 “pétalos” fusionados en la base formando un tubo corto; tienen 6 estambres muy prominentes. La planta, una vez que ha florecido, muere, siendo sustituida por pequeños retoños que crecen alrededor de su base. El fruto es una cápsula alargada y trígona (3 compartimentos), de color verde que va cambiando a marrón y negruzco con el tiempo, con el ápice en pico y numerosas semillas aplanadas de color negro brillante.
+
+**Origen** · Se trata de una especie originaria del este de México.
+
+**Hábitat** · Se trata de una planta termófila que en la región mediterránea habita en lugares pedregosos soleados, ramblas y arenales, por lo general cercanos al mar y más raramente en el interior. También es habitual a lo largo de los caminos y en los linderos de las parcelas. En general, prefiere suelos muy bien drenados y soleados, siempre próximos a la costa. Es frecuente en comunidades dunares, cunetas, taludes, etc. En la Comunidad Valenciana aparece en matorrales degradados y márgenes de vías de comunicación de zonas costeras de baja altitud. También es abundante en acantilados y dunas litorales donde claramente excluye a la vegetación autóctona por competencia por el espacio.
+
+**Impacto** · Sobre el hábitat: (1) Esta especie puede hacerse localmente dominante en comunidades nitrófilas que invaden playas y dunas. (2) Reduce la biodiversidad nativa. Sobre las especies (1) Sus comunidades son tan densas que llega a desplazar a las especies autóctonas de arenales costeros por competencia del espacio y alteración del medio. Puede competir con las especies nativas por los escasos recursos presentes en las dunas. (2) Produce amplia sombra con sus grandes hojas, desplazando las especies autóctonas. Sus brotes rizomatosos pueden alterar el estado de nutrientes del suelo. (3) En Isla Grossa (Murcia), se ha citado que, entre otras especies exóticas invasoras, compite con las autóctonas Lycium intricatum (Solanaceae), Salsola spp. (Chenopodiaceae) y Withania frutescens (Solanaceae); Sobre los recursos económicos asociados al uso del patrimonio natural: no se ha descrito.
+
+**Vía de entrada** · Introducción intencional como planta ornamental y textil, así como para demarcación de lindes. Una vez introducida, se expande de forma natural.
+
+## Rabogato / plumero — _Cenchrus setaceus_
+
+**Descripción** · Es una hierba perenne de hasta 130 cm de alto que crece formando densas macollas. Los tallos florales son erectos (o ligeramente caídos), no ramificados o, en el caso, muy poco. Estos tallos surgen de la base de la planta, junto con las hojas. Las hojas tienen el limbo enrollado, son largas, acintadas, ásperas al tacto, y miden hasta 30 cm x 3 mm. En su mayoría son glabras, pero a veces tienen algunos pelos hacia la base. La lígula que aparece entre la vaina de la hoja y la lámina es ciliada. Tienen una costilla notoria en el haz. Las espigas de semillas son de 6-30 cm de largo, plumosas, de color rojizo, rosado o púrpura. Cada espiguilla floral está rodeada por numerosas cerdas plumosas, de 12 a 26 mm de largo, y con una cerda significativamente más larga que las demás (16-40 mm). El raquis es angular. Las espigas maduras se vuelven de color pajizo, y las semillas se desprenden con las cerdas plumosas rodeándolas.
+
+**Origen** · Especie originaria del nordeste de África, desde Túnez hasta Somalia.
+
+**Hábitat** · Pastizales y herbazales de ambientes alterados. Zonas de matorral xerofítico del piso basal. Matorrales de medianías. Eriales y matorrales desérticos. Matorrales de ambientes costeros no excesivamente halófilos. Zonas urbanizadas. Terrenos de cultivos y zonas verdes de origen antrópico. Franja litoral halófila (costas rocosas y acantilados costeros).
+
+**Impacto** · Sobre el hábitat: (1) Alteraciones en la estructura y abundancia relativa de especies nativas o endémicas, y en los patrones de la sucesión natural de la vegetación nativa. Provoca asimismo alteraciones en el régimen hidrológico, dinámica de nutrientes y minerales, disponibilidad de luz, cambios de salinidad o de pH, etc. También puede llegar a modificar el régimen de incendios. (2) Formación de rodales monoespecíficos y desplazamiento de especies nativas. Sobre las especies: sus impactos más negativos sobre el medio se deben en primer lugar a la competencia con la vegetación nativa, a la que puede llegar a desplazar. Tal es el caso en Canarias de la gramínea autóctona Hyparrhenia hirta, a la que tiende a eliminar en las zonas donde entran en competencia. Recursos económicos asociados al uso del patrimonio natural: también invade terrenos de cultivo.
+
+**Vía de entrada** · Introducción intencional como especie ornamental. Las semillas son transportadas por el viento y por el agua, por animales, vehículos, en residuos de jardinería, etc.
+
+## Bulbul naranjero — _Pycnonotus cafer_
+
+**Descripción** · Es un ave de tamaño mediano, de unos 20 cm de longitud y entre 26 y 45 gramos de peso. El macho y la hembra son similares, aunque el macho tiende a ser de mayor tamaño. La cabeza tiene una apariencia cuadrada debido a la corta cresta que luce. El pico y los ojos son negros. El cuerpo es de tonalidades oscuras (marrones, grisáceas o de color humo), la cabeza es casi negra y el abdomen blanco. Presenta una característica y distintiva mancha de color carmesí bajo las plumas de la cola. La cola es de color marrón con la punta blanca. Los juveniles son como los adultos, pero con algún ribete de color marrón en las plumas. Los huevos son de color rosa pálido o rojizo, profundamente marcados con manchas oscuras de tonos marrón violáceo.
+
+**Origen** · Pakistán, India, SRI Lanka e Indochina.
+
+**Hábitat** · Vive en zonas de arbustos, en parques y jardines. También se encuentran en los bosques y áreas agrícolas.
+
+**Impacto** · Sobre las especies y los hábitas: destruye las flores, frijoles, tomates, guisantes y frutas maduras (por ejemplo, plátanos y otros frutos blandos). Sobre los recursos económicos asociados al uso del patrimonio natural: también pueden ayudar en la difusión de las semillas de otras especies invasoras.
+
+**Vía de entrada** · Introducción intencional como especie ornamental. Escapes o liberaciones voluntarias de individuos mantenidos en cautividad.
+
+## Caña común — _Arundo donax_
+
+**Descripción** · Planta herbácea, perenne, erecta, con raíces fuertes y carnosas. Tiene el tallo grueso y robusto, hueco; alcanza los 2-6 metros de altura y hasta 4 cm de diámetro. Es suave y glabro, brillante, simple o algo ramificado en los nudos; las cañas se dividen por tabiques en los nudos (como el bambú). Las hojas son largas y acintadas (similares a las del maíz), azul-verdosas, dispuestas en dos filas conspicuamente opuestas a lo largo del tallo, al que “abrazan”; tienen en la base mechones de pelos; llegan a medir unos 60 centímetros de largo y 6 de ancho. Los márgenes son afilados al tacto, pudiendo llegar a cortar. Las flores nacen en grandes panículas apicales, de 30-65 dm de largo. Las espiguillas, comprimidas lateralmente, presentan tonos violáceos o amarillentos, generalmente, con tres flores bisexuales. Las glumas son subiguales y membranosas; la lema es bífida y pelosa en su parte dorsal, y más larga que la pálea. El fruto es una cariópside oblanceolada y estriada, que no parece producir semillas viables fuera de su rango nativo de distribución. El embrión ocupa más o menos un tercio de la longitud.
+
+**Origen** · Este de Asia.
+
+**Hábitat** · Cauces de barrancos en zonas bajas y medianías, palmerales, terrenos de cultivos y zonas verdes de origen antrópico, manantiales, rezumaderos y otros enclaves húmedos, zonas urbanizadas.
+
+**Impacto** · Sobre el hábitat: (1) Entre sus impactos sobre el medio natural, cabe destacar el desplazamiento de la vegetación riparia nativa, que puede llegar incluso a ser sustituida en su totalidad. Esto provoca un empobrecimiento del hábitat para la fauna terrestre asociada. Disminuye la capacidad de desagüe de ríos y canales al taponar y reducir los cauces con sus sedimentos. Por la gran biomasa que produce es un factor de riesgo de cara a los incendios. Debido a su intensa transpiración, reduce los recursos hídricos en zonas áridas donde los humedales escasean. (2) En la invasión de ecosistemas naturales tiene gran trascendencia la destrucción previa de la vegetación autóctona por actuaciones antrópicas. Sobre las especies: produce una fuerte competencia, reducción y alteración por el espacio y los recursos, con las especies endémicas y/o nativas.
+
+**Vía de entrada** · Introducción intencional como especie ornamental y para otros usos variados (paja, instrumentos, agricultura, etc.). Dispersión por medio de residuos de jardinería, maquinaria, corrientes de agua (fragmentos de rizoma), viento (semillas).
+
+## Chumbera — _Opuntia stricta_
+
+**Descripción** · Arbusto suculento de hasta 2 metros de alto, al principio erecto pero con tendencia a achaparrarse. Los tallos, transformados en cladodios (palas), son de color verde o verde azulado, aplanados, de 10-25 cm de largo y 7,5-15 cm de ancho, glabros, cubiertos de aréolas. Las aréolas (pequeñas protuberancias) presentan gloquidios (pequeñas cerdas espinosas) y pueden tener de 0 a 2 espinas afiladas largas, de 2 a 4 cm de largo. Las flores son de color amarillo brillante, a menudo con marcas rosadas en los “pétalos” exteriores, y aparecen en los márgenes de los cladodios. El fruto tiene forma de pera, más o menos esférico, de color morado en la madurez, con la superficie externa lisa y sin espinas, con la excepción de algunos gloquidios incrustados en las pequeñas aréolas. La pulpa es de color púrpura y sabor agrio, y contiene unas 60 semillas con un revestimiento duro.
+
+**Origen** · Sudeste de Estados Unidos (Florida, Luisiana, Alabama, Georgia, Carolina del Sur y Carolina del Norte), este de Méjico y Cuba. Dudosamente nativa en Puerto Rico, Islas Vírgenes y Bahamas.
+
+**Hábitat** · Roquedos silicios y terrazas de antiguos cultivos. 0-300 m. Ambientes muy soleados y cálidos, resistiendo sequías prolongadas y suelos con sales y yeso, pero siempre bien drenados. Preferentemente ocupa laderas de solana. No tolera los suelos hidromorfos o mal drenados. Prefiere los sustratos arenosos, creciendo incluso en dunas costeras estabilizadas. No tiene capacidad de rebrotar después de un incendio.
+
+**Impacto** · Sobre las especies: en zonas áridas y cálidas compite ventajosamente con la vegetación autóctona, desplazándola o impidiendo su regeneración. Está incluida en la lista de la UICN de las 100 peores especies alóctonas invasoras del Mundo.
+
+**Vía de entrada** · Introducción intencional como especie ornamental y para la formación de setos. Dispersión de las semillas por endozoocoria y por el agua; los restos de podas de las palas tienen la capacidad de enraizar.
+
+## Chumbera de Dillen — _Opuntia dillenii_
+
+**Descripción** · Arbusto de hasta 3 metros de alto (aunque no suele superar el metro), algo achaparrado, muy ramificado, con los tallos transformados en cladodios (palas), carnosos, suculentos, a menudo con los márgenes ondulados, de color verde-azulado, a veces gris verdoso. Miden de 7 a 40 cm de largo y de 6 a 9 de grosor. Las aréolas (pequeñas protuberancias) son numerosas y llamativas, ligeramente elevadas, con gloquidios (pequeñas cerdas espinosas) de color amarillo. Tienen entre 1 y 5 grandes espinas de hasta 5 cm de largo, aunque a veces pueden faltar. Las flores son variables, de color amarillo limón a naranja, e incluso rojizas, con numerosos “pétalos” y estambres, y se sitúan en los márgenes de los cladodios. Los frutos son piriformes o casi globosos, con una depresión poco profunda en la parte superior, de color púrpura, sin espinas pero con gloquidios, jugosos y comestibles, con la pulpa rojiza. Las semillas son abundantes, de color amarillo o marrón pálido, y en forma de disco.
+
+**Origen** · Se trata de una especie ampliamente distribuida. Se presenta en el sudeste de Estados Unidos, México, Bahamas, Cuba, Islas Caimán, Jamaica, República Dominicana, Puerto Rico, Islas Vírgenes, Antillas Holandesas, Bermudas y Ecuador.
+
+**Hábitat** · Eriales y matorrales desérticos. Zonas de matorral xerofítico del piso basal. Matorrales de ambientes costeros pero no excesivamente halófilos. Pastizales y herbazales de ambientes alterados. Terrenos de cultivos y zonas verdes de origen antrópico. Zonas urbanizadas.
+
+**Impacto** · Sobre el hábitat: alteraciones en la estructura y abundancia relativa de especies nativas o endémicas, y en los patrones de la sucesión natural de la vegetación nativa. Además puede causar alteraciones en el régimen hidrológico, dinámica de nutrientes y minerales, disponibilidad de luz, cambios de salinidad o de pH, etc. Sobre las especies: (1) En España es relativamente abundante en los sustratos arenosos del litoral onubense, incluido el Parque Nacional de Doñana, generalmente cerca de las carreteras y pistas. Invade los matorrales de Retama monosperma (L.) Boiss, así como los claros de pinar. Por lo observado en otras zonas del mundo, es una especie peligrosa para los ecosistemas y, por tanto, a tener en cuenta.
+
+**Vía de entrada** · Introducción intencional como especie ornamental y para la formación de setos. Dispersión de las semillas por endozoocoria e hidrocoria; los restos de podas de las palas tienen la capacidad de enraizar.
+
+## Manzana de Sodoma — _Calotropis procera_
+
+**Descripción** · Es un pequeño árbol siempre verde. Los tallos y hojas tienen apariencia cerosa y contienen un látex lechoso blanquecino. El tronco es más o menos erecto, ramificado desde la base. Los tallos jóvenes son de color verde grisáceo, de textura suave, cubiertos de pelos blanquecinos. Los tallos maduros están profundamente fisurados, con apariencia de corcho, con la corteza de color marrón claro o amarillo grisáceo. Las hojas son grandes, de 5-30 cm de largo y 4-15 cm de ancho, sésiles o con peciolos muy cortos (3-4 mm), coriáceas, redondeadas u ovadas, y opuestas en pares. Su color es verde grisáceo, y los bordes son enteros. El haz es glabro mientras que el envés puede estar densamente cubierto de minúsculos pelos blancos o bien con un mechón de pelos rígidos en la base del nervio central. Las flores nacen en racimos de 3-15 flores, en las horquillas de las hojas superiores (inflorescencias axilares). El pedúnculo de las inflorescencias es de 20-55 mm de largo y cada flor tiene un pedicelo de 15-25 mm. Tienen 5 pétalos relativamente cortos y anchos (7-10 mm de largo y 6-10 mm de ancho), blancos o rosados, con puntas de color púrpura. Los frutos son grandes folículos inflados de color verde grisáceo. La piel es gruesa y esponjosa. Cada fruto contiene numerosas semillas aplanadas rematadas por un penacho de pelos blancos, sedosos y largos.
+
+**Origen** · Especie saharo-síndica (áreas desérticas desde el Sahara occidental y Marruecos hasta Pakistán, Afganistán y la India).
+
+**Hábitat** · Aparece de forma ocasional en la franja litoral halófila y arenales costeros de Fuerteventura y Gran Canaria. - Terrenos de cultivo y zonas verdes de origen antrópico. En Fuerteventura ocupa con preferencia los fondos de pequeñas presas asociados a antiguas zonas agrícolas. Ocasional en matorral xerofítico del piso basal. En estas zonas, ocupa los lechos gravosos de valles y amplios barrancos, así como laderas bajas de las montañas. Zonas urbanizadas. Asilvestrada, por ejemplo, a lo largo de algunas calles de urbanizaciones en Jandía, así como en áreas ruderalizadas en las proximidades de lugares habitados, como bordes y taludes de carreteras, solares y escombreras (Scholz, 2008).
+
+**Impacto** · Sobre el hábitat - Coloniza áreas muy pobres en vegetación natural. Sobre las especies - No se ha estudiado en profundidad. En el valle de Giniginámar C. procera se ha encontrado cerca de grupos de Tamarix canariensis, sin que haya podido observarse una alteración en el crecimiento de éstos. Sobre los recursos económicos asociados al uso del patrimonio natural - No se han registrado. Sobre la salud humana - Es una especie tóxica.
+
+**Vía de entrada** · Introducida de forma voluntaria como especie ornamental. De forma natural se expande por semillas de dispersión anemócora, hidrócora y zoócora. Puede expandirse por vehículos, movimientos de suelo contaminado, etc.
+
+## Amapola de California — _Eschscholzia californica_
+
+**Descripción** · Hierba de 20-60 cm de altura, con cierta pubescencia, erecta o decumbente, y que secreta un látex acuoso. Las hojas están largamente pecioladas, son de color verde azulado (glauco), con tres lóbulos finamente divididos y casi glabras. Las flores son solitarias, axilares o terminales, grandes, de 5-8 cm de diámetro, hermafroditas, actinomorfas, con 4 pétalos largos y anchos de color amarillo-naranja, con forma de copa y de textura sedosa (satinados), a veces con una mancha oscura en la base, fugaces. Tienen un aroma picante. Responden a los bajos niveles de luz, cerrándose. El cáliz presenta 2 sépalos soldados en forma de capuchón, caedizas dejando un reborde irregular que se mantiene tras caer los pétalos. Los pedicelos son de 1 a 8 cm. El fruto es una cápsula dehiscente estrecha y alargada, de 8 a 10 cm de largo, glabra, con nervios prominentes, que contiene numerosas semillas globosas, de color marrón oscuro o negro, con la superficie reticulada o punteada.
+
+**Origen** · Norteamérica (entre el río Columbia y la Baja Califórnia de norte a sur y desde el litoral del Océano Pacífico hasta el Gran Cañón).
+
+**Hábitat** · Pinares (pinares montanos secos sobre suelos desarrollados, pinares de cumbre), Pastizales y herbazales de ambientes alterados. Zonas urbanizadas. Bosques de Juniperus spp. (sabinares).
+
+**Impacto** · Sobre el hábitat: alteraciones en la estructura y abundancia relativa de especies nativas o endémicas, y en los patrones de sucesión natural de la vegetación nativa. Sobre las especies: competencia, reducción o alteración por el espacio o los recursos. Facilitan el desarrollo de otras especies invasoras.
+
+**Vía de entrada** · Introducción intencional como especie ornamental. Se dispersa de forma natural (los frutos “explotan” lanzando las semillas).
+
+## Milpiés portugués — _Ommatoiulus moreletii_
+
+**Descripción** · Miriápodo robusto, de cuerpo cilíndrico y alargado, de color negro o gris negruzco, de 20-45 mm de largo, con el cuerpo compuesto de numerosos segmentos con dos pares de patas cada uno (unos 50 segmentos en estado maduro), aunque los primeros segmentos pueden portar sólo un par de patas. Huevos de color blanco amarillento. Los juveniles solo poseen 3 pares de patas, aumentado en cada muda el número de segmentos y pares de patas, de color marrón claro o grises, y con una línea lateral oscura a cada lado.
+
+**Origen** · Península ibérica.
+
+**Hábitat** · En Canarias ocupa casi todos los hábitats de las islas, siempre ligado a ambientes con humedad y con abundante materia vegetal acumulada en el suelo.
+
+**Impacto** · Sobre el hábitat: alteración en la abundancia relativa de especies nativas o endémicas. Sobre las especies: es probable que se produzca competencia por los recursos con otras especies nativas pertenecientes al mismo grupo taxonómico. Si alcanza altas densidades puede que desplace a las especies endémicas del género Dolichoiulus al competir por el espacio y los recursos. Sobre los recursos económicos asociados al uso del patrimonio natural: en Canarias no afecta a cultivos ni se tiene constancia de que provoque impactos sobre la economía. Sobre la salud humana: no resulta perjudicial para seres humanos, pero puede ser una importante molestia cuando invade casas y jardines cada otoño y primavera.
+
+**Vía de entrada** · Introducción accidental asociada al comercio y transporte de mercancías. Comercio de productos agrícolas y vegetación ornamental.
+
+## Campanilla azul — _Ipomoea indica_
+
+**Descripción** · Planta perenne lianoide, con tallos volubles, cubiertos de pelos cuando son jóvenes; a veces segregar una savia lechosa al romperse. Las hojas son verdes o verde olivo en el haz, más claras en el envés, alternas, pecioladas, de hasta 20 cm, con 3 lóbulos patentes (los basales algo separados), en forma de corazón o de flecha, a veces con pequeños dientecillos en el margen. Suelen ser suavemente pubescentes, sobre todo en el envés. Las flores son relativamente grandes, de 7 a 10 cm de diámetro y más de 5 cm de largo, y tienen los pétalos soldados en toda su longitud, agrupadas de 3 en 3, con la corola en forma de campanilla de color rosa, blanca, azul o violeta, muy vistosas. Nacen en las axilas de las hojas. Tienen 5 sépalos largos y estrechos. El cáliz es verde, lanceolado o cordado, con o sin pelos suaves. El fruto es una cápsula subglobosa con aspecto de papel, trilocular, que contiene 4-6 semillas de color marrón oscuro o negro, puberulentas.
+
+**Origen** · Zona tropical de Sudamérica.
+
+**Hábitat** · Setos y herbazales ruderalizados cercanos a la costa. Terrenos de cultivos y zonas verdes de origen antrópico. Zonas urbanizadas. Matorrales de medianías. Ambientes riparios de interior (riachuelos).
+
+**Impacto** · Sobre el hábitat: alteraciones en la estructura y abundancia relativa de especies nativas o endémicas, y en los patrones de la sucesión natural de la vegetación nativa. Sobre las especies: (1) Compite con las especies nativas disminuyendo su regeneración. (2) En algunos cauces fluviales de régimen torrencial (ramblas) cercanos al mar, puede contribuir al desplazamiento y eliminación de la vegetación riparia original, al invadir los taludes y trepar por los árboles y arbustos ahogándolos (Sanz-Elorza, 2004). Sobre los recursos económicos asociados al uso del patrimonio natural: forma un denso tapiz sobre el suelo, que puede convertirla en una especie que modifique las condiciones ambientales de una zona.
+
+**Vía de entrada** · Introducción intencional como especie ornamental. Expansión mediada por el hombre a través de restos de jardinería, maquinaria, etc.
+
+## Cochinilla de la humedad — _Armadillidium vulgare_
+
+**Descripción** · Es un isópodo de buen tamaño, llegando a alcanzar los 18 mm de longitud. Como el resto de las “cochinillas”, es de forma ovalada, moderadamente aplanada por su parte dorsal, con el cuerpo aproximadamente el doble de largo que de ancho. La mayoría de los individuos presentan una coloración gris oscuro no brillante (gris pizarra), aunque a veces puede presentar pigmentaciones marrones o rojizas. El escutelo es amplio, pero no se proyecta por encima de la cabeza. Presenta dos pares de antenas, aunque uno de ellos es casi inapreciable. El tórax se divide en 7 segmentos visibles, con siete pares de patas.
+
+**Origen** · Se distribuye por toda Europa, especialmente en la región del Mediterráneo.
+
+**Hábitat** · Arenales costeros, terrenos de cultivos y zonas verdes de origen antrópico, zonas de matorral xerofítico del piso basal, matorrales de ambientes montanos y de cumbre, pinares, bosques montanos húmedos, pastizales y herbazales de ambientes alterados, medio subterráneo e incluso zonas urbanizadas. En las zonas de laurisilva ocupa sobre todo las zonas abiertas donde existe más luz, disminuyendo su densidad en zonas más internas del bosque.
+
+**Impacto** · Sobre el hábitat - Alteraciones en la estructura de la vegetación, en la abundancia relativa de las especies y en los patrones de sucesión naturales de la vegetación nativa. Se trata de una especie con mucha plasticidad adaptativa y su presencia puede ser indicativo de la perturbación del hábitat. Sobre las especies - Potencialmente puede afectar a especies endémicas de isópodos por competencia por el espacio y los recursos. No es una especie agresiva. Sobre los recursos económicos asociados al uso del patrimonio natural - A. vulgare se ha convertido en plaga de cultivos en siembra directa en otras regiones del planeta, principalmente en los cultivos de soja, colza y girasol. En canarias no se tiene constancia de que provoque impactos sobre la economía Sobre la salud humana - No existen impactos sobre la salud humana.
+
+**Vía de entrada** · Introducción accidental asociada a la agricultura. Tierras contaminadas con huevos, larvas o adultos de esta especie.
+
+## Valeriana roja — _Centranthus ruber_
+
+**Descripción** · Hemicriptófito. Herbácea perenne de 30 a 80 cm. glabra. Tallos erectos simples o ramificados, lisos. Hojas ovales o elípticolanceolada de 8 a 12 cm. de largo y de 2 a 4 de ancho, enteras o un poco dentada, opuestas. Las inferiores pecioladas y las superiores sésiles. Flores muy numerosas, rojas o blancas con espolón, dispuestas en corimbos apretados que se alargan en panícula tricótoma. Fruto en aquenio glabro.
+
+**Origen** · Cuenca mediterránea
+
+**Hábitat** · Terrenos de cultivos y zonas verdes de origen antrópico. Zonas urbanizadas. Matorrales de medianías. Zonas de matorral xerofítico del piso basal. Pastizales y herbazales de ambientes alterados. Bosques montanos húmedos (brezales y fayal-brezales arbustivos, monteverde arbóreo mesofítico), vegetación en campos de lavas y hábitats rupícolas húmedos en dominio del monteverde o el pinar. - Preferiblemente se desarrolla en lugares bien soleados, aunque también acepta lugares en semisombra. Resiste de forma moderada el frío. Soporta periodos de sequía aunque en Canarias se desarrolla mejor en ambientes húmedos.
+
+**Impacto** · Sobre el hábitat: alteraciones en la estructura y abundancia relativa de especies nativas o endémicas y en los patrones de sucesión natural de la vegetación nativa. Se encuentra entre las 20 especies de plantas invasoras más extendidas en la Gomera (25.75 Km2) y Lanzarote (48 Km2) según el análisis de presencia en cuadrículas de 500 x 500 m elaborado para las plantas introducidas con carácter invasor en Canarias (Martín Esquivel, 2010) Sobre las especies: competencia, reducción o alteración por el espacio o los recursos. Impiden o dificultan regeneración de especies endémicas o nativas. Facilitan el desarrollo de otras especies invasoras.
+
+**Vía de entrada** · —
+
+## Leucaena — _Leucaena leucocephala_
+
+**Descripción** · Arbusto o pequeño árbol de 2 a 6 metros de altura, con el tronco leñoso de corteza gris-marrón con fisuras verticales superficiales de color óxido; las ramas jóvenes son pubescentes, y se vuelven glabras con la edad. Las estípulas son triangulares, diminutas y caducas. Las hojas son bipinnadas, con 4-9 pares de pinnas por hoja y 13-21 pares de foliolos por pinna agudos, oblogo-lanceolados, simétricos, que se cierran unos contra otros en ausencia de luz. Tienen glándulas (translúcidas y luego negruzcas) en la base de los raquis secundarios, con el peciolo de unos 5 cm y la hoja de hasta 15 cm. Las flores son de color crema o blanquecino y tornan al rosa salmón al marchitarse; los estambres sobresalen de la corola. Tienen el cáliz pentámero de unos 3 mm y los pétalos de unos 5 mm y pubescentes por el exterior. Se reúnen (100-180 flores por cabeza) en glomérulos globosos compactos en las axilas de las hojas, de 2-3 cm de diámetro, sobre pedúnculos de 4 cm. Los frutos son legumbres rectas y aplanadas, coriáceas, pardas, con un pedicelo pubescente, dehiscentes por 2 suturas longitudinales, de color marrón, y se disponen en racimos de 5 a 20 legumbres por flor. Las semillas, de 6 a 30, se disponen transversalmente y son marrones o negruzcas, brillantes, y con una clara línea fisural ovalada en el tegumento.
+
+**Origen** · Especie originaria de México y América Central.
+
+**Hábitat** · Sobre todo crece en zonas bajas en el dominio de los matorrales xerófilos del piso basal, pero en situaciones con algo de humedad edáfica, en bordes y en la proximidad de cauces de barrancos. Aunque prospera mejor con pluviometrías superiores a 800 mm anuales, existen numerosas variedades y cultivares que se adaptan a condiciones más xéricas.
+
+**Impacto** · Sobre el hábitat: en la actualidad el impacto sobre hábitats naturales es escaso. Puede llegar a competir con algunas especies de los matorrales de los cauces. Sobre las especies: competencia, reducción o alteración por el espacio o los recursos.
+
+**Vía de entrada** · Introducción intencional como especie ornamental y forrajera. Se dispersa por medios propios a partir de cultivos, cayendo las semillas por gravedad o arrastradas por el agua, por insectos o por roedores.
+
+## Chumbera — _Opuntia maxima_
+
+**Descripción** · Arbusto suculento con un tronco bien desarrollado, de hasta 6 metros de alto, con los tallos transformados en cladodios (palas) carnosos de 30-50 cm, suculentos, estrechamente obovados u oblongos, aplanados, verde-grisáceos. Aréolas evidentes dispersas por las palas, con numerosos gloquidios (pequeñas espinas con ganchitos en su extremo) y espinas; las espinas varían en densidad (de 0 a 6) y en tamaño (de 2 a 40 mm), y son delgadas, rectas y blanquecinas. Las flores son de color amarillo o naranja brillante, grandes, de 5-10 cm de diámetro. Los frutos son pseudo-bayas en forma de tonel, verdes, naranjas o rojos, provistos de gloquidias y a veces de espinas, de 6 a 10 cm de largo, profundamente umbilicados en el ápice (son los higos chumbos), con la pulpa anaranjada comestible. Las semillas, abundantes.
+
+**Origen** · América tropical, desde México hasta Colombia. Algunos autores restringen su área de origen exclusivamente a México.
+
+**Hábitat** · Resiste muy bien la sequía y los fuertes vientos marítimos. Puede soportar temperaturas de hasta -12 ºC en condiciones de baja humedad atmosférica relativa, siempre y cuando no sean prolongadas. Necesita iluminaciones intensas. No tolera los suelos hidromorfos o mal drenados. No tiene capacidad de rebrotar después de un incendio. En Canarias ocupa matorrales de medianías. Terrenos de cultivos y zonas verdes de origen antrópico. Zonas de matorral xerofítico del piso basal. Bosques de Juniperus spp. (sabinares). Eriales y matorrales desérticos. Zonas urbanizadas. Coladas volcánicas recientes y subrecientes con escasa vegetación.
+
+**Impacto** · Sobre el hábitat: alteraciones en la estructura y abundancia relativa de especies nativas o endémicas, y en los patrones de la sucesión natural de la vegetación nativa. También puede llegar a provocar alteraciones en el régimen hidrológico, dinámica de nutrientes y minerales, disponibilidad de luz, cambios de salinidad o de pH, etc. Sobre las especies: en zonas áridas y cálidas compite ventajosamente con la vegetación autóctona, desplazándola o impidiendo su regeneración. En nuestro país se encuentra muy extendida por el sur y en la costa mediterránea, generalmente en ambientes sometidos a intensa influencia antropozoógena. No obstante, en las inmediaciones del Parque Nacional de Doñana, la hemos visto invadiendo pinares de Pinus pinea L. y matorrales de Pistacia lentiscus L. En las islas es especialmente urgente su eliminación dada la enorme fragilidad de los ecosistemas insulares.
+
+**Vía de entrada** · Introducción intencional para su cultivo agrícola, con fines ornamentales y para la formación de setos. Dispersión de las semillas por endozoocoria; los restos de podas de las palas tienen la capacidad de enraizar.
+
+## Ibis sagrado — _Threskiornis aethiopicus_
+
+**Descripción** · Ave de buen tamaño, con una longitud de 65 a 89 cm, una envergadura de 112-124 cm y un peso de aproximadamente 1,5 kg. Las hembras son algo más pequeñas que los machos. El plumaje del cuerpo es muy blanco, contrastando con la cabeza y cuello que son negros y sin plumas. El pico es largo, muy curvado hacia abajo, ancho en la base y de color negro. La punta de las plumas primarias y secundarias de las alas es negra. La cola es corta, y en el dorso cuelga una falsa cola formada por unas largas plumas ornamentales negras. Las patas son negras con tintes rojizos. Los jóvenes carecen de las plumas ornamentales negras, y tienen la garganta y la parte anterior del cuello de color blanco.
+
+**Origen** · Originaria de la región africana subsahariana, distribuyéndose por países africanos al sur del Sahara, Madagascar, sur de Irak e isla de Aldabra.
+
+**Hábitat** · Presente en zonas costeras, humedales de interior, en pastizales y praderas húmedas, en áreas de turberas, cultivos de regadío.
+
+**Impacto** · Sobre las especies: (1) Depredación sobre distintas especies amenazadas, principalmente insectos y anfibios de medios acuáticos, y sobre aves reproductoras de medios acuáticos (principalmente colonias de ardeidas y charranes). (2) Competencia posible por recursos tróficos y lugares de reproducción con otras especies de aves ciconiformes, principalmente garzas. (3) Afección a la vegetación natural existente en las colonias de cría. Sobre los recursos económicos asociados al uso del patrimonio natural: (1) Modificación del hábitat por abundancia elevada de individuos (colonias de cría, dormideros), por el aumento de la eutrofización en humedales. (2) Posible afección a zonas de aprovechamiento de salinas. (3) Riesgos de colisión con aeronaves en las inmediaciones de aeropuertos.
+
+**Vía de entrada** · Introducción intencional como especie ornamental/de exhibición. Escapes de ejemplares mantenidos en cautividad en parques zoológicos.
+
+## Uña de gato — _Carpobrotus edulis_
+
+**Descripción** · Es una planta reptante, con tallos largos muy ramificados, sub-cilíndricos, de hasta 3 metros y cortas ramas, dispuestos formando grandes esteras, a veces con raíces en los nudos. Las hojas son suculentas, sésiles, opuestas, de sección triangular, ligeramente adnatas en la base, cerosas, de color verde brillante o ligeramente glauco, a menudo teñidas de rojo a lo largo de los bordes. Las superficies lateral y adaxial son claramente cóncavas; la quilla está denticulada (a veces sólo en la parte superior). Miden de 4-10 cm de largo 1-1,6 cm de ancho. Las flores son de color amarillo, rosado o púrpura, de 4-9 cm de diámetro, con 5 tépalos, 3 externos (miden de 2 a 4,5 cm, oblongos) y 2 internos (más pequeños y con el margen escarioso). Los “pétalos” (estaminodios petaloideos) son lineares o lanceolados, dispuestos en 3-4 verticilos. Los pedúnculos miden de 1 a 5 cm de largo. Tienen numerosos estambres amarillentos. El fruto es una drupa carnosa, subglobosa, de color amarillento, indehiscente. Las semillas, de 1-1,5 mm, son de color marrón oscuro, obovoides, ligeramente comprimidas, finamente reticuladas y rodeadas de mucílago.
+
+**Origen** · Sudáfrica (El Cabo).
+
+**Hábitat** · Zonas urbanizadas. Terrenos de cultivos y zonas verdes de origen antrópico. Franja litoral halófila. Acantilados costeros.
+
+**Impacto** · Sobre el hábitat: (1) Alteraciones en la estructura y abundancia relativa de especies nativas o endémicas, y en los patrones de sucesión natural de la vegetación nativa. (2) En España invade algunas áreas del Parque Nacional de las islas Atlánticas, de las costas de Asturias y Cantabria, de la Costa Brava, de la isla de Menorca, de Mallorca, del Parque Natural del Delta del Ebro, de las costas de Castellón, de Alicante y del litoral andaluz (Marismas del río Palmones, Conil de la Frontera, Parque Nacional de Doñana) (Sanz-Elorza et al, 2004). (3) Produce un efecto de concentración y acumulación de sales en el suelo disminuyendo la disponibilidad de nutrientes y alterando el pH del substrato (Sanz-Elorza et al, 2004). Sobre las especies: (1) Dificulta la regeneración de especies nativas. (2) Facilita el desarrollo de otras especies invasoras.
+
+**Vía de entrada** · Introducción intencional como especie ornamental. Restos de jardinería. Las semillas se pueden dispersar en los excrementos de animales (conejos, roedores, etc.). Las aves no consumen las semillas pero ayudan en su dispersión tomando fragmentos vegetativos como material de nidificación (principalmente las gaviotas).
+

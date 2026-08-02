@@ -37,6 +37,9 @@ if (!PARK) { console.error('Uso: --park <slug> [--dry] [--merged <ruta>]'); proc
 const NOMBRES = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'hic-nombres.json'), 'utf8')).codigos;
 // Tipos que no se adoptan: lo que está bajo el agua no se explora a pie.
 const TIPOS_EXCLUIDOS = new Set(['Marino']);
+// Excepciones por parque: códigos que la cartografía oficial recorta dentro del espacio pero que su
+// formulario normalizado Natura 2000 no declara (ver el _nota del fichero para la regla de alta).
+const EXCLUIDOS_PARQUE = (JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'hic-excluidos.json'), 'utf8')).parques || {})[PARK] || {};
 
 // Campos de park.json que son CURADOS: se conservan tal cual si ya existían.
 const CURADOS = ['description', 'coordinates', 'color', 'image', 'audio', 'audioTranscript', 'reviewNote', 'speciesIds'];
@@ -92,12 +95,17 @@ function main() {
     const code = String(f.properties.code || '');
     const tipo = (NOMBRES[code] && NOMBRES[code].type) || f.properties.type;
     if (TIPOS_EXCLUIDOS.has(tipo)) { excluidos.push(`${code} ${f.properties.name} (tipo ${tipo})`); continue; }
+    if (EXCLUIDOS_PARQUE[code]) { excluidos.push(`${code} ${f.properties.name} — ${EXCLUIDOS_PARQUE[code]}`); continue; }
     aceptados.push(f);
   }
   if (excluidos.length) {
-    console.log('\nExcluidos por la regla de producto (la app no es útil en el mar):');
+    console.log('\nExcluidos (regla de producto marina + excepciones de hic-excluidos.json):');
     excluidos.forEach(e => console.log(`  · ${e}`));
   }
+  // Un código sin ficha en hic-nombres.json entra con nombre 'HIC <código>' y tipo 'Hábitat', y con
+  // ese tipo se salta el filtro marino. Se avisa para que se decida antes de publicarlo.
+  const sinFicha = aceptados.filter(f => !NOMBRES[String(f.properties.code || '')]).map(f => f.properties.code);
+  if (sinFicha.length) console.log(`\n⚠ códigos sin ficha en hic-nombres.json (nombre y tipo son un apaño, revísalos): ${sinFicha.join(', ')}`);
 
   // 2) Sincronizar el array `habitats` --------------------------------------------------------------
   const habitats = [], nuevos = [], actualizados = [];

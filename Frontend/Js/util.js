@@ -95,6 +95,10 @@ export function kingdomEmoji(species) {
   if (group.includes('ave')) return '🐦';
   if (group.includes('reptil')) return '🦎';
   if (group.includes('anfibio')) return '🐸';
+  // «Murciélago» y «Roedor» no contienen «mam»: sin estas dos líneas caían al emoji genérico de
+  // concha, que para un quiróptero no dice nada.
+  if (group.includes('murciélago') || group.includes('quiróptero')) return '🦇';
+  if (group.includes('roedor')) return '🐿️';
   if (group.includes('mam')) return '🐾';
   return '🐚';
 }
@@ -141,6 +145,37 @@ export function habitatPlaceholderImage(habitat) {
 
 export function habitatImageSrc(habitat) {
   return habitat.image && habitat.image.trim() ? habitat.image : habitatPlaceholderImage(habitat);
+}
+
+// --- Especies invasoras: emoji e imagen-placeholder ---------------------------------------------
+// El catálogo de invasoras es nacional y no comparte forma con `species` (no tiene `kingdom` fauna/
+// flora fiable ni `id`), así que tiene sus propios helpers. La convención es la misma que en el
+// resto del catálogo: si hay foto se muestra la foto, y si no, una portada generada con el emoji
+// del grupo — nunca un hueco vacío.
+export function invasoraEmoji(group) {
+  const g = normalize(group);
+  if (g.includes('ave')) return '🐦';
+  if (g.includes('mamíf') || g.includes('mamif')) return '🦔';
+  if (g.includes('invertebrad') || g.includes('molusc') || g.includes('artróp')) return '🐛';
+  if (g.includes('reptil') || g.includes('anfib')) return '🦎';
+  if (g.includes('pez') || g.includes('peces')) return '🐟';
+  return '🌿';
+}
+
+export function invasoraPlaceholderImage(invasora) {
+  const svg = '<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">'
+    + '<rect width="100%" height="100%" fill="#f7e8e3"/>'
+    + '<text x="50%" y="55%" font-size="76" text-anchor="middle" dominant-baseline="middle">'
+    + invasoraEmoji(invasora && invasora.group) + '</text>'
+    + '</svg>';
+  return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+}
+
+// Las fichas antiguas guardaban rutas locales (`Img/invasoras/<slug>.jpg`) que nunca existieron;
+// solo se acepta una URL absoluta para evitar volver a pedir un fichero que no está.
+export function invasoraImageSrc(invasora) {
+  const src = invasora && invasora.image ? String(invasora.image).trim() : '';
+  return /^https?:/i.test(src) ? src : invasoraPlaceholderImage(invasora);
 }
 
 // --- Puntos de interés: emoji e imagen-placeholder ----------------------------------------------

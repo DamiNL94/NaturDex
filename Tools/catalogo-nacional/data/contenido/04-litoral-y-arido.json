@@ -1,0 +1,420 @@
+{
+  "Allium melananthum": {
+    "group": "Planta bulbosa",
+    "habitat": "Espartales, pastizales secos y claros de matorral sobre suelos margosos",
+    "seasonality": "Primavera",
+    "description": "Ajo silvestre de flores de un púrpura tan oscuro que parece negro, agrupadas en una umbela apretada al final de un tallo largo y desnudo. Es un endemismo del sureste ibérico, de área muy reducida, que pasa el verano bajo tierra en forma de bulbo.",
+    "tips": [
+      "Flores de púrpura casi negro, muy oscuras",
+      "Umbela compacta sobre un tallo largo y liso",
+      "Huele a ajo al estrujar las hojas o el bulbo"
+    ]
+  },
+  "Centaurium rigualii": {
+    "group": "Hierba",
+    "habitat": "Bordes de saladar, suelos margosos húmedos y depresiones con algo de sal",
+    "seasonality": "Primavera",
+    "description": "Pequeña hierba anual de la familia de las gencianas, con flores rosadas de cinco pétalos abiertas en estrella. Es un endemismo muy localizado del sureste peninsular, ligado a suelos húmedos y algo salinos, un ambiente escaso y fácil de destruir.",
+    "tips": [
+      "Flores rosas de cinco pétalos, abiertas al sol",
+      "Planta anual y menuda, de pocos centímetros",
+      "Hojas opuestas en pares a lo largo del tallo"
+    ]
+  },
+  "Salsola papillosa": {
+    "group": "Mata",
+    "habitat": "Estepas salinas y suelos margosos y yesosos con sal",
+    "seasonality": "Verano y otoño",
+    "description": "Mata baja y densa de hojas cortas y carnosas cubiertas de pequeñas papilas que le dan un tacto áspero. Es un endemismo ibérico ligado a suelos salinos y margosos, con una distribución muy fragmentada, lo que la hace especialmente sensible a la roturación.",
+    "tips": [
+      "Superficie de las hojas rugosa, con papilas visibles de cerca",
+      "Mata compacta y grisácea, de porte bajo",
+      "Frutos con alas membranosas al madurar"
+    ]
+  },
+  "Olea europaea var. sylvestris": {
+    "group": "Árbol",
+    "habitat": "Matorral alto, laderas secas y barrancos del piso más cálido",
+    "seasonality": "Todo el año",
+    "description": "El acebuche es el olivo silvestre: mismo árbol, sin siglos de selección. Tiene las hojas más pequeñas y duras, las ramas jóvenes a menudo espinosas y aceitunas diminutas. Forma matorrales altos y es el árbol característico de las laderas cálidas mediterráneas.",
+    "tips": [
+      "Hojas pequeñas, verdes arriba y plateadas por debajo",
+      "Ramillas jóvenes rígidas y a veces espinosas",
+      "Aceitunas muy pequeñas, de poco más de un centímetro"
+    ]
+  },
+  "Lygeum spartum": {
+    "group": "Gramínea",
+    "habitat": "Estepas salinas, margas y suelos yesosos secos; forma albardinales",
+    "seasonality": "Todo el año (espigado en primavera)",
+    "description": "Gramínea perenne de hojas duras y punzantes que forma matas separadas sobre suelos salinos y margosos donde poco más prospera. Su inflorescencia es inconfundible: una espata blanca y sedosa que envuelve las flores como un capuchón de papel.",
+    "tips": [
+      "Espata blanca y sedosa envolviendo la espiga",
+      "Hojas rígidas terminadas en punta punzante",
+      "Matas espaciadas sobre suelo desnudo y claro"
+    ]
+  },
+  "Burhinus oedicnemus": {
+    "group": "Ave esteparia",
+    "habitat": "Llanos pedregosos, cultivos de secano, ramblas y eriales con poca cobertura",
+    "seasonality": "Todo el año",
+    "description": "Ave de aspecto extraño y ojos amarillos enormes, adaptados a la actividad nocturna. De día permanece agachada e inmóvil, confiada en su plumaje críptico, y solo al anochecer se activa y delata con un reclamo silbado y melancólico que recuerda al del zarapito.",
+    "tips": [
+      "Ojos amarillos desproporcionadamente grandes",
+      "Dos barras blancas y negras en el ala plegada",
+      "Reclamo silbado y triste al anochecer"
+    ]
+  },
+  "Lavandula multifida": {
+    "group": "Mata aromática",
+    "habitat": "Matorral seco, ribazos y bordes soleados de clima cálido",
+    "seasonality": "Casi todo el año, con máximo en primavera y otoño",
+    "description": "Alhucema de hojas muy divididas, casi como las de un helecho, y aspecto grisáceo. Florece durante buena parte del año en espigas azul violeta rematadas por dos brácteas alargadas. Su olor es más resinoso y menos dulce que el del espliego cultivado.",
+    "tips": [
+      "Hojas finamente divididas, de aspecto plumoso",
+      "Espigas azul violeta con dos brácteas en la punta",
+      "Aroma resinoso e intenso al frotar"
+    ]
+  },
+  "Anabasis hispanica": {
+    "group": "Planta suculenta",
+    "habitat": "Suelos salinos y margosos áridos, estepas y ramblas de clima muy seco",
+    "seasonality": "Verano y otoño",
+    "description": "Mata de tallos verdes, carnosos y articulados, sin hojas visibles, muy parecida a las sosas de saladar pero de porte más rígido y ramificado. Es una planta iberoafricana que en la península solo vive en los enclaves más áridos del sureste.",
+    "tips": [
+      "Tallos articulados y suculentos, sin hojas",
+      "Porte rígido y muy ramificado desde la base",
+      "En los suelos más áridos y salinos, casi desnudos"
+    ]
+  },
+  "Maytenus senegalensis subsp. europaea": {
+    "group": "Arbusto",
+    "habitat": "Matorral árido de clima muy cálido, ramblas y glacis pedregosos",
+    "seasonality": "Todo el año",
+    "description": "Arbusto denso y espinoso de origen tropical africano, superviviente de climas más cálidos que el actual, que en Europa solo pervive en el extremo sureste ibérico. Sus ramas verdes acaban en pincho y sus hojas, algo carnosas, caen en los veranos más duros.",
+    "tips": [
+      "Ramas verdes rematadas en espina fuerte",
+      "Hojas algo carnosas de borde finamente dentado",
+      "Porte redondeado y muy denso, difícil de atravesar"
+    ]
+  },
+  "Osyris lanceolata": {
+    "group": "Arbusto",
+    "habitat": "Matorral alto, sabinares y laderas secas sobre suelo pedregoso",
+    "seasonality": "Todo el año",
+    "description": "Arbusto de ramas verdes y erguidas con hojas estrechas y coriáceas. Es hemiparásito: fabrica su propio alimento pero además conecta sus raíces a las de otras plantas para robarles agua y sales. Sus frutos son bayas rojas o anaranjadas muy vistosas.",
+    "tips": [
+      "Ramas verdes y erectas, de aspecto escobiforme",
+      "Bayas rojo anaranjado brillantes al madurar",
+      "Hojas estrechas, duras y de punta aguda"
+    ]
+  },
+  "Bubo bubo": {
+    "group": "Ave rapaz nocturna",
+    "habitat": "Cortados rocosos, barrancos y laderas con matorral y zonas abiertas de caza",
+    "seasonality": "Todo el año",
+    "description": "El mayor búho de Europa, con casi dos metros de envergadura, penachos de plumas erguidos sobre la cabeza y ojos de un naranja encendido. Caza conejos, ratas e incluso otras rapaces. Su canto es un «bu-bo» profundo que se propaga kilómetros por los barrancos en las noches de invierno.",
+    "tips": [
+      "Penachos de plumas erguidos a los lados de la cabeza",
+      "Ojos naranjas muy intensos",
+      "Canto grave y profundo en las noches de invierno"
+    ]
+  },
+  "Lycium intricatum": {
+    "group": "Arbusto",
+    "habitat": "Matorral costero y suelos salinos y nitrificados de clima cálido",
+    "seasonality": "Todo el año",
+    "description": "Arbusto de ramas enmarañadas y espinosas, con hojitas carnosas agrupadas en manojos. Sus flores son pequeñas, tubulares y de color violeta pálido, y da bayas rojas que comen muchas aves. Forma setos impenetrables que dan refugio a pájaros y reptiles.",
+    "tips": [
+      "Ramas enredadas entre sí y terminadas en espina",
+      "Hojas carnosas en manojitos a lo largo de la rama",
+      "Bayas rojas pequeñas y flores tubulares violáceas"
+    ]
+  },
+  "Sternula albifrons": {
+    "group": "Ave marina",
+    "habitat": "Playas de arena y grava, salinas y lagunas costeras",
+    "seasonality": "Primavera y verano (estival)",
+    "description": "El más pequeño de los charranes europeos, con la frente blanca y el pico amarillo de punta negra. Cría directamente sobre la arena o la grava, en nidos que son poco más que un hoyo, lo que lo hace muy sensible al tránsito de personas en las playas.",
+    "tips": [
+      "Frente blanca que contrasta con el capirote negro",
+      "Pico amarillo con la punta negra",
+      "Se ciñe sobre el agua antes de zambullirse en picado"
+    ]
+  },
+  "Charadrius alexandrinus": {
+    "group": "Ave limícola",
+    "habitat": "Playas, salinas, marismas y llanos arenosos junto al mar",
+    "seasonality": "Todo el año, con máximos en primavera y verano",
+    "description": "Chorlitejo pequeño y pálido, de patas oscuras, que corretea por la arena en carreras cortas seguidas de paradas bruscas. Su nido es una simple depresión en la arena con los huevos perfectamente camuflados, por lo que las puestas se pierden con facilidad bajo el pisoteo.",
+    "tips": [
+      "Collar oscuro interrumpido en el centro del pecho",
+      "Corre a ratos y se para en seco, una y otra vez",
+      "Plumaje muy pálido, del color de la arena seca"
+    ]
+  },
+  "Galerida theklae": {
+    "group": "Ave",
+    "habitat": "Matorral bajo, laderas pedregosas y eriales con vegetación rala",
+    "seasonality": "Todo el año",
+    "description": "Cogujada de cresta puntiaguda, muy parecida a la común pero de pico más corto y grueso y con el pecho más nítidamente rayado. Prefiere el matorral y las laderas pedregosas, mientras que la común busca cultivos, caminos y bordes de pueblo.",
+    "tips": [
+      "Cresta alta y afilada, casi triangular",
+      "Pico más corto y romo que el de la cogujada común",
+      "Rayado del pecho bien definido, no difuminado"
+    ]
+  },
+  "Citrullus colocynthis": {
+    "group": "Hierba",
+    "habitat": "Ramblas, arenales y suelos removidos de clima árido",
+    "seasonality": "Verano y otoño",
+    "description": "Pariente silvestre de la sandía, de tallos rastreros y zarcillos, que extiende sus ramas por el suelo desnudo de ramblas y baldíos. Sus frutos son bolas del tamaño de una naranja, verdes jaspeadas al principio y amarillas al madurar, de pulpa amarguísima y tóxica.",
+    "tips": [
+      "Tallos tumbados por el suelo, con zarcillos",
+      "Frutos esféricos jaspeados que amarillean al madurar",
+      "Hojas profundamente lobuladas y ásperas"
+    ]
+  },
+  "Gulosus aristotelis": {
+    "group": "Ave marina",
+    "habitat": "Costas rocosas, acantilados e islotes; pesca buceando cerca de la orilla",
+    "seasonality": "Todo el año",
+    "description": "Cormorán marino de plumaje negro con reflejos verdosos, más esbelto que el grande y con la frente empinada. Bucea desde la superficie con un salto característico y persigue peces bajo el agua. Se seca con las alas abiertas sobre las rocas.",
+    "tips": [
+      "Salta hacia arriba antes de sumergirse",
+      "Frente muy empinada y pico fino",
+      "Se posa en roca con las alas abiertas al sol"
+    ]
+  },
+  "Periploca angustifolia": {
+    "group": "Arbusto",
+    "habitat": "Matorral cálido, laderas soleadas y barrancos de clima muy seco",
+    "seasonality": "Primavera y verano (floración)",
+    "description": "Arbusto de hojas estrechas y coriáceas y flores pequeñas con cinco pétalos de un pardo verdoso y aspecto aterciopelado. Sus frutos son dos vainas largas y curvas dispuestas en forma de cuerno, de donde le viene el nombre popular de cornical. Suelta látex al romperse.",
+    "tips": [
+      "Frutos en dos vainas curvas enfrentadas, como cuernos",
+      "Látex blanco al partir una hoja o rama",
+      "Flores pardo verdosas con aspecto de terciopelo"
+    ]
+  },
+  "Calidris alba": {
+    "group": "Ave limícola",
+    "habitat": "Playas de arena expuestas; también salinas y marismas costeras",
+    "seasonality": "Otoño e invierno",
+    "description": "Limícola pequeña y muy pálida que se ve casi siempre en la misma escena: corriendo tras la ola que se retira y huyendo de la siguiente, con las patas moviéndose a toda velocidad. En invierno es el más blanco de los correlimos, con una mancha negra en el hombro.",
+    "tips": [
+      "Corre persiguiendo el vaivén de las olas",
+      "Plumaje de invierno muy blanco y limpio",
+      "Mancha negra en el hombro y barra alar blanca en vuelo"
+    ]
+  },
+  "Curruca melanocephala": {
+    "group": "Ave",
+    "habitat": "Matorral mediterráneo denso, setos y bordes de arbolado",
+    "seasonality": "Todo el año",
+    "description": "La curruca más común del matorral mediterráneo. El macho tiene la cabeza negra hasta por debajo del ojo, la garganta blanca y un llamativo anillo ocular rojo. Es ruidosa y territorial: su reclamo de alarma es un traqueteo seco que delata su presencia constantemente.",
+    "tips": [
+      "Capucha negra que baja por debajo del ojo",
+      "Anillo ocular rojo intenso",
+      "Reclamo de alarma como una carraca seca"
+    ]
+  },
+  "Martes foina": {
+    "group": "Mamífero carnívoro",
+    "habitat": "Roquedos, bosques, ruinas y construcciones rurales",
+    "seasonality": "Todo el año (actividad nocturna)",
+    "description": "Mustélido nocturno de cuerpo alargado y cola espesa, con un babero blanco en la garganta que suele bifurcarse hacia las patas delanteras. Trepa con soltura y aprovecha desde roquedos hasta desvanes. Es omnívora: come frutos, insectos, huevos y pequeños vertebrados.",
+    "tips": [
+      "Babero blanco en la garganta, a menudo dividido en dos",
+      "Excrementos retorcidos y con pelos o semillas, sobre piedras",
+      "Rastro nocturno; muy rara vez se ve de día"
+    ]
+  },
+  "Felis silvestris": {
+    "group": "Mamífero carnívoro",
+    "habitat": "Bosque, matorral denso y roquedos con buena población de conejos y roedores",
+    "seasonality": "Todo el año (actividad crepuscular y nocturna)",
+    "description": "Gato salvaje europeo, más robusto que un gato doméstico atigrado, con la cola gruesa, roma en la punta y anillada de negro. Es solitario, esquivo y sobre todo nocturno. Su mayor amenaza es la hibridación con gatos asilvestrados, que diluye la población silvestre.",
+    "tips": [
+      "Cola gruesa, de punta roma y con anillos negros nítidos",
+      "Raya negra continua a lo largo del lomo",
+      "Aspecto más recio y patilargo que un gato casero"
+    ]
+  },
+  "Genetta genetta": {
+    "group": "Mamífero carnívoro",
+    "habitat": "Bosque, matorral denso, roquedos y sotos con cobertura y refugios",
+    "seasonality": "Todo el año (actividad nocturna)",
+    "description": "Carnívoro esbelto de pelaje gris con manchas negras y una cola larguísima anillada en blanco y negro, tan larga como el resto del cuerpo. Es un trepador excelente y estrictamente nocturno. Deja sus excrementos en letrinas fijas sobre piedras y troncos, que usa durante años.",
+    "tips": [
+      "Cola muy larga con anillos blancos y negros bien marcados",
+      "Pelaje gris con hileras de manchas negras",
+      "Letrinas repetidas en el mismo punto elevado"
+    ]
+  },
+  "Sus scrofa": {
+    "group": "Mamífero ungulado",
+    "habitat": "Bosque, matorral denso y cultivos; necesita cobertura y puntos de agua",
+    "seasonality": "Todo el año (actividad sobre todo nocturna)",
+    "description": "Ungulado robusto y adaptable, con el cuerpo cubierto de cerdas ásperas y una cabeza en cuña rematada por un hocico potente con el que remueve el suelo. Los rayones —las crías— nacen con líneas claras a lo largo del lomo. Es omnívoro y ha ampliado mucho su área en las últimas décadas.",
+    "tips": [
+      "Hozaduras: zonas de suelo removido como si lo hubieran arado",
+      "Huellas hendidas grandes con las pezuñas laterales marcadas",
+      "Barros y árboles con el tronco embarrado a media altura"
+    ]
+  },
+  "Leucanthemum decipiens": {
+    "group": "Hierba",
+    "habitat": "Fisuras y repisas de roquedos calizos, sobre todo en umbrías",
+    "seasonality": "Primavera",
+    "description": "Margarita rupícola de hojas carnosas y recortadas que crece agarrada a las grietas de la roca. Sus flores son las clásicas cabezuelas de centro amarillo y lígulas blancas. Es un endemismo del sureste ibérico y del norte de África, de área muy pequeña.",
+    "tips": [
+      "Crece en grietas de pared rocosa, no en el suelo",
+      "Hojas algo carnosas y recortadas en dientes",
+      "Cabezuelas blancas de centro amarillo, solitarias"
+    ]
+  },
+  "Chamaerops humilis": {
+    "group": "Palmera",
+    "habitat": "Matorral cálido, laderas soleadas y acantilados del piso termomediterráneo",
+    "seasonality": "Todo el año",
+    "description": "La única palmera silvestre de Europa continental. Suele crecer en mata, con varios troncos cortos, aunque con los años puede levantar un tronco único. Sus hojas son abanicos rígidos con pecíolos muy espinosos. Del cogollo se sacaba el «palmito», y de las hojas, cordelería y escobas.",
+    "tips": [
+      "Hojas en abanico, rígidas y divididas en segmentos",
+      "Pecíolos con espinas fuertes en los bordes",
+      "Porte en mata, con varios troncos desde la base"
+    ]
+  },
+  "Alectoris rufa": {
+    "group": "Ave",
+    "habitat": "Mosaicos de cultivo, matorral bajo y laderas pedregosas",
+    "seasonality": "Todo el año",
+    "description": "Perdiz de patas y pico rojos, con un collar negro que se deshace en un salpicado de motas sobre el pecho y flancos barrados en blanco, negro y castaño. Prefiere correr a volar, y cuando por fin levanta lo hace de golpe y a ras de suelo, planeando ladera abajo.",
+    "tips": [
+      "Flancos con barras nítidas blancas, negras y castañas",
+      "Collar negro que se disgrega en motas sobre el pecho",
+      "Corre agachada antes que volar; levanta de golpe y planea"
+    ]
+  },
+  "Pinus halepensis": {
+    "group": "Conífera",
+    "habitat": "Laderas secas y soleadas sobre calizas y margas, en clima mediterráneo cálido",
+    "seasonality": "Todo el año",
+    "description": "Pino de copa clara e irregular y follaje de un verde pálido, el más resistente a la sequía y a los suelos pobres de los pinos ibéricos. Sus piñas, alargadas y asimétricas, quedan colgadas años en la rama y liberan las semillas tras los incendios, lo que le permite recolonizar rápido.",
+    "tips": [
+      "Copa irregular y poco densa, de verde claro",
+      "Piñas asimétricas y persistentes, apuntando hacia atrás",
+      "Corteza clara y agrietada, rojiza en las ramas jóvenes"
+    ]
+  },
+  "Juniperus phoenicea": {
+    "group": "Conífera",
+    "habitat": "Roquedos, arenales, acantilados y crestas ventosas sobre suelos pobres",
+    "seasonality": "Todo el año",
+    "description": "Sabina de hojas diminutas en forma de escama, pegadas a la ramilla, que dan a las ramas un aspecto de cordón redondeado. Aguanta viento, sequía y salinidad como pocas plantas leñosas. Sus gálbulos —los falsos frutos— maduran de verde a un rojo pardusco en dos años.",
+    "tips": [
+      "Hojas en escama pegadas a la rama, no punzantes",
+      "Ramillas cilíndricas, como cordones",
+      "Gálbulos redondos que pasan de verde a pardo rojizo"
+    ]
+  },
+  "Senecio flavus": {
+    "group": "Hierba",
+    "habitat": "Ramblas, arenales y suelos removidos de clima árido",
+    "seasonality": "Primavera",
+    "description": "Hierba anual de hojas carnosas y algo azuladas, con cabezuelas amarillas cuyas lígulas se enrollan hacia atrás al abrirse. Es una planta de estirpe sahariana que en Europa solo aparece en los rincones más áridos del sureste ibérico, tras las lluvias.",
+    "tips": [
+      "Lígulas amarillas enrolladas hacia atrás",
+      "Hojas carnosas y de verde azulado",
+      "Aparece en masa tras las lluvias y desaparece pronto"
+    ]
+  },
+  "Limonium cossonianum": {
+    "group": "Hierba",
+    "habitat": "Saladares, acantilados costeros y suelos salinos margosos",
+    "seasonality": "Verano",
+    "description": "Siempreviva de roseta basal de hojas espatuladas y tallos ramificados que sostienen espiguillas de flores diminutas de color lila. Los cálices secos y papiráceos permanecen en la planta hasta el invierno siguiente, dando al saladar un tono pajizo persistente.",
+    "tips": [
+      "Roseta basal de hojas anchas y espatuladas",
+      "Ramificación en zigzag, muy abierta",
+      "Cálices secos que persisten meses tras florecer"
+    ]
+  },
+  "Limonium insigne": {
+    "group": "Hierba",
+    "habitat": "Suelos margosos y yesosos salinos, en estepas y taludes áridos",
+    "seasonality": "Final de primavera y verano",
+    "description": "Una de las siemprevivas más vistosas: sus inflorescencias forman un ramillete denso de un lila rosado intenso que destaca sobre el gris de las margas. Es un endemismo del sureste ibérico, ligado a suelos salinos y yesosos, y muy usado en seco como flor ornamental.",
+    "tips": [
+      "Floración densa y de lila rosado vivo, muy llamativa",
+      "Hojas en roseta basal, gruesas y de borde ondulado",
+      "Sobre margas y yesos claros, en terreno casi desnudo"
+    ]
+  },
+  "Meles meles": {
+    "group": "Mamífero carnívoro",
+    "habitat": "Bosque, matorral y ribazos con suelo blando para excavar tejoneras",
+    "seasonality": "Todo el año (actividad nocturna)",
+    "description": "Mustélido corpulento y de patas cortas, con la cabeza blanca cruzada por dos bandas negras que pasan por los ojos. Excava madrigueras complejas —las tejoneras— que una misma familia amplía y usa durante generaciones. Es omnívoro y muy aficionado a las lombrices.",
+    "tips": [
+      "Cabeza blanca con dos franjas negras longitudinales",
+      "Tejoneras: varias bocas grandes con montones de tierra",
+      "Letrinas en hoyos poco profundos cerca de la madriguera"
+    ]
+  },
+  "Calandrella brachydactyla": {
+    "group": "Ave esteparia",
+    "habitat": "Llanos de cultivo, eriales y pastizales rasos con suelo desnudo",
+    "seasonality": "Primavera y verano (estival)",
+    "description": "Alondra pequeña y pálida de aspecto muy limpio, con el pecho sin apenas rayado salvo una mancha oscura a cada lado del cuello. Anida en el suelo, en cultivos y baldíos. En migración se agrupa en bandos que se levantan del suelo todos a la vez.",
+    "tips": [
+      "Mancha oscura a cada lado del cuello, como un botón",
+      "Pecho limpio, sin rayado extenso",
+      "Ceja clara y pico corto y grueso de granívora"
+    ]
+  },
+  "Alaudala rufescens": {
+    "group": "Ave esteparia",
+    "habitat": "Saladares, estepas salinas, eriales y llanos áridos con vegetación rala",
+    "seasonality": "Todo el año",
+    "description": "La alondra más pequeña de Europa, de plumaje pardo grisáceo y con el pecho finamente rayado de arriba abajo, sin las manchas laterales de su parienta. Vive ligada a los llanos más áridos y salinos, un hábitat en retroceso, y se camufla tan bien que suele verse solo al levantar el vuelo.",
+    "tips": [
+      "Rayado fino y extendido por todo el pecho",
+      "Muy pequeña y compacta, de aspecto grisáceo",
+      "Prefiere los llanos salinos y las estepas más áridas"
+    ]
+  },
+  "Thymus hyemalis": {
+    "group": "Mata aromática",
+    "habitat": "Tomillares y matorral raso sobre suelos calizos y margosos secos",
+    "seasonality": "Todo el año, con floración de invierno a primavera",
+    "description": "Tomillo del sureste ibérico que florece en pleno invierno, cuando casi nada más lo hace, cubriéndose de espigas de flores blancas o rosadas. Ese calendario lo convierte en un recurso decisivo para los insectos en la estación fría y en una planta melífera muy apreciada.",
+    "tips": [
+      "Florece en invierno, adelantándose al resto del tomillar",
+      "Hojas pequeñas con el borde enrollado hacia abajo",
+      "Aroma fuerte a tomillo al frotar entre los dedos"
+    ]
+  },
+  "Vulpes vulpes": {
+    "group": "Mamífero carnívoro",
+    "habitat": "Prácticamente cualquier ambiente: bosque, matorral, cultivos y periferias urbanas",
+    "seasonality": "Todo el año (actividad sobre todo nocturna)",
+    "description": "El carnívoro silvestre más adaptable y extendido: vive desde la alta montaña hasta el borde de las ciudades. Es omnívoro y oportunista, lo que explica su éxito. Se reconoce por la cola larga y espesa —la «hopa»— rematada casi siempre en blanco.",
+    "tips": [
+      "Cola muy espesa con la punta blanca",
+      "Huella alargada con las cuatro almohadillas alineadas",
+      "Excrementos retorcidos y con pelos, sobre piedras y caminos"
+    ]
+  },
+  "Halocnemum strobilaceum": {
+    "group": "Planta suculenta",
+    "habitat": "Saladares muy salinos con encharcamiento estacional",
+    "seasonality": "Verano y otoño",
+    "description": "Mata de tallos articulados y suculentos, con las ramas jóvenes agrupadas en apretados manojos que recuerdan a piñas diminutas, de donde le viene el nombre. Vive en los suelos más salinos del saladar, donde apenas compite con otras plantas.",
+    "tips": [
+      "Ramillas agrupadas en manojos con aspecto de piña",
+      "Tallos gruesos y articulados de color verde grisáceo",
+      "En las zonas más saladas y desnudas del saladar"
+    ]
+  }
+}

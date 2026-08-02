@@ -1,0 +1,620 @@
+{
+  "_comentario": [
+    "Varias fichas de este bloque traían un nombre común equivocado (Quercus ilex como «Alcornoque»,",
+    "Ulmus como «Álamo», Digitalis obscura como «Almez», Arctostaphylos como «Alcantarilla»…).",
+    "Se corrigen aquí: el nombre común es un campo universal y un nombre mal puesto convierte la",
+    "ficha en desinformación."
+  ],
+
+  "Frankenia corymbosa": {
+    "group": "Mata",
+    "habitat": "Estepas salinas, saladares y suelos margosos con sal",
+    "seasonality": "Primavera y verano",
+    "description": "Mata baja y muy ramificada, de hojas diminutas y enrolladas que a menudo aparecen cubiertas de una costra blanca: son cristales de sal que la planta expulsa por glándulas especializadas. Sus flores son rosadas y pequeñas, apiñadas en el extremo de las ramas.",
+    "tips": [
+      "Costra blanca de sal cristalizada sobre las hojas",
+      "Hojas minúsculas y enrolladas, casi como escamas",
+      "Flores rosadas pequeñas agrupadas en el extremo"
+    ]
+  },
+  "Saccharum ravennae": {
+    "group": "Gramínea",
+    "habitat": "Ramblas, cauces y suelos húmedos con capa freática cercana",
+    "seasonality": "Verano y otoño",
+    "description": "Gramínea gigante que levanta cañas de dos y tres metros rematadas por penachos plumosos plateados, muy vistosos al contraluz de finales de verano. Forma matas grandes en cauces y bordes de rambla, donde sujeta el sustrato.",
+    "tips": [
+      "Penachos plumosos plateados en lo alto de cañas altas",
+      "Forma matas grandes y densas, no céspedes",
+      "Hojas largas de borde muy áspero, cortante al pasar la mano"
+    ]
+  },
+  "Hyparrhenia hirta": {
+    "group": "Gramínea",
+    "habitat": "Laderas secas, ribazos y pastizales sobre suelos pedregosos",
+    "seasonality": "Verano y otoño",
+    "description": "Gramínea perenne que forma matas y espiga en verano, cuando el resto del pastizal ya está agostado. Sus espiguillas van por parejas, cubiertas de pelos rojizos y con aristas retorcidas. Da al paisaje un tono dorado rojizo a final de verano.",
+    "tips": [
+      "Espiguillas peludas agrupadas por parejas",
+      "Aristas retorcidas y acodadas",
+      "Espiga en verano, cuando lo demás está seco"
+    ]
+  },
+  "Brachypodium retusum": {
+    "group": "Gramínea",
+    "habitat": "Pastizales, claros de matorral y ribazos sobre suelos calizos",
+    "seasonality": "Primavera",
+    "description": "Gramínea perenne y rizomatosa que forma céspedes extensos en los claros del matorral mediterráneo. Sus hojas son cortas, rígidas y de punta roma. Es de las plantas que más rápido rebrota tras un incendio, gracias a sus rizomas subterráneos.",
+    "tips": [
+      "Céspedes extensos y bajos, no matas aisladas",
+      "Hojas cortas y rígidas, de punta redondeada",
+      "Espiguillas alineadas a un lado de un eje rígido"
+    ]
+  },
+  "Genista cinerea": {
+    "group": "Arbusto",
+    "habitat": "Matorral y laderas soleadas de montaña media, sobre suelos calizos",
+    "seasonality": "Primavera y principio de verano",
+    "description": "Retama de ramas finas, sedosas y de un verde grisáceo, sin espinas, que en floración se cubre de flores amarillas fragantes. Sus hojas son diminutas y caen pronto: la fotosíntesis la hacen los tallos.",
+    "tips": [
+      "Ramas finas y flexibles, sin espinas",
+      "Aspecto grisáceo por los pelos sedosos de las ramillas",
+      "Floración amarilla abundante y perfumada"
+    ]
+  },
+  "Genista longipes": {
+    "group": "Arbusto",
+    "habitat": "Crestas, pedregales y matorral almohadillado de montaña",
+    "seasonality": "Primavera",
+    "description": "Genista espinosa que forma cojines densos y bajos, adaptados al viento y al frío de las cumbres. Sus flores amarillas salen sobre pedúnculos largos, un rasgo que le da el nombre. Es un endemismo del sureste ibérico.",
+    "tips": [
+      "Cojín compacto y espinoso, muy bajo",
+      "Flores amarillas sobre pedúnculos largos y finos",
+      "En crestas y pedregales de montaña, expuesta al viento"
+    ]
+  },
+  "Sideritis leucantha": {
+    "group": "Mata aromática",
+    "habitat": "Tomillares y matorral raso sobre suelos calizos y margosos",
+    "seasonality": "Primavera y verano",
+    "description": "Rabogato de tallos erguidos cubiertos de pelusa blanca, con flores de color blanco crema dispuestas en verticilos separados a lo largo de la espiga. Es un endemismo del sureste ibérico y una de las plantas usadas tradicionalmente en infusión.",
+    "tips": [
+      "Flores blanco crema en anillos separados por el tallo",
+      "Toda la planta blanquecina y algo lanuda",
+      "Brácteas anchas y punzantes bajo cada grupo de flores"
+    ]
+  },
+  "Cosentinia vellea": {
+    "group": "Helecho",
+    "habitat": "Grietas de roquedos secos y soleados, paredones y pedregales",
+    "seasonality": "Todo el año",
+    "description": "Helecho pequeño cubierto por completo de una densa lana parda que le da aspecto afieltrado y le permite sobrevivir en roca seca y al sol. En sequía se enrolla sobre sí mismo hasta parecer muerto, y se despliega en cuanto llueve.",
+    "tips": [
+      "Frondes cubiertas de lana parda, aspecto afieltrado",
+      "Se enrolla en verano y revive con la lluvia",
+      "En roca seca y soleada, no en umbrías húmedas"
+    ]
+  },
+  "Quercus ilex": {
+    "commonName": "Encina",
+    "group": "Árbol",
+    "habitat": "Bosques y matorrales mediterráneos sobre suelos variados, en clima no extremo",
+    "seasonality": "Todo el año",
+    "description": "Árbol perennifolio de copa densa y redondeada, con hojas coriáceas verde oscuro por el haz y blanquecinas y afieltradas por el envés. Las hojas jóvenes y las de las ramas bajas tienen el borde espinoso, un mecanismo de defensa frente a los herbívoros.",
+    "tips": [
+      "Envés de la hoja blanquecino y afieltrado",
+      "Hojas de las ramas bajas con borde espinoso",
+      "Copa densa y oscura, muy cerrada a la luz"
+    ]
+  },
+  "Quercus rotundifolia": {
+    "commonName": "Carrasca",
+    "group": "Árbol",
+    "habitat": "Bosques y matorrales mediterráneos continentales, sobre suelos secos y pobres",
+    "seasonality": "Todo el año",
+    "description": "La encina de interior, más adaptada al frío y a la sequía continental, con hojas más redondeadas y bellotas dulces. A menudo crece en mata por el efecto del ramoneo y las cortas repetidas. Muchos autores la consideran una subespecie de la encina.",
+    "tips": [
+      "Hojas más redondeadas y pequeñas que las de la encina litoral",
+      "Bellotas de sabor dulce, no amargas",
+      "Frecuente en porte de mata, con varios pies"
+    ]
+  },
+  "Cytisus scoparius": {
+    "commonName": "Retama de escobas",
+    "group": "Arbusto",
+    "habitat": "Claros de bosque, laderas y taludes sobre suelos silíceos o descarbonatados",
+    "seasonality": "Primavera",
+    "description": "Arbusto de ramas verdes, angulosas y flexibles, casi sin hojas, que en primavera se cubre de flores amarillas grandes. Sus legumbres, negras al madurar, se abren con un chasquido audible en los días secos y lanzan las semillas a varios metros.",
+    "tips": [
+      "Ramas verdes de sección angulosa, flexibles",
+      "Legumbres negras y peludas en los bordes",
+      "Las vainas estallan con un chasquido en verano"
+    ]
+  },
+  "Sedum gypsicola": {
+    "group": "Planta suculenta",
+    "habitat": "Litosuelos, costras yesosas y repisas rocosas secas",
+    "seasonality": "Primavera y verano",
+    "description": "Crasulácea diminuta de hojas cilíndricas y carnosas apretadas contra el tallo, que forma almohadillas sobre suelos yesosos y roca desnuda. En verano toma tonos rojizos y saca flores blancas estrelladas.",
+    "tips": [
+      "Hojitas carnosas y cilíndricas apretadas al tallo",
+      "Vira a rojizo con la sequía y el sol",
+      "Flores blancas estrelladas de cinco pétalos"
+    ]
+  },
+  "Ulex europaeus": {
+    "commonName": "Tojo",
+    "group": "Arbusto",
+    "habitat": "Matorral sobre suelos ácidos y frescos, claros y bordes de camino",
+    "seasonality": "Invierno y primavera",
+    "description": "Arbusto totalmente cubierto de espinas rígidas —hojas y ramillas transformadas— que en invierno y primavera se llena de flores amarillas con olor a coco. Forma masas impenetrables que sirven de refugio a pájaros de matorral.",
+    "tips": [
+      "Espinas rígidas por toda la planta, muy punzantes",
+      "Flores amarillas con aroma dulce, a coco",
+      "Florece en pleno invierno, adelantándose al resto"
+    ]
+  },
+  "Lonicera biflora": {
+    "commonName": "Madreselva mediterránea",
+    "group": "Arbusto",
+    "habitat": "Roquedos, matorral denso y barrancos cálidos",
+    "seasonality": "Primavera",
+    "description": "Madreselva de tallos trepadores o apoyantes y hojas opuestas algo carnosas, con flores blanquecinas agrupadas de dos en dos, de donde le viene el nombre. Sus frutos son bayas rojas o negruzcas que consumen las aves.",
+    "tips": [
+      "Flores agrupadas por parejas en la axila de la hoja",
+      "Hojas opuestas, a veces soldadas por la base",
+      "Tallos que se apoyan y trepan sobre otros arbustos"
+    ]
+  },
+  "Sideritis bourgaeana": {
+    "group": "Mata aromática",
+    "habitat": "Tomillares y matorral raso sobre suelos calizos secos",
+    "seasonality": "Primavera y verano",
+    "description": "Rabogato de tallos blanquecinos y flores agrupadas en verticilos separados, característico del sureste ibérico. Es un taxón raro y poco fotografiado: como otras labiadas del grupo, se ha usado tradicionalmente en infusiones.",
+    "tips": [
+      "Tallos y hojas cubiertos de pelusa blanca",
+      "Flores en anillos bien separados a lo largo del tallo",
+      "Brácteas anchas y algo punzantes bajo cada verticilo"
+    ]
+  },
+  "Ammotragus lervia": {
+    "group": "Mamífero ungulado",
+    "habitat": "Laderas escarpadas, roquedos y matorral de montaña seca",
+    "seasonality": "Todo el año",
+    "description": "Bóvido norteafricano introducido en España en los años cincuenta con fines cinegéticos, hoy asilvestrado en varias sierras del sureste. Se reconoce por la melena de pelos largos que cuelga del cuello y las patas delanteras, y por sus cuernos gruesos y arqueados en ambos sexos.",
+    "tips": [
+      "Melena de pelo largo colgando del cuello y las patas delanteras",
+      "Cuernos gruesos y curvados también en las hembras",
+      "Pelaje uniforme de color arena, sin manchas"
+    ]
+  },
+  "Cistus albidus": {
+    "commonName": "Jara blanca",
+    "group": "Mata",
+    "habitat": "Matorral y laderas soleadas sobre suelos calizos secos",
+    "seasonality": "Primavera",
+    "description": "Jara de hojas blanquecinas, aterciopeladas al tacto y sin peciolo, con flores grandes de color rosa malva y pétalos arrugados como papel de seda que duran solo unas horas. Es una de las plantas que da color al matorral en primavera.",
+    "tips": [
+      "Hojas blanquecinas y aterciopeladas, sentadas en la rama",
+      "Flores rosa malva grandes, de pétalos arrugados",
+      "Cada flor dura apenas una mañana"
+    ]
+  },
+  "Juniperus oxycedrus": {
+    "commonName": "Enebro de la miera",
+    "group": "Conífera",
+    "habitat": "Matorral, pinares aclarados y laderas pedregosas",
+    "seasonality": "Todo el año",
+    "description": "Enebro de hojas aciculares y punzantes dispuestas de tres en tres, con dos bandas blancas en la cara superior que lo separan a simple vista de la sabina. Sus gálbulos son rojizos al madurar. De su madera se destilaba el aceite de miera.",
+    "tips": [
+      "Hojas punzantes en grupos de tres, no en escama",
+      "Dos rayas blancas en la cara superior de cada hoja",
+      "Gálbulos rojizos y brillantes al madurar"
+    ]
+  },
+  "Pistacia terebinthus": {
+    "commonName": "Cornicabra",
+    "group": "Arbusto",
+    "habitat": "Barrancos, umbrías y matorral alto sobre suelos frescos",
+    "seasonality": "Primavera a otoño (pierde la hoja en invierno)",
+    "description": "Arbusto o arbolillo de hoja caduca, con hojas compuestas de foliolos grandes y brillantes y un raquis sin alas, lo que lo separa del lentisco. Suele presentar agallas rojizas y curvadas en forma de cuerno, provocadas por pulgones, que le dan el nombre.",
+    "tips": [
+      "Agallas rojizas curvadas como cuernos en las hojas",
+      "Pierde la hoja en invierno, al contrario que el lentisco",
+      "Hoja compuesta con foliolo terminal y raquis sin alas"
+    ]
+  },
+  "Viburnum tinus": {
+    "commonName": "Durillo",
+    "group": "Arbusto",
+    "habitat": "Umbrías, barrancos y sotobosque de encinar y pinar húmedo",
+    "seasonality": "Invierno y primavera (floración)",
+    "description": "Arbusto de hojas perennes, opuestas y coriáceas, que florece en pleno invierno con corimbos de flores blancas nacidas de capullos rosados. Sus frutos son bayas de un azul metálico oscuro muy llamativo.",
+    "tips": [
+      "Florece en invierno, en corimbos blancos planos",
+      "Capullos rosados antes de abrir",
+      "Frutos azul metálico oscuro, casi negros"
+    ]
+  },
+  "Pinus pinaster": {
+    "commonName": "Pino rodeno",
+    "group": "Conífera",
+    "habitat": "Laderas y sierras sobre suelos silíceos o arenosos, en clima algo húmedo",
+    "seasonality": "Todo el año",
+    "description": "Pino de acículas largas, gruesas y rígidas, las mayores de los pinos ibéricos, y piñas grandes y brillantes con escamas terminadas en pincho. Su corteza, gruesa y profundamente agrietada, muestra tonos rojizos en el fondo de las grietas.",
+    "tips": [
+      "Acículas muy largas y gruesas, que pinchan al apretarlas",
+      "Piñas grandes y brillantes con escamas apuntadas",
+      "Corteza muy gruesa y agrietada, rojiza por dentro"
+    ]
+  },
+  "Sciurus vulgaris": {
+    "group": "Roedor",
+    "habitat": "Pinares y bosques con arbolado maduro y producción de piñones o frutos",
+    "seasonality": "Todo el año",
+    "description": "Ardilla arborícola de cola larga y esponjosa y orejas con pinceles de pelo más marcados en invierno. En los pinares mediterráneos su rastro más evidente son las piñas roídas hasta dejar solo el eje, abandonadas en tocones y piedras.",
+    "tips": [
+      "Piñas roídas hasta el raspón, apiladas en un mismo posadero",
+      "Cola larga y esponjosa que mantiene erguida al saltar",
+      "Pinceles de pelo en las orejas, sobre todo en invierno"
+    ]
+  },
+  "Digitalis obscura": {
+    "commonName": "Vidriera",
+    "group": "Mata",
+    "habitat": "Matorral, pedregales y laderas soleadas sobre suelos calizos",
+    "seasonality": "Primavera y verano",
+    "description": "Dedalera leñosa en la base, con hojas estrechas, brillantes y de borde entero, muy distinta de las digitales de hoja ancha. Sus flores son tubos colgantes de un naranja rojizo con manchas oscuras en el interior. Toda la planta es tóxica.",
+    "tips": [
+      "Flores en dedal de color naranja rojizo",
+      "Hojas estrechas, lustrosas y de borde liso",
+      "Base leñosa, no herbácea"
+    ]
+  },
+  "Genista spartioides": {
+    "group": "Arbusto",
+    "habitat": "Laderas secas, ramblas y matorral sobre suelos margosos y pedregosos",
+    "seasonality": "Verano y otoño",
+    "description": "Retama de ramas juncales, verdes y erguidas, prácticamente sin hojas, que florece en amarillo a final de verano, cuando casi todo el matorral está en reposo. Es un endemismo del sureste ibérico.",
+    "tips": [
+      "Ramas verdes largas y juncales, sin hojas visibles",
+      "Florece a final de verano y en otoño",
+      "Porte erguido en escoba, no en cojín"
+    ]
+  },
+  "Cytinus ruber": {
+    "commonName": "Cabrilla",
+    "group": "Planta parásita",
+    "habitat": "Sobre las raíces de jaras y jarillas, en matorral mediterráneo",
+    "seasonality": "Primavera",
+    "description": "Planta parásita sin clorofila que vive dentro de las raíces de las jaras y solo asoma para florecer: un ramillete de flores rosadas y blancas que brota directamente del suelo, al pie de la mata hospedadora. El resto del año es invisible.",
+    "tips": [
+      "Brota directamente del suelo, sin tallo ni hojas verdes",
+      "Siempre al pie de una jara o jarilla",
+      "Flores rosadas con brácteas carnosas y llamativas"
+    ]
+  },
+  "Rhamnus alaternus": {
+    "commonName": "Aladierno",
+    "group": "Arbusto",
+    "habitat": "Matorral alto, encinares y barrancos sobre suelos pedregosos",
+    "seasonality": "Todo el año",
+    "description": "Arbusto perennifolio de hojas alternas, coriáceas y de borde finamente dentado, sin espinas. Sus frutos maduran de rojo a negro y son muy buscados por los pájaros. Se distingue del espino negro por carecer de espinas y tener hojas mayores.",
+    "tips": [
+      "Sin espinas, a diferencia de otros ramnos",
+      "Hojas alternas, coriáceas y algo dentadas",
+      "Frutos que pasan de rojo a negro al madurar"
+    ]
+  },
+  "Macrochloa tenacissima": {
+    "commonName": "Esparto",
+    "group": "Gramínea",
+    "habitat": "Laderas secas y llanos sobre suelos pobres; forma espartales extensos",
+    "seasonality": "Primavera (espigado)",
+    "description": "El esparto, nombrado también como Stipa tenacissima, forma matas densas y duraderas que dan nombre a los espartales, uno de los paisajes característicos del sureste ibérico. Sus hojas se enrollan sobre sí mismas en los días secos para perder menos agua y se abren tras la lluvia. Durante siglos se recolectó para hacer cuerdas, esteras y alpargatas.",
+    "tips": [
+      "Matas grandes y compactas de hojas duras enrolladas",
+      "Las hojas se abren tras la lluvia y se enrollan al secar",
+      "Espigas altas y plateadas a final de primavera"
+    ]
+  },
+  "Lonicera splendida": {
+    "commonName": "Madreselva",
+    "group": "Arbusto",
+    "habitat": "Roquedos, barrancos y matorral sobre suelos calizos",
+    "seasonality": "Primavera y verano",
+    "description": "Madreselva trepadora de hojas opuestas, azuladas y soldadas por la base formando un disco que atraviesa el tallo. Sus flores blanquecinas o rosadas, muy perfumadas, se abren al atardecer para atraer polillas. Es un endemismo del sur peninsular.",
+    "tips": [
+      "Hojas superiores soldadas en un disco atravesado por el tallo",
+      "Follaje de tono azulado o glauco",
+      "Flores muy perfumadas que abren al anochecer"
+    ]
+  },
+  "Phillyrea angustifolia": {
+    "commonName": "Labiérnago",
+    "group": "Arbusto",
+    "habitat": "Matorral mediterráneo y laderas secas sobre suelos pedregosos",
+    "seasonality": "Todo el año",
+    "description": "Arbusto de hojas opuestas, estrechas y coriáceas, muy parecido a un acebuche pero con las hojas verdes por ambas caras. Sus frutos son pequeñas drupas azuladas o negras que consumen zorzales y currucas.",
+    "tips": [
+      "Hojas opuestas y estrechas, verdes por las dos caras",
+      "Sin el reverso plateado del acebuche",
+      "Frutos pequeños azulados o negros"
+    ]
+  },
+  "Pelophylax perezi": {
+    "commonName": "Rana común",
+    "group": "Anfibio",
+    "habitat": "Charcas, balsas, acequias y tramos remansados con vegetación",
+    "seasonality": "Primavera a otoño",
+    "description": "La rana verde ibérica, la más común y adaptable de nuestros anfibios: coloniza desde ramblas y balsas de riego hasta fuentes urbanas. Su canto es un cacareo entrecortado que forma coros al atardecer. Salta al agua al menor movimiento en la orilla.",
+    "tips": [
+      "Línea clara a lo largo del centro del lomo en muchos ejemplares",
+      "Canto entrecortado, como una risa o un cacareo",
+      "Salta al agua desde la orilla al notar movimiento"
+    ]
+  },
+  "Quercus faginea": {
+    "commonName": "Quejigo",
+    "group": "Árbol",
+    "habitat": "Umbrías y suelos frescos y profundos, en transición al bosque mediterráneo",
+    "seasonality": "Primavera a otoño (marcescente en invierno)",
+    "description": "Roble mediterráneo de hojas dentadas, más grandes que las de la encina, verdes por el haz y algo blanquecinas por el envés. Es marcescente: las hojas secas quedan colgando del árbol todo el invierno y no caen hasta que brotan las nuevas.",
+    "tips": [
+      "Hojas secas que persisten en la rama todo el invierno",
+      "Hoja dentada, mayor y más blanda que la de la encina",
+      "Prefiere umbrías y vaguadas con suelo profundo"
+    ]
+  },
+  "Arbutus unedo": {
+    "commonName": "Madroño",
+    "group": "Arbusto",
+    "habitat": "Umbrías, barrancos y matorral alto sobre suelos frescos",
+    "seasonality": "Otoño e invierno (flor y fruto a la vez)",
+    "description": "Arbusto o arbolillo de hojas lustrosas y dentadas y corteza rojiza que se desprende en tiras. En otoño coinciden en la misma rama las flores blancas en racimos colgantes y los frutos rojos y granulosos del año anterior.",
+    "tips": [
+      "Flores y frutos a la vez en la misma rama, en otoño",
+      "Frutos rojos esféricos de superficie granulosa",
+      "Corteza rojiza que se desprende en tiras finas"
+    ]
+  },
+  "Nicotiana glauca": {
+    "commonName": "Tabaco moruno",
+    "group": "Arbusto",
+    "habitat": "Ramblas, escombreras, cunetas y suelos removidos de clima cálido",
+    "seasonality": "Casi todo el año",
+    "description": "Arbusto de crecimiento rápido, originario de Sudamérica y hoy naturalizado en el sureste ibérico, con hojas ovaladas de un verde azulado y flores tubulares amarillas. Coloniza terrenos alterados y es una planta exótica invasora que desplaza a la vegetación de rambla.",
+    "tips": [
+      "Hojas de verde azulado con peciolo largo",
+      "Flores tubulares amarillas y colgantes",
+      "Casi siempre en escombreras, cunetas y ramblas alteradas"
+    ]
+  },
+  "Lotus dorycnium": {
+    "commonName": "Bocha blanca",
+    "group": "Mata",
+    "habitat": "Matorral, ribazos y claros sobre suelos secos y calizos",
+    "seasonality": "Primavera y verano",
+    "description": "Mata baja y grisácea por la pelusa que la cubre, con hojas divididas en foliolos estrechos y ramilletes apretados de florecillas blancas con la quilla oscura. Es muy frecuente en los claros del matorral.",
+    "tips": [
+      "Ramilletes densos de flores blancas muy pequeñas",
+      "Quilla de la flor con la punta oscura",
+      "Aspecto grisáceo por la pelusa que cubre la planta"
+    ]
+  },
+  "Allium paniculatum": {
+    "commonName": "Ajo silvestre",
+    "group": "Planta bulbosa",
+    "habitat": "Pastizales secos, ribazos y claros de matorral",
+    "seasonality": "Verano",
+    "description": "Ajo silvestre de umbela laxa y colgante, con flores acampanadas de tonos rosados o pardo claro sobre pedicelos largos y desiguales. Las brácteas que envuelven la inflorescencia acaban en dos puntas largas como cuernos.",
+    "tips": [
+      "Umbela laxa y desmadejada, con flores colgantes",
+      "Dos brácteas largas como cuernos bajo la umbela",
+      "Olor a ajo al estrujar las hojas"
+    ]
+  },
+  "Populus alba": {
+    "commonName": "Álamo blanco",
+    "group": "Árbol",
+    "habitat": "Riberas, sotos y suelos con capa freática cercana",
+    "seasonality": "Primavera a otoño",
+    "description": "Árbol de ribera con el envés de las hojas cubierto de un fieltro blanco que hace que la copa parezca cambiar de color con el viento. La corteza es clara y con lenticelas romboidales oscuras. Rebrota de raíz con facilidad y forma bosquetes clonales.",
+    "tips": [
+      "Envés de la hoja blanco: la copa «platea» con el viento",
+      "Corteza clara con marcas romboidales oscuras",
+      "Retoños de raíz alrededor del pie principal"
+    ]
+  },
+  "Phillyrea latifolia": {
+    "commonName": "Labiérnago prieto",
+    "group": "Arbusto",
+    "habitat": "Encinares, matorral alto y umbrías sobre suelos pedregosos",
+    "seasonality": "Todo el año",
+    "description": "Arbusto o arbolillo de hojas opuestas, coriáceas y de borde dentado, más anchas que las de su pariente de hoja estrecha. Las hojas jóvenes son marcadamente dentadas y las adultas casi enteras, lo que despista con frecuencia.",
+    "tips": [
+      "Hojas opuestas y anchas, dentadas en las ramas jóvenes",
+      "Verde oscuro por las dos caras",
+      "Frutos pequeños azul negruzcos"
+    ]
+  },
+  "Arctostaphylos uva-ursi": {
+    "commonName": "Gayuba",
+    "group": "Mata",
+    "habitat": "Pinares aclarados, crestas y laderas pedregosas de montaña",
+    "seasonality": "Todo el año",
+    "description": "Mata rastrera de hojas pequeñas, coriáceas y brillantes que forma alfombras densas sobre el suelo del pinar. Sus flores son urnas blanco rosadas colgantes y sus frutos, bayas rojas y harinosas. Ayuda a fijar el suelo en laderas pedregosas.",
+    "tips": [
+      "Porte rastrero formando alfombras continuas",
+      "Hojas pequeñas, duras y muy brillantes",
+      "Flores en urna colgante y frutos rojos harinosos"
+    ]
+  },
+  "Stachys circinata": {
+    "commonName": "Ortiga muerta",
+    "group": "Hierba",
+    "habitat": "Roquedos, taludes umbríos y pies de cantil",
+    "seasonality": "Primavera",
+    "description": "Labiada de hojas anchas, arrugadas y cubiertas de pelo suave, que crece en repisas y pies de roca umbríos. Sus flores, blanquecinas o rosadas con manchas, se agrupan en verticilos. Recuerda a una ortiga, pero no pica.",
+    "tips": [
+      "Hojas anchas y arrugadas, de tacto aterciopelado",
+      "Flores en anillos alrededor del tallo cuadrado",
+      "En pies de roca y taludes umbríos"
+    ]
+  },
+  "Ulmus minor": {
+    "commonName": "Olmo común",
+    "group": "Árbol",
+    "habitat": "Sotos, vegas y suelos profundos con humedad freática",
+    "seasonality": "Primavera a otoño",
+    "description": "Árbol de hojas asimétricas en la base —un lado baja más que el otro— y borde doblemente aserrado. Florece antes de echar la hoja y fructifica en sámaras redondeadas y membranosas. La grafiosis ha diezmado sus poblaciones adultas.",
+    "tips": [
+      "Base de la hoja claramente asimétrica",
+      "Sámaras redondas y papiráceas antes que las hojas",
+      "Rebrota de raíz formando setos y orlas"
+    ]
+  },
+  "Ulmus glabra": {
+    "commonName": "Olmo de montaña",
+    "group": "Árbol",
+    "habitat": "Barrancos húmedos y umbrías frescas de montaña",
+    "seasonality": "Primavera a otoño",
+    "description": "Olmo de hojas grandes, ásperas al tacto como papel de lija y con la base muy asimétrica, a menudo con la punta dividida en tres. Prefiere barrancos frescos y umbríos, y no rebrota de raíz como el olmo común.",
+    "tips": [
+      "Hojas grandes y muy ásperas al tacto",
+      "Punta de la hoja a menudo dividida en tres lóbulos",
+      "En barrancos umbríos y frescos, no en vegas secas"
+    ]
+  },
+  "Myrtus communis": {
+    "commonName": "Mirto",
+    "group": "Arbusto",
+    "habitat": "Barrancos, umbrías y matorral alto sobre suelos frescos",
+    "seasonality": "Verano (floración) y otoño (fruto)",
+    "description": "Arbusto aromático de hojas opuestas, brillantes y coriáceas que al mirarlas a contraluz muestran puntitos translúcidos: son las glándulas de aceite esencial. Sus flores blancas tienen un penacho de estambres y sus frutos son bayas azul negruzcas.",
+    "tips": [
+      "Puntos translúcidos en la hoja al mirarla a contraluz",
+      "Aroma intenso al estrujar una hoja",
+      "Flores blancas con muchos estambres, como un pincel"
+    ]
+  },
+  "Centranthus lecoqii": {
+    "commonName": "Milamores",
+    "group": "Hierba",
+    "habitat": "Roquedos, muros, taludes y pedregales",
+    "seasonality": "Primavera y verano",
+    "description": "Planta de hojas opuestas y algo carnosas, de un verde azulado, con densos ramilletes de flores rosadas o lilas provistas de un espolón fino. Coloniza muros viejos, taludes y pedregales, donde forma manchas muy vistosas.",
+    "tips": [
+      "Ramilletes densos de flores rosadas o lilas",
+      "Cada flor con un espolón fino por detrás",
+      "Follaje glauco, algo carnoso y azulado"
+    ]
+  },
+  "Anacyclus valentinus": {
+    "commonName": "Manzanilla bastarda",
+    "group": "Hierba",
+    "habitat": "Cunetas, eriales, ramblas y suelos removidos",
+    "seasonality": "Primavera y verano",
+    "description": "Compuesta anual de hojas muy divididas y capítulos amarillos que suelen carecer de lígulas, por lo que parecen botones sin pétalos. Es una planta pionera muy frecuente en bordes de camino y terrenos alterados.",
+    "tips": [
+      "Capítulos amarillos sin pétalos visibles, como botones",
+      "Hojas finamente divididas, de aspecto plumoso",
+      "Frecuente en cunetas y suelos removidos"
+    ]
+  },
+  "Ceratonia siliqua": {
+    "commonName": "Algarrobo",
+    "group": "Árbol",
+    "habitat": "Laderas cálidas, antiguos cultivos y matorral del piso termomediterráneo",
+    "seasonality": "Todo el año",
+    "description": "Árbol perennifolio de copa densa y hojas compuestas con foliolos redondeados y lustrosos. Florece en otoño directamente sobre el tronco y las ramas viejas. Sus vainas pardas y dulces, las algarrobas, se han usado durante siglos como pienso y alimento.",
+    "tips": [
+      "Hojas compuestas de foliolos redondos y brillantes",
+      "Flores nacidas directamente del tronco y las ramas gruesas",
+      "Vainas pardas y aplanadas colgando del árbol"
+    ]
+  },
+  "Aria edulis": {
+    "commonName": "Mostajo",
+    "group": "Árbol",
+    "habitat": "Umbrías y barrancos frescos de montaña, en bosque mixto",
+    "seasonality": "Primavera (flor) y otoño (fruto y color)",
+    "description": "Arbolillo de hojas anchas, dentadas y cubiertas por el envés de un fieltro blanco que las hace destacar cuando sopla el viento. Da corimbos de flores blancas en primavera y frutos rojos y harinosos en otoño, buscados por zorzales y mirlos.",
+    "tips": [
+      "Envés de la hoja blanco y afieltrado",
+      "Corimbos de flores blancas en primavera",
+      "Frutos rojos harinosos en otoño"
+    ]
+  },
+  "Cormus domestica": {
+    "commonName": "Serbal común",
+    "group": "Árbol",
+    "habitat": "Umbrías, barrancos y antiguos cultivos de montaña media",
+    "seasonality": "Primavera (flor) y otoño (fruto)",
+    "description": "Árbol de hojas compuestas por muchos foliolos dentados, parecido al serbal de cazadores pero con frutos mayores, en forma de pera o manzana diminuta, que solo se vuelven comestibles cuando se pasan y ablandan.",
+    "tips": [
+      "Hoja compuesta de muchos foliolos alargados y dentados",
+      "Frutos con forma de perita o manzanita",
+      "Corteza que se agrieta en placas rectangulares con la edad"
+    ]
+  },
+  "Juglans regia": {
+    "commonName": "Nogal",
+    "group": "Árbol",
+    "habitat": "Vegas, barrancos y suelos profundos y frescos; a menudo plantado",
+    "seasonality": "Primavera a otoño",
+    "description": "Árbol de hoja caduca con hojas compuestas de foliolos grandes y aromáticos y corteza gris que se agrieta con la edad. Sus raíces liberan sustancias que inhiben el crecimiento de otras plantas, por lo que bajo su copa suele haber poco sotobosque.",
+    "tips": [
+      "Hojas compuestas de olor fuerte al estrujarlas",
+      "Nueces envueltas en una cáscara verde carnosa",
+      "Poca vegetación bajo su copa"
+    ]
+  },
+  "Fraxinus ornus": {
+    "commonName": "Fresno de flor",
+    "group": "Árbol",
+    "habitat": "Umbrías, barrancos y bosques mixtos sobre suelos frescos",
+    "seasonality": "Primavera (floración) a otoño",
+    "description": "Fresno que, a diferencia de sus parientes, tiene flores blancas y vistosas con pétalos, agrupadas en panículas fragantes que aparecen con las hojas. De su corteza se obtiene el maná, una savia azucarada que se recolectaba tradicionalmente.",
+    "tips": [
+      "Panículas de flores blancas perfumadas, con pétalos",
+      "Hojas compuestas opuestas, de foliolos dentados",
+      "Yemas grises o pardas, no negras como en otros fresnos"
+    ]
+  },
+  "Helianthemum violaceum": {
+    "commonName": "Jarilla",
+    "group": "Mata",
+    "habitat": "Tomillares y matorral raso sobre suelos calizos y margosos secos",
+    "seasonality": "Primavera",
+    "description": "Jarilla pequeña de hojas estrechas y grisáceas con el borde enrollado, que se cubre en primavera de flores amarillas efímeras. Como en todas las jarillas, los pétalos apenas duran una mañana y se renuevan cada día.",
+    "tips": [
+      "Hojas estrechas con el borde enrollado hacia abajo",
+      "Flores amarillas que duran solo unas horas",
+      "Mata baja y grisácea del tomillar"
+    ]
+  },
+  "Cistus populifolius": {
+    "commonName": "Jara cervuna",
+    "group": "Mata",
+    "habitat": "Jarales y claros de bosque sobre suelos silíceos o descarbonatados",
+    "seasonality": "Primavera",
+    "description": "Jara de hojas anchas y acorazonadas con peciolo, parecidas a las de un chopo, lo que la hace inconfundible entre las jaras ibéricas. Sus flores son blancas, grandes y con el centro amarillo, y salen agrupadas en el extremo de las ramas.",
+    "tips": [
+      "Hojas anchas y acorazonadas, con peciolo largo",
+      "Flores blancas grandes con el centro amarillo",
+      "Sépalos externos grandes y muy visibles en el capullo"
+    ]
+  },
+  "Hypericum caprifolium": {
+    "commonName": "Hipérico de fuente",
+    "group": "Mata",
+    "habitat": "Fuentes, rezumes, acequias y bordes de curso de agua",
+    "seasonality": "Verano",
+    "description": "Hipérico de tallos erguidos con hojas opuestas y soldadas por la base, que rodean el tallo. Vive ligado a puntos con agua permanente, así que su presencia señala fuentes y rezumaderos. Sus flores amarillas tienen los estambres agrupados en haces.",
+    "tips": [
+      "Hojas opuestas soldadas alrededor del tallo",
+      "Flores amarillas con muchos estambres en manojos",
+      "Siempre junto a fuentes, acequias o rezumes"
+    ]
+  }
+}

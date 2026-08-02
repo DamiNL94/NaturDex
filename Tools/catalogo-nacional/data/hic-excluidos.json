@@ -1,0 +1,20 @@
+{
+  "_nota": [
+    "Códigos HIC que NO se adoptan en un espacio concreto, con el motivo. Es la excepción por parque",
+    "al filtro general de adopt-habitats.js (que sólo sabe descartar por tipo: lo marino).",
+    "",
+    "Existe porque la cartografía de hábitats de la BDN de 1997 asigna, en algunos recintos, códigos",
+    "que el formulario normalizado Natura 2000 del espacio NO recoge. merge-habitats.js los añade",
+    "igualmente (no puede saberlo: cruza geometría, no declaraciones), y sin esta lista adopt-habitats",
+    "los reintroduce en cada pasada aunque se hayan borrado a mano del park.json.",
+    "",
+    "Regla para añadir una entrada: hace falta una fuente que diga que el hábitat NO está declarado en",
+    "ese espacio — el formulario normalizado del LIC/ZEC o el plan de gestión. Un hábitat que sólo",
+    "resulte dudoso NO se excluye: se deja con reviewNote."
+  ],
+  "parques": {
+    "cabo-cope-puntas-calnegre": {
+      "9560": "No figura en el formulario normalizado de ninguno de los dos LIC del parque (ES6200031 Cabo Cope y ES6200012 Calnegre): ambos catalogan el sabinar de sabina mora como 5210, que ya está cartografiado. El recinto procede de la BDN 1997, lleva la asociación Chamaeropo humilis-Juniperetum phoeniceae (la del 5210 aquí) y solapa 46,7 de sus 61,2 ha con el polígono del 5210."
+    }
+  }
+}

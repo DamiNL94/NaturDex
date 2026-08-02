@@ -1,0 +1,20 @@
+{
+  "_comentario": [
+    "Correcciones puntuales de campos universales que venían con dos valores distintos según el",
+    "parque, o con un valor sencillamente equivocado. Al ser un campo universal solo puede haber uno,",
+    "y este fichero fija cuál.",
+    "",
+    "Curruca conspicillata y Saxicola rubicola: una ficha decía «LC (Preocupación menor)» y la otra",
+    "«No evaluada específicamente en la Lista Roja mundial de la UICN». Ambas están evaluadas y",
+    "figuran como Preocupación menor, así que se unifica en ese valor."
+  ],
+
+  "Saxicola rubicola": {
+    "iucnGlobal": "LC (Preocupación menor)",
+    "spainStatus": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)"
+  },
+  "Curruca conspicillata": {
+    "iucnGlobal": "LC (Preocupación menor)",
+    "spainStatus": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)"
+  }
+}

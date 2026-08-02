@@ -1,0 +1,27 @@
+{
+  "_comentario": [
+    "Cistanche phelypaea, añadida al catálogo el 1 de agosto de 2026. El nombre común «pijolobo» es",
+    "el de Águilas y su comarca; es también el que da nombre al logro de la app («¡Más aguileño que",
+    "un pijo lobo!»). Fuera de ahí se conoce sobre todo como «jopo de lobo»."
+  ],
+
+  "Anabasis hispanica": {
+    "image": "Img/species/anabasis-hispanica.jpg",
+    "imageAttribution": "Smithsonian NMNH (CC0) · GBIF — copia local"
+  },
+
+  "Cistanche phelypaea": {
+    "commonName": "Pijolobo",
+    "group": "Planta parásita",
+    "habitat": "Saladares, estepas salinas y matorrales halófilos, sobre las raíces de quenopodiáceas",
+    "seasonality": "Primavera",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección: no aparece en el Catálogo Español de Especies Amenazadas ni en el Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE). Comprobado en EIDOS (IEPNB), que no le registra ningún estado legal vigente.",
+    "description": "Planta sin una sola hoja verde: no hace fotosíntesis y vive enganchada a las raíces de las sosas y los almajos del saladar, de los que toma agua y alimento. Todo el año es invisible bajo tierra y, en primavera, saca de golpe una espiga carnosa de hasta medio metro cubierta de grandes flores amarillas, un espectáculo desconcertante en un suelo desnudo y salado. En Águilas y su comarca se la conoce como pijolobo; en el resto del sureste, como jopo de lobo.",
+    "tips": [
+      "Espiga carnosa amarilla que brota directamente del suelo, sin tallo con hojas",
+      "Escamas pardas en vez de hojas a lo largo del tallo",
+      "Siempre al pie de una sosa, un almajo o un salado: es su hospedador"
+    ]
+  }
+}

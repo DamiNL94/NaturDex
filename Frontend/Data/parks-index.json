@@ -25,7 +25,7 @@
                             "slug": "cuatro-calas",
                             "name": "Cuatro Calas",
                             "category": "Paisaje Protegido",
-                            "status": "basic",
+                            "status": "available",
                             "center": [37.3825, -1.632],
                             "path": "Data/parks/murcia/cuatro-calas",
                             "manifest": "Data/parks/murcia/cuatro-calas/manifest.json"

@@ -279,11 +279,42 @@ function validatePark(entry) {
   const images = manifest.images || [];
   if (counts.images !== images.length) err(scope, 'manifest.counts.images=' + counts.images + ' ≠ ' + images.length + ' entradas en manifest.images');
 
-  // 5) Convención de imagen de hábitat ------------------------------------------------------------
+  // 5) Imágenes ------------------------------------------------------------------------------------
+  // La foto puede ser un fichero del repo (`Img/...`, cuando el servidor de origen no permite el
+  // enlace directo) o una URL externa (Wikimedia Commons, GBIF/iNaturalist). Las dos son válidas;
+  // lo que NO vale es una URL a un derivado cacheado de Wikimedia (`upload.wikimedia.org/.../thumb/
+  // .../640px-...`): ese enlace apunta a un fichero generado, no al original, y devuelve 400 en
+  // cuanto el thumb no está o el archivo se renombra. Fue lo que dejó sin foto a la Tortuga mora.
+  // Se resuelve con Tools/catalogo-nacional/wikimedia-images.js --canonicalize.
+  const thumbFragil = url => /upload\.wikimedia\.org\/.*\/thumb\//i.test(url || '');
   habitats.forEach(h => {
-    const expected = 'Img/habitats/' + h.id + '.jpg';
-    if (h.image && h.image !== expected) warn(scope, 'hábitat "' + h.id + '" tiene image="' + h.image + '" (se esperaba "' + expected + '")');
-    if (h.image && !images.includes(h.image)) warn(scope, 'la imagen del hábitat "' + h.id + '" no está en manifest.images');
+    if (h.image && h.image.startsWith('Img/') && !images.includes(h.image))
+      warn(scope, 'la imagen local del hábitat "' + h.id + '" no está en manifest.images');
+    if (thumbFragil(h.image)) err(scope, 'hábitat "' + h.id + '": enlaza a un thumb de Wikimedia (frágil). Usa Special:FilePath');
+    if (h.image && !h.imageAttribution)
+      warn(scope, 'hábitat "' + h.id + '" tiene foto pero no `imageAttribution` (CC-BY obliga a citar autor y licencia)');
+  });
+  species.forEach(s => {
+    if (thumbFragil(s.image)) err(scope, 'especie #' + s.id + ' (' + s.commonName + '): enlaza a un thumb de Wikimedia (frágil). Usa Special:FilePath');
+    if (s.image && !s.imageAttribution)
+      warn(scope, 'especie #' + s.id + ' (' + s.commonName + ') tiene foto pero no `imageAttribution` (CC-BY obliga a citar autor y licencia)');
+    if (!s.image) warn(scope, 'especie #' + s.id + ' (' + s.commonName + ') sin foto: la ficha muestra la portada temática');
+  });
+
+  // 5 bis) Contenido universal de la ficha de especie ----------------------------------------------
+  // Una ficha de especie describe a la ESPECIE, no su presencia en este parque: la misma ficha se
+  // sirve en todos los espacios donde vive. Si `description`, `habitat` o `tips` nombran un parque,
+  // una ZEPA o un LIC concretos, el texto es falso en cuanto la especie aparece en otro sitio —así
+  // acabaron 40 fichas de Sierra Espuña hablando de una ZEPA de Cabo Cope. Lo específico del
+  // espacio va en `habitatIds`, `source`, `featured` y `zepaSiteCode`.
+  const RASTRO_LOCAL = /\b(este parque|del parque|en el parque|parque piloto|este espacio|Cabo Cope|Calnegre|Marina de Cope|Espuña|ZEPA ES\d+|LIC\/ZEC ES\d+|EEA\/BISE)\b/i;
+  species.forEach(s => {
+    for (const campo of ['description', 'habitat', 'tips']) {
+      const texto = Array.isArray(s[campo]) ? s[campo].join(' ') : (s[campo] || '');
+      const m = texto.match(RASTRO_LOCAL);
+      if (m) err(scope, 'especie #' + s.id + ' (' + s.commonName + '): `' + campo + '` menciona «' + m[0] + '». Ese campo es universal; ver Tools/sync-species-catalog.js');
+    }
+    if (!(s.tips || []).length) warn(scope, 'especie #' + s.id + ' (' + s.commonName + ') sin pistas de identificación');
   });
 
   // 6) Coordenadas bien formadas ------------------------------------------------------------------
@@ -363,6 +394,49 @@ function validatePark(entry) {
   if (errors === errorsBefore) ok('coherencia OK: ' + habitats.length + ' hábitats, ' + species.length + ' especies, ' + pois.length + ' POIs');
 }
 
+// --- Coherencia ENTRE parques ---------------------------------------------------------------------
+// La misma especie aparece en varios park.json. Los campos que describen a la especie tienen que ser
+// idénticos en todos: si el pino carrasco sale con una foto en un parque y otra distinta en otro, es
+// que alguien editó una copia. La fuente de verdad es el catálogo universal y quien las vuelve a
+// alinear es `node Tools/sync-species-catalog.js --apply`.
+const CAMPOS_UNIVERSALES = ['commonName', 'kingdom', 'group', 'habitat', 'seasonality', 'rarityScore',
+  'description', 'tips', 'taxonomy', 'iucnGlobal', 'spainStatus', 'image', 'imageAttribution'];
+
+function validarCoherenciaEntreParques(parques) {
+  const porEspecie = new Map();
+  parques.forEach(p => {
+    const file = path.join(FRONTEND, 'Data', 'parks', p.region || 'murcia', p.slug, 'park.json');
+    const manifestPath = p.manifest ? path.join(FRONTEND, p.manifest) : null;
+    let data = null;
+    if (manifestPath && fs.existsSync(manifestPath)) {
+      const dataRel = readJson(manifestPath).data;
+      if (dataRel && fs.existsSync(path.join(FRONTEND, dataRel))) data = readJson(path.join(FRONTEND, dataRel));
+    } else if (fs.existsSync(file)) {
+      data = readJson(file);
+    }
+    (data && data.species || []).forEach(s => {
+      if (!porEspecie.has(s.scientificName)) porEspecie.set(s.scientificName, []);
+      porEspecie.get(s.scientificName).push({ slug: p.slug, sp: s });
+    });
+  });
+
+  let divergencias = 0;
+  porEspecie.forEach((apariciones, sci) => {
+    if (apariciones.length < 2) return;
+    const [primera, ...resto] = apariciones;
+    CAMPOS_UNIVERSALES.forEach(campo => {
+      const distintos = resto.filter(a => JSON.stringify(a.sp[campo]) !== JSON.stringify(primera.sp[campo]));
+      if (!distintos.length) return;
+      divergencias++;
+      err('entre parques', sci + ': `' + campo + '` difiere entre ' + primera.slug + ' y ' + distintos.map(d => d.slug).join(', '));
+    });
+  });
+  if (!divergencias && porEspecie.size) {
+    console.log('\n\x1b[1m▶ coherencia entre parques\x1b[0m');
+    ok(porEspecie.size + ' especies distintas, sin divergencias en los campos universales');
+  }
+}
+
 // --- main ---------------------------------------------------------------------------------------
 console.log('\x1b[1mNaturDex · validación de datos de parques\x1b[0m');
 if (!fs.existsSync(REGISTRY)) { console.error('No se encontró el registro: ' + REGISTRY); process.exit(2); }
@@ -378,6 +452,7 @@ unknown.forEach(p => err(p.slug, 'status desconocido "' + p.status + '" (valores
 if (!full.length && !basic.length) { console.log('No hay parques con datos que validar.'); process.exit(errors === 0 ? 0 : 1); }
 full.forEach(validatePark);
 basic.forEach(validateBasicPark);
+validarCoherenciaEntreParques(full);
 
 const total = full.length + basic.length;
 const desglose = full.length + ' completo(s) + ' + basic.length + ' ficha(s) base';

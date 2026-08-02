@@ -1,0 +1,585 @@
+{
+  "Salix pedicellata": {
+    "group": "Árbol",
+    "habitat": "Riberas, fuentes y cauces con humedad permanente",
+    "seasonality": "Primavera (floración) y todo el año",
+    "description": "Sauce mediterráneo de porte arbustivo o de arbolillo, con hojas alargadas verdes por encima y algo blanquecinas por debajo. Florece antes de echar la hoja, en amentos peludos. Forma parte de las orlas de vegetación que fijan las márgenes de los cauces.",
+    "tips": [
+      "Amentos peludos en las ramas desnudas, antes que las hojas",
+      "Hojas alargadas, más pálidas por el envés",
+      "Siempre junto a agua o en suelos con humedad permanente"
+    ]
+  },
+  "Colchicum triphyllum": {
+    "group": "Planta bulbosa",
+    "habitat": "Pastizales y claros de matorral en montaña, sobre suelos pedregosos",
+    "seasonality": "Final de invierno y principio de primavera",
+    "description": "Bulbosa que florece muy pronto, a veces con la nieve aún cerca, sacando del suelo flores rosadas o lilas en forma de copa junto a tres hojas estrechas. El resto del año permanece bajo tierra. Toda la planta es tóxica, como el resto del género.",
+    "tips": [
+      "Flores rosa lila en copa, casi a ras de suelo",
+      "Tres hojas estrechas acompañando a la flor",
+      "Florece muy temprano, antes que la mayoría del pastizal"
+    ]
+  },
+  "Ononis ornithopodioides": {
+    "group": "Hierba",
+    "habitat": "Pastizales anuales y claros de matorral sobre suelos secos",
+    "seasonality": "Primavera",
+    "description": "Pequeña leguminosa anual de tallos finos y glandulosos, con hojas de tres foliolos y flores amarillas diminutas. Sus legumbres, curvadas y dispuestas en grupo, recuerdan a los dedos de una pata de pájaro, lo que le da el nombre científico.",
+    "tips": [
+      "Legumbres curvas agrupadas, como una pata de ave",
+      "Flores amarillas muy pequeñas",
+      "Tallos pegajosos al tacto, con pelos glandulosos"
+    ]
+  },
+  "Halimium atriplicifolium": {
+    "group": "Mata",
+    "habitat": "Matorral y jarales sobre suelos secos y soleados de montaña media",
+    "seasonality": "Primavera",
+    "description": "Arbusto de hojas anchas, ovaladas y cubiertas de una pelusa plateada que le da un aspecto casi blanco. En primavera se llena de flores amarillas de cinco pétalos con una mancha oscura en la base. Es un endemismo del sur y sureste peninsular.",
+    "tips": [
+      "Hojas anchas y plateadas, no estrechas como las jaras",
+      "Flores amarillas con una manchita oscura en la base del pétalo",
+      "Porte erguido, más alto que las jarillas comunes"
+    ]
+  },
+  "Ononis speciosa": {
+    "group": "Arbusto",
+    "habitat": "Matorral seco y laderas soleadas sobre suelos pedregosos",
+    "seasonality": "Primavera",
+    "description": "Leguminosa arbustiva y pegajosa, con hojas de tres foliolos y racimos densos y erguidos de flores de un amarillo intenso. Es un endemismo del sur peninsular y del norte de África, y una de las plantas más vistosas del matorral en plena floración.",
+    "tips": [
+      "Racimos densos y erguidos de flores amarillo vivo",
+      "Toda la planta pegajosa por los pelos glandulosos",
+      "Hojas de tres foliolos dentados"
+    ]
+  },
+  "Bupleurum gibraltaricum": {
+    "group": "Arbusto",
+    "habitat": "Roquedos, laderas pedregosas y matorral seco sobre calizas",
+    "seasonality": "Verano",
+    "description": "Umbelífera leñosa, algo insólita en una familia de hierbas, con hojas estrechas, coriáceas y de un verde azulado. Sus umbelas de flores amarillas se abren en pleno verano. Desprende un olor resinoso característico al romper una rama.",
+    "tips": [
+      "Umbelífera con base leñosa, no herbácea",
+      "Hojas estrechas, duras y de verde azulado",
+      "Umbelas amarillas en pleno verano"
+    ]
+  },
+  "Jasione foliosa": {
+    "group": "Hierba",
+    "habitat": "Fisuras y repisas de roquedos calizos de montaña",
+    "seasonality": "Verano",
+    "description": "Planta rupícola que forma matas compactas en las grietas de la roca, con cabezuelas globosas de flores azules formadas por muchas florecillas estrechas. Es un endemismo ibérico ligado a los cantiles calizos, donde escapa de la competencia y del ganado.",
+    "tips": [
+      "Cabezuelas azules redondas, como pompones",
+      "Crece encajada en grietas de pared rocosa",
+      "Hojas estrechas agrupadas en la base"
+    ]
+  },
+  "Imperata cylindrica": {
+    "group": "Gramínea",
+    "habitat": "Arenales, ramblas y suelos húmedos con capa freática cercana",
+    "seasonality": "Primavera y verano",
+    "description": "Gramínea perenne que se extiende por rizomas y levanta espigas cilíndricas de un blanco plateado y sedoso, muy vistosas a contraluz. Coloniza arenales y bordes de rambla, donde ayuda a fijar el sustrato suelto.",
+    "tips": [
+      "Espigas cilíndricas de un blanco sedoso brillante",
+      "Se extiende en manchas por rizomas subterráneos",
+      "Hojas rígidas con el nervio central pálido y marcado"
+    ]
+  },
+  "Saxifraga almeriensis": {
+    "group": "Hierba",
+    "habitat": "Grietas y repisas umbrías de roquedos calizos de montaña",
+    "seasonality": "Primavera",
+    "description": "Saxífraga rupícola que forma pequeñas rosetas de hojas carnosas y algo divididas encajadas en la roca, con tallos finos rematados en flores blancas de cinco pétalos. Es un endemismo del sureste ibérico restringido a unas pocas sierras.",
+    "tips": [
+      "Rosetas pequeñas y carnosas metidas en la fisura",
+      "Flores blancas de cinco pétalos sobre tallos finos",
+      "Casi siempre en paredes umbrías y frescas"
+    ]
+  },
+  "Calicotome villosa": {
+    "group": "Arbusto",
+    "habitat": "Matorral y laderas soleadas sobre suelos secos y pedregosos",
+    "seasonality": "Primavera",
+    "description": "Arbusto espinoso y muy ramificado que en primavera se cubre por completo de flores amarillas. Sus ramas terminan en espinas fuertes y sus legumbres van cubiertas de pelos sedosos. Forma masas impenetrables que dan refugio a aves de matorral.",
+    "tips": [
+      "Ramas rematadas en espinas rígidas y punzantes",
+      "Floración amarilla masiva que cubre toda la mata",
+      "Legumbres cubiertas de pelos blancos y sedosos"
+    ]
+  },
+  "Convolvulus lineatus": {
+    "group": "Hierba",
+    "habitat": "Pastizales secos, ribazos y claros de matorral sobre suelos margosos",
+    "seasonality": "Primavera y verano",
+    "description": "Correhuela de porte bajo y no trepadora, con hojas estrechas cubiertas de pelos sedosos que las hacen brillar con una pátina plateada. Sus flores son embudos rosados o blanquecinos que se abren por la mañana y se cierran con el calor.",
+    "tips": [
+      "Hojas estrechas con brillo sedoso plateado",
+      "No trepa: forma matitas bajas y extendidas",
+      "Flores en embudo, rosadas o casi blancas"
+    ]
+  },
+  "Campanula hispanica": {
+    "group": "Hierba",
+    "habitat": "Fisuras de roquedos, taludes y pedregales de montaña",
+    "seasonality": "Primavera y verano",
+    "description": "Campánula de tallos finos y flexibles con flores azul violeta en forma de campana colgante. Crece en grietas de roca y en pedregales, donde sus raíces alcanzan la humedad que retiene la piedra. Las hojas de la base tienen forma redondeada y las del tallo son estrechas.",
+    "tips": [
+      "Flores azuladas en campana, colgando del tallo",
+      "Hojas basales redondeadas, muy distintas de las del tallo",
+      "En grietas y repisas de roca, a menudo colgando"
+    ]
+  },
+  "Linaria cavanillesii": {
+    "group": "Hierba",
+    "habitat": "Repisas y fisuras de cantiles calizos, generalmente en umbría",
+    "seasonality": "Primavera y verano",
+    "description": "Linaria rupícola de tallos colgantes y hojas algo carnosas y verticiladas, con flores amarillas provistas de un espolón largo y curvado. Es un endemismo ibérico de área muy reducida, restringido a un puñado de cantiles.",
+    "tips": [
+      "Tallos colgando de la pared rocosa",
+      "Flores amarillas con espolón largo por detrás",
+      "Hojas dispuestas en anillos alrededor del tallo"
+    ]
+  },
+  "Trifolium gemellum": {
+    "group": "Hierba",
+    "habitat": "Pastizales anuales sobre suelos arenosos y ácidos",
+    "seasonality": "Primavera",
+    "description": "Trébol anual diminuto, de tallos tendidos y cabezuelas pequeñas y peludas que a menudo salen emparejadas, de donde le viene el nombre. Forma parte de los pastizales efímeros que se secan en cuanto llega el calor.",
+    "tips": [
+      "Cabezuelas pequeñas y peludas, con frecuencia de dos en dos",
+      "Planta anual y menuda, tendida por el suelo",
+      "Hojas de tres foliolos, típicas de trébol"
+    ]
+  },
+  "Erodium foetidum": {
+    "group": "Hierba",
+    "habitat": "Grietas y repisas de roquedos calizos",
+    "seasonality": "Primavera y verano",
+    "description": "Geranio rupícola que forma rosetas de hojas recortadas y algo pegajosas, con flores blancas o rosadas veteadas. Como todos los erodios, sus frutos rematan en un pico largo que se enrosca al secarse y va clavando la semilla en las grietas.",
+    "tips": [
+      "Rosetas de hojas recortadas encajadas en la roca",
+      "Frutos con pico largo que se enrosca en espiral",
+      "Olor desagradable al estrujar las hojas"
+    ]
+  },
+  "Thymus antoninae": {
+    "group": "Mata aromática",
+    "habitat": "Tomillares y pastizales pedregosos de montaña sobre calizas",
+    "seasonality": "Primavera y verano",
+    "description": "Tomillo endémico del sureste ibérico, de área muy restringida, que forma matitas bajas y grisáceas con espigas de flores rosadas o blanquecinas. Su rareza y la fragmentación de su hábitat lo convierten en una de las plantas más vulnerables del grupo.",
+    "tips": [
+      "Mata baja y grisácea, de hojas muy pequeñas",
+      "Espigas cortas de flores rosadas o blancas",
+      "Aroma a tomillo, más suave que el de sus parientes comunes"
+    ]
+  },
+  "Quercus lusitanica": {
+    "group": "Arbusto",
+    "habitat": "Matorral y claros de bosque sobre suelos silíceos o descarbonatados",
+    "seasonality": "Todo el año",
+    "description": "Roble enano que rara vez supera el medio metro y se extiende por rizomas formando manchas. Sus hojas son pequeñas, dentadas y algo coriáceas, y las bellotas, diminutas. Es un arbusto, no un árbol joven: nunca llega a levantar tronco.",
+    "tips": [
+      "Porte muy bajo, casi rastrero, en manchas extensas",
+      "Hojas pequeñas y dentadas, algo rígidas",
+      "Bellotas muy pequeñas, casi sentadas en la rama"
+    ]
+  },
+  "Erinacea anthyllis": {
+    "group": "Mata",
+    "habitat": "Crestas ventosas, pastizales pedregosos y matorral almohadillado de montaña",
+    "seasonality": "Primavera",
+    "description": "Leguminosa que forma cojines rígidos y espinosos, una arquitectura que le permite resistir el viento, el frío y el pisoteo en las cumbres. En primavera se cubre de flores azul violeta que contrastan con el verde grisáceo de las espinas.",
+    "tips": [
+      "Cojín compacto y espinoso, duro al tacto",
+      "Flores azul violeta sobre un almohadón de espinas",
+      "En crestas y collados expuestos al viento"
+    ]
+  },
+  "Thymus membranaceus": {
+    "group": "Mata aromática",
+    "habitat": "Tomillares y matorral raso sobre suelos calizos secos",
+    "seasonality": "Primavera",
+    "description": "Tomillo endémico del sureste ibérico, fácil de reconocer por unas brácteas grandes, blancas y membranosas que rodean la inflorescencia y parecen pétalos. Ese conjunto vistoso, más que las flores en sí, es lo que atrae a los insectos.",
+    "tips": [
+      "Brácteas blancas grandes y papiráceas rodeando la flor",
+      "Cabezuelas terminales muy vistosas y redondeadas",
+      "Aroma intenso a tomillo al frotar"
+    ]
+  },
+  "Peucedanum officinale": {
+    "group": "Hierba",
+    "habitat": "Herbazales, claros de matorral y bordes de bosque sobre suelos profundos",
+    "seasonality": "Verano",
+    "description": "Umbelífera robusta que levanta tallos de más de un metro rematados en grandes umbelas de flores amarillas. Sus hojas están divididas muchas veces en segmentos estrechos y largos. Es planta nutricia de varias mariposas.",
+    "tips": [
+      "Umbelas amarillas amplias sobre tallos altos",
+      "Hojas divididas en segmentos muy finos y largos",
+      "Cepa gruesa y leñosa en la base"
+    ]
+  },
+  "Linaria aeruginea": {
+    "group": "Hierba",
+    "habitat": "Pedregales, gravas y taludes móviles de montaña",
+    "seasonality": "Primavera y verano",
+    "description": "Linaria de tallos tendidos y hojas algo carnosas de un verde azulado, con flores de colores muy variables —del amarillo al pardo violáceo, a veces bicolores— provistas de un espolón. Vive en pedregales sueltos, donde pocas plantas se asientan.",
+    "tips": [
+      "Color de la flor muy variable, a menudo bicolor",
+      "Follaje verde azulado y algo carnoso",
+      "Sobre gravas y pedregales sueltos"
+    ]
+  },
+  "Acer monspessulanum": {
+    "group": "Árbol",
+    "habitat": "Barrancos, umbrías y bosques mixtos sobre suelos frescos y calizos",
+    "seasonality": "Todo el año, con color otoñal marcado",
+    "description": "Arce pequeño de hojas coriáceas divididas en tres lóbulos redondeados, mucho menores que las de otros arces. En otoño vira a tonos amarillos y rojizos que destacan en las umbrías. Sus frutos son sámaras dobles con las alas casi paralelas.",
+    "tips": [
+      "Hojas de tres lóbulos redondeados, pequeñas y duras",
+      "Sámaras dobles con las alas casi juntas y paralelas",
+      "Color otoñal amarillo y rojizo en barrancos umbríos"
+    ]
+  },
+  "Limodorum abortivum": {
+    "group": "Orquídea",
+    "habitat": "Pinares y bosques con hojarasca, en media sombra",
+    "seasonality": "Primavera y principio de verano",
+    "description": "Orquídea sin apenas clorofila que emerge del suelo como un tallo violáceo con las hojas reducidas a escamas. Se alimenta a través de hongos conectados a las raíces de los árboles, así que no depende de la luz. Muchos años ni siquiera llega a abrir las flores.",
+    "tips": [
+      "Tallo violáceo entero, sin hojas verdes",
+      "Aparece de golpe entre la hojarasca del pinar",
+      "Flores grandes de color lila que a veces no llegan a abrirse"
+    ]
+  },
+  "Convolvulus althaeoides": {
+    "group": "Hierba",
+    "habitat": "Ribazos, cunetas, cultivos y claros de matorral",
+    "seasonality": "Primavera y verano",
+    "description": "Correhuela trepadora de flores rosadas grandes y llamativas, con hojas muy variables: las de abajo casi enteras y las de arriba profundamente divididas y plateadas. Se enreda en la vegetación de ribazos y márgenes.",
+    "tips": [
+      "Flores rosa intenso en embudo, grandes y vistosas",
+      "Hojas superiores muy recortadas y de aspecto plateado",
+      "Tallos volubles que se enredan en otras plantas"
+    ]
+  },
+  "Colutea arborescens": {
+    "group": "Arbusto",
+    "habitat": "Bordes de bosque, barrancos y matorral sobre suelos frescos",
+    "seasonality": "Primavera y verano",
+    "description": "Leguminosa arbustiva de flores amarillas y hojas compuestas, célebre por sus frutos: vainas infladas como globos de papel que estallan con un chasquido al apretarlas, de donde le viene el nombre de espantalobos.",
+    "tips": [
+      "Vainas infladas y traslúcidas, como globos",
+      "Flores amarillas de forma amariposada",
+      "Hojas compuestas por varios pares de foliolos redondeados"
+    ]
+  },
+  "Erodium saxatile": {
+    "group": "Hierba",
+    "habitat": "Fisuras y repisas de roquedos calizos",
+    "seasonality": "Primavera",
+    "description": "Geranio rupícola de rosetas compactas y hojas divididas y algo peludas, con flores rosadas o blanquecinas de venas marcadas. Vive encajado en las grietas de los cantiles, donde encuentra humedad y escapa de los herbívoros.",
+    "tips": [
+      "Rosetas apretadas metidas en la grieta de la roca",
+      "Flores rosadas con venas más oscuras",
+      "Frutos con pico largo que se enrolla al secarse"
+    ]
+  },
+  "Ophrys lutea": {
+    "group": "Orquídea",
+    "habitat": "Pastizales, claros de matorral y tomillares sobre suelos calizos",
+    "seasonality": "Primavera",
+    "description": "Orquídea que engaña a los insectos: su labelo imita el cuerpo de una abeja hembra, con un ancho borde amarillo y una mancha central azulada y aterciopelada. Los machos intentan copular con la flor y salen cargados de polen.",
+    "tips": [
+      "Labelo con ancho reborde amarillo brillante",
+      "Mancha central azulada y aterciopelada, como un espejo",
+      "Flores pocas y espaciadas en un tallo corto"
+    ]
+  },
+  "Poterium ancistroides": {
+    "group": "Hierba",
+    "habitat": "Roquedos, pedregales y pastizales pedregosos de montaña",
+    "seasonality": "Primavera",
+    "description": "Pimpinela de base leñosa y hojas divididas en foliolos pequeños y dentados, con cabezuelas globosas de flores verdosas y rojizas que carecen de pétalos. Crece agarrada a la roca y a los pedregales calizos.",
+    "tips": [
+      "Cabezuelas globosas verdosas o rojizas, sin pétalos",
+      "Hojas divididas en muchos foliolos dentados",
+      "Base leñosa y porte compacto sobre roca"
+    ]
+  },
+  "Helianthemum viscarium": {
+    "group": "Mata",
+    "habitat": "Tomillares y matorral raso sobre margas y suelos yesosos",
+    "seasonality": "Primavera",
+    "description": "Jarilla pequeña y pegajosa, con hojas estrechas y tallos cubiertos de pelos glandulosos que retienen el polvo. Sus flores amarillas duran apenas unas horas y se renuevan cada día. Es un endemismo del sureste ibérico ligado a suelos margosos.",
+    "tips": [
+      "Tallos pegajosos, con polvo y arena adheridos",
+      "Flores amarillas efímeras, de un solo día",
+      "Sobre margas y yesos, en terreno claro"
+    ]
+  },
+  "Epipactis kleinii": {
+    "group": "Orquídea",
+    "habitat": "Pinares y bosques secos con hojarasca, en media sombra",
+    "seasonality": "Primavera y principio de verano",
+    "description": "Orquídea forestal de tallo delgado y hojas estrechas dispuestas en dos filas, con flores pequeñas de tonos blanquecinos y rosados. Es discreta y se pasa por alto con facilidad entre la hojarasca del pinar.",
+    "tips": [
+      "Hojas estrechas alineadas en dos filas a lo largo del tallo",
+      "Flores pequeñas y colgantes, blanquecinas o rosadas",
+      "Crece dispersa entre la hojarasca de pinares y bosques secos"
+    ]
+  },
+  "Coronilla juncea": {
+    "group": "Arbusto",
+    "habitat": "Matorral seco y laderas soleadas sobre suelos pedregosos",
+    "seasonality": "Primavera",
+    "description": "Leguminosa de tallos verdes, largos y flexibles, casi sin hojas —que caen pronto para ahorrar agua—, rematados en umbelas de flores amarillas. Sus frutos son legumbres articuladas que se rompen en segmentos con una semilla cada uno.",
+    "tips": [
+      "Tallos verdes y juncosos, casi sin hojas",
+      "Umbelas de flores amarillas en el extremo",
+      "Legumbres articuladas, como collares de cuentas"
+    ]
+  },
+  "Ammoides pusilla": {
+    "group": "Hierba",
+    "habitat": "Pastizales anuales, claros de matorral y suelos removidos",
+    "seasonality": "Primavera",
+    "description": "Umbelífera anual y menuda, con hojas divididas en segmentos filiformes y pequeñas umbelas de flores blancas. Desprende un olor aromático fuerte al estrujarla. Forma parte de las comunidades efímeras que aparecen tras las lluvias de primavera.",
+    "tips": [
+      "Hojas divididas en segmentos como hilos",
+      "Umbelas blancas pequeñas y de pocos radios",
+      "Olor aromático marcado al estrujar la planta"
+    ]
+  },
+  "Athamanta hispanica": {
+    "group": "Hierba",
+    "habitat": "Fisuras y repisas de roquedos calizos de montaña",
+    "seasonality": "Verano",
+    "description": "Umbelífera rupícola de hojas muy divididas y cubiertas de pelos, con umbelas de flores blancas sostenidas por tallos finos. Es un endemismo ibérico restringido a cantiles calizos del sureste, donde forma pequeñas poblaciones aisladas.",
+    "tips": [
+      "Hojas muy divididas y con pelos, de aspecto grisáceo",
+      "Umbelas blancas pequeñas, en pared rocosa",
+      "Crece encajada en fisuras, colgando del cantil"
+    ]
+  },
+  "Dianthus broteri": {
+    "group": "Hierba",
+    "habitat": "Pastizales secos, arenales y claros de matorral sobre suelos pobres",
+    "seasonality": "Primavera y verano",
+    "description": "Clavellina silvestre de tallos finos y hojas muy estrechas, con flores rosadas de pétalos profundamente recortados en flecos. El cáliz es un tubo largo y estrecho del que asoman los pétalos. Desprende una fragancia suave, más perceptible al atardecer.",
+    "tips": [
+      "Pétalos rosados recortados en flecos finos",
+      "Cáliz en tubo largo y delgado",
+      "Hojas muy estrechas, casi como agujas"
+    ]
+  },
+  "Teucrium thymifolium": {
+    "group": "Mata aromática",
+    "habitat": "Roquedos, pedregales y matorral raso sobre calizas de montaña",
+    "seasonality": "Primavera y verano",
+    "description": "Mata pequeña y grisácea de hojas diminutas y enrolladas parecidas a las del tomillo, con flores de un rosa purpúreo. Como todos los teucrios, la flor carece de labio superior, dejando los estambres al descubierto. Es un endemismo del sureste ibérico.",
+    "tips": [
+      "Hojas minúsculas y enrolladas, como de tomillo",
+      "Flores rosa púrpura sin labio superior",
+      "Sobre roca y pedregal calizo, en matas bajas"
+    ]
+  },
+  "Iris lutescens": {
+    "group": "Planta bulbosa",
+    "habitat": "Pastizales pedregosos, ribazos y claros de matorral sobre calizas",
+    "seasonality": "Primavera",
+    "description": "Lirio enano de rizoma superficial y hojas en abanico, con flores grandes que pueden ser amarillas o violetas en la misma población. Los pétalos externos llevan una cresta de pelos que guía a los abejorros hacia el néctar.",
+    "tips": [
+      "Flores grandes sobre un tallo muy corto, casi a ras de suelo",
+      "Cresta de pelos en los pétalos externos",
+      "Hojas planas dispuestas en abanico"
+    ]
+  },
+  "Ononis fruticosa": {
+    "group": "Arbusto",
+    "habitat": "Pedregales, taludes y matorral sobre suelos calizos y margosos",
+    "seasonality": "Primavera y verano",
+    "description": "Leguminosa arbustiva de hojas con tres foliolos estrechos y dentados y racimos de flores rosadas con venas más oscuras. Es una planta pionera que fija taludes y pedregales, donde sus raíces profundas aguantan el movimiento del sustrato.",
+    "tips": [
+      "Flores rosadas con venas oscuras bien marcadas",
+      "Hojas de tres foliolos estrechos y dentados",
+      "Coloniza taludes y pedregales sueltos"
+    ]
+  },
+  "Klasea flavescens": {
+    "group": "Hierba",
+    "habitat": "Pastizales secos, claros de matorral y taludes sobre suelos margosos",
+    "seasonality": "Primavera y verano",
+    "description": "Compuesta de hojas divididas y algo espinosas, con capítulos grandes de flores amarillas rodeados de brácteas secas y brillantes. A distancia recuerda a un cardo, pero sus hojas pinchan mucho menos.",
+    "tips": [
+      "Capítulos amarillos grandes y solitarios",
+      "Brácteas secas y algo brillantes bajo la flor",
+      "Hojas divididas, con dientes poco punzantes"
+    ]
+  },
+  "Cephalanthera longifolia": {
+    "group": "Orquídea",
+    "habitat": "Bosques y pinares con sombra y hojarasca, sobre suelos calizos",
+    "seasonality": "Primavera",
+    "description": "Orquídea de porte erguido con hojas largas y estrechas dispuestas en dos filas y flores blancas que apenas llegan a abrirse del todo. Vive en la penumbra del bosque y depende de hongos del suelo para germinar y crecer.",
+    "tips": [
+      "Flores blancas semicerradas, en espiga laxa",
+      "Hojas largas y estrechas en dos filas",
+      "En sombra de bosque, sobre hojarasca"
+    ]
+  },
+  "Asplenium petrarchae": {
+    "group": "Helecho",
+    "habitat": "Grietas de roquedos calizos secos y soleados, y muros antiguos",
+    "seasonality": "Todo el año",
+    "description": "Helecho pequeño que sobrevive en fisuras de roca caliza expuestas al sol, algo insólito en un grupo que suele buscar la humedad. Sus frondes son cortas, divididas y cubiertas de pelos glandulosos. En sequía se enrolla y parece muerto, y revive con la lluvia.",
+    "tips": [
+      "Frondes pequeñas, divididas y con pelos pegajosos",
+      "En grietas de roca seca y soleada, no en umbrías húmedas",
+      "Se reseca y enrolla en verano, y rebrota con la lluvia"
+    ]
+  },
+  "Prunus prostrata": {
+    "group": "Arbusto",
+    "habitat": "Crestas, pedregales y matorral almohadillado de alta montaña",
+    "seasonality": "Primavera",
+    "description": "Cerezo enano de porte rastrero y ramas retorcidas, adaptado al viento y al frío de las cumbres. Florece en rosa antes de echar la hoja y da drupas rojas pequeñas y ácidas. Rara vez levanta más de un palmo del suelo.",
+    "tips": [
+      "Porte rastrero y retorcido, pegado a la roca",
+      "Flores rosadas antes de que salgan las hojas",
+      "Frutillos rojos parecidos a cerezas diminutas"
+    ]
+  },
+  "Cotoneaster granatensis": {
+    "group": "Arbusto",
+    "habitat": "Roquedos, pedregales y matorral de montaña, a menudo en umbría",
+    "seasonality": "Primavera (floración) y otoño (fruto)",
+    "description": "Arbusto de hojas ovaladas, verdes por el haz y blanquecinas y afieltradas por el envés, con flores blancas o rosadas agrupadas en corimbos. En otoño da frutos rojos que atraen a zorzales y currucas. Es un endemismo del sur y sureste peninsular.",
+    "tips": [
+      "Envés de la hoja blanquecino y afieltrado",
+      "Frutos rojos pequeños agrupados, muy visibles en otoño",
+      "Porte arbustivo entre rocas, a menudo colgante"
+    ]
+  },
+  "Artemisia reptans": {
+    "group": "Mata",
+    "habitat": "Pedregales, gravas y suelos removidos de montaña",
+    "seasonality": "Verano y otoño",
+    "description": "Artemisia de porte rastrero que se extiende por el suelo formando alfombras, con hojas divididas y cubiertas de pelo blanco. Sus capítulos son pequeños y poco vistosos, como en casi todas las artemisias. Desprende un olor amargo característico.",
+    "tips": [
+      "Porte rastrero, extendiéndose por el suelo",
+      "Hojas divididas y cubiertas de pelusa blanca",
+      "Olor amargo y aromático al frotar"
+    ]
+  },
+  "Silene mellifera": {
+    "group": "Hierba",
+    "habitat": "Roquedos, taludes y claros de matorral sobre suelos calizos",
+    "seasonality": "Primavera y verano",
+    "description": "Silene de flores blancas cuyos pétalos se abren al atardecer y desprenden un perfume dulce e intenso que atrae a polillas nocturnas. El cáliz es un tubo alargado con venas marcadas. De día las flores suelen aparecer mustias y cerradas.",
+    "tips": [
+      "Flores blancas que abren al anochecer y huelen intensamente",
+      "Cáliz tubular con venas bien marcadas",
+      "De día las flores parecen marchitas"
+    ]
+  },
+  "Cephalanthera damasonium": {
+    "group": "Orquídea",
+    "habitat": "Bosques umbríos con hojarasca sobre suelos calizos",
+    "seasonality": "Primavera",
+    "description": "Orquídea de bosque con hojas anchas y ovaladas y flores de un blanco cremoso que casi nunca llegan a abrirse por completo. Se autopoliniza dentro de la flor cerrada, lo que la hace independiente de los insectos.",
+    "tips": [
+      "Flores color marfil que apenas se entreabren",
+      "Hojas anchas y ovaladas, no estrechas",
+      "En bosque umbrío, sobre hojarasca"
+    ]
+  },
+  "Erodium celtibericum": {
+    "group": "Hierba",
+    "habitat": "Pedregales calizos y crestas de montaña",
+    "seasonality": "Primavera y verano",
+    "description": "Geranio de montaña que forma rosetas compactas de hojas plateadas y muy divididas, con flores rosadas de venas marcadas. Es un endemismo ibérico ligado a pedregales calizos de altura, con poblaciones pequeñas y aisladas.",
+    "tips": [
+      "Rosetas densas de hojas plateadas y muy divididas",
+      "Flores rosadas con venas más oscuras",
+      "En pedregales de altura, sobre caliza"
+    ]
+  },
+  "Fritillaria lusitanica": {
+    "group": "Planta bulbosa",
+    "habitat": "Pastizales, claros de matorral y pedregales de montaña",
+    "seasonality": "Primavera",
+    "description": "Bulbosa de tallo fino y hojas estrechas que cuelga una o dos flores en forma de campana, con un jaspeado pardo y verdoso que recuerda a un tablero de ajedrez. Pasa desapercibida entre la hierba pese a su forma llamativa.",
+    "tips": [
+      "Flor colgante en campana con dibujo ajedrezado",
+      "Tallo fino con pocas hojas estrechas",
+      "Colores apagados que la camuflan en el pastizal"
+    ]
+  },
+  "Capra pyrenaica": {
+    "group": "Mamífero ungulado",
+    "habitat": "Roquedos, canchales y laderas escarpadas con matorral",
+    "seasonality": "Todo el año",
+    "description": "Bóvido de montaña perfectamente adaptado a la roca: pezuñas con borde duro y almohadilla blanda que agarra en pendientes imposibles. Los machos lucen cuernos grandes, curvados hacia atrás y con abultamientos; las hembras los tienen cortos y rectos.",
+    "tips": [
+      "Machos con cuernos grandes curvados hacia atrás",
+      "Se mueve por cortados donde nada más puede subir",
+      "Excrementos en montoncitos de bolitas cilíndricas"
+    ]
+  },
+  "Thymus zygis": {
+    "group": "Mata aromática",
+    "habitat": "Tomillares, pastizales secos y claros de matorral sobre suelos pobres",
+    "seasonality": "Primavera y verano",
+    "description": "Tomillo de hojas estrechas y con pelos largos en la base, que forma matas bajas y ramificadas. Es la especie de la que se extrae buena parte del tomillo de uso culinario y de la que se destila aceite esencial rico en timol.",
+    "tips": [
+      "Hojas estrechas con pelos largos y blancos en la base",
+      "Espigas de flores blancas o rosadas al final de las ramas",
+      "Aroma potente, el clásico del tomillo de cocina"
+    ]
+  },
+  "Potentilla caulescens": {
+    "group": "Hierba",
+    "habitat": "Fisuras y repisas de roquedos calizos, sobre todo en umbría",
+    "seasonality": "Verano",
+    "description": "Planta rupícola de hojas divididas en cinco foliolos dentados y flores blancas de cinco pétalos algo separados entre sí. Crece colgando de las grietas de los cantiles calizos, formando matas laxas.",
+    "tips": [
+      "Hojas divididas en cinco foliolos dentados",
+      "Flores blancas con los pétalos algo separados",
+      "Cuelga de fisuras en pared caliza"
+    ]
+  },
+  "Erica erigena": {
+    "group": "Arbusto",
+    "habitat": "Suelos húmedos, bordes de curso de agua y zonas de rezume",
+    "seasonality": "Invierno y primavera",
+    "description": "Brezo de hojas diminutas en verticilos y flores rosadas en forma de campanilla que se abren en pleno invierno. A diferencia de la mayoría de brezos, necesita humedad constante en el suelo, lo que restringe mucho su presencia.",
+    "tips": [
+      "Flores rosadas acampanadas, en invierno",
+      "Hojas minúsculas dispuestas en anillos",
+      "Siempre en suelos con humedad permanente"
+    ]
+  },
+  "Neotinea maculata": {
+    "group": "Orquídea",
+    "habitat": "Pastizales, claros de matorral y pinares sobre suelos calizos",
+    "seasonality": "Primavera",
+    "description": "Orquídea discreta y pequeña, con una espiga densa de flores blanquecinas o rosadas que apenas se abren. Sus hojas basales llevan a menudo un moteado pardo violáceo que le da el nombre. Pasa desapercibida salvo que se busque a propósito.",
+    "tips": [
+      "Espiga apretada de flores muy pequeñas y semicerradas",
+      "Hojas basales con manchas pardas o violáceas",
+      "Planta menuda, de pocos centímetros"
+    ]
+  },
+  "Epipactis atrorubens": {
+    "group": "Orquídea",
+    "habitat": "Pedregales, claros de bosque y taludes calizos de montaña",
+    "seasonality": "Verano",
+    "description": "Orquídea de flores de un rojo vinoso oscuro que desprenden aroma a vainilla y atraen a avispas. Crece en pedregales y claros calizos, a menudo en pequeños grupos. Es una de las orquídeas de floración más tardía.",
+    "tips": [
+      "Flores de rojo vinoso oscuro, muy características",
+      "Aroma dulce a vainilla al acercarse",
+      "En pedregales y taludes calizos, en verano"
+    ]
+  }
+}
