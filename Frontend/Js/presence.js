@@ -19,6 +19,7 @@
 import { API_BASE, state } from './state.js';
 import { pointInGeometry, haversineMeters, geoUnavailableReason } from './util.js';
 import { presenceBar, presenceText, presenceAction } from './dom.js';
+import { placeUserMarker, clearUserMarker } from './map.js';
 
 // --- Reglas (espejo de Backend/Lib/presence.php, solo para predecir y explicar) -------------------
 const MIN_FIXES = 3;
@@ -297,18 +298,31 @@ export async function notePresenceFix(lat, lng, accuracy) {
 // --- Seguimiento propio (cuando el modo explorador está apagado) ----------------------------------
 // El modo explorador ya sigue la posición con alta precisión, pero es opcional y gasta batería: si
 // solo se pudiera verificar con él encendido, mucha gente marcaría cosas en el campo y no le
-// contarían. Este seguimiento es el mínimo imprescindible: baja precisión, sin dibujar nada en el
-// mapa, y solo si el permiso de ubicación YA estaba concedido (nunca se pide solo).
-async function permissionGranted() {
-  if (!navigator.permissions || !navigator.permissions.query) return false;
-  try { return (await navigator.permissions.query({ name: 'geolocation' })).state === 'granted'; }
-  catch (e) { return false; }
+// contarían. Este seguimiento es el mínimo imprescindible: baja precisión y solo si el permiso de
+// ubicación YA estaba concedido (nunca se pide solo).
+// Además de verificar la presencia, cada posición pinta el punto de "estás aquí" en el mapa: es el
+// mismo dato y ya lo teníamos, así que tenerlo y no enseñarlo era dejar al usuario sin saber dónde
+// estaba dentro del parque. Dibujar va SIEMPRE por delante de notePresenceFix, que descarta
+// posiciones a propósito (fuera del límite, o demasiado seguidas): el punto tiene que moverse
+// contigo aunque esa posición no se envíe a ninguna parte.
+// 'granted' | 'denied' | 'prompt' | 'unknown' (navegadores sin Permissions API, p. ej. Safari viejo).
+async function permissionState() {
+  if (!navigator.permissions || !navigator.permissions.query) return 'unknown';
+  try { return (await navigator.permissions.query({ name: 'geolocation' })).state; }
+  catch (e) { return 'unknown'; }
 }
 
+// Un único watchPosition para las dos cosas que dependen de saber dónde estás: pintar el punto y
+// verificar la presencia. Un espacio de ficha base no tiene catálogo que verificar, pero sí mapa y
+// límite oficial, así que allí el watch se queda solo con el punto.
 function startWatch() {
   if (live.watchId != null || geoUnavailableReason()) return;
   live.watchId = navigator.geolocation.watchPosition(
-    pos => notePresenceFix(pos.coords.latitude, pos.coords.longitude, pos.coords.accuracy),
+    pos => {
+      const { latitude: lat, longitude: lng, accuracy } = pos.coords;
+      placeUserMarker(lat, lng, accuracy);
+      if (state.parkLevel !== 'basic') notePresenceFix(lat, lng, accuracy);
+    },
     () => { /* sin señal: la barra se queda como esté, no hay nada que explicar todavía */ },
     { enableHighAccuracy: false, maximumAge: 30000, timeout: 60000 }
   );
@@ -319,7 +333,7 @@ function stopWatch() {
   live.watchId = null;
 }
 
-/** Enciende el registro de presencia a petición del usuario (botón de la barra). */
+/** Enciende el registro de presencia (botón de la barra, o al entrar al parque si nunca se decidió). */
 export function enablePresenceTracking() {
   const blocked = geoUnavailableReason();
   if (blocked) {
@@ -327,9 +341,13 @@ export function enablePresenceTracking() {
     renderBar();
     return;
   }
-  // Petición explícita: aquí sí se pide el permiso, porque lo ha pedido la persona.
   navigator.geolocation.getCurrentPosition(
-    pos => { notePresenceFix(pos.coords.latitude, pos.coords.longitude, pos.coords.accuracy); startWatch(); },
+    pos => {
+      const { latitude: lat, longitude: lng, accuracy } = pos.coords;
+      placeUserMarker(lat, lng, accuracy);
+      if (state.parkLevel !== 'basic') notePresenceFix(lat, lng, accuracy);
+      startWatch();
+    },
     err => {
       live.status = { active: false, verified: false, blocked: err && err.code === 1
         ? 'Sin permiso de ubicación no se pueden verificar tus salidas.' : 'No se pudo obtener tu posición.', fixCount: 0, dwellSeconds: 0 };
@@ -412,27 +430,38 @@ export async function startPresence(parkSlug, handlers) {
   live.parkSlug = parkSlug;
   live.status = null;
   renderBar();
-  if (!parkSlug || state.parkLevel === 'basic') return;
+  if (!parkSlug) return;
 
-  // Estado ya conocido por el servidor (p. ej. la visita de hace un rato sigue abierta).
-  if (state.userId != null && NaturDexOffline.isOnline()) {
-    try {
-      const res = await fetch(API_BASE + '/presence.php?park=' + encodeURIComponent(parkSlug), { signal: apiSignal() });
-      if (res.ok) adoptServerStatus(parkSlug, await res.json());
-    } catch (e) { /* sin red: se usa lo local */ }
+  // La verificación de presencia solo aplica a un espacio con catálogo: en uno de ficha base no hay
+  // nada que se pueda ganar, así que no se registra visita. El punto del mapa sí se pinta en los dos.
+  if (state.parkLevel !== 'basic') {
+    // Estado ya conocido por el servidor (p. ej. la visita de hace un rato sigue abierta).
+    if (state.userId != null && NaturDexOffline.isOnline()) {
+      try {
+        const res = await fetch(API_BASE + '/presence.php?park=' + encodeURIComponent(parkSlug), { signal: apiSignal() });
+        if (res.ok) adoptServerStatus(parkSlug, await res.json());
+      } catch (e) { /* sin red: se usa lo local */ }
+    }
+    if (!live.status) {
+      const open = localVisits().filter(v => v.park === parkSlug)
+        .filter(v => (Date.now() - Date.parse(v.lastFixAt)) <= SESSION_GAP_S * 1000).pop();
+      live.status = localStatusFrom(open);
+    }
+    renderBar();
   }
-  if (!live.status) {
-    const open = localVisits().filter(v => v.park === parkSlug)
-      .filter(v => (Date.now() - Date.parse(v.lastFixAt)) <= SESSION_GAP_S * 1000).pop();
-    live.status = localStatusFrom(open);
-  }
-  renderBar();
 
-  if (await permissionGranted()) startWatch();
+  // Ubicación. Concedida: se sigue en silencio. Sin decidir todavía: se pide UNA vez, aquí, al
+  // entrar al parque — es el momento en que empieza a tener sentido, y sin ella no hay punto de
+  // "estás aquí" en el mapa ni salidas verificadas, que son media app. Denegada: no se vuelve a
+  // pedir nunca; la barra de presencia sigue ofreciendo el botón a quien cambie de idea.
+  const permission = await permissionState();
+  if (permission === 'granted') startWatch();
+  else if (permission !== 'denied') enablePresenceTracking();
 }
 
 export function stopPresence() {
   stopWatch();
+  clearUserMarker();
   live.parkSlug = null;
   live.status = null;
   renderBar();

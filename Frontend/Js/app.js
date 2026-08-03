@@ -33,8 +33,7 @@ import {
   renderBasicPark, renderAccountProgress
 } from './render.js';
 import {
-  map, setMapHandlers, ensureMapSized, soloHabitat, setupParkBaseLayer, applyBaseChoice,
-  focusOn, reframe,
+  map, setMapHandlers, ensureMapSized, soloHabitat, setupParkBaseLayer, applyBaseChoice, focusOn,
   renderMarkers, renderPoiMarkers, renderTrails, renderProtectedAreas, renderHabitatZones
 } from './map.js';
 import { initExplorer } from './explorer.js';
@@ -298,11 +297,8 @@ function setMobileTab(tab) {
     closeDetailSheet();
     ensureMapSized(); // el mapa estaba display:none; Leaflet debe recalcular el tamaño del contenedor
   } else {
-    setView(tab); // 'catalog' | 'progress' — setView ya sincroniza la nav inferior
+    setView(tab); // 'catalog' | 'invasoras' | 'progress' — setView ya sincroniza la nav inferior
   }
-  // Cambiar de pestaña hace aparecer o desaparecer la hoja, y con ella la mitad del mapa que
-  // tapaba: lo que se estaba enseñando se recoloca para el hueco nuevo (ver map.js · reframe).
-  reframe();
 }
 
 function openDetailSheet() {
@@ -643,6 +639,11 @@ async function startParkExperience(slug, user) {
   // setView reinicia la vista al catálogo (o a su aviso, si el espacio es de ficha base) al entrar
   // a un parque; así cambiar de parque nunca deja abierta una pestaña que no aplica al nuevo.
   setView('catalog');
+  // ...pero en móvil lo primero que se enseña es el MAPA, no el catálogo: al llegar a un parque lo
+  // que se quiere saber es dónde estás y qué tienes alrededor. El catálogo queda ya montado detrás,
+  // a un toque de la nav inferior. En escritorio no aplica: allí el mapa y el catálogo se ven a la
+  // vez, y esta pestaña no existe.
+  if (mobileMedia.matches) setMobileTab('map');
   if (state.parkLevel !== 'basic') renderDetail();
   refreshLayersPanel();
   state.parkWasComplete = computeProgress().parkComplete;
