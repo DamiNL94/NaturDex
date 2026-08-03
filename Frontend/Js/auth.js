@@ -17,9 +17,14 @@
   var currentUser = readCachedUser();
 
   // --- Utilidades de pantalla -----------------------------------------------------------------
-  // Expuesta para que app.js (módulo ES, sin acceso a este cierre) pueda mostrar la pantalla de
-  // progreso de cuenta sin duplicar la lógica de mostrar/ocultar `.screen` ni el manejo de foco.
-  window.naturdexShowScreen = showScreen;
+  // Expuesta para que app.js y profile.js (módulos ES, sin acceso a este cierre) puedan abrir las
+  // pantallas de progreso de cuenta y de perfil sin duplicar ni el mostrar/ocultar `.screen`, ni el
+  // manejo de foco, ni el apilado en la pila de navegación.
+  window.naturdexShowScreen = function (id) {
+    if (id === 'screen-account') { pushScreen('screen-account', overlayClose(accountReturnTo)); return; }
+    if (id === 'screen-profile') { pushScreen('screen-profile', overlayClose(profileReturnTo)); return; }
+    showScreen(id);
+  };
   var screenShownOnce = false;
   function showScreen(id) {
     var screens = document.querySelectorAll('.screen');
@@ -42,6 +47,42 @@
     screenShownOnce = true;
   }
   function $(sel) { return document.querySelector(sel); }
+
+  // --- Navegación: cada pantalla es un paso deshacible -------------------------------------------
+  // showScreen() solo pinta. Todo cambio de pantalla pasa además por la pila de nav.js, que le da a
+  // cada paso su entrada en el historial: así el botón «atrás» del móvil (y el gesto de deslizar
+  // desde el borde, que es como navega la mayoría de la gente) retrocede DENTRO de la app —parque →
+  // selector → portada— en vez de sacar al usuario de la web a la primera.
+  function nav() { return window.NaturDexNav || null; }
+
+  function pushScreen(id, onBack) {
+    var n = nav();
+    if (n) {
+      if (n.has('screen:' + id)) n.closeAbove('screen:' + id); // ya se estaba en ella: solo se cierra lo de encima
+      else n.open('screen:' + id, onBack);
+      // A partir del primer paso dentro de la app, salir pide una segunda pulsación (y se queda
+      // pedida aunque se vuelva a la portada). Quien acaba de aterrizar en la portada y se va sin
+      // tocar nada no se encuentra con ningún obstáculo: ahí el guardián sigue apagado.
+      n.setExitGuard(true);
+    }
+    showScreen(id);
+  }
+
+  // Cierre del primer nivel: volver a la portada.
+  function backToCover() {
+    if (window.naturdexStopPresence) window.naturdexStopPresence();
+    showScreen('screen-cover');
+  }
+
+  // Cierre de las pantallas que se abren ENCIMA de otra (perfil, progreso de cuenta): devuelven a
+  // donde estabas. Volver al parque exige recalcular el tamaño del mapa: estuvo oculto
+  // (display:none) y Leaflet no dibuja capas si midió el contenedor a cero.
+  function overlayClose(returnTo) {
+    return function () {
+      showScreen(returnTo);
+      if (returnTo === 'screen-park' && window.naturdexInvalidateMap) window.naturdexInvalidateMap();
+    };
+  }
 
   function readCachedUser() {
     try {
@@ -131,6 +172,9 @@
   async function logout() {
     try { await api('logout', 'POST'); } catch (e) {}
     setUser(null);
+    // Cerrar sesión sale de todo de una vez: la pila entera se vacía para que «atrás» no devuelva a
+    // pantallas de una sesión que ya no existe.
+    if (nav()) { nav().reset(); nav().setExitGuard(false); }
     showScreen('screen-cover');
   }
 
@@ -152,10 +196,8 @@
   }
 
   function closeProfile() {
-    // Volver al parque exige recalcular el tamaño del mapa: estuvo oculto (display:none) mientras
-    // el perfil estaba abierto y Leaflet no dibuja capas si midió el contenedor a cero.
-    showScreen(profileReturnTo);
-    if (profileReturnTo === 'screen-park' && window.naturdexInvalidateMap) window.naturdexInvalidateMap();
+    if (nav() && nav().close('screen:screen-profile')) return; // su cierre ya devuelve a donde estabas
+    overlayClose(profileReturnTo)();
   }
 
   // --- Progreso estatal (logros de cuenta) ------------------------------------------------------
@@ -166,25 +208,22 @@
 
   function openAccountProgress() {
     accountReturnTo = visibleScreenId();
-    var back = $('#backToSelectFromAccount');
-    if (back) back.textContent = accountReturnTo === 'screen-park' ? '← Volver al parque' : '← Parques';
+    // Solo la etiqueta: el icono de flecha del botón se queda donde está.
+    var back = $('#backToSelectFromAccount .back-btn-label');
+    if (back) back.textContent = accountReturnTo === 'screen-park' ? 'Volver al parque' : 'Parques';
     if (window.naturdexShowAccountProgress) window.naturdexShowAccountProgress(currentUser);
   }
 
   function closeAccountProgress() {
-    if (accountReturnTo === 'screen-park') {
-      showScreen('screen-park');
-      if (window.naturdexInvalidateMap) window.naturdexInvalidateMap();
-      return;
-    }
-    goToSelect();
+    if (nav() && nav().close('screen:screen-account')) return; // su cierre ya devuelve a donde estabas
+    overlayClose(accountReturnTo)();
   }
 
   // Abre el formulario de acceso en el modo pedido ('login' o 'register'). Lo usa el botón "Crear
   // una cuenta" que profile.js ofrece al invitado.
   function goToAuth(mode) {
     setAuthMode(mode === 'register' ? 'register' : 'login');
-    showScreen('screen-auth');
+    pushScreen('screen-auth', backToCover);
   }
 
   // API para los módulos ES (profile.js), que no comparten este cierre. Mismo patrón que
@@ -379,7 +418,7 @@
     setSelectStatus('Cargando el parque…');
     try {
       await window.startParkExperience(slug, currentUser);
-      showScreen('screen-park');
+      pushScreen('screen-park', restoreSelectScreen);
       if (window.naturdexInvalidateMap) window.naturdexInvalidateMap();
       setSelectStatus('');
       // Tramo del tutorial dentro del parque: solo la primera vez que este usuario entra a uno.
@@ -454,12 +493,10 @@
     img.src = src;
   }
 
-  async function goToSelect() {
+  // Contenido de la pantalla del selector, sin tocar la pila de navegación: lista de parques, mapa
+  // de España y preselección. Lo comparten la entrada al selector y la vuelta desde un parque.
+  async function fillSelectScreen() {
     updateUserLabels();
-    // Salir del parque apaga el registro de presencia: seguir gastando GPS en una pantalla que no
-    // es el parque no verifica nada y sí vacía la batería (app.js · presence.js).
-    if (window.naturdexStopPresence) window.naturdexStopPresence();
-    showScreen('screen-select');
     if (!registry) {
       try { registry = (await NaturDexOffline.fetchJsonCached('Data/parks-index.json')).data; }
       catch (e) { setSelectStatus('No se pudo cargar la lista de parques.', true); return; }
@@ -478,10 +515,40 @@
     if (window.naturdexTutorial) window.naturdexTutorial.maybeAutoStart('select', currentUser && currentUser.id);
   }
 
+  // Cierre del nivel «parque»: se vuelve al selector. No pasa por goToSelect() a propósito — la pila
+  // ya está desapilando este nivel y volver a entrar por la puerta grande sería una recursión.
+  function restoreSelectScreen() {
+    // Salir del parque apaga el registro de presencia: seguir gastando GPS en una pantalla que no
+    // es el parque no verifica nada y sí vacía la batería (app.js · presence.js).
+    if (window.naturdexStopPresence) window.naturdexStopPresence();
+    showScreen('screen-select');
+    setSelectStatus('');
+    fillSelectScreen();
+  }
+
+  async function goToSelect() {
+    var n = nav();
+    // Desde dentro de un parque, «← Parques» es exactamente el paso atrás que la pila ya sabe hacer
+    // (y su cierre deja el selector pintado): así el botón de la app y el del móvil hacen lo mismo.
+    if (n && n.has('screen:screen-park')) { n.close('screen:screen-park'); return; }
+    if (n && n.has('screen:screen-auth')) {
+      // Recién identificado: el formulario de acceso deja de formar parte del camino. Atrás desde el
+      // selector lleva a la portada, no de vuelta a un login ya resuelto.
+      n.closeAbove('screen:screen-auth');
+      n.replaceTop('screen:screen-select', backToCover);
+      n.setExitGuard(true);
+      showScreen('screen-select');
+    } else {
+      pushScreen('screen-select', backToCover);
+    }
+    if (window.naturdexStopPresence) window.naturdexStopPresence();
+    await fillSelectScreen();
+  }
+
   async function goFromCover() {
     // Si ya hay sesión (cacheada o del servidor), directo al selector; si no, al login.
     await refreshSession();
-    if (currentUser) goToSelect(); else showScreen('screen-auth');
+    if (currentUser) goToSelect(); else pushScreen('screen-auth', backToCover);
   }
 
   // --- Invitado (sin cuenta, sin backend) ------------------------------------------------------
@@ -503,7 +570,10 @@
     $('#coverStart').addEventListener('click', goFromCover);
     // Modo invitado desactivado: sus dos botones están comentados en index.html, así que aquí no
     // hay nada que cablear (ver enterAsGuest más arriba para reactivarlo).
-    $('#authBack').addEventListener('click', function () { showScreen('screen-cover'); });
+    $('#authBack').addEventListener('click', function () {
+      if (nav() && nav().close('screen:screen-auth')) return;
+      backToCover();
+    });
     document.querySelectorAll('.auth-tab').forEach(function (t) { t.addEventListener('click', function () { setAuthMode(t.dataset.mode); }); });
     $('#authForm').addEventListener('submit', submitAuth);
     $('#parkSelect').addEventListener('change', function (e) { choosePark(e.target.value); });
@@ -516,6 +586,13 @@
     $('#profileBtnSelect').addEventListener('click', openProfile);
     $('#backFromProfile').addEventListener('click', closeProfile);
     $('#backToParks').addEventListener('click', goToSelect);
+    // Gemelos de la barra superior del mapa (móvil): en la pestaña «Mapa» la barra lateral —donde
+    // viven los originales— está oculta, y sin estos dos botones no había salida ni acceso al perfil
+    // desde la primera pantalla que ve el usuario al entrar a un parque.
+    var backMap = $('#backToParksMap');
+    if (backMap) backMap.addEventListener('click', goToSelect);
+    var profileMap = $('#profileBtnMap');
+    if (profileMap) profileMap.addEventListener('click', openProfile);
     $('#accountProgressBtn').addEventListener('click', openAccountProgress);
     $('#accountProgressBtnPark').addEventListener('click', openAccountProgress);
     $('#backToSelectFromAccount').addEventListener('click', closeAccountProgress);
@@ -526,6 +603,9 @@
     });
 
     updateUserLabels();
+    // La pila arranca vacía en la portada: ahí «atrás» sale de NaturDex sin ceremonias, porque es
+    // el borde real de la app.
+    if (nav()) { nav().init(); nav().setExitGuard(false); }
     showScreen('screen-cover');
     NaturDexOffline.registerServiceWorker();
     fillCover();      // en segundo plano: la portada ya es usable con sus textos de reserva

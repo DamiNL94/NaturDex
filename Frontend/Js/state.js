@@ -31,6 +31,10 @@ export const state = {
   habitatFocus: null,
   detailMode: 'habitat',
   selectedHabitatId: null,
+  // Punto de interés cuya ficha se muestra en el panel de detalle (detailMode='poi'). Los POIs
+  // tenían su información en un globo del mapa; ahora comparten el mismo sitio que el resto de
+  // fichas, así que necesitan su propia selección.
+  selectedPoiId: null,
   // Nombre científico de la invasora cuya ficha se muestra en el panel de detalle (detailMode='invasora').
   selectedInvasora: null,
   markers: new Map(),

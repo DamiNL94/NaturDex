@@ -7,15 +7,15 @@
 // setMapHandlers(). Así render/app pueden cambiar sin tocar este módulo y no hay imports cíclicos.
 // ================================================================================================
 
-import { html, escapeHtml, kingdomEmoji, poiEmoji, poiImageSrc } from './util.js';
+import { html, escapeHtml, kingdomEmoji, poiEmoji } from './util.js';
 import { audioBlock } from './audio.js';
-import {
-  state, habitatSpeciesSeenCount, habitatAreaLabel, isHabitatComplete, speciesLatLng
-} from './state.js';
+import { state, isHabitatComplete, speciesLatLng } from './state.js';
 
 // --- Acciones de la app disparadas desde el mapa (las inyecta app.js) ----------------------------
 const handlers = {
-  onSelectSpecies: null, // (speciesId, focusMap) desde el popup/click de un marcador de especie
+  onSelectSpecies: null, // (speciesId, focusMap) al tocar un marcador de especie
+  onSelectPoi: null,     // (poiId) al tocar un punto de interés: abre su ficha en el panel/hoja
+  onSelectHabitat: null, // (habitatId) al tocar un polígono de hábitat: abre su ficha
   onFocusHabitat: null,  // (habitatId) desde el botón "Ver especies de este hábitat"
   onTogglePoiSeen: null  // (poiId) desde el botón "Marcar como visitado"
 };
@@ -134,6 +134,81 @@ function preferredBase() {
 export const map = L.map('map', { zoomControl: false, layers: [preferredBase()] }).setView([37.5016, -1.44925], 12);
 L.control.zoom({ position: 'bottomright' }).addTo(map);
 
+// --- Tocar fuera de una etiqueta la cierra --------------------------------------------------------
+// El mapa está cubierto de polígonos clicables (el límite del parque, los LIC/ZEPA, los hábitats),
+// así que "tocar fuera" de un globo abierto casi nunca caía en mapa vacío: caía en otro polígono,
+// que abría SU etiqueta. Desde fuera parecía que la etiqueta no se cerraba nunca y que la app iba
+// sola. Con este guardián, mientras haya algo abierto la siguiente pulsación solo cierra —el mismo
+// gesto de descarte que tiene cualquier hoja o menú—, y ya la siguiente vuelve a abrir cosas.
+let openPopup = null;
+map.on('popupopen', event => { openPopup = event.popup; });
+map.on('popupclose', event => { if (openPopup === event.popup) openPopup = null; });
+
+map.getContainer().addEventListener('click', event => {
+  if (!openPopup) return;
+  const target = event.target;
+  if (!target || !target.closest) return;
+  // Dentro del propio globo (leer, pulsar su botón, cerrarlo) y en los controles del mapa (zoom,
+  // «Capas») el toque es para ellos, no un descarte.
+  if (target.closest('.leaflet-popup') || target.closest('.leaflet-control')) return;
+  // Tocar OTRO marcador tampoco es descartar: es cambiar de sitio. Se deja pasar para que abra lo
+  // suyo directamente (lo abierto se cierra solo al abrirse lo nuevo). Tragarse ese toque obligaría
+  // a pulsar dos veces cada punto, que es exactamente la sensación de app que no responde.
+  if (target.closest('.leaflet-marker-icon')) return;
+  map.closePopup();
+  event.stopPropagation();  // que no llegue a los manejadores de Leaflet: este toque solo cierra
+  event.preventDefault();
+}, true);
+
+// El «atrás» del móvil cierra la etiqueta abierta antes que nada, como en cualquier mapa: es lo
+// último que se abrió, así que es lo primero que debe deshacerse (ver Js/nav.js).
+map.on('popupopen', () => {
+  if (window.NaturDexNav) window.NaturDexNav.open('map-popup', () => map.closePopup());
+});
+map.on('popupclose', () => {
+  if (window.NaturDexNav) window.NaturDexNav.close('map-popup');
+});
+
+// --- La franja de mapa que de verdad se ve --------------------------------------------------------
+// En móvil, el contenedor del mapa ocupa toda la pantalla pero por arriba lo tapa la barra del
+// parque y por abajo la nav inferior y, si está abierta, la ficha deslizante. Centrar "en el centro
+// del contenedor" dejaba el punto justo debajo de la hoja: el usuario tocaba un punto de interés y
+// el mapa parecía no moverse (o moverse a un sitio que no veía). Todo encuadre pasa por aquí.
+const MIN_VISIBLE_STRIP = 140; // px de mapa que se reservan siempre, pase lo que pase
+
+function chromeInset() {
+  const inset = { top: 0, bottom: 0 };
+  if (!window.matchMedia('(max-width: 900px)').matches) return inset;
+  const el = map.getContainer();
+  if (!el) return inset;
+  const rect = el.getBoundingClientRect();
+  if (!rect.height) return inset;
+  // Lo de abajo (nav y ficha) se mide por su ALTO, no por su posición: la ficha entra deslizándose
+  // y, a mitad de la animación, su posición todavía miente. El alto ya es el definitivo.
+  // Se mira `offsetHeight` y no `offsetParent`: la nav y la ficha son position:fixed y ahí
+  // offsetParent siempre es null, así que ese atajo habría medido cero en el único caso que importa.
+  // Con display:none el alto sí es cero, que es justo la comprobación que se necesita.
+  const heightOf = node => (node && !node.hidden && node.offsetHeight) || 0;
+  const topBar = document.querySelector('.map-topbar');
+  if (heightOf(topBar)) inset.top = Math.max(0, topBar.getBoundingClientRect().bottom - rect.top + 8);
+  inset.bottom = heightOf(document.querySelector('.mobile-nav'));
+  if (document.body.classList.contains('sheet-open')) {
+    inset.bottom = Math.max(inset.bottom, heightOf(document.querySelector('.detail-dock')));
+  }
+  if (inset.bottom) inset.bottom += 8;
+  // Con la hoja casi a pantalla completa no queda franja donde encuadrar nada: se le devuelve al
+  // mapa un mínimo para que el punto siga estando "arriba del todo" y no fuera de la pantalla.
+  const free = rect.height - inset.top - inset.bottom;
+  if (free < MIN_VISIBLE_STRIP) inset.bottom = Math.max(0, rect.height - inset.top - MIN_VISIBLE_STRIP);
+  return inset;
+}
+
+// Desplazamiento (px) entre el centro del contenedor y el centro de la franja visible.
+function visualCenterOffset() {
+  const inset = chromeInset();
+  return (inset.top - inset.bottom) / 2;
+}
+
 // Cambiar la preferencia con la app abierta se refleja en el acto. Se compara con el valor anterior
 // a propósito: el listener salta con CUALQUIER preferencia que cambie (tema, texto…) y, sin esta
 // guarda, tocar el tema desharía la capa base que el usuario acabase de elegir a mano en «Capas».
@@ -197,7 +272,7 @@ function speciesDivIcon(species) {
 // El icono por tipo de POI (poiEmoji) y las imágenes-placeholder viven en util.js.
 function poiDivIcon(poi, seen) {
   return L.divIcon({
-    className: 'poi-marker' + (seen ? ' seen' : ''),
+    className: 'poi-marker' + (seen ? ' seen' : '') + (state.selectedPoiId === poi.id ? ' active' : ''),
     html: '<span role="img" aria-label="' + escapeHtml(poi.name) + (seen ? ' (visitado)' : '') + '">' + poiEmoji(poi) + '</span>',
     iconSize: [26, 26],
     iconAnchor: [13, 13],
@@ -222,12 +297,16 @@ export function renderMarkers() {
     // speciesLatLng antepone el avistamiento. Solo se quedan sin marcador si tampoco hay eso.
     const latLng = speciesLatLng(species);
     if (!latLng) return;
-    const fromGps = state.sightings.has(species.id);
     const marker = L.marker(latLng, { icon: speciesDivIcon(species) });
-    marker.bindPopup(
-      String(html`<strong>${species.commonName}</strong><br>${species.scientificName}<br><small>${fromGps ? '📍 Ubicación registrada por GPS' : '📍 Ubicación aproximada (sin GPS)'}</small>`)
-    );
-    marker.on('click', () => handlers.onSelectSpecies && handlers.onSelectSpecies(species.id, false));
+    // Sin globo: tocar el marcador abre la ficha completa en el mismo sitio donde el usuario ya lee
+    // las fichas (la columna de la derecha en escritorio, la hoja deslizante en móvil). Un globo
+    // encima del mapa era un TERCER contenedor de información, con su propio cierre y su propia
+    // forma de descartarse, para decir menos que la ficha.
+    if (!L.Browser.touch) marker.bindTooltip(species.commonName, { direction: 'top', offset: [0, -12] });
+    marker.on('click', () => {
+      if (handlers.onSelectSpecies) handlers.onSelectSpecies(species.id, false);
+      revealOn(latLng, map.getZoom()); // recolocar bajo la ficha: si no, la hoja lo tapa
+    });
     state.speciesCluster.addLayer(marker);
     state.markers.set(species.id, marker);
   });
@@ -243,13 +322,15 @@ export function renderPoiMarkers() {
     if (!poi.coordinates) return;
     const seen = state.seenPois.has(poi.id);
     const marker = L.marker(poi.coordinates, { icon: poiDivIcon(poi, seen) }).addTo(state.poiGroup);
-    marker.bindPopup(
-      String(html`<div class="poi-popup-image"><img src="${poiImageSrc(poi)}" alt="" loading="lazy"></div><strong>${poi.name}</strong><br><span class="popup-type">${poi.type}</span>${poi.approx ? html`<span class="badge review poi-approx-badge">ubicación aproximada</span>` : ''}<p>${poi.description}</p>${audioBlock(poi, 'Audioguía del punto de interés')}${poi.source ? html`<p class="detail-source">Fuente: ${poi.source}</p>` : ''}<button type="button" class="poi-seen-btn" data-poi="${poi.id}" aria-pressed="${seen ? 'true' : 'false'}">${seen ? '✓ Visitado' : 'Marcar como visitado'}</button>`),
-      { maxWidth: 300 }
-    );
-    marker.on('popupopen', event => {
-      const button = event.popup.getElement().querySelector('.poi-seen-btn');
-      if (button) button.addEventListener('click', () => handlers.onTogglePoiSeen && handlers.onTogglePoiSeen(poi.id));
+    // Igual que las especies: la ficha del punto de interés se abre donde se abren todas las fichas.
+    // El globo anterior traía foto de 180 px, descripción, audioguía y botón: en un móvil ocupaba
+    // casi la pantalla entera, Leaflet no conseguía encajarlo y quedaba cortado por arriba o debajo
+    // de la nav. Ahora ese mismo contenido cabe en la hoja, que ya sabe deslizarse, hacer scroll y
+    // cerrarse con el velo, con la ✕ o con «atrás».
+    if (!L.Browser.touch) marker.bindTooltip(poi.name, { direction: 'top', offset: [0, -12] });
+    marker.on('click', () => {
+      if (handlers.onSelectPoi) handlers.onSelectPoi(poi.id);
+      revealOn(poi.coordinates, Math.max(map.getZoom(), 15));
     });
     state.poiMarkers.set(poi.id, marker);
   });
@@ -272,7 +353,7 @@ function addProtectedLayer(group, geojson, style, popupFor) {
     style,
     onEachFeature: (feature, layer) => {
       const p = feature.properties || {};
-      layer.bindPopup(popupFor(p));
+      layer.bindPopup(popupFor(p), POPUP_OPTIONS);
     }
   }).addTo(group);
 }
@@ -313,7 +394,8 @@ export function renderTrails() {
       // Las rutas (senderos) admiten audioguía: propiedades `audio`/`audioTranscript` en el
       // feature del trails.geojson (mismas claves que hábitats y POIs).
       layer.bindPopup(
-        String(html`<strong>${p.name || 'Sendero'}</strong><br><span class="popup-type">${p.tipo || ''}${km ? ' · ' + km : ''}</span>${p.homologado ? html`<span class="badge">homologado</span>` : ''}${p.descripcion ? html`<p>${p.descripcion}</p>` : ''}${audioBlock(p, 'Audioguía de la ruta')}${p.source ? html`<small>${p.source}</small>` : ''}`)
+        String(html`<strong>${p.name || 'Sendero'}</strong><br><span class="popup-type">${p.tipo || ''}${km ? ' · ' + km : ''}</span>${p.homologado ? html`<span class="badge">homologado</span>` : ''}${p.descripcion ? html`<p>${p.descripcion}</p>` : ''}${audioBlock(p, 'Audioguía de la ruta')}${p.source ? html`<small>${p.source}</small>` : ''}`),
+        POPUP_OPTIONS
       );
     }
   }).addTo(state.trailLayer);
@@ -335,17 +417,15 @@ export function renderProtectedAreas() {
 }
 
 // --- Zonas de hábitat -------------------------------------------------------------------------------
-function bindHabitatPopup(layer, habitat) {
-  const complete = isHabitatComplete(habitat);
-  const seenCount = habitatSpeciesSeenCount(habitat);
-  const total = (habitat.speciesIds || []).length;
-  const area = habitatAreaLabel(habitat);
-  layer.bindPopup(
-    String(html`<strong>${habitat.name}</strong><br><span class="popup-type">${habitat.type || ''}${habitat.priority ? ' · prioritario UE' : ''}${habitat.code ? ' · cód. ' + habitat.code : ''}</span>${area ? html`<p class="habitat-area-line">Superficie en el parque: <strong>${area}</strong></p>` : ''}<p>${habitat.description}</p><p class="habitat-progress-line">Especies vistas: <strong>${seenCount} / ${total}</strong>${complete ? ' · ¡Hábitat completo! 🏅' : ''}</p><button type="button" class="habitat-filter-btn" data-habitat="${habitat.id}">Ver especies de este hábitat</button>`)
-  );
-  layer.on('popupopen', event => {
-    const button = event.popup.getElement().querySelector('.habitat-filter-btn');
-    if (button) button.addEventListener('click', () => handlers.onFocusHabitat && handlers.onFocusHabitat(habitat.id));
+// Tocar un hábitat abre su ficha (la misma que el catálogo), no un globo propio: ahí ya está la
+// superficie, el progreso, las especies y el botón de "ver sus especies", con sitio para leerlo.
+function bindHabitatTap(layer, habitat) {
+  if (!L.Browser.touch && layer.bindTooltip) layer.bindTooltip(habitat.name, { sticky: true });
+  layer.on('click', event => {
+    // Sin esto, el toque sigue subiendo hasta el mapa: Leaflet lo trataría como "clic en el mapa" y
+    // cerraría la ficha que se acaba de pedir.
+    L.DomEvent.stopPropagation(event);
+    if (handlers.onSelectHabitat) handlers.onSelectHabitat(habitat.id);
   });
 }
 
@@ -373,9 +453,9 @@ export function renderHabitatZones() {
     }
     // Se guarda el estilo base para poder deshacer el resaltado "estás pisando este hábitat".
     layer._naturdexBaseStyle = baseStyle;
-    bindHabitatPopup(layer, habitat);
+    bindHabitatTap(layer, habitat);
     // La visibilidad por hábitat la gobierna el panel de capas (layers.js): la capa se crea
-    // siempre (los popups y el zoom desde otras vistas la necesitan) pero solo se añade al grupo
+    // siempre (la ficha y el zoom desde otras vistas la necesitan) pero solo se añade al grupo
     // si el usuario no la tiene apagada.
     if (!state.hiddenHabitats.has(habitat.id)) layer.addTo(state.habitatGroup);
     state.habitatLayers.set(habitat.id, layer);
@@ -425,26 +505,68 @@ export function soloHabitat(habitatId) {
 }
 
 // --- Encuadre ------------------------------------------------------------------------------------
-// Punto único por el que la app mueve el mapa "para enseñar algo". Hubo una época en que además
-// descontaba la parte que tapaba la hoja del catálogo, cuando el mapa era el fondo permanente de la
-// pantalla del parque; ahora el mapa tiene su pestaña entera para él y no hay nada delante que
-// descontar, pero el embudo se queda: es el sitio donde ponerlo si vuelve a hacer falta.
+// Punto único por el que la app mueve el mapa "para enseñar algo", y el único sitio donde se
+// descuenta lo que tapan la barra del parque, la nav inferior y la ficha deslizante (chromeInset).
+// Enseñar algo significa dejarlo donde el usuario lo ve, no donde el contenedor dice que está el
+// centro: es la diferencia entre "he tocado el mirador y el mapa se ha centrado en él" y "he tocado
+// el mirador y no ha pasado nada".
 export function focusOn(latlng, zoom = null, options = {}) {
-  map.setView(latlng, zoom == null ? map.getZoom() : zoom, options);
+  const z = zoom == null ? map.getZoom() : zoom;
+  const offset = visualCenterOffset();
+  if (!offset) { map.setView(latlng, z, options); return; }
+  // Se corrige en coordenadas de píxel del zoom de destino: mover el centro del mapa `offset` px
+  // hacia arriba coloca el punto `offset` px más abajo en la pantalla, y al revés.
+  const target = map.unproject(map.project(latlng, z).subtract([0, offset]), z);
+  map.setView(target, z, options);
 }
 
 export function fitOn(bounds, options = {}) {
-  map.fitBounds(bounds, options);
+  const inset = chromeInset();
+  map.fitBounds(bounds, Object.assign({
+    paddingTopLeft: [24, inset.top + 24],
+    paddingBottomRight: [24, inset.bottom + 24]
+  }, options));
 }
 
-// Encuadra un hábitat en el mapa (y abre su popup si se pide). Lo usan el panel de capas y el
+// Coloca un punto concreto (un marcador tocado) en la franja visible, acercando si hacía falta.
+// `minZoom` evita el efecto de "se ha centrado pero sigo sin ver dónde está".
+export function revealOn(latlng, minZoom = 15) {
+  if (!latlng) return;
+  focusOn(latlng, Math.max(map.getZoom(), minZoom), { animate: true });
+}
+
+// Los globos que quedan (senderos y figuras de protección) se colocan a mano: `autoPan` de Leaflet
+// solo empuja el mapa lo justo para que el globo entre en el CONTENEDOR, y en móvil eso lo dejaba
+// medio tapado por la nav inferior o por la ficha. Aquí se coloca dentro de la franja visible.
+const POPUP_OPTIONS = { autoPan: false, maxWidth: 300, className: 'nd-popup' };
+
+function revealPopup(popup) {
+  const el = popup.getElement();
+  const latlng = popup.getLatLng();
+  if (!el || !latlng) return;
+  const inset = chromeInset();
+  const size = map.getSize();
+  const height = el.offsetHeight || 200;
+  // El globo crece hacia arriba desde su punto de anclaje: para que quepa entero, el ancla tiene que
+  // quedar por debajo de `inset.top + alto`, y siempre por encima de lo que tapa la parte de abajo.
+  const lowest = size.y - inset.bottom - 16;
+  const desiredY = Math.max(inset.top + 24, Math.min(lowest, inset.top + height + 24));
+  const delta = desiredY - size.y / 2;
+  if (Math.abs(delta) < 8) return;
+  const z = map.getZoom();
+  map.panTo(map.unproject(map.project(latlng, z).subtract([0, delta]), z), { animate: true });
+}
+
+map.on('popupopen', event => revealPopup(event.popup));
+
+// Encuadra un hábitat en el mapa (y abre su ficha si se pide). Lo usan el panel de capas y el
 // panel "cerca de ti" del explorador.
-export function focusHabitatOnMap(habitatId, openPopup = false) {
+export function focusHabitatOnMap(habitatId, openDetail = false) {
   const layer = state.habitatLayers.get(habitatId);
   if (!layer) return;
   const bounds = layer.getBounds ? layer.getBounds() : null;
   if (bounds) fitOn(bounds, { maxZoom: 15 });
-  if (openPopup && layer.openPopup) layer.openPopup();
+  if (openDetail && handlers.onSelectHabitat) handlers.onSelectHabitat(habitatId);
 }
 
 // --- "Estás aquí": el punto azul de tu posición ---------------------------------------------------

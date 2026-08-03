@@ -10,7 +10,8 @@
 import {
   html, kingdomEmoji, placeholderImage, speciesImageSrc,
   habitatImageSrc, habitatPlaceholderImage, icon,
-  invasoraEmoji, invasoraImageSrc, invasoraPlaceholderImage
+  invasoraEmoji, invasoraImageSrc, invasoraPlaceholderImage,
+  poiImageSrc, poiPlaceholderImage
 } from './util.js';
 import { audioBlock } from './audio.js';
 import { highlightGlossary } from './glossary.js';
@@ -43,6 +44,13 @@ window.__habitatImgFallback = function (imgEl, habitatId) {
   if (!habitat || !imgEl) return;
   imgEl.onerror = null;
   imgEl.src = habitatPlaceholderImage(habitat);
+};
+
+window.__poiImgFallback = function (imgEl) {
+  const poi = (state.data.pointsOfInterest || []).find(item => item.id === state.selectedPoiId);
+  if (!poi || !imgEl) return;
+  imgEl.onerror = null;
+  imgEl.src = poiPlaceholderImage(poi);
 };
 
 // Foto de invasora rota (p. ej. sin conexión) en la portada de la ficha → emoji del grupo a tamaño
@@ -211,7 +219,8 @@ function renderTaxonomyRow(label, value) {
 // hábitat, según qué haya seleccionado el usuario (`detailMode`).
 export function renderDetail() {
   if (state.detailMode === 'invasora') { renderInvasoraDetail(); return; } // ya resalta el glosario dentro
-  if (state.detailMode === 'habitat') renderHabitatDetail();
+  if (state.detailMode === 'poi') renderPoiDetail();
+  else if (state.detailMode === 'habitat') renderHabitatDetail();
   else renderSpeciesDetail();
   // Resalta los términos del glosario en las descripciones ya pintadas (no-op si aún no cargó).
   highlightGlossary(detailPanel);
@@ -261,6 +270,29 @@ function renderHabitatDetail() {
     ${habitat.reviewNote ? html`<div class="review-note"><strong>Pendiente de revisión:</strong> ${habitat.reviewNote}</div>` : ''}
     ${habitat.image && habitat.imageAttribution ? html`<p class="detail-source">Foto: ${habitat.imageAttribution}${habitat.imageNote ? ' — ' + habitat.imageNote : ''}</p>` : ''}
     <button class="seen-toggle" type="button" data-view-habitat-species="${habitat.id}">Ver ${total === 1 ? 'la especie' : 'las ' + total + ' especies'} en el catálogo</button>
+    </div>`;
+}
+
+// Ficha de un punto de interés. Antes vivía dentro de un globo del mapa, apretada entre una foto de
+// 180 px y el borde de la pantalla; aquí tiene el mismo formato que las demás fichas (foto de
+// portada, datos, audioguía y su botón de marcar), y por tanto el mismo modo de cerrarse.
+function renderPoiDetail() {
+  const poi = (state.data.pointsOfInterest || []).find(item => item.id === state.selectedPoiId);
+  if (!poi) { detailPanel.innerHTML = ''; return; }
+  const seen = state.seenPois.has(poi.id);
+  detailPanel.innerHTML = html`<div class="detail-image-wrap poi-detail-image">
+    <img src="${poiImageSrc(poi)}" alt="${poi.name}" onerror="window.__poiImgFallback(this)">
+    <span class="habitat-detail-kind">Punto de interés</span>
+    </div>
+    <div class="detail-body">
+    <span class="card-meta"><span class="badge">${poi.type || 'Punto de interés'}</span>${poi.approx ? html`<span class="badge review">ubicación aproximada</span>` : ''}${seen ? html`<span class="badge">visitado ✓</span>` : ''}</span>
+    <h2>${poi.name}</h2>
+    <p class="detail-prose">${poi.description || ''}</p>
+    ${audioBlock(poi, 'Audioguía del punto de interés')}
+    ${poi.approx ? html`<div class="review-note">La posición de este punto en el mapa es <strong>aproximada</strong>: sigue las indicaciones del terreno y los senderos señalizados.</div>` : ''}
+    ${poi.source ? html`<p class="detail-source">Fuente: ${poi.source}</p>` : ''}
+    <button class="seen-toggle ${seen ? 'is-seen' : ''}" type="button" data-toggle-poi="${poi.id}" aria-pressed="${seen ? 'true' : 'false'}">${seen ? '✓ Visitado' : 'Marcar como visitado'}</button>
+    ${seen ? markVerificationNote('poi', poi.id) : ''}
     </div>`;
 }
 
@@ -320,6 +352,9 @@ function renderSpeciesDetail() {
     ${species.source ? html`<p class="detail-source">Fuente: ${species.source}</p>` : ''}
     <button class="seen-toggle ${seen ? 'is-seen' : ''}" type="button" data-toggle-seen="${species.id}" aria-pressed="${seen ? 'true' : 'false'}">${seen ? '✓ Visto' : 'Marcar como visto'}</button>
     ${seen ? markVerificationNote('species', species.id) : ''}
+    ${seen ? html`<p class="detail-source">${state.sightings.has(species.id)
+      ? '📍 Ya está en el mapa, en el punto exacto que registró tu GPS al marcarla.'
+      : '📍 Ya está en el mapa, en su ubicación aproximada del catálogo (no había GPS al marcarla).'}</p>` : ''}
     </div>`;
 }
 

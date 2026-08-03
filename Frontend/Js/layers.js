@@ -117,11 +117,24 @@ export function initLayersPanel() {
   };
   control.addTo(map);
 
+  // El panel de capas también es un paso deshacible: se abre encima de todo, así que «atrás»
+  // (o Escape) lo cierra antes que ninguna otra cosa. Ver Js/nav.js.
+  const closePanel = () => {
+    layersPanel.hidden = true;
+    layersToggle.setAttribute('aria-expanded', 'false');
+  };
+
   layersToggle.addEventListener('click', () => {
     const open = layersPanel.hidden;
-    layersPanel.hidden = !open;
-    layersToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    if (open) refreshLayersPanel(); // reconstruir al abrir: refleja el estado real de cada capa
+    if (!open) {
+      if (window.NaturDexNav && window.NaturDexNav.close('layers')) return;
+      closePanel();
+      return;
+    }
+    layersPanel.hidden = false;
+    layersToggle.setAttribute('aria-expanded', 'true');
+    refreshLayersPanel(); // reconstruir al abrir: refleja el estado real de cada capa
+    if (window.NaturDexNav) window.NaturDexNav.open('layers', closePanel);
   });
 
   layersPanel.addEventListener('change', event => {

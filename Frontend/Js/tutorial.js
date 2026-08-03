@@ -273,6 +273,9 @@ export function startTutorial(stage) {
   openerEl = document.activeElement; // para devolver el foco al cerrar
   overlay.hidden = false;
   showStep(0);
+  // El tutorial se abre por encima de todo: «atrás» debe cerrarlo a él, no la pantalla que está
+  // explicando (ver Js/nav.js).
+  if (window.NaturDexNav) window.NaturDexNav.open('tutorial', closeRaw);
 }
 
 // Lanza un tramo solo si ese usuario no lo ha visto aún. auth.js la llama al mostrar cada pantalla;
@@ -291,7 +294,15 @@ export function resetTutorial(userId) {
   try { localStorage.removeItem(storageKey()); } catch (e) { /* sin localStorage: nada que olvidar */ }
 }
 
+// Cierre "público": pasa por la pila de navegación para que el paso quede deshecho también en el
+// historial. Si no hay pila (o el tutorial no está apilado), cierra directamente.
 function close() {
+  if (!isOpen()) return;
+  if (window.NaturDexNav && window.NaturDexNav.close('tutorial')) return;
+  closeRaw();
+}
+
+function closeRaw() {
   if (!isOpen()) return;
   markSeen(activeStage); // cerrado, saltado o terminado: no volver a interrumpir a este usuario
   overlay.hidden = true;

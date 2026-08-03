@@ -17,7 +17,7 @@ import { state, isHabitatComplete } from './state.js';
 import {
   explorerToggle, nearbyPanel, nearbyStatus, nearbyList, nearbyClose, explorerHint
 } from './dom.js';
-import { map, placeUserMarker, highlightHabitat, focusOn, fitOn } from './map.js';
+import { map, placeUserMarker, highlightHabitat, focusOn, fitOn, revealOn } from './map.js';
 
 // Umbrales de proximidad. El de POI coincide con el "¡Estás aquí!" del panel cercano; el círculo
 // de hábitat es el mismo radio que dibuja map.js cuando un hábitat no tiene polígono todavía.
@@ -27,6 +27,8 @@ const HABITAT_CIRCLE_METERS = 420;
 const handlers = {
   onTogglePoiSeen: null,      // (poiId) desde el botón "Marcar visitado" del aviso
   onShowHabitatSpecies: null, // (habitatId) desde el "Sí, ver especies" del diálogo de hábitat
+  onSelectPoi: null,          // (poiId) al tocar un punto en "cerca de ti": abre su ficha
+  onSelectHabitat: null,      // (habitatId) al tocar un hábitat en "cerca de ti": abre su ficha
   onFix: null                 // (lat, lng, accuracy) cada posición, para la verificación de presencia
 };
 
@@ -333,15 +335,20 @@ export function initExplorer(h) {
     // Ir a un punto de la lista también es tomar el mando: si no, el siguiente fix del GPS
     // devolvería el mapa a tu posición de golpe. El botón queda en "Centrar en mí".
     if (followActive) setFollow(false);
+    // Los puntos y los hábitats ya no abren un globo propio: abren su ficha, igual que al tocarlos
+    // en el mapa o al elegirlos en el catálogo (ver Js/map.js).
     if (kind === 'poi') {
       const marker = state.poiMarkers.get(id);
-      if (marker) { focusOn(marker.getLatLng(), 16, { animate: true }); marker.openPopup(); }
+      if (marker) {
+        if (handlers.onSelectPoi) handlers.onSelectPoi(id);
+        revealOn(marker.getLatLng(), 16);
+      }
     } else if (kind === 'habitat') {
       const layer = state.habitatLayers.get(id);
       if (layer) {
+        if (handlers.onSelectHabitat) handlers.onSelectHabitat(id);
         const bounds = layer.getBounds ? layer.getBounds() : null;
         if (bounds) fitOn(bounds, { maxZoom: 15 });
-        if (layer.openPopup) layer.openPopup();
       }
     }
   });

@@ -34,7 +34,7 @@ import {
 } from './render.js';
 import {
   map, setMapHandlers, ensureMapSized, soloHabitat, setupParkBaseLayer, applyBaseChoice, focusOn,
-  renderMarkers, renderPoiMarkers, renderTrails, renderProtectedAreas, renderHabitatZones
+  revealOn, renderMarkers, renderPoiMarkers, renderTrails, renderProtectedAreas, renderHabitatZones
 } from './map.js';
 import { initExplorer } from './explorer.js';
 import { initLayersPanel, refreshLayersPanel } from './layers.js';
@@ -44,6 +44,15 @@ import { initAchievements, noteParkActivity, handleServerNewlyUnlocked, reportIn
 import { startPresence, stopPresence, notePresenceFix, flushPresenceQueue, marksCountNow, refreshPresenceBar } from './presence.js';
 import { initProfile, showProfile } from './profile.js';
 import { showNotice } from './notice.js';
+
+// --- Pila de navegación (nav.js) ------------------------------------------------------------------
+// Cada cosa que se abre dentro del parque —una pestaña, la ficha deslizante, el hábitat en el que se
+// entra, el panel de capas— se apila como un paso deshacible. Así el botón «atrás» del móvil deshace
+// exactamente ese último paso, en lugar de sacar al usuario de la app, y los botones de la interfaz
+// (✕, «← Hábitats», el velo) y la tecla Escape hacen todos lo mismo por dentro.
+const nav = window.NaturDexNav || null;
+function navOpen(key, close) { if (nav) nav.open(key, close); }
+function navClose(key) { return nav ? nav.close(key) : false; }
 
 // --- Navegación del catálogo ----------------------------------------------------------------------
 function enterHabitat(habitatId) {
@@ -55,6 +64,9 @@ function enterHabitat(habitatId) {
   // "Ver todas las especies" (habitatId nulo) no tiene hábitat que mostrar, así que no la toca.
   if (habitatId) selectHabitat(habitatId);
   renderCatalogBody();
+  // Entrar en un hábitat es bajar un nivel dentro del catálogo: «atrás» devuelve a la lista de
+  // hábitats, que es justo lo que hace el botón «← Hábitats» de la miga de pan.
+  navOpen('habitat', backToHabitatsRaw);
 }
 
 // Pestaña de invasoras: lista a la izquierda + ficha en el panel de detalle de la derecha (como especies).
@@ -79,18 +91,27 @@ function selectInvasora(scientificName) {
   openDetailSheet(); // en móvil, la ficha se desliza como bottom-sheet
 }
 
-// Muestra la etiqueta (ficha) de un hábitat en el panel de detalle de la derecha y lo aísla en el
-// mapa: al elegir un hábitat en el catálogo se apagan los demás y solo se ve este (el usuario puede
-// reactivar el resto desde el panel de capas). Se refresca dicho panel para que sus casillas cuadren.
-function selectHabitat(habitatId) {
+// Muestra la ficha de un hábitat en el panel de detalle de la derecha.
+// `solo` lo aísla además en el mapa (apaga los demás; el usuario puede reactivarlos desde el panel
+// de capas, que por eso se refresca). Se hace al elegirlo en el CATÁLOGO, donde
+// el usuario ha ido a por ese hábitat en concreto. Al tocarlo en el MAPA no: si tocar un hábitat
+// apagara los demás, el siguiente ya no estaría ahí para tocarlo, y explorar el mapa a toques —que
+// es la forma natural de usarlo— se convertiría en un callejón sin salida.
+function selectHabitat(habitatId, solo = true) {
+  clearPoiSelection();
   state.selectedHabitatId = habitatId;
   state.detailMode = 'habitat';
   renderDetail();
-  soloHabitat(habitatId);
-  refreshLayersPanel();
+  if (solo) { soloHabitat(habitatId); refreshLayersPanel(); }
 }
 
-function backToHabitats() {
+// Tocar un hábitat en el mapa: su ficha, en el mismo sitio que todas las demás.
+function selectHabitatFromMap(habitatId) {
+  selectHabitat(habitatId, false);
+  openDetailSheet(true);
+}
+
+function backToHabitatsRaw() {
   state.habitatFocus = null;
   state.catalogMode = 'habitats';
   state.query = '';
@@ -98,30 +119,56 @@ function backToHabitats() {
   renderCatalogBody();
 }
 
+function backToHabitats() {
+  if (navClose('habitat')) return; // su cierre ya vuelve a la lista de hábitats
+  backToHabitatsRaw();
+}
+
 function focusHabitat(habitatId) {
-  // Entrada al catálogo de especies de un hábitat desde su popup en el mapa.
+  // Entrada al catálogo de especies de un hábitat desde su ficha o desde "cerca de ti".
   closeDetailSheet();
-  setView('catalog');
+  if (mobileMedia.matches) setMobileTab('catalog'); else setView('catalog');
   enterHabitat(habitatId);
 }
 
 function selectSpecies(id, focusMap = true) {
+  clearPoiSelection();
   state.selectedId = Number(id);
   state.detailMode = 'species';
   renderSpeciesList();
   renderDetail();
+  // `focusMap` es false justo cuando la llamada viene de tocar el marcador en el mapa (map.js): en
+  // ese caso la hoja se abre a media altura para no tapar el bicho que se acaba de tocar.
+  openDetailSheet(!focusMap);
+  if (!focusMap) return;
   const species = state.data.species.find(item => item.id === state.selectedId);
   const marker = state.markers.get(state.selectedId);
-  if (species && marker && focusMap) {
-    // Si el marcador está dentro de un clúster, abrimos el clúster hasta mostrarlo y luego el popup.
-    if (map.hasLayer(state.speciesCluster) && typeof state.speciesCluster.zoomToShowLayer === 'function') {
-      state.speciesCluster.zoomToShowLayer(marker, () => marker.openPopup());
-    } else {
-      focusOn(speciesLatLng(species), 14, { animate: true });
-      marker.openPopup();
-    }
+  if (!species || !marker) return;
+  const latLng = speciesLatLng(species);
+  // Si el marcador está dentro de un clúster, se abre el clúster hasta mostrarlo y luego se coloca
+  // en la franja de mapa que la ficha deja a la vista.
+  if (map.hasLayer(state.speciesCluster) && typeof state.speciesCluster.zoomToShowLayer === 'function') {
+    state.speciesCluster.zoomToShowLayer(marker, () => revealOn(latLng, map.getZoom()));
+  } else {
+    revealOn(latLng, 14);
   }
-  openDetailSheet(); // en móvil, la ficha se muestra como bottom-sheet
+}
+
+// El marcador resaltado deja de estarlo en cuanto la ficha pasa a hablar de otra cosa: si no, el
+// mapa se queda señalando un punto que ya no es el que se está leyendo.
+function clearPoiSelection() {
+  if (state.selectedPoiId == null) return;
+  state.selectedPoiId = null;
+  renderPoiMarkers();
+}
+
+// Punto de interés tocado en el mapa (o desde "cerca de ti"): su ficha, en el panel de detalle.
+function selectPoi(id) {
+  state.selectedPoiId = id;
+  state.detailMode = 'poi';
+  renderPoiMarkers(); // el marcador tocado se resalta
+  renderDetail();
+  openDetailSheet(true);
 }
 
 // --- Marcar visto / visitado ------------------------------------------------------------------------
@@ -215,14 +262,17 @@ function togglePoiSeen(id) {
   if (nowSeen) state.seenPois.add(id); else state.seenPois.delete(id);
   noteMarked('poi', id, nowSeen);
   renderPoiMarkers();
+  if (state.detailMode === 'poi' && state.selectedPoiId === id) renderDetail();
   if (state.view === 'progress') renderProgressTab();
   if (nowSeen) { noteParkActivity(state.activeParkSlug); refreshAccountProgress(); }
   persistProgress('poi', id, nowSeen).then(res => res && handleServerNewlyUnlocked(res.newlyUnlocked));
 }
 
-// Acciones que los popups del mapa disparan sobre la app (ver map.js).
+// Acciones que el mapa dispara sobre la app al tocar algo (ver map.js).
 setMapHandlers({
   onSelectSpecies: selectSpecies,
+  onSelectPoi: selectPoi,
+  onSelectHabitat: selectHabitatFromMap,
   onFocusHabitat: focusHabitat,
   onTogglePoiSeen: togglePoiSeen
 });
@@ -291,34 +341,75 @@ function syncMobileNav(tab) {
   });
 }
 
-function setMobileTab(tab) {
+// Pinta la pestaña pedida, sin tocar la pila de navegación.
+function showMobileTab(tab) {
   if (tab === 'map') {
     syncMobileNav('map');
-    closeDetailSheet();
-    ensureMapSized(); // el mapa estaba display:none; Leaflet debe recalcular el tamaño del contenedor
+    closeDetailSheetRaw();
+    ensureMapSized(); // el mapa estaba oculto; Leaflet debe recalcular el tamaño del contenedor
   } else {
     setView(tab); // 'catalog' | 'invasoras' | 'progress' — setView ya sincroniza la nav inferior
   }
 }
 
-function openDetailSheet() {
-  if (mobileMedia.matches) {
-    document.body.classList.add('sheet-open');
-    // El foco entra en la ficha (tabindex="-1" en el HTML): el lector de pantalla anuncia el
-    // contenido recién abierto y Escape/el botón ✕ quedan al alcance del teclado.
-    detailPanel.focus({ preventScroll: true });
+// El mapa es la "casa" del parque: se abre en él y todas las demás pestañas son un paso hacia
+// dentro. Así «atrás» desde el catálogo devuelve al mapa —y solo desde el mapa sale al selector de
+// parques—, en vez de encadenar pestañas visitadas como si fueran páginas distintas.
+function setMobileTab(tab) {
+  if (!mobileMedia.matches) { setView(tab === 'map' ? 'catalog' : tab); return; }
+  if (tab === 'map') {
+    if (navClose('mtab')) return; // su cierre ya pinta el mapa
+    showMobileTab('map');
+    return;
   }
+  if (nav && nav.has('mtab')) nav.closeAbove('mtab'); // cierra la ficha o el globo que hubiera encima
+  navOpen('mtab', () => showMobileTab('map'));
+  showMobileTab(tab);
 }
 
+// `fromMap` es lo que decide la altura con la que se abre la hoja. Abierta desde el mapa, una hoja
+// de 82 % de pantalla tapaba justo lo que el usuario acababa de tocar: se queda a media altura, con
+// el punto a la vista, y el asa la sube entera si quiere leerlo todo (el patrón de Google Maps).
+// Abierta desde una lista no hay nada detrás que preservar, así que se abre grande como siempre.
+function openDetailSheet(fromMap = false) {
+  if (!mobileMedia.matches) return; // en escritorio la ficha es la columna de la derecha: siempre visible
+  document.body.classList.toggle('sheet-compact', !!fromMap);
+  if (fromMap) document.body.classList.remove('sheet-expanded');
+  document.body.classList.add('sheet-open');
+  // El foco entra en la ficha (tabindex="-1" en el HTML): el lector de pantalla anuncia el
+  // contenido recién abierto y Escape/el botón ✕ quedan al alcance del teclado.
+  detailPanel.focus({ preventScroll: true });
+  navOpen('sheet', closeDetailSheetRaw);
+}
+
+function closeDetailSheetRaw() {
+  document.body.classList.remove('sheet-open', 'sheet-expanded');
+}
+
+// El asa sube la ficha a pantalla casi completa y la vuelve a bajar.
+const sheetExpand = document.querySelector('#sheetExpand');
+if (sheetExpand) {
+  sheetExpand.addEventListener('click', () => {
+    const tall = document.body.classList.toggle('sheet-expanded');
+    sheetExpand.setAttribute('aria-expanded', tall ? 'true' : 'false');
+    sheetExpand.setAttribute('aria-label', tall ? 'Reducir la ficha' : 'Ampliar la ficha');
+  });
+}
+
+// Cierre "público" de la ficha (✕, velo, cambio de vista): pasa por la pila para que el historial no
+// se quede con un paso de más.
 function closeDetailSheet() {
-  document.body.classList.remove('sheet-open');
+  if (navClose('sheet')) return;
+  closeDetailSheetRaw();
 }
 
-// Escape cierra lo que esté superpuesto (bottom-sheet de la ficha o panel de capas), devolviendo
-// el foco a un lugar coherente. Complementa a los botones ✕ para el uso con teclado.
+// Escape deshace el último paso, exactamente igual que el «atrás» del móvil: la ficha, el panel de
+// capas, el hábitat en el que se ha entrado… lo que esté arriba de la pila.
 document.addEventListener('keydown', event => {
   if (event.key !== 'Escape') return;
-  if (document.body.classList.contains('sheet-open')) { closeDetailSheet(); return; }
+  if (nav && nav.back()) return;
+  // Sin pila (navegador sin historial utilizable): al menos, los dos cierres de siempre.
+  if (document.body.classList.contains('sheet-open')) { closeDetailSheetRaw(); return; }
   if (layersPanel && !layersPanel.hidden) {
     layersPanel.hidden = true;
     layersToggle.setAttribute('aria-expanded', 'false');
@@ -356,6 +447,9 @@ if (invasorasPanel) invasorasPanel.addEventListener('click', event => {
 detailPanel.addEventListener('click', event => {
   const seenBtn = event.target.closest('[data-toggle-seen]');
   if (seenBtn) { toggleSpeciesSeen(seenBtn.dataset.toggleSeen); return; }
+  // "Marcar como visitado" de un punto de interés: antes vivía dentro de su globo del mapa.
+  const poiBtn = event.target.closest('[data-toggle-poi]');
+  if (poiBtn) { togglePoiSeen(poiBtn.dataset.togglePoi); warnIfNotVerified(); return; }
   const invasiveBtn = event.target.closest('[data-mark-invasive]');
   if (invasiveBtn) {
     reportInvasiveSeen(invasiveBtn.dataset.markInvasive, invasiveBtn.dataset.invasiveCcaa).then(() => renderDetail());
@@ -404,6 +498,8 @@ searchInput.addEventListener('input', event => {
 initExplorer({
   onTogglePoiSeen: togglePoiSeen,
   onShowHabitatSpecies: focusHabitat,
+  onSelectPoi: selectPoi,
+  onSelectHabitat: selectHabitatFromMap,
   onFix: (lat, lng, accuracy) => notePresenceFix(lat, lng, accuracy)
 });
 
@@ -617,8 +713,13 @@ async function startParkExperience(slug, user) {
   } catch (e) { /* sin invasoras: la pestaña muestra el aviso de "sin datos" */ }
 
   if (parkTitle && state.data.park && state.data.park.name) parkTitle.textContent = state.data.park.name;
+  // El mismo nombre, en la barra superior del mapa (móvil): es la primera pantalla del parque y sin
+  // rótulo no queda claro en cuál se ha entrado.
+  const mapParkTitle = document.querySelector('#mapParkTitle');
+  if (mapParkTitle) mapParkTitle.textContent = (state.data.park && state.data.park.name) || '';
 
   state.selectedId = state.data.species?.[0]?.id ?? null;
+  state.selectedPoiId = null;
   // Al entrar al parque, el panel de detalle de la derecha muestra por defecto la etiqueta de un
   // hábitat (no la de una especie). Se prefiere un hábitat sin nota de revisión para una portada
   // limpia; si todos la tuvieran, se usa el primero.

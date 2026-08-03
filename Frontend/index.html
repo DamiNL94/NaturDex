@@ -86,7 +86,7 @@
             <!-- Modo invitado desactivado por ahora (ver la nota de la portada).
             <button class="link-btn" type="button" id="guestStartAuth">Explorar como invitado, sin cuenta →</button>
             -->
-            <button class="link-btn" type="button" id="authBack">← Volver a la portada</button>
+            <button class="back-btn" type="button" id="authBack"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="15 18 9 12 15 6"/></svg><span class="back-btn-label">Volver a la portada</span></button>
         </div>
     </section>
 
@@ -120,7 +120,7 @@
         <div class="account-panel">
             <div class="select-head">
                 <div><p class="eyebrow">NaturDex</p><h2>Tu progreso estatal</h2></div>
-                <button id="backToSelectFromAccount" class="link-btn" type="button">← Parques</button>
+                <button id="backToSelectFromAccount" class="back-btn" type="button"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="15 18 9 12 15 6"/></svg><span class="back-btn-label">Parques</span></button>
             </div>
             <p class="select-hint">Lo que has descubierto en todos los parques de tu cuenta, sumado. Un logro, una vez conseguido, no se pierde.</p>
             <div id="accountProgressBody" class="account-progress-body"></div>
@@ -136,7 +136,7 @@
         <div class="profile-panel">
             <div class="select-head">
                 <div><p class="eyebrow">NaturDex</p><h2>Perfil y ajustes</h2></div>
-                <button id="backFromProfile" class="link-btn" type="button">← Volver</button>
+                <button id="backFromProfile" class="back-btn" type="button"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="15 18 9 12 15 6"/></svg><span class="back-btn-label">Volver</span></button>
             </div>
             <div id="profileBody" class="profile-body"></div>
         </div>
@@ -148,7 +148,7 @@
             <a class="skip-link" href="#map">Saltar al mapa</a>
             <aside class="sidebar" aria-label="Panel de exploración NaturDex">
                 <div class="park-nav">
-                    <button type="button" id="backToParks" class="link-btn">← Parques</button>
+                    <button type="button" id="backToParks" class="back-btn"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="15 18 9 12 15 6"/></svg><span class="back-btn-label">Parques</span></button>
                     <!-- El progreso estatal (logros de cuenta, sumando todos los parques) también se
                          alcanza desde dentro de un parque: es de la cuenta, no del parque, y estando
                          aquí no había forma de llegar sin salir al selector. Vuelve al parque al cerrar. -->
@@ -220,6 +220,17 @@
             </aside>
             <section class="map-stage" aria-label="Mapa y ficha de especie">
                 <div id="map" aria-label="Mapa interactivo del parque"></div>
+                <!-- Barra superior del mapa (SOLO móvil, pestaña «Mapa»). La app abre el parque por
+                     el mapa y la cabecera con "← Parques" vive en la barra lateral, que en esa
+                     pestaña está oculta: sin esta barra no había NINGUNA forma de volver al selector
+                     ni de llegar al perfil desde la primera pantalla que se ve, y la salida acababa
+                     siendo el botón «atrás» del sistema. Los botones son gemelos de los de la barra
+                     lateral y los cablea auth.js. -->
+                <div class="map-topbar">
+                    <button type="button" id="backToParksMap" class="back-btn"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="15 18 9 12 15 6"/></svg><span class="back-btn-label">Parques</span></button>
+                    <span class="map-topbar-title" id="mapParkTitle"></span>
+                    <button id="profileBtnMap" class="icon-btn primary" type="button" title="Perfil y ajustes" aria-label="Perfil y ajustes"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button>
+                </div>
                 <!-- Panel de capas propio (layers.js): control + leyenda unificados, con
                      subsección de hábitats para verlos por separado. -->
                 <div class="layers-control">
@@ -233,7 +244,10 @@
                 <div class="sheet-scrim" id="sheetScrim" aria-hidden="true"></div>
                 <div class="detail-dock">
                     <div class="sheet-bar">
-                        <span class="sheet-grip" aria-hidden="true"></span>
+                        <!-- El asa no es decorativa: abierta desde el mapa, la ficha se queda a media
+                             altura para no tapar el punto que se acaba de tocar, y esta la sube a
+                             pantalla casi completa (y la vuelve a bajar). -->
+                        <button type="button" id="sheetExpand" class="sheet-grip-btn" aria-expanded="false" aria-label="Ampliar la ficha"><span class="sheet-grip" aria-hidden="true"></span></button>
                         <button type="button" id="sheetClose" class="sheet-close" aria-label="Cerrar ficha"><svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
                     </div>
                     <article id="detailPanel" class="detail-panel" aria-live="polite" tabindex="-1" aria-label="Ficha de detalle"></article>
@@ -272,6 +286,10 @@
          map.js degrada a OSM/PNOA y al fondo vacío de siempre. -->
     <script src="Vendor/protomaps/protomaps-leaflet.js"></script>
     <script src="Js/offline.js"></script>
+    <!-- Pila de navegación: convierte cada pantalla, pestaña, ficha y globo del mapa en un paso
+         deshacible, para que el botón «atrás» del móvil retroceda dentro de la app en vez de
+         sacar al usuario de la web. Script clásico (lo usan tanto app.js como auth.js). -->
+    <script src="Js/nav.js"></script>
     <script type="module" src="Js/app.js"></script>
     <script src="Js/auth.js"></script>
 </body>
