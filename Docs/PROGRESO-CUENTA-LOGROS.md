@@ -1,28 +1,43 @@
 # Progreso de cuenta y logros
 
+> **Regla que gobierna todo lo demás:** un logro no se gana marcando, se gana **estando allí**. Una
+> marca solo cuenta si su hora cae dentro de una **visita verificada** al espacio que la contiene
+> (posiciones del GPS validadas contra el límite oficial, ver
+> [VERIFICACION-Y-ANTITRAMPAS.md](VERIFICACION-Y-ANTITRAMPAS.md)). Lo marcado fuera de una visita
+> sigue en el cuaderno del usuario, pero no puntúa.
+
 NaturDex tiene dos capas de progreso, una encima de la otra:
 
 1. **Progreso por parque** (la de siempre). Vive en `user_progress` (una fila por usuario y parque,
    payload `{ seenSpeciesIds, seenPoiIds, sightings, updatedAt }`). La gestiona
    `Backend/Api/progress.php` y, en el frontend, `Frontend/Js/state.js`/`data.js`. El único logro que
    conocía era completar un parque (`ACHIEVEMENT_NAME` en `state.js`).
-2. **Progreso de cuenta** (ámbito estatal). Agrega lo visto en **todos** los parques de una cuenta:
-   especies distintas (deduplicadas entre parques), parques visitados/completados, comunidades
-   autónomas y provincias pisadas, hábitats completados, POIs, avistamientos GPS, invasoras
-   identificadas, términos de glosario consultados y constancia (días de actividad, rachas). De aquí
-   sale el catálogo de **logros de cuenta**, que nunca se pierden aunque el progreso baje después.
+2. **Progreso de cuenta** (ámbito estatal). Agrega lo visto **y verificado** en todos los parques de
+   una cuenta: especies distintas (deduplicadas entre parques), espacios visitados/completados,
+   comunidades autónomas y provincias pisadas, hábitats completados, POIs, registros
+   georreferenciados, horas y kilómetros de campo, y constancia (días de campo, rachas). De aquí sale
+   el catálogo de **logros de cuenta**, que nunca se pierden aunque el progreso baje después.
+3. **Visitas verificadas** (`user_park_visits`). La capa que sostiene a la 2: la prueba de que el
+   usuario estuvo físicamente dentro del espacio. Se documenta aparte en
+   [VERIFICACION-Y-ANTITRAMPAS.md](VERIFICACION-Y-ANTITRAMPAS.md).
 
-La capa 2 no sustituye a la 1: la lee. Todo en `user_account_progress` es **derivable desde cero** a
-partir de `user_progress` + `user_activity_log` + `user_invasive_sightings` + `user_glossary_views`
-(la única pieza que no es puramente derivada son los flags "de sabor" reportados por el cliente, ver
-más abajo). Por eso `Tools/recalculate-account-progress.php` puede reconstruir el progreso de cuenta
-de cualquier usuario en cualquier momento sin perder nada.
+La capa 2 no sustituye a la 1: cruza la 1 con la 3. Todo en `user_account_progress` es **derivable
+desde cero** a partir de `user_progress` + `user_park_visits` + `user_invasive_sightings` +
+`user_glossary_views`; ya no hay ninguna pieza reportada por el cliente (los antiguos flags "de
+sabor" se derivan hoy de las visitas). Por eso `Tools/recalculate-account-progress.php` puede
+reconstruir el progreso de cuenta de cualquier usuario en cualquier momento sin perder nada.
+
+**Lo que ya no da logros:** consultar el glosario e identificar invasoras se siguen registrando y se
+muestran en el progreso como *actividad en la app*, pero no desbloquean nada. Eran precisamente los
+logros que se conseguían sin salir de casa.
 
 ## Piezas del sistema
 
 | Pieza | Qué hace |
 |---|---|
-| `Database/schema.sql` / `migrations.sql` | Tablas `user_account_progress`, `user_achievements`, `user_activity_log`, `user_invasive_sightings`, `user_glossary_views`. |
+| `Database/schema.sql` / `migrations.sql` | Tablas `user_account_progress`, `user_achievements`, `user_park_visits`, `user_activity_log`, `user_invasive_sightings`, `user_glossary_views`. |
+| `Backend/Lib/presence.php` · `geo.php` | Visitas verificadas: valida cada posición del GPS contra el límite oficial y decide qué marcas cuentan. |
+| `Frontend/Js/presence.js` | Envío de posiciones, predicción offline y barra de "esto cuenta / esto no". |
 | `Frontend/Data/achievements.json` | **Catálogo de logros, fuente única.** Lo leen tanto el backend como el frontend: ninguno de los dos puede desincronizarse de las reglas. |
 | `Backend/Lib/account_progress.php` | Agregación (`computeAccountAggregates`) + evaluación del catálogo (`evaluateAchievements`) + punto de entrada único (`recomputeAccountProgress`). |
 | `Backend/Api/account-progress.php` | GET de totales/logros; POST para invasoras identificadas, términos de glosario, flags de sabor y "marcar como celebrado". |
@@ -92,8 +107,10 @@ No hace falta tocar código en ninguno de los dos lados. Añade una entrada al a
 - `metric` debe existir en el agregado que devuelve `computeAccountAggregates()` (PHP) /
   `computeLocalAggregates()` (JS) — mira `Backend/Lib/account_progress.php` para la lista completa
   (`speciesSeen`, `parksVisited`, `parksCompleted`, `regionsVisited`, `provincesVisited`,
-  `habitatsCompleted`, `poisSeen`, `gpsSightings`, `invasiveSeen`, `glossaryViewed`, `activeDays`,
-  `weekStreak`, `maxParkRevisitDays`, o un flag de sabor como `earlyBird`/`winterOuting`/`noSearchHabitat`).
+  `habitatsCompleted`, `poisSeen`, `gpsSightings`, `fieldDays`, `weekStreak`, `maxParkRevisitDays`,
+  `fieldHours`, `fieldKilometers`, o un flag de sabor como `earlyBird`/`winterVisit`/`longVisit`).
+  `invasiveSeen` y `glossaryViewed` siguen en el agregado, pero **son estadísticas**: no uses una
+  métrica que se pueda cumplir sin salir de casa, o vuelves al problema que este sistema resuelve.
 - `category` debe existir en el array `categories` del mismo fichero (o añade una nueva ahí también).
 - `threshold` es el valor de esa métrica que desbloquea el logro (para los flags de sabor, siempre 1).
 

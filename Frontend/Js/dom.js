@@ -58,6 +58,11 @@ export const layersPanel = document.querySelector('#layersPanel');
 export const saveOfflineBtn = document.querySelector('#saveOfflineBtn');
 export const connStatus = document.querySelector('#connStatus');
 
+// Barra de presencia verificada (¿cuenta para los logros lo que marco ahora mismo?)
+export const presenceBar = document.querySelector('#presenceBar');
+export const presenceText = document.querySelector('#presenceText');
+export const presenceAction = document.querySelector('#presenceAction');
+
 // Progreso de cuenta (ámbito estatal, pantalla propia fuera de un parque)
 export const accountProgressBody = document.querySelector('#accountProgressBody');
 

@@ -4,7 +4,14 @@
 // catálogo de logros para TODOS los usuarios existentes (CLI).
 // ------------------------------------------------------------------------------------------------
 // Uso:
-//   php Tools/recalculate-account-progress.php
+//   php Tools/recalculate-account-progress.php              recalcula (nunca retira logros)
+//   php Tools/recalculate-account-progress.php --reset      vacía primero los logros y recalcula
+//
+// `--reset` existe por el cambio de reglas: los logros ganados cuando bastaba con pulsar "marcar
+// como vista" desde el sofá no significan lo que dice su ficha, y evaluateAchievements() solo
+// añade, nunca retira. Vaciar y recalcular deja el sistema coherente con la verificación de
+// presencia. No toca user_progress: lo que el usuario tenía marcado sigue siendo suyo, solo que
+// pasa a estar "sin verificar" hasta que vuelva al campo.
 //
 // Para qué sirve:
 //  - Retrocompatibilidad al desplegar esta funcionalidad: usuarios que ya tenían progreso en
@@ -25,6 +32,13 @@
 // ================================================================================================
 require_once __DIR__ . "/../Backend/Config/db.php";
 require_once __DIR__ . "/../Backend/Lib/account_progress.php";
+
+$reset = in_array("--reset", $argv ?? [], true);
+if ($reset) {
+    $conn->query("DELETE FROM user_achievements");
+    $conn->query("DELETE FROM user_account_progress");
+    echo "Logros y agregados vaciados: se recalculan desde cero con las reglas de presencia verificada.\n\n";
+}
 
 $result = $conn->query("SELECT id, email FROM users ORDER BY id");
 if (!$result) {

@@ -125,12 +125,13 @@ async function progressSummary() {
   const totalAchievements = (catalog.achievements || []).length;
   const unlocked = state.account.achievements.size;
   const stat = (value, label) => html`<div class="account-stat"><strong>${value ?? 0}</strong><span>${label}</span></div>`;
-  const activeDays = serverProfile ? serverProfile.stats.activeDays : totals.activeDays;
+  // Días de campo = días con presencia verificada, no días de haber abierto la app.
+  const fieldDays = serverProfile ? serverProfile.stats.fieldDays : totals.fieldDays;
   return html`<div class="account-totals-grid profile-totals">
-    ${stat(totals.speciesSeen, 'especies vistas')}
-    ${stat(totals.parksVisited, 'parques visitados')}
+    ${stat(totals.speciesSeen, 'especies avistadas')}
+    ${stat(totals.parksVisited, 'espacios visitados')}
     ${stat(unlocked + ' / ' + totalAchievements, 'logros')}
-    ${stat(activeDays, 'días de campo')}
+    ${stat(fieldDays, 'días de campo')}
     </div>
     <button type="button" class="btn-secondary" data-action="open-account">${icon('trophy', 16)} Ver tu progreso estatal completo</button>`;
 }

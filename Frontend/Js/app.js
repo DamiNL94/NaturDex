@@ -14,7 +14,7 @@
 
 import {
   DEFAULT_PARK_SLUG, PARK_INDEX_PATH,
-  state, computeProgress, speciesLatLng, relatedSpeciesIds, isHabitatComplete
+  state, computeProgress, speciesLatLng, relatedSpeciesIds
 } from './state.js';
 import { iconMarkup, geoUnavailableReason, formatBytes } from './util.js';
 import {
@@ -40,7 +40,8 @@ import { initExplorer } from './explorer.js';
 import { initLayersPanel, refreshLayersPanel } from './layers.js';
 import { loadGlossary, initGlossaryPopover } from './glossary.js';
 import { initTutorial } from './tutorial.js';
-import { initAchievements, noteParkActivity, handleServerNewlyUnlocked, reportFlavorFlag, reportInvasiveSeen, refreshAccountProgress, syncWithServer } from './achievements.js';
+import { initAchievements, noteParkActivity, handleServerNewlyUnlocked, reportInvasiveSeen, refreshAccountProgress, syncWithServer } from './achievements.js';
+import { startPresence, stopPresence, notePresenceFix, flushPresenceQueue, marksCountNow, refreshPresenceBar } from './presence.js';
 import { initProfile, showProfile } from './profile.js';
 import { showNotice } from './notice.js';
 
@@ -136,12 +137,16 @@ function afterSeenChange() {
 
 // Al marcar una especie como vista, la ubicación del avistamiento la aporta el GPS del dispositivo.
 // Si el usuario deniega el permiso o no hay GPS, se marca igualmente como vista y el marcador cae
-// en la coordenada representativa del catálogo (con aviso en el popup). `alsoSeen` son las demás
-// apariciones de la misma especie (otros hábitats): se marcan vistas también, pero sin avistamiento
-// GPS propio (cada una usa su coordenada representativa en el mapa).
+// en la coordenada representativa del catálogo (con aviso en el popup) — pero entonces el
+// avistamiento no puede verificarse y no contará para los logros, que es justo lo que la barra de
+// presencia le está diciendo por delante. `alsoSeen` son las demás apariciones de la misma especie
+// (otros hábitats): se marcan vistas también, pero sin avistamiento GPS propio.
 function captureSighting(numericId, alsoSeen = []) {
   const finish = (coords) => {
-    if (coords) state.sightings.set(numericId, coords);
+    if (coords) state.sightings.set(numericId, { lat: coords.lat, lng: coords.lng });
+    // La coordenada del avistamiento también alimenta la presencia: quien recorre el parque
+    // marcando bichos verifica su visita sin tener que encender nada aparte.
+    if (coords) notePresenceFix(coords.lat, coords.lng, coords.accuracy);
     renderMarkers();
     if (state.selectedId === numericId) renderDetail();
     noteParkActivity(state.activeParkSlug);
@@ -150,16 +155,39 @@ function captureSighting(numericId, alsoSeen = []) {
     refreshAccountProgress();
     persistProgress('species', numericId, true, coords).then(res => res && handleServerNewlyUnlocked(res.newlyUnlocked));
     alsoSeen.forEach(rid => persistProgress('species', rid, true).then(res => res && handleServerNewlyUnlocked(res.newlyUnlocked)));
-    checkNoSearchHabitatFlavor(numericId);
   };
   // Sin geolocalización posible (navegador sin API o contexto no seguro) el avistamiento se marca
   // igual, solo que sin coordenada GPS propia — no bloquea al usuario.
   if (geoUnavailableReason()) { finish(null); return; }
   navigator.geolocation.getCurrentPosition(
-    pos => finish({ lat: pos.coords.latitude, lng: pos.coords.longitude }),
+    pos => finish({ lat: pos.coords.latitude, lng: pos.coords.longitude, accuracy: pos.coords.accuracy }),
     () => finish(null),
     { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
   );
+}
+
+// Avisa UNA VEZ por sesión de que lo que se está marcando no va a contar. El sitio donde duele
+// enterarse de esto es al final de la ruta, viendo que no ha sumado nada: mejor decirlo al primer
+// avistamiento. No bloquea nada — el cuaderno personal del usuario sigue siendo suyo.
+let unverifiedWarned = false;
+function warnIfNotVerified() {
+  if (unverifiedWarned || marksCountNow()) return;
+  unverifiedWarned = true;
+  showNotice({
+    key: 'presence-unverified', icon: '📍',
+    title: 'Esto no cuenta para los logros todavía',
+    text: 'Tus marcas se guardan igual, pero para que sumen tiene que constar que estás dentro del parque. '
+      + 'Activa la ubicación y camina unos minutos: la barra de arriba te dirá cuándo está verificada.'
+  });
+}
+
+// Hora de marcado, la pieza que decide si algo cuenta. El servidor sella la suya (progress.php) y
+// esta es la copia local para poder predecir sin cobertura; al sincronizar, manda la del servidor.
+function noteMarked(type, id, seen) {
+  const key = type + ':' + id;
+  if (!state.markedAt) state.markedAt = {};
+  if (seen) { if (!state.markedAt[key]) state.markedAt[key] = new Date().toISOString(); }
+  else delete state.markedAt[key];
 }
 
 function toggleSpeciesSeen(id) {
@@ -171,11 +199,12 @@ function toggleSpeciesSeen(id) {
   const related = relatedSpeciesIds(numericId);
   const others = related.filter(rid => rid !== numericId);
   if (nowSeen) {
-    related.forEach(rid => state.seenSpecies.add(rid));
+    related.forEach(rid => { state.seenSpecies.add(rid); noteMarked('species', rid, true); });
     afterSeenChange();
     captureSighting(numericId, others);
+    warnIfNotVerified();
   } else {
-    related.forEach(rid => { state.seenSpecies.delete(rid); state.sightings.delete(rid); });
+    related.forEach(rid => { state.seenSpecies.delete(rid); state.sightings.delete(rid); noteMarked('species', rid, false); });
     afterSeenChange();
     related.forEach(rid => persistProgress('species', rid, false));
   }
@@ -184,18 +213,11 @@ function toggleSpeciesSeen(id) {
 function togglePoiSeen(id) {
   const nowSeen = !state.seenPois.has(id);
   if (nowSeen) state.seenPois.add(id); else state.seenPois.delete(id);
+  noteMarked('poi', id, nowSeen);
   renderPoiMarkers();
   if (state.view === 'progress') renderProgressTab();
   if (nowSeen) { noteParkActivity(state.activeParkSlug); refreshAccountProgress(); }
   persistProgress('poi', id, nowSeen).then(res => res && handleServerNewlyUnlocked(res.newlyUnlocked));
-}
-
-// Logro de sabor "hábitat completado sin buscador": si marcar esta especie acaba de completar
-// alguno de sus hábitats y en toda la sesión no se ha escrito nada en el buscador, se reporta.
-function checkNoSearchHabitatFlavor(speciesId) {
-  if (state.searchUsedThisSession) return;
-  const habitats = (state.data.habitats || []).filter(h => (h.speciesIds || []).includes(speciesId));
-  if (habitats.some(h => isHabitatComplete(h))) reportFlavorFlag('noSearchHabitat');
 }
 
 // Acciones que los popups del mapa disparan sobre la app (ver map.js).
@@ -367,15 +389,17 @@ backToHabitatsBtn.addEventListener('click', backToHabitats);
 
 searchInput.addEventListener('input', event => {
   state.query = event.target.value;
-  if (state.query.trim()) state.searchUsedThisSession = true;
   if (state.catalogMode === 'species') renderSpeciesList(); else renderHabitatCatalog();
 });
 
 // --- Modo explorador (explorer.js): GPS continuo, "cerca de ti" y descubrimiento por proximidad --
 // Las acciones que el explorador dispara sobre la app se inyectan aquí, igual que con map.js.
+// `onFix` conecta su watchPosition con la verificación de presencia: el explorador ya está siguiendo
+// la posición, así que no hace falta un segundo GPS encendido en paralelo.
 initExplorer({
   onTogglePoiSeen: togglePoiSeen,
-  onShowHabitatSpecies: focusHabitat
+  onShowHabitatSpecies: focusHabitat,
+  onFix: (lat, lng, accuracy) => notePresenceFix(lat, lng, accuracy)
 });
 
 // Panel de capas del mapa (layers.js): bases, capas con leyenda y hábitats individuales.
@@ -470,7 +494,11 @@ function initOfflineUI() {
     if (syncing || !NaturDexOffline.isOnline()) return;
     syncing = true;
     try {
-      // 1) Subir lo marcado sin cobertura. Va primero: es lo único que solo existe en el móvil.
+      // 1) Subir las posiciones del GPS pendientes. Van las PRIMERAS de todo: son las que verifican
+      //    la visita, y sin visita verificada lo que se suba después no contaría para nada.
+      const presenceFlush = await flushPresenceQueue();
+      if (presenceFlush.newlyUnlocked.length) handleServerNewlyUnlocked(presenceFlush.newlyUnlocked);
+      // 2) Subir lo marcado sin cobertura. Va después: es lo único que solo existe en el móvil.
       const flushed = await flushProgressQueue();
       if (flushed.sent) {
         showNotice({
@@ -480,9 +508,10 @@ function initOfflineUI() {
         });
         if (flushed.newlyUnlocked.length) handleServerNewlyUnlocked(flushed.newlyUnlocked);
       }
-      // 2) Reconciliar los logros de cuenta (hasta ahora solo corría al arrancar).
+      // 3) Reconciliar los logros de cuenta (hasta ahora solo corría al arrancar).
       if (state.userId != null) await syncWithServer();
-      // 3) ¿El parque guardado tiene fotos o mapa nuevos? Nunca se descarga solo.
+      refreshPresenceBar();
+      // 4) ¿El parque guardado tiene fotos o mapa nuevos? Nunca se descarga solo.
       await maybeOfferRevalidation();
     } catch (e) {
       console.info('La sincronización al recuperar conexión falló; se reintentará.', e);
@@ -613,6 +642,11 @@ async function startParkExperience(slug, user) {
   // alto), el mapa no dibuja capas ni teselas (ver ensureMapSized en map.js).
   ensureMapSized();
 
+  // Verificación de presencia: a partir de aquí, la app sabe si estás dentro del límite oficial y
+  // te lo dice antes de que marques nada (presence.js). No pide el permiso de ubicación por su
+  // cuenta: si ya lo tenía, sigue en silencio; si no, la barra ofrece activarlo.
+  startPresence(state.activeParkSlug, { onUnlocked: handleServerNewlyUnlocked });
+
   if (!parkExperienceInited) { initOfflineUI(); initGlossaryPopover(); parkExperienceInited = true; }
   // La UI offline es única pero su contenido depende del parque (si está guardado, cuánto ocupa),
   // así que al cambiar de parque hay que repintarla y volver a mirar si lo guardado está viejo.
@@ -622,6 +656,7 @@ async function startParkExperience(slug, user) {
 }
 window.startParkExperience = startParkExperience;
 window.naturdexInvalidateMap = ensureMapSized; // auth.js lo llama al mostrar la pantalla del parque
+window.naturdexStopPresence = stopPresence;    // auth.js lo llama al volver al selector de parques
 
 // Pantalla de progreso de cuenta (ámbito estatal): auth.js la llama desde "screen-select" (botón de
 // trofeo) y achievements.js desde el cartel agrupado ("¡N logros nuevos!"). No depende de que haya

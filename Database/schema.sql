@@ -343,11 +343,52 @@ CREATE TABLE IF NOT EXISTS user_achievements (
     INDEX idx_user_achievements_user (user_id)
 );
 
--- Registro de actividad (día en que el usuario marcó algo visto en un parque concreto). Es la ÚNICA
--- pieza de este bloque que no se puede recalcular desde user_progress: su payload sobrescribe
--- updated_at en cada UPSERT, así que no queda historial de qué días hubo actividad. Tabla pequeña y
--- de solo-inserción (INSERT IGNORE con la fecha de hoy en cada POST a progress.php); de aquí salen
--- "días de salida distintos", "racha de semanas" y "volver al mismo parque en varias fechas".
+-- ------------------------------------------------------------------------------------------------
+-- VISITAS VERIFICADAS: la prueba de que el usuario estuvo físicamente en el espacio protegido.
+-- ------------------------------------------------------------------------------------------------
+-- Es la tabla que sostiene TODOS los logros de campo. Una fila = una sesión de presencia continua en
+-- un espacio: la app va enviando posiciones del GPS (Backend/Api/presence.php) y cada una se valida
+-- contra el límite oficial del espacio antes de acumularse aquí. `verified` no lo pide nadie: se
+-- calcula (presencia sostenida = varios fixes repartidos en varios minutos) y una visita marcada como
+-- sospechosa no lo alcanza nunca. Ver Backend/Lib/presence.php y Docs/VERIFICACION-Y-ANTITRAMPAS.md.
+--
+-- Privacidad: NO se guarda la traza del paseo, solo el agregado de la visita y la última posición
+-- (necesaria para encadenar el siguiente fix y detectar saltos imposibles). Con eso basta para los
+-- logros y no se convierte a la app en un registro de por dónde anda la gente.
+CREATE TABLE IF NOT EXISTS user_park_visits (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    park_slug VARCHAR(120) NOT NULL,
+    -- Fechas en UTC (las escribe PHP con gmdate, nunca NOW(), para no depender de la zona del motor).
+    started_at DATETIME NOT NULL,
+    last_fix_at DATETIME NOT NULL,
+    fix_count INT NOT NULL DEFAULT 0,
+    -- Metros recorridos dentro del espacio (suma de tramos entre fixes válidos). De aquí salen los
+    -- logros de kilómetros de campo, que son los que no se pueden fingir sentado.
+    distance_m INT NOT NULL DEFAULT 0,
+    best_accuracy_m SMALLINT UNSIGNED NULL,
+    last_lat DECIMAL(10,6) NULL,
+    last_lng DECIMAL(10,6) NULL,
+    -- Fixes seguidos con la coordenada EXACTAMENTE igual: un GPS real siempre baila unos metros, así
+    -- que una racha larga delata una posición fijada a mano.
+    frozen_streak SMALLINT NOT NULL DEFAULT 0,
+    verified TINYINT(1) NOT NULL DEFAULT 0,
+    verified_at DATETIME NULL,
+    -- Cuarentena, no castigo: una visita sospechosa no puntúa, pero no se borra ni bloquea la cuenta.
+    -- `flags` guarda los motivos ('salto_imposible', 'gps_congelado'...) para poder auditarlo después.
+    suspicious TINYINT(1) NOT NULL DEFAULT 0,
+    flags JSON NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    INDEX idx_user_park_visits_park (user_id, park_slug, last_fix_at),
+    INDEX idx_user_park_visits_window (user_id, verified, started_at)
+);
+
+-- Registro de actividad (día en que el usuario marcó algo visto en un parque concreto). Tabla
+-- histórica: desde la verificación de presencia, la constancia (días de campo, rachas, volver al
+-- mismo sitio) sale de user_park_visits, porque marcar algo se puede hacer desde el sofá y estar
+-- en el monte no. Se mantiene porque es un rastro barato y útil para depurar (qué días hubo
+-- actividad en la app, con o sin GPS), pero NINGÚN logro depende ya de ella.
 CREATE TABLE IF NOT EXISTS user_activity_log (
     user_id INT NOT NULL,
     park_slug VARCHAR(120) NOT NULL,

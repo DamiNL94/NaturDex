@@ -351,3 +351,41 @@ UPDATE species s
    SET s.gbif_species_key = 4127897
  WHERE s.scientific_name = 'Macrochloa tenacissima'
    AND s.gbif_species_key = 3073;
+
+-- ------------------------------------------------------------------------------------------------
+-- Verificación de presencia: logros que exigen haber pisado el espacio protegido.
+-- ------------------------------------------------------------------------------------------------
+-- Hasta aquí, todo el progreso de cuenta se podía conseguir sin salir de casa: bastaba con pulsar
+-- "marcar como vista". A partir de esta tabla, lo que cuenta para un logro es dónde estaba el
+-- usuario cuando lo marcó, y eso lo decide el servidor cruzando cada posición del GPS con el límite
+-- oficial del espacio (Backend/Lib/geo.php + presence.php). Ver los comentarios completos en
+-- Database/schema.sql y el modelo de amenazas en Docs/VERIFICACION-Y-ANTITRAMPAS.md.
+CREATE TABLE IF NOT EXISTS user_park_visits (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    park_slug VARCHAR(120) NOT NULL,
+    started_at DATETIME NOT NULL,
+    last_fix_at DATETIME NOT NULL,
+    fix_count INT NOT NULL DEFAULT 0,
+    distance_m INT NOT NULL DEFAULT 0,
+    best_accuracy_m SMALLINT UNSIGNED NULL,
+    last_lat DECIMAL(10,6) NULL,
+    last_lng DECIMAL(10,6) NULL,
+    frozen_streak SMALLINT NOT NULL DEFAULT 0,
+    verified TINYINT(1) NOT NULL DEFAULT 0,
+    verified_at DATETIME NULL,
+    suspicious TINYINT(1) NOT NULL DEFAULT 0,
+    flags JSON NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    INDEX idx_user_park_visits_park (user_id, park_slug, last_fix_at),
+    INDEX idx_user_park_visits_window (user_id, verified, started_at)
+);
+
+-- Los logros ganados con las reglas viejas (sin pisar campo) no significan lo que dice su ficha, y
+-- el catálogo ha cambiado de ids: se vacían para que el sistema arranque limpio. NO se toca
+-- user_progress: lo que el usuario tenía marcado sigue ahí, simplemente pasa a estar "sin verificar"
+-- hasta que vuelva al campo. Tras aplicar esto, ejecutar:
+--     php Tools/recalculate-account-progress.php
+DELETE FROM user_achievements;
+DELETE FROM user_account_progress;

@@ -1,0 +1,550 @@
+/* ================================================================================================
+   NaturDex — capa "ranger" (implementación de la propuesta v2)
+   ------------------------------------------------------------------------------------------------
+   Se carga DESPUÉS de Css/styles.css. No sustituye a styles.css: redefine sus tokens y sobrescribe
+   los valores literales (colores blancos/verde claro, radios de 8px y píldoras de 999px) que la
+   hoja original tenía escritos a mano. Así el rediseño entra sin reescribir 832 líneas y se puede
+   revertir quitando una sola línea del index.html.
+
+   Contiene tres bloques:
+     A. Tokens (claro + oscuro) y tipografía
+     B. Piel: cartel del parque, versalitas, filetes, avisos, parches, botones, formas
+     C. Reestructuración móvil: el mapa pasa a ser el fondo y la barra lateral, una hoja deslizante
+   ================================================================================================ */
+
+/* ===== A. Tokens ============================================================================== */
+:root{
+  --paper:#FFFFFF;
+  --panel:#FFFFFF;
+  --surface:#FAFAF8;
+  --surface-alt:#F1F1EE;
+
+  --line:#E3E3DF;
+  --line-strong:#D4D4CE;
+  --ink:#1A1A17;
+  --ink-soft:#45453D;
+  --muted:#6A6A61;
+  --muted-2:#7C7C73;
+  --faint:#A2A29A;
+
+  --leaf:#1F4D34;
+  --leaf-deep:#143424;
+  --leaf-tint:#E3E7D6;
+  /* Verde de RELLENO (fondo del cartel, botón principal, filtro activo…), siempre con texto crema
+     encima. En claro coincide con --leaf; en oscuro NO puede hacerlo: allí --leaf se aclara para
+     poder leerse como texto, y usarlo de fondo dejaba el crema en 2,55:1. Ver el bloque D. */
+  --leaf-fill:#1F4D34;
+  --leaf-fill-deep:#143424;
+  --bark:#4A3B2A;
+  --brass:#C4A15E;
+  --brass-ink:#C4A15E;      /* latón cuando es TEXTO sobre el verde del cartel (ver oscuro) */
+  --sea:#2E6D8E;
+  --sea-tint:#DCE6E9;
+
+  --sun:#C4762A;            /* el ámbar de styles.css pasa a ser el ámbar de aviso del cartel */
+  --warn:#C4762A;
+  --warn-ink:#96601F;
+  --warn-bg:#FBF1DF;
+  --danger:#A0451F;
+  --danger-ink:#8A3B19;
+
+  --font-display:"Zilla Slab",Georgia,serif;
+  --font-ui:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --tracking-caps:.12em;
+
+  --radius-sm:2px;
+  --radius-md:3px;
+  --radius-lg:4px;
+  --rule:4px;
+  --shadow-sm:0 4px 14px rgba(26,26,23,.10);
+  --shadow:0 16px 44px rgba(26,26,23,.18);
+  --tap-min:44px;
+}
+
+:root[data-theme="dark"]{
+  --paper:#16180F;
+  --panel:#1E2118;
+  --surface:#232719;
+  --surface-alt:#2C3325;
+  --tint:#2C3325;
+
+  --line:#333A2A;
+  --line-strong:#3A4130;
+  --ink:#F5EEDD;
+  --ink-soft:#D5CDB8;
+  --muted:#9B9480;
+  --muted-2:#8B8A76;
+  --faint:#7A7A68;
+
+  --leaf:#6FA986;           /* en oscuro el verde tiene que LEERSE: se usa el luminoso */
+  --leaf-deep:#8CC0A1;
+  --leaf-tint:#263021;
+  /* Relleno: verde lo bastante oscuro para que el crema encima llegue a 5,9:1 y lo bastante vivo
+     para separarse del panel casi negro. */
+  --leaf-fill:#2E6B49;
+  --leaf-fill-deep:#25573B;
+  --bark:#3A2E22;
+  --brass:#C4A15E;
+  /* Sobre el verde de relleno del oscuro, el latón normal se queda en 2,6:1 y la categoría del
+     cartel deja de leerse. Como texto se usa un latón pálido (4,5:1); como filete sigue el normal. */
+  --brass-ink:#EBD9A8;
+  --sea:#6FA9C4;
+  --sea-tint:#1D2A30;
+
+  --sun:#E8B45A;
+  --warn:#C4762A;
+  --warn-ink:#E8B45A;
+  --warn-bg:#2A2417;
+  --danger:#E08256;
+  --danger-ink:#F0A68F;
+
+  --shadow-sm:0 4px 14px rgba(0,0,0,.4);
+  --shadow:0 16px 44px rgba(0,0,0,.55);
+}
+
+/* Tipografía: rótulos con serifa (cartel tallado) y texto en sans neutra */
+body{font-family:var(--font-ui);background:var(--paper);color:var(--ink)}
+h1,h2,h3,.section-title h2,.cover-title,.profile-name,.account-stat strong,.summary-grid strong{
+  font-family:var(--font-display);font-weight:700;letter-spacing:-.01em}
+h1,h2{text-wrap:pretty}
+.species-card em,.detail-body em,.invasora-desc em{font-style:italic}
+
+/* Versalitas de metadato: eyebrows, subtítulos, insignias de sección */
+.eyebrow,.detail-subtitle,.profile-subtitle,.layers-section h4,.popup-type,
+.status-list li span,.achievement-toast-eyebrow,.habitat-detail-kind{
+  letter-spacing:var(--tracking-caps);text-transform:uppercase;font-weight:700}
+.eyebrow{color:var(--brass)}
+.select-head .eyebrow,.park-summary .eyebrow{color:var(--muted-2)}
+
+/* ===== B. Piel ================================================================================= */
+/* Forma: la estética es impresa, no de burbuja. Fuera píldoras y esquinas de 8-16px. */
+.btn-primary,.btn-secondary,.btn-danger,.icon-btn,.seen-toggle,.poi-seen-btn,.popup-enter,
+.save-offline-btn,.explorer-toggle,.layers-toggle,.nearby-item,.hint-primary,.notice-action,
+.presence-action,.layers-solo,.badge,.habitat-species-chip,.habitat-filter-chip,.profile-choices,
+.profile-choice,.auth-tabs,.auth-tab,.auth-card,.segmented,.filter-button,.view-tab,
+.species-card,.habitat-card,.summary-grid div,.achievement-card,.detail-facts div,.status-list li,
+.audio-block,.profile-section,.profile-identity,.profile-list li,.account-stat,.select-field select,
+.controls input,.auth-field input,.tutorial-card,.tutorial-back,.tutorial-next,.tutorial-close,
+.habitat-prompt-card,.habitat-prompt-no,.habitat-prompt-yes,.explorer-hint,.layers-panel,
+.nearby-panel,.glossary-popover,.review-note,.basic-foot,.account-rule,.presence-bar,
+.progress-row,.profile-msg,.auth-error,.select-status,.profile-warning,.sheet-close{
+  border-radius:var(--radius-md)}
+.progress-track,.progress-fill,.tutorial-dot,.legend-dot,.lg-dot,.sheet-grip,
+.profile-switch-track,.profile-switch-track::after,.seen-badge,.presence-dot,
+.user-marker span,.species-marker span{border-radius:999px}
+/* display:block es obligatorio, no cosmético: en la pestaña de progreso las barras de cada hábitat
+   se pintan con <span>, y sobre un elemento en línea la altura no se aplica. Las 15 barras de
+   hábitat medían 0px de alto —invisibles— porque solo las barras "big", que son <div>, funcionaban. */
+.progress-track,.progress-fill{display:block}
+.progress-track{height:6px;background:var(--surface-alt)}
+
+/* Botones */
+.btn-primary{min-height:var(--tap-min);background:var(--leaf-fill);color:#FBF7EE;font-weight:700;
+  letter-spacing:.02em;font-size:1rem}
+.btn-primary:hover:not(:disabled){background:var(--leaf-fill-deep);filter:none}
+.btn-secondary{min-height:var(--tap-min);border:2px solid var(--bark);background:transparent;
+  color:var(--bark);font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+.btn-secondary:hover{background:var(--bark);color:#F2E5CE;border-color:var(--bark)}
+.link-btn{color:var(--leaf);text-decoration:underline;text-underline-offset:3px}
+.icon-btn{width:var(--tap-min);height:var(--tap-min);border-color:var(--line-strong);
+  background:var(--panel);color:var(--ink-soft)}
+.icon-btn:hover{color:#FBF7EE;background:var(--bark);border-color:var(--bark)}
+.icon-btn.primary{border-color:var(--leaf);color:var(--leaf)}
+.icon-btn.primary:hover{background:var(--leaf-fill);border-color:var(--leaf-fill);color:#FBF7EE}
+
+/* Portada: cartel verde con filete de latón sobre fondo sobrio (sin degradado radial verde claro) */
+.screen-cover{background:var(--paper);padding:0;align-items:stretch}
+.cover-inner{display:flex;flex-direction:column;justify-content:flex-end;max-width:560px;
+  width:100%;margin:0 auto;padding:0 0 34px;text-align:left}
+.cover-mark{display:none}
+.cover-sign{position:relative;margin:0 0 22px;padding:22px 22px 20px;background:var(--leaf-fill);
+  border-bottom:5px solid var(--brass);border-radius:var(--radius-lg);box-shadow:var(--shadow)}
+.cover-sign .eyebrow{margin:0 0 8px;color:var(--brass-ink);font-size:.66rem;letter-spacing:.2em}
+.cover-title{margin:0 0 10px;color:#FFFFFF;font-size:clamp(2.6rem,9vw,3.6rem);line-height:.98}
+.cover-sign .cover-stats{margin:0;color:#C7D6C9;font-size:.9rem;line-height:1.5}
+.cover-sub{margin:0 22px 22px;color:var(--ink-soft);font-size:1rem;line-height:1.6}
+.cover-inner>.btn-primary{margin:0 22px;width:calc(100% - 44px)}
+.cover-foot{margin:16px 22px 0;color:var(--muted);font-size:.72rem;letter-spacing:.02em}
+.cover-photo{flex:1;min-height:0;position:relative;background:#1B3A2A;
+  display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.28)}
+.cover-photo::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(20,19,16,.5) 0%,rgba(20,19,16,0) 40%,var(--paper) 100%)}
+.cover-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+/* Pie de foto: dice de qué espacio es la imagen que ha tocado hoy. Va por encima del degradado
+   (z-index) y sobre la zona superior oscurecida, donde el crema se lee de sobra. */
+.cover-photo-caption{position:absolute;z-index:1;top:calc(14px + env(safe-area-inset-top));left:22px;
+  right:22px;margin:0;color:#F2E5CE;font-size:.68rem;font-weight:700;
+  letter-spacing:var(--tracking-caps);text-transform:uppercase;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.cover-photo-caption[hidden]{display:none}
+
+/* Acceso */
+.auth-card{border-color:var(--line);box-shadow:var(--shadow)}
+.auth-card .eyebrow{color:var(--muted-2)}
+.auth-tabs{background:var(--surface-alt);border-color:var(--line)}
+.auth-tab{min-height:40px;font-weight:700}
+.auth-tab.active{background:var(--panel);color:var(--leaf);box-shadow:none;
+  border-bottom:2px solid var(--brass)}
+.auth-field{color:var(--muted-2);letter-spacing:.06em;text-transform:uppercase;font-size:.7rem}
+.auth-field input,.controls input,.select-field select,.select-field input{background:var(--panel);
+  color:var(--ink);border-color:var(--line-strong);min-height:var(--tap-min)}
+/* El <select> no hereda la tipografía: styles.css hace `button,input{font:inherit}` pero deja fuera
+   a select, así que el desplegable de parques salía en la fuente por defecto del navegador (Arial)
+   mientras todo lo demás iba en Public Sans. */
+select{font-family:var(--font-ui);font-size:.92rem}
+.select-field input{display:block;width:100%;margin-top:6px;padding:0 10px;
+  border:1px solid var(--line-strong);border-radius:var(--radius-md);font-size:.92rem}
+.select-field+.select-search-count{margin:6px 0 0;color:var(--muted);font-size:.76rem;font-weight:700}
+.select-search-count[hidden]{display:none}
+.auth-error,.profile-msg.error,.select-status.error{background:var(--warn-bg);color:var(--danger)}
+.select-status{background:var(--leaf-tint);color:var(--leaf)}
+
+/* Cartel del parque: cabecera de la barra lateral / de la hoja */
+.park-summary{background:var(--panel);border-bottom:1px solid var(--line)}
+.park-sign,.park-summary .park-sign{background:var(--leaf-fill);border-bottom:3px solid var(--brass);
+  border-radius:var(--radius-lg);color:#FBF7EE;padding:12px 14px}
+/* Dentro del cartel manda el cartel: styles.css pinta `.park-summary p` en gris de metadato y eso
+   sobre el verde no se lee. El rótulo va en crema y la categoría en latón, como en la portada. */
+.park-summary .park-sign .eyebrow{margin:0 0 6px;color:var(--brass-ink);font-size:.66rem;
+  letter-spacing:.2em}
+.park-sign #parkTitle{margin:0;color:#FBF7EE}
+#parkTitle{font-family:var(--font-display)}
+.summary-grid div{background:var(--surface);border-color:var(--line)}
+.summary-grid span{color:var(--muted-2);letter-spacing:.06em;text-transform:uppercase;font-size:.66rem}
+
+/* Pestañas y filtros: subrayado de latón en vez de relleno oscuro */
+.view-tabs{gap:0;border-bottom:1px solid var(--line)}
+.view-tab{border:0;border-bottom:3px solid transparent;border-radius:0;background:transparent;
+  color:var(--muted);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.74rem;
+  min-height:42px}
+.view-tab.active{background:transparent;color:var(--leaf);border-bottom-color:var(--brass)}
+.view-tab:hover:not(.active){background:var(--surface);color:var(--ink)}
+.segmented{background:var(--surface-alt);border-color:var(--line)}
+.filter-button{min-height:36px;color:var(--muted);font-weight:700;font-size:.78rem}
+.filter-button.active{background:var(--leaf-fill);color:#FBF7EE}
+
+/* Tarjetas de especie y hábitat: filete de color a la izquierda, no borde redondeado uniforme */
+.species-card,.habitat-card{background:var(--surface);border-color:var(--line);
+  border-left:var(--rule) solid var(--line-strong)}
+.species-card:hover,.habitat-card:hover{transform:none;box-shadow:var(--shadow-sm);
+  border-color:var(--line-strong)}
+.species-card.seen,.habitat-card.complete{border-left-color:var(--leaf);background:var(--panel)}
+.species-card.active{border-color:var(--leaf);border-left-color:var(--leaf);
+  box-shadow:inset 0 0 0 1px var(--leaf)}
+.habitat-card.complete{border-color:var(--line)}
+.species-card img{border-radius:var(--radius-sm);background:var(--surface-alt)}
+.card-thumb{border-radius:var(--radius-sm);overflow:hidden}
+.seen-badge{background:var(--leaf-fill);color:#FBF7EE;box-shadow:0 0 0 2px var(--panel)}
+.habitat-all-link{border:1px solid var(--line-strong);border-radius:var(--radius-md);
+  color:var(--leaf);letter-spacing:.06em;text-transform:uppercase;font-size:.72rem;min-height:40px}
+.habitat-all-link:hover{background:var(--leaf-tint)}
+.zepa-card{border-color:var(--line)}
+.zepa-card:hover{border-color:var(--sea)}
+
+/* Insignias: versalitas sin fondo de pastilla */
+.badge{background:transparent;padding:0;min-height:0;color:var(--muted-2);font-size:.64rem;
+  font-weight:700;letter-spacing:var(--tracking-caps);text-transform:uppercase}
+.badge+.badge{padding-left:8px;border-left:1px solid var(--line)}
+.badge.fauna{color:var(--sea);background:transparent}
+.badge.alert{color:var(--danger);background:transparent}
+.badge.review{color:var(--warn-ink);background:transparent}
+.badge.migratoria{color:var(--sea);background:transparent}
+.badge.habitat-code{color:var(--muted-2);background:transparent;font-variant-numeric:tabular-nums}
+.habitat-species-chip{background:var(--panel);border-color:var(--line-strong);font-weight:600}
+.habitat-species-chip:hover{border-color:var(--leaf);background:var(--leaf-tint)}
+.habitat-species-chip.seen{border-color:var(--leaf);background:var(--leaf-tint);color:var(--leaf)}
+.habitat-filter-chip{background:var(--leaf-tint);color:var(--leaf);border-radius:var(--radius-md)}
+.habitat-filter-chip button{color:var(--leaf)}
+
+/* Ficha de detalle */
+.detail-panel{background:var(--panel);border-left:1px solid var(--line)}
+.detail-panel img{background:var(--surface-alt)}
+.detail-body em{color:var(--muted)}
+.detail-body p{color:var(--ink-soft)}
+.detail-facts div,.status-list li{background:var(--surface);border-color:var(--line)}
+.detail-facts span,.status-list li span{color:var(--muted-2);letter-spacing:var(--tracking-caps)}
+.detail-subtitle{color:var(--muted-2);font-size:.68rem}
+.seen-toggle{min-height:var(--tap-min);border:2px solid var(--leaf);background:transparent;
+  color:var(--leaf);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.78rem}
+.seen-toggle:hover{background:var(--leaf-tint)}
+.seen-toggle.is-seen{background:var(--leaf-fill);color:#FBF7EE}
+.seen-toggle.is-seen:hover{background:var(--leaf-fill-deep)}
+.habitat-detail-kind{background:var(--leaf-fill);border-radius:var(--radius-sm);color:#FBF7EE;
+  font-size:.64rem}
+.review-note{border-color:var(--warn);background:var(--warn-bg);color:var(--warn-ink)}
+.detail-source{color:var(--faint)}
+
+/* Avisos con voz de personal del parque: banda marrón con filete ámbar */
+.basic-notice .basic-foot,.account-rule,.presence-bar{background:var(--surface);
+  border-color:var(--line);color:var(--muted)}
+.notice-bar,.invasoras-intro.notice-bar{display:flex;gap:11px;align-items:flex-start;padding:13px;
+  background:var(--bark);border-bottom:var(--rule) solid var(--warn);color:#F2E5CE;
+  border-radius:var(--radius-md)}
+.invasora-warning{border-color:var(--warn);background:var(--warn-bg);color:var(--warn-ink)}
+.invasora-thumb,.invasora-thumb img,.invasora-detail-hero,.invasora-detail-hero img{
+  background:var(--surface-alt)}
+.profile-warning{border-color:var(--warn);background:var(--warn-bg);color:var(--warn-ink)}
+.profile-warning .icon{color:var(--warn)}
+.explorer-hint{border-color:var(--warn);background:var(--warn-bg);box-shadow:var(--shadow)}
+.hint-body span{color:var(--warn-ink)}
+.hint-primary{background:var(--leaf-fill);border-color:var(--leaf-fill);color:#FBF7EE;
+  min-height:var(--tap-min)}
+.notice-action{border-color:var(--leaf);color:var(--leaf);min-height:38px}
+.notice-action:hover{background:var(--leaf-fill);color:#FBF7EE}
+
+/* Progreso y parches de mérito */
+.progress-row{background:var(--surface);border-color:var(--line)}
+/* Barras de hábitat: con `flex:1` la barra se quedaba con las sobras del nombre y medía entre 116px
+   y 0px según lo largo que fuese el hábitat —quince barras a quince anchos distintos, y las de
+   nombre más largo directamente sin pintar—. Ahora la barra tiene una vía fija y es el nombre el
+   que cede: es el nombre el que puede partirse en dos líneas, no la escala del progreso. */
+.progress-row .progress-row-label{flex:1 1 auto;min-width:0}
+.progress-row .habitat-goal-bar{flex:0 0 72px;max-width:72px}
+.progress-row.complete{border-color:var(--line);border-left:var(--rule) solid var(--leaf);
+  background:var(--panel)}
+.progress-row-value{color:var(--muted-2);font-variant-numeric:tabular-nums}
+.achievement-card{background:var(--surface);border-color:var(--line);align-items:center}
+.achievement-card.unlocked{border-color:var(--line);border-left:var(--rule) solid var(--brass);
+  background:var(--panel)}
+.achievement-card.rarity-poco-comun.unlocked{border-left-color:var(--sea);background:var(--panel)}
+.achievement-card.rarity-raro.unlocked{border-left-color:var(--bark);background:var(--panel)}
+.achievement-card.rarity-legendario.unlocked{border-left-color:var(--brass);
+  background:var(--warn-bg)}
+.achievement-icon{width:56px;height:56px;border-radius:999px;background:var(--leaf-fill);
+  border:3px solid var(--brass);color:#F2E5CE}
+.achievement-card.locked .achievement-icon{background:var(--surface-alt);border-style:dashed;
+  border-color:var(--line-strong);color:var(--faint)}
+.achievement-toast{background:var(--panel);border-color:var(--line);
+  border-bottom:var(--rule) solid var(--brass)}
+.achievement-toast.rarity-legendario{background:var(--warn-bg)}
+.achievement-toast-icon{background:var(--leaf-fill);border:3px solid var(--brass);color:#F2E5CE;
+  box-shadow:none}
+.achievement-toast-eyebrow{color:var(--brass)}
+.account-stat{background:var(--surface);border-color:var(--line)}
+.account-stat span{color:var(--muted-2);letter-spacing:.06em;text-transform:uppercase}
+
+/* Perfil */
+.screen-profile,.screen-account{background:var(--paper)}
+.profile-identity,.profile-section{background:var(--panel);border-color:var(--line);
+  box-shadow:none;border-top:var(--rule) solid var(--leaf)}
+#profile-danger{border-top-color:var(--danger)}
+.profile-avatar{border-radius:999px;background:var(--leaf-fill);border:3px solid var(--brass);
+  color:#F2E5CE;font-family:var(--font-display)}
+.profile-section-icon{background:var(--surface-alt);color:var(--leaf);border-radius:999px}
+.profile-choices{background:var(--surface-alt);border-color:var(--line);border-radius:var(--radius-md)}
+.profile-choice{min-height:38px;border-radius:var(--radius-sm);font-weight:700}
+.profile-choice.active{background:var(--leaf-fill);color:#FBF7EE}
+.profile-switch-track{background:var(--line-strong)}
+.profile-switch input:checked+.profile-switch-track{background:var(--leaf)}
+.profile-list li,.audio-block{background:var(--surface);border-color:var(--line)}
+.profile-msg{background:var(--leaf-tint);color:var(--leaf)}
+.btn-danger{min-height:var(--tap-min);border:2px solid var(--danger);color:var(--danger);
+  letter-spacing:.06em;text-transform:uppercase;font-size:.78rem}
+.btn-danger:hover{background:var(--danger);color:#FBF7EE}
+
+/* Mapa, marcadores y controles del mapa */
+#map{background:var(--sea-tint)}
+.explorer-toggle,.layers-toggle,.save-offline-btn{background:var(--panel);color:var(--ink);
+  border:1px solid var(--line-strong);font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  font-size:.7rem;min-height:40px}
+.explorer-toggle.active{background:var(--leaf-fill);border-color:var(--leaf-fill);color:#FBF7EE}
+.explorer-toggle.active.recenter{background:var(--panel);color:var(--leaf);border-color:var(--leaf);
+  box-shadow:inset 0 0 0 1px var(--leaf),var(--shadow-sm)}
+.layers-toggle[aria-expanded="true"]{background:var(--leaf-fill);border-color:var(--leaf-fill);color:#FBF7EE}
+.layers-panel,.nearby-panel,.glossary-popover{background:var(--panel);box-shadow:var(--shadow);
+  border:1px solid var(--line)}
+.layers-hint{background:var(--leaf-tint);color:var(--leaf);border-radius:var(--radius-sm)}
+.layers-mini-actions button,.layers-habitat-name:hover{color:var(--leaf)}
+.layers-solo{border-color:var(--line-strong);background:var(--panel);color:var(--muted-2)}
+.layers-solo:hover{border-color:var(--leaf);color:var(--leaf)}
+.nearby-item{background:var(--surface);border-color:var(--line)}
+.nearby-item:hover{border-color:var(--leaf)}
+.nearby-item.here{border-color:var(--brass);background:var(--warn-bg)}
+.nearby-name strong{color:var(--warn-ink)}
+.nearby-dist{color:var(--muted-2);font-variant-numeric:tabular-nums}
+.poi-marker span{background:var(--warn);border-radius:var(--radius-sm);border:2px solid #FBF7EE}
+.poi-marker.seen span{background:var(--leaf);box-shadow:0 0 0 2px var(--brass),0 2px 8px rgba(0,0,0,.25)}
+.species-marker span{border:2px solid #FBF7EE}
+.species-marker.seen span{box-shadow:0 0 0 2px var(--brass),0 2px 8px rgba(0,0,0,.25)}
+.user-marker span{background:var(--sea);border-color:#FBF7EE}
+.marker-cluster-small,.marker-cluster-medium,.marker-cluster-large{background:rgba(31,77,52,.22)}
+.marker-cluster-small div,.marker-cluster-medium div,.marker-cluster-large div{
+  background:var(--leaf-fill);color:#FBF7EE;font-weight:700}
+.leaflet-popup-content-wrapper{border-radius:var(--radius-md);box-shadow:var(--shadow)}
+.leaflet-popup-content strong{font-family:var(--font-display)}
+.poi-popup-image{border-radius:var(--radius-md) var(--radius-md) 0 0;background:var(--surface-alt)}
+.popup-enter,.poi-seen-btn{border:1px solid var(--leaf);color:var(--leaf);min-height:36px}
+.legend-dot{background:var(--leaf)}
+.legend-dot.fauna{background:var(--sea)}
+.legend-dot.poi{background:var(--warn);border-radius:2px}
+.legend-line.parque{border-top-color:var(--leaf)}
+.legend-line.lic{border-top-color:var(--sea)}
+
+/* Presencia verificada */
+.presence-bar.is-verified{border-color:var(--line);border-left:var(--rule) solid var(--leaf);
+  background:var(--surface);color:var(--leaf)}
+.presence-bar.is-verified .presence-dot{background:var(--leaf)}
+.presence-bar.is-checking{border-color:var(--line);border-left:var(--rule) solid var(--warn);
+  background:var(--warn-bg);color:var(--warn-ink)}
+.presence-bar.is-checking .presence-dot{background:var(--warn)}
+.presence-bar.is-outside{border-color:var(--line);border-left:var(--rule) solid var(--danger);
+  background:var(--warn-bg);color:var(--danger)}
+.presence-bar.is-outside .presence-dot{background:var(--danger)}
+.presence-action{border-color:var(--leaf);color:var(--leaf);background:var(--panel);min-height:32px}
+.conn-status{color:var(--leaf);letter-spacing:.06em;text-transform:uppercase;font-size:.66rem}
+.save-offline-btn.saved{background:var(--leaf-tint);border-color:var(--leaf);color:var(--leaf)}
+
+/* Tutorial y diálogos */
+.tutorial-card,.habitat-prompt-card{background:var(--panel);border:1px solid var(--line);
+  border-top:var(--rule) solid var(--brass);box-shadow:var(--shadow)}
+.tutorial-card h3,.habitat-prompt-card h3{font-family:var(--font-display)}
+.tutorial-spot{outline-color:var(--brass);box-shadow:0 0 0 9999px rgba(20,19,16,.6)}
+.tutorial-dot.active{background:var(--leaf)}
+.tutorial-next,.habitat-prompt-yes{background:var(--leaf-fill);color:#FBF7EE;min-height:40px;
+  letter-spacing:.06em;text-transform:uppercase;font-size:.72rem;font-weight:700}
+.tutorial-back,.habitat-prompt-no{background:var(--panel);border:1px solid var(--line-strong);
+  min-height:40px}
+.glossary-term{color:var(--leaf);border-bottom-color:var(--brass)}
+.glossary-term:hover,.glossary-term:focus-visible{background:var(--leaf-tint)}
+.glossary-popover-term{color:var(--leaf);font-family:var(--font-display)}
+.skip-link{background:var(--leaf-fill);color:#FBF7EE;border-radius:var(--radius-md)}
+:focus-visible{outline:3px solid var(--brass);outline-offset:2px}
+.leaflet-container :focus-visible{outline:3px solid var(--brass)}
+
+/* ===== C. Reestructuración móvil ============================================================== */
+/* El mapa deja de ser una pestaña y pasa a ser el FONDO permanente de la pantalla del parque; la
+   barra lateral (catálogo / invasoras / progreso) se convierte en la hoja deslizante que hace de
+   hub. Todo se resuelve con la estructura y el estado que ya existen (body[data-mtab], .sheet-open),
+   sin tocar app.js: Js/ranger-sheet.js solo añade el gesto de subir/bajar la hoja. */
+@media(max-width:900px){
+  :root{--sheet-peek:58dvh}
+
+  /* Mapa: siempre presente, a pantalla completa, por debajo de todo lo demás */
+  body[data-mtab="catalog"] .map-stage,
+  body[data-mtab="progress"] .map-stage,
+  body[data-mtab="invasoras"] .map-stage{
+    position:fixed;inset:0;z-index:auto;visibility:visible;pointer-events:auto}
+  .map-stage{position:fixed;inset:0}
+  /* Los controles del mapa se quedan en la franja visible por encima de la hoja */
+  .explorer-toggle{top:calc(12px + env(safe-area-inset-top));left:12px}
+  .layers-control{margin:calc(12px + env(safe-area-inset-top)) 12px 0 0 !important}
+
+  /* Hoja-hub: la barra lateral sube desde abajo sobre el mapa */
+  .sidebar{position:fixed;left:0;right:0;bottom:0;top:auto;height:var(--sheet-peek);z-index:700;
+    background:var(--panel);border:0;border-top:3px solid var(--brass);
+    border-radius:14px 14px 0 0;box-shadow:0 -14px 40px rgba(20,19,16,.28);
+    padding-bottom:calc(var(--mnav-h) + env(safe-area-inset-bottom));
+    transition:height .28s ease;overflow-y:auto;overscroll-behavior:contain}
+  body.park-sheet-full .sidebar{height:calc(100dvh - 52px)}
+  body.park-sheet-low .sidebar{height:34dvh}
+  body[data-mtab="map"] .sidebar{display:none}
+  /* La hoja no debe tapar el mapa cuando la ficha de detalle está abierta encima */
+  body.sheet-open .sidebar{height:34dvh}
+
+  /* Asa de la hoja (la pinta index.html: <div class="park-sheet-grip">) */
+  /* flex:0 0 auto es imprescindible: .sidebar es un flex column cuyo contenido desborda, y sin
+     esto el asa se comprimía a la altura de su barrita (7px) y dejaba de ser pulsable. */
+  .park-sheet-grip{position:sticky;top:0;z-index:3;flex:0 0 auto;display:flex;align-items:center;
+    justify-content:center;height:30px;min-height:30px;background:var(--panel);border:0;width:100%;
+    cursor:grab;touch-action:none;border-radius:14px 14px 0 0}
+  .park-sheet-grip::after{content:"";position:absolute;left:0;right:0;top:-4px;height:44px}
+  .park-sheet-grip::before{content:"";width:46px;height:5px;border-radius:999px;
+    background:var(--line-strong)}
+  body[data-mtab="map"] .park-sheet-grip{display:none}
+
+  /* La cabecera del parque, dentro de la hoja, es el cartel verde. Se compacta a lo imprescindible
+     (cartel + cifras + progreso) para que la lista del catálogo asome ya con la hoja en su altura
+     media; el resto —presencia verificada y datos sin conexión— aparece al subir la hoja del todo. */
+  .park-nav{padding:2px 16px 0}
+  .park-summary{flex:0 0 auto;padding:8px 16px 10px;border-bottom:1px solid var(--line)}
+  .park-sign{padding:10px 12px}
+  #parkTitle{margin:0;font-size:1.2rem}
+  #parkSummary{display:none}
+  .summary-grid{gap:6px;margin-top:8px;grid-template-columns:repeat(3,1fr)}
+  .summary-grid div{padding:6px 8px}
+  .summary-grid strong{font-size:.92rem}
+  .progress-wrap{margin-top:8px}
+  /* En la altura media de la hoja solo se ve el cartel y el progreso: cifras, presencia, datos sin
+     conexión y buscador son consulta, no el punto de partida, y aparecen al subir la hoja del todo.
+     Sin esto la hoja abría con ~400px de cabecera y ni una ficha del catálogo a la vista. */
+  .summary-grid,.presence-bar,.offline-bar,.controls{display:none}
+  body.park-sheet-full .summary-grid{display:grid}
+  body.park-sheet-full .presence-bar:not([hidden]){display:flex}
+  body.park-sheet-full .offline-bar{display:flex}
+  body.park-sheet-full .controls:not([hidden]){display:block;padding:10px 16px}
+  .species-panel{flex:0 0 auto;padding:10px 16px 16px}
+
+  /* Nav inferior: cartel oscuro, no barra blanca de app genérica */
+  .mobile-nav{z-index:800;background:var(--bark);border-top:0;
+    border-bottom:0;box-shadow:0 -2px 0 var(--brass) inset;gap:0;padding:4px 6px calc(4px + env(safe-area-inset-bottom))}
+  .mobile-nav-btn{color:#D9CDB6;border-radius:var(--radius-sm);min-height:var(--tap-min);
+    font-size:.64rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+  .mobile-nav-btn.active{background:rgba(255,255,255,.08);color:#FFFFFF;
+    box-shadow:inset 0 -3px 0 var(--brass)}
+  .mobile-nav-btn span{font-size:1rem}
+
+  /* Ficha de detalle: sigue siendo la hoja superior, con el mismo lenguaje de cartel */
+  .detail-dock{z-index:900;background:var(--panel);border-top:3px solid var(--brass);
+    border-radius:14px 14px 0 0;box-shadow:0 -14px 40px rgba(20,19,16,.3);max-height:82dvh}
+  .sheet-bar{background:var(--panel);border-radius:14px 14px 0 0}
+  .sheet-grip{background:var(--line-strong)}
+  .sheet-close{width:36px;height:36px;background:var(--surface-alt);color:var(--ink-soft);
+    border-radius:var(--radius-md)}
+  .sheet-scrim{background:rgba(20,19,16,.55)}
+
+  /* Portada a pantalla completa: foto arriba, cartel abajo, en la zona del pulgar */
+  .screen-cover{padding:0}
+  .cover-inner{max-width:none;padding-bottom:calc(26px + env(safe-area-inset-bottom))}
+}
+
+@media(max-width:520px){
+  .cover-title{font-size:clamp(2.4rem,11vw,3.2rem)}
+}
+
+/* Escritorio: la barra lateral conserva su columna, con el filete de latón como remate */
+@media(min-width:901px){
+  .sidebar{border-right:1px solid var(--line);border-top:3px solid var(--brass)}
+  .park-sheet-grip{display:none}
+}
+
+/* ===== D. Tema oscuro: reafirmar la piel ====================================================== */
+/* styles.css escribe TODO su tema oscuro con selectores `:root[data-theme="dark"] .x`, que ganan a
+   los `.x` del bloque B por especificidad. Sin repetir aquí esos mismos selectores, en oscuro
+   reaparecían el degradado verde de la portada, las píldoras de las insignias y las pestañas
+   rellenas: el rediseño solo se veía en claro. Al cargarse ranger.css DESPUÉS, con la misma
+   especificidad manda esta hoja. Comprobado con el emulador de tema del navegador. */
+:root[data-theme="dark"] .screen-cover{background:var(--paper)}
+
+/* Insignias: versalitas sin pastilla, también en oscuro */
+:root[data-theme="dark"] .badge,
+:root[data-theme="dark"] .badge.habitat-code{background:transparent;color:var(--muted-2)}
+:root[data-theme="dark"] .badge.fauna,
+:root[data-theme="dark"] .badge.migratoria{background:transparent;color:var(--sea)}
+:root[data-theme="dark"] .badge.alert{background:transparent;color:var(--danger)}
+:root[data-theme="dark"] .badge.review{background:transparent;color:var(--warn-ink)}
+
+/* Pestañas: subrayado de latón, no relleno */
+:root[data-theme="dark"] .view-tab{background:transparent;color:var(--muted)}
+:root[data-theme="dark"] .view-tab.active{background:transparent;color:var(--leaf);
+  border-color:transparent;border-bottom-color:var(--brass)}
+:root[data-theme="dark"] .mobile-nav-btn.active{background:rgba(255,255,255,.08);color:#FFFFFF}
+
+/* Tarjetas y filas: el fondo tiene que ser --surface para despegarse del panel de la barra */
+:root[data-theme="dark"] .species-card,
+:root[data-theme="dark"] .summary-grid div,
+:root[data-theme="dark"] .achievement-card,
+:root[data-theme="dark"] .nearby-item,
+:root[data-theme="dark"] .audio-block{background:var(--surface)}
+:root[data-theme="dark"] .species-card.seen,
+:root[data-theme="dark"] .habitat-card.complete{background:var(--panel);border-color:var(--line)}
+
+/* Parches de mérito y avisos: filete lateral de color, sin bloque ámbar */
+:root[data-theme="dark"] .achievement-card.unlocked{background:var(--panel);border-color:var(--line);
+  border-left:var(--rule) solid var(--brass)}
+:root[data-theme="dark"] .achievement-card.rarity-poco-comun.unlocked{border-left-color:var(--sea)}
+:root[data-theme="dark"] .achievement-card.rarity-raro.unlocked{border-left-color:var(--bark)}
+:root[data-theme="dark"] .achievement-card.rarity-legendario.unlocked,
+:root[data-theme="dark"] .achievement-toast.rarity-legendario{background:var(--warn-bg);
+  border-left-color:var(--brass)}
+:root[data-theme="dark"] .achievement-toast-icon{background:var(--leaf-fill);border-color:var(--brass)}
+:root[data-theme="dark"] .nearby-item.here{background:var(--warn-bg);border-color:var(--brass)}
+:root[data-theme="dark"] .presence-bar.is-verified{background:var(--surface);color:var(--leaf)}

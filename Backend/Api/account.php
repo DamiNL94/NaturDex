@@ -111,6 +111,11 @@ if ($method === "GET" && ($action === "" || $action === "profile")) {
     }
     $achievements = rowsFor($conn, "SELECT COUNT(*) AS n FROM user_achievements WHERE user_id = ?", $userId);
     $activity = rowsFor($conn, "SELECT MIN(activity_date) AS first_day, COUNT(DISTINCT activity_date) AS days FROM user_activity_log WHERE user_id = ?", $userId);
+    // "Días de campo" son días con presencia verificada dentro de un espacio, no días de haber
+    // abierto la app: eso último es `activeDays` y se queda como dato de uso, sin presumir de nada.
+    $field = rowsFor($conn,
+        "SELECT COUNT(DISTINCT DATE(started_at)) AS days, COALESCE(SUM(distance_m), 0) AS meters
+         FROM user_park_visits WHERE user_id = ? AND verified = 1 AND suspicious = 0", $userId);
 
     respond([
         "user" => publicUser($row),
@@ -119,6 +124,8 @@ if ($method === "GET" && ($action === "" || $action === "profile")) {
             "parksWithProgress" => count($parks),
             "gpsSightings" => $sightings,
             "achievements" => (int) ($achievements[0]["n"] ?? 0),
+            "fieldDays" => (int) ($field[0]["days"] ?? 0),
+            "fieldKilometers" => (int) floor(((int) ($field[0]["meters"] ?? 0)) / 1000),
             "activeDays" => (int) ($activity[0]["days"] ?? 0),
             "firstActivity" => $activity[0]["first_day"] ?? null,
             "lastProgressAt" => $parks[0]["updated_at"] ?? null,
@@ -149,6 +156,11 @@ if ($method === "GET" && $action === "export") {
         "progressByPark" => $progress,
         "achievements" => rowsFor($conn, "SELECT achievement_id, unlocked_at, celebrated_at, context FROM user_achievements WHERE user_id = ? ORDER BY unlocked_at", $userId),
         "activityLog" => rowsFor($conn, "SELECT park_slug, activity_date FROM user_activity_log WHERE user_id = ? ORDER BY activity_date", $userId),
+        // Las visitas verificadas son dato personal de pleno derecho (dónde estuvo esta persona y
+        // cuándo): tienen que ir en la copia que se lleva, igual que todo lo demás.
+        "parkVisits" => rowsFor($conn,
+            "SELECT park_slug, started_at, last_fix_at, fix_count, distance_m, verified, suspicious, flags
+             FROM user_park_visits WHERE user_id = ? ORDER BY started_at", $userId),
         "invasiveSightings" => rowsFor($conn, "SELECT e.scientific_name, e.common_name, e.ccaa, s.seen_at FROM user_invasive_sightings s JOIN especies_invasoras e ON e.id = s.invasive_id WHERE s.user_id = ? ORDER BY s.seen_at", $userId),
         "glossaryViews" => rowsFor($conn, "SELECT g.term, v.viewed_at FROM user_glossary_views v JOIN glosario g ON g.id = v.term_id WHERE v.user_id = ? ORDER BY v.viewed_at", $userId),
     ]);

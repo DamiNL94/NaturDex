@@ -15,8 +15,13 @@
 // cliente no había celebrado, se celebra al reconectar.
 // ================================================================================================
 
-import { normalize } from './util.js';
+import { normalize, pointInGeometry } from './util.js';
 import { API_BASE, ACHIEVEMENTS_CATALOG_PATH, PARK_INDEX_PATH, state } from './state.js';
+import { localVerifiedWindows } from './presence.js';
+
+// Cupo de ritmo humano por visita (espejo de PRESENCE_MARKS_* en Backend/Lib/presence.php).
+const MARKS_PER_MINUTE = 3;
+const MARKS_FLOOR = 10;
 
 const API_TIMEOUT_MS = 3000;
 function apiSignal() {
@@ -54,7 +59,9 @@ function addLocalParkIndex(slug) {
   if (!list.includes(slug)) { list.push(slug); setJSON(lsKey('accountParks'), list); }
 }
 
-// Registro de actividad local (espejo ligero de user_activity_log): un día por (parque, fecha).
+// Registro de actividad local: un día por (parque, fecha). Ojo, esto NO es constancia: marcar algo
+// se puede hacer desde el sofá. La constancia que puntúa sale de las visitas verificadas
+// (presence.js·localVisits); esto se conserva solo como rastro de uso de la app.
 function getLocalActivityLog() { return getJSON(lsKey('activityLog'), []); }
 function recordLocalActivity(parkSlug) {
   if (!parkSlug) return;
@@ -77,13 +84,6 @@ function removeCelebratedIds(ids) {
   const set = getCelebratedIds();
   ids.forEach(id => set.delete(id));
   setJSON(lsKey('celebrated'), Array.from(set));
-}
-
-// Flags "de sabor" pegajosos (una vez true, no vuelve a false), espejo local de los del servidor.
-function getLocalFlags() { return getJSON(lsKey('flags'), {}); }
-function setLocalFlag(name) {
-  const flags = getLocalFlags();
-  if (!flags[name]) { flags[name] = true; setJSON(lsKey('flags'), flags); }
 }
 
 // --- Clave canónica de especie (deduplicación entre parques) ------------------------------------
@@ -114,18 +114,34 @@ function isoWeekStartMs(key) {
   return jan4.getTime() - jan4DayNum * 86400000 + (w - 1) * 7 * 86400000;
 }
 
-function localActivityStats() {
-  const log = getLocalActivityLog();
-  const days = new Set(log.map(e => e.date));
+// Estadísticas de campo a partir de las visitas VERIFICADAS conocidas por este dispositivo (espejo
+// de presenceFieldStats en el servidor). Nada de esto sale ya de "días en los que marqué algo".
+function localFieldStats() {
+  const windows = localVerifiedWindows();
+  const days = new Set();
   const perPark = {};
-  let winterOuting = false;
-  log.forEach(e => {
-    (perPark[e.parkSlug] || (perPark[e.parkSlug] = new Set())).add(e.date);
-    const month = Number(e.date.slice(5, 7));
-    if (month === 12 || month === 1 || month === 2) winterOuting = true;
+  const parks = new Set();
+  let seconds = 0, meters = 0, longest = 0, earlyBird = false, winterVisit = false;
+
+  windows.forEach(w => {
+    const start = new Date(w.startedAt);
+    // Día y hora "de la persona": el campo se mide en hora peninsular, no en UTC.
+    const date = new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/Madrid' }).format(start); // AAAA-MM-DD
+    days.add(date);
+    (perPark[w.park] || (perPark[w.park] = new Set())).add(date);
+    parks.add(w.park);
+    seconds += w.seconds;
+    meters += w.distanceM || 0;
+    longest = Math.max(longest, w.seconds);
+    const hour = Number(new Intl.DateTimeFormat('es-ES', { hour: 'numeric', hour12: false, timeZone: 'Europe/Madrid' }).format(start));
+    if (hour < 8) earlyBird = true;
+    const month = Number(date.slice(5, 7));
+    if (month === 12 || month === 1 || month === 2) winterVisit = true;
   });
+
   let maxParkRevisitDays = 0;
   Object.values(perPark).forEach(set => { maxParkRevisitDays = Math.max(maxParkRevisitDays, set.size); });
+
   const weekKeys = Array.from(new Set(Array.from(days).map(isoWeekKey))).sort();
   let best = 0, current = 0, prevMs = null;
   weekKeys.forEach(wk => {
@@ -134,17 +150,51 @@ function localActivityStats() {
     best = Math.max(best, current);
     prevMs = ms;
   });
-  return { activeDays: days.size, weekStreak: best, maxParkRevisitDays, winterOuting };
+
+  return {
+    parksVisited: parks.size,
+    parksList: Array.from(parks),
+    fieldDays: days.size,
+    weekStreak: best,
+    maxParkRevisitDays,
+    fieldHours: Math.floor(seconds / 3600),
+    fieldKilometers: Math.floor(meters / 1000),
+    longestVisitHours: Math.floor(longest / 3600),
+    earlyBird,
+    winterVisit
+  };
 }
 
-function isEarlyBird(sightings) {
-  return Object.values(sightings || {}).some(s => {
-    if (!s || !s.at) return false;
-    try {
-      const hour = Number(new Intl.DateTimeFormat('es-ES', { hour: 'numeric', hour12: false, timeZone: 'Europe/Madrid' }).format(new Date(s.at)));
-      return hour < 8;
-    } catch (e) { return false; }
+// Marcas de un parque que caen dentro de una visita verificada, con el mismo cupo de ritmo humano
+// que aplica el servidor (partitionVerifiedMarks en Backend/Lib/account_progress.php).
+function verifiedMarksOf(parkSlug, markedAt, windows) {
+  const mine = windows.filter(w => w.park === parkSlug);
+  const species = new Set();
+  const pois = new Set();
+  if (!mine.length) return { species, pois };
+
+  const perWindow = new Map();
+  Object.keys(markedAt || {}).forEach(key => {
+    const ts = Date.parse(markedAt[key]);
+    if (!ts) return;
+    const idx = mine.findIndex(w => ts >= w.from && ts <= w.to);
+    if (idx < 0) return;
+    if (!perWindow.has(idx)) perWindow.set(idx, []);
+    perWindow.get(idx).push({ key, ts });
   });
+
+  perWindow.forEach((marks, idx) => {
+    marks.sort((a, b) => a.ts - b.ts);
+    const allowed = Math.max(MARKS_FLOOR, Math.ceil((mine[idx].seconds / 60) * MARKS_PER_MINUTE));
+    marks.slice(0, allowed).forEach(m => {
+      const sep = m.key.indexOf(':');
+      const type = m.key.slice(0, sep);
+      const id = m.key.slice(sep + 1);
+      if (type === 'species') species.add(Number(id));
+      else if (type === 'poi') pois.add(id);
+    });
+  });
+  return { species, pois };
 }
 
 // --- Registro de parques (para resolver la ruta de datos de un parque distinto del activo) -------
@@ -169,14 +219,29 @@ function findParkEntry(registry, slug) {
 async function computeLocalAggregates() {
   const parkSlugs = getLocalParkIndex();
   const registry = await loadRegistry();
+  const windows = localVerifiedWindows();
+  const field = localFieldStats();
   const speciesKeys = new Set();
   const gpsKeys = new Set();
-  const parksVisited = new Set();
   const regions = new Set();
   const provinces = new Set();
   let poisSeen = 0;
   let habitatsCompleted = 0;
   let parksCompleted = 0;
+  let unverifiedMarks = 0;
+
+  // Comunidades y provincias salen de haber PISADO el espacio, no de haber marcado nada en él.
+  for (const slug of field.parksList) {
+    const entry = registry ? findParkEntry(registry, slug) : null;
+    if (!entry) continue;
+    try {
+      const manifest = (await NaturDexOffline.fetchJsonCached(entry.manifest)).data;
+      const parkData = (await NaturDexOffline.fetchJsonCached(manifest.data)).data;
+      const park = (parkData && parkData.park) || {};
+      if (park.region) regions.add(park.region);
+      if (park.province) provinces.add(park.province);
+    } catch (e) { /* sin datos cacheados: se omite su aportación al recuento territorial */ }
+  }
 
   for (const slug of parkSlugs) {
     const scope = (state.userId != null ? 'u' + state.userId : 'anon') + ':' + slug;
@@ -185,27 +250,34 @@ async function computeLocalAggregates() {
     const seenPois = new Set(progress.seenPoiIds || []);
     if (!seenSpecies.size && !seenPois.size) continue;
 
+    // Solo cuenta lo marcado durante una visita verificada a ESTE espacio. Lo demás sigue en el
+    // cuaderno del usuario (y se cuenta aparte para poder decírselo con claridad).
+    const verified = verifiedMarksOf(slug, progress.markedAt || {}, windows);
+    const verifiedSpecies = Array.from(verified.species).filter(id => seenSpecies.has(id));
+    const verifiedPois = Array.from(verified.pois).filter(id => seenPois.has(id));
+    unverifiedMarks += (seenSpecies.size - verifiedSpecies.length) + (seenPois.size - verifiedPois.length);
+    if (!verifiedSpecies.length && !verifiedPois.length) continue;
+
     const entry = registry ? findParkEntry(registry, slug) : null;
     if (!entry) continue;
-    let parkData;
+    let parkData, boundary = null;
     try {
       const manifest = (await NaturDexOffline.fetchJsonCached(entry.manifest)).data;
       parkData = (await NaturDexOffline.fetchJsonCached(manifest.data)).data;
+      if (manifest.geo && manifest.geo.parque) boundary = (await NaturDexOffline.fetchJsonCached(manifest.geo.parque)).data;
     } catch (e) { continue; } // sin datos cacheados de este parque: se omite su aportación
 
-    parksVisited.add(slug);
-    const park = parkData.park || {};
-    if (park.region) regions.add(park.region);
-    if (park.province) provinces.add(park.province);
-    poisSeen += seenPois.size;
-
+    poisSeen += verifiedPois.length;
+    const verifiedSpeciesSet = new Set(verifiedSpecies);
     const speciesById = new Map((parkData.species || []).map(s => [s.id, s]));
-    seenSpecies.forEach(id => {
+    verifiedSpecies.forEach(id => {
       const sp = speciesById.get(id);
       if (!sp) return;
       const key = canonicalSpeciesKey(sp);
       speciesKeys.add(key);
-      if (progress.sightings && progress.sightings[String(id)]) gpsKeys.add(key);
+      // Registro georreferenciado: la coordenada del avistamiento tiene que caer dentro del límite.
+      const sighting = progress.sightings && progress.sightings[String(id)];
+      if (sighting && boundary && insideBoundary(boundary, sighting.lat, sighting.lng)) gpsKeys.add(key);
     });
 
     const habitats = parkData.habitats || [];
@@ -213,49 +285,48 @@ async function computeLocalAggregates() {
     habitats.forEach(h => {
       const members = h.speciesIds || [];
       if (!members.length) return;
-      const seenHere = members.filter(id => seenSpecies.has(id)).length;
+      const seenHere = members.filter(id => verifiedSpeciesSet.has(id)).length;
       if (seenHere === members.length) habitatsCompleteHere++;
     });
     habitatsCompleted += habitatsCompleteHere;
 
     const poisTotal = (parkData.pointsOfInterest || []).length;
     const parkComplete = habitats.length > 0 && habitatsCompleteHere === habitats.length
-      && poisTotal > 0 && seenPois.size === poisTotal;
+      && poisTotal > 0 && verifiedPois.length === poisTotal;
     if (parkComplete) parksCompleted++;
-  }
-
-  const activity = localActivityStats();
-  const storedFlags = getLocalFlags();
-  const flags = {
-    earlyBird: !!storedFlags.earlyBird,
-    winterOuting: !!storedFlags.winterOuting || activity.winterOuting,
-    noSearchHabitat: !!storedFlags.noSearchHabitat
-  };
-  // earlyBird necesita mirar los avistamientos GPS de cada parque local; se comprueba aparte porque
-  // el bucle de arriba no guarda los `progress.sightings` completos fuera de su iteración.
-  for (const slug of parkSlugs) {
-    const scope = (state.userId != null ? 'u' + state.userId : 'anon') + ':' + slug;
-    const progress = NaturDexOffline.loadProgressLocal(scope);
-    if (isEarlyBird(progress.sightings)) { flags.earlyBird = true; break; }
   }
 
   return {
     speciesSeen: speciesKeys.size,
-    parksVisited: parksVisited.size,
+    parksVisited: field.parksVisited,
     parksCompleted,
     regionsVisited: regions.size,
     provincesVisited: provinces.size,
     habitatsCompleted,
     poisSeen,
     gpsSightings: gpsKeys.size,
+    fieldDays: field.fieldDays,
+    weekStreak: field.weekStreak,
+    maxParkRevisitDays: field.maxParkRevisitDays,
+    fieldHours: field.fieldHours,
+    fieldKilometers: field.fieldKilometers,
     invasiveSeen: getJSON(lsKey('invasiveSeen'), []).length,
     glossaryViewed: getJSON(lsKey('glossaryViewed'), []).length,
-    activeDays: activity.activeDays,
-    weekStreak: activity.weekStreak,
-    maxParkRevisitDays: activity.maxParkRevisitDays,
+    unverifiedMarks,
     regionsList: Array.from(regions),
-    flags
+    flags: {
+      earlyBird: field.earlyBird,
+      winterVisit: field.winterVisit,
+      longVisit: field.longestVisitHours >= 3
+    }
   };
+}
+
+/** ¿Cae la coordenada dentro del GeoJSON del límite del parque? (mismo criterio que el servidor). */
+function insideBoundary(geojson, lat, lng) {
+  if (!geojson || typeof lat !== 'number' || typeof lng !== 'number') return false;
+  const features = geojson.features || [{ geometry: geojson.geometry || geojson }];
+  return features.some(f => pointInGeometry(lat, lng, f.geometry || f));
 }
 
 function metricValue(aggregates, metric) {
@@ -288,6 +359,14 @@ async function evaluateLocally(aggregates) {
 async function refreshLocal() {
   const aggregates = await computeLocalAggregates();
   state.account.totals = aggregates;
+  // Sin red, el historial de salidas que se enseña es el que conoce este dispositivo (el servidor
+  // lo sustituye por el suyo en cuanto hay conexión, en syncWithServer).
+  if (!state.account.visits || !state.account.visits.length) {
+    state.account.visits = localVerifiedWindows().slice().reverse().map(w => ({
+      park: w.park, parkName: w.park, startedAt: w.startedAt,
+      seconds: w.seconds, distanceM: w.distanceM, verified: true, suspicious: false, flags: []
+    }));
+  }
   const newlyLocal = await evaluateLocally(aggregates);
   const now = new Date().toISOString();
   const celebratedBefore = getCelebratedIds();
@@ -322,6 +401,9 @@ export async function syncWithServer() {
     if (!res.ok) throw new Error('account-progress unavailable');
     const data = await res.json();
     state.account.totals = data.totals || state.account.totals;
+    // Historial de salidas: si los logros dependen de haber estado allí, la pantalla de progreso
+    // tiene que poder enseñar qué visitas se han contado y cuáles no.
+    if (Array.isArray(data.visits)) state.account.visits = data.visits;
 
     const serverIds = new Set((data.achievements || []).map(a => a.id));
     // Retirar en silencio lo predicho localmente que el servidor no confirma.
@@ -399,20 +481,6 @@ export async function reportGlossaryView(term) {
       const res = await fetch(API_BASE + '/account-progress.php', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ type: 'glossary', term }), signal: apiSignal()
-      });
-      if (res.ok) { const data = await res.json(); handleServerNewlyUnlocked(data.newlyUnlocked); }
-    } catch (e) { /* se reconcilia al reconectar */ }
-  }
-}
-
-export async function reportFlavorFlag(name) {
-  setLocalFlag(name);
-  await refreshLocal();
-  if (state.userId != null) {
-    try {
-      const res = await fetch(API_BASE + '/account-progress.php', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ type: 'flags', flags: { [name]: true } }), signal: apiSignal()
       });
       if (res.ok) { const data = await res.json(); handleServerNewlyUnlocked(data.newlyUnlocked); }
     } catch (e) { /* se reconcilia al reconectar */ }
@@ -657,7 +725,7 @@ export function celebrate(ids) {
 // Guardia con marca persistente: si no, un usuario que vuelve a explorar como invitado en el mismo
 // dispositivo y luego reinicia sesión con su cuenta vería su progreso real sobrescrito por el nuevo
 // rastro de invitado en cada carga.
-const MIGRATABLE_KEYS = ['accountParks', 'activityLog', 'celebrated', 'flags', 'invasiveSeen', 'glossaryViewed', 'achievementSound'];
+const MIGRATABLE_KEYS = ['accountParks', 'activityLog', 'visits', 'celebrated', 'invasiveSeen', 'glossaryViewed', 'achievementSound'];
 function migrateGuestDataIfNeeded() {
   if (state.userId == null) return;
   const guardKey = 'naturdex.migratedGuestData.u' + state.userId;

@@ -122,6 +122,10 @@ function applyProgress(progress) {
   state.seenSpecies = new Set((progress.seenSpeciesIds || []).map(Number));
   state.seenPois = new Set(progress.seenPoiIds || []);
   state.sightings = new Map();
+  // Cuándo se marcó cada cosa ('species:12' / 'poi:mirador' → fecha ISO). Es lo que permite saber si
+  // una marca se hizo durante una visita verificada al parque, o sea, si cuenta para los logros
+  // (ver Frontend/Js/presence.js y Backend/Lib/account_progress.php).
+  state.markedAt = (progress.markedAt && typeof progress.markedAt === 'object') ? { ...progress.markedAt } : {};
   const sightings = progress.sightings || {};
   Object.keys(sightings).forEach(k => {
     const s = sightings[k];
@@ -136,6 +140,7 @@ function currentProgressSnapshot() {
     seenSpeciesIds: Array.from(state.seenSpecies),
     seenPoiIds: Array.from(state.seenPois),
     sightings,
+    markedAt: { ...(state.markedAt || {}) },
     updatedAt: new Date().toISOString()
   };
 }
@@ -166,6 +171,10 @@ function queueProgress(type, id, seen, coords) {
     type, id, seen,
     lat: coords ? coords.lat : null,
     lng: coords ? coords.lng : null,
+    accuracy: coords && typeof coords.accuracy === 'number' ? coords.accuracy : null,
+    // Cuándo ocurrió de verdad. Lo marcado sin cobertura se sube horas después, y esa hora es la que
+    // decide si cayó dentro de una visita verificada: sin ella, una salida entera al monte llegaría
+    // al servidor fechada al reconectar, ya en casa, y no contaría para nada.
     at: new Date().toISOString()
   });
 }
@@ -208,7 +217,7 @@ export async function flushProgressQueue() {
         const response = await fetch(API_BASE + '/progress.php?park=' + encodeURIComponent(park), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ events: events.map(e => ({ type: e.type, id: e.id, seen: e.seen, lat: e.lat, lng: e.lng })) }),
+          body: JSON.stringify({ events: events.map(e => ({ type: e.type, id: e.id, seen: e.seen, lat: e.lat, lng: e.lng, accuracy: e.accuracy, at: e.at })) }),
           signal: apiSignal(SYNC_TIMEOUT_MS)
         });
         if (!response.ok) throw new Error('progress endpoint unavailable (HTTP ' + response.status + ')');
@@ -260,6 +269,8 @@ export async function loadProgress() {
         state.sightings.set(Number(k), { lat: ss[k].lat, lng: ss[k].lng });
       }
     });
+    // El servidor manda en las horas de marcado: son las que sella él y las que deciden qué cuenta.
+    Object.assign(state.markedAt, server.markedAt || {});
     state.progressReady = true;
     saveProgressLocalNow();
   } catch (error) {
@@ -273,8 +284,15 @@ export async function persistProgress(type, id, seen, coords) {
   if (!NaturDexOffline.isOnline()) { queueProgress(type, id, seen, coords); return null; }
   try {
     const payload = { type, id, seen };
-    if (coords) { payload.lat = coords.lat; payload.lng = coords.lng; }
-    const response = await fetch(API_BASE + '/progress.php', {
+    if (coords) {
+      payload.lat = coords.lat;
+      payload.lng = coords.lng;
+      if (typeof coords.accuracy === 'number') payload.accuracy = coords.accuracy;
+    }
+    // El parque VIAJA EN LA URL. Sin él, progress.php se cae a su parque por defecto
+    // (cabo-cope-puntas-calnegre): marcar una especie en Sierra Espuña con la app abierta escribía
+    // el progreso en el parque equivocado, y solo la cola de pendientes (que sí lo mandaba) acertaba.
+    const response = await fetch(API_BASE + '/progress.php?park=' + encodeURIComponent(state.activeParkSlug), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),

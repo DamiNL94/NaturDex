@@ -158,6 +158,28 @@
     if (profileReturnTo === 'screen-park' && window.naturdexInvalidateMap) window.naturdexInvalidateMap();
   }
 
+  // --- Progreso estatal (logros de cuenta) ------------------------------------------------------
+  // Mismo criterio que el perfil: se abre desde el selector y desde dentro de un parque, y el botón
+  // de volver devuelve a donde estabas. Sin esto, mirar tus logros desde el parque te echaba al
+  // selector y había que recargar el parque entero para seguir explorando.
+  var accountReturnTo = 'screen-select';
+
+  function openAccountProgress() {
+    accountReturnTo = visibleScreenId();
+    var back = $('#backToSelectFromAccount');
+    if (back) back.textContent = accountReturnTo === 'screen-park' ? '← Volver al parque' : '← Parques';
+    if (window.naturdexShowAccountProgress) window.naturdexShowAccountProgress(currentUser);
+  }
+
+  function closeAccountProgress() {
+    if (accountReturnTo === 'screen-park') {
+      showScreen('screen-park');
+      if (window.naturdexInvalidateMap) window.naturdexInvalidateMap();
+      return;
+    }
+    goToSelect();
+  }
+
   // Abre el formulario de acceso en el modo pedido ('login' o 'register'). Lo usa el botón "Crear
   // una cuenta" que profile.js ofrece al invitado.
   function goToAuth(mode) {
@@ -205,14 +227,32 @@
     return '';
   }
 
-  function buildParkDropdown(reg) {
+  // Normaliza para buscar: sin tildes, sin mayúsculas. Escribir "espuna" tiene que encontrar
+  // "Sierra Espuña", y "canaverosa" a "Cañaverosa"; si no, el buscador solo sirve al que ya sabe
+  // escribir el nombre exacto, que es justo quien no lo necesita.
+  function searchKey(text) {
+    // NFD separa cada letra de su tilde ("ñ" -> "n" + virgulilla suelta) y el filtro se queda solo
+    // con ASCII imprimible, que descarta las tildes ya sueltas. Se hace así, y no con un rango de
+    // marcas diacríticas, para que este fichero no dependa de caracteres combinantes en el código.
+    return String(text || '').normalize('NFD').replace(/[^\x20-\x7E]/g, '').toLowerCase().trim();
+  }
+
+  // Construye el desplegable, opcionalmente filtrado por nombre. Devuelve cuántos parques han
+  // quedado; con `query` vacía, la lista completa agrupada por comunidad y provincia de siempre.
+  function buildParkDropdown(reg, query) {
     var select = $('#parkSelect');
+    var needle = searchKey(query);
+    var matches = 0;
     select.innerHTML = '<option value="">— Elige un parque —</option>';
     ((reg && reg.communities) || []).forEach(function (c) {
       (c.provinces || []).forEach(function (p) {
         var group = document.createElement('optgroup');
         group.label = c.name + ' · ' + p.name;
         (p.parks || []).forEach(function (park) {
+          // Se busca por el nombre y también por la categoría: "paisaje protegido" es una consulta
+          // razonable y con solo el nombre no encontraría nada.
+          if (needle && searchKey(park.name + ' ' + (park.category || '')).indexOf(needle) === -1) return;
+          matches++;
           var opt = document.createElement('option');
           opt.value = park.slug;
           opt.textContent = park.name + parkOptionSuffix(park);
@@ -222,6 +262,30 @@
         if (group.children.length) select.appendChild(group);
       });
     });
+    return matches;
+  }
+
+  // Filtra la lista mientras se escribe. Si la selección actual sobrevive al filtro se conserva; si
+  // el filtro la deja fuera, se limpia (y con ella el botón de entrar) para no entrar a un parque
+  // que ya no se ve en pantalla.
+  function onParkSearch() {
+    var query = $('#parkSearch').value;
+    var matches = buildParkDropdown(registry, query);
+    var counter = $('#parkSearchCount');
+    if (!searchKey(query)) {
+      counter.hidden = true;
+    } else {
+      counter.textContent = matches === 0 ? 'Ningún parque coincide con esa búsqueda.'
+        : matches === 1 ? '1 parque encontrado.' : matches + ' parques encontrados.';
+      counter.hidden = false;
+    }
+    if (selectedSlug && $('#parkSelect').querySelector('option[value="' + selectedSlug + '"]')) {
+      $('#parkSelect').value = selectedSlug;
+    } else if (selectedSlug) {
+      selectedSlug = null;
+      $('#enterParkBtn').disabled = true;
+      setSelectStatus('');
+    }
   }
 
   function initSpainMap(reg) {
@@ -326,13 +390,85 @@
     }
   }
 
+  // --- Portada ---------------------------------------------------------------------------------
+  // La portada no lleva ni un dato escrito a mano: el recuento sale del índice de parques y la foto,
+  // del manifiesto de uno de los espacios con catálogo, rotando por día del año. Así deja de
+  // anunciar un parque piloto concreto (el rótulo es NaturDex) y se actualiza sola según se añaden
+  // espacios y fotos. Todo va en try/catch: sin red ni caché, se quedan los textos de reserva del
+  // index.html y el hueco de la foto en verde profundo, que es un fondo válido de por sí.
+  async function fillCover() {
+    try {
+      if (!registry) registry = (await NaturDexOffline.fetchJsonCached('Data/parks-index.json')).data;
+    } catch (e) { return; }
+
+    var all = [];
+    var communities = [];
+    ((registry && registry.communities) || []).forEach(function (c) {
+      if (c.name) communities.push(c.name);
+      (c.provinces || []).forEach(function (p) { (p.parks || []).forEach(function (park) { all.push(park); }); });
+    });
+    if (!all.length) return;
+
+    var withCatalog = all.filter(function (p) { return p.status === 'available'; });
+    var stats = $('#coverStats');
+    if (stats) {
+      stats.textContent = all.length + (all.length === 1 ? ' espacio protegido' : ' espacios protegidos')
+        + ' · ' + withCatalog.length + ' con catálogo completo';
+    }
+    var foot = $('#coverFoot');
+    if (foot && communities.length) foot.textContent = 'Prototipo · ' + communities.join(' · ');
+
+    // La foto rota por día del año entre los espacios con catálogo. Si al que toca no le han puesto
+    // fotos todavía (hoy solo las tiene el parque por defecto), se cae al parque por defecto.
+    var dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
+    var order = withCatalog.length ? withCatalog : all;
+    var candidates = [order[dayOfYear % order.length]];
+    var fallback = all.find(function (p) { return p.slug === registry.defaultPark; });
+    if (fallback && candidates[0] !== fallback) candidates.push(fallback);
+
+    for (var i = 0; i < candidates.length; i++) {
+      var park = candidates[i];
+      if (!park || !park.manifest) continue;
+      try {
+        var manifest = (await NaturDexOffline.fetchJsonCached(park.manifest)).data;
+        var images = (manifest && manifest.images) || [];
+        if (!images.length) continue;
+        showCoverPhoto(images[dayOfYear % images.length], park.name);
+        return;
+      } catch (e) { /* ese parque no tiene manifiesto accesible: se prueba el siguiente */ }
+    }
+  }
+
+  function showCoverPhoto(src, parkName) {
+    var box = $('#coverPhoto');
+    var caption = $('#coverPhotoCaption');
+    if (!box || !src) return;
+    var img = document.createElement('img');
+    img.alt = '';                         // decorativa: el pie de foto ya dice de dónde es
+    img.decoding = 'async';
+    // Solo se muestra si carga: una imagen rota sobre el verde se vería peor que el verde solo.
+    img.addEventListener('load', function () {
+      box.insertBefore(img, box.firstChild);
+      if (caption && parkName) { caption.textContent = parkName; caption.hidden = false; }
+    });
+    img.src = src;
+  }
+
   async function goToSelect() {
     updateUserLabels();
+    // Salir del parque apaga el registro de presencia: seguir gastando GPS en una pantalla que no
+    // es el parque no verifica nada y sí vacía la batería (app.js · presence.js).
+    if (window.naturdexStopPresence) window.naturdexStopPresence();
     showScreen('screen-select');
     if (!registry) {
       try { registry = (await NaturDexOffline.fetchJsonCached('Data/parks-index.json')).data; }
       catch (e) { setSelectStatus('No se pudo cargar la lista de parques.', true); return; }
     }
+    // Al volver al selector la búsqueda se limpia: si no, se llegaría con la lista filtrada de la
+    // vez anterior y con la mitad de los parques "desaparecidos" sin explicación.
+    var search = $('#parkSearch');
+    if (search) search.value = '';
+    $('#parkSearchCount').hidden = true;
     buildParkDropdown(registry);
     initSpainMap(registry);
     // Preselección: si solo hay un parque disponible, dejarlo elegido.
@@ -371,6 +507,7 @@
     document.querySelectorAll('.auth-tab').forEach(function (t) { t.addEventListener('click', function () { setAuthMode(t.dataset.mode); }); });
     $('#authForm').addEventListener('submit', submitAuth);
     $('#parkSelect').addEventListener('change', function (e) { choosePark(e.target.value); });
+    $('#parkSearch').addEventListener('input', onParkSearch);
     $('#enterParkBtn').addEventListener('click', function () { enterPark(selectedSlug); });
     $('#geoLocateBtn').addEventListener('click', geolocateNearest);
     // Cerrar sesión ya no es un icono suelto en cada cabecera: vive dentro de Perfil y ajustes,
@@ -379,8 +516,9 @@
     $('#profileBtnSelect').addEventListener('click', openProfile);
     $('#backFromProfile').addEventListener('click', closeProfile);
     $('#backToParks').addEventListener('click', goToSelect);
-    $('#accountProgressBtn').addEventListener('click', function () { if (window.naturdexShowAccountProgress) window.naturdexShowAccountProgress(currentUser); });
-    $('#backToSelectFromAccount').addEventListener('click', goToSelect);
+    $('#accountProgressBtn').addEventListener('click', openAccountProgress);
+    $('#accountProgressBtnPark').addEventListener('click', openAccountProgress);
+    $('#backToSelectFromAccount').addEventListener('click', closeAccountProgress);
     // Botón "Entrar al parque" dentro del popup del mapa de España.
     document.addEventListener('click', function (e) {
       var b = e.target.closest && e.target.closest('.popup-enter');
@@ -390,6 +528,7 @@
     updateUserLabels();
     showScreen('screen-cover');
     NaturDexOffline.registerServiceWorker();
+    fillCover();      // en segundo plano: la portada ya es usable con sus textos de reserva
     refreshSession(); // en segundo plano, para que "Comenzar" ya sepa si hay sesión
   }
 

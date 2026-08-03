@@ -422,7 +422,7 @@ La barra lateral tiene ahora dos pestañas: **Catálogo** (vista de siempre) y *
 - Barra global de especies vistas / total.
 - Lista de hábitats con su recuento de especies vistas y una marca ✓ cuando un hábitat se completa (todas sus especies vistas).
 - Barra y lista de puntos de interés visitados / total.
-- Una tarjeta de logro: al completar todos los hábitats y todos los puntos de interés se desbloquea **"¡Más aguileño que un pijo lobo!"**, con una animación al desbloquearse. El estado de "completo" se recalcula siempre a partir de `seenSpecies`/`seenPois`, no se guarda por separado.
+- Una tarjeta de logro: al completar todos los hábitats y todos los puntos de interés se desbloquea **"Guardián del parque"** (`ACHIEVEMENT_NAME` en `Frontend/Js/state.js`), con una animación al desbloquearse. El estado de "completo" se recalcula siempre a partir de `seenSpecies`/`seenPois`, no se guarda por separado.
 
 ## Progreso tipo pokédex
 

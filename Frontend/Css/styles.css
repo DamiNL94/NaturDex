@@ -790,3 +790,42 @@ p.achievement-progress-label{margin:8px 0 0}
 /* El callejero de OSM es una imagen clara: se atenúa para que no deslumbre dentro del tema oscuro.
    La ortofoto del PNOA NO se toca: alterarla falsearía lo que se está viendo del terreno. */
 :root[data-theme="dark"] .tile-osm{filter:brightness(.72) saturate(.85) contrast(1.06)}
+
+/* --- Presencia verificada (presence.js) ------------------------------------------------------
+   La barra de la cabecera del parque dice, antes de que marques nada, si lo que marques va a
+   contar. Tres estados y tres colores: verificada (verde), verificando (ámbar) y apagada/fuera
+   del límite (rojo apagado). Es información, no una alarma: nunca bloquea nada. */
+.presence-bar{display:flex;align-items:center;gap:8px;margin-top:12px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fbfcf8;font-size:.74rem;line-height:1.35;color:var(--muted)}
+.presence-bar[hidden]{display:none}
+.presence-dot{flex:0 0 auto;width:8px;height:8px;border-radius:999px;background:var(--muted)}
+.presence-text{flex:1;min-width:0}
+.presence-action{flex:0 0 auto;min-height:28px;padding:0 10px;border:1px solid var(--leaf);border-radius:6px;background:#fff;color:var(--leaf);font-size:.72rem;font-weight:800;cursor:pointer}
+.presence-action[hidden]{display:none}
+.presence-bar.is-verified{border-color:var(--leaf);background:#eef6ef;color:#22543c}
+.presence-bar.is-verified .presence-dot{background:var(--leaf)}
+.presence-bar.is-checking{border-color:#e6c980;background:#fdf6e6;color:#6b4a00}
+.presence-bar.is-checking .presence-dot{background:var(--sun);animation:presence-pulse 1.6s ease-in-out infinite}
+.presence-bar.is-outside{border-color:#e5b9ac;background:#faeee9;color:var(--danger)}
+.presence-bar.is-outside .presence-dot{background:var(--danger)}
+@keyframes presence-pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+/* Estado de verificación de una marca concreta, bajo su botón de "visto" en la ficha. */
+.mark-verified,.mark-unverified{margin:8px 0 0;font-size:.73rem;line-height:1.45}
+.mark-verified{color:var(--leaf)}
+.mark-unverified{color:var(--muted)}
+
+/* Pantalla de progreso estatal: regla de la casa, historial de salidas y actividad de la app. */
+.account-rule{margin:14px 0 0;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:#fbfcf8;color:var(--muted);font-size:.76rem;line-height:1.5}
+.account-note{margin:10px 0 0;color:var(--muted);font-size:.74rem;line-height:1.5}
+.account-totals-grid.small{grid-template-columns:repeat(2,1fr)}
+.visit-state{font-weight:800;color:var(--muted);font-size:.74rem}
+.visit-state.is-ok{color:var(--leaf)}
+.visit-state.is-flagged{color:var(--danger)}
+.progress-row small{color:var(--muted);font-weight:600}
+
+:root[data-theme="dark"] .presence-bar{background:rgba(255,255,255,.04);border-color:var(--line)}
+:root[data-theme="dark"] .presence-bar.is-verified{background:rgba(47,111,78,.22);color:#bfe6cd}
+:root[data-theme="dark"] .presence-bar.is-checking{background:rgba(216,155,48,.18);color:#f0d9a6}
+:root[data-theme="dark"] .presence-bar.is-outside{background:rgba(184,83,63,.18);color:#f0bdb0}
+:root[data-theme="dark"] .presence-action{background:transparent}
+:root[data-theme="dark"] .account-rule{background:rgba(255,255,255,.04)}

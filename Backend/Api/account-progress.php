@@ -21,7 +21,11 @@ $userId = (int) $_SESSION["user_id"];
 $method = $_SERVER["REQUEST_METHOD"];
 
 if ($method === "GET") {
-    echo json_encode(buildAccountPayload($conn, $userId), JSON_UNESCAPED_UNICODE);
+    $payload = buildAccountPayload($conn, $userId);
+    // El historial de salidas viaja con el progreso: si los logros dependen de haber estado allí,
+    // el usuario tiene que poder ver qué visitas se le han contado (y cuáles no) sin preguntar.
+    $payload["visits"] = buildVisitHistory($conn, $userId);
+    echo json_encode($payload, JSON_UNESCAPED_UNICODE);
     exit;
 }
 
@@ -29,7 +33,7 @@ if ($method === "POST") {
     $body = json_decode(file_get_contents("php://input"), true);
     if (!is_array($body) || !isset($body["type"])) {
         http_response_code(400);
-        echo json_encode(["error" => "Cuerpo JSON inválido. Se espera { type: 'invasive'|'glossary'|'flags'|'celebrate', ... }."]);
+        echo json_encode(["error" => "Cuerpo JSON inválido. Se espera { type: 'invasive'|'glossary'|'celebrate', ... }."]);
         exit;
     }
 
@@ -90,19 +94,6 @@ if ($method === "POST") {
             exit;
         }
 
-        // Logro de sabor "hábitat completado sin buscador": no derivable en servidor, lo reporta el
-        // cliente cuando lo detecta. Se guarda de forma pegajosa (ver computeAccountAggregates).
-        case "flags": {
-            $flags = is_array($body["flags"] ?? null) ? $body["flags"] : [];
-            $allowed = array_intersect_key($flags, ["noSearchHabitat" => true]);
-            $result = recomputeAccountProgress($conn, $userId, $allowed);
-            echo json_encode([
-                "totals" => $result["aggregates"],
-                "newlyUnlocked" => $result["newlyUnlocked"],
-            ], JSON_UNESCAPED_UNICODE);
-            exit;
-        }
-
         // El frontend llama esto justo después de mostrar el cartel de celebración de cada logro,
         // para que un refresco de página (o entrar desde otro dispositivo) no lo vuelva a animar.
         case "celebrate": {
@@ -114,7 +105,7 @@ if ($method === "POST") {
 
         default:
             http_response_code(400);
-            echo json_encode(["error" => "type desconocido. Usa 'invasive', 'glossary', 'flags' o 'celebrate'."]);
+            echo json_encode(["error" => "type desconocido. Usa 'invasive', 'glossary' o 'celebrate'."]);
             exit;
     }
 }

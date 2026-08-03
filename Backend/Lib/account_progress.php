@@ -4,16 +4,26 @@
 // ------------------------------------------------------------------------------------------------
 // El progreso "de siempre" (user_progress) es por parque. Esta capa agrega lo visto en TODOS los
 // parques de una cuenta y evalúa el catálogo compartido de logros (Frontend/Data/achievements.json)
-// contra ese agregado. Los agregados son SIEMPRE recalculables desde cero a partir de user_progress
-// + user_activity_log + user_invasive_sightings + user_glossary_views (por eso Tools/recalculate-
-// account-progress.php puede simplemente llamar a recomputeAccountProgress() para cada usuario).
-// La única excepción es la marca "noSearchHabitat" (logro de sabor): no hay forma de derivarla del
-// lado del servidor porque depende de si el usuario usó el buscador en el cliente, así que viaja
-// como flag desde el frontend y se guarda de forma "pegajosa" (una vez true, siempre true).
+// contra ese agregado.
 //
-// La usa Backend/Api/progress.php (tras cada POST, para poder devolver `newlyUnlocked`) y
+// REGLA CENTRAL: para los logros no cuenta lo que el usuario marca, sino lo que marcó ESTANDO ALLÍ.
+// Una marca solo suma si su hora cae dentro de la ventana de una visita verificada al espacio que la
+// contiene (Backend/Lib/presence.php: posiciones del GPS validadas contra el límite oficial). Lo
+// demás se guarda igual —el cuaderno personal del usuario es suyo— pero no puntúa. Antes bastaba
+// con pulsar "marcar como vista" desde el sofá y la colección entera se podía completar sin salir
+// de casa; ver Docs/VERIFICACION-Y-ANTITRAMPAS.md.
+//
+// Los agregados son SIEMPRE recalculables desde cero a partir de user_progress + user_park_visits +
+// user_invasive_sightings + user_glossary_views (por eso Tools/recalculate-account-progress.php
+// puede simplemente llamar a recomputeAccountProgress() para cada usuario). Ya no hay ningún flag
+// reportado por el cliente: los logros "de sabor" también se derivan de visitas verificadas.
+//
+// La usa Backend/Api/progress.php (tras cada POST, para poder devolver `newlyUnlocked`),
+// Backend/Api/presence.php (una visita que cuaja puede desbloquear logros) y
 // Backend/Api/account-progress.php (GET/POST de la pestaña de progreso estatal).
 // ================================================================================================
+
+require_once __DIR__ . "/presence.php";
 
 /**
  * Ruta al catálogo de logros compartido (mismo fichero que lee el frontend).
@@ -87,73 +97,55 @@ function poisCountByParkId($conn, $parkId) {
     return (int) $stmt->get_result()->fetch_assoc()["n"];
 }
 
-// --- Actividad (días distintos, racha semanal, visitas repetidas al mismo parque) ---------------
-// Única fuente que NO se puede recalcular desde user_progress (su updated_at se sobrescribe en cada
-// UPSERT): user_activity_log es el registro append-only del que sale todo esto.
-function activityStats($conn, $userId) {
-    $stmt = $conn->prepare("SELECT park_slug, activity_date FROM user_activity_log WHERE user_id = ? ORDER BY activity_date");
-    $stmt->bind_param("i", $userId);
-    $stmt->execute();
-    $rows = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+// --- Verificación: qué marcas cuentan y cuáles se quedan en el cuaderno personal ------------------
+/**
+ * Reparte las marcas de un parque entre verificadas y no verificadas.
+ *
+ * Una marca cuenta si (1) tiene hora registrada (`markedAt`, lo sella el servidor en progress.php),
+ * (2) esa hora cae dentro de la ventana de una visita verificada a ESE espacio, y (3) entra dentro
+ * del cupo de ritmo humano de esa visita: nadie identifica cuarenta especies en un minuto, así que
+ * cada visita solo puede avalar tantas marcas como dé de sí su duración (presenceMarkAllowance).
+ * Cuando se pasa del cupo, se descartan las ÚLTIMAS por hora: lo primero que viste sigue contando.
+ *
+ * @param array $windows   Ventanas de visita verificada a este parque (presenceVerifiedWindows).
+ * @param array $markedAt  Mapa 'species:12' | 'poi:mirador' => fecha ISO.
+ * @return array { species: int[], pois: string[] } claves verificadas.
+ */
+function partitionVerifiedMarks($windows, $markedAt) {
+    if (!$windows || !$markedAt) return ["species" => [], "pois" => []];
 
-    $days = [];
-    $perPark = [];
-    $winterOuting = false;
-    foreach ($rows as $r) {
-        $date = $r["activity_date"];
-        $days[$date] = true;
-        $perPark[$r["park_slug"]][$date] = true;
-        $month = (int) substr($date, 5, 2);
-        if ($month === 12 || $month === 1 || $month === 2) $winterOuting = true;
-    }
-    $maxParkRevisitDays = 0;
-    foreach ($perPark as $dates) $maxParkRevisitDays = max($maxParkRevisitDays, count($dates));
-
-    // Racha de semanas ISO consecutivas con al menos un día de actividad.
-    $weekKeys = [];
-    foreach (array_keys($days) as $d) {
-        $ts = strtotime($d);
-        if ($ts !== false) $weekKeys[date("o-W", $ts)] = true;
-    }
-    $weekKeys = array_keys($weekKeys);
-    sort($weekKeys);
-    $bestStreak = 0;
-    $current = 0;
-    $prevTs = null;
-    foreach ($weekKeys as $wk) {
-        [$isoYear, $isoWeek] = explode("-", $wk);
-        $dt = DateTime::createFromFormat("o-W-N", $isoYear . "-" . $isoWeek . "-1");
-        $ts = $dt ? $dt->getTimestamp() : null;
-        if ($ts !== null) {
-            $current = ($prevTs !== null && $ts - $prevTs === 7 * 86400) ? $current + 1 : 1;
-            $bestStreak = max($bestStreak, $current);
-            $prevTs = $ts;
+    // 1) Cada marca, a la primera ventana que la contenga.
+    $perWindow = [];
+    foreach ($markedAt as $markKey => $iso) {
+        $ts = strtotime((string) $iso);
+        if ($ts === false) continue;
+        foreach ($windows as $i => $w) {
+            if ($ts >= $w["from"] && $ts <= $w["to"]) { $perWindow[$i][] = ["key" => $markKey, "ts" => $ts]; break; }
         }
     }
-    return [
-        "activeDays" => count($days),
-        "weekStreak" => $bestStreak,
-        "maxParkRevisitDays" => $maxParkRevisitDays,
-        "winterOuting" => $winterOuting,
-    ];
+
+    // 2) Cupo por ventana, respetando el orden en que se marcaron.
+    $species = [];
+    $pois = [];
+    foreach ($perWindow as $i => $marks) {
+        usort($marks, function ($a, $b) { return $a["ts"] <=> $b["ts"]; });
+        $allowed = presenceMarkAllowance($windows[$i]["seconds"]);
+        foreach (array_slice($marks, 0, $allowed) as $mark) {
+            [$type, $id] = array_pad(explode(":", $mark["key"], 2), 2, null);
+            if ($id === null) continue;
+            if ($type === "species") $species[] = (int) $id;
+            elseif ($type === "poi") $pois[] = $id;
+        }
+    }
+    return ["species" => array_values(array_unique($species)), "pois" => array_values(array_unique($pois))];
 }
 
-// Marca "madruga" (logro de sabor): alguna especie marcada vista con avistamiento GPS antes de las
-// 8:00, hora peninsular. Aproximado (solo cubre avistamientos con coordenadas), suficiente para un
-// logro cosmético.
-function detectEarlyBird($progressRows) {
-    foreach ($progressRows as $row) {
-        $payload = json_decode($row["payload"] ?: "{}", true) ?: [];
-        foreach (($payload["sightings"] ?? []) as $sighting) {
-            if (empty($sighting["at"])) continue;
-            try {
-                $dt = new DateTime($sighting["at"]);
-                $dt->setTimezone(new DateTimeZone("Europe/Madrid"));
-                if ((int) $dt->format("G") < 8) return true;
-            } catch (Exception $e) { /* fecha inválida: se ignora */ }
-        }
-    }
-    return false;
+/** Región y provincia de cada parque, indexadas por slug (tabla pequeña: se lee entera). */
+function parksBySlug($conn) {
+    $result = $conn->query("SELECT slug, id, region, province FROM parks");
+    $out = [];
+    foreach ($result->fetch_all(MYSQLI_ASSOC) as $r) $out[$r["slug"]] = $r;
+    return $out;
 }
 
 function countUserInvasiveSightings($conn, $userId) {
@@ -170,68 +162,81 @@ function countUserGlossaryViews($conn, $userId) {
     return (int) $stmt->get_result()->fetch_assoc()["n"];
 }
 
-function loadStoredFlags($conn, $userId) {
-    $stmt = $conn->prepare("SELECT payload FROM user_account_progress WHERE user_id = ? LIMIT 1");
-    $stmt->bind_param("i", $userId);
-    $stmt->execute();
-    $row = $stmt->get_result()->fetch_assoc();
-    if (!$row) return [];
-    $decoded = json_decode($row["payload"], true);
-    return (is_array($decoded) && isset($decoded["flags"]) && is_array($decoded["flags"])) ? $decoded["flags"] : [];
-}
-
 // --- Agregación completa (recalculable desde cero) -----------------------------------------------
 /**
- * Recalcula los totales agregados de un usuario a partir de user_progress + user_activity_log +
+ * Recalcula los totales agregados de un usuario a partir de user_progress + user_park_visits +
  * user_invasive_sightings + user_glossary_views, y guarda el resultado en user_account_progress.
- * @param mysqli $conn
- * @param int $userId
- * @param array $incomingFlags  Flags que reporta el cliente y no se pueden derivar en servidor
- *                               (hoy solo 'noSearchHabitat'). Se combinan de forma "pegajosa" (OR)
- *                               con lo que ya hubiera guardado: una vez true, no vuelve a false.
+ *
+ * Todo lo que alimenta un logro sale de una visita verificada. Lo que el usuario tenga marcado sin
+ * haber estado allí sigue en su cuaderno (y se cuenta aparte, en `unverifiedMarks`, para poder
+ * decírselo con claridad en la pantalla de progreso), pero no entra en ninguna métrica.
+ *
  * @return array  El array de agregados (misma forma que se guarda en el payload).
  */
-function computeAccountAggregates($conn, $userId, $incomingFlags = []) {
-    $stmt = $conn->prepare(
-        "SELECT up.park_slug, up.payload, p.id AS park_id, p.region, p.province
-         FROM user_progress up
-         JOIN parks p ON p.slug = up.park_slug
-         WHERE up.user_id = ?"
-    );
+function computeAccountAggregates($conn, $userId) {
+    $field = presenceFieldStats($conn, $userId);
+    $windowsByPark = [];
+    foreach ($field["windows"] as $w) $windowsByPark[$w["park"]][] = $w;
+
+    $stmt = $conn->prepare("SELECT park_slug, payload FROM user_progress WHERE user_id = ?");
     $stmt->bind_param("i", $userId);
     $stmt->execute();
     $progressRows = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+    $parks = parksBySlug($conn);
 
     $speciesKeys = [];
     $gpsKeys = [];
-    $parksVisited = [];
     $regions = [];
     $provinces = [];
     $poisSeen = 0;
     $habitatsCompleted = 0;
     $parksCompleted = 0;
+    $unverifiedMarks = 0;
+
+    // Comunidades y provincias: se cuentan por haber PISADO el espacio (visita verificada), no por
+    // haber marcado nada en él. Pisar un parque y no ver ni un bicho sigue siendo haber estado allí.
+    foreach ($field["parksList"] as $slug) {
+        $park = $parks[$slug] ?? null;
+        if (!$park) continue;
+        if (!empty($park["region"])) $regions[$park["region"]] = true;
+        if (!empty($park["province"])) $provinces[$park["province"]] = true;
+    }
 
     foreach ($progressRows as $row) {
+        $slug = $row["park_slug"];
+        $park = $parks[$slug] ?? null;
+        if (!$park) continue;
         $payload = json_decode($row["payload"] ?: "{}", true) ?: [];
         $seenSpecies = array_values(array_unique(array_map("intval", $payload["seenSpeciesIds"] ?? [])));
         $seenPois = array_values(array_unique($payload["seenPoiIds"] ?? []));
         $sightings = is_array($payload["sightings"] ?? null) ? $payload["sightings"] : [];
-        // Un parque solo cuenta como "visitado" si hay algo realmente marcado: entrar a un espacio
-        // de ficha base (sin catálogo) no deja ningún rastro que marcar, así que no se cuenta.
+        $markedAt = is_array($payload["markedAt"] ?? null) ? $payload["markedAt"] : [];
         if (!$seenSpecies && !$seenPois) continue;
 
-        $parkId = (int) $row["park_id"];
-        $parksVisited[$row["park_slug"]] = true;
-        if (!empty($row["region"])) $regions[$row["region"]] = true;
-        if (!empty($row["province"])) $provinces[$row["province"]] = true;
-        $poisSeen += count($seenPois);
+        $verified = partitionVerifiedMarks($windowsByPark[$slug] ?? [], $markedAt);
+        // Solo se consideran verificadas las marcas que además siguen marcadas hoy (el usuario pudo
+        // desmarcar algo después; `markedAt` se limpia al desmarcar, esto es el cinturón).
+        $verifiedSpecies = array_values(array_intersect($verified["species"], $seenSpecies));
+        $verifiedPois = array_values(array_intersect($verified["pois"], $seenPois));
+        $unverifiedMarks += (count($seenSpecies) - count($verifiedSpecies)) + (count($seenPois) - count($verifiedPois));
+        if (!$verifiedSpecies && !$verifiedPois) continue;
+
+        $parkId = (int) $park["id"];
+        $poisSeen += count($verifiedPois);
+        $boundary = naturdexParkBoundary($slug);
 
         $speciesCatalog = speciesByParkId($conn, $parkId);
-        foreach ($seenSpecies as $sid) {
+        foreach ($verifiedSpecies as $sid) {
             if (!isset($speciesCatalog[$sid])) continue; // especie borrada/renumerada: se ignora
             $key = canonicalSpeciesKey($speciesCatalog[$sid]);
             $speciesKeys[$key] = true;
-            if (isset($sightings[(string) $sid])) $gpsKeys[$key] = true;
+            // Avistamiento georreferenciado: además de estar verificado, la coordenada del propio
+            // avistamiento tiene que caer dentro del espacio. Es el dato con valor científico.
+            $sighting = $sightings[(string) $sid] ?? null;
+            if ($sighting && isset($sighting["lat"], $sighting["lng"]) && $boundary
+                && naturdexBoundaryContains($boundary, (float) $sighting["lat"], (float) $sighting["lng"])) {
+                $gpsKeys[$key] = true;
+            }
         }
 
         $habitatIds = habitatIdsByParkId($conn, $parkId);
@@ -241,42 +246,43 @@ function computeAccountAggregates($conn, $userId, $incomingFlags = []) {
         foreach ($habitatIds as $hid) {
             $members = $habitatSpeciesMap[$hid] ?? [];
             if (!$members) continue;
-            $seenHere = count(array_intersect($members, $seenSpecies));
+            $seenHere = count(array_intersect($members, $verifiedSpecies));
             if ($seenHere === count($members)) $habitatsCompleteHere++;
         }
         $habitatsCompleted += $habitatsCompleteHere;
 
         $poisTotal = poisCountByParkId($conn, $parkId);
         $parkComplete = $habitatsTotal > 0 && $habitatsCompleteHere === $habitatsTotal
-            && $poisTotal > 0 && count($seenPois) === $poisTotal;
+            && $poisTotal > 0 && count($verifiedPois) === $poisTotal;
         if ($parkComplete) $parksCompleted++;
     }
 
-    $activity = activityStats($conn, $userId);
-    $storedFlags = loadStoredFlags($conn, $userId);
-    $flags = [
-        "earlyBird" => !empty($storedFlags["earlyBird"]) || detectEarlyBird($progressRows),
-        "winterOuting" => !empty($storedFlags["winterOuting"]) || $activity["winterOuting"],
-        // No derivable en servidor: se queda con lo ya guardado OR lo que reporte este POST.
-        "noSearchHabitat" => !empty($storedFlags["noSearchHabitat"]) || !empty($incomingFlags["noSearchHabitat"]),
-    ];
-
     return [
+        // --- Métricas de logro (todas exigen presencia verificada) --------------------------------
         "speciesSeen" => count($speciesKeys),
-        "parksVisited" => count($parksVisited),
+        "parksVisited" => $field["parksVisited"],
         "parksCompleted" => $parksCompleted,
         "regionsVisited" => count($regions),
         "provincesVisited" => count($provinces),
         "habitatsCompleted" => $habitatsCompleted,
         "poisSeen" => $poisSeen,
         "gpsSightings" => count($gpsKeys),
+        "fieldDays" => $field["fieldDays"],
+        "weekStreak" => $field["weekStreak"],
+        "maxParkRevisitDays" => $field["maxParkRevisitDays"],
+        "fieldHours" => $field["fieldHours"],
+        "fieldKilometers" => $field["fieldKilometers"],
+        // --- Estadísticas de la app (se muestran, pero ya no desbloquean nada) --------------------
         "invasiveSeen" => countUserInvasiveSightings($conn, $userId),
         "glossaryViewed" => countUserGlossaryViews($conn, $userId),
-        "activeDays" => $activity["activeDays"],
-        "weekStreak" => $activity["weekStreak"],
-        "maxParkRevisitDays" => $activity["maxParkRevisitDays"],
-        "flags" => $flags,
+        "unverifiedMarks" => $unverifiedMarks,
         "regionsList" => array_values(array_keys($regions)),
+        // --- Logros "de sabor", ahora también derivados de visitas reales --------------------------
+        "flags" => [
+            "earlyBird" => $field["earlyBird"],
+            "winterVisit" => $field["winterVisit"],
+            "longVisit" => $field["longestVisitHours"] >= 3,
+        ],
     ];
 }
 
@@ -321,11 +327,12 @@ function evaluateAchievements($conn, $userId, $aggregates) {
 
 /**
  * Recalcula, persiste y evalúa: el punto de entrada único que llaman progress.php (tras cada POST),
- * account-progress.php (tras un POST de invasoras/glosario) y el script de recálculo de Tools/.
+ * presence.php (cuando una visita se verifica), account-progress.php (invasoras/glosario) y el
+ * script de recálculo de Tools/.
  * @return array { aggregates, newlyUnlocked }
  */
-function recomputeAccountProgress($conn, $userId, $incomingFlags = []) {
-    $aggregates = computeAccountAggregates($conn, $userId, $incomingFlags);
+function recomputeAccountProgress($conn, $userId) {
+    $aggregates = computeAccountAggregates($conn, $userId);
     $payload = json_encode($aggregates, JSON_UNESCAPED_UNICODE);
     $stmt = $conn->prepare(
         "INSERT INTO user_account_progress (user_id, payload) VALUES (?, ?)
@@ -404,4 +411,33 @@ function buildAccountPayload($conn, $userId) {
     // `achievements` (desbloqueado o no), así que no hace falta exponerlos en `totals`.
     unset($totals["flags"]);
     return ["totals" => $totals, "achievements" => $achievements, "updatedAt" => $updatedAt];
+}
+
+/**
+ * Historial de visitas verificadas de un usuario, para la pantalla de progreso ("tus salidas al
+ * campo"). Es la contrapartida honesta de exigir presencia: si los logros dependen de esto, el
+ * usuario tiene derecho a ver exactamente qué salidas le ha contado la app y cuáles no.
+ */
+function buildVisitHistory($conn, $userId, $limit = 50) {
+    $stmt = $conn->prepare(
+        "SELECT v.park_slug, p.name AS park_name, v.started_at, v.last_fix_at, v.fix_count,
+                v.distance_m, v.verified, v.suspicious, v.flags
+         FROM user_park_visits v LEFT JOIN parks p ON p.slug = v.park_slug
+         WHERE v.user_id = ? ORDER BY v.started_at DESC LIMIT ?"
+    );
+    $stmt->bind_param("ii", $userId, $limit);
+    $stmt->execute();
+    return array_map(function ($r) {
+        return [
+            "park" => $r["park_slug"],
+            "parkName" => $r["park_name"] ?: $r["park_slug"],
+            "startedAt" => gmdate("c", strtotime($r["started_at"])),
+            "seconds" => max(0, strtotime($r["last_fix_at"]) - strtotime($r["started_at"])),
+            "distanceM" => (int) $r["distance_m"],
+            "fixCount" => (int) $r["fix_count"],
+            "verified" => (bool) $r["verified"],
+            "suspicious" => (bool) $r["suspicious"],
+            "flags" => $r["flags"] ? json_decode($r["flags"], true) : [],
+        ];
+    }, $stmt->get_result()->fetch_all(MYSQLI_ASSOC));
 }

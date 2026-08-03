@@ -26,7 +26,8 @@ const HABITAT_CIRCLE_METERS = 420;
 
 const handlers = {
   onTogglePoiSeen: null,      // (poiId) desde el botón "Marcar visitado" del aviso
-  onShowHabitatSpecies: null  // (habitatId) desde el "Sí, ver especies" del diálogo de hábitat
+  onShowHabitatSpecies: null, // (habitatId) desde el "Sí, ver especies" del diálogo de hábitat
+  onFix: null                 // (lat, lng, accuracy) cada posición, para la verificación de presencia
 };
 
 // Avisos ya mostrados en esta sesión de exploración (para no repetir el mismo al ritmo del GPS).
@@ -274,6 +275,9 @@ function startExplorerMode() {
       if (followActive) centerOn(lat, lng); // el mapa te acompaña (y el primer fix te acerca)
       updateNearby(lat, lng, accuracy);
       checkDiscoveries(lat, lng);
+      // La misma posición alimenta la verificación de presencia (presence.js decide si la envía:
+      // aquí llegan fixes cada pocos segundos y allí se espacian).
+      if (handlers.onFix) handlers.onFix(lat, lng, accuracy);
     },
     error => {
       nearbyStatus.textContent = geoErrorMessage(error);

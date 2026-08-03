@@ -6,15 +6,15 @@
     <title>NaturDex</title>
     <!-- PWA: instalable en el móvil con icono propio y a pantalla completa -->
     <link rel="manifest" href="manifest.webmanifest">
-    <meta name="theme-color" content="#2f6f4e">
+    <meta name="theme-color" content="#1F4D34">
     <link rel="icon" type="image/png" href="Img/icon-192.png">
     <link rel="apple-touch-icon" href="Img/icon-192.png">
-    <!-- Tipografía Inter: la hoja de estilos ya la declaraba como preferida (font-family), pero sin
-         cargarla nunca se veía la fuente del sistema. font-display:swap evita texto invisible mientras
-         carga; si no hay red, cae directamente a la pila de system-ui ya prevista en styles.css. -->
+    <!-- Tipografía de la dirección "ranger": Zilla Slab para los rótulos (serifa de cartel tallado)
+         y Public Sans para el resto de la interfaz. font-display:swap evita texto invisible mientras
+         carga; sin red cae a Georgia / system-ui, ya previstas en las pilas de Css/ranger.css. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap">
     <!-- Leaflet y markercluster van vendorizados en Vendor/ (no unpkg): el Service Worker ignora a
          propósito todo lo que no sea del mismo origen, así que desde un CDN nunca llegaban a la
          caché y sin cobertura la app no arrancaba (map.js usa L al importarse). Ver Vendor/README.md. -->
@@ -22,6 +22,10 @@
     <link rel="stylesheet" href="Vendor/markercluster/MarkerCluster.css">
     <link rel="stylesheet" href="Vendor/markercluster/MarkerCluster.Default.css">
     <link rel="stylesheet" href="Css/styles.css">
+    <!-- Capa "ranger" (rediseño v2): redefine los tokens de styles.css, sustituye sus colores y
+         radios literales y reestructura la vista móvil (mapa de fondo + hoja deslizante). Va
+         DESPUÉS de styles.css a propósito; quitando esta línea la app vuelve al aspecto anterior. -->
+    <link rel="stylesheet" href="Css/ranger.css">
     <!-- Preferencias del usuario (tema, tamaño de texto, movimiento). Script clásico y SÍNCRONO en
          el <head> a propósito: el tema tiene que estar puesto en <html> antes del primer pintado o
          se vería un fogonazo blanco al abrir la app en modo oscuro. -->
@@ -30,10 +34,20 @@
 <body>
     <!-- ===================== Pantalla: portada ===================== -->
     <section id="screen-cover" class="screen screen-center screen-cover" aria-label="Portada de NaturDex">
+        <!-- Portada como cartel de bienvenida de un parque: foto de un espacio real arriba y, sobre
+             ella, el cartel verde con filete de latón. Nada de esto va escrito a mano: la foto, su
+             pie y la línea de cifras los rellena auth.js · fillCover() desde Data/parks-index.json y
+             el manifiesto del parque que toque ese día. Si falla (sin red y sin caché) se quedan los
+             textos de reserva de aquí abajo y el hueco de la foto en verde profundo. -->
         <div class="cover-inner">
-            <div class="cover-mark" aria-hidden="true">🌿</div>
-            <p class="eyebrow">Guía ambiental virtual</p>
-            <h1 class="cover-title">NaturDex</h1>
+            <div class="cover-photo" id="coverPhoto">
+                <p class="cover-photo-caption" id="coverPhotoCaption" hidden></p>
+            </div>
+            <div class="cover-sign">
+                <p class="eyebrow">Guía ambiental virtual</p>
+                <h1 class="cover-title">NaturDex</h1>
+                <p class="cover-stats" id="coverStats">Espacios protegidos de España</p>
+            </div>
             <p class="cover-sub">Explora, identifica y cataloga la flora y la fauna de los parques naturales y nacionales de España.</p>
             <button id="coverStart" type="button" class="btn-primary">Comenzar</button>
             <!-- Modo invitado desactivado por ahora: ya se pueden crear cuentas reales contra el
@@ -42,7 +56,7 @@
                  volver a cablearlos en auth.js (enterAsGuest sigue ahí).
             <button id="guestStart" type="button" class="link-btn">Explorar como invitado, sin cuenta →</button>
             -->
-            <p class="cover-foot">Prototipo · Parque piloto: Cabo Cope y Puntas de Calnegre</p>
+            <p class="cover-foot" id="coverFoot">Prototipo · Región de Murcia</p>
         </div>
     </section>
 
@@ -84,7 +98,14 @@
                 <div class="park-user"><span id="userNameSelect" class="user-name"></span><button id="accountProgressBtn" class="icon-btn" type="button" title="Tu progreso estatal" aria-label="Ver tu progreso estatal"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="6"/><polyline points="8.5 13.5 7 22 12 19 17 22 15.5 13.5"/></svg></button><button id="tutorialBtnSelect" class="icon-btn" type="button" title="Ver el tutorial" aria-label="Ver el tutorial"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></button><button id="profileBtnSelect" class="icon-btn primary" type="button" title="Perfil y ajustes" aria-label="Perfil y ajustes"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button></div>
             </div>
             <p class="select-hint">Selecciónalo en el mapa o en la lista. Así solo se carga la información del parque que vas a explorar, sin saturar el mapa.</p>
-            <label class="select-field">Parque
+            <!-- Buscador por nombre: con 16 espacios (y subiendo) el desplegable agrupado por
+                 provincia ya no se recorre de un vistazo. Filtra las opciones del <select> sin
+                 tildes ni mayúsculas; vaciarlo devuelve la lista completa. Lo cablea auth.js. -->
+            <label class="select-field" for="parkSearch">Buscar parque
+                <input id="parkSearch" type="search" placeholder="Nombre del espacio protegido" autocomplete="off">
+            </label>
+            <p class="select-search-count" id="parkSearchCount" role="status" hidden></p>
+            <label class="select-field" for="parkSelect">Parque
                 <select id="parkSelect"><option value="">Cargando…</option></select>
             </label>
             <button id="geoLocateBtn" type="button" class="btn-secondary"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></svg> Ir al parque más cercano a mí</button>
@@ -126,13 +147,24 @@
         <main class="app-shell">
             <a class="skip-link" href="#map">Saltar al mapa</a>
             <aside class="sidebar" aria-label="Panel de exploración NaturDex">
+                <!-- Asa de la hoja-hub (solo visible en móvil): sube, deja o baja la hoja sobre el
+                     mapa de fondo. El gesto lo maneja Js/ranger-sheet.js. -->
+                <button type="button" class="park-sheet-grip" aria-label="Ajustar la altura del panel"></button>
                 <div class="park-nav">
                     <button type="button" id="backToParks" class="link-btn">← Parques</button>
-                    <div class="park-user"><span id="userName" class="user-name"></span><button id="tutorialBtn" class="icon-btn" type="button" title="Ver el tutorial" aria-label="Ver el tutorial"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></button><button id="profileBtn" class="icon-btn primary" type="button" title="Perfil y ajustes" aria-label="Perfil y ajustes"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button></div>
+                    <!-- El progreso estatal (logros de cuenta, sumando todos los parques) también se
+                         alcanza desde dentro de un parque: es de la cuenta, no del parque, y estando
+                         aquí no había forma de llegar sin salir al selector. Vuelve al parque al cerrar. -->
+                    <div class="park-user"><span id="userName" class="user-name"></span><button id="accountProgressBtnPark" class="icon-btn" type="button" title="Tu progreso estatal" aria-label="Ver tu progreso estatal"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="6"/><polyline points="8.5 13.5 7 22 12 19 17 22 15.5 13.5"/></svg></button><button id="tutorialBtn" class="icon-btn" type="button" title="Ver el tutorial" aria-label="Ver el tutorial"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></button><button id="profileBtn" class="icon-btn primary" type="button" title="Perfil y ajustes" aria-label="Perfil y ajustes"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button></div>
                 </div>
                 <section class="park-summary">
-                    <p class="eyebrow" id="parkEyebrow">NaturDex piloto</p>
-                    <h1 id="parkTitle">Cabo Cope y Puntas de Calnegre</h1>
+                    <!-- Cartel del parque (rediseño "ranger"): el rótulo y su categoría van sobre la
+                         banda verde con filete de latón. El div es solo el soporte del cartel; el
+                         texto lo sigue rellenando render.js por sus ids de siempre. -->
+                    <div class="park-sign">
+                        <p class="eyebrow" id="parkEyebrow">NaturDex piloto</p>
+                        <h1 id="parkTitle">Cabo Cope y Puntas de Calnegre</h1>
+                    </div>
                     <p id="parkSummary">Guía viva de especies, hábitats y puntos de observación.</p>
                     <div class="summary-grid" id="parkStats" aria-label="Resumen del parque">
                         <div><strong id="speciesCount">0</strong><span>especies</span></div>
@@ -142,6 +174,14 @@
                     <div class="progress-wrap" id="parkProgressWrap" aria-label="Progreso de descubrimiento">
                         <div id="progressTrack" class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-labelledby="progressLabel"><div id="progressFill" class="progress-fill"></div></div>
                         <span id="progressLabel" class="progress-label">0 / 0 especies descubiertas</span>
+                    </div>
+                    <!-- Presencia verificada: dice si lo que marcas está contando para los logros.
+                         Sin esta barra, el usuario no tendría forma de saber por qué su avistamiento
+                         no le ha sumado nada (ver Frontend/Js/presence.js). -->
+                    <div class="presence-bar is-off" id="presenceBar" hidden aria-live="polite">
+                        <span class="presence-dot" aria-hidden="true"></span>
+                        <span class="presence-text" id="presenceText"></span>
+                        <button type="button" class="presence-action" id="presenceAction" hidden>Activar</button>
                     </div>
                     <div class="offline-bar" aria-label="Estado de conexión y datos sin conexión">
                         <span id="connStatus" class="conn-status" role="status">En línea</span>
@@ -235,5 +275,7 @@
     <script src="Js/offline.js"></script>
     <script type="module" src="Js/app.js"></script>
     <script src="Js/auth.js"></script>
+    <!-- Gesto de la hoja-hub del parque (móvil). Al final del body: solo necesita el DOM ya pintado. -->
+    <script src="Js/ranger-sheet.js"></script>
 </body>
 </html>

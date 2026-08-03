@@ -12,7 +12,10 @@ import { normalize } from './util.js';
 
 // --- Constantes de la aplicación ----------------------------------------------------------------
 export const API_BASE = '../Backend/Api';
-export const ACHIEVEMENT_NAME = '¡Más aguileño que un pijo lobo!';
+// Logro final de un parque (todos los hábitats y todos los puntos de interés, verificados en campo).
+// Antes era un guiño local de Águilas ("¡Más aguileño que un pijo lobo!"); con el catálogo creciendo
+// a espacios de toda la Región, el nombre tenía que dejar de hablar de una sola comarca.
+export const ACHIEVEMENT_NAME = 'Guardián del parque';
 export const DEFAULT_PARK_SLUG = 'cabo-cope-puntas-calnegre';
 export const PARK_INDEX_PATH = 'Data/parks-index.json';
 export const ACHIEVEMENTS_CATALOG_PATH = 'Data/achievements.json';
@@ -37,6 +40,10 @@ export const state = {
   seenSpecies: new Set(),
   seenPois: new Set(),
   sightings: new Map(),
+  // Cuándo se marcó cada cosa: { 'species:12': ISO, 'poi:mirador': ISO }. No es adorno: cruzar esa
+  // hora con las visitas verificadas al parque (presence.js) es lo que decide si una marca cuenta
+  // para los logros o se queda en el cuaderno personal. La sella el servidor en cada POST.
+  markedAt: {},
   progressReady: false,
   parkWasComplete: false,
   activeParkSlug: null,
@@ -57,12 +64,7 @@ export const state = {
   // achievements.js: `totals` son los agregados (especies estatales, parques visitados...) y
   // `achievements` es un Map id -> { unlockedAt, celebratedAt, context }. `ready` indica que ya se
   // cargó al menos una vez (local u online) y la rejilla de logros puede pintarse sin parpadeo.
-  account: { totals: null, achievements: new Map(), ready: false },
-  // Se pone a `true` en cuanto el usuario escribe algo en el buscador del catálogo, en cualquier
-  // parque de esta sesión; lo usa el logro de sabor "hábitat completado sin buscador" (app.js
-  // comprueba este flag la primera vez que un hábitat se completa). Vive aquí porque, como
-  // `parkWasComplete`, es UI-state efímero de esta sesión, no progreso persistido.
-  searchUsedThisSession: false
+  account: { totals: null, achievements: new Map(), ready: false, visits: [] }
 };
 
 // --- Selectores: catálogo -------------------------------------------------------------------------

@@ -15,6 +15,7 @@ import {
 import { audioBlock } from './audio.js';
 import { highlightGlossary } from './glossary.js';
 import { isInvasiveSeenLocally, loadAchievementsCatalog, refreshAccountProgress } from './achievements.js';
+import { isMarkVerifiedLocally } from './presence.js';
 import {
   ACHIEVEMENT_NAME, state, getFilteredSpecies, getFilteredHabitats,
   habitatSpeciesSeenCount, habitatAreaLabel, isHabitatComplete, computeProgress
@@ -263,6 +264,18 @@ function renderHabitatDetail() {
     </div>`;
 }
 
+// Estado de verificación de una marca concreta, bajo su botón de "visto". Es la contrapartida
+// honesta de que los logros exijan presencia: si algo no va a contar, se dice en su ficha, no se
+// deja al usuario descubrirlo al ver que el contador no sube. La predicción es local (lo que este
+// dispositivo sabe de tus visitas); en cuanto hay red, el servidor la corrige.
+function markVerificationNote(type, id) {
+  const markedIso = (state.markedAt || {})[type + ':' + id];
+  const verified = markedIso ? isMarkVerifiedLocally(state.activeParkSlug, Date.parse(markedIso)) : false;
+  return verified
+    ? html`<p class="mark-verified">✅ Avistamiento verificado en campo: cuenta para tus logros.</p>`
+    : html`<p class="mark-unverified">◌ Sin verificar: está en tu cuaderno, pero no cuenta para los logros. Solo suman las marcas hechas dentro del parque con la ubicación activada.</p>`;
+}
+
 function renderSpeciesDetail() {
   const species = state.data.species.find(item => item.id === state.selectedId) ?? state.data.species[0];
   if (!species) { detailPanel.innerHTML = ''; return; }
@@ -306,6 +319,7 @@ function renderSpeciesDetail() {
     ${species.image && species.imageAttribution ? html`<p class="detail-source">Foto: ${species.imageAttribution}</p>` : ''}
     ${species.source ? html`<p class="detail-source">Fuente: ${species.source}</p>` : ''}
     <button class="seen-toggle ${seen ? 'is-seen' : ''}" type="button" data-toggle-seen="${species.id}" aria-pressed="${seen ? 'true' : 'false'}">${seen ? '✓ Visto' : 'Marcar como visto'}</button>
+    ${seen ? markVerificationNote('species', species.id) : ''}
     </div>`;
 }
 
@@ -370,6 +384,35 @@ function achievementCard(name, unlocked, desc, justUnlocked) {
   return html`<div class="achievement-card ${unlocked ? 'unlocked' : 'locked'}${justUnlocked ? ' just-unlocked' : ''}"><span class="achievement-icon" aria-hidden="true">${unlocked ? icon('trophy', 22) : icon('lock', 22)}</span><div><strong>${name}</strong><p>${desc}</p></div></div>`;
 }
 
+// Progreso del parque activo contando SOLO lo verificado en campo. Espejo local de lo que hace el
+// servidor en Backend/Lib/account_progress.php: cruzar la hora de cada marca con las visitas
+// verificadas. Es una predicción (lo que sabe este dispositivo); el servidor tiene la última palabra.
+function verifiedParkProgress() {
+  const isVerified = (type, id) => {
+    const iso = (state.markedAt || {})[type + ':' + id];
+    return iso ? isMarkVerifiedLocally(state.activeParkSlug, Date.parse(iso)) : false;
+  };
+  const species = (state.data.species || []).filter(s => state.seenSpecies.has(s.id) && isVerified('species', s.id));
+  const seenIds = new Set(species.map(s => s.id));
+  const pois = (state.data.pointsOfInterest || []).filter(p => state.seenPois.has(p.id) && isVerified('poi', p.id));
+
+  const habitats = state.data.habitats || [];
+  const habitatsCompleteCount = habitats.filter(h => {
+    const members = h.speciesIds || [];
+    return members.length > 0 && members.every(id => seenIds.has(id));
+  }).length;
+  const poisTotal = (state.data.pointsOfInterest || []).length;
+
+  return {
+    speciesSeen: species.length,
+    poisSeen: pois.length,
+    habitatsCompleteCount,
+    zepaSeen: species.filter(s => s.zepaSiteCode).length,
+    parkComplete: habitats.length > 0 && habitatsCompleteCount === habitats.length
+      && poisTotal > 0 && pois.length === poisTotal
+  };
+}
+
 export function renderProgressTab() {
   const progress = computeProgress();
   const speciesPct = progress.speciesTotal ? Math.round((progress.speciesSeen / progress.speciesTotal) * 100) : 0;
@@ -385,20 +428,28 @@ export function renderProgressTab() {
   const poisHtml = (state.data.pointsOfInterest || []).map(p =>
     html`<li class="progress-row${state.seenPois.has(p.id) ? ' complete' : ''}"><span class="progress-row-label">${p.name}</span><span class="progress-row-value">${state.seenPois.has(p.id) ? 'Visitado ✓' : 'Pendiente'}</span></li>`);
 
-  const justUnlocked = progress.parkComplete && !state.parkWasComplete;
-  state.parkWasComplete = progress.parkComplete;
+  // Los tres logros de este parque se miden sobre lo VERIFICADO, no sobre el cuaderno. Las barras de
+  // arriba siguen contando todo lo marcado (es tu registro personal y no se toca), pero una medalla
+  // se gana en el campo: si no, esta pestaña seguiría repartiendo logros desde el sofá mientras el
+  // progreso estatal ya no lo hace, y la app se contradiría a sí misma.
+  const verified = verifiedParkProgress();
+  const justUnlocked = verified.parkComplete && !state.parkWasComplete;
+  state.parkWasComplete = verified.parkComplete;
 
-  // Logros temáticos: colección de hábitats, colección de aves de la ZEPA y el logro grande del parque.
-  const habitatsAllComplete = nHab > 0 && progress.habitatsCompleteCount === nHab;
-  const zepaAllSeen = progress.zepaTotal > 0 && progress.zepaSeen === progress.zepaTotal;
+  const habitatsAllComplete = nHab > 0 && verified.habitatsCompleteCount === nHab;
+  const zepaAllSeen = progress.zepaTotal > 0 && verified.zepaSeen === progress.zepaTotal;
+  const pendiente = progress.speciesSeen > verified.speciesSeen || progress.poisSeen > verified.poisSeen
+    ? html`<p class="account-note">De lo que llevas marcado en este parque, <strong>${verified.speciesSeen} de ${progress.speciesSeen}</strong> ${progress.speciesSeen === 1 ? 'especie está verificada' : 'especies están verificadas'} en campo. Solo eso cuenta para las medallas.</p>`
+    : '';
   const logros = [
     achievementCard('Explorador de hábitats', habitatsAllComplete,
-      habitatsAllComplete ? 'Has completado todos los hábitats del parque.' : `Completa los ${nHab} hábitats viendo todas sus especies (${progress.habitatsCompleteCount}/${nHab}).`, false),
+      habitatsAllComplete ? 'Has completado todos los hábitats del parque, avistando sus especies allí mismo.' : `Completa los ${nHab} hábitats avistando todas sus especies dentro del parque (${verified.habitatsCompleteCount}/${nHab}).`, false),
     progress.zepaTotal > 0 ? achievementCard('Gran observador de aves', zepaAllSeen,
-      zepaAllSeen ? '¡Lista completa! Has avistado las ' + progress.zepaTotal + ' aves migratorias de este espacio protegido (ZEPA, Red Natura 2000).' : `Completa tu lista de avistamientos de las aves migratorias del parque (${progress.zepaSeen}/${progress.zepaTotal}).`, false) : '',
-    achievementCard(ACHIEVEMENT_NAME, progress.parkComplete,
-      progress.parkComplete ? 'Logro desbloqueado: has completado todos los hábitats y puntos de interés de Cabo Cope y Puntas de Calnegre.'
-        : 'Completa todos los hábitats y visita todos los puntos de interés para desbloquear el logro final.', justUnlocked),
+      zepaAllSeen ? '¡Lista completa! Has avistado las ' + progress.zepaTotal + ' aves migratorias de este espacio protegido (ZEPA, Red Natura 2000).' : `Completa tu lista de avistamientos de las aves migratorias del parque (${verified.zepaSeen}/${progress.zepaTotal}).`, false) : '',
+    achievementCard(ACHIEVEMENT_NAME, verified.parkComplete,
+      verified.parkComplete ? 'Logro desbloqueado: has completado todos los hábitats y puntos de interés de este parque, sobre el terreno.'
+        : 'Completa todos los hábitats y visita todos los puntos de interés, estando allí, para desbloquear el logro final.', justUnlocked),
+    pendiente
   ];
 
   const zepaPct = progress.zepaTotal ? Math.round((progress.zepaSeen / progress.zepaTotal) * 100) : 0;
@@ -439,19 +490,37 @@ export async function renderAccountProgress() {
   const achievementsMap = state.account.achievements;
 
   const totalsGrid = html`<div class="account-totals-grid">
-    ${accountStat(totals.speciesSeen, 'especies vistas')}
-    ${accountStat(totals.parksVisited, 'parques visitados')}
-    ${accountStat(totals.parksCompleted, 'parques completados')}
+    ${accountStat(totals.speciesSeen, 'especies avistadas')}
+    ${accountStat(totals.parksVisited, 'espacios visitados')}
+    ${accountStat(totals.parksCompleted, 'espacios completados')}
     ${accountStat(totals.regionsVisited, 'comunidades autónomas')}
     ${accountStat(totals.provincesVisited, 'provincias')}
     ${accountStat(totals.habitatsCompleted, 'hábitats completados')}
     ${accountStat(totals.poisSeen, 'puntos de interés')}
-    ${accountStat(totals.gpsSightings, 'avistamientos GPS')}
+    ${accountStat(totals.gpsSightings, 'registros con GPS')}
+    ${accountStat(totals.fieldDays, 'días de campo')}
+    ${accountStat(totals.fieldHours, 'horas en el monte')}
+    ${accountStat(totals.fieldKilometers, 'km recorridos')}
+    ${accountStat(totals.weekStreak, 'semanas seguidas')}
   </div>`;
+
+  // Regla de la casa, dicha de frente: todo lo de arriba se cuenta estando allí.
+  const rulesHtml = html`<p class="account-rule">📍 Todo lo que ves aquí se gana en el campo: solo cuentan las marcas hechas <strong>dentro de un espacio protegido</strong> mientras tu ubicación confirma que estás allí.${totals.unverifiedMarks ? html` Tienes <strong>${totals.unverifiedMarks}</strong> ${totals.unverifiedMarks === 1 ? 'marca sin verificar' : 'marcas sin verificar'} en tu cuaderno: siguen ahí, pero no suman.` : ''}</p>`;
 
   const regionsHtml = (totals.regionsList && totals.regionsList.length)
     ? html`<div class="account-section"><h3>Comunidades autónomas exploradas</h3><div class="account-chips">${totals.regionsList.map(r => html`<span class="badge">${r}</span>`)}</div></div>`
     : '';
+
+  const visitsHtml = renderVisitHistory();
+
+  // Lo que ya no desbloquea logros pero se sigue registrando: se enseña aparte y sin medallas, para
+  // que quede claro que es actividad de la app y no mérito de campo.
+  const appStatsHtml = html`<div class="account-section"><h3>📖 Actividad en la app</h3>
+    <div class="account-totals-grid small">
+      ${accountStat(totals.glossaryViewed, 'términos del glosario consultados')}
+      ${accountStat(totals.invasiveSeen, 'invasoras identificadas')}
+    </div>
+    <p class="account-note">Aprender también cuenta, pero no da logros: se puede hacer desde casa.</p></div>`;
 
   const sections = (catalog.categories || []).map(cat => {
     const items = (catalog.achievements || []).filter(a => a.category === cat.key);
@@ -461,5 +530,36 @@ export async function renderAccountProgress() {
     return html`<div class="account-section"><h3>${cat.icon} ${cat.label} <span class="account-section-count">${unlockedCount}/${items.length}</span></h3><div class="achievement-grid">${cards}</div></div>`;
   });
 
-  accountProgressBody.innerHTML = html`${totalsGrid}${regionsHtml}${sections}`;
+  accountProgressBody.innerHTML = html`${totalsGrid}${rulesHtml}${regionsHtml}${visitsHtml}${sections}${appStatsHtml}`;
+}
+
+// --- Historial de salidas verificadas ------------------------------------------------------------
+// Si el progreso depende de haber estado allí, el usuario tiene derecho a ver la lista exacta de lo
+// que la app le ha contado como visita, y a que le diga por qué una no le ha valido.
+const VISIT_FLAG_LABELS = {
+  salto_imposible: 'posiciones incoherentes entre sí',
+  gps_congelado: 'la ubicación no se movió ni un metro'
+};
+
+function renderVisitHistory() {
+  const visits = (state.account.visits || []).slice(0, 12);
+  if (!visits.length) {
+    return html`<div class="account-section"><h3>🥾 Tus salidas</h3>
+      <p class="account-note">Todavía no hay ninguna visita verificada. Entra en un espacio protegido con la ubicación activada y camina unos minutos: la app registrará tu presencia y a partir de ahí todo lo que marques contará.</p></div>`;
+  }
+  const rows = visits.map(v => {
+    const date = new Date(v.startedAt).toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' });
+    const minutes = Math.round((v.seconds || 0) / 60);
+    const km = (v.distanceM || 0) / 1000;
+    const detail = [
+      minutes >= 60 ? Math.floor(minutes / 60) + ' h ' + (minutes % 60) + ' min' : minutes + ' min',
+      km >= 0.1 ? km.toLocaleString('es-ES', { maximumFractionDigits: 1 }) + ' km' : null
+    ].filter(Boolean).join(' · ');
+    const state_ = v.suspicious
+      ? html`<span class="visit-state is-flagged" title="${(v.flags || []).map(f => VISIT_FLAG_LABELS[f] || f).join(', ')}">No verificada</span>`
+      : (v.verified ? html`<span class="visit-state is-ok">Verificada ✓</span>` : html`<span class="visit-state">Demasiado corta</span>`);
+    return html`<li class="progress-row"><span class="progress-row-label">${v.parkName}<br><small>${date} · ${detail}</small></span><span class="progress-row-value">${state_}</span></li>`;
+  });
+  return html`<div class="account-section"><h3>🥾 Tus salidas</h3><ul class="progress-list">${rows}</ul>
+    <p class="account-note">Una salida se verifica con presencia sostenida dentro del límite oficial del espacio (varias posiciones repartidas en unos minutos).</p></div>`;
 }
