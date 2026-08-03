@@ -23,7 +23,7 @@ import {
 } from './data.js';
 import {
   speciesList, searchInput, catalogControls, catalogPanel,
-  backToHabitatsBtn, catalogCrumbLabel, parkTitle, parkEyebrow, parkStats, parkProgressWrap,
+  backToHabitatsBtn, catalogCrumb, catalogCrumbLabel, parkTitle, parkEyebrow, parkStats, parkProgressWrap,
   progressPanel, invasorasPanel, basicNotice, detailPanel, sheetClose, sheetScrim,
   saveOfflineBtn, connStatus, layersToggle, layersPanel, explorerToggle
 } from './dom.js';
@@ -34,6 +34,7 @@ import {
 } from './render.js';
 import {
   map, setMapHandlers, ensureMapSized, soloHabitat, setupParkBaseLayer, applyBaseChoice,
+  focusOn, reframe,
   renderMarkers, renderPoiMarkers, renderTrails, renderProtectedAreas, renderHabitatZones
 } from './map.js';
 import { initExplorer } from './explorer.js';
@@ -117,7 +118,7 @@ function selectSpecies(id, focusMap = true) {
     if (map.hasLayer(state.speciesCluster) && typeof state.speciesCluster.zoomToShowLayer === 'function') {
       state.speciesCluster.zoomToShowLayer(marker, () => marker.openPopup());
     } else {
-      map.setView(speciesLatLng(species), 14, { animate: true });
+      focusOn(speciesLatLng(species), 14, { animate: true });
       marker.openPopup();
     }
   }
@@ -259,6 +260,11 @@ function setView(view) {
   // En un espacio de ficha base, el hueco del catálogo lo ocupa el aviso (nunca los dos a la vez).
   catalogControls.hidden = basic || view !== 'catalog';
   catalogPanel.hidden = basic || view !== 'catalog';
+  // La miga de pan es del catálogo: fuera de él no pinta nada. Se quedaba encendida al cambiar de
+  // pestaña, así que Progreso e Invasoras salían encabezadas por "← Hábitats · <hábitat>", un
+  // rótulo que no era suyo y cuyo botón cambiaba, sin avisar, la vista que había detrás.
+  // renderCatalogBody vuelve a decidir si toca al volver al catálogo.
+  if (catalogCrumb && view !== 'catalog') catalogCrumb.hidden = true;
   if (basicNotice) basicNotice.hidden = !basic || view !== 'catalog';
   progressPanel.hidden = view !== 'progress';
   if (invasorasPanel) invasorasPanel.hidden = view !== 'invasoras';
@@ -294,6 +300,9 @@ function setMobileTab(tab) {
   } else {
     setView(tab); // 'catalog' | 'progress' — setView ya sincroniza la nav inferior
   }
+  // Cambiar de pestaña hace aparecer o desaparecer la hoja, y con ella la mitad del mapa que
+  // tapaba: lo que se estaba enseñando se recoloca para el hueco nuevo (ver map.js · reframe).
+  reframe();
 }
 
 function openDetailSheet() {
@@ -637,7 +646,9 @@ async function startParkExperience(slug, user) {
   if (state.parkLevel !== 'basic') renderDetail();
   refreshLayersPanel();
   state.parkWasComplete = computeProgress().parkComplete;
-  map.setView(state.data.park.center, 12);
+  // focusOn (no setView): en móvil la hoja del catálogo tapa la mitad de abajo del mapa, así que el
+  // centro del parque se coloca en la franja que SE VE, no en el centro del contenedor.
+  focusOn(state.data.park.center, 12);
   // Leaflet cachea el tamaño del contenedor al crearse; si el layout aún no estaba listo (0 de
   // alto), el mapa no dibuja capas ni teselas (ver ensureMapSized en map.js).
   ensureMapSized();

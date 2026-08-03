@@ -424,13 +424,78 @@ export function soloHabitat(habitatId) {
   if (!map.hasLayer(state.habitatGroup)) state.habitatGroup.addTo(map);
 }
 
+// --- Encuadre con la hoja-hub delante (móvil) ---------------------------------------------------
+// En móvil el mapa es el FONDO permanente de la pantalla del parque y la hoja del catálogo le tapa
+// la mitad de abajo (ver Css/ranger.css). El centro del CONTENEDOR no es, por tanto, el centro de
+// lo que se ve: centrar ahí dejaba el parque justo detrás de la hoja y la franja visible enseñaba
+// mar vacío. focusOn/fitOn descuentan la parte tapada; en escritorio la hoja no existe (la barra
+// lateral es una columna al lado, no encima) y se comportan como setView/fitBounds de siempre.
+// Son el único sitio por el que la app mueve el mapa "para enseñar algo": lo que el usuario
+// arrastre después es suyo y no se le toca.
+function sheetCoverPx() {
+  const sheet = document.querySelector('.sidebar');
+  if (!sheet) return 0;
+  const style = getComputedStyle(sheet);
+  if (style.position !== 'fixed' || style.display === 'none') return 0;
+  const mapHeight = map.getSize().y;
+  const covered = mapHeight - sheet.getBoundingClientRect().top;
+  // Tope del 60%: con la hoja subida del todo no queda franja visible que valga, y empujar el mapa
+  // hasta el borde solo lo dejaría igual de tapado pero además descolocado al bajar la hoja.
+  return Math.max(0, Math.min(covered, mapHeight * 0.6));
+}
+
+// Lo último que la app pidió enseñar. Guardarlo permite recolocarlo cuando cambia lo que tapa la
+// hoja (subirla, bajarla, ir a la pestaña de mapa): si no, el parque se quedaba encuadrado para la
+// hoja de antes y, a pantalla completa, ocupaba la mitad de arriba dejando media pantalla de mar.
+let framed = null;
+
+// ¿Ha tocado el usuario el mapa desde el último encuadre? Se mira el gesto en bruto sobre el
+// contenedor y no los eventos de Leaflet a propósito: sus `movestart`/`zoomstart` los dispara
+// también la propia app (setView, invalidateSize), así que no sirven para distinguir de quién fue
+// el movimiento — y en cuanto el mapa es del usuario, la app no vuelve a moverlo sola.
+let userMovedMap = false;
+function markUserMove() { userMovedMap = true; }
+['pointerdown', 'wheel'].forEach(type =>
+  map.getContainer().addEventListener(type, markUserMove, { passive: true }));
+
+function applyFrame(options) {
+  const cover = sheetCoverPx();
+  let center = framed.latlng;
+  if (cover > 4) {
+    // Bajar el centro medio alto de hoja sube el punto la misma distancia sobre la pantalla.
+    center = map.unproject(map.project(center, framed.zoom).add([0, cover / 2]), framed.zoom);
+  }
+  map.setView(center, framed.zoom, options);
+}
+
+// Centra `latlng` en la franja de mapa que se ve, no en el centro del contenedor.
+export function focusOn(latlng, zoom = null, options = {}) {
+  framed = { latlng: L.latLng(latlng), zoom: zoom == null ? map.getZoom() : zoom };
+  userMovedMap = false;
+  applyFrame(options);
+}
+
+// Igual que fitBounds, pero reservando la banda inferior que ocupa la hoja.
+export function fitOn(bounds, options = {}) {
+  const cover = sheetCoverPx();
+  map.fitBounds(bounds, cover > 4 ? { ...options, paddingBottomRight: L.point(0, cover) } : options);
+}
+
+// Recoloca el último encuadre para la altura que tenga ahora la hoja.
+export function reframe() {
+  if (!framed || userMovedMap) return;
+  applyFrame({ animate: false });
+}
+// ranger-sheet.js es un script clásico (no módulo) y necesita avisar al soltar la hoja.
+window.naturdexReframeMap = reframe;
+
 // Encuadra un hábitat en el mapa (y abre su popup si se pide). Lo usan el panel de capas y el
 // panel "cerca de ti" del explorador.
 export function focusHabitatOnMap(habitatId, openPopup = false) {
   const layer = state.habitatLayers.get(habitatId);
   if (!layer) return;
   const bounds = layer.getBounds ? layer.getBounds() : null;
-  if (bounds) map.fitBounds(bounds, { maxZoom: 15 });
+  if (bounds) fitOn(bounds, { maxZoom: 15 });
   if (openPopup && layer.openPopup) layer.openPopup();
 }
 
@@ -442,7 +507,7 @@ export function placeUserMarker(lat, lng, accuracy) {
     state.userAccuracyCircle = L.circle(latlng, {
       radius: accuracy || 30, color: '#1f6f8b', weight: 1, fillColor: '#1f6f8b', fillOpacity: 0.08, interactive: false
     }).addTo(map);
-    map.setView(latlng, 15, { animate: true });
+    focusOn(latlng, 15, { animate: true });
   } else {
     state.userMarker.setLatLng(latlng);
     state.userAccuracyCircle.setLatLng(latlng).setRadius(accuracy || 30);

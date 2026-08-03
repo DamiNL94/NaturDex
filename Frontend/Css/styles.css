@@ -265,6 +265,12 @@
 
 /* La cabecera del catálogo (título + nº de resultados) se queda fija al hacer scroll la lista */
 .species-panel .section-title{position:sticky;top:0;z-index:2;background:var(--panel)}
+/* Y cabe en UNA línea: los nombres largos de hábitat ("Acantilados mediterráneos con Limonium")
+   partían el título en dos y empujaban el recuento a una tercera, robándole a la lista ~50px de
+   alto en la columna estrecha. El recuento no se parte nunca; el que cede es el título. */
+.section-title{align-items:center}
+.section-title h2{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.section-title span{flex:0 0 auto;white-space:nowrap}
 
 /* Móvil: título algo mayor para jerarquía */
 @media(max-width:900px){
@@ -389,6 +395,11 @@
    se les quita el estilo de botón nativo manteniendo el aspecto previo. */
 .catalog-crumb .crumb-label{border:0;background:transparent;padding:4px 0;color:var(--muted);font-size:.8rem;font-weight:700;cursor:pointer;text-align:left}
 .nearby-list button.nearby-item{width:100%;font:inherit;color:inherit;text-align:left}
+/* La miga se lee de un vistazo o no se lee. En una columna estrecha (o en la hoja móvil) el nombre
+   del hábitat se partía en dos líneas y empujaba a «← Hábitats» a otras dos, con dos textos
+   entrelazados justo encima de la lista. El botón de vuelta no se parte y el nombre se trunca. */
+.catalog-crumb #backToHabitats{flex:0 0 auto;white-space:nowrap}
+.catalog-crumb .crumb-label{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
 /* 2.3.3 / animaciones: quien pide menos movimiento en su sistema, lo recibe. */
 @media (prefers-reduced-motion: reduce){
@@ -576,7 +587,9 @@ p.achievement-progress-label{margin:8px 0 0}
 @media(max-width:640px){
   /* En móvil, el cartel entra desde abajo (mismo patrón que el bottom-sheet de la ficha), no desde
      la esquina superior: así se siente nativo y no tapa la nav inferior al aparecer. */
-  .achievement-toast-region{top:auto;bottom:calc(70px + env(safe-area-inset-bottom));left:12px;right:12px;align-items:stretch}
+  /* Justo por encima de la nav inferior, midiéndola de verdad (--mnav-h) en vez de con un 70px a
+     ojo: con la nav de la capa ranger (52px) el aviso se montaba sobre ella. */
+  .achievement-toast-region{top:auto;bottom:calc(var(--mnav-h,58px) + 12px + env(safe-area-inset-bottom));left:12px;right:12px;align-items:stretch}
   .achievement-toast{width:100%;transform:translateY(24px) scale(.98)}
   .achievement-toast.in{transform:translateY(0) scale(1)}
   .achievement-toast.out{transform:translateY(16px) scale(.98)}

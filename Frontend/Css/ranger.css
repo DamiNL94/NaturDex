@@ -416,17 +416,55 @@ select{font-family:var(--font-ui);font-size:.92rem}
    hub. Todo se resuelve con la estructura y el estado que ya existen (body[data-mtab], .sheet-open),
    sin tocar app.js: Js/ranger-sheet.js solo añade el gesto de subir/bajar la hoja. */
 @media(max-width:900px){
-  :root{--sheet-peek:58dvh}
+  /* Alto de la hoja en su posición de partida y alto real de la nav inferior (la de ranger mide
+     52px: 44 de botón + 4 y 4 de aire). Van juntos porque entre los dos reparten la pantalla. */
+  :root{--sheet-peek:62dvh;--mnav-h:52px}
+  /* Franja de mapa que queda a la vista por encima de la hoja, en su altura de partida. */
+  :root{--map-peek:calc(100dvh - var(--sheet-peek))}
 
-  /* Mapa: siempre presente, a pantalla completa, por debajo de todo lo demás */
+  /* --- Orden de apilamiento de la pantalla del parque -------------------------------------------
+       —    #map ............... fondo permanente (sus capas y popups van contenidos en el pane
+                                 principal de Leaflet, en el nivel 400)
+       450  atrezo del mapa .... modo explorador, «cerca de ti», aviso de proximidad
+       470  controles Leaflet .. zoom, atribución y el panel de «Capas» (layers.js lo monta como
+                                 control nativo, ver más abajo)
+       700  .sidebar ........... hoja-hub: catálogo / invasoras / progreso
+       800  .mobile-nav ........ nav inferior
+       850  .sheet-scrim ....... velo de la ficha
+       900  .detail-dock ....... ficha de especie / hábitat / invasora
+
+     .map-stage NO puede ser position:fixed aquí: un elemento fijo crea contexto de apilamiento y
+     encierra dentro a sus hijos, y el velo y la ficha SON hijos suyos (viven dentro de .map-stage
+     desde que la ficha era la columna derecha del escritorio). Con la hoja del catálogo en 700 y
+     la nav en 800, la ficha —que se cree en 900— quedaba atrapada en el nivel 0 del mapa: al
+     tocar una tarjeta del catálogo, la ficha de la especie se abría POR DEBAJO del listado del
+     hábitat y de la nav, entremezclada con ellos, y el velo solo atenuaba el mapa. Anclándola con
+     position:absolute a #screen-park (que ya mide exactamente el viewport) no se crea ese contexto
+     y cada capa vale lo que dice. */
+  #screen-park{position:relative}
+  .map-stage,
   body[data-mtab="catalog"] .map-stage,
   body[data-mtab="progress"] .map-stage,
   body[data-mtab="invasoras"] .map-stage{
-    position:fixed;inset:0;z-index:auto;visibility:visible;pointer-events:auto}
-  .map-stage{position:fixed;inset:0}
+    position:absolute;inset:0;z-index:auto;visibility:visible;pointer-events:auto}
+  /* Los controles nativos de Leaflet vienen en z-index 1000, un número que no significa nada
+     dentro de esta pantalla y que los ponía por encima de la hoja, de la nav y de la ficha. Se les
+     da su sitio en la escala de aquí: por encima del atrezo del mapa (para que el panel de
+     «Capas» no salga por debajo del botón del explorador) y por debajo de la hoja. */
+  .leaflet-top,.leaflet-bottom{z-index:470}
   /* Los controles del mapa se quedan en la franja visible por encima de la hoja */
   .explorer-toggle{top:calc(12px + env(safe-area-inset-top));left:12px}
   .layers-control{margin:calc(12px + env(safe-area-inset-top)) 12px 0 0 !important}
+  /* Los dos paneles que cuelgan de la franja de mapa («Capas» y «Cerca de ti») se quedan dentro de
+     ella: con su alto de escritorio (52-64vh) la mitad de abajo caía detrás de la hoja, y lo que
+     quedaba escondido era justo el final de la lista de capas. Ahora caben enteros y hacen scroll
+     dentro de sí mismos. */
+  .nearby-panel{top:calc(62px + env(safe-area-inset-top))}
+  .nearby-panel,.layers-panel{
+    max-height:calc(var(--map-peek) - 76px - env(safe-area-inset-top))}
+  /* Zoom y atribución de Leaflet: van pegados al borde inferior del contenedor, que a pantalla
+     completa es justo donde está la nav. Se suben por encima de ella. */
+  .leaflet-bottom{bottom:calc(var(--mnav-h) + env(safe-area-inset-bottom));z-index:470}
 
   /* Hoja-hub: la barra lateral sube desde abajo sobre el mapa */
   .sidebar{position:fixed;left:0;right:0;bottom:0;top:auto;height:var(--sheet-peek);z-index:700;
@@ -434,17 +472,19 @@ select{font-family:var(--font-ui);font-size:.92rem}
     border-radius:14px 14px 0 0;box-shadow:0 -14px 40px rgba(20,19,16,.28);
     padding-bottom:calc(var(--mnav-h) + env(safe-area-inset-bottom));
     transition:height .28s ease;overflow-y:auto;overscroll-behavior:contain}
-  body.park-sheet-full .sidebar{height:calc(100dvh - 52px)}
-  body.park-sheet-low .sidebar{height:34dvh}
+  body.park-sheet-full .sidebar{height:calc(100dvh - 40px)}
+  body.park-sheet-low .sidebar{height:30dvh}
   body[data-mtab="map"] .sidebar{display:none}
-  /* La hoja no debe tapar el mapa cuando la ficha de detalle está abierta encima */
-  body.sheet-open .sidebar{height:34dvh}
+  /* La hoja NO cambia de altura al abrir la ficha. Antes se recogía a 34dvh «para no tapar el
+     mapa», pero la ficha se abre a pantalla casi completa con su velo delante: lo único que se
+     veía de aquel encogimiento era el catálogo reajustándose entero detrás del velo cada vez que
+     se tocaba una tarjeta, y de nuevo al cerrarla. Quieta, el fondo no se mueve. */
 
   /* Asa de la hoja (la pinta index.html: <div class="park-sheet-grip">) */
   /* flex:0 0 auto es imprescindible: .sidebar es un flex column cuyo contenido desborda, y sin
      esto el asa se comprimía a la altura de su barrita (7px) y dejaba de ser pulsable. */
   .park-sheet-grip{position:sticky;top:0;z-index:3;flex:0 0 auto;display:flex;align-items:center;
-    justify-content:center;height:30px;min-height:30px;background:var(--panel);border:0;width:100%;
+    justify-content:center;height:24px;min-height:24px;background:var(--panel);border:0;width:100%;
     cursor:grab;touch-action:none;border-radius:14px 14px 0 0}
   .park-sheet-grip::after{content:"";position:absolute;left:0;right:0;top:-4px;height:44px}
   .park-sheet-grip::before{content:"";width:46px;height:5px;border-radius:999px;
@@ -452,17 +492,18 @@ select{font-family:var(--font-ui);font-size:.92rem}
   body[data-mtab="map"] .park-sheet-grip{display:none}
 
   /* La cabecera del parque, dentro de la hoja, es el cartel verde. Se compacta a lo imprescindible
-     (cartel + cifras + progreso) para que la lista del catálogo asome ya con la hoja en su altura
-     media; el resto —presencia verificada y datos sin conexión— aparece al subir la hoja del todo. */
+     (cartel + progreso) para que la lista del catálogo asome ya con la hoja en su altura media; el
+     resto —cifras, presencia verificada y datos sin conexión— aparece al subir la hoja del todo. */
   .park-nav{padding:2px 16px 0}
-  .park-summary{flex:0 0 auto;padding:8px 16px 10px;border-bottom:1px solid var(--line)}
-  .park-sign{padding:10px 12px}
-  #parkTitle{margin:0;font-size:1.2rem}
+  .park-summary{flex:0 0 auto;padding:6px 16px 8px;border-bottom:1px solid var(--line)}
+  .park-sign{padding:7px 12px}
+  #parkTitle{margin:0;font-size:1.05rem;line-height:1.2}
   #parkSummary{display:none}
   .summary-grid{gap:6px;margin-top:8px;grid-template-columns:repeat(3,1fr)}
   .summary-grid div{padding:6px 8px}
   .summary-grid strong{font-size:.92rem}
-  .progress-wrap{margin-top:8px}
+  .progress-wrap{margin-top:6px}
+  .progress-label{margin-top:4px}
   /* En la altura media de la hoja solo se ve el cartel y el progreso: cifras, presencia, datos sin
      conexión y buscador son consulta, no el punto de partida, y aparecen al subir la hoja del todo.
      Sin esto la hoja abría con ~400px de cabecera y ni una ficha del catálogo a la vista. */
@@ -471,7 +512,24 @@ select{font-family:var(--font-ui);font-size:.92rem}
   body.park-sheet-full .presence-bar:not([hidden]){display:flex}
   body.park-sheet-full .offline-bar{display:flex}
   body.park-sheet-full .controls:not([hidden]){display:block;padding:10px 16px}
+  /* Con la hoja subida del todo hay sitio de sobra: el cartel recupera su tamaño de rótulo y su
+     categoría. Compacto solo mientras la hoja está a media altura, que es donde el sitio escasea. */
+  .park-summary .park-sign .eyebrow{display:none}
+  body.park-sheet-full .park-summary .park-sign .eyebrow{display:block}
+  body.park-sheet-full .park-sign{padding:10px 12px}
+  body.park-sheet-full #parkTitle{font-size:1.35rem}
   .species-panel{flex:0 0 auto;padding:10px 16px 16px}
+
+  /* Miga de pan del catálogo: se queda pegada justo bajo el asa. Al deslizar la hoja, la cabecera
+     del parque se va hacia arriba pero el hábitat en el que estás y su salida «← Hábitats» siguen
+     ahí: era lo que se perdía nada más empezar a bajar por la lista de especies. */
+  .catalog-crumb{position:sticky;top:24px;z-index:2;padding:8px 16px;
+    background:var(--panel);border-bottom:1px solid var(--line)}
+  /* Y como la miga ya dice en qué hábitat estás, el título de la lista repetía el mismo nombre dos
+     dedos más abajo. Dentro de un hábitat se queda solo el recuento; en la lista de hábitats (sin
+     miga) el título «Hábitats» sigue estando. */
+  .catalog-crumb:not([hidden]) ~ .species-panel .section-title{justify-content:flex-start}
+  .catalog-crumb:not([hidden]) ~ .species-panel .section-title h2{display:none}
 
   /* Nav inferior: cartel oscuro, no barra blanca de app genérica */
   .mobile-nav{z-index:800;background:var(--bark);border-top:0;

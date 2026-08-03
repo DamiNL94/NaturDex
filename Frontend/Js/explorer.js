@@ -17,7 +17,7 @@ import { state, isHabitatComplete } from './state.js';
 import {
   explorerToggle, nearbyPanel, nearbyStatus, nearbyList, nearbyClose, explorerHint
 } from './dom.js';
-import { map, placeUserMarker, highlightHabitat } from './map.js';
+import { map, placeUserMarker, highlightHabitat, focusOn, fitOn } from './map.js';
 
 // Umbrales de proximidad. El de POI coincide con el "¡Estás aquí!" del panel cercano; el círculo
 // de hábitat es el mismo radio que dibuja map.js cuando un hábitat no tiene polígono todavía.
@@ -51,7 +51,7 @@ const FOLLOW_ZOOM = 16;
 function centerOn(lat, lng) {
   const zoom = followZoomed ? map.getZoom() : Math.max(map.getZoom(), FOLLOW_ZOOM);
   followZoomed = true;
-  map.setView([lat, lng], zoom, { animate: false });
+  focusOn([lat, lng], zoom, { animate: false });
 }
 
 function setFollow(on) {
@@ -335,12 +335,12 @@ export function initExplorer(h) {
     if (followActive) setFollow(false);
     if (kind === 'poi') {
       const marker = state.poiMarkers.get(id);
-      if (marker) { map.setView(marker.getLatLng(), 16, { animate: true }); marker.openPopup(); }
+      if (marker) { focusOn(marker.getLatLng(), 16, { animate: true }); marker.openPopup(); }
     } else if (kind === 'habitat') {
       const layer = state.habitatLayers.get(id);
       if (layer) {
         const bounds = layer.getBounds ? layer.getBounds() : null;
-        if (bounds) map.fitBounds(bounds, { maxZoom: 15 });
+        if (bounds) fitOn(bounds, { maxZoom: 15 });
         if (layer.openPopup) layer.openPopup();
       }
     }
