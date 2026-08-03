@@ -34,7 +34,8 @@ import {
 } from './render.js';
 import {
   map, setMapHandlers, ensureMapSized, soloHabitat, setupParkBaseLayer, applyBaseChoice, focusOn,
-  renderMarkers, renderPoiMarkers, renderTrails, renderProtectedAreas, renderHabitatZones
+  renderMarkers, renderPoiMarkers, renderTrails, renderProtectedAreas, renderHabitatZones,
+  playEntrySequence
 } from './map.js';
 import { initExplorer } from './explorer.js';
 import { initLayersPanel, refreshLayersPanel } from './layers.js';
@@ -636,6 +637,9 @@ async function startParkExperience(slug, user) {
   renderHabitatZones();
   renderMarkers();
   renderPoiMarkers();
+  // Ya está todo pintado: los planos entran escalonados de abajo arriba para que el mapa se lea
+  // como una secuencia y no como cinco capas de golpe (ver playEntrySequence en map.js).
+  playEntrySequence();
   // setView reinicia la vista al catálogo (o a su aviso, si el espacio es de ficha base) al entrar
   // a un parque; así cambiar de parque nunca deja abierta una pestaña que no aplica al nuevo.
   setView('catalog');
