@@ -597,11 +597,16 @@ export function renderHabitatZones() {
   (state.data.habitats || []).forEach(habitat => {
     const complete = isHabitatComplete(habitat);
     const geom = state.geo && state.geo.habitatGeom ? state.geo.habitatGeom[habitat.id] : null;
-    // El borde sigue siendo el color propio del hábitat (el mismo que su punto en el panel de
-    // capas, que es la leyenda); lo que cambia es el relleno, que pasa a ser la trama de su familia.
+    // Borde y trama comparten la tinta de la familia: el plano queda de una pieza y los hábitats se
+    // distinguen por el DIBUJO, no por el tono. El color propio de cada hábitat (verdes, rosas y
+    // ocres del catálogo) no desaparece: sigue siendo su punto en el panel de capas, que es la
+    // leyenda, y el relleno de respaldo si el navegador no pintase la trama. El oro del hábitat
+    // completo manda sobre todo lo demás: es un estado, no una identidad.
+    const texture = HABITAT_TEXTURES[habitatFamily(habitat)];
     const baseStyle = {
-      color: complete ? '#d89b30' : (habitat.color || '#2f6f4e'),
+      color: complete ? '#d89b30' : (texture ? texture.ink : (habitat.color || '#2f6f4e')),
       weight: complete ? 3 : 2,
+      opacity: complete ? 1 : 0.75, // la tinta es oscura: a plena opacidad el borde pesaba más que su trama
       fillColor: habitat.color || '#2f6f4e',
       fillOpacity: 0.16,
       pane: PANES.habitats
@@ -618,7 +623,7 @@ export function renderHabitatZones() {
     }
     // Se guarda el estilo base para poder deshacer el resaltado "estás pisando este hábitat".
     layer._naturdexBaseStyle = baseStyle;
-    layer._naturdexTexture = HABITAT_TEXTURES[habitatFamily(habitat)];
+    layer._naturdexTexture = texture;
     bindHabitatPopup(layer, habitat);
     // Desde 'add' y no tras el addTo: Leaflet crea un <path> nuevo cada vez que la capa entra al
     // mapa, así que la trama tiene que volver a ponerse también cuando se reactiva desde el panel.
