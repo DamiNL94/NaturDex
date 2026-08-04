@@ -490,20 +490,42 @@ export const HABITAT_TEXTURES = {
   saladar:  { pattern: 'hatchDash', ink: '#2E6D8E', bgOpacity: .05 }
 };
 
+// Que dos hábitats de la misma familia compartan trama es correcto —son la misma clase de terreno—,
+// pero un parque trae hasta cuatro matorrales o cuatro pastizales distintos y con eso media hoja
+// quedaba dibujada exactamente igual. Se separan por el PASO de la trama, nunca por el color: mismo
+// dibujo y misma tinta, más suelto o más apretado. Se lee "otra unidad de lo mismo", que es justo lo
+// que son, y la familia se sigue reconociendo de un vistazo. Con más hermanos que pasos el ciclo se
+// repite: para entonces son polígonos ya lejanos entre sí y el borde basta para separarlos.
+const TEXTURE_SCALES = [1, 1.5, 2.1];
+
 // La tesela de cada trama. Las diagonales se dibujan con las dos esquinas repetidas (los tramos
 // fuera de la tesela) para que el rayado sea continuo al repetirse y no queden escalones.
+// `s` es el paso de la trama (ver TEXTURE_SCALES): llega hasta aquí solo para adelgazar el trazo,
+// porque quien estira la tesela es el patternTransform del <pattern>.
+// Las opacidades son bajas a propósito: los hábitats SE SOLAPAN (en Sierra Espuña, trece polígonos
+// cubriendo el parque entero), así que sobre buena parte de la hoja no hay una trama sino dos o tres
+// sumadas. A esta densidad dos capas siguen leyéndose como dos tramas; al 55 % se apelmazaban en una
+// mancha oscura donde ya no se distinguía ninguna.
 const PATTERN_TILES = {
-  hatch45:    { w: 8,  h: 8,  marks: ink => mark('M0 8 L8 0 M-1 1 L1 -1 M7 9 L9 7', ink, 1, .55) },
-  'hatch-45': { w: 8,  h: 8,  marks: ink => mark('M0 0 L8 8 M-1 7 L1 9 M7 -1 L9 1', ink, 1, .55) },
-  grid:       { w: 9,  h: 9,  marks: ink => mark('M0 0 L0 9 M0 0 L9 0', ink, .8, .45) },
-  dots:       { w: 7,  h: 7,  marks: ink => '<circle cx="3.5" cy="3.5" r="1.1" fill="' + ink + '" fill-opacity=".5"/>' },
-  waveWet:    { w: 12, h: 8,  marks: ink => mark('M0 6 q3 -3 6 0 t6 0', ink, 1, .55) },
-  waveDry:    { w: 12, h: 8,  marks: ink => mark('M0 6 q3 -3 6 0 t6 0', ink, 1, .45, '3 2.5') },
-  hatchDash:  { w: 8,  h: 8,  marks: ink => mark('M0 8 L8 0 M-1 1 L1 -1 M7 9 L9 7', ink, 1, .5, '2.5 2.5') }
+  hatch45:    { w: 8,  h: 8,  marks: (ink, s) => mark('M0 8 L8 0 M-1 1 L1 -1 M7 9 L9 7', ink, 1, .38, null, s) },
+  'hatch-45': { w: 8,  h: 8,  marks: (ink, s) => mark('M0 0 L8 8 M-1 7 L1 9 M7 -1 L9 1', ink, 1, .38, null, s) },
+  grid:       { w: 9,  h: 9,  marks: (ink, s) => mark('M0 0 L0 9 M0 0 L9 0', ink, .8, .30, null, s) },
+  dots:       { w: 7,  h: 7,  marks: (ink, s) => '<circle cx="3.5" cy="3.5" r="' + thin(1.1, s) + '" fill="' + ink + '" fill-opacity=".36"/>' },
+  waveWet:    { w: 12, h: 8,  marks: (ink, s) => mark('M0 6 q3 -3 6 0 t6 0', ink, 1, .40, null, s) },
+  waveDry:    { w: 12, h: 8,  marks: (ink, s) => mark('M0 6 q3 -3 6 0 t6 0', ink, 1, .34, '3 2.5', s) },
+  hatchDash:  { w: 8,  h: 8,  marks: (ink, s) => mark('M0 8 L8 0 M-1 1 L1 -1 M7 9 L9 7', ink, 1, .36, '2.5 2.5', s) }
 };
 
-function mark(d, ink, width, opacity, dash) {
-  return '<path d="' + d + '" fill="none" stroke="' + ink + '" stroke-width="' + width + '"'
+// El patternTransform agranda TODO lo de la tesela, trazo incluido: a paso 2,1 una línea de 1 px
+// saldría de 2,1 px y la variante ancha pesaría el doble que la estrecha en vez de leerse como la
+// misma trama más suelta. Se dibuja dividida por la raíz del paso, así que en pantalla crece con
+// √paso: lo justo para que no se afile al separarse, sin engordar.
+function thin(width, scale) {
+  return +(width / Math.sqrt(scale || 1)).toFixed(2);
+}
+
+function mark(d, ink, width, opacity, dash, scale) {
+  return '<path d="' + d + '" fill="none" stroke="' + ink + '" stroke-width="' + thin(width, scale) + '"'
     + ' stroke-opacity="' + opacity + '" stroke-linecap="round"'
     + (dash ? ' stroke-dasharray="' + dash + '"' : '') + '/>';
 }
@@ -544,7 +566,8 @@ function ensurePattern(path, texture) {
   const tile = PATTERN_TILES[texture.pattern];
   const defs = tile && svgDefs(path);
   if (!defs) return null;
-  const id = 'tx-' + texture.pattern;
+  const scale = texture.scale || 1;
+  const id = 'tx-' + texture.pattern + (scale === 1 ? '' : '-' + String(scale).replace('.', '_'));
   if (!defs.querySelector('[id="' + id + '"]')) {
     const pattern = document.createElementNS(SVG_NS, 'pattern');
     pattern.setAttribute('id', id);
@@ -553,8 +576,11 @@ function ensurePattern(path, texture) {
     // userSpaceOnUse y no objectBoundingBox: la trama es simbología, no textura del terreno, y su
     // paso tiene que medir lo mismo en pantalla en un hábitat de 3 ha y en uno de 3.000.
     pattern.setAttribute('patternUnits', 'userSpaceOnUse');
+    // El paso se aplica como transformación y no reescribiendo la tesela: la geometría del dibujo
+    // se escribe UNA vez, en su tamaño natural, y las variantes son la misma tesela estirada.
+    if (scale !== 1) pattern.setAttribute('patternTransform', 'scale(' + scale + ')');
     pattern.innerHTML = '<rect width="' + tile.w + '" height="' + tile.h + '" fill="' + texture.ink
-      + '" fill-opacity="' + texture.bgOpacity + '"/>' + tile.marks(texture.ink);
+      + '" fill-opacity="' + texture.bgOpacity + '"/>' + tile.marks(texture.ink, scale);
     defs.appendChild(pattern);
   }
   return id;
@@ -594,33 +620,39 @@ function bindHabitatPopup(layer, habitat) {
 export function renderHabitatZones() {
   state.habitatGroup.clearLayers();
   state.habitatLayers.clear();
+  // Cuántos hábitats de cada familia llevamos pintados: da el paso de trama del siguiente. Se
+  // reparte por orden de catálogo (estable entre renders) y solo cuentan los que llegan a pintarse.
+  const familyCount = new Map();
   (state.data.habitats || []).forEach(habitat => {
     const complete = isHabitatComplete(habitat);
     const geom = state.geo && state.geo.habitatGeom ? state.geo.habitatGeom[habitat.id] : null;
+    if (!geom && !habitat.coordinates) return; // ni polígono ni punto: no hay nada que dibujar
+    const family = habitatFamily(habitat);
+    const nth = familyCount.get(family) || 0;
+    familyCount.set(family, nth + 1);
+    const base = HABITAT_TEXTURES[family];
+    const texture = base ? { ...base, scale: TEXTURE_SCALES[nth % TEXTURE_SCALES.length] } : null;
     // Borde y trama comparten la tinta de la familia: el plano queda de una pieza y los hábitats se
     // distinguen por el DIBUJO, no por el tono. El color propio de cada hábitat (verdes, rosas y
     // ocres del catálogo) no desaparece: sigue siendo su punto en el panel de capas, que es la
     // leyenda, y el relleno de respaldo si el navegador no pintase la trama. El oro del hábitat
     // completo manda sobre todo lo demás: es un estado, no una identidad.
-    const texture = HABITAT_TEXTURES[habitatFamily(habitat)];
     const baseStyle = {
       color: complete ? '#d89b30' : (texture ? texture.ink : (habitat.color || '#2f6f4e')),
-      weight: complete ? 3 : 2,
-      opacity: complete ? 1 : 0.75, // la tinta es oscura: a plena opacidad el borde pesaba más que su trama
+      // Trazo fino y a media opacidad, por lo mismo que las tramas: un parque de trece hábitats
+      // solapados son trece contornos, y a peso completo el mapa se convertía en una maraña de
+      // líneas. El hábitat completo sí va grueso y opaco: ahí el borde ES la noticia.
+      weight: complete ? 3 : 1.5,
+      opacity: complete ? 1 : 0.65,
       fillColor: habitat.color || '#2f6f4e',
       fillOpacity: 0.16,
       pane: PANES.habitats
     };
-    let layer;
-    if (geom) {
-      // Geometría real (polígono) servida desde el habitats.geojson del parque (ver manifiesto).
-      layer = L.geoJSON(geom, { style: baseStyle });
-    } else if (habitat.coordinates) {
-      // Sin polígono todavía: círculo aproximado en la posición representativa del hábitat.
-      layer = L.circle(habitat.coordinates, { radius: 420, ...baseStyle });
-    } else {
-      return;
-    }
+    // Con geometría real, el polígono del habitats.geojson del parque (ver manifiesto); sin ella
+    // todavía, un círculo aproximado en la posición representativa del hábitat.
+    const layer = geom
+      ? L.geoJSON(geom, { style: baseStyle })
+      : L.circle(habitat.coordinates, { radius: 420, ...baseStyle });
     // Se guarda el estilo base para poder deshacer el resaltado "estás pisando este hábitat".
     layer._naturdexBaseStyle = baseStyle;
     layer._naturdexTexture = texture;
