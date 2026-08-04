@@ -13,7 +13,7 @@
       37.60257,
       -0.78109
     ],
-    "summary": "Parque Regional de la Región de Murcia, con una superficie oficial de 2466,3 ha en los términos municipales de Cartagena y La Unión. Solapa con los espacios de la Red Natura 2000 ZEPA ES0000260 «Mar Menor» y LIC/ZEC ES6200001 «Calblanque, Monte de las Cenizas y Peña del Águila».",
+    "summary": "Playas de arena dorada y dunas vivas al pie de sierras mineras, con calas entre acantilados y las salinas del Rasall tras el cordón dunar.",
     "boundaryNote": "Límite oficial servido en geo/parque.geojson, descargado del geoportal del IMIDA/CARM (servicio PROYECTOS/OISMA, capa de Parque Regional, registros con Caracter «Firme»), identificador interno ENP000005. Código ENP oficial ES620011, superficie oficial 2466,3 ha según el Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Geometría en WGS84, sin generalizar (4832 vértices, superficie resultante 2476,2 ha, desviación del 0,40 %). Sustituye a la delimitación de la capa ENP nacional del MITECO, que es un producto generalizado. El IMIDA publica 2 delimitaciones firmes de este espacio; se ha escogido la de mayor detalle (4901 vértices, 2472,3 ha) frente a 2077 vértices / 2466,3 ha. Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM. Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico» (código y superficie oficiales) e IMIDA/CARM (geometría)."
   },
   "habitats": [],

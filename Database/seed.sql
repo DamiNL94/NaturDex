@@ -14,7 +14,7 @@ SET NAMES utf8mb4;
 USE naturadex;
 
 INSERT INTO parks (slug, name, category, region, province, municipality, description, coastline_km, latitude, longitude, status)
-VALUES ('cabo-cope-puntas-calnegre','Cabo Cope y Puntas de Calnegre','Parque Regional','Región de Murcia','Murcia','Águilas y Lorca','Espacio litoral protegido con calas, acantilados, matorral semiárido y praderas marinas. Este parque es el piloto de NaturDex.',17.00,37.501600,-1.449250,'available')
+VALUES ('cabo-cope-puntas-calnegre','Cabo Cope y Puntas de Calnegre','Parque Regional','Región de Murcia','Murcia','Águilas y Lorca','Diecisiete kilómetros de litoral casi virgen entre Águilas y Mazarrón: calas encajadas, acantilados a plomo sobre el mar y matorral semiárido.',17.00,37.501600,-1.449250,'available')
 ON DUPLICATE KEY UPDATE name = VALUES(name), category = VALUES(category), region = VALUES(region), province = VALUES(province), municipality = VALUES(municipality), description = VALUES(description), coastline_km = VALUES(coastline_km), status = VALUES(status), updated_at = CURRENT_TIMESTAMP;
 
 -- Paisaje Protegido de Cuatro Calas (Águilas). Declarado por la Ley 4/1992 y LIC/ZEC de la Red
@@ -24,7 +24,7 @@ ON DUPLICATE KEY UPDATE name = VALUES(name), category = VALUES(category), region
 -- Las coordenadas son un centro aproximado del espacio (para encuadrar el mini-mapa del panel);
 -- ajústalo desde el selector de coordenadas.
 INSERT INTO parks (slug, name, category, region, province, municipality, description, area_hectares, coastline_km, latitude, longitude, status)
-VALUES ('cuatro-calas','Cuatro Calas','Paisaje Protegido','Región de Murcia','Murcia','Águilas','Paisaje Protegido del litoral suroccidental de Águilas: cuatro calas vírgenes (Calarreona, La Higuerica, La Carolina y Los Cocedores) con ramblas y lomas semidesérticas, en el límite con la provincia de Almería.',222.00,NULL,37.382500,-1.632000,'basic')
+VALUES ('cuatro-calas','Cuatro Calas','Paisaje Protegido','Región de Murcia','Murcia','Águilas','Cuatro calas vírgenes al suroeste de Águilas, con ramblas, lomas semidesérticas y arenales hasta el límite con Almería.',222.00,NULL,37.382500,-1.632000,'basic')
 ON DUPLICATE KEY UPDATE name = VALUES(name), category = VALUES(category), region = VALUES(region), province = VALUES(province), municipality = VALUES(municipality), description = VALUES(description), area_hectares = VALUES(area_hectares), latitude = VALUES(latitude), longitude = VALUES(longitude), status = VALUES(status), updated_at = CURRENT_TIMESTAMP;
 
 -- Hábitats de interés comunitario (Directiva 92/43/CEE) presentes en el Parque Regional Calnegre

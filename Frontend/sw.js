@@ -12,7 +12,10 @@
 // Subir esta versión invalida la caché del armazón. Hay que hacerlo SIEMPRE que cambie la lista de
 // SHELL_ASSETS: un módulo nuevo que no esté precacheado deja la app rota sin cobertura, y la
 // estrategia network-first no lo salva porque justo entonces no hay red de la que tirar.
-var VERSION = 'v53';
+// (v54 y no v53 porque `main` y esta rama subieron a v53 por separado, cada una con un armazón
+// distinto: dejar las dos con el mismo número habría hecho que un cliente con una ya cacheada no
+// se actualizara a la otra.)
+var VERSION = 'v54';
 var RUNTIME_CACHE = 'naturdex-runtime-' + VERSION;
 
 // Armazón mínimo que se intenta precachear en la instalación (best-effort).

@@ -204,8 +204,10 @@ select{font-family:var(--font-ui);font-size:.92rem}
   border-radius:var(--radius-lg);color:#FBF7EE;padding:12px 14px}
 /* Dentro del cartel manda el cartel: styles.css pinta `.park-summary p` en gris de metadato y eso
    sobre el verde no se lee. El rótulo va en crema y la categoría en latón, como en la portada. */
+/* Lleva tres datos («NaturDex piloto · Parque Regional · 2666 ha»), así que el interletrado de
+   cartel baja de .2em a .1em: con el original la línea se partía en dos en la columna estrecha. */
 .park-summary .park-sign .eyebrow{margin:0 0 6px;color:var(--brass-ink);font-size:.66rem;
-  letter-spacing:.2em}
+  letter-spacing:.1em}
 .park-sign #parkTitle{margin:0;color:#FBF7EE}
 #parkTitle{font-family:var(--font-display)}
 .summary-grid div{background:var(--surface);border-color:var(--line)}
@@ -491,9 +493,14 @@ select{font-family:var(--font-ui);font-size:.92rem}
   .park-summary{flex:0 0 auto;padding:6px 16px 10px;border-bottom:1px solid var(--line)}
   .park-sign{padding:8px 12px}
   #parkTitle{margin:0;font-size:1.15rem;line-height:1.2}
-  .park-summary .park-sign .eyebrow{margin:0 0 4px}
-  #parkSummary{display:none}
-  .summary-grid{gap:6px;margin-top:8px;grid-template-columns:repeat(3,1fr)}
+  .park-summary .park-sign .eyebrow{margin:0 0 4px;font-size:.62rem;letter-spacing:.08em}
+  /* La descripción estuvo oculta en móvil mientras fue una frase administrativa que repetía lo que
+     ya decían el cartel y la ficha: ocupaba dos líneas para no contar nada. Ahora describe el sitio
+     —es lo primero que quiere saber quien acaba de entrar— y se muestra recortada a dos líneas, con
+     los márgenes de alrededor apretados para que la cabecera no crezca por ello. */
+  #parkSummary{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+    margin:6px 0 0;font-size:.78rem;line-height:1.35}
+  .summary-grid{gap:6px;margin-top:6px;grid-template-columns:repeat(3,1fr)}
   .summary-grid div{padding:6px 8px}
   .summary-grid strong{font-size:.92rem}
   .progress-wrap{margin-top:8px}

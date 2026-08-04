@@ -99,6 +99,19 @@ const AC_MARINA = new Set(['DGBBD']);
 
 const FECHA_CAPA = 'diciembre de 2025';
 const ATRIBUCION = 'Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico».';
+
+// Descripciones redactadas a mano (data/descripciones-espacios.json): son lo que el visitante lee en
+// la cabecera del parque y lo único de park.json que NO sale de una fuente oficial, así que se lee de
+// su propio fichero y una regeneración no puede pisarlo. Sin entrada para un espacio se cae en la
+// frase administrativa de siempre (figura + superficie + municipios + Natura 2000), que es la que
+// había antes para todos: un espacio nuevo nunca se queda sin texto.
+const DESCRIPCIONES = (() => {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'descripciones-espacios.json'), 'utf8')).descripciones || {};
+  } catch (e) {
+    return {};
+  }
+})();
 // Presupuesto de peso por fichero geográfico. Un móvil en 4G se descarga esto por cada espacio que
 // abre, así que la generalización sube hasta que quepa.
 const PRESUPUESTO_BYTES = 300 * 1024;
@@ -693,7 +706,11 @@ function elegirTolerancia(construir, pesar, presupuesto, avisos, etiqueta) {
     const fraseNatura = citas.length
       ? `Solapa con ${citas.length === 1 ? 'el espacio' : 'los espacios'} de la Red Natura 2000 ${frasedeLista(citas)}.`
       : `Sin solape con la Red Natura 2000 en la capa oficial de ${FECHA_CAPA}.`;
-    const summary = `${figura} de ${cfg.regionEn}, con una superficie oficial de ${numeroEs(supOficial)} ha en ${fraseMuni}. ${fraseNatura}`;
+    // La frase administrativa no se pierde cuando hay descripción a mano: figura, superficie y
+    // municipios ya salen como filas de la ficha base (render.js · renderBasicPark) y los códigos
+    // Natura 2000, además, en su propia lista. Aquí manda el texto que explica el sitio.
+    const administrativo = `${figura} de ${cfg.regionEn}, con una superficie oficial de ${numeroEs(supOficial)} ha en ${fraseMuni}. ${fraseNatura}`;
+    const summary = DESCRIPCIONES[slug] || administrativo;
 
     let boundaryNote = `Límite oficial servido en geo/parque.geojson, recortado de la capa de Espacios Naturales Protegidos del Banco de Datos de la Naturaleza (MITECO, ${FECHA_CAPA}). Código ENP oficial ${o.cod}${cdda ? ` (CDDA ${cdda})` : ''}, superficie oficial ${numeroEs(supOficial)} ha. La capa se publica proyectada en ETRS89 UTM ${cfg.huso}N (EPSG:258${cfg.huso}): la geometría se ha reproyectado a WGS84 y generalizada con tolerancia de ${parque.tol} m para uso web (superficie resultante ${numeroEs(supGeneralizada)} ha, desviación del ${numeroEs(desvio, 2)} %).`;
     // La discrepancia entre fuentes es un dato, no un problema a ocultar: si la cartografía regional

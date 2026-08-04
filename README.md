@@ -68,6 +68,7 @@ Database/            schema.sql (DDL) · seed.sql (datos) · migrations.sql (ALT
 Tools/               tooling zero-dep (salvo polygon-clipping)
   lib/                           INFRAESTRUCTURA COMPARTIDA — empieza siempre por aquí
   catalogo-nacional/             el pipeline de datos por espacio
+    data/descripciones-espacios.json   la descripción de cada espacio (texto redactado a mano)
 Docs/                documentación temática + rollout/ESTADO.md (el histórico)
 ```
 
@@ -179,7 +180,7 @@ dato; «Cómo» = la herramienta o el criterio; «Verifica» = quién lo comprue
 | `region`, `province`, `municipality` | ENP + límites municipales del CNIG | El municipio NO está en la capa ENP: sale de cruzar el centroide contra el CNIG | manual |
 | `area_hectares` | ENP | La superficie **oficial la manda el MITECO** aunque el dibujo venga del geoportal autonómico | manual |
 | `latitude`/`longitude` (`center`) | calculado | Centroide del límite | `validate` (dentro de la caja de España) |
-| `description` (`summary`) | redacción propia | 2–3 frases verificables (relieve, ecosistema dominante, rasgo singular). Cero adjetivos de folleto. Sin fuente, no se escribe | revisión humana |
+| `description` (`summary`) | redacción propia — `data/descripciones-espacios.json` | **El único texto del pipeline que no sale de una fuente oficial.** 130–150 caracteres: es lo que se lee entero en el hueco de la cabecera. Qué paisaje es y qué se ve allí; cero adjetivos de folleto. Vive en ese fichero y no en el `park.json` para que **una regeneración con `n1:build` no pueda pisarlo** | revisión humana |
 | `status` | proceso | `basic` → `available` al cerrar la Capa 3 | `validate` (rechaza valores desconocidos) |
 | `boundaryNote` | proceso | **Obligatorio**: de qué servicio salió el límite y su código ENP | `validate` (campo exigido en N1) |
 
@@ -489,6 +490,15 @@ Todo lo que sigue son decisiones de producto ya tomadas y en producción; el det
 
 **Flujo**: portada → login → mapa de España (selector agrupado por comunidad y provincia, con «ir al
 parque más cercano») → espacio. Lo pesado del espacio se carga **solo al elegirlo**.
+
+**La cabecera del espacio** responde a lo primero que se pregunta quien acaba de entrar —*qué es este
+sitio*— con tres piezas: (1) **figura y superficie oficial** («Parque Regional · 2666 ha»), tomadas de
+las propiedades del propio `geo/parque.geojson`, la misma geometría que se dibuja, así que la tienen
+los dieciséis espacios sin un campo más que mantener; (2) **la descripción** del paisaje (§4); y (3)
+**los tres recuentos de lo que se colecciona**: hábitats, especies y POIs. La tercera casilla eran los
+kilómetros de costa, un dato que ni se colecciona ni existe en un espacio de interior (salía «—» en
+trece de dieciséis). Un espacio sin puntos cargados muestra «—», no un cero: el dato está pendiente,
+no vacío.
 
 **Hábitats por grupos** (`Js/habitat-groups.js`). Un espacio trae entre 11 y 21 hábitats, y con una
 lista plana no hay forma de gestionar el solapamiento en el mapa desde un móvil en el campo. Se

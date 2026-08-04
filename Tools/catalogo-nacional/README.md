@@ -212,6 +212,7 @@ generan ficheros en `out/` para revisar antes de adoptarlos.
 | `hic-excluidos.json` | Excepciones por espacio: códigos que la cartografía recorta dentro pero que el formulario normalizado no declara |
 | `especies-universal.json` | El catálogo universal: los campos que describen a la especie, indexados por nombre científico |
 | `contenido/*.json` | Texto redactado a mano. **Manda sobre lo extraído** — cuidado con las entradas obsoletas (README raíz §7.2) |
+| `descripciones-espacios.json` | La descripción de cada espacio. **El único texto del pipeline redactado a mano**; `build-n1-espacios.js` la lee de aquí para que una regeneración no la pise |
 | `murcia-enp-municipios.json`, `senderos-fmrm-murcia.json` | Datos de apoyo de la comunidad piloto |
 
 ### Uso (ejemplo real, piloto verificado)
