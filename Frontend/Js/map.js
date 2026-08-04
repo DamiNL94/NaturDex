@@ -134,6 +134,36 @@ function preferredBase() {
 export const map = L.map('map', { zoomControl: false, layers: [preferredBase()] }).setView([37.5016, -1.44925], 12);
 L.control.zoom({ position: 'bottomright' }).addTo(map);
 
+// --- Planos del mapa (panes propios) ---------------------------------------------------------------
+// Leaflet mete por defecto TODOS los vectores en el mismo plano (overlayPane) y los apila por orden
+// de alta: según qué se renderizara antes, la trama de un hábitat acababa tapando el límite del
+// parque o un sendero. Con un pane por plano el orden deja de depender del render y pasa a ser el de
+// la lectura del mapa: tramas de hábitat al fondo, figuras de protección encima, senderos sobre
+// ellas y, arriba del todo, los puntos (POIs, especies y tu posición).
+// El pane es además la unidad de la entrada escalonada: fundir un plano es fundir su <div>.
+export const PANES = {
+  habitats: 'nd-habitats',
+  protected: 'nd-protected',
+  trails: 'nd-trails',
+  pois: 'nd-pois',
+  species: 'nd-species',
+  user: 'nd-user'
+};
+// Referencia de los z-index nativos: overlayPane 400, shadowPane 500, markerPane 600,
+// tooltipPane 650, popupPane 700. Los propios se intercalan sin pisar ninguno.
+[
+  [PANES.habitats, 410],
+  [PANES.protected, 420],
+  [PANES.trails, 430],
+  [PANES.pois, 610],
+  [PANES.species, 620],
+  [PANES.user, 640] // tu posición no la tapa ningún marcador, pero sigue por debajo de los popups
+].forEach(([name, zIndex]) => {
+  const pane = map.createPane(name);
+  pane.style.zIndex = zIndex;
+  pane.classList.add('nd-plane');
+});
+
 // --- Tocar fuera de una etiqueta la cierra --------------------------------------------------------
 // El mapa está cubierto de polígonos clicables (el límite del parque, los LIC/ZEPA, los hábitats),
 // así que "tocar fuera" de un globo abierto casi nunca caía en mapa vacío: caía en otro polígono,
@@ -248,7 +278,8 @@ state.speciesCluster = L.markerClusterGroup({
   maxClusterRadius: 50,
   showCoverageOnHover: false,
   spiderfyOnMaxZoom: true,
-  disableClusteringAtZoom: 16
+  disableClusteringAtZoom: 16,
+  clusterPane: PANES.species // los globos de racimo comparten plano con sus marcadores
 }).addTo(map);
 
 // El control de capas y la leyenda son un panel propio (layers.js): el control nativo de Leaflet
@@ -297,7 +328,7 @@ export function renderMarkers() {
     // speciesLatLng antepone el avistamiento. Solo se quedan sin marcador si tampoco hay eso.
     const latLng = speciesLatLng(species);
     if (!latLng) return;
-    const marker = L.marker(latLng, { icon: speciesDivIcon(species) });
+    const marker = L.marker(latLng, { icon: speciesDivIcon(species), pane: PANES.species });
     // Sin globo: tocar el marcador abre la ficha completa en el mismo sitio donde el usuario ya lee
     // las fichas (la columna de la derecha en escritorio, la hoja deslizante en móvil). Un globo
     // encima del mapa era un TERCER contenedor de información, con su propio cierre y su propia
@@ -321,7 +352,7 @@ export function renderPoiMarkers() {
     // a L.marker(null). Se salta: mejor que falte un marcador a que se caiga el mapa entero.
     if (!poi.coordinates) return;
     const seen = state.seenPois.has(poi.id);
-    const marker = L.marker(poi.coordinates, { icon: poiDivIcon(poi, seen) }).addTo(state.poiGroup);
+    const marker = L.marker(poi.coordinates, { icon: poiDivIcon(poi, seen), pane: PANES.pois }).addTo(state.poiGroup);
     // Igual que las especies: la ficha del punto de interés se abre donde se abren todas las fichas.
     // El globo anterior traía foto de 180 px, descripción, audioguía y botón: en un móvil ocupaba
     // casi la pantalla entera, Leaflet no conseguía encajarlo y quedaba cortado por arriba o debajo
@@ -336,11 +367,80 @@ export function renderPoiMarkers() {
   });
 }
 
+// --- Trabajo directo sobre el SVG: tramas y recortes ------------------------------------------------
+// Leaflet dibuja cada polígono como un <path> dentro del <svg> del plano que le toca, y no conoce ni
+// tramas ni recortes: hay que inyectar los <pattern>/<clipPath> en los <defs> de ESE svg y apuntar
+// el atributo del path a su id. Dos avisos que explican la forma de todo lo que sigue:
+//   · Leaflet crea un <path> NUEVO cada vez que la capa vuelve al mapa (encender un hábitat en el
+//     panel de capas), así que la trama se re-aplica desde el evento 'add' de la capa, no una vez.
+//   · setStyle() reescribe fill y fill-opacity desde las opciones, así que después de tocar el
+//     estilo (resaltado del hábitat que estás pisando) hay que volver a poner la trama.
+const SVG_NS = 'http://www.w3.org/2000/svg';
+const PAPER = '#FBF7EE'; // crema del casing: el mismo papel sobre el que se lee todo el plano
+
+/** Recorre los <path> ya montados de una capa (una geometría suelta o un grupo GeoJSON). */
+function eachPath(layer, fn) {
+  if (layer._path) fn(layer._path, layer);
+  if (layer.eachLayer) layer.eachLayer(child => eachPath(child, fn));
+}
+
+function svgDefs(path) {
+  const svg = path.ownerSVGElement;
+  if (!svg) return null;
+  let defs = svg.querySelector('defs');
+  if (!defs) {
+    defs = document.createElementNS(SVG_NS, 'defs');
+    svg.insertBefore(defs, svg.firstChild);
+  }
+  return defs;
+}
+
+// Recorte de un trazo contra su propia geometría. Un <stroke> SVG siempre se pinta centrado sobre la
+// línea: para una "banda interior" se dibuja un trazo del doble de ancho y se le quita la mitad de
+// fuera recortándolo contra el mismo polígono. El <clipPath> lleva una copia del `d` del path, que
+// Leaflet recalcula al mover o hacer zoom, así que se resincroniza con la vista.
+let clipSeq = 0;
+const selfClips = [];
+
+function clipPathsToSelf(layer) {
+  eachPath(layer, path => {
+    const defs = svgDefs(path);
+    if (!defs) return;
+    const id = 'nd-clip-' + (++clipSeq);
+    const clip = document.createElementNS(SVG_NS, 'clipPath');
+    clip.setAttribute('id', id);
+    const shape = document.createElementNS(SVG_NS, 'path');
+    shape.setAttribute('d', path.getAttribute('d') || '');
+    clip.appendChild(shape);
+    defs.appendChild(clip);
+    path.setAttribute('clip-path', 'url(#' + id + ')');
+    selfClips.push({ clip, shape, path });
+  });
+  syncSelfClips();
+}
+
+function syncSelfClips() {
+  for (let i = selfClips.length - 1; i >= 0; i--) {
+    const entry = selfClips[i];
+    // Capa dada de baja (cambio de parque, capa apagada): su <path> ya no está en el documento y el
+    // recorte se queda huérfano. Se limpia aquí y no en un removeLayer para no depender del camino
+    // por el que la capa desapareció.
+    if (!entry.path.isConnected) { entry.clip.remove(); selfClips.splice(i, 1); continue; }
+    entry.shape.setAttribute('d', entry.path.getAttribute('d') || '');
+  }
+}
+map.on('zoomend viewreset moveend', syncSelfClips);
+
 // --- Zonas protegidas y senderos (geometría oficial IMIDA/CARM) ------------------------------------
+// Plano 1 · zonas protegidas: borde + banda interior, sin relleno. Un espacio protegido no es una
+// mancha de color sino un LÍMITE ("a partir de aquí, esto está protegido"), y rellenarlo enturbiaba
+// las tramas de hábitat y la ortofoto que hay debajo. El parque lleva casing crema (halo a los dos
+// lados que despega el borde de cualquier fondo); LIC y ZEPA, banda hacia dentro, que además dice de
+// qué lado del trazo está la figura sin necesidad de leyenda.
 const PROTECTED_STYLES = {
-  parque: { color: '#2f6f4e', weight: 3, fill: true, fillColor: '#2f6f4e', fillOpacity: 0.04 },
-  lic: { color: '#1f6f8b', weight: 2, dashArray: '5 4', fill: true, fillColor: '#1f6f8b', fillOpacity: 0.06 },
-  zepa: { color: '#7b4fa0', weight: 2, dashArray: '2 5', fill: true, fillColor: '#7b4fa0', fillOpacity: 0.05 }
+  parque: { color: '#1F4D34', weight: 2.5, fill: false, casing: { color: PAPER, weight: 7, opacity: .7 } },
+  lic:    { color: '#2E6D8E', weight: 1.5, opacity: .8, dashArray: '6 4', fill: false, band: { weight: 12, opacity: .10 } },
+  zepa:   { color: '#4A3B2A', weight: 1.5, opacity: .7, dashArray: '1 5', lineCap: 'round', fill: false, band: { weight: 12, opacity: .08 } }
 };
 
 function protectedPopup(figura, nombre, codigo, ha) {
@@ -349,24 +449,47 @@ function protectedPopup(figura, nombre, codigo, ha) {
 
 function addProtectedLayer(group, geojson, style, popupFor) {
   if (!geojson) return;
+  const { casing, band, ...line } = style;
+  const under = casing || band;
+  // POPUP_OPTIONS: sin `autoPan`, porque el globo lo coloca revealPopup() dentro de la franja de
+  // mapa que de verdad se ve (ver la sección de encuadre).
+  const bindPopup = (feature, layer) => layer.bindPopup(popupFor(feature.properties || {}), POPUP_OPTIONS);
+  // Casing y banda son el mismo recurso —un trazo ancho por debajo del borde fino— con dos
+  // acabados: el casing es crema y sobresale a los dos lados; la banda va del color de la figura y
+  // se recorta contra el polígono, así que solo se ve su mitad de dentro. Va en su propia capa y se
+  // da de alta ANTES que el borde: dentro de un plano el orden de pintado es el de alta.
+  if (under) {
+    const underLayer = L.geoJSON(geojson, {
+      style: {
+        color: under.color || line.color,
+        weight: under.weight,
+        opacity: under.opacity == null ? 1 : under.opacity,
+        fill: false, lineJoin: 'round', lineCap: 'round', pane: PANES.protected
+      },
+      // El borde son 1,5-2,5 px: sin esto habría que acertarle al píxel para abrir su ficha. La capa
+      // de debajo es ancha y lleva el mismo popup, así que hace de zona de toque.
+      onEachFeature: bindPopup
+    });
+    if (band) underLayer.on('add', () => clipPathsToSelf(underLayer));
+    underLayer.addTo(group);
+  }
   L.geoJSON(geojson, {
-    style,
-    onEachFeature: (feature, layer) => {
-      const p = feature.properties || {};
-      layer.bindPopup(popupFor(p), POPUP_OPTIONS);
-    }
+    style: { ...line, lineJoin: 'round', pane: PANES.protected },
+    onEachFeature: bindPopup
   }).addTo(group);
 }
 
-// Los senderos vienen en tres rangos de la red señalizada (GR, PR y SL) y un parque puede tener
-// casi veinte a la vez: pintados todos del mismo naranja resultaban una maraña en la que no se
-// distinguía la travesía que cruza la sierra del sendero local de una hora. Se mantienen dentro de
-// la misma familia de color —siguen leyéndose como "senderos", que es una sola capa— y se separan
-// por grosor y trazo, que es justo la jerarquía que tienen sobre el terreno.
+// Plano 3 · senderos: casing crema + núcleo. Los senderos vienen en tres rangos de la red señalizada
+// (GR, PR y SL) y un parque puede tener casi veinte a la vez: pintados todos del mismo naranja
+// resultaban una maraña en la que no se distinguía la travesía que cruza la sierra del sendero local
+// de una hora. Se mantienen dentro de la misma familia de color —siguen leyéndose como "senderos",
+// que es una sola capa— y se separan por grosor y trazo, que es justo la jerarquía que tienen sobre
+// el terreno. `casing` es el ancho de la banda crema que va debajo: separa la traza del hábitat, del
+// límite o de la ortofoto sobre los que cruza sin necesidad de subirle el contraste al color.
 export const TRAIL_STYLES = {
-  GR: { color: '#b4531f', weight: 4 },
-  PR: { color: '#d98032', weight: 3 },
-  SL: { color: '#d98032', weight: 3, dashArray: '7 5' }
+  GR: { color: '#8A3B19', weight: 4.5, casing: 9 },
+  PR: { color: '#C4762A', weight: 3.5, casing: 8 },
+  SL: { color: '#C4762A', weight: 3,   casing: 7.5, dashArray: '0.1 7', lineCap: 'round' }
 };
 
 export function trailKind(properties) {
@@ -374,31 +497,48 @@ export function trailKind(properties) {
   return m ? m[1].toUpperCase() : 'GR';
 }
 
+function trailStyle(feature) {
+  return Object.assign(
+    { opacity: 0.95, lineJoin: 'round', lineCap: 'round', pane: PANES.trails },
+    TRAIL_STYLES[trailKind(feature.properties)] || TRAIL_STYLES.GR
+  );
+}
+
+function trailPopup(p) {
+  // `longitudKm` son los kilómetros DENTRO del parque, no los de la ruta completa: se rotula
+  // así para no dar a entender que el GR-92 mide 15 km. `homologado` solo se afirma cuando
+  // consta en el catálogo de la FMRM (ver Tools/build-park-trails.js), nunca se niega.
+  const km = typeof p.longitudKm === 'number'
+    ? p.longitudKm.toLocaleString('es-ES', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' km dentro del parque'
+    : '';
+  // Las rutas (senderos) admiten audioguía: propiedades `audio`/`audioTranscript` en el
+  // feature del trails.geojson (mismas claves que hábitats y POIs).
+  return String(html`<strong>${p.name || 'Sendero'}</strong><br><span class="popup-type">${p.tipo || ''}${km ? ' · ' + km : ''}</span>${p.homologado ? html`<span class="badge">homologado</span>` : ''}${p.descripcion ? html`<p>${p.descripcion}</p>` : ''}${audioBlock(p, 'Audioguía de la ruta')}${p.source ? html`<small>${p.source}</small>` : ''}`);
+}
+
 export function renderTrails() {
   if (!state.geo || !state.trailLayer) return;
   state.trailLayer.clearLayers();
   if (!state.geo.trails) return;
+  const bindPopup = (feature, layer) => layer.bindPopup(trailPopup(feature.properties || {}), POPUP_OPTIONS);
+  // El casing va en su propia capa y se da de alta primero, para quedar por debajo de TODOS los
+  // núcleos: si fueran pares casing+núcleo sendero a sendero, el casing de uno taparía el núcleo del
+  // que cruza por debajo. Copia el punteado del núcleo (el SL es una fila de puntos, y su casing
+  // tiene que ser la misma fila, más gruesa, para que cada punto salga con su aro crema).
   L.geoJSON(state.geo.trails, {
-    style: feature => Object.assign(
-      { opacity: 0.9, lineJoin: 'round', lineCap: 'round' },
-      TRAIL_STYLES[trailKind(feature.properties)] || TRAIL_STYLES.GR
-    ),
-    onEachFeature: (feature, layer) => {
-      const p = feature.properties || {};
-      // `longitudKm` son los kilómetros DENTRO del parque, no los de la ruta completa: se rotula
-      // así para no dar a entender que el GR-92 mide 15 km. `homologado` solo se afirma cuando
-      // consta en el catálogo de la FMRM (ver Tools/build-park-trails.js), nunca se niega.
-      const km = typeof p.longitudKm === 'number'
-        ? p.longitudKm.toLocaleString('es-ES', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' km dentro del parque'
-        : '';
-      // Las rutas (senderos) admiten audioguía: propiedades `audio`/`audioTranscript` en el
-      // feature del trails.geojson (mismas claves que hábitats y POIs).
-      layer.bindPopup(
-        String(html`<strong>${p.name || 'Sendero'}</strong><br><span class="popup-type">${p.tipo || ''}${km ? ' · ' + km : ''}</span>${p.homologado ? html`<span class="badge">homologado</span>` : ''}${p.descripcion ? html`<p>${p.descripcion}</p>` : ''}${audioBlock(p, 'Audioguía de la ruta')}${p.source ? html`<small>${p.source}</small>` : ''}`),
-        POPUP_OPTIONS
-      );
-    }
+    style: feature => {
+      const core = trailStyle(feature);
+      return {
+        color: PAPER, weight: core.casing || core.weight + 4, opacity: .85,
+        dashArray: core.dashArray, lineJoin: 'round', lineCap: core.lineCap || 'round',
+        fill: false, pane: PANES.trails
+      };
+    },
+    // Un sendero es una línea de 3-4,5 px: el casing es más ancho y lleva el mismo popup, así que
+    // hace de zona de toque (importante en móvil, que es donde se usa esto andando).
+    onEachFeature: bindPopup
   }).addTo(state.trailLayer);
+  L.geoJSON(state.geo.trails, { style: trailStyle, onEachFeature: bindPopup }).addTo(state.trailLayer);
 }
 
 export function renderProtectedAreas() {
@@ -417,6 +557,109 @@ export function renderProtectedAreas() {
 }
 
 // --- Zonas de hábitat -------------------------------------------------------------------------------
+// Plano 2 · hábitats: trama SVG por familia. Un parque trae hasta once hábitats solapados, y con
+// once rellenos planos de color el mapa se convertía en un mosaico opaco en el que ni se leía la
+// ortofoto ni se sabía qué había debajo de qué. La trama resuelve las dos cosas: deja pasar el
+// fondo y sigue distinguiéndose donde dos hábitats se pisan, porque lo que separa no es el tono
+// sino el dibujo. Las familias son las siete grandes formaciones, con tinta según el medio
+// (verde vegetación, marrón mineral, azul agua).
+export const HABITAT_TEXTURES = {
+  matorral: { pattern: 'hatch45',   ink: '#1F4D34', bgOpacity: .07 },
+  bosque:   { pattern: 'hatch-45',  ink: '#1F4D34', bgOpacity: .07 },
+  pastos:   { pattern: 'dots',      ink: '#1F4D34', bgOpacity: .05 },
+  roquedo:  { pattern: 'grid',      ink: '#4A3B2A', bgOpacity: .06 },
+  dunas:    { pattern: 'waveDry',   ink: '#4A3B2A', bgOpacity: .05 },
+  ribera:   { pattern: 'waveWet',   ink: '#2E6D8E', bgOpacity: .07 },
+  saladar:  { pattern: 'hatchDash', ink: '#2E6D8E', bgOpacity: .05 }
+};
+
+// La tesela de cada trama. Las diagonales se dibujan con las dos esquinas repetidas (los tramos
+// fuera de la tesela) para que el rayado sea continuo al repetirse y no queden escalones.
+const PATTERN_TILES = {
+  hatch45:    { w: 8,  h: 8,  marks: ink => mark('M0 8 L8 0 M-1 1 L1 -1 M7 9 L9 7', ink, 1, .55) },
+  'hatch-45': { w: 8,  h: 8,  marks: ink => mark('M0 0 L8 8 M-1 7 L1 9 M7 -1 L9 1', ink, 1, .55) },
+  grid:       { w: 9,  h: 9,  marks: ink => mark('M0 0 L0 9 M0 0 L9 0', ink, .8, .45) },
+  dots:       { w: 7,  h: 7,  marks: ink => '<circle cx="3.5" cy="3.5" r="1.1" fill="' + ink + '" fill-opacity=".5"/>' },
+  waveWet:    { w: 12, h: 8,  marks: ink => mark('M0 6 q3 -3 6 0 t6 0', ink, 1, .55) },
+  waveDry:    { w: 12, h: 8,  marks: ink => mark('M0 6 q3 -3 6 0 t6 0', ink, 1, .45, '3 2.5') },
+  hatchDash:  { w: 8,  h: 8,  marks: ink => mark('M0 8 L8 0 M-1 1 L1 -1 M7 9 L9 7', ink, 1, .5, '2.5 2.5') }
+};
+
+function mark(d, ink, width, opacity, dash) {
+  return '<path d="' + d + '" fill="none" stroke="' + ink + '" stroke-width="' + width + '"'
+    + ' stroke-opacity="' + opacity + '" stroke-linecap="round"'
+    + (dash ? ' stroke-dasharray="' + dash + '"' : '') + '/>';
+}
+
+/**
+ * Familia de trama de un hábitat. El criterio es el código HIC (anexo I de la Directiva Hábitats
+ * 92/43/CEE), que ya agrupa por grandes tipos: 1x costeros y salinos, 2x dunas, 3x aguas
+ * continentales, 4x-5x matorrales, 6x pastizales, 7x turberas, 8x roquedos y 9x bosques (91x y 92x
+ * son los bosques de galería, que sobre el mapa se leen como ribera y no como bosque). Solo si el
+ * hábitat viniera sin código se recurre al campo `type` del catálogo, que es texto libre.
+ */
+export function habitatFamily(habitat) {
+  const code = String((habitat && habitat.code) || '').toUpperCase();
+  const group = code.slice(0, 2);
+  if (group === '91' || group === '92') return 'ribera';
+  if (code.startsWith('9')) return 'bosque';
+  if (code.startsWith('3') || code.startsWith('7')) return 'ribera';
+  if (code.startsWith('2') || code === '1210' || code === '1220') return 'dunas';
+  if (code === '1230' || code === '1240') return 'roquedo'; // acantilados
+  if (code.startsWith('1')) return 'saladar';               // 13xx-15xx: marismas y estepas salinas
+  if (code.startsWith('4') || code.startsWith('5')) return 'matorral';
+  if (code.startsWith('6')) return 'pastos';
+  if (code.startsWith('8')) return 'roquedo';
+  // NFD + quitar diacríticos: el campo es texto libre del catálogo ("Roquedos", "Salino"…).
+  const type = String((habitat && habitat.type) || '').toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  if (type.includes('bosque')) return 'bosque';
+  if (type.includes('pasto') || type.includes('prado')) return 'pastos';
+  if (type.includes('roqued') || type.includes('rocos')) return 'roquedo';
+  if (type.includes('ribera') || type.includes('fluvial') || type.includes('humedal')) return 'ribera';
+  if (type.includes('salin') || type.includes('salad')) return 'saladar';
+  if (type.includes('litoral') || type.includes('duna') || type.includes('playa')) return 'dunas';
+  return 'matorral';
+}
+
+/** Deja el <pattern> de una trama en los <defs> del svg de ese path y devuelve su id. */
+function ensurePattern(path, texture) {
+  const tile = PATTERN_TILES[texture.pattern];
+  const defs = tile && svgDefs(path);
+  if (!defs) return null;
+  const id = 'tx-' + texture.pattern;
+  if (!defs.querySelector('[id="' + id + '"]')) {
+    const pattern = document.createElementNS(SVG_NS, 'pattern');
+    pattern.setAttribute('id', id);
+    pattern.setAttribute('width', tile.w);
+    pattern.setAttribute('height', tile.h);
+    // userSpaceOnUse y no objectBoundingBox: la trama es simbología, no textura del terreno, y su
+    // paso tiene que medir lo mismo en pantalla en un hábitat de 3 ha y en uno de 3.000.
+    pattern.setAttribute('patternUnits', 'userSpaceOnUse');
+    pattern.innerHTML = '<rect width="' + tile.w + '" height="' + tile.h + '" fill="' + texture.ink
+      + '" fill-opacity="' + texture.bgOpacity + '"/>' + tile.marks(texture.ink);
+    defs.appendChild(pattern);
+  }
+  return id;
+}
+
+/**
+ * Apunta el relleno de la capa a su trama. fill-opacity vuelve a 1 porque la transparencia ya va
+ * dentro de la propia trama (fondo al 5-7 %, trazos al 45-55 %): dejar el 0,16 del relleno plano
+ * la borraría. Si algo fallase —navegador sin <pattern>, capa sin path todavía— se queda el relleno
+ * de color de siempre, que sigue estando en las opciones de la capa.
+ */
+function paintTexture(layer) {
+  const texture = layer._naturdexTexture;
+  if (!texture) return;
+  eachPath(layer, path => {
+    const id = ensurePattern(path, texture);
+    if (!id) return;
+    path.setAttribute('fill', 'url(#' + id + ')');
+    path.setAttribute('fill-opacity', '1');
+  });
+}
+
 // Tocar un hábitat abre su ficha (la misma que el catálogo), no un globo propio: ahí ya está la
 // superficie, el progreso, las especies y el botón de "ver sus especies", con sitio para leerlo.
 function bindHabitatTap(layer, habitat) {
@@ -435,11 +678,19 @@ export function renderHabitatZones() {
   (state.data.habitats || []).forEach(habitat => {
     const complete = isHabitatComplete(habitat);
     const geom = state.geo && state.geo.habitatGeom ? state.geo.habitatGeom[habitat.id] : null;
+    // Borde y trama comparten la tinta de la familia: el plano queda de una pieza y los hábitats se
+    // distinguen por el DIBUJO, no por el tono. El color propio de cada hábitat (verdes, rosas y
+    // ocres del catálogo) no desaparece: sigue siendo su punto en el panel de capas, que es la
+    // leyenda, y el relleno de respaldo si el navegador no pintase la trama. El oro del hábitat
+    // completo manda sobre todo lo demás: es un estado, no una identidad.
+    const texture = HABITAT_TEXTURES[habitatFamily(habitat)];
     const baseStyle = {
-      color: complete ? '#d89b30' : (habitat.color || '#2f6f4e'),
+      color: complete ? '#d89b30' : (texture ? texture.ink : (habitat.color || '#2f6f4e')),
       weight: complete ? 3 : 2,
+      opacity: complete ? 1 : 0.75, // la tinta es oscura: a plena opacidad el borde pesaba más que su trama
       fillColor: habitat.color || '#2f6f4e',
-      fillOpacity: 0.16
+      fillOpacity: 0.16,
+      pane: PANES.habitats
     };
     let layer;
     if (geom) {
@@ -453,7 +704,11 @@ export function renderHabitatZones() {
     }
     // Se guarda el estilo base para poder deshacer el resaltado "estás pisando este hábitat".
     layer._naturdexBaseStyle = baseStyle;
+    layer._naturdexTexture = texture;
     bindHabitatTap(layer, habitat);
+    // Desde 'add' y no tras el addTo: Leaflet crea un <path> nuevo cada vez que la capa entra al
+    // mapa, así que la trama tiene que volver a ponerse también cuando se reactiva desde el panel.
+    layer.on('add', () => paintTexture(layer));
     // La visibilidad por hábitat la gobierna el panel de capas (layers.js): la capa se crea
     // siempre (la ficha y el zoom desde otras vistas la necesitan) pero solo se añade al grupo
     // si el usuario no la tiene apagada.
@@ -473,14 +728,17 @@ let highlightedHabitatId = null;
 function applyHighlight(habitatId) {
   const layer = state.habitatLayers.get(habitatId);
   if (!layer || !layer._naturdexBaseStyle) return;
+  // Con relleno de trama el resaltado no puede ser "más opacidad": lo lleva el borde, que se
+  // engruesa. setStyle reescribe el fill desde las opciones, así que la trama se repinta detrás.
   layer.setStyle({ ...layer._naturdexBaseStyle, weight: 5, opacity: 1, fillOpacity: 0.32 });
+  paintTexture(layer);
   if (layer.bringToFront) layer.bringToFront();
 }
 
 export function highlightHabitat(habitatId) {
   if (highlightedHabitatId && highlightedHabitatId !== habitatId) {
     const prev = state.habitatLayers.get(highlightedHabitatId);
-    if (prev && prev._naturdexBaseStyle) prev.setStyle(prev._naturdexBaseStyle);
+    if (prev && prev._naturdexBaseStyle) { prev.setStyle(prev._naturdexBaseStyle); paintTexture(prev); }
   }
   highlightedHabitatId = habitatId || null;
   if (highlightedHabitatId) applyHighlight(highlightedHabitatId);
@@ -502,6 +760,39 @@ export function setHabitatVisible(habitatId, visible) {
 export function soloHabitat(habitatId) {
   (state.data.habitats || []).forEach(h => setHabitatVisible(h.id, h.id === habitatId));
   if (!map.hasLayer(state.habitatGroup)) state.habitatGroup.addTo(map);
+}
+
+// --- Entrada escalonada ----------------------------------------------------------------------------
+// Al abrir un parque aparecían de golpe cinco capas de información sobre el mapa y no había forma de
+// saber qué era cada cosa. Entrando por planos, de abajo arriba, el mapa se explica solo: primero
+// dónde estás (el límite protegido), luego por dónde se anda (senderos), qué hay (hábitats) y al
+// final los puntos. Son 120 ms entre planos: medio segundo largo en total, lo justo para leerlo
+// como una secuencia sin que llegue a hacerse esperar.
+// prefers-reduced-motion: la secuencia se salta entera —todo visible desde el primer fotograma—,
+// no se hace "más despacio". La CSS de .nd-plane hace lo propio con la transición.
+const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const STAGGER = REDUCED ? 0 : 120; // ms entre planos, fundido de 400 ms por capa (ver styles.css)
+const ENTRY_ORDER = ['parque', 'trails', 'habitats', 'pois', 'species'];
+const ENTRY_PANES = {
+  parque: PANES.protected, trails: PANES.trails, habitats: PANES.habitats,
+  pois: PANES.pois, species: PANES.species
+};
+let entryTimers = [];
+
+/** Reproduce la entrada por planos. La llama app.js al terminar de pintar un parque. */
+export function playEntrySequence() {
+  entryTimers.forEach(clearTimeout);
+  entryTimers = [];
+  const panes = map.getPanes();
+  const planes = ENTRY_ORDER.map(key => panes[ENTRY_PANES[key]]).filter(Boolean);
+  if (REDUCED) { planes.forEach(pane => pane.classList.remove('nd-plane-enter')); return; }
+  planes.forEach(pane => pane.classList.add('nd-plane-enter'));
+  // Reflow forzado: sin él, poner y quitar la clase en el mismo fotograma no cuenta como cambio y
+  // el navegador se salta la transición (el plano aparecería de golpe, que es lo que se evita).
+  if (planes[0]) void planes[0].offsetWidth;
+  planes.forEach((pane, i) => {
+    entryTimers.push(setTimeout(() => pane.classList.remove('nd-plane-enter'), i * STAGGER));
+  });
 }
 
 // --- Encuadre ------------------------------------------------------------------------------------
@@ -578,10 +869,12 @@ export function focusHabitatOnMap(habitatId, openDetail = false) {
 export function placeUserMarker(lat, lng, accuracy) {
   const latlng = [lat, lng];
   if (!state.userMarker) {
-    // zIndexOffset alto: tu punto no lo tapa ningún marcador de especie ni de punto de interés.
-    state.userMarker = L.marker(latlng, { icon: userDivIcon(), zIndexOffset: 1000, interactive: false }).addTo(map);
+    // Plano propio por encima de todos los demás: tu punto no lo tapa ningún marcador de especie ni
+    // de punto de interés, ni la trama de un hábitat (el círculo de precisión es un vector).
+    state.userMarker = L.marker(latlng, { icon: userDivIcon(), pane: PANES.user, zIndexOffset: 1000, interactive: false }).addTo(map);
     state.userAccuracyCircle = L.circle(latlng, {
-      radius: accuracy || 30, color: '#1f6f8b', weight: 1, fillColor: '#1f6f8b', fillOpacity: 0.08, interactive: false
+      radius: accuracy || 30, color: '#1f6f8b', weight: 1, fillColor: '#1f6f8b', fillOpacity: 0.08,
+      interactive: false, pane: PANES.user
     }).addTo(map);
   } else {
     state.userMarker.setLatLng(latlng);

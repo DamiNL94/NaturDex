@@ -71,6 +71,10 @@ function trailsSwatch() {
     .map(k => '<i class="legend-line trail trail-' + k.toLowerCase() + '"></i>').join('') + '</span>';
 }
 
+// El punto de color de cada fila es el color propio del hábitat en el catálogo. Desde que el
+// polígono se pinta con la trama y la tinta de su familia (HABITAT_TEXTURES en map.js), esta fila
+// es el ÚNICO sitio donde ese color se ve: aquí distingue una entrada de otra dentro de la lista,
+// que es para lo que sirve, sin volver a convertir el mapa en un mosaico de colores.
 function habitatRows() {
   return (state.data && state.data.habitats ? state.data.habitats : []).map(h => {
     const visible = !state.hiddenHabitats.has(h.id);
