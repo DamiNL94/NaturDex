@@ -13,7 +13,7 @@
       -1.632
     ],
     "coastlineKm": 0,
-    "summary": "Paisaje Protegido del litoral suroccidental de Águilas: cuatro calas vírgenes (Calarreona, La Higuerica, La Carolina y Los Cocedores) con ramblas y lomas semidesérticas, en el límite con la provincia de Almería.",
+    "summary": "Cuatro calas vírgenes al suroeste de Águilas, con ramblas, lomas semidesérticas y arenales hasta el límite con Almería.",
     "boundary": [],
     "boundaryNote": "Límite oficial del Paisaje Protegido servido en geo/parque.geojson, descargado del IMIDA/CARM (identificador interno ENP000007, 221,68 ha). Código ENP oficial ES620004 (CDDA 349352). Contrastado con la capa oficial ENP del Banco de Datos de la Naturaleza (MITECO, diciembre 2025). El MITECO da 220,99 ha frente a las 221,68 ha del IMIDA: una diferencia del 0,3 % por distinta generalización de la geometría entre ambas fuentes. Se conserva la geometría del IMIDA por ser la de mayor detalle."
   },

@@ -1,0 +1,23 @@
+{
+  "_nota": "Descripciones de los espacios protegidos: el ÚNICO texto redactado a mano de todo el pipeline. El resto de campos de park.json se generan de fuentes oficiales (build-n1-espacios.js) y no llevan adjetivos a propósito; esta descripción es lo contrario, y por eso vive aparte: es lo que le cuenta al visitante qué se va a encontrar, y una regeneración no puede pisarla. Los datos administrativos (figura, superficie oficial, municipios y códigos Natura 2000) NO se repiten aquí: ya salen en la cabecera de la pantalla del parque y en las filas de la ficha base. Regla al escribirlas: paisaje y lo que se ve, sin cifras que no estén contrastadas y sin promesas de fauna que dependan de la suerte.",
+  "_fuente": "Redacción propia a partir de la declaración de cada espacio (Ley 4/1992 de Ordenación y Protección del Territorio de la Región de Murcia y decretos posteriores), las fichas de la Red Natura 2000 (MITECO) y la descripción de los espacios naturales de la CARM.",
+  "descripciones": {
+    "cabo-cope-puntas-calnegre": "Diecisiete kilómetros de litoral casi virgen entre Águilas y Mazarrón: calas encajadas, acantilados a plomo sobre el mar y matorral semiárido.",
+    "cuatro-calas": "Cuatro calas vírgenes al suroeste de Águilas, con ramblas, lomas semidesérticas y arenales hasta el límite con Almería.",
+    "sierra-espuna": "El gran bosque de la Región: pinar repoblado hace más de un siglo, barrancos, umbrías frescas y los pozos de la nieve en lo alto del Morrón.",
+    "barrancos-de-gebas": "El «paisaje lunar» de la Región: cárcavas y barrancos excavados en margas blancas, casi sin vegetación, a las faldas de Sierra Espuña.",
+    "cabezo-gordo": "Un cerro calizo aislado sobre la llanura del Campo de Cartagena: un islote de roca y matorral entre cultivos, con simas y viejas canteras.",
+    "calblanque-monte-cenizas-pena-aguila": "Playas de arena dorada y dunas vivas al pie de sierras mineras, con calas entre acantilados y las salinas del Rasall tras el cordón dunar.",
+    "carrascoy-y-el-valle": "La sierra que cierra la huerta de Murcia por el sur: pinares, carrascales y crestas de roca como la Cresta del Gallo, con miradores sobre la ciudad.",
+    "espacios-abiertos-e-islas-del-mar-menor": "Las islas volcánicas del Mar Menor y los saladares libres de su orilla: humedales salinos que dan refugio a las aves entre tanta costa urbanizada.",
+    "humedal-del-ajauque-y-rambla-salada": "Un humedal salino de interior: ramblas de agua salobre, tarayales y saladares entre cerros áridos, con aves acuáticas insólitas tan lejos del mar.",
+    "monte-arabi": "Un macizo de arenisca que emerge solo en el altiplano de Yecla, con abrigos esculpidos por el viento que guardan arte rupestre prehistórico.",
+    "salinas-arenales-san-pedro-pinatar": "Salinas en activo, dunas y pinares al norte del Mar Menor: charcas donde se concentran flamencos, cigüeñuelas y avocetas, y la playa de La Llana.",
+    "sierra-de-el-carche": "La montaña más alta del noreste murciano, por encima de los 1.300 m: pinares en la umbría y crestas asomadas al límite con Alicante.",
+    "sierra-de-la-pila": "Una isla de bosque sobre el valle del Segura: pinares y carrascales hasta cerca de los 1.300 m, con fuentes, cortados y rapaces sobre el llano árido.",
+    "sierra-de-las-moreras": "Sierra litoral de Mazarrón: lomas de matorral semiárido asomadas al mar y ramblas que bajan hasta la costa, escala de las aves del litoral.",
+    "sierra-de-salinas": "Sierra compartida con Alicante sobre el altiplano de Yecla: pinar, carrascal y umbrías frescas, una de las masas forestales mejor conservadas.",
+    "sotos-y-bosques-de-ribera-de-canaverosa": "El bosque de ribera mejor conservado del Segura: una galería cerrada de álamos, sauces y tarays a lo largo del río, entre Calasparra y Moratalla."
+  },
+  "_longitud": "Entre 130 y 150 caracteres: es lo que cabe COMPLETO en las tres líneas que la cabecera del parque le reserva a la descripción (Css/styles.css, #parkSummary). Más largo y se corta con puntos suspensivos, que es justo lo que se quería arreglar."
+}

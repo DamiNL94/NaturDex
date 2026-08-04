@@ -23,6 +23,7 @@ El primer parque piloto es el Parque Regional de Cabo Cope y Puntas de Calnegre,
 - `Frontend/sw.js`: Service Worker que cachea el armazón de la app y los datos del parque para offline.
 - `Frontend/Data/parks-index.json`: registro global de parques por comunidad autónoma y provincia.
 - `Frontend/Data/parks/<provincia>/<parque>/`: datos de cada parque (`park.json`), su `manifest.json` de activos y su carpeta `geo/`. Ver `Frontend/Data/parks/README.md`.
+- `Tools/catalogo-nacional/data/descripciones-espacios.json`: la **descripción de cada espacio** (el único texto redactado a mano del pipeline; el resto de `park.json` se genera de fuentes oficiales). Ver «La cabecera del parque» más abajo.
 - `Frontend/Img/species/` y `Frontend/Img/poi/`: fotografías locales de especies y puntos de interés (servidas desde el propio proyecto, no hotlinkeadas).
 - `Backend/Api/auth.php`: registro, login, logout y comprobación de sesión (cuentas reales con contraseña hasheada y sesión PHP).
 - `Backend/Api/parks.php`: endpoint de parques (lista plana + agrupación por comunidad/provincia).
@@ -352,6 +353,28 @@ persiste en la tabla `user_progress` (una fila por usuario y parque, con el mism
 en el dispositivo, en `localStorage` con una clave que combina usuario + parque (`u<id>:<slug>`), de
 modo que ni las cuentas ni los parques se mezclan. El endpoint `progress.php` exige sesión (responde
 401 si no la hay). Nota de prototipo: para producción, servir por HTTPS y endurecer la sesión.
+
+## La cabecera del parque: qué es este sitio
+
+La pantalla de un parque se abre con su cartel, y ahí se responde a lo primero que se pregunta quien
+acaba de entrar: **qué es este sitio**. Tres piezas, en este orden:
+
+1. **Figura de protección y superficie oficial**, en la línea de encima del rótulo
+   («Parque Regional · 2666 ha»). La superficie sale de las propiedades del propio límite oficial
+   (`geo/parque.geojson`), la misma geometría que se dibuja en el mapa, así que la tienen los
+   dieciséis espacios, tengan catálogo o no, sin un campo más que mantener a mano.
+2. **La descripción del espacio**: qué paisaje es y qué se ve allí. La escribe una persona —es el
+   único texto del pipeline que no sale de una fuente oficial— y vive en
+   `Tools/catalogo-nacional/data/descripciones-espacios.json`, de donde la toma el generador de
+   espacios (`build-n1-espacios.js`), de modo que una regeneración no puede pisarla. Entre 130 y 150
+   caracteres: es lo que se lee **entero** en el hueco que la cabecera le reserva. Antes de esto, los
+   trece espacios de ficha base llevaban una frase administrativa generada («Paisaje Protegido de la
+   Región de Murcia, con una superficie oficial de… Solapa con los espacios de la Red Natura 2000…»)
+   que además repetía, palabra por palabra, lo que ya decían las filas de datos de su propia ficha.
+3. **Los tres recuentos de lo que se colecciona**: hábitats, especies y puntos de interés. La tercera
+   casilla eran los kilómetros de costa, un dato que ni se colecciona ni existe en un espacio de
+   interior (salía «—» en trece de los dieciséis). Un espacio sin puntos cargados todavía muestra
+   «—», no un cero: el dato está pendiente, no vacío.
 
 ## Hábitats por grupos
 
