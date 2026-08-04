@@ -36,7 +36,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const ROOT = path.join(__dirname, '..');
+const { ROOT, REGISTRY_FILE } = require('./lib/io');
 const FRONTEND = path.join(ROOT, 'Frontend');
 const REGISTRY = path.join(FRONTEND, 'Data', 'parks-index.json');
 const FMRM_CATALOG = path.join(__dirname, 'catalogo-nacional', 'data', 'senderos-fmrm-murcia.json');

@@ -9,24 +9,14 @@
 //   node Tools/catalogo-nacional/invasoras-eei.js --gadm ESP.14_1 --ccaa "Región de Murcia" [--top 25] [--json out.json]
 // (gadmGid: p. ej. Región de Murcia = ESP.14_1; búscalo en api.gbif.org/v1/geocode o el visor GADM.)
 // ================================================================================================
-const https = require('https');
 const fs = require('fs');
-function arg(n, d) { const i = process.argv.indexOf('--' + n); return i >= 0 && process.argv[i + 1] ? process.argv[i + 1] : d; }
-const GADM = arg('gadm'), CCAA = arg('ccaa'), TOP = parseInt(arg('top', '25'), 10), OUT = arg('json');
-if (!GADM || !CCAA) { process.stderr.write('Uso: --gadm <gadmGid> --ccaa <nombre> [--top N] [--json out.json]\n'); process.exit(1); }
+const { getJson, pool } = require('../lib/http');
+const { arg, num, requireArgs } = require('../lib/cli');
 
-function get(host, path, tries = 0) {
-  return new Promise((res, rej) => {
-    https.get({ host, path, headers: { Accept: 'application/json', 'User-Agent': 'naturdex-invasoras/1' } }, r => {
-      let b = ''; r.on('data', c => b += c); r.on('end', () => { try { res(JSON.parse(b)); } catch (e) { rej(new Error(b.slice(0, 150))); } });
-    }).on('error', e => tries < 2 ? setTimeout(() => get(host, path, tries + 1).then(res, rej), 500) : rej(e)).setTimeout(40000, function () { this.destroy(new Error('timeout')); });
-  });
-}
-async function pool(items, n, fn) {
-  const out = new Array(items.length); let i = 0;
-  await Promise.all(Array.from({ length: n }, async () => { while (i < items.length) { const idx = i++; try { out[idx] = await fn(items[idx]); } catch (_) { out[idx] = null; } } }));
-  return out;
-}
+const GADM = arg('gadm'), CCAA = arg('ccaa'), TOP = num('top', 25), OUT = arg('json');
+requireArgs('Uso: --gadm <gadmGid> --ccaa <nombre> [--top N] [--json out.json]', { gadm: GADM, ccaa: CCAA });
+
+const get = (host, path) => getJson(host, path, { agent: 'invasoras-eei' });
 
 (async () => {
   // 1) Catálogo EEI oficial (EIDOS): idtaxon "CEEEI: Incluido" del RD 630/2013.

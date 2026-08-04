@@ -49,10 +49,10 @@
 const fs = require('fs');
 const path = require('path');
 const pc = require('polygon-clipping');
-const { utmToLonLat } = require('./lib/shapefile');
-const { ringArea, closeRing, orientRing, inRing } = require('./lib/geo');
+const { utmToLonLat } = require('../lib/shapefile');
+const { ringArea, closeRing, orientRing, inRing } = require('../lib/geo');
 
-const RAIZ = path.join(__dirname, '..', '..');
+const { ROOT: RAIZ } = require('../lib/io');
 const FRONTEND = path.join(RAIZ, 'Frontend');
 const FUENTES = path.join(__dirname, 'fuentes', 'miteco-ide');
 const REGISTRO = path.join(FRONTEND, 'Data', 'parks-index.json');

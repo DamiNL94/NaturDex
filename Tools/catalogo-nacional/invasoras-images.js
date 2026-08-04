@@ -31,14 +31,14 @@
 const fs = require('fs');
 const path = require('path');
 
-const { loads, metadatos, atribucion, filePathUrl, commonsFileFromUrl, resolver } = require('./lib/wikimedia');
+const { loads, metadatos, atribucion, filePathUrl, commonsFileFromUrl, resolver } = require('../lib/wikimedia');
+const { arg, flag, num } = require('../lib/cli');
 
-const ROOT = path.join(__dirname, '..', '..');
+const { ROOT } = require('../lib/io');
 const JSON_PATH = path.join(ROOT, 'Frontend', 'Data', 'invasoras.json');
 
-const args = process.argv.slice(2);
-const has = f => args.includes(f);
-const val = (f, d) => { const i = args.indexOf(f); return i >= 0 && args[i + 1] ? args[i + 1] : d; };
+// Lectura de opciones: Tools/lib/cli.js (admite `--x v` y `--x=v`, y el nombre con o sin guiones).
+const has = flag, val = arg;
 
 const OPT = {
   only: (val('--only', '') || '').split(';').map(s => s.trim()).filter(Boolean),
@@ -55,7 +55,7 @@ const OPT = {
 // diff de formato sobre el fichero que escribe este script.
 const comoPhp = data => JSON.stringify(data, null, 4).replace(/\//g, '\\/') + '\n';
 
-const sqlStr = v => v === null || v === undefined ? 'NULL' : `'${String(v).replace(/\\/g, '\\\\').replace(/'/g, "''")}'`;
+const { sqlStr } = require('../lib/sql');
 
 (async () => {
   if (!fs.existsSync(JSON_PATH)) {

@@ -3,13 +3,15 @@
     "Cistanche phelypaea, añadida al catálogo el 1 de agosto de 2026. El nombre común «pijolobo» es",
     "el de Águilas y su comarca; fuera de ahí se conoce sobre todo como «jopo de lobo». Dio nombre",
     "al logro final de parque hasta que este pasó a llamarse «Guardián del parque», al dejar de ser",
-    "la app de un solo espacio."
+    "la app de un solo espacio.",
+    "",
+    "Aquí había además una entrada de Anabasis hispanica que fijaba su foto al pliego de herbario",
+    "«Img/species/anabasis-hispanica.jpg». Esa copia local se borró el 1 de agosto de 2026, al",
+    "sustituir los pliegos por fotos de campo, pero la entrada se quedó: como data/contenido/ manda",
+    "sobre lo extraído, cada `npm run species:extract` volvía a pisar la foto buena con una ruta a un",
+    "fichero inexistente y `--apply` la propagaba a los park.json y al SQL. Retirada: la foto vigente",
+    "(observation.org, Ans Gorter, CC BY-NC-ND) vive en especies-universal.json, que es su sitio."
   ],
-
-  "Anabasis hispanica": {
-    "image": "Img/species/anabasis-hispanica.jpg",
-    "imageAttribution": "Smithsonian NMNH (CC0) · GBIF — copia local"
-  },
 
   "Cistanche phelypaea": {
     "commonName": "Pijolobo",

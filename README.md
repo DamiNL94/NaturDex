@@ -1,556 +1,637 @@
 # NaturDex
 
-NaturDex es un prototipo de guía virtual para identificar, catalogar e informar sobre especies vegetales y animales en parques naturales y nacionales de España.
-
-El primer parque piloto es el Parque Regional de Cabo Cope y Puntas de Calnegre, en la Región de Murcia. La app está planteada como una experiencia tipo pokédex: mapa, catálogo, filtros, fichas de especie, hábitats y puntos de observación.
-
-## Objetivo del prototipo
-
-- Validar una experiencia profesional de exploración en campo.
-- Estructurar los datos para escalar a otros parques españoles.
-- Separar parque, hábitat, especie y observación para que el modelo crezca sin rehacer la base.
-- Empezar con datos semilla de Cabo Cope y sustituirlos progresivamente por fuentes verificadas.
-
-## Estructura
-
-- `Frontend/index.html`: interfaz principal del prototipo.
-- `Frontend/Css/styles.css`: diseño responsive de la experiencia NaturDex.
-- `Frontend/Js/app.js`: mapa, filtros, catálogo, ficha de especie y progreso tipo pokédex (la experiencia de un parque).
-- `Frontend/Js/auth.js`: flujo de pantallas (portada → login → mapa de España → parque), autenticación y selector de parque.
-- `Frontend/Js/nav.js`: pila de navegación de la app. Convierte cada pantalla, pestaña, ficha y etiqueta del mapa en un paso deshacible con su entrada de historial, para que el botón «atrás» del móvil (y el gesto de deslizar) retroceda dentro de NaturDex en vez de salir de la web. Ver «Navegación e interacción» más abajo.
-- `Frontend/Js/habitat-groups.js`: los **grupos de hábitats** (costa y dunas, saladares, riberas, matorrales, pastizales, roquedos y bosques) con su trama y su tinta. Es la agrupación única que comparten el mapa, la leyenda y el catálogo. Ver «Hábitats por grupos» más abajo.
-- `Frontend/Js/offline.js`: capa de almacenamiento local y funcionamiento sin conexión (ver más abajo).
-- `Frontend/sw.js`: Service Worker que cachea el armazón de la app y los datos del parque para offline.
-- `Frontend/Data/parks-index.json`: registro global de parques por comunidad autónoma y provincia.
-- `Frontend/Data/parks/<provincia>/<parque>/`: datos de cada parque (`park.json`), su `manifest.json` de activos y su carpeta `geo/`. Ver `Frontend/Data/parks/README.md`.
-- `Tools/catalogo-nacional/data/descripciones-espacios.json`: la **descripción de cada espacio** (el único texto redactado a mano del pipeline; el resto de `park.json` se genera de fuentes oficiales). Ver «La cabecera del parque» más abajo.
-- `Frontend/Img/species/` y `Frontend/Img/poi/`: fotografías locales de especies y puntos de interés (servidas desde el propio proyecto, no hotlinkeadas).
-- `Backend/Api/auth.php`: registro, login, logout y comprobación de sesión (cuentas reales con contraseña hasheada y sesión PHP).
-- `Backend/Api/parks.php`: endpoint de parques (lista plana + agrupación por comunidad/provincia).
-- `Backend/Api/species.php`: endpoint agregado para parque, hábitats, puntos de interés y especies.
-- `Backend/Api/progress.php`: endpoint GET/POST del progreso **por usuario y por parque** (requiere sesión); marca especies/POIs vistos y registra la ubicación GPS de cada avistamiento (persistido en la tabla `user_progress`).
-- `Database/schema.sql`: **solo la estructura** (DDL) del modelo escalable: parques, hábitats, especies, puntos de interés, observaciones, relación especie-hábitat, y **`users` + `user_progress`** para las cuentas.
-- `Database/seed.sql`: **los datos** del parque piloto (15 hábitats, 76 especies, 16 POIs y sus relaciones). Idempotente.
-- `Database/migrations.sql`: `ALTER` idempotentes para **actualizar instalaciones antiguas** (en una instalación limpia no hace falta).
-- Instalación limpia: `mysql < Database/schema.sql` y luego `mysql < Database/seed.sql`. Validación de los datos empaquetados del frontend: `npm run validate`.
-
-## Catálogo de datos
-
-El catálogo incluye 78 especies (34 fauna, 44 flora), 21 hábitats de interés comunitario (Directiva 92/43/CEE) y 6 puntos de interés del Parque Regional de Cabo Cope y Puntas de Calnegre. Cada especie incluye:
-
-- Taxonomía completa (reino, filo/división, clase, orden, familia, género).
-- Estado de conservación en tres escalas: **UICN (evaluación global)**, **España** (Catálogo Español de Especies Amenazadas / Lista Roja de la Flora Vascular Española 2008 para flora) y **Región de Murcia** (Catálogo Regional de Especies Amenazadas de la Fauna Silvestre / Catálogo Regional de Flora Silvestre Protegida, Decreto 50/2003).
-- Un campo `source`/`fuente` con la referencia usada.
-
-Fuentes consultadas:
-
-- Región de Murcia Digital (CARM) - Cabo Cope y Puntas de Calnegre (Características, Flora, Fauna): https://www.regmurcia.com
-- Wikipedia "Parque regional de Cabo Cope y Puntas de Calnegre", con referencias a MITECO y Red Natura 2000 (LIC ES6200012 Calnegre / LIC ES6200031 Cabo Cope).
-- Universidad de Murcia, revista *Eubacteria* nº5 - Alcaraz Ariza, F.J. "La Marina de Cope: ¿los últimos días de un paraíso botánico?" (fuente principal para las especies de flora añadidas en esta ronda, específica del parque).
-- Decreto 50/2003 (BORM), Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia; base científica: Sánchez Gómez, P. et al. 2002, *Libro Rojo de la Flora Silvestre Protegida de la Región de Murcia*.
-- Lista Roja 2008 de la Flora Vascular Española (MITECO / SEBiCoP, listaroja.conservacionvegetal.org).
-- IUCN Red List of Threatened Species (evaluación global) - iucnredlist.org.
-- Baraza Martínez, F. 1999. "Los hábitats comunitarios en la Región de Murcia", DGMN-CARM.
-
-Este catálogo es un punto de partida para el prototipo: los datos deben contrastarse en campo y con las fuentes primarias (PORN/PRUG del parque, inventarios oficiales de la CARM y el MITECO) antes de un uso definitivo. Muchas especies añadidas no tienen todavía fotografía; el frontend muestra un icono de marcador de posición hasta incorporar imágenes con licencia confirmada.
-
-### Fotografías de flora (florasilvestre.es)
-
-Se han incorporado **13 fotografías de especies vegetales** descargadas de [florasilvestre.es](https://www.florasilvestre.es/mediterranea/sudeste.htm) (galería de flora del sureste ibérico), coincidencias exactas por nombre científico: *Allium melananthum*, *Caralluma europaea*, *Citrullus colocynthis*, *Cynomorium coccineum*, *Lafuentea rotundifolia*, *Lavandula multifida*, *Limonium insigne*, *Lycium intricatum*, *Maytenus senegalensis* subsp. *europaea*, *Notoceras bicorne*, *Salsola papillosa*, *Senecio flavus* y *Teucrium freynii*. Consideraciones:
-
-- Las imágenes se guardan **localmente** en `Frontend/Img/species/` y se sirven desde el propio proyecto (no se hotlinkea, porque el sitio verifica el *referer*). Cada ficha lleva la atribución `Foto: florasilvestre.es` en su campo `source`.
-- Solo se usaron **coincidencias exactas de género + especie**; no se sustituyó ninguna especie por la foto de otra afín del mismo género (evita identificaciones erróneas). Por eso el resto de la flora del sitio no se incorporó.
-- **Aviso de licencia**: las fotos son propiedad de florasilvestre.es y se usan aquí solo en el contexto de este prototipo educativo. Antes de cualquier uso público/definitivo hay que **confirmar la licencia o el permiso con el autor del sitio**, o sustituirlas por imágenes de licencia libre (p. ej. Wikimedia Commons).
-
-### Especies marcadas para revisión personal
-
-De las 11 especies marcadas inicialmente como "a revisar", una ronda de investigación adicional (fuentes oficiales y bibliográficas) permitió resolver 5 con confianza razonable; se les quitó el campo `reviewNote`/`review_note` y su fuente quedó ampliada con la referencia que resuelve la duda:
-
-- **Águila perdicera** (*Aquila fasciata*) - confirmado: la Ley 7/1995 de Fauna Silvestre de la Región de Murcia (Anexo I) la cataloga "en peligro de extinción" a nivel regional, coincidiendo con el dato ya presente en el catálogo.
-- **Curruca cabecinegra** (*Curruca melanocephala*) - confirmado: el género *Curruca* (en vez de *Sylvia*) es el estándar taxonómico vigente según la IOC World Bird List.
-- **Pardela cenicienta** (*Calonectris diomedea*) - confirmado: no hay colonia reproductora conocida en Cabo Cope; la única colonia murciana documentada está en la Isla de las Palomas (San Pedro del Pinatar), por lo que la presencia en el parque es de paso/alimentación.
-- **Espino negro** (*Rhamnus lycioides* subsp. *borgiae*) - confirmado: "Rhamnus hispanorum" (nombre usado en el decreto regional) es sinónimo de este taxón según World Flora Online.
-- **Arto** (*Maytenus senegalensis* subsp. *europaea*) - confirmado: una ficha oficial del Ayuntamiento de Cartagena usa exactamente ese binomio para la especie común "arto", resolviendo la equivalencia de nombre.
-
-Las 6 especies restantes siguen sin poder verificarse de forma independiente y mantienen su `reviewNote`/`review_note` visible en la app (etiqueta "a revisar"):
-
-1. **Cormorán moñudo** (*Gulosus aristotelis*) - la subespecie mediterránea *desmarestii* es la esperable en el litoral murciano, pero la fuente consultada (RegMurcia) solo confirma nidificación en Isla Grosa, no en Cabo Cope, y da la categoría regional como "especie vulnerable" (Ley 7/95), distinta de "interés especial" que figura hoy en el catálogo; pendiente de decidir si se corrige.
-2. **Centaurio de Rigual** (*Centaurium rigualii*) - **atención especial**: fuentes taxonómicas (Kew/POWO) lo tratan como sinónimo o forma de *Centaurium quadrifolium*, reforzando la sospecha de que no es un taxón válido independiente; sigue sin confirmarse con fuente primaria su presencia específica en Cabo Cope.
-3. **Anabasis** (*Anabasis hispanica*) - su presencia regional y el hábitat (suelos margosos/salinos) son coherentes con el catálogo, pero la identificación de campo frente a otras quenopodiáceas suculentas sigue sin confirmar.
-4. **Siempreviva insigne** (*Limonium insigne*) - hay indicios de que tiene distribución óptima específicamente en el territorio de Cabo Cope, lo que reduce la duda de presencia, pero la complejidad taxonómica del género frente a especies afines (*L. lobatum*, *L. cossonianum*) sigue sin resolverse.
-5. **Tomillo de invierno** (*Thymus hyemalis*) - la subespecie amenazada *millefloris* parece documentada solo en Almería; lo más probable es que la población de Cabo Cope sea la subsp. *hyemalis* típica, pero falta confirmarlo antes de ajustar `spainStatus`.
-6. **Coloquíntida** (*Citrullus colocynthis*) - no catalogada oficialmente; no se encontraron fuentes que confirmen ni descarten su presencia específica en Cabo Cope (solo hay referencias a Mula/Yecla, en el interior de Murcia, y a Cabo de Gata, en Almería).
-
-Por favor revisa estos 6 casos y avísame de cualquier corrección; actualizaré el catálogo en consecuencia.
-
-## Mapa: zonas protegidas oficiales, capas base y hábitats
-
-El mapa muestra ahora la **geometría oficial real** de las figuras de protección, dos capas base
-conmutables y los hábitats, todo activable/desactivable desde el control de capas (arriba a la derecha).
-
-### Zonas protegidas con geometría oficial (IMIDA/CARM)
-
-El límite aproximado de puntos que había antes se ha sustituido por geometría vectorial oficial,
-descargada del servicio ArcGIS REST del IMIDA/CARM (`geoportal.imida.es/.../OISMA/MapServer`),
-reproyectada a EPSG:4326 y generalizada para peso web (ver `Frontend/Data/parks/murcia/cabo-cope-puntas-calnegre/geo/README.md`). Cada
-figura es una capa propia, con su estilo y un popup con nombre, código y superficie:
-
-- **Parque Regional** de Calnegre y Cabo Cope (Ley 4/1992; 2.665 ha) — línea verde continua. Es el
-  límite legal, el mismo que representa el folleto oficial (ya no un trazado aproximado).
-- **LIC · Red Natura 2000** — `ES6200031` Cabo Cope (240 ha) y `ES6200012` Calnegre (781 ha); línea
-  azul-teal discontinua.
-- **ZEPA · Red Natura 2000** — `ES0000261` Almenara-Moreras-Cabo Cope (22.201 ha); línea púrpura
-  punteada (se extiende bastante al norte del parque). Los LIC y la ZEPA juntos constituyen la Red
-  Natura 2000. Vienen apagados por defecto para no saturar el mapa; se activan desde el control de capas.
-
-### La ubicación de una especie la aporta el GPS al marcarla como vista
-
-Los marcadores de especies **ya no aparecen pre-cargados** en el mapa. La localización es parte de la
-mecánica tipo pokédex y proviene del **GPS del dispositivo**: al marcar una especie como vista, el
-navegador pide la posición (`navigator.geolocation.getCurrentPosition`) y el marcador se coloca **donde
-el usuario realmente la ha visto**. Al desmarcar, el marcador y su ubicación desaparecen.
-
-- La ubicación del avistamiento se persiste en el backend (`progress.php` → `Backend/Data/progress.json`,
-  campo `sightings` con `{lat, lng, at}` por especie) y se restaura al recargar.
-- Si el usuario **deniega el permiso** o el dispositivo no tiene GPS, la especie se marca igualmente como
-  vista y el marcador cae en la coordenada representativa del catálogo, indicándolo en el popup
-  ("Ubicación aproximada (sin GPS)" frente a "Ubicación registrada por GPS").
-- La geolocalización del navegador requiere contexto seguro (HTTPS o `localhost`).
-
-### Senderos del parque (GR-92)
-
-Se dibuja el trazado real del **GR-92 / Sendero del Mediterráneo** a su paso por el parque (capa
-*Senderos*, línea naranja), extraído de **OpenStreetMap** (© OpenStreetMap contributors, ODbL) y guardado
-en `Frontend/Data/parks/murcia/cabo-cope-puntas-calnegre/geo/trails.geojson`. Recorre el litoral entre Calabardina y Puntas de Calnegre. Los
-senderos locales señalizados (PR/SL) se pueden añadir al mismo fichero cuando se disponga de su trazado.
-
-### Puntos de interés: iconos por tipo, fotos y 16 en total
-
-Los 6 puntos de interés originales se corrigieron con topónimos de OpenStreetMap (varios estaban
-desplazados: la Torre de Cope ~1,5 km y Cala Blanca ~5 km) y se han ampliado a **16**, con un icono
-distinto por tipo en el mapa (🏰 Cultural, 🏞️ Paisajístico, 🌋 Geológico, 🚪 Acceso, 🌊 Natural,
-🏺 Arqueológico, 🦖 Paleontológico, ⛪ Religioso) y foto en el popup cuando existe (`Frontend/Img/poi/`,
-con atribución en el campo `source`).
-
-> **Corrección de iconos**: los tipos Geológico y Paleontológico usaban 🪨 y 🦴, dos emoji Unicode
-> recientes (13.1 y 11) sin glifo a color en el motor de render probado — se veían como un bloque negro
-> sólido. Se verificó con un canvas offscreen (recuento de píxeles de color) antes de decidir el
-> reemplazo: 🌋 y 🦖 sí renderizan a todo color.
-
-Los 8 nuevos, con fuentes primarias del Anexo I del proyecto de PORN (ANSE), OpenStreetMap y otras fuentes documentales:
-
-- **Ermita de Cope** (Religioso) — capilla del siglo XVIII junto a la Torre de Cope; el episodio del
-  incendio pirata que se le atribuye en fuentes de turismo queda marcado como pendiente de contrastar
-  con fuente documental primaria.
-- **Cueva C.6** (Arqueológico) — cavidad kárstica costera con restos del Neolítico final/Edad del Bronce
-  (c. 3000 a.C.), el registro arqueológico más antiguo conocido del macizo de Cope. Coordenada **estimada**
-  por triangulación textual (ladera norte del macizo, ~1 km al oeste de la Playa del Sombrerico), marcada
-  `approx: true`.
-- **Dunas fósiles de Cabo Cope** (Geológico) — calcarenitas eutirrenienses (Pleistoceno) que el Anexo I
-  del PORN destaca como valor geomorfológico y paleogeográfico singular de la costa del parque. Reubicadas
-  entre la Playa del Sombrerico y la Torre de Cope (donde de verdad están, según la corrección del usuario),
-  no junto al propio Cabo Cope como se puso por error en la ronda anterior. Coordenada representativa,
-  `approx: true`.
-- **Yacimientos paleontológicos de Garrobillo** y **de Galera-Cope** (Paleontológico) — los cinco
-  yacimientos oficiales de la Cuenca de Cope citados por el Anexo I del PORN (Garrobillo 1 y 2; Galera-1;
-  Cope 1 y 2), agrupados en dos puntos representativos porque el documento no publica la coordenada exacta
-  de cada uno. Ambos `approx: true`.
-- **Fuente de los piratas** (Natural) — la Ensenada/Cala de la Fuente, junto a la Torre de Cope, llamada
-  así por un manantial de agua dulce que servía de aguada a la guarnición de la torre y, según tradición
-  oral de fuentes de turismo, también a embarcaciones berberiscas. `approx: true` (no hay coordenada
-  publicada del manantial en sí, se sitúa junto a la torre).
-- **Punta de las Cabricas** (Paisajístico) — saliente rocoso entre Cabo Cope y Calabardina, topónimo OSM
-  verificado, coordenada exacta.
-- **Ruinas de la aldea de El Garrobillo** (Cultural) — antigua pedanía agrícola despoblada del término de
-  Lorca en la Marina de Cope. `approx: true`: se usa la posición del paraje "El Garrobillo" de OSM, no la
-  de una edificación concreta verificada en campo (no se encontró ninguna ruina con esa referencia exacta
-  en fuentes abiertas).
-
-**Verificación de "Cabo Cope"**: se revisó expresamente si el punto de interés homónimo estaba mal situado.
-Su coordenada (37.42283, -1.49217) coincide exactamente con el único nodo de OpenStreetMap etiquetado
-`natural=cape` con `name=Cabo Cope`, así que se mantiene: es la referencia geográfica real del cabo. Lo que
-sí estaba mal era la ubicación de las dunas fósiles (corregida arriba), que antes se solapaba visualmente
-con este punto y podía dar la impresión de que ambos estaban mal.
-
-**Aviso honesto sobre el límite del parque**: al comprobar los puntos contra el polígono oficial del Parque
-Regional (el mismo GeoJSON real de la sección anterior), **4 caen fuera** por entre 227 y 656 m: Puntas de
-Calnegre, Playa de Calnegre, Lomo de Bas y Calabardina. Sus coordenadas son correctas (verificadas con
-OpenStreetMap); simplemente son núcleos urbanos o cumbres situados justo en el borde o inmediatamente fuera
-del límite legal del parque (Calabardina, por ejemplo, es precisamente la puerta de entrada *adyacente*, no
-un punto dentro). Se mantienen porque son referencias reales y bien establecidas, no un error de datos.
-
-### Capas base y clústeres
-
-- **Dos capas base** conmutables: *Mapa* (OpenStreetMap) y *Satélite (PNOA)* — ortofoto aérea del
-  Instituto Geográfico Nacional por WMTS (`OI.OrthoimageCoverage`, cuadrícula `GoogleMapsCompatible`).
-- **Agrupación de marcadores** (Leaflet.markercluster): las especies vistas próximas se agrupan en un
-  clúster con su recuento y se despliegan al hacer zoom. Al seleccionar una especie ya vista desde el
-  catálogo, el mapa hace zoom hasta sacar su marcador del clúster y abre el popup.
-
-### Hábitats: círculos aproximados, listos para polígonos reales
-
-- Cada uno de los 21 hábitats de interés comunitario se dibuja como un **círculo en una posición
-  representativa** (no su extensión real), con su código, prioridad UE y color. Al hacer clic se abre un
-  popup con el recuento de especies vistas en ese hábitat y un botón para filtrar el catálogo a esas especies.
-- La geometría de hábitats vive en `Frontend/Data/parks/murcia/cabo-cope-puntas-calnegre/geo/habitats.geojson` (plantilla vacía por ahora). Es la
-  **fontanería lista para QGIS**: `app.js` dibuja el polígono real de un hábitat en cuanto se añade a ese
-  fichero un `Feature` con `properties.slug`, sin tocar código.
-- **Se intentó de nuevo conseguir la extensión real** de los 21 hábitats antes de dejarlos como círculos,
-  probando: (1) el WMS de MITECO "Tipos de Hábitat de Interés Comunitario" y el de "Distribución de Hábitat
-  Artículo 17" — ambos devuelven un error interno del servidor (`NullReferenceException` en su proxy
-  ArcGIS), caídos en el lado de MITECO, no un problema de nuestra petición; y aunque funcionaran, el
-  Artículo 17 es una malla de 10×10 km, demasiado basta para este mapa; (2) el catálogo CSW de IDERM/CARM y
-  todas las carpetas del geoportal del IMIDA (el mismo servicio que sí dio la geometría real del Parque
-  Regional, LIC y ZEPA) — sin ninguna capa de hábitats. Existe **SIOSE** (uso/cobertura del suelo, ese sí
-  con geometría real y detallada) como aproximación indirecta, pero sus categorías son de uso del suelo
-  genérico ("matorral", "arbolado"), no los códigos de la Directiva de Hábitats: usarlo haría pasar por
-  "hábitat oficial" algo que no lo es, así que se descartó en vez de forzarlo. Conclusión: no hay hoy una
-  fuente vectorial oficial y accesible para esto; sigue pendiente de la cartografía QGIS/HIC de MITECO.
-- La relación especie-hábitat es muchos-a-muchos (una especie puede vivir en varios hábitats): en el JSON de
-  respaldo son los campos `habitatIds` (por especie) y `speciesIds` (por hábitat); en la base de datos es la
-  tabla `species_habitats`, calculada por `species.php` a partir de nombre científico + slug de hábitat.
-
-### Revisión a fondo: ¿los 21 hábitats existen todos en este parque?
-
-Se contrastaron uno a uno los 21 códigos contra las dos fuentes oficiales ya usadas (el documento previo del
-PORN, CARM 2021, y el Anexo I del proyecto de PORN, ANSE). El PORN previo es explícito: **los LIC de Calnegre
-y Cabo Cope suman 15 tipos de hábitat**, no 21. Los 6 que sobran ahora llevan un campo `reviewNote` propio
-(visible como badge "a revisar" en su tarjeta del catálogo, igual que en las especies), en vez de quedar solo
-documentados en este README:
-
-- **`posidonia` (1120), `banco-arena` (1110), `arrecifes` (1170)** — los 3 son marinos. El PORN previo
-  menciona que el LIC Cabo Cope linda con la ZEC marina "Franja Litoral Sumergida de la Región de Murcia"
-  (ES6200029); es plausible que pertenezcan a esa zona adyacente y no al LIC del parque en sí, pero no hay
-  confirmación directa. Nota: pendiente de contrastar con el Plan de Gestión de esa ZEC.
-- **`dunas-brachypodietalia` (2240), `rios-paspalo-agrostidion` (3280), `turberas-cladium` (7210)** — los 3
-  son terrestres y sí figuraban en el Anexo I de ANSE, pero no en la lista de 15 del PORN previo. Nota:
-  pendiente de una fuente primaria adicional que confirme su presencia específica en este parque.
-
-Los otros 15 (1210, 1240, 1420, 1430, 1510\*, 2110, 2230, 3250, 5210, 5220\*, 5330, 6110\*, 6220\*, 8210, 92D0)
-coinciden exactamente entre ambas fuentes, con la misma rareza/prioridad, así que se consideran confirmados
-sin reserva. No se ha quitado ningún hábitat del catálogo: se ha preferido dejar la duda anotada y visible
-para que se resuelva con calma, en vez de borrar algo que podría ser correcto.
-
-### Reconstrucción del catálogo de hábitats (9 → 21, fuente Red Natura 2000)
-
-El catálogo de hábitats se ha reconstruido por completo a partir de fuentes oficiales de Red Natura 2000, sustituyendo la selección inicial (basada en referencias de divulgación) por los **21 hábitats de interés comunitario** (Directiva 92/43/CEE) oficialmente documentados para todo el Parque Regional: 18 terrestres y 3 marinos, de los cuales 5 son prioritarios (marcados `*`).
-
-Fuentes usadas exclusivamente para esta reconstrucción:
-
-- **Anexo I del proyecto de PORN del Parque Regional Calnegre y Cabo Cope** (asociacionanse.org): catálogo completo de los 21 hábitats para todo el parque, con código, nombre, rareza (muy raro/raro/no raro) y prioridad.
-- **Standard Data Form y Plan de Gestión del LIC ES6200031 Cabo Cope** (asociacionanse.org): descripciones detalladas de las asociaciones fitosociológicas de los hábitats presentes específicamente en el sector de Cabo Cope, incluida la delimitación textual oficial de esa sub-zona (241,02 ha).
-
-Los 21 hábitats: 1110 (bancos de arena), 1120* (Posidonia oceanica), 1170 (arrecifes), 1210 (vegetación anual sobre desechos marinos), 1240 (acantilados con Limonium), 1420 (matorrales halófilos), 1430 (matorrales halo-nitrófilos), 1510* (estepas salinas/albardinal), 2110 (dunas móviles embrionarias), 2230 (dunas con céspedes del Malcomietalia), 2240 (dunas con céspedes del Brachypodietalia), 3250 (ríos con Glaucium flavum), 3280 (ríos del Paspalo-Agrostidion), 5210 (sabinar de Juniperus), 5220* (azufaifares de Ziziphus), 5330 (matorral termomediterráneo semiárido), 6110* (prados calcáreos del Alysso-Sedion), 6220* (subestepa de Thero-Brachypodietea), 7210 (turberas calcáreas de Cladium mariscus), 8210 (roquedos casmofíticos) y 92D0 (galerías de Tamarix).
-
-Los 9 hábitats que ya existían en el catálogo se mantienen (mismo slug, mismas especies asociadas) por corresponder exactamente a 9 de estos 21 códigos oficiales. Se corrige, además, la única reclasificación de especie inequívoca que surge de esta reconstrucción: **Teucrium freynii** (teucrio de Freyn) pasa de "Galerías ribereñas" (92D0) a "Roquedos casmofíticos" (8210), ya que la fuente oficial la cita como especie característica de la asociación *Cosentinio bivalentis-Teucrietum freynii*, propia de ese hábitat rocoso, y no de las galerías de ribera.
-
-Los 11 hábitats nuevos que no correspondían a especies ya presentes en el catálogo (dunas, ríos, estepas, prados y turberas) se añadieron con su código, nombre, prioridad y descripción oficial. La incorporación de especies nuevas (~25 candidatas identificadas en el Standard Data Form de 1994 y en el Anexo I del PORN) sigue pendiente para una siguiente ronda, según lo acordado; la reclasificación de especies ya existentes hacia estos hábitats se completó en la ronda siguiente (ver más abajo).
-
-### Reorganización especie-hábitat sobre el catálogo oficial de 21 hábitats
-
-Con el catálogo de 21 hábitats ya en su sitio, se releyeron las descripciones textuales de las asociaciones fitosociológicas del Plan de Gestión del LIC Cabo Cope y del Anexo I del PORN (las mismas fuentes de la reconstrucción anterior) para reclasificar 12 especies ya catalogadas hacia los hábitats que les corresponden oficialmente. Cada cambio se apoya en una cita textual concreta, no en una suposición:
-
-- **Sabina negral** (*Juniperus phoenicea*), **Espino negro** (*Rhamnus lycioides* subsp. *borgiae*) y **Pino carrasco** (*Pinus halepensis*): los tres aparecen citados en la asociación oficial 856121 *Chamaeropo humilis-Juniperetum phoeniceae* (hábitat 5210, sabinar); se añaden a "Sabinar de Juniperus" sin quitar sus hábitats previos.
-- **Cornical** (*Periploca angustifolia*) y **Lentisco** (*Pistacia lentiscus*): citados en la asociación 422011 *Mayteno-Periplocetum angustifoliae* (hábitat 5220); se añaden a "Azufaifar".
-- **Albardín** (*Lygeum spartum*) y **Siempreviva insigne** (*Limonium insigne*): son las especies dominantes de la asociación 151047 *Limonio insignis-Lygeetum sparti* (hábitat 1510, nuevo); se añaden a "Estepas salinas/albardinal".
-- **Siempreviva insigne**, **Anabasis** (*Anabasis hispanica*) y **Salsola** (*Salsola papillosa*): las tres aparecen juntas en la asociación 433413 *Limonio insignis-Anabasietum hispanicae* (hábitat 5330); se añaden a "Matorral semiárido".
-- **Cambrón** (*Lycium intricatum*): es la especie dominante de la asociación 143016 *Whitanio frutescentis-Lycietum intricati* (hábitat 1430, no 1420 como estaba asignada); esa misma asociación cita como acompañantes a *Lygeum spartum* y *Asteriscus maritimus* (este último ya estaba correctamente en 1430 desde la auditoría anterior). Se corrige *Lycium intricatum* de "Matorral halófilo" a "Matorral halo-nitrófilo" y se añade *Lygeum spartum* también a ese hábitat.
-- **Taray** (*Tamarix africana*): se añade a "Galerías de Tamarix" (92D0 = Nerio-Tamaricetea, el hábitat definido precisamente por el género Tamarix), sin quitar el matorral halófilo original.
-- **Azucena de mar** (*Pancratium maritimum*): se traslada de "Matorral halo-nitrófilo" a "Dunas móviles embrionarias" (2110), resolviendo el vacío de hábitat dunar detectado en la auditoría anterior. A diferencia de los cambios anteriores, esta es una **inferencia ecológica mía** (es una especie típica de dunas costeras), no una cita textual directa: ni el Plan de Gestión del LIC Cabo Cope ni el Anexo I del PORN mencionan expresamente *Pancratium maritimum* entre las especies indicadoras de esa asociación (que cita *Elymus farctus* y *Sporobolus pungens*). Queda marcada con `reviewNote` para que se confirme.
-
-Los 7 hábitats que siguen sin especies asociadas (1210, 2230, 2240, 3250, 3280, 6110, 6220) es porque ninguna especie ya catalogada coincide con las especies indicadoras que citan las fuentes oficiales para esas asociaciones concretas; sus especies candidatas forman parte de la ampliación pendiente del catálogo.
-
-### Auditoría de coherencia especie-hábitat
-
-Se comparó el texto libre `habitat` y las coordenadas de cada una de las 44 especies contra el hábitat estructurado que tenía asignado, y se corrigieron 4 casos donde ambos discrepaban del original (en `cabo-cope.json` y en el parche SQL de `species_habitats`):
-
-- **Ajo de flor oscura** (*Allium melananthum*): se añade el hábitat "Matorrales halófilos" (sus coordenadas caen dentro de ese círculo y su descripción cita el albardín, especie indicadora), sin quitar el matorral semiárido original.
-- **Siempreviva insigne** (*Limonium insigne*): estaba solo en "Matorral semiárido", que no aparece mencionado en ningún lugar de su ficha; se corrige a "Matorrales halófilos" + "Acantilados", que es justo lo que dice su propio texto ("Saladar y acantilados de la marina de Cope").
-- **Zamarrilla lanuda** (*Teucrium lanigerum*): estaba en "Matorrales halófilos" por error; su texto ("Cerros carbonatados", sin mención de suelo salino) y coordenadas encajan con "Matorral semiárido", igual que el Rabogato (*Sideritis ibanyezii*), que comparte el mismo hábitat textual.
-- **Margarita de mar** (*Asteriscus maritimus*): se añade "Acantilados" (su descripción cita literalmente "roquedos y acantilados costeros" y sus coordenadas están a ~150 m del centro de ese hábitat), manteniendo el matorral halonitrófilo original.
-
-Limitación detectada de paso: la *Azucena de mar* (*Pancratium maritimum*) vive en dunas y playas, pero el catálogo de 9 hábitats no incluye ningún hábitat dunar/de playa; se mantiene en "Matorral halonitrófilo" por ser la opción más cercana disponible. Si se añade cartografía de hábitats más detallada, valdría la pena crear un hábitat de dunas litorales.
-
-## Actualización a partir del PORN de Calnegre y Cabo Cope (documento previo, CARM 2021)
-
-Se ha contrastado el catálogo contra el [Documento previo del PORN de Calnegre y Cabo Cope](https://transparencia.carm.es/wres/transparencia/doc/Organos-colegiados/Consejo_Asesor_Regional_Medio_Ambiente/2021-02-18/PORN_CALNEGRE_Documento_previo_CARMA.pdf) (CARM, 2021), el instrumento de planificación ambiental más autorizado disponible para este espacio. Es un documento *previo* de 28 páginas: solo su apartado "Patrimonio natural y biodiversidad" tiene contenido sustantivo (hábitats, especies catalogadas, fauna); la zonificación por usos todavía no está redactada en esta versión. (El límite del mapa **sí** se ha actualizado después a la geometría oficial del Parque Regional y de la Red Natura 2000 — ver "Mapa: zonas protegidas oficiales" más arriba.)
-
-- **22 especies nuevas** incorporadas al catálogo (66 especies en total, antes 44): 3 de flora del Catálogo Regional de Flora Silvestre Protegida citadas expresamente para la zona y ausentes hasta ahora (*Centaurea saxicola* -cardo amarillo de roca-, *Lafuentea rotundifolia* -orejilla de roca- y *Senecio flavus*) y 19 de fauna citadas en el documento (mamíferos carnívoros: gato montés, gineta, garduña, tejón; aves de matorral, saladar y playa: terrera marismeña, terrera común, cogujada montesina, curruca rabilarga, collalba negra, mochuelo europeo, perdiz roja, chorlitejo patinegro, correlimos tridáctilo, vuelvepiedras, ostrero euroasiático, charrancito común; reptiles: lagartija colilarga, culebra bastarda, lagartija colirroja). Todas incluyen `reviewNote` indicando que el PORN cita su presencia sin detallar categoría de protección regional exacta ni, en el caso de *Senecio flavus*, hábitat o nombre común.
-- *Ziziphus lotus* (Azufaifo) **ya existía** en el catálogo (no se duplicó); solo se amplió su fuente con la cita del PORN, que confirma su categoría Vulnerable.
-- **6 especies ya existentes confirmadas** con categoría oficial exacta y cita añadida a su fuente: Cornical, Chumberillo de lobo, Ajo de flor oscura y Salsola (las cuatro ya estaban como Vulnerable, ahora con respaldo directo del PORN) y dos correcciones de categoría: **Arto** (*Maytenus senegalensis* subsp. *europaea*) pasa de "pendiente de confirmar" a **Vulnerable**, y **Espartilla de Persia** (*Enneapogon persicus*) pasa de "de interés especial" a **en peligro de extinción** en el Catálogo Regional de Murcia (categoría distinta de su "en peligro crítico" nacional, que no cambia).
-- **Conflicto de recuento de hábitats sin resolver**: el PORN dice que los LIC de Calnegre y Cabo Cope suman **15 tipos de hábitat** (4 prioritarios), no 21. Coincide con 15 de los 21 códigos ya catalogados; los 6 restantes (1110, 1120\*, 1170, 2240, 3280, 7210) no aparecen en esta lista oficial "de los LIC de Calnegre y Cabo Cope". El documento sí menciona que el LIC Cabo Cope linda con la ZEC marina "Franja Litoral Sumergida de la Región de Murcia" (ES6200029), lo que podría explicar los 3 hábitats marinos (1110, 1120\*, 1170) como pertenecientes a esa zona adyacente y no al LIC en sí; los otros 3 (2240, 3280, 7210) quedan sin explicación por ahora. Se mantienen los 21 en el catálogo por precaución, pero conviene revisar el Standard Data Form u otra fuente que justificara originalmente esos 6 códigos antes de darlos por buenos.
-
-### Completado del catálogo de flora protegida (Anexo I del proyecto de PORN, ANSE)
-
-La flora vascular total del parque se estima en **322 especies y subespecies** (dato de Wikipedia, atribuido a Alcaraz Ariza, *"La Marina de Cope: ¿los últimos días de un paraíso botánico?"*, *Eubacteria* nº5, Universidad de Murcia; el [Anexo I del proyecto de PORN](https://www.asociacionanse.org/wp-content/uploads/2020/12/ANEXO-I_PROYECTO_PORN_COPE.pdf) de ANSE lo corrobora como ">320 taxones de flora vascular" solo en las ~800 ha de vegetación natural de la Marina de Cope). **Ese inventario florístico completo no está publicado en ninguna fuente accesible en línea**: ni el documento previo del PORN, ni el Anexo I de ANSE, ni Wikipedia ni RegMurcia enumeran las 322; solo publican la tabla de flora protegida (~40 taxones), una lista de especies invasoras y algunos ejemplos en prosa. El catálogo de la app **no pretende, por tanto, cubrir las 322**, sino el subconjunto realmente documentado.
-
-Sí se ha completado la **lista oficial de flora protegida del parque** (~40 taxones del Catálogo Regional de Flora Silvestre Protegida, Decreto 50/2003, según el Anexo I de ANSE). De esos ~40, 26 ya estaban en el catálogo y se han añadido los **12 taxones que faltaban** (78 especies en total, antes 66): *Chamaerops humilis* (palmito), *Cynomorium coccineum* (cinomorio), *Eragrostis papposa*, *Erodium sanguis-christi*, *Lavandula dentata* (cantueso dentado), *Lavandula multifida* (alhucema), *Leucanthemum decipiens*, *Limonium cossonianum* (siempreviva de Cosson, especie dominante de los acantilados según la asociación *Limonio cossoniani-Lycietum intricati*), *Osyris lanceolata* (bayón), *Quercus coccifera* (coscoja), *Sarcocapnos enneaphylla* subsp. *saetabensis* (zapatito de la Virgen, del hábitat rocoso 8210) y *Serratula mucronata*. Notas:
-
-- Se descartaron *Rhamnus hispanorum* (sinónimo del Espino negro ya catalogado, *Rhamnus lycioides* subsp. *borgiae*) y *Tamarix canariensis* (co-citada con el Taray, *Tamarix africana*, ya presente).
-- La tabla del PDF del Anexo tiene los **nombres comunes descolocados de columna** (etiqueta a *Cynomorium* como "palmito", que en realidad es *Chamaerops*, etc.); se han usado los nombres científicos y nombres comunes correctos, no los del PDF.
-- Para *Chamaerops humilis*, *Osyris lanceolata*, *Limonium cossonianum* y *Sarcocapnos enneaphylla* subsp. *saetabensis* el hábitat se apoya en la asociación fitosociológica citada por las fuentes oficiales; para las 8 restantes la asignación de hábitat es una **inferencia ecológica** (marcada con `reviewNote`) y las coordenadas son representativas, no de una localización verificada en campo.
-
-## Catálogo organizado por hábitat
-
-La pestaña Catálogo ya no empieza con las 78 especies en una lista plana: empieza mostrando los **21
-hábitats** (con su código, prioridad UE, color y recuento de especies vistas/total). Al pulsar uno se
-entra a la lista de especies que viven ahí, con los mismos filtros y buscador de siempre, y un enlace
-"← Hábitats" arriba para volver. Sigue habiendo un acceso directo "Ver todas las especies" para quien
-prefiera la lista completa sin pasar por ningún hábitat. Este cambio de orden refleja mejor cómo se
-explora el parque en la práctica: primero se está *en* un hábitat, y dentro de él se buscan sus especies,
-no al revés.
-
-La misma lista de hábitats es también la entrada a las 6 fichas marcadas para revisión (ver más arriba):
-se ven con el badge "a revisar" desde el primer vistazo, igual que ya pasaba con las especies dudosas.
-
-## Modo explorador y hoja de ruta hacia la app móvil
-
-NaturDex está pensado para acabar siendo una **app móvil que funcione como guía ambiental virtual**: en vez
-de que el usuario busque cosas en una lista, la propia app le va mostrando lo que tiene alrededor a medida
-que camina por el parque, registrando su posición en tiempo real.
-
-Como primer paso concreto en esa dirección se ha añadido el **modo explorador** (botón "📍 Modo explorador"
-sobre el mapa): activa el GPS del dispositivo de forma continua (`navigator.geolocation.watchPosition`),
-sitúa un punto azul pulsante en la posición real del usuario y muestra un panel "Cerca de ti" con los
-puntos de interés y hábitats ordenados por distancia (metros o km), marcando "¡Estás aquí!" cuando se está
-a menos de 60 m de uno de ellos. Es la misma infraestructura de geolocalización que ya usa el registro de
-avistamientos de especies (ver más arriba), reutilizada aquí para orientación en vez de para guardar una
-ubicación puntual.
-
-Esto dista todavía de una app nativa con geofencing en segundo plano, pero deja sentada la lógica central
-(distancia en tiempo real a cada elemento del catálogo) que una futura app solo tendría que envolver en:
-notificaciones push cuando se entra en el radio de un punto, desbloqueo automático de fichas/logros al
-pasar por una zona, y registro de recorrido en vez de solo del punto de avistamiento.
-
-También se ha hecho un pase de diseño gráfico: icono distinto por tipo de punto de interés (ver arriba),
-foto con recorte en los popups del mapa, tarjetas con elevación sutil al pasar el ratón, control de capas
-que arranca colapsado en pantallas estrechas para no solapar con el panel "Cerca de ti", y un marcador de
-usuario animado. El diseño sigue usando la misma paleta y tipografía de siempre; el cambio es de pulido
-(sombras, transiciones, jerarquía visual), no una reestructuración.
-
-## Flujo de entrada: portada → login → mapa de España → parque
-
-La app ya no arranca directamente en Cabo Cope. Es una **app de una sola página con pantallas** (no
-páginas HTML separadas, para mantener el offline y la futura app móvil simples), gestionadas por
-`auth.js`:
-
-1. **Portada** con el nombre de la app y un botón *Comenzar*.
-2. **Login / registro** (`Backend/Api/auth.php`): **cuentas reales** en MySQL (tabla `users`), con
-   contraseñas hasheadas (`password_hash`/`password_verify`) y **sesión PHP**. Si ya hay sesión
-   iniciada, este paso se salta.
-3. **Mapa de España** (selector ligero): un mapa centrado en España con un marcador por cada parque
-   *disponible* y un **desplegable agrupado por comunidad autónoma y provincia** (leído de
-   `parks-index.json`). Incluye un botón **"Ir al parque más cercano a mí"** que usa el GPS y calcula
-   por distancia (haversine) el parque disponible más próximo. En este prototipo solo aparece Cabo
-   Cope; la estructura ya admite el resto de España sin tocar código.
-4. **Parque**: al elegirlo, `auth.js` llama a `startParkExperience(slug, user)` de `app.js`, que carga
-   **solo entonces** todo lo pesado del parque (datos, geometría, imágenes). Así el mapa no se satura ni
-   se cargan todos los parques de golpe. Dentro del parque hay un "← Parques" para volver al selector y
-   un botón de cerrar sesión.
-
-**Progreso por usuario**: cada cuenta guarda su propio descubrimiento en cada parque. El progreso se
-persiste en la tabla `user_progress` (una fila por usuario y parque, con el mismo JSON de antes) y,
-en el dispositivo, en `localStorage` con una clave que combina usuario + parque (`u<id>:<slug>`), de
-modo que ni las cuentas ni los parques se mezclan. El endpoint `progress.php` exige sesión (responde
-401 si no la hay). Nota de prototipo: para producción, servir por HTTPS y endurecer la sesión.
-
-## La cabecera del parque: qué es este sitio
-
-La pantalla de un parque se abre con su cartel, y ahí se responde a lo primero que se pregunta quien
-acaba de entrar: **qué es este sitio**. Tres piezas, en este orden:
-
-1. **Figura de protección y superficie oficial**, en la línea de encima del rótulo
-   («Parque Regional · 2666 ha»). La superficie sale de las propiedades del propio límite oficial
-   (`geo/parque.geojson`), la misma geometría que se dibuja en el mapa, así que la tienen los
-   dieciséis espacios, tengan catálogo o no, sin un campo más que mantener a mano.
-2. **La descripción del espacio**: qué paisaje es y qué se ve allí. La escribe una persona —es el
-   único texto del pipeline que no sale de una fuente oficial— y vive en
-   `Tools/catalogo-nacional/data/descripciones-espacios.json`, de donde la toma el generador de
-   espacios (`build-n1-espacios.js`), de modo que una regeneración no puede pisarla. Entre 130 y 150
-   caracteres: es lo que se lee **entero** en el hueco que la cabecera le reserva. Antes de esto, los
-   trece espacios de ficha base llevaban una frase administrativa generada («Paisaje Protegido de la
-   Región de Murcia, con una superficie oficial de… Solapa con los espacios de la Red Natura 2000…»)
-   que además repetía, palabra por palabra, lo que ya decían las filas de datos de su propia ficha.
-3. **Los tres recuentos de lo que se colecciona**: hábitats, especies y puntos de interés. La tercera
-   casilla eran los kilómetros de costa, un dato que ni se colecciona ni existe en un espacio de
-   interior (salía «—» en trece de los dieciséis). Un espacio sin puntos cargados todavía muestra
-   «—», no un cero: el dato está pendiente, no vacío.
-
-## Hábitats por grupos
-
-Un parque trae entre once y veintiún hábitats de interés comunitario, y hasta ahora se presentaban
-como **una lista plana** en los tres sitios donde aparecen: el panel de capas (que es también la
-leyenda), el catálogo y la pestaña de progreso. Con esa lista no había forma de recorrerlos con
-tranquilidad ni, sobre todo, de gestionar el **solapamiento en el mapa**: los polígonos se pisan unos
-a otros y apagarlos de uno en uno, con veintiuna casillas, no es manejable en un móvil en el campo.
-
-`Frontend/Js/habitat-groups.js` reparte los hábitats en **siete grupos de características similares**,
-ordenados del mar hacia dentro: costa y dunas, saladares y estepas salinas, ríos y riberas,
-matorrales, pastizales, roquedos y bosques. El criterio es el **código HIC** (anexo I de la Directiva
-92/43/CEE), que ya agrupa por grandes tipos; solo si el hábitat viniera sin código se recurre al campo
-`type` del catálogo. Los bosques de galería (91B0, 91E0, 91F0, 92A0-92D0) van con el agua y no con los
-bosques, porque es el río lo que los explica.
-
-Cada grupo lleva **su trama y su tinta**, y son las mismas en los tres sitios:
-
-- **En el mapa**, la trama de un polígono dice de qué grupo es; su **borde** toma el color propio del
-  hábitat en el catálogo, que es lo que lo distingue de sus hermanos de grupo.
-- **En la leyenda** (panel de «Capas»), cada grupo es una fila con su muestra de trama, su recuento,
-  su casilla para encenderlo o apagarlo entero y un «Solo» que **aísla ese grupo en el mapa**. Al
-  abrir un grupo se despliega el desglose de sus hábitats, con la casilla, el color y el «Solo» de
-  cada uno. Solo hay un grupo desplegado a la vez.
-- **En el catálogo**, la navegación baja tres niveles: grupos → hábitats del grupo → especies del
-  hábitat. Entrar en un grupo lo aísla también en el mapa, así que las tres vistas cuentan lo mismo.
-  El buscador sigue siendo plano: escribir «duna» encuentra el hábitat sin saber en qué grupo cae.
-- **En el progreso**, las barras por hábitat van bajo la cabecera de su grupo, con el mismo orden.
-
-## Navegación e interacción: el modelo de "un paso atrás"
-
-Al ser una app de una sola página, durante un tiempo todo lo que se abría (pantallas, pestañas de la
-nav inferior, la ficha deslizante, las etiquetas del mapa) era **una única entrada de historial**
-para el navegador. Consecuencia: el botón «atrás» del móvil —y el gesto de deslizar desde el borde,
-que es como navega la mayoría de la gente— no deshacía el último paso, sino que **sacaba de la web
-entera**, con el trabajo a medias. Y la pestaña «Mapa», que es la primera que se ve al entrar a un
-parque, no tenía ningún botón de volver: la cabecera con «← Parques» vive en la barra lateral, que
-en esa pestaña está oculta.
-
-`Frontend/Js/nav.js` resuelve las dos cosas con una regla única: **todo lo que se abre es un nivel
-apilado, y «atrás» cierra el nivel de arriba**, venga del botón del sistema, de la tecla Escape o de
-un botón de la interfaz. Cada nivel añade su entrada de historial (que solo guarda la profundidad de
-la pila, no qué había abierto), y cerrar a mano desapila y retrocede a la vez, para que la pila y el
-historial no se separen nunca. La pila típica dentro de un parque, de fuera hacia dentro:
-
-```
-portada → selector → parque → pestaña (catálogo/invasoras/progreso) → grupo → hábitat → ficha
-                            └→ perfil / progreso estatal        (encima de donde estabas)
-                            └→ panel de capas · etiqueta del mapa · tutorial
+Guía ambiental virtual de los espacios naturales protegidos de España. Una PWA orientada a móvil que
+funciona sin cobertura: mapa con los límites oficiales, catálogo de hábitats y especies, fichas
+divulgativas, y una mecánica tipo pokédex en la que descubrir una especie exige **estar allí** (la
+posición se verifica contra el límite oficial del espacio).
+
+> **Si retomas este proyecto en una sesión nueva, lee este documento entero antes de tocar nada.**
+> Está escrito para que el proceso de dar de alta un espacio nuevo sea reproducible sin volver a
+> descubrir de dónde sale cada dato. El histórico de decisiones —qué se hizo cada día y por qué— está
+> en `Docs/rollout/ESTADO.md`; aquí solo está el **procedimiento vigente**.
+
+## Estado (2026-08-04)
+
+| | |
+|---|---|
+| Espacios dados de alta | **16** de los 21 de la Región de Murcia (4 descartados por reglas de producto, 1 retirado) |
+| Con catálogo completo (**N2**) | 3 — Cabo Cope y Puntas de Calnegre (15 hábitats · 175 especies · 15 POIs), Sierra Espuña (13 · 190 · 0), Cuatro Calas (7 · 102 · 0) |
+| Con ficha base (**N1**) | 13 — límite oficial y Red Natura 2000, sin catálogo |
+| Catálogo universal de especies | **353** fichas distintas reutilizadas entre espacios |
+| Invasoras · glosario · logros | 25 · 219 términos · 52 logros |
+| Comunidades autónomas cubiertas | 1 de 17 |
+
+El ledger espacio por espacio, con códigos ENP y huecos conocidos, está en `Docs/rollout/ESTADO.md`.
+
+---
+
+## 1. Arranque rápido
+
+```bash
+# Entorno completo (PHP + MySQL + Caddy)
+cp .env.example .env       # las contraseñas son OBLIGATORIAS: sin ellas `up` falla a propósito
+docker compose up -d       # la app queda en http://localhost:${WEB_PORT:-8080}
+docker exec -i naturdex-db-1 sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" mysql' < Database/schema.sql
+docker exec -i naturdex-db-1 sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" mysql naturadex' < Database/seed.sql
+
+# Solo el frontend. Basta para casi todo el trabajo de datos: la app es offline-first y lee los
+# park.json empaquetados; el backend es una mejora, no un requisito.
+php -S localhost:8000 -t Frontend
+
+npm install          # una sola dependencia: polygon-clipping
+npm run validate     # red de seguridad de los datos empaquetados — TIENE que salir en verde
+npm run hooks:install
 ```
 
-Piezas concretas:
+Para actualizar una instalación antigua: `Database/migrations.sql` antes que nada (son `ALTER`
+idempotentes). Despliegue: `DEPLOY.md`. Despliegue estático sin backend: `Docs/DESPLIEGUE_ESTATICO.md`.
 
-- **Barra superior del mapa** (`.map-topbar`, solo móvil): «← Parques», nombre del parque y perfil.
-  Le da salida y contexto a la pantalla con la que se abre un parque.
-- **Botones de volver** (`.back-btn`): chevrón + palabra, altura táctil completa (44 px) y el mismo
-  aspecto y sitio en todas las pantallas. Antes eran enlaces de texto de ~24 px de alto.
-- **Salir de la app** pide una segunda pulsación («Pulsa "atrás" otra vez para salir»), como es
-  costumbre en Android. Solo se activa a partir del primer paso dentro de la app: quien acaba de
-  aterrizar en la portada y se va no se encuentra ningún obstáculo.
-- **El mapa es la "casa" del parque**: «atrás» desde cualquier pestaña vuelve al mapa, y solo desde
-  el mapa se sale al selector. No se encadenan pestañas visitadas como si fueran páginas.
-- **El historial se pone al día al final del turno**, no en cada apertura o cierre. `history.go()` es
-  asíncrono, así que un manejador que cerraba un nivel y abría otros dos —cerrar la ficha de un
-  hábitat y entrar en el catálogo de sus especies, por ejemplo— disparaba un retroceso que llegaba
-  *después* de las nuevas entradas, aterrizaba en una profundidad menor y **deshacía solo lo que el
-  usuario acababa de abrir**: se pulsaba «ver las especies de este hábitat» y la pantalla volvía al
-  mapa sin nada. Apilando el saldo real del turno en una microtarea, esa carrera no existe.
+---
 
-### Etiquetas del mapa: fichas, no globos
+## 2. Mapa del repositorio
 
-Los puntos de interés, las especies y los hábitats abrían un **globo de Leaflet** con toda su
-información. Eso daba tres problemas, todos de la misma familia:
+```
+Frontend/            PWA (sin framework, sin build). Módulos ES en Js/, datos empaquetados en Data/
+  Data/parks-index.json          registro: comunidad → provincia → espacios, con su `status`
+  Data/parks/<prov>/<slug>/      park.json + manifest.json + geo/*.geojson + tiles/base.pmtiles
+  Js/api.js                      ÚNICO punto de contacto con Backend/Api (corte por tiempo, errores)
+  Js/data.js                     carga de registro/manifiesto/datos/geo + progreso local-first
+  sw.js                          Service Worker (network-first). Su lista SHELL_ASSETS hay que
+                                 mantenerla al día: un módulo nuevo sin precachear rompe el offline
+Backend/             API PHP + MySQL
+  Api/*.php                      endpoints; todos arrancan con apiBoot() de Lib/api.php
+  Lib/api.php                    prólogo común: cabeceras, CORS, preflight, sesión, respond()
+  Lib/park_payload.php           forma canónica del JSON de un parque (API y exportador comparten)
+  Lib/presence.php               verificación de presencia real (antitrampas). Ver Docs/
+AdminPanel/          panel de administración (React+Vite) → se compila a Frontend/admin/
+Database/            schema.sql (DDL) · seed.sql (datos) · migrations.sql (ALTER idempotentes)
+Tools/               tooling zero-dep (salvo polygon-clipping)
+  lib/                           INFRAESTRUCTURA COMPARTIDA — empieza siempre por aquí
+  catalogo-nacional/             el pipeline de datos por espacio
+    data/descripciones-espacios.json   la descripción de cada espacio (texto redactado a mano)
+Docs/                documentación temática + rollout/ESTADO.md (el histórico)
+```
 
-1. **No se centraban.** El `autoPan` de Leaflet empuja el mapa lo justo para que el globo entre en el
-   *contenedor*, que en móvil está tapado por arriba (barra del parque) y por abajo (nav inferior y
-   ficha). El globo acababa medio oculto, o el mapa parecía no moverse.
-2. **Tocar fuera no cerraba.** El mapa está cubierto de polígonos clicables (el límite del parque,
-   los LIC/ZEPA, los hábitats), así que "fuera" casi nunca era mapa vacío: era otro polígono, que
-   abría *su* globo. Desde fuera parecía que la etiqueta no se cerraba nunca.
-3. **No cabían.** La ficha de un punto de interés (foto, descripción, audioguía, botón de marcar) en
-   un globo sobre un móvil ocupa casi la pantalla entera.
+### `Tools/lib/` — la infraestructura compartida
 
-Ahora:
+Antes de escribir una herramienta nueva, mira si lo que necesitas ya está aquí. Todo el tooling
+depende de estos módulos, y cada uno existe porque su lógica estaba copiada y las copias divergieron.
 
-- Tocar un punto, una especie o un hábitat abre su **ficha en el mismo sitio donde se leen todas las
-  fichas**: la columna derecha en escritorio, la hoja deslizante en móvil. Un solo contenedor de
-  información, con un solo modo de cerrarse (✕, velo, Escape o «atrás»).
-- Abierta desde el mapa, la hoja se queda a **media altura** y el mapa se recoloca para que lo que se
-  acaba de tocar quede en la franja visible; el asa la sube a pantalla casi completa. Todo encuadre
-  pasa por `chromeInset()` en `map.js`, que descuenta barras y hoja.
-- Con una etiqueta abierta, **la siguiente pulsación fuera solo cierra** (un guardián en el
-  contenedor del mapa se come ese toque antes de que Leaflet abra nada más). Tocar *otro* marcador sí
-  pasa: cambiar de punto no debe costar dos toques.
+| Módulo | Qué da | Por qué está aquí |
+|---|---|---|
+| `cli.js` | `arg` `num` `flag` `requireArgs` `die` `sleep` | Admite `--x v` y `--x=v`, y el nombre con o sin guiones. Había catorce copias con dos convenciones incompatibles |
+| `http.js` | `getText` `getJson` `pool` | Acumula en Buffer (no parte caracteres multibyte), comprueba el `statusCode` y reintenta ante 429/5xx |
+| `io.js` | `ROOT` `FRONTEND` `PARKS_DIR` `REGISTRY_FILE` `readJson` `writeJson` `parkFiles` `rel` | La raíz se resuelve una vez. `writeJson` usa el formato canónico (2 espacios + salto final): escribir de otra forma produce un diff completo aunque no cambie ningún dato |
+| `eidos.js` | `resolveTaxon` `conservationByScope` `legalStatus` `commonName` | Cliente de EIDOS/IEPNB. `resolveTaxon` es **la clave maestra** del modelo (ver §4) |
+| `gbif.js` | `matchName` `searchOccurrences` `esRangoEspecifico` | `matchName` devuelve el rango: una `usageKey` de género o familia no identifica ninguna especie |
+| `registry.js` | `resolvePark` `readBoundaryPolygons` | Localiza los geo de un espacio. Acepta `available` **y** `basic` (un N1 ascendiendo a N2 es justo el caso de uso) |
+| `geo.js` `shapefile.js` `dbf.js` | punto-en-polígono, áreas, parser `.shp` + reproyección UTM, lector dBASE | Sin dependencias |
+| `wikimedia.js` | resolución de foto de un taxón contra Wikidata/Wikipedia/Commons | Lo delicado no es pedir la foto sino **descartar** la que no sirve (§6) |
+| `db.js` | acceso al MySQL del contenedor por `docker exec` | La contraseña va por `MYSQL_PWD`, nunca en la línea de órdenes |
+| `sql.js` | `sqlStr` `sqlStrOrNull` `sqlNum` `sqlJson` | Escapa la barra invertida, que MySQL trata como carácter de escape |
 
-## Arquitectura escalable a toda España (por provincias)
+---
 
-El proyecto se ha reestructurado para poder crecer a **todos los parques naturales y nacionales de España**
-sin rehacer nada, manteniendo el foco actual **solo en Cabo Cope y Puntas de Calnegre** (es el único parque
-con datos; el resto queda como estructura vacía lista para rellenar, sin inventar nada).
+## 3. El modelo: dos niveles de dato y tres capas
 
-- **Registro de parques** (`Frontend/Data/parks-index.json`): árbol *comunidad autónoma → provincia →
-  parques*, cada parque con su `status` (`available` / `planned`) y las rutas a sus ficheros. Hay un
-  `defaultPark` que es el que abre la app.
-- **Un directorio por parque** bajo su provincia: `Frontend/Data/parks/<provincia>/<parque>/` con
-  `park.json` (datos), `manifest.json` (lista de activos) y `geo/` (GeoJSON). El paso de `cabo-cope.json`
-  + `Data/geo/` sueltos a esta estructura ya está hecho para el parque piloto. Cómo añadir uno nuevo:
-  `Frontend/Data/parks/README.md`.
-- **Cargador agnóstico al parque**: `app.js` ya no tiene rutas fijas. Lee el registro, resuelve el parque
-  activo, carga su manifiesto y de ahí saca datos y geometría. Cambiar de parque en el futuro será elegir
-  otro slug, sin tocar código.
-- **Backend ya multi-parque**: la base de datos indexa todo por `park_id` y `species.php?park=<slug>` sirve
-  cualquiera; `parks.php` devuelve además la agrupación por comunidad/provincia para un futuro selector.
+**Dos niveles.** Hacer cada espacio completo antes de pasar al siguiente dejaría el mapa de España
+vacío durante años, así que se separan:
 
-## Funcionamiento sin conexión (para la app móvil)
+| Nivel | `status` | Contenido | Coste |
+|---|---|---|---|
+| **N1 · ficha base** | `basic` | Límite oficial, códigos Natura 2000, figura, superficie, municipios, `summary` | Lote automático: decenas de espacios por sesión |
+| **N2 · completo** | `available` | Hábitats HIC recortados, catálogo de especies con evidencia, POIs, fotos, audioguías | Una sesión larga por espacio |
 
-Muchos parques no tienen cobertura, así que la app está preparada para **guardar un parque en el
-dispositivo y usarlo sin internet**. La estrategia es por capas, de más garantizada a más completa
-(`Frontend/Js/offline.js`):
+Todo espacio nace N1 y asciende cuando le toca. `planned` es un espacio anunciado sin carpeta de datos.
 
-1. **Caché automática en `localStorage`** de todo JSON que se descarga (registro, manifiesto, datos del
-   parque y los 5 GeoJSON). Con **visitar un parque online una sola vez**, sus datos y sus mapas vectoriales
-   (límite, LIC, ZEPA, senderos, hábitats) quedan disponibles offline la próxima vez. No necesita nada más.
-2. **Botón "Guardar sin conexión"** (barra bajo el resumen del parque): además de lo anterior, descarga las
-   **imágenes** (binarias) a la Cache Storage del navegador y marca el parque como guardado. Así las fotos
-   también funcionan offline, no solo el icono de reserva.
-3. **Service Worker** (`sw.js`): cachea el **armazón de la app** (HTML/CSS/JS) para que arranque sin red.
-   Usa estrategia **network-first en todo**: estando online sirve siempre la versión fresca de la red (la
-   caché es solo respaldo para cuando no hay conexión), de modo que la app nunca se queda "atascada" en una
-   versión antigua. Es una mejora progresiva: si el navegador no lo admite, las capas 1 y 2 siguen funcionando.
+**Tres capas**, la misma arquitectura para cada espacio:
 
-Además, el **progreso del usuario es local-first**: se guarda siempre en el dispositivo (`localStorage`) y,
-cuando hay backend, se sincroniza con el servidor por unión (nunca se pierde un "visto" registrado sin
-cobertura). Lo marcado sin red entra en una **cola de pendientes** persistida que se vacía al recuperar
-conexión y al arrancar; es idempotente (`progress.php` acepta lotes y trabaja por unión), así que
-reintentar nunca duplica. Un **indicador de conexión** ("En línea" / "Sin conexión · parque guardado")
-avisa del estado.
+```mermaid
+flowchart TD
+  subgraph F["Fuentes oficiales / científicas / públicas"]
+    ENP["ENP · Espacios Naturales Protegidos<br/>IEPNB/MITECO"]
+    N2K["Red Natura 2000 (LIC/ZEC + ZEPA)<br/>IEPNB — da los códigos ES…"]
+    IMIDA["Geoportal autonómico (IMIDA/CARM)<br/>delimitación de más detalle"]
+    HIC["Cartografía de Hábitats 92/43/CEE<br/>MITECO/BDN · SHP + Habi&lt;NN&gt;.dbf"]
+    ATLAS["Atlas y Manual de los Hábitats de España<br/>especies características por HIC"]
+    EIDOS["EIDOS · IEPNB (PostgREST, sin auth)<br/>taxonomía · UICN · estado legal"]
+    GBIF["GBIF · ocurrencias georreferenciadas"]
+    BISE["EEA Discodata · Site_Species_List<br/>especies oficiales por sitio Natura 2000"]
+    WM["Wikidata / Wikipedia / Commons<br/>fotos con licencia"]
+  end
 
-### Mapa base sin conexión
+  C1["CAPA 1 · Límite<br/>geo/parque.geojson (WGS84)"]
+  C2["CAPA 2 · Hábitats<br/>geo/habitats.geojson: HIC + asociación + prioridad"]
+  C3["CAPA 3 · Especies<br/>species + species_habitats (con evidencia)"]
 
-Cada parque puede traer su propio **paquete de teselas** (`manifest.tiles` → `tiles/base.pmtiles`), que se
-descarga con el resto al pulsar "Guardar sin conexión" y se sirve desde nuestro dominio. Sin cobertura la
-app conmuta sola a esa capa, así que se ve un mapa de verdad en lugar del fondo vacío de antes.
+  ENP --> C1
+  N2K --> C1
+  IMIDA -->|refina el dibujo| C1
+  C1 --> C2
+  HIC -->|"reproyectar UTM→WGS84 · join por CODIGO · recortar al límite"| C2
+  C2 --> C3
+  ATLAS -->|evidencia 'caracteristica'| C3
+  GBIF -->|"evidencia 'observada_gbif' (∩ polígono, sin Aves)"| C3
+  BISE -->|"evidencia 'zepa' (aves, por site_code)"| C3
+  EIDOS -->|taxonomía y estado · PRINCIPAL| C3
+  WM --> C3
+```
 
-Se genera con `npm run tiles:build <slug>`, que recorta el basemap de Protomaps al **límite oficial del
-parque** (no al bbox: en un parque costero medio bbox es mar). Pesa ~1 MB por parque frente a las decenas
-que costaría el mismo ámbito en ráster, y al ser vectorial sigue siendo legible más allá de su zoom máximo.
+### El principio que lo gobierna todo
 
-**Por qué Protomaps y no OSM directamente:** la [política de teselas de OSM](https://operations.osmfoundation.org/policies/tiles/)
-prohíbe expresamente el prefetch y el uso sin conexión de sus servidores, así que empaquetar desde ahí no
-es una opción. El basemap de Protomaps es una *Produced Work* de OSM bajo ODbL: se puede redistribuir
-exigiendo atribución `© OpenStreetMap`, que viaja en el propio manifiesto para poder pintarla también sin
-red. El PNOA del IGN (CC BY 4.0) **sigue siendo solo online**: una ortofoto no se puede vectorizar y
-empaquetarla exigiría un pipeline aparte desde el Centro de Descargas del CNIG.
+> **Ninguna base de datos oficial dice «la especie X vive en el polígono de hábitat Y».**
+> Ese vínculo **siempre es derivado**. Lo sólido es construirlo cruzando dos señales y guardando **de
+> dónde sale cada una**: por eso `species_habitats` tiene una columna `evidence`. Todo lo demás
+> (límites, hábitats, taxonomía, estado de conservación) sí es dato oficial directo.
 
-El validador comprueba que el paquete existe, que `bytes` cuadra con el fichero, que hay atribución y que
-el parque cabe en el **presupuesto de 25 MB** (mapa + fotos + audio); el botón anuncia el peso antes de
-descargar ("Guardar sin conexión · 2,9 MB") y pide confirmación por encima de 20 MB.
+Corolario operativo, y la regla que manda sobre todas las demás:
+**ante la duda, hueco documentado antes que dato inventado.**
 
-## Pestaña "Progreso"
+### Las especies son nacionales, no del parque
 
-La barra lateral tiene ahora dos pestañas: **Catálogo** (vista de siempre) y **Progreso**, con:
+Una *Aquila fasciata* de Murcia y una de Cádiz son la misma ficha. El contenido de una ficha se parte
+en dos y esa separación es la que hace que el catálogo escale:
 
-- Barra global de especies vistas / total.
-- Lista de hábitats con su recuento de especies vistas y una marca ✓ cuando un hábitat se completa (todas sus especies vistas).
-- Barra y lista de puntos de interés visitados / total.
-- Una tarjeta de logro: al completar todos los hábitats y todos los puntos de interés se desbloquea **"Guardián del parque"** (`ACHIEVEMENT_NAME` en `Frontend/Js/state.js`), con una animación al desbloquearse. El estado de "completo" se recalcula siempre a partir de `seenSpecies`/`seenPois`, no se guarda por separado.
+- **Universal** — lo que la especie *es*: `commonName`, `kingdom`, `group`, `habitat`, `seasonality`,
+  `rarityScore`, `description`, `tips`, `taxonomy`, `iucnGlobal`, `spainStatus`, `image`,
+  `imageAttribution`. Vive en `Tools/catalogo-nacional/data/especies-universal.json`, **indexado por
+  nombre científico**, y se sincroniza a todos los `park.json` con `npm run species:apply`.
+- **Local** — dónde y cómo aparece *en este espacio*: `id`, `habitatIds`, `coordinates`, `featured`,
+  `visible`, `source`, `reviewNote`, `zepaSiteCode`, `gbifOccurrences`, `gbifSpeciesKey`,
+  `eidosTaxonId`, `murciaStatus`, `conservationStatus`, `audio`. Vive en cada `park.json`.
 
-## Progreso tipo pokédex
+Si un texto universal nombra un parque concreto, es falso en cuanto la especie aparece en otro sitio.
+`validate-park-data.js` lo trata como **error**, no como aviso: así acabaron 40 fichas de Sierra
+Espuña hablando de una ZEPA de Cabo Cope.
 
-`app.js` guarda qué especies y puntos de interés se han marcado como "vistos" llamando a `Backend/Api/progress.php`, que persiste el estado en `Backend/Data/progress.json` (sin autenticación, pensado para un único usuario en este prototipo). Si el backend no está disponible, el progreso se mantiene solo en la sesión del navegador.
+---
 
-## Próximos pasos recomendados
+## 4. Procedencia de cada campo
 
-1. Base de datos: instalación limpia con `mysql < Database/schema.sql` (estructura) y `mysql < Database/seed.sql` (datos). Para poner al día una instalación antigua, ejecutar antes `mysql < Database/migrations.sql` (`ADD COLUMN IF NOT EXISTS`, idempotente; requiere MySQL 8.0.29+ o MariaDB 10.5+).
-2. Abrir `Frontend/index.html` desde el servidor local del proyecto.
-3. Sustituir el límite aproximado del parque y las posiciones de hábitat por la cartografía real en cuanto esté lista en QGIS (idealmente sirviendo un GeoJSON desde el backend).
-4. Sustituir progresivamente las citas genéricas por referencias documentales concretas (informes PORN/PRUG, fichas de especie oficiales) y curar fotografías con licencia verificada.
-5. Añadir autenticación y subida de observaciones cuando el prototipo visual esté validado.
+Esta es la tabla que hay que consultar antes de rellenar nada. **Columna «Fuente» = de dónde sale el
+dato; «Cómo» = la herramienta o el criterio; «Verifica» = quién lo comprueba.**
+
+### `parks` — el espacio protegido
+
+| Campo | Fuente | Cómo | Verifica |
+|---|---|---|---|
+| `slug` | decisión propia | Sin tildes, minúsculas, guiones. **Es una clave: estable para siempre** | `validate` (coincide con el registro) |
+| `name`, `category` | ENP (IEPNB/MITECO) | Figura oficial **literal** («Parque Regional», «Paisaje Protegido») | `validate` (avisa si difiere del registro) |
+| `region`, `province`, `municipality` | ENP + límites municipales del CNIG | El municipio NO está en la capa ENP: sale de cruzar el centroide contra el CNIG | manual |
+| `area_hectares` | ENP | La superficie **oficial la manda el MITECO** aunque el dibujo venga del geoportal autonómico | manual |
+| `latitude`/`longitude` (`center`) | calculado | Centroide del límite | `validate` (dentro de la caja de España) |
+| `description` (`summary`) | redacción propia — `data/descripciones-espacios.json` | **El único texto del pipeline que no sale de una fuente oficial.** 130–150 caracteres: es lo que se lee entero en el hueco de la cabecera. Qué paisaje es y qué se ve allí; cero adjetivos de folleto. Vive en ese fichero y no en el `park.json` para que **una regeneración con `n1:build` no pueda pisarlo** | revisión humana |
+| `status` | proceso | `basic` → `available` al cerrar la Capa 3 | `validate` (rechaza valores desconocidos) |
+| `boundaryNote` | proceso | **Obligatorio**: de qué servicio salió el límite y su código ENP | `validate` (campo exigido en N1) |
+
+### `habitats` — Capa 2
+
+| Campo | Fuente | Cómo | Verifica |
+|---|---|---|---|
+| `code` (HIC) | MITECO/BDN `Habi<NN>.dbf`, columna `CODIGO_UE` | Join `shapefile.CODIGO ↔ Habi<NN>.CODIGO` | `validate` (unicidad por parque) |
+| `geometry` | MITECO/BDN, shapefile de recintos | `build-habitats.js`: reproyecta UTM→WGS84 y **recorta al límite** | `validate` (0 vértices fuera de España); el propio script informa de vértices fuera del límite, que debe ser **0** |
+| `name`, `habitat_type` | `data/hic-nombres.json` | ⚠️ Un código **ausente de este fichero** no se queda solo sin nombre: **se salta el filtro marino** y entra un hábitat que no debería. Ver §6 | `adopt-habitats.js` avisa de los códigos sin ficha |
+| `is_priority` | `data/hic-prioritarios.json` (Anexo I de la Directiva) | **NUNCA del flag `PRIORITARI`** del dato de 1997, que es poco fiable (marca 8210 como prioritario) | revisión contra el Anexo I |
+| `fitosociologia` | `Habi<NN>.dbf`, columna `CONCEPTO` | Asociaciones oficiales. Es lo que justifica reconciliar un código antiguo | manual |
+| `hic_subtipos` | `Habi<NN>.dbf` | Subtipos concretos presentes (5330 → `["5334"]`) | — |
+| `description` | Atlas de Hábitats | Texto oficial del Atlas para ese código | — |
+| `latitude`/`longitude` | calculado | Centroide. Solo para el círculo aproximado cuando no hay polígono | `validate` |
+| `color` | decisión propia | Paleta del catálogo. La **trama** la pone el grupo (§8) | — |
+| `image`, `image_attribution`, `image_note` | Wikimedia Commons | `habitat-images.js`: un hábitat no es un taxón, así que se ilustra con su **especie diagnóstica** —la que el propio hábitat nombra— y se explica en `image_note` | `validate` (foto sin atribución = aviso) |
+| `speciesIds` | derivado | Inverso de `species.habitatIds` | `validate` (simetría e integridad referencial) |
+| `audio_url`, `audio_transcript` | producción propia | La transcripción es **obligatoria** (WCAG 1.2.1) | `validate` (**error** si falta) |
+
+### `species` — Capa 3
+
+| Campo | Ámbito | Fuente | Cómo |
+|---|---|---|---|
+| `scientific_name` | universal | **EIDOS** `v_taxonomia` | El **nombre aceptado**, no el sinónimo. `eidos.resolveTaxon()` lo resuelve |
+| `eidos_taxonid` | local | EIDOS | **La clave maestra.** Es lo que permite reutilizar una ficha entre espacios sin duplicarla |
+| `gbif_species_key` | local | GBIF `species/match` | ⚠️ Comprobar el **rango**: si no es SPECIES/SUBSPECIES, la clave es de género o familia y no identifica nada (el catálogo llegó a tener 3073 = Poaceae como «clave del esparto») |
+| `common_name` | universal | EIDOS `v_nombrescomunes` (preferente en castellano) → Wikipedia | — |
+| `kingdom`, `taxon_*` | universal | EIDOS `v_taxonomia` | `flora`/`fauna`/`fungi`/`other` + los seis rangos |
+| `group` | universal | vocabulario **cerrado** | Había 79 valores distintos en un parque. `sync-species-catalog.js` traduce con `GRUPO_NORMALIZADO`. `group` dice solo *qué clase de ser vivo es*; la familia va en `taxonomy` y el ambiente en `habitat` |
+| `iucn_global` | universal | EIDOS `v_estadoconservacion` (`aplicaa` = Mundial) → UICN Red List | Solo la fila **vigente más reciente** de cada ámbito |
+| `spain_status` | universal | EIDOS `v_estadolegal` ámbito Nacional (CEEA/LESRPE) + Lista Roja de la Flora Vascular 2008 | La Lista Roja es evaluación científica, **no norma jurídica**: por eso muchas plantas no salen en `v_estadolegal` y eso no es un error |
+| `murcia_status` | local | EIDOS `v_estadolegal` ámbito CCAA | ⚠️ **Nombre atado a Murcia. Es la deuda nº 1 del rollout: ver §9** |
+| `conservation_status` | local | derivado | Etiqueta corta para la tarjeta. En flora refleja el estado **legal**, no la evaluación UICN: son dos ejes distintos y mezclarlos ya causó un problema |
+| `description`, `tips`, `habitat`, `seasonality` | universal | redacción propia sobre fuentes | Prosa divulgativa. `tips` = tres rasgos que se ven en campo. **Nunca puede nombrar un espacio concreto** |
+| `image`, `image_attribution` | universal | Wikimedia (`wikimedia-images.js`) → GBIF (`enrich-images.js`) | URL canónica `Special:FilePath`, nunca un `/thumb/` (`validate` lo trata como **error**). Autor + licencia obligatorios |
+| `rarity_score` | universal | criterio propio 1–5 | Ordena el catálogo y elige la especie diagnóstica de un hábitat |
+| `source` | local | proceso | La referencia concreta que respalda **la cita en este espacio** |
+| `review_note` | local | proceso | La duda, escrita y visible en la app («a revisar»). Es el mecanismo de «hueco documentado» |
+| `habitatIds` | local | derivado | Ver `species_habitats` abajo |
+| `zepa_site_code` | local | Discodata BISE | Las aves **no se cuelgan de hábitats**: vuelan. Van a su apartado de espacio |
+| `is_visible` | local | criterio | `false` oculta del catálogo público sin borrar (pocas ocurrencias GBIF **y** sin figura oficial) |
+| `coordinates` | local | representativa | La ubicación real la aporta el GPS al marcar la especie como vista |
+
+### `species_habitats.evidence` — el vínculo derivado
+
+| Valor | Fuente | Criterio |
+|---|---|---|
+| `caracteristica` | Atlas de Hábitats | La especie figura como característica de ese HIC **y** está en el catálogo del espacio. Backbone determinista y filtro de cordura del resto |
+| `observada_gbif` | GBIF | Ocurrencia **dentro del polígono** (punto-en-polígono local, no bbox). `gbif_occurrences` guarda cuántas |
+| `zepa` | EEA Discodata BISE | Lista oficial de especies del sitio Natura 2000 (`site_code`) |
+
+### Otras tablas
+
+| Tabla | Fuente | Herramienta |
+|---|---|---|
+| `especies_invasoras` | Catálogo Español de EEI (RD 630/2013) vía EIDOS ∩ presencia GBIF por CCAA | `invasoras-eei.js`, `invasoras-contenido.js`, `invasoras-images.js` |
+| `glosario` | redacción propia sobre glosarios oficiales y el Atlas | `glossary-coverage.js` **detecta** el vocabulario sin definir; la definición la escribe una persona |
+| `user_*` | el propio usuario | Progreso, visitas verificadas, logros. Ver `Docs/PROGRESO-CUENTA-LOGROS.md` y `Docs/VERIFICACION-Y-ANTITRAMPAS.md` |
+
+### Fuentes: URLs y claves
+
+| Fuente | Acceso | Claves y notas |
+|---|---|---|
+| **ENP** | IEPNB catálogo `408ec0c0-7823-5c91-9f72-8c06e3df8b9e` · WMS `wms.mapama.gob.es/sig/Biodiversidad/ENP/wms.aspx` | EPSG:4326. Capa nacional de referencia |
+| **Red Natura 2000** | IEPNB catálogo `dc7a3014-cd9a-51b8-ad62-7aab55afecdd` | Da los códigos `ES…`, llave de la lista oficial de especies. Publicada a 31/12/N, su contenido es lo remitido a la Comisión hasta diciembre de N−1 |
+| **Cartografía de Hábitats 92/43/CEE** | `miteco.gob.es/…/habitat_descargas_2.html` | Dos ficheros por provincia `NN`: `DirectivaHabitat<NN>_1997_*.zip` (polígonos) y `directivadatos_<NN>_*.zip` → `Habi<NN>.dbf` (atributos). Las URL llevan sufijos `_tcm30-NNNNNN` **no derivables**: están copiadas en `Tools/catalogo-nacional/fuentes/habitat-provincias.json` (las 50 provincias) |
+| **Atlas y Manual de los Hábitats de España** | PDF en `Docs/` | Extraer con `pdftotext -layout` |
+| **EIDOS** | `https://iepnb.gob.es/api/especie/` (PostgREST, **sin autenticación**) | `v_taxonomia` (`taxonid`), `v_estadoconservacion`, `v_estadolegal`, `v_nombrescomunes`, `v_atributos_pliniancore`. Lista Patrón en `/api/catalogo/` |
+| **GBIF** | `https://api.gbif.org/v1/` | `occurrence/search` (paginar a 300), `species/match` |
+| **EEA Discodata (BISE)** | `https://discodata.eea.europa.eu/sql?query=…` | Tabla `[BISE].[latest].[Site_Species_List]`. URL-encode; bloquea tablas de sistema |
+| **Geoportal IMIDA/CARM** | `geoportal.imida.es/…/PROYECTOS/OISMA/MapServer` | Delimitación con 2–15× más vértices que la capa nacional |
+
+---
+
+## 5. Runbook: dar de alta un espacio
+
+### Fase 1 — N1, una comunidad entera de golpe
+
+```bash
+node Tools/catalogo-nacional/build-n1-espacios.js --nuts2 <CODIGO> [--dry] [--solo <ES…>]
+node Tools/catalogo-nacional/refina-limites-imida.js [--dry]      # si hay geoportal autonómico
+npm run tiles:build <slug>                                        # mapa base offline por espacio
+npm run validate
+```
+
+`build-n1-espacios.js` es **idempotente** y genera, por espacio: `geo/parque.geojson`,
+`geo/lic.geojson`, `geo/zepa.geojson`, `park.json` (solo el bloque `park`), `manifest.json` con
+contadores a cero, y la entrada en `parks-index.json` con `status: "basic"`.
+
+Antes de escribir nada, **presenta el inventario y espera el visto bueno**: nombre oficial, figura,
+provincia, municipios, superficie, código ENP y códigos Natura 2000. Puede haber espacios que excluir.
+
+### Fase 2 — N2, un espacio por sesión
+
+**Paso 0 · confirmar parámetros y parar si alguno no cuadra**
+
+- `REGION_NN` (código INE de provincia, para los ficheros del MITECO).
+- **Huso UTM: NO lo asumas.** Léelo del `.prj` del shapefile descargado y dilo en voz alta.
+- `SITE_CODES` (los `ES…` de LIC/ZEC y ZEPA), leídos de los geojson que ya existen del N1.
+- Ruta del límite en WGS84.
+
+**Capa 2 · hábitats**
+
+```bash
+node Tools/catalogo-nacional/build-habitats.js --park <SLUG> \
+     --shp <ruta>.shp --datos Habi<NN>.dbf --zone <HUSO>
+# Revisar ANTES de fusionar: recintos recortados, vértices fuera del límite (debe ser 0),
+# recintos sin HIC descartados, códigos antiguos a reconciliar.
+
+node Tools/catalogo-nacional/merge-habitats.js --park <SLUG> \
+     --official Tools/catalogo-nacional/out/<SLUG>-oficial.geojson [--reconcile 8230:8210]
+
+node Tools/catalogo-nacional/adopt-habitats.js --park <SLUG> --dry   # revisar
+node Tools/catalogo-nacional/adopt-habitats.js --park <SLUG>         # escribir
+```
+
+`merge-habitats` conserva lo curado a mano y actualiza desde la fuente lo que es dato. `adopt-habitats`
+lo lleva a `Frontend/`, sincroniza `park.json` y recalcula los contadores del manifiesto. Si aparecen
+códigos HIC nuevos, **amplía `data/hic-nombres.json` y `data/hic-prioritarios.json` antes** (§6).
+
+**Capa 3 · especies — el orden importa, de más sólido a más ruidoso**
+
+1. **Reutilización primero.** Cruza contra `especies-universal.json` por `eidosTaxonId`. Lo que ya
+   existe se **enlaza**, no se reescribe. Di cuántas reutilizas y cuántas son nuevas.
+2. **Atlas de Hábitats** → `atlas-hic-especies.js` → evidencia `caracteristica`. Backbone determinista.
+3. **EIDOS** para toda especie nueva: taxonomía, UICN por ámbito, estado legal, nombre común.
+4. **GBIF ∩ polígonos, sin Aves** → `gbif-habitats.js` → evidencia `observada_gbif`.
+5. **Aves** → Discodata BISE por `site_code` → evidencia `zepa`, apartado propio del espacio.
+6. **Reconciliación taxonómica** → `reconcile-taxa.js`.
+
+**Regla de selección** (ajústala al tamaño del espacio y **dilo**). La usada en Cuatro Calas:
+
+> Se excluyen las no nativas (van a Invasoras, que es regional). Se mantiene una especie si **(a)**
+> tiene figura legal vigente en EIDOS, **(b)** el Atlas la da como característica de alguno de los HIC
+> cartografiados aquí, o **(c)** tiene **≥ N ocurrencias** de GBIF dentro de un mismo hábitat.
+
+En Sierra Espuña (80× más grande) el umbral fue 15 y luego 50; en Cuatro Calas, 3. El umbral no es
+una constante universal: es una decisión por espacio que hay que dejar escrita en el informe de cierre.
+
+**POIs, fotos y cierre**
+
+```bash
+npm run species:extract      # vuelca a especies-universal.json lo nuevo de los park.json
+npm run images:species       # fotos de Wikimedia con atribución
+npm run images:habitats      # portadas de hábitat
+npm run species:apply        # sincroniza los campos universales a TODOS los park.json + SQL
+node Tools/build-park-trails.js <slug>
+npm run tiles:build <slug>
+npm run validate             # hasta verde
+npm run glossary:check       # vocabulario nuevo sin definición
+npm run taxones:duplicados   # el mismo taxón con dos nombres
+```
+
+POIs **solo desde fuente documental** (PORN/PRUG, red de senderos oficial, cartografía del organismo
+gestor). Un POI sin fuente no entra. Después: `status` a `available` en `parks-index.json`, cargar la
+BD, y actualizar `Docs/rollout/ESTADO.md` con el informe de cierre (contadores, cobertura de fotos,
+especies sin hábitat, huecos conocidos y qué contrastar en campo).
+
+### Definición de «terminado»
+
+**N1**: está en `parks-index.json` como `basic`, su límite oficial se dibuja, `npm run validate` pasa
+y la ficha declara su fuente en `boundaryNote`.
+
+**N2**: además, sus hábitats vienen del MITECO recortados a su límite (**0 vértices fuera**), toda
+especie tiene `source` + `evidence` + estado en las tres escalas, las aves están en su apartado ZEPA y
+no colgadas de hábitats, ninguna foto es de licencia dudosa, los contadores del manifiesto cuadran y
+el informe de cierre lista los huecos conocidos.
+
+### Checklist de cierre
+
+```
+[ ] npm run validate                    en verde (los avisos preexistentes, contados y explicados)
+[ ] npm run taxones:duplicados          código 0, o los pendientes justificados
+[ ] npm run glossary:check              vocabulario nuevo redactado o anotado
+[ ] npm run species:extract             SEGUNDO pase → 0 cambios (idempotencia)
+[ ] npm run species:apply               SEGUNDO pase → 0 fichas actualizadas
+[ ] adopt-habitats.js --dry             converge: «=» en los tres ficheros
+[ ] status → "available" en parks-index.json
+[ ] manifest.version subido y updatedAt al día (si no, el offline no revalida)
+[ ] SQL generado Y aplicado (la API tiene prioridad sobre el park.json — §7.3)
+[ ] Docs/rollout/ESTADO.md con el informe de cierre y los huecos
+```
+
+### Prompt para retomar en una sesión nueva
+
+> Retomo el rollout de NaturDex. Contexto: el README raíz — modelo de dos niveles (N1/N2) y tres capas
+> (§3), procedencia de cada campo (§4), runbook (§5), trampas (§6) y orden de operaciones (§7). El
+> estado por espacio está en `Docs/rollout/ESTADO.md`.
+>
+> Empieza preguntándome **qué espacio** procesamos y confírmame antes de descargar nada: su
+> `REGION_NN`, el **huso UTM leído del `.prj`** (no lo asumas) y sus códigos Natura 2000. Si alguno no
+> cuadra, para y dímelo.
+
+---
+
+## 6. Trampas conocidas
+
+Cada una costó una sesión de depuración. Léelas antes de repetirlas.
+
+**Geometría y cartografía**
+
+- **Hay que reproyectar.** Pese a que GeoJSON exige WGS84, el MITECO publica en UTM y lo declara en el
+  miembro `crs`. Sin reproyectar, el parque se dibuja en mitad del Atlántico. El validador tiene una
+  comprobación específica para cazarlo (vértices fuera de la caja de España).
+- **El huso depende de la región**: 28N Canarias, 29N, 30N, 31N. Léelo del `.prj`, no lo supongas.
+- **Se generaliza en UTM, no en grados.** Un grado de longitud mide ~88 km aquí y uno de latitud ~111:
+  la misma tolerancia deforma más en un eje que en otro.
+- **Lectura por streaming.** `Enp2025_p.json` pesa 190 MB y el de Red Natura 620 MB, ambos en **una
+  sola línea**: un `JSON.parse` revienta el heap de Node.
+- **El solape con Red Natura se mide, no se supone.** El bbox da falsos positivos (una ZEPA marina
+  grande envuelve un monumento de interior sin tocarlo). Se usa solo como prefiltro barato.
+- **Un espacio protegido suele ser multiparte y con enclaves excluidos.** Recortar contra el primer
+  anillo dio un límite 446 ha mayor que el real en Sierra Espuña.
+- **`COBERTURA` viene vacía** en el dato de 1997 y el flag `PRIORITARI` es poco fiable.
+- **Códigos HIC antiguos**: `8230` + asociación `Hypericion ericoidis` es roquedo casmofítico
+  calcícola → hoy **8210**. Reconciliar **solo si la asociación lo justifica**.
+- **El dato oficial es un MOSAICO**: un recinto lleva varios HIC sobre el MISMO polígono (el mayor de
+  Cuatro Calas cataloga nueve), así que una ocurrencia cae en todos a la vez y la geometría no permite
+  discriminar. Criterio: si el Atlas respalda la especie para alguno de los HIC del recinto, se enlaza
+  **solo a ésos**; si no, a todos.
+- **Un código ausente de `hic-nombres.json` se salta el filtro marino.** Sin ficha, el pipeline le pone
+  nombre `HIC <código>` y tipo `Hábitat`, que no es un tipo excluido — y así entró un hábitat marino de
+  0 ha llamado literalmente «HIC 1110». Para códigos que la cartografía recorta dentro del espacio pero
+  que su formulario normalizado **no declara**, está `data/hic-excluidos.json`.
+
+**Taxonomía**
+
+- **Las tres fuentes reclasifican y usan nomenclaturas distintas** (Larus→Ichthyaetus, Salvia
+  rosmarinus→Rosmarinus, Accipiter→Astur, Stipa→Macrochloa). Sin `eidos_taxonid` como clave maestra, al
+  décimo parque hay diez fichas del mismo águila con textos divergentes.
+- **El punto ciego de identificar por nombre**: si el mismo taxón se da de alta con el basónimo en un
+  espacio y con el nombre aceptado en otro, para el validador son dos especies y no hay nada que
+  comparar. Pasó con el esparto. `npm run taxones:duplicados` agrupa por identificador externo, que es
+  lo único que lo delata, y **sale con código 1 mientras queden**.
+- **No trunques el nombre a dos palabras** para emparejar: rompe las subespecies. Se empareja por
+  prefijo terminado en espacio (`eidos.nameMatches`).
+- **El cruce con el Atlas hay que hacerlo con los DOS nombres** (el de GBIF y el aceptado por EIDOS).
+  Con solo el de GBIF, *Periploca laevigata* no casaba con la *P. angustifolia* del Atlas y la especie
+  diagnóstica del 5220 se quedaba sin enlace — y el hábitat, sin portada.
+- **La misma columna se llama distinto según la vista de EIDOS**: `taxonid` en `v_taxonomia`,
+  `idtaxon` en las de detalle, `id_taxon` en `v_imagenes`. Filtrar por la equivocada **no da error
+  HTTP**: PostgREST devuelve 200 con un objeto de error, el `for...of` revienta y el informe sale con
+  «0 rellenadas / 0 sin foto», como si no hubiera nada que hacer. `eidos.rows()` normaliza a array.
+
+**Fotos y licencias**
+
+- **Ordenar solo por licencia elige pliegos de herbario.** Los herbarios digitalizan en CC0/CC-BY y
+  iNaturalist publica en CC-BY-NC, así que un pliego prensado **siempre** ganaba a la foto de campo. El
+  orden correcto es *foto de campo antes que pliego* → licencia → país.
+- **`/by\b/` no detecta CC BY.** La licencia de naturgucker es literalmente «*Copyright by the
+  creator…*» y así acabó una foto con derechos reservados en una ficha. El patrón va anclado (`cc by`,
+  `/licenses/by`) y con lista de exclusión (`copyright by`, `all rights reserved`, `©`).
+- **`by-nc-nd` no es `by-nc`**: la atribución tiene que decir la licencia real, cláusula *sin obra
+  derivada* incluida.
+- **Nunca enlaces un `/thumb/` de Wikimedia**: es un derivado cacheado y devuelve 400 en cuanto no está
+  generado. Usa `Special:FilePath`. El validador lo trata como **error**.
+- **El `_` de los nombres de Commons es carácter de palabra**, así que `\bplate\b` no casa con
+  `…(Plate_16)…` y se colaron láminas del XIX.
+- **`redirects=1` puede llevarte a otro reino**: de la gramínea *Sphenopus divaricatus* al artículo del
+  género *Sphenopus*, que es **un zoantario**. Hay que rechazar el archivo que nombra el mismo género
+  con otro epíteto.
+- **Revisa mirando la imagen**, no solo su licencia: es la única forma de cazar lo que ningún filtro caza.
+
+**GBIF**
+
+- **Filtra Aves**: son el 88 % de las ocurrencias y casi todo ruido espacial (vuelan).
+- **El filtro por incertidumbre de coordenada no sirve**: solo el 14 % la declara.
+- **`usageKey` no siempre es de rango específico** (ver §4).
+- **Punto-en-polígono local**, no consulta espacial: evita el límite de complejidad y de longitud de URL.
+
+---
+
+## 7. Orden de operaciones
+
+Hay dependencias entre herramientas que no son evidentes y que, al saltárselas, deshacen trabajo en
+silencio. **Ninguna de estas tres se detecta con un error: todas fallan en verde.**
+
+1. **`image`/`imageAttribution` son campos UNIVERSALES.** Si escribes una foto en el `park.json` (con
+   `enrich-images.js --write-park`) y después lanzas `species:apply` sin haber hecho antes
+   `species:extract`, el catálogo universal **pisa la foto recién puesta** y vuelve a null. Lo robusto
+   es escribir la foto en `especies-universal.json` y luego `--apply`.
+2. **`data/contenido/*.json` manda sobre todo lo demás.** Es lo correcto (es texto escrito para ser
+   universal), pero significa que una entrada obsoleta ahí revierte cualquier corrección en cada
+   `--extract`. Ya pasó: una entrada fijaba la foto de *Anabasis hispanica* a un pliego borrado del
+   disco, y cada extracción reponía la ruta muerta. Hoy `sync-species-catalog.js` **ignora y avisa** de
+   las fotos locales inexistentes, pero la regla sigue en pie: al corregir un campo universal, mira si
+   `contenido/` lo está fijando.
+3. **La API tiene prioridad sobre el `park.json` empaquetado** (`Frontend/Js/data.js`). Con backend
+   desplegado, tocar solo los ficheros del frontend no cambia lo que ve el usuario: hay que generar y
+   aplicar también el SQL. Y al revés — `adopt-habitats.js` escribe en `Frontend/` y **no pasa por la
+   BD**: mientras el pipeline de hábitats siga así, un export desde la API borraría sus cambios.
+
+**Idempotencia.** `build-n1-espacios`, `merge-habitats`, `adopt-habitats`,
+`fix-estado-conservacion-iepnb` y `sync-species-catalog` son idempotentes: reejecutarlos con la misma
+entrada no cambia ni un byte. Es la comprobación más barata de que algo se ha hecho bien —
+**si un segundo pase produce un diff, hay un problema**.
+
+**Regenerar el `park.json` desde la BD** (tras editar en el panel de administración):
+`npm run export:park -- <slug>`. Sube `manifest.version` para que el offline revalide.
+
+---
+
+## 8. La aplicación
+
+Todo lo que sigue son decisiones de producto ya tomadas y en producción; el detalle está en `Docs/`.
+
+**Flujo**: portada → login → mapa de España (selector agrupado por comunidad y provincia, con «ir al
+parque más cercano») → espacio. Lo pesado del espacio se carga **solo al elegirlo**.
+
+**La cabecera del espacio** responde a lo primero que se pregunta quien acaba de entrar —*qué es este
+sitio*— con tres piezas: (1) **figura y superficie oficial** («Parque Regional · 2666 ha»), tomadas de
+las propiedades del propio `geo/parque.geojson`, la misma geometría que se dibuja, así que la tienen
+los dieciséis espacios sin un campo más que mantener; (2) **la descripción** del paisaje (§4); y (3)
+**los tres recuentos de lo que se colecciona**: hábitats, especies y POIs. La tercera casilla eran los
+kilómetros de costa, un dato que ni se colecciona ni existe en un espacio de interior (salía «—» en
+trece de dieciséis). Un espacio sin puntos cargados muestra «—», no un cero: el dato está pendiente,
+no vacío.
+
+**Hábitats por grupos** (`Js/habitat-groups.js`). Un espacio trae entre 11 y 21 hábitats, y con una
+lista plana no hay forma de gestionar el solapamiento en el mapa desde un móvil en el campo. Se
+reparten en **siete grupos** ordenados del mar hacia dentro (costa y dunas, saladares, ríos y riberas,
+matorrales, pastizales, roquedos, bosques). El criterio es el **código HIC**, que ya agrupa por grandes
+tipos. Cada grupo tiene su trama y su tinta, **las mismas en los tres sitios** donde aparece: el mapa
+(la trama dice el grupo, el borde toma el color propio del hábitat), la leyenda y el catálogo. Los
+bosques de galería (91B0–92D0) van con el agua, no con los bosques: es el río lo que los explica.
+
+**Navegación de «un paso atrás»** (`Js/nav.js`). Siendo una app de una sola página, todo lo que se abría
+era una única entrada de historial, así que el botón «atrás» del móvil sacaba de la web entera con el
+trabajo a medias. Regla única: **todo lo que se abre es un nivel apilado y «atrás» cierra el de arriba**,
+venga del sistema, de Escape o de un botón. El historial se pone al día **al final del turno**, en una
+microtarea: `history.go()` es asíncrono, y un manejador que cerraba un nivel y abría otros dos disparaba
+un retroceso que llegaba *después* y deshacía justo lo que el usuario acababa de abrir.
+
+**Las etiquetas del mapa son fichas, no globos.** El `autoPan` de Leaflet solo garantiza que el globo
+entre en el *contenedor*, que en móvil está tapado arriba y abajo; y «tocar fuera» casi nunca era mapa
+vacío sino otro polígono, que abría *su* globo. Ahora todo abre en el mismo sitio donde se leen las
+fichas, con un solo modo de cerrarse. Todo encuadre pasa por `chromeInset()` en `map.js`.
+
+**Sin conexión**, en tres capas (`Js/offline.js` + `sw.js`): (1) caché automática en `localStorage` de
+todo JSON descargado — visitar un espacio online **una vez** deja sus datos y sus mapas vectoriales
+disponibles; (2) botón «Guardar sin conexión», que baja además las imágenes y el paquete de teselas;
+(3) Service Worker con el armazón, **network-first** para que la app nunca se quede atascada en una
+versión antigua. El progreso es **local-first** con cola de pendientes idempotente.
+
+**Mapa base offline**: `npm run tiles:build <slug>` recorta el basemap de Protomaps al **límite oficial**
+(no al bbox: en un espacio costero medio bbox es mar). ~1 MB por espacio. No se empaqueta desde
+tile.openstreetmap.org porque su política de teselas prohíbe expresamente el prefetch y el uso offline;
+el basemap de Protomaps es una *Produced Work* de OSM bajo ODbL, redistribuible **exigiendo atribución**,
+que viaja en el propio manifiesto para poder pintarla sin red. Presupuesto por espacio: **25 MB**
+(mapa + fotos + audio), comprobado por el validador.
+
+**Presencia verificada.** Descubrir una especie exige estar allí: cada posición se valida contra el
+límite oficial y la visita solo se marca `verified` con presencia sostenida. No se guarda la traza del
+paseo, solo el agregado. Ver `Docs/VERIFICACION-Y-ANTITRAMPAS.md`.
+
+---
+
+## 9. Deuda técnica, por orden de rentabilidad
+
+Cada una se paga mejor ahora que en el espacio número treinta.
+
+1. **`murcia_status` está atado a Murcia.** Es el bloqueo real del rollout nacional a nivel de campo:
+   cada comunidad tiene su propio catálogo de especies amenazadas. Hay que renombrarlo a algo como
+   `regional_status` + `regional_norma`, y tocar exactamente: `Database/schema.sql` y una migración,
+   `Backend/Lib/park_payload.php:129`, `Backend/Api/admin.php` (3 sentencias),
+   `Frontend/Js/render.js:423` (que además tiene la etiqueta «Región de Murcia» escrita a mano),
+   `Tools/sync-species-catalog.js` (lista `LOCALES`) y `Tools/catalogo-nacional/fix-estado-conservacion-iepnb.js`.
+   Hace falta además una tabla **comunidad → norma** para que el campo no sea texto libre distinto en
+   cada espacio. `Tools/eidos-diff.js` ya acepta `--ccaa`.
+2. **El pipeline de hábitats no escribe en la BD.** `adopt-habitats.js` toca `Frontend/` y nada más, así
+   que un export desde la API borraría sus cambios sin avisar. Mientras siga así, cualquier cambio suyo
+   es provisional (§7.3).
+3. **Claves externas incoherentes** — lo que reporta hoy `npm run taxones:duplicados` (sale con
+   código 1 mientras queden):
+   - **1 taxón duplicado**: la `gbifSpeciesKey` **3064** está puesta en dos especies distintas de
+     Cabo Cope (*Salsola vermiculata* y *Arthrocnemum macrostachyum*) porque **3064 es Amaranthaceae,
+     la FAMILIA**. Una clave de familia no identifica nada: cualquier consulta de ocurrencias con ella
+     devuelve la familia entera. Mismo caso en *Stipa capensis* (3073 = Poaceae) y *Sedum sediforme*
+     (2406 = Crassulaceae). **Estos tres son arreglo mecánico**: basta volver a resolverlos con
+     `gbif.matchName()`, que ahora devuelve el rango y permite rechazar lo que no sea específico.
+   - **9 identificadores incoherentes** entre espacios: `eidosTaxonId` distinto en `Sedum sediforme`
+     y `Olea europaea var. sylvestris`, y `gbifSpeciesKey` distinta en siete casos donde un espacio
+     usa la clave del sinónimo y otro la del nombre aceptado. **Estos NO son mecánicos**: exigen
+     decidir si el catálogo sigue el nombre aceptado de EIDOS a rajatabla y, en varios, si la cita del
+     espacio se refiere de verdad al taxón que GBIF considera aceptado.
+   - `eidosTaxonId` duplicados: **0**. El esparto era el único de su clase.
+4. **Tabla de reconciliación taxonómica nacional.** Existe la del piloto
+   (`out/cabo-cope-puntas-calnegre-reconciliacion.json`, 124 especies); falta acumular todos los
+   espacios sin duplicar por `eidos_taxonid`.
+5. **Completar `hic-nombres.json` y `hic-prioritarios.json`** al entrar en cada provincia nueva. No es
+   opcional: un código sin ficha se salta el filtro marino (§6).
+6. **Fotos de florasilvestre.es pendientes de licencia** en Cabo Cope: 13 fichas usadas en el contexto
+   de este prototipo educativo. Antes de cualquier uso público hay que confirmar el permiso o
+   sustituirlas por equivalentes de licencia libre.
+7. **Cero POIs en Sierra Espuña y Cuatro Calas.** No hay fuente con coordenadas descargables; el PRUG en
+   PDF sigue siendo la vía pendiente. Los senderos sí están resueltos (`build-park-trails.js`), pero son
+   trazas, no puntos.
+8. **Duplicación consciente**: `AdminPanel/src/api.ts` y el cliente de la API del frontend son dos
+   implementaciones del mismo contrato. Se mantienen separadas porque son dos aplicaciones distintas
+   (React con build vs. módulos ES sin build).
+
+---
+
+## 10. Comandos
+
+| Comando | Qué hace |
+|---|---|
+| `npm run validate` | **Red de seguridad.** Coherencia `park.json ↔ manifest.json ↔ geojson`, integridad especie↔hábitat, contadores, coordenadas, licencias de foto, transcripciones y presupuesto offline. Bloquea el commit |
+| `npm run taxones:duplicados` | El mismo taxón con dos nombres científicos. Sale con código 1 mientras queden |
+| `npm run glossary:check` | Vocabulario científico de las fichas sin definición en el glosario |
+| `npm run species:check / :extract / :apply` | Catálogo universal: informar / volcar / sincronizar a todos los espacios (+ SQL) |
+| `npm run habitats:build / :merge` | Capa 2 desde la cartografía del MITECO |
+| `npm run atlas:hic` | Especies características por HIC desde el Atlas |
+| `npm run images:species / :habitats / :invasoras` | Fotos con atribución desde Wikimedia |
+| `npm run contenido:invasoras` | Fichas de invasoras desde EIDOS |
+| `npm run invasoras:eei` | Catálogo EEI ∩ presencia GBIF por territorio |
+| `npm run eidos:diff` | Coteja la BD viva contra EIDOS (solo lectura). `-- --ccaa "<comunidad>"` |
+| `npm run gbif:habitats` | Ocurrencias GBIF ∩ polígonos de hábitat, con análisis de ruido |
+| `npm run tiles:build <slug>` | Paquete de mapa base offline |
+| `npm run export:park / :glossary / :invasoras` | Regenera los JSON empaquetados desde la BD |
+| `npm run db:status / :pull / :push / :backup` | Sincronización con el MySQL del contenedor |
+
+Ninguna herramienta de Capa 2/3 escribe en la BD ni en el seed directamente (salvo
+`enrich-images.js --write-park`, documentado en su cabecera): generan ficheros en `out/` para revisar
+antes de adoptarlos.
+
+---
+
+## 11. Dónde está el resto
+
+| Documento | Contenido |
+|---|---|
+| `Docs/rollout/ESTADO.md` | **El histórico.** Ledger por espacio + informe de cierre de cada sesión, con las decisiones y sus motivos |
+| `Docs/prompts/e-rollout-nacional.md` | Guion operativo del rollout: qué se pega en cada sesión y en qué orden |
+| `Docs/piloto-cabo-cope.md` | **El ejemplo trabajado.** Trazabilidad completa de la curación del piloto: qué fuente respalda cada dato y qué quedó sin resolver |
+| `Tools/catalogo-nacional/README.md` | Detalle de las herramientas del pipeline |
+| `Frontend/Data/parks/README.md` | Formato de `park.json` y `manifest.json` |
+| `Docs/ESCALABILIDAD.md` | Arquitectura de crecimiento |
+| `Docs/VERIFICACION-Y-ANTITRAMPAS.md` | Verificación de presencia real |
+| `Docs/PROGRESO-CUENTA-LOGROS.md` · `Docs/PERFIL-Y-AJUSTES.md` | Progreso estatal, logros, cuenta |
+| `Docs/catalogo-especies-universal.md` · `Docs/glosario-divulgativo.md` | Catálogo universal y glosario |
+| `DEPLOY.md` · `Docs/DESPLIEGUE_ESTATICO.md` | Despliegue |
+| `AdminPanel/README.md` | Panel de administración |
+
+---
+
+## Aviso sobre los datos
+
+Este catálogo es un trabajo de recopilación sobre fuentes oficiales y científicas públicas, no un
+inventario validado en campo. Las asignaciones especie↔hábitat son **derivadas** por construcción (§3),
+las coordenadas de especie son representativas, y las fichas marcadas «a revisar» lo están porque su
+duda no ha podido resolverse con una fuente primaria. Antes de cualquier uso que no sea divulgativo,
+contrasta con el PORN/PRUG del espacio y con el organismo gestor.

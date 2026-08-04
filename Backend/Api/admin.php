@@ -16,20 +16,13 @@
 //   POST delete&resource=<r>              → body {id}
 //   POST export                           → body {park}: regenera park.json + contadores (offline)
 // ================================================================================================
-header("Content-Type: application/json; charset=utf-8");
-
-require_once __DIR__ . "/../Config/db.php";
-require_once __DIR__ . "/../Lib/session.php";
-naturdexSessionStart($conn);
-
-function respond($data, $code = 200) {
-    http_response_code($code);
-    echo json_encode($data, JSON_UNESCAPED_UNICODE);
-    exit;
-}
+require_once __DIR__ . "/../Lib/api.php";
+// `cors: false` a propósito: el panel se sirve del mismo origen y esta API no debe anunciarse a
+// ningún otro (a diferencia de la API pública de lectura).
+$conn = apiBoot(["cors" => false, "session" => true]);
 
 // --- Guardia: sesión + rol de administrador ------------------------------------------------------
-if (empty($_SESSION["user_id"])) respond(["error" => "Necesitas iniciar sesión."], 401);
+if (empty($_SESSION["user_id"])) apiError("Necesitas iniciar sesión.", 401);
 $stmt = $conn->prepare("SELECT id, email, display_name, role FROM users WHERE id = ? LIMIT 1");
 $stmt->bind_param("i", $_SESSION["user_id"]);
 $stmt->execute();

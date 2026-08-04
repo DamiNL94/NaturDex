@@ -19,20 +19,12 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-
-const ROOT = path.join(__dirname, '..');
-const FRONTEND = path.join(ROOT, 'Frontend');
-const REGISTRY = path.join(FRONTEND, 'Data', 'parks-index.json');
+const { ROOT, FRONTEND, REGISTRY_FILE: REGISTRY, readJson } = require('./lib/io');
 
 let errors = 0, warnings = 0;
 const err = (scope, msg) => { errors++; console.log('  \x1b[31m✗ ERROR\x1b[0m [' + scope + '] ' + msg); };
 const warn = (scope, msg) => { warnings++; console.log('  \x1b[33m⚠ aviso\x1b[0m [' + scope + '] ' + msg); };
 const ok = (msg) => console.log('  \x1b[32m✓\x1b[0m ' + msg);
-
-function readJson(absPath) {
-  const raw = fs.readFileSync(absPath, 'utf8');
-  return JSON.parse(raw);
-}
 
 // Devuelve los duplicados de una lista de valores.
 function duplicates(values) {
@@ -405,15 +397,16 @@ const CAMPOS_UNIVERSALES = ['commonName', 'kingdom', 'group', 'habitat', 'season
 function validarCoherenciaEntreParques(parques) {
   const porEspecie = new Map();
   parques.forEach(p => {
-    const file = path.join(FRONTEND, 'Data', 'parks', p.region || 'murcia', p.slug, 'park.json');
+    // El park.json se localiza SIEMPRE por el manifiesto, que es lo que hace también el frontend.
+    // Antes había un respaldo que construía la ruta a mano con `p.region || 'murcia'`: nunca se
+    // ejecutaba (todo parque del registro tiene manifiesto) y, de hacerlo, habría buscado en
+    // Murcia el park.json de cualquier parque de otra provincia. `region` es además el nombre de la
+    // comunidad ("Región de Murcia"), no el segmento de ruta, así que jamás habría acertado.
     const manifestPath = p.manifest ? path.join(FRONTEND, p.manifest) : null;
+    if (!manifestPath || !fs.existsSync(manifestPath)) return;   // ya avisado al validar el parque
     let data = null;
-    if (manifestPath && fs.existsSync(manifestPath)) {
-      const dataRel = readJson(manifestPath).data;
-      if (dataRel && fs.existsSync(path.join(FRONTEND, dataRel))) data = readJson(path.join(FRONTEND, dataRel));
-    } else if (fs.existsSync(file)) {
-      data = readJson(file);
-    }
+    const dataRel = readJson(manifestPath).data;
+    if (dataRel && fs.existsSync(path.join(FRONTEND, dataRel))) data = readJson(path.join(FRONTEND, dataRel));
     (data && data.species || []).forEach(s => {
       if (!porEspecie.has(s.scientificName)) porEspecie.set(s.scientificName, []);
       porEspecie.get(s.scientificName).push({ slug: p.slug, sp: s });

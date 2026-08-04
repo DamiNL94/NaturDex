@@ -25,17 +25,15 @@
  */
 const fs = require('fs');
 const path = require('path');
-const https = require('https');
-const { signedArea, ringArea, closeRing, orientRing, inRing } = require('./lib/geo');
+const { signedArea, ringArea, closeRing, orientRing, inRing } = require('../lib/geo');
+const { getText } = require('../lib/http');
+const { arg, flag } = require('../lib/cli');
+const { ROOT: RAIZ, FRONTEND, REGISTRY_FILE: REGISTRO } = require('../lib/io');
 
-const RAIZ = path.join(__dirname, '..', '..');
-const FRONTEND = path.join(RAIZ, 'Frontend');
-const REGISTRO = path.join(FRONTEND, 'Data', 'parks-index.json');
 const CACHE = path.join(__dirname, 'fuentes', 'imida-enp');
 
-const ARGV = process.argv.slice(2);
-const DRY = ARGV.includes('--dry');
-const SOLO = (i => i >= 0 ? ARGV[i + 1] : null)(ARGV.indexOf('--solo'));
+const DRY = flag('dry');
+const SOLO = arg('solo');
 
 const HOST = 'geoportal.imida.es';
 const BASE = '/gis/rest/services/PROYECTOS/OISMA/MapServer';
@@ -50,24 +48,24 @@ const PRESUPUESTO_BYTES = 300 * 1024;
 const TOLERANCIAS = [0, 1, 2, 5, 10, 20, 50];
 const numeroEs = (n, d = 1) => n.toLocaleString('es-ES', { minimumFractionDigits: d, maximumFractionDigits: d });
 
-function descarga(capa) {
+// Las cinco capas se cachean en disco (`fuentes/imida-enp/capa-N.json`, versionadas): el servicio
+// del IMIDA es lento y la respuesta es determinista, así que reejecutar el refinador no vuelve a
+// descargar nada. Borrar el fichero fuerza la descarga.
+//
+// ArcGIS responde 200 con un objeto `{error}` cuando la consulta no le gusta, así que el código de
+// estado no basta: hay que mirar el cuerpo antes de darlo por bueno y, sobre todo, antes de
+// escribirlo en la caché — si no, el error queda cacheado y las siguientes ejecuciones fallan sin
+// que se vea por qué.
+async function descarga(capa) {
   const destino = path.join(CACHE, `capa-${capa}.json`);
-  if (fs.existsSync(destino)) return Promise.resolve(JSON.parse(fs.readFileSync(destino, 'utf8')));
+  if (fs.existsSync(destino)) return JSON.parse(fs.readFileSync(destino, 'utf8'));
   const ruta = `${BASE}/${capa}/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&geometryPrecision=7&f=json`;
-  return new Promise((res, rej) => {
-    https.get({ host: HOST, path: ruta, headers: { 'User-Agent': 'NaturDex/1.0' } }, r => {
-      let b = ''; r.setEncoding('utf8'); r.on('data', c => b += c);
-      r.on('end', () => {
-        try {
-          const j = JSON.parse(b);
-          if (j.error) return rej(new Error(`capa ${capa}: ${JSON.stringify(j.error).slice(0, 200)}`));
-          fs.mkdirSync(CACHE, { recursive: true });
-          fs.writeFileSync(destino, b);
-          res(j);
-        } catch (e) { rej(e); }
-      });
-    }).on('error', rej);
-  });
+  const { body } = await getText(HOST, ruta, { agent: 'refina-limites-imida', timeoutMs: 120000 });
+  const j = JSON.parse(body);
+  if (j.error) throw new Error(`capa ${capa}: ${JSON.stringify(j.error).slice(0, 200)}`);
+  fs.mkdirSync(CACHE, { recursive: true });
+  fs.writeFileSync(destino, body);
+  return j;
 }
 
 // ArcGIS entrega TODOS los anillos en una lista plana, con el exterior en sentido horario y los

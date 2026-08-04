@@ -15,83 +15,54 @@
  * ================================================================================================
  */
 'use strict';
-const fs = require('fs');
 const path = require('path');
-const https = require('https');
-const { resolvePark } = require('./lib/registry');
+const { resolvePark } = require('../lib/registry');
+const { readJson, writeJson, rel, ROOT, OUT_DIR } = require('../lib/io');
+const { arg, num, die, sleep, requireArgs } = require('../lib/cli');
+const eidos = require('../lib/eidos');
+const gbif = require('../lib/gbif');
 
-const REPO_ROOT = path.resolve(__dirname, '..', '..');
-const ARGV = process.argv.slice(2);
-const flag = (n, d = null) => { const i = ARGV.indexOf(n); return i >= 0 && i + 1 < ARGV.length ? ARGV[i + 1] : d; };
-const die = (m) => { console.error('✖ ' + m); process.exit(1); };
-const PARK = flag('--park');
-const OUT = flag('--out');
-const LIMIT = flag('--limit') ? parseInt(flag('--limit'), 10) : Infinity;
+const PARK = arg('park');
+const OUT = arg('out');
+const LIMIT = num('limit', Infinity);
+requireArgs('Uso: --park <slug> [--out tabla.json] [--limit N]', { park: PARK });
+// Pausa entre especies: son dos servicios públicos y un catálogo son cientos de peticiones.
 const THROTTLE = 130;
 
-function getJson(host, pathQuery, attempt = 0) {
-  return new Promise((resolve, reject) => {
-    const req = https.get({ host, path: pathQuery, headers: { Accept: 'application/json', 'User-Agent': 'NaturDex-reconcile/1.0' } }, res => {
-      let b = ''; res.setEncoding('utf8'); res.on('data', c => b += c);
-      res.on('end', () => {
-        if (res.statusCode < 200 || res.statusCode >= 300) return reject(new Error(`HTTP ${res.statusCode} ${pathQuery}`));
-        try { resolve(JSON.parse(b)); } catch (e) { reject(e); }
-      });
-    });
-    req.setTimeout(30000, () => req.destroy(new Error('timeout')));
-    req.on('error', e => attempt < 1 ? setTimeout(() => getJson(host, pathQuery, attempt + 1).then(resolve, reject), 500) : reject(e));
-  });
-}
-const sleep = ms => new Promise(r => setTimeout(r, ms));
-const norm = s => String(s || '').trim().toLowerCase().split(/\s+/).slice(0, 2).join(' ');
-
-// EIDOS: resuelve taxonid del nombre aceptado (o el aceptado real si es sinónimo).
-async function eidos(sci) {
-  const rows = await getJson('iepnb.gob.es',
-    `/api/especie/v_taxonomia?name=like.${encodeURIComponent(sci)}*&select=taxonid,nameid,acceptednameid,name,nametype`);
-  if (!Array.isArray(rows) || !rows.length) return { status: 'no-encontrada' };
-  const accepted = rows.filter(r => r.nametype === 'Aceptado/válido');
-  const exact = accepted.find(r => norm(r.name) === norm(sci) || norm(r.name).startsWith(norm(sci) + ' '));
-  if (exact) return { status: 'ok', taxonid: exact.taxonid, aceptado: exact.name };
-  if (accepted.length) return { status: 'ok', taxonid: accepted[0].taxonid, aceptado: accepted[0].name };
-  const syn = rows[0];
-  let acc = null, taxonid = null;
-  if (syn.acceptednameid && syn.acceptednameid !== syn.nameid) {
-    try { const a = await getJson('iepnb.gob.es', `/api/especie/v_taxonomia?nameid=eq.${syn.acceptednameid}&select=name,taxonid`); if (a[0]) { acc = a[0].name; taxonid = a[0].taxonid; } } catch (_) {}
-  }
-  return { status: 'sinonimo', taxonid, aceptado: acc, sinonimo: syn.name };
-}
-
-// GBIF: match del nombre → usageKey/acceptedUsageKey.
-async function gbif(sci) {
-  const m = await getJson('api.gbif.org', `/v1/species/match?name=${encodeURIComponent(sci)}`);
-  if (!m || m.matchType === 'NONE') return { status: 'no-encontrada' };
-  const key = m.synonym && m.acceptedUsageKey ? m.acceptedUsageKey : m.usageKey;
-  return { status: m.synonym ? 'sinonimo' : 'ok', speciesKey: key, aceptado: m.species || m.scientificName, matchType: m.matchType };
-}
-
 async function main() {
-  const park = resolvePark(REPO_ROOT, PARK);
-  const pj = JSON.parse(fs.readFileSync(park.habitatsPath.replace(/geo[\\/]habitats\.geojson$/, 'park.json'), 'utf8'));
+  const park = resolvePark(ROOT, PARK);
+  const pj = readJson(park.habitatsPath.replace(/geo[\\/]habitats\.geojson$/, 'park.json'));
   const species = (pj.species || []).filter(s => s.scientificName);
   const total = Math.min(species.length, LIMIT);
   console.log(`Reconciliando ${total} especies de ${park.slug} (EIDOS + GBIF)…`);
 
   const table = [];
-  const stats = { eidosOk: 0, eidosSyn: 0, eidosNo: 0, gbifOk: 0, gbifSyn: 0, gbifNo: 0, discrepan: 0 };
+  const stats = { eidosOk: 0, eidosSyn: 0, eidosNo: 0, gbifOk: 0, gbifSyn: 0, gbifNo: 0, discrepan: 0, gbifNoEspecifico: 0 };
   for (let i = 0; i < total; i++) {
     const s = species[i];
     let e = { status: 'error' }, g = { status: 'error' };
-    try { e = await eidos(s.scientificName); } catch (_) {}
-    try { g = await gbif(s.scientificName); } catch (_) {}
+    try { e = await eidos.resolveTaxon(s.scientificName); } catch (_) { /* se cuenta como no encontrada */ }
+    try { g = await gbif.matchName(s.scientificName); } catch (_) { /* ídem */ }
+
     if (e.status === 'ok') stats.eidosOk++; else if (e.status === 'sinonimo') stats.eidosSyn++; else stats.eidosNo++;
     if (g.status === 'ok') stats.gbifOk++; else if (g.status === 'sinonimo') stats.gbifSyn++; else stats.gbifNo++;
-    const acuerdan = e.aceptado && g.aceptado && norm(e.aceptado) === norm(g.aceptado);
-    if (e.aceptado && g.aceptado && !acuerdan) stats.discrepan++;
+
+    // Una clave de GBIF de rango género o FAMILIA no identifica a la especie: cualquier consulta de
+    // ocurrencias con ella devuelve el grupo entero. Se anota en vez de darla por buena (el catálogo
+    // llegó a tener 3073 = Poaceae como «clave del esparto»).
+    const rangoDudoso = g.speciesKey && g.rank && !gbif.esRangoEspecifico(g.rank);
+    if (rangoDudoso) stats.gbifNoEspecifico++;
+
+    const acuerdan = e.acceptedName && g.acceptedName
+      && eidos.binomial(e.acceptedName) === eidos.binomial(g.acceptedName);
+    if (e.acceptedName && g.acceptedName && !acuerdan) stats.discrepan++;
+
     table.push({
       id: s.id, scientificName: s.scientificName,
-      eidos_taxonid: e.taxonid || null, eidos_aceptado: e.aceptado || null, eidos_estado: e.status,
-      gbif_speciesKey: g.speciesKey || null, gbif_aceptado: g.aceptado || null, gbif_estado: g.status,
+      eidos_taxonid: e.taxonid || null, eidos_aceptado: e.acceptedName || null, eidos_estado: e.status,
+      gbif_speciesKey: g.speciesKey || null, gbif_aceptado: g.acceptedName || null, gbif_estado: g.status,
+      gbif_rango: g.rank || null,
+      gbif_rango_no_especifico: !!rangoDudoso,
       reclasificada: e.status === 'sinonimo' || g.status === 'sinonimo',
       fuentes_acuerdan: !!acuerdan,
     });
@@ -99,13 +70,15 @@ async function main() {
     if (i < total - 1) await sleep(THROTTLE);
   }
   process.stdout.write('\n');
-  const outPath = OUT || path.join(__dirname, 'out', `${park.slug}-reconciliacion.json`);
-  fs.mkdirSync(path.dirname(outPath), { recursive: true });
-  fs.writeFileSync(outPath, JSON.stringify({ park: park.slug, generado: 'EIDOS v_taxonomia + GBIF species/match', stats, especies: table }, null, 2));
+
+  const outPath = OUT ? path.resolve(OUT) : path.join(OUT_DIR, `${park.slug}-reconciliacion.json`);
+  writeJson(outPath, { park: park.slug, generado: 'EIDOS v_taxonomia + GBIF species/match', stats, especies: table });
+
   console.log(`\nEIDOS  → ok ${stats.eidosOk} · sinónimo ${stats.eidosSyn} · no encontrada ${stats.eidosNo}`);
   console.log(`GBIF   → ok ${stats.gbifOk} · sinónimo ${stats.gbifSyn} · no encontrada ${stats.gbifNo}`);
+  if (stats.gbifNoEspecifico) console.log(`⚠ ${stats.gbifNoEspecifico} clave(s) de GBIF de rango superior a especie: NO sirven para consultar ocurrencias`);
   console.log(`Reclasificadas (alguna fuente): ${table.filter(t => t.reclasificada).length} · discrepancias nombre aceptado: ${stats.discrepan}`);
   console.log(`Con eidos_taxonid Y gbif_speciesKey (clave maestra completa): ${table.filter(t => t.eidos_taxonid && t.gbif_speciesKey).length}/${total}`);
-  console.log(`→ ${path.relative(REPO_ROOT, outPath)}`);
+  console.log(`→ ${rel(outPath)}`);
 }
-main().catch(e => die(e.stack || e.message));
+main().catch(e => die(e.stack || e.message, 1));

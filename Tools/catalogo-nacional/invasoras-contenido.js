@@ -38,30 +38,22 @@
 
 const fs = require('fs');
 const path = require('path');
-const https = require('https');
+const { getJson } = require('../lib/http');
+const { arg, flag } = require('../lib/cli');
+const { ROOT, DATA } = require('../lib/io');
+const eidos = require('../lib/eidos');
 
-const ROOT = path.join(__dirname, '..', '..');
-const JSON_PATH = path.join(ROOT, 'Frontend', 'Data', 'invasoras.json');
+const JSON_PATH = path.join(DATA, 'invasoras.json');
 const FUENTE = 'EIDOS (IEPNB) · Catálogo Español de Especies Exóticas Invasoras (RD 630/2013)';
 
-const args = process.argv.slice(2);
-const has = f => args.includes(f);
-const val = (f, d) => { const i = args.indexOf(f); return i >= 0 && args[i + 1] ? args[i + 1] : d; };
-const OPT = { write: has('--write'), sql: val('--sql', null), preview: val('--preview', null) };
+const OPT = { write: flag('write'), sql: arg('sql', null), preview: arg('preview', null) };
 
 // --- EIDOS ---------------------------------------------------------------------------------------
-function get(pathname) {
-  return new Promise((res, rej) => {
-    https.get({ host: 'iepnb.gob.es', path: pathname, headers: { Accept: 'application/json', 'User-Agent': 'naturdex-invasoras/1' } }, r => {
-      // setEncoding es imprescindible: sin él, concatenar los Buffer con `+=` los convierte a texto
-      // uno a uno y parte por la mitad los caracteres multibyte que caen en el borde de un trozo.
-      // Así es como se colaron los «conservaci<?>n» y «germinaci<?>n» del primer volcado.
-      r.setEncoding('utf8');
-      let b = ''; r.on('data', c => b += c);
-      r.on('end', () => { try { res(JSON.parse(b)); } catch (e) { rej(new Error(b.slice(0, 200))); } });
-    }).on('error', rej).setTimeout(40000, function () { this.destroy(new Error('timeout')); });
-  });
-}
+// El cliente compartido acumula la respuesta en Buffer y la decodifica una sola vez al final. Es
+// lo que evita el fallo de este script en su primera versión: concatenar los Buffer con `+=` los
+// convierte a texto uno a uno y parte por la mitad los caracteres multibyte que caen en el borde
+// de un trozo — así se colaron los «conservaci<?>n» y «germinaci<?>n» del primer volcado.
+const get = (pathname) => getJson(eidos.HOST, pathname, { agent: 'invasoras-contenido' });
 
 // --- Limpieza del texto de EIDOS -------------------------------------------------------------------
 // Los valores llegan tal cual se teclearon en las Memorias Técnicas y Fichas Descriptivas del RD
@@ -223,7 +215,7 @@ const enOrden = ficha => {
   for (const k of Object.keys(ficha)) if (!(k in out)) out[k] = ficha[k];
   return out;
 };
-const sqlStr = v => v === null || v === undefined || v === '' ? 'NULL' : `'${String(v).replace(/\\/g, '\\\\').replace(/'/g, "''")}'`;
+const { sqlStrOrNull: sqlStr } = require('../lib/sql');
 
 (async () => {
   const invasoras = JSON.parse(fs.readFileSync(JSON_PATH, 'utf8'));

@@ -28,7 +28,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const ROOT = path.join(__dirname, '..');
+const { ROOT } = require('./lib/io');
 const FRONTEND = path.join(ROOT, 'Frontend');
 const GLOSARIO = path.join(FRONTEND, 'Data', 'glosario.json');
 const UNIVERSAL = path.join(ROOT, 'Tools', 'catalogo-nacional', 'data', 'especies-universal.json');

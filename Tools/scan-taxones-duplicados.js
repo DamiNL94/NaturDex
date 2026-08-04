@@ -29,21 +29,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const ROOT = path.join(__dirname, '..');
-const PARKS_DIR = path.join(ROOT, 'Frontend', 'Data', 'parks');
-
-function parkFiles() {
-  const out = [];
-  for (const region of fs.readdirSync(PARKS_DIR)) {
-    const dir = path.join(PARKS_DIR, region);
-    if (!fs.statSync(dir).isDirectory()) continue;
-    for (const slug of fs.readdirSync(dir)) {
-      const f = path.join(dir, slug, 'park.json');
-      if (fs.existsSync(f)) out.push({ slug, file: f });
-    }
-  }
-  return out;
-}
+// El recorrido de los park.json en disco vive en Tools/lib/io.js (`parkFiles`).
+const { parkFiles } = require('./lib/io');
 
 const fichas = [];
 for (const { slug, file } of parkFiles()) {

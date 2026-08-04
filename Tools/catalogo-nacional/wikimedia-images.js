@@ -38,14 +38,12 @@
 const fs = require('fs');
 const path = require('path');
 
-const { loads, metadatos, atribucion, filePathUrl, commonsFileFromUrl, resolver } = require('./lib/wikimedia');
+const { loads, metadatos, atribucion, filePathUrl, commonsFileFromUrl, resolver } = require('../lib/wikimedia');
+const { arg, flag, num } = require('../lib/cli');
+const { ROOT, parkFiles, rel } = require('../lib/io');
 
-const ROOT = path.join(__dirname, '..', '..');
-const PARKS_DIR = path.join(ROOT, 'Frontend', 'Data', 'parks');
-
-const args = process.argv.slice(2);
-const has = f => args.includes(f);
-const val = (f, d) => { const i = args.indexOf(f); return i >= 0 && args[i + 1] ? args[i + 1] : d; };
+// Lectura de opciones: Tools/lib/cli.js (admite `--x v` y `--x=v`, y el nombre con o sin guiones).
+const has = flag, val = arg;
 
 const OPT = {
   park: val('--park', null),
@@ -60,26 +58,17 @@ const OPT = {
   check: has('--check'),
   list: has('--list'),
   force: has('--force'),
-  width: parseInt(val('--width', '1280'), 10),
+  width: num('width', 1280),
   report: val('--report', null),
 };
 
 // --- recorrido del catálogo -----------------------------------------------------------------------
-function parkFiles() {
-  const out = [];
-  const regiones = fs.readdirSync(PARKS_DIR).filter(d => fs.statSync(path.join(PARKS_DIR, d)).isDirectory());
-  for (const region of regiones) {
-    for (const slug of fs.readdirSync(path.join(PARKS_DIR, region))) {
-      if (OPT.park && slug !== OPT.park) continue;
-      const f = path.join(PARKS_DIR, region, slug, 'park.json');
-      if (fs.existsSync(f)) out.push({ slug, file: f });
-    }
-  }
-  return out;
-}
+// `parkFiles` (Tools/lib/io.js) recorre Frontend/Data/parks/<provincia>/<slug>/park.json; aquí solo
+// se acota al parque pedido con --park.
+const parquesDelCatalogo = () => parkFiles().filter(p => !OPT.park || p.slug === OPT.park);
 
 (async () => {
-  const parks = parkFiles();
+  const parks = parquesDelCatalogo();
   if (!parks.length) { console.error('No se encontró ningún park.json' + (OPT.park ? ` para --park ${OPT.park}` : '')); process.exit(1); }
 
   const lineas = [];

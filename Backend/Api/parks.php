@@ -1,8 +1,6 @@
 <?php
-header("Content-Type: application/json; charset=utf-8");
-require_once __DIR__ . "/../Lib/api_cors.php";
-apiCorsHeaders();
-require_once __DIR__ . "/../Config/db.php";
+require_once __DIR__ . "/../Lib/api.php";
+$conn = apiBoot();
 
 // `status` es el nivel de dato del espacio ('basic' ficha base · 'available' catálogo completo ·
 // 'planned' anunciado sin datos). Se devuelve para que cualquier cliente de esta API pueda decidir
@@ -11,15 +9,13 @@ $sql = "SELECT id, slug, name, category, region, province, municipality, descrip
 $result = $conn->query($sql);
 
 if (!$result) {
-    http_response_code(500);
     // El fallo típico aquí es una instalación creada con un esquema anterior, sin la columna
     // `status`. Se dice explícitamente en vez de dejar un "Unable to load parks" a secas: ahorra
     // media hora de depuración a quien despliegue sobre una BD antigua.
     $hint = strpos($conn->error, "status") !== false
         ? " Puede que a la base de datos le falte la columna 'status' de la tabla parks: ejecuta Database/migrations.sql."
         : "";
-    echo json_encode(["error" => "Unable to load parks." . $hint]);
-    exit;
+    apiError("Unable to load parks." . $hint, 500);
 }
 
 $parks = [];
@@ -58,7 +54,7 @@ foreach ($byRegion as $regionName => $provinces) {
     $communities[] = ["name" => $regionName, "provinces" => $provList];
 }
 
-echo json_encode([
+respond([
     "parks" => $parks,
     "communities" => $communities
-], JSON_UNESCAPED_UNICODE);
+]);

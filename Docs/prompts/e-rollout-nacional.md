@@ -240,9 +240,11 @@ ahora que en el parque número treinta:
 
 1. **Tabla de reconciliación taxonómica** (`eidos_taxonid` ↔ `gbifSpeciesKey`) como clave maestra
    nacional. Es *el* prerrequisito de la reutilización de especies entre parques.
-2. **Migrar la cartografía de hábitats de 1997 a CNH21 (2021)** — doble leyenda LPEH+HIC, catálogo
-   IEPNB `2a7fc624-0d69-4788-9bdd-49ee01fb1fe9`. El pipeline actual asume el formato de 1997; el
-   momento barato de cambiarlo es antes de procesar decenas de provincias con él.
+2. ~~**Migrar la cartografía de hábitats de 1997 a CNH21 (2021)**~~ — **descartado el 2026-07-25**:
+   la de 1997 **es la vigente**. El MITECO declara que, hasta que exista la del Inventario Español de
+   Hábitats Terrestres, lo publicado es esa. Lo que sí hay como alternativa es el **Atlas de Hábitats
+   de 2005** (`INB_Habitat<NN>` + `Datos<NN>.dbf`), con el que se construyó Cuatro Calas entero;
+   `build-habitats.js` distingue las dos fuentes solo.
 3. **Adoptar el `<slug>-merged.geojson`** como `habitats.geojson` del parque (hoy solo se genera en
    `out/` para revisión manual).
 4. **Catálogos regionales de especies amenazadas**: cada comunidad tiene el suyo. Hace falta una

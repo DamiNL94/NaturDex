@@ -20,7 +20,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const RAIZ = path.join(__dirname, '..', '..');
+const { ROOT: RAIZ } = require('../lib/io');
 const PARK = path.join(RAIZ, 'Frontend/Data/parks/murcia/cabo-cope-puntas-calnegre/park.json');
 const SEED = path.join(RAIZ, 'Database/seed.sql');
 const DRY = process.argv.includes('--dry');

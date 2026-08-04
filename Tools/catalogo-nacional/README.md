@@ -1,22 +1,16 @@
-# Catálogo nacional NaturDex — fuentes de datos y procedimiento por parque
+# Catálogo nacional NaturDex — el pipeline de datos, herramienta a herramienta
 
-> **Para qué sirve este documento.** Es el mapa de **de dónde sale cada dato** (límites de
-> parques, polígonos de hábitats, catálogo de especies) y el **procedimiento repetible** para
-> construir los datos de *cualquier* parque de España con fuentes **oficiales, científicas y
-> públicas**. Está pensado también como **prompt de arranque para futuras sesiones**: si retomas
-> esto, lee la sección [«Prompt para retomar»](#prompt-para-retomar) al final.
+> **Para qué sirve este documento.** Es el detalle de **cómo funciona cada herramienta** del pipeline
+> de tres capas: qué lee, qué escribe, qué opciones tiene y con qué trampas.
+>
+> **No empieces por aquí.** El **README raíz** es el manual operativo: modelo de datos (§3),
+> procedencia de cada campo (§4), runbook completo (§5), trampas conocidas (§6) y orden de
+> operaciones (§7). Este documento es la letra pequeña de las herramientas que ese runbook invoca.
+> El histórico de sesiones está en `Docs/rollout/ESTADO.md`.
 
-Estado: **piloto completado** — *Cabo Cope y Puntas de Calnegre* (Murcia). El resto de parques
-está pendiente de ejecutar con este mismo procedimiento.
-
-> **Nota (2026-07-25).** `build-habitats.js`, `merge-habitats.js`, `lib/` y `data/` se escribieron
-> en la rama `catalogo-nacional` y nunca se fusionaron a `main`: `main` tenía las SALIDAS del
-> piloto versionadas (`out/*.geojson`) pero no el código que las genera, y `package.json` apuntaba
-> a scripts inexistentes (`npm run habitats:build`/`habitats:merge`). Se han recuperado desde esa
-> rama (commit `02b7459`) y verificado que reproducen byte a byte `out/cabo-cope-puntas-calnegre-
-> {oficial,merged}.geojson` a partir del shapefile original del MITECO. Ver §5 para el estado real
-> de cada herramienta a día de hoy — varias cosas descritas en este documento han evolucionado en
-> `main` sin que el documento se actualizara; se corrige aquí.
+Estado (2026-08-04): **3 espacios en N2** (Cabo Cope y Puntas de Calnegre, Sierra Espuña, Cuatro
+Calas) y **13 en N1**, toda la Región de Murcia. El pipeline está rodado sobre el huso 30N; el
+primer cambio de huso llega con Cataluña/Aragón/Baleares (31N).
 
 ---
 
@@ -34,7 +28,7 @@ flowchart TD
   subgraph FUENTES["Fuentes oficiales / científicas / públicas"]
     ENP["ENP — Espacios Naturales Protegidos<br/>IEPNB/MITECO · SHP/GeoJSON/WMS · EPSG:4326"]
     N2K["Red Natura 2000 (LIC/ZEC + ZEPA)<br/>IEPNB · GeoJSON nativo"]
-    HIC["Cartografía Hábitats Directiva 92/43/CEE<br/>MITECO/BDN · SHP UTM + HabiNN.dbf (1997)<br/>sucesora nacional: CNH21 (2021)"]
+    HIC["Cartografía Hábitats Directiva 92/43/CEE<br/>MITECO/BDN · SHP UTM + HabiNN.dbf (1997)<br/>o Atlas de Hábitats (2005)"]
     EIDOS["EIDOS — IEPNB (PostgREST, sin auth)<br/>taxonomía · UICN por ámbito · estado legal"]
     UICN["UICN Red List — fallback conservación"]
     GBIF["GBIF — ocurrencias georreferenciadas<br/>api.gbif.org (nodo GBIF.ES)"]
@@ -88,7 +82,12 @@ Cada **región = código de provincia `NN`** (Murcia = 30). Dos ficheros por reg
 - **CRS**: ETRS89 UTM — **el huso depende de la región** (Murcia = 30N / EPSG:25830; otras pueden ser 29N/31N; Canarias 28N/EPSG:32628). Reproyectar a WGS84 (ETRS89 ≈ WGS84, sin datum-shift).
 - ⚠️ **`COBERTURA` viene vacía (0)** en el dato de 1997. ⚠️ El flag `PRIORITARI` es **poco fiable** (marca 8210 como prioritario); usar la **lista autorizada del Anexo I** para la prioridad.
 - ⚠️ **Codificación antigua**: algunos HIC del 1997 hay que reconciliarlos (p. ej. `8230`+`Hypericion ericoidis` = roquedo casmofítico calcícola → hoy `8210`, no silíceo).
-- **Sucesora moderna (recomendada para el rollout nacional)**: **CNH21 (2021)**, doble leyenda LPEH+HIC, catálogo IEPNB `2a7fc624-0d69-4788-9bdd-49ee01fb1fe9`. No está en la página de 1997.
+- ⚠️ **La cartografía de 1997 es la VIGENTE.** El MITECO declara que, hasta que exista la del
+  Inventario Español de Hábitats Terrestres, lo publicado es la de 1997. La «CNH21 (2021)» que
+  versiones anteriores de este documento daban como sucesora nacional **no lo es** (corregido el
+  2026-07-25). Existe además el **Atlas de Hábitats de 2005** (`INB_Habitat<NN>` + `Datos<NN>.dbf`),
+  con el que se construyó Cuatro Calas entero: `build-habitats.js` distingue las dos fuentes solo y
+  etiqueta cada recinto con la suya (`atlas2005` / `hic1997`).
 
 ### Capa 3 — Catálogo de especies (la «BD»)
 
@@ -124,12 +123,15 @@ Propiedades por hábitat en el geojson (ya implementadas en el piloto): `code`(H
 
 ## 4. Procedimiento por parque (repetible)
 
+> El runbook con los comandos exactos, la checklist de cierre y la definición de «terminado» está en
+> el **README raíz §5**. Aquí queda el esqueleto conceptual, que es lo que no cambia.
+
 **Parámetros que cambian por parque** → `<PARK_SLUG>`, `<REGION_NN>` (código provincia), `<UTM_ZONE>`
-(huso), `<SITE_CODES>` (ES… del LIC/ZEPA), ruta al `park boundary geojson` (WGS84).
+(huso, **leído del `.prj`**), `<SITE_CODES>` (ES… del LIC/ZEPA), ruta al límite en WGS84.
 
 1. **Límite** — obtener el geojson del límite (ENP nacional o la fuente regional) en WGS84.
 2. **Hábitats**
-   1. Descargar de MITECO `DirectivaHabitat<NN>_*.zip` (shapefile) y `directivadatos_<NN>_*.zip` (`Habi<NN>.dbf`). *(Alternativa moderna: tesela CNH21 2021.)*
+   1. Descargar de MITECO `DirectivaHabitat<NN>_*.zip` (shapefile) y `directivadatos_<NN>_*.zip` (`Habi<NN>.dbf`), o los del Atlas de 2005 (`INB_Habitat<NN>` + `Datos<NN>.dbf`).
    2. Parsear `.shp`, **reproyectar UTM `<UTM_ZONE>`N → WGS84**.
    3. **Join** shapefile.`CODIGO` ↔ `Habi<NN>`.`CODIGO` → HIC + asociación + prioridad por recinto.
    4. **Recortar** cada recinto al límite del parque (intersección de polígonos robusta).
@@ -141,128 +143,169 @@ Propiedades por hábitat en el geojson (ya implementadas en el piloto): `code`(H
    3. **GBIF** ∩ polígonos de hábitat, **sin Aves** → `observada_gbif`.
    4. **Aves** → apartado migratorias/ZEPA, contrastado con **Discodata BISE** por `<SITE_CODES>`.
 4. **Reconciliación taxonómica** con `eidos_taxonid`/`speciesKey` como clave maestra.
-5. **Validar** (`node Tools/validate-park-data.js`) y cuadrar contadores hábitat/especie.
+5. **Adoptar** la capa fusionada como la del espacio (`adopt-habitats.js`).
+6. **Validar** (`npm run validate`) y cuadrar contadores hábitat/especie.
 
 ---
 
-## 5. Herramientas — estado real (2026-07-25)
+## 5. Las herramientas
 
-```
-Tools/catalogo-nacional/
-├── README.md                          ← este documento
-├── build-habitats.js                  ← CAPA 2: shapefile MITECO → capa oficial recortada al parque
-├── merge-habitats.js                  ← CAPA 2: fusiona la capa oficial con la curada del parque
-├── atlas-hic-especies.js              ← CAPA 3: Atlas de Hábitats (PDF) → especies características por HIC
-├── enrich-images.js                   ← CAPA 3: fotos con licencia (EIDOS, fallback GBIF)
-├── invasoras-eei.js                   ← CAPA 3: catálogo EEI (RD 630/2013) ∩ presencia GBIF por territorio
-├── lib/
-│   ├── shapefile.js                   ← parser .shp (polígonos) + reproyección inversa UTM (cualquier huso)
-│   ├── dbf.js                         ← lector dBASE (.dbf)
-│   ├── geo.js                         ← bbox, punto-en-polígono, áreas, orientación de anillos
-│   └── registry.js                    ← localiza los geo del parque en parks-index.json
-├── data/
-│   ├── hic-prioritarios.json          ← códigos HIC prioritarios (Anexo I) — fuente de verdad
-│   └── hic-nombres.json               ← nombre/tipo por código HIC (para los hábitats añadidos)
-└── out/                               ← salidas generadas
-```
+Todas viven bajo `Tools/`. La **infraestructura compartida** está en `Tools/lib/` (antes en
+`Tools/catalogo-nacional/lib/`; se movió porque los scripts de `Tools/` necesitaban lo mismo y lo
+reimplementaban): ver la tabla del README raíz §2. Ninguna herramienta de Capa 2/3 escribe en la BD
+ni en el seed directamente —salvo `enrich-images.js --write-park`, documentado en su cabecera—:
+generan ficheros en `out/` para revisar antes de adoptarlos.
 
-| Script | Qué hace | Escribe | Estado |
-|---|---|---|---|
-| `build-habitats.js` | Reproyecta UTM→WGS84, une por `CODIGO`, recorta al límite del parque | `out/<slug>-oficial.geojson` | **Recuperado** de la rama `catalogo-nacional` (nunca se había fusionado a `main`); verificado byte a byte contra la salida del piloto |
-| `merge-habitats.js` | Enriquece la capa curada, mantiene lo suyo, añade HIC oficiales que falten | `out/<slug>-merged.geojson` | **Recuperado**, ídem |
-| `atlas-hic-especies.js` | CAPA 3: cruza el Atlas (PDF, extraído con `pdftotext`) con el catálogo del parque | JSON de enlaces `caracteristica` | Presente en `main`. Sustituye a un primer script (`hic-especies-caracteristicas.js`, por género de sintaxón) que existía en la rama pero quedó obsoleto en cuanto se dispuso del texto del Atlas — no se ha recuperado por no aportar ya nada |
-| `enrich-images.js` | Fotos con licencia por especie (EIDOS, fallback GBIF) | `.sql` de UPDATEs + informe | Presente en `main`. No existía en el diseño original de esta carpeta |
-| `invasoras-eei.js` | EEI oficiales (EIDOS) ∩ presencia GBIF por CCAA/provincia | JSON rankeado | Presente en `main`. Tampoco existía en el diseño original |
-| `Tools/eidos-diff.js` | CAPA 3: cotejo BD ↔ EIDOS (conservación/estado) | informe `.md` | **Referenciado por `npm run eidos:diff` pero el fichero NO existe en `main`.** Existe en la rama `catalogo-nacional` y en la copia de disco (ver más abajo); no se ha recuperado en esta pasada por no estar en el alcance pedido — mismo síntoma que build/merge-habitats |
-| `Tools/gbif-habitats.js` | CAPA 3: GBIF ∩ polígonos + análisis de ruido | informe `.md`/`.json` | **Mismo caso**: referenciado por `npm run gbif:habitats`, ausente en `main`, presente en la rama y en la copia de disco |
-| `reconcile-taxa.js` | Tabla maestra `eidos_taxonid` ↔ `gbifSpeciesKey` del parque | `out/<slug>-reconciliacion.json` | **Ausente en `main` y sin script npm.** Su salida para el piloto SÍ está versionada (`out/cabo-cope-puntas-calnegre-reconciliacion.json`); el script en sí solo existe en la rama y en la copia de disco |
+### Capa 1 · límite y ficha base
 
-Ninguna de las herramientas de Capa 2/3 escribe en la BD, el seed ni el `habitats.geojson` curado
-directamente (salvo `enrich-images.js --write-park`, documentado en su cabecera): generan ficheros
-en `out/` para revisar antes de adoptarlos.
+| Script | npm | Qué hace |
+|---|---|---|
+| `build-n1-espacios.js` | `n1:build` | Genera las fichas N1 de una comunidad entera desde las capas nacionales del MITECO. **Idempotente.** Respeta la marca `CodigoIMIDA`: no pisa un límite ya refinado (para rehacer uno, borra su carpeta) |
+| `refina-limites-imida.js` | `n1:refina` | Sustituye el límite generalizado del ENP nacional por la delimitación del geoportal autonómico (2–15× más vértices). Solo geometrías `Caracter = 'Firme'`. Cachea las capas en `fuentes/imida-enp/` |
+| `Tools/build-park-trails.js` | `trails:build` | Senderos señalizados (GR/PR/SL) de OpenStreetMap recortados al polígono oficial (no al bbox) |
+| `Tools/build-park-tiles.js` | `tiles:build` | Paquete de mapa base offline (`.pmtiles`) recortado al límite oficial |
 
-**Sobre `out/`**: el diseño original marcaba esta carpeta como no versionada (`out/.gitignore` con
-`*`). En algún punto posterior `main` empezó a versionar las 5 salidas del piloto de todos modos
-(`cabo-cope-puntas-calnegre-{oficial,merged,hic-especies,reconciliacion}` + `preview.html`). Esta
-recuperación no revierte esa decisión — solo la deja documentada — porque no está en el alcance
-pedido (reparar herramientas, no cambiar políticas de versionado).
+### Capa 2 · hábitats
+
+| Script | npm | Qué hace |
+|---|---|---|
+| `build-habitats.js` | `habitats:build` | Reproyecta UTM→WGS84, une por `CODIGO` y **recorta al límite**. → `out/<slug>-oficial.geojson`. `--zone` fuerza el huso; por defecto lo lee del `.prj` |
+| `merge-habitats.js` | `habitats:merge` | Fusiona la capa oficial con la curada: enriquece, conserva lo curado y añade los HIC oficiales que falten. → `out/<slug>-merged.geojson`. La procedencia la lee de la capa oficial, no la escribe a mano |
+| `adopt-habitats.js` | `habitats:adopt` | Lleva el merged a `Frontend/`, sincroniza `park.json` y recalcula el manifiesto. `--dry` para revisar. Aplica la **regla marina** y las excepciones de `data/hic-excluidos.json` |
+
+### Capa 3 · especies
+
+| Script | npm | Qué hace |
+|---|---|---|
+| `atlas-hic-especies.js` | `atlas:hic` | Atlas (PDF → `pdftotext -layout`) → especies características por HIC = evidencia `caracteristica` |
+| `Tools/gbif-habitats.js` | `gbif:habitats` | GBIF ∩ polígonos de hábitat + análisis de ruido. Cachea las ocurrencias en disco (`--refresh` fuerza la descarga) |
+| `reconcile-taxa.js` | `taxones:reconcilia` | Tabla maestra `eidos_taxonid` ↔ `gbif_speciesKey`, resolviendo sinonimias. Avisa de las claves de GBIF de rango superior a especie |
+| `Tools/eidos-diff.js` | `eidos:diff` | Coteja la BD viva contra EIDOS (solo lectura). `--ccaa` elige el catálogo autonómico |
+| `fix-estado-conservacion-iepnb.js` | — | Aplica al piloto las correcciones derivadas de la Lista Patrón del IEPNB. Idempotente, `--dry` |
+| `Tools/sync-species-catalog.js` | `species:check` `species:extract` `species:apply` | El catálogo universal: una especie, una ficha, en todos los espacios |
+| `Tools/scan-taxones-duplicados.js` | `taxones:duplicados` | El mismo taxón con dos nombres científicos. Agrupa por identificador externo, no por nombre |
+
+### Fotos e invasoras
+
+| Script | npm | Qué hace |
+|---|---|---|
+| `wikimedia-images.js` | `images:species` | Foto de cada especie contra Wikidata/Wikipedia/Commons, con URL canónica `Special:FilePath` y atribución |
+| `habitat-images.js` | `images:habitats` | Portada de hábitat: su especie diagnóstica, explicada en `imageNote` |
+| `enrich-images.js` | — | Fotos desde EIDOS con respaldo en GBIF. Ordena *foto de campo antes que pliego* → licencia → país |
+| `invasoras-eei.js` | `invasoras:eei` | Catálogo EEI (RD 630/2013) ∩ presencia GBIF por territorio |
+| `invasoras-contenido.js` | `contenido:invasoras` | Fichas de invasoras desde EIDOS, limpiando los restos del formulario de origen |
+| `invasoras-images.js` | `images:invasoras` | Sus fotos, misma cadena de resolución que el catálogo |
+
+### Verificación
+
+| Script | npm | Qué hace |
+|---|---|---|
+| `Tools/validate-park-data.js` | `validate` | La red de seguridad. **Bloquea el commit.** Coherencia `park.json ↔ manifest ↔ geojson`, integridad especie↔hábitat, contadores, coordenadas, licencias, transcripciones y presupuesto offline |
+| `Tools/glossary-coverage.js` | `glossary:check` | Vocabulario científico de las fichas sin definición en el glosario |
+
+### Datos de referencia (`data/`)
+
+| Fichero | Qué es |
+|---|---|
+| `hic-prioritarios.json` | Códigos HIC prioritarios del Anexo I. **Fuente de verdad de `priority`** — nunca el flag `PRIORITARI` de 1997 |
+| `hic-nombres.json` | Nombre y tipo por código HIC. ⚠️ Un código ausente **se salta el filtro marino** (README raíz §6) |
+| `hic-excluidos.json` | Excepciones por espacio: códigos que la cartografía recorta dentro pero que el formulario normalizado no declara |
+| `especies-universal.json` | El catálogo universal: los campos que describen a la especie, indexados por nombre científico |
+| `contenido/*.json` | Texto redactado a mano. **Manda sobre lo extraído** — cuidado con las entradas obsoletas (README raíz §7.2) |
+| `descripciones-espacios.json` | La descripción de cada espacio. **El único texto del pipeline redactado a mano**; `build-n1-espacios.js` la lee de aquí para que una regeneración no la pise |
+| `murcia-enp-municipios.json`, `senderos-fmrm-murcia.json` | Datos de apoyo de la comunidad piloto |
 
 ### Uso (ejemplo real, piloto verificado)
 
 ```bash
-# Windows: cmd.exe no tiene Node en el PATH
-export PATH="/c/Program Files/nodejs:$PATH"
-
-# 1) Capa oficial recortada al parque (--zone = huso UTM de la región)
+# 1) Capa oficial recortada al parque (--zone = huso UTM leído del .prj)
 node Tools/catalogo-nacional/build-habitats.js \
   --park cabo-cope-puntas-calnegre \
-  --shp  <ruta>/DirectivaHabitat30_1997.shp \
-  --habi <ruta>/Habi30.dbf \
-  --zone 30
+  --shp   <ruta>/DirectivaHabitat30_1997.shp \
+  --datos <ruta>/Habi30.dbf \
+  --zone  30
 
 # 2) Fusión con la capa curada (--reconcile solo si la asociación lo justifica)
 node Tools/catalogo-nacional/merge-habitats.js \
   --park cabo-cope-puntas-calnegre \
   --official Tools/catalogo-nacional/out/cabo-cope-puntas-calnegre-oficial.geojson \
   --reconcile 8230:8210
+
+# 3) Adopción como capa real del espacio
+node Tools/catalogo-nacional/adopt-habitats.js --park cabo-cope-puntas-calnegre --dry
+node Tools/catalogo-nacional/adopt-habitats.js --park cabo-cope-puntas-calnegre
 ```
 
-También como `npm run habitats:build -- --park … ` y `npm run habitats:merge -- --park …`.
+**Resultado del piloto**: 28 recintos oficiales recortados (0 vértices fuera del parque) → 16
+hábitats fusionados = 10 enriquecidos + 5 solo-curada + 1 añadido; 11/16 con fitosociología oficial.
+Tras la revisión del 2026-08-01 (retirados el 1110 marino y el 9560 duplicado) el espacio sirve 15.
 
-**Resultado del piloto** (reproducido el 2026-07-25 contra el shapefile original — coincide byte a
-byte con `out/cabo-cope-puntas-calnegre-{oficial,merged}.geojson`): 28 recintos oficiales recortados
-(0 vértices fuera del parque) → 16 hábitats fusionados = 10 enriquecidos + 5 solo-curada + 1 añadido
-(Posidonia 1120); prioritarios 1510, 5220, 6110, 6220, 1120; 11/16 con fitosociología oficial.
+### Sobre `out/`
+
+El diseño original marcaba esta carpeta como no versionada. En algún punto `main` empezó a versionar
+las salidas del piloto de todos modos, y así sigue: son útiles como referencia de formato y como
+prueba de reproducibilidad. Ojo con una consecuencia: `out/<slug>-merged.geojson` puede quedar
+desfasado respecto a `Frontend/.../habitats.geojson` si la capa curada avanzó después (le pasa al
+piloto, cuya capa curada se rehizo con el Atlas de 2005). **La fuente de verdad es la de `Frontend/`.**
 
 ### Dependencia
 
-**`polygon-clipping` es la única dependencia del repo** (declarada en `package.json`). La usa el
-recorte de hábitats. Se optó por ella tras comprobar que un Greiner-Hormann propio, aun pasando
-los tests unitarios (incluido recorte cóncavo), **falla con los tramos de costa colineales** entre
-el límite del parque y los polígonos marinos. El resto del tooling sigue siendo zero-dep y el
-`Frontend` no depende de nada.
+**`polygon-clipping` es la única dependencia del repo.** La usa el recorte de hábitats. Se optó por
+ella tras comprobar que un Greiner-Hormann propio, aun pasando los tests unitarios (incluido recorte
+cóncavo), **falla con los tramos de costa colineales** entre el límite del parque y los polígonos
+marinos. El resto del tooling sigue siendo zero-dep y el `Frontend` no depende de nada.
 
 ---
 
-## 6. Ficheros de apoyo del piloto (fuera del repo)
+## 6. Ficheros de origen (fuera del repo)
 
-Los ZIP originales del MITECO y el shapefile extraído están en dos sitios en disco (ninguno
-versionado):
+Los ZIP del MITECO **no se versionan** (pesan y son reproducibles: sus URL literales, por provincia,
+están en `fuentes/habitat-provincias.json`). Lo que sí está versionado y no hay que volver a
+descargar:
 
-- `C:\Users\Deathscythe\Desktop\Murcia\` — shapefile + `.dbf` ya extraídos (sin los `.zip`).
-- `C:\Users\Deathscythe\Desktop\NaturDex-work\fuentes-mitec\` — los `.zip` originales
-  (`directivahabitat30.zip`, `directivadatos_30.zip`) más el mismo shapefile y `Habi30.dbf` ya
-  extraídos, y en `NaturDex-work\api-outputs\`/`resultados-catalogo\` las salidas intermedias del
-  piloto (incluye ejecuciones de `eidos-diff.js` y `gbif-habitats.js`, que ya no están en `main`).
-- `C:\Users\Deathscythe\Desktop\NaturDex - copia\` — una copia de trabajo completa del repo de esa
-  fecha, con **todo** el código de `Tools/catalogo-nacional/` intacto (incluido lo que sigue sin
-  recuperar en `main`: `Tools/eidos-diff.js`, `Tools/gbif-habitats.js`, `reconcile-taxa.js`,
-  `hic-especies-caracteristicas.js`). Es la fuente más rápida si se decide recuperar el resto.
+- `fuentes/FUENTES.json` — fichas de ENP, Red Natura 2000, Hábitat art. 17 y riqueza de especies.
+- `fuentes/habitat-provincias.json` — **las 50 provincias** con la URL literal de su shapefile y de
+  su tabla de atributos. Los sufijos `_tcm30-NNNNNN` **no son derivables**: están copiados a mano de
+  las páginas de descarga del MITECO. Es el fichero que ahorra media hora por provincia nueva.
+- `fuentes/iepnb-api.json` — la API PostgREST del IEPNB, sin autenticación.
+- `fuentes/imida-enp/capa-*.json` — las cinco capas del geoportal murciano, ya descargadas.
+
+En la máquina de desarrollo original los ZIP y el shapefile extraído de Murcia estaban bajo
+`Desktop\Murcia\` y `Desktop\NaturDex-work\fuentes-mitec\`. Son rutas de una sola máquina: si no
+están, se vuelven a descargar desde `habitat-provincias.json`.
+
+---
+
+## 7. Deuda propia del pipeline
+
+La lista priorizada y completa está en el **README raíz §9**. Lo que toca específicamente a estas
+herramientas:
+
+1. **El pipeline de hábitats no escribe en la BD.** `adopt-habitats.js` toca `Frontend/` y nada más,
+   así que un export desde la API borraría sus cambios sin avisar.
+2. **Tabla de reconciliación taxonómica nacional.** Existe la del piloto
+   (`out/cabo-cope-puntas-calnegre-reconciliacion.json`, 124 especies, generada por
+   `reconcile-taxa.js`); falta acumular todos los espacios sin duplicar por `eidos_taxonid`.
+3. **Completar `data/hic-prioritarios.json` y `data/hic-nombres.json`** al entrar en cada provincia
+   nueva. No es opcional: un código sin ficha se salta el filtro marino.
+4. **Primer cambio de huso UTM** (31N con Cataluña/Aragón/Baleares) y, más adelante, **28N en
+   Canarias**, donde además EIDOS trata los endemismos en su propio ámbito (`aplicaa` = "Canarias") y
+   los hábitats macaronésicos no están en el Atlas peninsular.
+5. **Catálogos regionales de especies amenazadas**: hace falta una tabla comunidad → norma. Ver la
+   deuda nº 1 del README raíz (`murcia_status` está atado a Murcia).
 
 ---
 
 ## Prompt para retomar
 
-> Retomo el **catálogo nacional de NaturDex**. Contexto en `Tools/catalogo-nacional/README.md`:
-> arquitectura de 3 capas (límite ENP/Natura2000 → hábitats HIC del MITECO → especies
-> EIDOS+GBIF+ZEPA+Atlas). El **piloto** (Cabo Cope, Murcia) está hecho:
-> `Frontend/Data/parks/murcia/cabo-cope-puntas-calnegre/geo/habitats.geojson`.
+> Retomo el rollout de NaturDex. Contexto: el **README raíz** (modelo, procedencia de cada campo,
+> runbook, trampas y orden de operaciones) y este documento para el detalle de cada herramienta. El
+> estado por espacio está en `Docs/rollout/ESTADO.md`.
 >
-> La **Capa 2 está empaquetada y verificada**: `build-habitats.js` + `merge-habitats.js` (ver §5
-> «Uso»). Para un parque nuevo basta descargar sus 2 ficheros del MITECO y lanzarlos.
+> El pipeline está rodado sobre tres espacios de Murcia (huso 30N) y las herramientas de las tres
+> capas están completas y verificadas. Para un espacio nuevo que ya esté en N1 basta descargar sus
+> dos ficheros del MITECO y seguir el runbook del README §5.
 >
-> Tareas abiertas:
-> 1. Decidir si se recuperan también `Tools/eidos-diff.js`, `Tools/gbif-habitats.js`,
->    `reconcile-taxa.js` y `hic-especies-caracteristicas.js` desde la rama `catalogo-nacional` /
->    la copia de disco en `Desktop\NaturDex - copia\` — están en la misma situación que
->    build/merge-habitats estaban antes de esta recuperación (código perdido, salida versionada).
-> 2. Tabla de **reconciliación taxonómica** nacional (`eidos_taxonid` / `speciesKey` de GBIF) —
->    el piloto ya tiene una para sus 124 especies (`out/cabo-cope-puntas-calnegre-reconciliacion.json`,
->    generada por `reconcile-taxa.js`); falta decidir si es la base de la tabla maestra nacional o
->    hay que rehacerla con otro criterio (ver Docs/rollout/ESTADO.md §7.1).
-> 3. Completar `data/hic-prioritarios.json` y `data/hic-nombres.json` al añadir regiones nuevas.
-> 4. Valorar migrar la cartografía de hábitats **1997 → CNH21 (2021)** (más moderna, doble leyenda
->    LPEH+HIC); el pipeline actual asume el formato de 1997 (shapefile + `Habi<NN>.dbf`).
->
-> Empieza por preguntarme **qué parque** procesamos y confirma su `REGION_NN`, **huso UTM** y
-> códigos Natura 2000 antes de descargar nada.
+> Empieza por preguntarme **qué espacio** procesamos y confírmame su `REGION_NN`, el **huso UTM leído
+> del `.prj`** (no lo asumas) y sus códigos Natura 2000 antes de descargar nada. Si alguno no cuadra,
+> para y dímelo.
