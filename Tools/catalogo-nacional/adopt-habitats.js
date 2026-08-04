@@ -23,16 +23,15 @@
  */
 const fs = require('fs');
 const path = require('path');
-const { resolvePark } = require('./lib/registry');
-const { ringArea, inRing } = require('./lib/geo');
+const { resolvePark } = require('../lib/registry');
+const { ringArea, inRing } = require('../lib/geo');
 
-const RAIZ = path.join(__dirname, '..', '..');
-const FRONTEND = path.join(RAIZ, 'Frontend');
-const ARGV = process.argv.slice(2);
-const flag = (n, d = null) => { const i = ARGV.indexOf(n); return i >= 0 && i + 1 < ARGV.length ? ARGV[i + 1] : d; };
-const DRY = ARGV.includes('--dry');
-const PARK = flag('--park');
-if (!PARK) { console.error('Uso: --park <slug> [--dry] [--merged <ruta>]'); process.exit(2); }
+const { arg, flag, requireArgs } = require('../lib/cli');
+const { ROOT: RAIZ, FRONTEND } = require('../lib/io');
+
+const DRY = flag('dry');
+const PARK = arg('park');
+requireArgs('Uso: --park <slug> [--dry] [--merged <ruta>]', { park: PARK });
 
 const NOMBRES = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'hic-nombres.json'), 'utf8')).codigos;
 // Tipos que no se adoptan: lo que está bajo el agua no se explora a pie.

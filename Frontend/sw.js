@@ -9,7 +9,10 @@
  * Es opcional: si el navegador no admite Service Workers, la app sigue funcionando con la caché en
  * localStorage y Cache Storage que gestiona offline.js.
  */
-var VERSION = 'v52';
+// Subir esta versión invalida la caché del armazón. Hay que hacerlo SIEMPRE que cambie la lista de
+// SHELL_ASSETS: un módulo nuevo que no esté precacheado deja la app rota sin cobertura, y la
+// estrategia network-first no lo salva porque justo entonces no hay red de la que tirar.
+var VERSION = 'v53';
 var RUNTIME_CACHE = 'naturdex-runtime-' + VERSION;
 
 // Armazón mínimo que se intenta precachear en la instalación (best-effort).
@@ -17,7 +20,7 @@ var RUNTIME_CACHE = 'naturdex-runtime-' + VERSION;
 // ignora a propósito todo lo que no es del mismo origen: desde un CDN jamás llegaban a la caché y,
 // como map.js usa `L` al importarse, la app no arrancaba sin cobertura. Los PNG de leaflet/images
 // hacen falta de verdad: el mapa de España (auth.js) usa el marcador por defecto de Leaflet.
-var SHELL_ASSETS = ['index.html', 'Css/styles.css', 'Css/ranger.css', 'manifest.webmanifest', 'Img/icon-192.png', 'Img/icon-512.png', 'Vendor/leaflet/leaflet.js', 'Vendor/leaflet/leaflet.css', 'Vendor/leaflet/images/marker-icon.png', 'Vendor/leaflet/images/marker-icon-2x.png', 'Vendor/leaflet/images/marker-shadow.png', 'Vendor/leaflet/images/layers.png', 'Vendor/leaflet/images/layers-2x.png', 'Vendor/markercluster/leaflet.markercluster.js', 'Vendor/markercluster/MarkerCluster.css', 'Vendor/markercluster/MarkerCluster.Default.css', 'Vendor/protomaps/protomaps-leaflet.js', 'Js/offline.js', 'Js/nav.js', 'Js/prefs.js', 'Js/util.js', 'Js/state.js', 'Js/habitat-groups.js', 'Js/dom.js', 'Js/data.js', 'Js/render.js', 'Js/map.js', 'Js/layers.js', 'Js/explorer.js', 'Js/audio.js', 'Js/glossary.js', 'Js/tutorial.js', 'Js/achievements.js', 'Js/presence.js', 'Js/notice.js', 'Js/profile.js', 'Js/app.js', 'Js/auth.js', 'Data/glosario.json', 'Data/invasoras.json', 'Data/achievements.json'];
+var SHELL_ASSETS = ['index.html', 'Css/styles.css', 'Css/ranger.css', 'manifest.webmanifest', 'Img/icon-192.png', 'Img/icon-512.png', 'Vendor/leaflet/leaflet.js', 'Vendor/leaflet/leaflet.css', 'Vendor/leaflet/images/marker-icon.png', 'Vendor/leaflet/images/marker-icon-2x.png', 'Vendor/leaflet/images/marker-shadow.png', 'Vendor/leaflet/images/layers.png', 'Vendor/leaflet/images/layers-2x.png', 'Vendor/markercluster/leaflet.markercluster.js', 'Vendor/markercluster/MarkerCluster.css', 'Vendor/markercluster/MarkerCluster.Default.css', 'Vendor/protomaps/protomaps-leaflet.js', 'Js/offline.js', 'Js/nav.js', 'Js/prefs.js', 'Js/util.js', 'Js/state.js', 'Js/api.js', 'Js/habitat-groups.js', 'Js/dom.js', 'Js/data.js', 'Js/render.js', 'Js/map.js', 'Js/layers.js', 'Js/explorer.js', 'Js/audio.js', 'Js/glossary.js', 'Js/tutorial.js', 'Js/achievements.js', 'Js/presence.js', 'Js/notice.js', 'Js/profile.js', 'Js/app.js', 'Js/auth.js', 'Data/glosario.json', 'Data/invasoras.json', 'Data/achievements.json'];
 
 self.addEventListener('install', function (event) {
   event.waitUntil(

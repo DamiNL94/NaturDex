@@ -16,7 +16,8 @@
 // agregado (cuánto tiempo dentro, cuántos metros). La app no es un registro de por dónde andas.
 // ================================================================================================
 
-import { API_BASE, state } from './state.js';
+import { state } from './state.js';
+import { apiFetch } from './api.js';
 import { pointInGeometry, haversineMeters, geoUnavailableReason } from './util.js';
 import { presenceBar, presenceText, presenceAction } from './dom.js';
 import { placeUserMarker, clearUserMarker } from './map.js';
@@ -35,10 +36,9 @@ const MARK_POST_GRACE_S = 900;
 const SEND_INTERVAL_MS = 60000;
 const SEND_DISTANCE_M = 40;
 
-const API_TIMEOUT_MS = 5000;
-function apiSignal() {
-  return (typeof AbortSignal !== 'undefined' && AbortSignal.timeout) ? AbortSignal.timeout(API_TIMEOUT_MS) : undefined;
-}
+// Subir una posición puede tardar algo más que una lectura: el servidor valida el fix contra el
+// límite oficial y reconstruye la traza antes de contestar.
+const PRESENCE_TIMEOUT_MS = 5000;
 
 // --- Almacenamiento local (por cuenta) ------------------------------------------------------------
 function scope() { return state.userId != null ? 'u' + state.userId : 'anon'; }
@@ -195,9 +195,8 @@ async function sendFix(parkSlug, fix) {
   if (state.userId == null) return null;
   if (!NaturDexOffline.isOnline()) { queueFix(parkSlug, fix); return null; }
   try {
-    const res = await fetch(API_BASE + '/presence.php', {
-      method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ park: parkSlug, ...fix }), signal: apiSignal()
+    const res = await apiFetch('/presence.php', {
+      method: 'POST', body: { park: parkSlug, ...fix }, timeoutMs: PRESENCE_TIMEOUT_MS,
     });
     if (!res.ok) throw new Error('presence endpoint unavailable (HTTP ' + res.status + ')');
     return await res.json();
@@ -231,9 +230,8 @@ export async function flushPresenceQueue() {
   let sent = 0;
   for (const [park, fixes] of byPark) {
     try {
-      const res = await fetch(API_BASE + '/presence.php', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ park, fixes }), signal: apiSignal()
+      const res = await apiFetch('/presence.php', {
+        method: 'POST', body: { park, fixes }, timeoutMs: PRESENCE_TIMEOUT_MS,
       });
       if (!res.ok) throw new Error('presence endpoint unavailable (HTTP ' + res.status + ')');
       const data = await res.json();
@@ -438,7 +436,7 @@ export async function startPresence(parkSlug, handlers) {
     // Estado ya conocido por el servidor (p. ej. la visita de hace un rato sigue abierta).
     if (state.userId != null && NaturDexOffline.isOnline()) {
       try {
-        const res = await fetch(API_BASE + '/presence.php?park=' + encodeURIComponent(parkSlug), { signal: apiSignal() });
+        const res = await apiFetch('/presence.php?park=' + encodeURIComponent(parkSlug), { timeoutMs: PRESENCE_TIMEOUT_MS });
         if (res.ok) adoptServerStatus(parkSlug, await res.json());
       } catch (e) { /* sin red: se usa lo local */ }
     }

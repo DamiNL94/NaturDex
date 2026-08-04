@@ -7,19 +7,9 @@
 // y mapas vectoriales quedan disponibles sin conexión.
 // ================================================================================================
 
-import { API_BASE, DEFAULT_PARK_SLUG, state } from './state.js';
-
-// Señal de corte para las llamadas a la API: si el backend no responde en 3 s se aborta y se sigue
-// con los datos locales (offline-first). Medido con MySQL caído: sin esto, entrar al parque tardaba
-// ~10 s porque los fetch fallidos se esperaban en serie. AbortSignal.timeout no existe en
-// navegadores antiguos: en ese caso se devuelve undefined y el fetch va sin límite, como antes.
-const API_TIMEOUT_MS = 3000;
-function apiSignal(ms = API_TIMEOUT_MS) {
-  return (typeof AbortSignal !== 'undefined' && AbortSignal.timeout) ? AbortSignal.timeout(ms) : undefined;
-}
-// Vaciar la cola de pendientes puede mandar decenas de eventos de una excursión entera: 3 s son
-// pocos para eso, y abortar a medias significaría reintentarlo todo en el próximo arranque.
-const SYNC_TIMEOUT_MS = 15000;
+import { DEFAULT_PARK_SLUG, state } from './state.js';
+// Todo el trato con Backend/Api/ (corte por tiempo incluido) vive en api.js.
+import { apiFetch, apiGetJson, SYNC_TIMEOUT_MS } from './api.js';
 
 // --- Registro de parques --------------------------------------------------------------------------
 // Resuelve el parque activo del registro. Si el slug pedido no existe se cae a un parque abrible:
@@ -74,7 +64,7 @@ export async function loadData(manifest) {
   // 2) Si hay backend accesible, sus datos (desde la base de datos) tienen prioridad y refrescan
   //    la copia offline con la versión más completa.
   try {
-    const apiResponse = await fetch(API_BASE + '/species.php?park=' + encodeURIComponent(manifest.apiSlug), { signal: apiSignal() });
+    const apiResponse = await apiFetch('/species.php?park=' + encodeURIComponent(manifest.apiSlug));
     if (apiResponse.ok) {
       const apiData = await apiResponse.json();
       if (apiData?.species?.length) {
@@ -214,11 +204,10 @@ export async function flushProgressQueue() {
     let sent = 0;
     for (const [park, events] of byPark) {
       try {
-        const response = await fetch(API_BASE + '/progress.php?park=' + encodeURIComponent(park), {
+        const response = await apiFetch('/progress.php?park=' + encodeURIComponent(park), {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ events: events.map(e => ({ type: e.type, id: e.id, seen: e.seen, lat: e.lat, lng: e.lng, accuracy: e.accuracy, at: e.at })) }),
-          signal: apiSignal(SYNC_TIMEOUT_MS)
+          body: { events: events.map(e => ({ type: e.type, id: e.id, seen: e.seen, lat: e.lat, lng: e.lng, accuracy: e.accuracy, at: e.at })) },
+          timeoutMs: SYNC_TIMEOUT_MS,
         });
         if (!response.ok) throw new Error('progress endpoint unavailable (HTTP ' + response.status + ')');
         const body = await response.json();
@@ -247,9 +236,7 @@ export async function loadProgress() {
   applyProgress(NaturDexOffline.loadProgressLocal(progressScope()));
   // Luego, si hay backend y sesión, se fusiona por unión (nunca se pierde un "visto" offline).
   try {
-    const response = await fetch(API_BASE + '/progress.php?park=' + encodeURIComponent(state.activeParkSlug), { signal: apiSignal() });
-    if (!response.ok) throw new Error('progress endpoint unavailable');
-    const server = await response.json();
+    const server = await apiGetJson('/progress.php?park=' + encodeURIComponent(state.activeParkSlug));
 
     // Lo que el dispositivo tiene y el servidor no, se encola para subir ANTES de fusionar (después
     // ya no se distinguen). Esto recupera el progreso de las versiones que no tenían cola y el de
@@ -292,11 +279,8 @@ export async function persistProgress(type, id, seen, coords) {
     // El parque VIAJA EN LA URL. Sin él, progress.php se cae a su parque por defecto
     // (cabo-cope-puntas-calnegre): marcar una especie en Sierra Espuña con la app abierta escribía
     // el progreso en el parque equivocado, y solo la cola de pendientes (que sí lo mandaba) acertaba.
-    const response = await fetch(API_BASE + '/progress.php?park=' + encodeURIComponent(state.activeParkSlug), {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-      signal: apiSignal()
+    const response = await apiFetch('/progress.php?park=' + encodeURIComponent(state.activeParkSlug), {
+      method: 'POST', body: payload,
     });
     if (!response.ok) throw new Error('progress endpoint unavailable');
     state.progressReady = true;

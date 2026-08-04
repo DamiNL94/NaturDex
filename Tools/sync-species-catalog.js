@@ -41,11 +41,12 @@
 
 const fs = require('fs');
 const path = require('path');
+const { arg, flag } = require('./lib/cli');
+const { sqlStr } = require('./lib/sql');
+const { ROOT, CATALOGO_DIR, rel, fromRoot, parkFiles } = require('./lib/io');
 
-const ROOT = path.join(__dirname, '..');
-const PARKS_DIR = path.join(ROOT, 'Frontend', 'Data', 'parks');
-const CATALOGO = path.join(ROOT, 'Tools', 'catalogo-nacional', 'data', 'especies-universal.json');
-const CONTENIDO_DIR = path.join(ROOT, 'Tools', 'catalogo-nacional', 'data', 'contenido');
+const CATALOGO = path.join(CATALOGO_DIR, 'data', 'especies-universal.json');
+const CONTENIDO_DIR = path.join(CATALOGO_DIR, 'data', 'contenido');
 
 // Vocabulario cerrado de `group`. Antes había 79 valores distintos en un parque y 61 en otro,
 // mezclando tres cosas: la forma de vida ("Arbusto"), la familia botánica ("Quenopodiácea") y el
@@ -104,23 +105,11 @@ const LOCALES = [
 // Texto que delata que un campo universal se escribió pensando en un parque concreto.
 const RASTRO_LOCAL = /\b(este parque|del parque|en el parque|parque piloto|este espacio|Cabo Cope|Calnegre|Marina de Cope|Espuña|ZEPA ES\d+|LIC\/ZEC ES\d+|EEA\/BISE|Red Natura 2000)\b/i;
 
-const args = process.argv.slice(2);
-const has = f => args.includes(f);
-const val = (f, d) => { const i = args.indexOf(f); return i >= 0 && args[i + 1] ? args[i + 1] : d; };
+// Lectura de opciones: Tools/lib/cli.js (admite `--x v` y `--x=v`).
+const has = flag, val = arg;
 
-// --- recorrido de parques -------------------------------------------------------------------------
-function parkFiles() {
-  const out = [];
-  for (const region of fs.readdirSync(PARKS_DIR)) {
-    const dir = path.join(PARKS_DIR, region);
-    if (!fs.statSync(dir).isDirectory()) continue;
-    for (const slug of fs.readdirSync(dir)) {
-      const f = path.join(dir, slug, 'park.json');
-      if (fs.existsSync(f)) out.push({ slug, file: f });
-    }
-  }
-  return out;
-}
+// El recorrido de Frontend/Data/parks/<provincia>/<slug>/park.json vive en Tools/lib/io.js
+// (`parkFiles`): lo hacían igual esta herramienta, wikimedia-images.js y habitat-images.js.
 
 const leer = f => JSON.parse(fs.readFileSync(f, 'utf8'));
 const escribir = (f, obj) => fs.writeFileSync(f, JSON.stringify(obj, null, 2) + '\n', 'utf8');
@@ -243,13 +232,24 @@ function extraer() {
   // Superpone el contenido redactado a mano (data/contenido/*.json). Manda sobre lo extraído: es
   // texto escrito para ser universal, mientras que lo de los park.json arrastra el sesgo del parque
   // en el que se escribió.
-  let redactadas = 0, sinFicha = [];
+  let redactadas = 0, sinFicha = [], fotosMuertas = [];
   if (fs.existsSync(CONTENIDO_DIR)) {
     for (const fichero of fs.readdirSync(CONTENIDO_DIR).filter(f => f.endsWith('.json')).sort()) {
       const bloque = leer(path.join(CONTENIDO_DIR, fichero));
       for (const sci in bloque) {
         if (sci.startsWith('_')) continue;
         if (!catalogo[sci]) { sinFicha.push(`${sci} (${fichero})`); continue; }
+        // Una foto LOCAL fijada aquí que ya no existe en disco es el peor caso posible: como este
+        // bloque manda sobre todo lo demás, cada --extract pisa la foto buena del catálogo con una
+        // ruta muerta y --apply la propaga a todos los park.json y al SQL, sin que nada falle.
+        // Pasó con el pliego de Anabasis hispanica, borrado al cambiar los pliegos por fotos de
+        // campo pero no retirado de data/contenido/. Se ignora el campo y se avisa.
+        const img = bloque[sci].image;
+        if (img && !/^https?:/i.test(img) && !fs.existsSync(path.join(ROOT, 'Frontend', img))) {
+          fotosMuertas.push(`${sci} (${fichero}) → ${img}`);
+          delete bloque[sci].image;
+          delete bloque[sci].imageAttribution;
+        }
         Object.assign(catalogo[sci], bloque[sci]);
         redactadas++;
       }
@@ -258,11 +258,16 @@ function extraer() {
 
   fs.mkdirSync(path.dirname(CATALOGO), { recursive: true });
   escribir(CATALOGO, Object.fromEntries(Object.keys(catalogo).sort().map(k => [k, catalogo[k]])));
-  console.log(`Catálogo universal: ${Object.keys(catalogo).length} especies (${nuevas} nuevas) → ${path.relative(ROOT, CATALOGO)}`);
+  console.log(`Catálogo universal: ${Object.keys(catalogo).length} especies (${nuevas} nuevas) → ${rel(CATALOGO)}`);
   console.log(`Grupos normalizados: ${gruposTraducidos} · fichas con contenido redactado: ${redactadas}`);
   if (sinFicha.length) {
     console.log(`\n⚠ ${sinFicha.length} entradas de data/contenido/ no corresponden a ninguna especie del catálogo:`);
     sinFicha.forEach(s => console.log('  · ' + s));
+  }
+  if (fotosMuertas.length) {
+    console.log(`\n⚠ ${fotosMuertas.length} foto(s) de data/contenido/ apuntan a un fichero que no existe en Frontend/.`);
+    console.log('  Se han IGNORADO (se conserva la del catálogo). Quita esas claves del fichero de contenido:');
+    fotosMuertas.forEach(s => console.log('  · ' + s));
   }
   if (conflictos.length) {
     console.log(`\n⚠ ${conflictos.length} valores del catálogo NO coinciden con lo que hay en algún parque.`);
@@ -273,7 +278,6 @@ function extraer() {
 }
 
 // --- --apply ---------------------------------------------------------------------------------------
-const sqlStr = v => v === null || v === undefined ? 'NULL' : `'${String(v).replace(/\\/g, '\\\\').replace(/'/g, "''")}'`;
 
 function aplicar() {
   if (!fs.existsSync(CATALOGO)) {
@@ -304,7 +308,7 @@ function aplicar() {
       if (cambia) { cambiadas++; tocado = true; }
     }
 
-    if (tocado) { escribir(file, park); console.log(`  → ${path.relative(ROOT, file)}`); }
+    if (tocado) { escribir(file, park); console.log(`  → ${rel(file)}`); }
 
     if (sqlPath) {
       for (const sp of park.species) {
@@ -341,9 +345,9 @@ function aplicar() {
       '-- empaquetado: sin aplicar esto, un despliegue con backend seguiría sirviendo los textos viejos.',
       '', '',
     ].join('\n');
-    const destino = path.isAbsolute(sqlPath) ? sqlPath : path.join(ROOT, sqlPath);
+    const destino = fromRoot(sqlPath);
     fs.writeFileSync(destino, cabecera + sql.join('\n\n') + '\n', 'utf8');
-    console.log(`SQL escrito en ${path.relative(ROOT, destino)} (${sql.length} UPDATE)`);
+    console.log(`SQL escrito en ${rel(destino)} (${sql.length} UPDATE)`);
   }
 }
 

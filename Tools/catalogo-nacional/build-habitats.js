@@ -50,10 +50,12 @@
 const fs = require('fs');
 const path = require('path');
 const pc = require('polygon-clipping');
-const { readDbf } = require('./lib/dbf');
-const { readPolygons, utmToLonLat } = require('./lib/shapefile');
-const { bbox, bboxOverlap, inRing, signedArea } = require('./lib/geo');
-const { resolvePark, readBoundaryPolygons } = require('./lib/registry');
+const { readDbf } = require('../lib/dbf');
+const { readPolygons, utmToLonLat } = require('../lib/shapefile');
+const { bbox, bboxOverlap, inRing, signedArea } = require('../lib/geo');
+const { resolvePark, readBoundaryPolygons } = require('../lib/registry');
+const { arg, flag: has, die } = require('../lib/cli');
+const { ROOT } = require('../lib/io');
 
 // Caja envolvente de un MultiPolygon (todas las piezas), y punto dentro del límite teniendo en
 // cuenta piezas y agujeros: el equivalente multiparte de bbox()/inRing() para el límite del parque.
@@ -74,21 +76,17 @@ function dentroDelLimite(x, y, polys) {
   return false;
 }
 
-const REPO_ROOT = path.resolve(__dirname, '..', '..');
+const REPO_ROOT = ROOT;
 
-// --- Flags ------------------------------------------------------------------------------------
-const ARGV = process.argv.slice(2);
-const flag = (n, d = null) => { const i = ARGV.indexOf(n); return i >= 0 && i + 1 < ARGV.length ? ARGV[i + 1] : d; };
-const die = (m) => { console.error('✖ ' + m); process.exit(1); };
+// --- Opciones (Tools/lib/cli.js) ----------------------------------------------------------------
+const PARK = arg('park');
+const SHP = arg('shp');
+const HABI = arg('datos') || arg('habi');   // --habi se mantiene por compatibilidad
+const BOUNDARY = arg('boundary');
+const OUT = arg('out');
+const FUENTE_FORZADA = arg('fuente');
 
-const PARK = flag('--park');
-const SHP = flag('--shp');
-const HABI = flag('--datos') || flag('--habi');   // --habi se mantiene por compatibilidad
-const BOUNDARY = flag('--boundary');
-const OUT = flag('--out');
-const FUENTE_FORZADA = flag('--fuente');
-
-if (ARGV.includes('--help')) { console.log(fs.readFileSync(__filename, 'utf8').split('*/')[0]); process.exit(0); }
+if (has('help')) { console.log(fs.readFileSync(__filename, 'utf8').split('*/')[0]); process.exit(0); }
 if (!SHP || !HABI) die('Faltan --shp y/o --datos. Ver: node Tools/catalogo-nacional/build-habitats.js --help');
 if (!fs.existsSync(SHP)) die(`No existe el shapefile: ${SHP}`);
 if (!fs.existsSync(HABI)) die(`No existe la tabla de hábitats: ${HABI}`);

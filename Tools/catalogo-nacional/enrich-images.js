@@ -35,12 +35,16 @@
 //               para especies que aún no existen en la BD: el catálogo puede ampliarse solo en park.json).
 // ================================================================================================
 'use strict';
-const https = require('https');
 const fs = require('fs');
 const path = require('path');
+const { getJson, pool } = require('../lib/http');
+const { arg, num, flag, requireArgs } = require('../lib/cli');
+const { sqlStr } = require('../lib/sql');
 
-function arg(n, d) { const i = process.argv.indexOf('--' + n); return i >= 0 && process.argv[i + 1] ? process.argv[i + 1] : d; }
-function flag(n) { return process.argv.indexOf('--' + n) >= 0; }
+// El cliente HTTP compartido añade User-Agent, timeout, reintento ante 429/5xx y —lo importante
+// aquí— acumula la respuesta en Buffer: la versión local concatenaba con `+=` sin setEncoding y
+// partía los caracteres multibyte de los nombres de autor.
+const get = (host, pathq) => getJson(host, pathq, { agent: 'enrich-images' });
 
 const PARK = arg('park');
 const SLUG = arg('slug');
@@ -52,22 +56,9 @@ const WRITE_PARK = flag('write-park'); // escribe image+imageAttribution en el p
 // Nota: la mayoría de fotos de iNaturalist/GBIF son CC-BY-NC. Sin --allow-nc, muchas especies del
 // SE ibérico se quedarán sin foto. Para este catálogo suele quererse --allow-nc.
 const COUNTRY = arg('country', 'ES');
-const CONC = parseInt(arg('concurrency', '6'), 10);
-if (!PARK || !SLUG) { process.stderr.write('Uso: --park <park.json> --slug <park-slug> [--out f.sql] [--report f.md] [--mode missing|all] [--allow-nc] [--country ES]\n'); process.exit(1); }
-
-// --- HTTP JSON con reintentos y timeout (mismo patrón que invasoras-eei.js) ----------------------
-function get(host, pathq, tries = 0) {
-  return new Promise((res, rej) => {
-    https.get({ host, path: pathq, headers: { Accept: 'application/json', 'User-Agent': 'naturdex-enrich-images/1' } }, r => {
-      let b = ''; r.on('data', c => b += c); r.on('end', () => { try { res(JSON.parse(b)); } catch (e) { rej(new Error(`${host}${pathq.slice(0, 60)}: ${b.slice(0, 120)}`)); } });
-    }).on('error', e => tries < 2 ? setTimeout(() => get(host, pathq, tries + 1).then(res, rej), 600) : rej(e)).setTimeout(40000, function () { this.destroy(new Error('timeout')); });
-  });
-}
-async function pool(items, n, fn) {
-  const out = new Array(items.length); let i = 0;
-  await Promise.all(Array.from({ length: n }, async () => { while (i < items.length) { const idx = i++; try { out[idx] = await fn(items[idx], idx); } catch (e) { out[idx] = { error: String(e.message || e) }; } } }));
-  return out;
-}
+const CONC = num('concurrency', 6);
+requireArgs('Uso: --park <park.json> --slug <park-slug> [--out f.sql] [--report f.md] [--mode missing|all] [--allow-nc] [--country ES]',
+  { park: PARK, slug: SLUG });
 
 // --- Licencias: normalización, ranking y etiqueta corta -----------------------------------------
 function licenseInfo(raw) {
@@ -195,7 +186,9 @@ function needsPhoto(sp) {
   return !(sp.image || '').trim();
 }
 
-function sqlEscape(s) { return String(s).replace(/'/g, "''"); }
+// El escapador compartido (Tools/lib/sql.js) sí escapa la barra invertida, que MySQL trata como
+// carácter de escape: el `sqlEscape` local sólo duplicaba la comilla y generaba SQL roto con una
+// atribución que la contuviera.
 
 (async () => {
   const park = JSON.parse(fs.readFileSync(PARK, 'utf8'));
@@ -221,10 +214,10 @@ function sqlEscape(s) { return String(s).replace(/'/g, "''"); }
     const { sp, hit } = r;
     const attribution = `${hit.creator || 'Autor desconocido'} (${hit.license.short}) · ${hit.source}`;
     filled.push({ sp, hit, attribution });
-    sql.push(`UPDATE species s JOIN parks p ON p.id = s.park_id AND p.slug = '${sqlEscape(SLUG)}'`);
-    sql.push(`    SET s.image_url = '${sqlEscape(hit.url)}',`);
-    sql.push(`        s.image_attribution = '${sqlEscape(attribution)}'`);
-    sql.push(`    WHERE s.scientific_name = '${sqlEscape(sp.scientificName)}';`);
+    sql.push(`UPDATE species s JOIN parks p ON p.id = s.park_id AND p.slug = ${sqlStr(SLUG)}`);
+    sql.push(`    SET s.image_url = ${sqlStr(hit.url)},`);
+    sql.push(`        s.image_attribution = ${sqlStr(attribution)}`);
+    sql.push(`    WHERE s.scientific_name = ${sqlStr(sp.scientificName)};`);
   }
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
   fs.writeFileSync(OUT, sql.join('\n') + '\n');

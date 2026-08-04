@@ -16,17 +16,15 @@
 // ================================================================================================
 
 import { normalize, pointInGeometry } from './util.js';
-import { API_BASE, ACHIEVEMENTS_CATALOG_PATH, PARK_INDEX_PATH, state } from './state.js';
+import { ACHIEVEMENTS_CATALOG_PATH, PARK_INDEX_PATH, state } from './state.js';
+import { apiGetJson, apiPostQuiet } from './api.js';
 import { localVerifiedWindows } from './presence.js';
 
 // Cupo de ritmo humano por visita (espejo de PRESENCE_MARKS_* en Backend/Lib/presence.php).
 const MARKS_PER_MINUTE = 3;
 const MARKS_FLOOR = 10;
 
-const API_TIMEOUT_MS = 3000;
-function apiSignal() {
-  return (typeof AbortSignal !== 'undefined' && AbortSignal.timeout) ? AbortSignal.timeout(API_TIMEOUT_MS) : undefined;
-}
+// Las llamadas a la API van por api.js (corte por tiempo, cabeceras y lectura de errores).
 
 // --- Catálogo de logros (compartido con el backend) ----------------------------------------------
 let catalogPromise = null;
@@ -397,9 +395,7 @@ export function handleServerNewlyUnlocked(ids) {
 // silencio; los que el servidor tiene y el cliente no había celebrado, se celebran ahora.
 export async function syncWithServer() {
   try {
-    const res = await fetch(API_BASE + '/account-progress.php', { signal: apiSignal() });
-    if (!res.ok) throw new Error('account-progress unavailable');
-    const data = await res.json();
+    const data = await apiGetJson('/account-progress.php');
     state.account.totals = data.totals || state.account.totals;
     // Historial de salidas: si los logros dependen de haber estado allí, la pantalla de progreso
     // tiene que poder enseñar qué visitas se han contado y cuáles no.
@@ -459,13 +455,10 @@ export async function reportInvasiveSeen(scientificName, ccaa) {
   if (!list.includes(key)) { list.push(key); setJSON(lsKey('invasiveSeen'), list); }
   await refreshLocal();
   if (state.userId != null) {
-    try {
-      const res = await fetch(API_BASE + '/account-progress.php', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ type: 'invasive', scientificName, ccaa }), signal: apiSignal()
-      });
-      if (res.ok) { const data = await res.json(); handleServerNewlyUnlocked(data.newlyUnlocked); }
-    } catch (e) { /* offline: la predicción local ya quedó registrada, se reconcilia al reconectar */ }
+    // offline: la predicción local ya quedó registrada y se reconcilia al reconectar, así que un
+    // fallo aquí no debe romper nada (apiPostQuiet devuelve null en vez de lanzar).
+    const data = await apiPostQuiet('/account-progress.php', { type: 'invasive', scientificName, ccaa });
+    if (data) handleServerNewlyUnlocked(data.newlyUnlocked);
   }
 }
 
@@ -477,13 +470,8 @@ export async function reportGlossaryView(term) {
   setJSON(lsKey('glossaryViewed'), list);
   await refreshLocal();
   if (state.userId != null) {
-    try {
-      const res = await fetch(API_BASE + '/account-progress.php', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ type: 'glossary', term }), signal: apiSignal()
-      });
-      if (res.ok) { const data = await res.json(); handleServerNewlyUnlocked(data.newlyUnlocked); }
-    } catch (e) { /* se reconcilia al reconectar */ }
+    const data = await apiPostQuiet('/account-progress.php', { type: 'glossary', term });
+    if (data) handleServerNewlyUnlocked(data.newlyUnlocked);
   }
 }
 
@@ -654,12 +642,8 @@ async function markCelebrated(ids) {
     if (entry) entry.celebratedAt = new Date().toISOString();
   });
   if (state.userId != null) {
-    try {
-      await fetch(API_BASE + '/account-progress.php', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ type: 'celebrate', ids }), signal: apiSignal()
-      });
-    } catch (e) { /* se reintentará en la próxima sincronización (removeCelebratedIds no las borra) */ }
+    // Si falla, se reintentará en la próxima sincronización (removeCelebratedIds no las borra).
+    await apiPostQuiet('/account-progress.php', { type: 'celebrate', ids });
   }
 }
 

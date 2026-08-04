@@ -16,7 +16,7 @@
  */
 const fs = require('fs');
 const path = require('path');
-const { readDbf } = require('../lib/dbf.js');
+const { readDbf } = require('../../lib/dbf.js');
 
 const ROOT = path.join(__dirname, 'miteco-ide');
 const args = process.argv.slice(2);

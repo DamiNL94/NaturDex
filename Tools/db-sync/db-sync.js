@@ -34,16 +34,17 @@
  */
 'use strict';
 
-const { execFileSync, spawnSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { ROOT, DATABASE } = require('../lib/io');
+const { findContainer, isContainerRunning, container, inContainer, query } = require('../lib/db');
 
 const DB = 'naturadex';
 const REF_DB = 'naturadex_sync_ref'; // BD temporal para comparar el seed contra el contenedor
-const REPO_ROOT = path.resolve(__dirname, '..', '..');
-const SCHEMA_FILE = path.join(REPO_ROOT, 'Database', 'schema.sql');
-const SEED_FILE = path.join(REPO_ROOT, 'Database', 'seed.sql');
-const SNAPSHOT_FILE = path.join(REPO_ROOT, 'Database', 'snapshot.sql');
+const REPO_ROOT = ROOT;
+const SCHEMA_FILE = path.join(DATABASE, 'schema.sql');
+const SEED_FILE = path.join(DATABASE, 'seed.sql');
+const SNAPSHOT_FILE = path.join(DATABASE, 'snapshot.sql');
 const BACKUP_DIR = path.join(__dirname, 'backups');
 
 // Columnas ignoradas al comparar contenido (claves subrogadas y marcas de tiempo automáticas).
@@ -61,78 +62,10 @@ const fail = (s) => { console.error(color(C.red, '✖ ') + s); };
 
 function die(msg) { fail(msg); process.exit(1); }
 
-// --- Docker helpers ---------------------------------------------------------------------------
-
-function findContainer() {
-  if (process.env.NATURDEX_DB_CONTAINER) return process.env.NATURDEX_DB_CONTAINER;
-  try {
-    const id = execFileSync('docker', ['compose', 'ps', '-q', 'db'], {
-      cwd: REPO_ROOT, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'],
-    }).trim();
-    if (id) return id;
-  } catch (_) { /* docker compose no disponible o servicio no arriba */ }
-  // Respaldo: nombre por defecto del proyecto compose.
-  return 'naturdex-db-1';
-}
-
-// ¿Está en marcha el contenedor de la BD? Devuelve true/false sin abortar (para modos tolerantes).
-function isContainerRunning() {
-  const name = findContainer();
-  try {
-    const state = execFileSync('docker', ['inspect', '-f', '{{.State.Running}}', name],
-      { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
-    return state === 'true';
-  } catch (_) {
-    return false;
-  }
-}
-
-let CONTAINER = null;
-function container() {
-  if (CONTAINER) return CONTAINER;
-  CONTAINER = findContainer();
-  // Verificar que el contenedor existe y está en marcha.
-  try {
-    const state = execFileSync('docker', ['inspect', '-f', '{{.State.Running}}', CONTAINER],
-      { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
-    if (state !== 'true') {
-      die(`El contenedor de la BD ('${CONTAINER}') existe pero no está en marcha.\n` +
-          `  Levántalo con:  docker compose up -d db`);
-    }
-  } catch (_) {
-    die(`No encuentro el contenedor de la BD ('${CONTAINER}').\n` +
-        `  Levántalo con:  docker compose up -d db\n` +
-        `  O indícalo con la variable de entorno NATURDEX_DB_CONTAINER.`);
-  }
-  return CONTAINER;
-}
-
-// Ejecuta un comando mysql/mysqldump DENTRO del contenedor. `input` (opcional) se envía por stdin.
-// Devuelve stdout. Lanza si el proceso falla.
-function inContainer(shellCmd, input) {
-  const args = ['exec'];
-  if (input !== undefined) args.push('-i');
-  args.push(container(), 'sh', '-c', `MYSQL_PWD="$MYSQL_ROOT_PASSWORD" ${shellCmd}`);
-  const res = spawnSync('docker', args, {
-    input: input,
-    encoding: 'utf8',
-    maxBuffer: 256 * 1024 * 1024,
-  });
-  if (res.status !== 0) {
-    const err = (res.stderr || '').trim();
-    throw new Error(`docker exec falló (${res.status}): ${err || 'sin detalle'}`);
-  }
-  return res.stdout;
-}
-
-// Ejecuta SQL y devuelve stdout crudo (modo --batch, sin cabeceras).
-function query(sql, db) {
-  const target = db ? ` ${db}` : '';
-  return inContainer(
-    `mysql --default-character-set=utf8mb4 --batch --skip-column-names${target}`,
-    sql,
-  );
-}
+// --- Acceso al contenedor (Tools/lib/db.js) -----------------------------------------------------
+// `findContainer`, `isContainerRunning`, `inContainer` y `query` viven en el módulo compartido:
+// eran idénticos aquí y en Tools/eidos-diff.js, incluidos el `docker compose ps -q db` y el paso de
+// la contraseña por MYSQL_PWD (nunca en la línea de órdenes).
 
 // --- Utilidades de comparación ----------------------------------------------------------------
 

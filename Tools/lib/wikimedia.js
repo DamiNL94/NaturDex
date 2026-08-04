@@ -29,7 +29,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const FRONTEND = path.join(__dirname, '..', '..', '..', 'Frontend');
+const { FRONTEND } = require('./io');
 const UA = 'NaturDexBot/1.0 (https://naturdex.app; catálogo naturalista sin ánimo de lucro)';
 
 // Wikimedia pide identificarse y no martillear. Una petición cada 120 ms y sin paralelismo sobre

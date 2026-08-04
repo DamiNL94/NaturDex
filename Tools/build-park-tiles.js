@@ -28,7 +28,7 @@ const os = require('os');
 const path = require('path');
 const { execFileSync } = require('child_process');
 
-const ROOT = path.join(__dirname, '..');
+const { ROOT, REGISTRY_FILE } = require('./lib/io');
 const FRONTEND = path.join(ROOT, 'Frontend');
 const REGISTRY = path.join(FRONTEND, 'Data', 'parks-index.json');
 const BUILDS_URL = 'https://build-metadata.protomaps.dev/builds.json';

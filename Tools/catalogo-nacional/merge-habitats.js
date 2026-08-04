@@ -31,22 +31,20 @@
 const fs = require('fs');
 const path = require('path');
 const pc = require('polygon-clipping');
-const { areaHectares } = require('./lib/geo');
-const { resolvePark, readBoundaryRing } = require('./lib/registry');
+const { areaHectares } = require('../lib/geo');
+const { resolvePark, readBoundaryRing } = require('../lib/registry');
+const { arg, flag: has, die } = require('../lib/cli');
+const { ROOT, readJson } = require('../lib/io');
 
-const REPO_ROOT = path.resolve(__dirname, '..', '..');
-const PRIORITARIOS = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'hic-prioritarios.json'), 'utf8'));
-const NOMBRES = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'hic-nombres.json'), 'utf8'));
+const REPO_ROOT = ROOT;
+const PRIORITARIOS = readJson(path.join(__dirname, 'data', 'hic-prioritarios.json'));
+const NOMBRES = readJson(path.join(__dirname, 'data', 'hic-nombres.json'));
 
-const ARGV = process.argv.slice(2);
-const flag = (n, d = null) => { const i = ARGV.indexOf(n); return i >= 0 && i + 1 < ARGV.length ? ARGV[i + 1] : d; };
-const die = (m) => { console.error('✖ ' + m); process.exit(1); };
-
-if (ARGV.includes('--help')) { console.log(fs.readFileSync(__filename, 'utf8').split('*/')[0]); process.exit(0); }
-const PARK = flag('--park');
-const OFFICIAL = flag('--official');
-const OUT = flag('--out');
-const RECONCILE = parseReconcile(flag('--reconcile'));
+if (has('help')) { console.log(fs.readFileSync(__filename, 'utf8').split('*/')[0]); process.exit(0); }
+const PARK = arg('park');
+const OFFICIAL = arg('official');
+const OUT = arg('out');
+const RECONCILE = parseReconcile(arg('reconcile'));
 
 if (!OFFICIAL) die('Falta --official <ruta al geojson de build-habitats.js>');
 if (!fs.existsSync(OFFICIAL)) die(`No existe: ${OFFICIAL}`);

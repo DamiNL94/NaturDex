@@ -31,8 +31,8 @@ if (!atlasPath || !slug) die('Uso: --atlas <atlas.txt> --park <slug> [--json out
 if (!fs.existsSync(atlasPath)) die('No existe el texto del Atlas: ' + atlasPath + '\n(extráelo con: pdftotext -enc UTF-8 <Atlas.pdf> atlas.txt)');
 
 // Localiza el park.json del parque a partir del registro.
-const FRONTEND = path.join(__dirname, '..', '..', 'Frontend');
-const registry = JSON.parse(fs.readFileSync(path.join(FRONTEND, 'Data', 'parks-index.json'), 'utf8'));
+const { FRONTEND, REGISTRY_FILE, readJson } = require('../lib/io');
+const registry = readJson(REGISTRY_FILE);
 let entry = null;
 for (const c of (registry.communities || [])) for (const p of (c.provinces || [])) for (const pk of (p.parks || []))
   if (pk.slug === slug) entry = pk;

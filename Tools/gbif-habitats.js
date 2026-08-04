@@ -24,68 +24,43 @@
  */
 'use strict';
 
-const https = require('https');
 const fs = require('fs');
 const path = require('path');
+const { ROOT } = require('./lib/io');
+const { arg, num, flag, die, sleep } = require('./lib/cli');
+const { resolvePark } = require('./lib/registry');
+const { inRing } = require('./lib/geo');
+const gbif = require('./lib/gbif');
 
-const REPO_ROOT = path.resolve(__dirname, '..');
-const FRONTEND_DIR = path.join(REPO_ROOT, 'Frontend');
-const REGISTRY_FILE = path.join(FRONTEND_DIR, 'Data', 'parks-index.json');
-
-const GBIF_HOST = 'api.gbif.org';
-const PAGE = 300;
+const REPO_ROOT = ROOT;
+const PAGE = gbif.PAGE;
 const THROTTLE_MS = 120;
 
-// --- Flags ------------------------------------------------------------------------------------
+// --- Opciones ------------------------------------------------------------------------------------
 
-const ARGV = process.argv.slice(2);
-function flag(name, def = null) {
-  const i = ARGV.indexOf(name);
-  return i >= 0 && i + 1 < ARGV.length ? ARGV[i + 1] : def;
-}
-const has = (name) => ARGV.includes(name);
-const PARK = flag('--park');
-const TOP = parseInt(flag('--top', '10'), 10);
-const MAX_UNCERT = flag('--max-uncertainty') ? parseFloat(flag('--max-uncertainty')) : null;
-const DROP_UNKNOWN = has('--drop-unknown'); // al filtrar, descartar registros sin incertidumbre conocida
-const REFRESH = has('--refresh');
-const OUT_FILE = flag('--out');
-const JSON_FILE = flag('--json');
-const BIRDS_OUT = flag('--birds-out');
-const MAX_OCC = parseInt(flag('--max-occ', '40000'), 10);
+const PARK = arg('park');
+const TOP = num('top', 10);
+const MAX_UNCERT = num('max-uncertainty', null);
+const DROP_UNKNOWN = flag('drop-unknown'); // al filtrar, descartar registros sin incertidumbre conocida
+const REFRESH = flag('refresh');
+const OUT_FILE = arg('out');
+const JSON_FILE = arg('json');
+const BIRDS_OUT = arg('birds-out');
+const MAX_OCC = num('max-occ', 40000);
 
-function die(msg) { console.error('✖ ' + msg); process.exit(1); }
+// --- Registro de parques / geojson --------------------------------------------------------------
+// La localización del parque en Frontend/Data/parks-index.json vive en Tools/lib/registry.js, que
+// resuelve tanto los espacios 'available' (N2) como los 'basic' (N1 ascendiendo a N2, que es justo
+// el caso de uso de esta herramienta). Estaba duplicada aquí, y esa copia fue la que se olvidó de
+// aceptar los 'basic' cuando se arregló la otra.
 
-// --- Registro de parques / geojson ------------------------------------------------------------
-
-function resolvePark() {
-  const registry = JSON.parse(fs.readFileSync(REGISTRY_FILE, 'utf8'));
-  const found = [];
-  for (const community of registry.communities || []) {
-    for (const province of community.provinces || []) {
-      for (const park of province.parks || []) {
-        // Acepta 'available' (N2) y 'basic' (N1 ascendiendo a N2, que es justo el caso de uso:
-        // todavía no tiene status 'available' pero ya tiene habitats.geojson). Mismo fix que
-        // lib/registry.js el 2026-07-27.
-        if (!['available', 'basic'].includes(park.status || '') || !park.manifest) continue;
-        const manifestPath = path.join(FRONTEND_DIR, park.manifest);
-        if (!fs.existsSync(manifestPath)) continue;
-        const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-        const geoRel = manifest.geo && manifest.geo.habitats;
-        if (!geoRel) continue;
-        const geojsonPath = path.join(FRONTEND_DIR, geoRel);
-        if (!fs.existsSync(geojsonPath)) continue;
-        found.push({ slug: manifest.apiSlug || park.slug, name: park.name || manifest.name || park.slug, geojsonPath });
-      }
-    }
+function parkConHabitats() {
+  const park = resolvePark(REPO_ROOT, PARK);
+  if (!fs.existsSync(park.habitatsPath)) {
+    die(`El parque '${park.slug}' todavía no tiene geo/habitats.geojson: genera antes la Capa 2 ` +
+        `(build-habitats.js → merge-habitats.js → adopt-habitats.js).`);
   }
-  if (found.length === 0) die('No hay parques con habitats.geojson en el registro.');
-  if (PARK) {
-    const p = found.find(f => f.slug === PARK);
-    if (!p) die(`Parque '${PARK}' no encontrado. Disponibles: ${found.map(f => f.slug).join(', ')}`);
-    return p;
-  }
-  return found[0];
+  return { ...park, geojsonPath: park.habitatsPath };
 }
 
 function loadHabitats(geojsonPath) {
@@ -116,14 +91,7 @@ function bboxOf(polys) {
   }
   return { minX, minY, maxX, maxY };
 }
-function inRing(x, y, ring) {
-  let inside = false;
-  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
-    const xi = ring[i][0], yi = ring[i][1], xj = ring[j][0], yj = ring[j][1];
-    if (((yi > y) !== (yj > y)) && (x < ((xj - xi) * (y - yi)) / (yj - yi) + xi)) inside = !inside;
-  }
-  return inside;
-}
+// `inRing` (ray casting) viene de Tools/lib/geo.js: era idéntico aquí.
 function inHabitat(x, y, hab) {
   const b = hab.bbox;
   if (x < b.minX || x > b.maxX || y < b.minY || y > b.maxY) return false;
@@ -138,22 +106,10 @@ function inHabitat(x, y, hab) {
 
 // --- GBIF + caché -----------------------------------------------------------------------------
 
-function httpGetJson(pathQuery, attempt = 0) {
-  return new Promise((resolve, reject) => {
-    const req = https.get({ host: GBIF_HOST, path: pathQuery, headers: { 'Accept': 'application/json', 'User-Agent': 'NaturDex-gbif-habitats/1.0' } }, (res) => {
-      let body = '';
-      res.setEncoding('utf8');
-      res.on('data', (c) => { body += c; });
-      res.on('end', () => {
-        if (res.statusCode < 200 || res.statusCode >= 300) return reject(new Error(`HTTP ${res.statusCode}: ${body.slice(0, 160)}`));
-        try { resolve(JSON.parse(body)); } catch (e) { reject(new Error('JSON inválido de GBIF: ' + e.message)); }
-      });
-    });
-    req.setTimeout(45000, () => req.destroy(new Error('timeout')));
-    req.on('error', (e) => { attempt < 2 ? setTimeout(() => httpGetJson(pathQuery, attempt + 1).then(resolve, reject), 700) : reject(e); });
-  });
-}
-const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+// El cliente HTTP compartido (Tools/lib/http.js, vía lib/gbif.js) añade User-Agent, timeout y
+// reintento ante 429/5xx, que es justo el fallo que da GBIF al paginar decenas de miles de
+// ocurrencias seguidas.
+const httpGetJson = (pathQuery) => require('./lib/http').getJson(gbif.HOST, pathQuery, { agent: 'gbif-habitats', timeoutMs: 45000 });
 
 async function downloadOccurrences(bbox) {
   const margin = 0.001;
@@ -207,7 +163,7 @@ function passUncertainty(o) {
 }
 
 function main() {
-  const park = resolvePark();
+  const park = parkConHabitats();
   const habitats = loadHabitats(park.geojsonPath);
   if (habitats.length === 0) die('El geojson no tiene polígonos de hábitat.');
   console.log(`Parque: ${park.name} (${park.slug}) · ${habitats.length} hábitats`);

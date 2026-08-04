@@ -2,24 +2,11 @@
 // Progreso del usuario (especies/POIs vistos y avistamientos GPS), ahora POR USUARIO y POR PARQUE.
 // Requiere sesión iniciada (auth.php). Se guarda en la tabla user_progress como un JSON con la
 // misma forma que antes: { seenSpeciesIds, seenPoiIds, sightings, updatedAt }.
-header("Content-Type: application/json; charset=utf-8");
-require_once __DIR__ . "/../Lib/api_cors.php";
-apiCorsHeaders();
-
-if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") { http_response_code(204); exit; }
-
-require_once __DIR__ . "/../Config/db.php";
-require_once __DIR__ . "/../Lib/session.php";
+require_once __DIR__ . "/../Lib/api.php";
 require_once __DIR__ . "/../Lib/presence.php";
 require_once __DIR__ . "/../Lib/account_progress.php";
-naturdexSessionStart($conn);
-
-if (empty($_SESSION["user_id"])) {
-    http_response_code(401);
-    echo json_encode(["error" => "No autenticado."]);
-    exit;
-}
-$userId = (int) $_SESSION["user_id"];
+$conn = apiBoot(["session" => true]);
+$userId = requireUserId();
 $parkSlug = $_GET["park"] ?? "cabo-cope-puntas-calnegre";
 
 function emptyProgress() {
@@ -64,7 +51,7 @@ function writeProgress($conn, $userId, $parkSlug, $progress) {
 $method = $_SERVER["REQUEST_METHOD"];
 
 if ($method === "GET") {
-    echo json_encode(readProgress($conn, $userId, $parkSlug), JSON_UNESCAPED_UNICODE);
+    respond(readProgress($conn, $userId, $parkSlug));
     exit;
 }
 
@@ -126,12 +113,7 @@ function applyProgressEvent(&$progress, $event) {
 }
 
 if ($method === "POST") {
-    $body = json_decode(file_get_contents("php://input"), true);
-    if (!is_array($body)) {
-        http_response_code(400);
-        echo json_encode(["error" => "Cuerpo JSON inválido. Se espera { type, id, seen, lat?, lng? } o { events: [...] }."]);
-        exit;
-    }
+    $body = requireJsonBody("{ type, id, seen, lat?, lng? } o { events: [...] }");
 
     // Dos formas admitidas: un evento suelto (marcar una especie con la app abierta) o un lote
     // { events: [...] }, que es como la app vacía de golpe lo que se marcó sin cobertura. El lote
@@ -166,24 +148,16 @@ if ($method === "POST") {
         if (applyProgressEvent($progress, $event)) {
             $applied++;
         } elseif (!$isBatch) {
-            http_response_code(400);
-            echo json_encode(["error" => "Se espera { type: 'species'|'poi', id, seen }."]);
-            exit;
+            apiError("Se espera { type: 'species'|'poi', id, seen }.");
         }
         // En un lote, un evento corrupto se ignora en vez de tumbar el envío entero: si no, ese
         // evento se quedaría atascado en la cola del dispositivo reintentándose para siempre.
     }
-    if ($isBatch && $applied === 0) {
-        http_response_code(400);
-        echo json_encode(["error" => "El lote no traía ningún evento válido."]);
-        exit;
-    }
+    if ($isBatch && $applied === 0) apiError("El lote no traía ningún evento válido.");
     $progress["updatedAt"] = gmdate("c");
 
     if (!writeProgress($conn, $userId, $parkSlug, $progress)) {
-        http_response_code(500);
-        echo json_encode(["error" => "No se pudo guardar el progreso."]);
-        exit;
+        apiError("No se pudo guardar el progreso.", 500);
     }
     if (empty($progress["sightings"])) $progress["sightings"] = (object) [];
     if (empty($progress["markedAt"])) $progress["markedAt"] = (object) [];
@@ -205,9 +179,7 @@ if ($method === "POST") {
     try {
         $progress["presence"] = presenceCurrentStatus($conn, $userId, $parkSlug);
     } catch (Throwable $e) { /* sin estado de presencia: la app lo pedirá aparte */ }
-    echo json_encode($progress, JSON_UNESCAPED_UNICODE);
-    exit;
+    respond($progress);
 }
 
-http_response_code(405);
-echo json_encode(["error" => "Método no permitido. Usa GET o POST."]);
+apiMethodNotAllowed();

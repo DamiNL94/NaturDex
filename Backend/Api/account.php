@@ -15,26 +15,9 @@
 // Secure/SameSite y límite de intentos. Aquí no hay verificación de email: cambiar el email surte
 // efecto de inmediato.
 // ================================================================================================
-header("Content-Type: application/json; charset=utf-8");
-require_once __DIR__ . "/../Lib/api_cors.php";
-apiCorsHeaders();
-
-if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") { http_response_code(204); exit; }
-
-require_once __DIR__ . "/../Config/db.php";
-require_once __DIR__ . "/../Lib/session.php";
-naturdexSessionStart($conn);
-
-function respond($data, $code = 200) {
-    http_response_code($code);
-    echo json_encode($data, JSON_UNESCAPED_UNICODE);
-    exit;
-}
-
-if (empty($_SESSION["user_id"])) {
-    respond(["error" => "No autenticado."], 401);
-}
-$userId = (int) $_SESSION["user_id"];
+require_once __DIR__ . "/../Lib/api.php";
+$conn = apiBoot(["session" => true]);
+$userId = requireUserId();
 
 /** Fila completa del usuario (incluido el hash, para verificar la contraseña actual). */
 function userRow($conn, $userId) {

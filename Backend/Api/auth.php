@@ -8,21 +8,8 @@
 // usuario tendría que volver a entrar cada vez que cierra la app o cada vez que se redespliega.
 //
 // Nota de prototipo: aquí no hay límite de intentos de login ni verificación de email.
-header("Content-Type: application/json; charset=utf-8");
-require_once __DIR__ . "/../Lib/api_cors.php";
-apiCorsHeaders();
-
-if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") { http_response_code(204); exit; }
-
-require_once __DIR__ . "/../Config/db.php";
-require_once __DIR__ . "/../Lib/session.php";
-naturdexSessionStart($conn);
-
-function respond($data, $code = 200) {
-    http_response_code($code);
-    echo json_encode($data, JSON_UNESCAPED_UNICODE);
-    exit;
-}
+require_once __DIR__ . "/../Lib/api.php";
+$conn = apiBoot(["session" => true]);
 
 function currentUser($conn) {
     if (empty($_SESSION["user_id"])) return null;

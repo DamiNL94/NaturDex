@@ -28,48 +28,26 @@
 
 const fs = require('fs');
 const path = require('path');
+const { metadatos, atribucion, commonsFileFromUrl, filePathUrl } = require('../lib/wikimedia');
+const { sqlStr } = require('../lib/sql');
+const { arg, flag, num } = require('../lib/cli');
+const { ROOT, parkFiles, fromRoot, rel } = require('../lib/io');
 
-const ROOT = path.join(__dirname, '..', '..');
-const PARKS_DIR = path.join(ROOT, 'Frontend', 'Data', 'parks');
-const UA = 'NaturDexBot/1.0 (https://naturdex.app; catálogo naturalista sin ánimo de lucro)';
-const COMMONS = 'https://commons.wikimedia.org/w/api.php';
-
-const args = process.argv.slice(2);
 const OPT = {
-  park: args.includes('--park') ? args[args.indexOf('--park') + 1] : null,
-  write: args.includes('--write'),
-  sql: args.includes('--sql') ? args[args.indexOf('--sql') + 1] : null,
-  width: 1280,
+  park: arg('park', null),
+  write: flag('write'),
+  sql: arg('sql', null),
+  width: num('width', 1280),
 };
 
-const sqlStr = v => v === null || v === undefined ? 'NULL' : `'${String(v).replace(/\\/g, '\\\\').replace(/'/g, "''")}'`;
 const sentencias = [];
 
-const sleep = ms => new Promise(r => setTimeout(r, ms));
-const texto = h => String(h || '').replace(/<[^>]*>/g, '').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
-
-function commonsFileFromUrl(url) {
-  if (!url || !/^https?:\/\/(upload|commons)\.wikimedia\.org/i.test(url)) return null;
-  const sinQuery = url.split('?')[0];
-  const especial = sinQuery.match(/Special:FilePath\/(.+)$/i);
-  if (especial) return decodeURIComponent(especial[1]);
-  const partes = sinQuery.split('/');
-  const idx = partes.indexOf('thumb');
-  return decodeURIComponent(idx >= 0 ? partes[partes.length - 2] : partes[partes.length - 1]);
-}
-
+// La consulta a Commons, el nombre de archivo a partir de la URL y el formato de la atribución
+// viven en Tools/lib/wikimedia.js, que es también quien aplica el estrangulamiento de peticiones
+// (Commons responde 429 en cuanto varias fichas piden a la vez). Estaban duplicados aquí.
 async function atribucionCommons(file) {
-  await sleep(150);
-  const url = `${COMMONS}?action=query&titles=${encodeURIComponent('File:' + file)}&prop=imageinfo&iiprop=extmetadata&format=json`;
-  try {
-    const j = await (await fetch(url, { headers: { 'User-Agent': UA } })).json();
-    const meta = Object.values(j.query?.pages || {})[0]?.imageinfo?.[0]?.extmetadata;
-    if (!meta) return null;
-    const licencia = texto(meta.LicenseShortName?.value) || 'licencia sin especificar';
-    let autor = texto(meta.Artist?.value) || texto(meta.Credit?.value) || 'autor no indicado';
-    if (autor.length > 70) autor = autor.slice(0, 67) + '…';
-    return `${autor} (${licencia}) · Wikimedia Commons`;
-  } catch { return null; }
+  const meta = await metadatos(file);
+  return meta ? atribucion(meta) : null;
 }
 
 // Especie que mejor representa al hábitat entre las que tiene asignadas.
@@ -126,16 +104,8 @@ function parecidos(genero, raiz) {
 }
 
 (async () => {
-  const parques = [];
-  for (const region of fs.readdirSync(PARKS_DIR)) {
-    const dir = path.join(PARKS_DIR, region);
-    if (!fs.statSync(dir).isDirectory()) continue;
-    for (const slug of fs.readdirSync(dir)) {
-      if (OPT.park && slug !== OPT.park) continue;
-      const f = path.join(dir, slug, 'park.json');
-      if (fs.existsSync(f)) parques.push({ slug, file: f });
-    }
-  }
+  // `parkFiles` (Tools/lib/io.js) recorre Frontend/Data/parks/<provincia>/<slug>/park.json.
+  const parques = parkFiles().filter(p => !OPT.park || p.slug === OPT.park);
 
   for (const { slug, file } of parques) {
     const park = JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -151,7 +121,7 @@ function parecidos(genero, raiz) {
       if (file2) {
         const atr = await atribucionCommons(file2);
         if (atr) {
-          const url = `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file2.replace(/ /g, '_'))}?width=${OPT.width}`;
+          const url = filePathUrl(file2, OPT.width);
           if (h.image !== url || h.imageAttribution !== atr) {
             h.image = url; h.imageAttribution = atr; tocado = true;
             console.log(`  ↻ ${h.id} — atribución recuperada de Commons`);
@@ -186,7 +156,7 @@ function parecidos(genero, raiz) {
 
     if (tocado && OPT.write) {
       fs.writeFileSync(file, JSON.stringify(park, null, 2) + '\n', 'utf8');
-      console.log(`  → escrito ${path.relative(ROOT, file)}`);
+      console.log(`  → escrito ${rel(file)}`);
     } else if (tocado) {
       console.log('  (simulación: usa --write para guardar)');
     }
@@ -199,8 +169,8 @@ function parecidos(genero, raiz) {
       '-- Requiere las columnas habitats.image_attribution e image_note (Database/migrations.sql).',
       '', '',
     ].join('\n');
-    const destino = path.isAbsolute(OPT.sql) ? OPT.sql : path.join(ROOT, OPT.sql);
+    const destino = fromRoot(OPT.sql);
     fs.writeFileSync(destino, cabecera + sentencias.join('\n\n') + '\n', 'utf8');
-    console.log(`\nSQL escrito en ${path.relative(ROOT, destino)} (${sentencias.length} UPDATE)`);
+    console.log(`\nSQL escrito en ${rel(destino)} (${sentencias.length} UPDATE)`);
   }
 })();

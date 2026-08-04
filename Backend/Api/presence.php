@@ -11,45 +11,23 @@
 // se aceptó y por qué, para que la app pueda explicárselo al usuario en castellano en vez de
 // dejarle con un logro que no llega y sin saber por qué.
 // ================================================================================================
-header("Content-Type: application/json; charset=utf-8");
-require_once __DIR__ . "/../Lib/api_cors.php";
-apiCorsHeaders();
-
-if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") { http_response_code(204); exit; }
-
-require_once __DIR__ . "/../Config/db.php";
-require_once __DIR__ . "/../Lib/session.php";
+require_once __DIR__ . "/../Lib/api.php";
 require_once __DIR__ . "/../Lib/presence.php";
 require_once __DIR__ . "/../Lib/account_progress.php";
-naturdexSessionStart($conn);
-
-if (empty($_SESSION["user_id"])) {
-    http_response_code(401);
-    echo json_encode(["error" => "No autenticado."]);
-    exit;
-}
-$userId = (int) $_SESSION["user_id"];
+$conn = apiBoot(["session" => true]);
+$userId = requireUserId();
 $method = $_SERVER["REQUEST_METHOD"];
 
 if ($method === "GET") {
     $parkSlug = trim((string) ($_GET["park"] ?? ""));
-    if ($parkSlug === "") {
-        http_response_code(400);
-        echo json_encode(["error" => "Falta el parámetro ?park=<slug>."]);
-        exit;
-    }
-    echo json_encode(presenceCurrentStatus($conn, $userId, $parkSlug), JSON_UNESCAPED_UNICODE);
-    exit;
+    if ($parkSlug === "") apiError("Falta el parámetro ?park=<slug>.");
+    respond(presenceCurrentStatus($conn, $userId, $parkSlug));
 }
 
 if ($method === "POST") {
-    $body = json_decode(file_get_contents("php://input"), true);
-    $parkSlug = is_array($body) ? trim((string) ($body["park"] ?? "")) : "";
-    if (!is_array($body) || $parkSlug === "") {
-        http_response_code(400);
-        echo json_encode(["error" => "Se espera { park, lat, lng } o { park, fixes: [...] }."]);
-        exit;
-    }
+    $body = requireJsonBody("{ park, lat, lng } o { park, fixes: [...] }");
+    $parkSlug = trim((string) ($body["park"] ?? ""));
+    if ($parkSlug === "") apiError("Falta `park`. Se espera { park, lat, lng } o { park, fixes: [...] }.");
 
     $fixes = (isset($body["fixes"]) && is_array($body["fixes"])) ? $body["fixes"] : [$body];
     // Los lotes de la cola offline pueden llegar desordenados (el dispositivo los apila según se
@@ -80,14 +58,12 @@ if ($method === "POST") {
         }
     }
 
-    echo json_encode([
+    respond([
         "status" => presenceCurrentStatus($conn, $userId, $parkSlug),
         "results" => $results,
         "accepted" => $accepted,
         "newlyUnlocked" => $newlyUnlocked,
-    ], JSON_UNESCAPED_UNICODE);
-    exit;
+    ]);
 }
 
-http_response_code(405);
-echo json_encode(["error" => "Método no permitido. Usa GET o POST."]);
+apiMethodNotAllowed();

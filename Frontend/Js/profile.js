@@ -23,13 +23,13 @@
 
 import { html, raw, icon } from './util.js';
 import { API_BASE, state } from './state.js';
+import { apiFetch, apiPostJson } from './api.js';
 import { profileBody } from './dom.js';
 import { loadAchievementsCatalog, refreshAccountProgress } from './achievements.js';
 
-const API_TIMEOUT_MS = 5000;
-function apiSignal() {
-  return (typeof AbortSignal !== 'undefined' && AbortSignal.timeout) ? AbortSignal.timeout(API_TIMEOUT_MS) : undefined;
-}
+// Las acciones de cuenta (cambiar email, contraseña, exportar, darse de baja) hacen más trabajo en
+// el servidor que una lectura: se les da algo más de margen.
+const ACCOUNT_TIMEOUT_MS = 5000;
 
 function auth() { return window.naturdexAuth || null; }
 function currentUser() { const a = auth(); return a ? a.getUser() : null; }
@@ -288,7 +288,7 @@ async function loadServerProfile() {
   serverProfile = null;
   if (isGuest() || !NaturDexOffline.isOnline()) return;
   try {
-    const res = await fetch(API_BASE + '/account.php?action=profile', { signal: apiSignal() });
+    const res = await apiFetch('/account.php?action=profile', { timeoutMs: ACCOUNT_TIMEOUT_MS });
     if (!res.ok) return;
     const data = await res.json();
     serverProfile = data;
@@ -312,15 +312,7 @@ export async function showProfile() {
 // Acciones (delegación de eventos sobre el contenedor: el cuerpo se repinta entero a menudo)
 // ================================================================================================
 async function postAccount(action, body) {
-  const res = await fetch(API_BASE + '/account.php?action=' + action, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body),
-    signal: apiSignal()
-  });
-  const data = await res.json().catch(() => ({}));
-  if (!res.ok) throw new Error(data.error || ('No se pudo completar la operación (HTTP ' + res.status + ').'));
-  return data;
+  return apiPostJson('/account.php?action=' + action, body, { timeoutMs: ACCOUNT_TIMEOUT_MS });
 }
 
 /** Descarga un objeto como fichero JSON, sin pasar por el servidor. */
