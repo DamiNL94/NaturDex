@@ -459,9 +459,16 @@ select{font-family:var(--font-ui);font-size:.92rem}
      mapa (para que el panel de «Capas» no salga por debajo del botón del explorador) y por debajo
      de la ficha. */
   .leaflet-top,.leaflet-bottom{z-index:470}
-  .explorer-toggle{top:calc(12px + env(safe-area-inset-top));left:12px}
-  .layers-control{margin:calc(12px + env(safe-area-inset-top)) 12px 0 0 !important}
-  .nearby-panel{top:calc(62px + env(safe-area-inset-top))}
+  /* Todo el atrezo del mapa arranca por DEBAJO de la barra superior del parque (.map-topbar), que
+     es la que lleva la salida hacia el selector: si algo se le solapa, tapa la única salida que
+     tiene esta pantalla. */
+  .explorer-toggle{top:calc(62px + env(safe-area-inset-top));left:12px}
+  .layers-control{margin:calc(62px + env(safe-area-inset-top)) 12px 0 0 !important}
+  .nearby-panel{top:calc(112px + env(safe-area-inset-top))}
+  /* Barra superior del mapa con la piel de la casa: papel del panel y filete de latón, gemela de
+     la nav inferior. */
+  body[data-mtab="map"] .map-topbar{border-bottom:0;box-shadow:0 -3px 0 var(--brass) inset}
+  .map-topbar-title{font-family:var(--font-display);letter-spacing:.01em}
   /* Zoom y atribución de Leaflet: van pegados al borde inferior del contenedor, que es justo donde
      está la nav. Se suben por encima de ella. */
   .leaflet-bottom{bottom:calc(var(--mnav-h) + env(safe-area-inset-bottom));z-index:470}
@@ -572,3 +579,14 @@ select{font-family:var(--font-ui);font-size:.92rem}
 :root[data-theme="dark"] .achievement-toast-icon{background:var(--leaf-fill);border-color:var(--brass)}
 :root[data-theme="dark"] .nearby-item.here{background:var(--warn-bg);border-color:var(--brass)}
 :root[data-theme="dark"] .presence-bar.is-verified{background:var(--surface);color:var(--leaf)}
+
+/* ===== E. Navegación: volver atrás con la piel de la casa ====================================== */
+/* El "volver" es el control más importante de la app para quien se pierde, así que se le da el
+   mismo peso visual que a un botón secundario: filete, versalitas y altura táctil completa. */
+.back-btn{min-height:var(--tap-min);border-color:var(--line-strong);border-radius:var(--radius-md);
+  background:var(--panel);color:var(--leaf);font-weight:700;letter-spacing:.04em;font-size:.78rem;
+  text-transform:uppercase}
+.back-btn:hover{background:var(--leaf-tint)}
+.nav-exit-toast{border-radius:var(--radius-md);background:var(--bark);color:#FBF7EE;
+  font-weight:700;letter-spacing:.02em;text-transform:none}
+:root[data-theme="dark"] body[data-mtab="map"] .map-topbar{background:rgba(20,24,20,.94)}

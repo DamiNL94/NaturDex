@@ -17,6 +17,7 @@ El primer parque piloto es el Parque Regional de Cabo Cope y Puntas de Calnegre,
 - `Frontend/Css/styles.css`: diseño responsive de la experiencia NaturDex.
 - `Frontend/Js/app.js`: mapa, filtros, catálogo, ficha de especie y progreso tipo pokédex (la experiencia de un parque).
 - `Frontend/Js/auth.js`: flujo de pantallas (portada → login → mapa de España → parque), autenticación y selector de parque.
+- `Frontend/Js/nav.js`: pila de navegación de la app. Convierte cada pantalla, pestaña, ficha y etiqueta del mapa en un paso deshacible con su entrada de historial, para que el botón «atrás» del móvil (y el gesto de deslizar) retroceda dentro de NaturDex en vez de salir de la web. Ver «Navegación e interacción» más abajo.
 - `Frontend/Js/offline.js`: capa de almacenamiento local y funcionamiento sin conexión (ver más abajo).
 - `Frontend/sw.js`: Service Worker que cachea el armazón de la app y los datos del parque para offline.
 - `Frontend/Data/parks-index.json`: registro global de parques por comunidad autónoma y provincia.
@@ -350,6 +351,66 @@ persiste en la tabla `user_progress` (una fila por usuario y parque, con el mism
 en el dispositivo, en `localStorage` con una clave que combina usuario + parque (`u<id>:<slug>`), de
 modo que ni las cuentas ni los parques se mezclan. El endpoint `progress.php` exige sesión (responde
 401 si no la hay). Nota de prototipo: para producción, servir por HTTPS y endurecer la sesión.
+
+## Navegación e interacción: el modelo de "un paso atrás"
+
+Al ser una app de una sola página, durante un tiempo todo lo que se abría (pantallas, pestañas de la
+nav inferior, la ficha deslizante, las etiquetas del mapa) era **una única entrada de historial**
+para el navegador. Consecuencia: el botón «atrás» del móvil —y el gesto de deslizar desde el borde,
+que es como navega la mayoría de la gente— no deshacía el último paso, sino que **sacaba de la web
+entera**, con el trabajo a medias. Y la pestaña «Mapa», que es la primera que se ve al entrar a un
+parque, no tenía ningún botón de volver: la cabecera con «← Parques» vive en la barra lateral, que
+en esa pestaña está oculta.
+
+`Frontend/Js/nav.js` resuelve las dos cosas con una regla única: **todo lo que se abre es un nivel
+apilado, y «atrás» cierra el nivel de arriba**, venga del botón del sistema, de la tecla Escape o de
+un botón de la interfaz. Cada nivel añade su entrada de historial (que solo guarda la profundidad de
+la pila, no qué había abierto), y cerrar a mano desapila y retrocede a la vez, para que la pila y el
+historial no se separen nunca. La pila típica dentro de un parque, de fuera hacia dentro:
+
+```
+portada → selector de parque → parque → pestaña (catálogo/invasoras/progreso) → hábitat → ficha
+                                     └→ perfil / progreso estatal        (encima de donde estabas)
+                                     └→ panel de capas · etiqueta del mapa · tutorial
+```
+
+Piezas concretas:
+
+- **Barra superior del mapa** (`.map-topbar`, solo móvil): «← Parques», nombre del parque y perfil.
+  Le da salida y contexto a la pantalla con la que se abre un parque.
+- **Botones de volver** (`.back-btn`): chevrón + palabra, altura táctil completa (44 px) y el mismo
+  aspecto y sitio en todas las pantallas. Antes eran enlaces de texto de ~24 px de alto.
+- **Salir de la app** pide una segunda pulsación («Pulsa "atrás" otra vez para salir»), como es
+  costumbre en Android. Solo se activa a partir del primer paso dentro de la app: quien acaba de
+  aterrizar en la portada y se va no se encuentra ningún obstáculo.
+- **El mapa es la "casa" del parque**: «atrás» desde cualquier pestaña vuelve al mapa, y solo desde
+  el mapa se sale al selector. No se encadenan pestañas visitadas como si fueran páginas.
+
+### Etiquetas del mapa: fichas, no globos
+
+Los puntos de interés, las especies y los hábitats abrían un **globo de Leaflet** con toda su
+información. Eso daba tres problemas, todos de la misma familia:
+
+1. **No se centraban.** El `autoPan` de Leaflet empuja el mapa lo justo para que el globo entre en el
+   *contenedor*, que en móvil está tapado por arriba (barra del parque) y por abajo (nav inferior y
+   ficha). El globo acababa medio oculto, o el mapa parecía no moverse.
+2. **Tocar fuera no cerraba.** El mapa está cubierto de polígonos clicables (el límite del parque,
+   los LIC/ZEPA, los hábitats), así que "fuera" casi nunca era mapa vacío: era otro polígono, que
+   abría *su* globo. Desde fuera parecía que la etiqueta no se cerraba nunca.
+3. **No cabían.** La ficha de un punto de interés (foto, descripción, audioguía, botón de marcar) en
+   un globo sobre un móvil ocupa casi la pantalla entera.
+
+Ahora:
+
+- Tocar un punto, una especie o un hábitat abre su **ficha en el mismo sitio donde se leen todas las
+  fichas**: la columna derecha en escritorio, la hoja deslizante en móvil. Un solo contenedor de
+  información, con un solo modo de cerrarse (✕, velo, Escape o «atrás»).
+- Abierta desde el mapa, la hoja se queda a **media altura** y el mapa se recoloca para que lo que se
+  acaba de tocar quede en la franja visible; el asa la sube a pantalla casi completa. Todo encuadre
+  pasa por `chromeInset()` en `map.js`, que descuenta barras y hoja.
+- Con una etiqueta abierta, **la siguiente pulsación fuera solo cierra** (un guardián en el
+  contenedor del mapa se come ese toque antes de que Leaflet abra nada más). Tocar *otro* marcador sí
+  pasa: cambiar de punto no debe costar dos toques.
 
 ## Arquitectura escalable a toda España (por provincias)
 

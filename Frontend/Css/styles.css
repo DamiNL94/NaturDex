@@ -856,3 +856,94 @@ p.achievement-progress-label{margin:8px 0 0}
 :root[data-theme="dark"] .presence-bar.is-outside{background:rgba(184,83,63,.18);color:#f0bdb0}
 :root[data-theme="dark"] .presence-action{background:transparent}
 :root[data-theme="dark"] .account-rule{background:rgba(255,255,255,.04)}
+
+/* ================================================================================================
+   Navegación: volver atrás, barra del mapa y aviso de salida
+   ------------------------------------------------------------------------------------------------
+   Los "volver" eran enlaces de texto («← Parques») de 0,84 rem y sin altura propia: un objetivo de
+   unos 24 px, por debajo del mínimo táctil, con el aspecto de una nota al pie más que el de un
+   control. Quien no los encontraba tiraba del botón «atrás» del sistema, que hasta ahora salía de
+   la web. Ahora son botones de verdad: chevrón + palabra, altura táctil completa y el mismo aspecto
+   en todas las pantallas, para que "volver" se vea siempre igual y siempre en el mismo sitio.
+   ================================================================================================ */
+.back-btn{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 14px 0 10px;
+  border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--leaf);
+  font-size:.84rem;font-weight:800;cursor:pointer;white-space:nowrap}
+.back-btn:hover{background:#f2f6f1}
+.back-btn .icon{flex:0 0 auto}
+.back-btn-label{overflow:hidden;text-overflow:ellipsis}
+
+/* Barra superior de la pestaña «Mapa» (solo móvil). El mapa es la pantalla con la que se abre un
+   parque, y la cabecera con el botón de volver vive en la barra lateral, que ahí está oculta: sin
+   esta barra no había ninguna salida visible desde la primera pantalla del parque. */
+.map-topbar{display:none}
+
+/* Aviso de "vas a salir de la app" (nav.js). Discreto y centrado abajo, como los toasts de Android:
+   no es un error ni pide una decisión, solo avisa de que la siguiente pulsación sí sale. */
+.nav-exit-toast{position:fixed;left:50%;bottom:calc(28px + env(safe-area-inset-bottom));z-index:1200;
+  transform:translate(-50%,12px);max-width:min(88vw,420px);padding:12px 18px;border-radius:999px;
+  background:rgba(23,33,27,.94);color:#fff;font-size:.84rem;font-weight:700;text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,.3);opacity:0;pointer-events:none;
+  transition:opacity .2s ease,transform .2s ease}
+.nav-exit-toast.in{opacity:1;transform:translate(-50%,0)}
+
+/* Punto de interés seleccionado: el marcador que se acaba de tocar se distingue del resto mientras
+   su ficha está abierta (antes ese papel lo hacía el globo, que ya no existe). */
+.poi-marker.active span{transform:scale(1.18);box-shadow:0 0 0 3px rgba(31,111,139,.35),0 2px 8px rgba(0,0,0,.25)}
+.poi-detail-image{position:relative}
+
+/* Globos que quedan (senderos y figuras de protección): en móvil su ✕ era un objetivo de 14 px.
+   Tocar "casi" el aspa movía el mapa en vez de cerrar, que es parte de la sensación de que las
+   etiquetas no se cierran. */
+.leaflet-popup-close-button{width:32px !important;height:32px !important;font-size:20px !important;
+  line-height:30px !important}
+
+@media(max-width:900px){
+  /* La barra solo existe en la pestaña del mapa: en las demás, la cabecera del parque (con su
+     propio botón de volver) ya está en pantalla dentro de la barra lateral. */
+  body[data-mtab="map"] .map-topbar{position:absolute;top:0;left:0;right:0;z-index:475;
+    display:flex;align-items:center;gap:10px;
+    padding:calc(8px + env(safe-area-inset-top)) 12px 8px;
+    background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);
+    -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+  .map-topbar-title{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;
+    white-space:nowrap;text-align:center;font-weight:800;font-size:.88rem;color:var(--ink)}
+  /* El botón y los controles flotantes del mapa bajan por debajo de la barra. */
+  .explorer-toggle{top:calc(62px + env(safe-area-inset-top))}
+  .layers-control{margin:calc(62px + env(safe-area-inset-top)) 12px 0 0 !important}
+  .nearby-panel{top:calc(112px + env(safe-area-inset-top))}
+  /* El "volver" de la barra lateral manda: es la salida del parque y tiene que verse a la primera. */
+  .park-nav .back-btn{flex:0 0 auto}
+}
+
+:root[data-theme="dark"] .back-btn{background:var(--panel);border-color:var(--line)}
+:root[data-theme="dark"] .back-btn:hover{background:rgba(255,255,255,.06)}
+:root[data-theme="dark"] body[data-mtab="map"] .map-topbar{background:rgba(16,22,18,.92);
+  border-bottom-color:var(--line)}
+
+@media(max-width:900px){
+  /* Ficha abierta desde el mapa: media altura, para que lo que se acaba de tocar siga a la vista.
+     El asa (.sheet-grip-btn) la sube a completa y la vuelve a bajar. Abierta desde una lista no se
+     aplica: allí detrás no hay nada que preservar. */
+  body.sheet-compact .detail-dock{max-height:48dvh}
+  body.sheet-compact.sheet-expanded .detail-dock{max-height:82dvh}
+  .sheet-grip-btn{display:flex;align-items:center;justify-content:center;width:96px;min-height:32px;
+    padding:0;border:0;background:transparent;cursor:pointer}
+  .sheet-grip-btn:hover .sheet-grip{background:var(--muted)}
+  /* Foto de portada de la ficha: a media altura no puede comerse la mitad de lo que se ve. */
+  body.sheet-compact:not(.sheet-expanded) .detail-panel img{height:150px}
+}
+
+/* Los avisos flotantes salían pegados al borde superior derecho, que es justo donde viven los
+   botones de volver de las pantallas de progreso y perfil: un aviso podía tapar la salida durante
+   varios segundos. Bajan por debajo de esa fila de cabecera (en móvil ya salen abajo). */
+@media(min-width:901px){
+  .achievement-toast-region{top:calc(76px + env(safe-area-inset-top))}
+}
+
+@media(max-width:900px){
+  /* Con la ficha abierta a media altura, los avisos de abajo caían justo encima de lo que el
+     usuario acababa de abrir. Se colocan sobre el mapa, por encima de la hoja. */
+  body.sheet-open.sheet-compact:not(.sheet-expanded) .achievement-toast-region{
+    bottom:calc(48dvh + 12px)}
+}
