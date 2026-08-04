@@ -27,7 +27,12 @@ export const state = {
   query: '',
   selectedId: null,
   view: 'catalog',
-  catalogMode: 'habitats',
+  // Nivel del catálogo en el que está el usuario. Son tres, de fuera hacia dentro:
+  //   'groups'   → los grupos de hábitats (habitat-groups.js): el nivel de entrada.
+  //   'habitats' → los hábitats de UN grupo (state.habitatGroupFocus).
+  //   'species'  → las especies de UN hábitat (state.habitatFocus) o todas si es null.
+  catalogMode: 'groups',
+  habitatGroupFocus: null,
   habitatFocus: null,
   detailMode: 'habitat',
   selectedHabitatId: null,
@@ -83,12 +88,18 @@ export function getFilteredSpecies() {
   });
 }
 
-// --- Catálogo organizado por hábitat: se navega primero por hábitat (donde viven las especies) y
-// solo al entrar en uno se muestran sus fichas. Es más fácil de recorrer que una lista plana de
-// 78 especies, y refuerza la idea de que cada especie pertenece a un ecosistema concreto.
-export function getFilteredHabitats() {
+// --- Catálogo organizado por grupo y hábitat: se navega primero por grupo de hábitats (costa,
+// saladares, matorral…), luego por el hábitat concreto y solo dentro de él se muestran las fichas de
+// sus especies. Es más fácil de recorrer que una lista plana de 78 especies —o de 21 hábitats—, y
+// refuerza la idea de que cada especie pertenece a un ecosistema concreto.
+// `habitats` acota la búsqueda a una lista dada (los de un grupo); sin ella busca en todos, que es
+// lo que hace el buscador desde el nivel de grupos: escribir "duna" tiene que encontrar el hábitat
+// aunque el usuario no sepa en qué grupo está. Se recibe la lista ya hecha —y no el id del grupo—
+// para que este módulo no dependa de habitat-groups.js, que a su vez lee de aquí.
+export function getFilteredHabitats(habitats) {
   const q = normalize(state.query);
-  return (state.data.habitats || []).filter(h => {
+  const list = habitats || (state.data.habitats || []);
+  return list.filter(h => {
     if (!q) return true;
     return normalize([h.name, h.code, h.type].join(' ')).includes(q);
   });

@@ -120,9 +120,9 @@ h1,h2{text-wrap:pretty}
 /* Forma: la estética es impresa, no de burbuja. Fuera píldoras y esquinas de 8-16px. */
 .btn-primary,.btn-secondary,.btn-danger,.icon-btn,.seen-toggle,.poi-seen-btn,.popup-enter,
 .save-offline-btn,.explorer-toggle,.layers-toggle,.nearby-item,.hint-primary,.notice-action,
-.presence-action,.layers-solo,.badge,.habitat-species-chip,.habitat-filter-chip,.profile-choices,
+.presence-action,.layers-solo,.badge,.habitat-species-chip,.habitat-filter-chip,.detail-group-link,.profile-choices,
 .profile-choice,.auth-tabs,.auth-tab,.auth-card,.segmented,.filter-button,.view-tab,
-.species-card,.habitat-card,.summary-grid div,.achievement-card,.detail-facts div,.status-list li,
+.species-card,.habitat-card,.habitat-group-card,.summary-grid div,.achievement-card,.detail-facts div,.status-list li,
 .audio-block,.profile-section,.profile-identity,.profile-list li,.account-stat,.select-field select,
 .controls input,.auth-field input,.tutorial-card,.tutorial-back,.tutorial-next,.tutorial-close,
 .habitat-prompt-card,.habitat-prompt-no,.habitat-prompt-yes,.explorer-hint,.layers-panel,
@@ -222,12 +222,19 @@ select{font-family:var(--font-ui);font-size:.92rem}
 .filter-button{min-height:36px;color:var(--muted);font-weight:700;font-size:.78rem}
 .filter-button.active{background:var(--leaf-fill);color:#FBF7EE}
 
-/* Tarjetas de especie y hábitat: filete de color a la izquierda, no borde redondeado uniforme */
-.species-card,.habitat-card{background:var(--surface);border-color:var(--line);
+/* Tarjetas de especie, hábitat y grupo: filete de color a la izquierda, no borde redondeado uniforme */
+.species-card,.habitat-card,.habitat-group-card{background:var(--surface);border-color:var(--line);
   border-left:var(--rule) solid var(--line-strong)}
-.species-card:hover,.habitat-card:hover{transform:none;box-shadow:var(--shadow-sm);
+.species-card:hover,.habitat-card:hover,.habitat-group-card:hover{transform:none;box-shadow:var(--shadow-sm);
   border-color:var(--line-strong)}
-.species-card.seen,.habitat-card.complete{border-left-color:var(--leaf);background:var(--panel)}
+.species-card.seen,.habitat-card.complete,.habitat-group-card.complete{border-left-color:var(--leaf);background:var(--panel)}
+.habitat-group-card.complete{border-color:var(--line)}
+/* La cabecera de grupo del panel de capas y la del progreso, con las versalitas de la casa. */
+.layers-group-name{font-weight:700}
+.progress-group-title{letter-spacing:var(--tracking-caps);text-transform:uppercase;font-weight:700}
+.detail-group-link{border-color:var(--line-strong);color:var(--muted-2);letter-spacing:.04em;
+  text-transform:uppercase;font-size:.7rem}
+.detail-group-link:hover{border-color:var(--leaf);color:var(--leaf);background:var(--leaf-tint)}
 .species-card.active{border-color:var(--leaf);border-left-color:var(--leaf);
   box-shadow:inset 0 0 0 1px var(--leaf)}
 .habitat-card.complete{border-color:var(--line)}
@@ -515,8 +522,13 @@ select{font-family:var(--font-ui);font-size:.92rem}
   .mobile-nav-btn span{font-size:1rem}
 
   /* Ficha de detalle: hoja inferior, con el mismo lenguaje de cartel */
+  /* La ficha abierta desde una lista (o desde un hábitat del mapa) ocupa casi la pantalla entera:
+     estas fichas son largas —la de un hábitat trae descripción, superficie, fitosociología, la barra
+     de progreso y todas sus especies— y a media pantalla obligaban a deslizar dentro de una ventana
+     de tres dedos de alto. Se deja asomar el 8 % de arriba para que se siga viendo que hay algo
+     detrás y que el velo se puede tocar para cerrar. */
   .detail-dock{z-index:900;background:var(--panel);border-top:3px solid var(--brass);
-    border-radius:14px 14px 0 0;box-shadow:0 -14px 40px rgba(20,19,16,.3);max-height:82dvh}
+    border-radius:14px 14px 0 0;box-shadow:0 -14px 40px rgba(20,19,16,.3);max-height:92dvh}
   .sheet-bar{background:var(--panel);border-radius:14px 14px 0 0}
   .sheet-grip{background:var(--line-strong)}
   .sheet-close{width:36px;height:36px;background:var(--surface-alt);color:var(--ink-soft);
@@ -561,11 +573,13 @@ select{font-family:var(--font-ui);font-size:.92rem}
 
 /* Tarjetas y filas: el fondo tiene que ser --surface para despegarse del panel de la barra */
 :root[data-theme="dark"] .species-card,
+:root[data-theme="dark"] .habitat-group-card,
 :root[data-theme="dark"] .summary-grid div,
 :root[data-theme="dark"] .achievement-card,
 :root[data-theme="dark"] .nearby-item,
 :root[data-theme="dark"] .audio-block{background:var(--surface)}
 :root[data-theme="dark"] .species-card.seen,
+:root[data-theme="dark"] .habitat-group-card.complete,
 :root[data-theme="dark"] .habitat-card.complete{background:var(--panel);border-color:var(--line)}
 
 /* Parches de mérito y avisos: filete lateral de color, sin bloque ámbar */

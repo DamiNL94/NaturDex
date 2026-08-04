@@ -1,17 +1,27 @@
 // ================================================================================================
-// layers.js — panel de capas propio: mapa base, capas con su simbología y hábitats individuales.
+// layers.js — panel de capas propio: mapa base, capas con su simbología y hábitats POR GRUPOS.
 // ------------------------------------------------------------------------------------------------
 // Módulo ES importado por app.js. Sustituye al control nativo de Leaflet y a la antigua leyenda
 // estática, que duplicaban información y no permitían encender/apagar cada hábitat por separado
 // (los polígonos se solapan y vistos todos a la vez resultan confusos). Cada fila lleva su propia
-// muestra de color, así el panel ES la leyenda. La subsección de hábitats ofrece Todos / Ninguno,
-// un "Solo" por hábitat (lo aísla y lo encuadra) y zoom con popup al tocar el nombre.
+// muestra, así el panel ES la leyenda.
+//
+// La sección de hábitats ya no es una lista plana de hasta veintiuna casillas: enseña los SIETE
+// grupos de habitat-groups.js (los mismos del mapa y del catálogo), cada uno con su trama, su
+// recuento y su casilla para encenderlo o apagarlo entero. Al abrir un grupo se despliega el
+// desglose de sus hábitats, con la casilla, el color y el "Solo" de cada uno. Solo hay un grupo
+// desplegado a la vez: el panel cabe de un vistazo y el mapa deja de ser un mosaico de polígonos
+// pisándose, que es de lo que se trata.
 // ================================================================================================
 
 import { html, raw } from './util.js';
 import { state } from './state.js';
 import { layersToggle, layersPanel } from './dom.js';
-import { map, setHabitatVisible, focusHabitatOnMap, hasParkBaseLayer, applyBaseChoice, activeBaseKind, trailKind } from './map.js';
+import {
+  map, setHabitatVisible, focusHabitatOnMap, hasParkBaseLayer, applyBaseChoice, activeBaseKind,
+  trailKind, setHabitatGroupVisible, soloHabitatGroup, focusHabitatGroupOnMap
+} from './map.js';
+import { groupedHabitats, groupSwatch, groupIdOfHabitat } from './habitat-groups.js';
 
 // Capas generales (las de hábitats van en su propia subsección). El swatch reutiliza las clases
 // de la antigua leyenda (.legend-dot/.legend-line) para que la simbología siga siendo la misma.
@@ -71,18 +81,57 @@ function trailsSwatch() {
     .map(k => '<i class="legend-line trail trail-' + k.toLowerCase() + '"></i>').join('') + '</span>';
 }
 
-// El punto de color de cada fila es el color propio del hábitat en el catálogo. Desde que el
-// polígono se pinta con la trama y la tinta de su familia (HABITAT_TEXTURES en map.js), esta fila
-// es el ÚNICO sitio donde ese color se ve: aquí distingue una entrada de otra dentro de la lista,
-// que es para lo que sirve, sin volver a convertir el mapa en un mosaico de colores.
-function habitatRows() {
-  return (state.data && state.data.habitats ? state.data.habitats : []).map(h => {
+// --- Grupo desplegado ------------------------------------------------------------------------------
+// Uno solo a la vez, y se conserva entre repintados del panel (abrir «Capas», dar a «Solo»…). Lo
+// fija también la app cuando el usuario entra en un hábitat desde el catálogo o lo toca en el mapa:
+// al abrir el panel, el grupo de lo que está mirando ya está desplegado.
+let openGroupId = null;
+
+/** Despliega el grupo indicado (o el del hábitat dado con `openLayersGroupOfHabitat`). */
+export function setOpenLayersGroup(groupId) {
+  openGroupId = groupId || null;
+}
+
+export function openLayersGroupOfHabitat(habitatId) {
+  const groupId = groupIdOfHabitat(habitatId);
+  if (groupId) openGroupId = groupId;
+}
+
+// El punto de color de cada fila es el color propio del hábitat en el catálogo: el MISMO con el que
+// se dibuja el borde de su polígono, así que sirve para reconocerlo dentro de la trama compartida
+// del grupo. La trama común la enseña la fila del grupo, justo encima.
+function habitatRows(habitats) {
+  return habitats.map(h => {
     const visible = !state.hiddenHabitats.has(h.id);
-    return html`<div class="layers-row">
+    return html`<div class="layers-row layers-habitat-row">
       <input type="checkbox" data-habitat-check="${h.id}" id="lyr-hab-${h.id}" aria-label="Mostrar ${h.name} en el mapa" ${visible ? raw('checked') : ''}>
       <span class="lg-dot" style="background:${h.color || '#2f6f4e'}"></span>
       <button type="button" class="layers-habitat-name" data-habitat-zoom="${h.id}" title="Ver este hábitat en el mapa">${h.name}</button>
       <button type="button" class="layers-solo" data-habitat-solo="${h.id}" title="Mostrar solo este hábitat" aria-label="Mostrar solo ${h.name}">Solo</button>
+      </div>`;
+  });
+}
+
+const CHEVRON = raw('<svg class="layers-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"'
+  + ' stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">'
+  + '<polyline points="9 18 15 12 9 6"/></svg>');
+
+function groupBlocks() {
+  const groups = groupedHabitats();
+  if (!groups.length) return html`<p class="layers-empty">Este espacio todavía no tiene hábitats cartografiados.</p>`;
+  return groups.map(({ group, habitats }) => {
+    const visibles = habitats.filter(h => !state.hiddenHabitats.has(h.id)).length;
+    const open = openGroupId === group.id;
+    return html`<div class="layers-group${open ? ' open' : ''}">
+      <div class="layers-row layers-group-row">
+        <input type="checkbox" data-group-check="${group.id}" data-group-partial="${visibles > 0 && visibles < habitats.length ? '1' : ''}"
+          aria-label="Mostrar los hábitats de ${group.name} en el mapa" ${visibles > 0 ? raw('checked') : ''}>
+        ${raw(groupSwatch(group, 20))}
+        <button type="button" class="layers-group-name" data-group-toggle="${group.id}" aria-expanded="${open ? 'true' : 'false'}"
+          title="Ver los hábitats de este grupo">${group.name}<span class="layers-group-count">${visibles < habitats.length ? visibles + '/' + habitats.length : habitats.length}</span>${CHEVRON}</button>
+        <button type="button" class="layers-solo" data-group-solo="${group.id}" title="Ver en el mapa solo este grupo" aria-label="Ver solo ${group.name}">Solo</button>
+      </div>
+      ${open ? html`<div class="layers-habitats">${habitatRows(habitats)}</div>` : ''}
       </div>`;
   });
 }
@@ -103,9 +152,15 @@ export function refreshLayersPanel() {
     ${OVERLAYS.filter(o => !o.visible || o.visible()).map(o => html`<label class="layers-row"><input type="checkbox" data-overlay="${o.key}" ${map.hasLayer(o.group()) ? raw('checked') : ''}>${raw(typeof o.swatch === 'function' ? o.swatch() : o.swatch)}${typeof o.label === 'function' ? o.label() : o.label}</label>`)}
     </section>
     <section class="layers-section">
-    <h4>Hábitats <span class="layers-mini-actions"><button type="button" data-habitats-all>Todos</button><button type="button" data-habitats-none>Ninguno</button></span></h4>
-    <div class="layers-habitats">${habitatRows()}</div>
+    <h4>Hábitats por grupo <span class="layers-mini-actions"><button type="button" data-habitats-all>Todos</button><button type="button" data-habitats-none>Ninguno</button></span></h4>
+    <div class="layers-groups">${groupBlocks()}</div>
     </section>`;
+  // "Algunos sí y otros no" no se puede escribir en el HTML: el estado intermedio de una casilla es
+  // una propiedad del elemento, no un atributo. Es lo que distingue un grupo a medio encender de
+  // uno entero, y sin él la casilla del grupo mentiría.
+  layersPanel.querySelectorAll('input[data-group-check]').forEach(input => {
+    input.indeterminate = input.dataset.groupPartial === '1';
+  });
 }
 
 export function initLayersPanel() {
@@ -156,8 +211,19 @@ export function initLayersPanel() {
       if (overlay.checked) group.addTo(map); else map.removeLayer(group);
       return;
     }
+    // Casilla de grupo: enciende o apaga sus hábitats de una vez. Desde el estado intermedio
+    // ("algunos") el navegador la deja marcada, que es lo esperable: se completa el grupo.
+    const groupCheck = event.target.closest('input[data-group-check]');
+    if (groupCheck) {
+      setHabitatGroupVisible(groupCheck.dataset.groupCheck, groupCheck.checked);
+      refreshLayersPanel();
+      return;
+    }
     const habCheck = event.target.closest('input[data-habitat-check]');
-    if (habCheck) setHabitatVisible(habCheck.dataset.habitatCheck, habCheck.checked);
+    if (habCheck) {
+      setHabitatVisible(habCheck.dataset.habitatCheck, habCheck.checked);
+      refreshLayersPanel(); // el recuento del grupo de arriba deja de cuadrar si no se repinta
+    }
   });
 
   layersPanel.addEventListener('click', event => {
@@ -169,6 +235,26 @@ export function initLayersPanel() {
     }
     if (event.target.closest('[data-habitats-none]')) {
       habitats.forEach(h => setHabitatVisible(h.id, false));
+      refreshLayersPanel();
+      return;
+    }
+    // Desplegar/plegar un grupo. Solo uno abierto a la vez: con dos o tres desplegados el panel
+    // volvía a ser la lista interminable que se quería quitar.
+    const toggle = event.target.closest('[data-group-toggle]');
+    if (toggle) {
+      const id = toggle.dataset.groupToggle;
+      openGroupId = openGroupId === id ? null : id;
+      refreshLayersPanel();
+      return;
+    }
+    // "Solo" de grupo: es la herramienta contra el solapamiento. Deja en el mapa ese grupo entero
+    // —no un hábitat suelto— y encuadra sobre él, con su desglose abierto para seguir afinando.
+    const groupSolo = event.target.closest('[data-group-solo]');
+    if (groupSolo) {
+      const id = groupSolo.dataset.groupSolo;
+      soloHabitatGroup(id);
+      openGroupId = id;
+      focusHabitatGroupOnMap(id);
       refreshLayersPanel();
       return;
     }

@@ -19,9 +19,14 @@
  * - Cada nivel abierto añade una entrada de historial que lleva escrita la PROFUNDIDAD de la pila
  *   ({ nd: { depth } }). El historial no guarda qué había abierto, solo cuántos niveles: al volver
  *   atrás basta con desapilar hasta esa profundidad, así que da igual por qué camino se llegó.
- * - Cerrar a mano (botón ← o ✕) desapila en el acto y además retrocede en el historial, para que la
- *   pila y el historial no se separen nunca. El manejador de `popstate` es idempotente: si ya se
- *   desapiló, no hace nada.
+ * - Abrir y cerrar niveles se apunta AL MOMENTO en `levels` (la interfaz responde al instante), pero
+ *   el historial se pone al día UNA sola vez al final del turno, en una microtarea. Es lo que hace
+ *   falta porque `history.go()` es asíncrono: un manejador que cierra un nivel y abre otros dos
+ *   —cerrar la ficha del hábitat y entrar a sus especies, por ejemplo— disparaba un `go(-1)` que
+ *   llegaba DESPUÉS de los dos `pushState`, aterrizaba en una entrada de profundidad menor y el
+ *   `popstate` deshacía, sin que nadie lo hubiese pedido, lo que se acababa de abrir. Consolidando
+ *   el saldo al final del turno, esa carrera no existe: se empuja o se retrocede una vez, y solo
+ *   por la diferencia real.
  * - En la raíz («no hay nada abierto») el «atrás» del sistema saldría de la app. Ahí se pide
  *   confirmación con el patrón de siempre en Android: pulsar dos veces seguidas para salir.
  *
@@ -45,6 +50,12 @@
   var started = false;
   var EXIT_WINDOW = 3500;  // ms que dura el aviso de salida
 
+  // --- Puesta al día del historial (ver la nota de cabecera) --------------------------------------
+  var histDepth = 0;       // entradas «nd» apiladas sobre la centinela, según nosotros
+  var syncQueued = false;  // ya hay una microtarea de puesta al día en camino
+  var pendingGo = 0;       // history.go() lanzados por nosotros y aún sin su popstate
+  var syncAgain = false;   // hubo cambios mientras esperábamos ese popstate
+
   function ndState(s) { return s && s.nd ? s.nd : null; }
 
   function pushHistory(depth) {
@@ -54,6 +65,35 @@
   function replaceHistory(depth, root) {
     if (!supported) return;
     try { history.replaceState({ nd: { depth: depth, root: !!root } }, ''); } catch (e) { supported = false; }
+  }
+
+  // Apunta que la pila ha cambiado. La puesta al día del historial va en una microtarea: para
+  // entonces el manejador de eventos ha terminado y se conoce el saldo REAL de todo lo que se abrió
+  // y se cerró en él (ver la nota de cabecera).
+  function scheduleSync() {
+    if (!supported || syncQueued) return;
+    syncQueued = true;
+    Promise.resolve().then(runSync);
+  }
+
+  function runSync() {
+    syncQueued = false;
+    if (!supported) return;
+    // Con un go() nuestro en el aire, la entrada actual todavía no es la que creemos: se espera a su
+    // popstate y se vuelve a intentar desde allí.
+    if (pendingGo > 0) { syncAgain = true; return; }
+    if (levels.length > histDepth) {
+      while (histDepth < levels.length) pushHistory(++histDepth);
+    } else if (levels.length < histDepth) {
+      var delta = levels.length - histDepth;
+      histDepth = levels.length;
+      pendingGo++;
+      try { history.go(delta); } catch (e) { pendingGo--; }
+    } else {
+      // Misma profundidad con otro contenido (reabrir un nivel, replaceTop): la entrada actual ya
+      // vale, solo se refresca su marca.
+      replaceHistory(histDepth);
+    }
   }
 
   // Desapila (cerrando) hasta dejar exactamente `depth` niveles abiertos. Se saca el nivel de la
@@ -79,11 +119,11 @@
       // se cierra lo que tenga encima y se reutiliza su nivel, en vez de apilar un duplicado.
       unwindTo(at + 1);
       levels[at].close = close;
-      replaceHistory(levels.length);
+      scheduleSync();
       return;
     }
     levels.push({ key: key, close: close });
-    pushHistory(levels.length);
+    scheduleSync();
   }
 
   // Sustituye el nivel de arriba por otro SIN apilar un paso nuevo ni cerrar el anterior: el camino
@@ -94,7 +134,7 @@
     init();
     if (!levels.length) { open(key, close); return; }
     levels[levels.length - 1] = { key: key, close: close };
-    replaceHistory(levels.length);
+    scheduleSync();
   }
 
   // Cierra `key` y todo lo que tenga encima. Devuelve false si ese nivel no estaba abierto, para
@@ -103,18 +143,16 @@
   function closeKey(key) {
     var at = indexOf(key);
     if (at === -1) return false;
-    var delta = at - levels.length;   // negativo: cuántas entradas de historial sobran
     unwindTo(at);
-    if (delta && supported) { try { history.go(delta); } catch (e) {} }
+    scheduleSync();
     return true;
   }
 
   function closeAbove(key) {
     var at = indexOf(key);
     if (at === -1) return false;
-    var delta = (at + 1) - levels.length;
     unwindTo(at + 1);
-    if (delta && supported) { try { history.go(delta); } catch (e) {} }
+    scheduleSync();
     return true;
   }
 
@@ -158,13 +196,24 @@
 
   function onPopState(event) {
     var nd = ndState(event.state);
-    if (nd && nd.root) { unwindTo(0); onExitAttempt(); return; }
+    // Este popstate es la respuesta a un history.go() nuestro, no un «atrás» del usuario: la pila ya
+    // está como debe, solo faltaba que el historial llegase. Si mientras tanto hubo más cambios, se
+    // vuelve a intentar la puesta al día ahora que la entrada actual ya es la buena.
+    if (pendingGo > 0) {
+      pendingGo--;
+      histDepth = nd && typeof nd.depth === 'number' ? nd.depth : 0;
+      if (syncAgain || histDepth !== levels.length) { syncAgain = false; scheduleSync(); }
+      return;
+    }
+    if (nd && nd.root) { unwindTo(0); histDepth = 0; onExitAttempt(); return; }
     var depth = nd && typeof nd.depth === 'number' ? nd.depth : 0;
+    histDepth = depth;
     if (depth < levels.length) { unwindTo(depth); return; }
     if (depth > levels.length) {
       // Hacia delante después de haber cerrado a mano: no se puede reabrir lo que ya se cerró, así
       // que se normaliza la entrada actual a la profundidad real.
-      replaceHistory(levels.length);
+      histDepth = levels.length;
+      replaceHistory(histDepth);
     }
     // depth === levels.length: se ha vuelto a la entrada centinela (la raíz de la app) o ya estaba
     // todo desapilado. No hay nada que cerrar; salir de la app solo lo decide la rama `nd.root`.
@@ -178,6 +227,7 @@
     started = true;
     replaceHistory(0, true);
     pushHistory(0);
+    histDepth = 0;
     window.addEventListener('popstate', onPopState);
   }
 
@@ -195,10 +245,9 @@
     // deshace de golpe las entradas de historial que había apiladas, para que «atrás» no se quede
     // dando pasos que ya no llevan a ninguna parte.
     reset: function () {
-      var depth = levels.length;
       levels.length = 0;
       exitArmedAt = 0;
-      if (depth && supported) { try { history.go(-depth); } catch (e) {} }
+      scheduleSync(); // deshace de golpe las entradas que sobran, por el mismo camino que todo lo demás
     }
   };
 })();
