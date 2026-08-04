@@ -28,17 +28,18 @@ import {
   saveOfflineBtn, connStatus, layersToggle, layersPanel, explorerToggle
 } from './dom.js';
 import {
-  renderHabitatCatalog, renderSpeciesList, renderCatalogBody,
+  renderHabitatGroups, renderHabitatCatalog, renderSpeciesList, renderCatalogBody,
   renderSummary, renderProgress, renderDetail, renderProgressTab, renderInvasoras,
   renderBasicPark, renderAccountProgress
 } from './render.js';
 import {
   map, setMapHandlers, ensureMapSized, soloHabitat, setupParkBaseLayer, applyBaseChoice, focusOn,
   revealOn, renderMarkers, renderPoiMarkers, renderTrails, renderProtectedAreas, renderHabitatZones,
-  playEntrySequence
+  playEntrySequence, setHabitatVisible, soloHabitatGroup, focusHabitatGroupOnMap
 } from './map.js';
+import { groupIdOfHabitat } from './habitat-groups.js';
 import { initExplorer } from './explorer.js';
-import { initLayersPanel, refreshLayersPanel } from './layers.js';
+import { initLayersPanel, refreshLayersPanel, setOpenLayersGroup, openLayersGroupOfHabitat } from './layers.js';
 import { loadGlossary, initGlossaryPopover } from './glossary.js';
 import { initTutorial } from './tutorial.js';
 import { initAchievements, noteParkActivity, handleServerNewlyUnlocked, reportInvasiveSeen, refreshAccountProgress, syncWithServer } from './achievements.js';
@@ -56,7 +57,37 @@ function navOpen(key, close) { if (nav) nav.open(key, close); }
 function navClose(key) { return nav ? nav.close(key) : false; }
 
 // --- Navegación del catálogo ----------------------------------------------------------------------
+// Tres niveles encajados: grupos de hábitats → hábitats del grupo → especies del hábitat. Cada uno
+// es un paso deshacible en la pila (nav.js), así que «atrás» sube UN nivel, igual que la miga de pan.
+
+// Entrar en un grupo de hábitats. Además de abrir su lista en el catálogo, aísla el grupo en el
+// mapa: es la razón de ser de los grupos —dejar de ver veintiún polígonos pisándose— y hace que las
+// tres vistas (mapa, leyenda y catálogo) cuenten lo mismo.
+function enterHabitatGroup(groupId) {
+  state.habitatGroupFocus = groupId;
+  state.habitatFocus = null;
+  state.catalogMode = 'habitats';
+  state.query = '';
+  searchInput.value = '';
+  soloHabitatGroup(groupId);
+  focusHabitatGroupOnMap(groupId);
+  setOpenLayersGroup(groupId);
+  refreshLayersPanel();
+  renderCatalogBody();
+  navOpen('habitat-group', backToGroupsRaw);
+}
+
 function enterHabitat(habitatId) {
+  // El grupo del hábitat se apila DEBAJO aunque se haya llegado de un salto (desde el mapa, desde
+  // "cerca de ti" o desde un resultado del buscador): así «atrás» sube al grupo y solo el siguiente
+  // «atrás» sale al principio del catálogo, sin caminos que se salten un nivel.
+  const groupId = habitatId ? groupIdOfHabitat(habitatId) : '';
+  if (groupId) {
+    state.habitatGroupFocus = groupId;
+    navOpen('habitat-group', backToGroupsRaw);
+  } else {
+    state.habitatGroupFocus = null; // "Ver todas las especies": no cuelga de ningún grupo
+  }
   state.habitatFocus = habitatId;
   state.catalogMode = 'species';
   state.query = '';
@@ -65,9 +96,7 @@ function enterHabitat(habitatId) {
   // "Ver todas las especies" (habitatId nulo) no tiene hábitat que mostrar, así que no la toca.
   if (habitatId) selectHabitat(habitatId);
   renderCatalogBody();
-  // Entrar en un hábitat es bajar un nivel dentro del catálogo: «atrás» devuelve a la lista de
-  // hábitats, que es justo lo que hace el botón «← Hábitats» de la miga de pan.
-  navOpen('habitat', backToHabitatsRaw);
+  navOpen('habitat', backFromHabitatRaw);
 }
 
 // Pestaña de invasoras: lista a la izquierda + ficha en el panel de detalle de la derecha (como especies).
@@ -103,26 +132,62 @@ function selectHabitat(habitatId, solo = true) {
   state.selectedHabitatId = habitatId;
   state.detailMode = 'habitat';
   renderDetail();
+  // El panel de capas deja desplegado el grupo del hábitat en cuestión: al abrirlo, lo que se está
+  // mirando ya está a la vista, sin tener que buscar en qué grupo cae.
+  openLayersGroupOfHabitat(habitatId);
   if (solo) { soloHabitat(habitatId); refreshLayersPanel(); }
 }
 
 // Tocar un hábitat en el mapa: su ficha, en el mismo sitio que todas las demás.
+// A diferencia de una especie o un punto, la hoja se abre ENTERA y no a media altura: un hábitat no
+// es un punto que haya que seguir viendo debajo —ocupa media pantalla de mapa— y su ficha es la más
+// larga de la app (descripción, superficie, fitosociología, progreso y todas sus especies). A media
+// altura obligaba a subirla a mano cada vez.
 function selectHabitatFromMap(habitatId) {
   selectHabitat(habitatId, false);
-  openDetailSheet(true);
+  openDetailSheet();
 }
 
-function backToHabitatsRaw() {
+// Salir de un hábitat: se vuelve a la lista de SU grupo (o al nivel de grupos si se estaba en
+// "todas las especies", que no cuelga de ninguno).
+function backFromHabitatRaw() {
   state.habitatFocus = null;
-  state.catalogMode = 'habitats';
+  state.catalogMode = state.habitatGroupFocus ? 'habitats' : 'groups';
   state.query = '';
   searchInput.value = '';
+  // Entrar en un hábitat lo aísla en el mapa (selectHabitat · soloHabitat); al salir, el mapa vuelve
+  // a enseñar el grupo entero, que es lo que la lista está mostrando otra vez. Sin esto, la lista
+  // decía "cuatro hábitats" y en el mapa seguía habiendo uno.
+  if (state.habitatGroupFocus) {
+    soloHabitatGroup(state.habitatGroupFocus);
+    refreshLayersPanel();
+  }
   renderCatalogBody();
 }
 
-function backToHabitats() {
-  if (navClose('habitat')) return; // su cierre ya vuelve a la lista de hábitats
-  backToHabitatsRaw();
+// Salir de un grupo: al nivel de entrada del catálogo. El mapa recupera todos los hábitats, que es
+// lo que el usuario está viendo en la lista.
+function backToGroupsRaw() {
+  state.habitatGroupFocus = null;
+  state.habitatFocus = null;
+  state.catalogMode = 'groups';
+  state.query = '';
+  searchInput.value = '';
+  (state.data && state.data.habitats ? state.data.habitats : []).forEach(h => setHabitatVisible(h.id, true));
+  setOpenLayersGroup(null);
+  refreshLayersPanel();
+  renderCatalogBody();
+}
+
+// El botón «←» de la miga: sube UN nivel, sea cual sea en el que se esté.
+function backOneCatalogLevel() {
+  if (state.catalogMode === 'species') {
+    if (navClose('habitat')) return; // su cierre ya devuelve al grupo (o a los grupos)
+    backFromHabitatRaw();
+    return;
+  }
+  if (navClose('habitat-group')) return;
+  backToGroupsRaw();
 }
 
 function focusHabitat(habitatId) {
@@ -130,6 +195,13 @@ function focusHabitat(habitatId) {
   closeDetailSheet();
   if (mobileMedia.matches) setMobileTab('catalog'); else setView('catalog');
   enterHabitat(habitatId);
+}
+
+// Entrada al catálogo de hábitats de un grupo desde la ficha de un hábitat (su etiqueta de grupo).
+function focusHabitatGroup(groupId) {
+  closeDetailSheet();
+  if (mobileMedia.matches) setMobileTab('catalog'); else setView('catalog');
+  enterHabitatGroup(groupId);
 }
 
 function selectSpecies(id, focusMap = true) {
@@ -424,9 +496,20 @@ document.querySelectorAll('.mobile-nav-btn').forEach(btn => {
 if (sheetClose) sheetClose.addEventListener('click', closeDetailSheet);
 // Tocar el velo (fondo atenuado) también cierra la ficha, como en cualquier bottom-sheet.
 if (sheetScrim) sheetScrim.addEventListener('click', closeDetailSheet);
-// La miga de pan del catálogo abre la ficha del hábitat en el que se está navegando.
+// La miga de pan del catálogo abre la ficha del hábitat en el que se está navegando; dentro de un
+// grupo (que no tiene ficha propia) lo que hace es enseñar ese grupo, y solo ese, en el mapa.
 catalogCrumbLabel.addEventListener('click', () => {
-  if (state.habitatFocus) { selectHabitat(state.habitatFocus); openDetailSheet(); }
+  if (state.catalogMode === 'species' && state.habitatFocus) {
+    selectHabitat(state.habitatFocus);
+    openDetailSheet();
+    return;
+  }
+  if (state.habitatGroupFocus) {
+    soloHabitatGroup(state.habitatGroupFocus);
+    focusHabitatGroupOnMap(state.habitatGroupFocus);
+    refreshLayersPanel();
+    if (mobileMedia.matches) setMobileTab('map');
+  }
 });
 syncMobileNav('catalog'); // pestaña inicial
 
@@ -434,6 +517,8 @@ syncMobileNav('catalog'); // pestaña inicial
 speciesList.addEventListener('click', event => {
   const card = event.target.closest('.species-card');
   if (card) { selectSpecies(card.dataset.id); return; }
+  const groupCard = event.target.closest('[data-habitat-group]');
+  if (groupCard) { enterHabitatGroup(groupCard.dataset.habitatGroup); return; }
   const habitatCard = event.target.closest('.habitat-card');
   if (habitatCard) { enterHabitat(habitatCard.dataset.habitat); return; }
   if (event.target.closest('#viewAllSpeciesBtn')) enterHabitat(null);
@@ -459,6 +544,9 @@ detailPanel.addEventListener('click', event => {
   // Desde la etiqueta de hábitat: abrir el catálogo de especies de ese hábitat.
   const viewSpecies = event.target.closest('[data-view-habitat-species]');
   if (viewSpecies) { focusHabitat(viewSpecies.dataset.viewHabitatSpecies); return; }
+  // Desde la etiqueta de grupo de la ficha: subir a los hábitats hermanos de ese grupo.
+  const groupLink = event.target.closest('[data-habitat-group-link]');
+  if (groupLink) { focusHabitatGroup(groupLink.dataset.habitatGroupLink); return; }
   // Desde una de las especies listadas en la etiqueta de hábitat: abrir su ficha.
   const chip = event.target.closest('[data-species-chip]');
   if (chip) {
@@ -485,11 +573,13 @@ document.querySelectorAll('.view-tab').forEach(button => {
   button.addEventListener('click', () => setView(button.dataset.view));
 });
 
-backToHabitatsBtn.addEventListener('click', backToHabitats);
+backToHabitatsBtn.addEventListener('click', backOneCatalogLevel);
 
 searchInput.addEventListener('input', event => {
   state.query = event.target.value;
-  if (state.catalogMode === 'species') renderSpeciesList(); else renderHabitatCatalog();
+  if (state.catalogMode === 'species') renderSpeciesList();
+  else if (state.catalogMode === 'habitats') renderHabitatCatalog();
+  else renderHabitatGroups(); // en el nivel de grupos el buscador enseña los hábitats que coinciden
 });
 
 // --- Modo explorador (explorer.js): GPS continuo, "cerca de ti" y descubrimiento por proximidad --
@@ -729,6 +819,12 @@ async function startParkExperience(slug, user) {
   state.selectedHabitatId = defaultHabitat ? defaultHabitat.id : null;
   state.detailMode = 'habitat';
   state.hiddenHabitats.clear(); // al (re)entrar a un parque, todos sus hábitats parten visibles
+  // El catálogo arranca por su nivel de entrada: los grupos de hábitats. Cambiar de parque no puede
+  // dejarlo dentro del grupo o del hábitat del parque anterior, que ya ni existen.
+  state.catalogMode = 'groups';
+  state.habitatGroupFocus = null;
+  state.habitatFocus = null;
+  setOpenLayersGroup(null);
   // Mapa base propio del parque (paquete .pmtiles). Si ya se entra sin cobertura se activa de
   // salida: OSM/PNOA no pintarían nada y el usuario vería la geometría flotando sobre el vacío.
   if (setupParkBaseLayer(manifest) && !NaturDexOffline.isOnline()) applyBaseChoice('parque', false);

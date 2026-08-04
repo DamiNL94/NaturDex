@@ -18,6 +18,7 @@ El primer parque piloto es el Parque Regional de Cabo Cope y Puntas de Calnegre,
 - `Frontend/Js/app.js`: mapa, filtros, catálogo, ficha de especie y progreso tipo pokédex (la experiencia de un parque).
 - `Frontend/Js/auth.js`: flujo de pantallas (portada → login → mapa de España → parque), autenticación y selector de parque.
 - `Frontend/Js/nav.js`: pila de navegación de la app. Convierte cada pantalla, pestaña, ficha y etiqueta del mapa en un paso deshacible con su entrada de historial, para que el botón «atrás» del móvil (y el gesto de deslizar) retroceda dentro de NaturDex en vez de salir de la web. Ver «Navegación e interacción» más abajo.
+- `Frontend/Js/habitat-groups.js`: los **grupos de hábitats** (costa y dunas, saladares, riberas, matorrales, pastizales, roquedos y bosques) con su trama y su tinta. Es la agrupación única que comparten el mapa, la leyenda y el catálogo. Ver «Hábitats por grupos» más abajo.
 - `Frontend/Js/offline.js`: capa de almacenamiento local y funcionamiento sin conexión (ver más abajo).
 - `Frontend/sw.js`: Service Worker que cachea el armazón de la app y los datos del parque para offline.
 - `Frontend/Data/parks-index.json`: registro global de parques por comunidad autónoma y provincia.
@@ -352,6 +353,34 @@ en el dispositivo, en `localStorage` con una clave que combina usuario + parque 
 modo que ni las cuentas ni los parques se mezclan. El endpoint `progress.php` exige sesión (responde
 401 si no la hay). Nota de prototipo: para producción, servir por HTTPS y endurecer la sesión.
 
+## Hábitats por grupos
+
+Un parque trae entre once y veintiún hábitats de interés comunitario, y hasta ahora se presentaban
+como **una lista plana** en los tres sitios donde aparecen: el panel de capas (que es también la
+leyenda), el catálogo y la pestaña de progreso. Con esa lista no había forma de recorrerlos con
+tranquilidad ni, sobre todo, de gestionar el **solapamiento en el mapa**: los polígonos se pisan unos
+a otros y apagarlos de uno en uno, con veintiuna casillas, no es manejable en un móvil en el campo.
+
+`Frontend/Js/habitat-groups.js` reparte los hábitats en **siete grupos de características similares**,
+ordenados del mar hacia dentro: costa y dunas, saladares y estepas salinas, ríos y riberas,
+matorrales, pastizales, roquedos y bosques. El criterio es el **código HIC** (anexo I de la Directiva
+92/43/CEE), que ya agrupa por grandes tipos; solo si el hábitat viniera sin código se recurre al campo
+`type` del catálogo. Los bosques de galería (91B0, 91E0, 91F0, 92A0-92D0) van con el agua y no con los
+bosques, porque es el río lo que los explica.
+
+Cada grupo lleva **su trama y su tinta**, y son las mismas en los tres sitios:
+
+- **En el mapa**, la trama de un polígono dice de qué grupo es; su **borde** toma el color propio del
+  hábitat en el catálogo, que es lo que lo distingue de sus hermanos de grupo.
+- **En la leyenda** (panel de «Capas»), cada grupo es una fila con su muestra de trama, su recuento,
+  su casilla para encenderlo o apagarlo entero y un «Solo» que **aísla ese grupo en el mapa**. Al
+  abrir un grupo se despliega el desglose de sus hábitats, con la casilla, el color y el «Solo» de
+  cada uno. Solo hay un grupo desplegado a la vez.
+- **En el catálogo**, la navegación baja tres niveles: grupos → hábitats del grupo → especies del
+  hábitat. Entrar en un grupo lo aísla también en el mapa, así que las tres vistas cuentan lo mismo.
+  El buscador sigue siendo plano: escribir «duna» encuentra el hábitat sin saber en qué grupo cae.
+- **En el progreso**, las barras por hábitat van bajo la cabecera de su grupo, con el mismo orden.
+
 ## Navegación e interacción: el modelo de "un paso atrás"
 
 Al ser una app de una sola página, durante un tiempo todo lo que se abría (pantallas, pestañas de la
@@ -369,9 +398,9 @@ la pila, no qué había abierto), y cerrar a mano desapila y retrocede a la vez,
 historial no se separen nunca. La pila típica dentro de un parque, de fuera hacia dentro:
 
 ```
-portada → selector de parque → parque → pestaña (catálogo/invasoras/progreso) → hábitat → ficha
-                                     └→ perfil / progreso estatal        (encima de donde estabas)
-                                     └→ panel de capas · etiqueta del mapa · tutorial
+portada → selector → parque → pestaña (catálogo/invasoras/progreso) → grupo → hábitat → ficha
+                            └→ perfil / progreso estatal        (encima de donde estabas)
+                            └→ panel de capas · etiqueta del mapa · tutorial
 ```
 
 Piezas concretas:
@@ -385,6 +414,12 @@ Piezas concretas:
   aterrizar en la portada y se va no se encuentra ningún obstáculo.
 - **El mapa es la "casa" del parque**: «atrás» desde cualquier pestaña vuelve al mapa, y solo desde
   el mapa se sale al selector. No se encadenan pestañas visitadas como si fueran páginas.
+- **El historial se pone al día al final del turno**, no en cada apertura o cierre. `history.go()` es
+  asíncrono, así que un manejador que cerraba un nivel y abría otros dos —cerrar la ficha de un
+  hábitat y entrar en el catálogo de sus especies, por ejemplo— disparaba un retroceso que llegaba
+  *después* de las nuevas entradas, aterrizaba en una profundidad menor y **deshacía solo lo que el
+  usuario acababa de abrir**: se pulsaba «ver las especies de este hábitat» y la pantalla volvía al
+  mapa sin nada. Apilando el saldo real del turno en una microtarea, esa carrera no existe.
 
 ### Etiquetas del mapa: fichas, no globos
 

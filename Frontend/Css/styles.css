@@ -95,7 +95,11 @@
 .layers-habitat-name:hover{color:var(--sea)}
 .layers-solo{flex:0 0 auto;border:1px solid var(--line);background:#fff;border-radius:999px;font-size:.64rem;font-weight:800;color:var(--muted);padding:2px 8px;cursor:pointer}
 .layers-solo:hover{border-color:var(--sea);color:var(--sea)}
-@media(max-width:900px){.layers-panel{width:min(86vw,320px);max-height:52vh}}
+/* Móvil: el panel cabe mucho más ahora que los hábitats van plegados por grupos, así que se le deja
+   más alto (con el desglose de un grupo abierto, antes había que deslizar dentro de 52vh para llegar
+   al final de la lista). overscroll-behavior corta el encadenamiento: al llegar al tope, el gesto no
+   sigue en el mapa de detrás moviéndolo. */
+@media(max-width:900px){.layers-panel{width:min(86vw,320px);max-height:64vh;overscroll-behavior:contain}}
 
 /* Aviso de descubrimiento por proximidad (POI al alcance / hábitat pisado) */
 .explorer-hint{position:absolute;top:16px;left:50%;transform:translateX(-50%);z-index:460;display:flex;align-items:center;gap:10px;max-width:min(92%,440px);padding:10px 12px;border-radius:12px;border:1px solid var(--sun);background:#fff8e8;box-shadow:var(--shadow);animation:hint-in .25s ease}
@@ -362,7 +366,7 @@
   body.sheet-open .sheet-scrim{opacity:1;visibility:visible;pointer-events:auto}
 
   /* Ficha como bottom-sheet: se desliza desde abajo por encima de la vista activa, del velo y de la nav */
-  .detail-dock{position:fixed;left:0;right:0;bottom:0;z-index:900;display:flex;flex-direction:column;max-height:78dvh;background:#fff;border-radius:16px 16px 0 0;box-shadow:0 -12px 40px rgba(23,33,27,.28);transform:translateY(110%);transition:transform .28s ease;padding-bottom:env(safe-area-inset-bottom)}
+  .detail-dock{position:fixed;left:0;right:0;bottom:0;z-index:900;display:flex;flex-direction:column;max-height:92dvh;background:#fff;border-radius:16px 16px 0 0;box-shadow:0 -12px 40px rgba(23,33,27,.28);transform:translateY(110%);transition:transform .28s ease;padding-bottom:env(safe-area-inset-bottom)}
   body.sheet-open .detail-dock{transform:translateY(0)}
   /* Cabecera de la hoja: franja sólida (fondo #fff + z-index) por encima del contenido que scrollea.
      Antes era transparente y de solo ~25px: la "X" (32px) sobresalía hacia abajo y, como la barra y
@@ -733,6 +737,7 @@ p.achievement-progress-label{margin:8px 0 0}
 :root[data-theme="dark"] .sheet-bar,
 :root[data-theme="dark"] .species-card,
 :root[data-theme="dark"] .habitat-card,
+:root[data-theme="dark"] .habitat-group-card,
 :root[data-theme="dark"] .habitat-species-chip,
 :root[data-theme="dark"] .summary-grid div,
 :root[data-theme="dark"] .achievement-card,
@@ -783,6 +788,7 @@ p.achievement-progress-label{margin:8px 0 0}
 :root[data-theme="dark"] .achievement-card.unlocked,
 :root[data-theme="dark"] .achievement-toast-icon,
 :root[data-theme="dark"] .nearby-item.here,
+:root[data-theme="dark"] .habitat-group-card.complete,
 :root[data-theme="dark"] .habitat-card.complete,
 :root[data-theme="dark"] .profile-warning{background:#2b2415;border-color:var(--sun)}
 :root[data-theme="dark"] .achievement-card.rarity-poco-comun.unlocked{background:#152a33}
@@ -926,7 +932,7 @@ p.achievement-progress-label{margin:8px 0 0}
      El asa (.sheet-grip-btn) la sube a completa y la vuelve a bajar. Abierta desde una lista no se
      aplica: allí detrás no hay nada que preservar. */
   body.sheet-compact .detail-dock{max-height:48dvh}
-  body.sheet-compact.sheet-expanded .detail-dock{max-height:82dvh}
+  body.sheet-compact.sheet-expanded .detail-dock{max-height:92dvh}
   .sheet-grip-btn{display:flex;align-items:center;justify-content:center;width:96px;min-height:32px;
     padding:0;border:0;background:transparent;cursor:pointer}
   .sheet-grip-btn:hover .sheet-grip{background:var(--muted)}
@@ -946,4 +952,124 @@ p.achievement-progress-label{margin:8px 0 0}
      usuario acababa de abrir. Se colocan sobre el mapa, por encima de la hoja. */
   body.sheet-open.sheet-compact:not(.sheet-expanded) .achievement-toast-region{
     bottom:calc(48dvh + 12px)}
+}
+
+/* ===================== Grupos de hábitats (mapa · leyenda · catálogo) ========================= */
+/* Los hábitats de un parque —hasta veintiuno— se reparten en los siete grupos de
+   Js/habitat-groups.js. La misma agrupación, con la misma muestra de trama, aparece en los tres
+   sitios donde antes había una lista plana: el panel de capas (que ES la leyenda), el catálogo y la
+   pestaña de progreso. Ver la cabecera de Js/habitat-groups.js. */
+
+/* Muestra de trama del grupo: el mismo dibujo con el que se rellena su polígono en el mapa. */
+.hab-swatch{display:block;flex:0 0 auto;border-radius:var(--radius-sm)}
+/* En oscuro esas tintas —verde bosque, marrón y azul profundos— caen casi al negro del panel y la
+   muestra se quedaba en un cuadrado vacío. Se aclara la muestra, no la trama del mapa: allí la tinta
+   va sobre la ortofoto y tiene que seguir siendo la misma. */
+:root[data-theme="dark"] .hab-swatch{filter:brightness(2.1) saturate(.85)}
+
+/* --- Panel de capas: grupo plegable con su desglose ------------------------------------------- */
+.layers-groups{display:flex;flex-direction:column;gap:2px}
+.layers-group+.layers-group{border-top:1px solid var(--line)}
+.layers-group-row{gap:8px}
+.layers-group-name{flex:1;min-width:0;display:flex;align-items:center;gap:6px;padding:2px 0;border:0;
+  background:transparent;color:inherit;font:inherit;font-size:.8rem;font-weight:700;text-align:left;cursor:pointer}
+.layers-group-name>:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.layers-group-count{flex:0 0 auto;color:var(--muted);font-size:.7rem;font-weight:800}
+.layers-chevron{flex:0 0 auto;margin-left:auto;color:var(--muted);transition:transform .18s ease}
+.layers-group.open .layers-chevron{transform:rotate(90deg)}
+.layers-group.open .layers-group-name{color:var(--leaf)}
+/* El desglose se sangra y cuelga de un filete: se ve de un vistazo que esas casillas son las del
+   grupo de arriba y no capas sueltas. */
+.layers-habitats{margin:0 0 6px 10px;padding-left:10px;border-left:2px solid var(--line)}
+.layers-habitat-row{gap:8px}
+.layers-empty{margin:4px 0;color:var(--muted);font-size:.76rem;line-height:1.4}
+
+/* --- Catálogo: tarjeta de grupo (nivel de entrada) --------------------------------------------- */
+.habitat-group-card{width:100%;display:grid;grid-template-columns:34px 1fr 18px;gap:12px;align-items:center;
+  margin-bottom:8px;padding:12px;border:1px solid var(--line);border-radius:8px;text-align:left;
+  color:inherit;background:#fff;cursor:pointer;
+  transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease}
+.habitat-group-card:hover{transform:translateY(-1px);box-shadow:var(--shadow-sm);border-color:#c7d9c9}
+.habitat-group-card.complete{border-color:var(--sun);background:#fffaf0}
+.habitat-group-swatch{align-self:start;margin-top:2px}
+.habitat-group-desc{color:var(--muted);font-size:.78rem;line-height:1.4}
+.habitat-group-go{color:var(--muted);display:flex;align-items:center;justify-content:center}
+/* Dentro de un grupo, su trama y su descripción encabezan la lista: recuerdan qué se está mirando
+   sin repetir el nombre, que ya está en la miga de pan justo encima. */
+.catalog-group-intro{display:flex;align-items:flex-start;gap:10px;margin:0 0 10px;color:var(--muted);
+  font-size:.78rem;line-height:1.4}
+.catalog-empty{margin:10px 0;color:var(--muted);font-size:.82rem;line-height:1.5}
+
+/* --- Ficha de hábitat: su grupo, como enlace a los hermanos ------------------------------------ */
+.detail-group-link{display:inline-flex;align-items:center;gap:8px;margin:10px 0 2px;padding:6px 10px;
+  border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--muted);
+  font-size:.76rem;font-weight:800;cursor:pointer}
+.detail-group-link:hover{border-color:var(--leaf);color:var(--leaf)}
+
+/* --- Pestaña de progreso: las mismas cabeceras de grupo ---------------------------------------- */
+.progress-group{list-style:none}
+.progress-group+.progress-group{margin-top:12px}
+.progress-group-title{display:flex;align-items:center;gap:8px;margin-bottom:6px;color:var(--muted);
+  font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+.progress-group-count{margin-left:auto;font-size:.72rem}
+
+/* ===================== Escritorio: recorrer el catálogo con tranquilidad ====================== */
+/* EL PROBLEMA (medido en 1280x720, con el parque piloto abierto):
+     park-nav 54 + park-summary 372 + view-tabs 53 + miga 31 + filtros 90 = 600 px de cabecera fija,
+     y a la LISTA del catálogo le quedaban 96 px de alto para 985 px de tarjetas. Se recorrían 175
+     especies por una ventanita de dos tarjetas y media. El pase anterior ya compactó la cabecera
+     (de 498 px a 372) y aun así no llegaba: el problema no es cuánto mide la cabecera, es que sea
+     INAMOVIBLE mientras la lista se ahoga debajo.
+   LA SOLUCIÓN: en escritorio la barra lateral scrollea como UNA columna, igual que ya hacía en
+   móvil. La cabecera del parque se aparta al deslizar y la lista dispone de la columna entera; la
+   miga de pan y el buscador se quedan pegados arriba, que son los dos controles que hay que tener
+   siempre a mano mientras se recorre el catálogo. */
+@media(min-width:901px){
+  /* Ancho fluido: con 420 + 460 px fijos, en un portátil de 1024 px al mapa le quedaban 144 px y
+     las tres columnas iban apretadas. Ahora ceden a la vez y el mapa conserva su sitio. */
+  .app-shell{grid-template-columns:clamp(320px,27vw,420px) 1fr}
+  .detail-panel{width:clamp(340px,29vw,460px)}
+
+  /* Una sola columna deslizable. scroll-padding deja el destino por DEBAJO de lo pegajoso al saltar
+     con el teclado o con un ancla, en vez de detrás. */
+  .sidebar{overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;
+    scroll-padding-top:calc(var(--crumb-h) + 96px)}
+  /* Nada se encoge: la barra sigue siendo un flex en columna y, al desbordar, repartía el recorte
+     entre sus hijos —la cabecera perdía aire y la miga de pan se quedaba en 23 de sus 38 px, con lo
+     que los filtros pegajosos se le montaban encima—. Con el scroll, lo que sobra se desliza. */
+  .sidebar>*{flex:0 0 auto}
+  .species-panel,.progress-panel,.invasoras-panel{min-height:auto;overflow:visible}
+  .species-list{flex:none;min-height:0;overflow:visible;padding-right:0}
+
+  /* Miga de pan y filtros, pegados arriba. Los dos son sticky y van uno debajo del otro, así que el
+     segundo necesita saber cuánto mide el primero. No se estima: la misma variable que le da el alto
+     a la miga es la que le dice a los filtros dónde pegarse, así que no pueden descuadrarse (la miga
+     es siempre UNA línea; su rótulo ya se recorta con puntos suspensivos). Cuando está oculta —en la
+     lista de grupos, donde no hay de dónde volver— los filtros suben a ras. */
+  :root{--crumb-h:38px}
+  .catalog-crumb{position:sticky;top:0;z-index:4;background:var(--panel);
+    height:var(--crumb-h);padding-top:0;padding-bottom:0}
+  .controls{position:sticky;top:0;z-index:3;background:var(--panel)}
+  .sidebar:has(.catalog-crumb:not([hidden])) .controls{top:var(--crumb-h)}
+  /* Con la columna entera deslizándose, la cabecera de la lista ya no puede quedarse fija: se
+     colaría por debajo del buscador. El nombre de lo que se está viendo ya está en la miga. */
+  .species-panel .section-title{position:static}
+
+  /* La ficha de la derecha sigue con su propio scroll (es otra columna): que no arrastre al mapa al
+     llegar al tope y que su barra no reflowee el texto al aparecer. */
+  .detail-panel{overscroll-behavior:contain;scrollbar-gutter:stable}
+
+  /* Barras de scroll visibles y discretas: la barra "de sistema" que solo asoma al mover el ratón
+     dejaba a estas columnas sin ninguna pista de que hubiera más contenido debajo. */
+  .sidebar,.detail-panel,.layers-panel{scrollbar-width:thin;scrollbar-color:var(--line-strong) transparent}
+  .sidebar::-webkit-scrollbar,.detail-panel::-webkit-scrollbar,.layers-panel::-webkit-scrollbar{width:10px}
+  .sidebar::-webkit-scrollbar-thumb,.detail-panel::-webkit-scrollbar-thumb,
+  .layers-panel::-webkit-scrollbar-thumb{
+    border:3px solid transparent;background:var(--line-strong);background-clip:content-box;border-radius:999px}
+  .sidebar::-webkit-scrollbar-thumb:hover,.detail-panel::-webkit-scrollbar-thumb:hover,
+  .layers-panel::-webkit-scrollbar-thumb:hover{background:var(--muted);background-clip:content-box}
+
+  /* Panel de capas: agrupado ya cabe entero, y si el parque trae muchos grupos scrollea él solo sin
+     arrastrar el mapa de detrás (la rueda acababa haciendo zoom). */
+  .layers-panel{max-height:min(72vh,620px);overscroll-behavior:contain}
 }

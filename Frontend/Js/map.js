@@ -10,6 +10,7 @@
 import { html, escapeHtml, kingdomEmoji, poiEmoji } from './util.js';
 import { audioBlock } from './audio.js';
 import { state, isHabitatComplete, speciesLatLng } from './state.js';
+import { habitatGroupId, habitatGroupById, habitatsOfGroup, PATTERN_TILES } from './habitat-groups.js';
 
 // --- Acciones de la app disparadas desde el mapa (las inyecta app.js) ----------------------------
 const handlers = {
@@ -557,71 +558,18 @@ export function renderProtectedAreas() {
 }
 
 // --- Zonas de hábitat -------------------------------------------------------------------------------
-// Plano 2 · hábitats: trama SVG por familia. Un parque trae hasta once hábitats solapados, y con
-// once rellenos planos de color el mapa se convertía en un mosaico opaco en el que ni se leía la
+// Plano 2 · hábitats: trama SVG por GRUPO. Un parque trae hasta veintiún hábitats solapados, y con
+// veintiún rellenos planos de color el mapa se convertía en un mosaico opaco en el que ni se leía la
 // ortofoto ni se sabía qué había debajo de qué. La trama resuelve las dos cosas: deja pasar el
 // fondo y sigue distinguiéndose donde dos hábitats se pisan, porque lo que separa no es el tono
-// sino el dibujo. Las familias son las siete grandes formaciones, con tinta según el medio
-// (verde vegetación, marrón mineral, azul agua).
-export const HABITAT_TEXTURES = {
-  matorral: { pattern: 'hatch45',   ink: '#1F4D34', bgOpacity: .07 },
-  bosque:   { pattern: 'hatch-45',  ink: '#1F4D34', bgOpacity: .07 },
-  pastos:   { pattern: 'dots',      ink: '#1F4D34', bgOpacity: .05 },
-  roquedo:  { pattern: 'grid',      ink: '#4A3B2A', bgOpacity: .06 },
-  dunas:    { pattern: 'waveDry',   ink: '#4A3B2A', bgOpacity: .05 },
-  ribera:   { pattern: 'waveWet',   ink: '#2E6D8E', bgOpacity: .07 },
-  saladar:  { pattern: 'hatchDash', ink: '#2E6D8E', bgOpacity: .05 }
-};
-
-// La tesela de cada trama. Las diagonales se dibujan con las dos esquinas repetidas (los tramos
-// fuera de la tesela) para que el rayado sea continuo al repetirse y no queden escalones.
-const PATTERN_TILES = {
-  hatch45:    { w: 8,  h: 8,  marks: ink => mark('M0 8 L8 0 M-1 1 L1 -1 M7 9 L9 7', ink, 1, .55) },
-  'hatch-45': { w: 8,  h: 8,  marks: ink => mark('M0 0 L8 8 M-1 7 L1 9 M7 -1 L9 1', ink, 1, .55) },
-  grid:       { w: 9,  h: 9,  marks: ink => mark('M0 0 L0 9 M0 0 L9 0', ink, .8, .45) },
-  dots:       { w: 7,  h: 7,  marks: ink => '<circle cx="3.5" cy="3.5" r="1.1" fill="' + ink + '" fill-opacity=".5"/>' },
-  waveWet:    { w: 12, h: 8,  marks: ink => mark('M0 6 q3 -3 6 0 t6 0', ink, 1, .55) },
-  waveDry:    { w: 12, h: 8,  marks: ink => mark('M0 6 q3 -3 6 0 t6 0', ink, 1, .45, '3 2.5') },
-  hatchDash:  { w: 8,  h: 8,  marks: ink => mark('M0 8 L8 0 M-1 1 L1 -1 M7 9 L9 7', ink, 1, .5, '2.5 2.5') }
-};
-
-function mark(d, ink, width, opacity, dash) {
-  return '<path d="' + d + '" fill="none" stroke="' + ink + '" stroke-width="' + width + '"'
-    + ' stroke-opacity="' + opacity + '" stroke-linecap="round"'
-    + (dash ? ' stroke-dasharray="' + dash + '"' : '') + '/>';
-}
-
-/**
- * Familia de trama de un hábitat. El criterio es el código HIC (anexo I de la Directiva Hábitats
- * 92/43/CEE), que ya agrupa por grandes tipos: 1x costeros y salinos, 2x dunas, 3x aguas
- * continentales, 4x-5x matorrales, 6x pastizales, 7x turberas, 8x roquedos y 9x bosques (91x y 92x
- * son los bosques de galería, que sobre el mapa se leen como ribera y no como bosque). Solo si el
- * hábitat viniera sin código se recurre al campo `type` del catálogo, que es texto libre.
- */
-export function habitatFamily(habitat) {
-  const code = String((habitat && habitat.code) || '').toUpperCase();
-  const group = code.slice(0, 2);
-  if (group === '91' || group === '92') return 'ribera';
-  if (code.startsWith('9')) return 'bosque';
-  if (code.startsWith('3') || code.startsWith('7')) return 'ribera';
-  if (code.startsWith('2') || code === '1210' || code === '1220') return 'dunas';
-  if (code === '1230' || code === '1240') return 'roquedo'; // acantilados
-  if (code.startsWith('1')) return 'saladar';               // 13xx-15xx: marismas y estepas salinas
-  if (code.startsWith('4') || code.startsWith('5')) return 'matorral';
-  if (code.startsWith('6')) return 'pastos';
-  if (code.startsWith('8')) return 'roquedo';
-  // NFD + quitar diacríticos: el campo es texto libre del catálogo ("Roquedos", "Salino"…).
-  const type = String((habitat && habitat.type) || '').toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-  if (type.includes('bosque')) return 'bosque';
-  if (type.includes('pasto') || type.includes('prado')) return 'pastos';
-  if (type.includes('roqued') || type.includes('rocos')) return 'roquedo';
-  if (type.includes('ribera') || type.includes('fluvial') || type.includes('humedal')) return 'ribera';
-  if (type.includes('salin') || type.includes('salad')) return 'saladar';
-  if (type.includes('litoral') || type.includes('duna') || type.includes('playa')) return 'dunas';
-  return 'matorral';
-}
-
+// sino el dibujo.
+//
+// La trama y la tinta salen del GRUPO del hábitat (habitat-groups.js), que es el mismo con el que
+// se ordenan la leyenda y el catálogo: mirando un polígono se sabe de qué entrada del panel viene.
+// Dentro de un grupo todos comparten trama —son formaciones parecidas y así se leen como una sola
+// familia—, y lo que los separa entre sí es el BORDE, que toma el color propio del hábitat en el
+// catálogo. Es justo el reparto que hace falta ahora que el panel enseña un grupo desplegado cada
+// vez: entre grupos distingue el dibujo, dentro del grupo distingue el color.
 /** Deja el <pattern> de una trama en los <defs> del svg de ese path y devuelve su id. */
 function ensurePattern(path, texture) {
   const tile = PATTERN_TILES[texture.pattern];
@@ -678,16 +626,16 @@ export function renderHabitatZones() {
   (state.data.habitats || []).forEach(habitat => {
     const complete = isHabitatComplete(habitat);
     const geom = state.geo && state.geo.habitatGeom ? state.geo.habitatGeom[habitat.id] : null;
-    // Borde y trama comparten la tinta de la familia: el plano queda de una pieza y los hábitats se
-    // distinguen por el DIBUJO, no por el tono. El color propio de cada hábitat (verdes, rosas y
-    // ocres del catálogo) no desaparece: sigue siendo su punto en el panel de capas, que es la
-    // leyenda, y el relleno de respaldo si el navegador no pintase la trama. El oro del hábitat
-    // completo manda sobre todo lo demás: es un estado, no una identidad.
-    const texture = HABITAT_TEXTURES[habitatFamily(habitat)];
+    // La trama (y su velo de fondo) es la del GRUPO; el borde, el color propio del hábitat en el
+    // catálogo. Así el plano se lee en dos niveles: el dibujo dice de qué grupo es el polígono —el
+    // mismo que encabeza la leyenda y el catálogo— y el filete distingue un hábitat de otro dentro
+    // de ese grupo, que es justo lo que hace falta cuando el panel deja desplegado un grupo entero.
+    // El oro del hábitat completo manda sobre todo lo demás: es un estado, no una identidad.
+    const texture = habitatGroupById(habitatGroupId(habitat));
     const baseStyle = {
-      color: complete ? '#d89b30' : (texture ? texture.ink : (habitat.color || '#2f6f4e')),
+      color: complete ? '#d89b30' : (habitat.color || texture.ink),
       weight: complete ? 3 : 2,
-      opacity: complete ? 1 : 0.75, // la tinta es oscura: a plena opacidad el borde pesaba más que su trama
+      opacity: complete ? 1 : 0.9, // el color del catálogo es más claro que la tinta del grupo: aguanta casi opaco
       fillColor: habitat.color || '#2f6f4e',
       fillOpacity: 0.16,
       pane: PANES.habitats
@@ -760,6 +708,36 @@ export function setHabitatVisible(habitatId, visible) {
 export function soloHabitat(habitatId) {
   (state.data.habitats || []).forEach(h => setHabitatVisible(h.id, h.id === habitatId));
   if (!map.hasLayer(state.habitatGroup)) state.habitatGroup.addTo(map);
+}
+
+// --- Visibilidad por GRUPO de hábitats -------------------------------------------------------------
+// Es la herramienta de verdad contra el solapamiento: los polígonos que se pisan suelen ser vecinos
+// del mismo tipo (tres dunas encadenadas, dos saladares…), así que encender y apagar por grupos deja
+// el mapa legible con un solo gesto, en vez de con veintiuna casillas.
+
+/** Enciende o apaga de golpe todos los hábitats de un grupo. */
+export function setHabitatGroupVisible(groupId, visible) {
+  habitatsOfGroup(groupId).forEach(h => setHabitatVisible(h.id, visible));
+  if (visible && !map.hasLayer(state.habitatGroup)) state.habitatGroup.addTo(map);
+}
+
+/** Aísla un grupo: deja visibles sus hábitats y apaga los de todos los demás grupos. */
+export function soloHabitatGroup(groupId) {
+  (state.data.habitats || []).forEach(h => setHabitatVisible(h.id, habitatGroupId(h) === groupId));
+  if (!map.hasLayer(state.habitatGroup)) state.habitatGroup.addTo(map);
+}
+
+/** Encuadra el mapa sobre todos los hábitats de un grupo (los que tengan geometría cargada). */
+export function focusHabitatGroupOnMap(groupId) {
+  let bounds = null;
+  habitatsOfGroup(groupId).forEach(h => {
+    const layer = state.habitatLayers.get(h.id);
+    if (!layer || !layer.getBounds) return;
+    const b = layer.getBounds();
+    if (!b || !b.isValid()) return;
+    bounds = bounds ? bounds.extend(b) : L.latLngBounds(b.getSouthWest(), b.getNorthEast());
+  });
+  if (bounds) fitOn(bounds, { maxZoom: 14 });
 }
 
 // --- Entrada escalonada ----------------------------------------------------------------------------

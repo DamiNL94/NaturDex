@@ -8,11 +8,14 @@
 // ================================================================================================
 
 import {
-  html, kingdomEmoji, placeholderImage, speciesImageSrc,
+  html, raw, kingdomEmoji, placeholderImage, speciesImageSrc,
   habitatImageSrc, habitatPlaceholderImage, icon,
   invasoraEmoji, invasoraImageSrc, invasoraPlaceholderImage,
   poiImageSrc, poiPlaceholderImage
 } from './util.js';
+import {
+  groupedHabitats, habitatsOfGroup, habitatGroup, habitatGroupById, groupSwatch
+} from './habitat-groups.js';
 import { audioBlock } from './audio.js';
 import { highlightGlossary } from './glossary.js';
 import { isInvasiveSeenLocally, loadAchievementsCatalog, refreshAccountProgress } from './achievements.js';
@@ -25,7 +28,7 @@ import {
   speciesList, detailPanel, searchInput, resultCount,
   speciesCount, habitatCount, coastlineKm, parkSummary,
   progressTrack, progressFill, progressLabel,
-  catalogCrumb, catalogCrumbLabel, catalogTitle,
+  catalogCrumb, catalogCrumbLabel, catalogTitle, backToHabitatsBtn,
   speciesFilterGroup, searchLabel, progressPanel, invasorasPanel, basicNotice,
   accountProgressBody
 } from './dom.js';
@@ -74,16 +77,63 @@ window.__invThumbFallback = function (imgEl) {
 };
 
 // --- Catálogo ---------------------------------------------------------------------------------------
-export function renderHabitatCatalog() {
-  const habitats = getFilteredHabitats();
-  resultCount.textContent = habitats.length === 1 ? '1 hábitat' : habitats.length + ' hábitats';
-  const cards = habitats.map(h => {
-    const total = (h.speciesIds || []).length;
-    const seen = habitatSpeciesSeenCount(h);
-    const complete = isHabitatComplete(h);
-    return html`<button class="habitat-card${complete ? ' complete' : ''}" type="button" data-habitat="${h.id}"><span class="habitat-card-dot" style="background:${h.color || '#2f6f4e'}"></span><span class="habitat-card-body"><span class="habitat-card-meta"><span class="badge habitat-code">${h.code || ''}</span>${h.priority ? html`<span class="badge alert">prioritario UE</span>` : ''}${h.reviewNote ? html`<span class="badge review">a revisar</span>` : ''}</span><strong>${h.name}</strong><span class="habitat-card-count">${seen} / ${total} especies vistas${complete && total > 0 ? ' · completo 🏅' : ''}</span></span></button>`;
+// Tres niveles: grupos de hábitats → hábitats del grupo → especies del hábitat. Ver state.catalogMode.
+
+/** Tarjeta de un hábitat (la usan el nivel de grupo y los resultados del buscador). */
+function habitatCard(h, withGroup) {
+  const total = (h.speciesIds || []).length;
+  const seen = habitatSpeciesSeenCount(h);
+  const complete = isHabitatComplete(h);
+  return html`<button class="habitat-card${complete ? ' complete' : ''}" type="button" data-habitat="${h.id}"><span class="habitat-card-dot" style="background:${h.color || '#2f6f4e'}"></span><span class="habitat-card-body"><span class="habitat-card-meta"><span class="badge habitat-code">${h.code || ''}</span>${withGroup ? html`<span class="badge">${habitatGroup(h).short}</span>` : ''}${h.priority ? html`<span class="badge alert">prioritario UE</span>` : ''}${h.reviewNote ? html`<span class="badge review">a revisar</span>` : ''}</span><strong>${h.name}</strong><span class="habitat-card-count">${seen} / ${total} especies vistas${complete && total > 0 ? ' · completo 🏅' : ''}</span></span></button>`;
+}
+
+/**
+ * Nivel de entrada: los grupos de hábitats presentes en el parque. Con el buscador escrito se
+ * cortocircuita y se enseñan directamente los hábitats que coinciden, vengan del grupo que vengan:
+ * quien busca "duna" quiere el hábitat, no que le hagan adivinar en qué grupo cae.
+ */
+export function renderHabitatGroups() {
+  const query = state.query.trim();
+  if (query) {
+    const matches = getFilteredHabitats();
+    resultCount.textContent = matches.length === 1 ? '1 hábitat' : matches.length + ' hábitats';
+    speciesList.innerHTML = matches.length
+      ? html`${matches.map(h => habitatCard(h, true))}`
+      : html`<p class="catalog-empty">Ningún hábitat coincide con «${query}».</p>`;
+    return;
+  }
+  const groups = groupedHabitats();
+  resultCount.textContent = groups.length === 1 ? '1 grupo' : groups.length + ' grupos';
+  const cards = groups.map(({ group, habitats }) => {
+    const total = habitats.reduce((n, h) => n + (h.speciesIds || []).length, 0);
+    const seen = habitats.reduce((n, h) => n + habitatSpeciesSeenCount(h), 0);
+    const complete = habitats.every(h => isHabitatComplete(h));
+    return html`<button class="habitat-group-card${complete ? ' complete' : ''}" type="button" data-habitat-group="${group.id}">
+      <span class="habitat-group-swatch">${raw(groupSwatch(group, 34))}</span>
+      <span class="habitat-card-body">
+      <span class="habitat-card-meta"><span class="badge">${habitats.length === 1 ? '1 hábitat' : habitats.length + ' hábitats'}</span>${habitats.some(h => h.priority) ? html`<span class="badge alert">prioritario UE</span>` : ''}${complete ? html`<span class="badge">completo 🏅</span>` : ''}</span>
+      <strong>${group.name}</strong>
+      <span class="habitat-group-desc">${group.description}</span>
+      <span class="habitat-card-count">${seen} / ${total} especies vistas</span>
+      </span>
+      <span class="habitat-group-go" aria-hidden="true">${icon('chevronRight', 18)}</span>
+      </button>`;
   });
   speciesList.innerHTML = html`<button class="habitat-all-link" type="button" id="viewAllSpeciesBtn">Ver todas las especies (${state.data.species.length})</button>${cards}`;
+}
+
+/** Segundo nivel: los hábitats de un grupo (state.habitatGroupFocus). */
+export function renderHabitatCatalog() {
+  const groupId = state.habitatGroupFocus;
+  const habitats = getFilteredHabitats(groupId ? habitatsOfGroup(groupId) : null);
+  resultCount.textContent = habitats.length === 1 ? '1 hábitat' : habitats.length + ' hábitats';
+  const group = groupId ? habitatGroupById(groupId) : null;
+  const head = group
+    ? html`<p class="catalog-group-intro">${raw(groupSwatch(group, 26))}<span>${group.description}</span></p>`
+    : '';
+  speciesList.innerHTML = habitats.length
+    ? html`${head}${habitats.map(h => habitatCard(h, false))}`
+    : html`${head}<p class="catalog-empty">Ningún hábitat de este grupo coincide con la búsqueda.</p>`;
 }
 
 export function renderSpeciesList() {
@@ -97,21 +147,41 @@ export function renderSpeciesList() {
 }
 
 export function renderCatalogBody() {
-  const inSpeciesMode = state.catalogMode === 'species';
+  const mode = state.catalogMode;
+  const inSpeciesMode = mode === 'species';
   speciesFilterGroup.hidden = !inSpeciesMode;
   searchLabel.textContent = inSpeciesMode ? 'Buscar especie' : 'Buscar hábitat';
   searchInput.placeholder = inSpeciesMode ? 'Nombre común o científico' : 'Nombre o código de hábitat';
-  catalogCrumb.hidden = !inSpeciesMode;
+  // La miga de pan solo existe a partir del segundo nivel: en los grupos no hay de dónde volver.
+  catalogCrumb.hidden = mode === 'groups';
+  const group = state.habitatGroupFocus ? habitatGroupById(state.habitatGroupFocus) : null;
   if (inSpeciesMode) {
     const habitat = state.habitatFocus ? state.data.habitats.find(h => h.id === state.habitatFocus) : null;
     const label = habitat ? habitat.name : 'Todas las especies';
+    // El botón de volver dice a DÓNDE se vuelve, que dentro de un hábitat es su grupo y no la lista
+    // entera: sin eso, el usuario que entró por "Costa y dunas" no sabe si va a salir a su grupo o
+    // al principio del catálogo.
+    setCrumbBack(habitat && group ? group.short : 'Hábitats');
     catalogCrumbLabel.textContent = label;
+    catalogCrumbLabel.title = habitat ? 'Abrir la ficha de este hábitat' : '';
     catalogTitle.textContent = label;
     renderSpeciesList();
-  } else {
-    catalogTitle.textContent = 'Hábitats';
+  } else if (mode === 'habitats') {
+    setCrumbBack('Grupos');
+    catalogCrumbLabel.textContent = group ? group.name : 'Hábitats';
+    catalogCrumbLabel.title = 'Ver en el mapa solo este grupo';
+    catalogTitle.textContent = group ? group.name : 'Hábitats';
     renderHabitatCatalog();
+  } else {
+    catalogTitle.textContent = 'Grupos de hábitats';
+    renderHabitatGroups();
   }
+}
+
+// El botón «←» de la miga es uno solo y cambia de rótulo según el nivel. El texto va en un <span>
+// aparte de la flecha para no rehacer el botón entero en cada render.
+function setCrumbBack(label) {
+  backToHabitatsBtn.textContent = '← ' + label;
 }
 
 // --- Cabecera del parque (resumen + barra de progreso) -----------------------------------------------
@@ -235,6 +305,10 @@ function renderHabitatDetail() {
   const complete = isHabitatComplete(habitat);
   const pct = total ? Math.round((seen / total) * 100) : 0;
   const area = habitatAreaLabel(habitat);
+  // El grupo va en la ficha —con su trama— y es además un enlace: desde un hábitat tocado en el
+  // mapa se sube a sus vecinos de tipo sin volver al principio del catálogo.
+  const group = habitatGroup(habitat);
+  const groupSize = habitatsOfGroup(group.id).length;
   const chips = (habitat.speciesIds || []).map(id => {
     const s = (state.data.species || []).find(item => item.id === id);
     if (!s) return '';
@@ -253,6 +327,7 @@ function renderHabitatDetail() {
     ${habitat.reviewNote ? html`<span class="badge review">a revisar</span>` : ''}
     ${complete && total > 0 ? html`<span class="badge">completo 🏅</span>` : ''}
     </span>
+    <button type="button" class="detail-group-link" data-habitat-group-link="${group.id}" title="Ver los hábitats de este grupo">${raw(groupSwatch(group, 18))}${group.name}${groupSize > 1 ? html` · ${groupSize} hábitats` : ''}</button>
     <h2>${habitat.name}</h2>
     <p class="detail-prose">${habitat.description}</p>
     ${audioBlock(habitat, 'Audioguía del hábitat')}
@@ -455,9 +530,18 @@ export function renderProgressTab() {
   const nHab = progress.habitatProgress.length;
 
   // Hábitats subdivididos: cada uno es un mini-logro con su propia barra; al verlos todos, medalla.
-  const habitatsHtml = progress.habitatProgress.map(h => {
-    const pct = h.total ? Math.round((h.seen / h.total) * 100) : 0;
-    return html`<li class="progress-row habitat-goal${h.complete ? ' complete' : ''}"><span class="progress-row-label"><span class="dot" style="background:${h.color || '#2f6f4e'}"></span>${h.name}</span><span class="habitat-goal-bar"><span class="progress-track"><span class="progress-fill" style="width:${pct}%"></span></span></span><span class="progress-row-value">${h.seen}/${h.total}${h.complete ? ' 🏅' : ''}</span></li>`;
+  // Van agrupados igual que en el mapa y en el catálogo —el mismo orden y las mismas cabeceras—, que
+  // con veintiuna filas seguidas esta lista era la más difícil de recorrer de la app.
+  const progressById = new Map(progress.habitatProgress.map(h => [h.id, h]));
+  const habitatsHtml = groupedHabitats().map(({ group, habitats }) => {
+    const rows = habitats.map(habitat => {
+      const h = progressById.get(habitat.id);
+      if (!h) return '';
+      const pct = h.total ? Math.round((h.seen / h.total) * 100) : 0;
+      return html`<li class="progress-row habitat-goal${h.complete ? ' complete' : ''}"><span class="progress-row-label"><span class="dot" style="background:${h.color || '#2f6f4e'}"></span>${h.name}</span><span class="habitat-goal-bar"><span class="progress-track"><span class="progress-fill" style="width:${pct}%"></span></span></span><span class="progress-row-value">${h.seen}/${h.total}${h.complete ? ' 🏅' : ''}</span></li>`;
+    });
+    const done = habitats.filter(habitat => (progressById.get(habitat.id) || {}).complete).length;
+    return html`<li class="progress-group"><span class="progress-group-title">${raw(groupSwatch(group, 16))}${group.name}<span class="progress-group-count">${done}/${habitats.length}</span></span><ul class="progress-list">${rows}</ul></li>`;
   });
 
   const poisHtml = (state.data.pointsOfInterest || []).map(p =>
