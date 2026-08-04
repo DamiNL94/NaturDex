@@ -13,7 +13,7 @@
       38.28027,
       -1.71834
     ],
-    "summary": "Reserva Natural de la Región de Murcia, con una superficie oficial de 248,8 ha en los términos municipales de Calasparra y Moratalla. Solapa con el espacio de la Red Natura 2000 LIC/ZEC ES6200004 «Sierras y Vega Alta del Segura y Ríos Alhárabe y Moratalla».",
+    "summary": "El bosque de ribera mejor conservado del Segura: una galería cerrada de álamos, sauces y tarays a lo largo del río, entre Calasparra y Moratalla.",
     "boundaryNote": "Límite oficial servido en geo/parque.geojson, descargado del geoportal del IMIDA/CARM (servicio PROYECTOS/OISMA, capa de Reserva Natural, registros con Caracter «Firme»), identificador interno ENP000011. Código ENP oficial ES620009, superficie oficial 248,8 ha según el Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Geometría en WGS84, sin generalizar (2167 vértices, superficie resultante 242,6 ha, desviación del 2,49 %). Sustituye a la delimitación de la capa ENP nacional del MITECO, que es un producto generalizado. Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM. Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico» (código y superficie oficiales) e IMIDA/CARM (geometría)."
   },
   "habitats": [],

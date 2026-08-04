@@ -14,7 +14,7 @@
       37.85809,
       -1.23518
     ],
-    "summary": "Parque Regional de la Región de Murcia, con una superficie oficial de 16.685,8 ha en los términos municipales de Alhama de Murcia, Fuente Álamo de Murcia y Murcia. Solapa con los espacios de la Red Natura 2000 ZEPA ES0000269 «Monte El Valle y Sierras de Altaona y Escalona» y LIC/ZEC ES6200002 «Carrascoy y El Valle».",
+    "summary": "La sierra que cierra la huerta de Murcia por el sur: pinares, carrascales y crestas de roca como la Cresta del Gallo, con miradores sobre la ciudad.",
     "boundaryNote": "Límite oficial servido en geo/parque.geojson, descargado del geoportal del IMIDA/CARM (servicio PROYECTOS/OISMA, capa de Parque Regional, registros con Caracter «Firme»), identificador interno ENP000002. Código ENP oficial ES620008, superficie oficial 16.685,8 ha según el Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Geometría en WGS84, sin generalizar (2100 vértices, superficie resultante 16.717,3 ha, desviación del 0,19 %). Sustituye a la delimitación de la capa ENP nacional del MITECO, que es un producto generalizado. Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM. Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico» (código y superficie oficiales) e IMIDA/CARM (geometría)."
   },
   "habitats": [],

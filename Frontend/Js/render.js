@@ -26,7 +26,7 @@ import {
 } from './state.js';
 import {
   speciesList, detailPanel, searchInput, resultCount,
-  speciesCount, habitatCount, coastlineKm, parkSummary,
+  speciesCount, habitatCount, poiCount, parkEyebrow, parkSummary,
   progressTrack, progressFill, progressLabel,
   catalogCrumb, catalogCrumbLabel, catalogTitle, backToHabitatsBtn,
   speciesFilterGroup, searchLabel, progressPanel, invasorasPanel, basicNotice,
@@ -185,14 +185,28 @@ function setCrumbBack(label) {
 }
 
 // --- Cabecera del parque (resumen + barra de progreso) -----------------------------------------------
-// Tolerante con los espacios de ficha base (status "basic"): sus arrays están vacíos y no tienen
-// dato de costa. app.js oculta la rejilla de contadores en ese caso, pero aquí no se asume nada.
+// Tolerante con los espacios de ficha base (status "basic"): sus arrays están vacíos. app.js oculta
+// la rejilla de contadores en ese caso, pero aquí no se asume nada.
 export function renderSummary() {
   const park = (state.data && state.data.park) || {};
-  speciesCount.textContent = (state.data.species || []).length;
   habitatCount.textContent = (state.data.habitats || []).length;
-  coastlineKm.textContent = (typeof park.coastlineKm === 'number' && park.coastlineKm > 0)
-    ? park.coastlineKm + ' km' : '—';
+  speciesCount.textContent = (state.data.species || []).length;
+  // Un espacio sin puntos de interés cargados todavía no tiene "cero puntos": tiene el dato
+  // pendiente. El guion lo dice sin fingir un recuento, igual que hacía la casilla de costa con los
+  // espacios de interior.
+  const pois = (state.data.pointsOfInterest || []).length;
+  poiCount.textContent = pois > 0 ? pois : '—';
+  // Línea de encima del rótulo: qué ES el sitio, figura de protección y superficie oficial. Nada
+  // más, porque es UNA línea en versalitas y con un tercer dato se parte en dos en la columna
+  // estrecha. La superficie sale de la geometría oficial (la misma que dibuja el límite en el mapa),
+  // así que la tienen los dieciséis espacios, tengan catálogo o no; si alguno llegase sin ella,
+  // simplemente no aparece. Lo que ocupaba antes esta línea («NaturDex piloto») era la firma de la
+  // app dentro de la propia app, y el aviso de «Ficha base» que la acompañaba no se pierde: lo dan
+  // el rótulo del panel de catálogo («Catálogo en preparación · Ficha base») y la insignia de la
+  // propia ficha del espacio.
+  if (parkEyebrow) {
+    parkEyebrow.textContent = [park.category, boundaryHectares()].filter(Boolean).join(' · ');
+  }
   parkSummary.textContent = park.summary || '';
   renderProgress();
 }

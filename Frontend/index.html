@@ -159,14 +159,25 @@
                          banda verde con filete de latón. El div es solo el soporte del cartel; el
                          texto lo sigue rellenando render.js por sus ids de siempre. -->
                     <div class="park-sign">
+                        <!-- La línea de encima del rótulo la compone render.js · renderSummary:
+                             figura de protección y superficie oficial. La superficie sale de la
+                             geometría oficial servida en geo/parque.geojson, no de un dato escrito a
+                             mano, así que la tienen los dieciséis espacios. Va en una sola línea a
+                             propósito: es la identidad administrativa del sitio y no merece ni una
+                             línea más ni una casilla del recuento de al lado. -->
                         <p class="eyebrow" id="parkEyebrow">NaturDex piloto</p>
                         <h1 id="parkTitle">Cabo Cope y Puntas de Calnegre</h1>
                     </div>
                     <p id="parkSummary">Guía viva de especies, hábitats y puntos de observación.</p>
+                    <!-- Las tres cosas que se coleccionan en un parque, y solo esas: hábitats,
+                         especies y puntos de interés. Antes la tercera casilla eran los km de costa,
+                         un dato que ni se colecciona ni existe en los espacios de interior. -->
                     <div class="summary-grid" id="parkStats" aria-label="Resumen del parque">
-                        <div><strong id="speciesCount">0</strong><span>especies</span></div>
                         <div><strong id="habitatCount">0</strong><span>hábitats</span></div>
-                        <div><strong id="coastlineKm">17 km</strong><span>costa</span></div>
+                        <div><strong id="speciesCount">0</strong><span>especies</span></div>
+                        <!-- "puntos" a secas en pantalla: el rótulo completo parte la casilla en dos
+                             líneas y estira toda la fila. Los lectores de pantalla sí lo leen entero. -->
+                        <div><strong id="poiCount">0</strong><span>puntos<span class="sr-only"> de interés</span></span></div>
                     </div>
                     <div class="progress-wrap" id="parkProgressWrap" aria-label="Progreso de descubrimiento">
                         <div id="progressTrack" class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-labelledby="progressLabel"><div id="progressFill" class="progress-fill"></div></div>

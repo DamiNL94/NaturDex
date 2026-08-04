@@ -13,7 +13,7 @@
       37.81265,
       -0.76233
     ],
-    "summary": "Parque Regional de la Región de Murcia, con una superficie oficial de 850,5 ha en los términos municipales de San Javier y San Pedro del Pinatar. Solapa con el espacio de la Red Natura 2000 LIC/ZEC y ZEPA ES0000175 «Salinas y Arenales de San Pedro del Pinatar».",
+    "summary": "Salinas en activo, dunas y pinares al norte del Mar Menor: charcas donde se concentran flamencos, cigüeñuelas y avocetas, y la playa de La Llana.",
     "boundaryNote": "Límite oficial servido en geo/parque.geojson, descargado del geoportal del IMIDA/CARM (servicio PROYECTOS/OISMA, capa de Parque Regional, registros con Caracter «Firme»), identificador interno ENP000004. Código ENP oficial ES620012, superficie oficial 850,5 ha según el Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Geometría en WGS84, sin generalizar (1234 vértices, superficie resultante 851,8 ha, desviación del 0,16 %). Sustituye a la delimitación de la capa ENP nacional del MITECO, que es un producto generalizado. Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM. Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico» (código y superficie oficiales) e IMIDA/CARM (geometría)."
   },
   "habitats": [],

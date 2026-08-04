@@ -358,7 +358,8 @@ function applyParkLevel(level) {
   const basic = level === 'basic';
   state.parkLevel = basic ? 'basic' : 'full';
   document.body.dataset.parkLevel = state.parkLevel;
-  if (parkEyebrow) parkEyebrow.textContent = basic ? 'Ficha base' : 'NaturDex piloto';
+  // El rótulo de encima del título (figura · superficie) lo compone renderSummary, que se llama
+  // justo después y ya tiene cargados los datos del espacio.
   // Contadores y barra de progreso: sin catálogo no hay nada que contar, así que se ocultan.
   if (parkStats) parkStats.hidden = basic;
   if (parkProgressWrap) parkProgressWrap.hidden = basic;

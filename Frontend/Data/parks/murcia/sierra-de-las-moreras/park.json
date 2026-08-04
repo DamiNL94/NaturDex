@@ -12,7 +12,7 @@
       37.57516,
       -1.34435
     ],
-    "summary": "Paisaje Protegido de la Región de Murcia, con una superficie oficial de 1712,6 ha en el término municipal de Mazarrón. Solapa con los espacios de la Red Natura 2000 ZEPA ES0000261 «Almenara-Moreras-Cabo Cope» y LIC/ZEC ES6200011 «Sierra de las Moreras».",
+    "summary": "Sierra litoral de Mazarrón: lomas de matorral semiárido asomadas al mar y ramblas que bajan hasta la costa, escala de las aves del litoral.",
     "boundaryNote": "Límite oficial servido en geo/parque.geojson, descargado del geoportal del IMIDA/CARM (servicio PROYECTOS/OISMA, capa de Paisaje Protegido, registros con Caracter «Firme»), identificador interno ENP000009. Código ENP oficial ES620005, superficie oficial 1712,6 ha según el Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Geometría en WGS84, sin generalizar (1159 vértices, superficie resultante 1716,1 ha, desviación del 0,20 %). Sustituye a la delimitación de la capa ENP nacional del MITECO, que es un producto generalizado. Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM. Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico» (código y superficie oficiales) e IMIDA/CARM (geometría)."
   },
   "habitats": [],
