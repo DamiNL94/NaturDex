@@ -7,8 +7,8 @@
 | Comunidad | Provincia | Espacio | Figura | Slug | Nivel | Fecha | Notas / huecos |
 |---|---|---|---|---|---|---|---|
 | Región de Murcia | Murcia | Cabo Cope y Puntas de Calnegre | Parque Regional | `cabo-cope-puntas-calnegre` | N2 | 2026-08-01 | Piloto. ENP **ES620007**. LIC/ZEC ES6200031 (Cabo Cope) · ES6200012 (Calnegre) · ZEPA ES0000261. **15 hábitats** (retirados el 1110 y el 9560 el 2026-08-01, ver informe), 175 especies. Fotos de florasilvestre.es pendientes de licencia |
-| Región de Murcia | Murcia | Cuatro Calas | Paisaje Protegido | `cuatro-calas` | N2 | 2026-08-01 | Límite IMIDA/CARM. ENP **ES620004** (`ENP000007` es el id interno del IMIDA, no el código oficial). LIC/ZEC ES6200010 · ZEPA marina ES0000507. 7 hábitats (3 prioritarios, 177 ha = 79 % del espacio), **102 especies** (73 flora, 29 fauna incl. 27 aves de la lista oficial Natura 2000), 97 con foto, 0 POIs. Ver informe de cierre §"Cuatro Calas: Fase 2 cerrada" |
-| Región de Murcia | Murcia | Sierra Espuña | Parque Regional | `sierra-espuna` | N2 | 2026-07-28 | ENP **ES620013**, 17.693,2 ha. LIC/ZEC ES0000173 · ZEPA ES0000173. 13 hábitats, **191 especies** tras el recorte a catálogo oficial + evidencia GBIF (121 flora, 70 fauna incl. 48 aves y 9 quirópteros), 155 con foto (149 de Wikipedia/Commons), 0 POIs (hueco documentado). Ver informe de cierre §"Sierra Espuña: Fase 2 cerrada" y §"Sierra Espuña: recorte a especies con respaldo oficial" |
+| Región de Murcia | Murcia | Cuatro Calas | Paisaje Protegido | `cuatro-calas` | N2 | 2026-08-01 | Límite IMIDA/CARM. ENP **ES620004** (`ENP000007` es el id interno del IMIDA, no el código oficial). LIC/ZEC ES6200010 · ZEPA marina ES0000507. 7 hábitats (3 prioritarios, 177 ha = 79 % del espacio), **102 especies** (73 flora, 29 fauna incl. 27 aves de la lista oficial Natura 2000), 97 con foto, 0 POIs. Ver informe de cierre §"Cuatro Calas: Fase 2 cerrada". **Fase 3 abierta el 2026-08-07**: 4 candidatos a POI a la espera de visto bueno; PORN inexistente, 1 LIG (La Carolina/Punta Parda), 0 BIC, OSM barrido. IELIG y Commons SIN consultar (red cerrada) — §"2026-08-07" |
+| Región de Murcia | Murcia | Sierra Espuña | Parque Regional | `sierra-espuna` | N2 | 2026-07-28 | ENP **ES620013**, 17.693,2 ha. LIC/ZEC ES0000173 · ZEPA ES0000173. 13 hábitats, **191 especies** tras el recorte a catálogo oficial + evidencia GBIF (121 flora, 70 fauna incl. 48 aves y 9 quirópteros), 155 con foto (149 de Wikipedia/Commons), 0 POIs (hueco documentado). Ver informe de cierre §"Sierra Espuña: Fase 2 cerrada" y §"Sierra Espuña: recorte a especies con respaldo oficial". **Fase 3 abierta el 2026-08-07**: 10 candidatos a POI a la espera de visto bueno; 2 BIC localizados (Pozos de la Nieve, Santuario de Santa Eulalia), OSM barrido. **PRUG aprobado por Decreto 6/2026 y sin abrir** — es la fuente que puede dar de golpe los picos y collados. IELIG y Commons SIN consultar (red cerrada) — §"2026-08-07" |
 | Región de Murcia | Murcia | Carrascoy y El Valle | Parque Regional | `carrascoy-y-el-valle` | N1 | 2026-07 | ENP **ES620008**, 16.685,8 ha. LIC/ZEC ES6200002 · ZEPA ES0000269 |
 | Región de Murcia | Murcia | Sierra de la Pila | Parque Regional | `sierra-de-la-pila` | N1 | 2026-07 | ENP **ES620018**, 8851,0 ha. LIC/ZEC ES6200003 · ZEPA ES0000174 |
 | Región de Murcia | Murcia | Sierra de El Carche | Parque Regional | `sierra-de-el-carche` | N1 | 2026-07 | ENP **ES620017**, 5869,1 ha. LIC/ZEC ES6200009 |
@@ -50,6 +50,126 @@ delimitación regional, así que conserva el límite del MITECO y no pasa por
 > 1.489 vértices), porque reconstruye `geo/parque.geojson` desde la capa nacional para todos sus
 > objetivos. Ahora detecta la marca `CodigoIMIDA` —que sólo escribe el refinador— y **deja intacto**
 > el espacio, avisando. Para rehacer uno de cero hay que borrar su carpeta.
+
+---
+
+## 2026-08-07 — Fase 3 arrancada en Cuatro Calas y Sierra Espuña: **abierta, no cerrada**
+
+Primera sesión de N3 del rollout. **Ninguno de los dos espacios sube de nivel**: siguen en N2 y su
+`pointsOfInterest` sigue vacío. Lo que hay es la herramienta que faltaba, la cascada recorrida hasta
+donde se pudo, y catorce candidatos con nombre y coordenada esperando visto bueno.
+
+### Por qué no se cerró: la sesión no tenía salida a las fuentes
+
+La política de egreso del entorno remoto permitía **solo GitHub y los registros de paquetes**.
+Quedaron fuera, con 403 al CONNECT: Wikimedia (Commons, Wikipedia, Wikidata), Overpass, GBIF,
+EIDOS/IEPNB, el geoportal del IMIDA, el IELIG del IGME, murcianatural, regmurcia, el BORM y
+Protomaps. Es decir, **las fuentes 1, 2, 3 y 6 de la cascada del §4.2 no se pudieron leer de primera
+mano**, solo por resúmenes de un buscador web.
+
+Eso significa una cosa importante para quien retome: **no está agotada ninguna fuente**. El §5 pide
+haber recorrido la cascada *entera* para dar el nivel por cerrado, y aquí no se ha hecho. Un «no hay»
+de esta sesión no vale como «no hay».
+
+Para no volver a perder media hora averiguándolo: **`npm run red:check`** dice en diez segundos qué
+fuentes están abiertas y qué herramienta deja de funcionar sin cada una.
+
+### Herramienta nueva: `Tools/build-park-pois.js` (`npm run pois:build`)
+
+Era el punto pendiente del §4.4. Barre el territorio del parque y deja los candidatos en
+`Tools/catalogo-nacional/out/<slug>-poi-candidatos.md`, ya recortados al polígono oficial (~50 m de
+margen, el mismo criterio que los senderos), con los descartes del §4.1 y §4.3 justificados por su
+regla, fundido lo que está a menos de 50 m y cruzado contra los POIs ya dados de alta y contra
+`trails.geojson`. **Nunca escribe `park.json`.**
+
+Tira de Overpass cuando hay red y, si no, del **`tiles/base.pmtiles` que cada parque ya lleva en el
+repo**: el basemap de Protomaps es una Produced Work de OSM bajo ODbL y dentro van las capas `pois`,
+`places` y `water` con nombre y posición. Lo lee `Tools/lib/pmtiles.js`, un lector mínimo de PMTiles
+v3 + MVT sin dependencias. Ventaja que no es solo de emergencia: **está congelado en la fecha del
+build, así que es reproducible** —se comprobó, dos ejecuciones dan salida byte a byte idéntica—
+mientras que Overpass sirve el OSM vivo y no da esa garantía. Límite a tener presente: el basemap ve
+menos que OSM (no lleva `historic=*` ni `man_made=*`, y filtra por zoom).
+
+### Lo que dio cada fuente
+
+| Fuente | Cuatro Calas | Sierra Espuña |
+|---|---|---|
+| 1 · PORN/PRUG | **No hay PORN aprobado**: declarado por la Ley 4/1992 y sin plan propio | **PRUG aprobado por Decreto 6/2026 de 12-II** (BORM supl. nº 1 del nº 52, 4-III-2026), con anexos de zonificación y normativa. **Sin abrir** |
+| 2 · IELIG | LIG **«La Carolina (Punta Parda)»**, afloramiento volcánico. Del portal del IGME, nada | Interés geomorfológico documentado, **sin ficha LIG con código confirmada** |
+| 3 · BIC | Nada dentro del límite | **Pozos de la Nieve** (Sitio de Interés Etnográfico) y **Santuario de Santa Eulalia** (BIC 2002) |
+| 4 · OSM | 18 elementos con nombre → **4 candidatos** | 706 → **186 candidatos**, casi todos picos y collados sin hecho |
+| 6 · Fotos | Commons inaccesible | Commons inaccesible |
+
+### Los catorce candidatos
+
+Tabla completa, con coordenada, fuente del hecho, `approx` y qué contar, en los dos informes de
+`out/`. En resumen:
+
+- **Cuatro Calas (4)**: Playa de los Cocedores (Cultural, las cuevas del esparto), Punta Parda–Playa
+  de la Carolina (Geológico, el LIG, `approx`), Playa de la Higuerica (Geológico, el más flojo),
+  Playa de Calarreona (Acceso, arranque del SL-MU 18).
+- **Sierra Espuña (10)**: Pozos de la Nieve (`approx`, representa el conjunto de 28), Santuario de
+  Santa Eulalia, Torreón de los Exploradores, Arco de Sigismondi, Casas de Malvariche, Ermita de
+  Santa Leocadia, Centro de Visitantes Ricardo Codorníu, Paredes de Leiva (`approx`), Los Ojos del
+  Dragón, Torre del Azaraque.
+- **Tres buenos sin coordenada**, que necesitan Overpass o campo: el antiguo cuartel de Carabineros
+  de Calarreona, la duna fósil entre La Carolina y Los Cocedores, y el Antiguo Sanatorio de
+  Tuberculosos.
+
+### Descartes que conviene no volver a proponer
+
+- **Las seis cuevas de Sierra Espuña** (Moneda, Luenga, Matea, Plata, Palomas, Mataos) → §4.3.6. La
+  de la Moneda tiene indicios de yacimiento exterior con cerámica de la Edad del Bronce y sirvió de
+  refugio en el Paleolítico y el Neolítico, sin vigilancia. Mismo caso que la Cueva C.6 del piloto.
+- **Cima del Morrón (1.583 m)** → §4.3.5: la ocupa el EVA-13 del Ejército del Aire, zona militar en
+  activo y cerrada. Por eso el candidato es el Torreón de los Exploradores, que sí se pisa.
+- **71 picos y 28 collados** de Sierra Espuña → §4.1, topónimo suelto. **Si el anexo de valores del
+  PRUG los enumera, varios pasan a candidatos de golpe: es la razón principal para abrir ese PDF.**
+- **Cañada Brusca** (Cuatro Calas) → su saladar cae dentro de los HIC 1430, 5330 y 5220 del propio
+  espacio, o sea Capa 2 (§4.1). Solo entraría por su propuesta de Microrreserva Botánica y con fuente
+  primaria.
+- **Capilla de la Virgen del Rocío, Ermita y Mirador de Gebas** → caen dentro del polígono de Sierra
+  Espuña y **no** dentro de Barrancos de Gebas (comprobado), pero están en el borde oriental y
+  culturalmente son de Gebas. Decisión pendiente.
+
+### Fotos: `Tools/catalogo-nacional/poi-images.js` (`npm run images:pois`)
+
+La cadena de fotos del catálogo cuelga del nombre científico, y un POI no tiene ninguno: su nombre es
+un topónimo, que se repite por toda España. El ancla aquí es **la categoría de Commons del espacio**
+—un archivo dentro de `Category:Cuatro Calas Protected Landscape` está en Cuatro Calas por
+construcción—, y el nombre del fichero decide qué elemento retrata. Solo escribe licencias libres
+(CC0, dominio público, CC BY, CC BY-SA) y no escribe nunca una coincidencia dudosa sin `--force`.
+
+Dos trampas ya cazadas y cubiertas por test: **`Playa de las Higuericas` no es `Playa de la
+Higuerica`** (está en Pilar de la Horadada, a 200 km — la comparación es por palabra completa, nunca
+por subcadena), y **`Ermita de Santa Leocadia` hay al menos tres en España**.
+
+Búsqueda a mano hecha en `out/poi-fotos-candidatas.md`: encontró las dos categorías de espacio y
+cuatro archivos, **ninguno verificado** porque no se pudo abrir ninguna ficha. Sirve de pista, no de
+dato.
+
+### Cómo retomar
+
+```
+Retomo la Fase 3 (N3) de NaturDex en <cuatro-calas | sierra-espuna>.
+
+Contexto: Docs/prompts/e-rollout-nacional.md §4 (qué es un POI, la cascada y las reglas de
+admisión) y Docs/piloto-cabo-cope.md. La referencia de formato son los 15 POIs de
+Frontend/Data/parks/murcia/cabo-cope-puntas-calnegre/park.json.
+
+Lo ya hecho está en Docs/rollout/ESTADO.md §"2026-08-07": la tabla de candidatos, los
+descartes con su regla y qué dio cada fuente. Los informes completos, en
+Tools/catalogo-nacional/out/<slug>-poi-candidatos.md.
+
+Empieza por `npm run red:check`. Si está todo abierto:
+  1. Abre el PRUG de Sierra Espuña (BORM supl. nº1 del nº52, 4-III-2026) y busca su anexo de
+     valores: es lo que puede convertir picos y collados en candidatos con hecho.
+  2. Consulta el IELIG del IGME dentro de los dos límites.
+  3. `npm run pois:build <slug>` con Overpass, que ve etiquetas que el basemap no.
+  4. Sitúa los tres candidatos sin coordenada.
+  5. Reháceme la tabla del §4.5 paso 2 con lo que aporte todo eso y ESPERA MI VISTO BUENO.
+Si sigue cerrado, dímelo y no sigas: sin las fuentes esto no cierra.
+```
 
 ---
 
