@@ -46,6 +46,35 @@ npm run hooks:install
 Para actualizar una instalación antigua: `Database/migrations.sql` antes que nada (son `ALTER`
 idempotentes). Despliegue: `DEPLOY.md`. Despliegue estático sin backend: `Docs/DESPLIEGUE_ESTATICO.md`.
 
+### Comprobaciones
+
+| Comando | Qué es | ¿Bloquea? |
+|---|---|---|
+| `npm run validate` | Los datos empaquetados de los 16 espacios: contadores, referencias, límites | **Sí**, y también en `pre-commit` |
+| `npm test` | Reglas de verificación de presencia y progreso (PHP, sin BD) | Sí |
+| `npm run typecheck` | `tsc --noEmit` sobre el AdminPanel | Sí |
+| `npm run glossary:check` | Tecnicismos nuevos sin definición en el glosario | No, es editorial |
+| `npm run taxones:duplicados` | El mismo taxón dado de alta con dos nombres | No |
+
+### Trabajar a distancia (Claude Code on the web)
+
+`.claude/hooks/session-start.sh` prepara la sesión remota: instala las dependencias de la raíz y del
+AdminPanel y activa `core.hooksPath`. Solo actúa si `CLAUDE_CODE_REMOTE=true`, así que en local no
+toca nada. Tarda ~11 s la primera vez y ~1 s después, porque el contenedor queda cacheado.
+
+Lo que **no** puede arreglar el repo es la política de egreso del entorno, que decide a qué hosts se
+puede salir. Casi todo `Tools/` vive de fuentes externas —Wikimedia, GBIF, Overpass, EIDOS, IMIDA,
+IGME, Protomaps— y con la política restringida fallan con errores de red que no explican nada:
+
+```bash
+npm run red:check                       # qué fuentes están abiertas hoy y qué se rompe sin ellas
+node Tools/check-egress.js --allowlist  # los hosts cerrados, para pegarlos en los ajustes
+```
+
+Pregunta por `CONNECT` al proxy, así que distingue una denegación de política de una caída del
+servicio. La lista de hosts vive en `Tools/check-egress.js`: si añades una fuente nueva a una
+herramienta, añádela también ahí.
+
 ---
 
 ## 2. Mapa del repositorio
