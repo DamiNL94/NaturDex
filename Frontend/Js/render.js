@@ -18,6 +18,7 @@ import {
 } from './habitat-groups.js';
 import { audioBlock } from './audio.js';
 import { highlightGlossary } from './glossary.js';
+import { explicaAsociacion, explicacionFitosociologia } from './fitosociologia.js';
 import { isInvasiveSeenLocally, loadAchievementsCatalog, refreshAccountProgress } from './achievements.js';
 import { isMarkVerifiedLocally } from './presence.js';
 import {
@@ -310,6 +311,39 @@ export function renderDetail() {
   highlightGlossary(detailPanel);
 }
 
+// La asociación fitosociológica de la cartografía oficial, servida de forma que la entienda quien no
+// es botánico. Se muestran tres cosas y en este orden: el nombre en llano (lo que el visitante tiene
+// delante), la lectura de qué vegetación es, y la CITA COMPLETA —nombre latino + autores y año— que
+// es el dato oficial y la referencia bibliográfica, y que por eso nunca se recorta ni se sustituye.
+// Sin diccionario cargado (sin conexión y sin caché aún) se degrada a la cita sola, que es como se
+// mostraba antes: se pierde la explicación, nunca el dato. Ver Frontend/Js/fitosociologia.js.
+function fitosociologiaBlock(habitat) {
+  const citas = habitat.fitosociologia || [];
+  if (!citas.length) return '';
+  const ayuda = explicacionFitosociologia();
+  const items = citas.map(cadena => {
+    const a = explicaAsociacion(cadena);
+    const plantas = a.nombradaPor.map((p, i) => html`${i === 0 ? '' : (i === a.nombradaPor.length - 1 ? ' y ' : ', ')}<em>${p.cientifico}</em>${p.comun ? ' (' + p.comun + ')' : ''}`);
+    return html`<li class="fito-item">
+      ${a.nombre ? html`<p class="fito-name">${a.nombre}${a.rango ? html` <span class="fito-rank">${a.rango}</span>` : ''}</p>` : ''}
+      ${a.lectura ? html`<p class="detail-prose fito-read">${a.lectura}</p>` : ''}
+      ${plantas.length ? html`<p class="fito-named">Nombrada por ${plantas}</p>` : ''}
+      <p class="fito-cite"><em>${a.latino}</em>${a.autoria ? html` <span class="fito-author">${a.autoria}</span>` : ''}</p>
+      </li>`;
+  });
+  return html`<h3 class="detail-subtitle">Asociación fitosociológica</h3>
+    <ul class="fito-list">${items}</ul>
+    ${ayuda ? html`<details class="fito-help">
+      <summary>¿Qué es esto y cómo se lee el nombre?</summary>
+      <p class="detail-prose">${ayuda.texto}</p>
+      <p class="detail-prose">${ayuda.comoSeLee}</p>
+      <dl class="fito-suffixes">${(ayuda.terminaciones || []).map(t => html`<dt><em>${t.sufijo}</em> · ${t.rango}</dt><dd>${t.significa}</dd>`)}</dl>
+      <p class="detail-prose">${ayuda.autoria}</p>
+      <p class="detail-prose">${ayuda.porQueImporta}</p>
+      </details>` : ''}
+    <p class="detail-source">Fuente: Cartografía de Hábitats, Directiva 92/43/CEE (MITECO). La explicación en lenguaje llano es de NaturDex.</p>`;
+}
+
 function renderHabitatDetail() {
   const habitat = (state.data.habitats || []).find(item => item.id === state.selectedHabitatId)
     ?? (state.data.habitats || [])[0];
@@ -350,7 +384,7 @@ function renderHabitatDetail() {
     ${habitat.hicSubtipos && habitat.hicSubtipos.length > 1 ? html`<div><span>Subtipos HIC</span><strong>${habitat.hicSubtipos.join(', ')}</strong></div>` : ''}
     <div><span>Superficie en el parque</span><strong>${area || 'Sin cartografiar'}</strong></div>
     </div>
-    ${habitat.fitosociologia && habitat.fitosociologia.length ? html`<h3 class="detail-subtitle">Asociación fitosociológica</h3><ul class="detail-list">${habitat.fitosociologia.map(a => html`<li><em>${a}</em></li>`)}</ul><p class="detail-source">Fuente: Cartografía de Hábitats, Directiva 92/43/CEE (MITECO)</p>` : ''}
+    ${fitosociologiaBlock(habitat)}
     <div class="habitat-detail-progress">
     <div class="progress-track big" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}" aria-label="Especies vistas en este hábitat"><div class="progress-fill" style="width:${pct}%"></div></div>
     <span class="progress-caption">${seen} / ${total} especies vistas en este hábitat</span>

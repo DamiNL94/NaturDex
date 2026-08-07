@@ -101,6 +101,9 @@ const EXCEPCIONES = new Set([
   'grisáceo', 'grisáceos', 'grisácea', 'grisáceas', 'violáceo', 'violáceos', 'violácea', 'violáceas',
   'rosáceo', 'rosáceos', 'lilácea', 'liláceas', 'oliváceo', 'oliváceos', 'olivácea', 'oliváceas',
   'azulgrisáceo', 'azulgrisácea', 'glaucium', 'margarita', 'margaritas',
+  // Nombres de género que la regla de sufijos confunde con vocabulario técnico (como `glaucium`):
+  // van dentro de un nombre científico y ya se explican con su nombre común al lado.
+  'scirpoides', 'lycioides',
 ]);
 
 // ------------------------------------------------------------------------------------------------
@@ -164,6 +167,20 @@ function corpus() {
         (data.habitats || []).forEach(h => add(slug + '/hábitat ' + (h.code || h.name), h.description));
       });
     });
+  }
+
+  // 3 bis) Lectura en llano de las asociaciones fitosociológicas. Se pinta dentro de la ficha de
+  // hábitat con la misma clase .detail-prose que las descripciones, así que el glosario la resalta
+  // igual y debe cubrir su vocabulario. La fuente es data/contenido/fitosociologia.json, cuya forma
+  // (claves `explicacion` y `asociaciones`) no encaja en el recorrido genérico del bloque 2.
+  const fito = path.join(CONTENIDO, 'fitosociologia.json');
+  if (fs.existsSync(fito)) {
+    const data = leerJson(fito);
+    const exp = data.explicacion || {};
+    add('fitosociologia/explicación', exp.texto, exp.comoSeLee, exp.autoria, exp.porQueImporta,
+      (exp.terminaciones || []).map(t => t.significa).join(' | '));
+    Object.keys(data.asociaciones || {}).forEach(k =>
+      add('fitosociologia/' + k, data.asociaciones[k].nombre, data.asociaciones[k].lectura));
   }
 
   // 4) Especies exóticas invasoras (pestaña propia, también con .detail-prose).

@@ -172,6 +172,7 @@ generan ficheros en `out/` para revisar antes de adoptarlos.
 | `build-habitats.js` | `habitats:build` | Reproyecta UTM→WGS84, une por `CODIGO` y **recorta al límite**. → `out/<slug>-oficial.geojson`. `--zone` fuerza el huso; por defecto lo lee del `.prj` |
 | `merge-habitats.js` | `habitats:merge` | Fusiona la capa oficial con la curada: enriquece, conserva lo curado y añade los HIC oficiales que falten. → `out/<slug>-merged.geojson`. La procedencia la lee de la capa oficial, no la escribe a mano |
 | `adopt-habitats.js` | `habitats:adopt` | Lleva el merged a `Frontend/`, sincroniza `park.json` y recalcula el manifiesto. `--dry` para revisar. Aplica la **regla marina** y las excepciones de `data/hic-excluidos.json` |
+| `Tools/sync-habitat-catalog.js` | `habitats:check` `habitats:apply` | El equivalente del catálogo universal para hábitats: **una descripción por código HIC**, la misma en todos los espacios. Exporta además `Frontend/Data/fitosociologia.json`, la lectura en llano de las asociaciones (la cita oficial no se toca) |
 
 ### Capa 3 · especies
 
@@ -211,7 +212,9 @@ generan ficheros en `out/` para revisar antes de adoptarlos.
 | `hic-nombres.json` | Nombre y tipo por código HIC. ⚠️ Un código ausente **se salta el filtro marino** (README raíz §6) |
 | `hic-excluidos.json` | Excepciones por espacio: códigos que la cartografía recorta dentro pero que el formulario normalizado no declara |
 | `especies-universal.json` | El catálogo universal: los campos que describen a la especie, indexados por nombre científico |
-| `contenido/*.json` | Texto redactado a mano. **Manda sobre lo extraído** — cuidado con las entradas obsoletas (README raíz §7.2) |
+| `contenido/*.json` | Texto redactado a mano. **Manda sobre lo extraído** — cuidado con las entradas obsoletas (README raíz §7.2). Los ficheros por tanda van indexados por nombre científico; `habitats.json` y `fitosociologia.json` son la excepción (ver la fila siguiente) |
+| `contenido/habitats.json` | Descripción divulgativa por **código HIC**, universal para todos los parques de España. La aplica `sync-habitat-catalog.js` |
+| `contenido/fitosociologia.json` | Lectura en llano de cada asociación fitosociológica (nombre entendible, plantas que la nombran, rango) + cómo se lee la nomenclatura. Indexado por el **nombre latino sin autoría**. No sustituye a la cita oficial: la acompaña |
 | `descripciones-espacios.json` | La descripción de cada espacio. **El único texto del pipeline redactado a mano**; `build-n1-espacios.js` la lee de aquí para que una regeneración no la pise |
 | `murcia-enp-municipios.json`, `senderos-fmrm-murcia.json` | Datos de apoyo de la comunidad piloto |
 

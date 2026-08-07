@@ -162,6 +162,26 @@
 .habitat-species-chip.seen{border-color:#bcd6c4;background:#eef6ef;color:var(--leaf)}
 .habitat-species-chip span{font-size:.9rem;line-height:1}
 
+/* Asociación fitosociológica: primero lo que se entiende (nombre llano + lectura), y debajo la cita
+   oficial completa. La jerarquía tipográfica es la que hace el trabajo — el nombre llano al tamaño
+   del texto normal y la cita en cuerpo pequeño y gris — para que el dato siga estando entero y a la
+   vista sin ser lo primero que hay que descifrar. */
+.fito-list{list-style:none;display:grid;gap:10px;margin:0;padding:0}
+.fito-item{padding:10px 12px;border:1px solid var(--line);border-radius:8px}
+.fito-name{margin:0;font-weight:800;font-size:.92rem;line-height:1.35}
+.fito-rank{margin-left:6px;padding:1px 7px;border-radius:999px;background:#e4f0e7;color:var(--leaf);font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.03em;vertical-align:middle}
+.fito-item .fito-read{margin:6px 0 0;font-size:.84rem;line-height:1.5}
+.fito-named{margin:6px 0 0;color:var(--muted);font-size:.78rem;line-height:1.45}
+.fito-cite{margin:8px 0 0;padding-top:8px;border-top:1px solid var(--line);color:var(--muted);font-size:.76rem;line-height:1.45}
+.fito-author{font-style:normal}
+.fito-help{margin-top:10px;padding:0 12px;border:1px solid var(--line);border-radius:8px}
+.fito-help summary{padding:10px 0;color:var(--leaf);font-size:.8rem;font-weight:800;cursor:pointer}
+.fito-help[open] summary{border-bottom:1px solid var(--line)}
+.fito-help p{margin:10px 0;font-size:.82rem;line-height:1.5}
+.fito-suffixes{margin:10px 0;font-size:.8rem;line-height:1.45}
+.fito-suffixes dt{margin-top:8px;font-weight:800}
+.fito-suffixes dd{margin:2px 0 0;color:var(--muted)}
+
 /* --- Barra de estado offline: indicador de conexión + botón "Guardar sin conexión" ----------- */
 .offline-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px}
 .conn-status{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:800;color:var(--leaf)}

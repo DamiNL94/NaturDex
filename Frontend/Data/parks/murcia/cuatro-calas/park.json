@@ -31,7 +31,7 @@
         "Cistancho phelypaeae-Arthrocnemetum fruticosi Géhu ex Géhu & Géhu-Franck 1977",
         "Frankenio corymbosae-Halocnemetum strobilacei Rivas-Martínez, Alcaraz, Belmonte, Cantó & Sánchez-Mata 1984"
       ],
-      "description": "",
+      "description": "Matorral bajo y carnoso de sosas y almajos (Sarcocornia, Arthrocnemum, Halocnemum) sobre suelos que se inundan de agua salada y luego se secan dejando costra de sal. Son matas de tallos gruesos y articulados, sin hojas aparentes, que almacenan agua y diluyen en ella la sal que absorben. En otoño viran a rojo, naranja y morado, y ese cambio de color es la señal más visible del saladar.",
       "coordinates": [
         37.386213,
         -1.624356
@@ -87,7 +87,7 @@
         "Salsolo oppositifoliae-Suaedetum verae Rivas Goday & Rigual 1958 corr. Alcaraz, T.E. Díaz, Rivas-Martínez & Sánchez-Gómez",
         "Withanio frutescentis-Lycietum intricati Alcaraz, P. Sánchez, De la Torre, Ríos & J. Alvarez 1991"
       ],
-      "description": "",
+      "description": "Matorral de suelos salinos removidos y cargados de nitrógeno: bordes de camino y de cultivo, márgenes de rambla, corrales y escombreras viejas. Lo forman matas robustas de hoja gris o carnosa —orgazas, sosas, bojas y cambroneras— que rebrotan enseguida tras cualquier alteración. Aunque nace de terrenos trastocados, es vegetación propia de los ambientes áridos del sureste y a menudo el último refugio de plantas escasas.",
       "coordinates": [
         37.38407,
         -1.630607
@@ -178,7 +178,7 @@
         "Limonietum angustebracteato-delicatuli Rivas-Martínez & Alcaraz in Alcaraz 1984",
         "Suaedetum spicato-splendentis Rivas-Martínez, Cantó & Sanchez-Mata in Rivas-Martínez, T.E.Díaz, Fernández-González, Izco, Loidi, Lousa & Penas 2002"
       ],
-      "description": "",
+      "description": "Estepas de suelos salinos pero secos, sin encharcamiento permanente, en depresiones y llanos interiores de clima duro. Dominan el albardín (Lygeum spartum), una gramínea de matas separadas y hojas punzantes, y las siemprevivas (Limonium), que en verano cubren el suelo desnudo de flores diminutas rosas y violetas. Es un paisaje de aspecto pobre que concentra un número altísimo de plantas que no crecen en ningún otro ambiente.",
       "coordinates": [
         37.386213,
         -1.624356
@@ -229,7 +229,7 @@
       "fitosociologia": [
         "Bupleuro semicompositi-Filaginetum mareoticae Alcaraz, P. Sánchez, De la Torre, Ríos & J. Alvarez 1991"
       ],
-      "description": "",
+      "description": "Pastizales secos en los que conviven gramíneas vivaces de mata dura, como el lastón (Brachypodium retusum) o el esparto, con una multitud de plantas anuales diminutas que nacen con las lluvias y se secan antes del verano. En agosto parecen un erial pardo; en abril pueden reunir cuarenta especies distintas en un metro cuadrado. Esa riqueza escondida es la razón de que sea un hábitat prioritario.",
       "coordinates": [
         37.386213,
         -1.624356
@@ -278,7 +278,7 @@
       "fitosociologia": [
         "Inulo crithmoidis-Tamaricetum boveanae Izco, Fernández-González & A. Molina 1984"
       ],
-      "description": "",
+      "description": "La vegetación leñosa de ramblas, arroyos y ríos de caudal irregular, que unos meses llevan agua y otros son un lecho de piedras: adelfares y tarayales. La adelfa (Nerium oleander), de hojas coriáceas y flores rosas, y los tarays (Tamarix), de ramillas finas y flores en espiga, resisten tanto las avenidas violentas como meses de sequía. Toda la adelfa es muy tóxica, incluidas hojas y ramas secas.",
       "coordinates": [
         37.386213,
         -1.624356
@@ -330,7 +330,7 @@
         "Limonio insignis-Anabasietum hispanicae Rivas Goday & Esteve 1968",
         "Teucrio lanigeri-Sideritidetum ibanyezii Rivas Goday in Rivas Goday & Esteve 1968 corr. Alcaraz, T.E. Díaz, Rivas-Martínez & P. Sánchez 1989"
       ],
-      "description": "",
+      "description": "El matorral de las zonas más cálidas y secas, allí donde prácticamente no hiela: palmito, espino negro, lentisco, cornicales, bojas, albaidas y esparto sobre laderas pedregosas y llanos soleados. Es un matorral abierto, con suelo desnudo a la vista entre mata y mata, y con muchas especies compartidas con el norte de África. Aguanta sequías de meses y rebrota en cuanto llueve.",
       "coordinates": [
         37.383614,
         -1.631935
@@ -414,7 +414,7 @@
       "fitosociologia": [
         "Mayteno europaei-Periplocetum angustifoliae Rivas Goday & Esteve in Rivas Goday in Rivas Goday, Borja, Esteve, Galiano, Rigual & Rivas-Martínez 1960 corr. Rivas-Martínez 1975"
       ],
-      "description": "",
+      "description": "Espinares de azufaifo (Ziziphus lotus), matas hemisféricas de ramas entrelazadas y espinas ganchudas que forman islas de sombra sobre llanos áridos. Cada mata levanta un pequeño montículo de arena y hojarasca y guarda debajo humedad, semillas y fauna que fuera no sobreviviría. Es el único hábitat de clima casi desértico de Europa occidental, y por eso figura como prioritario.",
       "coordinates": [
         37.383614,
         -1.631935

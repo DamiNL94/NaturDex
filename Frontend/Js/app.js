@@ -41,6 +41,7 @@ import { groupIdOfHabitat } from './habitat-groups.js';
 import { initExplorer } from './explorer.js';
 import { initLayersPanel, refreshLayersPanel, setOpenLayersGroup, openLayersGroupOfHabitat } from './layers.js';
 import { loadGlossary, initGlossaryPopover } from './glossary.js';
+import { loadFitosociologia } from './fitosociologia.js';
 import { initTutorial } from './tutorial.js';
 import { initAchievements, noteParkActivity, handleServerNewlyUnlocked, reportInvasiveSeen, refreshAccountProgress, syncWithServer } from './achievements.js';
 import { startPresence, stopPresence, notePresenceFix, flushPresenceQueue, marksCountNow, refreshPresenceBar } from './presence.js';
@@ -795,7 +796,10 @@ async function startParkExperience(slug, user) {
   const manifest = await loadManifest(parkEntry);
   state.manifest = manifest;
 
-  await Promise.all([loadData(manifest), loadGeo(manifest), loadProgress(), loadGlossary(), initAchievements()]);
+  // loadFitosociologia va aquí, con el glosario, y no perezosamente al abrir la primera ficha de
+  // hábitat: la lectura en llano de la asociación se pinta en el mismo `innerHTML` que el resto de
+  // la ficha (render.js es síncrono), así que tiene que estar en memoria antes del primer pintado.
+  await Promise.all([loadData(manifest), loadGeo(manifest), loadProgress(), loadGlossary(), loadFitosociologia(), initAchievements()]);
 
   // Especies invasoras (dato nacional por CCAA, empaquetado offline). renderInvasoras filtra por
   // región. fetchJsonCached lo cachea en localStorage (capa 1): disponible sin conexión aunque el
