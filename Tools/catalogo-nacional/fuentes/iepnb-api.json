@@ -41,7 +41,7 @@
       "titulo": "Lista patrón con pasarelas a otras clasificaciones",
       "endpoint": "https://iepnb.gob.es/api/catalogo/v_listapatronespecie_codigos",
       "xlsx": "https://www.miteco.gob.es/content/dam/miteco/es/biodiversidad/servicios/banco-datos-naturaleza/recursos/listas/lista-patron-especies-silvestres-pasarela.xlsx",
-      "usoEnNaturDex": "Tabla de reconciliación oficial. Da «Código RED NATURA» (el código de especie de los formularios Natura 2000) y «Código UICN» (el assessment id de la Red List). Sustituye parcialmente al reconcile-taxa.js perdido que describe Docs/rollout/ESTADO.md §7.1.",
+      "usoEnNaturDex": "Tabla de reconciliación oficial. Da «Código RED NATURA» (el código de especie de los formularios Natura 2000) y «Código UICN» (el assessment id de la Red List). Sustituye parcialmente al reconcile-taxa.js perdido que describe Docs/rollout/ESTADO.md §8.1.",
       "camposClave": ["idtaxon", "ScientificName", "Código RED NATURA", "Código UICN", "taxonConceptID"],
       "notas": "LIMITACIÓN: no trae gbifSpeciesKey. La reconciliación con GBIF sigue necesitando la API de GBIF. Pero «Código UICN» permite enlazar directo a iucnredlist.org sin búsqueda por nombre, y «Código RED NATURA» cruza con la lista de especies por espacio (BISE Site_Species_List) usando el mismo código."
     }

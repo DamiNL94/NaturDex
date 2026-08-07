@@ -1,7 +1,8 @@
 # Ledger de progreso del rollout nacional
 
-> Tabla del §5 de `Docs/prompts/e-rollout-nacional.md`. Se actualiza al cierre de cada sesión de
-> Fase 1 (N1) o Fase 2 (N2). Formato y niveles (N1/N2) definidos en ese mismo documento §0 y §4.
+> Tabla del §6 de `Docs/prompts/e-rollout-nacional.md`. Se actualiza al cierre de cada sesión de
+> Fase 1 (N1), Fase 2 (N2) o Fase 3 (N3, puntos de interés). Formato y niveles (N1/N2/N3) definidos
+> en ese mismo documento §0 y §5; el procedimiento de la Fase 3 y su cascada de fuentes, en su §4.
 
 | Comunidad | Provincia | Espacio | Figura | Slug | Nivel | Fecha | Notas / huecos |
 |---|---|---|---|---|---|---|---|
@@ -610,7 +611,7 @@ galápago sí se asigna a los dos hábitats de ribera (92D0, 92A0), verificable 
 
 ## 2026-07-27 — Capa de hábitats curada (Atlas 2005) en Cabo Cope y Sierra Espuña
 
-Adoptado por fin el `<slug>-merged.geojson` como capa real del parque: es el punto **§7.3** de la
+Adoptado por fin el `<slug>-merged.geojson` como capa real del parque: es el punto **§8.3** de la
 deuda técnica, que llevaba abierto desde el piloto (la fusión se generaba en `out/` y nadie la
 llevaba a `Frontend/`). Herramienta nueva: **`Tools/catalogo-nacional/adopt-habitats.js`** (`--dry`).
 
@@ -803,7 +804,7 @@ con la copia de `Desktop\NaturDex - copia\`.
   flag `PRIORITARI` del dato de 1997 marca 9561 con `*`, pero el README avisa de que ese flag no es
   fiable. Falta contrastarlo contra el Anexo I oficial.
 - **Sierra Espuña no tiene capa curada**, así que `merge-habitats.js` no tiene con qué fusionar: la
-  capa oficial pasaría a ser directamente su `habitats.geojson`. Es el punto §7.3 de la deuda técnica
+  capa oficial pasaría a ser directamente su `habitats.geojson`. Es el punto §8.3 de la deuda técnica
   («adoptar el `<slug>-merged.geojson`»), pendiente de decidir.
 - **Capa 3 (especies) sin empezar.**
 
@@ -1006,11 +1007,11 @@ esté, se añade a `murcia-enp-municipios.json` y el generador lo recoge sin toc
 
 ---
 
-## §7.1 — Tabla de reconciliación taxonómica: qué hay ya
+## §8.1 — Tabla de reconciliación taxonómica: qué hay ya
 
 `Tools/catalogo-nacional/out/cabo-cope-puntas-calnegre-reconciliacion.json` es, para las 124
 especies del piloto, exactamente la tabla `eidos_taxonid` ↔ `gbifSpeciesKey` que
-`Docs/prompts/e-rollout-nacional.md` §7.1 pide como prerrequisito de la reutilización de especies
+`Docs/prompts/e-rollout-nacional.md` §8.1 pide como prerrequisito de la reutilización de especies
 entre parques: por especie trae `eidos_taxonid` + nombre aceptado en EIDOS, `gbif_speciesKey` +
 nombre aceptado en GBIF, si hubo reclasificación y si las dos fuentes coinciden. Estadísticas del
 piloto: 106 EIDOS ok / 17 sinónimo / 1 no encontrado; 124 GBIF ok; 19 discrepancias entre fuentes.

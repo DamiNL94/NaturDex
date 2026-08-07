@@ -95,17 +95,22 @@ depende de estos módulos, y cada uno existe porque su lógica estaba copiada y 
 
 ---
 
-## 3. El modelo: dos niveles de dato y tres capas
+## 3. El modelo: tres niveles de dato y tres capas
 
-**Dos niveles.** Hacer cada espacio completo antes de pasar al siguiente dejaría el mapa de España
+**Tres niveles.** Hacer cada espacio completo antes de pasar al siguiente dejaría el mapa de España
 vacío durante años, así que se separan:
 
 | Nivel | `status` | Contenido | Coste |
 |---|---|---|---|
 | **N1 · ficha base** | `basic` | Límite oficial, códigos Natura 2000, figura, superficie, municipios, `summary` | Lote automático: decenas de espacios por sesión |
-| **N2 · completo** | `available` | Hábitats HIC recortados, catálogo de especies con evidencia, POIs, fotos, audioguías | Una sesión larga por espacio |
+| **N2 · completo** | `available` | Hábitats HIC recortados, catálogo de especies con evidencia, fotos, audioguías | Una sesión larga por espacio |
+| **N3 · puntos de interés** | `available` | `pointsOfInterest`: qué ver dentro del parque y por qué, con fuente, coordenada y foto | Una sesión corta por espacio |
 
 Todo espacio nace N1 y asciende cuando le toca. `planned` es un espacio anunciado sin carpeta de datos.
+
+**N2 y N3 comparten `status`**: los POIs no dependen del tamaño ni del interés del espacio sino de si
+alguien publicó la lista, así que avanzan a su ritmo y el nivel se registra en el ledger, no en el
+código. El procedimiento y la cascada de fuentes están en `Docs/prompts/e-rollout-nacional.md` §4.
 
 **Tres capas**, la misma arquitectura para cada espacio:
 

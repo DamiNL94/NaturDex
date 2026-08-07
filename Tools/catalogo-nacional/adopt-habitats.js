@@ -5,7 +5,7 @@
  *
  *   node Tools/catalogo-nacional/adopt-habitats.js --park <slug> [--dry]
  *
- * Es el paso §7.3 de la deuda técnica del rollout: hasta ahora `merge-habitats.js` dejaba su
+ * Es el paso §8.3 de la deuda técnica del rollout: hasta ahora `merge-habitats.js` dejaba su
  * resultado en `out/` para revisión manual y nadie lo llevaba a `Frontend/`. Esto lo cierra:
  *
  *   1. Escribe Frontend/Data/parks/<prov>/<slug>/geo/habitats.geojson desde el merged.

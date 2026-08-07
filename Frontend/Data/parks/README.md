@@ -19,22 +19,31 @@ Data/
           habitats.geojson
 ```
 
-## Dos niveles de dato: ficha base (N1) y catálogo completo (N2)
+## Tres niveles de dato: ficha base (N1), catálogo completo (N2) y puntos de interés (N3)
 
-El rollout nacional (`Docs/prompts/e-rollout-nacional.md`) separa el trabajo en dos niveles, y eso se
-refleja en el campo `status` de cada entrada de `parks-index.json`:
+El rollout nacional (`Docs/prompts/e-rollout-nacional.md`) separa el trabajo en tres niveles. Los dos
+primeros se reflejan en el campo `status` de cada entrada de `parks-index.json`; **el N3 no**, porque
+los POIs son contenido opcional y un espacio con y sin ellos es igual de `available` para el frontend
+(ver más abajo):
 
 | `status` | Nivel | Qué tiene | Qué ve el usuario |
 |---|---|---|---|
 | `basic` | **N1 · ficha base** | Bloque `park` completo + `geo/parque.geojson` (límite oficial) y, si los hay, `lic`/`zepa`. Los arrays `habitats`, `species` y `pointsOfInterest` están **vacíos**. | El espacio es seleccionable y se etiqueta «(ficha base)». Entra al mapa con su límite y sus capas Natura 2000; en lugar del catálogo aparece el aviso «catálogo de especies y hábitats en preparación». Sin contadores, sin barra de progreso, sin pestaña de progreso ni modo explorador. |
-| `available` | **N2 · completo** | Todo lo del piloto: hábitats HIC recortados, especies con evidencia y estado de conservación, POIs, fotos y audioguías. | La experiencia completa. |
+| `available` | **N2 · completo** | Hábitats HIC recortados, especies con evidencia y estado de conservación, fotos y audioguías. `pointsOfInterest` puede seguir vacío. | La experiencia completa. |
+| `available` | **N3 · puntos de interés** | Lo anterior **más** `pointsOfInterest`: sitios concretos y situados, cada uno con su `source`, su coordenada dentro del límite y su marca `approx`. | Lo mismo, con las chinchetas de POI en el mapa (un icono por `type`). |
 | `planned` | — | Nada: no hay carpeta de datos. | Aparece en la lista deshabilitado, como «(próximamente)». |
 
-Todo espacio **nace `basic` y asciende a `available`** cuando se le hace el catálogo. El validador
-(`npm run validate`) comprueba los dos niveles, con reglas relajadas para `basic`: exige el bloque
-`park` completo y un límite oficial válido (GeoJSON de polígonos en WGS84 dentro de España), y que
-los contadores del manifiesto cuadren —a cero si están a cero—, pero **no** exige hábitats, especies,
-POIs ni imágenes.
+Todo espacio **nace `basic` y asciende a `available`** cuando se le hace el catálogo. **N2 y N3
+comparten `status`**: el salto de uno a otro no cambia nada en el código —el frontend ya sabe no
+dibujar una capa de POIs vacía— y se registra en el ledger `Docs/rollout/ESTADO.md`. Hoy solo el
+piloto está en N3 (15 POIs); Sierra Espuña y Cuatro Calas cerraron su N2 con 0.
+
+El validador (`npm run validate`) comprueba los dos niveles de `status`, con reglas relajadas para
+`basic`: exige el bloque `park` completo y un límite oficial válido (GeoJSON de polígonos en WGS84
+dentro de España), y que los contadores del manifiesto cuadren —a cero si están a cero—, pero **no**
+exige hábitats, especies, POIs ni imágenes. De los POIs que sí existen sí comprueba lo suyo: id
+único, **coordenada obligatoria** (y encuadrada en España: el `[0, 0]` es sintácticamente válido pero
+cae en el golfo de Guinea) y `counts.pointsOfInterest` cuadrado con `park.json`.
 
 ### Quién manda sobre el `status`
 
