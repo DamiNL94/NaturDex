@@ -187,10 +187,11 @@ tengan textos distintos para el mismo código.
 
 **La asociación fitosociológica es dato oficial y no se toca**, pero por sí sola no le dice nada a
 quien no es botánico. `Tools/catalogo-nacional/data/contenido/fitosociologia.json` le añade, sin
-sustituirla, su lectura en llano («Coscojar con espino negro»), las plantas que le dan nombre y cómo
-se leen la nomenclatura y la autoría; `habitats:apply` lo exporta a `Frontend/Data/fitosociologia.json`
-y la ficha muestra las dos cosas: la explicación arriba y **la cita completa, con autores y año,
-íntegra debajo**.
+sustituirla, su nombre en llano («Coscojar con espino negro»), las plantas que le dan nombre, **por
+qué esas plantas crecen juntas** —el filtro que comparten: sal, fuego, sequía, inundación, o una
+relación directa entre ellas— y cómo se leen la nomenclatura y la autoría. `habitats:apply` lo
+exporta a `Frontend/Data/fitosociologia.json`. En la ficha el **titular es el nombre científico con
+su autoría íntegra**, y todo lo demás va debajo para descifrarlo.
 
 ---
 

@@ -1514,6 +1514,7 @@ INSERT INTO glosario (term, definition, category, aliases, source) VALUES
   ('cladodio', 'Tallo aplanado o con forma de hoja que hace la fotosíntesis en lugar de las hojas, como en las esparragueras.', 'botánica', '["cladodios"]', 'NaturDex (divulgacion)'),
   ('zarcillo', 'Órgano en forma de hilo enrollado con el que algunas plantas se agarran para trepar.', 'botánica', '["zarcillos"]', 'NaturDex (divulgacion)'),
   ('estípula', 'Pequeño apéndice situado en la base del rabillo de la hoja; a veces se transforma en espina.', 'botánica', '["estípulas"]', 'NaturDex (divulgacion)'),
+  ('estolón', 'Tallo rastrero que crece pegado al suelo y echa raíces allí donde toca, formando una planta nueva. Es una forma de extenderse sin depender de la semilla.', 'botánica', '["estolones","estolonífero","estolonífera"]', 'NaturDex (divulgacion)'),
   ('látex', 'Jugo lechoso que sueltan algunas plantas al romperse; suele ser irritante o tóxico.', 'botánica', NULL, 'NaturDex (divulgacion)'),
   ('acícula', 'Hoja larga, fina y rígida con forma de aguja, típica de los pinos.', 'botánica', '["acículas"]', 'NaturDex (divulgacion)'),
   ('raquis', 'Eje central del que salen los foliolos de una hoja compuesta o las flores de una espiga.', 'botánica', NULL, 'NaturDex (divulgacion)'),

@@ -1,11 +1,13 @@
 {
-  "_nota": "Lectura en lenguaje llano de las asociaciones fitosociológicas que la cartografía oficial (columna CONCEPTO de Habi<NN>.dbf) asigna a cada recinto de hábitat. NO sustituye al nombre científico ni a su autoría: lo acompaña. La app muestra el nombre llano, la lectura y, debajo, la cita completa tal cual viene de la fuente. Indexado por el NOMBRE LATINO SIN AUTORÍA, que es la parte estable del nombre; la app busca la clave más larga que sea prefijo de la cadena oficial, así que un mismo nombre con autoría distinta o con una nota entre paréntesis sigue encontrando su entrada.",
-  "_fuente": "Nombres y autorías: Cartografía de Hábitats de la Directiva 92/43/CEE (MITECO/BDN). La lectura en llano es redacción propia a partir de los géneros que dan nombre a la asociación y del hábitat HIC al que la fuente la adscribe.",
+  "_nota": "Lectura en lenguaje llano de las asociaciones fitosociológicas que la cartografía oficial (columna CONCEPTO de Habi<NN>.dbf) asigna a cada recinto de hábitat. NO sustituye al nombre científico ni a su autoría: lo acompaña. En la ficha el titular es el NOMBRE CIENTÍFICO con su autoría —es el dato— y debajo van el nombre llano, las plantas que dan nombre a la comunidad y la explicación. Indexado por el NOMBRE LATINO SIN AUTORÍA, que es la parte estable del nombre; la app busca la clave más larga que sea prefijo de la cadena oficial, así que un mismo nombre con autoría distinta o con una nota entre paréntesis sigue encontrando su entrada.",
+  "_fuente": "Nombres y autorías: Cartografía de Hábitats de la Directiva 92/43/CEE (MITECO/BDN). La lectura en llano es redacción propia a partir de los géneros que dan nombre a la asociación, del hábitat HIC al que la fuente la adscribe y de la ecología conocida de esas especies.",
   "_regla": "Universal, como el resto del contenido de este directorio: la misma asociación se sirve en todos los espacios donde la cartografía la reconoce, así que el texto no puede nombrar un parque ni una comarca. Tampoco puede afirmar de la comunidad nada que no se sostenga en toda su área.",
+  "_estilo": "`lectura` tiene que responder a una pregunta concreta: POR QUÉ ESAS PLANTAS CRECEN JUNTAS. No basta con describir el sitio. La estructura que funciona es: (1) qué filtro impone el ambiente —sal, sequía, fuego, viento, inundación, falta de suelo—, (2) con qué solución lo pasa cada planta, y (3) a quién deja fuera ese filtro, que es lo que explica que estas y no otras. Cuando hay una relación directa entre ellas (parasitismo, planta nodriza, mismo animal dispersante, rebrote tras el fuego), esa es la mejor explicación posible y va primero. Dos o tres frases.",
   "explicacion": {
     "titulo": "Qué es una asociación fitosociológica",
     "texto": "Los botánicos no solo dan nombre a las especies: también nombran los conjuntos de plantas que aparecen siempre juntas cuando se repiten las mismas condiciones de suelo, agua y clima. Ese nombre —la asociación fitosociológica— se escribe como el de una especie, en latín y seguido del autor y el año de quien la describió, porque cumple la misma función: es una cita que cualquiera puede rastrear hasta el trabajo original.",
     "comoSeLee": "El nombre se forma con los géneros de las dos o tres plantas que mejor identifican la comunidad. Así, «Rhamno lycioidis-Quercetum cocciferae» se lee «la comunidad de Rhamnus lycioides (espino negro) y Quercus coccifera (coscoja)»: un coscojar con espino negro.",
+    "porQueJuntas": "Que aparezcan juntas no es casualidad ni una lista de lo que había ese día. Cada ambiente impone un filtro —sal, meses sin lluvia, fuego, viento, inundación, roca sin suelo— y solo lo pasan las plantas que tienen una solución para él: raíces que llegan al agua profunda, hojas carnosas que diluyen la sal, semillas que solo germinan tras un incendio, yemas enterradas que rebrotan cuando la parte de arriba se pierde. Las que comparten filtro acaban compartiendo sitio, y las demás quedan fuera; por eso la misma combinación de plantas reaparece a cientos de kilómetros en cuanto se repiten las condiciones. A veces la relación es aún más directa: una vive parásita de la otra, una protege bajo su sombra a las plántulas de la vecina, o el mismo pájaro se come los frutos de ambas y siembra las dos a la vez.",
     "terminaciones": [
       { "sufijo": "-etum", "rango": "asociación", "significa": "La unidad concreta, la más precisa: un tipo de matorral, pastizal o bosque que se reconoce en el campo." },
       { "sufijo": "-ion", "rango": "alianza", "significa": "Un grupo de asociaciones parecidas entre sí. Se usa cuando la cartografía no baja al detalle o cuando la comunidad concreta aún no está descrita." },
@@ -18,7 +20,7 @@
   "asociaciones": {
     "Agrostio stoloniferae-Tamaricetum canariensis": {
       "nombre": "Tarayal de vega húmeda",
-      "lectura": "Tarayal de ramblas y vegas donde el suelo se mantiene húmedo y algo salado todo el año, con un césped fino de grama cubriendo el fondo entre los árboles.",
+      "lectura": "Coinciden porque comparten un suelo que casi nadie tolera: húmedo en profundidad todo el año, pero salado. El taray llega al agua con raíces largas y expulsa la sal sobrante por unas glándulas de las hojas —de ahí las costras blancas que se le ven encima—, y la grama sobrevive a quedar enterrada por el limo de cada avenida porque rebrota de tallos rastreros que echan raíz allí donde tocan. Álamos y sauces, que necesitan la misma humedad pero no aguantan la sal, quedan fuera: por eso aquí hay tarayal y no una alameda.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Agrostis stolonifera", "comun": "grama de agua" },
@@ -27,7 +29,7 @@
     },
     "Atriplicetum glauco-halimi": {
       "nombre": "Matorral de orgazas",
-      "lectura": "Matas de hoja gris y harinosa que colonizan suelos salinos removidos y cargados de nitrógeno: bordes de camino y de cultivo, corrales y escombreras viejas.",
+      "lectura": "Las dos orgazas son especialistas en un suelo doblemente hostil: salado y además cargado de nitrógeno por el ganado, los escombros o el abandono de un cultivo. Sus hojas están cubiertas de pelos con forma de vejiga que van almacenando la sal y luego revientan: ese polvillo es lo que les da el aspecto harinoso y gris. Donde hay tanta sal y tanto nitratos juntos casi ninguna otra planta germina, así que las orgazas crecen sin competencia y forman rodales casi puros.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Atriplex glauca", "comun": "orgaza menuda" },
@@ -36,7 +38,7 @@
     },
     "Atriplici glaucae-Suaedetum pruinosae": {
       "nombre": "Matorral de orgaza y sosa",
-      "lectura": "Matorral bajo de matas grisáceas y carnosas sobre suelos salinos y pisoteados, en el borde de saladares y ramblas salobres.",
+      "lectura": "Misma historia que en cualquier orgazal —suelo salino y removido—, pero un paso más adentro del saladar, donde la sal ya es demasiada para la orgaza sola. Ahí entra la sosa, que resuelve el problema por otra vía: en vez de expulsar la sal, la diluye almacenando agua en unos tallos gruesos y carnosos. Las dos estrategias funcionan en el mismo punto del gradiente, y por eso las dos plantas se mezclan justo en esa franja y no más allá.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Atriplex glauca", "comun": "orgaza menuda" },
@@ -45,7 +47,7 @@
     },
     "Berberido hispanicae-Quercetum rotundifoliae": {
       "nombre": "Encinar de montaña con agracejo",
-      "lectura": "El encinar de las sierras del interior, más fresco que el de tierra baja, con un sotobosque espinoso en el que el agracejo —arbusto de bayas rojas y ramas armadas— es la mata más característica.",
+      "lectura": "Es el encinar al que se le ha subido la altitud: la encina sigue siendo el árbol capaz de aguantar a la vez el verano sin agua y el invierno con heladas fuertes, pero a su sombra ya no caben el lentisco ni el palmito, que se hielan. Su lugar lo ocupa el agracejo, un arbusto espinoso de montaña que además se defiende del diente del ganado, muy presente en estas sierras. Que aparezcan juntos es la señal de que el frío, y no la sequía, es aquí el factor que manda.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Berberis hispanica", "comun": "agracejo" },
@@ -54,7 +56,7 @@
     },
     "Bupleuro semicompositi-Filaginetum mareoticae": {
       "nombre": "Pastizal efímero de anuales",
-      "lectura": "Césped ralo de hierbas anuales diminutas que germinan con las lluvias sobre suelos secos y pedregosos y se secan antes del verano; el resto del año solo quedan las semillas en el suelo.",
+      "lectura": "Aquí lo que comparten no es una forma de resistir, sino de escapar: el suelo es tan delgado y se seca tan pronto que ninguna planta perenne consigue mantenerse viva el verano entero. Estas hierbas germinan con las primeras lluvias, florecen y fabrican semilla en unas pocas semanas, y pasan el resto del año enterradas en forma de semilla, a salvo del calor. Coinciden porque la misma ventana corta de humedad selecciona el mismo ciclo relámpago, y quien no lo tenga no llega a reproducirse.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Bupleurum semicompositum", "comun": "bupleuro anual" },
@@ -63,7 +65,7 @@
     },
     "Chaenorhino villosi-Athamanthetum hispanicae": {
       "nombre": "Grietas de cortados calizos",
-      "lectura": "Comunidad de fisuras en paredes de caliza, con hierbas de raíz muy larga agarradas a la grieta: conejitos de roca de flor violácea y umbelíferas de hoja finamente dividida.",
+      "lectura": "En una pared vertical no hay suelo ni agua retenida: lo único aprovechable es la grieta, que recoge un poco de tierra y el agua que escurre por la roca. Las dos plantas hacen lo mismo, meter una raíz larguísima por esa fisura y sacar fuera solo unas hojas pequeñas y duras que pierden poca agua. Y hay un segundo motivo para que estén ahí y no en el llano: a la pared no llegan ni el ganado ni el arado ni las plantas que las desplazarían en un suelo normal.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Chaenorhinum villosum", "comun": "conejitos de roca" },
@@ -72,7 +74,7 @@
     },
     "Chamaeropo humilis-Juniperetum phoeniceae": {
       "nombre": "Sabinar negral con palmito",
-      "lectura": "Bosque abierto de sabina negral con palmito en el sotobosque, sobre laderas y cerros de clima cálido y suelo escaso. El palmito es la única palmera silvestre de Europa continental.",
+      "lectura": "La sabina negral es de los pocos árboles que prosperan sobre roca casi desnuda y soportando el viento cargado de sal, y bajo su copa cabe el palmito, que rebrota una y otra vez desde un tallo subterráneo cuando se le corta o se le quema. Lo que decide que estén juntos es una ausencia: la de heladas. El palmito no las tolera, así que esta pareja marca exactamente los cerros y laderas donde el invierno nunca llega a helar.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Chamaerops humilis", "comun": "palmito" },
@@ -81,7 +83,7 @@
     },
     "Chamaeropo humilis-Rhamnetum lycioidis": {
       "nombre": "Matorral de palmito y espino negro",
-      "lectura": "El matorral más alto y cerrado al que llega el clima cálido y seco cuando no se corta ni se quema: una maraña de palmito, espino negro y lentisco difícil de atravesar.",
+      "lectura": "Donde no hiela pero llueve muy poco, el bosque no llega a formarse nunca: este matorral no es una etapa hacia otra cosa, es el techo de la vegetación. Palmito y espino negro llegan a él porque comparten las dos soluciones que hacen falta, hojas duras que apenas transpiran y reservas bajo tierra desde las que rebrotan tras un incendio o una tala. Los árboles de crecimiento rápido, que necesitarían un verano con algo de agua, no pasan ese filtro.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Chamaerops humilis", "comun": "palmito" },
@@ -90,7 +92,7 @@
     },
     "Cistancho phelypaeae-Arthrocnemetum fruticosi": {
       "nombre": "Almajar de saladar inundable",
-      "lectura": "Matorral carnoso de sosas sobre fango que se inunda de agua salada, con el jopo amarillo asomando entre las matas: una planta sin clorofila que vive parasitando sus raíces.",
+      "lectura": "Aquí la relación es directa y visible: el jopo amarillo no tiene clorofila ni puede fabricarse el alimento, así que vive enganchado a las raíces de las sosas y les roba el agua y los azúcares. Por eso no aparece nunca solo, solo donde están ellas. Y ellas están donde están porque aguantan la inundación con agua de mar diluyéndola en unos tallos carnosos y articulados, sin hojas que perder: en ese fango salado no crece ninguna otra cosa que el jopo pudiera parasitar.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Cistanche phelypaea", "comun": "jopo, matacandil amarillo" },
@@ -99,7 +101,7 @@
     },
     "Cosentinio bivalentis-Teucrietum freynii": {
       "nombre": "Grietas de roca con helechillo y zamarrilla",
-      "lectura": "Comunidad de fisuras en paredes calizas soleadas, donde conviven un helecho diminuto y peludo que se enrolla al secarse y rebrota con la lluvia, y matas de zamarrilla.",
+      "lectura": "Una pared caliza al sol se seca por completo y puede pasar meses sin una gota: las dos plantas resuelven ese mismo problema por caminos distintos. El helechillo se deja secar del todo —se enrolla, parece muerto y se despliega verde a las pocas horas de llover—, y la zamarrilla se protege con hojas menudas cubiertas de pelo que frenan la evaporación. Comparten grieta porque ambas soportan quedarse sin agua durante semanas, cosa que casi ninguna otra planta hace.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Cosentinia vellea", "comun": "doradilla peluda" },
@@ -108,7 +110,7 @@
     },
     "Cypero mucronati-Agropyretum juncei": {
       "nombre": "Duna embrionaria de grama de mar",
-      "lectura": "Las dos primeras plantas que fijan la arena de la playa: la grama de mar y la juncia marina, que crecen hacia arriba a medida que el viento las entierra y levantan así el primer montículo de duna.",
+      "lectura": "En la arena de la playa el filtro no es la sequía sino el enterramiento: el viento sepulta cada poco lo que crece allí. Estas dos lo aprovechan en vez de sufrirlo, porque tienen tallos subterráneos que se alargan hacia arriba a medida que la arena sube, y así van quedando siempre por encima. Además, al frenar el viento hacen que la arena se deposite a su alrededor: son ellas las que fabrican la duna en la que viven, y por eso van siempre juntas y siempre en la primera línea.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Cyperus capitatus", "comun": "juncia marina" },
@@ -117,7 +119,7 @@
     },
     "Daphno latifoliae-Aceretum granatensis": {
       "nombre": "Quejigar-arceda de umbría",
-      "lectura": "Bosque fresco de umbría en el que el quejigo se mezcla con arces de hoja pequeña sobre suelos profundos que conservan la humedad. Es de los pocos bosques mediterráneos que cambian de color en otoño.",
+      "lectura": "Estas plantas no aguantan la sequía mediterránea, así que solo aparecen en los rincones donde el verano se suaviza: umbrías, vaguadas y suelos profundos que guardan agua bajo tierra. Y una vez instalados, los árboles crean ellos mismos la condición que necesita el sotobosque, porque la lauréola es una planta de sombra que fuera del bosque se achicharra. Es una comunidad que depende de dos cosas encadenadas: el rincón fresco y la copa que lo mantiene fresco.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Daphne laureola subsp. latifolia", "comun": "lauréola" },
@@ -126,7 +128,7 @@
     },
     "Erico mediterraneae-Salicetum pedicellatae": {
       "nombre": "Sauceda con brezo de agua",
-      "lectura": "Banda estrecha de sauces a lo largo de cursos con agua todo el año, acompañada del brezo de agua, un arbusto que solo vive donde el suelo nunca llega a secarse del todo.",
+      "lectura": "Un suelo empapado todo el año casi no tiene oxígeno, y eso mata las raíces de la mayoría de las plantas. El sauce lo tolera y además rebrota entero cuando una crecida le arranca las ramas, y el brezo de agua es tan exigente en humedad que se seca en cuanto el nivel freático baja un poco. Que aparezcan juntos es la prueba de que ahí el agua no falta ni en agosto: son un indicador vivo del nivel del agua.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Erica erigena", "comun": "brezo de agua" },
@@ -135,7 +137,7 @@
     },
     "Erinaceo anthyllidis-Genistetum longipedis": {
       "nombre": "Matorral almohadillado de erizón",
-      "lectura": "Cojines espinosos y compactos pegados al suelo, en crestas y laderas de montaña expuestas al viento. El erizón florece en azul violáceo sobre la propia bola de espinas.",
+      "lectura": "Erizón y aulaga no son parientes cercanos y sin embargo tienen la misma forma, una bola compacta y espinosa pegada al suelo. Es la respuesta al mismo problema: arriba, en la crestería, el viento seca y rompe, y la nieve aplasta lo que sobresale. El cojín se protege a sí mismo —dentro hay unos grados más y menos viento que fuera— y encima retiene la nieve, que en invierno funciona como manta. Cualquier planta de porte erguido queda descartada, y por eso todas las de aquí acaban pareciéndose.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Erinacea anthyllis", "comun": "erizón, cojín de monja" },
@@ -144,7 +146,7 @@
     },
     "Festucetum hystricis": {
       "nombre": "Pastizal de festuca erizo",
-      "lectura": "Césped duro de matas redondeadas y punzantes en cumbres calizas venteadas, con el suelo pedregoso a la vista entre mata y mata.",
+      "lectura": "En las cumbres calizas el suelo es escaso, el viento constante y el hielo levanta la tierra cada noche de invierno, descalzando las raíces. La festuca erizo aguanta porque crece en mata apretada: las hojas viejas y punzantes protegen las yemas del centro, sujetan el suelo entre ellas y disuaden al ganado. Casi ninguna otra hierba resiste las tres cosas a la vez, así que domina ella sola y deja pedregal desnudo entre mata y mata.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Festuca hystrix", "comun": "festuca erizo" }
@@ -152,7 +154,7 @@
     },
     "Frankenio corymbosae-Halocnemetum strobilacei": {
       "nombre": "Almajar con costra de sal",
-      "lectura": "Matorral bajo de las zonas más saladas del saladar, donde el agua se evapora y deja una costra blanca en la superficie. Las matas crecen espaciadas sobre suelo desnudo.",
+      "lectura": "Este es el extremo del saladar: donde el agua se evapora y deja una costra blanca, la sal alcanza concentraciones que deshidratan a cualquier planta como lo haría la sequía. La sosa jabonera es de las poquísimas que la soportan, acumulando agua en tallos carnosos, y el albohol se defiende expulsando la sal por unas glándulas de las hojas, que quedan como escarchadas. No es que prefieran este sitio: es que aquí no tienen competencia, y por eso crecen espaciadas sobre suelo desnudo.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Frankenia corymbosa", "comun": "albohol" },
@@ -161,7 +163,7 @@
     },
     "Fumano ericoidis-Hypericetum ericoidis": {
       "nombre": "Repisas rocosas con hipérico de roca",
-      "lectura": "Comunidad de repisas y grietas soleadas de roca caliza, con matitas leñosas de hoja menuda; el hipérico de roca forma cojines colgantes cubiertos de flores amarillas.",
+      "lectura": "Una repisa soleada de caliza acumula un poco de tierra pero se calienta muchísimo y se seca en horas. Las dos plantas responden igual, con hojas minúsculas, casi de aguja, que reducen al mínimo la superficie por la que perder agua, y con una raíz que se cuela en la fisura para buscar la humedad que queda dentro de la roca. Por eso se parecen tanto en el porte aunque sean de familias distintas, y por eso ocupan la misma repisa.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Fumana ericoides", "comun": "jarilla de brezo" },
@@ -170,7 +172,7 @@
     },
     "Genistetum valentinae": {
       "nombre": "Matorral de aulaga",
-      "lectura": "Matorral espinoso dominado por una aulaga de flor amarilla, propio de laderas secas y suelos pedregosos poco profundos.",
+      "lectura": "La aulaga domina en suelos pedregosos y pobres gracias a dos ventajas: como todas las leguminosas, se asocia con bacterias en sus raíces que le fabrican el nitrógeno que al suelo le falta, y sus espinas la libran del ramoneo que se lleva por delante a las plantas blandas. En verano tira las hojas y sigue fotosintetizando con los tallos verdes. Con esa combinación se instala donde otras no llegan y acaba formando rodales casi de una sola especie.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Genista valentina", "comun": "aulaga" }
@@ -178,7 +180,7 @@
     },
     "Holoschoenetum vulgaris": {
       "nombre": "Juncal churrero",
-      "lectura": "Macollas altas de junco churrero sobre suelos que mantienen humedad bajo tierra todo el verano, aunque la superficie esté seca: bordes de acequia, manantiales y fondos de vaguada.",
+      "lectura": "El junco churrero vive de un agua que no se ve: la superficie puede estar seca y agrietada en agosto, pero sus raíces alcanzan la capa húmeda que hay medio metro más abajo. Eso le da un verano entero de crecimiento cuando todo lo de alrededor está parado, y por eso monopoliza estos suelos y forma macollas casi puras. El ganado, que busca este verde en pleno verano, se come lo que crece entre ellas e impide que llegue el matorral: el juncal se mantiene, en parte, porque lo pastan.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Scirpoides holoschoenus", "comun": "junco churrero" }
@@ -186,7 +188,7 @@
     },
     "Hormatophyllo spinosae-Erodietum saxatilis": {
       "nombre": "Repisas de roquedo con matas espinosas",
-      "lectura": "Vegetación de repisas y pedregales al pie de los cortados, con matas espinosas en forma de cojín y geranios silvestres de hoja recortada creciendo en las juntas de la roca.",
+      "lectura": "Al pie de los cortados el problema es que el terreno se mueve: las piedras que caen de la pared ruedan y entierran cualquier plántula. Estas dos se sujetan con una raíz gruesa y profunda que hace de ancla y les permite volver a asomar cuando el pedregal se remueve, y ambas crecen a ras de suelo para no ofrecer resistencia. Es un ambiente que expulsa a casi todo el mundo, así que las que aguantan la inestabilidad terminan compartiéndolo.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Hormathophylla spinosa", "comun": "rascaviejas" },
@@ -195,7 +197,7 @@
     },
     "Hypericion ericoidis": {
       "nombre": "Comunidades de paredes calizas",
-      "lectura": "No es una comunidad concreta, sino el conjunto de las que viven en las fisuras de paredes calizas del sureste ibérico, emparentadas entre sí y reconocibles por el hipérico de roca. La cartografía usa este nivel cuando no baja al detalle de la asociación.",
+      "lectura": "No es una comunidad concreta sino el conjunto de todas las que viven en las fisuras de paredes calizas del sureste ibérico. Se agrupan porque comparten el mismo modo de vida —raíz en la grieta, hojas mínimas, resistencia a secarse por completo— y porque el roquedo lleva milenios a salvo del arado y del ganado, lo que ha permitido que sobrevivan ahí plantas que desaparecieron del resto del paisaje. La cartografía usa este nivel cuando no baja al detalle de la asociación.",
       "rango": "alianza",
       "nombradaPor": [
         { "cientifico": "Hypericum ericoides", "comun": "hipérico de roca" }
@@ -203,7 +205,7 @@
     },
     "Inulo crithmoidis-Tamaricetum boveanae": {
       "nombre": "Tarayal de suelo salino",
-      "lectura": "Tarays dispersos sobre suelos salinos que se encharcan, con un tapiz a sus pies de matas carnosas de hoja gruesa y flores amarillas.",
+      "lectura": "Los dos viven del agua freática salada que hay bajo estos suelos, y los dos han resuelto la sal por la misma vía que un animal marino: sacarla fuera. El taray la expulsa por glándulas de las ramillas y la hierba salada la diluye en hojas gruesas y carnosas llenas de agua. Comparten sitio porque comparten esa capacidad, y porque el encharcamiento salino elimina de la competencia a todo lo demás.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Inula crithmoides", "comun": "hierba salada" },
@@ -212,7 +214,7 @@
     },
     "Jasonio glutinosae-Teucrietum thymifolii": {
       "nombre": "Grietas calizas con té de roca",
-      "lectura": "Comunidad de fisuras en paredes de caliza con el té de roca —pegajoso y muy aromático, recolectado tradicionalmente para infusión— y matas de zamarrilla de hoja diminuta.",
+      "lectura": "Las dos se defienden del calor y de los herbívoros con química: están cubiertas de glándulas que producen resinas y aceites aromáticos, que reducen la evaporación y hacen que la planta sepa mal. En una pared expuesta, donde no se puede huir ni rebrotar deprisa, esa defensa química vale más que cualquier otra. Ese parecido de estrategia, junto a la raíz metida en la fisura, es lo que las reúne en la misma grieta.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Jasonia glutinosa", "comun": "té de roca" },
@@ -221,7 +223,7 @@
     },
     "Lafuenteo rotundifoliae-Centaureetum saxicolae": {
       "nombre": "Extraplomos y paredes umbrías",
-      "lectura": "Vegetación de paredes verticales y extraplomos resguardados de la lluvia directa, con plantas de hoja carnosa y redondeada que cuelgan de la roca en penumbra.",
+      "lectura": "Bajo un extraplomo la lluvia no cae nunca: el agua que hay es la que rezuma por la roca y la que condensa en las noches húmedas. Las dos plantas viven de eso, con hojas algo carnosas que guardan reserva y un porte colgante que las mantiene fuera del alcance de todo. Es un microambiente rarísimo —sombra permanente, sin lluvia directa y sin ganado— y por eso concentra plantas que no se encuentran a diez metros de allí.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Lafuentea rotundifolia", "comun": "lafuentea" },
@@ -230,7 +232,7 @@
     },
     "Lavandulo-Genistion boissieri": {
       "nombre": "Matorrales de montaña con lavandas y aulagas",
-      "lectura": "Reúne los matorrales aromáticos y espinosos de montaña caliza —lavandas, aulagas, tomillos y salvias— que se repiten con la misma estructura por buena parte de la mitad sur peninsular.",
+      "lectura": "Reúne los matorrales de montaña caliza en los que se repite siempre el mismo reparto de papeles: leguminosas espinosas que fabrican su propio nitrógeno en un suelo que no lo tiene, y labiadas aromáticas cuyos aceites frenan la evaporación y les quitan el apetito a los herbívoros. Esa combinación de dos soluciones complementarias funciona igual de bien en toda la mitad sur peninsular, y por eso la misma estructura reaparece de sierra en sierra aunque cambien las especies concretas.",
       "rango": "alianza",
       "nombradaPor": [
         { "cientifico": "Lavandula", "comun": "lavandas, cantuesos" },
@@ -239,7 +241,7 @@
     },
     "Limonietum angustebracteato-delicatuli": {
       "nombre": "Estepa salina de siemprevivas",
-      "lectura": "Suelos salinos y secos cubiertos de rosetas de hoja plana pegadas al suelo, de las que en verano brotan tallos ramificados con flores diminutas rosas y violetas que se conservan al secarse.",
+      "lectura": "Las siemprevivas viven en suelos con sal pero secos, que es la peor combinación posible: la sal les impide absorber el poca agua que hay. Su solución es doble, una roseta de hojas planas pegada al suelo, donde el aire es más húmedo y sopla menos, y unas glándulas que sacan la sal fuera de la hoja. Solo florecen en verano y con flores casi de papel, que no se marchitan: la planta apenas invierte agua en ellas. Nada que no tenga glándulas de sal prospera a su lado.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Limonium angustebracteatum", "comun": "siempreviva" },
@@ -248,7 +250,7 @@
     },
     "Limonio cossoniani-Lycietum intricati": {
       "nombre": "Matorral de acantilado con cambronera",
-      "lectura": "Matorral bajo y espinoso del borde del mar, resistente a la sal que trae el rociado, con cambroneras de ramas enmarañadas y siemprevivas instaladas en las grietas.",
+      "lectura": "En el borde del mar la sal no llega por el suelo sino por el aire: cada temporal deja una capa de gotas saladas que quema las hojas tiernas. La cambronera responde con ramas rígidas y enmarañadas y hojas pequeñas que tira en cuanto aprieta la sequía, y la siempreviva expulsa la sal por sus glándulas. Cualquier matorral de tierra adentro se achicharra en esa primera franja; estos dos la ocupan porque nadie más puede.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Limonium cossonianum", "comun": "siempreviva de mar" },
@@ -257,7 +259,7 @@
     },
     "Limonio insignis-Anabasietum hispanicae": {
       "nombre": "Matorral de sosa sobre margas salinas",
-      "lectura": "Matorral abierto sobre margas con sal, con matas de tallos articulados y sin hojas visibles y siemprevivas que florecen en pleno verano, cuando casi nada más lo hace.",
+      "lectura": "Las margas salinas se encharcan cuando llueve, se agrietan al secarse y tienen sal en la superficie: un suelo inestable y tóxico para casi todo. La sosa negra prescinde de hojas —fotosintetiza con tallos gruesos y articulados, así pierde mucha menos agua y diluye la sal en su interior— y la siempreviva la expulsa por las hojas. Ambas florecen en pleno verano, cuando ninguna otra cosa lo hace, porque no dependen de la lluvia de primavera para tener agua.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Limonium insigne", "comun": "siempreviva" },
@@ -266,7 +268,7 @@
     },
     "Limonio insignis-Lygeetum sparti": {
       "nombre": "Albardinal con siemprevivas",
-      "lectura": "Estepa de albardín, gramínea de matas separadas y hoja punzante que crece sobre suelos salinos y secos; entre las matas florecen las siemprevivas y queda mucho suelo desnudo a la vista.",
+      "lectura": "El albardín atraviesa la costra salada de la superficie con raíces profundas y busca el agua por debajo, y encima enrolla las hojas para no perderla; eso le permite dominar donde la sal y la sequía van juntas. Pero no puede cerrar el terreno: entre mata y mata queda siempre suelo desnudo, demasiado salino para una hierba normal. Ese hueco es justo el que ocupan las siemprevivas, que sí toleran la sal en superficie. La pareja funciona porque cada una explota una capa distinta del mismo suelo.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Limonium insigne", "comun": "siempreviva" },
@@ -275,7 +277,7 @@
     },
     "Lysimachio ephemeri-Holoschoenetum": {
       "nombre": "Juncal churrero de montaña",
-      "lectura": "Juncal de zonas frescas de interior, con lisimaquia de espigas blancas entre las macollas, sobre suelos que no se secan ni en pleno verano.",
+      "lectura": "Es el mismo juncal que se ve en tierra baja —el junco churrero llegando con sus raíces al agua que queda bajo tierra en verano—, pero en un clima más fresco. Ahí, con menos calor y algo más de humedad ambiental, entra la lisimaquia, una hierba alta que en el sur no aguantaría. Su presencia es lo que distingue un juncal de montaña de uno de vega cálida.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Lysimachia ephemerum", "comun": "lisimaquia" },
@@ -284,7 +286,7 @@
     },
     "Mayteno europaei-Periplocetum angustifoliae": {
       "nombre": "Espinar de arto y cornical",
-      "lectura": "Matorral iberoafricano de los llanos más áridos, con el arto —mata espinosa e impenetrable— y el cornical, arbusto de hoja carnosa cuyos frutos maduros se abren en dos cuernos.",
+      "lectura": "En los llanos más áridos, una semilla que germine a pleno sol y al alcance del ganado no llega a adulta. El arto lo resuelve para toda la comunidad: su cúpula espinosa e impenetrable da sombra, retiene la humedad y protege del diente a las plántulas que crecen debajo, entre ellas las del cornical. Funciona como planta nodriza, y por eso el cornical aparece una y otra vez asociado a él. Los dos son de origen norteafricano y ambos tiran las hojas en la sequía para no gastar agua.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Maytenus senegalensis subsp. europaeus", "comun": "arto" },
@@ -293,7 +295,7 @@
     },
     "Pilosello capitatae-Brachypodietum retusi": {
       "nombre": "Lastonar con vellosillas",
-      "lectura": "Pastizal de lastón, gramínea de mata dura que rebrota con fuerza tras el fuego, salpicado de vellosillas de flores amarillas y hojas cubiertas de pelo blanco.",
+      "lectura": "Este pastizal es hijo del fuego y del ganado. El lastón guarda las yemas en tallos subterráneos, así que un incendio se lleva la parte de arriba y en unas semanas ya está rebrotando y ocupando el terreno antes que nadie. La vellosilla juega a otra cosa: se extiende con estolones rastreros y mantiene las hojas en roseta pegadas al suelo, donde el diente no las alcanza. Las dos ganan con la perturbación, y por eso donde se quema o se pasta a menudo aparecen juntas.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Pilosella capitata", "comun": "vellosilla" },
@@ -302,7 +304,7 @@
     },
     "Quercetum rotundifoliae": {
       "nombre": "Encinar",
-      "lectura": "El encinar en su forma más extendida: carrascas de copa densa y hoja dura sobre suelos calizos del interior, con un sotobosque de coscoja, enebros y plantas aromáticas.",
+      "lectura": "La encina domina porque resuelve a la vez los dos problemas del clima mediterráneo continental: la hoja dura y perenne aguanta el verano sin agua y sigue trabajando en invierno, y la raíz profunda alcanza reservas que otros árboles no tocan. Una vez cerrada la copa, la sombra y la hojarasca seleccionan un sotobosque de plantas que toleran vivir con poca luz y suelo seco. El resultado es un bosque de pocas especies dominantes, pero muy estable.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Quercus rotundifolia", "comun": "encina, carrasca" }
@@ -310,7 +312,7 @@
     },
     "Resedo paui-Sarcocapnetum saetabensis": {
       "nombre": "Oquedades y extraplomos rocosos",
-      "lectura": "Comunidad de huecos y extraplomos que la lluvia no llega a mojar, con plantas colgantes de hoja carnosa y flores blanquecinas o rosadas asomando desde el interior de la grieta.",
+      "lectura": "Los huecos y extraplomos son un ambiente seco a la sombra: no reciben lluvia directa, pero tampoco sol que evapore lo poco que entra. Las dos plantas se han especializado en ese hueco, con hojas carnosas que almacenan agua y un porte colgante que las descuelga desde la grieta. Sus semillas llevan un apéndice carnoso que atrae a las hormigas, y son ellas las que las llevan a otras fisuras: sin ese transporte no habría forma de pasar de una pared a la siguiente.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Reseda paui", "comun": "reseda" },
@@ -319,7 +321,7 @@
     },
     "Rhamno borgiae-Teucrietum rivasii": {
       "nombre": "Roquedo con espino y zamarrilla",
-      "lectura": "Comunidad de paredes calizas en la que las dos plantas que le dan nombre viven solo en un puñado de sierras y en ningún otro sitio del mundo.",
+      "lectura": "Los cortados funcionan como islas: llevan miles de años sin arar, sin talar y sin ganado, así que han conservado plantas que desaparecieron del terreno llano de alrededor. Las dos que dan nombre a esta comunidad viven solo en un puñado de sierras y en ningún otro sitio del mundo. No están juntas por afinidad entre ellas, sino porque el mismo refugio las ha protegido a las dos, y porque ambas soportan vivir con la raíz metida en una fisura.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Rhamnus borgiae", "comun": "espino" },
@@ -328,7 +330,7 @@
     },
     "Rhamno lycioidis-Genistetum murcicae": {
       "nombre": "Matorral de espino negro y aulaga",
-      "lectura": "Matorral seco y espinoso de laderas pedregosas, con el espino negro de ramas rígidas terminadas en punta y una aulaga de flores amarillas y área muy reducida.",
+      "lectura": "En laderas pedregosas y muy pastadas, sobrevive lo que el ganado no puede comer: los dos arbustos van armados, uno con ramas que acaban en punta y la otra con espinas. Y se reparten el trabajo bajo tierra, porque la aulaga, como leguminosa, fija nitrógeno y enriquece un suelo que no lo tiene, del que también se beneficia el espino. Presión de herbívoros más suelo pobre da siempre esta misma combinación de espinas y leguminosas.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Rhamnus lycioides", "comun": "espino negro" },
@@ -337,7 +339,7 @@
     },
     "Rhamno lycioidis-Juniperetum phoeniceae": {
       "nombre": "Sabinar negral con espino negro",
-      "lectura": "Bosque abierto de sabina negral sobre roca caliza, con espino negro y otras matas duras rellenando los claros entre árbol y árbol.",
+      "lectura": "Los dos dan frutos carnosos —los gálbulos azulados de la sabina y las drupas del espino— que comen los mismos pájaros, sobre todo zorzales, en el mismo invierno. Las aves se posan en las matas y en los salientes de roca y siembran ahí las dos especies a la vez: la comunidad se reconstruye literalmente desde el mismo transporte. Sobre roca caliza casi sin suelo, además, ambas aguantan la sequía y el viento, así que las plántulas que caen juntas también sobreviven juntas.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Rhamnus lycioides", "comun": "espino negro" },
@@ -346,7 +348,7 @@
     },
     "Rhamno lycioidis-Quercetum cocciferae": {
       "nombre": "Coscojar con espino negro",
-      "lectura": "Matorral denso y espinoso de coscoja —una encina arbustiva de hoja pinchuda— y espino negro. Es la etapa a la que llega el monte calizo mediterráneo cuando se le deja de cortar y quemar.",
+      "lectura": "Coscoja y espino negro son los dos ganadores del mismo filtro: la perturbación repetida. Los dos guardan las yemas en una cepa leñosa bajo tierra, así que rebrotan con fuerza después de un incendio, una tala o un desbroce, mientras un pino o una encina tardarían décadas en volver desde semilla. Los dos, además, van armados —hoja pinchuda uno, ramas en punta el otro— y el ganado los evita. Por eso este matorral es lo que queda donde el encinar se ha cortado y quemado una y otra vez.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Rhamnus lycioides", "comun": "espino negro" },
@@ -355,7 +357,7 @@
     },
     "Rubo ulmifolii-Nerietum oleandri": {
       "nombre": "Adelfar de rambla",
-      "lectura": "Adelfas en el lecho de ramblas y cauces de caudal irregular, trabadas con zarzas allí donde queda algo de humedad. Aguantan tanto las avenidas violentas como meses sin una gota de agua.",
+      "lectura": "Una rambla castiga de dos formas opuestas: meses sin agua y, de golpe, una avenida que arrastra piedras. La adelfa está hecha para las dos, con raíces que alcanzan el agua que sigue circulando bajo las gravas y ramas flexibles que se doblan con la riada en vez de partirse. Y hay un tercer motivo para que domine: es muy tóxica, así que el ganado se come todo lo demás y a ella la deja. La zarza solo la acompaña en los tramos donde queda algo más de humedad.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Rubus ulmifolius", "comun": "zarza" },
@@ -364,7 +366,7 @@
     },
     "Salsolo kali-Cakiletum aegyptiacae": {
       "nombre": "Vegetación de la línea de marea",
-      "lectura": "La franja de plantas anuales que germina sobre los restos que el mar deja en la playa: el rábano de mar, de flores lilas y hojas carnosas, y la barrilla pinchosa.",
+      "lectura": "Estas plantas crecen exactamente donde el mar deposita algas y restos, y no es casualidad: esa franja podrida es el único punto de la playa con nutrientes. A cambio hay que soportar sal, arena que sepulta y un oleaje que en invierno borra la orilla entera. Por eso las dos son anuales: no intentan resistir el temporal, mueren antes y dejan semillas que vuelven a germinar en la nueva línea de restos. Ninguna planta perenne aguanta que le rehagan el suelo cada año.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Salsola kali", "comun": "barrilla pinchosa" },
@@ -373,7 +375,7 @@
     },
     "Salsolo oppositifoliae-Suaedetum verae": {
       "nombre": "Matorral de sosas en suelo removido",
-      "lectura": "Matas carnosas y grisáceas que ocupan suelos salinos alterados y ricos en nitrógeno: bordes de rambla y de camino, antiguos corrales y terrenos abandonados.",
+      "lectura": "Las dos sosas comparten la misma solución para la sal: absorberla y diluirla en tallos y hojas llenos de agua, que es lo que les da ese aspecto carnoso y grisáceo. Eso les permite ocupar suelos salinos que además han sido removidos y enriquecidos con nitrógeno —bordes de rambla y de camino, corrales y terrenos abandonados—, una mezcla que resulta tóxica para casi todas las demás plantas. Ahí crecen sin competencia y son las primeras en cubrir el terreno.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Salsola oppositifolia", "comun": "sosa" },
@@ -382,7 +384,7 @@
     },
     "Saturejo canescentis-Cistetum albidi": {
       "nombre": "Jaral con ajedrea",
-      "lectura": "Matorral de jara blanca, de hoja aterciopelada y grandes flores rosas que parecen de papel arrugado, con ajedreas aromáticas entre medias. Ocupa terrenos degradados por el fuego o el pastoreo.",
+      "lectura": "Un jaral denso casi siempre indica un incendio reciente. La jara acumula miles de semillas duras en el suelo que solo germinan cuando el calor del fuego las abre: quemado el monte, la jara nace en masa y toma el terreno antes que nadie. La ajedrea, aromática y de raíz somera, aprovecha ese mismo suelo despejado y soleado. Ninguna de las dos es una planta de bosque maduro: están porque el bosque no está.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Satureja canescens", "comun": "ajedrea" },
@@ -391,7 +393,7 @@
     },
     "Sedetum micrantho-sediformis": {
       "nombre": "Céspedes de uñas de gato",
-      "lectura": "Plantas crasas de hojas gruesas que almacenan agua, instaladas en repisas y lanchas de roca con un dedo escaso de tierra. Florecen en verano en amarillo pálido o blanco.",
+      "lectura": "Una lancha de roca con un dedo de tierra se seca en unas horas después de llover. Las uñas de gato pueden vivir ahí porque hacen algo que casi ninguna planta hace: abren los poros de las hojas de noche, cuando el aire está húmedo, guardan el gas y lo usan de día con los poros cerrados, de modo que apenas pierden agua. Y almacenan reserva en hojas gruesas. Todas las plantas de esta comunidad son crasas o anuales fugaces porque no hay otra manera de durar sobre la piedra.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Sedum micranthum", "comun": "uña de gato" },
@@ -400,7 +402,7 @@
     },
     "Suaedetum spicato-splendentis": {
       "nombre": "Sosas anuales de fondo de saladar",
-      "lectura": "Céspedes de plantas anuales carnosas que colonizan el fondo del saladar cuando el agua se retira, y que a final de verano tiñen de rojo y naranja toda la superficie.",
+      "lectura": "El fondo del saladar pasa el invierno bajo el agua y el verano convertido en una costra de sal: no hay ninguna planta capaz de estar viva en las dos situaciones. Estas sosas resuelven el problema por el calendario, germinando en cuanto el agua se retira, creciendo deprisa y dejando semilla antes de que la sal se concentre del todo. Por eso son anuales y por eso el mismo fondo parece desnudo medio año y rojo intenso el otro medio.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Suaeda spicata", "comun": "sosa anual" },
@@ -409,7 +411,7 @@
     },
     "Teucrio lanigeri-Sideritidetum ibanyezii": {
       "nombre": "Tomillar de zamarrilla y rabogato",
-      "lectura": "Tomillar bajo sobre margas y suelos áridos, con matas cubiertas de pelo blanco que reflejan el sol y frenan la pérdida de agua. Casi todas desprenden aroma al rozarlas.",
+      "lectura": "Sobre margas áridas, el sol y la falta de agua son el filtro, y las dos plantas lo pasan con el mismo truco: una capa de pelos blancos que cubre hojas y tallos. Ese fieltro refleja la luz, baja la temperatura de la hoja y retiene junto a ella una fina capa de aire húmedo que frena la evaporación. Encima son aromáticas, y sus aceites las hacen poco apetecibles para el ganado. Aspecto blanquecino y olor fuerte son, aquí, dos síntomas del mismo problema.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Teucrium lanigerum", "comun": "zamarrilla lanuda" },
@@ -418,7 +420,7 @@
     },
     "Teucrio pseudochamaepityos-Brachypodietum ramosi": {
       "nombre": "Lastonar con zamarrilla",
-      "lectura": "Pastizal seco de lastón con zamarrillas y una multitud de plantas anuales que solo se ven en primavera. En verano queda de color pajizo y parece un erial.",
+      "lectura": "El lastón sostiene el pastizal desde abajo: sus tallos subterráneos le permiten rebrotar tras el fuego o el diente y ocupar el suelo de forma permanente. Entre sus matas queda espacio libre y algo de sombra, y ese hueco lo aprovecha cada primavera una multitud de plantas anuales que nacen, florecen y se secan en semanas. Perennes que aguantan la perturbación más anuales que escapan de la sequía: dos estrategias distintas que encajan en el mismo metro cuadrado.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Teucrium pseudochamaepitys", "comun": "zamarrilla, pinillo" },
@@ -427,7 +429,7 @@
     },
     "Teucrio webbiani-Helianthemetum origanifolii": {
       "nombre": "Tomillar de crestas calizas",
-      "lectura": "Matorral bajo y abierto de crestas y laderas de caliza, con zamarrillas y jarillas cuyas flores amarillas se abren por la mañana y pierden los pétalos ese mismo día.",
+      "lectura": "En una cresta el suelo es mínimo, el viento constante y el agua se escurre enseguida. Las dos plantas son matas leñosas y bajas, de hoja pequeña, que dependen de hongos asociados a sus raíces para arrancar del suelo los nutrientes que quedan. La jarilla ahorra al máximo en flores: las abre por la mañana y pierde los pétalos ese mismo día, pero saca muchas seguidas. Todo en esta comunidad está organizado alrededor de gastar poco.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Teucrium webbianum", "comun": "zamarrilla" },
@@ -436,7 +438,7 @@
     },
     "Withanio frutescentis-Lycietum intricati": {
       "nombre": "Matorral de oroval y cambronera",
-      "lectura": "Matas robustas y enmarañadas al pie de acantilados y en ramblas cálidas, sobre suelos removidos y con algo de sal. El oroval tiene hojas grandes y blandas, poco habituales en un sitio tan seco.",
+      "lectura": "Al pie de los cortados y en las ramblas cálidas se acumulan restos y excrementos de las aves que se posan arriba, y con ellos un suelo removido y muy rico en nitrógeno. Las dos plantas son nitrófilas y lo aprovechan; el oroval llega a permitirse hojas grandes y blandas, raras en un sitio tan seco, porque ese suelo fértil se lo consiente. Y las dos dan frutos carnosos que comen esos mismos pájaros, que las siembran otra vez donde se posan: el ave trae el abono y la semilla al mismo sitio.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Withania frutescens", "comun": "oroval" },
@@ -445,7 +447,7 @@
     },
     "Ziziphetum loti": {
       "nombre": "Espinar de azufaifo",
-      "lectura": "Grandes matas hemisféricas de azufaifo, de ramas espinosas entrelazadas, repartidas por llanos áridos. Cada una acumula arena y hojarasca y crea debajo una isla de sombra y humedad.",
+      "lectura": "El azufaifo sobrevive en llanos donde apenas llueve porque sus raíces bajan metros y metros hasta alcanzar humedad profunda; con eso mantiene verde una mata enorme en pleno agosto. Esa mata frena el viento y acumula a su alrededor arena, hojarasca y semillas, formando un montículo más fresco y fértil que el terreno de alrededor. El resultado es una isla de sombra y humedad donde se refugian plantas, insectos y reptiles que fuera no aguantarían: la comunidad entera existe gracias a una sola planta.",
       "rango": "asociación",
       "nombradaPor": [
         { "cientifico": "Ziziphus lotus", "comun": "azufaifo, arto" }

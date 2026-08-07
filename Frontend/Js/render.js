@@ -312,11 +312,12 @@ export function renderDetail() {
 }
 
 // La asociación fitosociológica de la cartografía oficial, servida de forma que la entienda quien no
-// es botánico. Se muestran tres cosas y en este orden: el nombre en llano (lo que el visitante tiene
-// delante), la lectura de qué vegetación es, y la CITA COMPLETA —nombre latino + autores y año— que
-// es el dato oficial y la referencia bibliográfica, y que por eso nunca se recorta ni se sustituye.
-// Sin diccionario cargado (sin conexión y sin caché aún) se degrada a la cita sola, que es como se
-// mostraba antes: se pierde la explicación, nunca el dato. Ver Frontend/Js/fitosociologia.js.
+// es botánico. El TITULAR es el nombre científico con su autoría —es el dato oficial y la referencia
+// bibliográfica, y por eso no se recorta ni se sustituye—, y debajo va, en orden, todo lo que hace
+// falta para descifrarlo: el nombre en llano, las plantas que dan nombre a la comunidad y la
+// explicación de por qué esas plantas crecen juntas. Sin diccionario cargado (sin conexión y sin
+// caché aún) queda la cita sola, que es como se mostraba antes: se pierde la explicación, nunca el
+// dato. Ver Frontend/Js/fitosociologia.js.
 function fitosociologiaBlock(habitat) {
   const citas = habitat.fitosociologia || [];
   if (!citas.length) return '';
@@ -325,10 +326,11 @@ function fitosociologiaBlock(habitat) {
     const a = explicaAsociacion(cadena);
     const plantas = a.nombradaPor.map((p, i) => html`${i === 0 ? '' : (i === a.nombradaPor.length - 1 ? ' y ' : ', ')}<em>${p.cientifico}</em>${p.comun ? ' (' + p.comun + ')' : ''}`);
     return html`<li class="fito-item">
-      ${a.nombre ? html`<p class="fito-name">${a.nombre}${a.rango ? html` <span class="fito-rank">${a.rango}</span>` : ''}</p>` : ''}
-      ${a.lectura ? html`<p class="detail-prose fito-read">${a.lectura}</p>` : ''}
+      <p class="fito-name"><em>${a.latino}</em>${a.rango ? html` <span class="fito-rank">${a.rango}</span>` : ''}</p>
+      ${a.autoria ? html`<p class="fito-author">${a.autoria}</p>` : ''}
+      ${a.nombre ? html`<p class="fito-plain">${a.nombre}</p>` : ''}
       ${plantas.length ? html`<p class="fito-named">Nombrada por ${plantas}</p>` : ''}
-      <p class="fito-cite"><em>${a.latino}</em>${a.autoria ? html` <span class="fito-author">${a.autoria}</span>` : ''}</p>
+      ${a.lectura ? html`<p class="detail-prose fito-read">${a.lectura}</p>` : ''}
       </li>`;
   });
   return html`<h3 class="detail-subtitle">Asociación fitosociológica</h3>
@@ -337,6 +339,7 @@ function fitosociologiaBlock(habitat) {
       <summary>¿Qué es esto y cómo se lee el nombre?</summary>
       <p class="detail-prose">${ayuda.texto}</p>
       <p class="detail-prose">${ayuda.comoSeLee}</p>
+      ${ayuda.porQueJuntas ? html`<p class="detail-prose">${ayuda.porQueJuntas}</p>` : ''}
       <dl class="fito-suffixes">${(ayuda.terminaciones || []).map(t => html`<dt><em>${t.sufijo}</em> · ${t.rango}</dt><dd>${t.significa}</dd>`)}</dl>
       <p class="detail-prose">${ayuda.autoria}</p>
       <p class="detail-prose">${ayuda.porQueImporta}</p>

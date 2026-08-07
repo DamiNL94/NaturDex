@@ -15,7 +15,8 @@
 // (v54 y no v53 porque `main` y esta rama subieron a v53 por separado, cada una con un armazón
 // distinto: dejar las dos con el mismo número habría hecho que un cliente con una ya cacheada no
 // se actualizara a la otra.)
-// v55: entran Js/fitosociologia.js y Data/fitosociologia.json (lectura en llano de la asociación).
+// v55: entran Js/fitosociologia.js y Data/fitosociologia.json (lectura en llano de la asociación),
+// y Data/glosario.json gana un término («estolón»), que también obliga a subir la versión.
 var VERSION = 'v55';
 var RUNTIME_CACHE = 'naturdex-runtime-' + VERSION;
 

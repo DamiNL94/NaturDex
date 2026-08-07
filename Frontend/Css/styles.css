@@ -162,18 +162,18 @@
 .habitat-species-chip.seen{border-color:#bcd6c4;background:#eef6ef;color:var(--leaf)}
 .habitat-species-chip span{font-size:.9rem;line-height:1}
 
-/* Asociación fitosociológica: primero lo que se entiende (nombre llano + lectura), y debajo la cita
-   oficial completa. La jerarquía tipográfica es la que hace el trabajo — el nombre llano al tamaño
-   del texto normal y la cita en cuerpo pequeño y gris — para que el dato siga estando entero y a la
-   vista sin ser lo primero que hay que descifrar. */
+/* Asociación fitosociológica. El titular es el NOMBRE CIENTÍFICO con su autoría debajo —la cita
+   oficial, íntegra— y el resto de la tarjeta lo descifra de arriba abajo: nombre llano, plantas que
+   le dan nombre y por qué crecen juntas. El nombre llano va en verde para que se lea como la
+   traducción del título y no como una línea más del cuerpo. */
 .fito-list{list-style:none;display:grid;gap:10px;margin:0;padding:0}
 .fito-item{padding:10px 12px;border:1px solid var(--line);border-radius:8px}
 .fito-name{margin:0;font-weight:800;font-size:.92rem;line-height:1.35}
 .fito-rank{margin-left:6px;padding:1px 7px;border-radius:999px;background:#e4f0e7;color:var(--leaf);font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.03em;vertical-align:middle}
+.fito-author{margin:2px 0 0;color:var(--muted);font-size:.74rem;line-height:1.4}
+.fito-plain{margin:8px 0 0;padding-top:8px;border-top:1px solid var(--line);color:var(--leaf);font-weight:800;font-size:.84rem;line-height:1.4}
+.fito-named{margin:4px 0 0;color:var(--muted);font-size:.78rem;line-height:1.45}
 .fito-item .fito-read{margin:6px 0 0;font-size:.84rem;line-height:1.5}
-.fito-named{margin:6px 0 0;color:var(--muted);font-size:.78rem;line-height:1.45}
-.fito-cite{margin:8px 0 0;padding-top:8px;border-top:1px solid var(--line);color:var(--muted);font-size:.76rem;line-height:1.45}
-.fito-author{font-style:normal}
 .fito-help{margin-top:10px;padding:0 12px;border:1px solid var(--line);border-radius:8px}
 .fito-help summary{padding:10px 0;color:var(--leaf);font-size:.8rem;font-weight:800;cursor:pointer}
 .fito-help[open] summary{border-bottom:1px solid var(--line)}

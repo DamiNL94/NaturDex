@@ -751,6 +751,17 @@
         "source": "NaturDex (divulgacion)"
     },
     {
+        "term": "estolón",
+        "definition": "Tallo rastrero que crece pegado al suelo y echa raíces allí donde toca, formando una planta nueva. Es una forma de extenderse sin depender de la semilla.",
+        "category": "botánica",
+        "aliases": [
+            "estolones",
+            "estolonífero",
+            "estolonífera"
+        ],
+        "source": "NaturDex (divulgacion)"
+    },
+    {
         "term": "Extinto (EX)",
         "definition": "Categoría de la Lista Roja de la UICN. No queda ningún individuo vivo de la especie: se ha extinguido por completo.",
         "category": "conservación (UICN)",

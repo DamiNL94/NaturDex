@@ -6,9 +6,11 @@
 // se toca, pero a quien no es botánico no le dice nada: ni qué plantas son, ni qué paisaje describe,
 // ni por qué lleva pegado un apellido y un año.
 //
-// Este módulo NO sustituye la cita: la parte en dos. El nombre latino se acompaña de su lectura en
-// llano y de las plantas que lo forman; la autoría —autores, año, `in`, `ex`, `corr.`— se conserva
-// entera porque es la referencia bibliográfica que permite rastrear el dato hasta su publicación.
+// Este módulo NO sustituye la cita: la parte en dos para poder maquetarla. El nombre latino queda de
+// titular —es lo que identifica la comunidad— con la autoría justo debajo, y el resto de la ficha se
+// dedica a descifrarlo: nombre en llano, plantas que dan nombre a la comunidad y por qué crecen
+// juntas. La autoría —autores, año, `in`, `ex`, `corr.`— se conserva entera porque es la referencia
+// bibliográfica que permite rastrear el dato hasta su publicación.
 //
 // Datos: Frontend/Data/fitosociologia.json, generado por Tools/sync-habitat-catalog.js --apply
 // desde Tools/catalogo-nacional/data/contenido/fitosociologia.json.

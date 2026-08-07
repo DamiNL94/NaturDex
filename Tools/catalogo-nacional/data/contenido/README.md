@@ -74,13 +74,16 @@ entre paréntesis sigue encontrando su entrada.
 | Campo | Qué es |
 |---|---|
 | `nombre` | El nombre en llano, lo que el visitante tiene delante: «Coscojar con espino negro». |
-| `lectura` | Una o dos frases: qué vegetación es y de qué depende. Se pinta con clase `.detail-prose`, así que el glosario resalta su vocabulario — pásale `npm run glossary:check`. |
 | `rango` | `asociación` o `alianza`. Es lo que distingue un `-etum` de un `-ion`, y la app lo muestra como etiqueta. |
 | `nombradaPor` | Las plantas que dan nombre a la asociación, con su nombre científico y el común. Es lo que convierte el latín en algo legible. |
+| `lectura` | **Por qué esas plantas crecen juntas**, no solo dónde. Dos o tres frases con esta estructura: qué filtro impone el ambiente (sal, sequía, fuego, viento, inundación, falta de suelo), con qué solución lo pasa cada planta, y a quién deja fuera —que es lo que explica que sean estas y no otras—. Si entre ellas hay una relación directa (parasitismo, planta nodriza, mismo pájaro dispersante, rebrote tras el fuego), esa es la mejor explicación y va primero. Se pinta con clase `.detail-prose`, así que el glosario resalta su vocabulario: pásale `npm run glossary:check`. |
+
+En la ficha, el **titular es el nombre científico** con la autoría justo debajo, y el resto lo
+descifra en este orden: `nombre` → `nombradaPor` → `lectura`.
 
 **La cita oficial no se toca.** Ni el nombre latino ni la autoría (`in`, `ex`, `corr.`, autores, año)
 se reescriben, se abrevian ni se traducen: son la referencia bibliográfica, la app las muestra
-íntegras y este fichero solo añade la explicación al lado. Si una asociación no tiene entrada aquí,
+íntegras y este fichero solo añade la explicación debajo. Si una asociación no tiene entrada aquí,
 la ficha sigue mostrando su cita completa; lo único que se pierde es la explicación.
 
 ## Después de editar
