@@ -539,7 +539,17 @@ export function renderTrails() {
     // hace de zona de toque (importante en móvil, que es donde se usa esto andando).
     onEachFeature: bindPopup
   }).addTo(state.trailLayer);
-  L.geoJSON(state.geo.trails, { style: trailStyle, onEachFeature: bindPopup }).addTo(state.trailLayer);
+  L.geoJSON(state.geo.trails, {
+    style: trailStyle,
+    onEachFeature: bindPopup,
+    // La atribución de las trazas NO puede depender de la capa base. Salen de OpenStreetMap (ODbL,
+    // ver Tools/build-park-trails.js) y hasta ahora el único crédito a OSM lo ponían el callejero y
+    // el paquete de Protomaps: con «Satélite (PNOA)» activo el control pasaba a acreditar solo al
+    // IGN y los senderos se pintaban sin mencionar a OSM. Va aquí, en la capa, para que Leaflet la
+    // dé de alta y de baja con ella y solo se lea cuando hay senderos dibujados. El `source` de
+    // cada sendero sigue en su popup: esto es el crédito visible permanente, no lo sustituye.
+    attribution: 'Senderos: &copy; OpenStreetMap contributors (ODbL)'
+  }).addTo(state.trailLayer);
 }
 
 export function renderProtectedAreas() {
