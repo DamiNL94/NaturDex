@@ -33,6 +33,7 @@
     "species:apply": "node Tools/sync-species-catalog.js --apply --sql Database/species-universal.sql",
     "images:species": "node Tools/catalogo-nacional/wikimedia-images.js --canonicalize --missing --write",
     "images:habitats": "node Tools/catalogo-nacional/habitat-images.js --write --sql Database/habitats-imagenes.sql",
+    "images:pois": "node Tools/catalogo-nacional/poi-images.js --write --sql Database/poi-imagenes.sql --report Docs/fotos-poi.md",
     "images:invasoras": "node Tools/catalogo-nacional/invasoras-images.js --write --sql Database/invasoras-imagenes.sql",
     "contenido:invasoras": "node Tools/catalogo-nacional/invasoras-contenido.js --write --sql Database/invasoras-contenido.sql --preview Docs/fichas-invasoras.md",
     "eidos:diff": "node Tools/eidos-diff.js",

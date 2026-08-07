@@ -360,6 +360,7 @@ una constante universal: es una decisión por espacio que hay que dejar escrita 
 npm run species:extract      # vuelca a especies-universal.json lo nuevo de los park.json
 npm run images:species       # fotos de Wikimedia con atribución
 npm run images:habitats      # portadas de hábitat
+npm run images:pois          # fotos de POIs desde la categoría de Commons del espacio
 npm run species:apply        # sincroniza los campos universales a TODOS los park.json + SQL
 npm run habitats:check       # hábitats sin descripción universal, textos con rastro de un parque
 npm run habitats:apply       # descripción por código HIC a TODOS los park.json + Data/fitosociologia.json + SQL
