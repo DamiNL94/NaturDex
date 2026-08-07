@@ -46,6 +46,35 @@ npm run hooks:install
 Para actualizar una instalación antigua: `Database/migrations.sql` antes que nada (son `ALTER`
 idempotentes). Despliegue: `DEPLOY.md`. Despliegue estático sin backend: `Docs/DESPLIEGUE_ESTATICO.md`.
 
+### Comprobaciones
+
+| Comando | Qué es | ¿Bloquea? |
+|---|---|---|
+| `npm run validate` | Los datos empaquetados de los 16 espacios: contadores, referencias, límites | **Sí**, y también en `pre-commit` |
+| `npm test` | Reglas de verificación de presencia y progreso (PHP, sin BD) | Sí |
+| `npm run typecheck` | `tsc --noEmit` sobre el AdminPanel | Sí |
+| `npm run glossary:check` | Tecnicismos nuevos sin definición en el glosario | No, es editorial |
+| `npm run taxones:duplicados` | El mismo taxón dado de alta con dos nombres | No |
+
+### Trabajar a distancia (Claude Code on the web)
+
+`.claude/hooks/session-start.sh` prepara la sesión remota: instala las dependencias de la raíz y del
+AdminPanel y activa `core.hooksPath`. Solo actúa si `CLAUDE_CODE_REMOTE=true`, así que en local no
+toca nada. Tarda ~11 s la primera vez y ~1 s después, porque el contenedor queda cacheado.
+
+Lo que **no** puede arreglar el repo es la política de egreso del entorno, que decide a qué hosts se
+puede salir. Casi todo `Tools/` vive de fuentes externas —Wikimedia, GBIF, Overpass, EIDOS, IMIDA,
+IGME, Protomaps— y con la política restringida fallan con errores de red que no explican nada:
+
+```bash
+npm run red:check                       # qué fuentes están abiertas hoy y qué se rompe sin ellas
+node Tools/check-egress.js --allowlist  # los hosts cerrados, para pegarlos en los ajustes
+```
+
+Pregunta por `CONNECT` al proxy, así que distingue una denegación de política de una caída del
+servicio. La lista de hosts vive en `Tools/check-egress.js`: si añades una fuente nueva a una
+herramienta, añádela también ahí.
+
 ---
 
 ## 2. Mapa del repositorio
@@ -360,10 +389,12 @@ una constante universal: es una decisión por espacio que hay que dejar escrita 
 npm run species:extract      # vuelca a especies-universal.json lo nuevo de los park.json
 npm run images:species       # fotos de Wikimedia con atribución
 npm run images:habitats      # portadas de hábitat
+npm run images:pois          # fotos de POIs desde la categoría de Commons del espacio
 npm run species:apply        # sincroniza los campos universales a TODOS los park.json + SQL
 npm run habitats:check       # hábitats sin descripción universal, textos con rastro de un parque
 npm run habitats:apply       # descripción por código HIC a TODOS los park.json + Data/fitosociologia.json + SQL
 node Tools/build-park-trails.js <slug>
+npm run pois:build <slug>    # candidatos a POI recortados al polígono (NO escribe park.json)
 npm run tiles:build <slug>
 npm run validate             # hasta verde
 npm run glossary:check       # vocabulario nuevo sin definición
@@ -371,7 +402,11 @@ npm run taxones:duplicados   # el mismo taxón con dos nombres
 ```
 
 POIs **solo desde fuente documental** (PORN/PRUG, red de senderos oficial, cartografía del organismo
-gestor). Un POI sin fuente no entra. Después: `status` a `available` en `parks-index.json`, cargar la
+gestor). Un POI sin fuente no entra. `pois:build` **no** salta esa regla: barre OpenStreetMap dentro
+del límite —vía Overpass, o vía el `base.pmtiles` del propio parque cuando no hay red— y deja los
+candidatos con su coordenada en `Tools/catalogo-nacional/out/<slug>-poi-candidatos.md`. El hecho, la
+fuente, la foto y la descripción se ponen a mano; la herramienta solo dice dónde mirar.
+Después: `status` a `available` en `parks-index.json`, cargar la
 BD, y actualizar `Docs/rollout/ESTADO.md` con el informe de cierre (contadores, cobertura de fotos,
 especies sin hábitat, huecos conocidos y qué contrastar en campo).
 
