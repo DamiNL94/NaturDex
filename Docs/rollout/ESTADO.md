@@ -7,8 +7,8 @@
 | Comunidad | Provincia | Espacio | Figura | Slug | Nivel | Fecha | Notas / huecos |
 |---|---|---|---|---|---|---|---|
 | Región de Murcia | Murcia | Cabo Cope y Puntas de Calnegre | Parque Regional | `cabo-cope-puntas-calnegre` | N2 | 2026-08-01 | Piloto. ENP **ES620007**. LIC/ZEC ES6200031 (Cabo Cope) · ES6200012 (Calnegre) · ZEPA ES0000261. **15 hábitats** (retirados el 1110 y el 9560 el 2026-08-01, ver informe), 175 especies. Fotos de florasilvestre.es pendientes de licencia |
-| Región de Murcia | Murcia | Cuatro Calas | Paisaje Protegido | `cuatro-calas` | N2 | 2026-08-01 | Límite IMIDA/CARM. ENP **ES620004** (`ENP000007` es el id interno del IMIDA, no el código oficial). LIC/ZEC ES6200010 · ZEPA marina ES0000507. 7 hábitats (3 prioritarios, 177 ha = 79 % del espacio), **102 especies** (73 flora, 29 fauna incl. 27 aves de la lista oficial Natura 2000), 97 con foto, 0 POIs. Ver informe de cierre §"Cuatro Calas: Fase 2 cerrada". **Fase 3 abierta el 2026-08-07**: 4 candidatos a POI a la espera de visto bueno; PORN inexistente, 1 LIG (La Carolina/Punta Parda), 0 BIC, OSM barrido. IELIG y Commons SIN consultar (red cerrada) — §"2026-08-07" |
-| Región de Murcia | Murcia | Sierra Espuña | Parque Regional | `sierra-espuna` | N2 | 2026-07-28 | ENP **ES620013**, 17.693,2 ha. LIC/ZEC ES0000173 · ZEPA ES0000173. 13 hábitats, **191 especies** tras el recorte a catálogo oficial + evidencia GBIF (121 flora, 70 fauna incl. 48 aves y 9 quirópteros), 155 con foto (149 de Wikipedia/Commons), 0 POIs (hueco documentado). Ver informe de cierre §"Sierra Espuña: Fase 2 cerrada" y §"Sierra Espuña: recorte a especies con respaldo oficial". **Fase 3 abierta el 2026-08-07**: 10 candidatos a POI a la espera de visto bueno; 2 BIC localizados (Pozos de la Nieve, Santuario de Santa Eulalia), OSM barrido. **PRUG aprobado por Decreto 6/2026 y sin abrir** — es la fuente que puede dar de golpe los picos y collados. IELIG y Commons SIN consultar (red cerrada) — §"2026-08-07" |
+| Región de Murcia | Murcia | Cuatro Calas | Paisaje Protegido | `cuatro-calas` | N2 | 2026-08-01 | Límite IMIDA/CARM. ENP **ES620004** (`ENP000007` es el id interno del IMIDA, no el código oficial). LIC/ZEC ES6200010 · ZEPA marina ES0000507. 7 hábitats (3 prioritarios, 177 ha = 79 % del espacio), **102 especies** (73 flora, 29 fauna incl. 27 aves de la lista oficial Natura 2000), 97 con foto, 0 POIs. Ver informe de cierre §"Cuatro Calas: Fase 2 cerrada". **Fase 3 abierta el 2026-08-07**: 4 candidatos a POI a la espera de visto bueno; PORN inexistente, 0 BIC, OSM barrido con Overpass. **IELIG consultado de primera mano: 2 LIG dentro del límite, `BE005` «Playa de Cuatro Calas» y `BE006` «Vulcanismo de La Carolina»** (corrige el «La Carolina/Punta Parda» de la primera sesión). Commons consultado, licencias sin verificar — §"2026-08-07 (b)" y `n3-cuatro-calas-sierra-espuna.md` |
+| Región de Murcia | Murcia | Sierra Espuña | Parque Regional | `sierra-espuna` | N2 | 2026-07-28 | ENP **ES620013**, 17.693,2 ha. LIC/ZEC ES0000173 · ZEPA ES0000173. 13 hábitats, **191 especies** tras el recorte a catálogo oficial + evidencia GBIF (121 flora, 70 fauna incl. 48 aves y 9 quirópteros), 155 con foto (149 de Wikipedia/Commons), 0 POIs (hueco documentado). Ver informe de cierre §"Sierra Espuña: Fase 2 cerrada" y §"Sierra Espuña: recorte a especies con respaldo oficial". **Fase 3 abierta el 2026-08-07**: 13 candidatos a POI a la espera de visto bueno; 2 BIC confirmados con su norma (Pozos de la Nieve, Sitio de Interés Etnográfico; Santuario de Santa Eulalia, *Decreto 96/2002*), OSM barrido con Overpass (28 pozos de nieve uno a uno, Sanatorio situado). **IELIG consultado: 0 LIG dentro del límite**, «no hay» de primera mano. **Anexo I del PRUG (Decreto 6/2026) sigue sin abrir**, ahora por protección anti-bot del BORM — es la fuente que puede dar de golpe los picos y collados. Commons consultado, licencias sin verificar — §"2026-08-07 (b)" y `n3-cuatro-calas-sierra-espuna.md` |
 | Región de Murcia | Murcia | Carrascoy y El Valle | Parque Regional | `carrascoy-y-el-valle` | N1 | 2026-07 | ENP **ES620008**, 16.685,8 ha. LIC/ZEC ES6200002 · ZEPA ES0000269 |
 | Región de Murcia | Murcia | Sierra de la Pila | Parque Regional | `sierra-de-la-pila` | N1 | 2026-07 | ENP **ES620018**, 8851,0 ha. LIC/ZEC ES6200003 · ZEPA ES0000174 |
 | Región de Murcia | Murcia | Sierra de El Carche | Parque Regional | `sierra-de-el-carche` | N1 | 2026-07 | ENP **ES620017**, 5869,1 ha. LIC/ZEC ES6200009 |
@@ -50,6 +50,58 @@ delimitación regional, así que conserva el límite del MITECO y no pasa por
 > 1.489 vértices), porque reconstruye `geo/parque.geojson` desde la capa nacional para todos sus
 > objetivos. Ahora detecta la marca `CodigoIMIDA` —que sólo escribe el refinador— y **deja intacto**
 > el espacio, avisando. Para rehacer uno de cero hay que borrar su carpeta.
+
+---
+
+## 2026-08-07 (b) — La cascada de la Fase 3, recorrida: **sigue abierta, y con menos huecos**
+
+Segunda sesión de N3 el mismo día, en otra máquina. **Ninguno de los dos espacios sube de nivel**:
+esto es el paso 2 del §4.5 y está a la espera del visto bueno. `park.json` sin tocar.
+
+**El informe completo, con las dos tablas de candidatos, está en
+`Docs/rollout/n3-cuatro-calas-sierra-espuna.md`.** Aquí solo lo que cambia el estado del rollout.
+
+**Se invirtió el bloqueo.** La sesión anterior tenía Node y no tenía red; ésta **tiene red y no tiene
+Node**. No se ha podido ejecutar ni una herramienta del repo —ni `red:check`, ni `pois:build`, ni
+`validate`—, así que el recorte por polígono del §4.3.3 se rehízo con un script equivalente de
+PowerShell, **validado contra la salida ya existente de la herramienta con 8 puntos de control, 8
+aciertos**. Antes del alta hay que reejecutar `pois:build` en una máquina con Node.
+
+**Lo que se cierra de verdad, porque se leyó de primera mano:**
+
+- **IELIG.** Sierra Espuña **no tiene ningún LIG** dentro del límite (0 polígonos y 0 puntos en el
+  servicio del IGME). Es un «no hay» que ya vale como «no hay».
+- **IELIG en Cuatro Calas: dos, y el ledger los tenía mal.** Lo que había registrado como un LIG «La
+  Carolina (Punta Parda)» —dato de resumen de buscador— es en realidad **`BE006` «Vulcanismo de La
+  Carolina»**, y Punta Parda no entra en su denominación. Además **se le había escapado entero el
+  `BE005` «Playa de Cuatro Calas»**, que es el más rico de los dos (geomorfológico, estratigráfico,
+  paleontológico, tectónico y sedimentológico). Los dos caen **dentro** del polígono oficial.
+- **BIC.** Los dos de Sierra Espuña quedan con su norma: **Pozos de la Nieve**, BIC como *Sitio de
+  Interés Etnográfico*; **Santuario de Santa Eulalia de Mérida**, BIC categoría Monumento por
+  ***Decreto 96/2002, de 7 de junio***.
+- **Overpass** ve lo que el basemap no (`historic=*` y `man_made=*` no viajan en las teselas): **89
+  elementos dentro** en Sierra Espuña, con los **28 pozos de nieve uno a uno** y su capilla en ruinas,
+  el **Caño de Espuña** (acueducto), la **Casa Forestal de Huerta Espuña** y la **Garita del
+  Turullón**, que no estaban en la lista anterior.
+- **Uno de los tres candidatos sin coordenada queda situado**: el **Sanatorio de Tuberculosos**
+  (`way/132482920`, 37.868303 / −1.512129). Los otros dos, el cuartel de Carabineros de Calarreona y
+  la duna fósil, **no están en OSM** — barrido completo de `historic`, `man_made` y `natural`. Ya no
+  es «falta mirar Overpass», es «OSM no los tiene».
+- **Commons responde.** 10 archivos de la Cala de los Cocederos (dos retratan los depósitos de
+  esparto, que es justo el hecho del candidato) y 1 de los Pozos de la Nieve. **Licencias sin
+  verificar**: eso es `images:pois`, que necesita Node.
+
+**Lo que sigue cerrado, y por qué importa el matiz.** El **Anexo I del PRUG** —el cuerpo del plan—
+**sigue sin leerse**, pero ya no por la red: el articulado del Decreto 6/2026 sí se leyó y **enumera
+sus anexos sin que aparezca ningún «anexo de valores»** (Anexo I PRUG, II Gebas, III Llano de las
+Cabras, y dos apéndices que son planes de recuperación de dos plantas). El PDF completo son ~65 MB y
+al reintentar la descarga **el BORM levantó un captcha de Radware**; `murcianatural.carm.es` redirige
+al mismo verificador. **No se intentó sortearlo y no debe intentarse**: la vía limpia es bajarlo a
+mano desde un navegador y leerlo con `pdftotext -layout`, como se hizo con el Atlas de Hábitats.
+
+> **Aviso que excede la Fase 3.** Existe una **Ley 1/2026, de 2 de marzo, de modificación de los
+> límites del Parque Regional de Sierra Espuña**. Si mueve el límite, afecta a `parque.geojson` y por
+> tanto al recorte de POIs, senderos y hábitats. **Sin comprobar.**
 
 ---
 
