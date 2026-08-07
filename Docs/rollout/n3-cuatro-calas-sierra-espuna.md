@@ -1,8 +1,11 @@
 # Fase 3 (N3) de Cuatro Calas y Sierra Espuña — la cascada, recorrida
 
 > Segunda sesión de N3, **2026-08-07**. Sigue el §4 de `Docs/prompts/e-rollout-nacional.md`.
-> **Ninguno de los dos espacios sube de nivel todavía**: esto es el paso 2 del §4.5 —la tabla de
-> candidatos— y está **a la espera del visto bueno**. Nadie ha tocado `park.json`.
+> La tabla de candidatos del paso 2 **recibió el visto bueno** y los POIs están **dados de alta**:
+> **4 en Cuatro Calas y 13 en Sierra Espuña** (§7).
+> **Aun así ninguno de los dos sube a N3.** El §5 exige, además de la cascada, que la BD tenga sus
+> filas y que `npm run validate` pase; aquí no hay ni Node ni contenedor de BD. Los dos siguen
+> en **N2** con su capa de POIs escrita y el SQL preparado sin aplicar.
 >
 > La sesión anterior (§"2026-08-07" de `ESTADO.md`) dejó la cascada a medias porque el entorno no
 > tenía salida a las fuentes. Aquí la red **sí** está abierta, y eso cambia el resultado de las
@@ -16,16 +19,15 @@
 |---|---|
 | Red | **Abierta** a Overpass, IGME, Wikimedia y Nominatim. Se ha leído de primera mano |
 | BORM y CARM | **Cerrados por protección anti-bot** (Radware / `validate.perfdrive.com`). Ver §2 |
-| Node.js | **No instalado en esta máquina.** `npm run …` no existe aquí |
+| Node.js | **No estaba; se instaló a mitad de sesión** (v24.19.0 LTS). Ver abajo |
+| Docker / BD | **No hay.** Por eso el SQL queda sin aplicar |
 
-**Node no está.** Eso significa que en esta sesión **no se ha podido ejecutar ninguna herramienta del
-repo**: ni `red:check`, ni `pois:build`, ni `validate`, ni `images:pois`. Es la inversa exacta de la
-sesión anterior, que tenía Node pero no red.
-
-El recorte por polígono —lo que hace `build-park-pois.js` con el §4.3.3— se ha rehecho a mano con un
-script de PowerShell equivalente (ray casting sobre el `MultiPolygon` de `geo/parque.geojson`, con
-huecos, y distancia mínima al borde para el margen de ~50 m). **Se ha validado contra la salida ya
-existente de la herramienta** con cuatro puntos de control por espacio, y coincide en los ocho:
+**Node no estaba al empezar**, así que la primera mitad de la sesión se hizo sin ninguna herramienta
+del repo: era la inversa exacta de la sesión anterior, que tenía Node pero no red. El recorte por
+polígono del §4.3.3 se rehízo con un script de PowerShell equivalente (ray casting sobre el
+`MultiPolygon` de `geo/parque.geojson`, con huecos, y distancia mínima al borde para el margen de
+~50 m), **validado contra la salida ya existente de la herramienta** con cuatro puntos de control por
+espacio, y coincidiendo en los ocho:
 
 | Punto de control | Esperado (informe del basemap) | Obtenido |
 |---|---|---|
@@ -37,10 +39,30 @@ existente de la herramienta** con cuatro puntos de control por espacio, y coinci
 | Cala de las Tortugas | fuera | FUERA (407 m) |
 | Islote Cama de Los Novios | fuera | FUERA (253 m) |
 
-El script está en el scratchpad de la sesión, **no en el repo**: es un apaño para no perder la
-sesión, no una herramienta. Lo que manda sigue siendo `build-park-pois.js`, y **antes del alta hay
-que reejecutarlo en una máquina con Node** para que las coordenadas de aquí queden confirmadas por la
-herramienta de verdad.
+El script está en el scratchpad de la sesión, **no en el repo**: era un apaño, no una herramienta.
+
+**Ya no hace falta fiarse de él.** Instalado Node (v24.19.0 LTS, ZIP oficial en
+`%LOCALAPPDATA%\Programs\nodejs`, SHA256 verificado, sin admin), se ejecutaron las herramientas de
+verdad y **confirman el trabajo hecho a mano**:
+
+- **`npm run validate` en verde**: «Validación superada (16 espacios: 3 completos + 13 fichas base,
+  **5 avisos**)», y en las dos fichas `coherencia OK: … 4 POIs` y `… 13 POIs`. Los 5 avisos son
+  preexistentes y ajenos a esta capa (aves y quirópteros sin hábitat, dos especies sin foto).
+- **`npm run pois:build` con Overpass** en los dos espacios. Cruzando contra `park.json`, reconoce
+  las altas como duplicados por el §4.3.7 —`playa-de-calarreona`, `playa-de-los-cocedores`,
+  `pozos-de-la-nieve`, `santuario-de-santa-eulalia`, `casas-de-malvariche`, `torre-del-azaraque`,
+  `centro-de-visitantes-ricardo-codorniu`, `capilla-de-la-virgen-del-rocio`—, y en Cuatro Calas los
+  dos únicos candidatos que le quedan son justo los que se dejaron fuera a propósito (Playa de la
+  Carolina y Playa de la Higuerica).
+- **`npm run red:check`**: 16 de 17 fuentes abiertas; solo falla el mirror
+  `overpass.openstreetmap.fr` (403). Ojo con la lectura: da `www.borm.es` por **abierto**, porque
+  comprueba alcance del host, y el captcha de Radware salta al pedir el documento (§2).
+
+> **Diferencia anotada.** El centroide que Overpass da hoy para `Playa de Calarreona`
+> (37.383606, −1.619603) está a unos 133 m del que se registró (37.383513, −1.621103, del basemap del
+> repo). Los dos son puntos representativos de una playa; **se conserva el registrado porque cae
+> estrictamente dentro del polígono**, mientras que el centroide de Overpass queda fuera y solo entra
+> por el margen de 50 m.
 
 ---
 
@@ -214,12 +236,77 @@ no lo hay. Sin licencia comprobada, `image: null` (§4.5 paso 4).
 
 ---
 
-## 7. Qué falta para cerrar el N3
+## 7. El alta: qué se escribió y con qué decisiones
 
-1. **Abrir el Anexo I del PRUG** a mano (§2). Es lo único que puede mover los picos y collados.
-2. **Fuente del hecho** para Arco de Sigismondi, Los Ojos del Dragón y Ermita de Santa Leocadia; sin
-   ella no entran (§4.3.1).
-3. **Resolver las tres decisiones** del §5 y la del nº 3 de Cuatro Calas.
-4. **Reejecutar `npm run pois:build`** en una máquina con Node para que las coordenadas de aquí las
-   confirme la herramienta del repo, y `npm run images:pois` para las fotos.
+**17 POIs**: 4 en Cuatro Calas y 13 en Sierra Espuña. Escritos en el bloque `pointsOfInterest` de
+cada `park.json` con los mismos diez campos del piloto, `counts.pointsOfInterest` actualizado y
+`version` 2 → 3 en los dos manifiestos para que el offline revalide.
+
+### Las cuatro decisiones, resueltas
+
+1. **`BE005` entra renombrado** como **«Conglomerados de Cuatro Calas»**, con la denominación oficial
+   y el código en `source`, para que la chincheta no se lea como «aquí está el parque».
+2. **Los pozos, dos POIs**: el conjunto (`approx`, sobre el Pozo 1) y el **Pozo de la nieve de Mula**
+   aparte. Los otros 26 no se pinchan uno a uno.
+3. **Los hornos, un POI sobre el que tiene nombre**: «Hornos de cal del Barranco de Argüelles»,
+   `approx`, con el nombre propio en el título y los otros ocho citados en `source`.
+4. **Gebas: solo entra la Capilla de la Virgen del Rocío.** Ver el aviso de abajo.
+
+> **Corrección al ledger, encontrada al dar el alta.** La sesión anterior dio por hecho que la
+> Capilla de la Virgen del Rocío, la Ermita y el Mirador de Gebas caían **las tres** dentro de Sierra
+> Espuña. Comprobado punto por punto contra los dos polígonos oficiales, **solo la Capilla lo hace**
+> (253 m dentro). La **Ermita de Gebas** (*Ermita de la Purísima*, `way/902032036`, con su
+> inscripción «ERMITA DE GEBAS / AÑO 1893 / RESTAURADA / AÑO 1998») queda **324 m fuera de Sierra
+> Espuña y 547 m fuera de Barrancos de Gebas**: está en el caserío, que no es de ninguno de los dos
+> espacios. La «Fuente Mirador de Gebas» es un punto de agua (§4.1) y también cae fuera. Por el
+> §4.3.3 no pueden entrar en ningún parque.
+
+### Los que NO entraron, y por qué
+
+| Nombre | Regla |
+|---|---|
+| Arco de Sigismondi · Los Ojos del Dragón · Ermita de Santa Leocadia | **§4.3.1**: no se les encontró fuente del hecho. Tienen coordenada, pero un POI sin fuente no entra |
+| Ermita de Gebas · Fuente Mirador de Gebas | **§4.3.3**: fuera de los dos polígonos |
+| Playa de la Higuerica | **§4.1**: el hecho geológico que la sostenía es el `BE005`, que entra por su cuenta |
+
+### Comprobación
+
+Primero a mano, y después **con el validador del repo, que confirma el resultado** (§1):
+`npm run validate` **en verde**, con `coherencia OK: … 4 POIs` y `… 13 POIs`.
+
+Lo comprobado sobre esta capa, limpio en los dos espacios: JSON válido · los diez campos del piloto,
+ni uno más ni uno menos · `id` en slug estable y único · `type` dentro del vocabulario cerrado del
+§4.1 · coordenada presente, distinta de `[0,0]` y en rango · `source` no vacío · **pertenencia por
+polígono: 15 dentro y 2 en el margen de 50 m, 0 fuera** · sin dos POIs a menos de 50 m entre sí
+(§4.3.7) · `park.json`, `manifest.json` y el SQL coinciden en slugs, coordenadas y cuentas.
+
+**Ninguno de los 17 lleva foto** (`image: null`). Commons tiene material —sobre todo para los
+Cocedores— pero las licencias no se han verificado, y el §4.5 manda hueco antes que foto dudosa.
+
+### Base de datos
+
+`Database/n3-pois-cuatro-calas-sierra-espuna.sql`, idempotente (`ON DUPLICATE KEY UPDATE` sobre la
+clave única `(park_id, slug)`). **Está sin aplicar**: no hay contenedor de BD en esta máquina. Sin
+él, un despliegue con backend seguirá sirviendo los dos espacios con 0 POIs, porque
+`Frontend/Js/data.js` da prioridad a la API sobre el `park.json` empaquetado.
+
+```bash
+docker exec -i naturdex-db-1 sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" mysql naturadex' < Database/n3-pois-cuatro-calas-sierra-espuna.sql
+```
+
+---
+
+## 8. Qué falta para que los dos cierren el N3
+
+**Cuatro Calas está a un paso: le falta solo el punto 1.** Su cascada está agotada y el validador
+pasa.
+
+1. **Aplicar el SQL.** Único requisito del §5 que queda en Cuatro Calas. No hay Docker ni contenedor
+   de BD en esta máquina, así que `Database/n3-pois-cuatro-calas-sierra-espuna.sql` está escrito y
+   sin aplicar.
+2. **Abrir el Anexo I del PRUG** a mano (§2). Es lo único que le falta a la cascada de **Sierra
+   Espuña**, y lo único que puede mover los 71 picos y 28 collados.
+3. **`npm run images:pois`** para resolver las fotos: los 17 POIs están con `image: null`.
+4. **Fuente del hecho** para Arco de Sigismondi, Los Ojos del Dragón y Ermita de Santa Leocadia, si
+   se quiere recuperarlos.
 5. Comprobar si la **Ley 1/2026** mueve el límite del parque (§2).

@@ -1085,7 +1085,203 @@
       "imageNote": "Portada ilustrada con Mimbre (Salix pedicellata), la especie que da nombre al hábitat."
     }
   ],
-  "pointsOfInterest": [],
+  "pointsOfInterest": [
+    {
+      "id": "pozos-de-la-nieve",
+      "name": "Pozos de la Nieve",
+      "type": "Cultural",
+      "description": "Conjunto de 28 pozos de nieve repartidos en dos grupos separados por menos de un kilómetro, en las umbrías de Alhama y Totana. Desde finales del siglo XVI se prensaba aquí la nieve para convertirla en hielo y bajarla a los hospitales y a las ciudades del Reino de Murcia; su apogeo fueron los siglos XVII y XVIII. Está declarado Bien de Interés Cultural con categoría de Sitio de Interés Etnográfico, y el conjunto incluye además casas y una ermita, hoy en ruinas. Dos de los pozos del término de Totana están restaurados y se visitan.",
+      "coordinates": [
+        37.869322,
+        -1.570733
+      ],
+      "image": null,
+      "source": "Bien de Interés Cultural, categoría Sitio de Interés Etnográfico (Dirección General de Bienes Culturales, Región de Murcia). Posición de los 28 pozos en OpenStreetMap (man_made=ice_house, ODbL). approx: la coordenada es la del Pozo 1 (node/8543844778) y representa el conjunto.",
+      "approx": true,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "pozo-de-la-nieve-de-mula",
+      "name": "Pozo de la nieve de Mula",
+      "type": "Cultural",
+      "description": "Pozo de nieve aislado, a unos tres kilómetros y medio al norte del conjunto principal, cartografiado con nombre propio como Pozo 28. Pertenece al mismo sistema de arquitectura del frío declarado Bien de Interés Cultural, pero queda fuera de los dos grupos de Alhama y Totana. Su nombre lo vincula a la ciudad de Mula como destinataria de su hielo, extremo pendiente de contrastar.",
+      "coordinates": [
+        37.900506,
+        -1.558394
+      ],
+      "image": null,
+      "source": "OpenStreetMap node/8543903956 (historic=yes, man_made=ice_house, ODbL). El conjunto de pozos de nieve está declarado BIC como Sitio de Interés Etnográfico.",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "santuario-de-santa-eulalia",
+      "name": "Santuario de Santa Eulalia de Mérida",
+      "type": "Religioso",
+      "description": "Ermita levantada en 1574 y ampliada después con edificaciones anexas hasta formar un conjunto. Conserva artesonado mudéjar y un ciclo de pinturas murales realizado entre 1601 y 1624 que recubre los muros del templo. Está declarada Bien de Interés Cultural con categoría de Monumento.",
+      "coordinates": [
+        37.800765,
+        -1.557502
+      ],
+      "image": null,
+      "source": "Decreto 96/2002, de 7 de junio, del Consejo de Gobierno de la Región de Murcia, por el que se declara bien de interés cultural, con categoría de monumento, la iglesia de Santa Eulalia de Mérida, en Totana. Posición: OpenStreetMap way/152263929 (ODbL).",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "sanatorio-de-tuberculosos",
+      "name": "Sanatorio de Tuberculosos de Sierra Espuña",
+      "type": "Cultural",
+      "description": "Ruinas del sanatorio antituberculoso levantado en la sierra para aprovechar el clima de altura, el tratamiento habitual antes de que los antibióticos hicieran innecesario el aislamiento en montaña. El edificio está hoy en ruinas y sin uso.",
+      "coordinates": [
+        37.868303,
+        -1.512129
+      ],
+      "image": null,
+      "source": "OpenStreetMap way/132482920 (historic=building, building=hospital, ruins=yes, ODbL); denominación confirmada en Nominatim. Fechas de construcción y cierre pendientes de contrastar con fuente documental.",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "torreon-de-los-exploradores",
+      "name": "Torreón de los Exploradores",
+      "type": "Cultural",
+      "description": "Torre junto al antiguo campamento de los Exploradores. Es el punto elevado que sí se pisa en este sector de la sierra: la cima del Morrón, a 1.583 m, la ocupa el Escuadrón de Vigilancia Aérea nº 13 y es zona militar en activo, cerrada al paso.",
+      "coordinates": [
+        37.861787,
+        -1.572962
+      ],
+      "image": null,
+      "source": "OpenStreetMap way/783436635 (man_made=tower, historic=yes, ODbL). El acuartelamiento del EVA-13 figura en OpenStreetMap como zona militar.",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "cano-de-espuna",
+      "name": "Caño de Espuña",
+      "type": "Cultural",
+      "description": "Conducción hidráulica histórica que lleva el agua captada en la sierra hacia el llano, cartografiada como acueducto en varios tramos.",
+      "coordinates": [
+        37.867086,
+        -1.499334
+      ],
+      "image": null,
+      "source": "OpenStreetMap relation/13221261 (historic=aqueduct, ODbL). approx: la coordenada es el centro de una obra lineal, no un punto de la propia conducción. Época y función pendientes de contrastar con fuente documental.",
+      "approx": true,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "casas-de-malvariche",
+      "name": "Casas de Malvariche",
+      "type": "Cultural",
+      "description": "Caserío abandonado en el sector noroeste del parque, hoy en ruinas. A pocos cientos de metros quedan la Casa de los Quintana y la Casa del Guarda, del mismo poblamiento disperso anterior a la repoblación forestal de la sierra.",
+      "coordinates": [
+        37.887263,
+        -1.598814
+      ],
+      "image": null,
+      "source": "OpenStreetMap way/698763176 (historic=ruins, ODbL); Casa de los Quintana way/698763175 y Casa del Guarda way/698763173.",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "casa-forestal-de-huerta-espuna",
+      "name": "Casa Forestal de Huerta Espuña",
+      "type": "Cultural",
+      "description": "Casa forestal de Huerta Espuña, en el mismo sector que el Centro de Visitantes. Está marcada como elemento histórico y pertenece al aparato de gestión del monte que acompañó a la repoblación forestal de la sierra; su papel concreto en ella está pendiente de contrastar.",
+      "coordinates": [
+        37.857896,
+        -1.516811
+      ],
+      "image": null,
+      "source": "OpenStreetMap way/900533315 (historic=yes, ODbL). Pendiente de contrastar con fuente documental.",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "garita-del-turullon",
+      "name": "Garita del Turullón",
+      "type": "Paisajístico",
+      "description": "Torre en el borde oriental de la sierra, asomada al valle del Guadalentín. Consta como torre en la cartografía libre; si es un puesto de vigilancia de incendios o tiene otro origen está pendiente de comprobar en campo.",
+      "coordinates": [
+        37.861313,
+        -1.488209
+      ],
+      "image": null,
+      "source": "OpenStreetMap way/553637712 (man_made=tower, ODbL). Uso y época pendientes de contrastar.",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "centro-de-visitantes-ricardo-codorniu",
+      "name": "Centro de Visitantes Ricardo Codorníu",
+      "type": "Acceso",
+      "description": "Centro de visitantes y sede de gestión del parque, y su principal puerta de entrada. Lleva el nombre del ingeniero de montes que dirigió la repoblación forestal de Sierra Espuña a finales del siglo XIX.",
+      "coordinates": [
+        37.855798,
+        -1.512696
+      ],
+      "image": null,
+      "source": "OpenStreetMap way/170061146 (amenity=ranger_station, tourism=information, historic=house, ODbL).",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "torre-del-azaraque",
+      "name": "Torre del Azaraque",
+      "type": "Cultural",
+      "description": "Torre en ruinas en el extremo oriental del parque, junto a las Casas del Azaraque. Queda a unos quince metros del límite oficial, dentro del margen con el que se recortan las capas del espacio.",
+      "coordinates": [
+        37.837443,
+        -1.471796
+      ],
+      "image": null,
+      "source": "OpenStreetMap way/1097841454 (historic=ruins, man_made=tower, ODbL). Época y función pendientes de contrastar con fuente documental.",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "hornos-de-cal-del-barranco-de-arguelles",
+      "name": "Hornos de cal del Barranco de Argüelles",
+      "type": "Cultural",
+      "description": "El Horno del Barranco de Argüelles es el único con nombre propio de un conjunto de nueve hornos de cal repartidos por el parque; los otros ocho están cartografiados sin nombre. Son estructuras de piedra donde se calcinaba caliza para obtener cal, un oficio ligado al aprovechamiento tradicional del monte.",
+      "coordinates": [
+        37.858432,
+        -1.532187
+      ],
+      "image": null,
+      "source": "OpenStreetMap way/1047229110, «Horno del Barranco de Argüelles» (historic=yes, man_made=kiln, ruins=yes, ODbL); otros ocho hornos sin nombre dentro del límite. approx: la coordenada es la del horno con nombre y representa el conjunto.",
+      "approx": true,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "capilla-de-la-virgen-del-rocio",
+      "name": "Capilla de la Virgen del Rocío",
+      "type": "Religioso",
+      "description": "Capilla en el borde nororiental del parque, en el término de Alhama de Murcia. Culturalmente pertenece al caserío de Gebas, con el que la enlaza el camino que la une a la Ermita de Gebas; geométricamente, en cambio, cae dentro del Parque Regional de Sierra Espuña y no dentro del Paisaje Protegido de los Barrancos de Gebas.",
+      "coordinates": [
+        37.896804,
+        -1.459874
+      ],
+      "image": null,
+      "source": "OpenStreetMap way/989858047 (amenity=place_of_worship, building=chapel, ODbL). Pertenencia comprobada por point-in-polygon contra geo/parque.geojson: dentro de Sierra Espuña (253 m del borde) y fuera de Barrancos de Gebas (1.218 m).",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    }
+  ],
   "species": [
     {
       "id": 1,

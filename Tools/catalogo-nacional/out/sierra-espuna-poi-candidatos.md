@@ -8,11 +8,10 @@
 | | |
 |---|---|
 | Espacio | Sierra Espuña (`sierra-espuna`) |
-| Fuente consultada | basemap Protomaps del repo (`Frontend/Data/parks/murcia/sierra-espuna/tiles/base.pmtiles`, ODbL) |
-| Basemap | zoom máx. 15, recorte -1.6663,37.7946 → -1.4487,37.9434 |
-| Candidatos dentro del límite | 186 |
-| Fuera del polígono (descartados) | 81 |
-| Descartados por regla | 177 |
+| Fuente consultada | OpenStreetMap vía Overpass (2026-08-07) |
+| Candidatos dentro del límite | 157 |
+| Fuera del polígono (descartados) | 310 |
+| Descartados por regla | 146 |
 
 ## Candidatos
 
@@ -21,192 +20,163 @@ de la etiqueta de OSM: los ocho del vocabulario cerrado del §4.1, y quien redac
 
 | Nombre | `id` propuesto | Tipo sug. | Coordenada | Origen | A revisar |
 |---|---|---|---|---|---|
-| Area Recreativa Casa Leiva | `area-recreativa-casa-leiva` | Acceso | 37.868245, -1.505323 | basemap pois | a 10 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Área Recreativa de Balsa Chica | `area-recreativa-de-balsa-chica` | Acceso | 37.822506, -1.582136 | basemap pois | — |
-| Área Recreativa de Balsa Grande | `area-recreativa-de-balsa-grande` | Acceso | 37.825302, -1.583273 | basemap pois | — |
-| Area Recreativa Fuente del Hilo | `area-recreativa-fuente-del-hilo` | Acceso | 37.858246, -1.522406 | basemap pois | también mapeado como: Fuente del Hilo (spring), Refugio Fuente del Hilo (shelter) |
-| Area Recreativa Fuente La Portuguesa | `area-recreativa-fuente-la-portuguesa` | Acceso | 37.933860, -1.511081 | basemap pois | también mapeado como: Fuente de la Portuguesa (spring) |
-| Area Recreativa La Perdiz | `area-recreativa-la-perdiz` | Acceso | 37.868777, -1.520732 | basemap pois | a 18 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Área Recreativa Las Alquerías | `area-recreativa-las-alquerias` | Acceso | 37.834255, -1.580392 | basemap pois | también mapeado como: Zona de Acampada Las Alquerías (camp_site) |
-| Centro de Visitantes y Gestión Ricardo Codorníu | `centro-de-visitantes-y-gestion-ricardo-codorniu` | Acceso | 37.855798, -1.512696 | basemap pois | a 21 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) · también mapeado como: Espubike (information) |
-| Collado Ballesteros | `collado-ballesteros` | Acceso | 37.853229, -1.503767 | basemap pois | a 5 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Collado de la Hoya del Carbón | `collado-de-la-hoya-del-carbon` | Acceso | 37.858659, -1.473785 | basemap pois | — |
-| Collado del Buitre | `collado-del-buitre` | Acceso | 37.865876, -1.560244 | basemap pois | — |
-| Collado del Perdigón | `collado-del-perdigon` | Acceso | 37.864061, -1.530761 | basemap pois | — |
-| El caño de Espuña | `el-cano-de-espuna` | Acceso | 37.857412, -1.517371 | basemap pois | a 1 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) · también mapeado como: Mirador de Huerta Espuña (viewpoint) |
-| La Selva | `la-selva` | Acceso | 37.865969, -1.492148 | basemap pois | a 3 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Mirador del Barranco de Leyva | `mirador-del-barranco-de-leyva` | Acceso | 37.871483, -1.516725 | basemap pois | a 3 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Parque Regional Sierra Espuña | `parque-regional-sierra-espuna` | Acceso | 37.857586, -1.522164 | basemap pois | a 2 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| PR-MU 131 Sendero de Baldomero Brugarolas | `pr-mu-131-sendero-de-baldomero-brugarolas` | Acceso | 37.882460, -1.543265 | basemap pois | a 5 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Rutas de La Santa | `rutas-de-la-santa` | Acceso | 37.799974, -1.557999 | basemap pois | a 10 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Zona de Acampada Campamento de Exploradores | `zona-de-acampada-campamento-de-exploradores` | Acceso | 37.855095, -1.519898 | basemap pois | también mapeado como: Area Recreativa Campamento de los Exploradores (picnic_site), Zona de Acampada Campamento de Exploradores (information) |
-| Zona de Acampada La Perdiz | `zona-de-acampada-la-perdiz` | Acceso | 37.869166, -1.521118 | basemap pois | a 32 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Casa de la Loma | `casa-de-la-loma` | Cultural | 37.884008, -1.627851 | basemap pois | — |
-| Casa de los Quintana | `casa-de-los-quintana` | Cultural | 37.887767, -1.597765 | basemap pois | — |
-| Casa del Guarda | `casa-del-guarda` | Cultural | 37.885123, -1.608140 | basemap pois | — |
-| Casas de Malvariche | `casas-de-malvariche` | Cultural | 37.887259, -1.598814 | basemap pois | — |
-| Retroexcavadora accidente | `retroexcavadora-accidente` | Cultural | 37.885180, -1.612423 | basemap pois | — |
-| Torre del Azaraque | `torre-del-azaraque` | Cultural | 37.837443, -1.471795 | basemap pois | — |
-| Virgen del Pilar | `virgen-del-pilar` | Cultural | 37.868563, -1.515842 | basemap pois | a 26 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Arco de Sigismondi | `arco-de-sigismondi` | Geológico | 37.860940, -1.576039 | basemap pois | — |
-| Cueva de la Matea | `cueva-de-la-matea` | Geológico | 37.915482, -1.499830 | basemap pois | §4.3.6 — una cavidad con registro arqueológico y sin vigilancia no se señala en una guía de campo (precedente: Cueva C.6 de Cabo Cope). Comprobar protección antes de admitirlo |
-| Cueva de la Moneda | `cueva-de-la-moneda` | Geológico | 37.828288, -1.536640 | basemap pois | §4.3.6 — una cavidad con registro arqueológico y sin vigilancia no se señala en una guía de campo (precedente: Cueva C.6 de Cabo Cope). Comprobar protección antes de admitirlo |
-| Cueva de la Plata | `cueva-de-la-plata` | Geológico | 37.858630, -1.611224 | basemap pois | §4.3.6 — una cavidad con registro arqueológico y sin vigilancia no se señala en una guía de campo (precedente: Cueva C.6 de Cabo Cope). Comprobar protección antes de admitirlo |
-| Cueva de las Palomas | `cueva-de-las-palomas` | Geológico | 37.884054, -1.544145 | basemap pois | §4.3.6 — una cavidad con registro arqueológico y sin vigilancia no se señala en una guía de campo (precedente: Cueva C.6 de Cabo Cope). Comprobar protección antes de admitirlo |
-| Cueva de los Mataos | `cueva-de-los-mataos` | Geológico | 37.867650, -1.503587 | basemap pois | §4.3.6 — una cavidad con registro arqueológico y sin vigilancia no se señala en una guía de campo (precedente: Cueva C.6 de Cabo Cope). Comprobar protección antes de admitirlo · a 10 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Cueva Luenga | `cueva-luenga` | Geológico | 37.881963, -1.471897 | basemap pois | §4.3.6 — una cavidad con registro arqueológico y sin vigilancia no se señala en una guía de campo (precedente: Cueva C.6 de Cabo Cope). Comprobar protección antes de admitirlo |
-| El Gigante del Morrón de Alhama | `el-gigante-del-morron-de-alhama` | Geológico | 37.869135, -1.544800 | basemap pois | — |
-| Los Ojos del Dragón | `los-ojos-del-dragon` | Geológico | 37.835793, -1.497059 | basemap pois | — |
-| Peña Apartada | `pena-apartada` | Geológico | 37.850665, -1.557352 | basemap pois | — |
-| Balsa de Campix | `balsa-de-campix` | Natural | 37.824400, -1.489318 | basemap pois | comprobar que es un elemento natural y no una balsa de gestión forestal |
-| Balsa de Carmona | `balsa-de-carmona` | Natural | 37.875114, -1.468153 | basemap pois | comprobar que es un elemento natural y no una balsa de gestión forestal |
-| Balsa grande | `balsa-grande` | Natural | 37.825254, -1.583877 | basemap pois | comprobar que es un elemento natural y no una balsa de gestión forestal |
-| Balsa Vieja | `balsa-vieja` | Natural | 37.898425, -1.455793 | basemap pois | comprobar que es un elemento natural y no una balsa de gestión forestal |
-| Embalse de Campix | `embalse-de-campix` | Natural | 37.812681, -1.524002 | basemap pois | comprobar que es un elemento natural y no una balsa de gestión forestal |
-| Fuente Alta | `fuente-alta` | Natural | 37.848117, -1.491767 | basemap pois | — |
-| Fuente Bermeja | `fuente-bermeja` | Natural | 37.867381, -1.490782 | basemap pois | — |
-| Fuente de la Teja | `fuente-de-la-teja` | Natural | 37.862848, -1.500369 | basemap pois | — |
-| Fuente de Malvariche | `fuente-de-malvariche` | Natural | 37.886313, -1.598253 | basemap pois | — |
-| Fuente de Valdelaparra | `fuente-de-valdelaparra` | Natural | 37.893197, -1.544513 | basemap pois | — |
-| Fuente del Azud Frías | `fuente-del-azud-frias` | Natural | 37.863750, -1.505339 | basemap pois | — |
-| Fuente del Pinillo | `fuente-del-pinillo` | Natural | 37.859330, -1.621720 | basemap pois | — |
-| Fuente del Zarzal | `fuente-del-zarzal` | Natural | 37.866541, -1.497689 | basemap pois | — |
-| Fuente Rubeos | `fuente-rubeos` | Natural | 37.855114, -1.511918 | basemap pois | a 4 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) · también mapeado como: Casa Forestal Fuente de Rubeos (museum), Memorial Mariano Serrano (memorial) |
-| La Poza | `la-poza` | Natural | 37.897925, -1.455866 | basemap pois | — |
-| Prado Mangueta | `prado-mangueta` | Natural | 37.867547, -1.563135 | basemap pois | — |
-| Cabezo Agudo | `cabezo-agudo` | Paisajístico | 37.821811, -1.501071 | basemap pois | — |
-| Cabezo de la Gritadera | `cabezo-de-la-gritadera` | Paisajístico | 37.878470, -1.516382 | basemap pois | — |
-| Cabezo de la Mezquita | `cabezo-de-la-mezquita` | Paisajístico | 37.860586, -1.509681 | basemap pois | — |
-| Cabezo de las Alquerías | `cabezo-de-las-alquerias` | Paisajístico | 37.845999, -1.562639 | basemap pois | — |
-| Cabezo de Los Albaricoqueros | `cabezo-de-los-albaricoqueros` | Paisajístico | 37.842510, -1.588498 | basemap pois | — |
-| Cabezo de los Calares del Azaraque | `cabezo-de-los-calares-del-azaraque` | Paisajístico | 37.835819, -1.474324 | basemap pois | — |
-| Cabezo de los Castillicos | `cabezo-de-los-castillicos` | Paisajístico | 37.858113, -1.514118 | basemap pois | — |
-| Cabezo de los Lobos | `cabezo-de-los-lobos` | Paisajístico | 37.846806, -1.508531 | basemap pois | — |
-| Cabezo del Aire | `cabezo-del-aire` | Paisajístico | 37.860578, -1.526622 | basemap pois | — |
-| Cabezo del Campanario | `cabezo-del-campanario` | Paisajístico | 37.828076, -1.589997 | basemap pois | — |
-| Cabezo del Grillo | `cabezo-del-grillo` | Paisajístico | 37.827446, -1.607343 | basemap pois | — |
-| Cabezo del las Minas | `cabezo-del-las-minas` | Paisajístico | 37.819756, -1.521767 | basemap pois | — |
-| Cabezo del Mortero | `cabezo-del-mortero` | Paisajístico | 37.800841, -1.531552 | basemap pois | — |
-| Cabezo del Murciano | `cabezo-del-murciano` | Paisajístico | 37.805241, -1.541122 | basemap pois | — |
-| Cabezo del Sopalmo | `cabezo-del-sopalmo` | Paisajístico | 37.892530, -1.572877 | basemap pois | — |
-| Cabezo Salaoso | `cabezo-salaoso` | Paisajístico | 37.858746, -1.462134 | basemap pois | — |
-| Cabezo Tolino | `cabezo-tolino` | Paisajístico | 37.927310, -1.567883 | basemap pois | — |
-| Cabezos Negros | `cabezos-negros` | Paisajístico | 37.809928, -1.543547 | basemap pois | — |
-| Carrasca | `carrasca` | Paisajístico | 37.904198, -1.563663 | basemap pois | — |
-| Cejo de La Ventanica | `cejo-de-la-ventanica` | Paisajístico | 37.865812, -1.617407 | basemap pois | — |
-| Cejo Largo | `cejo-largo` | Paisajístico | 37.888208, -1.523945 | basemap pois | — |
-| Cejo Negro | `cejo-negro` | Paisajístico | 37.849815, -1.520780 | basemap pois | — |
-| Cerro Almorollón | `cerro-almorollon` | Paisajístico | 37.842991, -1.534543 | basemap pois | — |
-| Cerro de Cánovas | `cerro-de-canovas` | Paisajístico | 37.859769, -1.653764 | basemap pois | — |
-| Cerro de la Cuna | `cerro-de-la-cuna` | Paisajístico | 37.841591, -1.553930 | basemap pois | — |
-| Cerro de las Cabras | `cerro-de-las-cabras` | Paisajístico | 37.851707, -1.606657 | basemap pois | — |
-| Cerro de las Lagunas | `cerro-de-las-lagunas` | Paisajístico | 37.922520, -1.527826 | basemap pois | — |
-| Cerro de los Calares | `cerro-de-los-calares` | Paisajístico | 37.829671, -1.495503 | basemap pois | — |
-| Cerro de los Infiernos | `cerro-de-los-infiernos` | Paisajístico | 37.838916, -1.630437 | basemap pois | — |
-| Cerro de Perona | `cerro-de-perona` | Paisajístico | 37.913622, -1.549107 | basemap pois | — |
-| Cerro del Caballete | `cerro-del-caballete` | Paisajístico | 37.817169, -1.511253 | basemap pois | — |
-| Cerro del Cantal | `cerro-del-cantal` | Paisajístico | 37.845840, -1.646377 | basemap pois | — |
-| Cerro del Ciervo | `cerro-del-ciervo` | Paisajístico | 37.916898, -1.584392 | basemap pois | — |
-| Cerro del Rayo | `cerro-del-rayo` | Paisajístico | 37.896397, -1.567526 | basemap pois | — |
-| Cerro Espuña | `cerro-espuna` | Paisajístico | 37.863273, -1.575465 | basemap pois | — |
-| Collado Ballesteros | `collado-ballesteros` | Paisajístico | 37.853589, -1.503212 | basemap pois | a 36 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Collado Blanco | `collado-blanco` | Paisajístico | 37.862177, -1.647523 | basemap pois | — |
-| Collado Caseta Pelada | `collado-caseta-pelada` | Paisajístico | 37.853704, -1.607593 | basemap pois | a 2 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Collado de Don Eleuterio | `collado-de-don-eleuterio` | Paisajístico | 37.870727, -1.581833 | basemap pois | a 5 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Collado de Farache | `collado-de-farache` | Paisajístico | 37.854432, -1.482108 | basemap pois | a 6 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Collado de la Media Ladera | `collado-de-la-media-ladera` | Paisajístico | 37.912147, -1.532896 | basemap pois | — |
-| Collado de la Plegera | `collado-de-la-plegera` | Paisajístico | 37.848091, -1.623860 | basemap pois | — |
-| Collado de la Sabina | `collado-de-la-sabina` | Paisajístico | 37.920260, -1.581320 | basemap pois | — |
-| Collado de la Zarza | `collado-de-la-zarza` | Paisajístico | 37.829065, -1.549644 | basemap pois | a 5 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Collado de las Chaparras | `collado-de-las-chaparras` | Paisajístico | 37.820618, -1.536192 | basemap pois | — |
-| Collado de las Yeseras | `collado-de-las-yeseras` | Paisajístico | 37.846083, -1.582023 | basemap pois | a 0 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Collado de los Siete Hermanos | `collado-de-los-siete-hermanos` | Paisajístico | 37.864974, -1.511953 | basemap pois | a 1 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Collado de Totana | `collado-de-totana` | Paisajístico | 37.856245, -1.618102 | basemap pois | a 23 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Collado del Buitre | `collado-del-buitre` | Paisajístico | 37.894443, -1.558844 | basemap pois | — |
-| Collado del Ciervo | `collado-del-ciervo` | Paisajístico | 37.913925, -1.585698 | basemap pois | — |
-| Collado del Enebral | `collado-del-enebral` | Paisajístico | 37.897489, -1.569073 | basemap pois | — |
-| Collado del Humero | `collado-del-humero` | Paisajístico | 37.863068, -1.613692 | basemap pois | a 8 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Collado del Pajarillo | `collado-del-pajarillo` | Paisajístico | 37.856662, -1.501672 | basemap pois | — |
-| Collado del Paleto | `collado-del-paleto` | Paisajístico | 37.865952, -1.476733 | basemap pois | a 9 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Collado del Perdigón | `collado-del-perdigon` | Paisajístico | 37.864273, -1.528958 | basemap pois | — |
-| Collado del Piojo | `collado-del-piojo` | Paisajístico | 37.873270, -1.542544 | basemap pois | — |
-| Collado del Portillo | `collado-del-portillo` | Paisajístico | 37.885454, -1.615840 | basemap pois | — |
-| Collado del Rayo | `collado-del-rayo` | Paisajístico | 37.897297, -1.573105 | basemap pois | — |
-| Collado Mangueta | `collado-mangueta` | Paisajístico | 37.869967, -1.565892 | basemap pois | a 11 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Collado Moreno de Campix | `collado-moreno-de-campix` | Paisajístico | 37.834077, -1.525702 | basemap pois | — |
-| Collado Pilón | `collado-pilon` | Paisajístico | 37.845406, -1.583413 | basemap pois | a 1 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Collado Portillo | `collado-portillo` | Paisajístico | 37.884746, -1.537008 | basemap pois | — |
-| Cumbre del Sombrero | `cumbre-del-sombrero` | Paisajístico | 37.844637, -1.541873 | basemap pois | — |
-| El Aguilón | `el-aguilon` | Paisajístico | 37.883864, -1.619872 | basemap pois | — |
-| El Bosque | `el-bosque` | Paisajístico | 37.896456, -1.591518 | basemap pois | — |
-| El Buitre | `el-buitre` | Paisajístico | 37.897256, -1.555944 | basemap pois | — |
-| El Peñón | `el-penon` | Paisajístico | 37.818864, -1.561579 | basemap pois | — |
-| Mirador Collado Bermejo | `mirador-collado-bermejo` | Paisajístico | 37.855091, -1.568060 | basemap pois | a 5 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) · también mapeado como: Collado Bermejo (saddle), Mirador del Collado Bermejo (viewpoint) |
-| Mirador de Alhama | `mirador-de-alhama` | Paisajístico | 37.856764, -1.470033 | basemap pois | — |
-| Mirador de La Virgen Blanca | `mirador-de-la-virgen-blanca` | Paisajístico | 37.803810, -1.557862 | basemap pois | a 29 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) · también mapeado como: La Virgen Blanca (memorial) |
-| Mirador del Algarrobo | `mirador-del-algarrobo` | Paisajístico | 37.807866, -1.545902 | basemap pois | — |
-| Mirador del Avión | `mirador-del-avion` | Paisajístico | 37.855224, -1.510792 | basemap pois | — |
-| Mirador del Collado del Pilón | `mirador-del-collado-del-pilon` | Paisajístico | 37.846659, -1.579344 | basemap pois | a 5 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Mirador del Collado Mangueta | `mirador-del-collado-mangueta` | Paisajístico | 37.869797, -1.568435 | basemap pois | a 11 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) · también mapeado como: Mirador Collado Mangueta (information) |
-| Mirador del Corazón de Jesus | `mirador-del-corazon-de-jesus` | Paisajístico | 37.797007, -1.552916 | basemap pois | — |
-| Mirador del Guadalentín | `mirador-del-guadalentin` | Paisajístico | 37.867214, -1.474590 | basemap pois | — |
-| Molejón Alto | `molejon-alto` | Paisajístico | 37.826345, -1.571930 | basemap pois | — |
-| Morra de Juan Alonso | `morra-de-juan-alonso` | Paisajístico | 37.887621, -1.555365 | basemap pois | — |
-| Morra de las Bojas | `morra-de-las-bojas` | Paisajístico | 37.885868, -1.551725 | basemap pois | — |
-| Morra de las Cucalas | `morra-de-las-cucalas` | Paisajístico | 37.884778, -1.534237 | basemap pois | — |
-| Morra de las Moscas | `morra-de-las-moscas` | Paisajístico | 37.872613, -1.555311 | basemap pois | — |
-| Morra de los Pajarillos | `morra-de-los-pajarillos` | Paisajístico | 37.855131, -1.502405 | basemap pois | — |
-| Morra de los Picachos | `morra-de-los-picachos` | Paisajístico | 37.884905, -1.544987 | basemap pois | — |
-| Morra del Lentisco | `morra-del-lentisco` | Paisajístico | 37.883362, -1.518989 | basemap pois | — |
-| Morra del Portillo | `morra-del-portillo` | Paisajístico | 37.884414, -1.539317 | basemap pois | — |
-| Morrón de Abajo | `morron-de-abajo` | Paisajístico | 37.880576, -1.577560 | basemap pois | — |
-| Morrón de Alhama | `morron-de-alhama` | Paisajístico | 37.874290, -1.539097 | basemap pois | — |
-| Morrón de Arriba | `morron-de-arriba` | Paisajístico | 37.879619, -1.585223 | basemap pois | — |
-| Morrón de la Cabra | `morron-de-la-cabra` | Paisajístico | 37.921578, -1.580647 | basemap pois | — |
-| Morrón Largo | `morron-largo` | Paisajístico | 37.818487, -1.553047 | basemap pois | — |
-| Morrón Redondo | `morron-redondo` | Paisajístico | 37.822968, -1.539545 | basemap pois | — |
-| Peña Apartada | `pena-apartada` | Paisajístico | 37.847568, -1.559495 | basemap pois | — |
-| Peña Burrera | `pena-burrera` | Paisajístico | 37.887625, -1.531185 | basemap pois | — |
-| Peña Soleada | `pena-soleada` | Paisajístico | 37.860300, -1.575291 | basemap pois | — |
-| Peñas Blancas | `penas-blancas` | Paisajístico | 37.912166, -1.587935 | basemap pois | — |
-| Pico de la Garita | `pico-de-la-garita` | Paisajístico | 37.859519, -1.491753 | basemap pois | — |
-| Pico de Moriana | `pico-de-moriana` | Paisajístico | 37.853070, -1.480099 | basemap pois | — |
-| Piedra del Almirez | `piedra-del-almirez` | Paisajístico | 37.922173, -1.547549 | basemap pois | — |
-| Pinos Blancos | `pinos-blancos` | Paisajístico | 37.872630, -1.583619 | basemap pois | — |
-| Poyo Miguel | `poyo-miguel` | Paisajístico | 37.867358, -1.552795 | basemap pois | — |
-| Poyos de Pedro López | `poyos-de-pedro-lopez` | Paisajístico | 37.861550, -1.598374 | basemap pois | — |
-| Risca de la Yedra | `risca-de-la-yedra` | Paisajístico | 37.890405, -1.558884 | basemap pois | — |
-| Riscal de Campix | `riscal-de-campix` | Paisajístico | 37.850518, -1.513088 | basemap pois | — |
-| Risco del Portillo | `risco-del-portillo` | Paisajístico | 37.888616, -1.612067 | basemap pois | — |
-| Seterico Alto | `seterico-alto` | Paisajístico | 37.813757, -1.564388 | basemap pois | — |
-| Capilla de la Virgen del Rocío | `capilla-de-la-virgen-del-rocio` | Religioso | 37.896803, -1.459875 | basemap pois | — |
-| Corazón de Jesus | `corazon-de-jesus` | Religioso | 37.798209, -1.553015 | basemap pois | — |
-| Ermita de Santa Leocadia | `ermita-de-santa-leocadia` | Religioso | 37.821616, -1.600858 | basemap pois | — |
-| Santuario de Santa Eulalia de Mérida | `santuario-de-santa-eulalia-de-merida` | Religioso | 37.800765, -1.557502 | basemap pois | a 33 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) · también mapeado como: Carrasca centenaria del Alzheimer (memorial) |
-| Pozo 10 | `pozo-10` | — | 37.870382, -1.576474 | basemap pois | a 22 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Pozo 13 | `pozo-13` | — | 37.873661, -1.562566 | basemap pois | a 25 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) · también mapeado como: Pozo 12 (attraction), Pozo 11 (attraction) |
-| Pozo 14 | `pozo-14` | — | 37.873380, -1.561907 | basemap pois | a 31 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Pozo 15 | `pozo-15` | — | 37.873812, -1.561172 | basemap pois | a 6 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Pozo 17 | `pozo-17` | — | 37.873858, -1.560469 | basemap pois | también mapeado como: Pozo 16 (attraction) |
-| Pozo 18 | `pozo-18` | — | 37.873611, -1.563419 | basemap pois | — |
-| Pozo 2 | `pozo-2` | — | 37.869141, -1.570777 | basemap pois | a 23 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) · también mapeado como: Pozo 1 (attraction) |
-| Pozo 20 | `pozo-20` | — | 37.873632, -1.565656 | basemap pois | — |
-| Pozo 21 | `pozo-21` | — | 37.870113, -1.566936 | basemap pois | — |
-| Pozo 22 | `pozo-22` | — | 37.868707, -1.566461 | basemap pois | también mapeado como: Pozo 23 (attraction) |
-| Pozo 24. Pozo de Don Eleuterio | `pozo-24-pozo-de-don-eleuterio` | — | 37.870464, -1.582978 | basemap pois | a 26 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Pozo 25 | `pozo-25` | — | 37.872355, -1.567134 | basemap pois | — |
-| Pozo 26 | `pozo-26` | — | 37.874637, -1.565471 | basemap pois | — |
-| Pozo 27. Pozo de las Ánimas | `pozo-27-pozo-de-las-animas` | — | 37.883040, -1.552106 | basemap pois | a 13 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Pozo 28. Pozo de la nieve de Mula | `pozo-28-pozo-de-la-nieve-de-mula` | — | 37.900505, -1.558393 | basemap pois | — |
-| Pozo 3 | `pozo-3` | — | 37.868643, -1.570704 | basemap pois | — |
-| Pozo 5 | `pozo-5` | — | 37.869990, -1.572016 | basemap pois | también mapeado como: Pozo 4 (attraction) |
-| Pozo 6 | `pozo-6` | — | 37.869344, -1.572032 | basemap pois | a 10 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Pozo 7 | `pozo-7` | — | 37.869378, -1.573596 | basemap pois | — |
-| Pozo 8 | `pozo-8` | — | 37.871263, -1.573853 | basemap pois | — |
-| Pozo 9 | `pozo-9` | — | 37.870651, -1.575342 | basemap pois | — |
-| Refugio de Fuente Bermeja | `refugio-de-fuente-bermeja` | — | 37.866723, -1.491590 | basemap pois | a 20 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
-| Refugio de Leiva | `refugio-de-leiva` | — | 37.883553, -1.553780 | basemap pois | — |
-| Refugio Fuente del Sol | `refugio-fuente-del-sol` | — | 37.858329, -1.541117 | basemap pois | — |
+| Area Recreativa Casa Leiva | `area-recreativa-casa-leiva` | Acceso | 37.868237, -1.505339 | OSM way/933925411 | a 11 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Área Recreativa de Balsa Chica | `area-recreativa-de-balsa-chica` | Acceso | 37.822538, -1.582056 | OSM way/1314322568 | — |
+| Área Recreativa de Balsa Grande | `area-recreativa-de-balsa-grande` | Acceso | 37.825303, -1.583273 | OSM node/6810268852 | — |
+| Area Recreativa La Perdiz | `area-recreativa-la-perdiz` | Acceso | 37.868767, -1.520827 | OSM way/1145434863 | a 11 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Área Recreativa Las Alquerías | `area-recreativa-las-alquerias` | Acceso | 37.834255, -1.580394 | OSM node/2517397337 | — |
+| Casas de Santa Leocadia | `casas-de-santa-leocadia` | Acceso | 37.820006, -1.599989 | OSM node/9020151401 | — |
+| Collado Ballesteros | `collado-ballesteros` | Acceso | 37.853229, -1.503768 | OSM node/9312462690 | a 6 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Collado de la Hoya del Carbón | `collado-de-la-hoya-del-carbon` | Acceso | 37.858660, -1.473785 | OSM node/13476548765 | — |
+| Collado del Buitre | `collado-del-buitre` | Acceso | 37.865876, -1.560245 | OSM node/13476548772 | — |
+| Collado del Perdigón | `collado-del-perdigon` | Acceso | 37.864061, -1.530760 | OSM node/13476548769 | — |
+| El caño de Espuña | `el-cano-de-espuna` | Acceso | 37.857412, -1.517371 | OSM node/9312462706 | a 1 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) · también mapeado como: Mirador de Huerta Espuña (viewpoint) |
+| La Selva | `la-selva` | Acceso | 37.865969, -1.492148 | OSM node/9247313953 | a 3 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Mirador del Barranco de Leyva | `mirador-del-barranco-de-leyva` | Acceso | 37.871482, -1.516723 | OSM node/9674057117 | a 3 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Moriana | `moriana` | Acceso | 37.851396, -1.465226 | OSM node/1613752481 | — |
+| PR-MU 131 Sendero de Baldomero Brugarolas | `pr-mu-131-sendero-de-baldomero-brugarolas` | Acceso | 37.882461, -1.543265 | OSM node/13188974477 | a 5 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Rutas de La Santa | `rutas-de-la-santa` | Acceso | 37.799975, -1.557999 | OSM node/5935528326 | a 10 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Zona de Acampada Campamento de Exploradores | `zona-de-acampada-campamento-de-exploradores` | Acceso | 37.854946, -1.519781 | OSM node/9629542773 | también mapeado como: Area Recreativa Campamento de los Exploradores (picnic_site) |
+| Casa de la Loma | `casa-de-la-loma` | Cultural | 37.883994, -1.627834 | OSM way/1079142369 | — |
+| Casa de los Quintana | `casa-de-los-quintana` | Cultural | 37.887769, -1.597658 | OSM way/698763175 | — |
+| Casa del Guarda | `casa-del-guarda` | Cultural | 37.885123, -1.608140 | OSM way/698763173 | — |
+| Corazón de Jesus | `corazon-de-jesus` | Cultural | 37.798209, -1.553015 | OSM node/1666034202 | — |
+| La Virgen Blanca | `la-virgen-blanca` | Cultural | 37.803778, -1.557931 | OSM node/5935529692 | a 23 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) · también mapeado como: Mirador de La Virgen Blanca (viewpoint) |
+| Retroexcavadora accidente | `retroexcavadora-accidente` | Cultural | 37.885179, -1.612425 | OSM node/6515708117 | — |
+| Virgen del Pilar | `virgen-del-pilar` | Cultural | 37.868562, -1.515842 | OSM node/8493171574 | a 26 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Arco de Sigismondi | `arco-de-sigismondi` | Geológico | 37.860940, -1.576039 | OSM node/11657976984 | — |
+| Cuchillos del Bosque | `cuchillos-del-bosque` | Geológico | 37.892028, -1.605027 | OSM way/900889235 | — |
+| Cuchillos del Bosque | `cuchillos-del-bosque` | Geológico | 37.887469, -1.613133 | OSM way/904327877 | — |
+| Cuchillos del Bosque | `cuchillos-del-bosque` | Geológico | 37.894720, -1.598245 | OSM way/905441022 | — |
+| Cueva de la Matea | `cueva-de-la-matea` | Geológico | 37.915482, -1.499831 | OSM node/8225376825 | §4.3.6 — una cavidad con registro arqueológico y sin vigilancia no se señala en una guía de campo (precedente: Cueva C.6 de Cabo Cope). Comprobar protección antes de admitirlo |
+| Cueva de la Moneda | `cueva-de-la-moneda` | Geológico | 37.828288, -1.536640 | OSM node/1997624222 | §4.3.6 — una cavidad con registro arqueológico y sin vigilancia no se señala en una guía de campo (precedente: Cueva C.6 de Cabo Cope). Comprobar protección antes de admitirlo |
+| Cueva de la Plata | `cueva-de-la-plata` | Geológico | 37.858629, -1.611224 | OSM node/6561811841 | §4.3.6 — una cavidad con registro arqueológico y sin vigilancia no se señala en una guía de campo (precedente: Cueva C.6 de Cabo Cope). Comprobar protección antes de admitirlo |
+| Cueva de las Palomas | `cueva-de-las-palomas` | Geológico | 37.884055, -1.544145 | OSM node/8581108769 | §4.3.6 — una cavidad con registro arqueológico y sin vigilancia no se señala en una guía de campo (precedente: Cueva C.6 de Cabo Cope). Comprobar protección antes de admitirlo |
+| Cueva de los Mataos | `cueva-de-los-mataos` | Geológico | 37.867650, -1.503587 | OSM node/8150226073 | §4.3.6 — una cavidad con registro arqueológico y sin vigilancia no se señala en una guía de campo (precedente: Cueva C.6 de Cabo Cope). Comprobar protección antes de admitirlo · a 10 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Cueva Luenga | `cueva-luenga` | Geológico | 37.881963, -1.471898 | OSM node/8111986924 | §4.3.6 — una cavidad con registro arqueológico y sin vigilancia no se señala en una guía de campo (precedente: Cueva C.6 de Cabo Cope). Comprobar protección antes de admitirlo |
+| Los Ojos del Dragón | `los-ojos-del-dragon` | Geológico | 37.835794, -1.497059 | OSM node/11642915017 | — |
+| Paredes de Leiva | `paredes-de-leiva` | Geológico | 37.884429, -1.533451 | OSM way/893077714 | — |
+| Paredes de Leiva | `paredes-de-leiva` | Geológico | 37.884103, -1.532345 | OSM way/893077716 | — |
+| Paredes del Leiva | `paredes-del-leiva` | Geológico | 37.883426, -1.534261 | OSM way/893077715 | — |
+| Fuente Alta | `fuente-alta` | Natural | 37.848117, -1.491766 | OSM node/8112137522 | — |
+| Fuente Bermeja | `fuente-bermeja` | Natural | 37.867381, -1.490782 | OSM node/8242884125 | — |
+| Fuente Blanca | `fuente-blanca` | Natural | 37.886418, -1.564549 | OSM node/6503395548 | — |
+| Fuente de la Portuguesa | `fuente-de-la-portuguesa` | Natural | 37.933709, -1.510988 | OSM node/8382250155 | también mapeado como: Area Recreativa Fuente La Portuguesa (picnic_site) |
+| Fuente de la Teja | `fuente-de-la-teja` | Natural | 37.862848, -1.500368 | OSM node/12837175034 | — |
+| Fuente de Malvariche | `fuente-de-malvariche` | Natural | 37.886313, -1.598253 | OSM node/8293857478 | — |
+| Fuente de Valdelaparra | `fuente-de-valdelaparra` | Natural | 37.893198, -1.544512 | OSM node/6514259872 | — |
+| Fuente del Azud Frías | `fuente-del-azud-frias` | Natural | 37.863750, -1.505340 | OSM node/9720384374 | — |
+| Fuente del Hilo | `fuente-del-hilo` | Natural | 37.857831, -1.522438 | OSM node/5520403689 | a 28 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) · también mapeado como: Parque Regional Sierra Espuña (information), Area Recreativa Fuente del Hilo (picnic_site) |
+| Fuente del Pinillo | `fuente-del-pinillo` | Natural | 37.859331, -1.621719 | OSM node/7030027661 | — |
+| Fuente del Zarzal | `fuente-del-zarzal` | Natural | 37.866541, -1.497689 | OSM node/12837175092 | — |
+| Fuente Rubeos | `fuente-rubeos` | Natural | 37.855114, -1.511919 | OSM node/6939811102 | a 4 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) · también mapeado como: Memorial Mariano Serrano (memorial), Casa Forestal Fuente de Rubeos (museum) |
+| La Poza | `la-poza` | Natural | 37.897925, -1.455865 | OSM node/9148002002 | — |
+| Cabezo Agudo | `cabezo-agudo` | Paisajístico | 37.821811, -1.501071 | OSM node/8491291932 | — |
+| Cabezo de la Gritadera | `cabezo-de-la-gritadera` | Paisajístico | 37.878470, -1.516382 | OSM node/8525731741 | — |
+| Cabezo de la Mezquita | `cabezo-de-la-mezquita` | Paisajístico | 37.860586, -1.509681 | OSM node/8111937277 | — |
+| Cabezo de las Alquerías | `cabezo-de-las-alquerias` | Paisajístico | 37.845999, -1.562639 | OSM node/8339642270 | — |
+| Cabezo de Los Albaricoqueros | `cabezo-de-los-albaricoqueros` | Paisajístico | 37.842510, -1.588498 | OSM node/1304136884 | — |
+| Cabezo de los Calares del Azaraque | `cabezo-de-los-calares-del-azaraque` | Paisajístico | 37.835819, -1.474325 | OSM node/8547220712 | — |
+| Cabezo de los Castillicos | `cabezo-de-los-castillicos` | Paisajístico | 37.858113, -1.514118 | OSM node/8438831270 | — |
+| Cabezo de los Lobos | `cabezo-de-los-lobos` | Paisajístico | 37.846806, -1.508531 | OSM node/948500403 | — |
+| Cabezo del Aire | `cabezo-del-aire` | Paisajístico | 37.860578, -1.526622 | OSM node/8541978086 | — |
+| Cabezo del Campanario | `cabezo-del-campanario` | Paisajístico | 37.828076, -1.589996 | OSM node/1304107417 | — |
+| Cabezo del Grillo | `cabezo-del-grillo` | Paisajístico | 37.827446, -1.607342 | OSM node/1304120308 | — |
+| Cabezo del las Minas | `cabezo-del-las-minas` | Paisajístico | 37.819756, -1.521767 | OSM node/8490114920 | — |
+| Cabezo del Mortero | `cabezo-del-mortero` | Paisajístico | 37.800841, -1.531552 | OSM node/8332455253 | — |
+| Cabezo del Murciano | `cabezo-del-murciano` | Paisajístico | 37.805240, -1.541122 | OSM node/8490114900 | — |
+| Cabezo del Sopalmo | `cabezo-del-sopalmo` | Paisajístico | 37.892530, -1.572878 | OSM node/1304137188 | — |
+| Cabezo Salaoso | `cabezo-salaoso` | Paisajístico | 37.858745, -1.462135 | OSM node/8143135206 | — |
+| Cabezo Tolino | `cabezo-tolino` | Paisajístico | 37.927309, -1.567883 | OSM node/8455097790 | — |
+| Cabezos Negros | `cabezos-negros` | Paisajístico | 37.809928, -1.543547 | OSM node/8490114898 | — |
+| Carrasca | `carrasca` | Paisajístico | 37.904197, -1.563662 | OSM node/8454015383 | — |
+| Cejo de La Ventanica | `cejo-de-la-ventanica` | Paisajístico | 37.865813, -1.617406 | OSM node/7865465760 | — |
+| Cejo Largo | `cejo-largo` | Paisajístico | 37.888208, -1.523945 | OSM node/8454015358 | — |
+| Cejo Negro | `cejo-negro` | Paisajístico | 37.849815, -1.520780 | OSM node/13367750226 | — |
+| Cerro Almorollón | `cerro-almorollon` | Paisajístico | 37.842991, -1.534544 | OSM node/1243083562 | — |
+| Cerro de Cánovas | `cerro-de-canovas` | Paisajístico | 37.859769, -1.653764 | OSM node/8438831271 | — |
+| Cerro de la Cuna | `cerro-de-la-cuna` | Paisajístico | 37.841591, -1.553931 | OSM node/1243037587 | — |
+| Cerro de las Cabras | `cerro-de-las-cabras` | Paisajístico | 37.851706, -1.606657 | OSM node/6939867987 | — |
+| Cerro de las Lagunas | `cerro-de-las-lagunas` | Paisajístico | 37.922520, -1.527826 | OSM node/8454057206 | — |
+| Cerro de los Calares | `cerro-de-los-calares` | Paisajístico | 37.829671, -1.495503 | OSM node/8491291952 | — |
+| Cerro de los Infiernos | `cerro-de-los-infiernos` | Paisajístico | 37.838916, -1.630437 | OSM node/948502769 | — |
+| Cerro de Perona | `cerro-de-perona` | Paisajístico | 37.913622, -1.549107 | OSM node/8997119155 | — |
+| Cerro del Caballete | `cerro-del-caballete` | Paisajístico | 37.817169, -1.511253 | OSM node/8491291936 | — |
+| Cerro del Cantal | `cerro-del-cantal` | Paisajístico | 37.845840, -1.646377 | OSM node/8455097465 | — |
+| Cerro del Ciervo | `cerro-del-ciervo` | Paisajístico | 37.916898, -1.584392 | OSM node/8369088576 | — |
+| Cerro del Rayo | `cerro-del-rayo` | Paisajístico | 37.896397, -1.567525 | OSM node/1304106317 | — |
+| Cerro Espuña | `cerro-espuna` | Paisajístico | 37.863274, -1.575465 | OSM node/12554351252 | — |
+| Collado Ballesteros | `collado-ballesteros` | Paisajístico | 37.853589, -1.503212 | OSM node/8150226086 | a 36 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Collado Blanco | `collado-blanco` | Paisajístico | 37.884577, -1.560838 | OSM node/8112430385 | a 8 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Collado Blanco | `collado-blanco` | Paisajístico | 37.862176, -1.647523 | OSM node/8629254966 | — |
+| Collado Caseta Pelada | `collado-caseta-pelada` | Paisajístico | 37.853704, -1.607594 | OSM node/6939867988 | a 2 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Collado de Don Eleuterio | `collado-de-don-eleuterio` | Paisajístico | 37.870727, -1.581833 | OSM node/8140124780 | a 5 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Collado de Farache | `collado-de-farache` | Paisajístico | 37.854433, -1.482108 | OSM node/8143140117 | a 7 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Collado de la Media Ladera | `collado-de-la-media-ladera` | Paisajístico | 37.912147, -1.532896 | OSM node/8454057207 | — |
+| Collado de la Plegera | `collado-de-la-plegera` | Paisajístico | 37.848092, -1.623860 | OSM node/7037222588 | — |
+| Collado de la Sabina | `collado-de-la-sabina` | Paisajístico | 37.920260, -1.581320 | OSM node/8411818251 | — |
+| Collado de la Zarza | `collado-de-la-zarza` | Paisajístico | 37.829066, -1.549643 | OSM node/8490114942 | a 5 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Collado de las Chaparras | `collado-de-las-chaparras` | Paisajístico | 37.820618, -1.536192 | OSM node/8143135201 | — |
+| Collado de las Yeseras | `collado-de-las-yeseras` | Paisajístico | 37.846083, -1.582023 | OSM node/2104604153 | a 0 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Collado de los Siete Hermanos | `collado-de-los-siete-hermanos` | Paisajístico | 37.864973, -1.511955 | OSM node/8143135204 | a 1 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Collado de Totana | `collado-de-totana` | Paisajístico | 37.856245, -1.618102 | OSM node/6939867989 | a 23 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Collado del Buitre | `collado-del-buitre` | Paisajístico | 37.894443, -1.558843 | OSM node/8113206729 | — |
+| Collado del Ciervo | `collado-del-ciervo` | Paisajístico | 37.913924, -1.585698 | OSM node/8454015409 | — |
+| Collado del Enebral | `collado-del-enebral` | Paisajístico | 37.897490, -1.569074 | OSM node/8140124777 | — |
+| Collado del Humero | `collado-del-humero` | Paisajístico | 37.863068, -1.613692 | OSM node/6939867998 | a 8 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Collado del Pajarillo | `collado-del-pajarillo` | Paisajístico | 37.856662, -1.501672 | OSM node/13367750228 | — |
+| Collado del Paleto | `collado-del-paleto` | Paisajístico | 37.865952, -1.476734 | OSM node/11220778538 | a 9 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Collado del Perdigón | `collado-del-perdigon` | Paisajístico | 37.864273, -1.528958 | OSM node/8541978084 | — |
+| Collado del Piojo | `collado-del-piojo` | Paisajístico | 37.873270, -1.542544 | OSM node/8455093465 | — |
+| Collado del Portillo | `collado-del-portillo` | Paisajístico | 37.885453, -1.615839 | OSM node/8606763013 | — |
+| Collado del Rayo | `collado-del-rayo` | Paisajístico | 37.897297, -1.573105 | OSM node/8307072108 | — |
+| Collado Mangueta | `collado-mangueta` | Paisajístico | 37.869966, -1.565891 | OSM node/8111902105 | a 11 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Collado Moreno de Campix | `collado-moreno-de-campix` | Paisajístico | 37.834077, -1.525702 | OSM node/8332455104 | — |
+| Collado Pilón | `collado-pilon` | Paisajístico | 37.845405, -1.583412 | OSM node/6939892897 | a 1 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Collado Portillo | `collado-portillo` | Paisajístico | 37.884746, -1.537008 | OSM node/8150226083 | — |
+| Cumbre del Sombrero | `cumbre-del-sombrero` | Paisajístico | 37.844636, -1.541873 | OSM node/1304109661 | — |
+| El Aguilón | `el-aguilon` | Paisajístico | 37.883864, -1.619872 | OSM node/8293926858 | también mapeado como: Cuchillos del Bosque (cliff) |
+| El Bosque | `el-bosque` | Paisajístico | 37.896457, -1.591519 | OSM node/1304139116 | — |
+| El Buitre | `el-buitre` | Paisajístico | 37.897257, -1.555944 | OSM node/8140124776 | — |
+| El Peñón | `el-penon` | Paisajístico | 37.818863, -1.561579 | OSM node/8490114940 | — |
+| Mirador Collado Bermejo | `mirador-collado-bermejo` | Paisajístico | 37.855091, -1.568060 | OSM node/1439429708 | a 5 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) · también mapeado como: Collado Bermejo (saddle), Mirador del Collado Bermejo (viewpoint) |
+| Mirador de Alhama | `mirador-de-alhama` | Paisajístico | 37.856764, -1.470033 | OSM node/2737797917 | — |
+| Mirador del Algarrobo | `mirador-del-algarrobo` | Paisajístico | 37.807867, -1.545903 | OSM node/8332456273 | — |
+| Mirador del Avión | `mirador-del-avion` | Paisajístico | 37.855231, -1.510793 | OSM way/902032069 | — |
+| Mirador del Collado del Pilón | `mirador-del-collado-del-pilon` | Paisajístico | 37.846660, -1.579345 | OSM way/901826721 | a 5 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Mirador del Collado Mangueta | `mirador-del-collado-mangueta` | Paisajístico | 37.869797, -1.568436 | OSM node/8377137472 | a 11 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) · también mapeado como: Mirador Collado Mangueta (information) |
+| Mirador del Corazón de Jesus | `mirador-del-corazon-de-jesus` | Paisajístico | 37.797007, -1.552915 | OSM node/1666034210 | — |
+| Mirador del Guadalentín | `mirador-del-guadalentin` | Paisajístico | 37.867214, -1.474590 | OSM node/8150216706 | — |
+| Molejón Alto | `molejon-alto` | Paisajístico | 37.826345, -1.571929 | OSM node/8490114935 | — |
+| Morra de Juan Alonso | `morra-de-juan-alonso` | Paisajístico | 37.887620, -1.555365 | OSM node/1304106861 | — |
+| Morra de las Bojas | `morra-de-las-bojas` | Paisajístico | 37.885869, -1.551726 | OSM node/8191127177 | — |
+| Morra de las Cucalas | `morra-de-las-cucalas` | Paisajístico | 37.884777, -1.534238 | OSM node/1304135569 | — |
+| Morra de las Moscas | `morra-de-las-moscas` | Paisajístico | 37.872614, -1.555312 | OSM node/1304133147 | — |
+| Morra de los Pajarillos | `morra-de-los-pajarillos` | Paisajístico | 37.855131, -1.502404 | OSM node/13367750227 | — |
+| Morra de los Picachos | `morra-de-los-picachos` | Paisajístico | 37.884905, -1.544988 | OSM node/8150226081 | también mapeado como: Paredes de Leiva (cliff) |
+| Morra del Lentisco | `morra-del-lentisco` | Paisajístico | 37.883362, -1.518989 | OSM node/8525731644 | — |
+| Morra del Portillo | `morra-del-portillo` | Paisajístico | 37.884413, -1.539318 | OSM node/8150226082 | — |
+| Morrón de Abajo | `morron-de-abajo` | Paisajístico | 37.880576, -1.577561 | OSM node/7865547243 | — |
+| Morrón de Alhama | `morron-de-alhama` | Paisajístico | 37.874291, -1.539096 | OSM node/296437745 | — |
+| Morrón de Arriba | `morron-de-arriba` | Paisajístico | 37.879619, -1.585222 | OSM node/1304124492 | — |
+| Morrón de la Cabra | `morron-de-la-cabra` | Paisajístico | 37.921578, -1.580647 | OSM node/8454015406 | — |
+| Morrón Largo | `morron-largo` | Paisajístico | 37.818487, -1.553048 | OSM node/1304125155 | — |
+| Morrón Redondo | `morron-redondo` | Paisajístico | 37.822967, -1.539546 | OSM node/1304111131 | — |
+| Peña Apartada | `pena-apartada` | Paisajístico | 37.847568, -1.559495 | OSM node/1304117634 | — |
+| Peña Burrera | `pena-burrera` | Paisajístico | 37.887625, -1.531186 | OSM node/8150226080 | — |
+| Peña Soleada | `pena-soleada` | Paisajístico | 37.860300, -1.575290 | OSM node/8140124781 | — |
+| Peñas Blancas | `penas-blancas` | Paisajístico | 37.912166, -1.587935 | OSM node/8454015410 | — |
+| Pico de la Garita | `pico-de-la-garita` | Paisajístico | 37.859519, -1.491755 | OSM node/1304128808 | — |
+| Pico de Moriana | `pico-de-moriana` | Paisajístico | 37.853070, -1.480099 | OSM node/1304133699 | — |
+| Piedra del Almirez | `piedra-del-almirez` | Paisajístico | 37.922173, -1.547549 | OSM node/8113206730 | — |
+| Pinos Blancos | `pinos-blancos` | Paisajístico | 37.872631, -1.583620 | OSM node/8140124779 | — |
+| Poyo Miguel | `poyo-miguel` | Paisajístico | 37.867358, -1.552795 | OSM node/8455093464 | — |
+| Poyos de Pedro López | `poyos-de-pedro-lopez` | Paisajístico | 37.861550, -1.598373 | OSM node/1304115334 | — |
+| Risca de la Yedra | `risca-de-la-yedra` | Paisajístico | 37.890405, -1.558883 | OSM node/8454015364 | — |
+| Riscal de Campix | `riscal-de-campix` | Paisajístico | 37.850518, -1.513088 | OSM node/8475877529 | — |
+| Risco del Portillo | `risco-del-portillo` | Paisajístico | 37.888617, -1.612065 | OSM node/1304112535 | — |
+| Seterico Alto | `seterico-alto` | Paisajístico | 37.813757, -1.564387 | OSM node/8490114932 | — |
+| Ermita de Santa Leocadia | `ermita-de-santa-leocadia` | Religioso | 37.821635, -1.600863 | OSM way/591081760 | — |
 
 **Lo que falta en cada fila y no lo puede poner un script**: el hecho comprobable y su
 fuente, `approx` (y por qué), la foto con su licencia, y la descripción. Sin fuente del
@@ -216,183 +186,152 @@ hecho, el candidato no entra (§4.3.1).
 
 | Nombre | Etiqueta OSM | Regla que lo descarta |
 |---|---|---|
-| Cerro de Cánovas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Cuerda de Cánovas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| El Carretero | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Cerro del Cantal | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Cañada del Gitano | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Las Coquetas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Loma de Llamas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| La Rotura | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Los Tornejos | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Llano de las Cabras | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Las Quemadas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Los Quemados | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Cocón de las Artesicas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| El Portillo | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Umbría del Bosque | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Casa Nueva | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Cuesta Muñoz | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| La Romana | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Las Longanizas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| El Bosque | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Barranco del Gargantón | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Cuchillos del Bosque | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| El Pinillo | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Cuevas de Plata | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Cerro Caseta Pelada | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| El Purgatorio | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Santa Matilde | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Caruana | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| La Alquería | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Loma del Repelón | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Loma de la Solana de Malvariche | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Camino de Fuente Blanca | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Casa de Don Blas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| El Chutal | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Rincón del Grillo | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Piedra del Campanario | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Finca Caruana | `summer_camp` | alojamiento |
-| Finca Caruana | `restaurant` | servicio, no valor del espacio |
-| Casas de Santa Leocadia | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Casa del Cura | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Morrón de la Cabra | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Albergue de Montaña Casas Nuevas | `hostel` | alojamiento |
-| Los Morrones | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Peñas Blancas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Cuerda de los Carrascales | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Sala de Armas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Los Morroncicos | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Cerro Pinos Blancos | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| La Carrasca | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Cuesta de los Ruices | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Fuente de la Carrasca | `drinking_water` | equipamiento de ruta (fuente potable), no valor en sí |
-| Los Albaricoqueros | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Rincón de las Alquerías | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Las Alquerías | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Salto del Ciervo | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Hoya del Apurchil | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Hoya de la Sabina | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Barranco de las Cuevas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Cuesta del Rayo | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| El Manzanillo | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Cerro Espuña | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Pozos de la Villa | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Pozos de Orihuela | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Corral de la Villa | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Pozos de Cartagena | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Torreón de Los Exploradores | `other` | etiqueta sin contenido: mirar en OSM qué es antes de proponerlo |
-| Estación de Vigilancia Aérea número 13 «Acuartelamiento Aéreo Sierra Espuña» | `military` | zona militar en activo: no se pisa (§4.3.5) |
-| Pinos Donceles | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Los Ballesteros | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Coto de la Casilla | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Bar Restaurante Los Donceles | `restaurant` | servicio, no valor del espacio |
-| Fuente CF Alquerías | `drinking_water` | equipamiento de ruta (fuente potable), no valor en sí |
-| Albergue y Aula de la Naturaleza "Las Alquerías" | `hostel` | alojamiento |
-| Molejón Alto | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Las Tenganeras | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Abrevadero de las Yeguas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Fuente Perona | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Umbría de la Sierra de Espuña | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Prado Mayor | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Fuente Blanca | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Fuente Blanca | `drinking_water` | equipamiento de ruta (fuente potable), no valor en sí |
-| Los Carrascales | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Pozos de Murcia | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Pozos de Mangueta | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Pozo 19 | `other` | etiqueta sin contenido: mirar en OSM qué es antes de proponerlo |
-| Las Labores | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| La Santa | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Barranco del Roblecillo | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Rotura de la Cueva Telare | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| El Peñón | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Finca del Peñon | `farmyard` | servicio |
-| Arco de Totana | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Pinito de Oro | `hotel` | alojamiento |
-| Minas Del As | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Cejo de Valdecanales | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Camino del Valle de Leiva | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Llanos de las Tres Carrascas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Parque Regional de Sierra Espuña | `nature_reserve` | es el propio espacio protegido, no un punto dentro de él |
-| Casa Rosa | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Umbría de Peña Apartada | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| La Carrasquilla | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Los Algarrobos | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| El Grifo | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Los Colorados | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| El Balcón | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Estrecho de la Santa | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Fuente de La Santa | `drinking_water` | equipamiento de ruta (fuente potable), no valor en sí |
-| Fuente de Los Cuatro Chorros | `drinking_water` | equipamiento de ruta (fuente potable), no valor en sí |
-| Fuente AR El Grifo | `drinking_water` | equipamiento de ruta (fuente potable), no valor en sí |
-| Fuente de La Virgen Blanca | `drinking_water` | equipamiento de ruta (fuente potable), no valor en sí |
-| Jardines de la Santa | `hotel` | alojamiento |
-| Casa Rural Corredor de Santiago | `chalet` | alojamiento |
 | Pan Panizo | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Umbría de la Sepultura | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Los Pradillos | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Los Pracillos | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| La Breña | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| El Rodete | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Valdelaparra | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Las Escalerillas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Fuente del Piojo | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Solana del Morrón | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| El Perdigón | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Barranco del Azud | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Barranco del Buey | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Morti Alto | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Barranco de Carrasquilla | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Cabezo del Murciano | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Cerro de las Lagunas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Prado Chico | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| El Berro | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Cuerda del Estepar | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Stone circle | `artwork` | sin hecho comprobable detrás salvo que la fuente lo dé |
+| Pinos Donceles | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| El Chutal | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Cerro del Cantal | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Los Quemados | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Rincón del Grillo | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Los Morroncicos | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
 | La Perdiz | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Dientes de la Vieja | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| El Marqués | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Solana de los Corrales | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Horno del Barranco de Argüelles | `other` | etiqueta sin contenido: mirar en OSM qué es antes de proponerlo |
-| La Moriana | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Umbría del Marqués | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Campix | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| La Pocera | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| La Almoloya | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| El Fontanar | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Comedero de arruís | `wildlife_feeding` | instalación de gestión |
-| Los Jaboneros | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| El Valle | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| La Perdiz | `restaurant` | servicio, no valor del espacio |
-| Fuente La Perdiz | `drinking_water` | equipamiento de ruta (fuente potable), no valor en sí |
-| Casas Forestales Huerta Espuña | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Casa Forestal de Huerta Espuña | `other` | etiqueta sin contenido: mirar en OSM qué es antes de proponerlo |
-| Fuente del Hilo | `drinking_water` | equipamiento de ruta (fuente potable), no valor en sí |
-| Estación de Aforo del Río Espuña | `other` | etiqueta sin contenido: mirar en OSM qué es antes de proponerlo |
-| Casa de la Marina | `building` | sin contenido propio |
-| Restaurante Fuente del Hilo | `restaurant` | servicio, no valor del espacio |
-| Cejo Negro | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Centro de Defensa Brifor Alhama - Espuña | `fire_station` | servicio |
-| Casas de Campix | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Campís | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Cancari | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Fuente la Portuguesa | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Casa del Avión | `recreation_ground` | equipamiento |
-| Los Aramillejos | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Acebúchar | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Stone cycle | `artwork` | sin hecho comprobable detrás salvo que la fuente lo dé |
-| Casa Leiva | `social_centre` | servicio |
-| El Turullón | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
 | Fuente Alta | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| El Abuznel | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Cerro de los Calares | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Cuerda de la Cantera | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| El Estrecho | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Umbría de Peña Apartada | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Camino del Valle de Leiva | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| La Carrasquilla | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Estrecho de la Santa | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Cuchillos del Bosque | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Barranco de las Cuevas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Piedra del Campanario | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
 | Llano del Pico | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Los Ballesteros | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Campix | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| El Abuznel | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Hoya del Apurchil | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| La Moriana | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| La Pocera | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Barranco del Gargantón | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| La Rotura | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Cerro Espuña | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Coto de la Casilla | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Llanos de las Tres Carrascas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| La Almoloya | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Prado Chico | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Barranco del Roblecillo | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Cuesta Muñoz | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Sala de Armas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Cuerda de la Cantera | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Casa del Cura | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Los Morrones | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Molejón Alto | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Las Labores | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| El Peñón | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Prado Mayor | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
 | Calares de Juana | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Moriana | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Hotel La Mariposa | `hotel` | alojamiento |
-| Fuente Ermita Gebas | `drinking_water` | equipamiento de ruta (fuente potable), no valor en sí |
+| Barranco del Azud | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Hoya de la Sabina | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| El Balcón | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Umbría del Marqués | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Solana de los Corrales | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Las Tenganeras | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| La Romana | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| El Valle | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Llano de las Cabras | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Cañada del Gitano | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Casa Nueva | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Cerro de Cánovas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Los Aramillejos | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Los Pradillos | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| El Perdigón | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Fuente Blanca | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Los Algarrobos | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Fuente del Piojo | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Los Albaricoqueros | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Las Alquerías | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| El Purgatorio | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| El Turullón | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Acebúchar | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Rincón de las Alquerías | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| La Breña | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Santa Matilde | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Loma de la Solana de Malvariche | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| El Pinillo | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Cuerda del Estepar | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Fuente Perona | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Cabezo del Murciano | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Cuerda de Cánovas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Los Pracillos | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Umbría de la Sepultura | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Casa de Don Blas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Cerro Caseta Pelada | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Loma del Repelón | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| El Bosque | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Abrevadero de las Yeguas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Fuente la Portuguesa | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Casa Rosa | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Barranco de Carrasquilla | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Solana del Morrón | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Corral de la Villa | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| La Alquería | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| El Manzanillo | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| El Berro | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Cocón de las Artesicas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Loma de Llamas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Peñas Blancas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Caruana | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| La Santa | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Los Jaboneros | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Cancari | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Morrón de la Cabra | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Las Escalerillas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Las Longanizas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Los Tornejos | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Cerro Pinos Blancos | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Arco de Totana | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| El Marqués | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Los Carrascales | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Rotura de la Cueva Telare | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Cerro de los Calares | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Cejo de Valdecanales | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Cejo Negro | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Barranco del Buey | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Camino de Fuente Blanca | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Morti Alto | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Los Colorados | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Cerro de las Lagunas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| El Grifo | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| La Carrasca | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| El Fontanar | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| El Carretero | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Umbría de la Sierra de Espuña | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| El Rodete | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Cuesta del Rayo | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Cuerda de los Carrascales | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Umbría del Bosque | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Las Coquetas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Valdelaparra | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Campís | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Cuesta de los Ruices | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Las Quemadas | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Pozos de Murcia | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Carrasca centenaria del Alzheimer | `memorial` | duplicado de un POI ya dado de alta (santuario-de-santa-eulalia) — §4.3.7 |
+| Cuevas de Plata | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| El Portillo | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Minas Del As | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| El Estrecho | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Salto del Ciervo | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Espubike | `information` | duplicado de un POI ya dado de alta (centro-de-visitantes-ricardo-codorniu) — §4.3.7 |
+| Dientes de la Vieja | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Stone cycle | `artwork` | sin hecho comprobable detrás salvo que la fuente lo dé |
+| Stone circle | `artwork` | sin hecho comprobable detrás salvo que la fuente lo dé |
+| Pozos de Mangueta | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Pozos de Orihuela | `locality` | duplicado de un POI ya dado de alta (pozos-de-la-nieve) — §4.3.7 |
+| Pozos de Cartagena | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Pozos de la Villa | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
+| Santuario de Santa Eulalia de Mérida | `place_of_worship` | duplicado de un POI ya dado de alta (santuario-de-santa-eulalia) — §4.3.7 |
+| Centro de Visitantes y Gestión Ricardo Codorníu | `house` | duplicado de un POI ya dado de alta (centro-de-visitantes-ricardo-codorniu) — §4.3.7 |
+| Casas de Malvariche | `ruins` | duplicado de un POI ya dado de alta (casas-de-malvariche) — §4.3.7 |
+| Capilla de la Virgen del Rocío | `place_of_worship` | duplicado de un POI ya dado de alta (capilla-de-la-virgen-del-rocio) — §4.3.7 |
+| Torre del Azaraque | `ruins` | duplicado de un POI ya dado de alta (torre-del-azaraque) — §4.3.7 |
 
 ## Fuera del polígono oficial
 
@@ -400,87 +339,316 @@ Caen en el bbox pero no en el límite (§4.3.3), con el margen de ~50 m ya aplic
 
 | Nombre | Etiqueta OSM | Coordenada |
 |---|---|---|
-| Rincones | `locality` | 37.869706, -1.659566 |
-| La Cantina | `locality` | 37.875558, -1.652820 |
-| Vueltas de la Cigarra | `locality` | 37.869414, -1.652933 |
-| Los Rincones | `locality` | 37.878975, -1.645857 |
-| El Puntal | `locality` | 37.837793, -1.643894 |
-| La Fragua | `locality` | 37.825542, -1.634348 |
-| Llano de Subriel | `locality` | 37.816037, -1.637647 |
-| Casa de los Guardias | `locality` | 37.819109, -1.634399 |
-| Casa del Calderero | `chalet` | 37.897354, -1.617356 |
-| Casas del Purgatorio | `locality` | 37.837308, -1.602977 |
-| Los Calares | `locality` | 37.908296, -1.595327 |
-| La Sierra | `locality` | 37.835469, -1.601619 |
-| Rincón de Oller | `locality` | 37.816991, -1.596094 |
-| El Terrero | `locality` | 37.928831, -1.586776 |
-| Casas del Terrero | `locality` | 37.929853, -1.590891 |
-| Las Oliveras | `locality` | 37.923324, -1.589692 |
-| Área Recreativa Casas Nuevas | `forest` | 37.922680, -1.592537 |
-| Cañada del Agua | `locality` | 37.821177, -1.589016 |
-| Ermita de San José | `place_of_worship` | 37.815709, -1.583032 |
-| La Bermeja | `locality` | 37.929404, -1.578255 |
-| Casa Moreno | `locality` | 37.935017, -1.575007 |
-| Caserío Alquerías | `locality` | 37.814418, -1.572491 |
-| Cejo de las Palomas | `locality` | 37.934298, -1.566271 |
-| Minas del Salto del Ciervo | `locality` | 37.931251, -1.567035 |
-| Cejo de las Palomas | `peak` | 37.934080, -1.564229 |
+| Aledo | `village` | 37.795432, -1.573102 |
+| El Pilón | `locality` | 37.802149, -1.575919 |
+| La Mastroja | `locality` | 37.950371, -1.549807 |
+| Las Filomenas | `locality` | 37.809305, -1.440035 |
+| El Horcajo | `locality` | 37.952943, -1.685826 |
+| Rendija de la Huerta | `locality` | 37.789393, -1.558596 |
+| Casa Blanca | `locality` | 37.933913, -1.626209 |
+| Loma de Calvillo | `locality` | 37.919241, -1.668599 |
+| Cañada de Bojar | `locality` | 37.804934, -1.455076 |
+| Caserío Alquerías | `locality` | 37.814418, -1.572490 |
+| Tres Brazos | `locality` | 37.807159, -1.462617 |
+| Lomo Centeno | `locality` | 37.804746, -1.578299 |
+| El Cabecico | `locality` | 37.784894, -1.559921 |
+| Rincones de Lacuas | `locality` | 37.947581, -1.635219 |
+| Loma del Carrizalejo | `locality` | 37.883286, -1.678628 |
+| Las Talas | `locality` | 37.882379, -1.653446 |
+| La Heredad | `locality` | 37.829401, -1.455645 |
+| Covatillas | `locality` | 37.787729, -1.475103 |
+| Ojo del Lobo | `locality` | 37.787434, -1.431399 |
+| Casa de los Guardias | `locality` | 37.819109, -1.634397 |
+| Casa Párraga | `locality` | 37.950250, -1.611462 |
+| Calar de Cánsaras | `locality` | 37.920091, -1.638094 |
+| El Perdiguero | `locality` | 37.779180, -1.535108 |
+| El Colorado | `locality` | 37.926226, -1.634818 |
+| La Perala | `locality` | 37.925365, -1.468940 |
+| Los Huertos | `locality` | 37.776638, -1.529288 |
+| Charco Masanjuan | `locality` | 37.781101, -1.633429 |
+| La Marcilla | `locality` | 37.853199, -1.679098 |
 | Umbría del Pocico | `locality` | 37.806116, -1.569379 |
-| Restaurante Hermanos Mandola | `restaurant` | 37.808347, -1.570897 |
-| Arco de Aledo | `ruins` | 37.808195, -1.569178 |
+| Los Tarquinales | `locality` | 37.829108, -1.463571 |
+| Los Rincones | `locality` | 37.878976, -1.645856 |
+| Rincón del Calderero | `locality` | 37.901926, -1.616056 |
+| Los Albares | `locality` | 37.775287, -1.581555 |
+| Casa Marsilla | `locality` | 37.958221, -1.645813 |
+| Las Boqueras | `locality` | 37.940411, -1.542401 |
+| Coto Don Ginés | `locality` | 37.812382, -1.650528 |
+| Cañada de Ana | `locality` | 37.812272, -1.453865 |
 | El Zorro | `locality` | 37.803757, -1.566574 |
+| El Amarguillo | `locality` | 37.828386, -1.479482 |
+| Francés de Arriba | `locality` | 37.940154, -1.676984 |
+| Molino Chancla | `locality` | 37.785467, -1.581213 |
+| Llano Camacho | `locality` | 37.787432, -1.658148 |
+| Calvillo | `locality` | 37.912919, -1.646894 |
+| Casa Balsa | `locality` | 37.888399, -1.643204 |
+| Los Gallos | `locality` | 37.797246, -1.603771 |
+| Cabezo del Corral de Nogueras | `locality` | 37.953525, -1.508714 |
+| Prado Bartolo | `locality` | 37.957247, -1.592026 |
+| El Mololla | `locality` | 37.906907, -1.675316 |
+| El Hoyo | `locality` | 37.790519, -1.571145 |
+| Agua Blanca | `locality` | 37.938183, -1.635347 |
+| Cabezo de las Piedras | `locality` | 37.788729, -1.606067 |
+| Prado Miñano | `locality` | 37.921313, -1.618480 |
+| La Punta | `locality` | 37.830131, -1.431120 |
+| El Baladrar | `locality` | 37.775632, -1.461761 |
+| Lomas del Corral de Perucho | `locality` | 37.952459, -1.534276 |
+| El Terrero | `locality` | 37.928831, -1.586777 |
+| Sopa en Vino | `locality` | 37.796080, -1.558579 |
+| Tollo Barriga | `locality` | 37.792220, -1.623173 |
+| Las Lentejas | `locality` | 37.912609, -1.603354 |
+| Llano de las Tumerosas | `locality` | 37.798228, -1.651717 |
 | Las Zanjas | `locality` | 37.802085, -1.571388 |
-| Sopa en Vino | `locality` | 37.796081, -1.558578 |
-| Rincón de Yéchar | `locality` | 37.794633, -1.553860 |
-| Rendija de la Huerta | `locality` | 37.789393, -1.558597 |
-| Pozo de Miralles | `locality` | 37.793616, -1.540739 |
-| Paíto de Abajo | `locality` | 37.933940, -1.527829 |
-| Paíto de Arriba | `locality` | 37.929451, -1.528567 |
-| La Hoz | `locality` | 37.923207, -1.532947 |
-| Mortí Alto | `locality` | 37.810040, -1.526547 |
-| Balsa de los Mortolitos | `water` | 37.793565, -1.532609 |
-| Venta de los Pinos | `restaurant` | 37.791235, -1.527478 |
-| Los Bebedores | `locality` | 37.802922, -1.525903 |
-| Paintball Sport Totana | `pitch` | 37.800964, -1.520212 |
-| Cerro del Caballete | `locality` | 37.815569, -1.512498 |
-| Hoya de las Nogueras | `locality` | 37.898554, -1.502568 |
-| Casa de Agua Amarga | `locality` | 37.896160, -1.498022 |
-| Casa Hoya de las Nogueras | `locality` | 37.896793, -1.503201 |
-| Los Losaricos | `locality` | 37.900476, -1.490782 |
-| Cerro del Cristo | `peak` | 37.890636, -1.492569 |
-| Camping Sierra Espuña | `camp_site` | 37.888809, -1.493636 |
-| Bajo el Cejo | `chalet` | 37.889283, -1.489951 |
-| Iglesia Virgen de los Dolores | `place_of_worship` | 37.890561, -1.490648 |
-| El Corazón de Jesús | `monument` | 37.890056, -1.491641 |
-| Fuente El Berro | `drinking_water` | 37.889702, -1.490587 |
-| Cementerio Nuestra Señora de los Dolores | `cemetery` | 37.890136, -1.493752 |
-| Restaurante Sierra Espuña | `restaurant` | 37.888548, -1.492856 |
-| Restaurante de La Parra | `restaurant` | 37.888690, -1.491971 |
-| Ecoparque El Berro | `recycling` | 37.891040, -1.489160 |
-| Panadería David | `bakery` | 37.889787, -1.490603 |
-| Frutas de la Sierra Espuña | `industrial` | 37.931744, -1.473445 |
-| Hoya Noguera y Cuadrados | `locality` | 37.906023, -1.482041 |
-| Huerta de Camacho | `locality` | 37.896768, -1.473445 |
-| Calares del Azaraque | `locality` | 37.831542, -1.471189 |
-| El Amarguillo | `locality` | 37.828387, -1.479482 |
-| El Azaraque | `locality` | 37.837251, -1.468847 |
-| Casas del Azaraque | `manor` | 37.837234, -1.468872 |
+| Zamora | `locality` | 37.943372, -1.593838 |
+| Los Marianos | `locality` | 37.785510, -1.546259 |
+| El Majuelo | `locality` | 37.777019, -1.476243 |
+| Cañada de Sevilla | `locality` | 37.952270, -1.588103 |
+| Las Lagunas | `locality` | 37.926062, -1.674813 |
+| Cañada de Salas | `locality` | 37.787074, -1.637975 |
+| Los Tornajos | `locality` | 37.932942, -1.669569 |
+| La Hoz | `locality` | 37.923206, -1.532946 |
+| Paíto de Arriba | `locality` | 37.929451, -1.528566 |
+| Los Calares | `locality` | 37.908295, -1.595326 |
+| Cerro Brazo de Camacho | `locality` | 37.793247, -1.659122 |
+| Picachos de Peito | `locality` | 37.949472, -1.503186 |
+| La Posadilla | `locality` | 37.959365, -1.663925 |
+| La Asomada | `locality` | 37.804072, -1.588944 |
+| El Calvillo | `locality` | 37.918220, -1.610677 |
+| El Prado | `locality` | 37.774674, -1.606490 |
+| La Pieza | `locality` | 37.797972, -1.442409 |
+| Tala de los Gatos | `locality` | 37.873833, -1.680275 |
+| Las Palomas | `locality` | 37.816614, -1.453707 |
+| Los Rubiales | `locality` | 37.788371, -1.614681 |
+| Llano del Almendro | `locality` | 37.961781, -1.563060 |
+| Cañada del Prior | `locality` | 37.835388, -1.668506 |
+| Minas del Salto del Ciervo | `locality` | 37.931251, -1.567034 |
+| Caja del Aire | `locality` | 37.908754, -1.667298 |
+| Llano de las Cabras | `locality` | 37.814483, -1.681663 |
+| Cabezuelas Rojas | `locality` | 37.819563, -1.451817 |
+| Lomo de los Cabreras | `locality` | 37.777126, -1.436261 |
+| Rincón de Yéchar | `locality` | 37.794634, -1.553860 |
+| Las Anguilas | `locality` | 37.959410, -1.531622 |
+| La Fragua | `locality` | 37.825543, -1.634347 |
+| Los Pedregales | `locality` | 37.775179, -1.558509 |
+| Llano del Purgatorio | `locality` | 37.807732, -1.652941 |
+| Muela del Moclón | `locality` | 37.941974, -1.528908 |
+| Cañada del Acebuche | `locality` | 37.803533, -1.465135 |
+| Cerro de la Almoloya | `locality` | 37.878635, -1.670525 |
+| Las Cruces | `locality` | 37.870803, -1.453598 |
+| Cañada Miñano | `locality` | 37.908472, -1.621655 |
+| Cañada Larga | `locality` | 37.795640, -1.591490 |
+| Cerro del Silillo | `locality` | 37.794091, -1.667534 |
+| Francés de Abajo | `locality` | 37.941980, -1.645747 |
+| Vueltas de la Cigarra | `locality` | 37.869413, -1.652932 |
+| Los Tejares | `locality` | 37.826538, -1.457272 |
+| La Calzona | `locality` | 37.801382, -1.508818 |
+| El Almendro | `locality` | 37.955601, -1.554405 |
+| Las Olmedas | `locality` | 37.925029, -1.621027 |
+| Pozo de la Arboleja | `locality` | 37.775945, -1.596588 |
+| Llano Carrones | `locality` | 37.782424, -1.652084 |
+| Loma de Palomeque | `locality` | 37.904091, -1.638070 |
+| El Puerto | `locality` | 37.893041, -1.648748 |
+| Cañada del Agua | `locality` | 37.821178, -1.589016 |
+| Lomas de la Juncosa | `locality` | 37.799074, -1.672306 |
+| Los Bebedores | `locality` | 37.802922, -1.525904 |
+| Cabezo Molino | `locality` | 37.783309, -1.586875 |
+| Los Camachos | `locality` | 37.943973, -1.614084 |
+| La Zarzadilla | `locality` | 37.849569, -1.681720 |
+| Las Zahurdas | `locality` | 37.799660, -1.591573 |
+| La Hondonada | `locality` | 37.820311, -1.458686 |
+| Casa Moreno | `locality` | 37.935016, -1.575006 |
+| Cañada de la Barrilla | `locality` | 37.802360, -1.681538 |
+| Los Bernabeles | `locality` | 37.961789, -1.615559 |
+| Vereda de los Gatos | `locality` | 37.799815, -1.615297 |
+| Cañada de Matamoros | `locality` | 37.808335, -1.453301 |
+| Coto de Pagán | `locality` | 37.809474, -1.599076 |
+| Calares del Azaraque | `locality` | 37.831541, -1.471190 |
+| La Zarzadilla | `locality` | 37.945689, -1.643846 |
+| Los Sifones | `locality` | 37.778684, -1.577028 |
+| Tirieza | `locality` | 37.775572, -1.567868 |
+| Calar Chico | `locality` | 37.906672, -1.651468 |
+| Cabezo del Corral de Nogueras | `peak` | 37.952735, -1.508107 |
+| Cañada del Centeno | `locality` | 37.805352, -1.672727 |
+| Casa Salinas | `locality` | 37.962771, -1.588255 |
+| La Cantina | `locality` | 37.875559, -1.652820 |
+| La Torreta | `locality` | 37.787843, -1.574172 |
+| Cocón del Enebro | `locality` | 37.842892, -1.661064 |
+| Cañada Nueva | `locality` | 37.793735, -1.610265 |
+| Casa Carlos | `locality` | 37.922696, -1.653780 |
+| Cerro del Caballete | `locality` | 37.815569, -1.512497 |
+| Cañadas Viejas | `locality` | 37.814805, -1.663833 |
+| Malvariche | `locality` | 37.950311, -1.561770 |
+| La Fontanilla | `locality` | 37.785932, -1.564545 |
+| Los Chorillos | `locality` | 37.933872, -1.601370 |
+| Cueva del Silillo | `locality` | 37.797197, -1.673657 |
+| Llano de las Bojas | `locality` | 37.780645, -1.619073 |
+| El Tollo | `locality` | 37.801770, -1.454369 |
+| El Cholo | `locality` | 37.791168, -1.648280 |
+| Pedro Puro | `locality` | 37.941257, -1.576854 |
+| El Mármol | `locality` | 37.949948, -1.667088 |
+| Llanos de la Viña | `locality` | 37.824503, -1.469802 |
+| El Colmenar | `locality` | 37.797584, -1.474060 |
+| Los Bulleros | `locality` | 37.947334, -1.583110 |
+| Los Selvares | `locality` | 37.923141, -1.682750 |
+| Loma del Aliagal | `locality` | 37.928312, -1.653143 |
+| Estrecho de Lacuas | `locality` | 37.957377, -1.563283 |
+| El Pinar | `locality` | 37.933018, -1.469054 |
+| La Cantera | `locality` | 37.956680, -1.679135 |
+| Cruce de la Cruz | `locality` | 37.777319, -1.619066 |
+| Cañada Perdida | `locality` | 37.867312, -1.682233 |
+| Cabezo de los Bastidas | `locality` | 37.824955, -1.449295 |
+| Puntal de los Gatos | `locality` | 37.870958, -1.669901 |
+| Los Cordones | `locality` | 37.806950, -1.475594 |
+| Estrecho de la Algualeja | `locality` | 37.782732, -1.600399 |
+| Cejo de las Palomas | `locality` | 37.934297, -1.566270 |
+| Cuerda de Miñano | `locality` | 37.904766, -1.619188 |
+| Rincón de Oller | `locality` | 37.816991, -1.596094 |
 | Los Yesares | `locality` | 37.816160, -1.463089 |
-| Gebas | `locality` | 37.894503, -1.449951 |
-| El Mirador de Gebas | `restaurant` | 37.901128, -1.453827 |
-| Balsa Nueva | `water` | 37.899750, -1.454449 |
-| El Mirador de Gebas | `guest_house` | 37.901079, -1.454076 |
-| Fuente Mirador de Gebas | `drinking_water` | 37.897049, -1.451982 |
-| Fuente del Chorrico | `fountain` | 37.893749, -1.454452 |
-| Camino del Bajo Guadalentín | `information` | 37.897386, -1.451011 |
-| Senderos de Alhama | `information` | 37.897041, -1.451963 |
-| Fuente del Saltador | `spring` | 37.895855, -1.453320 |
-| Ermita de la Purísima | `place_of_worship` | 37.896941, -1.451660 |
-| Carmona | `locality` | 37.872488, -1.454959 |
-| Las Cruces | `locality` | 37.870803, -1.453596 |
-| Casa del Taibilla | `building` | 37.848777, -1.453736 |
-| Depósito de Alhama | `industrial` | 37.849709, -1.458384 |
-| Molino Nuevo | `other` | 37.854837, -1.454932 |
+| Huertos Nuevos | `locality` | 37.777961, -1.471046 |
+| La Lentiscosa | `locality` | 37.808803, -1.491459 |
+| Tazona | `locality` | 37.786541, -1.531260 |
+| Llano de Subriel | `locality` | 37.816037, -1.637647 |
+| El Coto | `locality` | 37.798196, -1.465699 |
+| Cejo de las Rotas | `locality` | 37.913082, -1.665866 |
+| El Puntal | `locality` | 37.837793, -1.643894 |
+| Casa Olmedas | `locality` | 37.912785, -1.624396 |
+| Cañada de Millas | `locality` | 37.806251, -1.599398 |
+| Las Ollerías | `locality` | 37.962583, -1.597342 |
+| Lomo de los Ángeles | `locality` | 37.808220, -1.588377 |
+| Almonolla | `locality` | 37.939321, -1.651178 |
+| Cabezo del Chopo | `locality` | 37.779212, -1.602998 |
+| Las Oliveras | `locality` | 37.923324, -1.589692 |
+| Los Carreches | `locality` | 37.830647, -1.440108 |
+| El Charquico | `locality` | 37.944695, -1.429914 |
+| El Rulo | `locality` | 37.778602, -1.510369 |
+| Las Zahúrdas | `locality` | 37.811363, -1.591202 |
+| La Venta | `locality` | 37.962460, -1.536946 |
+| La Bermeja | `locality` | 37.929404, -1.578255 |
+| Cañada Jacinto | `locality` | 37.790773, -1.631240 |
+| El Francés | `locality` | 37.936604, -1.659467 |
+| Morra de los Conejos | `locality` | 37.896039, -1.673851 |
+| Chorloque | `locality` | 37.903883, -1.624630 |
+| Los Losaricos | `locality` | 37.900476, -1.490781 |
+| Los Majales | `locality` | 37.794290, -1.647836 |
+| Cañada del Tollo | `locality` | 37.790913, -1.659096 |
+| Molino Nuevo | `locality` | 37.788704, -1.587306 |
+| Los Magras | `locality` | 37.937887, -1.600179 |
+| Pozo de Miralles | `locality` | 37.793616, -1.540740 |
+| La Restinga | `locality` | 37.821880, -1.445713 |
+| Loma Larga | `locality` | 37.790394, -1.488222 |
+| Casa Cortés | `locality` | 37.948000, -1.572570 |
+| Lomas de Don Pedro | `locality` | 37.777780, -1.682974 |
+| La Higuerica | `locality` | 37.954062, -1.609148 |
+| Paíto de Abajo | `locality` | 37.933939, -1.527828 |
+| Cañada de Don Luis | `locality` | 37.803361, -1.649011 |
+| Flotas de Arranca | `locality` | 37.788103, -1.454734 |
+| La Tejera | `locality` | 37.808311, -1.577936 |
+| El Carcavalar | `locality` | 37.954122, -1.642052 |
+| Llano Sarabia | `locality` | 37.790896, -1.612545 |
+| Cabezo del Albergue | `locality` | 37.918663, -1.603945 |
+| Hoya de las Nogueras | `locality` | 37.898554, -1.502569 |
+| La Esperanza | `locality` | 37.962024, -1.492515 |
+| Cañada de Caravaca | `locality` | 37.796213, -1.637216 |
+| El Huérfano | `locality` | 37.961159, -1.572657 |
+| Cerro de Palomeque | `peak` | 37.908251, -1.629500 |
+| Alto de Peña Rubia | `peak` | 37.894044, -1.678004 |
+| Cabezuela Gorda | `peak` | 37.800827, -1.471474 |
+| Calar Grande | `peak` | 37.910233, -1.645170 |
+| Cabezo del Sordo | `peak` | 37.902829, -1.673891 |
+| Cueva de la Mauta | `cave_entrance` | 37.790848, -1.583496 |
+| Molino Alto | `watermill` | 37.786262, -1.571570 |
+| Molino Cavero | `watermill` | 37.789667, -1.583714 |
+| Molino Chancla | `watermill` | 37.788208, -1.581160 |
+| Molino Chiquito | `watermill` | 37.787319, -1.575581 |
+| Molino Mora | `watermill` | 37.786198, -1.570730 |
+| Molino Nuevo | `watermill` | 37.791099, -1.583329 |
+| Molino Primero | `watermill` | 37.785397, -1.564548 |
+| Molino Ramos | `watermill` | 37.787086, -1.578978 |
+| Molino Segundo | `watermill` | 37.785805, -1.568300 |
+| Molino Tello | `watermill` | 37.783088, -1.554681 |
+| Molino de la Huerta | `watermill` | 37.782011, -1.552185 |
+| Patalache | `hamlet` | 37.790523, -1.582545 |
+| Carmona | `hamlet` | 37.872488, -1.454960 |
+| El Berro | `hamlet` | 37.889602, -1.490703 |
+| Gebas | `hamlet` | 37.894502, -1.449951 |
+| Hoya Noguera y Cuadrados | `hamlet` | 37.906022, -1.482041 |
+| La Costera | `hamlet` | 37.781019, -1.487745 |
+| La Huerta | `hamlet` | 37.775928, -1.546877 |
+| La Sierra | `hamlet` | 37.835468, -1.601620 |
+| Las Canales | `hamlet` | 37.797108, -1.579027 |
+| Las Flotas de Butrón | `hamlet` | 37.800967, -1.441396 |
+| Los Pavos | `hamlet` | 37.843930, -1.452550 |
+| Mortí Alto | `hamlet` | 37.810040, -1.526546 |
+| Nonihay | `hamlet` | 37.786690, -1.597030 |
+| Retamosa | `hamlet` | 37.936589, -1.451331 |
+| Mirador del Infierno | `viewpoint` | 37.791384, -1.572795 |
+| Mirador Ollerías | `viewpoint` | 37.794061, -1.571970 |
+| Busto Tío Juan Rita | `memorial` | 37.794154, -1.572833 |
+| Restos de la muralla | `archaeological_site` | 37.791244, -1.573235 |
+| Mirador Estrecho de la Arboleja | `viewpoint` | 37.783023, -1.596487 |
+| Estrecho de la Arboleja | `locality` | 37.782882, -1.596810 |
+| Entrada al Estrecho | `cave_entrance` | 37.783153, -1.596950 |
+| Castillo de Aledo | `castle` | 37.791435, -1.573260 |
+| El Corazón de Jesús | `monument` | 37.890056, -1.491641 |
+| Hornacina Santo Ángel de la Guarda | `artwork` | 37.856381, -1.435862 |
+| Mirador de la Muela | `viewpoint` | 37.863520, -1.430285 |
+| Información Fuente Allá Abajo | `information` | 37.794433, -1.575287 |
+| Monumento al Donante de sangre | `memorial` | 37.795328, -1.573063 |
+| Caño de la Cañaica | `ruins` | 37.801595, -1.572031 |
+| Arco de Aledo | `ruins` | 37.808194, -1.569179 |
+| Busto Juan Pablo II | `memorial` | 37.796814, -1.572747 |
+| Mirador de la Huerta | `viewpoint` | 37.792996, -1.574074 |
+| Muralla del Agujero | `ruins` | 37.792888, -1.573418 |
+| Cruz Arma Christi (Agonía de Cristo) | `memorial` | 37.791571, -1.573686 |
+| Mirador de la Picota | `viewpoint` | 37.791531, -1.573651 |
+| Geología de Aledo | `information` | 37.792083, -1.573883 |
+| Senda del Agua de Sierra Espuña | `information` | 37.792419, -1.574492 |
+| Cruz de Las Cuestas | `memorial` | 37.792601, -1.574126 |
+| Mural Taller Social de Graffiti Aledo | `artwork` | 37.794445, -1.574422 |
+| Mirador Suroeste | `viewpoint` | 37.791311, -1.573579 |
+| Cerro del Cristo | `peak` | 37.890636, -1.492569 |
+| Fuentes del Barbol | `spring` | 37.935990, -1.540468 |
+| Cejo de las Palomas | `peak` | 37.934080, -1.564228 |
+| Collado de Peña Rubia | `saddle` | 37.899189, -1.674557 |
+| Collado de los Huesos | `saddle` | 37.902933, -1.656688 |
+| La Senda del Agua | `information` | 37.946208, -1.488607 |
+| Casas del Purgatorio | `hamlet` | 37.837308, -1.602977 |
+| El Retamar de Abajo | `hamlet` | 37.937890, -1.441317 |
+| Cerro de la Almoloya | `peak` | 37.878315, -1.667438 |
+| Camino del Bajo Guadalentín | `information` | 37.897385, -1.451011 |
+| Senderos de Alhama | `information` | 37.897041, -1.451964 |
+| Fuente del Saltador | `spring` | 37.895856, -1.453320 |
+| Los Chopos | `locality` | 37.932825, -1.667973 |
+| Casas Altas | `hamlet` | 37.907435, -1.430304 |
+| Venta la Rata | `hamlet` | 37.787310, -1.524305 |
+| Residencial Espuña | `hamlet` | 37.797873, -1.508864 |
+| Las Casicas | `hamlet` | 37.920328, -1.594971 |
+| Los Yesares | `ruins` | 37.813700, -1.464255 |
+| Red de Senderos de la Sierra de la Muela | `information` | 37.871575, -1.444311 |
+| PR-MU 131 Sendero de Baldomero Brugarolas | `information` | 37.851645, -1.435710 |
+| Cruz de la Misión | `wayside_cross` | 37.775358, -1.507825 |
+| Oficina de turismo | `information` | 37.791335, -1.573339 |
+| Balsa | `ruins` | 37.791872, -1.574994 |
+| Iglesia Santa María La Real | `attraction` | 37.791690, -1.573012 |
+| Iglesia de María Inmaculada | `place_of_worship` | 37.923990, -1.598017 |
+| La Almoloya | `archaeological_site` | 37.952716, -1.508012 |
+| Casa del Calderero | `manor` | 37.897352, -1.617413 |
+| Ermita de la Purísima | `place_of_worship` | 37.896957, -1.451659 |
+| Iglesia Virgen de los Dolores | `place_of_worship` | 37.890555, -1.490649 |
+| Pared del Lavaor | `cliff` | 37.888311, -1.488339 |
+| La Almoloya | `parking` | 37.958218, -1.507181 |
+| Casas del Azaraque | `manor` | 37.837233, -1.468872 |
+| Molino Nuevo | `yes` | 37.854837, -1.454931 |
+| Casa del Factor | `manor` | 37.849002, -1.443859 |
+| Casa del Ramblar | `manor` | 37.838127, -1.444030 |
+| Ermita de San José | `place_of_worship` | 37.815698, -1.583030 |
+| Tira de Lienzo | `archaeological_site` | 37.795874, -1.484130 |
+| Capilla Cementerio Nuestra Señora del Carmen | `place_of_worship` | 37.778169, -1.491482 |
+| La Calahorra | `tower` | 37.791346, -1.573282 |
+| El Pulgoso | `cliff` | 37.785697, -1.547898 |
+| Casa de Don José Sánchez Munuera | `manor` | 37.849130, -1.446324 |
+| Área Recreativa Casas Nuevas | `picnic_site` | 37.922523, -1.592780 |
 
 ## Fundidos por proximidad
 
@@ -488,27 +656,19 @@ A menos de 50 m de otro candidato: el mismo sitio con dos etiquetas (§4.3.7).
 
 | Nombre | Etiqueta | Fundido con |
 |---|---|---|
-| Pozo 1 | `attraction` | Pozo 2 |
-| Pozo 4 | `attraction` | Pozo 5 |
-| Zona de Acampada Las Alquerías | `camp_site` | Área Recreativa Las Alquerías |
-| Pozo 12 | `attraction` | Pozo 13 |
-| Pozo 23 | `attraction` | Pozo 22 |
-| Pozo 11 | `attraction` | Pozo 13 |
-| Pozo 16 | `attraction` | Pozo 17 |
-| Mirador Collado Mangueta | `information` | Mirador del Collado Mangueta |
+| Mirador de La Virgen Blanca | `viewpoint` | La Virgen Blanca |
 | Collado Bermejo | `saddle` | Mirador Collado Bermejo |
 | Mirador del Collado Bermejo | `viewpoint` | Mirador Collado Bermejo |
-| Carrasca centenaria del Alzheimer | `memorial` | Santuario de Santa Eulalia de Mérida |
-| La Virgen Blanca | `memorial` | Mirador de La Virgen Blanca |
-| Fuente del Hilo | `spring` | Area Recreativa Fuente del Hilo |
-| Mirador de Huerta Espuña | `viewpoint` | El caño de Espuña |
-| Refugio Fuente del Hilo | `shelter` | Area Recreativa Fuente del Hilo |
-| Area Recreativa Campamento de los Exploradores | `picnic_site` | Zona de Acampada Campamento de Exploradores |
-| Zona de Acampada Campamento de Exploradores | `information` | Zona de Acampada Campamento de Exploradores |
-| Fuente de la Portuguesa | `spring` | Area Recreativa Fuente La Portuguesa |
-| Espubike | `information` | Centro de Visitantes y Gestión Ricardo Codorníu |
-| Casa Forestal Fuente de Rubeos | `museum` | Fuente Rubeos |
 | Memorial Mariano Serrano | `memorial` | Fuente Rubeos |
+| Parque Regional Sierra Espuña | `information` | Fuente del Hilo |
+| Mirador de Huerta Espuña | `viewpoint` | El caño de Espuña |
+| Mirador Collado Mangueta | `information` | Mirador del Collado Mangueta |
+| Paredes de Leiva | `cliff` | Morra de los Picachos |
+| Casa Forestal Fuente de Rubeos | `museum` | Fuente Rubeos |
+| Cuchillos del Bosque | `cliff` | El Aguilón |
+| Area Recreativa Fuente La Portuguesa | `picnic_site` | Fuente de la Portuguesa |
+| Area Recreativa Fuente del Hilo | `picnic_site` | Fuente del Hilo |
+| Area Recreativa Campamento de los Exploradores | `picnic_site` | Zona de Acampada Campamento de Exploradores |
 
 ## Resto de la cascada (§4.2) — a mano
 

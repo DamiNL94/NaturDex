@@ -484,7 +484,68 @@
       "imageNote": "Portada ilustrada con Cornical (Periploca angustifolia), la especie que da nombre al hábitat."
     }
   ],
-  "pointsOfInterest": [],
+  "pointsOfInterest": [
+    {
+      "id": "vulcanismo-de-la-carolina",
+      "name": "Vulcanismo de La Carolina",
+      "type": "Geológico",
+      "description": "Afloramiento volcánico catalogado en el Inventario Español de Lugares de Interés Geológico con el código BE006. No está interestratificado: su contacto con los materiales sedimentarios mio-pliocenos aparece verticalizado, de modo que el volcanismo no fue simultáneo al depósito de esas capas. El IGME le reconoce interés principal petrológico-geoquímico y, como secundarios, el estratigráfico y el geomorfológico.",
+      "coordinates": [
+        37.374485,
+        -1.627156
+      ],
+      "image": null,
+      "source": "Inventario Español de Lugares de Interés Geológico (IELIG), IGME — LIG BE006 «Vulcanismo de La Carolina». La coordenada es la del propio punto del inventario.",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "playa-de-los-cocedores",
+      "name": "Playa de los Cocedores",
+      "type": "Cultural",
+      "description": "En el acantilado de marga que cierra la cala se excavaron depósitos y balsas donde se maceraba el esparto en agua antes de majarlo y trenzarlo. El topónimo nombra ese oficio: un cocedero es el sitio donde se cuece el esparto. Las cavidades y los depósitos siguen siendo visibles, y están documentados fotográficamente; la práctica está pendiente de contrastar con fuente documental escrita.",
+      "coordinates": [
+        37.374916,
+        -1.629774
+      ],
+      "image": null,
+      "source": "Posición: OpenStreetMap way/1459077450 (ODbL). Uso espartero documentado en Wikimedia Commons («Antiguo deposito de esparto en la Cala de los Cocederos», «Depositos excavados en el acantilado, Cala de los Cocederos»); pendiente de contrastar con fuente documental. El IELIG y Commons escriben «Cocederos»; OpenStreetMap, «Cocedores».",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "conglomerados-de-cuatro-calas",
+      "name": "Conglomerados de Cuatro Calas",
+      "type": "Geológico",
+      "description": "Afloran conglomerados horizontales muy fracturados de la Unidad Superior y, hacia poniente, areniscas calcáreas limosas con fauna fósil. Es el punto de mayor interés geológico del espacio: el IGME le asigna interés geomorfológico como principal y, como secundarios, el estratigráfico, el paleontológico, el tectónico y el sedimentológico.",
+      "coordinates": [
+        37.377857,
+        -1.628044
+      ],
+      "image": null,
+      "source": "Inventario Español de Lugares de Interés Geológico (IELIG), IGME — LIG BE005, cuya denominación oficial es «Playa de Cuatro Calas»; aquí se le da otro nombre para no confundirlo con el del propio espacio protegido. approx: el punto del inventario representa el conjunto del tramo costero, no un afloramiento puntual.",
+      "approx": true,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "playa-de-calarreona",
+      "name": "Playa de Calarreona",
+      "type": "Acceso",
+      "description": "La más septentrional de las cuatro calas que dan nombre al espacio y su acceso por el norte. Es una de las paradas del SL-MU 18 «Sendero de Cuatro Calas Juan F. Mota Poveda», recorrido circular de unos 5 km que enlaza Calarreona, La Higuerica, La Carolina y Los Cocedores y pasa por el saladar de Cañada Brusca.",
+      "coordinates": [
+        37.383513,
+        -1.621103
+      ],
+      "image": null,
+      "source": "Posición: OpenStreetMap (ODbL). Sendero SL-MU 18 homologado por la FMRM. Aviso: la traza del SL-MU 18 NO está en geo/trails.geojson, que solo lleva el GR-92.",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    }
+  ],
   "species": [
     {
       "id": 1,

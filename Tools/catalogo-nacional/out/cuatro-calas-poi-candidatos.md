@@ -8,10 +8,9 @@
 | | |
 |---|---|
 | Espacio | Cuatro Calas (`cuatro-calas`) |
-| Fuente consultada | basemap Protomaps del repo (`Frontend/Data/parks/murcia/cuatro-calas/tiles/base.pmtiles`, ODbL) |
-| Basemap | zoom máx. 15, recorte -1.6441,37.3739 → -1.6198,37.3911 |
-| Candidatos dentro del límite | 4 |
-| Fuera del polígono (descartados) | 9 |
+| Fuente consultada | OpenStreetMap vía Overpass (2026-08-07) |
+| Candidatos dentro del límite | 2 |
+| Fuera del polígono (descartados) | 22 |
 | Descartados por regla | 5 |
 
 ## Candidatos
@@ -21,10 +20,8 @@ de la etiqueta de OSM: los ocho del vocabulario cerrado del §4.1, y quien redac
 
 | Nombre | `id` propuesto | Tipo sug. | Coordenada | Origen | A revisar |
 |---|---|---|---|---|---|
-| Cala Los Cocedores | `cala-los-cocedores` | Natural | 37.374900, -1.629254 | basemap pois | — |
-| Playa de Calarreona | `playa-de-calarreona` | Natural | 37.383513, -1.621103 | basemap pois | — |
-| Playa de la Carolina | `playa-de-la-carolina` | Natural | 37.376290, -1.628315 | basemap pois | — |
-| Playa de la Higuerica | `playa-de-la-higuerica` | Natural | 37.379947, -1.626478 | basemap pois | a 29 m de una traza de trails.geojson: si lo que se quiere contar es el recorrido, ya está en la capa de senderos (§4.1) |
+| Playa de la Carolina | `playa-de-la-carolina` | Natural | 37.376287, -1.628168 | OSM way/1459077415 | — |
+| Playa de la Higuerica | `playa-de-la-higuerica` | Natural | 37.379908, -1.626160 | OSM way/1459077557 | — |
 
 **Lo que falta en cada fila y no lo puede poner un script**: el hecho comprobable y su
 fuente, `approx` (y por qué), la foto con su licencia, y la descripción. Sin fuente del
@@ -37,8 +34,8 @@ hecho, el candidato no entra (§4.3.1).
 | Cabezo Alto | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
 | Los Cocedores | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
 | Cañada Brusca | `locality` | topónimo suelto (§4.1): solo entra si una fuente le pone un hecho detrás |
-| Paisaje Protegido Cuatro Calas | `nature_reserve` | es el propio espacio protegido, no un punto dentro de él |
-| Albergue Juvenil Calarreona | `hostel` | alojamiento |
+| Playa de Calarreona | `beach` | duplicado de un POI ya dado de alta (playa-de-calarreona) — §4.3.7 |
+| Cala Los Cocedores | `beach` | duplicado de un POI ya dado de alta (playa-de-los-cocedores) — §4.3.7 |
 
 ## Fuera del polígono oficial
 
@@ -46,15 +43,28 @@ Caen en el bbox pero no en el límite (§4.3.3), con el margen de ~50 m ya aplic
 
 | Nombre | Etiqueta OSM | Coordenada |
 |---|---|---|
-| Cañada Blanca | `locality` | 37.381654, -1.648700 |
-| Los Gorriones | `locality` | 37.394426, -1.632146 |
-| Camper Area Aníbal | `caravan_site` | 37.388726, -1.616677 |
-| ANIBAL | `fuel` | 37.388834, -1.615875 |
-| Autolavado | `car_wash` | 37.389150, -1.615476 |
-| Calarreona | `locality` | 37.386595, -1.618606 |
-| Cala de las Tortugas | `beach` | 37.384540, -1.615165 |
-| Maxcaly Playa Restaurante | `restaurant` | 37.384841, -1.618563 |
-| Islote Cama de Los Novios | `coastline` | 37.378304, -1.623233 |
+| Castillo de San Juan de los Terreros | `castle` | 37.357222, -1.651901 |
+| Despeñaperros | `locality` | 37.363937, -1.653557 |
+| Cañada Blanca | `locality` | 37.381655, -1.648700 |
+| Cerrón Cogón | `locality` | 37.372742, -1.656720 |
+| La Moleta | `locality` | 37.376030, -1.644678 |
+| Las Canales | `locality` | 37.400071, -1.650470 |
+| Los Gorriones | `locality` | 37.394426, -1.632147 |
+| Cabezo Negro | `locality` | 37.398714, -1.628883 |
+| Cuadras de Moreno | `locality` | 37.400662, -1.618928 |
+| Lo Blanco | `locality` | 37.405098, -1.643985 |
+| Calarreona | `hamlet` | 37.386594, -1.618605 |
+| El Cocón | `hamlet` | 37.401730, -1.663936 |
+| San Juan de los Terreros | `village` | 37.360811, -1.663670 |
+| Playa Casica Verde | `beach` | 37.395197, -1.602469 |
+| Playa de la Herradura | `beach` | 37.387122, -1.611064 |
+| Playa de Matalentisco | `beach` | 37.388721, -1.610837 |
+| Cala Mijo | `beach` | 37.385882, -1.612637 |
+| Cala de las Tortugas | `beach` | 37.384543, -1.615160 |
+| Cala La Invencible | `beach` | 37.356356, -1.656635 |
+| Playa de las Palmeras | `beach` | 37.374395, -1.638722 |
+| Playa la Carolina | `beach` | 37.371164, -1.643716 |
+| Playa Cañada del Negro | `beach` | 37.392628, -1.606325 |
 
 ## Resto de la cascada (§4.2) — a mano
 

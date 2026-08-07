@@ -2,8 +2,8 @@
   "slug": "cuatro-calas",
   "name": "Cuatro Calas",
   "apiSlug": "cuatro-calas",
-  "version": 2,
-  "updatedAt": "2026-08-01",
+  "version": 3,
+  "updatedAt": "2026-08-07",
   "data": "Data/parks/murcia/cuatro-calas/park.json",
   "geo": {
     "parque": "Data/parks/murcia/cuatro-calas/geo/parque.geojson",
@@ -32,7 +32,7 @@
   "counts": {
     "species": 102,
     "habitats": 7,
-    "pointsOfInterest": 0,
+    "pointsOfInterest": 4,
     "images": 0,
     "assetBytes": 0
   }
