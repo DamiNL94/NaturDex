@@ -216,6 +216,7 @@ generan ficheros en `out/` para revisar antes de adoptarlos.
 | `contenido/habitats.json` | Descripción divulgativa por **código HIC**, universal para todos los parques de España. La aplica `sync-habitat-catalog.js` |
 | `contenido/fitosociologia.json` | Lectura en llano de cada asociación fitosociológica (nombre entendible, plantas que la nombran, rango) + cómo se lee la nomenclatura. Indexado por el **nombre latino sin autoría**. No sustituye a la cita oficial: la acompaña |
 | `descripciones-espacios.json` | La descripción de cada espacio. **El único texto del pipeline redactado a mano**; `build-n1-espacios.js` la lee de aquí para que una regeneración no la pise |
+| `poi-alias.json` | Nombres alternativos con los que buscar en Commons la foto de un POI, cuando la grafía de quien lo situó (OSM, IELIG) no es la de quien subió la foto. Los aplica `poi-images.js` **solo dentro de la categoría del espacio**, nunca en el buscador |
 | `murcia-enp-municipios.json`, `senderos-fmrm-murcia.json` | Datos de apoyo de la comunidad piloto |
 
 ### Uso (ejemplo real, piloto verificado)

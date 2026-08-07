@@ -283,16 +283,22 @@ elemento, y dicho así en su `source`.
 8. **`id` en slug estable**, sin tildes, minúsculas y guiones: es clave en la BD
    (`points_of_interest.slug`, único por parque).
 
-### 4.4 Herramienta
+### 4.4 Herramientas
 
-No existe todavía: **`Tools/build-park-pois.js`** (`npm run pois:build`), hermana de
-`build-park-trails.js` —de la que hereda la consulta a Overpass con reintento y mirror, el recorte
-por polígono y el `--dry-run`—. Cruza OSM con el IELIG y el registro de BIC y escribe **candidatos**
-en `Tools/catalogo-nacional/out/<slug>-poi-candidatos.md`.
+| Script | npm | Qué hace |
+|---|---|---|
+| `Tools/build-park-pois.js` | `pois:build` | Barre el territorio del parque y trae todo lo que tiene nombre y coordenada, recortado al polígono oficial. Fuentes: Overpass o el `base.pmtiles` del propio parque (`--fuente=auto\|overpass\|basemap`). → `out/<slug>-poi-candidatos.md` |
+| `Tools/catalogo-nacional/poi-images.js` | `images:pois` | La foto de cada POI y su crédito (§4.6) |
 
-> **Escribe candidatos, nunca `park.json`.** La descripción de un POI es texto redactado a mano con
+> **Escriben candidatos, nunca `park.json`.** La descripción de un POI es texto redactado a mano con
 > su fuente delante: de los 15 del piloto no salió ni uno tal cual de una consulta. La búsqueda se
-> automatiza; la admisión y la redacción, no.
+> automatiza; la admisión y la redacción, no. `poi-images.js` sí escribe, pero solo la candidata que
+> pasa las dos puertas del §4.6.
+>
+> La fuente de `build-park-pois.js` importa y queda anotada en el informe: `overpass` ve las
+> etiquetas completas del §4.2 pero cambia entre ejecuciones; `basemap` no necesita red y es
+> reproducible, pero solo ve lo que sobrevive al filtro de zoom de Protomaps. Un candidato que solo
+> sale por basemap no significa que OSM no tenga más: significa que esa consulta no se pudo hacer.
 
 ### 4.5 El prompt
 
@@ -332,11 +338,16 @@ NO los toques. Lo único que se añade aquí es `pointsOfInterest`.
    - `description`: 2-4 frases con el hecho concreto y comprobable. Si la fuente es tradición
      oral o divulgación turística, se dice en el propio texto y se marca como pendiente de
      contrastar — como está hecho en la Ermita de Cope y en la Fuente de los piratas.
-   - `image`: Commons con licencia libre (URL canónica Special:FilePath) o fichero en
-     Frontend/Img/poi/. Sin foto es mejor que con foto de licencia dudosa: `image: null`.
+   - `image`: NO la busques a mano. Es el paso 5, con la herramienta del §4.6.
    - Cero adjetivos de folleto.
 
-5. CIERRE. Actualiza manifest.json (counts.pointsOfInterest, images), ejecuta `npm run validate`
+5. FOTOS (§4.6). Averigua primero la categoría del espacio en Commons —es el ancla— y pásala:
+     node Tools/catalogo-nacional/poi-images.js --park <SLUG> --categoria "<Categoría>" \
+          --municipio "<Municipio>" --list
+   Enséñame el listado antes de escribir. Luego repite con --write --sql. Sin foto es mejor que
+   con foto de licencia dudosa: el POI se queda con `image: null` y consta como hueco.
+
+6. CIERRE. Actualiza manifest.json (counts.pointsOfInterest, images), ejecuta `npm run validate`
    hasta verde, y prepara el SQL de la tabla points_of_interest (park_id + slug único) siguiendo
    el patrón de Database/cuatro-calas-n2.sql: idempotente, y dime si queda aplicado o pendiente.
    Actualiza Docs/rollout/ESTADO.md (nivel N3, nº de POIs y las fuentes que dieron y no dieron
@@ -346,6 +357,91 @@ NO los toques. Lo único que se añade aquí es `pointsOfInterest`.
 Regla que manda sobre todas: ante la duda, hueco documentado antes que dato inventado. Un espacio
 que cierra su N3 con 0 POIs y la lista de fuentes agotadas es un resultado válido.
 ```
+
+### 4.6 Las fotos de los POIs — `poi-images.js`
+
+**Por qué no vale el mecanismo de las especies.** Toda la cadena de fotos del catálogo
+(`lib/wikimedia.js`) cuelga de un ancla que un POI no tiene: el nombre científico. Wikidata responde
+a `haswbstatement:P225="Ziziphus lotus"` con la foto del taxón correcto, y de ahí para abajo todo el
+criterio de descarte —otra especie del género, mapas de área, pliegos de herbario— se apoya en el
+binomio. El nombre de un POI es un topónimo, que es justo el tipo de cadena que se repite por toda
+España: hay al menos tres «Ermita de Santa Leocadia» y la «Playa de las Higuericas» está a 200 km de
+nuestra «Playa de la Higuerica».
+
+**El ancla es la categoría de Commons del espacio.** Un archivo que está dentro de
+`Category:Cuatro Calas Protected Landscape` está en Cuatro Calas por construcción. Eso resuelve la
+mitad del problema —*dónde*— y deja la otra mitad —*qué retrata*— al nombre del archivo.
+
+| # | Vía | Garantiza el sitio | Garantiza el elemento | Se escribe sola |
+|---|---|---|---|---|
+| 1 | Categoría del espacio + sus subcategorías (**un nivel**), archivo cuyo nombre mencione el POI | Sí, la categoría | El nombre del archivo | **Sí** |
+| 2 | Buscador de archivos de Commons: nombre del POI + espacio o municipio | No | No | No: sale como `needsReview` |
+
+> **Un nivel de subcategorías y no más.** En Commons la categoría de un espacio protegido cuelga de
+> las del municipio y las de la comunidad; bajar dos niveles acaba trayendo la playa urbana del
+> pueblo de al lado. Un nivel sí hace falta: `Cuatro Calas Protected Landscape` agrupa por cala en
+> subcategorías como `Cala de los Cocedores`.
+
+**Coincidencia por palabras completas, nunca por subcadena.** Se exige que *todas* las palabras con
+peso del nombre del POI aparezcan en el nombre del archivo (los artículos y preposiciones se caen:
+Commons escribe indistintamente «Playa Cocedores» y «Playa de los Cocedores»). Que sea palabra
+completa y no subcadena es el fallo que el script existe para no cometer: «Higuericas» contiene
+«Higuerica». Está cubierto por su test.
+
+**Alias de topónimo — `data/poi-alias.json`.** El nombre con el que un POI está dado de alta sale de
+la fuente que lo *sitúa* (casi siempre OSM o el IELIG) y no tiene por qué ser el que usó quien subió
+la foto. Cuando no coinciden, el script no encuentra nada aunque la foto esté delante. El caso que
+lo motiva: el POI se llama **«Playa de los Cocedores»** (grafía de OSM) y los diez archivos de
+Commons dicen **«Cala de los Cocederos»** (grafía del IELIG) — ni «playa» ni «cocedores» aparecen en
+el nombre del archivo, así que el mejor POI documentado de Cuatro Calas se quedaba sin foto.
+
+> **Los alias solo se aplican en la vía 1.** No es una limitación, es lo que los hace seguros:
+> dentro de la categoría del espacio el sitio ya está garantizado, así que un alias corto como
+> «Carolina» o «Azaraque» solo puede traer algo de este espacio. En el buscador ese mismo alias
+> traería La Carolina de Jaén, y por eso allí se sigue exigiendo el nombre completo. Un alias
+> **no relaja ninguna comprobación**: la licencia sigue siendo lista blanca y la candidata sigue
+> teniendo que cargar.
+
+Al dar de alta un POI conviene mirar con qué nombre lo escribe la fuente de la foto y, si difiere,
+anotarlo ahí mismo: es más barato que descubrirlo cuando la búsqueda vuelva vacía.
+
+**Dos puertas que el script no abre nunca solo:**
+
+1. **Licencia — lista blanca, no lista negra.** Solo entran CC0, dominio público, CC BY y CC BY-SA.
+   NC, ND y «licencia sin especificar» se descartan y se anotan. Es lo contrario de lo que hace el
+   pipeline de especies —que se limita a anotar lo que diga Commons— y es deliberado: allí la foto
+   ilustra un taxón sustituible; aquí acompaña a un sitio concreto y **se empaqueta en la descarga
+   sin conexión del parque**. `--force` **no** levanta esta puerta.
+2. **Coincidencia dudosa.** Una candidata `needsReview` —las de la vía 2— sale en el informe pero no
+   se escribe. Que una foto sea del sitio correcto no lo decide una heurística sobre un topónimo:
+   tiene que verlo alguien. Esta puerta sí la levanta `--force`.
+
+**El crédito va dentro de `source`.** Un POI no tiene `imageAttribution` (una especie y un hábitat
+sí). El formato es el del piloto —`…Anexo I del proyecto de PORN…; Wikimedia Commons (foto:
+J.Alberto, CC BY-SA 4.0)`— y la escritura es idempotente: una segunda pasada sustituye el crédito
+anterior en vez de encadenar otro.
+
+**Se heredan los filtros de `usable()`** de `lib/wikimedia.js`, y aquí importan más que en especies:
+para un lugar, el falso positivo clásico no es un pliego de herbario sino **el mapa**. La categoría
+de Sierra Espuña contiene literalmente un `Mapa sierra espuna.svg`, y ya hubo el precedente del
+`Sorbus domestica_range.svg` colado como «foto» de *Cormus domestica*.
+
+```bash
+# 1) Enumerar sin escribir: qué candidata sale por POI, con autor, licencia y vía
+node Tools/catalogo-nacional/poi-images.js --park <SLUG> \
+     --categoria "<Categoría de Commons del espacio>" --municipio "<Municipio>" --list
+
+# 2) Escribir las seguras + el SQL (la API manda sobre el park.json empaquetado)
+node Tools/catalogo-nacional/poi-images.js --park <SLUG> \
+     --categoria "<Categoría>" --write --sql Database/poi-imagenes.sql --report Docs/fotos-poi.md
+```
+
+**Si un POI se queda sin foto, se queda con `image: null`** y consta como hueco en el informe de
+cierre. No hay prisa que levante la regla de licencia.
+
+> **Foto local en vez de enlace.** Si la foto se descarga al repo (`Frontend/Img/poi/<id>.jpg`, como
+> las 6 de Cabo Cope), hay que añadirla a `manifest.images` y recalcular `counts.images` y
+> `assetBytes`: el validador compara los tres. Una URL de Commons no toca el manifiesto.
 
 ---
 
@@ -362,9 +458,15 @@ conocidos.
 
 Un espacio está en **N3** cuando, además: se ha recorrido **entera** la cascada de fuentes del §4.2
 y consta en el ledger qué dio cada una, todo POI admitido tiene `source`, coordenada dentro del
-polígono oficial y `approx` correctamente marcado, ninguno cae en las exclusiones del §4.3,
-`counts.pointsOfInterest` cuadra y la BD tiene sus filas. **Un N3 con 0 POIs es un N3 cerrado** si la
-cascada está agotada y documentada: lo que cierra el nivel es haber buscado, no haber encontrado.
+polígono oficial y `approx` correctamente marcado, ninguno cae en las exclusiones del §4.3, **ha
+pasado la búsqueda de fotos del §4.6 con la categoría de Commons del espacio localizada** (y los que
+sigan sin foto constan como hueco, no como pendiente), `counts.pointsOfInterest` cuadra y la BD tiene
+sus filas.
+
+**Un N3 con 0 POIs es un N3 cerrado** si la cascada está agotada y documentada: lo que cierra el
+nivel es haber buscado, no haber encontrado. Lo mismo vale para las fotos —**pero solo si la búsqueda
+se ha hecho de verdad**. Un «sin foto» que en realidad significa «no había red para preguntarle a
+Commons» no cierra nada: eso es una tarea pendiente y va anotada como tal.
 
 ---
 
@@ -426,10 +528,15 @@ ahora que en el parque número treinta:
 4. **Catálogos regionales de especies amenazadas**: cada comunidad tiene el suyo. Hace falta una
    tabla comunidad → norma para que el campo de estado autonómico no sea un texto libre distinto
    en cada parque.
-5. **`Tools/build-park-pois.js`** (§4.4): la búsqueda de POIs es hoy manual entera. Mientras no
-   exista, cada Fase 3 repite a mano la consulta a Overpass y el recorte por polígono que
-   `build-park-trails.js` ya sabe hacer. Es la deuda más barata de las cinco y la que más veces se
-   va a pagar: hay 15 espacios de Murcia esperando su N3 y el resto de España detrás.
-6. **El pipeline de POIs no escribe en la BD**, igual que el de hábitats (ver ESTADO.md, sesión del
-   2026-08-01): `park.json` y `points_of_interest` se sincronizan a mano con un SQL por espacio. Con
-   dos parques se lleva; con doscientos, no.
+5. **Las fotos de los POIs de Cuatro Calas y Sierra Espuña están sin resolver** (17 POIs, todos con
+   `image: null`). No es falta de herramienta —`poi-images.js` existe y hace el trabajo— sino que las
+   dos sesiones que lo han intentado (2026-08-07 y 2026-08-08) corrían en entornos **sin salida a
+   `commons.wikimedia.org`**. Es la primera deuda que se salda sola en cuanto se ejecute desde una
+   máquina con red; los comandos exactos están en `out/poi-fotos-candidatas.md`.
+6. **El IELIG y el registro de BIC se consultan a mano.** `build-park-pois.js` automatiza la vía 4 de
+   la cascada (OSM) pero no las vías 2 y 3, que son las que dan los POIs geológicos y patrimoniales
+   —los mejores del piloto—. Mientras siga así, la calidad del N3 de un espacio depende de la
+   paciencia de quien lo haga.
+7. **El pipeline de POIs no escribe en la BD por sí solo**, igual que el de hábitats (ver ESTADO.md,
+   sesión del 2026-08-01): `poi-images.js` genera el SQL con `--sql`, pero aplicarlo es manual y el
+   alta de los POIs no genera ninguno. Con dos parques se lleva; con doscientos, no.

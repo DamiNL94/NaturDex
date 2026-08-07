@@ -53,6 +53,55 @@ delimitación regional, así que conserva el límite del MITECO y no pasa por
 
 ---
 
+## 2026-08-08 — El mecanismo de fotos de POIs, documentado; y el alias que evitaba encontrarlas
+
+La Fase 3 del rollout no decía nada de cómo se buscan las fotos de los POIs, pese a que
+`poi-images.js` ya existía y las buscaba. Añadido **§4.6 a `Docs/prompts/e-rollout-nacional.md`**:
+por qué la cadena de las especies no sirve (cuelga del nombre científico y un POI no tiene), cuál es
+el ancla que la sustituye (la **categoría de Commons del espacio**: un archivo dentro de
+`Category:Cuatro Calas Protected Landscape` está en Cuatro Calas por construcción), las dos vías, y
+las dos puertas que el script no abre solo —licencia de lista blanca, que `--force` **no** levanta, y
+coincidencia dudosa, que sí—. La definición de N3 «terminado» (§5) incorpora la búsqueda de fotos, y
+distingue el hueco real («no hay foto libre») del falso («no hubo red para preguntar»).
+
+### El fallo que habría dejado la próxima pasada en balde
+
+`mencionaSitio` exige que todas las palabras con peso del nombre del POI estén en el nombre del
+archivo. Contra los archivos que de verdad hay en Commons, eso fallaba en **3 de los 4 POIs de Cuatro
+Calas**, y precisamente en el mejor documentado:
+
+| POI | Archivos reales | Por qué no casaba |
+|---|---|---|
+| Playa de los Cocedores | «…en la Cala de los **Cocederos**» (10 archivos) | Falta «playa», y «cocedores» ≠ «cocederos» |
+| Vulcanismo de La Carolina | «Afloramientos rocosos en la **Cala La Carolina**» | Falta «vulcanismo» |
+| Conglomerados de Cuatro Calas | El IELIG lo llama «**Playa de Cuatro Calas**» | Falta «conglomerados» |
+
+La trampa «Cocederos/Cocedores» ya estaba anotada en `n3-cuatro-calas-sierra-espuna.md` §5 como algo
+a tener en cuenta «al resolver las fotos»; lo que no había era mecanismo para tenerlo en cuenta.
+
+**`Tools/catalogo-nacional/data/poi-alias.json`** (nuevo) da nombres alternativos por POI, y
+`poi-images.js` los aplica **solo en la vía 1**, dentro de la categoría del espacio. Ahí un alias
+corto como «Carolina» o «Azaraque» es seguro porque la categoría ya garantiza el sitio; en el
+buscador traería La Carolina de Jaén, así que allí se sigue exigiendo el nombre completo. Un alias no
+relaja la licencia ni la comprobación de carga. Cubiertos los 4 POIs de Cuatro Calas y 10 de los 13
+de Sierra Espuña.
+
+Los tres sin alias lo están a propósito y consta por qué en el propio fichero. El caso que enseña
+algo es **«Pozo de la nieve de Mula»**: su nombre en OSM es «Pozo 28», pero `palabrasClave` descarta
+las palabras de dos letras o menos, así que ese alias se reduciría a «pozo» y casaría con cualquiera
+de los 28 pozos del parque. Un alias que se queda en una palabra genérica es peor que no tener
+alias.
+
+### Lo que sigue pendiente y por qué
+
+**Los 17 POIs siguen con `image: null`.** Esta sesión tampoco pudo ejecutar la pasada: sin Node y sin
+salida a `commons.wikimedia.org` ni `es.wikipedia.org`. Es la tercera seguida que se queda en el
+mismo punto por el entorno, no por el trabajo. No falta herramienta ni criterio: falta una máquina
+con Node y red. Los dos comandos exactos, las categorías verificadas y qué esperar de cada espacio
+están en `Tools/catalogo-nacional/out/poi-fotos-candidatas.md`.
+
+---
+
 ## 2026-08-07 (b) — La cascada de la Fase 3, recorrida: **sigue abierta, y con menos huecos**
 
 Segunda sesión de N3 el mismo día, en otra máquina. **Ninguno de los dos espacios sube de nivel**:

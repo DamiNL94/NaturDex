@@ -24,6 +24,20 @@
  *   2. Buscador de archivos de Commons con el nombre del POI Y el del espacio o su municipio. Se
  *      marca `needsReview` siempre: el buscador no garantiza nada.
  *
+ * Alias de topónimo (data/poi-alias.json)
+ * ---------------------------------------
+ * El nombre con el que un POI está dado de alta y el que usa Commons no tienen por qué coincidir, y
+ * cuando no coinciden este script no encuentra NADA aunque la foto esté delante. El caso que lo
+ * motiva es real y está documentado en Docs/rollout/n3-cuatro-calas-sierra-espuna.md §5: el POI se
+ * llama «Playa de los Cocedores» (grafía de OSM) y los diez archivos de Commons dicen «Cala de los
+ * CocedEros» (grafía del IELIG). Ni «playa» ni «cocedores» aparecen en el nombre del archivo, así
+ * que `mencionaSitio` decía que no y el mejor POI documentado de Cuatro Calas se quedaba sin foto.
+ *
+ * Los alias SOLO se aplican en la vía 1, nunca en el buscador. No es una limitación, es la razón de
+ * que sean seguros: dentro de la categoría del espacio el sitio ya está garantizado, así que un
+ * topónimo corto como «Carolina» solo puede traer algo de este espacio. En el buscador ese mismo
+ * alias traería la Carolina de Jaén, y por eso allí se sigue exigiendo el nombre completo.
+ *
  * Dos puertas que este script no abre nunca solo
  * ----------------------------------------------
  *   · **Licencia.** Solo entran CC0, dominio público, CC BY y CC BY-SA. Lo demás —NC, ND, licencia
@@ -55,9 +69,10 @@ const path = require('path');
 const { api, loads, usable, metadatos, atribucion, filePathUrl, commonsFileFromUrl } = require('../lib/wikimedia');
 const { sqlStr } = require('../lib/sql');
 const { arg, flag, num } = require('../lib/cli');
-const { parkFiles, readJson, fromRoot, rel } = require('../lib/io');
+const { parkFiles, readJson, readJsonIf, fromRoot, rel } = require('../lib/io');
 
 const COMMONS = 'https://commons.wikimedia.org/w/api.php';
+const ALIAS_FILE = path.join(__dirname, 'data', 'poi-alias.json');
 
 const OPT = {
   park: arg('park', null),
@@ -116,6 +131,22 @@ function mencionaSitio(fileName, nombrePoi) {
   const claves = palabrasClave(nombrePoi);
   if (!claves.length) return false;
   return claves.every(w => tokens.has(w));
+}
+
+/** Igual, pero dando por bueno cualquiera de los nombres (el del POI o uno de sus alias). */
+const mencionaAlguno = (fileName, nombres) => nombres.some(n => mencionaSitio(fileName, n));
+
+// --- Alias de topónimo -----------------------------------------------------------------------------
+// data/poi-alias.json: { "<slug del espacio>": { "<id del POI>": ["otro nombre", …] } }
+// Un fichero ausente o una entrada que falte no son un error: significa que ese POI se busca solo
+// por su nombre, que es el caso normal.
+const ALIAS = readJsonIf(ALIAS_FILE, {});
+
+function aliasDe(slug, poiId) {
+  const delEspacio = ALIAS[slug];
+  if (!delEspacio) return [];
+  const lista = delEspacio[poiId];
+  return Array.isArray(lista) ? lista.filter(s => typeof s === 'string' && s.trim()) : [];
 }
 
 // --- Commons ---------------------------------------------------------------------------------------
@@ -184,12 +215,19 @@ async function primeraValida(ficheros, via, needsReview) {
   return { elegida: null, rechazos };
 }
 
-async function resuelvePoi(poi, { archivos, contexto }) {
-  // 1 · dentro de la categoría del espacio, por nombre.
-  const enCategoria = archivos.filter(f => mencionaSitio(f, poi.name));
+async function resuelvePoi(poi, { archivos, contexto, alias }) {
+  // 1 · dentro de la categoría del espacio, por nombre o por cualquiera de sus alias. Los alias solo
+  //     valen aquí: la categoría ya garantiza el sitio (ver cabecera).
+  const nombres = [poi.name, ...alias];
+  const enCategoria = archivos.filter(f => mencionaAlguno(f, nombres));
   if (enCategoria.length) {
     const { elegida, rechazos } = await primeraValida(enCategoria, 'Categoría de Commons del espacio', false);
-    if (elegida) return { ...elegida, rechazos };
+    if (elegida) {
+      // Que la coincidencia haya salido por alias y no por el nombre del POI se dice en el informe:
+      // es lo que hay que mirar si alguna vez una foto acaba en el POI equivocado.
+      if (!mencionaSitio(elegida.file, poi.name)) elegida.via += ' (por alias)';
+      return { ...elegida, rechazos };
+    }
     if (rechazos.length) return { elegida: null, rechazos };
   }
   // 2 · buscador, con el espacio o el municipio como contexto. Siempre a revisar.
@@ -218,7 +256,9 @@ async function procesaParque(entry, informe) {
     const tieneFoto = !!poi.image;
     if (tieneFoto && !OPT.all) { informe.push({ parque: entry.slug, poi: poi.name, estado: 'ya tenía foto', detalle: poi.image }); continue; }
 
-    const res = await resuelvePoi(poi, { archivos, contexto });
+    const alias = aliasDe(entry.slug, poi.id);
+    if (alias.length) console.log(dim('    alias: ' + alias.join(' · ')));
+    const res = await resuelvePoi(poi, { archivos, contexto, alias });
     for (const r of (res.rechazos || [])) {
       informe.push({ parque: entry.slug, poi: poi.name, estado: 'descartada', detalle: r.file + ' — ' + r.motivo });
     }
@@ -299,4 +339,4 @@ if (require.main === module) {
 
 // Las tres decisiones que no dependen de la red y sí de acertar: qué licencia entra, cuándo un
 // nombre de archivo habla del sitio, y cómo queda el crédito dentro de `source`.
-module.exports = { licenciaLibre, mencionaSitio, conCredito };
+module.exports = { licenciaLibre, mencionaSitio, mencionaAlguno, aliasDe, conCredito };
