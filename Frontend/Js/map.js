@@ -344,6 +344,17 @@ export function renderMarkers() {
   });
 }
 
+// Parte de los puntos de interés se ubicaron con topónimos y posiciones de OpenStreetMap (ODbL) y el
+// resto sale del PORN, de la CARM o de fuentes documentales. Acreditar a OSM en bloque por la capa
+// entera atribuiría mal los segundos, así que el crédito lo declara cada marcador según su propio
+// `source`: aparece solo si hay en pantalla algún punto que de verdad venga de OSM, y se va con
+// ellos al cambiar de parque. El `source` completo de cada punto sigue en su ficha; esto es el
+// crédito visible permanente, que no puede depender de qué capa base esté activa.
+const POI_OSM_CREDIT = 'Puntos de interés: &copy; OpenStreetMap contributors (ODbL)';
+function poiAttribution(poi) {
+  return /openstreetmap/i.test(poi.source || '') ? POI_OSM_CREDIT : undefined;
+}
+
 export function renderPoiMarkers() {
   state.poiGroup.clearLayers();
   state.poiMarkers.clear();
@@ -353,7 +364,9 @@ export function renderPoiMarkers() {
     // a L.marker(null). Se salta: mejor que falte un marcador a que se caiga el mapa entero.
     if (!poi.coordinates) return;
     const seen = state.seenPois.has(poi.id);
-    const marker = L.marker(poi.coordinates, { icon: poiDivIcon(poi, seen), pane: PANES.pois }).addTo(state.poiGroup);
+    const marker = L.marker(poi.coordinates, {
+      icon: poiDivIcon(poi, seen), pane: PANES.pois, attribution: poiAttribution(poi)
+    }).addTo(state.poiGroup);
     // Igual que las especies: la ficha del punto de interés se abre donde se abren todas las fichas.
     // El globo anterior traía foto de 180 px, descripción, audioguía y botón: en un móvil ocupaba
     // casi la pantalla entera, Leaflet no conseguía encajarlo y quedaba cortado por arriba o debajo
