@@ -364,6 +364,7 @@ npm run species:apply        # sincroniza los campos universales a TODOS los par
 npm run habitats:check       # hábitats sin descripción universal, textos con rastro de un parque
 npm run habitats:apply       # descripción por código HIC a TODOS los park.json + Data/fitosociologia.json + SQL
 node Tools/build-park-trails.js <slug>
+npm run pois:build <slug>    # candidatos a POI recortados al polígono (NO escribe park.json)
 npm run tiles:build <slug>
 npm run validate             # hasta verde
 npm run glossary:check       # vocabulario nuevo sin definición
@@ -371,7 +372,11 @@ npm run taxones:duplicados   # el mismo taxón con dos nombres
 ```
 
 POIs **solo desde fuente documental** (PORN/PRUG, red de senderos oficial, cartografía del organismo
-gestor). Un POI sin fuente no entra. Después: `status` a `available` en `parks-index.json`, cargar la
+gestor). Un POI sin fuente no entra. `pois:build` **no** salta esa regla: barre OpenStreetMap dentro
+del límite —vía Overpass, o vía el `base.pmtiles` del propio parque cuando no hay red— y deja los
+candidatos con su coordenada en `Tools/catalogo-nacional/out/<slug>-poi-candidatos.md`. El hecho, la
+fuente, la foto y la descripción se ponen a mano; la herramienta solo dice dónde mirar.
+Después: `status` a `available` en `parks-index.json`, cargar la
 BD, y actualizar `Docs/rollout/ESTADO.md` con el informe de cierre (contadores, cobertura de fotos,
 especies sin hábitat, huecos conocidos y qué contrastar en campo).
 
