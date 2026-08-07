@@ -309,6 +309,20 @@ function validatePark(entry) {
     if (!(s.tips || []).length) warn(scope, 'especie #' + s.id + ' (' + s.commonName + ') sin pistas de identificación');
   });
 
+  // 5 ter) Contenido universal de la ficha de hábitat ---------------------------------------------
+  // Un código HIC es el mismo tipo de hábitat en toda la Directiva: el 5330 de Almería y el de
+  // Tarragona son el mismo matorral. Su `description` describe ESE tipo de vegetación, no el recinto
+  // que le tocó en este espacio, así que tampoco puede nombrar un parque —lo hacía: «terrestre del
+  // parque piloto», «marina de Cope»—. Lo local del hábitat es el polígono, la superficie, el
+  // centroide y sus `speciesIds`. La fuente de verdad es
+  // Tools/catalogo-nacional/data/contenido/habitats.json, indexado por código.
+  habitats.forEach(h => {
+    const texto = h.description || '';
+    if (!texto.trim()) { warn(scope, 'hábitat "' + h.id + '" sin descripción'); return; }
+    const m = texto.match(RASTRO_LOCAL);
+    if (m) err(scope, 'hábitat "' + h.id + '": `description` menciona «' + m[0] + '». Ese campo es universal; ver Tools/sync-habitat-catalog.js');
+  });
+
   // 6) Coordenadas bien formadas ------------------------------------------------------------------
   // Además del formato se comprueba el encuadre: un [0, 0] es sintácticamente válido pero cae en el
   // golfo de Guinea, y así es como se colaban los POIs sin ubicar (NULL en la BD casteado a 0.0).
@@ -394,8 +408,14 @@ function validatePark(entry) {
 const CAMPOS_UNIVERSALES = ['commonName', 'kingdom', 'group', 'habitat', 'seasonality', 'rarityScore',
   'description', 'tips', 'taxonomy', 'iucnGlobal', 'spainStatus', 'image', 'imageAttribution'];
 
+// Lo mismo, pero para los hábitats: la clave no es el nombre científico sino el CÓDIGO HIC, y el
+// único campo universal de momento es la descripción. Quien las vuelve a alinear es
+// `node Tools/sync-habitat-catalog.js --apply`.
+const CAMPOS_UNIVERSALES_HABITAT = ['description'];
+
 function validarCoherenciaEntreParques(parques) {
   const porEspecie = new Map();
+  const porCodigoHic = new Map();
   parques.forEach(p => {
     // El park.json se localiza SIEMPRE por el manifiesto, que es lo que hace también el frontend.
     // Antes había un respaldo que construía la ruta a mano con `p.region || 'murcia'`: nunca se
@@ -411,6 +431,12 @@ function validarCoherenciaEntreParques(parques) {
       if (!porEspecie.has(s.scientificName)) porEspecie.set(s.scientificName, []);
       porEspecie.get(s.scientificName).push({ slug: p.slug, sp: s });
     });
+    (data && data.habitats || []).forEach(h => {
+      const code = String(h.code || '');
+      if (!code) return;
+      if (!porCodigoHic.has(code)) porCodigoHic.set(code, []);
+      porCodigoHic.get(code).push({ slug: p.slug, h });
+    });
   });
 
   let divergencias = 0;
@@ -424,9 +450,21 @@ function validarCoherenciaEntreParques(parques) {
       err('entre parques', sci + ': `' + campo + '` difiere entre ' + primera.slug + ' y ' + distintos.map(d => d.slug).join(', '));
     });
   });
-  if (!divergencias && porEspecie.size) {
+  let divergenciasHic = 0;
+  porCodigoHic.forEach((apariciones, code) => {
+    if (apariciones.length < 2) return;
+    const [primera, ...resto] = apariciones;
+    CAMPOS_UNIVERSALES_HABITAT.forEach(campo => {
+      const distintos = resto.filter(a => JSON.stringify(a.h[campo]) !== JSON.stringify(primera.h[campo]));
+      if (!distintos.length) return;
+      divergenciasHic++;
+      err('entre parques', 'HIC ' + code + ': `' + campo + '` difiere entre ' + primera.slug + ' y ' + distintos.map(d => d.slug).join(', '));
+    });
+  });
+
+  if (!divergencias && !divergenciasHic && porEspecie.size) {
     console.log('\n\x1b[1m▶ coherencia entre parques\x1b[0m');
-    ok(porEspecie.size + ' especies distintas, sin divergencias en los campos universales');
+    ok(porEspecie.size + ' especies y ' + porCodigoHic.size + ' códigos HIC distintos, sin divergencias en los campos universales');
   }
 }
 

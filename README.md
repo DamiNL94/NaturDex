@@ -65,10 +65,13 @@ Backend/             API PHP + MySQL
   Lib/presence.php               verificación de presencia real (antitrampas). Ver Docs/
 AdminPanel/          panel de administración (React+Vite) → se compila a Frontend/admin/
 Database/            schema.sql (DDL) · seed.sql (datos) · migrations.sql (ALTER idempotentes)
+                     *-universal.sql y *-imagenes.sql son GENERADOS: no se editan a mano
 Tools/               tooling zero-dep (salvo polygon-clipping)
   lib/                           INFRAESTRUCTURA COMPARTIDA — empieza siempre por aquí
   catalogo-nacional/             el pipeline de datos por espacio
     data/descripciones-espacios.json   la descripción de cada espacio (texto redactado a mano)
+    data/contenido/habitats.json       la descripción de cada hábitat, por código HIC (universal)
+    data/contenido/fitosociologia.json la asociación fitosociológica en lenguaje llano
 Docs/                documentación temática + rollout/ESTADO.md (el histórico)
 ```
 
@@ -164,6 +167,31 @@ Si un texto universal nombra un parque concreto, es falso en cuanto la especie a
 `validate-park-data.js` lo trata como **error**, no como aviso: así acabaron 40 fichas de Sierra
 Espuña hablando de una ZEPA de Cabo Cope.
 
+### Los hábitats tampoco son del parque
+
+El mismo corte, un nivel más arriba. Un **código HIC es el mismo tipo de hábitat en toda la
+Directiva**: el 5330 de Almería y el de Tarragona son el mismo matorral termomediterráneo. Su
+`description` describe esa vegetación, no el recinto que le tocó aquí.
+
+- **Universal** — `description`, indexada por **código HIC** en
+  `Tools/catalogo-nacional/data/contenido/habitats.json` y sincronizada a todos los `park.json` con
+  `npm run habitats:apply`. (`name` y `type` también son universales, pero llegan por otra vía:
+  `data/hic-nombres.json` → `adopt-habitats.js`.)
+- **Local** — el polígono, la superficie, el centroide, el color, la foto, `speciesIds`,
+  `reviewNote`, la audioguía y la `fitosociologia` que la cartografía asigna a *estos* recintos.
+
+Las descripciones se escribieron mirando el espacio piloto y decían «terrestre del parque piloto» o
+«marina de Cope» —falso en cuanto el código aparece en otro sitio, y aparece—; otras doce estaban
+vacías. `validate-park-data.js` trata como **error** tanto el rastro local como que dos parques
+tengan textos distintos para el mismo código.
+
+**La asociación fitosociológica es dato oficial y no se toca**, pero por sí sola no le dice nada a
+quien no es botánico. `Tools/catalogo-nacional/data/contenido/fitosociologia.json` le añade, sin
+sustituirla, su lectura en llano («Coscojar con espino negro»), las plantas que le dan nombre y cómo
+se leen la nomenclatura y la autoría; `habitats:apply` lo exporta a `Frontend/Data/fitosociologia.json`
+y la ficha muestra las dos cosas: la explicación arriba y **la cita completa, con autores y año,
+íntegra debajo**.
+
 ---
 
 ## 4. Procedencia de cada campo
@@ -192,9 +220,9 @@ dato; «Cómo» = la herramienta o el criterio; «Verifica» = quién lo comprue
 | `geometry` | MITECO/BDN, shapefile de recintos | `build-habitats.js`: reproyecta UTM→WGS84 y **recorta al límite** | `validate` (0 vértices fuera de España); el propio script informa de vértices fuera del límite, que debe ser **0** |
 | `name`, `habitat_type` | `data/hic-nombres.json` | ⚠️ Un código **ausente de este fichero** no se queda solo sin nombre: **se salta el filtro marino** y entra un hábitat que no debería. Ver §6 | `adopt-habitats.js` avisa de los códigos sin ficha |
 | `is_priority` | `data/hic-prioritarios.json` (Anexo I de la Directiva) | **NUNCA del flag `PRIORITARI`** del dato de 1997, que es poco fiable (marca 8210 como prioritario) | revisión contra el Anexo I |
-| `fitosociologia` | `Habi<NN>.dbf`, columna `CONCEPTO` | Asociaciones oficiales. Es lo que justifica reconciliar un código antiguo | manual |
+| `fitosociologia` | `Habi<NN>.dbf`, columna `CONCEPTO` | Asociaciones oficiales, **literales**. Es lo que justifica reconciliar un código antiguo. Su lectura en llano vive aparte, en `data/contenido/fitosociologia.json`, y **no la modifica** | manual |
 | `hic_subtipos` | `Habi<NN>.dbf` | Subtipos concretos presentes (5330 → `["5334"]`) | — |
-| `description` | Atlas de Hábitats | Texto oficial del Atlas para ese código | — |
+| `description` | universal — `data/contenido/habitats.json` | Redacción propia sobre el Atlas de Hábitats y el Anexo I, **indexada por código HIC** y por tanto válida en cualquier parque de España. Se sincroniza con `npm run habitats:apply`. **Nunca puede nombrar un espacio concreto** | `validate` (**error** si nombra un parque o si dos parques discrepan) |
 | `latitude`/`longitude` | calculado | Centroide. Solo para el círculo aproximado cuando no hay polígono | `validate` |
 | `color` | decisión propia | Paleta del catálogo. La **trama** la pone el grupo (§8) | — |
 | `image`, `image_attribution`, `image_note` | Wikimedia Commons | `habitat-images.js`: un hábitat no es un taxón, así que se ilustra con su **especie diagnóstica** —la que el propio hábitat nombra— y se explica en `image_note` | `validate` (foto sin atribución = aviso) |
@@ -328,6 +356,8 @@ npm run species:extract      # vuelca a especies-universal.json lo nuevo de los 
 npm run images:species       # fotos de Wikimedia con atribución
 npm run images:habitats      # portadas de hábitat
 npm run species:apply        # sincroniza los campos universales a TODOS los park.json + SQL
+npm run habitats:check       # hábitats sin descripción universal, textos con rastro de un parque
+npm run habitats:apply       # descripción por código HIC a TODOS los park.json + Data/fitosociologia.json + SQL
 node Tools/build-park-trails.js <slug>
 npm run tiles:build <slug>
 npm run validate             # hasta verde
@@ -358,6 +388,8 @@ el informe de cierre lista los huecos conocidos.
 [ ] npm run glossary:check              vocabulario nuevo redactado o anotado
 [ ] npm run species:extract             SEGUNDO pase → 0 cambios (idempotencia)
 [ ] npm run species:apply               SEGUNDO pase → 0 fichas actualizadas
+[ ] npm run habitats:check              0 hábitats sin descripción y 0 asociaciones sin lectura llana
+[ ] npm run habitats:apply              SEGUNDO pase → 0 hábitats actualizados
 [ ] adopt-habitats.js --dry             converge: «=» en los tres ficheros
 [ ] status → "available" en parks-index.json
 [ ] manifest.version subido y updatedAt al día (si no, el offline no revalida)

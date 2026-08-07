@@ -90,7 +90,7 @@
       "code": "1240",
       "name": "Acantilados mediterráneos con Limonium",
       "type": "Litoral",
-      "description": "litoral del parque piloto",
+      "description": "Roquedos del borde del mar, batidos por el viento y salpicados constantemente de sal. Las plantas viven agarradas a las grietas, con hojas gruesas o cerosas para no perder agua, y las más características son las siemprevivas (Limonium) y el hinojo marino. Muchas de esas siemprevivas viven solo en un tramo corto de costa y en ningún otro sitio del mundo.",
       "priority": false,
       "coordinates": [
         37.423855,
@@ -129,7 +129,7 @@
       "code": "2230",
       "name": "Dunas con céspedes del Malcomietalia",
       "type": "Litoral",
-      "description": "céspedes anuales sobre arenas dunares estabilizadas",
+      "description": "Claros de arena entre el matorral dunar en los que, tras las lluvias, germina un césped efímero de plantas diminutas que florecen y se secan en pocas semanas. Pasan el resto del año como semilla enterrada, de modo que durante casi todo el verano el sitio parece arena vacía. Es un hábitat que solo se ve entero unas semanas al año, y por eso se destruye sin que nadie note que había algo.",
       "priority": false,
       "coordinates": [
         37.507063,
@@ -160,7 +160,7 @@
       "code": "2110",
       "name": "Dunas móviles embrionarias",
       "type": "Litoral",
-      "description": "primer cordón dunar en formación activa junto a la orilla",
+      "description": "El primer relieve de arena de la playa, de apenas unos decímetros, que se forma donde una planta rastrera frena el viento y la arena se deposita a su alrededor. La construyen la grama de mar (Elymus farctus) y la juncia marina, capaces de crecer hacia arriba a medida que quedan enterradas. Es la duna naciente: si se pisa o se allana, todo el cordón dunar que hay detrás se queda sin recambio.",
       "priority": false,
       "coordinates": [
         37.466605,
@@ -196,7 +196,7 @@
       "code": "1510",
       "name": "Estepas salinas mediterráneas (Limonietalia)",
       "type": "Terrestre",
-      "description": "albardinal (Lygeum spartum) sobre suelos salinos de la marina de Cope, asociado a Limonium insigne",
+      "description": "Estepas de suelos salinos pero secos, sin encharcamiento permanente, en depresiones y llanos interiores de clima duro. Dominan el albardín (Lygeum spartum), una gramínea de matas separadas y hojas punzantes, y las siemprevivas (Limonium), que en verano cubren el suelo desnudo de flores diminutas rosas y violetas. Es un paisaje de aspecto pobre que concentra un número altísimo de plantas que no crecen en ningún otro ambiente.",
       "priority": true,
       "coordinates": [
         37.50201,
@@ -231,7 +231,7 @@
       "code": "92D0",
       "name": "Galerías y matorrales ribereños termomediterráneos",
       "type": "Terrestre",
-      "description": "terrestre del parque piloto, ramblas",
+      "description": "La vegetación leñosa de ramblas, arroyos y ríos de caudal irregular, que unos meses llevan agua y otros son un lecho de piedras: adelfares y tarayales. La adelfa (Nerium oleander), de hojas coriáceas y flores rosas, y los tarays (Tamarix), de ramillas finas y flores en espiga, resisten tanto las avenidas violentas como meses de sequía. Toda la adelfa es muy tóxica, incluidas hojas y ramas secas.",
       "priority": false,
       "coordinates": [
         37.439468,
@@ -266,7 +266,7 @@
       "code": "5330",
       "name": "Matorral termomediterráneo semiárido",
       "type": "Terrestre",
-      "description": "terrestre del parque piloto",
+      "description": "El matorral de las zonas más cálidas y secas, allí donde prácticamente no hiela: palmito, espino negro, lentisco, cornicales, bojas, albaidas y esparto sobre laderas pedregosas y llanos soleados. Es un matorral abierto, con suelo desnudo a la vista entre mata y mata, y con muchas especies compartidas con el norte de África. Aguanta sequías de meses y rebrota en cuanto llueve.",
       "priority": false,
       "coordinates": [
         37.501195,
@@ -363,7 +363,7 @@
       "code": "5210",
       "name": "Matorrales arborescentes de Juniperus spp.",
       "type": "Terrestre",
-      "description": "sabinar (Juniperus phoenicea) sobre laderas y cerros del interior del parque",
+      "description": "Matorral alto o bosquete abierto dominado por enebros y sabinas (Juniperus), arbustos de follaje escamoso o punzante y porte denso que aguantan sequía, viento y suelos casi inexistentes. Sus frutos carnosos y azulados —los gálbulos— alimentan en invierno a zorzales y otras aves, que se encargan de dispersar la semilla. Crecen tan despacio que un ejemplar de dos metros puede tener siglos.",
       "priority": false,
       "coordinates": [
         37.427725,
@@ -394,7 +394,7 @@
       "code": "5220",
       "name": "Matorrales arborescentes de Ziziphus",
       "type": "Terrestre",
-      "description": "terrestre del parque piloto",
+      "description": "Espinares de azufaifo (Ziziphus lotus), matas hemisféricas de ramas entrelazadas y espinas ganchudas que forman islas de sombra sobre llanos áridos. Cada mata levanta un pequeño montículo de arena y hojarasca y guarda debajo humedad, semillas y fauna que fuera no sobreviviría. Es el único hábitat de clima casi desértico de Europa occidental, y por eso figura como prioritario.",
       "priority": true,
       "coordinates": [
         37.501195,
@@ -432,7 +432,7 @@
       "code": "1430",
       "name": "Matorrales halo-nitrófilos",
       "type": "Terrestre",
-      "description": "terrestre del parque piloto, marina de Cope",
+      "description": "Matorral de suelos salinos removidos y cargados de nitrógeno: bordes de camino y de cultivo, márgenes de rambla, corrales y escombreras viejas. Lo forman matas robustas de hoja gris o carnosa —orgazas, sosas, bojas y cambroneras— que rebrotan enseguida tras cualquier alteración. Aunque nace de terrenos trastocados, es vegetación propia de los ambientes áridos del sureste y a menudo el último refugio de plantas escasas.",
       "priority": false,
       "coordinates": [
         37.464167,
@@ -476,7 +476,7 @@
       "code": "1420",
       "name": "Matorrales halófilos mediterráneos y termoatlánticos",
       "type": "Terrestre",
-      "description": "terrestre del parque piloto, marina de Cope",
+      "description": "Matorral bajo y carnoso de sosas y almajos (Sarcocornia, Arthrocnemum, Halocnemum) sobre suelos que se inundan de agua salada y luego se secan dejando costra de sal. Son matas de tallos gruesos y articulados, sin hojas aparentes, que almacenan agua y diluyen en ella la sal que absorben. En otoño viran a rojo, naranja y morado, y ese cambio de color es la señal más visible del saladar.",
       "priority": false,
       "coordinates": [
         37.482116,
@@ -522,7 +522,7 @@
       "code": "8210",
       "name": "Pendientes rocosas calcícolas con vegetación casmofítica",
       "type": "Terrestre",
-      "description": "roquedos y cortados calcáreos con vegetación fisurícola, con Teucrium freynii como especie característica",
+      "description": "Paredes y cortados de roca caliza en los que la vegetación no vive sobre el suelo, sino dentro de las fisuras. Son plantas de raíz larguísima y crecimiento lentísimo, agarradas a la grieta, que aprovechan el agua que escurre por la pared. Los roquedos han quedado a salvo del arado y del ganado durante milenios, y por eso concentran una proporción altísima de especies que no existen en ningún otro lugar.",
       "priority": false,
       "coordinates": [
         37.426388,
@@ -565,7 +565,7 @@
       "code": "6110",
       "name": "Prados calcáreos cársticos o basófilos del Alysso-Sedion albi",
       "type": "Terrestre",
-      "description": "pastizales de terófitos y crasuláceas sobre suelos esqueléticos calcáreos de los cerros carbonatados",
+      "description": "Pastos abiertos sobre repisas y lanchas de roca caliza con apenas un dedo de tierra encima. Ahí solo prosperan plantas crasas de hojas gordas, como las uñas de gato (Sedum), y hierbas anuales minúsculas que nacen, florecen y mueren entre febrero y mayo. Ocupa superficies muy pequeñas y depende de que el suelo siga siendo escaso: en cuanto se acumula tierra, otras plantas lo desplazan.",
       "priority": true,
       "coordinates": [
         37.427725,
@@ -592,7 +592,7 @@
       "code": "3250",
       "name": "Ríos mediterráneos de caudal permanente con Glaucium flavum",
       "type": "Terrestre",
-      "description": "cauces y ramblas con lámina de agua permanente colonizados por la amapola marina",
+      "description": "Tramos de río con agua todo el año y lecho de gravas y cantos que las crecidas remueven y vuelven a depositar. Sobre esas barras de piedra suelta crece la amapola marina (Glaucium flavum), de hojas de un verde azulado y flores amarillas grandes, junto a otras plantas que aguantan que el sustrato cambie de sitio cada invierno. Es vegetación de terreno inestable: sin crecidas, la maleza la desplaza.",
       "priority": false,
       "coordinates": [
         37.500643,
@@ -619,7 +619,7 @@
       "code": "1210",
       "name": "Vegetación anual sobre desechos marinos acumulados",
       "type": "Litoral",
-      "description": "comunidades pioneras sobre la línea de acumulación de restos marinos en las playas del parque",
+      "description": "La primera línea de vegetación de una playa: plantas anuales que germinan sobre los restos que deja la marea, aprovechando el poco alimento y la humedad que guarda esa franja de algas y madera. Son hierbas carnosas de vida corta, como el rábano de mar (Cakile maritima) o la barrilla pinchosa (Salsola kali), que completan su ciclo en una sola temporada. Desaparece por completo donde se limpia la arena con maquinaria.",
       "priority": false,
       "coordinates": [
         37.466605,
@@ -654,7 +654,7 @@
       "code": "6220",
       "name": "Zonas subestépicas de gramíneas y anuales del Thero-Brachypodietea",
       "type": "Terrestre",
-      "description": "pastizales terofíticos mediterráneos sobre suelos oligotróficos de llanos y laderas abiertas",
+      "description": "Pastizales secos en los que conviven gramíneas vivaces de mata dura, como el lastón (Brachypodium retusum) o el esparto, con una multitud de plantas anuales diminutas que nacen con las lluvias y se secan antes del verano. En agosto parecen un erial pardo; en abril pueden reunir cuarenta especies distintas en un metro cuadrado. Esa riqueza escondida es la razón de que sea un hábitat prioritario.",
       "priority": true,
       "coordinates": [
         37.429269,

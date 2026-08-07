@@ -1,0 +1,124 @@
+{
+  "_nota": "Texto divulgativo UNIVERSAL de la ficha de hábitat, indexado por CÓDIGO HIC (Anexo I, Directiva 92/43/CEE). Lo lee Tools/sync-habitat-catalog.js y lo escribe en el campo `description` de todos los park.json y en la BD. El mismo código HIC es el mismo hábitat en Cádiz, en el Pirineo y en Menorca: por eso el texto NO puede nombrar un parque, una comarca, una ZEPA ni un LIC. Lo específico de un espacio va en `reviewNote` o en la audioguía del park.json, nunca aquí.",
+  "_fuente": "Redacción propia sobre el «Atlas y Manual de los Hábitats de España» (MITECO) y las fichas del Anexo I de la Directiva 92/43/CEE. El nombre oficial del hábitat sigue viniendo de data/hic-nombres.json; esto es la explicación en lenguaje llano, no una traducción literal de la ficha oficial.",
+  "_estilo": "Dos o tres frases. Qué es y cómo se reconoce a simple vista, dónde aparece y qué lo hace singular o frágil. Sin adjetivos de folleto, sin cifras de superficie y sin jerga que no se explique en la misma frase; las palabras técnicas que se dejen (terófito, casmofítica, halófilo) deben estar en el glosario.",
+  "codigos": {
+    "1110": {
+      "description": "Fondos de arena que nunca quedan al descubierto, desde la rompiente hasta unos veinte metros de profundidad. El oleaje los remueve y los redibuja constantemente, así que la vida se refugia enterrada: moluscos, gusanos, crustáceos y peces planos que aprovechan la arena para desaparecer. Son la guardería de buena parte de los peces que después se pescan en la costa."
+    },
+    "1120": {
+      "description": "Praderas submarinas de posidonia (Posidonia oceanica), que no es un alga sino una planta con flores exclusiva del Mediterráneo, y que crece apenas unos centímetros al año. Sus hojas acintadas forman un bosque sumergido que sujeta el fondo, aclara el agua y da refugio y comida a cientos de especies. Las hojas muertas que se acumulan en la playa en invierno no son suciedad: amortiguan el temporal y evitan que la arena se vaya."
+    },
+    "1150": {
+      "description": "Láminas de agua salada o salobre separadas del mar por una barra de arena, con la que se comunican de forma permanente o solo en los temporales. La sal, la temperatura y el nivel cambian tanto con las lluvias y la evaporación que solo aguantan aquí unas pocas especies muy resistentes, pero las que aguantan se cuentan por miles de individuos. Es uno de los lugares donde más aves acuáticas se concentran a la vez."
+    },
+    "1210": {
+      "description": "La primera línea de vegetación de una playa: plantas anuales que germinan sobre los restos que deja la marea, aprovechando el poco alimento y la humedad que guarda esa franja de algas y madera. Son hierbas carnosas de vida corta, como el rábano de mar (Cakile maritima) o la barrilla pinchosa (Salsola kali), que completan su ciclo en una sola temporada. Desaparece por completo donde se limpia la arena con maquinaria."
+    },
+    "1240": {
+      "description": "Roquedos del borde del mar, batidos por el viento y salpicados constantemente de sal. Las plantas viven agarradas a las grietas, con hojas gruesas o cerosas para no perder agua, y las más características son las siemprevivas (Limonium) y el hinojo marino. Muchas de esas siemprevivas viven solo en un tramo corto de costa y en ningún otro sitio del mundo."
+    },
+    "1310": {
+      "description": "Céspedes abiertos de plantas anuales y carnosas que colonizan el fango salino en cuanto el agua se retira, en los bordes de salinas, marismas y lagunas costeras. Dominan las salicornias y sosas anuales, tallos sin hojas visibles, articulados como pequeños cactus, que a final de verano se tiñen de rojo y anaranjado. Es una vegetación efímera: cada año se instala de nuevo sobre un suelo que ha vuelto a quedar desnudo."
+    },
+    "1410": {
+      "description": "Praderas de juncos y gramíneas sobre suelos salinos que se encharcan en invierno y se resecan en verano, tierra adentro de las marismas y en el borde de saladares y ramblas salobres. La sal se concentra en la superficie al evaporarse el agua, de modo que solo prosperan plantas capaces de bombear agua contra ella. Forman un tapiz denso y verde que contrasta con los suelos desnudos de alrededor."
+    },
+    "1420": {
+      "description": "Matorral bajo y carnoso de sosas y almajos (Sarcocornia, Arthrocnemum, Halocnemum) sobre suelos que se inundan de agua salada y luego se secan dejando costra de sal. Son matas de tallos gruesos y articulados, sin hojas aparentes, que almacenan agua y diluyen en ella la sal que absorben. En otoño viran a rojo, naranja y morado, y ese cambio de color es la señal más visible del saladar."
+    },
+    "1430": {
+      "description": "Matorral de suelos salinos removidos y cargados de nitrógeno: bordes de camino y de cultivo, márgenes de rambla, corrales y escombreras viejas. Lo forman matas robustas de hoja gris o carnosa —orgazas, sosas, bojas y cambroneras— que rebrotan enseguida tras cualquier alteración. Aunque nace de terrenos trastocados, es vegetación propia de los ambientes áridos del sureste y a menudo el último refugio de plantas escasas."
+    },
+    "1510": {
+      "description": "Estepas de suelos salinos pero secos, sin encharcamiento permanente, en depresiones y llanos interiores de clima duro. Dominan el albardín (Lygeum spartum), una gramínea de matas separadas y hojas punzantes, y las siemprevivas (Limonium), que en verano cubren el suelo desnudo de flores diminutas rosas y violetas. Es un paisaje de aspecto pobre que concentra un número altísimo de plantas que no crecen en ningún otro ambiente."
+    },
+    "2110": {
+      "description": "El primer relieve de arena de la playa, de apenas unos decímetros, que se forma donde una planta rastrera frena el viento y la arena se deposita a su alrededor. La construyen la grama de mar (Elymus farctus) y la juncia marina, capaces de crecer hacia arriba a medida que quedan enterradas. Es la duna naciente: si se pisa o se allana, todo el cordón dunar que hay detrás se queda sin recambio."
+    },
+    "2120": {
+      "description": "El cordón dunar alto, de arena suelta y clara, que se levanta detrás de la playa. Lo sostiene el barrón (Ammophila arenaria), una gramínea de hojas enrolladas y punzantes que crece hacia arriba cuanta más arena la sepulta y teje bajo la superficie una red de rizomas que sujeta el montículo. Es la barrera natural que protege del temporal todo lo que queda tierra adentro."
+    },
+    "2210": {
+      "description": "Dunas ya estabilizadas, donde la arena apenas se mueve y aparecen matas leñosas bajas, líquenes y un tapiz gris azulado de hoja pequeña. Es el paso intermedio entre la duna viva y el matorral: se reconoce porque el suelo deja de ser arena limpia y empieza a tener costra y materia orgánica. Se recupera muy despacio, así que una pisada abre un claro que tarda años en cerrarse."
+    },
+    "2230": {
+      "description": "Claros de arena entre el matorral dunar en los que, tras las lluvias, germina un césped efímero de plantas diminutas que florecen y se secan en pocas semanas. Pasan el resto del año como semilla enterrada, de modo que durante casi todo el verano el sitio parece arena vacía. Es un hábitat que solo se ve entero unas semanas al año, y por eso se destruye sin que nadie note que había algo."
+    },
+    "2260": {
+      "description": "Matorral mediterráneo instalado sobre arenas ya fijadas, normalmente algo tierra adentro: jaras, jaguarzos, romero, lavandas, tomillos y enebros sobre suelo arenoso. Las hojas son duras o están cubiertas de pelillos, la defensa habitual contra el sol y la falta de agua, y muchas desprenden aroma al rozarlas. Es la etapa más madura y estable del sistema dunar, la última antes del bosque."
+    },
+    "3170": {
+      "description": "Charcas y navajos que se llenan con las lluvias y se secan por completo en verano, a veces en pocas semanas. Ese secado no es un fallo, es parte del hábitat: al no haber peces, pueden criar anfibios y crustáceos diminutos que resisten enterrados como huevo o quiste hasta la siguiente lluvia. La vegetación es de plantas menudas que aprovechan el barro húmedo del fondo cuando el agua se retira."
+    },
+    "3250": {
+      "description": "Tramos de río con agua todo el año y lecho de gravas y cantos que las crecidas remueven y vuelven a depositar. Sobre esas barras de piedra suelta crece la amapola marina (Glaucium flavum), de hojas de un verde azulado y flores amarillas grandes, junto a otras plantas que aguantan que el sustrato cambie de sitio cada invierno. Es vegetación de terreno inestable: sin crecidas, la maleza la desplaza."
+    },
+    "3280": {
+      "description": "Ríos de caudal permanente y corriente lenta, con orillas de limo que quedan al descubierto en verano. Allí se instalan céspedes densos de gramíneas que soportan quedar sumergidas y ser pisoteadas, bajo una cortina de sauces, álamos o tarays. El agua tibia, poco profunda y bien iluminada de estas orillas es donde se concentran los insectos acuáticos y los alevines."
+    },
+    "4090": {
+      "description": "Matorral almohadillado de montaña: matas espinosas y compactas —piornos, erizones, aulagas y aliagas— que crecen pegadas al suelo formando cojines redondeados. Esa forma no es casual, es la respuesta al viento, al frío y al peso de la nieve, y por dentro guarda un microclima donde se refugian otras plantas. Aparece por encima o en el lugar del bosque, en crestas y laderas expuestas."
+    },
+    "5210": {
+      "description": "Matorral alto o bosquete abierto dominado por enebros y sabinas (Juniperus), arbustos de follaje escamoso o punzante y porte denso que aguantan sequía, viento y suelos casi inexistentes. Sus frutos carnosos y azulados —los gálbulos— alimentan en invierno a zorzales y otras aves, que se encargan de dispersar la semilla. Crecen tan despacio que un ejemplar de dos metros puede tener siglos."
+    },
+    "5220": {
+      "description": "Espinares de azufaifo (Ziziphus lotus), matas hemisféricas de ramas entrelazadas y espinas ganchudas que forman islas de sombra sobre llanos áridos. Cada mata levanta un pequeño montículo de arena y hojarasca y guarda debajo humedad, semillas y fauna que fuera no sobreviviría. Es el único hábitat de clima casi desértico de Europa occidental, y por eso figura como prioritario."
+    },
+    "5330": {
+      "description": "El matorral de las zonas más cálidas y secas, allí donde prácticamente no hiela: palmito, espino negro, lentisco, cornicales, bojas, albaidas y esparto sobre laderas pedregosas y llanos soleados. Es un matorral abierto, con suelo desnudo a la vista entre mata y mata, y con muchas especies compartidas con el norte de África. Aguanta sequías de meses y rebrota en cuanto llueve."
+    },
+    "6110": {
+      "description": "Pastos abiertos sobre repisas y lanchas de roca caliza con apenas un dedo de tierra encima. Ahí solo prosperan plantas crasas de hojas gordas, como las uñas de gato (Sedum), y hierbas anuales minúsculas que nacen, florecen y mueren entre febrero y mayo. Ocupa superficies muy pequeñas y depende de que el suelo siga siendo escaso: en cuanto se acumula tierra, otras plantas lo desplazan."
+    },
+    "6170": {
+      "description": "Pastos de alta montaña sobre suelos calizos, por encima del límite del bosque, donde la nieve cubre el terreno buena parte del año. Son céspedes bajos, densos y muy diversos, con plantas de porte enano y flores desproporcionadamente grandes que florecen en cuanto se funde la nieve. El corto verano y el pastoreo tradicional han modelado juntos este paisaje."
+    },
+    "6175": {
+      "description": "Pastos de cumbre sobre caliza en las montañas del norte peninsular, en el piso donde el bosque ya no llega. Forman un césped raso salpicado de matas espinosas en cojín y de plantas enanas que aprovechan el deshielo para florecer todas a la vez. Es la variante cantábrica de los pastos calcáreos de montaña, con especies que no bajan de esas alturas."
+    },
+    "6220": {
+      "description": "Pastizales secos en los que conviven gramíneas vivaces de mata dura, como el lastón (Brachypodium retusum) o el esparto, con una multitud de plantas anuales diminutas que nacen con las lluvias y se secan antes del verano. En agosto parecen un erial pardo; en abril pueden reunir cuarenta especies distintas en un metro cuadrado. Esa riqueza escondida es la razón de que sea un hábitat prioritario."
+    },
+    "6420": {
+      "description": "Juncales altos sobre suelos que mantienen humedad en profundidad todo el verano, aunque la superficie esté seca: bordes de acequia, manantiales, vegas y fondos de valle. El junco churrero (Scirpoides holoschoenus) forma macollas robustas entre las que crecen menta, lirios y a menudo orquídeas. Es un oasis de verde en pleno agosto, y desaparece en cuanto se drena o se capta el agua que lo alimenta."
+    },
+    "8210": {
+      "description": "Paredes y cortados de roca caliza en los que la vegetación no vive sobre el suelo, sino dentro de las fisuras. Son plantas de raíz larguísima y crecimiento lentísimo, agarradas a la grieta, que aprovechan el agua que escurre por la pared. Los roquedos han quedado a salvo del arado y del ganado durante milenios, y por eso concentran una proporción altísima de especies que no existen en ningún otro lugar."
+    },
+    "8211": {
+      "description": "Variante calcícola de los cortados rocosos: paredes y extraplomos de caliza y dolomía donde las plantas viven encajadas en las grietas, sin apenas suelo. Cada orientación tiene su comunidad —la umbría, húmeda y con helechillos; la solana, con matas leñosas de hoja dura—, y muchas de esas plantas ocupan áreas minúsculas. Es un ambiente estable y muy antiguo, refugio de especies que quedaron aisladas ahí."
+    },
+    "8230": {
+      "description": "Afloramientos y lanchares de roca ácida —granito, pizarra, cuarcita— cubiertos por una costra de suelo de pocos milímetros. Encima crecen musgos, líquenes, plantas crasas y hierbas anuales que completan su ciclo en las pocas semanas en que la roca retiene humedad. Es vegetación pionera: la primera que se instala sobre la piedra desnuda y la que empieza a fabricar suelo."
+    },
+    "8310": {
+      "description": "Cuevas, simas y galerías sin uso turístico. Sin luz no hay plantas, de modo que toda la vida depende de lo que entra de fuera: agua de filtración, restos arrastrados y, sobre todo, el guano de los murciélagos que crían dentro. De ahí viven invertebrados sin ojos ni pigmento, muchos de ellos exclusivos de una sola cavidad. Una visita en época de cría puede hacer fracasar la colonia entera."
+    },
+    "9240": {
+      "description": "Bosques de quejigo (Quercus faginea) y quejigo andaluz (Quercus canariensis), parientes de la encina que buscan más humedad y suelos más profundos: umbrías, vaguadas y pies de sierra. Su hoja es marcescente, es decir, se seca en otoño pero no cae hasta que empuja la nueva, así que en invierno el bosque se queda de color pardo dorado en vez de desnudo. Bajo su sombra prospera un sotobosque más rico y verde que el del encinar."
+    },
+    "9340": {
+      "description": "El bosque mediterráneo por excelencia: encinares y carrascales de hoja dura, pequeña y perenne, que aguantan tanto el calor del verano como las heladas del interior. Bajo los árboles crece un sotobosque denso de coscoja, lentisco, madroño, enebros y aromáticas, y en el suelo la bellota sostiene en otoño a jabalíes, palomas y arrendajos. Aclarado por el ser humano durante siglos, ha dado lugar a las dehesas."
+    },
+    "9530": {
+      "description": "Pinares de montaña de pino salgareño o laricio (Pinus nigra), de tronco recto y corteza gris agrietada, sobre crestas y laderas calizas de suelo escaso. Aguantan el frío, el viento y la nieve donde otros árboles no llegan, y los ejemplares de los cantiles pueden tener cientos o más de mil años. Su madera registra en los anillos la historia del clima, lo que convierte a estos bosques en archivos vivos."
+    },
+    "9560": {
+      "description": "Bosques abiertos y luminosos de sabinas y enebros arbóreos (Juniperus), con los árboles separados entre sí y un pasto o matorral bajo entre ellos. Se instalan donde el frío, el viento o la falta de suelo impiden que se cierre un bosque, desde páramos continentales hasta laderas costeras. Crecen extraordinariamente despacio y son muy longevos, así que un sabinar arrasado no vuelve en una vida humana."
+    },
+    "9561": {
+      "description": "Formaciones abiertas de sabinas y enebros (Juniperus) sobre terrenos duros: páramos fríos, crestas venteadas y arenales. Los árboles crecen espaciados, con troncos retorcidos y copas irregulares moldeadas por el viento, y entre ellos queda pasto o matorral bajo. Son bosques de crecimiento lentísimo y ejemplares muy viejos, imposibles de recuperar a corto plazo."
+    },
+    "9570": {
+      "description": "Bosques de ciprés de Cartagena (Tetraclinis articulata), una conífera norteafricana cuyas únicas poblaciones europeas están en el sureste ibérico. Tiene ramillas articuladas y aplanadas y conos leñosos de cuatro valvas que se abren como una flor de madera, y rebrota de cepa después de un incendio, cosa rara entre las coníferas. Su rareza y su área diminuta explican que sea un hábitat prioritario."
+    },
+    "92A0": {
+      "description": "Alamedas y saucedas: la banda de árboles de hoja caduca que acompaña a los ríos, con el álamo blanco de envés plateado, chopos y sauces de raíces dentro del agua. Dan sombra al cauce, sujetan las orillas en las crecidas y sostienen una fauna que no aparece a veinte metros de allí. Es un bosque estrecho y alargado que funciona además como corredor entre sierras."
+    },
+    "92D0": {
+      "description": "La vegetación leñosa de ramblas, arroyos y ríos de caudal irregular, que unos meses llevan agua y otros son un lecho de piedras: adelfares y tarayales. La adelfa (Nerium oleander), de hojas coriáceas y flores rosas, y los tarays (Tamarix), de ramillas finas y flores en espiga, resisten tanto las avenidas violentas como meses de sequía. Toda la adelfa es muy tóxica, incluidas hojas y ramas secas."
+    }
+  }
+}

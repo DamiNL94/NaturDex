@@ -56,7 +56,7 @@ export const FIELDS: Record<Resource, FieldDef[]> = {
     { k: 'latitude', label: 'Latitud (centro aprox.)', type: 'number' },
     { k: 'longitude', label: 'Longitud (centro aprox.)', type: 'number' },
     { k: 'is_priority', label: 'Hábitat prioritario UE', type: 'checkbox' },
-    { k: 'description', label: 'Descripción', type: 'textarea', wide: true },
+    { k: 'description', label: 'Descripción', type: 'textarea', wide: true, hint: 'Es UNIVERSAL: describe el tipo de hábitat (el código HIC), no el recinto de este parque, y no puede nombrar un espacio concreto. La fuente es Tools/catalogo-nacional/data/contenido/habitats.json; lo que se escriba aquí lo pisa el siguiente `npm run habitats:apply`.' },
     { k: 'audio_url', label: 'Audioguía (URL o ruta Audio/…)', hint: 'Audio explicativo del hábitat (mp3/ogg)' },
     { k: 'audio_transcript', label: 'Transcripción de la audioguía', type: 'textarea', wide: true, hint: 'Obligatoria por accesibilidad si hay audio (WCAG 1.2.1)' },
     { k: 'review_note', label: 'Nota "pendiente de revisión" (vacío = validado)', type: 'textarea', wide: true }
