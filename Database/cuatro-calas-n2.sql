@@ -12,7 +12,7 @@
 --   Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico».
 --
 -- Idempotente: todos los INSERT llevan ON DUPLICATE KEY UPDATE. Aplicar con:
---   docker exec -i naturdex-db-1 sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" mysql naturadex' < Database/cuatro-calas-n2.sql
+--   docker exec -i naturdex-db-1 sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" mysql --default-character-set=utf8mb4 naturadex' < Database/cuatro-calas-n2.sql
 -- ================================================================================================
 
 UPDATE parks SET status = 'available', area_hectares = 221.68 WHERE slug = 'cuatro-calas';

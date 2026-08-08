@@ -7,8 +7,8 @@
 | Comunidad | Provincia | Espacio | Figura | Slug | Nivel | Fecha | Notas / huecos |
 |---|---|---|---|---|---|---|---|
 | Región de Murcia | Murcia | Cabo Cope y Puntas de Calnegre | Parque Regional | `cabo-cope-puntas-calnegre` | N2 | 2026-08-01 | Piloto. ENP **ES620007**. LIC/ZEC ES6200031 (Cabo Cope) · ES6200012 (Calnegre) · ZEPA ES0000261. **15 hábitats** (retirados el 1110 y el 9560 el 2026-08-01, ver informe), 175 especies. Fotos de florasilvestre.es pendientes de licencia |
-| Región de Murcia | Murcia | Cuatro Calas | Paisaje Protegido | `cuatro-calas` | N2 | 2026-08-01 | Límite IMIDA/CARM. ENP **ES620004** (`ENP000007` es el id interno del IMIDA, no el código oficial). LIC/ZEC ES6200010 · ZEPA marina ES0000507. 7 hábitats (3 prioritarios, 177 ha = 79 % del espacio), **102 especies** (73 flora, 29 fauna incl. 27 aves de la lista oficial Natura 2000), 97 con foto, **4 POIs** (sin foto). Ver informe de cierre §"Cuatro Calas: Fase 2 cerrada". **Fase 3: 4 POIs dados de alta el 2026-08-07, cascada AGOTADA y `validate` en verde**; sigue en N2 **solo porque falta aplicar el SQL** (§5) — es lo único que le separa del N3. PORN inexistente, 0 BIC, OSM barrido con Overpass. **IELIG consultado de primera mano: 2 LIG dentro del límite, `BE005` «Playa de Cuatro Calas» y `BE006` «Vulcanismo de La Carolina»** (corrige el «La Carolina/Punta Parda» de la primera sesión). Commons consultado, licencias sin verificar — §"2026-08-07 (b)" y `n3-cuatro-calas-sierra-espuna.md` |
-| Región de Murcia | Murcia | Sierra Espuña | Parque Regional | `sierra-espuna` | N2 | 2026-07-28 | ENP **ES620013**, 17.693,2 ha. LIC/ZEC ES0000173 · ZEPA ES0000173. 13 hábitats, **191 especies** tras el recorte a catálogo oficial + evidencia GBIF (121 flora, 70 fauna incl. 48 aves y 9 quirópteros), 155 con foto (149 de Wikipedia/Commons), **13 POIs** (sin foto). Ver informe de cierre §"Sierra Espuña: Fase 2 cerrada" y §"Sierra Espuña: recorte a especies con respaldo oficial". **Fase 3: 13 POIs dados de alta el 2026-08-07** y `validate` en verde, pero la cascada NO está agotada (falta el Anexo I del PRUG) y falta aplicar el SQL, así que sigue en N2; 2 BIC confirmados con su norma (Pozos de la Nieve, Sitio de Interés Etnográfico; Santuario de Santa Eulalia, *Decreto 96/2002*), OSM barrido con Overpass (28 pozos de nieve uno a uno, Sanatorio situado). **IELIG consultado: 0 LIG dentro del límite**, «no hay» de primera mano. **Anexo I del PRUG (Decreto 6/2026) sigue sin abrir**, ahora por protección anti-bot del BORM — es la fuente que puede dar de golpe los picos y collados. Commons consultado, licencias sin verificar — §"2026-08-07 (b)" y `n3-cuatro-calas-sierra-espuna.md` |
+| Región de Murcia | Murcia | Cuatro Calas | Paisaje Protegido | `cuatro-calas` | **N3** | 2026-08-08 | Límite IMIDA/CARM. ENP **ES620004** (`ENP000007` es el id interno del IMIDA, no el código oficial). LIC/ZEC ES6200010 · ZEPA marina ES0000507. 7 hábitats (3 prioritarios, 177 ha = 79 % del espacio), **102 especies** (73 flora, 29 fauna incl. 27 aves de la lista oficial Natura 2000), 97 con foto, **4 POIs** (sin foto). Ver informe de cierre §"Cuatro Calas: Fase 2 cerrada". **Fase 3 CERRADA el 2026-08-08**: 4 POIs dados de alta, cascada AGOTADA, `validate` en verde y **SQL aplicado y verificado contra la BD** (4/4 POIs, comparación campo a campo y API sirviéndolos). Cumple los tres requisitos del §5. PORN inexistente, 0 BIC, OSM barrido con Overpass. **IELIG consultado de primera mano: 2 LIG dentro del límite, `BE005` «Playa de Cuatro Calas» y `BE006` «Vulcanismo de La Carolina»** (corrige el «La Carolina/Punta Parda» de la primera sesión). Commons consultado, licencias sin verificar — §"2026-08-07 (b)" y `n3-cuatro-calas-sierra-espuna.md`. **Hueco de senderos: `trails.geojson` sirve solo el GR-92; el SL-MU 18, que es el sendero propio del espacio, NO está en OpenStreetMap** (verificado el 2026-08-08 por siete vías, §"2026-08-08"). Entrará solo con `npm run trails:build` en cuanto se mapee |
+| Región de Murcia | Murcia | Sierra Espuña | Parque Regional | `sierra-espuna` | N2 | 2026-07-28 | ENP **ES620013**, 17.693,2 ha. LIC/ZEC ES0000173 · ZEPA ES0000173. 13 hábitats, **191 especies** tras el recorte a catálogo oficial + evidencia GBIF (121 flora, 70 fauna incl. 48 aves y 9 quirópteros), 155 con foto (149 de Wikipedia/Commons), **13 POIs** (sin foto). Ver informe de cierre §"Sierra Espuña: Fase 2 cerrada" y §"Sierra Espuña: recorte a especies con respaldo oficial". **Fase 3: 13 POIs dados de alta el 2026-08-07** y `validate` en verde, pero la cascada NO está agotada (falta el Anexo I del PRUG) y falta aplicar el SQL, así que sigue en N2; 2 BIC confirmados con su norma (Pozos de la Nieve, Sitio de Interés Etnográfico; Santuario de Santa Eulalia, *Decreto 96/2002*), OSM barrido con Overpass (28 pozos de nieve uno a uno, Sanatorio situado). **IELIG consultado: 0 LIG dentro del límite**, «no hay» de primera mano. **Anexo I del PRUG (Decreto 6/2026) sigue sin abrir**, ahora por protección anti-bot del BORM — es la fuente que puede dar de golpe los picos y collados. **Al aplicar el SQL el 2026-08-08 insertó 0 filas: `sierra-espuna` NO existe en la tabla `parks`** (la BD solo trae las de `seed.sql`), y el `INSERT … JOIN parks` no casa y no da error. Hay que **dar de alta su fila en `parks`** y reaplicar el SQL, que es idempotente — §"2026-08-08". Commons consultado, licencias sin verificar — §"2026-08-07 (b)" y `n3-cuatro-calas-sierra-espuna.md` |
 | Región de Murcia | Murcia | Carrascoy y El Valle | Parque Regional | `carrascoy-y-el-valle` | N1 | 2026-07 | ENP **ES620008**, 16.685,8 ha. LIC/ZEC ES6200002 · ZEPA ES0000269 |
 | Región de Murcia | Murcia | Sierra de la Pila | Parque Regional | `sierra-de-la-pila` | N1 | 2026-07 | ENP **ES620018**, 8851,0 ha. LIC/ZEC ES6200003 · ZEPA ES0000174 |
 | Región de Murcia | Murcia | Sierra de El Carche | Parque Regional | `sierra-de-el-carche` | N1 | 2026-07 | ENP **ES620017**, 5869,1 ha. LIC/ZEC ES6200009 |
@@ -50,6 +50,140 @@ delimitación regional, así que conserva el límite del MITECO y no pasa por
 > 1.489 vértices), porque reconstruye `geo/parque.geojson` desde la capa nacional para todos sus
 > objetivos. Ahora detecta la marca `CodigoIMIDA` —que sólo escribe el refinador— y **deja intacto**
 > el espacio, avisando. Para rehacer uno de cero hay que borrar su carpeta.
+
+---
+
+## 2026-08-08 — Cuatro Calas: el SL-MU 18 **no está en OpenStreetMap**. Hueco confirmado, no inventado
+
+`geo/trails.geojson` de Cuatro Calas sirve **una sola traza, el GR-92**, y falta el **SL-MU 18
+«Sendero de Cuatro Calas Juan F. Mota Poveda»**, que es el sendero propio del espacio: circular de
+unos 5 km, homologado por la FMRM, enlaza las cuatro calas que le dan nombre (Calarreona, La
+Higuerica, La Carolina y Los Cocedores), pasa por el saladar de Cañada Brusca y discurre entero
+dentro del límite. El aviso venía del POI `playa-de-calarreona`, que lo cita en su `source`
+(«arranque señalizado del SL-MU 18») advirtiendo de que la traza no estaba en la capa.
+
+**Comprobado contra OSM en vivo: no está.** No es que la herramienta lo filtrara mal — es que en
+OpenStreetMap no existe. Siete consultas a Overpass sobre un bbox de ~13 × 10 km (el del espacio con
+~5 km de margen por lado), atacando el problema por ángulos distintos para no depender del filtro que
+usa `build-park-trails.js`:
+
+| Consulta | Resultado |
+|---|---|
+| Relaciones `route=hiking\|foot` con `ref` ^SL (lo que mira la herramienta) | **0** |
+| Cualquier relación con `ref` que case `MU[ -]*18` (por si el `ref` va escrito de otro modo) | **0** |
+| Relaciones/ways con `name` «Cuatro Calas» | 1, y es el **polígono del propio espacio** (`way/1251209976`, `ref=ES620004`) |
+| **Todas** las relaciones de ruta a pie de la zona, **sin filtrar por `ref`** | **4**, y ninguna es: GR 253, C52 «Camino Las Palomas», PR-A 232 «Pulpí - Terreros», GR 92 |
+| Ways con `ref` ^SL (sendero mapeado sin relación) | **0** |
+| Cualquier elemento que cite «Mota Poveda» | **0** |
+| Postes/balizas (`information=route_marker\|guidepost`) dentro del polígono | **0** |
+
+La cuarta fila es la que cierra el asunto: **no hay ninguna relación de senderismo en la zona que
+pueda ser el SL-MU 18 bajo otro nombre o sin `ref`**. Y dentro del polígono hay **39 caminos**
+(`highway=path|footway|track`) mapeados, pero **ninguno con `ref` ni `name`**: el camino físico
+está, la ruta señalizada como objeto no.
+
+**No se ha escrito nada a mano.** Se lanzó `node Tools/build-park-trails.js cuatro-calas --dry-run`,
+que ve 2 relaciones candidatas (GR-253 y GR-92), descarta el GR-253 por no cruzar el polígono
+—criterio de pertenencia ya documentado el 2026-07-28— y reproduce **exactamente** la capa actual:
+GR-92, 1,74 km, 2 trazas. Nada que incorporar, así que `trails.geojson` y `manifest.json` quedan sin
+tocar y la versión del manifiesto no sube. `npm run validate` en verde.
+
+> **Por qué no se dibuja de otra fuente.** La traza de la FMRM vive en Wikiloc
+> (`wikiloc: 17037634` en `senderos-fmrm-murcia.json`) y **no es redistribuible**; la capa se sirve
+> bajo ODbL con «OpenStreetMap contributors». Meter ahí una traza de otra procedencia rompería la
+> atribución del fichero, y dibujarla a ojo entre las cuatro calas sería inventarse un sendero
+> homologado. **La única vía limpia es que alguien lo mapee en OSM**: en cuanto exista la relación,
+> `npm run trails:build` lo incorpora solo, sin tocar código.
+
+Esto **no era un hallazgo nuevo del catálogo**: `senderos-fmrm-murcia.json` ya listaba `SL-MU 18`
+bajo `estadoDeLaConstruccion.senderosDelCatalogoQueOSM_NO_tiene` (`"cuatro-calas": ["SL-MU 18"]`) desde
+el 2026-07-28, y su `siguientesPasos` nº 7 ya describe la vía de incorporación. Lo que aporta esta
+sesión es **verificarlo de primera mano y por métodos que no dependen del filtro de la herramienta**,
+que era la duda razonable: que el sendero estuviera en OSM pero etiquetado de forma que el `ref` no
+casara. No lo está. La entrada del catálogo queda anotada con la fecha de re-verificación.
+
+### Reparado de paso: un aviso interno que se estaba sirviendo al usuario
+
+El `source` del POI `playa-de-calarreona` acababa así:
+
+> «… Sendero SL-MU 18 homologado por la FMRM. **Aviso: la traza del SL-MU 18 NO está en
+> geo/trails.geojson, que solo lleva el GR-92.**»
+
+Eso es una **nota de mantenimiento interna metida en un campo que se sirve al usuario final**:
+`Frontend/Js/render.js:416` pinta `Fuente: {poi.source}` en la ficha del punto, y el propio `map.js`
+lo dice en su comentario («el `source` completo de cada punto sigue en su ficha»). Al visitante de
+Calarreona se le estaba enseñando el nombre de un fichero del repo.
+
+Sustituido por el hecho, dicho para quien camina y sin internismos: *«Su recorrido no aparece
+dibujado en el mapa: el sendero está señalizado sobre el terreno, pero no cartografiado en
+OpenStreetMap, que es de donde sale la capa de senderos.»* Es información útil de verdad — quien
+llega al arranque señalizado y no ve la línea en el mapa merece saber por qué—, y la atribución ODbL
+y la homologación FMRM se conservan intactas.
+
+Tocado en los **dos sitios que comparten ese texto**, que si no divergen: `park.json` y
+`Database/n3-pois-cuatro-calas-sierra-espuna.sql` (sigue sin aplicar, ver abajo). Y `manifest.json`
+sube de **v3 a v4** con fecha 2026-08-08, porque `park.json` ha cambiado y `parkNeedsRevalidation`
+(`offline.js:203`) compara `version` y `updatedAt`: sin subirla, quien tenga el parque guardado sin
+conexión seguiría leyendo el aviso viejo para siempre.
+
+**Consecuencia para el nivel:** ninguna. Este hueco es de la capa de senderos, no de la cascada del
+§4, y no bloquea el N3.
+
+### SQL aplicado: **Cuatro Calas sube a N3**. Sierra Espuña no puede
+
+Con la pila de Docker ya levantada (`naturdex-db-1`, MySQL 8.4, *healthy*), se aplicó
+`Database/n3-pois-cuatro-calas-sierra-espuna.sql`. Resultado, con copia de seguridad previa de
+`parks` y `points_of_interest` tomada con `mysqldump`:
+
+| Espacio | Antes | Después | |
+|---|---|---|---|
+| `cuatro-calas` | 0 POIs | **4 POIs** | ✅ |
+| `sierra-espuna` | — | **0 filas insertadas** | ⚠️ ver abajo |
+
+**Cuatro Calas cumple ya los tres requisitos del §5** —cascada agotada, la BD tiene sus filas y
+`npm run validate` en verde—, que es exactamente lo que el §8 del informe daba como único pendiente.
+**Pasa de N2 a N3.**
+
+Comprobación, no confianza: exportadas las 4 filas de la BD y comparadas **campo a campo contra
+`park.json`** (nombre, tipo, latitud, longitud, `approx`, imagen, descripción y `source`) →
+**coincidencia exacta en los 8 campos de los 4 POIs**, acentos y comillas angulares incluidos. Y de
+punta a punta: `GET /Backend/Api/species.php?park=cuatro-calas` devuelve **200** con los 4 POIs y el
+`source` corregido, sin rastro del aviso interno. Que es lo que importaba: `data.js` da prioridad a
+la API sobre el `park.json` empaquetado.
+
+> **Sierra Espuña no ha insertado nada, y no es un fallo del SQL.** Sus 13 POIs van en un
+> `INSERT … SELECT … FROM parks p JOIN (…) ON p.slug = 'sierra-espuna'`, y **`sierra-espuna` no
+> existe en la tabla `parks`**: la BD solo tiene `cabo-cope-puntas-calnegre` y `cuatro-calas`, que
+> son las que trae `seed.sql`. El JOIN no casa y el INSERT afecta a 0 filas **sin dar error**, así
+> que el SQL «pasa» y no inserta. **Sierra Espuña sigue en N2** y le faltan ahora dos cosas, no una:
+> el Anexo I del PRUG y **dar de alta su fila en `parks`** antes de reaplicar este mismo SQL, que es
+> idempotente y se puede relanzar tal cual.
+
+> **Ojo al volumen.** Esto está aplicado sobre el volumen `naturdex_db_data` de la máquina local.
+> `seed.sql` no lleva estos POIs, así que **si se recrea el volumen hay que reaplicar el SQL**.
+
+### Fallo encontrado al aplicarlo: el comando documentado corrompía el UTF-8
+
+El comando que venía escrito en las cabeceras de los `.sql` y en los documentos invocaba `mysql`
+**sin `--default-character-set=utf8mb4`**, y el cliente entra en **latin1** mientras la BD es utf8mb4
+(`@@character_set_client = latin1`, `@@character_set_database = utf8mb4`).
+
+Verificado en una BD desechable, creada y eliminada para la prueba, en vez de darlo por supuesto:
+
+```
+escrito: Posición «Cocederos» Espuña geológico
+leído  : PosiciÃ³n Â«CocederosÂ» EspuÃ±a geolÃ³gico
+```
+
+Con este catálogo —lleno de «Espuña», «geológico», «Posición» y comillas angulares— eso es mojibake
+en cada ficha. **El SQL se aplicó con el flag puesto**, de ahí que la comparación campo a campo salga
+limpia.
+
+La herramienta del repo **ya lo hacía bien** (`Tools/lib/db.js:79` pasa el flag), así que el fallo
+estaba solo en los comandos escritos a mano. Corregido en las **6 apariciones**: las cabeceras de
+`Database/cuatro-calas-n2.sql` y `Database/n3-pois-cuatro-calas-sierra-espuna.sql`, este mismo
+ledger, el informe de N3 y las dos del `README.md` (`schema.sql` y `seed.sql`, que es donde más caro
+salía). `Docs/glosario-divulgativo.md` ya lo traía bien y no se ha tocado.
 
 ---
 
@@ -444,7 +578,7 @@ había contenedor de BD en marcha en esta sesión. Sin él, un despliegue con ba
 Cuatro Calas como ficha base, porque `Frontend/Js/data.js` da prioridad a la API sobre el `park.json`.
 
 ```bash
-docker exec -i naturdex-db-1 sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" mysql naturadex' < Database/cuatro-calas-n2.sql
+docker exec -i naturdex-db-1 sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" mysql --default-character-set=utf8mb4 naturadex' < Database/cuatro-calas-n2.sql
 ```
 
 ### Huecos conocidos

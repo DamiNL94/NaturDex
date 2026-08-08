@@ -17,7 +17,7 @@
 -- dudosa. Se resuelve con `npm run images:pois`.
 --
 -- Idempotente: ON DUPLICATE KEY UPDATE sobre la clave única (park_id, slug). Aplicar con:
---   docker exec -i naturdex-db-1 sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" mysql naturadex' < Database/n3-pois-cuatro-calas-sierra-espuna.sql
+--   docker exec -i naturdex-db-1 sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" mysql --default-character-set=utf8mb4 naturadex' < Database/n3-pois-cuatro-calas-sierra-espuna.sql
 -- ================================================================================================
 
 -- ------------------------------------------------------------------------------------------------
@@ -33,7 +33,7 @@ JOIN (
     UNION ALL
     SELECT 'conglomerados-de-cuatro-calas', 'Conglomerados de Cuatro Calas', 'Geológico', 'Afloran conglomerados horizontales muy fracturados de la Unidad Superior y, hacia poniente, areniscas calcáreas limosas con fauna fósil. Es el punto de mayor interés geológico del espacio: el IGME le asigna interés geomorfológico como principal y, como secundarios, el estratigráfico, el paleontológico, el tectónico y el sedimentológico.', 37.377857, -1.628044, NULL, 'Inventario Español de Lugares de Interés Geológico (IELIG), IGME — LIG BE005, cuya denominación oficial es «Playa de Cuatro Calas»; aquí se le da otro nombre para no confundirlo con el del propio espacio protegido. approx: el punto del inventario representa el conjunto del tramo costero, no un afloramiento puntual.', TRUE
     UNION ALL
-    SELECT 'playa-de-calarreona', 'Playa de Calarreona', 'Acceso', 'La más septentrional de las cuatro calas que dan nombre al espacio y su acceso por el norte. Es una de las paradas del SL-MU 18 «Sendero de Cuatro Calas Juan F. Mota Poveda», recorrido circular de unos 5 km que enlaza Calarreona, La Higuerica, La Carolina y Los Cocedores y pasa por el saladar de Cañada Brusca.', 37.383513, -1.621103, NULL, 'Posición: OpenStreetMap (ODbL). Sendero SL-MU 18 homologado por la FMRM. Aviso: la traza del SL-MU 18 NO está en geo/trails.geojson, que solo lleva el GR-92.', FALSE
+    SELECT 'playa-de-calarreona', 'Playa de Calarreona', 'Acceso', 'La más septentrional de las cuatro calas que dan nombre al espacio y su acceso por el norte. Es una de las paradas del SL-MU 18 «Sendero de Cuatro Calas Juan F. Mota Poveda», recorrido circular de unos 5 km que enlaza Calarreona, La Higuerica, La Carolina y Los Cocedores y pasa por el saladar de Cañada Brusca.', 37.383513, -1.621103, NULL, 'Posición: OpenStreetMap (ODbL). Sendero SL-MU 18 homologado por la FMRM. Su recorrido no aparece dibujado en el mapa: el sendero está señalizado sobre el terreno, pero no cartografiado en OpenStreetMap, que es de donde sale la capa de senderos.', FALSE
 ) poi ON p.slug = 'cuatro-calas'
 ON DUPLICATE KEY UPDATE name=VALUES(name), type=VALUES(type), description=VALUES(description),
     latitude=VALUES(latitude), longitude=VALUES(longitude), image_url=VALUES(image_url),
