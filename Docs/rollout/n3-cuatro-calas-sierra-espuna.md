@@ -301,11 +301,15 @@ docker exec -i naturdex-db-1 sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" mysql --def
 **Cuatro Calas está a un paso: le falta solo el punto 1.** Su cascada está agotada y el validador
 pasa.
 
-1. ~~**Aplicar el SQL.**~~ **HECHO el 2026-08-08.** Aplicado sobre `naturdex-db-1`: **Cuatro Calas
-   tiene sus 4 POIs en la BD**, verificados campo a campo contra `park.json` y servidos por la API.
-   **Cuatro Calas cierra el N3.** Sierra Espuña insertó **0 filas**: su slug **no existe en la tabla
-   `parks`**, así que el `INSERT … JOIN parks` no casa y no da error. Hay que darla de alta en
-   `parks` y reaplicar (el SQL es idempotente). Ver `ESTADO.md` §"2026-08-08".
+1. ~~**Aplicar el SQL.**~~ **HECHO el 2026-08-08, y hacía falta más de lo que ponía aquí.** No
+   bastaba con el SQL de POIs: **`cuatro-calas-n2.sql` tampoco se había aplicado nunca** (el espacio
+   estaba en la BD como ficha base, 0 hábitats y 0 especies), y **Sierra Espuña ni siquiera tenía
+   fila en `parks`**, que es por lo que su mitad del SQL insertaba 0 filas sin dar error. Aplicado
+   `cuatro-calas-n2.sql`, creado y aplicado `Database/sierra-espuna-n2.sql` (fila de `parks` + 13
+   hábitats + 190 especies + 703 enlaces) y reaplicado el de POIs. Resultado: **Cuatro Calas 7 hab /
+   102 esp / 4 POIs** y **Sierra Espuña 13 / 190 / 13**, ambos cuadrando con su `park.json` y
+   servidos por la API. **Cuatro Calas cierra el N3**; Sierra Espuña sigue en N2 porque le falta la
+   cascada (punto 2), no la BD. Ver `ESTADO.md` §"2026-08-08".
 2. **Abrir el Anexo I del PRUG** a mano (§2). Es lo único que le falta a la cascada de **Sierra
    Espuña**, y lo único que puede mover los 71 picos y 28 collados.
 3. **`npm run images:pois`** para resolver las fotos: los 17 POIs están con `image: null`.

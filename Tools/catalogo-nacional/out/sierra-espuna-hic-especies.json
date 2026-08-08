@@ -1,0 +1,322 @@
+{
+ "park": "sierra-espuna",
+ "generado": "Atlas y Manual de los Hábitats de España (MITECO) ∩ catálogo del parque",
+ "hic": {
+  "4090": {
+   "habitat": "matorrales-mediterraneos-y-4090",
+   "especies": [
+    "Erodium foetidum",
+    "Genista longipes",
+    "Ulex europaeus",
+    "Genista cinerea"
+   ]
+  },
+  "5210": {
+   "habitat": "matorrales-arborescentes-de-5210",
+   "especies": [
+    "Quercus ilex",
+    "Genista cinerea"
+   ]
+  },
+  "5330": {
+   "habitat": "matorrales-termomediterraneos-y-5330",
+   "especies": [
+    "Halimium atriplicifolium",
+    "Teucrium lanigerum",
+    "Sideritis bourgaeana",
+    "Sideritis leucantha",
+    "Thymus antoninae",
+    "Cytisus scoparius",
+    "Quercus lusitanica"
+   ]
+  },
+  "6110": {
+   "habitat": "prados-calcareos-carsticos-6110",
+   "especies": [
+    "Sedum gypsicola"
+   ]
+  },
+  "6170": {
+   "habitat": "prados-alpinos-y-6170",
+   "especies": [
+    "Erodium foetidum",
+    "Silene mellifera"
+   ]
+  },
+  "6220": {
+   "habitat": "zonas-subestepicas-de-6220",
+   "especies": [
+    "Notoceras bicorne",
+    "Ononis ornithopodioides",
+    "Trifolium gemellum",
+    "Convolvulus lineatus",
+    "Colchicum triphyllum",
+    "Allium melananthum"
+   ]
+  },
+  "6420": {
+   "habitat": "prados-humedos-mediterraneos-6420",
+   "especies": [
+    "Erica erigena"
+   ]
+  },
+  "8210": {
+   "habitat": "pendientes-rocosas-calcicolas-8210",
+   "especies": [
+    "Jasione foliosa",
+    "Campanula hispanica",
+    "Potentilla caulescens",
+    "Saxifraga almeriensis",
+    "Linaria cavanillesii",
+    "Teucrium thymifolium",
+    "Centaurea saxicola",
+    "Cosentinia vellea",
+    "Lafuentea rotundifolia",
+    "Teucrium freynii"
+   ]
+  },
+  "9240": {
+   "habitat": "robledales-ibericos-de-9240",
+   "especies": []
+  },
+  "9340": {
+   "habitat": "encinares-de-quercus-9340",
+   "especies": []
+  },
+  "9560": {
+   "habitat": "bosques-endemicos-de-9560",
+   "especies": []
+  },
+  "92D0": {
+   "habitat": "galerias-y-matorrales-92D0",
+   "especies": [
+    "Imperata cylindrica",
+    "Lonicera biflora"
+   ]
+  },
+  "92A0": {
+   "habitat": "bosques-galeria-de-92A0",
+   "especies": [
+    "Salix pedicellata"
+   ]
+  }
+ },
+ "links": [
+  {
+   "code": "5210",
+   "habitat_slug": "matorrales-arborescentes-de-5210",
+   "scientific_name": "Quercus ilex",
+   "atlas_name": "Quercus ilex subsp. ilex"
+  },
+  {
+   "code": "5210",
+   "habitat_slug": "matorrales-arborescentes-de-5210",
+   "scientific_name": "Genista cinerea",
+   "atlas_name": "Genista cinerea subsp. valentina"
+  },
+  {
+   "code": "4090",
+   "habitat_slug": "matorrales-mediterraneos-y-4090",
+   "scientific_name": "Erodium foetidum",
+   "atlas_name": "Erodium foetidum subsp. valentinum"
+  },
+  {
+   "code": "4090",
+   "habitat_slug": "matorrales-mediterraneos-y-4090",
+   "scientific_name": "Genista longipes",
+   "atlas_name": "Genista longipes subsp. gadorensis"
+  },
+  {
+   "code": "4090",
+   "habitat_slug": "matorrales-mediterraneos-y-4090",
+   "scientific_name": "Ulex europaeus",
+   "atlas_name": "Ulex europaeus"
+  },
+  {
+   "code": "4090",
+   "habitat_slug": "matorrales-mediterraneos-y-4090",
+   "scientific_name": "Genista cinerea",
+   "atlas_name": "Genista cinerea subsp. speciosa"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Notoceras bicorne",
+   "atlas_name": "Notoceras bicorne"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Ononis ornithopodioides",
+   "atlas_name": "Ononis ornithopodioides"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Trifolium gemellum",
+   "atlas_name": "Trifolium gemellum"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Convolvulus lineatus",
+   "atlas_name": "Convolvulus lineatus"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Colchicum triphyllum",
+   "atlas_name": "Colchicum triphyllum"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Allium melananthum",
+   "atlas_name": "Allium melananthum"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Halimium atriplicifolium",
+   "atlas_name": "Halimium atriplicifolium subsp. serpentinicola"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Teucrium lanigerum",
+   "atlas_name": "Teucrium lanigerum"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Sideritis bourgaeana",
+   "atlas_name": "Sideritis bourgaeana"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Sideritis leucantha",
+   "atlas_name": "Sideritis leucantha subsp. incana"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Thymus antoninae",
+   "atlas_name": "Thymus antoninae"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Cytisus scoparius",
+   "atlas_name": "Cytisus scoparius subsp. bourgaei"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Quercus lusitanica",
+   "atlas_name": "Quercus lusitanica"
+  },
+  {
+   "code": "92D0",
+   "habitat_slug": "galerias-y-matorrales-92D0",
+   "scientific_name": "Imperata cylindrica",
+   "atlas_name": "Imperata cylindrica"
+  },
+  {
+   "code": "92D0",
+   "habitat_slug": "galerias-y-matorrales-92D0",
+   "scientific_name": "Lonicera biflora",
+   "atlas_name": "Lonicera biflora"
+  },
+  {
+   "code": "6420",
+   "habitat_slug": "prados-humedos-mediterraneos-6420",
+   "scientific_name": "Erica erigena",
+   "atlas_name": "Erica erigena"
+  },
+  {
+   "code": "6110",
+   "habitat_slug": "prados-calcareos-carsticos-6110",
+   "scientific_name": "Sedum gypsicola",
+   "atlas_name": "Sedum gypsicola"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Jasione foliosa",
+   "atlas_name": "Jasione foliosa subsp. foliosa"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Campanula hispanica",
+   "atlas_name": "Campanula hispanica"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Potentilla caulescens",
+   "atlas_name": "Potentilla caulescens subsp. petrophila"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Saxifraga almeriensis",
+   "atlas_name": "Saxifraga almeriensis"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Linaria cavanillesii",
+   "atlas_name": "Linaria cavanillesii"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Teucrium thymifolium",
+   "atlas_name": "Teucrium thymifolium"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Centaurea saxicola",
+   "atlas_name": "Centaurea saxicola"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Cosentinia vellea",
+   "atlas_name": "Cosentinia vellea subsp. bivalens"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Lafuentea rotundifolia",
+   "atlas_name": "Lafuentea rotundifolia"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Teucrium freynii",
+   "atlas_name": "Teucrium freynii"
+  },
+  {
+   "code": "6170",
+   "habitat_slug": "prados-alpinos-y-6170",
+   "scientific_name": "Erodium foetidum",
+   "atlas_name": "Erodium foetidum subsp. rupestre"
+  },
+  {
+   "code": "6170",
+   "habitat_slug": "prados-alpinos-y-6170",
+   "scientific_name": "Silene mellifera",
+   "atlas_name": "Silene mellifera subsp. nevadensis"
+  },
+  {
+   "code": "92A0",
+   "habitat_slug": "bosques-galeria-de-92A0",
+   "scientific_name": "Salix pedicellata",
+   "atlas_name": "Salix pedicellata"
+  }
+ ]
+}

@@ -8,7 +8,7 @@
 |---|---|---|---|---|---|---|---|
 | Región de Murcia | Murcia | Cabo Cope y Puntas de Calnegre | Parque Regional | `cabo-cope-puntas-calnegre` | N2 | 2026-08-01 | Piloto. ENP **ES620007**. LIC/ZEC ES6200031 (Cabo Cope) · ES6200012 (Calnegre) · ZEPA ES0000261. **15 hábitats** (retirados el 1110 y el 9560 el 2026-08-01, ver informe), 175 especies. Fotos de florasilvestre.es pendientes de licencia |
 | Región de Murcia | Murcia | Cuatro Calas | Paisaje Protegido | `cuatro-calas` | **N3** | 2026-08-08 | Límite IMIDA/CARM. ENP **ES620004** (`ENP000007` es el id interno del IMIDA, no el código oficial). LIC/ZEC ES6200010 · ZEPA marina ES0000507. 7 hábitats (3 prioritarios, 177 ha = 79 % del espacio), **102 especies** (73 flora, 29 fauna incl. 27 aves de la lista oficial Natura 2000), 97 con foto, **4 POIs** (sin foto). Ver informe de cierre §"Cuatro Calas: Fase 2 cerrada". **Fase 3 CERRADA el 2026-08-08**: 4 POIs dados de alta, cascada AGOTADA, `validate` en verde y **SQL aplicado y verificado contra la BD** (4/4 POIs, comparación campo a campo y API sirviéndolos). Cumple los tres requisitos del §5. PORN inexistente, 0 BIC, OSM barrido con Overpass. **IELIG consultado de primera mano: 2 LIG dentro del límite, `BE005` «Playa de Cuatro Calas» y `BE006` «Vulcanismo de La Carolina»** (corrige el «La Carolina/Punta Parda» de la primera sesión). Commons consultado, licencias sin verificar — §"2026-08-07 (b)" y `n3-cuatro-calas-sierra-espuna.md`. **Hueco de senderos: `trails.geojson` sirve solo el GR-92; el SL-MU 18, que es el sendero propio del espacio, NO está en OpenStreetMap** (verificado el 2026-08-08 por siete vías, §"2026-08-08"). Entrará solo con `npm run trails:build` en cuanto se mapee |
-| Región de Murcia | Murcia | Sierra Espuña | Parque Regional | `sierra-espuna` | N2 | 2026-07-28 | ENP **ES620013**, 17.693,2 ha. LIC/ZEC ES0000173 · ZEPA ES0000173. 13 hábitats, **191 especies** tras el recorte a catálogo oficial + evidencia GBIF (121 flora, 70 fauna incl. 48 aves y 9 quirópteros), 155 con foto (149 de Wikipedia/Commons), **13 POIs** (sin foto). Ver informe de cierre §"Sierra Espuña: Fase 2 cerrada" y §"Sierra Espuña: recorte a especies con respaldo oficial". **Fase 3: 13 POIs dados de alta el 2026-08-07** y `validate` en verde, pero la cascada NO está agotada (falta el Anexo I del PRUG) y falta aplicar el SQL, así que sigue en N2; 2 BIC confirmados con su norma (Pozos de la Nieve, Sitio de Interés Etnográfico; Santuario de Santa Eulalia, *Decreto 96/2002*), OSM barrido con Overpass (28 pozos de nieve uno a uno, Sanatorio situado). **IELIG consultado: 0 LIG dentro del límite**, «no hay» de primera mano. **Anexo I del PRUG (Decreto 6/2026) sigue sin abrir**, ahora por protección anti-bot del BORM — es la fuente que puede dar de golpe los picos y collados. **Al aplicar el SQL el 2026-08-08 insertó 0 filas: `sierra-espuna` NO existe en la tabla `parks`** (la BD solo trae las de `seed.sql`), y el `INSERT … JOIN parks` no casa y no da error. Hay que **dar de alta su fila en `parks`** y reaplicar el SQL, que es idempotente — §"2026-08-08". Commons consultado, licencias sin verificar — §"2026-08-07 (b)" y `n3-cuatro-calas-sierra-espuna.md` |
+| Región de Murcia | Murcia | Sierra Espuña | Parque Regional | `sierra-espuna` | N2 | 2026-07-28 | ENP **ES620013**, 17.693,2 ha. LIC/ZEC ES0000173 · ZEPA ES0000173. 13 hábitats, **191 especies** tras el recorte a catálogo oficial + evidencia GBIF (121 flora, 70 fauna incl. 48 aves y 9 quirópteros), 155 con foto (149 de Wikipedia/Commons), **13 POIs** (sin foto). Ver informe de cierre §"Sierra Espuña: Fase 2 cerrada" y §"Sierra Espuña: recorte a especies con respaldo oficial". **Fase 3: 13 POIs dados de alta el 2026-08-07** y `validate` en verde, pero la cascada NO está agotada (falta el Anexo I del PRUG) y falta aplicar el SQL, así que sigue en N2; 2 BIC confirmados con su norma (Pozos de la Nieve, Sitio de Interés Etnográfico; Santuario de Santa Eulalia, *Decreto 96/2002*), OSM barrido con Overpass (28 pozos de nieve uno a uno, Sanatorio situado). **IELIG consultado: 0 LIG dentro del límite**, «no hay» de primera mano. **Anexo I del PRUG (Decreto 6/2026) sigue sin abrir**, ahora por protección anti-bot del BORM — es la fuente que puede dar de golpe los picos y collados, y **lo único que le queda para el N3**. **BD resuelta el 2026-08-08**: creado y aplicado `Database/sierra-espuna-n2.sql` (fila en `parks` —que no existía y por eso el SQL de POIs insertaba 0 filas en silencio—, 13 hábitats con geometría, 190 especies y 703 enlaces), y reaplicado el de POIs: **13/13 dentro**. Verificado campo a campo contra `park.json` y por la API — §"2026-08-08". Commons consultado, licencias sin verificar — §"2026-08-07 (b)" y `n3-cuatro-calas-sierra-espuna.md` |
 | Región de Murcia | Murcia | Carrascoy y El Valle | Parque Regional | `carrascoy-y-el-valle` | N1 | 2026-07 | ENP **ES620008**, 16.685,8 ha. LIC/ZEC ES6200002 · ZEPA ES0000269 |
 | Región de Murcia | Murcia | Sierra de la Pila | Parque Regional | `sierra-de-la-pila` | N1 | 2026-07 | ENP **ES620018**, 8851,0 ha. LIC/ZEC ES6200003 · ZEPA ES0000174 |
 | Región de Murcia | Murcia | Sierra de El Carche | Parque Regional | `sierra-de-el-carche` | N1 | 2026-07 | ENP **ES620017**, 5869,1 ha. LIC/ZEC ES6200009 |
@@ -161,6 +161,63 @@ la API sobre el `park.json` empaquetado.
 
 > **Ojo al volumen.** Esto está aplicado sobre el volumen `naturdex_db_data` de la máquina local.
 > `seed.sql` no lleva estos POIs, así que **si se recrea el volumen hay que reaplicar el SQL**.
+
+> **CORRECCIÓN, el mismo día.** Lo de arriba —«Cuatro Calas cumple ya los tres requisitos del §5»—
+> **estaba mal, y la comprobación que lo respaldaba miraba donde no era.** Se verificaron los 4 POIs
+> contra la BD y se dio el §5 por cumplido, pero **`Database/cuatro-calas-n2.sql` nunca se había
+> aplicado**: el espacio estaba en la BD con `status = 'basic'`, **0 hábitats y 0 especies** y solo
+> sus 4 POIs. Es decir, la BD servía Cuatro Calas como ficha base con chinchetas, **peor que el
+> `park.json` empaquetado**, porque `data.js` da prioridad a la API. «La BD tiene sus filas» es el
+> catálogo entero, no la capa que uno acaba de tocar. Resuelto abajo.
+
+### Los tres espacios, cuadrados con su `park.json`
+
+Aplicado lo que faltaba y creado lo que no existía:
+
+| | `status` | hábitats | especies | POIs | |
+|---|---|---|---|---|---|
+| `cabo-cope-puntas-calnegre` | available | 15 | 146 | 15 | ya estaba (seed) |
+| `cuatro-calas` | available | **7** | **102** | 4 | aplicado `cuatro-calas-n2.sql`, que seguía sin aplicar |
+| `sierra-espuna` | available | **13** | **190** | **13** | **fichero nuevo** `sierra-espuna-n2.sql` |
+
+**Cuatro Calas sí cierra ahora el N3**, esta vez con el catálogo completo detrás.
+**Sierra Espuña se queda en N2 aun teniendo ya todas sus filas**: el §5 pide además la cascada
+agotada, y le sigue faltando el Anexo I del PRUG. Lo que se ha quitado de en medio es el requisito
+de base de datos, no la cascada.
+
+### `Database/sierra-espuna-n2.sql` — fichero nuevo (920 KB)
+
+Generado desde `park.json` + `geo/habitats.geojson`, con el mismo patrón que el de Cuatro Calas
+(`INSERT … SELECT … JOIN parks`, todo idempotente). Dos diferencias deliberadas:
+
+1. **Inserta la fila de `parks`**, que el de Cuatro Calas solo actualiza. `seed.sql` trae únicamente
+   cabo-cope y cuatro-calas, así que `sierra-espuna` **no existía en la tabla**: esa y no otra era la
+   causa de que el SQL de POIs insertara 0 filas sin dar error. Hay que aplicarlo **antes** que el de
+   POIs.
+2. **Incluye `is_visible` y `review_note`** en `species`, que el de Cuatro Calas no traía. Aquí hacen
+   falta: una especie (*Sylvia undata*) va oculta del catálogo público y 52 llevan nota de revisión.
+   `park_payload.php:89` las lee y las sirve, y `data.js` filtra por `visible` en cliente — sin la
+   columna, esa especie reaparecería.
+
+**Sobre `evidence`, que es un dato de procedencia y no se puede inventar.** Los 703 pares
+(especie, hábitat) y sus `gbif_occurrences` salen literalmente del `park.json`; ese camino se validó
+reproduciendo **al 100% los 271 enlaces** del SQL de Cuatro Calas. La etiqueta `evidence`, en cambio,
+**no está en el `park.json`**: se ha derivado con la herramienta del repo
+(`atlas-hic-especies.js`, Atlas ∩ catálogo, salida nueva en
+`Tools/catalogo-nacional/out/sierra-espuna-hic-especies.json`). Contrastado contra Cuatro Calas, ese
+método reproduce **16 de sus 19** `caracteristica` y **no produce ninguno de más**; los 3 que faltan
+allí vienen de una curación a mano posterior que no está en el repo. Así que en Espuña
+`caracteristica` (32 de 703) puede quedarse **corto, nunca largo** — preferible a etiquetar a ojo el
+origen de un enlace.
+
+**Comprobado, no supuesto:** volcadas las filas de la BD y comparadas contra `park.json` —13/13
+hábitats con geometría, 190/190 especies, 13/13 POIs, 703/703 enlaces, y campo a campo en nombre,
+código, tipo, prioridad, color, descripción, reino, grupo, `visible`, `featured` y ZEPA— con **cero
+discrepancias**. Y por la API: `species.php?park=sierra-espuna` devuelve **200** con 13 hábitats,
+190 especies y 13 POIs, y *Sylvia undata* llega con `visible:false` como en el `park.json`.
+
+> El generador es un script de sesión, **no está en el repo**. Si interesa reproducir el fichero sin
+> él, la vía es `atlas-hic-especies.js` para los enlaces y el propio `park.json` para el resto.
 
 ### Fallo encontrado al aplicarlo: el comando documentado corrompía el UTF-8
 
