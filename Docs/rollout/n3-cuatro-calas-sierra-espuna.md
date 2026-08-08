@@ -234,6 +234,11 @@ Commons **está accesible** y responde. Lo encontrado, como pista y no como dato
 **Ninguna licencia se ha verificado.** Eso se hace con `npm run images:pois`, que necesita Node y aquí
 no lo hay. Sin licencia comprobada, `image: null` (§4.5 paso 4).
 
+> **Resuelto el 2026-08-09.** Ejecutado `poi-images.js` con Node y salida a Commons: **10 de los 17
+> POIs llevan foto** (Cuatro Calas 4/4, Sierra Espuña 6/13) y los otros 7 no tienen material libre en
+> Commons, lo que los convierte en hueco cerrado. Detalle, comandos y las dos coincidencias
+> verificadas por coordenadas en `Tools/catalogo-nacional/out/poi-fotos-candidatas.md`.
+
 ---
 
 ## 7. El alta: qué se escribió y con qué decisiones
@@ -282,6 +287,7 @@ polígono: 15 dentro y 2 en el margen de 50 m, 0 fuera** · sin dos POIs a menos
 
 **Ninguno de los 17 lleva foto** (`image: null`). Commons tiene material —sobre todo para los
 Cocedores— pero las licencias no se han verificado, y el §4.5 manda hueco antes que foto dudosa.
+**Resuelto el 2026-08-09: 10 con foto de licencia libre, 7 sin material** (ver §6).
 
 ### Base de datos
 
@@ -312,7 +318,8 @@ pasa.
    cascada (punto 2), no la BD. Ver `ESTADO.md` §"2026-08-08".
 2. **Abrir el Anexo I del PRUG** a mano (§2). Es lo único que le falta a la cascada de **Sierra
    Espuña**, y lo único que puede mover los 71 picos y 28 collados.
-3. **`npm run images:pois`** para resolver las fotos: los 17 POIs están con `image: null`.
+3. ~~**`npm run images:pois`** para resolver las fotos~~ — **hecho el 2026-08-09**: 10 POIs con foto,
+   7 sin material libre en Commons. Queda **aplicar `Database/poi-imagenes.sql`** (10 `UPDATE`).
 4. **Fuente del hecho** para Arco de Sigismondi, Los Ojos del Dragón y Ermita de Santa Leocadia, si
    se quiere recuperarlos.
 5. Comprobar si la **Ley 1/2026** mueve el límite del parque (§2).

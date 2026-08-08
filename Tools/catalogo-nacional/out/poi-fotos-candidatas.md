@@ -1,80 +1,95 @@
-# Fotos de los POIs de Cuatro Calas y Sierra Espuña — estado al 2026-08-08
+# Fotos de los POIs de Cuatro Calas y Sierra Espuña — cerrado el 2026-08-09
 
-> **Los 17 POIs siguen con `image: null`.** Nada de lo que hay aquí está escrito en ningún
-> `park.json`, y no debe escribirse a mano: lo escribe `poi-images.js` tras comprobar la licencia.
+> **10 de los 17 POIs llevan foto; los otros 7 se quedan sin ella porque no hay material libre en
+> Commons.** Escritas por `poi-images.js` en los dos `park.json` y en `Database/poi-imagenes.sql`
+> (10 `UPDATE`, **pendiente de aplicar contra la BD**: `Frontend/Js/data.js` da prioridad a la API
+> sobre el `park.json` empaquetado).
 
-## Por qué sigue abierto
+## Qué salió
 
-Tres sesiones lo han intentado y las tres se han quedado en el mismo sitio, por el mismo motivo:
+**Cuatro Calas — 4 de 4.** Los cuatro por la vía 1 (categoría del espacio) y por alias, CC BY-SA 3.0 es.
 
-| Sesión | Qué faltaba |
-|---|---|
-| 2026-08-07 | Sin salida a `commons.wikimedia.org` (la política de red solo permitía GitHub) |
-| 2026-08-07 (b) | Commons accesible y consultado, pero **sin Node** para ejecutar `poi-images.js` |
-| 2026-08-08 | Sin Node **y** sin salida a `commons.wikimedia.org` ni `es.wikipedia.org` |
+| POI | Archivo | Autor |
+|---|---|---|
+| Vulcanismo de La Carolina | `Afloramientos rocosos en la Cala La Carolina.JPG` | Mabelcalabuig |
+| Playa de los Cocedores | `Antiguo deposito de esparto en la Cala de los Cocederos.JPG` | Mabelcalabuig |
+| Conglomerados de Cuatro Calas | `Cuatro calas aguilas vista desde carretera.jpg` | Edumartinez89 |
+| Playa de Calarreona | `Calarreona, afloramientos rocosos.Las Cuatro Calas.JPG` | Mabelcalabuig |
 
-No falta herramienta ni criterio: falta **una máquina con Node y salida a Commons**. Es una pasada
-de un comando.
+**Sierra Espuña — 6 de 13**, en tres pasadas con tres categorías distintas.
 
-## Cómo se cierra
+| POI | Archivo | Licencia | Categoría usada |
+|---|---|---|---|
+| Pozos de la Nieve | `Pozos de la Nieve de Murcia 11-03-2024.jpg` | CC BY 4.0 | del parque |
+| Casa Forestal de Huerta Espuña | `Casa Forestal de Huerta Espuña. Sierra Espuña.jpg` | CC BY-SA 4.0 | del parque |
+| Centro de Visitantes Ricardo Codorníu | `Centro de Visitantes y Gestión Ricardo Codorniu. Sierra Espuña.jpg` | CC BY-SA 4.0 | del parque |
+| Sanatorio de Tuberculosos | `Antiguo Sanatorio de Tuberculosos de Sierra Espuña 03.jpg` | CC BY-SA 4.0 | `Category:Sanatorio de Tuberculosos de Sierra Espuña` |
+| Santuario de Santa Eulalia de Mérida | `Iglesia de Santa Eulalia de Merida (1).jpg` | CC BY-SA 3.0 es | `Category:Church of Santa Eulalia de Mérida, Totana` |
+| Torre del Azaraque | `Restos de la Torre del Azaraque (Alhama de Murcia).jpg` | CC BY-SA 4.0 | buscador, con `--force` |
+
+## Los comandos que se ejecutaron
 
 ```bash
-# Cuatro Calas — 4 POIs
 node Tools/catalogo-nacional/poi-images.js --park cuatro-calas \
-     --categoria "Cuatro Calas Protected Landscape" --municipio "Águilas" --list
-
-# Sierra Espuña — 13 POIs
+     --categoria "Cuatro Calas Protected Landscape" --municipio "Águilas" --write
 node Tools/catalogo-nacional/poi-images.js --park sierra-espuna \
-     --categoria "Parque Regional de Sierra Espuña" --municipio "Totana" --list
+     --categoria "Parque Regional de Sierra Espuña" --municipio "Totana" --write
+node Tools/catalogo-nacional/poi-images.js --park sierra-espuna \
+     --categoria "Sanatorio de Tuberculosos de Sierra Espuña" --municipio "Alhama de Murcia" --write
+node Tools/catalogo-nacional/poi-images.js --park sierra-espuna \
+     --categoria "Sanatorio de Tuberculosos de Sierra Espuña" --municipio "Alhama de Murcia" --force --write
+node Tools/catalogo-nacional/poi-images.js --park sierra-espuna \
+     --categoria "Church of Santa Eulalia de Mérida, Totana" --municipio "Totana" --write
 ```
 
-`--list` no escribe nada: enumera qué candidata sale por POI, con autor, licencia y vía. Revisado el
-listado, se repite con `--write --sql Database/poi-imagenes.sql --report Docs/fotos-poi.md` y se
-aplica el SQL — `Frontend/Js/data.js` da prioridad a la API sobre el `park.json` empaquetado, así que
-sin cargarlo un despliegue con backend seguiría sirviendo los POIs sin foto.
+Cada pasada escribe su propio `--sql`, así que los cinco ficheros se concatenaron a mano en
+`Database/poi-imagenes.sql`. El script sobrescribe el `--sql` en cada ejecución: no acumula.
 
-Las dos categorías de arriba están **verificadas como existentes**; lo que no se ha podido enumerar
-es su contenido.
+## Las tres cosas que hubo que resolver
 
-| Espacio | Categoría de Commons |
-|---|---|
-| Cuatro Calas | [`Category:Cuatro Calas Protected Landscape`](https://commons.wikimedia.org/wiki/Category:Cuatro_Calas_Protected_Landscape) |
-| Cuatro Calas · subcategoría | [`Category:Cala de los Cocedores`](https://commons.wikimedia.org/wiki/Category:Cala_de_los_Cocedores) |
-| Sierra Espuña | [`Category:Parque Regional de Sierra Espuña`](https://commons.wikimedia.org/wiki/Category:Parque_Regional_de_Sierra_Espu%C3%B1a) |
-| Sierra Espuña · subcategoría | [`Category:Sanatorio de Tuberculosos de Sierra Espuña`](https://commons.wikimedia.org/wiki/Category:Sanatorio_de_Tuberculosos_de_Sierra_Espu%C3%B1a) |
+### 1 · El bug que decía «sin candidata» teniendo candidata
 
-## Lo que se arregló el 2026-08-08 para que esa pasada no salga en balde
+`resuelvePoi` devolvía `{ ...elegida, rechazos }` —la candidata aplanada— y `procesaParque` lee
+`res.elegida`, que ahí es `undefined`. **Cuando encontraba foto, informaba de que no había ninguna**,
+y como los rechazos venían vacíos lo anotaba como «ninguna candidata pasó licencia y carga». Con 40
+archivos utilizables en Cuatro Calas y 78 en Sierra Espuña, los 17 POIs salían a cero. Corregido a
+`return { elegida, rechazos }` en las dos salidas de la función.
 
-La búsqueda tal y como estaba **habría devuelto vacío en el POI mejor documentado de los 17**, y no
-por falta de fotos. `mencionaSitio` exige que todas las palabras con peso del nombre del POI estén
-en el nombre del archivo, y aquí no lo están:
+### 2 · Dos categorías que el barrido no alcanza
 
-| POI (`name`) | Archivos de Commons | ¿Casaba? |
-|---|---|---|
-| Playa de los Cocedores | «Antiguo deposito de esparto en la Cala de los **Cocederos**» (y 9 más) | **No**: falta «playa» y «cocedores» ≠ «cocederos» |
-| Vulcanismo de La Carolina | «Afloramientos rocosos en la **Cala La Carolina**» | **No**: falta «vulcanismo» |
-| Conglomerados de Cuatro Calas | El IELIG lo llama «**Playa de Cuatro Calas**» | **No**: falta «conglomerados» |
+`cmtype=subcat` devuelve **cero subcategorías** tanto para `Category:Cuatro Calas Protected Landscape`
+como para `Category:Parque Regional de Sierra Espuña`. Ni la del Sanatorio ni la de Santa Eulalia
+cuelgan de la del parque, así que el barrido de un nivel no las ve y hubo que pasarlas en
+`--categoria`. No es un fallo del ancla: el ancla garantiza el sitio porque no sale de la categoría.
 
-Añadido **`Tools/catalogo-nacional/data/poi-alias.json`** con los nombres alternativos de los POIs de
-estos dos espacios, y `poi-images.js` los aplica **solo dentro de la categoría del espacio** (donde
-el sitio ya está garantizado), nunca en el buscador. Detalle del mecanismo en
-`Docs/prompts/e-rollout-nacional.md` §4.6.
+Los 14 archivos de `Category:Cala de los Cocedores` sí están además en la categoría del espacio, así
+que esa subcategoría no hizo falta.
 
-Los alias son una ayuda de búsqueda, no una relajación: la licencia sigue siendo lista blanca (CC0,
-dominio público, CC BY, CC BY-SA), la candidata sigue teniendo que cargar de verdad, y una vía 2
-sigue saliendo como «a revisar» sin escribirse.
+### 3 · Dos coincidencias verificadas a mano por coordenadas
 
-## Qué esperar de la pasada
+- **Torre del Azaraque** salió por el buscador y por tanto como «a revisar». El archivo declara
+  **37.8374849, −1.47182282** y el POI está en **37.837443, −1.471796**: unos 5 m. Mismo torreón, y
+  era la única candidata «a revisar» de esa pasada, así que `--force` no podía colar otra cosa.
+- **Santuario de Santa Eulalia**: su categoría en Commons se llama «Church of…» y en Totana hay
+  iglesia parroquial aparte. La categoría declara **37.800832, −1.557237** y el POI **37.800765,
+  −1.557502**: unos 25 m. Coincide con el *Decreto 96/2002* que ya citaba el `source` del POI.
 
-- **Cuatro Calas** tiene material identificado para 3 de sus 4 POIs (10 archivos de la Cala de los
-  Cocederos, uno de ellos temáticamente exacto: los depósitos de esparto). El cuarto, «Playa de
-  Calarreona», no tenía candidata.
-- **Sierra Espuña** solo tiene identificado un archivo, «Pozos de la Nieve de Murcia 11-03-2024.jpg»,
-  y la subcategoría del Sanatorio. De sus 13 POIs, lo normal es que la mayoría se quede sin foto.
-- Un POI que se quede sin foto **se queda con `image: null`** y pasa a constar como hueco cerrado,
-  no como pendiente. Lo que no vale es lo de ahora: «sin foto» porque no hubo con qué preguntar.
+## El alias corregido
+
+`conglomerados-de-cuatro-calas` llevaba como alias el nombre oficial del LIG BE005, «Playa de Cuatro
+Calas», y eso casaba con «Calarreona, algas en la playa (Las Cuatro Calas)»: un primer plano de algas
+en otra cala, para un POI **geológico**. Cambiado a «Cuatro calas aguilas», que trae las vistas
+generales del tramo costero, que es lo que el propio inventario dice que representa el punto. No vale
+«Cuatro Calas Murcia»: casa también con la foto de la Cala La Carolina.
+
+## Los 7 sin foto: hueco cerrado, no pendiente
+
+Pozo de la nieve de Mula, Torreón de los Exploradores, Caño de Espuña, Casas de Malvariche, Garita
+del Turullón, Hornos de cal del Barranco de Argüelles y Capilla de la Virgen del Rocío. Buscados uno
+a uno en Commons por nombre y en el espacio de nombres de categorías: **no hay material**. Los dos
+únicos resultados que aparecieron eran de otras provincias —«Pozo de la nieve (El Tiemblo)», Ávila, y
+una ermita aragonesa— y el filtro los descartó por no mencionar el sitio.
 
 > **Ojo con los mapas.** La categoría de Sierra Espuña contiene un `Mapa sierra espuna.svg`. El
-> filtro `usable()` de `lib/wikimedia.js` lo descarta por nombre y por extensión, pero es el falso
-> positivo clásico de un lugar y ya hubo el precedente del `Sorbus domestica_range.svg` colado como
-> foto de *Cormus domestica*. Si aparece en el informe, es que el filtro se ha quedado corto.
+> filtro `usable()` de `lib/wikimedia.js` lo descartó, como debía. Si alguna vez aparece en el
+> informe, es que el filtro se ha quedado corto.

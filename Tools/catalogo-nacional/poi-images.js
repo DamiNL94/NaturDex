@@ -226,14 +226,14 @@ async function resuelvePoi(poi, { archivos, contexto, alias }) {
       // Que la coincidencia haya salido por alias y no por el nombre del POI se dice en el informe:
       // es lo que hay que mirar si alguna vez una foto acaba en el POI equivocado.
       if (!mencionaSitio(elegida.file, poi.name)) elegida.via += ' (por alias)';
-      return { ...elegida, rechazos };
+      return { elegida, rechazos };
     }
     if (rechazos.length) return { elegida: null, rechazos };
   }
   // 2 · buscador, con el espacio o el municipio como contexto. Siempre a revisar.
   const encontrados = await buscaEnCommons(poi.name, contexto);
   const { elegida, rechazos } = await primeraValida(encontrados, 'Búsqueda en Commons', true);
-  return elegida ? { ...elegida, rechazos } : { elegida: null, rechazos };
+  return { elegida, rechazos };
 }
 
 // --- Recorrido -----------------------------------------------------------------------------------------
