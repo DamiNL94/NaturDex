@@ -1,0 +1,63 @@
+{
+  "_comment": "Nombres alternativos con los que buscar la foto de un punto de interés en Commons. Los lee Tools/catalogo-nacional/poi-images.js y SOLO los aplica dentro de la categoría de Commons del espacio (vía 1), nunca en el buscador: allí la categoría ya garantiza el sitio, así que un topónimo corto es seguro. Formato: <slug del espacio> → <id del POI> → [nombres]. Un POI que no figure aquí se busca solo por su `name`, que es el caso normal. Añadir un alias no relaja ninguna comprobación: la licencia sigue siendo lista blanca y la candidata sigue teniendo que cargar.",
+  "_porque": "El nombre con el que un POI está dado de alta sale de la fuente que lo sitúa (casi siempre OpenStreetMap o el IELIG) y no tiene por qué ser el que use quien subió la foto. Cuando no coinciden, poi-images.js no encuentra nada aunque la foto esté delante: mencionaSitio exige que TODAS las palabras con peso del nombre estén en el nombre del archivo.",
+
+  "cuatro-calas": {
+    "_comment": "El IELIG y Commons escriben «Cocederos»; OpenStreetMap, «Cocedores». Documentado en Docs/rollout/n3-cuatro-calas-sierra-espuna.md §5 como trampa conocida.",
+    "playa-de-los-cocedores": [
+      "Cala de los Cocederos",
+      "Cocederos",
+      "Cocedores"
+    ],
+    "vulcanismo-de-la-carolina": [
+      "Cala La Carolina",
+      "La Carolina"
+    ],
+    "conglomerados-de-cuatro-calas": [
+      "Playa de Cuatro Calas"
+    ],
+    "playa-de-calarreona": [
+      "Calarreona"
+    ]
+  },
+
+  "sierra-espuna": {
+    "_comment": "Los alias de una sola palabra (Malvariche, Azaraque, Turullón) son topónimos que no se repiten y que dentro de la categoría del parque no pueden traer otra cosa.",
+    "santuario-de-santa-eulalia": [
+      "Ermita de Santa Eulalia",
+      "Iglesia de Santa Eulalia",
+      "Santa Eulalia"
+    ],
+    "sanatorio-de-tuberculosos": [
+      "Sanatorio de Tuberculosos",
+      "Sanatorio"
+    ],
+    "_pozo-de-la-nieve-de-mula": "SIN ALIAS A PROPÓSITO. Su nombre en OSM es «Pozo 28», pero `palabrasClave` descarta las palabras de dos letras o menos, así que ese alias se reduciría a «pozo» y casaría con cualquiera de los 28 pozos de nieve del parque. Se queda con su nombre completo, que exige «mula» y es justo lo que lo distingue.",
+    "torreon-de-los-exploradores": [
+      "Exploradores"
+    ],
+    "hornos-de-cal-del-barranco-de-arguelles": [
+      "Horno del Barranco de Argüelles",
+      "Barranco de Argüelles"
+    ],
+    "casas-de-malvariche": [
+      "Malvariche"
+    ],
+    "casa-forestal-de-huerta-espuna": [
+      "Huerta Espuña"
+    ],
+    "garita-del-turullon": [
+      "Turullón"
+    ],
+    "centro-de-visitantes-ricardo-codorniu": [
+      "Ricardo Codorníu",
+      "Centro de Visitantes"
+    ],
+    "torre-del-azaraque": [
+      "Azaraque"
+    ],
+    "capilla-de-la-virgen-del-rocio": [
+      "Virgen del Rocío"
+    ]
+  }
+}
