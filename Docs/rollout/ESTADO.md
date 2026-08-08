@@ -7,8 +7,8 @@
 | Comunidad | Provincia | Espacio | Figura | Slug | Nivel | Fecha | Notas / huecos |
 |---|---|---|---|---|---|---|---|
 | Región de Murcia | Murcia | Cabo Cope y Puntas de Calnegre | Parque Regional | `cabo-cope-puntas-calnegre` | N2 | 2026-08-01 | Piloto. ENP **ES620007**. LIC/ZEC ES6200031 (Cabo Cope) · ES6200012 (Calnegre) · ZEPA ES0000261. **15 hábitats** (retirados el 1110 y el 9560 el 2026-08-01, ver informe), 175 especies. Fotos de florasilvestre.es pendientes de licencia |
-| Región de Murcia | Murcia | Cuatro Calas | Paisaje Protegido | `cuatro-calas` | N2 | 2026-08-01 | Límite IMIDA/CARM. ENP **ES620004** (`ENP000007` es el id interno del IMIDA, no el código oficial). LIC/ZEC ES6200010 · ZEPA marina ES0000507. 7 hábitats (3 prioritarios, 177 ha = 79 % del espacio), **102 especies** (73 flora, 29 fauna incl. 27 aves de la lista oficial Natura 2000), 97 con foto, **4 POIs** (sin foto). Ver informe de cierre §"Cuatro Calas: Fase 2 cerrada". **Fase 3: 4 POIs dados de alta el 2026-08-07, cascada AGOTADA y `validate` en verde**; sigue en N2 **solo porque falta aplicar el SQL** (§5) — es lo único que le separa del N3. PORN inexistente, 0 BIC, OSM barrido con Overpass. **IELIG consultado de primera mano: 2 LIG dentro del límite, `BE005` «Playa de Cuatro Calas» y `BE006` «Vulcanismo de La Carolina»** (corrige el «La Carolina/Punta Parda» de la primera sesión). Commons consultado, licencias sin verificar — §"2026-08-07 (b)" y `n3-cuatro-calas-sierra-espuna.md` |
-| Región de Murcia | Murcia | Sierra Espuña | Parque Regional | `sierra-espuna` | N2 | 2026-07-28 | ENP **ES620013**, 17.693,2 ha. LIC/ZEC ES0000173 · ZEPA ES0000173. 13 hábitats, **191 especies** tras el recorte a catálogo oficial + evidencia GBIF (121 flora, 70 fauna incl. 48 aves y 9 quirópteros), 155 con foto (149 de Wikipedia/Commons), **13 POIs** (sin foto). Ver informe de cierre §"Sierra Espuña: Fase 2 cerrada" y §"Sierra Espuña: recorte a especies con respaldo oficial". **Fase 3: 13 POIs dados de alta el 2026-08-07** y `validate` en verde, pero la cascada NO está agotada (falta el Anexo I del PRUG) y falta aplicar el SQL, así que sigue en N2; 2 BIC confirmados con su norma (Pozos de la Nieve, Sitio de Interés Etnográfico; Santuario de Santa Eulalia, *Decreto 96/2002*), OSM barrido con Overpass (28 pozos de nieve uno a uno, Sanatorio situado). **IELIG consultado: 0 LIG dentro del límite**, «no hay» de primera mano. **Anexo I del PRUG (Decreto 6/2026) sigue sin abrir**, ahora por protección anti-bot del BORM — es la fuente que puede dar de golpe los picos y collados. Commons consultado, licencias sin verificar — §"2026-08-07 (b)" y `n3-cuatro-calas-sierra-espuna.md` |
+| Región de Murcia | Murcia | Cuatro Calas | Paisaje Protegido | `cuatro-calas` | N2 | 2026-08-01 | Límite IMIDA/CARM. ENP **ES620004** (`ENP000007` es el id interno del IMIDA, no el código oficial). LIC/ZEC ES6200010 · ZEPA marina ES0000507. 7 hábitats (3 prioritarios, 177 ha = 79 % del espacio), **102 especies** (73 flora, 29 fauna incl. 27 aves de la lista oficial Natura 2000), 101 con foto (83 de Wikimedia Commons), **4 POIs** (sin foto). Ver informe de cierre §"Cuatro Calas: Fase 2 cerrada". **Fase 3: 4 POIs dados de alta el 2026-08-07, cascada AGOTADA y `validate` en verde**; sigue en N2 **solo porque falta aplicar el SQL** (§5) — es lo único que le separa del N3. PORN inexistente, 0 BIC, OSM barrido con Overpass. **IELIG consultado de primera mano: 2 LIG dentro del límite, `BE005` «Playa de Cuatro Calas» y `BE006` «Vulcanismo de La Carolina»** (corrige el «La Carolina/Punta Parda» de la primera sesión). Commons consultado, licencias sin verificar — §"2026-08-07 (b)" y `n3-cuatro-calas-sierra-espuna.md` |
+| Región de Murcia | Murcia | Sierra Espuña | Parque Regional | `sierra-espuna` | N2 | 2026-07-28 | ENP **ES620013**, 17.693,2 ha. LIC/ZEC ES0000173 · ZEPA ES0000173. 13 hábitats, **190 especies** tras el recorte a catálogo oficial + evidencia GBIF (121 flora, 69 fauna incl. 48 aves y 9 quirópteros), 189 con foto (174 de Wikimedia Commons; falta solo #58 *Rabo de gato*), **13 POIs** (sin foto). Ver informe de cierre §"Sierra Espuña: Fase 2 cerrada" y §"Sierra Espuña: recorte a especies con respaldo oficial". **Fase 3: 13 POIs dados de alta el 2026-08-07** y `validate` en verde, pero la cascada NO está agotada (falta el Anexo I del PRUG) y falta aplicar el SQL, así que sigue en N2; 2 BIC confirmados con su norma (Pozos de la Nieve, Sitio de Interés Etnográfico; Santuario de Santa Eulalia, *Decreto 96/2002*), OSM barrido con Overpass (28 pozos de nieve uno a uno, Sanatorio situado). **IELIG consultado: 0 LIG dentro del límite**, «no hay» de primera mano. **Anexo I del PRUG (Decreto 6/2026) sigue sin abrir**, ahora por protección anti-bot del BORM — es la fuente que puede dar de golpe los picos y collados. Commons consultado, licencias sin verificar — §"2026-08-07 (b)" y `n3-cuatro-calas-sierra-espuna.md` |
 | Región de Murcia | Murcia | Carrascoy y El Valle | Parque Regional | `carrascoy-y-el-valle` | N1 | 2026-07 | ENP **ES620008**, 16.685,8 ha. LIC/ZEC ES6200002 · ZEPA ES0000269 |
 | Región de Murcia | Murcia | Sierra de la Pila | Parque Regional | `sierra-de-la-pila` | N1 | 2026-07 | ENP **ES620018**, 8851,0 ha. LIC/ZEC ES6200003 · ZEPA ES0000174 |
 | Región de Murcia | Murcia | Sierra de El Carche | Parque Regional | `sierra-de-el-carche` | N1 | 2026-07 | ENP **ES620017**, 5869,1 ha. LIC/ZEC ES6200009 |
@@ -519,6 +519,13 @@ docker exec -i naturdex-db-1 sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" mysql natur
 Repaso de las fotos que faltaban en Cuatro Calas, que destapó un sesgo del pipeline que afectaba a
 todo el catálogo. **465/467 fichas tienen ya foto** (antes 461, y tres de las que había eran pliegos).
 
+> **Efecto por parque, anotado el 2026-08-08.** Al volcar el catálogo universal a los `park.json` (ver
+> la nota sobre el orden correcto al final de esta sección), las fotos de Sierra Espuña pasaron de
+> **157 a 189** y las URL de Commons cambiaron de `upload.wikimedia.org` a `commons.wikimedia.org`;
+> Cuatro Calas quedó en **101/102**. Los 465/467 de arriba siguen cuadrando. La tabla del §6 arrastró
+> durante una semana las cifras previas (155 y 97) porque este apartado solo dio el total agregado;
+> ya están corregidas.
+
 ### Por qué el pipeline elegía pliegos
 
 `enrich-images.js` ordenaba las candidatas de GBIF **solo por licencia**. Los herbarios digitalizan
@@ -672,8 +679,9 @@ llamadas a Wikipedia más abajo, con la misma solución (backoff exponencial, re
 ### Efecto colateral que conviene tener presente
 
 La regla se aplicó literalmente, y eso **saca del catálogo protagonistas del propio LIC/ZEPA que no
-tienen ni un registro GBIF dentro del parque**: los 9 murciélagos Anexo II (sin foto/observación
-ciudadana pública de sus refugios cársticos, esperable en quirópteros), el galápago leproso *Mauremys
+tienen ni un registro GBIF dentro del parque**: 8 de los 9 murciélagos Anexo II (sin foto/observación
+ciudadana pública de sus refugios cársticos, esperable en quirópteros; el noveno, *Rhinolophus
+mehelyi*, sí tiene 2 avistamientos en el bbox y por eso pasó el filtro), el galápago leproso *Mauremys
 leprosa*, y 4 aves oficiales de la ZEPA (*Melanocorypha calandra*, *Tichodroma muraria*, *Saxicola
 rubetra*, *Curruca cantillans*). Están en la lista oficial del espacio (BISE) pero sin avistamiento
 GBIF verificable en él, así que la regla —tal y como se pidió— los deja fuera. Si se prefiere que la
@@ -712,16 +720,18 @@ volumen de peticiones).
 Wikipedia/Commons, con autor y licencia reales). `npm run validate` en verde (33 avisos). Contadores
 de `manifest.json` actualizados a 177.
 
-### Corrección: reincorporadas las 14 especies oficiales sin avistamiento GBIF
+### Corrección: reincorporadas las 13 especies oficiales sin avistamiento GBIF
 
 A petición explícita ("si están en el anexo, añádelos"), se revierte para este subconjunto el
 requisito de avistamiento GBIF: **basta la designación oficial** (LIC/ZEC/ZEPA vía BISE, o Anexo/
-catálogo vía EIDOS). Reincorporados los 14 descartados en la pasada anterior por tener
+catálogo vía EIDOS). Reincorporados los 13 descartados en la pasada anterior por tener
 `enCatalogoOficial=true` y 0 avistamientos GBIF en el bbox:
 
-- **9 quirópteros** Anexo II Directiva Hábitats (*Miniopterus schreibersii*, *Myotis blythii*,
+- **8 quirópteros** Anexo II Directiva Hábitats (*Miniopterus schreibersii*, *Myotis blythii*,
   *M. capaccinii*, *M. emarginatus*, *M. myotis*, *Rhinolophus euryale*, *R. ferrumequinum*,
-  *R. hipposideros*, *R. mehelyi*).
+  *R. hipposideros*). El noveno del anexo, *R. mehelyi*, **ya estaba** en las 177 (2 avistamientos
+  GBIF en el bbox): el lote lo reincorporó igualmente y lo dejó duplicado — ver la nota del
+  "Resultado final".
 - **Galápago leproso** (*Mauremys leprosa*).
 - **4 aves ZEPA**: *Melanocorypha calandra* (calandria), *Tichodroma muraria* (treparriscos),
   *Saxicola rubetra* (tarabilla norteña), *Curruca cantillans* (curruca carrasqueña).
@@ -742,8 +752,17 @@ en *M. myotis*).
 
 ### Resultado final
 
-**191 especies**: 121 flora, 70 fauna (48 aves + 22 otra fauna, incluidos los 9 quirópteros y el
-galápago). `npm run validate` en verde (33 avisos). Contadores de `manifest.json` actualizados a 191.
+**190 especies**: 121 flora, 69 fauna (48 aves + 21 otra fauna, incluidos los 9 quirópteros y el
+galápago). `npm run validate` en verde (33 avisos). Contadores de `manifest.json` actualizados a 190.
+
+> **Corregido el 2026-08-08.** Esta sección decía **191** (70 fauna, 22 otra fauna) y era erróneo *en
+> el momento de escribirse*, no por una fusión posterior: la reincorporación duplicó a *Rhinolophus
+> mehelyi*, que ya estaba en las 177 supervivientes. El fichero quedó con 191 filas pero **190
+> especies distintas**. La fila duplicada (`id` 186) se eliminó el 2026-08-02 en la sesión de Cuatro
+> Calas, que bajó `manifest.json` a 190 sin actualizar este apartado. `park.json` y `manifest.json`
+> son la referencia: 190 filas, `counts.species: 190`, sin `eidosTaxonId` repetidos, `id` 1–191 con el
+> hueco del 186. No tiene nada que ver con la fusión del esparto (*Stipa* → *Macrochloa*) de esa misma
+> sesión: en Sierra Espuña solo había *Macrochloa tenacissima*, así que su flora sigue en 121.
 
 ---
 
