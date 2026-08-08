@@ -540,7 +540,7 @@
         -1.621103
       ],
       "image": null,
-      "source": "Posición: OpenStreetMap (ODbL). Sendero SL-MU 18 homologado por la FMRM. Aviso: la traza del SL-MU 18 NO está en geo/trails.geojson, que solo lleva el GR-92.",
+      "source": "Posición: OpenStreetMap (ODbL). Sendero SL-MU 18 homologado por la FMRM. Su recorrido no aparece dibujado en el mapa: el sendero está señalizado sobre el terreno, pero no cartografiado en OpenStreetMap, que es de donde sale la capa de senderos.",
       "approx": false,
       "audio": null,
       "audioTranscript": null

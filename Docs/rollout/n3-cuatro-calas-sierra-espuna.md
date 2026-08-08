@@ -291,7 +291,7 @@ clave única `(park_id, slug)`). **Está sin aplicar**: no hay contenedor de BD 
 `Frontend/Js/data.js` da prioridad a la API sobre el `park.json` empaquetado.
 
 ```bash
-docker exec -i naturdex-db-1 sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" mysql naturadex' < Database/n3-pois-cuatro-calas-sierra-espuna.sql
+docker exec -i naturdex-db-1 sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" mysql --default-character-set=utf8mb4 naturadex' < Database/n3-pois-cuatro-calas-sierra-espuna.sql
 ```
 
 ---
@@ -301,12 +301,35 @@ docker exec -i naturdex-db-1 sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" mysql natur
 **Cuatro Calas está a un paso: le falta solo el punto 1.** Su cascada está agotada y el validador
 pasa.
 
-1. **Aplicar el SQL.** Único requisito del §5 que queda en Cuatro Calas. No hay Docker ni contenedor
-   de BD en esta máquina, así que `Database/n3-pois-cuatro-calas-sierra-espuna.sql` está escrito y
-   sin aplicar.
+1. ~~**Aplicar el SQL.**~~ **HECHO el 2026-08-08, y hacía falta más de lo que ponía aquí.** No
+   bastaba con el SQL de POIs: **`cuatro-calas-n2.sql` tampoco se había aplicado nunca** (el espacio
+   estaba en la BD como ficha base, 0 hábitats y 0 especies), y **Sierra Espuña ni siquiera tenía
+   fila en `parks`**, que es por lo que su mitad del SQL insertaba 0 filas sin dar error. Aplicado
+   `cuatro-calas-n2.sql`, creado y aplicado `Database/sierra-espuna-n2.sql` (fila de `parks` + 13
+   hábitats + 190 especies + 703 enlaces) y reaplicado el de POIs. Resultado: **Cuatro Calas 7 hab /
+   102 esp / 4 POIs** y **Sierra Espuña 13 / 190 / 13**, ambos cuadrando con su `park.json` y
+   servidos por la API. **Cuatro Calas cierra el N3**; Sierra Espuña sigue en N2 porque le falta la
+   cascada (punto 2), no la BD. Ver `ESTADO.md` §"2026-08-08".
 2. **Abrir el Anexo I del PRUG** a mano (§2). Es lo único que le falta a la cascada de **Sierra
    Espuña**, y lo único que puede mover los 71 picos y 28 collados.
 3. **`npm run images:pois`** para resolver las fotos: los 17 POIs están con `image: null`.
 4. **Fuente del hecho** para Arco de Sigismondi, Los Ojos del Dragón y Ermita de Santa Leocadia, si
    se quiere recuperarlos.
 5. Comprobar si la **Ley 1/2026** mueve el límite del parque (§2).
+
+> **Resuelto el 2026-08-08 — el SL-MU 18 no entra porque OSM no lo tiene.** El candidato nº 4 de §4
+> (Playa de Calarreona) se dio de alta como «arranque señalizado del **SL-MU 18**» advirtiendo de que
+> esa traza no estaba en `geo/trails.geojson`. Comprobado contra Overpass por siete vías distintas
+> —incluidas **todas** las relaciones de ruta a pie del bbox sin filtrar por `ref`—: **el SL-MU 18 no
+> existe en OpenStreetMap**, ni como relación, ni como ways con `ref`, ni con balizas. Dentro del
+> límite hay 39 caminos mapeados, ninguno con `ref` ni `name`. No es un fallo de la herramienta:
+> `build-park-trails.js --dry-run` reproduce la capa actual clavada (GR-92, 1,74 km, 2 trazas). **No
+> se dibuja a mano**: la traza de la FMRM está en Wikiloc y no es redistribuible, y la capa se sirve
+> bajo ODbL. Queda registrado como hueco en `ESTADO.md` §"2026-08-08"; se incorporará solo con
+> `npm run trails:build` en cuanto alguien lo mapee en OSM.
+>
+> **Sí se ha tocado el POI, pero por otro motivo.** Su `source` acababa en «Aviso: la traza del
+> SL-MU 18 NO está en geo/trails.geojson, que solo lleva el GR-92», que es una nota de mantenimiento
+> interna **en un campo que se sirve al usuario final** (`render.js:416` pinta `Fuente: {source}` en
+> la ficha). Sustituida por el hecho, dicho para quien camina: el sendero está señalizado sobre el
+> terreno pero no cartografiado en OSM, y por eso no se dibuja. Ver `ESTADO.md` §"2026-08-08".

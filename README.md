@@ -31,8 +31,8 @@ El ledger espacio por espacio, con códigos ENP y huecos conocidos, está en `Do
 # Entorno completo (PHP + MySQL + Caddy)
 cp .env.example .env       # las contraseñas son OBLIGATORIAS: sin ellas `up` falla a propósito
 docker compose up -d       # la app queda en http://localhost:${WEB_PORT:-8080}
-docker exec -i naturdex-db-1 sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" mysql' < Database/schema.sql
-docker exec -i naturdex-db-1 sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" mysql naturadex' < Database/seed.sql
+docker exec -i naturdex-db-1 sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" mysql --default-character-set=utf8mb4' < Database/schema.sql
+docker exec -i naturdex-db-1 sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" mysql --default-character-set=utf8mb4 naturadex' < Database/seed.sql
 
 # Solo el frontend. Basta para casi todo el trabajo de datos: la app es offline-first y lee los
 # park.json empaquetados; el backend es una mejora, no un requisito.
