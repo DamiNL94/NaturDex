@@ -10,5 +10,42 @@
         ]
       }
     ]
+  },
+
+  "permissions": {
+    "deny": [
+      "Read(./node_modules/**)",
+      "Read(./AdminPanel/node_modules/**)",
+
+      "Read(./Frontend/admin/assets/**)",
+      "Read(./Frontend/Vendor/leaflet/**)",
+      "Read(./Frontend/Vendor/markercluster/**)",
+      "Read(./Frontend/Vendor/protomaps/**)",
+      "Read(./Frontend/Data/parks/**/tiles/**)",
+
+      "Read(./Database/seed.sql)",
+      "Read(./Database/snapshot.sql)",
+      "Read(./Database/species-universal.sql)",
+      "Read(./Database/habitats-universal.sql)",
+      "Read(./Database/sierra-espuna-n2.sql)",
+      "Read(./Database/cuatro-calas-n2.sql)",
+      "Read(./Database/invasoras-contenido.sql)",
+      "Read(./Database/*-imagenes.sql)",
+      "Read(./Database/*.pre_iepnb_backup)",
+
+      "Read(./Tools/db-sync/backups/**)",
+      "Read(./Tools/catalogo-nacional/fuentes/**)",
+      "Read(./Tools/catalogo-nacional/out/**)",
+      "Read(./Tools/bin/**)",
+
+      "Read(./Docs/**/*.pdf)",
+      "Read(./gbif-cache-*.json)",
+      "Read(./**/*.xlsx)",
+      "Read(./**/*.pmtiles)",
+      "Read(./**/*.shp)",
+      "Read(./**/*.dbf)",
+      "Read(./**/*.zip)",
+      "Read(./**/package-lock.json)"
+    ]
   }
 }

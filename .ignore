@@ -1,0 +1,52 @@
+# .ignore — exclusiones para ripgrep (y por tanto para la búsqueda de Claude Code).
+#
+# NO afecta a git: es un fichero que solo lee ripgrep (`rg`), igual que .gitignore pero
+# independiente de él. Sirve para que una búsqueda de texto no tenga que recorrer los
+# megabytes de dato generado, binario o compilado que sí queremos versionar.
+#
+# Todo lo que hay aquí cumple una de estas dos condiciones:
+#   a) es binario o compilado (no se busca texto en ello), o
+#   b) es dato generado por una herramienta de Tools/ y reproducible.
+#
+# Para buscar dentro de algo de esta lista de forma puntual: `rg --no-ignore <patrón> <ruta>`.
+# El equivalente para Claude está en .claude/settings.json → permissions.deny.
+
+# --- Dependencias y bundles compilados ---------------------------------------------------------
+node_modules/
+Frontend/admin/assets/          # build de Vite del AdminPanel; el fuente está en AdminPanel/src/
+Frontend/Vendor/leaflet/
+Frontend/Vendor/markercluster/
+Frontend/Vendor/protomaps/
+package-lock.json
+
+# --- Volcados de datos: enormes, generados, y sin nada que buscar a mano -----------------------
+# Sí se buscan (deliberadamente NO están aquí): schema.sql, migrations.sql.
+Database/seed.sql
+Database/snapshot.sql
+Database/species-universal.sql
+Database/habitats-universal.sql
+Database/sierra-espuna-n2.sql
+Database/cuatro-calas-n2.sql
+Database/invasoras-contenido.sql
+Database/*-imagenes.sql
+Database/*.pre_iepnb_backup
+Tools/db-sync/backups/
+
+# --- Fuentes descargadas y salidas intermedias del catálogo nacional ---------------------------
+Tools/catalogo-nacional/fuentes/
+Tools/catalogo-nacional/out/
+Tools/bin/
+
+# --- Binarios ----------------------------------------------------------------------------------
+*.pdf
+*.xlsx
+*.pmtiles
+*.shp
+*.dbf
+*.shx
+*.zip
+*.png
+*.jpg
+*.jpeg
+*.webp
+gbif-cache-*.json

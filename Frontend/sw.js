@@ -16,7 +16,12 @@
 // distinto: dejar las dos con el mismo número habría hecho que un cliente con una ya cacheada no
 // se actualizara a la otra.)
 // v55: entran Js/fitosociologia.js y Data/fitosociologia.json (lectura en llano de la asociación).
-var VERSION = 'v55';
+// v56: render.js, map.js y achievements.js se parten en Js/render/*, Js/map/* y Js/achievements/*.
+//      Los tres siguen existiendo como barril (reexportan), así que quien los importa no cambia,
+//      pero AHORA HAY 18 FICHEROS MÁS QUE PRECACHEAR: sin ellos el barril resuelve a un 404 y la
+//      app no arranca sin cobertura. Es exactamente el fallo contra el que avisa el comentario de
+//      arriba, y por eso la lista de abajo está agrupada por carpeta y no en una sola línea.
+var VERSION = 'v56';
 var RUNTIME_CACHE = 'naturdex-runtime-' + VERSION;
 
 // Armazón mínimo que se intenta precachear en la instalación (best-effort).
@@ -24,7 +29,44 @@ var RUNTIME_CACHE = 'naturdex-runtime-' + VERSION;
 // ignora a propósito todo lo que no es del mismo origen: desde un CDN jamás llegaban a la caché y,
 // como map.js usa `L` al importarse, la app no arrancaba sin cobertura. Los PNG de leaflet/images
 // hacen falta de verdad: el mapa de España (auth.js) usa el marcador por defecto de Leaflet.
-var SHELL_ASSETS = ['index.html', 'Css/styles.css', 'Css/ranger.css', 'manifest.webmanifest', 'Img/icon-192.png', 'Img/icon-512.png', 'Vendor/leaflet/leaflet.js', 'Vendor/leaflet/leaflet.css', 'Vendor/leaflet/images/marker-icon.png', 'Vendor/leaflet/images/marker-icon-2x.png', 'Vendor/leaflet/images/marker-shadow.png', 'Vendor/leaflet/images/layers.png', 'Vendor/leaflet/images/layers-2x.png', 'Vendor/markercluster/leaflet.markercluster.js', 'Vendor/markercluster/MarkerCluster.css', 'Vendor/markercluster/MarkerCluster.Default.css', 'Vendor/protomaps/protomaps-leaflet.js', 'Js/offline.js', 'Js/nav.js', 'Js/prefs.js', 'Js/util.js', 'Js/state.js', 'Js/api.js', 'Js/habitat-groups.js', 'Js/dom.js', 'Js/data.js', 'Js/render.js', 'Js/map.js', 'Js/layers.js', 'Js/explorer.js', 'Js/audio.js', 'Js/glossary.js', 'Js/fitosociologia.js', 'Js/tutorial.js', 'Js/achievements.js', 'Js/presence.js', 'Js/notice.js', 'Js/profile.js', 'Js/app.js', 'Js/auth.js', 'Data/glosario.json', 'Data/fitosociologia.json', 'Data/invasoras.json', 'Data/achievements.json'];
+var SHELL_ASSETS = [
+  // Armazón
+  'index.html', 'Css/styles.css', 'Css/ranger.css', 'manifest.webmanifest',
+  'Img/icon-192.png', 'Img/icon-512.png',
+
+  // Vendor (Leaflet, markercluster, protomaps). Ver el comentario de arriba: nunca desde CDN.
+  'Vendor/leaflet/leaflet.js', 'Vendor/leaflet/leaflet.css',
+  'Vendor/leaflet/images/marker-icon.png', 'Vendor/leaflet/images/marker-icon-2x.png',
+  'Vendor/leaflet/images/marker-shadow.png', 'Vendor/leaflet/images/layers.png',
+  'Vendor/leaflet/images/layers-2x.png',
+  'Vendor/markercluster/leaflet.markercluster.js', 'Vendor/markercluster/MarkerCluster.css',
+  'Vendor/markercluster/MarkerCluster.Default.css',
+  'Vendor/protomaps/protomaps-leaflet.js',
+
+  // Scripts clásicos (no módulos ES)
+  'Js/offline.js', 'Js/nav.js', 'Js/prefs.js', 'Js/auth.js',
+
+  // Módulos ES sueltos
+  'Js/util.js', 'Js/state.js', 'Js/api.js', 'Js/habitat-groups.js', 'Js/dom.js', 'Js/data.js',
+  'Js/layers.js', 'Js/explorer.js', 'Js/audio.js', 'Js/glossary.js', 'Js/fitosociologia.js',
+  'Js/tutorial.js', 'Js/presence.js', 'Js/notice.js', 'Js/profile.js', 'Js/app.js',
+
+  // Barriles + sus trozos. El barril solo reexporta: SIN los trozos la app no arranca offline.
+  'Js/render.js',
+  'Js/render/fallbacks.js', 'Js/render/catalogo.js', 'Js/render/resumen.js',
+  'Js/render/detalle.js', 'Js/render/invasoras.js', 'Js/render/progreso.js',
+
+  'Js/map.js',
+  'Js/map/core.js', 'Js/map/iconos.js', 'Js/map/tramas.js',
+  'Js/map/camara.js', 'Js/map/marcadores.js', 'Js/map/capas.js',
+
+  'Js/achievements.js',
+  'Js/achievements/almacen.js', 'Js/achievements/agregacion.js', 'Js/achievements/celebracion.js',
+  'Js/achievements/sincronizacion.js', 'Js/achievements/eventos.js', 'Js/achievements/arranque.js',
+
+  // Datos del armazón
+  'Data/glosario.json', 'Data/fitosociologia.json', 'Data/invasoras.json', 'Data/achievements.json'
+];
 
 self.addEventListener('install', function (event) {
   event.waitUntil(
