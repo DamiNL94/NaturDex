@@ -39,6 +39,13 @@ encima** el contenido redactado a mano de `Tools/catalogo-nacional/data/contenid
 fuente de verdad del texto divulgativo. `--apply` escribe los campos universales en todos los
 `park.json` y, con `--sql`, genera los `UPDATE` para la base de datos.
 
+**`--extract` añade, pero solo borra si se lo pides.** El catálogo se indexa por nombre científico,
+así que renombrar un taxón deja la entrada vieja ahí: `--extract` la lista como «entrada que ningún
+parque usa» y `npm run species:poda` (`--extract --podar`) la retira. El aviso va por defecto y el
+borrado no, porque el catálogo lo comparten todos los espacios. Y no es una entrada inerte: una
+selección de especies aprobada antes del renombrado casa con el nombre viejo y resucita el duplicado
+que el renombrado quitó.
+
 > **El SQL no es opcional en un despliegue con backend.** `Frontend/Js/data.js` da prioridad a la
 > respuesta de la API sobre el `park.json` empaquetado: si solo se actualizan los JSON, un despliegue
 > con base de datos viva seguirá sirviendo los textos y las fotos viejos.

@@ -26,13 +26,16 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    `fix-estado-conservacion-iepnb` y `sync-species-catalog` no deben cambiar un byte en un segundo
    pase. Si un segundo pase produce diff, hay un problema.
 
-## 2. Tres cosas que fallan EN VERDE
+## 2. Cuatro cosas que fallan EN VERDE
 
 Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 [`Docs/runbook/ORDEN-DE-OPERACIONES.md`](Docs/runbook/ORDEN-DE-OPERACIONES.md).
 
 - `species:apply` sin `species:extract` antes **pisa** las fotos escritas en el `park.json`.
 - Una entrada obsoleta en `data/contenido/*.json` **revierte** cualquier corrección en cada extracción.
+- **Renombrar un taxón** desengancha su entrada del catálogo universal y su texto de
+  `data/contenido/`, que se indexan por nombre científico. Cambia la clave allí también y pasa
+  `npm run species:poda`.
 - **La API tiene prioridad sobre el `park.json` empaquetado.** Con backend desplegado, tocar solo el
   frontend no cambia lo que ve el usuario: hay que generar y aplicar también el SQL.
 

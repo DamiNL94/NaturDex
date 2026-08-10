@@ -34,6 +34,7 @@
     "habitats:apply": "node Tools/sync-habitat-catalog.js --apply --sql Database/habitats-universal.sql",
     "species:check": "node Tools/sync-species-catalog.js",
     "species:extract": "node Tools/sync-species-catalog.js --extract",
+    "species:poda": "node Tools/sync-species-catalog.js --extract --podar",
     "species:apply": "node Tools/sync-species-catalog.js --apply --sql Database/species-universal.sql",
     "images:species": "node Tools/catalogo-nacional/wikimedia-images.js --canonicalize --missing --write",
     "images:habitats": "node Tools/catalogo-nacional/habitat-images.js --write --sql Database/habitats-imagenes.sql",

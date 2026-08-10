@@ -31,7 +31,7 @@ errores de red que no explican nada, `npm run red:check` lo aclara en diez segun
 | Fichero | Líneas | Qué hace |
 |---|---|---|
 | `validate-park-data.js` | 494 | **La red de seguridad.** `npm run validate`, y también en `pre-commit` |
-| `sync-species-catalog.js` | 357 | Una especie, una ficha, en todos los parques (`species:check/:extract/:apply`) |
+| `sync-species-catalog.js` | 392 | Una especie, una ficha, en todos los parques (`species:check/:extract/:apply/:poda`) |
 | `sync-habitat-catalog.js` | 231 | Un hábitat, una descripción, en todos los parques (`habitats:check/:apply`) |
 | `scan-taxones-duplicados.js` | 95 | El mismo taxón con dos nombres científicos. **Sale con código 1 mientras queden** |
 | `glossary-coverage.js` | 263 | Vocabulario de las fichas sin definición en el glosario |

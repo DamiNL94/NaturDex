@@ -73,6 +73,7 @@ falta el detalle.
 
 | Sesión | Qué se cerró |
 |---|---|
+| 2026-08-10 (b) | El catálogo universal deja de acumular nombres muertos: `--podar` y seis claves de `contenido/` reenganchadas |
 | 2026-08-10 | Carrascoy sube a N2, y **el alta de especies deja de hacerse a mano**: `build-species-n2.js` |
 
 ### [`sesiones/2026-08-09.md`](sesiones/2026-08-09.md) · 781 líneas

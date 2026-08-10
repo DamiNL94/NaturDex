@@ -12,15 +12,15 @@ posición se verifica contra el límite oficial del espacio).
 >
 > Si estás retomando el proyecto: lee `CLAUDE.md` primero — es el resumen operativo en dos páginas.
 
-## Estado (2026-08-09)
+## Estado (2026-08-10)
 
 | | |
 |---|---|
 | Espacios dados de alta | **16** de los 21 de la Región de Murcia (4 descartados por reglas de producto, 1 retirado) |
-| Con catálogo completo (**N2**) | 3 — Cabo Cope y Puntas de Calnegre (15 hábitats · 175 especies · 15 POIs), Sierra Espuña (13 · 188 · 13), Cuatro Calas (7 · 102 · 4) |
-| Con ficha base (**N1**) | 13 — límite oficial y Red Natura 2000, sin catálogo |
-| Catálogo universal de especies | **353** fichas distintas reutilizadas entre espacios |
-| Invasoras · glosario · logros | 25 · 219 términos · 52 logros |
+| Con catálogo completo (**N2** o más) | 4 — Cabo Cope y Puntas de Calnegre (15 hábitats · 175 especies · 15 POIs), Sierra Espuña (13 · 188 · 13), Cuatro Calas (7 · 102 · 4), Carrascoy y El Valle (15 · 146 · 0) |
+| Con ficha base (**N1**) | 12 — límite oficial y Red Natura 2000, sin catálogo |
+| Catálogo universal de especies | **350** fichas distintas reutilizadas entre espacios |
+| Invasoras · glosario · logros | 26 · 219 términos · 52 logros |
 | Comunidades autónomas cubiertas | 1 de 17 |
 
 El ledger espacio por espacio, con códigos ENP y huecos conocidos, está en

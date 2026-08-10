@@ -23,6 +23,14 @@
  * fuente de verdad de lo primero; el park.json sigue siendo la de lo segundo y sigue siendo
  * autosuficiente (importa: la PWA funciona sin conexión leyendo solo su park.json).
  *
+ * El catálogo indexa por nombre científico y `--extract` añade, pero nunca borraba: renombrar un
+ * taxón en los park.json dejaba su entrada vieja ahí para siempre. No son entradas inertes. Una
+ * selección de especies aprobada ANTES del renombrado casa con el nombre viejo, lo encuentra en el
+ * catálogo y resucita el duplicado que el renombrado acababa de quitar —le pasó a Carrascoy con
+ * cuatro especies—. Por eso `--extract` lista ahora las entradas que ningún parque usa, y `--podar`
+ * las retira. Lo mismo vale para `data/contenido/`: una entrada con el nombre viejo no falla, pero
+ * su texto redactado deja de llegar a la especie y se queda alimentando a la entrada muerta.
+ *
  * Uso
  * ---
  *   node Tools/sync-species-catalog.js --check     Informa de divergencias y de texto local
@@ -30,6 +38,9 @@
  *   node Tools/sync-species-catalog.js --extract   Vuelca a un catálogo universal lo que hoy hay en
  *                                                  los park.json (punto de partida; avisa de los
  *                                                  conflictos entre parques en vez de elegir a ciegas).
+ *   node Tools/sync-species-catalog.js --extract --podar
+ *                                                  Además, retira del catálogo las entradas que ya no
+ *                                                  corresponden a ninguna especie de ningún parque.
  *   node Tools/sync-species-catalog.js --apply     Escribe los campos universales del catálogo en
  *                                                  todos los park.json.
  *   node Tools/sync-species-catalog.js --apply --sql Database/species-universal.sql
@@ -185,11 +196,13 @@ function comprobar() {
 function extraer() {
   const catalogo = fs.existsSync(CATALOGO) ? leer(CATALOGO) : {};
   const conflictos = [];
+  const enParques = new Set();
   let nuevas = 0;
 
   for (const { slug, file } of parkFiles()) {
     for (const sp of (leer(file).species || [])) {
       const sci = sp.scientificName;
+      enParques.add(sci);
       if (!catalogo[sci]) {
         catalogo[sci] = {};
         for (const campo of UNIVERSALES) if (sp[campo] !== undefined) catalogo[sci][campo] = sp[campo];
@@ -229,12 +242,27 @@ function extraer() {
     if (g && GRUPO_NORMALIZADO[g] && GRUPO_NORMALIZADO[g] !== g) { catalogo[sci].group = GRUPO_NORMALIZADO[g]; gruposTraducidos++; }
   }
 
+  // Entradas que ya no corresponden a ninguna especie de ningún parque: nombres retirados por una
+  // revisión nomenclatural, o especies que se fueron a otro carril (las exóticas, a `invasoras.json`).
+  // Se podan ANTES de superponer `data/contenido/`, para que una entrada de ahí que siga con el
+  // nombre viejo salga en el aviso de «no corresponde a ninguna especie» en vez de reanimar a la
+  // muerta en silencio.
+  const huerfanas = Object.keys(catalogo)
+    .filter(sci => !enParques.has(sci))
+    .map(sci => ({ sci, commonName: catalogo[sci].commonName }));
+  const podar = has('--podar');
+  if (podar) for (const { sci } of huerfanas) delete catalogo[sci];
+
   // Superpone el contenido redactado a mano (data/contenido/*.json). Manda sobre lo extraído: es
   // texto escrito para ser universal, mientras que lo de los park.json arrastra el sesgo del parque
   // en el que se escribió.
   let redactadas = 0, sinFicha = [], fotosMuertas = [];
   if (fs.existsSync(CONTENIDO_DIR)) {
-    for (const fichero of fs.readdirSync(CONTENIDO_DIR).filter(f => f.endsWith('.json')).sort()) {
+    // `habitats.json` y `fitosociologia.json` viven en el mismo directorio pero son de
+    // sync-habitat-catalog.js y no se indexan por nombre científico: sus claves de primer nivel
+    // (`codigos`, `asociaciones`…) salían como tres «entradas que no corresponden a ninguna especie».
+    const DE_HABITATS = new Set(['habitats.json', 'fitosociologia.json']);
+    for (const fichero of fs.readdirSync(CONTENIDO_DIR).filter(f => f.endsWith('.json') && !DE_HABITATS.has(f)).sort()) {
       const bloque = leer(path.join(CONTENIDO_DIR, fichero));
       for (const sci in bloque) {
         if (sci.startsWith('_')) continue;
@@ -260,8 +288,15 @@ function extraer() {
   escribir(CATALOGO, Object.fromEntries(Object.keys(catalogo).sort().map(k => [k, catalogo[k]])));
   console.log(`Catálogo universal: ${Object.keys(catalogo).length} especies (${nuevas} nuevas) → ${rel(CATALOGO)}`);
   console.log(`Grupos normalizados: ${gruposTraducidos} · fichas con contenido redactado: ${redactadas}`);
+  if (huerfanas.length) {
+    console.log(`\n${podar ? '✂' : '⚠'} ${huerfanas.length} entradas del catálogo que ningún parque usa` +
+      (podar ? ' — RETIRADAS:' : ' (nombres retirados por una revisión, o especies que pasaron a otro carril):'));
+    huerfanas.forEach(h => console.log(`  · ${h.sci}${h.commonName ? ` (${h.commonName})` : ''}`));
+    if (!podar) console.log('  Están vivas: una selección aprobada antes del renombrado casa con ellas. Retíralas con --podar.');
+  }
   if (sinFicha.length) {
-    console.log(`\n⚠ ${sinFicha.length} entradas de data/contenido/ no corresponden a ninguna especie del catálogo:`);
+    console.log(`\n⚠ ${sinFicha.length} entradas de data/contenido/ no corresponden a ninguna especie del catálogo.`);
+    console.log('  Su texto redactado NO llega a ninguna ficha. Si es un nombre renombrado, cambia la clave por el aceptado:');
     sinFicha.forEach(s => console.log('  · ' + s));
   }
   if (fotosMuertas.length) {

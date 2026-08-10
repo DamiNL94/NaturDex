@@ -6,6 +6,7 @@
 | `npm run taxones:duplicados` | El mismo taxón con dos nombres científicos. Sale con código 1 mientras queden |
 | `npm run glossary:check` | Vocabulario científico de las fichas sin definición en el glosario |
 | `npm run species:check / :extract / :apply` | Catálogo universal: informar / volcar / sincronizar a todos los espacios (+ SQL) |
+| `npm run species:poda` | `:extract` que además **retira** las entradas del catálogo que ya no usa ningún parque (nombres que dejó atrás un renombrado). Sin él solo se listan |
 | `npm run habitats:build / :merge` | Capa 2 desde la cartografía del MITECO |
 | `npm run atlas:hic` | Especies características por HIC desde el Atlas |
 | `npm run species:build -- --park <slug> [--dry]` | **Capa 3**: escribe las fichas de especie en `park.json` desde la selección aprobada. Ensambla lo que ya hay en el repo; no sale a la red. Idempotente |
