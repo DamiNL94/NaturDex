@@ -61,12 +61,31 @@ códigos HIC nuevos, **amplía `data/hic-nombres.json` y `data/hic-prioritarios.
 
 De ahí sale la **selección aprobada**, `out/<slug>-seleccion-especies.json`: la lista con su
 procedencia especie a especie y las excluidas con su motivo. **No son fichas todavía.** Escribirlas
-es un paso aparte y tiene herramienta:
+son dos pasos, y **el orden importa**:
 
 ```bash
-node Tools/catalogo-nacional/build-species-n2.js --park <SLUG> --dry   # revisar
-node Tools/catalogo-nacional/build-species-n2.js --park <SLUG>         # escribir
+# 1) Alta en el catálogo universal de las especies que no están en NINGÚN parque todavía.
+#    Sale a EIDOS, GBIF y Wikimedia. Es el único de los dos que necesita red.
+node Tools/catalogo-nacional/build-species-universal.js --park <SLUG> --dry
+node Tools/catalogo-nacional/build-species-universal.js --park <SLUG> \
+     --curado Tools/catalogo-nacional/data/curacion-especies.json
+
+# 2) Escritura de las fichas del espacio en su park.json.
+node Tools/catalogo-nacional/build-species-n2.js --park <SLUG> --dry    # revisar
+node Tools/catalogo-nacional/build-species-n2.js --park <SLUG>          # escribir
 ```
+
+**Sin el paso 1, el paso 2 no puede escribir una especie nueva y lo dice.** El catálogo universal
+solo se alimentaba de `species:extract`, que vuelca lo que YA hay en los `park.json`, y
+`build-species-n2.js` se niega —con razón— a escribir una especie sin ficha universal. Las dos
+reglas juntas cerraban un círculo: **una especie que no estuviera ya en algún parque no podía entrar
+en ninguno**. Eso es lo que dejó a Carrascoy y El Valle con 100 especies aprobadas y sin escribir
+durante una sesión entera. `build-species-universal.js` es la puerta de entrada al catálogo.
+
+Lo que el paso 1 **no** rellena queda listado en `out/<slug>-fichas-incompletas.md`, con la
+descripción de EIDOS y los nombres castellanos alternativos al lado para poder cerrarlo con
+`--curado` sin salirse de la fuente. Las **tres pistas de identificación no se generan nunca**:
+ninguna fuente las sirve y recortar la descripción produce frases que no ayudan a identificar nada.
 
 Ensambla el array `species` del `park.json`, el inverso `speciesIds` de cada hábitat y los
 contadores del manifiesto. **No sale a la red y no inventa ningún campo**: lo universal lo copia del
@@ -74,8 +93,8 @@ catálogo, los enlaces y las ocurrencias del barrido de GBIF, el estado legal de
 IEPNB que trae la selección y los identificadores externos del parque donde la especie ya está
 fichada. Una seleccionada **sin ficha en el catálogo universal no se escribe** —haría falta inventar
 taxonomía, nombre común, UICN y foto—: queda listada en `out/<slug>-especies-pendientes.md` y la
-herramienta la incorpora sola cuando alguien le dé de alta la ficha. Es idempotente y conserva lo
-curado a mano (`coordinates`, `featured`, `visible`, `reviewNote`, audio).
+herramienta la incorpora sola en cuanto el paso 1 le dé de alta la ficha. Es idempotente y conserva
+lo curado a mano (`coordinates`, `featured`, `visible`, `reviewNote`, audio).
 
 **Regla de selección** (ajústala al tamaño del espacio y **dilo**). La usada en Cuatro Calas:
 

@@ -2,11 +2,11 @@
  "_nota": "Selección REVISADA de especies para la Capa 3 de Carrascoy y El Valle. NO es park.json: es la lista aprobada y su procedencia. Criterio, en tres filtros encadenados: (1) constancia en GBIF dentro de los polígonos de hábitat del parque —ninguna entra sólo por figurar en EIDOS o en otro parque—; (2) autoctonía: se excluye todo lo que la Lista Patrón del IEPNB marca como «Especie no nativa», que es lo que quita ornamentales y exotismos; (3) presencia considerable para las que NO tienen respaldo documental: al menos 5 ocurrencias en 2 hábitats. Las protegidas (LESRPE, CEEA, Decreto 50/2003, Ley 7/1995) y las características del Atlas 2005 conservan su plaza aunque tengan pocos registros, porque su respaldo no es el número de avistamientos. Se excluye el CEEEI (RD 630/2013): es el catálogo de especies exóticas INVASORAS, no una figura de protección.",
  "park": "carrascoy-y-el-valle",
  "generado": "2026-08-09",
- "total": 246,
+ "total": 245,
  "aves": 118,
  "reutilizables": 146,
- "nuevas": 100,
- "excluidas": 22,
+ "nuevas": 99,
+ "excluidas": 23,
  "_sinonimia": "Las 5 que no casaban con la Lista Patrón eran sinonimia o grafía, NO falta de autoctonía: las 5 son nativas. Resueltas contra v_listapatronespecie_sinonimos del IEPNB. Sólo se renombra Sylvia undata → Curruca undata, porque el nombre aceptado YA está fichado en otro parque y usarlo reutiliza esa ficha; las otras cuatro se mantienen con el nombre del catálogo para no duplicar fichas compartidas, con su nombre aceptado anotado en nombreAceptadoEidos. Renombrarlas es una revisión nomenclatural de todos los parques a la vez (el precedente es el esparto, ESTADO.md 2026-08-02), no de este espacio.",
  "especies": [
   {
@@ -4248,25 +4248,6 @@
    "origen": "Especie nativa"
   },
   {
-   "scientificName": "Caretta caretta",
-   "class": "Testudines",
-   "gbifOccurrences": 14,
-   "habitats": 3,
-   "evidence": [
-    "observada_gbif",
-    "protegida"
-   ],
-   "yaFichadaEn": null,
-   "normas": [
-    {
-     "ambito": "España",
-     "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-     "categoria": "CEEA: Vulnerable"
-    }
-   ],
-   "origen": "Especie nativa"
-  },
-  {
    "scientificName": "Mauremys leprosa",
    "class": "Testudines",
    "gbifOccurrences": 3,
@@ -4575,6 +4556,26 @@
    "yaFichadaEn": "sierra-espuna",
    "normas": [],
    "motivo": "sólo GBIF y presencia escasa (<5 occ o <2 hábitats)"
+  },
+  {
+   "scientificName": "Caretta caretta",
+   "class": "Testudines",
+   "gbifOccurrences": 14,
+   "habitats": 3,
+   "evidence": [
+    "observada_gbif",
+    "protegida"
+   ],
+   "yaFichadaEn": null,
+   "normas": [
+    {
+     "ambito": "España",
+     "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+     "categoria": "CEEA: Vulnerable"
+    }
+   ],
+   "origen": "Especie nativa",
+   "motivo": "ruido de telemetría, no presencia. Los 14 registros de GBIF dentro de los polígonos de hábitat son MACHINE_OBSERVATION de 2018 (seguimiento por satélite de ejemplares marcados): posiciones Argos de baja calidad proyectadas tierra adentro, repartidas por matorral (5330), roquedo calcícola (8210) y pastizal subestépico (6220) de una sierra de interior a 20 km del mar. La tortuga boba es estrictamente marina, así que además cae por la regla de producto de nada marino. Verificado el 2026-08-10 consultando basisOfRecord en la API de GBIF; las otras cuatro especies acuáticas del barrido (Pandion haliaetus, Aythya nyroca, Ardeola ralloides, Tadorna tadorna) son HUMAN_OBSERVATION y se mantienen: son aves en paso, que es presencia real."
   }
  ]
 }

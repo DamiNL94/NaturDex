@@ -1225,7 +1225,7 @@ Cabezuelas blancas de centro amarillo, solitarias',
   s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/614232981/original.jpg',
   s.image_attribution = 'faluke (CC BY-NC 4.0) · iNaturalist/GBIF',
   s.rarity_score = 4
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Leucanthemum decipiens';
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Mauranthemum decipiens';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Loeflingia',
@@ -1924,8 +1924,8 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
 Hojas con costra de sal
 Marca el límite del saladar',
   s.seasonality = 'Primavera y verano',
-  s.image_url = 'https://minka-sdg.org/attachments/local_photos/files/936178/original.jpg',
-  s.image_attribution = 'nicolasghanime (CC BY 4.0) · GBIF',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Limoniastrum_monopetalum_2.JPG?width=1280',
+  s.image_attribution = 'Xemenendura (CC BY-SA 4.0) · Wikimedia Commons',
   s.rarity_score = 2
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Limoniastrum monopetalum';
 
@@ -1963,8 +1963,8 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
 Céspedes abiertos sobre arena
 Da nombre al hábitat (Malcolmietalia)',
   s.seasonality = 'Primavera a otoño',
-  s.image_url = 'https://minka-sdg.org/attachments/local_photos/files/944511/original.jpeg',
-  s.image_attribution = 'maxlbe (CC BY 4.0) · GBIF',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Malcolmia_littorea_3_(Espagne).jpg?width=1280',
+  s.image_attribution = 'Ghislain118 https://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons',
   s.rarity_score = 3
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Malcolmia littorea';
 
@@ -2333,6 +2333,17 @@ Corteza clara y agrietada, rojiza en las ramas jóvenes',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Pinus halepensis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Espino negro',
+  s.primary_habitat = NULL,
+  s.description = 'Es un arbustillo de hasta 3 m de altura (López González, 2001), que frecuentemente tiene aspecto de mata alta o media, más o menos espinoso, de ramificación intricada y de perennifolio a semicaducifolio facultativo. Sus especímenes tienen espinas pero presentan una variabilidad: los de las regiones continentales y mediterráneas más áridas las llegan a tener en cantidad y longitud exagerada, pero otros son casi inermes. Presenta también unas ramillas laterales cortas terminadas en un fascículo de hojas. Éstas se disponen alternas, aunque a veces algunas se muestran casi opuestas; son simples, sin peciolo y con un limbo estrecho (tíìcamente menor de 0,5 cm), a veces muy corto, menor de 1,2 cm (subsp. borgiae), de trasovado-oblongo a espatulado-linear, lampiño o con un pelillo muy corto (subesp. velutina).',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhamnus_lycioides_fruits.JPG?width=1280',
+  s.image_attribution = 'איתן פרמן (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Rhamnus lycioides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Jara blanca',
   s.primary_habitat = 'Matorral y laderas soleadas sobre suelos calizos secos',
   s.description = 'Jara de hojas blanquecinas, aterciopeladas al tacto y sin peciolo, con flores grandes de color rosa malva y pétalos arrugados como papel de seda que duran solo unas horas. Es una de las plantas que da color al matorral en primavera.',
@@ -2463,6 +2474,28 @@ Pinceles de pelo en las orejas, sobre todo en invierno',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Sciurus vulgaris';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Narciso',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lapiedra_martinezii_-_Flor_de_la_estrella.jpg?width=1280',
+  s.image_attribution = 'Formater (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Lapiedra martinezii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Camaleón común',
+  s.primary_habitat = 'Presente en zonas de costa por lo general, a baja altitud y sobre suelos arenosos',
+  s.description = 'Especie de aspecto inconfundible: cuerpo aplanado lateralmente, ojos prominentes, cabeza con casco llamativo, cola prensil, escamas granulares y dedos distribuidos en disposición 3+2. Se registra dicromatismo sexual con un patrón de coloración corporal (o librea) muy complejo y relacionado con el sexo, estado reproductor y las necesidades de termorregulación. Longitud total máxima de 282 mm en machos y 301 en hembras.',
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/BennyTrapp_Chamaeleo_chamaeleon_Samos_Griechenland.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Chamaeleo chamaeleon';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Esparraguera blanca',
   s.primary_habitat = 'Matorral seco, ribazos y bajo arbustos en clima cálido',
   s.description = 'Esparraguera de tallos blanquecinos y muy espinosos que pierde el follaje en verano y florece en otoño, al revés que casi todo el matorral. Lo que parecen hojas son ramillas finas agrupadas en haces. Sus brotes tiernos son los espárragos silvestres de recolección tradicional.',
@@ -2578,6 +2611,17 @@ Hojas muy estrechas, casi como agujas',
   s.image_attribution = 'Nanosanchez (Public domain) · Wikimedia Commons',
   s.rarity_score = 2
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Dianthus broteri';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Abejera',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a mayo',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ophrys_tenthredinifera_b.JPG?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Ophrys tenthredinifera';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Jarilla de brezo',
@@ -2710,6 +2754,17 @@ Flores sin labio superior, típicas del género',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Teucrium capitatum';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cardoncha',
+  s.primary_habitat = 'Vive en laderas pedregosas y campos abandonados sobre sustratos básicos, hasta 1300 m',
+  s.description = 'Hierba perenne, hasta de 2,5 m, leñosa en la base, con varios tallos, espinosa, fétida, muy pelosa, con tallos con costillas longitudinales. Hojas de 5-15 x 1,5-6 cm, pinnatifidas, con lóbulos espinosos, con nervios amarillentos prominentes. Capítulos de 2-5 cm, terminales, en grupos, ovoides o acampanados, con siete filas de brácteas, con corolas de unos 3,5 cm, de color amarillo. Frutos en aquenio de 5-7 mm, comprimidos lateralmente, negruzcos, con vilano simple, caedizo.',
+  s.identification_tips = '',
+  s.seasonality = 'Diciembre, febrero, marzo, abril, mayo, junio, julio, agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/C._arborescens-1.JPG?width=1280',
+  s.image_attribution = 'Philmarin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 4
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Phonus arborescens';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Lagartija colilarga',
   s.primary_habitat = 'Matorral litoral y laderas secas',
   s.description = 'Lagartija esbelta de escamas grandes, quilladas y brillantes, con dos líneas claras muy marcadas a cada lado del dorso. La cola puede medir el doble que el cuerpo. Los machos lucen en primavera manchas azules en el hombro y las mejillas anaranjadas.',
@@ -2788,6 +2843,17 @@ Forma matas colgantes en pared caliza',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Lafuentea rotundifolia';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Almez',
+  s.primary_habitat = 'En vegas y riberas de ríos, sobre suelos húmedos y profundos de aluvión',
+  s.description = 'Árbol caducifolio hasta de 30 m y amplia copa, con corteza muy lisa de color gris plateado, parecida a la piel de los elefantes. Ramas con frecuencia colgantes. Hojas 5-15 x 1,5-6 cm, simples, alternas, pecioladas, asimétricas en la base, lanceoladas, largamente acuminadas, aserradas, más o menos pelosas, con el haz verde oscuro y envés verde claro. Flores masculinas o hermafroditas, pequeñas y solitarias, poco vistosas, verdosas, con una sola envoltura floral y con un largo pedúnculo de 2-8 cm. Fruto de 8-12 mm, en drupa redondeada y con largo pedúnculo, color negro azulado en la madurez.',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a enero',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Celtis_australis_(2).JPG?width=1280',
+  s.image_attribution = 'Marija Gajić (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Celtis australis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Clujía',
   s.primary_habitat = 'Roquedos, laderas pedregosas y matorral seco sobre calizas',
   s.description = 'Umbelífera leñosa, algo insólita en una familia de hierbas, con hojas estrechas, coriáceas y de un verde azulado. Sus umbelas de flores amarillas se abren en pleno verano. Desprende un olor resinoso característico al romper una rama.',
@@ -2851,6 +2917,17 @@ Crece en grietas de roca, colgando de la pared',
   s.image_attribution = 'Piermario Maculan (CC0) · GBIF',
   s.rarity_score = 2
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Melica minuta';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Oeosporangium pteridioides',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Oeosporangium_pteridioides.jpg?width=1280',
+  s.image_attribution = 'Marc Riera (CC BY 4.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Oeosporangium pteridioides';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Esparto',
@@ -2931,6 +3008,28 @@ Abundante en cunetas y terrenos alterados',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Dittrichia viscosa';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Polipodio',
+  s.primary_habitat = 'Coloniza grietas de roquedos o muros sombríos y musgosos, así como troncos u horcaduras de árboles, desde tierra baja hasta 1500 (2000) m',
+  s.description = 'Helecho perenne, con rizoma rastrero recubier to de escamas de color castaño (páleas). Las frondes pueden alcanzar 50 cm; presentan una lámina a veces deltoide, de color verde tierno, que suele sobrepasar la longitud del pecíolo; sus pinnas enfrentadas son agudas y las dos inferiores quedan reflejas. Al madurar forman, a cada lado del ner vio central, por el envés, una fila de montoncitos elípticos, amarillentos, que contienen los esporangios o soros.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Polypodium_cambricum_''Oakley''.JPG?width=1280',
+  s.image_attribution = 'Queeste (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Polypodium cambricum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lucema',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 4
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Teucrium libanitis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Mata del vizque',
   s.primary_habitat = 'Ríos mediterráneos con Glaucium flavum',
   s.description = 'Compuesta blanco-tomentosa de capítulos amarillos, pionera de gravas y arenas de rambla; extendida por toda la Región de Murcia.',
@@ -2942,6 +3041,28 @@ Coloniza gravas removidas de cauce',
   s.image_attribution = 'Ziegler175 Rose Ziegler (CC0) · Wikimedia Commons',
   s.rarity_score = 1
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Andryala ragusina';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra viperina',
+  s.primary_habitat = 'Se trata de una culebra que frecuenta ríos, riachuelos, pantanos, balsas y marismas, siendo menos frecuente lejos de los puntos de agua',
+  s.description = 'Serpiente de tamaño medio, cola corta y cabeza ensanchada y bien delimitada respecto al resto del cuerpo. Generalmente hay dos escamas preoculares y dos postoculares, 7 escamas supralabiales y 9 escamas infralabiales. Dorsales claramente carenadas. El diseño es muy llamativo pues se trata de una amplia banda en forma de zig zag que recorre todo el cuerpo en posición dorsal. Existe un patrón alternativo que consiste en dos líneas longitudinales y paralelas, de colores claros, de recorrido también dorsal. El diseño rayado es más frecuente hacia el sur de la península y la costa mediterránea, aunque poblaciones muy cercanas pueden tener frecuencias muy dispares. La coloración corporal de fondo es variable aunque destacan los tonos verdosos, pardos y oliváceos. El vientre es generalmente gris amarillento con manchas oscuras en forma de diseño ajedrezado. Las hembras son mayores pero la longitud de cola y el número de subcaudales son mayores en machos. Longitud total máxima en la Península Ibérica, 910 mm.',
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Viperine_Snake_(Natrix_maura)_(14198769323).jpg?width=1280',
+  s.image_attribution = 'Bernard DUPONT from FRANCE (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Natrix maura';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'ajete junciero',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Allium_moschatum.jpg?width=1280',
+  s.image_attribution = 'Александр Фатерыга (Alexander Fateryga) (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Allium moschatum';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Cabra montés',
@@ -3100,6 +3221,17 @@ Copa densa y oscura, muy cerrada a la luz',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Quercus ilex';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Brochera pegajosa',
+  s.primary_habitat = 'Vive en tomillares sobre yesos, hasta 600 m',
+  s.description = 'Planta de 15-45 cm, cubierta de glandulas sésiles, por lo que resulta pegajosa, con tallos densamente foliosos, hojas de 8-25 mm, con largo pecíolo, pinnatisectas con cinco hileras de segmentos, las superiores lineares. Capítulos numerosos, solitarios en cada escapo, de 5-10 mm de diámetro, subglobosos, con varias filas de brácteas. Florecillas todas tubulares, glandulosas, amarillas. Aquenios 1,2-1,5 mm, angulosos, sin vilano.',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Santolina_viscosa_kz01.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 4
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Santolina viscosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Boja negra',
   s.primary_habitat = 'Matorrales halo-nitrófilos',
   s.description = 'Mata aromática grisácea de las bojas del sureste árido, colonizadora de suelos alterados, bordes de camino y matorrales nitrificados.',
@@ -3113,6 +3245,17 @@ Indica suelos alterados',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Artemisia barrelieri';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Fresno',
+  s.primary_habitat = 'Vive sobre sustratos frescos y en general profundos, hasta 1400 m',
+  s.description = 'Árbol hasta de 20 m, caducifolio, con corteza grisácea, agrietada. Hojas de 10-30 cm, compuestas imparipinnadas, con siete a 13 folíolos hasta de 9 cm, lanceolados o elípticos, levemente dentados, pecioladas. Flores dispuestas en racimos axilares, simplificadas, minúsculas, unisexuales o hermafroditas, con dos estambres casi sentados y un estilo con estigma bilobulado. Fruto en sámara hasta de 5 cm, alada por los bordes.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fresno_(Colmenar_Viejo).jpg?width=1280',
+  s.image_attribution = 'Wiki LIC (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Fraxinus angustifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Klasea flavescens',
   s.primary_habitat = 'Pastizales secos, claros de matorral y taludes sobre suelos margosos',
   s.description = 'Compuesta de hojas divididas y algo espinosas, con capítulos grandes de flores amarillas rodeados de brácteas secas y brillantes. A distancia recuerda a un cardo, pero sus hojas pinchan mucho menos.',
@@ -3124,6 +3267,28 @@ Hojas divididas, con dientes poco punzantes',
   s.image_attribution = 'Philmarin (CC BY-SA 3.0) · Wikimedia Commons',
   s.rarity_score = 1
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Klasea flavescens';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'escorzonerilla falsa',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Launaea pumila';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collejón',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Enero a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Moricandia_moricandioides_2018-10-22_3399.jpg?width=1280',
+  s.image_attribution = 'Salicyna (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Moricandia moricandioides';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Labiérnago prieto',
@@ -3191,6 +3356,19 @@ Pétalos arrugados, como de papel de seda',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Helianthemum almeriense';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Leucanto litoral',
+  s.primary_habitat = 'Fisuras y repisas de roquedos calizos, sobre todo en umbrías',
+  s.description = 'Margarita rupícola de hojas carnosas y recortadas que crece agarrada a las grietas de la roca. Sus flores son las clásicas cabezuelas de centro amarillo y lígulas blancas. Es un endemismo del sureste ibérico y del norte de África, de área muy pequeña.',
+  s.identification_tips = 'Crece en grietas de pared rocosa, no en el suelo
+Hojas algo carnosas y recortadas en dientes
+Cabezuelas blancas de centro amarillo, solitarias',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/614232981/original.jpg',
+  s.image_attribution = 'faluke (CC BY-NC 4.0) · iNaturalist/GBIF',
+  s.rarity_score = 4
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Mauranthemum decipiens';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Rascavieja',
   s.primary_habitat = 'Matorral seco y laderas soleadas sobre suelos pedregosos',
   s.description = 'Leguminosa arbustiva y pegajosa, con hojas de tres foliolos y racimos densos y erguidos de flores de un amarillo intenso. Es un endemismo del sur peninsular y del norte de África, y una de las plantas más vistosas del matorral en plena floración.',
@@ -3204,6 +3382,17 @@ Hojas de tres foliolos dentados',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Ononis speciosa';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sabina de Cartagena',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sandarac_Tree_(Tetraclinis_articulata)_-_Cartagena%2C_Spain_2024-02-05_(01).jpg?width=1280',
+  s.image_attribution = 'Ryan Hodnett (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 4
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Tetraclinis articulata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Lagartija colirroja',
   s.primary_habitat = 'Matorral litoral y laderas secas',
   s.description = 'Lagartija de suelos arenosos, de cuerpo aplanado y dedos con escamas laterales en forma de peine que le sirven de raqueta sobre la arena suelta. Los jóvenes tienen la cola y las patas traseras de un rojo intenso que se apaga en los adultos.',
@@ -3215,6 +3404,28 @@ Cuerpo aplanado, con rayas y ocelos claros en el dorso',
   s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
   s.rarity_score = 3
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Acanthodactylus erythrurus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jara pringosa',
+  s.primary_habitat = 'Se encuentra formando jarales sobre sustratos silíceos pobres, con suelos poco desarrollados, hasta 1500 m',
+  s.description = 'Arbusto hasta de 3 m, muy leñoso, con corteza que se desprende en tiras. Hojas de 4-8 x 1-2 cm, lanceoladas, coriáceas, con nervio central marcado y con pelos estrellados por el envés, impregnadas de una sustancia pegajosa y aromática llamada ládano. Flores abiertas, con cinco pétalos de 3-5 cm, blancos, con una mancha amarilla en la base, a veces con una más oscura, con muchos estambres cortos que forman una corona. Fruto en cápsula de 1-1,5 cm, esférica, que se abre por diez valvas. Semillas minúsculas, negras.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aracena_-_Cistus_ladanifer_01.jpg?width=1280',
+  s.image_attribution = 'Basotxerri (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Cistus ladanifer';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra lisa meridional',
+  s.primary_habitat = 'Se encuentra desde el nivel del mar, pero es más frecuente en claros de bosque y matorral mediterráneo en zonas de media montaña',
+  s.description = 'La culebra lisa meridional Coronella girondica es de pequeño tamaño, cabeza pequeña y cola relativamente corta. En general hay 21 hileras de dorsales aunque es frecuente observar 19 hileras en ejemplares de las cordilleras béticas. Dorso y flancos generalmente de color pardo o gris, con una hilera de manchas transversales por el dorso. En el vientre destacan unas manchas cuadradas oscuras en un diseño ajedrezado. En la parte dorsal de la cabeza hay una gran mancha en forma de U, y a ambos lados de la cabeza, una brida oscura que atraviesa el ojo y se prolonga por delante de la placa frontal uniendo las manchas de ambos lados. No hay dimorfismo sexual en la longitud cabeza-cloaca ni en la folidosis cefálica. En cambio se aprecian ligeras diferencias en el número de dorsales (19 hileras más frecuente en machos) y ventrales (más en hembras), pero sobre todo en la cola (mayor longitud relativa y mayor número de subcaudales en machos). No hay subespecies descritas, pero se aprecian diferencias poblacionales en el número de ventrales. En machos, se observa una clina latitudinal en la longitud de hocico-cloaca y número de ventrales, siendo mayores los ejemplares más septentrionales. Longitud total máxima en la Península Ibérica, 800 mm.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/BennyTrapp_Coronella_girondica.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Coronella girondica';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Conejo',
@@ -3256,6 +3467,17 @@ Porte erguido, más alto que las jarillas comunes',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Cistus atriplicifolius';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pincelillo',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hypericum_ericoides_fruto.jpg?width=1280',
+  s.image_attribution = 'Retama 11:14, 14 April 2007 (UTC) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Hypericum ericoides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Ononis ornithopodioides',
   s.primary_habitat = 'Pastizales anuales y claros de matorral sobre suelos secos',
   s.description = 'Pequeña leguminosa anual de tallos finos y glandulosos, con hojas de tres foliolos y flores amarillas diminutas. Sus legumbres, curvadas y dispuestas en grupo, recuerdan a los dedos de una pata de pájaro, lo que le da el nombre científico.',
@@ -3267,6 +3489,28 @@ Tallos pegajosos al tacto, con pelos glandulosos',
   s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
   s.rarity_score = 1
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Ononis ornithopodioides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Abejera',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ophrys_sphegodes_(as_Ophrys_aranifera)_-_Bot._Reg._14_pl._1197_(1828).jpg?width=1280',
+  s.image_attribution = 'Designer: M. Hart - Engraver: J. Watts (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Ophrys sphegodes';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Escila de otoño',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Agosto a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Scilla_autumnalis0.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Prospero autumnale';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Olmo común',
@@ -3295,6 +3539,17 @@ Planta anual pelosa, de pocos decímetros, en suelo pelado',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Carrichtera annua';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Majuelo',
+  s.primary_habitat = 'En claros y orlas de bosques, como encinares, alcornocales, quejigares, melojares, robledales, o formando setos, en barrancos, zarzales y espinares',
+  s.description = 'Pequeño árbol de 5-6 (10) m, caducifolio, de corteza lisa y grisácea, de porte irregular y copa redondeada. Ramas jóvenes a veces con espinas hasta de 2-2,5 cm. Hojas 20-50 x 8-50 mm, con pecíolo de 1-3 cm, obovado-espatuladas, con 1-3 pares de lóbulos laterales, dentadas por arriba, cuneadas en la base, más o menos pelosas. Inflorescencias en ramilletes corimbiformes, pediceladas, con 5-10 (12) flores, de 1-1,5 cm diámetro. Cáliz con sépalos de 1,5-4,5 x 1,5-2,5 mm. Pétalos de 4-8 x 4-7 mm blancos o algo coloreados. Estambres 15-20, con las anteras de color púrpura. Fruto de 5,5-12 x 5-10 mm, en pomo, globoso, con un hueso o pireno.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Crataegus_monogyna_-_Common_hawthorn.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Crataegus monogyna';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Acelguilla espinosa',
   s.primary_habitat = 'Pastizales secos, suelos margosos y salinos en clima árido',
   s.description = 'Saladilla anual pequeña, con una roseta de hojas ásperas al tacto y tallos ramificados en zigzag que llevan las flores en espiguillas cortas. Las flores, blanquecinas o violáceas, conservan el cáliz seco y papiráceo mucho después de marchitarse.',
@@ -3319,6 +3574,94 @@ Hoja compuesta con foliolo terminal y raquis sin alas',
   s.image_attribution = 'greffer.net (CC BY 2.5) · Wikimedia Commons',
   s.rarity_score = 2
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Pistacia terebinthus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra de escalera',
+  s.primary_habitat = 'Ocupa todo tipo de suelos en ambientes mediterráneos de matorral y borde de bosque, pues precisa de cierta cobertura vegetal y de lugares relativamente húmedos',
+  s.description = 'Longitud hocico-cloaca media de 720 mm (rango 233-1.385 mm), cola relativamente corta. Cabeza algo pequeña, con hocico agudo, que sobrepasa netamente el extremo anterior de la mandíbula. 27 rangos de escamas dorsales. Color de fondo amarillento, con diseño de manchas dorsales en escalera en los ejemplares pequeños, y dos líneas dorsolaterales en los ejemplares de mayor tamaño. Longitud total máxima, 1.650 mm.',
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhinechis_scalaris_cropped.jpg?width=1280',
+  s.image_attribution = 'Benny_Trapp_Rhinechis_scalaris_Portugal.jpg: Benny Trapp derivative… (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Zamenis scalaris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chaenorhinum grandiflorum',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Enero a junio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 4
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Chaenorhinum grandiflorum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Boja de las calenturas',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/BUPLEURUM_FRUTISCENS_-_AGUDA_-_IB-327_(Botja_groga).JPG?width=1280',
+  s.image_attribution = 'Isidre blanc (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Bupleurum fruticescens';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cephalanthera rubra',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cephalanthera_rubra_02_Luxemburg.jpg?width=1280',
+  s.image_attribution = 'Orchi (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Cephalanthera rubra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cerambyx cerdo',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Junio a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ceramby_cerdo.jpg?width=1280',
+  s.image_attribution = 'Xavier Vázquez (Public domain) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Cerambyx cerdo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Espuelilla de yesos',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a junio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 4
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Chaenorhinum rupestre';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'achicoria falsa',
+  s.primary_habitat = 'Habita sobre acantilados y laderas de naturaleza margo-arenosa muy deleznables junto a la línea de costa, en el piso termomediterráneo de ombroclima seco',
+  s.description = 'Planta procumbente y multicaule, de base sufruticosa y hojas subcrasas, las inferiores liradopinnatipartidas y las superiores linear-lanceoladas. Tallos floríferos estriado-glandulosos, subáfilos y engrosados por debajo del capítulo. Brácteas del involucro oblongas, con apéndice semilunar y con 9-11 cilios. Aquenios de 4x2 mm, negruzcos, glabrescentes y con vilano de hasta 3 mm de longitud.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cheirolophus_intybaceus_kz01.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Cheirolophus intybaceus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jara de Cartagena',
+  s.primary_habitat = NULL,
+  s.description = 'Arbusto 80-120 cm, muy ramoso, perennifolio, de vida larga (30 años o más). Tallos con pelos estrellados y algunos simples, largos. Hojas 5-20 x 2-10 mm, sésiles o subsésiles, elíptico-lanceoladas, las adultas vellosas, falciformes y con el borde fuertemente revuelto hacia el envés. Sépalos acuminados, seríceos. Pétalos rosados. Estilo sobresaliente entre los estambres. Cápsula 7-9 mm, globosa. Semillas 1-2 mm, angulosas, papilosas, de color marrón claro.',
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_heterophyllus2.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (Public domain) · Wikimedia Commons',
+  s.rarity_score = 4
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Cistus heterophyllus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Jara cervuna',
@@ -3347,6 +3690,17 @@ Tonos azulados en las brácteas durante la floración',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Eryngium ilicifolium';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'flor del príncipe',
+  s.primary_habitat = 'Vive en sustratos yesíferos secos, entre 40-900 m',
+  s.description = 'Perenne sufruticosa, de 10-40 cm; cubierta de escamas peltadas, plateadas, con tallo tetragonal. Hojas de 8-25 x 3-10 mm, de oblongo a lineares, pecioladas, opuestas, estipuladas. Pétalos de 3,5-5 mm, amarillos. Cápsula de 3-3,5 mm, tomentosa arriba.',
+  s.identification_tips = '',
+  s.seasonality = 'Octubre, noviembre, diciembre, marzo, abril, mayo, junio, julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_squamatum_1_(Espagne).jpg?width=1280',
+  s.image_attribution = 'Ghislain118 http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Helianthemum squamatum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Salamanquesa rosada',
   s.primary_habitat = 'Pendientes rocosas calcícolas con vegetación casmofítica',
   s.description = 'Gecko pequeño y translúcido de tonos rosados, de hábitos nocturnos, que se refugia en grietas de roquedos, muros de piedra y ruinas.',
@@ -3371,6 +3725,28 @@ Se tira al agua en cuanto detecta movimiento en la orilla',
   s.image_attribution = 'David Perez (CC BY 3.0) · Wikimedia Commons',
   s.rarity_score = 2
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Mauremys leprosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bayón',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Osyris_alba_1.JPG?width=1280',
+  s.image_attribution = 'User:Xemenendura (CC BY-SA 2.1 es) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Osyris alba';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'poliol real',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Teucrium buxifolium';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Lagarto ocelado',
@@ -3410,6 +3786,28 @@ Legumbres cubiertas de pelos blancos y sedosos',
   s.image_attribution = 'Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons',
   s.rarity_score = 1
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Cytisus lanigerus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Guiraoa arvensis',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 4
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Guiraoa arvensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'albada',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a diciembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/GYPSOPHYLA_STRUTHIUM_-_EMPALOUS_-_IB-507_(Trincola).JPG?width=1280',
+  s.image_attribution = 'Isidre blanc (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Gypsophila struthium';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Sosa jabonera',
@@ -3477,6 +3875,17 @@ Canto en frase descendente que remata en un adorno',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Fringilla coelebs';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mito',
+  s.primary_habitat = NULL,
+  s.description = 'Es fácil de identificar por la notable longitud de su cola (7-9 centímetros), que contrasta con su pequeño cuerpecillo, de cortas y redondeadas alas. En un primer vistazo resulta un ave con una apariencia general oscura. Sin embargo, observada con atención se aprecia una banda clara que recorre toda la cabeza, así como una pechuga grisácea con tintes rojizos, que contrasta con los tonos negros y grises del dorso, la cola y las alas.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Long-tailed_Tit_Aegithalos_caudatus.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Aegithalos caudatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Curruca cabecinegra',
   s.primary_habitat = 'Matorral mediterráneo denso, setos y bordes de arbolado',
   s.description = 'La curruca más común del matorral mediterráneo. El macho tiene la cabeza negra hasta por debajo del ojo, la garganta blanca y un llamativo anillo ocular rojo. Es ruidosa y territorial: su reclamo de alarma es un traqueteo seco que delata su presencia constantemente.',
@@ -3490,6 +3899,50 @@ Reclamo de alarma como una carraca seca',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Curruca melanocephala';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carbonero común',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de una especie fácilmente reconocible por el color amarillo de su cuerpo, que contrasta con el azul de las alas y la cola. La cabeza es de color negro-azabache y con las mejillas muy blancas, salvo en los jóvenes del año, algo amarillenta. Los machos se distinguen de las hembras por poseer una conspicua banda negra que recorre su cuerpo desde la garganta hasta la base de la cola. Las hembras, en cambio, tienen muy poco marcada dicha banda, que se desdibuja en el vientre.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D0%B8%D0%BD%D0%B8%D1%86%D0%B0_(Parus_major%2C_fem)%2C_%D0%91%D0%B8%D1%82%D1%86%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BB%D0%B5%D1%81.jpg?width=1280',
+  s.image_attribution = 'Dion Art (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Parus major';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pito ibérico',
+  s.primary_habitat = NULL,
+  s.description = 'Es un pájaro carpintero grande y robusto, de aspecto inconfundible, en cuyo plumaje dominan claramente los tonos verdosos, más intensos en las regiones dorsales, ligeramente grisáceos en las ventrales y con matices amarillentos en el obispillo. Carece de moteados y listas —salvo, tenuemente, en la región anal—, pero luce un llamativo patrón de coloración en la cabeza, donde el píleo es rojo y los ojos, amarillentos, aparecen enmarcados por un antifaz negro. Los machos y los jóvenes presentan una bigotera negra y roja, que es exclusivamente negra en las hembras. El plumaje juvenil se caracteriza por ser fuertemente moteado, especialmente en las partes inferiores, aunque, en conjunto, su coloración es más apagada que la del adulto, no presentan antifaz y poseen un iris más oscuro. Su vuelo es muy característico, con una trayectoria ondulatoria en la que el ave combina tramos en los que bate las alas con otros en que las pliega.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Iberian_Green_Woodpecker_(Pito_Ib%C3%A9rico)_(Picus_sharpei)_-_Torrevieja%2C_Spain_2024-02-04.jpg?width=1280',
+  s.image_attribution = 'Ryan Hodnett (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Picus sharpei';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mosquitero común',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de un pequeño pajarillo de pico fino y patas oscuras. Presenta tonos verdosos o pardo-grisáceos en el dorso y blanquecinos en las partes inferiores. Ambos sexos resultan similares, si bien los machos son ligeramente mayores que las hembras. Es una especie prácticamente idéntica en el campo al mosquitero ibérico, del que se distingue por su canto y por encontrarse presente en nuestro territorio durante todo el año o en invierno —según las regiones—, mientras que el ibérico es un ave únicamente estival. Es también muy similar al mosquitero musical, pero este posee las patas y el pico pálidos, así como la lista superciliar y otras finas marcas auriculares más definidas. Además, el musical solo está presente en paso.',
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a abril',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Chiffchaff_-_Phylloscopus_collybita.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Phylloscopus collybita';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carbonero garrapinos',
+  s.primary_habitat = NULL,
+  s.description = 'Ave pequeña, con plumaje de colores apagados. El dorso y las alas son de color azul grisáceo, mientras que el pecho y el vientre presentan una tonalidad ante. Su rasgo más distintivo es la mancha blanca en la nuca. Se muestra muy activo y explora minuciosamente las ramas, ramitas, hojas y piñas. En su exhaustiva búsqueda de alimento llega a realizar auténticas acrobacias, muchas veces quedando colgado o realizando cortos cernidos. Habita preferentemente en pinares, pero también se localiza en formaciones de frondosas y en áreas ajardinadas. Tras el periodo reproductor se mueve en pequeños grupos, que en numerosas ocasiones están integrados por varias especies, pues se mezcla con otros páridos, reyezuelos, mosquiteros, etc.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/005Large.jpg?width=1280',
+  s.image_attribution = 'John GB Garrett (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Periparus ater';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Perdiz roja',
   s.primary_habitat = 'Mosaicos de cultivo, matorral bajo y laderas pedregosas',
   s.description = 'Perdiz de patas y pico rojos, con un collar negro que se deshace en un salpicado de motas sobre el pecho y flancos barrados en blanco, negro y castaño. Prefiere correr a volar, y cuando por fin levanta lo hace de golpe y a ras de suelo, planeando ladera abajo.',
@@ -3501,6 +3954,28 @@ Corre agachada antes que volar; levanta de golpe y planea',
   s.image_attribution = 'Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons',
   s.rarity_score = 3
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Alectoris rufa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Herrerillo capuchino',
+  s.primary_habitat = NULL,
+  s.description = 'Pequeño pajarillo de apariencia inconfundible, gracias sobre todo a su característica cresta triangular y apuntada, de plumas blancas y negras y que despliega habitualmente. Su cara es también un juego de bandas negras y blancas: presenta una conspicua corbata negra que se prolonga a modo de collar; además tiene una línea ocular negra, y otra que recorre la mejilla, siempre sobre fondo claro o blanco. Por el contrario, el dorso, las alas y la cola son de color pardo oscuro, que contrasta con los flancos, el pecho y el vientre, de un tono gris-canela muy apagado. Al igual que los carboneros garrapinos u otros páridos, habita en bosques de coníferas (pinos, abetos, etc.). Pero también se localiza en formaciones de frondosas —caducifolias y perennes— y se observa en áreas ajardinadas. No es un ave especialmente gregaria, pero en otoño e invierno puede constituir pequeños grupos de 2-10 individuos, que exploran conjuntamente tanto el suelo como, sobre todo, la corteza, las ramas y las hojas de los árboles. Con frecuencia se mezcla con otros páridos, con agateadores y con reyezuelos, conformando ruidosos bandos mixtos.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/083_Wild_European_crested_tit_at_Parc_naturel_r%C3%A9gional_Jura_vaudois_Photo_by_Giles_Laurent.jpg?width=1280',
+  s.image_attribution = 'Giles Laurent (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Lophophanes cristatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Petirrojo europeo',
+  s.primary_habitat = NULL,
+  s.description = 'Pajarillo de constitución rechoncha, sobre todo en invierno, cuando ahueca sus plumas para generar una capa de aire caliente interior. Machos y hembras son idénticos en coloración. En su plumaje destaca la amplia mancha anaranjada que se extiende por la cara, la garganta y el pecho, la cual aparece bordeada por una irregular y sutil banda gris. El resto del plumaje resulta poco vistoso. Domina el color pardo verdoso en el dorso y las alas, y el blanco sucio en el vientre. Los jóvenes volantones, antes de la muda parcial a finales del verano, muestran un plumaje pardo, con casi todas sus plumas punteadas en su extremo con motas amarillentas. El petirrojo europeo se mueve habitualmente por el suelo en busca de insectos. Para cantar se posa en las ramas altas de los árboles, ya sea en invierno o durante la temporada de cría. Es muy agresivo, tanto con ejemplares de su misma especie como con el resto de las aves, no solo en la época reproductora, sino también durante la invernada. En este último periodo, las parejas se separan y defienden territorios individuales.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Erithacus_rubecula_with_cocked_head.jpg?width=1280',
+  s.image_attribution = 'Francis C. Franklin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Erithacus rubecula';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Cernícalo vulgar',
@@ -3542,6 +4017,17 @@ Arrullo ronco y vibrante, muy distinto al de la tórtola turca',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Streptopelia turtur';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Colirrojo tizón',
+  s.primary_habitat = NULL,
+  s.description = 'Ave de pequeño tamaño y diseño peculiar, con obispillo y cola de característico color rojo. El macho presenta el pecho y la cara de color negro azabache, y el resto del cuerpo oscuro, con una mancha blanca en las alas. Las hembras y los jóvenes son pardogrisáceos. Muy terrestre, acostumbra a posarse con figura erguida mientras agita su cola roja. Tiene vuelo amariposado, con batido rápido de alas.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hausrotschwanz_Brutpflege_2006-05-21-05.jpg?width=1280',
+  s.image_attribution = 'Stefan-Xp (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Phoenicurus ochruros';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Cogujada común',
   s.primary_habitat = 'Cultivos, caminos, eriales y bordes de poblado con suelo desnudo',
   s.description = 'Alondra parda de cresta alta y puntiaguda, muy ligada a caminos, cunetas y descampados junto a los pueblos. Camina en vez de saltar y, al volar, deja ver el forro rojizo de las alas y la cola con los bordes canela.',
@@ -3581,6 +4067,28 @@ Canto nocturno monótono, como un motor lejano',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Caprimulgus ruficollis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Vencejo común',
+  s.primary_habitat = 'Nidos:edificios,acantilados rocosos,cuevas,cajas nido, en colonias.En todo tipo de habitats',
+  s.description = 'Presenta silueta en forma de ballesta, cola corta y ahorquillada, y alas estrechas y largas. Posee pico corto, plano y con la boca muy ancha; patas emplumadas y extremadamente cortas, que le impiden posarse en el suelo; y pies pequeños y de fuertes garras, con los cuatro dedos dirigidos hacia delante. Muestra coloración uniforme de tono pardo oscuro, casi negro, excepto en la garganta, que es blanca; la cara inferior de las alas resulta un poco más pálida. En otoño, con su plumaje desgastado, es algo más claro. Ambos sexos son iguales. Los jóvenes se parecen mucho a los adultos, aunque con un tono algo más oscuro y un aspecto escamoso, por los pequeños ribetes blancos que tienen en las plumas. Esta ave es observada casi siempre en vuelo y en grupo. Las condiciones de luz, el fondo y la distancia determinan su apariencia, pudiendo confundirse con frecuencia con el vencejo pálido. Se localiza habitualmente en núcleos urbanos, volando de forma incansable a gran velocidad. Pasa la mayor parte de su vida en el aire, y únicamente se la ve posada cuando entra o sale del nido. Duerme tanto en el nido como en vuelo.',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Apus_apus_-Barcelona%2C_Spain-8_(1).jpg?width=1280',
+  s.image_attribution = 'pau.artigas (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Apus apus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lavandera blanca',
+  s.primary_habitat = NULL,
+  s.description = 'Pájaro estilizado de aspecto muy distintivo, con larga cola y tonos blancos, negros y grises. Exhibe dorso gris ceniza, vientre blanco, y alas negras y con bandas blancas cuando están plegadas. Posee cola larga y negra, con plumas externas blancas, y patas y pico negros. El patrón de la cabeza resulta muy contrastado, con la cara blanca rodeada arriba y abajo de negro. Luce un plumaje invernal similar, aunque el color negro en la cabeza está más reducido, y muestra garganta blanca y banda pectoral negra. La lavandera enlutada (M. a. yarrelli), de origen británico, presenta tonos negros en dorso y flancos. Ambos sexos son parecidos, pero la hembra tiene la nuca gris. Los jóvenes resultan más uniformes, sin negro en la cabeza y con banda pectoral grisácea. Un hábito destacado de esta ave es el continuo balanceo de la cola. En invierno se vuelve muy gregaria y se reúne en dormideros.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/White-Wagtail.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Motacilla alba';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Abejaruco europeo',
   s.primary_habitat = 'Matorral termomediterráneo semiárido',
   s.description = 'Ave colorida y gregaria que caza abejas y libélulas en vuelo sobre espacios abiertos y cría en galerías excavadas en taludes terrosos.',
@@ -3607,6 +4115,17 @@ Vuelo ondulado, a rachas de aleteo y planeo',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Athene noctua';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Golondrina común',
+  s.primary_habitat = NULL,
+  s.description = 'Ave delicada, grácil y aerodinámica, de color negro, con reflejos azules metálicos por arriba y blancos crema en las partes inferiores. Tiene la frente y la garganta rojas y un collar negro. Las alas, largas y apuntadas, muestran tonos blancos en la parte inferior delantera. Su cola, muy larga y ahorquillada, es de color negro, con pequeños óvalos blancos cuando la extiende. Posee patas cortas sin emplumar, boca muy ancha, y pico corto, plano y negro. Presenta variación latitudinal en el tamaño corporal y en la longitud de la cola, que son menores hacia el sur. Aunque ambos sexos se parecen, la hembra es menos brillante, más blanca por abajo y con la cola más corta. Los jóvenes lucen tonos negros mate, tienen la frente y la garganta naranjas y una cola mucho más corta. De vuelo ágil, rápido y acrobático, la golondrina común ocupa en el espacio aéreo las capas bajas, por debajo de aviones y vencejos.',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Landsvale.jpg?width=1280',
+  s.image_attribution = 'Malene Thyssen (CC BY 2.5) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Hirundo rustica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Piquituerto',
   s.primary_habitat = 'Pinares y masas de coníferas con producción de piñas',
   s.description = 'Fringílido de pico único: las dos mandíbulas se cruzan en la punta, una herramienta para abrir las escamas de las piñas y sacar el piñón. El macho es rojo ladrillo y la hembra verde oliva. Cría incluso en invierno si hay piñas, y se mueve en bandos ruidosos de copa en copa.',
@@ -3620,6 +4139,17 @@ Reclamo metálico «chip-chip» de los bandos en vuelo',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Loxia curvirostra';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca capirotada',
+  s.primary_habitat = NULL,
+  s.description = 'Curruca de mediano tamaño, de aspecto más compacto y robusto que la mayor parte de sus congéneres, aunque muy similar en tamaño y silueta a la curruca mosquitera. Al igual que ésta, y a diferencia de la mayoría de las currucas, no presenta ni rectrices externas ni garganta blanquecinas. Luce una tonalidad general grisácea, aunque la hembra muestra en las alas y en las regiones ventrales tintes más pardo rojizos. Los machos poseen el capirote negro, mientras que las hembras y los jóvenes lo tienen de color castaño.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sylvia_atricapilla_-Lullington_Heath%2C_East_Sussex%2C_England_-male-8.jpg?width=1280',
+  s.image_attribution = 'Ron Knight from Seaford, East Sussex, United Kingdom (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Sylvia atricapilla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Águila calzada',
   s.primary_habitat = 'Bosques y sierras con arbolado, cazando sobre zonas abiertas cercanas',
   s.description = 'Águila pequeña, del tamaño de un ratonero, con dos formas de plumaje muy distintas: una clara con el vientre blanco y otra oscura y uniforme. Nidifica en árboles dentro del bosque y caza en campo abierto lanzándose desde altura. Se identifica en vuelo por las «luces de posición»: dos manchas blancas en el arranque de las alas.',
@@ -3631,6 +4161,17 @@ Cola larga y recta, sin la muesca del milano',
   s.image_attribution = 'Derek Keats from Johannesburg, South Africa (CC BY 2.0) · Wikimedia Commons',
   s.rarity_score = 2
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Hieraaetus pennatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Oropéndola',
+  s.primary_habitat = 'Bosques de ribera,hileras de olmos,chopos,sotos,generalmente fluviales,parques,jardines...Mar-1600m',
+  s.description = 'Ave de tamaño similar a un mirlo y llamativo color amarillento. El macho exhibe un intenso color amarillo limón en la cabeza — rayada con una línea ocular oscura— y en el cuerpo, que contrasta bastante con las anchas y redondeadas alas, totalmente negras, a excepción de dos parches amarillos a la altura de la articulación de la muñeca. La cola es igualmente amarilla, aunque presenta una ancha banda terminal negra. Posee patas de tono grisáceo y pico rojizo. La hembra, que recuerda a un pequeño pito real, muestra tonos más apagados que el macho, con partes superiores de color verde oliva e inferiores blanquecinas y rayadas en gris. Tiene las alas y la cola pardas, y el pico rojo sucio. Los jóvenes son casi iguales a las hembras, aunque con el pico pardo oscuro y el ojo negruzco. Se trata de un ave esquiva, por lo que la mayoría de las observaciones corresponden a individuos en vuelos breves entre la espesura. Su vuelo, directo y ondulado, alterna aleteos y alas plegadas, de modo similar al del pito real. Su carácter agresivo se evidencia en los frecuentes acosos a otras especies, incluso de mayor tamaño.',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Oriole_2.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Oriolus oriolus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Papamoscas gris',
@@ -3659,6 +4200,17 @@ Vientre de color vinoso, con motitas blancas en la garganta',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Curruca undata';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cuco',
+  s.primary_habitat = 'Zonas arboladas de todo tipo.Bosques,linderos,bosquetes,cultivos,huertos frutales,piornales',
+  s.description = 'Esta ave, de tamaño medio y aspecto estilizado, se caracteriza por poseer una larga cola y unas alas apuntadas, por lo que su silueta puede confundirse en vuelo con la de una pequeña rapaz, como el cernícalo vulgar o el gavilán. En la coloración del macho dominan los tonos grises, sobre todo en el dorso, la cabeza y el cuello. Por su parte, las regiones ventrales son blancas, pero finamente barreadas. La hembra puede lucir dos tipos de plumaje: uno grisáceo, muy parecido al del macho, y otro rojizo, bastante menos frecuente que el anterior. Los inmaduros se asemejan en parte a las hembras de fase rojiza, aunque tienen las plumas orladas de blanco y una característica mancha blanca en la nuca.',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cuckoo_(51169010335).jpg?width=1280',
+  s.image_attribution = 'Andy Morffew from Itchen Abbas, Hampshire, UK (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Cuculus canorus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Alcaudón real',
   s.primary_habitat = 'Campo abierto con matorral disperso, cables y posaderos altos',
   s.description = 'Alcaudón grande, gris por encima y con un antifaz negro que le cruza el ojo. Caza al acecho desde un posadero alto y tiene la costumbre de empalar sus presas —insectos, lagartijas, ratones— en espinas y alambres, formando pequeñas despensas.',
@@ -3685,6 +4237,28 @@ Estival de mayo a agosto',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Lanius senator';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cuervo grande',
+  s.primary_habitat = NULL,
+  s.description = 'El rasgo más llamativo del cuervo es, sin duda, su colosal tamaño, que lo convierte en el representante más voluminoso del orden de los paseriformes. Dentro de su anatomía destaca sobre todo el pico, notablemente largo, robusto y grueso. Por lo demás, luce un plumaje homogéneamente negro, con algunos brillos metálicos. El vuelo de este enorme pájaro es lento y suele intercalar aleteos con largos planeos, que el ave ejecuta gracias a sus largas alas apuntadas y a su cola en forma de cuña.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Corvus_corax.001_-_Tower_of_London.JPG?width=1280',
+  s.image_attribution = 'Fernando Losada Rodríguez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Corvus corax';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Avión común',
+  s.primary_habitat = NULL,
+  s.description = 'Pequeña golondrina de aspecto compacto, negro azulada brillante por arriba y blanca por abajo, con límites netos entre colores. Posee alas largas y apuntadas y cola corta ahorquillada de color negro; pico corto, plano y negro; boca muy ancha, y patas cortas cubiertas de finas plumas blancas. Destaca su obispillo de color blanco, la única zona clara de las partes dorsales. Ambos sexos son iguales. Los jóvenes resultan menos contrastados, más parduzcos, sobre todo por abajo, con límites difusos entre partes negras y blancas, y con puntas blancas en las terciarias. Este pájaro suele observarse en vuelo y agrupado. Su vuelo es rápido y ágil, aunque menos que en la golondrina común, y a menudo se produce a mayor altura que en esta. Se posa con frecuencia, a veces en el suelo.',
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Delichon_urbicum_-Iceland_-flying-8_(1).jpg?width=1280',
+  s.image_attribution = 'Ómar Runólfsson (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Delichon urbicum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Avión roquero',
   s.primary_habitat = 'Acantilados mediterráneos con Limonium',
   s.description = 'Hirundínido pardo y robusto que vuela pegado a las paredes rocosas de acantilados y barrancos, donde construye su nido de barro.',
@@ -3698,6 +4272,17 @@ Nido de barro en cortados',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Ptyonoprogne rupestris';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Escribano montesino',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de un escribano bastante grande y voluminoso, con las alas relativamente cortas y la cola larga, que luce en la cabeza tres características listas oscuras. La cabeza, el cuello, la nuca y la parte superior del pecho son de color grisáceo, en tanto que el resto del cuerpo presenta tonos pardos o rojizos. Fuera de la estación reproductora, los machos se asemejan a las hembras y a los inmaduros, aunque en el periodo de cría su coloración se hace más brillante, con abundancia de tonos anaranjados en el pecho y en el vientre. El joven presenta un plumaje parduzco y fuertemente estriado en el pecho; la cabeza es marrón-ocre y no presenta bandas laterales.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Emberiza_cia.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Emberiza cia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Collalba negra',
   s.primary_habitat = 'Matorral litoral, laderas secas y roquedos',
   s.description = 'La mayor de las collalbas, enteramente negra salvo el obispillo y la base de la cola, blancos. Vive en cortados y laderas rocosas, donde construye junto al nido una plataforma de piedrecitas que acarrea una a una. Su canto es potente y melodioso.',
@@ -3709,6 +4294,17 @@ Montoncitos de piedrecitas junto a la grieta del nido',
   s.image_attribution = 'Andrew Thomas from Shrewsbury, UK (CC BY-SA 2.0) · Wikimedia Commons',
   s.rarity_score = 3
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Oenanthe leucura';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gavilán común',
+  s.primary_habitat = 'Bosques mixtos de coníferas y frondosas.Sotos, grandes arbustos',
+  s.description = 'Esta pequeña rapaz de hábitos forestales, larga cola y alas cortas y redondeadas presenta un acusado dimorfismo sexual invertido, por el cual las hembras resultan ostensiblemente más corpulentas que los machos; además, entre ambos sexos existen marcadas diferencias en cuanto al diseño del plumaje. El macho adulto tiene las partes superiores y el píleo de un color grisáceo bastante intenso, en tanto que las inferiores son pálidas con un fino barrado transversal y un tono rojizo que puede ser muy notorio, principalmente en las mejillas y los flancos; sobre el ojo luce una leve línea blanca a modo de ceja. Las patas son amarillas y con los largos tarsos sin emplumar. La hembra, mucho más pesada y robusta, posee un patrón de coloración dominado por los tonos pardogrisáceos en el dorso y el píleo, con las regiones inferiores blanquecinas, muy finamente barradas de pardo; la ceja es más grande y evidente que en su compañero. El plumaje de los jóvenes presenta las partes superiores parduzcas, con las plumas orladas de ante, y las inferiores blanquecinas y toscamente barradas de pardo rojizo. Sobre el ojo —que es amarillo— exhibe una marcada ceja. Visto en vuelo, el gavilán es un ave bastante pálida, en cuya silueta llama la atención una cola larga y de base estrecha. Normalmente, se lo observa volando velozmente a baja altura entre los árboles, aunque también puede elevarse y planear durante un tiempo sobre el dosel forestal.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eurasian_Sparrowhawk_by_Steve_Ward.jpg?width=1280',
+  s.image_attribution = 'Steve Ward (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Accipiter nisus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Agateador común',
@@ -3802,6 +4398,17 @@ Acantilados y roquedos calcáreos',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Monticola solitarius';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Escribano soteño',
+  s.primary_habitat = NULL,
+  s.description = 'De tamaño algo menor que el escribano cerillo, el soteño es ligeramente más colicorto y posee un pico más robusto. La coloración general se asemeja también a la del cerillo, sobre todo en jóvenes y hembras. Se diferencian, sin embargo, por el color del obispillo — gris oliváceo en el soteño—, por la posesión de marcadas bandas laterales en la cara y, en general, por presentar menos áreas amarillentas en el plumaje. El macho en época reproductora luce una amplia franja pectoral gris olivácea, un llamativo babero negro en la garganta y un antifaz del mismo color; además, conserva todo el año el píleo y la nuca extensamente coloreados de gris oliváceo, con finas listas oscuras.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Emberiza_cirlus.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Emberiza cirlus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Alcaraván',
   s.primary_habitat = 'Llanos pedregosos, cultivos de secano, ramblas y eriales con poca cobertura',
   s.description = 'Ave de aspecto extraño y ojos amarillos enormes, adaptados a la actividad nocturna. De día permanece agachada e inmóvil, confiada en su plumaje críptico, y solo al anochecer se activa y delata con un reclamo silbado y melancólico que recuerda al del zarapito.',
@@ -3854,6 +4461,39 @@ Reclamo como el chasquido de dos cantos rodados',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Saxicola rubicola';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bisbita común',
+  s.primary_habitat = NULL,
+  s.description = 'Ave de aspecto poco llamativo y sin caracteres muy distintivos, similar al resto de bisbitas. Exhibe dorso pardo, un tanto verdoso al principio del otoño, con muchas estrías oscuras; vientre blanco sucio muy rayado; y flancos anaranjados en otoño, que se aclaran según avanza el invierno. Posee alas redondeadas, cola larga y con plumas externas blancas, pico fino, y patas finas, con la uña posterior larga y recta. La garganta es blanca, con una fina bigotera negra. Ambos sexos son iguales. Los jóvenes, cuando llegan a España, no se distinguen de los adultos. Este pájaro se observa casi siempre en el suelo y en grupo. Para diferenciarlo de otros bisbitas hay que atender a las fechas, a su voz, a su pequeño tamaño, y a detalles del plumaje como flancos con estrías más gruesas y dorso menos contrastado.',
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a abril',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Anthus_pratensis.jpg?width=1280',
+  s.image_attribution = 'Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Anthus pratensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Vencejo pálido',
+  s.primary_habitat = 'Nidos: roquedos,acantilados costeros, edificios, puentes de piedra, iglesias,árboles',
+  s.description = 'Presenta silueta en forma de ballesta, cola corta y ahorquillada, y alas largas y estrechas. Posee pico corto, plano y con la boca muy ancha; patas emplumadas y extremadamente cortas, que le impiden posarse en el suelo; y pies pequeños y de fuertes garras, con los cuatro dedos dirigidos hacia delante. Luce una coloración uniforme de tono pardo grisáceo, excepto en la garganta, que es blanca; la parte inferior interna de las alas resulta más clara. Con plumaje poco desgastado muestra un aspecto general escamoso. Se confunde fácilmente con el vencejo común, y para diferenciarlos se necesitan buenas condiciones de luz y hay que situarse a corta distancia. El vencejo pálido tiene un tono general más claro y parduzco, y mayor extensión en el blanco de la garganta; además, a veces se aprecia un antifaz más marcado, mayor contraste en la parte inferior de las alas y aspecto más escamoso. Ambos sexos son iguales. Los jóvenes, muy similares a los adultos, presentan un tono un poco más oscuro y un aspecto escamoso más marcado por la presencia de plumas ribeteadas en blanco. Esta ave pasa la mayor parte de su vida en el aire, por lo que casi siempre se la ve volando y agrupada, tanto en núcleos urbanos como en acantilados costeros y de interior.',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Vencejo_p%C3%A1lido_20250901_03.jpg?width=1280',
+  s.image_attribution = 'Ismael Olea (CC BY 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Apus pallidus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Reyezuelo listado',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de una de las aves más diminutas de la avifauna europea. En un primer vistazo, aparece como un pájaro de aspecto general rechoncho, con tonalidades verdosas y cabeza adornada por un característico diseño de listas. Presenta el dorso verde brillante, en contraste con las alas oscuras, surcadas por dos bandas blanquecinas. Las partes inferiores son pálidas, aunque muestran ligeros tonos anaranjados en el pecho del macho. La especie posee un diseño cefálico característico en el que destaca el píleo naranja en los machos, o amarillo en las hembras, flanqueado por una banda negra y una marcada ceja blanca. Asimismo, luce una lista ocular negra y un semianillo blanco que circunda la parte inferior del ojo.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Firecrest93.JPG?width=1280',
+  s.image_attribution = 'NAUMANN, NATURGESCHICHTE DER VÖGEL MITTELEUROPAS: Band II, Tafel 15… (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Regulus ignicapilla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Águila real',
   s.primary_habitat = 'Montañas y sierras con cortados rocosos y amplias zonas abiertas de caza',
   s.description = 'La mayor de las águilas ibéricas, con casi dos metros y medio de envergadura y una nuca dorada que le da nombre. Cría en repisas de cantiles y usa territorios enormes, que una pareja defiende durante años. Planea con las alas en una «V» muy suave y bate poco, lo que la distingue de las rapaces menores.',
@@ -3865,6 +4505,17 @@ Tamaño enorme: dobla al ratonero en el mismo cielo',
   s.image_attribution = 'Jarkko Järvinen (CC BY-SA 2.0) · Wikimedia Commons',
   s.rarity_score = 2
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Aquila chrysaetos';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lúgano',
+  s.primary_habitat = 'Sus preferencias de hábitat van ligadas a sus requerimientos tróficos',
+  s.description = 'Se trata de un ave pequeña, de pico corto y fino, que muestra cola corta y escotada cuando está cerrada. Su coloración puede recordar a la de verdecillos, verderones comunes y verderones serranos. Pero los lúganos se distinguen bien por la combinación de los siguientes caracteres: pequeño tamaño, manchas amarillas en alas y cola, y franjas amarillas en los “hombros” de las alas. Además, los machos tienen el capirote y la garganta negros. Es una especie gregaria que se mezcla con otras, sobre todo fringílidos como pardillos, pinzones vulgares, verdecillos, verderones serranos, pinzones reales, etc. Pero, a diferencia de la mayoría de los fringílidos, el lúgano también busca alimento en las ramas de árboles de ribera, siendo común observarlo en alisos, olmos y abedules.',
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a abril',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carduelis_Spinus_(55339970).jpeg?width=1280',
+  s.image_attribution = 'Kobolt (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Spinus spinus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Carraca europea',
@@ -3880,6 +4531,28 @@ Posada quieta en cables, oteando el suelo',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Coracias garrulus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Vencejo real',
+  s.primary_habitat = 'Nidos:Acantilados,cortados,marinos e interior.Hasta 1900m.Sustrato preferido calizo,...Edificaciones',
+  s.description = 'Se trata del más grande y vistoso de los vencejos españoles. Presenta una silueta típica en forma de ballesta, cola corta y levemente ahorquillada, y alas muy largas y estrechas, de aleteos lentos. Posee pico corto, plano y con la boca muy ancha; patas emplumadas y extremadamente cortas, que le impiden posarse en el suelo; y pies pequeños y de fuertes garras, con los cuatro dedos dirigidos hacia delante. Muestra coloración general pardo oliva, más oscura en las alas, con dos destacadas áreas blancas en el vientre y la garganta, separadas ambas por un collar parduzco. Ambos sexos son iguales. Los jóvenes resultan muy similares a los adultos, aunque un poco más oscuros y con plumas ribeteadas de blanco. Esta ave pasa la mayor parte de su vida en el aire, por lo que casi siempre se la ve volando y agrupada, tanto en núcleos urbanos como en acantilados costeros y de interior.',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tachymarptis_melba_-Barcelona%2C_Spain_-flying-8.jpg?width=1280',
+  s.image_attribution = 'Birdwatching Barcelona (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Tachymarptis melba';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Paloma zurita',
+  s.primary_habitat = NULL,
+  s.description = 'Paloma similar a la bravía, pero de tamaño algo menor, y más ligera que la torcaz. En su plumaje, totalmente gris, destacan los tonos vinosos del cuello, el color gris pálido del obispillo y unas franjas más claras en las alas. Ambos sexos resultan similares. Tiene un vuelo más rápido y con mayor frecuencia de aleteo que la torcaz. Al volar se ve oscura la zona inferior de sus alas, que es pálida en las palomas bravía y torcaz.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/2019-03-17_Columba_oenas%2C_Jesmond_Dene_1.jpg?width=1280',
+  s.image_attribution = 'MPF (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Columba oenas';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Gaviota patiamarilla',
   s.primary_habitat = 'Costas, puertos, playas, acantilados y basureros',
   s.description = 'La gaviota grande más común del Mediterráneo: manto gris claro, patas amarillas y un pico robusto con una mancha roja en la mandíbula inferior. Es oportunista hasta el extremo —pesca, roba, carroñea y frecuenta puertos y vertederos— y sus colonias ocupan islotes y cortados costeros.',
@@ -3891,6 +4564,17 @@ Los jóvenes son pardos moteados y tardan cuatro años en cambiar',
   s.image_attribution = 'Jörg Hempel (CC BY-SA 2.0 de) · Wikimedia Commons',
   s.rarity_score = 2
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Larus michahellis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chochín',
+  s.primary_habitat = NULL,
+  s.description = 'El chochín común es un pajarillo de pequeño tamaño, aspecto compacto, cabeza voluminosa y cola corta, que se caracteriza por poseer un plumaje pardo-rojizo —algo más claro en las partes inferiores— finamente vermiculado de tonos más oscuros. Sobre el ojo presenta una marcada ceja de color crema. El pico es fino y algo curvado, con distinta longitud según la subespecie. Las diferencias entre edades y sexos son muy sutiles y resultan difíciles de reconocer en el campo. De carácter inquieto, el chochín —una de las especies más pequeñas de nuestra avifauna— cuando se excita suele sacudir y levantar su cola formando un ángulo de 90 grados, antes de desaparecer entre la densa vegetación.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carri%C3%A7a%2C_carricinha%2C_carruira%2C_no_seu_canto_possante_e_melodioso%2C_Winter_Wren%2C_with_a_melodious_and_powerful_singing_(53737498699)_(cropped).jpg?width=1280',
+  s.image_attribution = 'Luiz Lapa from Oeiras, Portugal (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Troglodytes troglodytes';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Águila perdicera',
@@ -3919,6 +4603,17 @@ Marca blanca y negra en el borde delantero del ala',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Lullula arborea';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Abejero europeo',
+  s.primary_habitat = 'Bosque con algunos claros, gran variedad de especies arbóreas.Desde el mar a 1600m, templado-húmedo',
+  s.description = 'La coloración de esta especie presenta considerables diferencias individuales, de tal manera que han llegado a distinguirse hasta 10 fases de plumaje diferentes. Como norma, las partes inferiores son claras y están provistas de un profuso barreado transversal marronáceo, en tanto que las dorsales, parduzcas, resultan bastante más oscuras que las ventrales; la cola, por su parte, muestra un característico franjeado. En la cabeza, que presenta una tonalidad grisácea, destaca el iris intensamente amarillo. Dentro de este patrón general, existen notables variaciones, y se pueden hallar desde individuos muy claros hasta otros extremadamente oscuros, casi melánicos; en todo caso, los ejemplares de coloración intermedia son los más frecuentes. Aparte de algunas diferencias en el diseño y coloración del plumaje, el rasgo más distintivo entre machos y hembras es el mayor tamaño de estas. Los jóvenes, por su parte, tienden a ser oscuros, con el iris marrón. En vuelo es llamativo el barreado ventral, así como las franjas de la cola, si bien lo más significativo y que permite diferenciar fácilmente al abejero de otras rapaces similares, como el busardo ratonero, es su silueta, con la cabeza apuntada, la cola larga —de ángulos algo redondeados— y las alas rectas y estrechas.',
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Wespenbussard_European_honey_buzzard_Pernis_apivorus.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Pernis apivorus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Búho real',
   s.primary_habitat = 'Cortados rocosos, barrancos y laderas con matorral y zonas abiertas de caza',
   s.description = 'El mayor búho de Europa, con casi dos metros de envergadura, penachos de plumas erguidos sobre la cabeza y ojos de un naranja encendido. Caza conejos, ratas e incluso otras rapaces. Su canto es un «bu-bo» profundo que se propaga kilómetros por los barrancos en las noches de invierno.',
@@ -3932,6 +4627,28 @@ Canto grave y profundo en las noches de invierno',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Bubo bubo';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gorrión chillón',
+  s.primary_habitat = NULL,
+  s.description = 'El chillón es un gorrión grande y corpulento, con la cabeza robusta y el pico muy fuerte. En su plumaje dominan los tonos marróngrisáceos con un profuso listado oscuro en el dorso. Las partes inferiores, por el contrario, son claras y están adornadas con amplias listas de color gris parduzco. En la cabeza destacan tres listas anchas: una clara; otra marrón-grisácea tras el ojo bajo aquella, y, por encima, una parda oscura. Otra lista de color marrón pálido recorre el píleo. Bajo la garganta presenta una mancha amarilla que a menudo permanece oculta o poco visible. En la cola aparecen unas manchas blancas hacia los extremos, que resultan bien visibles en vuelo. No hay diferencias de coloración entre machos y hembras. Los jóvenes son difíciles de distinguir de los adultos, incluso recién volados del nido. Se diferencian de estos por carecer de la mancha amarilla en la garganta. Asimismo, el dibujo de la cara presenta en ellos un aspecto poco definido y su coloración general es más suave.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Petronia_petronia_-Ariege%2C_Midi-Pyrenee%2C_France-8-4c.jpg?width=1280',
+  s.image_attribution = 'Petronia_petronia_-Ariege,_Midi-Pyrenee,_France-8.jpg: Sandra from … (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Petronia petronia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lavandera cascadeña',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Grey_Wagtail.jpg?width=1280',
+  s.image_attribution = 'User:Kclama (CC SA 1.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Motacilla cinerea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Collalba gris',
   s.primary_habitat = 'Pastizales pedregosos, canchales y zonas abiertas de montaña',
   s.description = 'Collalba de dorso gris en el macho, con antifaz negro y alas oscuras. Como todas las collalbas, delata su identidad al volar: obispillo blanco y cola blanca con una «T» negra invertida. Se posa erguida en piedras y hace carreras cortas por el suelo.',
@@ -3943,6 +4660,94 @@ Carreras cortas por el suelo entre piedra y piedra',
   s.image_attribution = 'Arnstein Rønning (CC BY-SA 4.0) · Wikimedia Commons',
   s.rarity_score = 2
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Oenanthe oenanthe';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Papamoscas cerrojillo',
+  s.primary_habitat = 'Zonas boscosas,de caducifolios, robles,hayas,pinares de altura,sotos espesos.Migrac:muy repartido,',
+  s.description = 'Es un paseriforme de pequeño tamaño, cuerpo compacto, cabeza ancha y pico fino. Fuera de la época de reproducción no hay diferencias entre los sexos en lo que al plumaje se refiere, ya que ambos lo poseen de color pardo claro por el dorso y blanco ocre en las partes inferiores. Los ojos, las patas y el pico son negros. En primavera, los machos adquieren un plumaje nupcial negro o marrón muy oscuro en las partes superiores, con una llamativa mancha blanca en la frente y un extenso panel blanco en las alas. Las partes inferiores se aclaran hasta adquirir un color blanco puro. A menudo queda algún resto de plumaje pardo en la cabeza o en las coberteras del hombro. Los jóvenes recién salidos del nido, por su parte, presentan un plumaje, en general, muy moteado de marrón claro y pardo, con aspecto escamoso.',
+  s.identification_tips = '',
+  s.seasonality = 'Abril, mayo, junio, agosto, septiembre, octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ficedula_hypoleuca_NRM.jpg?width=1280',
+  s.image_attribution = 'Uploaded by Aelwyn with the permission of the Author, who works wit… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Ficedula hypoleuca';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zarcero común',
+  s.primary_habitat = 'Amplio espectro de hábitats,soleados,densa cobertura arbustiva,<2m altura.Zarzales,majuelos,jarales',
+  s.description = 'Se trata de un pájaro de tamaño pequeño y tonos generales amarillo-verdosos. Presenta el dorso de color verde grisáceo y la zona ventral amarillenta (más pálida en los jóvenes). Es muy similar al raro zarcero icterino, del que resulta difícil de distinguir en el campo. Algunos ejemplares muy pálidos o con el plumaje muy desgastado pueden generar también confusión con otras especies, como el zarcero pálido o la curruca mosquitera. Ambos sexos son similares.',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Melodious_warbler_(Hippolais_polyglotta)%2C_Le_Petit_Loc''h%2C_Guidel%2C_Brittany%2C_France_(19765512360).jpg?width=1280',
+  s.image_attribution = 'Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Hippolais polyglotta';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cárabo',
+  s.primary_habitat = NULL,
+  s.description = 'Lo primero que llama la atención en el aspecto del cárabo común es su voluminosa cabeza, en la que destacan unos enormes y globosos ojos negros, lo que, unido a la ausencia de penachos cefálicos (“orejas”) y a su aspecto rechoncho y robusto, permite diferenciarlo fácilmente del resto de nuestras rapaces nocturnas. Su plumaje resulta extraordinariamente mimético y presenta una gran variabilidad en cuanto a color, ya que existen ejemplares grisáceos, rojizos y marrones. En todos los casos, el diseño consiste en una compleja mezcla de punteados, barrados y vermiculados, que imitan a la perfección la corteza de los árboles. La cara es de color blancuzco, grisáceo o rojizo, y en ella destacan dos listas blanquecinas a modo de “cejas”.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D0%BE%D0%B2%D1%91%D0%BD%D0%BE%D0%BA_%D0%A4%D0%B8%D0%BB%D1%8F%2C_%D0%A1%D0%B5%D1%80%D0%B0%D1%8F_%D0%BD%D0%B5%D1%8F%D1%81%D1%8B%D1%82%D1%8C_(Strix_aluco%2C_juv)%2C_%D0%A4%D0%B8%D0%BB%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D0%B0%D1%80%D0%BA.jpg?width=1280',
+  s.image_attribution = 'Dion Art (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Strix aluco';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Buitrón',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de una de las aves más pequeñas de Europa. Posee el dorso y el píleo de color pardo oscuro y fuertemente listados, el obispillo rojizo y las partes inferiores claras con los flancos y el pecho de color ocráceo. En vuelo ejecuta una trayectoria muy ondulante y presenta una silueta característica, con las alas redondeadas y la cola —que suele mantener parcialmente desplegada— con un perfil también redondeado y de longitud creciente de los extremos hacia el centro. En su parte distal, la cola muestra una banda de manchas negras y blancas muy visibles en vuelo. Cuando se posa entre la vegetación, suele aferrarse a los tallos manteniendo la verticalidad a la vez que agita continuamente la cola.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Zitting_cisticola_2024_04_19_(cropped).jpg?width=1280',
+  s.image_attribution = 'Alexis Lours (CC BY 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Cisticola juncidis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ruiseñor común',
+  s.primary_habitat = 'Pisos bioclimáticos termo,meso,supramediterráneos,matorrales,sotos densos,montes bajos, jardines...',
+  s.description = 'Ave estilizada, de pico fino y cola larga. Hembras y machos son iguales. Su manto y sus alas presentan un color pardo ocráceo uniforme, excepto en la cola, que posee un distintivo tono pardo rojizo. Las partes inferiores, mucho más claras, tienen color blanco crema. Este pájaro, muy escondidizo, rara vez abandona la protección de la espesura de la vegetación, pero resulta muy fácil de detectar por su inconfundible canto, muy sonoro, emitido incansablemente durante el día y la noche. Los jóvenes volantones, previamente a la muda parcial de su plumaje que tiene lugar antes de que comience la migración, exhiben un plumaje pardo que muestra plumas manchadas en su extremo con motas amarillentas. Los adultos se pueden confundir con carriceros comunes y ruiseñores bastardos, con los que a veces conviven en malezas ribereñas. Sin embargo, los carriceros presentan un tono ocre más pálido y amarillento, y carecen de la cola rojiza que luce el ruiseñor común. Lo mismo sucede con el ruiseñor bastardo, que además tiene una conspicua línea blanca sobre el ojo y posee unas alas y una cola cortas y redondeadas.',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Luscinia_megarhynchos_-_01.jpg?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Luscinia megarhynchos';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Milano negro',
+  s.primary_habitat = NULL,
+  s.description = 'Esta rapaz de mediano tamaño y coloración general bastante oscura se caracteriza por poseer unas alas más bien largas, así como una larga cola ahorquillada, si bien bastante menos que la de su cercano pariente, el milano real, que ofrece un aspecto más estilizado y es de mayor tamaño. El adulto luce una coloración considerablemente oscura en conjunto, aunque con la cabeza de color grisáceo y finamente listada; las partes inferiores se muestran algo rojizas y aparecen surcadas longitudinalmente por motas alargadas, en tanto que las coberteras alares presentan bordes bastante claros, por lo que definen un característico dibujo dorsal. La cola es marrón-grisácea con abundante barrado. El plumaje del joven es más claro y ostenta un patente moteado pálido en las regiones ventrales, mientras que en las dorsales las coberteras aparecen orladas de color crema, lo que le otorga un aspecto escamoso. La cola no es tan ahorquillada como en el adulto (a veces incluso carece de escotadura), en tanto que las alas, en su parte inferior, muestran dos grandes parches más claros que el resto, aunque no demasiado evidentes. En vuelo, el milano negro es un ave ágil que muestra una extraordinaria capacidad para maniobrar en el aire, aunque no resulta tan elegante como el milano real.',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Milvus_migrans_front(ThKraft).jpg?width=1280',
+  s.image_attribution = 'Thomas Kraft (ThKraft) (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Milvus migrans';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Aguilucho lagunero occidental',
+  s.primary_habitat = 'Masas de vegetación palustre,lagunas, ríos y pantanos.Nidos en vegetación a pocos cm del agua,suelo',
+  s.description = 'El aguilucho lagunero es una rapaz de tamaño medio y aspecto bastante estilizado, aunque ciertamente más robusto que los restantes aguiluchos presentes en nuestra fauna, a los que también supera en envergadura. La especie presenta, como es habitual en otros miembros del género Circus, un acusado dimorfismo sexual, ya que la hembra es bastante mayor y más pesada que el macho, y ambos sexos exhiben plumajes muy diferentes. En el macho adulto predominan los tonos marrones en el dorso, aunque la cabeza y la nuca son amarillentas o ligeramente grisáceas y surcadas por finas estrías oscuras. Las partes inferiores —especialmente a la altura de las patas y el bajo vientre— suelen adquirir un color rojizo, que va dando paso al crema o blanco sucio a medida que subimos hacia el pecho y la garganta, los cuales aparecen suavemente listados. Las rectrices y rémiges secundarias son grises; estas últimas describen una extensa banda alar, muy visible en vuelo . Ventralmente, las alas del macho son más bien claras —blancuzcas o de color gris pálido— y en ellas destacan fuertemente las negras rémiges primarias. Las hembras adultas, por su parte, resultan bastante más oscuras y menos contrastadas, en conjunto, que sus parejas, pues lucen un plumaje —tanto dorsal como ventralmente— dominado por los tonos pardoachocolatados, que en la cabeza, la garganta y los hombros son sustituidos por otros amarillentos o blanquecinos. Los ejemplares recién salidos del nido se parecen bastante a las hembras, aunque resultan más homogéneos y ligeramente más oscuros; además, solo presentan manchas más claras en la cabeza, la nuca y la garganta. Entre la librea juvenil y la de adulto existen varios plumajes de transición, que definen las diferentes edades del ave. Por otra parte, el aguilucho lagunero es una especie en la que no son infrecuentes los casos de melanismo y la aparición de diseños atípicos, lo que en ocasiones puede dificultar su identificación y propiciar las confusiones con especies de tamaño semejante.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Circus_aeruginosus_samiec2.jpg?width=1280',
+  s.image_attribution = 'Artur Mikołajewski (CC BY 2.5) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Circus aeruginosus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Herrerillo común',
+  s.primary_habitat = NULL,
+  s.description = 'Sus alas, cola y cabeza exhiben un bello color azulado, que se completa con un collar azul cobalto. El dorso posee tintes verdosos, y las partes inferiores son amarillentas. Presenta mejillas de color blanco en los adultos y amarillo pálido en los volantones. La coloración general podría recordar a la de un carbonero común. Pero este es notablemente mayor, con la cabeza negra y una banda de igual color que divide en dos el amarillo del pecho.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eurasian_blue_tit_Lancashire.jpg?width=1280',
+  s.image_attribution = 'Francis Franklin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Cyanistes caeruleus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Alcotán',
@@ -3971,6 +4776,28 @@ El macho muestra manchas blancas en alas y cola',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Caprimulgus europaeus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lechuza común',
+  s.primary_habitat = 'Es una especie típica de paisajes humanizados con áreas agrícolas en mosaico',
+  s.description = 'El único representante de la familia Tytonidae en territorio europeo es una rapaz de tamaño medio, aspecto esbelto, largas patas y voluminosa cabeza, que luce un contrastado plumaje en el que predominan los tonos leonados y dorados en el dorso y el blanco puro —incluso ligeramente plateado— en las zonas ventrales. Las plumas dorsales y la parte superior de las alas y la cola aparecen finamente vermiculadas por sutiles punteados de color negro, gris y blancuzco, en tanto que las regiones ventrales pueden mostrar un moteado variable. En el rostro —inconfundible por su forma de corazón— destacan los ojos intensamente negros y el prominente pico de color claro. Los jóvenes poseen un plumaje muy similar al de los adultos, de los que se diferencian por sutiles detalles, difíciles de distinguir en el campo. El vuelo de esta rapaz nocturna —de alas largas y relativamente anchas— es elegante, silencioso y ágil gracias al escaso peso del ave. No es raro ver a la lechuza cernirse hábilmente sobre un punto, mientras escudriña el terreno en busca de presas.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tyto_alba_close_up.jpg?width=1280',
+  s.image_attribution = 'Stevie B (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Tyto alba';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Águila pescadora',
+  s.primary_habitat = NULL,
+  s.description = 'Rapaz de mediano tamaño. Los adultos poseen partes inferiores blancas, con un moteado variable en el pecho; los individuos que tienen un collar de estrías más marcado en el pecho suelen ser hembras. Como contraste presentan partes superiores muy oscuras. El píleo es blanco, y tras el ojo aparece una lista ocular, a modo de antifaz, que recorre parte del cuello. En vuelo exhiben una silueta bastante característica, con cola corta y alas relativamente estrechas y “anguladas”. Vistos desde abajo, el cuerpo y las partes anteriores del ala, blancas, contrastan con las franjas oscuras que recorren las plumas de vuelo. La cola muestra una sucesión de barras oscuras. El joven es muy similar, pero sus partes superiores parecen como escamadas —debido al borde pálido en las plumas— y, en vuelo, las secundarias resultan algo más pálidas que en los adultos, con un barreado más patente. Cuando el águila pescadora vuela en busca de alimento, es capaz de cernirse con profundos aleteos antes de lanzarse al agua para capturar los peces con sus garras.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/2010-kabini-osprey.jpg?width=1280',
+  s.image_attribution = 'Yathin S Krishnappa (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 4
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Pandion haliaetus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Terrera común',
   s.primary_habitat = 'Llanos de cultivo, eriales y pastizales rasos con suelo desnudo',
   s.description = 'Alondra pequeña y pálida de aspecto muy limpio, con el pecho sin apenas rayado salvo una mancha oscura a cada lado del cuello. Anida en el suelo, en cultivos y baldíos. En migración se agrupa en bandos que se levantan del suelo todos a la vez.',
@@ -3982,6 +4809,39 @@ Ceja clara y pico corto y grueso de granívora',
   s.image_attribution = 'Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons',
   s.rarity_score = 3
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Calandrella brachydactyla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mosquitero musical',
+  s.primary_habitat = 'Bosques abiertos de frondosas, robledales, hayedos,castañares,arbustos,a media altura, media altura..',
+  s.description = 'Presenta gran parecido con otros congéneres, especialmente los mosquiteros común e ibérico, de los que se diferencia por poseer el pico y las patas pálidos, las listas faciales más marcadas —con una lista superciliar muy patente—, las partes inferiores más amarillas y el dorso de un tono verdoso más brillante.',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo, abril, mayo, agosto, septiembre, octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Willow_Warbler_Phylloscopus_trochilus.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Phylloscopus trochilus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Garza real',
+  s.primary_habitat = 'Se distribuye en invierno por zonas de aguas remansadas y poco profundas, coincidiendo con su carácter eminentemente ictiófago',
+  s.description = 'La garza real es un ave de gran tamaño —la mayor de las ardeidas que frecuentan nuestro país—, de figura estilizada, largo cuello y coloración general grisácea, con un diseño variable según la edad y la época del año. Durante el periodo reproductor, la cabeza de los adultos luce una coloración blanca y aparece adornada por una línea negra y un par de largas plumas de este mismo color, en tanto que el cuello, blanco también, se halla surcado longitudinalmente por dos bandas paralelas negruzcas. El largo y afilado pico presenta un tono rojizo, y las regiones dorsales son mayoritariamente cenicientas, con una llamativa mancha negra en los hombros. Fuera de la época de cría, el diseño es menos contrastado, sin las plumas ornamentales de la cabeza y con el pico amarillento. En vuelo adopta la postura característica de las garzas, con el cuello encogido en forma de “S” y las patas estiradas sobresaliendo por detrás de la cola, si bien la garza real resulta fácilmente diferenciable del resto de sus parientes debido a su gran tamaño.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ardea_cinerea_-_Pak_Thale.jpg?width=1280',
+  s.image_attribution = 'JJ Harrison (https://www.jjharrison.com.au/) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Ardea cinerea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Halcón de Eleonora',
+  s.primary_habitat = 'Estival presente de abril a primeros de noviembre',
+  s.description = 'Este halcón de mediano tamaño y aspecto estilizado se caracteriza por presentar varias fases de plumaje que nada tienen que ver con el sexo, pues machos y hembras se diferencian, además de por su tamaño —las hembras son mayores—, por tener la cera del pico, así como el anillo ocular, de diferente color (amarillo en el macho y grisáceo en la hembra). Los ejemplares adultos de plumaje más claro se parecen, en cierta medida, a un alcotán que tuviera las partes inferiores de color canela. Las zonas superiores y el píleo son de color pardo oscuro; las calzas y el vientre, rojizos y barrados; y las mejillas, pálidas y surcadas por una marcada bigotera. En el aire da la impresión de ser bastante oscuro por debajo, con las plumas de vuelo algo más pálidas. El adulto de plumaje intermedio es similar al anterior, pero las mejillas y el vientre resultan más oscuros, y carece de las tonalidades herrumbre de la fase clara. El adulto oscuro, por su parte, luce un plumaje completamente negruzco (aunque hay variantes de garganta y mejillas pálidas), algo más intenso en el dorso y ligeramente achocolatado —con un finísimo barrado apenas visible— en las regiones ventrales. En vuelo se ve un ave muy oscura, pero con las rémiges y rectrices más claras. El joven pálido es similar al adulto de la misma fase, pero más pardo en general y sin calzas rojizas, aunque con orlas claras en las plumas coberteras, lo que le da un cierto aspecto escamoso. El joven oscuro es completamente negruzco, con las rémiges y rectrices más pálidas y barradas.',
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eleonorenfalke1.jpg?width=1280',
+  s.image_attribution = 'Jürgen Dietrich (CC BY 3.0 de) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Falco eleonorae';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Acentor alpino',
@@ -3997,6 +4857,17 @@ Base del pico amarilla',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Prunella collaris';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Garcilla bueyera',
+  s.primary_habitat = NULL,
+  s.description = 'Esta garza de pequeño o mediano tamaño y formas bastante compactas se caracteriza por tener el cuello, las patas y el pico relativamente cortos y por el color mayoritariamente blanco de su plumaje, en el que apenas se aprecian diferencias sexuales. En el individuo adulto durante la época nupcial predomina el color blanco, pero adornado con tonos entre ocráceos y anaranjados en el píleo, la nuca, el pecho y la espalda; además, luce un intenso color rojizo en el pico, el ojo y las patas. El ave no reproductora es mucho más pálida, con un ligero tinte ocráceo en el píleo, el pico amarillo y las patas de un color muy variable. El joven es similar al adulto no reproductor, pero completamente blanco. Esta ave resulta muy blanca y rechoncha en vuelo, con las formas más compactas que otras garzas.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cattle_Egret_(Bubulcus_ibis)_Crop.jpg?width=1280',
+  s.image_attribution = 'Cattle_Egret_(Bubulcus_ibis)_-Florida_Keys.jpg: Stig Nygaard deriva… (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Bubulcus ibis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Cigüeñuela',
   s.primary_habitat = 'Salinas, marismas, charcas someras y humedales salobres',
   s.description = 'Limícola blanca y negra de patas rosadas larguísimas, desproporcionadas para su tamaño, que le permiten caminar por aguas someras picoteando insectos en la superficie. Es ruidosa y muy territorial cerca del nido, y sobrevuela en círculos a quien se acerca.',
@@ -4008,6 +4879,17 @@ Reclamo insistente y chillón al sobrevolar al intruso',
   s.image_attribution = '(Hans Hillewaert) (CC BY-SA 3.0) · Wikimedia Commons',
   s.rarity_score = 2
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Himantopus himantopus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Acentor común',
+  s.primary_habitat = NULL,
+  s.description = 'Pájaro del tamaño de un gorrión común, con el pico fino y puntiagudo, y las patas fuertes y rojizas. De comportamiento huidizo, le gusta moverse entre la vegetación baja y caminar por el suelo. Tiene las partes superiores del plumaje marrones y con escamado pardo oscuro, semejantes al dorso de un gorrión común. La cabeza, la garganta y el pecho son de un color gris plomizo, más intenso en los machos, con la zona auricular y el píleo marrones. Las partes posteriores del vientre poseen un tono gris más claro, con los flancos marrones. Los jóvenes exhiben cabeza y garganta de color castaño, en lugar de gris, y muestran todo el plumaje fuertemente listado de pardo oscuro. La base de su pico es naranja amarillenta, mientras que los adultos presentan todo el pico negro.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Acentor_com%C3%BAn23_by_Paco_G%C3%B3mez.jpg?width=1280',
+  s.image_attribution = 'Paco Gómez (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Prunella modularis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Tarabilla norteña',
@@ -4047,6 +4929,17 @@ Mucho más esquivo que el mirlo común',
   s.image_attribution = 'MPF (CC BY-SA 3.0) · Wikimedia Commons',
   s.rarity_score = 2
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Turdus torquatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Críalo',
+  s.primary_habitat = 'Bosques,zonas con córvidos',
+  s.description = 'Es un ave de tamaño medio, morfológicamente muy semejante al cuco, del que se diferencia por su aspecto más esbelto, por tener una cola más larga y por el colorido del plumaje. Este es de tono marrón grisáceo en las regiones dorsales, que aparecen salpicadas de motas blancas, al igual que ocurre con las plumas del ala. La zona ventral es de color blanquecino, con la garganta teñida de ocre-amarillento. En la cabeza luce un capirote de color gris plateado —que remata en una pequeña cresta ligeramente eréctil— y un anillo ocular rojo. El joven presenta una coloración incluso más vistosa que los adultos, pues exhibe un intenso color achocolatado con abundantes motas blancas en el dorso y unas regiones ventrales blancas, que se tornan amarillo-ocráceas en pecho y cuello. Las plumas de vuelo poseen un vistoso color rojizo, en tanto que el capirote es negro y el anillo ocular más conspicuo que el de los adultos.',
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Clamator_glandarius.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Clamator glandarius';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Colirrojo real',
@@ -4101,6 +4994,72 @@ Del tamaño de un puño, mucho menor que una perdiz',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Coturnix coturnix';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mosquitero papialbo',
+  s.primary_habitat = 'Forestal termófila,laderas de solana.Nidos:bosque planifolio,conífera.Zona montana,submediterránea',
+  s.description = 'El papialbo presenta la típica silueta de los mosquiteros: cuerpecillo rechoncho, patas frágiles y pico fino, pero se diferencia de los demás por su coloración general mucho más clara, especialmente en la cabeza y las partes ventrales. Las patas son negras y las alas, el dorso y las partes exteriores de la cola, verdosos, en contraste con el resto del cuerpo, de color blanquecino. La especie no manifiesta dimorfismo sexual.',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Western_Bonelli''s_Warbler_-_Aosta_Valley_-_Italy_S4E5346_(19079885220).jpg?width=1280',
+  s.image_attribution = 'Francesco Veronesi from Italy (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Phylloscopus bonelli';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca mosquitera',
+  s.primary_habitat = 'Campiñas verdes,sotos,orlas de bosque,zonas de vegetación ribereña,masas arboladas con sotobosque..',
+  s.description = 'Pajarillo de fisonomía más compacta y robusta que la de otras currucas —aunque bastante similar a la de la curruca capirotada—, con cabeza más redondeada y pico más corto y grueso. Un fino anillo orbital rodea al ojo. De todas formas, se trata de un ave que no cuenta con rasgos distintivos realmente identificativos o llamativos, y su aspecto general resulta bastante uniforme. Presenta las partes ventrales de color ante pálido y el dorso pardo-grisáceo. En torno a su cuello destaca ligeramente un discreto collar más grisáceo. Ambos sexos son iguales.',
+  s.identification_tips = '',
+  s.seasonality = 'Abril, mayo, agosto, septiembre, octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sylvia_borin_(%C3%96rebro_County).jpg?width=1280',
+  s.image_attribution = 'Biillyboy (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Sylvia borin';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Porrón pardo',
+  s.primary_habitat = NULL,
+  s.description = 'Este pato buceador de pequeño o mediano tamaño y cuerpo bastante corto presenta una cabeza con el característico perfil de porrón, es decir, frente alta y píleo apuntado. El macho adulto en plumaje nupcial exhibe una bella tonalidad herrumbre o castaño intenso, más oscuro en el dorso y más pálido en los flancos. El iris es de color blanco, por lo que destaca vivamente sobre el plumaje de la cabeza. La hembra adulta resulta más sombría y menos contrastada y tiene el iris de color pardo. Los jóvenes son similares a la hembra adulta, pero de color más apagado, en general. En vuelo se observan muy nítidamente unas anchas bandas de color blanco puro que llegan hasta los extremos alares, así como la coloración blanca del vientre y la popa.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aythya_nyroca_at_Martin_Mere_1.jpg?width=1280',
+  s.image_attribution = 'Francis Franklin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 5
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Aythya nyroca';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cetia ruiseñor',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de un pájaro de pequeño tamaño, de diseño muy discreto y aspecto rechoncho, con alas y cola redondeadas. Presenta el dorso de color pardo-rojizo oscuro y las zonas inferiores grisáceas, con motas claras en las infracoberteras caudales. Posee una ceja pálida, así como una zona auricular grisácea y un pico muy fino. Ambos sexos son iguales en apariencia y solamente se diferencian por pequeñas variaciones de tamaño. De hábitos escondidizos, resulta difícil de observar, pero es, en cambio, muy fácil de detectar en las espesas marañas ribereñas que frecuenta por su inconfundible y sonoro canto. Cuando se desplaza entre la vegetación, levanta y despliega frecuentemente la cola.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/37-090505-cettis-warbler-at-Kalloni-east-river.jpg?width=1280',
+  s.image_attribution = 'Mark S Jobling (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Cettia cetti';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Milano real',
+  s.primary_habitat = NULL,
+  s.description = 'En el plumaje de esta mediana rapaz dominan los tonos rojizos, profusamente rayados de oscuro en las regiones ventrales y con un característico aspecto orlado en el dorso debido a los bordes pálidos de las coberteras alares. La cabeza y el cuello, por su parte, presentan un tono gris pálido surcado por finas estrías muy oscuras. En vuelo resulta inconfundible, no solo por la extraordinaria habilidad con la que ejecuta todo tipo de maniobras y regates, sino por poseer una silueta característica, en la que destacan una cola profundamente ahorquillada, de color rojizo anaranjado, y unas largas alas acodadas y provistas de una mancha blanca muy visible. Cuando está posado, también resulta fácil diferenciarlo de otras rapaces de tamaño similar, además de por la forma de la cola, por poseer una figura bastante estilizada. Los jóvenes son similares a los adultos, aunque con una coloración general más clara y uniforme, sin el característico tono grisáceo de la cabeza y con la cola más corta y menos ahorquillada.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Milvus_milvus_R(ThKraft).jpg?width=1280',
+  s.image_attribution = 'Thomas Kraft (ThKraft) (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 5
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Milvus milvus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Avión zapador',
+  s.primary_habitat = 'Cría:en colonias excadas en taludes arenosos junto a ríos o lagos,muros.Dormideros en carrizales',
+  s.description = 'Se trata del menor de nuestros aviones y golondrinas, aunque sólo es ligeramente más pequeño que el resto. Exhibe partes superiores de color pardo mate e inferiores blanquecinas, con límites netos entre ambas. Posee alas largas y apuntadas, que en vuelo destacan por su parte inferior y anterior más oscura. Tiene cola corta levemente ahorquillada, patas cortas sin emplumar, boca muy ancha, y pico corto, plano y negro. Resulta característica la ancha banda transversal de color pardo en el pecho. Ambos sexos son iguales. Los jóvenes, muy similares a los adultos, presentan la cabeza, el cuello y el bajo vientre teñidos de color cremarojizo, en tanto que las plumas del dorso y la cabeza muestran bordes pálidos. El avión zapador suele observarse en grupos, tanto en vuelo como posado en taludes y cables, y está más ligado al agua que otros aviones y golondrinas.',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Riparia_riparia.jpg?width=1280',
+  s.image_attribution = 'Axel Strauß (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Riparia riparia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Treparriscos',
   s.primary_habitat = 'Paredes rocosas, cantiles y barrancos; en invierno baja a roquedos y edificios',
   s.description = 'Pájaro de alta montaña que trepa por paredes verticales agitando las alas como una mariposa gigante, mostrando unos vistosos paneles rojos. Extrae insectos de las grietas con un pico largo y fino. En invierno desciende y puede aparecer en cortados bajos, castillos y presas.',
@@ -4127,6 +5086,17 @@ Alas muy largas y estrechas en proporción al cuerpo',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Circus pygargus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Escribano cerillo',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de un escribano de considerable tamaño y cola larga, en el que predominan los tonos acastañados, amarillentos y pardogrisáceos. El macho, durante la época de cría, luce la cabeza y el vientre de un brillante amarillo, con el característico antifaz de tres bandas propio de los escribanos muy desdibujado, casi inexistente, mientras que el pecho y el obispillo se tornan rojizos. La librea de la hembra se asemeja a la del macho durante el periodo invernal; en ella dominan las coloraciones más apagadas, grisáceas y pardas, con tonos amarillos más pálidos y menos extendidos. Los jóvenes se parecen mucho a las hembras, pero son más grisáceos, con apenas una leve tonalidad amarilla en la región ventral.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Emberiza_citrinella_-New_Zealand_-North_Island-8.jpg?width=1280',
+  s.image_attribution = 'Alan Vernon (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Emberiza citrinella';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Buitre común',
   s.primary_habitat = 'Sierras con cortados para criar; se alimenta en campo abierto',
   s.description = 'Buitre grande y pardo, con la cabeza y el cuello cubiertos de plumón blanco y una gorguera de plumas en la base del cuello. Planea horas sin batir las alas aprovechando las térmicas, y localiza los cadáveres vigilando lo que hacen los demás buitres a kilómetros de distancia.',
@@ -4138,6 +5108,17 @@ Planea en círculos sin apenas batir las alas',
   s.image_attribution = 'Thermos (CC BY-SA 2.5) · Wikimedia Commons',
   s.rarity_score = 2
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Gyps fulvus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Reyezuelo sencillo',
+  s.primary_habitat = NULL,
+  s.description = 'Junto a su cercano pariente, el listado, el reyezuelo sencillo es una de las aves más pequeñas de Europa. Presenta el dorso verdoso, con alas más oscuras sobre las que destaca una franja blanquecina. Se diferencia de su pariente por carecer de la lista superciliar clara, así como de la lista ocular negra. Dos tiras negras —que no se unen en la frente— surcan su píleo, flanqueando una tercera banda frontal más ancha de color naranja en los machos y amarillo en las hembras. Los jóvenes carecen de todas estas listas.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%D0%96%D0%B5%D0%BB%D1%82%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D1%80%D0%BE%D0%BB%D1%91%D0%BA_(Regulus_regulus)%2C_%D0%91%D0%B8%D1%82%D1%86%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BB%D0%B5%D1%81.jpg?width=1280',
+  s.image_attribution = 'Dion Art (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Regulus regulus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Esmerejón',
@@ -4153,6 +5134,105 @@ Sin bigotera marcada, a diferencia del peregrino',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Falco columbarius';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Andarríos grande',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de un ave limícola de tamaño entre pequeño y mediano, de aspecto estilizado, con patas de mediana longitud que apenas sobresalen de la cola en vuelo, y pico igual a la longitud de la cabeza. Como otros andarríos, cuando está posado suele realizar un continuo movimiento de balanceo. La coloración es bastante oscura en la región dorsal, en marcado contraste con la garganta y las zonas ventrales, de color blanco. Presenta un límite nítido entre el pecho oscuro y el vientre blanco. Las patas son de color grisáceo oscuro y muestra también una ceja blanca, que es corta y solo se extiende entre el pico y el ojo. El adulto en plumaje nupcial exhibe numerosas pintas blancas en las partes superiores, que destacan notablemente sobre el fondo marrón oscuro. El píleo, el cuello y el pecho aparecen listados de marrón y blanco. Los ejemplares no reproductores presentan motas menos destacadas, de color ante apagado, el píleo apenas estriado de claro y el pecho grisáceo, con un estriado más difuso. El juvenil, por su parte, es semejante al adulto no reproductor, pero con las pintas de las partes superiores más conspicuas y con un estriado menos definido en el pecho. El andarríos grande es un ave tímida y nerviosa, a la que, normalmente, no se descubre hasta que alza el vuelo. En ese momento resulta fácil de identificar debido a su color muy oscuro, en el que resalta el obispillo blanco y el barrado transversal de la cola',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Green_Sandpiper_(Tringa_ochropus)-_In_Breeding_plumage_at_Bharatpur_I_IMG_5533.jpg?width=1280',
+  s.image_attribution = 'J.M.Garg (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Tringa ochropus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Garcilla cangrejera',
+  s.primary_habitat = 'Estival (desde finales de abril), aunque también se da invernada en nuestro país',
+  s.description = 'Garza de pequeño-mediano tamaño. El adulto reproductor tiene las partes superiores rosado-anaranjadas y las inferiores más blanquecinas. Del píleo le cuelgan largas plumas pardas, con raquis más pálido, que le dibujan una melena sobre el dorso. Su pico es azulado, con el extremo negro, y luce patas naranjas. El adulto no reproductor es mucho más parduzco, con toda la cabeza y el cuello repletos de estrías longitudinales blancas y pardas, patas amarillentas y pico naranja sucio. Los jóvenes son muy similares a los adultos no reproductores. En vuelo, la garcilla cangrejera se muestra muy pálida, ya que sus alas y cola son blancas, y el cuerpo y la cabeza rosados. Se localiza generalmente en aguazales abiertos, en orillas o en aguas someras.',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Crabier_chevelu.jpg?width=1280',
+  s.image_attribution = 'Pierre Dalous (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 4
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Ardeola ralloides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Golondrina dáurica',
+  s.primary_habitat = 'Desde parameras secas hasta altas cumbres.Nidos bajo puentes,riscos,acantilados,zonas llanas bajas',
+  s.description = 'De apariencia similar a la golondrina común, exhibe dorso negro, con reflejos azulados, y vientre blanco sucio, con flancos anaranjados y algunas rayas tenues. Los rasgos más característicos de la especie son la nuca y la cara anaranjadas, del mismo color que el obispillo. Las alas, largas y apuntadas, también muestran tonos naranjas en la parte inferior delantera. Posee una cola muy larga y muy ahorquillada,de color negro uniforme, tanto por arriba como por abajo. Tiene patas cortas sin emplumar, boca muy ancha, y pico corto, plano y negro. Ambos sexos son iguales. Los jóvenes presentan en el dorso plumaje negro mate, con plumas ribeteadas en blanco, siendo las zonas naranjas de menor intensidad; incluso el obispillo parece blanco en ocasiones. Esta ave se observa frecuentemente cerca de puentes y roquedos, y exhibe un vuelo ágil, rápido y acrobático.',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Golondrina_d%C3%A1urica_Cecropis_daurica_1.jpg?width=1280',
+  s.image_attribution = 'Agustín Povedano from El Puerto de Santa María, Extremadura y Andal… (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Cecropis daurica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cernícalo primilla',
+  s.primary_habitat = NULL,
+  s.description = 'De aspecto bastante similar al del cernícalo vulgar, el primilla se distingue de este por su menor tamaño y por una serie de características morfológicas que algunas veces —como sucede con el color de las uñas: blancas en el primilla, negras en el vulgar— no son fácilmente identificables en el campo. El macho adulto tiene el dorso rojizo, sin manchas. La cabeza y las grandes coberteras son de color gris azulado; las plumas de vuelo, negras, y las partes inferiores, de un suave tono crema con tintes rosados y levemente tachonado de pintas oscuras. Carece de bigotera, a diferencia del cernícalo vulgar, y presenta la cera del pico y el anillo ocular de color amarillo. En vuelo ofrece un aspecto muy pálido, tanto en la cara inferior de las alas como en el cuerpo y la cola; esta es de color gris claro y aparece rematada por una banda terminal negra sobre la que destacan las rectrices centrales, que son más largas. La hembra luce un tono general bastante más apagado y homogéneo. Sus partes superiores son de color marrón rojizo, con un profuso barrado transversal, y las inferiores, muy claras, aunque con un moteado más abundante que el del macho. La bigotera resulta menos marcada que la de la hembra del cernícalo vulgar, y en vuelo las partes inferiores son más pálidas y menos barradas. El joven es muy similar a la hembra adulta y también a hembras y jóvenes de cernícalo vulgar. De los segundos se distingue por tener una bigotera poco marcada y ser menos barrado en la parte inferior.',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lesser_Kestrel_from_Fujeirah.jpg?width=1280',
+  s.image_attribution = 'Shah Jahan (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Falco naumanni';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pinzón real',
+  s.primary_habitat = NULL,
+  s.description = 'Los machos y hembras de pinzón real tienen el pecho y la garganta de color anaranjado pálido, el pico amarillento y el vientre blanco. En plumaje nupcial los machos presentan un intenso color negro en la cabeza, que comienzan a adquirir ya durante el invierno, junto con un pico que se muestra de color negro. Muy similar en forma y tamaño al pinzón vulgar, del que se diferencia por su conspicuo obispillo blanco y por carecer de las bandas blancas de las alas y la cola típicas de los pinzones vulgares.',
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a marzo',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pinson_du_nord.jpg?width=1280',
+  s.image_attribution = 'Pierre Dalous (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Fringilla montifringilla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alimoche común',
+  s.primary_habitat = 'Nidifica en cavidades de acantilados',
+  s.description = 'A medio camino entre las rapaces estrictamente carroñeras y las cazadoras, el alimoche es un ave de tamaño entre mediano y grande y aspecto completamente inconfundible. Los ejemplares adultos lucen un plumaje mayoritariamente blanco sucio —con algunas regiones teñidas de crema—, a excepción de las rémiges, que son completamente negras. En la anatomía de esta rapaz destacan, por otra parte, una llamativa gorguera de plumas desflecadas y un tanto desordenadas en la cabeza y el cuello —lo que le confiere un aire bastante peculiar—, además de la cara, que aparece desnuda y coloreada de un llamativo amarillo. Los jóvenes son mucho más oscuros, pues exhiben una librea parda que, a lo largo de sucesivas mudas, va pasando por diferentes patrones de coloración hasta llegar al plumaje definitivo cuando cuentan con cinco años. Los jóvenes presentan también la cara de color gris azulado. Otra de las características anatómicas del alimoche es la posesión de un pico fino y relativamente largo, que le impide desgarrar los cueros de los grandes cadáveres como hacen los buitres mayores, aunque le confiere, en cambio, una gran adaptabilidad a la hora de seleccionar el alimento. En vuelo, el adulto aparece como un ave muy blanca, en cuya silueta destacan las estrechas y largas alas y una cola larga, en forma de cuña, que dotan al ave de gran capacidad de maniobra. El joven, sin embargo, aunque mantiene la característica silueta de la especie, resulta muy oscuro.',
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Egyptian_vulture_2.jpg?width=1280',
+  s.image_attribution = 'Egyptian_vulture.jpg: Kousik Nandy derivative work: Robertonemo (talk) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 5
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Neophron percnopterus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tarro blanco',
+  s.primary_habitat = NULL,
+  s.description = 'Anátida intermedia (por forma y comportamiento) entre un ganso y un pato típicos, que presenta las patas muy centradas en el cuerpo, en una posición que facilita la acción de pastar. Su coloración general es blanca, con el dorso más oscuro (verdoso) y un ancho collar pardorrojizo en el pecho. La cabeza y el cuello son de un verde oscuro, a modo de capuchón. El pico rojo posee un llamativo abultamiento en la frente de los machos. Los jóvenes son mucho más pálidos, sin collar y sin capucha definida, con el dorso pardo escamado, cabeza y cuello oscuros, cara blanquecina y pico rosado. En vuelo, las primarias y secundarias, de color muy oscuro —las últimas de un tono verde botella—, contrastan con el tono general blanco.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Common_Shellduck_(Tadorna_tadorna)_(26499348215).jpg?width=1280',
+  s.image_attribution = 'Bernard DUPONT from FRANCE (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Tadorna tadorna';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carricero común',
+  s.primary_habitat = 'Marismas,estuarios costeros,lagunas interiores,riberas fluviales,humedales con plantas palustres...',
+  s.description = 'Pequeño pájaro insectívoro de tonos ocres uniformes. Como otros carriceros y carricerines, posee una cabeza apuntada, con la frente aplanada y el pico relativamente largo y fino. Tiene el dorso de color marrón, con tintes oliváceos o grises dependiendo de la edad y el desgaste del plumaje. Las partes inferiores muestran tonos ocres pálidos. Carece de las listas y cejas cefálicas distintivas de otras especies del género Acrocephalus y, a diferencia de otros carriceros, presenta el obispillo de color marrón rojizo. Ambos sexos son similares.',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carricerocomun.jpg?width=1280',
+  s.image_attribution = 'Carles Pastor (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Acrocephalus scirpaceus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chorlitejo chico',
+  s.primary_habitat = NULL,
+  s.description = 'Esta limícola de pequeño tamaño, movimientos rápidos y cabeza voluminosa se caracteriza por poseer un pico muy corto y patas algo más largas que la anchura del cuerpo. El macho en plumaje nupcial tiene el píleo de color marrón grisáceo y separado del dorso —también grisáceo— por un doble collar blanco y negro cerrado completamente por su parte frontal; en la cabeza presenta un diseño característico, que viene definido por una frente blanca y por la presencia de una barra frontal negra separada del píleo mediante una fina banda blanca. El anillo ocular, al igual que las patas, es amarillo. La hembra resulta similar, pero con el negro de la cabeza más apagado. En el adulto no reproductor, sin embargo, casi todo el negro aparece sustituido por marrón. El diseño general del joven es semejante al del no reproductor, pero con los bordes de las plumas de las partes superiores orlados de ante pálido; el collar es oscuro y no se cierra por completo.',
+  s.identification_tips = '',
+  s.seasonality = 'Enero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Charadrius_dubius_4_(Marek_Szczepanek).jpg?width=1280',
+  s.image_attribution = 'Marek Szczepanek (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Charadrius dubius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Calandria común',
   s.primary_habitat = 'Llanos cerealistas, pastizales y estepas de suelo profundo',
   s.description = 'La mayor de las alondras ibéricas, robusta y de pico grueso, con una mancha negra muy marcada a cada lado del cuello. Canta en vuelo, describiendo círculos altos con un torrente de notas en el que imita a otras aves. En invierno forma bandos numerosos en los llanos.',
@@ -4164,6 +5244,17 @@ Pico grueso y pálido, de granívora',
   s.image_attribution = 'Bereşe.jpg: Dûrzan cîrano derivative work: Osado (CC BY-SA 3.0) · Wikimedia Commons',
   s.rarity_score = 2
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Melanocorypha calandra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ganga ortega',
+  s.primary_habitat = NULL,
+  s.description = 'Ave de hábitos terrestres, compacta, corpulenta y de colores miméticos. El macho posee tonos grises en la cabeza y el cuello, excepto en la garganta, naranja y con la base negra. Una banda pectoral negra delimita el pecho asalmonado, mientras que el vientre se muestra llamativamente negro. El dorso y las alas plegadas exhiben grandes ocelos dorados sobre un fondo grisáceo. La cola es corta, vermiculada por arriba y blanca con banda subterminal negra por abajo. Tiene grises el pico y las patas, estas últimas de dedos cortos y con la parte anterior del tarso emplumada en blanco. Se distingue de la ganga ibérica por su mayor tamaño, su vientre negro y su cola más corta, sin las largas plumas centrales. La hembra resulta menos vistosa que el macho, con un patrón general terroso muy vermiculado, tanto en el dorso como en el pecho, el píleo y la nuca. Además de la banda pectoral y el vientre negro, tiene una pequeña línea negra en la garganta, mientras que posee un pecho. Los jóvenes son una versión más pálida y menos contrastada de los adultos de cada sexo. Se trata de una especie de hábitos gregarios, más marcados fuera de la época de cría, y a la que se suele ver en pequeños grupos. Su vuelo es poderoso y de batir lento, y cuando vuela muestra sus alas apuntadas, blancas y negras por abajo.',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pterocles_orientalis_(Charyn).jpg?width=1280',
+  s.image_attribution = 'Ron Khight (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 4
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Pterocles orientalis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Torcecuello euroasiático',

@@ -337,8 +337,12 @@ function main() {
     const ya = fichadas.get(sci);
     const eidos = identificadorReutilizado(ya && ya.eidos, taxonIdDudoso, sci, 'eidosTaxonId');
     const gbifKey = identificadorReutilizado(ya && ya.gbif, taxonIdDudoso, sci, 'gbifSpeciesKey');
-    const eidosTaxonId = eidos.valor;
-    if (!eidos.hayFicha) sinTaxonId.push(sci);
+    // Si ningún otro parque la tiene fichada, la clave maestra se toma del catálogo universal, donde
+    // la deja `build-species-universal.js` al dar de alta la ficha. Sin este segundo origen, una
+    // especie que se ESTRENA en el catálogo nace sin `eidosTaxonId` por no tener de quién copiarlo
+    // —le pasaba a las 99 primerizas de Carrascoy—, que es justo al revés de lo que se quiere.
+    const eidosTaxonId = eidos.valor !== null ? eidos.valor : (u.eidosTaxonId != null ? u.eidosTaxonId : null);
+    if (!eidos.hayFicha && eidosTaxonId == null) sinTaxonId.push(sci);
 
     const ficha = {
       id: antes ? antes.id : siguienteId++,
@@ -406,6 +410,11 @@ function main() {
   if (pendientes.length) {
     if (!DRY) { fs.mkdirSync(OUT_DIR, { recursive: true }); fs.writeFileSync(pendientesPath, informe, 'utf8'); }
     console.log(previoInforme === informe ? `= ${rel(pendientesPath)}` : `${DRY ? '~' : '+'} ${rel(pendientesPath)}`);
+  } else if (previoInforme !== null) {
+    // Sin pendientes, el informe de la ejecución anterior es una MENTIRA que se queda en el repo
+    // diciendo que faltan cien especies. Se borra: el fichero es el estado, no un histórico.
+    if (!DRY) fs.unlinkSync(pendientesPath);
+    console.log(`${DRY ? '~' : '-'} ${rel(pendientesPath)} (ya no queda ninguna pendiente)`);
   }
 
   // 7) Resumen ---------------------------------------------------------------------------------------

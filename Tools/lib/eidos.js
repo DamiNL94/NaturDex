@@ -112,6 +112,14 @@ async function conservationByScope(idtaxon, opts = {}) {
  * `ccaa` es el nombre de la comunidad cuyo catálogo regional interesa ("Murcia", "Andalucía"…): el
  * campo de estado autonómico de la ficha depende de la norma de CADA comunidad, así que el filtro
  * es un parámetro y no una constante (era `/murcia/i` fijo, atado al parque piloto).
+ *
+ * ⚠️ SEGUNDA TRAMPA DE LA VISTA, y esta llegó a producción: `ambito` NO basta para saber si una
+ * norma es estatal. EIDOS sirve las filas del Catálogo Regional de Castilla-La Mancha (Ley 9/1999)
+ * con `ambito: "Nacional"`, y solo se delatan por traer `ccaa: "Castilla-La Mancha"` relleno. De ahí
+ * salen las 60 fichas del catálogo cuyo `spainStatus` cita una ley manchega —39 en Sierra Espuña y
+ * 21 en Carrascoy—, que el ledger daba por incorregibles sin un «índice de normas del IEPNB» que no
+ * existe: la fuente sí distingue, pero por `ccaa` y no por `ambito`. Una norma estatal no tiene
+ * comunidad, así que `nacional` exige las dos cosas.
  */
 async function legalStatus(idtaxon, ccaa = null, opts = {}) {
   const filas = await rows('v_estadolegal', [
@@ -121,17 +129,25 @@ async function legalStatus(idtaxon, ccaa = null, opts = {}) {
   const re = ccaa ? new RegExp(ccaa.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i') : null;
   return {
     vigentes,
-    nacional: vigentes.filter(r => r.ambito === 'Nacional'),
+    nacional: vigentes.filter(r => r.ambito === 'Nacional' && !r.ccaa),
     autonomico: re ? vigentes.filter(r => re.test(r.ccaa || '') || re.test(r.norma || '')) : [],
   };
 }
 
-/** Nombre común preferente en castellano, si EIDOS lo tiene. */
+/**
+ * Nombre común preferente en castellano, si EIDOS lo tiene.
+ *
+ * Las columnas de esta vista NO se llaman como las de las demás: el nombre está en `nombre_comun` y
+ * la marca de preferente en `espreferente`. Pedir `select=nombre,idioma,preferente` devuelve un 400
+ * de PostgREST («column does not exist»), así que esta función falló siempre desde que se escribió;
+ * no se notó porque ninguna herramienta la llegó a llamar hasta el alta de fichas universales.
+ */
 async function commonName(idtaxon, opts = {}) {
-  const filas = await rows('v_nombrescomunes', [`idtaxon=eq.${idtaxon}`, 'select=nombre,idioma,preferente'], opts);
+  const filas = await rows('v_nombrescomunes',
+    [`idtaxon=eq.${idtaxon}`, 'select=nombre_comun,idioma,espreferente,tiponombre'], opts);
   const es = filas.filter(r => !r.idioma || /castellano|espa/i.test(r.idioma));
-  const pref = es.find(r => r.preferente) || es[0] || filas[0];
-  return pref ? pref.nombre : null;
+  const pref = es.find(r => r.espreferente) || es[0] || filas[0];
+  return pref ? pref.nombre_comun : null;
 }
 
 module.exports = {

@@ -27,13 +27,17 @@ Cada una se paga mejor ahora que en el espacio número treinta.
      decidir si el catálogo sigue el nombre aceptado de EIDOS a rajatabla y, en varios, si la cita del
      espacio se refiere de verdad al taxón que GBIF considera aceptado.
    - `eidosTaxonId` duplicados: **0**. El esparto era el único de su clase.
-4. **`spainStatus` con normas de otras comunidades autónomas.** El campo describe el estado legal *en
-   España* y en **60 fichas** cita una norma autonómica ajena —sobre todo la Ley 9/1999 de
-   Castilla-La Mancha—: 39 en Sierra Espuña y 21 en Carrascoy, heredadas del catálogo universal. El
-   corrector existe (`fix-sierra-espuna-revision.js`, que ya lo resolvió para un subconjunto y **cuya
-   primera versión hubo que tirar** por reconstruir el campo entero en vez de podarlo), pero exige el
-   **índice de normas del IEPNB, que no está versionado**: hay que volver a descargar la vista y, ya
-   puestos, guardarla en `fuentes/` para que la corrección sea repetible sin red.
+4. ~~**`spainStatus` con normas de otras comunidades autónomas.**~~ **PAGADA el 2026-08-10.** Eran 60
+   fichas (39 en Sierra Espuña, 21 en Carrascoy) citando una norma autonómica ajena —la Ley 9/1999 de
+   Castilla-La Mancha, sobre todo— en un campo que describe el estado legal *en España*.
+   > El diagnóstico de que hacía falta «el índice de normas del IEPNB, que no está versionado» **era
+   > erróneo**, y por eso la deuda llevaba abierta desde julio. No era falta de datos: era una
+   > lectura equivocada de la vista. **EIDOS sirve las filas del Catálogo Regional de Castilla-La
+   > Mancha con `ambito: "Nacional"`**, así que filtrar por ámbito —que es lo que hacía el
+   > pipeline— las deja pasar. Lo que sí las distingue es que traen `ccaa` relleno, y una norma
+   > estatal no tiene comunidad. Corregido en `Tools/lib/eidos.js` (`legalStatus` exige ahora las dos
+   > condiciones) y propagado con
+   > `build-species-universal.js --refrescar --refrescar-campos spainStatus`. Quedan **0**.
 5. **Tabla de reconciliación taxonómica nacional.** Existe la del piloto
    (`out/cabo-cope-puntas-calnegre-reconciliacion.json`, 124 especies); falta acumular todos los
    espacios sin duplicar por `eidos_taxonid`.

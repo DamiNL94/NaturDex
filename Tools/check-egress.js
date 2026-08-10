@@ -39,7 +39,12 @@ const HOSTS = [
   ['api.gbif.org',                 'ocurrencias por hábitat (gbif:habitats) y fotos de campo'],
   ['iepnb.gob.es',                 'EIDOS: taxonomía, UICN y estado legal'],
   ['geoportal.imida.es',           'límites oficiales de los espacios (n1:build, n1:refina)'],
-  ['info.igme.es',                 'IELIG: lugares de interés geológico (cascada de POIs)'],
+  // El IELIG son DOS hosts y hay que preguntar por los dos. `info.igme.es` sirve el visor, que es
+  // HTML y no tiene los datos; las fichas de LIG salen del ArcGIS de `mapas.igme.es`. Con solo el
+  // primero, el informe daba el IELIG por abierto y la cascada de POIs se estrellaba con un 403 del
+  // proxy a mitad de sesión (pasó el 2026-08-10 en Carrascoy).
+  ['info.igme.es',                 'IELIG: visor de lugares de interés geológico'],
+  ['mapas.igme.es',                'IELIG: el servicio con las fichas de LIG (cascada de POIs)'],
   ['murcianatural.carm.es',        'fichas y cartografía del organismo gestor'],
   ['www.borm.es',                  'PORN y PRUG publicados'],
   ['build.protomaps.com',          'mapa base sin conexión (tiles:build)'],
