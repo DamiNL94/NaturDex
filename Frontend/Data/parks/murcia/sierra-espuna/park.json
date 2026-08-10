@@ -3887,7 +3887,7 @@
         "genus": "Thymus"
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
-      "spainStatus": "Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: NT (Casi amenazado) (2010)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
       "reviewNote": "Foto localizada por búsqueda en Commons (no por el elemento de Wikidata del taxón): conviene confirmar que corresponde a esta especie.",
       "eidosTaxonId": 8896,
@@ -4318,7 +4318,7 @@
         "genus": "Viburnum"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
-      "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999)",
+      "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
       "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
       "reviewNote": null,
       "eidosTaxonId": 9370,
@@ -4415,7 +4415,7 @@
         "genus": "Sciurus"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2023)",
-      "spainStatus": "Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: LC (Preocupación menor) (2007)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": null,
       "eidosTaxonId": 12414,
@@ -4657,7 +4657,7 @@
         "genus": "Acer"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
-      "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999)",
+      "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
       "murciaStatus": "En Peligro de Extinción (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
       "reviewNote": null,
       "eidosTaxonId": 1924,
@@ -5142,7 +5142,7 @@
         "genus": "Lonicera"
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
-      "spainStatus": "Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
       "reviewNote": null,
       "eidosTaxonId": 6048,
@@ -5428,7 +5428,7 @@
         "genus": "Arbutus"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2017)",
-      "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); Especie de flora para la que se aplica el régimen de regulación de aprovechamientos tradicionales de leñas, ramas, tallos, hojas, flores o frutos. (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto, por el que se regula el Catálogo español de especies exóticas invasoras. BOE 185 de 3 de agosto de 2013); ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo, sobre la comercialización de los materiales forestal…)",
+      "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto) · y 1 figura más en EIDOS (IEPNB)",
       "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
       "reviewNote": null,
       "eidosTaxonId": 2284,
@@ -6277,7 +6277,7 @@
         "genus": "Ulmus"
       },
       "iucnGlobal": "DD (Datos insuficientes) (evaluación UICN 2017)",
-      "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo, sobre la comercialización de los materiales forestal…)",
+      "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)",
       "murciaStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
       "reviewNote": null,
       "eidosTaxonId": 9144,
@@ -6419,7 +6419,7 @@
         "genus": "Cotoneaster"
       },
       "iucnGlobal": "NT (Casi amenazado) (evaluación UICN 1998)",
-      "spainStatus": "Vulnerable (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "En Peligro de Extinción (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
       "reviewNote": null,
       "eidosTaxonId": 3759,
@@ -6790,7 +6790,7 @@
         "genus": "Aria"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2017)",
-      "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo, sobre la comercialización de los materiales forestal…)",
+      "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)",
       "murciaStatus": "En Peligro de Extinción (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
       "reviewNote": null,
       "eidosTaxonId": 8557,
@@ -7257,7 +7257,7 @@
         "genus": "Erica"
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
-      "spainStatus": "Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "En Peligro de Extinción (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
       "reviewNote": null,
       "eidosTaxonId": 4368,
@@ -8305,7 +8305,7 @@
         "genus": "Anthus"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Anexo IV (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: NE (No evaluado) (2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": null,
       "eidosTaxonId": 10944,
@@ -8346,7 +8346,7 @@
         "genus": "Anthus"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: NE (No evaluado) (2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": null,
       "eidosTaxonId": 12231,
@@ -8387,7 +8387,7 @@
         "genus": "Buteo"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2021)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: NE (No evaluado) (2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": null,
       "eidosTaxonId": 10922,
@@ -8428,7 +8428,7 @@
         "genus": "Caprimulgus"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Anexo IV (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: NE (No evaluado) (2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": null,
       "eidosTaxonId": 11229,
@@ -8469,7 +8469,7 @@
         "genus": "Certhia"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: NE (No evaluado) (2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": null,
       "eidosTaxonId": 10733,
@@ -8510,7 +8510,7 @@
         "genus": "Circus"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2021)",
-      "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Anexo IV (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); Vulnerable (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: VU (Vulnerable) (2004)",
+      "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
       "murciaStatus": "Vulnerable (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Mu…)",
       "reviewNote": null,
       "eidosTaxonId": 12048,
@@ -8592,7 +8592,7 @@
         "genus": "Falco"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2021)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Anexo IV (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: NE (No evaluado) (2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": null,
       "eidosTaxonId": 11059,
@@ -8633,7 +8633,7 @@
         "genus": "Falco"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2021)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Vulnerable (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: NT (Casi amenazado) (2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": null,
       "eidosTaxonId": 12262,
@@ -8674,7 +8674,7 @@
         "genus": "Fringilla"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2019)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: NE (No evaluado) (2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": null,
       "eidosTaxonId": 11047,
@@ -8715,7 +8715,7 @@
         "genus": "Gyps"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2021)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Anexo IV (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: NE (No evaluado) (2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
       "murciaStatus": "Extinguida (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Mu…)",
       "reviewNote": null,
       "eidosTaxonId": 11313,
@@ -8756,7 +8756,7 @@
         "genus": "Loxia"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2017)",
-      "spainStatus": "Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); UICN España: NE (No evaluado) (2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": null,
       "eidosTaxonId": 11116,
@@ -8797,7 +8797,7 @@
         "genus": "Lullula"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2019)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Anexo IV (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: NE (No evaluado) (2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": null,
       "eidosTaxonId": 10750,
@@ -8838,7 +8838,7 @@
         "genus": "Monticola"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2017)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: NE (No evaluado) (2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": null,
       "eidosTaxonId": 12155,
@@ -8879,7 +8879,7 @@
         "genus": "Oenanthe"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
-      "spainStatus": "Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); UICN España: NE (No evaluado) (2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": null,
       "eidosTaxonId": 11890,
@@ -8920,7 +8920,7 @@
         "genus": "Otus"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2021)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: NE (No evaluado) (2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": null,
       "eidosTaxonId": 12175,
@@ -8961,7 +8961,7 @@
         "genus": "Phoenicurus"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2019)",
-      "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: VU (Vulnerable) (2004)",
+      "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": null,
       "eidosTaxonId": 11977,
@@ -9002,7 +9002,7 @@
         "genus": "Prunella"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: NE (No evaluado) (2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": null,
       "eidosTaxonId": 11054,
@@ -9084,7 +9084,7 @@
         "genus": "Turdus"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2019)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: NE (No evaluado) (2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": null,
       "eidosTaxonId": 12324,
@@ -9248,7 +9248,7 @@
         "genus": "Rhinolophus"
       },
       "iucnGlobal": "VU (Vulnerable) (evaluación UICN 2016)",
-      "spainStatus": "Anexo V (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); Anexo II (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Vulnerable (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: EN (En peligro) (2007)",
+      "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
       "murciaStatus": "Vulnerable (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Mu…)",
       "reviewNote": "La cita de presencia en este espacio procede del volcado inicial del catálogo, que reutilizó fichas de otro parque, y no de una fuente propia: pendiente de referenciar contra el PORN y el plan de gestión de este espacio.",
       "eidosTaxonId": 11702,
@@ -9289,7 +9289,7 @@
         "genus": "Miniopterus"
       },
       "iucnGlobal": "VU (Vulnerable) (evaluación UICN 2023)",
-      "spainStatus": "Anexo II (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); Anexo V (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Vulnerable (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: VU (Vulnerable) (2007)",
+      "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": "Foto localizada por búsqueda en Commons (no por el elemento de Wikidata del taxón): conviene confirmar que corresponde a esta especie. La cita de presencia en este espacio procede del volcado inicial del catálogo, que reutilizó fichas de otro parque, y no de una fuente propia: pendiente de referenciar contra el PORN y el plan de gestión de este espacio.",
       "eidosTaxonId": 12169,
@@ -9328,7 +9328,7 @@
         "genus": "Myotis"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
-      "spainStatus": "Anexo II (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); Anexo V (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); Vulnerable (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); UICN España: VU (Vulnerable) (2007)",
+      "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
       "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Mu…)",
       "reviewNote": "La cita de presencia en este espacio procede del volcado inicial del catálogo, que reutilizó fichas de otro parque, y no de una fuente propia: pendiente de referenciar contra el PORN y el plan de gestión de este espacio.",
       "eidosTaxonId": 10866,
@@ -9406,7 +9406,7 @@
         "genus": "Myotis"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
-      "spainStatus": "Anexo V (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); Anexo II (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Vulnerable (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: VU (Vulnerable) (2007)",
+      "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": "La cita de presencia en este espacio procede del volcado inicial del catálogo, que reutilizó fichas de otro parque, y no de una fuente propia: pendiente de referenciar contra el PORN y el plan de gestión de este espacio.",
       "eidosTaxonId": 11206,
@@ -9445,7 +9445,7 @@
         "genus": "Myotis"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
-      "spainStatus": "Anexo V (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); Anexo II (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Vulnerable (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: VU (Vulnerable) (2007)",
+      "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
       "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Mu…)",
       "reviewNote": "La cita de presencia en este espacio procede del volcado inicial del catálogo, que reutilizó fichas de otro parque, y no de una fuente propia: pendiente de referenciar contra el PORN y el plan de gestión de este espacio.",
       "eidosTaxonId": 11803,
@@ -9484,7 +9484,7 @@
         "genus": "Rhinolophus"
       },
       "iucnGlobal": "NT (Casi amenazado) (evaluación UICN 2016)",
-      "spainStatus": "Anexo II (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); Anexo V (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Vulnerable (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: VU (Vulnerable) (2007)",
+      "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
       "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Mu…)",
       "reviewNote": "La cita de presencia en este espacio procede del volcado inicial del catálogo, que reutilizó fichas de otro parque, y no de una fuente propia: pendiente de referenciar contra el PORN y el plan de gestión de este espacio.",
       "eidosTaxonId": 11230,
@@ -9523,7 +9523,7 @@
         "genus": "Rhinolophus"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
-      "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Vulnerable (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); Anexo V (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); Anexo II (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); UICN España: NT (Casi amenazado) (2007)",
+      "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
       "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Mu…)",
       "reviewNote": "La cita de presencia en este espacio procede del volcado inicial del catálogo, que reutilizó fichas de otro parque, y no de una fuente propia: pendiente de referenciar contra el PORN y el plan de gestión de este espacio.",
       "eidosTaxonId": 11264,
@@ -9562,7 +9562,7 @@
         "genus": "Rhinolophus"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Vulnerable (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); Anexo V (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); Anexo II (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); UICN España: NT (Casi amenazado) (2007)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
       "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Mu…)",
       "reviewNote": "La cita de presencia en este espacio procede del volcado inicial del catálogo, que reutilizó fichas de otro parque, y no de una fuente propia: pendiente de referenciar contra el PORN y el plan de gestión de este espacio.",
       "eidosTaxonId": 11451,
@@ -9601,7 +9601,7 @@
         "genus": "Mauremys"
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Anexo II (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); Anexo V (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: VU (Vulnerable) (2002)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": "La cita de presencia en este espacio procede del volcado inicial del catálogo, que reutilizó fichas de otro parque, y no de una fuente propia: pendiente de referenciar contra el PORN y el plan de gestión de este espacio.",
       "eidosTaxonId": 11585,
@@ -9721,7 +9721,7 @@
         "genus": "Saxicola"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: NE (No evaluado) (2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": null,
       "eidosTaxonId": 12112,
@@ -9760,7 +9760,7 @@
         "genus": "Curruca"
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2019)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999); UICN España: NE (No evaluado) (2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": null,
       "eidosTaxonId": 80920,

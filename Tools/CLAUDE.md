@@ -62,7 +62,8 @@ Orden real de uso; el runbook completo está en
 | `merge-habitats.js` | 187 | Capa 2: conserva lo curado a mano, actualiza desde la fuente lo que es dato |
 | `adopt-habitats.js` | 194 | Capa 2: lo lleva a `Frontend/` y recalcula contadores. **No pasa por la BD** |
 | `atlas-hic-especies.js` | 100 | **Capa 3**: especies características por HIC desde el Atlas → evidencia `caracteristica` |
-| `build-species-n2.js` | 355 | Capa 3: **escribe las fichas** en `park.json` desde la selección aprobada. Ensambla, no consulta: sin red y sin inventar un campo. Idempotente |
+| `build-species-universal.js` | 600 | Capa 3: **da de alta en el catálogo universal** la ficha de un taxón que no está en ningún parque. Sale a EIDOS, GBIF y Wikimedia. Es el paso que va ANTES de `build-species-n2.js` |
+| `build-species-n2.js` | 360 | Capa 3: **escribe las fichas** en `park.json` desde la selección aprobada. Ensambla, no consulta: sin red y sin inventar un campo. Idempotente |
 | `reconcile-taxa.js` | 84 | Capa 3: reconciliación taxonómica EIDOS ↔ GBIF |
 | `wikimedia-images.js` · `enrich-images.js` | 177 · 267 | Fotos de especies con atribución |
 | `habitat-images.js` · `poi-images.js` | 176 · 423 | Portadas de hábitat (por especie diagnóstica) y fotos de POI |
@@ -80,6 +81,11 @@ Orden real de uso; el runbook completo está en
 - `data/hic-nombres.json` y `data/hic-prioritarios.json` — **hay que ampliarlos al entrar en una
   provincia nueva.** Un código ausente de `hic-nombres.json` **se salta el filtro marino** y mete un
   hábitat que no debería estar.
+- `data/curacion-especies.json` — los campos de la ficha universal que ninguna fuente sirve tal cual:
+  el **porte** de una planta cuando EIDOS no trae descripción, el **nombre común** usual cuando el que
+  EIDOS marca como preferente es un localismo (da «Aguilón» para el alimoche) y las **tres pistas de
+  identificación**. Lo lee `build-species-universal.js --curado`. Solo admite los campos de su lista
+  `CURABLES`: lo que sale de una fuente no se cura a mano.
 - `fuentes/*.json` — el registro reproducible de qué se descarga y de dónde. Se versiona; las
   descargas en sí, no.
 

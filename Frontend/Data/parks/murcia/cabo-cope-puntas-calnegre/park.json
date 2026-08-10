@@ -4636,7 +4636,7 @@
     {
       "id": 101,
       "commonName": "Leucanto litoral",
-      "scientificName": "Leucanthemum decipiens",
+      "scientificName": "Mauranthemum decipiens",
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Fisuras y repisas de roquedos calizos, sobre todo en umbrías",
@@ -4659,14 +4659,14 @@
         "class": "Magnoliopsida",
         "order": "Asterales",
         "family": "Asteraceae",
-        "genus": "Leucanthemum"
+        "genus": "Mauranthemum"
       },
-      "iucnGlobal": "NE",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
       "reviewNote": "La foto está publicada bajo el nombre Mauranthemum decipiens (Pomel) Vogt & Oberpr., que es el mismo taxón: varias floras lo segregan del género Leucanthemum. Es el único nombre bajo el que existen fotografías de campo.",
       "eidosTaxonId": 522,
-      "gbifSpeciesKey": 5388462,
+      "gbifSpeciesKey": 3096523,
       "zepaSiteCode": null,
       "habitatIds": [
         "acantilados",
@@ -6811,7 +6811,7 @@
         "Marca el límite del saladar"
       ],
       "seasonality": "Primavera y verano",
-      "image": "https://minka-sdg.org/attachments/local_photos/files/936178/original.jpg",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Limoniastrum_monopetalum_2.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 2,
       "featured": false,
@@ -6835,7 +6835,7 @@
         "matorral-halofilo",
         "estepas-salinas-albardinal"
       ],
-      "imageAttribution": "nicolasghanime (CC BY 4.0) · GBIF"
+      "imageAttribution": "Xemenendura (CC BY-SA 4.0) · Wikimedia Commons"
     },
     {
       "id": 224,
@@ -6934,7 +6934,7 @@
         "Da nombre al hábitat (Malcolmietalia)"
       ],
       "seasonality": "Primavera a otoño",
-      "image": "https://minka-sdg.org/attachments/local_photos/files/944511/original.jpeg",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Malcolmia_littorea_3_(Espagne).jpg?width=1280",
       "coordinates": null,
       "rarityScore": 3,
       "featured": false,
@@ -6957,7 +6957,7 @@
       "habitatIds": [
         "dunas-malcomietalia"
       ],
-      "imageAttribution": "maxlbe (CC BY 4.0) · GBIF"
+      "imageAttribution": "Ghislain118 https://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons"
     },
     {
       "id": 227,

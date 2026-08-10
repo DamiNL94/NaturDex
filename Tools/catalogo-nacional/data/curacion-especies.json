@@ -1,0 +1,39 @@
+{
+  "_nota": "Curación de los campos de la ficha universal que ninguna fuente sirve en el formato que pide el catálogo. Lo carga Tools/catalogo-nacional/build-species-universal.js con --curado. SOLO admite los campos de su lista CURABLES: lo que sale de una fuente (taxonomía, UICN, estado legal, foto) no se toca aquí. Dos motivos de entrada, y conviene distinguirlos: (a) commonName, cuando el que EIDOS marca como preferente es un nombre local y el usual está en la propia lista de nombres castellanos de EIDOS —se elige entre lo que dice la fuente, no se inventa—; (b) group, el porte de una planta, que no está en la taxonomía y que EIDOS solo deja leer cuando su descripción morfológica lo dice. Los que están aquí por (b) sin descripción en EIDOS son atribución del curador y así consta en el informe de cierre.",
+
+  "_commonName_por_nombre_local_de_eidos": "Los de abajo llevan el nombre castellano usual, tomado SIEMPRE de la lista de nombres de EIDOS del propio taxón. Entre paréntesis, lo que EIDOS marcaba como preferente.",
+
+  "Accipiter nisus": { "commonName": "Gavilán común" },
+  "Apus apus": { "commonName": "Vencejo común" },
+  "Erithacus rubecula": { "commonName": "Petirrojo europeo" },
+  "Hirundo rustica": { "commonName": "Golondrina común" },
+  "Motacilla alba": { "commonName": "Lavandera blanca" },
+  "Neophron percnopterus": { "commonName": "Alimoche común" },
+  "Pterocles orientalis": { "commonName": "Ganga ortega" },
+  "Spinus spinus": { "commonName": "Lúgano" },
+  "Emberiza cirlus": { "commonName": "Escribano soteño" },
+  "Falco eleonorae": { "commonName": "Halcón de Eleonora" },
+  "Cecropis daurica": { "commonName": "Golondrina dáurica" },
+  "Tetraclinis articulata": { "commonName": "Sabina de Cartagena" },
+  "Polypodium cambricum": { "commonName": "Polipodio" },
+  "Crataegus monogyna": { "commonName": "Majuelo" },
+  "Rhamnus lycioides": { "commonName": "Espino negro" },
+  "Cistus ladanifer": { "commonName": "Jara pringosa" },
+  "Hypericum ericoides": { "commonName": "Pincelillo", "group": "Mata" },
+  "Prospero autumnale": { "commonName": "Escila de otoño", "group": "Planta bulbosa" },
+  "Santolina viscosa": { "commonName": "Brochera pegajosa", "group": "Mata" },
+
+  "_group_sin_descripcion_en_eidos": "Porte atribuido por el curador: EIDOS no trae descripción morfológica de estos taxones, así que la herramienta no puede leerlo de la fuente. Son todos arbustos, matas y hierbas del matorral gipsícola y calcícola murciano.",
+
+  "Bupleurum fruticescens": { "group": "Mata" },
+  "Chaenorhinum grandiflorum": { "group": "Hierba" },
+  "Chaenorhinum rupestre": { "group": "Hierba" },
+  "Guiraoa arvensis": { "group": "Hierba" },
+  "Gypsophila struthium": { "group": "Mata" },
+  "Launaea pumila": { "group": "Mata" },
+  "Mauranthemum decipiens": { "group": "Hierba" },
+  "Moricandia moricandioides": { "group": "Hierba" },
+  "Osyris alba": { "group": "Arbusto" },
+  "Teucrium buxifolium": { "group": "Mata" },
+  "Teucrium libanitis": { "group": "Mata" }
+}

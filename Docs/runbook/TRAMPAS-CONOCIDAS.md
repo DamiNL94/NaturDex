@@ -46,6 +46,17 @@ Cada una costó una sesión de depuración. Léelas antes de repetirlas.
   `idtaxon` en las de detalle, `id_taxon` en `v_imagenes`. Filtrar por la equivocada **no da error
   HTTP**: PostgREST devuelve 200 con un objeto de error, el `for...of` revienta y el informe sale con
   «0 rellenadas / 0 sin foto», como si no hubiera nada que hacer. `eidos.rows()` normaliza a array.
+  Lo mismo en `v_nombrescomunes`, que llama a lo suyo `nombre_comun` y `espreferente`: pedirle
+  `nombre`/`preferente` devuelve **400** y así estuvo rota `eidos.commonName()` desde que se escribió.
+- **`ambito` NO basta para saber si una norma es estatal.** EIDOS sirve las filas del Catálogo
+  Regional de **Castilla-La Mancha** con `ambito: "Nacional"`; lo único que las delata es que traen
+  **`ccaa` relleno**, y una norma estatal no tiene comunidad. De ahí salieron 60 fichas cuyo
+  `spainStatus` citaba la Ley 9/1999 manchega, y de ahí que la deuda pareciera necesitar «el índice de
+  normas del IEPNB». `eidos.legalStatus()` exige ahora las dos condiciones.
+- **El «preferente» de EIDOS no es el nombre por el que se conoce a la especie.** `espreferente`
+  marca **«Aguilón»** para el alimoche, **«Frías»** para el petirrojo y **«Alerce»** para la sabina
+  mora, teniendo el nombre usual en la misma lista. Hay que ofrecer las alternativas y elegir; no es
+  un campo que se pueda tomar a ciegas.
 
 **Fotos y licencias**
 
@@ -70,6 +81,15 @@ Cada una costó una sesión de depuración. Léelas antes de repetirlas.
 
 - **Filtra Aves**: son el 88 % de las ocurrencias y casi todo ruido espacial (vuelan).
 - **El filtro por incertidumbre de coordenada no sirve**: solo el 14 % la declara.
+- **`basisOfRecord` sí sirve, y hay que mirarlo.** `MACHINE_OBSERVATION` en una especie con
+  seguimiento por satélite son posiciones Argos, y las de baja calidad caen tierra adentro: así
+  *Caretta caretta* —una tortuga **marina**— acumuló 14 ocurrencias en el matorral, el roquedo y el
+  pastizal de Carrascoy, a 20 km del mar, y la selección la aprobó. Ante una especie que no pinta
+  nada donde sale, mira el `basisOfRecord` antes que la cifra.
+- **El histograma mensual mide esfuerzo de observación, no presencia.** Los registros de un residente
+  se disparan en primavera porque es cuando se sale a censar: quedarse con los meses de máximo le
+  pone «Abril a mayo» al carbonero común. Lo que el histograma distingue de verdad es la **ausencia**
+  (un estival no tiene registros en enero), así que el umbral va bajo y se lee el tramo *presente*.
 - **`usageKey` no siempre es de rango específico** (ver [procedencia de campos](../arquitectura/PROCEDENCIA-DE-CAMPOS.md)).
 - **Punto-en-polígono local**, no consulta espacial: evita el límite de complejidad y de longitud de URL.
 
