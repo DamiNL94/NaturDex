@@ -46,13 +46,36 @@ códigos HIC nuevos, **amplía `data/hic-nombres.json` y `data/hic-prioritarios.
 
 **Capa 3 · especies — el orden importa, de más sólido a más ruidoso**
 
-1. **Reutilización primero.** Cruza contra `especies-universal.json` por `eidosTaxonId`. Lo que ya
-   existe se **enlaza**, no se reescribe. Di cuántas reutilizas y cuántas son nuevas.
-2. **Atlas de Hábitats** → `atlas-hic-especies.js` → evidencia `caracteristica`. Backbone determinista.
+1. **GBIF ∩ polígonos** → `gbif-habitats.js` → evidencia `observada_gbif`. Es lo que trae las
+   **candidatas**, y por eso va primero: en un espacio que arranca con 0 especies, el Atlas no puede
+   ir antes porque cruza contra la flora *que el parque ya tiene* y devolvería 0 enlaces.
+   ⚠️ `--max-occ` vale 40.000 por defecto y trunca **por offset**, que no es una muestra al azar:
+   súbelo por encima del total del bbox o te quedas con un catálogo hecho con la mitad de los datos.
+2. **Atlas de Hábitats** → `atlas-hic-especies.js` → evidencia `caracteristica`. Aquí es **filtro**,
+   no fuente de candidatas: da el backbone determinista y la prueba de cordura del resto.
 3. **EIDOS** para toda especie nueva: taxonomía, UICN por ámbito, estado legal, nombre común.
-4. **GBIF ∩ polígonos, sin Aves** → `gbif-habitats.js` → evidencia `observada_gbif`.
-5. **Aves** → Discodata BISE por `site_code` → evidencia `zepa`, apartado propio del espacio.
-6. **Reconciliación taxonómica** → `reconcile-taxa.js`.
+4. **Aves** → Discodata BISE por `site_code` → evidencia `zepa`, apartado propio del espacio.
+5. **Reconciliación taxonómica** → `reconcile-taxa.js`.
+6. **Reutilización.** Cruza contra `especies-universal.json`. Lo que ya existe se **enlaza**, no se
+   reescribe. Di cuántas reutilizas y cuántas son nuevas.
+
+De ahí sale la **selección aprobada**, `out/<slug>-seleccion-especies.json`: la lista con su
+procedencia especie a especie y las excluidas con su motivo. **No son fichas todavía.** Escribirlas
+es un paso aparte y tiene herramienta:
+
+```bash
+node Tools/catalogo-nacional/build-species-n2.js --park <SLUG> --dry   # revisar
+node Tools/catalogo-nacional/build-species-n2.js --park <SLUG>         # escribir
+```
+
+Ensambla el array `species` del `park.json`, el inverso `speciesIds` de cada hábitat y los
+contadores del manifiesto. **No sale a la red y no inventa ningún campo**: lo universal lo copia del
+catálogo, los enlaces y las ocurrencias del barrido de GBIF, el estado legal de las `normas` del
+IEPNB que trae la selección y los identificadores externos del parque donde la especie ya está
+fichada. Una seleccionada **sin ficha en el catálogo universal no se escribe** —haría falta inventar
+taxonomía, nombre común, UICN y foto—: queda listada en `out/<slug>-especies-pendientes.md` y la
+herramienta la incorpora sola cuando alguien le dé de alta la ficha. Es idempotente y conserva lo
+curado a mano (`coordinates`, `featured`, `visible`, `reviewNote`, audio).
 
 **Regla de selección** (ajústala al tamaño del espacio y **dilo**). La usada en Cuatro Calas:
 
@@ -64,6 +87,13 @@ En Sierra Espuña (80× más grande) el umbral fue 15 y luego 50; en Cuatro Cala
 una constante universal: es una decisión por espacio que hay que dejar escrita en el informe de cierre.
 
 **POIs, fotos y cierre**
+
+> **Y antes de nada, `npm run species:extract`.** Una revisión nomenclatural que renombre taxones en
+> los `park.json` y no vuelva a extraer deja el catálogo universal partido en dos: los nombres viejos
+> siguen ahí (extract añade, nunca borra) y los nuevos no están. Una selección aprobada **antes** de
+> ese renombrado casa con los viejos y resucita el duplicado que se acababa de quitar. Pasó en
+> Carrascoy con cuatro especies (ESTADO.md §"2026-08-10"); `build-species-n2.js` lo detecta y avisa,
+> pero el catálogo hay que dejarlo al día igualmente.
 
 ```bash
 npm run species:extract      # vuelca a especies-universal.json lo nuevo de los park.json

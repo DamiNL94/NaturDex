@@ -259,6 +259,32 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Allium_melananthum02.jpg?width=1280",
     "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons"
   },
+  "Allium pallens": {
+    "commonName": "Ajo silvestre",
+    "kingdom": "flora",
+    "group": "Planta bulbosa",
+    "habitat": "Pastizales secos, ribazos y claros de matorral",
+    "seasonality": "Verano",
+    "rarityScore": 1,
+    "description": "Ajo silvestre de umbela laxa y colgante, con flores acampanadas de tonos rosados o pardo claro sobre pedicelos largos y desiguales. Las brácteas que envuelven la inflorescencia acaban en dos puntas largas como cuernos.",
+    "tips": [
+      "Umbela laxa y desmadejada, con flores colgantes",
+      "Dos brácteas largas como cuernos bajo la umbela",
+      "Olor a ajo al estrujar las hojas"
+    ],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Asparagales",
+      "family": "Amaryllidaceae",
+      "genus": "Allium"
+    },
+    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2011)",
+    "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Laguna_de_San_Juan_20100617_3431.jpg?width=1280",
+    "imageAttribution": "Alberto Salguero (CC BY-SA 4.0) · Wikimedia Commons"
+  },
   "Allium paniculatum": {
     "commonName": "Ajo silvestre",
     "kingdom": "flora",
@@ -1221,6 +1247,32 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/B._gibraltarium-1.JPG?width=1280",
     "imageAttribution": "Philmarin (CC BY-SA 3.0) · Wikimedia Commons"
   },
+  "Bupleurum gibraltarium": {
+    "commonName": "Clujía",
+    "kingdom": "flora",
+    "group": "Arbusto",
+    "habitat": "Roquedos, laderas pedregosas y matorral seco sobre calizas",
+    "seasonality": "Verano",
+    "rarityScore": 1,
+    "description": "Umbelífera leñosa, algo insólita en una familia de hierbas, con hojas estrechas, coriáceas y de un verde azulado. Sus umbelas de flores amarillas se abren en pleno verano. Desprende un olor resinoso característico al romper una rama.",
+    "tips": [
+      "Umbelífera con base leñosa, no herbácea",
+      "Hojas estrechas, duras y de verde azulado",
+      "Umbelas amarillas en pleno verano"
+    ],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Apiales",
+      "family": "Apiaceae",
+      "genus": "Bupleurum"
+    },
+    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/B._gibraltarium-1.JPG?width=1280",
+    "imageAttribution": "Philmarin (CC BY-SA 3.0) · Wikimedia Commons"
+  },
   "Bupleurum semicompositum": {
     "commonName": "Perfollada anual",
     "kingdom": "flora",
@@ -1504,6 +1556,32 @@
     },
     "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
     "spainStatus": "Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Campanula_hispanica_1.jpg?width=1280",
+    "imageAttribution": "Ghislain118 http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons"
+  },
+  "Campanula rotundifolia subsp. hispanica": {
+    "commonName": "campanillas de cantil",
+    "kingdom": "flora",
+    "group": "Hierba",
+    "habitat": "Fisuras de roquedos, taludes y pedregales de montaña",
+    "seasonality": "Primavera y verano",
+    "rarityScore": 2,
+    "description": "Campánula de tallos finos y flexibles con flores azul violeta en forma de campana colgante. Crece en grietas de roca y en pedregales, donde sus raíces alcanzan la humedad que retiene la piedra. Las hojas de la base tienen forma redondeada y las del tallo son estrechas.",
+    "tips": [
+      "Flores azuladas en campana, colgando del tallo",
+      "Hojas basales redondeadas, muy distintas de las del tallo",
+      "En grietas y repisas de roca, a menudo colgando"
+    ],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Asterales",
+      "family": "Campanulaceae",
+      "genus": "Campanula"
+    },
+    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "spainStatus": "No incluida en el LESRPE ni en el Catálogo Español de Especies Amenazadas [IEPNB, Lista Patrón de las especies silvestres presentes en España, vista de normas, consultada 2026-08-09]",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Campanula_hispanica_1.jpg?width=1280",
     "imageAttribution": "Ghislain118 http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons"
   },
@@ -2079,6 +2157,32 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_albidus_flowers.jpg?width=1280",
     "imageAttribution": "Júlio Reis (CC BY-SA 3.0) · Wikimedia Commons"
   },
+  "Cistus atriplicifolius": {
+    "commonName": "Jara blanca",
+    "kingdom": "flora",
+    "group": "Mata",
+    "habitat": "Matorral y jarales sobre suelos secos y soleados de montaña media",
+    "seasonality": "Primavera",
+    "rarityScore": 1,
+    "description": "Arbusto de hojas anchas, ovaladas y cubiertas de una pelusa plateada que le da un aspecto casi blanco. En primavera se llena de flores amarillas de cinco pétalos con una mancha oscura en la base. Es un endemismo del sur y sureste peninsular.",
+    "tips": [
+      "Hojas anchas y plateadas, no estrechas como las jaras",
+      "Flores amarillas con una manchita oscura en la base del pétalo",
+      "Porte erguido, más alto que las jarillas comunes"
+    ],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Malvales",
+      "family": "Cistaceae",
+      "genus": "Cistus"
+    },
+    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Halimium_commutatum1.jpg?width=1280",
+    "imageAttribution": "Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons"
+  },
   "Cistus clusii": {
     "commonName": "Romerina",
     "kingdom": "flora",
@@ -2577,14 +2681,14 @@
     "commonName": "Curruca rabilarga",
     "kingdom": "fauna",
     "group": "Ave",
-    "habitat": "Matorral litoral y laderas secas",
+    "habitat": "Matorral bajo y denso, jarales, brezales y tomillares",
     "seasonality": "Todo el año",
     "rarityScore": 3,
-    "description": "Pequeña ave residente de matorral mediterráneo denso, reclasificada taxonómicamente de Sylvia undata a Curruca undata, igual que la curruca cabecinegra.",
+    "description": "Curruca pequeña, oscura y de cola muy larga que suele llevar levantada. El macho tiene el vientre vinoso y el ojo rojo rodeado de un anillo del mismo color. Es muy inquieta y rara vez se deja ver más de unos segundos antes de volver a hundirse en la mata.",
     "tips": [
-      "Cola larga que mueve constantemente",
-      "Ojo y anillo ocular rojizos",
-      "Ligada a matorral denso y bajo"
+      "Cola larga y erguida, casi vertical al posarse",
+      "Ojo y anillo ocular rojos",
+      "Vientre de color vinoso, con motitas blancas en la garganta"
     ],
     "taxonomy": {
       "kingdom": "Animalia",
@@ -2702,6 +2806,32 @@
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cytinus_ruber_(flowering_plants).jpg?width=1280",
     "imageAttribution": "Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons"
+  },
+  "Cytisus lanigerus": {
+    "commonName": "erguen",
+    "kingdom": "flora",
+    "group": "Arbusto",
+    "habitat": "Matorral y laderas soleadas sobre suelos secos y pedregosos",
+    "seasonality": "Primavera",
+    "rarityScore": 1,
+    "description": "Arbusto espinoso y muy ramificado que en primavera se cubre por completo de flores amarillas. Sus ramas terminan en espinas fuertes y sus legumbres van cubiertas de pelos sedosos. Forma masas impenetrables que dan refugio a aves de matorral.",
+    "tips": [
+      "Ramas rematadas en espinas rígidas y punzantes",
+      "Floración amarilla masiva que cubre toda la mata",
+      "Legumbres cubiertas de pelos blancos y sedosos"
+    ],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Fabales",
+      "family": "Fabaceae",
+      "genus": "Cytisus"
+    },
+    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Calycotome_villosa1.jpg?width=1280",
+    "imageAttribution": "Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons"
   },
   "Cytisus scoparius": {
     "commonName": "Retama de escobas",
@@ -6109,6 +6239,32 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Oenanthe_oenanthe_Larvik.JPG?width=1280",
     "imageAttribution": "Arnstein Rønning (CC BY-SA 4.0) · Wikimedia Commons"
   },
+  "Olea europaea subsp. europaea": {
+    "commonName": "Acebuche",
+    "kingdom": "flora",
+    "group": "Árbol",
+    "habitat": "Matorral alto, laderas secas y barrancos del piso más cálido",
+    "seasonality": "Todo el año",
+    "rarityScore": 2,
+    "description": "El acebuche es el olivo silvestre: mismo árbol, sin siglos de selección. Tiene las hojas más pequeñas y duras, las ramas jóvenes a menudo espinosas y aceitunas diminutas. Forma matorrales altos y es el árbol característico de las laderas cálidas mediterráneas.",
+    "tips": [
+      "Hojas pequeñas, verdes arriba y plateadas por debajo",
+      "Ramillas jóvenes rígidas y a veces espinosas",
+      "Aceitunas muy pequeñas, de poco más de un centímetro"
+    ],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Lamiales",
+      "family": "Oleaceae",
+      "genus": "Olea"
+    },
+    "iucnGlobal": "LC",
+    "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ullastre_vell.JPG?width=1280",
+    "imageAttribution": "Antoni Salvà (CC BY-SA 4.0) · Wikimedia Commons"
+  },
   "Olea europaea var. sylvestris": {
     "commonName": "Acebuche",
     "kingdom": "flora",
@@ -7279,6 +7435,32 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rhinolophus_mehelyi-cropped.jpg?width=1280",
     "imageAttribution": "F. C. Robiller / naturlichter.de (CC BY-SA 3.0) · Wikimedia Commons"
   },
+  "Rosmarinus officinalis": {
+    "commonName": "Romero",
+    "kingdom": "flora",
+    "group": "Mata aromática",
+    "habitat": "Matorral seco y soleado sobre suelos calizos y pedregosos",
+    "seasonality": "Todo el año, con máximo de floración en invierno y primavera",
+    "rarityScore": 1,
+    "description": "Arbusto aromático de hojas estrechas como agujas, verde oscuro por el haz y blanquecinas por el envés, con los bordes enrollados hacia abajo. Florece casi todo el año en azul pálido, y en pleno invierno es una de las pocas fuentes de néctar del matorral.",
+    "tips": [
+      "Hojas como agujas, blancas por debajo",
+      "Olor inconfundible al frotar entre los dedos",
+      "Flores azul claro repartidas por las ramas casi todo el año"
+    ],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Lamiales",
+      "family": "Lamiaceae",
+      "genus": "Salvia"
+    },
+    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
+    "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rosemary_in_bloom.JPG?width=1280",
+    "imageAttribution": "Margalob (CC BY-SA 4.0) · Wikimedia Commons"
+  },
   "Saccharum ravennae": {
     "commonName": "Carrizo real",
     "kingdom": "flora",
@@ -7592,6 +7774,32 @@
     "imageAttribution": "derivative work: Myosotis Scorpioides (CC BY-SA 3.0) · Wikimedia Commons"
   },
   "Saxifraga almeriensis": {
+    "commonName": "Saxifraga almeriensis",
+    "kingdom": "flora",
+    "group": "Hierba",
+    "habitat": "Grietas y repisas umbrías de roquedos calizos de montaña",
+    "seasonality": "Primavera",
+    "rarityScore": 2,
+    "description": "Saxífraga rupícola que forma pequeñas rosetas de hojas carnosas y algo divididas encajadas en la roca, con tallos finos rematados en flores blancas de cinco pétalos. Es un endemismo del sureste ibérico restringido a unas pocas sierras.",
+    "tips": [
+      "Rosetas pequeñas y carnosas metidas en la fisura",
+      "Flores blancas de cinco pétalos sobre tallos finos",
+      "Casi siempre en paredes umbrías y frescas"
+    ],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Saxifragales",
+      "family": "Saxifragaceae",
+      "genus": "Saxifraga"
+    },
+    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
+    "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/111644731/original.jpeg",
+    "imageAttribution": "faluke (CC BY-NC 4.0) · GBIF/iNaturalist"
+  },
+  "Saxifraga camposii subsp. leptophylla": {
     "commonName": "Saxifraga almeriensis",
     "kingdom": "flora",
     "group": "Hierba",

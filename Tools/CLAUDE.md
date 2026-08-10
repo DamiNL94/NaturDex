@@ -62,6 +62,7 @@ Orden real de uso; el runbook completo está en
 | `merge-habitats.js` | 187 | Capa 2: conserva lo curado a mano, actualiza desde la fuente lo que es dato |
 | `adopt-habitats.js` | 194 | Capa 2: lo lleva a `Frontend/` y recalcula contadores. **No pasa por la BD** |
 | `atlas-hic-especies.js` | 100 | **Capa 3**: especies características por HIC desde el Atlas → evidencia `caracteristica` |
+| `build-species-n2.js` | 355 | Capa 3: **escribe las fichas** en `park.json` desde la selección aprobada. Ensambla, no consulta: sin red y sin inventar un campo. Idempotente |
 | `reconcile-taxa.js` | 84 | Capa 3: reconciliación taxonómica EIDOS ↔ GBIF |
 | `wikimedia-images.js` · `enrich-images.js` | 177 · 267 | Fotos de especies con atribución |
 | `habitat-images.js` · `poi-images.js` | 176 · 423 | Portadas de hábitat (por especie diagnóstica) y fotos de POI |

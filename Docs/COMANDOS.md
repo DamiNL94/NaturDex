@@ -8,6 +8,7 @@
 | `npm run species:check / :extract / :apply` | Catálogo universal: informar / volcar / sincronizar a todos los espacios (+ SQL) |
 | `npm run habitats:build / :merge` | Capa 2 desde la cartografía del MITECO |
 | `npm run atlas:hic` | Especies características por HIC desde el Atlas |
+| `npm run species:build -- --park <slug> [--dry]` | **Capa 3**: escribe las fichas de especie en `park.json` desde la selección aprobada. Ensambla lo que ya hay en el repo; no sale a la red. Idempotente |
 | `npm run images:species / :habitats / :invasoras` | Fotos con atribución desde Wikimedia |
 | `npm run contenido:invasoras` | Fichas de invasoras desde EIDOS |
 | `npm run invasoras:eei` | Catálogo EEI ∩ presencia GBIF por territorio |
