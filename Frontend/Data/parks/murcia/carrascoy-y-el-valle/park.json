@@ -959,7 +959,308 @@
       ]
     }
   ],
-  "pointsOfInterest": [],
+  "pointsOfInterest": [
+    {
+      "id": "santuario-de-la-fuensanta",
+      "name": "Santuario de Nuestra Señora de la Fuensanta",
+      "type": "Religioso",
+      "description": "Santuario barroco al pie de la sierra, sede de la patrona de Murcia. El PORN lo señala al describir los valores del espacio como uno de los lugares de peregrinación más significativos de toda la Región, y recoge su entorno como una de las tres subzonas de uso público intensivo del plan, con el santuario y las instalaciones asociadas.",
+      "coordinates": [
+        37.937523,
+        -1.118225
+      ],
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Santuario_de_la_Fuensanta%2C_Murcia.JPG?width=1280",
+      "source": "PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §1 y Normativa (subzona de uso público intensivo «Santuario de La Fuensanta»); declarado Bien de Interés Cultural el 22.06.1983 según OpenStreetMap y el registro estatal, sin contrastar en la fuente oficial (el registro del Ministerio de Cultura no responde desde este entorno). Coordenada: OpenStreetMap way/55846465 (ODbL); Wikimedia Commons (foto: José Garcia, \"pepegar\", CC BY-SA 3.0)",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "antiguo-seminario-de-la-fuensanta",
+      "name": "Antiguo seminario de la Fuensanta",
+      "type": "Cultural",
+      "description": "Ruinas del antiguo seminario, en la subida al santuario. El PORN lo inventaría entre las edificaciones religiosas de la vertiente norte de El Valle —santuario, seminario, casa de la Oración, ermitas— y describe ese conjunto como «puntos de referencia claves y lugares tradicionales de visita». OpenStreetMap lo registra hoy como ruina.",
+      "coordinates": [
+        37.936897,
+        -1.121176
+      ],
+      "image": null,
+      "source": "PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §4.3.2 (edificaciones e instalaciones anexas). Coordenada: OpenStreetMap way/63663130 (ODbL)",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "eremitorio-de-la-luz",
+      "name": "Eremitorio de Nuestra Señora de la Luz",
+      "type": "Religioso",
+      "description": "Conjunto de ermita y caserío en el cerro de la Luz. El PORN lo cita dos veces: entre los hitos paisajísticos singulares del parque, «tanto de índole natural como histórica y cultural», y entre las edificaciones religiosas de El Valle, donde figura como «Ermita y Caserío de la Luz». Comparte cerro con el santuario ibérico y con el castillo de la Luz.",
+      "coordinates": [
+        37.933161,
+        -1.12444
+      ],
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eremitorio_Nuestra_Se%C3%B1ora_de_la_Luz_in_Santo_%C3%81ngel%2C_Murcia%2C_Spain%2C_2020_January_-_2.jpg?width=1280",
+      "source": "PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §3.3 (hitos paisajísticos) y §4.3.2. Coordenada: OpenStreetMap way/653754604 (ODbL); Wikimedia Commons (foto: Ximonic (Simo Räsänen), CC BY-SA 4.0)",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "santuario-iberico-de-la-luz",
+      "name": "Santuario ibérico de la Luz",
+      "type": "Arqueológico",
+      "description": "Santuario ibérico excavado en la ladera del cerro, uno de los grandes conjuntos de la cultura ibérica del sureste: de aquí salieron los exvotos de bronce que expone el Museo Arqueológico de Murcia, fundidos en hornos del propio cerro. El PORN lo recoge como área de protección arqueológica YA-03 «Santuario de la Luz» del planeamiento de Murcia. El yacimiento está acondicionado para la visita, con pasarelas y señalización, y tiene centro de interpretación.",
+      "coordinates": [
+        37.933872,
+        -1.126108
+      ],
+      "image": null,
+      "source": "PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §4.4, Tabla 8 (áreas con yacimientos arqueológicos en el t.m. de Murcia, según el Plan Especial de Protección Arqueológica y la Carta Arqueológica). Coordenada aproximada: OpenStreetMap way/140439029, que rotula «Poblado Ibérico» el recinto entero y no un elemento concreto (ODbL)",
+      "approx": true,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "castillo-de-la-luz",
+      "name": "Castillo de la Luz",
+      "type": "Cultural",
+      "description": "Restos de una fortificación islámica sobre el cerro de la Luz, de la que hoy destaca el aljibe. El PORN la incluye entre los hitos paisajísticos e históricos singulares del parque. Aparece también con los nombres de castillo de Santa Catalina del Monte y castillo del Verdolay.",
+      "coordinates": [
+        37.931436,
+        -1.129948
+      ],
+      "image": null,
+      "source": "PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §3.3 (hitos paisajísticos). Inscrito como Bien de Interés Cultural el 07.08.1997 con el código RI-51-0010058 «Castillo de Santa Catalina del Monte o de la Luz» según Wikidata y OpenStreetMap, sin contrastar en el registro del Ministerio de Cultura, que no responde desde este entorno. Coordenada: OpenStreetMap node/6126604839, coincidente con Wikidata Q126824754 (ODbL)",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "ermita-de-san-antonio-el-pobre",
+      "name": "Ermita de San Antonio el Pobre",
+      "type": "Religioso",
+      "description": "Ermita de la vertiente norte de El Valle, inventariada por el PORN entre las edificaciones religiosas del parque. El plan cita además su entorno como una de las cinco áreas de escalada deportiva del espacio, y recogía como obra en ejecución la senda que lleva su nombre.",
+      "coordinates": [
+        37.931501,
+        -1.131878
+      ],
+      "image": null,
+      "source": "PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §4.2.7.2 (áreas de escalada, señalización de sendas) y §4.3.2. Coordenada: OpenStreetMap way/63655085 (ODbL)",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "castillo-de-la-asomada",
+      "name": "Castillo de la Asomada",
+      "type": "Cultural",
+      "description": "Fortaleza islámica del siglo XII, de la época de esplendor de la taifa de Murcia, encaramada sobre el Cabezo del Puerto para vigilar el Puerto de la Cadena: el paso que conecta desde antiguo el Campo de Cartagena con la huerta de Murcia. El PORN lo destaca al describir los valores del espacio —«Destaca también el Castillo del Puerto de la Cadena, en la Sierra del Puerto»— y le dedica un trozo propio del monte público n.º 79 Bis. Sus muros siguen viéndose desde la autovía.",
+      "coordinates": [
+        37.901281,
+        -1.151227
+      ],
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Castillo_de_la_Asomada._El_Palmar_(Murcia).jpg?width=1280",
+      "source": "PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §1, §3.3 (hito «Cabezo del Puerto») y §4.2.2.1 (monte 79 Bis, Trozo 2.º «Castillo del Puerto»); datación y descripción: Región de Murcia Digital (CARM), ficha del Castillo de la Asomada, que lo cataloga como Bien de Interés Cultural por la Disposición Adicional Segunda de la Ley 16/1985 del Patrimonio Histórico Español. Coordenada: OpenStreetMap node/10277995531, a 13 m de la de Wikidata Q24568061 (ODbL); Wikimedia Commons (foto: Laura Pérez Ibáñez, CC BY-SA 4.0)",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "castillo-del-portazgo-superior",
+      "name": "Castillo del Portazgo Superior",
+      "type": "Cultural",
+      "description": "La más alta de las dos construcciones del Portazgo, edificaciones de menor entidad levantadas al pie del castillo de la Asomada y probablemente a la vez que él, para controlar el paso entre la costa y el interior del reino. Forman con el castillo un mismo sistema de vigilancia sobre el Puerto de la Cadena.",
+      "coordinates": [
+        37.909936,
+        -1.160584
+      ],
+      "image": null,
+      "source": "Región de Murcia Digital (CARM), ficha del Castillo de la Asomada («el Portazgo Inferior y Superior, edificaciones de menor entidad ubicadas a los pies del castillo»); PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §1. Coordenada: OpenStreetMap node/10278170815 (ODbL)",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "castillo-del-portazgo-inferior",
+      "name": "Castillo del Portazgo Inferior",
+      "type": "Cultural",
+      "description": "La más baja de las dos construcciones del Portazgo, a unos 190 m de la superior y al pie del castillo de la Asomada. Región de Murcia Digital las describe como edificaciones de menor entidad construidas probablemente a la vez que la fortaleza, para el control de la vía entre la costa y el interior.",
+      "coordinates": [
+        37.908357,
+        -1.161277
+      ],
+      "image": null,
+      "source": "Región de Murcia Digital (CARM), ficha del Castillo de la Asomada; PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §1. Coordenada: OpenStreetMap node/10278192037 (ODbL)",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "cresta-del-gallo",
+      "name": "Cresta del Gallo",
+      "type": "Paisajístico",
+      "description": "Crestón rocoso asomado sobre la huerta de Murcia y el hito más reconocible del parque. El PORN lo enumera cinco veces en su inventario de recursos para el uso público —área recreativa, área de acampada, mirador habilitado, punto de información y área de escalada deportiva—, además de incluirlo entre los hitos paisajísticos del espacio y darle nombre a una subzona de uso público intensivo. La coordenada es la del mirador.",
+      "coordinates": [
+        37.943841,
+        -1.090818
+      ],
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Crestadelgallo.JPG?width=1280",
+      "source": "PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §3.3 y §4.2.7.2, y Normativa (subzona de uso público intensivo «Cresta del Gallo»). Coordenada: OpenStreetMap node/747347873 (ODbL); Wikimedia Commons (foto: Gregorico, CC BY-SA 4.0)",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "la-panocha",
+      "name": "La Panocha",
+      "type": "Geológico",
+      "description": "Aguja caliza de 523 m junto a la Cresta del Gallo, escuela de escalada clásica de la sierra. El PORN la cita dos veces: entre los hitos paisajísticos singulares del parque y, junto a las Navetas, en el inventario de Lugares de Interés Geológico que toma de El Patrimonio Geológico de la Región de Murcia (Fundación Séneca, 1999).",
+      "coordinates": [
+        37.942858,
+        -1.087673
+      ],
+      "image": null,
+      "source": "PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §3.1.2.3 (Lugares de Interés Geológico: «Las Navetas y La Panocha») y §3.3. Coordenada y altitud: OpenStreetMap node/747347157 (ODbL)",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "mirador-del-relojero",
+      "name": "Mirador del Relojero",
+      "type": "Paisajístico",
+      "description": "Torre de vigilancia forestal en la cima del Relojero, a 604 m, con vista sobre la huerta y la Cordillera Sur. El PORN inventaría aquí uno de los seis miradores habilitados del parque, que sitúa «al pie del Relojero».",
+      "coordinates": [
+        37.913559,
+        -1.119209
+      ],
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Vistas_desde_el_Pico_Relojero.jpg?width=1280",
+      "source": "PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §4.2.7.2 (miradores habilitados: «El Relojero (al pie del Relojero)»). Coordenada aproximada: el plan sitúa el mirador al pie del cerro y la coordenada es la de la torre de observación de la cima, OpenStreetMap way/136894912 (ODbL); Wikimedia Commons (foto: Juan Antonio Pellicer Alcaraz, CC BY-SA 3.0 es)",
+      "approx": true,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "umbria-de-los-sanchez",
+      "name": "Umbría de los Sánchez",
+      "type": "Paisajístico",
+      "description": "Ladera de umbría en el sector oriental de El Valle, que el PORN señala entre los hitos paisajísticos singulares del parque junto al Paisaje lunar y a los picos de la Cresta del Gallo. La orientación norte sostiene aquí el pinar, que el propio plan describe como la comunidad vegetal básica de las umbrías del espacio.",
+      "coordinates": [
+        37.918535,
+        -1.096699
+      ],
+      "image": null,
+      "source": "PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §3.3 (hitos paisajísticos) y Normativa (directrices sobre el pinar). Coordenada aproximada: nodo de topónimo del Instituto Geográfico Nacional en OpenStreetMap (node/1243032396), que representa el paraje y no un punto concreto (ODbL)",
+      "approx": true,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "cumbre-de-carrascoy",
+      "name": "Cumbre de Carrascoy",
+      "type": "Paisajístico",
+      "description": "Techo del parque, a 1.065 m, en el extremo occidental y en la sierra que le da nombre. El PORN incluye entre los hitos paisajísticos del espacio los carrascales de las zonas culminales de Carrascoy, y los cita —junto a los del Majal Blanco— entre los terrenos donde el uso prioritario es la conservación.",
+      "coordinates": [
+        37.844203,
+        -1.271864
+      ],
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sierradecarrascoy.JPG?width=1280",
+      "source": "PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §3.3 (hitos paisajísticos) y Normativa (zona de conservación prioritaria). Coordenada y altitud: OpenStreetMap node/26864606, que rotula la cumbre con el nombre de la sierra (ODbL); Wikimedia Commons (foto: Sapoproductions, CC BY-SA 4.0)",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "centro-de-visitantes-el-valle",
+      "name": "Centro de Visitantes El Valle",
+      "type": "Acceso",
+      "description": "Puerta de entrada al parque por El Valle y arranque de la mayor parte de sus itinerarios. A su lado están el Arboretum y el aula de naturaleza, que el PORN inventaría entre los equipamientos de información y educación ambiental del espacio, con un punto de información propio.",
+      "coordinates": [
+        37.928823,
+        -1.139578
+      ],
+      "image": null,
+      "source": "PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §4.2.7.2 (equipamientos e instalaciones para la información y educación ambiental: «Punto de Información Arboretum»). Coordenada: OpenStreetMap way/130441668 (ODbL)",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "area-recreativa-el-valle-perdido",
+      "name": "Área recreativa de El Valle Perdido",
+      "type": "Acceso",
+      "description": "Área recreativa en el vallejo que da nombre al paraje, con mirador habilitado sobre la huerta. El PORN la recoge a la vez entre las seis áreas recreativas del parque y entre sus seis miradores, y la integra en la subzona de uso público intensivo «Valle Perdido-El Sequén».",
+      "coordinates": [
+        37.928087,
+        -1.147792
+      ],
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Panel_informativo_en_%C3%81rea_Recreativa_El_Valle_Perdido..jpg?width=1280",
+      "source": "PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §4.2.7.2 y Normativa (subzona de uso público intensivo «Valle Perdido-El Sequén»). Coordenada: OpenStreetMap relation/1852332 (ODbL); Wikimedia Commons (foto: Juan Antonio Pellicer Alcaraz, CC BY-SA 3.0 es)",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "area-recreativa-la-balsa",
+      "name": "Área recreativa de La Balsa",
+      "type": "Acceso",
+      "description": "Una de las seis áreas recreativas que el PORN inventaría en el parque, en la vertiente norte de El Valle y a poca distancia del centro de visitantes.",
+      "coordinates": [
+        37.926663,
+        -1.137554
+      ],
+      "image": null,
+      "source": "PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §4.2.7.2 (áreas recreativas e instalaciones similares: «La Balsa»). Coordenada: OpenStreetMap way/54286201 (ODbL)",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "area-recreativa-valle-de-los-pajaros",
+      "name": "Área recreativa del Valle de los Pájaros",
+      "type": "Acceso",
+      "description": "Área recreativa de la vertiente norte de El Valle, que el PORN inventaría como «Valle de los Pájaros» y OpenStreetMap rotula «Área Recreativa Los Pájaros».",
+      "coordinates": [
+        37.930672,
+        -1.138654
+      ],
+      "image": null,
+      "source": "PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §4.2.7.2 (áreas recreativas e instalaciones similares: «Valle de los Pájaros»). Coordenada: OpenStreetMap way/141055227 (ODbL)",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "centro-de-educacion-ambiental-el-sequen",
+      "name": "Centro de Educación Ambiental de El Sequén",
+      "type": "Acceso",
+      "description": "Antigua casa forestal reconvertida en centro de educación ambiental. El PORN la inventaría dos veces —como equipamiento de educación ambiental y como uno de los miradores habilitados del parque— y le da nombre, junto al Valle Perdido, a una de las subzonas de uso público intensivo del plan.",
+      "coordinates": [
+        37.925638,
+        -1.128428
+      ],
+      "image": null,
+      "source": "PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §4.2.7.2 (miradores habilitados y equipamientos de educación ambiental) y Normativa. Coordenada: OpenStreetMap way/60168609 (ODbL)",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "aula-de-naturaleza-del-majal-blanco",
+      "name": "Aula de Naturaleza del Majal Blanco",
+      "type": "Acceso",
+      "description": "Aula de naturaleza y albergue de la finca municipal del Majal Blanco, el equipamiento de uso público del sector central del parque. El PORN registra aquí dos de los senderos de pequeño recorrido señalizados del espacio y cita los carrascales de este monte entre los terrenos cuyo uso prioritario es la conservación.",
+      "coordinates": [
+        37.879914,
+        -1.209116
+      ],
+      "image": null,
+      "source": "PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §4.2.7.1 y §4.2.7.2 (equipamientos y señalización de sendas) y Normativa. Coordenada: OpenStreetMap way/105179418 (ODbL)",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    }
+  ],
   "species": [
     {
       "id": 1,

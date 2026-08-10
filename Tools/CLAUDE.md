@@ -67,6 +67,7 @@ Orden real de uso; el runbook completo está en
 | `reconcile-taxa.js` | 84 | Capa 3: reconciliación taxonómica EIDOS ↔ GBIF |
 | `wikimedia-images.js` · `enrich-images.js` | 177 · 267 | Fotos de especies con atribución |
 | `habitat-images.js` · `poi-images.js` | 176 · 423 | Portadas de hábitat (por especie diagnóstica) y fotos de POI |
+| `build-poi-sql.js` | 113 | **N3**: vuelca el bloque `pointsOfInterest` de un `park.json` a SQL idempotente (`pois:sql`). La API manda sobre el paquete: sin este SQL, un N3 cerrado se sirve con 0 POIs |
 | `invasoras-eei.js` · `invasoras-contenido.js` · `invasoras-images.js` | 72 · 317 · 159 | Invasoras: catálogo EEI ∩ GBIF, ficha desde EIDOS, foto |
 | `fix-estado-conservacion-iepnb.js` · `fix-sierra-espuna-revision.js` | 262 · 152 | Correcciones puntuales ya aplicadas. **Histórico: no relanzar sin leer su cabecera** |
 
