@@ -83,6 +83,20 @@ se reescriben, se abrevian ni se traducen: son la referencia bibliográfica, la 
 íntegras y este fichero solo añade la explicación al lado. Si una asociación no tiene entrada aquí,
 la ficha sigue mostrando su cita completa; lo único que se pierde es la explicación.
 
+## Cuidado: si renombras un taxón, renombra también la clave
+
+La clave es el **nombre científico**, así que un renombrado en los `park.json` desengancha esta
+entrada sin que nada falle: su texto deja de llegar a la especie y se queda alimentando a la entrada
+vieja del catálogo universal, que tampoco se borra sola. Pasó con **seis** de las nueve sinonimias
+que resolvió la revisión nomenclatural del 2026-08-09: *Halimium atriplicifolium*,
+*Bupleurum gibraltaricum*, *Saxifraga almeriensis*, *Calicotome villosa*, *Campanula hispanica* y
+*Allium paniculatum* siguieron aquí con el nombre retirado.
+
+`--extract` lo avisa ahora por partida doble —lista las entradas de aquí que no corresponden a
+ninguna especie y las del catálogo que no usa ningún parque—, y `npm run species:poda` retira las
+segundas. Y si la especie se va a otro carril (las exóticas, a `invasoras.json`), su entrada de aquí
+**se borra**: `invasoras-contenido.js` no lee este directorio.
+
 ## Después de editar
 
 ```bash

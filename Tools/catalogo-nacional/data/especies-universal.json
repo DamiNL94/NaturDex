@@ -259,7 +259,7 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Allium_melananthum02.jpg?width=1280",
     "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons"
   },
-  "Allium paniculatum": {
+  "Allium pallens": {
     "commonName": "Ajo silvestre",
     "kingdom": "flora",
     "group": "Planta bulbosa",
@@ -362,32 +362,6 @@
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ammoides_pusilla_Enfoqueflores_2011-6-11_CampodeCalatrava.jpg?width=1280",
     "imageAttribution": "javier martin (Public domain) · Wikimedia Commons"
-  },
-  "Ammotragus lervia": {
-    "commonName": "Arrui",
-    "kingdom": "fauna",
-    "group": "Mamífero ungulado",
-    "habitat": "Laderas escarpadas, roquedos y matorral de montaña seca",
-    "seasonality": "Todo el año",
-    "rarityScore": 4,
-    "description": "Bóvido norteafricano introducido en España en los años cincuenta con fines cinegéticos, hoy asilvestrado en varias sierras del sureste. Se reconoce por la melena de pelos largos que cuelga del cuello y las patas delanteras, y por sus cuernos gruesos y arqueados en ambos sexos.",
-    "tips": [
-      "Melena de pelo largo colgando del cuello y las patas delanteras",
-      "Cuernos gruesos y curvados también en las hembras",
-      "Pelaje uniforme de color arena, sin manchas"
-    ],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Mammalia",
-      "order": "Artiodactyla",
-      "family": "Bovidae",
-      "genus": "Ammotragus"
-    },
-    "iucnGlobal": "VU (Vulnerable) (evaluación UICN 2022)",
-    "spainStatus": "CEEEI: Incluido (Sentencia de 16 de marzo de 2016); UICN España: NE (No evaluado) (2007)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Barbary_Sheep_Tennoji.jpg?width=1280",
-    "imageAttribution": "Kuribo (CC BY-SA 3.0) · Wikimedia Commons"
   },
   "Anabasis hispanica": {
     "commonName": "Anabasis",
@@ -1195,7 +1169,7 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bucanetes_githagineus_-Salinas_de_Janubio%2C_Lanzarote%2C_Spain-8.jpg?width=1280",
     "imageAttribution": "Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons"
   },
-  "Bupleurum gibraltaricum": {
+  "Bupleurum gibraltarium": {
     "commonName": "Clujía",
     "kingdom": "flora",
     "group": "Arbusto",
@@ -1377,32 +1351,6 @@
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/476714358/original.jpeg",
     "imageAttribution": "Christoph Moning (CC BY 4.0) · GBIF"
   },
-  "Calicotome villosa": {
-    "commonName": "erguen",
-    "kingdom": "flora",
-    "group": "Arbusto",
-    "habitat": "Matorral y laderas soleadas sobre suelos secos y pedregosos",
-    "seasonality": "Primavera",
-    "rarityScore": 1,
-    "description": "Arbusto espinoso y muy ramificado que en primavera se cubre por completo de flores amarillas. Sus ramas terminan en espinas fuertes y sus legumbres van cubiertas de pelos sedosos. Forma masas impenetrables que dan refugio a aves de matorral.",
-    "tips": [
-      "Ramas rematadas en espinas rígidas y punzantes",
-      "Floración amarilla masiva que cubre toda la mata",
-      "Legumbres cubiertas de pelos blancos y sedosos"
-    ],
-    "taxonomy": {
-      "kingdom": "Plantae",
-      "phylum": "Tracheophyta",
-      "class": "Magnoliopsida",
-      "order": "Fabales",
-      "family": "Fabaceae",
-      "genus": "Cytisus"
-    },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
-    "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Calycotome_villosa1.jpg?width=1280",
-    "imageAttribution": "Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons"
-  },
   "Calidris alba": {
     "commonName": "Correlimos tridáctilo",
     "kingdom": "fauna",
@@ -1481,7 +1429,7 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/CorysShearwaterBottom.jpg?width=1280",
     "imageAttribution": "TomAllmendinger (CC BY 2.5) · Wikimedia Commons"
   },
-  "Campanula hispanica": {
+  "Campanula rotundifolia subsp. hispanica": {
     "commonName": "campanillas de cantil",
     "kingdom": "flora",
     "group": "Hierba",
@@ -1503,7 +1451,7 @@
       "genus": "Campanula"
     },
     "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
-    "spainStatus": "Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999)",
+    "spainStatus": "No incluida en el LESRPE ni en el Catálogo Español de Especies Amenazadas [IEPNB, Lista Patrón de las especies silvestres presentes en España, vista de normas, consultada 2026-08-09]",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Campanula_hispanica_1.jpg?width=1280",
     "imageAttribution": "Ghislain118 http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons"
   },
@@ -2079,6 +2027,32 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_albidus_flowers.jpg?width=1280",
     "imageAttribution": "Júlio Reis (CC BY-SA 3.0) · Wikimedia Commons"
   },
+  "Cistus atriplicifolius": {
+    "commonName": "Jara blanca",
+    "kingdom": "flora",
+    "group": "Mata",
+    "habitat": "Matorral y jarales sobre suelos secos y soleados de montaña media",
+    "seasonality": "Primavera",
+    "rarityScore": 1,
+    "description": "Arbusto de hojas anchas, ovaladas y cubiertas de una pelusa plateada que le da un aspecto casi blanco. En primavera se llena de flores amarillas de cinco pétalos con una mancha oscura en la base. Es un endemismo del sur y sureste peninsular.",
+    "tips": [
+      "Hojas anchas y plateadas, no estrechas como las jaras",
+      "Flores amarillas con una manchita oscura en la base del pétalo",
+      "Porte erguido, más alto que las jarillas comunes"
+    ],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Malvales",
+      "family": "Cistaceae",
+      "genus": "Cistus"
+    },
+    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Halimium_commutatum1.jpg?width=1280",
+    "imageAttribution": "Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons"
+  },
   "Cistus clusii": {
     "commonName": "Romerina",
     "kingdom": "flora",
@@ -2577,14 +2551,14 @@
     "commonName": "Curruca rabilarga",
     "kingdom": "fauna",
     "group": "Ave",
-    "habitat": "Matorral litoral y laderas secas",
+    "habitat": "Matorral bajo y denso, jarales, brezales y tomillares",
     "seasonality": "Todo el año",
     "rarityScore": 3,
-    "description": "Pequeña ave residente de matorral mediterráneo denso, reclasificada taxonómicamente de Sylvia undata a Curruca undata, igual que la curruca cabecinegra.",
+    "description": "Curruca pequeña, oscura y de cola muy larga que suele llevar levantada. El macho tiene el vientre vinoso y el ojo rojo rodeado de un anillo del mismo color. Es muy inquieta y rara vez se deja ver más de unos segundos antes de volver a hundirse en la mata.",
     "tips": [
-      "Cola larga que mueve constantemente",
-      "Ojo y anillo ocular rojizos",
-      "Ligada a matorral denso y bajo"
+      "Cola larga y erguida, casi vertical al posarse",
+      "Ojo y anillo ocular rojos",
+      "Vientre de color vinoso, con motitas blancas en la garganta"
     ],
     "taxonomy": {
       "kingdom": "Animalia",
@@ -2702,6 +2676,32 @@
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cytinus_ruber_(flowering_plants).jpg?width=1280",
     "imageAttribution": "Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons"
+  },
+  "Cytisus lanigerus": {
+    "commonName": "erguen",
+    "kingdom": "flora",
+    "group": "Arbusto",
+    "habitat": "Matorral y laderas soleadas sobre suelos secos y pedregosos",
+    "seasonality": "Primavera",
+    "rarityScore": 1,
+    "description": "Arbusto espinoso y muy ramificado que en primavera se cubre por completo de flores amarillas. Sus ramas terminan en espinas fuertes y sus legumbres van cubiertas de pelos sedosos. Forma masas impenetrables que dan refugio a aves de matorral.",
+    "tips": [
+      "Ramas rematadas en espinas rígidas y punzantes",
+      "Floración amarilla masiva que cubre toda la mata",
+      "Legumbres cubiertas de pelos blancos y sedosos"
+    ],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Fabales",
+      "family": "Fabaceae",
+      "genus": "Cytisus"
+    },
+    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Calycotome_villosa1.jpg?width=1280",
+    "imageAttribution": "Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons"
   },
   "Cytisus scoparius": {
     "commonName": "Retama de escobas",
@@ -3898,32 +3898,6 @@
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sea_Purslane.jpg?width=1280",
     "imageAttribution": "autor no indicado (Public domain) · Wikimedia Commons"
-  },
-  "Halimium atriplicifolium": {
-    "commonName": "Jara blanca",
-    "kingdom": "flora",
-    "group": "Mata",
-    "habitat": "Matorral y jarales sobre suelos secos y soleados de montaña media",
-    "seasonality": "Primavera",
-    "rarityScore": 1,
-    "description": "Arbusto de hojas anchas, ovaladas y cubiertas de una pelusa plateada que le da un aspecto casi blanco. En primavera se llena de flores amarillas de cinco pétalos con una mancha oscura en la base. Es un endemismo del sur y sureste peninsular.",
-    "tips": [
-      "Hojas anchas y plateadas, no estrechas como las jaras",
-      "Flores amarillas con una manchita oscura en la base del pétalo",
-      "Porte erguido, más alto que las jarillas comunes"
-    ],
-    "taxonomy": {
-      "kingdom": "Plantae",
-      "phylum": "Tracheophyta",
-      "class": "Magnoliopsida",
-      "order": "Malvales",
-      "family": "Cistaceae",
-      "genus": "Cistus"
-    },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
-    "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Halimium_commutatum1.jpg?width=1280",
-    "imageAttribution": "Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons"
   },
   "Halocnemum strobilaceum": {
     "commonName": "Sosa jabonera",
@@ -5979,32 +5953,6 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nerium_oleander_flowers_leaves.jpg?width=1280",
     "imageAttribution": "Alvesgaspar (CC BY 2.5) · Wikimedia Commons"
   },
-  "Nicotiana glauca": {
-    "commonName": "Tabaco moruno",
-    "kingdom": "flora",
-    "group": "Arbusto",
-    "habitat": "Ramblas, escombreras, cunetas y suelos removidos de clima cálido",
-    "seasonality": "Casi todo el año",
-    "rarityScore": 2,
-    "description": "Arbusto de crecimiento rápido, originario de Sudamérica y hoy naturalizado en el sureste ibérico, con hojas ovaladas de un verde azulado y flores tubulares amarillas. Coloniza terrenos alterados y es una planta exótica invasora que desplaza a la vegetación de rambla.",
-    "tips": [
-      "Hojas de verde azulado con peciolo largo",
-      "Flores tubulares amarillas y colgantes",
-      "Casi siempre en escombreras, cunetas y ramblas alteradas"
-    ],
-    "taxonomy": {
-      "kingdom": "Plantae",
-      "phylum": "Tracheophyta",
-      "class": "Magnoliopsida",
-      "order": "Solanales",
-      "family": "Solanaceae",
-      "genus": "Nicotiana"
-    },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
-    "spainStatus": "CEEEI: Incluido (Real Decreto 216/2019, de 29 de marzo, por el que se aprueba la lista de especies exóticas…)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Charuteira_(Nicotiana_glauca)%2C_planta_t%C3%B3xica_parente_do_tabaco_(Bag%C3%A9-RS).jpg?width=1280",
-    "imageAttribution": "Gabriel Collares (CC BY 4.0) · Wikimedia Commons"
-  },
   "Notoceras bicorne": {
     "commonName": "Cuerno de cabra",
     "kingdom": "flora",
@@ -6109,7 +6057,7 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Oenanthe_oenanthe_Larvik.JPG?width=1280",
     "imageAttribution": "Arnstein Rønning (CC BY-SA 4.0) · Wikimedia Commons"
   },
-  "Olea europaea var. sylvestris": {
+  "Olea europaea subsp. europaea": {
     "commonName": "Acebuche",
     "kingdom": "flora",
     "group": "Árbol",
@@ -7279,6 +7227,32 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rhinolophus_mehelyi-cropped.jpg?width=1280",
     "imageAttribution": "F. C. Robiller / naturlichter.de (CC BY-SA 3.0) · Wikimedia Commons"
   },
+  "Rosmarinus officinalis": {
+    "commonName": "Romero",
+    "kingdom": "flora",
+    "group": "Mata aromática",
+    "habitat": "Matorral seco y soleado sobre suelos calizos y pedregosos",
+    "seasonality": "Todo el año, con máximo de floración en invierno y primavera",
+    "rarityScore": 1,
+    "description": "Arbusto aromático de hojas estrechas como agujas, verde oscuro por el haz y blanquecinas por el envés, con los bordes enrollados hacia abajo. Florece casi todo el año en azul pálido, y en pleno invierno es una de las pocas fuentes de néctar del matorral.",
+    "tips": [
+      "Hojas como agujas, blancas por debajo",
+      "Olor inconfundible al frotar entre los dedos",
+      "Flores azul claro repartidas por las ramas casi todo el año"
+    ],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Lamiales",
+      "family": "Lamiaceae",
+      "genus": "Salvia"
+    },
+    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
+    "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rosemary_in_bloom.JPG?width=1280",
+    "imageAttribution": "Margalob (CC BY-SA 4.0) · Wikimedia Commons"
+  },
   "Saccharum ravennae": {
     "commonName": "Carrizo real",
     "kingdom": "flora",
@@ -7461,32 +7435,6 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Salsola_vermiculata.jpg?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons"
   },
-  "Salvia rosmarinus": {
-    "commonName": "Romero",
-    "kingdom": "flora",
-    "group": "Mata aromática",
-    "habitat": "Matorral seco y soleado sobre suelos calizos y pedregosos",
-    "seasonality": "Todo el año, con máximo de floración en invierno y primavera",
-    "rarityScore": 1,
-    "description": "Arbusto aromático de hojas estrechas como agujas, verde oscuro por el haz y blanquecinas por el envés, con los bordes enrollados hacia abajo. Florece casi todo el año en azul pálido, y en pleno invierno es una de las pocas fuentes de néctar del matorral.",
-    "tips": [
-      "Hojas como agujas, blancas por debajo",
-      "Olor inconfundible al frotar entre los dedos",
-      "Flores azul claro repartidas por las ramas casi todo el año"
-    ],
-    "taxonomy": {
-      "kingdom": "Plantae",
-      "phylum": "Tracheophyta",
-      "class": "Magnoliopsida",
-      "order": "Lamiales",
-      "family": "Lamiaceae",
-      "genus": "Salvia"
-    },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
-    "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rosemary_in_bloom.JPG?width=1280",
-    "imageAttribution": "Margalob (CC BY-SA 4.0) · Wikimedia Commons"
-  },
   "Sarcocapnos enneaphylla subsp. saetabensis": {
     "commonName": "Zapatito de la Virgen",
     "kingdom": "flora",
@@ -7591,7 +7539,7 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Malestonechatseaham_Cropped.jpg?width=1280",
     "imageAttribution": "derivative work: Myosotis Scorpioides (CC BY-SA 3.0) · Wikimedia Commons"
   },
-  "Saxifraga almeriensis": {
+  "Saxifraga camposii subsp. leptophylla": {
     "commonName": "Saxifraga almeriensis",
     "kingdom": "flora",
     "group": "Hierba",
@@ -8370,32 +8318,6 @@
     "spainStatus": "No catalogada (especie cinegética común)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eberswalde_Zoo_12-2017_img2.jpg?width=1280",
     "imageAttribution": "A.Savin (FAL) · Wikimedia Commons"
-  },
-  "Sylvia undata": {
-    "commonName": "Curruca rabilarga",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": "Matorral bajo y denso, jarales, brezales y tomillares",
-    "seasonality": "Todo el año",
-    "rarityScore": 1,
-    "description": "Curruca pequeña, oscura y de cola muy larga que suele llevar levantada. El macho tiene el vientre vinoso y el ojo rojo rodeado de un anillo del mismo color. Es muy inquieta y rara vez se deja ver más de unos segundos antes de volver a hundirse en la mata.",
-    "tips": [
-      "Cola larga y erguida, casi vertical al posarse",
-      "Ojo y anillo ocular rojos",
-      "Vientre de color vinoso, con motitas blancas en la garganta"
-    ],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Sylviidae",
-      "genus": "Sylvia"
-    },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
-    "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dartford_Warbler_Provencegrasm%C3%BCcke_(Sylvia_undata)_by_J._Dietrich.jpg?width=1280",
-    "imageAttribution": "J. Dietrich (CC BY-SA 3.0) · Wikimedia Commons"
   },
   "Tachybaptus ruficollis": {
     "commonName": "Zampullín común",

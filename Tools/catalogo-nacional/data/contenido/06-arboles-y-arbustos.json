@@ -176,17 +176,6 @@
       "Brácteas anchas y algo punzantes bajo cada verticilo"
     ]
   },
-  "Ammotragus lervia": {
-    "group": "Mamífero ungulado",
-    "habitat": "Laderas escarpadas, roquedos y matorral de montaña seca",
-    "seasonality": "Todo el año",
-    "description": "Bóvido norteafricano introducido en España en los años cincuenta con fines cinegéticos, hoy asilvestrado en varias sierras del sureste. Se reconoce por la melena de pelos largos que cuelga del cuello y las patas delanteras, y por sus cuernos gruesos y arqueados en ambos sexos.",
-    "tips": [
-      "Melena de pelo largo colgando del cuello y las patas delanteras",
-      "Cuernos gruesos y curvados también en las hembras",
-      "Pelaje uniforme de color arena, sin manchas"
-    ]
-  },
   "Cistus albidus": {
     "commonName": "Jara blanca",
     "group": "Mata",
@@ -377,18 +366,6 @@
       "Corteza rojiza que se desprende en tiras finas"
     ]
   },
-  "Nicotiana glauca": {
-    "commonName": "Tabaco moruno",
-    "group": "Arbusto",
-    "habitat": "Ramblas, escombreras, cunetas y suelos removidos de clima cálido",
-    "seasonality": "Casi todo el año",
-    "description": "Arbusto de crecimiento rápido, originario de Sudamérica y hoy naturalizado en el sureste ibérico, con hojas ovaladas de un verde azulado y flores tubulares amarillas. Coloniza terrenos alterados y es una planta exótica invasora que desplaza a la vegetación de rambla.",
-    "tips": [
-      "Hojas de verde azulado con peciolo largo",
-      "Flores tubulares amarillas y colgantes",
-      "Casi siempre en escombreras, cunetas y ramblas alteradas"
-    ]
-  },
   "Lotus dorycnium": {
     "commonName": "Bocha blanca",
     "group": "Mata",
@@ -401,7 +378,7 @@
       "Aspecto grisáceo por la pelusa que cubre la planta"
     ]
   },
-  "Allium paniculatum": {
+  "Allium pallens": {
     "commonName": "Ajo silvestre",
     "group": "Planta bulbosa",
     "habitat": "Pastizales secos, ribazos y claros de matorral",

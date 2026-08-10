@@ -32,7 +32,7 @@
       "Tallos pegajosos al tacto, con pelos glandulosos"
     ]
   },
-  "Halimium atriplicifolium": {
+  "Cistus atriplicifolius": {
     "group": "Mata",
     "habitat": "Matorral y jarales sobre suelos secos y soleados de montaña media",
     "seasonality": "Primavera",
@@ -54,7 +54,7 @@
       "Hojas de tres foliolos dentados"
     ]
   },
-  "Bupleurum gibraltaricum": {
+  "Bupleurum gibraltarium": {
     "group": "Arbusto",
     "habitat": "Roquedos, laderas pedregosas y matorral seco sobre calizas",
     "seasonality": "Verano",
@@ -87,7 +87,7 @@
       "Hojas rígidas con el nervio central pálido y marcado"
     ]
   },
-  "Saxifraga almeriensis": {
+  "Saxifraga camposii subsp. leptophylla": {
     "group": "Hierba",
     "habitat": "Grietas y repisas umbrías de roquedos calizos de montaña",
     "seasonality": "Primavera",
@@ -98,7 +98,7 @@
       "Casi siempre en paredes umbrías y frescas"
     ]
   },
-  "Calicotome villosa": {
+  "Cytisus lanigerus": {
     "group": "Arbusto",
     "habitat": "Matorral y laderas soleadas sobre suelos secos y pedregosos",
     "seasonality": "Primavera",
@@ -120,7 +120,7 @@
       "Flores en embudo, rosadas o casi blancas"
     ]
   },
-  "Campanula hispanica": {
+  "Campanula rotundifolia subsp. hispanica": {
     "group": "Hierba",
     "habitat": "Fisuras de roquedos, taludes y pedregales de montaña",
     "seasonality": "Primavera y verano",

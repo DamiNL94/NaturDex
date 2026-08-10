@@ -82,10 +82,6 @@ UPDATE habitats h JOIN parks p ON p.id = h.park_id
 WHERE p.slug = 'carrascoy-y-el-valle' AND h.code = '1410';
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id
-  SET h.description = 'Matorral de suelos salinos removidos y cargados de nitrógeno: bordes de camino y de cultivo, márgenes de rambla, corrales y escombreras viejas. Lo forman matas robustas de hoja gris o carnosa —orgazas, sosas, bojas y cambroneras— que rebrotan enseguida tras cualquier alteración. Aunque nace de terrenos trastocados, es vegetación propia de los ambientes áridos del sureste y a menudo el último refugio de plantas escasas.'
-WHERE p.slug = 'carrascoy-y-el-valle' AND h.code = '1430';
-
-UPDATE habitats h JOIN parks p ON p.id = h.park_id
   SET h.description = 'La vegetación leñosa de ramblas, arroyos y ríos de caudal irregular, que unos meses llevan agua y otros son un lecho de piedras: adelfares y tarayales. La adelfa (Nerium oleander), de hojas coriáceas y flores rosas, y los tarays (Tamarix), de ramillas finas y flores en espiga, resisten tanto las avenidas violentas como meses de sequía. Toda la adelfa es muy tóxica, incluidas hojas y ramas secas.'
 WHERE p.slug = 'carrascoy-y-el-valle' AND h.code = '92D0';
 

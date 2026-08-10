@@ -149,6 +149,19 @@ Camina por el suelo clavando el pico largo y curvo',
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Upupa epops';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Acebuche',
+  s.primary_habitat = 'Matorral alto, laderas secas y barrancos del piso más cálido',
+  s.description = 'El acebuche es el olivo silvestre: mismo árbol, sin siglos de selección. Tiene las hojas más pequeñas y duras, las ramas jóvenes a menudo espinosas y aceitunas diminutas. Forma matorrales altos y es el árbol característico de las laderas cálidas mediterráneas.',
+  s.identification_tips = 'Hojas pequeñas, verdes arriba y plateadas por debajo
+Ramillas jóvenes rígidas y a veces espinosas
+Aceitunas muy pequeñas, de poco más de un centímetro',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ullastre_vell.JPG?width=1280',
+  s.image_attribution = 'Antoni Salvà (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Olea europaea subsp. europaea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Acelga marina',
   s.primary_habitat = 'Playas de cantos, pie de acantilado y suelos removidos con sal cerca del mar',
   s.description = 'Antepasada silvestre de la acelga y la remolacha, con hojas gruesas, lustrosas y algo carnosas que aguantan la sal y el viento. Crece donde el mar deja restos orgánicos acumulados. Sus flores son verdosas y pasan desapercibidas, dispuestas en largas espigas.',
@@ -800,11 +813,11 @@ WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Curruca mela
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Curruca rabilarga',
-  s.primary_habitat = 'Matorral litoral y laderas secas',
-  s.description = 'Pequeña ave residente de matorral mediterráneo denso, reclasificada taxonómicamente de Sylvia undata a Curruca undata, igual que la curruca cabecinegra.',
-  s.identification_tips = 'Cola larga que mueve constantemente
-Ojo y anillo ocular rojizos
-Ligada a matorral denso y bajo',
+  s.primary_habitat = 'Matorral bajo y denso, jarales, brezales y tomillares',
+  s.description = 'Curruca pequeña, oscura y de cola muy larga que suele llevar levantada. El macho tiene el vientre vinoso y el ojo rojo rodeado de un anillo del mismo color. Es muy inquieta y rara vez se deja ver más de unos segundos antes de volver a hundirse en la mata.',
+  s.identification_tips = 'Cola larga y erguida, casi vertical al posarse
+Ojo y anillo ocular rojos
+Vientre de color vinoso, con motitas blancas en la garganta',
   s.seasonality = 'Todo el año',
   s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_pitchou_Ichkeul_NP.jpg?width=1280',
   s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',
@@ -1473,6 +1486,19 @@ Sin el olor a romero, aunque se le parezca de lejos',
   s.image_attribution = 'Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons',
   s.rarity_score = 2
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Cistus clusii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Romero',
+  s.primary_habitat = 'Matorral seco y soleado sobre suelos calizos y pedregosos',
+  s.description = 'Arbusto aromático de hojas estrechas como agujas, verde oscuro por el haz y blanquecinas por el envés, con los bordes enrollados hacia abajo. Florece casi todo el año en azul pálido, y en pleno invierno es una de las pocas fuentes de néctar del matorral.',
+  s.identification_tips = 'Hojas como agujas, blancas por debajo
+Olor inconfundible al frotar entre los dedos
+Flores azul claro repartidas por las ramas casi todo el año',
+  s.seasonality = 'Todo el año, con máximo de floración en invierno y primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rosemary_in_bloom.JPG?width=1280',
+  s.image_attribution = 'Margalob (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Rosmarinus officinalis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Rugueta de mar',
@@ -2255,6 +2281,1904 @@ Siempre al pie de una sosa, un almajo o un salado: es su hospedador',
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Cistanche phelypaea';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jabalí',
+  s.primary_habitat = 'Bosque, matorral denso y cultivos; necesita cobertura y puntos de agua',
+  s.description = 'Ungulado robusto y adaptable, con el cuerpo cubierto de cerdas ásperas y una cabeza en cuña rematada por un hocico potente con el que remueve el suelo. Los rayones —las crías— nacen con líneas claras a lo largo del lomo. Es omnívoro y ha ampliado mucho su área en las últimas décadas.',
+  s.identification_tips = 'Hozaduras: zonas de suelo removido como si lo hubieran arado
+Huellas hendidas grandes con las pezuñas laterales marcadas
+Barros y árboles con el tronco embarrado a media altura',
+  s.seasonality = 'Todo el año (actividad sobre todo nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eberswalde_Zoo_12-2017_img2.jpg?width=1280',
+  s.image_attribution = 'A.Savin (FAL) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Sus scrofa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zorro',
+  s.primary_habitat = 'Prácticamente cualquier ambiente: bosque, matorral, cultivos y periferias urbanas',
+  s.description = 'El carnívoro silvestre más adaptable y extendido: vive desde la alta montaña hasta el borde de las ciudades. Es omnívoro y oportunista, lo que explica su éxito. Se reconoce por la cola larga y espesa —la «hopa»— rematada casi siempre en blanco.',
+  s.identification_tips = 'Cola muy espesa con la punta blanca
+Huella alargada con las cuatro almohadillas alineadas
+Excrementos retorcidos y con pelos, sobre piedras y caminos',
+  s.seasonality = 'Todo el año (actividad sobre todo nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Vulpes_vulpes_2.jpg?width=1280',
+  s.image_attribution = 'Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Vulpes vulpes';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Albaida',
+  s.primary_habitat = 'Matorral seco y soleado sobre margas y suelos pobres',
+  s.description = 'Mata de aspecto blanquecino por la fina pelusa que cubre hojas y tallos, un recurso frente al sol y la sequía. En primavera se llena de espigas de flores amarillas que atraen a muchos insectos. Es una de las leguminosas que primero coloniza laderas degradadas y taludes.',
+  s.identification_tips = 'Aspecto grisáceo y aterciopelado al tacto
+Flores amarillas pequeñas en espigas apretadas
+Hojas divididas en tres, la del centro más larga',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Anthyllis_cytisoides.JPG?width=1280',
+  s.image_attribution = 'Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Anthyllis cytisoides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pino carrasco',
+  s.primary_habitat = 'Laderas secas y soleadas sobre calizas y margas, en clima mediterráneo cálido',
+  s.description = 'Pino de copa clara e irregular y follaje de un verde pálido, el más resistente a la sequía y a los suelos pobres de los pinos ibéricos. Sus piñas, alargadas y asimétricas, quedan colgadas años en la rama y liberan las semillas tras los incendios, lo que le permite recolonizar rápido.',
+  s.identification_tips = 'Copa irregular y poco densa, de verde claro
+Piñas asimétricas y persistentes, apuntando hacia atrás
+Corteza clara y agrietada, rojiza en las ramas jóvenes',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pino_secolare_-_Castelleone_di_Suasa.JPG?width=1280',
+  s.image_attribution = 'Accurimbono (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Pinus halepensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jara blanca',
+  s.primary_habitat = 'Matorral y laderas soleadas sobre suelos calizos secos',
+  s.description = 'Jara de hojas blanquecinas, aterciopeladas al tacto y sin peciolo, con flores grandes de color rosa malva y pétalos arrugados como papel de seda que duran solo unas horas. Es una de las plantas que da color al matorral en primavera.',
+  s.identification_tips = 'Hojas blanquecinas y aterciopeladas, sentadas en la rama
+Flores rosa malva grandes, de pétalos arrugados
+Cada flor dura apenas una mañana',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_albidus_flowers.jpg?width=1280',
+  s.image_attribution = 'Júlio Reis (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Cistus albidus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lentisco',
+  s.primary_habitat = 'Matorral mediterráneo litoral',
+  s.description = 'Arbusto perennifolio de hojas compuestas sin foliolo terminal y con el raquis alado, un detalle que lo separa de la cornicabra. Al frotarlo huele intensamente a resina. Sus frutos, en racimo, pasan de rojo a negro y son alimento clave para aves en otoño.',
+  s.identification_tips = 'Hoja compuesta con número par de foliolos, sin uno terminal
+Raquis de la hoja con dos alas laterales
+Olor fuerte a resina al frotar las hojas',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pistacia_lentiscus.jpg?width=1280',
+  s.image_attribution = 'Lumbar~commonswiki (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Pistacia lentiscus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Romero',
+  s.primary_habitat = 'Matorral seco y soleado sobre suelos calizos y pedregosos',
+  s.description = 'Arbusto aromático de hojas estrechas como agujas, verde oscuro por el haz y blanquecinas por el envés, con los bordes enrollados hacia abajo. Florece casi todo el año en azul pálido, y en pleno invierno es una de las pocas fuentes de néctar del matorral.',
+  s.identification_tips = 'Hojas como agujas, blancas por debajo
+Olor inconfundible al frotar entre los dedos
+Flores azul claro repartidas por las ramas casi todo el año',
+  s.seasonality = 'Todo el año, con máximo de floración en invierno y primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rosemary_in_bloom.JPG?width=1280',
+  s.image_attribution = 'Margalob (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Rosmarinus officinalis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Algarrobo',
+  s.primary_habitat = 'Laderas cálidas, antiguos cultivos y matorral del piso termomediterráneo',
+  s.description = 'Árbol perennifolio de copa densa y hojas compuestas con foliolos redondeados y lustrosos. Florece en otoño directamente sobre el tronco y las ramas viejas. Sus vainas pardas y dulces, las algarrobas, se han usado durante siglos como pienso y alimento.',
+  s.identification_tips = 'Hojas compuestas de foliolos redondos y brillantes
+Flores nacidas directamente del tronco y las ramas gruesas
+Vainas pardas y aplanadas colgando del árbol',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ceratonia_siliqua_Keciboynuzu_1370984_Nevit.jpg?width=1280',
+  s.image_attribution = 'Nevit Dilmen (talk) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Ceratonia siliqua';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Aladierno',
+  s.primary_habitat = 'Matorral alto, encinares y barrancos sobre suelos pedregosos',
+  s.description = 'Arbusto perennifolio de hojas alternas, coriáceas y de borde finamente dentado, sin espinas. Sus frutos maduran de rojo a negro y son muy buscados por los pájaros. Se distingue del espino negro por carecer de espinas y tener hojas mayores.',
+  s.identification_tips = 'Sin espinas, a diferencia de otros ramnos
+Hojas alternas, coriáceas y algo dentadas
+Frutos que pasan de rojo a negro al madurar',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhamnus_alaternus1627.JPG?width=1280',
+  s.image_attribution = 'tato grasso (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Rhamnus alaternus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Coscoja',
+  s.primary_habitat = 'Matorral esclerófilo y sabinar',
+  s.description = 'Arbusto esclerófilo de hoja perenne y espinosa, integrante del matorral mediterráneo denso y de las orlas del sabinar.',
+  s.identification_tips = 'Hojas coriáceas con margen espinoso
+Bellota con cúpula de escamas punzantes
+Porte arbustivo denso',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_coccifera_1.JPG?width=1280',
+  s.image_attribution = 'User:Xemenendura (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Quercus coccifera';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bayón',
+  s.primary_habitat = 'Matorral alto, sabinares y laderas secas sobre suelo pedregoso',
+  s.description = 'Arbusto de ramas verdes y erguidas con hojas estrechas y coriáceas. Es hemiparásito: fabrica su propio alimento pero además conecta sus raíces a las de otras plantas para robarles agua y sales. Sus frutos son bayas rojas o anaranjadas muy vistosas.',
+  s.identification_tips = 'Ramas verdes y erectas, de aspecto escobiforme
+Bayas rojo anaranjado brillantes al madurar
+Hojas estrechas, duras y de punta aguda',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Osyris_lanceolata.JPG?width=1280',
+  s.image_attribution = 'Xemenendura (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Osyris lanceolata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tomillo blanco',
+  s.primary_habitat = 'Tomillares y matorral raso sobre suelos calizos secos',
+  s.description = 'Tomillo endémico del sureste ibérico, fácil de reconocer por unas brácteas grandes, blancas y membranosas que rodean la inflorescencia y parecen pétalos. Ese conjunto vistoso, más que las flores en sí, es lo que atrae a los insectos.',
+  s.identification_tips = 'Brácteas blancas grandes y papiráceas rodeando la flor
+Cabezuelas terminales muy vistosas y redondeadas
+Aroma intenso a tomillo al frotar',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Thymus_membranaceus_(3).jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Thymus membranaceus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Enebro de la miera',
+  s.primary_habitat = 'Matorral, pinares aclarados y laderas pedregosas',
+  s.description = 'Enebro de hojas aciculares y punzantes dispuestas de tres en tres, con dos bandas blancas en la cara superior que lo separan a simple vista de la sabina. Sus gálbulos son rojizos al madurar. De su madera se destilaba el aceite de miera.',
+  s.identification_tips = 'Hojas punzantes en grupos de tres, no en escama
+Dos rayas blancas en la cara superior de cada hoja
+Gálbulos rojizos y brillantes al madurar',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_oxycedrus_g1.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Juniperus oxycedrus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ardilla roja',
+  s.primary_habitat = 'Pinares y bosques con arbolado maduro y producción de piñones o frutos',
+  s.description = 'Ardilla arborícola de cola larga y esponjosa y orejas con pinceles de pelo más marcados en invierno. En los pinares mediterráneos su rastro más evidente son las piñas roídas hasta dejar solo el eje, abandonadas en tocones y piedras.',
+  s.identification_tips = 'Piñas roídas hasta el raspón, apiladas en un mismo posadero
+Cola larga y esponjosa que mantiene erguida al saltar
+Pinceles de pelo en las orejas, sobre todo en invierno',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eichh%C3%B6rnchen_D%C3%BCsseldorf_Hofgarten_edit.jpg?width=1280',
+  s.image_attribution = 'Ray eye (CC BY-SA 2.0 de) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Sciurus vulgaris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Esparraguera blanca',
+  s.primary_habitat = 'Matorral seco, ribazos y bajo arbustos en clima cálido',
+  s.description = 'Esparraguera de tallos blanquecinos y muy espinosos que pierde el follaje en verano y florece en otoño, al revés que casi todo el matorral. Lo que parecen hojas son ramillas finas agrupadas en haces. Sus brotes tiernos son los espárragos silvestres de recolección tradicional.',
+  s.identification_tips = 'Tallos claros, casi blancos, con espinas fuertes
+Ramillas finas agrupadas en manojitos
+Florece en otoño, con flores blancas y olorosas',
+  s.seasonality = 'Otoño (floración)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Art%C3%A0_-_Ermita_de_Betlem_-_Asparagus_albus_03_ies.jpg?width=1280',
+  s.image_attribution = 'Frank Vincentz (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Asparagus albus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Azufaifo',
+  s.primary_habitat = 'Matorrales arborescentes de Ziziphus',
+  s.description = 'Arbusto espinoso que forma cúpulas densas de varios metros, un microhábitat en sí mismo: bajo su copa se refugian aves, reptiles y mamíferos, y la humedad y el suelo son distintos que fuera. Sus ramas zigzaguean con dos espinas en cada nudo, una recta y otra ganchuda.',
+  s.identification_tips = 'Ramas en zigzag con dos espinas por nudo, una recta y otra curva
+Porte en cúpula o almohadón, muy denso
+Frutos redondos que pasan de verde a pardo amarillento',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ziziphus_lotus_20200928_191923.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 4
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Ziziphus lotus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lastón',
+  s.primary_habitat = 'Pastizales, claros de matorral y ribazos sobre suelos calizos',
+  s.description = 'Gramínea perenne y rizomatosa que forma céspedes extensos en los claros del matorral mediterráneo. Sus hojas son cortas, rígidas y de punta roma. Es de las plantas que más rápido rebrota tras un incendio, gracias a sus rizomas subterráneos.',
+  s.identification_tips = 'Céspedes extensos y bajos, no matas aisladas
+Hojas cortas y rígidas, de punta redondeada
+Espiguillas alineadas a un lado de un eje rígido',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Brachypodium_retusum_espiga_seca.jpg?width=1280',
+  s.image_attribution = 'Pere prlpz (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Brachypodium retusum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Palmito',
+  s.primary_habitat = 'Matorral cálido, laderas soleadas y acantilados del piso termomediterráneo',
+  s.description = 'La única palmera silvestre de Europa continental. Suele crecer en mata, con varios troncos cortos, aunque con los años puede levantar un tronco único. Sus hojas son abanicos rígidos con pecíolos muy espinosos. Del cogollo se sacaba el «palmito», y de las hojas, cordelería y escobas.',
+  s.identification_tips = 'Hojas en abanico, rígidas y divididas en segmentos
+Pecíolos con espinas fuertes en los bordes
+Porte en mata, con varios troncos desde la base',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Chamaerops_humilis_Torreblanca.jpg?width=1280',
+  s.image_attribution = 'Canaan (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Chamaerops humilis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Baladre',
+  s.primary_habitat = 'Cauces de rambla y ramblizos con humedad subterránea y crecidas',
+  s.description = 'Arbusto de hojas coriáceas, alargadas y opuestas, que forma masas densas en el lecho de las ramblas y aguanta las riadas gracias a su raigambre. Florece en rosa intenso durante buena parte del verano. Toda la planta es muy tóxica, savia incluida.',
+  s.identification_tips = 'Hojas duras y lanceoladas con el nervio central marcado
+Flores rosas grandes en el extremo de las ramas
+Frutos en vaina larga que se abre soltando semillas con vilano',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Nerium_oleander_flowers_leaves.jpg?width=1280',
+  s.image_attribution = 'Alvesgaspar (CC BY 2.5) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Nerium oleander';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carrasca',
+  s.primary_habitat = 'Bosques y matorrales mediterráneos continentales, sobre suelos secos y pobres',
+  s.description = 'La encina de interior, más adaptada al frío y a la sequía continental, con hojas más redondeadas y bellotas dulces. A menudo crece en mata por el efecto del ramoneo y las cortas repetidas. Muchos autores la consideran una subespecie de la encina.',
+  s.identification_tips = 'Hojas más redondeadas y pequeñas que las de la encina litoral
+Bellotas de sabor dulce, no amargas
+Frecuente en porte de mata, con varios pies',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carrasca_de_la_Raboseras.JPG?width=1280',
+  s.image_attribution = 'Picamaderos (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Quercus rotundifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Esparraguera de gato',
+  s.primary_habitat = 'Matorrales arborescentes de Juniperus spp.',
+  s.description = 'Esparraguera muy espinosa y densa que se enreda entre el matorral y el sabinar litoral, con cladodios rígidos y punzantes.',
+  s.identification_tips = 'Cladodios rígidos y punzantes
+Se enreda en el matorral
+Frutos negros en otoño',
+  s.seasonality = 'Otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Asparagus_stipularis_(detail).jpg?width=1280',
+  s.image_attribution = 'Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Asparagus horridus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bolaga',
+  s.primary_habitat = 'Matorral costero y semiárido, arenas y suelos pedregosos con influencia marina',
+  s.description = 'Mata de ramas largas y flexibles cubiertas de hojitas escamosas, apretadas contra el tallo como las tejas de un tejado, con el envés blanco y peludo. Las flores son verdosas y pasan desapercibidas, pero su corteza es tan fibrosa y resistente que se ha usado tradicionalmente como cuerda.',
+  s.identification_tips = 'Hojas minúsculas y solapadas, cubriendo el tallo como escamas
+La rama no se rompe al doblarla: la corteza es fibrosa y correosa
+Flores verde-amarillentas pegadas a la rama, sin pétalos vistosos',
+  s.seasonality = 'Floración de otoño a primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Thymelaea_hirsuta_Bonifacio.jpg?width=1280',
+  s.image_attribution = 'Pancrat (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Thymelaea hirsuta';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Clavellina',
+  s.primary_habitat = 'Pastizales secos, arenales y claros de matorral sobre suelos pobres',
+  s.description = 'Clavellina silvestre de tallos finos y hojas muy estrechas, con flores rosadas de pétalos profundamente recortados en flecos. El cáliz es un tubo largo y estrecho del que asoman los pétalos. Desprende una fragancia suave, más perceptible al atardecer.',
+  s.identification_tips = 'Pétalos rosados recortados en flecos finos
+Cáliz en tubo largo y delgado
+Hojas muy estrechas, casi como agujas',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Dianthus_broteri.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Dianthus broteri';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jarilla de brezo',
+  s.primary_habitat = 'Matorrales y pastizales pedregosos sobre calizas, en solanas secas',
+  s.description = 'Matita leñosa de hojas estrechas y punzantes parecidas a las del brezo, de donde le viene el nombre. Sus flores amarillas, de cinco pétalos delicados, se abren por la mañana y pierden los pétalos el mismo día.',
+  s.identification_tips = 'Hojas lineares, rígidas y puntiagudas, como agujas cortas
+Flores amarillas efímeras, con pétalos arrugados
+Mata baja y leñosa en la base, muy ramificada',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fumana_ericoides_Tallos_2010-7-03_ParqueNaturalLagunasdelaMata.jpg?width=1280',
+  s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Fumana ericoides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Rana común',
+  s.primary_habitat = 'Charcas, balsas, acequias y tramos remansados con vegetación',
+  s.description = 'La rana verde ibérica, la más común y adaptable de nuestros anfibios: coloniza desde ramblas y balsas de riego hasta fuentes urbanas. Su canto es un cacareo entrecortado que forma coros al atardecer. Salta al agua al menor movimiento en la orilla.',
+  s.identification_tips = 'Línea clara a lo largo del centro del lomo en muchos ejemplares
+Canto entrecortado, como una risa o un cacareo
+Salta al agua desde la orilla al notar movimiento',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pelophylax_perezi_by-dpc.jpg?width=1280',
+  s.image_attribution = 'David Perez (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Pelophylax perezi';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tomillo de invierno',
+  s.primary_habitat = 'Tomillares y matorral raso sobre suelos calizos y margosos secos',
+  s.description = 'Tomillo del sureste ibérico que florece en pleno invierno, cuando casi nada más lo hace, cubriéndose de espigas de flores blancas o rosadas. Ese calendario lo convierte en un recurso decisivo para los insectos en la estación fría y en una planta melífera muy apreciada.',
+  s.identification_tips = 'Florece en invierno, adelantándose al resto del tomillar
+Hojas pequeñas con el borde enrollado hacia abajo
+Aroma fuerte a tomillo al frotar entre los dedos',
+  s.seasonality = 'Todo el año, con floración de invierno a primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Thymus_hyemalis_re.jpg?width=1280',
+  s.image_attribution = 'Retama (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Thymus hyemalis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Campanica',
+  s.primary_habitat = 'Ribazos, cunetas, cultivos y claros de matorral',
+  s.description = 'Correhuela trepadora de flores rosadas grandes y llamativas, con hojas muy variables: las de abajo casi enteras y las de arriba profundamente divididas y plateadas. Se enreda en la vegetación de ribazos y márgenes.',
+  s.identification_tips = 'Flores rosa intenso en embudo, grandes y vistosas
+Hojas superiores muy recortadas y de aspecto plateado
+Tallos volubles que se enredan en otras plantas',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Convolvulus_althaeoides_1.JPG?width=1280',
+  s.image_attribution = 'User:Xemenendura (CC BY-SA 2.1 es) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Convolvulus althaeoides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alhucema',
+  s.primary_habitat = 'Matorral seco, ribazos y bordes soleados de clima cálido',
+  s.description = 'Alhucema de hojas muy divididas, casi como las de un helecho, y aspecto grisáceo. Florece durante buena parte del año en espigas azul violeta rematadas por dos brácteas alargadas. Su olor es más resinoso y menos dulce que el del espliego cultivado.',
+  s.identification_tips = 'Hojas finamente divididas, de aspecto plumoso
+Espigas azul violeta con dos brácteas en la punta
+Aroma resinoso e intenso al frotar',
+  s.seasonality = 'Casi todo el año, con máximo en primavera y otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lavandula_multifida.jpg?width=1280',
+  s.image_attribution = 'Laitche (Public domain) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Lavandula multifida';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Oroval',
+  s.primary_habitat = 'Matorral cálido, roquedos y ramblas de clima muy seco',
+  s.description = 'Arbusto de la familia del tomate y la belladona, con hojas ovaladas algo carnosas y flores verdosas discretas. Los frutos son bayas rojas y brillantes envueltas en el cáliz. Es una especie de raíz norteafricana que en la península solo vive en los rincones más cálidos del sureste.',
+  s.identification_tips = 'Bayas rojas pequeñas asomando del cáliz
+Hojas ovales, algo carnosas y de verde apagado
+Flores verde amarillentas, poco vistosas',
+  s.seasonality = 'Primavera y otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Withania_frutescens0176.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Withania frutescens';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Floreta',
+  s.primary_habitat = 'Matorral seco y laderas soleadas sobre suelos pedregosos',
+  s.description = 'Leguminosa de tallos verdes, largos y flexibles, casi sin hojas —que caen pronto para ahorrar agua—, rematados en umbelas de flores amarillas. Sus frutos son legumbres articuladas que se rompen en segmentos con una semilla cada uno.',
+  s.identification_tips = 'Tallos verdes y juncosos, casi sin hojas
+Umbelas de flores amarillas en el extremo
+Legumbres articuladas, como collares de cuentas',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Coronilla_juncea.JPG?width=1280',
+  s.image_attribution = 'Mario Modesto Mata (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Coronilla juncea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bocha blanca',
+  s.primary_habitat = 'Matorral, ribazos y claros sobre suelos secos y calizos',
+  s.description = 'Mata baja y grisácea por la pelusa que la cubre, con hojas divididas en foliolos estrechos y ramilletes apretados de florecillas blancas con la quilla oscura. Es muy frecuente en los claros del matorral.',
+  s.identification_tips = 'Ramilletes densos de flores blancas muy pequeñas
+Quilla de la flor con la punta oscura
+Aspecto grisáceo por la pelusa que cubre la planta',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Dorycnium_pentaphyllum_Habitat_2010-6-15_DehesaBoyaldePuertollano.jpg?width=1280',
+  s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Lotus dorycnium';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Salamanquesa común',
+  s.primary_habitat = 'Pendientes rocosas calcícolas con vegetación casmofítica',
+  s.description = 'Gecko robusto de piel tuberculada, activo al anochecer sobre roquedos, muros y cortados, donde caza insectos atraídos por la luz.',
+  s.identification_tips = 'Piel rugosa con tubérculos
+Activa al atardecer
+Trepa por rocas y muros',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/605672084/original.jpg',
+  s.image_attribution = 'jrodben (CC BY-NC 4.0) · GBIF',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Tarentola mauritanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zamarrilla',
+  s.primary_habitat = 'Tomillares y matorral raso sobre suelo calizo pedregoso',
+  s.description = 'Mata pequeña y grisácea, de hojas estrechas con el borde enrollado, que remata sus tallos en cabezuelas apretadas de flores blancas o crema. Es una de las plantas más constantes del tomillar y una fuente de néctar importante en pleno verano.',
+  s.identification_tips = 'Cabezuelas redondas y compactas al final del tallo
+Aspecto general blanquecino o grisáceo
+Flores sin labio superior, típicas del género',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_capitatum2006.jpg?width=1280',
+  s.image_attribution = 'No machine-readable author provided. Víctor M. Vicente Selvas~commo… (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Teucrium capitatum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagartija colilarga',
+  s.primary_habitat = 'Matorral litoral y laderas secas',
+  s.description = 'Lagartija esbelta de escamas grandes, quilladas y brillantes, con dos líneas claras muy marcadas a cada lado del dorso. La cola puede medir el doble que el cuerpo. Los machos lucen en primavera manchas azules en el hombro y las mejillas anaranjadas.',
+  s.identification_tips = 'Dos líneas claras nítidas a lo largo de cada costado
+Escamas grandes y quilladas, de aspecto brillante
+Cola larguísima, hasta el doble que el cuerpo',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Psammodromus_algirus_-_01.jpg?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Psammodromus algirus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Madroño',
+  s.primary_habitat = 'Umbrías, barrancos y matorral alto sobre suelos frescos',
+  s.description = 'Arbusto o arbolillo de hojas lustrosas y dentadas y corteza rojiza que se desprende en tiras. En otoño coinciden en la misma rama las flores blancas en racimos colgantes y los frutos rojos y granulosos del año anterior.',
+  s.identification_tips = 'Flores y frutos a la vez en la misma rama, en otoño
+Frutos rojos esféricos de superficie granulosa
+Corteza rojiza que se desprende en tiras finas',
+  s.seasonality = 'Otoño e invierno (flor y fruto a la vez)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Arbutus_unedo_Corsica.jpg?width=1280',
+  s.image_attribution = 'jxandreani (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Arbutus unedo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mirto',
+  s.primary_habitat = 'Barrancos, umbrías y matorral alto sobre suelos frescos',
+  s.description = 'Arbusto aromático de hojas opuestas, brillantes y coriáceas que al mirarlas a contraluz muestran puntitos translúcidos: son las glándulas de aceite esencial. Sus flores blancas tienen un penacho de estambres y sus frutos son bayas azul negruzcas.',
+  s.identification_tips = 'Puntos translúcidos en la hoja al mirarla a contraluz
+Aroma intenso al estrujar una hoja
+Flores blancas con muchos estambres, como un pincel',
+  s.seasonality = 'Verano (floración) y otoño (fruto)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Starr_080304-3229_Myrtus_communis.jpg?width=1280',
+  s.image_attribution = 'Forest & Kim Starr (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Myrtus communis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Rabo de gato',
+  s.primary_habitat = 'Tomillares y matorral raso sobre suelos calizos y margosos',
+  s.description = 'Rabogato de tallos erguidos cubiertos de pelusa blanca, con flores de color blanco crema dispuestas en verticilos separados a lo largo de la espiga. Es un endemismo del sureste ibérico y una de las plantas usadas tradicionalmente en infusión.',
+  s.identification_tips = 'Flores blanco crema en anillos separados por el tallo
+Toda la planta blanquecina y algo lanuda
+Brácteas anchas y punzantes bajo cada grupo de flores',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Alb-S.leucantha-13.jpg?width=1280',
+  s.image_attribution = 'Philmarin (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Sideritis leucantha';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Canadillo',
+  s.primary_habitat = 'Roquedos, matorral seco y pie de acantilado en clima cálido',
+  s.description = 'Arbusto de aspecto extraño: un manojo de tallos verdes, articulados y colgantes, casi sin hojas, que se quiebran con facilidad por los nudos. No es una planta con flores, sino un pariente lejano de las coníferas; sus semillas van envueltas en una cubierta roja y carnosa.',
+  s.identification_tips = 'Tallos verdes articulados que se rompen por los nudos
+Sin hojas visibles, solo escamas en cada nudo
+Frutos rojos carnosos con una semilla dentro',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ephedra_fragilis_3.JPG?width=1280',
+  s.image_attribution = 'User:falconaumanni (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Ephedra fragilis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Orejilla de roca',
+  s.primary_habitat = 'Roquedos y fisuras calcáreas costeras',
+  s.description = 'Planta rupícola de hojas redondeadas, dentadas y algo carnosas, que forma matas colgantes en las paredes calizas. Sus flores, blanquecinas con toques amarillos, se agrupan en racimos erguidos. Es un endemismo iberoafricano restringido al sureste peninsular y al norte de África.',
+  s.identification_tips = 'Hojas redondas y dentadas, casi como monedas
+Racimos de flores blanquecinas erguidos sobre el follaje
+Forma matas colgantes en pared caliza',
+  s.seasonality = 'Floración primaveral',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lafuentea_rotundifolia80857.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 4
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Lafuentea rotundifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Clujía',
+  s.primary_habitat = 'Roquedos, laderas pedregosas y matorral seco sobre calizas',
+  s.description = 'Umbelífera leñosa, algo insólita en una familia de hierbas, con hojas estrechas, coriáceas y de un verde azulado. Sus umbelas de flores amarillas se abren en pleno verano. Desprende un olor resinoso característico al romper una rama.',
+  s.identification_tips = 'Umbelífera con base leñosa, no herbácea
+Hojas estrechas, duras y de verde azulado
+Umbelas amarillas en pleno verano',
+  s.seasonality = 'Verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/B._gibraltarium-1.JPG?width=1280',
+  s.image_attribution = 'Philmarin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Bupleurum gibraltarium';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Romerina',
+  s.primary_habitat = 'Tomillares y matorral seco sobre calizas y margas',
+  s.description = 'Jara pequeña de hojas muy estrechas y enrolladas por los bordes, verdes arriba y blancas por debajo, que a distancia recuerdan al romero. Se distingue enseguida al florecer: da grupos de flores blancas de cinco pétalos, mucho mayores que las del romero.',
+  s.identification_tips = 'Hojas estrechas enrolladas, blancas por el envés
+Flores blancas de cinco pétalos, varias juntas
+Sin el olor a romero, aunque se le parezca de lejos',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_clusii_(habitus).jpg?width=1280',
+  s.image_attribution = 'Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Cistus clusii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mata pulguera',
+  s.primary_habitat = 'Roquedos, muros, taludes y grietas soleadas',
+  s.description = 'Mata pequeña y leñosa en la base que crece agarrada a la roca y a los muros. Sus hojas son estrechas y blanquecinas por el envés. Las cabezuelas, solitarias sobre tallos largos y desnudos, están rodeadas de brácteas secas y pardas que persisten mucho tiempo.',
+  s.identification_tips = 'Cabezuelas pardas y secas al final de tallos largos y pelados
+Hojas estrechas, verdes arriba y blancas por debajo
+Casi siempre sobre roca, muro o talud',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Phagnalon_saxatile.JPG?width=1280',
+  s.image_attribution = 'Xemenendura (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Phagnalon saxatile';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sedo de hojas gruesas',
+  s.primary_habitat = 'Prados calcáreos del Alysso-Sedion albi',
+  s.description = 'Crasulácea diminuta de hojas gruesas, casi esféricas y de un gris azulado, dispuestas de dos en dos y cubiertas de pelillos glandulosos que la hacen pegajosa. Forma almohadillas en grietas y muros y da flores blancas con venas rosadas.',
+  s.identification_tips = 'Hojas casi esféricas, opuestas y de gris azulado
+Tacto pegajoso por los pelillos glandulosos
+Flores blancas con finas venas rosadas',
+  s.seasonality = 'Verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sedum_dasyphyllum_(1)_6.jpg?width=1280',
+  s.image_attribution = 'Ghislain118 http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Sedum dasyphyllum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Melica menor',
+  s.primary_habitat = 'Grietas de roquedos calizos, cornisas y pies de cantil sombreados',
+  s.description = 'Gramínea perenne y grácil que crece en repisas y fisuras de roca, formando matas laxas de hojas finas. Su inflorescencia es una panícula abierta y ligera, con espiguillas nacaradas que brillan a contraluz. Es una de las pocas gramíneas que prospera en pared vertical.',
+  s.identification_tips = 'Panícula muy laxa, casi transparente al trasluz
+Espiguillas brillantes y algo nacaradas
+Crece en grietas de roca, colgando de la pared',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/626575126/original.jpg',
+  s.image_attribution = 'Piermario Maculan (CC0) · GBIF',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Melica minuta';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Esparto',
+  s.primary_habitat = 'Laderas secas y llanos sobre suelos pobres; forma espartales extensos',
+  s.description = 'El esparto, nombrado también como Stipa tenacissima, forma matas densas y duraderas que dan nombre a los espartales, uno de los paisajes característicos del sureste ibérico. Sus hojas se enrollan sobre sí mismas en los días secos para perder menos agua y se abren tras la lluvia. Durante siglos se recolectó para hacer cuerdas, esteras y alpargatas.',
+  s.identification_tips = 'Matas grandes y compactas de hojas duras enrolladas
+Las hojas se abren tras la lluvia y se enrollan al secar
+Espigas altas y plateadas a final de primavera',
+  s.seasonality = 'Primavera (espigado)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Stipa_tenacissima.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Macrochloa tenacissima';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tomillo',
+  s.primary_habitat = 'Tomillares, pastizales secos y claros de matorral sobre suelos pobres',
+  s.description = 'Tomillo de hojas estrechas y con pelos largos en la base, que forma matas bajas y ramificadas. Es la especie de la que se extrae buena parte del tomillo de uso culinario y de la que se destila aceite esencial rico en timol.',
+  s.identification_tips = 'Hojas estrechas con pelos largos y blancos en la base
+Espigas de flores blancas o rosadas al final de las ramas
+Aroma potente, el clásico del tomillo de cocina',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Thymus_zygis_1.JPG?width=1280',
+  s.image_attribution = 'Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Thymus zygis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Labiérnago',
+  s.primary_habitat = 'Matorral mediterráneo y laderas secas sobre suelos pedregosos',
+  s.description = 'Arbusto de hojas opuestas, estrechas y coriáceas, muy parecido a un acebuche pero con las hojas verdes por ambas caras. Sus frutos son pequeñas drupas azuladas o negras que consumen zorzales y currucas.',
+  s.identification_tips = 'Hojas opuestas y estrechas, verdes por las dos caras
+Sin el reverso plateado del acebuche
+Frutos pequeños azulados o negros',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Phyllirea_angustifolia.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Phillyrea angustifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cosentinia vellea',
+  s.primary_habitat = 'Grietas de roquedos secos y soleados, paredones y pedregales',
+  s.description = 'Helecho pequeño cubierto por completo de una densa lana parda que le da aspecto afieltrado y le permite sobrevivir en roca seca y al sol. En sequía se enrolla sobre sí mismo hasta parecer muerto, y se despliega en cuanto llueve.',
+  s.identification_tips = 'Frondes cubiertas de lana parda, aspecto afieltrado
+Se enrolla en verano y revive con la lluvia
+En roca seca y soleada, no en umbrías húmedas',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cosentinia_vellea_kz02.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Cosentinia vellea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Morsana',
+  s.primary_habitat = 'Suelos removidos, cunetas, ramblas y bordes de saladar en clima árido',
+  s.description = 'Hierba perenne de tallos gruesos y quebradizos con hojas carnosas partidas en dos folíolos redondeados, como dos gotas verdes enfrentadas. Coloniza suelos pisoteados y salinos, y sus frutos alargados, en forma de cápsula estriada, cuelgan durante buena parte del verano.',
+  s.identification_tips = 'Hojas de solo dos folíolos carnosos y redondeados
+Tallos hinchados en los nudos, que se quiebran con facilidad
+Cápsulas alargadas y acostilladas colgando tras la floración',
+  s.seasonality = 'Floración de primavera a verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Morsana-1.JPG?width=1280',
+  s.image_attribution = 'Philmarin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Zygophyllum fabago';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Olivarda',
+  s.primary_habitat = 'Cunetas, taludes, ramblas y suelos removidos',
+  s.description = 'Mata pegajosa y de olor penetrante que florece cuando casi todo lo demás está seco, cubriéndose de cabezuelas amarillas a finales de verano. Esa floración tardía la convierte en un refugio clave para insectos. Sus hojas dejan las manos resinosas al tocarlas.',
+  s.identification_tips = 'Hojas pegajosas y aromáticas al tacto
+Florece amarillo en pleno final de verano y otoño
+Abundante en cunetas y terrenos alterados',
+  s.seasonality = 'Verano y otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Inula_viscosa_flowers.jpg?width=1280',
+  s.image_attribution = 'No machine-readable author provided. Rickjpelleg assumed (based on … (CC BY 2.5) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Dittrichia viscosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mata del vizque',
+  s.primary_habitat = 'Ríos mediterráneos con Glaucium flavum',
+  s.description = 'Compuesta blanco-tomentosa de capítulos amarillos, pionera de gravas y arenas de rambla; extendida por toda la Región de Murcia.',
+  s.identification_tips = 'Aspecto blanco-lanoso
+Capítulos amarillos
+Coloniza gravas removidas de cauce',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/114Andryala_ragusina.JPG?width=1280',
+  s.image_attribution = 'Ziegler175 Rose Ziegler (CC0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Andryala ragusina';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cabra montés',
+  s.primary_habitat = 'Roquedos, canchales y laderas escarpadas con matorral',
+  s.description = 'Bóvido de montaña perfectamente adaptado a la roca: pezuñas con borde duro y almohadilla blanda que agarra en pendientes imposibles. Los machos lucen cuernos grandes, curvados hacia atrás y con abultamientos; las hembras los tienen cortos y rectos.',
+  s.identification_tips = 'Machos con cuernos grandes curvados hacia atrás
+Se mueve por cortados donde nada más puede subir
+Excrementos en montoncitos de bolitas cilíndricas',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Capra_pyrenaica_in_Sierra_de_Guadarrama.jpg?width=1280',
+  s.image_attribution = 'Thomas Holbach (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Capra pyrenaica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jarilla',
+  s.primary_habitat = 'Tomillares y matorral raso sobre suelos calizos y margosos secos',
+  s.description = 'Jarilla pequeña de hojas estrechas y grisáceas con el borde enrollado, que se cubre en primavera de flores amarillas efímeras. Como en todas las jarillas, los pétalos apenas duran una mañana y se renuevan cada día.',
+  s.identification_tips = 'Hojas estrechas con el borde enrollado hacia abajo
+Flores amarillas que duran solo unas horas
+Mata baja y grisácea del tomillar',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_violaceum_habitus_SierraMadrona.jpg?width=1280',
+  s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Helianthemum violaceum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Albardín',
+  s.primary_habitat = 'Estepas salinas, margas y suelos yesosos secos; forma albardinales',
+  s.description = 'Gramínea perenne de hojas duras y punzantes que forma matas separadas sobre suelos salinos y margosos donde poco más prospera. Su inflorescencia es inconfundible: una espata blanca y sedosa que envuelve las flores como un capuchón de papel.',
+  s.identification_tips = 'Espata blanca y sedosa envolviendo la espiga
+Hojas rígidas terminadas en punta punzante
+Matas espaciadas sobre suelo desnudo y claro',
+  s.seasonality = 'Todo el año (espigado en primavera)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lygeum_spartum-1.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Lygeum spartum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Hierba de la cruz',
+  s.primary_habitat = 'Roquedos, pedregales y pastizales pedregosos de montaña',
+  s.description = 'Pimpinela de base leñosa y hojas divididas en foliolos pequeños y dentados, con cabezuelas globosas de flores verdosas y rojizas que carecen de pétalos. Crece agarrada a la roca y a los pedregales calizos.',
+  s.identification_tips = 'Cabezuelas globosas verdosas o rojizas, sin pétalos
+Hojas divididas en muchos foliolos dentados
+Base leñosa y porte compacto sobre roca',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/517007573/original.jpg',
+  s.image_attribution = 'FloresdeMurcia.com (CC BY-NC 4.0) · GBIF/iNaturalist',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Poterium ancistroides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Rabo de gato',
+  s.primary_habitat = 'Tomillares y matorral raso sobre suelos calizos secos',
+  s.description = 'Rabogato de tallos blanquecinos y flores agrupadas en verticilos separados, característico del sureste ibérico. Es un taxón raro y poco fotografiado: como otras labiadas del grupo, se ha usado tradicionalmente en infusiones.',
+  s.identification_tips = 'Tallos y hojas cubiertos de pelusa blanca
+Flores en anillos bien separados a lo largo del tallo
+Brácteas anchas y algo punzantes bajo cada verticilo',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Sideritis bourgaeana';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cerraja fina',
+  s.primary_habitat = 'Muros, taludes, cunetas y pies de roca en ambientes secos y alterados',
+  s.description = 'Cerraja de hojas muy divididas en segmentos estrechos, casi filiformes, que la distinguen de sus parientes de hoja ancha. Brota en cualquier grieta o talud, suelta látex blanco al partirla y florece prácticamente todo el año en clima cálido.',
+  s.identification_tips = 'Hojas partidas en segmentos muy estrechos y separados
+Látex blanco abundante al romper el tallo
+Capítulos amarillo pálido y vilanos sedosos y blancos',
+  s.seasonality = 'Casi todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sonchus_tenerrimus_01.JPG?width=1280',
+  s.image_attribution = 'Luca Fornasari (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Sonchus tenerrimus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sanjuán blanco',
+  s.primary_habitat = 'Bosques y pinares con sombra y hojarasca, sobre suelos calizos',
+  s.description = 'Orquídea de porte erguido con hojas largas y estrechas dispuestas en dos filas y flores blancas que apenas llegan a abrirse del todo. Vive en la penumbra del bosque y depende de hongos del suelo para germinar y crecer.',
+  s.identification_tips = 'Flores blancas semicerradas, en espiga laxa
+Hojas largas y estrechas en dos filas
+En sombra de bosque, sobre hojarasca',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cephalanthera_longifolia_300508.jpg?width=1280',
+  s.image_attribution = 'Bernd Haynold (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Cephalanthera longifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Vidriera',
+  s.primary_habitat = 'Matorral, pedregales y laderas soleadas sobre suelos calizos',
+  s.description = 'Dedalera leñosa en la base, con hojas estrechas, brillantes y de borde entero, muy distinta de las digitales de hoja ancha. Sus flores son tubos colgantes de un naranja rojizo con manchas oscuras en el interior. Toda la planta es tóxica.',
+  s.identification_tips = 'Flores en dedal de color naranja rojizo
+Hojas estrechas, lustrosas y de borde liso
+Base leñosa, no herbácea',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Digitalis_obscura_1.jpg?width=1280',
+  s.image_attribution = 'Cillas (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Digitalis obscura';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sapo corredor',
+  s.primary_habitat = 'Ramblas y zonas húmedas estacionales',
+  s.description = 'Sapo de patas cortas que corre en vez de saltar, con una línea amarilla nítida a lo largo del centro del lomo. Se reproduce en charcas efímeras que se llenan con las lluvias, y los machos forman coros de un canto vibrante y estridente que se oye a kilómetros.',
+  s.identification_tips = 'Raya amarilla continua por el centro del lomo
+Corre a cuatro patas en vez de saltar
+Canto nocturno vibrante y muy sonoro tras las lluvias',
+  s.seasonality = 'Otoño e invierno lluviosos',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Epidalea_calamita_02_by-dpc.jpg?width=1280',
+  s.image_attribution = 'David Perez (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Epidalea calamita';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Fagonia',
+  s.primary_habitat = 'Suelos pedregosos, ramblas y litosuelos de clima árido',
+  s.description = 'Planta baja y tendida, de tallos angulosos, hojas divididas en tres y estípulas convertidas en espinas finas. Sus flores tienen cinco pétalos de un lila rosado que se abren durante las horas centrales del día. Es de estirpe norteafricana y aquí vive en el extremo de su área.',
+  s.identification_tips = 'Porte tendido y desordenado, pegado al suelo
+Hojas de tres foliolos con espinas en la base
+Flores lila con cinco pétalos bien separados',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fagonia_cretica.jpg?width=1280',
+  s.image_attribution = 'Retama (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Fagonia cretica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra de herradura',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Culebra ágil y trepadora con dibujo dorsal en herradura, ligada a matorrales termófilos y roquedos soleados del sureste ibérico.',
+  s.identification_tips = 'Manchas dorsales en herradura
+Ágil y trepadora
+Inofensiva para las personas',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hemorrhois_hippocrepis_121004.jpg?width=1280',
+  s.image_attribution = 'Accipiter (R. Altenkamp, Berlin) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Hemorrhois hippocrepis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Encina',
+  s.primary_habitat = 'Bosques y matorrales mediterráneos sobre suelos variados, en clima no extremo',
+  s.description = 'Árbol perennifolio de copa densa y redondeada, con hojas coriáceas verde oscuro por el haz y blanquecinas y afieltradas por el envés. Las hojas jóvenes y las de las ramas bajas tienen el borde espinoso, un mecanismo de defensa frente a los herbívoros.',
+  s.identification_tips = 'Envés de la hoja blanquecino y afieltrado
+Hojas de las ramas bajas con borde espinoso
+Copa densa y oscura, muy cerrada a la luz',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carrasca_de_la_Raboseras.JPG?width=1280',
+  s.image_attribution = 'Picamaderos (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Quercus ilex';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Boja negra',
+  s.primary_habitat = 'Matorrales halo-nitrófilos',
+  s.description = 'Mata aromática grisácea de las bojas del sureste árido, colonizadora de suelos alterados, bordes de camino y matorrales nitrificados.',
+  s.identification_tips = 'Olor aromático fuerte al frotar
+Follaje gris-plateado
+Indica suelos alterados',
+  s.seasonality = 'Otoño',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/173279674/original.jpeg',
+  s.image_attribution = 'Yamil J.R (CC0) · GBIF',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Artemisia barrelieri';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Klasea flavescens',
+  s.primary_habitat = 'Pastizales secos, claros de matorral y taludes sobre suelos margosos',
+  s.description = 'Compuesta de hojas divididas y algo espinosas, con capítulos grandes de flores amarillas rodeados de brácteas secas y brillantes. A distancia recuerda a un cardo, pero sus hojas pinchan mucho menos.',
+  s.identification_tips = 'Capítulos amarillos grandes y solitarios
+Brácteas secas y algo brillantes bajo la flor
+Hojas divididas, con dientes poco punzantes',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Klasea_flavescens0001_01.jpg?width=1280',
+  s.image_attribution = 'Philmarin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Klasea flavescens';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Labiérnago prieto',
+  s.primary_habitat = 'Encinares, matorral alto y umbrías sobre suelos pedregosos',
+  s.description = 'Arbusto o arbolillo de hojas opuestas, coriáceas y de borde dentado, más anchas que las de su pariente de hoja estrecha. Las hojas jóvenes son marcadamente dentadas y las adultas casi enteras, lo que despista con frecuencia.',
+  s.identification_tips = 'Hojas opuestas y anchas, dentadas en las ramas jóvenes
+Verde oscuro por las dos caras
+Frutos pequeños azul negruzcos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Phillyrea_latifolia.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Phillyrea latifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cerrajón',
+  s.primary_habitat = 'Suelos arenosos, ramblas y terrenos removidos en clima cálido y seco',
+  s.description = 'Hierba anual de aspecto lampiño con capítulos amarillos que llevan en el centro una mancha oscura, casi negra, como un ojo. Al cortar el tallo suelta látex blanco, rasgo compartido con las cerrajas y los dientes de león.',
+  s.identification_tips = 'Capítulo amarillo con el centro oscuro, casi negro
+Látex blanco al partir el tallo o una hoja
+Brácteas anchas y membranosas en el borde, bajo la flor',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Reich-ting-2.jpg?width=1280',
+  s.image_attribution = 'Philmarin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Reichardia tingitana';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pijolobo',
+  s.primary_habitat = 'Saladares, estepas salinas y matorrales halófilos, sobre las raíces de quenopodiáceas',
+  s.description = 'Planta sin una sola hoja verde: no hace fotosíntesis y vive enganchada a las raíces de las sosas y los almajos del saladar, de los que toma agua y alimento. Todo el año es invisible bajo tierra y, en primavera, saca de golpe una espiga carnosa de hasta medio metro cubierta de grandes flores amarillas, un espectáculo desconcertante en un suelo desnudo y salado. En Águilas y su comarca se la conoce como pijolobo; en el resto del sureste, como jopo de lobo.',
+  s.identification_tips = 'Espiga carnosa amarilla que brota directamente del suelo, sin tallo con hojas
+Escamas pardas en vez de hojas a lo largo del tallo
+Siempre al pie de una sosa, un almajo o un salado: es su hospedador',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/CistanchePhelypaea.jpg?width=1280',
+  s.image_attribution = 'Ziegler175 (Public domain) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Cistanche phelypaea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bolina',
+  s.primary_habitat = 'Matorral y laderas soleadas de montaña media, sobre suelos calizos',
+  s.description = 'Retama de ramas finas, sedosas y de un verde grisáceo, sin espinas, que en floración se cubre de flores amarillas fragantes. Sus hojas son diminutas y caen pronto: la fotosíntesis la hacen los tallos.',
+  s.identification_tips = 'Ramas finas y flexibles, sin espinas
+Aspecto grisáceo por los pelos sedosos de las ramillas
+Floración amarilla abundante y perfumada',
+  s.seasonality = 'Primavera y principio de verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Genista_cinerea26de_maig_2007_019.jpg?width=1280',
+  s.image_attribution = 'Victor M. Vicente Selvas (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Genista cinerea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jarilla de Almería',
+  s.primary_habitat = 'Tomillares y matorral abierto sobre suelos secos y pedregosos',
+  s.description = 'Jarilla enana de hojas pequeñas y blanquecinas, cubiertas de pelos que reflejan la luz y reducen la pérdida de agua. En primavera se cubre de flores blancas con el centro amarillo, cuyos pétalos duran apenas una mañana. Sus raíces se asocian con hongos comestibles del desierto.',
+  s.identification_tips = 'Mata baja y grisácea, de hojas muy pequeñas
+Flores blancas con el centro amarillo, efímeras
+Pétalos arrugados, como de papel de seda',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_almeriense_flor.jpg?width=1280',
+  s.image_attribution = 'Retama (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Helianthemum almeriense';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Rascavieja',
+  s.primary_habitat = 'Matorral seco y laderas soleadas sobre suelos pedregosos',
+  s.description = 'Leguminosa arbustiva y pegajosa, con hojas de tres foliolos y racimos densos y erguidos de flores de un amarillo intenso. Es un endemismo del sur peninsular y del norte de África, y una de las plantas más vistosas del matorral en plena floración.',
+  s.identification_tips = 'Racimos densos y erguidos de flores amarillo vivo
+Toda la planta pegajosa por los pelos glandulosos
+Hojas de tres foliolos dentados',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/184117054/original.jpeg',
+  s.image_attribution = 'Santiago Martín-Bravo (CC BY 4.0) · iNaturalist/GBIF',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Ononis speciosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagartija colirroja',
+  s.primary_habitat = 'Matorral litoral y laderas secas',
+  s.description = 'Lagartija de suelos arenosos, de cuerpo aplanado y dedos con escamas laterales en forma de peine que le sirven de raqueta sobre la arena suelta. Los jóvenes tienen la cola y las patas traseras de un rojo intenso que se apaga en los adultos.',
+  s.identification_tips = 'Dedos con flecos de escamas a los lados, como peines
+Jóvenes con cola y patas traseras rojo intenso
+Cuerpo aplanado, con rayas y ocelos claros en el dorso',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Benny_Trapp_Acanthodactylus_erythrurus.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Acanthodactylus erythrurus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Conejo',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Lagomorfo excavador que vive en madrigueras coloniales; pieza clave del ecosistema mediterráneo como presa de águila perdicera, búho real y carnívoros.',
+  s.identification_tips = 'Excava madrigueras coloniales
+Presa clave de rapaces
+Activo al amanecer y atardecer',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Oryctolagus_cuniculus_Tasmania_2.jpg?width=1280',
+  s.image_attribution = 'JJ Harrison (https://www.jjharrison.com.au/) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Oryctolagus cuniculus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cardo amarillo de roca',
+  s.primary_habitat = 'Roquedos y fisuras calcáreas costeras',
+  s.description = 'Compuesta rupícola que crece colgando de las fisuras de los cantiles calizos, con hojas divididas y algo carnosas y capítulos amarillos rodeados de brácteas con apéndices espinosos. Es un endemismo del sureste ibérico ligado a paredes de roca costeras y de interior.',
+  s.identification_tips = 'Capítulos amarillos con brácteas de apéndice espinoso
+Hojas divididas y algo carnosas, en roseta colgante
+Crece encajada en la grieta, no en el suelo',
+  s.seasonality = 'Floración primaveral',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Centaurea_saxicola674.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 4
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Centaurea saxicola';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jara blanca',
+  s.primary_habitat = 'Matorral y jarales sobre suelos secos y soleados de montaña media',
+  s.description = 'Arbusto de hojas anchas, ovaladas y cubiertas de una pelusa plateada que le da un aspecto casi blanco. En primavera se llena de flores amarillas de cinco pétalos con una mancha oscura en la base. Es un endemismo del sur y sureste peninsular.',
+  s.identification_tips = 'Hojas anchas y plateadas, no estrechas como las jaras
+Flores amarillas con una manchita oscura en la base del pétalo
+Porte erguido, más alto que las jarillas comunes',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Halimium_commutatum1.jpg?width=1280',
+  s.image_attribution = 'Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Cistus atriplicifolius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ononis ornithopodioides',
+  s.primary_habitat = 'Pastizales anuales y claros de matorral sobre suelos secos',
+  s.description = 'Pequeña leguminosa anual de tallos finos y glandulosos, con hojas de tres foliolos y flores amarillas diminutas. Sus legumbres, curvadas y dispuestas en grupo, recuerdan a los dedos de una pata de pájaro, lo que le da el nombre científico.',
+  s.identification_tips = 'Legumbres curvas agrupadas, como una pata de ave
+Flores amarillas muy pequeñas
+Tallos pegajosos al tacto, con pelos glandulosos',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ononis_ornithopodioides_kz1.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Ononis ornithopodioides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Olmo común',
+  s.primary_habitat = 'Sotos, vegas y suelos profundos con humedad freática',
+  s.description = 'Árbol de hojas asimétricas en la base —un lado baja más que el otro— y borde doblemente aserrado. Florece antes de echar la hoja y fructifica en sámaras redondeadas y membranosas. La grafiosis ha diezmado sus poblaciones adultas.',
+  s.identification_tips = 'Base de la hoja claramente asimétrica
+Sámaras redondas y papiráceas antes que las hojas
+Rebrota de raíz formando setos y orlas',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Blismes_elm_2007.jpg?width=1280',
+  s.image_attribution = 'Eric Collin. Original uploader was Ptelea at en.wikipedia (GFDL) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Ulmus minor';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cuchareta',
+  s.primary_habitat = 'Pastizales anuales, eriales y suelos margosos removidos en clima árido',
+  s.description = 'Crucífera anual de flores blanquecinas con nervios violáceos, inconfundible por su fruto: una vainita corta rematada por una lengüeta plana y curvada que recuerda a una cuchara. Los frutos secos persisten sobre la planta y son la mejor pista para identificarla.',
+  s.identification_tips = 'Frutos con una pala plana en el extremo, como cucharillas
+Hojas muy divididas, de segmentos estrechos
+Planta anual pelosa, de pocos decímetros, en suelo pelado',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carrichtera_annua2.JPG?width=1280',
+  s.image_attribution = 'Flora y Vegetación de Lanzarote (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Carrichtera annua';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Acelguilla espinosa',
+  s.primary_habitat = 'Pastizales secos, suelos margosos y salinos en clima árido',
+  s.description = 'Saladilla anual pequeña, con una roseta de hojas ásperas al tacto y tallos ramificados en zigzag que llevan las flores en espiguillas cortas. Las flores, blanquecinas o violáceas, conservan el cáliz seco y papiráceo mucho después de marchitarse.',
+  s.identification_tips = 'Hojas de la roseta ásperas, con pelillos duros
+Tallos en zigzag, con ramas divaricadas
+Cálices secos y papiráceos persistiendo tras la flor',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_echioides233.JPG?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Limonium echioides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cornicabra',
+  s.primary_habitat = 'Barrancos, umbrías y matorral alto sobre suelos frescos',
+  s.description = 'Arbusto o arbolillo de hoja caduca, con hojas compuestas de foliolos grandes y brillantes y un raquis sin alas, lo que lo separa del lentisco. Suele presentar agallas rojizas y curvadas en forma de cuerno, provocadas por pulgones, que le dan el nombre.',
+  s.identification_tips = 'Agallas rojizas curvadas como cuernos en las hojas
+Pierde la hoja en invierno, al contrario que el lentisco
+Hoja compuesta con foliolo terminal y raquis sin alas',
+  s.seasonality = 'Primavera a otoño (pierde la hoja en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pistachier2.JPG?width=1280',
+  s.image_attribution = 'greffer.net (CC BY 2.5) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Pistacia terebinthus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jara cervuna',
+  s.primary_habitat = 'Jarales y claros de bosque sobre suelos silíceos o descarbonatados',
+  s.description = 'Jara de hojas anchas y acorazonadas con peciolo, parecidas a las de un chopo, lo que la hace inconfundible entre las jaras ibéricas. Sus flores son blancas, grandes y con el centro amarillo, y salen agrupadas en el extremo de las ramas.',
+  s.identification_tips = 'Hojas anchas y acorazonadas, con peciolo largo
+Flores blancas grandes con el centro amarillo
+Sépalos externos grandes y muy visibles en el capullo',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_populifolius.jpg?width=1280',
+  s.image_attribution = 'Taken by Carsten Niehaus (user:Lumbar). (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Cistus populifolius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cardo mancaperros',
+  s.primary_habitat = 'Pastizales secos, eriales y suelos margosos pisoteados',
+  s.description = 'Cardo corredor anual, muy espinoso y rígido, con hojas duras parecidas a las de la encina —de ahí el nombre— y cabezuelas espinosas azuladas rodeadas de brácteas punzantes. Al secarse se vuelve leñoso y persiste todo el verano pinchando a quien pase.',
+  s.identification_tips = 'Hojas rígidas y espinosas, recortadas como las de la encina
+Cabezuelas con brácteas largas y punzantes en estrella
+Tonos azulados en las brácteas durante la floración',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eryngium_ilicifolium_InflorescenceCloseup2_DehesaBoyaldePuertollano.jpg?width=1280',
+  s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Eryngium ilicifolium';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Salamanquesa rosada',
+  s.primary_habitat = 'Pendientes rocosas calcícolas con vegetación casmofítica',
+  s.description = 'Gecko pequeño y translúcido de tonos rosados, de hábitos nocturnos, que se refugia en grietas de roquedos, muros de piedra y ruinas.',
+  s.identification_tips = 'Piel rosada casi translúcida
+Cola con anillos espinosos
+Nocturna y discreta',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hemidactylus_turcicus_on_a_wall_in_Greece.jpg?width=1280',
+  s.image_attribution = 'Koppi2 (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Hemidactylus turcicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Galápago leproso',
+  s.primary_habitat = 'Ríos, charcas, balsas y tramos remansados con vegetación y soleaderos',
+  s.description = 'Galápago de agua con el caparazón aplanado y de color verde oliva a pardo, a menudo cubierto de algas. Los ejemplares jóvenes muestran manchas anaranjadas en el cuello y en los lados de la cabeza que se van apagando con la edad. Toma el sol sobre piedras y troncos y se lanza al agua al menor ruido.',
+  s.identification_tips = 'Manchas anaranjadas en el cuello, más vivas de joven
+Caparazón bajo y aplanado, a menudo con algas
+Se tira al agua en cuanto detecta movimiento en la orilla',
+  s.seasonality = 'Primavera a otoño (inactivo en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Mauremys_leprosa_03_by-dpc.jpg?width=1280',
+  s.image_attribution = 'David Perez (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Mauremys leprosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagarto ocelado',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'El lagarto más grande de Europa, de hasta 60 cm con la cola incluida. Su dorso es verde con un fino reticulado negro y, en los costados, hileras de ocelos de un azul intenso. Los machos viejos tienen una cabeza enorme y maciza. Es diurno y muy desconfiado.',
+  s.identification_tips = 'Ocelos azules alineados en los costados
+Dorso verde con retícula negra muy fina
+Tamaño grande y cabeza maciza en los machos adultos',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Jewelled_Lizard_(Timon_lepidus)_male_found_under_a_stone_by_Jean_NICOLAS_(14166347788).jpg?width=1280',
+  s.image_attribution = 'Bernard DUPONT from FRANCE (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Timon lepidus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Durillo',
+  s.primary_habitat = 'Umbrías, barrancos y sotobosque de encinar y pinar húmedo',
+  s.description = 'Arbusto de hojas perennes, opuestas y coriáceas, que florece en pleno invierno con corimbos de flores blancas nacidas de capullos rosados. Sus frutos son bayas de un azul metálico oscuro muy llamativo.',
+  s.identification_tips = 'Florece en invierno, en corimbos blancos planos
+Capullos rosados antes de abrir
+Frutos azul metálico oscuro, casi negros',
+  s.seasonality = 'Invierno y primavera (floración)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/T2_37_Viburnum_tinus_par_Pierre-Joseph_Redout%C3%A9.jpeg?width=1280',
+  s.image_attribution = 'Pierre-Joseph Redouté (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Viburnum tinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'erguen',
+  s.primary_habitat = 'Matorral y laderas soleadas sobre suelos secos y pedregosos',
+  s.description = 'Arbusto espinoso y muy ramificado que en primavera se cubre por completo de flores amarillas. Sus ramas terminan en espinas fuertes y sus legumbres van cubiertas de pelos sedosos. Forma masas impenetrables que dan refugio a aves de matorral.',
+  s.identification_tips = 'Ramas rematadas en espinas rígidas y punzantes
+Floración amarilla masiva que cubre toda la mata
+Legumbres cubiertas de pelos blancos y sedosos',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Calycotome_villosa1.jpg?width=1280',
+  s.image_attribution = 'Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Cytisus lanigerus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sosa jabonera',
+  s.primary_habitat = 'Saladares muy salinos con encharcamiento estacional',
+  s.description = 'Mata de tallos articulados y suculentos, con las ramas jóvenes agrupadas en apretados manojos que recuerdan a piñas diminutas, de donde le viene el nombre. Vive en los suelos más salinos del saladar, donde apenas compite con otras plantas.',
+  s.identification_tips = 'Ramillas agrupadas en manojos con aspecto de piña
+Tallos gruesos y articulados de color verde grisáceo
+En las zonas más saladas y desnudas del saladar',
+  s.seasonality = 'Verano y otoño',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/611359925/original.jpg',
+  s.image_attribution = 'Xavier Rufray (CC BY-NC 4.0) · iNaturalist/GBIF · obs. EAU (revisar: existe en salinas de España)',
+  s.rarity_score = 4
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Halocnemum strobilaceum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cerrillo',
+  s.primary_habitat = 'Laderas secas, ribazos y pastizales sobre suelos pedregosos',
+  s.description = 'Gramínea perenne que forma matas y espiga en verano, cuando el resto del pastizal ya está agostado. Sus espiguillas van por parejas, cubiertas de pelos rojizos y con aristas retorcidas. Da al paisaje un tono dorado rojizo a final de verano.',
+  s.identification_tips = 'Espiguillas peludas agrupadas por parejas
+Aristas retorcidas y acodadas
+Espiga en verano, cuando lo demás está seco',
+  s.seasonality = 'Verano y otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hyparrhenia_hirta_Habitus_ValledeAlcudia.jpg?width=1280',
+  s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Hyparrhenia hirta';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Senecio flavus',
+  s.primary_habitat = 'Ramblas, arenales y suelos removidos de clima árido',
+  s.description = 'Hierba anual de hojas carnosas y algo azuladas, con cabezuelas amarillas cuyas lígulas se enrollan hacia atrás al abrirse. Es una planta de estirpe sahariana que en Europa solo aparece en los rincones más áridos del sureste ibérico, tras las lluvias.',
+  s.identification_tips = 'Lígulas amarillas enrolladas hacia atrás
+Hojas carnosas y de verde azulado
+Aparece en masa tras las lluvias y desaparece pronto',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Senecio_flavus_1.jpg?width=1280',
+  s.image_attribution = 'Gideon Pisanty (Gidip) גדעון פיזנטי (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 4
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Senecio flavus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Taray de saladar',
+  s.primary_habitat = 'Galerías y matorrales ribereños termomediterráneos',
+  s.description = 'Taray de saladar de flores blanco-rosadas y porte arbustivo, propio de bordes de ramblas salinas y depresiones halófilas del litoral.',
+  s.identification_tips = 'Flores en espigas densas
+Tolera suelos muy salinos
+Bordes de rambla y saladar',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/621745664/original.jpg',
+  s.image_attribution = 'melendrete (CC BY-NC 4.0) · GBIF',
+  s.rarity_score = 4
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Tamarix boveana';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pimientera',
+  s.primary_habitat = 'Bosques, arboledas, huertos y jardines con arbolado',
+  s.description = 'Uno de los pájaros más abundantes de Europa. El macho luce el pecho vinoso y la nuca gris azulada; la hembra es parda. Ambos comparten dos barras alares blancas muy visibles en vuelo. Su canto es una frase descendente que acaba en un floreo, repetida sin descanso en primavera.',
+  s.identification_tips = 'Dos barras blancas bien marcadas en cada ala
+Bordes blancos en la cola, visibles al volar
+Canto en frase descendente que remata en un adorno',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fringilla_coelebs_(chaffinch)%2C_male.jpg?width=1280',
+  s.image_attribution = 'Self: Commons user MichaelMaggs (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Fringilla coelebs';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca cabecinegra',
+  s.primary_habitat = 'Matorral mediterráneo denso, setos y bordes de arbolado',
+  s.description = 'La curruca más común del matorral mediterráneo. El macho tiene la cabeza negra hasta por debajo del ojo, la garganta blanca y un llamativo anillo ocular rojo. Es ruidosa y territorial: su reclamo de alarma es un traqueteo seco que delata su presencia constantemente.',
+  s.identification_tips = 'Capucha negra que baja por debajo del ojo
+Anillo ocular rojo intenso
+Reclamo de alarma como una carraca seca',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sardinian_Warbler.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Curruca melanocephala';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Perdiz roja',
+  s.primary_habitat = 'Mosaicos de cultivo, matorral bajo y laderas pedregosas',
+  s.description = 'Perdiz de patas y pico rojos, con un collar negro que se deshace en un salpicado de motas sobre el pecho y flancos barrados en blanco, negro y castaño. Prefiere correr a volar, y cuando por fin levanta lo hace de golpe y a ras de suelo, planeando ladera abajo.',
+  s.identification_tips = 'Flancos con barras nítidas blancas, negras y castañas
+Collar negro que se disgrega en motas sobre el pecho
+Corre agachada antes que volar; levanta de golpe y planea',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Perdiz_roja.jpg?width=1280',
+  s.image_attribution = 'Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Alectoris rufa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cernícalo vulgar',
+  s.primary_habitat = 'Campos abiertos, matorral, cortados y también ciudades',
+  s.description = 'El halcón más común y fácil de ver, gracias a su costumbre de cernirse: se queda suspendido en el aire batiendo las alas con la cabeza inmóvil, buscando ratones y lagartijas. El macho tiene la cabeza gris y el dorso rojizo con puntos negros; la hembra es más parda y barrada.',
+  s.identification_tips = 'Se queda «clavado» en el aire cerniéndose
+Dorso rojizo salpicado de puntos negros
+Cola larga con una banda negra ancha en la punta',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Common_kestrel_falco_tinnunculus.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Falco tinnunculus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Busardo ratonero',
+  s.primary_habitat = 'Mosaicos de bosque y campo abierto, con arbolado para nidificar',
+  s.description = 'La rapaz mediana más frecuente y variable de plumaje: los hay casi blancos y casi negros. Pasa mucho tiempo posado en postes y en el suelo, y planea en círculos con las alas ligeramente levantadas. Su reclamo es un maullido lastimero muy reconocible.',
+  s.identification_tips = 'Planea en círculos con las alas en «V» poco marcada
+Maullido agudo y quejumbroso al volar
+Muy variable: desde ejemplares claros a muy oscuros',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Buizerd-rh_20091021_002_(cropped).jpg?width=1280',
+  s.image_attribution = 'RonaldHuijssen (CC BY-SA 3.0 nl) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Buteo buteo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tórtola europea',
+  s.primary_habitat = 'Sotos, arboledas y matorral alto junto a cultivos y ramblas',
+  s.description = 'La más pequeña y grácil de nuestras palomas, con el dorso escamado en negro y canela y un parche a rayas blancas y negras en el cuello. Su arrullo ronco y adormecedor es uno de los sonidos del verano. Sus poblaciones han caído mucho en Europa por la pérdida de barbechos y setos.',
+  s.identification_tips = 'Espalda escamada, como un mosaico canela y negro
+Parche rayado blanco y negro a los lados del cuello
+Arrullo ronco y vibrante, muy distinto al de la tórtola turca',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Streptopelia_turtur_Grlica0036.jpg?width=1280',
+  s.image_attribution = 'Zrno at Serbian Wikipedia (Public domain) · Wikimedia Commons',
+  s.rarity_score = 4
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Streptopelia turtur';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cogujada común',
+  s.primary_habitat = 'Cultivos, caminos, eriales y bordes de poblado con suelo desnudo',
+  s.description = 'Alondra parda de cresta alta y puntiaguda, muy ligada a caminos, cunetas y descampados junto a los pueblos. Camina en vez de saltar y, al volar, deja ver el forro rojizo de las alas y la cola con los bordes canela.',
+  s.identification_tips = 'Cresta larga y puntiaguda, casi siempre erguida
+Forro de las alas rojizo, visible al levantar el vuelo
+Camina por el suelo en vez de saltar',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Crested_Lark_-_Qatar.jpg?width=1280',
+  s.image_attribution = 'Ashraf Kotb (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Galerida cristata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Abubilla',
+  s.primary_habitat = 'Campos abiertos, dehesas, cultivos con arbolado y bordes de matorral',
+  s.description = 'Ave inconfundible de color canela con alas y cola a franjas blancas y negras, y una cresta eréctil que despliega en abanico al posarse. Sondea el suelo blando con el pico largo y curvo en busca de larvas e insectos. Su canto, un «up-up-up» sordo y repetido, se oye de lejos en primavera.',
+  s.identification_tips = 'Vuelo ondulante y torpe, como una mariposa grande
+Cresta que abre en abanico justo al aterrizar
+Camina por el suelo clavando el pico largo y curvo',
+  s.seasonality = 'Todo el año en el sur peninsular; estival en el resto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Wiedehopf_mit_Puppe_als_Futter.jpg?width=1280',
+  s.image_attribution = 'Sven Damerow (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Upupa epops';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chotacabras cuellirrojo',
+  s.primary_habitat = 'Matorral abierto, pinares aclarados, ramblas y caminos térreos',
+  s.description = 'Ave crepuscular de plumaje jaspeado que imita la hojarasca, tan mimético que de día resulta casi imposible verla posada en el suelo. Caza polillas en vuelo con la boca muy abierta. Su canto nocturno es un «cu-toc, cu-toc» repetido de forma monótona durante minutos.',
+  s.identification_tips = 'Collar rojizo en la nuca, más marcado que en su pariente europeo
+Se levanta del camino al anochecer y vuelve a posarse unos metros más allá
+Canto nocturno monótono, como un motor lejano',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Caprimulgus_ruficollis_-Portugal-8.jpg?width=1280',
+  s.image_attribution = 'Olivença (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Caprimulgus ruficollis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Abejaruco europeo',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Ave colorida y gregaria que caza abejas y libélulas en vuelo sobre espacios abiertos y cría en galerías excavadas en taludes terrosos.',
+  s.identification_tips = 'Colorido inconfundible
+Reclamo ''prruip'' en vuelo
+Cría en taludes de rambla',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%C5%9Eahl%C3%BBr-33.jpg?width=1280',
+  s.image_attribution = 'Dûrzan cîrano (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Merops apiaster';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mochuelo europeo',
+  s.primary_habitat = 'Matorral litoral y zonas abiertas con posaderos',
+  s.description = 'Búho pequeño y rechoncho, de cabeza plana y ojos amarillos con un ceño que le da expresión severa. Es el más diurno de nuestros búhos: se ve posado en postes y ruinas a plena luz. Vuela con un ondulado marcado, a golpes de aleteo y planeo.',
+  s.identification_tips = 'Cabeza plana y ancha, sin penachos
+Cejas blancas marcadas que le dan aspecto ceñudo
+Vuelo ondulado, a rachas de aleteo y planeo',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Mochuelo_Com%C3%BAn_(_Athene_noctua_)(1).jpg?width=1280',
+  s.image_attribution = 'Arturo Nikolai from Galicia, Spain (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Athene noctua';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Piquituerto',
+  s.primary_habitat = 'Pinares y masas de coníferas con producción de piñas',
+  s.description = 'Fringílido de pico único: las dos mandíbulas se cruzan en la punta, una herramienta para abrir las escamas de las piñas y sacar el piñón. El macho es rojo ladrillo y la hembra verde oliva. Cría incluso en invierno si hay piñas, y se mueve en bandos ruidosos de copa en copa.',
+  s.identification_tips = 'Puntas del pico cruzadas, visibles de cerca
+Macho rojizo, hembra verde amarillenta
+Reclamo metálico «chip-chip» de los bandos en vuelo',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Red_Crossbills_(Male).jpg?width=1280',
+  s.image_attribution = 'Elaine R. Wilson, www.naturespicsonline.com (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Loxia curvirostra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Águila calzada',
+  s.primary_habitat = 'Bosques y sierras con arbolado, cazando sobre zonas abiertas cercanas',
+  s.description = 'Águila pequeña, del tamaño de un ratonero, con dos formas de plumaje muy distintas: una clara con el vientre blanco y otra oscura y uniforme. Nidifica en árboles dentro del bosque y caza en campo abierto lanzándose desde altura. Se identifica en vuelo por las «luces de posición»: dos manchas blancas en el arranque de las alas.',
+  s.identification_tips = 'Dos manchas blancas donde el ala se une al cuerpo
+Existen ejemplares claros y oscuros de la misma especie
+Cola larga y recta, sin la muesca del milano',
+  s.seasonality = 'Primavera y verano (estival); algunos ejemplares invernan',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Booted_eagle%2C_Hieraaetus_pennatus%2C_at_Kgalagadi_Transfrontier_Pa_(32334023348).jpg?width=1280',
+  s.image_attribution = 'Derek Keats from Johannesburg, South Africa (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Hieraaetus pennatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Papamoscas gris',
+  s.primary_habitat = 'Arbolado abierto, bordes de bosque, huertos y jardines con perchas altas',
+  s.description = 'Pájaro discreto de color pardo grisáceo, sin marcas llamativas, que se reconoce mejor por su conducta que por su aspecto: se posa muy erguido en una rama descubierta, sale disparado a cazar un insecto en el aire y vuelve exactamente a la misma percha. Repite la maniobra decenas de veces.',
+  s.identification_tips = 'Vuelve siempre a la misma rama tras cada vuelo de caza
+Postura muy vertical, con las alas caídas
+Frente y pecho con un rayado fino y difuso',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/SpottedFlycatcheronfence.jpg?width=1280',
+  s.image_attribution = 'Andrew Easton (Attribution) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Muscicapa striata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca rabilarga',
+  s.primary_habitat = 'Matorral bajo y denso, jarales, brezales y tomillares',
+  s.description = 'Curruca pequeña, oscura y de cola muy larga que suele llevar levantada. El macho tiene el vientre vinoso y el ojo rojo rodeado de un anillo del mismo color. Es muy inquieta y rara vez se deja ver más de unos segundos antes de volver a hundirse en la mata.',
+  s.identification_tips = 'Cola larga y erguida, casi vertical al posarse
+Ojo y anillo ocular rojos
+Vientre de color vinoso, con motitas blancas en la garganta',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_pitchou_Ichkeul_NP.jpg?width=1280',
+  s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Curruca undata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcaudón real',
+  s.primary_habitat = 'Campo abierto con matorral disperso, cables y posaderos altos',
+  s.description = 'Alcaudón grande, gris por encima y con un antifaz negro que le cruza el ojo. Caza al acecho desde un posadero alto y tiene la costumbre de empalar sus presas —insectos, lagartijas, ratones— en espinas y alambres, formando pequeñas despensas.',
+  s.identification_tips = 'Antifaz negro sobre fondo gris claro
+Siempre en lo alto de un cable, poste o mata
+Presas empaladas en espinos cerca de su territorio',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/S%C3%BCdlicher-Raubw%C3%BCrger_2018-01-07_0003.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 4
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Lanius meridionalis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcaudón común',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Alcaudón estival de cabeza castaña que caza insectos desde posaderos en el matorral abierto, empalando presas en espinas a modo de despensa.',
+  s.identification_tips = 'Capirote castaño rojizo
+Caza desde posaderos
+Estival de mayo a agosto',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lanius_senator01_new.jpg?width=1280',
+  s.image_attribution = 'Lanius_senator01.jpg: chausinho derivative work: Bogbumper (talk) (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Lanius senator';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Avión roquero',
+  s.primary_habitat = 'Acantilados mediterráneos con Limonium',
+  s.description = 'Hirundínido pardo y robusto que vuela pegado a las paredes rocosas de acantilados y barrancos, donde construye su nido de barro.',
+  s.identification_tips = 'Vuelo pegado a las paredes
+Manchas claras en la cola
+Nido de barro en cortados',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ptyonoprogne_rupestris_in_flight.jpg?width=1280',
+  s.image_attribution = 'ferran pestaña (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Ptyonoprogne rupestris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collalba negra',
+  s.primary_habitat = 'Matorral litoral, laderas secas y roquedos',
+  s.description = 'La mayor de las collalbas, enteramente negra salvo el obispillo y la base de la cola, blancos. Vive en cortados y laderas rocosas, donde construye junto al nido una plataforma de piedrecitas que acarrea una a una. Su canto es potente y melodioso.',
+  s.identification_tips = 'Cuerpo negro con obispillo blanco muy contrastado
+«T» negra invertida en la cola blanca al volar
+Montoncitos de piedrecitas junto a la grieta del nido',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Black_Wheatear%2C_Isla_Plana_3.jpg?width=1280',
+  s.image_attribution = 'Andrew Thomas from Shrewsbury, UK (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Oenanthe leucura';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Agateador común',
+  s.primary_habitat = 'Bosques y arboledas con troncos gruesos y corteza resquebrajada',
+  s.description = 'Pájaro diminuto y críptico que sube por los troncos en espiral, apoyándose en la cola rígida, y baja volando a la base del árbol siguiente para empezar de nuevo. Extrae insectos de las grietas de la corteza con un pico fino y curvado.',
+  s.identification_tips = 'Trepa siempre hacia arriba, nunca cabeza abajo
+Dorso jaspeado como corteza y vientre blanco
+Pico fino y curvo, como una aguja doblada',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Short-toed_Treecreeper_(Certhia_brachydactyla)_(cropped_version).jpg?width=1280',
+  s.image_attribution = 'Short-toed_Treecreeper_(Certhia_brachydactyla).jpg: א (Aleph) deriv… (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Certhia brachydactyla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chova piquirroja',
+  s.primary_habitat = 'Cortados rocosos, cantiles y montañas, alimentándose en pastizales cercanos',
+  s.description = 'Córvido negro y brillante con el pico rojo, largo y curvo, y las patas del mismo color encendido. Vuela en grupos acrobáticos junto a los cantiles, plegando las alas y dejándose caer por puro juego. Busca larvas hurgando en el suelo de los pastos con ese pico de sonda.',
+  s.identification_tips = 'Pico rojo, largo y curvado hacia abajo
+Reclamo agudo, un «chiaa» nasal muy característico
+Plumas de la punta del ala muy separadas, como dedos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pyrrhocorax_pyrrhocorax_-standing-8.jpg?width=1280',
+  s.image_attribution = 'File:Alpenkrähe.jpg: "Malte Uhl (User:Zzzip)" derivative work: Snow… (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Pyrrhocorax pyrrhocorax';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cogujada montesina',
+  s.primary_habitat = 'Matorral bajo, laderas pedregosas y eriales con vegetación rala',
+  s.description = 'Cogujada de cresta puntiaguda, muy parecida a la común pero de pico más corto y grueso y con el pecho más nítidamente rayado. Prefiere el matorral y las laderas pedregosas, mientras que la común busca cultivos, caminos y bordes de pueblo.',
+  s.identification_tips = 'Cresta alta y afilada, casi triangular
+Pico más corto y romo que el de la cogujada común
+Rayado del pecho bien definido, no difuminado',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Galerida_theklae_Madrid.jpg?width=1280',
+  s.image_attribution = 'Adrian198cm (Public domain) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Galerida theklae';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collalba rubia',
+  s.primary_habitat = 'Laderas secas y pedregosas con matorral bajo y suelo desnudo',
+  s.description = 'Collalba pequeña y contrastada: el macho es color arena claro con las alas negras y un antifaz o una garganta negros según la variedad. Como todas las collalbas, enseña al volar una cola blanca con una «T» negra invertida. Caza insectos lanzándose al suelo desde una piedra o una mata.',
+  s.identification_tips = 'Cola blanca con una «T» negra al abrirse
+Alas negras que resaltan sobre el cuerpo color arena
+Se posa erguida en piedras y matas, muy visible',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Black-eared_Wheatear%2C_Punta_del_Sabinar%2C_Spain.jpg?width=1280',
+  s.image_attribution = 'Vince Smith from London, United Kingdom (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Oenanthe hispanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Autillo',
+  s.primary_habitat = 'Arboledas, sotos, huertos y parques con árboles viejos',
+  s.description = 'El búho más pequeño de Europa, apenas mayor que un puño, con un plumaje jaspeado que lo hace invisible pegado a un tronco. Se detecta por el oído: un silbido monótono y flautado que repite cada dos o tres segundos durante toda la noche de primavera.',
+  s.identification_tips = 'Silbido corto y flautado repetido de forma monótona
+Diminuto, con dos penachos de plumas en la cabeza
+Plumaje veteado que imita la corteza',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Scops_Owl_(Otus_scops)%2C_Kalloni%2C_Lesvos%2C_Greece%2C_19.04.2015_(16773748434).jpg?width=1280',
+  s.image_attribution = 'Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Otus scops';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebrera europea',
+  s.primary_habitat = 'Sierras y llanos con matorral, ramblas y bosque abierto',
+  s.description = 'Águila grande y muy pálida por debajo, especializada en comer culebras y lagartos. Se ciñe en el aire durante largos ratos, con las patas colgando, escrutando el suelo antes de dejarse caer. La cabeza, ancha y con ojos amarillos muy frontales, le da un aire de lechuza.',
+  s.identification_tips = 'Vientre y alas casi blancos vistos desde abajo
+Se mantiene cerniéndose, algo raro en un águila tan grande
+Cabeza ancha y ojos amarillos, aspecto de búho',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aguila_culebrera_(Circaetus_gallicus).jpg?width=1280',
+  s.image_attribution = 'Paco Gómez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Circaetus gallicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Roquero solitario',
+  s.primary_habitat = 'Acantilados mediterráneos con Limonium',
+  s.description = 'Pájaro rupícola de plumaje azul pizarra en el macho, ligado a acantilados marinos y roquedos, donde canta desde cornisas destacadas.',
+  s.identification_tips = 'Macho azul pizarra
+Canta desde cornisas y cumbres
+Acantilados y roquedos calcáreos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Blue_rock_thrush_(male)_at_Gamla_Nature_Reserve.jpg?width=1280',
+  s.image_attribution = 'Artemy Voikhansky (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Monticola solitarius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcaraván',
+  s.primary_habitat = 'Llanos pedregosos, cultivos de secano, ramblas y eriales con poca cobertura',
+  s.description = 'Ave de aspecto extraño y ojos amarillos enormes, adaptados a la actividad nocturna. De día permanece agachada e inmóvil, confiada en su plumaje críptico, y solo al anochecer se activa y delata con un reclamo silbado y melancólico que recuerda al del zarapito.',
+  s.identification_tips = 'Ojos amarillos desproporcionadamente grandes
+Dos barras blancas y negras en el ala plegada
+Reclamo silbado y triste al anochecer',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Burhinus_oedicnemus_insularum_Lanzarote_1.jpg?width=1280',
+  s.image_attribution = 'Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Burhinus oedicnemus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Triguero',
+  s.primary_habitat = 'Cultivos de secano, pastizales y llanos abiertos con posaderos',
+  s.description = 'Escribano grande y rechoncho, pardo y rayado, sin marcas llamativas. Canta desde un cable o una mata con una frase acelerada que suena como un manojo de llaves agitado, y vuela distancias cortas dejando las patas colgando.',
+  s.identification_tips = 'Canto como un manojo de llaves agitándose
+Vuela con las patas colgando, sin recogerlas
+Aspecto pesado y pardo, sin marcas vistosas',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/606625336/original.jpg',
+  s.image_attribution = 'euqirneto (CC BY 4.0) · GBIF',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Emberiza calandra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Halcón peregrino',
+  s.primary_habitat = 'Cortados y áreas abiertas',
+  s.description = 'Halcón robusto de alas puntiagudas y cola corta, capaz de superar los 300 km/h en el picado con que abate a otras aves en pleno vuelo. Se reconoce por la ancha bigotera negra que baja desde el ojo sobre un pecho claro y barrado.',
+  s.identification_tips = 'Bigotera negra ancha bajo el ojo, como un casco
+Silueta de ancla: alas puntiagudas y cola corta
+Pecho claro con barrado fino en horizontal',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Falco_peregrinus_-_01.jpg?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 4
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Falco peregrinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tarabilla europea',
+  s.primary_habitat = 'Matorral bajo, herbazales, ribazos y bordes de cultivo con posaderos',
+  s.description = 'Pájaro pequeño y regordete que se posa en lo alto de las matas, muy erguido y a la vista, para lanzarse al suelo a por insectos. El macho tiene la cabeza negra, un collar blanco a los lados y el pecho naranja. Su reclamo suena como dos piedras golpeadas, de donde le viene el nombre.',
+  s.identification_tips = 'Siempre en lo alto de una mata, bien visible
+Macho con capucha negra y medio collar blanco
+Reclamo como el chasquido de dos cantos rodados',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Malestonechatseaham_Cropped.jpg?width=1280',
+  s.image_attribution = 'derivative work: Myosotis Scorpioides (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Saxicola rubicola';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Águila real',
+  s.primary_habitat = 'Montañas y sierras con cortados rocosos y amplias zonas abiertas de caza',
+  s.description = 'La mayor de las águilas ibéricas, con casi dos metros y medio de envergadura y una nuca dorada que le da nombre. Cría en repisas de cantiles y usa territorios enormes, que una pareja defiende durante años. Planea con las alas en una «V» muy suave y bate poco, lo que la distingue de las rapaces menores.',
+  s.identification_tips = 'Nuca y cogote de tono dorado, visibles a buena luz
+Planea con las alas en «V» muy abierta y bate poco
+Tamaño enorme: dobla al ratonero en el mismo cielo',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Maakotka_(Aquila_chrysaetos)_by_Jarkko_J%C3%A4rvinen.jpg?width=1280',
+  s.image_attribution = 'Jarkko Järvinen (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Aquila chrysaetos';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carraca europea',
+  s.primary_habitat = 'Campos abiertos con arbolado disperso, ribazos y construcciones con huecos',
+  s.description = 'Del tamaño de una paloma y de un azul turquesa intenso que sorprende al levantar el vuelo. Caza al acecho desde cables y postes, dejándose caer sobre saltamontes y escarabajos. Cría en huecos de árboles viejos y de edificios, de ahí que dependa de que queden árboles añosos y ruinas en el campo.',
+  s.identification_tips = 'Azul turquesa que solo se aprecia bien cuando vuela
+Espalda de color canela que contrasta con el azul
+Posada quieta en cables, oteando el suelo',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/European_roller.jpg?width=1280',
+  s.image_attribution = 'Christian Svane (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Coracias garrulus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gaviota patiamarilla',
+  s.primary_habitat = 'Costas, puertos, playas, acantilados y basureros',
+  s.description = 'La gaviota grande más común del Mediterráneo: manto gris claro, patas amarillas y un pico robusto con una mancha roja en la mandíbula inferior. Es oportunista hasta el extremo —pesca, roba, carroñea y frecuenta puertos y vertederos— y sus colonias ocupan islotes y cortados costeros.',
+  s.identification_tips = 'Patas amarillas y pico amarillo con mancha roja
+Manto gris claro con puntas de las alas negras y espejos blancos
+Los jóvenes son pardos moteados y tardan cuatro años en cambiar',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Larus_michahellis_LC0046.jpg?width=1280',
+  s.image_attribution = 'Jörg Hempel (CC BY-SA 2.0 de) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Larus michahellis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Águila perdicera',
+  s.primary_habitat = 'Sierras con cortados rocosos y amplias zonas abiertas de matorral y cultivo para cazar',
+  s.description = 'Águila mediana de alas largas y cola larga, con el vientre blanco finamente rayado y una mancha blanca en la espalda que se ve bien en vuelo. Caza a gran velocidad y a poca altura, sorprendiendo a perdices, conejos y palomas. Las parejas ocupan el mismo cortado durante años.',
+  s.identification_tips = 'Mancha blanca en el centro de la espalda, visible desde arriba
+Vientre claro y muy rayado, con una banda oscura en el borde del ala
+Vuelo bajo y rápido cuando caza, no en círculos altos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aguila_perdicera.jpg?width=1280',
+  s.image_attribution = 'Paco Gómez from Castellón, Spain (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 5
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Aquila fasciata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alondra totovía',
+  s.primary_habitat = 'Claros de bosque, dehesas y laderas con matorral y árboles dispersos',
+  s.description = 'Alondra pequeña de cola muy corta y cresta discreta, con una ceja blanca ancha que se une en la nuca. Canta en vuelo circular, sobre todo al amanecer y en noches claras, con una frase melancólica y descendente de una belleza reconocida.',
+  s.identification_tips = 'Cola muy corta, silueta rechoncha en vuelo
+Cejas blancas que se juntan por detrás de la cabeza
+Marca blanca y negra en el borde delantero del ala',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lullula_arborea.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Lullula arborea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Búho real',
+  s.primary_habitat = 'Cortados rocosos, barrancos y laderas con matorral y zonas abiertas de caza',
+  s.description = 'El mayor búho de Europa, con casi dos metros de envergadura, penachos de plumas erguidos sobre la cabeza y ojos de un naranja encendido. Caza conejos, ratas e incluso otras rapaces. Su canto es un «bu-bo» profundo que se propaga kilómetros por los barrancos en las noches de invierno.',
+  s.identification_tips = 'Penachos de plumas erguidos a los lados de la cabeza
+Ojos naranjas muy intensos
+Canto grave y profundo en las noches de invierno',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Bubo_bubo_sibiricus_-_01.JPG?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 4
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Bubo bubo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collalba gris',
+  s.primary_habitat = 'Pastizales pedregosos, canchales y zonas abiertas de montaña',
+  s.description = 'Collalba de dorso gris en el macho, con antifaz negro y alas oscuras. Como todas las collalbas, delata su identidad al volar: obispillo blanco y cola blanca con una «T» negra invertida. Se posa erguida en piedras y hace carreras cortas por el suelo.',
+  s.identification_tips = 'Obispillo blanco y «T» negra en la cola
+Macho con antifaz negro y dorso gris
+Carreras cortas por el suelo entre piedra y piedra',
+  s.seasonality = 'Paso migratorio y cría en montaña',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Oenanthe_oenanthe_Larvik.JPG?width=1280',
+  s.image_attribution = 'Arnstein Rønning (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Oenanthe oenanthe';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcotán',
+  s.primary_habitat = 'Campo abierto con arbolado disperso, cerca de zonas húmedas',
+  s.description = 'Halcón esbelto con silueta de vencejo gigante: alas muy largas y afiladas y cola corta. Caza libélulas e incluso vencejos en pleno vuelo, con una agilidad extraordinaria. Los adultos tienen los «calzones» y la zona anal de un rojo ladrillo característico.',
+  s.identification_tips = 'Silueta de hoz, como un vencejo enorme
+Calzones y bajo vientre rojizos en el adulto
+Bigotera negra ancha sobre garganta blanca',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hobby_-_Falco_subbuteo.jpg?width=1280',
+  s.image_attribution = 'Andy Morffew from Itchen Abbas, Hampshire, UK (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Falco subbuteo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chotacabras europeo',
+  s.primary_habitat = 'Claros de bosque, brezales y matorral con suelo desnudo',
+  s.description = 'Ave nocturna de plumaje jaspeado que descansa de día tumbada a lo largo de una rama o en el suelo, confundida con la corteza. Caza polillas al vuelo con la boca enorme. Su canto es un ronroneo continuo y mecánico que puede durar minutos sin pausa.',
+  s.identification_tips = 'Canto como un motor lejano, continuo y vibrante
+Vuela al anochecer con giros silenciosos y bruscos
+El macho muestra manchas blancas en alas y cola',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Nachtzwaluw_-_European_nightjar_-_Caprimulgus_europaeus_2.jpg?width=1280',
+  s.image_attribution = 'Bouke ten Cate (CC BY 4.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Caprimulgus europaeus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Terrera común',
+  s.primary_habitat = 'Llanos de cultivo, eriales y pastizales rasos con suelo desnudo',
+  s.description = 'Alondra pequeña y pálida de aspecto muy limpio, con el pecho sin apenas rayado salvo una mancha oscura a cada lado del cuello. Anida en el suelo, en cultivos y baldíos. En migración se agrupa en bandos que se levantan del suelo todos a la vez.',
+  s.identification_tips = 'Mancha oscura a cada lado del cuello, como un botón
+Pecho limpio, sin rayado extenso
+Ceja clara y pico corto y grueso de granívora',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Alondra.jpg?width=1280',
+  s.image_attribution = 'Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Calandrella brachydactyla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Acentor alpino',
+  s.primary_habitat = 'Roquedos y pedreras de alta montaña; en invierno baja a cortados',
+  s.description = 'Pájaro robusto de montaña, pardo y discreto salvo por dos detalles: los flancos con listas castañas y una garganta blanca finamente moteada de negro. Camina entre las rocas buscando insectos y semillas, y en invierno desciende a cortados y construcciones.',
+  s.identification_tips = 'Flancos con anchas listas castañas
+Garganta blanca con motas negras, como un babero
+Base del pico amarilla',
+  s.seasonality = 'Otoño e invierno en cotas bajas',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Alpine_accentor_saganta.jpg?width=1280',
+  s.image_attribution = 'Paco Gómez from Castellón, Spain (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Prunella collaris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cigüeñuela',
+  s.primary_habitat = 'Salinas, marismas, charcas someras y humedales salobres',
+  s.description = 'Limícola blanca y negra de patas rosadas larguísimas, desproporcionadas para su tamaño, que le permiten caminar por aguas someras picoteando insectos en la superficie. Es ruidosa y muy territorial cerca del nido, y sobrevuela en círculos a quien se acerca.',
+  s.identification_tips = 'Patas rojizas extremadamente largas, que sobresalen en vuelo
+Contraste limpio de blanco y negro, con pico fino y recto
+Reclamo insistente y chillón al sobrevolar al intruso',
+  s.seasonality = 'Sobre todo de primavera a verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Himantopus_himantopus.jpg?width=1280',
+  s.image_attribution = '(Hans Hillewaert) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Himantopus himantopus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tarabilla norteña',
+  s.primary_habitat = 'Herbazales, prados altos y cultivos con tallos donde posarse',
+  s.description = 'Tarabilla migradora que solo se ve en los pasos. Se distingue de la europea por una ceja blanca ancha y muy marcada y por las bases blancas de la cola. Como su parienta, se posa en lo alto de tallos y matas y baja al suelo a cazar insectos.',
+  s.identification_tips = 'Ceja blanca ancha y bien marcada
+Base de la cola blanca a ambos lados
+Pecho anaranjado que va difuminándose hacia el vientre',
+  s.seasonality = 'Paso migratorio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Saxicola_rubetra_poklaskwa_AM.jpg?width=1280',
+  s.image_attribution = 'Artur Mikołajewski (CC BY 2.5) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Saxicola rubetra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zampullín común',
+  s.primary_habitat = 'Charcas, embalses, ramblas remansadas y canales con vegetación',
+  s.description = 'El más pequeño de los somormujos, rechoncho y sin cola aparente, que pasa más tiempo bajo el agua que sobre ella. En primavera luce las mejillas y el cuello de color castaño y una mancha amarilla en la comisura del pico. Su reclamo es un relincho agudo y vibrante muy característico.',
+  s.identification_tips = 'Silueta redonda, sin cola visible, como un corcho
+Se sumerge sin salpicar y reaparece lejos
+Relincho agudo y tembloroso desde la vegetación',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Zwergtaucher_060319_3.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Tachybaptus ruficollis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mirlo capiblanco',
+  s.primary_habitat = 'Montaña con matorral y pastos; en paso, sierras con enebros y bayas',
+  s.description = 'Mirlo de montaña que se distingue del común por una banda blanca en forma de media luna sobre el pecho y por las plumas del ala ribeteadas de claro, que dan un aspecto escamado. Es muy desconfiado y se aleja en cuanto detecta movimiento.',
+  s.identification_tips = 'Media luna blanca en el pecho
+Alas con aspecto escamado y plateado
+Mucho más esquivo que el mirlo común',
+  s.seasonality = 'Paso migratorio e invernada en montaña',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/2015-04-20_Turdus_torquatus_torquatus_Cairngorm_3.jpg?width=1280',
+  s.image_attribution = 'MPF (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Turdus torquatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Colirrojo real',
+  s.primary_habitat = 'Bosques abiertos, sotos y arboledas con huecos para criar',
+  s.description = 'Pájaro elegante con la cola de un naranja encendido que hace vibrar sin parar al posarse. El macho tiene la garganta negra, la frente blanca y el pecho anaranjado; la hembra es parda pero conserva la misma cola vibrante, que es la mejor pista para identificarlos.',
+  s.identification_tips = 'Cola naranja que tiembla constantemente
+Macho con frente blanca y garganta negra
+Se posa en ramas bajas y baja al suelo a por insectos',
+  s.seasonality = 'Paso migratorio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Common_Redstart_-_Segrate_-_Italy_S4E2518-1_(19357313382).jpg?width=1280',
+  s.image_attribution = 'Francesco Veronesi from Italy (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Phoenicurus phoenicurus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Garceta común',
+  s.primary_habitat = 'Marismas, salinas, ramblas con agua, arrozales y orillas costeras',
+  s.description = 'Garza blanca y esbelta, de tamaño medio, con el pico negro y las patas negras rematadas en unos pies amarillos llamativos. Pesca removiendo el fondo con esas patas para levantar peces y camarones. En época de cría luce dos plumas largas y finas en la nuca.',
+  s.identification_tips = 'Pies amarillos al final de patas negras
+Pico negro y fino, no amarillo
+Remueve el fondo con una pata mientras acecha',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aigrette_garzette_au_lac_sud_de_Tunis_(site_RAMSAR).jpg?width=1280',
+  s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Egretta garzetta';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bisbita campestre',
+  s.primary_habitat = 'Llanos secos, pastizales ralos y claros pedregosos con poca vegetación',
+  s.description = 'Bisbita grande, esbelto y de tonos arena, con muy poco rayado en el pecho comparado con sus parientes. Camina por el suelo desnudo moviendo la cola arriba y abajo. Anida entre piedras y matas bajas, y su canto es una frase corta y monótona que emite en vuelo.',
+  s.identification_tips = 'Pecho casi liso, sin el rayado denso de otros bisbitas
+Camina en vez de saltar, meneando la cola
+Ceja clara marcada y patas largas y pálidas',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/AnthusCampestris_cropped.jpg?width=1280',
+  s.image_attribution = 'AnthusCampestris.jpg: Lip Kee derivative work: Bogbumper (talk) (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Anthus campestris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Codorniz común',
+  s.primary_habitat = 'Cereales, herbazales altos y pastizales densos',
+  s.description = 'La más pequeña de nuestras gallináceas y la única migradora. Es mucho más fácil de oír que de ver: su canto trisilábico —el clásico «pal-pa-lá»— se emite desde el interior del cereal. Solo levanta el vuelo cuando se la pisa casi encima, y lo hace en línea recta y rasante.',
+  s.identification_tips = 'Canto trisilábico repetido desde dentro del herbazal
+Vuela raso y en línea recta al levantarse
+Del tamaño de un puño, mucho menor que una perdiz',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Quaglia.jpg?width=1280',
+  s.image_attribution = 'Raniero Massoli Novelli (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Coturnix coturnix';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Treparriscos',
+  s.primary_habitat = 'Paredes rocosas, cantiles y barrancos; en invierno baja a roquedos y edificios',
+  s.description = 'Pájaro de alta montaña que trepa por paredes verticales agitando las alas como una mariposa gigante, mostrando unos vistosos paneles rojos. Extrae insectos de las grietas con un pico largo y fino. En invierno desciende y puede aparecer en cortados bajos, castillos y presas.',
+  s.identification_tips = 'Manchas rojo carmín en las alas al abrirlas
+Trepa por la roca a saltos, aleteando sin parar
+Pico largo, fino y algo curvado',
+  s.seasonality = 'Otoño e invierno fuera de la alta montaña',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tichodroma_muraria02_cropped.jpg?width=1280',
+  s.image_attribution = 'derivative work: Hämbörger (talk) Tichodroma_muraria02.jpg: User:Kulac (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Tichodroma muraria';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Aguilucho cenizo',
+  s.primary_habitat = 'Cerealistas, herbazales y matorral bajo en zonas llanas',
+  s.description = 'Aguilucho grácil y de alas largas y estrechas que patrulla a poca altura, basculando con el viento y con las alas en «V». El macho es gris ceniza con las puntas negras; la hembra, parda y listada, con un obispillo blanco. Cría en el suelo, entre la vegetación.',
+  s.identification_tips = 'Vuelo bajo y balanceante, con las alas en «V»
+Macho gris ceniza con una barra negra en el ala
+Alas muy largas y estrechas en proporción al cuerpo',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Flickr_-_don_macauley_-_Bird_015.jpg?width=1280',
+  s.image_attribution = 'Donald Macauley (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Circus pygargus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Buitre común',
+  s.primary_habitat = 'Sierras con cortados para criar; se alimenta en campo abierto',
+  s.description = 'Buitre grande y pardo, con la cabeza y el cuello cubiertos de plumón blanco y una gorguera de plumas en la base del cuello. Planea horas sin batir las alas aprovechando las térmicas, y localiza los cadáveres vigilando lo que hacen los demás buitres a kilómetros de distancia.',
+  s.identification_tips = 'Alas enormes y rectangulares, con los «dedos» separados
+Cabeza pálida y pequeña en proporción al cuerpo
+Planea en círculos sin apenas batir las alas',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Vulture_beak_sideview_A.jpg?width=1280',
+  s.image_attribution = 'Thermos (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Gyps fulvus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Esmerejón',
+  s.primary_habitat = 'Llanos abiertos, marismas y pastizales durante la invernada',
+  s.description = 'El halcón más pequeño de Europa, poco mayor que un mirlo, con vuelo rápido y bajo pegado al terreno para sorprender a pequeñas aves. El macho es gris azulado por encima; la hembra, parda. No se ciñe como el cernícalo: siempre está en movimiento.',
+  s.identification_tips = 'Muy pequeño y compacto, con aleteo rápido
+Vuela bajo y en línea recta, casi rozando el suelo
+Sin bigotera marcada, a diferencia del peregrino',
+  s.seasonality = 'Otoño e invierno',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Falco_columbarius_Male.jpg?width=1280',
+  s.image_attribution = 'Raj Boora from Edmonton, Canada (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Falco columbarius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Calandria común',
+  s.primary_habitat = 'Llanos cerealistas, pastizales y estepas de suelo profundo',
+  s.description = 'La mayor de las alondras ibéricas, robusta y de pico grueso, con una mancha negra muy marcada a cada lado del cuello. Canta en vuelo, describiendo círculos altos con un torrente de notas en el que imita a otras aves. En invierno forma bandos numerosos en los llanos.',
+  s.identification_tips = 'Babero negro a cada lado del cuello
+Borde trasero del ala blanco y visible en vuelo
+Pico grueso y pálido, de granívora',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Melanocorypha_calandra.jpg?width=1280',
+  s.image_attribution = 'Bereşe.jpg: Dûrzan cîrano derivative work: Osado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Melanocorypha calandra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Torcecuello euroasiático',
+  s.primary_habitat = 'Bosques abiertos, sotos, huertos y arboledas con madera muerta',
+  s.description = 'Pariente de los pájaros carpinteros que ni pica la madera ni trepa por los troncos: se posa de través en las ramas y come hormigas del suelo con una lengua larguísima. Su plumaje jaspeado en grises y pardos imita la corteza. Si se le molesta en el nido, retuerce el cuello como una culebra, de ahí su nombre.',
+  s.identification_tips = 'Plumaje veteado como corteza, difícil de ver quieto
+Se posa a lo largo de la rama, no agarrado al tronco
+Franja oscura desde la nuca hasta la mitad de la espalda',
+  s.seasonality = 'Paso migratorio e invernada',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Jinxtorquilla.jpg?width=1280',
+  s.image_attribution = 'User:Aelwyn (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Jynx torquilla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Aulaga',
   s.primary_habitat = 'Matorral árido, ramblas y bordes de camino en clima muy seco',
   s.description = 'Mata en forma de bola formada por ramas verdes, rígidas y terminadas en pincho, casi sin hojas: la fotosíntesis la hacen los propios tallos. Al romper una rama suelta un látex blanco. Sus flores amarillas recuerdan a las del diente de león en miniatura.',
@@ -2578,6 +4502,19 @@ Hojas acintadas y de verde azulado, saliendo de la arena',
   s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
   s.rarity_score = 3
 WHERE p.slug = 'cuatro-calas' AND s.scientific_name = 'Pancratium maritimum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Romero',
+  s.primary_habitat = 'Matorral seco y soleado sobre suelos calizos y pedregosos',
+  s.description = 'Arbusto aromático de hojas estrechas como agujas, verde oscuro por el haz y blanquecinas por el envés, con los bordes enrollados hacia abajo. Florece casi todo el año en azul pálido, y en pleno invierno es una de las pocas fuentes de néctar del matorral.',
+  s.identification_tips = 'Hojas como agujas, blancas por debajo
+Olor inconfundible al frotar entre los dedos
+Flores azul claro repartidas por las ramas casi todo el año',
+  s.seasonality = 'Todo el año, con máximo de floración en invierno y primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rosemary_in_bloom.JPG?width=1280',
+  s.image_attribution = 'Margalob (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'cuatro-calas' AND s.scientific_name = 'Rosmarinus officinalis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Saladilla anual',
@@ -2929,6 +4866,19 @@ Espigas terminales de flores pequeñas y amarillentas',
   s.image_attribution = 'Gideon Pisanty (Gidip) גדעון פיזנטי (CC BY 3.0) · Wikimedia Commons',
   s.rarity_score = 2
 WHERE p.slug = 'cuatro-calas' AND s.scientific_name = 'Crucianella maritima';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Acebuche',
+  s.primary_habitat = 'Matorral alto, laderas secas y barrancos del piso más cálido',
+  s.description = 'El acebuche es el olivo silvestre: mismo árbol, sin siglos de selección. Tiene las hojas más pequeñas y duras, las ramas jóvenes a menudo espinosas y aceitunas diminutas. Forma matorrales altos y es el árbol característico de las laderas cálidas mediterráneas.',
+  s.identification_tips = 'Hojas pequeñas, verdes arriba y plateadas por debajo
+Ramillas jóvenes rígidas y a veces espinosas
+Aceitunas muy pequeñas, de poco más de un centímetro',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ullastre_vell.JPG?width=1280',
+  s.image_attribution = 'Antoni Salvà (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'cuatro-calas' AND s.scientific_name = 'Olea europaea subsp. europaea';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Albaida',
@@ -3581,6 +5531,19 @@ Barros y árboles con el tronco embarrado a media altura',
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Sus scrofa';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Romero',
+  s.primary_habitat = 'Matorral seco y soleado sobre suelos calizos y pedregosos',
+  s.description = 'Arbusto aromático de hojas estrechas como agujas, verde oscuro por el haz y blanquecinas por el envés, con los bordes enrollados hacia abajo. Florece casi todo el año en azul pálido, y en pleno invierno es una de las pocas fuentes de néctar del matorral.',
+  s.identification_tips = 'Hojas como agujas, blancas por debajo
+Olor inconfundible al frotar entre los dedos
+Flores azul claro repartidas por las ramas casi todo el año',
+  s.seasonality = 'Todo el año, con máximo de floración en invierno y primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rosemary_in_bloom.JPG?width=1280',
+  s.image_attribution = 'Margalob (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Rosmarinus officinalis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Zorro',
   s.primary_habitat = 'Prácticamente cualquier ambiente: bosque, matorral, cultivos y periferias urbanas',
   s.description = 'El carnívoro silvestre más adaptable y extendido: vive desde la alta montaña hasta el borde de las ciudades. Es omnívoro y oportunista, lo que explica su éxito. Se reconoce por la cola larga y espesa —la «hopa»— rematada casi siempre en blanco.',
@@ -3761,6 +5724,19 @@ Mata pequeña, de menos de medio metro',
   s.image_attribution = 'Alejandro Rodríguez Zapata (CC BY 4.0) · GBIF/iNaturalist',
   s.rarity_score = 4
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Eragrostis papposa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Acebuche',
+  s.primary_habitat = 'Matorral alto, laderas secas y barrancos del piso más cálido',
+  s.description = 'El acebuche es el olivo silvestre: mismo árbol, sin siglos de selección. Tiene las hojas más pequeñas y duras, las ramas jóvenes a menudo espinosas y aceitunas diminutas. Forma matorrales altos y es el árbol característico de las laderas cálidas mediterráneas.',
+  s.identification_tips = 'Hojas pequeñas, verdes arriba y plateadas por debajo
+Ramillas jóvenes rígidas y a veces espinosas
+Aceitunas muy pequeñas, de poco más de un centímetro',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ullastre_vell.JPG?width=1280',
+  s.image_attribution = 'Antoni Salvà (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Olea europaea subsp. europaea';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Orejilla de roca',
@@ -4010,6 +5986,19 @@ Tallos pegajosos al tacto, con pelos glandulosos',
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Ononis ornithopodioides';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jara blanca',
+  s.primary_habitat = 'Matorral y jarales sobre suelos secos y soleados de montaña media',
+  s.description = 'Arbusto de hojas anchas, ovaladas y cubiertas de una pelusa plateada que le da un aspecto casi blanco. En primavera se llena de flores amarillas de cinco pétalos con una mancha oscura en la base. Es un endemismo del sur y sureste peninsular.',
+  s.identification_tips = 'Hojas anchas y plateadas, no estrechas como las jaras
+Flores amarillas con una manchita oscura en la base del pétalo
+Porte erguido, más alto que las jarillas comunes',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Halimium_commutatum1.jpg?width=1280',
+  s.image_attribution = 'Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Cistus atriplicifolius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Rascavieja',
   s.primary_habitat = 'Matorral seco y laderas soleadas sobre suelos pedregosos',
   s.description = 'Leguminosa arbustiva y pegajosa, con hojas de tres foliolos y racimos densos y erguidos de flores de un amarillo intenso. Es un endemismo del sur peninsular y del norte de África, y una de las plantas más vistosas del matorral en plena floración.',
@@ -4034,6 +6023,19 @@ En roca seca y soleada, no en umbrías húmedas',
   s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
   s.rarity_score = 1
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Cosentinia vellea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Clujía',
+  s.primary_habitat = 'Roquedos, laderas pedregosas y matorral seco sobre calizas',
+  s.description = 'Umbelífera leñosa, algo insólita en una familia de hierbas, con hojas estrechas, coriáceas y de un verde azulado. Sus umbelas de flores amarillas se abren en pleno verano. Desprende un olor resinoso característico al romper una rama.',
+  s.identification_tips = 'Umbelífera con base leñosa, no herbácea
+Hojas estrechas, duras y de verde azulado
+Umbelas amarillas en pleno verano',
+  s.seasonality = 'Verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/B._gibraltarium-1.JPG?width=1280',
+  s.image_attribution = 'Philmarin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Bupleurum gibraltarium';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Botón azul',
@@ -4088,6 +6090,32 @@ Hojas rígidas con el nervio central pálido y marcado',
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Imperata cylindrica';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Saxifraga almeriensis',
+  s.primary_habitat = 'Grietas y repisas umbrías de roquedos calizos de montaña',
+  s.description = 'Saxífraga rupícola que forma pequeñas rosetas de hojas carnosas y algo divididas encajadas en la roca, con tallos finos rematados en flores blancas de cinco pétalos. Es un endemismo del sureste ibérico restringido a unas pocas sierras.',
+  s.identification_tips = 'Rosetas pequeñas y carnosas metidas en la fisura
+Flores blancas de cinco pétalos sobre tallos finos
+Casi siempre en paredes umbrías y frescas',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/111644731/original.jpeg',
+  s.image_attribution = 'faluke (CC BY-NC 4.0) · GBIF/iNaturalist',
+  s.rarity_score = 2
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Saxifraga camposii subsp. leptophylla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'erguen',
+  s.primary_habitat = 'Matorral y laderas soleadas sobre suelos secos y pedregosos',
+  s.description = 'Arbusto espinoso y muy ramificado que en primavera se cubre por completo de flores amarillas. Sus ramas terminan en espinas fuertes y sus legumbres van cubiertas de pelos sedosos. Forma masas impenetrables que dan refugio a aves de matorral.',
+  s.identification_tips = 'Ramas rematadas en espinas rígidas y punzantes
+Floración amarilla masiva que cubre toda la mata
+Legumbres cubiertas de pelos blancos y sedosos',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Calycotome_villosa1.jpg?width=1280',
+  s.image_attribution = 'Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Cytisus lanigerus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'campanilla espigada',
   s.primary_habitat = 'Pastizales secos, ribazos y claros de matorral sobre suelos margosos',
   s.description = 'Correhuela de porte bajo y no trepadora, con hojas estrechas cubiertas de pelos sedosos que las hacen brillar con una pátina plateada. Sus flores son embudos rosados o blanquecinos que se abren por la mañana y se cierran con el calor.',
@@ -4099,6 +6127,19 @@ Flores en embudo, rosadas o casi blancas',
   s.image_attribution = 'Ghislain118 https://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons',
   s.rarity_score = 1
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Convolvulus lineatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'campanillas de cantil',
+  s.primary_habitat = 'Fisuras de roquedos, taludes y pedregales de montaña',
+  s.description = 'Campánula de tallos finos y flexibles con flores azul violeta en forma de campana colgante. Crece en grietas de roca y en pedregales, donde sus raíces alcanzan la humedad que retiene la piedra. Las hojas de la base tienen forma redondeada y las del tallo son estrechas.',
+  s.identification_tips = 'Flores azuladas en campana, colgando del tallo
+Hojas basales redondeadas, muy distintas de las del tallo
+En grietas y repisas de roca, a menudo colgando',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Campanula_hispanica_1.jpg?width=1280',
+  s.image_attribution = 'Ghislain118 http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Campanula rotundifolia subsp. hispanica';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Pampajarito',
@@ -4658,6 +6699,19 @@ Crece encajada en fisuras, colgando del cantil',
   s.image_attribution = 'Fco. Javier López Espino (CC BY-NC-ND 4.0) · observation.org / GBIF',
   s.rarity_score = 2
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Athamanta hispanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ajo silvestre',
+  s.primary_habitat = 'Pastizales secos, ribazos y claros de matorral',
+  s.description = 'Ajo silvestre de umbela laxa y colgante, con flores acampanadas de tonos rosados o pardo claro sobre pedicelos largos y desiguales. Las brácteas que envuelven la inflorescencia acaban en dos puntas largas como cuernos.',
+  s.identification_tips = 'Umbela laxa y desmadejada, con flores colgantes
+Dos brácteas largas como cuernos bajo la umbela
+Olor a ajo al estrujar las hojas',
+  s.seasonality = 'Verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Laguna_de_San_Juan_20100617_3431.jpg?width=1280',
+  s.image_attribution = 'Alberto Salguero (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Allium pallens';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Clavellina',
@@ -5649,11 +7703,11 @@ WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Prunella collaris';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Curruca rabilarga',
-  s.primary_habitat = 'Matorral litoral y laderas secas',
-  s.description = 'Pequeña ave residente de matorral mediterráneo denso, reclasificada taxonómicamente de Sylvia undata a Curruca undata, igual que la curruca cabecinegra.',
-  s.identification_tips = 'Cola larga que mueve constantemente
-Ojo y anillo ocular rojizos
-Ligada a matorral denso y bajo',
+  s.primary_habitat = 'Matorral bajo y denso, jarales, brezales y tomillares',
+  s.description = 'Curruca pequeña, oscura y de cola muy larga que suele llevar levantada. El macho tiene el vientre vinoso y el ojo rojo rodeado de un anillo del mismo color. Es muy inquieta y rara vez se deja ver más de unos segundos antes de volver a hundirse en la mata.',
+  s.identification_tips = 'Cola larga y erguida, casi vertical al posarse
+Ojo y anillo ocular rojos
+Vientre de color vinoso, con motitas blancas en la garganta',
   s.seasonality = 'Todo el año',
   s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_pitchou_Ichkeul_NP.jpg?width=1280',
   s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',

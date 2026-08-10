@@ -31,7 +31,7 @@ errores de red que no explican nada, `npm run red:check` lo aclara en diez segun
 | Fichero | Líneas | Qué hace |
 |---|---|---|
 | `validate-park-data.js` | 494 | **La red de seguridad.** `npm run validate`, y también en `pre-commit` |
-| `sync-species-catalog.js` | 357 | Una especie, una ficha, en todos los parques (`species:check/:extract/:apply`) |
+| `sync-species-catalog.js` | 392 | Una especie, una ficha, en todos los parques (`species:check/:extract/:apply/:poda`) |
 | `sync-habitat-catalog.js` | 231 | Un hábitat, una descripción, en todos los parques (`habitats:check/:apply`) |
 | `scan-taxones-duplicados.js` | 95 | El mismo taxón con dos nombres científicos. **Sale con código 1 mientras queden** |
 | `glossary-coverage.js` | 263 | Vocabulario de las fichas sin definición en el glosario |
@@ -62,6 +62,7 @@ Orden real de uso; el runbook completo está en
 | `merge-habitats.js` | 187 | Capa 2: conserva lo curado a mano, actualiza desde la fuente lo que es dato |
 | `adopt-habitats.js` | 194 | Capa 2: lo lleva a `Frontend/` y recalcula contadores. **No pasa por la BD** |
 | `atlas-hic-especies.js` | 100 | **Capa 3**: especies características por HIC desde el Atlas → evidencia `caracteristica` |
+| `build-species-n2.js` | 355 | Capa 3: **escribe las fichas** en `park.json` desde la selección aprobada. Ensambla, no consulta: sin red y sin inventar un campo. Idempotente |
 | `reconcile-taxa.js` | 84 | Capa 3: reconciliación taxonómica EIDOS ↔ GBIF |
 | `wikimedia-images.js` · `enrich-images.js` | 177 · 267 | Fotos de especies con atribución |
 | `habitat-images.js` · `poi-images.js` | 176 · 423 | Portadas de hábitat (por especie diagnóstica) y fotos de POI |

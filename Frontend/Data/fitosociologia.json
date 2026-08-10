@@ -45,6 +45,17 @@
         }
       ]
     },
+    "Andryaletum ragusinae": {
+      "nombre": "Vegetación de gravas de cauce",
+      "lectura": "Plantas sueltas sobre las gravas y arenas que las avenidas remueven cada pocos años: matas de hojas blanquecinas y afieltradas rematadas por capítulos amarillos, capaces de rebrotar después de quedar enterradas o arrastradas por la corriente.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Andryala ragusina",
+          "comun": "ajonjera"
+        }
+      ]
+    },
     "Atriplicetum glauco-halimi": {
       "nombre": "Matorral de orgazas",
       "lectura": "Matas de hoja gris y harinosa que colonizan suelos salinos removidos y cargados de nitrógeno: bordes de camino y de cultivo, corrales y escombreras viejas.",
@@ -150,6 +161,17 @@
         }
       ]
     },
+    "Charetum vulgaris": {
+      "nombre": "Praderas sumergidas de agua caliza",
+      "lectura": "Tapiz sumergido de unas algas verdes grandes que ramifican en pisos, ancladas al fondo de charcas y remansos de agua clara y muy cargada de cal. Crujen al tocarlas porque se recubren de una costra caliza, y desprenden un olor que recuerda al ajo.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Chara vulgaris",
+          "comun": "ova"
+        }
+      ]
+    },
     "Cistancho phelypaeae-Arthrocnemetum fruticosi": {
       "nombre": "Almajar de saladar inundable",
       "lectura": "Matorral carnoso de sosas sobre fango que se inunda de agua salada, con el jopo amarillo asomando entre las matas: una planta sin clorofila que vive parasitando sus raíces.",
@@ -177,6 +199,17 @@
         {
           "cientifico": "Teucrium freynii",
           "comun": "zamarrilla"
+        }
+      ]
+    },
+    "Cyperetum distachyi": {
+      "nombre": "Juncias de orilla encharcada",
+      "lectura": "Franja baja y verde de juncias justo en la orilla del agua, sobre limos que siguen empapados todo el año. Sus tallos son de sección triangular —se nota al rodarlos entre los dedos— y rematan en un penacho de espiguillas pardas.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Cyperus distachyos",
+          "comun": "juncia"
         }
       ]
     },
@@ -237,6 +270,21 @@
         {
           "cientifico": "Genista longipes",
           "comun": "aulaga rastrera"
+        }
+      ]
+    },
+    "Eryngio ilicifolii-Plantaginetum ovatae": {
+      "nombre": "Pastizal anual de suelos margosos secos",
+      "lectura": "Césped ralo de hierbas anuales sobre margas y suelos compactos de clima semiárido: germina con las lluvias de otoño, florece en primavera y desaparece antes del verano, dejando de pie los cardos espinosos secos como única señal de que estuvo allí.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Eryngium ilicifolium",
+          "comun": "cardo setero"
+        },
+        {
+          "cientifico": "Plantago ovata",
+          "comun": "zaragatona"
         }
       ]
     },
@@ -359,6 +407,21 @@
         }
       ]
     },
+    "Juncetum maritimo-subulati": {
+      "nombre": "Juncal de saladar",
+      "lectura": "Juncal denso y alto sobre suelos salinos que se encharcan en invierno y se resecan en verano dejando una costra blanca de sal. Los juncos, de tallo cilíndrico y punta punzante, crecen en macollas apretadas que aguantan tanto el agua como la sal.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Juncus maritimus",
+          "comun": "junco marítimo"
+        },
+        {
+          "cientifico": "Juncus subulatus",
+          "comun": "junco de saladar"
+        }
+      ]
+    },
     "Lafuenteo rotundifoliae-Centaureetum saxicolae": {
       "nombre": "Extraplomos y paredes umbrías",
       "lectura": "Vegetación de paredes verticales y extraplomos resguardados de la lluvia directa, con plantas de hoja carnosa y redondeada que cuelgan de la roca en penumbra.",
@@ -374,6 +437,21 @@
         }
       ]
     },
+    "Lapiedro martinezii-Cosentinietum bivalentis": {
+      "nombre": "Repisas soleadas de roca caliza",
+      "lectura": "Comunidad de repisas y grietas anchas de roca caliza muy soleada, donde apenas se acumula tierra: helechillos de fronde cubierta de pelos y escamas, que se enrollan al secarse y vuelven a desplegarse con la lluvia, acompañados de pequeñas plantas de bulbo que florecen al final del verano.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Lapiedra martinezii",
+          "comun": "lapiedra"
+        },
+        {
+          "cientifico": "Cosentinia bivalens",
+          "comun": "helecho lanoso"
+        }
+      ]
+    },
     "Lavandulo-Genistion boissieri": {
       "nombre": "Matorrales de montaña con lavandas y aulagas",
       "lectura": "Reúne los matorrales aromáticos y espinosos de montaña caliza —lavandas, aulagas, tomillos y salvias— que se repiten con la misma estructura por buena parte de la mitad sur peninsular.",
@@ -386,6 +464,17 @@
         {
           "cientifico": "Genista boissieri",
           "comun": "aulaga"
+        }
+      ]
+    },
+    "Lepidion subulati": {
+      "nombre": "Matorrales de yesos",
+      "lectura": "Reúne los matorrales abiertos que solo prosperan sobre suelos de yeso, con plantas capaces de vivir en un sustrato que a la mayoría le resulta inhóspito. El suelo, blanquecino y con costra, queda a la vista entre mata y mata. La cartografía usa este nivel cuando no baja al detalle de la asociación.",
+      "rango": "alianza",
+      "nombradaPor": [
+        {
+          "cientifico": "Lepidium subulatum",
+          "comun": "mostacilla de yesos"
         }
       ]
     },
@@ -494,6 +583,32 @@
         }
       ]
     },
+    "Polypodietum serrati": {
+      "nombre": "Polipodios de roca umbría",
+      "lectura": "Alfombra de helechos de fronde recortada que crece sobre una capa de musgo, en grietas y bases de roca a la sombra donde el aire se mantiene húmedo. Rebrota en otoño y se agosta en verano, cuando las frondes se enrollan y parecen muertas.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Polypodium serratum",
+          "comun": "polipodio"
+        }
+      ]
+    },
+    "Polypogono maritimi-Centaurietum spicati": {
+      "nombre": "Pastizal de charcas temporales",
+      "lectura": "Herbazal bajo de plantas anuales que ocupa el fondo de charcas y depresiones que se inundan en invierno y se secan del todo en verano: gramíneas de espiga blanda y plumosa y florecillas rosadas que van apareciendo a medida que el agua se retira.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Polypogon maritimus",
+          "comun": "cola de zorra"
+        },
+        {
+          "cientifico": "Centaurium spicatum",
+          "comun": "centaura espigada"
+        }
+      ]
+    },
     "Quercetum rotundifoliae": {
       "nombre": "Encinar",
       "lectura": "El encinar en su forma más extendida: carrascas de copa densa y hoja dura sobre suelos calizos del interior, con un sotobosque de coscoja, enebros y plantas aromáticas.",
@@ -580,6 +695,36 @@
         }
       ]
     },
+    "Rubio longifoliae-Quercetum rotundifoliae": {
+      "nombre": "Encinar de tierra baja con rubia",
+      "lectura": "Encinar de las zonas cálidas y secas de poca altitud, de copas apretadas y oscuras, con lianas de tallo áspero y hojas en corona que se enganchan a la ropa al pasar. Es un bosque más bajo y más abierto que el encinar de montaña.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Rubia longifolia",
+          "comun": "rubia"
+        },
+        {
+          "cientifico": "Quercus rotundifolia",
+          "comun": "encina, carrasca"
+        }
+      ]
+    },
+    "Rubo ulmifolii-Loniceretum biflorae": {
+      "nombre": "Zarzal de ribera con madreselva",
+      "lectura": "Maraña espinosa de zarzas trepada por madreselvas, en los bordes de cauces y acequias de clima cálido. Forma un seto casi impenetrable que da sombra al agua y sirve de refugio y despensa a los pájaros.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Rubus ulmifolius",
+          "comun": "zarza"
+        },
+        {
+          "cientifico": "Lonicera biflora",
+          "comun": "madreselva"
+        }
+      ]
+    },
     "Rubo ulmifolii-Nerietum oleandri": {
       "nombre": "Adelfar de rambla",
       "lectura": "Adelfas en el lecho de ramblas y cauces de caudal irregular, trabadas con zarzas allí donde queda algo de humedad. Aguantan tanto las avenidas violentas como meses sin una gota de agua.",
@@ -637,6 +782,21 @@
         {
           "cientifico": "Cistus albidus",
           "comun": "jara blanca, estepa blanca"
+        }
+      ]
+    },
+    "Schoeno nigricantis-Plantaginetum crassifoliae": {
+      "nombre": "Prado húmedo salino de masiega",
+      "lectura": "Prado bajo y apretado sobre suelos húmedos y algo salados, alimentados por agua subterránea: matas de masiega con la base negra y brillante y llantenes de hoja gruesa y carnosa. Se mantiene verde en pleno verano, cuando todo lo que lo rodea está seco.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Schoenus nigricans",
+          "comun": "masiega negra"
+        },
+        {
+          "cientifico": "Plantago crassifolia",
+          "comun": "llantén carnoso"
         }
       ]
     },
@@ -700,6 +860,21 @@
         }
       ]
     },
+    "Teucrio verticillati-Thymetum pallentis": {
+      "nombre": "Tomillar de yesos",
+      "lectura": "Tomillar bajo y claro sobre costras de yeso, con matas grisáceas de porte redondeado muy separadas entre sí. Es una vegetación de cobertura escasa, ajustada a un suelo pobre y seco que se cuartea al perder el agua.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Teucrium verticillatum",
+          "comun": "zamarrilla"
+        },
+        {
+          "cientifico": "Thymus pallens",
+          "comun": "tomillo"
+        }
+      ]
+    },
     "Teucrio webbiani-Helianthemetum origanifolii": {
       "nombre": "Tomillar de crestas calizas",
       "lectura": "Matorral bajo y abierto de crestas y laderas de caliza, con zamarrillas y jarillas cuyas flores amarillas se abren por la mañana y pierden los pétalos ese mismo día.",
@@ -712,6 +887,36 @@
         {
           "cientifico": "Helianthemum origanifolium",
           "comun": "jarilla"
+        }
+      ]
+    },
+    "Thymo moroderi-Sideritidion leucanthae": {
+      "nombre": "Tomillares semiáridos de rabo de gato",
+      "lectura": "Reúne los tomillares bajos y abiertos de las tierras más secas y cálidas del sureste ibérico, sobre margas y suelos pedregosos: matas leñosas pequeñas y muy aromáticas, separadas unas de otras por suelo desnudo. La cartografía usa este nivel cuando no baja al detalle de la asociación.",
+      "rango": "alianza",
+      "nombradaPor": [
+        {
+          "cientifico": "Thymus moroderi",
+          "comun": "cantueso murciano"
+        },
+        {
+          "cientifico": "Sideritis leucantha",
+          "comun": "rabo de gato"
+        }
+      ]
+    },
+    "Trachelio coerulei-Adiantetum capilli-veneris": {
+      "nombre": "Culantrillos de rezumadero",
+      "lectura": "Cortina colgante de culantrillos de hoja fina y plantas de flor azul sobre rocas por las que el agua escurre sin parar. La cal que lleva el agua se va depositando sobre los tallos y con el tiempo forma una roca porosa y muy ligera.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Trachelium caeruleum",
+          "comun": "flor de la viuda"
+        },
+        {
+          "cientifico": "Adiantum capillus-veneris",
+          "comun": "culantrillo de pozo"
         }
       ]
     },
