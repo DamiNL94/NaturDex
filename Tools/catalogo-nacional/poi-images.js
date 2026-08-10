@@ -19,9 +19,17 @@
  *
  * Cadena de resolución
  * --------------------
+ *   0. Archivo elegido a mano en `data/poi-foto.json`, si lo hay. No se salta ninguna comprobación:
+ *      la licencia y la carga se verifican igual. Sirve para cuando hay varias fotos válidas del
+ *      sitio y la que elige el orden alfabético no es la mejor; eso no lo puede decidir el script.
  *   1. Categoría de Commons del espacio (y sus subcategorías, un nivel): archivo cuyo nombre
  *      mencione el POI. Es la vía buena: el sitio lo garantiza la categoría y el elemento, el nombre.
- *   2. Buscador de archivos de Commons con el nombre del POI Y el del espacio o su municipio. Se
+ *   2. Geosearch de Commons alrededor de la coordenada del POI: archivos geoetiquetados dentro del
+ *      radio y cuyo nombre mencione el POI. Alcanza archivos que no están en ninguna categoría del
+ *      espacio. **Las coordenadas garantizan el sitio, no el sujeto**: en el radio de un POI hay
+ *      fotos de mariposas y de otros elementos, así que se sigue exigiendo la mención por nombre,
+ *      exactamente igual que en la vía 1.
+ *   3. Buscador de archivos de Commons con el nombre del POI Y el del espacio o su municipio. Se
  *      marca `needsReview` siempre: el buscador no garantiza nada.
  *
  * Alias de topónimo (data/poi-alias.json)
@@ -55,8 +63,9 @@
  *   node Tools/catalogo-nacional/poi-images.js --write --sql Database/poi-imagenes.sql --report Docs/fotos-poi.md
  *
  * Opciones: --park <slug> (por defecto, todos), --categoria <Categoría de Commons del espacio>,
- *           --municipio <nombre> (afina la búsqueda del paso 2), --all (revisa también los POIs que
- *           ya tienen foto), --force (acepta candidatos `needsReview`), --width <px>, --dry-run.
+ *           --municipio <nombre> (afina la búsqueda del paso 3), --radio <m> (geosearch, 500 por
+ *           defecto), --all (revisa también los POIs que ya tienen foto), --force (acepta candidatos
+ *           `needsReview`), --width <px>, --dry-run.
  *
  * `--sql` hace falta porque Frontend/Js/data.js da prioridad a la respuesta de la API sobre el
  * park.json empaquetado: sin cargar la BD, un despliegue con backend seguiría sirviendo lo viejo.
@@ -73,11 +82,13 @@ const { parkFiles, readJson, readJsonIf, fromRoot, rel } = require('../lib/io');
 
 const COMMONS = 'https://commons.wikimedia.org/w/api.php';
 const ALIAS_FILE = path.join(__dirname, 'data', 'poi-alias.json');
+const FOTO_FILE = path.join(__dirname, 'data', 'poi-foto.json');
 
 const OPT = {
   park: arg('park', null),
   categoria: arg('categoria', null),
   municipio: arg('municipio', null),
+  radio: num('radio', 500),
   list: flag('list'),
   all: flag('all'),
   write: flag('write'),
@@ -149,6 +160,29 @@ function aliasDe(slug, poiId) {
   return Array.isArray(lista) ? lista.filter(s => typeof s === 'string' && s.trim()) : [];
 }
 
+// --- Archivo elegido a mano -------------------------------------------------------------------------
+// data/poi-foto.json: { "<slug del espacio>": { "<id del POI>": "Nombre del archivo.jpg" } }
+// Cuando hay varias fotos válidas del mismo sitio, el script se queda con la primera por orden
+// alfabético, y eso no tiene por qué ser la mejor: cuál ilustra mejor un sitio es un juicio que una
+// heurística sobre nombres de archivo no puede hacer. Esto lo deja anotado en el repositorio en vez
+// de a mano en el `park.json`, que es lo que no se debe tocar. **No salta ninguna comprobación**: la
+// licencia sigue siendo lista blanca y el archivo sigue teniendo que cargar.
+const FOTO = readJsonIf(FOTO_FILE, {});
+
+function fotoElegida(slug, poiId) {
+  const delEspacio = FOTO[slug];
+  const f = delEspacio && delEspacio[poiId];
+  return typeof f === 'string' && f.trim() ? f.trim().replace(/^File:/, '') : null;
+}
+
+// --- Distancia ---------------------------------------------------------------------------------------
+function metros(lat1, lon1, lat2, lon2) {
+  const R = 6371000, rad = x => x * Math.PI / 180;
+  const dLat = rad(lat2 - lat1), dLon = rad(lon2 - lon1);
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(rad(lat1)) * Math.cos(rad(lat2)) * Math.sin(dLon / 2) ** 2;
+  return Math.round(2 * R * Math.asin(Math.sqrt(h)));
+}
+
 // --- Commons ---------------------------------------------------------------------------------------
 async function miembrosDeCategoria(categoria, tipo) {
   const j = await api(`${COMMONS}?action=query&list=categorymembers&cmtitle=${encodeURIComponent('Category:' + categoria)}` +
@@ -174,6 +208,25 @@ async function archivosDelEspacio(categoria) {
   return [...ficheros].filter(usable);
 }
 
+/**
+ * Archivos geoetiquetados alrededor de la coordenada del POI, del más cercano al más lejano.
+ *
+ * Alcanza lo que la categoría no alcanza: un archivo puede no estar en ninguna categoría del espacio
+ * y aun así llevar las coordenadas del sitio. Lo que NO hace es garantizar el sujeto —en 500 m de un
+ * POI hay fotos de mariposas y de otros elementos—, así que quien llama sigue exigiendo la mención
+ * por nombre. Devuelve `[{ file, dist }]`.
+ */
+async function geosearchDelPoi(coordenadas, radio) {
+  if (!Array.isArray(coordenadas) || coordenadas.length !== 2) return [];
+  const [lat, lon] = coordenadas;
+  const j = await api(`${COMMONS}?action=query&list=geosearch&gscoord=${lat}|${lon}` +
+    `&gsradius=${Math.max(10, Math.min(10000, radio))}&gsnamespace=6&gslimit=100&format=json&origin=*`);
+  return (j?.query?.geosearch || [])
+    .map(h => ({ file: String(h.title || '').replace(/^File:/, ''), dist: metros(lat, lon, h.lat, h.lon) }))
+    .filter(h => usable(h.file))
+    .sort((a, b) => a.dist - b.dist);
+}
+
 async function buscaEnCommons(nombrePoi, contexto) {
   const consulta = [nombrePoi, contexto].filter(Boolean).join(' ');
   const j = await api(`${COMMONS}?action=query&list=search&srsearch=${encodeURIComponent(consulta)}` +
@@ -197,7 +250,7 @@ function conCredito(source, meta) {
   if (!previo) return credito;
   // Idempotencia: una segunda pasada no debe encadenar créditos. Si ya hay uno de Commons, se
   // sustituye entero en vez de añadir otro.
-  if (/wikimedia commons/i.test(previo)) return previo.replace(/;\s*Wikimedia Commons[^;]*$/i, '') .trim().replace(/;$/, '') + '; ' + credito;
+  if (/wikimedia commons/i.test(previo)) return previo.replace(/;\s*Wikimedia Commons[^;]*$/i, '').trim().replace(/[;.]$/, '') + '; ' + credito;
   return previo.replace(/[;.]$/, '') + '; ' + credito;
 }
 
@@ -215,10 +268,20 @@ async function primeraValida(ficheros, via, needsReview) {
   return { elegida: null, rechazos };
 }
 
-async function resuelvePoi(poi, { archivos, contexto, alias }) {
-  // 1 · dentro de la categoría del espacio, por nombre o por cualquiera de sus alias. Los alias solo
-  //     valen aquí: la categoría ya garantiza el sitio (ver cabecera).
+async function resuelvePoi(poi, { archivos, contexto, alias, elegidaAMano }) {
+  const rechazosPrevios = [];
   const nombres = [poi.name, ...alias];
+
+  // 0 · archivo elegido a mano. Pasa por las mismas comprobaciones que cualquier otro; si no las
+  //     pasa, se anota y la cadena sigue como si no estuviera anotado.
+  if (elegidaAMano) {
+    const { elegida, rechazos } = await primeraValida([elegidaAMano], 'Archivo elegido a mano', false);
+    if (elegida) return { elegida, rechazos };
+    rechazosPrevios.push(...rechazos);
+  }
+
+  // 1 · dentro de la categoría del espacio, por nombre o por cualquiera de sus alias. Los alias solo
+  //     valen aquí y en la vía 2: el sitio ya está garantizado (ver cabecera).
   const enCategoria = archivos.filter(f => mencionaAlguno(f, nombres));
   if (enCategoria.length) {
     const { elegida, rechazos } = await primeraValida(enCategoria, 'Categoría de Commons del espacio', false);
@@ -226,14 +289,30 @@ async function resuelvePoi(poi, { archivos, contexto, alias }) {
       // Que la coincidencia haya salido por alias y no por el nombre del POI se dice en el informe:
       // es lo que hay que mirar si alguna vez una foto acaba en el POI equivocado.
       if (!mencionaSitio(elegida.file, poi.name)) elegida.via += ' (por alias)';
-      return { elegida, rechazos };
+      return { elegida, rechazos: [...rechazosPrevios, ...rechazos] };
     }
-    if (rechazos.length) return { elegida: null, rechazos };
+    rechazosPrevios.push(...rechazos);
   }
-  // 2 · buscador, con el espacio o el municipio como contexto. Siempre a revisar.
+
+  // 2 · geosearch alrededor del POI, exigiendo también la mención por nombre: las coordenadas dan el
+  //     sitio y el nombre el sujeto, que es la misma pareja de garantías que la vía 1.
+  const cerca = (await geosearchDelPoi(poi.coordinates, OPT.radio))
+    .filter(h => !archivos.includes(h.file) && mencionaAlguno(h.file, nombres));
+  if (cerca.length) {
+    const { elegida, rechazos } = await primeraValida(cerca.map(h => h.file), 'Geosearch de Commons', false);
+    if (elegida) {
+      const hit = cerca.find(h => h.file === elegida.file);
+      elegida.via += ` (a ${hit.dist} m)`;
+      if (!mencionaSitio(elegida.file, poi.name)) elegida.via += ' (por alias)';
+      return { elegida, rechazos: [...rechazosPrevios, ...rechazos] };
+    }
+    rechazosPrevios.push(...rechazos);
+  }
+
+  // 3 · buscador, con el espacio o el municipio como contexto. Siempre a revisar.
   const encontrados = await buscaEnCommons(poi.name, contexto);
   const { elegida, rechazos } = await primeraValida(encontrados, 'Búsqueda en Commons', true);
-  return { elegida, rechazos };
+  return { elegida, rechazos: [...rechazosPrevios, ...rechazos] };
 }
 
 // --- Recorrido -----------------------------------------------------------------------------------------
@@ -258,7 +337,9 @@ async function procesaParque(entry, informe) {
 
     const alias = aliasDe(entry.slug, poi.id);
     if (alias.length) console.log(dim('    alias: ' + alias.join(' · ')));
-    const res = await resuelvePoi(poi, { archivos, contexto, alias });
+    const elegidaAMano = fotoElegida(entry.slug, poi.id);
+    if (elegidaAMano) console.log(dim('    elegida a mano: ' + elegidaAMano));
+    const res = await resuelvePoi(poi, { archivos, contexto, alias, elegidaAMano });
     for (const r of (res.rechazos || [])) {
       informe.push({ parque: entry.slug, poi: poi.name, estado: 'descartada', detalle: r.file + ' — ' + r.motivo });
     }
@@ -339,4 +420,4 @@ if (require.main === module) {
 
 // Las tres decisiones que no dependen de la red y sí de acertar: qué licencia entra, cuándo un
 // nombre de archivo habla del sitio, y cómo queda el crédito dentro de `source`.
-module.exports = { licenciaLibre, mencionaSitio, mencionaAlguno, aliasDe, conCredito };
+module.exports = { licenciaLibre, mencionaSitio, mencionaAlguno, aliasDe, fotoElegida, metros, conCredito };

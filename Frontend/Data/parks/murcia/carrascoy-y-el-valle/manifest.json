@@ -9,13 +9,14 @@
     "parque": "Data/parks/murcia/carrascoy-y-el-valle/geo/parque.geojson",
     "lic": "Data/parks/murcia/carrascoy-y-el-valle/geo/lic.geojson",
     "zepa": "Data/parks/murcia/carrascoy-y-el-valle/geo/zepa.geojson",
-    "trails": "Data/parks/murcia/carrascoy-y-el-valle/geo/trails.geojson"
+    "trails": "Data/parks/murcia/carrascoy-y-el-valle/geo/trails.geojson",
+    "habitats": "Data/parks/murcia/carrascoy-y-el-valle/geo/habitats.geojson"
   },
   "images": [],
   "audio": [],
   "counts": {
     "species": 0,
-    "habitats": 0,
+    "habitats": 15,
     "pointsOfInterest": 0,
     "images": 0,
     "assetBytes": 0

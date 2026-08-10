@@ -1,0 +1,13 @@
+{
+  "_comment": "Archivo de Commons elegido a mano para un punto de interés. Lo lee Tools/catalogo-nacional/poi-images.js como vía 0, antes que la categoría. Formato: <slug del espacio> → <id del POI> → \"Nombre del archivo.jpg\". Un POI que no figure aquí se resuelve por la cadena normal, que es el caso habitual.",
+  "_porque": "Cuando hay varias fotos válidas del mismo sitio, el script se queda con la primera por orden alfabético del nombre del archivo, y ese orden no tiene nada que ver con cuál ilustra mejor el sitio. Cuál es la buena es un juicio visual que una heurística sobre nombres no puede hacer. Esto lo deja anotado en el repositorio, versionado y revisable, en vez de a mano en el park.json, que es justo lo que no se debe tocar.",
+  "_no_relaja_nada": "El archivo elegido pasa por las mismas dos comprobaciones que cualquier otro: licencia de lista blanca (CC0, dominio público, CC BY, CC BY-SA) y carga real de la URL. Si no las pasa, se anota como descartado y la cadena sigue como si no estuviera anotado.",
+
+  "cuatro-calas": {
+    "_comment": "Elegidas mirando las 40 fotos de la categoría del espacio una a una el 2026-08-09. Las que salían por orden alfabético eran correctas de sitio pero malas de imagen: cielos grises, primeros planos de arena y de algas.",
+    "vulcanismo-de-la-carolina": "Entrada a la Cala La Carolina.jpg",
+    "playa-de-los-cocedores": "Cala Cerrada o de los Cocederos, en el Paraje Protegido Las Cuatro Calas.JPG",
+    "conglomerados-de-cuatro-calas": "Cuatro Calas Murcia.jpg",
+    "playa-de-calarreona": "Calarreona, lado sur, en Las Cuatro Calas.JPG"
+  }
+}

@@ -52,9 +52,18 @@ const esRangoEspecifico = (rank) => rank === 'SPECIES' || rank === 'SUBSPECIES' 
 /**
  * Una página de `occurrence/search`. `params` se pasa tal cual a la API (decimalLatitude,
  * decimalLongitude, hasCoordinate, mediaType, country…).
+ *
+ * Reintentos por encima del valor por defecto de `http.js` (2, ~1,8 s de margen) porque aquí no se
+ * pierde una petición: se pierde la descarga entera. Barrer el bbox de un parque son cientos de
+ * páginas y la caché no se escribe hasta el final, así que un `503 Backend fetch failed` de GBIF a
+ * media pasada tira diez minutos de trabajo — que es justo lo que ocurrió con Carrascoy y El Valle
+ * en la página 105 de 134. Cinco intentos con espera creciente dan ~9 s acumulados, que es lo que
+ * suele durar el bache y sigue siendo cortés con un servicio público.
  */
 function searchOccurrences(params, opts = {}) {
-  return getJson(HOST, `/v1/occurrence/search?${qs(params)}`, { agent: 'gbif', timeoutMs: 45000, ...opts });
+  return getJson(HOST, `/v1/occurrence/search?${qs(params)}`, {
+    agent: 'gbif', timeoutMs: 45000, retries: 5, retryDelayMs: 600, ...opts,
+  });
 }
 
 module.exports = { HOST, PAGE, qs, matchName, esRangoEspecifico, searchOccurrences };

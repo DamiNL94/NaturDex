@@ -238,6 +238,7 @@ menos rango que la que sostiene el hecho.
 | # | Fuente | Qué aporta | ¿Trae coordenada? | Alimenta |
 |---|---|---|---|---|
 | 1 | **PORN / PRUG del espacio** (anexos de valores, documento previo, memoria informativa) | La lista *autorizada* de lo que el propio plan considera valioso | Casi nunca: nombra el paraje | Geológico, Paleontológico, Paisajístico, Natural |
+| 1b | **Zonificación del PORN/PRUG en el geoportal del IMIDA** (capas 31-39 de `PROYECTOS/OISMA`, solo Murcia) | Las zonas del plan con su categoría y su nombre oficial, y **con polígono** | **Sí**, pero de la zona, no del elemento | Sitúa dónde el plan manda a la gente (uso público) y dónde no |
 | 2 | **IELIG** — Inventario Español de Lugares de Interés Geológico (IGME) | LIG con código, nombre oficial e interés declarado (geomorfológico, estratigráfico, neotectónico…) | **Sí** | Geológico, Paleontológico |
 | 3 | **Registro de BIC y patrimonio** (Ministerio de Cultura + catálogo de la comunidad) | Torres, ermitas, castillos, aldeas, con su declaración | A veces solo el municipio | Cultural, Religioso, Arqueológico |
 | 4 | **OpenStreetMap vía Overpass** (ODbL) | Topónimos y accesos, con la posición real del nodo | **Sí, exacta** | Los ocho tipos |
@@ -528,15 +529,26 @@ ahora que en el parque número treinta:
 4. **Catálogos regionales de especies amenazadas**: cada comunidad tiene el suyo. Hace falta una
    tabla comunidad → norma para que el campo de estado autonómico no sea un texto libre distinto
    en cada parque.
-5. **Las fotos de los POIs de Cuatro Calas y Sierra Espuña están sin resolver** (17 POIs, todos con
-   `image: null`). No es falta de herramienta —`poi-images.js` existe y hace el trabajo— sino que las
-   dos sesiones que lo han intentado (2026-08-07 y 2026-08-08) corrían en entornos **sin salida a
-   `commons.wikimedia.org`**. Es la primera deuda que se salda sola en cuanto se ejecute desde una
-   máquina con red; los comandos exactos están en `out/poi-fotos-candidatas.md`.
+5. ~~**Las fotos de los POIs de Cuatro Calas y Sierra Espuña están sin resolver**~~ — **saldada el
+   2026-08-09**: ejecutado `poi-images.js` desde una máquina con Node y salida a Commons, quedan
+   **10 POIs con foto y 7 sin material libre** (hueco cerrado, no pendiente), y
+   `Database/poi-imagenes.sql` está **aplicado y verificado** contra la BD y por la API. Se llevó por
+   delante un fallo del propio script —`resuelvePoi` devolvía la candidata aplanada y quien la recibe
+   lee `res.elegida`, así que **cuando encontraba foto decía que no había ninguna**—, que ninguna de
+   las tres sesiones anteriores pudo ver porque murieron antes de llegar ahí. Ver ESTADO.md,
+   sesiones del 2026-08-09.
 6. **El IELIG y el registro de BIC se consultan a mano.** `build-park-pois.js` automatiza la vía 4 de
    la cascada (OSM) pero no las vías 2 y 3, que son las que dan los POIs geológicos y patrimoniales
    —los mejores del piloto—. Mientras siga así, la calidad del N3 de un espacio depende de la
    paciencia de quien lo haga.
+8. **El geoportal del IMIDA sirve 62 capas y el rollout usa 5.** El pipeline solo toca las capas 1-5
+   (una por figura de protección) de `PROYECTOS/OISMA/MapServer`. Sin explotar quedan, entre otras,
+   la **zonificación de seis PORN/PRUG** (capas 31-39, que resuelven la vía 1 de la cascada sin pasar
+   por el BORM), **Mojones** (48), **Montes públicos** (49), **Vías Pecuarias** (50), **Valores
+   Naturales** y **Hábitats terrestres** (51-52) y las **Áreas de Protección de la Fauna Silvestre**
+   (57-58). Es la deuda con mejor relación entre lo que cuesta y lo que da, y **solo sirve para
+   Murcia**: cada comunidad tendrá su propio geoportal y habrá que repetir el hallazgo. Descubierto
+   el 2026-08-09, ver ESTADO.md §"2026-08-09 (d)".
 7. **El pipeline de POIs no escribe en la BD por sí solo**, igual que el de hábitats (ver ESTADO.md,
    sesión del 2026-08-01): `poi-images.js` genera el SQL con `--sql`, pero aplicarlo es manual y el
    alta de los POIs no genera ninguno. Con dos parques se lleva; con doscientos, no.

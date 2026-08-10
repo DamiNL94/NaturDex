@@ -494,7 +494,7 @@
         37.374485,
         -1.627156
       ],
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Afloramientos_rocosos_en_la_Cala_La_Carolina.JPG?width=1280",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Entrada_a_la_Cala_La_Carolina.jpg?width=1280",
       "source": "Inventario Español de Lugares de Interés Geológico (IELIG), IGME — LIG BE006 «Vulcanismo de La Carolina». La coordenada es la del propio punto del inventario; Wikimedia Commons (foto: Mabelcalabuig, CC BY-SA 3.0 es)",
       "approx": false,
       "audio": null,
@@ -509,8 +509,8 @@
         37.374916,
         -1.629774
       ],
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Antiguo_deposito_de_esparto_en_la_Cala_de_los_Cocederos.JPG?width=1280",
-      "source": "Posición: OpenStreetMap way/1459077450 (ODbL). Uso espartero documentado en Wikimedia Commons («Antiguo deposito de esparto en la Cala de los Cocederos», «Depositos excavados en el acantilado, Cala de los Cocederos»); pendiente de contrastar con fuente documental. El IELIG y Commons escriben «Cocederos»; OpenStreetMap, «Cocedores».; Wikimedia Commons (foto: Mabelcalabuig, CC BY-SA 3.0 es)",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Cerrada_o_de_los_Cocederos%2C_en_el_Paraje_Protegido_Las_Cuatro_Calas.JPG?width=1280",
+      "source": "Posición: OpenStreetMap way/1459077450 (ODbL). Uso espartero documentado en Wikimedia Commons («Antiguo deposito de esparto en la Cala de los Cocederos», «Depositos excavados en el acantilado, Cala de los Cocederos»); pendiente de contrastar con fuente documental. El IELIG y Commons escriben «Cocederos»; OpenStreetMap, «Cocedores»; Wikimedia Commons (foto: Mabelcalabuig, CC BY-SA 3.0 es)",
       "approx": false,
       "audio": null,
       "audioTranscript": null
@@ -524,8 +524,8 @@
         37.377857,
         -1.628044
       ],
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cuatro_calas_aguilas_vista_desde_carretera.jpg?width=1280",
-      "source": "Inventario Español de Lugares de Interés Geológico (IELIG), IGME — LIG BE005, cuya denominación oficial es «Playa de Cuatro Calas»; aquí se le da otro nombre para no confundirlo con el del propio espacio protegido. approx: el punto del inventario representa el conjunto del tramo costero, no un afloramiento puntual; Wikimedia Commons (foto: Edumartinez89, CC BY-SA 3.0 es)",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cuatro_Calas_Murcia.jpg?width=1280",
+      "source": "Inventario Español de Lugares de Interés Geológico (IELIG), IGME — LIG BE005, cuya denominación oficial es «Playa de Cuatro Calas»; aquí se le da otro nombre para no confundirlo con el del propio espacio protegido. approx: el punto del inventario representa el conjunto del tramo costero, no un afloramiento puntual; Wikimedia Commons (foto: Mynomadicbackpack, CC BY-SA 4.0)",
       "approx": true,
       "audio": null,
       "audioTranscript": null
@@ -539,7 +539,7 @@
         37.383513,
         -1.621103
       ],
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Calarreona%2C_afloramientos_rocosos.Las_Cuatro_Calas.JPG?width=1280",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Calarreona%2C_lado_sur%2C_en_Las_Cuatro_Calas.JPG?width=1280",
       "source": "Posición: OpenStreetMap (ODbL). Sendero SL-MU 18 homologado por la FMRM. Su recorrido no aparece dibujado en el mapa: el sendero está señalizado sobre el terreno, pero no cartografiado en OpenStreetMap, que es de donde sale la capa de senderos; Wikimedia Commons (foto: Mabelcalabuig, CC BY-SA 3.0 es)",
       "approx": false,
       "audio": null,
@@ -1623,7 +1623,7 @@
     {
       "id": 26,
       "commonName": "Romero",
-      "scientificName": "Salvia rosmarinus",
+      "scientificName": "Rosmarinus officinalis",
       "kingdom": "flora",
       "group": "Mata aromática",
       "habitat": "Matorral seco y soleado sobre suelos calizos y pedregosos",
@@ -1640,7 +1640,7 @@
       "coordinates": null,
       "rarityScore": 1,
       "featured": false,
-      "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 4 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
+      "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 4 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO). Nombre aceptado en EIDOS; Salvia rosmarinus es sinónimo.",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2822,7 +2822,7 @@
     {
       "id": 54,
       "commonName": "Acebuche",
-      "scientificName": "Olea europaea var. sylvestris",
+      "scientificName": "Olea europaea subsp. europaea",
       "kingdom": "flora",
       "group": "Árbol",
       "habitat": "Matorral alto, laderas secas y barrancos del piso más cálido",
@@ -2839,7 +2839,7 @@
       "coordinates": null,
       "rarityScore": 2,
       "featured": false,
-      "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 2 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO). La cita de GBIF figura como Olea europaea.",
+      "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 2 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO). La cita de GBIF figura como Olea europaea. Nombre aceptado en EIDOS; Olea europaea var. sylvestris es sinónimo.",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",

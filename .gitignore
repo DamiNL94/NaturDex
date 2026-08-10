@@ -30,3 +30,10 @@ Tools/bin/
 Tools/catalogo-nacional/fuentes/miteco-ide/
 Tools/catalogo-nacional/fuentes/habitats-provinciales/
 Tools/catalogo-nacional/fuentes/iepnb/
+# Caché de ocurrencias de GBIF por parque (gbif-habitats.js). Son megas de dato descargable y
+# reproducible, y además puede quedar a medias (`parcial: true`) tras un corte del servicio.
+gbif-cache-*.json
+# Atlas de Hábitats 2005 del MITECO, descargado por provincia (shapefile + tabla de datos).
+# Las URLs de las 52 provincias están en fuentes/atlas-habitats-2005-provincias.json, que SÍ se
+# versiona: para rehacer la descarga basta ese fichero.
+Tools/catalogo-nacional/fuentes/atlas-2005/

@@ -149,19 +149,6 @@ Camina por el suelo clavando el pico largo y curvo',
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Upupa epops';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Acebuche',
-  s.primary_habitat = 'Matorral alto, laderas secas y barrancos del piso más cálido',
-  s.description = 'El acebuche es el olivo silvestre: mismo árbol, sin siglos de selección. Tiene las hojas más pequeñas y duras, las ramas jóvenes a menudo espinosas y aceitunas diminutas. Forma matorrales altos y es el árbol característico de las laderas cálidas mediterráneas.',
-  s.identification_tips = 'Hojas pequeñas, verdes arriba y plateadas por debajo
-Ramillas jóvenes rígidas y a veces espinosas
-Aceitunas muy pequeñas, de poco más de un centímetro',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ullastre_vell.JPG?width=1280',
-  s.image_attribution = 'Antoni Salvà (CC BY-SA 4.0) · Wikimedia Commons',
-  s.rarity_score = 2
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Olea europaea var. sylvestris';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Acelga marina',
   s.primary_habitat = 'Playas de cantos, pie de acantilado y suelos removidos con sal cerca del mar',
   s.description = 'Antepasada silvestre de la acelga y la remolacha, con hojas gruesas, lustrosas y algo carnosas que aguantan la sal y el viento. Crece donde el mar deja restos orgánicos acumulados. Sus flores son verdosas y pasan desapercibidas, dispuestas en largas espigas.',
@@ -1488,19 +1475,6 @@ Sin el olor a romero, aunque se le parezca de lejos',
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Cistus clusii';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Romero',
-  s.primary_habitat = 'Matorral seco y soleado sobre suelos calizos y pedregosos',
-  s.description = 'Arbusto aromático de hojas estrechas como agujas, verde oscuro por el haz y blanquecinas por el envés, con los bordes enrollados hacia abajo. Florece casi todo el año en azul pálido, y en pleno invierno es una de las pocas fuentes de néctar del matorral.',
-  s.identification_tips = 'Hojas como agujas, blancas por debajo
-Olor inconfundible al frotar entre los dedos
-Flores azul claro repartidas por las ramas casi todo el año',
-  s.seasonality = 'Todo el año, con máximo de floración en invierno y primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rosemary_in_bloom.JPG?width=1280',
-  s.image_attribution = 'Margalob (CC BY-SA 4.0) · Wikimedia Commons',
-  s.rarity_score = 1
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Salvia rosmarinus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Rugueta de mar',
   s.primary_habitat = 'Arena suelta de la primera línea de playa, sobre restos orgánicos del mar',
   s.description = 'Crucífera anual y carnosa que coloniza la arena batida donde el mar deposita algas. Sus hojas son gruesas y recortadas y sus flores, lilas o blancas, tienen los cuatro pétalos en cruz de la familia. El fruto se parte en dos: una mitad queda en la planta y la otra flota y viaja por mar.',
@@ -2606,19 +2580,6 @@ Hojas acintadas y de verde azulado, saliendo de la arena',
 WHERE p.slug = 'cuatro-calas' AND s.scientific_name = 'Pancratium maritimum';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Romero',
-  s.primary_habitat = 'Matorral seco y soleado sobre suelos calizos y pedregosos',
-  s.description = 'Arbusto aromático de hojas estrechas como agujas, verde oscuro por el haz y blanquecinas por el envés, con los bordes enrollados hacia abajo. Florece casi todo el año en azul pálido, y en pleno invierno es una de las pocas fuentes de néctar del matorral.',
-  s.identification_tips = 'Hojas como agujas, blancas por debajo
-Olor inconfundible al frotar entre los dedos
-Flores azul claro repartidas por las ramas casi todo el año',
-  s.seasonality = 'Todo el año, con máximo de floración en invierno y primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rosemary_in_bloom.JPG?width=1280',
-  s.image_attribution = 'Margalob (CC BY-SA 4.0) · Wikimedia Commons',
-  s.rarity_score = 1
-WHERE p.slug = 'cuatro-calas' AND s.scientific_name = 'Salvia rosmarinus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Saladilla anual',
   s.primary_habitat = 'Saladares, arenas litorales y suelos salinos secos',
   s.description = 'Saladilla anual —a diferencia de la mayoría de sus parientes, que son perennes— con una roseta de hojas lobuladas pegada al suelo y tallos alados que rematan en espigas de flores azuladas o violáceas. Sus flores conservan el color al secarse, un truco común en el género.',
@@ -2968,19 +2929,6 @@ Espigas terminales de flores pequeñas y amarillentas',
   s.image_attribution = 'Gideon Pisanty (Gidip) גדעון פיזנטי (CC BY 3.0) · Wikimedia Commons',
   s.rarity_score = 2
 WHERE p.slug = 'cuatro-calas' AND s.scientific_name = 'Crucianella maritima';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Acebuche',
-  s.primary_habitat = 'Matorral alto, laderas secas y barrancos del piso más cálido',
-  s.description = 'El acebuche es el olivo silvestre: mismo árbol, sin siglos de selección. Tiene las hojas más pequeñas y duras, las ramas jóvenes a menudo espinosas y aceitunas diminutas. Forma matorrales altos y es el árbol característico de las laderas cálidas mediterráneas.',
-  s.identification_tips = 'Hojas pequeñas, verdes arriba y plateadas por debajo
-Ramillas jóvenes rígidas y a veces espinosas
-Aceitunas muy pequeñas, de poco más de un centímetro',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ullastre_vell.JPG?width=1280',
-  s.image_attribution = 'Antoni Salvà (CC BY-SA 4.0) · Wikimedia Commons',
-  s.rarity_score = 2
-WHERE p.slug = 'cuatro-calas' AND s.scientific_name = 'Olea europaea var. sylvestris';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Albaida',
@@ -3633,19 +3581,6 @@ Barros y árboles con el tronco embarrado a media altura',
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Sus scrofa';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Romero',
-  s.primary_habitat = 'Matorral seco y soleado sobre suelos calizos y pedregosos',
-  s.description = 'Arbusto aromático de hojas estrechas como agujas, verde oscuro por el haz y blanquecinas por el envés, con los bordes enrollados hacia abajo. Florece casi todo el año en azul pálido, y en pleno invierno es una de las pocas fuentes de néctar del matorral.',
-  s.identification_tips = 'Hojas como agujas, blancas por debajo
-Olor inconfundible al frotar entre los dedos
-Flores azul claro repartidas por las ramas casi todo el año',
-  s.seasonality = 'Todo el año, con máximo de floración en invierno y primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rosemary_in_bloom.JPG?width=1280',
-  s.image_attribution = 'Margalob (CC BY-SA 4.0) · Wikimedia Commons',
-  s.rarity_score = 1
-WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Salvia rosmarinus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Zorro',
   s.primary_habitat = 'Prácticamente cualquier ambiente: bosque, matorral, cultivos y periferias urbanas',
   s.description = 'El carnívoro silvestre más adaptable y extendido: vive desde la alta montaña hasta el borde de las ciudades. Es omnívoro y oportunista, lo que explica su éxito. Se reconoce por la cola larga y espesa —la «hopa»— rematada casi siempre en blanco.',
@@ -3826,19 +3761,6 @@ Mata pequeña, de menos de medio metro',
   s.image_attribution = 'Alejandro Rodríguez Zapata (CC BY 4.0) · GBIF/iNaturalist',
   s.rarity_score = 4
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Eragrostis papposa';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Acebuche',
-  s.primary_habitat = 'Matorral alto, laderas secas y barrancos del piso más cálido',
-  s.description = 'El acebuche es el olivo silvestre: mismo árbol, sin siglos de selección. Tiene las hojas más pequeñas y duras, las ramas jóvenes a menudo espinosas y aceitunas diminutas. Forma matorrales altos y es el árbol característico de las laderas cálidas mediterráneas.',
-  s.identification_tips = 'Hojas pequeñas, verdes arriba y plateadas por debajo
-Ramillas jóvenes rígidas y a veces espinosas
-Aceitunas muy pequeñas, de poco más de un centímetro',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ullastre_vell.JPG?width=1280',
-  s.image_attribution = 'Antoni Salvà (CC BY-SA 4.0) · Wikimedia Commons',
-  s.rarity_score = 2
-WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Olea europaea var. sylvestris';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Orejilla de roca',
@@ -4088,19 +4010,6 @@ Tallos pegajosos al tacto, con pelos glandulosos',
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Ononis ornithopodioides';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Jara blanca',
-  s.primary_habitat = 'Matorral y jarales sobre suelos secos y soleados de montaña media',
-  s.description = 'Arbusto de hojas anchas, ovaladas y cubiertas de una pelusa plateada que le da un aspecto casi blanco. En primavera se llena de flores amarillas de cinco pétalos con una mancha oscura en la base. Es un endemismo del sur y sureste peninsular.',
-  s.identification_tips = 'Hojas anchas y plateadas, no estrechas como las jaras
-Flores amarillas con una manchita oscura en la base del pétalo
-Porte erguido, más alto que las jarillas comunes',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Halimium_commutatum1.jpg?width=1280',
-  s.image_attribution = 'Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons',
-  s.rarity_score = 1
-WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Halimium atriplicifolium';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Rascavieja',
   s.primary_habitat = 'Matorral seco y laderas soleadas sobre suelos pedregosos',
   s.description = 'Leguminosa arbustiva y pegajosa, con hojas de tres foliolos y racimos densos y erguidos de flores de un amarillo intenso. Es un endemismo del sur peninsular y del norte de África, y una de las plantas más vistosas del matorral en plena floración.',
@@ -4125,19 +4034,6 @@ En roca seca y soleada, no en umbrías húmedas',
   s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
   s.rarity_score = 1
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Cosentinia vellea';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Clujía',
-  s.primary_habitat = 'Roquedos, laderas pedregosas y matorral seco sobre calizas',
-  s.description = 'Umbelífera leñosa, algo insólita en una familia de hierbas, con hojas estrechas, coriáceas y de un verde azulado. Sus umbelas de flores amarillas se abren en pleno verano. Desprende un olor resinoso característico al romper una rama.',
-  s.identification_tips = 'Umbelífera con base leñosa, no herbácea
-Hojas estrechas, duras y de verde azulado
-Umbelas amarillas en pleno verano',
-  s.seasonality = 'Verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/B._gibraltarium-1.JPG?width=1280',
-  s.image_attribution = 'Philmarin (CC BY-SA 3.0) · Wikimedia Commons',
-  s.rarity_score = 1
-WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Bupleurum gibraltaricum';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Botón azul',
@@ -4192,32 +4088,6 @@ Hojas rígidas con el nervio central pálido y marcado',
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Imperata cylindrica';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Saxifraga almeriensis',
-  s.primary_habitat = 'Grietas y repisas umbrías de roquedos calizos de montaña',
-  s.description = 'Saxífraga rupícola que forma pequeñas rosetas de hojas carnosas y algo divididas encajadas en la roca, con tallos finos rematados en flores blancas de cinco pétalos. Es un endemismo del sureste ibérico restringido a unas pocas sierras.',
-  s.identification_tips = 'Rosetas pequeñas y carnosas metidas en la fisura
-Flores blancas de cinco pétalos sobre tallos finos
-Casi siempre en paredes umbrías y frescas',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/111644731/original.jpeg',
-  s.image_attribution = 'faluke (CC BY-NC 4.0) · GBIF/iNaturalist',
-  s.rarity_score = 2
-WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Saxifraga almeriensis';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'erguen',
-  s.primary_habitat = 'Matorral y laderas soleadas sobre suelos secos y pedregosos',
-  s.description = 'Arbusto espinoso y muy ramificado que en primavera se cubre por completo de flores amarillas. Sus ramas terminan en espinas fuertes y sus legumbres van cubiertas de pelos sedosos. Forma masas impenetrables que dan refugio a aves de matorral.',
-  s.identification_tips = 'Ramas rematadas en espinas rígidas y punzantes
-Floración amarilla masiva que cubre toda la mata
-Legumbres cubiertas de pelos blancos y sedosos',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Calycotome_villosa1.jpg?width=1280',
-  s.image_attribution = 'Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons',
-  s.rarity_score = 1
-WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Calicotome villosa';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'campanilla espigada',
   s.primary_habitat = 'Pastizales secos, ribazos y claros de matorral sobre suelos margosos',
   s.description = 'Correhuela de porte bajo y no trepadora, con hojas estrechas cubiertas de pelos sedosos que las hacen brillar con una pátina plateada. Sus flores son embudos rosados o blanquecinos que se abren por la mañana y se cierran con el calor.',
@@ -4229,19 +4099,6 @@ Flores en embudo, rosadas o casi blancas',
   s.image_attribution = 'Ghislain118 https://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons',
   s.rarity_score = 1
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Convolvulus lineatus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'campanillas de cantil',
-  s.primary_habitat = 'Fisuras de roquedos, taludes y pedregales de montaña',
-  s.description = 'Campánula de tallos finos y flexibles con flores azul violeta en forma de campana colgante. Crece en grietas de roca y en pedregales, donde sus raíces alcanzan la humedad que retiene la piedra. Las hojas de la base tienen forma redondeada y las del tallo son estrechas.',
-  s.identification_tips = 'Flores azuladas en campana, colgando del tallo
-Hojas basales redondeadas, muy distintas de las del tallo
-En grietas y repisas de roca, a menudo colgando',
-  s.seasonality = 'Primavera y verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Campanula_hispanica_1.jpg?width=1280',
-  s.image_attribution = 'Ghislain118 http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons',
-  s.rarity_score = 2
-WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Campanula hispanica';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Pampajarito',
@@ -4359,19 +4216,6 @@ Brácteas anchas y algo punzantes bajo cada verticilo',
   s.image_attribution = NULL,
   s.rarity_score = 1
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Sideritis bourgaeana';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Arrui',
-  s.primary_habitat = 'Laderas escarpadas, roquedos y matorral de montaña seca',
-  s.description = 'Bóvido norteafricano introducido en España en los años cincuenta con fines cinegéticos, hoy asilvestrado en varias sierras del sureste. Se reconoce por la melena de pelos largos que cuelga del cuello y las patas delanteras, y por sus cuernos gruesos y arqueados en ambos sexos.',
-  s.identification_tips = 'Melena de pelo largo colgando del cuello y las patas delanteras
-Cuernos gruesos y curvados también en las hembras
-Pelaje uniforme de color arena, sin manchas',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Barbary_Sheep_Tennoji.jpg?width=1280',
-  s.image_attribution = 'Kuribo (CC BY-SA 3.0) · Wikimedia Commons',
-  s.rarity_score = 4
-WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Ammotragus lervia';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Jara blanca',
@@ -4777,19 +4621,6 @@ Legumbres articuladas, como collares de cuentas',
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Coronilla juncea';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Tabaco moruno',
-  s.primary_habitat = 'Ramblas, escombreras, cunetas y suelos removidos de clima cálido',
-  s.description = 'Arbusto de crecimiento rápido, originario de Sudamérica y hoy naturalizado en el sureste ibérico, con hojas ovaladas de un verde azulado y flores tubulares amarillas. Coloniza terrenos alterados y es una planta exótica invasora que desplaza a la vegetación de rambla.',
-  s.identification_tips = 'Hojas de verde azulado con peciolo largo
-Flores tubulares amarillas y colgantes
-Casi siempre en escombreras, cunetas y ramblas alteradas',
-  s.seasonality = 'Casi todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Charuteira_(Nicotiana_glauca)%2C_planta_t%C3%B3xica_parente_do_tabaco_(Bag%C3%A9-RS).jpg?width=1280',
-  s.image_attribution = 'Gabriel Collares (CC BY 4.0) · Wikimedia Commons',
-  s.rarity_score = 2
-WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Nicotiana glauca';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Ammoides',
   s.primary_habitat = 'Pastizales anuales, claros de matorral y suelos removidos',
   s.description = 'Umbelífera anual y menuda, con hojas divididas en segmentos filiformes y pequeñas umbelas de flores blancas. Desprende un olor aromático fuerte al estrujarla. Forma parte de las comunidades efímeras que aparecen tras las lluvias de primavera.',
@@ -4827,19 +4658,6 @@ Crece encajada en fisuras, colgando del cantil',
   s.image_attribution = 'Fco. Javier López Espino (CC BY-NC-ND 4.0) · observation.org / GBIF',
   s.rarity_score = 2
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Athamanta hispanica';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Ajo silvestre',
-  s.primary_habitat = 'Pastizales secos, ribazos y claros de matorral',
-  s.description = 'Ajo silvestre de umbela laxa y colgante, con flores acampanadas de tonos rosados o pardo claro sobre pedicelos largos y desiguales. Las brácteas que envuelven la inflorescencia acaban en dos puntas largas como cuernos.',
-  s.identification_tips = 'Umbela laxa y desmadejada, con flores colgantes
-Dos brácteas largas como cuernos bajo la umbela
-Olor a ajo al estrujar las hojas',
-  s.seasonality = 'Verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Laguna_de_San_Juan_20100617_3431.jpg?width=1280',
-  s.image_attribution = 'Alberto Salguero (CC BY-SA 4.0) · Wikimedia Commons',
-  s.rarity_score = 1
-WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Allium paniculatum';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Clavellina',
@@ -5831,16 +5649,16 @@ WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Prunella collaris';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Curruca rabilarga',
-  s.primary_habitat = 'Matorral bajo y denso, jarales, brezales y tomillares',
-  s.description = 'Curruca pequeña, oscura y de cola muy larga que suele llevar levantada. El macho tiene el vientre vinoso y el ojo rojo rodeado de un anillo del mismo color. Es muy inquieta y rara vez se deja ver más de unos segundos antes de volver a hundirse en la mata.',
-  s.identification_tips = 'Cola larga y erguida, casi vertical al posarse
-Ojo y anillo ocular rojos
-Vientre de color vinoso, con motitas blancas en la garganta',
+  s.primary_habitat = 'Matorral litoral y laderas secas',
+  s.description = 'Pequeña ave residente de matorral mediterráneo denso, reclasificada taxonómicamente de Sylvia undata a Curruca undata, igual que la curruca cabecinegra.',
+  s.identification_tips = 'Cola larga que mueve constantemente
+Ojo y anillo ocular rojizos
+Ligada a matorral denso y bajo',
   s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Dartford_Warbler_Provencegrasm%C3%BCcke_(Sylvia_undata)_by_J._Dietrich.jpg?width=1280',
-  s.image_attribution = 'J. Dietrich (CC BY-SA 3.0) · Wikimedia Commons',
-  s.rarity_score = 1
-WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Sylvia undata';
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_pitchou_Ichkeul_NP.jpg?width=1280',
+  s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Curruca undata';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Mirlo capiblanco',

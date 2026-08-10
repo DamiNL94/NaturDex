@@ -17,7 +17,386 @@
     "summary": "La sierra que cierra la huerta de Murcia por el sur: pinares, carrascales y crestas de roca como la Cresta del Gallo, con miradores sobre la ciudad.",
     "boundaryNote": "Límite oficial servido en geo/parque.geojson, descargado del geoportal del IMIDA/CARM (servicio PROYECTOS/OISMA, capa de Parque Regional, registros con Caracter «Firme»), identificador interno ENP000002. Código ENP oficial ES620008, superficie oficial 16.685,8 ha según el Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Geometría en WGS84, sin generalizar (2100 vértices, superficie resultante 16.717,3 ha, desviación del 0,19 %). Sustituye a la delimitación de la capa ENP nacional del MITECO, que es un producto generalizado. Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM. Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico» (código y superficie oficiales) e IMIDA/CARM (geometría)."
   },
-  "habitats": [],
+  "habitats": [
+    {
+      "id": "matorrales-termomediterraneos-y-5330",
+      "code": "5330",
+      "name": "Matorrales termomediterráneos y pre-estépicos",
+      "type": "Matorral",
+      "priority": false,
+      "hicSubtipos": [
+        "5330"
+      ],
+      "fitosociologia": [
+        "Chamaeropo humilis-Rhamnetum lycioidis O. Bolòs 1957",
+        "Rhamno lycioidis-Genistetum murcicae Peinado, Alcaraz & Martínez-Parras 1992",
+        "Saturejo canescentis-Cistetum albidi Rivas Goday 1954 corr. Alcaraz, T.E. Díaz, Rivas-Martínez & P. Sánchez 1989",
+        "Teucrio lanigeri-Sideritidetum ibanyezii Rivas Goday in Rivas Goday & Esteve 1968 corr. Alcaraz, T.E. Díaz, Rivas-Martínez & P. Sánchez 1989",
+        "Thymo moroderi-Sideritidion leucanthae O. Bolòs 1957 corr. Alcaraz, T.E. Díaz, Rivas-Martínez & P. Sánchez 1989"
+      ],
+      "description": "El matorral de las zonas más cálidas y secas, allí donde prácticamente no hiela: palmito, espino negro, lentisco, cornicales, bojas, albaidas y esparto sobre laderas pedregosas y llanos soleados. Es un matorral abierto, con suelo desnudo a la vista entre mata y mata, y con muchas especies compartidas con el norte de África. Aguanta sequías de meses y rebrota en cuanto llueve.",
+      "coordinates": [
+        37.853674,
+        -1.249658
+      ],
+      "color": "#daa520",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "pendientes-rocosas-calcicolas-8210",
+      "code": "8210",
+      "name": "Pendientes rocosas calcícolas con vegetación casmofítica",
+      "type": "Roquedos",
+      "priority": false,
+      "hicSubtipos": [
+        "8210"
+      ],
+      "fitosociologia": [
+        "Cosentinio bivalentis-Teucrietum freynii Rigual, Esteve & Rivas Goday 1962 corr. Alcaraz, T.E. Díaz, Rivas-Martínez & P. Sánchez 1989",
+        "Fumano ericoidis-Hypericetum ericoidis O. Bolòs 1957",
+        "Hypericion ericoidis Esteve ex Costa & Peris 1985",
+        "Jasonio glutinosae-Teucrietum thymifolii Rigual, Esteve & Rivas Goday 1963 corr. Alcaraz & De la Torre 1988",
+        "Lafuenteo rotundifoliae-Centaureetum saxicolae Rigual, Esteve & Rivas Goday 1963",
+        "Lapiedro martinezii-Cosentinietum bivalentis Mateo & Figuerola 1987",
+        "Polypodietum serrati Br.-Bl. in Br.-Bl., Roussine & Nègre 1952",
+        "Resedo paui-Sarcocapnetum saetabensis Sánchez Gómez & Alcaráz 1993",
+        "Rhamno borgiae-Teucrietum rivasii Mateo & Figuerola 1987 corr. M.B. Crespo 1993"
+      ],
+      "description": "Paredes y cortados de roca caliza en los que la vegetación no vive sobre el suelo, sino dentro de las fisuras. Son plantas de raíz larguísima y crecimiento lentísimo, agarradas a la grieta, que aprovechan el agua que escurre por la pared. Los roquedos han quedado a salvo del arado y del ganado durante milenios, y por eso concentran una proporción altísima de especies que no existen en ningún otro lugar.",
+      "coordinates": [
+        37.918047,
+        -1.131715
+      ],
+      "color": "#daa520",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "zonas-subestepicas-de-6220",
+      "code": "6220",
+      "name": "Zonas subestépicas de gramíneas y anuales del Thero-Brachypodietea",
+      "type": "Pastos",
+      "priority": true,
+      "hicSubtipos": [
+        "6220"
+      ],
+      "fitosociologia": [
+        "Eryngio ilicifolii-Plantaginetum ovatae Esteve 1973",
+        "Teucrio pseudochamaepityos-Brachypodietum ramosi O. Bolòs 1957"
+      ],
+      "description": "Pastizales secos en los que conviven gramíneas vivaces de mata dura, como el lastón (Brachypodium retusum) o el esparto, con una multitud de plantas anuales diminutas que nacen con las lluvias y se secan antes del verano. En agosto parecen un erial pardo; en abril pueden reunir cuarenta especies distintas en un metro cuadrado. Esa riqueza escondida es la razón de que sea un hábitat prioritario.",
+      "coordinates": [
+        37.852464,
+        -1.250455
+      ],
+      "color": "#66cdaa",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "pastizales-salinos-mediterraneos-1410",
+      "code": "1410",
+      "name": "Pastizales salinos mediterráneos (Juncetalia maritimi)",
+      "type": "Salino",
+      "priority": false,
+      "hicSubtipos": [
+        "1410"
+      ],
+      "fitosociologia": [
+        "Juncetum maritimo-subulati Alcaraz 1984 corr. Alcaraz, P. Sánchez, De la Torre, Ríos & J. Alvarez 1991",
+        "Schoeno nigricantis-Plantaginetum crassifoliae Br.-Bl. in Br.-Bl., Roussine & Nègre 1952"
+      ],
+      "description": "Praderas de juncos y gramíneas sobre suelos salinos que se encharcan en invierno y se resecan en verano, tierra adentro de las marismas y en el borde de saladares y ramblas salobres. La sal se concentra en la superficie al evaporarse el agua, de modo que solo prosperan plantas capaces de bombear agua contra ella. Forman un tapiz denso y verde que contrasta con los suelos desnudos de alrededor.",
+      "coordinates": [
+        37.920619,
+        -1.159191
+      ],
+      "color": "#b8860b",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "galerias-y-matorrales-92D0",
+      "code": "92D0",
+      "name": "Galerías y matorrales ribereños termomediterráneos (Nerio-Tamaricetea)",
+      "type": "Ribera",
+      "priority": false,
+      "hicSubtipos": [
+        "92D0"
+      ],
+      "fitosociologia": [
+        "Agrostio stoloniferae-Tamaricetum canariensis Cirujano 1981",
+        "Rubo ulmifolii-Loniceretum biflorae Alcaraz, Ríos & P. Sánchez 1987",
+        "Rubo ulmifolii-Nerietum oleandri O. Bolòs 1956"
+      ],
+      "description": "La vegetación leñosa de ramblas, arroyos y ríos de caudal irregular, que unos meses llevan agua y otros son un lecho de piedras: adelfares y tarayales. La adelfa (Nerium oleander), de hojas coriáceas y flores rosas, y los tarays (Tamarix), de ramillas finas y flores en espiga, resisten tanto las avenidas violentas como meses de sequía. Toda la adelfa es muy tóxica, incluidas hojas y ramas secas.",
+      "coordinates": [
+        37.883233,
+        -1.232551
+      ],
+      "color": "#2e8b57",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "vegetacion-gipsicola-iberica-1520",
+      "code": "1520",
+      "name": "Vegetación gipsícola ibérica (Gypsophiletalia)",
+      "type": "Matorral",
+      "priority": true,
+      "hicSubtipos": [
+        "1520"
+      ],
+      "fitosociologia": [
+        "Lepidion subulati Bellot & Rivas Goday in Rivas Goday, Borja, Monasterio, Galiano, Rigual & Rivas-Martínez 1957 (estepas yesosas)",
+        "Teucrio verticillati-Thymetum pallentis Bellot, Esteve & Rivas Goday in Rivas Goday & Esteve 1968"
+      ],
+      "description": "Matorral bajo y ralo que crece únicamente sobre yeso, un suelo blanquecino que forma costra y en el que casi ninguna otra planta prospera. Las que lo consiguen están especializadas en ese sustrato y muchas no viven en ningún otro sitio, de modo que cada afloramiento de yeso tiene su propia flora. No se recupera: al roturar o extraer el yeso desaparecen a la vez el suelo y lo que crecía sobre él.",
+      "coordinates": [
+        37.939308,
+        -1.101462
+      ],
+      "color": "#9acd32",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "aguas-oligomesotroficas-calcareas-3140",
+      "code": "3140",
+      "name": "Aguas oligomesotróficas calcáreas con vegetación béntica de Chara spp.",
+      "type": "Acuático",
+      "priority": false,
+      "hicSubtipos": [
+        "3140"
+      ],
+      "fitosociologia": [
+        "Charetum vulgaris Corillion 1957"
+      ],
+      "description": "Fondos de charcas, lagunas y remansos de agua clara y dura, tapizados por praderas sumergidas de unas algas verdes grandes que arraigan en el limo y ramifican en pisos, con aspecto de cola de caballo. Solo prosperan donde el agua es transparente y pobre en nutrientes, así que su presencia es en sí misma una señal de que está limpia. Un vertido de abonos o un enturbiamiento que se prolongue las hacen desaparecer.",
+      "coordinates": [
+        37.920573,
+        -1.159331
+      ],
+      "color": "#9acd32",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "estanques-temporales-mediterraneos-3170",
+      "code": "3170",
+      "name": "Estanques temporales mediterráneos",
+      "type": "Acuático",
+      "priority": true,
+      "hicSubtipos": [
+        "3170"
+      ],
+      "fitosociologia": [
+        "Polypogono maritimi-Centaurietum spicati Alcaraz, P. Sánchez, De la Torre, Ríos & J. Alvarez 1991"
+      ],
+      "description": "Charcas y navajos que se llenan con las lluvias y se secan por completo en verano, a veces en pocas semanas. Ese secado no es un fallo, es parte del hábitat: al no haber peces, pueden criar anfibios y crustáceos diminutos que resisten enterrados como huevo o quiste hasta la siguiente lluvia. La vegetación es de plantas menudas que aprovechan el barro húmedo del fondo cuando el agua se retira.",
+      "coordinates": [
+        37.921654,
+        -1.159927
+      ],
+      "color": "#daa520",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "rios-mediterraneos-de-3280",
+      "code": "3280",
+      "name": "Ríos mediterráneos de caudal permanente del Paspalo-Agrostidion",
+      "type": "Ribera",
+      "priority": false,
+      "hicSubtipos": [
+        "3280"
+      ],
+      "fitosociologia": [
+        "Cyperetum distachyi O. Bolòs & Molinier 1984"
+      ],
+      "description": "Ríos de caudal permanente y corriente lenta, con orillas de limo que quedan al descubierto en verano. Allí se instalan céspedes densos de gramíneas que soportan quedar sumergidas y ser pisoteadas, bajo una cortina de sauces, álamos o tarays. El agua tibia, poco profunda y bien iluminada de estas orillas es donde se concentran los insectos acuáticos y los alevines.",
+      "coordinates": [
+        37.920573,
+        -1.159331
+      ],
+      "color": "#4f7942",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "prados-humedos-mediterraneos-6420",
+      "code": "6420",
+      "name": "Prados húmedos mediterráneos de hierbas altas del Molinion-Holoschoenion",
+      "type": "Pastos",
+      "priority": false,
+      "hicSubtipos": [
+        "6420"
+      ],
+      "fitosociologia": [
+        "Holoschoenetum vulgaris Br.-Bl. ex Tchou 1948"
+      ],
+      "description": "Juncales altos sobre suelos que mantienen humedad en profundidad todo el verano, aunque la superficie esté seca: bordes de acequia, manantiales, vegas y fondos de valle. El junco churrero (Scirpoides holoschoenus) forma macollas robustas entre las que crecen menta, lirios y a menudo orquídeas. Es un oasis de verde en pleno agosto, y desaparece en cuanto se drena o se capta el agua que lo alimenta.",
+      "coordinates": [
+        37.921654,
+        -1.159927
+      ],
+      "color": "#8b5e34",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "prados-calcareos-carsticos-6110",
+      "code": "6110",
+      "name": "Prados calcáreos cársticos o basófilos del Alysso-Sedion albi",
+      "type": "Pastos",
+      "priority": true,
+      "hicSubtipos": [
+        "6110"
+      ],
+      "fitosociologia": [
+        "Sedetum micrantho-sediformis O. Bolòs & Masalles in O. Bolòs 1981"
+      ],
+      "description": "Pastos abiertos sobre repisas y lanchas de roca caliza con apenas un dedo de tierra encima. Ahí solo prosperan plantas crasas de hojas gordas, como las uñas de gato (Sedum), y hierbas anuales minúsculas que nacen, florecen y mueren entre febrero y mayo. Ocupa superficies muy pequeñas y depende de que el suelo siga siendo escaso: en cuanto se acumula tierra, otras plantas lo desplazan.",
+      "coordinates": [
+        37.832627,
+        -1.291494
+      ],
+      "color": "#9acd32",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "manantiales-petrificantes-con-7220",
+      "code": "7220",
+      "name": "Manantiales petrificantes con formación de tuf (Cratoneurion)",
+      "type": "Acuático",
+      "priority": true,
+      "hicSubtipos": [
+        "7220"
+      ],
+      "fitosociologia": [
+        "Trachelio coerulei-Adiantetum capilli-veneris O. Bolòs 1957"
+      ],
+      "description": "Rezumaderos y paredes por donde el agua brota cargada de cal y la va depositando sobre los musgos y helechos que los tapizan, hasta formar una roca porosa y ligera llamada toba. La fabrica la propia vegetación y lo hace muy despacio, así que la roca y los seres vivos que la levantan son inseparables. Basta con que el manantial se seque o se capte su agua para que el proceso se detenga.",
+      "coordinates": [
+        37.883298,
+        -1.216555
+      ],
+      "color": "#daa520",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "encinares-de-quercus-9340",
+      "code": "9340",
+      "name": "Encinares de Quercus ilex y Quercus rotundifolia",
+      "type": "Bosque",
+      "priority": false,
+      "hicSubtipos": [
+        "9340"
+      ],
+      "fitosociologia": [
+        "Quercetum rotundifoliae Br.-Bl. & O. Bolòs in Vives 1956",
+        "Rubio longifoliae-Quercetum rotundifoliae Costa, Peris & Figuerola 1983 (encinares)"
+      ],
+      "description": "El bosque mediterráneo por excelencia: encinares y carrascales de hoja dura, pequeña y perenne, que aguantan tanto el calor del verano como las heladas del interior. Bajo los árboles crece un sotobosque denso de coscoja, lentisco, madroño, enebros y aromáticas, y en el suelo la bellota sostiene en otoño a jabalíes, palomas y arrendajos. Aclarado por el ser humano durante siglos, ha dado lugar a las dehesas.",
+      "coordinates": [
+        37.881036,
+        -1.209036
+      ],
+      "color": "#6b8e23",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "rios-mediterraneos-de-3250",
+      "code": "3250",
+      "name": "Ríos mediterráneos de caudal permanente con Glaucium flavum",
+      "type": "Ribera",
+      "priority": false,
+      "hicSubtipos": [
+        "3250"
+      ],
+      "fitosociologia": [
+        "Andryaletum ragusinae Br.-Bl. & O. Bolòs 1958"
+      ],
+      "description": "Tramos de río con agua todo el año y lecho de gravas y cantos que las crecidas remueven y vuelven a depositar. Sobre esas barras de piedra suelta crece la amapola marina (Glaucium flavum), de hojas de un verde azulado y flores amarillas grandes, junto a otras plantas que aguantan que el sustrato cambie de sitio cada invierno. Es vegetación de terreno inestable: sin crecidas, la maleza la desplaza.",
+      "coordinates": [
+        37.841582,
+        -1.233219
+      ],
+      "color": "#66cdaa",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "matorrales-arborescentes-de-5210",
+      "code": "5210",
+      "name": "Matorrales arborescentes de Juniperus spp.",
+      "type": "Matorral",
+      "priority": false,
+      "hicSubtipos": [
+        "5210"
+      ],
+      "fitosociologia": [
+        "Rhamno lycioidis-Quercetum cocciferae Br.-Bl. & O. Bolòs 1954 (comunidades de Juniperus)"
+      ],
+      "description": "Matorral alto o bosquete abierto dominado por enebros y sabinas (Juniperus), arbustos de follaje escamoso o punzante y porte denso que aguantan sequía, viento y suelos casi inexistentes. Sus frutos carnosos y azulados —los gálbulos— alimentan en invierno a zorzales y otras aves, que se encargan de dispersar la semilla. Crecen tan despacio que un ejemplar de dos metros puede tener siglos.",
+      "coordinates": [
+        37.839022,
+        -1.287194
+      ],
+      "color": "#9acd32",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    }
+  ],
   "pointsOfInterest": [],
   "species": []
 }

@@ -73,7 +73,6 @@
         45,
         46,
         47,
-        59,
         60,
         61,
         62,
@@ -105,7 +104,6 @@
         88,
         89,
         90,
-        91,
         92,
         93,
         94,
@@ -215,7 +213,6 @@
         52,
         53,
         55,
-        59,
         60,
         61,
         62,
@@ -247,7 +244,6 @@
         88,
         89,
         90,
-        91,
         92,
         93,
         94,
@@ -366,7 +362,6 @@
         52,
         53,
         54,
-        59,
         60,
         61,
         62,
@@ -398,7 +393,6 @@
         88,
         89,
         90,
-        91,
         92,
         93,
         94,
@@ -510,7 +504,6 @@
         49,
         52,
         53,
-        59,
         60,
         61,
         62,
@@ -542,7 +535,6 @@
         88,
         89,
         90,
-        91,
         92,
         93,
         94,
@@ -632,7 +624,6 @@
         41,
         47,
         50,
-        59,
         60,
         61,
         62,
@@ -732,7 +723,6 @@
         56,
         57,
         58,
-        59,
         60,
         61,
         62,
@@ -764,7 +754,6 @@
         88,
         89,
         90,
-        91,
         92,
         93,
         94,
@@ -837,7 +826,6 @@
         19,
         45,
         52,
-        59,
         75,
         117,
         124,
@@ -957,7 +945,6 @@
         46,
         49,
         53,
-        59,
         60,
         61,
         62,
@@ -1008,7 +995,6 @@
         10,
         35,
         55,
-        59,
         61,
         62,
         63,
@@ -1301,7 +1287,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pino_secolare_-_Castelleone_di_Suasa.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado de protección",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -1353,7 +1339,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eberswalde_Zoo_12-2017_img2.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "Wikipedia",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -1388,7 +1374,7 @@
     {
       "id": 3,
       "commonName": "Romero",
-      "scientificName": "Salvia rosmarinus",
+      "scientificName": "Rosmarinus officinalis",
       "kingdom": "flora",
       "group": "Mata aromática",
       "habitat": "Matorral seco y soleado sobre suelos calizos y pedregosos",
@@ -1403,8 +1389,8 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rosemary_in_bloom.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
-      "source": "Especie característica del matorral termomediterráneo (hábitat 5330; romerales del Rosmarino-Ericion) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y las fichas de la Red Natura 2000; muy común en la Región de Murcia. Sinónimo: Rosmarinus officinalis. Ficha básica (mínima), pendiente de ampliar.",
+      "featured": false,
+      "source": "Especie característica del matorral termomediterráneo (hábitat 5330; romerales del Rosmarino-Ericion) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y las fichas de la Red Natura 2000; muy común en la Región de Murcia. Sinónimo: Rosmarinus officinalis. Ficha básica (mínima), pendiente de ampliar. Nombre aceptado en EIDOS; Salvia rosmarinus es sinónimo.",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -1454,7 +1440,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Vulpes_vulpes_2.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "Wikipedia",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -1505,7 +1491,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_coccifera_1.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -1555,7 +1541,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pistacia_lentiscus.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado de protección",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -1657,7 +1643,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_clusii_(habitus).jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "Especie característica de los matorrales y romerales del hábitat 5330 (matorral termomediterráneo semiárido) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y las fichas de la Red Natura 2000; frecuente en la Región de Murcia. Ficha básica (mínima), pendiente de ampliar.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -1707,7 +1693,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anthyllis_cytisoides.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "Especie característica del hábitat 5330 (matorral termomediterráneo semiárido) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y las fichas de la Red Natura 2000; muy extendida por la Región de Murcia (ficha de flora de regmurcia.com y Región de Murcia Digital). Ficha básica (mínima), pendiente de ampliar.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -1757,7 +1743,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brachypodium_retusum_espiga_seca.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "Especie estructural del hábitat prioritario de interés comunitario 6220* (Zonas subestépicas de gramíneas y anuales del Thero-Brachypodietea; asociación Teucrio pseudochamaepityos-Brachypodietum ramosi) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y las fichas de la Red Natura 2000; frecuente en la Región de Murcia, franja costera e interior (Región de Murcia Digital). Sinónimo: Brachypodium ramosum. Ficha básica (mínima), pendiente de ampliar.; IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -1807,7 +1793,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Phagnalon_saxatile.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "Especie característica de los claros pedregosos y roquedos (hábitats 5330 y 8210) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y las fichas de la Red Natura 2000; frecuente en la Región de Murcia. Sinónimo: Phagnalon rupestre s.l. Ficha básica (mínima), pendiente de ampliar.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -1854,7 +1840,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Asparagus_stipularis_(detail).jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO) — especie característica del HIC 5210; Inventario Español EIDOS (IEPNB, taxonid 33035); GBIF (speciesKey 2768695); Matorrales arborescentes de Juniperus (HIC 5210).",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -1951,7 +1937,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Withania_frutescens0176.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 3,
-      "featured": true,
+      "featured": false,
       "source": "Especie característica de los matorrales térmicos del sureste (hábitats 5330 y azufaifar 5220), iberoafricanismo, según las fichas de flora de la Región de Murcia (regmurcia.com, ficha Withania frutescens - Oroval) y las Bases ecológicas de la Red Natura 2000. Sinónimo: Withania frutescens (L.) Pauquy. Ficha básica (mínima), pendiente de ampliar.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -1998,7 +1984,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_almeriense_flor.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "Especie característica de los tomillares y matorrales áridos del sureste (hábitat 5330) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y las fichas de la Red Natura 2000; propia del sureste ibérico y la Región de Murcia. Ficha básica (mínima), pendiente de ampliar.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -2045,7 +2031,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nerium_oleander_flowers_leaves.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "Especie característica del hábitat de interés comunitario 92D0 (Galerías y matorrales ribereños termomediterráneos, Nerio-Tamaricetea) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y las fichas de la Red Natura 2000; forma los adelfares de las ramblas de la Región de Murcia (Región de Murcia Digital). Ficha básica (mínima), pendiente de ampliar.; IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -2126,7 +2112,7 @@
     {
       "id": 18,
       "commonName": "Acebuche",
-      "scientificName": "Olea europaea var. sylvestris",
+      "scientificName": "Olea europaea subsp. europaea",
       "kingdom": "flora",
       "group": "Árbol",
       "habitat": "Matorral alto, laderas secas y barrancos del piso más cálido",
@@ -2141,8 +2127,8 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ullastre_vell.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
-      "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado de protección",
+      "featured": false,
+      "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado de protección Nombre aceptado en EIDOS; Olea europaea var. sylvestris es sinónimo.",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2235,7 +2221,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ephedra_fragilis_3.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "Especie característica del matorral termomediterráneo semiárido (5330), sabinares (5210) y roquedos (8210) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y las fichas de la Red Natura 2000; frecuente en la Región de Murcia. Ficha básica (mínima), pendiente de ampliar.; IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -2327,7 +2313,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Launaea_arborescens_-_Oasis_Park_botanical_garden_-_Fuerteventura_-_02.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "Especie característica del matorral semiárido (hábitat 5330) y de los matorrales halo-nitrófilos (1430) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y las fichas de la Red Natura 2000; frecuente en la Región de Murcia (ficha de regmurcia.com). Sinónimo: Launaea spinosa. Ficha básica (mínima), pendiente de ampliar.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -2558,7 +2544,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Epidalea_calamita_02_by-dpc.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 3,
-      "featured": true,
+      "featured": false,
       "source": "IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -2774,7 +2760,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Genista_cinerea26de_maig_2007_019.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 4090, 5210, 5330; GBIF (90 ocurrencias en 7 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -2821,7 +2807,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Salix_pedicellata_Habitus_2009-9-27_CampoCalatrava.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 92A0; GBIF (44 ocurrencias en 6 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -2870,7 +2856,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Genista-longipes-2019.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 4090; GBIF (37 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -2917,7 +2903,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Colchicum_triphyllum_001_GotBot_2016.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 6220; GBIF (30 ocurrencias en 8 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -2964,7 +2950,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alb-S.leucantha-13.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 5330; GBIF (23 ocurrencias en 6 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -3011,7 +2997,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ononis_ornithopodioides_kz1.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 6220; GBIF (19 ocurrencias en 6 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -3044,7 +3030,7 @@
     {
       "id": 38,
       "commonName": "Jara blanca",
-      "scientificName": "Halimium atriplicifolium",
+      "scientificName": "Cistus atriplicifolius",
       "kingdom": "flora",
       "group": "Mata",
       "habitat": "Matorral y jarales sobre suelos secos y soleados de montaña media",
@@ -3059,8 +3045,8 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Halimium_commutatum1.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
-      "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 5330; GBIF (19 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
+      "featured": false,
+      "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 5330; GBIF (19 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28. Nombre aceptado en EIDOS; Halimium atriplicifolium es sinónimo.",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -3106,7 +3092,7 @@
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/184117054/original.jpeg",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 9560; GBIF (19 ocurrencias en 7 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -3153,7 +3139,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cosentinia_vellea_kz02.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 8210; GBIF (18 ocurrencias en 4 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -3185,7 +3171,7 @@
     {
       "id": 41,
       "commonName": "Clujía",
-      "scientificName": "Bupleurum gibraltaricum",
+      "scientificName": "Bupleurum gibraltarium",
       "kingdom": "flora",
       "group": "Arbusto",
       "habitat": "Roquedos, laderas pedregosas y matorral seco sobre calizas",
@@ -3200,8 +3186,8 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/B._gibraltarium-1.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
-      "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 9560; GBIF (17 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
+      "featured": false,
+      "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 9560; GBIF (17 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28. Nombre aceptado en EIDOS; Bupleurum gibraltaricum es sinónimo.",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -3248,7 +3234,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jasione_foliosa_var._Minuta_GotBot_2015_001.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 8210; GBIF (16 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -3295,7 +3281,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Carrasca_de_la_Raboseras.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 5210, 9340; GBIF (15 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -3342,7 +3328,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cytisus_scoparius_by_Danny_S._-_001.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 5330; GBIF (15 ocurrencias en 7 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -3387,7 +3373,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Impera_cylind_071122-1339_stgd.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 92D0; GBIF (15 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -3420,7 +3406,7 @@
     {
       "id": 46,
       "commonName": "Saxifraga almeriensis",
-      "scientificName": "Saxifraga almeriensis",
+      "scientificName": "Saxifraga camposii subsp. leptophylla",
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Grietas y repisas umbrías de roquedos calizos de montaña",
@@ -3435,8 +3421,8 @@
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/111644731/original.jpeg",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
-      "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 8210; GBIF (15 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
+      "featured": false,
+      "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 8210; GBIF (15 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28. Nombre aceptado en EIDOS; Saxifraga almeriensis es sinónimo.",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -3468,7 +3454,7 @@
     {
       "id": 47,
       "commonName": "erguen",
-      "scientificName": "Calicotome villosa",
+      "scientificName": "Cytisus lanigerus",
       "kingdom": "flora",
       "group": "Arbusto",
       "habitat": "Matorral y laderas soleadas sobre suelos secos y pedregosos",
@@ -3483,8 +3469,8 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Calycotome_villosa1.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
-      "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 9560; GBIF (12 ocurrencias en 6 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
+      "featured": false,
+      "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 9560; GBIF (12 ocurrencias en 6 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28. Nombre aceptado en EIDOS; Calicotome villosa es sinónimo.",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -3531,7 +3517,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Convolvulus_lineatus_2.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 6220; GBIF (10 ocurrencias en 8 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -3560,7 +3546,7 @@
     {
       "id": 49,
       "commonName": "campanillas de cantil",
-      "scientificName": "Campanula hispanica",
+      "scientificName": "Campanula rotundifolia subsp. hispanica",
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Fisuras de roquedos, taludes y pedregales de montaña",
@@ -3575,8 +3561,8 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Campanula_hispanica_1.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
-      "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 8210; GBIF (10 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
+      "featured": false,
+      "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 8210; GBIF (10 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28. Nombre aceptado en EIDOS; Campanula hispanica es sinónimo.",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -3586,7 +3572,7 @@
         "genus": "Campanula"
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
-      "spainStatus": "Especie de interés especial (Ley 9/1999, de 26 de mayo, de conservación de la Naturaleza. DOCM 40 de 12 de junio de 1999)",
+      "spainStatus": "No incluida en el LESRPE ni en el Catálogo Español de Especies Amenazadas [IEPNB, Lista Patrón de las especies silvestres presentes en España, vista de normas, consultada 2026-08-09]",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": null,
       "eidosTaxonId": 3013,
@@ -3622,7 +3608,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sedum_gypsicola_kz01.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 6110; GBIF (9 ocurrencias en 7 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -3667,7 +3653,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ulex_europaeus.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 4090; GBIF (8 ocurrencias en 6 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -3711,7 +3697,7 @@
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/527297838/original.jpg",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 92D0; GBIF (7 ocurrencias en 4 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -3757,7 +3743,7 @@
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/501474709/original.jpeg",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 8210; GBIF (6 ocurrencias en 3 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -3803,7 +3789,7 @@
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/601798690/original.jpg",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 6220; GBIF (5 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -3846,7 +3832,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/ERODIUM_FOETIDUM_-_S%C3%92BOL_-_IB-784_(Cargola_de_roca).jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 4090, 6170; GBIF (5 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -3890,7 +3876,7 @@
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/411356756/original.jpeg",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 5330; GBIF (5 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -3933,7 +3919,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_lusitanica_kz01.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 5330; GBIF (5 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -3976,7 +3962,7 @@
       "image": null,
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 5330; GBIF (5 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -4000,57 +3986,6 @@
       "gbifOccurrences": 5,
       "visible": true,
       "gbifBboxSightings": 5
-    },
-    {
-      "id": 59,
-      "commonName": "Arrui",
-      "scientificName": "Ammotragus lervia",
-      "kingdom": "fauna",
-      "group": "Mamífero ungulado",
-      "habitat": "Laderas escarpadas, roquedos y matorral de montaña seca",
-      "conservationStatus": "VU",
-      "description": "Bóvido norteafricano introducido en España en los años cincuenta con fines cinegéticos, hoy asilvestrado en varias sierras del sureste. Se reconoce por la melena de pelos largos que cuelga del cuello y las patas delanteras, y por sus cuernos gruesos y arqueados en ambos sexos.",
-      "tips": [
-        "Melena de pelo largo colgando del cuello y las patas delanteras",
-        "Cuernos gruesos y curvados también en las hembras",
-        "Pelaje uniforme de color arena, sin manchas"
-      ],
-      "seasonality": "Todo el año",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Barbary_Sheep_Tennoji.jpg?width=1280",
-      "coordinates": null,
-      "rarityScore": 4,
-      "featured": true,
-      "source": "GBIF (671 ocurrencias en 11 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
-      "taxonomy": {
-        "kingdom": "Animalia",
-        "phylum": "Chordata",
-        "class": "Mammalia",
-        "order": "Artiodactyla",
-        "family": "Bovidae",
-        "genus": "Ammotragus"
-      },
-      "iucnGlobal": "VU (Vulnerable) (evaluación UICN 2022)",
-      "spainStatus": "CEEEI: Incluido (Sentencia de 16 de marzo de 2016); UICN España: NE (No evaluado) (2007)",
-      "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
-      "reviewNote": null,
-      "eidosTaxonId": 10481,
-      "gbifSpeciesKey": 2441005,
-      "zepaSiteCode": null,
-      "habitatIds": [
-        "matorrales-mediterraneos-y-4090",
-        "zonas-subestepicas-de-6220",
-        "encinares-de-quercus-9340",
-        "matorrales-termomediterraneos-y-5330",
-        "matorrales-arborescentes-de-5210",
-        "pendientes-rocosas-calcicolas-8210",
-        "bosques-endemicos-de-9560",
-        "galerias-y-matorrales-92D0",
-        "prados-alpinos-y-6170"
-      ],
-      "imageAttribution": "Kuribo (CC BY-SA 3.0) · Wikimedia Commons",
-      "gbifOccurrences": 387,
-      "visible": true,
-      "gbifBboxSightings": 387
     },
     {
       "id": 60,
@@ -4120,7 +4055,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_oxycedrus_g1.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (482 ocurrencias en 10 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -4171,7 +4106,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Carrasca_de_la_Raboseras.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (187 ocurrencias en 9 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -4221,7 +4156,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/ERINACEA_ANTHYLLIS_-_SANT_MAMET.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (162 ocurrencias en 9 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -4271,7 +4206,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Thymus_membranaceus_(3).jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (147 ocurrencias en 10 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -4321,7 +4256,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pistachier2.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (142 ocurrencias en 11 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -4372,7 +4307,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/T2_37_Viburnum_tinus_par_Pierre-Joseph_Redout%C3%A9.jpeg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (136 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -4419,7 +4354,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_pinaster_20131229.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (99 ocurrencias en 9 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -4469,7 +4404,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eichh%C3%B6rnchen_D%C3%BCsseldorf_Hofgarten_edit.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (97 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -4517,7 +4452,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Raskovnik33Joe-Laserpitium_siler.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (92 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -4564,7 +4499,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Digitalis_obscura_1.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (86 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -4614,7 +4549,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Genista_spartioides_kz01.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (85 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -4661,7 +4596,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Linaria_aeruginea.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (82 ocurrencias en 9 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -4711,7 +4646,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_monspessulanum_fg01.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (67 ocurrencias en 9 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -4762,7 +4697,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Limodorum_abortivum_Mallorca_04.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (64 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -4809,7 +4744,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Convolvulus_althaeoides_1.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (64 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -4859,7 +4794,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Colutea_arborescens01.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (57 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -4907,7 +4842,7 @@
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/483580471/original.jpeg",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (55 ocurrencias en 10 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -4957,7 +4892,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cytinus_ruber_(flowering_plants).jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (54 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -5004,7 +4939,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ophrys_lutea.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (53 ocurrencias en 9 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -5054,7 +4989,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rhamnus_alaternus1627.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (46 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -5101,7 +5036,7 @@
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/517007573/original.jpg",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (45 ocurrencias en 6 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -5148,7 +5083,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stipa_tenacissima.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (43 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -5196,7 +5131,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lonicera_splendida_2018-05-22_2462.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (42 ocurrencias en 9 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -5246,7 +5181,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Phyllirea_angustifolia.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (41 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -5293,7 +5228,7 @@
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/384325778/original.jpg",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (40 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -5340,7 +5275,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pelophylax_perezi_by-dpc.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (40 ocurrencias en 6 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -5388,7 +5323,7 @@
       "image": "https://bs.plantnet.org/image/o/fa3e211eacbd1612f2e8967c671667bdfafb8228",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (40 ocurrencias en 7 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -5435,7 +5370,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_faginea_centenario.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (39 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -5482,7 +5417,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Arbutus_unedo_Corsica.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (38 ocurrencias en 6 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -5529,7 +5464,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Coronilla_juncea.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (37 ocurrencias en 7 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -5560,53 +5495,6 @@
       "gbifBboxSightings": 20
     },
     {
-      "id": 91,
-      "commonName": "Tabaco moruno",
-      "scientificName": "Nicotiana glauca",
-      "kingdom": "flora",
-      "group": "Arbusto",
-      "habitat": "Ramblas, escombreras, cunetas y suelos removidos de clima cálido",
-      "conservationStatus": "NE",
-      "description": "Arbusto de crecimiento rápido, originario de Sudamérica y hoy naturalizado en el sureste ibérico, con hojas ovaladas de un verde azulado y flores tubulares amarillas. Coloniza terrenos alterados y es una planta exótica invasora que desplaza a la vegetación de rambla.",
-      "tips": [
-        "Hojas de verde azulado con peciolo largo",
-        "Flores tubulares amarillas y colgantes",
-        "Casi siempre en escombreras, cunetas y ramblas alteradas"
-      ],
-      "seasonality": "Casi todo el año",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Charuteira_(Nicotiana_glauca)%2C_planta_t%C3%B3xica_parente_do_tabaco_(Bag%C3%A9-RS).jpg?width=1280",
-      "coordinates": null,
-      "rarityScore": 2,
-      "featured": true,
-      "source": "GBIF (37 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
-      "taxonomy": {
-        "kingdom": "Plantae",
-        "phylum": "Tracheophyta",
-        "class": "Magnoliopsida",
-        "order": "Solanales",
-        "family": "Solanaceae",
-        "genus": "Nicotiana"
-      },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
-      "spainStatus": "CEEEI: Incluido (Real Decreto 216/2019, de 29 de marzo, por el que se aprueba la lista de especies exóticas…)",
-      "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
-      "reviewNote": null,
-      "eidosTaxonId": 6569,
-      "gbifSpeciesKey": 2928783,
-      "zepaSiteCode": null,
-      "habitatIds": [
-        "zonas-subestepicas-de-6220",
-        "matorrales-termomediterraneos-y-5330",
-        "matorrales-arborescentes-de-5210",
-        "matorrales-mediterraneos-y-4090",
-        "encinares-de-quercus-9340"
-      ],
-      "imageAttribution": "Gabriel Collares (CC BY 4.0) · Wikimedia Commons",
-      "gbifOccurrences": 12,
-      "visible": true,
-      "gbifBboxSightings": 12
-    },
-    {
       "id": 92,
       "commonName": "Ammoides",
       "scientificName": "Ammoides pusilla",
@@ -5624,7 +5512,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ammoides_pusilla_Enfoqueflores_2011-6-11_CampodeCalatrava.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (37 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -5671,7 +5559,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dorycnium_pentaphyllum_Habitat_2010-6-15_DehesaBoyaldePuertollano.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (36 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -5719,7 +5607,7 @@
       "image": "https://observation.org/photos/83864093.jpg",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (36 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -5754,7 +5642,7 @@
     {
       "id": 95,
       "commonName": "Ajo silvestre",
-      "scientificName": "Allium paniculatum",
+      "scientificName": "Allium pallens",
       "kingdom": "flora",
       "group": "Planta bulbosa",
       "habitat": "Pastizales secos, ribazos y claros de matorral",
@@ -5769,8 +5657,8 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Laguna_de_San_Juan_20100617_3431.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
-      "source": "GBIF (35 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
+      "featured": false,
+      "source": "GBIF (35 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28. Nombre aceptado en EIDOS; Allium paniculatum es sinónimo.",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -5816,7 +5704,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dianthus_broteri.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (35 ocurrencias en 6 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -5863,7 +5751,7 @@
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/627242096/original.jpg",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (35 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -5911,7 +5799,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Populus_alba_01.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (33 ocurrencias en 6 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -5958,7 +5846,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Phillyrea_latifolia.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (32 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6005,7 +5893,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Iris_lutescens_(flowers).jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (30 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6052,7 +5940,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ononis_fruticosa.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (30 ocurrencias en 7 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6098,7 +5986,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Klasea_flavescens0001_01.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (29 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6143,7 +6031,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gayuba.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (28 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6190,7 +6078,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stachys_circinata.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (26 ocurrencias en 7 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6237,7 +6125,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Blismes_elm_2007.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (25 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6284,7 +6172,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cephalanthera_longifolia_300508.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (25 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6331,7 +6219,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Petrarchae.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (24 ocurrencias en 7 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6378,7 +6266,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ulmus_glabra_horizontalis.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (23 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6425,7 +6313,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_prostrata.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (22 ocurrencias en 6 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6473,7 +6361,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Starr_080304-3229_Myrtus_communis.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (22 ocurrencias en 6 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6520,7 +6408,7 @@
       "image": "https://observation.org/photos/83833755.jpg",
       "coordinates": null,
       "rarityScore": 3,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (22 ocurrencias en 7 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6566,7 +6454,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Centranthus_lecoqii_subsp._lecoqii_4154.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (22 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6611,7 +6499,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Artemisia_reptans_Samuel_Correa_Falc%C3%B3n_2022_GC.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (20 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6658,7 +6546,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/A._valentinus-1.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (20 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6705,7 +6593,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Silene_mellifera_Enfoque_2012-05-27_Robledillo_SierraMadrona.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (20 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6751,7 +6639,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cephalanthera_damasonium_050606.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (20 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6798,7 +6686,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ceratonia_siliqua_Keciboynuzu_1370984_Nevit.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (19 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6845,7 +6733,7 @@
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/205785187/original.jpg",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (19 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6891,7 +6779,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Weilburg_-_Tiergarten_-_Mehlbeere.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (18 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6936,7 +6824,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fritillaria_lusitanica_2_2601.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (17 ocurrencias en 6 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6983,7 +6871,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Capra_pyrenaica_in_Sierra_de_Guadarrama.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (16 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -7030,7 +6918,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Thymus_zygis_1.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (16 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -7077,7 +6965,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Potentilla_caulescens.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (16 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -7123,7 +7011,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sorbus_domestica_FruitsLeaves_BotGardBln0906a.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (16 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -7170,7 +7058,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/20110802Walnussbaum_Plankstadt2.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (15 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -7217,7 +7105,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fraxinus_ornus_JPG2.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (15 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -7264,7 +7152,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_violaceum_habitus_SierraMadrona.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (15 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -7311,7 +7199,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_populifolius.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (15 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -7358,7 +7246,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Erica_erigena_2c.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (15 ocurrencias en 6 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -7404,7 +7292,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Neotinea_maculata_(Sardinia).jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (15 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -7451,7 +7339,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hypericum_caprifolium_(NHS).jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (15 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -7498,7 +7386,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Epipactis_atrorubens_flowers.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "GBIF (15 ocurrencias en 6 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -7545,7 +7433,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Northern_Goshawk_ad_M2.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List) para la presencia en la ZEPA/ZEC ES0000173",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -7586,7 +7474,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Maakotka_(Aquila_chrysaetos)_by_Jarkko_J%C3%A4rvinen.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List) para la presencia en la ZEPA/ZEC ES0000173; IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -7709,7 +7597,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Burhinus_oedicnemus_insularum_Lanzarote_1.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 3,
-      "featured": true,
+      "featured": false,
       "source": "IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -7750,7 +7638,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Caprimulgus_ruficollis_-Portugal-8.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 3,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List) para la presencia en la ZEPA/ZEC ES0000173",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -7791,7 +7679,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aguila_culebrera_(Circaetus_gallicus).jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List) para la presencia en la ZEPA/ZEC ES0000173; IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -7832,7 +7720,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/European_roller.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List) para la presencia en la ZEPA/ZEC ES0000173; IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -7914,7 +7802,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Common_kestrel_falco_tinnunculus.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List) para la presencia en la ZEPA/ZEC ES0000173",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -7955,7 +7843,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Crested_Lark_-_Qatar.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -7996,7 +7884,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Galerida_theklae_Madrid.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 3,
-      "featured": true,
+      "featured": false,
       "source": "IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8037,7 +7925,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Booted_eagle%2C_Hieraaetus_pennatus%2C_at_Kgalagadi_Transfrontier_Pa_(32334023348).jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List) para la presencia en la ZEPA/ZEC ES0000173",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8078,7 +7966,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jinxtorquilla.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List) para la presencia en la ZEPA/ZEC ES0000173",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8119,7 +8007,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%C5%9Eahl%C3%BBr-33.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO) — especie característica del HIC 5330; Inventario Español EIDOS (IEPNB, taxonid 10738); GBIF (speciesKey 2475443); Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE, RD 139/2011). Directiva Aves 2009/147/CE.",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8160,7 +8048,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/SpottedFlycatcheronfence.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List) para la presencia en la ZEPA/ZEC ES0000173",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8201,7 +8089,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Black-eared_Wheatear%2C_Punta_del_Sabinar%2C_Spain.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List) para la presencia en la ZEPA/ZEC ES0000173",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8242,7 +8130,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Black_Wheatear%2C_Isla_Plana_3.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 3,
-      "featured": true,
+      "featured": false,
       "source": "IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8283,7 +8171,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pyrrhocorax_pyrrhocorax_-standing-8.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List) para la presencia en la ZEPA/ZEC ES0000173; IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8365,7 +8253,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Wiedehopf_mit_Puppe_als_Futter.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List) para la presencia en la ZEPA/ZEC ES0000173",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8406,7 +8294,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/AnthusCampestris_cropped.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8447,7 +8335,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anthus_spinoletta.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8488,7 +8376,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Buizerd-rh_20091021_002_(cropped).jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8529,7 +8417,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nachtzwaluw_-_European_nightjar_-_Caprimulgus_europaeus_2.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8570,7 +8458,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Short-toed_Treecreeper_(Certhia_brachydactyla)_(cropped_version).jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8611,7 +8499,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flickr_-_don_macauley_-_Bird_015.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8652,7 +8540,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Quaglia.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8693,7 +8581,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Falco_columbarius_Male.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8734,7 +8622,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hobby_-_Falco_subbuteo.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8775,7 +8663,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fringilla_coelebs_(chaffinch)%2C_male.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8816,7 +8704,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Vulture_beak_sideview_A.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8857,7 +8745,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Red_Crossbills_(Male).jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8898,7 +8786,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lullula_arborea.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8939,7 +8827,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Monsax.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8980,7 +8868,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Oenanthe_oenanthe_Larvik.JPG?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -9021,7 +8909,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Scops_Owl_(Otus_scops)%2C_Kalloni%2C_Lesvos%2C_Greece%2C_19.04.2015_(16773748434).jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -9062,7 +8950,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Common_Redstart_-_Segrate_-_Italy_S4E2518-1_(19357313382).jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -9103,7 +8991,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alpine_accentor_saganta.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -9129,40 +9017,40 @@
     {
       "id": 172,
       "commonName": "Curruca rabilarga",
-      "scientificName": "Sylvia undata",
+      "scientificName": "Curruca undata",
       "kingdom": "fauna",
       "group": "Ave",
-      "habitat": "Matorral bajo y denso, jarales, brezales y tomillares",
+      "habitat": "Matorral litoral y laderas secas",
       "conservationStatus": "NE",
-      "description": "Curruca pequeña, oscura y de cola muy larga que suele llevar levantada. El macho tiene el vientre vinoso y el ojo rojo rodeado de un anillo del mismo color. Es muy inquieta y rara vez se deja ver más de unos segundos antes de volver a hundirse en la mata.",
+      "description": "Pequeña ave residente de matorral mediterráneo denso, reclasificada taxonómicamente de Sylvia undata a Curruca undata, igual que la curruca cabecinegra.",
       "tips": [
-        "Cola larga y erguida, casi vertical al posarse",
-        "Ojo y anillo ocular rojos",
-        "Vientre de color vinoso, con motitas blancas en la garganta"
+        "Cola larga que mueve constantemente",
+        "Ojo y anillo ocular rojizos",
+        "Ligada a matorral denso y bajo"
       ],
       "seasonality": "Todo el año",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dartford_Warbler_Provencegrasm%C3%BCcke_(Sylvia_undata)_by_J._Dietrich.jpg?width=1280",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_pitchou_Ichkeul_NP.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 1,
+      "rarityScore": 3,
       "featured": false,
-      "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28.",
+      "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28. Nombre aceptado en EIDOS; Sylvia undata es sinónimo.",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
         "class": "Aves",
         "order": "Passeriformes",
         "family": "Sylviidae",
-        "genus": "Sylvia"
+        "genus": "Curruca"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
-      "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
+      "iucnGlobal": "LC",
+      "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
-      "reviewNote": null,
-      "eidosTaxonId": 80230,
-      "gbifSpeciesKey": 2492949,
+      "reviewNote": "Identificadores corregidos el 2026-08-09: tenía eidosTaxonId 80230, que es Sylvia undata undata (la subespecie), y la gbifSpeciesKey del sinónimo. La especie es Curruca undata (EIDOS 80931).",
+      "eidosTaxonId": 80931,
+      "gbifSpeciesKey": 10355796,
       "zepaSiteCode": "ES0000173",
       "habitatIds": [],
-      "imageAttribution": "J. Dietrich (CC BY-SA 3.0) · Wikimedia Commons",
+      "imageAttribution": "El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": false,
       "gbifBboxSightings": 126
@@ -9185,7 +9073,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2015-04-20_Turdus_torquatus_torquatus_Cairngorm_3.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -9267,7 +9155,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_%C3%A0_lunettes_Aqueduc_de_Zaghouan.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28. Nombre en BISE: Sylvia conspicillata (reclasificado en EIDOS).",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -9308,7 +9196,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Malestonechatseaham_Cropped.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28. Nombre en BISE: Saxicola torquatus (reclasificado en EIDOS).",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -9390,7 +9278,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Miniopterus_schreibersii_dasythrix.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 4,
-      "featured": false,
+      "featured": true,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -9468,7 +9356,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Myotis_capaccinii_0105b_cropped.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 4,
-      "featured": false,
+      "featured": true,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado",
       "taxonomy": {
         "kingdom": "Animalia",

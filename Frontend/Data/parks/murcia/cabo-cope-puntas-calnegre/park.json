@@ -1366,7 +1366,7 @@
     {
       "id": 19,
       "commonName": "Acebuche",
-      "scientificName": "Olea europaea var. sylvestris",
+      "scientificName": "Olea europaea subsp. europaea",
       "kingdom": "flora",
       "group": "Árbol",
       "habitat": "Matorral alto, laderas secas y barrancos del piso más cálido",
@@ -1382,7 +1382,7 @@
       "coordinates": null,
       "rarityScore": 2,
       "featured": false,
-      "source": "Región de Murcia Digital (CARM) - Flora de Cabo Cope y Puntas de Calnegre; Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia",
+      "source": "Región de Murcia Digital (CARM) - Flora de Cabo Cope y Puntas de Calnegre; Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia Nombre aceptado en EIDOS; Olea europaea var. sylvestris es sinónimo.",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -5481,7 +5481,7 @@
     {
       "id": 159,
       "commonName": "Romero",
-      "scientificName": "Salvia rosmarinus",
+      "scientificName": "Rosmarinus officinalis",
       "kingdom": "flora",
       "group": "Mata aromática",
       "habitat": "Matorral seco y soleado sobre suelos calizos y pedregosos",
@@ -5497,7 +5497,7 @@
       "coordinates": null,
       "rarityScore": 1,
       "featured": false,
-      "source": "Especie característica del matorral termomediterráneo (hábitat 5330; romerales del Rosmarino-Ericion) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y las fichas de la Red Natura 2000; muy común en la Región de Murcia. Sinónimo: Rosmarinus officinalis. Ficha básica (mínima), pendiente de ampliar.",
+      "source": "Especie característica del matorral termomediterráneo (hábitat 5330; romerales del Rosmarino-Ericion) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y las fichas de la Red Natura 2000; muy común en la Región de Murcia. Sinónimo: Rosmarinus officinalis. Ficha básica (mínima), pendiente de ampliar. Nombre aceptado en EIDOS; Salvia rosmarinus es sinónimo.",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",

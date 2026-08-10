@@ -1,7 +1,7 @@
 {
   "_nota": "Códigos HIC (Anexo I, Directiva 92/43/CEE) PRIORITARIOS (marcados con *). Esta es la fuente de verdad para la prioridad; el flag PRIORITARI del dato MITECO 1997 es poco fiable. Lista para España — verificar/completar contra el Anexo I oficial o CNH21/LPEH al añadir regiones nuevas.",
   "codigos": [
-    "1120", "1150", "1510", "2130", "2150", "2250", "2270",
+    "1120", "1150", "1510", "1520", "2130", "2150", "2250", "2270",
     "3170", "5230", "5220", "6110", "6220", "6230", "7210",
     "7220", "8240", "9430", "9530", "9560", "9570", "9580",
     "91D0", "91E0"

@@ -1,0 +1,67 @@
+{
+ "park": "carrascoy-y-el-valle",
+ "generado": "Atlas y Manual de los Hábitats de España (MITECO) ∩ catálogo del parque",
+ "hic": {
+  "1410": {
+   "habitat": "pastizales-salinos-mediterraneos-1410",
+   "especies": []
+  },
+  "1520": {
+   "habitat": "vegetacion-gipsicola-iberica-1520",
+   "especies": []
+  },
+  "3140": {
+   "habitat": "aguas-oligomesotroficas-calcareas-3140",
+   "especies": []
+  },
+  "3170": {
+   "habitat": "estanques-temporales-mediterraneos-3170",
+   "especies": []
+  },
+  "3250": {
+   "habitat": "rios-mediterraneos-de-3250",
+   "especies": []
+  },
+  "3280": {
+   "habitat": "rios-mediterraneos-de-3280",
+   "especies": []
+  },
+  "5210": {
+   "habitat": "matorrales-arborescentes-de-5210",
+   "especies": []
+  },
+  "5330": {
+   "habitat": "matorrales-termomediterraneos-y-5330",
+   "especies": []
+  },
+  "6110": {
+   "habitat": "prados-calcareos-carsticos-6110",
+   "especies": []
+  },
+  "6220": {
+   "habitat": "zonas-subestepicas-de-6220",
+   "especies": []
+  },
+  "6420": {
+   "habitat": "prados-humedos-mediterraneos-6420",
+   "especies": []
+  },
+  "7220": {
+   "habitat": "manantiales-petrificantes-con-7220",
+   "especies": []
+  },
+  "8210": {
+   "habitat": "pendientes-rocosas-calcicolas-8210",
+   "especies": []
+  },
+  "9340": {
+   "habitat": "encinares-de-quercus-9340",
+   "especies": []
+  },
+  "92D0": {
+   "habitat": "galerias-y-matorrales-92D0",
+   "especies": []
+  }
+ },
+ "links": []
+}

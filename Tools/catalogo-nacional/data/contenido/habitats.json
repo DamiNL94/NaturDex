@@ -33,6 +33,9 @@
     "1510": {
       "description": "Estepas de suelos salinos pero secos, sin encharcamiento permanente, en depresiones y llanos interiores de clima duro. Dominan el albardín (Lygeum spartum), una gramínea de matas separadas y hojas punzantes, y las siemprevivas (Limonium), que en verano cubren el suelo desnudo de flores diminutas rosas y violetas. Es un paisaje de aspecto pobre que concentra un número altísimo de plantas que no crecen en ningún otro ambiente."
     },
+    "1520": {
+      "description": "Matorral bajo y ralo que crece únicamente sobre yeso, un suelo blanquecino que forma costra y en el que casi ninguna otra planta prospera. Las que lo consiguen están especializadas en ese sustrato y muchas no viven en ningún otro sitio, de modo que cada afloramiento de yeso tiene su propia flora. No se recupera: al roturar o extraer el yeso desaparecen a la vez el suelo y lo que crecía sobre él."
+    },
     "2110": {
       "description": "El primer relieve de arena de la playa, de apenas unos decímetros, que se forma donde una planta rastrera frena el viento y la arena se deposita a su alrededor. La construyen la grama de mar (Elymus farctus) y la juncia marina, capaces de crecer hacia arriba a medida que quedan enterradas. Es la duna naciente: si se pisa o se allana, todo el cordón dunar que hay detrás se queda sin recambio."
     },
@@ -47,6 +50,9 @@
     },
     "2260": {
       "description": "Matorral mediterráneo instalado sobre arenas ya fijadas, normalmente algo tierra adentro: jaras, jaguarzos, romero, lavandas, tomillos y enebros sobre suelo arenoso. Las hojas son duras o están cubiertas de pelillos, la defensa habitual contra el sol y la falta de agua, y muchas desprenden aroma al rozarlas. Es la etapa más madura y estable del sistema dunar, la última antes del bosque."
+    },
+    "3140": {
+      "description": "Fondos de charcas, lagunas y remansos de agua clara y dura, tapizados por praderas sumergidas de unas algas verdes grandes que arraigan en el limo y ramifican en pisos, con aspecto de cola de caballo. Solo prosperan donde el agua es transparente y pobre en nutrientes, así que su presencia es en sí misma una señal de que está limpia. Un vertido de abonos o un enturbiamiento que se prolongue las hacen desaparecer."
     },
     "3170": {
       "description": "Charcas y navajos que se llenan con las lluvias y se secan por completo en verano, a veces en pocas semanas. Ese secado no es un fallo, es parte del hábitat: al no haber peces, pueden criar anfibios y crustáceos diminutos que resisten enterrados como huevo o quiste hasta la siguiente lluvia. La vegetación es de plantas menudas que aprovechan el barro húmedo del fondo cuando el agua se retira."
@@ -83,6 +89,9 @@
     },
     "6420": {
       "description": "Juncales altos sobre suelos que mantienen humedad en profundidad todo el verano, aunque la superficie esté seca: bordes de acequia, manantiales, vegas y fondos de valle. El junco churrero (Scirpoides holoschoenus) forma macollas robustas entre las que crecen menta, lirios y a menudo orquídeas. Es un oasis de verde en pleno agosto, y desaparece en cuanto se drena o se capta el agua que lo alimenta."
+    },
+    "7220": {
+      "description": "Rezumaderos y paredes por donde el agua brota cargada de cal y la va depositando sobre los musgos y helechos que los tapizan, hasta formar una roca porosa y ligera llamada toba. La fabrica la propia vegetación y lo hace muy despacio, así que la roca y los seres vivos que la levantan son inseparables. Basta con que el manantial se seque o se capte su agua para que el proceso se detenga."
     },
     "8210": {
       "description": "Paredes y cortados de roca caliza en los que la vegetación no vive sobre el suelo, sino dentro de las fisuras. Son plantas de raíz larguísima y crecimiento lentísimo, agarradas a la grieta, que aprovechan el agua que escurre por la pared. Los roquedos han quedado a salvo del arado y del ganado durante milenios, y por eso concentran una proporción altísima de especies que no existen en ningún otro lugar."

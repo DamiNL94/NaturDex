@@ -54,7 +54,7 @@ const { readDbf } = require('../lib/dbf');
 const { readPolygons, utmToLonLat } = require('../lib/shapefile');
 const { bbox, bboxOverlap, inRing, signedArea } = require('../lib/geo');
 const { resolvePark, readBoundaryPolygons } = require('../lib/registry');
-const { arg, flag: has, die } = require('../lib/cli');
+const { arg, num, flag: has, die } = require('../lib/cli');
 const { ROOT } = require('../lib/io');
 
 // Caja envolvente de un MultiPolygon (todas las piezas), y punto dentro del límite teniendo en
@@ -106,7 +106,7 @@ function husoDelPrj(shpPath) {
   return m ? parseInt(m[1], 10) : null;
 }
 const ZONE_PRJ = husoDelPrj(SHP);
-const ZONE = flag('--zone') ? parseInt(flag('--zone'), 10) : ZONE_PRJ;
+const ZONE = num('zone', ZONE_PRJ);
 if (!Number.isInteger(ZONE) || ZONE < 27 || ZONE > 31)
   die(`No he podido determinar el huso UTM. El .prj no lo declara de forma reconocible: pásalo con --zone. Valor obtenido: ${ZONE}`);
 

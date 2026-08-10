@@ -68,7 +68,36 @@ function centroide(polys) {
   if (dentro) return c;
   // Si cae fuera (hábitat troceado), se usa el centroide de la pieza mayor.
   const mayor = polys.reduce((m, p) => (ringArea(p[0]) > ringArea(m[0]) ? p : m), polys[0]);
-  return centroide([mayor]) || c;
+  // Ojo: con una sola pieza, `mayor` ES `polys[0]`, así que volver a llamar aquí sería recursión
+  // infinita. Pasa de verdad —un hábitat de ribera es una banda sinuosa cuyo centroide de área cae
+  // fuera de su propio polígono—, así que ese caso se resuelve con un punto interior garantizado.
+  if (polys.length > 1) {
+    const c2 = centroide([mayor]);
+    if (c2) return c2;
+  }
+  return puntoInterior(mayor) || c;
+}
+
+// Punto garantizado DENTRO del polígono, con sus huecos: se traza una horizontal a media altura y
+// se toma el centro del tramo interior más ancho. Es el criterio de `ST_PointOnSurface` de PostGIS.
+function puntoInterior(poly) {
+  const ys = poly[0].map(p => p[1]);
+  const y = (Math.min(...ys) + Math.max(...ys)) / 2;
+  const cortes = [];
+  for (const anillo of poly) {
+    for (let i = 0, j = anillo.length - 1; i < anillo.length; j = i++) {
+      const [x1, y1] = anillo[j], [x2, y2] = anillo[i];
+      if ((y1 > y) === (y2 > y)) continue;   // el segmento no cruza la horizontal
+      cortes.push(x1 + ((y - y1) / (y2 - y1)) * (x2 - x1));
+    }
+  }
+  cortes.sort((a, b) => a - b);
+  let centro = null, ancho = -1;
+  for (let i = 0; i + 1 < cortes.length; i += 2) {
+    const d = cortes[i + 1] - cortes[i];
+    if (d > ancho) { ancho = d; centro = (cortes[i] + cortes[i + 1]) / 2; }
+  }
+  return centro === null ? null : [centro, y];
 }
 
 // Paleta de la app: color estable derivado del código HIC, para que un mismo hábitat salga igual en

@@ -10,9 +10,19 @@
     "",
     "Regla para añadir una entrada: hace falta una fuente que diga que el hábitat NO está declarado en",
     "ese espacio — el formulario normalizado del LIC/ZEC o el plan de gestión. Un hábitat que sólo",
-    "resulte dudoso NO se excluye: se deja con reviewNote."
+    "resulte dudoso NO se excluye: se deja con reviewNote.",
+    "",
+    "SEGUNDO MOTIVO, de producto y no normativo (añadido el 2026-08-09): superficie residual. Un",
+    "hábitat con una presencia testimonial ocupa en la app la misma ficha y la misma entrada de",
+    "leyenda que uno que cubre media sierra, y eso desinforma. No sustituye a la regla de arriba ni",
+    "afirma que el hábitat no esté declarado: dice que no se cataloga aquí. Se aplica sólo por",
+    "decisión explícita, nunca automáticamente, y la entrada debe traer la superficie medida y su",
+    "porcentaje sobre el espacio para que la decisión se pueda revisar."
   ],
   "parques": {
+    "carrascoy-y-el-valle": {
+      "1430": "Superficie residual (segundo motivo del _nota): 0,2 ha, el 0,00 % de las 16.685,8 ha del espacio. Es el menor de los 16 hábitats cartografiados y seis veces más pequeño que el siguiente (1520, 1,2 ha). Son dos manchas en extremos opuestos del parque, a unos 28 km una de otra (37.8077/-1.3539 y 37.9513/-1.0653), y sólo 13 de sus 27 vértices caen dentro del LIC ES6200002. NO consta que el formulario normalizado del LIC no lo declare: no se pudo consultar (el visor SDF de la EEA y EUNIS sirven la ficha por JavaScript y su API devuelve la plantilla vacía), así que esto es exclusión por superficie y no por norma. Si algún día se lee el formulario y lo declara, la decisión sigue siendo válida como decisión de producto, pero conviene anotarlo aquí."
+    },
     "cabo-cope-puntas-calnegre": {
       "9560": "No figura en el formulario normalizado de ninguno de los dos LIC del parque (ES6200031 Cabo Cope y ES6200012 Calnegre): ambos catalogan el sabinar de sabina mora como 5210, que ya está cartografiado. El recinto procede de la BDN 1997, lleva la asociación Chamaeropo humilis-Juniperetum phoeniceae (la del 5210 aquí) y solapa 46,7 de sus 61,2 ha con el polígono del 5210."
     }

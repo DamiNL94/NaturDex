@@ -111,7 +111,12 @@ function inHabitat(x, y, hab) {
 // ocurrencias seguidas.
 const httpGetJson = (pathQuery) => require('./lib/http').getJson(gbif.HOST, pathQuery, { agent: 'gbif-habitats', timeoutMs: 45000 });
 
-async function downloadOccurrences(bbox) {
+// Cada cuántas páginas se vuelca la caché a disco. El barrido de un parque grande son cientos de
+// páginas contra un servicio público que devuelve 503 con cierta frecuencia; volcando cada pocas,
+// un corte cuesta esas páginas y no la pasada entera.
+const PAGINAS_POR_VOLCADO = 10;
+
+async function downloadOccurrences(bbox, cacheFile, previo) {
   const margin = 0.001;
   const latR = `${(bbox.minY - margin).toFixed(5)},${(bbox.maxY + margin).toFixed(5)}`;
   const lonR = `${(bbox.minX - margin).toFixed(5)},${(bbox.maxX + margin).toFixed(5)}`;
@@ -119,9 +124,31 @@ async function downloadOccurrences(bbox) {
     `&decimalLatitude=${encodeURIComponent(latR)}&decimalLongitude=${encodeURIComponent(lonR)}`;
   const first = await httpGetJson(`${base}&limit=0`);
   const total = Math.min(first.count || 0, MAX_OCC);
-  const occ = [];
-  for (let offset = 0; offset < total; offset += PAGE) {
-    const page = await httpGetJson(`${base}&limit=${PAGE}&offset=${offset}`);
+
+  // Reanudación: si hay una descarga a medias del MISMO bbox y el mismo tope, se sigue desde donde
+  // se quedó en vez de volver a empezar.
+  const mismoBarrido = previo && previo.parcial && previo.bbox === base && previo.max === MAX_OCC;
+  const occ = mismoBarrido ? previo.occ : [];
+  let inicio = mismoBarrido ? previo.offset : 0;
+  if (mismoBarrido) console.log(`Reanudando descarga en ${inicio}/${total} (${occ.length} ocurrencias ya guardadas).`);
+
+  const volcar = (offset, parcial) => fs.writeFileSync(cacheFile, JSON.stringify({
+    total: first.count || 0, capped: (first.count || 0) > MAX_OCC, occ, parcial, offset, bbox: base, max: MAX_OCC,
+  }));
+
+  let pagina = 0;
+  for (let offset = inicio; offset < total; offset += PAGE) {
+    let page;
+    try {
+      page = await httpGetJson(`${base}&limit=${PAGE}&offset=${offset}`);
+    } catch (e) {
+      // Lo descargado hasta aquí NO se tira: se deja en la caché marcada como parcial para que la
+      // siguiente ejecución reanude. El error se propaga igual.
+      volcar(offset, true);
+      process.stdout.write('\n');
+      console.error(`✖ corte en el offset ${offset}. Lo descargado queda en ${path.basename(cacheFile)}; relanza para reanudar.`);
+      throw e;
+    }
     for (const r of page.results || []) {
       if (typeof r.decimalLatitude !== 'number' || typeof r.decimalLongitude !== 'number') continue;
       occ.push({
@@ -133,21 +160,27 @@ async function downloadOccurrences(bbox) {
     }
     process.stdout.write(`\r  descargando ocurrencias… ${Math.min(offset + PAGE, total)}/${total}`);
     if (page.endOfRecords) break;
+    if (++pagina % PAGINAS_POR_VOLCADO === 0) volcar(offset + PAGE, true);
     await sleep(THROTTLE_MS);
   }
   process.stdout.write('\n');
+  volcar(total, false);
   return { total: first.count || 0, capped: (first.count || 0) > MAX_OCC, occ };
 }
 
 async function getOccurrences(park, bbox) {
   const cacheFile = path.join(REPO_ROOT, `gbif-cache-${park.slug}.json`);
-  if (!REFRESH && fs.existsSync(cacheFile)) {
-    const c = JSON.parse(fs.readFileSync(cacheFile, 'utf8'));
-    console.log(`Caché: ${c.occ.length} ocurrencias (${path.basename(cacheFile)}). Usa --refresh para volver a descargar.`);
-    return c;
+  let previo = null;
+  if (fs.existsSync(cacheFile)) {
+    previo = JSON.parse(fs.readFileSync(cacheFile, 'utf8'));
+    // Una caché COMPLETA se reutiliza salvo --refresh; una PARCIAL nunca se sirve como resultado
+    // (daría un catálogo a medias sin avisar): sólo vale para reanudar.
+    if (!REFRESH && !previo.parcial) {
+      console.log(`Caché: ${previo.occ.length} ocurrencias (${path.basename(cacheFile)}). Usa --refresh para volver a descargar.`);
+      return previo;
+    }
   }
-  const data = await downloadOccurrences(bbox);
-  fs.writeFileSync(cacheFile, JSON.stringify(data));
+  const data = await downloadOccurrences(bbox, cacheFile, REFRESH ? null : previo);
   console.log(`Descargadas y cacheadas en ${path.basename(cacheFile)}.`);
   return data;
 }
