@@ -8,8 +8,9 @@
 | `npm run species:check / :extract / :apply` | Catálogo universal: informar / volcar / sincronizar a todos los espacios (+ SQL) |
 | `npm run species:poda` | `:extract` que además **retira** las entradas del catálogo que ya no usa ningún parque (nombres que dejó atrás un renombrado). Sin él solo se listan |
 | `npm run habitats:build / :merge` | Capa 2 desde la cartografía del MITECO |
-| `npm run atlas:hic` | Especies características por HIC desde el Atlas |
-| `npm run species:build -- --park <slug> [--dry]` | **Capa 3**: escribe las fichas de especie en `park.json` desde la selección aprobada. Ensambla lo que ya hay en el repo; no sale a la red. Idempotente |
+| `npm run atlas:hic -- --atlas <atlas.txt> --park <slug>` | Especies características por HIC desde el Atlas, **cruzadas con el catálogo ya escrito**. Es un paso posterior a la Capa 3: en un espacio sin especies da 0 por construcción |
+| `npm run species:seleccion -- --park <slug> --atlas <atlas.txt>` | **La lista aprobada** que consume `species:build` → `out/<slug>-seleccion-especies.json` + informe. Cuatro filtros (constancia GBIF, autoctonía, presencia, alcance taxonómico) y **reconciliación por `eidosTaxonId`**, que es lo que impide que el sinónimo y el nombre aceptado de GBIF entren como dos especies. `--clases`, `--todas-las-clases`, `--min-occ`, `--min-habitats` |
+| `npm run species:build -- --park <slug> [--dry] [--podar]` | **Capa 3**: escribe las fichas de especie en `park.json` desde la selección aprobada. Ensambla lo que ya hay en el repo; no sale a la red. Idempotente. `--podar` retira las fichas que la selección ya no respalda —hace falta tras un renombrado, o el nombre viejo se queda como especie fantasma— |
 | `npm run images:species / :habitats / :invasoras` | Fotos con atribución desde Wikimedia |
 | `npm run contenido:invasoras` | Fichas de invasoras desde EIDOS |
 | `npm run invasoras:eei` | Catálogo EEI ∩ presencia GBIF por territorio |

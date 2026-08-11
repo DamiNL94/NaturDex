@@ -1,0 +1,243 @@
+{
+ "park": "sierra-de-la-pila",
+ "generado": "Atlas y Manual de los Hábitats de España (MITECO) ∩ catálogo del parque",
+ "hic": {
+  "1520": {
+   "habitat": "vegetacion-gipsicola-iberica-1520",
+   "especies": [
+    "Astragalus alopecuroides",
+    "Helianthemum squamatum"
+   ]
+  },
+  "4090": {
+   "habitat": "matorrales-mediterraneos-y-4090",
+   "especies": [
+    "Centaurea boissieri",
+    "Armeria filicaulis",
+    "Thymus funkii",
+    "Genista cinerea"
+   ]
+  },
+  "5210": {
+   "habitat": "matorrales-arborescentes-de-5210",
+   "especies": [
+    "Genista versicolor",
+    "Genista cinerea"
+   ]
+  },
+  "5330": {
+   "habitat": "matorrales-termomediterraneos-y-5330",
+   "especies": [
+    "Halimium atriplicifolium",
+    "Helianthemum hirtum",
+    "Sideritis leucantha",
+    "Teucrium franchetianum",
+    "Thymus funkii",
+    "Genista cinerea"
+   ]
+  },
+  "6110": {
+   "habitat": "prados-calcareos-carsticos-6110",
+   "especies": []
+  },
+  "6220": {
+   "habitat": "zonas-subestepicas-de-6220",
+   "especies": [
+    "Myosotis ramosissima",
+    "Scorpiurus muricatus",
+    "Linaria oblongifolia",
+    "Phlomis lychnitis",
+    "Lygeum spartum",
+    "Helictotrichon filifolium",
+    "Lapiedra martinezii",
+    "Stipa lagascae",
+    "Festuca capillifolia"
+   ]
+  },
+  "8210": {
+   "habitat": "pendientes-rocosas-calcicolas-8210",
+   "especies": [
+    "Linaria cavanillesii",
+    "Sonchus tenerrimus",
+    "Campanula mollis",
+    "Polypodium cambricum"
+   ]
+  },
+  "9340": {
+   "habitat": "encinares-de-quercus-9340",
+   "especies": []
+  },
+  "9560": {
+   "habitat": "bosques-endemicos-de-9560",
+   "especies": []
+  },
+  "92D0": {
+   "habitat": "galerias-y-matorrales-92D0",
+   "especies": []
+  }
+ },
+ "links": [
+  {
+   "code": "5210",
+   "habitat_slug": "matorrales-arborescentes-de-5210",
+   "scientific_name": "Genista versicolor",
+   "atlas_name": "Genista versicolor"
+  },
+  {
+   "code": "5210",
+   "habitat_slug": "matorrales-arborescentes-de-5210",
+   "scientific_name": "Genista cinerea",
+   "atlas_name": "Genista cinerea subsp. valentina"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Halimium atriplicifolium",
+   "atlas_name": "Halimium atriplicifolium subsp. serpentinicola"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Helianthemum hirtum",
+   "atlas_name": "Helianthemum hirtum subsp. bethuricum"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Sideritis leucantha",
+   "atlas_name": "Sideritis leucantha subsp. incana"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Teucrium franchetianum",
+   "atlas_name": "Teucrium franchetianum"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Thymus funkii",
+   "atlas_name": "Thymus funkii subsp. funkii"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Genista cinerea",
+   "atlas_name": "Genista cinerea subsp. murcica"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Myosotis ramosissima",
+   "atlas_name": "Myosotis ramosissima subsp. gracillima"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Scorpiurus muricatus",
+   "atlas_name": "Scorpiurus muricatus"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Linaria oblongifolia",
+   "atlas_name": "Linaria oblongifolia"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Phlomis lychnitis",
+   "atlas_name": "Phlomis lychnitis"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Lygeum spartum",
+   "atlas_name": "Lygeum spartum"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Helictotrichon filifolium",
+   "atlas_name": "Helictotrichon filifolium subsp. filifolium"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Lapiedra martinezii",
+   "atlas_name": "Lapiedra martinezii"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Stipa lagascae",
+   "atlas_name": "Stipa lagascae var. australis"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Festuca capillifolia",
+   "atlas_name": "Festuca capillifolia"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Linaria cavanillesii",
+   "atlas_name": "Linaria cavanillesii"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Sonchus tenerrimus",
+   "atlas_name": "Sonchus tenerrimus var. dianae"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Campanula mollis",
+   "atlas_name": "Campanula mollis"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Polypodium cambricum",
+   "atlas_name": "Polypodium cambricum"
+  },
+  {
+   "code": "1520",
+   "habitat_slug": "vegetacion-gipsicola-iberica-1520",
+   "scientific_name": "Astragalus alopecuroides",
+   "atlas_name": "Astragalus alopecuroides subsp. grosii"
+  },
+  {
+   "code": "1520",
+   "habitat_slug": "vegetacion-gipsicola-iberica-1520",
+   "scientific_name": "Helianthemum squamatum",
+   "atlas_name": "Helianthemum squamatum"
+  },
+  {
+   "code": "4090",
+   "habitat_slug": "matorrales-mediterraneos-y-4090",
+   "scientific_name": "Centaurea boissieri",
+   "atlas_name": "Centaurea boissieri subsp. funkii"
+  },
+  {
+   "code": "4090",
+   "habitat_slug": "matorrales-mediterraneos-y-4090",
+   "scientific_name": "Armeria filicaulis",
+   "atlas_name": "Armeria filicaulis subsp. trevenqueana"
+  },
+  {
+   "code": "4090",
+   "habitat_slug": "matorrales-mediterraneos-y-4090",
+   "scientific_name": "Thymus funkii",
+   "atlas_name": "Thymus funkii subsp. sabulicola"
+  },
+  {
+   "code": "4090",
+   "habitat_slug": "matorrales-mediterraneos-y-4090",
+   "scientific_name": "Genista cinerea",
+   "atlas_name": "Genista cinerea subsp. speciosa"
+  }
+ ]
+}

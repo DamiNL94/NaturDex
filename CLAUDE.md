@@ -26,7 +26,7 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    `fix-estado-conservacion-iepnb` y `sync-species-catalog` no deben cambiar un byte en un segundo
    pase. Si un segundo pase produce diff, hay un problema.
 
-## 2. Cuatro cosas que fallan EN VERDE
+## 2. Cinco cosas que fallan EN VERDE
 
 Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 [`Docs/runbook/ORDEN-DE-OPERACIONES.md`](Docs/runbook/ORDEN-DE-OPERACIONES.md).
@@ -38,6 +38,10 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
   `npm run species:poda`.
 - **La API tiene prioridad sobre el `park.json` empaquetado.** Con backend desplegado, tocar solo el
   frontend no cambia lo que ve el usuario: hay que generar y aplicar también el SQL.
+- **Un extractor de PDF distinto = cero resultados sin aviso.** Le pasó al Atlas de Hábitats, que solo
+  se sabía leer en el formato de `pdftotext -layout`. Si una herramienta que lee texto extraído
+  devuelve 0, sospecha del formato antes que del dato — y haz que se queje, como hace ya
+  `lib/atlas.js`.
 
 ---
 

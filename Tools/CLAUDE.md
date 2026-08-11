@@ -20,6 +20,7 @@ errores de red que no explican nada, `npm run red:check` lo aclara en diez segun
 | `eidos.js` | `resolveTaxon` `conservationByScope` `legalStatus` `commonName` `rows` `nameMatches` | Cliente de EIDOS/IEPNB. **`resolveTaxon` es la clave maestra del modelo.** `rows()` normaliza a array porque PostgREST devuelve 200 con un objeto de error |
 | `gbif.js` | `matchName` `searchOccurrences` `esRangoEspecifico` | `matchName` devuelve el **rango**: una `usageKey` de género o familia no identifica ninguna especie |
 | `registry.js` | `resolvePark` `readBoundaryPolygons` | Localiza los geo de un espacio. Acepta `available` **y** `basic` (un N1 ascendiendo a N2 es el caso de uso) |
+| `atlas.js` | `especiesCaracteristicas` `binomio` | Lee el «Atlas y Manual de los Hábitats» (PDF → texto) por código HIC. Está aquí porque lo usan `atlas-hic-especies.js` y `build-species-seleccion.js`, y porque **tolera los dos formatos de extracción**: cuando el parser vivía dentro del primero y daba por hecho el de `pdftotext -layout`, con cualquier otro devolvía **cero especies en silencio** |
 | `geo.js` `shapefile.js` `dbf.js` | Punto-en-polígono, áreas, parser `.shp` + reproyección UTM, lector dBASE | Sin dependencias |
 | `pmtiles.js` | Lectura de paquetes de teselas | Permite barrer POIs sin red, desde el `base.pmtiles` del parque |
 | `wikimedia.js` | Resolución de foto de un taxón contra Wikidata/Wikipedia/Commons | Lo delicado no es pedir la foto sino **descartar** la que no sirve |

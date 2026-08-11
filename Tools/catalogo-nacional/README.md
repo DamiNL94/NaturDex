@@ -178,7 +178,8 @@ generan ficheros en `out/` para revisar antes de adoptarlos.
 
 | Script | npm | Qué hace |
 |---|---|---|
-| `atlas-hic-especies.js` | `atlas:hic` | Atlas (PDF → `pdftotext -layout`) → especies características por HIC = evidencia `caracteristica` |
+| `atlas-hic-especies.js` | `atlas:hic` | Atlas (PDF → texto) ∩ **catálogo ya escrito** del espacio → evidencia `caracteristica`. Es un paso POSTERIOR a la Capa 3: en un espacio sin especies devuelve 0 por construcción. El parser vive en `lib/atlas.js` |
+| `build-species-seleccion.js` | `species:seleccion` | La **selección aprobada** (`out/<slug>-seleccion-especies.json`), que es lo que consume `build-species-n2.js`. Cuatro filtros: constancia en GBIF ∩ polígonos, autoctonía (Lista Patrón), presencia considerable salvo respaldo documental, y alcance taxonómico del catálogo. Cachea EIDOS |
 | `Tools/gbif-habitats.js` | `gbif:habitats` | GBIF ∩ polígonos de hábitat + análisis de ruido. Cachea las ocurrencias en disco (`--refresh` fuerza la descarga) |
 | `reconcile-taxa.js` | `taxones:reconcilia` | Tabla maestra `eidos_taxonid` ↔ `gbif_speciesKey`, resolviendo sinonimias. Avisa de las claves de GBIF de rango superior a especie |
 | `Tools/eidos-diff.js` | `eidos:diff` | Coteja la BD viva contra EIDOS (solo lectura). `--ccaa` elige el catálogo autonómico |

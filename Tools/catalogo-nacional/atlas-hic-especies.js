@@ -45,37 +45,21 @@ const hicSet = new Set(HIC);
 const codeToSlug = {}; for (const h of park.habitats) if (h.code) codeToSlug[h.code] = h.id;
 
 // --- 1) Extraer "Especies características" por HIC del Atlas ---------------------------------------
-const lines = fs.readFileSync(atlasPath, 'utf8').split(/\r?\n/);
-const codeRe = /\b(\d{2}[A-Z]\d|\d{4})\*?\b/g;
-function nearestHic(idx) {
-  for (let i = idx; i >= 0 && i > idx - 12; i--) {
-    const l = lines[i]; let m, found = null; codeRe.lastIndex = 0;
-    while ((m = codeRe.exec(l))) if (hicSet.has(m[1])) found = m[1];
-    if (found && new RegExp(found + '\\*?\\s+[A-Za-zÁÉÍÓÚÑ]').test(l)) return found;
-  }
-  return null;
-}
-const clean = s => s.replace(/\s+/g, ' ').replace(/[.;,]+$/, '').trim();
-function splitSpecies(block) {
-  return block.split(/,|;| y (?=[A-Z])/).map(clean)
-    .filter(x => /^[A-ZÁÉÍÓÚ][a-záéíóúü-]+ [a-z]/.test(x))
-    .filter((v, i, a) => a.indexOf(v) === i);
-}
-const atlasByHic = {}; HIC.forEach(c => atlasByHic[c] = new Set());
-for (let i = 0; i < lines.length; i++) {
-  const m = lines[i].match(/Especies características\s+(.+)/);
-  if (!m) continue;
-  const code = nearestHic(i);
-  if (code) splitSpecies(m[1]).forEach(sp => atlasByHic[code].add(sp));
+// El parser vive en Tools/lib/atlas.js: lo comparte con build-species-seleccion.js y, sobre todo,
+// tolera los dos formatos de extracción del PDF. Cuando estaba aquí dentro daba por hecho el de
+// `pdftotext -layout` y con cualquier otro devolvía CERO especies sin decir nada.
+const { especiesCaracteristicas, binomio: binomial } = require('../lib/atlas');
+const atlas = especiesCaracteristicas(atlasPath, hicSet);
+const atlasByHic = {}; HIC.forEach(c => atlasByHic[c] = atlas.porHic.get(c) || new Set());
+
+// Un Atlas del que no sale ni una especie es un fallo de lectura del PDF, no un catálogo sin flora:
+// se avisa en vez de seguir y escribir un fichero de cero enlaces que parece un resultado.
+if (atlas.bloques && !atlas.bloquesConEspecies) {
+  die(`El Atlas tiene ${atlas.bloques} bloques de «Especies características» y no se ha podido leer ` +
+      'ninguna especie de ellos. Revisa la extracción del PDF antes de usar la salida.');
 }
 
 // --- 2) Cruzar con el catálogo del parque por binomio (género + raíz del epíteto) -----------------
-function binomial(name) {
-  const w = String(name).trim().split(/\s+/); if (w.length < 2) return null;
-  const g = w[0].toLowerCase().replace(/[^a-záéíóúü-]/g, '');
-  const ep = w[1].toLowerCase().replace(/[^a-záéíóúü-]/g, '').replace(/(us|um|a|os|as|is|e)$/, '');
-  return g + ' ' + ep;
-}
 const catByBin = new Map();
 for (const s of park.species) { const b = binomial(s.scientificName); if (b) catByBin.set(b, s); }
 
