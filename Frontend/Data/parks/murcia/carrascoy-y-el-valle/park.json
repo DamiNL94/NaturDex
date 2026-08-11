@@ -591,7 +591,7 @@
       "image": null,
       "audio": null,
       "audioTranscript": null,
-      "reviewNote": null,
+      "reviewNote": "Sin especies en el catálogo, y el hueco es real: el barrido de GBIF ∩ polígonos no encuentra NINGUNA ocurrencia dentro de sus 1,2 ha, que es el recinto más pequeño del espacio. Sin constancia dentro del polígono no entra ninguna especie (filtro 1 de la selección), así que el hueco se cierra con trabajo de campo, no con más fuentes.",
       "speciesIds": []
     },
     {

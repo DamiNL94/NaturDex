@@ -856,7 +856,7 @@
       "image": null,
       "audio": null,
       "audioTranscript": null,
-      "reviewNote": null,
+      "reviewNote": "Sin especies en el catálogo. El barrido de GBIF ∩ polígonos da 46 ocurrencias y 29 especies dentro de sus 6,6 ha, pero **26 de las 29 son aves**, que en este catálogo van al apartado de la ZEPA y no cuelgan de ningún hábitat; las otras tres son plantas con UNA ocurrencia cada una (*Helianthemum cinereum*, *Viburnum tinus* y *Pistacia terebinthus*), y las dos últimas sí están fichadas en el espacio. No se enlazan aquí porque la Capa 3 de Sierra Espuña se montó antes de `build-species-n2.js` y sus `habitatIds` NO salen de este barrido: mezclarlos dejaría el espacio con dos métodos distintos y sin decirlo. Se cierra rehaciendo su Capa 3 con el pipeline actual.",
       "speciesIds": []
     },
     {

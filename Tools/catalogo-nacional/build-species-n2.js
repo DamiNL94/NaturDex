@@ -309,7 +309,7 @@ function main() {
   let siguienteId = Math.max(0, ...[...previas.values()].map(s => Number(s.id) || 0)) + 1;
   const species = [];
   const avisos = [];
-  const sinGbif = [], taxonIdDudoso = [], sinTaxonId = [], sinRarezaLocal = [];
+  const sinGbif = [], hiloPerdido = [], taxonIdDudoso = [], sinTaxonId = [], sinRarezaLocal = [];
 
   for (const sel of conFicha) {
     const sci = sel.scientificName;
@@ -317,17 +317,30 @@ function main() {
     const antes = previas.get(sci);
     // El barrido de GBIF indexa por el nombre con el que GBIF sirve las ocurrencias, que no siempre
     // es el que usa el catálogo: la curruca rabilarga está fichada como `Curruca undata` y GBIF la
-    // devuelve como `Sylvia undata`. La selección lo deja anotado en `sinonimoDe`.
+    // devuelve como `Sylvia undata`. La selección lo deja anotado en `sinonimosFusionados`
+    // (`sinonimoDe` es la forma que usaban las selecciones anteriores a la reconciliación
+    // automática, y se sigue leyendo para no romper las que ya están escritas).
     //
     // El ORDEN de búsqueda importa y no es el que parece: se mira PRIMERO el nombre con el que se
     // aprobó la selección, porque de ese registro salió el `gbifOccurrences` que se revisó. GBIF
     // llega a servir el mismo taxón bajo dos nombres y con dos claves distintas —*Bupleurum
     // gibraltaricum* (23 ocurrencias) y *Bupleurum gibraltarium* (34)—, así que buscar por el nombre
     // aceptado dejaría la clave de un registro con el recuento y los hábitats de otro.
-    const alias = [sel.nombreEnLaSeleccion, sel.sinonimoDe, sci].filter(Boolean)
-      .filter((n, i, a) => a.indexOf(n) === i);
+    const alias = [sel.nombreEnLaSeleccion, ...(sel.sinonimosFusionados || []), sel.sinonimoDe, sci]
+      .filter(Boolean).filter((n, i, a) => a.indexOf(n) === i);
     const g = alias.map(n => gbif.porNombre.get(n)).find(Boolean) || null;
-    if (!g) sinGbif.push(sci);
+    // No encontrar el barrido no siempre significa lo mismo, y la diferencia es la que costó cinco
+    // fichas en Sierra de la Pila. Si la selección NO cuenta hábitats, la especie viene de otra vía y
+    // quedarse sin enlaces es coherente. Si la selección dice «9 hábitats» —cifra que solo puede
+    // haber salido de este mismo barrido— y aquí no aparece, entonces se ha perdido el hilo entre el
+    // nombre del catálogo y el nombre de GBIF, y escribir la ficha con `habitatIds` vacío deja un
+    // `source` que afirma lo contrario que el dato. Eso no es un aviso: es una contradicción.
+    if (!g && sel.habitats > 0) {
+      hiloPerdido.push(`${sci} · la selección le cuenta ${sel.habitats} hábitat(s) y ` +
+        `${sel.gbifOccurrences} ocurrencia(s); alias probados: ${alias.join(', ')}`);
+    } else if (!g) {
+      sinGbif.push(sci);
+    }
     // Si el barrido trae el taxón por partida doble, la cifra de este parque se queda corta: consta.
     const duplicadoGbif = alias.filter(n => gbif.porNombre.has(n) && gbif.porNombre.get(n) !== g)
       .map(n => `*${n}* (clave ${gbif.porNombre.get(n).speciesKey}, ` +
@@ -475,6 +488,14 @@ function main() {
       '  anterior al campo; vuelve a pasar `npm run species:seleccion` para que las destacadas de este\n' +
       '  espacio salgan del criterio de verdad y no del heredado.');
   if (sinGbif.length) console.log(`\n⚠ ${sinGbif.length} sin entrada en el barrido de GBIF (quedan sin hábitat ni clave): ${sinGbif.join(', ')}`);
+  if (hiloPerdido.length) {
+    console.error(`\n✖ ${hiloPerdido.length} ficha(s) escritas SIN enlaces a hábitat aunque la selección se los cuenta.\n` +
+      '  El barrido no aparece bajo ninguno de sus alias, así que se ha perdido el hilo entre el nombre\n' +
+      '  del catálogo y el nombre con el que GBIF sirve el taxón. La ficha queda con un `source` que\n' +
+      '  afirma lo que `habitatIds` desmiente. Se arregla anotando el nombre de GBIF en\n' +
+      '  `sinonimosFusionados` (lo hace `npm run species:seleccion` al reconciliar):');
+    hiloPerdido.forEach(t => console.error('  · ' + t));
+  }
   if (sinTaxonId.length) console.log(`\n⚠ ${sinTaxonId.length} sin eidosTaxonId reutilizable de otro parque: ${sinTaxonId.join(', ')}`);
   if (taxonIdDudoso.length) {
     console.log(`\n⚠ ${taxonIdDudoso.length} identificador(es) que los demás parques no tienen igual. NO se elige uno:\n` +
@@ -483,6 +504,10 @@ function main() {
   }
   avisos.forEach(a => console.log('\n⚠ ' + a));
   if (DRY) console.log('\nSimulación: no se ha tocado nada.');
+  // Salida en rojo mientras queden contradicciones, igual que `npm run taxones:duplicados`. Lo
+  // escrito se queda —revertirlo perdería el resto del trabajo— pero la ejecución no puede darse por
+  // buena: es exactamente el aviso que se pasó por alto la primera vez.
+  if (hiloPerdido.length) process.exitCode = 1;
 }
 
 /**

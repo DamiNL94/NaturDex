@@ -253,7 +253,10 @@
       "yaFichadaEn": "cabo-cope-puntas-calnegre",
       "normas": [],
       "origen": "Especie nativa",
-      "eidosTaxonId": 7647
+      "eidosTaxonId": 7647,
+      "sinonimosFusionados": [
+        "Salvia rosmarinus"
+      ]
     },
     {
       "scientificName": "Cistus albidus",
@@ -825,7 +828,10 @@
       "yaFichadaEn": "carrascoy-y-el-valle",
       "normas": [],
       "origen": "Especie nativa",
-      "eidosTaxonId": 5037
+      "eidosTaxonId": 5037,
+      "sinonimosFusionados": [
+        "Halimium atriplicifolium"
+      ]
     },
     {
       "scientificName": "Strix aluco",
@@ -996,7 +1002,10 @@
       "normas": [],
       "origen": "Especie nativa (verificado por el nombre aceptado: Petrosedum sediforme (Jacq.) Grulich subsp. sediforme)",
       "nombreAceptadoEidos": "Petrosedum sediforme (Jacq.) Grulich subsp. sediforme",
-      "eidosTaxonId": 95304
+      "eidosTaxonId": 95304,
+      "sinonimosFusionados": [
+        "Petrosedum sediforme"
+      ]
     },
     {
       "scientificName": "Carex halleriana",
@@ -3101,7 +3110,10 @@
       ],
       "yaFichadaEn": "cabo-cope-puntas-calnegre",
       "normas": [],
-      "origen": null
+      "origen": null,
+      "sinonimosFusionados": [
+        "Olea europaea"
+      ]
     },
     {
       "scientificName": "Astragalus monspessulanus",
@@ -3207,7 +3219,10 @@
       "yaFichadaEn": "carrascoy-y-el-valle",
       "normas": [],
       "origen": "Especie nativa",
-      "eidosTaxonId": 2953
+      "eidosTaxonId": 2953,
+      "sinonimosFusionados": [
+        "Calicotome villosa"
+      ]
     },
     {
       "scientificName": "Veronica praecox",

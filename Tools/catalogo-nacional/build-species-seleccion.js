@@ -182,6 +182,15 @@ function candidatos() {
  * Renombrar NO es gratis y por eso solo se hace dentro de este paso: la clave de `data/contenido/` y
  * la del catálogo universal van por nombre científico (CLAUDE.md §2). Aquí todavía no hay nada
  * escrito, que es justo el momento en que sale barato.
+ *
+ * Y renombrar OBLIGA a dejar escrito de qué nombre se viene, en `sinonimosFusionados`. Es el único
+ * hilo que une la ficha con el barrido de GBIF, que está indexado por el nombre que sirve GBIF y no
+ * por el que acaba usando el catálogo. La primera versión de esto solo lo anotaba cuando el grupo
+ * tenía más de un miembro, y el caso de UN solo candidato renombrado —el más frecuente, porque es el
+ * de la especie que ya está fichada en otro parque con otro nombre— se quedaba sin hilo: en Sierra
+ * de la Pila **cinco plantas perdieron TODOS sus enlaces a hábitat**, entre ellas el romero, con 200
+ * ocurrencias en 9 de los 10 hábitats del espacio. Sin error y sin aviso en el fichero: el `source`
+ * de la ficha seguía diciendo «9 hábitats» mientras `habitatIds` estaba vacío.
  */
 function reconcilia(lista, resueltas, porTaxonId) {
   const grupos = new Map();
@@ -214,6 +223,12 @@ function reconcilia(lista, resueltas, porTaxonId) {
         || miembros[0];
     }
 
+    // Los nombres con los que GBIF sirve este taxón y que NO son el elegido. Se calcula igual tanto
+    // si el grupo tenía varios candidatos como si era uno solo al que se le ha cambiado el nombre:
+    // en los dos casos es lo que hace falta para volver a encontrar el barrido.
+    const otrosNombresGbif = miembros
+      .map(m => m.scientificName).filter(n => n !== elegido.scientificName);
+
     if (miembros.length > 1) {
       const fusionado = {
         ...elegido,
@@ -221,15 +236,16 @@ function reconcilia(lista, resueltas, porTaxonId) {
         hics: new Set(miembros.flatMap(m => [...m.hics])),
       };
       fusionado.habitats = fusionado.hics.size;
-      fusionado.sinonimosFusionados = miembros
-        .map(m => m.scientificName).filter(n => n !== elegido.scientificName);
-      fusiones.push({ taxonid, elegido: elegido.scientificName, fusionados: fusionado.sinonimosFusionados });
+      fusionado.sinonimosFusionados = otrosNombresGbif;
+      fusiones.push({ taxonid, elegido: elegido.scientificName, fusionados: otrosNombresGbif });
       salida.push(fusionado);
     } else {
-      if (elegido.scientificName !== miembros[0].scientificName) {
+      if (otrosNombresGbif.length) {
         fusiones.push({ taxonid, elegido: elegido.scientificName, renombradaDe: miembros[0].scientificName });
+        salida.push({ ...elegido, sinonimosFusionados: otrosNombresGbif });
+      } else {
+        salida.push(elegido);
       }
-      salida.push(elegido);
     }
   }
   return { lista: salida.sort((a, b) => b.gbifOccurrences - a.gbifOccurrences), fusiones };
@@ -549,8 +565,11 @@ async function main() {
     }
     if (r.nombreAceptadoEidos) ficha.nombreAceptadoEidos = r.nombreAceptadoEidos;
     if (r.taxonid) ficha.eidosTaxonId = r.taxonid;
-    // Qué otros nombres de GBIF se han absorbido en esta ficha. Sin esto, alguien que compare la
-    // selección con el barrido de GBIF ve desaparecer especies y no sabe por qué.
+    // Con qué otros nombres sirve GBIF este taxón: los que se han absorbido al fusionar y también el
+    // que traía el candidato si se le ha cambiado el nombre. Sin esto pasan dos cosas, y la segunda
+    // en silencio: alguien que compare la selección con el barrido ve desaparecer especies sin saber
+    // por qué, y `build-species-n2.js` no encuentra el barrido —que está indexado por el nombre de
+    // GBIF— y escribe la ficha sin un solo enlace a hábitat.
     if (c.sinonimosFusionados && c.sinonimosFusionados.length) {
       ficha.sinonimosFusionados = c.sinonimosFusionados;
     }
