@@ -20,7 +20,9 @@ silencio.
 | `habitats-imagenes.sql` | 4 K | `Tools/catalogo-nacional/habitat-images.js` |
 | `invasoras-contenido.sql` | 64 K | `npm run contenido:invasoras` |
 | `invasoras-imagenes.sql` | 8 K | `Tools/catalogo-nacional/invasoras-images.js` |
-| `poi-imagenes.sql` | 8 K | `npm run images:pois` (`poi-images.js`) |
+| `poi-imagenes.sql` | 8 K | `npm run images:pois` (`poi-images.js`). **Con `--park <slug>` reescribe el fichero SOLO con las sentencias de ese espacio**: las de los demás, ya aplicadas, hay que conservarlas |
+| `n3-pois-<slug>.sql` | — | `npm run pois:sql -- --park <slug>` (`build-poi-sql.js`) |
+| `<slug>-n2.sql` | — | `npm run park:sql -- --park <slug>` (`build-park-sql.js`). **Se aplica ANTES que el de POIs**: trae la fila de `parks`, y sin ella todo lo demás carga cero filas en silencio. Los de Cuatro Calas y Sierra Espuña son anteriores al generador y siguen en «cargas puntuales» |
 | `seed.sql` | 692 K | Volcado de datos de arranque |
 | `snapshot.sql` | 692 K | Volcado completo de la BD viva |
 

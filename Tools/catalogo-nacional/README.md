@@ -196,6 +196,50 @@ generan ficheros en `out/` para revisar antes de adoptarlos.
 | `invasoras-eei.js` | `invasoras:eei` | Catálogo EEI (RD 630/2013) ∩ presencia GBIF por territorio |
 | `invasoras-contenido.js` | `contenido:invasoras` | Fichas de invasoras desde EIDOS, limpiando los restos del formulario de origen |
 | `invasoras-images.js` | `images:invasoras` | Sus fotos, misma cadena de resolución que el catálogo |
+| `poi-images.js` | `images:pois` | Foto de cada punto de interés, anclada en la **categoría de Commons del espacio**. Ver abajo qué hacer cuando se agota |
+
+#### Cuando Commons se agota: otras páginas donde buscar la foto de un POI
+
+Wikimedia Commons resuelve la mayoría y es la fuente primaria, pero se queda corta en espacios con
+poca cobertura fotográfica. El caso que motiva esta lista: **Carrascoy y El Valle cerró su N3 con 13
+de 21 POIs sin foto** (2026-08-11) después de recorrer las tres vías de Commons —categoría del
+espacio y sus subcategorías, geosearch de 700 m y buscador— y la categoría de Wiki Loves Earth del
+LIC. No quedaba nada más que mirar *ahí*.
+
+**Antes de ir a otra página, agota Commons de verdad**, que es barato y no tiene sorpresas de
+licencia: (1) la categoría del espacio **y su subcategoría** —en Carrascoy, la foto del Paisaje lunar
+llevaba tiempo ahí y no salía porque no existía todavía un POI con ese nombre—; (2) **geosearch** con
+radio amplio alrededor de la coordenada, revisando el listado a mano en vez de exigir que el nombre
+del archivo mencione el POI; (3) la categoría de **Wiki Loves Earth** del código Natura 2000 del
+espacio (`Category:Images of a site of community importance with code <CÓDIGO> from Wiki Loves Earth
+in Spain`); (4) las categorías propias de cada elemento y el **P18** de su ficha de Wikidata.
+
+Solo después, y por este orden de utilidad esperada:
+
+| # | Fuente | Qué aporta | Licencia | Acceso |
+|---|---|---|---|---|
+| 1 | **Openverse** (`api.openverse.org`) | Agregador: busca a la vez en Flickr, Commons, museos y más. La primera parada, porque una consulta cubre varias fuentes | Filtra por licencia en la propia consulta | API abierta; sin clave para uso básico |
+| 2 | **Flickr** (`api.flickr.com`) | El fondo más grande de fotografía de paisaje y patrimonio español. `flickr.photos.search` acepta **bbox** y `license`, así que se puede buscar *por coordenada* igual que el geosearch de Commons | `license=4,5,7,9,10` = BY, BY-SA, PD, CC0 | Necesita `api_key` gratuita |
+| 3 | **Mapillary** (`graph.mapillary.com`) | Imagen a pie de calle geolocalizada. Lo suyo son los POIs **junto a carretera o sendero**: accesos, áreas recreativas, centros de visitantes — justo los que peor cubre Commons | **CC BY-SA 4.0** todo | Necesita token |
+| 4 | **Europeana** (`api.europeana.eu`) | Patrimonio digitalizado de archivos y bibliotecas. Para lo **Cultural, Religioso y Arqueológico**: castillos, ermitas, yacimientos, y fotografía histórica | Mixta: **hay que filtrar por `REUSABILITY=open`** | Necesita `wskey` gratuita |
+| 5 | **Geograph** (`geograph.org.uk`) | Fotografía geolocalizada por cuadrícula, con el sitio garantizado por construcción | **CC BY-SA** todo | Abierta. ⚠️ Su cobertura es de Islas Británicas: para España, casi siempre vacío |
+| 6 | **iNaturalist** (`api.inaturalist.org`) | Sirve sobre todo para **especies**, no para POIs; puntual para un elemento natural con observaciones encima | ⚠️ **Mucho CC BY-NC, que NO entra**. Comprobar una a una | API abierta |
+
+> **Las dos puertas del §4.6 no se relajan por cambiar de fuente, y aquí importan más.** La
+> **licencia** sigue siendo lista blanca —CC0, dominio público, CC BY y CC BY-SA— porque la foto se
+> empaqueta en la descarga sin conexión del parque; NC y ND quedan fuera aunque la foto sea perfecta.
+> Y **la coincidencia** sigue necesitando ojo humano: fuera de Commons no existe la categoría del
+> espacio, que era lo que garantizaba el *dónde*, así que **todo lo que venga de aquí es
+> `needsReview` por definición**. Lo que sí ayuda es que Flickr y Mapillary buscan por coordenada:
+> una foto dentro del bbox del POI tiene el *dónde* resuelto, y queda solo el *qué*.
+>
+> **Lo que se anota al escribirla**: el crédito va dentro de `source`, con el mismo formato del piloto
+> y diciendo la fuente —`…; Flickr (foto: <autor>, CC BY-SA 2.0)`—, nunca «Wikimedia Commons» a secas.
+
+`npm run red:check` dice cuáles de estos seis hosts alcanza la sesión de hoy, y
+`node Tools/check-egress.js --allowlist` escupe los que están cerrados, listos para pegar en los
+ajustes del entorno. Que estén cerrados **no bloquea nada**: el POI se queda con `image: null` y
+consta como hueco, que es un resultado válido del §5.
 
 ### Verificación
 
