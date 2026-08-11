@@ -259,9 +259,61 @@ function validatePark(entry) {
       warn(scope, 'asimetría: hábitat "' + h.id + '" lista la especie #' + sid + ' pero esa especie no lista el hábitat');
   }));
 
+  const spOf = new Map(habitats.map(h => [h.id, new Set(h.speciesIds || [])]));
+  species.forEach(s => (s.habitatIds || []).forEach(hid => {
+    if (spOf.has(hid) && !spOf.get(hid).has(s.id))
+      warn(scope, 'asimetría: la especie #' + s.id + ' lista el hábitat "' + hid + '" pero ese hábitat no lista la especie');
+  }));
+
   // 3) Especies huérfanas (sin ningún hábitat) ----------------------------------------------------
   const orphans = species.filter(s => !(s.habitatIds && s.habitatIds.length));
   if (orphans.length) warn(scope, 'especies sin hábitat asignado (' + orphans.length + '): ' + orphans.map(s => '#' + s.id + ' ' + s.commonName).join(', '));
+
+  /*
+   * 3 bis) La ficha que se contradice a sí misma.
+   *
+   * Estar sin hábitat es legítimo —las aves van al apartado de la ZEPA y no cuelgan de ningún
+   * polígono—, así que el aviso de arriba, con 83 aves dentro, es ruido en el que se puede esconder
+   * cualquier cosa. Y se escondió: cinco plantas de Sierra de la Pila tenían `habitatIds` vacío
+   * mientras su `source` decía «200 ocurrencias dentro de los polígonos de hábitat del espacio
+   * (9 hábitats)». El dato estaba dentro de la propia ficha y nadie lo cotejaba.
+   *
+   * `source` lo escribe `build-species-n2.js` con la cifra que sale del barrido de GBIF, así que
+   * discrepar de `habitatIds` no es una imprecisión de redacción: es que se ha perdido el enlace.
+   *
+   * Quedan fuera las especies del apartado de la ZEPA (`zepaSiteCode`): sus ocurrencias también
+   * cayeron dentro de los polígonos, pero el catálogo decide a propósito no colgar las aves de
+   * ningún hábitat —son el grueso del ruido espacial, registros en vuelo que entran en cualquier
+   * recinto—, así que ahí la discrepancia es el diseño y no un fallo.
+   */
+  const CITA_HABITATS = /\((\d+) hábitats?;/;
+  species.forEach(s => {
+    if (s.zepaSiteCode) return;
+    const m = String(s.source || '').match(CITA_HABITATS);
+    if (!m) return;
+    const dice = Number(m[1]);
+    const tiene = (s.habitatIds || []).length;
+    if (dice > 0 && tiene === 0)
+      err(scope, 'especie #' + s.id + ' (' + s.commonName + '): su `source` cuenta ' + dice +
+        ' hábitat(s) y `habitatIds` está vacío. Ver Tools/catalogo-nacional/build-species-n2.js');
+  });
+
+  /*
+   * 3 ter) Hábitats sin ninguna especie.
+   *
+   * En la app un hábitat sin especies es un callejón sin salida: se puede pisar su polígono y no hay
+   * nada que descubrir (`explorer.js` ni siquiera pregunta). Puede ser legítimo —el 92D0 de Sierra de
+   * la Pila son 13,2 ha de ribera con UNA ocurrencia de GBIF dentro, y es un insecto, fuera del
+   * alcance del catálogo—, pero entonces tiene que constar por qué, en el `reviewNote` del hábitat.
+   * Sin nota, el hueco no se distingue de un enlace perdido.
+   */
+  habitats.forEach(h => {
+    if ((h.speciesIds || []).length) return;
+    const nota = String(h.reviewNote || '').trim();
+    if (nota) warn(scope, 'hábitat "' + h.id + '" (' + h.code + ') sin ninguna especie; el hueco está documentado en su `reviewNote`');
+    else err(scope, 'hábitat "' + h.id + '" (' + h.code + ') sin ninguna especie y sin `reviewNote` que lo explique: ' +
+      'o se han perdido los enlaces o el hueco es real, y en ese caso hay que escribirlo');
+  });
 
   // 4) Contadores del manifiesto (el catcher de "21 vs 15") ---------------------------------------
   const counts = manifest.counts || {};

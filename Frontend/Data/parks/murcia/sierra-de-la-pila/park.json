@@ -195,7 +195,12 @@
         158,
         159,
         160,
-        162
+        162,
+        248,
+        249,
+        250,
+        251,
+        252
       ]
     },
     {
@@ -376,7 +381,12 @@
         158,
         159,
         160,
-        162
+        162,
+        248,
+        249,
+        250,
+        251,
+        252
       ]
     },
     {
@@ -556,7 +566,12 @@
         158,
         159,
         160,
-        162
+        162,
+        248,
+        249,
+        250,
+        251,
+        252
       ]
     },
     {
@@ -599,7 +614,8 @@
         69,
         86,
         133,
-        161
+        161,
+        248
       ]
     },
     {
@@ -658,7 +674,8 @@
         146,
         147,
         148,
-        161
+        161,
+        248
       ]
     },
     {
@@ -776,7 +793,9 @@
         152,
         153,
         154,
-        161
+        161,
+        248,
+        249
       ]
     },
     {
@@ -811,7 +830,8 @@
         10,
         75,
         126,
-        143
+        143,
+        248
       ]
     },
     {
@@ -871,7 +891,9 @@
         117,
         120,
         140,
-        155
+        155,
+        248,
+        249
       ]
     },
     {
@@ -910,7 +932,8 @@
         93,
         120,
         140,
-        155
+        155,
+        248
       ]
     },
     {
@@ -934,7 +957,7 @@
       "image": null,
       "audio": null,
       "audioTranscript": null,
-      "reviewNote": null,
+      "reviewNote": "Sin especies en el catálogo, y el hueco es real: el barrido de GBIF ∩ polígonos del 2026-08-11 encuentra UNA sola ocurrencia dentro de sus 13,2 ha —repartidas en nueve retazos de ribera—, y es *Callophrys rubi*, un lepidóptero, que queda fuera del alcance taxonómico del catálogo (flora vascular y vertebrados). No es que se hayan perdido los enlaces: es que no hay de dónde sacarlos. Se cerrará con observación en campo o con un inventario florístico del tarayal, que ninguna de las fuentes consultadas sirve.",
       "speciesIds": []
     }
   ],
@@ -1377,7 +1400,17 @@
       "eidosTaxonId": 7647,
       "gbifSpeciesKey": 10902460,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "matorrales-termomediterraneos-y-5330",
+        "zonas-subestepicas-de-6220",
+        "matorrales-arborescentes-de-5210",
+        "bosques-endemicos-de-9560",
+        "encinares-de-quercus-9340",
+        "pendientes-rocosas-calcicolas-8210",
+        "matorrales-mediterraneos-y-4090",
+        "prados-calcareos-carsticos-6110",
+        "vegetacion-gipsicola-iberica-1520"
+      ],
       "gbifOccurrences": 200,
       "visible": true,
       "rarityLocal": 1,
@@ -2212,7 +2245,13 @@
       "eidosTaxonId": 5037,
       "gbifSpeciesKey": 7331286,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "matorrales-arborescentes-de-5210",
+        "matorrales-termomediterraneos-y-5330",
+        "zonas-subestepicas-de-6220",
+        "bosques-endemicos-de-9560",
+        "encinares-de-quercus-9340"
+      ],
       "gbifOccurrences": 28,
       "visible": true,
       "rarityLocal": 1,
@@ -2584,7 +2623,11 @@
       "eidosTaxonId": null,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "matorrales-arborescentes-de-5210",
+        "matorrales-termomediterraneos-y-5330",
+        "zonas-subestepicas-de-6220"
+      ],
       "gbifOccurrences": 24,
       "visible": true,
       "rarityLocal": 1,
@@ -7379,7 +7422,11 @@
       "eidosTaxonId": 2953,
       "gbifSpeciesKey": 2956364,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "matorrales-termomediterraneos-y-5330",
+        "matorrales-arborescentes-de-5210",
+        "zonas-subestepicas-de-6220"
+      ],
       "gbifOccurrences": 7,
       "visible": true,
       "rarityLocal": 1,
@@ -7538,7 +7585,11 @@
       "eidosTaxonId": null,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "matorrales-termomediterraneos-y-5330",
+        "matorrales-arborescentes-de-5210",
+        "zonas-subestepicas-de-6220"
+      ],
       "gbifOccurrences": 7,
       "visible": true,
       "rarityLocal": 1,

@@ -72,7 +72,7 @@ Orden real de uso; el runbook completo está en
 | `build-park-sql.js` | 213 | **N2 → BD**: vuelca el espacio entero (fila de `parks`, hábitats con geometría, especies y vínculos) a SQL idempotente (`park:sql`). **Va primero**: sin fila en `parks` lo demás carga cero filas en silencio |
 | `build-poi-sql.js` | 113 | **N3**: vuelca el bloque `pointsOfInterest` de un `park.json` a SQL idempotente (`pois:sql`). La API manda sobre el paquete: sin este SQL, un N3 cerrado se sirve con 0 POIs |
 | `invasoras-eei.js` · `invasoras-contenido.js` · `invasoras-images.js` | 72 · 317 · 159 | Invasoras: catálogo EEI ∩ GBIF, ficha desde EIDOS, foto |
-| `fix-estado-conservacion-iepnb.js` · `fix-sierra-espuna-revision.js` | 262 · 152 | Correcciones puntuales ya aplicadas. **Histórico: no relanzar sin leer su cabecera** |
+| `fix-estado-conservacion-iepnb.js` · `fix-sierra-espuna-revision.js` · `fix-enlaces-habitat-sierra-pila.js` | 262 · 152 · 217 | Correcciones puntuales ya aplicadas. **Histórico: no relanzar sin leer su cabecera.** La última repone los 23 enlaces especie↔hábitat que la reconciliación perdió al renombrar candidatos sueltos; comprueba la huella (ocurrencias y nº de hábitats) contra la selección antes de escribir, y se niega si no cuadra |
 
 ### Datos de entrada que hay que mantener a mano
 
