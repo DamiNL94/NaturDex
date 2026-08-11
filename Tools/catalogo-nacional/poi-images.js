@@ -244,13 +244,19 @@ async function buscaEnCommons(nombrePoi, contexto) {
 // foto va DENTRO de `source`, detrás de la fuente del hecho y separado por punto y coma. Es el
 // formato del piloto —«Anexo I del proyecto de PORN…; Wikimedia Commons (foto: J.Alberto, CC BY-SA
 // 4.0)»— y lo pide el §4.5: `source` cita la fuente del hecho y, aparte, la de la foto y su licencia.
-function conCredito(source, meta) {
-  const credito = `Wikimedia Commons (foto: ${meta.autor}, ${meta.licencia})`;
+// Los nombres de fuente de foto que este repo sabe escribir en `source`. La lista existe para la
+// IDEMPOTENCIA, no por gusto de enumerar: al reescribir un crédito hay que reconocer el anterior
+// —venga de Commons o de cualquiera de las alternativas de `poi-images-alt.js`— y sustituirlo, en
+// vez de encadenar uno detrás de otro hasta dejar el `source` ilegible.
+const FUENTES_FOTO = ['Wikimedia Commons', 'Openverse', 'Flickr', 'Mapillary', 'Europeana', 'Geograph', 'iNaturalist'];
+const CREDITO_PREVIO = new RegExp(';\\s*(?:' + FUENTES_FOTO.join('|') + ')[^;]*$', 'i');
+
+function conCredito(source, meta, fuente = 'Wikimedia Commons') {
+  const credito = `${fuente} (foto: ${meta.autor}, ${meta.licencia})`;
   const previo = String(source || '').trim();
   if (!previo) return credito;
-  // Idempotencia: una segunda pasada no debe encadenar créditos. Si ya hay uno de Commons, se
-  // sustituye entero en vez de añadir otro.
-  if (/wikimedia commons/i.test(previo)) return previo.replace(/;\s*Wikimedia Commons[^;]*$/i, '').trim().replace(/[;.]$/, '') + '; ' + credito;
+  // Idempotencia: una segunda pasada no debe encadenar créditos. Si ya hay uno, se sustituye entero.
+  if (CREDITO_PREVIO.test(previo)) return previo.replace(CREDITO_PREVIO, '').trim().replace(/[;.]$/, '') + '; ' + credito;
   return previo.replace(/[;.]$/, '') + '; ' + credito;
 }
 
@@ -420,4 +426,4 @@ if (require.main === module) {
 
 // Las tres decisiones que no dependen de la red y sí de acertar: qué licencia entra, cuándo un
 // nombre de archivo habla del sitio, y cómo queda el crédito dentro de `source`.
-module.exports = { licenciaLibre, mencionaSitio, mencionaAlguno, aliasDe, fotoElegida, metros, conCredito };
+module.exports = { licenciaLibre, mencionaSitio, mencionaAlguno, aliasDe, fotoElegida, metros, conCredito, FUENTES_FOTO };
