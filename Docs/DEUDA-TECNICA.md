@@ -53,10 +53,22 @@ Cada una se paga mejor ahora que en el espacio número treinta.
 7. **Fotos de florasilvestre.es pendientes de licencia** en Cabo Cope: 13 fichas usadas en el contexto
    de este prototipo educativo. Antes de cualquier uso público hay que confirmar el permiso o
    sustituirlas por equivalentes de licencia libre.
-8. **Cero POIs en Sierra Espuña y Cuatro Calas.** No hay fuente con coordenadas descargables; el PRUG en
-   PDF sigue siendo la vía pendiente. Los senderos sí están resueltos (`build-park-trails.js`), pero son
-   trazas, no puntos.
-9. **Duplicación consciente**: `AdminPanel/src/api.ts` y el cliente de la API del frontend son dos
-   implementaciones del mismo contrato. Se mantienen separadas porque son dos aplicaciones distintas
-   (React con build vs. módulos ES sin build).
+8. ~~**Cero POIs en Sierra Espuña y Cuatro Calas.**~~ **PAGADA**: Cuatro Calas cerró su N3 el
+   2026-08-08 (4 POIs) y Sierra Espuña el 2026-08-09 (13). El diagnóstico —«no hay fuente con
+   coordenadas descargables»— resultó ser medio cierto y medio pereza: **el plan del espacio estaba
+   publicado en PDF y descargable**, y en dos de los cuatro espacios que han cerrado N3 —Carrascoy y
+   Sierra de la Pila— es **lo que desbloqueó el nivel**. Lo que sí se confirmó es que el plan no trae
+   coordenadas: las pone OpenStreetMap y el hecho lo pone el plan, que es exactamente la cascada
+   del §4.2.
+9. **El glosario no cubre el vocabulario geológico, y son 32 términos.** Los saca a la luz el arreglo
+   del 2026-08-11 (e): `glossary-coverage.js` **no leía las descripciones de los POIs** aunque
+   `render/detalle.js:133` las pinta con `.detail-prose`, la clase sobre la que actúa el resaltado, y
+   su `LEXICO` no tenía ninguna raíz de tectónica ni estratigrafía. Corregidas las dos cosas, el
+   contador pasa de 35 a **67 términos sin definir**. El más repetido **no lo trajo la capa de
+   POIs**: `caliza`/`calizas` aparece en **87 fichas** de especies y hábitats que llevan meses
+   escritas. Es trabajo editorial —`glossary-coverage.js` no adivina definiciones a propósito— y se
+   redacta en el bloque `glosario` de `Database/seed.sql`, seguido de `npm run export:glossary`.
+10. **Duplicación consciente**: `AdminPanel/src/api.ts` y el cliente de la API del frontend son dos
+    implementaciones del mismo contrato. Se mantienen separadas porque son dos aplicaciones distintas
+    (React con build vs. módulos ES sin build).
 

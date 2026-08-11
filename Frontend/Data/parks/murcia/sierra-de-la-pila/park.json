@@ -938,7 +938,233 @@
       "speciesIds": []
     }
   ],
-  "pointsOfInterest": [],
+  "pointsOfInterest": [
+    {
+      "id": "penasco-del-perro",
+      "name": "Peñasco del Perro",
+      "type": "Geológico",
+      "description": "Afloramiento de calizas del Luteciense en el centro de la sierra, con la estructura de un anticlinal volcado hacia el norte y cabalgado hacia el oeste. Su peculiaridad es haber sufrido dos plegamientos: los repliegues de la base de los estratos se originaron en el propio Luteciense y son, probablemente, la primera pulsación tectónica de carácter tangencial registrada en las Béticas; el pliegue volcado del techo es ya del Mioceno medio. Es el afloramiento que el inventario geológico cita por su nombre al describir el lugar.",
+      "coordinates": [
+        38.251781,
+        -1.226009
+      ],
+      "image": null,
+      "source": "Inventario Español de Lugares de Interés Geológico (IELIG, IGME), LIG PT100 «Pliegues y fallas en la Sierra de Pila», de interés principal tectónico y valor científico muy alto, que nombra este afloramiento. Coordenada aproximada: es el topónimo del Instituto Geográfico Nacional que representa el paraje (OpenStreetMap node/1243055665), no un punto medido sobre el afloramiento.",
+      "approx": true,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "el-caramucel",
+      "name": "El Caramucel",
+      "type": "Geológico",
+      "description": "Cumbre más alta del macizo occidental, con 1.025 m. En sus escarpes se reconocen los mismos repliegues lutecienses que definen el lugar de interés geológico de la sierra, a unos tres kilómetros al oeste del afloramiento que lo da a conocer. Su entorno es una de las dos áreas de protección de la fauna silvestre delimitadas por las colonias de chova piquirroja, la especie que motivó la declaración de la ZEPA.",
+      "coordinates": [
+        38.25165,
+        -1.254051
+      ],
+      "image": null,
+      "source": "Inventario Español de Lugares de Interés Geológico (IELIG, IGME), LIG PT100 «Pliegues y fallas en la Sierra de Pila», de interés principal tectónico y valor científico muy alto; Plan Rector de Uso y Gestión del Parque Regional «Sierra de la Pila» (Plan de Gestión Integral de los Espacios Protegidos de los relieves y cuencas centro-orientales de la Región de Murcia, volumen III, junio de 2018), §2.1.4 relieve y §1.1 áreas de protección de la fauna silvestre. Coordenada del vértice mapeado en OpenStreetMap (node/11510695636, cota 1.025 m).",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "pico-de-la-pila",
+      "name": "Pico de la Pila",
+      "type": "Geológico",
+      "description": "La mayor de las dos cumbres que dan a la sierra su perfil característico, con 1.266 m. Bajo ella se sitúa el isleo tectónico de La Pila, formado por materiales dolomíticos subbéticos que se apoyan sobre materiales del Prebético: el rasgo de mayor interés tectónico que el plan rector reconoce en el espacio. El vértice cae dentro del polígono del lugar de interés geológico de la sierra.",
+      "coordinates": [
+        38.264379,
+        -1.189646
+      ],
+      "image": null,
+      "source": "Plan Rector de Uso y Gestión del Parque Regional «Sierra de la Pila» (Plan de Gestión Integral de los Espacios Protegidos de los relieves y cuencas centro-orientales de la Región de Murcia, volumen III, junio de 2018), §2.1.2 geología y §2.1.4 relieve; Inventario Español de Lugares de Interés Geológico (IELIG, IGME), LIG PT100 «Pliegues y fallas en la Sierra de Pila», de interés principal tectónico y valor científico muy alto. Coordenada del vértice mapeado en OpenStreetMap (node/26864615, cota 1.265 m).",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "picos-de-los-cenajos",
+      "name": "Picos de los Cenajos",
+      "type": "Paisajístico",
+      "description": "La segunda cumbre del macizo oriental, con 1.229 m, y uno de los cuatro miradores paisajísticos que inventaría el plan rector. La garita forestal de vigilancia de incendios ocupa el vértice, a siete metros del punto. Su entorno es la segunda de las dos áreas de protección de la fauna silvestre por chova piquirroja.",
+      "coordinates": [
+        38.269139,
+        -1.200625
+      ],
+      "image": null,
+      "source": "Plan Rector de Uso y Gestión del Parque Regional «Sierra de la Pila» (Plan de Gestión Integral de los Espacios Protegidos de los relieves y cuencas centro-orientales de la Región de Murcia, volumen III, junio de 2018), tabla 40 de instalaciones de uso público, §2.4.4.3 infraestructuras de gestión forestal y §1.1. Coordenada del vértice mapeado en OpenStreetMap (node/1243083049, cota 1.226 m); la torre de observación es way/553637709.",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "la-loma-alta",
+      "name": "La Loma Alta",
+      "type": "Geológico",
+      "description": "Extremo occidental del lugar de interés geológico de la sierra, donde el inventario del IGME describe una falla de desgarre de gran desarrollo. Es uno de los cuatro parajes que la ficha del lugar cita por su nombre, junto al Peñasco del Perro, el Caramucel y La Garapacha.",
+      "coordinates": [
+        38.264626,
+        -1.306712
+      ],
+      "image": null,
+      "source": "Inventario Español de Lugares de Interés Geológico (IELIG, IGME), LIG PT100 «Pliegues y fallas en la Sierra de Pila», de interés principal tectónico y valor científico muy alto, que describe aquí una falla de desgarre. Coordenada aproximada: es el topónimo del Instituto Geográfico Nacional que representa la loma (OpenStreetMap node/1243071799), no el trazado de la falla.",
+      "approx": true,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "la-garapacha",
+      "name": "La Garapacha",
+      "type": "Acceso",
+      "description": "La mayor de las tres entidades de población del interior del parque y cabecera de tres de las rutas que señaliza el plan rector: hacia el Alto de la Pila por el Mojón de las Cuatro Caras, hacia Fuente Blanca y hacia Los Cenajos y La Pila por la solana. La fuente que lleva su nombre es el principal drenaje de la sierra y está relacionada con su mayor acuífero. El plan da además el corte estratigráfico de La Garapacha por uno de los más completos del Prebético Meridional de la Región.",
+      "coordinates": [
+        38.249007,
+        -1.185921
+      ],
+      "image": null,
+      "source": "Plan Rector de Uso y Gestión del Parque Regional «Sierra de la Pila» (Plan de Gestión Integral de los Espacios Protegidos de los relieves y cuencas centro-orientales de la Región de Murcia, volumen III, junio de 2018), tabla 40 de rutas, §2.1.5 hidrología, §2.1.2 geología y §2.4.1 población. Coordenada del núcleo en el Nomenclátor Geográfico del Instituto Geográfico Nacional (OpenStreetMap node/791753748).",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "fuente-blanca",
+      "name": "Fuente Blanca",
+      "type": "Acceso",
+      "description": "Entidad de población del borde oriental y punto desde el que el plan rector sitúa dos equipamientos del parque: el Centro de Visitantes de La Pila, que gestiona el Ayuntamiento de Fortuna y dispone de aparcamiento para cincuenta turismos y tres autobuses, y las instalaciones de la brigada forestal. Desde aquí arranca la ruta que enlaza con La Garapacha.",
+      "coordinates": [
+        38.254627,
+        -1.16376
+      ],
+      "image": null,
+      "source": "Plan Rector de Uso y Gestión del Parque Regional «Sierra de la Pila» (Plan de Gestión Integral de los Espacios Protegidos de los relieves y cuencas centro-orientales de la Región de Murcia, volumen III, junio de 2018), §7.3.2 equipamientos y servicios, §2.4.4.3 y tabla 40 de rutas. La coordenada es la del núcleo de población en el Nomenclátor Geográfico del Instituto Geográfico Nacional (OpenStreetMap node/791753711), no la del centro de visitantes, que no está cartografiado.",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "fuente-de-la-higuera",
+      "name": "Fuente de la Higuera",
+      "type": "Acceso",
+      "description": "La puerta norte del parque. En menos de setenta metros se juntan el punto de información atendido por la Comunidad Autónoma, la mayor de las dos áreas recreativas —con veintidós mesas y trece cocinas—, la zona de acampada, con capacidad para unas cuarenta y cinco personas, y el aparcamiento. La fuente que da nombre al paraje mana justo encima.",
+      "coordinates": [
+        38.299529,
+        -1.1669
+      ],
+      "image": null,
+      "source": "Plan Rector de Uso y Gestión del Parque Regional «Sierra de la Pila» (Plan de Gestión Integral de los Espacios Protegidos de los relieves y cuencas centro-orientales de la Región de Murcia, volumen III, junio de 2018), tabla 40 de instalaciones de uso público y tabla 41 de servicios de las áreas recreativas. Coordenada del edificio del punto de información en OpenStreetMap (way/1107429062).",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "area-recreativa-fuente-del-jave",
+      "name": "Área recreativa de la Fuente del Javé",
+      "type": "Acceso",
+      "description": "La segunda de las dos áreas recreativas del parque, en el extremo suroccidental, con dos mesas y una cocina. A menos de cien metros está el mirador de la Fuente del Javé, que el plan rector inventaría aparte entre los cuatro miradores paisajísticos del espacio.",
+      "coordinates": [
+        38.237666,
+        -1.288034
+      ],
+      "image": null,
+      "source": "Plan Rector de Uso y Gestión del Parque Regional «Sierra de la Pila» (Plan de Gestión Integral de los Espacios Protegidos de los relieves y cuencas centro-orientales de la Región de Murcia, volumen III, junio de 2018), tabla 40 de instalaciones de uso público y tabla 41 de servicios de las áreas recreativas. Coordenada del área recreativa en OpenStreetMap (node/10130393528); el mirador es node/12488679001, a 96 m.",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "puerto-frio",
+      "name": "Puerto Frío",
+      "type": "Paisajístico",
+      "description": "Collado a 835 m en el borde nororiental de la sierra y uno de los cuatro miradores paisajísticos que inventaría el plan rector. El mismo inventario cataloga aquí el refugio de pastor de Puerto Frío como punto de interés cultural, a cargo del Ayuntamiento de Fortuna.",
+      "coordinates": [
+        38.277197,
+        -1.162625
+      ],
+      "image": null,
+      "source": "Plan Rector de Uso y Gestión del Parque Regional «Sierra de la Pila» (Plan de Gestión Integral de los Espacios Protegidos de los relieves y cuencas centro-orientales de la Región de Murcia, volumen III, junio de 2018), tabla 40 de instalaciones de uso público. Coordenada del mirador en OpenStreetMap (node/9854364469); el collado, con su cota de 835 m, es node/1326524494, a 210 m. El refugio de pastor no está cartografiado.",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "cerro-pino-de-la-muela",
+      "name": "Cerro Pino de la Muela",
+      "type": "Paisajístico",
+      "description": "Vértice de 828 m en el extremo occidental y uno de los cuatro miradores paisajísticos que inventaría el plan rector. Su refugio forestal, a quince metros de la cima, está en ruinas: el plan lo incluye entre los elementos que prioriza restaurar por su interés etnográfico, junto a los pozos de la nieve.",
+      "coordinates": [
+        38.26343,
+        -1.290227
+      ],
+      "image": null,
+      "source": "Plan Rector de Uso y Gestión del Parque Regional «Sierra de la Pila» (Plan de Gestión Integral de los Espacios Protegidos de los relieves y cuencas centro-orientales de la Región de Murcia, volumen III, junio de 2018), tabla 40 de instalaciones de uso público y §7.2 programa de conservación y restauración. Coordenadas en OpenStreetMap: node/11510695611 (cota 828 m) y way/1239085019 (el refugio, mapeado como edificio en ruinas).",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "pico-pelado",
+      "name": "Pico Pelado",
+      "type": "Cultural",
+      "description": "Uno de los tres refugios forestales que el plan rector cataloga por su interés etnográfico y prioriza restaurar junto a los pozos de la nieve. Está a catorce metros del vértice de 792 m que le da nombre y, a diferencia del de Pino de la Muela, sigue mapeado como cabaña en pie.",
+      "coordinates": [
+        38.271537,
+        -1.251896
+      ],
+      "image": null,
+      "source": "Plan Rector de Uso y Gestión del Parque Regional «Sierra de la Pila» (Plan de Gestión Integral de los Espacios Protegidos de los relieves y cuencas centro-orientales de la Región de Murcia, volumen III, junio de 2018), tabla 40 de instalaciones de uso público y §7.2 programa de conservación y restauración. Coordenadas en OpenStreetMap: node/4734060301 (cota 792 m) y way/480388069 (el refugio).",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "mojon-de-las-cuatro-caras",
+      "name": "Mojón de las Cuatro Caras",
+      "type": "Cultural",
+      "description": "El tercero de los refugios forestales que cataloga el plan rector, en el collado que da nombre al sendero señalizado que sube de La Garapacha al Alto de la Pila. El inventario de infraestructuras de agua de 2016 registra aquí además una balsa, en estado regular.",
+      "coordinates": [
+        38.271616,
+        -1.211938
+      ],
+      "image": null,
+      "source": "Plan Rector de Uso y Gestión del Parque Regional «Sierra de la Pila» (Plan de Gestión Integral de los Espacios Protegidos de los relieves y cuencas centro-orientales de la Región de Murcia, volumen III, junio de 2018), tabla 40 de instalaciones de uso público y tabla 26 de puntos de agua. Coordenada aproximada: es el topónimo del Instituto Geográfico Nacional que representa el collado (OpenStreetMap node/1243076562); el refugio no está cartografiado.",
+      "approx": true,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "casa-del-boticario",
+      "name": "Casa del Boticario",
+      "type": "Cultural",
+      "description": "Casa de labranza en ruinas bajo el Pico del Boticario. Es lo que queda de la agricultura tradicional que el plan rector describe en el interior de la sierra, y que dejó encachados y acequias con elementos de piedra tallada repartidos por el espacio.",
+      "coordinates": [
+        38.273301,
+        -1.229944
+      ],
+      "image": null,
+      "source": "OpenStreetMap way/480388094 (edificio histórico en ruinas), única fuente que sitúa y describe la construcción; el plan rector no la cita por su nombre. El contexto de la agricultura tradicional procede del Plan Rector de Uso y Gestión del Parque Regional «Sierra de la Pila» (Plan de Gestión Integral de los Espacios Protegidos de los relieves y cuencas centro-orientales de la Región de Murcia, volumen III, junio de 2018), §2.3 patrimonio cultural.",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "yacimiento-de-canada-molina",
+      "name": "Yacimiento paleontológico de Cañada Molina",
+      "type": "Paleontológico",
+      "description": "Yacimiento de algas marinas neógenas declarado bien inventariado en 2011. Su valor está en las algas fósiles, que sirven para interpretar las condiciones ambientales de antiguos medios sedimentarios. La declaración describe su conservación como regular, con surcos que evidencian erosión natural y conos de derrubios sobre parte del yacimiento.",
+      "coordinates": [
+        38.25407,
+        -1.319597
+      ],
+      "image": null,
+      "source": "Plan Rector de Uso y Gestión del Parque Regional «Sierra de la Pila» (Plan de Gestión Integral de los Espacios Protegidos de los relieves y cuencas centro-orientales de la Región de Murcia, volumen III, junio de 2018), §2.3 patrimonio cultural, que lo cataloga entre los recursos del espacio, y Resolución de 25 de marzo de 2011 de la Dirección General de Bellas Artes y Bienes Culturales, citada por el propio plan. Coordenada aproximada: es el topónimo del Instituto Geográfico Nacional (OpenStreetMap node/1243028502), que queda 69 m fuera del límite oficial del parque; el perímetro declarado del yacimiento no ha podido consultarse.",
+      "approx": true,
+      "audio": null,
+      "audioTranscript": null
+    }
+  ],
   "species": [
     {
       "id": 1,

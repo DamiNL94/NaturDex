@@ -10,7 +10,7 @@
  * Este script compara los DOS lados:
  *   · lo que dicen las fichas  -> descripciones, pistas de identificación y hábitat de cada especie
  *                                 (catálogo universal + park.json + invasoras), y las descripciones
- *                                 de los hábitats;
+ *                                 de los hábitats y de los puntos de interés;
  *   · lo que sabe el glosario  -> Frontend/Data/glosario.json (la copia exportada de la BD).
  *
  * Lo que encuentra sin definir se lista para redactarlo. NO adivina definiciones: el texto
@@ -83,6 +83,17 @@ const LEXICO = [
   'atochar', 'tomillar', 'garriga', 'maqui', 'sabinar', 'azufaifar', 'jaral', 'tarayal', 'tarajal',
   'carrizal', 'fitosociológ', 'asociación fitosociológica', 'biogeográf',
   'termomediterrán', 'mesomediterrán', 'supramediterrán', 'semiárid', 'ombroclim',
+  // -- Geología: tectónica, estratigrafía y geomorfología
+  // Entra con la capa de POIs: un punto de interés geológico se cuenta con este vocabulario y no con
+  // el de la botánica. Las unidades cronoestratigráficas y las geotectónicas van aquí porque el
+  // lector no tiene por qué saber qué es el Luteciense ni dónde está el Prebético.
+  // 'pliegue' y 'repliegue' van enteros a propósito: la raíz corta 'plieg' caza «despliega» y «las
+  // pliega», que son el verbo plegar y no la estructura geológica.
+  'anticlinal', 'sinclinal', 'cabalgam', 'cabalgad', 'plegami', 'pliegue', 'repliegue', 'tectónic',
+  'desgarre', 'aflorami', 'estratigráf', 'estrato', 'discordanc', 'facies', 'dolomít', 'caliza',
+  'acuífer', 'travertin', 'diapir', 'escarpe', 'derrubi', 'geomorfológ', 'sedimentológ',
+  'orogen', 'piedemonte', 'cárcava', 'isleo tectónic',
+  'luteciens', 'neógen', 'mioce', 'plioce', 'triásic', 'cuaternari', 'prebétic', 'subbétic',
   // -- Taxonomía y conservación
   'taxón', 'taxone', 'taxonómic', 'subespecie', 'híbrid', 'binomial', 'endemismo',
 ];
@@ -165,6 +176,12 @@ function corpus() {
         (data.species || []).forEach(s =>
           add(slug + '/' + (s.scientificName || s.commonName), s.description, (s.tips || []).join(' | '), s.habitat));
         (data.habitats || []).forEach(h => add(slug + '/hábitat ' + (h.code || h.name), h.description));
+        // Los POIs entran por el mismo motivo que los hábitats: render/detalle.js pinta su
+        // `description` con la clase .detail-prose, así que el resaltado del glosario actúa sobre
+        // ella igual que sobre una ficha de especie. Faltaban aquí desde el piloto, y el vocabulario
+        // geológico de un POI (anticlinal, cabalgamiento, desgarre, isleo tectónico) es justo el que
+        // el lector no tiene por qué saberse.
+        (data.pointsOfInterest || []).forEach(p => add(slug + '/POI ' + (p.id || p.name), p.description));
       });
     });
   }
