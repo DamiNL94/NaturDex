@@ -41,3 +41,6 @@ Tools/catalogo-nacional/fuentes/atlas-2005/
 # que el resto de descargas: lo reproducible no se versiona. Lo que sí queda versionado es el
 # resultado —la ficha en data/especies-universal.json— y la curación en data/curacion-especies.json.
 Tools/catalogo-nacional/out/especies-universal-cache.json
+
+# Caché de EIDOS de build-species-seleccion.js: se regenera solo y pesa lo que el catálogo.
+Tools/catalogo-nacional/out/*-eidos-seleccion-cache.json

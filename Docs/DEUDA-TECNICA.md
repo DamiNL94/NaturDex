@@ -41,6 +41,13 @@ Cada una se paga mejor ahora que en el espacio número treinta.
 5. **Tabla de reconciliación taxonómica nacional.** Existe la del piloto
    (`out/cabo-cope-puntas-calnegre-reconciliacion.json`, 124 especies); falta acumular todos los
    espacios sin duplicar por `eidos_taxonid`.
+   > **Parcialmente cubierta el 2026-08-11.** `build-species-seleccion.js` ya reconcilia **al dar de
+   > alta un espacio**: agrupa los candidatos de GBIF por `eidosTaxonId` y elige el nombre que ya use
+   > otro parque, así que un espacio nuevo no puede introducir un duplicado. En Sierra de la Pila
+   > fueron 8 grupos, dos de ellos la misma especie dos veces *dentro* del espacio (*Sylvia* /
+   > *Curruca melanocephala* y *Picus viridis* / *sharpei*). Lo que sigue faltando es la tabla
+   > **acumulada** y la limpieza de los 9 identificadores incoherentes del punto 3, que son
+   > anteriores y no los arregla este mecanismo.
 6. **Completar `hic-nombres.json` y `hic-prioritarios.json`** al entrar en cada provincia nueva. No es
    opcional: un código sin ficha se salta el filtro marino (ver [trampas](runbook/TRAMPAS-CONOCIDAS.md)).
 7. **Fotos de florasilvestre.es pendientes de licencia** en Cabo Cope: 13 fichas usadas en el contexto

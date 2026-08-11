@@ -50,8 +50,9 @@ const { arg, flag, requireArgs, die } = require('../lib/cli');
 const { ROOT, FRONTEND, CATALOGO_DIR, OUT_DIR, readJson, writeJson, rel, fromRoot, parkFiles } = require('../lib/io');
 
 const DRY = flag('dry');
+const PODAR = flag('podar');
 const PARK = arg('park');
-requireArgs('Uso: --park <slug> [--dry] [--seleccion <ruta>] [--gbif <ruta>]', { park: PARK });
+requireArgs('Uso: --park <slug> [--dry] [--podar] [--seleccion <ruta>] [--gbif <ruta>]', { park: PARK });
 
 const CATALOGO = path.join(CATALOGO_DIR, 'data', 'especies-universal.json');
 
@@ -367,8 +368,18 @@ function main() {
   }
 
   // Una ficha que ya estaba en el park.json y que la selección no respalda no se borra en silencio.
+  //
+  // Con `--podar` sí se retira, y hay un caso en que hace falta: cuando la selección RECONCILIA dos
+  // nombres del mismo taxón (GBIF sirve el sinónimo y el aceptado como especies distintas), el
+  // nombre viejo queda huérfano y conservarlo deja la misma especie dos veces en el mismo espacio
+  // —*Sylvia melanocephala* junto a *Curruca melanocephala*—, que es peor que borrarla. Sigue sin
+  // ser el comportamiento por omisión: una ficha puede estar ahí porque alguien la puso a mano.
   const huerfanas = [...previas.keys()].filter(sci => !conFicha.some(s => s.scientificName === sci));
-  for (const sci of huerfanas) { species.push(previas.get(sci)); avisos.push(`ficha conservada sin respaldo en la selección: ${sci}`); }
+  for (const sci of huerfanas) {
+    if (PODAR) { avisos.push(`ficha PODADA por no tener respaldo en la selección: ${sci}`); continue; }
+    species.push(previas.get(sci));
+    avisos.push(`ficha conservada sin respaldo en la selección: ${sci} (usa --podar para retirarla)`);
+  }
 
   // 4) Inverso especie↔hábitat en el array de hábitats ---------------------------------------------
   const porHabitat = new Map((doc.habitats || []).map(h => [h.id, []]));

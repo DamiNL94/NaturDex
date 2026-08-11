@@ -60,8 +60,27 @@ códigos HIC nuevos, **amplía `data/hic-nombres.json` y `data/hic-prioritarios.
    reescribe. Di cuántas reutilizas y cuántas son nuevas.
 
 De ahí sale la **selección aprobada**, `out/<slug>-seleccion-especies.json`: la lista con su
-procedencia especie a especie y las excluidas con su motivo. **No son fichas todavía.** Escribirlas
-son dos pasos, y **el orden importa**:
+procedencia especie a especie y las excluidas con su motivo. **Desde el 2026-08-11 la produce una
+herramienta**, no una sesión a mano:
+
+```bash
+# El Atlas hay que extraerlo del PDF una vez (cualquier extractor vale, lib/atlas.js lee los dos
+# formatos; sin poppler sirve pypdf). Sin --atlas no hay evidencia `caracteristica` y se avisa.
+pdftotext -enc UTF-8 "Docs/Atlas y Manual de los Habitat de Espana.pdf" atlas.txt
+
+npm run species:seleccion -- --park <SLUG> --atlas atlas.txt --dry   # revisar
+npm run species:seleccion -- --park <SLUG> --atlas atlas.txt         # escribir
+```
+
+Aplica cuatro filtros encadenados y **reconcilia por `eidosTaxonId`**. Lee su cabecera antes de
+tocar los umbrales; lo que descarta no desaparece, sale en `excluidas_detalle` con su motivo.
+
+> **El filtro que hay que mirar es el de alcance taxonómico.** GBIF no distingue entre lo que esta
+> app cataloga y lo que no: en Sierra de la Pila, 251 de 625 candidatos eran insectos. El catálogo es
+> **flora vascular y vertebrados**, y esa lista de clases se cambia con `--clases` — pero si la
+> cambias, dilo en el informe de cierre: es lo que hace comparables dos espacios.
+
+**No son fichas todavía.** Escribirlas son dos pasos, y **el orden importa**:
 
 ```bash
 # 1) Alta en el catálogo universal de las especies que no están en NINGÚN parque todavía.
@@ -73,6 +92,11 @@ node Tools/catalogo-nacional/build-species-universal.js --park <SLUG> \
 # 2) Escritura de las fichas del espacio en su park.json.
 node Tools/catalogo-nacional/build-species-n2.js --park <SLUG> --dry    # revisar
 node Tools/catalogo-nacional/build-species-n2.js --park <SLUG>          # escribir
+
+# Si la selección ha RECONCILIADO algún nombre, el viejo queda en el park.json como especie
+# fantasma: --podar lo retira, y species:poda limpia después el catálogo universal.
+node Tools/catalogo-nacional/build-species-n2.js --park <SLUG> --podar
+npm run species:poda
 ```
 
 **Sin el paso 1, el paso 2 no puede escribir una especie nueva y lo dice.** El catálogo universal

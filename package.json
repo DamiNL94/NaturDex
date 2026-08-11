@@ -29,6 +29,7 @@
     "habitats:merge": "node Tools/catalogo-nacional/merge-habitats.js",
     "habitats:adopt": "node Tools/catalogo-nacional/adopt-habitats.js",
     "atlas:hic": "node Tools/catalogo-nacional/atlas-hic-especies.js",
+    "species:seleccion": "node Tools/catalogo-nacional/build-species-seleccion.js",
     "species:build": "node Tools/catalogo-nacional/build-species-n2.js",
     "taxones:reconcilia": "node Tools/catalogo-nacional/reconcile-taxa.js",
     "invasoras:eei": "node Tools/catalogo-nacional/invasoras-eei.js",

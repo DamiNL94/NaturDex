@@ -37,6 +37,13 @@ Cada una costó una sesión de depuración. Léelas antes de repetirlas.
   espacio y con el nombre aceptado en otro, para el validador son dos especies y no hay nada que
   comparar. Pasó con el esparto. `npm run taxones:duplicados` agrupa por identificador externo, que es
   lo único que lo delata, y **sale con código 1 mientras queden**.
+- **GBIF sirve el sinónimo y el nombre aceptado como DOS especies**, cada uno con su `speciesKey` y
+  sus ocurrencias, y los dos pasan los filtros. En Sierra de la Pila entraron *Sylvia melanocephala*
+  (230 registros) y *Curruca melanocephala* (24) **en el mismo espacio**, y lo mismo con *Picus
+  viridis* / *Picus sharpei*. Quien los identifica es EIDOS: mismo `taxonid`.
+  `build-species-seleccion.js` reconcilia por ahí y elige **el nombre que ya use otro parque**, para
+  reutilizar su ficha en vez de crear una gemela. Ojo al renombrar: el nombre viejo se queda en el
+  `park.json` como especie fantasma si no pasas `--podar`.
 - **No trunques el nombre a dos palabras** para emparejar: rompe las subespecies. Se empareja por
   prefijo terminado en espacio (`eidos.nameMatches`).
 - **El cruce con el Atlas hay que hacerlo con los DOS nombres** (el de GBIF y el aceptado por EIDOS).
@@ -63,6 +70,16 @@ Cada una costó una sesión de depuración. Léelas antes de repetirlas.
 - **Ordenar solo por licencia elige pliegos de herbario.** Los herbarios digitalizan en CC0/CC-BY y
   iNaturalist publica en CC-BY-NC, así que un pliego prensado **siempre** ganaba a la foto de campo. El
   orden correcto es *foto de campo antes que pliego* → licencia → país.
+- **…y ese orden estuvo invertido dos semanas por un `\b` que faltaba.** `esPliego` buscaba
+  `naturalis` suelto, que **casa dentro de «iNaturalist»**: el dataset más común de GBIF se llama
+  «iNaturalist research-grade observations», así que **todas** las fotos de campo de iNaturalist se
+  clasificaban como pliegos. Con el patrón corregido, las mismas 14 especies pasan de 8 pliegos de
+  Naturalis/Kew/Smithsonian a 6 fotos de campo de autor identificado. Si escribes un patrón con
+  nombres de institución, ánclalo con `\b`.
+- **Despriorizar el pliego no basta cuando no hay foto de campo**: gana igual, por ser la única
+  candidata. `enrich-images.js --sin-pliegos` lo descarta del todo y deja la especie sin foto, que es
+  lo que decidió el 2026-08-01 —una planta prensada y cosida a una cartulina no ayuda a reconocer
+  nada en el campo—. De las 559 fichas del catálogo, **cero** tienen foto de herbario.
 - **`/by\b/` no detecta CC BY.** La licencia de naturgucker es literalmente «*Copyright by the
   creator…*» y así acabó una foto con derechos reservados en una ficha. El patrón va anclado (`cc by`,
   `/licenses/by`) y con lista de exclusión (`copyright by`, `all rights reserved`, `©`).

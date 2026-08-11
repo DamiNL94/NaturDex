@@ -31,6 +31,9 @@
 //               o cambiar candidatas de confianza media/baja por foto oficial de España).
 //   --allow-nc: acepta también fotos CC-BY-NC (la mayoría de iNaturalist lo son). Para este catálogo
 //               casi siempre hará falta, o la cobertura será mínima.
+//   --sin-pliegos: descarta del todo los pliegos de herbario en vez de solo despriorizarlos. Sin
+//               esta opción, cuando una especie NO tiene ninguna foto de campo libre el pliego gana
+//               por ser la única candidata. Ver la nota de `esPliego`.
 //   --write-park: además del .sql, escribe image+imageAttribution en el propio park.json (necesario
 //               para especies que aún no existen en la BD: el catálogo puede ampliarse solo en park.json).
 // ================================================================================================
@@ -137,9 +140,25 @@ async function gbifKey(sp) {
 // palaestina* y *Sphenopus divaricatus* acabaron ilustradas con sendos pliegos del Smithsonian.
 // Es el mismo criterio que ya aplica lib/wikimedia.js al descartar `herbarium|specimen|sheet`.
 const ESPECIMEN = /PRESERVED_SPECIMEN|FOSSIL_SPECIMEN|MATERIAL_SAMPLE|MATERIAL_CITATION/i;
+
+// OJO con los límites de palabra, y no es una precaución teórica: la versión anterior de este patrón
+// buscaba `naturalis` suelto, que casa DENTRO de «iNaturalist». El dataset más habitual de GBIF se
+// llama «iNaturalist research-grade observations», así que **todas las fotos de campo de iNaturalist
+// se estaban clasificando como pliegos de herbario**. El efecto era silencioso y del peor tipo: la
+// preferencia «foto de campo antes que pliego» quedaba invertida justo para la fuente que más fotos
+// de campo aporta, y con `--sin-pliegos` se habrían descartado todas.
+const INSTITUCION_DE_COLECCION = /\bherbari|\bherbier|\bmuseum\b|botanic garden|natural history|\bnmnh\b|\bnaturalis\b/i;
 const esPliego = oc => ESPECIMEN.test(oc.basisOfRecord || '')
-  || /herbari|herbier|museum|botanic garden|natural history|nmnh|naturalis/i.test(
+  || INSTITUCION_DE_COLECCION.test(
     (oc.datasetName || '') + ' ' + (oc.institutionCode || '') + ' ' + (oc.publisher || ''));
+
+// Despriorizar el pliego no basta cuando NO hay foto de campo: entonces gana igual, por ser la única.
+// Con `--sin-pliegos` se descarta del todo y la especie se queda sin foto, que es lo que decidió la
+// sesión del 2026-08-01 al sacar los pliegos de todo el catálogo: en una guía de campo, una planta
+// prensada y cosida a una cartulina no ayuda a reconocer nada, y ocupa el sitio de la portada
+// temática, que al menos no engaña. Comprobado el 2026-08-11: de las 559 fichas del catálogo
+// universal, CERO tienen foto de institución de herbario.
+const SIN_PLIEGOS = process.argv.includes('--sin-pliegos');
 
 function pickFromOccurrences(list) {
   let best = null;
@@ -150,6 +169,7 @@ function pickFromOccurrences(list) {
       if (li.rank === 9) continue;
       if (li.nc && !ALLOW_NC) continue;
       const pliego = esPliego(oc);
+      if (pliego && SIN_PLIEGOS) continue;
       const cand = { url: m.identifier, license: li, creator: m.creator || m.rightsHolder || oc.recordedBy || null,
         source: (m.publisher ? m.publisher + '/' : '') + 'GBIF', country: oc.countryCode || null, pliego };
       // Orden de preferencia: foto de campo antes que pliego; luego licencia; luego país objetivo.
