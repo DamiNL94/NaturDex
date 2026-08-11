@@ -156,7 +156,11 @@ function renderSpeciesDetail() {
   if (!species) { detailPanel.innerHTML = ''; return; }
   const seen = state.seenSpecies.has(species.id);
   const tx = species.taxonomy || {};
-  const stars = '★'.repeat(species.rarityScore) + '☆'.repeat(5 - species.rarityScore);
+  // Las estrellas cuentan lo excepcional que es la especie EN ESTE ESPACIO, así que mandan el tramo
+  // local (la categoría legal más grave de las dos escalas, estatal y autonómica). `rarityScore` es
+  // el estatal, universal, y solo se usa de reserva: en las fichas que aún no tienen tramo local.
+  const rareza = species.rarityLocal ?? species.rarityScore ?? 1;
+  const stars = '★'.repeat(rareza) + '☆'.repeat(5 - rareza);
   detailPanel.innerHTML = html`<div class="detail-image-wrap">
     <img src="${speciesImageSrc(species)}" alt="${species.commonName}" onerror="window.__imgFallback(this,${species.id})">
     </div>
@@ -173,7 +177,7 @@ function renderSpeciesDetail() {
     <div><span>Hábitat</span><strong>${species.habitat}</strong></div>
     <div><span>Temporada</span><strong>${species.seasonality}</strong></div>
     <div><span>Grupo</span><strong>${species.group}</strong></div>
-    <div><span>Rareza</span><strong><span role="img" aria-label="${species.rarityScore} de 5">${stars}</span></strong></div>
+    <div><span>Rareza</span><strong><span role="img" aria-label="${rareza} de 5">${stars}</span></strong></div>
     </div>
     <h3 class="detail-subtitle">Taxonomía</h3>
     <div class="detail-facts detail-taxonomy">

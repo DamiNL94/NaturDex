@@ -1319,7 +1319,18 @@
       "gbifOccurrences": 256,
       "visible": true,
       "gbifBboxSightings": 256,
-      "imageAttribution": "Accurimbono (CC BY-SA 3.0) · Wikimedia Commons"
+      "imageAttribution": "Accurimbono (CC BY-SA 3.0) · Wikimedia Commons",
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 2,
@@ -1369,7 +1380,18 @@
       "gbifOccurrences": 646,
       "visible": true,
       "gbifBboxSightings": 646,
-      "imageAttribution": "A.Savin (FAL) · Wikimedia Commons"
+      "imageAttribution": "A.Savin (FAL) · Wikimedia Commons",
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 3,
@@ -1420,7 +1442,18 @@
       "gbifOccurrences": 175,
       "visible": true,
       "gbifBboxSightings": 175,
-      "imageAttribution": "Margalob (CC BY-SA 4.0) · Wikimedia Commons"
+      "imageAttribution": "Margalob (CC BY-SA 4.0) · Wikimedia Commons",
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 4,
@@ -1471,7 +1504,18 @@
       "gbifOccurrences": 485,
       "visible": true,
       "gbifBboxSightings": 485,
-      "imageAttribution": "Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons"
+      "imageAttribution": "Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons",
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 5,
@@ -1521,7 +1565,13 @@
       "gbifOccurrences": 142,
       "visible": true,
       "gbifBboxSightings": 142,
-      "imageAttribution": "User:Xemenendura (CC BY-SA 3.0) · Wikimedia Commons"
+      "imageAttribution": "User:Xemenendura (CC BY-SA 3.0) · Wikimedia Commons",
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (Anexo II: aprovechamiento sujeto a autorización)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      }
     },
     {
       "id": 6,
@@ -1571,7 +1621,18 @@
       "gbifOccurrences": 136,
       "visible": true,
       "gbifBboxSightings": 136,
-      "imageAttribution": "Lumbar~commonswiki (CC BY-SA 3.0) · Wikimedia Commons"
+      "imageAttribution": "Lumbar~commonswiki (CC BY-SA 3.0) · Wikimedia Commons",
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 7,
@@ -1590,7 +1651,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_phoenicea1.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 1,
       "featured": true,
       "source": "Wikipedia",
       "taxonomy": {
@@ -1623,7 +1684,18 @@
       "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 72,
       "visible": true,
-      "gbifBboxSightings": 72
+      "gbifBboxSightings": 72,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 8,
@@ -1642,7 +1714,7 @@
       "seasonality": "Primavera",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_clusii_(habitus).jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie característica de los matorrales y romerales del hábitat 5330 (matorral termomediterráneo semiárido) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y las fichas de la Red Natura 2000; frecuente en la Región de Murcia. Ficha básica (mínima), pendiente de ampliar.",
       "taxonomy": {
@@ -1673,7 +1745,18 @@
       "imageAttribution": "Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 77,
       "visible": true,
-      "gbifBboxSightings": 77
+      "gbifBboxSightings": 77,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 9,
@@ -1723,7 +1806,18 @@
       "gbifOccurrences": 53,
       "visible": true,
       "gbifBboxSightings": 53,
-      "imageAttribution": "Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons"
+      "imageAttribution": "Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons",
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 10,
@@ -1773,7 +1867,18 @@
       "gbifOccurrences": 57,
       "visible": true,
       "gbifBboxSightings": 57,
-      "imageAttribution": "Pere prlpz (CC BY-SA 2.5) · Wikimedia Commons"
+      "imageAttribution": "Pere prlpz (CC BY-SA 2.5) · Wikimedia Commons",
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 11,
@@ -1820,7 +1925,18 @@
       "gbifOccurrences": 15,
       "visible": true,
       "gbifBboxSightings": 15,
-      "imageAttribution": "Xemenendura (CC BY 3.0) · Wikimedia Commons"
+      "imageAttribution": "Xemenendura (CC BY 3.0) · Wikimedia Commons",
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 12,
@@ -1839,7 +1955,7 @@
       "seasonality": "Otoño",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Asparagus_stipularis_(detail).jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO) — especie característica del HIC 5210; Inventario Español EIDOS (IEPNB, taxonid 33035); GBIF (speciesKey 2768695); Matorrales arborescentes de Juniperus (HIC 5210).",
       "taxonomy": {
@@ -1868,7 +1984,18 @@
       "imageAttribution": "Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 25,
       "visible": true,
-      "gbifBboxSightings": 25
+      "gbifBboxSightings": 25,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 13,
@@ -1917,7 +2044,13 @@
       "gbifOccurrences": 16,
       "visible": true,
       "gbifBboxSightings": 16,
-      "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons"
+      "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      }
     },
     {
       "id": 14,
@@ -1936,7 +2069,7 @@
       "seasonality": "Primavera y otoño",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Withania_frutescens0176.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie característica de los matorrales térmicos del sureste (hábitats 5330 y azufaifar 5220), iberoafricanismo, según las fichas de flora de la Región de Murcia (regmurcia.com, ficha Withania frutescens - Oroval) y las Bases ecológicas de la Red Natura 2000. Sinónimo: Withania frutescens (L.) Pauquy. Ficha básica (mínima), pendiente de ampliar.",
       "taxonomy": {
@@ -1964,7 +2097,18 @@
       "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 12
+      "gbifBboxSightings": 12,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 15,
@@ -1983,7 +2127,7 @@
       "seasonality": "Primavera",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_almeriense_flor.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie característica de los tomillares y matorrales áridos del sureste (hábitat 5330) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y las fichas de la Red Natura 2000; propia del sureste ibérico y la Región de Murcia. Ficha básica (mínima), pendiente de ampliar.",
       "taxonomy": {
@@ -2011,7 +2155,18 @@
       "gbifOccurrences": 0,
       "visible": true,
       "gbifBboxSightings": 11,
-      "imageAttribution": "Retama (CC BY-SA 3.0) · Wikimedia Commons"
+      "imageAttribution": "Retama (CC BY-SA 3.0) · Wikimedia Commons",
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 16,
@@ -2030,7 +2185,7 @@
       "seasonality": "Primavera y verano",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nerium_oleander_flowers_leaves.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie característica del hábitat de interés comunitario 92D0 (Galerías y matorrales ribereños termomediterráneos, Nerio-Tamaricetea) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y las fichas de la Red Natura 2000; forma los adelfares de las ramblas de la Región de Murcia (Región de Murcia Digital). Ficha básica (mínima), pendiente de ampliar.; IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
@@ -2060,7 +2215,18 @@
       "gbifOccurrences": 21,
       "visible": true,
       "gbifBboxSightings": 21,
-      "imageAttribution": "Alvesgaspar (CC BY 2.5) · Wikimedia Commons"
+      "imageAttribution": "Alvesgaspar (CC BY 2.5) · Wikimedia Commons",
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 17,
@@ -2107,7 +2273,13 @@
       "imageAttribution": "Alejandro Rodríguez Zapata (CC BY 4.0) · GBIF/iNaturalist",
       "gbifOccurrences": 9,
       "visible": true,
-      "gbifBboxSightings": 9
+      "gbifBboxSightings": 9,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      }
     },
     {
       "id": 18,
@@ -2126,7 +2298,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ullastre_vell.JPG?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado de protección Nombre aceptado en EIDOS; Olea europaea var. sylvestris es sinónimo.",
       "taxonomy": {
@@ -2155,7 +2327,18 @@
       "gbifOccurrences": 1,
       "visible": true,
       "gbifBboxSightings": 1,
-      "imageAttribution": "Antoni Salvà (CC BY-SA 4.0) · Wikimedia Commons"
+      "imageAttribution": "Antoni Salvà (CC BY-SA 4.0) · Wikimedia Commons",
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 19,
@@ -2201,7 +2384,13 @@
       "gbifOccurrences": 7,
       "visible": true,
       "gbifBboxSightings": 7,
-      "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons"
+      "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons",
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      }
     },
     {
       "id": 20,
@@ -2220,7 +2409,7 @@
       "seasonality": "Primavera",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ephedra_fragilis_3.JPG?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie característica del matorral termomediterráneo semiárido (5330), sabinares (5210) y roquedos (8210) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y las fichas de la Red Natura 2000; frecuente en la Región de Murcia. Ficha básica (mínima), pendiente de ampliar.; IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
@@ -2246,7 +2435,18 @@
       "gbifOccurrences": 0,
       "visible": true,
       "gbifBboxSightings": 12,
-      "imageAttribution": "User:falconaumanni (CC BY-SA 4.0) · Wikimedia Commons"
+      "imageAttribution": "User:falconaumanni (CC BY-SA 4.0) · Wikimedia Commons",
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 21,
@@ -2293,7 +2493,13 @@
       "gbifOccurrences": 5,
       "visible": true,
       "gbifBboxSightings": 5,
-      "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons"
+      "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      }
     },
     {
       "id": 22,
@@ -2340,7 +2546,18 @@
       "gbifOccurrences": 3,
       "visible": true,
       "gbifBboxSightings": 3,
-      "imageAttribution": "Norbert Nagel, Mörfelden-Walldorf, Germany (CC BY-SA 3.0) · Wikimedia Commons"
+      "imageAttribution": "Norbert Nagel, Mörfelden-Walldorf, Germany (CC BY-SA 3.0) · Wikimedia Commons",
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 23,
@@ -2359,7 +2576,7 @@
       "seasonality": "Todo el año (actividad crepuscular y nocturna)",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Felis_silvestris_Kocka_divok%C3%A1_zoo_cropped.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 2,
       "featured": true,
       "source": "IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
@@ -2386,7 +2603,18 @@
       "gbifOccurrences": 0,
       "visible": true,
       "gbifBboxSightings": 4,
-      "imageAttribution": "Felis_silvestris_Kočka_divoká_ZOO_Děčín.jpg: Alena Houšková derivat… (CC BY-SA 3.0) · Wikimedia Commons"
+      "imageAttribution": "Felis_silvestris_Kočka_divoká_ZOO_Děčín.jpg: Alena Houšková derivat… (CC BY-SA 3.0) · Wikimedia Commons",
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 24,
@@ -2405,7 +2633,7 @@
       "seasonality": "Todo el año (actividad nocturna)",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Genetta_genetta_felina_(Wroclaw_zoo).JPG?width=1280",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 2,
       "featured": true,
       "source": "IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
@@ -2432,7 +2660,18 @@
       "gbifOccurrences": 8,
       "visible": true,
       "gbifBboxSightings": 8,
-      "imageAttribution": "Guérin Nicolas (messages) (CC BY-SA 3.0) · Wikimedia Commons"
+      "imageAttribution": "Guérin Nicolas (messages) (CC BY-SA 3.0) · Wikimedia Commons",
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 25,
@@ -2451,7 +2690,7 @@
       "seasonality": "Todo el año (actividad nocturna)",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Steinmarder_01.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 1,
       "featured": true,
       "source": "IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
@@ -2478,7 +2717,18 @@
       "gbifOccurrences": 8,
       "visible": true,
       "gbifBboxSightings": 8,
-      "imageAttribution": "Zefram (CC BY 2.0 de) · Wikimedia Commons"
+      "imageAttribution": "Zefram (CC BY 2.0 de) · Wikimedia Commons",
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 26,
@@ -2497,7 +2747,7 @@
       "seasonality": "Todo el año (actividad nocturna)",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Badger-badger.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 1,
       "featured": true,
       "source": "IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
@@ -2524,7 +2774,18 @@
       "visible": true,
       "gbifBboxSightings": 6,
       "imageAttribution": "BadgerHero (CC BY-SA 3.0) · Wikimedia Commons",
-      "reviewNote": "La cita de presencia en este espacio procede del volcado inicial del catálogo, que reutilizó fichas de otro parque, y no de una fuente propia: pendiente de referenciar contra el PORN y el plan de gestión de este espacio."
+      "reviewNote": "La cita de presencia en este espacio procede del volcado inicial del catálogo, que reutilizó fichas de otro parque, y no de una fuente propia: pendiente de referenciar contra el PORN y el plan de gestión de este espacio.",
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 27,
@@ -2543,7 +2804,7 @@
       "seasonality": "Otoño e invierno lluviosos",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Epidalea_calamita_02_by-dpc.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 2,
       "featured": false,
       "source": "IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
@@ -2570,7 +2831,18 @@
       "gbifOccurrences": 8,
       "visible": true,
       "gbifBboxSightings": 8,
-      "imageAttribution": "David Perez (CC BY 3.0) · Wikimedia Commons"
+      "imageAttribution": "David Perez (CC BY 3.0) · Wikimedia Commons",
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 28,
@@ -2611,7 +2883,13 @@
       "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 1,
       "visible": true,
-      "gbifBboxSightings": 1
+      "gbifBboxSightings": 1,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      }
     },
     {
       "id": 29,
@@ -2630,7 +2908,7 @@
       "seasonality": "Primavera",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_lanigerum_kz01.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 1,
       "featured": true,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado de protección",
       "taxonomy": {
@@ -2654,7 +2932,18 @@
       "gbifOccurrences": 1,
       "visible": true,
       "gbifBboxSightings": 1,
-      "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons"
+      "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 30,
@@ -2673,7 +2962,7 @@
       "seasonality": "Primavera-verano",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_freynii_kz01.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 1,
       "featured": true,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado de protección",
       "taxonomy": {
@@ -2697,7 +2986,18 @@
       "gbifOccurrences": 1,
       "visible": true,
       "gbifBboxSightings": 1,
-      "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons"
+      "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 31,
@@ -2716,7 +3016,7 @@
       "seasonality": "Primavera",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Notoceras_bicorne_kz08.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 1,
       "featured": true,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado de protección",
       "taxonomy": {
@@ -2740,7 +3040,18 @@
       "gbifOccurrences": 1,
       "visible": true,
       "gbifBboxSightings": 1,
-      "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons"
+      "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 32,
@@ -2759,7 +3070,7 @@
       "seasonality": "Primavera y principio de verano",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Genista_cinerea26de_maig_2007_019.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 4090, 5210, 5330; GBIF (90 ocurrencias en 7 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -2787,7 +3098,18 @@
       "imageAttribution": "Victor M. Vicente Selvas (Public domain) · Wikimedia Commons",
       "gbifOccurrences": 43,
       "visible": true,
-      "gbifBboxSightings": 43
+      "gbifBboxSightings": 43,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 33,
@@ -2806,7 +3128,7 @@
       "seasonality": "Primavera (floración) y todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Salix_pedicellata_Habitus_2009-9-27_CampoCalatrava.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 92A0; GBIF (44 ocurrencias en 6 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -2836,7 +3158,18 @@
       "imageAttribution": "javier martin (Public domain) · Wikimedia Commons",
       "gbifOccurrences": 19,
       "visible": true,
-      "gbifBboxSightings": 19
+      "gbifBboxSightings": 19,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 34,
@@ -2883,7 +3216,18 @@
       "imageAttribution": "MottaW (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 12,
       "visible": true,
-      "gbifBboxSightings": 12
+      "gbifBboxSightings": 12,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 35,
@@ -2902,7 +3246,7 @@
       "seasonality": "Final de invierno y principio de primavera",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Colchicum_triphyllum_001_GotBot_2016.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 6220; GBIF (30 ocurrencias en 8 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -2930,7 +3274,18 @@
       "imageAttribution": "Averater (CC BY 4.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 7
+      "gbifBboxSightings": 7,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 36,
@@ -2977,7 +3332,18 @@
       "imageAttribution": "Philmarin (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 8
+      "gbifBboxSightings": 8,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 37,
@@ -3025,7 +3391,18 @@
       "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 7,
       "visible": true,
-      "gbifBboxSightings": 7
+      "gbifBboxSightings": 7,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 38,
@@ -3072,7 +3449,18 @@
       "imageAttribution": "Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 10
+      "gbifBboxSightings": 10,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 39,
@@ -3091,7 +3479,7 @@
       "seasonality": "Primavera",
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/184117054/original.jpeg",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 9560; GBIF (19 ocurrencias en 7 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -3119,7 +3507,18 @@
       "imageAttribution": "Santiago Martín-Bravo (CC BY 4.0) · iNaturalist/GBIF",
       "gbifOccurrences": 11,
       "visible": true,
-      "gbifBboxSightings": 11
+      "gbifBboxSightings": 11,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 40,
@@ -3166,7 +3565,18 @@
       "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 9,
       "visible": true,
-      "gbifBboxSightings": 9
+      "gbifBboxSightings": 9,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 41,
@@ -3214,7 +3624,18 @@
       "imageAttribution": "Philmarin (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 7
+      "gbifBboxSightings": 7,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 42,
@@ -3233,7 +3654,7 @@
       "seasonality": "Verano",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jasione_foliosa_var._Minuta_GotBot_2015_001.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 8210; GBIF (16 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -3261,7 +3682,18 @@
       "imageAttribution": "Averater (CC BY 4.0) · Wikimedia Commons",
       "gbifOccurrences": 6,
       "visible": true,
-      "gbifBboxSightings": 6
+      "gbifBboxSightings": 6,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 43,
@@ -3280,7 +3712,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Carrasca_de_la_Raboseras.JPG?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 5210, 9340; GBIF (15 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -3308,7 +3740,18 @@
       "imageAttribution": "Picamaderos (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 3,
       "visible": true,
-      "gbifBboxSightings": 3
+      "gbifBboxSightings": 3,
+      "rarityLocal": 5,
+      "rarityLocalBasis": {
+        "categoria": "En Peligro de Extinción (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 44,
@@ -3327,7 +3770,7 @@
       "seasonality": "Primavera",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cytisus_scoparius_by_Danny_S._-_001.JPG?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 5330; GBIF (15 ocurrencias en 7 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -3353,7 +3796,18 @@
       "imageAttribution": "Danny S. (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 6,
       "visible": true,
-      "gbifBboxSightings": 6
+      "gbifBboxSightings": 6,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 45,
@@ -3372,7 +3826,7 @@
       "seasonality": "Primavera y verano",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Impera_cylind_071122-1339_stgd.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 92D0; GBIF (15 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -3401,7 +3855,14 @@
       "imageAttribution": "W.A. Djatmiko (Wie146) (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 5,
       "visible": true,
-      "gbifBboxSightings": 5
+      "gbifBboxSightings": 5,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": null
     },
     {
       "id": 46,
@@ -3420,7 +3881,7 @@
       "seasonality": "Primavera",
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/111644731/original.jpeg",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 8210; GBIF (15 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28. Nombre aceptado en EIDOS; Saxifraga almeriensis es sinónimo.",
       "taxonomy": {
@@ -3449,7 +3910,18 @@
       "imageAttribution": "faluke (CC BY-NC 4.0) · GBIF/iNaturalist",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 4
+      "gbifBboxSightings": 4,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 47,
@@ -3497,7 +3969,18 @@
       "imageAttribution": "Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons",
       "gbifOccurrences": 4,
       "visible": true,
-      "gbifBboxSightings": 4
+      "gbifBboxSightings": 4,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 48,
@@ -3541,7 +4024,18 @@
       "imageAttribution": "Ghislain118 https://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 2
+      "gbifBboxSightings": 2,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 49,
@@ -3560,7 +4054,7 @@
       "seasonality": "Primavera y verano",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Campanula_hispanica_1.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 8210; GBIF (10 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28. Nombre aceptado en EIDOS; Campanula hispanica es sinónimo.",
       "taxonomy": {
@@ -3588,7 +4082,18 @@
       "imageAttribution": "Ghislain118 http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 6,
       "visible": true,
-      "gbifBboxSightings": 6
+      "gbifBboxSightings": 6,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 50,
@@ -3633,7 +4138,18 @@
       "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 3,
       "visible": true,
-      "gbifBboxSightings": 3
+      "gbifBboxSightings": 3,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 51,
@@ -3652,7 +4168,7 @@
       "seasonality": "Invierno y primavera",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ulex_europaeus.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 4090; GBIF (8 ocurrencias en 6 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -3677,7 +4193,18 @@
       "imageAttribution": "J.F. Gaffard Jeffdelonge at fr.wikipedia (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 3,
       "visible": true,
-      "gbifBboxSightings": 3
+      "gbifBboxSightings": 3,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 52,
@@ -3723,7 +4250,18 @@
       "imageAttribution": "Finlay F. K. Thorpe (CC BY-NC 4.0) · GBIF/iNaturalist",
       "gbifOccurrences": 3,
       "visible": true,
-      "gbifBboxSightings": 3
+      "gbifBboxSightings": 3,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 53,
@@ -3742,7 +4280,7 @@
       "seasonality": "Primavera y verano",
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/501474709/original.jpeg",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 8210; GBIF (6 ocurrencias en 3 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -3769,7 +4307,18 @@
       "imageAttribution": "deutschle (CC BY-NC 4.0) · GBIF/iNaturalist",
       "gbifOccurrences": 4,
       "visible": true,
-      "gbifBboxSightings": 4
+      "gbifBboxSightings": 4,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 54,
@@ -3812,7 +4361,18 @@
       "imageAttribution": "Miguel A. Casado (CC BY-NC 4.0) · GBIF/iNaturalist",
       "gbifOccurrences": 1,
       "visible": true,
-      "gbifBboxSightings": 1
+      "gbifBboxSightings": 1,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 55,
@@ -3831,7 +4391,7 @@
       "seasonality": "Primavera y verano",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/ERODIUM_FOETIDUM_-_S%C3%92BOL_-_IB-784_(Cargola_de_roca).jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 5,
       "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 4090, 6170; GBIF (5 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -3856,7 +4416,18 @@
       "imageAttribution": "Isidre blanc (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 5
+      "gbifBboxSightings": 5,
+      "rarityLocal": 5,
+      "rarityLocalBasis": {
+        "categoria": "CEEA: En peligro de extinción (Orden AAA/1771/2015, de 31 de agosto, por la que se modifica el anexo del Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 211, de 3 de septiembre de 2015)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "CEEA: En peligro de extinción (Orden AAA/1771/2015, de 31 de agosto, por la que se modifica el anexo del Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 211, de 3 de septiembre de 2015)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 56,
@@ -3875,7 +4446,7 @@
       "seasonality": "Primavera y verano",
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/411356756/original.jpeg",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 5330; GBIF (5 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -3899,7 +4470,18 @@
       "imageAttribution": "Maël Taupin (CC BY-NC 4.0) · GBIF/iNaturalist",
       "gbifOccurrences": 1,
       "visible": true,
-      "gbifBboxSightings": 1
+      "gbifBboxSightings": 1,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 57,
@@ -3918,7 +4500,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_lusitanica_kz01.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 5330; GBIF (5 ocurrencias en 5 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -3942,7 +4524,18 @@
       "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 12
+      "gbifBboxSightings": 12,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 58,
@@ -3985,7 +4578,18 @@
       "imageAttribution": null,
       "gbifOccurrences": 5,
       "visible": true,
-      "gbifBboxSightings": 5
+      "gbifBboxSightings": 5,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 60,
@@ -4035,7 +4639,18 @@
       "imageAttribution": "Júlio Reis (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 185,
       "visible": true,
-      "gbifBboxSightings": 185
+      "gbifBboxSightings": 185,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 61,
@@ -4054,7 +4669,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_oxycedrus_g1.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (482 ocurrencias en 10 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -4086,7 +4701,18 @@
       "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 170
+      "gbifBboxSightings": 170,
+      "rarityLocal": 5,
+      "rarityLocalBasis": {
+        "categoria": "En Peligro de Extinción (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 62,
@@ -4105,7 +4731,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Carrasca_de_la_Raboseras.JPG?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (187 ocurrencias en 9 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -4136,7 +4762,18 @@
       "imageAttribution": "Picamaderos (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 64,
       "visible": true,
-      "gbifBboxSightings": 64
+      "gbifBboxSightings": 64,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 63,
@@ -4186,7 +4823,18 @@
       "imageAttribution": "Isidre blanc (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 58,
       "visible": true,
-      "gbifBboxSightings": 58
+      "gbifBboxSightings": 58,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 64,
@@ -4236,7 +4884,18 @@
       "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 57,
       "visible": true,
-      "gbifBboxSightings": 57
+      "gbifBboxSightings": 57,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 65,
@@ -4255,7 +4914,7 @@
       "seasonality": "Primavera a otoño (pierde la hoja en invierno)",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pistachier2.JPG?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (142 ocurrencias en 11 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -4287,7 +4946,18 @@
       "imageAttribution": "greffer.net (CC BY 2.5) · Wikimedia Commons",
       "gbifOccurrences": 37,
       "visible": true,
-      "gbifBboxSightings": 37
+      "gbifBboxSightings": 37,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 66,
@@ -4306,7 +4976,7 @@
       "seasonality": "Invierno y primavera (floración)",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/T2_37_Viburnum_tinus_par_Pierre-Joseph_Redout%C3%A9.jpeg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (136 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -4334,7 +5004,18 @@
       "imageAttribution": "Pierre-Joseph Redouté (Public domain) · Wikimedia Commons",
       "gbifOccurrences": 41,
       "visible": true,
-      "gbifBboxSightings": 41
+      "gbifBboxSightings": 41,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 67,
@@ -4353,7 +5034,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_pinaster_20131229.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (99 ocurrencias en 9 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -4384,7 +5065,18 @@
       "imageAttribution": "Luis Fernández García (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 31
+      "gbifBboxSightings": 31,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 68,
@@ -4403,7 +5095,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eichh%C3%B6rnchen_D%C3%BCsseldorf_Hofgarten_edit.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (97 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -4432,7 +5124,18 @@
       "imageAttribution": "Ray eye (CC BY-SA 2.0 de) · Wikimedia Commons",
       "gbifOccurrences": 29,
       "visible": true,
-      "gbifBboxSightings": 29
+      "gbifBboxSightings": 29,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 69,
@@ -4479,7 +5182,18 @@
       "imageAttribution": "Струјајое (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 20
+      "gbifBboxSightings": 20,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 70,
@@ -4529,7 +5243,18 @@
       "imageAttribution": "Cillas (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 35,
       "visible": true,
-      "gbifBboxSightings": 35
+      "gbifBboxSightings": 35,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 71,
@@ -4548,7 +5273,7 @@
       "seasonality": "Verano y otoño",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Genista_spartioides_kz01.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (85 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -4576,7 +5301,18 @@
       "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 17
+      "gbifBboxSightings": 17,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 72,
@@ -4626,7 +5362,18 @@
       "imageAttribution": "This image is created by user Stijn Hantson at Observation.org, a g… (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 24,
       "visible": true,
-      "gbifBboxSightings": 24
+      "gbifBboxSightings": 24,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 73,
@@ -4645,7 +5392,7 @@
       "seasonality": "Todo el año, con color otoñal marcado",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_monspessulanum_fg01.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (67 ocurrencias en 9 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -4677,7 +5424,18 @@
       "imageAttribution": "Fritz Geller-Grimm (CC BY-SA 2.5) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 23
+      "gbifBboxSightings": 23,
+      "rarityLocal": 5,
+      "rarityLocalBasis": {
+        "categoria": "En Peligro de Extinción (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 74,
@@ -4724,7 +5482,18 @@
       "imageAttribution": "Orchi (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 14,
       "visible": true,
-      "gbifBboxSightings": 14
+      "gbifBboxSightings": 14,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 75,
@@ -4774,7 +5543,18 @@
       "imageAttribution": "User:Xemenendura (CC BY-SA 2.1 es) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 24
+      "gbifBboxSightings": 24,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 76,
@@ -4793,7 +5573,7 @@
       "seasonality": "Primavera y verano",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Colutea_arborescens01.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (57 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -4822,7 +5602,18 @@
       "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 17,
       "visible": true,
-      "gbifBboxSightings": 17
+      "gbifBboxSightings": 17,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 77,
@@ -4841,7 +5632,7 @@
       "seasonality": "Primavera",
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/483580471/original.jpeg",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (55 ocurrencias en 10 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -4872,7 +5663,18 @@
       "imageAttribution": "Olivier Argagnon (CC BY 4.0) · GBIF/iNaturalist",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 21
+      "gbifBboxSightings": 21,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 78,
@@ -4891,7 +5693,7 @@
       "seasonality": "Primavera",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cytinus_ruber_(flowering_plants).jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (54 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -4919,7 +5721,18 @@
       "imageAttribution": "Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 14,
       "visible": true,
-      "gbifBboxSightings": 14
+      "gbifBboxSightings": 14,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 79,
@@ -4969,7 +5782,18 @@
       "imageAttribution": "autor no indicado (CC BY-SA 1.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 18
+      "gbifBboxSightings": 18,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 80,
@@ -4988,7 +5812,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rhamnus_alaternus1627.JPG?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (46 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -5016,7 +5840,18 @@
       "imageAttribution": "tato grasso (CC BY-SA 2.5) · Wikimedia Commons",
       "gbifOccurrences": 28,
       "visible": true,
-      "gbifBboxSightings": 28
+      "gbifBboxSightings": 28,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 81,
@@ -5035,7 +5870,7 @@
       "seasonality": "Primavera",
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/517007573/original.jpg",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (45 ocurrencias en 6 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -5063,7 +5898,14 @@
       "imageAttribution": "FloresdeMurcia.com (CC BY-NC 4.0) · GBIF/iNaturalist",
       "gbifOccurrences": 18,
       "visible": true,
-      "gbifBboxSightings": 18
+      "gbifBboxSightings": 18,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": null
     },
     {
       "id": 82,
@@ -5111,7 +5953,18 @@
       "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 17,
       "visible": true,
-      "gbifBboxSightings": 17
+      "gbifBboxSightings": 17,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 83,
@@ -5130,7 +5983,7 @@
       "seasonality": "Primavera y verano",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lonicera_splendida_2018-05-22_2462.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (42 ocurrencias en 9 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -5161,7 +6014,18 @@
       "imageAttribution": "Salicyna (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 12
+      "gbifBboxSightings": 12,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 84,
@@ -5180,7 +6044,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Phyllirea_angustifolia.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (41 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -5208,7 +6072,18 @@
       "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 22,
       "visible": true,
-      "gbifBboxSightings": 22
+      "gbifBboxSightings": 22,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 85,
@@ -5255,7 +6130,18 @@
       "imageAttribution": "anarkis (CC BY-NC 4.0) · GBIF/iNaturalist",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 11
+      "gbifBboxSightings": 11,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 86,
@@ -5274,7 +6160,7 @@
       "seasonality": "Primavera a otoño",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pelophylax_perezi_by-dpc.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (40 ocurrencias en 6 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -5303,7 +6189,18 @@
       "imageAttribution": "David Perez (CC BY 3.0) · Wikimedia Commons",
       "gbifOccurrences": 24,
       "visible": true,
-      "gbifBboxSightings": 24
+      "gbifBboxSightings": 24,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 87,
@@ -5350,7 +6247,18 @@
       "imageAttribution": "janet_phi (CC BY-SA 4.0) · GBIF",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 17
+      "gbifBboxSightings": 17,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 88,
@@ -5369,7 +6277,7 @@
       "seasonality": "Primavera a otoño (marcescente en invierno)",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_faginea_centenario.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (39 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -5397,7 +6305,18 @@
       "imageAttribution": "Carlosblh (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 10,
       "visible": true,
-      "gbifBboxSightings": 10
+      "gbifBboxSightings": 10,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 89,
@@ -5416,7 +6335,7 @@
       "seasonality": "Otoño e invierno (flor y fruto a la vez)",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Arbutus_unedo_Corsica.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (38 ocurrencias en 6 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -5444,7 +6363,18 @@
       "imageAttribution": "jxandreani (CC BY 2.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 10
+      "gbifBboxSightings": 10,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 90,
@@ -5463,7 +6393,7 @@
       "seasonality": "Primavera",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Coronilla_juncea.JPG?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (37 ocurrencias en 7 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -5492,7 +6422,18 @@
       "imageAttribution": "Mario Modesto Mata (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 20,
       "visible": true,
-      "gbifBboxSightings": 20
+      "gbifBboxSightings": 20,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 92,
@@ -5539,7 +6480,18 @@
       "imageAttribution": "javier martin (Public domain) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 11
+      "gbifBboxSightings": 11,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 93,
@@ -5558,7 +6510,7 @@
       "seasonality": "Primavera y verano",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dorycnium_pentaphyllum_Habitat_2010-6-15_DehesaBoyaldePuertollano.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (36 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -5587,7 +6539,18 @@
       "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 23
+      "gbifBboxSightings": 23,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 94,
@@ -5606,7 +6569,7 @@
       "seasonality": "Verano",
       "image": "https://observation.org/photos/83864093.jpg",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 4,
       "featured": false,
       "source": "GBIF (36 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -5637,7 +6600,18 @@
       "imageAttribution": "Fco. Javier López Espino (CC BY-NC-ND 4.0) · observation.org / GBIF",
       "gbifOccurrences": 10,
       "visible": true,
-      "gbifBboxSightings": 10
+      "gbifBboxSightings": 10,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "UICN España: VU (Vulnerable) (2010)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "UICN España: VU (Vulnerable) (2010)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 95,
@@ -5684,7 +6658,18 @@
       "imageAttribution": "Alberto Salguero (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 13,
       "visible": true,
-      "gbifBboxSightings": 13
+      "gbifBboxSightings": 13,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 96,
@@ -5703,7 +6688,7 @@
       "seasonality": "Primavera y verano",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dianthus_broteri.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 4,
       "featured": false,
       "source": "GBIF (35 ocurrencias en 6 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -5731,7 +6716,18 @@
       "imageAttribution": "Nanosanchez (Public domain) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 14
+      "gbifBboxSightings": 14,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "UICN España: VU (Vulnerable) (2010)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "UICN España: VU (Vulnerable) (2010)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 97,
@@ -5779,7 +6775,18 @@
       "imageAttribution": "Finlay F. K. Thorpe (CC BY-NC 4.0) · GBIF/iNaturalist",
       "gbifOccurrences": 13,
       "visible": true,
-      "gbifBboxSightings": 13
+      "gbifBboxSightings": 13,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 98,
@@ -5798,7 +6805,7 @@
       "seasonality": "Primavera a otoño",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Populus_alba_01.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (33 ocurrencias en 6 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -5826,7 +6833,18 @@
       "imageAttribution": "la la means I love you (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 12,
       "visible": true,
-      "gbifBboxSightings": 12
+      "gbifBboxSightings": 12,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 99,
@@ -5845,7 +6863,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Phillyrea_latifolia.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (32 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -5873,7 +6891,18 @@
       "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 9,
       "visible": true,
-      "gbifBboxSightings": 9
+      "gbifBboxSightings": 9,
+      "rarityLocal": 5,
+      "rarityLocalBasis": {
+        "categoria": "En Peligro de Extinción (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 100,
@@ -5892,7 +6921,7 @@
       "seasonality": "Primavera",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Iris_lutescens_(flowers).jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (30 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -5920,7 +6949,18 @@
       "imageAttribution": "Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 7,
       "visible": true,
-      "gbifBboxSightings": 7
+      "gbifBboxSightings": 7,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 101,
@@ -5966,7 +7006,18 @@
       "imageAttribution": "Arrakatanga33 (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 11
+      "gbifBboxSightings": 11,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 102,
@@ -6011,7 +7062,18 @@
       "imageAttribution": "Philmarin (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 10,
       "visible": true,
-      "gbifBboxSightings": 10
+      "gbifBboxSightings": 10,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 103,
@@ -6030,7 +7092,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gayuba.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (28 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -6058,7 +7120,18 @@
       "imageAttribution": "No machine-readable author provided. Carlosblh assumed (based on co… (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 12
+      "gbifBboxSightings": 12,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 104,
@@ -6077,7 +7150,7 @@
       "seasonality": "Primavera",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stachys_circinata.JPG?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (26 ocurrencias en 7 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -6105,7 +7178,18 @@
       "imageAttribution": "Xemenendura (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 7,
       "visible": true,
-      "gbifBboxSightings": 7
+      "gbifBboxSightings": 7,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 105,
@@ -6124,7 +7208,7 @@
       "seasonality": "Primavera a otoño",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Blismes_elm_2007.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (25 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -6152,7 +7236,18 @@
       "imageAttribution": "Eric Collin. Original uploader was Ptelea at en.wikipedia (GFDL) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 8
+      "gbifBboxSightings": 8,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 106,
@@ -6199,7 +7294,18 @@
       "imageAttribution": "Bernd Haynold (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 7,
       "visible": true,
-      "gbifBboxSightings": 7
+      "gbifBboxSightings": 7,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 107,
@@ -6246,7 +7352,18 @@
       "imageAttribution": "Juan Bibiloni (CC BY 3.0) · Wikimedia Commons",
       "gbifOccurrences": 8,
       "visible": true,
-      "gbifBboxSightings": 8
+      "gbifBboxSightings": 8,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 108,
@@ -6265,7 +7382,7 @@
       "seasonality": "Primavera a otoño",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ulmus_glabra_horizontalis.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (23 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -6293,7 +7410,18 @@
       "imageAttribution": "Melburnian (CC BY 2.5) · Wikimedia Commons",
       "gbifOccurrences": 8,
       "visible": true,
-      "gbifBboxSightings": 8
+      "gbifBboxSightings": 8,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 109,
@@ -6312,7 +7440,7 @@
       "seasonality": "Primavera",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_prostrata.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (22 ocurrencias en 6 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -6341,7 +7469,18 @@
       "imageAttribution": "User:Tigerente (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 15,
       "visible": true,
-      "gbifBboxSightings": 15
+      "gbifBboxSightings": 15,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 110,
@@ -6360,7 +7499,7 @@
       "seasonality": "Verano (floración) y otoño (fruto)",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Starr_080304-3229_Myrtus_communis.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (22 ocurrencias en 6 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -6388,7 +7527,18 @@
       "imageAttribution": "Forest & Kim Starr (CC BY 3.0) · Wikimedia Commons",
       "gbifOccurrences": 6,
       "visible": true,
-      "gbifBboxSightings": 6
+      "gbifBboxSightings": 6,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 111,
@@ -6407,7 +7557,7 @@
       "seasonality": "Primavera (floración) y otoño (fruto)",
       "image": "https://observation.org/photos/83833755.jpg",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (22 ocurrencias en 7 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -6434,7 +7584,18 @@
       "imageAttribution": "Paco (Faluke) (CC BY-NC-ND 4.0) · observation.org / GBIF",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 13
+      "gbifBboxSightings": 13,
+      "rarityLocal": 5,
+      "rarityLocalBasis": {
+        "categoria": "En Peligro de Extinción (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 112,
@@ -6453,7 +7614,7 @@
       "seasonality": "Primavera y verano",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Centranthus_lecoqii_subsp._lecoqii_4154.JPG?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (22 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -6479,7 +7640,18 @@
       "imageAttribution": "Vachiclub (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 6,
       "visible": true,
-      "gbifBboxSightings": 6
+      "gbifBboxSightings": 6,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 113,
@@ -6498,7 +7670,7 @@
       "seasonality": "Verano y otoño",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Artemisia_reptans_Samuel_Correa_Falc%C3%B3n_2022_GC.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 1,
+      "rarityScore": 4,
       "featured": false,
       "source": "GBIF (20 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -6526,7 +7698,18 @@
       "imageAttribution": "SamuelCorreaFalcón (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 4,
       "visible": true,
-      "gbifBboxSightings": 4
+      "gbifBboxSightings": 4,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "UICN España: VU (Vulnerable) (2010)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "UICN España: VU (Vulnerable) (2010)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 114,
@@ -6545,7 +7728,7 @@
       "seasonality": "Primavera y verano",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/A._valentinus-1.JPG?width=1280",
       "coordinates": null,
-      "rarityScore": 1,
+      "rarityScore": 5,
       "featured": false,
       "source": "GBIF (20 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -6573,7 +7756,18 @@
       "imageAttribution": "Philmarin (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 5,
       "visible": true,
-      "gbifBboxSightings": 5
+      "gbifBboxSightings": 5,
+      "rarityLocal": 5,
+      "rarityLocalBasis": {
+        "categoria": "UICN España: CR (En peligro crítico) (2010)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "UICN España: CR (En peligro crítico) (2010)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 115,
@@ -6619,7 +7813,18 @@
       "imageAttribution": "Javier martin (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 13
+      "gbifBboxSightings": 13,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 116,
@@ -6666,7 +7871,18 @@
       "imageAttribution": "Bernd Haynold (CC BY 2.5) · Wikimedia Commons",
       "gbifOccurrences": 6,
       "visible": true,
-      "gbifBboxSightings": 6
+      "gbifBboxSightings": 6,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 117,
@@ -6685,7 +7901,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ceratonia_siliqua_Keciboynuzu_1370984_Nevit.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (19 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -6713,7 +7929,18 @@
       "imageAttribution": "Nevit Dilmen (talk) (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 18,
       "visible": true,
-      "gbifBboxSightings": 18
+      "gbifBboxSightings": 18,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 118,
@@ -6759,7 +7986,18 @@
       "imageAttribution": "Denys Vynokurov (CC BY 4.0) · GBIF/iNaturalist",
       "gbifOccurrences": 6,
       "visible": true,
-      "gbifBboxSightings": 6
+      "gbifBboxSightings": 6,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 119,
@@ -6778,7 +8016,7 @@
       "seasonality": "Primavera (flor) y otoño (fruto y color)",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Weilburg_-_Tiergarten_-_Mehlbeere.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (18 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -6804,7 +8042,18 @@
       "imageAttribution": "Oliver Abels (SBT) (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 12
+      "gbifBboxSightings": 12,
+      "rarityLocal": 5,
+      "rarityLocalBasis": {
+        "categoria": "En Peligro de Extinción (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 120,
@@ -6823,7 +8072,7 @@
       "seasonality": "Primavera",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fritillaria_lusitanica_2_2601.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (17 ocurrencias en 6 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -6851,7 +8100,18 @@
       "imageAttribution": "Balles2601 (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 6,
       "visible": true,
-      "gbifBboxSightings": 6
+      "gbifBboxSightings": 6,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 121,
@@ -6898,7 +8158,14 @@
       "imageAttribution": "Thomas Holbach (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 52,
       "visible": true,
-      "gbifBboxSightings": 52
+      "gbifBboxSightings": 52,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": null
     },
     {
       "id": 122,
@@ -6945,7 +8212,18 @@
       "imageAttribution": "Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 6
+      "gbifBboxSightings": 6,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 123,
@@ -6964,7 +8242,7 @@
       "seasonality": "Verano",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Potentilla_caulescens.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (16 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -6991,7 +8269,18 @@
       "imageAttribution": "User:Tigerente (CC BY 2.5) · Wikimedia Commons",
       "gbifOccurrences": 6,
       "visible": true,
-      "gbifBboxSightings": 6
+      "gbifBboxSightings": 6,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 124,
@@ -7010,7 +8299,7 @@
       "seasonality": "Primavera (flor) y otoño (fruto)",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sorbus_domestica_FruitsLeaves_BotGardBln0906a.JPG?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (16 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -7038,7 +8327,18 @@
       "imageAttribution": "BotBln (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 8
+      "gbifBboxSightings": 8,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 125,
@@ -7057,7 +8357,7 @@
       "seasonality": "Primavera a otoño",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/20110802Walnussbaum_Plankstadt2.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (15 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -7085,7 +8385,18 @@
       "imageAttribution": "AnRo0002 (CC0) · Wikimedia Commons",
       "gbifOccurrences": 5,
       "visible": true,
-      "gbifBboxSightings": 5
+      "gbifBboxSightings": 5,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 126,
@@ -7104,7 +8415,7 @@
       "seasonality": "Primavera (floración) a otoño",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fraxinus_ornus_JPG2.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (15 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -7132,7 +8443,18 @@
       "imageAttribution": "Jean-Pol GRANDMONT (CC BY 3.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 3
+      "gbifBboxSightings": 3,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 127,
@@ -7151,7 +8473,7 @@
       "seasonality": "Primavera",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_violaceum_habitus_SierraMadrona.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (15 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -7179,7 +8501,14 @@
       "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
       "gbifOccurrences": 7,
       "visible": true,
-      "gbifBboxSightings": 7
+      "gbifBboxSightings": 7,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": null
     },
     {
       "id": 128,
@@ -7226,7 +8555,18 @@
       "imageAttribution": "Taken by Carsten Niehaus (user:Lumbar). (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 4
+      "gbifBboxSightings": 4,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 129,
@@ -7245,7 +8585,7 @@
       "seasonality": "Invierno y primavera",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Erica_erigena_2c.JPG?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "GBIF (15 ocurrencias en 6 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
@@ -7272,7 +8612,18 @@
       "imageAttribution": "Consultaplantas (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 14,
       "visible": true,
-      "gbifBboxSightings": 14
+      "gbifBboxSightings": 14,
+      "rarityLocal": 5,
+      "rarityLocalBasis": {
+        "categoria": "En Peligro de Extinción (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 130,
@@ -7319,7 +8670,18 @@
       "imageAttribution": "(Hans Hillewaert) (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 5,
       "visible": true,
-      "gbifBboxSightings": 5
+      "gbifBboxSightings": 5,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 131,
@@ -7366,7 +8728,18 @@
       "imageAttribution": "The Trustees of the National History Museum in London (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 7,
       "visible": true,
-      "gbifBboxSightings": 7
+      "gbifBboxSightings": 7,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 132,
@@ -7413,7 +8786,18 @@
       "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 4,
       "visible": true,
-      "gbifBboxSightings": 4
+      "gbifBboxSightings": 4,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 133,
@@ -7454,7 +8838,18 @@
       "imageAttribution": "Norbert Kenntner, Berlin (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 6,
       "visible": true,
-      "gbifBboxSightings": 6
+      "gbifBboxSightings": 6,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 134,
@@ -7495,7 +8890,18 @@
       "imageAttribution": "Jarkko Järvinen (CC BY-SA 2.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 148
+      "gbifBboxSightings": 148,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 135,
@@ -7514,7 +8920,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aguila_perdicera.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 5,
+      "rarityScore": 4,
       "featured": true,
       "source": "Libro Rojo de las Aves de España, SEO/BirdLife 2004; Ley 7/1995, de 21 de abril, de la Fauna Silvestre de la Región de Murcia (Anexo I); IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
@@ -7536,7 +8942,18 @@
       "imageAttribution": "Paco Gómez from Castellón, Spain (CC BY-SA 2.0) · Wikimedia Commons",
       "gbifOccurrences": 13,
       "visible": true,
-      "gbifBboxSightings": 13
+      "gbifBboxSightings": 13,
+      "rarityLocal": 5,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: En peligro de extinción (población reproductora muy reducida)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Catálogo Español de Especies Amenazadas: Vulnerable",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 136,
@@ -7555,7 +8972,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bubo_bubo_sibiricus_-_01.JPG?width=1280",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 2,
       "featured": true,
       "source": "IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
@@ -7577,7 +8994,18 @@
       "gbifOccurrences": 13,
       "visible": true,
       "gbifBboxSightings": 13,
-      "imageAttribution": "Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons"
+      "imageAttribution": "Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons",
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 137,
@@ -7596,7 +9024,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Burhinus_oedicnemus_insularum_Lanzarote_1.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 2,
       "featured": false,
       "source": "IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
@@ -7618,7 +9046,18 @@
       "gbifOccurrences": 0,
       "visible": true,
       "gbifBboxSightings": 10,
-      "imageAttribution": "Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons"
+      "imageAttribution": "Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons",
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 138,
@@ -7637,7 +9076,7 @@
       "seasonality": "Primavera y verano (estival)",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Caprimulgus_ruficollis_-Portugal-8.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 2,
       "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List) para la presencia en la ZEPA/ZEC ES0000173",
       "taxonomy": {
@@ -7659,7 +9098,18 @@
       "imageAttribution": "Olivença (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 17,
       "visible": true,
-      "gbifBboxSightings": 17
+      "gbifBboxSightings": 17,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 139,
@@ -7700,7 +9150,18 @@
       "imageAttribution": "Paco Gómez (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 35,
       "visible": true,
-      "gbifBboxSightings": 35
+      "gbifBboxSightings": 35,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 140,
@@ -7741,7 +9202,18 @@
       "imageAttribution": "Christian Svane (CC BY-SA 2.5) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 13
+      "gbifBboxSightings": 13,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 141,
@@ -7760,7 +9232,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Falco_peregrinus_-_01.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 2,
       "featured": true,
       "source": "IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
@@ -7782,7 +9254,18 @@
       "gbifOccurrences": 65,
       "visible": true,
       "gbifBboxSightings": 65,
-      "imageAttribution": "Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons"
+      "imageAttribution": "Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons",
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 142,
@@ -7823,7 +9306,18 @@
       "imageAttribution": "Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons",
       "gbifOccurrences": 127,
       "visible": true,
-      "gbifBboxSightings": 127
+      "gbifBboxSightings": 127,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 143,
@@ -7864,7 +9358,18 @@
       "gbifOccurrences": 0,
       "visible": true,
       "gbifBboxSightings": 35,
-      "imageAttribution": "Ashraf Kotb (CC BY-SA 3.0) · Wikimedia Commons"
+      "imageAttribution": "Ashraf Kotb (CC BY-SA 3.0) · Wikimedia Commons",
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 144,
@@ -7883,7 +9388,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Galerida_theklae_Madrid.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 2,
       "featured": false,
       "source": "IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
@@ -7905,7 +9410,18 @@
       "gbifOccurrences": 55,
       "visible": true,
       "gbifBboxSightings": 55,
-      "imageAttribution": "Adrian198cm (Public domain) · Wikimedia Commons"
+      "imageAttribution": "Adrian198cm (Public domain) · Wikimedia Commons",
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 145,
@@ -7946,7 +9462,18 @@
       "imageAttribution": "Derek Keats from Johannesburg, South Africa (CC BY 2.0) · Wikimedia Commons",
       "gbifOccurrences": 134,
       "visible": true,
-      "gbifBboxSightings": 134
+      "gbifBboxSightings": 134,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 146,
@@ -7987,7 +9514,18 @@
       "imageAttribution": "User:Aelwyn (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 2
+      "gbifBboxSightings": 2,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 147,
@@ -8028,7 +9566,18 @@
       "imageAttribution": "Dûrzan cîrano (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 47,
       "visible": true,
-      "gbifBboxSightings": 47
+      "gbifBboxSightings": 47,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 148,
@@ -8069,7 +9618,18 @@
       "imageAttribution": "Andrew Easton (Attribution) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 50
+      "gbifBboxSightings": 50,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 149,
@@ -8110,7 +9670,18 @@
       "imageAttribution": "Vince Smith from London, United Kingdom (CC BY-SA 2.0) · Wikimedia Commons",
       "gbifOccurrences": 45,
       "visible": true,
-      "gbifBboxSightings": 45
+      "gbifBboxSightings": 45,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 150,
@@ -8129,7 +9700,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Black_Wheatear%2C_Isla_Plana_3.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 2,
       "featured": false,
       "source": "IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
@@ -8151,7 +9722,18 @@
       "gbifOccurrences": 59,
       "visible": true,
       "gbifBboxSightings": 59,
-      "imageAttribution": "Andrew Thomas from Shrewsbury, UK (CC BY-SA 2.0) · Wikimedia Commons"
+      "imageAttribution": "Andrew Thomas from Shrewsbury, UK (CC BY-SA 2.0) · Wikimedia Commons",
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 151,
@@ -8192,7 +9774,18 @@
       "imageAttribution": "File:Alpenkrähe.jpg: \"Malte Uhl (User:Zzzip)\" derivative work: Snow… (CC BY-SA 2.5) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 245
+      "gbifBboxSightings": 245,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 152,
@@ -8211,7 +9804,7 @@
       "seasonality": "Primavera y verano (estival)",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Streptopelia_turtur_Grlica0036.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 2,
       "featured": true,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List) para la presencia en la ZEPA/ZEC ES0000173; IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
@@ -8233,7 +9826,18 @@
       "imageAttribution": "Zrno at Serbian Wikipedia (Public domain) · Wikimedia Commons",
       "gbifOccurrences": 48,
       "visible": true,
-      "gbifBboxSightings": 48
+      "gbifBboxSightings": 48,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "Directiva Aves 2009/147/CE, Anexo II (especie cinegética)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Directiva Aves 2009/147/CE, Anexo II (especie cinegética)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 153,
@@ -8274,7 +9878,18 @@
       "imageAttribution": "Sven Damerow (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 42
+      "gbifBboxSightings": 42,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 154,
@@ -8315,7 +9930,18 @@
       "imageAttribution": "AnthusCampestris.jpg: Lip Kee derivative work: Bogbumper (talk) (CC BY-SA 2.0) · Wikimedia Commons",
       "gbifOccurrences": 1,
       "visible": true,
-      "gbifBboxSightings": 1
+      "gbifBboxSightings": 1,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 155,
@@ -8356,7 +9982,18 @@
       "imageAttribution": "Original uploader was Marboline at pl.wikipedia (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 2,
       "visible": true,
-      "gbifBboxSightings": 2
+      "gbifBboxSightings": 2,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 156,
@@ -8397,7 +10034,18 @@
       "imageAttribution": "RonaldHuijssen (CC BY-SA 3.0 nl) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 63
+      "gbifBboxSightings": 63,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 157,
@@ -8438,7 +10086,18 @@
       "imageAttribution": "Bouke ten Cate (CC BY 4.0) · Wikimedia Commons",
       "gbifOccurrences": 6,
       "visible": true,
-      "gbifBboxSightings": 6
+      "gbifBboxSightings": 6,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 158,
@@ -8479,7 +10138,18 @@
       "imageAttribution": "Short-toed_Treecreeper_(Certhia_brachydactyla).jpg: א (Aleph) deriv… (CC BY-SA 2.5) · Wikimedia Commons",
       "gbifOccurrences": 310,
       "visible": true,
-      "gbifBboxSightings": 310
+      "gbifBboxSightings": 310,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 159,
@@ -8498,7 +10168,7 @@
       "seasonality": "Primavera y verano (estival)",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flickr_-_don_macauley_-_Bird_015.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 4,
       "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28.",
       "taxonomy": {
@@ -8520,7 +10190,18 @@
       "imageAttribution": "Donald Macauley (CC BY-SA 2.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 1
+      "gbifBboxSightings": 1,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 160,
@@ -8561,7 +10242,14 @@
       "imageAttribution": "Raniero Massoli Novelli (CC BY 2.0) · Wikimedia Commons",
       "gbifOccurrences": 3,
       "visible": true,
-      "gbifBboxSightings": 3
+      "gbifBboxSightings": 3,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": null
     },
     {
       "id": 161,
@@ -8602,7 +10290,18 @@
       "imageAttribution": "Raj Boora from Edmonton, Canada (CC BY 2.0) · Wikimedia Commons",
       "gbifOccurrences": 1,
       "visible": true,
-      "gbifBboxSightings": 1
+      "gbifBboxSightings": 1,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 162,
@@ -8643,7 +10342,18 @@
       "imageAttribution": "Andy Morffew from Itchen Abbas, Hampshire, UK (CC BY 2.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 3
+      "gbifBboxSightings": 3,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 163,
@@ -8684,7 +10394,18 @@
       "imageAttribution": "Self: Commons user MichaelMaggs (CC BY-SA 2.5) · Wikimedia Commons",
       "gbifOccurrences": 628,
       "visible": true,
-      "gbifBboxSightings": 628
+      "gbifBboxSightings": 628,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 164,
@@ -8725,7 +10446,18 @@
       "imageAttribution": "Thermos (CC BY-SA 2.5) · Wikimedia Commons",
       "gbifOccurrences": 160,
       "visible": true,
-      "gbifBboxSightings": 160
+      "gbifBboxSightings": 160,
+      "rarityLocal": 5,
+      "rarityLocalBasis": {
+        "categoria": "Extinguida (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Mu…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 165,
@@ -8766,7 +10498,18 @@
       "imageAttribution": "Elaine R. Wilson, www.naturespicsonline.com (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 381
+      "gbifBboxSightings": 381,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 166,
@@ -8807,7 +10550,18 @@
       "imageAttribution": "autor no indicado (Public domain) · Wikimedia Commons",
       "gbifOccurrences": 124,
       "visible": true,
-      "gbifBboxSightings": 124
+      "gbifBboxSightings": 124,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 167,
@@ -8848,7 +10602,18 @@
       "imageAttribution": "Pierre Dalous (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 5,
       "visible": true,
-      "gbifBboxSightings": 5
+      "gbifBboxSightings": 5,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 168,
@@ -8889,7 +10654,18 @@
       "imageAttribution": "Arnstein Rønning (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 8,
       "visible": true,
-      "gbifBboxSightings": 8
+      "gbifBboxSightings": 8,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 169,
@@ -8930,7 +10706,18 @@
       "imageAttribution": "Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons",
       "gbifOccurrences": 13,
       "visible": true,
-      "gbifBboxSightings": 13
+      "gbifBboxSightings": 13,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 170,
@@ -8949,7 +10736,7 @@
       "seasonality": "Paso migratorio",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Common_Redstart_-_Segrate_-_Italy_S4E2518-1_(19357313382).jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 4,
       "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28.",
       "taxonomy": {
@@ -8971,7 +10758,18 @@
       "imageAttribution": "Francesco Veronesi from Italy (CC BY-SA 2.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": true,
-      "gbifBboxSightings": 12
+      "gbifBboxSightings": 12,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 171,
@@ -9012,7 +10810,18 @@
       "imageAttribution": "Paco Gómez from Castellón, Spain (CC BY-SA 2.0) · Wikimedia Commons",
       "gbifOccurrences": 21,
       "visible": true,
-      "gbifBboxSightings": 21
+      "gbifBboxSightings": 21,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 172,
@@ -9031,7 +10840,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_pitchou_Ichkeul_NP.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 2,
       "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28. Nombre aceptado en EIDOS; Sylvia undata es sinónimo.",
       "taxonomy": {
@@ -9053,7 +10862,18 @@
       "imageAttribution": "El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
       "visible": false,
-      "gbifBboxSightings": 126
+      "gbifBboxSightings": 126,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 173,
@@ -9094,7 +10914,18 @@
       "imageAttribution": "MPF (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 210,
       "visible": true,
-      "gbifBboxSightings": 210
+      "gbifBboxSightings": 210,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 174,
@@ -9113,7 +10944,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/S%C3%BCdlicher-Raubw%C3%BCrger_2018-01-07_0003.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 2,
       "featured": true,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List, https://discodata.eea.europa.eu) para la presencia en la ZEPA/LIC ES0000173, consultado 2026-07-28.",
       "taxonomy": {
@@ -9135,7 +10966,18 @@
       "imageAttribution": "Andreas Trepte (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 27,
       "visible": true,
-      "gbifBboxSightings": 27
+      "gbifBboxSightings": 27,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 175,
@@ -9176,7 +11018,18 @@
       "imageAttribution": "El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 8,
       "visible": true,
-      "gbifBboxSightings": 8
+      "gbifBboxSightings": 8,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 176,
@@ -9217,7 +11070,18 @@
       "imageAttribution": "derivative work: Myosotis Scorpioides (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 95,
       "visible": true,
-      "gbifBboxSightings": 95
+      "gbifBboxSightings": 95,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 177,
@@ -9258,7 +11122,18 @@
       "imageAttribution": "F. C. Robiller / naturlichter.de (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 2,
       "visible": true,
-      "gbifBboxSightings": 2
+      "gbifBboxSightings": 2,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 178,
@@ -9297,7 +11172,18 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "imageAttribution": "Andrew Smith (Public domain) · Wikimedia Commons",
-      "gbifBboxSightings": 0
+      "gbifBboxSightings": 0,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 179,
@@ -9316,7 +11202,7 @@
       "seasonality": "Todo el año (hiberna en invierno)",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Myotis-blythii-cropped.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 4,
       "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado",
       "taxonomy": {
@@ -9336,7 +11222,18 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "imageAttribution": "C. Robiller / www.naturlichter.de (CC BY-SA 3.0) · Wikimedia Commons",
-      "gbifBboxSightings": 0
+      "gbifBboxSightings": 0,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 180,
@@ -9355,7 +11252,7 @@
       "seasonality": "Todo el año (hiberna en invierno)",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Myotis_capaccinii_0105b_cropped.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 5,
       "featured": true,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado",
       "taxonomy": {
@@ -9375,7 +11272,18 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "imageAttribution": "This image was improved or created by the Wikigraphists of the Grap… (FAL) · Wikimedia Commons",
-      "gbifBboxSightings": 0
+      "gbifBboxSightings": 0,
+      "rarityLocal": 5,
+      "rarityLocalBasis": {
+        "categoria": "CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 181,
@@ -9394,7 +11302,7 @@
       "seasonality": "Todo el año (hiberna en invierno)",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Myotis_emarginatus.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 4,
       "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado",
       "taxonomy": {
@@ -9414,7 +11322,18 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "imageAttribution": "Rémi Bigonneau (CC BY 3.0) · Wikimedia Commons",
-      "gbifBboxSightings": 0
+      "gbifBboxSightings": 0,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 182,
@@ -9433,7 +11352,7 @@
       "seasonality": "Todo el año (hiberna en invierno)",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Myotis.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 4,
       "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado",
       "taxonomy": {
@@ -9453,7 +11372,18 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "imageAttribution": "Urheber: Manuel Werner, Germany, Wikipedia-Kontakt: http://de.wikip… (CC BY-SA 3.0) · Wikimedia Commons",
-      "gbifBboxSightings": 0
+      "gbifBboxSightings": 0,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 183,
@@ -9472,7 +11402,7 @@
       "seasonality": "Todo el año (hiberna en invierno)",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rhinolophus_euryale-cropped.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 4,
       "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado",
       "taxonomy": {
@@ -9492,7 +11422,18 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "imageAttribution": "Carlosblh (CC BY 3.0) · Wikimedia Commons",
-      "gbifBboxSightings": 0
+      "gbifBboxSightings": 0,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 184,
@@ -9511,7 +11452,7 @@
       "seasonality": "Todo el año (hiberna en invierno)",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Rhinolophe_2.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 4,
       "featured": false,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado",
       "taxonomy": {
@@ -9531,7 +11472,18 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "imageAttribution": "Marie Jullion (CC BY-SA 3.0) · Wikimedia Commons",
-      "gbifBboxSightings": 0
+      "gbifBboxSightings": 0,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 185,
@@ -9570,7 +11522,18 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "imageAttribution": "F. C. Robiller / naturlichter.de (CC BY-SA 3.0) · Wikimedia Commons",
-      "gbifBboxSightings": 0
+      "gbifBboxSightings": 0,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Mu…)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 187,
@@ -9612,7 +11575,18 @@
         "bosques-galeria-de-92A0"
       ],
       "imageAttribution": "David Perez (CC BY 3.0) · Wikimedia Commons",
-      "gbifBboxSightings": 0
+      "gbifBboxSightings": 0,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 188,
@@ -9651,7 +11625,18 @@
       "zepaSiteCode": "ES0000173",
       "habitatIds": [],
       "imageAttribution": "Bereşe.jpg: Dûrzan cîrano derivative work: Osado (CC BY-SA 3.0) · Wikimedia Commons",
-      "gbifBboxSightings": 0
+      "gbifBboxSightings": 0,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 189,
@@ -9690,7 +11675,18 @@
       "zepaSiteCode": "ES0000173",
       "habitatIds": [],
       "imageAttribution": "derivative work: Hämbörger (talk) Tichodroma_muraria02.jpg: User:Kulac (CC BY-SA 3.0) · Wikimedia Commons",
-      "gbifBboxSightings": 0
+      "gbifBboxSightings": 0,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 190,
@@ -9729,7 +11725,18 @@
       "zepaSiteCode": "ES0000173",
       "habitatIds": [],
       "imageAttribution": "Artur Mikołajewski (CC BY 2.5) · Wikimedia Commons",
-      "gbifBboxSightings": 0
+      "gbifBboxSightings": 0,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 191,
@@ -9768,7 +11775,18 @@
       "zepaSiteCode": "ES0000173",
       "habitatIds": [],
       "imageAttribution": "Antonios Tsaknakis (CC BY-SA 4.0) · Wikimedia Commons",
-      "gbifBboxSightings": 0
+      "gbifBboxSightings": 0,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     }
   ]
 }

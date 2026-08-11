@@ -15,8 +15,10 @@
  *
  * La especie diagnóstica se elige buscando en `speciesIds` del hábitat una especie cuyo nombre
  * científico aparezca en el nombre del hábitat (p. ej. "Matorrales arborescentes de Ziziphus" →
- * Ziziphus lotus). Si no hay coincidencia, se usa la de mayor `rarityScore` entre las del hábitat,
- * que suele ser la más característica; esa elección se marca con `imageNote` para poder revisarla.
+ * Ziziphus lotus). Si NO hay coincidencia, el hábitat se queda con su portada temática: el plan B por
+ * «la especie más rara del hábitat» se probó y era peor que no poner nada (ver especieDiagnostica()).
+ * Este comentario decía lo contrario —que se usaba la de mayor `rarityScore`— y llevaba tiempo
+ * desmintiéndolo el propio código.
  *
  * Uso:  node Tools/catalogo-nacional/habitat-images.js [--park <slug>] [--write] [--sql <fichero>]
  *

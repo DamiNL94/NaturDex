@@ -120,7 +120,10 @@ if (!PARK && !TAXONES) die('Uso: --park <slug> | --taxones "Nombre uno,Nombre do
 // Campos que el fichero de curación puede fijar. Es la lista blanca a propósito: lo que sale de una
 // fuente (taxonomía, UICN, estado legal, foto) NO se cura a mano, se corrige en la fuente o se
 // arregla el lector. Lo que se cura es lo que ninguna fuente sirve en el formato que pide la ficha.
-const CURABLES = ['commonName', 'group', 'habitat', 'seasonality', 'tips', 'rarityScore', 'description'];
+const CURABLES = ['commonName', 'group', 'habitat', 'seasonality', 'tips', 'rarityScore', 'description',
+  // Si se cura la descripción hay que poder curar su cita: una descripción escrita a mano que
+  // conserve el `descriptionSource` de EIDOS estaría atribuyendo a la fuente un texto que no es suyo.
+  'descriptionSource'];
 
 const CATALOGO = path.join(CATALOGO_DIR, 'data', 'especies-universal.json');
 
@@ -647,6 +650,14 @@ async function main() {
       seasonality: estacionalidad(g),
       rarityScore: rarezaDe(g, e.legal, iucn),
       description: descripcion,
+      // De dónde sale el texto. Va al lado del texto y no en un registro aparte porque el problema
+      // que resuelve es que la ficha se sirve sin decir si lo que se lee es la fuente o una
+      // redacción: 476 fichas del catálogo tenían descripción y ninguna decía de dónde. Aquí solo se
+      // rellena cuando la descripción ES de EIDOS; si la deja `data/contenido/`, la cita la pone
+      // quien la redacta, en su propio `descriptionSource`.
+      descriptionSource: descripcion
+        ? 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»'
+        : null,
       tips: [],
       taxonomy: tax,
       iucnGlobal: iucn,

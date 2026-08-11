@@ -46,6 +46,14 @@ códigos HIC nuevos, **amplía `data/hic-nombres.json` y `data/hic-prioritarios.
 
 **Capa 3 · especies — el orden importa, de más sólido a más ruidoso**
 
+0. **El anexo normativo del espacio**, antes que nada. Lee el PORN, el PRUG, el decreto de
+   declaración o el SDF del sitio Natura 2000 y transcribe la lista de especies que enumeren a
+   `Tools/catalogo-nacional/data/anexos-normativos.json`, con su cita y la fecha en que lo leíste.
+   Es la evidencia más fuerte de las cuatro —la única que afirma la pertenencia *a este espacio*— y
+   la que salva del filtro de presencia a lo que la norma respalda. **Si no hay anexo con especies,
+   no inventes uno**: deja el espacio sin entrada y la herramienta lo dirá («NO consultado») en vez
+   de callarlo. No es puerta de entrada: lo que la norma enumere y GBIF no confirme sale en
+   `anexo_sin_constancia` como hueco a contrastar en campo, no como ficha.
 1. **GBIF ∩ polígonos** → `gbif-habitats.js` → evidencia `observada_gbif`. Es lo que trae las
    **candidatas**, y por eso va primero: en un espacio que arranca con 0 especies, el Atlas no puede
    ir antes porque cruza contra la flora *que el parque ya tiene* y devolvería 0 enlaces.

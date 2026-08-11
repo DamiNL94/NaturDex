@@ -21,6 +21,9 @@
  *   · lo UNIVERSAL de la ficha (qué es la especie) → data/especies-universal.json, tal cual.
  *   · los enlaces a hábitat y las ocurrencias      → out/<slug>-gbif.json (GBIF ∩ polígonos).
  *   · el estado legal en las dos escalas           → las `normas` del IEPNB que trae la selección.
+ *   · la rareza local y las destacadas             → `rarityLocal`, el tramo legal que calcula la
+ *                                                    selección cruzando el ámbito estatal y el
+ *                                                    autonómico. Ninguna señal de abundancia.
  *   · el identificador maestro `eidosTaxonId`      → el park.json donde la especie ya está fichada.
  *
  * Una especie SELECCIONADA que todavía no tiene ficha en el catálogo universal **no se escribe**:
@@ -58,21 +61,21 @@ const CATALOGO = path.join(CATALOGO_DIR, 'data', 'especies-universal.json');
 
 // Campos que describen a la ESPECIE. Se copian literalmente del catálogo universal; son los mismos
 // que sincroniza Tools/sync-species-catalog.js, y por eso `npm run species:apply` no los mueve.
-const UNIVERSALES = ['commonName', 'kingdom', 'group', 'habitat', 'seasonality', 'rarityScore',
-  'description', 'tips', 'taxonomy', 'iucnGlobal', 'spainStatus', 'image', 'imageAttribution'];
+const UNIVERSALES = ['commonName', 'kingdom', 'group', 'habitat', 'seasonality', 'rarityScore', 'rarityBasis',
+  'description', 'descriptionSource', 'tips', 'taxonomy', 'iucnGlobal', 'spainStatus', 'image', 'imageAttribution'];
 
 // Campos LOCALES que, si la ficha ya existía en este park.json, se conservan tal cual: o los ha
 // puesto una persona (coordinates, audio, la nota de revisión) o son una decisión editorial de este
 // catálogo (featured, visible). Todo lo demás se recalcula desde las fuentes en cada pase.
-const CURADOS = ['coordinates', 'featured', 'visible', 'reviewNote', 'audio', 'audioTranscript'];
+const CURADOS = ['coordinates', 'featured', 'visible', 'hiddenReason', 'reviewNote', 'audio', 'audioTranscript'];
 
 // Orden de las claves de la ficha. Fijarlo importa: sin él, dos ejecuciones que producen los mismos
 // datos generan diffs distintos según el orden en que se hayan ido asignando las propiedades.
 const ORDEN = ['id', 'commonName', 'scientificName', 'kingdom', 'group', 'habitat',
-  'conservationStatus', 'description', 'tips', 'seasonality', 'image', 'imageAttribution',
-  'coordinates', 'rarityScore', 'featured', 'source', 'taxonomy', 'iucnGlobal', 'spainStatus',
+  'conservationStatus', 'description', 'descriptionSource', 'tips', 'seasonality', 'image', 'imageAttribution',
+  'coordinates', 'rarityScore', 'rarityBasis', 'rarityLocal', 'rarityLocalBasis', 'featured', 'source', 'taxonomy', 'iucnGlobal', 'spainStatus',
   'murciaStatus', 'reviewNote', 'eidosTaxonId', 'gbifSpeciesKey', 'zepaSiteCode', 'habitatIds',
-  'gbifOccurrences', 'visible', 'audio', 'audioTranscript'];
+  'gbifOccurrences', 'visible', 'hiddenReason', 'audio', 'audioTranscript'];
 
 // Gravedad de las categorías de los catálogos de especies amenazadas, para quedarse con la mayor
 // cuando una especie figura en varias filas de la misma norma.
@@ -306,7 +309,7 @@ function main() {
   let siguienteId = Math.max(0, ...[...previas.values()].map(s => Number(s.id) || 0)) + 1;
   const species = [];
   const avisos = [];
-  const sinGbif = [], taxonIdDudoso = [], sinTaxonId = [];
+  const sinGbif = [], taxonIdDudoso = [], sinTaxonId = [], sinRarezaLocal = [];
 
   for (const sel of conFicha) {
     const sci = sel.scientificName;
@@ -345,12 +348,30 @@ function main() {
     const eidosTaxonId = eidos.valor !== null ? eidos.valor : (u.eidosTaxonId != null ? u.eidosTaxonId : null);
     if (!eidos.hayFicha && eidosTaxonId == null) sinTaxonId.push(sci);
 
+    /*
+     * `rarityLocal` — el tramo legal que decide lo excepcional que es encontrarla EN ESTE ESPACIO, y
+     * el que gobierna las destacadas.
+     *
+     * Antes las destacadas salían de `rarityScore`, que es universal y solo mira el ámbito estatal. Y
+     * el Estado casi no discrimina: en Sierra de la Pila deja **una sola** especie en el tramo >= 4
+     * sobre 243, porque 74 de ellas caen en el mismo cajón («en régimen de protección especial»).
+     * Quien separa de verdad es el catálogo autonómico —25 de interés especial, 8 vulnerables, 1 en
+     * peligro—, que es territorial y por eso no cabe en un campo universal. `rarityLocal` toma la
+     * categoría más grave de los dos ámbitos y sube las destacadas de 1 a 10 en ese mismo espacio.
+     *
+     * Una selección anterior a este campo no lo trae. Entonces se cae al `rarityScore` universal y se
+     * anota: escribir un 1 daría por comprobado un tramo que nadie ha calculado.
+     */
+    const rarityLocal = sel.rarityLocal != null ? sel.rarityLocal : (sinRarezaLocal.push(sci), (u.rarityScore || 1));
+
     const ficha = {
       id: antes ? antes.id : siguienteId++,
       scientificName: sci,
       conservationStatus: etiquetaConservacion(sel.normas, u.iucnGlobal),
       coordinates: null,
-      featured: (u.rarityScore || 0) >= 4,
+      rarityLocal,
+      rarityLocalBasis: sel.rarityLocalBasis || null,
+      featured: rarityLocal >= 4,
       source: fuenteDe(sel, g, fecha, zepa),
       murciaStatus: estadoAutonomico(sel.normas, comunidad),
       reviewNote: notaDeRevision(sel, esAve, zepa, duplicadoGbif),
@@ -435,7 +456,9 @@ function main() {
   console.log(`\n${species.length} especies escritas (${aves} aves en el apartado de ZEPA, ` +
     `${conEnlace} colgadas de al menos un hábitat) · ${conFoto} con foto`);
   console.log(`Enlaces especie↔hábitat: ${species.reduce((n, s) => n + (s.habitatIds || []).length, 0)}`);
-  console.log(`Destacadas (rarityScore ≥ 4): ${species.filter(s => s.featured).length}`);
+  console.log(`Destacadas (rarityLocal ≥ 4): ${species.filter(s => s.featured).length}`);
+  const porTramo = [5, 4, 3, 2, 1].map(n => `${n}:${species.filter(s => s.rarityLocal === n).length}`);
+  console.log(`Rareza local (tramo legal, estatal+autonómico): ${porTramo.join(' · ')}`);
 
   if (pendientes.length)
     console.log(`\n⚠ ${pendientes.length} especies de la selección NO se han escrito: no tienen ficha en el\n` +
@@ -446,6 +469,11 @@ function main() {
       '  usa hoy el resto del catálogo (una revisión nomenclatural posterior a la selección):');
     renombradas.forEach(r => console.log('  · ' + r));
   }
+  if (sinRarezaLocal.length)
+    console.log(`\n⚠ ${sinRarezaLocal.length} ficha(s) sin \`rarityLocal\` en la selección: se ha usado el \`rarityScore\`\n` +
+      '  universal, que solo mira el ámbito estatal y deja casi todo en el mismo tramo. La selección es\n' +
+      '  anterior al campo; vuelve a pasar `npm run species:seleccion` para que las destacadas de este\n' +
+      '  espacio salgan del criterio de verdad y no del heredado.');
   if (sinGbif.length) console.log(`\n⚠ ${sinGbif.length} sin entrada en el barrido de GBIF (quedan sin hábitat ni clave): ${sinGbif.join(', ')}`);
   if (sinTaxonId.length) console.log(`\n⚠ ${sinTaxonId.length} sin eidosTaxonId reutilizable de otro parque: ${sinTaxonId.join(', ')}`);
   if (taxonIdDudoso.length) {

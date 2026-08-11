@@ -591,7 +591,18 @@
         "galerias-y-matorrales-92D0",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 2,
@@ -631,7 +642,18 @@
       "zepaSiteCode": null,
       "habitatIds": [
         "matorrales-halonitrofilos-pegano-1430"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 3,
@@ -677,7 +699,18 @@
         "galerias-y-matorrales-92D0",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 4,
@@ -723,7 +756,18 @@
         "galerias-y-matorrales-92D0",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 5,
@@ -764,7 +808,13 @@
       "habitatIds": [
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      }
     },
     {
       "id": 6,
@@ -784,7 +834,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Suaeda_vera.JPG?width=1280",
       "imageAttribution": "Xemenendura (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 11 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -804,7 +854,18 @@
       "zepaSiteCode": null,
       "habitatIds": [
         "matorrales-halofilos-mediterraneos-1420"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 7,
@@ -850,7 +911,13 @@
         "galerias-y-matorrales-92D0",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      }
     },
     {
       "id": 8,
@@ -890,7 +957,13 @@
       "zepaSiteCode": null,
       "habitatIds": [
         "estepas-salinas-mediterraneas-1510"
-      ]
+      ],
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      }
     },
     {
       "id": 9,
@@ -910,7 +983,7 @@
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/640806369/original.jpg",
       "imageAttribution": "faluke (CC BY-NC 4.0) · iNaturalist/GBIF",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Presencia documentada por 9 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -936,7 +1009,18 @@
         "galerias-y-matorrales-92D0",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 10,
@@ -982,7 +1066,18 @@
         "galerias-y-matorrales-92D0",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 11,
@@ -1002,7 +1097,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Asteriscus_maritimus1.jpg?width=1280",
       "imageAttribution": "Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Presencia documentada por 8 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO). La cita de GBIF figura como Pallenis maritima.",
       "taxonomy": {
@@ -1028,7 +1123,18 @@
         "galerias-y-matorrales-92D0",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 12,
@@ -1048,7 +1154,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lygeum_spartum-1.jpg?width=1280",
       "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 8 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -1068,7 +1174,18 @@
       "zepaSiteCode": null,
       "habitatIds": [
         "zonas-subestepicas-de-6220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 13,
@@ -1088,7 +1205,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_almeriense_flor.jpg?width=1280",
       "imageAttribution": "Retama (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 7 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -1114,7 +1231,18 @@
         "galerias-y-matorrales-92D0",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 14,
@@ -1134,7 +1262,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Benny_Trapp_Acanthodactylus_erythrurus.jpg?width=1280",
       "imageAttribution": "Benny Trapp (CC BY 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 2,
       "featured": true,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 7 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -1160,7 +1288,18 @@
         "galerias-y-matorrales-92D0",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 15,
@@ -1200,7 +1339,13 @@
       "zepaSiteCode": null,
       "habitatIds": [
         "matorrales-termomediterraneos-y-5330"
-      ]
+      ],
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      }
     },
     {
       "id": 16,
@@ -1220,7 +1365,7 @@
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/611359925/original.jpg",
       "imageAttribution": "Xavier Rufray (CC BY-NC 4.0) · iNaturalist/GBIF · obs. EAU (revisar: existe en salinas de España)",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 1,
       "featured": true,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 6 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -1240,7 +1385,18 @@
       "zepaSiteCode": null,
       "habitatIds": [
         "matorrales-halofilos-mediterraneos-1420"
-      ]
+      ],
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 17,
@@ -1282,7 +1438,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 18,
@@ -1322,7 +1489,18 @@
       "zepaSiteCode": null,
       "habitatIds": [
         "matorrales-halofilos-mediterraneos-1420"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 19,
@@ -1342,7 +1520,7 @@
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/464713930/original.jpeg",
       "imageAttribution": "Rafael Medina (CC BY 4.0) · GBIF",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie característica del hábitat de interés comunitario 1420 según el Atlas y Manual de los Hábitat de España (MITECO, 2005), con presencia confirmada por 5 ocurrencia(s) de GBIF dentro de ese hábitat en este espacio.",
       "taxonomy": {
@@ -1362,7 +1540,18 @@
       "zepaSiteCode": null,
       "habitatIds": [
         "matorrales-halofilos-mediterraneos-1420"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 20,
@@ -1382,7 +1571,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_lanigerum_kz01.jpg?width=1280",
       "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 5 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -1402,7 +1591,18 @@
       "zepaSiteCode": null,
       "habitatIds": [
         "matorrales-termomediterraneos-y-5330"
-      ]
+      ],
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 21,
@@ -1422,7 +1622,7 @@
       "image": "https://observation.org/photos/125530399.jpg",
       "imageAttribution": "Humedales de Navarra (CC BY-NC-ND 4.0) · observation.org / GBIF",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Presencia documentada por 4 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -1448,7 +1648,18 @@
         "galerias-y-matorrales-92D0",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 22,
@@ -1468,7 +1679,7 @@
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/619207211/original.jpg",
       "imageAttribution": "Augustin Soulard (CC BY 4.0) · GBIF",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Presencia documentada por 4 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -1494,7 +1705,18 @@
         "galerias-y-matorrales-92D0",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 23,
@@ -1514,7 +1736,7 @@
       "image": "https://observation.org/photos/111149341.jpg",
       "imageAttribution": "Ans Gorter (CC BY-NC-ND 4.0) · observation.org / GBIF",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 4 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO). La cita de GBIF figura como Anabasis articulata.",
       "taxonomy": {
@@ -1534,7 +1756,18 @@
       "zepaSiteCode": null,
       "habitatIds": [
         "matorrales-termomediterraneos-y-5330"
-      ]
+      ],
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 24,
@@ -1554,7 +1787,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Asparagus_stipularis_(detail).jpg?width=1280",
       "imageAttribution": "Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 4 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -1576,7 +1809,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 25,
@@ -1596,7 +1840,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pancratium_maritimum2.jpg?width=1280",
       "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 1,
       "featured": true,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 4 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -1618,7 +1862,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 26,
@@ -1660,7 +1915,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 27,
@@ -1680,7 +1946,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_lobatum.jpg?width=1280",
       "imageAttribution": "Sf2000 (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 4 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -1702,7 +1968,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 28,
@@ -1722,7 +1999,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Reich-ting-2.jpg?width=1280",
       "imageAttribution": "Philmarin (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Presencia documentada por 4 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -1744,7 +2021,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 29,
@@ -1788,7 +2076,13 @@
         "estepas-salinas-mediterraneas-1510",
         "zonas-subestepicas-de-6220",
         "galerias-y-matorrales-92D0"
-      ]
+      ],
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      }
     },
     {
       "id": 30,
@@ -1808,7 +2102,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mesambryanthemum_nodiflorum.jpg?width=1280",
       "imageAttribution": "Tigerente (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Presencia documentada por 3 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -1834,7 +2128,18 @@
         "galerias-y-matorrales-92D0",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 31,
@@ -1880,7 +2185,18 @@
         "galerias-y-matorrales-92D0",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 32,
@@ -1900,7 +2216,7 @@
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/475241861/original.jpeg",
       "imageAttribution": "Christoph Moning (CC BY 4.0) · GBIF",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 1,
       "featured": false,
       "source": "Presencia documentada por 3 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO). La cita de GBIF figura como Daucus pumilus.",
       "taxonomy": {
@@ -1926,7 +2242,18 @@
         "galerias-y-matorrales-92D0",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 33,
@@ -1946,7 +2273,7 @@
       "image": "https://observation.org/photos/144643107.jpg",
       "imageAttribution": "Ans Gorter (CC BY-NC-ND 4.0) · observation.org / GBIF",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie característica del hábitat de interés comunitario 1510, 6220 según el Atlas y Manual de los Hábitat de España (MITECO, 2005), con presencia confirmada por 3 ocurrencia(s) de GBIF dentro de ese hábitat en este espacio.",
       "taxonomy": {
@@ -1967,7 +2294,18 @@
       "habitatIds": [
         "estepas-salinas-mediterraneas-1510",
         "zonas-subestepicas-de-6220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 34,
@@ -1987,7 +2325,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Genista_umbellata.JPG?width=1280",
       "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Presencia documentada por 3 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -2013,7 +2351,18 @@
         "galerias-y-matorrales-92D0",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 35,
@@ -2033,7 +2382,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Carrichtera_annua2.JPG?width=1280",
       "imageAttribution": "Flora y Vegetación de Lanzarote (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Presencia documentada por 3 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -2059,7 +2408,18 @@
         "galerias-y-matorrales-92D0",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 36,
@@ -2079,7 +2439,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fagonia_cretica.jpg?width=1280",
       "imageAttribution": "Retama (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 1,
       "featured": false,
       "source": "Presencia documentada por 3 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -2101,7 +2461,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 37,
@@ -2121,7 +2492,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fumana_ericoides_Tallos_2010-7-03_ParqueNaturalLagunasdelaMata.jpg?width=1280",
       "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Presencia documentada por 3 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -2143,7 +2514,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 38,
@@ -2185,7 +2567,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 39,
@@ -2247,7 +2640,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_clusii_(habitus).jpg?width=1280",
       "imageAttribution": "Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Presencia documentada por 3 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -2269,7 +2662,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 41,
@@ -2289,7 +2693,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anthyllis_terniflora_kz01.jpg?width=1280",
       "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 3 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -2311,7 +2715,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 42,
@@ -2331,7 +2746,7 @@
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/474144349/original.jpeg",
       "imageAttribution": "Gabriel Dixon (CC0) · GBIF",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie característica del hábitat de interés comunitario 1430 según el Atlas y Manual de los Hábitat de España (MITECO, 2005), con presencia confirmada por 3 ocurrencia(s) de GBIF dentro de ese hábitat en este espacio. La cita de GBIF figura como Caroxylon genistoides.",
       "taxonomy": {
@@ -2351,7 +2766,18 @@
       "zepaSiteCode": null,
       "habitatIds": [
         "matorrales-halonitrofilos-pegano-1430"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 43,
@@ -2371,7 +2797,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Unk_desert_flower_3.jpg?width=1280",
       "imageAttribution": "Yummifruitbat (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Presencia documentada por 3 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -2393,7 +2819,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 44,
@@ -2413,7 +2850,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Young_Drimia_maritima%2C_near_Ramon_crater%2C_Israel.jpg?width=1280",
       "imageAttribution": "Someone35 (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": true,
       "source": "Presencia documentada por 3 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO). La cita de GBIF figura como Drimia maritima.",
       "taxonomy": {
@@ -2435,7 +2872,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 45,
@@ -2455,7 +2903,7 @@
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/611378691/original.jpg",
       "imageAttribution": "Michael Bakker Paiva (CC BY 4.0) · GBIF",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 3 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -2475,7 +2923,18 @@
       "zepaSiteCode": null,
       "habitatIds": [
         "matorrales-halonitrofilos-pegano-1430"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 46,
@@ -2495,7 +2954,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sonchus_tenerrimus_01.JPG?width=1280",
       "imageAttribution": "Luca Fornasari (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Presencia documentada por 3 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -2517,7 +2976,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 47,
@@ -2559,7 +3029,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 48,
@@ -2601,7 +3082,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 49,
@@ -2621,7 +3113,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/A._arvensis-flor-1.JPG?width=1280",
       "imageAttribution": "Philmarin (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Presencia documentada por 3 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -2643,7 +3135,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 50,
@@ -2685,7 +3188,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 51,
@@ -2729,7 +3243,18 @@
         "estepas-salinas-mediterraneas-1510",
         "zonas-subestepicas-de-6220",
         "galerias-y-matorrales-92D0"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 52,
@@ -2749,7 +3274,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Silene_ramosissima_2.jpg?width=1280",
       "imageAttribution": "bymamo (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 2 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -2775,7 +3300,18 @@
         "galerias-y-matorrales-92D0",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 53,
@@ -2795,7 +3331,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Crucianella_maritima_1.JPG?width=1280",
       "imageAttribution": "Gideon Pisanty (Gidip) גדעון פיזנטי (CC BY 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 2 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -2817,7 +3353,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 54,
@@ -2837,7 +3384,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ullastre_vell.JPG?width=1280",
       "imageAttribution": "Antoni Salvà (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 2 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO). La cita de GBIF figura como Olea europaea. Nombre aceptado en EIDOS; Olea europaea var. sylvestris es sinónimo.",
       "taxonomy": {
@@ -2859,7 +3406,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 55,
@@ -2901,7 +3459,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 56,
@@ -2921,7 +3490,7 @@
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/173279674/original.jpeg",
       "imageAttribution": "Yamil J.R (CC0) · GBIF",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie característica del hábitat de interés comunitario 1430 según el Atlas y Manual de los Hábitat de España (MITECO, 2005), con presencia confirmada por 2 ocurrencia(s) de GBIF dentro de ese hábitat en este espacio.",
       "taxonomy": {
@@ -2941,7 +3510,18 @@
       "zepaSiteCode": null,
       "habitatIds": [
         "matorrales-halonitrofilos-pegano-1430"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 57,
@@ -2961,7 +3541,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_echioides233.JPG?width=1280",
       "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 2 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -2983,7 +3563,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 58,
@@ -3025,7 +3616,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 59,
@@ -3069,7 +3671,13 @@
         "estepas-salinas-mediterraneas-1510",
         "zonas-subestepicas-de-6220",
         "galerias-y-matorrales-92D0"
-      ]
+      ],
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      }
     },
     {
       "id": 60,
@@ -3089,7 +3697,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Suaeda_maritima_01_by_Line1.JPG?width=1280",
       "imageAttribution": "Liné1 (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 1 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -3113,7 +3721,18 @@
         "estepas-salinas-mediterraneas-1510",
         "zonas-subestepicas-de-6220",
         "galerias-y-matorrales-92D0"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 61,
@@ -3133,7 +3752,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Frankenia_pulverulenta_kz2.jpg?width=1280",
       "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 1 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -3157,7 +3776,18 @@
         "estepas-salinas-mediterraneas-1510",
         "zonas-subestepicas-de-6220",
         "galerias-y-matorrales-92D0"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 62,
@@ -3177,7 +3807,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tamarix_gallica_-_Villa_Taranto_(Verbania)_-_DSC03778.JPG?width=1280",
       "imageAttribution": "Daderot (Public domain) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 1 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -3197,7 +3827,14 @@
       "zepaSiteCode": null,
       "habitatIds": [
         "galerias-y-matorrales-92D0"
-      ]
+      ],
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": null
     },
     {
       "id": 63,
@@ -3217,7 +3854,7 @@
       "image": null,
       "imageAttribution": null,
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 1 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -3239,7 +3876,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 64,
@@ -3259,7 +3907,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Allium_subvillosum.JPG?width=1280",
       "imageAttribution": "Xemenendura (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 1 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -3281,7 +3929,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 65,
@@ -3301,7 +3960,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ceratonia_siliqua_Keciboynuzu_1370984_Nevit.jpg?width=1280",
       "imageAttribution": "Nevit Dilmen (talk) (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 1 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -3323,7 +3982,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 66,
@@ -3343,7 +4013,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Reichardia_gaditana_2.JPG?width=1280",
       "imageAttribution": "Xemenendura (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 1 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -3365,7 +4035,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 67,
@@ -3385,7 +4066,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chalcides_bedriagai_01_by-dpc.jpg?width=1280",
       "imageAttribution": "David Perez (CC BY 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 2,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 1 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -3407,7 +4088,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 68,
@@ -3449,7 +4141,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 69,
@@ -3469,7 +4172,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eryngium_ilicifolium_InflorescenceCloseup2_DehesaBoyaldePuertollano.jpg?width=1280",
       "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 1 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -3491,7 +4194,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 70,
@@ -3511,7 +4225,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aizoon_hispanicum_2b.JPG?width=1280",
       "imageAttribution": "Ghislain118 https://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 1 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -3533,7 +4247,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 71,
@@ -3553,7 +4278,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Crassula_connata.jpg?width=1280",
       "imageAttribution": "Mike (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 1 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -3575,7 +4300,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 72,
@@ -3617,7 +4353,13 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      }
     },
     {
       "id": 73,
@@ -3637,7 +4379,7 @@
       "image": "https://observation.org/photos/125538681.jpg",
       "imageAttribution": "Humedales de Navarra (CC BY-NC-ND 4.0) · observation.org / GBIF",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie característica del hábitat de interés comunitario  según el Atlas y Manual de los Hábitat de España (MITECO, 2005), con presencia confirmada por 1 ocurrencia(s) de GBIF dentro de ese hábitat en este espacio.",
       "taxonomy": {
@@ -3659,7 +4401,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 74,
@@ -3679,7 +4432,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ephedra_fragilis_3.JPG?width=1280",
       "imageAttribution": "User:falconaumanni (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 1 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -3701,7 +4454,18 @@
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 75,
@@ -3721,7 +4485,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Withania_frutescens0176.jpg?width=1280",
       "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 1 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
       "taxonomy": {
@@ -3741,7 +4505,18 @@
       "zepaSiteCode": null,
       "habitatIds": [
         "matorrales-halonitrofilos-pegano-1430"
-      ]
+      ],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 76,
@@ -3779,7 +4554,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 21,
       "zepaSiteCode": "ES6200010",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 77,
@@ -3799,7 +4585,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Burhinus_oedicnemus_insularum_Lanzarote_1.jpg?width=1280",
       "imageAttribution": "Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 2,
       "featured": false,
       "source": "Especie de la lista oficial del sitio Natura 2000 ES6200010 (EEA/BISE, Site_Species_List). Confirmada además por 3 ocurrencias de GBIF dentro de este espacio.",
       "taxonomy": {
@@ -3817,7 +4603,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 3,
       "zepaSiteCode": "ES6200010",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 78,
@@ -3837,7 +4634,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Caprimulgus_ruficollis_-Portugal-8.jpg?width=1280",
       "imageAttribution": "Olivença (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 2,
       "featured": false,
       "source": "Especie de la lista oficial del sitio Natura 2000 ES6200010 (EEA/BISE, Site_Species_List). Confirmada además por 3 ocurrencias de GBIF dentro de este espacio.",
       "taxonomy": {
@@ -3855,7 +4652,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 3,
       "zepaSiteCode": "ES6200010",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 79,
@@ -3893,7 +4701,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 0,
       "zepaSiteCode": "ES6200010",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 80,
@@ -3931,7 +4750,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 70,
       "zepaSiteCode": "ES6200010",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 81,
@@ -3951,7 +4781,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Falco_peregrinus_-_01.jpg?width=1280",
       "imageAttribution": "Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 2,
       "featured": false,
       "source": "Especie de la lista oficial del sitio Natura 2000 ES6200010 (EEA/BISE, Site_Species_List). Confirmada además por 18 ocurrencias de GBIF dentro de este espacio.",
       "taxonomy": {
@@ -3969,7 +4799,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 18,
       "zepaSiteCode": "ES6200010",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 82,
@@ -4007,7 +4848,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 3,
       "zepaSiteCode": "ES6200010",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 83,
@@ -4027,7 +4879,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Black_Wheatear%2C_Isla_Plana_3.jpg?width=1280",
       "imageAttribution": "Andrew Thomas from Shrewsbury, UK (CC BY-SA 2.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 2,
       "featured": false,
       "source": "Especie de la lista oficial del sitio Natura 2000 ES6200010 (EEA/BISE, Site_Species_List). Confirmada además por 306 ocurrencias de GBIF dentro de este espacio.",
       "taxonomy": {
@@ -4045,7 +4897,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 306,
       "zepaSiteCode": "ES6200010",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 84,
@@ -4065,7 +4928,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Streptopelia_turtur_Grlica0036.jpg?width=1280",
       "imageAttribution": "Zrno at Serbian Wikipedia (Public domain) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 2,
       "featured": false,
       "source": "Especie de la lista oficial del sitio Natura 2000 ES6200010 (EEA/BISE, Site_Species_List). Confirmada además por 6 ocurrencias de GBIF dentro de este espacio.",
       "taxonomy": {
@@ -4083,7 +4946,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 6,
       "zepaSiteCode": "ES6200010",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "Directiva Aves 2009/147/CE, Anexo II (especie cinegética)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Directiva Aves 2009/147/CE, Anexo II (especie cinegética)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 85,
@@ -4103,7 +4977,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Little_Tern_6820C.jpg?width=1280",
       "imageAttribution": "Little_Tern_6820.jpg: Alnus derivative work: Osado (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 2,
       "featured": false,
       "source": "Especie de la lista oficial del sitio Natura 2000 ES6200010 y ES0000507 (EEA/BISE, Site_Species_List). Sin ocurrencia de GBIF verificada dentro del espacio: la cita es documental.",
       "taxonomy": {
@@ -4121,7 +4995,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 0,
       "zepaSiteCode": "ES0000507",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 86,
@@ -4159,7 +5044,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 36,
       "zepaSiteCode": "ES0000507",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 87,
@@ -4179,7 +5075,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/CorysShearwaterBottom.jpg?width=1280",
       "imageAttribution": "TomAllmendinger (CC BY 2.5) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie de la lista oficial del sitio Natura 2000 ES0000507 (EEA/BISE, Site_Species_List). Sin ocurrencia de GBIF verificada dentro del espacio: la cita es documental.",
       "taxonomy": {
@@ -4197,7 +5093,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 0,
       "zepaSiteCode": "ES0000507",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 88,
@@ -4217,7 +5124,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chlidonias_niger.jpg?width=1280",
       "imageAttribution": "USGov (Public domain) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 5,
       "featured": false,
       "source": "Especie de la lista oficial del sitio Natura 2000 ES0000507 (EEA/BISE, Site_Species_List). Sin ocurrencia de GBIF verificada dentro del espacio: la cita es documental.",
       "taxonomy": {
@@ -4235,7 +5142,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 0,
       "zepaSiteCode": "ES0000507",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 5,
+      "rarityLocalBasis": {
+        "categoria": "CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 89,
@@ -4255,7 +5173,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hydrobates_pelagicus.jpg?width=1280",
       "imageAttribution": "Júlio Reis (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie de la lista oficial del sitio Natura 2000 ES0000507 (EEA/BISE, Site_Species_List). Sin ocurrencia de GBIF verificada dentro del espacio: la cita es documental.",
       "taxonomy": {
@@ -4273,7 +5191,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 0,
       "zepaSiteCode": "ES0000507",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 90,
@@ -4311,7 +5240,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 0,
       "zepaSiteCode": "ES0000507",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 91,
@@ -4331,7 +5271,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Larus-fuscus-taxbox.jpg?width=1280",
       "imageAttribution": "Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie de la lista oficial del sitio Natura 2000 ES0000507 (EEA/BISE, Site_Species_List). Confirmada además por 11 ocurrencias de GBIF dentro de este espacio.",
       "taxonomy": {
@@ -4349,7 +5289,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 11,
       "zepaSiteCode": "ES0000507",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 92,
@@ -4387,7 +5338,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 0,
       "zepaSiteCode": "ES0000507",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 93,
@@ -4425,7 +5387,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 144,
       "zepaSiteCode": "ES0000507",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 94,
@@ -4463,7 +5436,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 48,
       "zepaSiteCode": "ES0000507",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 95,
@@ -4501,7 +5485,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 0,
       "zepaSiteCode": "ES0000507",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 96,
@@ -4539,7 +5534,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 0,
       "zepaSiteCode": "ES0000507",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 97,
@@ -4559,7 +5565,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Charr%C3%A1n_Com%C3%BAn_(Sterna_hirundo_hirundo)_in_Canary_Islands.jpg?width=1280",
       "imageAttribution": "Juan Emilio from Las Palmas de Gran Canaria, España (CC BY-SA 2.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 2,
       "featured": false,
       "source": "Especie de la lista oficial del sitio Natura 2000 ES0000507 (EEA/BISE, Site_Species_List). Sin ocurrencia de GBIF verificada dentro del espacio: la cita es documental.",
       "taxonomy": {
@@ -4577,7 +5583,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 0,
       "zepaSiteCode": "ES0000507",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 98,
@@ -4615,7 +5632,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 81,
       "zepaSiteCode": "ES0000507",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 99,
@@ -4653,7 +5681,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 9,
       "zepaSiteCode": "ES0000507",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 5,
+      "rarityLocalBasis": {
+        "categoria": "CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 100,
@@ -4691,7 +5730,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 0,
       "zepaSiteCode": "ES0000507",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 101,
@@ -4711,7 +5761,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Larus_michahellis_LC0046.jpg?width=1280",
       "imageAttribution": "Jörg Hempel (CC BY-SA 2.0 de) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Especie de la lista oficial del sitio Natura 2000 ES0000507 (EEA/BISE, Site_Species_List). Confirmada además por 331 ocurrencias de GBIF dentro de este espacio.",
       "taxonomy": {
@@ -4729,7 +5779,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 331,
       "zepaSiteCode": "ES0000507",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     },
     {
       "id": 102,
@@ -4767,7 +5828,18 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 0,
       "zepaSiteCode": "ES0000507",
-      "habitatIds": []
+      "habitatIds": [],
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      }
     }
   ]
 }

@@ -99,13 +99,40 @@ CREATE TABLE IF NOT EXISTS species (
     image_attribution VARCHAR(300),
     latitude DECIMAL(10,6),
     longitude DECIMAL(10,6),
+    -- Tramo de rareza 1–5 derivado de la CATEGORÍA LEGAL, no de la abundancia (5 en peligro de
+    -- extinción · 4 vulnerable o sensible · 3 de interés especial · 2 LESRPE o Directiva Aves ·
+    -- 1 sin figura). Antes era «criterio propio»: un número puesto a ojo que nadie podía recalcular.
+    -- Ver Docs/arquitectura/PROCEDENCIA-DE-CAMPOS.md y Tools/lib/rareza.js.
     rarity_score TINYINT UNSIGNED DEFAULT 1,
+    -- La figura que justifica el tramo, con su ámbito y de qué campo se leyó: {categoria, ambito,
+    -- origen}. JSON y no columnas sueltas porque lo que hace falta es el round-trip exacto con el
+    -- park.json: aplanarlo perdería `origen`, que es justo lo que da la trazabilidad.
+    -- NULL = todavía sin migrar. Ojo: «sin figura de protección» NO es NULL, es una categoría más:
+    -- «comprobado que no hay» y «nadie lo ha mirado» son estados distintos y solo el segundo se
+    -- arrastra como deuda (`validate` lo avisa).
+    rarity_basis JSON,
+    -- El mismo tramo, pero tomando la categoría más grave de los DOS ámbitos, estatal y autonómico.
+    -- Es local al parque —el catálogo autonómico es territorial: la misma especie es Vulnerable en
+    -- una comunidad y no figura en la de al lado— y es el que gobierna las estrellas de la ficha y
+    -- las destacadas. Solo con el estatal la escalera se aplana: 74 especies caen en el mismo cajón
+    -- («en régimen de protección especial») y una sola queda por encima del umbral de destacada.
+    rarity_local TINYINT UNSIGNED,
+    rarity_local_basis JSON,
     is_featured BOOLEAN DEFAULT FALSE,
     -- Catálogo público: FALSE oculta la especie del listado/contadores sin borrar el dato ni sus
     -- referencias en species_habitats (criterio: pocas ocurrencias GBIF Y sin figura en ningún
     -- catálogo/anexo oficial de protección). NULL/TRUE = visible, igual que las especies previas a
     -- esta columna (aditivo, no rompe parques ya cargados). Ver Frontend/Js/data.js `applyVisibility`.
     is_visible BOOLEAN DEFAULT TRUE,
+    -- Por qué está oculta. Distingue «sin descripción que enseñar» (lo que escribe
+    -- `npm run especies:ocultar`) de una decisión tomada a mano, para que un pase automático no pise
+    -- la segunda. NULL en las visibles.
+    hidden_reason TEXT,
+    -- De dónde sale el TEXTO de `description`. Las descripciones tienen dos orígenes que en la app se
+    -- ven idénticos —EIDOS (v_atributos_pliniancore) o redacción propia en data/contenido/— y este
+    -- campo es lo único que los distingue. Era el único campo de la ficha sin procedencia.
+    -- NULL = heredada, sin trazar; `validate` cuenta cuántas quedan.
+    description_source TEXT,
     -- Campos de cita/estado de conservación: TEXT (no VARCHAR) porque las atribuciones y los
     -- estados con referencia pueden superar los 500 caracteres. Con MySQL en modo estricto un
     -- VARCHAR corto abortaría la carga del seed en lugar de truncar en silencio.

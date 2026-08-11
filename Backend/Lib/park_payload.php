@@ -86,7 +86,7 @@ function buildParkPayload($conn, $parkSlug) {
     }
 
     // --- Especies ---------------------------------------------------------------------------------
-    $speciesStmt = $conn->prepare("SELECT id, common_name, scientific_name, kingdom, family, primary_habitat, conservation_status, description, identification_tips, seasonality, image_url, image_attribution, latitude, longitude, rarity_score, is_featured, is_visible, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, spain_status, murcia_status, review_note, eidos_taxonid, gbif_species_key, zepa_site_code FROM species WHERE park_id = ? ORDER BY is_featured DESC, common_name ASC");
+    $speciesStmt = $conn->prepare("SELECT id, common_name, scientific_name, kingdom, family, primary_habitat, conservation_status, description, identification_tips, seasonality, image_url, image_attribution, description_source, latitude, longitude, rarity_score, rarity_basis, rarity_local, rarity_local_basis, is_featured, is_visible, hidden_reason, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, spain_status, murcia_status, review_note, eidos_taxonid, gbif_species_key, zepa_site_code FROM species WHERE park_id = ? ORDER BY is_featured DESC, common_name ASC");
     $speciesStmt->bind_param("i", $park["id"]);
     $speciesStmt->execute();
     $result = $speciesStmt->get_result();
@@ -101,6 +101,8 @@ function buildParkPayload($conn, $parkSlug) {
             "habitat" => $row["primary_habitat"],
             "conservationStatus" => $row["conservation_status"],
             "description" => $row["description"],
+            // De dónde sale el texto: EIDOS o redacción propia. NULL en las heredadas sin trazar.
+            "descriptionSource" => $row["description_source"] ?? null,
             "tips" => array_values(array_filter(array_map("trim", explode(";", $row["identification_tips"] ?? "")))),
             "seasonality" => $row["seasonality"],
             "image" => $row["image_url"],
@@ -111,10 +113,20 @@ function buildParkPayload($conn, $parkSlug) {
                 ? [(float) $row["latitude"], (float) $row["longitude"]]
                 : null,
             "rarityScore" => (int) $row["rarity_score"],
+            // La procedencia del tramo viaja con el tramo. Se decodifica aquí y no en el cliente
+            // porque el park.json empaquetado ya lo sirve como objeto: si la API lo mandara como
+            // cadena JSON, la misma ficha tendría dos formas según de dónde viniera, que es
+            // exactamente el tipo de divergencia que `Frontend/Js/data.js` no puede resolver.
+            "rarityBasis" => $row["rarity_basis"] !== null ? json_decode($row["rarity_basis"], true) : null,
+            // Tramo local (estatal + autonómico): el que pinta las estrellas de la ficha.
+            "rarityLocal" => $row["rarity_local"] !== null ? (int) $row["rarity_local"] : null,
+            "rarityLocalBasis" => $row["rarity_local_basis"] !== null ? json_decode($row["rarity_local_basis"], true) : null,
             "featured" => (bool) $row["is_featured"],
-            // false = oculta del catálogo público (poca evidencia GBIF y sin figura oficial), pero
-            // el dato se conserva. Ver Frontend/Js/data.js `applyVisibility`.
+            // false = oculta del catálogo público (poca evidencia GBIF y sin figura oficial, o sin
+            // descripción que enseñar), pero el dato se conserva. Ver Frontend/Js/data.js
+            // `applyVisibility`; `hiddenReason` dice cuál de los dos motivos es.
             "visible" => (bool) $row["is_visible"],
+            "hiddenReason" => $row["hidden_reason"] ?? null,
             "source" => $row["source"],
             "taxonomy" => [
                 "kingdom" => $row["kingdom"] === "flora" ? "Plantae" : "Animalia",

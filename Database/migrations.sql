@@ -148,6 +148,29 @@ CALL naturdex_add_column('habitats', 'image_note', 'VARCHAR(400) NULL');
 CALL naturdex_add_column('species', 'is_visible', 'BOOLEAN NOT NULL DEFAULT TRUE');
 
 -- ------------------------------------------------------------------------------------------------
+-- Trazabilidad de la rareza y del texto (2026-08-11)
+--
+-- Cierra tres campos que la app servía sin decir de dónde salían:
+--
+--   · `rarity_score` era «criterio propio 1–5», puesto a ojo ficha a ficha. Ahora se deriva de la
+--     categoría legal estatal y `rarity_basis` guarda la figura que lo justifica. La migración de
+--     las 552 fichas del catálogo movió 349 de tramo, y el reparto viejo→nuevo no tenía ninguna
+--     correlación: 156 pasaron de 2 a 1 y 27 estaban en tramo 4 —umbral de destacada— sin figura
+--     de protección alguna detrás.
+--   · `rarity_local` es el tramo que de verdad describe lo excepcional que es la especie AQUÍ, y el
+--     que gobierna las estrellas. El estatal solo no sirve: manda casi todo al mismo cajón.
+--   · `description_source` distingue las descripciones que sirve EIDOS de las redactadas a mano.
+--
+-- Todas admiten NULL a propósito: NULL significa «sin migrar / sin trazar», que es una deuda que se
+-- cuenta, no un valor por defecto. Aditivas: una instalación antigua sigue funcionando sin ellas.
+-- ------------------------------------------------------------------------------------------------
+CALL naturdex_add_column('species', 'rarity_basis', 'JSON NULL');
+CALL naturdex_add_column('species', 'rarity_local', 'TINYINT UNSIGNED NULL');
+CALL naturdex_add_column('species', 'rarity_local_basis', 'JSON NULL');
+CALL naturdex_add_column('species', 'hidden_reason', 'TEXT NULL');
+CALL naturdex_add_column('species', 'description_source', 'TEXT NULL');
+
+-- ------------------------------------------------------------------------------------------------
 -- Campos de cita/estado a TEXT: las atribuciones y los estados de conservación con referencia
 -- pueden superar los 500 caracteres. En MySQL con modo estricto (STRICT_TRANS_TABLES, por defecto
 -- en 8.0) un VARCHAR corto ABORTA la carga del seed en lugar de truncar en silencio como hace la

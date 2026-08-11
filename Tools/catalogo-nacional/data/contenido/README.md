@@ -28,8 +28,38 @@ superficie, `speciesIds` y `reviewNote` en hábitats). `npm run validate` da err
 | `habitat` | El ambiente de la especie en términos generales: «Roquedos, matorral seco y pie de acantilado en clima cálido». |
 | `seasonality` | Cuándo se puede ver o reconocer. |
 | `description` | Dos o tres frases divulgativas: qué es, cómo vive, algún detalle que enganche. |
+| `descriptionSource` | **Obligatorio si escribes `description`.** De dónde sale lo que afirma el texto: manual, atlas, monografía o ficha oficial, con su cita. Ver más abajo. |
 | `tips` | **Tres rasgos observables en campo.** No el hábitat otra vez, no «muy localizada», no «no manipular». Si no sirve para decidir si lo que tienes delante es esa especie, no es una pista. |
 | `iucnGlobal`, `spainStatus` | Solo para corregir valores erróneos o contradictorios entre parques. |
+
+## `descriptionSource`: por qué el texto necesita cita
+
+Las descripciones del catálogo tienen **dos orígenes que en la app se ven idénticos**: unas las
+sirve EIDOS (`v_atributos_pliniancore`, atributo «Descripción de la especie») y otras están
+redactadas aquí. Las primeras son texto técnico de la fuente; las segundas son prosa divulgativa. Un
+lector no puede distinguirlas, y hasta ahora el repo tampoco: era el **único campo de la ficha sin
+procedencia**, en un proyecto donde `Docs/arquitectura/PROCEDENCIA-DE-CAMPOS.md` la documenta campo a
+campo con URLs.
+
+Eso choca con la regla nº 2 (*hueco documentado antes que dato inventado*) justo donde más se nota:
+un error de historia natural dentro de un párrafo bien escrito no lo puede rastrear nadie.
+
+Así que **toda `description` nueva lleva su `descriptionSource`**. `npm run validate` cuenta las que
+no lo tienen y lo saca como aviso; es aviso y no error porque el texto heredado —476 fichas— es útil
+y no se va a tirar, pero tiene que constar cuánto queda por trazar.
+
+No vale «conocimiento general» ni «elaboración propia». Vale la obra concreta de la que sale el dato:
+
+```json
+"descriptionSource": "Flora iberica, vol. VIII, p. 213 (RJB-CSIC)"
+"descriptionSource": "Atlas y Manual de los Hábitats de España (MITECO, 2005), ficha del HIC 5330"
+"descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»"
+```
+
+Y si no hay fuente que lo respalde, **el hueco es mejor que el párrafo**: una ficha sin descripción
+se oculta sola con `npm run especies:ocultar` y espera ahí, en vez de servirse en blanco o rellena a
+ojo. Son 76 fichas hoy, casi todas flora vascular (51 Magnoliopsida y 19 Liliopsida), porque EIDOS no
+publica el atributo para la mayor parte de las plantas.
 
 ## Ejemplo
 

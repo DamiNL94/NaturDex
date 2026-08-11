@@ -39,6 +39,8 @@
     "species:extract": "node Tools/sync-species-catalog.js --extract",
     "species:poda": "node Tools/sync-species-catalog.js --extract --podar",
     "species:apply": "node Tools/sync-species-catalog.js --apply --sql Database/species-universal.sql",
+    "especies:ocultar": "node Tools/catalogo-nacional/ocultar-sin-descripcion.js",
+    "especies:rareza": "node Tools/catalogo-nacional/rareza-legal.js",
     "images:species": "node Tools/catalogo-nacional/wikimedia-images.js --canonicalize --missing --write",
     "images:habitats": "node Tools/catalogo-nacional/habitat-images.js --write --sql Database/habitats-imagenes.sql",
     "images:pois": "node Tools/catalogo-nacional/poi-images.js --write --sql Database/poi-imagenes.sql --report Docs/fotos-poi.md",

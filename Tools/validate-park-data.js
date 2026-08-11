@@ -293,6 +293,55 @@ function validatePark(entry) {
     if (!s.image) warn(scope, 'especie #' + s.id + ' (' + s.commonName + ') sin foto: la ficha muestra la portada temática');
   });
 
+  // 4 bis) Rareza: las dos escalas y su procedencia -------------------------------------------------
+  // `rarityScore` (universal) sale de la categoría legal ESTATAL; `rarityLocal` toma la más grave de
+  // los dos ámbitos, estatal y autonómico. De ahí que el local nunca pueda ser MENOR que el estatal:
+  // si lo es, o el tramo se ha escrito a mano o la selección se generó con otro criterio.
+  //
+  // Y un `rarityScore` sin `rarityBasis` es uno de los 448 valores heredados, puestos a ojo antes de
+  // que el tramo se derivara de la norma. No es un error —el dato sigue ahí— pero tampoco puede pasar
+  // por derivado: sale como aviso hasta que la migración lo recalcule contra EIDOS.
+  // 4 ter) Trazabilidad del texto divulgativo -------------------------------------------------------
+  // La descripción es lo que más lee el usuario y era el único campo de la ficha sin procedencia:
+  // 476 fichas con texto y ninguna decía si lo servía EIDOS o lo había redactado alguien. Las dos
+  // cosas conviven y en la app se ven idénticas, que es justo lo que la regla nº 7 pide no hacer.
+  //
+  // Desde ahora `descriptionSource` acompaña al texto. Es AVISO y no error a propósito: el texto
+  // heredado es útil y no se va a tirar, pero tiene que constar cuánto queda sin trazar.
+  //
+  // Lo que sí es error: una ficha VISIBLE sin descripción. Esas se ocultan con
+  // `npm run especies:ocultar` hasta que tengan texto — un hueco documentado, no una ficha en blanco
+  // servida al usuario.
+  let sinCita = 0;
+  species.forEach(s => {
+    const texto = String(s.description || '').trim();
+    if (texto && !s.descriptionSource) sinCita++;
+    if (!texto && s.visible !== false)
+      err(scope, 'especie #' + s.id + ' (' + s.commonName + '): sin `description` y VISIBLE. ' +
+        'Ocúltala (`visible: false`) hasta que tenga texto: ver npm run especies:ocultar');
+  });
+  if (sinCita)
+    warn(scope, sinCita + ' especie(s) con descripción sin `descriptionSource`: no consta si el texto ' +
+      'lo sirve EIDOS o lo redactó alguien. Ver Tools/catalogo-nacional/data/contenido/README.md');
+
+  let sinBase = 0;
+  species.forEach(s => {
+    const fuera = v => v != null && (!Number.isInteger(v) || v < 1 || v > 5);
+    if (fuera(s.rarityScore)) err(scope, 'especie #' + s.id + ' (' + s.commonName + '): `rarityScore` fuera del tramo 1–5: ' + s.rarityScore);
+    if (fuera(s.rarityLocal)) err(scope, 'especie #' + s.id + ' (' + s.commonName + '): `rarityLocal` fuera del tramo 1–5: ' + s.rarityLocal);
+    // El local incluye al estatal, así que nunca puede ser menor… pero SOLO cuando los dos salen de
+    // la escalera legal. Mientras `rarityScore` siga siendo el número heredado a ojo (el que no tiene
+    // `rarityBasis`), compararlos no dice nada: daba 339 errores contra valores que no significan lo
+    // mismo. La comprobación se activa sola, ficha a ficha, en cuanto el estatal se migre.
+    if (s.rarityBasis && s.rarityLocal != null && s.rarityScore != null && s.rarityLocal < s.rarityScore)
+      err(scope, 'especie #' + s.id + ' (' + s.commonName + '): `rarityLocal` (' + s.rarityLocal +
+        ') es MENOR que `rarityScore` (' + s.rarityScore + '), y el local incluye al estatal');
+    if (s.rarityScore != null && !s.rarityBasis) sinBase++;
+  });
+  if (sinBase)
+    warn(scope, sinBase + ' especie(s) con `rarityScore` sin `rarityBasis`: el tramo viene del criterio ' +
+      'propio anterior, no de una norma. Pendiente de recalcular contra EIDOS');
+
   // 5 bis) Contenido universal de la ficha de especie ----------------------------------------------
   // Una ficha de especie describe a la ESPECIE, no su presencia en este parque: la misma ficha se
   // sirve en todos los espacios donde vive. Si `description`, `habitat` o `tips` nombran un parque,
@@ -405,8 +454,8 @@ function validatePark(entry) {
 // idénticos en todos: si el pino carrasco sale con una foto en un parque y otra distinta en otro, es
 // que alguien editó una copia. La fuente de verdad es el catálogo universal y quien las vuelve a
 // alinear es `node Tools/sync-species-catalog.js --apply`.
-const CAMPOS_UNIVERSALES = ['commonName', 'kingdom', 'group', 'habitat', 'seasonality', 'rarityScore',
-  'description', 'tips', 'taxonomy', 'iucnGlobal', 'spainStatus', 'image', 'imageAttribution'];
+const CAMPOS_UNIVERSALES = ['commonName', 'kingdom', 'group', 'habitat', 'seasonality', 'rarityScore', 'rarityBasis',
+  'description', 'descriptionSource', 'tips', 'taxonomy', 'iucnGlobal', 'spainStatus', 'image', 'imageAttribution'];
 
 // Lo mismo, pero para los hábitats: la clave no es el nombre científico sino el CÓDIGO HIC, y el
 // único campo universal de momento es la descripción. Quien las vuelve a alinear es

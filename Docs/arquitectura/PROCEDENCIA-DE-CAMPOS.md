@@ -47,9 +47,13 @@ dato; «Cómo» = la herramienta o el criterio; «Verifica» = quién lo comprue
 | `spain_status` | universal | EIDOS `v_estadolegal` ámbito Nacional (CEEA/LESRPE) + Lista Roja de la Flora Vascular 2008 | La Lista Roja es evaluación científica, **no norma jurídica**: por eso muchas plantas no salen en `v_estadolegal` y eso no es un error |
 | `murcia_status` | local | EIDOS `v_estadolegal` ámbito CCAA | ⚠️ **Nombre atado a Murcia. Es la deuda nº 1 del rollout: ver [DEUDA-TECNICA.md](../DEUDA-TECNICA.md)** |
 | `conservation_status` | local | derivado | Etiqueta corta para la tarjeta. En flora refleja el estado **legal**, no la evaluación UICN: son dos ejes distintos y mezclarlos ya causó un problema |
-| `description`, `tips`, `habitat`, `seasonality` | universal | redacción propia sobre fuentes | Prosa divulgativa. `tips` = tres rasgos que se ven en campo. **Nunca puede nombrar un espacio concreto** |
+| `description`, `tips`, `habitat`, `seasonality` | universal | **dos orígenes**: EIDOS (`v_atributos_pliniancore`) o redacción en `data/contenido/` | Prosa divulgativa. `tips` = tres rasgos que se ven en campo. **Nunca puede nombrar un espacio concreto.** Una ficha sin `description` no se muestra: `npm run especies:ocultar` le pone `visible: false` |
+| `description_source` | universal | la cita de quien escribe el texto | **Obligatorio con toda `description` nueva.** Los dos orígenes de arriba se ven idénticos en la app y este campo es lo único que los distingue. `validate` cuenta como aviso las que no lo tienen (476 heredadas) |
+| `hidden_reason` | local | proceso | Por qué la ficha está oculta. Distingue «sin texto que enseñar» de una decisión tomada a mano, para que un pase automático no pise la segunda |
 | `image`, `image_attribution` | universal | Wikimedia (`wikimedia-images.js`) → GBIF (`enrich-images.js`) | URL canónica `Special:FilePath`, nunca un `/thumb/` (`validate` lo trata como **error**). Autor + licencia obligatorios |
-| `rarity_score` | universal | criterio propio 1–5 | Ordena el catálogo y elige la especie diagnóstica de un hábitat |
+| `rarity_score` | universal | **categoría legal estatal** (CEEA/LESRPE, RD 139/2011) vía EIDOS | Escalera 1–5: 5 en peligro de extinción · 4 vulnerable o sensible · 3 de interés especial · 2 LESRPE · 1 sin figura estatal. `rarity_basis` guarda la norma que justifica el tramo. **No interviene ninguna señal de abundancia**: es dato oficial directo y reproducible, no el número puesto a ojo que era antes. Cuenta también la Lista Roja / Libro Rojo, que son evaluación y no norma, por decisión explícita |
+| `rarity_basis` | universal | la figura que justifica el tramo | Lo que impide que el número vuelva a ser una cifra sin procedencia. El tramo 1 **también** la lleva («Sin figura de protección»): «comprobado que no hay» y «nadie lo ha mirado» son estados distintos, y solo el segundo queda sin `rarity_basis` y avisado por `validate` |
+| `rarity_local` | local | la categoría más grave de **los dos ámbitos**, estatal y autonómico | Lo excepcional que es encontrarla *en este espacio*. Es local porque el catálogo autonómico es territorial: la misma especie es Vulnerable en una comunidad y no figura en la de al lado. Medido en Sierra de la Pila, el tramo estatal solo deja **1** especie en ≥ 4 sobre 243 (el Estado casi solo dice «en régimen de protección especial», 74 veces) mientras que el local deja **10** — quien discrimina de verdad es el catálogo regional |
 | `source` | local | proceso | La referencia concreta que respalda **la cita en este espacio** |
 | `review_note` | local | proceso | La duda, escrita y visible en la app («a revisar»). Es el mecanismo de «hueco documentado» |
 | `habitatIds` | local | derivado | Ver `species_habitats` abajo |
@@ -64,6 +68,14 @@ dato; «Cómo» = la herramienta o el criterio; «Verifica» = quién lo comprue
 | `caracteristica` | Atlas de Hábitats | La especie figura como característica de ese HIC **y** está en el catálogo del espacio. Backbone determinista y filtro de cordura del resto |
 | `observada_gbif` | GBIF | Ocurrencia **dentro del polígono** (punto-en-polígono local, no bbox). `gbif_occurrences` guarda cuántas |
 | `zepa` | EEA Discodata BISE | Lista oficial de especies del sitio Natura 2000 (`site_code`) |
+| `anexo_normativo` | PORN/PRUG, decreto de declaración o SDF del sitio | La norma del espacio la **enumera por escrito** en un anexo. Es la evidencia más fuerte de las cuatro: la única que afirma la pertenencia *a este espacio* y no a un polígono o a un tipo de hábitat. La lista se transcribe a mano en `Tools/catalogo-nacional/data/anexos-normativos.json`, con su cita y la fecha en que se leyó |
+
+> **El anexo da evidencia, no entrada.** La constancia en GBIF sigue siendo la puerta del catálogo:
+> lo que la norma enumera y el barrido no confirma dentro de ningún polígono **no se aprueba**, pero
+> tampoco se pierde — sale en `anexo_sin_constancia` del informe de selección como hueco a contrastar
+> en campo. El motivo es de cobertura: el Anexo I del PRUG de Sierra Espuña no inventaría especies,
+> el PORN de Carrascoy tampoco y el de Sierra de la Pila no se pudo abrir. Con el anexo de puerta,
+> esos espacios entrarían con cero especies y el de al lado con doscientas.
 
 ### Otras tablas
 

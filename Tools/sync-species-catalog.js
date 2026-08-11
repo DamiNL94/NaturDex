@@ -101,14 +101,14 @@ const GRUPO_NORMALIZADO = {
 
 // Campos que describen a la ESPECIE. Se sincronizan a todos los parques.
 const UNIVERSALES = [
-  'commonName', 'kingdom', 'group', 'habitat', 'seasonality', 'rarityScore',
-  'description', 'tips', 'taxonomy', 'iucnGlobal', 'spainStatus',
+  'commonName', 'kingdom', 'group', 'habitat', 'seasonality', 'rarityScore', 'rarityBasis',
+  'description', 'descriptionSource', 'tips', 'taxonomy', 'iucnGlobal', 'spainStatus',
   'image', 'imageAttribution',
 ];
 
 // Campos que describen la PRESENCIA en un parque concreto. No se tocan nunca.
 const LOCALES = [
-  'id', 'habitatIds', 'coordinates', 'featured', 'visible', 'source', 'reviewNote',
+  'id', 'habitatIds', 'coordinates', 'featured', 'visible', 'hiddenReason', 'source', 'reviewNote',
   'zepaSiteCode', 'gbifOccurrences', 'gbifBboxSightings', 'gbifSpeciesKey', 'eidosTaxonId',
   'murciaStatus', 'conservationStatus', 'audio', 'audioTranscript',
 ];
@@ -354,11 +354,15 @@ function aplicar() {
           `  s.common_name = ${sqlStr(u.commonName)},\n` +
           `  s.primary_habitat = ${sqlStr(u.habitat)},\n` +
           `  s.description = ${sqlStr(u.description)},\n` +
+          `  s.description_source = ${sqlStr(u.descriptionSource)},\n` +
           `  s.identification_tips = ${sqlStr((u.tips || []).join('\n'))},\n` +
           `  s.seasonality = ${sqlStr(u.seasonality)},\n` +
           `  s.image_url = ${sqlStr(u.image)},\n` +
           `  s.image_attribution = ${sqlStr(u.imageAttribution)},\n` +
-          `  s.rarity_score = ${u.rarityScore ?? 1}\n` +
+          `  s.rarity_score = ${u.rarityScore ?? 1},\n` +
+          // La base viaja con el tramo: un `rarity_score` sin su `rarity_basis` en la BD volvería a
+          // ser el número sin procedencia que acabamos de quitar del catálogo.
+          `  s.rarity_basis = ${u.rarityBasis ? sqlStr(JSON.stringify(u.rarityBasis)) : 'NULL'}\n` +
           `WHERE p.slug = ${sqlStr(slug)} AND s.scientific_name = ${sqlStr(sp.scientificName)};`
         );
       }

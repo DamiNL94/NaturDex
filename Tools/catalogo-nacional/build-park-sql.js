@@ -170,7 +170,10 @@ L.push('    image_note = VALUES(image_note);');
 
 // 3) Especies --------------------------------------------------------------------------------------
 seccion(`3. Especies (${species.length}). \`identification_tips\` va como texto separado por «; », que es como lo parte park_payload.php.`);
-const COLS_S = ['common_name', 'scientific_name', 'kingdom', 'family', 'primary_habitat', 'conservation_status', 'description', 'identification_tips', 'seasonality', 'image_url', 'image_attribution', 'latitude', 'longitude', 'rarity_score', 'is_featured', 'is_visible', 'source', 'taxon_phylum', 'taxon_class', 'taxon_order', 'taxon_family', 'taxon_genus', 'iucn_global', 'spain_status', 'murcia_status', 'review_note', 'eidos_taxonid', 'gbif_species_key', 'zepa_site_code'];
+const COLS_S = ['common_name', 'scientific_name', 'kingdom', 'family', 'primary_habitat', 'conservation_status', 'description', 'description_source', 'identification_tips', 'seasonality', 'image_url', 'image_attribution', 'latitude', 'longitude', 'rarity_score', 'rarity_basis', 'rarity_local', 'rarity_local_basis', 'is_featured', 'is_visible', 'hidden_reason', 'source', 'taxon_phylum', 'taxon_class', 'taxon_order', 'taxon_family', 'taxon_genus', 'iucn_global', 'spain_status', 'murcia_status', 'review_note', 'eidos_taxonid', 'gbif_species_key', 'zepa_site_code'];
+// Los dos `*_basis` son columnas JSON y se escriben con `sqlJson` de lib/sql (ya lo usan los
+// hábitats): así vuelven del viaje siendo el mismo objeto que hay en el park.json, en vez de una
+// cadena. `park_payload.php` los decodifica al otro lado.
 L.push('INSERT INTO species (park_id, ' + COLS_S.join(', ') + ')');
 L.push('SELECT pk.id, ' + COLS_S.map(c => 's.' + c).join(', '));
 L.push('FROM parks pk JOIN (');
@@ -179,11 +182,18 @@ species.forEach((s, i) => {
   const v = [
     sqlStr(s.commonName), sqlStr(s.scientificName), sqlStr(s.kingdom),
     sqlStrOrNull(s.group), sqlStrOrNull(s.habitat), sqlStrOrNull(s.conservationStatus),
-    sqlStrOrNull(s.description), sqlStrOrNull((s.tips || []).join('; ')), sqlStrOrNull(s.seasonality),
+    sqlStrOrNull(s.description), sqlStrOrNull(s.descriptionSource),
+    sqlStrOrNull((s.tips || []).join('; ')), sqlStrOrNull(s.seasonality),
     sqlStrOrNull(s.image), sqlStrOrNull(s.imageAttribution),
     sqlNum(s.coordinates && s.coordinates[0]), sqlNum(s.coordinates && s.coordinates[1]),
-    sqlNum(s.rarityScore == null ? 1 : s.rarityScore), sqlBool(s.featured),
+    sqlNum(s.rarityScore == null ? 1 : s.rarityScore), sqlJson(s.rarityBasis),
+    // `rarity_local` va a NULL cuando la ficha no lo tiene, y NO a 1: son las que quedaron sin tramo
+    // porque su estado legal dice «pendiente de confirmar». Un 1 afirmaría una comprobación que nadie
+    // hizo (Tools/catalogo-nacional/out/rareza-por-contrastar.md).
+    sqlNum(s.rarityLocal), sqlJson(s.rarityLocalBasis),
+    sqlBool(s.featured),
     sqlBool(s.visible === undefined ? true : s.visible),
+    sqlStrOrNull(s.hiddenReason),
     sqlStrOrNull(s.source),
     sqlStrOrNull(t.phylum), sqlStrOrNull(t.class), sqlStrOrNull(t.order), sqlStrOrNull(t.family), sqlStrOrNull(t.genus),
     sqlStrOrNull(s.iucnGlobal), sqlStrOrNull(s.spainStatus), sqlStrOrNull(s.murciaStatus), sqlStrOrNull(s.reviewNote),

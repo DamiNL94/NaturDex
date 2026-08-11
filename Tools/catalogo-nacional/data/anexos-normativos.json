@@ -1,0 +1,22 @@
+{
+  "_nota": "Especies que la NORMA DE DECLARACIÓN O GESTIÓN de cada espacio enumera en un anexo: PORN, PRUG, decreto de declaración o el Formulario Normalizado de Datos (SDF) del sitio Natura 2000. Es la única señal de la Capa 3 que afirma, de primera mano y por escrito, que una especie forma parte de ESTE espacio; GBIF solo prueba que alguien la ha registrado dentro del polígono, y el Atlas solo que es característica del tipo de hábitat. Da la evidencia `anexo_normativo` y cuenta como respaldo documental en build-species-seleccion.js. NO es una puerta de entrada: una especie del anexo que GBIF no confirma dentro de los polígonos NO se aprueba (filtro 1, constancia), pero tampoco desaparece: sale en el informe como hueco a contrastar. Un espacio SIN entrada aquí no es un espacio sin anexo: es un anexo NO CONSULTADO, y la herramienta lo dice en vez de callarlo. NUNCA se rellena de memoria ni por analogía con otro espacio (CLAUDE.md, regla nº 2): cada lista se transcribe de la norma, con su cita y la fecha en que se leyó.",
+  "_esquema": {
+    "<slug del espacio>": {
+      "fuente": {
+        "norma": "Título y rango de la norma, tal y como se cita en el boletín",
+        "boletin": "BORM/BOE/DOG… número y fecha",
+        "url": "Enlace al texto consultado",
+        "anexo": "Qué anexo o apartado concreto contiene la lista",
+        "consultado": "AAAA-MM-DD en que se leyó el documento"
+      },
+      "especies": [
+        {
+          "scientificName": "Nombre científico tal y como lo escribe la norma",
+          "categoria": "La categoría que le asigna la norma, si la asigna (opcional)",
+          "nota": "Cualquier salvedad: nombre desactualizado, ámbito parcial… (opcional)"
+        }
+      ]
+    }
+  },
+  "espacios": {}
+}
