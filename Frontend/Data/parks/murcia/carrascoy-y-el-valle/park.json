@@ -1126,6 +1126,21 @@
       "audioTranscript": null
     },
     {
+      "id": "paisaje-lunar",
+      "name": "Paisaje lunar",
+      "type": "Geológico",
+      "description": "Los bad lands de la vertiente sur de la Cresta del Gallo, que el PORN inventaría como Lugar de Interés Geológico y como uno de los hitos paisajísticos del parque. El sustrato son regosoles margálicos sobre fuertes pendientes: el plan describe cómo dan lugar a «un paisaje abarrancado con una red de drenaje dentrítica», sin apenas vegetación, que contrasta con el pinar de las umbrías vecinas. Se contempla desde el mirador de la Cresta del Gallo, mirando al sur.",
+      "coordinates": [
+        37.943528,
+        -1.090778
+      ],
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Paisaje_Lunar_desde_Columbares.jpg?width=1280",
+      "source": "PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §3.1.2.3 (Lugares de Interés Geológico: «Bad lands de la vertiente sur de la Sierra de la Cresta del Gallo (Paisaje lunar)», del inventario de El Patrimonio Geológico de la Región de Murcia, Fundación Séneca, 1999), §3.1.2.4 (regosoles margálicos) y §3.3 (hitos paisajísticos). Coordenada aproximada: ninguna fuente delimita el paraje —el PORN solo dice «al sur de la Cresta del Gallo»— y no tiene nodo en OpenStreetMap, así que se le da la del mirador de la Cresta del Gallo, que es el punto desde el que se observa; Wikimedia Commons (foto: Wadim, CC BY-SA 4.0)",
+      "approx": true,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
       "id": "mirador-del-relojero",
       "name": "Mirador del Relojero",
       "type": "Paisajístico",

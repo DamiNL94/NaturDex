@@ -17,7 +17,7 @@
 --   docker exec -i naturdex-db-1 sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" mysql --default-character-set=utf8mb4 naturadex' < Database/n3-pois-carrascoy-y-el-valle.sql
 -- ================================================================================================
 
--- 20 punto(s) de interés.
+-- 21 punto(s) de interés.
 INSERT INTO points_of_interest (park_id, slug, name, type, description, latitude, longitude, image_url, source, is_approx)
 SELECT p.id, poi.slug, poi.name, poi.type, poi.description, poi.latitude, poi.longitude, poi.image_url, poi.source, poi.is_approx
 FROM parks p
@@ -43,6 +43,8 @@ JOIN (
     SELECT 'cresta-del-gallo', 'Cresta del Gallo', 'Paisajístico', 'Crestón rocoso asomado sobre la huerta de Murcia y el hito más reconocible del parque. El PORN lo enumera cinco veces en su inventario de recursos para el uso público —área recreativa, área de acampada, mirador habilitado, punto de información y área de escalada deportiva—, además de incluirlo entre los hitos paisajísticos del espacio y darle nombre a una subzona de uso público intensivo. La coordenada es la del mirador.', 37.943841, -1.090818, 'https://commons.wikimedia.org/wiki/Special:FilePath/Crestadelgallo.JPG?width=1280', 'PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §3.3 y §4.2.7.2, y Normativa (subzona de uso público intensivo «Cresta del Gallo»). Coordenada: OpenStreetMap node/747347873 (ODbL); Wikimedia Commons (foto: Gregorico, CC BY-SA 4.0)', FALSE
     UNION ALL
     SELECT 'la-panocha', 'La Panocha', 'Geológico', 'Aguja caliza de 523 m junto a la Cresta del Gallo, escuela de escalada clásica de la sierra. El PORN la cita dos veces: entre los hitos paisajísticos singulares del parque y, junto a las Navetas, en el inventario de Lugares de Interés Geológico que toma de El Patrimonio Geológico de la Región de Murcia (Fundación Séneca, 1999).', 37.942858, -1.087673, NULL, 'PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §3.1.2.3 (Lugares de Interés Geológico: «Las Navetas y La Panocha») y §3.3. Coordenada y altitud: OpenStreetMap node/747347157 (ODbL)', FALSE
+    UNION ALL
+    SELECT 'paisaje-lunar', 'Paisaje lunar', 'Geológico', 'Los bad lands de la vertiente sur de la Cresta del Gallo, que el PORN inventaría como Lugar de Interés Geológico y como uno de los hitos paisajísticos del parque. El sustrato son regosoles margálicos sobre fuertes pendientes: el plan describe cómo dan lugar a «un paisaje abarrancado con una red de drenaje dentrítica», sin apenas vegetación, que contrasta con el pinar de las umbrías vecinas. Se contempla desde el mirador de la Cresta del Gallo, mirando al sur.', 37.943528, -1.090778, 'https://commons.wikimedia.org/wiki/Special:FilePath/Paisaje_Lunar_desde_Columbares.jpg?width=1280', 'PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §3.1.2.3 (Lugares de Interés Geológico: «Bad lands de la vertiente sur de la Sierra de la Cresta del Gallo (Paisaje lunar)», del inventario de El Patrimonio Geológico de la Región de Murcia, Fundación Séneca, 1999), §3.1.2.4 (regosoles margálicos) y §3.3 (hitos paisajísticos). Coordenada aproximada: ninguna fuente delimita el paraje —el PORN solo dice «al sur de la Cresta del Gallo»— y no tiene nodo en OpenStreetMap, así que se le da la del mirador de la Cresta del Gallo, que es el punto desde el que se observa; Wikimedia Commons (foto: Wadim, CC BY-SA 4.0)', TRUE
     UNION ALL
     SELECT 'mirador-del-relojero', 'Mirador del Relojero', 'Paisajístico', 'Torre de vigilancia forestal en la cima del Relojero, a 604 m, con vista sobre la huerta y la Cordillera Sur. El PORN inventaría aquí uno de los seis miradores habilitados del parque, que sitúa «al pie del Relojero».', 37.913559, -1.119209, 'https://commons.wikimedia.org/wiki/Special:FilePath/Vistas_desde_el_Pico_Relojero.jpg?width=1280', 'PORN del Parque Regional Carrascoy y El Valle (Orden de 18 de mayo de 2005, BORM n.º 129 de 07.06.2005), Memoria Descriptiva §4.2.7.2 (miradores habilitados: «El Relojero (al pie del Relojero)»). Coordenada aproximada: el plan sitúa el mirador al pie del cerro y la coordenada es la de la torre de observación de la cima, OpenStreetMap way/136894912 (ODbL); Wikimedia Commons (foto: Juan Antonio Pellicer Alcaraz, CC BY-SA 3.0 es)', TRUE
     UNION ALL
@@ -73,6 +75,6 @@ ON DUPLICATE KEY UPDATE
     source = VALUES(source),
     is_approx = VALUES(is_approx);
 
--- Comprobación posterior: debe devolver 20.
+-- Comprobación posterior: debe devolver 21.
 SELECT COUNT(*) AS pois_cargados FROM points_of_interest poi
 JOIN parks p ON p.id = poi.park_id WHERE p.slug = 'carrascoy-y-el-valle';
