@@ -18,6 +18,7 @@
 | `npm run pois:build <slug> [--fuente=auto\|overpass\|basemap]` | **Fase 3**: candidatos a punto de interés dentro del límite oficial → `out/<slug>-poi-candidatos.md`. Escribe candidatos, nunca `park.json` |
 | `npm run images:pois -- --park <slug> --categoria "<Categoría de Commons>"` | Foto y crédito de cada POI. **Con `--park` reescribe `Database/poi-imagenes.sql` solo con ese espacio**: hay que conservar a mano las sentencias ya aplicadas de los demás |
 | `npm run pois:sql -- --park <slug>` | Vuelca el bloque `pointsOfInterest` de un `park.json` a SQL idempotente → `Database/n3-pois-<slug>.sql`. **La API manda sobre el paquete**: sin aplicarlo, el espacio se sirve con 0 POIs |
+| `npm run park:sql -- --park <slug>` | Vuelca el **N2 completo** —fila de `parks`, hábitats con geometría, especies y vínculos— → `Database/<slug>-n2.sql`. **Va antes que `pois:sql`**: sin fila en `parks`, todo lo demás carga cero filas en silencio |
 | `npm run tiles:build <slug>` | Paquete de mapa base offline |
 | `npm run trails:build <slug>` | Senderos señalizados (GR, PR, SL) que pasan por el parque |
 | `npm run export:park / :glossary / :invasoras` | Regenera los JSON empaquetados desde la BD |

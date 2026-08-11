@@ -49,6 +49,20 @@ const HOSTS = [
   ['www.borm.es',                  'PORN y PRUG publicados'],
   ['build.protomaps.com',          'mapa base sin conexión (tiles:build)'],
   ['build-metadata.protomaps.dev', 'versión del build de Protomaps'],
+
+  // --- Fotos de POI, segunda vuelta -------------------------------------------------------------
+  // Wikimedia Commons es la fuente primaria y resuelve la mayoría, pero se agota rápido en espacios
+  // con poca cobertura: en Carrascoy y El Valle, 13 de 21 POIs se quedaron sin foto con la categoría
+  // del espacio, geosearch y buscador ya recorridos (2026-08-11). Estos seis repositorios sirven
+  // material con licencia de la lista blanca del §4.6 y son la vuelta siguiente. Ninguno es
+  // necesario para que el pipeline funcione: si están cerrados, el hueco se documenta y ya está.
+  ['www.flickr.com',               'fotos de POI: buscador de Flickr (filtro de licencia CC)'],
+  ['api.flickr.com',               'fotos de POI: API de Flickr (flickr.photos.search, necesita api_key)'],
+  ['api.openverse.org',            'fotos de POI: Openverse, agregador CC (sin clave para uso básico)'],
+  ['graph.mapillary.com',          'fotos de POI: Mapillary, imagen a pie de calle CC BY-SA 4.0 (necesita token)'],
+  ['api.europeana.eu',             'fotos de POI: Europeana, patrimonio digitalizado (necesita wskey)'],
+  ['www.geograph.org.uk',          'fotos de POI: Geograph, fotografía geolocalizada CC BY-SA'],
+  ['api.inaturalist.org',          'fotos de POI y de especies: iNaturalist (ojo: mucho CC BY-NC, que NO entra)'],
 ];
 
 const http = require('http');

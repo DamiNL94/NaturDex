@@ -22,6 +22,7 @@
     "trails:build": "node Tools/build-park-trails.js",
     "pois:build": "node Tools/build-park-pois.js",
     "pois:sql": "node Tools/catalogo-nacional/build-poi-sql.js",
+    "park:sql": "node Tools/catalogo-nacional/build-park-sql.js",
     "n1:build": "node Tools/catalogo-nacional/build-n1-espacios.js",
     "n1:refina": "node Tools/catalogo-nacional/refina-limites-imida.js",
     "habitats:build": "node Tools/catalogo-nacional/build-habitats.js",
