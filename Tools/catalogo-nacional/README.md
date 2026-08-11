@@ -197,6 +197,7 @@ generan ficheros en `out/` para revisar antes de adoptarlos.
 | `invasoras-contenido.js` | `contenido:invasoras` | Fichas de invasoras desde EIDOS, limpiando los restos del formulario de origen |
 | `invasoras-images.js` | `images:invasoras` | Sus fotos, misma cadena de resolución que el catálogo |
 | `poi-images.js` | `images:pois` | Foto de cada punto de interés, anclada en la **categoría de Commons del espacio**. Ver abajo qué hacer cuando se agota |
+| `poi-images-alt.js` | `images:pois:alt` | Las mismas fotos, pero en las fuentes de **fuera de Wikimedia** de la tabla de abajo. Todo lo que devuelve es `needsReview`: no escribe sin `--write --force` |
 
 #### Cuando Commons se agota: otras páginas donde buscar la foto de un POI
 
@@ -212,7 +213,16 @@ llevaba tiempo ahí y no salía porque no existía todavía un POI con ese nombr
 radio amplio alrededor de la coordenada, revisando el listado a mano en vez de exigir que el nombre
 del archivo mencione el POI; (3) la categoría de **Wiki Loves Earth** del código Natura 2000 del
 espacio (`Category:Images of a site of community importance with code <CÓDIGO> from Wiki Loves Earth
-in Spain`); (4) las categorías propias de cada elemento y el **P18** de su ficha de Wikidata.
+in Spain`); (4) las categorías propias de cada elemento y el **P18** de su ficha de Wikidata; (5) las
+**subidas completas del colaborador** que haya fotografiado el espacio (`list=allimages&aiuser=…`),
+que alcanzan los archivos suyos que no llevan geoetiqueta y que por eso el geosearch no ve.
+
+> El paso (5) es el que más veces queda por hacer, y en Carrascoy fue el que cerró la duda: las **42
+> subidas de `Picoesquinamu`** —un Wiki Loves Earth 2015 sobre el LIC ES6200002— son prácticamente
+> todo lo que Commons tiene del parque. El (4) también dio un «no hay» de primera mano: los dos
+> castillos del Portazgo **sí tienen ficha de Wikidata** (`Q43153670` recinto superior, `Q43153665`
+> recinto inferior, ambos BIC) y **ninguna tiene P18**; el Santuario ibérico de la Luz (`Q136656567`),
+> tampoco.
 
 Solo después, y por este orden de utilidad esperada:
 
@@ -235,6 +245,33 @@ Solo después, y por este orden de utilidad esperada:
 >
 > **Lo que se anota al escribirla**: el crédito va dentro de `source`, con el mismo formato del piloto
 > y diciendo la fuente —`…; Flickr (foto: <autor>, CC BY-SA 2.0)`—, nunca «Wikimedia Commons» a secas.
+> Lo escribe `conCredito(source, meta, fuente)`, que **sustituye** el crédito anterior en vez de
+> encadenar otro: por eso conoce los siete nombres de fuente de la constante `FUENTES_FOTO`.
+
+**Las seis las recorre `poi-images-alt.js`** (`npm run images:pois:alt -- --park <slug>`), por este
+mismo orden. Las claves salen del entorno —`FLICKR_API_KEY`, `MAPILLARY_TOKEN`, `EUROPEANA_WSKEY`— y
+**cuando falta una, la fuente sale en el informe como «no disponible», no se salta en silencio**: que
+un POI no tenga foto porque nadie la ha hecho y que no la tenga porque no había clave son dos cosas
+distintas, y sólo la segunda se arregla consiguiendo la clave.
+
+##### Lo que dio esta cascada en Carrascoy, medido (2026-08-11)
+
+Las seis se probaron POI a POI sobre los 13 sin foto. **Resultado: cero candidatas.** Conviene que
+quede escrito para que nadie repita el barrido esperando otra cosa:
+
+| Fuente | Qué pasó |
+|---|---|
+| Openverse | Responde, pero **sólo devuelve material de Wikimedia** bajo el filtro de licencia libre: lo de Flickr que hay de esta sierra es casi todo BY-NC-ND. Su búsqueda es además **sólo textual y muy laxa** —«Parque Regional El Valle» trae un parque de Madrid y otro de Perú—, así que se le exige mención del topónimo |
+| Flickr | **No consultada: falta `FLICKR_API_KEY`.** Es una de las dos que buscan por coordenada, así que es la que más falta hace |
+| Mapillary | **No consultada: falta `MAPILLARY_TOKEN`.** Es la que mejor cubriría los 5 POIs de tipo Acceso (centros de visitantes y áreas recreativas), que son los que Commons no tiene |
+| Europeana | Consultada con la clave pública `api2demo`. **0 resultados** con `reusability=open` para los 6 POIs Cultural/Religioso/Arqueológico. Lo que devuelve para «Puerto de la Cadena» son **pliegos de herbario** de Naturalis y Kew: el topónimo aparece en la etiqueta del espécimen, no en una foto del sitio |
+| Geograph | Islas Británicas. No se consulta |
+| iNaturalist | Consultada con `--inat`: sólo fotos de insectos, moluscos y musgos. Aciertan el *dónde* y fallan el *qué*, que es exactamente lo que avisa su fila de arriba |
+
+> **Antes de dar por agotada la sesión, comprueba `npm run red:check`.** El 2026-08-11 las seis
+> aparecían **cortadas por el proxy** y ese mismo día, en otra sesión, estaban **las 25 abiertas**: la
+> política de egress cambia entre sesiones. «Cortada» es un estado de hoy, no una propiedad de la
+> fuente.
 
 `npm run red:check` dice cuáles de estos seis hosts alcanza la sesión de hoy, y
 `node Tools/check-egress.js --allowlist` escupe los que están cerrados, listos para pegar en los
