@@ -13,6 +13,16 @@ Cada una se paga mejor ahora que en el espacio número treinta.
 2. **El pipeline de hábitats no escribe en la BD.** `adopt-habitats.js` toca `Frontend/` y nada más, así
    que un export desde la API borraría sus cambios sin avisar. Mientras siga así, cualquier cambio suyo
    es provisional (ver [orden de operaciones](runbook/ORDEN-DE-OPERACIONES.md) §4).
+   > **Medido el 2026-08-11 (f), y son dos campos con nombre.** Cargada la BD desde cero
+   > (`schema` + `seed` + `sierra-de-la-pila-n2.sql`) y regenerado el paquete con
+   > `php Tools/export-park.php sierra-de-la-pila`, la ida y vuelta **pierde en silencio**:
+   > **`gbifOccurrences`** de cada especie —no tiene columna en `species`; son **767 fichas** en los
+   > cuatro espacios que lo llevan— y **`origen`** de cada recinto de `geo/habitats.geojson`, que es
+   > justo el campo de procedencia que exige la regla nº 1 del `CLAUDE.md`. Además **reordena**
+   > especies, POIs y recintos, así que el diff sale completo y esconde lo que sí cambió.
+   > Los contadores cuadran (10/245/15) y ningún error salta: es exactamente el género de fallo del
+   > §2 del `CLAUDE.md`. **Quien pulse «Publicar cambios offline» en el AdminPanel dispara esta misma
+   > ruta** (`Backend/Lib/park_export.php` es compartido).
 3. **Claves externas incoherentes** — lo que reporta hoy `npm run taxones:duplicados` (sale con
    código 1 mientras queden):
    - **1 taxón duplicado**: la `gbifSpeciesKey` **3064** está puesta en dos especies distintas de
