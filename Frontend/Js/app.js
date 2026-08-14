@@ -22,7 +22,7 @@ import {
   loadProgress, persistProgress, flushProgressQueue
 } from './data.js';
 import {
-  speciesList, searchInput, catalogControls, catalogPanel,
+  sidebar, speciesList, searchInput, catalogControls, catalogPanel,
   backToHabitatsBtn, catalogCrumb, catalogCrumbLabel, parkTitle, parkEyebrow, parkStats, parkProgressWrap,
   progressPanel, invasorasPanel, basicNotice, detailPanel, sheetClose, sheetScrim,
   saveOfflineBtn, connStatus, layersToggle, layersPanel, explorerToggle
@@ -47,6 +47,7 @@ import { initAchievements, noteParkActivity, handleServerNewlyUnlocked, reportIn
 import { startPresence, stopPresence, notePresenceFix, flushPresenceQueue, marksCountNow, refreshPresenceBar } from './presence.js';
 import { initProfile, showProfile } from './profile.js';
 import { showNotice } from './notice.js';
+import { abreVisor } from './visor.js';
 
 // --- Pila de navegación (nav.js) ------------------------------------------------------------------
 // Cada cosa que se abre dentro del parque —una pestaña, la ficha deslizante, el hábitat en el que se
@@ -56,6 +57,39 @@ import { showNotice } from './notice.js';
 const nav = window.NaturDexNav || null;
 function navOpen(key, close) { if (nav) nav.open(key, close); }
 function navClose(key) { return nav ? nav.close(key) : false; }
+
+// --- Empezar por arriba ---------------------------------------------------------------------------
+// Los contenedores con scroll propio conservan su `scrollTop` al repintarse. Sin esto, abrir una
+// ficha desde una lista ya desplazada dejaba al usuario a media altura, con el texto cortado y sin
+// ver la foto; y volver a una pestaña la devolvía por donde se había quedado hace media hora. Para
+// quien no maneja bien el móvil eso no se lee como «estoy desplazado»: se lee como «se ha roto».
+//
+// El salto es seco (asignar `scrollTop`, no `scrollTo({behavior:'smooth'})`), así que respeta
+// data-motion="reduce" por construcción: no hay nada que animar.
+
+// La vista entrante (pestaña o nivel del catálogo) arranca arriba del todo. Se tocan los cuatro
+// contenedores que scrollean por su cuenta, porque cuál de ellos lo hace depende del ancho: en
+// escritorio son las listas; en móvil, la barra lateral entera.
+function vistaArriba() {
+  [sidebar, speciesList, progressPanel, invasorasPanel].forEach(el => { if (el) el.scrollTop = 0; });
+}
+
+// Estreno de la ficha: empieza por la foto y, si se pide, el foco cae en su TÍTULO (no en el panel),
+// para que el lector de pantalla anuncie el nombre de la especie y no «Ficha de detalle». Mismo
+// criterio que showScreen() en auth.js y closeRaw() en tutorial.js.
+//
+// `preventScroll` aquí no estorba, al revés: la posición ya se ha corregido a mano una línea antes,
+// y sin él el navegador volvería a desplazar el contenedor para «traer» el título a la vista justo
+// mientras la hoja móvil está entrando.
+function estrenaFicha(enfoca = true) {
+  if (!detailPanel) return;
+  detailPanel.scrollTop = 0;
+  if (!enfoca) return;
+  const titulo = detailPanel.querySelector('h2');
+  if (!titulo) return;
+  if (!titulo.hasAttribute('tabindex')) titulo.setAttribute('tabindex', '-1');
+  titulo.focus({ preventScroll: true });
+}
 
 // --- Navegación del catálogo ----------------------------------------------------------------------
 // Tres niveles encajados: grupos de hábitats → hábitats del grupo → especies del hábitat. Cada uno
@@ -75,6 +109,7 @@ function enterHabitatGroup(groupId) {
   setOpenLayersGroup(groupId);
   refreshLayersPanel();
   renderCatalogBody();
+  vistaArriba();
   navOpen('habitat-group', backToGroupsRaw);
 }
 
@@ -97,6 +132,7 @@ function enterHabitat(habitatId) {
   // "Ver todas las especies" (habitatId nulo) no tiene hábitat que mostrar, así que no la toca.
   if (habitatId) selectHabitat(habitatId);
   renderCatalogBody();
+  vistaArriba();
   navOpen('habitat', backFromHabitatRaw);
 }
 
@@ -113,6 +149,7 @@ function showInvasoras() {
   state.detailMode = 'invasora';
   renderInvasoras();
   renderDetail(); // muestra la ficha por defecto en la derecha (en escritorio siempre visible)
+  estrenaFicha(false); // la ficha cambia sola, sin que el usuario la haya pedido: no se le roba el foco
 }
 function selectInvasora(scientificName) {
   state.selectedInvasora = scientificName;
@@ -133,6 +170,9 @@ function selectHabitat(habitatId, solo = true) {
   state.selectedHabitatId = habitatId;
   state.detailMode = 'habitat';
   renderDetail();
+  // Ficha nueva ⇒ ficha por arriba. El foco no se toca aquí: `selectHabitat` también se llama al
+  // ENTRAR en un hábitat desde el catálogo, y allí el usuario se queda navegando la lista.
+  estrenaFicha(false);
   // El panel de capas deja desplegado el grupo del hábitat en cuestión: al abrirlo, lo que se está
   // mirando ya está a la vista, sin tener que buscar en qué grupo cae.
   openLayersGroupOfHabitat(habitatId);
@@ -164,6 +204,7 @@ function backFromHabitatRaw() {
     refreshLayersPanel();
   }
   renderCatalogBody();
+  vistaArriba();
 }
 
 // Salir de un grupo: al nivel de entrada del catálogo. El mapa recupera todos los hábitats, que es
@@ -178,6 +219,7 @@ function backToGroupsRaw() {
   setOpenLayersGroup(null);
   refreshLayersPanel();
   renderCatalogBody();
+  vistaArriba();
 }
 
 // El botón «←» de la miga: sube UN nivel, sea cual sea en el que se esté.
@@ -396,6 +438,7 @@ function setView(view) {
   else if (view === 'invasoras') showInvasoras();
   else if (basic) renderBasicPark();
   else renderCatalogBody();
+  vistaArriba(); // la pestaña entrante empieza por su encabezado, no por donde se quedó la anterior
   syncMobileNav(view); // catálogo, invasoras y progreso también son pestañas de la nav inferior móvil
 }
 
@@ -421,6 +464,7 @@ function showMobileTab(tab) {
   if (tab === 'map') {
     syncMobileNav('map');
     closeDetailSheetRaw();
+    vistaArriba(); // al volver del mapa, la pestaña de texto no puede seguir a media altura
     ensureMapSized(); // el mapa estaba oculto; Leaflet debe recalcular el tamaño del contenedor
   } else {
     setView(tab); // 'catalog' | 'invasoras' | 'progress' — setView ya sincroniza la nav inferior
@@ -447,13 +491,15 @@ function setMobileTab(tab) {
 // el punto a la vista, y el asa la sube entera si quiere leerlo todo (el patrón de Google Maps).
 // Abierta desde una lista no hay nada detrás que preservar, así que se abre grande como siempre.
 function openDetailSheet(fromMap = false) {
-  if (!mobileMedia.matches) return; // en escritorio la ficha es la columna de la derecha: siempre visible
+  // En escritorio la ficha es la columna de la derecha y siempre está visible: no hay hoja que
+  // abrir, pero SÍ hay ficha nueva, así que empieza arriba y el foco entra en ella igual.
+  if (!mobileMedia.matches) { estrenaFicha(); return; }
   document.body.classList.toggle('sheet-compact', !!fromMap);
   if (fromMap) document.body.classList.remove('sheet-expanded');
   document.body.classList.add('sheet-open');
-  // El foco entra en la ficha (tabindex="-1" en el HTML): el lector de pantalla anuncia el
-  // contenido recién abierto y Escape/el botón ✕ quedan al alcance del teclado.
-  detailPanel.focus({ preventScroll: true });
+  // El foco entra en el TÍTULO de la ficha, no en el panel: así el lector de pantalla anuncia el
+  // nombre de la especie y no «Ficha de detalle». Antes de darlo, la ficha se pone arriba del todo.
+  estrenaFicha();
   navOpen('sheet', closeDetailSheetRaw);
 }
 
@@ -533,6 +579,10 @@ if (invasorasPanel) invasorasPanel.addEventListener('click', event => {
 });
 
 detailPanel.addEventListener('click', event => {
+  // La foto de portada de la ficha abre el visor a pantalla completa (visor.js). Va la primera:
+  // es el único control de la ficha que no es un <button>, así que ningún otro closest la pilla.
+  const foto = event.target.closest('img[data-zoom]');
+  if (foto) { abreVisor(foto); return; }
   const seenBtn = event.target.closest('[data-toggle-seen]');
   if (seenBtn) { toggleSpeciesSeen(seenBtn.dataset.toggleSeen); return; }
   // "Marcar como visitado" de un punto de interés: antes vivía dentro de su globo del mapa.
@@ -556,6 +606,16 @@ detailPanel.addEventListener('click', event => {
     enterHabitat(state.selectedHabitatId);
     selectSpecies(chip.dataset.speciesChip);
   }
+});
+
+// La foto de la ficha es un control anunciado (role="button" + tabindex), no una imagen muda que
+// resulta que responde: con el teclado tiene que abrirse igual que con el dedo.
+detailPanel.addEventListener('keydown', event => {
+  if (event.key !== 'Enter' && event.key !== ' ' && event.key !== 'Spacebar') return;
+  const foto = event.target.closest('img[data-zoom]');
+  if (!foto) return;
+  event.preventDefault(); // el espacio, si no, desplaza la ficha por debajo del visor
+  abreVisor(foto);
 });
 
 document.querySelectorAll('.filter-button').forEach(button => {

@@ -22,6 +22,13 @@ otro fichero del armazón.
 | `leaflet/` | [`leaflet`](https://www.npmjs.com/package/leaflet) | 1.9.4 | BSD-2-Clause (`leaflet/LICENSE`) |
 | `markercluster/` | [`leaflet.markercluster`](https://www.npmjs.com/package/leaflet.markercluster) | 1.5.3 | MIT (`markercluster/LICENSE`) |
 | `protomaps/` | [`protomaps-leaflet`](https://www.npmjs.com/package/protomaps-leaflet) | 5.1.0 | BSD-3-Clause (`protomaps/LICENSE`) |
+| `fonts/` | [Public Sans](https://public-sans.digital.gov/) v21 · [Zilla Slab](https://github.com/mozilla/zilla-slab) v12 | subconjuntos de Google Fonts | SIL OFL 1.1 (`fonts/LICENSE-*.txt`) |
+
+`fonts/` está aquí por el MISMO motivo que Leaflet, y llegó tarde: las dos familias se cargaban
+desde `fonts.googleapis.com`, así que sin cobertura la app perdía su tipografía y caía a la fuente
+del sistema — justo en el monte, que es donde se usa. Son los subconjuntos `latin` y `latin-ext`
+tal cual los sirve Google Fonts (~220 KB en total), con su `@font-face` en `fonts/fonts.css`. De
+paso deja de filtrarse a un tercero la IP de cada usuario en cada arranque.
 
 Son los mismos ficheros `dist/` que servía unpkg, sin modificar. `leaflet/images/` hace falta
 porque `leaflet.css` referencia los sprites del control de capas por ruta relativa, y porque el mapa

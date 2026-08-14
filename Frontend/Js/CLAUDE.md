@@ -100,6 +100,7 @@ secciones cumple la misma función: abre solo el rango que necesites.
 | `profile.js` | 537 | Pantalla «Perfil y ajustes». Único sitio donde el usuario administra su cuenta |
 | `tutorial.js` | 333 | Onboarding por pasos (*spotlight*). Dos tramos: `select` y `park` |
 | `glossary.js` | 173 | Resalta tecnicismos en las descripciones y muestra su definición en llano |
+| `visor.js` | 309 | La foto de la ficha a pantalla completa, con pellizco, doble toque y rueda. Solo sobre fotos reales: sobre un sustituto generado no abre |
 | `fitosociologia.js` | 65 | Traduce la asociación fitosociológica a lenguaje llano **sin sustituir** la cita oficial |
 | `audio.js` | 50 | Audioguías de POIs, senderos y hábitats. La transcripción es obligatoria (WCAG 1.2.1) |
 | `notice.js` | 79 | Avisos discretos tipo *toast* |

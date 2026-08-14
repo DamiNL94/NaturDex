@@ -33,6 +33,22 @@ export function html(strings, ...values) {
 // Marca un fragmento como HTML de confianza (ya escapado o estático). Úsalo con cuidado.
 export function raw(value) { return new SafeHtml(String(value)); }
 
+/**
+ * Atributos que convierten la foto de portada de una ficha en un control que abre el visor a
+ * pantalla completa (Js/visor.js). Se devuelven VACÍOS si no hay foto real: sobre una portada
+ * generada —el emoji del grupo, el degradado del hábitat— no hay nada que ampliar, y un control
+ * que al pulsarlo no hace nada desconcierta más de lo que ayuda.
+ *
+ * El crédito viaja en el propio nodo porque el visor lo pinta debajo de la imagen: hay fotos en el
+ * catálogo cuya licencia obliga a citarlas, y ampliada es cuando más se mira la foto.
+ */
+export function atributosAmpliar(hayFoto, nombre, credito) {
+  if (!hayFoto) return new SafeHtml('');
+  return new SafeHtml(' data-zoom="1" role="button" tabindex="0"'
+    + ' aria-label="' + escapeHtml('Ampliar la foto de ' + (nombre || 'esta ficha')) + '"'
+    + (credito ? ' data-zoom-credit="' + escapeHtml(credito) + '"' : ''));
+}
+
 // --- Iconos SVG inline ---------------------------------------------------------------------------
 // Sustituyen a los emoji nativos en los controles de interfaz (botones, pestañas, insignias): mismo
 // trazo (Feather/Lucide, stroke=currentColor) en toda la app, sin depender de qué emoji dibuje cada

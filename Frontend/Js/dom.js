@@ -7,6 +7,10 @@
 // ================================================================================================
 
 // Catálogo (barra lateral)
+// La barra lateral es el contenedor que SCROLLEA en móvil (allí es la pantalla entera): al conmutar
+// de pestaña o de nivel del catálogo hay que devolverla arriba, o la vista entrante aparece a media
+// altura con el texto cortado (ver app.js · vistaArriba).
+export const sidebar = document.querySelector('.sidebar');
 export const speciesList = document.querySelector('#speciesList');
 export const searchInput = document.querySelector('#searchInput');
 export const resultCount = document.querySelector('#resultCount');

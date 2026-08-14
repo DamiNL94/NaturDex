@@ -124,7 +124,7 @@ h1,h2{text-wrap:pretty}
 .profile-choice,.auth-tabs,.auth-tab,.auth-card,.segmented,.filter-button,.view-tab,
 .species-card,.habitat-card,.habitat-group-card,.summary-grid div,.achievement-card,.detail-facts div,.status-list li,
 .audio-block,.profile-section,.profile-identity,.profile-list li,.account-stat,.select-field select,
-.controls input,.auth-field input,.tutorial-card,.tutorial-back,.tutorial-next,.tutorial-close,
+.controls input,.auth-field input,.tutorial-card,.tutorial-back,.tutorial-next,.tutorial-confirm-no,
 .habitat-prompt-card,.habitat-prompt-no,.habitat-prompt-yes,.explorer-hint,.layers-panel,
 .nearby-panel,.glossary-popover,.review-note,.basic-foot,.account-rule,.presence-bar,
 .progress-row,.profile-msg,.auth-error,.select-status,.profile-warning,.sheet-close{
@@ -140,10 +140,10 @@ h1,h2{text-wrap:pretty}
 
 /* Botones */
 .btn-primary{min-height:var(--tap-min);background:var(--leaf-fill);color:#FBF7EE;font-weight:700;
-  letter-spacing:.02em;font-size:1rem}
+  letter-spacing:.02em;font-size:var(--fs-md)}
 .btn-primary:hover:not(:disabled){background:var(--leaf-fill-deep);filter:none}
 .btn-secondary{min-height:var(--tap-min);border:2px solid var(--bark);background:transparent;
-  color:var(--bark);font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+  color:var(--bark);font-weight:700;font-size:var(--fs-sm);letter-spacing:.08em;text-transform:uppercase}
 .btn-secondary:hover{background:var(--bark);color:#F2E5CE;border-color:var(--bark)}
 .link-btn{color:var(--leaf);text-decoration:underline;text-underline-offset:3px}
 .icon-btn{width:var(--tap-min);height:var(--tap-min);border-color:var(--line-strong);
@@ -159,12 +159,12 @@ h1,h2{text-wrap:pretty}
 .cover-mark{display:none}
 .cover-sign{position:relative;margin:0 0 22px;padding:22px 22px 20px;background:var(--leaf-fill);
   border-bottom:5px solid var(--brass);border-radius:var(--radius-lg);box-shadow:var(--shadow)}
-.cover-sign .eyebrow{margin:0 0 8px;color:var(--brass-ink);font-size:.66rem;letter-spacing:.2em}
+.cover-sign .eyebrow{margin:0 0 8px;color:var(--brass-ink);font-size:var(--fs-xs);letter-spacing:.2em}
 .cover-title{margin:0 0 10px;color:#FFFFFF;font-size:clamp(2.6rem,9vw,3.6rem);line-height:.98}
-.cover-sign .cover-stats{margin:0;color:#C7D6C9;font-size:.9rem;line-height:1.5}
-.cover-sub{margin:0 22px 22px;color:var(--ink-soft);font-size:1rem;line-height:1.6}
+.cover-sign .cover-stats{margin:0;color:#C7D6C9;font-size:var(--fs-md);line-height:1.5}
+.cover-sub{margin:0 22px 22px;color:var(--ink-soft);font-size:var(--fs-md);line-height:1.6}
 .cover-inner>.btn-primary{margin:0 22px;width:calc(100% - 44px)}
-.cover-foot{margin:16px 22px 0;color:var(--muted);font-size:.72rem;letter-spacing:.02em}
+.cover-foot{margin:16px 22px 0;color:var(--muted);font-size:var(--fs-xs);letter-spacing:.02em}
 .cover-photo{flex:1;min-height:0;position:relative;background:#1B3A2A;
   display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.28)}
 .cover-photo::after{content:"";position:absolute;inset:0;pointer-events:none;
@@ -173,7 +173,7 @@ h1,h2{text-wrap:pretty}
 /* Pie de foto: dice de qué espacio es la imagen que ha tocado hoy. Va por encima del degradado
    (z-index) y sobre la zona superior oscurecida, donde el crema se lee de sobra. */
 .cover-photo-caption{position:absolute;z-index:1;top:calc(14px + env(safe-area-inset-top));left:22px;
-  right:22px;margin:0;color:#F2E5CE;font-size:.68rem;font-weight:700;
+  right:22px;margin:0;color:#F2E5CE;font-size:var(--fs-xs);font-weight:700;
   letter-spacing:var(--tracking-caps);text-transform:uppercase;text-shadow:0 1px 3px rgba(0,0,0,.5)}
 .cover-photo-caption[hidden]{display:none}
 
@@ -184,16 +184,16 @@ h1,h2{text-wrap:pretty}
 .auth-tab{min-height:40px;font-weight:700}
 .auth-tab.active{background:var(--panel);color:var(--leaf);box-shadow:none;
   border-bottom:2px solid var(--brass)}
-.auth-field{color:var(--muted-2);letter-spacing:.06em;text-transform:uppercase;font-size:.7rem}
+.auth-field{color:var(--muted-2);letter-spacing:.06em;text-transform:uppercase;font-size:var(--fs-xs)}
 .auth-field input,.controls input,.select-field select,.select-field input{background:var(--panel);
   color:var(--ink);border-color:var(--line-strong);min-height:var(--tap-min)}
 /* El <select> no hereda la tipografía: styles.css hace `button,input{font:inherit}` pero deja fuera
    a select, así que el desplegable de parques salía en la fuente por defecto del navegador (Arial)
    mientras todo lo demás iba en Public Sans. */
-select{font-family:var(--font-ui);font-size:.92rem}
+select{font-family:var(--font-ui);font-size:var(--fs-md)}
 .select-field input{display:block;width:100%;margin-top:6px;padding:0 10px;
-  border:1px solid var(--line-strong);border-radius:var(--radius-md);font-size:.92rem}
-.select-field+.select-search-count{margin:6px 0 0;color:var(--muted);font-size:.76rem;font-weight:700}
+  border:1px solid var(--line-strong);border-radius:var(--radius-md);font-size:var(--fs-md)}
+.select-field+.select-search-count{margin:6px 0 0;color:var(--muted);font-size:var(--fs-xs);font-weight:700}
 .select-search-count[hidden]{display:none}
 .auth-error,.profile-msg.error,.select-status.error{background:var(--warn-bg);color:var(--danger)}
 .select-status{background:var(--leaf-tint);color:var(--leaf)}
@@ -206,22 +206,22 @@ select{font-family:var(--font-ui);font-size:.92rem}
    sobre el verde no se lee. El rótulo va en crema y la categoría en latón, como en la portada. */
 /* Lleva tres datos («NaturDex piloto · Parque Regional · 2666 ha»), así que el interletrado de
    cartel baja de .2em a .1em: con el original la línea se partía en dos en la columna estrecha. */
-.park-summary .park-sign .eyebrow{margin:0 0 6px;color:var(--brass-ink);font-size:.66rem;
+.park-summary .park-sign .eyebrow{margin:0 0 6px;color:var(--brass-ink);font-size:var(--fs-xs);
   letter-spacing:.1em}
 .park-sign #parkTitle{margin:0;color:#FBF7EE}
 #parkTitle{font-family:var(--font-display)}
 .summary-grid div{background:var(--surface);border-color:var(--line)}
-.summary-grid span{color:var(--muted-2);letter-spacing:.06em;text-transform:uppercase;font-size:.66rem}
+.summary-grid span{color:var(--muted-2);letter-spacing:.06em;text-transform:uppercase;font-size:var(--fs-xs)}
 
 /* Pestañas y filtros: subrayado de latón en vez de relleno oscuro */
 .view-tabs{gap:0;border-bottom:1px solid var(--line)}
 .view-tab{border:0;border-bottom:3px solid transparent;border-radius:0;background:transparent;
-  color:var(--muted);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.74rem;
+  color:var(--muted);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:var(--fs-xs);
   min-height:42px}
 .view-tab.active{background:transparent;color:var(--leaf);border-bottom-color:var(--brass)}
 .view-tab:hover:not(.active){background:var(--surface);color:var(--ink)}
 .segmented{background:var(--surface-alt);border-color:var(--line)}
-.filter-button{min-height:36px;color:var(--muted);font-weight:700;font-size:.78rem}
+.filter-button{min-height:36px;color:var(--muted);font-weight:700;font-size:var(--fs-xs)}
 .filter-button.active{background:var(--leaf-fill);color:#FBF7EE}
 
 /* Tarjetas de especie, hábitat y grupo: filete de color a la izquierda, no borde redondeado uniforme */
@@ -235,7 +235,7 @@ select{font-family:var(--font-ui);font-size:.92rem}
 .layers-group-name{font-weight:700}
 .progress-group-title{letter-spacing:var(--tracking-caps);text-transform:uppercase;font-weight:700}
 .detail-group-link{border-color:var(--line-strong);color:var(--muted-2);letter-spacing:.04em;
-  text-transform:uppercase;font-size:.7rem}
+  text-transform:uppercase;font-size:var(--fs-xs)}
 .detail-group-link:hover{border-color:var(--leaf);color:var(--leaf);background:var(--leaf-tint)}
 .species-card.active{border-color:var(--leaf);border-left-color:var(--leaf);
   box-shadow:inset 0 0 0 1px var(--leaf)}
@@ -244,13 +244,13 @@ select{font-family:var(--font-ui);font-size:.92rem}
 .card-thumb{border-radius:var(--radius-sm);overflow:hidden}
 .seen-badge{background:var(--leaf-fill);color:#FBF7EE;box-shadow:0 0 0 2px var(--panel)}
 .habitat-all-link{border:1px solid var(--line-strong);border-radius:var(--radius-md);
-  color:var(--leaf);letter-spacing:.06em;text-transform:uppercase;font-size:.72rem;min-height:40px}
+  color:var(--leaf);letter-spacing:.06em;text-transform:uppercase;font-size:var(--fs-xs);min-height:40px}
 .habitat-all-link:hover{background:var(--leaf-tint)}
 .zepa-card{border-color:var(--line)}
 .zepa-card:hover{border-color:var(--sea)}
 
 /* Insignias: versalitas sin fondo de pastilla */
-.badge{background:transparent;padding:0;min-height:0;color:var(--muted-2);font-size:.64rem;
+.badge{background:transparent;padding:0;min-height:0;color:var(--muted-2);font-size:var(--fs-xs);
   font-weight:700;letter-spacing:var(--tracking-caps);text-transform:uppercase}
 .badge+.badge{padding-left:8px;border-left:1px solid var(--line)}
 .badge.fauna{color:var(--sea);background:transparent}
@@ -271,14 +271,14 @@ select{font-family:var(--font-ui);font-size:.92rem}
 .detail-body p{color:var(--ink-soft)}
 .detail-facts div,.status-list li{background:var(--surface);border-color:var(--line)}
 .detail-facts span,.status-list li span{color:var(--muted-2);letter-spacing:var(--tracking-caps)}
-.detail-subtitle{color:var(--muted-2);font-size:.68rem}
+.detail-subtitle{color:var(--muted-2);font-size:var(--fs-xs)}
 .seen-toggle{min-height:var(--tap-min);border:2px solid var(--leaf);background:transparent;
-  color:var(--leaf);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.78rem}
+  color:var(--leaf);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:var(--fs-xs)}
 .seen-toggle:hover{background:var(--leaf-tint)}
 .seen-toggle.is-seen{background:var(--leaf-fill);color:#FBF7EE}
 .seen-toggle.is-seen:hover{background:var(--leaf-fill-deep)}
 .habitat-detail-kind{background:var(--leaf-fill);border-radius:var(--radius-sm);color:#FBF7EE;
-  font-size:.64rem}
+  font-size:var(--fs-xs)}
 .review-note{border-color:var(--warn);background:var(--warn-bg);color:var(--warn-ink)}
 .detail-source{color:var(--faint)}
 
@@ -347,14 +347,14 @@ select{font-family:var(--font-ui);font-size:.92rem}
 .profile-list li,.audio-block{background:var(--surface);border-color:var(--line)}
 .profile-msg{background:var(--leaf-tint);color:var(--leaf)}
 .btn-danger{min-height:var(--tap-min);border:2px solid var(--danger);color:var(--danger);
-  letter-spacing:.06em;text-transform:uppercase;font-size:.78rem}
+  letter-spacing:.06em;text-transform:uppercase;font-size:var(--fs-xs)}
 .btn-danger:hover{background:var(--danger);color:#FBF7EE}
 
 /* Mapa, marcadores y controles del mapa */
 #map{background:var(--sea-tint)}
 .explorer-toggle,.layers-toggle,.save-offline-btn{background:var(--panel);color:var(--ink);
   border:1px solid var(--line-strong);font-weight:700;letter-spacing:.06em;text-transform:uppercase;
-  font-size:.7rem;min-height:40px}
+  font-size:var(--fs-xs);min-height:40px}
 .explorer-toggle.active{background:var(--leaf-fill);border-color:var(--leaf-fill);color:#FBF7EE}
 .explorer-toggle.active.recenter{background:var(--panel);color:var(--leaf);border-color:var(--leaf);
   box-shadow:inset 0 0 0 1px var(--leaf),var(--shadow-sm)}
@@ -399,7 +399,7 @@ select{font-family:var(--font-ui);font-size:.92rem}
   background:var(--warn-bg);color:var(--danger)}
 .presence-bar.is-outside .presence-dot{background:var(--danger)}
 .presence-action{border-color:var(--leaf);color:var(--leaf);background:var(--panel);min-height:32px}
-.conn-status{color:var(--leaf);letter-spacing:.06em;text-transform:uppercase;font-size:.66rem}
+.conn-status{color:var(--leaf);letter-spacing:.06em;text-transform:uppercase;font-size:var(--fs-xs)}
 .save-offline-btn.saved{background:var(--leaf-tint);border-color:var(--leaf);color:var(--leaf)}
 
 /* Tutorial y diálogos */
@@ -409,7 +409,7 @@ select{font-family:var(--font-ui);font-size:.92rem}
 .tutorial-spot{outline-color:var(--brass);box-shadow:0 0 0 9999px rgba(20,19,16,.6)}
 .tutorial-dot.active{background:var(--leaf)}
 .tutorial-next,.habitat-prompt-yes{background:var(--leaf-fill);color:#FBF7EE;min-height:40px;
-  letter-spacing:.06em;text-transform:uppercase;font-size:.72rem;font-weight:700}
+  letter-spacing:.06em;text-transform:uppercase;font-size:var(--fs-xs);font-weight:700}
 .tutorial-back,.habitat-prompt-no{background:var(--panel);border:1px solid var(--line-strong);
   min-height:40px}
 .glossary-term{color:var(--leaf);border-bottom-color:var(--brass)}
@@ -427,8 +427,10 @@ select{font-family:var(--font-ui);font-size:.92rem}
    la barra lateral ya no es una hoja deslizante: es la pantalla, sin asa ni alturas intermedias.
    Todo se gobierna con body[data-mtab], que app.js ya mantenía. */
 @media(max-width:900px){
-  /* Alto real de la nav inferior de ranger: 44 de botón + 4 y 4 de aire. */
-  :root{--mnav-h:52px}
+  /* Alto real de la nav inferior de ranger: 48 de botón (--tap-big: se pulsa de pie y con prisa)
+     + 4 y 4 de aire. Si cambia el alto del botón hay que cambiar esta cifra, o el catálogo se
+     desliza por debajo de la barra. */
+  :root{--mnav-h:56px}
 
   /* --- Orden de apilamiento de la pantalla del parque -------------------------------------------
        —    #map ............... la pantalla del mapa (sus capas y popups van contenidos en el pane
@@ -492,17 +494,17 @@ select{font-family:var(--font-ui);font-size:.92rem}
   .park-nav{padding:calc(6px + env(safe-area-inset-top)) 16px 0}
   .park-summary{flex:0 0 auto;padding:6px 16px 10px;border-bottom:1px solid var(--line)}
   .park-sign{padding:8px 12px}
-  #parkTitle{margin:0;font-size:1.15rem;line-height:1.2}
-  .park-summary .park-sign .eyebrow{margin:0 0 4px;font-size:.62rem;letter-spacing:.08em}
+  #parkTitle{margin:0;font-size:var(--fs-lg);line-height:1.2}
+  .park-summary .park-sign .eyebrow{margin:0 0 4px;font-size:var(--fs-xs);letter-spacing:.08em}
   /* La descripción estuvo oculta en móvil mientras fue una frase administrativa que repetía lo que
      ya decían el cartel y la ficha: ocupaba dos líneas para no contar nada. Ahora describe el sitio
      —es lo primero que quiere saber quien acaba de entrar— y se muestra recortada a dos líneas, con
      los márgenes de alrededor apretados para que la cabecera no crezca por ello. */
   #parkSummary{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
-    margin:6px 0 0;font-size:.78rem;line-height:1.35}
+    margin:6px 0 0;font-size:var(--fs-xs);line-height:1.35}
   .summary-grid{gap:6px;margin-top:6px;grid-template-columns:repeat(3,1fr)}
   .summary-grid div{padding:6px 8px}
-  .summary-grid strong{font-size:.92rem}
+  .summary-grid strong{font-size:var(--fs-md)}
   .progress-wrap{margin-top:8px}
   .progress-label{margin-top:4px}
   .presence-bar{margin-top:8px}
@@ -523,10 +525,10 @@ select{font-family:var(--font-ui);font-size:.92rem}
   .mobile-nav{z-index:800;background:var(--bark);border-top:0;
     border-bottom:0;box-shadow:0 -2px 0 var(--brass) inset;gap:0;padding:4px 6px calc(4px + env(safe-area-inset-bottom))}
   .mobile-nav-btn{color:#D9CDB6;border-radius:var(--radius-sm);min-height:var(--tap-min);
-    font-size:.64rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+    font-size:var(--fs-xs);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
   .mobile-nav-btn.active{background:rgba(255,255,255,.08);color:#FFFFFF;
     box-shadow:inset 0 -3px 0 var(--brass)}
-  .mobile-nav-btn span{font-size:1rem}
+  .mobile-nav-btn span{font-size:var(--fs-md)}
 
   /* Ficha de detalle: hoja inferior, con el mismo lenguaje de cartel */
   /* La ficha abierta desde una lista (o desde un hábitat del mapa) ocupa casi la pantalla entera:
@@ -605,9 +607,55 @@ select{font-family:var(--font-ui);font-size:.92rem}
 /* El "volver" es el control más importante de la app para quien se pierde, así que se le da el
    mismo peso visual que a un botón secundario: filete, versalitas y altura táctil completa. */
 .back-btn{min-height:var(--tap-min);border-color:var(--line-strong);border-radius:var(--radius-md);
-  background:var(--panel);color:var(--leaf);font-weight:700;letter-spacing:.04em;font-size:.78rem;
+  background:var(--panel);color:var(--leaf);font-weight:700;letter-spacing:.04em;font-size:var(--fs-xs);
   text-transform:uppercase}
 .back-btn:hover{background:var(--leaf-tint)}
 .nav-exit-toast{border-radius:var(--radius-md);background:var(--bark);color:#FBF7EE;
   font-weight:700;letter-spacing:.02em;text-transform:none}
 :root[data-theme="dark"] body[data-mtab="map"] .map-topbar{background:rgba(20,24,20,.94)}
+
+/* ===== F. Manos reales: áreas táctiles y rótulos legibles ====================================== */
+/* El público objetivo de esta capa son personas mayores y niños: dedos imprecisos, poca destreza y
+   miedo a «romper algo». Dos reglas, y las dos se comprueban con una regla de medir:
+
+     · --tap-min (44px) en TODO control. Quedaban sueltos min-height de 30, 32, 34, 36, 38 y 40 px
+       repartidos por las dos hojas; aquí se recogen todos de una vez, en la capa que se carga la
+       última, para no tener que perseguirlos por styles.css.
+     · --tap-big (48px) en los cuatro botones que se pulsan de pie, con guantes o con prisa:
+       «Marcar como visto», la nav inferior, el cierre de la hoja y los botones del tutorial.
+
+   Los botones redondos (icon-btn, cierres) llevan además `min-width`: sin él cumplen los 44 px de
+   alto y se quedan en 28 de ancho, que para el objetivo de 44×44 no sirve de nada. */
+:root{--tap-big:48px}
+
+.view-tab,.filter-button,.auth-tab,.habitat-all-link,.profile-choice,.notice-action,
+.explorer-toggle,.layers-toggle,.save-offline-btn,.popup-enter,.poi-seen-btn,.presence-action,
+.habitat-prompt-no,.habitat-prompt-yes,.hint-primary,.layers-solo,.catalog-crumb button,
+.link-btn,.habitat-species-chip,.layers-habitat-name,.layers-mini-actions button,
+.detail-group-link,.audio-block button,.sheet-grip-btn{min-height:var(--tap-min)}
+
+/* Controles redondos: el objetivo es 44×44, no 44 de alto. */
+.icon-btn,.hint-close,.nearby-close,.sheet-close,.achievement-toast-close{
+  min-width:var(--tap-min);min-height:var(--tap-min)}
+.hint-close,.nearby-close{width:var(--tap-min);height:var(--tap-min)}
+/* El zoom del mapa lo pinta Leaflet a 30 px. Es de los pocos controles que se pulsan con guantes
+   puestos, así que también sube: el objetivo táctil manda sobre la hoja de la librería. */
+.leaflet-touch .leaflet-bar a,.leaflet-bar a{width:var(--tap-min);height:var(--tap-min);
+  line-height:var(--tap-min)}
+
+/* Los que se pulsan con el móvil en una mano y la vista en el monte. */
+.seen-toggle,.mobile-nav-btn,.sheet-close,.tutorial-back,.tutorial-salir{
+  min-height:var(--tap-big)}
+/* El botón primario del tutorial es el ÚNICO camino hacia delante: 56 px y rótulo a tamaño de
+   cuerpo, no las versalitas de 11 px que tenía. */
+.tutorial-next{min-height:56px;font-size:var(--fs-md);letter-spacing:.04em;text-transform:none}
+.sheet-close{width:var(--tap-big);height:var(--tap-big)}
+/* «Marcar como visto» es el botón que da sentido a la app: rótulo a tamaño de cuerpo, no de pie
+   de página, y sin versalitas apretadas. */
+.seen-toggle{font-size:var(--fs-md);letter-spacing:.02em;text-transform:none}
+
+/* Un subtítulo de sección no es una etiqueta: «Estado de conservación» o «Asociación
+   fitosociológica» en versalitas apretadas y a 11 px era ilegible de largo. Las versalitas se
+   quedan donde eran de una o dos palabras (insignias, eyebrows, rótulos de dato). */
+.detail-subtitle{text-transform:none;letter-spacing:0;font-size:var(--fs-lg);
+  font-family:var(--font-display);font-weight:700;color:var(--ink)}

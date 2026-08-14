@@ -8,9 +8,22 @@
 // criterio de ámbito que progressScope() en data.js: naturdex.tutorial.<u{id}|anon>.
 //
 // El componente resalta el elemento real de la UI (recorte sobre un fondo atenuado, vía box-shadow
-// gigante del recuadro de foco) y muestra una tarjeta corta con Atrás/Siguiente/Saltar, puntos de
-// progreso, cierre con ✕/Escape y clic fuera. En escritorio la tarjeta se ancla junto al elemento;
-// en móvil (≤900px) es una tarjeta inferior fija, como la bottom-sheet de la ficha (.detail-dock).
+// gigante del recuadro de foco) y muestra una tarjeta corta. En escritorio la tarjeta se ancla
+// junto al elemento; en móvil (≤900px) es una tarjeta inferior fija, como la bottom-sheet de la
+// ficha (.detail-dock).
+//
+// POR QUÉ ES BLOQUEANTE
+// Antes se salía sin querer con una facilidad pasmosa: un toque en CUALQUIER punto de la pantalla
+// cerraba el tutorial y lo marcaba como visto, y ya no volvía a salir solo. Para alguien de setenta
+// años que está aprendiendo dónde tocar, ese es el fallo principal de todo el onboarding: el primer
+// toque exploratorio se lleva por delante la única explicación que iba a recibir.
+//
+// Ahora hay UN camino y UNA salida:
+//   · El fondo se toca y no pasa nada (la tarjeta da un empujón visual para señalar dónde pulsar).
+//   · El fondo es inerte de verdad: `inert` sobre las <section class="screen">, con respaldo de
+//     aria-hidden + pointer-events:none, y el cuerpo sin scroll. Solo responde la tarjeta.
+//   · Se avanza con «Siguiente» hasta el final, o se sale por «Salir del tutorial», que PREGUNTA.
+//     Antes había dos formas de irse (✕ y «Saltar») y ninguna avisaba.
 // ================================================================================================
 
 import { state } from './state.js';
@@ -24,32 +37,34 @@ const mobileMedia = window.matchMedia('(max-width: 900px)');
 // vive en un control distinto en móvil y en escritorio). Sin target (o target oculto) la tarjeta
 // se muestra centrada, sin recorte. mobileTab: pestaña de la nav inferior móvil que hay que abrir
 // para que el elemento resaltado esté en pantalla (en escritorio se ignora).
+//
+// Los textos se escriben con una regla: frases cortas, una idea por frase, sin subordinadas y sin
+// paréntesis largos. Quien lee esto está de pie, con el móvil en una mano, y a veces tiene ocho
+// años o setenta. Un paso que ocupa seis líneas no se lee: se salta.
 const STAGES = {
   select: [
-    { title: '¡Bienvenido a NaturDex!', text: 'NaturDex es tu guía de naturaleza: te ayuda a identificar y apuntar las plantas y los animales que veas mientras exploras un parque. En un minuto te enseñamos lo básico.' },
-    { target: '#spain-map', title: 'Elige un parque en el mapa', text: 'Cada marcador es un parque disponible. Tócalo y pulsa «Entrar al parque» para empezar a explorarlo.' },
-    { target: '#parkSelect', title: '…o búscalo en la lista', text: 'Si lo prefieres, despliega esta lista y elige el parque por su nombre.' },
-    { target: '#geoLocateBtn', title: 'El parque más cercano', text: '¿Ya estás de ruta? Este botón usa el GPS de tu dispositivo para llevarte directo al parque que tengas más cerca. Al entrar en un parque seguimos con el resto del tutorial.' }
+    { title: '¡Bienvenido a NaturDex!', text: 'NaturDex es tu guía de naturaleza. Te ayuda a reconocer las plantas y los animales de un parque, y a apuntar los que veas. Te enseñamos lo básico en un minuto.' },
+    { target: '#spain-map', title: 'Elige un parque en el mapa', text: 'Cada marcador es un parque. Tócalo y pulsa «Entrar al parque».' },
+    { target: '#parkSelect', title: '…o búscalo en la lista', text: 'También puedes desplegar esta lista y elegir el parque por su nombre.' },
+    { target: '#geoLocateBtn', title: 'El parque más cercano', text: '¿Ya estás de ruta? Este botón usa el GPS y te lleva al parque que tengas más cerca.' }
   ],
   park: [
-    { title: '¡Ya estás dentro!', text: 'Este es tu cuaderno de campo del parque. Primero verás sus hábitats (los tipos de paisaje: playas, montes, ramblas…) y, dentro de cada uno, las especies que viven allí.' },
-    { target: '#speciesList', mobileTab: 'catalog', title: 'Hábitats y especies', text: 'Toca un hábitat para ver sus plantas y animales. Con «← Hábitats» vuelves a la lista de paisajes del parque.' },
-    { target: '#detailPanel', mobileTab: 'catalog', title: 'Marca lo que veas', text: 'Al abrir la ficha de una especie verás el botón «Marcar como visto». Púlsalo cuando la encuentres de verdad: así vas completando tu colección del parque.' },
-    { target: '#layersToggle', mobileTab: 'map', title: 'Capas del mapa', text: 'Aquí enciendes o apagas lo que se pinta en el mapa (hábitats, senderos, puntos de interés…) y consultas la leyenda de colores.' },
-    { target: '#explorerToggle', mobileTab: 'map', title: 'Modo explorador', text: 'Actívalo durante la ruta: el mapa te sigue mientras caminas y, con el GPS, te avisamos de lo que tienes cerca (especies, hábitats, miradores) para que no se te escape nada. Si mueves el mapa a mano, el mismo botón te vuelve a centrar.' },
-    { target: ['.mobile-nav-btn[data-mtab="progress"]', '.view-tab[data-view="progress"]'], title: 'Tu progreso', text: 'Aquí ves cuántas especies llevas descubiertas en este parque, como un álbum que se va completando.' },
+    { title: '¡Ya estás dentro!', text: 'Este es tu cuaderno de campo. Primero verás los hábitats del parque, que son sus tipos de paisaje: playas, montes, ramblas. Dentro de cada uno están sus especies.' },
+    { target: '#speciesList', mobileTab: 'catalog', title: 'Hábitats y especies', text: 'Toca un hábitat y verás sus plantas y sus animales. El botón «← Hábitats» te devuelve a la lista.' },
+    { target: '#detailPanel', mobileTab: 'catalog', title: 'Marca lo que veas', text: 'Cada especie tiene su ficha, con su foto. Pulsa «Marcar como visto» cuando la encuentres de verdad. Así completas tu colección.' },
+    { target: '#layersToggle', mobileTab: 'map', title: 'Capas del mapa', text: 'Aquí eliges qué se pinta en el mapa: hábitats, senderos o puntos de interés. También está la leyenda de colores.' },
+    { target: '#explorerToggle', mobileTab: 'map', title: 'Modo explorador', text: 'Actívalo durante la ruta. El mapa te sigue mientras caminas y te avisa de lo que tienes cerca. Si mueves el mapa a mano, este mismo botón te vuelve a centrar.' },
+    { target: ['.mobile-nav-btn[data-mtab="progress"]', '.view-tab[data-view="progress"]'], title: 'Tu progreso', text: 'Aquí ves cuántas especies llevas descubiertas. Es como un álbum que se va completando.' },
     // El botón vive en la cabecera del parque, dentro de la barra lateral: en móvil eso es la
     // pestaña "Catálogo" (con data-mtab="map" el CSS oculta la barra entera y no se vería).
     // El texto se calcula al mostrarlo porque el tamaño depende del parque en el que estés.
     {
       target: '#saveOfflineBtn', mobileTab: 'catalog', title: 'Llévate el parque en el bolsillo',
-      text: () => 'En muchos parques no hay cobertura, y sin ella la app no puede descargar nada. Pulsa aquí '
-        + 'estando en casa con wifi, antes de salir de ruta, y te llevas el parque entero: las fichas, las '
-        + 'fotos, las audioguías y el mapa'
-        + (offlineSizeLabel() ? ' (unos ' + offlineSizeLabel() + ' de espacio en el móvil)' : '')
-        + '. Una vez descargado, funciona en mitad del monte igual que aquí.'
+      text: () => 'En el monte casi nunca hay cobertura. Pulsa aquí en casa, con wifi, y te llevas el parque entero'
+        + (offlineSizeLabel() ? ' (unos ' + offlineSizeLabel() + ')' : '')
+        + '. Después funciona igual sin señal.'
     },
-    { mobileTab: 'catalog', title: 'Y un último apunte', text: 'También puedes buscar y filtrar especies y ver la pestaña «Invasoras» (especies que no deberían estar aquí). Si quieres repetir este tutorial, pulsa el botón «?» junto a tu nombre. ¡A explorar!' }
+    { mobileTab: 'catalog', title: 'Y un último apunte', text: 'La pestaña «Invasoras» te enseña las especies que no deberían estar aquí. Y el botón «?», junto a tu nombre, repite este tutorial cuando quieras. ¡A explorar!' }
   ]
 };
 
@@ -80,10 +95,11 @@ function markSeen(stage) {
 // --- Estado del componente ----------------------------------------------------------------------
 let overlay = null, spotEl = null, backdropEl = null, cardEl = null;
 let titleEl = null, textEl = null, stepCountEl = null, dotsEl = null;
-let backBtn = null, nextBtn = null, skipBtn = null;
+let backBtn = null, nextBtn = null, exitBtn = null, confirmEl = null, confirmStayBtn = null;
 let steps = [], stepIndex = 0, activeStage = null, openerEl = null;
 
 function isOpen() { return !!overlay && !overlay.hidden; }
+function confirmandoSalida() { return !!confirmEl && !confirmEl.hidden; }
 
 // El overlay se crea perezosamente la primera vez (mismo patrón que el popover del glosario).
 function ensureOverlay() {
@@ -95,16 +111,22 @@ function ensureOverlay() {
     '<div class="tutorial-backdrop"></div>' +
     '<div class="tutorial-spot" hidden></div>' +
     '<div class="tutorial-card" role="dialog" aria-modal="true" aria-labelledby="tutorialTitle" aria-describedby="tutorialText" tabindex="-1">' +
-      '<button type="button" class="tutorial-close" aria-label="Cerrar el tutorial"><svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>' +
+      // "Paso 3 de 8" a la vista. Existía, pero en .sr-only: solo lo sabía quien usaba lector de
+      // pantalla. Saber cuánto queda es justo lo que hace que alguien no abandone a la mitad.
+      '<p class="tutorial-step" id="tutorialStepCount"></p>' +
       '<h3 id="tutorialTitle"></h3>' +
-      '<span class="sr-only" id="tutorialStepCount"></span>' +
       '<p id="tutorialText"></p>' +
-      '<div class="tutorial-foot">' +
-        '<div class="tutorial-dots" aria-hidden="true"></div>' +
-        '<div class="tutorial-actions">' +
-          '<button type="button" class="tutorial-skip">Saltar tutorial</button>' +
-          '<button type="button" class="tutorial-back">Atrás</button>' +
-          '<button type="button" class="tutorial-next">Siguiente</button>' +
+      '<div class="tutorial-dots" aria-hidden="true"></div>' +
+      '<div class="tutorial-actions">' +
+        '<button type="button" class="tutorial-back">Atrás</button>' +
+        '<button type="button" class="tutorial-next">Siguiente</button>' +
+      '</div>' +
+      '<button type="button" class="tutorial-salir">Salir del tutorial</button>' +
+      '<div class="tutorial-confirm" hidden role="group" aria-label="Confirmar la salida del tutorial">' +
+        '<p>¿Seguro que quieres salir? Puedes volver a verlo cuando quieras con el botón «?».</p>' +
+        '<div class="tutorial-confirm-actions">' +
+          '<button type="button" class="tutorial-confirm-no">Seguir con el tutorial</button>' +
+          '<button type="button" class="tutorial-confirm-si">Salir</button>' +
         '</div>' +
       '</div>' +
     '</div>';
@@ -119,42 +141,105 @@ function ensureOverlay() {
   dotsEl = overlay.querySelector('.tutorial-dots');
   backBtn = overlay.querySelector('.tutorial-back');
   nextBtn = overlay.querySelector('.tutorial-next');
-  skipBtn = overlay.querySelector('.tutorial-skip');
+  exitBtn = overlay.querySelector('.tutorial-salir');
+  confirmEl = overlay.querySelector('.tutorial-confirm');
+  confirmStayBtn = overlay.querySelector('.tutorial-confirm-no');
 
-  overlay.querySelector('.tutorial-close').addEventListener('click', () => close());
-  backdropEl.addEventListener('click', () => close()); // clic fuera del recuadro: cerrar
-  skipBtn.addEventListener('click', () => close());
+  // El fondo NO cierra. Tocarlo señala dónde hay que pulsar con un empujón visual de la tarjeta:
+  // el toque exploratorio de quien está aprendiendo ya no se lleva por delante la explicación.
+  backdropEl.addEventListener('click', señalaLaTarjeta);
+  // Y tampoco arrastra: sin esto, el gesto de deslizar sobre el fondo movía la pantalla de debajo.
+  backdropEl.addEventListener('touchmove', event => event.preventDefault(), { passive: false });
+
+  exitBtn.addEventListener('click', pideConfirmacionSalida);
+  confirmStayBtn.addEventListener('click', cancelaSalida);
+  overlay.querySelector('.tutorial-confirm-si').addEventListener('click', () => close());
   backBtn.addEventListener('click', () => showStep(stepIndex - 1));
   nextBtn.addEventListener('click', () => {
     if (stepIndex >= steps.length - 1) close(); else showStep(stepIndex + 1);
   });
 
-  // Teclado: Escape cierra, flechas navegan y Tab queda atrapado dentro de la tarjeta. En captura
-  // y con stopPropagation para que el Escape no cierre además la bottom-sheet o el panel de capas
-  // (app.js y glossary.js escuchan Escape en document).
+  // Teclado: Escape sale (pasando por la confirmación), flechas navegan y Tab queda atrapado dentro
+  // de la tarjeta. En captura y con stopPropagation para que el Escape no cierre además la
+  // bottom-sheet o el panel de capas (app.js y glossary.js escuchan Escape en document).
   window.addEventListener('keydown', onKeydown, true);
   window.addEventListener('resize', () => { if (isOpen()) showStep(stepIndex); });
   return overlay;
 }
 
+// Empujón visual: la tarjeta da un respingo para decir «lo que responde es esto». Con
+// data-motion="reduce" la animación queda neutralizada por la regla global de styles.css, y el
+// resultado es el mismo que ya se buscaba: tocar el fondo no hace nada.
+function señalaLaTarjeta() {
+  if (!cardEl) return;
+  cardEl.classList.remove('nudge');
+  void cardEl.offsetWidth; // reinicia la animación aunque se toque el fondo dos veces seguidas
+  cardEl.classList.add('nudge');
+}
+
+// Los botones que se pueden enfocar AHORA: con la confirmación abierta, solo los suyos. Si no se
+// acotara, el Tab pasearía por «Siguiente» y «Atrás», que están debajo y no responden.
+function botonesEnfocables() {
+  const raiz = confirmandoSalida() ? confirmEl : cardEl;
+  return Array.from(raiz.querySelectorAll('button'))
+    .filter(b => !b.hidden && (confirmandoSalida() || !confirmEl.contains(b)));
+}
+
+function pideConfirmacionSalida() {
+  if (!confirmEl) return;
+  confirmEl.hidden = false;
+  cardEl.classList.add('is-confirming');
+  confirmStayBtn.focus({ preventScroll: true }); // el foco cae en «seguir», no en «salir»
+}
+
+function cancelaSalida() {
+  if (!confirmEl) return;
+  confirmEl.hidden = true;
+  cardEl.classList.remove('is-confirming');
+  nextBtn.focus({ preventScroll: true });
+}
+
 function onKeydown(event) {
   if (!isOpen()) return;
-  if (event.key === 'Escape') { event.stopPropagation(); close(); return; }
+  if (event.key === 'Escape') {
+    event.stopPropagation();
+    // Escape sigue siendo la salida de teclado, pero pasa por la misma pregunta que el botón. Con
+    // la pregunta ya en pantalla, el segundo Escape confirma: es el patrón de «pulsa dos veces para
+    // salir» que la app ya usa en el «atrás» de la raíz (ver Js/nav.js).
+    if (confirmandoSalida()) close(); else pideConfirmacionSalida();
+    return;
+  }
+  if (confirmandoSalida() && event.key !== 'Tab') return; // con la pregunta abierta, nada de navegar pasos
   if (event.key === 'ArrowRight') { nextBtn.click(); return; }
   if (event.key === 'ArrowLeft') { if (stepIndex > 0) showStep(stepIndex - 1); return; }
   if (event.key === 'Tab') {
-    // Ciclo de foco dentro de la tarjeta (los botones ocultos con [hidden] no entran en el ciclo).
-    const focusables = Array.from(cardEl.querySelectorAll('button')).filter(b => !b.hidden);
+    const focusables = botonesEnfocables();
     if (!focusables.length) return;
     const first = focusables[0], last = focusables[focusables.length - 1];
     if (event.shiftKey && (document.activeElement === first || !cardEl.contains(document.activeElement))) {
       event.preventDefault(); last.focus();
     } else if (!event.shiftKey && document.activeElement === last) {
       event.preventDefault(); first.focus();
-    } else if (!cardEl.contains(document.activeElement)) {
+    } else if (!cardEl.contains(document.activeElement) || !focusables.includes(document.activeElement)) {
       event.preventDefault(); first.focus();
     }
   }
+}
+
+// --- Fondo inerte ---------------------------------------------------------------------------------
+// El recorte del spotlight solo tapaba: el resto de la interfaz seguía respondiendo a los toques y
+// al tabulador. `inert` la desactiva de verdad (foco, puntero y árbol de accesibilidad de una vez);
+// aria-hidden + pointer-events:none quedan de respaldo para navegadores que aún no lo admitan.
+//
+// La tarjeta cuelga de <body>, no de ninguna .screen, así que se queda fuera del bloqueo. Y los
+// clicks que el propio tutorial dispara para cambiar de pestaña móvil (showStep) siguen
+// funcionando: `inert` corta la interacción del USUARIO, no los eventos que se despachan a mano.
+function bloqueaFondo(activo) {
+  document.querySelectorAll('.screen').forEach(screen => {
+    if (activo) { screen.setAttribute('inert', ''); screen.setAttribute('aria-hidden', 'true'); }
+    else { screen.removeAttribute('inert'); screen.removeAttribute('aria-hidden'); }
+  });
+  document.body.classList.toggle('tutorial-open', activo);
 }
 
 // --- Resolución y colocación de cada paso -------------------------------------------------------
@@ -196,7 +281,14 @@ function showStep(index) {
   // En móvil, algunos elementos viven en otra pestaña de la nav inferior: se abre primero.
   if (mobileMedia.matches && step.mobileTab) {
     const tabBtn = document.querySelector('.mobile-nav-btn[data-mtab="' + step.mobileTab + '"]');
-    if (tabBtn && !tabBtn.classList.contains('active')) tabBtn.click();
+    if (tabBtn && !tabBtn.classList.contains('active')) {
+      // El fondo está inerte. Se levanta el bloqueo lo justo para que este click —que lo dispara el
+      // tutorial, no el usuario— llegue igual en cualquier navegador, y se repone acto seguido: es
+      // síncrono, así que entremedias no hay ni un repintado en el que se pueda tocar nada.
+      bloqueaFondo(false);
+      tabBtn.click();
+      bloqueaFondo(true);
+    }
   }
 
   titleEl.textContent = step.title;
@@ -206,14 +298,18 @@ function showStep(index) {
   dotsEl.innerHTML = steps.map((s, i) =>
     '<span class="tutorial-dot' + (i === stepIndex ? ' active' : '') + '"></span>').join('');
   backBtn.hidden = stepIndex === 0;
-  skipBtn.hidden = stepIndex === steps.length - 1;
+  // En el último paso no queda nada de lo que salirse: el botón primario ya termina el tutorial.
+  exitBtn.hidden = stepIndex === steps.length - 1;
   nextBtn.textContent = stepIndex === steps.length - 1 ? '¡A explorar!' : 'Siguiente';
+  if (confirmandoSalida()) cancelaSalida();
 
   // La colocación es síncrona: getBoundingClientRect fuerza el reflujo, así que aunque se acabe de
   // cambiar de pestaña móvil las medidas ya son las buenas (rAF no vale: en pestañas en segundo
   // plano no se dispara y el paso quedaría sin colocar).
   positionStep(step);
-  cardEl.focus({ preventScroll: true });
+  // El foco va al botón primario, no a la tarjeta: quien navega con teclado tiene «Siguiente» bajo
+  // el Intro desde el primer paso, sin tener que tabular hasta encontrarlo.
+  nextBtn.focus({ preventScroll: true });
 }
 
 function positionStep(step) {
@@ -272,6 +368,8 @@ export function startTutorial(stage) {
   if (!steps.length) return;
   openerEl = document.activeElement; // para devolver el foco al cerrar
   overlay.hidden = false;
+  if (confirmEl) { confirmEl.hidden = true; cardEl.classList.remove('is-confirming'); }
+  bloqueaFondo(true); // a partir de aquí, lo único que responde es la tarjeta
   showStep(0);
   // El tutorial se abre por encima de todo: «atrás» debe cerrarlo a él, no la pantalla que está
   // explicando (ver Js/nav.js).
@@ -307,6 +405,8 @@ function closeRaw() {
   markSeen(activeStage); // cerrado, saltado o terminado: no volver a interrumpir a este usuario
   overlay.hidden = true;
   backdropEl.classList.remove('dim');
+  if (confirmEl) { confirmEl.hidden = true; cardEl.classList.remove('is-confirming'); }
+  bloqueaFondo(false); // se revierte todo: la app vuelve a responder tal cual estaba
   // El foco vuelve a quien abrió el tutorial o, si ya no está visible, al encabezado de la
   // pantalla actual (mismo criterio que showScreen en auth.js).
   if (openerEl && document.contains(openerEl) && openerEl.getClientRects().length) {

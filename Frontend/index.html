@@ -10,11 +10,11 @@
     <link rel="icon" type="image/png" href="Img/icon-192.png">
     <link rel="apple-touch-icon" href="Img/icon-192.png">
     <!-- Tipografía de la dirección "ranger": Zilla Slab para los rótulos (serifa de cartel tallado)
-         y Public Sans para el resto de la interfaz. font-display:swap evita texto invisible mientras
-         carga; sin red cae a Georgia / system-ui, ya previstas en las pilas de Css/ranger.css. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+         y Public Sans para el resto de la interfaz. VENDORIZADAS, por el mismo motivo que Leaflet:
+         venían de fonts.googleapis.com y el Service Worker ignora todo lo que no es del mismo
+         origen, así que sin cobertura la app perdía su tipografía justo en el monte, que es donde
+         se usa. Ver Vendor/fonts/fonts.css. -->
+    <link rel="stylesheet" href="Vendor/fonts/fonts.css">
     <!-- Leaflet y markercluster van vendorizados en Vendor/ (no unpkg): el Service Worker ignora a
          propósito todo lo que no sea del mismo origen, así que desde un CDN nunca llegaban a la
          caché y sin cobertura la app no arrancaba (map.js usa L al importarse). Ver Vendor/README.md. -->

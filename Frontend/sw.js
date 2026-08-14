@@ -21,7 +21,11 @@
 //      pero AHORA HAY 18 FICHEROS MÁS QUE PRECACHEAR: sin ellos el barril resuelve a un 404 y la
 //      app no arranca sin cobertura. Es exactamente el fallo contra el que avisa el comentario de
 //      arriba, y por eso la lista de abajo está agrupada por carpeta y no en una sola línea.
-var VERSION = 'v56';
+// v57: Fase 1 de usabilidad. Entran Js/visor.js (la foto de la ficha a pantalla completa) y, sobre
+//      todo, LAS TIPOGRAFÍAS: Zilla Slab y Public Sans venían de fonts.googleapis.com y el fetch de
+//      más abajo ignora a propósito todo lo que no es del mismo origen, así que sin cobertura la
+//      app perdía su tipografía. Ahora son diez .woff2 en Vendor/fonts/ (~220 KB) más su hoja.
+var VERSION = 'v57';
 var RUNTIME_CACHE = 'naturdex-runtime-' + VERSION;
 
 // Armazón mínimo que se intenta precachear en la instalación (best-effort).
@@ -43,13 +47,22 @@ var SHELL_ASSETS = [
   'Vendor/markercluster/MarkerCluster.Default.css',
   'Vendor/protomaps/protomaps-leaflet.js',
 
+  // Tipografías (antes en fonts.googleapis.com, ver Vendor/fonts/fonts.css). Sin ellas precacheadas
+  // la app se ve en la fuente del sistema justo donde más se usa: en el monte y sin cobertura.
+  'Vendor/fonts/fonts.css',
+  'Vendor/fonts/public-sans-normal-latin.woff2', 'Vendor/fonts/public-sans-normal-latin-ext.woff2',
+  'Vendor/fonts/public-sans-italic-latin.woff2', 'Vendor/fonts/public-sans-italic-latin-ext.woff2',
+  'Vendor/fonts/zilla-slab-500-latin.woff2', 'Vendor/fonts/zilla-slab-500-latin-ext.woff2',
+  'Vendor/fonts/zilla-slab-600-latin.woff2', 'Vendor/fonts/zilla-slab-600-latin-ext.woff2',
+  'Vendor/fonts/zilla-slab-700-latin.woff2', 'Vendor/fonts/zilla-slab-700-latin-ext.woff2',
+
   // Scripts clásicos (no módulos ES)
   'Js/offline.js', 'Js/nav.js', 'Js/prefs.js', 'Js/auth.js',
 
   // Módulos ES sueltos
   'Js/util.js', 'Js/state.js', 'Js/api.js', 'Js/habitat-groups.js', 'Js/dom.js', 'Js/data.js',
   'Js/layers.js', 'Js/explorer.js', 'Js/audio.js', 'Js/glossary.js', 'Js/fitosociologia.js',
-  'Js/tutorial.js', 'Js/presence.js', 'Js/notice.js', 'Js/profile.js', 'Js/app.js',
+  'Js/tutorial.js', 'Js/presence.js', 'Js/notice.js', 'Js/profile.js', 'Js/visor.js', 'Js/app.js',
 
   // Barriles + sus trozos. El barril solo reexporta: SIN los trozos la app no arranca offline.
   'Js/render.js',
