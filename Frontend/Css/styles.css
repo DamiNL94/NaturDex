@@ -1265,3 +1265,10 @@ body.visor-open{overflow:hidden}
   /* Con la columna entera deslizándose, la letra pegajosa se colaría por debajo del buscador. */
   .dicc-letra{position:static}
 }
+
+/* Esqueleto del perfil (Js/profile.js): ocupa el sitio del contenido final mientras llega el perfil
+   del servidor, para que al pintarlo no salte la maquetación. Solo aparece la primera vez que se
+   abre la pantalla; en un repintado se conserva a la vista lo que ya había. */
+.profile-skeleton{display:flex;flex-direction:column;gap:18px}
+.profile-skeleton-block{border:1px solid var(--line);border-radius:var(--radius-md,8px);background:var(--surface,#fbfcf8);animation:profile-skeleton-latido 1.4s ease-in-out infinite}
+@keyframes profile-skeleton-latido{0%,100%{opacity:1}50%{opacity:.55}}
