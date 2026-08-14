@@ -26,7 +26,7 @@
    Slab vendorizadas en Vendor/fonts/). Aquí solo queda la reserva del sistema, por si alguna vez se
    quitara esa hoja: antes esta línea pedía `Inter`, que no se carga en ninguna parte de la app. */
 body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);font-size:var(--fs-md);line-height:1.5}button,input{font:inherit}.app-shell{height:100vh;overflow:hidden;display:grid;grid-template-columns:minmax(360px,420px) 1fr}.sidebar{height:100%;min-height:0;overflow:hidden;display:flex;flex-direction:column;border-right:1px solid var(--line);background:var(--panel)}.park-summary{padding:28px 28px 22px;border-bottom:1px solid var(--line)}.eyebrow{margin:0 0 8px;color:var(--sea);font-size:var(--fs-xs);font-weight:800;text-transform:uppercase}h1,h2,h3,p{margin-top:0}h1{margin-bottom:12px;font-size:clamp(2rem,4vw,3.4rem);line-height:.96}.park-summary p{margin-bottom:18px;color:var(--muted);line-height:1.5}.summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.summary-grid div{padding:12px;border:1px solid var(--line);border-radius:8px;background:#fbfcf8}.summary-grid strong{display:block;font-size:var(--fs-xl)}.summary-grid span{display:block;color:var(--muted);font-size:var(--fs-xs)}.controls{padding:18px 28px;border-bottom:1px solid var(--line)}.controls label{display:block;margin-bottom:8px;color:var(--muted);font-size:var(--fs-sm);font-weight:700}.controls input{width:100%;height:42px;padding:0 12px;border:1px solid var(--line);border-radius:8px}.progress-wrap{margin-top:14px}.progress-track{height:8px;border-radius:999px;background:#e4ece0;overflow:hidden}.progress-track.big{height:12px}.progress-fill{height:100%;width:0;background:var(--leaf);border-radius:999px;transition:width .3s ease}.progress-label,.progress-caption{display:block;margin-top:6px;color:var(--muted);font-size:var(--fs-xs)}.segmented{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:12px;padding:4px;border:1px solid var(--line);border-radius:8px;background:#eef4ec}
-.view-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:14px 28px 0}.view-tab{min-height:38px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--muted);font-weight:800;cursor:pointer}.view-tab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.view-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:14px 28px 0}.view-tab{min-height:38px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--muted);font-weight:800;cursor:pointer}.view-tab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
 .habitat-filter-chip{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:10px;padding:8px 10px;border-radius:8px;background:#eef4ec;color:var(--leaf);font-size:var(--fs-xs);font-weight:700}.habitat-filter-chip[hidden]{display:none}.habitat-filter-chip button{border:0;background:transparent;color:var(--leaf);font-weight:800;cursor:pointer}
 .progress-panel{flex:1;min-height:0;overflow:auto;padding:18px 18px 18px 28px;display:flex;flex-direction:column;gap:20px}.species-panel[hidden],.progress-panel[hidden],.controls[hidden]{display:none}.progress-section h3{margin:0 0 8px;font-size:var(--fs-md);color:var(--ink)}.progress-list{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}.progress-row{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;font-size:var(--fs-sm)}.progress-row.complete{border-color:var(--leaf);background:#eef6ef}.progress-row-label{display:flex;align-items:center;gap:8px}.progress-row .dot{display:inline-block;width:10px;height:10px;border-radius:999px}.progress-row-value{font-weight:800;color:var(--muted)}.progress-row.complete .progress-row-value{color:var(--leaf)}
 .achievement-card{display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:10px;border:1px solid var(--line);background:#fbfcf8}.achievement-card.locked{opacity:.6}.achievement-card.unlocked{border-color:var(--sun);background:#fff8e8}.achievement-card.just-unlocked{animation:achievement-pulse 1.2s ease}.achievement-icon{font-size:2rem;line-height:1}.achievement-card strong{display:block;margin-bottom:4px;font-size:var(--fs-md)}.achievement-card p{margin:0;color:var(--muted);font-size:var(--fs-xs);line-height:1.45}
@@ -406,8 +406,8 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFo
      z-index, la ficha (z-index:900 dentro) quedaba atrapada por debajo de la nav, que la tapaba
      justo donde está el botón "Marcar como visto". Estando la hoja cerrada sigue oculto e inerte
      (visibility:hidden + pointer-events:none), así que la nav se ve y se pulsa con normalidad. */
-  body[data-mtab="catalog"] .map-stage,body[data-mtab="progress"] .map-stage,body[data-mtab="invasoras"] .map-stage{position:fixed;inset:0;z-index:850;visibility:hidden;pointer-events:none}
-  body[data-mtab="catalog"] .map-stage .detail-dock,body[data-mtab="progress"] .map-stage .detail-dock,body[data-mtab="invasoras"] .map-stage .detail-dock{visibility:visible;pointer-events:auto}
+  body:not([data-mtab="map"]) .map-stage{position:fixed;inset:0;z-index:850;visibility:hidden;pointer-events:none}
+  body:not([data-mtab="map"]) .map-stage .detail-dock{visibility:visible;pointer-events:auto}
   .map-stage{height:100%}
   #map{width:100%;height:100%}
 
@@ -1216,3 +1216,52 @@ body.visor-open{overflow:hidden}
   font-size:var(--fs-md);line-height:1.6}
 /* Las viñetas de "cómo reconocerla" son el texto más útil de la ficha de una especie. */
 .detail-list li{line-height:1.6}
+
+/* ================================================================================================
+   Diccionario (Js/diccionario.js): el glosario entero, consultable por sí solo.
+   ------------------------------------------------------------------------------------------------
+   Cada término es un <details>. No es adorno: 219 definiciones abiertas de golpe son un muro en el
+   que no se encuentra nada con el pulgar, y <summary> trae gratis el teclado, el lector de pantalla
+   y el estado abierto/cerrado, que es justo lo que aquí significa «consultar una palabra».
+   ================================================================================================ */
+.dicc-panel{flex:1;min-height:0;overflow:auto;padding:18px 18px 18px 28px}
+.dicc-panel[hidden]{display:none}
+.dicc-intro{margin:0 0 14px;color:var(--muted);font-size:var(--fs-sm);line-height:1.55}
+.dicc-controls label{display:block;margin-bottom:8px;color:var(--muted);font-size:var(--fs-sm);font-weight:700}
+.dicc-controls input{width:100%;min-height:var(--tap-min,44px);padding:0 12px;border:1px solid var(--line);border-radius:var(--radius-md,8px);background:var(--panel);color:var(--ink)}
+/* Las materias son diez y de largo desigual: en rejilla fija se cortaban los rótulos. */
+.dicc-cats{display:flex;flex-wrap:wrap;gap:6px;grid-template-columns:none}
+.dicc-cats .filter-button{padding:0 12px}
+/* Índice A–Z: las letras sin resultados se quedan apagadas en vez de desaparecer, para que la fila
+   no baile al escribir en el buscador. */
+.dicc-index{display:flex;flex-wrap:wrap;gap:2px;margin:14px 0 6px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.dicc-letra-btn{min-width:30px;min-height:34px;padding:0 4px;border:0;border-radius:var(--radius-sm,4px);background:transparent;color:var(--leaf);font-weight:800;font-size:var(--fs-sm);cursor:pointer}
+.dicc-letra-btn:hover{background:var(--tint,#eef4ec)}
+.dicc-letra-btn.is-vacia{color:var(--faint,var(--muted));opacity:.5;cursor:default;display:inline-flex;align-items:center;justify-content:center}
+.dicc-letra{position:sticky;top:0;z-index:1;margin:16px 0 6px;padding:6px 0;background:var(--panel);color:var(--muted);font-size:var(--fs-sm);letter-spacing:.08em}
+.dicc-item{padding:4px 0;border-bottom:1px solid var(--line)}
+.dicc-item summary{display:flex;align-items:center;flex-wrap:wrap;gap:8px;min-height:var(--tap-min,44px);padding:4px 0;cursor:pointer;font-size:var(--fs-md);list-style:none}
+.dicc-item summary::-webkit-details-marker{display:none}
+/* El triángulo lo pone la hoja, no el navegador: así gira igual en todos y no se hereda su tamaño. */
+.dicc-item summary::before{content:"›";display:inline-block;width:14px;color:var(--muted);font-weight:800;transition:transform .15s ease}
+.dicc-item[open] summary::before{transform:rotate(90deg)}
+.dicc-term{font-weight:700}
+.dicc-def{margin:2px 0 8px 14px;font-size:var(--fs-md);line-height:1.6}
+.dicc-alias{margin:0 0 8px 14px;color:var(--muted);font-size:var(--fs-sm)}
+.dicc-item .detail-source{margin:0 0 10px 14px}
+/* La palabra a la que se ha saltado desde el popover, señalada con el filete de la casa. */
+.dicc-item.is-destacado{border-left:3px solid var(--sun);padding-left:10px;background:var(--tint,#f4f8f2)}
+.dicc-vacio{margin:16px 0;padding:14px;border:1px solid var(--line);border-radius:var(--radius-md,8px);color:var(--muted);font-size:var(--fs-md);line-height:1.6}
+.dicc-pie{margin-top:18px}
+/* Salida al diccionario desde el popover de una palabra suelta. */
+.glossary-popover-link{display:block;margin-top:10px;padding:6px 0;border:0;background:transparent;color:var(--leaf);font-weight:800;font-size:var(--fs-sm);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+/* El enlace de la cabecera del catálogo es SOLO para móvil: en escritorio ya hay pestaña propia y
+   sería el mismo destino dos veces en la misma columna. */
+.dicc-link{display:block;width:100%;margin-top:12px;min-height:var(--tap-min,44px);border:1px dashed var(--line);border-radius:var(--radius-md,8px);background:transparent;color:var(--leaf);font-weight:700;font-size:var(--fs-sm);cursor:pointer}
+.dicc-link:hover{background:var(--tint,#eef4ec)}
+@media(min-width:901px){.dicc-link{display:none}}
+@media(max-width:900px){
+  .dicc-panel{flex:none;min-height:auto;overflow:visible;padding:10px 16px 16px}
+  /* Con la columna entera deslizándose, la letra pegajosa se colaría por debajo del buscador. */
+  .dicc-letra{position:static}
+}

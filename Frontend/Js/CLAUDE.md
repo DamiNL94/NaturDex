@@ -99,7 +99,8 @@ secciones cumple la misma función: abre solo el rango que necesites.
 | `explorer.js` | 365 | Modo explorador: GPS continuo, panel «cerca de ti», descubrimiento por proximidad |
 | `profile.js` | 537 | Pantalla «Perfil y ajustes». Único sitio donde el usuario administra su cuenta |
 | `tutorial.js` | 333 | Onboarding por pasos (*spotlight*). Dos tramos: `select` y `park` |
-| `glossary.js` | 173 | Resalta tecnicismos en las descripciones y muestra su definición en llano |
+| `glossary.js` | 220 | Resalta tecnicismos en las descripciones y muestra su definición en llano. El popover **sigue** a su palabra al desplazarse, no se cierra |
+| `diccionario.js` | 208 | El glosario entero como vista propia: alfabético, buscable y filtrable. La cabecera explica por qué NO es un quinto botón de la nav móvil |
 | `visor.js` | 309 | La foto de la ficha a pantalla completa, con pellizco, doble toque y rueda. Solo sobre fotos reales: sobre un sustituto generado no abre |
 | `fitosociologia.js` | 65 | Traduce la asociación fitosociológica a lenguaje llano **sin sustituir** la cita oficial |
 | `audio.js` | 50 | Audioguías de POIs, senderos y hábitats. La transcripción es obligatoria (WCAG 1.2.1) |

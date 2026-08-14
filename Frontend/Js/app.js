@@ -24,7 +24,7 @@ import {
 import {
   sidebar, speciesList, searchInput, catalogControls, catalogPanel,
   backToHabitatsBtn, catalogCrumb, catalogCrumbLabel, parkTitle, parkEyebrow, parkStats, parkProgressWrap,
-  progressPanel, invasorasPanel, basicNotice, detailPanel, sheetClose, sheetScrim,
+  progressPanel, invasorasPanel, diccionarioPanel, basicNotice, detailPanel, sheetClose, sheetScrim,
   saveOfflineBtn, connStatus, layersToggle, layersPanel, explorerToggle
 } from './dom.js';
 import {
@@ -40,7 +40,8 @@ import {
 import { groupIdOfHabitat } from './habitat-groups.js';
 import { initExplorer } from './explorer.js';
 import { initLayersPanel, refreshLayersPanel, setOpenLayersGroup, openLayersGroupOfHabitat } from './layers.js';
-import { loadGlossary, initGlossaryPopover } from './glossary.js';
+import { loadGlossary, initGlossaryPopover, hideGlossaryPopover } from './glossary.js';
+import { abreDiccionario, initDiccionario } from './diccionario.js';
 import { loadFitosociologia } from './fitosociologia.js';
 import { initTutorial } from './tutorial.js';
 import { initAchievements, noteParkActivity, handleServerNewlyUnlocked, reportInvasiveSeen, refreshAccountProgress, syncWithServer } from './achievements.js';
@@ -71,7 +72,8 @@ function navClose(key) { return nav ? nav.close(key) : false; }
 // contenedores que scrollean por su cuenta, porque cuál de ellos lo hace depende del ancho: en
 // escritorio son las listas; en móvil, la barra lateral entera.
 function vistaArriba() {
-  [sidebar, speciesList, progressPanel, invasorasPanel].forEach(el => { if (el) el.scrollTop = 0; });
+  [sidebar, speciesList, progressPanel, invasorasPanel, diccionarioPanel]
+    .forEach(el => { if (el) el.scrollTop = 0; });
 }
 
 // Estreno de la ficha: empieza por la foto y, si se pide, el foco cae en su TÍTULO (no en el panel),
@@ -434,8 +436,12 @@ function setView(view) {
   if (basicNotice) basicNotice.hidden = !basic || view !== 'catalog';
   progressPanel.hidden = view !== 'progress';
   if (invasorasPanel) invasorasPanel.hidden = view !== 'invasoras';
+  // El diccionario es nacional, no del parque: se ve igual en un espacio de ficha base, donde no
+  // hay catálogo que consultar pero las palabras técnicas siguen saliendo en la ficha del espacio.
+  if (diccionarioPanel) diccionarioPanel.hidden = view !== 'diccionario';
   if (view === 'progress') renderProgressTab();
   else if (view === 'invasoras') showInvasoras();
+  else if (view === 'diccionario') abreDiccionario();
   else if (basic) renderBasicPark();
   else renderCatalogBody();
   vistaArriba(); // la pestaña entrante empieza por su encabezado, no por donde se quedó la anterior
@@ -635,6 +641,24 @@ document.querySelectorAll('.view-tab').forEach(button => {
   button.addEventListener('click', () => setView(button.dataset.view));
 });
 
+// Las dos puertas del diccionario que no son la pestaña de escritorio (ver Js/diccionario.js):
+// el enlace de la cabecera del catálogo y el «Ver en el diccionario →» del popover del glosario.
+// La segunda además abre el término que se estaba consultando, que es la gracia de tenerla.
+function vaAlDiccionario(termino) {
+  hideGlossaryPopover();
+  closeDetailSheet();          // en móvil el popover se abre sobre la ficha, que tapa la pantalla
+  if (mobileMedia.matches) setMobileTab('diccionario'); else setView('diccionario');
+  abreDiccionario(termino);    // después de setView: es quien deja el panel a la vista
+}
+
+const diccionarioLink = document.querySelector('#openDiccionario');
+if (diccionarioLink) diccionarioLink.addEventListener('click', () => vaAlDiccionario());
+
+document.body.addEventListener('click', event => {
+  const salto = event.target.closest('[data-abrir-diccionario]');
+  if (salto) vaAlDiccionario(salto.dataset.abrirDiccionario);
+});
+
 backToHabitatsBtn.addEventListener('click', backOneCatalogLevel);
 
 searchInput.addEventListener('input', event => {
@@ -658,6 +682,10 @@ initExplorer({
 
 // Panel de capas del mapa (layers.js): bases, capas con leyenda y hábitats individuales.
 initLayersPanel();
+
+// Diccionario (diccionario.js): el glosario entero, consultable sin pasar por una ficha. Se cablea
+// sobre su propio panel, igual que el panel de capas.
+initDiccionario();
 
 // Tutorial de bienvenida (tutorial.js): botones "?" y API por window para auth.js.
 initTutorial();

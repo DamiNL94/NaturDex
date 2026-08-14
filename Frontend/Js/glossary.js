@@ -14,6 +14,7 @@ import { reportGlossaryView } from './achievements.js';
 let TERMS = null;      // [{ term, definition, category, aliases, source }]
 let MATCHER = null;    // { regex, byForm: Map(formaEnMinúsculas -> { term, definition }) }
 let popoverEl = null;
+let anclaEl = null;    // la palabra a la que está apuntando el popover ahora mismo
 
 const norm = s => s.toLowerCase();
 
@@ -31,6 +32,14 @@ export async function loadGlossary() {
   }
   return TERMS;
 }
+
+/**
+ * El glosario entero, para quien quiera consultarlo sin pasar por una ficha (Js/diccionario.js).
+ * Devuelve [] mientras no haya cargado: quien lo pinta debe distinguir «vacío» de «aún no cargado»
+ * con `glosarioCargado()`, porque las dos situaciones se cuentan de forma muy distinta al usuario.
+ */
+export function glosarioTerminos() { return TERMS || []; }
+export function glosarioCargado() { return TERMS !== null; }
 
 function escapeRe(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
 
@@ -121,8 +130,33 @@ export function initGlossaryPopover() {
     if (popoverEl && !popoverEl.hidden && !event.target.closest('.glossary-popover')) hidePopover();
   });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') hidePopover(); });
-  window.addEventListener('resize', hidePopover);
-  window.addEventListener('scroll', hidePopover, true); // captura también el scroll interno del panel
+  // Al desplazarse, el popover SIGUE a su palabra en vez de cerrarse.
+  //
+  // Cerrarlo parecía lo sensato y hacía que ni llegara a verse: el término es un <button>, y al
+  // pulsar uno que estaba por debajo del pliegue el navegador desplaza el panel para traerlo a la
+  // vista —558 px en la ficha de un hábitat—; ese desplazamiento, disparado por el MISMO click que
+  // abría el popover, lo cerraba en el acto. Es decir: cualquier palabra que no estuviera ya en
+  // pantalla no tenía definición consultable. Ahora solo se cierra cuando su palabra se va de la
+  // pantalla, que es cuando el popover deja de tener a qué apuntar.
+  const seguir = () => {
+    if (!popoverEl || popoverEl.hidden || !anclaEl) return;
+    if (!document.contains(anclaEl)) { hidePopover(); return; }
+    const r = anclaEl.getBoundingClientRect();
+    const vh = document.documentElement.clientHeight;
+    const vw = document.documentElement.clientWidth;
+    if (r.bottom < 0 || r.top > vh || r.right < 0 || r.left > vw) { hidePopover(); return; }
+    positionPopover(popoverEl, anclaEl);
+  };
+  // Agrupado en un frame: un scroll con el dedo dispara decenas de eventos y cada uno mediría el
+  // popover (getBoundingClientRect fuerza reflujo).
+  let pendiente = false;
+  const alDesplazar = () => {
+    if (pendiente) return;
+    pendiente = true;
+    requestAnimationFrame(() => { pendiente = false; seguir(); });
+  };
+  window.addEventListener('resize', alDesplazar);
+  window.addEventListener('scroll', alDesplazar, true); // captura también el scroll interno del panel
 }
 
 function ensurePopover() {
@@ -139,6 +173,7 @@ function togglePopover(termEl) {
   const el = ensurePopover();
   if (el.dataset.for === termEl.dataset.glossTerm && !el.hidden) { hidePopover(); return; }
   el.dataset.for = termEl.dataset.glossTerm;
+  anclaEl = termEl;
   reportGlossaryView(termEl.dataset.glossTerm);
   el.textContent = '';
   const h = document.createElement('strong');
@@ -147,7 +182,15 @@ function togglePopover(termEl) {
   const p = document.createElement('p');
   p.className = 'glossary-popover-def';
   p.textContent = termEl.dataset.glossDef;
-  el.append(h, p);
+  // Salida al diccionario completo: el popover explica UNA palabra, y quien acaba de descubrir que
+  // existe un glosario querrá ver el resto. Quien lo abre es app.js por delegación (este módulo no
+  // puede importar diccionario.js: diccionario.js ya importa este para leer los términos).
+  const ver = document.createElement('button');
+  ver.type = 'button';
+  ver.className = 'glossary-popover-link';
+  ver.dataset.abrirDiccionario = termEl.dataset.glossTerm;
+  ver.textContent = 'Ver en el diccionario →';
+  el.append(h, p, ver);
   positionPopover(el, termEl);
 }
 
@@ -169,5 +212,9 @@ function positionPopover(el, termEl) {
 }
 
 function hidePopover() {
+  anclaEl = null;
   if (popoverEl && !popoverEl.hidden) { popoverEl.hidden = true; popoverEl.dataset.for = ''; }
 }
+
+/** Cierre del popover desde fuera (app.js, al saltar al diccionario). */
+export function hideGlossaryPopover() { hidePopover(); }

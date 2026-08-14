@@ -451,18 +451,14 @@ select{font-family:var(--font-ui);font-size:var(--fs-md)}
      exactamente el viewport) no se crea ese contexto y cada capa vale lo que dice. */
   #screen-park{position:relative}
   .map-stage,
-  body[data-mtab="catalog"] .map-stage,
-  body[data-mtab="progress"] .map-stage,
-  body[data-mtab="invasoras"] .map-stage{
+  body:not([data-mtab="map"]) .map-stage{
     position:absolute;inset:0;z-index:auto;visibility:visible;pointer-events:auto}
 
   /* Fuera de la pestaña de mapa, el mapa y su atrezo se apagan. Con visibility (no display:none)
      a propósito: el contenedor conserva su tamaño y Leaflet no pierde la cuenta de cuánto mide,
      que es justo lo que le dejaba el mapa en blanco al volver. La ficha (.detail-dock) y su velo
      viven dentro de .map-stage pero se abren sobre el catálogo, así que siguen encendidos. */
-  body[data-mtab="catalog"] .map-stage>*:not(.detail-dock):not(.sheet-scrim),
-  body[data-mtab="progress"] .map-stage>*:not(.detail-dock):not(.sheet-scrim),
-  body[data-mtab="invasoras"] .map-stage>*:not(.detail-dock):not(.sheet-scrim){
+  body:not([data-mtab="map"]) .map-stage>*:not(.detail-dock):not(.sheet-scrim){
     visibility:hidden;pointer-events:none}
 
   /* Los controles nativos de Leaflet vienen en z-index 1000, un número que no significa nada
@@ -659,3 +655,8 @@ select{font-family:var(--font-ui);font-size:var(--fs-md)}
    quedan donde eran de una o dos palabras (insignias, eyebrows, rótulos de dato). */
 .detail-subtitle{text-transform:none;letter-spacing:0;font-size:var(--fs-lg);
   font-family:var(--font-display);font-weight:700;color:var(--ink)}
+
+/* Las pestañas de la barra lateral pasaron de tres a cuatro al entrar el diccionario, y en versalitas
+   con interletrado «DICCIONARIO» no cabía en su cuarto de columna: salía recortado a media palabra.
+   Se quedan en caja baja, que además es lo que pedía el suelo de legibilidad de esta tanda. */
+.view-tab{text-transform:none;letter-spacing:0;font-size:var(--fs-sm);padding:0 4px}
