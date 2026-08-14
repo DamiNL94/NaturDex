@@ -70,6 +70,12 @@ delimitación regional, así que conserva el límite del MITECO y no pasa por
 Cada línea es un informe de cierre. El título dice la conclusión; entra al fichero solo si te hace
 falta el detalle.
 
+### [`sesiones/2026-08-14.md`](sesiones/2026-08-14.md)
+
+| Sesión | Qué se cerró |
+|---|---|
+| 2026-08-14 | **Cuatro fases de app, ningún dato tocado**: la foto de la ficha se amplía y las tipografías dejan de venir de Google (sin cobertura la app las perdía, en el monte); el glosario se consulta entero y aparece que **el popover nunca funcionó para una palabra por debajo del pliegue**; el perfil deja de pintarse dos veces; y los logros pasan a medallas con la rareza a la vista y cuatro umbrales que nadie podía conseguir |
+
 ### [`sesiones/2026-08-11.md`](sesiones/2026-08-11.md)
 
 | Sesión | Qué se cerró |

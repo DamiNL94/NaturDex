@@ -23,10 +23,10 @@ usuario**: eso es de `app.js`.
 |---|---|---|
 | `render/catalogo.js` | 108 | Catálogo en tres niveles: grupos de hábitats → hábitats → especies |
 | `render/resumen.js` | 109 | Cabecera del parque, ficha base (`status: basic`) y barra de progreso |
-| `render/detalle.js` | 187 | Ficha de especie, de hábitat y de punto de interés |
+| `render/detalle.js` | 214 | Ficha de especie, de hábitat y de punto de interés |
 | `render/invasoras.js` | 55 | Pestaña de invasoras y su ficha |
-| `render/progreso.js` | 195 | Progreso del parque, progreso de cuenta, historial de salidas verificadas |
-| `render/fallbacks.js` | 42 | Sustitutos de imagen rota (`window.__*Fallback`, los invoca el `onerror` del HTML generado). Sin exports |
+| `render/progreso.js` | 286 | Progreso del parque, **medallero** de cuenta (rareza a la vista y techo del catálogo) e historial de salidas verificadas |
+| `render/fallbacks.js` | 64 | Sustitutos de imagen rota (`window.__*Fallback`, los invoca el `onerror` del HTML generado). Sin exports |
 
 ### `map/` — todo lo que toca Leaflet
 
@@ -55,16 +55,16 @@ conexión.
 
 | Trozo | Líneas | Qué resuelve |
 |---|---|---|
-| `achievements/almacen.js` | 190 | Catálogo de logros, almacenamiento local por cuenta, clave canónica de especie, semana ISO |
-| `achievements/agregacion.js` | 134 | El espejo local del agregado del backend |
-| `achievements/celebracion.js` | 226 | La cola del cartel animado. Autocontenida: crea su propio DOM la primera vez |
+| `achievements/almacen.js` | 223 | Catálogo de logros, almacenamiento local por cuenta, clave canónica de especie, semana ISO |
+| `achievements/agregacion.js` | 148 | El espejo local del agregado del backend |
+| `achievements/celebracion.js` | 257 | La cola del cartel animado. Autocontenida: crea su propio DOM la primera vez |
 | `achievements/sincronizacion.js` | 93 | Recalcula (local u online), evalúa y refresca `state.account` |
 | `achievements/eventos.js` | 38 | Lo que llaman `app.js` y `glossary.js` cuando pasa algo |
 | `achievements/arranque.js` | 42 | Migración invitado → cuenta registrada e `init` |
 
 ---
 
-## `app.js` — el orquestador (896 líneas, **a propósito en un solo fichero**)
+## `app.js` — el orquestador (984 líneas, **a propósito en un solo fichero**)
 
 Se estudió partirlo y **no se partió**: sus secciones se llaman entre sí en ambos sentidos
 (navegación ↔ vistas ↔ pestañas móviles, arranque ↔ UI de offline). Partirlo produciría media docena
@@ -73,32 +73,33 @@ secciones cumple la misma función: abre solo el rango que necesites.
 
 | Líneas | Sección |
 |---|---|
-| 51–59 | Pila de navegación (`nav.js`) |
-| 60–247 | Navegación del catálogo: entrar en grupo/hábitat/especie/POI/invasora, volver atrás |
-| 248–353 | Marcar visto / visitado, captura de avistamiento, aviso de «sin verificar» |
-| 354–373 | Nivel de dato del espacio: ficha base vs. catálogo completo |
-| 374–401 | Vistas (catálogo / progreso) |
-| 402–517 | Vistas móviles: nav inferior y ficha como *bottom-sheet* |
-| 518–586 | Delegación de eventos (**todos los clicks entran por aquí**) |
-| 587–608 | Modo explorador (`explorer.js`) |
-| 609–778 | UI de estado offline: indicador de conexión y botón «Guardar sin conexión» |
-| 779–897 | Arranque de la experiencia de un parque (`startParkExperience`) |
+| 53–61 | Pila de navegación (`nav.js`) |
+| 62–95 | **Empezar por arriba**: `vistaArriba()` y `estrenaFicha()`. Toda vista o ficha que se abre arranca por su encabezado, no por donde se quedó la anterior |
+| 96–291 | Navegación del catálogo: entrar en grupo/hábitat/especie/POI/invasora, volver atrás |
+| 292–397 | Marcar visto / visitado, captura de avistamiento, aviso de «sin verificar» |
+| 398–417 | Nivel de dato del espacio: ficha base vs. catálogo completo |
+| 418–450 | Vistas (catálogo / invasoras / progreso / diccionario) |
+| 451–569 | Vistas móviles: nav inferior y ficha como *bottom-sheet* |
+| 570–670 | Delegación de eventos (**todos los clicks entran por aquí**), incluida la foto que abre el visor y las puertas del diccionario |
+| 671–696 | Modo explorador (`explorer.js`) |
+| 697–866 | UI de estado offline: indicador de conexión y botón «Guardar sin conexión» |
+| 867–984 | Arranque de la experiencia de un parque (`startParkExperience`) |
 
 ## Resto de módulos ES
 
 | Módulo | Líneas | Qué resuelve |
 |---|---|---|
 | `state.js` | 177 | Única fuente de verdad del estado + selectores derivados y constantes |
-| `dom.js` | 70 | Referencias centralizadas a los nodos del DOM del parque |
+| `dom.js` | 75 | Referencias centralizadas a los nodos del DOM del parque |
 | `data.js` | 297 | Registro, manifiesto, datos y geo + progreso local-first. **Todo lo que habla con red o caché pasa por aquí.** La API tiene prioridad sobre el `park.json` |
 | `api.js` | 82 | **Único** punto de contacto con `Backend/Api/`: corte por tiempo, errores, `apiSignal()` |
-| `util.js` | 282 | Helpers puros: sin estado, sin DOM, sin Leaflet. Aquí vive la plantilla `` html`` `` |
+| `util.js` | 298 | Helpers puros: sin estado, sin DOM, sin Leaflet. Aquí vive la plantilla `` html`` `` |
 | `layers.js` | 279 | Panel de capas propio (sustituye al control nativo de Leaflet) |
 | `habitat-groups.js` | 212 | **Los siete grupos de hábitat**, ordenados del mar hacia dentro. Trama y tinta idénticas en mapa, leyenda y catálogo. Criterio: código HIC |
 | `presence.js` | 469 | **Presencia verificada**: la prueba de que estás dentro del espacio. Es lo que hace que los logros signifiquen algo |
 | `explorer.js` | 365 | Modo explorador: GPS continuo, panel «cerca de ti», descubrimiento por proximidad |
-| `profile.js` | 537 | Pantalla «Perfil y ajustes». Único sitio donde el usuario administra su cuenta |
-| `tutorial.js` | 333 | Onboarding por pasos (*spotlight*). Dos tramos: `select` y `park` |
+| `profile.js` | 575 | Pantalla «Perfil y ajustes». Único sitio donde el usuario administra su cuenta |
+| `tutorial.js` | 433 | Onboarding por pasos (*spotlight*). Dos tramos: `select` y `park`. **Bloqueante**: el fondo es inerte y solo se sale confirmando |
 | `glossary.js` | 220 | Resalta tecnicismos en las descripciones y muestra su definición en llano. El popover **sigue** a su palabra al desplazarse, no se cierra |
 | `diccionario.js` | 208 | El glosario entero como vista propia: alfabético, buscable y filtrable. La cabecera explica por qué NO es un quinto botón de la nav móvil |
 | `visor.js` | 309 | La foto de la ficha a pantalla completa, con pellizco, doble toque y rueda. Solo sobre fotos reales: sobre un sustituto generado no abre |
