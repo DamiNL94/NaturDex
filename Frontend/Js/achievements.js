@@ -20,7 +20,7 @@
 
 import './achievements/agregacion.js';
 
-export { loadAchievementsCatalog } from './achievements/almacen.js';
+export { loadAchievementsCatalog, loadRegistry } from './achievements/almacen.js';
 export { celebrate } from './achievements/celebracion.js';
 export { handleServerNewlyUnlocked, refreshAccountProgress, syncWithServer } from './achievements/sincronizacion.js';
 export { isInvasiveSeenLocally, noteParkActivity, reportGlossaryView, reportInvasiveSeen } from './achievements/eventos.js';

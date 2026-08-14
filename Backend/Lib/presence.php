@@ -275,6 +275,20 @@ function presenceMarkAllowance($seconds) {
 }
 
 /**
+ * Estación del año de un mes, por el criterio meteorológico (trimestres completos). Es el mismo que
+ * ya usaba el flag `winterVisit` (diciembre, enero y febrero) y, sobre todo, es una cuenta de
+ * CALENDARIO, no una afirmación sobre el clima: en un espacio del sur peninsular o de Canarias el
+ * invierno no es frío, y un logro no puede dar por hecho el tiempo que hace en la región de nadie.
+ * Debe devolver exactamente lo mismo que su espejo en Frontend/Js/achievements/almacen.js.
+ */
+function presenceSeasonOfMonth($month) {
+    if ($month === 12 || $month === 1 || $month === 2) return "invierno";
+    if ($month <= 5) return "primavera";
+    if ($month <= 8) return "verano";
+    return "otono";
+}
+
+/**
  * Estadísticas de campo derivadas SOLO de visitas verificadas. Sustituyen a las que antes salían de
  * user_activity_log (que se llenaba con solo marcar algo, desde cualquier sitio).
  * Las fechas se calculan en hora peninsular: el "día de campo" es el que percibe la persona.
@@ -290,6 +304,8 @@ function presenceFieldStats($conn, $userId) {
     $longestSeconds = 0;
     $earlyBird = false;
     $winterVisit = false;
+    $seasons = [];        // estaciones distintas con alguna salida verificada
+    $seasonsPerPark = []; // ...y las de cada espacio, para "el mismo sitio en las cuatro estaciones"
 
     foreach ($windows as $w) {
         $start = new DateTime($w["startedAt"], new DateTimeZone("UTC"));
@@ -304,10 +320,18 @@ function presenceFieldStats($conn, $userId) {
         if ((int) $start->format("G") < 8) $earlyBird = true;
         $month = (int) $start->format("n");
         if ($month === 12 || $month === 1 || $month === 2) $winterVisit = true;
+        $season = presenceSeasonOfMonth($month);
+        $seasons[$season] = true;
+        $seasonsPerPark[$w["park"]][$season] = true;
     }
 
     $maxParkRevisitDays = 0;
     foreach ($perPark as $dates) $maxParkRevisitDays = max($maxParkRevisitDays, count($dates));
+
+    // "Volver al mismo sitio en las cuatro estaciones" se mide por espacio y se queda con el mejor:
+    // el mérito es conocer UN sitio en sus cuatro caras, no haber pisado cuatro sitios distintos.
+    $sameParkSeasons = 0;
+    foreach ($seasonsPerPark as $set) $sameParkSeasons = max($sameParkSeasons, count($set));
 
     // Racha de semanas ISO consecutivas con al menos un día de campo verificado.
     $weekKeys = [];
@@ -335,6 +359,8 @@ function presenceFieldStats($conn, $userId) {
         "fieldDays" => count($days),
         "weekStreak" => $bestStreak,
         "maxParkRevisitDays" => $maxParkRevisitDays,
+        "seasonsVisited" => count($seasons),
+        "sameParkSeasons" => $sameParkSeasons,
         "fieldHours" => (int) floor($seconds / 3600),
         "fieldKilometers" => (int) floor($meters / 1000),
         "longestVisitHours" => (int) floor($longestSeconds / 3600),

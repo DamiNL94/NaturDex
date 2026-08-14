@@ -105,6 +105,10 @@ export async function computeLocalAggregates() {
     fieldDays: field.fieldDays,
     weekStreak: field.weekStreak,
     maxParkRevisitDays: field.maxParkRevisitDays,
+    // Estaciones del año con salida verificada (y el mejor registro dentro de un mismo espacio).
+    // Espejo: computeAccountAggregates() en Backend/Lib/account_progress.php.
+    seasonsVisited: field.seasonsVisited,
+    sameParkSeasons: field.sameParkSeasons,
     fieldHours: field.fieldHours,
     fieldKilometers: field.fieldKilometers,
     invasiveSeen: getJSON(lsKey('invasiveSeen'), []).length,

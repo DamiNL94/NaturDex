@@ -27,7 +27,10 @@
 //      app perdía su tipografía. Ahora son diez .woff2 en Vendor/fonts/ (~220 KB) más su hoja.
 // v58: entra Js/diccionario.js (el glosario entero como vista propia). Data/glosario.json ya estaba
 //      precacheado desde antes, así que el diccionario funciona sin cobertura desde el primer día.
-var VERSION = 'v58';
+// v59: Data/achievements.json sube a v3 (umbrales recalibrados, dos métricas nuevas y tres logros
+//      más) y la rejilla pasa a ser un medallero. El JSON ya estaba precacheado, pero un cliente con
+//      la v2 en caché seguiría evaluando con los umbrales viejos hasta que caducara el armazón.
+var VERSION = 'v59';
 var RUNTIME_CACHE = 'naturdex-runtime-' + VERSION;
 
 // Armazón mínimo que se intenta precachear en la instalación (best-effort).

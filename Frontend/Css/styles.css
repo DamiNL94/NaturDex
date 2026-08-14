@@ -1272,3 +1272,81 @@ body.visor-open{overflow:hidden}
 .profile-skeleton{display:flex;flex-direction:column;gap:18px}
 .profile-skeleton-block{border:1px solid var(--line);border-radius:var(--radius-md,8px);background:var(--surface,#fbfcf8);animation:profile-skeleton-latido 1.4s ease-in-out infinite}
 @keyframes profile-skeleton-latido{0%,100%{opacity:1}50%{opacity:.55}}
+
+/* ================================================================================================
+   Medallero (render/progreso.js): la rejilla de logros de cuenta.
+   ------------------------------------------------------------------------------------------------
+   Antes era una lista de tarjetas planas con `opacity:.6` para lo bloqueado. La RAREZA estaba
+   declarada en Data/achievements.json y documentada con su escala, pero no se veía por ninguna
+   parte salvo un filete lateral, y solo en las ya conseguidas: un legendario y un común se leían
+   exactamente igual.
+
+   Ahora cada logro es una medalla: disco grande con su icono, marco del color de su rareza y cinta
+   con el nombre de la rareza debajo. El criterio es que se distingan A UN METRO, que es la
+   distancia a la que se mira un móvil.
+
+   Los bloqueados NO se esconden: la pista de cómo se consiguen está siempre a la vista —un logro
+   que no se sabe cómo se gana no motiva, desconcierta— y lo que se apaga es solo el disco.
+   ================================================================================================ */
+.medallero{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.medalla{display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 10px 12px;
+  border:1px solid var(--line);border-radius:var(--radius-md,8px);background:var(--surface,#fbfcf8);
+  text-align:center}
+/* El disco: círculo con marco grueso del color de la rareza. */
+.medalla-disco{display:flex;align-items:center;justify-content:center;width:72px;height:72px;
+  border-radius:999px;border:4px solid var(--medalla-color,var(--line-strong));
+  background:var(--panel);box-shadow:inset 0 0 0 3px var(--panel)}
+.medalla-icono{font-size:1.9rem;line-height:1}
+.medalla-titulo{font-size:var(--fs-sm);line-height:1.3}
+/* La cinta de rareza: versalitas cortas, que es para lo que sirven las versalitas. */
+.medalla-rareza{display:inline-block;padding:1px 7px;border-radius:var(--radius-sm,4px);
+  background:var(--medalla-color,var(--line-strong));color:#FBF7EE;
+  font-size:var(--fs-xs);font-weight:800;letter-spacing:.04em;text-transform:uppercase;
+  white-space:nowrap}
+.medalla-desc{margin:2px 0 0;color:var(--muted);font-size:var(--fs-xs);line-height:1.45}
+.medalla-progreso{display:flex;align-items:center;gap:8px;width:100%;margin-top:auto;padding-top:8px}
+.medalla-progreso .progress-track{flex:1}
+.medalla-cifra{flex:0 0 auto;color:var(--muted);font-size:var(--fs-xs);font-weight:800;
+  font-variant-numeric:tabular-nums}
+/* Lo que todavía no se puede conseguir porque el catálogo no llega: se dice, no se disimula. */
+.medalla-lejos{margin:6px 0 0;color:var(--muted);font-size:var(--fs-xs);line-height:1.4;font-style:italic}
+
+/* Rarezas. Los cuatro colores salen de los tokens de ranger.css y son los mismos que ya usaba el
+   filete lateral de las tarjetas, para no inventar una segunda escala de color. */
+.medalla.rareza-comun{--medalla-color:var(--line-strong,#c9c9c2)}
+.medalla.rareza-poco-comun{--medalla-color:var(--sea,#2E6D8E)}
+.medalla.rareza-raro{--medalla-color:var(--bark,#4A3B2A)}
+.medalla.rareza-legendario{--medalla-color:var(--brass,#C4A15E)}
+
+/* Ganada: el papel del panel, el marco a la vista y, en el legendario, un halo. */
+.medalla.is-ganada{background:var(--panel);border-color:var(--medalla-color)}
+.medalla.rareza-legendario.is-ganada{background:var(--warn-bg,#fbf3de);
+  box-shadow:0 0 0 1px var(--medalla-color),0 6px 20px rgba(196,161,94,.28)}
+/* Pendiente: se apaga el DISCO (silueta), no el texto. La pista se sigue leyendo entera. */
+.medalla.is-pendiente .medalla-disco{border-style:dashed;border-color:var(--line-strong);
+  background:var(--surface-alt,#eef1ea)}
+.medalla.is-pendiente .medalla-icono{filter:grayscale(1);opacity:.45}
+.medalla.is-pendiente .medalla-rareza{background:transparent;color:var(--medalla-color);
+  box-shadow:inset 0 0 0 1px var(--medalla-color)}
+.medalla.is-lejos{opacity:.9}
+@media(max-width:520px){
+  .medallero{grid-template-columns:repeat(auto-fill,minmax(136px,1fr));gap:10px}
+  .medalla-disco{width:62px;height:62px}
+  .medalla-icono{font-size:1.6rem}
+}
+
+/* El cartel de logro, con el eco de su rareza (achievements/celebracion.js). El disco entra girando
+   una sola vez; `.reduced` —y la regla global de data-motion="reduce"— lo dejan quieto para quien
+   pidió menos movimiento, sin perder nada de la información. */
+.achievement-toast-count{margin:6px 0 0;color:var(--muted);font-size:var(--fs-xs);font-weight:800;
+  font-variant-numeric:tabular-nums}
+.achievement-toast .medalla-gira{animation:medalla-entra .6s cubic-bezier(.34,1.4,.64,1) both}
+.achievement-toast.reduced .medalla-gira{animation:none}
+@keyframes medalla-entra{
+  from{transform:rotate(-220deg) scale(.4);opacity:0}
+  to{transform:rotate(0) scale(1);opacity:1}}
+/* El marco del cartel también dice la rareza, con los mismos cuatro colores que el medallero. */
+.achievement-toast.rarity-comun{border-bottom-color:var(--line-strong)}
+.achievement-toast.rarity-poco-comun{border-bottom-color:var(--sea)}
+.achievement-toast.rarity-raro{border-bottom-color:var(--bark)}
+.achievement-toast.rarity-legendario{border-bottom-color:var(--brass)}
