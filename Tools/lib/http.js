@@ -72,24 +72,64 @@ async function getText(host, pathQuery, options = {}) {
   throw ultimoError;
 }
 
+/*
+ * La conexión cortada a media respuesta era un FALLO EN VERDE, y del peor tipo.
+ *
+ * `res` emite `end` cuando el cuerpo llega entero. Cuando la conexión se corta a mitad —lo hace el
+ * proxy de salida, y lo hace sin avisar— `res` emite `aborted` y `close`, y `req` **no** emite
+ * `error`. Sin un manejador para eso, la promesa se queda pendiente para siempre; y una promesa
+ * pendiente no sostiene el bucle de eventos de node, así que **el proceso termina solo, con código
+ * 0 y sin imprimir nada**. `req.setTimeout` tampoco salva: es un temporizador de inactividad del
+ * socket, y un socket destruido no está inactivo, está cerrado.
+ *
+ * El resultado desde fuera es indistinguible de haber terminado bien: `echo $?` dice 0 y no hay ni
+ * una línea en stderr. Así se descargó el barrido de GBIF de Carrascoy y El Valle —97.362
+ * ocurrencias en su bbox— **cortado en la página 34 de 325**, y el catálogo del espacio se
+ * construyó sobre ese trozo sin que nada lo dijera.
+ *
+ * Con esto, un corte pasa a ser un error de red normal y corriente: `getText` lo reintenta como
+ * cualquier 429 o 503, y si los reintentos se agotan, sale por donde tiene que salir — una
+ * excepción que se ve.
+ */
 function unaPeticion(host, pathQuery, headers, timeoutMs) {
   return new Promise((resolve, reject) => {
+    // Una promesa solo se resuelve una vez; sin este pestillo, el `close` que sigue a un `end`
+    // normal rechazaría una petición que ya ha ido bien.
+    let resuelta = false;
+    const ok = (v) => { if (!resuelta) { resuelta = true; resolve(v); } };
+    const falla = (e) => { if (!resuelta) { resuelta = true; reject(e); } };
+
     const req = https.get({ host, path: pathQuery, headers }, (res) => {
       // Se acumula en Buffer y se decodifica al final: partir un carácter multibyte entre dos
       // trozos es imposible así, y `getBuffer` puede reutilizar la misma ruta para binarios.
       const trozos = [];
-      res.on('data', (c) => trozos.push(c));
+      let recibido = 0;
+      res.on('data', (c) => { trozos.push(c); recibido += c.length; });
       res.on('end', () => {
         const body = Buffer.concat(trozos).toString('utf8');
         if (res.statusCode < 200 || res.statusCode >= 300) {
-          reject(new HttpError(res.statusCode, host, pathQuery, body));
+          falla(new HttpError(res.statusCode, host, pathQuery, body));
           return;
         }
-        resolve({ status: res.statusCode, headers: res.headers, body });
+        ok({ status: res.statusCode, headers: res.headers, body });
       });
+      // El cuerpo se cortó antes de llegar entero. Se dice cuánto llegó y cuánto se esperaba: la
+      // diferencia es lo que distingue un corte de red de una respuesta legítimamente vacía.
+      const cortada = () => {
+        const esperado = res.headers['content-length'];
+        falla(new Error(
+          `conexión cortada a media respuesta de ${host}${String(pathQuery).slice(0, 120)}: ` +
+          `${recibido} B recibidos${esperado ? ` de ${esperado}` : ''} sin fin de cuerpo`));
+      };
+      res.on('aborted', cortada);
+      res.on('close', cortada);
     });
     req.setTimeout(timeoutMs, () => req.destroy(new Error(`timeout (${timeoutMs} ms) en ${host}${String(pathQuery).slice(0, 120)}`)));
-    req.on('error', reject);
+    req.on('error', falla);
+    // Red de seguridad: si el socket se cierra antes de que llegue a haber respuesta, tampoco puede
+    // quedarse la promesa colgando.
+    req.on('close', () => falla(new Error(
+      `conexión cerrada sin respuesta de ${host}${String(pathQuery).slice(0, 120)}`)));
   });
 }
 

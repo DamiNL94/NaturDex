@@ -261,6 +261,18 @@ function etiquetaConservacion(normas, iucnGlobal) {
 // paréntesis, a media frase, la mayúscula inicial sobra. Solo la primera letra, y solo si es letra.
 const minuscula = (s) => String(s).replace(/^\p{Lu}/u, (c) => c.toLowerCase());
 
+// Primera oración de una nota, sin paréntesis y sin el punto final. Un punto seguido de espacio y
+// mayúscula cierra oración, salvo cuando el punto es el de una abreviatura: las notas están llenas
+// de «subsp.», «var.» y «n.º», y cortar ahí parte el nombre por la mitad.
+const ABREVIATURAS = /\b(subsp|ssp|var|subvar|f|cf|aff|n|art|núm|pág|s|Sr|Sra|Dr|ed|coord|vol)\.$/i;
+function primeraOracion(s) {
+  const sinParentesis = String(s).replace(/\s*\([^)]*\)/g, '').trim();
+  const trozos = sinParentesis.split(/(?<=\.)\s+(?=[A-ZÁÉÍÓÚ¿«])/);
+  let out = trozos[0];
+  for (let i = 1; i < trozos.length && ABREVIATURAS.test(out); i++) out += ' ' + trozos[i];
+  return out.replace(/\.$/, '').trim();
+}
+
 function fuenteDelAnexo(sel) {
   const a = sel.anexoNormativo;
   if (!a) return null;
@@ -274,7 +286,13 @@ function fuenteDelAnexo(sel) {
     partes.push(`, que la cita como «${a.citadaComo}»`);
     // La salvedad de la entrada del anexo. Sin ella, un nombre mal impreso en el boletín —«Falco
     // tunninculus», «Milaria calandra»— parece una errata de NaturDex y no de la norma.
-    if (a.nota) partes.push(` (${minuscula(a.nota).replace(/\.$/, '')})`);
+    //
+    // Solo la PRIMERA oración, y sin sus paréntesis: la nota del anexo puede llevar detrás la
+    // verificación contra GBIF y la fecha en que se hizo, que son para quien mantiene el dato y no
+    // para quien lee la ficha. Meterla entera producía un paréntesis dentro de otro y un `source`
+    // de treinta líneas.
+    const nota = a.nota ? primeraOracion(a.nota) : null;
+    if (nota) partes.push(` (${minuscula(nota)})`);
   }
   if (a.categoria) partes.push(`, con la categoría «${a.categoria}»`);
   return partes.join('');

@@ -14,7 +14,7 @@ Total: **4**.
 
 | Nombre científico | Clase | Ocurrencias GBIF | Hábitats | Evidencia | Estado legal (IEPNB) |
 |---|---|---|---|---|---|
-| *Saxicola torquatus* | Aves | 48 | 5 | observada_gbif | — |
-| *Thapsia scabra* | Magnoliopsida | 24 | 4 | observada_gbif | — |
-| *Pistacia saportae* | Magnoliopsida | 24 | 4 | observada_gbif | — |
-| *Caroxylon genistoides* | Magnoliopsida | 9 | 3 | observada_gbif | — |
+| *Saxicola torquatus* | Aves | 10 | 5 | observada_gbif, anexo_normativo | — |
+| *Thapsia scabra* | Magnoliopsida | 6 | 4 | observada_gbif | — |
+| *Pistacia saportae* | Magnoliopsida | 6 | 4 | observada_gbif | — |
+| *Caroxylon genistoides* | Magnoliopsida | 3 | 3 | observada_gbif | — |

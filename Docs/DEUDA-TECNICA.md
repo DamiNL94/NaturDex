@@ -139,13 +139,20 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     siguiente import. Por eso `validate` lo da como **aviso y no como error**: bloquear el commit por
     una deuda que solo se salda tocando la BD dejaría el repo sin red de seguridad para todo lo demás.
     Es un rato de trabajo, pero hay que hacerlo en el mismo paso que la carga de SQL pendiente.
-18. **Sierra de la Pila y Carrascoy y El Valle siguen construidos sobre la métrica de mosaico.** Los
-    dos cerraron su Capa 3 **antes** del 2026-08-15 (c), que es cuando se descubrió que
-    `gbif-habitats.js` sumaba las ocurrencias **por hábitat** y los recintos del Atlas —que son
-    mosaicos de varios códigos— las multiplicaban. Su selección se hizo con el umbral viejo sobre la
-    cuenta inflada, así que puede haber fichas sostenidas por un solo registro sin que nada lo diga:
-    en El Carche, regenerarlo con la métrica corregida **podó cinco**. Se paga igual que allí —volcado
-    de GBIF nuevo, `species:seleccion`, `species:build --podar`— y de paso conviene **transcribir su
-    anexo normativo**, que ninguno de los dos tiene: el PRUG de Sierra de la Pila sí enumera especies
-    (el PORN de Carrascoy tiene tres inventarios y ninguno es de especies, así que ése quedará con un
-    «no hay» de primera mano). Ver ESTADO.md, §"2026-08-15 (h)".
+18. **Carrascoy y El Valle está construido con el 41 % de los datos de GBIF.** No es solo la
+    métrica de mosaico —que también, porque cerró antes del 2026-08-15 (c)—: su bbox tiene **97.362
+    ocurrencias** y el barrido se hizo con `--max-occ` en su valor por defecto, **40.000**, que
+    **trunca por offset** y por tanto no es una muestra al azar. La herramienta ya no tiene que
+    paginar el rectángulo: desde el 2026-08-16 le pide a GBIF el filtro espacial con el límite
+    oficial (97.362 → 29.915), pero el paginado profundo de GBIF cuesta decenas de segundos por
+    página y la descarga no cabe en una sesión corta. Se paga con paciencia: volcado nuevo,
+    `species:seleccion`, `species:build --podar` y `park:sql`. **Sierra de la Pila ya está hecha**
+    (2026-08-16): allí la métrica corregida podó cuatro fichas que se sostenían sobre un solo
+    registro. Ver ESTADO.md, §2026-08-16.
+19. **El PORN de Carrascoy y El Valle no tiene inventario de especies, y conviene que conste.** Sus
+    tres inventarios —§3.1.2.3 lugares de interés geológico, §3.3 hitos paisajísticos y §4.4 Tabla 8
+    de yacimientos— son los que desbloquearon su Fase 3, y ninguno enumera fauna ni flora. Mientras
+    no esté escrito en `data/normativa-espacios.json`, cada sesión que mire este espacio volverá a
+    abrir el PDF para averiguar lo mismo. Un `encontrado: true` con `inventarioDeEspecies: false`
+    ahorra esa búsqueda, y es la misma regla que ya aplica el anexo normativo: **un espacio sin
+    entrada no es un espacio sin anexo, es un anexo no consultado**.

@@ -2068,7 +2068,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 18 ocurrencias dentro de los polígonos de hábitat del espacio (10 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Arctostaphylos uva-ursi subsp. grossi» (la norma la cita con subespecie, «Arctostaphylos uva-ursi subsp. grossi»; el backbone de GBIF no reconoce ese trinomio y la resuelve a Arctostaphylos uva-ursi (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 18 ocurrencias dentro de los polígonos de hábitat del espacio (10 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Arctostaphylos uva-ursi subsp. grossi» (el backbone de GBIF no reconoce ese trinomio y la resuelve a Arctostaphylos uva-ursi); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2119,7 +2119,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 18 ocurrencias dentro de los polígonos de hábitat del espacio (10 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Pinus nigra subsp. salzmanii» (la norma la cita con subespecie, «Pinus nigra subsp. salzmanii»; el backbone de GBIF no reconoce ese trinomio y la resuelve a Pinus nigra (consultado 2026-08-15)), con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 18 ocurrencias dentro de los polígonos de hábitat del espacio (10 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Pinus nigra subsp. salzmanii» (el backbone de GBIF no reconoce ese trinomio y la resuelve a Pinus nigra), con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2697,7 +2697,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 6 ocurrencias dentro de los polígonos de hábitat del espacio (9 hábitats; barrido de 2026-08-15); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Genista pumila» (la norma la cita como «Genista pumila»; el backbone de GBIF lo trata como sinónimo de Genista versicolor (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 6 ocurrencias dentro de los polígonos de hábitat del espacio (9 hábitats; barrido de 2026-08-15); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Genista pumila» (el backbone de GBIF lo trata como sinónimo de Genista versicolor); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2964,7 +2964,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 4 ocurrencias dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Ceterach officinarum» (la norma la cita como «Ceterach officinarum»; el backbone de GBIF lo trata como sinónimo de Asplenium ceterach (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 4 ocurrencias dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Ceterach officinarum» (el backbone de GBIF lo trata como sinónimo de Asplenium ceterach); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -3175,7 +3175,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 4 ocurrencias dentro de los polígonos de hábitat del espacio (9 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Sanguisorba ancistroides» (la norma la cita como «Sanguisorba ancistroides»; el backbone de GBIF lo trata como sinónimo de Poterium ancistroides (consultado 2026-08-15)), con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 4 ocurrencias dentro de los polígonos de hábitat del espacio (9 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Sanguisorba ancistroides» (el backbone de GBIF lo trata como sinónimo de Poterium ancistroides), con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -3278,7 +3278,7 @@
         "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
       },
       "featured": false,
-      "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Piptatherum paradoxum» (la norma la cita como «Piptatherum paradoxum»; el backbone de GBIF lo trata como sinónimo de Achnatherum paradoxum (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Piptatherum paradoxum» (el backbone de GBIF lo trata como sinónimo de Achnatherum paradoxum); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -3377,7 +3377,7 @@
         "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
       },
       "featured": false,
-      "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (7 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Arenaria valentina» (la norma la cita como «Arenaria valentina»; el backbone de GBIF lo trata como sinónimo de Arenaria grandiflora (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (7 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Arenaria valentina» (el backbone de GBIF lo trata como sinónimo de Arenaria grandiflora); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -4445,7 +4445,7 @@
         "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
       },
       "featured": false,
-      "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Acinos arvensis» (la norma la cita como «Acinos arvensis»; el backbone de GBIF lo trata como sinónimo de Clinopodium acinos (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Acinos arvensis» (el backbone de GBIF lo trata como sinónimo de Clinopodium acinos); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -6410,7 +6410,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (9 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Sedum dasyphyllum var. gladuliferum» (la norma la cita con subespecie, «Sedum dasyphyllum var. gladuliferum»; el backbone de GBIF no reconoce ese trinomio y la resuelve a Sedum dasyphyllum (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (9 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Sedum dasyphyllum var. gladuliferum» (el backbone de GBIF no reconoce ese trinomio y la resuelve a Sedum dasyphyllum); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -7358,7 +7358,7 @@
         "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Artemisia campestres subsp. glutinosa» (la tabla escribe «campestres»; el epíteto al uso es campestris. Errata de la tabla: se lee «campestres» por campestris. Además, el backbone de GBIF no reconoce el trinomio y lo resuelve a Artemisia campestris (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Artemisia campestres subsp. glutinosa» (la tabla escribe «campestres»; el epíteto al uso es campestris); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -7507,7 +7507,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-15); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Astragalus alopecuroides subsp. grosii» (la norma la cita con subespecie, «Astragalus alopecuroides subsp. grosii»; el backbone de GBIF no reconoce ese trinomio y la resuelve a Astragalus alopecuroides (consultado 2026-08-15)), con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-15); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Astragalus alopecuroides subsp. grosii» (el backbone de GBIF no reconoce ese trinomio y la resuelve a Astragalus alopecuroides), con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -8438,7 +8438,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Coronilla lotoides» (la norma la cita como «Coronilla lotoides»; el backbone de GBIF lo trata como sinónimo de Coronilla minima (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Coronilla lotoides» (el backbone de GBIF lo trata como sinónimo de Coronilla minima); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -8731,7 +8731,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Erophila verna» (la norma la cita como «Erophila verna»; el backbone de GBIF lo trata como sinónimo de Draba verna (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Erophila verna» (el backbone de GBIF lo trata como sinónimo de Draba verna); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -8779,7 +8779,7 @@
         "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Ecbalium elaterium subsp. dioicum» (errata de la tabla: se lee «Ecbalium» por Ecballium. Además, el backbone de GBIF no reconoce el trinomio y lo resuelve a Ecballium elaterium (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Ecbalium elaterium subsp. dioicum» (errata de la tabla: se lee «Ecbalium» por Ecballium); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -9604,7 +9604,7 @@
         "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Haplophyllum linifolium subsp. rosmarinifolium» (la norma la cita con subespecie, «Haplophyllum linifolium subsp. rosmarinifolium»; el backbone de GBIF no reconoce ese trinomio y la resuelve a Haplophyllum rosmarinifolium (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Haplophyllum linifolium subsp. rosmarinifolium» (el backbone de GBIF no reconoce ese trinomio y la resuelve a Haplophyllum rosmarinifolium); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -9951,7 +9951,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Avenula bromoides subsp. pauneroi» (la norma la cita con subespecie, «Avenula bromoides subsp. pauneroi»; el backbone de GBIF no reconoce ese trinomio y la resuelve a Helictochloa bromoides (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Avenula bromoides subsp. pauneroi» (el backbone de GBIF no reconoce ese trinomio y la resuelve a Helictochloa bromoides); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -10484,7 +10484,7 @@
         "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Cardaria draba» (la norma la cita como «Cardaria draba»; el backbone de GBIF lo trata como sinónimo de Lepidium draba (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Cardaria draba» (el backbone de GBIF lo trata como sinónimo de Lepidium draba); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -10783,7 +10783,7 @@
         "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Asterolinon linum-stellatum» (la norma la cita como «Asterolinon linum-stellatum»; el backbone de GBIF lo trata como sinónimo de Lysimachia linum-stellatum (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Asterolinon linum-stellatum» (el backbone de GBIF lo trata como sinónimo de Lysimachia linum-stellatum); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -10931,7 +10931,7 @@
         "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Trigonella polyceratia» (la norma la cita como «Trigonella polyceratia»; el backbone de GBIF lo trata como sinónimo de Medicago polyceratia (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Trigonella polyceratia» (el backbone de GBIF lo trata como sinónimo de Medicago polyceratia); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -11270,7 +11270,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Nepeta hepetella subsp. murcica» (errata de la tabla: se lee «hepetella» por nepetella. Además, el backbone de GBIF no reconoce el trinomio y lo resuelve a Nepeta nepetella (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Nepeta hepetella subsp. murcica» (errata de la tabla: se lee «hepetella» por nepetella); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -11371,7 +11371,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (2 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Cheilanthes acrostica» (la norma la cita como «Cheilanthes acrostica»; el backbone de GBIF lo trata como sinónimo de Oeosporangium pteridioides (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (2 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Cheilanthes acrostica» (el backbone de GBIF lo trata como sinónimo de Oeosporangium pteridioides); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -11568,7 +11568,7 @@
         "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Cynoglossum cheirifolium» (la norma la cita como «Cynoglossum cheirifolium»; el backbone de GBIF lo trata como sinónimo de Pardoglossum cheirifolium (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Cynoglossum cheirifolium» (el backbone de GBIF lo trata como sinónimo de Pardoglossum cheirifolium); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -11858,7 +11858,7 @@
         "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (2 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Podarcis hispánica» (la tabla escribe el epíteto en castellano («hispánica»); el binomio al uso es Podarcis hispanicus. Errata de la tabla: se lee «hispánica» por hispanicus, sin tilde y en masculino); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (2 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Podarcis hispánica» (la tabla escribe el epíteto en castellano; el binomio al uso es Podarcis hispanicus); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -12048,7 +12048,7 @@
         "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (2 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Scorzonera hispanica» (la norma la cita como «Scorzonera hispanica»; el backbone de GBIF lo trata como sinónimo de Pseudopodospermum hispanicum (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (2 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Scorzonera hispanica» (el backbone de GBIF lo trata como sinónimo de Pseudopodospermum hispanicum); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -18192,7 +18192,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Carduelis spinus» (la norma la cita como «Carduelis spinus»; el backbone de GBIF lo trata como sinónimo de Spinus spinus (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen III §2.2 (PRUG del Parque Regional «Sierra del Carche»), BORM n.º 103, de 6 de mayo de 2025: la norma la enumera en el inventario de especies del propio Parque Regional, que es el espacio de esta ficha, que la cita como «Carduelis spinus» (el backbone de GBIF lo trata como sinónimo de Spinus spinus); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",

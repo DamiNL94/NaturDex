@@ -198,7 +198,7 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Pica pica* | Aves | 3 | 1 | 1 | observada_gbif | sierra-de-el-carche |
 | *Aquila chrysaetos* | Aves | 3 | 1 | 2 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Galerida theklae* | Aves | 3 | 2 | 2 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
-| *Sturnus unicolor* | Aves | 3 | 2 | 1 | observada_gbif, anexo_normativo | sierra-de-la-pila |
+| *Sturnus unicolor* | Aves | 3 | 2 | 1 | observada_gbif, anexo_normativo | sierra-de-el-carche |
 | *Pistacia lentiscus* | Magnoliopsida | 3 | 2 | 1 | observada_gbif | cabo-cope-puntas-calnegre |
 | *Ptyonoprogne rupestris* | Aves | 3 | 1 | 2 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Sarcocapnos enneaphylla* | Magnoliopsida | 2 | 1 | 1 | observada_gbif, anexo_normativo | — |

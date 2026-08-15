@@ -1,6 +1,6 @@
 # sierra-de-el-carche · selección de especies
 
-Generada el 2026-08-15. **340 aprobadas** (95 aves), 216 ya fichadas en otro espacio y 124 nuevas. 163 excluidas.
+Generada el 2026-08-15. **340 aprobadas** (95 aves), 217 ya fichadas en otro espacio y 123 nuevas. 163 excluidas.
 
 Atlas 2005 consultado: 651 especies características para los HIC de este espacio.
 
@@ -38,7 +38,7 @@ La norma del espacio dice que están aquí; el barrido de GBIF no las ha encontr
 | *Osyris alba* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
 | *Pistacia terebinthus* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
 | *Potentilla caulescens* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
-| *Rhamnus hispanorum* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | La norma la cita como «Rhamnus hispanorum»; el backbone de GBIF lo trata como sinónimo de Rhamnus lycioides (consultado 2026-08-15). |
+| *Rhamnus hispanorum* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | El backbone de GBIF lo trata como sinónimo de Rhamnus lycioides (consultado 2026-08-15). |
 | *Rhamnus pumilus* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | El backbone de GBIF no resuelve este nombre a rango específico: devuelve la familia Rhamnaceae, y tampoco reconoce Rhamnus pumila (consultado 2026-08-15). Sin nombre verificado no se escribe corrección, así que la entrada queda sin cruzar con GBIF. |
 | *Sarcocapnos enneaphylla subsp. saetabensis* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
 | *Tamarix canariensis* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
@@ -304,8 +304,8 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Caroxylon genistoides* | Magnoliopsida | 1 | 4 | 1 | observada_gbif, anexo_normativo | — |
 | *Ceropegia munbyana* | Magnoliopsida | 1 | 2 | 1 | observada_gbif, anexo_normativo | — |
 | *Spinus spinus* | Aves | 1 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
-| *Ruscus aculeatus* | Liliopsida | 1 | 3 | 1 | observada_gbif, anexo_normativo | — |
-| *Podarcis hispanicus* | Squamata | 1 | 2 | 1 | observada_gbif, anexo_normativo | — |
+| *Ruscus aculeatus* | Liliopsida | 1 | 3 | 1 | observada_gbif, anexo_normativo | sierra-de-la-pila |
+| *Podarcis hispanicus* | Squamata | 1 | 2 | 1 | observada_gbif, anexo_normativo | sierra-de-la-pila |
 | *Teucrium franchetianum* | Magnoliopsida | 1 | 3 | 1 | observada_gbif, caracteristica, protegida, anexo_normativo | monte-arabi |
 | *Anthyllis lagascana* | Magnoliopsida | 1 | 4 | 1 | observada_gbif, protegida | monte-arabi |
 | *Rosa canina* | Magnoliopsida | 1 | 3 | 1 | observada_gbif, anexo_normativo | — |
@@ -324,7 +324,7 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Conopodium majus* | Magnoliopsida | 1 | 4 | 1 | observada_gbif, anexo_normativo | — |
 | *Erigeron bonariensis* | Magnoliopsida | 1 | 4 | 1 | observada_gbif, anexo_normativo | — |
 | *Cosentinia vellea* | Polypodiopsida | 1 | 2 | 1 | observada_gbif, caracteristica, anexo_normativo | carrascoy-y-el-valle |
-| *Echinaria capitata* | Liliopsida | 1 | 4 | 1 | observada_gbif, anexo_normativo | sierra-de-la-pila |
+| *Echinaria capitata* | Liliopsida | 1 | 4 | 1 | observada_gbif, anexo_normativo | — |
 | *Euphorbia nicaeensis* | Magnoliopsida | 1 | 4 | 1 | observada_gbif, anexo_normativo | — |
 | *Helianthemum squamatum* | Magnoliopsida | 1 | 4 | 1 | observada_gbif, caracteristica | carrascoy-y-el-valle |
 | *Helichrysum serotinum* | Magnoliopsida | 1 | 4 | 1 | observada_gbif, anexo_normativo | — |

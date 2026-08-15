@@ -1,6 +1,6 @@
 # sierra-de-salinas · selección de especies
 
-Generada el 2026-08-15. **119 aprobadas** (79 aves), 108 ya fichadas en otro espacio y 11 nuevas. 177 excluidas.
+Generada el 2026-08-15. **119 aprobadas** (79 aves), 109 ya fichadas en otro espacio y 10 nuevas. 177 excluidas.
 
 Atlas 2005 consultado: 591 especies características para los HIC de este espacio.
 
@@ -236,7 +236,7 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Cistus atriplicifolius* | Magnoliopsida | 2 | 4 | 1 | observada_gbif | carrascoy-y-el-valle |
 | *Iberis saxatilis* | Magnoliopsida | 2 | 4 | 1 | observada_gbif | — |
 | *Campanula rapunculus* | Magnoliopsida | 2 | 4 | 1 | observada_gbif | — |
-| *Pseudopodospermum hispanicum* | Magnoliopsida | 2 | 4 | 1 | observada_gbif | — |
+| *Pseudopodospermum hispanicum* | Magnoliopsida | 2 | 4 | 1 | observada_gbif | sierra-de-el-carche |
 | *Rumex intermedius* | Magnoliopsida | 2 | 4 | 1 | observada_gbif | — |
 | *Ranunculus gramineus* | Magnoliopsida | 2 | 4 | 1 | observada_gbif | — |
 | *Viburnum tinus* | Magnoliopsida | 2 | 4 | 1 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |

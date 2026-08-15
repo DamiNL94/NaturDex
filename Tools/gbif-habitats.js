@@ -126,12 +126,113 @@ const httpGetJson = (pathQuery) => require('./lib/http').getJson(gbif.HOST, path
 // un corte cuesta esas páginas y no la pasada entera.
 const PAGINAS_POR_VOLCADO = 10;
 
-async function downloadOccurrences(bbox, cacheFile, previo) {
+/*
+ * El bbox de un parque grande no se puede paginar, y por eso el catálogo salía truncado.
+ *
+ * El bbox de Carrascoy y El Valle tiene **97.362 ocurrencias** —es un rectángulo que se come media
+ * huerta de Murcia—, que a 300 por página son 325 páginas, y GBIF cobra el paginado profundo: la
+ * página del offset 10.000 tarda 37 s. La descarga no termina nunca. Lo que se hizo la primera vez
+ * fue dejar `--max-occ` en su valor por defecto, 40.000, que **trunca por offset**: el catálogo del
+ * espacio se construyó con el 41 % de los datos y con el sesgo de que el offset no es una muestra al
+ * azar.
+ *
+ * Se arregla pidiéndole el filtro espacial a GBIF en vez de traerse el rectángulo entero. GBIF acepta
+ * `geometry=<WKT>`, con dos exigencias que no perdona: el anillo tiene que estar **cerrado** y
+ * orientado **antihorario** —22 de los 51 recintos de Carrascoy salían del `.shp` en horario y
+ * devolvían 400—. El límite oficial trae 2.100 vértices y no cabe en una URL, así que se simplifica
+ * con Douglas-Peucker hasta un puñado y **se simplifica siempre hacia fuera**: lo que se manda es un
+ * superconjunto del límite, nunca un recorte. Quien decide de verdad si una ocurrencia cuenta sigue
+ * siendo el punto-en-polígono LOCAL contra cada hábitat, que no ha cambiado; esto solo evita
+ * descargar la mitad de la Región.
+ *
+ * En Carrascoy: 97.362 → 29.915. Si GBIF rechaza la geometría, se vuelve al bbox **diciéndolo**.
+ */
+const EPSILON_SIMPLIFICADO = 0.001;   // ~90 m: suficiente para bajar de 2.100 vértices a ~130
+const MAX_VERTICES_WKT = 200;         // por encima, la URL se va de tamaño
+
+function simplifica(pts, eps) {
+  if (pts.length < 3) return pts;
+  const dist = (q, a, b) => {
+    const dx = b[0] - a[0], dy = b[1] - a[1], L = dx * dx + dy * dy;
+    if (!L) return Math.hypot(q[0] - a[0], q[1] - a[1]);
+    let t = ((q[0] - a[0]) * dx + (q[1] - a[1]) * dy) / L;
+    t = Math.max(0, Math.min(1, t));
+    return Math.hypot(q[0] - (a[0] + t * dx), q[1] - (a[1] + t * dy));
+  };
+  let idx = 0, max = 0;
+  for (let i = 1; i < pts.length - 1; i++) {
+    const d = dist(pts[i], pts[0], pts[pts.length - 1]);
+    if (d > max) { max = d; idx = i; }
+  }
+  if (max <= eps) return [pts[0], pts[pts.length - 1]];
+  return simplifica(pts.slice(0, idx + 1), eps).slice(0, -1).concat(simplifica(pts.slice(idx), eps));
+}
+
+/** Casco convexo (Andrew). Se usa cuando el límite tiene varios anillos: un WKT es un polígono. */
+function cascoConvexo(pts) {
+  const cruz = (o, a, b) => (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0]);
+  const s = [...pts].sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+  const bajo = [], alto = [];
+  for (const q of s) { while (bajo.length >= 2 && cruz(bajo[bajo.length - 2], bajo[bajo.length - 1], q) <= 0) bajo.pop(); bajo.push(q); }
+  for (const q of [...s].reverse()) { while (alto.length >= 2 && cruz(alto[alto.length - 2], alto[alto.length - 1], q) <= 0) alto.pop(); alto.push(q); }
+  return bajo.slice(0, -1).concat(alto.slice(0, -1));
+}
+
+/** WKT de un anillo, cerrado y antihorario, que es lo único que GBIF acepta. */
+function wktAntihorario(pts) {
+  let area = 0;
+  for (let i = 0; i < pts.length; i++) {
+    const [x1, y1] = pts[i], [x2, y2] = pts[(i + 1) % pts.length];
+    area += x1 * y2 - x2 * y1;
+  }
+  const p = area < 0 ? [...pts].reverse() : pts;
+  const ultimo = p[p.length - 1];
+  const cerrado = (p[0][0] === ultimo[0] && p[0][1] === ultimo[1]) ? p : p.concat([p[0]]);
+  return `POLYGON((${cerrado.map(c => `${c[0].toFixed(4)} ${c[1].toFixed(4)}`).join(',')}))`;
+}
+
+/** El WKT con el que pedirle a GBIF que filtre, o null si no se puede construir uno razonable. */
+function geometriaDelLimite(boundaryPath) {
+  if (!boundaryPath || !fs.existsSync(boundaryPath)) return null;
+  const g = JSON.parse(fs.readFileSync(boundaryPath, 'utf8'));
+  const anillos = [];
+  for (const f of g.features || [g]) {
+    const geo = f.geometry || f;
+    if (geo.type === 'Polygon') anillos.push(geo.coordinates[0]);
+    else if (geo.type === 'MultiPolygon') for (const poly of geo.coordinates) anillos.push(poly[0]);
+  }
+  if (!anillos.length) return null;
+  // Un solo anillo se simplifica; varios se envuelven en su casco convexo, que es un superconjunto
+  // (se descarga de más, nunca de menos) y cabe en un único WKT.
+  let pts = anillos.length === 1 ? simplifica(anillos[0], EPSILON_SIMPLIFICADO)
+    : simplifica(cascoConvexo(anillos.flat()), EPSILON_SIMPLIFICADO);
+  if (pts.length > MAX_VERTICES_WKT) pts = cascoConvexo(pts);
+  return pts.length >= 4 ? wktAntihorario(pts) : null;
+}
+
+async function downloadOccurrences(bbox, cacheFile, previo, geometria) {
   const margin = 0.001;
   const latR = `${(bbox.minY - margin).toFixed(5)},${(bbox.maxY + margin).toFixed(5)}`;
   const lonR = `${(bbox.minX - margin).toFixed(5)},${(bbox.maxX + margin).toFixed(5)}`;
-  const base = `/v1/occurrence/search?hasCoordinate=true&hasGeospatialIssue=false` +
+  const porBbox = `/v1/occurrence/search?hasCoordinate=true&hasGeospatialIssue=false` +
     `&decimalLatitude=${encodeURIComponent(latR)}&decimalLongitude=${encodeURIComponent(lonR)}`;
+  let base = porBbox;
+  if (geometria) {
+    const porGeometria = `/v1/occurrence/search?hasCoordinate=true&hasGeospatialIssue=false` +
+      `&geometry=${encodeURIComponent(geometria)}`;
+    try {
+      const prueba = await httpGetJson(`${porGeometria}&limit=0`);
+      const enBbox = await httpGetJson(`${porBbox}&limit=0`);
+      console.log(`Filtro espacial en el servidor: ${prueba.count} ocurrencias en el límite oficial ` +
+        `(${enBbox.count} en el bbox; se ahorran ${Math.max(0, enBbox.count - prueba.count)}).`);
+      base = porGeometria;
+    } catch (e) {
+      // Un «no se pudo» que se ve: si GBIF rechaza la geometría, la descarga sigue por bbox, pero
+      // nadie puede confundir eso con no haberlo intentado.
+      console.error(`⚠ GBIF rechaza la geometría del límite (${String(e.message).slice(0, 120)}).\n` +
+        '  Se descarga por bbox, que en un espacio grande puede no terminar. Revisa el WKT.');
+    }
+  }
   const first = await httpGetJson(`${base}&limit=0`);
   const total = Math.min(first.count || 0, MAX_OCC);
 
@@ -178,7 +279,7 @@ async function downloadOccurrences(bbox, cacheFile, previo) {
   return { total: first.count || 0, capped: (first.count || 0) > MAX_OCC, occ };
 }
 
-async function getOccurrences(park, bbox) {
+async function getOccurrences(park, bbox, geometria) {
   const cacheFile = path.join(REPO_ROOT, `gbif-cache-${park.slug}.json`);
   let previo = null;
   if (fs.existsSync(cacheFile)) {
@@ -190,7 +291,7 @@ async function getOccurrences(park, bbox) {
       return previo;
     }
   }
-  const data = await downloadOccurrences(bbox, cacheFile, REFRESH ? null : previo);
+  const data = await downloadOccurrences(bbox, cacheFile, REFRESH ? null : previo, geometria);
   console.log(`Descargadas y cacheadas en ${path.basename(cacheFile)}.`);
   return data;
 }
@@ -212,9 +313,15 @@ function main() {
   console.log(`Parque: ${park.name} (${park.slug}) · ${habitats.length} hábitats`);
   const bbox = bboxOf(habitats.flatMap(h => h.polys));
 
-  getOccurrences(park, bbox).then(({ total, capped, occ }) => {
+  // El filtro espacial se le pide a GBIF sobre el LÍMITE OFICIAL, no sobre el bbox. `--bbox` vuelve
+  // al comportamiento viejo, que en un espacio grande no termina.
+  const geometria = flag('bbox') ? null : geometriaDelLimite(park.boundaryPath);
+  if (!geometria && !flag('bbox'))
+    console.error('⚠ Sin geometría del límite utilizable: se descarga por bbox. En un espacio grande puede no terminar.');
+
+  getOccurrences(park, bbox, geometria).then(({ total, capped, occ }) => {
     const used = occ.filter(passUncertainty);
-    console.log(`GBIF: ${total} en bbox${capped ? ` (limitado a ${MAX_OCC})` : ''}; ${used.length} tras filtro de incertidumbre` +
+    console.log(`GBIF: ${total} descargadas${capped ? ` (limitado a ${MAX_OCC})` : ''}; ${used.length} tras filtro de incertidumbre` +
       `${MAX_UNCERT != null ? ` (≤ ${MAX_UNCERT} m${DROP_UNKNOWN ? ', descartando desconocidas' : ', desconocidas incluidas'})` : ' (sin filtro)'}.\n`);
 
     // Point-in-polygon.

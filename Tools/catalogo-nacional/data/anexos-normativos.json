@@ -45,7 +45,7 @@
           "scientificName": "Acinos arvensis",
           "grupo": "Flora",
           "nombreCorregido": "Clinopodium acinos",
-          "nota": "La norma la cita como «Acinos arvensis»; el backbone de GBIF lo trata como sinónimo de Clinopodium acinos (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF lo trata como sinónimo de Clinopodium acinos (consultado 2026-08-15)."
         },
         {
           "scientificName": "Alyssum alyssoides",
@@ -101,7 +101,7 @@
           "scientificName": "Arctostaphylos uva-ursi subsp. grossi",
           "grupo": "Flora",
           "nombreCorregido": "Arctostaphylos uva-ursi",
-          "nota": "La norma la cita con subespecie, «Arctostaphylos uva-ursi subsp. grossi»; el backbone de GBIF no reconoce ese trinomio y la resuelve a Arctostaphylos uva-ursi (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF no reconoce ese trinomio y la resuelve a Arctostaphylos uva-ursi (consultado 2026-08-15)."
         },
         {
           "scientificName": "Arenaria leptoclados",
@@ -119,7 +119,7 @@
           "scientificName": "Arenaria valentina",
           "grupo": "Flora",
           "nombreCorregido": "Arenaria grandiflora",
-          "nota": "La norma la cita como «Arenaria valentina»; el backbone de GBIF lo trata como sinónimo de Arenaria grandiflora (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF lo trata como sinónimo de Arenaria grandiflora (consultado 2026-08-15)."
         },
         {
           "scientificName": "Aristida coerulescens",
@@ -184,14 +184,14 @@
           "scientificName": "Asterolinon linum-stellatum",
           "grupo": "Flora",
           "nombreCorregido": "Lysimachia linum-stellatum",
-          "nota": "La norma la cita como «Asterolinon linum-stellatum»; el backbone de GBIF lo trata como sinónimo de Lysimachia linum-stellatum (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF lo trata como sinónimo de Lysimachia linum-stellatum (consultado 2026-08-15)."
         },
         {
           "scientificName": "Astragalus alopecuroides subsp. grosii",
           "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
           "grupo": "Flora",
           "nombreCorregido": "Astragalus alopecuroides",
-          "nota": "La norma la cita con subespecie, «Astragalus alopecuroides subsp. grosii»; el backbone de GBIF no reconoce ese trinomio y la resuelve a Astragalus alopecuroides (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF no reconoce ese trinomio y la resuelve a Astragalus alopecuroides (consultado 2026-08-15)."
         },
         {
           "scientificName": "Astragalus sesameus",
@@ -205,7 +205,7 @@
           "scientificName": "Avenula bromoides subsp. pauneroi",
           "grupo": "Flora",
           "nombreCorregido": "Helictochloa bromoides",
-          "nota": "La norma la cita con subespecie, «Avenula bromoides subsp. pauneroi»; el backbone de GBIF no reconoce ese trinomio y la resuelve a Helictochloa bromoides (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF no reconoce ese trinomio y la resuelve a Helictochloa bromoides (consultado 2026-08-15)."
         },
         {
           "scientificName": "Brachypodium retusum",
@@ -243,7 +243,7 @@
           "scientificName": "Cardaria draba",
           "grupo": "Flora",
           "nombreCorregido": "Lepidium draba",
-          "nota": "La norma la cita como «Cardaria draba»; el backbone de GBIF lo trata como sinónimo de Lepidium draba (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF lo trata como sinónimo de Lepidium draba (consultado 2026-08-15)."
         },
         {
           "scientificName": "Carex halleriana",
@@ -285,7 +285,7 @@
           "scientificName": "Ceterach officinarum",
           "grupo": "Flora",
           "nombreCorregido": "Asplenium ceterach",
-          "nota": "La norma la cita como «Ceterach officinarum»; el backbone de GBIF lo trata como sinónimo de Asplenium ceterach (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF lo trata como sinónimo de Asplenium ceterach (consultado 2026-08-15)."
         },
         {
           "scientificName": "Chaenorrhinum crassifolium",
@@ -306,7 +306,7 @@
           "scientificName": "Cheilanthes acrostica",
           "grupo": "Flora",
           "nombreCorregido": "Oeosporangium pteridioides",
-          "nota": "La norma la cita como «Cheilanthes acrostica»; el backbone de GBIF lo trata como sinónimo de Oeosporangium pteridioides (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF lo trata como sinónimo de Oeosporangium pteridioides (consultado 2026-08-15)."
         },
         {
           "scientificName": "Chiliadenus glutinosus",
@@ -340,7 +340,7 @@
           "scientificName": "Coronilla lotoides",
           "grupo": "Flora",
           "nombreCorregido": "Coronilla minima",
-          "nota": "La norma la cita como «Coronilla lotoides»; el backbone de GBIF lo trata como sinónimo de Coronilla minima (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF lo trata como sinónimo de Coronilla minima (consultado 2026-08-15)."
         },
         {
           "scientificName": "Cosentinia vellea",
@@ -354,7 +354,7 @@
           "scientificName": "Cynoglossum cheirifolium",
           "grupo": "Flora",
           "nombreCorregido": "Pardoglossum cheirifolium",
-          "nota": "La norma la cita como «Cynoglossum cheirifolium»; el backbone de GBIF lo trata como sinónimo de Pardoglossum cheirifolium (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF lo trata como sinónimo de Pardoglossum cheirifolium (consultado 2026-08-15)."
         },
         {
           "scientificName": "Cytinus hypocistis",
@@ -434,7 +434,7 @@
           "scientificName": "Erophila verna",
           "grupo": "Flora",
           "nombreCorregido": "Draba verna",
-          "nota": "La norma la cita como «Erophila verna»; el backbone de GBIF lo trata como sinónimo de Draba verna (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF lo trata como sinónimo de Draba verna (consultado 2026-08-15)."
         },
         {
           "scientificName": "Eruca vesicaria",
@@ -488,7 +488,7 @@
           "scientificName": "Genista pumila",
           "grupo": "Flora",
           "nombreCorregido": "Genista versicolor",
-          "nota": "La norma la cita como «Genista pumila»; el backbone de GBIF lo trata como sinónimo de Genista versicolor (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF lo trata como sinónimo de Genista versicolor (consultado 2026-08-15)."
         },
         {
           "scientificName": "Genista scorpius",
@@ -520,7 +520,7 @@
           "scientificName": "Haplophyllum linifolium subsp. rosmarinifolium",
           "grupo": "Flora",
           "nombreCorregido": "Haplophyllum rosmarinifolium",
-          "nota": "La norma la cita con subespecie, «Haplophyllum linifolium subsp. rosmarinifolium»; el backbone de GBIF no reconoce ese trinomio y la resuelve a Haplophyllum rosmarinifolium (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF no reconoce ese trinomio y la resuelve a Haplophyllum rosmarinifolium (consultado 2026-08-15)."
         },
         {
           "scientificName": "Helianthemum apenninum",
@@ -795,7 +795,7 @@
           "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
           "grupo": "Flora",
           "nombreCorregido": "Pinus nigra",
-          "nota": "La norma la cita con subespecie, «Pinus nigra subsp. salzmanii»; el backbone de GBIF no reconoce ese trinomio y la resuelve a Pinus nigra (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF no reconoce ese trinomio y la resuelve a Pinus nigra (consultado 2026-08-15)."
         },
         {
           "scientificName": "Pinus pinaster",
@@ -806,7 +806,7 @@
           "scientificName": "Piptatherum paradoxum",
           "grupo": "Flora",
           "nombreCorregido": "Achnatherum paradoxum",
-          "nota": "La norma la cita como «Piptatherum paradoxum»; el backbone de GBIF lo trata como sinónimo de Achnatherum paradoxum (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF lo trata como sinónimo de Achnatherum paradoxum (consultado 2026-08-15)."
         },
         {
           "scientificName": "Pistacia lentiscus",
@@ -889,7 +889,7 @@
           "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
           "grupo": "Flora",
           "nombreCorregido": "Rhamnus lycioides",
-          "nota": "La norma la cita como «Rhamnus hispanorum»; el backbone de GBIF lo trata como sinónimo de Rhamnus lycioides (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF lo trata como sinónimo de Rhamnus lycioides (consultado 2026-08-15)."
         },
         {
           "scientificName": "Rhamnus lycioides",
@@ -925,7 +925,7 @@
           "scientificName": "Salsola genistoides",
           "grupo": "Flora",
           "nombreCorregido": "Caroxylon genistoides",
-          "nota": "La norma la cita como «Salsola genistoides»; el backbone de GBIF lo trata como sinónimo de Caroxylon genistoides (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF lo trata como sinónimo de Caroxylon genistoides (consultado 2026-08-15)."
         },
         {
           "scientificName": "Salsola kali",
@@ -936,13 +936,13 @@
           "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
           "grupo": "Flora",
           "nombreCorregido": "Poterium ancistroides",
-          "nota": "La norma la cita como «Sanguisorba ancistroides»; el backbone de GBIF lo trata como sinónimo de Poterium ancistroides (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF lo trata como sinónimo de Poterium ancistroides (consultado 2026-08-15)."
         },
         {
           "scientificName": "Sanguisorba rupicola",
           "grupo": "Flora",
           "nombreCorregido": "Poterium rupicolum",
-          "nota": "La norma la cita como «Sanguisorba rupicola»; el backbone de GBIF lo trata como sinónimo de Poterium rupicolum (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF lo trata como sinónimo de Poterium rupicolum (consultado 2026-08-15)."
         },
         {
           "scientificName": "Sarcocapnos enneaphylla subsp. saetabensis",
@@ -970,7 +970,7 @@
           "scientificName": "Scorzonera hispanica",
           "grupo": "Flora",
           "nombreCorregido": "Pseudopodospermum hispanicum",
-          "nota": "La norma la cita como «Scorzonera hispanica»; el backbone de GBIF lo trata como sinónimo de Pseudopodospermum hispanicum (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF lo trata como sinónimo de Pseudopodospermum hispanicum (consultado 2026-08-15)."
         },
         {
           "scientificName": "Sedum acre",
@@ -984,7 +984,7 @@
           "scientificName": "Sedum dasyphyllum var. gladuliferum",
           "grupo": "Flora",
           "nombreCorregido": "Sedum dasyphyllum",
-          "nota": "La norma la cita con subespecie, «Sedum dasyphyllum var. gladuliferum»; el backbone de GBIF no reconoce ese trinomio y la resuelve a Sedum dasyphyllum (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF no reconoce ese trinomio y la resuelve a Sedum dasyphyllum (consultado 2026-08-15)."
         },
         {
           "scientificName": "Sedum sediforme",
@@ -1109,7 +1109,7 @@
           "scientificName": "Trigonella polyceratia",
           "grupo": "Flora",
           "nombreCorregido": "Medicago polyceratia",
-          "nota": "La norma la cita como «Trigonella polyceratia»; el backbone de GBIF lo trata como sinónimo de Medicago polyceratia (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF lo trata como sinónimo de Medicago polyceratia (consultado 2026-08-15)."
         },
         {
           "scientificName": "Ulmus minor",
@@ -1275,7 +1275,7 @@
           "scientificName": "Carduelis spinus",
           "grupo": "Aves",
           "nombreCorregido": "Spinus spinus",
-          "nota": "La norma la cita como «Carduelis spinus»; el backbone de GBIF lo trata como sinónimo de Spinus spinus (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF lo trata como sinónimo de Spinus spinus (consultado 2026-08-15)."
         },
         {
           "scientificName": "Cuculus canorus",
@@ -1813,7 +1813,7 @@
           "scientificName": "Carduelis spinus",
           "grupo": "Aves",
           "nombreCorregido": "Spinus spinus",
-          "nota": "La norma la cita como «Carduelis spinus»; el backbone de GBIF lo trata como sinónimo de Spinus spinus (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF lo trata como sinónimo de Spinus spinus (consultado 2026-08-15)."
         },
         {
           "scientificName": "Cercotrichas galactotes",
@@ -2077,7 +2077,7 @@
           "scientificName": "Parus caeruleus",
           "grupo": "Aves",
           "nombreCorregido": "Cyanistes caeruleus",
-          "nota": "La norma la cita como «Parus caeruleus»; el backbone de GBIF lo trata como sinónimo de Cyanistes caeruleus (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF lo trata como sinónimo de Cyanistes caeruleus (consultado 2026-08-15)."
         },
         {
           "scientificName": "Parus cristatus",
@@ -2318,7 +2318,7 @@
           "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
           "grupo": "Flora",
           "nombreCorregido": "Colutea arborescens",
-          "nota": "La norma la cita como «Colutea hispanica»; el backbone de GBIF lo trata como sinónimo de Colutea arborescens (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF lo trata como sinónimo de Colutea arborescens (consultado 2026-08-15)."
         },
         {
           "scientificName": "Dictamnus hispanicus",
@@ -2345,7 +2345,7 @@
           "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
           "grupo": "Flora",
           "nombreCorregido": "Fritillaria lusitanica",
-          "nota": "La norma la cita como «Fritillaria hispanica»; el backbone de GBIF lo trata como sinónimo de Fritillaria lusitanica (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF lo trata como sinónimo de Fritillaria lusitanica (consultado 2026-08-15)."
         },
         {
           "scientificName": "Guillonea scabra",
@@ -2711,7 +2711,7 @@
           "categoria": "Migradora de llegada regular (Directiva Aves)",
           "grupo": "Aves",
           "nombreCorregido": "Chloris chloris",
-          "nota": "La norma la cita como «Carduelis chloris»; el backbone de GBIF lo trata como sinónimo de Chloris chloris (consultado 2026-08-15)."
+          "nota": "El backbone de GBIF lo trata como sinónimo de Chloris chloris (consultado 2026-08-15)."
         },
         {
           "scientificName": "Cercotrichas galactotes",
@@ -3368,6 +3368,1085 @@
         {
           "scientificName": "Ammotragus lervia",
           "nota": "El §3.2.4.2.2 la cita entre las alóctonas. Es la misma especie que ya se retiró del catálogo de Sierra Espuña el 2026-08-09 por invasora."
+        }
+      ]
+    },
+    "sierra-de-la-pila": {
+      "fuente": {
+        "norma": "Decreto n.º 43/2004, de 14 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de la Sierra de la Pila. El instrumento de gestión vigente es el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra de la Pila», que es el volumen III del Plan de Gestión Integral de los Espacios Protegidos de los relieves y cuencas centro-orientales de la Región de Murcia, de junio de 2018, publicado por la Dirección General de Medio Natural.",
+        "boletin": "BORM n.º 130, de 7 de junio de 2004 (PORN). El volumen III del plan de gestión lo publica el organismo gestor en murcianatural.carm.es; no se ha localizado un facsímil del anexo en el boletín.",
+        "url": "https://murcianatural.carm.es/documents/33032/40297/04PGI_CentroOriental_VOLUMEN3_PRUG/5a747ee7-1e84-a185-d952-e61a91fb557f",
+        "anexo": "Volumen III, §2.2 «Biodiversidad»: Tabla 7 (§2.2.1.2, 65 especies de flora de interés para su conservación, de las que 36 están en el Catálogo Regional —8 Vulnerable y 28 De Interés Especial—), Tabla 11 (§2.2.2.1, 13 especies de los anexos II y IV de la Directiva Hábitats: 8 mamíferos, 2 anfibios, 2 reptiles y 1 invertebrado), Tabla 12 (§2.2.2.2, 14 aves del anexo I de la Directiva Aves), Tabla 13 (§2.2.2.2, 48 aves migradoras de llegada regular) y Tabla 14 (§2.2.2.3, 104 «otras especies de interés para su conservación»). 244 taxones en total.",
+        "cita": "PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018)",
+        "ambito": "el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha",
+        "consultado": "2026-08-16",
+        "nota": "El inventario lo trae el PRUG, no el PORN: el Decreto 43/2004 es la norma que ordena los recursos naturales del espacio y el PRUG de 2018 es su instrumento de gestión vigente, y es éste el que enumera. Las cinco tablas cuadran una a una con las cifras que el propio texto declara —«36 están incluidas en el Catálogo Regional: 8 Vulnerable y 28 De Interés Especial» para la flora, «5 especies De Interés Especial» para las aves del anexo I—, que es la comprobación que se puede hacer sin salir del documento. La marca «PM» que llevan doce aves de la Tabla 13 es la llamada a la nota al pie «especie parcialmente migratoria» y NO forma parte del nombre: se retira del `scientificName` y se dice en la `nota` de cada una. Aquila fasciata NO se transcribe: el §2.2.2.2 la nombra solo como «área de potencial reintroducción o expansión» del plan de recuperación (Decreto 59/2016), que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas, El Carche y Monte Arabí. Las 64 entradas de coleópteros y lepidópteros de la Tabla 14 se transcriben igual que las demás: el alcance taxonómico del catálogo lo aplica después build-species-seleccion.js, y el anexo se copia entero."
+      },
+      "especies": [
+        {
+          "scientificName": "Aethionema ovalifolium",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Anagallis tenella",
+          "categoria": "Vulnerable (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Arbutus unedo",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Arctostaphylos uva-ursi subsp. crassifolia",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Arenaria aggregata",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Armeria bourgaei",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Asplenium rutamuraria subsp. rutamuraria",
+          "grupo": "Flora",
+          "nombreCorregido": "Asplenium ruta-muraria",
+          "nota": "Errata de la tabla: se lee «rutamuraria» por ruta-muraria, con guion. El backbone de GBIF resuelve el trinomio a Asplenium ruta-muraria (consultado 2026-08-16)."
+        },
+        {
+          "scientificName": "Aster sedifolius",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Astragalus alopecuroides subsp. grossi",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora",
+          "nombreCorregido": "Astragalus alopecuroides",
+          "nota": "El backbone de GBIF no reconoce ese nombre y lo resuelve a Astragalus alopecuroides (consultado 2026-08-16)."
+        },
+        {
+          "scientificName": "Bupleurum gibraltaricum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Campanula hispanica",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Campanula velutina",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora",
+          "nota": "El backbone de GBIF no resuelve este nombre a rango específico: devuelve el género Campanula (consultado 2026-08-16). Sin nombre verificado no se escribe corrección."
+        },
+        {
+          "scientificName": "Centaurea spachii",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Ceratonia siliqua",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Chaenorhinum rupestre",
+          "categoria": "Vulnerable (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Chamaerops humilis",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Colutea atlantica",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Colutea brevialata",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Colutea hispanica",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Cytinus ruber",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Ephedra fragilis desf. subsp. fragilis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Erinacea anthyllis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Erodium saxatile",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Euphorbia squamigera",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Genista mugronensis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Genista valentina",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Fritillaria hispanica",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Guillonea scabra",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Guiraoa arvensis",
+          "categoria": "Vulnerable (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Halimium atriplicifolium",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Hormatophylla spinosa",
+          "grupo": "Flora",
+          "nombreCorregido": "Hormathophylla spinosa",
+          "nota": "Errata de la tabla: se lee «Hormatophylla» por Hormathophylla."
+        },
+        {
+          "scientificName": "Iberis comosa Willd. subsp. hegelmaieri",
+          "grupo": "Flora",
+          "nota": "El backbone de GBIF no conoce Iberis comosa: al nombre verbatim y al binomio sin autoridad responde con Iberus cobosi, que es un CARACOL — una coincidencia difusa, no una sinonimia. Sin nombre verificado no se escribe corrección (consultado 2026-08-16)."
+        },
+        {
+          "scientificName": "Juniperus oxycedrus subsp. oxycedrus",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Juniperus phoenicea subsp. phoenicea",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Linaria cavanillesii",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Linaria spartea",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Lonicera implexa",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Lycocarpus fugax",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Nepeta mallophora (amethystina) subsp. microglandulosa",
+          "categoria": "Vulnerable (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Nerium oleander",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Olea europaea var. sylvestris",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Osyris alba",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Osyris lanceolata",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Osyris quadripartita",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Phillyrea angustifolia",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Pistacia lentiscus",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Pistacia terebinthus",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Pistacia x saportae",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Populus alba",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Quercus coccifera",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Quercus rotundifolia",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Rhamnus alaternus",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Rhamnus hispanorum",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Ruscus aculeatus",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Sarcocapnos enneaphylla subsp. saetabensis",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Saxifraga latepetiolata",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Tamarix boveana",
+          "categoria": "Vulnerable (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Tamarix canariensis",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Teucrium carolipaui",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Teucrium franchetianum",
+          "categoria": "Vulnerable (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Teucrium libanitis",
+          "categoria": "Vulnerable (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Thymus moroderi",
+          "categoria": "Vulnerable (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Ulmus minor",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Viburnum tinus",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Withania frutescens",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Atelerix algirus",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Eptesicus isabellinus",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Felis silvestris",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Miniopterus schreibersii",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Pipistrellus kuhlii",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Pipistrellus pipistrellus",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Pipistrellus pygmaeus",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Rhinolophus ferrumequinum",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Alytes obstetricans",
+          "grupo": "Anfibios"
+        },
+        {
+          "scientificName": "Bufo calamita",
+          "grupo": "Anfibios"
+        },
+        {
+          "scientificName": "Hemorrhois hippocrepis",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Podarcis hispanica",
+          "grupo": "Reptiles",
+          "nombreCorregido": "Podarcis hispanicus",
+          "nota": "Errata de la tabla: se lee «hispanica» por hispanicus, en masculino."
+        },
+        {
+          "scientificName": "Cerambyx cerdo",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Anthus campestris",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Aquila chrysaetos",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Bubo bubo",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Burhinus oedicnemus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Calandrella brachydactyla",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Caprimulgus europaeus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Circaetus gallicus",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Falco peregrinus",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Galerida theklae",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Hieraaetus pennatus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Lullula arborea",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Oenanthe leucura",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Pyrrhocorax pyrrhocorax",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Sylvia undata",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Accipiter nisus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Anthus pratensis",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Apus apus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Apus melba",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Buteo buteo",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Caprimulgus ruficollis",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Clamator glandarius",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Cuculus canorus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Delichon urbicum",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Erithacus rubecula",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Falco subbuteo",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Falco tinnunculus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Ficedula hypoleuca",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Hippolais pallida",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Hippolais polyglotta",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Hirundo daurica",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Hirundo rustica",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Jynx torquilla",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Lanius senador",
+          "grupo": "Aves",
+          "nombreCorregido": "Lanius senator",
+          "nota": "Errata de la tabla: se lee «senador» por senator."
+        },
+        {
+          "scientificName": "Luscinia megarhynchos",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Merops apiaster",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Motacilla alba",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Muscicapa striata",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Oenanthe hispanica",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Oenanthe oenanthe",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Oriolus oriolus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Otus scops",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Phoenicurus ochruros",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Phoenicurus phoenicurus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Phylloscopus bonelli",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Phylloscopus collybita",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Phylloscopus trochilus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Prunella collaris",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Prunella modularis",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Ptyonoprogne rupestris",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Regulus ignicapilla",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Regulus regulus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Saxicola torquata",
+          "grupo": "Aves",
+          "nota": "El nombre aceptado de la tarabilla común ibérica es Saxicola rubicola (verificado contra el backbone de GBIF el 2026-08-16). GBIF sirve también Saxicola torquatus, que es el mismo taxón.",
+          "nombreCorregido": "Saxicola rubicola"
+        },
+        {
+          "scientificName": "Sylvia cantillans",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Sylvia communis",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Sylvia conspicillata",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Sylvia hortensis",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Turdus iliacus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Turdus philomelos",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Turdus pilaris",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Turdus torquatus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Tyto alba",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Upupa epops",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Accipiter gentilis",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Aegithalos caudatus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Athene noctua",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Certhia brachydactyla",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Cettia cetti",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Cisticola juncidis",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Emberiza cia",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Emberiza cirlus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Galerida cristata",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Lanius meridionalis",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Lophophanes cristatus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Loxia curvirostra",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Monticola solitarius",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Parus major",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Periparus ater",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Petronia petronia",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Picus viridis",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Sitta europaea",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Strix aluco",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Sylvia melanocephala",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Troglodytes troglodytes",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Croccidura russula",
+          "grupo": "Mamiferos",
+          "nombreCorregido": "Crocidura russula",
+          "nota": "Errata de la tabla: se lee «Croccidura» por Crocidura."
+        },
+        {
+          "scientificName": "Erinaceus europaeus",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Genetta genetta",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Martes foina",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Meles meles",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Mustela nivalis",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Mustela putorius",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Sciurus vulgaris",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Suncus etruscus",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Pelodytes punctatus",
+          "grupo": "Anfibios"
+        },
+        {
+          "scientificName": "Pelophylax perezi",
+          "grupo": "Anfibios"
+        },
+        {
+          "scientificName": "Blanus cinereus",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Hemydactilus turcitus",
+          "grupo": "Reptiles",
+          "nombreCorregido": "Hemidactylus turcicus",
+          "nota": "Errata de la tabla: se lee «Hemydactilus turcitus» por Hemidactylus turcicus."
+        },
+        {
+          "scientificName": "Macroprotodon cucullatus",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Natrix maura",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Psammodromus algirus",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Psammodromus hispanicus",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Rhinechis scalaris",
+          "grupo": "Reptiles",
+          "nombreCorregido": "Zamenis scalaris",
+          "nota": "El backbone de GBIF lo trata como sinónimo de Zamenis scalaris (consultado 2026-08-16)."
+        },
+        {
+          "scientificName": "Timon lepidus",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Aethiesa floralis",
+          "grupo": "Invertebrados",
+          "nombreCorregido": "Aethiessa floralis",
+          "nota": "Errata de la tabla: se lee «Aethiesa» por Aethiessa."
+        },
+        {
+          "scientificName": "Agapanthia annularis",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Agapanthia irrorata",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Amathitis rufescens",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Anoxia australis",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Bolbelasmus bocchus",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Calosoma sycophanta",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Cetonia carthami",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Charaxes jasius",
+          "grupo": "Invertebrados",
+          "nota": "La Tabla 14 lo repite dos veces, una entre los coleópteros (n.º 49) y otra entre los lepidópteros (n.º 81); es un lepidóptero. Se transcribe una sola vez."
+        },
+        {
+          "scientificName": "Dinodes decipiens",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Dromius chobauti",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Dromius meridionalis",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Euserica seguraza",
+          "grupo": "Invertebrados",
+          "nombreCorregido": "Euserica segurana",
+          "nota": "Errata de la tabla: se lee «seguraza» por segurana."
+        },
+        {
+          "scientificName": "Glaresis hispana",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Hadrocarabus lusitanicus helluo",
+          "grupo": "Invertebrados",
+          "nombreCorregido": "Carabus lusitanicus",
+          "nota": "El backbone de GBIF no reconoce ese nombre y lo resuelve a Carabus lusitanicus (consultado 2026-08-16)."
+        },
+        {
+          "scientificName": "Hoplia farinosa",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Iberodorcadion fuentei",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Iberodorcadion mucidum",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Iberodorcadion sutulare",
+          "grupo": "Invertebrados",
+          "nombreCorregido": "Iberodorcadion suturale",
+          "nota": "Errata de la tabla: se lee «sutulare» por suturale."
+        },
+        {
+          "scientificName": "Icosium tomentosum",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Macrothorax rugosus levantinus",
+          "grupo": "Invertebrados",
+          "nombreCorregido": "Carabus rugosus",
+          "nota": "El backbone de GBIF no reconoce ese nombre y lo resuelve a Carabus rugosus (consultado 2026-08-16)."
+        },
+        {
+          "scientificName": "Monochamus galloprovincialis",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Nacerdes baebare",
+          "grupo": "Invertebrados",
+          "nota": "El backbone de GBIF no resuelve este nombre a rango específico: devuelve el género Nacerdes (consultado 2026-08-16)."
+        },
+        {
+          "scientificName": "Netocia morio",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Oryctes nasicornis",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Oxypleurus nodieri",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Penichroa fasciata",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Pentodon algerinum",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Philorhizus putzeysi",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Poecilus crenatus",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Poecilus kugelanni",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Polyphylla fullo",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Potosia opaca",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Pseudopercus guiraoi",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Singilis alternans",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Thorectes albarracinus",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Trimosternus ariasiy",
+          "grupo": "Invertebrados",
+          "nombreCorregido": "Trymosternus ariasi",
+          "nota": "Errata de la tabla: se lee «Trimosternus ariasiy» por Trymosternus ariasi."
+        },
+        {
+          "scientificName": "Trox perlatus hispanicus",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Verperus fuentei",
+          "grupo": "Invertebrados",
+          "nombreCorregido": "Vesperus fuentei",
+          "nota": "Errata de la tabla: se lee «Verperus» por Vesperus."
+        },
+        {
+          "scientificName": "Xanthochronia auberti",
+          "grupo": "Invertebrados",
+          "nombreCorregido": "Xanthochroina auberti",
+          "nota": "Errata de la tabla: se lee «Xanthochronia» por Xanthochroina."
+        },
+        {
+          "scientificName": "Dipluriella loti",
+          "grupo": "Invertebrados",
+          "nota": "El backbone de GBIF no resuelve este nombre a rango específico: devuelve el género Dipluriella (consultado 2026-08-16)."
+        },
+        {
+          "scientificName": "Euchloe tagis",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Hyles livornica",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Hyponephele lycaon",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Iphiclides feisthamelii",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Lysandra albicans",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Macrotilacea rubi",
+          "grupo": "Invertebrados",
+          "nota": "El backbone de GBIF no conoce este nombre ni en su forma verbatim (consultado 2026-08-16)."
+        },
+        {
+          "scientificName": "Melanargia ines",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Melanargia occitania",
+          "grupo": "Invertebrados",
+          "nombreCorregido": "Melanargia occitanica",
+          "nota": "Errata de la tabla: se lee «occitania» por occitanica."
+        },
+        {
+          "scientificName": "Melitaea didyma",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Pandoriana pandora",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Pieris mannii",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Plebejus argus",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Portetria dispar",
+          "grupo": "Invertebrados",
+          "nombreCorregido": "Lymantria dispar",
+          "nota": "Errata de la tabla: se lee «Portetria» por Porthetria, que es sinónimo de Lymantria dispar (verificado contra el backbone de GBIF el 2026-08-16)."
+        },
+        {
+          "scientificName": "Saturnia pyri",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Syntaracus pirithous",
+          "grupo": "Invertebrados",
+          "nombreCorregido": "Leptotes pirithous",
+          "nota": "Errata de la tabla: se lee «Syntaracus» por Syntarucus, sinónimo de Leptotes pirithous (verificado contra el backbone de GBIF el 2026-08-16)."
+        },
+        {
+          "scientificName": "Zegris eupheme",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Zerynthia rumina",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Zizeeria knysna",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Zygaena fausta",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Zygaena lavandulae",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Zygaena occitanica",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Zygaena radhamanthus",
+          "grupo": "Invertebrados",
+          "nombreCorregido": "Zygaena rhadamanthus",
+          "nota": "Errata de la tabla: se lee «radhamanthus» por rhadamanthus."
         }
       ]
     }
