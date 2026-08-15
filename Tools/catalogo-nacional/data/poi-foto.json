@@ -2,7 +2,6 @@
   "_comment": "Archivo de Commons elegido a mano para un punto de interés. Lo lee Tools/catalogo-nacional/poi-images.js como vía 0, antes que la categoría. Formato: <slug del espacio> → <id del POI> → \"Nombre del archivo.jpg\". Un POI que no figure aquí se resuelve por la cadena normal, que es el caso habitual.",
   "_porque": "Cuando hay varias fotos válidas del mismo sitio, el script se queda con la primera por orden alfabético del nombre del archivo, y ese orden no tiene nada que ver con cuál ilustra mejor el sitio. Cuál es la buena es un juicio visual que una heurística sobre nombres no puede hacer. Esto lo deja anotado en el repositorio, versionado y revisable, en vez de a mano en el park.json, que es justo lo que no se debe tocar.",
   "_no_relaja_nada": "El archivo elegido pasa por las mismas dos comprobaciones que cualquier otro: licencia de lista blanca (CC0, dominio público, CC BY, CC BY-SA) y carga real de la URL. Si no las pasa, se anota como descartado y la cadena sigue como si no estuviera anotado.",
-
   "cuatro-calas": {
     "_comment": "Elegidas mirando las 40 fotos de la categoría del espacio una a una el 2026-08-09. Las que salían por orden alfabético eran correctas de sitio pero malas de imagen: cielos grises, primeros planos de arena y de algas.",
     "vulcanismo-de-la-carolina": "Entrada a la Cala La Carolina.jpg",
@@ -10,7 +9,6 @@
     "conglomerados-de-cuatro-calas": "Cuatro Calas Murcia.jpg",
     "playa-de-calarreona": "Calarreona, lado sur, en Las Cuatro Calas.JPG"
   },
-
   "carrascoy-y-el-valle": {
     "_comment": "La categoría del espacio en Commons («Parque regional de Carrascoy y El Valle») tiene solo 4 archivos propios, así que la cadena automática se quedaba con fotos de PANELES INFORMATIVOS —correctas de sitio, inútiles como ilustración— o sin candidata. Elegidas el 2026-08-10 por nombre de archivo y ficha de Commons, no por inspección visual, y todas con licencia de lista blanca.",
     "santuario-de-la-fuensanta": "Santuario de la Fuensanta, Murcia.JPG",
@@ -21,5 +19,9 @@
     "_mirador-del-relojero": "Un mirador se ilustra con lo que se ve desde él.",
     "mirador-del-relojero": "Vistas desde el Pico Relojero.jpg",
     "cumbre-de-carrascoy": "Sierradecarrascoy.JPG"
+  },
+  "sierra-de-salinas": {
+    "_comment": "Elegida el 2026-08-15 por COORDENADA, no por nombre: es el único archivo de Commons cuya geoetiqueta cae dentro del límite oficial (a 5 m del POI). La cadena automática se quedaba con «Monolito Capilla.jpg», que no está geoetiquetado y cuyo sitio solo lo avalaba la categoría —insuficiente en este espacio, ver poi-alias.json—.",
+    "capilla-del-fraile": "VG nº 87059 La Capilla.jpg"
   }
 }

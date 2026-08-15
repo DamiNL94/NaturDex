@@ -1,7 +1,6 @@
 {
   "_comment": "Nombres alternativos con los que buscar la foto de un punto de interés en Commons. Los lee Tools/catalogo-nacional/poi-images.js y SOLO los aplica dentro de la categoría de Commons del espacio (vía 1), nunca en el buscador: allí la categoría ya garantiza el sitio, así que un topónimo corto es seguro. Formato: <slug del espacio> → <id del POI> → [nombres]. Un POI que no figure aquí se busca solo por su `name`, que es el caso normal. Añadir un alias no relaja ninguna comprobación: la licencia sigue siendo lista blanca y la candidata sigue teniendo que cargar.",
   "_porque": "El nombre con el que un POI está dado de alta sale de la fuente que lo sitúa (casi siempre OpenStreetMap o el IELIG) y no tiene por qué ser el que use quien subió la foto. Cuando no coinciden, poi-images.js no encuentra nada aunque la foto esté delante: mencionaSitio exige que TODAS las palabras con peso del nombre estén en el nombre del archivo.",
-
   "cuatro-calas": {
     "_comment": "El IELIG y Commons escriben «Cocederos»; OpenStreetMap, «Cocedores». Documentado en Docs/rollout/n3-cuatro-calas-sierra-espuna.md §5 como trampa conocida.",
     "playa-de-los-cocedores": [
@@ -21,7 +20,6 @@
       "Calarreona"
     ]
   },
-
   "sierra-espuna": {
     "_comment": "Los alias de una sola palabra (Malvariche, Azaraque, Turullón) son topónimos que no se repiten y que dentro de la categoría del parque no pueden traer otra cosa.",
     "santuario-de-santa-eulalia": [
@@ -60,5 +58,14 @@
     "capilla-de-la-virgen-del-rocio": [
       "Virgen del Rocío"
     ]
+  },
+  "sierra-de-salinas": {
+    "_comment": "ATENCIÓN con este espacio: su categoría de Commons es la del MACIZO ENTERO, que está partido entre Yecla (Murcia) y Villena (Alicante). La premisa del §4.6 —«un archivo dentro de la categoría del espacio está en el espacio por construcción»— NO se cumple aquí, y hay que comprobar la geoetiqueta.",
+    "_caso": "Los quince archivos «Sierra de Salinas. Colonia …» retratan una colonia de VILLENA, geoetiquetada a 5,2-5,5 km del POI y FUERA del límite oficial. Con el alias «Colonia» el script los daba por buenos: el sitio parecía garantizado por la categoría y el nombre casaba. Es un falso positivo que solo caza la coordenada, y por eso este espacio se resuelve por geoetiqueta y no por nombre.",
+    "capilla-del-fraile": [
+      "La Capilla",
+      "Capilla"
+    ],
+    "_sin_alias": "Los otros seis POIs se quedan SIN alias a propósito: ninguno de los 63 archivos utilizables de Commons los retrata, y el geosearch a 1.500 m de cada uno no devuelve nada geoetiquetado salvo el vértice de la cumbre."
   }
 }
