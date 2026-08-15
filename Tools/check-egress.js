@@ -52,6 +52,19 @@ const HOSTS = [
   ['mapas.igme.es',                'IELIG: el servicio con las fichas de LIG (cascada de POIs)'],
   ['murcianatural.carm.es',        'fichas y cartografía del organismo gestor'],
   ['www.borm.es',                  'PORN y PRUG publicados'],
+
+  // --- Vía 3 de la cascada de POIs: BIC y patrimonio ---------------------------------------------
+  // Era la ÚNICA de las seis vías del §4.2 sin host registrado aquí, y se notaba: cuatro espacios
+  // (Carrascoy, Sierra de la Pila, El Carche y Sierra de Salinas) la dieron por «bloqueada» contra
+  // hosts que cada sesión escribía de memoria, sin que constara en ninguna parte cuáles eran los
+  // buenos. Registrarlos convierte «bloqueado» en un estado comprobable en diez segundos.
+  //
+  // El portal de la CARM (`www.carm.es`) NO se consulta: responde 302 a `validate.perfdrive.com`,
+  // un gestor de bots de Radware. Es el portal para personas y no se intenta rodear. La misma
+  // información sale del canal de datos abiertos, que es el que sí está pensado para máquinas.
+  ['datos.gob.es',                 'catálogo de datos abiertos: localiza el fichero de patrimonio de cada comunidad (API /apidata/)'],
+  ['nexo.carm.es',                 'datos abiertos de la CARM: «Monumentos en la Región de Murcia» en json/csv/rdf (vía 3 de POIs)'],
+  ['www.culturaydeporte.gob.es',   'registro estatal de BIC del Ministerio de Cultura (vía 3 de POIs)'],
   ['build.protomaps.com',          'mapa base sin conexión (tiles:build)'],
   ['build-metadata.protomaps.dev', 'versión del build de Protomaps'],
 

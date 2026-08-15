@@ -240,10 +240,32 @@ menos rango que la que sostiene el hecho.
 | 1 | **PORN / PRUG del espacio** (anexos de valores, documento previo, memoria informativa) | La lista *autorizada* de lo que el propio plan considera valioso | Casi nunca: nombra el paraje | Geológico, Paleontológico, Paisajístico, Natural |
 | 1b | **Zonificación del PORN/PRUG en el geoportal del IMIDA** (capas 31-39 de `PROYECTOS/OISMA`, solo Murcia) | Las zonas del plan con su categoría y su nombre oficial, y **con polígono** | **Sí**, pero de la zona, no del elemento | Sitúa dónde el plan manda a la gente (uso público) y dónde no |
 | 2 | **IELIG** — Inventario Español de Lugares de Interés Geológico (IGME) | LIG con código, nombre oficial e interés declarado (geomorfológico, estratigráfico, neotectónico…) | **Sí** | Geológico, Paleontológico |
-| 3 | **Registro de BIC y patrimonio** (Ministerio de Cultura + catálogo de la comunidad) | Torres, ermitas, castillos, aldeas, con su declaración | A veces solo el municipio | Cultural, Religioso, Arqueológico |
+| 3 | **BIC y patrimonio** — ver el recuadro de abajo: **el boletín oficial primero**, y el catálogo de datos abiertos de la comunidad para localizar la norma | Torres, ermitas, castillos, aldeas, con su declaración | A veces solo el municipio | Cultural, Religioso, Arqueológico |
 | 4 | **OpenStreetMap vía Overpass** (ODbL) | Topónimos y accesos, con la posición real del nodo | **Sí, exacta** | Los ocho tipos |
 | 5 | **Portal del organismo gestor / Wikipedia** | Contexto para redactar la descripción | No | — |
 | 6 | **Wikimedia Commons · `Frontend/Img/poi/`** | La foto, con autor y licencia | — | — |
+
+> **La vía 3, por dónde se entra de verdad.** Es la que más se ha dado por «bloqueada» sin haberla
+> buscado bien, así que va escrita:
+>
+> 1. **El boletín oficial es la fuente primaria.** Un bien es BIC **porque una norma lo declara**, y
+>    esa norma se publica en el boletín (BORM, BOE…). El registro es un índice *secundario* de lo que
+>    el boletín ya publicó, así que para el `source` de un POI la norma es **mejor** cita que el
+>    registro. `www.borm.es` está abierto: `/services/anuncio/ano/AAAA/numero/NNNN/pdf`, sin captcha.
+> 2. **Para localizar la norma**, el catálogo de datos abiertos: `datos.gob.es` tiene API en
+>    `/apidata/` y ahí están indexados los ficheros de patrimonio de cada comunidad. En Murcia,
+>    «Monumentos en la Región de Murcia» (publicador `A14002961`) en json/csv/rdf desde `nexo.carm.es`.
+> 3. **Wikidata `P808`** es la propiedad «código BIC» y admite geosearch: sirve para un «no hay» de
+>    primera mano y a veces trae la referencia de la declaración. Es un **sustituto**, y así debe
+>    constar en el `source`.
+> 4. **El portal `www.carm.es` NO se consulta**: responde 302 a un gestor de bots de Radware. Es el
+>    portal para personas y **no se rodea** — ni user-agents, ni huellas de navegador, ni resolver el
+>    desafío. Si una fuente pone un control de acceso, se busca su canal para máquinas o se anota el
+>    hueco.
+>
+> Y antes de escribir «bloqueado» en un informe: **el host tiene que estar en `check-egress.js`**.
+> Durante cuatro espacios esta vía fue la única de las seis sin ninguno registrado, y cada sesión
+> escribía la URL de memoria, la veía fallar y lo anotaba como propiedad comprobada de la fuente.
 
 **Consulta OSM de partida** (bbox del parque + margen, recorte posterior por polígono):
 
@@ -320,7 +342,9 @@ NO los toques. Lo único que se añade aquí es `pointsOfInterest`.
    a) PORN/PRUG del espacio: ¿hay anexo o apartado que enumere valores geológicos, culturales
       o paisajísticos? Cítame el documento y el apartado.
    b) IELIG (IGME): LIG cuyo polígono o punto caiga dentro del límite oficial.
-   c) BIC y patrimonio (Ministerio de Cultura + catálogo de <COMUNIDAD>) dentro del límite.
+   c) BIC y patrimonio dentro del límite, por el orden del recuadro del §4.2: boletín oficial,
+      catálogo de datos abiertos de <COMUNIDAD> vía datos.gob.es, y Wikidata P808 como sustituto.
+      Si dices que una fuente está cerrada, di CONTRA QUÉ HOST y compruébalo con `npm run red:check`.
    d) OpenStreetMap vía Overpass con las etiquetas del §4.2, recortado AL POLÍGONO.
    Si una fuente no da nada, dilo — un "no hay" documentado vale, y es el resultado que
    tuvieron Sierra Espuña y Cuatro Calas.

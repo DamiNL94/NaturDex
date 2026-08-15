@@ -92,7 +92,39 @@ Cada una costó una sesión de depuración. Léelas antes de repetirlas.
 - **`redirects=1` puede llevarte a otro reino**: de la gramínea *Sphenopus divaricatus* al artículo del
   género *Sphenopus*, que es **un zoantario**. Hay que rechazar el archivo que nombra el mismo género
   con otro epíteto.
+- **La categoría de Commons del espacio NO garantiza que el archivo esté en el espacio.** Es la
+  premisa sobre la que se apoya la resolución de fotos de POI, y **se rompe cuando la categoría es la
+  del accidente geográfico y el espacio protegido es solo un trozo**. `Category:Sierra de Salinas` es
+  la del macizo entero, partido entre Yecla (Murcia) y Villena (Alicante); los quince archivos
+  «Sierra de Salinas. Colonia …» retratan la colonia de **Villena**, geoetiquetada a **5,2–5,5 km del
+  POI y fuera del límite**, y con el alias que hacía falta para que el nombre casara entraban como
+  buenos. **Lo único que lo caza es comparar la geoetiqueta con el polígono.** Antes de fiarte de una
+  categoría, mira si el espacio comparte macizo, sierra o costa con otro término municipal.
 - **Revisa mirando la imagen**, no solo su licencia: es la única forma de cazar lo que ningún filtro caza.
+
+**Fuentes y acceso**
+
+- **El portal de la CARM está tras un gestor de bots y no se rodea.** `www.carm.es` contesta 302 a
+  `validate.perfdrive.com` (Radware). Es el portal **para personas**; que el dato de debajo sea
+  público no autoriza a evadir el control, y además no funcionaría —el host del desafío también está
+  fuera de la política de egreso—. **La ruta buena es el canal de datos abiertos**: `datos.gob.es`
+  tiene API (`/apidata/`) y ahí está indexado el fichero de la CARM «Monumentos en la Región de
+  Murcia» (publicador `A14002961`), servido en json, csv y rdf desde `nexo.carm.es`. **Sin verificar
+  todavía si trae el campo de declaración BIC**: `nexo.carm.es` está fuera de la lista blanca y hay
+  que abrirlo en los ajustes del entorno.
+- **La fuente primaria de un BIC es el boletín, no el registro.** Un bien lo es **porque una norma lo
+  declara**, y esa norma se publica en el BORM o en el BOE; el registro es un índice secundario de lo
+  que el boletín ya publicó. `www.borm.es` está abierto y su endpoint
+  `/services/anuncio/ano/AAAA/numero/NNNN/pdf` devuelve el PDF sin captcha. Su límite: sirve una norma
+  que **ya sabes localizar** —su portada es una SPA de 1,4 KB sin nada que rascar—, así que para pasar
+  de «esto parece BIC» a «lo declara la Orden X» sigue haciendo falta un índice.
+- **«Bloqueado» hay que decirlo contra un host escrito, no de memoria.** La vía 3 de la cascada de
+  POIs (BIC y patrimonio) fue durante cuatro espacios la única de las seis **sin host registrado en
+  `check-egress.js`**: cada sesión escribía la URL de memoria, la veía fallar y anotaba «bloqueado»
+  como si fuera una propiedad comprobada de la fuente. Los fallos de CONNECT son a nivel de host, así
+  que el veredicto de lo probado se sostenía — pero **nadie había verificado que fueran los hosts
+  correctos**, y `www.carm.es` estaba en pie todo el tiempo. Si añades una fuente a la cascada,
+  regístrala en `check-egress.js` **antes** de dar por cerrada una vía por su culpa.
 
 **GBIF**
 
