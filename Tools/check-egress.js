@@ -39,6 +39,11 @@ const HOSTS = [
   ['api.gbif.org',                 'ocurrencias por hábitat (gbif:habitats) y fotos de campo'],
   ['iepnb.gob.es',                 'EIDOS: taxonomía, UICN y estado legal'],
   ['geoportal.imida.es',           'límites oficiales de los espacios (n1:build, n1:refina)'],
+  // Faltaba desde el principio, y es la fuente de la Capa 2 entera: de aquí salen el shapefile del
+  // Atlas de Hábitats 2005 y su tabla de datos, una descarga por provincia. Sin él, `habitats:build`
+  // no tiene con qué trabajar y el informe daba «todo abierto» igualmente (destapado el 2026-08-15,
+  // al empezar Sierra de El Carche).
+  ['www.miteco.gob.es',            'cartografía de hábitats (Atlas 2005 y HIC 1997) por provincia'],
   // El IELIG son DOS hosts y hay que preguntar por los dos. `info.igme.es` sirve el visor, que es
   // HTML y no tiene los datos; las fichas de LIG salen del ArcGIS de `mapas.igme.es`. Con solo el
   // primero, el informe daba el IELIG por abierto y la cascada de POIs se estrellaba con un 403 del

@@ -18,5 +18,1542 @@
       ]
     }
   },
-  "espacios": {}
+  "espacios": {
+    "sierra-de-el-carche": {
+      "fuente": {
+        "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
+        "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
+        "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/76b76f2d-24fa-4639-997f-79cd31dab35d/04PGI%20Altiplano_VOLUMEN3.pdf?guest=true",
+        "anexo": "Volumen III, §2.2.1.3 «Listado de especies» (Tabla 2, inventario florístico: 244 taxones, de los que 38 están en el Catálogo Regional de Flora Silvestre Protegida —5 Vulnerable y 33 De Interés Especial—) y §2.2.2.2 «Inventario de fauna» (Tabla 6: 126 taxones — 14 mamíferos, 83 aves, 17 reptiles, 7 anfibios y 5 invertebrados).",
+        "consultado": "2026-08-15",
+        "nota": "El texto descargado es el del volumen III publicado por la Dirección General de Medio Natural (fechado en junio de 2018), que es el que el Decreto 28/2025 aprueba como volumen III. No se ha podido cotejar contra un facsímil del anexo publicado en el BORM: el anuncio 2033 solo sirve el articulado del decreto, que remite el inventario a los volúmenes del plan."
+      },
+      "especies": [
+        {
+          "scientificName": "Acinos arvensis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Alyssum alyssoides",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Alyssum linifolium",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Alyssum montanum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Amaranthus muricatus",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Amaranthus quitensis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Amaranthus viridis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Anthyllis cytisoides",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Anthyllis terniflora",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Anthyllis vulneraria subsp. gandogeri",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Arabis auriculata",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Arbutus unedo",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Arctostaphylos uva-ursi subsp. crassifolia",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Arctostaphylos uva-ursi subsp. grossi",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Arenaria leptoclados",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Arenaria montana subsp. intricata",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Arenaria serpyllifolia",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Arenaria valentina",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Aristida coerulescens",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Armeria bourgaei subsp. willkommiana",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Armeria filicaulis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Arrhenatherum elatius subsp. sardoum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Artemisia campestres subsp. glutinosa",
+          "grupo": "Flora",
+          "nota": "La tabla escribe «campestres»; el epíteto al uso es campestris."
+        },
+        {
+          "scientificName": "Artemisia herba-alba",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Asparagus horridus",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Asphodelus ayardii",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Asphodelus cerasiferus",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Asphodelus fistulosus",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Asplenium onopteris",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Asplenium petrarchae",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Asplenium trichomanes subsp. quadrivalens",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Asplenium trichomanes",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Asterolinon linum-stellatum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Astragalus alopecuroides subsp. grosii",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Astragalus sesameus",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Atractylis humilis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Avenula bromoides subsp. pauneroi",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Brachypodium retusum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Buglossoides arvensis subsp. arvensis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Bupleurum fruticescens",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Buxus sempervirens",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Calendula arvensis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Camelina microcarpa",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Caralluma munbyana subsp. hispanica",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora",
+          "nota": "La tabla la marca con # : especie catalogada NO incluida en el Formulario Red Natura 2000."
+        },
+        {
+          "scientificName": "Cardaria draba",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Carex halleriana",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Carrichtera annua",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Centaurea aspera",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Centaurea boissieri subsp. boissieri",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Centaurea boissieri subsp. mariolensis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Centaurea sicula",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Cerastium brachypetalum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Cerastium gracile",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Cerastium pumilum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Ceterach officinarum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Chaenorrhinum crassifolium",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Chamaerops humilis",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Chamaesyce prostrata",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Cheilanthes acrostica",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Chiliadenus glutinosus",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Cistus albidus",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Cistus clusii",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Cistus laurifolius",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Conopodium majus",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Conopodium thalictrifolium",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Conringia orientalis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Coronilla lotoides",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Cosentinia vellea",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Cuscuta epithymum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Cynoglossum cheirifolium",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Cytinus hypocistis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Daphne gnidium",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Dictamnus hispanicus",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Diplotaxis erucoides",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Draba hispanica",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Ecbalium elaterium subsp. dioicum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Echinaria capitata",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Ephedra fragilis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Ephedra nebrodensis",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Erica multiflora",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Erigeron bonariensis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Erigeron canadensis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Erinacea anthyllis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Erodium celtibericum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Erodium ciconium",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Erodium cicutarium",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Erodium saxatile",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Erophila verna",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Eruca vesicaria",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Eryngium campestre",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Euphorbia characias",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Euphorbia nicaeensis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Euphorbia serrata",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Festuca hystrix",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Festuca indigesta",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Fritillaria lusitanica",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Fumana ericifolia",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Fumana ericoides",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Fumana laevipes",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Fumaria parviflora",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Genista pumila",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Genista scorpius",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Geranium purpureum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Geranium rotundifolium",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Guillonea scabra",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Guiraoa arvensis",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Halimium atriplicifolium",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Haplophyllum linifolium subsp. rosmarinifolium",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Helianthemum apenninum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Helianthemum apenninum subsp. cavanillesianum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Helianthemum cinereum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Helianthemum cinereum subsp. rotundifolium",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Helianthemum hirtum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Helianthemum marifolium subsp. marifolium",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Helianthemum syriacum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Helianthemum violaceum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Helichrysum serotinum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Helichrysum stoechas",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Helictotrichon filifolium",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Herniaria fruticosa",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Hieracium loscosianum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Hirschfeldia incana",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Homathophylla spinosa",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Hornungia petrea",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Hypecoum procumbens",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Hypericum perforatum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Iberis carnosa subsp. hegelmaieri",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Iberis ciliata subsp. ciliata",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Jasione foliosa",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Juniperus oxycedrus subsp. oxycedrus",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Juniperus phoenicea subsp. phoenicea",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Jurinea humillis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Jurinea pinnata",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Kickxia lanigera",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Kickxia spuria subsp. integrifolia",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Lathyrus cicera",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Lavandula latifolia",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Lavandula multifida",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Limonium eugeniae",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Linaria cavanillesii",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Linum narbonense",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Linum strictum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Lithodora fruticosa",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Lobularia maritima",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Lonicera implexa",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Macrochloa tenacissima",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Marrubium alysson",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Marrubium vulgare",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Medicago rigidula",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Medicago sativa",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Melia azedarach",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Melilotus indicus",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Minuartia campestris",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Minuartia hamata",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Moricandia arvensis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Muscari neglectum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Nepeta hepetella subsp. murcica",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Neslia paniculata subsp. thracica",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Odontites viscosus",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Olea europaea var. sylvestris",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Ornithogalum narbonense",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Osyris alba",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Pallenis spinosa",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Paronychia aretioides",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Paronychia capitata",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Paronychia suffruticosa",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Phagnalon rupestre",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Phillyrea angustifolia",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Phlomis lychnitis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Pinus halepensis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Pinus nigra subsp. clusiana",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Pinus nigra subsp. salzmanii",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Pinus pinaster",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Piptatherum paradoxum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Pistacia lentiscus",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Pistacia terebinthus",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Plantago albicans",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Plantago sempervirens",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Platycanos spicata",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Poa flaccidula",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Polycarpon tetraphyllum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Polygala rupestris",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Portulaca oleracea",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Potentilla caulescens",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Quercus coccifera",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Quercus rotundifolia",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Rapistrum rugossum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Reseda lutea",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Reseda phyteuma",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Retama sphaerocarpa",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Rhamnus alaternus",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Rhamnus hispanorum",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Rhamnus lycioides",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Rhamnus pumilus",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Rhodalsine geniculata",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Ridolfia segetum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Rosa canina",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Rosmarinus officinalis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Ruscus aculeatus",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Salsola genistoides",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Salsola kali",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Sanguisorba ancistroides",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Sanguisorba rupicola",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Sarcocapnos enneaphylla subsp. saetabensis",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Satureja cuneifolia",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Saxifraga latepetiolata",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Scabiosa turolensis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Schismus barbatus",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Scorzonera hispanica",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Sedum acre",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Sedum album",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Sedum dasyphyllum var. gladuliferum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Sedum sediforme",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Seseli montanum subsp. granatense",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Sideritis bourgaeana",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Sideritis montana",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Silene mellifera",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Silene vulgaris",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Sisymbrium irio",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Sisymbrium orientale",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Sisymbrium runcinatum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Staehelina dubia",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Stellaria media",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Stipa lagascae",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Tamarix canariensis",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Teucrium capitatum subsp. gracillimum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Teucrium chamaedrys",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Teucrium franchetianum",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Teucrim homotrichum",
+          "grupo": "Flora",
+          "nota": "Errata de la tabla: se lee «Teucrim» por Teucrium homotrichum."
+        },
+        {
+          "scientificName": "Teucrium libanitis",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Teucrium leonis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Teucrium pseudochamaepitys",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Teucrium thymifolium",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Thesium humifusum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Thymus funkii subsp. funkii",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Thymus hyemalis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Thymus moroderi",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Thymus vulgaris",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Thymus zygis subsp. gracilis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Torilis arvensis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Trigonella polyceratia",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Ulmus minor",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Viburnum tinus",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Vicia peregrina",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Capra pyrenaica",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Crocidura russula",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Eliomys quercinus",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Eptesicus isabellinus",
+          "grupo": "Mamiferos",
+          "nota": "La tabla añade «(antes E. serotinus)»."
+        },
+        {
+          "scientificName": "Erinaceus europaeus",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Felis silvestris",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Genetta genetta",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Martes foina",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Meles meles",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Miniopterus schreibersii",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Pipistrellus kuhlii",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Pipistrellus pipistrellus",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Plecotus austriacus",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Suncus etruscus",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Anthus campestris",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Aquila chrysaetos",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Bubo bubo",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Burhinus oedicnemus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Calandrella brachydactyla",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Circaetus gallicus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Coracias garrulus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Falco peregrinus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Galerida theklae",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Hieraaetus pennatus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Lullula arborea",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Oenanthe leucura",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Pyrrhocorax pyrrhocorax",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Sylvia sarda",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Sylvia undata",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Accipiter nisus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Acrocephalus arundinaceus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Alauda arvensis",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Anthus pratensis",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Apus apus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Apus melba",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Caprimulgus ruficollis",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Carduelis spinus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Cuculus canorus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Delichon urbica",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Emberiza citrinella",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Erithacus rubecula",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Falco tinnunculus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Ficedula hypoleuca",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Fringilla coelebs",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Hippolais pallida",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Hippolais polyglotta",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Hirundo rustica",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Lanius senator",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Luscinia megarhynchos",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Merops apiaster",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Motacilla alba",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Muscicapa striata",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Oenanthe hispanica",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Oenanthe oenanthe",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Oriolus oriolus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Otus scops",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Passer montanus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Phoenicurus ochruros",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Phoenicurus phoenicurus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Phylloscopus bonelli",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Phylloscopus collybita",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Phylloscopus trochilus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Prunella collaris",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Prunella modularis",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Ptyonoprogne rupestris",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Regulus ignicapillus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Regulus regulus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Saxicola torquita",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Sylvia atricapilla",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Sylvia cantillans",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Sylvia communis",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Sylvia conspicillata",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Sylvia hortensis",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Turdus torquatus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Turdus viscivorus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Tyto alba",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Upupa epops",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Accipiter gentilis",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Aegithalos caudatus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Athene noctua",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Certhia brachydactyla",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Corvus corax",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Emberiza cia",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Emberiza cirlus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Galerida cristata",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Garrulus glandarius",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Lanius meridionalis",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Loxia curvirostra",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Parus ater",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Parus cristatus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Parus major",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Petronia petronia",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Picus viridis",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Monticola solitarius",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Strix aluco",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Sylvia melanocephala",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Troglodytes troglodytes",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Acanthodactylus erythrurus",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Blanus cinereus",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Hemorrhois hippocrepis",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Coronella girondica",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Rhinechis scalaris",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Hemidactylus turcicus",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Macroprotodon brevis",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Macroprotodon mauritanicus",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Malpolon monspessulanus",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Natrix maura",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Natrix natrix",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Podarcis hispánica",
+          "grupo": "Reptiles",
+          "nota": "La tabla escribe el epíteto en castellano («hispánica»); el binomio al uso es Podarcis hispanicus."
+        },
+        {
+          "scientificName": "Psammodromus algirus",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Psammodromus hispanicus",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Tarentola mauritanica",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Timon lepidus",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Vipera latastei",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Alytes obstetricans",
+          "grupo": "Anfibios"
+        },
+        {
+          "scientificName": "Bufo bufo",
+          "grupo": "Anfibios"
+        },
+        {
+          "scientificName": "Bufo calamita",
+          "grupo": "Anfibios"
+        },
+        {
+          "scientificName": "Discoglossus jeanneae",
+          "grupo": "Anfibios"
+        },
+        {
+          "scientificName": "Pelobates cultripes",
+          "grupo": "Anfibios"
+        },
+        {
+          "scientificName": "Pelodytes punctatus",
+          "grupo": "Anfibios"
+        },
+        {
+          "scientificName": "Pelophylax perezi",
+          "grupo": "Anfibios"
+        },
+        {
+          "scientificName": "Cerambyx cerdo",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Coenonympha dorus",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Melanargia ines",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Melanargia occitanica",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Polyommatus nivescens",
+          "grupo": "Invertebrados",
+          "nota": "La tabla la escribe «Polyommatus (Plebicula) nivescens»."
+        }
+      ]
+    }
+  }
 }
