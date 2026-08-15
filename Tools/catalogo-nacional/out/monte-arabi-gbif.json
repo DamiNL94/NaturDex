@@ -1,0 +1,1588 @@
+{
+  "park": "monte-arabi",
+  "generatedFrom": "GBIF + local point-in-polygon",
+  "especies": [
+    {
+      "speciesKey": 7705930,
+      "name": "Sus scrofa",
+      "class": "Mammalia",
+      "occurrences": 45,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 5219243,
+      "name": "Vulpes vulpes",
+      "class": "Mammalia",
+      "occurrences": 40,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2482552,
+      "name": "Pyrrhocorax pyrrhocorax",
+      "class": "Aves",
+      "occurrences": 12,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 2490774,
+      "name": "Turdus viscivorus",
+      "class": "Aves",
+      "occurrences": 8,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 2684451,
+      "name": "Juniperus oxycedrus",
+      "class": "Pinopsida",
+      "occurrences": 8,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2494200,
+      "name": "Serinus serinus",
+      "class": "Aves",
+      "occurrences": 8,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 2490719,
+      "name": "Turdus merula",
+      "class": "Aves",
+      "occurrences": 8,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 9990095,
+      "name": "Curruca melanocephala",
+      "class": "Aves",
+      "occurrences": 8,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 2494686,
+      "name": "Carduelis carduelis",
+      "class": "Aves",
+      "occurrences": 7,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 2494422,
+      "name": "Fringilla coelebs",
+      "class": "Aves",
+      "occurrences": 7,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 2487883,
+      "name": "Lophophanes cristatus",
+      "class": "Aves",
+      "occurrences": 7,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 9629160,
+      "name": "Loxia curvirostra",
+      "class": "Aves",
+      "occurrences": 6,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 2495455,
+      "name": "Columba palumbus",
+      "class": "Aves",
+      "occurrences": 6,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 9705453,
+      "name": "Parus major",
+      "class": "Aves",
+      "occurrences": 6,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 2474051,
+      "name": "Alectoris rufa",
+      "class": "Aves",
+      "occurrences": 6,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 5229493,
+      "name": "Garrulus glandarius",
+      "class": "Aves",
+      "occurrences": 6,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 8104397,
+      "name": "Linaria cannabina",
+      "class": "Aves",
+      "occurrences": 5,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 5739315,
+      "name": "Phoenicurus ochruros",
+      "class": "Aves",
+      "occurrences": 5,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 7331435,
+      "name": "Cistus albidus",
+      "class": "Magnoliopsida",
+      "occurrences": 4,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2879175,
+      "name": "Quercus coccifera",
+      "class": "Magnoliopsida",
+      "occurrences": 4,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 6093527,
+      "name": "Regulus ignicapilla",
+      "class": "Aves",
+      "occurrences": 4,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 2487871,
+      "name": "Periparus ater",
+      "class": "Aves",
+      "occurrences": 4,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 2492462,
+      "name": "Erithacus rubecula",
+      "class": "Aves",
+      "occurrences": 4,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 4408759,
+      "name": "Saxicola rubicola",
+      "class": "Aves",
+      "occurrences": 4,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2492949,
+      "name": "Sylvia undata",
+      "class": "Aves",
+      "occurrences": 4,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 2480537,
+      "name": "Buteo buteo",
+      "class": "Aves",
+      "occurrences": 4,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2495000,
+      "name": "Aegithalos caudatus",
+      "class": "Aves",
+      "occurrences": 4,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 2495471,
+      "name": "Columba oenas",
+      "class": "Aves",
+      "occurrences": 4,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 9029556,
+      "name": "Picus sharpei",
+      "class": "Aves",
+      "occurrences": 4,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 9687165,
+      "name": "Motacilla alba",
+      "class": "Aves",
+      "occurrences": 4,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 5845582,
+      "name": "Chloris chloris",
+      "class": "Aves",
+      "occurrences": 4,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 9616058,
+      "name": "Falco tinnunculus",
+      "class": "Aves",
+      "occurrences": 4,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 2441054,
+      "name": "Capra pyrenaica",
+      "class": "Mammalia",
+      "occurrences": 4,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 1404300,
+      "name": "Iris oratoria",
+      "class": "Insecta",
+      "occurrences": 4,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 10902460,
+      "name": "Salvia rosmarinus",
+      "class": "Magnoliopsida",
+      "occurrences": 3,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 7634625,
+      "name": "Emberiza calandra",
+      "class": "Aves",
+      "occurrences": 3,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 5285604,
+      "name": "Pinus halepensis",
+      "class": "Pinopsida",
+      "occurrences": 3,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2489104,
+      "name": "Sturnus unicolor",
+      "class": "Aves",
+      "occurrences": 3,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 4408796,
+      "name": "Ptyonoprogne rupestris",
+      "class": "Aves",
+      "occurrences": 3,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2497266,
+      "name": "Athene noctua",
+      "class": "Aves",
+      "occurrences": 3,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2490266,
+      "name": "Anthus pratensis",
+      "class": "Aves",
+      "occurrences": 3,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2495414,
+      "name": "Columba livia",
+      "class": "Aves",
+      "occurrences": 3,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 5229490,
+      "name": "Pica pica",
+      "class": "Aves",
+      "occurrences": 3,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 9330514,
+      "name": "Galerida theklae",
+      "class": "Aves",
+      "occurrences": 3,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 2480506,
+      "name": "Aquila chrysaetos",
+      "class": "Aves",
+      "occurrences": 3,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 3190583,
+      "name": "Pistacia lentiscus",
+      "class": "Magnoliopsida",
+      "occurrences": 3,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 5156102,
+      "name": "Leptoglossus occidentalis",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 7314894,
+      "name": "Sarcocapnos enneaphylla",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 7331346,
+      "name": "Cistus clusii",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2441110,
+      "name": "Ovis aries",
+      "class": "Mammalia",
+      "occurrences": 2,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 9409796,
+      "name": "Corvus corone",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2498415,
+      "name": "Upupa epops",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 5240329,
+      "name": "Amanita ovoidea",
+      "class": "Agaricomycetes",
+      "occurrences": 2,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 1898286,
+      "name": "Vanessa atalanta",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 5959092,
+      "name": "Bubo bubo",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 5231236,
+      "name": "Oenanthe leucura",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 6100954,
+      "name": "Coloeus monedula",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 2491498,
+      "name": "Emberiza cia",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 8077224,
+      "name": "Alauda arvensis",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2492956,
+      "name": "Sylvia atricapilla",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2482100,
+      "name": "Burhinus oedicnemus",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 9809229,
+      "name": "Sturnus vulgaris",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 7341500,
+      "name": "Lanius meridionalis",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 7901064,
+      "name": "Turdus philomelos",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 7867604,
+      "name": "Rhamnus oleoides",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2881550,
+      "name": "Quercus rotundifolia",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 7311306,
+      "name": "Daphne gnidium",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2650617,
+      "name": "Asplenium ceterach",
+      "class": "Polypodiopsida",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 5632022,
+      "name": "Lotus dorycnium",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 3832875,
+      "name": "Ruta angustifolia",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 5352466,
+      "name": "Anthyllis cytisoides",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 3733181,
+      "name": "Boulardia latisquama",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 3112552,
+      "name": "Staehelina dubia",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 7172720,
+      "name": "Sedum dasyphyllum",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 5231770,
+      "name": "Prunella collaris",
+      "class": "Aves",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 5676053,
+      "name": "Brachypodium retusum",
+      "class": "Liliopsida",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2469763,
+      "name": "Psammodromus algirus",
+      "class": "Squamata",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 7798288,
+      "name": "Fumana laevis",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 7311323,
+      "name": "Thymelaea tartonraira",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 8410451,
+      "name": "Hypericum ericoides",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 6092830,
+      "name": "Spinus spinus",
+      "class": "Aves",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 5231190,
+      "name": "Passer domesticus",
+      "class": "Aves",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2482492,
+      "name": "Corvus corax",
+      "class": "Aves",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2490604,
+      "name": "Lullula arborea",
+      "class": "Aves",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 8160104,
+      "name": "Parasteropleurus martorellii",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2495696,
+      "name": "Streptopelia decaocto",
+      "class": "Aves",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2492350,
+      "name": "Petronia petronia",
+      "class": "Aves",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 5231763,
+      "name": "Prunella modularis",
+      "class": "Aves",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 9813242,
+      "name": "Falco columbarius",
+      "class": "Aves",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 5352349,
+      "name": "Anthyllis lagascana",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 7806848,
+      "name": "Certhia brachydactyla",
+      "class": "Aves",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 6371424,
+      "name": "Rhamnus alaternus",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2882803,
+      "name": "Arbutus unedo",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 5280867,
+      "name": "Weissia condensa",
+      "class": "Bryopsida",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 5300414,
+      "name": "Fritillaria lusitanica",
+      "class": "Liliopsida",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 8286501,
+      "name": "Scorzonera laciniata",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 7309064,
+      "name": "Nepeta nepetella",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 5584186,
+      "name": "Silene sclerocarpa",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 7457479,
+      "name": "Teucrium franchetianum",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2490955,
+      "name": "Monticola solitarius",
+      "class": "Aves",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2496464,
+      "name": "Clamator glandarius",
+      "class": "Aves",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 5844449,
+      "name": "Aquila fasciata",
+      "class": "Aves",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 5231438,
+      "name": "Troglodytes troglodytes",
+      "class": "Aves",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2480637,
+      "name": "Accipiter nisus",
+      "class": "Aves",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2474156,
+      "name": "Coturnix coturnix",
+      "class": "Aves",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 2672680,
+      "name": "Orthotrichum diaphanum",
+      "class": "Bryopsida",
+      "occurrences": 1,
+      "habitats": 1
+    }
+  ],
+  "habitats": [
+    {
+      "slug": "matorrales-termomediterraneos-y-5330",
+      "hic": "5330",
+      "occurrences": 293,
+      "speciesCount": 91,
+      "species": [
+        {
+          "speciesKey": 7705930,
+          "name": "Sus scrofa",
+          "class": "Mammalia",
+          "occurrences": 45
+        },
+        {
+          "speciesKey": 5219243,
+          "name": "Vulpes vulpes",
+          "class": "Mammalia",
+          "occurrences": 40
+        },
+        {
+          "speciesKey": 2684451,
+          "name": "Juniperus oxycedrus",
+          "class": "Pinopsida",
+          "occurrences": 8
+        },
+        {
+          "speciesKey": 2482552,
+          "name": "Pyrrhocorax pyrrhocorax",
+          "class": "Aves",
+          "occurrences": 6
+        },
+        {
+          "speciesKey": 2494200,
+          "name": "Serinus serinus",
+          "class": "Aves",
+          "occurrences": 5
+        },
+        {
+          "speciesKey": 2494422,
+          "name": "Fringilla coelebs",
+          "class": "Aves",
+          "occurrences": 5
+        },
+        {
+          "speciesKey": 2490719,
+          "name": "Turdus merula",
+          "class": "Aves",
+          "occurrences": 5
+        },
+        {
+          "speciesKey": 7331435,
+          "name": "Cistus albidus",
+          "class": "Magnoliopsida",
+          "occurrences": 4
+        },
+        {
+          "speciesKey": 2879175,
+          "name": "Quercus coccifera",
+          "class": "Magnoliopsida",
+          "occurrences": 4
+        },
+        {
+          "speciesKey": 2494686,
+          "name": "Carduelis carduelis",
+          "class": "Aves",
+          "occurrences": 4
+        },
+        {
+          "speciesKey": 2490774,
+          "name": "Turdus viscivorus",
+          "class": "Aves",
+          "occurrences": 4
+        },
+        {
+          "speciesKey": 4408759,
+          "name": "Saxicola rubicola",
+          "class": "Aves",
+          "occurrences": 4
+        },
+        {
+          "speciesKey": 8104397,
+          "name": "Linaria cannabina",
+          "class": "Aves",
+          "occurrences": 4
+        },
+        {
+          "speciesKey": 2480537,
+          "name": "Buteo buteo",
+          "class": "Aves",
+          "occurrences": 4
+        },
+        {
+          "speciesKey": 9990095,
+          "name": "Curruca melanocephala",
+          "class": "Aves",
+          "occurrences": 4
+        },
+        {
+          "speciesKey": 5739315,
+          "name": "Phoenicurus ochruros",
+          "class": "Aves",
+          "occurrences": 4
+        },
+        {
+          "speciesKey": 2441054,
+          "name": "Capra pyrenaica",
+          "class": "Mammalia",
+          "occurrences": 4
+        },
+        {
+          "speciesKey": 1404300,
+          "name": "Iris oratoria",
+          "class": "Insecta",
+          "occurrences": 4
+        },
+        {
+          "speciesKey": 10902460,
+          "name": "Salvia rosmarinus",
+          "class": "Magnoliopsida",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 9629160,
+          "name": "Loxia curvirostra",
+          "class": "Aves",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 2492462,
+          "name": "Erithacus rubecula",
+          "class": "Aves",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 7634625,
+          "name": "Emberiza calandra",
+          "class": "Aves",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 2495455,
+          "name": "Columba palumbus",
+          "class": "Aves",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 5285604,
+          "name": "Pinus halepensis",
+          "class": "Pinopsida",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 9687165,
+          "name": "Motacilla alba",
+          "class": "Aves",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 5845582,
+          "name": "Chloris chloris",
+          "class": "Aves",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 2497266,
+          "name": "Athene noctua",
+          "class": "Aves",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 2490266,
+          "name": "Anthus pratensis",
+          "class": "Aves",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 9616058,
+          "name": "Falco tinnunculus",
+          "class": "Aves",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 2495414,
+          "name": "Columba livia",
+          "class": "Aves",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 2474051,
+          "name": "Alectoris rufa",
+          "class": "Aves",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 5229490,
+          "name": "Pica pica",
+          "class": "Aves",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 2480506,
+          "name": "Aquila chrysaetos",
+          "class": "Aves",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 5156102,
+          "name": "Leptoglossus occidentalis",
+          "class": "Insecta",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 7314894,
+          "name": "Sarcocapnos enneaphylla",
+          "class": "Magnoliopsida",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 7331346,
+          "name": "Cistus clusii",
+          "class": "Magnoliopsida",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 6093527,
+          "name": "Regulus ignicapilla",
+          "class": "Aves",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 2487871,
+          "name": "Periparus ater",
+          "class": "Aves",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 2441110,
+          "name": "Ovis aries",
+          "class": "Mammalia",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 2487883,
+          "name": "Lophophanes cristatus",
+          "class": "Aves",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 9409796,
+          "name": "Corvus corone",
+          "class": "Aves",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 2492949,
+          "name": "Sylvia undata",
+          "class": "Aves",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 5240329,
+          "name": "Amanita ovoidea",
+          "class": "Agaricomycetes",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 1898286,
+          "name": "Vanessa atalanta",
+          "class": "Insecta",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 8077224,
+          "name": "Alauda arvensis",
+          "class": "Aves",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 9705453,
+          "name": "Parus major",
+          "class": "Aves",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 2492956,
+          "name": "Sylvia atricapilla",
+          "class": "Aves",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 5229493,
+          "name": "Garrulus glandarius",
+          "class": "Aves",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 2482100,
+          "name": "Burhinus oedicnemus",
+          "class": "Aves",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 9809229,
+          "name": "Sturnus vulgaris",
+          "class": "Aves",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 9330514,
+          "name": "Galerida theklae",
+          "class": "Aves",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 7341500,
+          "name": "Lanius meridionalis",
+          "class": "Aves",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 7901064,
+          "name": "Turdus philomelos",
+          "class": "Aves",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 7867604,
+          "name": "Rhamnus oleoides",
+          "class": "Magnoliopsida",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 2881550,
+          "name": "Quercus rotundifolia",
+          "class": "Magnoliopsida",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 7311306,
+          "name": "Daphne gnidium",
+          "class": "Magnoliopsida",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 2650617,
+          "name": "Asplenium ceterach",
+          "class": "Polypodiopsida",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 5632022,
+          "name": "Lotus dorycnium",
+          "class": "Magnoliopsida",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 3832875,
+          "name": "Ruta angustifolia",
+          "class": "Magnoliopsida",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 5352466,
+          "name": "Anthyllis cytisoides",
+          "class": "Magnoliopsida",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 3733181,
+          "name": "Boulardia latisquama",
+          "class": "Magnoliopsida",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 3112552,
+          "name": "Staehelina dubia",
+          "class": "Magnoliopsida",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 7172720,
+          "name": "Sedum dasyphyllum",
+          "class": "Magnoliopsida",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 5231770,
+          "name": "Prunella collaris",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 2498415,
+          "name": "Upupa epops",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 5676053,
+          "name": "Brachypodium retusum",
+          "class": "Liliopsida",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 2469763,
+          "name": "Psammodromus algirus",
+          "class": "Squamata",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 7798288,
+          "name": "Fumana laevis",
+          "class": "Magnoliopsida",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 7311323,
+          "name": "Thymelaea tartonraira",
+          "class": "Magnoliopsida",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 8410451,
+          "name": "Hypericum ericoides",
+          "class": "Magnoliopsida",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 5231236,
+          "name": "Oenanthe leucura",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 6100954,
+          "name": "Coloeus monedula",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 2491498,
+          "name": "Emberiza cia",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 6092830,
+          "name": "Spinus spinus",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 5231190,
+          "name": "Passer domesticus",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 2489104,
+          "name": "Sturnus unicolor",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 2495000,
+          "name": "Aegithalos caudatus",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 2495471,
+          "name": "Columba oenas",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 2482492,
+          "name": "Corvus corax",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 2490604,
+          "name": "Lullula arborea",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 8160104,
+          "name": "Parasteropleurus martorellii",
+          "class": "Insecta",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 2495696,
+          "name": "Streptopelia decaocto",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 2492350,
+          "name": "Petronia petronia",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 5231763,
+          "name": "Prunella modularis",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 9813242,
+          "name": "Falco columbarius",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 5352349,
+          "name": "Anthyllis lagascana",
+          "class": "Magnoliopsida",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 6371424,
+          "name": "Rhamnus alaternus",
+          "class": "Magnoliopsida",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 2882803,
+          "name": "Arbutus unedo",
+          "class": "Magnoliopsida",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 5280867,
+          "name": "Weissia condensa",
+          "class": "Bryopsida",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 3190583,
+          "name": "Pistacia lentiscus",
+          "class": "Magnoliopsida",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 2672680,
+          "name": "Orthotrichum diaphanum",
+          "class": "Bryopsida",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "slug": "pendientes-rocosas-calcicolas-8210",
+      "hic": "8210",
+      "occurrences": 95,
+      "speciesCount": 46,
+      "species": [
+        {
+          "speciesKey": 2482552,
+          "name": "Pyrrhocorax pyrrhocorax",
+          "class": "Aves",
+          "occurrences": 6
+        },
+        {
+          "speciesKey": 2487883,
+          "name": "Lophophanes cristatus",
+          "class": "Aves",
+          "occurrences": 5
+        },
+        {
+          "speciesKey": 9705453,
+          "name": "Parus major",
+          "class": "Aves",
+          "occurrences": 4
+        },
+        {
+          "speciesKey": 2490774,
+          "name": "Turdus viscivorus",
+          "class": "Aves",
+          "occurrences": 4
+        },
+        {
+          "speciesKey": 5229493,
+          "name": "Garrulus glandarius",
+          "class": "Aves",
+          "occurrences": 4
+        },
+        {
+          "speciesKey": 9029556,
+          "name": "Picus sharpei",
+          "class": "Aves",
+          "occurrences": 4
+        },
+        {
+          "speciesKey": 9990095,
+          "name": "Curruca melanocephala",
+          "class": "Aves",
+          "occurrences": 4
+        },
+        {
+          "speciesKey": 9629160,
+          "name": "Loxia curvirostra",
+          "class": "Aves",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 2495000,
+          "name": "Aegithalos caudatus",
+          "class": "Aves",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 2495455,
+          "name": "Columba palumbus",
+          "class": "Aves",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 2494686,
+          "name": "Carduelis carduelis",
+          "class": "Aves",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 2494200,
+          "name": "Serinus serinus",
+          "class": "Aves",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 2490719,
+          "name": "Turdus merula",
+          "class": "Aves",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 2474051,
+          "name": "Alectoris rufa",
+          "class": "Aves",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 4408796,
+          "name": "Ptyonoprogne rupestris",
+          "class": "Aves",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 2495471,
+          "name": "Columba oenas",
+          "class": "Aves",
+          "occurrences": 3
+        },
+        {
+          "speciesKey": 6093527,
+          "name": "Regulus ignicapilla",
+          "class": "Aves",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 2489104,
+          "name": "Sturnus unicolor",
+          "class": "Aves",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 5959092,
+          "name": "Bubo bubo",
+          "class": "Aves",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 2494422,
+          "name": "Fringilla coelebs",
+          "class": "Aves",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 3190583,
+          "name": "Pistacia lentiscus",
+          "class": "Magnoliopsida",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 2487871,
+          "name": "Periparus ater",
+          "class": "Aves",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 2492949,
+          "name": "Sylvia undata",
+          "class": "Aves",
+          "occurrences": 2
+        },
+        {
+          "speciesKey": 7806848,
+          "name": "Certhia brachydactyla",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 2492462,
+          "name": "Erithacus rubecula",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 5300414,
+          "name": "Fritillaria lusitanica",
+          "class": "Liliopsida",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 8286501,
+          "name": "Scorzonera laciniata",
+          "class": "Magnoliopsida",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 7309064,
+          "name": "Nepeta nepetella",
+          "class": "Magnoliopsida",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 5584186,
+          "name": "Silene sclerocarpa",
+          "class": "Magnoliopsida",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 7457479,
+          "name": "Teucrium franchetianum",
+          "class": "Magnoliopsida",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 2491498,
+          "name": "Emberiza cia",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 2490955,
+          "name": "Monticola solitarius",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 2498415,
+          "name": "Upupa epops",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 5739315,
+          "name": "Phoenicurus ochruros",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 5845582,
+          "name": "Chloris chloris",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 9616058,
+          "name": "Falco tinnunculus",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 2496464,
+          "name": "Clamator glandarius",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 9687165,
+          "name": "Motacilla alba",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 8104397,
+          "name": "Linaria cannabina",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 5844449,
+          "name": "Aquila fasciata",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 6100954,
+          "name": "Coloeus monedula",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 5231438,
+          "name": "Troglodytes troglodytes",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 5231236,
+          "name": "Oenanthe leucura",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 2480637,
+          "name": "Accipiter nisus",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 2474156,
+          "name": "Coturnix coturnix",
+          "class": "Aves",
+          "occurrences": 1
+        },
+        {
+          "speciesKey": 9330514,
+          "name": "Galerida theklae",
+          "class": "Aves",
+          "occurrences": 1
+        }
+      ]
+    }
+  ]
+}

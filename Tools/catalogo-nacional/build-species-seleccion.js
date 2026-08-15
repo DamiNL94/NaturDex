@@ -87,9 +87,18 @@ const PARK = arg('park');
 const DRY = flag('dry');
 requireArgs('Uso: --park <slug> [--atlas <atlas.txt>] [--gbif <ruta>] [--out <ruta>] [--dry]', { park: PARK });
 
-// Umbrales del filtro 3. Son los de la selección de Carrascoy; se dejan como parámetro porque un
-// espacio muy pequeño o muy poco muestreado puede necesitar bajarlos, y entonces tiene que constar.
-const MIN_OCURRENCIAS = num('min-occ', 5);
+// Umbrales del filtro 3. Se dejan como parámetro porque un espacio muy pequeño o muy poco muestreado
+// puede necesitar bajarlos, y entonces tiene que constar en el informe de cierre.
+//
+// El defecto es 2, no los 5 de Carrascoy, y el motivo es que la métrica cambió debajo: hasta Sierra
+// de Salinas, `gbif-habitats.js` sumaba las ocurrencias POR HÁBITAT, y como los recintos del Atlas
+// son mosaicos, una planta con un solo registro en un recinto de cuatro códigos llegaba declarando
+// cuatro. Corregida la cuenta a registros distintos, 2 es lo que reproduce lo que los espacios ya
+// publicados obtuvieron con 5 sobre la cifra inflada (factor de mosaico medio ~2,8). Esa calibración
+// se decidió el 2026-08-15 (c) y se escribió sólo en el informe: el defecto del código se quedó en 5,
+// así que el espacio siguiente lo habría aplicado sin enterarse de que era el umbral viejo sobre la
+// métrica nueva. Vive aquí para que no vuelva a pasar.
+const MIN_OCURRENCIAS = num('min-occ', 2);
 const MIN_HABITATS = num('min-habitats', 2);
 
 /*
@@ -327,17 +336,42 @@ function caracteristicasPorEspecie(codigos) {
  * sirve GBIF a pelo daría cero coincidencias sin que nadie se enterase.
  */
 function anexoNormativo() {
-  if (!fs.existsSync(RUTA_ANEXOS)) return { mapa: new Map(), fuente: null, consultado: false };
+  if (!fs.existsSync(RUTA_ANEXOS)) return { mapa: new Map(), noNativas: new Map(), fuente: null, consultado: false };
   const doc = readJson(RUTA_ANEXOS);
   const entrada = (doc.espacios || {})[PARK];
-  if (!entrada) return { mapa: new Map(), fuente: null, consultado: false };
+  if (!entrada) return { mapa: new Map(), noNativas: new Map(), fuente: null, consultado: false };
   const mapa = new Map();
   for (const e of entrada.especies || []) {
     const b = binomio(e.scientificName);
     if (!b) continue;
     mapa.set(b, e);
+    // El `scientificName` se transcribe TAL CUAL lo escribe la norma —erratas incluidas—, que es lo
+    // que manda el `_esquema` del fichero. Pero el cruce con GBIF se hace por nombre, así que con
+    // sólo esa clave una errata de imprenta («Taradia teniotis», «Anthillis cytisoides») deja a la
+    // especie sin el respaldo documental que la norma sí le da, y lo hace EN SILENCIO: la especie
+    // cae al filtro de presencia como si ninguna norma la nombrara. `nombreCorregido` es la clave
+    // adicional —el nombre aceptado, verificado contra GBIF— que repara el cruce sin tocar la
+    // transcripción. Vale igual para los nombres en desuso («Saxicola torquata» → S. rubicola).
+    const c = binomio(e.nombreCorregido);
+    if (c && c !== b && !mapa.has(c)) mapa.set(c, e);
   }
-  return { mapa, fuente: entrada.fuente || null, consultado: true, total: (entrada.especies || []).length };
+  // Las que la norma enumera como ALÓCTONAS. No van en `especies` —no son parte del catálogo del
+  // espacio— pero tampoco se pueden callar: son la única fuente oficial que dice que ese taxón está
+  // aquí y que no es de aquí.
+  const noNativas = new Map();
+  for (const e of entrada.noNativas || []) {
+    const b = binomio(e.scientificName);
+    if (b) noNativas.set(b, e);
+    const c = binomio(e.nombreCorregido);
+    if (c && c !== b) noNativas.set(c, e);
+  }
+  return {
+    mapa,
+    noNativas,
+    fuente: entrada.fuente || null,
+    consultado: true,
+    total: (entrada.especies || []).length,
+  };
 }
 
 // --- EIDOS: autoctonía y estado legal ---------------------------------------------------------------
@@ -531,8 +565,10 @@ async function main() {
   // Las categorías legales que se han visto y NO cuentan como protección. Se enseñan al final: es la
   // forma de enterarse de que una figura nueva se está descartando por no estar en la lista blanca.
   const categoriasDescartadas = new Map();
-  // Qué binomios del anexo ha casado GBIF. Lo que quede sin casar es el hueco anexo↔GBIF: la norma
+  // Qué ENTRADAS del anexo ha casado GBIF. Lo que quede sin casar es el hueco anexo↔GBIF: la norma
   // dice que la especie está aquí y el barrido no la ha encontrado dentro de ningún polígono.
+  // Se guarda la entrada y no su clave porque una misma especie puede estar indexada por dos
+  // nombres —el verbatim de la norma y su `nombreCorregido`—, y contar claves la duplicaría.
   const anexoCasado = new Set();
   for (const c of lista) {
     // Tras reconciliar, un candidato puede llevar el nombre de la ficha ya existente en otro espacio
@@ -553,7 +589,7 @@ async function main() {
     const bin = binomio(c.scientificName) || '';
     const binAcept = binomio(r.nombreAceptadoEidos || '') || '';
     const enAnexo = anexo.mapa.get(bin) || (binAcept && anexo.mapa.get(binAcept)) || null;
-    if (enAnexo) anexoCasado.add(anexo.mapa.has(bin) ? bin : binAcept);
+    if (enAnexo) anexoCasado.add(enAnexo);
 
     const evidence = ['observada_gbif'];
     if (caract.length) evidence.push('caracteristica');
@@ -595,9 +631,22 @@ async function main() {
     }
     if (r.error) ficha.errorEidos = r.error;
 
-    // Filtro 2 — autoctonía.
+    // Filtro 2 — autoctonía. Dos fuentes, y la segunda existe porque la primera tiene un punto ciego:
+    // la Lista Patrón no marca como «no nativa» lo que ni siquiera es fauna silvestre. *Ovis aries*
+    // —que en Monte Arabí es el muflón de Córcega introducido, y en cualquier sierra puede ser
+    // ganado— pasaba el filtro con 2 registros y su ficha, mientras el propio plan de gestión la
+    // enumera entre las alóctonas. Cuando la norma del espacio dice que un taxón es alóctono, eso es
+    // dato oficial directo sobre ESTE territorio y manda sobre el silencio de la Lista Patrón.
+    const alóctonaPorNorma = anexo.noNativas.get(bin) || (binAcept && anexo.noNativas.get(binAcept)) || null;
     if (esNoNativa(r.origen)) {
       excluidas.push({ ...ficha, motivo: 'no nativa (Lista Patrón IEPNB)' });
+      continue;
+    }
+    if (alóctonaPorNorma) {
+      excluidas.push({
+        ...ficha,
+        motivo: `alóctona según la norma del espacio: ${alóctonaPorNorma.nota || alóctonaPorNorma.scientificName}`,
+      });
       continue;
     }
     // Filtro 4 — alcance taxonómico del catálogo. Va antes que el de presencia porque no depende de
@@ -628,9 +677,9 @@ async function main() {
   // desaparecer en silencio sería exactamente lo que prohíbe la regla nº 2: la norma del espacio
   // afirma que están aquí y el barrido no las ha visto, y eso es un dato, no un vacío.
   const anexoSinConstancia = anexo.consultado
-    ? [...anexo.mapa.entries()]
-        .filter(([bin]) => !anexoCasado.has(bin))
-        .map(([, e]) => ({ scientificName: e.scientificName, categoria: e.categoria || null, nota: e.nota || null }))
+    ? [...new Set(anexo.mapa.values())]
+        .filter(e => !anexoCasado.has(e))
+        .map(e => ({ scientificName: e.scientificName, categoria: e.categoria || null, nota: e.nota || null }))
     : [];
   const doc = {
     _nota:

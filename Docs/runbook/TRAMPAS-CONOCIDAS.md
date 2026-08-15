@@ -44,6 +44,14 @@ Cada una costó una sesión de depuración. Léelas antes de repetirlas.
   `build-species-seleccion.js` reconcilia por ahí y elige **el nombre que ya use otro parque**, para
   reutilizar su ficha en vez de crear una gemela. Ojo al renombrar: el nombre viejo se queda en el
   `park.json` como especie fantasma si no pasas `--podar`.
+- **La errata de la norma le quita a la especie su respaldo documental, y en silencio.** El anexo
+  normativo se transcribe **verbatim** —lo manda el `_esquema` del fichero— y se indexaba **solo** por
+  ese nombre, así que *Taradia teniotis* o *Anthillis cytisoides* no casaban con GBIF por una letra:
+  la especie caía al filtro de presencia como si ninguna norma la nombrara, sin un aviso. Lo mismo con
+  la nomenclatura en desuso (*Saxicola torquata*, *Parus ater*). Se arregló el 2026-08-15 con el campo
+  **`nombreCorregido`**, que se indexa junto al verbatim sin tocar la transcripción; había **49
+  entradas afectadas en tres espacios** y en Monte Arabí solo recuperarlas subió el cruce anexo↔GBIF
+  de 48 a 60. La corrección se **verifica contra GBIF antes de escribirla**, nunca de memoria.
 - **No trunques el nombre a dos palabras** para emparejar: rompe las subespecies. Se empareja por
   prefijo terminado en espacio (`eidos.nameMatches`).
 - **El cruce con el Atlas hay que hacerlo con los DOS nombres** (el de GBIF y el aceptado por EIDOS).
@@ -118,6 +126,24 @@ Cada una costó una sesión de depuración. Léelas antes de repetirlas.
   `/services/anuncio/ano/AAAA/numero/NNNN/pdf` devuelve el PDF sin captcha. Su límite: sirve una norma
   que **ya sabes localizar** —su portada es una SPA de 1,4 KB sin nada que rascar—, así que para pasar
   de «esto parece BIC» a «lo declara la Orden X» sigue haciendo falta un índice.
+- **«Abierto» y «sirve el dato» no son lo mismo, y la vía 3 lo enseña tres veces.** Al cerrar Monte
+  Arabí (2026-08-15) se recorrió entera con los hosts ya registrados, y las tres puertas fallan por
+  motivos distintos: **(a)** el registro estatal de BIC estaba apuntado a `www.culturaydeporte.gob.es`,
+  que es el **dominio viejo** y solo devuelve un 301 a `www.cultura.gob.es`; **(b)** ese nuevo host sí
+  está permitido —el CONNECT del proxy devuelve 200— pero su certificado lo emite la **FNMT-RCM** y el
+  servidor manda solo la hoja, sin la intermedia, así que la cadena no valida: es un hueco de
+  **confianza**, no de egreso, y se arregla añadiendo la CA de la FNMT al entorno, nunca desactivando
+  la verificación; **(c)** el fichero de datos abiertos de la CARM sí se descargó —«Monumentos en la
+  Región de Murcia», 476 registros— y resuelve la duda que quedó abierta: **no trae campo de
+  declaración BIC**, es un catálogo de monumentos visitables, y de Yecla solo trae los diez del
+  casco urbano. Dos detalles que cuestan una sesión: `datos.gob.es` publica su `accessURL` en **http**
+  y por ahí el proxy responde «Host not in allowlist» (hay que pedirlo en https), y el JSON trae
+  **saltos de línea crudos dentro de las cadenas**, así que `JSON.parse` lo rechaza tal cual.
+- **El número de anuncio del BORM no se deduce del número de boletín.** El endpoint
+  `/services/anuncio/ano/AAAA/numero/NNNN/pdf` numera por **anuncio y año**, no por boletín: el
+  anuncio 3 de 1999 sale en el boletín n.º 13. Por eso la bisección «por el número de boletín de la
+  cabecera» no converge (Sierra de la Pila) y no se puede llegar a una norma concreta sabiendo solo
+  su boletín y su fecha. Hace falta un índice, y ése es el hueco de verdad.
 - **«Bloqueado» hay que decirlo contra un host escrito, no de memoria.** La vía 3 de la cascada de
   POIs (BIC y patrimonio) fue durante cuatro espacios la única de las seis **sin host registrado en
   `check-egress.js`**: cada sesión escribía la URL de memoria, la veía fallar y anotaba «bloqueado»

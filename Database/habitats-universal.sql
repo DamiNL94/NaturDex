@@ -154,6 +154,14 @@ UPDATE habitats h JOIN parks p ON p.id = h.park_id
 WHERE p.slug = 'cuatro-calas' AND h.code = '5220';
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'El matorral de las zonas más cálidas y secas, allí donde prácticamente no hiela: palmito, espino negro, lentisco, cornicales, bojas, albaidas y esparto sobre laderas pedregosas y llanos soleados. Es un matorral abierto, con suelo desnudo a la vista entre mata y mata, y con muchas especies compartidas con el norte de África. Aguanta sequías de meses y rebrota en cuanto llueve.'
+WHERE p.slug = 'monte-arabi' AND h.code = '5330';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Paredes y cortados de roca caliza en los que la vegetación no vive sobre el suelo, sino dentro de las fisuras. Son plantas de raíz larguísima y crecimiento lentísimo, agarradas a la grieta, que aprovechan el agua que escurre por la pared. Los roquedos han quedado a salvo del arado y del ganado durante milenios, y por eso concentran una proporción altísima de especies que no existen en ningún otro lugar.'
+WHERE p.slug = 'monte-arabi' AND h.code = '8210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
   SET h.description = 'Matorral alto o bosquete abierto dominado por enebros y sabinas (Juniperus), arbustos de follaje escamoso o punzante y porte denso que aguantan sequía, viento y suelos casi inexistentes. Sus frutos carnosos y azulados —los gálbulos— alimentan en invierno a zorzales y otras aves, que se encargan de dispersar la semilla. Crecen tan despacio que un ejemplar de dos metros puede tener siglos.'
 WHERE p.slug = 'sierra-de-el-carche' AND h.code = '5210';
 

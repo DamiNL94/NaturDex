@@ -7652,6 +7652,1167 @@ Barros y árboles con el tronco embarrado a media altura',
   s.image_attribution = 'A.Savin (FAL) · Wikimedia Commons',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Sus scrofa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zorro',
+  s.primary_habitat = 'Prácticamente cualquier ambiente: bosque, matorral, cultivos y periferias urbanas',
+  s.description = 'El carnívoro silvestre más adaptable y extendido: vive desde la alta montaña hasta el borde de las ciudades. Es omnívoro y oportunista, lo que explica su éxito. Se reconoce por la cola larga y espesa —la «hopa»— rematada casi siempre en blanco.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola muy espesa con la punta blanca
+Huella alargada con las cuatro almohadillas alineadas
+Excrementos retorcidos y con pelos, sobre piedras y caminos',
+  s.seasonality = 'Todo el año (actividad sobre todo nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Vulpes_vulpes_2.jpg?width=1280',
+  s.image_attribution = 'Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Vulpes vulpes';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Enebro de la miera',
+  s.primary_habitat = 'Matorral, pinares aclarados y laderas pedregosas',
+  s.description = 'Enebro de hojas aciculares y punzantes dispuestas de tres en tres, con dos bandas blancas en la cara superior que lo separan a simple vista de la sabina. Sus gálbulos son rojizos al madurar. De su madera se destilaba el aceite de miera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas punzantes en grupos de tres, no en escama
+Dos rayas blancas en la cara superior de cada hoja
+Gálbulos rojizos y brillantes al madurar',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_oxycedrus_g1.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Juniperus oxycedrus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cabra montés',
+  s.primary_habitat = 'Roquedos, canchales y laderas escarpadas con matorral',
+  s.description = 'Bóvido de montaña perfectamente adaptado a la roca: pezuñas con borde duro y almohadilla blanda que agarra en pendientes imposibles. Los machos lucen cuernos grandes, curvados hacia atrás y con abultamientos; las hembras los tienen cortos y rectos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Machos con cuernos grandes curvados hacia atrás
+Se mueve por cortados donde nada más puede subir
+Excrementos en montoncitos de bolitas cilíndricas',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Capra_pyrenaica_in_Sierra_de_Guadarrama.jpg?width=1280',
+  s.image_attribution = 'Thomas Holbach (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Capra pyrenaica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jara blanca',
+  s.primary_habitat = 'Matorral y laderas soleadas sobre suelos calizos secos',
+  s.description = 'Jara de hojas blanquecinas, aterciopeladas al tacto y sin peciolo, con flores grandes de color rosa malva y pétalos arrugados como papel de seda que duran solo unas horas. Es una de las plantas que da color al matorral en primavera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas blanquecinas y aterciopeladas, sentadas en la rama
+Flores rosa malva grandes, de pétalos arrugados
+Cada flor dura apenas una mañana',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_albidus_flowers.jpg?width=1280',
+  s.image_attribution = 'Júlio Reis (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Cistus albidus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Coscoja',
+  s.primary_habitat = 'Matorral esclerófilo y sabinar',
+  s.description = 'Arbusto esclerófilo de hoja perenne y espinosa, integrante del matorral mediterráneo denso y de las orlas del sabinar.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas coriáceas con margen espinoso
+Bellota con cúpula de escamas punzantes
+Porte arbustivo denso',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_coccifera_1.JPG?width=1280',
+  s.image_attribution = 'User:Xemenendura (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Quercus coccifera';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pino carrasco',
+  s.primary_habitat = 'Laderas secas y soleadas sobre calizas y margas, en clima mediterráneo cálido',
+  s.description = 'Pino de copa clara e irregular y follaje de un verde pálido, el más resistente a la sequía y a los suelos pobres de los pinos ibéricos. Sus piñas, alargadas y asimétricas, quedan colgadas años en la rama y liberan las semillas tras los incendios, lo que le permite recolonizar rápido.',
+  s.description_source = NULL,
+  s.identification_tips = 'Copa irregular y poco densa, de verde claro
+Piñas asimétricas y persistentes, apuntando hacia atrás
+Corteza clara y agrietada, rojiza en las ramas jóvenes',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pino_secolare_-_Castelleone_di_Suasa.JPG?width=1280',
+  s.image_attribution = 'Accurimbono (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Pinus halepensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lentisco',
+  s.primary_habitat = 'Matorral mediterráneo litoral',
+  s.description = 'Arbusto perennifolio de hojas compuestas sin foliolo terminal y con el raquis alado, un detalle que lo separa de la cornicabra. Al frotarlo huele intensamente a resina. Sus frutos, en racimo, pasan de rojo a negro y son alimento clave para aves en otoño.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hoja compuesta con número par de foliolos, sin uno terminal
+Raquis de la hoja con dos alas laterales
+Olor fuerte a resina al frotar las hojas',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pistacia_lentiscus.jpg?width=1280',
+  s.image_attribution = 'Lumbar~commonswiki (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Pistacia lentiscus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Romero',
+  s.primary_habitat = 'Matorral seco y soleado sobre suelos calizos y pedregosos',
+  s.description = 'Arbusto aromático de hojas estrechas como agujas, verde oscuro por el haz y blanquecinas por el envés, con los bordes enrollados hacia abajo. Florece casi todo el año en azul pálido, y en pleno invierno es una de las pocas fuentes de néctar del matorral.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas como agujas, blancas por debajo
+Olor inconfundible al frotar entre los dedos
+Flores azul claro repartidas por las ramas casi todo el año',
+  s.seasonality = 'Todo el año, con máximo de floración en invierno y primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rosemary_in_bloom.JPG?width=1280',
+  s.image_attribution = 'Margalob (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Rosmarinus officinalis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Romerina',
+  s.primary_habitat = 'Tomillares y matorral seco sobre calizas y margas',
+  s.description = 'Jara pequeña de hojas muy estrechas y enrolladas por los bordes, verdes arriba y blancas por debajo, que a distancia recuerdan al romero. Se distingue enseguida al florecer: da grupos de flores blancas de cinco pétalos, mucho mayores que las del romero.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas estrechas enrolladas, blancas por el envés
+Flores blancas de cinco pétalos, varias juntas
+Sin el olor a romero, aunque se le parezca de lejos',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_clusii_(habitus).jpg?width=1280',
+  s.image_attribution = 'Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Cistus clusii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carrasca',
+  s.primary_habitat = 'Bosques y matorrales mediterráneos continentales, sobre suelos secos y pobres',
+  s.description = 'La encina de interior, más adaptada al frío y a la sequía continental, con hojas más redondeadas y bellotas dulces. A menudo crece en mata por el efecto del ramoneo y las cortas repetidas. Muchos autores la consideran una subespecie de la encina.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas más redondeadas y pequeñas que las de la encina litoral
+Bellotas de sabor dulce, no amargas
+Frecuente en porte de mata, con varios pies',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carrasca_de_la_Raboseras.JPG?width=1280',
+  s.image_attribution = 'Picamaderos (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Quercus rotundifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Espino morisco',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Septiembre, octubre, noviembre, enero, febrero, marzo, abril, mayo, junio, julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhamnus_oleoides.JPG?width=1280',
+  s.image_attribution = 'User:Xemenendura (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Rhamnus oleoides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zapatitos de la Virgen',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sarcocapnos_enneaphylla_saetabensis.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Sarcocapnos enneaphylla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Albaida',
+  s.primary_habitat = 'Matorral seco y soleado sobre margas y suelos pobres',
+  s.description = 'Mata de aspecto blanquecino por la fina pelusa que cubre hojas y tallos, un recurso frente al sol y la sequía. En primavera se llena de espigas de flores amarillas que atraen a muchos insectos. Es una de las leguminosas que primero coloniza laderas degradadas y taludes.',
+  s.description_source = NULL,
+  s.identification_tips = 'Aspecto grisáceo y aterciopelado al tacto
+Flores amarillas pequeñas en espigas apretadas
+Hojas divididas en tres, la del centro más larga',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Anthyllis_cytisoides.JPG?width=1280',
+  s.image_attribution = 'Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Anthyllis cytisoides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Probayernos',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero, marzo, abril, mayo, junio, julio, septiembre, octubre',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Anthyllis lagascana';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Madroño',
+  s.primary_habitat = 'Umbrías, barrancos y matorral alto sobre suelos frescos',
+  s.description = 'Arbusto o arbolillo de hojas lustrosas y dentadas y corteza rojiza que se desprende en tiras. En otoño coinciden en la misma rama las flores blancas en racimos colgantes y los frutos rojos y granulosos del año anterior.',
+  s.description_source = NULL,
+  s.identification_tips = 'Flores y frutos a la vez en la misma rama, en otoño
+Frutos rojos esféricos de superficie granulosa
+Corteza rojiza que se desprende en tiras finas',
+  s.seasonality = 'Otoño e invierno (flor y fruto a la vez)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Arbutus_unedo_Corsica.jpg?width=1280',
+  s.image_attribution = 'jxandreani (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Arbutus unedo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tablero de damas',
+  s.primary_habitat = 'Pastizales, claros de matorral y pedregales de montaña',
+  s.description = 'Bulbosa de tallo fino y hojas estrechas que cuelga una o dos flores en forma de campana, con un jaspeado pardo y verdoso que recuerda a un tablero de ajedrez. Pasa desapercibida entre la hierba pese a su forma llamativa.',
+  s.description_source = NULL,
+  s.identification_tips = 'Flor colgante en campana con dibujo ajedrezado
+Tallo fino con pocas hojas estrechas
+Colores apagados que la camuflan en el pastizal',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fritillaria_lusitanica_2_2601.jpg?width=1280',
+  s.image_attribution = 'Balles2601 (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Fritillaria lusitanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagartija colilarga',
+  s.primary_habitat = 'Matorral litoral y laderas secas',
+  s.description = 'Lagartija esbelta de escamas grandes, quilladas y brillantes, con dos líneas claras muy marcadas a cada lado del dorso. La cola puede medir el doble que el cuerpo. Los machos lucen en primavera manchas azules en el hombro y las mejillas anaranjadas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Dos líneas claras nítidas a lo largo de cada costado
+Escamas grandes y quilladas, de aspecto brillante
+Cola larguísima, hasta el doble que el cuerpo',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Psammodromus_algirus_-_01.jpg?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Psammodromus algirus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Aladierno',
+  s.primary_habitat = 'Matorral alto, encinares y barrancos sobre suelos pedregosos',
+  s.description = 'Arbusto perennifolio de hojas alternas, coriáceas y de borde finamente dentado, sin espinas. Sus frutos maduran de rojo a negro y son muy buscados por los pájaros. Se distingue del espino negro por carecer de espinas y tener hojas mayores.',
+  s.description_source = NULL,
+  s.identification_tips = 'Sin espinas, a diferencia de otros ramnos
+Hojas alternas, coriáceas y algo dentadas
+Frutos que pasan de rojo a negro al madurar',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhamnus_alaternus1627.JPG?width=1280',
+  s.image_attribution = 'tato grasso (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Rhamnus alaternus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sedo de hojas gruesas',
+  s.primary_habitat = 'Prados calcáreos del Alysso-Sedion albi',
+  s.description = 'Crasulácea diminuta de hojas gruesas, casi esféricas y de un gris azulado, dispuestas de dos en dos y cubiertas de pelillos glandulosos que la hacen pegajosa. Forma almohadillas en grietas y muros y da flores blancas con venas rosadas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas casi esféricas, opuestas y de gris azulado
+Tacto pegajoso por los pelillos glandulosos
+Flores blancas con finas venas rosadas',
+  s.seasonality = 'Verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sedum_dasyphyllum_(1)_6.jpg?width=1280',
+  s.image_attribution = 'Ghislain118 http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Sedum dasyphyllum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Teucrium franchetianum',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Teucrium franchetianum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cagalera',
+  s.primary_habitat = 'Vive en matorrales y tomillares sobre sustrato básico o en yesos, hasta 1900 m',
+  s.description = 'Pequeño arbusto, hasta de 50 cm, con hojas de 5-15 x 1-4 mm, imbricadas, espatuladas, generalmente apiculadas, pelosas. Inflorescencias capituliformes, axilares, con dos a cinco flores y hasta 10 brácteas imbricadas, unisexuales, de 3,5-6 mm, con sépalos de 1-1,5 mm. Fruto de 2,3-3,5 mm, en forma de nuez, con semillas de 1,5-2,7 mm.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Mond%C3%BAber%2C_thymelaea_tartonraira.jpg?width=1280',
+  s.image_attribution = 'Joanbanjo (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Thymelaea tartonraira';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chova piquirroja',
+  s.primary_habitat = 'Cortados rocosos, cantiles y montañas, alimentándose en pastizales cercanos',
+  s.description = 'Córvido negro y brillante con el pico rojo, largo y curvo, y las patas del mismo color encendido. Vuela en grupos acrobáticos junto a los cantiles, plegando las alas y dejándose caer por puro juego. Busca larvas hurgando en el suelo de los pastos con ese pico de sonda.',
+  s.description_source = NULL,
+  s.identification_tips = 'Pico rojo, largo y curvado hacia abajo
+Reclamo agudo, un «chiaa» nasal muy característico
+Plumas de la punta del ala muy separadas, como dedos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pyrrhocorax_pyrrhocorax_-standing-8.jpg?width=1280',
+  s.image_attribution = 'File:Alpenkrähe.jpg: "Malte Uhl (User:Zzzip)" derivative work: Snow… (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Pyrrhocorax pyrrhocorax';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca cabecinegra',
+  s.primary_habitat = 'Matorral mediterráneo denso, setos y bordes de arbolado',
+  s.description = 'La curruca más común del matorral mediterráneo. El macho tiene la cabeza negra hasta por debajo del ojo, la garganta blanca y un llamativo anillo ocular rojo. Es ruidosa y territorial: su reclamo de alarma es un traqueteo seco que delata su presencia constantemente.',
+  s.description_source = NULL,
+  s.identification_tips = 'Capucha negra que baja por debajo del ojo
+Anillo ocular rojo intenso
+Reclamo de alarma como una carraca seca',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sardinian_Warbler.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Curruca melanocephala';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Serín verdecillo',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de un ave pequeña, con un pico ancho, pero muy corto, y una cola con una marcada escotadura en el extremo. Machos y hembras poseen un conspicuo obispillo verdeamarillento. Ambos, además, tienen el pecho y el vientre de color blanco amarillento, con pintas o cortas rayas verticales. Pero los machos, sobre todo en primavera, muestran la frente, la garganta y la pechera teñidas de intenso amarillo. Por su tamaño, aspecto y coloración, el verdecillo se asemeja a los lúganos, aunque presenta el pico más corto y menos afilado, y carece de las bandas verde-amarillentas que son fácilmente visibles en el lúgano. También podría confundirse con el verderón serrano; no obstante, este tiene la cabeza gris, y además habita en el límite altitudinal superior del bosque, donde el verdecillo resulta muy escaso. En invierno conforma nutridos bandos y se mezcla con otros fringílidos granívoros, como verderones comunes, pardillos comunes, jilgueros, etc.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Serinus_serinus_(Madrid%2C_Spain)_010.jpg?width=1280',
+  s.image_attribution = 'Luis García (Zaqarbal) (CC BY-SA 3.0 es) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Serinus serinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Turdus merula',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Common_Blackbird.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Turdus merula';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zorzal charlo',
+  s.primary_habitat = NULL,
+  s.description = 'Es un zorzal grande, bastante más corpulento que el zorzal común y más alargado y erguido cuando se posa. Las partes dorsales son de color pardo grisáceo y las inferiores, blanquecinas, con una mancha gris oscura a los lados del pecho e intensamente moteadas, desde la garganta hasta el vientre, por gruesas pintas oscuras dispuestas aleatoriamente. En la cara presenta un diseño irregular de manchas grises, blancas y negras. Los jóvenes aparecen intensamente moteados de marrón, ocre y blanco por todo el plumaje. Su vuelo es rápido y directo, y es en el aire cuando se hace especialmente visible su larga cola y la región axilar de color blanco, que permiten distinguirlo con facilidad de otros zorzales.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Mistle_thrush.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Turdus viscivorus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jilguero europeo',
+  s.primary_habitat = NULL,
+  s.description = 'Los jilgueros se distinguen con facilidad por el juego de vistosos colores de su plumaje. En la cabeza muestran una característica careta roja, junto a sendas manchas blanca y negra. Poseen un pico de base ancha, largo y acabado en una fina punta. Su cola es negra, con el obispillo y el extremo distal blanco; además, las plumas más externas de la cola pueden tener amplias manchas blancas. En vuelo se reconocen bien por la presencia de dos amplias bandas alares de color amarillo dorado. No hay dimorfismo sexual fácilmente perceptible, aunque los machos lucen hombros más negros y careta roja más amplia que las hembras. Por otra parte, el plumaje varía notablemente con la edad; así, antes de mudarlo a finales de verano, los volantones carecen de la coloración descrita para la cabeza, pero mantienen las distintivas franjas alares amarillas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carduelis_carduelis_1_(Marek_Szczepanek)_(cropped).jpg?width=1280',
+  s.image_attribution = 'Marek Szczepanek (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Carduelis carduelis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pimientera',
+  s.primary_habitat = 'Bosques, arboledas, huertos y jardines con arbolado',
+  s.description = 'Uno de los pájaros más abundantes de Europa. El macho luce el pecho vinoso y la nuca gris azulada; la hembra es parda. Ambos comparten dos barras alares blancas muy visibles en vuelo. Su canto es una frase descendente que acaba en un floreo, repetida sin descanso en primavera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Dos barras blancas bien marcadas en cada ala
+Bordes blancos en la cola, visibles al volar
+Canto en frase descendente que remata en un adorno',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fringilla_coelebs_(chaffinch)%2C_male.jpg?width=1280',
+  s.image_attribution = 'Self: Commons user MichaelMaggs (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Fringilla coelebs';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Herrerillo capuchino',
+  s.primary_habitat = NULL,
+  s.description = 'Pequeño pajarillo de apariencia inconfundible, gracias sobre todo a su característica cresta triangular y apuntada, de plumas blancas y negras y que despliega habitualmente. Su cara es también un juego de bandas negras y blancas: presenta una conspicua corbata negra que se prolonga a modo de collar; además tiene una línea ocular negra, y otra que recorre la mejilla, siempre sobre fondo claro o blanco. Por el contrario, el dorso, las alas y la cola son de color pardo oscuro, que contrasta con los flancos, el pecho y el vientre, de un tono gris-canela muy apagado. Al igual que los carboneros garrapinos u otros páridos, habita en bosques de coníferas (pinos, abetos, etc.). Pero también se localiza en formaciones de frondosas —caducifolias y perennes— y se observa en áreas ajardinadas. No es un ave especialmente gregaria, pero en otoño e invierno puede constituir pequeños grupos de 2-10 individuos, que exploran conjuntamente tanto el suelo como, sobre todo, la corteza, las ramas y las hojas de los árboles. Con frecuencia se mezcla con otros páridos, con agateadores y con reyezuelos, conformando ruidosos bandos mixtos.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/083_Wild_European_crested_tit_at_Parc_naturel_r%C3%A9gional_Jura_vaudois_Photo_by_Giles_Laurent.jpg?width=1280',
+  s.image_attribution = 'Giles Laurent (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Lophophanes cristatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Perdiz roja',
+  s.primary_habitat = 'Mosaicos de cultivo, matorral bajo y laderas pedregosas',
+  s.description = 'Perdiz de patas y pico rojos, con un collar negro que se deshace en un salpicado de motas sobre el pecho y flancos barrados en blanco, negro y castaño. Prefiere correr a volar, y cuando por fin levanta lo hace de golpe y a ras de suelo, planeando ladera abajo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Flancos con barras nítidas blancas, negras y castañas
+Collar negro que se disgrega en motas sobre el pecho
+Corre agachada antes que volar; levanta de golpe y planea',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Perdiz_roja.jpg?width=1280',
+  s.image_attribution = 'Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE, Anexos II y III (especie cinegética)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Alectoris rufa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Paloma torcaz',
+  s.primary_habitat = NULL,
+  s.description = 'Esta robusta paloma posee cuerpo grisáceo, pecho robusto prominente y rosado, y cabeza proporcionalmente pequeña. Sus manchas blancas en el cuello y las alas resultan características y fácilmente reconocibles. Exhibe un vuelo poderoso, rápido, directo y con fuertes batidos de alas, en las que destacan las bandas transversales blancas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pigeon_ramier_2.JPG?width=1280',
+  s.image_attribution = 'LPLT (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Columba palumbus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Arrendajo euroasiático',
+  s.primary_habitat = NULL,
+  s.description = 'Esta ave, de aspecto inconfundible, se aleja bastante de la imagen sombría de otros componentes de la familia de los córvidos, pues presenta un plumaje dominado por los tonos ocres, con ciertos tintes rosados y grisáceos, los cuales se tornan blanquecinos en la zona anal. En la cabeza —algo voluminosa y dotada de un fuerte pico— resultan muy característicos el píleo —eréctil, grisáceo y listado de negro— y una visible bigotera negra. Las alas lucen un llamativo diseño, con un panel de plumas de color azul turquesa —franjeado de negro y blanco— en el hombro, y otro blanco, muy conspicuo, sobre todo en vuelo. El obispillo también es blanco y llamativo cuando el ave despliega las alas, lo que contrasta fuertemente con la negra cola. No hay diferencias significativas entre sexos en lo referente al plumaje. Los jóvenes son semejantes en patrón a los adultos, aunque algo más parduzcos y con colores menos vivos en general.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Garrulus_glandarius_1_Luc_Viatour.jpg?width=1280',
+  s.image_attribution = 'Luc Viatour (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Garrulus glandarius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Piquituerto',
+  s.primary_habitat = 'Pinares y masas de coníferas con producción de piñas',
+  s.description = 'Fringílido de pico único: las dos mandíbulas se cruzan en la punta, una herramienta para abrir las escamas de las piñas y sacar el piñón. El macho es rojo ladrillo y la hembra verde oliva. Cría incluso en invierno si hay piñas, y se mueve en bandos ruidosos de copa en copa.',
+  s.description_source = NULL,
+  s.identification_tips = 'Puntas del pico cruzadas, visibles de cerca
+Macho rojizo, hembra verde amarillenta
+Reclamo metálico «chip-chip» de los bandos en vuelo',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Red_Crossbills_(Male).jpg?width=1280',
+  s.image_attribution = 'Elaine R. Wilson, www.naturespicsonline.com (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Loxia curvirostra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carbonero común',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de una especie fácilmente reconocible por el color amarillo de su cuerpo, que contrasta con el azul de las alas y la cola. La cabeza es de color negro-azabache y con las mejillas muy blancas, salvo en los jóvenes del año, algo amarillenta. Los machos se distinguen de las hembras por poseer una conspicua banda negra que recorre su cuerpo desde la garganta hasta la base de la cola. Las hembras, en cambio, tienen muy poco marcada dicha banda, que se desdibuja en el vientre.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D0%B8%D0%BD%D0%B8%D1%86%D0%B0_(Parus_major%2C_fem)%2C_%D0%91%D0%B8%D1%82%D1%86%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BB%D0%B5%D1%81.jpg?width=1280',
+  s.image_attribution = 'Dion Art (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Parus major';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pardillo común',
+  s.primary_habitat = NULL,
+  s.description = 'El pardillo es un pájaro estilizado, delgado, de pico corto y con cola larga y escotada. Su plumaje tiene color pardo en el dorso y ocre muy pálido en los flancos y el vientre. Presenta pintas alargadas o estrías, mucho más abundantes y visibles en las hembras. Además, los machos resultan inconfundibles en primavera, pues lucen un llamativo color carmín en la frente y el pecho. En vuelo, ambos sexos y los jóvenes del año muestran una débil pero perceptible mancha blanca, que destaca sobre el color negruzco de sus alas. Asimismo, el par de plumas externo de la cola es de color blanco. Tanto las hembras como los jóvenes del año, por su plumaje poco llamativo, se pueden confundir con bisbitas pratenses o con hembras y jóvenes de escribanos. No obstante, los bisbitas tienen un pico fino y largo y —más importante— “caminan”, mientras que los pardillos, como el resto de los fringílidos, “saltan” cuando se desplazan por el suelo. A su vez, la costumbre de los pardillos de buscar el alimento en el suelo los diferencia de los escribanos, a los que se observa habitualmente posados en ramas de arbustos. Los escribanos, son, además, de talla mayor y menos gregarios que los pardillos. Fuera de la época reproductora, el pardillo común se mueve en grandes bandos, que muchas veces son mixtos, pues se mezcla con otros fringílidos, como verdecillos, jilgueros, verderones comunes, lúganos, etc.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Linnet-Mindaugas_Urbonas-3.jpg?width=1280',
+  s.image_attribution = 'Mindaugas Urbonas from Lithuanian wikipedia (Profile, Homepage, E-m… (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Linaria cannabina';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Colirrojo tizón',
+  s.primary_habitat = NULL,
+  s.description = 'Ave de pequeño tamaño y diseño peculiar, con obispillo y cola de característico color rojo. El macho presenta el pecho y la cara de color negro azabache, y el resto del cuerpo oscuro, con una mancha blanca en las alas. Las hembras y los jóvenes son pardogrisáceos. Muy terrestre, acostumbra a posarse con figura erguida mientras agita su cola roja. Tiene vuelo amariposado, con batido rápido de alas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hausrotschwanz_Brutpflege_2006-05-21-05.jpg?width=1280',
+  s.image_attribution = 'Stefan-Xp (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Phoenicurus ochruros';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mito',
+  s.primary_habitat = NULL,
+  s.description = 'Es fácil de identificar por la notable longitud de su cola (7-9 centímetros), que contrasta con su pequeño cuerpecillo, de cortas y redondeadas alas. En un primer vistazo resulta un ave con una apariencia general oscura. Sin embargo, observada con atención se aprecia una banda clara que recorre toda la cabeza, así como una pechuga grisácea con tintes rojizos, que contrasta con los tonos negros y grises del dorso, la cola y las alas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Long-tailed_Tit_Aegithalos_caudatus.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Aegithalos caudatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Busardo ratonero',
+  s.primary_habitat = 'Mosaicos de bosque y campo abierto, con arbolado para nidificar',
+  s.description = 'La rapaz mediana más frecuente y variable de plumaje: los hay casi blancos y casi negros. Pasa mucho tiempo posado en postes y en el suelo, y planea en círculos con las alas ligeramente levantadas. Su reclamo es un maullido lastimero muy reconocible.',
+  s.description_source = NULL,
+  s.identification_tips = 'Planea en círculos con las alas en «V» poco marcada
+Maullido agudo y quejumbroso al volar
+Muy variable: desde ejemplares claros a muy oscuros',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Buizerd-rh_20091021_002_(cropped).jpg?width=1280',
+  s.image_attribution = 'RonaldHuijssen (CC BY-SA 3.0 nl) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Buteo buteo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Verderón común',
+  s.primary_habitat = NULL,
+  s.description = 'Podría describirse como un “gorrión verde”. Es cabezón, con un pico ancho y fuerte. Destaca su coloración, verde esmeralda, con llamativas manchas amarillas en el hombro, en las plumas remeras de las alas y en la cola. Las hembras presentan colores más discretos que los machos, pero ambos son muy parecidos. Solamente los jóvenes resultan algo distintos, pues al salir del nido tienen plumaje moteado en las partes inferiores, y el verde de su manto y cabeza es mucho más apagado que el de los adultos. Su coloración se parece a la de verderones serranos, lúganos y verdecillos, aunque el verderón común se reconoce bien por su mayor tamaño y por poseer amplias manchas amarillas en sus alas. Cuando vuela, este detalle resulta útil para distinguirlo de verdecillos, pardillos comunes y jilgueros.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carduelis_chloris_3_(Marek_Szczepanek).jpg?width=1280',
+  s.image_attribution = 'This illustration was made by Marek Szczepanek. If you are interest… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Chloris chloris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Paloma zurita',
+  s.primary_habitat = NULL,
+  s.description = 'Paloma similar a la bravía, pero de tamaño algo menor, y más ligera que la torcaz. En su plumaje, totalmente gris, destacan los tonos vinosos del cuello, el color gris pálido del obispillo y unas franjas más claras en las alas. Ambos sexos resultan similares. Tiene un vuelo más rápido y con mayor frecuencia de aleteo que la torcaz. Al volar se ve oscura la zona inferior de sus alas, que es pálida en las palomas bravía y torcaz.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/2019-03-17_Columba_oenas%2C_Jesmond_Dene_1.jpg?width=1280',
+  s.image_attribution = 'MPF (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Columba oenas';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Petirrojo europeo',
+  s.primary_habitat = NULL,
+  s.description = 'Pajarillo de constitución rechoncha, sobre todo en invierno, cuando ahueca sus plumas para generar una capa de aire caliente interior. Machos y hembras son idénticos en coloración. En su plumaje destaca la amplia mancha anaranjada que se extiende por la cara, la garganta y el pecho, la cual aparece bordeada por una irregular y sutil banda gris. El resto del plumaje resulta poco vistoso. Domina el color pardo verdoso en el dorso y las alas, y el blanco sucio en el vientre. Los jóvenes volantones, antes de la muda parcial a finales del verano, muestran un plumaje pardo, con casi todas sus plumas punteadas en su extremo con motas amarillentas. El petirrojo europeo se mueve habitualmente por el suelo en busca de insectos. Para cantar se posa en las ramas altas de los árboles, ya sea en invierno o durante la temporada de cría. Es muy agresivo, tanto con ejemplares de su misma especie como con el resto de las aves, no solo en la época reproductora, sino también durante la invernada. En este último periodo, las parejas se separan y defienden territorios individuales.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Erithacus_rubecula_with_cocked_head.jpg?width=1280',
+  s.image_attribution = 'Francis C. Franklin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Erithacus rubecula';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cernícalo vulgar',
+  s.primary_habitat = 'Campos abiertos, matorral, cortados y también ciudades',
+  s.description = 'El halcón más común y fácil de ver, gracias a su costumbre de cernirse: se queda suspendido en el aire batiendo las alas con la cabeza inmóvil, buscando ratones y lagartijas. El macho tiene la cabeza gris y el dorso rojizo con puntos negros; la hembra es más parda y barrada.',
+  s.description_source = NULL,
+  s.identification_tips = 'Se queda «clavado» en el aire cerniéndose
+Dorso rojizo salpicado de puntos negros
+Cola larga con una banda negra ancha en la punta',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Common_kestrel_falco_tinnunculus.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Falco tinnunculus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lavandera blanca',
+  s.primary_habitat = NULL,
+  s.description = 'Pájaro estilizado de aspecto muy distintivo, con larga cola y tonos blancos, negros y grises. Exhibe dorso gris ceniza, vientre blanco, y alas negras y con bandas blancas cuando están plegadas. Posee cola larga y negra, con plumas externas blancas, y patas y pico negros. El patrón de la cabeza resulta muy contrastado, con la cara blanca rodeada arriba y abajo de negro. Luce un plumaje invernal similar, aunque el color negro en la cabeza está más reducido, y muestra garganta blanca y banda pectoral negra. La lavandera enlutada (M. a. yarrelli), de origen británico, presenta tonos negros en dorso y flancos. Ambos sexos son parecidos, pero la hembra tiene la nuca gris. Los jóvenes resultan más uniformes, sin negro en la cabeza y con banda pectoral grisácea. Un hábito destacado de esta ave es el continuo balanceo de la cola. En invierno se vuelve muy gregaria y se reúne en dormideros.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/White-Wagtail.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Motacilla alba';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carbonero garrapinos',
+  s.primary_habitat = NULL,
+  s.description = 'Ave pequeña, con plumaje de colores apagados. El dorso y las alas son de color azul grisáceo, mientras que el pecho y el vientre presentan una tonalidad ante. Su rasgo más distintivo es la mancha blanca en la nuca. Se muestra muy activo y explora minuciosamente las ramas, ramitas, hojas y piñas. En su exhaustiva búsqueda de alimento llega a realizar auténticas acrobacias, muchas veces quedando colgado o realizando cortos cernidos. Habita preferentemente en pinares, pero también se localiza en formaciones de frondosas y en áreas ajardinadas. Tras el periodo reproductor se mueve en pequeños grupos, que en numerosas ocasiones están integrados por varias especies, pues se mezcla con otros páridos, reyezuelos, mosquiteros, etc.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/005Large.jpg?width=1280',
+  s.image_attribution = 'John GB Garrett (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Periparus ater';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pito ibérico',
+  s.primary_habitat = NULL,
+  s.description = 'Es un pájaro carpintero grande y robusto, de aspecto inconfundible, en cuyo plumaje dominan claramente los tonos verdosos, más intensos en las regiones dorsales, ligeramente grisáceos en las ventrales y con matices amarillentos en el obispillo. Carece de moteados y listas —salvo, tenuemente, en la región anal—, pero luce un llamativo patrón de coloración en la cabeza, donde el píleo es rojo y los ojos, amarillentos, aparecen enmarcados por un antifaz negro. Los machos y los jóvenes presentan una bigotera negra y roja, que es exclusivamente negra en las hembras. El plumaje juvenil se caracteriza por ser fuertemente moteado, especialmente en las partes inferiores, aunque, en conjunto, su coloración es más apagada que la del adulto, no presentan antifaz y poseen un iris más oscuro. Su vuelo es muy característico, con una trayectoria ondulatoria en la que el ave combina tramos en los que bate las alas con otros en que las pliega.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Iberian_Green_Woodpecker_(Pito_Ib%C3%A9rico)_(Picus_sharpei)_-_Torrevieja%2C_Spain_2024-02-04.jpg?width=1280',
+  s.image_attribution = 'Ryan Hodnett (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Picus sharpei';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Reyezuelo listado',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de una de las aves más diminutas de la avifauna europea. En un primer vistazo, aparece como un pájaro de aspecto general rechoncho, con tonalidades verdosas y cabeza adornada por un característico diseño de listas. Presenta el dorso verde brillante, en contraste con las alas oscuras, surcadas por dos bandas blanquecinas. Las partes inferiores son pálidas, aunque muestran ligeros tonos anaranjados en el pecho del macho. La especie posee un diseño cefálico característico en el que destaca el píleo naranja en los machos, o amarillo en las hembras, flanqueado por una banda negra y una marcada ceja blanca. Asimismo, luce una lista ocular negra y un semianillo blanco que circunda la parte inferior del ojo.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Firecrest93.JPG?width=1280',
+  s.image_attribution = 'NAUMANN, NATURGESCHICHTE DER VÖGEL MITTELEUROPAS: Band II, Tafel 15… (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Regulus ignicapilla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tarabilla europea',
+  s.primary_habitat = 'Matorral bajo, herbazales, ribazos y bordes de cultivo con posaderos',
+  s.description = 'Pájaro pequeño y regordete que se posa en lo alto de las matas, muy erguido y a la vista, para lanzarse al suelo a por insectos. El macho tiene la cabeza negra, un collar blanco a los lados y el pecho naranja. Su reclamo suena como dos piedras golpeadas, de donde le viene el nombre.',
+  s.description_source = NULL,
+  s.identification_tips = 'Siempre en lo alto de una mata, bien visible
+Macho con capucha negra y medio collar blanco
+Reclamo como el chasquido de dos cantos rodados',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Malestonechatseaham_Cropped.jpg?width=1280',
+  s.image_attribution = 'derivative work: Myosotis Scorpioides (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Saxicola rubicola';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sylvia undata',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Dartford_Warbler_Provencegrasm%C3%BCcke_(Sylvia_undata)_by_J._Dietrich.jpg?width=1280',
+  s.image_attribution = 'J. Dietrich (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Sylvia undata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bisbita común',
+  s.primary_habitat = NULL,
+  s.description = 'Ave de aspecto poco llamativo y sin caracteres muy distintivos, similar al resto de bisbitas. Exhibe dorso pardo, un tanto verdoso al principio del otoño, con muchas estrías oscuras; vientre blanco sucio muy rayado; y flancos anaranjados en otoño, que se aclaran según avanza el invierno. Posee alas redondeadas, cola larga y con plumas externas blancas, pico fino, y patas finas, con la uña posterior larga y recta. La garganta es blanca, con una fina bigotera negra. Ambos sexos son iguales. Los jóvenes, cuando llegan a España, no se distinguen de los adultos. Este pájaro se observa casi siempre en el suelo y en grupo. Para diferenciarlo de otros bisbitas hay que atender a las fechas, a su voz, a su pequeño tamaño, y a detalles del plumaje como flancos con estrías más gruesas y dorso menos contrastado.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a abril',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Anthus_pratensis.jpg?width=1280',
+  s.image_attribution = 'Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Anthus pratensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Águila real',
+  s.primary_habitat = 'Montañas y sierras con cortados rocosos y amplias zonas abiertas de caza',
+  s.description = 'La mayor de las águilas ibéricas, con casi dos metros y medio de envergadura y una nuca dorada que le da nombre. Cría en repisas de cantiles y usa territorios enormes, que una pareja defiende durante años. Planea con las alas en una «V» muy suave y bate poco, lo que la distingue de las rapaces menores.',
+  s.description_source = NULL,
+  s.identification_tips = 'Nuca y cogote de tono dorado, visibles a buena luz
+Planea con las alas en «V» muy abierta y bate poco
+Tamaño enorme: dobla al ratonero en el mismo cielo',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Maakotka_(Aquila_chrysaetos)_by_Jarkko_J%C3%A4rvinen.jpg?width=1280',
+  s.image_attribution = 'Jarkko Järvinen (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Aquila chrysaetos';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mochuelo europeo',
+  s.primary_habitat = 'Matorral litoral y zonas abiertas con posaderos',
+  s.description = 'Búho pequeño y rechoncho, de cabeza plana y ojos amarillos con un ceño que le da expresión severa. Es el más diurno de nuestros búhos: se ve posado en postes y ruinas a plena luz. Vuela con un ondulado marcado, a golpes de aleteo y planeo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cabeza plana y ancha, sin penachos
+Cejas blancas marcadas que le dan aspecto ceñudo
+Vuelo ondulado, a rachas de aleteo y planeo',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Mochuelo_Com%C3%BAn_(_Athene_noctua_)(1).jpg?width=1280',
+  s.image_attribution = 'Arturo Nikolai from Galicia, Spain (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Athene noctua';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Paloma bravía',
+  s.primary_habitat = NULL,
+  s.description = 'Ave compacta, de mediano tamaño, redondeada y de cabeza pequeña. Muestra una coloración dominante grisácea, con el obispillo blanco y dos bandas alares negras. Dado que se trata del ancestro silvestre de las palomas domésticas —con las que puede hibridarse—, presenta un aspecto muy similar a la forma “típica” de estas. Debido a la frecuente hibridación entre ambas variedades y a la presencia de muchas poblaciones cimarronas, resulta muy difícil distinguir cuándo una población es realmente silvestre o pertenece a la forma semidoméstica. Tiene un vuelo muy rápido y directo, con batidos potentes.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Wild_rock_dove_at_Raikot%2C_Diamer%2C_Gilgit-Baltistan%2C_Pakistan.png?width=1280',
+  s.image_attribution = 'Birds of Gilgit-Baltistan from Aliabad, Hunza, Pakistan (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Columba livia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Triguero',
+  s.primary_habitat = 'Cultivos de secano, pastizales y llanos abiertos con posaderos',
+  s.description = 'Escribano grande y rechoncho, pardo y rayado, sin marcas llamativas. Canta desde un cable o una mata con una frase acelerada que suena como un manojo de llaves agitado, y vuela distancias cortas dejando las patas colgando.',
+  s.description_source = NULL,
+  s.identification_tips = 'Canto como un manojo de llaves agitándose
+Vuela con las patas colgando, sin recogerlas
+Aspecto pesado y pardo, sin marcas vistosas',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/606625336/original.jpg',
+  s.image_attribution = 'euqirneto (CC BY 4.0) · GBIF',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"protegida por la Directiva Aves 2009/147/CE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Emberiza calandra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cogujada montesina',
+  s.primary_habitat = 'Matorral bajo, laderas pedregosas y eriales con vegetación rala',
+  s.description = 'Cogujada de cresta puntiaguda, muy parecida a la común pero de pico más corto y grueso y con el pecho más nítidamente rayado. Prefiere el matorral y las laderas pedregosas, mientras que la común busca cultivos, caminos y bordes de pueblo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cresta alta y afilada, casi triangular
+Pico más corto y romo que el de la cogujada común
+Rayado del pecho bien definido, no difuminado',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Galerida_theklae_Madrid.jpg?width=1280',
+  s.image_attribution = 'Adrian198cm (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Galerida theklae';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Urraca común',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de una de las más conocidas especies de la fauna española, circunstancia a la que contribuyen no solo su inconfundible aspecto, sino también unos hábitos poco recatados y su capacidad de instalarse en hábitats muy transformados, incluido el interior de las grandes ciudades. Especie de tamaño intermedio entre los córvidos, la urraca luce un llamativo y característico plumaje blanquinegro, que adquiere bellas irisaciones en diferentes zonas, sobre todo en las plumas caudales. Cuando se desplaza resulta también fácilmente identificable, además de por su diseño cromático, por poseer una silueta característica y un vuelo ondulante durante el cual bate espasmódicamente las alas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Urraca_(Pica_pica)%2C_Almuradiel%2C_Ciudad_Real%2C_Espa%C3%B1a%2C_2021-12-19%2C_DD_04.jpg?width=1280',
+  s.image_attribution = 'Diego Delso (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Pica pica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Avión roquero',
+  s.primary_habitat = 'Acantilados mediterráneos con Limonium',
+  s.description = 'Hirundínido pardo y robusto que vuela pegado a las paredes rocosas de acantilados y barrancos, donde construye su nido de barro.',
+  s.description_source = NULL,
+  s.identification_tips = 'Vuelo pegado a las paredes
+Manchas claras en la cola
+Nido de barro en cortados',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ptyonoprogne_rupestris_in_flight.jpg?width=1280',
+  s.image_attribution = 'ferran pestaña (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Ptyonoprogne rupestris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Estornino negro',
+  s.primary_habitat = NULL,
+  s.description = 'Esta ave posee tamaño mediano, aspecto compacto, patas cortas y fuertes, y pico puntiagudo. Luce una coloración uniformemente negra, con ciertos brillos verdes y púrpuras, pero sin motas. Tiene el pico amarillo en verano y oscuro en invierno. Ambos sexos resultan similares, y los jóvenes son uniformemente pardos. Aunque se parece al mirlo común, el estornino se desplaza más erguido, andando y no a saltos. Presenta un vuelo rápido y directo.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Estornino_Negro._Casa_de_Campo._Madrid..jpg?width=1280',
+  s.image_attribution = 'Luis Egido (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Sturnus unicolor';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alondra común',
+  s.primary_habitat = NULL,
+  s.description = 'Aláudido típico, de tonos pardos y estriado oscuro, con pico fuerte, cuerpo alargado y robusto, patas, alas y cola alargadas, y hábitos terrestres. La especie combina la presencia de una pequeña cresta, una máscara facial pálida, pecho estriado, borde blanco terminal en las alas — como en la calandria— y rectrices externas de la cola blancas. Su vuelo es rápido, con intenso batido de alas. Tiene una gran capacidad de maniobra en el aire, con posibilidades de cernidos prolongados y ascensiones y descensos vertiginosos .',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Alauda_arvensis_2.jpg?width=1280',
+  s.image_attribution = 'Daniel Pettersson (CC BY-SA 2.5 se) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Alauda arvensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Búho real',
+  s.primary_habitat = 'Cortados rocosos, barrancos y laderas con matorral y zonas abiertas de caza',
+  s.description = 'El mayor búho de Europa, con casi dos metros de envergadura, penachos de plumas erguidos sobre la cabeza y ojos de un naranja encendido. Caza conejos, ratas e incluso otras rapaces. Su canto es un «bu-bo» profundo que se propaga kilómetros por los barrancos en las noches de invierno.',
+  s.description_source = NULL,
+  s.identification_tips = 'Penachos de plumas erguidos a los lados de la cabeza
+Ojos naranjas muy intensos
+Canto grave y profundo en las noches de invierno',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Bubo_bubo_sibiricus_-_01.JPG?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Bubo bubo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcaraván',
+  s.primary_habitat = 'Llanos pedregosos, cultivos de secano, ramblas y eriales con poca cobertura',
+  s.description = 'Ave de aspecto extraño y ojos amarillos enormes, adaptados a la actividad nocturna. De día permanece agachada e inmóvil, confiada en su plumaje críptico, y solo al anochecer se activa y delata con un reclamo silbado y melancólico que recuerda al del zarapito.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ojos amarillos desproporcionadamente grandes
+Dos barras blancas y negras en el ala plegada
+Reclamo silbado y triste al anochecer',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Burhinus_oedicnemus_insularum_Lanzarote_1.jpg?width=1280',
+  s.image_attribution = 'Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Burhinus oedicnemus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Grajilla occidental',
+  s.primary_habitat = NULL,
+  s.description = 'Ave de tamaño más modesto que grajas y cornejas, la grajilla luce un plumaje muy oscuro, que a cierta distancia parece negro. Vista de cerca, sin embargo, se aprecia una cierta tonalidad grisácea en algunas regiones del cuerpo, especialmente en el pecho y en la nuca, que es de un bello color ceniciento. El iris es muy claro, de un azul pálido, casi blanco. Es habitual que las grajillas se organicen en ruidosos bandos que sobrevuelan las rocas y los viejos edificios o que menudean por campos y pastizales en busca de alimento.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D0%B0%D0%BB%D0%BA%D0%B0_(Corvus_monedula)%2C_%D0%A6%D0%B0%D1%80%D0%B8%D1%86%D1%8B%D0%BD%D0%BE.jpg?width=1280',
+  s.image_attribution = 'Dion Art (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Coloeus monedula';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Corneja negra',
+  s.primary_habitat = NULL,
+  s.description = 'Este córvido luce un plumaje homogéneamente negro —con algunos reflejos metálicos en la cabeza, las alas y el dorso—, el mismo color que exhibe en las patas y en su robusto pico. Puede confundirse a cierta distancia con el cuervo, si bien posee tamaño menor; alas más cortas, anchas y redondeadas; cola más corta y de borde casi recto; y una forma de vuelo diferente, en la que predominan los aleteos lentos y constantes. Por su tamaño y diseño se asemeja a los juveniles de graja, aunque la corneja cuenta con un pico más robusto y romo. A pesar de que estas aves pueden verse tanto solas como en parejas, no resulta infrecuente que se reúnan en bandos de cierta magnitud, allí donde abunde el alimento, o en dormideros.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carrion_crow_2022_04_05_05_02.jpg?width=1280',
+  s.image_attribution = 'Alexis Lours (CC BY 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Corvus corone';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Escribano montesino',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de un escribano bastante grande y voluminoso, con las alas relativamente cortas y la cola larga, que luce en la cabeza tres características listas oscuras. La cabeza, el cuello, la nuca y la parte superior del pecho son de color grisáceo, en tanto que el resto del cuerpo presenta tonos pardos o rojizos. Fuera de la estación reproductora, los machos se asemejan a las hembras y a los inmaduros, aunque en el periodo de cría su coloración se hace más brillante, con abundancia de tonos anaranjados en el pecho y en el vientre. El joven presenta un plumaje parduzco y fuertemente estriado en el pecho; la cabeza es marrón-ocre y no presenta bandas laterales.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Emberiza_cia.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Emberiza cia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcaudón real',
+  s.primary_habitat = 'Campo abierto con matorral disperso, cables y posaderos altos',
+  s.description = 'Alcaudón grande, gris por encima y con un antifaz negro que le cruza el ojo. Caza al acecho desde un posadero alto y tiene la costumbre de empalar sus presas —insectos, lagartijas, ratones— en espinas y alambres, formando pequeñas despensas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Antifaz negro sobre fondo gris claro
+Siempre en lo alto de un cable, poste o mata
+Presas empaladas en espinos cerca de su territorio',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/S%C3%BCdlicher-Raubw%C3%BCrger_2018-01-07_0003.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Lanius meridionalis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collalba negra',
+  s.primary_habitat = 'Matorral litoral, laderas secas y roquedos',
+  s.description = 'La mayor de las collalbas, enteramente negra salvo el obispillo y la base de la cola, blancos. Vive en cortados y laderas rocosas, donde construye junto al nido una plataforma de piedrecitas que acarrea una a una. Su canto es potente y melodioso.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cuerpo negro con obispillo blanco muy contrastado
+«T» negra invertida en la cola blanca al volar
+Montoncitos de piedrecitas junto a la grieta del nido',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Black_Wheatear%2C_Isla_Plana_3.jpg?width=1280',
+  s.image_attribution = 'Andrew Thomas from Shrewsbury, UK (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Oenanthe leucura';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Estornino pinto',
+  s.primary_habitat = NULL,
+  s.description = 'Ave de mediano tamaño, compacta, con patas fuertes y cortas de color rosado, y pico puntiagudo. Exhibe un plumaje de color negro dominante, con reflejos violáceos y púrpuras, y con un moteado variable de pintas blanco-amarillentas. En invierno, el moteado resulta especialmente intenso, mientras que en verano es menos evidente. Tiene el pico de color amarillo en verano y negro en invierno. Los jóvenes presentan tonos pardo-grisáceos. Se trata de un pájaro similar al mirlo común, aunque se desplaza más erguido, andando y no a saltos. Posee un vuelo rápido y directo.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/European_Starling_2006.jpg?width=1280',
+  s.image_attribution = 'http://www.naturespicsonline.com/ (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Sturnus vulgaris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca capirotada',
+  s.primary_habitat = NULL,
+  s.description = 'Curruca de mediano tamaño, de aspecto más compacto y robusto que la mayor parte de sus congéneres, aunque muy similar en tamaño y silueta a la curruca mosquitera. Al igual que ésta, y a diferencia de la mayoría de las currucas, no presenta ni rectrices externas ni garganta blanquecinas. Luce una tonalidad general grisácea, aunque la hembra muestra en las alas y en las regiones ventrales tintes más pardo rojizos. Los machos poseen el capirote negro, mientras que las hembras y los jóvenes lo tienen de color castaño.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sylvia_atricapilla_-Lullington_Heath%2C_East_Sussex%2C_England_-male-8.jpg?width=1280',
+  s.image_attribution = 'Ron Knight from Seaford, East Sussex, United Kingdom (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Sylvia atricapilla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zorzal común',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de un zorzal de tamaño medio, con las regiones dorsales de un color pardo algo más cálido que el del zorzal charlo. Las partes inferiores presentan tonos claros, blanquecinos en el vientre y de un color ocre amarillento en el pecho, y aparecen profusamente tachonadas por motas en forma de cuña que, en la zona del cuello, se ordenan para dar lugar a una fina bigotera. Suele desplazarse por el suelo, aunque se posa en la parte más alta de arbustos y árboles para cantar. Su vuelo, rápido y algo espasmódico, permite observar la característica coloración herrumbrosa de su zona axilar, que facilita su diferenciación de otros zorzales.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9F%D0%B5%D0%B2%D1%87%D0%B8%D0%B9_%D0%B4%D1%80%D0%BE%D0%B7%D0%B4_%D0%BD%D0%B0_%D0%BF%D0%B5%D0%BD%D1%8C%D0%BA%D0%B5_(Turdus_philomelos)%2C_%D0%91%D0%B8%D1%82%D1%86%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BB%D0%B5%D1%81.jpg?width=1280',
+  s.image_attribution = 'Dion Art (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Turdus philomelos';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Abubilla',
+  s.primary_habitat = 'Campos abiertos, dehesas, cultivos con arbolado y bordes de matorral',
+  s.description = 'Ave inconfundible de color canela con alas y cola a franjas blancas y negras, y una cresta eréctil que despliega en abanico al posarse. Sondea el suelo blando con el pico largo y curvo en busca de larvas e insectos. Su canto, un «up-up-up» sordo y repetido, se oye de lejos en primavera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Vuelo ondulante y torpe, como una mariposa grande
+Cresta que abre en abanico justo al aterrizar
+Camina por el suelo clavando el pico largo y curvo',
+  s.seasonality = 'Todo el año en el sur peninsular; estival en el resto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Wiedehopf_mit_Puppe_als_Futter.jpg?width=1280',
+  s.image_attribution = 'Sven Damerow (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Upupa epops';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gavilán común',
+  s.primary_habitat = 'Bosques mixtos de coníferas y frondosas.Sotos, grandes arbustos',
+  s.description = 'Esta pequeña rapaz de hábitos forestales, larga cola y alas cortas y redondeadas presenta un acusado dimorfismo sexual invertido, por el cual las hembras resultan ostensiblemente más corpulentas que los machos; además, entre ambos sexos existen marcadas diferencias en cuanto al diseño del plumaje. El macho adulto tiene las partes superiores y el píleo de un color grisáceo bastante intenso, en tanto que las inferiores son pálidas con un fino barrado transversal y un tono rojizo que puede ser muy notorio, principalmente en las mejillas y los flancos; sobre el ojo luce una leve línea blanca a modo de ceja. Las patas son amarillas y con los largos tarsos sin emplumar. La hembra, mucho más pesada y robusta, posee un patrón de coloración dominado por los tonos pardogrisáceos en el dorso y el píleo, con las regiones inferiores blanquecinas, muy finamente barradas de pardo; la ceja es más grande y evidente que en su compañero. El plumaje de los jóvenes presenta las partes superiores parduzcas, con las plumas orladas de ante, y las inferiores blanquecinas y toscamente barradas de pardo rojizo. Sobre el ojo —que es amarillo— exhibe una marcada ceja. Visto en vuelo, el gavilán es un ave bastante pálida, en cuya silueta llama la atención una cola larga y de base estrecha. Normalmente, se lo observa volando velozmente a baja altura entre los árboles, aunque también puede elevarse y planear durante un tiempo sobre el dosel forestal.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eurasian_Sparrowhawk_by_Steve_Ward.jpg?width=1280',
+  s.image_attribution = 'Steve Ward (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Accipiter nisus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Águila perdicera',
+  s.primary_habitat = 'Sierras con cortados rocosos y amplias zonas abiertas de matorral y cultivo para cazar',
+  s.description = 'Águila mediana de alas largas y cola larga, con el vientre blanco finamente rayado y una mancha blanca en la espalda que se ve bien en vuelo. Caza a gran velocidad y a poca altura, sorprendiendo a perdices, conejos y palomas. Las parejas ocupan el mismo cortado durante años.',
+  s.description_source = NULL,
+  s.identification_tips = 'Mancha blanca en el centro de la espalda, visible desde arriba
+Vientre claro y muy rayado, con una banda oscura en el borde del ala
+Vuelo bajo y rápido cuando caza, no en círculos altos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aguila_perdicera.jpg?width=1280',
+  s.image_attribution = 'Paco Gómez from Castellón, Spain (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas: Vulnerable","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Aquila fasciata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Agateador común',
+  s.primary_habitat = 'Bosques y arboledas con troncos gruesos y corteza resquebrajada',
+  s.description = 'Pájaro diminuto y críptico que sube por los troncos en espiral, apoyándose en la cola rígida, y baja volando a la base del árbol siguiente para empezar de nuevo. Extrae insectos de las grietas de la corteza con un pico fino y curvado.',
+  s.description_source = NULL,
+  s.identification_tips = 'Trepa siempre hacia arriba, nunca cabeza abajo
+Dorso jaspeado como corteza y vientre blanco
+Pico fino y curvo, como una aguja doblada',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Short-toed_Treecreeper_(Certhia_brachydactyla)_(cropped_version).jpg?width=1280',
+  s.image_attribution = 'Short-toed_Treecreeper_(Certhia_brachydactyla).jpg: א (Aleph) deriv… (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Certhia brachydactyla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Críalo',
+  s.primary_habitat = 'Bosques,zonas con córvidos',
+  s.description = 'Es un ave de tamaño medio, morfológicamente muy semejante al cuco, del que se diferencia por su aspecto más esbelto, por tener una cola más larga y por el colorido del plumaje. Este es de tono marrón grisáceo en las regiones dorsales, que aparecen salpicadas de motas blancas, al igual que ocurre con las plumas del ala. La zona ventral es de color blanquecino, con la garganta teñida de ocre-amarillento. En la cabeza luce un capirote de color gris plateado —que remata en una pequeña cresta ligeramente eréctil— y un anillo ocular rojo. El joven presenta una coloración incluso más vistosa que los adultos, pues exhibe un intenso color achocolatado con abundantes motas blancas en el dorso y unas regiones ventrales blancas, que se tornan amarillo-ocráceas en pecho y cuello. Las plumas de vuelo poseen un vistoso color rojizo, en tanto que el capirote es negro y el anillo ocular más conspicuo que el de los adultos.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Clamator_glandarius.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Clamator glandarius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cuervo grande',
+  s.primary_habitat = NULL,
+  s.description = 'El rasgo más llamativo del cuervo es, sin duda, su colosal tamaño, que lo convierte en el representante más voluminoso del orden de los paseriformes. Dentro de su anatomía destaca sobre todo el pico, notablemente largo, robusto y grueso. Por lo demás, luce un plumaje homogéneamente negro, con algunos brillos metálicos. El vuelo de este enorme pájaro es lento y suele intercalar aleteos con largos planeos, que el ave ejecuta gracias a sus largas alas apuntadas y a su cola en forma de cuña.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Corvus_corax.001_-_Tower_of_London.JPG?width=1280',
+  s.image_attribution = 'Fernando Losada Rodríguez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Corvus corax';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Esmerejón',
+  s.primary_habitat = 'Llanos abiertos, marismas y pastizales durante la invernada',
+  s.description = 'El halcón más pequeño de Europa, poco mayor que un mirlo, con vuelo rápido y bajo pegado al terreno para sorprender a pequeñas aves. El macho es gris azulado por encima; la hembra, parda. No se ciñe como el cernícalo: siempre está en movimiento.',
+  s.description_source = NULL,
+  s.identification_tips = 'Muy pequeño y compacto, con aleteo rápido
+Vuela bajo y en línea recta, casi rozando el suelo
+Sin bigotera marcada, a diferencia del peregrino',
+  s.seasonality = 'Otoño e invierno',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Falco_columbarius_Male.jpg?width=1280',
+  s.image_attribution = 'Raj Boora from Edmonton, Canada (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Falco columbarius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alondra totovía',
+  s.primary_habitat = 'Claros de bosque, dehesas y laderas con matorral y árboles dispersos',
+  s.description = 'Alondra pequeña de cola muy corta y cresta discreta, con una ceja blanca ancha que se une en la nuca. Canta en vuelo circular, sobre todo al amanecer y en noches claras, con una frase melancólica y descendente de una belleza reconocida.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola muy corta, silueta rechoncha en vuelo
+Cejas blancas que se juntan por detrás de la cabeza
+Marca blanca y negra en el borde delantero del ala',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lullula_arborea.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Lullula arborea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Roquero solitario',
+  s.primary_habitat = 'Acantilados mediterráneos con Limonium',
+  s.description = 'Pájaro rupícola de plumaje azul pizarra en el macho, ligado a acantilados marinos y roquedos, donde canta desde cornisas destacadas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Macho azul pizarra
+Canta desde cornisas y cumbres
+Acantilados y roquedos calcáreos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Blue_rock_thrush_(male)_at_Gamla_Nature_Reserve.jpg?width=1280',
+  s.image_attribution = 'Artemy Voikhansky (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial, RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Monticola solitarius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gorrión chillón',
+  s.primary_habitat = NULL,
+  s.description = 'El chillón es un gorrión grande y corpulento, con la cabeza robusta y el pico muy fuerte. En su plumaje dominan los tonos marróngrisáceos con un profuso listado oscuro en el dorso. Las partes inferiores, por el contrario, son claras y están adornadas con amplias listas de color gris parduzco. En la cabeza destacan tres listas anchas: una clara; otra marrón-grisácea tras el ojo bajo aquella, y, por encima, una parda oscura. Otra lista de color marrón pálido recorre el píleo. Bajo la garganta presenta una mancha amarilla que a menudo permanece oculta o poco visible. En la cola aparecen unas manchas blancas hacia los extremos, que resultan bien visibles en vuelo. No hay diferencias de coloración entre machos y hembras. Los jóvenes son difíciles de distinguir de los adultos, incluso recién volados del nido. Se diferencian de estos por carecer de la mancha amarilla en la garganta. Asimismo, el dibujo de la cara presenta en ellos un aspecto poco definido y su coloración general es más suave.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Petronia_petronia_-Ariege%2C_Midi-Pyrenee%2C_France-8-4c.jpg?width=1280',
+  s.image_attribution = 'Petronia_petronia_-Ariege,_Midi-Pyrenee,_France-8.jpg: Sandra from … (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Petronia petronia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Acentor alpino',
+  s.primary_habitat = 'Roquedos y pedreras de alta montaña; en invierno baja a cortados',
+  s.description = 'Pájaro robusto de montaña, pardo y discreto salvo por dos detalles: los flancos con listas castañas y una garganta blanca finamente moteada de negro. Camina entre las rocas buscando insectos y semillas, y en invierno desciende a cortados y construcciones.',
+  s.description_source = NULL,
+  s.identification_tips = 'Flancos con anchas listas castañas
+Garganta blanca con motas negras, como un babero
+Base del pico amarilla',
+  s.seasonality = 'Otoño e invierno en cotas bajas',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Alpine_accentor_saganta.jpg?width=1280',
+  s.image_attribution = 'Paco Gómez from Castellón, Spain (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Prunella collaris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Acentor común',
+  s.primary_habitat = NULL,
+  s.description = 'Pájaro del tamaño de un gorrión común, con el pico fino y puntiagudo, y las patas fuertes y rojizas. De comportamiento huidizo, le gusta moverse entre la vegetación baja y caminar por el suelo. Tiene las partes superiores del plumaje marrones y con escamado pardo oscuro, semejantes al dorso de un gorrión común. La cabeza, la garganta y el pecho son de un color gris plomizo, más intenso en los machos, con la zona auricular y el píleo marrones. Las partes posteriores del vientre poseen un tono gris más claro, con los flancos marrones. Los jóvenes exhiben cabeza y garganta de color castaño, en lugar de gris, y muestran todo el plumaje fuertemente listado de pardo oscuro. La base de su pico es naranja amarillenta, mientras que los adultos presentan todo el pico negro.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Acentor_com%C3%BAn23_by_Paco_G%C3%B3mez.jpg?width=1280',
+  s.image_attribution = 'Paco Gómez (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Prunella modularis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lúgano',
+  s.primary_habitat = 'Sus preferencias de hábitat van ligadas a sus requerimientos tróficos',
+  s.description = 'Se trata de un ave pequeña, de pico corto y fino, que muestra cola corta y escotada cuando está cerrada. Su coloración puede recordar a la de verdecillos, verderones comunes y verderones serranos. Pero los lúganos se distinguen bien por la combinación de los siguientes caracteres: pequeño tamaño, manchas amarillas en alas y cola, y franjas amarillas en los “hombros” de las alas. Además, los machos tienen el capirote y la garganta negros. Es una especie gregaria que se mezcla con otras, sobre todo fringílidos como pardillos, pinzones vulgares, verdecillos, verderones serranos, pinzones reales, etc. Pero, a diferencia de la mayoría de los fringílidos, el lúgano también busca alimento en las ramas de árboles de ribera, siendo común observarlo en alisos, olmos y abedules.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a abril',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carduelis_Spinus_(55339970).jpeg?width=1280',
+  s.image_attribution = 'Kobolt (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Spinus spinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chochín',
+  s.primary_habitat = NULL,
+  s.description = 'El chochín común es un pajarillo de pequeño tamaño, aspecto compacto, cabeza voluminosa y cola corta, que se caracteriza por poseer un plumaje pardo-rojizo —algo más claro en las partes inferiores— finamente vermiculado de tonos más oscuros. Sobre el ojo presenta una marcada ceja de color crema. El pico es fino y algo curvado, con distinta longitud según la subespecie. Las diferencias entre edades y sexos son muy sutiles y resultan difíciles de reconocer en el campo. De carácter inquieto, el chochín —una de las especies más pequeñas de nuestra avifauna— cuando se excita suele sacudir y levantar su cola formando un ángulo de 90 grados, antes de desaparecer entre la densa vegetación.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carri%C3%A7a%2C_carricinha%2C_carruira%2C_no_seu_canto_possante_e_melodioso%2C_Winter_Wren%2C_with_a_melodious_and_powerful_singing_(53737498699)_(cropped).jpg?width=1280',
+  s.image_attribution = 'Luiz Lapa from Oeiras, Portugal (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Troglodytes troglodytes';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jabalí',
+  s.primary_habitat = 'Bosque, matorral denso y cultivos; necesita cobertura y puntos de agua',
+  s.description = 'Ungulado robusto y adaptable, con el cuerpo cubierto de cerdas ásperas y una cabeza en cuña rematada por un hocico potente con el que remueve el suelo. Los rayones —las crías— nacen con líneas claras a lo largo del lomo. Es omnívoro y ha ampliado mucho su área en las últimas décadas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hozaduras: zonas de suelo removido como si lo hubieran arado
+Huellas hendidas grandes con las pezuñas laterales marcadas
+Barros y árboles con el tronco embarrado a media altura',
+  s.seasonality = 'Todo el año (actividad sobre todo nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eberswalde_Zoo_12-2017_img2.jpg?width=1280',
+  s.image_attribution = 'A.Savin (FAL) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Sus scrofa';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET

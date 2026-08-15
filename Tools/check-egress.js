@@ -63,8 +63,24 @@ const HOSTS = [
   // un gestor de bots de Radware. Es el portal para personas y no se intenta rodear. La misma
   // información sale del canal de datos abiertos, que es el que sí está pensado para máquinas.
   ['datos.gob.es',                 'catálogo de datos abiertos: localiza el fichero de patrimonio de cada comunidad (API /apidata/)'],
+  // OJO: `datos.gob.es` publica la accessURL de este fichero en **http**, y por ahí el proxy
+  // responde «Host not in allowlist». La descarga hay que pedirla en https (2026-08-15).
   ['nexo.carm.es',                 'datos abiertos de la CARM: «Monumentos en la Región de Murcia» en json/csv/rdf (vía 3 de POIs)'],
-  ['www.culturaydeporte.gob.es',   'registro estatal de BIC del Ministerio de Cultura (vía 3 de POIs)'],
+  // Dos hosts, y ninguno de los dos da el dato — pero por motivos DISTINTOS, y la diferencia
+  // importa (2026-08-15, Monte Arabí):
+  //   · `www.culturaydeporte.gob.es` es el dominio VIEJO: contesta 301 a `www.cultura.gob.es`.
+  //     Registrado solo él, este informe daba el registro de BIC por «abierto» sin que ninguna ruta
+  //     útil llegara a ninguna parte.
+  //   · `www.cultura.gob.es` sí está permitido —el CONNECT devuelve 200— y aun así no se puede
+  //     leer: su certificado lo emite la **FNMT-RCM (AC Componentes Informáticos)**, la CA de la
+  //     administración española, y el servidor manda solo la hoja, sin la intermedia. La cadena no
+  //     valida contra el bundle estándar. Eso NO se arregla desactivando la verificación: se
+  //     arregla añadiendo la CA de la FNMT al entorno. Mientras no esté, la vía 3 estatal es un
+  //     hueco de CONFIANZA, no de egreso, y así hay que escribirlo en el informe.
+  // Este chequeo mira el CONNECT, así que a los dos los dará por abiertos: son el ejemplo de que
+  // «abierto» y «sirve el dato» no son lo mismo.
+  ['www.culturaydeporte.gob.es',   'registro estatal de BIC: dominio VIEJO, solo devuelve 301 al nuevo'],
+  ['www.cultura.gob.es',           'registro estatal de BIC (dominio actual). Permitido, pero su cadena TLS (FNMT-RCM) no valida'],
   ['build.protomaps.com',          'mapa base sin conexión (tiles:build)'],
   ['build-metadata.protomaps.dev', 'versión del build de Protomaps'],
 

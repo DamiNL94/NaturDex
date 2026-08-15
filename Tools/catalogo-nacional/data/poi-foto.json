@@ -23,5 +23,10 @@
   "sierra-de-salinas": {
     "_comment": "Elegida el 2026-08-15 por COORDENADA, no por nombre: es el único archivo de Commons cuya geoetiqueta cae dentro del límite oficial (a 5 m del POI). La cadena automática se quedaba con «Monolito Capilla.jpg», que no está geoetiquetado y cuyo sitio solo lo avalaba la categoría —insuficiente en este espacio, ver poi-alias.json—.",
     "capilla-del-fraile": "VG nº 87059 La Capilla.jpg"
+  },
+  "monte-arabi": {
+    "_comment": "Elegidas MIRANDO las cinco candidatas de Category:Monte Arabí que nombran un POI, el 2026-08-15. Es el único espacio en el que el criterio visual ha descartado a la primera por orden alfabético: CantosVisera1.jpg no retrata el abrigo sino un CALCO expuesto en un panel —lleva impresa la cartela «CANTOS DE LA VISERA II (YECLA, MURCIA)»—, igual que las dos «… Panel.jpg» de la categoría. CantosVisera2.jpg sí es la pared pintada. Ninguna de las dos elegidas lleva geoetiqueta, y eso aquí es lo que las salva: las OCHO fotos geoetiquetadas de esta categoría se agrupan a ~2 km al suroeste de todo y siete caen FUERA del límite, así que su coordenada las descarta como prueba de sitio (misma comprobación que en Sierra de Salinas, distinto desenlace).",
+    "cantos-de-la-visera": "CantosVisera2.jpg",
+    "petroglifos-del-arabilejo": "InsculturasArabilejo2.jpg"
   }
 }

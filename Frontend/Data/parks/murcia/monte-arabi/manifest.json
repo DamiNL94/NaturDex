@@ -2,18 +2,19 @@
   "slug": "monte-arabi",
   "name": "Monte Arabí",
   "apiSlug": "monte-arabi",
-  "version": 1,
-  "updatedAt": "2026-07-27",
+  "version": 3,
+  "updatedAt": "2026-08-15",
   "data": "Data/parks/murcia/monte-arabi/park.json",
   "geo": {
-    "parque": "Data/parks/murcia/monte-arabi/geo/parque.geojson"
+    "parque": "Data/parks/murcia/monte-arabi/geo/parque.geojson",
+    "habitats": "Data/parks/murcia/monte-arabi/geo/habitats.geojson"
   },
   "images": [],
   "audio": [],
   "counts": {
-    "species": 0,
-    "habitats": 0,
-    "pointsOfInterest": 0,
+    "species": 83,
+    "habitats": 2,
+    "pointsOfInterest": 11,
     "images": 0,
     "assetBytes": 0
   },
