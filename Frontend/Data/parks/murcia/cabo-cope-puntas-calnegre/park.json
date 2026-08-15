@@ -2968,7 +2968,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 219,
@@ -3973,7 +3974,8 @@
         "categoria": "LESRPE (RD 139/2011)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 10,
@@ -6465,7 +6467,8 @@
         "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 77,

@@ -111,7 +111,10 @@ const dim = s => '\x1b[2m' + s + '\x1b[0m';
 // que hace el pipeline de especies —que se limita a anotar lo que diga Commons— y es deliberado:
 // allí la foto ilustra un taxón y se puede sustituir; aquí acompaña a un sitio concreto y se
 // empaqueta en la descarga sin conexión del parque.
-const LICENCIA_LIBRE = /^(cc0|cc[ -]?by([ -]sa)?([ -]\d(\.\d)?)*( [a-z]{2})?|public domain|dominio p[úu]blico|pd([ -].*)?|no restrictions)$/i;
+// La FAL (Licence Art Libre / Free Art License) es copyleft libre y Commons la acepta: permite obra
+// derivada y uso comercial, que es lo único que esta lista comprueba. Entró al añadirse la lista
+// blanca a las portadas de hábitat, donde cuatro portadas buenas de Commons la declaran.
+const LICENCIA_LIBRE = /^(cc0|cc[ -]?by([ -]sa)?([ -]\d(\.\d)?)*( [a-z]{2})?|public domain|dominio p[úu]blico|pd([ -].*)?|no restrictions|fal([ -]\d(\.\d)?)?|free art license([ -]\d(\.\d)?)?|licen[cs]e art libre([ -]\d(\.\d)?)?)$/i;
 
 function licenciaLibre(licencia) {
   const plano = String(licencia || '').trim().toLowerCase().replace(/\s+/g, ' ');
@@ -412,6 +415,24 @@ async function main() {
   if (OPT.report) escribeInforme(informe, fromRoot(OPT.report));
   if (OPT.sql && sentencias.length && !OPT.dryRun) {
     const file = fromRoot(OPT.sql);
+    // El fichero de SQL es de TODOS los espacios y esta ejecución puede ser de uno solo: se
+    // reescribe entero, así que con `--park` se llevaría por delante las sentencias de los demás.
+    // Es un borrado en silencio de algo YA APLICADO en la base de datos —`Database/poi-imagenes.sql`
+    // pasó de 19 sentencias a 1 el 2026-08-15 al resolver la foto de un solo espacio—, y desde la
+    // consola no se ve: el script dice «→ … (1 sentencia)» y parece que ha ido bien.
+    if (OPT.park && fs.existsSync(file)) {
+      const previo = fs.readFileSync(file, 'utf8');
+      const ajenas = (previo.match(/FROM parks WHERE slug = '([^']+)'/g) || [])
+        .map(m => m.slice(m.indexOf("'") + 1, -1))
+        .filter(s => s !== OPT.park);
+      if (ajenas.length) {
+        console.error(red(`\n✖ ${rel(file)} ya tiene ${new Set(ajenas).size} espacio(s) más ` +
+          `(${[...new Set(ajenas)].join(', ')}) y esta ejecución es solo de «${OPT.park}»:\n` +
+          '  escribirlo ahora los BORRARÍA, y es un fichero que se aplica contra la base de datos.\n' +
+          '  Quita `--park` para regenerarlo entero, o dale a `--sql` una ruta propia de este espacio.'));
+        process.exit(1);
+      }
+    }
     fs.mkdirSync(path.dirname(file), { recursive: true });
     fs.writeFileSync(file, '-- Fotos de puntos de interés (poi-images.js)\n' + sentencias.join('\n') + '\n', 'utf8');
     console.log('→ ' + rel(file) + ' (' + sentencias.length + ' sentencia(s))');

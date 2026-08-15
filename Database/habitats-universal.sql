@@ -239,6 +239,34 @@ WHERE p.slug = 'sierra-de-la-pila' AND h.code = '92D0';
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id
   SET h.description = 'Matorral alto o bosquete abierto dominado por enebros y sabinas (Juniperus), arbustos de follaje escamoso o punzante y porte denso que aguantan sequía, viento y suelos casi inexistentes. Sus frutos carnosos y azulados —los gálbulos— alimentan en invierno a zorzales y otras aves, que se encargan de dispersar la semilla. Crecen tan despacio que un ejemplar de dos metros puede tener siglos.'
+WHERE p.slug = 'sierra-de-salinas' AND h.code = '5210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Pastizales secos en los que conviven gramíneas vivaces de mata dura, como el lastón (Brachypodium retusum) o el esparto, con una multitud de plantas anuales diminutas que nacen con las lluvias y se secan antes del verano. En agosto parecen un erial pardo; en abril pueden reunir cuarenta especies distintas en un metro cuadrado. Esa riqueza escondida es la razón de que sea un hábitat prioritario.'
+WHERE p.slug = 'sierra-de-salinas' AND h.code = '6220';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Paredes y cortados de roca caliza en los que la vegetación no vive sobre el suelo, sino dentro de las fisuras. Son plantas de raíz larguísima y crecimiento lentísimo, agarradas a la grieta, que aprovechan el agua que escurre por la pared. Los roquedos han quedado a salvo del arado y del ganado durante milenios, y por eso concentran una proporción altísima de especies que no existen en ningún otro lugar.'
+WHERE p.slug = 'sierra-de-salinas' AND h.code = '8210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'El bosque mediterráneo por excelencia: encinares y carrascales de hoja dura, pequeña y perenne, que aguantan tanto el calor del verano como las heladas del interior. Bajo los árboles crece un sotobosque denso de coscoja, lentisco, madroño, enebros y aromáticas, y en el suelo la bellota sostiene en otoño a jabalíes, palomas y arrendajos. Aclarado por el ser humano durante siglos, ha dado lugar a las dehesas.'
+WHERE p.slug = 'sierra-de-salinas' AND h.code = '9340';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Matorral almohadillado de montaña: matas espinosas y compactas —piornos, erizones, aulagas y aliagas— que crecen pegadas al suelo formando cojines redondeados. Esa forma no es casual, es la respuesta al viento, al frío y al peso de la nieve, y por dentro guarda un microclima donde se refugian otras plantas. Aparece por encima o en el lugar del bosque, en crestas y laderas expuestas.'
+WHERE p.slug = 'sierra-de-salinas' AND h.code = '4090';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'El matorral de las zonas más cálidas y secas, allí donde prácticamente no hiela: palmito, espino negro, lentisco, cornicales, bojas, albaidas y esparto sobre laderas pedregosas y llanos soleados. Es un matorral abierto, con suelo desnudo a la vista entre mata y mata, y con muchas especies compartidas con el norte de África. Aguanta sequías de meses y rebrota en cuanto llueve.'
+WHERE p.slug = 'sierra-de-salinas' AND h.code = '5330';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Alamedas y saucedas: la banda de árboles de hoja caduca que acompaña a los ríos, con el álamo blanco de envés plateado, chopos y sauces de raíces dentro del agua. Dan sombra al cauce, sujetan las orillas en las crecidas y sostienen una fauna que no aparece a veinte metros de allí. Es un bosque estrecho y alargado que funciona además como corredor entre sierras.'
+WHERE p.slug = 'sierra-de-salinas' AND h.code = '92A0';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Matorral alto o bosquete abierto dominado por enebros y sabinas (Juniperus), arbustos de follaje escamoso o punzante y porte denso que aguantan sequía, viento y suelos casi inexistentes. Sus frutos carnosos y azulados —los gálbulos— alimentan en invierno a zorzales y otras aves, que se encargan de dispersar la semilla. Crecen tan despacio que un ejemplar de dos metros puede tener siglos.'
 WHERE p.slug = 'sierra-espuna' AND h.code = '5210';
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id

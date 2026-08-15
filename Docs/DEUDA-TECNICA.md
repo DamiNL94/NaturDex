@@ -113,20 +113,18 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     bastante más pequeño que el progreso de la gente, y conviene medirlo antes de prometerle un
     volumen a nadie. Lo mismo con las citas de invasoras anteriores al 2026-08-15, que salen con el
     hueco dicho en `occurrenceRemarks`.
-15. **`habitat-images.js` no filtra la licencia, y `poi-images.js` sí.** La portada de un hábitat se
-    hereda de la foto de una de sus especies diagnósticas, y el script la copia sin mirar bajo qué
-    licencia está. En la pasada del 2026-08-15 escribió una **CC BY-NC-ND** en Cuatro Calas —una
-    licencia que no admite obra derivada, en una imagen que la app recorta y escala—, y se retiró a
-    mano. Es el mismo agujero que el §4.6 del prompt de rollout cerró para los POIs con una lista
-    blanca (CC0, dominio público, CC BY, CC BY-SA); aquí basta con importarla del propio
-    `poi-images.js`, que es lo que ya hace `poi-images-alt.js` para no tener dos listas que puedan
-    divergir. Mientras no se haga, **toda pasada de `npm run images:habitats` hay que mirarla a mano**:
-    `git diff | grep imageAttribution`.
-    > **Ojo con el alcance al arreglarlo.** NC a secas **sí** se admite en las fotos de especie
-    > (`enrich-images.js --allow-nc`), y hay portadas de hábitat anteriores que la usan. Lo que no
-    > tiene defensa es la ND. La lista blanca de POIs es más estricta que la de especies a propósito,
-    > y copiarla tal cual retiraría material que hoy se da por bueno: la decisión de dónde poner el
-    > listón para los hábitats es parte del trabajo, no un detalle de implementación.
+15. ~~**`habitat-images.js` no filtra la licencia, y `poi-images.js` sí.**~~ — **saldada el
+    2026-08-15 (c)**. Y no era teórica: retirar a mano la CC BY-NC-ND de Cuatro Calas no sirvió de
+    nada, porque **la siguiente pasada del pipeline volvió a escribirla**. Ahora `habitat-images.js`
+    importa `licenciaLibre` de `poi-images.js` —no la copia—, **retira** la portada que no la pasa y
+    escribe el motivo en el `imageNote`, que es donde se ve. Se decidió poner el listón en el de los
+    POIs y no en el de las especies: la portada se empaqueta en la descarga sin conexión y la app la
+    recorta, así que la ND no tiene defensa y la NC tampoco en ese uso. Escribirla destapó tres cosas
+    más, las tres arregladas: la licencia **no está en un paréntesis fijo** de la atribución (se miran
+    todos y basta con que uno sea de la lista), **la FAL faltaba en la lista blanca** y es libre —sin
+    ella se llevaba por delante cuatro portadas buenas de El Carche y Sierra de la Pila—, y la especie
+    diagnóstica **se elegía por orden de `speciesIds`**, que ilustraba un encinar con una coscoja.
+    Ver ESTADO.md, §"2026-08-15 (c)".
 16. **La migración de ocurrencias está probada en MariaDB 10.11, no en MySQL 8.4.** El contenedor del
     proyecto es `mysql:8.4` y ahí no se ha podido levantar en esta sesión. Se escribió a propósito sin
     `LATERAL` ni `CAST(… AS JSON)` para que valga en los dos motores, y en MariaDB pasa dos veces sin

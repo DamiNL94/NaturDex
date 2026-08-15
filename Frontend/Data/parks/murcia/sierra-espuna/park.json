@@ -5285,7 +5285,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 71,
@@ -5705,7 +5706,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 78,
@@ -6352,7 +6354,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 89,
@@ -8095,7 +8098,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 120,
@@ -9210,7 +9214,8 @@
         "categoria": "LESRPE (RD 139/2011)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 140,
@@ -9684,7 +9689,8 @@
         "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 149,
@@ -10001,7 +10007,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 155,
@@ -10312,7 +10319,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
-      "rarityBasis": null
+      "rarityBasis": null,
+      "descriptionSource": null
     },
     {
       "id": 161,
@@ -10838,7 +10846,8 @@
         "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 171,

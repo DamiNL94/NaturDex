@@ -183,9 +183,9 @@ UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
 WHERE p.slug = 'carrascoy-y-el-valle' AND h.slug = 'matorrales-arborescentes-de-5210';
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
-  h.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/611359925/original.jpg',
-  h.image_attribution = 'Xavier Rufray (CC BY-NC 4.0) · iNaturalist/GBIF · obs. EAU (revisar: existe en salinas de España)',
-  h.image_note = 'Portada ilustrada con Sosa jabonera (Halocnemum strobilaceum), la especie que da nombre al hábitat.'
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Arthrocnemum_macrostachyum_2LaMata.jpg?width=1280',
+  h.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Sosa alacranera (Arthrocnemum macrostachyum), la especie que da nombre al hábitat.'
 WHERE p.slug = 'cuatro-calas' AND h.slug = 'matorrales-halofilos-mediterraneos-1420';
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
@@ -201,9 +201,9 @@ UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
 WHERE p.slug = 'cuatro-calas' AND h.slug = 'estepas-salinas-mediterraneas-1510';
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
-  h.image_url = 'https://observation.org/photos/125530399.jpg',
-  h.image_attribution = 'Humedales de Navarra (CC BY-NC-ND 4.0) · observation.org / GBIF',
-  h.image_note = 'Portada ilustrada con Perfollada anual (Bupleurum semicompositum), la especie que da nombre al hábitat.'
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
 WHERE p.slug = 'cuatro-calas' AND h.slug = 'zonas-subestepicas-de-6220';
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
@@ -349,6 +349,48 @@ UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
   h.image_attribution = NULL,
   h.image_note = NULL
 WHERE p.slug = 'sierra-de-la-pila' AND h.slug = 'galerias-y-matorrales-92D0';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_oxycedrus_g1.jpg?width=1280',
+  h.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Enebro de la miera (Juniperus oxycedrus), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-salinas' AND h.slug = 'matorrales-arborescentes-de-5210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'sierra-de-salinas' AND h.slug = 'zonas-subestepicas-de-6220';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'sierra-de-salinas' AND h.slug = 'pendientes-rocosas-calcicolas-8210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carrasca_de_la_Raboseras.JPG?width=1280',
+  h.image_attribution = 'Picamaderos (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Carrasca (Quercus rotundifolia), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-salinas' AND h.slug = 'encinares-de-quercus-9340';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'sierra-de-salinas' AND h.slug = 'matorrales-mediterraneos-y-4090';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'sierra-de-salinas' AND h.slug = 'matorrales-termomediterraneos-y-5330';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'sierra-de-salinas' AND h.slug = 'bosques-galeria-de-92A0';
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
   h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_phoenicea1.jpg?width=1280',

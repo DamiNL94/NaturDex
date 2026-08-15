@@ -17,6 +17,16 @@
  *      coordenadas, y "ubicuidad" (especies presentes en casi todos los hábitats = ruido espacial,
  *      típicamente aves en vuelo). Separa Aves de no-Aves para ver cuánto se limpia el catálogo.
  *
+ * DOS CUENTAS DISTINTAS, Y NO SON INTERCAMBIABLES. Los recintos del Atlas son MOSAICOS: un mismo
+ * polígono lleva varios códigos HIC, así que un registro que cae dentro entra en el listado de cada
+ * uno de ellos. Por eso el `--json` sirve las dos cuentas y las llama por su nombre:
+ *   · `habitats[].species[].occurrences` — registros dentro de ESE polígono. Sumarlas entre hábitats
+ *     NO da los registros de la especie en el espacio: multiplica por el mosaico.
+ *   · `especies[].occurrences` — registros DISTINTOS dentro de algún polígono, contados una sola vez.
+ *     Es la cuenta que mide presencia, y la que tiene que leer el filtro de `species:seleccion`.
+ * La distinción no es teórica: en Sierra de Salinas, un recinto lleva cuatro códigos, y 49 plantas
+ * con UN registro cada una aparecían con «4 ocurrencias» al sumar. Ver ESTADO.md, 2026-08-15 (c).
+ *
  * Uso:   node Tools/gbif-habitats.js [--park <slug>] [--top N] [--max-uncertainty M]
  *                                    [--drop-unknown] [--refresh]
  *                                    [--out informe.md] [--json datos.json] [--birds-out aves.json]
@@ -220,18 +230,21 @@ function main() {
         if (o.speciesKey) {
           const cur = h.species.get(o.speciesKey) || { name: o.species, class: o.class, count: 0 };
           cur.count++; h.species.set(o.speciesKey, cur);
-          const s = spInHab.get(o.speciesKey) || { name: o.species, class: o.class, habitats: new Set() };
+          const s = spInHab.get(o.speciesKey) || { name: o.species, class: o.class, habitats: new Set(), occ: 0 };
           s.habitats.add(h.slug); spInHab.set(o.speciesKey, s);
           if (isBird(o)) { const b = birds.get(o.speciesKey) || { name: o.species, count: 0, habitats: new Set() }; b.count++; b.habitats.add(h.slug); birds.set(o.speciesKey, b); }
         }
       }
+      // El registro se cuenta UNA vez por especie, fuera del bucle de hábitats: dentro se contaría
+      // una por cada código del mosaico que cubra el mismo punto.
+      if (hit && o.speciesKey && spInHab.has(o.speciesKey)) spInHab.get(o.speciesKey).occ++;
       if (hit) assigned++; else orphan++;
     }
 
     const md = renderReport(park, habitats, { total, capped, usedCount: used.length, allOcc: occ, assigned, orphan, spInHab, birds });
     console.log(md);
     if (OUT_FILE) { fs.writeFileSync(path.resolve(OUT_FILE), md); console.log(`\nInforme escrito en ${path.resolve(OUT_FILE)}`); }
-    if (JSON_FILE) writeJson(park, habitats);
+    if (JSON_FILE) writeJson(park, habitats, spInHab);
     if (BIRDS_OUT) writeBirds(park, birds);
   }).catch(e => die(e.stack || e.message));
 }
@@ -308,8 +321,13 @@ function renderReport(park, habitats, s) {
   return L.join('\n');
 }
 
-function writeJson(park, habitats) {
+function writeJson(park, habitats, spInHab) {
   const dump = { park: park.slug, generatedFrom: 'GBIF + local point-in-polygon',
+    // Registros DISTINTOS por especie dentro de algún polígono. Es la cuenta de presencia; la de
+    // habitats[].species[] es por polígono y sumarla multiplica por el mosaico (ver cabecera).
+    especies: [...spInHab.entries()]
+      .map(([k, v]) => ({ speciesKey: +k, name: v.name, class: v.class, occurrences: v.occ, habitats: v.habitats.size }))
+      .sort((a, b) => b.occurrences - a.occurrences),
     habitats: habitats.map(h => ({ slug: h.slug, hic: h.hic, occurrences: h.occ, speciesCount: h.species.size,
       species: [...h.species.entries()].map(([k, v]) => ({ speciesKey: +k, name: v.name, class: v.class, occurrences: v.count })).sort((a, b) => b.occurrences - a.occurrences) })) };
   fs.writeFileSync(path.resolve(JSON_FILE), JSON.stringify(dump, null, 2));

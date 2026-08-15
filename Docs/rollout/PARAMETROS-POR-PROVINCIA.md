@@ -37,6 +37,14 @@
     El JSON de provincias trae `husoUTM: null` a propósito, justo para que nadie lo dé por sabido.
   - El MITECO **sí admite `Accept-Ranges`**, así que aquí la descarga se reanuda con `curl -C -`.
     Sirve para **cualquier** espacio de Murcia: se descarga una vez por provincia, no por parque.
+  - **Las URL se leen del manifiesto, no de aquí**: `fuentes/atlas-habitats-2005-provincias.json` las
+    tiene para las 52 provincias. Ojo con una trampa del entorno de agente: `fuentes/` está en
+    `permissions.deny`, así que **un `curl -o` que escriba ahí se deniega** aunque el fichero sea de
+    los que hay que descargar. Se baja al directorio de trabajo temporal y se le pasan esas rutas a
+    `build-habitats.js` con `--shp` y `--datos`; el ZIP no se versiona de todas formas.
+  - **`pdftotext` no viene instalado** y hace falta para el paso 0 de la Capa 3 (los volúmenes de los
+    planes de gestión). `apt-get install -y poppler-utils` falla con un 404 hasta que se pasa
+    `apt-get update` antes.
 
 ---
 

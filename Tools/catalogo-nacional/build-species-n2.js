@@ -319,7 +319,7 @@ function main() {
   let siguienteId = Math.max(0, ...[...previas.values()].map(s => Number(s.id) || 0)) + 1;
   const species = [];
   const avisos = [];
-  const sinGbif = [], hiloPerdido = [], taxonIdDudoso = [], sinTaxonId = [], sinRarezaLocal = [];
+  const sinGbif = [], hiloPerdido = [], taxonIdDudoso = [], sinTaxonId = [], sinRarezaLocal = [], localPorEstatal = [];
 
   for (const sel of conFicha) {
     const sci = sel.scientificName;
@@ -384,8 +384,26 @@ function main() {
      *
      * Una selección anterior a este campo no lo trae. Entonces se cae al `rarityScore` universal y se
      * anota: escribir un 1 daría por comprobado un tramo que nadie ha calculado.
+     *
+     * Y NUNCA baja del `rarityScore` que se escribe en la misma ficha, porque el local INCLUYE al
+     * estatal. Las dos cifras no salen del mismo sitio —el estatal es el `spainStatus` del catálogo
+     * universal, el local sale de las `normas` que EIDOS devolvió al hacer la selección—, así que
+     * cuando EIDOS no reconoce el nombre y devuelve cero normas, el local se quedaba en 1 con un
+     * estatal de 2 y la ficha se contradecía a sí misma. Le pasó en Sierra de Salinas a la perdiz
+     * roja, la tórtola europea, la chova piquirroja y el triguero. Prevalece el estatal, y el
+     * `rarityLocalBasis` dice de dónde sale para que no parezca calculado.
      */
-    const rarityLocal = sel.rarityLocal != null ? sel.rarityLocal : (sinRarezaLocal.push(sci), (u.rarityScore || 1));
+    let rarityLocal = sel.rarityLocal != null ? sel.rarityLocal : (sinRarezaLocal.push(sci), (u.rarityScore || 1));
+    let rarityLocalBasis = sel.rarityLocalBasis || null;
+    if ((u.rarityScore || 1) > rarityLocal) {
+      localPorEstatal.push(sci);
+      rarityLocal = u.rarityScore;
+      rarityLocalBasis = {
+        ...(u.rarityBasis || {}),
+        origen: 'rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para ' +
+                'este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal',
+      };
+    }
 
     const ficha = {
       id: antes ? antes.id : siguienteId++,
@@ -393,7 +411,7 @@ function main() {
       conservationStatus: etiquetaConservacion(sel.normas, u.iucnGlobal),
       coordinates: null,
       rarityLocal,
-      rarityLocalBasis: sel.rarityLocalBasis || null,
+      rarityLocalBasis,
       featured: rarityLocal >= 4,
       source: fuenteDe(sel, g, fecha, zepa),
       murciaStatus: estadoAutonomico(sel.normas, comunidad),
@@ -497,6 +515,10 @@ function main() {
       '  universal, que solo mira el ámbito estatal y deja casi todo en el mismo tramo. La selección es\n' +
       '  anterior al campo; vuelve a pasar `npm run species:seleccion` para que las destacadas de este\n' +
       '  espacio salgan del criterio de verdad y no del heredado.');
+  if (localPorEstatal.length)
+    console.log(`\n⚠ ${localPorEstatal.length} ficha(s) con el \`rarityLocal\` de la selección POR DEBAJO del \`rarityScore\`\n` +
+      '  estatal, que lo incluye: EIDOS no devolvió ninguna norma para ese taxón. Se ha escrito el estatal\n' +
+      `  y su procedencia va en el \`rarityLocalBasis\`: ${localPorEstatal.join(', ')}`);
   if (sinGbif.length) console.log(`\n⚠ ${sinGbif.length} sin entrada en el barrido de GBIF (quedan sin hábitat ni clave): ${sinGbif.join(', ')}`);
   if (hiloPerdido.length) {
     console.error(`\n✖ ${hiloPerdido.length} ficha(s) escritas SIN enlaces a hábitat aunque la selección se los cuenta.\n` +
