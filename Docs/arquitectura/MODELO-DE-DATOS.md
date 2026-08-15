@@ -27,7 +27,7 @@ flowchart TD
     ATLAS["Atlas y Manual de los Hábitats de España<br/>especies características por HIC"]
     EIDOS["EIDOS · IEPNB (PostgREST, sin auth)<br/>taxonomía · UICN · estado legal"]
     GBIF["GBIF · ocurrencias georreferenciadas"]
-    BISE["EEA Discodata · Site_Species_List<br/>especies oficiales por sitio Natura 2000"]
+    RN2K["IEPNB · Red Natura 2000<br/>Formulario Normalizado de Datos: especies oficiales por sitio"]
     WM["Wikidata / Wikipedia / Commons<br/>fotos con licencia"]
   end
 
@@ -42,8 +42,8 @@ flowchart TD
   HIC -->|"reproyectar UTM→WGS84 · join por CODIGO · recortar al límite"| C2
   C2 --> C3
   ATLAS -->|evidencia 'caracteristica'| C3
-  GBIF -->|"evidencia 'observada_gbif' (∩ polígono, sin Aves)"| C3
-  BISE -->|"evidencia 'zepa' (aves, por site_code)"| C3
+  GBIF -->|"evidencia 'observada_gbif' (∩ polígono)"| C3
+  RN2K -->|"evidencia 'lista_oficial_sitio' (puerta de las aves, por site_code)"| C3
   EIDOS -->|taxonomía y estado · PRINCIPAL| C3
   WM --> C3
 ```

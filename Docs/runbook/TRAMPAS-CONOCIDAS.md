@@ -154,7 +154,13 @@ Cada una costó una sesión de depuración. Léelas antes de repetirlas.
 
 **GBIF**
 
-- **Filtra Aves**: son el 88 % de las ocurrencias y casi todo ruido espacial (vuelan).
+- **Las Aves son el 88 % de las ocurrencias y casi todo ruido espacial** (vuelan: un registro en vuelo
+  cae dentro de cualquier polígono). Por eso **no entran por el filtro de presencia**: desde el filtro
+  3 bis de `build-species-seleccion.js` un ave solo se aprueba con respaldo de sitio —el formulario
+  oficial (`sitio:especies`) o el anexo normativo— y GBIF queda como confirmación. Durante ocho
+  espacios la regla estuvo escrita y sin aplicar, y el catálogo acabó con 557 aves de 1.492 fichas
+  (el 73 % en Monte Arabí, el 26 % en Cuatro Calas: una proporción que mide la cobertura de eBird,
+  no el espacio).
 - **El filtro por incertidumbre de coordenada no sirve**: solo el 14 % la declara.
 - **`basisOfRecord` sí sirve, y hay que mirarlo.** `MACHINE_OBSERVATION` en una especie con
   seguimiento por satélite son posiciones Argos, y las de baja calidad caen tierra adentro: así

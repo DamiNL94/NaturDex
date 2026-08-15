@@ -57,7 +57,7 @@ dato; «Cómo» = la herramienta o el criterio; «Verifica» = quién lo comprue
 | `source` | local | proceso | La referencia concreta que respalda **la cita en este espacio** |
 | `review_note` | local | proceso | La duda, escrita y visible en la app («a revisar»). Es el mecanismo de «hueco documentado» |
 | `habitatIds` | local | derivado | Ver `species_habitats` abajo |
-| `zepa_site_code` | local | Discodata BISE | Las aves **no se cuelgan de hábitats**: vuelan. Van a su apartado de espacio |
+| `zepa_site_code` | local | IEPNB · Red Natura 2000 | El sitio cuyo **formulario oficial declara** esta ave. Las aves **no se cuelgan de hábitats**: vuelan, y van a su apartado de espacio. Antes llevaba el código de la ZEPA con la que solapa el espacio —del `zepa.geojson`— a toda ave del catálogo, dijera lo que dijera cualquier lista oficial; con eso, la «colección de aves de la ZEPA» que el juego construye en `Frontend/Js/state.js` era «las aves que GBIF dejó pasar» |
 | `is_visible` | local | criterio | `false` oculta del catálogo público sin borrar (pocas ocurrencias GBIF **y** sin figura oficial) |
 | `coordinates` | local | representativa | La ubicación real la aporta el GPS al marcar la especie como vista |
 
@@ -67,7 +67,7 @@ dato; «Cómo» = la herramienta o el criterio; «Verifica» = quién lo comprue
 |---|---|---|
 | `caracteristica` | Atlas de Hábitats | La especie figura como característica de ese HIC **y** está en el catálogo del espacio. Backbone determinista y filtro de cordura del resto |
 | `observada_gbif` | GBIF | Ocurrencia **dentro del polígono** (punto-en-polígono local, no bbox). `gbif_occurrences` guarda cuántas |
-| `zepa` | EEA Discodata BISE | Lista oficial de especies del sitio Natura 2000 (`site_code`) |
+| `lista_oficial_sitio` | IEPNB · Red Natura 2000 | Lista oficial de especies del sitio (`site_code`): secciones 3.2 y 3.3 de su Formulario Normalizado de Datos, que trae `especies-sitio-rn2000.js`. Junto al anexo normativo, la única evidencia que afirma la pertenencia *a este sitio*, y por eso es la **puerta de entrada de las aves**. Sustituye al valor `zepa`, que nunca llegó a escribirse porque la fuente que lo iba a alimentar (EEA Discodata/BISE) no estaba cableada |
 | `anexo_normativo` | PORN/PRUG, decreto de declaración o SDF del sitio | La norma del espacio la **enumera por escrito** en un anexo. Es la evidencia más fuerte de las cuatro: la única que afirma la pertenencia *a este espacio* y no a un polígono o a un tipo de hábitat. La lista se transcribe a mano en `Tools/catalogo-nacional/data/anexos-normativos.json`, con su cita y la fecha en que se leyó |
 
 > **El anexo da evidencia, no entrada.** La constancia en GBIF sigue siendo la puerta del catálogo:
@@ -96,6 +96,6 @@ dato; «Cómo» = la herramienta o el criterio; «Verifica» = quién lo comprue
 | **Atlas y Manual de los Hábitats de España** | PDF en `Docs/` | Extraer con `pdftotext -layout` |
 | **EIDOS** | `https://iepnb.gob.es/api/especie/` (PostgREST, **sin autenticación**) | `v_taxonomia` (`taxonid`), `v_estadoconservacion`, `v_estadolegal`, `v_nombrescomunes`, `v_atributos_pliniancore`. Lista Patrón en `/api/catalogo/` |
 | **GBIF** | `https://api.gbif.org/v1/` | `occurrence/search` (paginar a 300), `species/match` |
-| **EEA Discodata (BISE)** | `https://discodata.eea.europa.eu/sql?query=…` | Tabla `[BISE].[latest].[Site_Species_List]`. URL-encode; bloquea tablas de sistema |
+| **Red Natura 2000 (IEPNB)** | `https://iepnb.gob.es/api/rn2000/` (PostgREST, **sin autenticación**) | `v_cntr_site`, `v_cntr_species` (sección 3.2 del Formulario Normalizado de Datos) y `v_cntr_other_species` (sección 3.3). Mismo host que EIDOS. **No se usa EEA Discodata/BISE**: publica el mismo dato reexportado y su host está fuera de la política de egreso (403 al CONNECT) |
 | **Geoportal IMIDA/CARM** | `geoportal.imida.es/…/PROYECTOS/OISMA/MapServer` | Delimitación con 2–15× más vértices que la capa nacional |
 

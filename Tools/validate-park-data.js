@@ -408,14 +408,19 @@ function validatePark(entry) {
    * `source` lo escribe `build-species-n2.js` con la cifra que sale del barrido de GBIF, así que
    * discrepar de `habitatIds` no es una imprecisión de redacción: es que se ha perdido el enlace.
    *
-   * Quedan fuera las especies del apartado de la ZEPA (`zepaSiteCode`): sus ocurrencias también
-   * cayeron dentro de los polígonos, pero el catálogo decide a propósito no colgar las aves de
-   * ningún hábitat —son el grueso del ruido espacial, registros en vuelo que entran en cualquier
-   * recinto—, así que ahí la discrepancia es el diseño y no un fallo.
+   * Quedan fuera las AVES: el catálogo decide a propósito no colgarlas de ningún hábitat —son el
+   * grueso del ruido espacial, registros en vuelo que entran en cualquier recinto—, así que ahí la
+   * discrepancia es el diseño y no un fallo.
+   *
+   * La exención iba por `zepaSiteCode` y ese era el campo equivocado: no dice que la especie sea un
+   * ave, dice que su espacio solapa con una ZEPA. Cuando llegó Sierra de El Carche, que es LIC y
+   * nada más, sus 92 aves perdieron la exención de golpe y salieron como 92 errores; y desde que
+   * `zepaSiteCode` solo lo llevan las aves que el formulario oficial declara, la exención habría
+   * dejado fuera a todas las demás. Se exime por la clase, que es lo que de verdad manda.
    */
   const CITA_HABITATS = /\((\d+) hábitats?;/;
   species.forEach(s => {
-    if (s.zepaSiteCode) return;
+    if ((s.taxonomy || {}).class === 'Aves') return;
     const m = String(s.source || '').match(CITA_HABITATS);
     if (!m) return;
     const dice = Number(m[1]);
@@ -424,6 +429,25 @@ function validatePark(entry) {
       err(scope, 'especie #' + s.id + ' (' + s.commonName + '): su `source` cuenta ' + dice +
         ' hábitat(s) y `habitatIds` está vacío. Ver Tools/catalogo-nacional/build-species-n2.js');
   });
+
+  /*
+   * 3 quater) El ave colgada de un hábitat: la contradicción por el otro lado, que no miraba nadie.
+   *
+   * El catálogo afirma dos cosas a la vez —«las aves no se adscriben a hábitats», que es lo que dice
+   * su propio `source`, y una lista de `habitatIds`— y las dos no pueden ser ciertas. Quedaban 25
+   * aves así en Cabo Cope, del volcado del piloto, anteriores a la regla; y la comprobación de
+   * arriba no podía verlas porque las eximía a todas.
+   *
+   * Es aviso y no error porque son datos heredados y se limpian regenerando la Capa 3 del espacio,
+   * no a mano en mitad de otra tarea.
+   */
+  const avesConHabitat = species.filter(s => (s.taxonomy || {}).class === 'Aves' && (s.habitatIds || []).length);
+  if (avesConHabitat.length)
+    warn(scope, avesConHabitat.length + ' ave(s) con `habitatIds`, que contradice su propio `source` ' +
+      '(«las aves no se adscriben a hábitats»): ' +
+      avesConHabitat.slice(0, 8).map(s => '#' + s.id + ' ' + s.commonName).join(', ') +
+      (avesConHabitat.length > 8 ? ', …' : '') +
+      '. Se limpia regenerando la Capa 3 del espacio (build-species-n2.js)');
 
   /*
    * 3 ter) Hábitats sin ninguna especie.

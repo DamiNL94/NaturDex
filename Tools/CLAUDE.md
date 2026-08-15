@@ -70,6 +70,7 @@ Orden real de uso; el runbook completo está en
 | `merge-habitats.js` | 187 | Capa 2: conserva lo curado a mano, actualiza desde la fuente lo que es dato |
 | `adopt-habitats.js` | 194 | Capa 2: lo lleva a `Frontend/` y recalcula contadores. **No pasa por la BD** |
 | `atlas-hic-especies.js` | 100 | **Capa 3**: especies características por HIC desde el Atlas → evidencia `caracteristica` |
+| `especies-sitio-rn2000.js` | 246 | Capa 3: la lista OFICIAL de especies de cada sitio Red Natura 2000 del espacio (secciones 3.2 y 3.3 del Formulario Normalizado de Datos, IEPNB) → evidencia `lista_oficial_sitio`. **Es la puerta de las aves**: sin este volcado, la selección las excluye todas salvo las que salve el anexo normativo. Va ANTES de `build-species-seleccion.js` |
 | `build-species-universal.js` | 600 | Capa 3: **da de alta en el catálogo universal** la ficha de un taxón que no está en ningún parque. Sale a EIDOS, GBIF y Wikimedia. Es el paso que va ANTES de `build-species-n2.js` |
 | `build-species-n2.js` | 360 | Capa 3: **escribe las fichas** en `park.json` desde la selección aprobada. Ensambla, no consulta: sin red y sin inventar un campo. Idempotente |
 | `reconcile-taxa.js` | 84 | Capa 3: reconciliación taxonómica EIDOS ↔ GBIF |
