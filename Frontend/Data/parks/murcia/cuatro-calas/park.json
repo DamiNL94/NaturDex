@@ -37,7 +37,7 @@
         -1.624356
       ],
       "color": "#2e8b57",
-      "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/611359925/original.jpg",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Arthrocnemum_macrostachyum_2LaMata.jpg?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
@@ -69,8 +69,8 @@
         60,
         61
       ],
-      "imageAttribution": "Xavier Rufray (CC BY-NC 4.0) · iNaturalist/GBIF · obs. EAU (revisar: existe en salinas de España)",
-      "imageNote": "Portada ilustrada con Sosa jabonera (Halocnemum strobilaceum), la especie que da nombre al hábitat."
+      "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con Sosa alacranera (Arthrocnemum macrostachyum), la especie que da nombre al hábitat."
     },
     {
       "id": "matorrales-halonitrofilos-pegano-1430",
@@ -3049,7 +3049,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 48,

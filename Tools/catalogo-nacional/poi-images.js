@@ -111,7 +111,10 @@ const dim = s => '\x1b[2m' + s + '\x1b[0m';
 // que hace el pipeline de especies —que se limita a anotar lo que diga Commons— y es deliberado:
 // allí la foto ilustra un taxón y se puede sustituir; aquí acompaña a un sitio concreto y se
 // empaqueta en la descarga sin conexión del parque.
-const LICENCIA_LIBRE = /^(cc0|cc[ -]?by([ -]sa)?([ -]\d(\.\d)?)*( [a-z]{2})?|public domain|dominio p[úu]blico|pd([ -].*)?|no restrictions)$/i;
+// La FAL (Licence Art Libre / Free Art License) es copyleft libre y Commons la acepta: permite obra
+// derivada y uso comercial, que es lo único que esta lista comprueba. Entró al añadirse la lista
+// blanca a las portadas de hábitat, donde cuatro portadas buenas de Commons la declaran.
+const LICENCIA_LIBRE = /^(cc0|cc[ -]?by([ -]sa)?([ -]\d(\.\d)?)*( [a-z]{2})?|public domain|dominio p[úu]blico|pd([ -].*)?|no restrictions|fal([ -]\d(\.\d)?)?|free art license([ -]\d(\.\d)?)?|licen[cs]e art libre([ -]\d(\.\d)?)?)$/i;
 
 function licenciaLibre(licencia) {
   const plano = String(licencia || '').trim().toLowerCase().replace(/\s+/g, ' ');

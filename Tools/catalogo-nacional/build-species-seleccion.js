@@ -136,8 +136,17 @@ const RUTA_ANEXOS = arg('anexos')
 const hoy = () => new Date().toISOString().slice(0, 10);
 
 // --- Candidatos: GBIF ∩ polígonos de hábitat -------------------------------------------------------
-// `gbif-habitats.js` da las ocurrencias por hábitat; aquí se agregan por especie para tener las dos
-// magnitudes del filtro 3: cuántos registros y en cuántos hábitats distintos.
+// `gbif-habitats.js` da dos cuentas y sólo una mide presencia:
+//
+//   · `especies[].occurrences` — registros DISTINTOS dentro de algún polígono. Es la buena.
+//   · `habitats[].species[].occurrences` — registros por polígono. Sumarla entre hábitats NO da los
+//     registros de la especie: los recintos del Atlas son MOSAICOS y el mismo punto entra en el
+//     listado de cada código del recinto, así que la suma multiplica por el mosaico.
+//
+// Sumar la segunda es lo que se hacía, y hacía que el umbral del filtro 3 significara una cosa
+// distinta en cada espacio: en Sierra de Salinas hay un recinto con cuatro códigos, y 49 plantas con
+// UN registro cada una llegaban al filtro declarando «4 ocurrencias». El conjunto de hábitats sí
+// estaba bien contado (es un Set), y sigue igual.
 function candidatos() {
   if (!fs.existsSync(RUTA_GBIF)) {
     die(`No existe ${rel(RUTA_GBIF)}. Genera antes los candidatos:\n` +
@@ -148,16 +157,27 @@ function candidatos() {
   for (const h of g.habitats || []) {
     for (const s of h.species || []) {
       const e = porEspecie.get(s.name) || {
-        scientificName: s.name, class: s.class || null, gbifOccurrences: 0, hics: new Set(),
+        scientificName: s.name, class: s.class || null, gbifOccurrences: null, hics: new Set(),
       };
-      e.gbifOccurrences += s.occurrences || 0;
       // El CONJUNTO de hábitats, no la cuenta: al fusionar dos nombres del mismo taxón hay que
       // unirlos, y sumar las cuentas contaría dos veces los hábitats en que están los dos.
       if (h.hic) e.hics.add(h.hic);
       porEspecie.set(s.name, e);
     }
   }
-  for (const e of porEspecie.values()) e.habitats = e.hics.size;
+  const distintas = new Map((g.especies || []).map(s => [s.name, s.occurrences]));
+  if (!distintas.size) {
+    // Un `--json` viejo no trae la cuenta por especie. Se avisa en vez de volver a la suma en
+    // silencio: la diferencia decide qué especies entran en el catálogo.
+    die(`${rel(RUTA_GBIF)} no trae el bloque \`especies\` con los registros distintos por especie:\n` +
+        '  es un volcado anterior al 2026-08-15, y la suma por hábitat que traía multiplica por el\n' +
+        '  mosaico del Atlas. Regenéralo:\n' +
+        `  npm run gbif:habitats -- --park ${PARK} --json ${rel(RUTA_GBIF)}`);
+  }
+  for (const e of porEspecie.values()) {
+    e.habitats = e.hics.size;
+    e.gbifOccurrences = distintas.get(e.scientificName) ?? 0;
+  }
   return [...porEspecie.values()].sort((a, b) => b.gbifOccurrences - a.gbifOccurrences);
 }
 

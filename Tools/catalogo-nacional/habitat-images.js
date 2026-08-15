@@ -20,6 +20,15 @@
  * Este comentario decía lo contrario —que se usaba la de mayor `rarityScore`— y llevaba tiempo
  * desmintiéndolo el propio código.
  *
+ * LA LICENCIA ES LISTA BLANCA, y por el mismo motivo que en `poi-images.js`: la portada de un
+ * hábitat se empaqueta en la descarga sin conexión del espacio y la app la recorta y la escala, así
+ * que una CC BY-NC-ND —que no admite obra derivada— no sirve aunque la foto sea perfecta. La
+ * comprobación NO estaba, y por eso este script escribía en el hábitat cualquier licencia que
+ * arrastrara la especie: en el catálogo de especies una NC sí entra, porque allí la foto ilustra un
+ * taxón sustituible. La sesión del 2026-08-15 (b) tuvo que retirar a mano una CC BY-NC-ND de Cuatro
+ * Calas, y la siguiente ejecución del pipeline volvió a escribirla. La función es la misma de
+ * `poi-images.js`, importada y no copiada: dos listas se separan en cuanto alguien toca una.
+ *
  * Uso:  node Tools/catalogo-nacional/habitat-images.js [--park <slug>] [--write] [--sql <fichero>]
  *
  * `--sql` genera además los UPDATE para la base de datos: hace falta porque Frontend/Js/data.js da
@@ -31,6 +40,7 @@
 const fs = require('fs');
 const path = require('path');
 const { metadatos, atribucion, commonsFileFromUrl, filePathUrl } = require('../lib/wikimedia');
+const { licenciaLibre } = require('./poi-images');
 const { sqlStr } = require('../lib/sql');
 const { arg, flag, num } = require('../lib/cli');
 const { ROOT, parkFiles, fromRoot, rel } = require('../lib/io');
@@ -65,7 +75,7 @@ async function atribucionCommons(file) {
 function especieDiagnostica(habitat, species) {
   const candidatas = (habitat.speciesIds || [])
     .map(id => species.find(s => s.id === id))
-    .filter(s => s && s.image);
+    .filter(s => s && s.image && portadaUsable(s));
   if (!candidatas.length) return null;
   // De la cita fitosociológica solo interesa el nombre de la asociación (las dos primeras palabras);
   // lo que sigue es autor y año, y ahí hay apellidos que colisionan con géneros: "Festucetum
@@ -74,19 +84,66 @@ function especieDiagnostica(habitat, species) {
   const asociaciones = (habitat.fitosociologia || []).map(f => f.split(/\s+/).slice(0, 2).join(' '));
   const contexto = [habitat.name, habitat.description, ...asociaciones].join(' ').toLowerCase();
   const palabras = contexto.split(/[^a-záéíóúñ]+/i).filter(w => w.length > 3);
-  const nombrada = candidatas.find(s => {
+  // Se PUNTÚA a cada candidata y gana la mejor, en vez de quedarse con la primera que casa de
+  // cualquier manera. El orden de `speciesIds` no dice nada sobre el hábitat, y dejarlo decidir
+  // produce portadas falsas cuando hay congéneres: los «Encinares de Quercus ilex y Quercus
+  // rotundifolia» de Sierra de Salinas salían ilustrados con una coscoja —Quercus coccifera, que
+  // también está en el hábitat— bajo la nota «la especie que da nombre al hábitat»; y los
+  // «Matorrales arborescentes de Juniperus spp.», con esa misma coscoja en vez de con un enebro.
+  const nombre = String(habitat.name || '').toLowerCase();
+  function puntua(s) {
     const [genero, epiteto] = s.scientificName.toLowerCase().split(' ');
-    if (contexto.includes(genero) || (epiteto && contexto.includes(epiteto))) return true;
+    if (epiteto && contexto.includes(genero) && contexto.includes(epiteto)) return 4; // el binomio entero
+    if (nombre.includes(genero)) return 3;            // el género, en el nombre oficial del hábitat
+    if (contexto.includes(genero)) return 2;          // el género, en la descripción o la asociación
+    if (epiteto && contexto.includes(epiteto)) return 1;
     // Los nombres de asociación derivan del género con sufijos fijos: Sedum→Sedion,
     // Ziziphus→Ziziphetum, Malcolmia→Malcomietalia, Nerium→Nerio-Tamaricetea. Se quita el sufijo y
     // se compara la raíz con el género. Se tolera una letra de diferencia porque la nomenclatura
     // histórica no siempre respeta la grafía original (Malcomi- por Malcolmi-).
-    return palabras.some(p => {
+    const porRaiz = palabras.some(p => {
       const raiz = p.replace(/(etalia|etosum|etum|etea|ion|acea|aceae|o)$/, '');
       return raiz.length >= 4 && parecidos(genero, raiz);
     });
-  });
+    return porRaiz ? 1 : 0;
+  }
+  let nombrada = null, mejor = 0;
+  for (const s of candidatas) {
+    const p = puntua(s);
+    if (p > mejor) { mejor = p; nombrada = s; }
+  }
   return nombrada ? { sp: nombrada, porNombre: true } : null;
+}
+
+// La licencia va dentro del paréntesis de la atribución que escribe el pipeline de especies:
+// «Accurimbono (CC BY-SA 3.0) · Wikimedia Commons». Sin paréntesis no hay licencia que leer, y una
+// licencia ilegible se rechaza igual que una prohibida: es lista blanca.
+//
+// NO vale quedarse con un paréntesis concreto. La atribución no tiene una posición fija para la
+// licencia y los otros paréntesis son de todo tipo, a veces sin cerrar porque Commons trunca el
+// nombre del autor:
+//   «No machine-readable author provided. Pere prlpz assumed (based on c… (CC BY-SA 2.5) · …»
+//   «Xavier Rufray (CC BY-NC 4.0) · iNaturalist/GBIF · obs. EAU (revisar: existe en salinas…)»
+// Así que se miran TODOS y basta con que uno sea una licencia de la lista blanca. Sigue siendo
+// lista blanca: si ninguno lo es —incluido el caso de que no haya ninguno— se rechaza.
+function licenciasDeAtribucion(atr) {
+  const s = String(atr || '');
+  const trozos = [];
+  for (let i = s.indexOf('('); i >= 0; i = s.indexOf('(', i + 1)) {
+    const j = s.indexOf(')', i);
+    trozos.push((j < 0 ? s.slice(i + 1) : s.slice(i + 1, j)).trim());
+  }
+  return trozos;
+}
+function licenciaDeAtribucion(atr) {
+  const trozos = licenciasDeAtribucion(atr);
+  return trozos.find(licenciaLibre) || trozos[trozos.length - 1] || null;
+}
+function atribucionLibre(atr) {
+  return licenciasDeAtribucion(atr).some(licenciaLibre);
+}
+function portadaUsable(sp) {
+  return atribucionLibre(sp.imageAttribution);
 }
 
 // ¿`raiz` es el principio de `genero` con, como mucho, una letra de diferencia?
@@ -118,11 +175,25 @@ function parecidos(genero, raiz) {
     let tocado = false;
 
     for (const h of habitats) {
+      // 0) La portada que ya tiene, ¿pasa la lista blanca? Una que no pasa se RETIRA: dejarla es
+      //    publicarla, y el motivo se escribe donde se vea en vez de perderse en esta consola.
+      if (h.image && h.imageAttribution && !atribucionLibre(h.imageAttribution)) {
+        const lic = licenciaDeAtribucion(h.imageAttribution) || 'licencia sin especificar';
+        h.image = null; h.imageAttribution = null;
+        h.imageNote = `Sin portada: la candidata localizada es ${lic}, licencia que este catálogo no ` +
+          'usa para hábitats porque la portada se empaqueta en la descarga sin conexión y la app la ' +
+          'recorta y escala. Hueco cerrado habiendo mirado.';
+        tocado = true;
+        console.log(`  ⊘ ${h.id} — portada retirada: ${lic}`);
+      }
+
       // 1) Foto ya en Commons: canonizar y recuperar autor/licencia.
       const file2 = commonsFileFromUrl(h.image);
       if (file2) {
         const atr = await atribucionCommons(file2);
-        if (atr) {
+        if (atr && !atribucionLibre(atr)) {
+          console.log(`  ⊘ ${h.id} — la de Commons es ${licenciaDeAtribucion(atr)}: no se escribe`);
+        } else if (atr) {
           const url = filePathUrl(file2, OPT.width);
           if (h.image !== url || h.imageAttribution !== atr) {
             h.image = url; h.imageAttribution = atr; tocado = true;

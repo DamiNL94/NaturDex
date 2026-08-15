@@ -1098,6 +1098,51 @@
           "comun": "azufaifo, arto"
         }
       ]
+    },
+    "Saxifrago tridactylitae-Hornungietum petraeae": {
+      "nombre": "Pastizal efímero de repisas calizas",
+      "lectura": "Pastizal diminuto y de vida corta que ocupa en invierno la tierra suelta acumulada en repisas y rellanos de roca caliza. Son plantas de pocos centímetros que germinan con las primeras lluvias, florecen antes de la primavera y se secan enteras en cuanto aprieta el calor, de modo que la mancha desaparece del paisaje media parte del año.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Saxifraga tridactylites",
+          "comun": "saxifraga anual"
+        },
+        {
+          "cientifico": "Hornungia petraea",
+          "comun": "hornungia de roca"
+        }
+      ]
+    },
+    "Thymo piperellae-Hypericetum ericoidis": {
+      "nombre": "Comunidad de grietas con pebrella",
+      "lectura": "Matas leñosas y bajas agarradas a las grietas y cornisas de los paredones calizos, donde no llega a formarse suelo. Dominan un pinillo de hoja menuda y de flor amarilla y la pebrella, un tomillo aromático propio de las sierras entre Alicante, Valencia y el nordeste murciano.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Thymus piperella",
+          "comun": "pebrella"
+        },
+        {
+          "cientifico": "Hypericum ericoides",
+          "comun": "pinillo de oro"
+        }
+      ]
+    },
+    "Hedero helicis-Ulmetum minoris": {
+      "nombre": "Olmeda con hiedra",
+      "lectura": "Arboleda de olmos en fondos de barranco y vegas donde el suelo guarda humedad todo el año, con la hiedra trepando por los troncos y cubriendo el suelo a la sombra. Es la formación de ribera de los cauces que no llevan agua permanente, y en las sierras del interior queda reducida a rodales pequeños.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Hedera helix",
+          "comun": "hiedra"
+        },
+        {
+          "cientifico": "Ulmus minor",
+          "comun": "olmo"
+        }
+      ]
     }
   }
 }
