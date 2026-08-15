@@ -56,6 +56,21 @@
         }
       ]
     },
+    "Anthyllido cytisoidis-Phlomidetum crinitae": {
+      "nombre": "Albaidar con candilera",
+      "lectura": "Matorral bajo y claro de albaida, con las varas grises cargadas de flores amarillas en primavera, sobre suelos margosos que se secan pronto. Entre las matas asoman las hojas anchas y afieltradas de la candilera, y el suelo queda a la vista buena parte del año.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Anthyllis cytisoides",
+          "comun": "albaida"
+        },
+        {
+          "cientifico": "Phlomis crinita",
+          "comun": "candilera"
+        }
+      ]
+    },
     "Atriplicetum glauco-halimi": {
       "nombre": "Matorral de orgazas",
       "lectura": "Matas de hoja gris y harinosa que colonizan suelos salinos removidos y cargados de nitrógeno: bordes de camino y de cultivo, corrales y escombreras viejas.",
@@ -299,6 +314,21 @@
         }
       ]
     },
+    "Festuco hystricis-Avenetum filifoliae": {
+      "nombre": "Pastizal duro de festuca erizo",
+      "lectura": "Pastizal de macollas duras y punzantes repartidas sobre suelo pedregoso y poco profundo, con roca caliza asomando. Aguanta el pisoteo del ganado y el frío, y entre las matas crecen anuales que solo se ven unas semanas al año.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Festuca hystrix",
+          "comun": "festuca erizo"
+        },
+        {
+          "cientifico": "Avenula filifolia",
+          "comun": "avenula"
+        }
+      ]
+    },
     "Frankenio corymbosae-Halocnemetum strobilacei": {
       "nombre": "Almajar con costra de sal",
       "lectura": "Matorral bajo de las zonas más saladas del saladar, donde el agua se evapora y deja una costra blanca en la superficie. Las matas crecen espaciadas sobre suelo desnudo.",
@@ -337,6 +367,21 @@
         {
           "cientifico": "Genista valentina",
           "comun": "aulaga"
+        }
+      ]
+    },
+    "Helianthemo thibaudii-Teucrietum verticillati": {
+      "nombre": "Matorral de yesos con jarilla y zamarrilla",
+      "lectura": "Matorral bajo y muy abierto sobre suelos de yeso, donde la costra blanquecina queda a la vista entre mata y mata. Lo componen plantas de hoja pequeña y revuelta capaces de vivir en un sustrato que la mayoría no tolera.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Helianthemum thibaudii",
+          "comun": "jarilla"
+        },
+        {
+          "cientifico": "Teucrium verticillatum",
+          "comun": "zamarrilla"
         }
       ]
     },
@@ -392,6 +437,17 @@
         }
       ]
     },
+    "Jasionetum foliosae": {
+      "nombre": "Botón azul de las paredes calizas",
+      "lectura": "Vegetación de grieta: matas pequeñas enraizadas en las fisuras de paredones calizos, sin apenas suelo bajo ellas. La más visible remata sus tallos en cabezuelas azules que sobresalen de la roca desnuda.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Jasione foliosa",
+          "comun": "botón azul"
+        }
+      ]
+    },
     "Jasonio glutinosae-Teucrietum thymifolii": {
       "nombre": "Grietas calizas con té de roca",
       "lectura": "Comunidad de fisuras en paredes de caliza con el té de roca —pegajoso y muy aromático, recolectado tradicionalmente para infusión— y matas de zamarrilla de hoja diminuta.",
@@ -419,6 +475,21 @@
         {
           "cientifico": "Juncus subulatus",
           "comun": "junco de saladar"
+        }
+      ]
+    },
+    "Junipero phoeniceae-Pinetum clusianae": {
+      "nombre": "Pinar de salgareño con sabina negral",
+      "lectura": "Pinar abierto de pino de corteza gris y agrupada en placas, sobre crestas y laderas calizas donde el suelo es escaso. Bajo los pinos, y a menudo saliendo de la propia roca, crece la sabina negral de ramillas escamosas.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Pinus nigra subsp. clusiana",
+          "comun": "pino salgareño"
+        },
+        {
+          "cientifico": "Juniperus phoenicea",
+          "comun": "sabina negral"
         }
       ]
     },
@@ -609,6 +680,21 @@
         }
       ]
     },
+    "Poo bulbosae-Astragaletum sesamei": {
+      "nombre": "Majadal de poa bulbosa",
+      "lectura": "Césped raso y apretado que se forma donde el ganado descansa a diario: el pisoteo y el estiércol favorecen a una gramínea de base engrosada en bulbo que rebrota con las primeras lluvias. Es un pasto corto, verde en invierno y agostado en verano.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Poa bulbosa",
+          "comun": "poa bulbosa"
+        },
+        {
+          "cientifico": "Astragalus sesameus",
+          "comun": "astrágalo"
+        }
+      ]
+    },
     "Quercetum rotundifoliae": {
       "nombre": "Encinar",
       "lectura": "El encinar en su forma más extendida: carrascas de copa densa y hoja dura sobre suelos calizos del interior, con un sotobosque de coscoja, enebros y plantas aromáticas.",
@@ -785,6 +871,32 @@
         }
       ]
     },
+    "Saxifragetum latepetiolatae": {
+      "nombre": "Saxífraga de repisas umbrías",
+      "lectura": "Rosetas carnosas instaladas en repisas y grietas sombrías de roquedos calizos, donde se acumula algo de tierra fina y la pared resguarda del sol directo. Levantan un tallo ramificado con muchas flores blancas pequeñas.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Saxifraga latepetiolata",
+          "comun": "saxífraga"
+        }
+      ]
+    },
+    "Scabioso turolensis-Erinaceetum anthyllidis": {
+      "nombre": "Erizal de cumbre",
+      "lectura": "Matorral de almohadillas espinosas, duras al tacto y del tamaño de un cojín, repartidas sobre suelo pedregoso en las partes altas y ventosas. La forma redondeada y compacta es la respuesta al viento, al frío y a la sequía del verano.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Scabiosa turolensis",
+          "comun": "escabiosa mayor"
+        },
+        {
+          "cientifico": "Erinacea anthyllis",
+          "comun": "erizón, cojín de monja"
+        }
+      ]
+    },
     "Schoeno nigricantis-Plantaginetum crassifoliae": {
       "nombre": "Prado húmedo salino de masiega",
       "lectura": "Prado bajo y apretado sobre suelos húmedos y algo salados, alimentados por agua subterránea: matas de masiega con la base negra y brillante y llantenes de hoja gruesa y carnosa. Se mantiene verde en pleno verano, cuando todo lo que lo rodea está seco.",
@@ -812,6 +924,32 @@
         {
           "cientifico": "Sedum sediforme",
           "comun": "uña de gato"
+        }
+      ]
+    },
+    "Seseli granatensis-Festucetum hystricis": {
+      "nombre": "Pastizal de cumbre con festuca erizo",
+      "lectura": "Pasto ralo de las partes altas, con macollas punzantes y matas achaparradas repartidas sobre roca caliza descarnada. El viento y las heladas mantienen la vegetación pegada al suelo, y entre ella asoman umbelíferas de tallo fino.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Seseli granatense",
+          "comun": "séseli"
+        },
+        {
+          "cientifico": "Festuca hystrix",
+          "comun": "festuca erizo"
+        }
+      ]
+    },
+    "Sideritidion bourgaeanae": {
+      "nombre": "Tomillares de rabogato de interior",
+      "lectura": "Conjunto de matorrales bajos y abiertos en los que dominan las labiadas de hoja pequeña y olor fuerte —rabogato, tomillos, salvias—, propios de suelos margosos y pedregosos del interior, con veranos largos y secos y heladas en invierno.",
+      "rango": "alianza",
+      "nombradaPor": [
+        {
+          "cientifico": "Sideritis bourgaeana",
+          "comun": "rabogato"
         }
       ]
     },
@@ -887,6 +1025,21 @@
         {
           "cientifico": "Helianthemum origanifolium",
           "comun": "jarilla"
+        }
+      ]
+    },
+    "Thymo funkii-Anthyllidetum onobrychioidis": {
+      "nombre": "Tomillar de albaida fina",
+      "lectura": "Tomillar ralo de matas pequeñas sobre suelos margosos sueltos y muy secos, donde la roca aflora entre planta y planta. Lo identifican el tomillo de hojas estrechas y la albaida fina, de porte más rígido y flor amarilla.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Thymus funkii",
+          "comun": "tomillo"
+        },
+        {
+          "cientifico": "Anthyllis onobrychioides",
+          "comun": "albaida fina"
         }
       ]
     },

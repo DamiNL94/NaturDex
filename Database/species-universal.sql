@@ -7652,6 +7652,4277 @@ Barros y árboles con el tronco embarrado a media altura',
   s.image_attribution = 'A.Savin (FAL) · Wikimedia Commons',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Sus scrofa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zorro',
+  s.primary_habitat = 'Prácticamente cualquier ambiente: bosque, matorral, cultivos y periferias urbanas',
+  s.description = 'El carnívoro silvestre más adaptable y extendido: vive desde la alta montaña hasta el borde de las ciudades. Es omnívoro y oportunista, lo que explica su éxito. Se reconoce por la cola larga y espesa —la «hopa»— rematada casi siempre en blanco.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola muy espesa con la punta blanca
+Huella alargada con las cuatro almohadillas alineadas
+Excrementos retorcidos y con pelos, sobre piedras y caminos',
+  s.seasonality = 'Todo el año (actividad sobre todo nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Vulpes_vulpes_2.jpg?width=1280',
+  s.image_attribution = 'Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Vulpes vulpes';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pino carrasco',
+  s.primary_habitat = 'Laderas secas y soleadas sobre calizas y margas, en clima mediterráneo cálido',
+  s.description = 'Pino de copa clara e irregular y follaje de un verde pálido, el más resistente a la sequía y a los suelos pobres de los pinos ibéricos. Sus piñas, alargadas y asimétricas, quedan colgadas años en la rama y liberan las semillas tras los incendios, lo que le permite recolonizar rápido.',
+  s.description_source = NULL,
+  s.identification_tips = 'Copa irregular y poco densa, de verde claro
+Piñas asimétricas y persistentes, apuntando hacia atrás
+Corteza clara y agrietada, rojiza en las ramas jóvenes',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pino_secolare_-_Castelleone_di_Suasa.JPG?width=1280',
+  s.image_attribution = 'Accurimbono (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Pinus halepensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Romero',
+  s.primary_habitat = 'Matorral seco y soleado sobre suelos calizos y pedregosos',
+  s.description = 'Arbusto aromático de hojas estrechas como agujas, verde oscuro por el haz y blanquecinas por el envés, con los bordes enrollados hacia abajo. Florece casi todo el año en azul pálido, y en pleno invierno es una de las pocas fuentes de néctar del matorral.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas como agujas, blancas por debajo
+Olor inconfundible al frotar entre los dedos
+Flores azul claro repartidas por las ramas casi todo el año',
+  s.seasonality = 'Todo el año, con máximo de floración en invierno y primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rosemary_in_bloom.JPG?width=1280',
+  s.image_attribution = 'Margalob (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Rosmarinus officinalis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Enebro de la miera',
+  s.primary_habitat = 'Matorral, pinares aclarados y laderas pedregosas',
+  s.description = 'Enebro de hojas aciculares y punzantes dispuestas de tres en tres, con dos bandas blancas en la cara superior que lo separan a simple vista de la sabina. Sus gálbulos son rojizos al madurar. De su madera se destilaba el aceite de miera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas punzantes en grupos de tres, no en escama
+Dos rayas blancas en la cara superior de cada hoja
+Gálbulos rojizos y brillantes al madurar',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_oxycedrus_g1.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Juniperus oxycedrus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carrasca',
+  s.primary_habitat = 'Bosques y matorrales mediterráneos continentales, sobre suelos secos y pobres',
+  s.description = 'La encina de interior, más adaptada al frío y a la sequía continental, con hojas más redondeadas y bellotas dulces. A menudo crece en mata por el efecto del ramoneo y las cortas repetidas. Muchos autores la consideran una subespecie de la encina.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas más redondeadas y pequeñas que las de la encina litoral
+Bellotas de sabor dulce, no amargas
+Frecuente en porte de mata, con varios pies',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carrasca_de_la_Raboseras.JPG?width=1280',
+  s.image_attribution = 'Picamaderos (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Quercus rotundifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gayuba',
+  s.primary_habitat = 'Pinares aclarados, crestas y laderas pedregosas de montaña',
+  s.description = 'Mata rastrera de hojas pequeñas, coriáceas y brillantes que forma alfombras densas sobre el suelo del pinar. Sus flores son urnas blanco rosadas colgantes y sus frutos, bayas rojas y harinosas. Ayuda a fijar el suelo en laderas pedregosas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Porte rastrero formando alfombras continuas
+Hojas pequeñas, duras y muy brillantes
+Flores en urna colgante y frutos rojos harinosos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Gayuba.jpg?width=1280',
+  s.image_attribution = 'No machine-readable author provided. Carlosblh assumed (based on co… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Arctostaphylos uva-ursi';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pino Negro',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Enero, abril, mayo, junio, julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pin_laricio_Corse.jpg?width=1280',
+  s.image_attribution = 'Myrabella (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Pinus nigra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Romerina',
+  s.primary_habitat = 'Tomillares y matorral seco sobre calizas y margas',
+  s.description = 'Jara pequeña de hojas muy estrechas y enrolladas por los bordes, verdes arriba y blancas por debajo, que a distancia recuerdan al romero. Se distingue enseguida al florecer: da grupos de flores blancas de cinco pétalos, mucho mayores que las del romero.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas estrechas enrolladas, blancas por el envés
+Flores blancas de cinco pétalos, varias juntas
+Sin el olor a romero, aunque se le parezca de lejos',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_clusii_(habitus).jpg?width=1280',
+  s.image_attribution = 'Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Cistus clusii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Coscoja',
+  s.primary_habitat = 'Matorral esclerófilo y sabinar',
+  s.description = 'Arbusto esclerófilo de hoja perenne y espinosa, integrante del matorral mediterráneo denso y de las orlas del sabinar.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas coriáceas con margen espinoso
+Bellota con cúpula de escamas punzantes
+Porte arbustivo denso',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_coccifera_1.JPG?width=1280',
+  s.image_attribution = 'User:Xemenendura (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Quercus coccifera';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Uña de gato',
+  s.primary_habitat = 'Prados calcáreos del Alysso-Sedion albi',
+  s.description = 'Crasulácea perenne de hojas suculentas puntiagudas y flores amarillo-verdosas, muy extendida por Murcia en repisas rocosas y prados calcáreos; especie característica del hábitat prioritario.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas carnosas puntiagudas
+Inflorescencia amarillo pálido
+Coloniza repisas y suelos esqueléticos',
+  s.seasonality = 'Verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sedum_sediforme_hojas.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Sedum sediforme';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pino rodeno',
+  s.primary_habitat = 'Laderas y sierras sobre suelos silíceos o arenosos, en clima algo húmedo',
+  s.description = 'Pino de acículas largas, gruesas y rígidas, las mayores de los pinos ibéricos, y piñas grandes y brillantes con escamas terminadas en pincho. Su corteza, gruesa y profundamente agrietada, muestra tonos rojizos en el fondo de las grietas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Acículas muy largas y gruesas, que pinchan al apretarlas
+Piñas grandes y brillantes con escamas apuntadas
+Corteza muy gruesa y agrietada, rojiza por dentro',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_pinaster_20131229.jpg?width=1280',
+  s.image_attribution = 'Luis Fernández García (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Pinus pinaster';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jara blanca',
+  s.primary_habitat = 'Matorral y laderas soleadas sobre suelos calizos secos',
+  s.description = 'Jara de hojas blanquecinas, aterciopeladas al tacto y sin peciolo, con flores grandes de color rosa malva y pétalos arrugados como papel de seda que duran solo unas horas. Es una de las plantas que da color al matorral en primavera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas blanquecinas y aterciopeladas, sentadas en la rama
+Flores rosa malva grandes, de pétalos arrugados
+Cada flor dura apenas una mañana',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_albidus_flowers.jpg?width=1280',
+  s.image_attribution = 'Júlio Reis (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Cistus albidus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sabina negral',
+  s.primary_habitat = 'Roquedos, arenales, acantilados y crestas ventosas sobre suelos pobres',
+  s.description = 'Sabina de hojas diminutas en forma de escama, pegadas a la ramilla, que dan a las ramas un aspecto de cordón redondeado. Aguanta viento, sequía y salinidad como pocas plantas leñosas. Sus gálbulos —los falsos frutos— maduran de verde a un rojo pardusco en dos años.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas en escama pegadas a la rama, no punzantes
+Ramillas cilíndricas, como cordones
+Gálbulos redondos que pasan de verde a pardo rojizo',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_phoenicea1.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Juniperus phoenicea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Berrubio',
+  s.primary_habitat = 'Vive en lugares áridos, en bordes de camino o herbazales nitrófilos, hasta 1500 m',
+  s.description = 'Hierba perenne, de 20-80 cm, algo leñosa en la base, con tallos erectos, con frecuencia lanosos. Hojas de 1,7-6,5 x 1,2-4,2 cm, ovadas o subtriangulares, dentadas, pecioladas sobre todo las inferiores, en general densamente pelosas. Inflorescencia en ver ticilastros densos y globosos, hasta de 2 cm de diámetro, brácteas como las hojas. Cáliz de 5-7 mm, con diez dientes curvados hacia fuera; corola de color crema, que sobresale poco del cáliz, con labio superior hasta de 3,5 mm, erguido, y con tres lóbulos en el inferior. Frutillos de unos 2 mm, elipsoidales, de color castaño.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Marrubium_vulgare_kz20.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Marrubium vulgare';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Aliaga',
+  s.primary_habitat = 'Crestas ventosas, pastizales pedregosos y matorral almohadillado de montaña',
+  s.description = 'Leguminosa que forma cojines rígidos y espinosos, una arquitectura que le permite resistir el viento, el frío y el pisoteo en las cumbres. En primavera se cubre de flores azul violeta que contrastan con el verde grisáceo de las espinas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cojín compacto y espinoso, duro al tacto
+Flores azul violeta sobre un almohadón de espinas
+En crestas y collados expuestos al viento',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/ERINACEA_ANTHYLLIS_-_SANT_MAMET.JPG?width=1280',
+  s.image_attribution = 'Isidre blanc (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Erinacea anthyllis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Armeria filicaulis',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a agosto',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Armeria filicaulis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Genista versicolor',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Enero, abril, mayo, junio, julio, agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Genista_versicolor_kz01.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Genista versicolor';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pampajarito',
+  s.primary_habitat = 'Litosuelos, costras yesosas y repisas rocosas secas',
+  s.description = 'Crasulácea diminuta de hojas cilíndricas y carnosas apretadas contra el tallo, que forma almohadillas sobre suelos yesosos y roca desnuda. En verano toma tonos rojizos y saca flores blancas estrelladas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojitas carnosas y cilíndricas apretadas al tallo
+Vira a rojizo con la sequía y el sol
+Flores blancas estrelladas de cinco pétalos',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sedum_gypsicola_kz01.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Sedum gypsicola';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Albaida',
+  s.primary_habitat = 'Matorral seco y soleado sobre margas y suelos pobres',
+  s.description = 'Mata de aspecto blanquecino por la fina pelusa que cubre hojas y tallos, un recurso frente al sol y la sequía. En primavera se llena de espigas de flores amarillas que atraen a muchos insectos. Es una de las leguminosas que primero coloniza laderas degradadas y taludes.',
+  s.description_source = NULL,
+  s.identification_tips = 'Aspecto grisáceo y aterciopelado al tacto
+Flores amarillas pequeñas en espigas apretadas
+Hojas divididas en tres, la del centro más larga',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Anthyllis_cytisoides.JPG?width=1280',
+  s.image_attribution = 'Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Anthyllis cytisoides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Madroño',
+  s.primary_habitat = 'Umbrías, barrancos y matorral alto sobre suelos frescos',
+  s.description = 'Arbusto o arbolillo de hojas lustrosas y dentadas y corteza rojiza que se desprende en tiras. En otoño coinciden en la misma rama las flores blancas en racimos colgantes y los frutos rojos y granulosos del año anterior.',
+  s.description_source = NULL,
+  s.identification_tips = 'Flores y frutos a la vez en la misma rama, en otoño
+Frutos rojos esféricos de superficie granulosa
+Corteza rojiza que se desprende en tiras finas',
+  s.seasonality = 'Otoño e invierno (flor y fruto a la vez)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Arbutus_unedo_Corsica.jpg?width=1280',
+  s.image_attribution = 'jxandreani (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Arbutus unedo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jara',
+  s.primary_habitat = 'Forma jarales en etapas de sustitución de robledal sobre sustratos pedregosos y arenas de naturaleza ácida, entre 400-1900 m',
+  s.description = 'Arbusto hasta de 2 m, leñoso, con corteza que se desprende en tiras. Hojas de 4-9 x 2-3 cm, elípticas, con tres nervios marcados y con pecíolo largo. Inflorescencia en cima con forma de umbela, hasta con nueve flores, estas con pétalos de 2-3 cm, blancos con una mancha amarilla en la base, y estambres desiguales. Cápsula de 9-12 mm, ovoide, que se abre por cinco valvas.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_laurifolius_3.JPG?width=1280',
+  s.image_attribution = 'Xemenendura (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Cistus laurifolius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chupaores',
+  s.primary_habitat = 'Vive en bosques mediterráneos esclerófilos umbríos y en sus orlas, hasta 1500 m',
+  s.description = 'Arbusto trepador sarmentoso, de 1-4 m. Hojas de 2-5,5 x 0,7-3 cm, ovadas, sentadas, opuestas y decusadas, perennes, coriáceas, las superiores soldadas en la base. Inflorescencia en glomérulos terminales sentados, con dos a nueve flores de 3-4 cm, con largos tubos color blanco amarillento o rojizo, pubescente-glandulosa, y estilo peloso, no exerto. Fruto en baya de 5-8 mm, ovoide, roja.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lonicera_implexa.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Lonicera implexa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Hierba de la cruz',
+  s.primary_habitat = 'Roquedos, pedregales y pastizales pedregosos de montaña',
+  s.description = 'Pimpinela de base leñosa y hojas divididas en foliolos pequeños y dentados, con cabezuelas globosas de flores verdosas y rojizas que carecen de pétalos. Crece agarrada a la roca y a los pedregales calizos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cabezuelas globosas verdosas o rojizas, sin pétalos
+Hojas divididas en muchos foliolos dentados
+Base leñosa y porte compacto sobre roca',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/517007573/original.jpg',
+  s.image_attribution = 'FloresdeMurcia.com (CC BY-NC 4.0) · GBIF/iNaturalist',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Poterium ancistroides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Hierba de la calentura',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_pseudochamaepitys_M_1.jpg?width=1280',
+  s.image_attribution = 'Adrian198cm (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Teucrium pseudochamaepitys';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Esparraguera de gato',
+  s.primary_habitat = 'Matorrales arborescentes de Juniperus spp.',
+  s.description = 'Esparraguera muy espinosa y densa que se enreda entre el matorral y el sabinar litoral, con cladodios rígidos y punzantes.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cladodios rígidos y punzantes
+Se enreda en el matorral
+Frutos negros en otoño',
+  s.seasonality = 'Otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Asparagus_stipularis_(detail).jpg?width=1280',
+  s.image_attribution = 'Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Asparagus horridus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lentisco',
+  s.primary_habitat = 'Matorral mediterráneo litoral',
+  s.description = 'Arbusto perennifolio de hojas compuestas sin foliolo terminal y con el raquis alado, un detalle que lo separa de la cornicabra. Al frotarlo huele intensamente a resina. Sus frutos, en racimo, pasan de rojo a negro y son alimento clave para aves en otoño.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hoja compuesta con número par de foliolos, sin uno terminal
+Raquis de la hoja con dos alas laterales
+Olor fuerte a resina al frotar las hojas',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pistacia_lentiscus.jpg?width=1280',
+  s.image_attribution = 'Lumbar~commonswiki (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Pistacia lentiscus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tomillo',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Starr-080812-9700-Thymus_vulgaris-leaves-Makawao-Maui_(24807095872).jpg?width=1280',
+  s.image_attribution = 'Forest and Kim Starr (CC BY 3.0 us) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Thymus vulgaris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tomillo',
+  s.primary_habitat = 'Vive en tomillares y matorrales sobre diferentes sustratos, hasta 2400 m',
+  s.description = 'Mata perenne sufruticosa, con tallos pubescentes o tomentosos, y hojas de 4-20 x 1-7 mm. Sépalos con espacios intercostales cubiertos de pelos estrellados. Pétalos de 8-13 mm, de color amarillo, anaranjado, blanco, incluso rosado, maculados. Cápsula de 4-7 mm, pelosa. Es muy polimorfa, con siete subespecies, cinco de ellas endemismos españoles.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_apenninum1.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Helianthemum apenninum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'alpiste de pájaros',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Piptatherum_paradoxum.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Achnatherum paradoxum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alyssum montanum',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Alyssum_montanum_subsp._montanum_sl4.jpg?width=1280',
+  s.image_attribution = 'Stefan.lefnaer (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Alyssum montanum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Hierba de la piedra',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Arenaria_grandiflora_3.JPG?width=1280',
+  s.image_attribution = 'Ghislain118 http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Arenaria grandiflora';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Escolondrillo',
+  s.primary_habitat = 'Vive en grietas de rocas básicas, hasta 2600 m',
+  s.description = 'Tiene rizoma muy ramificado, con frondes de hasta 15 cm, con largo pecíolo con tres a cinco hojillas levemente crenadas, y soros alargados en el envés de la hoja.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aspenium_ruta-muraria2.JPG?width=1280',
+  s.image_attribution = 'Petr Filippov (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Asplenium ruta-muraria';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Centaurea boissieri',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/C.paui-1.jpg?width=1280',
+  s.image_attribution = 'Willkomm, H.M. (Filtered, cropped and uploaded by Philmarin, 2016, … (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Centaurea boissieri';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Macuca',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Conopodium thalictrifolium';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cardo',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eryngium_campestre_(42134784310).jpg?width=1280',
+  s.image_attribution = 'Björn S... (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Eryngium campestre';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Saxifraga latepetiolata',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Saxifraga latepetiolata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cantagüeso cabezudo',
+  s.primary_habitat = 'En tomillares y matorrales enanos sobre sustratos calizos, arcillosos o yesíferos',
+  s.description = 'Planta camefítica de 10-20 cm, leñosa, aromática, con tallos rojizos con pelos muy cortos. Hojas rígidas 5-8 x 0,7-1 mm, lineares, agudas y con margen revuelto, generalmente curvadas en el ápice, pubescentes, con escasos cilios en la base y muchas glándulas esferoidales amarillentas. Inflorescencias 12-20 mm, en cabezuelas, con brácteas mucho más anchas que las hojas, de hasta 12 x 8 mm, ovadas y densamente ciliadas en el margen, de color púrpura obscuro. Flores con cáliz de 5,5-6,5 mm, cilíndrico, bilabiado, membranáceo, con tubo de 3 mm, escasamente peloso o glabro, con dientes ciliados. Corola de 14-16 mm, larga, recta bilabiada, con lóbulos cortitos, de color púrpura, pubescente, que sobresale ligeramente entre las brácteas. Frutos de 0,7-1 mm, en núcula.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Thymus_moroderi03-800.jpg?width=1280',
+  s.image_attribution = 'No machine-readable author provided. Marionetarh assumed (based on … (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Thymus moroderi';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Armeria quichiotis',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 5,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Armeria quichiotis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Falguera',
+  s.primary_habitat = 'Crece en grietas o fisuras de roquedos y muros, principalmente en calizas, en lugares no muy fríos y a la sombra, aunque aguanta bien la insolación',
+  s.description = 'Helecho perenne, de 5-25 cm, con rizoma cespitoso, corto y superficial, revestido de escamas negras con margen ciliado. Frondes 5-15(25) cm, en roseta, persistentes, de color castaño negruzco en la base, las jóvenes enrolladas en forma de báculo, con láminas lanceoladas, coriáceas, pinnatipartidas, gruesas, onduladas; color verde mate en la parte superior y cubiertas de escamas ferrugíneas o plateadas abajo, con 6-15 pares de pinnas de 8-10 x 4-6 mm, de ápice redondeado y disposición alterna, que se secan en verano. Soros lineares u oblongos, parcialmente cubiertos por las escamas del reverso de las frondes. Esporas color castaño negruzco.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Asplenium_ceterach_(Sardinia).jpg?width=1280',
+  s.image_attribution = 'Hans Hillewaert (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Asplenium ceterach';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culantrillo chico',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Asplenium_trichomanes_subsp._quadrivalens_sl7.jpg?width=1280',
+  s.image_attribution = 'Stefan.lefnaer (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Asplenium quadrivalens';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Falguera',
+  s.primary_habitat = 'Vive en grietas de roquedos calizos o silíceos, hasta 2000 m',
+  s.description = 'Helecho de rizoma pequeño, completamente cubierto de escamitas color castaño; frondes hasta de 25 cm, con pecíolo corto y raquis oscuros y brillantes, con pinnas en disposición alterna y perpendicular al raquis, enteras, ovadas, suavemente dentadas y algo onduladas, con cuatro a diez soros alargados que nacen en las nervios laterales. Esporas hasta de 45 micras, color castaño.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Trichomanes-grazalema.jpg?width=1280',
+  s.image_attribution = 'Juan Bibiloni (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Asplenium trichomanes';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Acnica',
+  s.primary_habitat = 'En fisuras y rellanos de roquedos calizos más o menos inclinados, o en grietas, raramente en pedregales',
+  s.description = 'Planta hasta de 40(50) cm, perenne, con rizoma leñoso, del que brotan en primavera numerosos tallos lignificados abajo, ramificados superiormente, pubescente glandulosos. Hojas alternas, lanceoladas, enteras, 5-30 x 1,5-7 mm, pubescente-glandulosas, algo pegajosas, muy aromáticas, de olor alcanforado y de sabor un poco amargo. Capítulos 10-15 mm de diámetro, con brácteas estrechas, en 3-5 filas, a menudo curvadas hacia fuera; flores 5,5-7,5 mm, todas tubulosas y hermafroditas, amarillas. Frutos en aquenio fusiforme, 2,5-3,5 mm, pelosos en la base, glandulosos en el ápice; vilano doble, 5,5-7,5 mm.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Te_de_Muntanya.jpg?width=1280',
+  s.image_attribution = 'Juan José Girón Ruiz (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Chiliadenus glutinosus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'yerba-blanca',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Draba_hispanica.jpg?width=1280',
+  s.image_attribution = 'Laurascudder (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Draba hispanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sillerilla',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fumana_ericifolia_MHNT.BOT.2007.40.142.jpg?width=1280',
+  s.image_attribution = 'Roger Culos (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Fumana ericifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Uña de gato',
+  s.primary_habitat = 'Prados calcáreos cársticos o basófilos del Alysso-Sedion albi',
+  s.description = 'Crasulácea de hojas diminutas suculentas y flores amarillo-brillantes que coloniza costras y suelos esqueléticos sobre roca caliza.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas minúsculas y carnosas
+Flores amarillas estrelladas
+Sobre roca y suelos someros',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/665351988/original.jpg',
+  s.image_attribution = 'Santiago Martín-Bravo (CC BY 4.0) · GBIF',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Sedum acre';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sedo de hojas gruesas',
+  s.primary_habitat = 'Prados calcáreos del Alysso-Sedion albi',
+  s.description = 'Crasulácea diminuta de hojas gruesas, casi esféricas y de un gris azulado, dispuestas de dos en dos y cubiertas de pelillos glandulosos que la hacen pegajosa. Forma almohadillas en grietas y muros y da flores blancas con venas rosadas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas casi esféricas, opuestas y de gris azulado
+Tacto pegajoso por los pelillos glandulosos
+Flores blancas con finas venas rosadas',
+  s.seasonality = 'Verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sedum_dasyphyllum_(1)_6.jpg?width=1280',
+  s.image_attribution = 'Ghislain118 http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Sedum dasyphyllum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Labiérnago',
+  s.primary_habitat = 'Matorral mediterráneo y laderas secas sobre suelos pedregosos',
+  s.description = 'Arbusto de hojas opuestas, estrechas y coriáceas, muy parecido a un acebuche pero con las hojas verdes por ambas caras. Sus frutos son pequeñas drupas azuladas o negras que consumen zorzales y currucas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas opuestas y estrechas, verdes por las dos caras
+Sin el reverso plateado del acebuche
+Frutos pequeños azulados o negros',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Phyllirea_angustifolia.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Phillyrea angustifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Aladierno',
+  s.primary_habitat = 'Matorral alto, encinares y barrancos sobre suelos pedregosos',
+  s.description = 'Arbusto perennifolio de hojas alternas, coriáceas y de borde finamente dentado, sin espinas. Sus frutos maduran de rojo a negro y son muy buscados por los pájaros. Se distingue del espino negro por carecer de espinas y tener hojas mayores.',
+  s.description_source = NULL,
+  s.identification_tips = 'Sin espinas, a diferencia de otros ramnos
+Hojas alternas, coriáceas y algo dentadas
+Frutos que pasan de rojo a negro al madurar',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhamnus_alaternus1627.JPG?width=1280',
+  s.image_attribution = 'tato grasso (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Rhamnus alaternus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Llengua de bou',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rubia_peregrina01.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Rubia peregrina';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Durillo',
+  s.primary_habitat = 'Umbrías, barrancos y sotobosque de encinar y pinar húmedo',
+  s.description = 'Arbusto de hojas perennes, opuestas y coriáceas, que florece en pleno invierno con corimbos de flores blancas nacidas de capullos rosados. Sus frutos son bayas de un azul metálico oscuro muy llamativo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Florece en invierno, en corimbos blancos planos
+Capullos rosados antes de abrir
+Frutos azul metálico oscuro, casi negros',
+  s.seasonality = 'Invierno y primavera (floración)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/T2_37_Viburnum_tinus_par_Pierre-Joseph_Redout%C3%A9.jpeg?width=1280',
+  s.image_attribution = 'Pierre-Joseph Redouté (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Viburnum tinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cebollana',
+  s.primary_habitat = 'Asphodelus cerasiferus vive en pastizales, matorrales y claros de bosque en lugares soleados, sobre todo en sustratos básicos poco desarrollados, hasta 1700 m',
+  s.description = 'Tallo de 0,8-2 m, y hojas hasta de 90 x 2,5 cm, con quilla apenas marcada, flores con tépalos hasta de 2,2 cm y estambres algo más cortos; cápsula hasta de 20 mm, esférica.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Septiembre, noviembre, diciembre, enero, febrero, marzo, abril, mayo, junio, julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/ASPHODELUS_CERASIFERUS_-_BIOSCA_-_IB-825_(Alb%C3%B3).JPG?width=1280',
+  s.image_attribution = 'Isidre blanc (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Asphodelus cerasifer';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Albahaca silvestre',
+  s.primary_habitat = 'Se encuentra en pedregales y pastos de zonas áridas, entre 500 y 1200 m',
+  s.description = 'Se diferencia por ser especie bienal, en general de menor talla, con hojas estrechas, no revolutas, y de flores más pequeñas, con cáliz hasta de 6 mm y corola como máximo de 8 mm.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Acinos_arvensis_3.jpg?width=1280',
+  s.image_attribution = 'Bernd Gliwa (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Clinopodium acinos';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lletrera',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Euphorbia_serrata_FlowersCloseup_11April2009_CampoCalatrava.jpg?width=1280',
+  s.image_attribution = 'javier martin (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Euphorbia serrata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Festuca indigesta',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Festuca_indigesta_(cropped).jpg?width=1280',
+  s.image_attribution = 'Stuarlittle (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Festuca indigesta';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ceje',
+  s.primary_habitat = 'Crece en tomillares y matorrales sobre suelos secos calizos, dolomíticos o yesosos, hasta 2400 m',
+  s.description = 'Perenne sufruticosa, de 4-30 cm, con tallos ascendentes o erectos, redondeados, de tomentosos a glabros. Hojas con limbo de 4-20 x 2-10 mm, pecioladas, de ovadas a oblongo- lanceoladas, opuestas, a veces las superiores alternas, con envés generalmente peloso o tomentoso, las inferiores sin estípulas, las superiores con estípulas foliáceas. Pétalos de 3-6 mm, pequeños, mayores que el cáliz, amarillos. Cápsula de 3-5 mm, ovoide-elipsoidal, glabra o pelosa en el ápice. Semillas pardo-amarillentas. Especie de la que se han considerado cuatro subespecies, tres de ellas endemismos españoles.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Enero a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_cinereum_kz01.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Helianthemum cinereum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ceje',
+  s.primary_habitat = 'Crece en matorrales secos sobre sustratos calizos o dolomíticos, hasta 1900 m',
+  s.description = 'Perenne sufruticosa, de 5-35 cm, con cepa de ramas ascendentes o erectas y tallos de tomentosos o setosos a glabros. Hojas con limbo de 2,5-23 x 1,2-15 mm, con pecíolo de 0-3 mm, la mayoría opuestas, gruesas, algo carnosas sin estípulas, de ovadas a elípticas, a veces acorazonadas, blanco-tomentosas en el envés. Cimas simples con pocas flores. Pétalos 5, de 4-10 mm, amarillos. Fruto en cápsula de 3-5 mm, ovoide-elipsoidal, glabra o pelosa arriba. Dada su gran variabilidad, se han considerado seis subespecies, cuatro de ellas endemismos españoles.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_marifolium_-_Saint-Hilaire.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Helianthemum marifolium';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lastón',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo, abril, mayo, junio, julio, septiembre, octubre, noviembre, diciembre, enero',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Helictotrichon_filifolium.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Helictotrichon filifolium';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carraspique de Sierra Nevada',
+  s.primary_habitat = NULL,
+  s.description = 'Hierba vivaz, de tallo central corto, de cuya base parten tallos floríferos de 4-15 cm. Hojas alternas, simples, espatuladas. Flores zigomorfas, hermafroditas, en corimbos terminales; sépalos 4, libres, con margen membranáceo blanco o purpúreo; pétalos 4, libres, blancos o algo rosados, los dos externos más grandes; estambres 6, los dos laterales más cortos. Fruto silícula angustisepta, comprimido, con dos alas laterales.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Iberis_carnosa_2022-04-28_7901.jpg?width=1280',
+  s.image_attribution = 'Salicyna (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Iberis carnosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alhucema',
+  s.primary_habitat = NULL,
+  s.description = 'Matas de porte variable, siempreverdes, con altura comprendida entre 0,20 y 1(2) m, de porte erecto o ascendente, abundante ramificación, pubescentes al menos en las partes más jóvenes. Hojas opuestas, de tamaño variable (10-30 x 1-5 mm), agrupadas en la base de la planta, lineares o linear-lanceoladas, con haz verde, glabro o pubérulo, más o menos rugoso y envés tomentoso, borde entero, festoneado o lobulado, con peciolo corto (López González, 1983; Ruiz de la Torre, 2006).',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lavandula_Latifolia.jpg?width=1280',
+  s.image_attribution = 'remi.mahel (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Lavandula latifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Meniocus linifolius',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Alyssum_linifolium_flowerhead10_ST_(15553398462).jpg?width=1280',
+  s.image_attribution = 'Harry Rose from South West Rocks, Australia (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Meniocus linifolius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Algarabía',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a octubre',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Odontites viscosus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tomillo blanco',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Septiembre a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Phagnalon_rupestre_1.jpg?width=1280',
+  s.image_attribution = 'Gideon Pisanty (Gidip) (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Phagnalon rupestre';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zaragatona blanca',
+  s.primary_habitat = 'Pastizales secos, ribazos y claros de matorral sobre suelos margosos',
+  s.description = 'Llantén de aspecto plateado, cubierto de pelos sedosos, con hojas estrechas que salen todas de la base. Levanta espigas cilíndricas y densas en las que las flores se abren de abajo arriba, dejando ver unos estambres largos y colgantes. Resiste bien el pisoteo y la sequía.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas estrechas y plateadas, todas desde la base
+Espigas cilíndricas apretadas sobre tallos largos
+Estambres largos y colgantes durante la floración',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/633859652/original.jpg',
+  s.image_attribution = 'Pavel Kúr (CC0) · GBIF',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Plantago albicans';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bocheta',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo, abril, mayo, junio, julio, septiembre, octubre, noviembre, diciembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Plantago_sempervirens_-_Distribuzione.png?width=1280',
+  s.image_attribution = 'Enrico Blasutto at Italian Wikipedia (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Plantago sempervirens';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Poa flaccidula',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a julio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Poa flaccidula';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Anís silvestre',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Seseli_montanum_001_GotBot_2016.jpg?width=1280',
+  s.image_attribution = 'Averater (CC BY 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Seseli montanum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'poleo dorado',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Teucrium homotrichum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tablero de damas',
+  s.primary_habitat = 'Pastizales, claros de matorral y pedregales de montaña',
+  s.description = 'Bulbosa de tallo fino y hojas estrechas que cuelga una o dos flores en forma de campana, con un jaspeado pardo y verdoso que recuerda a un tablero de ajedrez. Pasa desapercibida entre la hierba pese a su forma llamativa.',
+  s.description_source = NULL,
+  s.identification_tips = 'Flor colgante en campana con dibujo ajedrezado
+Tallo fino con pocas hojas estrechas
+Colores apagados que la camuflan en el pastizal',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fritillaria_lusitanica_2_2601.jpg?width=1280',
+  s.image_attribution = 'Balles2601 (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Fritillaria lusitanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'escabiosa mayor',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril, mayo, junio, julio, agosto, octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Scabiosa_turolensis_subsp._turolensis_Habitus_2010-7-03_ParqueNaturalLagunasdelaMata.jpg?width=1280',
+  s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Scabiosa turolensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'culantrillo glanduloso',
+  s.primary_habitat = 'Grietas de roquedos calizos secos y soleados, y muros antiguos',
+  s.description = 'Helecho pequeño que sobrevive en fisuras de roca caliza expuestas al sol, algo insólito en un grupo que suele buscar la humedad. Sus frondes son cortas, divididas y cubiertas de pelos glandulosos. En sequía se enrolla y parece muerto, y revive con la lluvia.',
+  s.description_source = NULL,
+  s.identification_tips = 'Frondes pequeñas, divididas y con pelos pegajosos
+En grietas de roca seca y soleada, no en umbrías húmedas
+Se reseca y enrolla en verano, y rebrota con la lluvia',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Petrarchae.jpg?width=1280',
+  s.image_attribution = 'Juan Bibiloni (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Asplenium petrarchae';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jara blanca',
+  s.primary_habitat = 'Matorral y jarales sobre suelos secos y soleados de montaña media',
+  s.description = 'Arbusto de hojas anchas, ovaladas y cubiertas de una pelusa plateada que le da un aspecto casi blanco. En primavera se llena de flores amarillas de cinco pétalos con una mancha oscura en la base. Es un endemismo del sur y sureste peninsular.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas anchas y plateadas, no estrechas como las jaras
+Flores amarillas con una manchita oscura en la base del pétalo
+Porte erguido, más alto que las jarillas comunes',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Halimium_commutatum1.jpg?width=1280',
+  s.image_attribution = 'Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Cistus atriplicifolius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Conejo',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Lagomorfo excavador que vive en madrigueras coloniales; pieza clave del ecosistema mediterráneo como presa de águila perdicera, búho real y carnívoros.',
+  s.description_source = NULL,
+  s.identification_tips = 'Excava madrigueras coloniales
+Presa clave de rapaces
+Activo al amanecer y atardecer',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Oryctolagus_cuniculus_Tasmania_2.jpg?width=1280',
+  s.image_attribution = 'JJ Harrison (https://www.jjharrison.com.au/) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Oryctolagus cuniculus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Rana común',
+  s.primary_habitat = 'Charcas, balsas, acequias y tramos remansados con vegetación',
+  s.description = 'La rana verde ibérica, la más común y adaptable de nuestros anfibios: coloniza desde ramblas y balsas de riego hasta fuentes urbanas. Su canto es un cacareo entrecortado que forma coros al atardecer. Salta al agua al menor movimiento en la orilla.',
+  s.description_source = NULL,
+  s.identification_tips = 'Línea clara a lo largo del centro del lomo en muchos ejemplares
+Canto entrecortado, como una risa o un cacareo
+Salta al agua desde la orilla al notar movimiento',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pelophylax_perezi_by-dpc.jpg?width=1280',
+  s.image_attribution = 'David Perez (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Pelophylax perezi';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Encina',
+  s.primary_habitat = 'Bosques y matorrales mediterráneos sobre suelos variados, en clima no extremo',
+  s.description = 'Árbol perennifolio de copa densa y redondeada, con hojas coriáceas verde oscuro por el haz y blanquecinas y afieltradas por el envés. Las hojas jóvenes y las de las ramas bajas tienen el borde espinoso, un mecanismo de defensa frente a los herbívoros.',
+  s.description_source = NULL,
+  s.identification_tips = 'Envés de la hoja blanquecino y afieltrado
+Hojas de las ramas bajas con borde espinoso
+Copa densa y oscura, muy cerrada a la luz',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carrasca_de_la_Raboseras.JPG?width=1280',
+  s.image_attribution = 'Picamaderos (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Quercus ilex';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lucema',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Teucrium libanitis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagarto ocelado',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'El lagarto más grande de Europa, de hasta 60 cm con la cola incluida. Su dorso es verde con un fino reticulado negro y, en los costados, hileras de ocelos de un azul intenso. Los machos viejos tienen una cabeza enorme y maciza. Es diurno y muy desconfiado.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ocelos azules alineados en los costados
+Dorso verde con retícula negra muy fina
+Tamaño grande y cabeza maciza en los machos adultos',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Jewelled_Lizard_(Timon_lepidus)_male_found_under_a_stone_by_Jean_NICOLAS_(14166347788).jpg?width=1280',
+  s.image_attribution = 'Bernard DUPONT from FRANCE (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Timon lepidus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tulipa sylvestris',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/!-2011-wschowa-lapidarium-steiner-abri--tulipa-sylvestris.jpg?width=1280',
+  s.image_attribution = 'Marek Argent (CC BY-SA 3.0 pl) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Tulipa sylvestris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'broza de agua',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a octubre',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 5,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Zannichellia contorta';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'cañuela de oveja',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a agosto',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Festuca valentina';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alfileres',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sanguisorba_verrucosa_Hojas_2009-4-19_DehesaBoyaldePuertollano.jpg?width=1280',
+  s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Poterium verrucosum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bardaguera',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Salix.jpg?width=1280',
+  s.image_attribution = 'Ximénez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Salix atrocinerea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'hierba de la rabia',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Alyssum_alyssoides_(Kelch-Steinkraut)_2603_IMG.JPG?width=1280',
+  s.image_attribution = 'HermannSchachner (CC0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Alyssum alyssoides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Anerdo',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Anethum ridolfia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Probayernos',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero, marzo, abril, mayo, junio, julio, septiembre, octubre',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Anthyllis lagascana';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Albaida fina',
+  s.primary_habitat = 'Matorrales áridos y espartales sobre suelos pobres del sureste ibérico',
+  s.description = 'Mata blanquecina, cubierta de pelos sedosos, con las flores agrupadas de tres en tres a lo largo de las ramas, que es lo que le da nombre. Es una leguminosa del extremo árido del sureste peninsular y del norte de África, adaptada a suelos yesosos y margas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Flores en grupos de tres, dispuestas a lo largo de la rama
+Follaje sedoso y plateado por el pelo tumbado
+Cáliz hinchado y peludo que envuelve la flor',
+  s.seasonality = 'Floración de invierno a primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Anthyllis_terniflora_kz01.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Anthyllis terniflora';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Garbancillo',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Anthyllis_vulneraria.jpg?width=1280',
+  s.image_attribution = 'Taken by Carsten Niehaus (user:Lumbar). (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Anthyllis vulneraria';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Arabis auriculata',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Arabis_auriculata_Habitus_2011-4-10_SierraMadrona.jpg?width=1280',
+  s.image_attribution = 'Javier martin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Arabis auriculata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Arenaria leptoclados',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Arenaria_leptoclados_arse2_001_lvd.jpg?width=1280',
+  s.image_attribution = 'USDA-NRCS PLANTS Database / Britton, N.L., and A. Brown. 1913. An i… (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Arenaria leptoclados';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'césped espinoso',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Arenaria_montana_1.jpg?width=1280',
+  s.image_attribution = 'Michael Tiffany (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Arenaria montana';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Arenaria serpyllifolia',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Arenaria_serpyllifolia_W.jpg?width=1280',
+  s.image_attribution = 'Fornax (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Arenaria serpyllifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Armeria bourgaei',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Armeria bourgaei';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'tortero',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/461_Arrhenatherum_elatius.jpg?width=1280',
+  s.image_attribution = 'Carl Axel Magnus Lindman (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Arrhenatherum elatius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Abrótano hembra',
+  s.primary_habitat = 'Vive en lugares soleados, como arvense y ruderal, con frecuencia sobre sustratos salobres, hasta 1500 m',
+  s.description = 'Planta perenne de base leñosa, hasta de 60 cm, con tallos numerosos, pelosos, blanquecinos, y hojas hasta de 1 cm, divididas en segmentos algo carnosos y formando fascículos axilares. Capítulos en panícula terminal, de 3 mm de diámetro, con brácteas ovadas, en general glandulíferas. Florecillas amarillentas.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Artemisia herba-alba';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cebollana',
+  s.primary_habitat = 'Asphodelus ayardii se encuentra en lugares secos preferentemente sobre sustratos básicos, hasta 1000 m',
+  s.description = 'Asphodelus ayardii, con rizoma bien desarrollado y sin tubérculos radicales, con tallo de 0,3-0,6 m, y hojas hasta de 40 x 0,6 cm, de sección semicilíndrica, inflorescencia en racimo compuesto y tépalos hasta de 17 mm, blancos, con estambres claramente más cortos; cápsula hasta de 6 mm, obovoide.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a mayo',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Asphodelus_ayardii_enfoque_2010-3-29_DehesaBoyalPuertollano.jpg?width=1280',
+  s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Asphodelus ayardii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gamoncillo',
+  s.primary_habitat = 'Pastizales secos, bordes de camino y terrenos removidos',
+  s.description = 'Gamón pequeño de hojas cilíndricas y huecas —de ahí su nombre— que salen todas de la base. Levanta un tallo ramificado con flores blancas de nervio rosado, que se abren de forma escalonada durante semanas. Es una de las primeras plantas en colonizar cunetas y baldíos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas finas, cilíndricas y huecas por dentro
+Flores blancas con una raya rosa en cada pétalo
+Cápsulas redondas y pequeñas al fructificar',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/A._fistulosus-flor-2.JPG?width=1280',
+  s.image_attribution = 'Philmarin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Asphodelus fistulosus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Astragalus sesameus',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Astragalus sesameus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cardo',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/A._humilis-0002_12.jpg?width=1280',
+  s.image_attribution = 'Philmarin (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Atractylis humilis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lastón',
+  s.primary_habitat = 'Pastizales, claros de matorral y ribazos sobre suelos calizos',
+  s.description = 'Gramínea perenne y rizomatosa que forma céspedes extensos en los claros del matorral mediterráneo. Sus hojas son cortas, rígidas y de punta roma. Es de las plantas que más rápido rebrota tras un incendio, gracias a sus rizomas subterráneos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Céspedes extensos y bajos, no matas aisladas
+Hojas cortas y rígidas, de punta redondeada
+Espiguillas alineadas a un lado de un eje rígido',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Brachypodium_retusum_espiga_seca.jpg?width=1280',
+  s.image_attribution = 'Pere prlpz (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Brachypodium retusum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mijo del sol',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Buglossoides_arvensis_300406.jpg?width=1280',
+  s.image_attribution = 'Bernd Haynold (CC BY 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Buglossoides arvensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Boja de las calenturas',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/BUPLEURUM_FRUTISCENS_-_AGUDA_-_IB-327_(Botja_groga).JPG?width=1280',
+  s.image_attribution = 'Isidre blanc (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Bupleurum fruticescens';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Buje',
+  s.primary_habitat = 'Forma matorrales en barrancos y laderas umbrías preferentemente sobre sustrato básico, también en claros de bosque, entre 100-2100 m',
+  s.description = 'Arbusto o pequeño árbol perennifolio, de 0,5-6 m, monoico, muy ramoso, con ramas adultas glabras de corteza amarillenta. Hojas de 1,3-3 x 0,4-1,5 cm, ovado-elípticas, obtusas, enteras, con pecíolo corto, opuestas, coriáceas, glabras, con haz verde oscuro brillante y envés más claro. Flores de 5-7 mm, en glomérulos axilares densos, amarillentas, las masculinas con cuatro tépalos y cuatro estambres, que rodean a una flor femenina con seis tépalos y ovario tricarpelar. Fruto en cápsula de 8-11 x 6-8 mm, subesférica, tricorne, glauca.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Buxus_sempervirens.jpg?width=1280',
+  s.image_attribution = 'No machine-readable author provided. MPF assumed (based on copyrigh… (CC BY 2.5) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Buxus sempervirens';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Clavellina',
+  s.primary_habitat = 'Vive junto a caminos y en campos de cultivo, hasta 1500 m',
+  s.description = 'Hierba anual, de 5-40 cm, pubescente-glandulosa, con tallos erectos o ascendentes. Hojas alternas enteras o dentadas, oblongas o elípticas; las inferiores algo pecioladas, las superiores sentadas, algo auriculadas. Capítulos de 15-25 mm de diámetro, radiados, solitarios, con involucro de 5,5-8,5 mm de diámetro. Flores amarillas o anaranjadas, las externas liguladas o con lengüeta de 5-10 mm, femeninas, las internas tubulosas, de 0,5-1,5 mm, hermafroditas. Aquenios externos curvados, espinosos, con pico largo; los internos anulares, de dorso estriado. Especie muy polimorfa.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/2020.07.01_Calendula_arvensis_blossom_Tryliesina_Dribin_District_Mogilev_Region_Belarus.jpg?width=1280',
+  s.image_attribution = 'Alesya Kazakova (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Calendula arvensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Camelina microcarpa',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Bromus_tectorum_(cheatgrass)_and_Camelina_microcarpa_(littlepod_false_flax)_-_Flickr_-_Matt_Lavin.jpg?width=1280',
+  s.image_attribution = 'Matt Lavin from Bozeman, Montana, USA (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Camelina microcarpa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cabra montés',
+  s.primary_habitat = 'Roquedos, canchales y laderas escarpadas con matorral',
+  s.description = 'Bóvido de montaña perfectamente adaptado a la roca: pezuñas con borde duro y almohadilla blanda que agarra en pendientes imposibles. Los machos lucen cuernos grandes, curvados hacia atrás y con abultamientos; las hembras los tienen cortos y rectos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Machos con cuernos grandes curvados hacia atrás
+Se mueve por cortados donde nada más puede subir
+Excrementos en montoncitos de bolitas cilíndricas',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Capra_pyrenaica_in_Sierra_de_Guadarrama.jpg?width=1280',
+  s.image_attribution = 'Thomas Holbach (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Capra pyrenaica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cerrillo',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carex_halleriana_1.JPG?width=1280',
+  s.image_attribution = 'Luis nunes alberto (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Carex halleriana';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cuchareta',
+  s.primary_habitat = 'Pastizales anuales, eriales y suelos margosos removidos en clima árido',
+  s.description = 'Crucífera anual de flores blanquecinas con nervios violáceos, inconfundible por su fruto: una vainita corta rematada por una lengüeta plana y curvada que recuerda a una cuchara. Los frutos secos persisten sobre la planta y son la mejor pista para identificarla.',
+  s.description_source = NULL,
+  s.identification_tips = 'Frutos con una pala plana en el extremo, como cucharillas
+Hojas muy divididas, de segmentos estrechos
+Planta anual pelosa, de pocos decímetros, en suelo pelado',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carrichtera_annua2.JPG?width=1280',
+  s.image_attribution = 'Flora y Vegetación de Lanzarote (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Carrichtera annua';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Centaurea',
+  s.primary_habitat = 'Vive en lugares alterados como márgenes de caminos o eriales, hasta 1500 m',
+  s.description = 'Hierba perenne, hasta de 80 cm, inerme, lanuginosa, con tallos ramificados arriba. Hojas basales pecioladas, de enteras a pinnnatipartidas, con lóbulos acabados en espínulas no punzantes, las medias sentadas, elípticas o lineares. Capítulos en panículas corimbiformes, glabros, con involucro de 10-17 x 4,5-12 mm, ovoide, con cinco filas de brácteas imbricadas, hasta con cinco espinas amarillentas finas hasta de 3 mm. Flores liguladas y tubulosas, blanquecinas en la base y coloreadas arriba. Aquenios 3,5-5 mm, oblongo-ovoides, amarillentos, con vilano hasta de 3 mm, doble.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Centaurea_aspera.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Centaurea aspera';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Centaurea sicula',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Centaurea_nicaeensis_Gozo_Kliff_01.jpg?width=1280',
+  s.image_attribution = 'Denis Barthel (CC BY-SA 3.0 de) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Centaurea sicula';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'pamplinillas',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cerastium_brachypetalum6_W.jpg?width=1280',
+  s.image_attribution = 'Fornax (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Cerastium brachypetalum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'cerastiun',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cerastium_brachypetalum6_W.jpg?width=1280',
+  s.image_attribution = 'Fornax (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Cerastium gracile';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cerastium pumilum',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cerastium_pumilum_agg._sl1.jpg?width=1280',
+  s.image_attribution = 'Stefan.lefnaer (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Cerastium pumilum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Palmito',
+  s.primary_habitat = 'Matorral cálido, laderas soleadas y acantilados del piso termomediterráneo',
+  s.description = 'La única palmera silvestre de Europa continental. Suele crecer en mata, con varios troncos cortos, aunque con los años puede levantar un tronco único. Sus hojas son abanicos rígidos con pecíolos muy espinosos. Del cogollo se sacaba el «palmito», y de las hojas, cordelería y escobas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas en abanico, rígidas y divididas en segmentos
+Pecíolos con espinas fuertes en los bordes
+Porte en mata, con varios troncos desde la base',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Chamaerops_humilis_Torreblanca.jpg?width=1280',
+  s.image_attribution = 'Canaan (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Chamaerops humilis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Castañuela',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Conopodium_majus_03.jpg?width=1280',
+  s.image_attribution = 'Moldekarl (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Conopodium majus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra lisa meridional',
+  s.primary_habitat = 'Se encuentra desde el nivel del mar, pero es más frecuente en claros de bosque y matorral mediterráneo en zonas de media montaña',
+  s.description = 'La culebra lisa meridional Coronella girondica es de pequeño tamaño, cabeza pequeña y cola relativamente corta. En general hay 21 hileras de dorsales aunque es frecuente observar 19 hileras en ejemplares de las cordilleras béticas. Dorso y flancos generalmente de color pardo o gris, con una hilera de manchas transversales por el dorso. En el vientre destacan unas manchas cuadradas oscuras en un diseño ajedrezado. En la parte dorsal de la cabeza hay una gran mancha en forma de U, y a ambos lados de la cabeza, una brida oscura que atraviesa el ojo y se prolonga por delante de la placa frontal uniendo las manchas de ambos lados. No hay dimorfismo sexual en la longitud cabeza-cloaca ni en la folidosis cefálica. En cambio se aprecian ligeras diferencias en el número de dorsales (19 hileras más frecuente en machos) y ventrales (más en hembras), pero sobre todo en la cola (mayor longitud relativa y mayor número de subcaudales en machos). No hay subespecies descritas, pero se aprecian diferencias poblacionales en el número de ventrales. En machos, se observa una clina latitudinal en la longitud de hocico-cloaca y número de ventrales, siendo mayores los ejemplares más septentrionales. Longitud total máxima en la Península Ibérica, 800 mm.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/BennyTrapp_Coronella_girondica.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Coronella girondica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Azafrán borde',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cuscuta_epithymum4.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Cuscuta epithymum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chupera',
+  s.primary_habitat = 'Es silicícola y vive sobre granitos, pizarras, cuarcitas, en terraplenes, claros de bosque, hasta 2900 m',
+  s.description = 'Planta herbácea perenne o bienal, a veces leñosa en la base, de 0,5-1 m, con pelos glandulíferos. Hojas alternas, las inferiores de 5-20 x 1,5-10 cm, atenuadas en el pecíolo de 1,5-6,5 cm, elípticas, crenuladas o dentadas. Inflorescencia en racimos de 15-70 cm; flores con cinco sépalos algo desiguales. Corola de 3-4,5 cm, acampanada, con tubo 1,5-2 veces más largo que ancho, rosado-púrpura, con grandes manchas púrpuras por dentro; labio superior entero o escotado, el inferior con tres lóbulos anchos, redondeados. Fruto en cápsula de 9-15 x 6-10 mm, ovoideo, que acaba en un largo estilo.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cytinus_hypocistis.jpg?width=1280',
+  s.image_attribution = 'Bouba at French Wikipedia (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Cytinus hypocistis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Altrobisca',
+  s.primary_habitat = 'Vive en encinares, coscojares, alcornocales y pinares o a veces en formaciones de matorrales, sobre cualquier tipo de sustrato, hasta 1400 m',
+  s.description = 'Arbusto 0,5-2 m, ramificado, con tallos muy foliosos. Hojas hasta de 4 cm, lanceoladas 5-10 cm, agudas. Inflorescencias terminales, con flores de unos 6 mm, con un tubo, cuatro pétalos y cuatro estambres que se ven dentro del tubo y otros cuatro que nacen más abajo. Fruto de 7 mm, globoso, carnoso, color rojo, con una semilla.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Daphne_gnidium3.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Daphne gnidium';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Aliaria',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Septiembre a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ravanissablanca.jpg?width=1280',
+  s.image_attribution = 'Chixoy (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Diplotaxis erucoides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'equinaria',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Echinaria_capitata.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Echinaria capitata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lirón careto',
+  s.primary_habitat = 'Es una especie generalista, capaz de vivir en numerosos hábitats terrestres y arbóreos',
+  s.description = 'Debe su nombre a una franja de pelo negro que, como un antifaz, le enmarca los ojos y le cubre parte de la cara. Su aspecto es inconfundible, aunque sus hábitos trepadores y su color rojizo pueden asemejarle al lirón gris Glis glis, o a la ardilla roja Sciurus vulgaris. Los adultos presentan el dorso pardo- rojizo y el vientre blanco. La cola es larga y está cubierta de pelos, con un llamativo pincel de pelo largo blanco y negro en el extremo. Hocico alargado y orejas grandes. No presentan dimorfismo sexual. Las hembras presentan cuatro pares de mamas: uno pectoral, otro abdominal y dos pares inguinales. Medidas corporales, CC: 118,0-136,0 mm; C: 98,5-113,0 mm; P: 26,5-28,5 mm; Ps: 45,0-120,0 g. Se producen variaciones estacionales en el peso debido al carácter hibernante de la especie. El cráneo es de aspecto macizo y de perfil dorsal convexo. La caja craneana es cuadrada, el rostro largo, los huesos nasales muy estrechos en la parte posterior y los arcos zigomáticos amplios. Las bullas timpánicas presentan gran desarrollo, carácter típico de las especies de roedores de climas desérticos, con densidades de población escasas. Fórmula dentaria: 1.0.1.3/1.0.1.3. Es el único roedor español cuya mandíbula presenta un orificio natural en la apófisis angular, lo que facilita su identificación en los análisis de egagrópilas, excrementos, etc. Número de cromosomas (2n) = 46-52.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Gartenschlaefer_in_Natur.jpg?width=1280',
+  s.image_attribution = 'No machine-readable author provided. Asseus assumed (based on copyr… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Eliomys quercinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Erigeron bonariensis',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Erigeron_bonariensis%2C_Santa_Coloma_de_Farners.jpg?width=1280',
+  s.image_attribution = 'Josep Gesti (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Erigeron bonariensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Erizo europeo',
+  s.primary_habitat = NULL,
+  s.description = 'El aspecto general de los erizos es fácilmente reconocible por su zona dorsal recubierta de espinas, a excepción del rostro. El pelaje ventral es cerdoso, de color pardo, más o menos oscuro, según los individuos, pero con el vientre blancuzco. Ambos sexos son parecidos, ya que los testículos son intraabdominales. La principal diferencia consiste en que el pene está bastante adelantado, mientras que la vagina se localiza cerca del ano. Las hembras presentan cinco pares de mamas, una pectoral, dos abdominales y dos inguinales. Fórmula dentaria: 3.1.3.3/2.1.2.3. Sólo puede confundirse con el erizo moruno, Atelerix algirus, menos robusto, más claro, con las orejas proporcionalmente mayores y con las púas cefálicas más retrasadas. Las principales diferencias dentarias consisten en que el I3 es generalmente monoradiculado en E. europaeus y biradiculado en A. Algirus. El PM2 tiene un paracónido destacado netamente, ligeramente menor que el protocónido, mientras que en A. algirus es mucho más pequeño. Medidas corporales, CC: 190,0-290,0 mm; C: 22,0-40,0 mm; P: 46,0-53,0 mm; O: 25,0- 29,0 mm ; Ps: 500,0-1.200,0 g. Número de cromosomas (2n) = 48.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/West_European_Hedgehog_(Erinaceus_europaeus)1.jpg?width=1280',
+  s.image_attribution = 'Hrald (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Erinaceus europaeus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Erodium celtibericum',
+  s.primary_habitat = 'Pedregales calizos y crestas de montaña',
+  s.description = 'Geranio de montaña que forma rosetas compactas de hojas plateadas y muy divididas, con flores rosadas de venas marcadas. Es un endemismo ibérico ligado a pedregales calizos de altura, con poblaciones pequeñas y aisladas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Rosetas densas de hojas plateadas y muy divididas
+Flores rosadas con venas más oscuras
+En pedregales de altura, sobre caliza',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/205785187/original.jpg',
+  s.image_attribution = 'Denys Vynokurov (CC BY 4.0) · GBIF/iNaturalist',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Erodium celtibericum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Abujas de cigüeña',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Erodium3.jpg?width=1280',
+  s.image_attribution = 'The original uploader was Jeantosti at French Wikipedia. (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Erodium ciconium';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zapaticos de la Virgen',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Noviembre a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Erodium_cicutarium_MHNT.jpg?width=1280',
+  s.image_attribution = 'Didier Descouens (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Erodium cicutarium';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Aballicos',
+  s.primary_habitat = 'Vive en barbechos y bordes de camino, entre 10-1500 m',
+  s.description = 'Hierba anual de 20-100 cm, olorosa, con pelos esparcidos, y con tallos erectos. Hojas de 3-30 x 0,5-6 cm, de pinnatífidas a pinatissectas, con cinco a siete pares de segmentos; las basales en roseta, pecioladas; las caulinares más pequeñas, menos divididas y sentadas. Flores numerosas en racimos, con cuatro sépalos de 7-12 mm, dos de ellos gibosos en la base; pétalos de 15-20 mm, obovados, blanco-amarillentos, con nerviacion de color púrpura. Seis estambres, dos más cortos. Fruto en silicua de 10-20 x 2-5 mm, erecta, linear y con nervio central visible, con rostro de 4-9 mm. Semillas en dos series, elipsoides, color marrón.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Enero a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eruca_vesicaria_re.jpg?width=1280',
+  s.image_attribution = 'Retama (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Eruca vesicaria';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lletrera',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Euphorbia_characias13.jpg?width=1280',
+  s.image_attribution = 'Kurt Stüber [1] (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Euphorbia characias';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lletrera',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a diciembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Euphorbia_nicaeensis_2.jpg?width=1280',
+  s.image_attribution = 'Stan Shebs (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Euphorbia nicaeensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gato montés',
+  s.primary_habitat = 'Bosque, matorral denso y roquedos con buena población de conejos y roedores',
+  s.description = 'Gato salvaje europeo, más robusto que un gato doméstico atigrado, con la cola gruesa, roma en la punta y anillada de negro. Es solitario, esquivo y sobre todo nocturno. Su mayor amenaza es la hibridación con gatos asilvestrados, que diluye la población silvestre.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola gruesa, de punta roma y con anillos negros nítidos
+Raya negra continua a lo largo del lomo
+Aspecto más recio y patilargo que un gato casero',
+  s.seasonality = 'Todo el año (actividad crepuscular y nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Felis_silvestris_Kocka_divok%C3%A1_zoo_cropped.jpg?width=1280',
+  s.image_attribution = 'Felis_silvestris_Kočka_divoká_ZOO_Děčín.jpg: Alena Houšková derivat… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Felis silvestris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Festuca capillifolia',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Festuca capillifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jarilla de brezo',
+  s.primary_habitat = 'Matorrales y pastizales pedregosos sobre calizas, en solanas secas',
+  s.description = 'Matita leñosa de hojas estrechas y punzantes parecidas a las del brezo, de donde le viene el nombre. Sus flores amarillas, de cinco pétalos delicados, se abren por la mañana y pierden los pétalos el mismo día.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas lineares, rígidas y puntiagudas, como agujas cortas
+Flores amarillas efímeras, con pétalos arrugados
+Mata baja y leñosa en la base, muy ramificada',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fumana_ericoides_Tallos_2010-7-03_ParqueNaturalLagunasdelaMata.jpg?width=1280',
+  s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Fumana ericoides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Fumana laevipes',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Septiembre a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fumana_Capillare_(Fumana_laevipes)_-_Cagliari%2C_Italy_2024-03-29.jpg?width=1280',
+  s.image_attribution = 'Ryan Hodnett (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Fumana laevipes';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Conejitos',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fumaria_parviflora%5E_Papaveraceae_-_Flickr_-_gailhampshire.jpg?width=1280',
+  s.image_attribution = 'gailhampshire from Cradley, Malvern, U.K (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Fumaria parviflora';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gineta',
+  s.primary_habitat = 'Bosque, matorral denso, roquedos y sotos con cobertura y refugios',
+  s.description = 'Carnívoro esbelto de pelaje gris con manchas negras y una cola larguísima anillada en blanco y negro, tan larga como el resto del cuerpo. Es un trepador excelente y estrictamente nocturno. Deja sus excrementos en letrinas fijas sobre piedras y troncos, que usa durante años.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola muy larga con anillos blancos y negros bien marcados
+Pelaje gris con hileras de manchas negras
+Letrinas repetidas en el mismo punto elevado',
+  s.seasonality = 'Todo el año (actividad nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Genetta_genetta_felina_(Wroclaw_zoo).JPG?width=1280',
+  s.image_attribution = 'Guérin Nicolas (messages) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Genetta genetta';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Espino',
+  s.primary_habitat = 'Forma matorrales en lugares secos y soleados sobre sustratos básicos, raramente silíceos, entre 50-1800 m',
+  s.description = 'Arbusto hasta de 2 m, espinoso, con tallos muy ramificados acabados en una fuerte y punzante espina, y con ocho a diez costillas longitudinales. Hojas alternas unifoliadas, cortamente pecioladas, folíolo de 1,5-9 x 1-3,5 mm, con pelos dispersos, con pequeñas estípulas. Flores amariposadas, amarillas. Cáliz de 3-5 mm, campanulado, bilabiado, con tubo más largo que los labios. Corola de 9-12 mm, amarilla, glabra, con estandarte obovado, con ápice emarginado, ligeramente más largo que la quilla y alas. Diez estambres, monadelfos, y estilo glabro con estigma incluido. Legumbre de 12-35 x 3,5-4,5 mm, aplanada, linear-oblonga, glabra, con una a siete semillas.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Octubre, enero, marzo, abril, mayo, junio, julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Genet_epineux.jpg?width=1280',
+  s.image_attribution = 'Hubert Laroche (CC BY 2.5) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Genista scorpius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Geranio silvestre',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Diciembre a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Geranium_argenteum-purpureum-rivale_Dom%C3%ADnique_Villars_1789.jpg?width=1280',
+  s.image_attribution = 'Domínique Villars (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Geranium purpureum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'geranio de hoja redonda',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/20170411Geranium_rotundifolium03.jpg?width=1280',
+  s.image_attribution = 'AnRo0002 (CC0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Geranium rotundifolium';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jarilla',
+  s.primary_habitat = 'Vive en tomillares sobre sustratos calizos, a veces en arenales, hasta 1500 m',
+  s.description = 'Planta perenne sufruticosa, con tallos ascendentes, con pelos setosos. Hojas de 3-15 x 1,5-4 mm, lineares o elípticas, opuestas, estipuladas. Sépalos con pelos rígidos; espacios intercostales pubescentes. Pétalos de 6-10 mm, amarillos, a veces blancos. Cápsula de 3-4 mm, muy pelosa.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Noviembre, marzo, abril, mayo, junio, julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_hirtum.jpg?width=1280',
+  s.image_attribution = 'Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Helianthemum hirtum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'flor del príncipe',
+  s.primary_habitat = 'Vive en sustratos yesíferos secos, entre 40-900 m',
+  s.description = 'Perenne sufruticosa, de 10-40 cm; cubierta de escamas peltadas, plateadas, con tallo tetragonal. Hojas de 8-25 x 3-10 mm, de oblongo a lineares, pecioladas, opuestas, estipuladas. Pétalos de 3,5-5 mm, amarillos. Cápsula de 3-3,5 mm, tomentosa arriba.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre, noviembre, diciembre, marzo, abril, mayo, junio, julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_squamatum_1_(Espagne).jpg?width=1280',
+  s.image_attribution = 'Ghislain118 http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Helianthemum squamatum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Romero Blanco',
+  s.primary_habitat = 'Vive en matorrales sobre calizas o margas, hasta 1200 m',
+  s.description = 'Pequeño arbusto de 5-50 cm, con hojas de 10-50 x 2-8 mm, opuestas, estipuladas, ± lineares, con margen revuelto, blanquecinotomentosas en el envés. Flores en cimas unilaterales multifloras; pétalos de 5-10 mm, amarillos. Cápsula de 3-4 mm, pelosa arriba.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_syriacum_(habitus).jpg?width=1280',
+  s.image_attribution = 'Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Helianthemum syriacum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jarilla',
+  s.primary_habitat = 'Tomillares y matorral raso sobre suelos calizos y margosos secos',
+  s.description = 'Jarilla pequeña de hojas estrechas y grisáceas con el borde enrollado, que se cubre en primavera de flores amarillas efímeras. Como en todas las jarillas, los pétalos apenas duran una mañana y se renuevan cada día.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas estrechas con el borde enrollado hacia abajo
+Flores amarillas que duran solo unas horas
+Mata baja y grisácea del tomillar',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_violaceum_habitus_SierraMadrona.jpg?width=1280',
+  s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Helianthemum violaceum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Helichrysum serotinum',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Helichrysum_italicum_spp_serotinum.000_-_Islas_Cies.JPG?width=1280',
+  s.image_attribution = 'Fernando Losada Rodríguez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Helichrysum serotinum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tomillo',
+  s.primary_habitat = 'Vive en matorrales y en campos abandonados, hasta 1500 m',
+  s.description = 'Matilla perenne hasta de 70 cm, con hojas 5-35 x 0,5-2 mm, lineares, revolutas, alternas, de color verde grisáceo debido a su tomento. Capítulos dispuestos en corimbos compuestos muy densos. Involucro hasta de 7 mm, brácteas en cuatro filas de color amarillo pálido. Flores tubulares amarillas. Aquenios 0,5 mm, minúsculos, con vilano de 4 mm, caedizo.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Helichrysum_stoechas830.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Helichrysum stoechas';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Salamanquesa rosada',
+  s.primary_habitat = 'Pendientes rocosas calcícolas con vegetación casmofítica',
+  s.description = 'Gecko pequeño y translúcido de tonos rosados, de hábitos nocturnos, que se refugia en grietas de roquedos, muros de piedra y ruinas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Piel rosada casi translúcida
+Cola con anillos espinosos
+Nocturna y discreta',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hemidactylus_turcicus_on_a_wall_in_Greece.jpg?width=1280',
+  s.image_attribution = 'Koppi2 (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Hemidactylus turcicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Erísimo del predicador',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a diciembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hirschfeldia_incana_FlowersCloseup_October032009_DehesaBoyalPuertollano.jpg?width=1280',
+  s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Hirschfeldia incana';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'zadorija',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hypecoum_procumbens_LeavesFlowerCloseup_25April2009_CampodeCalatrava.jpg?width=1280',
+  s.image_attribution = 'javier martin (Public domain) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Hypecoum procumbens';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Abedul',
+  s.primary_habitat = 'Vive junto a cultivos, en baldíos o en bordes de camino, hasta 1900 m',
+  s.description = 'Hierba perenne, de 30-90 cm, leñosa abajo, con ramas estériles con dos líneas longitudinales y glándulas negras. Hojas de 1,6-2,5 x 0,5-0,7 cm, cuneadas, con glándulas traslúcidas y glándulas negras. Inflorescencia en cima; flores con cinco sépalos de 4-6 mm, lanceolados; y cinco pétalos de 9-15 mm, crenados, amarillos. Fruto en cápsula con tres a cinco valvas, de 5-9 mm, ovoide, rojizo. Semillas de 1 mm, de color pardo oscuro.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/(MHNT)_Hypericum_perforatum_flower_and_buttons.jpg?width=1280',
+  s.image_attribution = 'Didier Descouens (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Hypericum perforatum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Iberis ciliata',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Iberis_ciliata_01.JPG?width=1280',
+  s.image_attribution = 'Luis nunes alberto (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Iberis ciliata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lapa',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Kickxia_lanigera_DelanterayTrasera_2011-8-18_RioJabalon_CampodeCalatrava.jpg?width=1280',
+  s.image_attribution = 'javier martin (Public domain) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Kickxia lanigera';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'espolones',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Kickxia_elatine_%2B_Kickxia_spuria_sl1.jpg?width=1280',
+  s.image_attribution = 'Stefan.lefnaer (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Kickxia spuria';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcaballares',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lathyrus_cicera.jpg?width=1280',
+  s.image_attribution = 'Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Lathyrus cicera';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alhucema',
+  s.primary_habitat = 'Matorral seco, ribazos y bordes soleados de clima cálido',
+  s.description = 'Alhucema de hojas muy divididas, casi como las de un helecho, y aspecto grisáceo. Florece durante buena parte del año en espigas azul violeta rematadas por dos brácteas alargadas. Su olor es más resinoso y menos dulce que el del espliego cultivado.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas finamente divididas, de aspecto plumoso
+Espigas azul violeta con dos brácteas en la punta
+Aroma resinoso e intenso al frotar',
+  s.seasonality = 'Casi todo el año, con máximo en primavera y otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lavandula_multifida.jpg?width=1280',
+  s.image_attribution = 'Laitche (Public domain) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Lavandula multifida';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Linaria cavanillesii',
+  s.primary_habitat = 'Repisas y fisuras de cantiles calizos, generalmente en umbría',
+  s.description = 'Linaria rupícola de tallos colgantes y hojas algo carnosas y verticiladas, con flores amarillas provistas de un espolón largo y curvado. Es un endemismo ibérico de área muy reducida, restringido a un puñado de cantiles.',
+  s.description_source = NULL,
+  s.identification_tips = 'Tallos colgando de la pared rocosa
+Flores amarillas con espolón largo por detrás
+Hojas dispuestas en anillos alrededor del tallo',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/501474709/original.jpeg',
+  s.image_attribution = 'deutschle (CC BY-NC 4.0) · GBIF/iNaturalist',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Linaria cavanillesii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lirio de monte',
+  s.primary_habitat = 'Vive en matorrales y pastizales secos, sobre sustratos básicos, entre 100-2100 m',
+  s.description = 'Planta perenne, de 15-70 cm, sufruticosa, con hojas de 5-21 mm, alternas, dispuestas densamente, y flores con pétalos de 17-32 mm, azules, con estambres y estilos de diferentes tamaños; cápsulas de 7-11 mm.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Linum_narbonense0.jpg?width=1280',
+  s.image_attribution = 'Kurt Stüber [1] (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Linum narbonense';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Linum strictum',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Noviembre a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/LINUM_STRICTUM_-_AGUDA_-_IB-121_(Llinet_estricte).JPG?width=1280',
+  s.image_attribution = 'Isidre blanc (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Linum strictum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Asperillo',
+  s.primary_habitat = 'Vive en claros de encinar, matorrales soleados y pedregales, sobre sustratos básicos, entre 40-2100 m',
+  s.description = 'Mata leñosa hasta de 90 cm, híspida, con tallos muy ramificados, blanquecinos o grisáceos. Hojas de 8-20 x 1-2,5 mm, alternas, lineares, cubiertas de pelos ásperos blanquecinos. Una o dos flores en la parte terminal de las ramillas, rodeadas de brácteas largas. Cáliz tubular, de 5-7 mm, dividido hasta cerca de la base. Corola de 10-18 x 8-12 mm, regular o actinomorfa, infundibuliforme, azul, violácea o rojiza, con cinco lóbulos anchos y poco profundos, abiertos en estrella, algo pelosos por fuera y glabros en el interior. Cinco estambres no exertos, con anteras de 2-3 mm, amarillentas. Estilo incluído o algo exerto. Fruto formado por una o dos núculas de 3,5-4,5 x 2-2,5 mm, grisáceas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre, enero, febrero, marzo, abril, mayo, junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lithodora_fruticosa2.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Lithodora fruticosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'mastuerzo marítimo',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Alyssum_(Lobularia_maritima).jpg?width=1280',
+  s.image_attribution = 'No machine-readable author provided. CatherineMunro assumed (based … (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Lobularia maritima';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Esparto',
+  s.primary_habitat = 'Laderas secas y llanos sobre suelos pobres; forma espartales extensos',
+  s.description = 'El esparto, nombrado también como Stipa tenacissima, forma matas densas y duraderas que dan nombre a los espartales, uno de los paisajes característicos del sureste ibérico. Sus hojas se enrollan sobre sí mismas en los días secos para perder menos agua y se abren tras la lluvia. Durante siglos se recolectó para hacer cuerdas, esteras y alpargatas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Matas grandes y compactas de hojas duras enrolladas
+Las hojas se abren tras la lluvia y se enrollan al secar
+Espigas altas y plateadas a final de primavera',
+  s.seasonality = 'Primavera (espigado)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Stipa_tenacissima.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Macrochloa tenacissima';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Manrubio pinchoso',
+  s.primary_habitat = 'Vive sobre sustratos margosos y salinos o en lugares nitrificados, hasta 750 m',
+  s.description = 'Hierba perenne hasta de 40 cm, con hojas de 1,7-4,2 x 0,9-2,1 cm, cuneadas o en forma de abanico, dentadas o lobuladas, con pecíolo largo, sobre todo las inferiores, cáliz con tubo de 5 mm y con cinco dientes rígidos hasta de 4 mm, triangulares, perpendiculares al tubo, y con corola que sobresale poco del cáliz, de color púrpura.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/M.alysson-2.JPG?width=1280',
+  s.image_attribution = 'Philmarin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Marrubium alysson';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Garduña',
+  s.primary_habitat = 'Roquedos, bosques, ruinas y construcciones rurales',
+  s.description = 'Mustélido nocturno de cuerpo alargado y cola espesa, con un babero blanco en la garganta que suele bifurcarse hacia las patas delanteras. Trepa con soltura y aprovecha desde roquedos hasta desvanes. Es omnívora: come frutos, insectos, huevos y pequeños vertebrados.',
+  s.description_source = NULL,
+  s.identification_tips = 'Babero blanco en la garganta, a menudo dividido en dos
+Excrementos retorcidos y con pelos o semillas, sobre piedras
+Rastro nocturno; muy rara vez se ve de día',
+  s.seasonality = 'Todo el año (actividad nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Steinmarder_01.jpg?width=1280',
+  s.image_attribution = 'Zefram (CC BY 2.0 de) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Martes foina';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carretón',
+  s.primary_habitat = 'junio. Es arvense y ruderal, y se encuentra en claros de bosque, entre 100-1600 m',
+  s.description = 'Anual o perennizante, de 7-25 cm, con tallos pelosos, hojas con folíolos de 4,5-8 x 4-7 mm, obovados, truncados, serrados arriba; racimos con una o dos flores, cáliz 3-3,5 mm, con dientes tan largos como el tubo, corola de 4,5-6,5 mm, de color amarillo; fruto de 4,5-7 mm, con cuatro a siete espiras apretadas, globoso, espinoso.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Meri3_001_lhp.jpg?width=1280',
+  s.image_attribution = 'Tracey Slotta @ USDA-NRCS PLANTS Database (Public domain) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Medicago rigidula';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tejón',
+  s.primary_habitat = 'Bosque, matorral y ribazos con suelo blando para excavar tejoneras',
+  s.description = 'Mustélido corpulento y de patas cortas, con la cabeza blanca cruzada por dos bandas negras que pasan por los ojos. Excava madrigueras complejas —las tejoneras— que una misma familia amplía y usa durante generaciones. Es omnívoro y muy aficionado a las lombrices.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cabeza blanca con dos franjas negras longitudinales
+Tejoneras: varias bocas grandes con montones de tierra
+Letrinas en hoyos poco profundos cerca de la madriguera',
+  s.seasonality = 'Todo el año (actividad nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Badger-badger.jpg?width=1280',
+  s.image_attribution = 'BadgerHero (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Meles meles';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alfalfe borde',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Melilotus_indicus_(Flower).jpg?width=1280',
+  s.image_attribution = 'Ixitixel (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Melilotus indicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Minuartia campestris',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Minuartia campestris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'queria',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a julio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Minuartia hamata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collejón',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Moricandia_arvensis_-_Curtis.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Moricandia arvensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Barruguetas',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Muscari_neglectum002.jpg?width=1280',
+  s.image_attribution = 'Meneerke bloem (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Muscari neglectum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra viperina',
+  s.primary_habitat = 'Se trata de una culebra que frecuenta ríos, riachuelos, pantanos, balsas y marismas, siendo menos frecuente lejos de los puntos de agua',
+  s.description = 'Serpiente de tamaño medio, cola corta y cabeza ensanchada y bien delimitada respecto al resto del cuerpo. Generalmente hay dos escamas preoculares y dos postoculares, 7 escamas supralabiales y 9 escamas infralabiales. Dorsales claramente carenadas. El diseño es muy llamativo pues se trata de una amplia banda en forma de zig zag que recorre todo el cuerpo en posición dorsal. Existe un patrón alternativo que consiste en dos líneas longitudinales y paralelas, de colores claros, de recorrido también dorsal. El diseño rayado es más frecuente hacia el sur de la península y la costa mediterránea, aunque poblaciones muy cercanas pueden tener frecuencias muy dispares. La coloración corporal de fondo es variable aunque destacan los tonos verdosos, pardos y oliváceos. El vientre es generalmente gris amarillento con manchas oscuras en forma de diseño ajedrezado. Las hembras son mayores pero la longitud de cola y el número de subcaudales son mayores en machos. Longitud total máxima en la Península Ibérica, 910 mm.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Viperine_Snake_(Natrix_maura)_(14198769323).jpg?width=1280',
+  s.image_attribution = 'Bernard DUPONT from FRANCE (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Natrix maura';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra de collar',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Natrix_natrix_(Karl_L).jpg?width=1280',
+  s.image_attribution = 'Karl Larsaeus (CC BY 2.5) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Natrix natrix';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tamarillas',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Neslia_paniculata_eF.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Neslia paniculata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Acebuche',
+  s.primary_habitat = 'Matorral alto, laderas secas y barrancos del piso más cálido',
+  s.description = 'El acebuche es el olivo silvestre: mismo árbol, sin siglos de selección. Tiene las hojas más pequeñas y duras, las ramas jóvenes a menudo espinosas y aceitunas diminutas. Forma matorrales altos y es el árbol característico de las laderas cálidas mediterráneas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas pequeñas, verdes arriba y plateadas por debajo
+Ramillas jóvenes rígidas y a veces espinosas
+Aceitunas muy pequeñas, de poco más de un centímetro',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ullastre_vell.JPG?width=1280',
+  s.image_attribution = 'Antoni Salvà (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Olea europaea subsp. europaea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ajo de lobo',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ornithogalum_narbonense.jpg?width=1280',
+  s.image_attribution = 'Iorsh at English Wikipedia (Public domain) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Ornithogalum narbonense';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Castañuela',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre, noviembre, diciembre, febrero, marzo, abril, mayo, junio, julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pallenis_spinosa_3.JPG?width=1280',
+  s.image_attribution = 'User:Xemenendura (CC BY-SA 2.1 es) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Pallenis spinosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Asperilla',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Noviembre, enero, abril, mayo, junio, julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Paronychia_aretioides_1.JPG?width=1280',
+  s.image_attribution = 'Ghislain118 http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Paronychia aretioides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Asperilla',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Paronychia_capitata_-_Palmengarten_Frankfurt_-_DSC02006.JPG?width=1280',
+  s.image_attribution = 'Daderot (CC0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Paronychia capitata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Hierba de la sangre fina',
+  s.primary_habitat = 'Paronychia suffruticosa vive en matorrales secos, preferentemente calcícolas, hasta 1800 m',
+  s.description = 'Subarbustiva, de color violáceo, con raíz leñosa; tallos erectos de 10-40 cm; brácteas muy cortas, que no recubren las flores, estas dispuestas en glomérulos pequeños, terminales y laterales, muy numerosos y separados; flores de 1,7-2,2 mm, con sépalos cuculados, coriáceos, cortamente aristados.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://bs.plantnet.org/image/o/ba404fcf16ff8c29e139d41308827c139c69f20e',
+  s.image_attribution = 'González Hernández Antonio (CC BY-SA 4.0) · GBIF',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Paronychia suffruticosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sapillo moteado común',
+  s.primary_habitat = NULL,
+  s.description = 'Anuro de aspecto grácil, con un tamaño medio de 40 mm (36,32 mm en los machos y 43,3 mm en las hembras). Hocico alargado, ojos relativamente grandes y con pupila vertical. Dos tercios inferiores del iris más oscuros que el tercio superior. Membrana timpánica poco patente, ausencia de glándulas parótidas. Extremidades largas, particularmente las posteriores, y poco palmeadas (hasta la base de los dedos). Dedos alargados con un único tubérculo metatarsiano, situado en la base del primer dedo. Color variable, aunque suele mostrar un moteado verde más o menos patente en dorso, cabeza y extremidades. Vientre claro, con un moteado oscuro irregular. Los machos se diferencian de las hembras por su menor tamaño y por mostrar callosidades nupciales en las extremidades anteriores, muslos y la parte ventral y gular, durante el período de reproducción.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pelodytes_punctatus_side.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Pelodytes punctatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Genciana',
+  s.primary_habitat = 'Vive en tomillares y matorrales sobre sustratos pedregosos, a veces en lugares nitrificados',
+  s.description = 'Planta perenne, hasta de 60 cm, algo leñosa abajo, con tallos densamente pelosos, blanquecinos. Hojas de 3-14 cm, lanceoladas, pelosas. Flores en verticilastros de seis flores cada uno, que nacen entre dos amplias brácteas ovadas dispuestas a manera de copa. Cáliz de 1,3 cm, con cinco dientes alesnados de 4 mm, peloso. Corola de 2,5 cm, con labio superior en forma de casco, y el inferior con un gran lóbulo central redondeado, convexo, y dos laterales triangulares, pequeños, color amarillo. Núculas de 5 mm, ovoides, de color pardo.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Phlomis_lychnitis03.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Phlomis lychnitis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Polycarpon tetraphyllum',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Polycarpon_tetraphyllum.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Polycarpon tetraphyllum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Poligala',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Polygala_rupestris_(flower).jpg?width=1280',
+  s.image_attribution = 'Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Polygala rupestris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Berdolaga',
+  s.primary_habitat = 'Vive en cultivos abandonados algo nitrificados',
+  s.description = 'Hierba anual, 5-50 cm, con tallos erguidos o postrados. Hojas de 1-2 cm, obovadas, opuestas o alternas, planas, algo carnosas. Flores que nacen en grupos terminales hasta de tres, rodeadas de hojas. Flores de 1 cm, con cinco pétalos amarillos y en general muchos estambres. Fruto en cápsula o pixidio, que se abre por una tapaderita. Semillas de c. 1 mm, achatadas, de superficie papilosa.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a diciembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Portulaca_oleracea_MHNT.jpg?width=1280',
+  s.image_attribution = 'Didier Descouens (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Portulaca oleracea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagartija colilarga',
+  s.primary_habitat = 'Matorral litoral y laderas secas',
+  s.description = 'Lagartija esbelta de escamas grandes, quilladas y brillantes, con dos líneas claras muy marcadas a cada lado del dorso. La cola puede medir el doble que el cuerpo. Los machos lucen en primavera manchas azules en el hombro y las mejillas anaranjadas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Dos líneas claras nítidas a lo largo de cada costado
+Escamas grandes y quilladas, de aspecto brillante
+Cola larguísima, hasta el doble que el cuerpo',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Psammodromus_algirus_-_01.jpg?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Psammodromus algirus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gualda',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/ResedaLutea-overz-kl.jpg?width=1280',
+  s.image_attribution = 'TeunSpaans at Dutch Wikipedia (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Reseda lutea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Farolicos',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Reseda_phyteuma_M_1.jpg?width=1280',
+  s.image_attribution = 'Adrian198cm (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Reseda phyteuma';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Retama negra',
+  s.primary_habitat = 'Vive en lugares abiertos formando retamares en etapas de sustitución de encinar, sobre cualquier sustrato, hasta 1400 m',
+  s.description = 'Arbusto hasta de 4 m, con ramas flexibles y algo arqueadas, con unas ocho costillas longitudinales, plateadas debido a su pilosidad. Hojas muy pequeñas, con un folíolo, caedizas. Flores en racimos axilares, con el cáliz de unos 3 mm y la corola de unos 5 mm, de color amarillo pálido. Diez estambres, en grupos de diferentes tamaños. Fruto en legumbre de 1 cm, ovoide, con pericarpo esponjoso que se seca, de color amarillo, indehiscente, con una semilla de unos 8 mm, muy dura.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Retama_sphaerocarpa.011_-_Monfrague.JPG?width=1280',
+  s.image_attribution = 'Fernando Losada Rodríguez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Retama sphaerocarpa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Espino negro',
+  s.primary_habitat = NULL,
+  s.description = 'Es un arbustillo de hasta 3 m de altura (López González, 2001), que frecuentemente tiene aspecto de mata alta o media, más o menos espinoso, de ramificación intricada y de perennifolio a semicaducifolio facultativo. Sus especímenes tienen espinas pero presentan una variabilidad: los de las regiones continentales y mediterráneas más áridas las llegan a tener en cantidad y longitud exagerada, pero otros son casi inermes. Presenta también unas ramillas laterales cortas terminadas en un fascículo de hojas. Éstas se disponen alternas, aunque a veces algunas se muestran casi opuestas; son simples, sin peciolo y con un limbo estrecho (tíìcamente menor de 0,5 cm), a veces muy corto, menor de 1,2 cm (subsp. borgiae), de trasovado-oblongo a espatulado-linear, lampiño o con un pelillo muy corto (subesp. velutina).',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhamnus_lycioides_fruits.JPG?width=1280',
+  s.image_attribution = 'איתן פרמן (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Rhamnus lycioides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Hierba de las golondrinas',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhodalsine_geniculata_kz01.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Rhodalsine geniculata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Barrilla pinchosa',
+  s.primary_habitat = 'Arenas y gravas del primer cordón de playa y suelos removidos salinos',
+  s.description = 'Hierba anual muy ramificada, de hojas carnosas rematadas en un pincho fino, que forma una bola. Al secarse se desprende del suelo y rueda con el viento dispersando las semillas. Coloniza la línea donde el mar deja restos de algas y madera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas carnosas terminadas en una punta pinchuda
+Forma una mata redondeada que rueda al secarse
+Tallos con finas líneas rojizas o rosadas',
+  s.seasonality = 'Verano y otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Salsola_kali_habito.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Salsola kali';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tomillo',
+  s.primary_habitat = 'Satureja cuneifolia vive en matorrales abiertos hasta 1500 m',
+  s.description = 'Satureja cuneifolia puede llegar a 60 cm, con hojas algo carnosas, enteras y glabras, flores con el cáliz más pequeño, hasta de 4,5 mm, con dientes más cortos que el tubo, y corola hasta de 8 mm, de color crema o algo coloreado.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/S.cuneifolia-1.jpg?width=1280',
+  s.image_attribution = 'Philmarin (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Satureja cuneifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Schismus barbatus',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Mediterranean_grass%2C_Schismus_barbatus_(16386513525).jpg?width=1280',
+  s.image_attribution = 'Jim Morefield from Nevada, USA (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Schismus barbatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Uña de gato blanca',
+  s.primary_habitat = 'Prados calcáreos del Alysso-Sedion albi',
+  s.description = 'Crasulácea de hojas cilíndricas globosas y flores blancas estrelladas, componente típico de los prados pioneros del Alysso-Sedion albi sobre caliza; se enrojece al sol.',
+  s.description_source = NULL,
+  s.identification_tips = 'Flores blancas estrelladas
+Hojas pequeñas y globosas
+Se enrojece con la insolación',
+  s.seasonality = 'Verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sedum_album.jpg?width=1280',
+  s.image_attribution = 'Franz Xaver (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Sedum album';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Rabo de gato',
+  s.primary_habitat = 'Tomillares y matorral raso sobre suelos calizos secos',
+  s.description = 'Rabogato de tallos blanquecinos y flores agrupadas en verticilos separados, característico del sureste ibérico. Es un taxón raro y poco fotografiado: como otras labiadas del grupo, se ha usado tradicionalmente en infusiones.',
+  s.description_source = NULL,
+  s.identification_tips = 'Tallos y hojas cubiertos de pelusa blanca
+Flores en anillos bien separados a lo largo del tallo
+Brácteas anchas y algo punzantes bajo cada verticilo',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Sideritis bourgaeana';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'zahareña lanuda',
+  s.primary_habitat = 'Vive en pastizales de anuales sobre pedregales, preferentemente calcáreos, entre 350-1600 m',
+  s.description = 'Hierba anual, de 2,5-30 cm, con tallos simples, foliosos abajo; hojas de 11-23 x 3-9 mm, lanceoladas o espatuladas, enteras o con dos a cuatro dientes, pelosas; inflorescencia en verticilastros con dos a seis flores cada uno, brácteas como las hojas; cáliz de 7-9,5 mm, con pelos sedosos, y cinco dientes de 3-4,5 mm; corola de 5 mm, de color amarillo anaranjado.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/DSC_5621_Sideritis_montana_L._stani%C5%A1te.jpg?width=1280',
+  s.image_attribution = 'Lalakmus (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Sideritis montana';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Silene mellifera',
+  s.primary_habitat = 'Roquedos, taludes y claros de matorral sobre suelos calizos',
+  s.description = 'Silene de flores blancas cuyos pétalos se abren al atardecer y desprenden un perfume dulce e intenso que atrae a polillas nocturnas. El cáliz es un tubo alargado con venas marcadas. De día las flores suelen aparecer mustias y cerradas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Flores blancas que abren al anochecer y huelen intensamente
+Cáliz tubular con venas bien marcadas
+De día las flores parecen marchitas',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Silene_mellifera_Enfoque_2012-05-27_Robledillo_SierraMadrona.jpg?width=1280',
+  s.image_attribution = 'Javier martin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Silene mellifera';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcadicea',
+  s.primary_habitat = 'En general en medios alterados por la acción humana',
+  s.description = 'Planta de hasta 80 cm, herbácea vivaz, con cepa leñosa, multicaule, glabra o algo pelosa por abajo y a menudo de color azulado. Hojas hasta de 8 x 1,5 cm, de tamaño muy variable, simples, opuestas, las caulinares sésiles, de ovadas a lanceoladas, apiculadas. Flores grandes, pedunculadas, agrupadas en dicasios. Cáliz muy inflado, 10-17 mm, con 5 sépalos soldados con 20 nervios reticulados. Corola con 5 pétalos libres, blancos, profundamente hendidos por arriba, que sobresalen del cáliz 5-10 mm. Estambres largos, visibles. Fruto en cápsula, 6-12 x 6-8 mm, rodeada por el cáliz, globosa, acabada en 6 dientes, que contiene muchas semillas diminutas, 1-2 mm, rugosas, de forma arriñonada.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/0_Silene_vulgaris_-_Sil%C3%A8ne_enfl%C3%A9_-_Saint-Nicolas-de-V%C3%A9roce_(1).JPG?width=1280',
+  s.image_attribution = 'Jean-Pol GRANDMONT (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Silene vulgaris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Arbeana',
+  s.primary_habitat = 'Vive en campos de cultivo y bordes de caminos, hasta 1300 m',
+  s.description = 'Hierba anual, de 15-75 cm, con hojas pinnatisectas de lóbulos lanceolados. Flores en racimos con muchas flores, las nuevas sobrepasadas por los frutos jóvenes, con cuatro sépalos de 2-2,5 mm y pétalos pequeños, de 2,5-3,5 mm, de color amarillo. Frutos de 2,5-5 cm, muy finos, con semillas minúsculas.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Diciembre a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sisymbrium_irio.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Sisymbrium irio';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Hierba gusanera',
+  s.primary_habitat = 'Vive en bordes de caminos y campos de cultivo',
+  s.description = 'Hierba anual, de 10-80 cm, con un tallo poco ramificado. Hojas en roseta, pinnatipartidas con dos a cinco pares de lóbulos, las caulinares también hastadas. Inflorescencia en racimo con pocas flores. Sépalos de 4-5,5 mm y pétalos de 7-9 mm, de color amarillo intenso. Frutos de 5-10 cm, erecto-patentes, pelosos, con tres nervios bien marcados en las valvas. Semillas muy numerosas, de 1,1-1,4 mm.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sisymbrium_orientale_%2B_S._loeselii_sl1.jpg?width=1280',
+  s.image_attribution = 'Stefan.lefnaer (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Sisymbrium orientale';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'erísimo',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sisymbrium_runcinatum_Enfoque_2011-4-10_SierraMadrona.jpg?width=1280',
+  s.image_attribution = 'Javier martin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Sisymbrium runcinatum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cardo',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Staehelina_dubia_31.JPG?width=1280',
+  s.image_attribution = 'No machine-readable author provided. Victor M. Vicente Selvas assum… (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Staehelina dubia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Berraña',
+  s.primary_habitat = 'Es planta ruderal que se encuentra en cualquier lugar, hasta 2100 m',
+  s.description = 'Hierba anual, de 3-20 cm, con tallos con una línea longitudinal de pelos que alterna en cada entrenudo. Hojas hasta de 2 cm, opuestas, ovadas, agudas o acuminadas, glabras. Flores con cinco sépalos de 3-4 x 1 mm, cinco pétalos más pequeños que los sépalos, bipartidos, y tres a cinco estambres. Fruto en cápsula de 6-7 mm, piriforme, con semillas hasta de 1,3 mm, numerosas, con tubérculos redondeados.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Noviembre a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Chickweed_(aka).jpg?width=1280',
+  s.image_attribution = 'André Karwath aka Aka (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Stellaria media';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Banderillas',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Stipa_lagascae.jpg?width=1280',
+  s.image_attribution = 'Xemenendura (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Stipa lagascae';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Musgaño pequeño',
+  s.primary_habitat = NULL,
+  s.description = 'Es uno de los mamíferos más pequeños del mundo. Medidas corporales, CC: 35,0-53,0 mm; C: 21,0- 30,0 mm; P: 5,7-7,9 mm; Ps: 1,2-2,7 g. Su morfología externa es similar a la de otras musarañas, pero se distingue por presentar la cabeza proporcionalmente más grande y la cola más larga, de aproximadamente la mitad de la longitud corporal. Las orejas son bien visibles, los ojos pequeños y la cola está revestida de un corto pelaje entre el que sobresalen numerosos pelos dispersos de mayor longitud. La coloración del pelaje muestra pocas variaciones estacionales. En general, es gris pardusca, con ciertos reflejos rojizos en el dorso y de tonalidad más clara en el vientre, sin clara línea de demarcación entre ambas regiones. Presenta tres pares de mamas inguinales. El cráneo es estrecho y alargado, con la caja craneana de perfil superior prácticamente horizontal. La mandíbula es frágil y de dimensiones reducidas. Fórmula dentaria: 3.1.2.3/1.1.1.3. A diferencia del género Crocidura, Suncus se caracteriza por presentar cuatro unicúspides superiores, aunque el último es sumamente pequeño, está desplazado en sentido lingual y queda prácticamente oculto por la cúspide anterior del último premolar. Los dientes de la mandíbula son de morfología similar a los de la musaraña gris, Crocidura russula, aunque de menor tamaño y con la sección posterior del M3 más reducida. Número de cromosomas (2n) = 42.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Suncus_etruscus_crop.jpg?width=1280',
+  s.image_attribution = 'Suncus_etruscus.jpg: Trebol-a derivative work: Materialscientist (t… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Suncus etruscus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Salamanquesa común',
+  s.primary_habitat = 'Pendientes rocosas calcícolas con vegetación casmofítica',
+  s.description = 'Gecko robusto de piel tuberculada, activo al anochecer sobre roquedos, muros y cortados, donde caza insectos atraídos por la luz.',
+  s.description_source = NULL,
+  s.identification_tips = 'Piel rugosa con tubérculos
+Activa al atardecer
+Trepa por rocas y muros',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/605672084/original.jpg',
+  s.image_attribution = 'jrodben (CC BY-NC 4.0) · GBIF',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Tarentola mauritanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zamarrilla',
+  s.primary_habitat = 'Tomillares y matorral raso sobre suelo calizo pedregoso',
+  s.description = 'Mata pequeña y grisácea, de hojas estrechas con el borde enrollado, que remata sus tallos en cabezuelas apretadas de flores blancas o crema. Es una de las plantas más constantes del tomillar y una fuente de néctar importante en pleno verano.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cabezuelas redondas y compactas al final del tallo
+Aspecto general blanquecino o grisáceo
+Flores sin labio superior, típicas del género',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_capitatum2006.jpg?width=1280',
+  s.image_attribution = 'No machine-readable author provided. Víctor M. Vicente Selvas~commo… (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Teucrium capitatum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Beltrónica',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_chamaedrys_1.jpg?width=1280',
+  s.image_attribution = 'Franz Xaver (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Teucrium chamaedrys';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zamarrilla',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a agosto',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Teucrium leonis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'poliol atomillado',
+  s.primary_habitat = 'Roquedos, pedregales y matorral raso sobre calizas de montaña',
+  s.description = 'Mata pequeña y grisácea de hojas diminutas y enrolladas parecidas a las del tomillo, con flores de un rosa purpúreo. Como todos los teucrios, la flor carece de labio superior, dejando los estambres al descubierto. Es un endemismo del sureste ibérico.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas minúsculas y enrolladas, como de tomillo
+Flores rosa púrpura sin labio superior
+Sobre roca y pedregal calizo, en matas bajas',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/627242096/original.jpg',
+  s.image_attribution = 'Finlay F. K. Thorpe (CC BY-NC 4.0) · GBIF/iNaturalist',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Teucrium thymifolium';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Thesium humifusum',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Thesium_humifusum_inflorescence_(01).jpg?width=1280',
+  s.image_attribution = 'Michèle Van Panhuys-sigler (CC BY-SA 2.0 fr) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Thesium humifusum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tomillo de invierno',
+  s.primary_habitat = 'Tomillares y matorral raso sobre suelos calizos y margosos secos',
+  s.description = 'Tomillo del sureste ibérico que florece en pleno invierno, cuando casi nada más lo hace, cubriéndose de espigas de flores blancas o rosadas. Ese calendario lo convierte en un recurso decisivo para los insectos en la estación fría y en una planta melífera muy apreciada.',
+  s.description_source = NULL,
+  s.identification_tips = 'Florece en invierno, adelantándose al resto del tomillar
+Hojas pequeñas con el borde enrollado hacia abajo
+Aroma fuerte a tomillo al frotar entre los dedos',
+  s.seasonality = 'Todo el año, con floración de invierno a primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Thymus_hyemalis_re.jpg?width=1280',
+  s.image_attribution = 'Retama (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Thymus hyemalis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'bardanilla',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Torilisarvensis.jpg?width=1280',
+  s.image_attribution = 'Unknown authorUnknown author (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Torilis arvensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Arveana',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Vicia_peregrina_(21084365093).jpg?width=1280',
+  s.image_attribution = 'jacilluch (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Vicia peregrina';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'astrágalo de Narbona',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Astragalus_alopecuroides.png?width=1280',
+  s.image_attribution = 'Fturmo (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Astragalus alopecuroides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Espino',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/BY_KarlstTrGeb_Mai2013_GrKaefer.JPG?width=1280',
+  s.image_attribution = 'Bonnlander (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Rosa canina';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Albricias',
+  s.primary_habitat = 'Vive en sotobosques de encinares y melojares, o en grietas de roquedos, hasta 1500 m',
+  s.description = 'Subarbusto de 20-80 cm, rizomatoso, glabro, con tallos erguidos de sección circular. Hojas reducidas y tallitos ensanchados en forma de hoja o cladodios perenifolios, de 2-4 x 1-3 cm, elípticos, terminados en espina, con tres nervios. Plantas dioicas, con flores masculinas y femeninas en ejemplares diferentes, que nacen en el tercio inferior del cladodio, con una bráctea de 2-3 mm, escariosa, con seis tépalos de 2-3 mm, tres elípticos y tres lanceolados, de color amarillo verdoso; las masculinas con tres estambres soldados, las femeninas con el ovario y estambres con anteras vestigiales. Fruto en baya de 1-1,5 cm, globosa, roja, con una o dos semillas de 6-8 mm.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ruscus_aculeatus2.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Ruscus aculeatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Teucrium franchetianum',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Teucrium franchetianum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tojo',
+  s.primary_habitat = 'Matorral sobre suelos ácidos y frescos, claros y bordes de camino',
+  s.description = 'Arbusto totalmente cubierto de espinas rígidas —hojas y ramillas transformadas— que en invierno y primavera se llena de flores amarillas con olor a coco. Forma masas impenetrables que sirven de refugio a pájaros de matorral.',
+  s.description_source = NULL,
+  s.identification_tips = 'Espinas rígidas por toda la planta, muy punzantes
+Flores amarillas con aroma dulce, a coco
+Florece en pleno invierno, adelantándose al resto',
+  s.seasonality = 'Invierno y primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ulex_europaeus.jpg?width=1280',
+  s.image_attribution = 'J.F. Gaffard Jeffdelonge at fr.wikipedia (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Ulex europaeus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sapo partero común',
+  s.primary_habitat = NULL,
+  s.description = 'Sapo de tamaño pequeño (menor de 5 cm). Aspecto rechoncho, cabeza grande y hocico redondeado, ojos prominentes, pupila vertical e iris dorado con vetas negras. Tímpano visible y más pequeño que el ojo. Pliegue gular patente. Glándulas parotídeas poco aparentes. Piel granulosa con verrugas pequeñas, frecuentemente agrupadas en los costados en dos hileras dorsolaterales. Miembros cortos y fuertes, los anteriores con 3 tubérculos metacarpianos, y los posteriores con membrana interdigital muy reducida y con un tubérculo metatarsiano pequeño. Coloración dorsal de gris a parda con pequeñas manchas verdes, rojizas y negras poco marcadas. Zona ventral clara.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/AlytesObstet.jpg?width=1280',
+  s.image_attribution = 'Christian Fischer (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Alytes obstetricans';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cosentinia vellea',
+  s.primary_habitat = 'Grietas de roquedos secos y soleados, paredones y pedregales',
+  s.description = 'Helecho pequeño cubierto por completo de una densa lana parda que le da aspecto afieltrado y le permite sobrevivir en roca seca y al sol. En sequía se enrolla sobre sí mismo hasta parecer muerto, y se despliega en cuanto llueve.',
+  s.description_source = NULL,
+  s.identification_tips = 'Frondes cubiertas de lana parda, aspecto afieltrado
+Se enrolla en verano y revive con la lluvia
+En roca seca y soleada, no en umbrías húmedas',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cosentinia_vellea_kz02.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Cosentinia vellea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Festuca hystrix',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a agosto',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Festuca hystrix';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Oeosporangium pteridioides',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Oeosporangium_pteridioides.jpg?width=1280',
+  s.image_attribution = 'Marc Riera (CC BY 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Oeosporangium pteridioides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carbonero garrapinos',
+  s.primary_habitat = NULL,
+  s.description = 'Ave pequeña, con plumaje de colores apagados. El dorso y las alas son de color azul grisáceo, mientras que el pecho y el vientre presentan una tonalidad ante. Su rasgo más distintivo es la mancha blanca en la nuca. Se muestra muy activo y explora minuciosamente las ramas, ramitas, hojas y piñas. En su exhaustiva búsqueda de alimento llega a realizar auténticas acrobacias, muchas veces quedando colgado o realizando cortos cernidos. Habita preferentemente en pinares, pero también se localiza en formaciones de frondosas y en áreas ajardinadas. Tras el periodo reproductor se mueve en pequeños grupos, que en numerosas ocasiones están integrados por varias especies, pues se mezcla con otros páridos, reyezuelos, mosquiteros, etc.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/005Large.jpg?width=1280',
+  s.image_attribution = 'John GB Garrett (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Periparus ater';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Piquituerto',
+  s.primary_habitat = 'Pinares y masas de coníferas con producción de piñas',
+  s.description = 'Fringílido de pico único: las dos mandíbulas se cruzan en la punta, una herramienta para abrir las escamas de las piñas y sacar el piñón. El macho es rojo ladrillo y la hembra verde oliva. Cría incluso en invierno si hay piñas, y se mueve en bandos ruidosos de copa en copa.',
+  s.description_source = NULL,
+  s.identification_tips = 'Puntas del pico cruzadas, visibles de cerca
+Macho rojizo, hembra verde amarillenta
+Reclamo metálico «chip-chip» de los bandos en vuelo',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Red_Crossbills_(Male).jpg?width=1280',
+  s.image_attribution = 'Elaine R. Wilson, www.naturespicsonline.com (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Loxia curvirostra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carbonero común',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de una especie fácilmente reconocible por el color amarillo de su cuerpo, que contrasta con el azul de las alas y la cola. La cabeza es de color negro-azabache y con las mejillas muy blancas, salvo en los jóvenes del año, algo amarillenta. Los machos se distinguen de las hembras por poseer una conspicua banda negra que recorre su cuerpo desde la garganta hasta la base de la cola. Las hembras, en cambio, tienen muy poco marcada dicha banda, que se desdibuja en el vientre.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D0%B8%D0%BD%D0%B8%D1%86%D0%B0_(Parus_major%2C_fem)%2C_%D0%91%D0%B8%D1%82%D1%86%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BB%D0%B5%D1%81.jpg?width=1280',
+  s.image_attribution = 'Dion Art (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Parus major';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Petirrojo europeo',
+  s.primary_habitat = NULL,
+  s.description = 'Pajarillo de constitución rechoncha, sobre todo en invierno, cuando ahueca sus plumas para generar una capa de aire caliente interior. Machos y hembras son idénticos en coloración. En su plumaje destaca la amplia mancha anaranjada que se extiende por la cara, la garganta y el pecho, la cual aparece bordeada por una irregular y sutil banda gris. El resto del plumaje resulta poco vistoso. Domina el color pardo verdoso en el dorso y las alas, y el blanco sucio en el vientre. Los jóvenes volantones, antes de la muda parcial a finales del verano, muestran un plumaje pardo, con casi todas sus plumas punteadas en su extremo con motas amarillentas. El petirrojo europeo se mueve habitualmente por el suelo en busca de insectos. Para cantar se posa en las ramas altas de los árboles, ya sea en invierno o durante la temporada de cría. Es muy agresivo, tanto con ejemplares de su misma especie como con el resto de las aves, no solo en la época reproductora, sino también durante la invernada. En este último periodo, las parejas se separan y defienden territorios individuales.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Erithacus_rubecula_with_cocked_head.jpg?width=1280',
+  s.image_attribution = 'Francis C. Franklin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Erithacus rubecula';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Herrerillo capuchino',
+  s.primary_habitat = NULL,
+  s.description = 'Pequeño pajarillo de apariencia inconfundible, gracias sobre todo a su característica cresta triangular y apuntada, de plumas blancas y negras y que despliega habitualmente. Su cara es también un juego de bandas negras y blancas: presenta una conspicua corbata negra que se prolonga a modo de collar; además tiene una línea ocular negra, y otra que recorre la mejilla, siempre sobre fondo claro o blanco. Por el contrario, el dorso, las alas y la cola son de color pardo oscuro, que contrasta con los flancos, el pecho y el vientre, de un tono gris-canela muy apagado. Al igual que los carboneros garrapinos u otros páridos, habita en bosques de coníferas (pinos, abetos, etc.). Pero también se localiza en formaciones de frondosas —caducifolias y perennes— y se observa en áreas ajardinadas. No es un ave especialmente gregaria, pero en otoño e invierno puede constituir pequeños grupos de 2-10 individuos, que exploran conjuntamente tanto el suelo como, sobre todo, la corteza, las ramas y las hojas de los árboles. Con frecuencia se mezcla con otros páridos, con agateadores y con reyezuelos, conformando ruidosos bandos mixtos.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/083_Wild_European_crested_tit_at_Parc_naturel_r%C3%A9gional_Jura_vaudois_Photo_by_Giles_Laurent.jpg?width=1280',
+  s.image_attribution = 'Giles Laurent (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Lophophanes cristatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pimientera',
+  s.primary_habitat = 'Bosques, arboledas, huertos y jardines con arbolado',
+  s.description = 'Uno de los pájaros más abundantes de Europa. El macho luce el pecho vinoso y la nuca gris azulada; la hembra es parda. Ambos comparten dos barras alares blancas muy visibles en vuelo. Su canto es una frase descendente que acaba en un floreo, repetida sin descanso en primavera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Dos barras blancas bien marcadas en cada ala
+Bordes blancos en la cola, visibles al volar
+Canto en frase descendente que remata en un adorno',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fringilla_coelebs_(chaffinch)%2C_male.jpg?width=1280',
+  s.image_attribution = 'Self: Commons user MichaelMaggs (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Fringilla coelebs';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Colirrojo tizón',
+  s.primary_habitat = NULL,
+  s.description = 'Ave de pequeño tamaño y diseño peculiar, con obispillo y cola de característico color rojo. El macho presenta el pecho y la cara de color negro azabache, y el resto del cuerpo oscuro, con una mancha blanca en las alas. Las hembras y los jóvenes son pardogrisáceos. Muy terrestre, acostumbra a posarse con figura erguida mientras agita su cola roja. Tiene vuelo amariposado, con batido rápido de alas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hausrotschwanz_Brutpflege_2006-05-21-05.jpg?width=1280',
+  s.image_attribution = 'Stefan-Xp (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Phoenicurus ochruros';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Halcón peregrino',
+  s.primary_habitat = 'Cortados y áreas abiertas',
+  s.description = 'Halcón robusto de alas puntiagudas y cola corta, capaz de superar los 300 km/h en el picado con que abate a otras aves en pleno vuelo. Se reconoce por la ancha bigotera negra que baja desde el ojo sobre un pecho claro y barrado.',
+  s.description_source = NULL,
+  s.identification_tips = 'Bigotera negra ancha bajo el ojo, como un casco
+Silueta de ancla: alas puntiagudas y cola corta
+Pecho claro con barrado fino en horizontal',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Falco_peregrinus_-_01.jpg?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Falco peregrinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Turdus merula',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Common_Blackbird.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Turdus merula';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Paloma torcaz',
+  s.primary_habitat = NULL,
+  s.description = 'Esta robusta paloma posee cuerpo grisáceo, pecho robusto prominente y rosado, y cabeza proporcionalmente pequeña. Sus manchas blancas en el cuello y las alas resultan características y fácilmente reconocibles. Exhibe un vuelo poderoso, rápido, directo y con fuertes batidos de alas, en las que destacan las bandas transversales blancas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pigeon_ramier_2.JPG?width=1280',
+  s.image_attribution = 'LPLT (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Columba palumbus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sylvia undata',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Dartford_Warbler_Provencegrasm%C3%BCcke_(Sylvia_undata)_by_J._Dietrich.jpg?width=1280',
+  s.image_attribution = 'J. Dietrich (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Sylvia undata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mito',
+  s.primary_habitat = NULL,
+  s.description = 'Es fácil de identificar por la notable longitud de su cola (7-9 centímetros), que contrasta con su pequeño cuerpecillo, de cortas y redondeadas alas. En un primer vistazo resulta un ave con una apariencia general oscura. Sin embargo, observada con atención se aprecia una banda clara que recorre toda la cabeza, así como una pechuga grisácea con tintes rojizos, que contrasta con los tonos negros y grises del dorso, la cola y las alas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Long-tailed_Tit_Aegithalos_caudatus.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Aegithalos caudatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Serín verdecillo',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de un ave pequeña, con un pico ancho, pero muy corto, y una cola con una marcada escotadura en el extremo. Machos y hembras poseen un conspicuo obispillo verdeamarillento. Ambos, además, tienen el pecho y el vientre de color blanco amarillento, con pintas o cortas rayas verticales. Pero los machos, sobre todo en primavera, muestran la frente, la garganta y la pechera teñidas de intenso amarillo. Por su tamaño, aspecto y coloración, el verdecillo se asemeja a los lúganos, aunque presenta el pico más corto y menos afilado, y carece de las bandas verde-amarillentas que son fácilmente visibles en el lúgano. También podría confundirse con el verderón serrano; no obstante, este tiene la cabeza gris, y además habita en el límite altitudinal superior del bosque, donde el verdecillo resulta muy escaso. En invierno conforma nutridos bandos y se mezcla con otros fringílidos granívoros, como verderones comunes, pardillos comunes, jilgueros, etc.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Serinus_serinus_(Madrid%2C_Spain)_010.jpg?width=1280',
+  s.image_attribution = 'Luis García (Zaqarbal) (CC BY-SA 3.0 es) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Serinus serinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca cabecinegra',
+  s.primary_habitat = 'Matorral mediterráneo denso, setos y bordes de arbolado',
+  s.description = 'La curruca más común del matorral mediterráneo. El macho tiene la cabeza negra hasta por debajo del ojo, la garganta blanca y un llamativo anillo ocular rojo. Es ruidosa y territorial: su reclamo de alarma es un traqueteo seco que delata su presencia constantemente.',
+  s.description_source = NULL,
+  s.identification_tips = 'Capucha negra que baja por debajo del ojo
+Anillo ocular rojo intenso
+Reclamo de alarma como una carraca seca',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sardinian_Warbler.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Curruca melanocephala';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Avión roquero',
+  s.primary_habitat = 'Acantilados mediterráneos con Limonium',
+  s.description = 'Hirundínido pardo y robusto que vuela pegado a las paredes rocosas de acantilados y barrancos, donde construye su nido de barro.',
+  s.description_source = NULL,
+  s.identification_tips = 'Vuelo pegado a las paredes
+Manchas claras en la cola
+Nido de barro en cortados',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ptyonoprogne_rupestris_in_flight.jpg?width=1280',
+  s.image_attribution = 'ferran pestaña (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Ptyonoprogne rupestris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Perdiz roja',
+  s.primary_habitat = 'Mosaicos de cultivo, matorral bajo y laderas pedregosas',
+  s.description = 'Perdiz de patas y pico rojos, con un collar negro que se deshace en un salpicado de motas sobre el pecho y flancos barrados en blanco, negro y castaño. Prefiere correr a volar, y cuando por fin levanta lo hace de golpe y a ras de suelo, planeando ladera abajo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Flancos con barras nítidas blancas, negras y castañas
+Collar negro que se disgrega en motas sobre el pecho
+Corre agachada antes que volar; levanta de golpe y planea',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Perdiz_roja.jpg?width=1280',
+  s.image_attribution = 'Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE, Anexos II y III (especie cinegética)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Alectoris rufa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Arrendajo euroasiático',
+  s.primary_habitat = NULL,
+  s.description = 'Esta ave, de aspecto inconfundible, se aleja bastante de la imagen sombría de otros componentes de la familia de los córvidos, pues presenta un plumaje dominado por los tonos ocres, con ciertos tintes rosados y grisáceos, los cuales se tornan blanquecinos en la zona anal. En la cabeza —algo voluminosa y dotada de un fuerte pico— resultan muy característicos el píleo —eréctil, grisáceo y listado de negro— y una visible bigotera negra. Las alas lucen un llamativo diseño, con un panel de plumas de color azul turquesa —franjeado de negro y blanco— en el hombro, y otro blanco, muy conspicuo, sobre todo en vuelo. El obispillo también es blanco y llamativo cuando el ave despliega las alas, lo que contrasta fuertemente con la negra cola. No hay diferencias significativas entre sexos en lo referente al plumaje. Los jóvenes son semejantes en patrón a los adultos, aunque algo más parduzcos y con colores menos vivos en general.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Garrulus_glandarius_1_Luc_Viatour.jpg?width=1280',
+  s.image_attribution = 'Luc Viatour (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Garrulus glandarius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chova piquirroja',
+  s.primary_habitat = 'Cortados rocosos, cantiles y montañas, alimentándose en pastizales cercanos',
+  s.description = 'Córvido negro y brillante con el pico rojo, largo y curvo, y las patas del mismo color encendido. Vuela en grupos acrobáticos junto a los cantiles, plegando las alas y dejándose caer por puro juego. Busca larvas hurgando en el suelo de los pastos con ese pico de sonda.',
+  s.description_source = NULL,
+  s.identification_tips = 'Pico rojo, largo y curvado hacia abajo
+Reclamo agudo, un «chiaa» nasal muy característico
+Plumas de la punta del ala muy separadas, como dedos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pyrrhocorax_pyrrhocorax_-standing-8.jpg?width=1280',
+  s.image_attribution = 'File:Alpenkrähe.jpg: "Malte Uhl (User:Zzzip)" derivative work: Snow… (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Pyrrhocorax pyrrhocorax';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mosquitero común',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de un pequeño pajarillo de pico fino y patas oscuras. Presenta tonos verdosos o pardo-grisáceos en el dorso y blanquecinos en las partes inferiores. Ambos sexos resultan similares, si bien los machos son ligeramente mayores que las hembras. Es una especie prácticamente idéntica en el campo al mosquitero ibérico, del que se distingue por su canto y por encontrarse presente en nuestro territorio durante todo el año o en invierno —según las regiones—, mientras que el ibérico es un ave únicamente estival. Es también muy similar al mosquitero musical, pero este posee las patas y el pico pálidos, así como la lista superciliar y otras finas marcas auriculares más definidas. Además, el musical solo está presente en paso.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a abril',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Chiffchaff_-_Phylloscopus_collybita.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Phylloscopus collybita';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pito ibérico',
+  s.primary_habitat = NULL,
+  s.description = 'Es un pájaro carpintero grande y robusto, de aspecto inconfundible, en cuyo plumaje dominan claramente los tonos verdosos, más intensos en las regiones dorsales, ligeramente grisáceos en las ventrales y con matices amarillentos en el obispillo. Carece de moteados y listas —salvo, tenuemente, en la región anal—, pero luce un llamativo patrón de coloración en la cabeza, donde el píleo es rojo y los ojos, amarillentos, aparecen enmarcados por un antifaz negro. Los machos y los jóvenes presentan una bigotera negra y roja, que es exclusivamente negra en las hembras. El plumaje juvenil se caracteriza por ser fuertemente moteado, especialmente en las partes inferiores, aunque, en conjunto, su coloración es más apagada que la del adulto, no presentan antifaz y poseen un iris más oscuro. Su vuelo es muy característico, con una trayectoria ondulatoria en la que el ave combina tramos en los que bate las alas con otros en que las pliega.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Iberian_Green_Woodpecker_(Pito_Ib%C3%A9rico)_(Picus_sharpei)_-_Torrevieja%2C_Spain_2024-02-04.jpg?width=1280',
+  s.image_attribution = 'Ryan Hodnett (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Picus sharpei';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zorzal charlo',
+  s.primary_habitat = NULL,
+  s.description = 'Es un zorzal grande, bastante más corpulento que el zorzal común y más alargado y erguido cuando se posa. Las partes dorsales son de color pardo grisáceo y las inferiores, blanquecinas, con una mancha gris oscura a los lados del pecho e intensamente moteadas, desde la garganta hasta el vientre, por gruesas pintas oscuras dispuestas aleatoriamente. En la cara presenta un diseño irregular de manchas grises, blancas y negras. Los jóvenes aparecen intensamente moteados de marrón, ocre y blanco por todo el plumaje. Su vuelo es rápido y directo, y es en el aire cuando se hace especialmente visible su larga cola y la región axilar de color blanco, que permiten distinguirlo con facilidad de otros zorzales.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Mistle_thrush.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Turdus viscivorus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Agateador común',
+  s.primary_habitat = 'Bosques y arboledas con troncos gruesos y corteza resquebrajada',
+  s.description = 'Pájaro diminuto y críptico que sube por los troncos en espiral, apoyándose en la cola rígida, y baja volando a la base del árbol siguiente para empezar de nuevo. Extrae insectos de las grietas de la corteza con un pico fino y curvado.',
+  s.description_source = NULL,
+  s.identification_tips = 'Trepa siempre hacia arriba, nunca cabeza abajo
+Dorso jaspeado como corteza y vientre blanco
+Pico fino y curvo, como una aguja doblada',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Short-toed_Treecreeper_(Certhia_brachydactyla)_(cropped_version).jpg?width=1280',
+  s.image_attribution = 'Short-toed_Treecreeper_(Certhia_brachydactyla).jpg: א (Aleph) deriv… (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Certhia brachydactyla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Golondrina común',
+  s.primary_habitat = NULL,
+  s.description = 'Ave delicada, grácil y aerodinámica, de color negro, con reflejos azules metálicos por arriba y blancos crema en las partes inferiores. Tiene la frente y la garganta rojas y un collar negro. Las alas, largas y apuntadas, muestran tonos blancos en la parte inferior delantera. Su cola, muy larga y ahorquillada, es de color negro, con pequeños óvalos blancos cuando la extiende. Posee patas cortas sin emplumar, boca muy ancha, y pico corto, plano y negro. Presenta variación latitudinal en el tamaño corporal y en la longitud de la cola, que son menores hacia el sur. Aunque ambos sexos se parecen, la hembra es menos brillante, más blanca por abajo y con la cola más corta. Los jóvenes lucen tonos negros mate, tienen la frente y la garganta naranjas y una cola mucho más corta. De vuelo ágil, rápido y acrobático, la golondrina común ocupa en el espacio aéreo las capas bajas, por debajo de aviones y vencejos.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Landsvale.jpg?width=1280',
+  s.image_attribution = 'Malene Thyssen (CC BY 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Hirundo rustica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Escribano montesino',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de un escribano bastante grande y voluminoso, con las alas relativamente cortas y la cola larga, que luce en la cabeza tres características listas oscuras. La cabeza, el cuello, la nuca y la parte superior del pecho son de color grisáceo, en tanto que el resto del cuerpo presenta tonos pardos o rojizos. Fuera de la estación reproductora, los machos se asemejan a las hembras y a los inmaduros, aunque en el periodo de cría su coloración se hace más brillante, con abundancia de tonos anaranjados en el pecho y en el vientre. El joven presenta un plumaje parduzco y fuertemente estriado en el pecho; la cabeza es marrón-ocre y no presenta bandas laterales.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Emberiza_cia.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Emberiza cia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Vencejo común',
+  s.primary_habitat = 'Nidos:edificios,acantilados rocosos,cuevas,cajas nido, en colonias.En todo tipo de habitats',
+  s.description = 'Presenta silueta en forma de ballesta, cola corta y ahorquillada, y alas estrechas y largas. Posee pico corto, plano y con la boca muy ancha; patas emplumadas y extremadamente cortas, que le impiden posarse en el suelo; y pies pequeños y de fuertes garras, con los cuatro dedos dirigidos hacia delante. Muestra coloración uniforme de tono pardo oscuro, casi negro, excepto en la garganta, que es blanca; la cara inferior de las alas resulta un poco más pálida. En otoño, con su plumaje desgastado, es algo más claro. Ambos sexos son iguales. Los jóvenes se parecen mucho a los adultos, aunque con un tono algo más oscuro y un aspecto escamoso, por los pequeños ribetes blancos que tienen en las plumas. Esta ave es observada casi siempre en vuelo y en grupo. Las condiciones de luz, el fondo y la distancia determinan su apariencia, pudiendo confundirse con frecuencia con el vencejo pálido. Se localiza habitualmente en núcleos urbanos, volando de forma incansable a gran velocidad. Pasa la mayor parte de su vida en el aire, y únicamente se la ve posada cuando entra o sale del nido. Duerme tanto en el nido como en vuelo.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Apus_apus_-Barcelona%2C_Spain-8_(1).jpg?width=1280',
+  s.image_attribution = 'pau.artigas (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Apus apus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jilguero europeo',
+  s.primary_habitat = NULL,
+  s.description = 'Los jilgueros se distinguen con facilidad por el juego de vistosos colores de su plumaje. En la cabeza muestran una característica careta roja, junto a sendas manchas blanca y negra. Poseen un pico de base ancha, largo y acabado en una fina punta. Su cola es negra, con el obispillo y el extremo distal blanco; además, las plumas más externas de la cola pueden tener amplias manchas blancas. En vuelo se reconocen bien por la presencia de dos amplias bandas alares de color amarillo dorado. No hay dimorfismo sexual fácilmente perceptible, aunque los machos lucen hombros más negros y careta roja más amplia que las hembras. Por otra parte, el plumaje varía notablemente con la edad; así, antes de mudarlo a finales de verano, los volantones carecen de la coloración descrita para la cabeza, pero mantienen las distintivas franjas alares amarillas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carduelis_carduelis_1_(Marek_Szczepanek)_(cropped).jpg?width=1280',
+  s.image_attribution = 'Marek Szczepanek (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Carduelis carduelis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Busardo ratonero',
+  s.primary_habitat = 'Mosaicos de bosque y campo abierto, con arbolado para nidificar',
+  s.description = 'La rapaz mediana más frecuente y variable de plumaje: los hay casi blancos y casi negros. Pasa mucho tiempo posado en postes y en el suelo, y planea en círculos con las alas ligeramente levantadas. Su reclamo es un maullido lastimero muy reconocible.',
+  s.description_source = NULL,
+  s.identification_tips = 'Planea en círculos con las alas en «V» poco marcada
+Maullido agudo y quejumbroso al volar
+Muy variable: desde ejemplares claros a muy oscuros',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Buizerd-rh_20091021_002_(cropped).jpg?width=1280',
+  s.image_attribution = 'RonaldHuijssen (CC BY-SA 3.0 nl) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Buteo buteo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Águila real',
+  s.primary_habitat = 'Montañas y sierras con cortados rocosos y amplias zonas abiertas de caza',
+  s.description = 'La mayor de las águilas ibéricas, con casi dos metros y medio de envergadura y una nuca dorada que le da nombre. Cría en repisas de cantiles y usa territorios enormes, que una pareja defiende durante años. Planea con las alas en una «V» muy suave y bate poco, lo que la distingue de las rapaces menores.',
+  s.description_source = NULL,
+  s.identification_tips = 'Nuca y cogote de tono dorado, visibles a buena luz
+Planea con las alas en «V» muy abierta y bate poco
+Tamaño enorme: dobla al ratonero en el mismo cielo',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Maakotka_(Aquila_chrysaetos)_by_Jarkko_J%C3%A4rvinen.jpg?width=1280',
+  s.image_attribution = 'Jarkko Järvinen (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Aquila chrysaetos';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mosquitero papialbo',
+  s.primary_habitat = 'Forestal termófila,laderas de solana.Nidos:bosque planifolio,conífera.Zona montana,submediterránea',
+  s.description = 'El papialbo presenta la típica silueta de los mosquiteros: cuerpecillo rechoncho, patas frágiles y pico fino, pero se diferencia de los demás por su coloración general mucho más clara, especialmente en la cabeza y las partes ventrales. Las patas son negras y las alas, el dorso y las partes exteriores de la cola, verdosos, en contraste con el resto del cuerpo, de color blanquecino. La especie no manifiesta dimorfismo sexual.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Western_Bonelli''s_Warbler_-_Aosta_Valley_-_Italy_S4E5346_(19079885220).jpg?width=1280',
+  s.image_attribution = 'Francesco Veronesi from Italy (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Phylloscopus bonelli';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cernícalo vulgar',
+  s.primary_habitat = 'Campos abiertos, matorral, cortados y también ciudades',
+  s.description = 'El halcón más común y fácil de ver, gracias a su costumbre de cernirse: se queda suspendido en el aire batiendo las alas con la cabeza inmóvil, buscando ratones y lagartijas. El macho tiene la cabeza gris y el dorso rojizo con puntos negros; la hembra es más parda y barrada.',
+  s.description_source = NULL,
+  s.identification_tips = 'Se queda «clavado» en el aire cerniéndose
+Dorso rojizo salpicado de puntos negros
+Cola larga con una banda negra ancha en la punta',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Common_kestrel_falco_tinnunculus.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Falco tinnunculus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Reyezuelo listado',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de una de las aves más diminutas de la avifauna europea. En un primer vistazo, aparece como un pájaro de aspecto general rechoncho, con tonalidades verdosas y cabeza adornada por un característico diseño de listas. Presenta el dorso verde brillante, en contraste con las alas oscuras, surcadas por dos bandas blanquecinas. Las partes inferiores son pálidas, aunque muestran ligeros tonos anaranjados en el pecho del macho. La especie posee un diseño cefálico característico en el que destaca el píleo naranja en los machos, o amarillo en las hembras, flanqueado por una banda negra y una marcada ceja blanca. Asimismo, luce una lista ocular negra y un semianillo blanco que circunda la parte inferior del ojo.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Firecrest93.JPG?width=1280',
+  s.image_attribution = 'NAUMANN, NATURGESCHICHTE DER VÖGEL MITTELEUROPAS: Band II, Tafel 15… (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Regulus ignicapilla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cárabo',
+  s.primary_habitat = NULL,
+  s.description = 'Lo primero que llama la atención en el aspecto del cárabo común es su voluminosa cabeza, en la que destacan unos enormes y globosos ojos negros, lo que, unido a la ausencia de penachos cefálicos (“orejas”) y a su aspecto rechoncho y robusto, permite diferenciarlo fácilmente del resto de nuestras rapaces nocturnas. Su plumaje resulta extraordinariamente mimético y presenta una gran variabilidad en cuanto a color, ya que existen ejemplares grisáceos, rojizos y marrones. En todos los casos, el diseño consiste en una compleja mezcla de punteados, barrados y vermiculados, que imitan a la perfección la corteza de los árboles. La cara es de color blancuzco, grisáceo o rojizo, y en ella destacan dos listas blanquecinas a modo de “cejas”.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D0%BE%D0%B2%D1%91%D0%BD%D0%BE%D0%BA_%D0%A4%D0%B8%D0%BB%D1%8F%2C_%D0%A1%D0%B5%D1%80%D0%B0%D1%8F_%D0%BD%D0%B5%D1%8F%D1%81%D1%8B%D1%82%D1%8C_(Strix_aluco%2C_juv)%2C_%D0%A4%D0%B8%D0%BB%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D0%B0%D1%80%D0%BA.jpg?width=1280',
+  s.image_attribution = 'Dion Art (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Strix aluco';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gavilán común',
+  s.primary_habitat = 'Bosques mixtos de coníferas y frondosas.Sotos, grandes arbustos',
+  s.description = 'Esta pequeña rapaz de hábitos forestales, larga cola y alas cortas y redondeadas presenta un acusado dimorfismo sexual invertido, por el cual las hembras resultan ostensiblemente más corpulentas que los machos; además, entre ambos sexos existen marcadas diferencias en cuanto al diseño del plumaje. El macho adulto tiene las partes superiores y el píleo de un color grisáceo bastante intenso, en tanto que las inferiores son pálidas con un fino barrado transversal y un tono rojizo que puede ser muy notorio, principalmente en las mejillas y los flancos; sobre el ojo luce una leve línea blanca a modo de ceja. Las patas son amarillas y con los largos tarsos sin emplumar. La hembra, mucho más pesada y robusta, posee un patrón de coloración dominado por los tonos pardogrisáceos en el dorso y el píleo, con las regiones inferiores blanquecinas, muy finamente barradas de pardo; la ceja es más grande y evidente que en su compañero. El plumaje de los jóvenes presenta las partes superiores parduzcas, con las plumas orladas de ante, y las inferiores blanquecinas y toscamente barradas de pardo rojizo. Sobre el ojo —que es amarillo— exhibe una marcada ceja. Visto en vuelo, el gavilán es un ave bastante pálida, en cuya silueta llama la atención una cola larga y de base estrecha. Normalmente, se lo observa volando velozmente a baja altura entre los árboles, aunque también puede elevarse y planear durante un tiempo sobre el dosel forestal.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eurasian_Sparrowhawk_by_Steve_Ward.jpg?width=1280',
+  s.image_attribution = 'Steve Ward (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Accipiter nisus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Avión común',
+  s.primary_habitat = NULL,
+  s.description = 'Pequeña golondrina de aspecto compacto, negro azulada brillante por arriba y blanca por abajo, con límites netos entre colores. Posee alas largas y apuntadas y cola corta ahorquillada de color negro; pico corto, plano y negro; boca muy ancha, y patas cortas cubiertas de finas plumas blancas. Destaca su obispillo de color blanco, la única zona clara de las partes dorsales. Ambos sexos son iguales. Los jóvenes resultan menos contrastados, más parduzcos, sobre todo por abajo, con límites difusos entre partes negras y blancas, y con puntas blancas en las terciarias. Este pájaro suele observarse en vuelo y agrupado. Su vuelo es rápido y ágil, aunque menos que en la golondrina común, y a menudo se produce a mayor altura que en esta. Se posa con frecuencia, a veces en el suelo.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Delichon_urbicum_-Iceland_-flying-8_(1).jpg?width=1280',
+  s.image_attribution = 'Ómar Runólfsson (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Delichon urbicum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chochín',
+  s.primary_habitat = NULL,
+  s.description = 'El chochín común es un pajarillo de pequeño tamaño, aspecto compacto, cabeza voluminosa y cola corta, que se caracteriza por poseer un plumaje pardo-rojizo —algo más claro en las partes inferiores— finamente vermiculado de tonos más oscuros. Sobre el ojo presenta una marcada ceja de color crema. El pico es fino y algo curvado, con distinta longitud según la subespecie. Las diferencias entre edades y sexos son muy sutiles y resultan difíciles de reconocer en el campo. De carácter inquieto, el chochín —una de las especies más pequeñas de nuestra avifauna— cuando se excita suele sacudir y levantar su cola formando un ángulo de 90 grados, antes de desaparecer entre la densa vegetación.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carri%C3%A7a%2C_carricinha%2C_carruira%2C_no_seu_canto_possante_e_melodioso%2C_Winter_Wren%2C_with_a_melodious_and_powerful_singing_(53737498699)_(cropped).jpg?width=1280',
+  s.image_attribution = 'Luiz Lapa from Oeiras, Portugal (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Troglodytes troglodytes';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alondra totovía',
+  s.primary_habitat = 'Claros de bosque, dehesas y laderas con matorral y árboles dispersos',
+  s.description = 'Alondra pequeña de cola muy corta y cresta discreta, con una ceja blanca ancha que se une en la nuca. Canta en vuelo circular, sobre todo al amanecer y en noches claras, con una frase melancólica y descendente de una belleza reconocida.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola muy corta, silueta rechoncha en vuelo
+Cejas blancas que se juntan por detrás de la cabeza
+Marca blanca y negra en el borde delantero del ala',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lullula_arborea.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Lullula arborea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cuervo grande',
+  s.primary_habitat = NULL,
+  s.description = 'El rasgo más llamativo del cuervo es, sin duda, su colosal tamaño, que lo convierte en el representante más voluminoso del orden de los paseriformes. Dentro de su anatomía destaca sobre todo el pico, notablemente largo, robusto y grueso. Por lo demás, luce un plumaje homogéneamente negro, con algunos brillos metálicos. El vuelo de este enorme pájaro es lento y suele intercalar aleteos con largos planeos, que el ave ejecuta gracias a sus largas alas apuntadas y a su cola en forma de cuña.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Corvus_corax.001_-_Tower_of_London.JPG?width=1280',
+  s.image_attribution = 'Fernando Losada Rodríguez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Corvus corax';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cogujada común',
+  s.primary_habitat = 'Cultivos, caminos, eriales y bordes de poblado con suelo desnudo',
+  s.description = 'Alondra parda de cresta alta y puntiaguda, muy ligada a caminos, cunetas y descampados junto a los pueblos. Camina en vez de saltar y, al volar, deja ver el forro rojizo de las alas y la cola con los bordes canela.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cresta larga y puntiaguda, casi siempre erguida
+Forro de las alas rojizo, visible al levantar el vuelo
+Camina por el suelo en vez de saltar',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Crested_Lark_-_Qatar.jpg?width=1280',
+  s.image_attribution = 'Ashraf Kotb (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Galerida cristata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcaudón común',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Alcaudón estival de cabeza castaña que caza insectos desde posaderos en el matorral abierto, empalando presas en espinas a modo de despensa.',
+  s.description_source = NULL,
+  s.identification_tips = 'Capirote castaño rojizo
+Caza desde posaderos
+Estival de mayo a agosto',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lanius_senator01_new.jpg?width=1280',
+  s.image_attribution = 'Lanius_senator01.jpg: chausinho derivative work: Bogbumper (talk) (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Lanius senator';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bisbita común',
+  s.primary_habitat = NULL,
+  s.description = 'Ave de aspecto poco llamativo y sin caracteres muy distintivos, similar al resto de bisbitas. Exhibe dorso pardo, un tanto verdoso al principio del otoño, con muchas estrías oscuras; vientre blanco sucio muy rayado; y flancos anaranjados en otoño, que se aclaran según avanza el invierno. Posee alas redondeadas, cola larga y con plumas externas blancas, pico fino, y patas finas, con la uña posterior larga y recta. La garganta es blanca, con una fina bigotera negra. Ambos sexos son iguales. Los jóvenes, cuando llegan a España, no se distinguen de los adultos. Este pájaro se observa casi siempre en el suelo y en grupo. Para diferenciarlo de otros bisbitas hay que atender a las fechas, a su voz, a su pequeño tamaño, y a detalles del plumaje como flancos con estrías más gruesas y dorso menos contrastado.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a abril',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Anthus_pratensis.jpg?width=1280',
+  s.image_attribution = 'Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Anthus pratensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Verderón común',
+  s.primary_habitat = NULL,
+  s.description = 'Podría describirse como un “gorrión verde”. Es cabezón, con un pico ancho y fuerte. Destaca su coloración, verde esmeralda, con llamativas manchas amarillas en el hombro, en las plumas remeras de las alas y en la cola. Las hembras presentan colores más discretos que los machos, pero ambos son muy parecidos. Solamente los jóvenes resultan algo distintos, pues al salir del nido tienen plumaje moteado en las partes inferiores, y el verde de su manto y cabeza es mucho más apagado que el de los adultos. Su coloración se parece a la de verderones serranos, lúganos y verdecillos, aunque el verderón común se reconoce bien por su mayor tamaño y por poseer amplias manchas amarillas en sus alas. Cuando vuela, este detalle resulta útil para distinguirlo de verdecillos, pardillos comunes y jilgueros.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carduelis_chloris_3_(Marek_Szczepanek).jpg?width=1280',
+  s.image_attribution = 'This illustration was made by Marek Szczepanek. If you are interest… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Chloris chloris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Buitre común',
+  s.primary_habitat = 'Sierras con cortados para criar; se alimenta en campo abierto',
+  s.description = 'Buitre grande y pardo, con la cabeza y el cuello cubiertos de plumón blanco y una gorguera de plumas en la base del cuello. Planea horas sin batir las alas aprovechando las térmicas, y localiza los cadáveres vigilando lo que hacen los demás buitres a kilómetros de distancia.',
+  s.description_source = NULL,
+  s.identification_tips = 'Alas enormes y rectangulares, con los «dedos» separados
+Cabeza pálida y pequeña en proporción al cuerpo
+Planea en círculos sin apenas batir las alas',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Vulture_beak_sideview_A.jpg?width=1280',
+  s.image_attribution = 'Thermos (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Gyps fulvus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Paloma bravía',
+  s.primary_habitat = NULL,
+  s.description = 'Ave compacta, de mediano tamaño, redondeada y de cabeza pequeña. Muestra una coloración dominante grisácea, con el obispillo blanco y dos bandas alares negras. Dado que se trata del ancestro silvestre de las palomas domésticas —con las que puede hibridarse—, presenta un aspecto muy similar a la forma “típica” de estas. Debido a la frecuente hibridación entre ambas variedades y a la presencia de muchas poblaciones cimarronas, resulta muy difícil distinguir cuándo una población es realmente silvestre o pertenece a la forma semidoméstica. Tiene un vuelo muy rápido y directo, con batidos potentes.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Wild_rock_dove_at_Raikot%2C_Diamer%2C_Gilgit-Baltistan%2C_Pakistan.png?width=1280',
+  s.image_attribution = 'Birds of Gilgit-Baltistan from Aliabad, Hunza, Pakistan (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Columba livia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca iberiae',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sylvia_inornata_iberiae_in_Portugal.jpg?width=1280',
+  s.image_attribution = 'Rodrigo Saldanha de Almeida from Marco de Canaveses, Portugal (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Curruca iberiae';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pardillo común',
+  s.primary_habitat = NULL,
+  s.description = 'El pardillo es un pájaro estilizado, delgado, de pico corto y con cola larga y escotada. Su plumaje tiene color pardo en el dorso y ocre muy pálido en los flancos y el vientre. Presenta pintas alargadas o estrías, mucho más abundantes y visibles en las hembras. Además, los machos resultan inconfundibles en primavera, pues lucen un llamativo color carmín en la frente y el pecho. En vuelo, ambos sexos y los jóvenes del año muestran una débil pero perceptible mancha blanca, que destaca sobre el color negruzco de sus alas. Asimismo, el par de plumas externo de la cola es de color blanco. Tanto las hembras como los jóvenes del año, por su plumaje poco llamativo, se pueden confundir con bisbitas pratenses o con hembras y jóvenes de escribanos. No obstante, los bisbitas tienen un pico fino y largo y —más importante— “caminan”, mientras que los pardillos, como el resto de los fringílidos, “saltan” cuando se desplazan por el suelo. A su vez, la costumbre de los pardillos de buscar el alimento en el suelo los diferencia de los escribanos, a los que se observa habitualmente posados en ramas de arbustos. Los escribanos, son, además, de talla mayor y menos gregarios que los pardillos. Fuera de la época reproductora, el pardillo común se mueve en grandes bandos, que muchas veces son mixtos, pues se mezcla con otros fringílidos, como verdecillos, jilgueros, verderones comunes, lúganos, etc.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Linnet-Mindaugas_Urbonas-3.jpg?width=1280',
+  s.image_attribution = 'Mindaugas Urbonas from Lithuanian wikipedia (Profile, Homepage, E-m… (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Linaria cannabina';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mirlo capiblanco',
+  s.primary_habitat = 'Montaña con matorral y pastos; en paso, sierras con enebros y bayas',
+  s.description = 'Mirlo de montaña que se distingue del común por una banda blanca en forma de media luna sobre el pecho y por las plumas del ala ribeteadas de claro, que dan un aspecto escamado. Es muy desconfiado y se aleja en cuanto detecta movimiento.',
+  s.description_source = NULL,
+  s.identification_tips = 'Media luna blanca en el pecho
+Alas con aspecto escamado y plateado
+Mucho más esquivo que el mirlo común',
+  s.seasonality = 'Paso migratorio e invernada en montaña',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/2015-04-20_Turdus_torquatus_torquatus_Cairngorm_3.jpg?width=1280',
+  s.image_attribution = 'MPF (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Turdus torquatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tórtola europea',
+  s.primary_habitat = 'Sotos, arboledas y matorral alto junto a cultivos y ramblas',
+  s.description = 'La más pequeña y grácil de nuestras palomas, con el dorso escamado en negro y canela y un parche a rayas blancas y negras en el cuello. Su arrullo ronco y adormecedor es uno de los sonidos del verano. Sus poblaciones han caído mucho en Europa por la pérdida de barbechos y setos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Espalda escamada, como un mosaico canela y negro
+Parche rayado blanco y negro a los lados del cuello
+Arrullo ronco y vibrante, muy distinto al de la tórtola turca',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Streptopelia_turtur_Grlica0036.jpg?width=1280',
+  s.image_attribution = 'Zrno at Serbian Wikipedia (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE, Anexo II (especie cinegética)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Streptopelia turtur';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Búho real',
+  s.primary_habitat = 'Cortados rocosos, barrancos y laderas con matorral y zonas abiertas de caza',
+  s.description = 'El mayor búho de Europa, con casi dos metros de envergadura, penachos de plumas erguidos sobre la cabeza y ojos de un naranja encendido. Caza conejos, ratas e incluso otras rapaces. Su canto es un «bu-bo» profundo que se propaga kilómetros por los barrancos en las noches de invierno.',
+  s.description_source = NULL,
+  s.identification_tips = 'Penachos de plumas erguidos a los lados de la cabeza
+Ojos naranjas muy intensos
+Canto grave y profundo en las noches de invierno',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Bubo_bubo_sibiricus_-_01.JPG?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Bubo bubo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cogujada montesina',
+  s.primary_habitat = 'Matorral bajo, laderas pedregosas y eriales con vegetación rala',
+  s.description = 'Cogujada de cresta puntiaguda, muy parecida a la común pero de pico más corto y grueso y con el pecho más nítidamente rayado. Prefiere el matorral y las laderas pedregosas, mientras que la común busca cultivos, caminos y bordes de pueblo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cresta alta y afilada, casi triangular
+Pico más corto y romo que el de la cogujada común
+Rayado del pecho bien definido, no difuminado',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Galerida_theklae_Madrid.jpg?width=1280',
+  s.image_attribution = 'Adrian198cm (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Galerida theklae';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tarabilla europea',
+  s.primary_habitat = 'Matorral bajo, herbazales, ribazos y bordes de cultivo con posaderos',
+  s.description = 'Pájaro pequeño y regordete que se posa en lo alto de las matas, muy erguido y a la vista, para lanzarse al suelo a por insectos. El macho tiene la cabeza negra, un collar blanco a los lados y el pecho naranja. Su reclamo suena como dos piedras golpeadas, de donde le viene el nombre.',
+  s.description_source = NULL,
+  s.identification_tips = 'Siempre en lo alto de una mata, bien visible
+Macho con capucha negra y medio collar blanco
+Reclamo como el chasquido de dos cantos rodados',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Malestonechatseaham_Cropped.jpg?width=1280',
+  s.image_attribution = 'derivative work: Myosotis Scorpioides (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Saxicola rubicola';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zorzal alirrojo',
+  s.primary_habitat = NULL,
+  s.description = 'El alirrojo es un zorzal de pequeño tamaño, compacto y de cola relativamente corta, que no presenta un dimorfismo sexual muy evidente. Su plumaje es marrón-grisáceo en el dorso y blanco con listas oscuras hacia las regiones ventrales. Los flancos y la parte inferior de las alas lucen un tono rojizo bastante intenso, que es visible en vuelo y constituye un buen indicio para diferenciarlo de especies próximas. Otro rasgo llamativo en su diseño es la presencia de una marcada ceja y una bigotera blancas, distinguibles incluso a cierta distancia. Suele moverse en grupos numerosos durante el invierno, a menudo en compañía de otros zorzales.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a marzo',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Redwing_Turdus_iliacus.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Turdus iliacus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Acentor alpino',
+  s.primary_habitat = 'Roquedos y pedreras de alta montaña; en invierno baja a cortados',
+  s.description = 'Pájaro robusto de montaña, pardo y discreto salvo por dos detalles: los flancos con listas castañas y una garganta blanca finamente moteada de negro. Camina entre las rocas buscando insectos y semillas, y en invierno desciende a cortados y construcciones.',
+  s.description_source = NULL,
+  s.identification_tips = 'Flancos con anchas listas castañas
+Garganta blanca con motas negras, como un babero
+Base del pico amarilla',
+  s.seasonality = 'Otoño e invierno en cotas bajas',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Alpine_accentor_saganta.jpg?width=1280',
+  s.image_attribution = 'Paco Gómez from Castellón, Spain (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Prunella collaris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mochuelo europeo',
+  s.primary_habitat = 'Matorral litoral y zonas abiertas con posaderos',
+  s.description = 'Búho pequeño y rechoncho, de cabeza plana y ojos amarillos con un ceño que le da expresión severa. Es el más diurno de nuestros búhos: se ve posado en postes y ruinas a plena luz. Vuela con un ondulado marcado, a golpes de aleteo y planeo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cabeza plana y ancha, sin penachos
+Cejas blancas marcadas que le dan aspecto ceñudo
+Vuelo ondulado, a rachas de aleteo y planeo',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Mochuelo_Com%C3%BAn_(_Athene_noctua_)(1).jpg?width=1280',
+  s.image_attribution = 'Arturo Nikolai from Galicia, Spain (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Athene noctua';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Corneja negra',
+  s.primary_habitat = NULL,
+  s.description = 'Este córvido luce un plumaje homogéneamente negro —con algunos reflejos metálicos en la cabeza, las alas y el dorso—, el mismo color que exhibe en las patas y en su robusto pico. Puede confundirse a cierta distancia con el cuervo, si bien posee tamaño menor; alas más cortas, anchas y redondeadas; cola más corta y de borde casi recto; y una forma de vuelo diferente, en la que predominan los aleteos lentos y constantes. Por su tamaño y diseño se asemeja a los juveniles de graja, aunque la corneja cuenta con un pico más robusto y romo. A pesar de que estas aves pueden verse tanto solas como en parejas, no resulta infrecuente que se reúnan en bandos de cierta magnitud, allí donde abunde el alimento, o en dormideros.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carrion_crow_2022_04_05_05_02.jpg?width=1280',
+  s.image_attribution = 'Alexis Lours (CC BY 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Corvus corone';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Triguero',
+  s.primary_habitat = 'Cultivos de secano, pastizales y llanos abiertos con posaderos',
+  s.description = 'Escribano grande y rechoncho, pardo y rayado, sin marcas llamativas. Canta desde un cable o una mata con una frase acelerada que suena como un manojo de llaves agitado, y vuela distancias cortas dejando las patas colgando.',
+  s.description_source = NULL,
+  s.identification_tips = 'Canto como un manojo de llaves agitándose
+Vuela con las patas colgando, sin recogerlas
+Aspecto pesado y pardo, sin marcas vistosas',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/606625336/original.jpg',
+  s.image_attribution = 'euqirneto (CC BY 4.0) · GBIF',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"protegida por la Directiva Aves 2009/147/CE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Emberiza calandra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Abejaruco europeo',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Ave colorida y gregaria que caza abejas y libélulas en vuelo sobre espacios abiertos y cría en galerías excavadas en taludes terrosos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Colorido inconfundible
+Reclamo ''prruip'' en vuelo
+Cría en taludes de rambla',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%C5%9Eahl%C3%BBr-33.jpg?width=1280',
+  s.image_attribution = 'Dûrzan cîrano (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Merops apiaster';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collalba negra',
+  s.primary_habitat = 'Matorral litoral, laderas secas y roquedos',
+  s.description = 'La mayor de las collalbas, enteramente negra salvo el obispillo y la base de la cola, blancos. Vive en cortados y laderas rocosas, donde construye junto al nido una plataforma de piedrecitas que acarrea una a una. Su canto es potente y melodioso.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cuerpo negro con obispillo blanco muy contrastado
+«T» negra invertida en la cola blanca al volar
+Montoncitos de piedrecitas junto a la grieta del nido',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Black_Wheatear%2C_Isla_Plana_3.jpg?width=1280',
+  s.image_attribution = 'Andrew Thomas from Shrewsbury, UK (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Oenanthe leucura';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gorrión común',
+  s.primary_habitat = 'Ocupa ambientes de influencia eminentemente antrópica como son zonas agrícolas y zonas urbanizadas',
+  s.description = 'Paseriforme de aspecto robusto y voluminoso, el gorrión común posee un pico fuerte y un plumaje dominado por los tonos pardos en el dorso —adornado con marcadas listas negras— y grisáceos en el obispillo, el pecho y el vientre. Los machos en época reproductora presentan el pico negro y el dorso de una tonalidad bastante rojiza, en tanto que el píleo toma un color gris y el babero se hace más extenso y oscuro. Los caracteres sexuales ligados al plumaje son visibles todo el año, aunque se van haciendo más patentes debido al desgaste progresivo de las plumas, que deja a la vista los colores internos de estas. Las hembras tienen el píleo marrón y presentan una línea clara tras el ojo; no lucen babero y su pico es siempre grisáceo hacia el extremo y amarillento en la base. Los jóvenes machos, por su parte, son indistinguibles de las hembras hasta que realizan la muda de finales de verano, cuando adquieren los colores del adulto.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Huismus%2C_man.jpg?width=1280',
+  s.image_attribution = 'JrPol (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Passer domesticus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tórtola turca',
+  s.primary_habitat = NULL,
+  s.description = 'Ave de mediano tamaño, similar a la tórtola europea, aunque ligeramente mayor. Se caracteriza por sus tonos ante pálidos y su cola alargada, con el extremo blanco y la base negra. Presenta un fino collar negro, que se extiende por los laterales del cuello, pero que está ausente en los juveniles. Ambos sexos son similares. Tiene un vuelo rápido y ligero, con potentes batidos de alas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eurasian_Collared_Dove%2C_England_RWD2.jpg?width=1280',
+  s.image_attribution = 'DickDaniels (http://theworldbirds.org/) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Streptopelia decaocto';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Abubilla',
+  s.primary_habitat = 'Campos abiertos, dehesas, cultivos con arbolado y bordes de matorral',
+  s.description = 'Ave inconfundible de color canela con alas y cola a franjas blancas y negras, y una cresta eréctil que despliega en abanico al posarse. Sondea el suelo blando con el pico largo y curvo en busca de larvas e insectos. Su canto, un «up-up-up» sordo y repetido, se oye de lejos en primavera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Vuelo ondulante y torpe, como una mariposa grande
+Cresta que abre en abanico justo al aterrizar
+Camina por el suelo clavando el pico largo y curvo',
+  s.seasonality = 'Todo el año en el sur peninsular; estival en el resto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Wiedehopf_mit_Puppe_als_Futter.jpg?width=1280',
+  s.image_attribution = 'Sven Damerow (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Upupa epops';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cuco',
+  s.primary_habitat = 'Zonas arboladas de todo tipo.Bosques,linderos,bosquetes,cultivos,huertos frutales,piornales',
+  s.description = 'Esta ave, de tamaño medio y aspecto estilizado, se caracteriza por poseer una larga cola y unas alas apuntadas, por lo que su silueta puede confundirse en vuelo con la de una pequeña rapaz, como el cernícalo vulgar o el gavilán. En la coloración del macho dominan los tonos grises, sobre todo en el dorso, la cabeza y el cuello. Por su parte, las regiones ventrales son blancas, pero finamente barreadas. La hembra puede lucir dos tipos de plumaje: uno grisáceo, muy parecido al del macho, y otro rojizo, bastante menos frecuente que el anterior. Los inmaduros se asemejan en parte a las hembras de fase rojiza, aunque tienen las plumas orladas de blanco y una característica mancha blanca en la nuca.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cuckoo_(51169010335).jpg?width=1280',
+  s.image_attribution = 'Andy Morffew from Itchen Abbas, Hampshire, UK (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Cuculus canorus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alzacola',
+  s.primary_habitat = NULL,
+  s.description = 'Esta especie suele observarse en el suelo o posada en arbustos bajos. Es fácilmente reconocible por su larga cola, de coloración rojiza y extremo terminal con manchas blancas y negras, que frecuentemente alza, despliega y sacude de manera ostensible. También resulta distintivo su diseño facial, ya que posee una lista ocular fina oscura, que contrasta con una banda superciliar de color blanco crema. El resto de su plumaje presenta un tono ocre claro.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Agrobate_roux_au_Parc_National_de_l''Ichkeul_(Tunisia)%2C_crop.jpg?width=1280',
+  s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Erythropygia galactotes';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Roquero solitario',
+  s.primary_habitat = 'Acantilados mediterráneos con Limonium',
+  s.description = 'Pájaro rupícola de plumaje azul pizarra en el macho, ligado a acantilados marinos y roquedos, donde canta desde cornisas destacadas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Macho azul pizarra
+Canta desde cornisas y cumbres
+Acantilados y roquedos calcáreos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Blue_rock_thrush_(male)_at_Gamla_Nature_Reserve.jpg?width=1280',
+  s.image_attribution = 'Artemy Voikhansky (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial, RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Monticola solitarius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Oropéndola',
+  s.primary_habitat = 'Bosques de ribera,hileras de olmos,chopos,sotos,generalmente fluviales,parques,jardines...Mar-1600m',
+  s.description = 'Ave de tamaño similar a un mirlo y llamativo color amarillento. El macho exhibe un intenso color amarillo limón en la cabeza — rayada con una línea ocular oscura— y en el cuerpo, que contrasta bastante con las anchas y redondeadas alas, totalmente negras, a excepción de dos parches amarillos a la altura de la articulación de la muñeca. La cola es igualmente amarilla, aunque presenta una ancha banda terminal negra. Posee patas de tono grisáceo y pico rojizo. La hembra, que recuerda a un pequeño pito real, muestra tonos más apagados que el macho, con partes superiores de color verde oliva e inferiores blanquecinas y rayadas en gris. Tiene las alas y la cola pardas, y el pico rojo sucio. Los jóvenes son casi iguales a las hembras, aunque con el pico pardo oscuro y el ojo negruzco. Se trata de un ave esquiva, por lo que la mayoría de las observaciones corresponden a individuos en vuelos breves entre la espesura. Su vuelo, directo y ondulado, alterna aleteos y alas plegadas, de modo similar al del pito real. Su carácter agresivo se evidencia en los frecuentes acosos a otras especies, incluso de mayor tamaño.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Oriole_2.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Oriolus oriolus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gorrión chillón',
+  s.primary_habitat = NULL,
+  s.description = 'El chillón es un gorrión grande y corpulento, con la cabeza robusta y el pico muy fuerte. En su plumaje dominan los tonos marróngrisáceos con un profuso listado oscuro en el dorso. Las partes inferiores, por el contrario, son claras y están adornadas con amplias listas de color gris parduzco. En la cabeza destacan tres listas anchas: una clara; otra marrón-grisácea tras el ojo bajo aquella, y, por encima, una parda oscura. Otra lista de color marrón pálido recorre el píleo. Bajo la garganta presenta una mancha amarilla que a menudo permanece oculta o poco visible. En la cola aparecen unas manchas blancas hacia los extremos, que resultan bien visibles en vuelo. No hay diferencias de coloración entre machos y hembras. Los jóvenes son difíciles de distinguir de los adultos, incluso recién volados del nido. Se diferencian de estos por carecer de la mancha amarilla en la garganta. Asimismo, el dibujo de la cara presenta en ellos un aspecto poco definido y su coloración general es más suave.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Petronia_petronia_-Ariege%2C_Midi-Pyrenee%2C_France-8-4c.jpg?width=1280',
+  s.image_attribution = 'Petronia_petronia_-Ariege,_Midi-Pyrenee,_France-8.jpg: Sandra from … (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Petronia petronia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Urraca común',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de una de las más conocidas especies de la fauna española, circunstancia a la que contribuyen no solo su inconfundible aspecto, sino también unos hábitos poco recatados y su capacidad de instalarse en hábitats muy transformados, incluido el interior de las grandes ciudades. Especie de tamaño intermedio entre los córvidos, la urraca luce un llamativo y característico plumaje blanquinegro, que adquiere bellas irisaciones en diferentes zonas, sobre todo en las plumas caudales. Cuando se desplaza resulta también fácilmente identificable, además de por su diseño cromático, por poseer una silueta característica y un vuelo ondulante durante el cual bate espasmódicamente las alas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Urraca_(Pica_pica)%2C_Almuradiel%2C_Ciudad_Real%2C_Espa%C3%B1a%2C_2021-12-19%2C_DD_04.jpg?width=1280',
+  s.image_attribution = 'Diego Delso (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Pica pica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zorzal común',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de un zorzal de tamaño medio, con las regiones dorsales de un color pardo algo más cálido que el del zorzal charlo. Las partes inferiores presentan tonos claros, blanquecinos en el vientre y de un color ocre amarillento en el pecho, y aparecen profusamente tachonadas por motas en forma de cuña que, en la zona del cuello, se ordenan para dar lugar a una fina bigotera. Suele desplazarse por el suelo, aunque se posa en la parte más alta de arbustos y árboles para cantar. Su vuelo, rápido y algo espasmódico, permite observar la característica coloración herrumbrosa de su zona axilar, que facilita su diferenciación de otros zorzales.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9F%D0%B5%D0%B2%D1%87%D0%B8%D0%B9_%D0%B4%D1%80%D0%BE%D0%B7%D0%B4_%D0%BD%D0%B0_%D0%BF%D0%B5%D0%BD%D1%8C%D0%BA%D0%B5_(Turdus_philomelos)%2C_%D0%91%D0%B8%D1%82%D1%86%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BB%D0%B5%D1%81.jpg?width=1280',
+  s.image_attribution = 'Dion Art (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Turdus philomelos';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alondra común',
+  s.primary_habitat = NULL,
+  s.description = 'Aláudido típico, de tonos pardos y estriado oscuro, con pico fuerte, cuerpo alargado y robusto, patas, alas y cola alargadas, y hábitos terrestres. La especie combina la presencia de una pequeña cresta, una máscara facial pálida, pecho estriado, borde blanco terminal en las alas — como en la calandria— y rectrices externas de la cola blancas. Su vuelo es rápido, con intenso batido de alas. Tiene una gran capacidad de maniobra en el aire, con posibilidades de cernidos prolongados y ascensiones y descensos vertiginosos .',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Alauda_arvensis_2.jpg?width=1280',
+  s.image_attribution = 'Daniel Pettersson (CC BY-SA 2.5 se) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Alauda arvensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Vencejo pálido',
+  s.primary_habitat = 'Nidos: roquedos,acantilados costeros, edificios, puentes de piedra, iglesias,árboles',
+  s.description = 'Presenta silueta en forma de ballesta, cola corta y ahorquillada, y alas largas y estrechas. Posee pico corto, plano y con la boca muy ancha; patas emplumadas y extremadamente cortas, que le impiden posarse en el suelo; y pies pequeños y de fuertes garras, con los cuatro dedos dirigidos hacia delante. Luce una coloración uniforme de tono pardo grisáceo, excepto en la garganta, que es blanca; la parte inferior interna de las alas resulta más clara. Con plumaje poco desgastado muestra un aspecto general escamoso. Se confunde fácilmente con el vencejo común, y para diferenciarlos se necesitan buenas condiciones de luz y hay que situarse a corta distancia. El vencejo pálido tiene un tono general más claro y parduzco, y mayor extensión en el blanco de la garganta; además, a veces se aprecia un antifaz más marcado, mayor contraste en la parte inferior de las alas y aspecto más escamoso. Ambos sexos son iguales. Los jóvenes, muy similares a los adultos, presentan un tono un poco más oscuro y un aspecto escamoso más marcado por la presencia de plumas ribeteadas en blanco. Esta ave pasa la mayor parte de su vida en el aire, por lo que casi siempre se la ve volando y agrupada, tanto en núcleos urbanos como en acantilados costeros y de interior.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Vencejo_p%C3%A1lido_20250901_03.jpg?width=1280',
+  s.image_attribution = 'Ismael Olea (CC BY 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Apus pallidus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Águila perdicera',
+  s.primary_habitat = 'Sierras con cortados rocosos y amplias zonas abiertas de matorral y cultivo para cazar',
+  s.description = 'Águila mediana de alas largas y cola larga, con el vientre blanco finamente rayado y una mancha blanca en la espalda que se ve bien en vuelo. Caza a gran velocidad y a poca altura, sorprendiendo a perdices, conejos y palomas. Las parejas ocupan el mismo cortado durante años.',
+  s.description_source = NULL,
+  s.identification_tips = 'Mancha blanca en el centro de la espalda, visible desde arriba
+Vientre claro y muy rayado, con una banda oscura en el borde del ala
+Vuelo bajo y rápido cuando caza, no en círculos altos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aguila_perdicera.jpg?width=1280',
+  s.image_attribution = 'Paco Gómez from Castellón, Spain (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas: Vulnerable","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Aquila fasciata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cigüeña negra',
+  s.primary_habitat = NULL,
+  s.description = 'Zancuda de tonos oscuros predominantes. El adulto tiene todas las partes superiores, cabeza y cuello negros, con llamativas irisaciones — esencialmente verdosas— en el cuello y la cabeza. Las partes inferiores son blancas. Presenta patas de color naranja rojizo y pico rojo, tono que se extiende alrededor del ojo. Los jóvenes nacidos en el año carecen de irisaciones, y su tono es mucho más pardo, con pico y patas grisáceos. Los subadultos son similares a los adultos, pero con menos irisaciones y con un pico que no es completamente rojo. Se trata de un ave muy esquiva, pero suele verse en vuelo en la cercanía de sus nidos o vadeando orillas de ríos o embalses, así como prados húmedos. En vuelo es también muy oscura, con partes inferiores en las que predomina el negro, salvo en el vientre, pecho y axilas. Las partes superiores son totalmente oscuras.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Wildpark_Bad_Mergentheim._Schwarzstorch.jpg?width=1280',
+  s.image_attribution = 'Holger Uwe Schmitt (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Ciconia nigra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Aguilucho cenizo',
+  s.primary_habitat = 'Cerealistas, herbazales y matorral bajo en zonas llanas',
+  s.description = 'Aguilucho grácil y de alas largas y estrechas que patrulla a poca altura, basculando con el viento y con las alas en «V». El macho es gris ceniza con las puntas negras; la hembra, parda y listada, con un obispillo blanco. Cría en el suelo, entre la vegetación.',
+  s.description_source = NULL,
+  s.identification_tips = 'Vuelo bajo y balanceante, con las alas en «V»
+Macho gris ceniza con una barra negra en el ala
+Alas muy largas y estrechas en proporción al cuerpo',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Flickr_-_don_macauley_-_Bird_015.jpg?width=1280',
+  s.image_attribution = 'Donald Macauley (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Circus pygargus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Paloma zurita',
+  s.primary_habitat = NULL,
+  s.description = 'Paloma similar a la bravía, pero de tamaño algo menor, y más ligera que la torcaz. En su plumaje, totalmente gris, destacan los tonos vinosos del cuello, el color gris pálido del obispillo y unas franjas más claras en las alas. Ambos sexos resultan similares. Tiene un vuelo más rápido y con mayor frecuencia de aleteo que la torcaz. Al volar se ve oscura la zona inferior de sus alas, que es pálida en las palomas bravía y torcaz.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/2019-03-17_Columba_oenas%2C_Jesmond_Dene_1.jpg?width=1280',
+  s.image_attribution = 'MPF (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Columba oenas';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Águila calzada',
+  s.primary_habitat = 'Bosques y sierras con arbolado, cazando sobre zonas abiertas cercanas',
+  s.description = 'Águila pequeña, del tamaño de un ratonero, con dos formas de plumaje muy distintas: una clara con el vientre blanco y otra oscura y uniforme. Nidifica en árboles dentro del bosque y caza en campo abierto lanzándose desde altura. Se identifica en vuelo por las «luces de posición»: dos manchas blancas en el arranque de las alas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Dos manchas blancas donde el ala se une al cuerpo
+Existen ejemplares claros y oscuros de la misma especie
+Cola larga y recta, sin la muesca del milano',
+  s.seasonality = 'Primavera y verano (estival); algunos ejemplares invernan',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Booted_eagle%2C_Hieraaetus_pennatus%2C_at_Kgalagadi_Transfrontier_Pa_(32334023348).jpg?width=1280',
+  s.image_attribution = 'Derek Keats from Johannesburg, South Africa (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Hieraaetus pennatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcaudón real',
+  s.primary_habitat = 'Campo abierto con matorral disperso, cables y posaderos altos',
+  s.description = 'Alcaudón grande, gris por encima y con un antifaz negro que le cruza el ojo. Caza al acecho desde un posadero alto y tiene la costumbre de empalar sus presas —insectos, lagartijas, ratones— en espinas y alambres, formando pequeñas despensas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Antifaz negro sobre fondo gris claro
+Siempre en lo alto de un cable, poste o mata
+Presas empaladas en espinos cerca de su territorio',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/S%C3%BCdlicher-Raubw%C3%BCrger_2018-01-07_0003.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Lanius meridionalis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lavandera blanca',
+  s.primary_habitat = NULL,
+  s.description = 'Pájaro estilizado de aspecto muy distintivo, con larga cola y tonos blancos, negros y grises. Exhibe dorso gris ceniza, vientre blanco, y alas negras y con bandas blancas cuando están plegadas. Posee cola larga y negra, con plumas externas blancas, y patas y pico negros. El patrón de la cabeza resulta muy contrastado, con la cara blanca rodeada arriba y abajo de negro. Luce un plumaje invernal similar, aunque el color negro en la cabeza está más reducido, y muestra garganta blanca y banda pectoral negra. La lavandera enlutada (M. a. yarrelli), de origen británico, presenta tonos negros en dorso y flancos. Ambos sexos son parecidos, pero la hembra tiene la nuca gris. Los jóvenes resultan más uniformes, sin negro en la cabeza y con banda pectoral grisácea. Un hábito destacado de esta ave es el continuo balanceo de la cola. En invierno se vuelve muy gregaria y se reúne en dormideros.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/White-Wagtail.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Motacilla alba';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collalba gris',
+  s.primary_habitat = 'Pastizales pedregosos, canchales y zonas abiertas de montaña',
+  s.description = 'Collalba de dorso gris en el macho, con antifaz negro y alas oscuras. Como todas las collalbas, delata su identidad al volar: obispillo blanco y cola blanca con una «T» negra invertida. Se posa erguida en piedras y hace carreras cortas por el suelo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Obispillo blanco y «T» negra en la cola
+Macho con antifaz negro y dorso gris
+Carreras cortas por el suelo entre piedra y piedra',
+  s.seasonality = 'Paso migratorio y cría en montaña',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Oenanthe_oenanthe_Larvik.JPG?width=1280',
+  s.image_attribution = 'Arnstein Rønning (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Oenanthe oenanthe';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mosquitero musical',
+  s.primary_habitat = 'Bosques abiertos de frondosas, robledales, hayedos,castañares,arbustos,a media altura, media altura..',
+  s.description = 'Presenta gran parecido con otros congéneres, especialmente los mosquiteros común e ibérico, de los que se diferencia por poseer el pico y las patas pálidos, las listas faciales más marcadas —con una lista superciliar muy patente—, las partes inferiores más amarillas y el dorso de un tono verdoso más brillante.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo, abril, mayo, agosto, septiembre, octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Willow_Warbler_Phylloscopus_trochilus.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Phylloscopus trochilus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tarabilla norteña',
+  s.primary_habitat = 'Herbazales, prados altos y cultivos con tallos donde posarse',
+  s.description = 'Tarabilla migradora que solo se ve en los pasos. Se distingue de la europea por una ceja blanca ancha y muy marcada y por las bases blancas de la cola. Como su parienta, se posa en lo alto de tallos y matas y baja al suelo a cazar insectos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ceja blanca ancha y bien marcada
+Base de la cola blanca a ambos lados
+Pecho anaranjado que va difuminándose hacia el vientre',
+  s.seasonality = 'Paso migratorio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Saxicola_rubetra_poklaskwa_AM.jpg?width=1280',
+  s.image_attribution = 'Artur Mikołajewski (CC BY 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Saxicola rubetra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca capirotada',
+  s.primary_habitat = NULL,
+  s.description = 'Curruca de mediano tamaño, de aspecto más compacto y robusto que la mayor parte de sus congéneres, aunque muy similar en tamaño y silueta a la curruca mosquitera. Al igual que ésta, y a diferencia de la mayoría de las currucas, no presenta ni rectrices externas ni garganta blanquecinas. Luce una tonalidad general grisácea, aunque la hembra muestra en las alas y en las regiones ventrales tintes más pardo rojizos. Los machos poseen el capirote negro, mientras que las hembras y los jóvenes lo tienen de color castaño.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sylvia_atricapilla_-Lullington_Heath%2C_East_Sussex%2C_England_-male-8.jpg?width=1280',
+  s.image_attribution = 'Ron Knight from Seaford, East Sussex, United Kingdom (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Sylvia atricapilla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca zarcera',
+  s.primary_habitat = 'Linderos con arbustos y malezas espesas,cultivos, bosquetes, praderas y claros con setos de matorral',
+  s.description = 'Curruca de mediano tamaño, de cola relativamente larga y con rectrices externas blancas. El macho presenta el dorso de color pardo, con la cabeza gris en plumaje de cría y parda durante el resto del año, las alas pardo-rojizas, la garganta blanca, y las partes inferiores blanquecinas y con tonos rosados. La hembra muestra tonalidades más apagadas, con la cabeza y el dorso más pardos, la garganta blanquecina y más apagada, y la zona ventral también blanquecina y sin los tonos ligeramente asalmonados del macho. Ambos sexos tienen las patas claras. Los adultos lucen un iris rojizo, que contrasta con un tenue anillo orbital claro.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Flickr_-_Rainbirder_-_Common_Whitethroat_(Sylvia_communis).jpg?width=1280',
+  s.image_attribution = 'Steve Garvie from Dunfermline, Fife, Scotland (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Sylvia communis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zorzal real',
+  s.primary_habitat = NULL,
+  s.description = 'El real es un zorzal grande y bastante corpulento, que se reconoce fácilmente por presentar la cabeza y el obispillo de color gris azulado. El plumaje de la espalda y del dorso del ala es pardo-grisáceo, algo rojizo en ocasiones, mientras que las partes inferiores son blanquecinas con manchas ocres en los flancos y el pecho —más intensas en época reproductora— y profusamente moteadas de manchas oscuras en forma de cuña. El pico es amarillo con la punta oscura. Ambos sexos son muy parecidos, especialmente en invierno. Vistos de cerca, en el diseño de la cara se puede observar una brida negra delante del ojo y otra bajo la mejilla, así como la ceja blanquecina. En vuelo resalta su cola, larga y oscura, y los paneles blancos bajo el ala.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a marzo',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Turdus_pilaris2.jpg?width=1280',
+  s.image_attribution = 'Adam Kumiszcza (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Turdus pilaris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ruiseñor común',
+  s.primary_habitat = 'Pisos bioclimáticos termo,meso,supramediterráneos,matorrales,sotos densos,montes bajos, jardines...',
+  s.description = 'Ave estilizada, de pico fino y cola larga. Hembras y machos son iguales. Su manto y sus alas presentan un color pardo ocráceo uniforme, excepto en la cola, que posee un distintivo tono pardo rojizo. Las partes inferiores, mucho más claras, tienen color blanco crema. Este pájaro, muy escondidizo, rara vez abandona la protección de la espesura de la vegetación, pero resulta muy fácil de detectar por su inconfundible canto, muy sonoro, emitido incansablemente durante el día y la noche. Los jóvenes volantones, previamente a la muda parcial de su plumaje que tiene lugar antes de que comience la migración, exhiben un plumaje pardo que muestra plumas manchadas en su extremo con motas amarillentas. Los adultos se pueden confundir con carriceros comunes y ruiseñores bastardos, con los que a veces conviven en malezas ribereñas. Sin embargo, los carriceros presentan un tono ocre más pálido y amarillento, y carecen de la cola rojiza que luce el ruiseñor común. Lo mismo sucede con el ruiseñor bastardo, que además tiene una conspicua línea blanca sobre el ojo y posee unas alas y una cola cortas y redondeadas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Luscinia_megarhynchos_-_01.jpg?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Luscinia megarhynchos';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Acentor común',
+  s.primary_habitat = NULL,
+  s.description = 'Pájaro del tamaño de un gorrión común, con el pico fino y puntiagudo, y las patas fuertes y rojizas. De comportamiento huidizo, le gusta moverse entre la vegetación baja y caminar por el suelo. Tiene las partes superiores del plumaje marrones y con escamado pardo oscuro, semejantes al dorso de un gorrión común. La cabeza, la garganta y el pecho son de un color gris plomizo, más intenso en los machos, con la zona auricular y el píleo marrones. Las partes posteriores del vientre poseen un tono gris más claro, con los flancos marrones. Los jóvenes exhiben cabeza y garganta de color castaño, en lugar de gris, y muestran todo el plumaje fuertemente listado de pardo oscuro. La base de su pico es naranja amarillenta, mientras que los adultos presentan todo el pico negro.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Acentor_com%C3%BAn23_by_Paco_G%C3%B3mez.jpg?width=1280',
+  s.image_attribution = 'Paco Gómez (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Prunella modularis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Terrera común',
+  s.primary_habitat = 'Llanos de cultivo, eriales y pastizales rasos con suelo desnudo',
+  s.description = 'Alondra pequeña y pálida de aspecto muy limpio, con el pecho sin apenas rayado salvo una mancha oscura a cada lado del cuello. Anida en el suelo, en cultivos y baldíos. En migración se agrupa en bandos que se levantan del suelo todos a la vez.',
+  s.description_source = NULL,
+  s.identification_tips = 'Mancha oscura a cada lado del cuello, como un botón
+Pecho limpio, sin rayado extenso
+Ceja clara y pico corto y grueso de granívora',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Alondra.jpg?width=1280',
+  s.image_attribution = 'Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Calandrella brachydactyla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chotacabras cuellirrojo',
+  s.primary_habitat = 'Matorral abierto, pinares aclarados, ramblas y caminos térreos',
+  s.description = 'Ave crepuscular de plumaje jaspeado que imita la hojarasca, tan mimético que de día resulta casi imposible verla posada en el suelo. Caza polillas en vuelo con la boca muy abierta. Su canto nocturno es un «cu-toc, cu-toc» repetido de forma monótona durante minutos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Collar rojizo en la nuca, más marcado que en su pariente europeo
+Se levanta del camino al anochecer y vuelve a posarse unos metros más allá
+Canto nocturno monótono, como un motor lejano',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Caprimulgus_ruficollis_-Portugal-8.jpg?width=1280',
+  s.image_attribution = 'Olivença (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Caprimulgus ruficollis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Críalo',
+  s.primary_habitat = 'Bosques,zonas con córvidos',
+  s.description = 'Es un ave de tamaño medio, morfológicamente muy semejante al cuco, del que se diferencia por su aspecto más esbelto, por tener una cola más larga y por el colorido del plumaje. Este es de tono marrón grisáceo en las regiones dorsales, que aparecen salpicadas de motas blancas, al igual que ocurre con las plumas del ala. La zona ventral es de color blanquecino, con la garganta teñida de ocre-amarillento. En la cabeza luce un capirote de color gris plateado —que remata en una pequeña cresta ligeramente eréctil— y un anillo ocular rojo. El joven presenta una coloración incluso más vistosa que los adultos, pues exhibe un intenso color achocolatado con abundantes motas blancas en el dorso y unas regiones ventrales blancas, que se tornan amarillo-ocráceas en pecho y cuello. Las plumas de vuelo poseen un vistoso color rojizo, en tanto que el capirote es negro y el anillo ocular más conspicuo que el de los adultos.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Clamator_glandarius.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Clamator glandarius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca tomillera',
+  s.primary_habitat = 'Matorral bajo y abierto, tomillares y saladares con arbustos dispersos',
+  s.description = 'Curruca menuda de matorral raso, gris en la cabeza, parda en el dorso y con las plumas del ala ribeteadas de castaño encendido. El anillo blanco del ojo le da el aire de «gafas» que le da nombre. Es inquieta y suele delatarse por su reclamo antes de dejarse ver.',
+  s.description_source = NULL,
+  s.identification_tips = 'Anillo blanco alrededor del ojo bien marcado
+Panel castaño vivo en el ala plegada
+Vive en matorral muy bajo, no en arbolado',
+  s.seasonality = 'Todo el año en el sureste; parcialmente migradora',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_%C3%A0_lunettes_Aqueduc_de_Zaghouan.jpg?width=1280',
+  s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Curruca conspicillata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcotán',
+  s.primary_habitat = 'Campo abierto con arbolado disperso, cerca de zonas húmedas',
+  s.description = 'Halcón esbelto con silueta de vencejo gigante: alas muy largas y afiladas y cola corta. Caza libélulas e incluso vencejos en pleno vuelo, con una agilidad extraordinaria. Los adultos tienen los «calzones» y la zona anal de un rojo ladrillo característico.',
+  s.description_source = NULL,
+  s.identification_tips = 'Silueta de hoz, como un vencejo enorme
+Calzones y bajo vientre rojizos en el adulto
+Bigotera negra ancha sobre garganta blanca',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hobby_-_Falco_subbuteo.jpg?width=1280',
+  s.image_attribution = 'Andy Morffew from Itchen Abbas, Hampshire, UK (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Falco subbuteo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Calandria común',
+  s.primary_habitat = 'Llanos cerealistas, pastizales y estepas de suelo profundo',
+  s.description = 'La mayor de las alondras ibéricas, robusta y de pico grueso, con una mancha negra muy marcada a cada lado del cuello. Canta en vuelo, describiendo círculos altos con un torrente de notas en el que imita a otras aves. En invierno forma bandos numerosos en los llanos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Babero negro a cada lado del cuello
+Borde trasero del ala blanco y visible en vuelo
+Pico grueso y pálido, de granívora',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Melanocorypha_calandra.jpg?width=1280',
+  s.image_attribution = 'Bereşe.jpg: Dûrzan cîrano derivative work: Osado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Melanocorypha calandra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collalba rubia',
+  s.primary_habitat = 'Laderas secas y pedregosas con matorral bajo y suelo desnudo',
+  s.description = 'Collalba pequeña y contrastada: el macho es color arena claro con las alas negras y un antifaz o una garganta negros según la variedad. Como todas las collalbas, enseña al volar una cola blanca con una «T» negra invertida. Caza insectos lanzándose al suelo desde una piedra o una mata.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola blanca con una «T» negra al abrirse
+Alas negras que resaltan sobre el cuerpo color arena
+Se posa erguida en piedras y matas, muy visible',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Black-eared_Wheatear%2C_Punta_del_Sabinar%2C_Spain.jpg?width=1280',
+  s.image_attribution = 'Vince Smith from London, United Kingdom (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Oenanthe hispanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lúgano',
+  s.primary_habitat = 'Sus preferencias de hábitat van ligadas a sus requerimientos tróficos',
+  s.description = 'Se trata de un ave pequeña, de pico corto y fino, que muestra cola corta y escotada cuando está cerrada. Su coloración puede recordar a la de verdecillos, verderones comunes y verderones serranos. Pero los lúganos se distinguen bien por la combinación de los siguientes caracteres: pequeño tamaño, manchas amarillas en alas y cola, y franjas amarillas en los “hombros” de las alas. Además, los machos tienen el capirote y la garganta negros. Es una especie gregaria que se mezcla con otras, sobre todo fringílidos como pardillos, pinzones vulgares, verdecillos, verderones serranos, pinzones reales, etc. Pero, a diferencia de la mayoría de los fringílidos, el lúgano también busca alimento en las ramas de árboles de ribera, siendo común observarlo en alisos, olmos y abedules.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a abril',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carduelis_Spinus_(55339970).jpeg?width=1280',
+  s.image_attribution = 'Kobolt (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Spinus spinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jabalí',
+  s.primary_habitat = 'Bosque, matorral denso y cultivos; necesita cobertura y puntos de agua',
+  s.description = 'Ungulado robusto y adaptable, con el cuerpo cubierto de cerdas ásperas y una cabeza en cuña rematada por un hocico potente con el que remueve el suelo. Los rayones —las crías— nacen con líneas claras a lo largo del lomo. Es omnívoro y ha ampliado mucho su área en las últimas décadas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hozaduras: zonas de suelo removido como si lo hubieran arado
+Huellas hendidas grandes con las pezuñas laterales marcadas
+Barros y árboles con el tronco embarrado a media altura',
+  s.seasonality = 'Todo el año (actividad sobre todo nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eberswalde_Zoo_12-2017_img2.jpg?width=1280',
+  s.image_attribution = 'A.Savin (FAL) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Sus scrofa';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET

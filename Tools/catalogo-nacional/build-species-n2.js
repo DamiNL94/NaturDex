@@ -242,8 +242,18 @@ function fuenteDe(sel, gbif, fecha, zepa) {
   const partes = [];
   const n = sel.gbifOccurrences;
   const nHab = (gbif && gbif.habitats.length) || sel.habitats || 0;
-  partes.push(`GBIF: ${n} ocurrencia${n === 1 ? '' : 's'} dentro de los polígonos de hábitat del espacio` +
-    ` (${nHab} hábitat${nHab === 1 ? '' : 's'}; barrido de ${fecha})`);
+  // Un ave NO se cuelga de hábitats a propósito (vuela: sus ocurrencias caen en cualquier polígono),
+  // así que su `source` tampoco puede contar hábitats: sería afirmar un vínculo que `habitatIds`
+  // desmiente. La cifra se decía igual y el validador solo dejaba de verla porque exime a las que
+  // tienen `zepaSiteCode` — en cuanto llegó un espacio SIN ZEPA (Sierra de El Carche, ES6200009, que
+  // es LIC y nada más), las 92 aves salieron como 92 errores. La frase se cambia para las aves de
+  // todos los espacios, no solo las de éste: la imprecisión era la misma, solo que tapada.
+  if (sel.class === 'Aves')
+    partes.push(`GBIF: ${n} ocurrencia${n === 1 ? '' : 's'} dentro del espacio (barrido de ${fecha}); ` +
+      'las aves no se adscriben a hábitats');
+  else
+    partes.push(`GBIF: ${n} ocurrencia${n === 1 ? '' : 's'} dentro de los polígonos de hábitat del espacio` +
+      ` (${nHab} hábitat${nHab === 1 ? '' : 's'}; barrido de ${fecha})`);
   if ((sel.evidence || []).includes('caracteristica'))
     partes.push('Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí');
   if ((sel.normas || []).length)
@@ -532,6 +542,14 @@ function notaDeRevision(sel, esAve, zepa, duplicadoGbif) {
     `Presencia respaldada por ${sel.gbifOccurrences} ocurrencia${sel.gbifOccurrences === 1 ? '' : 's'} de GBIF ` +
     `dentro del espacio; queda pendiente contrastarla con la lista oficial de especies del sitio ${zepa.code}, ` +
     'que no ha podido consultarse (el servicio Discodata de la EEA rechaza las tablas probadas y el visor SDF sirve la ficha vacía).');
+  // Un espacio puede ser LIC y no ZEPA, y entonces no hay lista oficial de aves con la que
+  // contrastar: no es que no se haya podido consultar, es que no existe. Decirlo es distinto de
+  // callarlo, y evita que la ficha parezca un pendiente que nadie va a poder cerrar nunca.
+  else if (esAve) partes.push(
+    `Presencia respaldada por ${sel.gbifOccurrences} ocurrencia${sel.gbifOccurrences === 1 ? '' : 's'} de GBIF ` +
+    'dentro del espacio. Este espacio NO tiene ZEPA declarada, así que no hay lista oficial de aves ' +
+    'del sitio Natura 2000 con la que contrastarla: el respaldo documental, cuando lo hay, es el ' +
+    'inventario de fauna del plan de gestión del espacio.');
   return partes.length ? partes.join(' ') : null;
 }
 
