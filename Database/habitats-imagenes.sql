@@ -225,6 +225,18 @@ UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
 WHERE p.slug = 'cuatro-calas' AND h.slug = 'matorrales-arborescentes-de-5220';
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Anthyllis_cytisoides.JPG?width=1280',
+  h.image_attribution = 'Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Albaida (Anthyllis cytisoides), la especie que da nombre al hábitat.'
+WHERE p.slug = 'monte-arabi' AND h.slug = 'matorrales-termomediterraneos-y-5330';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'monte-arabi' AND h.slug = 'pendientes-rocosas-calcicolas-8210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
   h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eberswalde_Zoo_12-2017_img2.jpg?width=1280',
   h.image_attribution = 'A.Savin (FAL) · Wikimedia Commons',
   h.image_note = 'Portada ilustrada con Jabalí (Sus scrofa), la especie que da nombre al hábitat.'

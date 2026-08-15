@@ -2777,7 +2777,8 @@
       "categoria": "LESRPE",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Buteo buteo": {
     "commonName": "Busardo ratonero",
@@ -7403,7 +7404,8 @@
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Falco eleonorae": {
     "commonName": "Halcón de Eleonora",
@@ -16324,6 +16326,31 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
+  "Sarcocapnos enneaphylla": {
+    "commonName": "Zapatitos de la Virgen",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Febrero a octubre",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Ranunculales",
+      "family": "Papaveraceae",
+      "genus": "Sarcocapnos"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sarcocapnos_enneaphylla_saetabensis.jpg?width=1280",
+    "imageAttribution": "Nanosanchez (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 7982,
+    "rarityBasis": null
+  },
   "Sarcocapnos enneaphylla subsp. saetabensis": {
     "commonName": "Zapatito de la Virgen",
     "kingdom": "flora",
@@ -17866,6 +17893,31 @@
     },
     "descriptionSource": null
   },
+  "Sturnus vulgaris": {
+    "commonName": "Estornino pinto",
+    "kingdom": "fauna",
+    "group": "Ave",
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 1,
+    "description": "Ave de mediano tamaño, compacta, con patas fuertes y cortas de color rosado, y pico puntiagudo. Exhibe un plumaje de color negro dominante, con reflejos violáceos y púrpuras, y con un moteado variable de pintas blanco-amarillentas. En invierno, el moteado resulta especialmente intenso, mientras que en verano es menos evidente. Tiene el pico de color amarillo en verano y negro en invierno. Los jóvenes presentan tonos pardo-grisáceos. Se trata de un pájaro similar al mirlo común, aunque se desplaza más erguido, andando y no a saltos. Posee un vuelo rápido y directo.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Sturnidae",
+      "genus": "Sturnus"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/European_Starling_2006.jpg?width=1280",
+    "imageAttribution": "http://www.naturespicsonline.com/ (CC BY-SA 2.5) · Wikimedia Commons",
+    "eidosTaxonId": 12415,
+    "rarityBasis": null
+  },
   "Suaeda maritima": {
     "commonName": "Sosa blanca",
     "kingdom": "flora",
@@ -18856,6 +18908,31 @@
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     }
+  },
+  "Thymelaea tartonraira": {
+    "commonName": "Cagalera",
+    "kingdom": "flora",
+    "group": "Arbusto",
+    "habitat": "Vive en matorrales y tomillares sobre sustrato básico o en yesos, hasta 1900 m",
+    "seasonality": "Octubre a julio",
+    "rarityScore": 3,
+    "description": "Pequeño arbusto, hasta de 50 cm, con hojas de 5-15 x 1-4 mm, imbricadas, espatuladas, generalmente apiculadas, pelosas. Inflorescencias capituliformes, axilares, con dos a cinco flores y hasta 10 brácteas imbricadas, unisexuales, de 3,5-6 mm, con sépalos de 1-1,5 mm. Fruto de 2,3-3,5 mm, en forma de nuez, con semillas de 1,5-2,7 mm.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Malvales",
+      "family": "Thymelaeaceae",
+      "genus": "Thymelaea"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mond%C3%BAber%2C_thymelaea_tartonraira.jpg?width=1280",
+    "imageAttribution": "Joanbanjo (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 8887,
+    "rarityBasis": null
   },
   "Thymus antoninae": {
     "commonName": "Tomillo",

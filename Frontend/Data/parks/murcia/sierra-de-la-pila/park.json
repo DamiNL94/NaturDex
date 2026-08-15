@@ -1194,7 +1194,7 @@
         -1.319597
       ],
       "image": null,
-      "source": "Plan Rector de Uso y Gestión del Parque Regional «Sierra de la Pila» (Plan de Gestión Integral de los Espacios Protegidos de los relieves y cuencas centro-orientales de la Región de Murcia, volumen III, junio de 2018), §2.3 patrimonio cultural, que lo cataloga entre los recursos del espacio, y Resolución de 25 de marzo de 2011 de la Dirección General de Bellas Artes y Bienes Culturales, citada por el propio plan. Coordenada aproximada: es el topónimo del Instituto Geográfico Nacional (OpenStreetMap node/1243028502), que queda 69 m fuera del límite oficial del parque; el perímetro declarado del yacimiento no ha podido consultarse.",
+      "source": "Plan Rector de Uso y Gestión del Parque Regional «Sierra de la Pila» (Plan de Gestión Integral de los Espacios Protegidos de los relieves y cuencas centro-orientales de la Región de Murcia, volumen III, junio de 2018), §2.3 patrimonio cultural, que lo cataloga entre los recursos del espacio, y Resolución de 25 de marzo de 2011 de la Dirección General de Bellas Artes y Bienes Culturales, citada por el propio plan. Coordenada aproximada: es el topónimo del Instituto Geográfico Nacional (OpenStreetMap node/1243028502), que queda 86,5 m fuera del límite oficial del parque (la ficha declaró 69 m hasta la auditoría del 2026-08-15; la distancia se ha vuelto a medir al borde del `parque.geojson`, no al vértice más próximo, que es lo que la sobreestimaba); el perímetro declarado del yacimiento no ha podido consultarse.",
       "approx": true,
       "audio": null,
       "audioTranscript": null

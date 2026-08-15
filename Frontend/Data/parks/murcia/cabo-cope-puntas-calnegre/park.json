@@ -717,7 +717,7 @@
         -1.46224
       ],
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_blanca_2.JPG",
-      "source": "Anexo I del proyecto de PORN del Parque Regional Calnegre y Cabo Cope (ANSE/CARM)",
+      "source": "Anexo I del proyecto de PORN del Parque Regional Calnegre y Cabo Cope (ANSE/CARM); Wikimedia Commons (foto: Ingegneriadell´elizia, CC BY 3.0)",
       "approx": false,
       "audio": null,
       "audioTranscript": null
@@ -732,8 +732,8 @@
         -1.50347
       ],
       "image": "Img/poi/calabardina.jpg",
-      "source": "Región de Murcia Digital (CARM) - Águilas, Yacimientos; Wikimedia Commons (foto: Rietje Swart, CC BY-SA 2.0)",
-      "approx": false,
+      "source": "Región de Murcia Digital (CARM) - Águilas, Yacimientos; Wikimedia Commons (foto: Rietje Swart, CC BY-SA 2.0). La pedanía queda 554 m FUERA del límite oficial del espacio protegido: entra como puerta de entrada por carretera, que es la función que cumple, y no como un valor de dentro. Distancia medida contra el `parque.geojson` que sirve la app.",
+      "approx": true,
       "audio": null,
       "audioTranscript": null
     },
@@ -746,8 +746,8 @@
         37.441423,
         -1.484144
       ],
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Torre_de_Cope.JPG",
-      "source": "Anexo I del proyecto de PORN del Parque Regional Calnegre y Cabo Cope (ANSE/CARM)",
+      "image": null,
+      "source": "Anexo I del proyecto de PORN del Parque Regional Calnegre y Cabo Cope (ANSE/CARM). SIN FOTO a propósito desde la auditoría del 2026-08-15: la que servía era «Torre de Cope.JPG», que retrata la torre vigía del XVI —que además tiene POI propio en este mismo espacio— y no las calcarenitas dunares. Commons no tiene ninguna foto de las dunas a menos de 1,2 km (geosearch: los cinco archivos del entorno son la torre y vistas generales).",
       "approx": true,
       "audio": null,
       "audioTranscript": null
@@ -762,7 +762,7 @@
         -1.48484
       ],
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Panor%C3%A1mica_de_la_Torre_de_Cope_y_el_Golfo_de_Mazarr%C3%B3n.jpg",
-      "source": "OpenStreetMap contributors (ODbL); tradición oral recogida en fuentes de turismo regional (episodio del incendio pendiente de contrastar con fuente documental primaria)",
+      "source": "OpenStreetMap contributors (ODbL); tradición oral recogida en fuentes de turismo regional (episodio del incendio pendiente de contrastar con fuente documental primaria); Wikimedia Commons (foto: José Alberto Giménez, CC BY-SA 4.0)",
       "approx": false,
       "audio": null,
       "audioTranscript": null
@@ -777,7 +777,7 @@
         -1.483251
       ],
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ensenada_de_la_Fuente.jpg",
-      "source": "Wikipedia - \"Cabo Cope\"; descubriendomurcia.com; tradición oral recogida en fuentes de turismo regional (nombre popular pendiente de confirmar con fuente documental primaria)",
+      "source": "Wikipedia - \"Cabo Cope\"; descubriendomurcia.com; tradición oral recogida en fuentes de turismo regional (nombre popular pendiente de confirmar con fuente documental primaria); Wikimedia Commons (foto: Jose Ignacio Martinez Navarro, CC BY-SA 3.0 es)",
       "approx": true,
       "audio": null,
       "audioTranscript": null
@@ -836,8 +836,8 @@
         37.43294,
         -1.47693
       ],
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Puntas_de_Calnegre%2C_desde_Piedras_Negras.JPG",
-      "source": "OpenStreetMap contributors (ODbL)",
+      "image": null,
+      "source": "OpenStreetMap contributors (ODbL). SIN FOTO a propósito desde la auditoría del 2026-08-15: la que servía era «Puntas de Calnegre, desde Piedras Negras.JPG», cuyo propio nombre dice que retrata Puntas de Calnegre —otro POI de este mismo espacio, a 10,6 km— y no este saliente.",
       "approx": false,
       "audio": null,
       "audioTranscript": null
@@ -897,7 +897,7 @@
         -1.469368
       ],
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cabo_Cope_-_WLE_Spain_2015.jpg",
-      "source": "Anexo I del proyecto de PORN del Parque Regional Calnegre y Cabo Cope (ANSE/CARM). Posición representativa junto al saladar y la Playa de la Galera; las coordenadas exactas de cada yacimiento no están publicadas.",
+      "source": "Anexo I del proyecto de PORN del Parque Regional Calnegre y Cabo Cope (ANSE/CARM). Posición representativa junto al saladar y la Playa de la Galera; las coordenadas exactas de cada yacimiento no están publicadas. Wikimedia Commons (foto: Raul, CC BY 2.0)",
       "approx": true,
       "audio": null,
       "audioTranscript": null
@@ -912,7 +912,7 @@
         -1.498
       ],
       "image": null,
-      "source": "Anexo I del proyecto de PORN del Parque Regional Calnegre y Cabo Cope (ANSE/CARM). Posición representativa del paraje El Garrobillo; las coordenadas exactas de cada yacimiento no están publicadas.",
+      "source": "Anexo I del proyecto de PORN del Parque Regional Calnegre y Cabo Cope (ANSE/CARM). Posición representativa del paraje El Garrobillo; las coordenadas exactas de cada yacimiento no están publicadas. El topónimo queda 68 m fuera del límite oficial, por encima del margen de ~50 m del §4.3.3; se mantiene porque el paraje que el anexo cataloga sí se solapa con el espacio, y la distancia consta aquí en vez de callarse.",
       "approx": true,
       "audio": null,
       "audioTranscript": null
@@ -1926,7 +1926,8 @@
         "categoria": "LESRPE",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 100,

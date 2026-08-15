@@ -1,5 +1,5 @@
 {
-  "_nota": "Especies que la NORMA DE DECLARACIÓN O GESTIÓN de cada espacio enumera en un anexo: PORN, PRUG, decreto de declaración o el Formulario Normalizado de Datos (SDF) del sitio Natura 2000. Es la única señal de la Capa 3 que afirma, de primera mano y por escrito, que una especie forma parte de ESTE espacio; GBIF solo prueba que alguien la ha registrado dentro del polígono, y el Atlas solo que es característica del tipo de hábitat. Da la evidencia `anexo_normativo` y cuenta como respaldo documental en build-species-seleccion.js. NO es una puerta de entrada: una especie del anexo que GBIF no confirma dentro de los polígonos NO se aprueba (filtro 1, constancia), pero tampoco desaparece: sale en el informe como hueco a contrastar. Un espacio SIN entrada aquí no es un espacio sin anexo: es un anexo NO CONSULTADO, y la herramienta lo dice en vez de callarlo. NUNCA se rellena de memoria ni por analogía con otro espacio (CLAUDE.md, regla nº 2): cada lista se transcribe de la norma, con su cita y la fecha en que se leyó.",
+  "_nota": "Especies que la NORMA DE DECLARACIÓN O GESTIÓN de cada espacio enumera en un anexo: PORN, PRUG, decreto de declaración o el Formulario Normalizado de Datos (SDF) del sitio Natura 2000. Es la única señal de la Capa 3 que afirma, de primera mano y por escrito, que una especie forma parte de ESTE espacio; GBIF solo prueba que alguien la ha registrado dentro del polígono, y el Atlas solo que es característica del tipo de hábitat. Da la evidencia `anexo_normativo` y cuenta como respaldo documental en build-species-seleccion.js. NO es una puerta de entrada: una especie del anexo que GBIF no confirma dentro de los polígonos NO se aprueba (filtro 1, constancia), pero tampoco desaparece: sale en el informe como hueco a contrastar. Un espacio SIN entrada aquí no es un espacio sin anexo: es un anexo NO CONSULTADO, y la herramienta lo dice en vez de callarlo. NUNCA se rellena de memoria ni por analogía con otro espacio (CLAUDE.md, regla nº 2): cada lista se transcribe de la norma, con su cita y la fecha en que se leyó. Cuando el nombre de la norma trae una errata o una nomenclatura en desuso, el verbatim se conserva y la corrección va aparte, en `nombreCorregido`: sin ella el cruce con GBIF falla por una letra y la especie pierde EN SILENCIO el respaldo que la norma sí le da.",
   "_esquema": {
     "<slug del espacio>": {
       "fuente": {
@@ -13,7 +13,15 @@
         {
           "scientificName": "Nombre científico tal y como lo escribe la norma",
           "categoria": "La categoría que le asigna la norma, si la asigna (opcional)",
-          "nota": "Cualquier salvedad: nombre desactualizado, ámbito parcial… (opcional)"
+          "nota": "Cualquier salvedad: nombre desactualizado, ámbito parcial… (opcional)",
+          "nombreCorregido": "El nombre aceptado, SOLO cuando el de la norma no puede casar por sí solo: errata de imprenta o nomenclatura en desuso. Se indexa junto al verbatim para que el cruce con GBIF no pierda el respaldo documental; `scientificName` sigue siendo lo que dice la norma. Se verifica contra GBIF antes de escribirlo, nunca de memoria (opcional)"
+        }
+      ],
+      "noNativas": [
+        {
+          "scientificName": "Nombre científico tal y como lo escribe la norma",
+          "nombreCorregido": "Igual que arriba, si hace falta (opcional)",
+          "nota": "Qué dice exactamente la norma. Estas NO entran en el catálogo del espacio: la norma las declara alóctonas y eso manda sobre el silencio de la Lista Patrón del IEPNB, que no marca como «no nativa» lo que ni siquiera es fauna silvestre"
         }
       ]
     }
@@ -979,6 +987,7 @@
         },
         {
           "scientificName": "Teucrim homotrichum",
+          "nombreCorregido": "Teucrium homotrichum",
           "grupo": "Flora",
           "nota": "Errata de la tabla: se lee «Teucrim» por Teucrium homotrichum."
         },
@@ -1185,6 +1194,7 @@
         },
         {
           "scientificName": "Apus melba",
+          "nombreCorregido": "Tachymarptis melba",
           "grupo": "Aves"
         },
         {
@@ -1201,6 +1211,7 @@
         },
         {
           "scientificName": "Delichon urbica",
+          "nombreCorregido": "Delichon urbicum",
           "grupo": "Aves"
         },
         {
@@ -1309,6 +1320,7 @@
         },
         {
           "scientificName": "Regulus ignicapillus",
+          "nombreCorregido": "Regulus ignicapilla",
           "grupo": "Aves"
         },
         {
@@ -1401,10 +1413,12 @@
         },
         {
           "scientificName": "Parus ater",
+          "nombreCorregido": "Periparus ater",
           "grupo": "Aves"
         },
         {
           "scientificName": "Parus cristatus",
+          "nombreCorregido": "Lophophanes cristatus",
           "grupo": "Aves"
         },
         {
@@ -1429,6 +1443,7 @@
         },
         {
           "scientificName": "Sylvia melanocephala",
+          "nombreCorregido": "Curruca melanocephala",
           "grupo": "Aves"
         },
         {
@@ -1453,6 +1468,7 @@
         },
         {
           "scientificName": "Rhinechis scalaris",
+          "nombreCorregido": "Zamenis scalaris",
           "grupo": "Reptiles"
         },
         {
@@ -1607,6 +1623,7 @@
         },
         {
           "scientificName": "Alytes obstreticans",
+          "nombreCorregido": "Alytes obstetricans",
           "grupo": "Anfibios",
           "nota": "Errata de la tabla: se lee «obstreticans» por obstetricans."
         },
@@ -1707,6 +1724,7 @@
         },
         {
           "scientificName": "Apus melba",
+          "nombreCorregido": "Tachymarptis melba",
           "grupo": "Aves"
         },
         {
@@ -1736,6 +1754,7 @@
         },
         {
           "scientificName": "Delichon urbica",
+          "nombreCorregido": "Delichon urbicum",
           "grupo": "Aves"
         },
         {
@@ -1752,6 +1771,7 @@
         },
         {
           "scientificName": "Falco tunninculus",
+          "nombreCorregido": "Falco tinnunculus",
           "grupo": "Aves",
           "nota": "Errata de la tabla: se lee «tunninculus» por tinnunculus."
         },
@@ -1761,6 +1781,7 @@
         },
         {
           "scientificName": "Hirundo daurica",
+          "nombreCorregido": "Cecropis daurica",
           "grupo": "Aves"
         },
         {
@@ -1781,6 +1802,7 @@
         },
         {
           "scientificName": "Milaria calandra",
+          "nombreCorregido": "Emberiza calandra",
           "grupo": "Aves",
           "nota": "Errata de la tabla: se lee «Milaria» por Miliaria calandra."
         },
@@ -1814,6 +1836,7 @@
         },
         {
           "scientificName": "Phoenicrus ochruros",
+          "nombreCorregido": "Phoenicurus ochruros",
           "grupo": "Aves",
           "nota": "Errata de la tabla: se lee «Phoenicrus» por Phoenicurus ochruros."
         },
@@ -1835,6 +1858,7 @@
         },
         {
           "scientificName": "Regulus ignicapillus",
+          "nombreCorregido": "Regulus ignicapilla",
           "grupo": "Aves"
         },
         {
@@ -1843,6 +1867,7 @@
         },
         {
           "scientificName": "Saxicola torquata",
+          "nombreCorregido": "Saxicola rubicola",
           "grupo": "Aves"
         },
         {
@@ -1935,6 +1960,7 @@
         },
         {
           "scientificName": "Emberizia cia",
+          "nombreCorregido": "Emberiza cia",
           "grupo": "Aves",
           "nota": "Errata de la tabla: se lee «Emberizia» por Emberiza cia."
         },
@@ -1964,6 +1990,7 @@
         },
         {
           "scientificName": "Parus ater",
+          "nombreCorregido": "Periparus ater",
           "grupo": "Aves"
         },
         {
@@ -1972,6 +1999,7 @@
         },
         {
           "scientificName": "Parus cristatus",
+          "nombreCorregido": "Lophophanes cristatus",
           "grupo": "Aves"
         },
         {
@@ -1992,15 +2020,18 @@
         },
         {
           "scientificName": "Sturnur unicolor",
+          "nombreCorregido": "Sturnus unicolor",
           "grupo": "Aves",
           "nota": "Errata de la tabla: se lee «Sturnur» por Sturnus unicolor. Figura también entre las especies cazables del §1.1.2.2.2."
         },
         {
           "scientificName": "Sylvia melanocephala",
+          "nombreCorregido": "Curruca melanocephala",
           "grupo": "Aves"
         },
         {
           "scientificName": "Troglodites troglodites",
+          "nombreCorregido": "Troglodytes troglodytes",
           "grupo": "Aves",
           "nota": "Errata de la tabla: se lee «Troglodites troglodites» por Troglodytes troglodytes."
         },
@@ -2043,6 +2074,7 @@
         },
         {
           "scientificName": "Pelodyctes punctatus",
+          "nombreCorregido": "Pelodytes punctatus",
           "grupo": "Anfibios",
           "nota": "Errata de la tabla: se lee «Pelodyctes» por Pelodytes punctatus."
         },
@@ -2085,6 +2117,7 @@
         },
         {
           "scientificName": "Podarcis hispanica",
+          "nombreCorregido": "Podarcis hispanicus",
           "grupo": "Reptiles",
           "nota": "La tabla escribe el epíteto en femenino; el nombre al uso es Podarcis hispanicus."
         },
@@ -2098,6 +2131,7 @@
         },
         {
           "scientificName": "Rhinechis scalaris",
+          "nombreCorregido": "Zamenis scalaris",
           "grupo": "Reptiles"
         },
         {
@@ -2377,6 +2411,869 @@
           "scientificName": "Armeria alliacea subsp. alliacea",
           "grupo": "Flora",
           "nota": "No está en la Tabla 8. El §1.1.2.2.3 la enumera entre las especies de los lapiaces de la Cumbre Capilla del Fraile."
+        }
+      ]
+    },
+    "monte-arabi": {
+      "fuente": {
+        "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
+        "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
+        "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
+        "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+        "consultado": "2026-08-15",
+        "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
+      },
+      "especies": [
+        {
+          "scientificName": "Felis silvestris",
+          "categoria": "De Interés Especial (Catálogo Regional de Especies Amenazadas)",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Myotis myotis",
+          "categoria": "Vulnerable (Catálogo Español de Especies Amenazadas)",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Pipistrellus kuhlii",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Pipistrellus pipistrellus",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Plecotus austriacus",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Rhinolophus ferrumequinum",
+          "categoria": "Vulnerable (Catálogo Español de Especies Amenazadas)",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Rhinolophus hipposideros",
+          "categoria": "Vulnerable (Catálogo Regional de Especies Amenazadas)",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Taradia teniotis",
+          "nombreCorregido": "Tadarida teniotis",
+          "grupo": "Mamiferos",
+          "nota": "Errata de la tabla: se lee «Taradia teniotis» por Tadarida teniotis, que es como lo escribe el texto del §3.2.4.2.1."
+        },
+        {
+          "scientificName": "Alytes obstreticans",
+          "nombreCorregido": "Alytes obstetricans",
+          "grupo": "Anfibios",
+          "nota": "Errata de la tabla: se lee «obstreticans» por obstetricans. La Tabla 59 de acciones sí lo escribe bien."
+        },
+        {
+          "scientificName": "Pelobates cultripes",
+          "grupo": "Anfibios"
+        },
+        {
+          "scientificName": "Bufo calamita",
+          "grupo": "Anfibios"
+        },
+        {
+          "scientificName": "Hemorrhois hippocrepis",
+          "grupo": "Reptiles",
+          "nota": "La tabla añade «(antes Coluber hippocrepis)»."
+        },
+        {
+          "scientificName": "Aquila chrysaetos",
+          "categoria": "Anexo I de la Directiva Aves; De Interés Especial (Catálogo Regional de Especies Amenazadas)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Bubo bubo",
+          "categoria": "Anexo I de la Directiva Aves; De Interés Especial (Catálogo Regional de Especies Amenazadas)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Burhinus oedicnemus",
+          "categoria": "Anexo I de la Directiva Aves",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Calandrella brachydactyla",
+          "categoria": "Anexo I de la Directiva Aves",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Circaetus gallicus",
+          "categoria": "Anexo I de la Directiva Aves; De Interés Especial (Catálogo Regional de Especies Amenazadas)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Circus aeruginosus",
+          "categoria": "Anexo I de la Directiva Aves",
+          "grupo": "Aves",
+          "nota": "La columna del Catálogo regional trae «EX», categoría que la leyenda de la tabla no define."
+        },
+        {
+          "scientificName": "Circus cyaneus",
+          "categoria": "Anexo I de la Directiva Aves",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Falco peregrinus",
+          "categoria": "Anexo I de la Directiva Aves; De Interés Especial (Catálogo Regional de Especies Amenazadas)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Galerida theklae",
+          "categoria": "Anexo I de la Directiva Aves",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Hieraaetus pennatus",
+          "categoria": "Anexo I de la Directiva Aves",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Lullula arborea",
+          "categoria": "Anexo I de la Directiva Aves",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Melanocorypha calandra",
+          "categoria": "Anexo I de la Directiva Aves",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Milvus migrans",
+          "categoria": "Anexo I de la Directiva Aves",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Oenanthe leucura",
+          "categoria": "Anexo I de la Directiva Aves",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Pernis apivorus",
+          "categoria": "Anexo I de la Directiva Aves",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Pyrrhocorax pyrrhocorax",
+          "categoria": "Anexo I de la Directiva Aves; De Interés Especial (Catálogo Regional de Especies Amenazadas)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Sylvia sarda",
+          "categoria": "Anexo I de la Directiva Aves",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Sylvia undata",
+          "categoria": "Anexo I de la Directiva Aves",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Accipiter nisus",
+          "categoria": "Parcialmente migradora (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Alauda arvensis",
+          "categoria": "Parcialmente migradora (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Anas platyrhynchos",
+          "categoria": "Parcialmente migradora (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Apus apus",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Apus melba",
+          "nombreCorregido": "Tachymarptis melba",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves",
+          "nota": "Nombre en desuso: hoy Tachymarptis melba."
+        },
+        {
+          "scientificName": "Caprimulgus ruficollis",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Carduelis cannabia",
+          "nombreCorregido": "Linaria cannabina",
+          "categoria": "Parcialmente migradora (Directiva Aves)",
+          "grupo": "Aves",
+          "nota": "Errata de la tabla: se lee «cannabia» por cannabina."
+        },
+        {
+          "scientificName": "Carduelis carduelis",
+          "categoria": "Parcialmente migradora (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Carduelis chloris",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Cercotrichas galactotes",
+          "categoria": "Migradora de llegada regular (Directiva Aves); Vulnerable (Catálogo Español de Especies Amenazadas)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Clamator glandarius",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Columba palumbus",
+          "categoria": "Parcialmente migradora (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Cuculus canorus",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Delichon urbica",
+          "nombreCorregido": "Delichon urbicum",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves",
+          "nota": "Nombre en desuso: hoy Delichon urbicum."
+        },
+        {
+          "scientificName": "Erithacus rubecula",
+          "categoria": "Parcialmente migradora (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Falco subbuteo",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Falco tunninculus",
+          "nombreCorregido": "Falco tinnunculus",
+          "categoria": "Parcialmente migradora (Directiva Aves)",
+          "grupo": "Aves",
+          "nota": "Errata de la tabla: se lee «tunninculus» por tinnunculus."
+        },
+        {
+          "scientificName": "Fringilla coelebs",
+          "categoria": "Parcialmente migradora (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Hippolais pallida",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Hippolais polyglotta",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Hirundo daurica",
+          "nombreCorregido": "Cecropis daurica",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves",
+          "nota": "Nombre en desuso: hoy Cecropis daurica."
+        },
+        {
+          "scientificName": "Hirundo rustica",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Lanius senator",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Luscinia megarhynchos",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Merops apiaster",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Motacilla alba",
+          "categoria": "Parcialmente migradora (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Muscicapa striata",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Oenanthe hispanica",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Oenanthe oenanthe",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Oriolus oriolus",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Otus scops",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Passer montanus",
+          "categoria": "Parcialmente migradora (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Phoenicrus ochruros",
+          "nombreCorregido": "Phoenicurus ochruros",
+          "categoria": "Parcialmente migradora (Directiva Aves)",
+          "grupo": "Aves",
+          "nota": "Errata de la tabla: se lee «Phoenicrus» por Phoenicurus."
+        },
+        {
+          "scientificName": "Phylloscopus bonelli",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Phylloscopus collybita",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Prunella collaris",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Ptyonoprogne rupestris",
+          "categoria": "Parcialmente migradora (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Regulus ignicapillus",
+          "nombreCorregido": "Regulus ignicapilla",
+          "categoria": "Parcialmente migradora (Directiva Aves)",
+          "grupo": "Aves",
+          "nota": "Nombre en desuso: hoy Regulus ignicapilla."
+        },
+        {
+          "scientificName": "Saxicola torquata",
+          "nombreCorregido": "Saxicola rubicola",
+          "categoria": "Parcialmente migradora (Directiva Aves)",
+          "grupo": "Aves",
+          "nota": "Nombre en desuso: el taxón ibérico es hoy Saxicola rubicola."
+        },
+        {
+          "scientificName": "Serinus serinus",
+          "categoria": "Parcialmente migradora (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Streptopelia turtur",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Sylvia cantillans",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Sylvia communis",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Sylvia hortensis",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Turdus merula",
+          "categoria": "Parcialmente migradora (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Turdus torquatus",
+          "categoria": "Migradora de llegada regular (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Turdus viscivorus",
+          "categoria": "Parcialmente migradora (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Tyto alba",
+          "categoria": "Parcialmente migradora (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Upupa epops",
+          "categoria": "Parcialmente migradora (Directiva Aves)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Accipiter gentilis",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Aegithalos caudatus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Asio otus",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Athene noctua",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Buteo buteo",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Certhia brachydactyla",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Columba oenas",
+          "categoria": "De Interés Especial (Catálogo Regional de Especies Amenazadas)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Corvus corax",
+          "categoria": "De Interés Especial (Catálogo Regional de Especies Amenazadas)",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Emberizia cia",
+          "nombreCorregido": "Emberiza cia",
+          "grupo": "Aves",
+          "nota": "Errata de la tabla: se lee «Emberizia» por Emberiza."
+        },
+        {
+          "scientificName": "Galerida cristata",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Garrulus glandarius",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Lanius meridionalis",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Loxia curvirostra",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Monticola solitarius",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Parus ater",
+          "nombreCorregido": "Periparus ater",
+          "grupo": "Aves",
+          "nota": "Nombre en desuso: hoy Periparus ater."
+        },
+        {
+          "scientificName": "Parus cristatus",
+          "nombreCorregido": "Lophophanes cristatus",
+          "grupo": "Aves",
+          "nota": "Nombre en desuso: hoy Lophophanes cristatus."
+        },
+        {
+          "scientificName": "Parus major",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Picus viridis",
+          "grupo": "Aves",
+          "nota": "El taxón ibérico se segregó después como Picus sharpei."
+        },
+        {
+          "scientificName": "Strix aluco",
+          "grupo": "Aves"
+        },
+        {
+          "scientificName": "Sturnur unicolor",
+          "nombreCorregido": "Sturnus unicolor",
+          "grupo": "Aves",
+          "nota": "Errata de la tabla: se lee «Sturnur» por Sturnus."
+        },
+        {
+          "scientificName": "Sylvia melanocephala",
+          "nombreCorregido": "Curruca melanocephala",
+          "grupo": "Aves",
+          "nota": "Nombre en desuso: hoy Curruca melanocephala."
+        },
+        {
+          "scientificName": "Troglodites troglodites",
+          "nombreCorregido": "Troglodytes troglodytes",
+          "grupo": "Aves",
+          "nota": "Errata de la tabla: se lee «Troglodites troglodites» por Troglodytes troglodytes."
+        },
+        {
+          "scientificName": "Capra pyrenaica",
+          "grupo": "Mamiferos",
+          "nota": "Anexo V de la Directiva Hábitats."
+        },
+        {
+          "scientificName": "Crocidura russula",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Eliomys quercinus",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Erinaceus europaeus",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Suncus etruscus",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Genetta genetta",
+          "grupo": "Mamiferos",
+          "nota": "Anexo V de la Directiva Hábitats."
+        },
+        {
+          "scientificName": "Martes foina",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Meles meles",
+          "categoria": "De Interés Especial (Catálogo Regional de Especies Amenazadas)",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Mustela nivalis",
+          "grupo": "Mamiferos"
+        },
+        {
+          "scientificName": "Acanthodactylus erythrurus",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Blanus cinereus",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Coronella girondica",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Hemidactylus turcicus",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Malpolon monspessulanus",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Natrix maura",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Natrix natrix",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Podarcis hispanica",
+          "nombreCorregido": "Podarcis hispanicus",
+          "grupo": "Reptiles",
+          "nota": "Nombre en desuso: hoy Podarcis hispanicus, y el taxón del sureste ibérico se ha segregado."
+        },
+        {
+          "scientificName": "Psammodromus algirus",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Psammodromus hispanicus",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Rhinechis scalaris",
+          "nombreCorregido": "Zamenis scalaris",
+          "grupo": "Reptiles",
+          "nota": "Nombre en desuso: hoy Zamenis scalaris."
+        },
+        {
+          "scientificName": "Tarentola mauritanica",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Timon lepidus",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Vipera latastei",
+          "grupo": "Reptiles"
+        },
+        {
+          "scientificName": "Anthyllis lagascana",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Arbutus unedo",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Arctostaphylos uva-ursi subsp. crassifolia",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Ephedra nebrodensis subsp. nebrodensis",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Erodium saxatile",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Guillonea scabra",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Juniperus oxycedrus subsp. oxycedrus",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Juniperus phoenicea subsp. phoenicea",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Jurinea pinnata",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Lycocarpus fugax",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Phillyrea angustifolia",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Pistacia terebinthus",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Quercus rotundifolia",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Rhamnus alaternus",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Sarcocapnos enneaphylla subsp. saetabensis",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Tamarix canariensis",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Teucrium franchetianum",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora",
+          "nota": "El texto del §3.2.4.2.2 lo escribe «Teucrium francheniatum»; la tabla, «franchetianum», que es el nombre correcto."
+        },
+        {
+          "scientificName": "Teucrium libanitis",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Ulmus minor",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Viburnum tinus",
+          "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Pinus halepensis",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (pinar), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección."
+        },
+        {
+          "scientificName": "Quercus coccifera",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (sotobosque de umbría), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección."
+        },
+        {
+          "scientificName": "Stipa tenacissima",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (espartal de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección."
+        },
+        {
+          "scientificName": "Rosmarinus officinalis",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección."
+        },
+        {
+          "scientificName": "Thymus vulgaris",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección."
+        },
+        {
+          "scientificName": "Sideritis mugronensis",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección."
+        },
+        {
+          "scientificName": "Fumana ericoides",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección."
+        },
+        {
+          "scientificName": "Atracthyllis humilis",
+          "nombreCorregido": "Atractylis humilis",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. Errata del texto: se lee «Atracthyllis» por Atractylis."
+        },
+        {
+          "scientificName": "Heliantheum cinereum",
+          "nombreCorregido": "Helianthemum cinereum",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. Errata del texto: se lee «Heliantheum» por Helianthemum."
+        },
+        {
+          "scientificName": "Thymelaea tantonraira",
+          "nombreCorregido": "Thymelaea tartonraira",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. Errata del texto: se lee «tantonraira» por tartonraira."
+        },
+        {
+          "scientificName": "Cistus clusii",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección."
+        },
+        {
+          "scientificName": "Fumana thymifolia",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección."
+        },
+        {
+          "scientificName": "Bupleurum fruticescens",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección."
+        },
+        {
+          "scientificName": "Teucrium capitatum",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección."
+        },
+        {
+          "scientificName": "Aristolochia pistolochia",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección."
+        },
+        {
+          "scientificName": "Koelleria vallesiana",
+          "nombreCorregido": "Koeleria vallesiana",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. Errata del texto: se lee «Koelleria» por Koeleria."
+        },
+        {
+          "scientificName": "Teucrium pseudochamaepytis",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección."
+        },
+        {
+          "scientificName": "Rhamnus lycioides",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección."
+        },
+        {
+          "scientificName": "Anthillis cytisoides",
+          "nombreCorregido": "Anthyllis cytisoides",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. Errata del texto: se lee «Anthillis» por Anthyllis."
+        },
+        {
+          "scientificName": "Parietaria judaica",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (roquedos y paredes rocosas), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección."
+        },
+        {
+          "scientificName": "Umbilicus rupestris",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (roquedos y paredes rocosas), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección."
+        },
+        {
+          "scientificName": "Chaenorrhinum origanifolium subsp. Crassifolium",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (roquedos y paredes rocosas), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. El texto escribe el epíteto subespecífico en mayúscula («Crassifolium»); va en minúscula."
+        },
+        {
+          "scientificName": "Sedum dasyphyllum",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (roquedos y paredes rocosas), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección."
+        },
+        {
+          "scientificName": "Asplenium trichomanes",
+          "grupo": "Flora",
+          "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (roquedos y paredes rocosas), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección."
+        }
+      ],
+      "noNativas": [
+        {
+          "scientificName": "Ovis aries",
+          "nota": "El §3.2.4.2.2 la cita como alóctona —«muflón de Córcega»— y dice que su población «se encuentra en expansión». La Lista Patrón del IEPNB no la marca como no nativa (es un taxón doméstico), así que sin esta entrada el filtro de autoctonía la dejaba pasar con sus 2 registros de GBIF."
+        },
+        {
+          "scientificName": "Dama dama",
+          "nota": "El §3.2.4.2.2 la cita entre las alóctonas: «la presencia de algunos ejemplares de Dama dama (gamo)»."
+        },
+        {
+          "scientificName": "Ammotragus lervia",
+          "nota": "El §3.2.4.2.2 la cita entre las alóctonas. Es la misma especie que ya se retiró del catálogo de Sierra Espuña el 2026-08-09 por invasora."
         }
       ]
     }
