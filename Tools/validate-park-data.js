@@ -92,6 +92,133 @@ function validateBoundaryGeojson(scope, rel) {
   return feats.length;
 }
 
+// --- Reglas de admisión del N3 (§4.1 y §4.3 del prompt de rollout) -------------------------------
+
+// Los ocho que Frontend/Js/util.js sabe dibujar. Uno fuera de la lista no rompe nada, pero sale con
+// la estrella genérica: es un aviso, no un error.
+const TIPOS_POI = new Set(['Cultural', 'Paisajístico', 'Geológico', 'Acceso', 'Natural',
+  'Arqueológico', 'Paleontológico', 'Religioso']);
+// El mismo margen que usa build-park-trails.js para no descartar lo que roza el límite (§4.3.3),
+// y el mismo umbral de «dos chinchetas son el mismo sitio» del §4.3.7.
+const MARGEN_POI_M = 50;
+
+function distanciaM(a, b) {
+  const R = 6371000, t = x => x * Math.PI / 180;
+  const dLa = t(b[0] - a[0]), dLo = t(b[1] - a[1]);
+  const h = Math.sin(dLa / 2) ** 2 + Math.cos(t(a[0])) * Math.cos(t(b[0])) * Math.sin(dLo / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+
+// Distancia al BORDE del polígono, no al vértice más próximo. La diferencia no es cosmética: con
+// límites de miles de vértices, medir contra los vértices da una cota superior que se pasa de largo
+// —la Torre del Azaraque salía a 60 m y está a 14—, y una cifra inflada en un `source` es
+// exactamente el tipo de dato que este repo no publica.
+function metrosAlBorde(polys, lat, lon) {
+  const kx = 111320 * Math.cos(lat * Math.PI / 180), ky = 110540;
+  const px = lon * kx, py = lat * ky;
+  let min = Infinity;
+  for (const poly of polys) for (const ring of poly) {
+    for (let i = 0; i < ring.length - 1; i++) {
+      const ax = ring[i][0] * kx, ay = ring[i][1] * ky;
+      const bx = ring[i + 1][0] * kx, by = ring[i + 1][1] * ky;
+      const dx = bx - ax, dy = by - ay, len2 = dx * dx + dy * dy;
+      let t = len2 ? ((px - ax) * dx + (py - ay) * dy) / len2 : 0;
+      t = Math.max(0, Math.min(1, t));
+      min = Math.min(min, Math.hypot(px - (ax + t * dx), py - (ay + t * dy)));
+    }
+  }
+  return min;
+}
+
+function enAnillo(x, y, ring) {
+  let dentro = false;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const xi = ring[i][0], yi = ring[i][1], xj = ring[j][0], yj = ring[j][1];
+    if (((yi > y) !== (yj > y)) && (x < ((xj - xi) * (y - yi)) / (yj - yi) + xi)) dentro = !dentro;
+  }
+  return dentro;
+}
+function enPoligonos(polys, lat, lon) {
+  for (const poly of polys) {
+    if (!enAnillo(lon, lat, poly[0])) continue;
+    let enHueco = false;
+    for (let i = 1; i < poly.length; i++) if (enAnillo(lon, lat, poly[i])) enHueco = true;
+    if (!enHueco) return true;
+  }
+  return false;
+}
+
+function poligonosDelLimite(manifest) {
+  const rel = manifest.geo && manifest.geo.parque;
+  if (!rel) return null;
+  const abs = path.join(FRONTEND, rel);
+  if (!fs.existsSync(abs)) return null;
+  let gj;
+  try { gj = readJson(abs); } catch (e) { return null; }
+  const feats = gj.type === 'FeatureCollection' ? (gj.features || []) : [gj.geometry ? gj : { geometry: gj }];
+  const polys = [];
+  for (const f of feats) {
+    const g = f.geometry;
+    if (!g) continue;
+    if (g.type === 'Polygon') polys.push(g.coordinates);
+    else if (g.type === 'MultiPolygon') polys.push(...g.coordinates);
+  }
+  return polys.length ? polys : null;
+}
+
+function validatePoiRules(scope, pois, manifest) {
+  if (!pois.length) return;
+  const polys = poligonosDelLimite(manifest);
+
+  pois.forEach(p => {
+    // §4.1 — vocabulario cerrado de `type`.
+    if (!TIPOS_POI.has(p.type))
+      warn(scope, 'POI "' + p.id + '": type "' + p.type + '" no está en el vocabulario cerrado del §4.1, saldrá con la estrella genérica');
+    // §4.3.8 — el id es clave en la BD (points_of_interest.slug): minúsculas, sin tildes, guiones.
+    // Va como AVISO y no como error a propósito: el id ya está escrito en `seed.sql`, en
+    // `snapshot.sql` y en la fila viva de `points_of_interest`, así que arreglarlo no es editar el
+    // `park.json` sino una renombrada coordinada de las cuatro cosas a la vez. Bloquear el commit
+    // por una deuda que solo se puede saldar tocando la BD dejaría el repo sin red de seguridad para
+    // todo lo demás. Está en Docs/DEUDA-TECNICA.md.
+    if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(p.id || ''))
+      warn(scope, 'POI "' + p.id + '": el id no es un slug limpio (§4.3.8) y es clave única en points_of_interest. Renombrarlo exige tocar a la vez park.json, seed.sql, snapshot.sql y la fila viva');
+    // §4.3.1 — un POI sin fuente no entra.
+    if (!p.source || !String(p.source).trim())
+      err(scope, 'POI "' + p.id + '": sin `source`, y un POI sin fuente del hecho no entra (§4.3.1)');
+    // §4.3.4 — `approx` es una afirmación sobre el dato, así que tiene que estar dicha.
+    if (typeof p.approx !== 'boolean')
+      warn(scope, 'POI "' + p.id + '": `approx` no es booleano, así que no consta si la coordenada está verificada');
+
+    // La foto: la atribución es CONDICIÓN de la licencia, no un extra.
+    if (p.image) {
+      if (/\/thumb\//.test(p.image))
+        err(scope, 'POI "' + p.id + '": la imagen es un /thumb/ de Wikimedia (derivado cacheado que devuelve 400 en cuanto no está generado)');
+      const src = String(p.source || '');
+      if (!/\bCC[ -]|CC0|dominio público|domino público|Public Domain|\bFAL\b|licencia/i.test(src))
+        err(scope, 'POI "' + p.id + '": sirve una imagen y su `source` no dice de quién es ni bajo qué licencia — la atribución es condición de la CC BY / CC BY-SA');
+    }
+
+    // §4.3.3 — pertenencia por polígono, no por bbox.
+    if (polys && Array.isArray(p.coordinates) && p.coordinates.length === 2) {
+      const [lat, lon] = p.coordinates;
+      if (typeof lat === 'number' && typeof lon === 'number' && !enPoligonos(polys, lat, lon)) {
+        const d = metrosAlBorde(polys, lat, lon);
+        if (d > MARGEN_POI_M)
+          warn(scope, 'POI "' + p.id + '": cae FUERA del límite oficial, a ' + d.toFixed(0) + ' m del borde (§4.3.3). Si entra a propósito, tiene que decirlo su `source` — con esta misma distancia');
+      }
+    }
+  });
+
+  // §4.3.7 — dos chinchetas a menos de 50 m son el mismo sitio contado dos veces.
+  for (let i = 0; i < pois.length; i++) for (let j = i + 1; j < pois.length; j++) {
+    const a = pois[i].coordinates, b = pois[j].coordinates;
+    if (!Array.isArray(a) || !Array.isArray(b) || a.length !== 2 || b.length !== 2) continue;
+    const d = distanciaM(a, b);
+    if (d < MARGEN_POI_M)
+      warn(scope, 'POI "' + pois[i].id + '" y "' + pois[j].id + '" están a ' + d.toFixed(0) + ' m (§4.3.7): ¿son el mismo sitio dos veces?');
+  }
+}
+
 // Presupuesto de descarga por parque: es lo que se baja un móvil en 4G y lo que ocupa para siempre
 // en el dispositivo. Mismo número que Tools/build-park-tiles.js, a propósito.
 const MAX_TOTAL_BYTES = 25 * 1024 * 1024;
@@ -439,6 +566,14 @@ function validatePark(entry) {
     if (!p.coordinates) { err(scope, 'el punto de interés "' + p.id + '" no tiene coordenadas (son obligatorias)'); return; }
     checkCoord(p.coordinates, 'punto de interés "' + p.id + '"');
   });
+
+  // 6 bis) Las reglas de admisión del N3 (§4 de Docs/prompts/e-rollout-nacional.md) --------------
+  // Estaban escritas en el prompt y comprobadas a mano espacio por espacio, que es como se pierden:
+  // la auditoría del 2026-08-15 encontró seis fotos de Commons servidas sin acreditar a su autor
+  // —que es CONDICIÓN de la CC BY y la CC BY-SA, no un adorno—, dos POIs fuera del límite sin que su
+  // ficha lo dijera y una distancia declarada («69 m») que no era la real (86,5 m). Nada de eso lo
+  // veía ningún guardián.
+  validatePoiRules(scope, pois, manifest);
 
   // 7) GeoJSON de hábitats ------------------------------------------------------------------------
   const geoRel = manifest.geo && manifest.geo.habitats;

@@ -130,4 +130,12 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     `LATERAL` ni `CAST(… AS JSON)` para que valga en los dos motores, y en MariaDB pasa dos veces sin
     diff, pero **el primer pase contra el MySQL real hay que mirarlo**, con `npm run db:backup` hecho
     antes.
-
+17. **`playa-Charco`: un `slug` de POI con mayúscula, y es clave única en la BD.** Lo destapó la
+    auditoría del N3 del 2026-08-15 (g). El §4.3.8 pide el id en slug estable —minúsculas, sin tildes,
+    guiones— porque es `points_of_interest.slug`, único por parque, y este lleva una `C` mayúscula
+    desde el piloto. **No se arregla editando el `park.json`**: el mismo literal está en
+    `Database/seed.sql`, en `Database/snapshot.sql`, en `Database/recolocar-pois.sql` y en la fila viva
+    de la BD, así que hay que renombrarlo en los cuatro sitios a la vez o el POI se duplica al
+    siguiente import. Por eso `validate` lo da como **aviso y no como error**: bloquear el commit por
+    una deuda que solo se salda tocando la BD dejaría el repo sin red de seguridad para todo lo demás.
+    Es un rato de trabajo, pero hay que hacerlo en el mismo paso que la carga de SQL pendiente.
