@@ -23,8 +23,13 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
 4. **`npm run validate` tiene que salir en verde.** Bloquea el commit vía `.githooks/pre-commit`.
 5. **El huso UTM se lee del `.prj`, nunca se asume.** 28N Canarias, 29N/30N/31N península.
 6. **Idempotencia como prueba.** `build-n1-espacios`, `merge-habitats`, `adopt-habitats`,
-   `fix-estado-conservacion-iepnb` y `sync-species-catalog` no deben cambiar un byte en un segundo
-   pase. Si un segundo pase produce diff, hay un problema.
+   `fix-estado-conservacion-iepnb`, `sync-species-catalog` y el volcado de ocurrencias de
+   `migrations.sql` no deben cambiar un byte en un segundo pase. Si un segundo pase produce diff, hay
+   un problema.
+7. **La coordenada de una especie amenazada no se publica exacta.** Al exportar se generaliza a 1 o
+   10 km según su tramo de rareza legal, y el registro lo dice. Un taxón **sin** tramo calculado se
+   generaliza igual: «nadie lo ha mirado» no es «no está amenazada», y publicar de más no se puede
+   deshacer. Ver [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md).
 
 ## 2. Cinco cosas que fallan EN VERDE
 
@@ -57,6 +62,7 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 | Tocar la API | [`Backend/CLAUDE.md`](Backend/CLAUDE.md) |
 | Escribir o usar una herramienta | [`Tools/CLAUDE.md`](Tools/CLAUDE.md) — **mira `Tools/lib/` antes de escribir nada nuevo** |
 | Tocar SQL | [`Database/CLAUDE.md`](Database/CLAUDE.md) — qué fichero es fuente y cuál es generado |
+| Tocar avistamientos, ocurrencias o su exportación | [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md) — término a término, qué se generaliza y por qué |
 | Elegir el siguiente trabajo | [`Docs/DEUDA-TECNICA.md`](Docs/DEUDA-TECNICA.md), por orden de rentabilidad |
 | Recordar un comando | [`Docs/COMANDOS.md`](Docs/COMANDOS.md) |
 

@@ -34,7 +34,12 @@
     followByDefault: false,   // el modo explorador arranca con "el mapa se mueve contigo"
     highAccuracyGps: true,    // enableHighAccuracy en el seguimiento (gasta más batería)
     celebrations: true,       // carteles animados al desbloquear un logro
-    achievementSound: false   // sonido corto al desbloquear (heredada de achievements.js)
+    achievementSound: false,  // sonido corto al desbloquear (heredada de achievements.js)
+    // Consentimiento para que los avistamientos de esta cuenta salgan en la exportación Darwin Core
+    // (Tools/export-dwc.php). APAGADO por defecto y a propósito: publicar la observación de alguien
+    // con su nombre es una cesión de datos personales, y una cesión no se presume, se pide. El
+    // exportador lo comprueba en el espejo del servidor (users.prefs), no en el dispositivo.
+    shareOccurrences: false
   };
 
   var LISTENERS = [];

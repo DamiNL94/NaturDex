@@ -70,6 +70,12 @@ delimitación regional, así que conserva el límite del MITECO y no pasa por
 Cada línea es un informe de cierre. El título dice la conclusión; entra al fichero solo si te hace
 falta el detalle.
 
+### [`sesiones/2026-08-15.md`](sesiones/2026-08-15.md)
+
+| Sesión | Qué se cerró |
+|---|---|
+| 2026-08-15 | **Los avistamientos pasan a ser Darwin Core**, con las columnas como términos y no como traducción: se empieza a guardar la incertidumbre del GPS —que se recibía y se tiraba—, cada cita cuelga de su visita verificada, y al exportar la coordenada de un taxón amenazado sale generalizada y sin consentimiento explícito no sale nada. De paso aparece que **`migrations.sql` no fijaba `utf8mb4`** y guardaba mojibake sin avisar |
+
 ### [`sesiones/2026-08-14.md`](sesiones/2026-08-14.md)
 
 | Sesión | Qué se cerró |

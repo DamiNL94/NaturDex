@@ -58,6 +58,24 @@ flowchart TD
 Corolario operativo, y la regla que manda sobre todas las demás:
 **ante la duda, hueco documentado antes que dato inventado.**
 
+### Lo que marca el usuario tiene dos vidas
+
+Marcar una especie escribe en **dos** sitios, y no es una duplicación:
+
+| Dónde | Para qué | Quién manda |
+|---|---|---|
+| `user_progress.payload` | Lo que la app pinta. Un JSON por (usuario, espacio), indexado por el `species_id` de ese espacio | El dispositivo: es lo que hace que el progreso funcione sin cobertura (local-first) |
+| `user_occurrences` | La **capa científica**: una ocurrencia Darwin Core por cita, con identificador estable, hora con huso, incertidumbre de la coordenada, taxonomía con identificadores y estado de verificación | El servidor, que la deriva de la anterior |
+
+La segunda existe porque la primera no se puede publicar: no se puede consultar, una especie solo
+admite un avistamiento por espacio, y le faltan justo las piezas que hacen válida una cita. **La
+capa científica se deriva de la de la app y nunca al revés**: borrar una fila de `user_occurrences` no
+le quita nada al usuario. Cada ocurrencia cuelga además de la **visita verificada**
+(`user_park_visits`) en la que se marcó, y de ahí hereda su trazabilidad de calidad.
+
+El detalle completo —qué término sale de dónde, qué coordenadas se generalizan y por qué, y qué falta
+para publicar en GBIF— está en [`Docs/DARWIN-CORE.md`](../DARWIN-CORE.md).
+
 ### Las especies son nacionales, no del parque
 
 Una *Aquila fasciata* de Murcia y una de Cádiz son la misma ficha. El contenido de una ficha se parte

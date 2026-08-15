@@ -99,4 +99,23 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     Son los de `regionsVisited` y `provincesVisited`: apuntan a la España entera a propósito, y la
     medalla lo dice con el número que saca del registro, así que no engañan a nadie. Se cierra solo
     según avance el rollout; `npm run validate` los lista en cada pasada para que no se olviden.
+13. **El Darwin Core Archive no ha pasado por el validador de GBIF.** Está generado y comprobado
+    contra sí mismo —identificadores únicos, columnas cuadradas con la cabecera, fechas ISO 8601 con
+    huso, coordenadas en rango, `meta.xml` y `eml.xml` bien formados—, y eso **no es** una validación
+    de GBIF. Falta pasarlo por el [Data Validator](https://www.gbif.org/tools/data-validator), que
+    exige un archivo sobre datos reales y una cuenta; el informe va en `Docs/DARWIN-CORE.md` cuando se
+    haga. Con él van dos huecos declarados del propio conjunto: `locationID` **sin el código
+    Natura 2000** (la tabla `parks` no lo guarda; vive en el `park.json` empaquetado) y
+    `scientificNameID` **vacío** (falta el identificador nomenclatural: IPNI / Index Fungorum).
+14. **Las citas sin coordenada no son ocurrencias, y son la mayoría de lo marcado.** Un «visto» sin
+    permiso de GPS se queda en `user_progress` y no llega a `user_occurrences`: no dice dónde ocurrió
+    nada. Es la decisión correcta para publicar, pero significa que el conjunto científico será
+    bastante más pequeño que el progreso de la gente, y conviene medirlo antes de prometerle un
+    volumen a nadie. Lo mismo con las citas de invasoras anteriores al 2026-08-15, que salen con el
+    hueco dicho en `occurrenceRemarks`.
+15. **La migración de ocurrencias está probada en MariaDB 10.11, no en MySQL 8.4.** El contenedor del
+    proyecto es `mysql:8.4` y ahí no se ha podido levantar en esta sesión. Se escribió a propósito sin
+    `LATERAL` ni `CAST(… AS JSON)` para que valga en los dos motores, y en MariaDB pasa dos veces sin
+    diff, pero **el primer pase contra el MySQL real hay que mirarlo**, con `npm run db:backup` hecho
+    antes.
 

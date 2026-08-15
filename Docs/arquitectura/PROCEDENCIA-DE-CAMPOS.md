@@ -84,6 +84,7 @@ dato; «Cómo» = la herramienta o el criterio; «Verifica» = quién lo comprue
 | `especies_invasoras` | Catálogo Español de EEI (RD 630/2013) vía EIDOS ∩ presencia GBIF por CCAA | `invasoras-eei.js`, `invasoras-contenido.js`, `invasoras-images.js` |
 | `glosario` | redacción propia sobre glosarios oficiales y el Atlas | `glossary-coverage.js` **detecta** el vocabulario sin definir; la definición la escribe una persona |
 | `user_*` | el propio usuario | Progreso, visitas verificadas, logros. Ver `Docs/PROGRESO-CUENTA-LOGROS.md` y `Docs/VERIFICACION-Y-ANTITRAMPAS.md` |
+| `user_occurrences` | derivada de `user_progress` + `user_invasive_sightings` | La misma marca del usuario, escrita como **ocurrencia Darwin Core**. Sus columnas SON los términos, y de dónde sale cada uno está en [`Docs/DARWIN-CORE.md`](../DARWIN-CORE.md), término a término y con las URIs. Dos avisos que valen aquí: `species.kingdom` **no es** un reino taxonómico (es `flora`/`fauna` y se traduce a `Plantae`/`Animalia`), y `taxonRank` se deduce del nombre solo cuando el nombre lo dice sin ambigüedad |
 
 ### Fuentes: URLs y claves
 

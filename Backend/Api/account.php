@@ -16,6 +16,7 @@
 // efecto de inmediato.
 // ================================================================================================
 require_once __DIR__ . "/../Lib/api.php";
+require_once __DIR__ . "/../Lib/occurrences.php";
 $conn = apiBoot(["session" => true]);
 $userId = requireUserId();
 
@@ -146,6 +147,9 @@ if ($method === "GET" && $action === "export") {
              FROM user_park_visits WHERE user_id = ? ORDER BY started_at", $userId),
         "invasiveSightings" => rowsFor($conn, "SELECT e.scientific_name, e.common_name, e.ccaa, s.seen_at FROM user_invasive_sightings s JOIN especies_invasoras e ON e.id = s.invasive_id WHERE s.user_id = ? ORDER BY s.seen_at", $userId),
         "glossaryViews" => rowsFor($conn, "SELECT g.term, v.viewed_at FROM user_glossary_views v JOIN glosario g ON g.id = v.term_id WHERE v.user_id = ? ORDER BY v.viewed_at", $userId),
+        // Sus ocurrencias Darwin Core, con la coordenada FINA y sin generalizar: la generalización
+        // protege al taxón en la publicación, no al titular frente a sus propios datos.
+        "occurrences" => occurrencesForUser($conn, $userId),
     ]);
 }
 

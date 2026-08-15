@@ -445,3 +445,127 @@ CREATE TABLE IF NOT EXISTS user_glossary_views (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
     FOREIGN KEY (term_id) REFERENCES glosario(id) ON DELETE CASCADE
 );
+
+-- ================================================================================================
+-- OCURRENCIAS EN DARWIN CORE: la capa científica del avistamiento.
+-- ------------------------------------------------------------------------------------------------
+-- Por qué existe: hasta aquí, un avistamiento era una entrada dentro del JSON de user_progress.payload
+-- indexada por el species_id DE ESE PARQUE. Eso sirve para pintar la app y no sirve para nada más: no
+-- se puede consultar, una especie solo admite un avistamiento por espacio, y le faltan justo las
+-- piezas que hacen publicable una cita —identificador estable, hora con huso, incertidumbre de la
+-- coordenada, taxonomía con identificadores y estado de verificación—.
+--
+-- Aquí las COLUMNAS SON TÉRMINOS DARWIN CORE, no una traducción a posteriori: `event_date` es
+-- dwc:eventDate y `decimal_latitude` es dwc:decimalLatitude. La correspondencia completa columna ↔
+-- término ↔ URI se declara una sola vez en Backend/Lib/dwc.php, y de ahí salen el occurrence.txt y
+-- el meta.xml del Darwin Core Archive (Tools/export-dwc.php). Ver Docs/DARWIN-CORE.md.
+--
+-- Relación con user_progress: NINGUNA de sustitución. user_progress sigue siendo lo que la app lee y
+-- lo que hace que el progreso sea local-first; esta tabla se DERIVA de aquello y añade lo que la app
+-- no necesita. Borrar una fila de aquí no le quita nada al usuario en la app.
+--
+-- Aviso permanente (regla 7 del CLAUDE.md): cada fila es una observación ciudadana SIN validar por un
+-- experto, y así sale etiquetada en identification_verification_status. No es dato oficial.
+--
+-- OJO al escribir SQL a mano: `class` y `order` son palabras reservadas de MySQL y necesitan
+-- comillas invertidas. Se llaman así a propósito —son los términos dwc:class y dwc:order— porque el
+-- objetivo de la tabla es no tener que traducir nada.
+CREATE TABLE IF NOT EXISTS user_occurrences (
+    -- --- Identidad y reconciliación (esto NO es Darwin Core: es la costura con el resto del modelo) ---
+    -- dwc:occurrenceID. UUID v4 aleatorio, estable para siempre y expuesto como URN 'urn:uuid:…'.
+    -- NUNCA un autoincremento: un identificador correlativo revela el tamaño del conjunto y deja de
+    -- ser único en cuanto estos datos se fusionen con los de otro proveedor.
+    occurrence_id CHAR(36) NOT NULL PRIMARY KEY,
+    user_id INT NOT NULL,
+    -- De qué marca del usuario deriva esta ocurrencia: 'especie:<park_slug>:<species_id>' o
+    -- 'invasora:<invasive_id>'. Es la clave que hace IDEMPOTENTE tanto la escritura en caliente como
+    -- la migración: reprocesar lo mismo actualiza la fila y conserva su occurrence_id.
+    source_key VARCHAR(190) NOT NULL,
+    occurrence_kind ENUM('especie','invasora') NOT NULL DEFAULT 'especie',
+    -- Referencias al catálogo, SIN clave foránea a propósito: species se regenera espacio a espacio
+    -- (build-park-sql.js) y un borrado en cascada se llevaría por delante la observación de una
+    -- persona, que es dato propio y no derivado. Si la ficha desaparece, la cita sigue siendo válida:
+    -- lleva su taxonomía copiada.
+    catalog_species_id INT NULL,
+    catalog_invasive_id INT NULL,
+    park_slug VARCHAR(120) NULL,
+
+    -- --- Registro (dwc: Record-level) ---
+    basis_of_record VARCHAR(40) NOT NULL DEFAULT 'HumanObservation',
+    occurrence_status VARCHAR(20) NOT NULL DEFAULT 'present',
+    -- La app no pregunta cuántos ejemplares se vieron: se deja NULL en vez de escribir 1, que sería
+    -- afirmar algo que nadie ha dicho.
+    individual_count INT UNSIGNED NULL,
+    occurrence_remarks TEXT NULL,
+    recorded_by VARCHAR(160) NULL,
+    recorded_by_id VARCHAR(120) NULL,
+    modified DATETIME NOT NULL,
+
+    -- --- Evento (dwc: Event) ---
+    -- dwc:eventID ⇒ la VISITA VERIFICADA (user_park_visits.id). Con esto cada ocurrencia hereda la
+    -- trazabilidad de calidad de la visita: cuántos fixes, cuánto tiempo, qué precisión.
+    event_id INT NULL,
+    -- Fechas SIEMPRE en UTC y escritas por PHP con gmdate, nunca con NOW(): el motor puede estar en
+    -- cualquier huso y una fecha de ocurrencia sin huso no vale para nada.
+    event_date DATETIME NOT NULL,
+    sampling_protocol VARCHAR(190) NULL,
+
+    -- --- Lugar (dwc: Location) ---
+    decimal_latitude DECIMAL(10,6) NULL,
+    decimal_longitude DECIMAL(10,6) NULL,
+    geodetic_datum VARCHAR(20) NOT NULL DEFAULT 'WGS84',
+    -- La pieza que faltaba: la precisión del GPS en el momento de marcar. Sin ella un registro es
+    -- inservible para casi cualquier análisis, y hasta ahora se recibía en presence.php y se tiraba.
+    coordinate_uncertainty_in_meters INT UNSIGNED NULL,
+    georeference_protocol VARCHAR(190) NULL,
+    country_code CHAR(2) NOT NULL DEFAULT 'ES',
+    state_province VARCHAR(120) NULL,
+    county VARCHAR(120) NULL,
+    locality VARCHAR(255) NULL,
+    location_id VARCHAR(190) NULL,
+
+    -- --- Taxón (dwc: Taxon). Copiado, no referenciado: una cita publicada no puede cambiar de
+    -- especie porque alguien reconcilie el catálogo tres años después. ---
+    scientific_name VARCHAR(255) NOT NULL,
+    taxon_rank VARCHAR(40) NULL,
+    -- OJO: dwc:kingdom es el reino TAXONÓMICO ('Plantae'), no el 'flora'/'fauna' de species.kingdom,
+    -- que es una agrupación de la interfaz. La traducción está en dwc.php::dwcKingdom().
+    kingdom VARCHAR(60) NULL,
+    phylum VARCHAR(120) NULL,
+    `class` VARCHAR(120) NULL,
+    `order` VARCHAR(120) NULL,
+    family VARCHAR(160) NULL,
+    genus VARCHAR(120) NULL,
+    vernacular_name VARCHAR(255) NULL,
+    taxon_id VARCHAR(120) NULL,          -- EIDOS (IEPNB): la nomenclatura canónica del proyecto
+    scientific_name_id VARCHAR(190) NULL, -- identificador nomenclatural (IPNI/IF): hoy no lo tenemos
+    taxon_concept_id VARCHAR(200) NULL,   -- clave GBIF como URL
+
+    -- --- Calidad de la identificación ---
+    -- Dice las dos cosas que un banco de datos necesita saber: que nadie ha validado la
+    -- identificación (siempre) y si consta que la persona estaba dentro del espacio. Se recalcula
+    -- cuando la visita se verifica, que ocurre minutos DESPUÉS de marcar.
+    identification_verification_status VARCHAR(190) NOT NULL,
+    identified_by VARCHAR(160) NULL,
+    date_identified DATETIME NULL,
+
+    -- --- Derechos ---
+    license VARCHAR(190) NULL,
+    rights_holder VARCHAR(160) NULL,
+    institution_code VARCHAR(60) NULL,
+    dataset_name VARCHAR(190) NULL,
+    dataset_id VARCHAR(120) NULL,
+
+    -- --- Sensibilidad. Se rellenan al EXPORTAR, no al guardar: el dato fino se conserva siempre en
+    -- la base y lo que se generaliza es la publicación (Docs/DARWIN-CORE.md §sensibilidad). ---
+    information_withheld TEXT NULL,
+    data_generalizations TEXT NULL,
+
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE KEY unique_occurrence_source (user_id, source_key),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (event_id) REFERENCES user_park_visits(id) ON DELETE SET NULL,
+    INDEX idx_user_occurrences_user (user_id, event_date),
+    INDEX idx_user_occurrences_taxon (scientific_name),
+    INDEX idx_user_occurrences_park (park_slug, event_date)
+);

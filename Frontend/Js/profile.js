@@ -224,6 +224,13 @@ async function storageBlock() {
   return html`<h4 class="profile-subtitle">Parques guardados sin conexión</h4>
     ${parkList}
     ${usage ? html`<p class="profile-hint">Este navegador tiene ocupados unos <strong>${usage}</strong> con datos de NaturDex (fichas, mapas, fotos y audioguías descargadas).</p>` : ''}
+    <h4 class="profile-subtitle">Compartir con la ciencia</h4>
+    <p class="profile-hint">Cuando marcas una especie, NaturDex guarda dónde y cuándo la viste. Si lo
+    autorizas, esos avistamientos pueden cederse a bancos de datos de biodiversidad (como GBIF) para
+    estudiar cómo cambia la naturaleza. Se cederían con el nombre que uses en la app. <strong>La
+    posición exacta de las especies amenazadas nunca se publica</strong>: se redondea a varios
+    kilómetros para que nadie pueda ir a buscarlas. Puedes cambiar de opinión cuando quieras.</p>
+    ${toggleRow('shareOccurrences', 'Compartir mis avistamientos con fines científicos', 'Está desactivado salvo que lo actives tú. Sin activarlo, tus avistamientos no salen de tu cuenta.')}
     <h4 class="profile-subtitle">Tus datos</h4>
     <div class="profile-actions">
     <button type="button" class="btn-secondary" data-action="export-local">${icon('download', 15)} Descargar lo guardado en este dispositivo</button>

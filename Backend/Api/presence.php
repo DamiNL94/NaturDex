@@ -14,6 +14,7 @@
 require_once __DIR__ . "/../Lib/api.php";
 require_once __DIR__ . "/../Lib/presence.php";
 require_once __DIR__ . "/../Lib/account_progress.php";
+require_once __DIR__ . "/../Lib/occurrences.php";
 $conn = apiBoot(["session" => true]);
 $userId = requireUserId();
 $method = $_SERVER["REQUEST_METHOD"];
@@ -55,6 +56,13 @@ if ($method === "POST") {
             $newlyUnlocked = $accountResult["newlyUnlocked"];
         } catch (Throwable $e) {
             error_log("NaturDex: fallo al recalcular el progreso tras registrar presencia: " . $e->getMessage());
+        }
+        // Lo mismo para la capa científica: lo que se marcó en los primeros minutos de la salida se
+        // registró cuando la visita todavía no estaba verificada, y ahora ya puede colgar de ella.
+        try {
+            occurrencesRefreshVerification($conn, $userId, $parkSlug);
+        } catch (Throwable $e) {
+            error_log("NaturDex: fallo al reenganchar ocurrencias a la visita verificada: " . $e->getMessage());
         }
     }
 

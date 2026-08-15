@@ -71,6 +71,14 @@ Todas viven en `DEFAULTS` (`prefs.js`); añadir una nueva es añadirla ahí y pi
 | `highAccuracyGps` | booleano | `explorer.js` (`enableHighAccuracy`) |
 | `celebrations` | booleano | `achievements.js` (carteles animados) |
 | `achievementSound` | booleano | `achievements.js` (tono al desbloquear) |
+| `shareOccurrences` | booleano, **apagada por defecto** | `Tools/export-dwc.php`, y **desde el espejo del servidor** (`users.prefs`), no desde el dispositivo |
+
+**`shareOccurrences` es distinta de las demás y conviene no tratarla como una preferencia más.** Las
+otras son cosméticas y el dispositivo manda; esta es un **consentimiento para ceder datos personales**
+—los avistamientos salen con el nombre público del observador— y por eso: nace apagada, se explica en
+llano en «Compartir con la ciencia» (dentro de *Datos y almacenamiento*, no en *Ajustes*), y quien la
+lee es el exportador **contra `users.prefs` del servidor**, nunca contra lo que traiga una petición.
+Ausente cuenta como «no». Ver [`DARWIN-CORE.md`](DARWIN-CORE.md) §6.
 
 **Ámbito.** Son por cuenta y por dispositivo: `naturdex.prefs.<u{id}|anon>`, el mismo criterio que
 `progressScope()` (data.js), el tutorial y los logros. `prefs.js` deduce el ámbito leyendo el

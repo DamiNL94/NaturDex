@@ -48,7 +48,14 @@ errores de red que no explican nada, `npm run red:check` lo aclara en diez segun
 `export-park.php` · `export-glossary.php` · `export-invasoras.php` regeneran los JSON empaquetados
 desde la BD (la lógica vive en `Backend/Lib/`). `import-sql.php` ejecuta volcados contra MySQL
 remoto. `recalculate-account-progress.php` recalcula progreso y logros de todos los usuarios.
-`test-presence-rules.php` es `npm test`.
+
+`export-dwc.php` (`npm run export:dwc`) genera el **Darwin Core Archive** de los avistamientos:
+`occurrence.txt` + `meta.xml` + `eml.xml`. Aplica dos reglas que no se pueden delegar en quien reciba
+el fichero —el **consentimiento** del observador y la **generalización** de las coordenadas de los
+taxones amenazados—, y ninguna de las dos vive aquí: están en `Backend/Lib/dwc.php`, que es puro y por
+eso se puede probar sin BD. Ver [`Docs/DARWIN-CORE.md`](../Docs/DARWIN-CORE.md).
+
+`test-presence-rules.php` y `test-dwc-rules.php` son `npm test`.
 
 ## `catalogo-nacional/` — el pipeline por espacio
 

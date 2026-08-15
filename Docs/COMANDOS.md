@@ -27,6 +27,7 @@
 | `npm run tiles:build <slug>` | Paquete de mapa base offline |
 | `npm run trails:build <slug>` | Senderos señalizados (GR, PR, SL) que pasan por el parque |
 | `npm run export:park / :glossary / :invasoras` | Regenera los JSON empaquetados desde la BD |
+| `npm run export:dwc` | **Darwin Core Archive** de los avistamientos (`occurrence.txt` + `meta.xml` + `eml.xml`). Solo salen los usuarios que han dado su consentimiento, y las coordenadas de los taxones amenazados salen generalizadas. `-- --usuario <id\|correo>`, `-- --salida <ruta>`, `-- --zip`. Ver [DARWIN-CORE.md](DARWIN-CORE.md) |
 | `npm run db:status / :pull / :push / :backup` | Sincronización con el MySQL del contenedor |
 
 Ninguna herramienta de Capa 2/3 escribe en la BD ni en el seed directamente (salvo

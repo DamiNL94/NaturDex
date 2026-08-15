@@ -30,7 +30,7 @@
 // v59: Data/achievements.json sube a v3 (umbrales recalibrados, dos métricas nuevas y tres logros
 //      más) y la rejilla pasa a ser un medallero. El JSON ya estaba precacheado, pero un cliente con
 //      la v2 en caché seguiría evaluando con los umbrales viejos hasta que caducara el armazón.
-var VERSION = 'v59';
+var VERSION = 'v60';
 var RUNTIME_CACHE = 'naturdex-runtime-' + VERSION;
 
 // Armazón mínimo que se intenta precachear en la instalación (best-effort).
