@@ -5,6 +5,7 @@
 require_once __DIR__ . "/../Lib/api.php";
 require_once __DIR__ . "/../Lib/presence.php";
 require_once __DIR__ . "/../Lib/account_progress.php";
+require_once __DIR__ . "/../Lib/occurrences.php";
 $conn = apiBoot(["session" => true]);
 $userId = requireUserId();
 $parkSlug = $_GET["park"] ?? "cabo-cope-puntas-calnegre";
@@ -158,6 +159,33 @@ if ($method === "POST") {
 
     if (!writeProgress($conn, $userId, $parkSlug, $progress)) {
         apiError("No se pudo guardar el progreso.", 500);
+    }
+
+    // Capa científica: la misma marca, escrita también como ocurrencia Darwin Core (user_occurrences).
+    // Va DESPUÉS de registrar la presencia —para que la ocurrencia pueda engancharse ya a la visita
+    // que acabe de verificarse— y después de guardar el progreso, y nunca puede tumbar la respuesta:
+    // si esto falla, el progreso del usuario ya está a salvo. Ver Backend/Lib/occurrences.php.
+    try {
+        foreach ($events as $event) {
+            if (!is_array($event) || ($event["type"] ?? null) !== "species") continue;
+            $sid = isset($event["id"]) && is_numeric($event["id"]) ? (int) $event["id"] : null;
+            if ($sid === null) continue;
+            $seen = array_key_exists("seen", $event) ? (bool) $event["seen"] : true;
+            if (!$seen) {
+                occurrenceForget($conn, $userId, occurrenceSpeciesKey($parkSlug, $sid));
+                continue;
+            }
+            occurrenceRecordSpecies($conn, $userId, $parkSlug, $sid, [
+                "lat" => $event["lat"] ?? null, "lng" => $event["lng"] ?? null,
+                "accuracy" => $event["accuracy"] ?? null,
+                // La hora de la CITA es la primera vez que se marcó, no la de este envío: por eso se
+                // toma de `markedAt`, que progress.php nunca pisa, y no del reloj de ahora.
+                "at" => $progress["markedAt"][markKey("species", $sid)] ?? ($event["at"] ?? null),
+            ]);
+        }
+        occurrencesRefreshVerification($conn, $userId, $parkSlug);
+    } catch (Throwable $e) {
+        error_log("NaturDex: fallo al registrar la ocurrencia Darwin Core: " . $e->getMessage());
     }
     if (empty($progress["sightings"])) $progress["sightings"] = (object) [];
     if (empty($progress["markedAt"])) $progress["markedAt"] = (object) [];

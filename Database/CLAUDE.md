@@ -9,7 +9,7 @@ silencio.
 | Fichero | Tamaño | Qué es |
 |---|---|---|
 | `schema.sql` | 24 K | **El DDL.** La definición de las tablas. Toda columna nueva pasa por aquí |
-| `migrations.sql` | 24 K | `ALTER` **idempotentes** para actualizar una instalación antigua. Se aplica antes que nada |
+| `migrations.sql` | 32 K | `ALTER` e `INSERT … SELECT` **idempotentes** para actualizar una instalación antigua. Se aplica antes que nada. Abre con `SET NAMES utf8mb4`: sin eso, el texto con tilde que INSERTE entra doblemente codificado |
 
 ## Generado — **no se editan a mano**
 
@@ -51,6 +51,11 @@ sesión, no un script reejecutable en cualquier estado.
 3. **La contraseña va por `MYSQL_PWD`**, nunca en la línea de órdenes (`Tools/lib/db.js` ya lo hace).
 4. Tras editar en el panel de administración, regenera el empaquetado con
    `npm run export:park -- <slug>` y **sube `manifest.version`**, o el offline no revalida.
+5. **`user_occurrences` es la capa científica, no una copia del progreso.** Sus columnas son términos
+   Darwin Core (`class` y `order` necesitan comillas invertidas: son palabras reservadas). Se deriva
+   de `user_progress` y de `user_invasive_sightings`, que siguen siendo lo que la app lee. Antes de
+   aplicar su migración, `npm run db:backup`: toca datos de usuario. Ver
+   [`Docs/DARWIN-CORE.md`](../Docs/DARWIN-CORE.md).
 
 ## Aplicar
 

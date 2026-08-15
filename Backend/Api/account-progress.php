@@ -3,6 +3,7 @@
 // progress.php (que sigue siendo por parque y no cambia su contrato). Requiere sesión (auth.php).
 require_once __DIR__ . "/../Lib/api.php";
 require_once __DIR__ . "/../Lib/account_progress.php";
+require_once __DIR__ . "/../Lib/occurrences.php";
 $conn = apiBoot(["session" => true]);
 $userId = requireUserId();
 $method = $_SERVER["REQUEST_METHOD"];
@@ -35,6 +36,17 @@ if ($method === "POST") {
             $row = $stmt->get_result()->fetch_assoc();
             if (!$row) apiError("Especie invasora no encontrada.", 404);
             recordInvasiveSeen($conn, $userId, (int) $row["id"]);
+            // Una cita georreferenciada de una especie del Catálogo Español de EEI es lo que más
+            // valor tiene, de todo lo que recoge la app, para quien tiene que gestionar el problema.
+            // Hasta ahora se guardaba sin coordenada y era, por tanto, impublicable.
+            try {
+                occurrenceRecordInvasive($conn, $userId, (int) $row["id"], [
+                    "lat" => $body["lat"] ?? null, "lng" => $body["lng"] ?? null,
+                    "accuracy" => $body["accuracy"] ?? null,
+                ]);
+            } catch (Throwable $e) {
+                error_log("NaturDex: fallo al registrar la ocurrencia de invasora: " . $e->getMessage());
+            }
             $result = recomputeAccountProgress($conn, $userId);
             respond(["totals" => $result["aggregates"], "newlyUnlocked" => $result["newlyUnlocked"]]);
         }

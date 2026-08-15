@@ -14,6 +14,11 @@
 -- Requiere Oracle MySQL 8.0+ (probado en 8.4) o MariaDB 10.5+.
 --     mysql < Database/migrations.sql
 -- ================================================================================================
+-- El fichero es UTF-8, pero el cliente mysql puede conectar en latin1 (es lo que hace `mysql <
+-- fichero` sin más). Sin esta línea, cualquier texto con tilde o ñ que estas migraciones INSERTEN se
+-- guarda doblemente codificado (mojibake) y nadie se entera hasta que alguien lo lee. Es la misma
+-- línea, y por el mismo motivo, que abre Database/schema.sql.
+SET NAMES utf8mb4;
 USE naturadex;
 
 -- ------------------------------------------------------------------------------------------------
@@ -412,3 +417,256 @@ CREATE TABLE IF NOT EXISTS user_park_visits (
 --     php Tools/recalculate-account-progress.php
 DELETE FROM user_achievements;
 DELETE FROM user_account_progress;
+
+-- ================================================================================================
+-- Los avistamientos pasan a ser Darwin Core.
+-- ------------------------------------------------------------------------------------------------
+-- Antes de aplicar esto: `npm run db:backup`. Toca datos de usuario.
+--
+-- Dos partes: la tabla (idéntica a la de Database/schema.sql) y el VOLCADO de lo que ya había. El
+-- volcado es idempotente por la clave única (user_id, source_key): un segundo pase encuentra la fila
+-- y no cambia un byte —ni siquiera el occurrence_id, que es lo que hay que conservar a toda costa
+-- porque es el identificador publicado—.
+--
+-- Lo que NO hace: tocar user_progress ni user_invasive_sightings. Siguen siendo la fuente que la app
+-- lee y lo que hace que el progreso sea local-first; esta tabla se deriva de ellas.
+-- ================================================================================================
+-- Los comentarios de cada columna están en Database/schema.sql; aquí va la definición a secas.
+CREATE TABLE IF NOT EXISTS user_occurrences (
+    occurrence_id CHAR(36) NOT NULL PRIMARY KEY,
+    user_id INT NOT NULL,
+    source_key VARCHAR(190) NOT NULL,
+    occurrence_kind ENUM('especie','invasora') NOT NULL DEFAULT 'especie',
+    catalog_species_id INT NULL,
+    catalog_invasive_id INT NULL,
+    park_slug VARCHAR(120) NULL,
+
+    basis_of_record VARCHAR(40) NOT NULL DEFAULT 'HumanObservation',
+    occurrence_status VARCHAR(20) NOT NULL DEFAULT 'present',
+    individual_count INT UNSIGNED NULL,
+    occurrence_remarks TEXT NULL,
+    recorded_by VARCHAR(160) NULL,
+    recorded_by_id VARCHAR(120) NULL,
+    modified DATETIME NOT NULL,
+
+    event_id INT NULL,
+    event_date DATETIME NOT NULL,
+    sampling_protocol VARCHAR(190) NULL,
+
+    decimal_latitude DECIMAL(10,6) NULL,
+    decimal_longitude DECIMAL(10,6) NULL,
+    geodetic_datum VARCHAR(20) NOT NULL DEFAULT 'WGS84',
+    coordinate_uncertainty_in_meters INT UNSIGNED NULL,
+    georeference_protocol VARCHAR(190) NULL,
+    country_code CHAR(2) NOT NULL DEFAULT 'ES',
+    state_province VARCHAR(120) NULL,
+    county VARCHAR(120) NULL,
+    locality VARCHAR(255) NULL,
+    location_id VARCHAR(190) NULL,
+
+    scientific_name VARCHAR(255) NOT NULL,
+    taxon_rank VARCHAR(40) NULL,
+    kingdom VARCHAR(60) NULL,
+    phylum VARCHAR(120) NULL,
+    `class` VARCHAR(120) NULL,
+    `order` VARCHAR(120) NULL,
+    family VARCHAR(160) NULL,
+    genus VARCHAR(120) NULL,
+    vernacular_name VARCHAR(255) NULL,
+    taxon_id VARCHAR(120) NULL,          -- EIDOS (IEPNB): la nomenclatura canónica del proyecto
+    scientific_name_id VARCHAR(190) NULL, -- identificador nomenclatural (IPNI/IF): hoy no lo tenemos
+    taxon_concept_id VARCHAR(200) NULL,   -- clave GBIF como URL
+
+    identification_verification_status VARCHAR(190) NOT NULL,
+    identified_by VARCHAR(160) NULL,
+    date_identified DATETIME NULL,
+
+    license VARCHAR(190) NULL,
+    rights_holder VARCHAR(160) NULL,
+    institution_code VARCHAR(60) NULL,
+    dataset_name VARCHAR(190) NULL,
+    dataset_id VARCHAR(120) NULL,
+
+    information_withheld TEXT NULL,
+    data_generalizations TEXT NULL,
+
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE KEY unique_occurrence_source (user_id, source_key),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (event_id) REFERENCES user_park_visits(id) ON DELETE SET NULL,
+    INDEX idx_user_occurrences_user (user_id, event_date),
+    INDEX idx_user_occurrences_taxon (scientific_name),
+    INDEX idx_user_occurrences_park (park_slug, event_date)
+);
+
+-- ------------------------------------------------------------------------------------------------
+-- VOLCADO 1/2 · los avistamientos de especies que viven dentro de user_progress.payload.
+-- ------------------------------------------------------------------------------------------------
+-- `payload.sightings` es un objeto indexado por el species_id DE ESE PARQUE: { "<id>": {lat,lng,at} }.
+-- Se recorre con JSON_TABLE sobre JSON_KEYS —en dos tablas derivadas anidadas y sin LATERAL, para que
+-- funcione igual en MySQL 8 y en MariaDB— y se cruza con `species` (taxonomía), `parks` (lugar) y
+-- `user_park_visits` (estado de verificación).
+--
+-- Solo se vuelcan las entradas de `sightings`, es decir, las que tienen COORDENADA. Un "visto" sin
+-- coordenada (marcado sin permiso de GPS) sigue siendo una marca de colección del usuario, pero no es
+-- una cita: no dice dónde ocurrió nada. Se queda donde está, en user_progress, y no se pierde.
+--
+-- Los 600/900 segundos son los márgenes de gracia de Backend/Lib/presence.php (PRESENCE_MARK_PRE_GRACE_S
+-- y PRESENCE_MARK_POST_GRACE_S). Se repiten aquí porque esto es SQL de un solo uso; la regla viva
+-- sigue estando en PHP y es la que gobierna de aquí en adelante.
+--
+-- `payload` es TEXT y NO se hace CAST(... AS JSON): las funciones JSON de MySQL y de MariaDB ya
+-- aceptan una cadena con JSON válido, y ese CAST no existe en MariaDB.
+--
+-- El UUID se construye con RANDOM_BYTES y no con UUID(), que en MySQL es de versión 1 y lleva dentro
+-- la MAC de la máquina y la hora: un identificador que se va a publicar no puede filtrar eso.
+INSERT INTO user_occurrences (
+    occurrence_id, user_id, source_key, occurrence_kind, catalog_species_id, park_slug,
+    basis_of_record, occurrence_status, recorded_by, recorded_by_id, modified,
+    event_id, event_date, sampling_protocol,
+    decimal_latitude, decimal_longitude, geodetic_datum, georeference_protocol,
+    country_code, state_province, county, locality, location_id,
+    scientific_name, kingdom, phylum, `class`, `order`, family, genus, vernacular_name,
+    taxon_id, taxon_concept_id,
+    identification_verification_status, identified_by, date_identified,
+    license, rights_holder, institution_code, dataset_name, dataset_id, occurrence_remarks
+)
+SELECT
+    LOWER(CONCAT(
+        HEX(RANDOM_BYTES(4)), '-', HEX(RANDOM_BYTES(2)), '-4', SUBSTR(HEX(RANDOM_BYTES(2)), 2, 3), '-',
+        SUBSTR('89ab', 1 + FLOOR(RAND() * 4), 1), SUBSTR(HEX(RANDOM_BYTES(2)), 2, 3), '-',
+        HEX(RANDOM_BYTES(6))
+    )),
+    j.user_id,
+    CONCAT('especie:', j.park_slug, ':', j.species_key),
+    'especie',
+    s.id,
+    j.park_slug,
+    'HumanObservation',
+    'present',
+    COALESCE(NULLIF(u.display_name, ''), 'Observador/a de NaturDex'),
+    CONCAT('urn:naturdex:observador:', j.user_id),
+    UTC_TIMESTAMP(),
+    v.id,
+    j.observed_at,
+    'Observación oportunista con aplicación móvil; presencia en el espacio verificada por GPS contra el límite oficial',
+    j.lat,
+    j.lng,
+    'WGS84',
+    'GPS del dispositivo del observador en el momento de marcar',
+    'ES',
+    p.region,
+    p.province,
+    p.name,
+    CONCAT('urn:naturdex:espacio:', p.slug),
+    s.scientific_name,
+    CASE s.kingdom WHEN 'flora' THEN 'Plantae' WHEN 'fauna' THEN 'Animalia' WHEN 'fungi' THEN 'Fungi' ELSE NULL END,
+    s.taxon_phylum, s.taxon_class, s.taxon_order,
+    COALESCE(NULLIF(s.taxon_family, ''), NULLIF(s.family, '')),
+    s.taxon_genus,
+    NULLIF(s.common_name, ''),
+    CAST(s.eidos_taxonid AS CHAR),
+    CASE WHEN s.gbif_species_key IS NULL THEN NULL
+         ELSE CONCAT('https://www.gbif.org/species/', s.gbif_species_key) END,
+    CASE WHEN v.id IS NULL
+         THEN 'Observación ciudadana sin validar por experto; presencia en el espacio no verificada'
+         ELSE 'Observación ciudadana sin validar por experto; presencia en el espacio verificada por GPS' END,
+    COALESCE(NULLIF(u.display_name, ''), 'Observador/a de NaturDex'),
+    j.observed_at,
+    'http://creativecommons.org/licenses/by/4.0/legalcode',
+    COALESCE(NULLIF(u.display_name, ''), 'Observador/a de NaturDex'),
+    'NaturDex',
+    'NaturDex · avistamientos ciudadanos en espacios naturales protegidos de España',
+    'urn:naturdex:dataset:avistamientos-ciudadanos',
+    'Cita anterior a la captura de la precisión del GPS: no consta coordinateUncertaintyInMeters.'
+FROM (
+        SELECT
+            src.user_id, src.park_slug, src.species_key,
+            CAST(JSON_EXTRACT(src.payload, CONCAT('$.sightings."', src.species_key, '".lat')) AS DECIMAL(10,6)) AS lat,
+            CAST(JSON_EXTRACT(src.payload, CONCAT('$.sightings."', src.species_key, '".lng')) AS DECIMAL(10,6)) AS lng,
+            COALESCE(
+                STR_TO_DATE(SUBSTRING(REPLACE(JSON_UNQUOTE(JSON_EXTRACT(src.payload,
+                    CONCAT('$.sightings."', src.species_key, '".at'))), 'T', ' '), 1, 19), '%Y-%m-%d %H:%i:%s'),
+                STR_TO_DATE(SUBSTRING(REPLACE(JSON_UNQUOTE(JSON_EXTRACT(src.payload,
+                    CONCAT('$.markedAt."species:', src.species_key, '"'))), 'T', ' '), 1, 19), '%Y-%m-%d %H:%i:%s'),
+                src.updated_at
+            ) AS observed_at
+        FROM (
+            SELECT up.user_id, up.park_slug, up.updated_at,
+                   up.payload AS payload, k.species_key
+              FROM user_progress up
+              JOIN JSON_TABLE(
+                       JSON_KEYS(up.payload, '$.sightings'),
+                       '$[*]' COLUMNS (species_key VARCHAR(64) PATH '$')
+                   ) k
+             WHERE JSON_VALID(up.payload)
+        ) src
+     ) j
+JOIN users u ON u.id = j.user_id
+JOIN parks p ON p.slug = j.park_slug
+JOIN species s ON s.park_id = p.id AND s.id = CAST(j.species_key AS UNSIGNED)
+LEFT JOIN user_park_visits v
+       ON v.user_id = j.user_id AND v.park_slug = j.park_slug
+      AND v.verified = 1 AND v.suspicious = 0
+      AND j.observed_at BETWEEN DATE_SUB(v.started_at, INTERVAL 600 SECOND)
+                            AND DATE_ADD(v.last_fix_at, INTERVAL 900 SECOND)
+WHERE j.lat IS NOT NULL AND j.lng IS NOT NULL
+  AND j.observed_at IS NOT NULL
+ON DUPLICATE KEY UPDATE occurrence_id = occurrence_id;
+
+-- ------------------------------------------------------------------------------------------------
+-- VOLCADO 2/2 · las invasoras identificadas (user_invasive_sightings).
+-- ------------------------------------------------------------------------------------------------
+-- No tienen coordenada: la tabla nunca la guardó. Se vuelcan igual —una cita sin georreferenciar
+-- sigue siendo una cita, y perderla sería peor— con el hueco DICHO en occurrence_remarks en lugar de
+-- inventado. Desde ahora sí se captura (Backend/Api/account-progress.php).
+-- El lugar que consta es la comunidad autónoma del catálogo EEI, que es su ámbito real: una fila de
+-- especies_invasoras es (especie, CCAA), no (especie, espacio).
+INSERT INTO user_occurrences (
+    occurrence_id, user_id, source_key, occurrence_kind, catalog_invasive_id,
+    basis_of_record, occurrence_status, recorded_by, recorded_by_id, modified,
+    event_date, sampling_protocol, geodetic_datum, country_code, state_province,
+    scientific_name, kingdom, family, vernacular_name, taxon_id, taxon_concept_id,
+    identification_verification_status, identified_by, date_identified,
+    license, rights_holder, institution_code, dataset_name, dataset_id, occurrence_remarks
+)
+SELECT
+    LOWER(CONCAT(
+        HEX(RANDOM_BYTES(4)), '-', HEX(RANDOM_BYTES(2)), '-4', SUBSTR(HEX(RANDOM_BYTES(2)), 2, 3), '-',
+        SUBSTR('89ab', 1 + FLOOR(RAND() * 4), 1), SUBSTR(HEX(RANDOM_BYTES(2)), 2, 3), '-',
+        HEX(RANDOM_BYTES(6))
+    )),
+    isg.user_id,
+    CONCAT('invasora:', isg.invasive_id),
+    'invasora',
+    e.id,
+    'HumanObservation',
+    'present',
+    COALESCE(NULLIF(u.display_name, ''), 'Observador/a de NaturDex'),
+    CONCAT('urn:naturdex:observador:', isg.user_id),
+    UTC_TIMESTAMP(),
+    isg.seen_at,
+    'Identificación de especie exótica invasora desde la ficha de la aplicación',
+    'WGS84',
+    'ES',
+    e.ccaa,
+    e.scientific_name,
+    CASE e.kingdom WHEN 'flora' THEN 'Plantae' WHEN 'fauna' THEN 'Animalia' WHEN 'fungi' THEN 'Fungi' ELSE NULL END,
+    NULL,
+    NULLIF(e.common_name, ''),
+    CAST(e.eidos_taxonid AS CHAR),
+    CASE WHEN e.gbif_species_key IS NULL THEN NULL
+         ELSE CONCAT('https://www.gbif.org/species/', e.gbif_species_key) END,
+    'Observación ciudadana sin validar por experto; presencia en el espacio no verificada',
+    COALESCE(NULLIF(u.display_name, ''), 'Observador/a de NaturDex'),
+    isg.seen_at,
+    'http://creativecommons.org/licenses/by/4.0/legalcode',
+    COALESCE(NULLIF(u.display_name, ''), 'Observador/a de NaturDex'),
+    'NaturDex',
+    'NaturDex · avistamientos ciudadanos en espacios naturales protegidos de España',
+    'urn:naturdex:dataset:avistamientos-ciudadanos',
+    'Cita sin georreferenciar: se registró antes de que la aplicación capturase la posición al marcar una invasora.'
+FROM user_invasive_sightings isg
+JOIN users u ON u.id = isg.user_id
+JOIN especies_invasoras e ON e.id = isg.invasive_id
+ON DUPLICATE KEY UPDATE occurrence_id = occurrence_id;

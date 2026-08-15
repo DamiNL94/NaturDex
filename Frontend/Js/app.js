@@ -306,6 +306,19 @@ function afterSeenChange() {
 // avistamiento no puede verificarse y no contará para los logros, que es justo lo que la barra de
 // presencia le está diciendo por delante. `alsoSeen` son las demás apariciones de la misma especie
 // (otros hábitats): se marcan vistas también, pero sin avistamiento GPS propio.
+// Pide la posición UNA vez y llama a `hecho(coords|null)`. Nunca falla hacia el usuario: si no hay
+// API, si el contexto no es seguro o si deniega el permiso, sigue con `null` y lo marcado se guarda
+// igual. Lo comparten el avistamiento de especie y la identificación de invasora, que necesitan lo
+// mismo (lat, lng y la PRECISIÓN, que es lo que convierte una coordenada en un dato utilizable).
+function conPosicionActual(hecho) {
+  if (geoUnavailableReason()) { hecho(null); return; }
+  navigator.geolocation.getCurrentPosition(
+    pos => hecho({ lat: pos.coords.latitude, lng: pos.coords.longitude, accuracy: pos.coords.accuracy }),
+    () => hecho(null),
+    { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+  );
+}
+
 function captureSighting(numericId, alsoSeen = []) {
   const finish = (coords) => {
     if (coords) state.sightings.set(numericId, { lat: coords.lat, lng: coords.lng });
@@ -323,12 +336,7 @@ function captureSighting(numericId, alsoSeen = []) {
   };
   // Sin geolocalización posible (navegador sin API o contexto no seguro) el avistamiento se marca
   // igual, solo que sin coordenada GPS propia — no bloquea al usuario.
-  if (geoUnavailableReason()) { finish(null); return; }
-  navigator.geolocation.getCurrentPosition(
-    pos => finish({ lat: pos.coords.latitude, lng: pos.coords.longitude, accuracy: pos.coords.accuracy }),
-    () => finish(null),
-    { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
-  );
+  conPosicionActual(finish);
 }
 
 // Avisa UNA VEZ por sesión de que lo que se está marcando no va a contar. El sitio donde duele
@@ -596,7 +604,13 @@ detailPanel.addEventListener('click', event => {
   if (poiBtn) { togglePoiSeen(poiBtn.dataset.togglePoi); warnIfNotVerified(); return; }
   const invasiveBtn = event.target.closest('[data-mark-invasive]');
   if (invasiveBtn) {
-    reportInvasiveSeen(invasiveBtn.dataset.markInvasive, invasiveBtn.dataset.invasiveCcaa).then(() => renderDetail());
+    // La identificación de una invasora se georreferencia igual que un avistamiento: una cita de
+    // especie exótica invasora con coordenada es lo que de verdad le sirve a una administración, y
+    // hasta ahora se guardaba solo la especie y la fecha. Sin permiso de GPS se guarda igual, sin
+    // coordenada, y el hueco queda dicho en el propio registro (Backend/Lib/occurrences.php).
+    const nombre = invasiveBtn.dataset.markInvasive;
+    const ccaa = invasiveBtn.dataset.invasiveCcaa;
+    conPosicionActual(coords => { reportInvasiveSeen(nombre, ccaa, coords).then(() => renderDetail()); });
     return;
   }
   // Desde la etiqueta de hábitat: abrir el catálogo de especies de ese hábitat.

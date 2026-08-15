@@ -22,15 +22,28 @@ export function isInvasiveSeenLocally(scientificName) {
   return getJSON(lsKey('invasiveSeen'), []).includes(normalize(scientificName || ''));
 }
 
-export async function reportInvasiveSeen(scientificName, ccaa) {
+// `coords` ({ lat, lng, accuracy }) es opcional y la aporta app.js con el GPS del momento. Viaja al
+// servidor para que la identificación se guarde también como ocurrencia Darwin Core georreferenciada
+// (Backend/Lib/occurrences.php): una cita de especie exótica invasora sin coordenada no le sirve a
+// nadie que tenga que ir a por ella. Sin permiso de GPS se marca igual, y así queda dicho en el
+// registro; nunca se bloquea al usuario por eso.
+export async function reportInvasiveSeen(scientificName, ccaa, coords) {
   const key = normalize(scientificName || '');
   const list = getJSON(lsKey('invasiveSeen'), []);
   if (!list.includes(key)) { list.push(key); setJSON(lsKey('invasiveSeen'), list); }
   await refreshLocal();
   if (state.userId != null) {
+    // La hora no se manda: la pone el servidor, para que coincida exactamente con el `seen_at` que
+    // escribe user_invasive_sightings y no haya dos fechas de lo mismo.
+    const cuerpo = { type: 'invasive', scientificName, ccaa };
+    if (coords) {
+      cuerpo.lat = coords.lat;
+      cuerpo.lng = coords.lng;
+      if (typeof coords.accuracy === 'number') cuerpo.accuracy = coords.accuracy;
+    }
     // offline: la predicción local ya quedó registrada y se reconcilia al reconectar, así que un
     // fallo aquí no debe romper nada (apiPostQuiet devuelve null en vez de lanzar).
-    const data = await apiPostQuiet('/account-progress.php', { type: 'invasive', scientificName, ccaa });
+    const data = await apiPostQuiet('/account-progress.php', cuerpo);
     if (data) handleServerNewlyUnlocked(data.newlyUnlocked);
   }
 }

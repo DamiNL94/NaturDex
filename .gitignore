@@ -44,3 +44,8 @@ Tools/catalogo-nacional/out/especies-universal-cache.json
 
 # Caché de EIDOS de build-species-seleccion.js: se regenera solo y pesa lo que el catálogo.
 Tools/catalogo-nacional/out/*-eidos-seleccion-cache.json
+
+# Darwin Core Archive generado por Tools/export-dwc.php. Son DATOS DE USUARIO (avistamientos con
+# nombre de observador y coordenadas): no se versionan nunca, ni siquiera "para probar". Lo que sí
+# está versionado es el generador y la documentación de qué contiene (Docs/DARWIN-CORE.md).
+Tools/catalogo-nacional/out/dwc/

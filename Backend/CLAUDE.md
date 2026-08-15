@@ -35,6 +35,8 @@ preflight, sesión, `respond()`); si escribes uno nuevo, empieza por ahí.
 | `account_progress.php` | 443 | Progreso de cuenta y evaluación del catálogo de logros |
 | `session.php` | 214 | Sesión y «seguir conectado» entre aperturas |
 | `geo.php` | 199 | Geometría oficial del lado servidor: punto-en-polígono contra el límite |
+| `dwc.php` | 250 | **El vocabulario Darwin Core**: columna ↔ término ↔ URI, identificadores y reglas de sensibilidad. Puro (sin BD), para poder probarlo con `npm test` |
+| `occurrences.php` | 300 | Escritura y lectura de `user_occurrences`. Lo llaman `progress.php`, `presence.php` y `account-progress.php`; lo lee `Tools/export-dwc.php` |
 
 ## `Config/`
 
@@ -46,7 +48,10 @@ preflight, sesión, `respond()`); si escribes uno nuevo, empieza por ahí.
   desplegado, tocar solo los ficheros del frontend no cambia lo que ve el usuario.
 - **El pipeline de hábitats no pasa por la BD**: `adopt-habitats.js` escribe en `Frontend/` y nada
   más, así que un export desde la API borraría sus cambios. Deuda nº 2.
+- **Marcar algo escribe en DOS sitios**: `user_progress` (lo que la app lee, local-first) y
+  `user_occurrences` (la capa científica en Darwin Core). El segundo va siempre en `try/catch`: si
+  falla, el progreso del usuario ya está a salvo. Ver [`Docs/DARWIN-CORE.md`](../Docs/DARWIN-CORE.md).
 - `murcia_status` está atado a Murcia y toca `Lib/park_payload.php` y `Api/admin.php` (3 sentencias).
   Deuda nº 1: ver [`Docs/DEUDA-TECNICA.md`](../Docs/DEUDA-TECNICA.md).
 
-Pruebas sin BD: `npm test` → `Tools/test-presence-rules.php`.
+Pruebas sin BD: `npm test` → `Tools/test-presence-rules.php` + `Tools/test-dwc-rules.php`.
