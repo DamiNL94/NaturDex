@@ -139,3 +139,13 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     siguiente import. Por eso `validate` lo da como **aviso y no como error**: bloquear el commit por
     una deuda que solo se salda tocando la BD dejaría el repo sin red de seguridad para todo lo demás.
     Es un rato de trabajo, pero hay que hacerlo en el mismo paso que la carga de SQL pendiente.
+18. **Sierra de la Pila y Carrascoy y El Valle siguen construidos sobre la métrica de mosaico.** Los
+    dos cerraron su Capa 3 **antes** del 2026-08-15 (c), que es cuando se descubrió que
+    `gbif-habitats.js` sumaba las ocurrencias **por hábitat** y los recintos del Atlas —que son
+    mosaicos de varios códigos— las multiplicaban. Su selección se hizo con el umbral viejo sobre la
+    cuenta inflada, así que puede haber fichas sostenidas por un solo registro sin que nada lo diga:
+    en El Carche, regenerarlo con la métrica corregida **podó cinco**. Se paga igual que allí —volcado
+    de GBIF nuevo, `species:seleccion`, `species:build --podar`— y de paso conviene **transcribir su
+    anexo normativo**, que ninguno de los dos tiene: el PRUG de Sierra de la Pila sí enumera especies
+    (el PORN de Carrascoy tiene tres inventarios y ninguno es de especies, así que ése quedará con un
+    «no hay» de primera mano). Ver ESTADO.md, §"2026-08-15 (h)".

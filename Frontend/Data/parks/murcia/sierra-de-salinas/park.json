@@ -75,7 +75,8 @@
         35,
         36,
         37,
-        38
+        38,
+        118
       ],
       "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Enebro de la miera (Juniperus oxycedrus), la especie que da nombre al hábitat."
@@ -142,7 +143,8 @@
         35,
         36,
         37,
-        38
+        38,
+        118
       ],
       "imageAttribution": null,
       "imageNote": null
@@ -209,7 +211,8 @@
         35,
         36,
         37,
-        38
+        38,
+        118
       ],
       "imageAttribution": null,
       "imageNote": null
@@ -271,7 +274,8 @@
         35,
         36,
         37,
-        38
+        38,
+        118
       ],
       "imageAttribution": "Picamaderos (CC BY-SA 3.0) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Carrasca (Quercus rotundifolia), la especie que da nombre al hábitat."
@@ -743,7 +747,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 7 ocurrencias dentro de los polígonos de hábitat del espacio (7 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 7 ocurrencias dentro de los polígonos de hábitat del espacio (7 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -1053,7 +1057,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -1160,7 +1164,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -1564,7 +1568,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": true,
-      "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Juniperus oxycedrus subsp. oxycedrus», con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -1724,7 +1728,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -1924,7 +1928,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2027,7 +2031,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": true,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Sorbus aria» (el texto precisa que «apenas se han localizado una decena de ejemplares en los roquedos del Barranco del Lagrimal». La norma la cita como «Sorbus aria»; el backbone de GBIF lo trata como sinónimo de Aria edulis (consultado 2026-08-15)), con la categoría «En Peligro de Extinción (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2101,6 +2105,59 @@
       "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
+      "id": 118,
+      "commonName": "Espantalobos",
+      "scientificName": "Colutea arborescens",
+      "kingdom": "flora",
+      "group": "Arbusto",
+      "habitat": "Bordes de bosque, barrancos y matorral sobre suelos frescos",
+      "conservationStatus": "No catalogada",
+      "description": "Leguminosa arbustiva de flores amarillas y hojas compuestas, célebre por sus frutos: vainas infladas como globos de papel que estallan con un chasquido al apretarlas, de donde le viene el nombre de espantalobos.",
+      "descriptionSource": null,
+      "tips": [
+        "Vainas infladas y traslúcidas, como globos",
+        "Flores amarillas de forma amariposada",
+        "Hojas compuestas por varios pares de foliolos redondeados"
+      ],
+      "seasonality": "Primavera y verano",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Colutea_arborescens01.jpg?width=1280",
+      "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "featured": false,
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Colutea hispanica» (la norma la cita como «Colutea hispanica»; el backbone de GBIF lo trata como sinónimo de Colutea arborescens (consultado 2026-08-15)), con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "taxonomy": {
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Magnoliopsida",
+        "order": "Fabales",
+        "family": "Fabaceae",
+        "genus": "Colutea"
+      },
+      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+      "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)",
+      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "reviewNote": null,
+      "eidosTaxonId": 3496,
+      "gbifSpeciesKey": 7844167,
+      "zepaSiteCode": null,
+      "habitatIds": [
+        "encinares-de-quercus-9340",
+        "matorrales-arborescentes-de-5210",
+        "pendientes-rocosas-calcicolas-8210",
+        "zonas-subestepicas-de-6220"
+      ],
+      "gbifOccurrences": 1,
+      "visible": true
+    },
+    {
       "id": 32,
       "commonName": "Geranio de roca",
       "scientificName": "Erodium saxatile",
@@ -2132,7 +2189,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2189,7 +2246,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Fritillaria hispanica» (la norma la cita como «Fritillaria hispanica»; el backbone de GBIF lo trata como sinónimo de Fritillaria lusitanica (consultado 2026-08-15)), con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2340,7 +2397,7 @@
         "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Odontites viscosus subsp. australis», con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2398,7 +2455,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": true,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Quercus faginea subsp. faginea», con la categoría «Vulnerable (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2455,7 +2512,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2512,7 +2569,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 31 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 31 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -2560,7 +2617,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 26 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 26 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -2604,7 +2661,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 26 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 26 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -2653,7 +2710,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 25 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 25 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Parus ater»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -2705,7 +2762,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 24 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 24 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -2749,7 +2806,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 22 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 22 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -2793,7 +2850,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 21 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 21 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -2845,7 +2902,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 19 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 19 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Falco tunninculus» (errata de la tabla: se lee «tunninculus» por tinnunculus); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -2893,7 +2950,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 19 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 19 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Parus cristatus»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -2945,7 +3002,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 19 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 19 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -3041,7 +3098,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 18 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 18 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Sylvia melanocephala»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -3085,7 +3142,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 17 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 17 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -3133,7 +3190,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 16 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 16 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -3181,7 +3238,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 16 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 16 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -3229,7 +3286,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 14 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 14 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Especies Amenazadas)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -3277,7 +3334,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 14 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 14 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Phoenicrus ochruros» (errata de la tabla: se lee «Phoenicrus» por Phoenicurus ochruros); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -3409,7 +3466,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 12 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 12 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -3453,7 +3510,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 12 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 12 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Sturnur unicolor» (errata de la tabla: se lee «Sturnur» por Sturnus unicolor. Figura también entre las especies cazables del §1.1.2.2.2); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -3505,7 +3562,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 10 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 10 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -3557,7 +3614,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 9 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 9 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -3605,7 +3662,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 8 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 8 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -3657,7 +3714,7 @@
         "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
       },
       "featured": false,
-      "source": "GBIF: 8 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 8 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -3709,7 +3766,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 8 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 8 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -3761,7 +3818,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 8 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 8 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Especies Amenazadas)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -3813,7 +3870,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 8 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 8 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -3865,7 +3922,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 8 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 8 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Saxicola torquata»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -4001,7 +4058,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 7 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 7 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Emberizia cia» (errata de la tabla: se lee «Emberizia» por Emberiza cia); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -4053,7 +4110,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 7 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 7 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -4101,7 +4158,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 7 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 7 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -4249,7 +4306,7 @@
         "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
       },
       "featured": false,
-      "source": "GBIF: 7 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 7 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -4301,7 +4358,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 6 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 6 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -4349,7 +4406,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 6 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 6 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -4397,7 +4454,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 6 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 6 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -4445,7 +4502,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 5 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 5 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -4497,7 +4554,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 5 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 5 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Especies Amenazadas)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -4549,7 +4606,7 @@
         "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
       },
       "featured": false,
-      "source": "GBIF: 5 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 5 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Especies Amenazadas)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -4601,7 +4658,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 4 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 4 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -4693,7 +4750,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 4 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 4 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -4741,7 +4798,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 4 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 4 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -4789,7 +4846,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -4889,7 +4946,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Especies Amenazadas)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -4933,7 +4990,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -4985,7 +5042,7 @@
         "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
       },
       "featured": false,
-      "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Milaria calandra» (errata de la tabla: se lee «Milaria» por Miliaria calandra); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -5077,7 +5134,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Regulus ignicapillus»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -5129,7 +5186,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -5177,7 +5234,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Parus caeruleus» (la norma la cita como «Parus caeruleus»; el backbone de GBIF lo trata como sinónimo de Cyanistes caeruleus (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -5225,7 +5282,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -5277,7 +5334,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -5325,7 +5382,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Carduelis spinus» (la norma la cita como «Carduelis spinus»; el backbone de GBIF lo trata como sinónimo de Spinus spinus (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -5369,7 +5426,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -5422,7 +5479,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -5474,7 +5531,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -5522,7 +5579,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -5574,7 +5631,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Especies Amenazadas)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -5626,7 +5683,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -5714,7 +5771,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Corvus monedula» (especie cazable enumerada en el §1.1.2.2.2 «Fauna de interés cinegético»); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -5754,7 +5811,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -5798,7 +5855,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -5846,7 +5903,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Delichon urbica»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -5994,7 +6051,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -6046,7 +6103,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -6094,7 +6151,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -6198,7 +6255,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -6246,7 +6303,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -6294,7 +6351,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Troglodites troglodites» (errata de la tabla: se lee «Troglodites troglodites» por Troglodytes troglodytes); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",

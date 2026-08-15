@@ -5166,7 +5166,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 69,
@@ -5645,7 +5646,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 77,

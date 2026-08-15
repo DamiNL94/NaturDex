@@ -97,6 +97,10 @@ Orden real de uso; el runbook completo está en
   pertenencia *a ese* espacio, y la única que salva del filtro de presencia. Se transcribe a mano con
   el documento delante; **si no hay anexo con especies, no se inventa uno**: sin entrada, la
   herramienta dice «NO consultado» en vez de callarlo.
+- `data/umbrales-seleccion.json` — el umbral del filtro de presencia cuando un espacio necesita uno
+  distinto del general (2 ocurrencias en 2 hábitats). Con **motivo obligatorio**: un umbral sin motivo
+  es un número a ojo. Existe porque la calibración de un espacio ya se perdió **dos veces** por vivir
+  solo en su informe de cierre — la última le quitó diez fichas a Monte Arabí en silencio.
 - `data/normativa-espacios.json` — de dónde se descarga cada uno de esos planes y **en qué apartado**
   está el inventario. Es el manifiesto que evita repetir la búsqueda documental; los PDF no se
   versionan. Está aquí y no en `fuentes/` porque `fuentes/` está vetado en `permissions.deny`.

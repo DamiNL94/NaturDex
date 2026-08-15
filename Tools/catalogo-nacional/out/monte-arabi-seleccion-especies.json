@@ -14,11 +14,13 @@
       "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
       "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
       "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+      "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+      "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
       "consultado": "2026-08-15",
       "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
     },
     "enumeradas": 168,
-    "casadas": 60
+    "casadas": 61
   },
   "rareza": {
     "1": 44,
@@ -88,11 +90,14 @@
       "anexoNormativo": {
         "citadaComo": "Pyrrhocorax pyrrhocorax",
         "categoria": "Anexo I de la Directiva Aves; De Interés Especial (Catálogo Regional de Especies Amenazadas)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -134,11 +139,14 @@
       "anexoNormativo": {
         "citadaComo": "Juniperus oxycedrus subsp. oxycedrus",
         "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -164,11 +172,14 @@
       "anexoNormativo": {
         "citadaComo": "Serinus serinus",
         "categoria": "Parcialmente migradora (Directiva Aves)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -194,11 +205,14 @@
       "anexoNormativo": {
         "citadaComo": "Turdus merula",
         "categoria": "Parcialmente migradora (Directiva Aves)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -224,11 +238,14 @@
       "anexoNormativo": {
         "citadaComo": "Turdus viscivorus",
         "categoria": "Parcialmente migradora (Directiva Aves)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -269,11 +286,14 @@
       "anexoNormativo": {
         "citadaComo": "Sylvia melanocephala",
         "categoria": null,
+        "nota": "Nombre en desuso: hoy Curruca melanocephala.",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -314,11 +334,14 @@
       "anexoNormativo": {
         "citadaComo": "Fringilla coelebs",
         "categoria": "Parcialmente migradora (Directiva Aves)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -344,11 +367,14 @@
       "anexoNormativo": {
         "citadaComo": "Carduelis carduelis",
         "categoria": "Parcialmente migradora (Directiva Aves)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -389,11 +415,14 @@
       "anexoNormativo": {
         "citadaComo": "Parus cristatus",
         "categoria": null,
+        "nota": "Nombre en desuso: hoy Lophophanes cristatus.",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -434,11 +463,14 @@
       "anexoNormativo": {
         "citadaComo": "Loxia curvirostra",
         "categoria": null,
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -464,11 +496,14 @@
       "anexoNormativo": {
         "citadaComo": "Columba palumbus",
         "categoria": "Parcialmente migradora (Directiva Aves)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -526,11 +561,14 @@
       "anexoNormativo": {
         "citadaComo": "Parus major",
         "categoria": null,
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -556,11 +594,14 @@
       "anexoNormativo": {
         "citadaComo": "Garrulus glandarius",
         "categoria": null,
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -586,11 +627,14 @@
       "anexoNormativo": {
         "citadaComo": "Carduelis cannabia",
         "categoria": "Parcialmente migradora (Directiva Aves)",
+        "nota": "Errata de la tabla: se lee «cannabia» por cannabina.",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -631,11 +675,14 @@
       "anexoNormativo": {
         "citadaComo": "Phoenicrus ochruros",
         "categoria": "Parcialmente migradora (Directiva Aves)",
+        "nota": "Errata de la tabla: se lee «Phoenicrus» por Phoenicurus.",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -678,11 +725,14 @@
       "anexoNormativo": {
         "citadaComo": "Quercus coccifera",
         "categoria": null,
+        "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (sotobosque de umbría), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección.",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -723,11 +773,14 @@
       "anexoNormativo": {
         "citadaComo": "Saxicola torquata",
         "categoria": "Parcialmente migradora (Directiva Aves)",
+        "nota": "Nombre en desuso: el taxón ibérico es hoy Saxicola rubicola.",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -768,11 +821,14 @@
       "anexoNormativo": {
         "citadaComo": "Buteo buteo",
         "categoria": null,
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -798,11 +854,14 @@
       "anexoNormativo": {
         "citadaComo": "Capra pyrenaica",
         "categoria": null,
+        "nota": "Anexo V de la Directiva Hábitats.",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -843,11 +902,14 @@
       "anexoNormativo": {
         "citadaComo": "Erithacus rubecula",
         "categoria": "Parcialmente migradora (Directiva Aves)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -888,11 +950,14 @@
       "anexoNormativo": {
         "citadaComo": "Motacilla alba",
         "categoria": "Parcialmente migradora (Directiva Aves)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -905,7 +970,8 @@
       "gbifOccurrences": 4,
       "habitats": 2,
       "evidence": [
-        "observada_gbif"
+        "observada_gbif",
+        "anexo_normativo"
       ],
       "yaFichadaEn": "sierra-de-el-carche",
       "normas": [],
@@ -914,6 +980,21 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Carduelis chloris",
+        "categoria": "Migradora de llegada regular (Directiva Aves)",
+        "nota": "La norma la cita como «Carduelis chloris»; el backbone de GBIF lo trata como sinónimo de Chloris chloris (consultado 2026-08-15).",
+        "fuente": {
+          "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
+          "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
+          "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
+          "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
+          "consultado": "2026-08-15",
+          "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
+        }
+      },
       "eidosTaxonId": 16434
     },
     {
@@ -950,11 +1031,14 @@
       "anexoNormativo": {
         "citadaComo": "Falco tunninculus",
         "categoria": "Parcialmente migradora (Directiva Aves)",
+        "nota": "Errata de la tabla: se lee «tunninculus» por tinnunculus.",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -995,11 +1079,14 @@
       "anexoNormativo": {
         "citadaComo": "Regulus ignicapillus",
         "categoria": "Parcialmente migradora (Directiva Aves)",
+        "nota": "Nombre en desuso: hoy Regulus ignicapilla.",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -1040,11 +1127,14 @@
       "anexoNormativo": {
         "citadaComo": "Parus ater",
         "categoria": null,
+        "nota": "Nombre en desuso: hoy Periparus ater.",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -1070,11 +1160,14 @@
       "anexoNormativo": {
         "citadaComo": "Sylvia undata",
         "categoria": "Anexo I de la Directiva Aves",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -1115,11 +1208,14 @@
       "anexoNormativo": {
         "citadaComo": "Aegithalos caudatus",
         "categoria": null,
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -1156,11 +1252,14 @@
       "anexoNormativo": {
         "citadaComo": "Columba oenas",
         "categoria": "De Interés Especial (Catálogo Regional de Especies Amenazadas)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -1218,11 +1317,14 @@
       "anexoNormativo": {
         "citadaComo": "Rosmarinus officinalis",
         "categoria": null,
+        "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección.",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -1269,11 +1371,14 @@
       "anexoNormativo": {
         "citadaComo": "Pinus halepensis",
         "categoria": null,
+        "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (pinar), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección.",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -1314,11 +1419,14 @@
       "anexoNormativo": {
         "citadaComo": "Athene noctua",
         "categoria": null,
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -1430,11 +1538,14 @@
       "anexoNormativo": {
         "citadaComo": "Aquila chrysaetos",
         "categoria": "Anexo I de la Directiva Aves; De Interés Especial (Catálogo Regional de Especies Amenazadas)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -1475,11 +1586,14 @@
       "anexoNormativo": {
         "citadaComo": "Galerida theklae",
         "categoria": "Anexo I de la Directiva Aves",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -1505,11 +1619,14 @@
       "anexoNormativo": {
         "citadaComo": "Sturnur unicolor",
         "categoria": null,
+        "nota": "Errata de la tabla: se lee «Sturnur» por Sturnus.",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -1567,11 +1684,14 @@
       "anexoNormativo": {
         "citadaComo": "Ptyonoprogne rupestris",
         "categoria": "Parcialmente migradora (Directiva Aves)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -1597,11 +1717,14 @@
       "anexoNormativo": {
         "citadaComo": "Sarcocapnos enneaphylla subsp. saetabensis",
         "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -1627,11 +1750,14 @@
       "anexoNormativo": {
         "citadaComo": "Cistus clusii",
         "categoria": null,
+        "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección.",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -1674,11 +1800,14 @@
       "anexoNormativo": {
         "citadaComo": "Alauda arvensis",
         "categoria": "Parcialmente migradora (Directiva Aves)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -1736,11 +1865,14 @@
       "anexoNormativo": {
         "citadaComo": "Burhinus oedicnemus",
         "categoria": "Anexo I de la Directiva Aves",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -1798,11 +1930,14 @@
       "anexoNormativo": {
         "citadaComo": "Lanius meridionalis",
         "categoria": null,
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -1873,11 +2008,14 @@
       "anexoNormativo": {
         "citadaComo": "Quercus rotundifolia",
         "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -1918,11 +2056,14 @@
       "anexoNormativo": {
         "citadaComo": "Upupa epops",
         "categoria": "Parcialmente migradora (Directiva Aves)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -1963,11 +2104,14 @@
       "anexoNormativo": {
         "citadaComo": "Oenanthe leucura",
         "categoria": "Anexo I de la Directiva Aves",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -2026,11 +2170,14 @@
       "anexoNormativo": {
         "citadaComo": "Emberizia cia",
         "categoria": null,
+        "nota": "Errata de la tabla: se lee «Emberizia» por Emberiza.",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -2076,11 +2223,14 @@
       "anexoNormativo": {
         "citadaComo": "Bubo bubo",
         "categoria": "Anexo I de la Directiva Aves; De Interés Especial (Catálogo Regional de Especies Amenazadas)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -2106,11 +2256,14 @@
       "anexoNormativo": {
         "citadaComo": "Anthillis cytisoides",
         "categoria": null,
+        "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. Errata del texto: se lee «Anthillis» por Anthyllis.",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -2136,11 +2289,14 @@
       "anexoNormativo": {
         "citadaComo": "Sedum dasyphyllum",
         "categoria": null,
+        "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (roquedos y paredes rocosas), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección.",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -2181,11 +2337,14 @@
       "anexoNormativo": {
         "citadaComo": "Prunella collaris",
         "categoria": "Migradora de llegada regular (Directiva Aves)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -2226,11 +2385,14 @@
       "anexoNormativo": {
         "citadaComo": "Psammodromus algirus",
         "categoria": null,
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -2256,11 +2418,14 @@
       "anexoNormativo": {
         "citadaComo": "Thymelaea tantonraira",
         "categoria": null,
+        "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. Errata del texto: se lee «tantonraira» por tartonraira.",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -2329,11 +2494,14 @@
       "anexoNormativo": {
         "citadaComo": "Corvus corax",
         "categoria": "De Interés Especial (Catálogo Regional de Especies Amenazadas)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -2374,11 +2542,14 @@
       "anexoNormativo": {
         "citadaComo": "Lullula arborea",
         "categoria": "Anexo I de la Directiva Aves",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -2511,11 +2682,14 @@
       "anexoNormativo": {
         "citadaComo": "Anthyllis lagascana",
         "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -2552,11 +2726,14 @@
       "anexoNormativo": {
         "citadaComo": "Rhamnus alaternus",
         "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -2593,11 +2770,14 @@
       "anexoNormativo": {
         "citadaComo": "Arbutus unedo",
         "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -2638,11 +2818,14 @@
       "anexoNormativo": {
         "citadaComo": "Certhia brachydactyla",
         "categoria": null,
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -2708,11 +2891,14 @@
       "anexoNormativo": {
         "citadaComo": "Teucrium franchetianum",
         "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida)",
+        "nota": "El texto del §3.2.4.2.2 lo escribe «Teucrium francheniatum»; la tabla, «franchetianum», que es el nombre correcto.",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -2753,11 +2939,14 @@
       "anexoNormativo": {
         "citadaComo": "Monticola solitarius",
         "categoria": null,
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -2798,11 +2987,14 @@
       "anexoNormativo": {
         "citadaComo": "Clamator glandarius",
         "categoria": "Migradora de llegada regular (Directiva Aves)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -2880,11 +3072,14 @@
       "anexoNormativo": {
         "citadaComo": "Troglodites troglodites",
         "categoria": null,
+        "nota": "Errata de la tabla: se lee «Troglodites troglodites» por Troglodytes troglodytes.",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -2925,11 +3120,14 @@
       "anexoNormativo": {
         "citadaComo": "Accipiter nisus",
         "categoria": "Parcialmente migradora (Directiva Aves)",
+        "nota": null,
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
           "url": "https://murcianatural.carm.es/alfresco/d/a/workspace/SpacesStore/32a88b11-e661-4eb7-99ca-c5f2f59dfd0c/03PGI%20Altiplano_VOLUMEN2.pdf?guest=true",
           "anexo": "Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge.",
+          "cita": "Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025)",
+          "ambito": "el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha",
           "consultado": "2026-08-15",
           "nota": "A diferencia de Sierra de Salinas, aquí el inventario SÍ es el del espacio protegido: el §3.2 describe el Monumento Natural, que no solapa Red Natura 2000, así que el perímetro del inventario y el de NaturDex son el mismo. Las tres tablas de fauna suman 124 taxones, que es exactamente la cifra que el propio §3.2.6 declara como «124 taxones de fauna». Aquila fasciata NO se transcribe: el §3.2.4.2.1 dice que el Monte Arabí es un «antiguo territorio» de la especie y que el plan de recuperación considera su ámbito «área de potencial reintroducción o expansión», que no es una afirmación de presencia — mismo criterio que en Sierra de Salinas. Tampoco se transcriben las tres alóctonas que cita el §3.2.4.2.2 —Ovis aries (muflón de Córcega), Dama dama (gamo) y Ammotragus lervia (arruí)—: el catálogo de especies es de fauna y flora autóctonas y lo no nativo va por el camino de Invasoras, que es regional. Las 24 especies de flora tomadas del texto llevan dicho en su `nota` que salen de la descripción de la vegetación y no de la tabla del Catálogo Regional: la norma afirma su presencia, pero no les asigna categoría."
         }
@@ -3065,11 +3263,6 @@
     },
     {
       "scientificName": "Caprimulgus ruficollis",
-      "categoria": "Migradora de llegada regular (Directiva Aves)",
-      "nota": null
-    },
-    {
-      "scientificName": "Carduelis chloris",
       "categoria": "Migradora de llegada regular (Directiva Aves)",
       "nota": null
     },
@@ -3396,7 +3589,7 @@
     {
       "scientificName": "Stipa tenacissima",
       "categoria": null,
-      "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (espartal de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección."
+      "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (espartal de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. La norma la cita como «Stipa tenacissima»; el backbone de GBIF lo trata como sinónimo de Macrochloa tenacissima (consultado 2026-08-15)."
     },
     {
       "scientificName": "Thymus vulgaris",
@@ -3451,7 +3644,7 @@
     {
       "scientificName": "Teucrium pseudochamaepytis",
       "categoria": null,
-      "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección."
+      "nota": "El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. Errata de la tabla: se lee «pseudochamaepytis» por pseudochamaepitys."
     },
     {
       "scientificName": "Rhamnus lycioides",

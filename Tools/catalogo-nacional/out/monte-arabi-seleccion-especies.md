@@ -9,7 +9,7 @@ Atlas 2005 consultado: 254 especies características para los HIC de este espaci
 
 Fuente: **Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).**, Volumen II, §3.2.4.2 «Especies de fauna y flora» del Monumento Natural Monte Arabí: Tabla 53 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 54 (67 aves de la Directiva Aves — 18 del anexo I y 49 migradoras de llegada regular), Tabla 55 (45 «otras especies de fauna de interés para su conservación») y Tabla 56 (20 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 Vulnerable y 18 De Interés Especial). Se añaden las 24 especies de flora que el texto del §3.2.4.2.2 —repetido en el §3.2.1— enumera al describir el pinar, el espartal, el romeral y los roquedos, y que la Tabla 56 no recoge. · BORM n.º 103, de 6 de mayo de 2025, anuncio 2033 · consultado el 2026-08-15.
 
-Enumera **168 especies**; GBIF confirma **60** dentro de los polígonos de hábitat. Esas llevan evidencia `anexo_normativo` y conservan su plaza aunque tengan pocos registros.
+Enumera **168 especies**; GBIF confirma **61** dentro de los polígonos de hábitat. Esas llevan evidencia `anexo_normativo` y conservan su plaza aunque tengan pocos registros.
 
 
 ### Enumeradas por la norma y sin constancia en GBIF
@@ -44,7 +44,6 @@ La norma del espacio dice que están aquí; el barrido de GBIF no las ha encontr
 | *Apus apus* | Migradora de llegada regular (Directiva Aves) | — |
 | *Apus melba* | Migradora de llegada regular (Directiva Aves) | Nombre en desuso: hoy Tachymarptis melba. |
 | *Caprimulgus ruficollis* | Migradora de llegada regular (Directiva Aves) | — |
-| *Carduelis chloris* | Migradora de llegada regular (Directiva Aves) | — |
 | *Cercotrichas galactotes* | Migradora de llegada regular (Directiva Aves); Vulnerable (Catálogo Español de Especies Amenazadas) | — |
 | *Cuculus canorus* | Migradora de llegada regular (Directiva Aves) | — |
 | *Delichon urbica* | Migradora de llegada regular (Directiva Aves) | Nombre en desuso: hoy Delichon urbicum. |
@@ -109,7 +108,7 @@ La norma del espacio dice que están aquí; el barrido de GBIF no las ha encontr
 | *Teucrium libanitis* | Vulnerable (Catálogo Regional de Flora Silvestre Protegida) | — |
 | *Ulmus minor* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
 | *Viburnum tinus* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
-| *Stipa tenacissima* | — | El §3.2.4.2.2 la nombra en la descripción de la vegetación (espartal de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. |
+| *Stipa tenacissima* | — | El §3.2.4.2.2 la nombra en la descripción de la vegetación (espartal de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. La norma la cita como «Stipa tenacissima»; el backbone de GBIF lo trata como sinónimo de Macrochloa tenacissima (consultado 2026-08-15). |
 | *Thymus vulgaris* | — | El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. |
 | *Sideritis mugronensis* | — | El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. |
 | *Fumana ericoides* | — | El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. |
@@ -120,7 +119,7 @@ La norma del espacio dice que están aquí; el barrido de GBIF no las ha encontr
 | *Teucrium capitatum* | — | El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. |
 | *Aristolochia pistolochia* | — | El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. |
 | *Koelleria vallesiana* | — | El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. Errata del texto: se lee «Koelleria» por Koeleria. |
-| *Teucrium pseudochamaepytis* | — | El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. |
+| *Teucrium pseudochamaepytis* | — | El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. Errata de la tabla: se lee «pseudochamaepytis» por pseudochamaepitys. |
 | *Rhamnus lycioides* | — | El §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. |
 | *Parietaria judaica* | — | El §3.2.4.2.2 la nombra en la descripción de la vegetación (roquedos y paredes rocosas), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. |
 | *Umbilicus rupestris* | — | El §3.2.4.2.2 la nombra en la descripción de la vegetación (roquedos y paredes rocosas), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. |
@@ -182,7 +181,7 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Capra pyrenaica* | Mammalia | 4 | 1 | 1 | observada_gbif, anexo_normativo | carrascoy-y-el-valle |
 | *Erithacus rubecula* | Aves | 4 | 2 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
 | *Motacilla alba* | Aves | 4 | 2 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
-| *Chloris chloris* | Aves | 4 | 2 | 1 | observada_gbif | sierra-de-el-carche |
+| *Chloris chloris* | Aves | 4 | 2 | 1 | observada_gbif, anexo_normativo | sierra-de-el-carche |
 | *Falco tinnunculus* | Aves | 4 | 2 | 2 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Regulus ignicapilla* | Aves | 4 | 2 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
 | *Periparus ater* | Aves | 4 | 2 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |

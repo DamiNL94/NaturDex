@@ -1,0 +1,18 @@
+{
+  "_nota": "Umbral del filtro de PRESENCIA de build-species-seleccion.js cuando un espacio necesita uno distinto del general. El filtro solo actúa sobre lo que NO tiene respaldo documental —protegida, característica del Atlas o enumerada por el anexo normativo—, así que bajarlo no relaja el criterio de las especies documentadas: amplía el margen de las que solo tiene GBIF. El defecto vive en el código (2 ocurrencias en 2 hábitats) y es el que reproduce, sobre la métrica de registros distintos, lo que los primeros espacios obtuvieron con 5 sobre la cuenta inflada por el mosaico del Atlas. Este fichero existe porque la calibración de un espacio ya se perdió dos veces por vivir solo en su informe de cierre: Sierra de Salinas fijó el umbral general en 2 y el defecto del código se quedó en 5, y Monte Arabí bajó el de hábitats a 1 y una regeneración posterior lo habría vuelto a subir sin enterarse, perdiendo diez fichas en silencio. Un espacio SIN entrada aquí usa el defecto: la ausencia no es una decisión, es que no hizo falta. `--min-occ` y `--min-habitats` en la línea de órdenes mandan sobre esto, y entonces la herramienta lo dice.",
+  "_esquema": {
+    "<slug del espacio>": {
+      "minOcurrencias": "Registros DISTINTOS de GBIF dentro de los polígonos de hábitat (opcional)",
+      "minHabitats": "En cuántos de esos polígonos (opcional)",
+      "motivo": "Por qué este espacio necesita un umbral propio. Obligatorio: un umbral sin motivo es un número a ojo",
+      "decidido": "AAAA-MM-DD y sesión en que se calibró"
+    }
+  },
+  "espacios": {
+    "monte-arabi": {
+      "minHabitats": 1,
+      "motivo": "El espacio tiene solo DOS hábitats cartografiados, así que exigir presencia en 2 significa exigirla en el 100 % de ellos, y el 8210 son 16,5 ha de roquedo con seis especies no-aves en total: el filtro dejaba de medir presencia y pasaba a medir el accidente de tener un segundo polígono diminuto. Con 2/2 salen 71 fichas; con 2/1, 83. En Sierra de la Pila, 2 hábitats de 10 es el 20 %; aquí sería el 100 %.",
+      "decidido": "2026-08-15 (f)"
+    }
+  }
+}
