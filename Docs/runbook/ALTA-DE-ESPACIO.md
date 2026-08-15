@@ -46,9 +46,24 @@ códigos HIC nuevos, **amplía `data/hic-nombres.json` y `data/hic-prioritarios.
 
 **Capa 3 · especies — el orden importa, de más sólido a más ruidoso**
 
-0. **El anexo normativo del espacio**, antes que nada. Lee el PORN, el PRUG, el decreto de
+0. **El anexo normativo del espacio**, antes que nada. Mira primero
+   [`data/normativa-espacios.json`](../../Tools/catalogo-nacional/data/normativa-espacios.json): si
+   el plan del espacio ya se ha localizado en otra sesión, ahí están su URL y **el apartado exacto**
+   que trae el inventario, y te ahorras la búsqueda entera. Si no está, búscalo y **añádelo**, aunque
+   la búsqueda salga vacía (`encontrado: false` también es un resultado que vale).
+   > Un plan autonómico rara vez se publica entero en el boletín: el articulado remite a volúmenes
+   > que viven en el gestor documental de la comunidad. El del Altiplano son cuatro volúmenes en el
+   > Alfresco de `murcianatural.carm.es`, y el articulado del BORM no lleva ni una especie.
+   > Para leerlos: `apt-get install poppler-utils` y `pdftotext -layout -enc UTF-8` — **con
+   > `-layout`**, que sin él las columnas de la tabla se refluyen y el nombre científico de una fila
+   > acaba pegado al de la siguiente.
+
+   Lee el PORN, el PRUG, el decreto de
    declaración o el SDF del sitio Natura 2000 y transcribe la lista de especies que enumeren a
    `Tools/catalogo-nacional/data/anexos-normativos.json`, con su cita y la fecha en que lo leíste.
+   Los nombres van **tal y como los escribe la norma** (lo dice su `_esquema`): una errata evidente
+   se anota en `nota`, no se corrige en silencio. Lo que no case con GBIF saldrá en
+   `anexo_sin_constancia`, que es exactamente donde tiene que verse.
    Es la evidencia más fuerte de las cuatro —la única que afirma la pertenencia *a este espacio*— y
    la que salva del filtro de presencia a lo que la norma respalda. **Si no hay anexo con especies,
    no inventes uno**: deja el espacio sin entrada y la herramienta lo dirá («NO consultado») en vez

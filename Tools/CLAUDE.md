@@ -92,6 +92,14 @@ Orden real de uso; el runbook completo está en
 - `data/hic-nombres.json` y `data/hic-prioritarios.json` — **hay que ampliarlos al entrar en una
   provincia nueva.** Un código ausente de `hic-nombres.json` **se salta el filtro marino** y mete un
   hábitat que no debería estar.
+- `data/anexos-normativos.json` — las especies que el PORN, el PRUG o el decreto de declaración de un
+  espacio **enumeran por escrito**. Es la evidencia más fuerte de la Capa 3, la única que afirma la
+  pertenencia *a ese* espacio, y la única que salva del filtro de presencia. Se transcribe a mano con
+  el documento delante; **si no hay anexo con especies, no se inventa uno**: sin entrada, la
+  herramienta dice «NO consultado» en vez de callarlo.
+- `data/normativa-espacios.json` — de dónde se descarga cada uno de esos planes y **en qué apartado**
+  está el inventario. Es el manifiesto que evita repetir la búsqueda documental; los PDF no se
+  versionan. Está aquí y no en `fuentes/` porque `fuentes/` está vetado en `permissions.deny`.
 - `data/curacion-especies.json` — los campos de la ficha universal que ninguna fuente sirve tal cual:
   el **porte** de una planta cuando EIDOS no trae descripción, el **nombre común** usual cuando el que
   EIDOS marca como preferente es un localismo (da «Aguilón» para el alimoche) y las **tres pistas de

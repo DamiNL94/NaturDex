@@ -37,6 +37,13 @@ gbif-cache-*.json
 # Las URLs de las 52 provincias están en fuentes/atlas-habitats-2005-provincias.json, que SÍ se
 # versiona: para rehacer la descarga basta ese fichero.
 Tools/catalogo-nacional/fuentes/atlas-2005/
+# Texto plano del Atlas y Manual de los Hábitats (pdftotext -layout sobre el PDF de Docs/), que es lo
+# que leen atlas:hic y species:seleccion. 2 MB reproducibles en un comando; el PDF sí se versiona.
+Tools/catalogo-nacional/fuentes/atlas.txt
+# PORN, PRUG y planes de gestión descargados del boletín o del gestor documental de la comunidad.
+# Las URL, los apartados con inventario y la fecha de consulta están en
+# Tools/catalogo-nacional/data/normativa-espacios.json, que SÍ se versiona.
+Tools/catalogo-nacional/fuentes/normativa/
 # Caché de respuestas en crudo de EIDOS, GBIF y Wikimedia (build-species-universal.js). Misma regla
 # que el resto de descargas: lo reproducible no se versiona. Lo que sí queda versionado es el
 # resultado —la ficha en data/especies-universal.json— y la curación en data/curacion-especies.json.

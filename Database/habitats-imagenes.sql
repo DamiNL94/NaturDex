@@ -3,6 +3,186 @@
 -- Requiere las columnas habitats.image_attribution e image_note (Database/migrations.sql).
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_cossonianum_kz01.jpg?width=1280',
+  h.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = NULL
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND h.slug = 'acantilados';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://minka-sdg.org/attachments/local_photos/files/944511/original.jpeg',
+  h.image_attribution = 'maxlbe (CC BY 4.0) · GBIF',
+  h.image_note = 'Portada ilustrada con Alhelí de mar (Malcolmia littorea), la especie que da nombre al hábitat.'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND h.slug = 'dunas-malcomietalia';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Elymus_farctus_kz14.jpg?width=1280',
+  h.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = NULL
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND h.slug = 'dunas-embrionarias';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lygeum_spartum_Closeup_12July2009_LagunadelaMata.jpg?width=1280',
+  h.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  h.image_note = NULL
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND h.slug = 'estepas-salinas-albardinal';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tamarix_africana.jpg?width=1280',
+  h.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Taray (Tamarix africana), la especie que da nombre al hábitat.'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND h.slug = 'galeria-ribera';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/-0591_Anabasis_articulata%2C_d%C3%A9sert_d''Almeria%2C_Espagne_P1110397.JPG?width=1280',
+  h.image_attribution = 'Joël Lodé (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = NULL
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND h.slug = 'matorral-semiarido';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_phoenicea_4.JPG?width=1280',
+  h.image_attribution = 'Xemenendura (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = NULL
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND h.slug = 'sabinar-juniperus';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Zizyphus_lotus.JPG?width=1280',
+  h.image_attribution = 'Zeynel Cebeci (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = NULL
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND h.slug = 'azufaifar';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Escobilla_-_Salsola_genistoides.jpg?width=1280',
+  h.image_attribution = 'Yolanda95 (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = NULL
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND h.slug = 'matorral-halonitrofilo';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sarcocornia_perennis_kz01.jpg?width=1280',
+  h.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = NULL
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND h.slug = 'matorral-halofilo';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sarcocapnos_enneaphylla_saetabensis.jpg?width=1280',
+  h.image_attribution = 'Nanosanchez (Public domain) · Wikimedia Commons',
+  h.image_note = NULL
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND h.slug = 'roquedos-casmofiticos';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Close-up_of_a_vegetation_of_the_Alysso-Sedion.jpg?width=1280',
+  h.image_attribution = 'Lendskaip (CC0) · Wikimedia Commons',
+  h.image_note = NULL
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND h.slug = 'prados-alysso-sedion';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Glaucium_flavum_-_Orto_botanico_-_Rome%2C_Italy_-_DSC09962.jpg?width=1280',
+  h.image_attribution = 'Daderot (CC0) · Wikimedia Commons',
+  h.image_note = NULL
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND h.slug = 'rios-glaucium';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cakile_maritima_b.jpg?width=1280',
+  h.image_attribution = 'Taken by Carsten Niehaus (user:Lumbar). (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = NULL
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND h.slug = 'veg-anual-desechos-marinos';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Brachypodium_retusum_hivern_Canyelles.jpg?width=1280',
+  h.image_attribution = 'No machine-readable author provided. Pere prlpz assumed (based on c… (CC BY-SA 2.5) · Wikimedia Commons',
+  h.image_note = NULL
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND h.slug = 'subestepa-thero-brachypodietea';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_albidus_flowers.jpg?width=1280',
+  h.image_attribution = 'Júlio Reis (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Jara blanca (Cistus albidus), la especie que da nombre al hábitat.'
+WHERE p.slug = 'carrascoy-y-el-valle' AND h.slug = 'matorrales-termomediterraneos-y-5330';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhamnus_alaternus1627.JPG?width=1280',
+  h.image_attribution = 'tato grasso (CC BY-SA 2.5) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Aladierno (Rhamnus alaternus), la especie que da nombre al hábitat.'
+WHERE p.slug = 'carrascoy-y-el-valle' AND h.slug = 'pendientes-rocosas-calcicolas-8210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Brachypodium_retusum_espiga_seca.jpg?width=1280',
+  h.image_attribution = 'Pere prlpz (CC BY-SA 2.5) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Lastón (Brachypodium retusum), la especie que da nombre al hábitat.'
+WHERE p.slug = 'carrascoy-y-el-valle' AND h.slug = 'zonas-subestepicas-de-6220';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'carrascoy-y-el-valle' AND h.slug = 'pastizales-salinos-mediterraneos-1410';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'carrascoy-y-el-valle' AND h.slug = 'galerias-y-matorrales-92D0';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'carrascoy-y-el-valle' AND h.slug = 'vegetacion-gipsicola-iberica-1520';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'carrascoy-y-el-valle' AND h.slug = 'aguas-oligomesotroficas-calcareas-3140';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'carrascoy-y-el-valle' AND h.slug = 'estanques-temporales-mediterraneos-3170';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'carrascoy-y-el-valle' AND h.slug = 'rios-mediterraneos-de-3280';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'carrascoy-y-el-valle' AND h.slug = 'prados-humedos-mediterraneos-6420';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'carrascoy-y-el-valle' AND h.slug = 'prados-calcareos-carsticos-6110';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'carrascoy-y-el-valle' AND h.slug = 'manantiales-petrificantes-con-7220';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_coccifera_1.JPG?width=1280',
+  h.image_attribution = 'User:Xemenendura (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Coscoja (Quercus coccifera), la especie que da nombre al hábitat.'
+WHERE p.slug = 'carrascoy-y-el-valle' AND h.slug = 'encinares-de-quercus-9340';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eberswalde_Zoo_12-2017_img2.jpg?width=1280',
+  h.image_attribution = 'A.Savin (FAL) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Jabalí (Sus scrofa), la especie que da nombre al hábitat.'
+WHERE p.slug = 'carrascoy-y-el-valle' AND h.slug = 'rios-mediterraneos-de-3250';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhamnus_alaternus1627.JPG?width=1280',
+  h.image_attribution = 'tato grasso (CC BY-SA 2.5) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Aladierno (Rhamnus alaternus), la especie que da nombre al hábitat.'
+WHERE p.slug = 'carrascoy-y-el-valle' AND h.slug = 'matorrales-arborescentes-de-5210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
   h.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/611359925/original.jpg',
   h.image_attribution = 'Xavier Rufray (CC BY-NC 4.0) · iNaturalist/GBIF · obs. EAU (revisar: existe en salinas de España)',
   h.image_note = 'Portada ilustrada con Sosa jabonera (Halocnemum strobilaceum), la especie que da nombre al hábitat.'
@@ -21,9 +201,9 @@ UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
 WHERE p.slug = 'cuatro-calas' AND h.slug = 'estepas-salinas-mediterraneas-1510';
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
-  h.image_url = NULL,
-  h.image_attribution = NULL,
-  h.image_note = NULL
+  h.image_url = 'https://observation.org/photos/125530399.jpg',
+  h.image_attribution = 'Humedales de Navarra (CC BY-NC-ND 4.0) · observation.org / GBIF',
+  h.image_note = 'Portada ilustrada con Perfollada anual (Bupleurum semicompositum), la especie que da nombre al hábitat.'
 WHERE p.slug = 'cuatro-calas' AND h.slug = 'zonas-subestepicas-de-6220';
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
@@ -43,3 +223,207 @@ UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
   h.image_attribution = 'Quentin Groom (CC0) · GBIF',
   h.image_note = 'Portada ilustrada con Cornical (Periploca angustifolia), la especie que da nombre al hábitat.'
 WHERE p.slug = 'cuatro-calas' AND h.slug = 'matorrales-arborescentes-de-5220';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eberswalde_Zoo_12-2017_img2.jpg?width=1280',
+  h.image_attribution = 'A.Savin (FAL) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Jabalí (Sus scrofa), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-el-carche' AND h.slug = 'matorrales-arborescentes-de-5210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Anthyllis_cytisoides.JPG?width=1280',
+  h.image_attribution = 'Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Albaida (Anthyllis cytisoides), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-el-carche' AND h.slug = 'matorrales-termomediterraneos-y-5330';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_pseudochamaepitys_M_1.jpg?width=1280',
+  h.image_attribution = 'Adrian198cm (Public domain) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Hierba de la calentura (Teucrium pseudochamaepitys), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-el-carche' AND h.slug = 'zonas-subestepicas-de-6220';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carrasca_de_la_Raboseras.JPG?width=1280',
+  h.image_attribution = 'Picamaderos (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Carrasca (Quercus rotundifolia), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-el-carche' AND h.slug = 'encinares-de-quercus-9340';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_pseudochamaepitys_M_1.jpg?width=1280',
+  h.image_attribution = 'Adrian198cm (Public domain) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Hierba de la calentura (Teucrium pseudochamaepitys), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-el-carche' AND h.slug = 'pendientes-rocosas-calcicolas-8210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eberswalde_Zoo_12-2017_img2.jpg?width=1280',
+  h.image_attribution = 'A.Savin (FAL) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Jabalí (Sus scrofa), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-el-carche' AND h.slug = 'vegetacion-gipsicola-iberica-1520';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sedum_sediforme_hojas.jpg?width=1280',
+  h.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Uña de gato (Sedum sediforme), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-el-carche' AND h.slug = 'prados-calcareos-carsticos-6110';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_oxycedrus_g1.jpg?width=1280',
+  h.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Enebro de la miera (Juniperus oxycedrus), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-el-carche' AND h.slug = 'bosques-endemicos-de-9560';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'sierra-de-el-carche' AND h.slug = 'prados-alpinos-y-6170';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/ERINACEA_ANTHYLLIS_-_SANT_MAMET.JPG?width=1280',
+  h.image_attribution = 'Isidre blanc (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Aliaga (Erinacea anthyllis), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-el-carche' AND h.slug = 'matorrales-mediterraneos-y-4090';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pino_secolare_-_Castelleone_di_Suasa.JPG?width=1280',
+  h.image_attribution = 'Accurimbono (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Pino carrasco (Pinus halepensis), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-el-carche' AND h.slug = 'pinares-sub-mediterraneos-9530';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eberswalde_Zoo_12-2017_img2.jpg?width=1280',
+  h.image_attribution = 'A.Savin (FAL) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Jabalí (Sus scrofa), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-la-pila' AND h.slug = 'matorrales-arborescentes-de-5210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_albidus_flowers.jpg?width=1280',
+  h.image_attribution = 'Júlio Reis (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Jara blanca (Cistus albidus), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-la-pila' AND h.slug = 'matorrales-termomediterraneos-y-5330';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Brachypodium_retusum_espiga_seca.jpg?width=1280',
+  h.image_attribution = 'Pere prlpz (CC BY-SA 2.5) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Lastón (Brachypodium retusum), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-la-pila' AND h.slug = 'zonas-subestepicas-de-6220';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'sierra-de-la-pila' AND h.slug = 'prados-calcareos-carsticos-6110';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'sierra-de-la-pila' AND h.slug = 'pendientes-rocosas-calcicolas-8210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_oxycedrus_g1.jpg?width=1280',
+  h.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Enebro de la miera (Juniperus oxycedrus), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-la-pila' AND h.slug = 'bosques-endemicos-de-9560';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eberswalde_Zoo_12-2017_img2.jpg?width=1280',
+  h.image_attribution = 'A.Savin (FAL) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Jabalí (Sus scrofa), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-la-pila' AND h.slug = 'vegetacion-gipsicola-iberica-1520';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_coccifera_1.JPG?width=1280',
+  h.image_attribution = 'User:Xemenendura (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Coscoja (Quercus coccifera), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-la-pila' AND h.slug = 'encinares-de-quercus-9340';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'sierra-de-la-pila' AND h.slug = 'matorrales-mediterraneos-y-4090';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'sierra-de-la-pila' AND h.slug = 'galerias-y-matorrales-92D0';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_phoenicea1.jpg?width=1280',
+  h.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Sabina negral (Juniperus phoenicea), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-espuna' AND h.slug = 'matorrales-arborescentes-de-5210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Anthyllis_cytisoides.JPG?width=1280',
+  h.image_attribution = 'Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Albaida (Anthyllis cytisoides), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-espuna' AND h.slug = 'matorrales-mediterraneos-y-4090';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Brachypodium_retusum_espiga_seca.jpg?width=1280',
+  h.image_attribution = 'Pere prlpz (CC BY-SA 2.5) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Lastón (Brachypodium retusum), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-espuna' AND h.slug = 'zonas-subestepicas-de-6220';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_coccifera_1.JPG?width=1280',
+  h.image_attribution = 'User:Xemenendura (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Coscoja (Quercus coccifera), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-espuna' AND h.slug = 'encinares-de-quercus-9340';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_phoenicea1.jpg?width=1280',
+  h.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Sabina negral (Juniperus phoenicea), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-espuna' AND h.slug = 'bosques-endemicos-de-9560';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Genista_cinerea26de_maig_2007_019.jpg?width=1280',
+  h.image_attribution = 'Victor M. Vicente Selvas (Public domain) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Bolina (Genista cinerea), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-espuna' AND h.slug = 'matorrales-termomediterraneos-y-5330';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Nerium_oleander_flowers_leaves.jpg?width=1280',
+  h.image_attribution = 'Alvesgaspar (CC BY 2.5) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Baladre (Nerium oleander), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-espuna' AND h.slug = 'galerias-y-matorrales-92D0';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'sierra-espuna' AND h.slug = 'prados-humedos-mediterraneos-6420';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sedum_gypsicola_kz01.jpg?width=1280',
+  h.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Pampajarito (Sedum gypsicola), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-espuna' AND h.slug = 'prados-calcareos-carsticos-6110';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Centaurea_saxicola674.jpg?width=1280',
+  h.image_attribution = 'Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Cardo amarillo de roca (Centaurea saxicola), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-espuna' AND h.slug = 'pendientes-rocosas-calcicolas-8210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'sierra-espuna' AND h.slug = 'prados-alpinos-y-6170';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Acer_monspessulanum_fg01.jpg?width=1280',
+  h.image_attribution = 'Fritz Geller-Grimm (CC BY-SA 2.5) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Arce (Acer monspessulanum), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-espuna' AND h.slug = 'robledales-ibericos-de-9240';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Salix_pedicellata_Habitus_2009-9-27_CampoCalatrava.jpg?width=1280',
+  h.image_attribution = 'javier martin (Public domain) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Mimbre (Salix pedicellata), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-espuna' AND h.slug = 'bosques-galeria-de-92A0';

@@ -38,7 +38,7 @@
         -1.268158
       ],
       "color": "#9acd32",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eberswalde_Zoo_12-2017_img2.jpg?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
@@ -201,7 +201,9 @@
         250,
         251,
         252
-      ]
+      ],
+      "imageAttribution": "A.Savin (FAL) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con Jabalí (Sus scrofa), la especie que da nombre al hábitat."
     },
     {
       "id": "matorrales-termomediterraneos-y-5330",
@@ -223,7 +225,7 @@
         -1.237845
       ],
       "color": "#daa520",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_albidus_flowers.jpg?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
@@ -387,7 +389,9 @@
         250,
         251,
         252
-      ]
+      ],
+      "imageAttribution": "Júlio Reis (CC BY-SA 3.0) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con Jara blanca (Cistus albidus), la especie que da nombre al hábitat."
     },
     {
       "id": "zonas-subestepicas-de-6220",
@@ -407,7 +411,7 @@
         -1.235881
       ],
       "color": "#66cdaa",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brachypodium_retusum_espiga_seca.jpg?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
@@ -572,7 +576,9 @@
         250,
         251,
         252
-      ]
+      ],
+      "imageAttribution": "Pere prlpz (CC BY-SA 2.5) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con Lastón (Brachypodium retusum), la especie que da nombre al hábitat."
     },
     {
       "id": "prados-calcareos-carsticos-6110",
@@ -696,7 +702,7 @@
         -1.261285
       ],
       "color": "#9acd32",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_oxycedrus_g1.jpg?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
@@ -796,7 +802,9 @@
         161,
         248,
         249
-      ]
+      ],
+      "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con Enebro de la miera (Juniperus oxycedrus), la especie que da nombre al hábitat."
     },
     {
       "id": "vegetacion-gipsicola-iberica-1520",
@@ -816,7 +824,7 @@
         -1.259049
       ],
       "color": "#9acd32",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eberswalde_Zoo_12-2017_img2.jpg?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
@@ -832,7 +840,9 @@
         126,
         143,
         248
-      ]
+      ],
+      "imageAttribution": "A.Savin (FAL) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con Jabalí (Sus scrofa), la especie que da nombre al hábitat."
     },
     {
       "id": "encinares-de-quercus-9340",
@@ -852,7 +862,7 @@
         -1.247135
       ],
       "color": "#6b8e23",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_coccifera_1.JPG?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
@@ -894,7 +904,9 @@
         155,
         248,
         249
-      ]
+      ],
+      "imageAttribution": "User:Xemenendura (CC BY-SA 3.0) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con Coscoja (Quercus coccifera), la especie que da nombre al hábitat."
     },
     {
       "id": "matorrales-mediterraneos-y-4090",
@@ -1244,7 +1256,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 2,
@@ -1305,7 +1318,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 3,
@@ -1362,7 +1376,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 248,
@@ -1423,7 +1438,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 5,
@@ -1484,7 +1500,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 6,
@@ -1534,7 +1551,9 @@
         "vegetacion-gipsicola-iberica-1520"
       ],
       "gbifOccurrences": 128,
-      "visible": true
+      "visible": true,
+      "rarityBasis": null,
+      "descriptionSource": null
     },
     {
       "id": 7,
@@ -1593,7 +1612,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 8,
@@ -1653,7 +1673,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 9,
@@ -1713,7 +1734,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 10,
@@ -1773,7 +1795,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 11,
@@ -1991,7 +2014,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 15,
@@ -2045,7 +2069,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 16,
@@ -2100,7 +2125,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 17,
@@ -2152,7 +2178,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 18,
@@ -2264,7 +2291,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 20,
@@ -2319,7 +2347,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 21,
@@ -2428,7 +2457,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 23,
@@ -2480,7 +2510,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 24,
@@ -2533,7 +2564,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 25,
@@ -2585,7 +2617,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 250,
@@ -2640,7 +2673,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 27,
@@ -2695,7 +2729,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 28,
@@ -2749,7 +2784,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 29,
@@ -2806,7 +2842,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 30,
@@ -2859,7 +2896,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 31,
@@ -2916,7 +2954,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 32,
@@ -3025,7 +3064,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 34,
@@ -3136,7 +3176,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 36,
@@ -3188,7 +3229,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 37,
@@ -3296,7 +3338,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 39,
@@ -3408,7 +3451,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 41,
@@ -3625,7 +3669,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 45,
@@ -3677,7 +3722,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 46,
@@ -3788,7 +3834,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 48,
@@ -4061,7 +4108,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 53,
@@ -4114,7 +4162,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 54,
@@ -4329,7 +4378,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 58,
@@ -4434,7 +4484,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 60,
@@ -4544,7 +4595,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 62,
@@ -4596,7 +4648,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 63,
@@ -4708,7 +4761,8 @@
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 65,
@@ -4761,7 +4815,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 66,
@@ -4814,7 +4869,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 67,
@@ -4866,7 +4922,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 68,
@@ -4974,7 +5031,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 70,
@@ -5030,7 +5088,8 @@
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 71,
@@ -5139,7 +5198,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 73,
@@ -5191,7 +5251,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 74,
@@ -5352,7 +5413,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 77,
@@ -5510,7 +5572,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 80,
@@ -5562,7 +5625,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 81,
@@ -5666,7 +5730,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 83,
@@ -5722,7 +5787,8 @@
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 84,
@@ -6200,7 +6266,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
-      "rarityBasis": null
+      "rarityBasis": null,
+      "descriptionSource": null
     },
     {
       "id": 93,
@@ -6256,7 +6323,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 94,
@@ -6312,7 +6380,8 @@
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 95,
@@ -6746,7 +6815,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 103,
@@ -6954,7 +7024,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 107,
@@ -7010,7 +7081,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 108,
@@ -7174,7 +7246,8 @@
         "categoria": "LESRPE (RD 139/2011)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 111,
@@ -7227,7 +7300,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 112,
@@ -7279,7 +7353,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 113,
@@ -7331,7 +7406,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 114,
@@ -7547,7 +7623,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 252,
@@ -7602,7 +7679,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 119,
@@ -7655,7 +7733,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 120,
@@ -7816,7 +7895,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 123,
@@ -7867,7 +7947,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 124,
@@ -7971,7 +8052,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 126,
@@ -8023,7 +8105,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 127,
@@ -8231,7 +8314,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 131,
@@ -8282,7 +8366,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 132,
@@ -8333,7 +8418,8 @@
         "ambito": "autonómico",
         "origen": "murciaStatus del park.json"
       },
-      "rarityBasis": null
+      "rarityBasis": null,
+      "descriptionSource": null
     },
     {
       "id": 133,
@@ -8387,7 +8473,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 134,
@@ -8546,7 +8633,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 137,
@@ -8597,7 +8685,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 138,
@@ -8704,7 +8793,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 140,
@@ -8761,7 +8851,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 141,
@@ -8816,7 +8907,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 142,
@@ -9085,7 +9177,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 147,
@@ -9515,7 +9608,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 155,
@@ -9567,7 +9661,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 156,
@@ -9622,7 +9717,8 @@
         "categoria": "LESRPE (RD 139/2011)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 157,
@@ -9673,7 +9769,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 158,
@@ -9992,7 +10089,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 164,
@@ -10039,7 +10137,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 165,
@@ -10086,7 +10185,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 166,
@@ -10133,7 +10233,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 167,
@@ -10180,7 +10281,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 168,
@@ -10227,7 +10329,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 198,
@@ -10278,7 +10381,8 @@
         "categoria": "LESRPE (RD 139/2011)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 169,
@@ -10325,7 +10429,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 171,
@@ -10372,7 +10477,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 172,
@@ -10419,7 +10525,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 173,
@@ -10467,7 +10574,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 174,
@@ -10514,7 +10622,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 175,
@@ -10565,7 +10674,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 176,
@@ -10616,7 +10726,8 @@
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 177,
@@ -10663,7 +10774,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 178,
@@ -10710,7 +10822,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 179,
@@ -10859,7 +10972,8 @@
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 182,
@@ -10906,7 +11020,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 183,
@@ -10953,7 +11068,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 184,
@@ -11000,7 +11116,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 185,
@@ -11047,7 +11164,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 186,
@@ -11098,7 +11216,8 @@
         "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 187,
@@ -11196,7 +11315,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 189,
@@ -11244,7 +11364,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 190,
@@ -11291,7 +11412,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 191,
@@ -11389,7 +11511,8 @@
         "categoria": "Directiva Aves 2009/147/CE, Anexos II y III (especie cinegética)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 193,
@@ -11436,7 +11559,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 194,
@@ -11483,7 +11607,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 195,
@@ -11530,7 +11655,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 196,
@@ -11577,7 +11703,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 197,
@@ -11624,7 +11751,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 199,
@@ -11675,7 +11803,8 @@
         "categoria": "LESRPE (RD 139/2011)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 200,
@@ -11726,7 +11855,8 @@
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 201,
@@ -11773,7 +11903,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 202,
@@ -11820,7 +11951,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 203,
@@ -11867,7 +11999,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 204,
@@ -11914,7 +12047,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 205,
@@ -11965,7 +12099,8 @@
         "categoria": "LESRPE",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 206,
@@ -12016,7 +12151,8 @@
         "categoria": "LESRPE (RD 139/2011)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 207,
@@ -12067,7 +12203,8 @@
         "categoria": "LESRPE (RD 139/2011)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 208,
@@ -12118,7 +12255,8 @@
         "categoria": "LESRPE (RD 139/2011)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 209,
@@ -12169,7 +12307,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 238,
@@ -12216,7 +12355,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 210,
@@ -12263,7 +12403,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 211,
@@ -12357,7 +12498,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 213,
@@ -12404,7 +12546,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 214,
@@ -12502,7 +12645,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 216,
@@ -12553,7 +12697,8 @@
         "categoria": "protegida por la Directiva Aves 2009/147/CE",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 217,
@@ -12604,7 +12749,8 @@
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial, RD 139/2011)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 218,
@@ -12655,7 +12801,8 @@
         "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 219,
@@ -12702,7 +12849,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 221,
@@ -12800,7 +12948,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 223,
@@ -12898,7 +13047,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 225,
@@ -13099,7 +13249,8 @@
         "categoria": "LESRPE",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 229,
@@ -13240,7 +13391,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 232,
@@ -13338,7 +13490,8 @@
         "categoria": "LESRPE (RD 139/2011)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 234,
@@ -13436,7 +13589,8 @@
         "categoria": "Directiva Aves 2009/147/CE, Anexo II (especie cinegética)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 236,
@@ -13577,7 +13731,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 240,
@@ -13624,7 +13779,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 241,
@@ -13718,7 +13874,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 243,
@@ -13769,7 +13926,8 @@
         "categoria": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 244,
@@ -13820,7 +13978,8 @@
         "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 245,
@@ -13871,7 +14030,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 246,
@@ -13922,7 +14082,8 @@
         "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 247,
@@ -13969,7 +14130,8 @@
         "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     }
   ]
 }
