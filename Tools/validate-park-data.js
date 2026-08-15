@@ -569,6 +569,67 @@ function validarCoherenciaEntreParques(parques) {
   }
 }
 
+// --- Logros: catálogo universal y umbrales alcanzables --------------------------------------------
+// Los logros son de ÁMBITO ESTATAL: el mismo texto lo lee alguien en Canarias y alguien en el
+// Pirineo. Vale la regla 3 del CLAUDE.md —un texto universal que nombre un espacio concreto es un
+// error del validador, no un aviso— y se comprueba aquí porque no hay ningún otro sitio donde
+// pueda saltar: `Data/achievements.json` es la fuente única que leen el backend y el frontend.
+//
+// Además se avisa (aviso, no error) de los umbrales que HOY no puede alcanzar nadie con el
+// catálogo dado de alta. No es un error: los umbrales territoriales apuntan a la España entera a
+// propósito, y la app lo dice en la propia medalla. Pero conviene verlo al validar.
+function validarLogros(registry, parques) {
+  const file = path.join(FRONTEND, 'Data', 'achievements.json');
+  if (!fs.existsSync(file)) { err('logros', 'falta Frontend/Data/achievements.json'); return; }
+  const catalogo = readJson(file);
+  const logros = catalogo.achievements || [];
+  console.log('\n\x1b[1m▶ logros de cuenta\x1b[0m');
+
+  // Nombres propios que un texto universal no puede mencionar: espacios, comunidades y provincias.
+  const propios = [];
+  (registry.communities || []).forEach(c => {
+    if (c.name) propios.push(c.name);
+    (c.provinces || []).forEach(p => {
+      if (p.name) propios.push(p.name);
+      (p.parks || []).forEach(e => { if (e.name) propios.push(e.name); });
+    });
+  });
+  const normaliza = s => String(s || '').toLocaleLowerCase('es-ES');
+  let citas = 0;
+  logros.forEach(a => {
+    const texto = normaliza(a.title + ' ' + a.description);
+    propios.forEach(nombre => {
+      if (nombre.length < 5) return; // nombres muy cortos darían falsos positivos dentro de palabras
+      if (texto.includes(normaliza(nombre))) {
+        citas++;
+        err('logros', a.id + ': el texto nombra «' + nombre + '». Los logros son estatales y los lee todo el país.');
+      }
+    });
+  });
+
+  // Ids únicos y estables: un id reciclado le cambia el logro a quien ya lo tenía.
+  const repetidos = duplicates(logros.map(a => a.id));
+  if (repetidos.length) err('logros', 'ids repetidos: ' + repetidos.join(', '));
+
+  // Techo del catálogo, contado de lo que hay dado de alta ahora mismo.
+  const conCatalogo = parques.filter(p => p.status === 'available');
+  const techo = {
+    parksVisited: parques.length,
+    parksCompleted: conCatalogo.length,
+    regionsVisited: (registry.communities || []).filter(c => (c.provinces || []).some(p => (p.parks || []).length)).length,
+    provincesVisited: (registry.communities || []).reduce((n, c) => n + (c.provinces || []).filter(p => (p.parks || []).length).length, 0)
+  };
+  const inalcanzables = logros.filter(a => techo[a.metric] !== undefined && a.threshold > techo[a.metric]);
+  if (inalcanzables.length) {
+    warn('logros', inalcanzables.length + ' logro(s) por encima de lo que permite el catálogo de hoy: '
+      + inalcanzables.map(a => a.id + ' (' + a.threshold + ' > ' + techo[a.metric] + ')').join(', ')
+      + '. La rejilla lo dice en la medalla; revísalos al ampliar el rollout.');
+  }
+  if (!citas && !repetidos.length) {
+    ok(logros.length + ' logros en ' + (catalogo.categories || []).length + ' categorías, sin ningún texto que nombre un espacio o una comunidad');
+  }
+}
+
 // --- main ---------------------------------------------------------------------------------------
 console.log('\x1b[1mNaturDex · validación de datos de parques\x1b[0m');
 if (!fs.existsSync(REGISTRY)) { console.error('No se encontró el registro: ' + REGISTRY); process.exit(2); }
@@ -585,6 +646,7 @@ if (!full.length && !basic.length) { console.log('No hay parques con datos que v
 full.forEach(validatePark);
 basic.forEach(validateBasicPark);
 validarCoherenciaEntreParques(full);
+validarLogros(registry, all.filter(p => p.status === 'available' || p.status === 'basic'));
 
 const total = full.length + basic.length;
 const desglose = full.length + ' completo(s) + ' + basic.length + ' ficha(s) base';

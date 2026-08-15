@@ -270,6 +270,10 @@ function computeAccountAggregates($conn, $userId) {
         "fieldDays" => $field["fieldDays"],
         "weekStreak" => $field["weekStreak"],
         "maxParkRevisitDays" => $field["maxParkRevisitDays"],
+        // Estaciones del año con salida verificada (y el mejor registro dentro de un mismo espacio).
+        // Espejo: computeLocalAggregates() en Frontend/Js/achievements/agregacion.js.
+        "seasonsVisited" => $field["seasonsVisited"],
+        "sameParkSeasons" => $field["sameParkSeasons"],
         "fieldHours" => $field["fieldHours"],
         "fieldKilometers" => $field["fieldKilometers"],
         // --- Estadísticas de la app (se muestran, pero ya no desbloquean nada) --------------------

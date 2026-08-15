@@ -84,23 +84,44 @@ async function achievementById(id) {
   return catalog.find(a => a.id === id) || null;
 }
 
+// El eco de la rareza: el cartel no dice solo «Logro desbloqueado», dice CUÁL de los cuatro es. Un
+// legendario y un común costaban lo mismo de leer, y no cuestan lo mismo de conseguir.
+const RAREZA_ECO = {
+  'comun': 'Logro conseguido',
+  'poco-comun': 'Logro poco común',
+  'raro': 'Logro raro',
+  'legendario': '¡Logro legendario!'
+};
+
+/** «12 de 55 logros»: saber dónde queda el que se acaba de ganar es parte de la recompensa. */
+async function contadorDeLogros() {
+  const catalog = (await loadAchievementsCatalog()).achievements || [];
+  if (!catalog.length) return '';
+  return state.account.achievements.size + ' de ' + catalog.length + ' logros';
+}
+
 async function showCard(id) {
   const ach = await achievementById(id);
   const region = ensureRegion();
+  const rarity = ach ? ach.rarity : 'comun';
   const card = document.createElement('div');
-  card.className = 'achievement-toast rarity-' + (ach ? ach.rarity : 'comun') + (prefersReducedMotion() ? ' reduced' : '');
+  card.className = 'achievement-toast rarity-' + rarity + (prefersReducedMotion() ? ' reduced' : '');
   card.setAttribute('role', 'status');
   card.tabIndex = -1;
   const title = ach ? ach.title : 'Logro desbloqueado';
   const desc = ach ? ach.description : '';
   const emoji = ach ? ach.icon : '🏅';
+  const contador = await contadorDeLogros();
+  // La medalla entra girando; con «menos movimiento» la clase `reduced` la deja quieta (y la regla
+  // global de data-motion="reduce" en styles.css neutraliza además cualquier animación que quedara).
   card.innerHTML = `
-    ${confettiMarkup(ach ? ach.rarity : 'comun')}
-    <span class="achievement-toast-icon" aria-hidden="true">${emoji}</span>
+    ${confettiMarkup(rarity)}
+    <span class="achievement-toast-icon medalla-gira" aria-hidden="true">${emoji}</span>
     <div class="achievement-toast-body">
-      <p class="achievement-toast-eyebrow">Logro desbloqueado</p>
+      <p class="achievement-toast-eyebrow">${escapeText(RAREZA_ECO[rarity] || 'Logro desbloqueado')}</p>
       <strong>${escapeText(title)}</strong>
       <p>${escapeText(desc)}</p>
+      ${contador ? `<p class="achievement-toast-count">${escapeText(contador)}</p>` : ''}
     </div>
     <div class="achievement-toast-actions">
       <button type="button" class="achievement-toast-sound" aria-pressed="${soundEnabled()}" title="${soundEnabled() ? 'Silenciar el sonido de logro' : 'Activar el sonido de logro'}">${soundEnabled() ? '🔊' : '🔈'}</button>

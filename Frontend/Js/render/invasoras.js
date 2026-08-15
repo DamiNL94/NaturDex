@@ -8,7 +8,7 @@ import { isInvasiveSeenLocally } from '../achievements.js';
 import { detailPanel, invasorasPanel } from '../dom.js';
 import { highlightGlossary } from '../glossary.js';
 import { state } from '../state.js';
-import { html, invasoraEmoji, invasoraImageSrc } from '../util.js';
+import { atributosAmpliar, html, invasoraEmoji, invasoraImageSrc } from '../util.js';
 
 // --- Pestaña de invasoras -----------------------------------------------------------------------------
 // Lista de invasoras del parque (filtradas por la CCAA de la región).
@@ -39,7 +39,7 @@ export function renderInvasoraDetail() {
   const identified = isInvasiveSeenLocally(inv.scientificName);
   detailPanel.innerHTML = html`<div class="detail-image-wrap invasora-detail-hero">
     ${hasPhoto
-      ? html`<img src="${inv.image}" alt="${inv.commonName || inv.scientificName}" data-emoji="${emoji}" onerror="window.__invImgFallback(this)">`
+      ? html`<img src="${inv.image}" alt="${inv.commonName || inv.scientificName}" data-emoji="${emoji}" onerror="window.__invImgFallback(this)"${atributosAmpliar(true, inv.commonName || inv.scientificName, inv.imageAttribution ? 'Foto: ' + inv.imageAttribution : '')}>`
       : html`<span class="invasora-hero-emoji" aria-hidden="true">${emoji}</span>`}
     <span class="habitat-detail-kind">Invasora</span>
     </div>

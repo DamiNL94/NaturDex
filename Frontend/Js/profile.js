@@ -263,14 +263,53 @@ function dangerBlock() {
 }
 
 // --- Pintado completo ---------------------------------------------------------------------------
-export async function renderProfile() {
+// UN SOLO PINTADO, y no es un detalle de estilo.
+//
+// Antes se pintaba dos veces: `showProfile` llamaba a `renderProfile` (que abría con «Cargando tu
+// perfil…» y luego pintaba la pantalla entera), después esperaba a `loadServerProfile` y, si había
+// respuesta, volvía a llamar a `renderProfile` — que volvía a poner «Cargando tu perfil…». Es decir:
+// la pantalla se montaba, se desmontaba y se volvía a montar, tirando el scroll y el foco por el
+// camino, y todo para añadir la fecha de alta y un par de cifras. El comentario del código decía
+// «se repinta sin que se note el salto». Se notaba.
+//
+// Ahora el perfil del servidor va EN PARALELO con el resto y se pinta una sola vez, con lo que haya
+// llegado. El peor caso está acotado por su propio ACCOUNT_TIMEOUT_MS, y como invitado o sin
+// cobertura ni siquiera se intenta.
+//
+// `conServidor` distingue las dos llamadas: al ABRIR la pantalla hay que ir a buscarlo; en los
+// repintados de dentro (restablecer ajustes, eliminar una descarga) ya está en memoria y volver a
+// pedirlo solo añadiría una espera de red a un botón que debería responder al instante.
+
+// Esqueleto de la MISMA forma que el contenido final, para que la llegada de los datos no haga
+// saltar la maquetación. Solo se pinta cuando no hay nada que enseñar todavía: en un repintado se
+// deja el contenido anterior a la vista hasta que el nuevo está listo, o entrar, salir y volver a
+// entrar parpadearía igual que antes.
+function esqueleto() {
+  const bloque = alto => html`<div class="profile-skeleton-block" style="height:${alto}px"></div>`;
+  return html`<div class="profile-skeleton" aria-hidden="true">
+    ${bloque(96)}${bloque(200)}${bloque(300)}${bloque(420)}${bloque(260)}${bloque(180)}
+    </div>
+    <p class="sr-only" role="status">Cargando tu perfil…</p>`;
+}
+
+export async function renderProfile({ conServidor = false } = {}) {
   if (!profileBody) return;
-  profileBody.innerHTML = html`<p class="profile-hint">Cargando tu perfil…</p>`;
+  if (!profileBody.childElementCount) profileBody.innerHTML = esqueleto();
 
   // El progreso de cuenta ya sabe funcionar sin red (predice en local); el perfil del servidor es
   // el único dato que puede faltar, y su ausencia solo quita la fecha de alta y un par de cifras.
-  await refreshAccountProgress();
-  const [summary, storage] = await Promise.all([progressSummary(), storageBlock()]);
+  // Los tres van a la vez: ninguno necesita el resultado de los otros.
+  const [, , storage] = await Promise.all([
+    conServidor ? loadServerProfile() : Promise.resolve(),
+    refreshAccountProgress(),
+    storageBlock()
+  ]);
+  const summary = await progressSummary(); // necesita el agregado que acaba de refrescarse
+
+  // El contenedor con scroll es la pantalla entera (.screen-profile). Al vaciar el cuerpo su altura
+  // se desploma y el navegador recorta el scroll a 0; se guarda y se repone alrededor del cambio.
+  const contenedor = profileBody.closest('.screen-profile');
+  const scroll = contenedor ? contenedor.scrollTop : 0;
 
   profileBody.innerHTML = html`${identityCard()}
     ${section('profile-progress', 'award', 'Tu progreso', summary)}
@@ -281,6 +320,8 @@ export async function renderProfile() {
     ${section('profile-help', 'info', 'Ayuda y acerca de', helpBlock())}
     ${isGuest() ? '' : html`<button type="button" class="btn-secondary profile-logout" data-action="logout">${icon('power', 15)} Cerrar sesión</button>`}
     ${isGuest() ? '' : section('profile-danger', 'alert', 'Borrar la cuenta', dangerBlock())}`;
+
+  if (contenedor && scroll) contenedor.scrollTop = scroll;
 }
 
 /** Carga el perfil del servidor y adopta las preferencias espejadas. No bloquea el pintado. */
@@ -299,13 +340,10 @@ async function loadServerProfile() {
   } catch (e) { /* sin red: la pantalla funciona igual con lo local */ }
 }
 
-/** Punto de entrada desde app.js / auth.js: muestra la pantalla y la pinta. */
+/** Punto de entrada desde app.js / auth.js: muestra la pantalla y la pinta (una vez). */
 export async function showProfile() {
   if (window.naturdexShowScreen) window.naturdexShowScreen('screen-profile');
-  await renderProfile();
-  // El perfil del servidor llega después y solo enriquece: se repinta sin que se note el salto.
-  await loadServerProfile();
-  if (serverProfile) await renderProfile();
+  await renderProfile({ conServidor: true });
 }
 
 // ================================================================================================

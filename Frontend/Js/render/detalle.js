@@ -11,13 +11,21 @@ import { highlightGlossary } from '../glossary.js';
 import { groupSwatch, habitatGroup, habitatsOfGroup } from '../habitat-groups.js';
 import { isMarkVerifiedLocally } from '../presence.js';
 import { habitatAreaLabel, habitatSpeciesSeenCount, isHabitatComplete, state } from '../state.js';
-import { habitatImageSrc, html, kingdomEmoji, poiImageSrc, raw, speciesImageSrc } from '../util.js';
+import { atributosAmpliar, habitatImageSrc, html, kingdomEmoji, poiImageSrc, raw, speciesImageSrc } from '../util.js';
 import { renderInvasoraDetail } from './invasoras.js';
 
 // --- Panel de detalle (ficha de especie o de hábitat) ------------------------------------------------
 function renderTaxonomyRow(label, value) {
   if (!value) return '';
   return html`<div><span>${label}</span><strong>${value}</strong></div>`;
+}
+
+// ¿La portada de esta ficha es una foto de verdad o una imagen generada? De ello dependen dos
+// cosas: si la foto se puede ampliar (visor.js) y si hay que citar a alguien por ella.
+function hayFotoPropia(item) { return !!(item && item.image && String(item.image).trim()); }
+function creditoFoto(item) {
+  if (!item || !item.imageAttribution) return '';
+  return 'Foto: ' + item.imageAttribution + (item.imageNote ? ' — ' + item.imageNote : '');
 }
 
 // El panel de detalle de la derecha muestra o bien la etiqueta de una especie o bien la de un
@@ -84,7 +92,7 @@ function renderHabitatDetail() {
     return html`<button type="button" class="habitat-species-chip${wasSeen ? ' seen' : ''}" data-species-chip="${s.id}"><span aria-hidden="true">${kingdomEmoji(s)}</span>${s.commonName}${wasSeen ? html` <span aria-hidden="true">✓</span><span class="sr-only">(vista)</span>` : ''}</button>`;
   });
   detailPanel.innerHTML = html`<div class="detail-image-wrap habitat-detail-image">
-    <img src="${habitatImageSrc(habitat)}" alt="${habitat.name}" onerror="window.__habitatImgFallback(this,'${habitat.id}')">
+    <img src="${habitatImageSrc(habitat)}" alt="${habitat.name}" onerror="window.__habitatImgFallback(this,'${habitat.id}')"${atributosAmpliar(hayFotoPropia(habitat), habitat.name, creditoFoto(habitat))}>
     <span class="habitat-detail-kind">Hábitat</span>
     </div>
     <div class="detail-body">
@@ -124,7 +132,7 @@ function renderPoiDetail() {
   if (!poi) { detailPanel.innerHTML = ''; return; }
   const seen = state.seenPois.has(poi.id);
   detailPanel.innerHTML = html`<div class="detail-image-wrap poi-detail-image">
-    <img src="${poiImageSrc(poi)}" alt="${poi.name}" onerror="window.__poiImgFallback(this)">
+    <img src="${poiImageSrc(poi)}" alt="${poi.name}" onerror="window.__poiImgFallback(this)"${atributosAmpliar(hayFotoPropia(poi), poi.name, creditoFoto(poi))}>
     <span class="habitat-detail-kind">Punto de interés</span>
     </div>
     <div class="detail-body">
@@ -162,7 +170,7 @@ function renderSpeciesDetail() {
   const rareza = species.rarityLocal ?? species.rarityScore ?? 1;
   const stars = '★'.repeat(rareza) + '☆'.repeat(5 - rareza);
   detailPanel.innerHTML = html`<div class="detail-image-wrap">
-    <img src="${speciesImageSrc(species)}" alt="${species.commonName}" onerror="window.__imgFallback(this,${species.id})">
+    <img src="${speciesImageSrc(species)}" alt="${species.commonName}" onerror="window.__imgFallback(this,${species.id})"${atributosAmpliar(hayFotoPropia(species), species.commonName, creditoFoto(species))}>
     </div>
     <div class="detail-body">
     <span class="card-meta"><span class="badge ${species.kingdom}">${species.kingdom}</span>

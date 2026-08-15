@@ -4,7 +4,7 @@
 // Trozo de render.js. El índice de la carpeta está en Frontend/Js/CLAUDE.md.
 // ================================================================================================
 
-import { loadAchievementsCatalog, refreshAccountProgress } from '../achievements.js';
+import { loadAchievementsCatalog, loadRegistry, refreshAccountProgress } from '../achievements.js';
 import { accountProgressBody, progressPanel } from '../dom.js';
 import { groupSwatch, groupedHabitats } from '../habitat-groups.js';
 import { isMarkVerifiedLocally } from '../presence.js';
@@ -107,20 +107,97 @@ function accountStat(value, label) {
   return html`<div class="account-stat"><strong>${value ?? 0}</strong><span>${label}</span></div>`;
 }
 
-function achievementCardHtml(ach, entry, totals) {
+/**
+ * Cuánto territorio y cuántos espacios cubre HOY el catálogo. Se cuenta del registro de espacios
+ * —la única fuente que sabe la verdad en cada momento—, no de una cifra escrita a mano que se
+ * quedaría vieja en la primera alta. Si el registro no está a mano (sin cobertura y sin caché) se
+ * devuelve null y las medallas se pintan sin la nota, que es lo que había antes.
+ */
+async function techoDelCatalogo() {
+  try {
+    const registro = await loadRegistry();
+    const comunidades = (registro && registro.communities) || [];
+    let espacios = 0, completos = 0, provincias = 0;
+    comunidades.forEach(c => (c.provinces || []).forEach(p => {
+      const lista = p.parks || [];
+      if (!lista.length) return;
+      provincias++;
+      espacios += lista.length;
+      completos += lista.filter(e => e.status !== 'basic').length;
+    }));
+    if (!espacios) return null;
+    return { regiones: comunidades.filter(c => (c.provinces || []).some(p => (p.parks || []).length)).length, provincias, espacios, completos };
+  } catch (e) {
+    return null;
+  }
+}
+
+// --- Medallas -------------------------------------------------------------------------------------
+// La rejilla era una lista de tarjetas planas con `opacity:.6` para lo bloqueado: la RAREZA estaba
+// declarada en el catálogo y documentada con su escala, pero no se veía en ninguna parte salvo un
+// filete lateral, y solo en las ya conseguidas. Ahora cada logro es una medalla —disco grande, marco
+// del color de su rareza y cinta con su nombre— para que un legendario se distinga de un común a un
+// metro de distancia, que es la distancia a la que se mira un móvil.
+const RAREZA_LABEL = {
+  'comun': 'Común',
+  'poco-comun': 'Poco común',
+  'raro': 'Raro',
+  'legendario': 'Legendario'
+};
+
+/**
+ * Techo del catálogo: hasta dónde se puede llegar HOY con los espacios dados de alta. Sirve para
+ * decirle al usuario, en la propia medalla, que no es que se le resista: es que la app todavía no
+ * llega ahí. Es la regla 2 del proyecto —hueco documentado antes que dato inventado— aplicada a los
+ * logros: sale del registro de espacios, no de una cifra escrita a mano que se quedaría vieja.
+ */
+function techoDeMetrica(techo, metric) {
+  if (!techo) return null;
+  if (metric === 'regionsVisited') return { max: techo.regiones, que: techo.regiones === 1 ? 'una comunidad autónoma' : techo.regiones + ' comunidades autónomas' };
+  if (metric === 'provincesVisited') return { max: techo.provincias, que: techo.provincias === 1 ? 'una provincia' : techo.provincias + ' provincias' };
+  if (metric === 'parksVisited') return { max: techo.espacios, que: techo.espacios + ' espacios' };
+  if (metric === 'parksCompleted') return { max: techo.completos, que: techo.completos + ' espacios con catálogo completo' };
+  return null;
+}
+
+function medallaHtml(ach, entry, totals, techo) {
   const unlocked = !!entry;
   const value = (totals && totals[ach.metric] !== undefined) ? Number(totals[ach.metric]) || 0 : 0;
-  const showBar = !unlocked && ach.threshold > 1;
-  const pct = showBar ? Math.max(0, Math.min(100, Math.round((value / ach.threshold) * 100))) : 0;
-  return html`<div class="achievement-card rarity-${ach.rarity} ${unlocked ? 'unlocked' : 'locked'}">
-    <span class="achievement-icon" aria-hidden="true">${unlocked ? ach.icon : icon('lock', 20)}</span>
-    <div class="achievement-card-body">
-    <strong>${ach.title}</strong>
-    <p>${ach.description}</p>
-    ${showBar ? html`<div class="achievement-progress"><span class="progress-track"><span class="progress-fill" style="width:${pct}%"></span></span><span class="achievement-progress-label">${Math.min(value, ach.threshold)} / ${ach.threshold}</span></div>`
-      : (!unlocked ? html`<p class="achievement-progress-label">Aún no conseguido</p>` : '')}
-    </div>
-    </div>`;
+  const conBarra = !unlocked && ach.threshold > 1;
+  const pct = conBarra ? Math.max(0, Math.min(100, Math.round((value / ach.threshold) * 100))) : 0;
+  // ¿Está fuera de alcance con el catálogo de hoy? Se dice, y así el usuario no lo lee como que
+  // se le da mal: es la app la que todavía no tiene dónde conseguirlo.
+  const t = !unlocked ? techoDeMetrica(techo, ach.metric) : null;
+  const fueraDeAlcance = t && ach.threshold > t.max;
+  return html`<article class="medalla rareza-${ach.rarity}${unlocked ? ' is-ganada' : ' is-pendiente'}${fueraDeAlcance ? ' is-lejos' : ''}">
+    <span class="medalla-disco" aria-hidden="true"><span class="medalla-icono">${ach.icon}</span></span>
+    <strong class="medalla-titulo">${ach.title}</strong>
+    <span class="medalla-rareza">${RAREZA_LABEL[ach.rarity] || ach.rarity}${unlocked ? html` <span aria-hidden="true">✓</span><span class="sr-only">, conseguida</span>` : ''}</span>
+    <p class="medalla-desc">${ach.description}</p>
+    ${conBarra ? html`<div class="medalla-progreso">
+      <span class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}" aria-label="Progreso hacia «${ach.title}»"><span class="progress-fill" style="width:${pct}%"></span></span>
+      <span class="medalla-cifra">${Math.min(value, ach.threshold)} / ${ach.threshold}</span>
+      </div>` : ''}
+    ${fueraDeAlcance ? html`<p class="medalla-lejos">Todavía no está a tu alcance: NaturDex solo tiene espacios en ${t.que}. Se podrá conseguir según crezca el catálogo.</p>` : ''}
+    </article>`;
+}
+
+/**
+ * Orden dentro de una categoría: primero lo ganado (que se enseña), y después lo que está MÁS CERCA
+ * de caer. Un muro de legendarios inalcanzables por delante desanima; ver que faltan tres puntos de
+ * interés para la siguiente medalla, no.
+ */
+function ordenaPorCercania(items, achievementsMap, totals) {
+  const falta = a => {
+    const value = (totals && totals[a.metric] !== undefined) ? Number(totals[a.metric]) || 0 : 0;
+    return a.threshold > 0 ? Math.min(1, value / a.threshold) : 0; // 1 = a punto de caer
+  };
+  return items.slice().sort((a, b) => {
+    const ga = achievementsMap.has(a.id), gb = achievementsMap.has(b.id);
+    if (ga !== gb) return ga ? -1 : 1;
+    if (ga) return a.threshold - b.threshold; // las ganadas, en el orden en que se consiguieron
+    return falta(b) - falta(a);
+  });
 }
 
 export async function renderAccountProgress() {
@@ -164,12 +241,14 @@ export async function renderAccountProgress() {
     </div>
     <p class="account-note">Aprender también cuenta, pero no da logros: se puede hacer desde casa.</p></div>`;
 
+  const techo = await techoDelCatalogo();
   const sections = (catalog.categories || []).map(cat => {
     const items = (catalog.achievements || []).filter(a => a.category === cat.key);
     if (!items.length) return '';
     const unlockedCount = items.filter(a => achievementsMap.has(a.id)).length;
-    const cards = items.map(a => achievementCardHtml(a, achievementsMap.get(a.id), totals));
-    return html`<div class="account-section"><h3>${cat.icon} ${cat.label} <span class="account-section-count">${unlockedCount}/${items.length}</span></h3><div class="achievement-grid">${cards}</div></div>`;
+    const cards = ordenaPorCercania(items, achievementsMap, totals)
+      .map(a => medallaHtml(a, achievementsMap.get(a.id), totals, techo));
+    return html`<div class="account-section"><h3>${cat.icon} ${cat.label} <span class="account-section-count">· ${unlockedCount} de ${items.length}</span></h3><div class="medallero">${cards}</div></div>`;
   });
 
   accountProgressBody.innerHTML = html`${totalsGrid}${rulesHtml}${regionsHtml}${visitsHtml}${sections}${appStatsHtml}`;

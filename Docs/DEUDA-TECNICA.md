@@ -63,6 +63,10 @@ Cada una se paga mejor ahora que en el espacio número treinta.
 7. **Fotos de florasilvestre.es pendientes de licencia** en Cabo Cope: 13 fichas usadas en el contexto
    de este prototipo educativo. Antes de cualquier uso público hay que confirmar el permiso o
    sustituirlas por equivalentes de licencia libre.
+   > **Sigue abierta, pero se ve mejor desde el 2026-08-14.** El visor de imagen (`Js/visor.js`)
+   > pinta la atribución **debajo de la foto ampliada**, que es donde más se mira: la cita ya no vive
+   > solo en un pie de 11 px al final de la ficha. No paga la deuda —una cita no es un permiso—,
+   > pero deja a la vista de quién es cada foto sin tener que buscarlo.
 8. ~~**Cero POIs en Sierra Espuña y Cuatro Calas.**~~ **PAGADA**: Cuatro Calas cerró su N3 el
    2026-08-08 (4 POIs) y Sierra Espuña el 2026-08-09 (13). El diagnóstico —«no hay fuente con
    coordenadas descargables»— resultó ser medio cierto y medio pereza: **el plan del espacio estaba
@@ -78,7 +82,21 @@ Cada una se paga mejor ahora que en el espacio número treinta.
    POIs**: `caliza`/`calizas` aparece en **87 fichas** de especies y hábitats que llevan meses
    escritas. Es trabajo editorial —`glossary-coverage.js` no adivina definiciones a propósito— y se
    redacta en el bloque `glosario` de `Database/seed.sql`, seguido de `npm run export:glossary`.
+   > **El hueco está ahora a la vista, que era parte del objetivo.** Desde el 2026-08-14 hay una vista
+   > «Diccionario» (`Js/diccionario.js`) que enseña los 219 términos definidos y dice en su pie que
+   > quedan palabras de las fichas por definir. Quien busque `caliza` y no la encuentre lee que es un
+   > hueco conocido, no un fallo del buscador. El trabajo editorial sigue pendiente entero.
 10. **Duplicación consciente**: `AdminPanel/src/api.ts` y el cliente de la API del frontend son dos
     implementaciones del mismo contrato. Se mantienen separadas porque son dos aplicaciones distintas
     (React con build vs. módulos ES sin build).
+11. **`php Tools/recalculate-account-progress.php` pendiente de ejecutar**, desde el 2026-08-14. Ese
+    día se recalibraron cuatro umbrales de `Data/achievements.json` (v3) y entraron tres logros
+    nuevos con dos métricas nuevas; el recálculo hay que lanzarlo **al desplegar**, con la BD viva,
+    que en aquella sesión no estaba levantada. Nadie pierde nada por el retraso —`evaluateAchievements`
+    solo añade, nunca retira, y los cuatro umbrales bajan— pero hasta entonces los logros de las
+    métricas nuevas solo los concede la predicción local, no el servidor.
+12. **Seis logros territoriales fuera de alcance mientras el catálogo siga en una sola comunidad.**
+    Son los de `regionsVisited` y `provincesVisited`: apuntan a la España entera a propósito, y la
+    medalla lo dice con el número que saca del registro, así que no engañan a nadie. Se cierra solo
+    según avance el rollout; `npm run validate` los lista en cada pasada para que no se olviden.
 

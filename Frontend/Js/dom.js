@@ -7,6 +7,10 @@
 // ================================================================================================
 
 // Catálogo (barra lateral)
+// La barra lateral es el contenedor que SCROLLEA en móvil (allí es la pantalla entera): al conmutar
+// de pestaña o de nivel del catálogo hay que devolverla arriba, o la vista entrante aparece a media
+// altura con el texto cortado (ver app.js · vistaArriba).
+export const sidebar = document.querySelector('.sidebar');
 export const speciesList = document.querySelector('#speciesList');
 export const searchInput = document.querySelector('#searchInput');
 export const resultCount = document.querySelector('#resultCount');
@@ -38,6 +42,7 @@ export const basicNotice = document.querySelector('#basicNotice');
 // Pestaña de progreso y panel de detalle
 export const progressPanel = document.querySelector('#progressPanel');
 export const invasorasPanel = document.querySelector('#invasorasPanel');
+export const diccionarioPanel = document.querySelector('#diccionarioPanel');
 export const detailPanel = document.querySelector('#detailPanel');
 export const sheetClose = document.querySelector('#sheetClose'); // cierre de la bottom-sheet (móvil)
 export const sheetScrim = document.querySelector('#sheetScrim'); // velo tras la bottom-sheet (móvil)

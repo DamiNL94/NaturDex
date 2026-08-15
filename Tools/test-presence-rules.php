@@ -84,5 +84,18 @@ if ($boundary) {
     check("Madrid no está dentro del parque", naturdexBoundaryContains($boundary, 40.4168, -3.7038), false);
 }
 
+// --- Estaciones del año (métricas seasonsVisited / sameParkSeasons) ------------------------------
+// El criterio es meteorológico (trimestres completos) y es el MISMO que seasonOfMonth() en
+// Frontend/Js/achievements/almacen.js: si los dos se separan, un logro se gana online y no offline.
+check("diciembre es invierno", presenceSeasonOfMonth(12), "invierno");
+check("febrero sigue siendo invierno", presenceSeasonOfMonth(2), "invierno");
+check("marzo abre la primavera", presenceSeasonOfMonth(3), "primavera");
+check("junio abre el verano", presenceSeasonOfMonth(6), "verano");
+check("septiembre abre el otoño", presenceSeasonOfMonth(9), "otono");
+check("noviembre cierra el otoño", presenceSeasonOfMonth(11), "otono");
+$estaciones = [];
+foreach (range(1, 12) as $m) $estaciones[presenceSeasonOfMonth($m)] = true;
+check("los doce meses caen en cuatro estaciones", count($estaciones), 4);
+
 echo $fail === 0 ? "\nTodas las comprobaciones pasan.\n" : "\n$fail comprobación(es) fallida(s).\n";
 exit($fail === 0 ? 0 : 1);

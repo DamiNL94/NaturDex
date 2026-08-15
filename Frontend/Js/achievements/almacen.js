@@ -102,12 +102,26 @@ function isoWeekStartMs(key) {
 
 // Estadísticas de campo a partir de las visitas VERIFICADAS conocidas por este dispositivo (espejo
 // de presenceFieldStats en el servidor). Nada de esto sale ya de "días en los que marqué algo".
+// Estación del año de un mes, por el criterio meteorológico (trimestres completos). Es el mismo que
+// ya usaba el flag `winterVisit` (diciembre, enero y febrero) y, sobre todo, es una cuenta de
+// CALENDARIO, no una afirmación sobre el clima: en el sur peninsular o en Canarias el invierno no es
+// frío, y un logro no puede dar por hecho el tiempo que hace en la región de nadie.
+// Debe devolver exactamente lo mismo que presenceSeasonOfMonth() en Backend/Lib/presence.php.
+function seasonOfMonth(month) {
+  if (month === 12 || month === 1 || month === 2) return 'invierno';
+  if (month <= 5) return 'primavera';
+  if (month <= 8) return 'verano';
+  return 'otono';
+}
+
 export function localFieldStats() {
   const windows = localVerifiedWindows();
   const days = new Set();
   const perPark = {};
   const parks = new Set();
   let seconds = 0, meters = 0, longest = 0, earlyBird = false, winterVisit = false;
+  const seasons = new Set();       // estaciones distintas con alguna salida verificada
+  const seasonsPerPark = {};       // ...y las de cada espacio, para las cuatro estaciones en el mismo sitio
 
   windows.forEach(w => {
     const start = new Date(w.startedAt);
@@ -123,10 +137,18 @@ export function localFieldStats() {
     if (hour < 8) earlyBird = true;
     const month = Number(date.slice(5, 7));
     if (month === 12 || month === 1 || month === 2) winterVisit = true;
+    const season = seasonOfMonth(month);
+    seasons.add(season);
+    (seasonsPerPark[w.park] || (seasonsPerPark[w.park] = new Set())).add(season);
   });
 
   let maxParkRevisitDays = 0;
   Object.values(perPark).forEach(set => { maxParkRevisitDays = Math.max(maxParkRevisitDays, set.size); });
+
+  // "Volver al mismo sitio en las cuatro estaciones" se mide por espacio y se queda con el mejor: el
+  // mérito es conocer UN sitio en sus cuatro caras, no haber pisado cuatro sitios distintos.
+  let sameParkSeasons = 0;
+  Object.values(seasonsPerPark).forEach(set => { sameParkSeasons = Math.max(sameParkSeasons, set.size); });
 
   const weekKeys = Array.from(new Set(Array.from(days).map(isoWeekKey))).sort();
   let best = 0, current = 0, prevMs = null;
@@ -143,6 +165,8 @@ export function localFieldStats() {
     fieldDays: days.size,
     weekStreak: best,
     maxParkRevisitDays,
+    seasonsVisited: seasons.size,
+    sameParkSeasons,
     fieldHours: Math.floor(seconds / 3600),
     fieldKilometers: Math.floor(meters / 1000),
     longestVisitHours: Math.floor(longest / 3600),

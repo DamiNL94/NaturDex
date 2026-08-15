@@ -108,11 +108,18 @@ No hace falta tocar código en ninguno de los dos lados. Añade una entrada al a
   `computeLocalAggregates()` (JS) — mira `Backend/Lib/account_progress.php` para la lista completa
   (`speciesSeen`, `parksVisited`, `parksCompleted`, `regionsVisited`, `provincesVisited`,
   `habitatsCompleted`, `poisSeen`, `gpsSightings`, `fieldDays`, `weekStreak`, `maxParkRevisitDays`,
-  `fieldHours`, `fieldKilometers`, o un flag de sabor como `earlyBird`/`winterVisit`/`longVisit`).
+  `seasonsVisited`, `sameParkSeasons`, `fieldHours`, `fieldKilometers`, o un flag de sabor como
+  `earlyBird`/`winterVisit`/`longVisit`).
   `invasiveSeen` y `glossaryViewed` siguen en el agregado, pero **son estadísticas**: no uses una
   métrica que se pueda cumplir sin salir de casa, o vuelves al problema que este sistema resuelve.
 - `category` debe existir en el array `categories` del mismo fichero (o añade una nueva ahí también).
 - `threshold` es el valor de esa métrica que desbloquea el logro (para los flags de sabor, siempre 1).
+  **Se calibra contra el catálogo real**, no contra el que nos gustaría tener: un logro que hoy no
+  puede conseguir nadie con ningún esfuerzo no es raro, es imposible, y desanima igual que uno
+  regalado. `npm run validate` avisa de los umbrales que se salen de lo que el registro permite.
+  La excepción consciente son los territoriales (`regionsVisited`, `provincesVisited`), que apuntan
+  a la España entera desde el principio: ahí la app **dice en la propia medalla** que el catálogo
+  todavía no llega, en vez de dejar que el usuario lo descubra intentándolo.
 
 Si el logro necesita una métrica que **no existe todavía** (por ejemplo, algo que no se pueda derivar
 de `user_progress`/`user_activity_log`), hace falta código: añade el cálculo a
