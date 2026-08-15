@@ -234,6 +234,52 @@ function etiquetaConservacion(normas, iucnGlobal) {
   return codigo ? codigo[0] : 'No catalogada';
 }
 
+/*
+ * El respaldo documental se quedaba en el informe y no llegaba a la ficha.
+ *
+ * `build-species-seleccion.js` llama al anexo normativo «la evidencia más fuerte de las cuatro» —es
+ * la única que afirma, oficial y por escrito, que la especie pertenece a ESTE espacio; GBIF solo
+ * prueba que alguien la registró dentro del polígono y el Atlas solo que es característica del tipo
+ * de hábitat—, la calcula especie a especie y la deja en `anexoNormativo`. Y aquí se tiraba: el
+ * `source` citaba GBIF, el Atlas, EIDOS y la ZEPA, y de la norma no decía ni una palabra. En los
+ * tres espacios con anexo transcrito eran **0 fichas de 513** las que nombraban su norma; con esto
+ * son 417 de 537. Un fallo en verde de manual: nada avisaba, porque el dato estaba bien calculado y
+ * bien guardado — en el fichero que no se publica.
+ *
+ * Lo que se escribe NO es «la norma dice que está aquí» sin más, porque no siempre es eso. El
+ * inventario del Plan del Altiplano para Sierra de Salinas es el de la **ZEC ES6200008** (1.337,8
+ * ha), no el del Paisaje Protegido (2.395,4 ha), y afirmar lo segundo sería afirmar de más
+ * (CLAUDE.md, regla nº 2). Por eso el perímetro lo dice el propio anexo en su campo `ambito`, y sin
+ * él la ficha lo deja **sin precisar** en vez de dar por hecho que coinciden.
+ *
+ * Y se dice también CON QUÉ NOMBRE la cita: las normas escriben *Sylvia melanocephala* o *Parus
+ * ater*, que es nomenclatura en desuso, y a veces con erratas de imprenta. El `nombreCorregido` del
+ * anexo hace que el cruce no se pierda por una letra; esto hace que el lector pueda encontrar la
+ * entrada en el documento.
+ */
+// La nota del anexo está redactada como oración suelta («Errata de la tabla: …»); dentro de un
+// paréntesis, a media frase, la mayúscula inicial sobra. Solo la primera letra, y solo si es letra.
+const minuscula = (s) => String(s).replace(/^\p{Lu}/u, (c) => c.toLowerCase());
+
+function fuenteDelAnexo(sel) {
+  const a = sel.anexoNormativo;
+  if (!a) return null;
+  const f = a.fuente || {};
+  // `norma` es un párrafo entero: en un `source` no cabe. `cita` es la misma referencia abreviada;
+  // si el anexo no la trae, se usa la primera oración de `norma`, que es el título y el rango.
+  const cita = f.cita || String(f.norma || '').split(/\.\s+(?=[A-ZÁÉÍÓÚ])/)[0] || 'norma sin cita';
+  const ambito = f.ambito || 'un inventario cuyo perímetro el anexo no precisa';
+  const partes = [`${cita}: la norma la enumera en ${ambito}`];
+  if (a.citadaComo && a.citadaComo !== sel.scientificName) {
+    partes.push(`, que la cita como «${a.citadaComo}»`);
+    // La salvedad de la entrada del anexo. Sin ella, un nombre mal impreso en el boletín —«Falco
+    // tunninculus», «Milaria calandra»— parece una errata de NaturDex y no de la norma.
+    if (a.nota) partes.push(` (${minuscula(a.nota).replace(/\.$/, '')})`);
+  }
+  if (a.categoria) partes.push(`, con la categoría «${a.categoria}»`);
+  return partes.join('');
+}
+
 /**
  * `source`: la referencia concreta que respalda LA CITA EN ESTE ESPACIO. No es la ficha de la
  * especie —eso es universal— sino por qué consta que vive aquí.
@@ -256,6 +302,8 @@ function fuenteDe(sel, gbif, fecha, zepa) {
       ` (${nHab} hábitat${nHab === 1 ? '' : 's'}; barrido de ${fecha})`);
   if ((sel.evidence || []).includes('caracteristica'))
     partes.push('Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí');
+  const anexo = fuenteDelAnexo(sel);
+  if (anexo) partes.push(anexo);
   if ((sel.normas || []).length)
     partes.push('EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal');
   else

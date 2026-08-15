@@ -1,6 +1,6 @@
 # sierra-de-salinas · selección de especies
 
-Generada el 2026-08-15. **118 aprobadas** (79 aves), 106 ya fichadas en otro espacio y 12 nuevas. 178 excluidas.
+Generada el 2026-08-15. **119 aprobadas** (79 aves), 108 ya fichadas en otro espacio y 11 nuevas. 177 excluidas.
 
 Atlas 2005 consultado: 591 especies características para los HIC de este espacio.
 
@@ -9,7 +9,7 @@ Atlas 2005 consultado: 591 especies características para los HIC de este espaci
 
 Fuente: **Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan es el que trae la información específica de cada espacio; su §1.1 corresponde a la ZEC ES6200008 «Sierra de Salinas», que es la Red Natura 2000 que solapa el Paisaje Protegido.**, Volumen II, §1.1.2.2 «Especies de fauna y flora» de la ZEC ES6200008: Tabla 5 (12 especies de los anexos II y IV de la Directiva Hábitats), Tabla 6 (65 aves de la Directiva Aves — 16 del anexo I y 49 migratorias de llegada regular), Tabla 7 (53 «otras especies de interés para su conservación»), §1.1.2.2.2 (14 especies cazables) y Tabla 8 (40 especies de flora del Catálogo Regional de Flora Silvestre Protegida: 2 En Peligro de Extinción, 5 Vulnerable y 33 De Interés Especial). Se añaden las dos especies que la Tabla 9 y el §1.1.2.2.3 enumeran y la Tabla 8 no recoge. · BORM n.º 103, de 6 de mayo de 2025, anuncio 2033 · consultado el 2026-08-15.
 
-Enumera **182 especies**; GBIF confirma **64** dentro de los polígonos de hábitat. Esas llevan evidencia `anexo_normativo` y conservan su plaza aunque tengan pocos registros.
+Enumera **182 especies**; GBIF confirma **79** dentro de los polígonos de hábitat. Esas llevan evidencia `anexo_normativo` y conservan su plaza aunque tengan pocos registros.
 
 
 ### Enumeradas por la norma y sin constancia en GBIF
@@ -19,7 +19,7 @@ La norma del espacio dice que están aquí; el barrido de GBIF no las ha encontr
 | Especie | Categoría en la norma | Nota |
 |---|---|---|
 | *Felis silvestris* | De Interés Especial (Catálogo Regional de Especies Amenazadas) | — |
-| *Eptesicus isabelinus* | — | La tabla escribe «Eptesicus isabelinus (antes E. serotinus)»; el epíteto al uso es isabellinus. |
+| *Eptesicus isabelinus* | — | La tabla escribe «Eptesicus isabelinus (antes E. serotinus)»; el epíteto al uso es isabellinus. Errata de la tabla: se lee «isabelinus» por isabellinus. |
 | *Miniopterus schreibersii* | — | — |
 | *Nyctalus lasiopterus* | — | — |
 | *Pipistrellus kuhlii* | — | La columna del Catálogo regional trae «RP», que no es una categoría de ese catálogo sino del Listado de Especies Silvestres en Régimen de Protección Especial: se deja sin categoría en vez de interpretarla. |
@@ -37,24 +37,19 @@ La norma del espacio dice que están aquí; el barrido de GBIF no las ha encontr
 | *Alauda arvensis* | — | — |
 | *Apus melba* | — | — |
 | *Caprimulgus ruficollis* | — | — |
-| *Carduelis spinus* | — | — |
 | *Cercotrichas galactotes* | — | El texto la sitúa «En Peligro» en el Libro Rojo Español; la tabla la da Vulnerable en el Catálogo Español y sin categoría en el regional. |
 | *Clamator glandarius* | — | — |
 | *Emberiza schoeniclus* | — | — |
 | *Falco subbuteo* | — | — |
-| *Falco tunninculus* | — | Errata de la tabla: se lee «tunninculus» por tinnunculus. |
 | *Hirundo daurica* | — | — |
 | *Luscinia megarhynchos* | — | — |
-| *Milaria calandra* | — | Errata de la tabla: se lee «Milaria» por Miliaria calandra. |
 | *Oenanthe hispanica* | — | — |
 | *Oenanthe oenanthe* | — | — |
 | *Otus scops* | — | — |
 | *Passer montanus* | — | — |
-| *Phoenicrus ochruros* | — | Errata de la tabla: se lee «Phoenicrus» por Phoenicurus ochruros. |
 | *Prunella collaris* | — | — |
 | *Prunella modularis* | — | — |
 | *Regulus regulus* | — | — |
-| *Saxicola torquata* | — | — |
 | *Sylvia borin* | — | — |
 | *Sylvia cantillans* | — | — |
 | *Sylvia conspicillata* | — | — |
@@ -66,14 +61,7 @@ La norma del espacio dice que están aquí; el barrido de GBIF no las ha encontr
 | *Cisticola juncidis* | — | — |
 | *Columba oenas* | De Interés Especial (Catálogo Regional de Especies Amenazadas) | — |
 | *Dendrocopos major* | — | — |
-| *Emberizia cia* | — | Errata de la tabla: se lee «Emberizia» por Emberiza cia. |
-| *Parus ater* | — | — |
-| *Parus caeruleus* | — | — |
-| *Parus cristatus* | — | — |
 | *Picus viridis* | — | — |
-| *Sturnur unicolor* | — | Errata de la tabla: se lee «Sturnur» por Sturnus unicolor. Figura también entre las especies cazables del §1.1.2.2.2. |
-| *Sylvia melanocephala* | — | — |
-| *Troglodites troglodites* | — | Errata de la tabla: se lee «Troglodites troglodites» por Troglodytes troglodytes. |
 | *Crocidura russula* | — | — |
 | *Eliomys quercinus* | — | — |
 | *Erinaceus europaeus* | — | — |
@@ -109,13 +97,11 @@ La norma del espacio dice que están aquí; el barrido de GBIF no las ha encontr
 | *Buxus sempervirens* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
 | *Celtis australis* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
 | *Colutea brevialata* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
-| *Colutea hispanica* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
 | *Dictamnus hispanicus* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
 | *Ephedra nebrodensis subsp. nebrodensis* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
 | *Erica multiflora* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
-| *Fritillaria hispanica* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
 | *Guillonea scabra* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
-| *Juniperus phoenicea subsp. Phoenicea* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | La tabla escribe el epíteto de la subespecie en mayúscula: «subsp. Phoenicea». |
+| *Juniperus phoenicea subsp. Phoenicea* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | La tabla escribe el epíteto de la subespecie en mayúscula: «subsp. Phoenicea». La norma la cita como «Juniperus phoenicea subsp. Phoenicea», con el epíteto de la subespecie en mayúscula; el backbone de GBIF no reconoce el trinomio y lo resuelve a Juniperus phoenicea (consultado 2026-08-15). |
 | *Linaria cavanillesii* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
 | *Micromeria fruticosa* | Vulnerable (Catálogo Regional de Flora Silvestre Protegida) | La Tabla 9 declara que el Barranco del Lagrimal «contiene la mejor población» de la especie. |
 | *Phillyrea media* | En Peligro de Extinción (Catálogo Regional de Flora Silvestre Protegida) | El texto la cita en zonas de umbría «con un número muy escaso de ejemplares en la Región». |
@@ -123,12 +109,11 @@ La norma del espacio dice que están aquí; el barrido de GBIF no las ha encontr
 | *Populus alba* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
 | *Populus nigra* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
 | *Rhamnus hispanorum* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
-| *Rhamnus pumilis* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | La tabla escribe «Rhamnus pumilis» y le da como nombre común «chopera»; el nombre al uso es Rhamnus pumila. |
+| *Rhamnus pumilis* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | La tabla escribe «Rhamnus pumilis» y le da como nombre común «chopera»; el nombre al uso es Rhamnus pumila. El backbone de GBIF no resuelve este nombre a rango específico: devuelve la familia Rhamnaceae, y tampoco reconoce Rhamnus pumila (consultado 2026-08-15). Sin nombre verificado no se escribe corrección. |
 | *Sanguisorba ancistroides* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
 | *Sarcocapnos enneaphylla subsp. saetabensis* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
 | *Saxifraga corsica subsp. cossoniana* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | La Tabla 9 declara el Barranco del Lagrimal «la única localidad murciana» de la subespecie. |
 | *Seseli montanum subsp. granatense* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
-| *Sorbus aria* | En Peligro de Extinción (Catálogo Regional de Flora Silvestre Protegida) | El texto precisa que «apenas se han localizado una decena de ejemplares en los roquedos del Barranco del Lagrimal». |
 | *Teucrium franchetianum* | Vulnerable (Catálogo Regional de Flora Silvestre Protegida) | — |
 | *Teucrium libanitis* | Vulnerable (Catálogo Regional de Flora Silvestre Protegida) | — |
 | *Teucrium rivasii* | De Interés Especial (Catálogo Regional de Flora Silvestre Protegida) | — |
@@ -147,7 +132,7 @@ Tramo 1–5 derivado **solo** de la categoría legal vigente; no interviene ning
 | 4 | Vulnerable · Sensible a la alteración de su hábitat | 1 | 2 |
 | 3 | De interés especial | 0 | 13 |
 | 2 | En régimen de protección especial (LESRPE) | 56 | 52 |
-| 1 | Sin figura de protección | 61 | 49 |
+| 1 | Sin figura de protección | 62 | 50 |
 | **≥ 4** | **candidatas a destacadas** | **1** | **4** |
 
 ## Figuras legales que no cuentan como protección
@@ -170,32 +155,32 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | Especie | Clase | Occ. | Háb. | Rareza | Evidencia | Ya fichada en |
 |---|---|---:|---:|---:|---|---|
 | *Fringilla coelebs* | Aves | 31 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
-| *Turdus merula* | Aves | 26 | 4 | 1 | observada_gbif, anexo_normativo | sierra-de-el-carche |
+| *Turdus merula* | Aves | 26 | 4 | 1 | observada_gbif, anexo_normativo | monte-arabi |
 | *Parus major* | Aves | 26 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
-| *Periparus ater* | Aves | 25 | 4 | 2 | observada_gbif, protegida | carrascoy-y-el-valle |
+| *Periparus ater* | Aves | 25 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
 | *Loxia curvirostra* | Aves | 24 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
-| *Turdus viscivorus* | Aves | 22 | 4 | 1 | observada_gbif, anexo_normativo | sierra-de-el-carche |
-| *Columba palumbus* | Aves | 21 | 4 | 1 | observada_gbif, anexo_normativo | sierra-de-el-carche |
+| *Turdus viscivorus* | Aves | 22 | 4 | 1 | observada_gbif, anexo_normativo | monte-arabi |
+| *Columba palumbus* | Aves | 21 | 4 | 1 | observada_gbif, anexo_normativo | monte-arabi |
 | *Lullula arborea* | Aves | 19 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
-| *Lophophanes cristatus* | Aves | 19 | 4 | 2 | observada_gbif, protegida | carrascoy-y-el-valle |
-| *Serinus serinus* | Aves | 19 | 4 | 1 | observada_gbif | sierra-de-el-carche |
-| *Falco tinnunculus* | Aves | 19 | 4 | 2 | observada_gbif, protegida | cabo-cope-puntas-calnegre |
-| *Curruca melanocephala* | Aves | 18 | 4 | 2 | observada_gbif, protegida | cabo-cope-puntas-calnegre |
-| *Pica pica* | Aves | 17 | 4 | 1 | observada_gbif, anexo_normativo | sierra-de-el-carche |
+| *Lophophanes cristatus* | Aves | 19 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
+| *Serinus serinus* | Aves | 19 | 4 | 1 | observada_gbif | monte-arabi |
+| *Falco tinnunculus* | Aves | 19 | 4 | 2 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
+| *Curruca melanocephala* | Aves | 18 | 4 | 2 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
+| *Pica pica* | Aves | 17 | 4 | 1 | observada_gbif, anexo_normativo | monte-arabi |
 | *Aegithalos caudatus* | Aves | 16 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
 | *Erithacus rubecula* | Aves | 16 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
 | *Corvus corax* | Aves | 14 | 4 | 1 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
-| *Phoenicurus ochruros* | Aves | 14 | 4 | 2 | observada_gbif, protegida | carrascoy-y-el-valle |
+| *Phoenicurus ochruros* | Aves | 14 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
 | *Streptopelia decaocto* | Aves | 13 | 4 | 1 | observada_gbif | sierra-de-el-carche |
-| *Carduelis carduelis* | Aves | 13 | 4 | 1 | observada_gbif | sierra-de-el-carche |
+| *Carduelis carduelis* | Aves | 13 | 4 | 1 | observada_gbif | monte-arabi |
 | *Pinus halepensis* | Pinopsida | 13 | 6 | 1 | observada_gbif | cabo-cope-puntas-calnegre |
-| *Sturnus unicolor* | Aves | 12 | 4 | 1 | observada_gbif | sierra-de-la-pila |
-| *Garrulus glandarius* | Aves | 12 | 4 | 1 | observada_gbif, anexo_normativo | sierra-de-el-carche |
+| *Sturnus unicolor* | Aves | 12 | 4 | 1 | observada_gbif, anexo_normativo | monte-arabi |
+| *Garrulus glandarius* | Aves | 12 | 4 | 1 | observada_gbif, anexo_normativo | monte-arabi |
 | *Galerida theklae* | Aves | 10 | 4 | 2 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Rosmarinus officinalis* | Magnoliopsida | 10 | 6 | 1 | observada_gbif | cabo-cope-puntas-calnegre |
 | *Lanius meridionalis* | Aves | 9 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
-| *Saxicola rubicola* | Aves | 8 | 4 | 2 | observada_gbif, protegida | cabo-cope-puntas-calnegre |
-| *Turdus philomelos* | Aves | 8 | 4 | 1 | observada_gbif | sierra-de-el-carche |
+| *Saxicola rubicola* | Aves | 8 | 4 | 2 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
+| *Turdus philomelos* | Aves | 8 | 4 | 1 | observada_gbif | monte-arabi |
 | *Certhia brachydactyla* | Aves | 8 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
 | *Galerida cristata* | Aves | 8 | 4 | 2 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Accipiter nisus* | Aves | 8 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
@@ -203,8 +188,8 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Circaetus gallicus* | Aves | 8 | 4 | 2 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Cistus clusii* | Magnoliopsida | 8 | 6 | 1 | observada_gbif | cabo-cope-puntas-calnegre |
 | *Phylloscopus collybita* | Aves | 7 | 4 | 2 | observada_gbif, protegida | carrascoy-y-el-valle |
-| *Chloris chloris* | Aves | 7 | 4 | 1 | observada_gbif | sierra-de-el-carche |
-| *Emberiza cia* | Aves | 7 | 4 | 2 | observada_gbif, protegida | carrascoy-y-el-valle |
+| *Chloris chloris* | Aves | 7 | 4 | 1 | observada_gbif | monte-arabi |
+| *Emberiza cia* | Aves | 7 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
 | *Monticola solitarius* | Aves | 7 | 4 | 2 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Picus sharpei* | Aves | 7 | 4 | 2 | observada_gbif, protegida | carrascoy-y-el-valle |
 | *Phylloscopus bonelli* | Aves | 7 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
@@ -218,16 +203,16 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Pyrrhocorax pyrrhocorax* | Aves | 5 | 4 | 1 | observada_gbif, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Cuculus canorus* | Aves | 5 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
 | *Falco peregrinus* | Aves | 5 | 4 | 2 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
-| *Rhamnus oleoides* | Magnoliopsida | 5 | 6 | 1 | observada_gbif | — |
+| *Rhamnus oleoides* | Magnoliopsida | 5 | 6 | 1 | observada_gbif | monte-arabi |
 | *Sylvia atricapilla* | Aves | 4 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
 | *Passer domesticus* | Aves | 4 | 4 | 1 | observada_gbif | sierra-de-el-carche |
 | *Buteo buteo* | Aves | 4 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
 | *Petronia petronia* | Aves | 4 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
 | *Cistus laurifolius* | Magnoliopsida | 4 | 4 | 1 | observada_gbif | sierra-de-el-carche |
-| *Linaria cannabina* | Aves | 3 | 4 | 1 | observada_gbif | sierra-de-el-carche |
+| *Linaria cannabina* | Aves | 3 | 4 | 1 | observada_gbif | monte-arabi |
 | *Aquila chrysaetos* | Aves | 3 | 4 | 2 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
-| *Emberiza calandra* | Aves | 3 | 4 | 1 | observada_gbif | cabo-cope-puntas-calnegre |
-| *Columba livia* | Aves | 3 | 4 | 1 | observada_gbif, anexo_normativo | sierra-de-el-carche |
+| *Emberiza calandra* | Aves | 3 | 4 | 1 | observada_gbif, anexo_normativo | cabo-cope-puntas-calnegre |
+| *Columba livia* | Aves | 3 | 4 | 1 | observada_gbif, anexo_normativo | monte-arabi |
 | *Apus pallidus* | Aves | 3 | 4 | 2 | observada_gbif, protegida | carrascoy-y-el-valle |
 | *Apus apus* | Aves | 3 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
 | *Regulus ignicapilla* | Aves | 3 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
@@ -236,14 +221,14 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Arenaria montana* | Magnoliopsida | 3 | 4 | 1 | observada_gbif | sierra-de-el-carche |
 | *Populus canadensis* | Magnoliopsida | 2 | 4 | 1 | observada_gbif | — |
 | *Arbutus unedo* | Magnoliopsida | 2 | 4 | 1 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
-| *Sylvia undata* | Aves | 2 | 4 | 1 | observada_gbif, anexo_normativo | sierra-de-el-carche |
+| *Sylvia undata* | Aves | 2 | 4 | 1 | observada_gbif, anexo_normativo | monte-arabi |
 | *Emberiza cirlus* | Aves | 2 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
-| *Spinus spinus* | Aves | 2 | 4 | 2 | observada_gbif, protegida | carrascoy-y-el-valle |
+| *Spinus spinus* | Aves | 2 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
 | *Athene noctua* | Aves | 2 | 4 | 2 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Lanius senator* | Aves | 2 | 4 | 2 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Upupa epops* | Aves | 2 | 4 | 2 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Psammodromus algirus* | Squamata | 2 | 4 | 2 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
-| *Cyanistes caeruleus* | Aves | 2 | 4 | 2 | observada_gbif, protegida | carrascoy-y-el-valle |
+| *Cyanistes caeruleus* | Aves | 2 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
 | *Digitalis obscura* | Magnoliopsida | 2 | 4 | 1 | observada_gbif | carrascoy-y-el-valle |
 | *Orchis mascula* | Liliopsida | 2 | 4 | 1 | observada_gbif | — |
 | *Arabis auriculata* | Magnoliopsida | 2 | 6 | 1 | observada_gbif | sierra-de-el-carche |
@@ -262,28 +247,29 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Ptyonoprogne rupestris* | Aves | 1 | 4 | 2 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Bubo bubo* | Aves | 1 | 4 | 2 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Anthus pratensis* | Aves | 1 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
-| *Corvus corone* | Aves | 1 | 4 | 1 | observada_gbif, anexo_normativo | sierra-de-el-carche |
+| *Corvus corone* | Aves | 1 | 4 | 1 | observada_gbif, anexo_normativo | monte-arabi |
 | *Ficedula hypoleuca* | Aves | 1 | 4 | 2 | observada_gbif, protegida | carrascoy-y-el-valle |
 | *Calandrella brachydactyla* | Aves | 1 | 4 | 2 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Oriolus oriolus* | Aves | 1 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
 | *Anthus campestris* | Aves | 1 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
 | *Merops apiaster* | Aves | 1 | 4 | 2 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
-| *Coloeus monedula* | Aves | 1 | 4 | 1 | observada_gbif, anexo_normativo | sierra-de-la-pila |
+| *Coloeus monedula* | Aves | 1 | 4 | 1 | observada_gbif, anexo_normativo | monte-arabi |
 | *Muscicapa striata* | Aves | 1 | 4 | 2 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Phoenicurus phoenicurus* | Aves | 1 | 4 | 4 | observada_gbif, protegida | carrascoy-y-el-valle |
 | *Delichon urbicum* | Aves | 1 | 4 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
 | *Strix aluco* | Aves | 1 | 3 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
 | *Coturnix coturnix* | Aves | 1 | 4 | 1 | observada_gbif, anexo_normativo | carrascoy-y-el-valle |
+| *Colutea arborescens* | Magnoliopsida | 1 | 4 | 1 | observada_gbif, anexo_normativo | sierra-espuna |
 | *Coccothraustes coccothraustes* | Aves | 1 | 3 | 2 | observada_gbif, protegida | — |
 | *Hippolais polyglotta* | Aves | 1 | 3 | 2 | observada_gbif, protegida | carrascoy-y-el-valle |
-| *Troglodytes troglodytes* | Aves | 1 | 3 | 2 | observada_gbif, protegida | carrascoy-y-el-valle |
+| *Troglodytes troglodytes* | Aves | 1 | 3 | 2 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
 | *Odontites viscosus* | Magnoliopsida | 1 | 4 | 1 | observada_gbif, anexo_normativo | sierra-de-el-carche |
 | *Rhamnus alaternus* | Magnoliopsida | 1 | 4 | 1 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
 | *Hyparrhenia hirta* | Liliopsida | 1 | 5 | 1 | observada_gbif, caracteristica | cabo-cope-puntas-calnegre |
-| *Fritillaria lusitanica* | Liliopsida | 1 | 5 | 1 | observada_gbif, protegida | sierra-de-el-carche |
+| *Fritillaria lusitanica* | Liliopsida | 1 | 5 | 1 | observada_gbif, protegida, anexo_normativo | monte-arabi |
 | *Quercus faginea* | Magnoliopsida | 1 | 4 | 1 | observada_gbif, protegida, anexo_normativo | sierra-espuna |
 | *Erodium saxatile* | Magnoliopsida | 1 | 4 | 1 | observada_gbif, protegida, anexo_normativo | sierra-espuna |
-| *Aria edulis* | Magnoliopsida | 1 | 4 | 1 | observada_gbif, protegida | sierra-espuna |
+| *Aria edulis* | Magnoliopsida | 1 | 4 | 1 | observada_gbif, protegida, anexo_normativo | sierra-espuna |
 | *Anthyllis vulneraria* | Magnoliopsida | 1 | 4 | 1 | observada_gbif, caracteristica | sierra-de-el-carche |
 | *Lonicera etrusca* | Magnoliopsida | 1 | 4 | 1 | observada_gbif, protegida | — |
 | *Centaurea ornata* | Magnoliopsida | 1 | 4 | 1 | observada_gbif, caracteristica | — |
@@ -371,7 +357,6 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Phytometra sanctiflorentis* | Insecta | 1 | 4 | fuera del alcance del catálogo (clase Insecta) |
 | *Metzneria aprilella* | Insecta | 1 | 4 | fuera del alcance del catálogo (clase Insecta) |
 | *Rhodostrophia pudorata* | Insecta | 1 | 4 | fuera del alcance del catálogo (clase Insecta) |
-| *Colutea arborescens* | Magnoliopsida | 1 | 4 | sólo GBIF y presencia escasa (<2 occ o <2 hábitats) |
 | *Empusa pennata* | Insecta | 1 | 4 | fuera del alcance del catálogo (clase Insecta) |
 | *Cerambyx cerdo* | Insecta | 1 | 4 | fuera del alcance del catálogo (clase Insecta) |
 | *Trichodes leucopsideus* | Insecta | 1 | 4 | fuera del alcance del catálogo (clase Insecta) |

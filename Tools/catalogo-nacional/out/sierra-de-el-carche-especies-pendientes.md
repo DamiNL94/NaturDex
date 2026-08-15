@@ -10,8 +10,11 @@ Wikimedia Commons) y **ninguna se puede suplir de memoria** (regla nº 2 de `CLA
 
 En cuanto tengan ficha universal, esta herramienta las incorpora sola: no hay que tocar nada más.
 
-Total: **1**.
+Total: **4**.
 
 | Nombre científico | Clase | Ocurrencias GBIF | Hábitats | Evidencia | Estado legal (IEPNB) |
 |---|---|---|---|---|---|
-| *Poterium rupicolum* | Magnoliopsida | 8 | 4 | observada_gbif | — |
+| *Saxicola torquatus* | Aves | 2 | 2 | observada_gbif, anexo_normativo | — |
+| *Poterium rupicolum* | Magnoliopsida | 2 | 4 | observada_gbif, anexo_normativo | — |
+| *Caroxylon genistoides* | Magnoliopsida | 1 | 4 | observada_gbif, anexo_normativo | — |
+| *Ceropegia munbyana* | Magnoliopsida | 1 | 2 | observada_gbif, anexo_normativo | — |

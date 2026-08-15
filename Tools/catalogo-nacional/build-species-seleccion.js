@@ -98,8 +98,19 @@ requireArgs('Uso: --park <slug> [--atlas <atlas.txt>] [--gbif <ruta>] [--out <ru
 // se decidió el 2026-08-15 (c) y se escribió sólo en el informe: el defecto del código se quedó en 5,
 // así que el espacio siguiente lo habría aplicado sin enterarse de que era el umbral viejo sobre la
 // métrica nueva. Vive aquí para que no vuelva a pasar.
-const MIN_OCURRENCIAS = num('min-occ', 2);
-const MIN_HABITATS = num('min-habitats', 2);
+//
+// Y el umbral PROPIO de un espacio vive en `data/umbrales-seleccion.json`, por el mismo motivo y a la
+// segunda vez: Monte Arabí bajó a 1 el mínimo de hábitats —tiene solo dos cartografiados, así que
+// exigir 2 es exigir el 100 %— y esa decisión se quedó también en su informe. Regenerarlo sin
+// acordarse le quitaba diez fichas sin decir nada. Lo que se pasa por la línea de órdenes manda sobre
+// el fichero, y entonces se dice.
+const UMBRALES = (() => {
+  const ruta = path.join(CATALOGO_DIR, 'data', 'umbrales-seleccion.json');
+  if (!fs.existsSync(ruta)) return {};
+  return (readJson(ruta).espacios || {})[PARK] || {};
+})();
+const MIN_OCURRENCIAS = num('min-occ', UMBRALES.minOcurrencias ?? 2);
+const MIN_HABITATS = num('min-habitats', UMBRALES.minHabitats ?? 2);
 
 /*
  * Filtro 4 — ALCANCE TAXONÓMICO. El que estaba aplicado y sin escribir.
@@ -540,6 +551,14 @@ async function main() {
     ? `Anexo normativo: ${anexo.total} especies enumeradas (${anexo.fuente ? anexo.fuente.norma : 'sin cita'})`
     : `Anexo normativo: NO consultado — ${PARK} no tiene entrada en ${rel(RUTA_ANEXOS)}.\n` +
       '  No es lo mismo que «este espacio no tiene anexo»: es que nadie lo ha leído todavía.');
+  // De dónde sale el umbral se dice SIEMPRE, aunque sea el general: es la decisión que más cambia el
+  // tamaño del catálogo y la que dos veces se ha perdido por no estar a la vista.
+  console.log(`Umbral de presencia: ${MIN_OCURRENCIAS} ocurrencia(s) en ${MIN_HABITATS} hábitat(s) · ` +
+    (arg('min-occ') || arg('min-habitats')
+      ? 'dado en la línea de órdenes (manda sobre el fichero de umbrales)'
+      : UMBRALES.motivo
+        ? `propio de este espacio (data/umbrales-seleccion.json, ${UMBRALES.decidido || 'sin fecha'}): ${UMBRALES.motivo}`
+        : 'el general del rollout'));
 
   // Resolver TODOS contra EIDOS antes de nada: la reconciliación necesita el `taxonid` de cada uno.
   console.log('\nResolviendo contra EIDOS (Lista Patrón y estado legal)…');
@@ -616,6 +635,10 @@ async function main() {
       ficha.anexoNormativo = {
         citadaComo: enAnexo.scientificName,
         categoria: enAnexo.categoria || null,
+        // La salvedad de la entrada —«errata de la tabla», «nomenclatura en desuso», ámbito
+        // parcial—. Va aquí porque `build-species-n2.js` la escribe en el `source` de la ficha: sin
+        // ella, un nombre mal impreso en la norma parece un error de NaturDex.
+        nota: enAnexo.nota || null,
         fuente: anexo.fuente,
       };
     }
