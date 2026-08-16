@@ -84,6 +84,10 @@ const { especiesCaracteristicas, binomio } = require('../lib/atlas');
 // La escalera 1–5 vive en lib/ porque `rareza-legal.js` aplica exactamente el mismo criterio sobre
 // el texto ya redactado del park.json. Dos copias se separarían en cuanto alguien tocara una.
 const { tramoDeCategoria, SIGNIFICADO } = require('../lib/rareza');
+// El puente de nomenclatura entre lo que escribe una fuente oficial y lo que ficha el catálogo. Vive
+// en lib/ porque `poda-aves-sin-respaldo.js` tiene que tomar EXACTAMENTE la misma decisión sobre los
+// espacios ya publicados: dos implementaciones de «tiene respaldo de sitio» divergirían a la primera.
+const respaldoSitio = require('../lib/respaldo-sitio');
 
 const PARK = arg('park');
 const DRY = flag('dry');
@@ -325,6 +329,57 @@ function reconcilia(lista, resueltas, porTaxonId) {
     }
   }
   return { lista: salida.sort((a, b) => b.gbifOccurrences - a.gbifOccurrences), fusiones };
+}
+
+/*
+ * La cuarta vía de la reconciliación, y la única que no sale de un identificador: la TABLA DE
+ * EQUIVALENCIAS verificadas a mano.
+ *
+ * `reconcilia()` agrupa por `taxonid` de EIDOS, que es la clave maestra y resuelve casi todo. Pero
+ * no puede resolver el caso en que EIDOS mantiene DOS entradas válidas para el mismo taxón, porque
+ * entonces hay dos taxonid y no hay nada que agrupar. Ahí es donde la curruca rabilarga se partió en
+ * dos: `Curruca undata` (80931) en tres espacios y `Sylvia undata` (80230, que es la subespecie
+ * nominal) en otros cuatro, con foto, texto y contadores por separado.
+ *
+ * Se corrigió a mano en una de las siete fichas el 2026-08-09, y las cuatro Capas 3 generadas
+ * después la volvieron a introducir: una corrección que vive en el dato y no en la herramienta dura
+ * hasta la siguiente regeneración. Esta pasada es lo que hace que la corrección viva en la
+ * herramienta.
+ */
+function aplicaEquivalencias(lista, equivalencias) {
+  if (!equivalencias || !equivalencias.size) return { lista, renombradas: [] };
+  const porNombre = new Map();
+  const renombradas = [];
+  for (const c of lista) {
+    const eq = equivalencias.get(binomio(c.scientificName) || '');
+    const destino = eq ? eq.nombreEnElCatalogo : c.scientificName;
+    if (eq && destino !== c.scientificName) {
+      renombradas.push({ de: c.scientificName, a: destino, verificadoCon: eq.verificadoCon });
+    }
+    const ya = porNombre.get(destino);
+    if (!ya) {
+      porNombre.set(destino, destino === c.scientificName ? c : {
+        ...c,
+        scientificName: destino,
+        // El nombre con el que GBIF sirve este taxón sigue siendo el hilo hacia el barrido, que está
+        // indexado por él. Perderlo deja la ficha sin un solo enlace a hábitat (y en silencio).
+        sinonimosFusionados: [...new Set([...(c.sinonimosFusionados || []), c.scientificName])],
+      });
+      continue;
+    }
+    // Los dos nombres estaban entre los candidatos: es el duplicado de verdad. Se funden como haría
+    // `reconcilia()` con dos nombres del mismo taxonid.
+    ya.gbifOccurrences += c.gbifOccurrences;
+    ya.hics = new Set([...(ya.hics || []), ...(c.hics || [])]);
+    ya.habitats = ya.hics.size;
+    ya.sinonimosFusionados = [...new Set([
+      ...(ya.sinonimosFusionados || []), ...(c.sinonimosFusionados || []), c.scientificName,
+    ])].filter(n => n !== destino);
+  }
+  return {
+    lista: [...porNombre.values()].sort((a, b) => b.gbifOccurrences - a.gbifOccurrences),
+    renombradas,
+  };
 }
 
 // --- Reutilización: ¿esta especie ya está fichada en otro espacio? ----------------------------------
@@ -655,7 +710,53 @@ async function main() {
   }
   if (!DRY) writeJson(CACHE, cache);
 
-  const { lista, fusiones } = reconcilia(brutos, resueltas, porTaxonId);
+  /*
+   * El PUENTE de nomenclatura entre las fuentes de respaldo y el catálogo.
+   *
+   * Hasta aquí, el anexo y el formulario del sitio se cruzaban por el binomio del nombre que escribe
+   * el documento, más el nombre aceptado DEL CANDIDATO. Faltaba la dirección que importa: resolver el
+   * nombre de LA FUENTE. El formulario de un sitio revisado en 2023 sigue citando *Sylvia undata* y
+   * *Larus ridibundus*; el catálogo ficha *Curruca undata* y *Chroicocephalus ridibundus*. Sin
+   * resolver el lado de la fuente, esas aves salían con «no figura en el formulario oficial del
+   * sitio» escrito al lado — que es una afirmación falsa, y la puerta de las aves se apoya en ella.
+   *
+   * Sale caro una vez y nada las siguientes: son ~80 nombres por espacio y van a la misma caché.
+   */
+  const equivalencias = respaldoSitio.cargaEquivalencias();
+  const nombresDeFuente = [
+    ...[...sitio.mapa.values()].flat().map(e => e.scientificName),
+    ...[...anexo.mapa.values()].map(e => e.scientificName),
+  ].filter((n, i, a) => n && a.indexOf(n) === i);
+  if (nombresDeFuente.length) {
+    console.log(`\nResolviendo ${nombresDeFuente.length} nombres de las fuentes de respaldo contra EIDOS…`);
+    for (const nombre of nombresDeFuente) {
+      if (!resueltas.has(nombre)) resueltas.set(nombre, await resuelve(nombre, ccaa));
+    }
+    const idxSitio = respaldoSitio.indexa([...new Set([...sitio.mapa.values()].flat())], {
+      nombreDe: e => e.scientificName, resueltas, equivalencias: equivalencias.mapa,
+    });
+    const idxAnexo = respaldoSitio.indexa([...new Set([...anexo.mapa.values()])], {
+      nombreDe: e => e.scientificName, resueltas, equivalencias: equivalencias.mapa,
+    });
+    // Las claves nuevas se AÑADEN a los índices que ya había: el `nombreCorregido` del anexo y el
+    // binomio verbatim siguen valiendo, y aquí solo se amplía por dónde se puede casar.
+    for (const [k, v] of idxSitio.mapa) if (!sitio.mapa.has(k)) sitio.mapa.set(k, v);
+    for (const [k, v] of idxAnexo.mapa) if (!anexo.mapa.has(k)) anexo.mapa.set(k, v.length ? v[0] : v);
+    const puentes = [...idxSitio.puentes, ...idxAnexo.puentes]
+      .filter((p, i, a) => a.findIndex(x => x.nombre === p.nombre && x.clave === p.clave) === i);
+    if (puentes.length) {
+      console.log(`Puentes de nomenclatura tendidos: ${puentes.length}`);
+      for (const p of puentes) console.log(`   ${p.nombre}  →  ${p.clave}  (${p.via})`);
+    }
+  }
+
+  let { lista, fusiones } = reconcilia(brutos, resueltas, porTaxonId);
+  const equiv = aplicaEquivalencias(lista, equivalencias.mapa);
+  lista = equiv.lista;
+  if (equiv.renombradas.length) {
+    console.log(`\nEquivalencias de nomenclatura aplicadas: ${equiv.renombradas.length}`);
+    for (const r of equiv.renombradas) console.log(`   ${r.de}  →  ${r.a}`);
+  }
   if (fusiones.length) {
     console.log(`\nReconciliación taxonómica: ${fusiones.length} grupo(s) con más de un nombre para el mismo taxón`);
     for (const f of fusiones) {

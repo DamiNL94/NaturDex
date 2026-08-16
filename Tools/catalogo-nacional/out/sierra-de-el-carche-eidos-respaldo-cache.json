@@ -1,0 +1,2239 @@
+{
+  "Cerambyx cerdo": {
+    "acceptedName": "Cerambyx cerdo mirbecki Lucas, 1842",
+    "taxonid": 10999,
+    "error": null,
+    "preguntadoComo": "Cerambyx cerdo"
+  },
+  "Miniopterus schreibersii": {
+    "acceptedName": "Miniopterus schreibersii (Kuhl, 1817)",
+    "taxonid": 12169,
+    "error": null,
+    "preguntadoComo": "Miniopterus schreibersii"
+  },
+  "Coenonympha dorus (Esper, 1782)": {
+    "acceptedName": "Coenonympha dorus (Esper, 1782)",
+    "taxonid": 51699,
+    "error": null,
+    "preguntadoComo": "Coenonympha dorus (Esper, 1782)"
+  },
+  "Melanargia ines (Hoffmansegg, 1804)": {
+    "acceptedName": "Melanargia ines (Hoffmansegg, 1804)",
+    "taxonid": 58418,
+    "error": null,
+    "preguntadoComo": "Melanargia ines (Hoffmansegg, 1804)"
+  },
+  "Melanargia occitanica (Esper, 1793)": {
+    "acceptedName": "Melanargia occitanica (Esper, 1793)",
+    "taxonid": 58429,
+    "error": null,
+    "preguntadoComo": "Melanargia occitanica (Esper, 1793)"
+  },
+  "Odontites viscosus subsp. australis (Boiss.) Jahand. & Maire": {
+    "acceptedName": "Odontites viscosus subsp. australis (Boiss.) Jahand. & Maire",
+    "taxonid": 6451,
+    "error": null,
+    "preguntadoComo": "Odontites viscosus subsp. australis (Boiss.) Jahand. & Maire"
+  },
+  "Thymus funkii Coss. subsp. funkii": {
+    "acceptedName": "Thymus funkii Coss. subsp. funkii",
+    "taxonid": 8906,
+    "error": null,
+    "preguntadoComo": "Thymus funkii Coss. subsp. funkii"
+  },
+  "Acinos arvensis": {
+    "acceptedName": "Ziziphora acinos (L.) Melnikov",
+    "taxonid": 1795,
+    "error": null,
+    "preguntadoComo": "Acinos arvensis"
+  },
+  "Alyssum alyssoides": {
+    "acceptedName": "Alyssum alyssoides (L.) L.",
+    "taxonid": 2081,
+    "error": null,
+    "preguntadoComo": "Alyssum alyssoides"
+  },
+  "Alyssum linifolium": {
+    "acceptedName": "Meniocus linifolius (Willd.) DC.",
+    "taxonid": 2088,
+    "error": null,
+    "preguntadoComo": "Alyssum linifolium"
+  },
+  "Alyssum montanum": {
+    "acceptedName": "Alyssum montanum subsp. montanum",
+    "taxonid": 80821,
+    "error": null,
+    "preguntadoComo": "Alyssum montanum"
+  },
+  "Amaranthus muricatus": {
+    "acceptedName": "Amaranthus muricatus (Moq.) Hieron.",
+    "taxonid": 2108,
+    "error": null,
+    "preguntadoComo": "Amaranthus muricatus"
+  },
+  "Amaranthus quitensis": {
+    "acceptedName": "Amaranthus quitensis Humb., Bonpl. & Kunth",
+    "taxonid": 33,
+    "error": null,
+    "preguntadoComo": "Amaranthus quitensis"
+  },
+  "Amaranthus viridis": {
+    "acceptedName": "Amaranthus viridis L.",
+    "taxonid": 2111,
+    "error": null,
+    "preguntadoComo": "Amaranthus viridis"
+  },
+  "Anthyllis cytisoides": {
+    "acceptedName": "Anthyllis cytisoides L.",
+    "taxonid": 2186,
+    "error": null,
+    "preguntadoComo": "Anthyllis cytisoides"
+  },
+  "Anthyllis terniflora": {
+    "acceptedName": "Anthyllis terniflora (Lag.) Pau",
+    "taxonid": 2192,
+    "error": null,
+    "preguntadoComo": "Anthyllis terniflora"
+  },
+  "Anthyllis vulneraria subsp. gandogeri": {
+    "acceptedName": "Anthyllis vulneraria subsp. gandogeri (Sagorski) W. Becker",
+    "taxonid": 2057,
+    "error": null,
+    "preguntadoComo": "Anthyllis vulneraria subsp. gandogeri"
+  },
+  "Arabis auriculata": {
+    "acceptedName": "Arabis auriculata Lam.",
+    "taxonid": 2257,
+    "error": null,
+    "preguntadoComo": "Arabis auriculata"
+  },
+  "Arbutus unedo": {
+    "acceptedName": "Arbutus unedo L.",
+    "taxonid": 2284,
+    "error": null,
+    "preguntadoComo": "Arbutus unedo"
+  },
+  "Arctostaphylos uva-ursi subsp. crassifolia": {
+    "acceptedName": "Arctostaphylos uva-ursi (L.) Spreng.",
+    "taxonid": 2292,
+    "error": null,
+    "preguntadoComo": "Arctostaphylos uva-ursi subsp. crassifolia"
+  },
+  "Arctostaphylos uva-ursi subsp. grossi": {
+    "acceptedName": "Arctostaphylos uva-ursi (L.) Spreng.",
+    "taxonid": 2292,
+    "error": null,
+    "preguntadoComo": "Arctostaphylos uva-ursi"
+  },
+  "Arenaria leptoclados": {
+    "acceptedName": "Arenaria leptoclados (Rchb.) Guss.",
+    "taxonid": 2327,
+    "error": null,
+    "preguntadoComo": "Arenaria leptoclados"
+  },
+  "Arenaria montana subsp. intricata": {
+    "acceptedName": "Arenaria montana subsp. intricata (Ser.) Pau",
+    "taxonid": 2336,
+    "error": null,
+    "preguntadoComo": "Arenaria montana subsp. intricata"
+  },
+  "Arenaria serpyllifolia": {
+    "acceptedName": "Arenaria serpyllifolia L.",
+    "taxonid": 2349,
+    "error": null,
+    "preguntadoComo": "Arenaria serpyllifolia"
+  },
+  "Arenaria valentina": {
+    "acceptedName": "Arenaria valentina Boiss.",
+    "taxonid": 2355,
+    "error": null,
+    "preguntadoComo": "Arenaria valentina"
+  },
+  "Aristida coerulescens": {
+    "acceptedName": "Aristida coerulescens Desf.",
+    "taxonid": 80435,
+    "error": null,
+    "preguntadoComo": "Aristida coerulescens"
+  },
+  "Armeria bourgaei subsp. willkommiana": {
+    "acceptedName": "Armeria bourgaei subsp. willkommiana (Bernis) Nieto Fel.",
+    "taxonid": 2448,
+    "error": null,
+    "preguntadoComo": "Armeria bourgaei subsp. willkommiana"
+  },
+  "Armeria filicaulis": {
+    "acceptedName": "Armeria filicaulis subsp. alfacarensis Nieto Fel., Gut. Larena & Fuertes",
+    "taxonid": 995,
+    "error": null,
+    "preguntadoComo": "Armeria filicaulis"
+  },
+  "Arrhenatherum elatius subsp. sardoum": {
+    "acceptedName": "Arrhenatherum elatius subsp. sardoum (E. Schmid) Gamisans",
+    "taxonid": 9910,
+    "error": null,
+    "preguntadoComo": "Arrhenatherum elatius subsp. sardoum"
+  },
+  "Artemisia campestres subsp. glutinosa": {
+    "acceptedName": null,
+    "taxonid": null,
+    "error": null
+  },
+  "Artemisia herba-alba": {
+    "acceptedName": "Artemisia herba-alba Asso",
+    "taxonid": 9919,
+    "error": null,
+    "preguntadoComo": "Artemisia herba-alba"
+  },
+  "Asparagus horridus": {
+    "acceptedName": "Asparagus horridus L.",
+    "taxonid": 33035,
+    "error": null,
+    "preguntadoComo": "Asparagus horridus"
+  },
+  "Asphodelus ayardii": {
+    "acceptedName": "Asphodelus ayardii Jahand. & Maire",
+    "taxonid": 31495,
+    "error": null,
+    "preguntadoComo": "Asphodelus ayardii"
+  },
+  "Asphodelus cerasiferus": {
+    "acceptedName": "Asphodelus cerasiferus J. Gay",
+    "taxonid": 2520,
+    "error": null,
+    "preguntadoComo": "Asphodelus cerasiferus"
+  },
+  "Asphodelus fistulosus": {
+    "acceptedName": "Asphodelus fistulosus L.",
+    "taxonid": 2521,
+    "error": null,
+    "preguntadoComo": "Asphodelus fistulosus"
+  },
+  "Asplenium onopteris": {
+    "acceptedName": "Asplenium onopteris L.",
+    "taxonid": 2545,
+    "error": null,
+    "preguntadoComo": "Asplenium onopteris"
+  },
+  "Asplenium petrarchae": {
+    "acceptedName": "Asplenium petrarchae (Guérin) DC.",
+    "taxonid": 2546,
+    "error": null,
+    "preguntadoComo": "Asplenium petrarchae"
+  },
+  "Asplenium trichomanes subsp. quadrivalens": {
+    "acceptedName": "Asplenium quadrivalens (D.E. Meyer) Landolt",
+    "taxonid": 2559,
+    "error": null,
+    "preguntadoComo": "Asplenium trichomanes subsp. quadrivalens"
+  },
+  "Asplenium trichomanes": {
+    "acceptedName": "Asplenium trichomanes L.",
+    "taxonid": 2555,
+    "error": null,
+    "preguntadoComo": "Asplenium trichomanes"
+  },
+  "Asterolinon linum-stellatum": {
+    "acceptedName": "Lysimachia linum-stellatum L.",
+    "taxonid": 2562,
+    "error": null,
+    "preguntadoComo": "Asterolinon linum-stellatum"
+  },
+  "Astragalus alopecuroides subsp. grosii": {
+    "acceptedName": "Astragalus alopecuroides subsp. grosii (Pau) Rivas Goday & Rivas Mart.",
+    "taxonid": 2567,
+    "error": null,
+    "preguntadoComo": "Astragalus alopecuroides subsp. grosii"
+  },
+  "Astragalus sesameus": {
+    "acceptedName": "Astragalus sesameus L.",
+    "taxonid": 2609,
+    "error": null,
+    "preguntadoComo": "Astragalus sesameus"
+  },
+  "Atractylis humilis": {
+    "acceptedName": "Atractylis humilis L.",
+    "taxonid": 2627,
+    "error": null,
+    "preguntadoComo": "Atractylis humilis"
+  },
+  "Avenula bromoides subsp. pauneroi": {
+    "acceptedName": "Avenula bromoides (Gouan) H. Scholz bromoides",
+    "taxonid": 24513,
+    "error": null,
+    "preguntadoComo": "Avenula bromoides"
+  },
+  "Brachypodium retusum": {
+    "acceptedName": "Brachypodium retusum (Pers.) P. Beauv.",
+    "taxonid": 9931,
+    "error": null,
+    "preguntadoComo": "Brachypodium retusum"
+  },
+  "Buglossoides arvensis subsp. arvensis": {
+    "acceptedName": "Buglossoides arvensis (L.) I. M. Johnst.",
+    "taxonid": 2812,
+    "error": null,
+    "preguntadoComo": "Buglossoides arvensis"
+  },
+  "Bupleurum fruticescens": {
+    "acceptedName": "Bupleurum fruticescens L.",
+    "taxonid": 2838,
+    "error": null,
+    "preguntadoComo": "Bupleurum fruticescens"
+  },
+  "Buxus sempervirens": {
+    "acceptedName": "Buxus sempervirens L.",
+    "taxonid": 2860,
+    "error": null,
+    "preguntadoComo": "Buxus sempervirens"
+  },
+  "Calendula arvensis": {
+    "acceptedName": "Calendula arvensis (Vaill.) L.",
+    "taxonid": 9527,
+    "error": null,
+    "preguntadoComo": "Calendula arvensis"
+  },
+  "Camelina microcarpa": {
+    "acceptedName": "Camelina microcarpa DC.",
+    "taxonid": 2984,
+    "error": null,
+    "preguntadoComo": "Camelina microcarpa"
+  },
+  "Caralluma munbyana subsp. hispanica": {
+    "acceptedName": "Apteranthes munbyana (Decne.) Meve & Liede",
+    "taxonid": 2867,
+    "error": null,
+    "preguntadoComo": "Caralluma munbyana subsp. hispanica"
+  },
+  "Cardaria draba": {
+    "acceptedName": "Lepidium draba L.",
+    "taxonid": 2890,
+    "error": null,
+    "preguntadoComo": "Cardaria draba"
+  },
+  "Carex halleriana": {
+    "acceptedName": "Carex halleriana Asso",
+    "taxonid": 3094,
+    "error": null,
+    "preguntadoComo": "Carex halleriana"
+  },
+  "Carrichtera annua": {
+    "acceptedName": "Carrichtera annua (L.) DC.",
+    "taxonid": 3176,
+    "error": null,
+    "preguntadoComo": "Carrichtera annua"
+  },
+  "Centaurea aspera": {
+    "acceptedName": "Centaurea aspera L.",
+    "taxonid": 3214,
+    "error": null,
+    "preguntadoComo": "Centaurea aspera"
+  },
+  "Centaurea boissieri subsp. boissieri": {
+    "acceptedName": "Centaurea boissieri DC.",
+    "taxonid": 3224,
+    "error": null,
+    "preguntadoComo": "Centaurea boissieri"
+  },
+  "Centaurea boissieri subsp. mariolensis": {
+    "acceptedName": "Centaurea boissieri subsp. mariolensis (Rouy) Dostál",
+    "taxonid": 3228,
+    "error": null,
+    "preguntadoComo": "Centaurea boissieri subsp. mariolensis"
+  },
+  "Centaurea sicula": {
+    "acceptedName": "Centaurea sicula L.",
+    "taxonid": 3336,
+    "error": null,
+    "preguntadoComo": "Centaurea sicula"
+  },
+  "Cerastium brachypetalum": {
+    "acceptedName": "Cerastium brachypetalum Pers.",
+    "taxonid": 3392,
+    "error": null,
+    "preguntadoComo": "Cerastium brachypetalum"
+  },
+  "Cerastium gracile": {
+    "acceptedName": "Cerastium gracile Dufour",
+    "taxonid": 3406,
+    "error": null,
+    "preguntadoComo": "Cerastium gracile"
+  },
+  "Cerastium pumilum": {
+    "acceptedName": "Cerastium pumilum Curtis",
+    "taxonid": 3409,
+    "error": null,
+    "preguntadoComo": "Cerastium pumilum"
+  },
+  "Ceterach officinarum": {
+    "acceptedName": "Asplenium ceterach L.",
+    "taxonid": 80438,
+    "error": null,
+    "preguntadoComo": "Ceterach officinarum"
+  },
+  "Chaenorrhinum crassifolium": {
+    "acceptedName": null,
+    "taxonid": null,
+    "error": null
+  },
+  "Chamaerops humilis": {
+    "acceptedName": "Chamaerops humilis L.",
+    "taxonid": 3518,
+    "error": null,
+    "preguntadoComo": "Chamaerops humilis"
+  },
+  "Chamaesyce prostrata": {
+    "acceptedName": "Chamaesyce prostrata (Aiton) Small",
+    "taxonid": 3534,
+    "error": null,
+    "preguntadoComo": "Chamaesyce prostrata"
+  },
+  "Cheilanthes acrostica": {
+    "acceptedName": "Oeosporangium acrosticum (Balb.) L. Sáez & Aymerich",
+    "taxonid": 80516,
+    "error": null,
+    "preguntadoComo": "Cheilanthes acrostica"
+  },
+  "Chiliadenus glutinosus": {
+    "acceptedName": "Chiliadenus glutinosus (L.) Fourr.",
+    "taxonid": 31622,
+    "error": null,
+    "preguntadoComo": "Chiliadenus glutinosus"
+  },
+  "Cistus albidus": {
+    "acceptedName": "Cistus albidus L.",
+    "taxonid": 3609,
+    "error": null,
+    "preguntadoComo": "Cistus albidus"
+  },
+  "Cistus clusii": {
+    "acceptedName": "Cistus clusii Dunal",
+    "taxonid": 3610,
+    "error": null,
+    "preguntadoComo": "Cistus clusii"
+  },
+  "Cistus laurifolius": {
+    "acceptedName": "Cistus laurifolius L.",
+    "taxonid": 3622,
+    "error": null,
+    "preguntadoComo": "Cistus laurifolius"
+  },
+  "Conopodium majus": {
+    "acceptedName": "Conopodium majus (Gouan) Loret",
+    "taxonid": 3674,
+    "error": null,
+    "preguntadoComo": "Conopodium majus"
+  },
+  "Conopodium thalictrifolium": {
+    "acceptedName": "Conopodium thalictrifolium (Boiss.) Calest.",
+    "taxonid": 3680,
+    "error": null,
+    "preguntadoComo": "Conopodium thalictrifolium"
+  },
+  "Conringia orientalis": {
+    "acceptedName": "Conringia orientalis (L.) Dumort.",
+    "taxonid": 3683,
+    "error": null,
+    "preguntadoComo": "Conringia orientalis"
+  },
+  "Coronilla lotoides": {
+    "acceptedName": "Coronilla lotoides W.D.J. Koch",
+    "taxonid": 3735,
+    "error": null,
+    "preguntadoComo": "Coronilla lotoides"
+  },
+  "Cosentinia vellea": {
+    "acceptedName": "Cosentinia vellea (Aiton) Tod.",
+    "taxonid": 3758,
+    "error": null,
+    "preguntadoComo": "Cosentinia vellea"
+  },
+  "Cuscuta epithymum": {
+    "acceptedName": "Cuscuta epithymum (L.) L.",
+    "taxonid": 3892,
+    "error": null,
+    "preguntadoComo": "Cuscuta epithymum"
+  },
+  "Cynoglossum cheirifolium": {
+    "acceptedName": "Pardoglossum cheirifolium (L.) E. Barbier & Mathez",
+    "taxonid": 3777,
+    "error": null,
+    "preguntadoComo": "Cynoglossum cheirifolium"
+  },
+  "Cytinus hypocistis": {
+    "acceptedName": "Cytinus hypocistis (L.) L.",
+    "taxonid": 3805,
+    "error": null,
+    "preguntadoComo": "Cytinus hypocistis"
+  },
+  "Daphne gnidium": {
+    "acceptedName": "Daphne gnidium L.",
+    "taxonid": 3964,
+    "error": null,
+    "preguntadoComo": "Daphne gnidium"
+  },
+  "Dictamnus hispanicus": {
+    "acceptedName": "Dictamnus hispanicus Willk.",
+    "taxonid": 4038,
+    "error": null,
+    "preguntadoComo": "Dictamnus hispanicus"
+  },
+  "Diplotaxis erucoides": {
+    "acceptedName": "Diplotaxis erucoides (L.) DC.",
+    "taxonid": 4114,
+    "error": null,
+    "preguntadoComo": "Diplotaxis erucoides"
+  },
+  "Draba hispanica": {
+    "acceptedName": "Draba hispanica Boiss.",
+    "taxonid": 4143,
+    "error": null,
+    "preguntadoComo": "Draba hispanica"
+  },
+  "Ecbalium elaterium subsp. dioicum": {
+    "acceptedName": null,
+    "taxonid": null,
+    "error": null
+  },
+  "Echinaria capitata": {
+    "acceptedName": "Echinaria capitata (L.) Desf.",
+    "taxonid": 10187,
+    "error": null,
+    "preguntadoComo": "Echinaria capitata"
+  },
+  "Ephedra fragilis": {
+    "acceptedName": "Ephedra fragilis Desf.",
+    "taxonid": 4308,
+    "error": null,
+    "preguntadoComo": "Ephedra fragilis"
+  },
+  "Ephedra nebrodensis": {
+    "acceptedName": "Ephedra major Host",
+    "taxonid": 4311,
+    "error": null,
+    "preguntadoComo": "Ephedra nebrodensis"
+  },
+  "Erica multiflora": {
+    "acceptedName": "Erica multiflora L.",
+    "taxonid": 4372,
+    "error": null,
+    "preguntadoComo": "Erica multiflora"
+  },
+  "Erigeron bonariensis": {
+    "acceptedName": "Erigeron bonariensis L.",
+    "taxonid": 100825,
+    "error": null,
+    "preguntadoComo": "Erigeron bonariensis"
+  },
+  "Erigeron canadensis": {
+    "acceptedName": "Erigeron canadensis L.",
+    "taxonid": 83640,
+    "error": null,
+    "preguntadoComo": "Erigeron canadensis"
+  },
+  "Erinacea anthyllis": {
+    "acceptedName": "Erinacea anthyllis Link",
+    "taxonid": 4238,
+    "error": null,
+    "preguntadoComo": "Erinacea anthyllis"
+  },
+  "Erodium celtibericum": {
+    "acceptedName": "Erodium celtibericum Pau",
+    "taxonid": 80465,
+    "error": null,
+    "preguntadoComo": "Erodium celtibericum"
+  },
+  "Erodium ciconium": {
+    "acceptedName": "Erodium ciconium (L.) L'Hér.",
+    "taxonid": 9995,
+    "error": null,
+    "preguntadoComo": "Erodium ciconium"
+  },
+  "Erodium cicutarium": {
+    "acceptedName": "Erodium cicutarium (L.) L'Hér.",
+    "taxonid": 9996,
+    "error": null,
+    "preguntadoComo": "Erodium cicutarium"
+  },
+  "Erodium saxatile": {
+    "acceptedName": "Erodium saxatile Pau",
+    "taxonid": 32684,
+    "error": null,
+    "preguntadoComo": "Erodium saxatile"
+  },
+  "Erophila verna": {
+    "acceptedName": "Draba verna L.",
+    "taxonid": 82557,
+    "error": null,
+    "preguntadoComo": "Erophila verna"
+  },
+  "Eruca vesicaria": {
+    "acceptedName": "Eruca vesicaria (L.) Cav.",
+    "taxonid": 4384,
+    "error": null,
+    "preguntadoComo": "Eruca vesicaria"
+  },
+  "Eryngium campestre": {
+    "acceptedName": "Eryngium campestre L.",
+    "taxonid": 4398,
+    "error": null,
+    "preguntadoComo": "Eryngium campestre"
+  },
+  "Euphorbia characias": {
+    "acceptedName": "Euphorbia characias L.",
+    "taxonid": 4466,
+    "error": null,
+    "preguntadoComo": "Euphorbia characias"
+  },
+  "Euphorbia nicaeensis": {
+    "acceptedName": "Euphorbia nicaeensis All.",
+    "taxonid": 4481,
+    "error": null,
+    "preguntadoComo": "Euphorbia nicaeensis"
+  },
+  "Euphorbia serrata": {
+    "acceptedName": "Euphorbia serrata L.",
+    "taxonid": 4534,
+    "error": null,
+    "preguntadoComo": "Euphorbia serrata"
+  },
+  "Festuca hystrix": {
+    "acceptedName": "Festuca hystrix Boiss.",
+    "taxonid": 10032,
+    "error": null,
+    "preguntadoComo": "Festuca hystrix"
+  },
+  "Festuca indigesta": {
+    "acceptedName": "Festuca indigesta Boiss. subsp. indigesta",
+    "taxonid": 288,
+    "error": null,
+    "preguntadoComo": "Festuca indigesta"
+  },
+  "Fritillaria lusitanica": {
+    "acceptedName": "Fritillaria lusitanica Wikstr.",
+    "taxonid": 4633,
+    "error": null,
+    "preguntadoComo": "Fritillaria lusitanica"
+  },
+  "Fumana ericifolia": {
+    "acceptedName": "Fumana ericifolia Wallr. ",
+    "taxonid": 4640,
+    "error": null,
+    "preguntadoComo": "Fumana ericifolia"
+  },
+  "Fumana ericoides": {
+    "acceptedName": "Fumana ericoides (Cav.) Gand. in Magnier",
+    "taxonid": 4652,
+    "error": null,
+    "preguntadoComo": "Fumana ericoides"
+  },
+  "Fumana laevipes": {
+    "acceptedName": "Fumana laevipes (L.) Spach",
+    "taxonid": 4657,
+    "error": null,
+    "preguntadoComo": "Fumana laevipes"
+  },
+  "Fumaria parviflora": {
+    "acceptedName": "Fumaria parviflora Lam.",
+    "taxonid": 4684,
+    "error": null,
+    "preguntadoComo": "Fumaria parviflora"
+  },
+  "Genista pumila": {
+    "acceptedName": "Genista pumila (Hervier) Vierh.",
+    "taxonid": 4909,
+    "error": null,
+    "preguntadoComo": "Genista pumila"
+  },
+  "Genista scorpius": {
+    "acceptedName": "Genista scorpius (L.) DC.",
+    "taxonid": 4914,
+    "error": null,
+    "preguntadoComo": "Genista scorpius"
+  },
+  "Geranium purpureum": {
+    "acceptedName": "Geranium purpureum Vill.",
+    "taxonid": 4941,
+    "error": null,
+    "preguntadoComo": "Geranium purpureum"
+  },
+  "Geranium rotundifolium": {
+    "acceptedName": "Geranium rotundifolium L.",
+    "taxonid": 4947,
+    "error": null,
+    "preguntadoComo": "Geranium rotundifolium"
+  },
+  "Guillonea scabra": {
+    "acceptedName": "Guillonea scabra (Cav.) Coss.",
+    "taxonid": 5004,
+    "error": null,
+    "preguntadoComo": "Guillonea scabra"
+  },
+  "Guiraoa arvensis": {
+    "acceptedName": "Guiraoa arvensis Coss.",
+    "taxonid": 5007,
+    "error": null,
+    "preguntadoComo": "Guiraoa arvensis"
+  },
+  "Halimium atriplicifolium": {
+    "acceptedName": "Cistus atriplicifolius Lam.",
+    "taxonid": 5037,
+    "error": null,
+    "preguntadoComo": "Halimium atriplicifolium"
+  },
+  "Haplophyllum linifolium subsp. rosmarinifolium": {
+    "acceptedName": "Haplophyllum linifolium (L.) G. Don",
+    "taxonid": 5061,
+    "error": null,
+    "preguntadoComo": "Haplophyllum linifolium"
+  },
+  "Helianthemum apenninum": {
+    "acceptedName": "Helianthemum apenninum (L.) Mill.",
+    "taxonid": 4961,
+    "error": null,
+    "preguntadoComo": "Helianthemum apenninum"
+  },
+  "Helianthemum apenninum subsp. cavanillesianum": {
+    "acceptedName": "Helianthemum apenninum subsp. cavanillesianum (M. Laínz) G. López",
+    "taxonid": 4964,
+    "error": null,
+    "preguntadoComo": "Helianthemum apenninum subsp. cavanillesianum"
+  },
+  "Helianthemum cinereum": {
+    "acceptedName": "Helianthemum cinereum (Cav.) Pers.",
+    "taxonid": 4971,
+    "error": null,
+    "preguntadoComo": "Helianthemum cinereum"
+  },
+  "Helianthemum cinereum subsp. rotundifolium": {
+    "acceptedName": "Helianthemum cinereum subsp. rotundifolium (Dunal) Greuter & Burdet",
+    "taxonid": 5077,
+    "error": null,
+    "preguntadoComo": "Helianthemum cinereum subsp. rotundifolium"
+  },
+  "Helianthemum hirtum": {
+    "acceptedName": "Helianthemum hirtum (L.) Mill.",
+    "taxonid": 5078,
+    "error": null,
+    "preguntadoComo": "Helianthemum hirtum"
+  },
+  "Helianthemum marifolium subsp. marifolium": {
+    "acceptedName": "Helianthemum marifolium (L.) Mill.",
+    "taxonid": 5080,
+    "error": null,
+    "preguntadoComo": "Helianthemum marifolium"
+  },
+  "Helianthemum syriacum": {
+    "acceptedName": "Helianthemum syriacum (Jacq.) Dum. Cours.",
+    "taxonid": 5101,
+    "error": null,
+    "preguntadoComo": "Helianthemum syriacum"
+  },
+  "Helianthemum violaceum": {
+    "acceptedName": "Helianthemum violaceum (Cav.) Pers.",
+    "taxonid": 5102,
+    "error": null,
+    "preguntadoComo": "Helianthemum violaceum"
+  },
+  "Helichrysum serotinum": {
+    "acceptedName": "Helichrysum serotinum subsp. picardii (Boiss. & Reut.) Galbany, L. Sáez & Benedí",
+    "taxonid": 31767,
+    "error": null,
+    "preguntadoComo": "Helichrysum serotinum"
+  },
+  "Helichrysum stoechas": {
+    "acceptedName": "Helichrysum stoechas (L.) Moench",
+    "taxonid": 352,
+    "error": null,
+    "preguntadoComo": "Helichrysum stoechas"
+  },
+  "Helictotrichon filifolium": {
+    "acceptedName": "Helictotrichon filifolium (Lag.) Henrard",
+    "taxonid": 10044,
+    "error": null,
+    "preguntadoComo": "Helictotrichon filifolium"
+  },
+  "Herniaria fruticosa": {
+    "acceptedName": "Herniaria fruticosa L.",
+    "taxonid": 5159,
+    "error": null,
+    "preguntadoComo": "Herniaria fruticosa"
+  },
+  "Hieracium loscosianum": {
+    "acceptedName": "Hieracium loscosianum Scheele",
+    "taxonid": 24806,
+    "error": null,
+    "preguntadoComo": "Hieracium loscosianum"
+  },
+  "Hirschfeldia incana": {
+    "acceptedName": "Hirschfeldia incana (L.) Lagr.-Foss.",
+    "taxonid": 5299,
+    "error": null,
+    "preguntadoComo": "Hirschfeldia incana"
+  },
+  "Homathophylla spinosa": {
+    "acceptedName": null,
+    "taxonid": null,
+    "error": null
+  },
+  "Hornungia petrea": {
+    "acceptedName": null,
+    "taxonid": null,
+    "error": null
+  },
+  "Hypecoum procumbens": {
+    "acceptedName": "Hypecoum procumbens L.",
+    "taxonid": 5169,
+    "error": null,
+    "preguntadoComo": "Hypecoum procumbens"
+  },
+  "Hypericum perforatum": {
+    "acceptedName": "Hypericum perforatum L.",
+    "taxonid": 5318,
+    "error": null,
+    "preguntadoComo": "Hypericum perforatum"
+  },
+  "Iberis carnosa subsp. hegelmaieri": {
+    "acceptedName": "Iberis carnosa subsp. hegelmaieri (Willk.) Moreno",
+    "taxonid": 5337,
+    "error": null,
+    "preguntadoComo": "Iberis carnosa subsp. hegelmaieri"
+  },
+  "Iberis ciliata subsp. ciliata": {
+    "acceptedName": "Iberis ciliata All.",
+    "taxonid": 5341,
+    "error": null,
+    "preguntadoComo": "Iberis ciliata"
+  },
+  "Jasione foliosa": {
+    "acceptedName": "Jasione foliosa Cav.",
+    "taxonid": 5441,
+    "error": null,
+    "preguntadoComo": "Jasione foliosa"
+  },
+  "Juniperus oxycedrus subsp. oxycedrus": {
+    "acceptedName": "Juniperus oxycedrus L.",
+    "taxonid": 5505,
+    "error": null,
+    "preguntadoComo": "Juniperus oxycedrus"
+  },
+  "Juniperus phoenicea subsp. phoenicea": {
+    "acceptedName": "Juniperus phoenicea L.",
+    "taxonid": 5509,
+    "error": null,
+    "preguntadoComo": "Juniperus phoenicea"
+  },
+  "Jurinea humillis": {
+    "acceptedName": null,
+    "taxonid": null,
+    "error": null
+  },
+  "Jurinea pinnata": {
+    "acceptedName": "Jurinea pinnata (Pers.) DC.",
+    "taxonid": 5519,
+    "error": null,
+    "preguntadoComo": "Jurinea pinnata"
+  },
+  "Kickxia lanigera": {
+    "acceptedName": "Kickxia lanigera (Desf.) Hand.-Mazz.",
+    "taxonid": 5530,
+    "error": null,
+    "preguntadoComo": "Kickxia lanigera"
+  },
+  "Kickxia spuria subsp. integrifolia": {
+    "acceptedName": "Kickxia spuria subsp. integrifolia (Brot.) R. Fern.",
+    "taxonid": 5371,
+    "error": null,
+    "preguntadoComo": "Kickxia spuria subsp. integrifolia"
+  },
+  "Lathyrus cicera": {
+    "acceptedName": "Lathyrus cicera L.",
+    "taxonid": 5694,
+    "error": null,
+    "preguntadoComo": "Lathyrus cicera"
+  },
+  "Lavandula latifolia": {
+    "acceptedName": "Lavandula latifolia Medik.",
+    "taxonid": 5587,
+    "error": null,
+    "preguntadoComo": "Lavandula latifolia"
+  },
+  "Lavandula multifida": {
+    "acceptedName": "Lavandula multifida L.",
+    "taxonid": 5547,
+    "error": null,
+    "preguntadoComo": "Lavandula multifida"
+  },
+  "Limonium eugeniae": {
+    "acceptedName": "Limonium eugeniae Sennen",
+    "taxonid": 82092,
+    "error": null,
+    "preguntadoComo": "Limonium eugeniae"
+  },
+  "Linaria cavanillesii": {
+    "acceptedName": "Linaria cavanillesii Chav.",
+    "taxonid": 5785,
+    "error": null,
+    "preguntadoComo": "Linaria cavanillesii"
+  },
+  "Linum narbonense": {
+    "acceptedName": "Linum narbonense L.",
+    "taxonid": 10065,
+    "error": null,
+    "preguntadoComo": "Linum narbonense"
+  },
+  "Linum strictum": {
+    "acceptedName": "Linum strictum subsp. spicatum (Pers.) Nyman",
+    "taxonid": 495,
+    "error": null,
+    "preguntadoComo": "Linum strictum"
+  },
+  "Lithodora fruticosa": {
+    "acceptedName": "Lithodora fruticosa (L.) Griseb.",
+    "taxonid": 5933,
+    "error": null,
+    "preguntadoComo": "Lithodora fruticosa"
+  },
+  "Lobularia maritima": {
+    "acceptedName": "Lobularia maritima (L.) Desv.",
+    "taxonid": 6014,
+    "error": null,
+    "preguntadoComo": "Lobularia maritima"
+  },
+  "Lonicera implexa": {
+    "acceptedName": "Lonicera implexa Aiton",
+    "taxonid": 6038,
+    "error": null,
+    "preguntadoComo": "Lonicera implexa"
+  },
+  "Macrochloa tenacissima": {
+    "acceptedName": "Macrochloa tenacissima (L.) Kunth",
+    "taxonid": 27376,
+    "error": null,
+    "preguntadoComo": "Macrochloa tenacissima"
+  },
+  "Marrubium alysson": {
+    "acceptedName": "Marrubium alysson L.",
+    "taxonid": 6220,
+    "error": null,
+    "preguntadoComo": "Marrubium alysson"
+  },
+  "Marrubium vulgare": {
+    "acceptedName": "Marrubium vulgare L.",
+    "taxonid": 6223,
+    "error": null,
+    "preguntadoComo": "Marrubium vulgare"
+  },
+  "Medicago rigidula": {
+    "acceptedName": "Medicago rigidula (L.) All.",
+    "taxonid": 6237,
+    "error": null,
+    "preguntadoComo": "Medicago rigidula"
+  },
+  "Medicago sativa": {
+    "acceptedName": "Medicago sativa L.",
+    "taxonid": 6239,
+    "error": null,
+    "preguntadoComo": "Medicago sativa"
+  },
+  "Melia azedarach": {
+    "acceptedName": "Melia azedarach L.",
+    "taxonid": 6288,
+    "error": null,
+    "preguntadoComo": "Melia azedarach"
+  },
+  "Melilotus indicus": {
+    "acceptedName": "Melilotus indicus (L.) All.",
+    "taxonid": 6144,
+    "error": null,
+    "preguntadoComo": "Melilotus indicus"
+  },
+  "Minuartia campestris": {
+    "acceptedName": "Minuartia campestris L.",
+    "taxonid": 6341,
+    "error": null,
+    "preguntadoComo": "Minuartia campestris"
+  },
+  "Minuartia hamata": {
+    "acceptedName": "Minuartia hamata (Hausskn. & Bornm.) Mattf.",
+    "taxonid": 6347,
+    "error": null,
+    "preguntadoComo": "Minuartia hamata"
+  },
+  "Moricandia arvensis": {
+    "acceptedName": "Moricandia arvensis (L.) DC.",
+    "taxonid": 6399,
+    "error": null,
+    "preguntadoComo": "Moricandia arvensis"
+  },
+  "Muscari neglectum": {
+    "acceptedName": "Muscari neglectum Ten.",
+    "taxonid": 6305,
+    "error": null,
+    "preguntadoComo": "Muscari neglectum"
+  },
+  "Nepeta hepetella subsp. murcica": {
+    "acceptedName": null,
+    "taxonid": null,
+    "error": null
+  },
+  "Neslia paniculata subsp. thracica": {
+    "acceptedName": "Neslia paniculata subsp. thracica (Velen.) Bornm.",
+    "taxonid": 6565,
+    "error": null,
+    "preguntadoComo": "Neslia paniculata subsp. thracica"
+  },
+  "Odontites viscosus": {
+    "acceptedName": "Odontites viscosus (L.) Clairv.",
+    "taxonid": 6448,
+    "error": null,
+    "preguntadoComo": "Odontites viscosus"
+  },
+  "Olea europaea var. sylvestris": {
+    "acceptedName": "Olea europaea var. sylvestris (Mill.) Lehr.",
+    "taxonid": 32803,
+    "error": null,
+    "preguntadoComo": "Olea europaea var. sylvestris"
+  },
+  "Ornithogalum narbonense": {
+    "acceptedName": "Loncomelos narbonense (L.) Raf.",
+    "taxonid": 6794,
+    "error": null,
+    "preguntadoComo": "Ornithogalum narbonense"
+  },
+  "Osyris alba": {
+    "acceptedName": "Osyris alba L.",
+    "taxonid": 6880,
+    "error": null,
+    "preguntadoComo": "Osyris alba"
+  },
+  "Pallenis spinosa": {
+    "acceptedName": "Asteriscus spinosus (L.) Schulz Bip.",
+    "taxonid": 80443,
+    "error": null,
+    "preguntadoComo": "Pallenis spinosa"
+  },
+  "Paronychia aretioides": {
+    "acceptedName": "Paronychia aretioides DC.",
+    "taxonid": 6950,
+    "error": null,
+    "preguntadoComo": "Paronychia aretioides"
+  },
+  "Paronychia capitata": {
+    "acceptedName": "Paronychia capitata (L.) Lam. subsp. capitata",
+    "taxonid": 6763,
+    "error": null,
+    "preguntadoComo": "Paronychia capitata"
+  },
+  "Paronychia suffruticosa": {
+    "acceptedName": "Paronychia suffruticosa (L.) DC.",
+    "taxonid": 6774,
+    "error": null,
+    "preguntadoComo": "Paronychia suffruticosa"
+  },
+  "Phagnalon rupestre": {
+    "acceptedName": "Phagnalon rupestre (L.) DC.",
+    "taxonid": 601,
+    "error": null,
+    "preguntadoComo": "Phagnalon rupestre"
+  },
+  "Phillyrea angustifolia": {
+    "acceptedName": "Phillyrea angustifolia L.",
+    "taxonid": 7077,
+    "error": null,
+    "preguntadoComo": "Phillyrea angustifolia"
+  },
+  "Phlomis lychnitis": {
+    "acceptedName": "Phlomis lychnitis L.",
+    "taxonid": 7086,
+    "error": null,
+    "preguntadoComo": "Phlomis lychnitis"
+  },
+  "Pinus halepensis": {
+    "acceptedName": "Pinus halepensis Mill.",
+    "taxonid": 7118,
+    "error": null,
+    "preguntadoComo": "Pinus halepensis"
+  },
+  "Pinus nigra subsp. clusiana": {
+    "acceptedName": "Pinus nigra subsp. salzmannii (Dunal) Franco",
+    "taxonid": 7122,
+    "error": null,
+    "preguntadoComo": "Pinus nigra subsp. clusiana"
+  },
+  "Pinus nigra subsp. salzmanii": {
+    "acceptedName": "Pinus nigra J.F. Arnold",
+    "taxonid": 7120,
+    "error": null,
+    "preguntadoComo": "Pinus nigra"
+  },
+  "Pinus pinaster": {
+    "acceptedName": "Pinus pinaster Aiton",
+    "taxonid": 7123,
+    "error": null,
+    "preguntadoComo": "Pinus pinaster"
+  },
+  "Piptatherum paradoxum": {
+    "acceptedName": "Achnatherum paradoxum (L.) Banfi, Galasso & Bartolucci",
+    "taxonid": 82534,
+    "error": null,
+    "preguntadoComo": "Piptatherum paradoxum"
+  },
+  "Pistacia lentiscus": {
+    "acceptedName": "Pistacia lentiscus L.",
+    "taxonid": 7129,
+    "error": null,
+    "preguntadoComo": "Pistacia lentiscus"
+  },
+  "Pistacia terebinthus": {
+    "acceptedName": "Pistacia terebinthus L.",
+    "taxonid": 7130,
+    "error": null,
+    "preguntadoComo": "Pistacia terebinthus"
+  },
+  "Plantago albicans": {
+    "acceptedName": "Plantago albicans L.",
+    "taxonid": 7145,
+    "error": null,
+    "preguntadoComo": "Plantago albicans"
+  },
+  "Plantago sempervirens": {
+    "acceptedName": "Plantago sempervirens Crantz",
+    "taxonid": 7174,
+    "error": null,
+    "preguntadoComo": "Plantago sempervirens"
+  },
+  "Platycanos spicata": {
+    "acceptedName": null,
+    "taxonid": null,
+    "error": null
+  },
+  "Poa flaccidula": {
+    "acceptedName": "Poa flaccidula Boiss. & Reut.",
+    "taxonid": 10112,
+    "error": null,
+    "preguntadoComo": "Poa flaccidula"
+  },
+  "Polycarpon tetraphyllum": {
+    "acceptedName": "Polycarpon tetraphyllum (L.) L.",
+    "taxonid": 7245,
+    "error": null,
+    "preguntadoComo": "Polycarpon tetraphyllum"
+  },
+  "Polygala rupestris": {
+    "acceptedName": "Polygala rupestris Pourr.",
+    "taxonid": 7206,
+    "error": null,
+    "preguntadoComo": "Polygala rupestris"
+  },
+  "Portulaca oleracea": {
+    "acceptedName": "Portulaca oleracea L.",
+    "taxonid": 7295,
+    "error": null,
+    "preguntadoComo": "Portulaca oleracea"
+  },
+  "Potentilla caulescens": {
+    "acceptedName": "Potentilla caulescens L.",
+    "taxonid": 7331,
+    "error": null,
+    "preguntadoComo": "Potentilla caulescens"
+  },
+  "Quercus coccifera": {
+    "acceptedName": "Quercus coccifera L.",
+    "taxonid": 7478,
+    "error": null,
+    "preguntadoComo": "Quercus coccifera"
+  },
+  "Quercus rotundifolia": {
+    "acceptedName": "Quercus rotundifolia Lam.",
+    "taxonid": 7379,
+    "error": null,
+    "preguntadoComo": "Quercus rotundifolia"
+  },
+  "Rapistrum rugossum": {
+    "acceptedName": null,
+    "taxonid": null,
+    "error": null
+  },
+  "Reseda lutea": {
+    "acceptedName": "Reseda lutea L.",
+    "taxonid": 7658,
+    "error": null,
+    "preguntadoComo": "Reseda lutea"
+  },
+  "Reseda phyteuma": {
+    "acceptedName": "Reseda phyteuma L.",
+    "taxonid": 7667,
+    "error": null,
+    "preguntadoComo": "Reseda phyteuma"
+  },
+  "Retama sphaerocarpa": {
+    "acceptedName": "Retama sphaerocarpa (L.) Boiss.",
+    "taxonid": 7680,
+    "error": null,
+    "preguntadoComo": "Retama sphaerocarpa"
+  },
+  "Rhamnus alaternus": {
+    "acceptedName": "Rhamnus alaternus L.",
+    "taxonid": 7684,
+    "error": null,
+    "preguntadoComo": "Rhamnus alaternus"
+  },
+  "Rhamnus hispanorum": {
+    "acceptedName": "Rhamnus lycioides L. subsp. lycioides",
+    "taxonid": 7731,
+    "error": null,
+    "preguntadoComo": "Rhamnus hispanorum"
+  },
+  "Rhamnus lycioides": {
+    "acceptedName": "Rhamnus lycioides L.",
+    "taxonid": 7730,
+    "error": null,
+    "preguntadoComo": "Rhamnus lycioides"
+  },
+  "Rhamnus pumilus": {
+    "acceptedName": null,
+    "taxonid": null,
+    "error": null
+  },
+  "Rhodalsine geniculata": {
+    "acceptedName": "Rhodalsine geniculata (Poir.) F.N. Williams",
+    "taxonid": 7766,
+    "error": null,
+    "preguntadoComo": "Rhodalsine geniculata"
+  },
+  "Ridolfia segetum": {
+    "acceptedName": "Ridolfia segetum (L.) Moris",
+    "taxonid": 7791,
+    "error": null,
+    "preguntadoComo": "Ridolfia segetum"
+  },
+  "Rosa canina": {
+    "acceptedName": "Rosa canina L.",
+    "taxonid": 7619,
+    "error": null,
+    "preguntadoComo": "Rosa canina"
+  },
+  "Rosmarinus officinalis": {
+    "acceptedName": "Rosmarinus officinalis L.",
+    "taxonid": 7647,
+    "error": null,
+    "preguntadoComo": "Rosmarinus officinalis"
+  },
+  "Ruscus aculeatus": {
+    "acceptedName": "Ruscus aculeatus L.",
+    "taxonid": 7854,
+    "error": null,
+    "preguntadoComo": "Ruscus aculeatus"
+  },
+  "Salsola genistoides": {
+    "acceptedName": "Salsola genistoides Poir.",
+    "taxonid": 7911,
+    "error": null,
+    "preguntadoComo": "Salsola genistoides"
+  },
+  "Salsola kali": {
+    "acceptedName": "Salsola kali L.",
+    "taxonid": 7912,
+    "error": null,
+    "preguntadoComo": "Salsola kali"
+  },
+  "Sanguisorba ancistroides": {
+    "acceptedName": "Poterium ancistroides Desf.",
+    "taxonid": 7955,
+    "error": null,
+    "preguntadoComo": "Sanguisorba ancistroides"
+  },
+  "Sanguisorba rupicola": {
+    "acceptedName": "Poterium rupicola Boiss. & Reut.",
+    "taxonid": 7963,
+    "error": null,
+    "preguntadoComo": "Sanguisorba rupicola"
+  },
+  "Sarcocapnos enneaphylla subsp. saetabensis": {
+    "acceptedName": "Sarcocapnos saetabensis Mateo & Figuerola",
+    "taxonid": 31994,
+    "error": null,
+    "preguntadoComo": "Sarcocapnos enneaphylla subsp. saetabensis"
+  },
+  "Satureja cuneifolia": {
+    "acceptedName": "Satureja obovata Lag.",
+    "taxonid": 7988,
+    "error": null,
+    "preguntadoComo": "Satureja cuneifolia"
+  },
+  "Saxifraga latepetiolata": {
+    "acceptedName": "Saxifraga latepetiolata Willk.",
+    "taxonid": 8029,
+    "error": null,
+    "preguntadoComo": "Saxifraga latepetiolata"
+  },
+  "Scabiosa turolensis": {
+    "acceptedName": "Scabiosa turolensis Pau",
+    "taxonid": 8073,
+    "error": null,
+    "preguntadoComo": "Scabiosa turolensis"
+  },
+  "Schismus barbatus": {
+    "acceptedName": "Schismus barbatus (L.) Thell.",
+    "taxonid": 10126,
+    "error": null,
+    "preguntadoComo": "Schismus barbatus"
+  },
+  "Scorzonera hispanica": {
+    "acceptedName": "Pseudopodospermum hispanicum (L.) Zaika, Sukhor. & N. Kilian",
+    "taxonid": 10428,
+    "error": null,
+    "preguntadoComo": "Scorzonera hispanica"
+  },
+  "Sedum acre": {
+    "acceptedName": "Sedum acre L.",
+    "taxonid": 8188,
+    "error": null,
+    "preguntadoComo": "Sedum acre"
+  },
+  "Sedum album": {
+    "acceptedName": "Sedum album L.",
+    "taxonid": 8190,
+    "error": null,
+    "preguntadoComo": "Sedum album"
+  },
+  "Sedum dasyphyllum var. gladuliferum": {
+    "acceptedName": "Sedum dasyphyllum L.",
+    "taxonid": 8203,
+    "error": null,
+    "preguntadoComo": "Sedum dasyphyllum"
+  },
+  "Sedum sediforme": {
+    "acceptedName": "Petrosedum sediforme (Jacq.) Grulich subsp. sediforme",
+    "taxonid": 95304,
+    "error": null,
+    "preguntadoComo": "Sedum sediforme"
+  },
+  "Seseli montanum subsp. granatense": {
+    "acceptedName": "Seseli montanum subsp. granatense (Willk.) C. Pardo",
+    "taxonid": 8097,
+    "error": null,
+    "preguntadoComo": "Seseli montanum subsp. granatense"
+  },
+  "Sideritis bourgaeana": {
+    "acceptedName": "Sideritis bourgaeana Boiss. & Reut.",
+    "taxonid": 8279,
+    "error": null,
+    "preguntadoComo": "Sideritis bourgaeana"
+  },
+  "Sideritis montana": {
+    "acceptedName": "Sideritis montana L.",
+    "taxonid": 8342,
+    "error": null,
+    "preguntadoComo": "Sideritis montana"
+  },
+  "Silene mellifera": {
+    "acceptedName": "Silene mellifera Boiss. & Reut.",
+    "taxonid": 8413,
+    "error": null,
+    "preguntadoComo": "Silene mellifera"
+  },
+  "Silene vulgaris": {
+    "acceptedName": "Silene vulgaris (Moench) Garcke",
+    "taxonid": 8375,
+    "error": null,
+    "preguntadoComo": "Silene vulgaris"
+  },
+  "Sisymbrium irio": {
+    "acceptedName": "Sisymbrium irio L.",
+    "taxonid": 8458,
+    "error": null,
+    "preguntadoComo": "Sisymbrium irio"
+  },
+  "Sisymbrium orientale": {
+    "acceptedName": "Sisymbrium orientale L.",
+    "taxonid": 8462,
+    "error": null,
+    "preguntadoComo": "Sisymbrium orientale"
+  },
+  "Sisymbrium runcinatum": {
+    "acceptedName": "Sisymbrium runcinatum DC.",
+    "taxonid": 8464,
+    "error": null,
+    "preguntadoComo": "Sisymbrium runcinatum"
+  },
+  "Staehelina dubia": {
+    "acceptedName": "Staehelina dubia L.",
+    "taxonid": 8629,
+    "error": null,
+    "preguntadoComo": "Staehelina dubia"
+  },
+  "Stellaria media": {
+    "acceptedName": "Stellaria media (L.) Vill.",
+    "taxonid": 8641,
+    "error": null,
+    "preguntadoComo": "Stellaria media"
+  },
+  "Stipa lagascae": {
+    "acceptedName": "Stipa lagascae Roem. & Schult.",
+    "taxonid": 10134,
+    "error": null,
+    "preguntadoComo": "Stipa lagascae"
+  },
+  "Tamarix canariensis": {
+    "acceptedName": "Tamarix canariensis Willd.",
+    "taxonid": 8549,
+    "error": null,
+    "preguntadoComo": "Tamarix canariensis"
+  },
+  "Teucrium capitatum subsp. gracillimum": {
+    "acceptedName": "Teucrium capitatum subsp. gracillimum (Rouy) Valdés Berm.",
+    "taxonid": 8786,
+    "error": null,
+    "preguntadoComo": "Teucrium capitatum subsp. gracillimum"
+  },
+  "Teucrium chamaedrys": {
+    "acceptedName": "Teucrium chamaedrys L.",
+    "taxonid": 8713,
+    "error": null,
+    "preguntadoComo": "Teucrium chamaedrys"
+  },
+  "Teucrium franchetianum": {
+    "acceptedName": "Teucrium franchetianum Rouy & Coincy",
+    "taxonid": 8799,
+    "error": null,
+    "preguntadoComo": "Teucrium franchetianum"
+  },
+  "Teucrim homotrichum": {
+    "acceptedName": null,
+    "taxonid": null,
+    "error": null
+  },
+  "Teucrium libanitis": {
+    "acceptedName": "Teucrium libanitis Schreb.",
+    "taxonid": 8812,
+    "error": null,
+    "preguntadoComo": "Teucrium libanitis"
+  },
+  "Teucrium leonis": {
+    "acceptedName": "Teucrium leonis Sennen",
+    "taxonid": 8810,
+    "error": null,
+    "preguntadoComo": "Teucrium leonis"
+  },
+  "Teucrium pseudochamaepitys": {
+    "acceptedName": "Teucrium pseudochamaepitys L.",
+    "taxonid": 8823,
+    "error": null,
+    "preguntadoComo": "Teucrium pseudochamaepitys"
+  },
+  "Teucrium thymifolium": {
+    "acceptedName": "Teucrium thymifolium Schreb.",
+    "taxonid": 8844,
+    "error": null,
+    "preguntadoComo": "Teucrium thymifolium"
+  },
+  "Thesium humifusum": {
+    "acceptedName": "Thesium humifusum DC.",
+    "taxonid": 8678,
+    "error": null,
+    "preguntadoComo": "Thesium humifusum"
+  },
+  "Thymus funkii subsp. funkii": {
+    "acceptedName": "Thymus funkii Coss.",
+    "taxonid": 8905,
+    "error": null,
+    "preguntadoComo": "Thymus funkii"
+  },
+  "Thymus hyemalis": {
+    "acceptedName": "Thymus hyemalis Lange",
+    "taxonid": 8914,
+    "error": null,
+    "preguntadoComo": "Thymus hyemalis"
+  },
+  "Thymus moroderi": {
+    "acceptedName": "Thymus moroderi Mart. Mart.",
+    "taxonid": 8932,
+    "error": null,
+    "preguntadoComo": "Thymus moroderi"
+  },
+  "Thymus vulgaris": {
+    "acceptedName": "Thymus vulgaris L.",
+    "taxonid": 8951,
+    "error": null,
+    "preguntadoComo": "Thymus vulgaris"
+  },
+  "Thymus zygis subsp. gracilis": {
+    "acceptedName": "Thymus zygis subsp. gracilis (Boiss.) R. Morales",
+    "taxonid": 8958,
+    "error": null,
+    "preguntadoComo": "Thymus zygis subsp. gracilis"
+  },
+  "Torilis arvensis": {
+    "acceptedName": "Torilis arvensis (Huds.) Link",
+    "taxonid": 9014,
+    "error": null,
+    "preguntadoComo": "Torilis arvensis"
+  },
+  "Trigonella polyceratia": {
+    "acceptedName": "Medicago polyceratia (L.) Trautv.",
+    "taxonid": 82587,
+    "error": null,
+    "preguntadoComo": "Trigonella polyceratia"
+  },
+  "Ulmus minor": {
+    "acceptedName": "Ulmus minor Mill.",
+    "taxonid": 9147,
+    "error": null,
+    "preguntadoComo": "Ulmus minor"
+  },
+  "Viburnum tinus": {
+    "acceptedName": "Viburnum tinus L.",
+    "taxonid": 9370,
+    "error": null,
+    "preguntadoComo": "Viburnum tinus"
+  },
+  "Vicia peregrina": {
+    "acceptedName": "Vicia peregrina L.",
+    "taxonid": 9214,
+    "error": null,
+    "preguntadoComo": "Vicia peregrina"
+  },
+  "Capra pyrenaica": {
+    "acceptedName": "Capra pyrenaica pyrenaica",
+    "taxonid": 24419,
+    "error": null,
+    "preguntadoComo": "Capra pyrenaica"
+  },
+  "Crocidura russula": {
+    "acceptedName": "Crocidura russula (Hermann, 1780)",
+    "taxonid": 12133,
+    "error": null,
+    "preguntadoComo": "Crocidura russula"
+  },
+  "Eliomys quercinus": {
+    "acceptedName": "Eliomys quercinus (Linnaeus, 1766)",
+    "taxonid": 12074,
+    "error": null,
+    "preguntadoComo": "Eliomys quercinus"
+  },
+  "Eptesicus isabellinus": {
+    "acceptedName": "Cnephaeus isabellinus (Temminck, 1840)",
+    "taxonid": 16225,
+    "error": null,
+    "preguntadoComo": "Eptesicus isabellinus"
+  },
+  "Erinaceus europaeus": {
+    "acceptedName": "Erinaceus europaeus Linnaeus, 1758",
+    "taxonid": 11227,
+    "error": null,
+    "preguntadoComo": "Erinaceus europaeus"
+  },
+  "Felis silvestris": {
+    "acceptedName": "Felis silvestris Schreber, 1777",
+    "taxonid": 12214,
+    "error": null,
+    "preguntadoComo": "Felis silvestris"
+  },
+  "Genetta genetta": {
+    "acceptedName": "Genetta genetta (Linnaeus, 1758)",
+    "taxonid": 11350,
+    "error": null,
+    "preguntadoComo": "Genetta genetta"
+  },
+  "Martes foina": {
+    "acceptedName": "Martes foina (Erxleben, 1777)",
+    "taxonid": 11289,
+    "error": null,
+    "preguntadoComo": "Martes foina"
+  },
+  "Meles meles": {
+    "acceptedName": "Meles meles (Linnaeus, 1758)",
+    "taxonid": 11709,
+    "error": null,
+    "preguntadoComo": "Meles meles"
+  },
+  "Pipistrellus kuhlii": {
+    "acceptedName": "Pipistrellus kuhlii (Kuhl, 1817)",
+    "taxonid": 11550,
+    "error": null,
+    "preguntadoComo": "Pipistrellus kuhlii"
+  },
+  "Pipistrellus pipistrellus": {
+    "acceptedName": "Pipistrellus pipistrellus (Schreber, 1774)",
+    "taxonid": 11991,
+    "error": null,
+    "preguntadoComo": "Pipistrellus pipistrellus"
+  },
+  "Plecotus austriacus": {
+    "acceptedName": "Plecotus austriacus (J. B. Fischer, 1829)",
+    "taxonid": 10799,
+    "error": null,
+    "preguntadoComo": "Plecotus austriacus"
+  },
+  "Suncus etruscus": {
+    "acceptedName": "Suncus etruscus (Savi, 1822)",
+    "taxonid": 11223,
+    "error": null,
+    "preguntadoComo": "Suncus etruscus"
+  },
+  "Anthus campestris": {
+    "acceptedName": "Anthus campestris (Linnaeus, 1758)",
+    "taxonid": 10944,
+    "error": null,
+    "preguntadoComo": "Anthus campestris"
+  },
+  "Aquila chrysaetos": {
+    "acceptedName": "Aquila chrysaetos (Linnaeus, 1758)",
+    "taxonid": 10888,
+    "error": null,
+    "preguntadoComo": "Aquila chrysaetos"
+  },
+  "Bubo bubo": {
+    "acceptedName": "Bubo bubo (Linnaeus, 1758)",
+    "taxonid": 10917,
+    "error": null,
+    "preguntadoComo": "Bubo bubo"
+  },
+  "Burhinus oedicnemus": {
+    "acceptedName": "Burhinus oedicnemus (Linnaeus, 1758)",
+    "taxonid": 11887,
+    "error": null,
+    "preguntadoComo": "Burhinus oedicnemus"
+  },
+  "Calandrella brachydactyla": {
+    "acceptedName": "Calandrella brachydactyla (Leisler, 1814)",
+    "taxonid": 10734,
+    "error": null,
+    "preguntadoComo": "Calandrella brachydactyla"
+  },
+  "Circaetus gallicus": {
+    "acceptedName": "Circaetus gallicus (Gmelin, JF, 1788)",
+    "taxonid": 11336,
+    "error": null,
+    "preguntadoComo": "Circaetus gallicus"
+  },
+  "Coracias garrulus": {
+    "acceptedName": "Coracias garrulus Linnaeus, 1758",
+    "taxonid": 11339,
+    "error": null,
+    "preguntadoComo": "Coracias garrulus"
+  },
+  "Falco peregrinus": {
+    "acceptedName": "Falco peregrinus Tunstall, 1771",
+    "taxonid": 11963,
+    "error": null,
+    "preguntadoComo": "Falco peregrinus"
+  },
+  "Galerida theklae": {
+    "acceptedName": "Galerida theklae Brehm, AE, 1857",
+    "taxonid": 12316,
+    "error": null,
+    "preguntadoComo": "Galerida theklae"
+  },
+  "Hieraaetus pennatus": {
+    "acceptedName": "Hieraaetus pennatus (Gmelin, JF, 1788)",
+    "taxonid": 11959,
+    "error": null,
+    "preguntadoComo": "Hieraaetus pennatus"
+  },
+  "Lullula arborea": {
+    "acceptedName": "Lullula arborea (Linnaeus, 1758)",
+    "taxonid": 10750,
+    "error": null,
+    "preguntadoComo": "Lullula arborea"
+  },
+  "Oenanthe leucura": {
+    "acceptedName": "Oenanthe leucura (Gmelin, JF, 1789)",
+    "taxonid": 11592,
+    "error": null,
+    "preguntadoComo": "Oenanthe leucura"
+  },
+  "Pyrrhocorax pyrrhocorax": {
+    "acceptedName": "Pyrrhocorax pyrrhocorax subsp. erythrorhamphus",
+    "taxonid": 12063,
+    "error": null,
+    "preguntadoComo": "Pyrrhocorax pyrrhocorax"
+  },
+  "Sylvia sarda": {
+    "acceptedName": "Curruca sarda (Temminck, 1820)",
+    "taxonid": 80945,
+    "error": null,
+    "preguntadoComo": "Sylvia sarda"
+  },
+  "Sylvia undata": {
+    "acceptedName": "Sylvia undata undata (Boddaert, 1783)",
+    "taxonid": 80230,
+    "error": null,
+    "preguntadoComo": "Sylvia undata"
+  },
+  "Accipiter nisus": {
+    "acceptedName": "Accipiter nisus (Linnaeus, 1758)",
+    "taxonid": 11849,
+    "error": null,
+    "preguntadoComo": "Accipiter nisus"
+  },
+  "Acrocephalus arundinaceus": {
+    "acceptedName": "Acrocephalus arundinaceus (Linnaeus, 1758)",
+    "taxonid": 10766,
+    "error": null,
+    "preguntadoComo": "Acrocephalus arundinaceus"
+  },
+  "Alauda arvensis": {
+    "acceptedName": "Alauda arvensis Linnaeus, 1758",
+    "taxonid": 10768,
+    "error": null,
+    "preguntadoComo": "Alauda arvensis"
+  },
+  "Anthus pratensis": {
+    "acceptedName": "Anthus pratensis (Linnaeus, 1758)",
+    "taxonid": 12019,
+    "error": null,
+    "preguntadoComo": "Anthus pratensis"
+  },
+  "Apus apus": {
+    "acceptedName": "Apus apus (Linnaeus, 1758)",
+    "taxonid": 10743,
+    "error": null,
+    "preguntadoComo": "Apus apus"
+  },
+  "Apus melba": {
+    "acceptedName": "Tachymarptis melba (Linnaeus, 1758)",
+    "taxonid": 24459,
+    "error": null,
+    "preguntadoComo": "Apus melba"
+  },
+  "Caprimulgus ruficollis": {
+    "acceptedName": "Caprimulgus ruficollis Temminck, 1820",
+    "taxonid": 12122,
+    "error": null,
+    "preguntadoComo": "Caprimulgus ruficollis"
+  },
+  "Carduelis spinus": {
+    "acceptedName": "Spinus spinus (Linnaeus, 1758)",
+    "taxonid": 33009,
+    "error": null,
+    "preguntadoComo": "Carduelis spinus"
+  },
+  "Cuculus canorus": {
+    "acceptedName": "Cuculus canorus Linnaeus, 1758",
+    "taxonid": 10952,
+    "error": null,
+    "preguntadoComo": "Cuculus canorus"
+  },
+  "Delichon urbica": {
+    "acceptedName": "Delichon urbicum (Linnaeus, 1758)",
+    "taxonid": 12368,
+    "error": null,
+    "preguntadoComo": "Delichon urbica"
+  },
+  "Emberiza citrinella": {
+    "acceptedName": "Emberiza citrinella Linnaeus, 1758",
+    "taxonid": 10911,
+    "error": null,
+    "preguntadoComo": "Emberiza citrinella"
+  },
+  "Erithacus rubecula": {
+    "acceptedName": "Erithacus rubecula (Linnaeus, 1758)",
+    "taxonid": 12111,
+    "error": null,
+    "preguntadoComo": "Erithacus rubecula"
+  },
+  "Falco tinnunculus": {
+    "acceptedName": "Falco tinnunculus Linnaeus, 1758",
+    "taxonid": 12321,
+    "error": null,
+    "preguntadoComo": "Falco tinnunculus"
+  },
+  "Ficedula hypoleuca": {
+    "acceptedName": "Ficedula hypoleuca (Pallas, 1764)",
+    "taxonid": 11483,
+    "error": null,
+    "preguntadoComo": "Ficedula hypoleuca"
+  },
+  "Fringilla coelebs": {
+    "acceptedName": "Fringilla coelebs Linnaeus, 1758",
+    "taxonid": 11047,
+    "error": null,
+    "preguntadoComo": "Fringilla coelebs"
+  },
+  "Hippolais pallida": {
+    "acceptedName": null,
+    "taxonid": null,
+    "error": null,
+    "preguntadoComo": "Hippolais pallida"
+  },
+  "Hippolais polyglotta": {
+    "acceptedName": "Hippolais polyglotta (Vieillot, 1817)",
+    "taxonid": 12009,
+    "error": null,
+    "preguntadoComo": "Hippolais polyglotta"
+  },
+  "Hirundo rustica": {
+    "acceptedName": "Hirundo rustica Linnaeus, 1758",
+    "taxonid": 12134,
+    "error": null,
+    "preguntadoComo": "Hirundo rustica"
+  },
+  "Lanius senator": {
+    "acceptedName": "Lanius senator Linnaeus, 1758",
+    "taxonid": 12190,
+    "error": null,
+    "preguntadoComo": "Lanius senator"
+  },
+  "Luscinia megarhynchos": {
+    "acceptedName": "Luscinia megarhynchos Brehm, CL, 1831",
+    "taxonid": 11701,
+    "error": null,
+    "preguntadoComo": "Luscinia megarhynchos"
+  },
+  "Merops apiaster": {
+    "acceptedName": "Merops apiaster Linnaeus, 1758",
+    "taxonid": 10738,
+    "error": null,
+    "preguntadoComo": "Merops apiaster"
+  },
+  "Motacilla alba": {
+    "acceptedName": "Motacilla alba Linnaeus, 1758",
+    "taxonid": 10648,
+    "error": null,
+    "preguntadoComo": "Motacilla alba"
+  },
+  "Muscicapa striata": {
+    "acceptedName": "Muscicapa striata (Pallas, 1764)",
+    "taxonid": 12250,
+    "error": null,
+    "preguntadoComo": "Muscicapa striata"
+  },
+  "Oenanthe hispanica": {
+    "acceptedName": "Oenanthe hispanica (Linnaeus, 1758)",
+    "taxonid": 11453,
+    "error": null,
+    "preguntadoComo": "Oenanthe hispanica"
+  },
+  "Oenanthe oenanthe": {
+    "acceptedName": "Oenanthe oenanthe (Linnaeus, 1758)",
+    "taxonid": 11890,
+    "error": null,
+    "preguntadoComo": "Oenanthe oenanthe"
+  },
+  "Oriolus oriolus": {
+    "acceptedName": "Oriolus oriolus (Linnaeus, 1758)",
+    "taxonid": 11911,
+    "error": null,
+    "preguntadoComo": "Oriolus oriolus"
+  },
+  "Otus scops": {
+    "acceptedName": "Otus scops (Linnaeus, 1758)",
+    "taxonid": 12175,
+    "error": null,
+    "preguntadoComo": "Otus scops"
+  },
+  "Passer montanus": {
+    "acceptedName": "Passer montanus (Linnaeus, 1758)",
+    "taxonid": 11775,
+    "error": null,
+    "preguntadoComo": "Passer montanus"
+  },
+  "Phoenicurus ochruros": {
+    "acceptedName": "Phoenicurus ochruros (Gmelin, SG, 1774)",
+    "taxonid": 11886,
+    "error": null,
+    "preguntadoComo": "Phoenicurus ochruros"
+  },
+  "Phoenicurus phoenicurus": {
+    "acceptedName": "Phoenicurus phoenicurus (Linnaeus, 1758)",
+    "taxonid": 11977,
+    "error": null,
+    "preguntadoComo": "Phoenicurus phoenicurus"
+  },
+  "Phylloscopus bonelli": {
+    "acceptedName": "Phylloscopus bonelli (Vieillot, 1819)",
+    "taxonid": 10724,
+    "error": null,
+    "preguntadoComo": "Phylloscopus bonelli"
+  },
+  "Phylloscopus collybita": {
+    "acceptedName": "Phylloscopus collybita (Vieillot, 1817)",
+    "taxonid": 11056,
+    "error": null,
+    "preguntadoComo": "Phylloscopus collybita"
+  },
+  "Phylloscopus trochilus": {
+    "acceptedName": "Phylloscopus trochilus (Linnaeus, 1758)",
+    "taxonid": 12337,
+    "error": null,
+    "preguntadoComo": "Phylloscopus trochilus"
+  },
+  "Prunella collaris": {
+    "acceptedName": "Prunella collaris (Scopoli, 1769)",
+    "taxonid": 11054,
+    "error": null,
+    "preguntadoComo": "Prunella collaris"
+  },
+  "Prunella modularis": {
+    "acceptedName": "Prunella modularis (Linnaeus, 1758)",
+    "taxonid": 11761,
+    "error": null,
+    "preguntadoComo": "Prunella modularis"
+  },
+  "Ptyonoprogne rupestris": {
+    "acceptedName": "Ptyonoprogne rupestris (Scopoli, 1769)",
+    "taxonid": 12131,
+    "error": null,
+    "preguntadoComo": "Ptyonoprogne rupestris"
+  },
+  "Regulus ignicapillus": {
+    "acceptedName": "Regulus ignicapilla balearicus Jordans, 1923",
+    "taxonid": 23782,
+    "error": null,
+    "preguntadoComo": "Regulus ignicapillus"
+  },
+  "Regulus regulus": {
+    "acceptedName": "Regulus regulus (Linnaeus, 1758)",
+    "taxonid": 12088,
+    "error": null,
+    "preguntadoComo": "Regulus regulus"
+  },
+  "Saxicola torquita": {
+    "acceptedName": null,
+    "taxonid": null,
+    "error": null
+  },
+  "Sylvia atricapilla": {
+    "acceptedName": "Sylvia atricapilla (Linnaeus, 1758)",
+    "taxonid": 10791,
+    "error": null,
+    "preguntadoComo": "Sylvia atricapilla"
+  },
+  "Sylvia cantillans": {
+    "acceptedName": "Curruca cantillans (Pallas, 1764)",
+    "taxonid": 80920,
+    "error": null,
+    "preguntadoComo": "Sylvia cantillans"
+  },
+  "Sylvia communis": {
+    "acceptedName": "Curruca communis (Latham, 1787)",
+    "taxonid": 80921,
+    "error": null,
+    "preguntadoComo": "Sylvia communis"
+  },
+  "Sylvia conspicillata": {
+    "acceptedName": "Curruca conspicillata (Temminck, 1820)",
+    "taxonid": 80923,
+    "error": null,
+    "preguntadoComo": "Sylvia conspicillata"
+  },
+  "Sylvia hortensis": {
+    "acceptedName": "Curruca hortensis (Gmelin, 1789)",
+    "taxonid": 80927,
+    "error": null,
+    "preguntadoComo": "Sylvia hortensis"
+  },
+  "Turdus torquatus": {
+    "acceptedName": "Turdus torquatus Linnaeus, 1758",
+    "taxonid": 12324,
+    "error": null,
+    "preguntadoComo": "Turdus torquatus"
+  },
+  "Turdus viscivorus": {
+    "acceptedName": "Turdus viscivorus Linnaeus, 1758",
+    "taxonid": 12408,
+    "error": null,
+    "preguntadoComo": "Turdus viscivorus"
+  },
+  "Tyto alba": {
+    "acceptedName": "Tyto alba (Scopoli, 1769)",
+    "taxonid": 10650,
+    "error": null,
+    "preguntadoComo": "Tyto alba"
+  },
+  "Upupa epops": {
+    "acceptedName": "Upupa epops Linnaeus, 1758",
+    "taxonid": 11211,
+    "error": null,
+    "preguntadoComo": "Upupa epops"
+  },
+  "Accipiter gentilis": {
+    "acceptedName": "Accipiter gentilis (Linnaeus, 1758)",
+    "taxonid": 11351,
+    "error": null,
+    "preguntadoComo": "Accipiter gentilis"
+  },
+  "Aegithalos caudatus": {
+    "acceptedName": "Aegithalos caudatus (Linnaeus, 1758)",
+    "taxonid": 10993,
+    "error": null,
+    "preguntadoComo": "Aegithalos caudatus"
+  },
+  "Athene noctua": {
+    "acceptedName": "Athene noctua (Scopoli, 1769)",
+    "taxonid": 11861,
+    "error": null,
+    "preguntadoComo": "Athene noctua"
+  },
+  "Certhia brachydactyla": {
+    "acceptedName": "Certhia brachydactyla Brehm, CL, 1820",
+    "taxonid": 10733,
+    "error": null,
+    "preguntadoComo": "Certhia brachydactyla"
+  },
+  "Corvus corax": {
+    "acceptedName": "Corvus corax Linnaeus, 1758",
+    "taxonid": 11075,
+    "error": null,
+    "preguntadoComo": "Corvus corax"
+  },
+  "Emberiza cia": {
+    "acceptedName": "Emberiza cia Linnaeus, 1766",
+    "taxonid": 10890,
+    "error": null,
+    "preguntadoComo": "Emberiza cia"
+  },
+  "Emberiza cirlus": {
+    "acceptedName": "Emberiza cirlus Linnaeus, 1766",
+    "taxonid": 10907,
+    "error": null,
+    "preguntadoComo": "Emberiza cirlus"
+  },
+  "Galerida cristata": {
+    "acceptedName": "Galerida cristata (Linnaeus, 1758)",
+    "taxonid": 11102,
+    "error": null,
+    "preguntadoComo": "Galerida cristata"
+  },
+  "Garrulus glandarius": {
+    "acceptedName": "Garrulus glandarius (Linnaeus, 1758)",
+    "taxonid": 11368,
+    "error": null,
+    "preguntadoComo": "Garrulus glandarius"
+  },
+  "Lanius meridionalis": {
+    "acceptedName": "Lanius meridionalis Temminck, 1820",
+    "taxonid": 16426,
+    "error": null,
+    "preguntadoComo": "Lanius meridionalis"
+  },
+  "Loxia curvirostra": {
+    "acceptedName": "Loxia curvirostra Linnaeus, 1758",
+    "taxonid": 11116,
+    "error": null,
+    "preguntadoComo": "Loxia curvirostra"
+  },
+  "Parus ater": {
+    "acceptedName": "Periparus ater (Linnaeus, 1758)",
+    "taxonid": 16422,
+    "error": null,
+    "preguntadoComo": "Parus ater"
+  },
+  "Parus cristatus": {
+    "acceptedName": "Lophophanes cristatus (Linnaeus, 1758)",
+    "taxonid": 16421,
+    "error": null,
+    "preguntadoComo": "Parus cristatus"
+  },
+  "Parus major": {
+    "acceptedName": "Parus major Linnaeus, 1758",
+    "taxonid": 11650,
+    "error": null,
+    "preguntadoComo": "Parus major"
+  },
+  "Petronia petronia": {
+    "acceptedName": "Petronia petronia (Linnaeus, 1766)",
+    "taxonid": 11973,
+    "error": null,
+    "preguntadoComo": "Petronia petronia"
+  },
+  "Picus viridis": {
+    "acceptedName": "Picus sharpei (Saunders, H, 1872)",
+    "taxonid": 33014,
+    "error": null,
+    "preguntadoComo": "Picus viridis"
+  },
+  "Monticola solitarius": {
+    "acceptedName": "Monticola solitarius (Linnaeus, 1758)",
+    "taxonid": 12226,
+    "error": null,
+    "preguntadoComo": "Monticola solitarius"
+  },
+  "Strix aluco": {
+    "acceptedName": "Strix aluco Linnaeus, 1758",
+    "taxonid": 10698,
+    "error": null,
+    "preguntadoComo": "Strix aluco"
+  },
+  "Sylvia melanocephala": {
+    "acceptedName": "Curruca melanocephala (Gmelin, 1789)",
+    "taxonid": 80929,
+    "error": null,
+    "preguntadoComo": "Sylvia melanocephala"
+  },
+  "Troglodytes troglodytes": {
+    "acceptedName": "Troglodytes troglodytes (Linnaeus, 1758)",
+    "taxonid": 12340,
+    "error": null,
+    "preguntadoComo": "Troglodytes troglodytes"
+  },
+  "Acanthodactylus erythrurus": {
+    "acceptedName": "Acanthodactylus erythrurus (Schinz, 1833)",
+    "taxonid": 11220,
+    "error": null,
+    "preguntadoComo": "Acanthodactylus erythrurus"
+  },
+  "Blanus cinereus": {
+    "acceptedName": "Blanus cinereus (Vandelli, 1797)",
+    "taxonid": 10901,
+    "error": null,
+    "preguntadoComo": "Blanus cinereus"
+  },
+  "Hemorrhois hippocrepis": {
+    "acceptedName": "Hemorrhois hippocrepis (Linnaeus, 1758)",
+    "taxonid": 11448,
+    "error": null,
+    "preguntadoComo": "Hemorrhois hippocrepis"
+  },
+  "Coronella girondica": {
+    "acceptedName": "Coronella girondica (Daudin, 1803)",
+    "taxonid": 11362,
+    "error": null,
+    "preguntadoComo": "Coronella girondica"
+  },
+  "Rhinechis scalaris": {
+    "acceptedName": "Zamenis scalaris (Schinz, 1822)",
+    "taxonid": 33095,
+    "error": null,
+    "preguntadoComo": "Rhinechis scalaris"
+  },
+  "Hemidactylus turcicus": {
+    "acceptedName": "Hemidactylus turcicus (Linnaeus, 1758)",
+    "taxonid": 12351,
+    "error": null,
+    "preguntadoComo": "Hemidactylus turcicus"
+  },
+  "Macroprotodon brevis": {
+    "acceptedName": "Macroprotodon brevis (Günther, 1862)",
+    "taxonid": 10913,
+    "error": null,
+    "preguntadoComo": "Macroprotodon brevis"
+  },
+  "Macroprotodon mauritanicus": {
+    "acceptedName": "Macroprotodon mauritanicus Guichenot, 1850",
+    "taxonid": 11696,
+    "error": null,
+    "preguntadoComo": "Macroprotodon mauritanicus"
+  },
+  "Malpolon monspessulanus": {
+    "acceptedName": "Malpolon monspessulanus (Hermann, 1804)",
+    "taxonid": 11772,
+    "error": null,
+    "preguntadoComo": "Malpolon monspessulanus"
+  },
+  "Natrix maura": {
+    "acceptedName": "Natrix maura (Linnaeus, 1758)",
+    "taxonid": 11688,
+    "error": null,
+    "preguntadoComo": "Natrix maura"
+  },
+  "Natrix natrix": {
+    "acceptedName": "Natrix helvetica (Lacépède, 1789)",
+    "taxonid": 81375,
+    "error": null,
+    "preguntadoComo": "Natrix natrix"
+  },
+  "Podarcis hispánica": {
+    "acceptedName": null,
+    "taxonid": null,
+    "error": null
+  },
+  "Psammodromus algirus": {
+    "acceptedName": "Psammodromus algirus (Linnaeus, 1758)",
+    "taxonid": 10670,
+    "error": null,
+    "preguntadoComo": "Psammodromus algirus"
+  },
+  "Psammodromus hispanicus": {
+    "acceptedName": "Psammodromus hispanicus Fitzinger, 1826",
+    "taxonid": 11461,
+    "error": null,
+    "preguntadoComo": "Psammodromus hispanicus"
+  },
+  "Tarentola mauritanica": {
+    "acceptedName": "Tarentola mauritanica (Linnaeus, 1758)",
+    "taxonid": 11692,
+    "error": null,
+    "preguntadoComo": "Tarentola mauritanica"
+  },
+  "Timon lepidus": {
+    "acceptedName": "Timon lepidus (Daudin, 1802)",
+    "taxonid": 11582,
+    "error": null,
+    "preguntadoComo": "Timon lepidus"
+  },
+  "Vipera latastei": {
+    "acceptedName": "Vipera latastei Boscá, 1878",
+    "taxonid": 11567,
+    "error": null,
+    "preguntadoComo": "Vipera latastei"
+  },
+  "Alytes obstetricans": {
+    "acceptedName": "Alytes obstetricans (Laurenti, 1768)",
+    "taxonid": 11878,
+    "error": null,
+    "preguntadoComo": "Alytes obstetricans"
+  },
+  "Bufo bufo": {
+    "acceptedName": "Bufo bufo bufo Linnaeus, 1758",
+    "taxonid": 93827,
+    "error": null,
+    "preguntadoComo": "Bufo bufo"
+  },
+  "Bufo calamita": {
+    "acceptedName": "Epidalea calamita (Laurenti, 1768)",
+    "taxonid": 24327,
+    "error": null,
+    "preguntadoComo": "Bufo calamita"
+  },
+  "Discoglossus jeanneae": {
+    "acceptedName": "Discoglossus galganoi jeanneae Busack, 1986",
+    "taxonid": 24211,
+    "error": null,
+    "preguntadoComo": "Discoglossus jeanneae"
+  },
+  "Pelobates cultripes": {
+    "acceptedName": "Pelobates cultripes (Cuvier, 1829)",
+    "taxonid": 11108,
+    "error": null,
+    "preguntadoComo": "Pelobates cultripes"
+  },
+  "Pelodytes punctatus": {
+    "acceptedName": "Pelodytes punctatus (Daudin, 1802)",
+    "taxonid": 12037,
+    "error": null,
+    "preguntadoComo": "Pelodytes punctatus"
+  },
+  "Pelophylax perezi": {
+    "acceptedName": "Pelophylax perezi (Seoane, 1885)",
+    "taxonid": 11964,
+    "error": null,
+    "preguntadoComo": "Pelophylax perezi"
+  },
+  "Coenonympha dorus": {
+    "acceptedName": "Coenonympha dorus (Esper, 1782)",
+    "taxonid": 51699,
+    "error": null,
+    "preguntadoComo": "Coenonympha dorus"
+  },
+  "Melanargia ines": {
+    "acceptedName": "Melanargia ines (Hoffmansegg, 1804)",
+    "taxonid": 58418,
+    "error": null,
+    "preguntadoComo": "Melanargia ines"
+  },
+  "Melanargia occitanica": {
+    "acceptedName": "Melanargia occitanica occitanica (Esper, 1793)",
+    "taxonid": 58421,
+    "error": null,
+    "preguntadoComo": "Melanargia occitanica"
+  },
+  "Polyommatus nivescens": {
+    "acceptedName": "Polyommatus nivescens (Keferstein, 1851)",
+    "taxonid": 33115,
+    "error": null,
+    "preguntadoComo": "Polyommatus nivescens"
+  }
+}

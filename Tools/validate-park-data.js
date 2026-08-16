@@ -392,9 +392,20 @@ function validatePark(entry) {
       warn(scope, 'asimetría: la especie #' + s.id + ' lista el hábitat "' + hid + '" pero ese hábitat no lista la especie');
   }));
 
-  // 3) Especies huérfanas (sin ningún hábitat) ----------------------------------------------------
-  const orphans = species.filter(s => !(s.habitatIds && s.habitatIds.length));
+  /*
+   * 3) Especies huérfanas (sin ningún hábitat).
+   *
+   * Las AVES se cuentan aparte y no se enumeran. Estar sin hábitat es su estado NORMAL —el catálogo
+   * decide a propósito no colgarlas de ningún polígono—, así que meterlas en la lista convertía el
+   * aviso en un volcado de sesenta nombres por espacio donde ya no se veía la planta huérfana, que
+   * es lo único que aquí es un problema. Es el mismo aviso de siempre; lo que cambia es que ahora
+   * se puede leer.
+   */
+  const sinHabitat = species.filter(s => !(s.habitatIds && s.habitatIds.length));
+  const orphans = sinHabitat.filter(s => (s.taxonomy || {}).class !== 'Aves');
+  const avesSinHabitat = sinHabitat.length - orphans.length;
   if (orphans.length) warn(scope, 'especies sin hábitat asignado (' + orphans.length + '): ' + orphans.map(s => '#' + s.id + ' ' + s.commonName).join(', '));
+  if (avesSinHabitat) ok(avesSinHabitat + ' ave(s) sin hábitat asignado, que es lo esperado: las aves no se adscriben a hábitats');
 
   /*
    * 3 bis) La ficha que se contradice a sí misma.
