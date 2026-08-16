@@ -56,7 +56,6 @@
         9,
         10,
         11,
-        11,
         12,
         13,
         14,
@@ -412,7 +411,6 @@
         9,
         10,
         11,
-        11,
         12,
         13,
         14,
@@ -708,7 +706,6 @@
         8,
         9,
         10,
-        11,
         11,
         12,
         13,
@@ -10738,7 +10735,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 4 ocurrencias dentro de los polígonos de hábitat del espacio (12 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 4 ocurrencias dentro de los polígonos de hábitat del espacio (9 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -10758,9 +10755,6 @@
         "matorrales-termomediterraneos-y-5330",
         "zonas-subestepicas-de-6220",
         "pendientes-rocosas-calcicolas-8210",
-        "matorrales-termomediterraneos-y-5330",
-        "pendientes-rocosas-calcicolas-8210",
-        "zonas-subestepicas-de-6220",
         "aguas-oligomesotroficas-calcareas-3140",
         "galerias-y-matorrales-92D0",
         "manantiales-petrificantes-con-7220",
@@ -18181,7 +18175,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 450 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 450 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -18233,7 +18227,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 399 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 399 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -18285,7 +18279,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 338 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 338 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -18337,7 +18331,7 @@
         "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
       },
       "featured": true,
-      "source": "GBIF: 309 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 309 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -18389,7 +18383,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 297 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 297 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -18441,7 +18435,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 289 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 289 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -18493,7 +18487,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 251 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 251 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -18545,7 +18539,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 214 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 214 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -18597,7 +18591,7 @@
         "ambito": "España"
       },
       "featured": true,
-      "source": "GBIF: 185 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 185 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -18641,7 +18635,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 181 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 181 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -18694,7 +18688,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 180 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 180 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -18746,7 +18740,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 174 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 174 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -18798,7 +18792,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 154 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 154 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -18850,7 +18844,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 126 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 126 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -18902,7 +18896,7 @@
         "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
       },
       "featured": false,
-      "source": "GBIF: 102 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 102 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -18954,7 +18948,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 100 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 100 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -19006,7 +19000,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 96 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 96 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -19058,7 +19052,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 88 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 88 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -19110,7 +19104,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 86 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 86 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -19162,7 +19156,7 @@
         "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
       },
       "featured": false,
-      "source": "GBIF: 76 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 76 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -19214,7 +19208,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 69 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 69 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -19266,7 +19260,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": true,
-      "source": "GBIF: 57 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 57 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -19318,7 +19312,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 49 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 49 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -19370,7 +19364,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 44 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 44 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -19418,7 +19412,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 27 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 27 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -19470,7 +19464,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": true,
-      "source": "GBIF: 25 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 25 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -19522,7 +19516,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 22 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 22 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -19570,7 +19564,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 22 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 22 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -19622,7 +19616,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": true,
-      "source": "GBIF: 21 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 21 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -19674,7 +19668,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 19 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 19 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -19726,7 +19720,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 18 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 18 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -19774,7 +19768,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 13 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 13 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -19822,7 +19816,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 12 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 12 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -19874,7 +19868,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 11 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 11 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -19926,7 +19920,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 9 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 9 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -19978,7 +19972,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 5 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 5 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -20030,7 +20024,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 4 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 4 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -20082,7 +20076,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 3 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -20126,7 +20120,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 3 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -20178,7 +20172,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 2 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -20230,7 +20224,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 2 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -20282,7 +20276,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000269 (Monte El Valle y Sierras de Altaona y Escalona)",
+      "source": "GBIF confirma su presencia con 2 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",

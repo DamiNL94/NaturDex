@@ -2,7 +2,7 @@
 
 Generado el 2026-08-16 por `Tools/catalogo-nacional/poda-aves-sin-respaldo.js`.
 
-El espacio tenía **83 aves** de 246 fichas. Conservan su plaza **56**; se retiran **27**.
+El espacio tenía **56 aves** de 219 fichas. Conservan su plaza **56**; se retiran **0**.
 
 Una especie entra en el catálogo de un espacio por CONSTANCIA: que GBIF la haya registrado dentro de sus polígonos de hábitat. Para un ave esa prueba no mide lo que dice medir —vuela, y un registro en vuelo cae dentro de cualquier recinto—, así que su puerta es el **respaldo de sitio**: que una fuente oficial afirme por escrito que pertenece a ESTE sitio. Son dos, y cualquiera de las dos vale: el Formulario Normalizado de Datos del sitio Red Natura 2000 y el anexo normativo del plan de gestión del espacio.
 
@@ -57,37 +57,8 @@ El sitio las declara, el catálogo no las ficha con ese nombre, y hay un ave del
 
 ## Aves retiradas
 
-Ninguna fuente oficial las sitúa en este espacio. **No se pierden**: están en este informe con su recuento de GBIF, y vuelven al catálogo en cuanto una fuente de sitio las nombre — el anexo del plan de gestión del espacio es la vía, no bajar la exigencia.
+Ninguna: todas las aves del espacio tienen respaldo de sitio.
 
-| Especie | Nombre común | Occ. GBIF |
-|---|---|---:|
-| *Passer domesticus* | Gorrión común | 330 |
-| *Sylvia atricapilla* | Curruca capirotada | 153 |
-| *Serinus serinus* | Serín verdecillo | 78 |
-| *Chloris chloris* | Verderón común | 49 |
-| *Turdus merula* | Turdus merula | 44 |
-| *Fringilla coelebs* | Pimientera | 27 |
-| *Carduelis carduelis* | Jilguero europeo | 14 |
-| *Turdus viscivorus* | Zorzal charlo | 14 |
-| *Alectoris rufa* | Perdiz roja | 9 |
-| *Columba palumbus* | Paloma torcaz | 7 |
-| *Sturnus unicolor* | Estornino negro | 7 |
-| *Corvus corax* | Cuervo grande | 6 |
-| *Garrulus glandarius* | Arrendajo euroasiático | 6 |
-| *Streptopelia decaocto* | Tórtola turca | 5 |
-| *Linaria cannabina* | Pardillo común | 4 |
-| *Pica pica* | Urraca común | 4 |
-| *Coloeus monedula* | Grajilla occidental | 3 |
-| *Emberiza calandra* | Triguero | 3 |
-| *Luscinia svecica* | Pechiazul | 3 |
-| *Spinus spinus* | Lúgano | 3 |
-| *Acrocephalus scirpaceus* | Carricero común | 2 |
-| *Charadrius dubius* | Chorlitejo chico | 2 |
-| *Columba livia* | Paloma bravía | 2 |
-| *Lanius excubitor* | Alcaudón norteño | 2 |
-| *Milvus migrans* | Milano negro | 2 |
-| *Motacilla cinerea* | Lavandera cascadeña | 2 |
-| *Streptopelia turtur* | Tórtola europea | 2 |
 
 ## Declaradas por el sitio y sin ficha
 

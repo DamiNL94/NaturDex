@@ -1,3 +1,7 @@
+-- El juego de caracteres se fija SIEMPRE: el cliente mysql lo toma del entorno y en un
+-- contenedor sin locale eso es latin1, que convierte cada tilde en mojibake sin dar error.
+SET NAMES utf8mb4;
+
 -- Monte Arabí (monte-arabi) · retirada de las aves sin respaldo de sitio
 -- Generado el 2026-08-16 por Tools/catalogo-nacional/poda-aves-sin-respaldo.js
 --

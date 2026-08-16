@@ -1,3 +1,7 @@
+-- El juego de caracteres se fija SIEMPRE: el cliente mysql lo toma del entorno y en un
+-- contenedor sin locale eso es latin1, que convierte cada tilde en mojibake sin dar error.
+SET NAMES utf8mb4;
+
 -- ================================================================================
 -- Recolocación de puntos de interés que perdieron sus coordenadas.
 -- Origen del dato: Frontend/Data/parks/**/park.json (versionado en git), contrastado

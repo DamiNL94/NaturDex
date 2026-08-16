@@ -419,7 +419,7 @@ async function main() {
   if (OPT.sql && sentencias.length && !OPT.dryRun) {
     const file = fromRoot(OPT.sql);
     fs.mkdirSync(path.dirname(file), { recursive: true });
-    fs.writeFileSync(file, '-- Fotos de puntos de interés desde fuentes alternativas (poi-images-alt.js)\n' +
+    fs.writeFileSync(file, '-- El juego de caracteres se fija SIEMPRE: el cliente `mysql` lo toma del entorno y en un\n-- contenedor sin locale eso es latin1, que convierte cada tilde en mojibake sin dar error.\nSET NAMES utf8mb4;\n-- Fotos de puntos de interés desde fuentes alternativas (poi-images-alt.js)\n' +
       sentencias.join('\n') + '\n', 'utf8');
     console.log('→ ' + rel(file) + ' (' + sentencias.length + ' sentencia(s))');
   }

@@ -376,6 +376,28 @@ function validatePark(entry) {
   species.forEach(s => (s.habitatIds || []).forEach(hid => {
     if (!habitatIds.has(hid)) err(scope, 'especie #' + s.id + ' (' + s.commonName + ') referencia hábitat inexistente "' + hid + '"');
   }));
+  /*
+   * El enlace REPETIDO, que solo se veía cargando el SQL.
+   *
+   * `species_habitats` tiene clave única en `(species_id, habitat_id)`, así que un `habitatIds` con
+   * el mismo slug dos veces se colapsa al insertarlo: el fichero declara un número de vínculos y la
+   * base guarda otro, y ninguna de las dos cifras avisa de la otra. En Carrascoy y El Valle eran
+   * 1.310 contra 1.307, y la diferencia la ponía una sola ficha —*Osyris lanceolata*, que GBIF sirve
+   * con dos claves distintas bajo el mismo nombre—.
+   *
+   * Se mira aquí porque es donde se nota sin base de datos delante: que el paquete y la API digan
+   * cosas distintas es la cuarta de las «cinco cosas que fallan en verde» del CLAUDE.md, y esperar a
+   * tener un MySQL para enterarse es exactamente lo que no puede pasar.
+   */
+  species.forEach(s => {
+    const ids = s.habitatIds || [];
+    const repes = [...new Set(ids.filter((x, i) => ids.indexOf(x) !== i))];
+    if (repes.length)
+      err(scope, 'especie #' + s.id + ' (' + s.commonName + '): `habitatIds` repite ' +
+        repes.map(r => '"' + r + '"').join(', ') + '. La BD tiene clave única en (species_id, habitat_id), ' +
+        'así que el paquete contaría ' + ids.length + ' vínculos y la carga insertaría ' + new Set(ids).size +
+        '. Ver Tools/catalogo-nacional/build-species-n2.js');
+  });
   habitats.forEach(h => (h.speciesIds || []).forEach(sid => {
     if (!speciesIds.has(sid)) err(scope, 'hábitat "' + h.id + '" referencia especie inexistente #' + sid);
   }));

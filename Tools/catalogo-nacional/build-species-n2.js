@@ -111,10 +111,30 @@ function cargarGbif() {
     'Se genera con `npm run gbif:habitats` (necesita red).');
   const doc = readJson(p);
   const porNombre = new Map();
+  /*
+   * El barrido indexa sus especies por CLAVE de GBIF, y GBIF llega a servir el MISMO nombre con dos
+   * claves distintas. En Carrascoy y El Valle son dos: *Osyris lanceolata* (7473922 y 3788959) y
+   * *Paronychia suffruticosa* (5529030 y 7499195). Cuando eso pasa, el mismo hábitat aparece dos
+   * veces en la lista del nombre, y concatenarlas sin más metía el enlace repetido en `habitatIds`.
+   *
+   * No era visible en el `park.json` —una lista con un slug dos veces no rompe nada al pintarla— y
+   * en cambio SÍ lo era en la base de datos, que tiene clave única en `(species_id, habitat_id)`:
+   * el fichero declaraba 1.310 vínculos, la carga insertaba 1.307 y ninguna de las dos cifras
+   * avisaba de la otra. El paquete y la API diciendo cosas distintas es la cuarta de las «cinco
+   * cosas que fallan en verde» del CLAUDE.md.
+   *
+   * Así que el hábitat se fusiona por `slug`, quedándose con el recuento MAYOR de las dos claves.
+   * Sumarlas sería peor: no se sabe si los dos conjuntos de registros son disjuntos o el mismo
+   * registro contado dos veces, y esta cifra es la que el `source` de la ficha publica.
+   */
   for (const h of doc.habitats || []) {
     for (const s of h.species || []) {
-      if (!porNombre.has(s.name)) porNombre.set(s.name, { speciesKey: s.speciesKey, clase: s.class, habitats: [] });
-      porNombre.get(s.name).habitats.push({ slug: h.slug, hic: h.hic, ocurrencias: s.occurrences });
+      if (!porNombre.has(s.name)) porNombre.set(s.name, { speciesKey: s.speciesKey, clase: s.class, habitats: [], claves: new Set() });
+      const e = porNombre.get(s.name);
+      e.claves.add(s.speciesKey);
+      const ya = e.habitats.find(x => x.slug === h.slug);
+      if (ya) ya.ocurrencias = Math.max(ya.ocurrencias, s.occurrences);
+      else e.habitats.push({ slug: h.slug, hic: h.hic, ocurrencias: s.occurrences });
     }
   }
   // Orden estable: el hábitat con más ocurrencias primero; a igualdad, por slug.

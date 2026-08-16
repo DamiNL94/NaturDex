@@ -33,4 +33,29 @@ const sqlBool = (v) => (v === null || v === undefined ? 'NULL' : (v ? '1' : '0')
 /** Literal JSON para columnas JSON. `null` → NULL, no la cadena "null". */
 const sqlJson = (v) => (v === null || v === undefined ? 'NULL' : sqlStr(JSON.stringify(v)));
 
-module.exports = { sqlStr, sqlStrOrNull, sqlNum, sqlBool, sqlJson };
+/*
+ * `SET NAMES utf8mb4` — la línea sin la cual el fichero corrompe cada tilde, en silencio.
+ *
+ * El cliente `mysql` toma su juego de caracteres del entorno, y en un contenedor sin locale eso es
+ * **latin1**. Con el cliente en latin1 y la columna en utf8mb4, cada byte de un carácter UTF-8 se
+ * interpreta como un carácter y se vuelve a codificar: «Jabalí» entra en la base como «JabalÃ­», y
+ * no falla nada — el INSERT va bien, el contador cuadra y el validador no mira dentro de la BD.
+ *
+ * El repo ya lo había pagado una vez: el 2026-08-15 se descubrió que `migrations.sql` no lo fijaba.
+ * Se arregló allí y **no se miró quién más tenía el mismo agujero**, que eran doce ficheros
+ * generados — entre ellos `species-universal.sql`, que actualiza el nombre común de las **1.501**
+ * fichas del catálogo. Se destapó al cargar todo en un MySQL de verdad el 2026-08-16 y comparar
+ * campo a campo: 143 nombres comunes corruptos de 812 comparados.
+ *
+ * Por eso vive aquí y no en cada generador: son diez herramientas, y la que se olvide de ponerlo no
+ * dará ningún error. Toda herramienta que escriba un `.sql` empieza por `cabeceraSql()`.
+ */
+const cabeceraSql = (titulo) => [
+  ...(titulo ? [`-- ${titulo}`] : []),
+  '-- El juego de caracteres se fija SIEMPRE: el cliente `mysql` lo toma del entorno y en un',
+  '-- contenedor sin locale eso es latin1, que convierte cada tilde en mojibake sin dar error.',
+  'SET NAMES utf8mb4;',
+  '',
+].join('\n');
+
+module.exports = { sqlStr, sqlStrOrNull, sqlNum, sqlBool, sqlJson, cabeceraSql };

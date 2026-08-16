@@ -2,7 +2,7 @@
 
 Generado el 2026-08-16 por `Tools/catalogo-nacional/poda-aves-sin-respaldo.js`.
 
-El espacio tenía **47 aves** de 175 fichas. Conservan su plaza **34**; se retiran **13**.
+El espacio tenía **34 aves** de 162 fichas. Conservan su plaza **34**; se retiran **0**.
 
 Una especie entra en el catálogo de un espacio por CONSTANCIA: que GBIF la haya registrado dentro de sus polígonos de hábitat. Para un ave esa prueba no mide lo que dice medir —vuela, y un registro en vuelo cae dentro de cualquier recinto—, así que su puerta es el **respaldo de sitio**: que una fuente oficial afirme por escrito que pertenece a ESTE sitio. Son dos, y cualquiera de las dos vale: el Formulario Normalizado de Datos del sitio Red Natura 2000 y el anexo normativo del plan de gestión del espacio.
 
@@ -31,23 +31,8 @@ La fuente y el catálogo escriben la misma especie con nombres de épocas distin
 
 ## Aves retiradas
 
-Ninguna fuente oficial las sitúa en este espacio. **No se pierden**: están en este informe con su recuento de GBIF, y vuelven al catálogo en cuanto una fuente de sitio las nombre — el anexo del plan de gestión del espacio es la vía, no bajar la exigencia.
+Ninguna: todas las aves del espacio tienen respaldo de sitio.
 
-| Especie | Nombre común | Occ. GBIF |
-|---|---|---:|
-| *Sternula albifrons* | Charrancito común | — |
-| *Calidris alba* | Correlimos tridáctilo | — |
-| *Curruca melanocephala* | Curruca cabecinegra | — |
-| *Athene noctua* | Mochuelo europeo | — |
-| *Haematopus ostralegus* | Ostrero euroasiático | — |
-| *Alectoris rufa* | Perdiz roja | — |
-| *Alaudala rufescens* | Terrera marismeña | — |
-| *Arenaria interpres* | Vuelvepiedras | — |
-| *Monticola solitarius* | Roquero solitario | — |
-| *Ptyonoprogne rupestris* | Avión roquero | — |
-| *Lanius senator* | Alcaudón común | — |
-| *Emberiza calandra* | Triguero | — |
-| *Merops apiaster* | Abejaruco europeo | — |
 
 ## Declaradas por el sitio y sin ficha
 

@@ -2,7 +2,7 @@
 
 Generado el 2026-08-16 por `Tools/catalogo-nacional/poda-aves-sin-respaldo.js`.
 
-El espacio tenía **147 aves** de 468 fichas. Conservan su plaza **42**; se retiran **105**.
+El espacio tenía **42 aves** de 363 fichas. Conservan su plaza **42**; se retiran **0**.
 
 Una especie entra en el catálogo de un espacio por CONSTANCIA: que GBIF la haya registrado dentro de sus polígonos de hábitat. Para un ave esa prueba no mide lo que dice medir —vuela, y un registro en vuelo cae dentro de cualquier recinto—, así que su puerta es el **respaldo de sitio**: que una fuente oficial afirme por escrito que pertenece a ESTE sitio. Son dos, y cualquiera de las dos vale: el Formulario Normalizado de Datos del sitio Red Natura 2000 y el anexo normativo del plan de gestión del espacio.
 
@@ -29,115 +29,8 @@ La fuente y el catálogo escriben la misma especie con nombres de épocas distin
 
 ## Aves retiradas
 
-Ninguna fuente oficial las sitúa en este espacio. **No se pierden**: están en este informe con su recuento de GBIF, y vuelven al catálogo en cuanto una fuente de sitio las nombre — el anexo del plan de gestión del espacio es la vía, no bajar la exigencia.
+Ninguna: todas las aves del espacio tienen respaldo de sitio.
 
-| Especie | Nombre común | Occ. GBIF |
-|---|---|---:|
-| *Serinus serinus* | Serín verdecillo | 1353 |
-| *Fringilla coelebs* | Pimientera | 1092 |
-| *Aegithalos caudatus* | Mito | 880 |
-| *Curruca melanocephala* | Curruca cabecinegra | 879 |
-| *Turdus merula* | Turdus merula | 827 |
-| *Parus major* | Carbonero común | 800 |
-| *Columba palumbus* | Paloma torcaz | 795 |
-| *Phylloscopus collybita* | Mosquitero común | 723 |
-| *Chloris chloris* | Verderón común | 690 |
-| *Picus sharpei* | Pito ibérico | 580 |
-| *Alectoris rufa* | Perdiz roja | 430 |
-| *Lophophanes cristatus* | Herrerillo capuchino | 409 |
-| *Erithacus rubecula* | Petirrojo europeo | 361 |
-| *Carduelis carduelis* | Jilguero europeo | 330 |
-| *Phoenicurus ochruros* | Colirrojo tizón | 289 |
-| *Apus apus* | Vencejo común | 262 |
-| *Athene noctua* | Mochuelo europeo | 242 |
-| *Columba livia* | Paloma bravía | 232 |
-| *Streptopelia decaocto* | Tórtola turca | 229 |
-| *Turdus viscivorus* | Zorzal charlo | 229 |
-| *Motacilla alba* | Lavandera blanca | 217 |
-| *Passer domesticus* | Gorrión común | 217 |
-| *Hirundo rustica* | Golondrina común | 208 |
-| *Coloeus monedula* | Grajilla occidental | 199 |
-| *Lanius senator* | Alcaudón común | 182 |
-| *Sylvia atricapilla* | Curruca capirotada | 178 |
-| *Oriolus oriolus* | Oropéndola | 176 |
-| *Cuculus canorus* | Cuco | 166 |
-| *Corvus corax* | Cuervo grande | 136 |
-| *Delichon urbicum* | Avión común | 136 |
-| *Emberiza cia* | Escribano montesino | 124 |
-| *Ptyonoprogne rupestris* | Avión roquero | 122 |
-| *Accipiter nisus* | Gavilán común | 118 |
-| *Sturnus unicolor* | Estornino negro | 103 |
-| *Linaria cannabina* | Pardillo común | 99 |
-| *Certhia brachydactyla* | Agateador común | 85 |
-| *Emberiza calandra* | Triguero | 74 |
-| *Monticola solitarius* | Roquero solitario | 71 |
-| *Apus pallidus* | Vencejo pálido | 64 |
-| *Anthus pratensis* | Bisbita común | 61 |
-| *Emberiza cirlus* | Escribano soteño | 61 |
-| *Regulus ignicapilla* | Reyezuelo listado | 47 |
-| *Turdus philomelos* | Zorzal común | 47 |
-| *Sylvia hortensis* | Curruca mirlona | 41 |
-| *Spinus spinus* | Lúgano | 40 |
-| *Columba oenas* | Paloma zurita | 37 |
-| *Tachymarptis melba* | Vencejo real | 37 |
-| *Larus michahellis* | Gaviota patiamarilla | 31 |
-| *Garrulus glandarius* | Arrendajo euroasiático | 27 |
-| *Petronia petronia* | Gorrión chillón | 23 |
-| *Pica pica* | Urraca común | 21 |
-| *Erythropygia galactotes* | Alzacola | 17 |
-| *Ficedula hypoleuca* | Papamoscas cerrojillo | 16 |
-| *Hippolais polyglotta* | Zarcero común | 15 |
-| *Motacilla cinerea* | Lavandera cascadeña | 14 |
-| *Cisticola juncidis* | Buitrón | 13 |
-| *Curruca iberiae* | Curruca iberiae | 13 |
-| *Luscinia megarhynchos* | Ruiseñor común | 13 |
-| *Tyto alba* | Lechuza común | 13 |
-| *Strix aluco* | Cárabo | 12 |
-| *Cyanistes caeruleus* | Herrerillo común | 10 |
-| *Pandion haliaetus* | Águila pescadora | 10 |
-| *Phylloscopus trochilus* | Mosquitero musical | 10 |
-| *Anas platyrhynchos* | Ánade azulón | 8 |
-| *Ardea cinerea* | Garza real | 8 |
-| *Caprimulgus europaeus* | Chotacabras europeo | 8 |
-| *Bubulcus ibis* | Garcilla bueyera | 6 |
-| *Falco eleonorae* | Halcón de Eleonora | 6 |
-| *Himantopus himantopus* | Cigüeñuela | 6 |
-| *Clamator glandarius* | Críalo | 5 |
-| *Prunella collaris* | Acentor alpino | 5 |
-| *Saxicola rubetra* | Tarabilla norteña | 5 |
-| *Aythya nyroca* | Porrón pardo | 4 |
-| *Phoenicurus phoenicurus* | Colirrojo real | 4 |
-| *Prunella modularis* | Acentor común | 4 |
-| *Tachybaptus ruficollis* | Zampullín común | 4 |
-| *Egretta garzetta* | Garceta común | 3 |
-| *Milvus milvus* | Milano real | 3 |
-| *Phylloscopus bonelli* | Mosquitero papialbo | 3 |
-| *Riparia riparia* | Avión zapador | 3 |
-| *Sturnus vulgaris* | Estornino pinto | 3 |
-| *Sylvia borin* | Curruca mosquitera | 3 |
-| *Sylvia communis* | Curruca zarcera | 3 |
-| *Acrocephalus scirpaceus* | Carricero común | 2 |
-| *Cettia cetti* | Cetia ruiseñor | 2 |
-| *Emberiza citrinella* | Escribano cerillo | 2 |
-| *Falco columbarius* | Esmerejón | 2 |
-| *Fringilla montifringilla* | Pinzón real | 2 |
-| *Fulica atra* | Focha común | 2 |
-| *Gallinula chloropus* | Gallineta común | 2 |
-| *Iduna opaca* | Zarcero bereber | 2 |
-| *Phalacrocorax carbo* | Cormorán grande | 2 |
-| *Regulus regulus* | Reyezuelo sencillo | 2 |
-| *Turdus iliacus* | Zorzal alirrojo | 2 |
-| *Ardeola ralloides* | Garcilla cangrejera | 1 |
-| *Cecropis daurica* | Golondrina dáurica | 1 |
-| *Charadrius dubius* | Chorlitejo chico | 1 |
-| *Falco naumanni* | Cernícalo primilla | 1 |
-| *Jynx torquilla* | Torcecuello euroasiático | 1 |
-| *Larus audouinii* | Gaviota de Audouin | 1 |
-| *Melanocorypha calandra* | Calandria común | 1 |
-| *Neophron percnopterus* | Alimoche común | 1 |
-| *Pterocles orientalis* | Ganga ortega | 1 |
-| *Tadorna tadorna* | Tarro blanco | 1 |
-| *Tringa ochropus* | Andarríos grande | 1 |
 
 ## Declaradas por el sitio y sin ficha
 
