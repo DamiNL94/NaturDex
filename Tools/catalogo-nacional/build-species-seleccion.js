@@ -114,6 +114,19 @@ const UMBRALES = (() => {
 const MIN_OCURRENCIAS = num('min-occ', UMBRALES.minOcurrencias ?? 2);
 const MIN_HABITATS = num('min-habitats', UMBRALES.minHabitats ?? 2);
 
+// Las exclusiones curadas del espacio (filtro 0, más abajo). Se cargan aquí para poder decir cuántas
+// hay antes de empezar: una lista que no se aplica es peor que no tenerla.
+const EXCLUSIONES = (() => {
+  const ruta = path.join(CATALOGO_DIR, 'data', 'exclusiones-especies.json');
+  const m = new Map();
+  if (!fs.existsSync(ruta)) return m;
+  for (const e of (readJson(ruta).espacios || {})[PARK] || []) {
+    if (!e.motivo) die(`exclusiones-especies.json: «${e.scientificName}» no tiene motivo, y una exclusión sin motivo no se distingue de un olvido.`);
+    m.set(e.scientificName, e);
+  }
+  return m;
+})();
+
 /*
  * Filtro 4 — ALCANCE TAXONÓMICO. El que estaba aplicado y sin escribir.
  *
@@ -562,6 +575,9 @@ async function main() {
       '  No es lo mismo que «este espacio no tiene anexo»: es que nadie lo ha leído todavía.');
   // De dónde sale el umbral se dice SIEMPRE, aunque sea el general: es la decisión que más cambia el
   // tamaño del catálogo y la que dos veces se ha perdido por no estar a la vista.
+  console.log(EXCLUSIONES.size
+    ? `Exclusiones curadas de este espacio: ${EXCLUSIONES.size} (data/exclusiones-especies.json) — ${[...EXCLUSIONES.keys()].join(', ')}`
+    : 'Exclusiones curadas de este espacio: ninguna');
   console.log(`Umbral de presencia: ${MIN_OCURRENCIAS} ocurrencia(s) en ${MIN_HABITATS} hábitat(s) · ` +
     (arg('min-occ') || arg('min-habitats')
       ? 'dado en la línea de órdenes (manda sobre el fichero de umbrales)'
@@ -663,6 +679,29 @@ async function main() {
     }
     if (r.error) ficha.errorEidos = r.error;
 
+    /*
+     * Filtro 0 — la CURACIÓN del espacio, que hasta ahora no sobrevivía a una regeneración.
+     *
+     * Los cuatro filtros de abajo son automáticos y se aplican igual en todas partes. Pero hay casos
+     * que solo se pueden juzgar mirando ESTE espacio y ESTOS registros, y esos se decidían a mano
+     * sobre el `park.json` y se contaban en el informe de cierre. Un informe no lo lee la
+     * herramienta: la regeneración siguiente vuelve a aprobar lo que alguien ya había descartado, y
+     * lo hace **sin decir nada**, porque para el código nunca pasó nada.
+     *
+     * Le ocurrió a *Caretta caretta* en Carrascoy y El Valle. Se excluyó el 2026-08-10 con el motivo
+     * escrito —sus ocurrencias dentro de los polígonos son telemetría por satélite proyectada tierra
+     * adentro, no presencia— y el barrido del 2026-08-16 la volvió a meter en una sierra de interior.
+     *
+     * Va PRIMERO a propósito: si el espacio ya ha decidido que un taxón no entra, no hace falta
+     * discutir su autoctonía ni su número de registros. Y lo excluido sale en `excluidas_detalle`
+     * con su motivo, igual que lo que descartan los filtros automáticos: esto retira especies, no
+     * las esconde.
+     */
+    const curada = EXCLUSIONES.get(c.scientificName) || (binAcept && EXCLUSIONES.get(r.nombreAceptadoEidos)) || null;
+    if (curada) {
+      excluidas.push({ ...ficha, motivo: `excluida por decisión del espacio (${curada.decidido || 'sin fecha'}): ${curada.motivo}` });
+      continue;
+    }
     // Filtro 2 — autoctonía. Dos fuentes, y la segunda existe porque la primera tiene un punto ciego:
     // la Lista Patrón no marca como «no nativa» lo que ni siquiera es fauna silvestre. *Ovis aries*
     // —que en Monte Arabí es el muflón de Córcega introducido, y en cualquier sierra puede ser
