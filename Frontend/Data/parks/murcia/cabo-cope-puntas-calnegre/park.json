@@ -118,8 +118,6 @@
         101,
         102,
         133,
-        240,
-        241,
         245
       ],
       "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons"
@@ -221,7 +219,6 @@
         222,
         223,
         234,
-        243,
         250
       ],
       "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons"
@@ -293,7 +290,6 @@
         5,
         6,
         9,
-        10,
         11,
         13,
         15,
@@ -321,8 +317,6 @@
         73,
         74,
         75,
-        76,
-        77,
         83,
         84,
         85,
@@ -350,8 +344,6 @@
         230,
         231,
         238,
-        242,
-        244,
         247,
         248,
         249
@@ -500,7 +492,6 @@
         26,
         27,
         32,
-        71,
         72,
         96,
         102,
@@ -552,8 +543,6 @@
         166,
         169,
         235,
-        240,
-        241,
         245,
         246,
         247
@@ -638,10 +627,6 @@
       "audioTranscript": null,
       "speciesIds": [
         78,
-        79,
-        80,
-        81,
-        82,
         134,
         135,
         136,
@@ -683,9 +668,6 @@
         139,
         140,
         141,
-        242,
-        243,
-        244,
         248
       ],
       "imageAttribution": "No machine-readable author provided. Pere prlpz assumed (based on c… (CC BY-SA 2.5) · Wikimedia Commons"
@@ -3022,57 +3004,6 @@
       }
     },
     {
-      "id": 82,
-      "commonName": "Charrancito común",
-      "scientificName": "Sternula albifrons",
-      "kingdom": "fauna",
-      "group": "Ave marina",
-      "habitat": "Playas de arena y grava, salinas y lagunas costeras",
-      "conservationStatus": "Interés especial",
-      "description": "El más pequeño de los charranes europeos, con la frente blanca y el pico amarillo de punta negra. Cría directamente sobre la arena o la grava, en nidos que son poco más que un hoyo, lo que lo hace muy sensible al tránsito de personas en las playas.",
-      "tips": [
-        "Frente blanca que contrasta con el capirote negro",
-        "Pico amarillo con la punta negra",
-        "Se ciñe sobre el agua antes de zambullirse en picado"
-      ],
-      "seasonality": "Primavera y verano (estival)",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Little_Tern_6820C.jpg?width=1280",
-      "coordinates": null,
-      "rarityScore": 2,
-      "featured": false,
-      "source": "Documento previo del PORN de Calnegre y Cabo Cope (CARM, Consejería de Agua, Agricultura, Ganadería, Pesca y Medio Ambiente, 2021); IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
-      "taxonomy": {
-        "kingdom": "Animalia",
-        "phylum": "Chordata",
-        "class": "Aves",
-        "order": "Charadriiformes",
-        "family": "Laridae",
-        "genus": "Sternula"
-      },
-      "iucnGlobal": "LC",
-      "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
-      "reviewNote": "El PORN cita la presencia de la especie en el parque sin detallar su categoría exacta de protección regional; pendiente de confirmar con el Catálogo Regional vigente.",
-      "eidosTaxonId": 14084,
-      "gbifSpeciesKey": 5789279,
-      "zepaSiteCode": null,
-      "habitatIds": [
-        "veg-anual-desechos-marinos"
-      ],
-      "imageAttribution": "Little_Tern_6820.jpg: Alnus derivative work: Osado (CC BY-SA 3.0) · Wikimedia Commons",
-      "rarityLocal": 3,
-      "rarityLocalBasis": {
-        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
-        "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
-      },
-      "rarityBasis": {
-        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
-        "ambito": "estatal",
-        "origen": "spainStatus del catálogo universal"
-      }
-    },
-    {
       "id": 78,
       "commonName": "Chorlitejo patinegro",
       "scientificName": "Charadrius alexandrinus",
@@ -3675,57 +3606,6 @@
       }
     },
     {
-      "id": 79,
-      "commonName": "Correlimos tridáctilo",
-      "scientificName": "Calidris alba",
-      "kingdom": "fauna",
-      "group": "Ave limícola",
-      "habitat": "Playas de arena expuestas; también salinas y marismas costeras",
-      "conservationStatus": "Interés especial",
-      "description": "Limícola pequeña y muy pálida que se ve casi siempre en la misma escena: corriendo tras la ola que se retira y huyendo de la siguiente, con las patas moviéndose a toda velocidad. En invierno es el más blanco de los correlimos, con una mancha negra en el hombro.",
-      "tips": [
-        "Corre persiguiendo el vaivén de las olas",
-        "Plumaje de invierno muy blanco y limpio",
-        "Mancha negra en el hombro y barra alar blanca en vuelo"
-      ],
-      "seasonality": "Otoño e invierno",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Calidris-alba-001.jpg?width=1280",
-      "coordinates": null,
-      "rarityScore": 2,
-      "featured": false,
-      "source": "Documento previo del PORN de Calnegre y Cabo Cope (CARM, Consejería de Agua, Agricultura, Ganadería, Pesca y Medio Ambiente, 2021)",
-      "taxonomy": {
-        "kingdom": "Animalia",
-        "phylum": "Chordata",
-        "class": "Aves",
-        "order": "Charadriiformes",
-        "family": "Scolopacidae",
-        "genus": "Calidris"
-      },
-      "iucnGlobal": "LC",
-      "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
-      "reviewNote": "El PORN cita la presencia de la especie en el parque sin detallar su categoría exacta de protección regional; pendiente de confirmar con el Catálogo Regional vigente.",
-      "eidosTaxonId": 10649,
-      "gbifSpeciesKey": 2481748,
-      "zepaSiteCode": null,
-      "habitatIds": [
-        "veg-anual-desechos-marinos"
-      ],
-      "imageAttribution": "Original photo by Mdf (CC BY-SA 3.0) · Wikimedia Commons",
-      "rarityLocal": 3,
-      "rarityLocalBasis": {
-        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
-        "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
-      },
-      "rarityBasis": {
-        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
-        "ambito": "estatal",
-        "origen": "spainStatus del catálogo universal"
-      }
-    },
-    {
       "id": 104,
       "commonName": "Coscoja",
       "scientificName": "Quercus coccifera",
@@ -3970,58 +3850,6 @@
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
         "ambito": "autonómico",
         "origen": "murciaStatus del park.json"
-      },
-      "rarityBasis": {
-        "categoria": "LESRPE (RD 139/2011)",
-        "ambito": "estatal",
-        "origen": "spainStatus del catálogo universal"
-      },
-      "descriptionSource": null
-    },
-    {
-      "id": 10,
-      "commonName": "Curruca cabecinegra",
-      "scientificName": "Curruca melanocephala",
-      "kingdom": "fauna",
-      "group": "Ave",
-      "habitat": "Matorral mediterráneo denso, setos y bordes de arbolado",
-      "conservationStatus": "Interés especial",
-      "description": "La curruca más común del matorral mediterráneo. El macho tiene la cabeza negra hasta por debajo del ojo, la garganta blanca y un llamativo anillo ocular rojo. Es ruidosa y territorial: su reclamo de alarma es un traqueteo seco que delata su presencia constantemente.",
-      "tips": [
-        "Capucha negra que baja por debajo del ojo",
-        "Anillo ocular rojo intenso",
-        "Reclamo de alarma como una carraca seca"
-      ],
-      "seasonality": "Todo el año",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sardinian_Warbler.jpg?width=1280",
-      "coordinates": null,
-      "rarityScore": 2,
-      "featured": false,
-      "source": "Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre; clasificación de género Curruca conforme al IOC World Bird List; IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
-      "taxonomy": {
-        "kingdom": "Animalia",
-        "phylum": "Chordata",
-        "class": "Aves",
-        "order": "Passeriformes",
-        "family": "Sylviidae",
-        "genus": "Curruca"
-      },
-      "iucnGlobal": "LC",
-      "spainStatus": "LESRPE (RD 139/2011)",
-      "murciaStatus": "No catalogada regionalmente",
-      "reviewNote": null,
-      "eidosTaxonId": 80929,
-      "gbifSpeciesKey": 9990095,
-      "zepaSiteCode": null,
-      "habitatIds": [
-        "matorral-semiarido"
-      ],
-      "imageAttribution": "Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons",
-      "rarityLocal": 2,
-      "rarityLocalBasis": {
-        "categoria": "LESRPE (RD 139/2011)",
-        "ambito": "estatal",
-        "origen": "spainStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE (RD 139/2011)",
@@ -6019,58 +5847,6 @@
       }
     },
     {
-      "id": 76,
-      "commonName": "Mochuelo europeo",
-      "scientificName": "Athene noctua",
-      "kingdom": "fauna",
-      "group": "Ave",
-      "habitat": "Matorral litoral y zonas abiertas con posaderos",
-      "conservationStatus": "Interés especial",
-      "description": "Búho pequeño y rechoncho, de cabeza plana y ojos amarillos con un ceño que le da expresión severa. Es el más diurno de nuestros búhos: se ve posado en postes y ruinas a plena luz. Vuela con un ondulado marcado, a golpes de aleteo y planeo.",
-      "tips": [
-        "Cabeza plana y ancha, sin penachos",
-        "Cejas blancas marcadas que le dan aspecto ceñudo",
-        "Vuelo ondulado, a rachas de aleteo y planeo"
-      ],
-      "seasonality": "Todo el año",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mochuelo_Com%C3%BAn_(_Athene_noctua_)(1).jpg?width=1280",
-      "coordinates": null,
-      "rarityScore": 2,
-      "featured": false,
-      "source": "Documento previo del PORN de Calnegre y Cabo Cope (CARM, Consejería de Agua, Agricultura, Ganadería, Pesca y Medio Ambiente, 2021); IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
-      "taxonomy": {
-        "kingdom": "Animalia",
-        "phylum": "Chordata",
-        "class": "Aves",
-        "order": "Strigiformes",
-        "family": "Strigidae",
-        "genus": "Athene"
-      },
-      "iucnGlobal": "LC",
-      "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Reglamento CITES (CE) 338/97, Anexo A",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
-      "reviewNote": "El PORN cita la presencia de la especie en el parque sin detallar su categoría exacta de protección regional; pendiente de confirmar con el Catálogo Regional vigente.",
-      "eidosTaxonId": 11861,
-      "gbifSpeciesKey": 2497266,
-      "zepaSiteCode": null,
-      "habitatIds": [
-        "matorral-semiarido"
-      ],
-      "imageAttribution": "Arturo Nikolai from Galicia, Spain (CC BY-SA 2.0) · Wikimedia Commons",
-      "rarityLocal": 3,
-      "rarityLocalBasis": {
-        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
-        "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
-      },
-      "rarityBasis": {
-        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
-        "ambito": "estatal",
-        "origen": "spainStatus del catálogo universal"
-      },
-      "descriptionSource": null
-    },
-    {
       "id": 124,
       "commonName": "Olivarda",
       "scientificName": "Dittrichia viscosa",
@@ -6323,57 +6099,6 @@
       }
     },
     {
-      "id": 81,
-      "commonName": "Ostrero euroasiático",
-      "scientificName": "Haematopus ostralegus",
-      "kingdom": "fauna",
-      "group": "Ave",
-      "habitat": "Playas y costa rocosa (invernante)",
-      "conservationStatus": "Interés especial",
-      "description": "Limícola grande, blanco y negro, con un pico rojo largo y aplanado que usa como cuña para abrir mejillones y berberechos. Sus patas son rosadas y su reclamo, un silbido agudo y penetrante que delata su presencia antes de verlo.",
-      "tips": [
-        "Pico rojo largo, recto y aplanado lateralmente",
-        "Contraste tajante entre el negro y el blanco",
-        "Silbido agudo y repetido, muy sonoro"
-      ],
-      "seasonality": "Otoño e invierno",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Haematopus_ostralegus_Norway.jpg?width=1280",
-      "coordinates": null,
-      "rarityScore": 2,
-      "featured": false,
-      "source": "Documento previo del PORN de Calnegre y Cabo Cope (CARM, Consejería de Agua, Agricultura, Ganadería, Pesca y Medio Ambiente, 2021); IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
-      "taxonomy": {
-        "kingdom": "Animalia",
-        "phylum": "Chordata",
-        "class": "Aves",
-        "order": "Charadriiformes",
-        "family": "Haematopodidae",
-        "genus": "Haematopus"
-      },
-      "iucnGlobal": "LC",
-      "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo II parte B",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
-      "reviewNote": "El PORN cita la presencia de la especie en el parque sin detallar su categoría exacta de protección regional; pendiente de confirmar con el Catálogo Regional vigente.",
-      "eidosTaxonId": 11917,
-      "gbifSpeciesKey": 7788295,
-      "zepaSiteCode": null,
-      "habitatIds": [
-        "veg-anual-desechos-marinos"
-      ],
-      "imageAttribution": "Bjørn Christian Tørrissen (CC BY-SA 3.0) · Wikimedia Commons",
-      "rarityLocal": 3,
-      "rarityLocalBasis": {
-        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
-        "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
-      },
-      "rarityBasis": {
-        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
-        "ambito": "estatal",
-        "origen": "spainStatus del catálogo universal"
-      }
-    },
-    {
       "id": 95,
       "commonName": "Palmito",
       "scientificName": "Chamaerops humilis",
@@ -6467,58 +6192,6 @@
       },
       "rarityBasis": {
         "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
-        "ambito": "estatal",
-        "origen": "spainStatus del catálogo universal"
-      },
-      "descriptionSource": null
-    },
-    {
-      "id": 77,
-      "commonName": "Perdiz roja",
-      "scientificName": "Alectoris rufa",
-      "kingdom": "fauna",
-      "group": "Ave",
-      "habitat": "Mosaicos de cultivo, matorral bajo y laderas pedregosas",
-      "conservationStatus": "No catalogada",
-      "description": "Perdiz de patas y pico rojos, con un collar negro que se deshace en un salpicado de motas sobre el pecho y flancos barrados en blanco, negro y castaño. Prefiere correr a volar, y cuando por fin levanta lo hace de golpe y a ras de suelo, planeando ladera abajo.",
-      "tips": [
-        "Flancos con barras nítidas blancas, negras y castañas",
-        "Collar negro que se disgrega en motas sobre el pecho",
-        "Corre agachada antes que volar; levanta de golpe y planea"
-      ],
-      "seasonality": "Todo el año",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Perdiz_roja.jpg?width=1280",
-      "coordinates": null,
-      "rarityScore": 2,
-      "featured": false,
-      "source": "Documento previo del PORN de Calnegre y Cabo Cope (CARM, Consejería de Agua, Agricultura, Ganadería, Pesca y Medio Ambiente, 2021); IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
-      "taxonomy": {
-        "kingdom": "Animalia",
-        "phylum": "Chordata",
-        "class": "Aves",
-        "order": "Galliformes",
-        "family": "Phasianidae",
-        "genus": "Alectoris"
-      },
-      "iucnGlobal": "LC",
-      "spainStatus": "No incluida en el LESRPE; Directiva Aves 2009/147/CE, Anexos II y III (especie cinegética)",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
-      "reviewNote": "El IEPNB no registra figura regional para esta especie. La categoría que figuraba procede del PORN y no se ha podido confirmar en la Ley 7/1995.",
-      "eidosTaxonId": 12114,
-      "gbifSpeciesKey": 2474051,
-      "zepaSiteCode": null,
-      "habitatIds": [
-        "matorral-semiarido"
-      ],
-      "imageAttribution": "Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons",
-      "rarityLocal": 3,
-      "rarityLocalBasis": {
-        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
-        "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
-      },
-      "rarityBasis": {
-        "categoria": "Directiva Aves 2009/147/CE, Anexos II y III (especie cinegética)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
@@ -7590,57 +7263,6 @@
       "descriptionSource": null
     },
     {
-      "id": 71,
-      "commonName": "Terrera marismeña",
-      "scientificName": "Alaudala rufescens",
-      "kingdom": "fauna",
-      "group": "Ave esteparia",
-      "habitat": "Saladares, estepas salinas, eriales y llanos áridos con vegetación rala",
-      "conservationStatus": "Interés especial",
-      "description": "La alondra más pequeña de Europa, de plumaje pardo grisáceo y con el pecho finamente rayado de arriba abajo, sin las manchas laterales de su parienta. Vive ligada a los llanos más áridos y salinos, un hábitat en retroceso, y se camufla tan bien que suele verse solo al levantar el vuelo.",
-      "tips": [
-        "Rayado fino y extendido por todo el pecho",
-        "Muy pequeña y compacta, de aspecto grisáceo",
-        "Prefiere los llanos salinos y las estepas más áridas"
-      ],
-      "seasonality": "Todo el año",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Calandrella_rufescens_Canarias.jpg?width=1280",
-      "coordinates": null,
-      "rarityScore": 2,
-      "featured": false,
-      "source": "Documento previo del PORN de Calnegre y Cabo Cope (CARM, Consejería de Agua, Agricultura, Ganadería, Pesca y Medio Ambiente, 2021); IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
-      "taxonomy": {
-        "kingdom": "Animalia",
-        "phylum": "Chordata",
-        "class": "Aves",
-        "order": "Passeriformes",
-        "family": "Alaudidae",
-        "genus": "Alaudala"
-      },
-      "iucnGlobal": "LC",
-      "spainStatus": "LESRPE (RD 139/2011)",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
-      "reviewNote": "El IEPNB no registra figura regional para esta especie. La categoría que figuraba procede del PORN y no se ha podido confirmar en la Ley 7/1995.",
-      "eidosTaxonId": 33007,
-      "gbifSpeciesKey": 2490682,
-      "zepaSiteCode": null,
-      "habitatIds": [
-        "matorral-halofilo"
-      ],
-      "imageAttribution": "Calandrella_rufescens_-Canary_Islands_-Spain-8.jpg: Tony Hisgett de… (CC BY 2.0) · Wikimedia Commons",
-      "rarityLocal": 3,
-      "rarityLocalBasis": {
-        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
-        "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
-      },
-      "rarityBasis": {
-        "categoria": "LESRPE (RD 139/2011)",
-        "ambito": "estatal",
-        "origen": "spainStatus del catálogo universal"
-      }
-    },
-    {
       "id": 33,
       "commonName": "Teucrio de Freyn",
       "scientificName": "Teucrium freynii",
@@ -7990,57 +7612,6 @@
         "origen": "spainStatus del catálogo universal"
       },
       "descriptionSource": null
-    },
-    {
-      "id": 80,
-      "commonName": "Vuelvepiedras",
-      "scientificName": "Arenaria interpres",
-      "kingdom": "fauna",
-      "group": "Ave",
-      "habitat": "Playas y costa rocosa (invernante)",
-      "conservationStatus": "Interés especial",
-      "description": "Limícola robusta de patas naranjas y pico corto y algo respingón, que se gana la vida volteando piedras, conchas y algas para capturar lo que hay debajo. En vuelo muestra un llamativo diseño blanco y negro en alas y espalda.",
-      "tips": [
-        "Voltea piedras y algas con el pico corto y cuneiforme",
-        "Patas de color naranja vivo",
-        "Diseño blanco y negro muy contrastado en vuelo"
-      ],
-      "seasonality": "Otoño e invierno",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Arenaria_interpres_(habitus).jpg?width=1280",
-      "coordinates": null,
-      "rarityScore": 2,
-      "featured": false,
-      "source": "Documento previo del PORN de Calnegre y Cabo Cope (CARM, Consejería de Agua, Agricultura, Ganadería, Pesca y Medio Ambiente, 2021)",
-      "taxonomy": {
-        "kingdom": "Animalia",
-        "phylum": "Chordata",
-        "class": "Aves",
-        "order": "Charadriiformes",
-        "family": "Scolopacidae",
-        "genus": "Arenaria"
-      },
-      "iucnGlobal": "LC",
-      "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
-      "reviewNote": "El PORN cita la presencia de la especie en el parque sin detallar su categoría exacta de protección regional; pendiente de confirmar con el Catálogo Regional vigente.",
-      "eidosTaxonId": 11519,
-      "gbifSpeciesKey": 2481776,
-      "zepaSiteCode": null,
-      "habitatIds": [
-        "veg-anual-desechos-marinos"
-      ],
-      "imageAttribution": "Hans Hillewaert (CC BY-SA 4.0) · Wikimedia Commons",
-      "rarityLocal": 3,
-      "rarityLocalBasis": {
-        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
-        "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
-      },
-      "rarityBasis": {
-        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
-        "ambito": "estatal",
-        "origen": "spainStatus del catálogo universal"
-      }
     },
     {
       "id": 165,
@@ -9227,271 +8798,6 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       }
-    },
-    {
-      "id": 240,
-      "commonName": "Roquero solitario",
-      "scientificName": "Monticola solitarius",
-      "kingdom": "fauna",
-      "group": "Ave",
-      "habitat": "Acantilados mediterráneos con Limonium",
-      "conservationStatus": "Protección especial",
-      "description": "Pájaro rupícola de plumaje azul pizarra en el macho, ligado a acantilados marinos y roquedos, donde canta desde cornisas destacadas.",
-      "tips": [
-        "Macho azul pizarra",
-        "Canta desde cornisas y cumbres",
-        "Acantilados y roquedos calcáreos"
-      ],
-      "seasonality": "Todo el año",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_rock_thrush_(male)_at_Gamla_Nature_Reserve.jpg?width=1280",
-      "coordinates": null,
-      "rarityScore": 2,
-      "featured": true,
-      "source": "Atlas y Manual de los Hábitats de España (MITECO) — especie característica del HIC 1240; Inventario Español EIDOS (IEPNB, taxonid 12226); GBIF (speciesKey 2490955); Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE, RD 139/2011). Directiva Aves 2009/147/CE.",
-      "taxonomy": {
-        "kingdom": "Animalia",
-        "phylum": "Chordata",
-        "class": "Aves",
-        "order": "Passeriformes",
-        "family": "Muscicapidae",
-        "genus": "Monticola"
-      },
-      "iucnGlobal": "LC",
-      "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial, RD 139/2011)",
-      "murciaStatus": "Fauna protegida; ave rupícola de acantilados y roquedos del parque",
-      "reviewNote": null,
-      "eidosTaxonId": 12226,
-      "gbifSpeciesKey": 2490955,
-      "zepaSiteCode": "ES0000261",
-      "habitatIds": [
-        "acantilados",
-        "roquedos-casmofiticos"
-      ],
-      "imageAttribution": "Artemy Voikhansky (CC BY-SA 4.0) · Wikimedia Commons",
-      "rarityLocal": 2,
-      "rarityLocalBasis": {
-        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial, RD 139/2011)",
-        "ambito": "estatal",
-        "origen": "spainStatus del park.json"
-      },
-      "rarityBasis": {
-        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial, RD 139/2011)",
-        "ambito": "estatal",
-        "origen": "spainStatus del catálogo universal"
-      },
-      "descriptionSource": null
-    },
-    {
-      "id": 241,
-      "commonName": "Avión roquero",
-      "scientificName": "Ptyonoprogne rupestris",
-      "kingdom": "fauna",
-      "group": "Ave",
-      "habitat": "Acantilados mediterráneos con Limonium",
-      "conservationStatus": "Protección especial",
-      "description": "Hirundínido pardo y robusto que vuela pegado a las paredes rocosas de acantilados y barrancos, donde construye su nido de barro.",
-      "tips": [
-        "Vuelo pegado a las paredes",
-        "Manchas claras en la cola",
-        "Nido de barro en cortados"
-      ],
-      "seasonality": "Todo el año",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ptyonoprogne_rupestris_in_flight.jpg?width=1280",
-      "coordinates": null,
-      "rarityScore": 2,
-      "featured": false,
-      "source": "Atlas y Manual de los Hábitats de España (MITECO) — especie característica del HIC 1240; Inventario Español EIDOS (IEPNB, taxonid 12131); GBIF (speciesKey 4408796); Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE, RD 139/2011). Directiva Aves 2009/147/CE.",
-      "taxonomy": {
-        "kingdom": "Animalia",
-        "phylum": "Chordata",
-        "class": "Aves",
-        "order": "Passeriformes",
-        "family": "Hirundinidae",
-        "genus": "Ptyonoprogne"
-      },
-      "iucnGlobal": "LC",
-      "spainStatus": "LESRPE (RD 139/2011)",
-      "murciaStatus": "Fauna protegida; nidifica en cortados y acantilados del parque",
-      "reviewNote": null,
-      "eidosTaxonId": 12131,
-      "gbifSpeciesKey": 4408796,
-      "zepaSiteCode": "ES0000261",
-      "habitatIds": [
-        "acantilados",
-        "roquedos-casmofiticos"
-      ],
-      "imageAttribution": "ferran pestaña (CC BY-SA 2.0) · Wikimedia Commons",
-      "rarityLocal": 2,
-      "rarityLocalBasis": {
-        "categoria": "LESRPE (RD 139/2011)",
-        "ambito": "estatal",
-        "origen": "spainStatus del park.json"
-      },
-      "rarityBasis": {
-        "categoria": "LESRPE (RD 139/2011)",
-        "ambito": "estatal",
-        "origen": "spainStatus del catálogo universal"
-      },
-      "descriptionSource": null
-    },
-    {
-      "id": 242,
-      "commonName": "Alcaudón común",
-      "scientificName": "Lanius senator",
-      "kingdom": "fauna",
-      "group": "Ave",
-      "habitat": "Matorral termomediterráneo semiárido",
-      "conservationStatus": "Interés especial",
-      "description": "Alcaudón estival de cabeza castaña que caza insectos desde posaderos en el matorral abierto, empalando presas en espinas a modo de despensa.",
-      "tips": [
-        "Capirote castaño rojizo",
-        "Caza desde posaderos",
-        "Estival de mayo a agosto"
-      ],
-      "seasonality": "Primavera y verano (estival)",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lanius_senator01_new.jpg?width=1280",
-      "coordinates": null,
-      "rarityScore": 2,
-      "featured": false,
-      "source": "Atlas y Manual de los Hábitats de España (MITECO) — especie característica del HIC 5330; Inventario Español EIDOS (IEPNB, taxonid 12190); GBIF (speciesKey 2492867); Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE, RD 139/2011). Directiva Aves 2009/147/CE.",
-      "taxonomy": {
-        "kingdom": "Animalia",
-        "phylum": "Chordata",
-        "class": "Aves",
-        "order": "Passeriformes",
-        "family": "Laniidae",
-        "genus": "Lanius"
-      },
-      "iucnGlobal": "LC (SPEC, en declive en Europa)",
-      "spainStatus": "LESRPE (RD 139/2011)",
-      "murciaStatus": "Fauna protegida; estival reproductor en matorral abierto",
-      "reviewNote": null,
-      "eidosTaxonId": 12190,
-      "gbifSpeciesKey": 2492867,
-      "zepaSiteCode": "ES0000261",
-      "habitatIds": [
-        "matorral-semiarido",
-        "subestepa-thero-brachypodietea"
-      ],
-      "imageAttribution": "Lanius_senator01.jpg: chausinho derivative work: Bogbumper (talk) (CC BY-SA 2.0) · Wikimedia Commons",
-      "rarityLocal": 2,
-      "rarityLocalBasis": {
-        "categoria": "LESRPE (RD 139/2011)",
-        "ambito": "estatal",
-        "origen": "spainStatus del park.json"
-      },
-      "rarityBasis": {
-        "categoria": "LESRPE (RD 139/2011)",
-        "ambito": "estatal",
-        "origen": "spainStatus del catálogo universal"
-      },
-      "descriptionSource": null
-    },
-    {
-      "id": 243,
-      "commonName": "Triguero",
-      "scientificName": "Emberiza calandra",
-      "kingdom": "fauna",
-      "group": "Ave",
-      "habitat": "Cultivos de secano, pastizales y llanos abiertos con posaderos",
-      "conservationStatus": "No amenazada",
-      "description": "Escribano grande y rechoncho, pardo y rayado, sin marcas llamativas. Canta desde un cable o una mata con una frase acelerada que suena como un manojo de llaves agitado, y vuela distancias cortas dejando las patas colgando.",
-      "tips": [
-        "Canto como un manojo de llaves agitándose",
-        "Vuela con las patas colgando, sin recogerlas",
-        "Aspecto pesado y pardo, sin marcas vistosas"
-      ],
-      "seasonality": "Todo el año",
-      "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/606625336/original.jpg",
-      "coordinates": null,
-      "rarityScore": 2,
-      "featured": false,
-      "source": "Atlas y Manual de los Hábitats de España (MITECO) — especie característica del HIC 6220; Inventario Español EIDOS (IEPNB, taxonid 10938); GBIF (speciesKey 7634625); Zonas subestépicas del Thero-Brachypodietea (HIC 6220*). Directiva Aves 2009/147/CE.",
-      "taxonomy": {
-        "kingdom": "Animalia",
-        "phylum": "Chordata",
-        "class": "Aves",
-        "order": "Passeriformes",
-        "family": "Emberizidae",
-        "genus": "Emberiza"
-      },
-      "iucnGlobal": "LC",
-      "spainStatus": "No incluida en el LESRPE; protegida por la Directiva Aves 2009/147/CE",
-      "murciaStatus": "No catalogada como amenazada; ave común de pastizales y estepas",
-      "reviewNote": null,
-      "eidosTaxonId": 10938,
-      "gbifSpeciesKey": 7634625,
-      "zepaSiteCode": "ES0000261",
-      "habitatIds": [
-        "subestepa-thero-brachypodietea",
-        "estepas-salinas-albardinal"
-      ],
-      "imageAttribution": "euqirneto (CC BY 4.0) · GBIF",
-      "rarityLocal": 2,
-      "rarityLocalBasis": {
-        "categoria": "protegida por la Directiva Aves 2009/147/CE",
-        "ambito": "estatal",
-        "origen": "spainStatus del park.json"
-      },
-      "rarityBasis": {
-        "categoria": "protegida por la Directiva Aves 2009/147/CE",
-        "ambito": "estatal",
-        "origen": "spainStatus del catálogo universal"
-      },
-      "descriptionSource": null
-    },
-    {
-      "id": 244,
-      "commonName": "Abejaruco europeo",
-      "scientificName": "Merops apiaster",
-      "kingdom": "fauna",
-      "group": "Ave",
-      "habitat": "Matorral termomediterráneo semiárido",
-      "conservationStatus": "Interés especial",
-      "description": "Ave colorida y gregaria que caza abejas y libélulas en vuelo sobre espacios abiertos y cría en galerías excavadas en taludes terrosos.",
-      "tips": [
-        "Colorido inconfundible",
-        "Reclamo 'prruip' en vuelo",
-        "Cría en taludes de rambla"
-      ],
-      "seasonality": "Primavera y verano (estival)",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%C5%9Eahl%C3%BBr-33.jpg?width=1280",
-      "coordinates": null,
-      "rarityScore": 2,
-      "featured": false,
-      "source": "Atlas y Manual de los Hábitats de España (MITECO) — especie característica del HIC 5330; Inventario Español EIDOS (IEPNB, taxonid 10738); GBIF (speciesKey 2475443); Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE, RD 139/2011). Directiva Aves 2009/147/CE.",
-      "taxonomy": {
-        "kingdom": "Animalia",
-        "phylum": "Chordata",
-        "class": "Aves",
-        "order": "Coraciiformes",
-        "family": "Meropidae",
-        "genus": "Merops"
-      },
-      "iucnGlobal": "LC",
-      "spainStatus": "LESRPE (RD 139/2011)",
-      "murciaStatus": "Fauna protegida; estival que cría en taludes de rambla",
-      "reviewNote": null,
-      "eidosTaxonId": 10738,
-      "gbifSpeciesKey": 2475443,
-      "zepaSiteCode": "ES0000261",
-      "habitatIds": [
-        "matorral-semiarido",
-        "subestepa-thero-brachypodietea"
-      ],
-      "imageAttribution": "Dûrzan cîrano (CC BY-SA 3.0) · Wikimedia Commons",
-      "rarityLocal": 2,
-      "rarityLocalBasis": {
-        "categoria": "LESRPE (RD 139/2011)",
-        "ambito": "estatal",
-        "origen": "spainStatus del park.json"
-      },
-      "rarityBasis": {
-        "categoria": "LESRPE (RD 139/2011)",
-        "ambito": "estatal",
-        "origen": "spainStatus del catálogo universal"
-      },
-      "descriptionSource": null
     },
     {
       "id": 245,

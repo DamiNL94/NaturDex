@@ -1,0 +1,110 @@
+{
+  "Alca torda": {
+    "acceptedName": "Alca torda Linnaeus, 1758",
+    "taxonid": 14089,
+    "error": null,
+    "preguntadoComo": "Alca torda"
+  },
+  "Calonectris borealis": {
+    "acceptedName": "Calonectris borealis (Cory, 1881)",
+    "taxonid": 32348,
+    "error": null,
+    "preguntadoComo": "Calonectris borealis"
+  },
+  "Calonectris diomedea (sensu stricto [excluding borealis])": {
+    "acceptedName": "Calonectris diomedea (Scopoli, 1769)",
+    "taxonid": 11166,
+    "error": null,
+    "preguntadoComo": "Calonectris diomedea"
+  },
+  "Catharacta skua": {
+    "acceptedName": "Stercorarius skua (Brünnich, 1764)",
+    "taxonid": 14044,
+    "error": null,
+    "preguntadoComo": "Catharacta skua"
+  },
+  "Chlidonias niger": {
+    "acceptedName": "Chlidonias niger (Linnaeus, 1758)",
+    "taxonid": 14086,
+    "error": null,
+    "preguntadoComo": "Chlidonias niger"
+  },
+  "Hydrobates pelagicus": {
+    "acceptedName": "Hydrobates pelagicus pelagicus Linnaeus, 1758",
+    "taxonid": 11953,
+    "error": null,
+    "preguntadoComo": "Hydrobates pelagicus"
+  },
+  "Larus audouinii": {
+    "acceptedName": "Larus audouinii Payraudeau, 1826",
+    "taxonid": 14053,
+    "error": null,
+    "preguntadoComo": "Larus audouinii"
+  },
+  "Larus fuscus": {
+    "acceptedName": "Larus fuscus Linnaeus, 1758",
+    "taxonid": 14057,
+    "error": null,
+    "preguntadoComo": "Larus fuscus"
+  },
+  "Larus melanocephalus": {
+    "acceptedName": "Larus melanocephalus Temminck, 1820",
+    "taxonid": 14050,
+    "error": null,
+    "preguntadoComo": "Larus melanocephalus"
+  },
+  "Larus michahellis": {
+    "acceptedName": "Larus michahellis J.F. Naumann, 1840",
+    "taxonid": 14061,
+    "error": null,
+    "preguntadoComo": "Larus michahellis"
+  },
+  "Larus ridibundus": {
+    "acceptedName": "Chroicocephalus ridibundus (Linnaeus, 1766)",
+    "taxonid": 16356,
+    "error": null,
+    "preguntadoComo": "Larus ridibundus"
+  },
+  "Morus bassanus": {
+    "acceptedName": "Morus bassanus (Linnaeus, 1758)",
+    "taxonid": 14031,
+    "error": null,
+    "preguntadoComo": "Morus bassanus"
+  },
+  "Puffinus mauretanicus": {
+    "acceptedName": "Puffinus mauretanicus Lowe, 1921",
+    "taxonid": 11691,
+    "error": null,
+    "preguntadoComo": "Puffinus mauretanicus"
+  },
+  "Stercorarius parasiticus": {
+    "acceptedName": "Stercorarius parasiticus (Linnaeus, 1758)",
+    "taxonid": 14042,
+    "error": null,
+    "preguntadoComo": "Stercorarius parasiticus"
+  },
+  "Stercorarius pomarinus": {
+    "acceptedName": "Stercorarius pomarinus (Temminck, 1815)",
+    "taxonid": 14041,
+    "error": null,
+    "preguntadoComo": "Stercorarius pomarinus"
+  },
+  "Sterna hirundo": {
+    "acceptedName": "Sterna hirundo Linnaeus, 1758",
+    "taxonid": 14079,
+    "error": null,
+    "preguntadoComo": "Sterna hirundo"
+  },
+  "Sternula albifrons": {
+    "acceptedName": "Sternula albifrons (Pallas, 1764)",
+    "taxonid": 14084,
+    "error": null,
+    "preguntadoComo": "Sternula albifrons"
+  },
+  "Thalasseus sandvicensis": {
+    "acceptedName": "Thalasseus sandvicensis (Latham, 1787)",
+    "taxonid": 12147,
+    "error": null,
+    "preguntadoComo": "Thalasseus sandvicensis"
+  }
+}

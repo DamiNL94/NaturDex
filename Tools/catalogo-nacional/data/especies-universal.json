@@ -18463,35 +18463,6 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
-  "Sylvia undata": {
-    "commonName": "Sylvia undata",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 1,
-    "description": null,
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Sylviidae",
-      "genus": "Sylvia"
-    },
-    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dartford_Warbler_Provencegrasm%C3%BCcke_(Sylvia_undata)_by_J._Dietrich.jpg?width=1280",
-    "imageAttribution": "J. Dietrich (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 80230,
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
   "Tachybaptus ruficollis": {
     "commonName": "Zampullín común",
     "kingdom": "fauna",

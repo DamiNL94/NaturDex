@@ -2,8 +2,8 @@
   "slug": "sierra-de-salinas",
   "name": "Sierra de Salinas",
   "apiSlug": "sierra-de-salinas",
-  "version": 8,
-  "updatedAt": "2026-08-15",
+  "version": 9,
+  "updatedAt": "2026-08-16",
   "data": "Data/parks/murcia/sierra-de-salinas/park.json",
   "geo": {
     "parque": "Data/parks/murcia/sierra-de-salinas/geo/parque.geojson",
@@ -14,7 +14,7 @@
   "images": [],
   "audio": [],
   "counts": {
-    "species": 118,
+    "species": 105,
     "habitats": 7,
     "pointsOfInterest": 7,
     "images": 0,

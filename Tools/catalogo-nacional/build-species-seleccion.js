@@ -22,8 +22,10 @@
  *      (campo `origen` de v_taxonomia), que es lo que quita ornamentales y exotismos.
  *   3. PRESENCIA CONSIDERABLE, y solo para las que no tienen respaldo documental: al menos
  *      MIN_OCURRENCIAS registros repartidos en MIN_HABITATS hábitats. Las protegidas, las
- *      características del Atlas y las que enumera el anexo normativo del espacio conservan su
- *      plaza aunque tengan pocos registros, porque su respaldo no es el número de avistamientos.
+ *      características del Atlas y las que enumera el anexo normativo o el formulario oficial del
+ *      sitio conservan su plaza aunque tengan pocos registros, porque su respaldo no es el número
+ *      de avistamientos.
+ *   3 bis. RESPALDO DE SITIO PARA LAS AVES (más abajo, con su porqué).
  *   4. ALCANCE TAXONÓMICO (más abajo, con su lista de clases).
  *
  * Por qué GBIF sigue siendo la puerta y el anexo no
@@ -82,6 +84,10 @@ const { especiesCaracteristicas, binomio } = require('../lib/atlas');
 // La escalera 1–5 vive en lib/ porque `rareza-legal.js` aplica exactamente el mismo criterio sobre
 // el texto ya redactado del park.json. Dos copias se separarían en cuanto alguien tocara una.
 const { tramoDeCategoria, SIGNIFICADO } = require('../lib/rareza');
+// El puente de nomenclatura entre lo que escribe una fuente oficial y lo que ficha el catálogo. Vive
+// en lib/ porque `poda-aves-sin-respaldo.js` tiene que tomar EXACTAMENTE la misma decisión sobre los
+// espacios ya publicados: dos implementaciones de «tiene respaldo de sitio» divergirían a la primera.
+const respaldoSitio = require('../lib/respaldo-sitio');
 
 const PARK = arg('park');
 const DRY = flag('dry');
@@ -139,6 +145,36 @@ const CLASES = new Set(
   (arg('clases') ? arg('clases').split(',').map(s => s.trim()) : CLASES_POR_DEFECTO).filter(Boolean)
 );
 
+/*
+ * Filtro 3 bis — LAS AVES NO ENTRAN POR EL FILTRO DE PRESENCIA.
+ *
+ * Es la única clase para la que la puerta de los demás no mide lo que dice medir. El filtro 1 y el 3
+ * cuentan ocurrencias DENTRO de los polígonos de hábitat, y un ave no está en un polígono: lo
+ * sobrevuela. El propio repo lo tenía escrito desde el piloto —«filtrar Aves: son el 88 % de las
+ * ocurrencias y casi todo ruido espacial», `Docs/runbook/TRAMPAS-CONOCIDAS.md`— y `build-species-n2.js`
+ * lo asume al escribir la ficha, que sale a propósito SIN `habitatIds`. O sea que el ave entraba por
+ * una prueba cuyo resultado el propio catálogo declaraba falso acto seguido.
+ *
+ * Lo que eso producía, medido antes del cambio: 557 de 1.492 fichas eran aves (el 73 % del catálogo
+ * en Monte Arabí, el 26 % en Cuatro Calas — una proporción que mide la cobertura de eBird, no el
+ * espacio), y 366 de ellas llevaban una `reviewNote` pidiendo contrastar con la lista oficial del
+ * sitio. Justo la incomparabilidad entre espacios que el filtro 4 se escribió para evitar.
+ *
+ * Así que para las aves la puerta es el RESPALDO DE SITIO —la única evidencia que afirma la
+ * pertenencia a ESTE espacio— y GBIF pasa a ser la confirmación:
+ *
+ *   · el formulario oficial del sitio Red Natura 2000 (`especies-sitio-rn2000.js`), o
+ *   · el anexo normativo del PORN/PRUG/decreto del espacio.
+ *
+ * No vale estar protegida: que un ave sea LESRPE es dato oficial sobre la especie, no sobre este
+ * espacio, y con eso volveríamos a aprobar por ubicuidad. Las aves sin respaldo de sitio no se
+ * pierden: salen en `excluidas_detalle` con su motivo, y recuperarlas es volver a ejecutar.
+ *
+ * `--aves-sin-respaldo` restaura el comportamiento anterior (el ave entra por presencia, como una
+ * planta). Está para poder reproducir una selección vieja tal cual se hizo, no para usarlo.
+ */
+const AVES_SIN_RESPALDO = flag('aves-sin-respaldo');
+
 // Caché de EIDOS: un catálogo son ~1.300 peticiones a un servicio público. Sin ella, repetir la
 // selección tras ajustar un umbral vuelve a castigar al IEPNB durante diez minutos.
 const CACHE = fromRoot(arg('cache', path.join(OUT_DIR, `${PARK}-eidos-seleccion-cache.json`)));
@@ -152,6 +188,10 @@ const RUTA_ATLAS = arg('atlas') ? fromRoot(arg('atlas')) : null;
 const RUTA_ANEXOS = arg('anexos')
   ? fromRoot(arg('anexos'))
   : path.join(CATALOGO_DIR, 'data', 'anexos-normativos.json');
+// La lista oficial de especies de los sitios Red Natura 2000 del espacio (secciones 3.2 y 3.3 del
+// Formulario Normalizado de Datos), que trae `especies-sitio-rn2000.js`. Va por defecto y su
+// ausencia se dice, igual que la del Atlas y la del anexo: es la puerta de las aves.
+const RUTA_SITIO = fromRoot(arg('sitio', path.join(OUT_DIR, `${PARK}-rn2000-sitio.json`)));
 
 const hoy = () => new Date().toISOString().slice(0, 10);
 
@@ -291,6 +331,57 @@ function reconcilia(lista, resueltas, porTaxonId) {
   return { lista: salida.sort((a, b) => b.gbifOccurrences - a.gbifOccurrences), fusiones };
 }
 
+/*
+ * La cuarta vía de la reconciliación, y la única que no sale de un identificador: la TABLA DE
+ * EQUIVALENCIAS verificadas a mano.
+ *
+ * `reconcilia()` agrupa por `taxonid` de EIDOS, que es la clave maestra y resuelve casi todo. Pero
+ * no puede resolver el caso en que EIDOS mantiene DOS entradas válidas para el mismo taxón, porque
+ * entonces hay dos taxonid y no hay nada que agrupar. Ahí es donde la curruca rabilarga se partió en
+ * dos: `Curruca undata` (80931) en tres espacios y `Sylvia undata` (80230, que es la subespecie
+ * nominal) en otros cuatro, con foto, texto y contadores por separado.
+ *
+ * Se corrigió a mano en una de las siete fichas el 2026-08-09, y las cuatro Capas 3 generadas
+ * después la volvieron a introducir: una corrección que vive en el dato y no en la herramienta dura
+ * hasta la siguiente regeneración. Esta pasada es lo que hace que la corrección viva en la
+ * herramienta.
+ */
+function aplicaEquivalencias(lista, equivalencias) {
+  if (!equivalencias || !equivalencias.size) return { lista, renombradas: [] };
+  const porNombre = new Map();
+  const renombradas = [];
+  for (const c of lista) {
+    const eq = equivalencias.get(binomio(c.scientificName) || '');
+    const destino = eq ? eq.nombreEnElCatalogo : c.scientificName;
+    if (eq && destino !== c.scientificName) {
+      renombradas.push({ de: c.scientificName, a: destino, verificadoCon: eq.verificadoCon });
+    }
+    const ya = porNombre.get(destino);
+    if (!ya) {
+      porNombre.set(destino, destino === c.scientificName ? c : {
+        ...c,
+        scientificName: destino,
+        // El nombre con el que GBIF sirve este taxón sigue siendo el hilo hacia el barrido, que está
+        // indexado por él. Perderlo deja la ficha sin un solo enlace a hábitat (y en silencio).
+        sinonimosFusionados: [...new Set([...(c.sinonimosFusionados || []), c.scientificName])],
+      });
+      continue;
+    }
+    // Los dos nombres estaban entre los candidatos: es el duplicado de verdad. Se funden como haría
+    // `reconcilia()` con dos nombres del mismo taxonid.
+    ya.gbifOccurrences += c.gbifOccurrences;
+    ya.hics = new Set([...(ya.hics || []), ...(c.hics || [])]);
+    ya.habitats = ya.hics.size;
+    ya.sinonimosFusionados = [...new Set([
+      ...(ya.sinonimosFusionados || []), ...(c.sinonimosFusionados || []), c.scientificName,
+    ])].filter(n => n !== destino);
+  }
+  return {
+    lista: [...porNombre.values()].sort((a, b) => b.gbifOccurrences - a.gbifOccurrences),
+    renombradas,
+  };
+}
+
 // --- Reutilización: ¿esta especie ya está fichada en otro espacio? ----------------------------------
 // Es la decisión (c) del §0 del rollout: una Aquila fasciata de Murcia y una de Cádiz son la misma
 // ficha. Saber de antemano cuántas se reutilizan es lo que dice si el catálogo nacional está
@@ -382,6 +473,39 @@ function anexoNormativo() {
     fuente: entrada.fuente || null,
     consultado: true,
     total: (entrada.especies || []).length,
+  };
+}
+
+/*
+ * La lista oficial de especies de los sitios Red Natura 2000 con los que solapa el espacio: las
+ * secciones 3.2 y 3.3 del Formulario Normalizado de Datos, tal como las sirve el IEPNB.
+ *
+ * Es, junto al anexo normativo, la única fuente que afirma la pertenencia a ESTE sitio, y la única
+ * que existe para casi todas las aves: los planes de gestión que traen inventario faunístico son la
+ * excepción, no la regla. Se indexa por BINOMIO por el mismo motivo que el anexo —el formulario
+ * escribe subespecies trinomiales («Phalacrocorax aristotelis aristotelis»), autorías y salvedades
+ * entre paréntesis («Falco peregrinus ([including pelegrinoides])»)— y ese es el trabajo que ya hace
+ * `especies-sitio-rn2000.js` al volcar el fichero.
+ *
+ * Tres estados, y hay que distinguirlos: no consultado (nadie ha lanzado la herramienta), consultado
+ * y sin sitios (el espacio no está en Red Natura 2000: dato oficial), y consultado con lista.
+ */
+function listaOficialDelSitio() {
+  if (!fs.existsSync(RUTA_SITIO)) return { mapa: new Map(), consultado: false, sitios: [], total: 0 };
+  const doc = readJson(RUTA_SITIO);
+  const mapa = new Map();
+  for (const e of doc.especies || []) {
+    if (!e.binomio) continue;
+    if (!mapa.has(e.binomio)) mapa.set(e.binomio, []);
+    mapa.get(e.binomio).push(e);
+  }
+  return {
+    mapa,
+    consultado: true,
+    sitios: doc.sitios || [],
+    total: (doc.especies || []).length,
+    generado: doc.generado || null,
+    fuente: doc.fuente || null,
   };
 }
 
@@ -541,6 +665,7 @@ async function main() {
   const { porNombre: fichadas, porTaxonId } = yaFichadas();
   const atlas = caracteristicasPorEspecie(codigosHic);
   const anexo = anexoNormativo();
+  const sitio = listaOficialDelSitio();
 
   console.log(`Espacio: ${park.park.name} (${PARK}) · ${codigosHic.length} códigos HIC · catálogo regional: ${ccaa}`);
   console.log(`Candidatos de GBIF ∩ polígonos: ${brutos.length}`);
@@ -551,6 +676,21 @@ async function main() {
     ? `Anexo normativo: ${anexo.total} especies enumeradas (${anexo.fuente ? anexo.fuente.norma : 'sin cita'})`
     : `Anexo normativo: NO consultado — ${PARK} no tiene entrada en ${rel(RUTA_ANEXOS)}.\n` +
       '  No es lo mismo que «este espacio no tiene anexo»: es que nadie lo ha leído todavía.');
+  // Los tres estados de la lista oficial, dichos por su nombre. «No consultada» y «el espacio no
+  // está en Red Natura 2000» tienen la misma pinta en el resultado —ninguna ave con respaldo de
+  // sitio— y consecuencias opuestas: la primera se arregla lanzando una herramienta.
+  if (!sitio.consultado) {
+    console.log(`Lista oficial del sitio: NO consultada — no existe ${rel(RUTA_SITIO)}.\n` +
+      `  Genérala antes: npm run sitio:especies -- --park ${PARK}\n` +
+      '  Sin ella, ningún ave tiene respaldo de sitio y el filtro 3 bis las excluye todas.');
+  } else if (!sitio.sitios.length) {
+    console.log('Lista oficial del sitio: este espacio NO solapa con ningún sitio Red Natura 2000.\n' +
+      '  Es dato oficial, no un hueco: el respaldo posible de sus aves es el anexo normativo.');
+  } else {
+    const avesOficiales = [...sitio.mapa.values()].flat().filter(e => e.grupoCodigo === 'B').length;
+    console.log(`Lista oficial del sitio: ${sitio.total} entradas (${avesOficiales} aves) en ` +
+      `${sitio.sitios.map(s => s.code).join(', ')} · formulario de ${sitio.sitios[0].año || 'año sin declarar'}`);
+  }
   // De dónde sale el umbral se dice SIEMPRE, aunque sea el general: es la decisión que más cambia el
   // tamaño del catálogo y la que dos veces se ha perdido por no estar a la vista.
   console.log(`Umbral de presencia: ${MIN_OCURRENCIAS} ocurrencia(s) en ${MIN_HABITATS} hábitat(s) · ` +
@@ -570,7 +710,53 @@ async function main() {
   }
   if (!DRY) writeJson(CACHE, cache);
 
-  const { lista, fusiones } = reconcilia(brutos, resueltas, porTaxonId);
+  /*
+   * El PUENTE de nomenclatura entre las fuentes de respaldo y el catálogo.
+   *
+   * Hasta aquí, el anexo y el formulario del sitio se cruzaban por el binomio del nombre que escribe
+   * el documento, más el nombre aceptado DEL CANDIDATO. Faltaba la dirección que importa: resolver el
+   * nombre de LA FUENTE. El formulario de un sitio revisado en 2023 sigue citando *Sylvia undata* y
+   * *Larus ridibundus*; el catálogo ficha *Curruca undata* y *Chroicocephalus ridibundus*. Sin
+   * resolver el lado de la fuente, esas aves salían con «no figura en el formulario oficial del
+   * sitio» escrito al lado — que es una afirmación falsa, y la puerta de las aves se apoya en ella.
+   *
+   * Sale caro una vez y nada las siguientes: son ~80 nombres por espacio y van a la misma caché.
+   */
+  const equivalencias = respaldoSitio.cargaEquivalencias();
+  const nombresDeFuente = [
+    ...[...sitio.mapa.values()].flat().map(e => e.scientificName),
+    ...[...anexo.mapa.values()].map(e => e.scientificName),
+  ].filter((n, i, a) => n && a.indexOf(n) === i);
+  if (nombresDeFuente.length) {
+    console.log(`\nResolviendo ${nombresDeFuente.length} nombres de las fuentes de respaldo contra EIDOS…`);
+    for (const nombre of nombresDeFuente) {
+      if (!resueltas.has(nombre)) resueltas.set(nombre, await resuelve(nombre, ccaa));
+    }
+    const idxSitio = respaldoSitio.indexa([...new Set([...sitio.mapa.values()].flat())], {
+      nombreDe: e => e.scientificName, resueltas, equivalencias: equivalencias.mapa,
+    });
+    const idxAnexo = respaldoSitio.indexa([...new Set([...anexo.mapa.values()])], {
+      nombreDe: e => e.scientificName, resueltas, equivalencias: equivalencias.mapa,
+    });
+    // Las claves nuevas se AÑADEN a los índices que ya había: el `nombreCorregido` del anexo y el
+    // binomio verbatim siguen valiendo, y aquí solo se amplía por dónde se puede casar.
+    for (const [k, v] of idxSitio.mapa) if (!sitio.mapa.has(k)) sitio.mapa.set(k, v);
+    for (const [k, v] of idxAnexo.mapa) if (!anexo.mapa.has(k)) anexo.mapa.set(k, v.length ? v[0] : v);
+    const puentes = [...idxSitio.puentes, ...idxAnexo.puentes]
+      .filter((p, i, a) => a.findIndex(x => x.nombre === p.nombre && x.clave === p.clave) === i);
+    if (puentes.length) {
+      console.log(`Puentes de nomenclatura tendidos: ${puentes.length}`);
+      for (const p of puentes) console.log(`   ${p.nombre}  →  ${p.clave}  (${p.via})`);
+    }
+  }
+
+  let { lista, fusiones } = reconcilia(brutos, resueltas, porTaxonId);
+  const equiv = aplicaEquivalencias(lista, equivalencias.mapa);
+  lista = equiv.lista;
+  if (equiv.renombradas.length) {
+    console.log(`\nEquivalencias de nomenclatura aplicadas: ${equiv.renombradas.length}`);
+    for (const r of equiv.renombradas) console.log(`   ${r.de}  →  ${r.a}`);
+  }
   if (fusiones.length) {
     console.log(`\nReconciliación taxonómica: ${fusiones.length} grupo(s) con más de un nombre para el mismo taxón`);
     for (const f of fusiones) {
@@ -589,6 +775,10 @@ async function main() {
   // Se guarda la entrada y no su clave porque una misma especie puede estar indexada por dos
   // nombres —el verbatim de la norma y su `nombreCorregido`—, y contar claves la duplicaría.
   const anexoCasado = new Set();
+  // Lo mismo para la lista oficial del sitio: qué entradas ha confirmado GBIF. Lo que quede sin
+  // casar es el hueco lista↔GBIF, que para las aves es el más informativo de los dos: el formulario
+  // oficial dice que el ave está en el sitio y el barrido no la ha visto dentro de ningún polígono.
+  const sitioCasado = new Set();
   for (const c of lista) {
     // Tras reconciliar, un candidato puede llevar el nombre de la ficha ya existente en otro espacio
     // y no el que se preguntó a EIDOS: se busca por los dos.
@@ -609,11 +799,17 @@ async function main() {
     const binAcept = binomio(r.nombreAceptadoEidos || '') || '';
     const enAnexo = anexo.mapa.get(bin) || (binAcept && anexo.mapa.get(binAcept)) || null;
     if (enAnexo) anexoCasado.add(enAnexo);
+    // La lista oficial se cruza por los mismos dos nombres que el anexo: el formulario de 2023 sigue
+    // citando *Sylvia* donde GBIF ya sirve *Curruca*, y buscar solo por uno deja al ave sin el
+    // respaldo que su propio sitio le da — en silencio, que es lo que no puede pasar.
+    const enSitio = sitio.mapa.get(bin) || (binAcept && sitio.mapa.get(binAcept)) || null;
+    if (enSitio) for (const e of enSitio) sitioCasado.add(e.scientificName);
 
     const evidence = ['observada_gbif'];
     if (caract.length) evidence.push('caracteristica');
     if (normas.length) evidence.push('protegida');
     if (enAnexo) evidence.push('anexo_normativo');
+    if (enSitio) evidence.push('lista_oficial_sitio');
 
     const { rarityScore, rarityBasis, rarityLocal, rarityLocalBasis } = rarezaLegal(normas);
 
@@ -631,6 +827,20 @@ async function main() {
       rarityLocalBasis,
       origen: origenLegible(r),
     };
+    if (enSitio) {
+      // Se guardan TODAS las entradas: una misma ave puede figurar en el formulario de la ZEPA y en
+      // el del LIC del mismo espacio, y son dos afirmaciones oficiales distintas, no una repetida.
+      // `tipoPoblacion` (permanente / reproductora / invernante / en concentración) es además lo que
+      // permite que la estacionalidad de la ficha deje de ser un texto genérico.
+      ficha.listaOficialSitio = enSitio.map(e => ({
+        citadaComo: e.scientificName,
+        siteCode: e.siteCode,
+        siteName: e.siteName,
+        seccion: e.seccion,
+        tipoPoblacion: e.tipoPoblacion,
+        categoriaPoblacion: e.categoriaPoblacion,
+      }));
+    }
     if (enAnexo) {
       ficha.anexoNormativo = {
         citadaComo: enAnexo.scientificName,
@@ -678,10 +888,24 @@ async function main() {
       excluidas.push({ ...ficha, motivo: `fuera del alcance del catálogo (clase ${c.class})` });
       continue;
     }
+    // Filtro 3 bis — respaldo de SITIO para las aves. Va antes del de presencia porque para un ave
+    // el de presencia no mide presencia: mide cuántas veces alguien subió a GBIF un vuelo sobre el
+    // espacio. El porqué completo, arriba, en la cabecera de AVES_SIN_RESPALDO.
+    const respaldoDeSitio = Boolean(enAnexo) || Boolean(enSitio);
+    if (!AVES_SIN_RESPALDO && c.class === 'Aves' && !respaldoDeSitio) {
+      excluidas.push({
+        ...ficha,
+        motivo: sitio.consultado
+          ? 'ave sin respaldo de sitio (no figura en el formulario oficial del sitio ni en el anexo normativo)'
+          : 'ave sin respaldo de sitio, y la lista oficial NO se ha consultado (falta el volcado de sitio:especies)',
+      });
+      continue;
+    }
     // Filtro 3 — presencia, solo para las que no traen respaldo documental.
-    // El anexo del espacio es respaldo documental de pleno derecho, y el más fuerte de los tres: es
-    // la propia norma del espacio la que dice que la especie forma parte de él.
-    const conRespaldo = normas.length > 0 || caract.length > 0 || Boolean(enAnexo);
+    // El anexo del espacio y el formulario oficial del sitio son respaldo documental de pleno
+    // derecho, y los más fuertes: son los únicos que afirman que la especie forma parte de ESTE
+    // espacio, en vez de que sea propia de un tipo de hábitat o que esté protegida en general.
+    const conRespaldo = normas.length > 0 || caract.length > 0 || respaldoDeSitio;
     if (!conRespaldo && (c.gbifOccurrences < MIN_OCURRENCIAS || c.habitats < MIN_HABITATS)) {
       excluidas.push({
         ...ficha,
@@ -704,6 +928,20 @@ async function main() {
         .filter(e => !anexoCasado.has(e))
         .map(e => ({ scientificName: e.scientificName, categoria: e.categoria || null, nota: e.nota || null }))
     : [];
+  // El mismo hueco por el lado de la lista oficial. Aquí importa todavía más que en el anexo: como
+  // las aves ya solo entran con respaldo de sitio, esta lista es exactamente el catálogo de aves que
+  // el sitio declara y NaturDex no puede fichar, con el motivo puesto — y por tanto la lista de por
+  // dónde ampliar el barrido, no un vacío.
+  const sitioSinConstancia = sitio.consultado
+    ? [...new Set([...sitio.mapa.values()].flat())]
+        .filter(e => !sitioCasado.has(e.scientificName))
+        .map(e => ({
+          scientificName: e.scientificName, grupo: e.grupo, seccion: e.seccion,
+          siteCode: e.siteCode, tipoPoblacion: e.tipoPoblacion, categoriaPoblacion: e.categoriaPoblacion,
+        }))
+        .sort((a, b) => String(a.grupo).localeCompare(String(b.grupo)) ||
+                        String(a.scientificName).localeCompare(String(b.scientificName)))
+    : [];
   const doc = {
     _nota:
       `Selección de especies para la Capa 3 de ${park.park.name}. NO es park.json: es la lista aprobada y ` +
@@ -719,10 +957,17 @@ async function main() {
         ? 'Sin filtro de clase: entran todos los grupos taxonómicos.'
         : '(4) alcance taxonómico: flora vascular y vertebrados, que es lo que cataloga NaturDex — clases ' +
           `admitidas: ${[...CLASES].join(', ')}.`) + ' ' +
-      'El ANEXO NORMATIVO del espacio (PORN/PRUG/decreto de declaración o SDF del sitio Natura 2000) da ' +
-      'la evidencia `anexo_normativo` y cuenta como respaldo documental, pero NO es puerta de entrada: lo ' +
-      'que enumera y GBIF no confirma dentro de los polígonos queda en `anexo_sin_constancia`, no aprobado ' +
-      'y no perdido. `rarityScore` (1–5) se deriva únicamente de la categoría legal ESTATAL más grave, con ' +
+      'El ANEXO NORMATIVO del espacio (PORN/PRUG/decreto de declaración) da la evidencia ' +
+      '`anexo_normativo`, y la LISTA OFICIAL del sitio Red Natura 2000 —secciones 3.2 y 3.3 de su ' +
+      'Formulario Normalizado de Datos— da `lista_oficial_sitio`. Las dos cuentan como respaldo ' +
+      'documental, pero NO son puerta de entrada: lo que enumeran y GBIF no confirma dentro de los ' +
+      'polígonos queda en `anexo_sin_constancia` y `sitio_sin_constancia`, no aprobado y no perdido. ' +
+      (AVES_SIN_RESPALDO
+        ? '(3 bis) DESACTIVADO con --aves-sin-respaldo: las aves entran por presencia, como una planta. '
+        : '(3 bis) Las AVES no entran por el filtro de presencia —vuelan, sus ocurrencias caen dentro de ' +
+          'cualquier polígono y por eso su ficha se escribe sin `habitatIds`—: exigen respaldo de sitio ' +
+          '(formulario oficial del sitio o anexo normativo), y GBIF queda como confirmación. ') +
+      '`rarityScore` (1–5) se deriva únicamente de la categoría legal ESTATAL más grave, con ' +
       'la norma que la justifica en `rarityBasis`; no interviene ninguna señal de abundancia. ' +
       'Generada por Tools/catalogo-nacional/build-species-seleccion.js.',
     park: PARK,
@@ -735,6 +980,14 @@ async function main() {
     anexo: anexo.consultado
       ? { consultado: true, fuente: anexo.fuente, enumeradas: anexo.total, casadas: anexoCasado.size }
       : { consultado: false },
+    lista_oficial_sitio: sitio.consultado
+      ? {
+          consultado: true, fuente: sitio.fuente, generado: sitio.generado,
+          sitios: sitio.sitios.map(s => ({ code: s.code, name: s.name, figura: s.figura, año: s.año })),
+          enumeradas: sitio.total, casadas: sitioCasado.size,
+        }
+      : { consultado: false },
+    aves_puerta: AVES_SIN_RESPALDO ? 'presencia (--aves-sin-respaldo)' : 'respaldo de sitio',
     rareza: [5, 4, 3, 2, 1].reduce((a, n) => {
       a[n] = aprobadas.filter(e => e.rarityScore === n).length; return a;
     }, {}),
@@ -743,6 +996,7 @@ async function main() {
     }, {}),
     especies: aprobadas,
     anexo_sin_constancia: anexoSinConstancia,
+    sitio_sin_constancia: sitioSinConstancia,
     excluidas_detalle: excluidas,
   };
 
@@ -757,6 +1011,14 @@ async function main() {
   }
   console.log(`   destacadas (>= 4)   ${String(doc.rareza[5] + doc.rareza[4]).padStart(7)}   ` +
               `${String(doc.rareza_local[5] + doc.rareza_local[4]).padStart(4)}`);
+  if (sitio.consultado && sitio.sitios.length) {
+    console.log(`\nLista oficial del sitio: ${sitioCasado.size}/${sitio.total} confirmadas por GBIF dentro de los polígonos.`);
+    if (sitioSinConstancia.length) {
+      console.log(`⚠ ${sitioSinConstancia.length} del formulario oficial SIN constancia en GBIF: no se aprueban,`);
+      console.log('  quedan en `sitio_sin_constancia` (ver informe). Para las aves es la lista de lo que el');
+      console.log('  sitio declara y el barrido no ve: por ahí se amplía, no por bajar el umbral.');
+    }
+  }
   if (anexo.consultado) {
     console.log(`\nAnexo normativo: ${anexoCasado.size}/${anexo.total} confirmadas por GBIF dentro de los polígonos.`);
     if (anexoSinConstancia.length) {
@@ -803,6 +1065,39 @@ function informe(doc, atlas, conError, categoriasDescartadas) {
       '**NO consultado.** Este espacio no tiene entrada en `data/anexos-normativos.json`. No es que carezca ' +
       'de norma con anexo de especies: es que nadie la ha leído todavía, y hasta que se lea ninguna especie ' +
       'de este espacio tiene la evidencia más fuerte de las cuatro.', '');
+  }
+
+  const s = doc.lista_oficial_sitio || { consultado: false };
+  l.push('', '## Lista oficial del sitio Red Natura 2000', '');
+  if (!s.consultado) {
+    l.push('**NO consultada.** Falta el volcado de `npm run sitio:especies -- --park ' + doc.park + '`. ' +
+      'Sin ella ningún ave tiene respaldo de sitio, así que las aves de esta selección son las que ' +
+      'salva el anexo normativo y ninguna más: la cifra de aves de este informe está por debajo de lo ' +
+      'que el espacio tiene, y el motivo es que falta un paso, no que no haya aves.', '');
+  } else if (!s.sitios.length) {
+    l.push('Este espacio **no solapa con ningún sitio Red Natura 2000**. Es dato oficial, no un hueco: ' +
+      'no existe formulario del que sacar una lista de especies, y el único respaldo posible de sus aves ' +
+      'es el anexo normativo de su plan de gestión.', '');
+  } else {
+    l.push(`Fuente: **${s.fuente || 'IEPNB · Red Natura 2000'}**${s.generado ? ` · volcado del ${s.generado}` : ''}.`, '');
+    l.push('| Sitio | Figura | Formulario |', '|---|---|---|');
+    for (const x of s.sitios) l.push(`| ${x.code} ${x.name || ''} | ${x.figura || '—'} | ${x.año || '—'} |`);
+    l.push('', `Enumeran **${s.enumeradas} entradas**; GBIF confirma **${s.casadas}** dentro de los ` +
+      'polígonos de hábitat. Esas llevan evidencia `lista_oficial_sitio`, y en las aves es lo que las ' +
+      'deja entrar: es la única fuente que afirma que el ave pertenece a ESTE sitio.', '');
+  }
+
+  if (doc.sitio_sin_constancia && doc.sitio_sin_constancia.length) {
+    l.push('', '### En el formulario oficial y sin constancia en GBIF', '',
+      'El sitio las declara y el barrido no las ha encontrado dentro de ningún polígono. **No se ' +
+      'aprueban** —la constancia sigue siendo la puerta (filtro 1)— y se listan aquí en vez de ' +
+      'desaparecer. En las aves, esta es la lista por la que se amplía el catálogo del espacio: por ' +
+      'contrastarla, no por bajar el umbral de ocurrencias.', '',
+      '| Especie | Grupo | Sección | Sitio | Población |', '|---|---|---|---|---|');
+    for (const e of doc.sitio_sin_constancia) {
+      const pob = [e.tipoPoblacion, e.categoriaPoblacion].filter(Boolean).join(', ') || '—';
+      l.push(`| *${e.scientificName}* | ${e.grupo || '—'} | ${e.seccion} | ${e.siteCode} | ${pob} |`);
+    }
   }
 
   if (doc.anexo_sin_constancia && doc.anexo_sin_constancia.length) {

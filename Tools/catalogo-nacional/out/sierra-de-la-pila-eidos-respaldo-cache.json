@@ -1,0 +1,266 @@
+{
+  "Accipiter gentilis": {
+    "acceptedName": "Accipiter gentilis (Linnaeus, 1758)",
+    "taxonid": 11351,
+    "error": null,
+    "preguntadoComo": "Accipiter gentilis"
+  },
+  "Anthus campestris": {
+    "acceptedName": "Anthus campestris (Linnaeus, 1758)",
+    "taxonid": 10944,
+    "error": null,
+    "preguntadoComo": "Anthus campestris"
+  },
+  "Aquila chrysaetos": {
+    "acceptedName": "Aquila chrysaetos (Linnaeus, 1758)",
+    "taxonid": 10888,
+    "error": null,
+    "preguntadoComo": "Aquila chrysaetos"
+  },
+  "Bubo bubo": {
+    "acceptedName": "Bubo bubo (Linnaeus, 1758)",
+    "taxonid": 10917,
+    "error": null,
+    "preguntadoComo": "Bubo bubo"
+  },
+  "Burhinus oedicnemus": {
+    "acceptedName": "Burhinus oedicnemus (Linnaeus, 1758)",
+    "taxonid": 11887,
+    "error": null,
+    "preguntadoComo": "Burhinus oedicnemus"
+  },
+  "Buteo buteo": {
+    "acceptedName": "Buteo buteo (Linnaeus, 1758)",
+    "taxonid": 10922,
+    "error": null,
+    "preguntadoComo": "Buteo buteo"
+  },
+  "Calandrella brachydactyla": {
+    "acceptedName": "Calandrella brachydactyla (Leisler, 1814)",
+    "taxonid": 10734,
+    "error": null,
+    "preguntadoComo": "Calandrella brachydactyla"
+  },
+  "Caprimulgus europaeus": {
+    "acceptedName": "Caprimulgus europaeus Linnaeus, 1758",
+    "taxonid": 11229,
+    "error": null,
+    "preguntadoComo": "Caprimulgus europaeus"
+  },
+  "Certhia brachydactyla": {
+    "acceptedName": "Certhia brachydactyla Brehm, CL, 1820",
+    "taxonid": 10733,
+    "error": null,
+    "preguntadoComo": "Certhia brachydactyla"
+  },
+  "Circaetus gallicus": {
+    "acceptedName": "Circaetus gallicus (Gmelin, JF, 1788)",
+    "taxonid": 11336,
+    "error": null,
+    "preguntadoComo": "Circaetus gallicus"
+  },
+  "Falco peregrinus ([including pelegrinoides])": {
+    "acceptedName": "Falco peregrinus Tunstall, 1771",
+    "taxonid": 11963,
+    "error": null,
+    "preguntadoComo": "Falco peregrinus"
+  },
+  "Falco subbuteo": {
+    "acceptedName": "Falco subbuteo Linnaeus, 1758",
+    "taxonid": 12262,
+    "error": null,
+    "preguntadoComo": "Falco subbuteo"
+  },
+  "Falco tinnunculus": {
+    "acceptedName": "Falco tinnunculus Linnaeus, 1758",
+    "taxonid": 12321,
+    "error": null,
+    "preguntadoComo": "Falco tinnunculus"
+  },
+  "Galerida cristata": {
+    "acceptedName": "Galerida cristata (Linnaeus, 1758)",
+    "taxonid": 11102,
+    "error": null,
+    "preguntadoComo": "Galerida cristata"
+  },
+  "Galerida theklae": {
+    "acceptedName": "Galerida theklae Brehm, AE, 1857",
+    "taxonid": 12316,
+    "error": null,
+    "preguntadoComo": "Galerida theklae"
+  },
+  "Lanius meridionalis ([excluding koenigi])": {
+    "acceptedName": "Lanius meridionalis Temminck, 1820",
+    "taxonid": 16426,
+    "error": null,
+    "preguntadoComo": "Lanius meridionalis"
+  },
+  "Lullula arborea": {
+    "acceptedName": "Lullula arborea (Linnaeus, 1758)",
+    "taxonid": 10750,
+    "error": null,
+    "preguntadoComo": "Lullula arborea"
+  },
+  "Oenanthe hispanica": {
+    "acceptedName": "Oenanthe hispanica (Linnaeus, 1758)",
+    "taxonid": 11453,
+    "error": null,
+    "preguntadoComo": "Oenanthe hispanica"
+  },
+  "Oenanthe oenanthe ([excluding seebohmi])": {
+    "acceptedName": "Oenanthe oenanthe (Linnaeus, 1758)",
+    "taxonid": 11890,
+    "error": null,
+    "preguntadoComo": "Oenanthe oenanthe"
+  },
+  "Phoenicurus phoenicurus": {
+    "acceptedName": "Phoenicurus phoenicurus (Linnaeus, 1758)",
+    "taxonid": 11977,
+    "error": null,
+    "preguntadoComo": "Phoenicurus phoenicurus"
+  },
+  "Prunella collaris": {
+    "acceptedName": "Prunella collaris (Scopoli, 1769)",
+    "taxonid": 11054,
+    "error": null,
+    "preguntadoComo": "Prunella collaris"
+  },
+  "Pyrrhocorax pyrrhocorax": {
+    "acceptedName": "Pyrrhocorax pyrrhocorax subsp. erythrorhamphus",
+    "taxonid": 12063,
+    "error": null,
+    "preguntadoComo": "Pyrrhocorax pyrrhocorax"
+  },
+  "Saxicola torquatus": {
+    "acceptedName": null,
+    "taxonid": null,
+    "error": null,
+    "preguntadoComo": "Saxicola torquatus"
+  },
+  "Scolopax rusticola": {
+    "acceptedName": "Scolopax rusticola Linnaeus, 1758",
+    "taxonid": 12136,
+    "error": null,
+    "preguntadoComo": "Scolopax rusticola"
+  },
+  "Sylvia cantillans ([excluding subalpina])": {
+    "acceptedName": "Curruca cantillans (Pallas, 1764)",
+    "taxonid": 80920,
+    "error": null,
+    "preguntadoComo": "Sylvia cantillans"
+  },
+  "Sylvia conspicillata": {
+    "acceptedName": "Curruca conspicillata (Temminck, 1820)",
+    "taxonid": 80923,
+    "error": null,
+    "preguntadoComo": "Sylvia conspicillata"
+  },
+  "Sylvia undata": {
+    "acceptedName": "Sylvia undata undata (Boddaert, 1783)",
+    "taxonid": 80230,
+    "error": null,
+    "preguntadoComo": "Sylvia undata"
+  },
+  "Troglodytes troglodytes": {
+    "acceptedName": "Troglodytes troglodytes (Linnaeus, 1758)",
+    "taxonid": 12340,
+    "error": null,
+    "preguntadoComo": "Troglodytes troglodytes"
+  },
+  "Turdus torquatus": {
+    "acceptedName": "Turdus torquatus Linnaeus, 1758",
+    "taxonid": 12324,
+    "error": null,
+    "preguntadoComo": "Turdus torquatus"
+  },
+  "Agapanthia annularis (Olivier, 1795)": {
+    "acceptedName": "Agapanthia annularis (Olivier, 1795)",
+    "taxonid": 44550,
+    "error": null,
+    "preguntadoComo": "Agapanthia annularis (Olivier, 1795)"
+  },
+  "Charaxes jasius (Linnaeus, 1767)": {
+    "acceptedName": "Charaxes jasius (Linnaeus, 1767)",
+    "taxonid": 32996,
+    "error": null,
+    "preguntadoComo": "Charaxes jasius (Linnaeus, 1767)"
+  },
+  "Euchloe tagis (Hübner, 1804)": {
+    "acceptedName": "Euchloe tagis (Hübner, 1804)",
+    "taxonid": 64326,
+    "error": null,
+    "preguntadoComo": "Euchloe tagis (Hübner, 1804)"
+  },
+  "Hyles livornica (Esper, 1779)": {
+    "acceptedName": "Hyles livornica (Esper, 1779)",
+    "taxonid": 54272,
+    "error": null,
+    "preguntadoComo": "Hyles livornica (Esper, 1779)"
+  },
+  "Iberodorcadion fuentei (Pic, 1899)": {
+    "acceptedName": "Iberodorcadion fuentei (Pic, 1899)",
+    "taxonid": 57112,
+    "error": null,
+    "preguntadoComo": "Iberodorcadion fuentei (Pic, 1899)"
+  },
+  "Iberodorcadion mucidum (Dalman, 1817)": {
+    "acceptedName": "Iberodorcadion mucidum (Dalman, 1817)",
+    "taxonid": 57022,
+    "error": null,
+    "preguntadoComo": "Iberodorcadion mucidum (Dalman, 1817)"
+  },
+  "Iberodorcadion suturale (Chevrolat, 1862)": {
+    "acceptedName": "Iberodorcadion suturale (Chevrolat, 1862)",
+    "taxonid": 57019,
+    "error": null,
+    "preguntadoComo": "Iberodorcadion suturale (Chevrolat, 1862)"
+  },
+  "Lysandra albicans (Gerhard, 1851)": {
+    "acceptedName": "Lysandra albicans (Gerhard, 1851)",
+    "taxonid": 59171,
+    "error": null,
+    "preguntadoComo": "Lysandra albicans (Gerhard, 1851)"
+  },
+  "Oryctes nasicornis (Linnaeus, 1746)": {
+    "acceptedName": "Oryctes nasicornis (Linnaeus, 1746)",
+    "taxonid": 67048,
+    "error": null,
+    "preguntadoComo": "Oryctes nasicornis (Linnaeus, 1746)"
+  },
+  "Pieris mannii (Mayer, 1851)": {
+    "acceptedName": "Pieris mannii (Mayer, 1851)",
+    "taxonid": 71439,
+    "error": null,
+    "preguntadoComo": "Pieris mannii (Mayer, 1851)"
+  },
+  "Saturnia pyri (Denis & Schiffermüller, 1775)": {
+    "acceptedName": "Saturnia pyri (Denis & Schiffermüller, 1775)",
+    "taxonid": 32875,
+    "error": null,
+    "preguntadoComo": "Saturnia pyri (Denis & Schiffermüller, 1775)"
+  },
+  "Zygaena fausta": {
+    "acceptedName": "Zygaena fausta",
+    "taxonid": 76249,
+    "error": null,
+    "preguntadoComo": "Zygaena fausta"
+  },
+  "Cerambyx cerdo": {
+    "acceptedName": "Cerambyx cerdo mirbecki Lucas, 1842",
+    "taxonid": 10999,
+    "error": null,
+    "preguntadoComo": "Cerambyx cerdo"
+  },
+  "Miniopterus schreibersii": {
+    "acceptedName": "Miniopterus schreibersii (Kuhl, 1817)",
+    "taxonid": 12169,
+    "error": null,
+    "preguntadoComo": "Miniopterus schreibersii"
+  },
+  "Rhinolophus ferrumequinum": {
+    "acceptedName": "Rhinolophus ferrumequinum (Schreber, 1774)",
+    "taxonid": 11264,
+    "error": null,
+    "preguntadoComo": "Rhinolophus ferrumequinum"
+  }
+}

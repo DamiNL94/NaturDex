@@ -1,0 +1,125 @@
+{
+  "_nota": "GENERADO por Tools/catalogo-nacional/especies-sitio-rn2000.js. No editar a mano. Es la lista OFICIAL de especies de los sitios Red Natura 2000 con los que solapa el espacio: secciones 3.2 (especies de los anexos de las Directivas) y 3.3 (otras especies importantes) de su Formulario Normalizado de Datos. Es la fuente que afirma la pertenencia AL SITIO, y por eso es el respaldo documental de las aves, que no se pueden adscribir a un polígono de hábitat.",
+  "park": "sierra-de-el-carche",
+  "generado": "2026-08-15",
+  "fuente": "IEPNB · Servicio Web de la Red Natura 2000 (https://iepnb.gob.es/api/rn2000/): v_cntr_site, v_cntr_species (sección 3.2) y v_cntr_other_species (sección 3.3)",
+  "sitios": [
+    {
+      "code": "ES6200009",
+      "name": "Sierra de El Carche",
+      "figura": "LIC/ZEC",
+      "tipoSitio": "B",
+      "año": 2023,
+      "seccion32": 2,
+      "seccion33": 5,
+      "sinEspecies": false,
+      "porGrupo": {
+        "Mamíferos": 1,
+        "Invertebrados": 4,
+        "Plantas": 2
+      }
+    }
+  ],
+  "total": 7,
+  "taxonesDistintos": 7,
+  "especies": [
+    {
+      "scientificName": "Cerambyx cerdo",
+      "binomio": "cerambyx cerdo",
+      "grupo": "Invertebrados",
+      "grupoCodigo": "I",
+      "seccion": "3.2",
+      "codigoFnd": "1088",
+      "tipoPoblacion": "permanente",
+      "categoriaPoblacion": "presente",
+      "motivacion": null,
+      "siteCode": "ES6200009",
+      "siteName": "Sierra de El Carche",
+      "siteFigura": "LIC/ZEC"
+    },
+    {
+      "scientificName": "Miniopterus schreibersii",
+      "binomio": "miniopterus schreibersii",
+      "grupo": "Mamíferos",
+      "grupoCodigo": "M",
+      "seccion": "3.2",
+      "codigoFnd": "1310",
+      "tipoPoblacion": "permanente",
+      "categoriaPoblacion": "presente",
+      "motivacion": null,
+      "siteCode": "ES6200009",
+      "siteName": "Sierra de El Carche",
+      "siteFigura": "LIC/ZEC"
+    },
+    {
+      "scientificName": "Coenonympha dorus (Esper, 1782)",
+      "binomio": "coenonympha dor",
+      "grupo": "Invertebrados",
+      "grupoCodigo": "I",
+      "seccion": "3.3",
+      "codigoFnd": null,
+      "tipoPoblacion": null,
+      "categoriaPoblacion": "presente",
+      "motivacion": "B",
+      "siteCode": "ES6200009",
+      "siteName": "Sierra de El Carche",
+      "siteFigura": "LIC/ZEC"
+    },
+    {
+      "scientificName": "Melanargia ines (Hoffmansegg, 1804)",
+      "binomio": "melanargia ines",
+      "grupo": "Invertebrados",
+      "grupoCodigo": "I",
+      "seccion": "3.3",
+      "codigoFnd": null,
+      "tipoPoblacion": null,
+      "categoriaPoblacion": "presente",
+      "motivacion": "B",
+      "siteCode": "ES6200009",
+      "siteName": "Sierra de El Carche",
+      "siteFigura": "LIC/ZEC"
+    },
+    {
+      "scientificName": "Melanargia occitanica (Esper, 1793)",
+      "binomio": "melanargia occitanic",
+      "grupo": "Invertebrados",
+      "grupoCodigo": "I",
+      "seccion": "3.3",
+      "codigoFnd": null,
+      "tipoPoblacion": null,
+      "categoriaPoblacion": "presente",
+      "motivacion": "B",
+      "siteCode": "ES6200009",
+      "siteName": "Sierra de El Carche",
+      "siteFigura": "LIC/ZEC"
+    },
+    {
+      "scientificName": "Odontites viscosus subsp. australis (Boiss.) Jahand. & Maire",
+      "binomio": "odontites viscos",
+      "grupo": "Plantas",
+      "grupoCodigo": "P",
+      "seccion": "3.3",
+      "codigoFnd": null,
+      "tipoPoblacion": null,
+      "categoriaPoblacion": "escasa",
+      "motivacion": "D",
+      "siteCode": "ES6200009",
+      "siteName": "Sierra de El Carche",
+      "siteFigura": "LIC/ZEC"
+    },
+    {
+      "scientificName": "Thymus funkii Coss. subsp. funkii",
+      "binomio": "thymus funkii",
+      "grupo": "Plantas",
+      "grupoCodigo": "P",
+      "seccion": "3.3",
+      "codigoFnd": null,
+      "tipoPoblacion": null,
+      "categoriaPoblacion": "común",
+      "motivacion": "B",
+      "siteCode": "ES6200009",
+      "siteName": "Sierra de El Carche",
+      "siteFigura": "LIC/ZEC"
+    }
+  ]
+}

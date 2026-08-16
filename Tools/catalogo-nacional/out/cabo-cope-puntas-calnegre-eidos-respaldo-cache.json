@@ -1,0 +1,218 @@
+{
+  "Accipiter gentilis": {
+    "acceptedName": "Accipiter gentilis (Linnaeus, 1758)",
+    "taxonid": 11351,
+    "error": null,
+    "preguntadoComo": "Accipiter gentilis"
+  },
+  "Aquila chrysaetos": {
+    "acceptedName": "Aquila chrysaetos (Linnaeus, 1758)",
+    "taxonid": 10888,
+    "error": null,
+    "preguntadoComo": "Aquila chrysaetos"
+  },
+  "Aquila fasciata": {
+    "acceptedName": "Aquila fasciata Vieillot, 1822",
+    "taxonid": 16302,
+    "error": null,
+    "preguntadoComo": "Aquila fasciata"
+  },
+  "Bubo bubo": {
+    "acceptedName": "Bubo bubo (Linnaeus, 1758)",
+    "taxonid": 10917,
+    "error": null,
+    "preguntadoComo": "Bubo bubo"
+  },
+  "Bucanetes githagineus": {
+    "acceptedName": "Bucanetes githagineus subsp. zedlitzi",
+    "taxonid": 11363,
+    "error": null,
+    "preguntadoComo": "Bucanetes githagineus"
+  },
+  "Burhinus oedicnemus": {
+    "acceptedName": "Burhinus oedicnemus (Linnaeus, 1758)",
+    "taxonid": 11887,
+    "error": null,
+    "preguntadoComo": "Burhinus oedicnemus"
+  },
+  "Calandrella brachydactyla": {
+    "acceptedName": "Calandrella brachydactyla (Leisler, 1814)",
+    "taxonid": 10734,
+    "error": null,
+    "preguntadoComo": "Calandrella brachydactyla"
+  },
+  "Caprimulgus ruficollis": {
+    "acceptedName": "Caprimulgus ruficollis Temminck, 1820",
+    "taxonid": 12122,
+    "error": null,
+    "preguntadoComo": "Caprimulgus ruficollis"
+  },
+  "Charadrius alexandrinus": {
+    "acceptedName": "Charadrius alexandrinus Linnaeus, 1758",
+    "taxonid": 10664,
+    "error": null,
+    "preguntadoComo": "Charadrius alexandrinus"
+  },
+  "Circaetus gallicus": {
+    "acceptedName": "Circaetus gallicus (Gmelin, JF, 1788)",
+    "taxonid": 11336,
+    "error": null,
+    "preguntadoComo": "Circaetus gallicus"
+  },
+  "Coracias garrulus": {
+    "acceptedName": "Coracias garrulus Linnaeus, 1758",
+    "taxonid": 11339,
+    "error": null,
+    "preguntadoComo": "Coracias garrulus"
+  },
+  "Egretta garzetta": {
+    "acceptedName": "Egretta garzetta (Linnaeus, 1766)",
+    "taxonid": 11340,
+    "error": null,
+    "preguntadoComo": "Egretta garzetta"
+  },
+  "Falco peregrinus ([including pelegrinoides])": {
+    "acceptedName": "Falco peregrinus Tunstall, 1771",
+    "taxonid": 11963,
+    "error": null,
+    "preguntadoComo": "Falco peregrinus"
+  },
+  "Falco tinnunculus": {
+    "acceptedName": "Falco tinnunculus Linnaeus, 1758",
+    "taxonid": 12321,
+    "error": null,
+    "preguntadoComo": "Falco tinnunculus"
+  },
+  "Galerida cristata": {
+    "acceptedName": "Galerida cristata (Linnaeus, 1758)",
+    "taxonid": 11102,
+    "error": null,
+    "preguntadoComo": "Galerida cristata"
+  },
+  "Galerida theklae": {
+    "acceptedName": "Galerida theklae Brehm, AE, 1857",
+    "taxonid": 12316,
+    "error": null,
+    "preguntadoComo": "Galerida theklae"
+  },
+  "Hieraaetus pennatus": {
+    "acceptedName": "Hieraaetus pennatus (Gmelin, JF, 1788)",
+    "taxonid": 11959,
+    "error": null,
+    "preguntadoComo": "Hieraaetus pennatus"
+  },
+  "Jynx torquilla": {
+    "acceptedName": "Jynx torquilla Linnaeus, 1758",
+    "taxonid": 12326,
+    "error": null,
+    "preguntadoComo": "Jynx torquilla"
+  },
+  "Larus audouinii": {
+    "acceptedName": "Larus audouinii Payraudeau, 1826",
+    "taxonid": 14053,
+    "error": null,
+    "preguntadoComo": "Larus audouinii"
+  },
+  "Larus ridibundus": {
+    "acceptedName": "Chroicocephalus ridibundus (Linnaeus, 1766)",
+    "taxonid": 16356,
+    "error": null,
+    "preguntadoComo": "Larus ridibundus"
+  },
+  "Melanocorypha calandra": {
+    "acceptedName": "Melanocorypha calandra (Linnaeus, 1766)",
+    "taxonid": 10937,
+    "error": null,
+    "preguntadoComo": "Melanocorypha calandra"
+  },
+  "Muscicapa striata": {
+    "acceptedName": "Muscicapa striata (Pallas, 1764)",
+    "taxonid": 12250,
+    "error": null,
+    "preguntadoComo": "Muscicapa striata"
+  },
+  "Oenanthe hispanica": {
+    "acceptedName": "Oenanthe hispanica (Linnaeus, 1758)",
+    "taxonid": 11453,
+    "error": null,
+    "preguntadoComo": "Oenanthe hispanica"
+  },
+  "Oenanthe leucura": {
+    "acceptedName": "Oenanthe leucura (Gmelin, JF, 1789)",
+    "taxonid": 11592,
+    "error": null,
+    "preguntadoComo": "Oenanthe leucura"
+  },
+  "Phalacrocorax aristotelis aristotelis": {
+    "acceptedName": "Gulosus aristotelis aristotelis (Linnaeus, 1761)",
+    "taxonid": 10759,
+    "error": null,
+    "preguntadoComo": "Phalacrocorax aristotelis"
+  },
+  "Pyrrhocorax pyrrhocorax": {
+    "acceptedName": "Pyrrhocorax pyrrhocorax subsp. erythrorhamphus",
+    "taxonid": 12063,
+    "error": null,
+    "preguntadoComo": "Pyrrhocorax pyrrhocorax"
+  },
+  "Saxicola torquatus": {
+    "acceptedName": null,
+    "taxonid": null,
+    "error": null,
+    "preguntadoComo": "Saxicola torquatus"
+  },
+  "Streptopelia turtur": {
+    "acceptedName": "Streptopelia turtur (Linnaeus, 1758)",
+    "taxonid": 12356,
+    "error": null,
+    "preguntadoComo": "Streptopelia turtur"
+  },
+  "Sylvia conspicillata": {
+    "acceptedName": "Curruca conspicillata (Temminck, 1820)",
+    "taxonid": 80923,
+    "error": null,
+    "preguntadoComo": "Sylvia conspicillata"
+  },
+  "Sylvia undata": {
+    "acceptedName": "Sylvia undata undata (Boddaert, 1783)",
+    "taxonid": 80230,
+    "error": null,
+    "preguntadoComo": "Sylvia undata"
+  },
+  "Tachybaptus ruficollis": {
+    "acceptedName": "Tachybaptus ruficollis (Pallas, 1764)",
+    "taxonid": 12121,
+    "error": null,
+    "preguntadoComo": "Tachybaptus ruficollis"
+  },
+  "Thalasseus sandvicensis": {
+    "acceptedName": "Thalasseus sandvicensis (Latham, 1787)",
+    "taxonid": 12147,
+    "error": null,
+    "preguntadoComo": "Thalasseus sandvicensis"
+  },
+  "Tichodroma muraria": {
+    "acceptedName": "Tichodroma muraria (Linnaeus, 1766)",
+    "taxonid": 11796,
+    "error": null,
+    "preguntadoComo": "Tichodroma muraria"
+  },
+  "Upupa epops": {
+    "acceptedName": "Upupa epops Linnaeus, 1758",
+    "taxonid": 11211,
+    "error": null,
+    "preguntadoComo": "Upupa epops"
+  },
+  "Sideritis lasiantha Pers.": {
+    "acceptedName": "Sideritis lasiantha Pers.",
+    "taxonid": 8338,
+    "error": null,
+    "preguntadoComo": "Sideritis lasiantha Pers."
+  },
+  "Testudo graeca": {
+    "acceptedName": "Testudo graeca Linnaeus, 1758",
+    "taxonid": 11385,
+    "error": null,
+    "preguntadoComo": "Testudo graeca"
+  }
+}

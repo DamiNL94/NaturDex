@@ -181,6 +181,28 @@ function resolverNombre(sel, fichadas, universal) {
   return { nombre: propuesto, renombrada: null };
 }
 
+/*
+ * El sitio Red Natura 2000 que declara esta ave en su formulario oficial, que es lo que `zepaSiteCode`
+ * dice ahora. Antes decía otra cosa: llevaba el código de la ZEPA con la que solapa el ESPACIO, leído
+ * del `zepa.geojson`, a toda ave del catálogo. Es decir, marcaba «ave de la ZEPA» a cualquier ave que
+ * GBIF hubiera dejado pasar, sin que ninguna lista oficial la nombrara.
+ *
+ * Importa más de lo que parece porque no es solo una insignia: `Frontend/Js/state.js` construye con
+ * este campo la «colección de aves de la ZEPA», un logro propio del juego. Con el criterio viejo, esa
+ * colección era «las aves que el barrido de GBIF dejó pasar»; con este es la lista que el sitio
+ * declara, que es una colección cerrada, oficial y comprobable — que es justo lo que una mecánica de
+ * pokédex necesita.
+ *
+ * Se prefiere el código de la ZEPA del espacio cuando el ave figura en varios formularios: es el que
+ * corresponde a la figura por la que se protegen las aves.
+ */
+function sitioQueLaDeclara(sel, zepa) {
+  const entradas = sel.listaOficialSitio || [];
+  if (!entradas.length) return null;
+  if (zepa && entradas.some(e => e.siteCode === zepa.code)) return zepa.code;
+  return entradas[0].siteCode;
+}
+
 /** Código y nombre del sitio ZEPA del espacio, de su propio geo/zepa.geojson. */
 function leerZepa(geoDir) {
   const p = path.join(geoDir, 'zepa.geojson');
@@ -284,6 +306,25 @@ function fuenteDelAnexo(sel) {
  * `source`: la referencia concreta que respalda LA CITA EN ESTE ESPACIO. No es la ficha de la
  * especie —eso es universal— sino por qué consta que vive aquí.
  */
+/**
+ * La cita del formulario oficial del sitio Red Natura 2000, que para un ave es su evidencia
+ * principal: es lo único que afirma que pertenece a ESTE sitio. Trae además el tipo de población
+ * —permanente, reproductora, invernante— que declara el formulario, que es el dato que distingue al
+ * ave que cría aquí de la que solo pasa el invierno.
+ */
+function fuenteDelSitio(sel) {
+  const entradas = sel.listaOficialSitio || [];
+  if (!entradas.length) return null;
+  return entradas.map(e => {
+    const detalle = [e.tipoPoblacion && `población ${e.tipoPoblacion}`, e.categoriaPoblacion]
+      .filter(Boolean).join(', ');
+    const citada = e.citadaComo && e.citadaComo !== sel.scientificName ? `, que la cita como «${e.citadaComo}»` : '';
+    return `Formulario Normalizado de Datos del sitio Red Natura 2000 ${e.siteCode}` +
+      `${e.siteName ? ` (${e.siteName})` : ''}, sección ${e.seccion}${citada}` +
+      `${detalle ? `: ${detalle}` : ''}`;
+  }).join('; ');
+}
+
 function fuenteDe(sel, gbif, fecha, zepa) {
   const partes = [];
   const n = sel.gbifOccurrences;
@@ -294,22 +335,34 @@ function fuenteDe(sel, gbif, fecha, zepa) {
   // tienen `zepaSiteCode` — en cuanto llegó un espacio SIN ZEPA (Sierra de El Carche, ES6200009, que
   // es LIC y nada más), las 92 aves salieron como 92 errores. La frase se cambia para las aves de
   // todos los espacios, no solo las de éste: la imprecisión era la misma, solo que tapada.
+  //
+  // Y en un ave GBIF va como CONFIRMACIÓN, no como respaldo: desde el filtro 3 bis de la selección
+  // ninguna entra por sus ocurrencias, así que el `source` las presenta en ese papel y deja la
+  // afirmación de pertenencia a quien puede hacerla —el formulario del sitio o el anexo—.
   if (sel.class === 'Aves')
-    partes.push(`GBIF: ${n} ocurrencia${n === 1 ? '' : 's'} dentro del espacio (barrido de ${fecha}); ` +
-      'las aves no se adscriben a hábitats');
+    partes.push(`GBIF confirma su presencia con ${n} ocurrencia${n === 1 ? '' : 's'} dentro del espacio ` +
+      `(barrido de ${fecha}); las aves no se adscriben a hábitats`);
   else
     partes.push(`GBIF: ${n} ocurrencia${n === 1 ? '' : 's'} dentro de los polígonos de hábitat del espacio` +
       ` (${nHab} hábitat${nHab === 1 ? '' : 's'}; barrido de ${fecha})`);
   if ((sel.evidence || []).includes('caracteristica'))
     partes.push('Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí');
+  const sitio = fuenteDelSitio(sel);
+  if (sitio) partes.push(sitio);
   const anexo = fuenteDelAnexo(sel);
   if (anexo) partes.push(anexo);
   if ((sel.normas || []).length)
     partes.push('EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal');
   else
     partes.push('EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas');
-  if (zepa && sel.class === 'Aves')
-    partes.push(`ave del apartado de la ZEPA ${zepa.code}${zepa.name ? ` (${zepa.name})` : ''}`);
+  // Antes, aquí, toda ave decía «ave del apartado de la ZEPA ES…» por el mero hecho de que el
+  // espacio solapa con esa ZEPA —salía del `zepa.geojson`, no de ninguna lista de especies—. Eso lo
+  // dice ahora `fuenteDelSitio`, y lo dice de verdad: con el formulario, la sección y la población
+  // declarada. Un ave SIN respaldo de sitio ya no llega aquí (filtro 3 bis), salvo que la selección
+  // se haya hecho con `--aves-sin-respaldo`, y entonces conviene que su ficha lo diga.
+  if (sel.class === 'Aves' && !sitio && !anexo)
+    partes.push('sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que ' +
+      'esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio');
   return partes.join('; ');
 }
 
@@ -463,10 +516,10 @@ function main() {
       featured: rarityLocal >= 4,
       source: fuenteDe(sel, g, fecha, zepa),
       murciaStatus: estadoAutonomico(sel.normas, comunidad),
-      reviewNote: notaDeRevision(sel, esAve, zepa, duplicadoGbif),
+      reviewNote: notaDeRevision(sel, duplicadoGbif),
       eidosTaxonId,
       gbifSpeciesKey: gbifKey.valor !== null ? gbifKey.valor : (g ? g.speciesKey : null),
-      zepaSiteCode: esAve && zepa ? zepa.code : null,
+      zepaSiteCode: esAve ? sitioQueLaDeclara(sel, zepa) : null,
       habitatIds: enlaces.map(h => h.slug),
       gbifOccurrences: sel.gbifOccurrences,
       visible: true,
@@ -590,12 +643,23 @@ function main() {
   if (hiloPerdido.length) process.exitCode = 1;
 }
 
-/**
- * La nota de revisión visible en la app. Recoge la duda nomenclatural que traiga la selección y,
- * en las aves, deja constancia de que su presencia se apoya en GBIF y no en la lista oficial de
- * especies del sitio Natura 2000, que es la fuente que el runbook pide para el apartado de ZEPA.
+/*
+ * La nota de revisión visible en la app: SOLO dudas propias de ESTA ficha —una nomenclatural, un
+ * taxón que GBIF sirve con dos nombres, la salvedad que traiga la selección—.
+ *
+ * Lo que ya no escribe, y por qué. Hasta hoy toda ave se llevaba además una nota estructural
+ * («presencia respaldada por N ocurrencias de GBIF; queda pendiente contrastarla con la lista
+ * oficial del sitio…»). Eso no era una duda sobre esa ave: era una propiedad de cómo entraban TODAS
+ * las aves, repetida ficha a ficha. El efecto medido: 366 de las 557 aves del catálogo con
+ * `reviewNote`, y 357 de las 487 tarjetas que la app marcaba «a revisar». Un aviso que sale en tres
+ * de cada cuatro tarjetas no avisa de nada, y tapaba las 131 fichas con una duda de verdad.
+ *
+ * No se sustituye por una nota de apartado porque ya no hay nada pendiente que decir: desde que
+ * `especies-sitio-rn2000.js` trae el formulario oficial del sitio y la selección exige respaldo de
+ * sitio para aprobar un ave, la evidencia existe y su sitio es el `source` —«por qué consta que vive
+ * aquí»—, que es donde se lee entera y con su cita.
  */
-function notaDeRevision(sel, esAve, zepa, duplicadoGbif) {
+function notaDeRevision(sel, duplicadoGbif) {
   const partes = [];
   if (sel.reviewNote) partes.push(sel.reviewNote);
   if ((duplicadoGbif || []).length) partes.push(
@@ -608,18 +672,6 @@ function notaDeRevision(sel, esAve, zepa, duplicadoGbif) {
     partes.push(`Seleccionada como *${sel.nombreEnLaSeleccion}*; se ficha con el nombre aceptado en EIDOS, ` +
       'que es con el que el resto del catálogo la tiene desde la revisión nomenclatural posterior a la selección.');
   else if (sel.notaNomenclatural) partes.push(sel.notaNomenclatural);
-  if (esAve && zepa) partes.push(
-    `Presencia respaldada por ${sel.gbifOccurrences} ocurrencia${sel.gbifOccurrences === 1 ? '' : 's'} de GBIF ` +
-    `dentro del espacio; queda pendiente contrastarla con la lista oficial de especies del sitio ${zepa.code}, ` +
-    'que no ha podido consultarse (el servicio Discodata de la EEA rechaza las tablas probadas y el visor SDF sirve la ficha vacía).');
-  // Un espacio puede ser LIC y no ZEPA, y entonces no hay lista oficial de aves con la que
-  // contrastar: no es que no se haya podido consultar, es que no existe. Decirlo es distinto de
-  // callarlo, y evita que la ficha parezca un pendiente que nadie va a poder cerrar nunca.
-  else if (esAve) partes.push(
-    `Presencia respaldada por ${sel.gbifOccurrences} ocurrencia${sel.gbifOccurrences === 1 ? '' : 's'} de GBIF ` +
-    'dentro del espacio. Este espacio NO tiene ZEPA declarada, así que no hay lista oficial de aves ' +
-    'del sitio Natura 2000 con la que contrastarla: el respaldo documental, cuando lo hay, es el ' +
-    'inventario de fauna del plan de gestión del espacio.');
   return partes.length ? partes.join(' ') : null;
 }
 

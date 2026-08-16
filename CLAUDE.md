@@ -26,12 +26,17 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    `fix-estado-conservacion-iepnb`, `sync-species-catalog` y el volcado de ocurrencias de
    `migrations.sql` no deben cambiar un byte en un segundo pase. Si un segundo pase produce diff, hay
    un problema.
-7. **La coordenada de una especie amenazada no se publica exacta.** Al exportar se generaliza a 1 o
+7. **Un ave no entra por sus ocurrencias.** Vuela: un registro en vuelo cae dentro de cualquier
+   polígono, así que la prueba de constancia que vale para una planta ahí no mide nada. La puerta de
+   las aves es el **respaldo de sitio** —el formulario oficial del sitio Red Natura 2000 o el anexo
+   normativo del espacio—, y GBIF queda como confirmación.
+   [`Docs/runbook/AVES.md`](Docs/runbook/AVES.md).
+8. **La coordenada de una especie amenazada no se publica exacta.** Al exportar se generaliza a 1 o
    10 km según su tramo de rareza legal, y el registro lo dice. Un taxón **sin** tramo calculado se
    generaliza igual: «nadie lo ha mirado» no es «no está amenazada», y publicar de más no se puede
    deshacer. Ver [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md).
 
-## 2. Cinco cosas que fallan EN VERDE
+## 2. Ocho cosas que fallan EN VERDE
 
 Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 [`Docs/runbook/ORDEN-DE-OPERACIONES.md`](Docs/runbook/ORDEN-DE-OPERACIONES.md).
@@ -47,6 +52,16 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
   se sabía leer en el formato de `pdftotext -layout`. Si una herramienta que lee texto extraído
   devuelve 0, sospecha del formato antes que del dato — y haz que se queje, como hace ya
   `lib/atlas.js`.
+- **Cruzar una fuente oficial con el catálogo por el nombre**: la fuente cita con la nomenclatura de
+  su época (*Sylvia undata*) y el catálogo con la de hoy (*Curruca undata*). No falla: excluye la
+  especie y escribe al lado un motivo que es mentira («no figura en el formulario oficial»). Resuelve
+  contra EIDOS el nombre **de la fuente**, no solo el del candidato. Ver
+  [`Docs/runbook/AVES.md`](Docs/runbook/AVES.md) §5.
+- **Una corrección hecha en el `park.json` y no en el pipeline** la deshace la siguiente
+  regeneración. La curruca rabilarga se arregló en una ficha el 2026-08-09 y las cuatro Capas 3
+  generadas después la volvieron a partir en dos. Arregla **el dato y la entrada de `data/`**.
+- **`build-park-sql.js` solo hace UPSERT.** Quitar una ficha del `park.json` y regenerar el SQL deja
+  la BD igual, y la API manda sobre el paquete: el usuario la sigue viendo. El borrado va aparte.
 
 ---
 
@@ -57,6 +72,7 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 | Entender el modelo de datos | [`Docs/arquitectura/MODELO-DE-DATOS.md`](Docs/arquitectura/MODELO-DE-DATOS.md) |
 | Saber de dónde sale un campo | [`Docs/arquitectura/PROCEDENCIA-DE-CAMPOS.md`](Docs/arquitectura/PROCEDENCIA-DE-CAMPOS.md) — campo a campo, con las URLs de las fuentes |
 | Dar de alta o ampliar un espacio | [`Docs/runbook/ALTA-DE-ESPACIO.md`](Docs/runbook/ALTA-DE-ESPACIO.md) + [`Docs/runbook/TRAMPAS-CONOCIDAS.md`](Docs/runbook/TRAMPAS-CONOCIDAS.md) |
+| Tocar cualquier cosa de aves | [`Docs/runbook/AVES.md`](Docs/runbook/AVES.md) — **entran por otra puerta que el resto**, y el documento dice también qué NO cubre esa puerta |
 | Saber en qué estado está un espacio | [`Docs/rollout/ESTADO.md`](Docs/rollout/ESTADO.md) — **la tabla**. Los informes de cierre están en `Docs/rollout/sesiones/`, uno por periodo: entra solo al que haga falta |
 | Tocar el frontend | [`Frontend/Js/CLAUDE.md`](Frontend/Js/CLAUDE.md) |
 | Tocar la API | [`Backend/CLAUDE.md`](Backend/CLAUDE.md) |
