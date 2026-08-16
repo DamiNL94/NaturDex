@@ -29,9 +29,11 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    > **Y lo que cuesta, que hay que tenerlo delante:** los catálogos legales enumeran *lo protegido*,
    > no *lo característico*, y lo común no está protegido por ser común. Medido el 2026-08-16,
    > **330 de 1.161 fichas (28 %) se sostienen solo en GBIF** — el romero y el pino carrasco de
-   > Sierra de la Pila entre ellas. La salida no es relajar la puerta: es **transcribir los planes de
-   > gestión que faltan** (deuda nº 1) y **completar el índice del Atlas**, que es la fuente que dice
-   > «esta especie es característica de este hábitat».
+   > Sierra de la Pila entre ellas. La salida no es relajar la puerta. El **índice del Atlas** —la
+   > fuente que dice «esta especie es característica de este hábitat»— se completó ese mismo día y
+   > rescata 32 (el pino carrasco sí; el romero **no**: el Atlas enumera diagnósticas, no
+   > dominantes), así que el grueso cuelga de **transcribir los planes de gestión que faltan**
+   > (deuda nº 1).
 4. **Universal vs. local.** Especies y hábitats son nacionales. Lo universal (qué *es* la especie, qué
    *es* el código HIC) vive en `Tools/catalogo-nacional/data/`; lo local (dónde y cómo aparece aquí)
    en cada `park.json`. **Un texto universal que nombre un espacio concreto es un error del

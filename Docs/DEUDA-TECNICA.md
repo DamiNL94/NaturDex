@@ -220,9 +220,15 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     de Sierra de la Pila, que son exactamente lo que el catálogo debe enseñar.
     > **Por eso no se han podado y por eso no se deben podar a ciegas.** El orden correcto es al
     > revés: primero **transcribir los planes de gestión que faltan** (deuda nº 1) y **completar el
-    > índice del Atlas**, que es lo que sube de nivel al romero; y solo después regenerar y ver qué
-    > queda de verdad sin respaldo. Podar antes de eso confundiría «no está respaldada» con «no hemos
-    > mirado dónde está respaldada», que es la distinción que sostiene todo el modelo.
+    > índice del Atlas**; y solo después regenerar y ver qué queda de verdad sin respaldo. Podar
+    > antes de eso confundiría «no está respaldada» con «no hemos mirado dónde está respaldada», que
+    > es la distinción que sostiene todo el modelo.
+    > **El índice del Atlas se completó el 2026-08-16 (l)** — de 792 a 1.266 nombres, y **32 de las
+    > 330 fichas suben a nivel 2** (el pino carrasco y el albardín entre ellas, +4 más al pagar la
+    > deuda nº 26, que conviene pagar antes de regenerar). Pero la medición enterró una esperanza que
+    > esta deuda daba por hecha: el Atlas enumera **diagnósticas, no dominantes**, y **el romero, el
+    > tomillo y las jaras no figuran en él**. Para esas, la única vía es el plan de gestión: la
+    > deuda nº 1 ya no es la primera de dos palancas, es la única.
     > **Y hay una razón práctica además de la de criterio**: regenerar un espacio no es pasar un
     > comando. Con el criterio nuevo, Sierra de la Pila sale con **228 fichas frente a las 219
     > publicadas** —pierde 175 que solo sostenían avistamientos y **gana 105 que su PRUG inventaría y
@@ -243,3 +249,21 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     > `nombreCorregido` a su entrada —lo que manda el `_esquema` del fichero—, **nunca** corregir el
     > verbatim, que es la transcripción literal de la norma. Hay que hacerlo con el documento delante,
     > espacio por espacio, y los cuatro espacios con anexo lo necesitan.
+26. **El cruce con el Atlas va por binomio, y el binomio no puentea cambios de género: el esparto se
+    queda sin su respaldo.** El Atlas cita las especies con la nomenclatura de 2005 —*Stipa
+    tenacissima*— y el catálogo ficha *Macrochloa tenacissima*; el cruce de
+    `build-species-seleccion.js` (`caracteristicasPorEspecie` + consulta por
+    `binomio(c.scientificName)`) y el de `mide-niveles-puerta.js` no los juntan, así que el esparto
+    no tiene evidencia `caracteristica` en los cuatro espacios donde hoy es «solo GBIF» (en El
+    Carche es nivel 1 por su PRUG). Es la trampa del §2 del `CLAUDE.md` —cruzar una fuente oficial
+    con el catálogo por el nombre— aplicada al Atlas, la misma que ya pagaron las aves.
+    > **El arreglo NO es la tabla de equivalencias**: EIDOS resuelve el sinónimo (comprobado el
+    > 2026-08-16: *Stipa tenacissima* L. → aceptado *Macrochloa tenacissima* (L.) Kunth), y la
+    > convención de `data/equivalencias-nomenclatura.json` prohíbe dar de alta lo que EIDOS ya sabe.
+    > Es la lección de `Docs/runbook/AVES.md` §5: **resolver contra EIDOS el nombre que escribe la
+    > fuente** —aquí, los nombres del Atlas, con caché para no castigar al IEPNB con ~1.300
+    > peticiones por selección—. Medido el 2026-08-16 (l): son **+4 fichas** de nivel 3 a nivel 2
+    > (el esparto de Cabo Cope, Carrascoy, Cuatro Calas y Espuña), además de las 32 que ya subió el
+    > arreglo del parser. Conviene pagarla ANTES de regenerar los ocho espacios (paso 3 de la deuda
+    > nº 24): regenerar con el cruce cojo escribiría «solo GBIF» sobre especies que el Atlas sí
+    > respalda.

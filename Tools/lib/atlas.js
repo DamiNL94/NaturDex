@@ -20,6 +20,35 @@
  * Por eso este módulo lee **los dos formatos** y, sobre todo, **se queja cuando no encuentra nada**:
  * un Atlas del que no sale ni una especie es un problema de lectura, no un hábitat sin flora.
  *
+ * A QUÉ CÓDIGO PERTENECE CADA BLOQUE — la trampa de la segunda pasada (2026-08-16)
+ * --------------------------------------------------------------------------------
+ * El cuerpo del Atlas NO está organizado por códigos de la Directiva: son fichas de unidades
+ * fitosociológicas (alianzas), identificadas por códigos PROPIOS del Atlas de seis caracteres
+ * (834030, 81B030, 12401A…) que encabezan cada ficha. El código HIC solo aparece en el cajetín
+ * lateral «Directiva de Hábitat» de la página, y colgar el bloque de ese cajetín —que es lo que
+ * hacía la primera versión— falla dos veces sin avisar:
+ *
+ *   · el cajetín enseña UNA sola correspondencia aunque la unidad tenga varias: la ficha de los
+ *     encinares (834020/834030) también cubre el 5210 y el 9330, y el cajetín decía «5210», así
+ *     que el 9340 se quedaba a cero mientras sus especies existían y estaban leídas;
+ *   · la extracción sin layout coloca el cajetín donde cae —a veces DESPUÉS del bloque, a veces el
+ *     de la página anterior—, con lo que la ventana de líneas unas veces no lo encuentra (bloque
+ *     perdido) y otras encuentra el ajeno (bloque mal colgado).
+ *
+ * Con eso, de 344 bloques solo 98 daban especies, sesgadas hacia las unidades de correspondencia
+ * única. La lectura buena junta las DOS voces con las que el propio Atlas afirma la correspondencia,
+ * porque ninguna cubre a la otra:
+ *
+ *   · el **anexo de correspondencias** del final (HIC ↔ código de seis caracteres, ~1.400 filas),
+ *     que es el único sitio donde una unidad enseña TODAS sus correspondencias — pero omite unidades
+ *     que el cajetín sí reivindica: los espartales (522220) no tienen fila y su página dice «6220*»;
+ *   · el **cajetín de la página**, ligado a su página por los marcadores de paginación (número +
+ *     título corriente) y no por cercanía en líneas, que es lo que lo hacía mentir.
+ *
+ * Este módulo recoge los códigos de seis caracteres que encabezan la ficha de cada bloque, los pasa
+ * por el anexo, une los HIC del cajetín de esa página, y asigna las especies a todos ellos. El
+ * barrido por cercanía queda solo para extracciones sin marcadores de página (el formato -layout).
+ *
  * Vive en `lib/` porque lo necesitan dos herramientas: `atlas-hic-especies.js` (que cruza con el
  * catálogo ya escrito de un espacio) y `build-species-seleccion.js` (que lo cruza con los candidatos
  * de GBIF, antes de que el espacio tenga catálogo).
@@ -49,6 +78,32 @@ const fs = require('fs');
 // solo se tolera al reconocer el código.
 const RE_CODIGO = /\b(\d{2}[A-Z]\d|\d{4})\*?\b/g;
 
+// Un código PROPIO del Atlas: seis caracteres, con letra posible en tercera y sexta posición
+// (834030, 81B030, 12401A). Es la clave con la que el cuerpo del Atlas identifica sus unidades y
+// con la que el anexo final las cruza con la Directiva.
+const RE_CODIGO_ATLAS = /^\d{2}[0-9A-Z]\d{2}[0-9A-Z]$/;
+
+// Una fila del anexo de correspondencias: «HIC códigoAtlas * Nombre …». El HIC de la fila puede ser
+// un subtipo de la Directiva (5211); se normaliza al consultarlo contra el catálogo.
+const RE_FILA_ANEXO = /^\s*(\d{2}[A-Z0-9]\d)\s+(\d{2}[0-9A-Z]\d{2}[0-9A-Z])(?:\s*\*|\s+[A-ZÁÉÍÓÚÑ(«"])/;
+
+// La línea que abre la ficha con su código y el nombre de la alianza: «214010 Charion fragilis
+// Krausch 1964». Exige la mayúscula detrás para no confundirse con un código suelto de la lista de
+// asociaciones («824031; Poterio…» no pasa: lleva puntuación pegada).
+const RE_CODIGO_Y_NOMBRE = /^\s*(\d{2}[0-9A-Z]\d{2}[0-9A-Z])\s+[A-ZÁÉÍÓÚÑ]/;
+
+// La paginación: un número de página es una línea de solo dígitos PEGADA al título corriente
+// («Fichas descriptivas de los hábitat de España» / «Atlas y Manual de…»). La adyacencia es lo que
+// descarta los números sueltos de las tablas y descripciones.
+const RE_TITULO_CORRIENTE = /^\s*(Fichas descriptivas de los h[áa]bitat|Atlas y Manual de)/i;
+const RE_NUM_PAGINA = /^\s*\d{1,3}\s*$/;
+
+// El cajetín «Directiva de Hábitat» de la página: el rótulo, los epígrafes de grupo numerados
+// («62. FORMACIONES HERBOSAS…») y la línea «código nombre» que interesa.
+const RE_CAJETIN = /^\s*Directiva de H[áa]bitat\s*$/i;
+const RE_GRUPO_CAJETIN = /^\s*\d{1,2}\.\s/;
+const RE_HIC_CAJETIN = /^\s*(\d{2}[A-Z0-9]\d)\*?\s+\S/;
+
 // Encabezado del bloque. El texto que sigue en la misma línea es el formato de `pdftotext -layout`;
 // si no hay nada, la lista viene en las líneas de debajo.
 const RE_ENCABEZADO = /Especies características\s*(.*)$/;
@@ -58,7 +113,7 @@ const RE_ENCABEZADO = /Especies características\s*(.*)$/;
 // versales) que la extracción sin layout intercala.
 const RE_FIN = new RegExp([
   '^\\s*(Asociaciones que incluye|Descripci[óo]n|Distribuci[óo]n|Perfil ed[áa]fico|Especies',
-  'Clase\\.|Orden\\.|Alianza\\.|CAR[ÁA]CTER|Atlas y Manual)',
+  'Clase\\.|Orden\\.|Alianza\\.|CAR[ÁA]CTER|Atlas y Manual|Fichas descriptivas|Directiva de H[áa]bitat)',
 ].join('|'), 'i');
 
 // Una línea que ya no es lista de especies: versales de sección («IA. VEGETACIÓN DE AGUAS DULCES»),
@@ -75,9 +130,15 @@ const MAX_LINEAS_LISTA = 30;
 // lista en su primera línea: es lo que hacía que el 4090 se quedara sin ninguna de sus especies.
 const RE_ABREVIATURA = /\b(subsp|ssp|var|subvar|f|cf|aff|s\.\s*l|s\.\s*str)\.\s*$/i;
 
-// Cuánto se mira hacia arriba buscando el código HIC del bloque. En el formato con layout el código
-// estaba a ~12 líneas; sin layout la descripción se parte en más líneas cortas y se va a ~20.
+// Cuánto se mira hacia arriba buscando el código HIC del bloque en el MODO DE RESERVA (el cajetín).
+// En el formato con layout el código estaba a ~12 líneas; sin layout la descripción se parte en más
+// líneas cortas y se va a ~20.
 const VENTANA_CODIGO = 22;
+
+// Cuánto se mira hacia arriba recogiendo los códigos de seis caracteres de la ficha. Una ficha con
+// su foto, su descripción y su maquetación intercalada ocupa 40–70 líneas; el tope es la red, el
+// corte real es el bloque «Especies características» de la ficha anterior.
+const VENTANA_FICHA = 80;
 
 const limpia = (s) => String(s).replace(/\s+/g, ' ').replace(/[.;,]+$/, '').trim();
 
@@ -100,20 +161,123 @@ function uneLineas(lineas) {
 /**
  * Parte el texto del bloque en nombres científicos.
  * Se exige «Género epíteto» con género capitalizado: es lo que descarta los restos de maquetación
- * que se cuelan en la misma línea.
+ * que se cuelan en la misma línea. Dos reparaciones sobre el texto extraído:
+ *
+ *   · pypdf pega a veces el epíteto con el rango («gingidiumsubsp. commutatus»): se despegan.
+ *   · en las listas largas el Atlas abrevia el género («Limonium artruchium, L. balearicum…»);
+ *     la abreviatura se expande con el último género completo visto que empiece por esa letra,
+ *     que es la convención tipográfica que el propio Atlas sigue. Sin esto, las listas de
+ *     endemismos por género —los Limonium del 1240, sin ir más lejos— pierden todo menos el primero.
  */
 function parteEspecies(bloque) {
-  return bloque
-    .split(/,|;| y (?=[A-Z])/)
-    .map(limpia)
-    .filter((x) => /^[A-ZÁÉÍÓÚ][a-záéíóúü-]+ [a-z]/.test(x))
-    .filter((v, i, a) => a.indexOf(v) === i);
+  const texto = String(bloque).replace(/([a-záéíóúü])(subsp|ssp|var|subvar)\./g, '$1 $2.');
+  const out = [];
+  let genero = null;
+  for (let x of texto.split(/,|;| y (?=[A-Z])/).map(limpia)) {
+    const ab = x.match(/^([A-ZÁÉÍÓÚ])\.\s*(.+)$/);
+    if (ab && genero && genero.startsWith(ab[1])) x = genero + ' ' + ab[2];
+    const m = x.match(/^([A-ZÁÉÍÓÚ][a-záéíóúü-]+) [a-z]/);
+    if (!m) continue;
+    genero = m[1];
+    if (!out.includes(x)) out.push(x);
+  }
+  return out;
 }
 
 /**
- * Código HIC al que pertenece el bloque que empieza en `idx`: el más cercano hacia arriba que esté
- * en la lista de códigos que interesan y que encabece su línea seguido de texto (así se descarta un
- * número que aparezca suelto dentro de una descripción).
+ * El anexo de correspondencias del final del Atlas, leído entero: código propio del Atlas → HICs a
+ * los que corresponde. Es la única fuente dentro del propio documento que da TODAS las
+ * correspondencias de una unidad, no la única que el cajetín de la página tuvo sitio para enseñar.
+ */
+function correspondenciasAnexo(lineas) {
+  const mapa = new Map();
+  for (const l of lineas) {
+    const m = l.match(RE_FILA_ANEXO);
+    if (!m) continue;
+    if (!mapa.has(m[2])) mapa.set(m[2], new Set());
+    mapa.get(m[2]).add(m[1]);
+  }
+  return mapa;
+}
+
+/**
+ * Los índices de línea de los números de página. Si la extracción no los trae —el formato -layout
+ * los maqueta de otra manera—, la lista sale vacía y el módulo vuelve al barrido por cercanía.
+ */
+function marcadoresDePagina(lineas) {
+  const out = [];
+  for (let i = 0; i < lineas.length; i++) {
+    if (!RE_NUM_PAGINA.test(lineas[i])) continue;
+    if ((i > 0 && RE_TITULO_CORRIENTE.test(lineas[i - 1])) ||
+        (i + 1 < lineas.length && RE_TITULO_CORRIENTE.test(lineas[i + 1]))) {
+      out.push(i);
+    }
+  }
+  return out;
+}
+
+/**
+ * Los HIC que el cajetín «Directiva de Hábitat» afirma DENTRO de un tramo de líneas (una página).
+ * Ligarlo a la página, y no al bloque más cercano, es lo que impide que el cajetín de la página de
+ * al lado opine sobre una ficha que no es la suya.
+ */
+function hicsDelCajetin(lineas, desde, hasta) {
+  const out = new Set();
+  for (let i = desde; i < hasta; i++) {
+    if (!RE_CAJETIN.test(lineas[i])) continue;
+    for (let j = i + 1; j < Math.min(i + 7, hasta); j++) {
+      const l = lineas[j];
+      if (RE_GRUPO_CAJETIN.test(l)) continue;
+      const m = l.match(RE_HIC_CAJETIN);
+      if (!m) break; // la continuación del nombre partido cierra el cajetín
+      out.add(m[1]);
+    }
+  }
+  return out;
+}
+
+/**
+ * ¿Este HIC del anexo está en el catálogo que interesa? Directo, o normalizando el subtipo de la
+ * Directiva al tipo (el anexo escribe 5211 donde el catálogo dice 5210).
+ */
+function enCatalogo(hic, codigos) {
+  if (codigos.has(hic)) return hic;
+  if (/^\d{4}$/.test(hic)) {
+    const tipo = hic.slice(0, 3) + '0';
+    if (codigos.has(tipo)) return tipo;
+  }
+  return null;
+}
+
+/**
+ * Los códigos de seis caracteres de la ficha a la que pertenece el bloque que empieza en `idx`.
+ * Se recogen hacia arriba hasta el bloque de la ficha anterior: los códigos encabezan la ficha
+ * («421110», «833030 834020 - 834030», «214010 Charion fragilis Krausch 1964»), así que siempre
+ * quedan entre un encabezado y el siguiente. Las líneas de la lista de asociaciones no engañan:
+ * ahí el código va detrás del nombre y con puntuación pegada, y ninguno de los dos patrones lo caza.
+ */
+function codigosDeFicha(lineas, idx) {
+  const out = new Set();
+  for (let i = idx - 1; i >= 0 && i > idx - VENTANA_FICHA; i--) {
+    const l = lineas[i];
+    if (RE_ENCABEZADO.test(l)) break;
+    const toks = l.trim().split(/[\s—–-]+/).filter(Boolean);
+    if (toks.length && toks.every((t) => RE_CODIGO_ATLAS.test(t))) {
+      for (const t of toks) out.add(t);
+      continue;
+    }
+    const m = l.match(RE_CODIGO_Y_NOMBRE);
+    if (m) out.add(m[1]);
+  }
+  return out;
+}
+
+/**
+ * MODO DE RESERVA: el código HIC del cajetín «Directiva de Hábitat» más cercano hacia arriba que
+ * esté en la lista de códigos que interesan y que encabece su línea seguido de texto (así se
+ * descarta un número que aparezca suelto dentro de una descripción). Solo se usa cuando la
+ * extracción no trae marcadores de página (el formato -layout), porque «el más cercano» cruza el
+ * salto de página sin enterarse y el cajetín enseña una sola correspondencia.
  */
 function codigoMasCercano(lineas, idx, codigos) {
   for (let i = idx; i >= 0 && i > idx - VENTANA_CODIGO; i--) {
@@ -151,17 +315,46 @@ function especiesCaracteristicas(ruta, codigosHic) {
   const lineas = fs.readFileSync(ruta, 'utf8').split(/\r?\n/);
   const porHic = new Map();
   for (const c of codigos) porHic.set(c, new Set());
+  const anexo = correspondenciasAnexo(lineas);
+  const paginas = marcadoresDePagina(lineas);
 
   let bloques = 0, bloquesConEspecies = 0;
+  let pag = 0; // puntero sobre `paginas`; los bloques llegan en orden
   for (let i = 0; i < lineas.length; i++) {
     const m = lineas[i].match(RE_ENCABEZADO);
     if (!m) continue;
     bloques++;
-    const codigo = codigoMasCercano(lineas, i, codigos);
-    if (!codigo) continue;
+
+    // La atribución: los códigos propios de la ficha pasados por el anexo, MÁS lo que el cajetín de
+    // esta misma página afirme. Son las dos voces del propio Atlas y no se cubren entre sí: el anexo
+    // da todas las correspondencias de una unidad pero omite unidades (los espartales), y el cajetín
+    // las reivindica pero enseña una sola. La unión es la lectura fiel del documento entero.
+    const hics = new Set();
+    const codsFicha = codigosDeFicha(lineas, i);
+    for (const cod of codsFicha) {
+      for (const h of anexo.get(cod) || []) {
+        const c = enCatalogo(h, codigos);
+        if (c) hics.add(c);
+      }
+    }
+    if (paginas.length) {
+      while (pag < paginas.length && paginas[pag] < i) pag++;
+      const ini = pag > 0 ? paginas[pag - 1] : 0;
+      const fin = pag < paginas.length ? paginas[pag] : lineas.length;
+      for (const h of hicsDelCajetin(lineas, ini, fin)) {
+        const c = enCatalogo(h, codigos);
+        if (c) hics.add(c);
+      }
+    } else if (!hics.size) {
+      // Sin paginación reconocible (el formato -layout): el barrido por cercanía de siempre.
+      const c = codigoMasCercano(lineas, i, codigos);
+      if (c) hics.add(c);
+    }
+    if (!hics.size) continue;
+
     const especies = parteEspecies(textoDelBloque(lineas, i, m[1]));
     if (especies.length) bloquesConEspecies++;
-    for (const sp of especies) porHic.get(codigo).add(sp);
+    for (const hic of hics) for (const sp of especies) porHic.get(hic).add(sp);
   }
   return { porHic, bloques, bloquesConEspecies };
 }
