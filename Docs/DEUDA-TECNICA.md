@@ -220,9 +220,15 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     de Sierra de la Pila, que son exactamente lo que el catálogo debe enseñar.
     > **Por eso no se han podado y por eso no se deben podar a ciegas.** El orden correcto es al
     > revés: primero **transcribir los planes de gestión que faltan** (deuda nº 1) y **completar el
-    > índice del Atlas**, que es lo que sube de nivel al romero; y solo después regenerar y ver qué
-    > queda de verdad sin respaldo. Podar antes de eso confundiría «no está respaldada» con «no hemos
-    > mirado dónde está respaldada», que es la distinción que sostiene todo el modelo.
+    > índice del Atlas**; y solo después regenerar y ver qué queda de verdad sin respaldo. Podar
+    > antes de eso confundiría «no está respaldada» con «no hemos mirado dónde está respaldada», que
+    > es la distinción que sostiene todo el modelo.
+    > **El índice del Atlas se completó el 2026-08-16 (l)** — de 792 a 1.266 nombres, y **32 de las
+    > 330 fichas suben a nivel 2** (el pino carrasco y el albardín entre ellas, +4 más cuando el
+    > cruce resuelva *Stipa*↔*Macrochloa* contra EIDOS). Pero la medición enterró una esperanza que
+    > esta deuda daba por hecha: el Atlas enumera **diagnósticas, no dominantes**, y **el romero, el
+    > tomillo y las jaras no figuran en él**. Para esas, la única vía es el plan de gestión: la
+    > deuda nº 1 ya no es la primera de dos palancas, es la única.
     > **Y hay una razón práctica además de la de criterio**: regenerar un espacio no es pasar un
     > comando. Con el criterio nuevo, Sierra de la Pila sale con **228 fichas frente a las 219
     > publicadas** —pierde 175 que solo sostenían avistamientos y **gana 105 que su PRUG inventaría y
