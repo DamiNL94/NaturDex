@@ -35,9 +35,11 @@
  *
  *   · No existe para todos. El Anexo I del PRUG de Sierra Espuña NO contiene inventario de valores:
  *     lo encarga como acción pendiente. El PORN de Carrascoy tiene tres inventarios y ninguno es de
- *     especies. El de Sierra de la Pila no se pudo ni abrir. Con el anexo de puerta, esos espacios
- *     entrarían con cero especies y el de al lado con doscientas: la misma incomparabilidad que el
- *     filtro de alcance taxonómico se escribió para evitar.
+ *     especies. Con el anexo de puerta, esos espacios entrarían con cero especies y el de al lado
+ *     con doscientas: la misma incomparabilidad que el filtro de alcance taxonómico se escribió para
+ *     evitar. (De Sierra de la Pila se decía aquí que «no se pudo ni abrir»; era falso, y el
+ *     2026-08-16 se transcribieron los 244 taxones del §2.2 de su PRUG. El documento llevaba meses
+ *     leído: lo que faltaba era mirar el apartado que no era de Fase 3.)
  *   · Enumera lo protegido, no lo presente. Un catálogo hecho solo de anexos deja fuera la encina y
  *     deja dentro el endemismo del que hay tres rodales.
  *
@@ -141,6 +143,13 @@ const CLASES = new Set(
 
 // Caché de EIDOS: un catálogo son ~1.300 peticiones a un servicio público. Sin ella, repetir la
 // selección tras ajustar un umbral vuelve a castigar al IEPNB durante diez minutos.
+//
+// **Se escribe también con `--dry`**, y esto no es un descuido sino la corrección de uno. `--dry`
+// significa «no escribas el RESULTADO», no «no guardes lo que ya has preguntado»: la caché no es un
+// resultado, es la cortesía con la fuente. Y el caso para el que se escribió es exactamente éste,
+// porque después de un `--dry` viene siempre la pasada de verdad. En Carrascoy y El Valle, con 1.456
+// candidatos, la simulación se llevó veinticinco minutos de EIDOS y los tiró: la pasada buena tuvo
+// que volver a preguntarlo todo.
 const CACHE = fromRoot(arg('cache', path.join(OUT_DIR, `${PARK}-eidos-seleccion-cache.json`)));
 
 const RUTA_GBIF = fromRoot(arg('gbif', path.join(OUT_DIR, `${PARK}-gbif.json`)));
@@ -568,7 +577,7 @@ async function main() {
     if (++vistos % 50 === 0) process.stderr.write(`  … ${vistos}/${brutos.length}\n`);
     resueltas.set(c.scientificName, await resuelve(c.scientificName, ccaa));
   }
-  if (!DRY) writeJson(CACHE, cache);
+  writeJson(CACHE, cache);
 
   const { lista, fusiones } = reconcilia(brutos, resueltas, porTaxonId);
   if (fusiones.length) {
@@ -692,7 +701,7 @@ async function main() {
     aprobadas.push(ficha);
   }
 
-  if (!DRY) writeJson(CACHE, cache);
+  writeJson(CACHE, cache);
 
   const aves = aprobadas.filter(e => e.class === 'Aves').length;
   const reutilizables = aprobadas.filter(e => e.yaFichadaEn).length;
