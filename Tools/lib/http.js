@@ -1,7 +1,7 @@
 'use strict';
 /*
  * http.js — cliente HTTPS de solo lectura para las fuentes oficiales (EIDOS/IEPNB, GBIF, Wikimedia,
- * Discodata/EEA, ArcGIS del IMIDA, Overpass).
+ * Red Natura 2000 del IEPNB, ArcGIS del IMIDA, Overpass).
  *
  * Por qué existe: había ocho implementaciones distintas del mismo `https.get` → JSON con reintentos,
  * y sus diferencias no eran de diseño sino descuidos que se propagaron al copiar:

@@ -37,7 +37,14 @@ const HOSTS = [
   ['overpass-api.de',              'senderos (trails:build) y POIs (pois:build)'],
   ['overpass.openstreetmap.fr',    'mirror de Overpass'],
   ['api.gbif.org',                 'ocurrencias por hábitat (gbif:habitats) y fotos de campo'],
-  ['iepnb.gob.es',                 'EIDOS: taxonomía, UICN y estado legal'],
+  // Un host, DOS servicios, y el segundo se descubrió tarde: además de EIDOS (`/api/especie/`), el
+  // IEPNB sirve el «Servicio Web de la Red Natura 2000» (`/api/rn2000/`), que es de donde salen las
+  // secciones 3.2 y 3.3 del Formulario Normalizado de Datos de cada sitio: la lista OFICIAL de
+  // especies por `site_code`. El README daba esa lista por Discodata/BISE (`discodata.eea.europa.eu`),
+  // que esta política de egreso rechaza con un 403 al CONNECT — y por eso 366 fichas de ave llevaban
+  // una nota pidiendo contrastar contra una fuente inalcanzable. No hace falta abrir la EEA: el dato
+  // es nacional y lo publica MITECO en este mismo host (2026-08-15).
+  ['iepnb.gob.es',                 'EIDOS (taxonomía, UICN y estado legal) y Red Natura 2000 (especies oficiales por sitio)'],
   ['geoportal.imida.es',           'límites oficiales de los espacios (n1:build, n1:refina)'],
   // Faltaba desde el principio, y es la fuente de la Capa 2 entera: de aquí salen el shapefile del
   // Atlas de Hábitats 2005 y su tabla de datos, una descarga por provincia. Sin él, `habitats:build`

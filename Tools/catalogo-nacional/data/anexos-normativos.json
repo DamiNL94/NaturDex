@@ -1240,7 +1240,9 @@
         },
         {
           "scientificName": "Sylvia undata",
-          "grupo": "Aves"
+          "grupo": "Aves",
+          "nombreCorregido": "Curruca undata",
+          "nota": "La norma la cita como «Sylvia undata»; es la curruca rabilarga, que EIDOS acepta como «Curruca undata» (taxonid 80931) y con la que la ficha el catálogo (verificado 2026-08-16)."
         },
         {
           "scientificName": "Accipiter nisus",
@@ -1782,7 +1784,9 @@
         },
         {
           "scientificName": "Sylvia undata",
-          "grupo": "Aves"
+          "grupo": "Aves",
+          "nombreCorregido": "Curruca undata",
+          "nota": "La norma la cita como «Sylvia undata»; es la curruca rabilarga, que EIDOS acepta como «Curruca undata» (taxonid 80931) y con la que la ficha el catálogo (verificado 2026-08-16)."
         },
         {
           "scientificName": "Accipiter nisus",
@@ -2660,7 +2664,9 @@
         {
           "scientificName": "Sylvia undata",
           "categoria": "Anexo I de la Directiva Aves",
-          "grupo": "Aves"
+          "grupo": "Aves",
+          "nombreCorregido": "Curruca undata",
+          "nota": "La norma la cita como «Sylvia undata»; es la curruca rabilarga, que EIDOS acepta como «Curruca undata» (taxonid 80931) y con la que la ficha el catálogo (verificado 2026-08-16)."
         },
         {
           "scientificName": "Accipiter nisus",

@@ -72,6 +72,43 @@ Cada una costó una sesión de depuración. Léelas antes de repetirlas.
   marca **«Aguilón»** para el alimoche, **«Frías»** para el petirrojo y **«Alerce»** para la sabina
   mora, teniendo el nombre usual en la misma lista. Hay que ofrecer las alternativas y elegir; no es
   un campo que se pueda tomar a ciegas.
+- **Cruzar una fuente oficial con el catálogo por el nombre pierde especies, y la pérdida se lee
+  como un dato.** La fuente y el catálogo escriben la misma especie con nombres de épocas distintas:
+  el formulario de un sitio Red Natura 2000 revisado en 2023 sigue citando *Sylvia undata* y el
+  catálogo ficha *Curruca undata*. **De las 82 aves que declaran los formularios de los ocho
+  espacios, 11 no casaban.** Y como el respaldo de sitio es la puerta de las aves, la que no casaba
+  salía excluida con «no figura en el formulario oficial del sitio» al lado — una afirmación falsa,
+  producida por la propia herramienta. Se resuelve resolviendo contra EIDOS el nombre **DE LA
+  FUENTE** (no solo el del candidato, que era lo que se hacía) y con
+  `data/equivalencias-nomenclatura.json` para lo que ninguna autoridad reconcilia. Ver
+  [`AVES.md`](AVES.md) §5.
+- **Casar por epíteto para adivinar un cambio de género fusiona especies distintas.** Sobre estos
+  ocho espacios propone nueve pares y **tres son falsos** —*Calandrella brachydactyla* (terrera) ↔
+  *Certhia brachydactyla* (agateador), *Melanocorypha calandra* ↔ *Emberiza calandra*, *Saxicola
+  torquatus* ↔ *Turdus torquatus*— y encima **pierde el par verdadero** de ese último, que es
+  *Saxicola rubicola*. La heurística vale como lista de revisión y **no se aplica nunca** sola.
+- **Un taxón puede estar duplicado con TODOS los identificadores en regla.**
+  `scan-taxones-duplicados.js` agrupa por `eidosTaxonId` y por `gbifSpeciesKey`, lo que da por hecho
+  que un duplicado comparte al menos uno. Cuando las dos autoridades mantienen las dos entradas como
+  válidas no comparte ninguno: la curruca rabilarga estaba como *Curruca undata* (EIDOS 80931, GBIF
+  10355796) en tres espacios y como *Sylvia undata* (EIDOS 80230 —que es *Sylvia undata undata*, la
+  **subespecie** nominal— y GBIF 2492949) en otros cuatro. Cuatro identificadores para un ave y ni un
+  aviso. Hay ahora una tercera pasada por **epíteto dentro de la misma familia**, que es sospecha y
+  no veredicto, y por eso no bloquea.
+
+**Correcciones que se deshacen solas**
+
+- **Una corrección hecha en el dato y no en la herramienta dura hasta la siguiente regeneración.** La
+  ficha de la curruca rabilarga de Sierra Espuña llevaba desde el 2026-08-09 una `reviewNote`
+  explicando el arreglo —«tenía eidosTaxonId 80230, que es *Sylvia undata undata*, la subespecie»—.
+  Las **cuatro** Capas 3 generadas después lo reintrodujeron tal cual, porque el pipeline no sabía
+  nada: la reconciliación agrupa por `taxonid` y ahí había dos. El arreglo tiene que ir **siempre a
+  los dos sitios**: al dato ya escrito y a la entrada de `data/` que hace que no vuelva a ocurrir.
+- **`build-park-sql.js` solo hace UPSERT: no retira nada.** Regenerar el `-n2.sql` de un espacio del
+  que se han quitado fichas deja la base de datos **igual que antes**, y como la API manda sobre el
+  paquete, el usuario las sigue viendo. El borrado va aparte y explícito
+  (`aves:poda --sql` → `Database/poda-aves-<slug>.sql`), y arrastra además el progreso de quien
+  hubiera descubierto una de esas especies (`recalculate-account-progress.php`).
 
 **Fotos y licencias**
 
@@ -154,7 +191,13 @@ Cada una costó una sesión de depuración. Léelas antes de repetirlas.
 
 **GBIF**
 
-- **Filtra Aves**: son el 88 % de las ocurrencias y casi todo ruido espacial (vuelan).
+- **Las Aves son el 88 % de las ocurrencias y casi todo ruido espacial** (vuelan: un registro en vuelo
+  cae dentro de cualquier polígono). Por eso **no entran por el filtro de presencia**: desde el filtro
+  3 bis de `build-species-seleccion.js` un ave solo se aprueba con respaldo de sitio —el formulario
+  oficial (`sitio:especies`) o el anexo normativo— y GBIF queda como confirmación. Durante ocho
+  espacios la regla estuvo escrita y sin aplicar, y el catálogo acabó con 557 aves de 1.492 fichas
+  (el 73 % en Monte Arabí, el 26 % en Cuatro Calas: una proporción que mide la cobertura de eBird,
+  no el espacio).
 - **El filtro por incertidumbre de coordenada no sirve**: solo el 14 % la declara.
 - **`basisOfRecord` sí sirve, y hay que mirarlo.** `MACHINE_OBSERVATION` en una especie con
   seguimiento por satélite son posiciones Argos, y las de baja calidad caen tierra adentro: así

@@ -77,7 +77,22 @@ códigos HIC nuevos, **amplía `data/hic-nombres.json` y `data/hic-prioritarios.
 2. **Atlas de Hábitats** → `atlas-hic-especies.js` → evidencia `caracteristica`. Aquí es **filtro**,
    no fuente de candidatas: da el backbone determinista y la prueba de cordura del resto.
 3. **EIDOS** para toda especie nueva: taxonomía, UICN por ámbito, estado legal, nombre común.
-4. **Aves** → Discodata BISE por `site_code` → evidencia `zepa`, apartado propio del espacio.
+4. **Lista oficial del sitio** → `npm run sitio:especies -- --park <slug>` → secciones 3.2 y 3.3 del
+   Formulario Normalizado de Datos de cada sitio Red Natura 2000 del espacio, desde el servicio RN2000
+   del IEPNB → evidencia `lista_oficial_sitio`. **Lánzalo antes que la selección**: es la PUERTA de las
+   aves, que no entran por el filtro de presencia (sus ocurrencias caen en cualquier polígono porque
+   vuelan). Sin este volcado, la selección excluye todas las aves que no salve el anexo normativo, y lo
+   dice por pantalla. No es Discodata/BISE, que es lo que decía este runbook: el dato es nacional y lo
+   publica MITECO en el mismo host que EIDOS.
+
+   **Dos cosas que hay que tener delante al leer el resultado**, las dos en
+   [`AVES.md`](AVES.md) §3: el formulario **no es un inventario** —la sección 3.2 son las del Anexo I
+   y las migratorias de presencia regular, y la 3.3 está vacía en casi todos los sitios españoles—, y
+   **el perímetro del sitio no es el del espacio** (la única ZEPA que solapa Cuatro Calas es marina,
+   así que sus aves terrestres no las declara nadie). Si el espacio sale con muy pocas aves, la vía
+   es **transcribir su plan de gestión** al anexo normativo, no bajar la exigencia: los tres espacios
+   del Altiplano, que lo tienen transcrito, conservan 46, 61 y 66 aves; los que solo tienen
+   formulario se quedan en 17, 18 y 40.
 5. **Reconciliación taxonómica** → `reconcile-taxa.js`.
 6. **Reutilización.** Cruza contra `especies-universal.json`. Lo que ya existe se **enlaza**, no se
    reescribe. Di cuántas reutilizas y cuántas son nuevas.

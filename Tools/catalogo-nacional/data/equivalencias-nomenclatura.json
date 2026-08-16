@@ -1,0 +1,28 @@
+{
+  "_nota": "Equivalencias de nombre científico entre lo que escribe una FUENTE OFICIAL (el Formulario Normalizado de Datos de un sitio Red Natura 2000, el anexo de un PORN/PRUG) y el nombre con el que el catálogo ficha esa misma especie. Existe porque las dos cosas son de épocas distintas: el formulario de un sitio declarado en 2000 y revisado en 2023 sigue citando «Sylvia undata», y GBIF sirve «Curruca undata» desde que las currucas se separaron del género Sylvia. Cruzar a pelo da cero coincidencias, y el efecto no es un error visible: es un ave que su propio sitio declara y que el filtro 3 bis deja fuera con el motivo «no figura en el formulario oficial del sitio» escrito al lado.",
+  "_cuando_hace_falta_una_entrada": "SOLO cuando ni el binomio normalizado ni EIDOS cierran el puente. `Tools/lib/respaldo-sitio.js` prueba antes esas dos capas, y cierran la mayoría: EIDOS resuelve «Larus ridibundus» → Chroicocephalus ridibundus, «Catharacta skua» → Stercorarius skua, «Sylvia cantillans» → Curruca cantillans y «Phalacrocorax aristotelis» → Gulosus aristotelis. Añadir aquí lo que EIDOS ya sabe crea una segunda verdad que puede divergir de la primera: no se hace.",
+  "_como_se_da_de_alta_una": "Con la fuente delante, NUNCA de memoria y NUNCA por parecido de nombre. La herramienta propone candidatos por epíteto en su informe, y esa lista es un punto de partida, no una respuesta: sobre los ocho espacios ya publicados propone nueve pares y tres son especies distintas (Calandrella brachydactyla ↔ Certhia brachydactyla, Melanocorypha calandra ↔ Emberiza calandra, Saxicola torquatus ↔ Turdus torquatus). Se comprueba contra EIDOS o el backbone de GBIF que los dos nombres son el mismo taxón, y se escribe de dónde sale la comprobación y en qué fecha.",
+  "_esquema": {
+    "nombreEnLaFuente": "El nombre tal y como lo escribe el documento oficial (formulario del sitio, anexo de la norma). Se indexa por su binomio, que ya normaliza la terminación de género y descarta trinomios y salvedades entre paréntesis",
+    "nombreEnElCatalogo": "El nombre con el que NaturDex ficha esa especie, que es el que sirve GBIF",
+    "verificadoCon": "Cómo se ha comprobado que son el mismo taxón, con el identificador concreto",
+    "porQueNoLoCierraEidos": "Qué hace que las dos capas automáticas fallen en este caso. Sin esto, nadie sabe si la entrada sigue haciendo falta cuando la fuente se actualice",
+    "consultado": "AAAA-MM-DD en que se hizo la comprobación"
+  },
+  "equivalencias": [
+    {
+      "nombreEnLaFuente": "Sylvia undata",
+      "nombreEnElCatalogo": "Curruca undata",
+      "verificadoCon": "EIDOS: «Curruca undata (Boddaert, 1783)» es taxonid 80931, con nametype Aceptado/válido. Es la curruca rabilarga, Anexo I de la Directiva Aves.",
+      "porQueNoLoCierraEidos": "EIDOS mantiene ADEMÁS el taxonid 80230 «Sylvia undata undata (Boddaert, 1783)», que es la subespecie nominal, y con nametype aceptado. Así que resolver «Sylvia undata» contra EIDOS no devuelve un sinónimo que apunte a Curruca: devuelve otra ficha válida, y el puente automático se queda a un paso. Es exactamente el identificador con el que cuatro espacios tenían fichada la especie.",
+      "consultado": "2026-08-16"
+    },
+    {
+      "nombreEnLaFuente": "Saxicola torquatus",
+      "nombreEnElCatalogo": "Saxicola rubicola",
+      "verificadoCon": "EIDOS: «Saxicola torquata» (grafía femenina) figura como sinónimo y resuelve a taxonid 16387, «Saxicola rubicola (Linnaeus, 1766)», la tarabilla europea. Es la separación de la tarabilla africana/asiática (S. torquatus s.l.) de la europea, posterior a la redacción de los formularios.",
+      "porQueNoLoCierraEidos": "Con la grafía masculina que usan los formularios, EIDOS devuelve la fila del sinónimo SIN `acceptednameid`, así que `resolveTaxon` la marca «sinonimo» y no puede dar el taxonid del nombre aceptado. Y la normalización del binomio no ayuda: «torquatus» y «rubicola» no se parecen en nada, así que ninguna heurística de epíteto lo encuentra — la que hay propone «Turdus torquatus», que es el mirlo capiblanco.",
+      "consultado": "2026-08-16"
+    }
+  ]
+}

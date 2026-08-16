@@ -229,35 +229,6 @@
     "eidosTaxonId": 10136,
     "rarityBasis": null
   },
-  "Acrocephalus scirpaceus": {
-    "commonName": "Carricero común",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": "Marismas,estuarios costeros,lagunas interiores,riberas fluviales,humedales con plantas palustres...",
-    "seasonality": "Abril a octubre",
-    "rarityScore": 2,
-    "description": "Pequeño pájaro insectívoro de tonos ocres uniformes. Como otros carriceros y carricerines, posee una cabeza apuntada, con la frente aplanada y el pico relativamente largo y fino. Tiene el dorso de color marrón, con tintes oliváceos o grises dependiendo de la edad y el desgaste del plumaje. Las partes inferiores muestran tonos ocres pálidos. Carece de las listas y cejas cefálicas distintivas de otras especies del género Acrocephalus y, a diferencia de otros carriceros, presenta el obispillo de color marrón rojizo. Ambos sexos son similares.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Acrocephalidae",
-      "genus": "Acrocephalus"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Carricerocomun.jpg?width=1280",
-    "imageAttribution": "Carles Pastor (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 12171,
-    "rarityBasis": {
-      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
   "Adiantum capillus-veneris": {
     "commonName": "Falguera",
     "kingdom": "flora",
@@ -397,37 +368,6 @@
     "eidosTaxonId": 10768,
     "rarityBasis": null
   },
-  "Alaudala rufescens": {
-    "commonName": "Terrera marismeña",
-    "kingdom": "fauna",
-    "group": "Ave esteparia",
-    "habitat": "Saladares, estepas salinas, eriales y llanos áridos con vegetación rala",
-    "seasonality": "Todo el año",
-    "rarityScore": 2,
-    "description": "La alondra más pequeña de Europa, de plumaje pardo grisáceo y con el pecho finamente rayado de arriba abajo, sin las manchas laterales de su parienta. Vive ligada a los llanos más áridos y salinos, un hábitat en retroceso, y se camufla tan bien que suele verse solo al levantar el vuelo.",
-    "tips": [
-      "Rayado fino y extendido por todo el pecho",
-      "Muy pequeña y compacta, de aspecto grisáceo",
-      "Prefiere los llanos salinos y las estepas más áridas"
-    ],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Alaudidae",
-      "genus": "Alaudala"
-    },
-    "iucnGlobal": "LC",
-    "spainStatus": "LESRPE (RD 139/2011)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Calandrella_rufescens_Canarias.jpg?width=1280",
-    "imageAttribution": "Calandrella_rufescens_-Canary_Islands_-Spain-8.jpg: Tony Hisgett de… (CC BY 2.0) · Wikimedia Commons",
-    "rarityBasis": {
-      "categoria": "LESRPE (RD 139/2011)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    }
-  },
   "Alca torda": {
     "commonName": "Alca común",
     "kingdom": "fauna",
@@ -453,37 +393,6 @@
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Razorbill_iceland.JPG?width=1280",
     "imageAttribution": "autor no indicado (Public domain) · Wikimedia Commons",
-    "rarityBasis": {
-      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    }
-  },
-  "Alcedo atthis": {
-    "commonName": "Martín pescador",
-    "kingdom": "fauna",
-    "group": "Ave acuática",
-    "habitat": "Ríos, ramblas con pozas, canales y láminas de agua con posaderos y taludes terrosos",
-    "seasonality": "Todo el año",
-    "rarityScore": 2,
-    "description": "Pájaro rechoncho de color azul turquesa iridiscente por encima y naranja por debajo, con un pico largo y recto desproporcionado. Pesca lanzándose en picado desde una rama sobre el agua y anida en un túnel que excava en taludes de tierra.",
-    "tips": [
-      "Destello azul eléctrico volando bajo y recto sobre el agua",
-      "Silbido agudo y penetrante, casi siempre antes de verlo",
-      "Posado inmóvil en una rama sobre el agua, cabeza gacha"
-    ],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Coraciiformes",
-      "family": "Alcedinidae",
-      "genus": "Alcedo"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011) · Anexo IV (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Common_Kingfisher_Alcedo_atthis.jpg?width=1280",
-    "imageAttribution": "Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons",
     "rarityBasis": {
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
       "ambito": "estatal",
@@ -837,31 +746,6 @@
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     }
-  },
-  "Anas platyrhynchos": {
-    "commonName": "Ánade azulón",
-    "kingdom": "fauna",
-    "group": "Ave acuática",
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 1,
-    "description": "En el plumaje del macho de ánade azulón destaca el color verde brillante con irisaciones que presenta en cabeza y cuello. Un estrecho collar blanco separa a este del pecho, que es castaño. El dorso es parduzco; las partes ventrales, grises, y la popa, de color negro, resalta sobre los extremos blancos de las rectrices. El pico es amarillo con la uña negra, en tanto que las patas poseen una coloración anaranjada. Como rasgos característicos en el diseño de este ánade destacan, por un lado, las dos plumas negras y rizadas que presenta sobre la cola y, por otro, el espejuelo, de una tonalidad azul violácea —de ahí su denominación de azulón—, muy patente en vuelo. Como ocurre con la mayoría de las anátidas, esta especie presenta un acusado dimorfismo sexual. En este caso, las hembras tienen un tamaño algo menor que el del macho y son muy crípticas, con un plumaje parduzco moteado en el que tan solo resalta el espejuelo, del mismo color que en el macho. Los jóvenes muestran gran parecido con las hembras, si bien la tonalidad general es algo rojiza.",
-    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Anseriformes",
-      "family": "Anatidae",
-      "genus": "Anas"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9F%D0%B0%D1%80%D0%B0_%D1%83%D1%82%D0%BE%D0%BA_%D0%BA%D1%80%D1%8F%D0%BA%D0%B2_(Anas_platyrhynchos)%2C_%D0%9A%D0%BE%D0%BB%D0%BE%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5.jpg?width=1280",
-    "imageAttribution": "Dion Art (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 12000,
-    "rarityBasis": null
   },
   "Andryala integrifolia": {
     "commonName": "Cenizo",
@@ -1263,35 +1147,6 @@
     },
     "descriptionSource": null
   },
-  "Apus pallidus": {
-    "commonName": "Vencejo pálido",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": "Nidos: roquedos,acantilados costeros, edificios, puentes de piedra, iglesias,árboles",
-    "seasonality": "Marzo a septiembre",
-    "rarityScore": 2,
-    "description": "Presenta silueta en forma de ballesta, cola corta y ahorquillada, y alas largas y estrechas. Posee pico corto, plano y con la boca muy ancha; patas emplumadas y extremadamente cortas, que le impiden posarse en el suelo; y pies pequeños y de fuertes garras, con los cuatro dedos dirigidos hacia delante. Luce una coloración uniforme de tono pardo grisáceo, excepto en la garganta, que es blanca; la parte inferior interna de las alas resulta más clara. Con plumaje poco desgastado muestra un aspecto general escamoso. Se confunde fácilmente con el vencejo común, y para diferenciarlos se necesitan buenas condiciones de luz y hay que situarse a corta distancia. El vencejo pálido tiene un tono general más claro y parduzco, y mayor extensión en el blanco de la garganta; además, a veces se aprecia un antifaz más marcado, mayor contraste en la parte inferior de las alas y aspecto más escamoso. Ambos sexos son iguales. Los jóvenes, muy similares a los adultos, presentan un tono un poco más oscuro y un aspecto escamoso más marcado por la presencia de plumas ribeteadas en blanco. Esta ave pasa la mayor parte de su vida en el aire, por lo que casi siempre se la ve volando y agrupada, tanto en núcleos urbanos como en acantilados costeros y de interior.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Apodiformes",
-      "family": "Apodidae",
-      "genus": "Apus"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Vencejo_p%C3%A1lido_20250901_03.jpg?width=1280",
-    "imageAttribution": "Ismael Olea (CC BY 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 11930,
-    "rarityBasis": {
-      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
   "Aquila chrysaetos": {
     "commonName": "Águila real",
     "kingdom": "fauna",
@@ -1445,64 +1300,6 @@
     },
     "descriptionSource": null
   },
-  "Ardea cinerea": {
-    "commonName": "Garza real",
-    "kingdom": "fauna",
-    "group": "Ave acuática",
-    "habitat": "Se distribuye en invierno por zonas de aguas remansadas y poco profundas, coincidiendo con su carácter eminentemente ictiófago",
-    "seasonality": "Todo el año",
-    "rarityScore": 2,
-    "description": "La garza real es un ave de gran tamaño —la mayor de las ardeidas que frecuentan nuestro país—, de figura estilizada, largo cuello y coloración general grisácea, con un diseño variable según la edad y la época del año. Durante el periodo reproductor, la cabeza de los adultos luce una coloración blanca y aparece adornada por una línea negra y un par de largas plumas de este mismo color, en tanto que el cuello, blanco también, se halla surcado longitudinalmente por dos bandas paralelas negruzcas. El largo y afilado pico presenta un tono rojizo, y las regiones dorsales son mayoritariamente cenicientas, con una llamativa mancha negra en los hombros. Fuera de la época de cría, el diseño es menos contrastado, sin las plumas ornamentales de la cabeza y con el pico amarillento. En vuelo adopta la postura característica de las garzas, con el cuello encogido en forma de “S” y las patas estiradas sobresaliendo por detrás de la cola, si bien la garza real resulta fácilmente diferenciable del resto de sus parientes debido a su gran tamaño.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Pelecaniformes",
-      "family": "Ardeidae",
-      "genus": "Ardea"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ardea_cinerea_-_Pak_Thale.jpg?width=1280",
-    "imageAttribution": "JJ Harrison (https://www.jjharrison.com.au/) (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 10896,
-    "rarityBasis": {
-      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
-  "Ardeola ralloides": {
-    "commonName": "Garcilla cangrejera",
-    "kingdom": "fauna",
-    "group": "Ave acuática",
-    "habitat": "Estival (desde finales de abril), aunque también se da invernada en nuestro país",
-    "seasonality": "Marzo a octubre",
-    "rarityScore": 4,
-    "description": "Garza de pequeño-mediano tamaño. El adulto reproductor tiene las partes superiores rosado-anaranjadas y las inferiores más blanquecinas. Del píleo le cuelgan largas plumas pardas, con raquis más pálido, que le dibujan una melena sobre el dorso. Su pico es azulado, con el extremo negro, y luce patas naranjas. El adulto no reproductor es mucho más parduzco, con toda la cabeza y el cuello repletos de estrías longitudinales blancas y pardas, patas amarillentas y pico naranja sucio. Los jóvenes son muy similares a los adultos no reproductores. En vuelo, la garcilla cangrejera se muestra muy pálida, ya que sus alas y cola son blancas, y el cuerpo y la cabeza rosados. Se localiza generalmente en aguazales abiertos, en orillas o en aguas someras.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Pelecaniformes",
-      "family": "Ardeidae",
-      "genus": "Ardeola"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
-    "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Crabier_chevelu.jpg?width=1280",
-    "imageAttribution": "Pierre Dalous (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 12081,
-    "rarityBasis": {
-      "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
   "Arenaria grandiflora": {
     "commonName": "Hierba de la piedra",
     "kingdom": "flora",
@@ -1527,37 +1324,6 @@
     "imageAttribution": "Ghislain118 http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons",
     "eidosTaxonId": 2320,
     "rarityBasis": null
-  },
-  "Arenaria interpres": {
-    "commonName": "Vuelvepiedras",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": "Playas y costa rocosa (invernante)",
-    "seasonality": "Otoño e invierno",
-    "rarityScore": 2,
-    "description": "Limícola robusta de patas naranjas y pico corto y algo respingón, que se gana la vida volteando piedras, conchas y algas para capturar lo que hay debajo. En vuelo muestra un llamativo diseño blanco y negro en alas y espalda.",
-    "tips": [
-      "Voltea piedras y algas con el pico corto y cuneiforme",
-      "Patas de color naranja vivo",
-      "Diseño blanco y negro muy contrastado en vuelo"
-    ],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Charadriiformes",
-      "family": "Scolopacidae",
-      "genus": "Arenaria"
-    },
-    "iucnGlobal": "LC",
-    "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Arenaria_interpres_(habitus).jpg?width=1280",
-    "imageAttribution": "Hans Hillewaert (CC BY-SA 4.0) · Wikimedia Commons",
-    "rarityBasis": {
-      "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    }
   },
   "Arenaria leptoclados": {
     "commonName": "Arenaria leptoclados",
@@ -2728,35 +2494,6 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
-  "Aythya nyroca": {
-    "commonName": "Porrón pardo",
-    "kingdom": "fauna",
-    "group": "Ave acuática",
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 5,
-    "description": "Este pato buceador de pequeño o mediano tamaño y cuerpo bastante corto presenta una cabeza con el característico perfil de porrón, es decir, frente alta y píleo apuntado. El macho adulto en plumaje nupcial exhibe una bella tonalidad herrumbre o castaño intenso, más oscuro en el dorso y más pálido en los flancos. El iris es de color blanco, por lo que destaca vivamente sobre el plumaje de la cabeza. La hembra adulta resulta más sombría y menos contrastada y tiene el iris de color pardo. Los jóvenes son similares a la hembra adulta, pero de color más apagado, en general. En vuelo se observan muy nítidamente unas anchas bandas de color blanco puro que llegan hasta los extremos alares, así como la coloración blanca del vientre y la popa.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Anseriformes",
-      "family": "Anatidae",
-      "genus": "Aythya"
-    },
-    "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aythya_nyroca_at_Martin_Mere_1.jpg?width=1280",
-    "imageAttribution": "Francis Franklin (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 11871,
-    "rarityBasis": {
-      "categoria": "CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
   "Ballota hirsuta": {
     "commonName": "Manrubio negro",
     "kingdom": "flora",
@@ -3058,35 +2795,6 @@
     "imageAttribution": "Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons",
     "rarityBasis": {
       "categoria": "LESRPE",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
-  "Bubulcus ibis": {
-    "commonName": "Garcilla bueyera",
-    "kingdom": "fauna",
-    "group": "Ave acuática",
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 2,
-    "description": "Esta garza de pequeño o mediano tamaño y formas bastante compactas se caracteriza por tener el cuello, las patas y el pico relativamente cortos y por el color mayoritariamente blanco de su plumaje, en el que apenas se aprecian diferencias sexuales. En el individuo adulto durante la época nupcial predomina el color blanco, pero adornado con tonos entre ocráceos y anaranjados en el píleo, la nuca, el pecho y la espalda; además, luce un intenso color rojizo en el pico, el ojo y las patas. El ave no reproductora es mucho más pálida, con un ligero tinte ocráceo en el píleo, el pico amarillo y las patas de un color muy variable. El joven es similar al adulto no reproductor, pero completamente blanco. Esta ave resulta muy blanca y rechoncha en vuelo, con las formas más compactas que otras garzas.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Pelecaniformes",
-      "family": "Ardeidae",
-      "genus": "Bubulcus"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cattle_Egret_(Bubulcus_ibis)_Crop.jpg?width=1280",
-    "imageAttribution": "Cattle_Egret_(Bubulcus_ibis)_-Florida_Keys.jpg: Stig Nygaard deriva… (CC BY 2.0) · Wikimedia Commons",
-    "eidosTaxonId": 11496,
-    "rarityBasis": {
-      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     },
@@ -3523,37 +3231,6 @@
     "imageAttribution": "Christoph Moning (CC BY 4.0) · GBIF",
     "rarityBasis": {
       "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    }
-  },
-  "Calidris alba": {
-    "commonName": "Correlimos tridáctilo",
-    "kingdom": "fauna",
-    "group": "Ave limícola",
-    "habitat": "Playas de arena expuestas; también salinas y marismas costeras",
-    "seasonality": "Otoño e invierno",
-    "rarityScore": 2,
-    "description": "Limícola pequeña y muy pálida que se ve casi siempre en la misma escena: corriendo tras la ola que se retira y huyendo de la siguiente, con las patas moviéndose a toda velocidad. En invierno es el más blanco de los correlimos, con una mancha negra en el hombro.",
-    "tips": [
-      "Corre persiguiendo el vaivén de las olas",
-      "Plumaje de invierno muy blanco y limpio",
-      "Mancha negra en el hombro y barra alar blanca en vuelo"
-    ],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Charadriiformes",
-      "family": "Scolopacidae",
-      "genus": "Calidris"
-    },
-    "iucnGlobal": "LC",
-    "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Calidris-alba-001.jpg?width=1280",
-    "imageAttribution": "Original photo by Mdf (CC BY-SA 3.0) · Wikimedia Commons",
-    "rarityBasis": {
-      "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     }
@@ -4883,35 +4560,6 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
-  "Charadrius dubius": {
-    "commonName": "Chorlitejo chico",
-    "kingdom": "fauna",
-    "group": "Ave limícola",
-    "habitat": null,
-    "seasonality": "Enero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre",
-    "rarityScore": 2,
-    "description": "Esta limícola de pequeño tamaño, movimientos rápidos y cabeza voluminosa se caracteriza por poseer un pico muy corto y patas algo más largas que la anchura del cuerpo. El macho en plumaje nupcial tiene el píleo de color marrón grisáceo y separado del dorso —también grisáceo— por un doble collar blanco y negro cerrado completamente por su parte frontal; en la cabeza presenta un diseño característico, que viene definido por una frente blanca y por la presencia de una barra frontal negra separada del píleo mediante una fina banda blanca. El anillo ocular, al igual que las patas, es amarillo. La hembra resulta similar, pero con el negro de la cabeza más apagado. En el adulto no reproductor, sin embargo, casi todo el negro aparece sustituido por marrón. El diseño general del joven es semejante al del no reproductor, pero con los bordes de las plumas de las partes superiores orlados de ante pálido; el collar es oscuro y no se cierra por completo.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Charadriiformes",
-      "family": "Charadriidae",
-      "genus": "Charadrius"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Charadrius_dubius_4_(Marek_Szczepanek).jpg?width=1280",
-    "imageAttribution": "Marek Szczepanek (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 11179,
-    "rarityBasis": {
-      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
   "Cheirolophus intybaceus": {
     "commonName": "achicoria falsa",
     "kingdom": "flora",
@@ -5057,31 +4705,6 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
-  "Ciconia nigra": {
-    "commonName": "Cigüeña negra",
-    "kingdom": "fauna",
-    "group": "Ave acuática",
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 4,
-    "description": "Zancuda de tonos oscuros predominantes. El adulto tiene todas las partes superiores, cabeza y cuello negros, con llamativas irisaciones — esencialmente verdosas— en el cuello y la cabeza. Las partes inferiores son blancas. Presenta patas de color naranja rojizo y pico rojo, tono que se extiende alrededor del ojo. Los jóvenes nacidos en el año carecen de irisaciones, y su tono es mucho más pardo, con pico y patas grisáceos. Los subadultos son similares a los adultos, pero con menos irisaciones y con un pico que no es completamente rojo. Se trata de un ave muy esquiva, pero suele verse en vuelo en la cercanía de sus nidos o vadeando orillas de ríos o embalses, así como prados húmedos. En vuelo es también muy oscura, con partes inferiores en las que predomina el negro, salvo en el vientre, pecho y axilas. Las partes superiores son totalmente oscuras.",
-    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Ciconiiformes",
-      "family": "Ciconiidae",
-      "genus": "Ciconia"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
-    "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Wildpark_Bad_Mergentheim._Schwarzstorch.jpg?width=1280",
-    "imageAttribution": "Holger Uwe Schmitt (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 11841,
-    "rarityBasis": null
-  },
   "Circaetus gallicus": {
     "commonName": "Culebrera europea",
     "kingdom": "fauna",
@@ -5202,35 +4825,6 @@
     "imageAttribution": "Ziegler175 (Public domain) · Wikimedia Commons",
     "rarityBasis": {
       "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
-  "Cisticola juncidis": {
-    "commonName": "Buitrón",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 2,
-    "description": "Se trata de una de las aves más pequeñas de Europa. Posee el dorso y el píleo de color pardo oscuro y fuertemente listados, el obispillo rojizo y las partes inferiores claras con los flancos y el pecho de color ocráceo. En vuelo ejecuta una trayectoria muy ondulante y presenta una silueta característica, con las alas redondeadas y la cola —que suele mantener parcialmente desplegada— con un perfil también redondeado y de longitud creciente de los extremos hacia el centro. En su parte distal, la cola muestra una banda de manchas negras y blancas muy visibles en vuelo. Cuando se posa entre la vegetación, suele aferrarse a los tallos manteniendo la verticalidad a la vez que agita continuamente la cola.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Cisticolidae",
-      "genus": "Cisticola"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Zitting_cisticola_2024_04_19_(cropped).jpg?width=1280",
-    "imageAttribution": "Alexis Lours (CC BY 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 11543,
-    "rarityBasis": {
-      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     },
@@ -5604,31 +5198,6 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Acinos_arvensis_3.jpg?width=1280",
     "imageAttribution": "Bernd Gliwa (CC BY-SA 2.5) · Wikimedia Commons",
     "eidosTaxonId": 1795,
-    "rarityBasis": null
-  },
-  "Coccothraustes coccothraustes": {
-    "commonName": "Picogordo",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 1,
-    "description": "Se caracteriza por su cabeza voluminosa y con un pico muy grueso, de base notablemente ancha. A su vez, su cola corta potencia el volumen de la cabeza y el pico, además de otorgar al ave un aspecto compacto y robusto. En una observación detallada y cuidadosa se pueden diferenciar los sexos. Los machos tienen las manchas naranja y gris de la cabeza y la cara mucho más vivas que las hembras; además, las plumas internas de las alas están teñidas en los machos con un reflejo azul metálico, mientras que en las hembras es de color gris plata. Por otra parte, los jóvenes volantones se reconocen porque son de tonos pardos, sin colores vistosos en la cabeza y sin el bello tono anaranjado que poseen los adultos, tanto machos como hembras. Su vuelo es rápido y potente. Las alas desplegadas facilitan la identificación del picogordo, pues muestran con claridad dos grandes manchas blancas. En vuelo también se aprecia una característica banda terminal blanca. A pesar de sus peculiares rasgos, no resulta sencillo detectar al picogordo. Ya sea en parejas o en pequeños bandos, pasa inadvertido con facilidad, pues se trata de un ave tímida, esquiva y muy silenciosa que pulula por la parte alta de las copas de los árboles.",
-    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Fringillidae",
-      "genus": "Coccothraustes"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Coccothraustes_coccothraustes_1_(Marek_Szczepanek).jpg?width=1280",
-    "imageAttribution": "Marek Szczepanek (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 11045,
     "rarityBasis": null
   },
   "Colchicum triphyllum": {
@@ -6593,31 +6162,6 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
-  },
-  "Curruca iberiae": {
-    "commonName": "Curruca iberiae",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": null,
-    "seasonality": "Marzo a septiembre",
-    "rarityScore": 1,
-    "description": null,
-    "descriptionSource": null,
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Sylviidae",
-      "genus": "Curruca"
-    },
-    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sylvia_inornata_iberiae_in_Portugal.jpg?width=1280",
-    "imageAttribution": "Rodrigo Saldanha de Almeida from Marco de Canaveses, Portugal (CC BY 2.0) · Wikimedia Commons",
-    "eidosTaxonId": 80943,
-    "rarityBasis": null
   },
   "Curruca melanocephala": {
     "commonName": "Curruca cabecinegra",
@@ -7642,35 +7186,6 @@
     },
     "descriptionSource": null
   },
-  "Emberiza citrinella": {
-    "commonName": "Escribano cerillo",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 2,
-    "description": "Se trata de un escribano de considerable tamaño y cola larga, en el que predominan los tonos acastañados, amarillentos y pardogrisáceos. El macho, durante la época de cría, luce la cabeza y el vientre de un brillante amarillo, con el característico antifaz de tres bandas propio de los escribanos muy desdibujado, casi inexistente, mientras que el pecho y el obispillo se tornan rojizos. La librea de la hembra se asemeja a la del macho durante el periodo invernal; en ella dominan las coloraciones más apagadas, grisáceas y pardas, con tonos amarillos más pálidos y menos extendidos. Los jóvenes se parecen mucho a las hembras, pero son más grisáceos, con apenas una leve tonalidad amarilla en la región ventral.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Emberizidae",
-      "genus": "Emberiza"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Emberiza_citrinella_-New_Zealand_-North_Island-8.jpg?width=1280",
-    "imageAttribution": "Alan Vernon (CC BY 2.0) · Wikimedia Commons",
-    "eidosTaxonId": 10911,
-    "rarityBasis": {
-      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
   "Enneapogon persicus": {
     "commonName": "Espartilla de Persia",
     "kingdom": "flora",
@@ -8307,31 +7822,6 @@
     },
     "descriptionSource": null
   },
-  "Erythropygia galactotes": {
-    "commonName": "Alzacola",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": null,
-    "seasonality": "Mayo a septiembre",
-    "rarityScore": 4,
-    "description": "Esta especie suele observarse en el suelo o posada en arbustos bajos. Es fácilmente reconocible por su larga cola, de coloración rojiza y extremo terminal con manchas blancas y negras, que frecuentemente alza, despliega y sacude de manera ostensible. También resulta distintivo su diseño facial, ya que posee una lista ocular fina oscura, que contrasta con una banda superciliar de color blanco crema. El resto de su plumaje presenta un tono ocre claro.",
-    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Muscicapidae",
-      "genus": "Cercotrichas"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Agrobate_roux_au_Parc_National_de_l'Ichkeul_(Tunisia)%2C_crop.jpg?width=1280",
-    "imageAttribution": "El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 11327,
-    "rarityBasis": null
-  },
   "Euphorbia characias": {
     "commonName": "Lletrera",
     "kingdom": "flora",
@@ -8528,64 +8018,6 @@
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Falco_columbarius_Male.jpg?width=1280",
     "imageAttribution": "Raj Boora from Edmonton, Canada (CC BY 2.0) · Wikimedia Commons",
-    "rarityBasis": {
-      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
-  "Falco eleonorae": {
-    "commonName": "Halcón de Eleonora",
-    "kingdom": "fauna",
-    "group": "Ave rapaz",
-    "habitat": "Estival presente de abril a primeros de noviembre",
-    "seasonality": "Mayo a octubre",
-    "rarityScore": 2,
-    "description": "Este halcón de mediano tamaño y aspecto estilizado se caracteriza por presentar varias fases de plumaje que nada tienen que ver con el sexo, pues machos y hembras se diferencian, además de por su tamaño —las hembras son mayores—, por tener la cera del pico, así como el anillo ocular, de diferente color (amarillo en el macho y grisáceo en la hembra). Los ejemplares adultos de plumaje más claro se parecen, en cierta medida, a un alcotán que tuviera las partes inferiores de color canela. Las zonas superiores y el píleo son de color pardo oscuro; las calzas y el vientre, rojizos y barrados; y las mejillas, pálidas y surcadas por una marcada bigotera. En el aire da la impresión de ser bastante oscuro por debajo, con las plumas de vuelo algo más pálidas. El adulto de plumaje intermedio es similar al anterior, pero las mejillas y el vientre resultan más oscuros, y carece de las tonalidades herrumbre de la fase clara. El adulto oscuro, por su parte, luce un plumaje completamente negruzco (aunque hay variantes de garganta y mejillas pálidas), algo más intenso en el dorso y ligeramente achocolatado —con un finísimo barrado apenas visible— en las regiones ventrales. En vuelo se ve un ave muy oscura, pero con las rémiges y rectrices más claras. El joven pálido es similar al adulto de la misma fase, pero más pardo en general y sin calzas rojizas, aunque con orlas claras en las plumas coberteras, lo que le da un cierto aspecto escamoso. El joven oscuro es completamente negruzco, con las rémiges y rectrices más pálidas y barradas.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Falconiformes",
-      "family": "Falconidae",
-      "genus": "Falco"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eleonorenfalke1.jpg?width=1280",
-    "imageAttribution": "Jürgen Dietrich (CC BY 3.0 de) · Wikimedia Commons",
-    "eidosTaxonId": 11198,
-    "rarityBasis": {
-      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
-  "Falco naumanni": {
-    "commonName": "Cernícalo primilla",
-    "kingdom": "fauna",
-    "group": "Ave rapaz",
-    "habitat": null,
-    "seasonality": "Marzo a septiembre",
-    "rarityScore": 2,
-    "description": "De aspecto bastante similar al del cernícalo vulgar, el primilla se distingue de este por su menor tamaño y por una serie de características morfológicas que algunas veces —como sucede con el color de las uñas: blancas en el primilla, negras en el vulgar— no son fácilmente identificables en el campo. El macho adulto tiene el dorso rojizo, sin manchas. La cabeza y las grandes coberteras son de color gris azulado; las plumas de vuelo, negras, y las partes inferiores, de un suave tono crema con tintes rosados y levemente tachonado de pintas oscuras. Carece de bigotera, a diferencia del cernícalo vulgar, y presenta la cera del pico y el anillo ocular de color amarillo. En vuelo ofrece un aspecto muy pálido, tanto en la cara inferior de las alas como en el cuerpo y la cola; esta es de color gris claro y aparece rematada por una banda terminal negra sobre la que destacan las rectrices centrales, que son más largas. La hembra luce un tono general bastante más apagado y homogéneo. Sus partes superiores son de color marrón rojizo, con un profuso barrado transversal, y las inferiores, muy claras, aunque con un moteado más abundante que el del macho. La bigotera resulta menos marcada que la de la hembra del cernícalo vulgar, y en vuelo las partes inferiores son más pálidas y menos barradas. El joven es muy similar a la hembra adulta y también a hembras y jóvenes de cernícalo vulgar. De los segundos se distingue por tener una bigotera poco marcada y ser menos barrado en la parte inferior.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Falconiformes",
-      "family": "Falconidae",
-      "genus": "Falco"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lesser_Kestrel_from_Fujeirah.jpg?width=1280",
-    "imageAttribution": "Shah Jahan (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 11817,
     "rarityBasis": {
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
@@ -8825,35 +8257,6 @@
     "eidosTaxonId": 288,
     "rarityBasis": null
   },
-  "Ficedula hypoleuca": {
-    "commonName": "Papamoscas cerrojillo",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": "Zonas boscosas,de caducifolios, robles,hayas,pinares de altura,sotos espesos.Migrac:muy repartido,",
-    "seasonality": "Abril, mayo, junio, agosto, septiembre, octubre",
-    "rarityScore": 2,
-    "description": "Es un paseriforme de pequeño tamaño, cuerpo compacto, cabeza ancha y pico fino. Fuera de la época de reproducción no hay diferencias entre los sexos en lo que al plumaje se refiere, ya que ambos lo poseen de color pardo claro por el dorso y blanco ocre en las partes inferiores. Los ojos, las patas y el pico son negros. En primavera, los machos adquieren un plumaje nupcial negro o marrón muy oscuro en las partes superiores, con una llamativa mancha blanca en la frente y un extenso panel blanco en las alas. Las partes inferiores se aclaran hasta adquirir un color blanco puro. A menudo queda algún resto de plumaje pardo en la cabeza o en las coberteras del hombro. Los jóvenes recién salidos del nido, por su parte, presentan un plumaje, en general, muy moteado de marrón claro y pardo, con aspecto escamoso.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Muscicapidae",
-      "genus": "Ficedula"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ficedula_hypoleuca_NRM.jpg?width=1280",
-    "imageAttribution": "Uploaded by Aelwyn with the permission of the Author, who works wit… (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 11483,
-    "rarityBasis": {
-      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
   "Filago mareotica": {
     "commonName": "Algodonosa",
     "kingdom": "flora",
@@ -9064,35 +8467,6 @@
     },
     "descriptionSource": null
   },
-  "Fringilla montifringilla": {
-    "commonName": "Pinzón real",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": null,
-    "seasonality": "Octubre a marzo",
-    "rarityScore": 2,
-    "description": "Los machos y hembras de pinzón real tienen el pecho y la garganta de color anaranjado pálido, el pico amarillento y el vientre blanco. En plumaje nupcial los machos presentan un intenso color negro en la cabeza, que comienzan a adquirir ya durante el invierno, junto con un pico que se muestra de color negro. Muy similar en forma y tamaño al pinzón vulgar, del que se diferencia por su conspicuo obispillo blanco y por carecer de las bandas blancas de las alas y la cola típicas de los pinzones vulgares.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Fringillidae",
-      "genus": "Fringilla"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pinson_du_nord.jpg?width=1280",
-    "imageAttribution": "Pierre Dalous (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 16433,
-    "rarityBasis": {
-      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
   "Fritillaria lusitanica": {
     "commonName": "Tablero de damas",
     "kingdom": "flora",
@@ -9124,31 +8498,6 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
-  },
-  "Fulica atra": {
-    "commonName": "Focha común",
-    "kingdom": "fauna",
-    "group": "Ave acuática",
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 1,
-    "description": "Este rálido robusto y de buen tamaño se caracteriza por presentar un plumaje prácticamente negro, a excepción de los flancos y las zonas inferiores, que adquieren un cierto tono grisáceo, y las puntas de las rémiges secundarias, que son blancas. El aspecto más llamativo de la anatomía de esta especie es la posesión de un escudete frontal blanco que se estrecha hacia la base del pico, también de color blanco. Fuera del agua es posible observar los peculiares dedos de la focha común, largos y festoneados por amplios lóbulos redondeados, diseñados para facilitar el avance del ave cuando nada. Los ejemplares jóvenes son bastante diferentes a los adultos, pues lucen una librea parduzca con matices grisáceos, que se aclara en la garganta y la cara; en ellos, el escudete es muy reducido y presenta una coloración ocrácea.",
-    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Gruiformes",
-      "family": "Rallidae",
-      "genus": "Fulica"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bl%C3%A4sshuhn_Fulica_atra_2_Richard_Bartz.jpg?width=1280",
-    "imageAttribution": "This picture was realized by Richard Bartz by using a Canon EF 70-3… (CC BY-SA 2.5) · Wikimedia Commons",
-    "eidosTaxonId": 10786,
-    "rarityBasis": null
   },
   "Fumana ericifolia": {
     "commonName": "Sillerilla",
@@ -9523,31 +8872,6 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Galium_verrucosum_Beta_macrocarpa_Sebkhat_Kelbia.jpg?width=1280",
     "imageAttribution": "Denis Barthel (CC BY-SA 3.0) · Wikimedia Commons",
     "eidosTaxonId": 4791,
-    "rarityBasis": null
-  },
-  "Gallinula chloropus": {
-    "commonName": "Gallineta común",
-    "kingdom": "fauna",
-    "group": "Ave acuática",
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 1,
-    "description": "La coloración de este rálido de mediano tamaño a cierta distancia parece uniformemente oscura, casi negra, aunque visto de cerca se puede apreciar cómo el dorso adquiere una tonalidad entre verdosa y olivácea, con abundantes brillos metálicos, mientras que la cabeza es de un intenso color pizarra, que se va tornando azulado a medida que alcanza la nuca. Las regiones inferiores del ave son de color gris oscuro, si bien los flancos resultan prácticamente negros y aparecen ribeteados por largas plumas blancas que definen una llamativa línea discontinua. De color blanco también son las infracoberteras caudales, las cuales dibujan un conspicuo parche que contrasta fuertemente con el resto del plumaje; esta región de la anatomía de la gallineta —denominada escudo anal— es usada como indicador de los estados de ánimo y a modo de mecanismo de comunicación intraespecífica. Las zonas desnudas de la gallineta común resultan también ciertamente llamativas y sufren algunas modificaciones durante la etapa de reproducción, en que se tornan más brillantes. Así, el iris —normalmente marronáceo— adquiere un intenso color carmesí; las patas toman una coloración amarillenta, que se transforma en roja en la mitad superior de la tibia, y el escudete frontal, al igual que el pico, adquiere una intensa tonalidad roja en fuerte contraste con la punta amarilla de este. Las gallinetas jóvenes, al contrario que los adultos, lucen una librea bastante modesta, en la que dominan los tonos marronáceos con tintes verdosos; además, carecen de escudete frontal y de los restantes ornamentos cromáticos propios de las aves maduras.",
-    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Gruiformes",
-      "family": "Rallidae",
-      "genus": "Gallinula"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Common_Moorhen_(Gallinella_d'Acqua)_(Gallinula_chloropus)_-_Cagliari%2C_Italy_2024-03-30.jpg?width=1280",
-    "imageAttribution": "Ryan Hodnett (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 10887,
     "rarityBasis": null
   },
   "Garrulus glandarius": {
@@ -10170,37 +9494,6 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
-  },
-  "Haematopus ostralegus": {
-    "commonName": "Ostrero euroasiático",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": "Playas y costa rocosa (invernante)",
-    "seasonality": "Otoño e invierno",
-    "rarityScore": 2,
-    "description": "Limícola grande, blanco y negro, con un pico rojo largo y aplanado que usa como cuña para abrir mejillones y berberechos. Sus patas son rosadas y su reclamo, un silbido agudo y penetrante que delata su presencia antes de verlo.",
-    "tips": [
-      "Pico rojo largo, recto y aplanado lateralmente",
-      "Contraste tajante entre el negro y el blanco",
-      "Silbido agudo y repetido, muy sonoro"
-    ],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Charadriiformes",
-      "family": "Haematopodidae",
-      "genus": "Haematopus"
-    },
-    "iucnGlobal": "LC",
-    "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo II parte B",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Haematopus_ostralegus_Norway.jpg?width=1280",
-    "imageAttribution": "Bjørn Christian Tørrissen (CC BY-SA 3.0) · Wikimedia Commons",
-    "rarityBasis": {
-      "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    }
   },
   "Halimione portulacoides": {
     "commonName": "Orzaga marina",
@@ -10996,38 +10289,6 @@
     "eidosTaxonId": 32238,
     "rarityBasis": null
   },
-  "Himantopus himantopus": {
-    "commonName": "Cigüeñuela",
-    "kingdom": "fauna",
-    "group": "Ave limícola",
-    "habitat": "Salinas, marismas, charcas someras y humedales salobres",
-    "seasonality": "Sobre todo de primavera a verano",
-    "rarityScore": 2,
-    "description": "Limícola blanca y negra de patas rosadas larguísimas, desproporcionadas para su tamaño, que le permiten caminar por aguas someras picoteando insectos en la superficie. Es ruidosa y muy territorial cerca del nido, y sobrevuela en círculos a quien se acerca.",
-    "tips": [
-      "Patas rojizas extremadamente largas, que sobresalen en vuelo",
-      "Contraste limpio de blanco y negro, con pico fino y recto",
-      "Reclamo insistente y chillón al sobrevolar al intruso"
-    ],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Charadriiformes",
-      "family": "Recurvirostridae",
-      "genus": "Himantopus"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011) · Anexo IV (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Himantopus_himantopus.jpg?width=1280",
-    "imageAttribution": "(Hans Hillewaert) (CC BY-SA 3.0) · Wikimedia Commons",
-    "rarityBasis": {
-      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
   "Hippocrepis ciliata": {
     "commonName": "herba de la herradura",
     "kingdom": "flora",
@@ -11441,31 +10702,6 @@
     "eidosTaxonId": 5356,
     "rarityBasis": null
   },
-  "Iduna opaca": {
-    "commonName": "Zarcero bereber",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": null,
-    "seasonality": "Abril a septiembre",
-    "rarityScore": 2,
-    "description": "Este paseriforme de pequeño tamaño muestra cierto parecido con el carricero común. Su cabeza presenta un perfil afilado debido a su frente aplanada y a su pico largo y fino. Posee el dorso gris parduzco uniforme, la zona ventral pálida y el obispillo verde parduzco con ligeros tintes grisáceos. La cola presenta, como en otros zarceros, un perfil terminal cuadrangular con márgenes blanquecinos y puntas blancas, lo que lo distingue del carricero común. Ambos sexos son iguales.",
-    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Acrocephalidae",
-      "genus": "Iduna"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Iduna_opaca_CDC_image.jpg?width=1280",
-    "imageAttribution": "Ana M. Palomar, Aránzazu Portillo, Paula Santibáñez, David Mazuelas… (Public domain) · Wikimedia Commons",
-    "eidosTaxonId": 16398,
-    "rarityBasis": null
-  },
   "Imperata cylindrica": {
     "commonName": "Cisca",
     "kingdom": "flora",
@@ -11870,35 +11106,6 @@
     "imageAttribution": "Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons",
     "eidosTaxonId": 10059,
     "rarityBasis": null
-  },
-  "Lanius excubitor": {
-    "commonName": "Alcaudón norteño",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": "Hábitat abierto,con o sin matorral,pero con árboles y arbustos desperdigados,monte,bosque..",
-    "seasonality": "Todo el año",
-    "rarityScore": 1,
-    "description": "Presenta una coloración muy pálida, con escaso contraste entre las zonas dorsales y las ventrales, a diferencia de su pariente, el alcaudón real —con el que resulta fácil de confundir—, cuyo dorso es de un gris plomizo, si bien las condiciones de luz pueden influir notablemente en estas apreciaciones. En el norteño, la máscara facial negra es más pequeña y con un perfil más cuadrado. El tamaño de la mancha alar blanca en el ala plegada puede ser un buen carácter diferenciador, pues en el alcaudón norteño es más grande que en el real, aunque menos conspicua por la palidez del plumaje. La coloración muy clara de algunos ejemplares de real fuera de la estación reproductora o de los jóvenes de esta especie en su primer invierno, así como la presencia de alcaudones reales fuera de su área habitual de distribución por causa de desplazamientos estacionales, inducen a veces a creer erróneamente que se trata de alcaudones norteños que invernan en nuestro país.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Laniidae",
-      "genus": "Lanius"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lanius_excubitor_1_(Marek_Szczepanek).jpg?width=1280",
-    "imageAttribution": "Marek Szczepanek (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 11236,
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
   },
   "Lanius meridionalis": {
     "commonName": "Alcaudón real",
@@ -13267,35 +12474,6 @@
     },
     "descriptionSource": null
   },
-  "Luscinia svecica": {
-    "commonName": "Pechiazul",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": null,
-    "seasonality": "Agosto a marzo",
-    "rarityScore": 2,
-    "description": "Pajarillo de figura rechoncha, cola larga y pico fino, con un plumaje en el que destaca su pechera manchada de azul, que en los machos adultos queda perfilada por una fina franja negra, rodeada a su vez por una más ancha banda anaranjada. Además, los machos poseen unas bigoteras teñidas de azul, que en algunas subespecies se funden con la garganta, igualmente azulada. Dependiendo también de la subespecie, el babero azul está adornado con una mancha, a modo de medalla, que puede ser blanca o naranja. La coloración de las hembras resulta menos llamativa. Suelen lucir poco azul en el pecho, a menudo tienen la garganta de color blanco crema, y la banda naranja del pecho está desdibujada. No obstante, las hembras de más edad pueden presentar una coloración similar a los machos. Ambos sexos poseen una distintiva línea blanca sobre el ojo y exhiben un dorso pardo-grisáceo. La cola, anaranjada en su mitad basal, está coloreada de negro o pardo muy oscuro en la parte exterior. Los volantones son pardos y moteados, como los juveniles de petirrojo y ruiseñor común. Sin embargo, los pechiazules juveniles se distinguen por tres detalles: la línea superciliar blanca, su garganta clara y la coloración naranja de la cola.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Muscicapidae",
-      "genus": "Luscinia"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Luscinia_svecica_volgae.jpg?width=1280",
-    "imageAttribution": "Bogomolov.PL (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 12282,
-    "rarityBasis": {
-      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
   "Lycium intricatum": {
     "commonName": "Cambrón",
     "kingdom": "flora",
@@ -14321,35 +13499,6 @@
     },
     "descriptionSource": null
   },
-  "Milvus milvus": {
-    "commonName": "Milano real",
-    "kingdom": "fauna",
-    "group": "Ave rapaz",
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 5,
-    "description": "En el plumaje de esta mediana rapaz dominan los tonos rojizos, profusamente rayados de oscuro en las regiones ventrales y con un característico aspecto orlado en el dorso debido a los bordes pálidos de las coberteras alares. La cabeza y el cuello, por su parte, presentan un tono gris pálido surcado por finas estrías muy oscuras. En vuelo resulta inconfundible, no solo por la extraordinaria habilidad con la que ejecuta todo tipo de maniobras y regates, sino por poseer una silueta característica, en la que destacan una cola profundamente ahorquillada, de color rojizo anaranjado, y unas largas alas acodadas y provistas de una mancha blanca muy visible. Cuando está posado, también resulta fácil diferenciarlo de otras rapaces de tamaño similar, además de por la forma de la cola, por poseer una figura bastante estilizada. Los jóvenes son similares a los adultos, aunque con una coloración general más clara y uniforme, sin el característico tono grisáceo de la cabeza y con la cola más corta y menos ahorquillada.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Accipitriformes",
-      "family": "Accipitridae",
-      "genus": "Milvus"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2020)",
-    "spainStatus": "CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Milvus_milvus_R(ThKraft).jpg?width=1280",
-    "imageAttribution": "Thomas Kraft (ThKraft) (CC BY-SA 2.5) · Wikimedia Commons",
-    "eidosTaxonId": 11737,
-    "rarityBasis": {
-      "categoria": "CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
   "Miniopterus schreibersii": {
     "commonName": "Murciélago de cueva",
     "kingdom": "fauna",
@@ -14682,35 +13831,6 @@
     "eidosTaxonId": 10648,
     "rarityBasis": {
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
-  "Motacilla cinerea": {
-    "commonName": "Lavandera cascadeña",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 1,
-    "description": null,
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Motacillidae",
-      "genus": "Motacilla"
-    },
-    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Grey_Wagtail.jpg?width=1280",
-    "imageAttribution": "User:Kclama (CC SA 1.0) · Wikimedia Commons",
-    "eidosTaxonId": 10897,
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     },
@@ -15194,35 +14314,6 @@
     "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
     "eidosTaxonId": 6504,
     "rarityBasis": null
-  },
-  "Neophron percnopterus": {
-    "commonName": "Alimoche común",
-    "kingdom": "fauna",
-    "group": "Ave rapaz",
-    "habitat": "Nidifica en cavidades de acantilados",
-    "seasonality": "Febrero a octubre",
-    "rarityScore": 4,
-    "description": "A medio camino entre las rapaces estrictamente carroñeras y las cazadoras, el alimoche es un ave de tamaño entre mediano y grande y aspecto completamente inconfundible. Los ejemplares adultos lucen un plumaje mayoritariamente blanco sucio —con algunas regiones teñidas de crema—, a excepción de las rémiges, que son completamente negras. En la anatomía de esta rapaz destacan, por otra parte, una llamativa gorguera de plumas desflecadas y un tanto desordenadas en la cabeza y el cuello —lo que le confiere un aire bastante peculiar—, además de la cara, que aparece desnuda y coloreada de un llamativo amarillo. Los jóvenes son mucho más oscuros, pues exhiben una librea parda que, a lo largo de sucesivas mudas, va pasando por diferentes patrones de coloración hasta llegar al plumaje definitivo cuando cuentan con cinco años. Los jóvenes presentan también la cara de color gris azulado. Otra de las características anatómicas del alimoche es la posesión de un pico fino y relativamente largo, que le impide desgarrar los cueros de los grandes cadáveres como hacen los buitres mayores, aunque le confiere, en cambio, una gran adaptabilidad a la hora de seleccionar el alimento. En vuelo, el adulto aparece como un ave muy blanca, en cuya silueta destacan las estrechas y largas alas y una cola larga, en forma de cuña, que dotan al ave de gran capacidad de maniobra. El joven, sin embargo, aunque mantiene la característica silueta de la especie, resulta muy oscuro.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Accipitriformes",
-      "family": "Accipitridae",
-      "genus": "Neophron"
-    },
-    "iucnGlobal": "EN — En peligro (Lista Roja mundial de la UICN, 2021)",
-    "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Egyptian_vulture_2.jpg?width=1280",
-    "imageAttribution": "Egyptian_vulture.jpg: Kousik Nandy derivative work: Robertonemo (talk) (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 11961,
-    "rarityBasis": {
-      "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
   },
   "Neotinea maculata": {
     "commonName": "Neotinea maculata",
@@ -16357,35 +15448,6 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
-  "Pandion haliaetus": {
-    "commonName": "Águila pescadora",
-    "kingdom": "fauna",
-    "group": "Ave rapaz",
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 4,
-    "description": "Rapaz de mediano tamaño. Los adultos poseen partes inferiores blancas, con un moteado variable en el pecho; los individuos que tienen un collar de estrías más marcado en el pecho suelen ser hembras. Como contraste presentan partes superiores muy oscuras. El píleo es blanco, y tras el ojo aparece una lista ocular, a modo de antifaz, que recorre parte del cuello. En vuelo exhiben una silueta bastante característica, con cola corta y alas relativamente estrechas y “anguladas”. Vistos desde abajo, el cuerpo y las partes anteriores del ala, blancas, contrastan con las franjas oscuras que recorren las plumas de vuelo. La cola muestra una sucesión de barras oscuras. El joven es muy similar, pero sus partes superiores parecen como escamadas —debido al borde pálido en las plumas— y, en vuelo, las secundarias resultan algo más pálidas que en los adultos, con un barreado más patente. Cuando el águila pescadora vuela en busca de alimento, es capaz de cernirse con profundos aleteos antes de lanzarse al agua para capturar los peces con sus garras.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Accipitriformes",
-      "family": "Pandionidae",
-      "genus": "Pandion"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
-    "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2010-kabini-osprey.jpg?width=1280",
-    "imageAttribution": "Yathin S Krishnappa (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 11421,
-    "rarityBasis": {
-      "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
   "Papaver dubium": {
     "commonName": "Ababol",
     "kingdom": "flora",
@@ -16614,35 +15676,6 @@
     "eidosTaxonId": 11650,
     "rarityBasis": {
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
-  "Passer domesticus": {
-    "commonName": "Gorrión común",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": "Ocupa ambientes de influencia eminentemente antrópica como son zonas agrícolas y zonas urbanizadas",
-    "seasonality": "Todo el año",
-    "rarityScore": 1,
-    "description": "Paseriforme de aspecto robusto y voluminoso, el gorrión común posee un pico fuerte y un plumaje dominado por los tonos pardos en el dorso —adornado con marcadas listas negras— y grisáceos en el obispillo, el pecho y el vientre. Los machos en época reproductora presentan el pico negro y el dorso de una tonalidad bastante rojiza, en tanto que el píleo toma un color gris y el babero se hace más extenso y oscuro. Los caracteres sexuales ligados al plumaje son visibles todo el año, aunque se van haciendo más patentes debido al desgaste progresivo de las plumas, que deja a la vista los colores internos de estas. Las hembras tienen el píleo marrón y presentan una línea clara tras el ojo; no lucen babero y su pico es siempre grisáceo hacia el extremo y amarillento en la base. Los jóvenes machos, por su parte, son indistinguibles de las hembras hasta que realizan la muda de finales de verano, cuando adquieren los colores del adulto.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Passeridae",
-      "genus": "Passer"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Huismus%2C_man.jpg?width=1280",
-    "imageAttribution": "JrPol (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 11176,
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     },
@@ -16934,31 +15967,6 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
-  },
-  "Phalacrocorax carbo": {
-    "commonName": "Cormorán grande",
-    "kingdom": "fauna",
-    "group": "Ave acuática",
-    "habitat": "Acuático,tanto en zonas marinas como interiores.Acantilados,ríos, embalses, lagunas..",
-    "seasonality": "Todo el año",
-    "rarityScore": 1,
-    "description": null,
-    "descriptionSource": null,
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Suliformes",
-      "family": "Phalacrocoracidae",
-      "genus": "Phalacrocorax"
-    },
-    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Phalacrocorax_carbo_Vic.jpg?width=1280",
-    "imageAttribution": "JJ Harrison (https://www.jjharrison.com.au/) (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 10965,
-    "rarityBasis": null
   },
   "Phillyrea angustifolia": {
     "commonName": "Labiérnago",
@@ -18170,35 +17178,6 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
-  "Pterocles orientalis": {
-    "commonName": "Ganga ortega",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 4,
-    "description": "Ave de hábitos terrestres, compacta, corpulenta y de colores miméticos. El macho posee tonos grises en la cabeza y el cuello, excepto en la garganta, naranja y con la base negra. Una banda pectoral negra delimita el pecho asalmonado, mientras que el vientre se muestra llamativamente negro. El dorso y las alas plegadas exhiben grandes ocelos dorados sobre un fondo grisáceo. La cola es corta, vermiculada por arriba y blanca con banda subterminal negra por abajo. Tiene grises el pico y las patas, estas últimas de dedos cortos y con la parte anterior del tarso emplumada en blanco. Se distingue de la ganga ibérica por su mayor tamaño, su vientre negro y su cola más corta, sin las largas plumas centrales. La hembra resulta menos vistosa que el macho, con un patrón general terroso muy vermiculado, tanto en el dorso como en el pecho, el píleo y la nuca. Además de la banda pectoral y el vientre negro, tiene una pequeña línea negra en la garganta, mientras que posee un pecho. Los jóvenes son una versión más pálida y menos contrastada de los adultos de cada sexo. Se trata de una especie de hábitos gregarios, más marcados fuera de la época de cría, y a la que se suele ver en pequeños grupos. Su vuelo es poderoso y de batir lento, y cuando vuela muestra sus alas apuntadas, blancas y negras por abajo.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Pteroclidiformes",
-      "family": "Pteroclididae",
-      "genus": "Pterocles"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
-    "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pterocles_orientalis_(Charyn).jpg?width=1280",
-    "imageAttribution": "Ron Khight (CC BY 2.0) · Wikimedia Commons",
-    "eidosTaxonId": 11909,
-    "rarityBasis": {
-      "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
   "Ptyonoprogne rupestris": {
     "commonName": "Avión roquero",
     "kingdom": "fauna",
@@ -18521,35 +17500,6 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Firecrest93.JPG?width=1280",
     "imageAttribution": "NAUMANN, NATURGESCHICHTE DER VÖGEL MITTELEUROPAS: Band II, Tafel 15… (Public domain) · Wikimedia Commons",
     "eidosTaxonId": 11499,
-    "rarityBasis": {
-      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
-  "Regulus regulus": {
-    "commonName": "Reyezuelo sencillo",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 2,
-    "description": "Junto a su cercano pariente, el listado, el reyezuelo sencillo es una de las aves más pequeñas de Europa. Presenta el dorso verdoso, con alas más oscuras sobre las que destaca una franja blanquecina. Se diferencia de su pariente por carecer de la lista superciliar clara, así como de la lista ocular negra. Dos tiras negras —que no se unen en la frente— surcan su píleo, flanqueando una tercera banda frontal más ancha de color naranja en los machos y amarillo en las hembras. Los jóvenes carecen de todas estas listas.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Regulidae",
-      "genus": "Regulus"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%96%D0%B5%D0%BB%D1%82%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D1%80%D0%BE%D0%BB%D1%91%D0%BA_(Regulus_regulus)%2C_%D0%91%D0%B8%D1%82%D1%86%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BB%D0%B5%D1%81.jpg?width=1280",
-    "imageAttribution": "Dion Art (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 12088,
     "rarityBasis": {
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
@@ -18956,35 +17906,6 @@
     "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
     "eidosTaxonId": 7766,
     "rarityBasis": null
-  },
-  "Riparia riparia": {
-    "commonName": "Avión zapador",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": "Cría:en colonias excadas en taludes arenosos junto a ríos o lagos,muros.Dormideros en carrizales",
-    "seasonality": "Marzo a septiembre",
-    "rarityScore": 2,
-    "description": "Se trata del menor de nuestros aviones y golondrinas, aunque sólo es ligeramente más pequeño que el resto. Exhibe partes superiores de color pardo mate e inferiores blanquecinas, con límites netos entre ambas. Posee alas largas y apuntadas, que en vuelo destacan por su parte inferior y anterior más oscura. Tiene cola corta levemente ahorquillada, patas cortas sin emplumar, boca muy ancha, y pico corto, plano y negro. Resulta característica la ancha banda transversal de color pardo en el pecho. Ambos sexos son iguales. Los jóvenes, muy similares a los adultos, presentan la cabeza, el cuello y el bajo vientre teñidos de color cremarojizo, en tanto que las plumas del dorso y la cabeza muestran bordes pálidos. El avión zapador suele observarse en grupos, tanto en vuelo como posado en taludes y cables, y está más ligado al agua que otros aviones y golondrinas.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Hirundinidae",
-      "genus": "Riparia"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Riparia_riparia.jpg?width=1280",
-    "imageAttribution": "Axel Strauß (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 12097,
-    "rarityBasis": {
-      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
   },
   "Rosa canina": {
     "commonName": "Espino",
@@ -21119,35 +20040,6 @@
     },
     "descriptionSource": null
   },
-  "Streptopelia decaocto": {
-    "commonName": "Tórtola turca",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 1,
-    "description": "Ave de mediano tamaño, similar a la tórtola europea, aunque ligeramente mayor. Se caracteriza por sus tonos ante pálidos y su cola alargada, con el extremo blanco y la base negra. Presenta un fino collar negro, que se extiende por los laterales del cuello, pero que está ausente en los juveniles. Ambos sexos son similares. Tiene un vuelo rápido y ligero, con potentes batidos de alas.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Columbiformes",
-      "family": "Columbidae",
-      "genus": "Streptopelia"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eurasian_Collared_Dove%2C_England_RWD2.jpg?width=1280",
-    "imageAttribution": "DickDaniels (http://theworldbirds.org/) (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 11135,
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
   "Streptopelia turtur": {
     "commonName": "Tórtola europea",
     "kingdom": "fauna",
@@ -21237,31 +20129,6 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
-  },
-  "Sturnus vulgaris": {
-    "commonName": "Estornino pinto",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 1,
-    "description": "Ave de mediano tamaño, compacta, con patas fuertes y cortas de color rosado, y pico puntiagudo. Exhibe un plumaje de color negro dominante, con reflejos violáceos y púrpuras, y con un moteado variable de pintas blanco-amarillentas. En invierno, el moteado resulta especialmente intenso, mientras que en verano es menos evidente. Tiene el pico de color amarillo en verano y negro en invierno. Los jóvenes presentan tonos pardo-grisáceos. Se trata de un pájaro similar al mirlo común, aunque se desplaza más erguido, andando y no a saltos. Posee un vuelo rápido y directo.",
-    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Sturnidae",
-      "genus": "Sturnus"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/European_Starling_2006.jpg?width=1280",
-    "imageAttribution": "http://www.naturespicsonline.com/ (CC BY-SA 2.5) · Wikimedia Commons",
-    "eidosTaxonId": 12415,
-    "rarityBasis": null
   },
   "Suaeda maritima": {
     "commonName": "Sosa blanca",
@@ -21411,35 +20278,6 @@
     },
     "descriptionSource": null
   },
-  "Sylvia borin": {
-    "commonName": "Curruca mosquitera",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": "Campiñas verdes,sotos,orlas de bosque,zonas de vegetación ribereña,masas arboladas con sotobosque..",
-    "seasonality": "Abril, mayo, agosto, septiembre, octubre",
-    "rarityScore": 2,
-    "description": "Pajarillo de fisonomía más compacta y robusta que la de otras currucas —aunque bastante similar a la de la curruca capirotada—, con cabeza más redondeada y pico más corto y grueso. Un fino anillo orbital rodea al ojo. De todas formas, se trata de un ave que no cuenta con rasgos distintivos realmente identificativos o llamativos, y su aspecto general resulta bastante uniforme. Presenta las partes ventrales de color ante pálido y el dorso pardo-grisáceo. En torno a su cuello destaca ligeramente un discreto collar más grisáceo. Ambos sexos son iguales.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Sylviidae",
-      "genus": "Sylvia"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sylvia_borin_(%C3%96rebro_County).jpg?width=1280",
-    "imageAttribution": "Biillyboy (CC BY 2.0) · Wikimedia Commons",
-    "eidosTaxonId": 10728,
-    "rarityBasis": {
-      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
   "Sylvia communis": {
     "commonName": "Curruca zarcera",
     "kingdom": "fauna",
@@ -21505,7 +20343,13 @@
     "habitat": null,
     "seasonality": "Todo el año",
     "rarityScore": 1,
+    "rarityBasis": {
+      "categoria": "Sin figura de protección",
+      "ambito": "estatal",
+      "origen": "spainStatus del catálogo universal"
+    },
     "description": null,
+    "descriptionSource": null,
     "tips": [],
     "taxonomy": {
       "kingdom": "Animalia",
@@ -21518,14 +20362,7 @@
     "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dartford_Warbler_Provencegrasm%C3%BCcke_(Sylvia_undata)_by_J._Dietrich.jpg?width=1280",
-    "imageAttribution": "J. Dietrich (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 80230,
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
+    "imageAttribution": "J. Dietrich (CC BY-SA 3.0) · Wikimedia Commons"
   },
   "Tachybaptus ruficollis": {
     "commonName": "Zampullín común",
@@ -21581,35 +20418,6 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tachymarptis_melba_-Barcelona%2C_Spain_-flying-8.jpg?width=1280",
     "imageAttribution": "Birdwatching Barcelona (CC BY-SA 2.0) · Wikimedia Commons",
     "eidosTaxonId": 24459,
-    "rarityBasis": {
-      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
-  "Tadorna tadorna": {
-    "commonName": "Tarro blanco",
-    "kingdom": "fauna",
-    "group": "Ave acuática",
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 2,
-    "description": "Anátida intermedia (por forma y comportamiento) entre un ganso y un pato típicos, que presenta las patas muy centradas en el cuerpo, en una posición que facilita la acción de pastar. Su coloración general es blanca, con el dorso más oscuro (verdoso) y un ancho collar pardorrojizo en el pecho. La cabeza y el cuello son de un verde oscuro, a modo de capuchón. El pico rojo posee un llamativo abultamiento en la frente de los machos. Los jóvenes son mucho más pálidos, sin collar y sin capucha definida, con el dorso pardo escamado, cabeza y cuello oscuros, cara blanquecina y pico rosado. En vuelo, las primarias y secundarias, de color muy oscuro —las últimas de un tono verde botella—, contrastan con el tono general blanco.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Anseriformes",
-      "family": "Anatidae",
-      "genus": "Tadorna"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Common_Shellduck_(Tadorna_tadorna)_(26499348215).jpg?width=1280",
-    "imageAttribution": "Bernard DUPONT from FRANCE (CC BY-SA 2.0) · Wikimedia Commons",
-    "eidosTaxonId": 12286,
     "rarityBasis": {
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
@@ -22815,35 +21623,6 @@
     "eidosTaxonId": 9051,
     "rarityBasis": null
   },
-  "Tringa ochropus": {
-    "commonName": "Andarríos grande",
-    "kingdom": "fauna",
-    "group": "Ave limícola",
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 2,
-    "description": "Se trata de un ave limícola de tamaño entre pequeño y mediano, de aspecto estilizado, con patas de mediana longitud que apenas sobresalen de la cola en vuelo, y pico igual a la longitud de la cabeza. Como otros andarríos, cuando está posado suele realizar un continuo movimiento de balanceo. La coloración es bastante oscura en la región dorsal, en marcado contraste con la garganta y las zonas ventrales, de color blanco. Presenta un límite nítido entre el pecho oscuro y el vientre blanco. Las patas son de color grisáceo oscuro y muestra también una ceja blanca, que es corta y solo se extiende entre el pico y el ojo. El adulto en plumaje nupcial exhibe numerosas pintas blancas en las partes superiores, que destacan notablemente sobre el fondo marrón oscuro. El píleo, el cuello y el pecho aparecen listados de marrón y blanco. Los ejemplares no reproductores presentan motas menos destacadas, de color ante apagado, el píleo apenas estriado de claro y el pecho grisáceo, con un estriado más difuso. El juvenil, por su parte, es semejante al adulto no reproductor, pero con las pintas de las partes superiores más conspicuas y con un estriado menos definido en el pecho. El andarríos grande es un ave tímida y nerviosa, a la que, normalmente, no se descubre hasta que alza el vuelo. En ese momento resulta fácil de identificar debido a su color muy oscuro, en el que resalta el obispillo blanco y el barrado transversal de la cola",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Charadriiformes",
-      "family": "Scolopacidae",
-      "genus": "Tringa"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Green_Sandpiper_(Tringa_ochropus)-_In_Breeding_plumage_at_Bharatpur_I_IMG_5533.jpg?width=1280",
-    "imageAttribution": "J.M.Garg (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 11885,
-    "rarityBasis": {
-      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
   "Tripodion tetraphyllum": {
     "commonName": "Garbancito",
     "kingdom": "flora",
@@ -22897,31 +21676,6 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
-  },
-  "Turdus iliacus": {
-    "commonName": "Zorzal alirrojo",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": null,
-    "seasonality": "Octubre a marzo",
-    "rarityScore": 3,
-    "description": "El alirrojo es un zorzal de pequeño tamaño, compacto y de cola relativamente corta, que no presenta un dimorfismo sexual muy evidente. Su plumaje es marrón-grisáceo en el dorso y blanco con listas oscuras hacia las regiones ventrales. Los flancos y la parte inferior de las alas lucen un tono rojizo bastante intenso, que es visible en vuelo y constituye un buen indicio para diferenciarlo de especies próximas. Otro rasgo llamativo en su diseño es la presencia de una marcada ceja y una bigotera blancas, distinguibles incluso a cierta distancia. Suele moverse en grupos numerosos durante el invierno, a menudo en compañía de otros zorzales.",
-    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Turdidae",
-      "genus": "Turdus"
-    },
-    "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2017)",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Redwing_Turdus_iliacus.jpg?width=1280",
-    "imageAttribution": "Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons",
-    "eidosTaxonId": 16394,
-    "rarityBasis": null
   },
   "Turdus merula": {
     "commonName": "Turdus merula",
@@ -23035,35 +21789,6 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mistle_thrush.jpg?width=1280",
     "imageAttribution": "autor no indicado (Public domain) · Wikimedia Commons",
     "eidosTaxonId": 12408,
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
-  "Tyto alba": {
-    "commonName": "Lechuza común",
-    "kingdom": "fauna",
-    "group": "Ave rapaz nocturna",
-    "habitat": "Es una especie típica de paisajes humanizados con áreas agrícolas en mosaico",
-    "seasonality": "Todo el año",
-    "rarityScore": 1,
-    "description": "El único representante de la familia Tytonidae en territorio europeo es una rapaz de tamaño medio, aspecto esbelto, largas patas y voluminosa cabeza, que luce un contrastado plumaje en el que predominan los tonos leonados y dorados en el dorso y el blanco puro —incluso ligeramente plateado— en las zonas ventrales. Las plumas dorsales y la parte superior de las alas y la cola aparecen finamente vermiculadas por sutiles punteados de color negro, gris y blancuzco, en tanto que las regiones ventrales pueden mostrar un moteado variable. En el rostro —inconfundible por su forma de corazón— destacan los ojos intensamente negros y el prominente pico de color claro. Los jóvenes poseen un plumaje muy similar al de los adultos, de los que se diferencian por sutiles detalles, difíciles de distinguir en el campo. El vuelo de esta rapaz nocturna —de alas largas y relativamente anchas— es elegante, silencioso y ágil gracias al escaso peso del ave. No es raro ver a la lechuza cernirse hábilmente sobre un punto, mientras escudriña el terreno en busca de presas.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Strigiformes",
-      "family": "Tytonidae",
-      "genus": "Tyto"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tyto_alba_close_up.jpg?width=1280",
-    "imageAttribution": "Stevie B (CC BY 2.0) · Wikimedia Commons",
-    "eidosTaxonId": 10650,
     "rarityBasis": {
       "categoria": "Sin figura de protección",
       "ambito": "estatal",

@@ -32,7 +32,7 @@ flowchart TD
     EIDOS["EIDOS — IEPNB (PostgREST, sin auth)<br/>taxonomía · UICN por ámbito · estado legal"]
     UICN["UICN Red List — fallback conservación"]
     GBIF["GBIF — ocurrencias georreferenciadas<br/>api.gbif.org (nodo GBIF.ES)"]
-    BISE["EEA Discodata — BISE.Site_Species_List<br/>especies oficiales por espacio Natura 2000"]
+    RN2K["IEPNB — Red Natura 2000 (api/rn2000)<br/>Formulario Normalizado de Datos: especies oficiales por sitio"]
     ATLAS["Atlas y Manual de los Hábitats de España<br/>especies características por código HIC"]
   end
 
@@ -45,8 +45,8 @@ flowchart TD
   HIC -->|"reproyectar UTM→WGS84<br/>join por CODIGO<br/>recortar al límite del parque"| H
   P --> H
   ATLAS -->|"característica (por código HIC)"| S
-  GBIF -->|"observada_gbif (∩ polígono, sin Aves)"| S
-  BISE -->|"aves ZEPA (por site_code)"| S
+  GBIF -->|"observada_gbif (∩ polígono)"| S
+  RN2K -->|"lista_oficial_sitio (puerta de las aves, por site_code)"| S
   EIDOS -->|"estado/taxonomía · PRINCIPAL"| S
   UICN -->|"fallback"| S
   H --> S
@@ -95,13 +95,16 @@ Cada **región = código de provincia `NN`** (Murcia = 30). Dos ficheros por reg
 |---|---|---|---|
 | **EIDOS** (IEPNB) | **Principal**: taxonomía, nombres, **UICN por ámbito**, estado legal | PostgREST `https://iepnb.gob.es/api/especie/` (sin auth) | `v_taxonomia` (resuelve `taxonid` por `name=like.Genus species*`); en las vistas de detalle la clave es **`idtaxon`**. `v_estadoconservacion` (`aplicaa`=Mundial/España/Península/Canarias, `anio`, `vigencia`), `v_estadolegal` (`ambito`,`ccaa`), `v_atributos_pliniancore` (`Hábitat`, `Fitosociología`) |
 | **UICN Red List** | **Fallback** de conservación cuando EIDOS no cubre | API UICN | ~54/124 especies del piloto sin dato UICN en EIDOS (sobre todo flora) |
-| **GBIF** | **Empírico**: especies observadas ∩ polígono de hábitat | `https://api.gbif.org/v1/occurrence/search` | Descargar por bbox del parque, paginar, **point-in-polygon local** contra las geometrías. **Filtrar Aves** (88% de las ocurrencias = ruido espacial). El filtro por incertidumbre NO sirve (solo 14% la declaran). |
-| **EEA Discodata (BISE)** | **Oficial por espacio**: especies del LIC/ZEC/ZEPA | `https://discodata.eea.europa.eu/sql?query=...` (URL-encode; bloquea tablas de sistema) | Tabla `[BISE].[latest].[Site_Species_List]` — columnas `site_code, species_group_name, id_eunis, scientific_name, common_name`. Filtrar por `site_code` del parque |
+| **GBIF** | **Empírico**: especies observadas ∩ polígono de hábitat | `https://api.gbif.org/v1/occurrence/search` | Descargar por bbox del parque, paginar, **point-in-polygon local** contra las geometrías. Las **Aves** son el 88 % de las ocurrencias y casi todo ruido espacial, así que **no entran por aquí**: GBIF es su confirmación, no su puerta (ver §4, paso 3). El filtro por incertidumbre NO sirve (solo 14% la declaran). |
+| **Red Natura 2000 (IEPNB)** | **Oficial por sitio**: las especies del Formulario Normalizado de Datos del LIC/ZEC/ZEPA | `https://iepnb.gob.es/api/rn2000/` (PostgREST, sin auth) | `v_cntr_site`, `v_cntr_species` (sección 3.2) y `v_cntr_other_species` (sección 3.3), filtrando por `site_code`. Lo trae `especies-sitio-rn2000.js`. **Mismo host que EIDOS.** Sustituye a EEA Discodata/BISE, que publica el mismo dato reexportado y cuyo host está fuera de la política de egreso (403 al CONNECT): esa fuente inalcanzable es la que dejó 366 fichas de ave con una nota de revisión que nadie podía cerrar |
 | **Atlas y Manual de los Hábitats de España** | **Característica por HIC** (backbone determinista) | Documental (MITECO), PDF en `Docs/Atlas y Manual de los Habitat de Espana.pdf` | Da la lista de especies típicas por código HIC; es el filtro de cordura sobre GBIF. Extraído con `pdftotext` y cruzado por `atlas-hic-especies.js` (ver §5) |
 
-**Las aves NO se asignan a hábitats** (vuelan): van a un **apartado propio a nivel de parque
-(migratorias/ZEPA)**, contrastado con la lista oficial de la ZEPA (Discodata BISE). En el piloto,
-GBIF recuperó ~31/34 de las aves oficiales de la ZEPA ES0000261.
+**Las aves NO se asignan a hábitats** (vuelan): van a un **apartado propio a nivel de parque**, y su
+puerta de entrada es la **lista oficial del sitio**, no GBIF. En el piloto, GBIF recuperó ~31/34 de las
+aves oficiales de la ZEPA ES0000261 — que es justo el motivo por el que GBIF sirve para CONFIRMAR y no
+para decidir: recupera casi todas las oficiales, y además otras tantas que ninguna lista nombra. Medido
+sobre los ocho espacios cerrados antes de aplicar la regla: 557 aves fichadas frente a 154 que las
+listas oficiales declaran.
 
 > **Reconciliación taxonómica (transversal y obligatoria).** Las tres fuentes usan nomenclaturas
 > distintas y reclasifican (Larus→Ichthyaetus/Chroicocephalus, Salvia rosmarinus→Rosmarinus,
@@ -140,8 +143,8 @@ Propiedades por hábitat en el geojson (ya implementadas en el piloto): `code`(H
 3. **Especies**
    1. **EIDOS** (principal) + **UICN** (fallback) → taxonomía + estado por especie.
    2. **Atlas de Hábitats** → especies características por HIC (`atlas-hic-especies.js`) → backbone determinista y filtro de cordura.
-   3. **GBIF** ∩ polígonos de hábitat, **sin Aves** → `observada_gbif`.
-   4. **Aves** → apartado migratorias/ZEPA, contrastado con **Discodata BISE** por `<SITE_CODES>`.
+   3. **GBIF** ∩ polígonos de hábitat → `observada_gbif`. En las aves esto es CONFIRMACIÓN, no puerta.
+   4. **Lista oficial del sitio** (`especies-sitio-rn2000.js`, secciones 3.2 y 3.3 del FND por `<SITE_CODES>`) → `lista_oficial_sitio`. Es la **puerta de las aves**: sin respaldo de sitio —formulario oficial o anexo normativo— un ave no se aprueba, porque contar sus ocurrencias dentro de un polígono no mide su pertenencia al espacio.
 4. **Reconciliación taxonómica** con `eidos_taxonid`/`speciesKey` como clave maestra.
 5. **Adoptar** la capa fusionada como la del espacio (`adopt-habitats.js`).
 6. **Validar** (`npm run validate`) y cuadrar contadores hábitat/especie.
