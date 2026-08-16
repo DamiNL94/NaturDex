@@ -9,9 +9,11 @@
  * Era el último paso de la Capa 3 sin herramienta. `gbif-habitats.js` da los candidatos y
  * `build-species-n2.js` sabe escribirlos, pero entre los dos había un fichero
  * —`out/<slug>-seleccion-especies.json`— que alguien tenía que producir a mano cruzando GBIF con
- * EIDOS especie por especie. En Carrascoy fueron 625 candidatos para 245 aprobadas; hacerlo a mano
- * otra vez en el espacio siguiente no es lento, es **irreproducible**: nadie puede comprobar después
- * por qué entró una y no otra.
+ * EIDOS especie por especie. En Sierra de la Pila fueron 625 candidatos para 249 aprobadas; hacerlo
+ * a mano otra vez en el espacio siguiente no es lento, es **irreproducible**: nadie puede comprobar
+ * después por qué entró una y no otra. (Aquí ponía «en Carrascoy fueron 625 candidatos»: los 625 son
+ * de Sierra de la Pila. Carrascoy tiene 1.456, y la cifra equivocada llegó a repetirse en un commit
+ * y en un informe antes de que alguien la cotejara.)
  *
  * Los filtros encadenados, que son los que fijó la selección de Carrascoy y aquí se aplican
  * igual para todos los espacios:

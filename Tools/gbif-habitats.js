@@ -127,48 +127,48 @@ const httpGetJson = (pathQuery) => require('./lib/http').getJson(gbif.HOST, path
 const PAGINAS_POR_VOLCADO = 10;
 
 /*
- * El bbox de un parque grande no se puede paginar, y por eso el catálogo salía truncado.
+ * El bbox de un parque grande no se puede paginar, y por eso el barrido salía truncado.
  *
  * El bbox de Carrascoy y El Valle tiene **97.362 ocurrencias** —es un rectángulo que se come media
  * huerta de Murcia—, que a 300 por página son 325 páginas, y GBIF cobra el paginado profundo: la
  * página del offset 10.000 tarda 37 s. La descarga no termina nunca. Lo que se hizo la primera vez
- * fue dejar `--max-occ` en su valor por defecto, 40.000, que **trunca por offset**: el catálogo del
- * espacio se construyó con el 41 % de los datos y con el sesgo de que el offset no es una muestra al
- * azar.
+ * fue dejar `--max-occ` en su valor por defecto, 40.000, que **trunca por offset**, y el offset no
+ * es una muestra al azar.
+ *
+ * **Cuánto costó, medido y no supuesto**: el volcado truncado traía 1.460 especies dentro de los
+ * polígonos de hábitat y el completo trae 1.456, así que en DIVERSIDAD la pérdida fue casi nula —lo
+ * que se cortaba eran repeticiones de lo mismo—. Lo que sí falseaba es el **número de registros por
+ * especie**, que es lo que lee el filtro de presencia. Conviene decirlo con precisión: el salto de
+ * 245 a 466 fichas que dio la regeneración de este espacio **no** lo produjo la truncadura, sino la
+ * corrección de la métrica de mosaico. Las dos cosas son defectos reales y son distintas.
  *
  * Se arregla pidiéndole el filtro espacial a GBIF en vez de traerse el rectángulo entero. GBIF acepta
  * `geometry=<WKT>`, con dos exigencias que no perdona: el anillo tiene que estar **cerrado** y
  * orientado **antihorario** —22 de los 51 recintos de Carrascoy salían del `.shp` en horario y
- * devolvían 400—. El límite oficial trae 2.100 vértices y no cabe en una URL, así que se simplifica
- * con Douglas-Peucker hasta un puñado y **se simplifica siempre hacia fuera**: lo que se manda es un
- * superconjunto del límite, nunca un recorte. Quien decide de verdad si una ocurrencia cuenta sigue
- * siendo el punto-en-polígono LOCAL contra cada hábitat, que no ha cambiado; esto solo evita
- * descargar la mitad de la Región.
+ * devolvían 400—.
  *
- * En Carrascoy: 97.362 → 29.915. Si GBIF rechaza la geometría, se vuelve al bbox **diciéndolo**.
+ * QUÉ POLÍGONO SE MANDA, Y POR QUÉ NO ES EL LÍMITE SIMPLIFICADO
+ * -------------------------------------------------------------
+ * El primer intento simplificaba el límite oficial —2.100 vértices no caben en una URL— con
+ * Douglas-Peucker, dando por hecho que eso «simplifica hacia fuera». **No es verdad, y no lo es de
+ * una forma que no se ve**: Douglas-Peucker corta esquinas hacia DENTRO tanto como hacia fuera, y
+ * medido sobre Carrascoy dejaba el **7,83 % de los vértices de hábitat fuera** del polígono que se
+ * le pedía a GBIF. La consecuencia es la peor posible aquí: ocurrencias que sí están dentro de un
+ * hábitat y que nunca llegan a descargarse, sin que nada lo advierta.
+ *
+ * Lo que se manda es el **casco convexo de los polígonos de hábitat**, que es la geometría cuyo
+ * interior va a comprobar después el punto-en-polígono local. Un casco convexo contiene todos sus
+ * puntos **por construcción**: no hay epsilon, no hay error de aproximación y no hay nada que
+ * confiar. Se descarga de más —para Carrascoy, 41.858 en vez de las 29.915 del límite recortado—, y
+ * eso es exactamente lo que se quiere: de más se filtra localmente, de menos no se recupera.
+ *
+ * Y por si acaso, se comprueba: antes de usarla, `cubreLosHabitats()` verifica vértice a vértice que
+ * ningún punto de ningún hábitat quede fuera. Si quedara, se descarga por bbox y se dice. La
+ * suposición que falló está ahora escrita como invariante que se mira.
  */
-const EPSILON_SIMPLIFICADO = 0.001;   // ~90 m: suficiente para bajar de 2.100 vértices a ~130
 const MAX_VERTICES_WKT = 200;         // por encima, la URL se va de tamaño
 
-function simplifica(pts, eps) {
-  if (pts.length < 3) return pts;
-  const dist = (q, a, b) => {
-    const dx = b[0] - a[0], dy = b[1] - a[1], L = dx * dx + dy * dy;
-    if (!L) return Math.hypot(q[0] - a[0], q[1] - a[1]);
-    let t = ((q[0] - a[0]) * dx + (q[1] - a[1]) * dy) / L;
-    t = Math.max(0, Math.min(1, t));
-    return Math.hypot(q[0] - (a[0] + t * dx), q[1] - (a[1] + t * dy));
-  };
-  let idx = 0, max = 0;
-  for (let i = 1; i < pts.length - 1; i++) {
-    const d = dist(pts[i], pts[0], pts[pts.length - 1]);
-    if (d > max) { max = d; idx = i; }
-  }
-  if (max <= eps) return [pts[0], pts[pts.length - 1]];
-  return simplifica(pts.slice(0, idx + 1), eps).slice(0, -1).concat(simplifica(pts.slice(idx), eps));
-}
-
-/** Casco convexo (Andrew). Se usa cuando el límite tiene varios anillos: un WKT es un polígono. */
+/** Casco convexo (Andrew). Contiene todos sus puntos de entrada por construcción. */
 function cascoConvexo(pts) {
   const cruz = (o, a, b) => (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0]);
   const s = [...pts].sort((a, b) => a[0] - b[0] || a[1] - b[1]);
@@ -191,23 +191,52 @@ function wktAntihorario(pts) {
   return `POLYGON((${cerrado.map(c => `${c[0].toFixed(4)} ${c[1].toFixed(4)}`).join(',')}))`;
 }
 
-/** El WKT con el que pedirle a GBIF que filtre, o null si no se puede construir uno razonable. */
-function geometriaDelLimite(boundaryPath) {
-  if (!boundaryPath || !fs.existsSync(boundaryPath)) return null;
-  const g = JSON.parse(fs.readFileSync(boundaryPath, 'utf8'));
-  const anillos = [];
-  for (const f of g.features || [g]) {
-    const geo = f.geometry || f;
-    if (geo.type === 'Polygon') anillos.push(geo.coordinates[0]);
-    else if (geo.type === 'MultiPolygon') for (const poly of geo.coordinates) anillos.push(poly[0]);
+/**
+ * ¿Está el punto dentro de un polígono CONVEXO, contando el borde como dentro?
+ * `anillo` viene de `cascoConvexo`, que lo devuelve en sentido antihorario, así que un punto interior
+ * queda a la izquierda de todas las aristas (producto vectorial ≥ 0). La tolerancia absorbe el error
+ * de coma flotante de los vértices que están exactamente encima.
+ */
+function dentroDelConvexo(x, y, anillo, tol = 1e-12) {
+  for (let i = 0; i < anillo.length; i++) {
+    const [ax, ay] = anillo[i], [bx, by] = anillo[(i + 1) % anillo.length];
+    if ((bx - ax) * (y - ay) - (by - ay) * (x - ax) < -tol) return false;
   }
-  if (!anillos.length) return null;
-  // Un solo anillo se simplifica; varios se envuelven en su casco convexo, que es un superconjunto
-  // (se descarga de más, nunca de menos) y cabe en un único WKT.
-  let pts = anillos.length === 1 ? simplifica(anillos[0], EPSILON_SIMPLIFICADO)
-    : simplifica(cascoConvexo(anillos.flat()), EPSILON_SIMPLIFICADO);
-  if (pts.length > MAX_VERTICES_WKT) pts = cascoConvexo(pts);
-  return pts.length >= 4 ? wktAntihorario(pts) : null;
+  return true;
+}
+
+/** Todos los vértices de todos los polígonos de hábitat, en una lista. */
+function verticesDeHabitats(habitats) {
+  const pts = [];
+  const rec = (c) => { if (typeof c[0] === 'number') { pts.push(c); return; } c.forEach(rec); };
+  for (const h of habitats) rec(h.polys);
+  return pts;
+}
+
+/**
+ * El WKT con el que pedirle a GBIF que filtre: el casco convexo de los polígonos de hábitat.
+ * Devuelve null si no se puede construir uno que los cubra, y entonces se descarga por bbox.
+ */
+function geometriaQueCubreLosHabitats(habitats) {
+  const pts = verticesDeHabitats(habitats);
+  if (pts.length < 3) return null;
+  const casco = cascoConvexo(pts);
+  if (casco.length < 4 || casco.length > MAX_VERTICES_WKT) return null;
+  // El invariante, comprobado y no supuesto. Es la lección de haber dado por hecho que
+  // Douglas-Peucker simplifica hacia fuera: no lo hace, y dejaba el 7,83 % de los vértices de
+  // Carrascoy fuera de lo que se le pedía a GBIF.
+  //
+  // Ojo con CÓMO se comprueba: el primer intento usó `inRing`, y el ray casting da «fuera» para un
+  // punto que cae exactamente SOBRE el borde — que es justo lo que le pasa a los vértices que forman
+  // el casco. Saltaba con 38 falsos positivos. La comprobación buena para un polígono convexo es la
+  // de convexidad: el punto tiene que quedar del mismo lado (o encima) de todas sus aristas.
+  const fuera = pts.filter(([x, y]) => !dentroDelConvexo(x, y, casco)).length;
+  if (fuera) {
+    console.error(`⚠ el casco convexo deja ${fuera} vértice(s) de hábitat fuera, que es imposible por ` +
+      'construcción: hay un problema en la geometría. Se descarga por bbox.');
+    return null;
+  }
+  return wktAntihorario(casco);
 }
 
 async function downloadOccurrences(bbox, cacheFile, previo, geometria) {
@@ -223,13 +252,13 @@ async function downloadOccurrences(bbox, cacheFile, previo, geometria) {
     try {
       const prueba = await httpGetJson(`${porGeometria}&limit=0`);
       const enBbox = await httpGetJson(`${porBbox}&limit=0`);
-      console.log(`Filtro espacial en el servidor: ${prueba.count} ocurrencias en el límite oficial ` +
-        `(${enBbox.count} en el bbox; se ahorran ${Math.max(0, enBbox.count - prueba.count)}).`);
+      console.log(`Filtro espacial en el servidor: ${prueba.count} ocurrencias en el casco convexo de ` +
+        `los hábitats (${enBbox.count} en el bbox; se ahorran ${Math.max(0, enBbox.count - prueba.count)}).`);
       base = porGeometria;
     } catch (e) {
       // Un «no se pudo» que se ve: si GBIF rechaza la geometría, la descarga sigue por bbox, pero
       // nadie puede confundir eso con no haberlo intentado.
-      console.error(`⚠ GBIF rechaza la geometría del límite (${String(e.message).slice(0, 120)}).\n` +
+      console.error(`⚠ GBIF rechaza la geometría de los hábitats (${String(e.message).slice(0, 120)}).\n` +
         '  Se descarga por bbox, que en un espacio grande puede no terminar. Revisa el WKT.');
     }
   }
@@ -313,11 +342,11 @@ function main() {
   console.log(`Parque: ${park.name} (${park.slug}) · ${habitats.length} hábitats`);
   const bbox = bboxOf(habitats.flatMap(h => h.polys));
 
-  // El filtro espacial se le pide a GBIF sobre el LÍMITE OFICIAL, no sobre el bbox. `--bbox` vuelve
-  // al comportamiento viejo, que en un espacio grande no termina.
-  const geometria = flag('bbox') ? null : geometriaDelLimite(park.boundaryPath);
+  // El filtro espacial se le pide a GBIF sobre el CASCO CONVEXO DE LOS HÁBITATS, que los contiene
+  // por construcción. `--bbox` vuelve al comportamiento viejo, que en un espacio grande no termina.
+  const geometria = flag('bbox') ? null : geometriaQueCubreLosHabitats(habitats);
   if (!geometria && !flag('bbox'))
-    console.error('⚠ Sin geometría del límite utilizable: se descarga por bbox. En un espacio grande puede no terminar.');
+    console.error('⚠ Sin geometría utilizable: se descarga por bbox. En un espacio grande puede no terminar.');
 
   getOccurrences(park, bbox, geometria).then(({ total, capped, occ }) => {
     const used = occ.filter(passUncertainty);
