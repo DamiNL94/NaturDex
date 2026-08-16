@@ -139,17 +139,26 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     siguiente import. Por eso `validate` lo da como **aviso y no como error**: bloquear el commit por
     una deuda que solo se salda tocando la BD dejaría el repo sin red de seguridad para todo lo demás.
     Es un rato de trabajo, pero hay que hacerlo en el mismo paso que la carga de SQL pendiente.
-18. **Carrascoy y El Valle está construido con el 41 % de los datos de GBIF.** No es solo la
-    métrica de mosaico —que también, porque cerró antes del 2026-08-15 (c)—: su bbox tiene **97.362
-    ocurrencias** y el barrido se hizo con `--max-occ` en su valor por defecto, **40.000**, que
-    **trunca por offset** y por tanto no es una muestra al azar. La herramienta ya no tiene que
-    paginar el rectángulo: desde el 2026-08-16 le pide a GBIF el filtro espacial con el límite
-    oficial (97.362 → 29.915), pero el paginado profundo de GBIF cuesta decenas de segundos por
-    página y la descarga no cabe en una sesión corta. Se paga con paciencia: volcado nuevo,
-    `species:seleccion`, `species:build --podar` y `park:sql`. **Sierra de la Pila ya está hecha**
-    (2026-08-16): allí la métrica corregida podó cuatro fichas que se sostenían sobre un solo
-    registro. Ver ESTADO.md, §2026-08-16.
-19. **El PORN de Carrascoy y El Valle no tiene inventario de especies, y conviene que conste.** Sus
+18. ~~**Sierra de la Pila y Carrascoy y El Valle sobre la métrica de mosaico.**~~ — **PAGADA el
+    2026-08-16.** Los dos se regeneraron: Sierra de la Pila pasa de 245 a 246 fichas podando cuatro
+    que declaraban cinco hábitats teniendo **una** ocurrencia, y Carrascoy de **245 a 468**. Con
+    ellos ya no queda ningún espacio construido sobre la cuenta inflada.
+    > **El diagnóstico que traía esta deuda estaba mal en un punto y conviene dejarlo escrito.** Se
+    > dijo que el catálogo de Carrascoy «se construyó con el 41 % de los datos» porque `--max-occ`
+    > valía 40.000 sobre un bbox de 97.362. La truncadura es real, pero **no es lo que costaba las
+    > fichas**: el volcado truncado traía 1.460 especies dentro de los polígonos y el completo trae
+    > 1.463. Lo que la truncadura falseaba es el número de **registros por especie**; el salto de
+    > fichas lo produce la corrección de la métrica. Dos defectos reales, y se habían mezclado.
+19. **La misma especie con dos nombres Y dos identificadores, que es lo único que `taxones:duplicados`
+    no puede ver.** La curruca rabilarga es `Curruca undata` (eidos **80931**, gbif **10355796**) en
+    Cabo Cope y Sierra Espuña, y `Sylvia undata` (**80230**, **2492949**) en los otros seis espacios;
+    igual con *atricapilla*, *hortensis*, *communis* y *borin*. El escáner busca **un id con dos
+    nombres** y **un nombre con dos ids**, y este caso no es ninguno de los dos: las dos mitades son
+    internamente coherentes y sólo se ven juntas si alguien sabe que son la misma ave. Son dos
+    trabajos: enseñarle a mirarlo —por epíteto y nombre común, no sólo por id— y después elegir un
+    nombre y renombrar en los `park.json`, en `data/contenido/` y en el catálogo universal, con la
+    trampa del §2 del `CLAUDE.md` delante. Ver ESTADO.md, §"2026-08-16".
+20. **El PORN de Carrascoy y El Valle no tiene inventario de especies, y conviene que conste.** Sus
     tres inventarios —§3.1.2.3 lugares de interés geológico, §3.3 hitos paisajísticos y §4.4 Tabla 8
     de yacimientos— son los que desbloquearon su Fase 3, y ninguno enumera fauna ni flora. Mientras
     no esté escrito en `data/normativa-espacios.json`, cada sesión que mire este espacio volverá a

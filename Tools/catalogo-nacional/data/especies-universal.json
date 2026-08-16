@@ -176,7 +176,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Achillea_odorata_l-hom-nimes-le-vieux_fraissinet-de-fourques_48_20130709_DSC_8835.jpg?width=1280",
     "imageAttribution": "Olivier Pichard (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 9887
+    "eidosTaxonId": 9887,
+    "rarityBasis": null
   },
   "Achnatherum paradoxum": {
     "commonName": "alpiste de pájaros",
@@ -225,7 +226,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": null,
     "imageAttribution": null,
-    "eidosTaxonId": 10136
+    "eidosTaxonId": 10136,
+    "rarityBasis": null
   },
   "Acrocephalus scirpaceus": {
     "commonName": "Carricero común",
@@ -367,7 +369,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ajuga_iva_Dingli_Cliffs_Malta_01_06_2010_01.jpg?width=1280",
     "imageAttribution": "Denis Barthel (CC BY-SA 3.0 de) · Wikimedia Commons",
-    "eidosTaxonId": 1815
+    "eidosTaxonId": 1815,
+    "rarityBasis": null
   },
   "Alauda arvensis": {
     "commonName": "Alondra común",
@@ -571,7 +574,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Allium pallens": {
     "commonName": "Ajo silvestre",
@@ -856,7 +860,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9F%D0%B0%D1%80%D0%B0_%D1%83%D1%82%D0%BE%D0%BA_%D0%BA%D1%80%D1%8F%D0%BA%D0%B2_(Anas_platyrhynchos)%2C_%D0%9A%D0%BE%D0%BB%D0%BE%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5.jpg?width=1280",
     "imageAttribution": "Dion Art (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 12000
+    "eidosTaxonId": 12000,
+    "rarityBasis": null
   },
   "Andryala integrifolia": {
     "commonName": "Cenizo",
@@ -880,7 +885,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Andryala_integrifolia_flower.jpg?width=1280",
     "imageAttribution": "VPGwiki (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 9900
+    "eidosTaxonId": 9900,
+    "rarityBasis": null
   },
   "Andryala ragusina": {
     "commonName": "Mata del vizque",
@@ -911,7 +917,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Anethum ridolfia": {
     "commonName": "Anerdo",
@@ -1464,7 +1471,8 @@
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Ardeola ralloides": {
     "commonName": "Garcilla cangrejera",
@@ -1492,7 +1500,8 @@
       "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Arenaria grandiflora": {
     "commonName": "Hierba de la piedra",
@@ -1712,7 +1721,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Arisarum_vulgare_Mallorca_02.jpg?width=1280",
     "imageAttribution": "Orchi (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 2418
+    "eidosTaxonId": 2418,
+    "rarityBasis": null
   },
   "Aristida adscensionis": {
     "commonName": "Cerrilla",
@@ -1736,7 +1746,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aristidaadscensionis1.jpg?width=1280",
     "imageAttribution": "Anthony Valois and the National Park Service (Public domain) · Wikimedia Commons",
-    "eidosTaxonId": 9501
+    "eidosTaxonId": 9501,
+    "rarityBasis": null
   },
   "Armeria bourgaei": {
     "commonName": "Armeria bourgaei",
@@ -1879,7 +1890,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Artemisia campestris": {
     "commonName": "Tomillo",
@@ -2015,7 +2027,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Asparagus_acutifolius_habito.jpg?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 2377
+    "eidosTaxonId": 2377,
+    "rarityBasis": null
   },
   "Asparagus albus": {
     "commonName": "Esparraguera blanca",
@@ -2046,7 +2059,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Asparagus arborescens": {
     "commonName": "Esparragera",
@@ -2070,7 +2084,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": null,
     "imageAttribution": null,
-    "eidosTaxonId": 2381
+    "eidosTaxonId": 2381,
+    "rarityBasis": null
   },
   "Asparagus horridus": {
     "commonName": "Esparraguera de gato",
@@ -2126,7 +2141,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Asphodelus_albus.004_-_A_Coru%C3%B1a.jpg?width=1280",
     "imageAttribution": "Fernando Losada Rodríguez (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 2394
+    "eidosTaxonId": 2394,
+    "rarityBasis": null
   },
   "Asphodelus ayardii": {
     "commonName": "Cebollana",
@@ -2240,7 +2256,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Asphodelus_macrocarpus_001.jpg?width=1280",
     "imageAttribution": "Meneerke bloem (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 2524
+    "eidosTaxonId": 2524,
+    "rarityBasis": null
   },
   "Asplenium ceterach": {
     "commonName": "Falguera",
@@ -2293,7 +2310,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Asplenium_onopteris_1.jpg?width=1280",
     "imageAttribution": "Franz Xaver (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 2545
+    "eidosTaxonId": 2545,
+    "rarityBasis": null
   },
   "Asplenium petrarchae": {
     "commonName": "culantrillo glanduloso",
@@ -2736,7 +2754,8 @@
       "categoria": "CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Ballota hirsuta": {
     "commonName": "Manrubio negro",
@@ -2767,7 +2786,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Bellardia trixago": {
     "commonName": "Conejicos",
@@ -2791,7 +2811,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bellardia_trixago_1_Corse.JPG?width=1280",
     "imageAttribution": "Copydays (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 2743
+    "eidosTaxonId": 2743,
+    "rarityBasis": null
   },
   "Beta maritima": {
     "commonName": "Acelga marina",
@@ -2846,7 +2867,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Biscutellavalentina.jpg?width=1280",
     "imageAttribution": "Stickpen (Public domain) · Wikimedia Commons",
-    "eidosTaxonId": 2657
+    "eidosTaxonId": 2657,
+    "rarityBasis": null
   },
   "Biscutella valentina": {
     "commonName": "Tamarilla",
@@ -2870,7 +2892,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Biscutellavalentina.jpg?width=1280",
     "imageAttribution": "Stickpen (Public domain) · Wikimedia Commons",
-    "eidosTaxonId": 2660
+    "eidosTaxonId": 2660,
+    "rarityBasis": null
   },
   "Bituminaria bituminosa": {
     "commonName": "Angelote",
@@ -2894,7 +2917,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bituminaria_bituminosa_1.jpg?width=1280",
     "imageAttribution": "Franz Xaver (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 2663
+    "eidosTaxonId": 2663,
+    "rarityBasis": null
   },
   "Brachychiton populneus": {
     "commonName": "Árbol botella",
@@ -2918,7 +2942,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ejemplar_de_Brachychiton_populneus_en_el_Carrer_de_Fontanella%2C_Barcelona.jpg?width=1280",
     "imageAttribution": "Msacla (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 81703
+    "eidosTaxonId": 81703,
+    "rarityBasis": null
   },
   "Brachypodium phoenicoides": {
     "commonName": "Vallico",
@@ -3003,7 +3028,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bromus_rubens_(6230631241).jpg?width=1280",
     "imageAttribution": "Matt Lavin from Bozeman, Montana, USA (CC BY-SA 2.0) · Wikimedia Commons",
-    "eidosTaxonId": 9525
+    "eidosTaxonId": 9525,
+    "rarityBasis": null
   },
   "Bubo bubo": {
     "commonName": "Búho real",
@@ -3063,7 +3089,8 @@
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Bucanetes githagineus": {
     "commonName": "Camachuelo trompetero",
@@ -3118,7 +3145,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bufo_bufo_spinosus_2.png?width=1280",
     "imageAttribution": "Dimitri Laurent (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 16219
+    "eidosTaxonId": 16219,
+    "rarityBasis": null
   },
   "Buglossoides arvensis": {
     "commonName": "Mijo del sol",
@@ -3196,7 +3224,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2008_07_Botanical_Garden_Meran_70670R0209.jpg?width=1280",
     "imageAttribution": "Lord Koxinga (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 2841
+    "eidosTaxonId": 2841,
+    "rarityBasis": null
   },
   "Bupleurum gibraltarium": {
     "commonName": "Clujía",
@@ -3227,7 +3256,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Bupleurum rigidum": {
     "commonName": "Oreja de Liebre",
@@ -3637,7 +3667,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Campanula_erinus_3.jpg?width=1280",
     "imageAttribution": "Gideon Pisanty (Gidip) (CC BY 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 2995
+    "eidosTaxonId": 2995,
+    "rarityBasis": null
   },
   "Campanula mollis": {
     "commonName": "Campanilla de roca",
@@ -3777,7 +3808,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2.Capparis_spinosa.jpg?width=1280",
     "imageAttribution": "M sh شراونة محمد (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 3032
+    "eidosTaxonId": 3032,
+    "rarityBasis": null
   },
   "Capra pyrenaica": {
     "commonName": "Cabra montés",
@@ -3836,7 +3868,8 @@
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Caprimulgus ruficollis": {
     "commonName": "Chotacabras cuellirrojo",
@@ -3952,31 +3985,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/C._bourgeanus-asp-1.jpg?width=1280",
     "imageAttribution": "Philmarin (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 2908
-  },
-  "Caretta caretta": {
-    "commonName": "Tortuga boba",
-    "kingdom": "fauna",
-    "group": "Reptil",
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 4,
-    "description": "Tortuga de tamaño medio, que puede llegar a alcanzar una longitud recta del caparazón de 120 cm y un peso de 200 Kg. Presenta una cabeza de gran tamaño con pico y cuello muy robustos. Coloración dorsal marrón con bordes rojizos o anaranjados y vientre blanquecino con tonos amarillo pálidos. Se caracteriza por tener dos pares de escamas prefrontales en la cabeza. El caparazón dorsal muestra 5 escamas vertebrales, 5 escamas costales, 11-13 marginales a cada lado y 2 escamas supracaudales; la escama nucal está en contacto con las dos primeras escamas costales, a diferencia de la tortuga verde o carey, si bien es frecuente la aparición de anomalías asimétricas en la disposición de las escamas. El pico queratinizado presenta bordes lisos. Las aletas delanteras y las extremidades posteriores, con forma de timón, presentan 2 uñas. Los machos adultos alcanzan un tamaño ligeramente superior al de las hembras y tienen una cola relativamente larga y robusta que puede superar los 30 cm de largo, mientras que en las hembras raramente asoma por fuera del espaldar. Estos caracteres sexuales secundarios externos no aparecen hasta la maduración sexual. Los recién nacidos tienen tonos grises oscuros y suelen presentar las escamas vertebrales imbricadas formando 2 ó 3 quillas dorsales, así como el borde del espaldar aserrado, rasgos que se pierden según se aproximan las tortugas a la madurez sexual. Adquieren los tonos marrones rojizos característicos de la especie en la etapa de juveniles jóvenes. En los individuos grandes es muy frecuente la presencia de variedad de organismos epibiontes asociados al caparazón dorsal -algas, gusanos tubícolas, balanos u otros crustáceos sésiles.",
-    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Reptilia",
-      "order": "Testudines",
-      "family": "Cheloniidae",
-      "genus": "Caretta"
-    },
-    "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 2017)",
-    "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre) · y 1 figura más en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Loggerhead_Sea_Turtle_(Caretta_caretta)_2.jpg?width=1280",
-    "imageAttribution": "Brian Gratwicke (CC BY 2.0) · Wikimedia Commons",
-    "eidosTaxonId": 10970
+    "eidosTaxonId": 2908,
+    "rarityBasis": null
   },
   "Carex halleriana": {
     "commonName": "Cerrillo",
@@ -4061,7 +4071,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/C._lanatus-3.JPG?width=1280",
     "imageAttribution": "Philmarin (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 3180
+    "eidosTaxonId": 3180,
+    "rarityBasis": null
   },
   "Cecropis daurica": {
     "commonName": "Golondrina dáurica",
@@ -4118,7 +4129,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Centaurea aspera": {
     "commonName": "Centaurea",
@@ -4196,7 +4208,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/C._melitensis-7.jpg?width=1280",
     "imageAttribution": "Philmarin (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 3301
+    "eidosTaxonId": 3301,
+    "rarityBasis": null
   },
   "Centaurea ornata": {
     "commonName": "Azolla",
@@ -4247,7 +4260,9 @@
     "iucnGlobal": "NE",
     "spainStatus": "Pendiente de contrastar con la Lista Roja de la Flora Vascular Española 2008",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Centaurea_saxicola674.jpg?width=1280",
-    "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons"
+    "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
+    "rarityBasis": null,
+    "descriptionSource": null
   },
   "Centaurea seridis": {
     "commonName": "arzolla marina",
@@ -4271,7 +4286,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/C._seridis-1.JPG?width=1280",
     "imageAttribution": "Philmarin (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 3335
+    "eidosTaxonId": 3335,
+    "rarityBasis": null
   },
   "Centaurea sicula": {
     "commonName": "Centaurea sicula",
@@ -4346,7 +4362,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Annual_Valerian_(Centranthus_calcitrapae)_-_Muro%2C_Spain_2022-04-17_(01).jpg?width=1280",
     "imageAttribution": "Ryan Hodnett (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 3367
+    "eidosTaxonId": 3367,
+    "rarityBasis": null
   },
   "Centranthus lecoqii": {
     "commonName": "Milamores",
@@ -4439,7 +4456,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Cephalanthera rubra": {
     "commonName": "Cephalanthera rubra",
@@ -4467,35 +4485,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
-  },
-  "Cerambyx cerdo": {
-    "commonName": "Cerambyx cerdo",
-    "kingdom": "fauna",
-    "group": "Insecto",
-    "habitat": null,
-    "seasonality": "Junio a agosto",
-    "rarityScore": 1,
-    "description": null,
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Arthropoda",
-      "class": "Insecta",
-      "order": "Coleoptera",
-      "family": "Cerambycidae",
-      "genus": "Cerambyx"
     },
-    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-    "spainStatus": "Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ceramby_cerdo.jpg?width=1280",
-    "imageAttribution": "Xavier Vázquez (Public domain) · Wikimedia Commons",
-    "eidosTaxonId": 10999,
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    }
+    "descriptionSource": null
   },
   "Cerastium brachypetalum": {
     "commonName": "pamplinillas",
@@ -4601,7 +4592,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Certhia brachydactyla": {
     "commonName": "Agateador común",
@@ -4715,7 +4707,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Chaenorhinum origanifolium": {
     "commonName": "becerrilla pequeña",
@@ -4739,7 +4732,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chaenorhinum_origanifolium_001.JPG?width=1280",
     "imageAttribution": "Johan N (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 3455
+    "eidosTaxonId": 3455,
+    "rarityBasis": null
   },
   "Chaenorhinum rupestre": {
     "commonName": "Espuelilla de yesos",
@@ -4767,7 +4761,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Chalcides bedriagai": {
     "commonName": "Eslizón ibérico",
@@ -4826,7 +4821,8 @@
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Chamaerops humilis": {
     "commonName": "Palmito",
@@ -5144,7 +5140,8 @@
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Circus pygargus": {
     "commonName": "Aguilucho cenizo",
@@ -5236,7 +5233,8 @@
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Cistus albidus": {
     "commonName": "Jara blanca",
@@ -5334,34 +5332,6 @@
     },
     "descriptionSource": null
   },
-  "Cistus heterophyllus": {
-    "commonName": "Jara de Cartagena",
-    "kingdom": "flora",
-    "group": "Arbusto",
-    "habitat": null,
-    "seasonality": null,
-    "rarityScore": 1,
-    "description": "Arbusto 80-120 cm, muy ramoso, perennifolio, de vida larga (30 años o más). Tallos con pelos estrellados y algunos simples, largos. Hojas 5-20 x 2-10 mm, sésiles o subsésiles, elíptico-lanceoladas, las adultas vellosas, falciformes y con el borde fuertemente revuelto hacia el envés. Sépalos acuminados, seríceos. Pétalos rosados. Estilo sobresaliente entre los estambres. Cápsula 7-9 mm, globosa. Semillas 1-2 mm, angulosas, papilosas, de color marrón claro.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Plantae",
-      "phylum": "Tracheophyta",
-      "class": "Magnoliopsida",
-      "order": "Malvales",
-      "family": "Cistaceae",
-      "genus": "Cistus"
-    },
-    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_heterophyllus2.jpg?width=1280",
-    "imageAttribution": "Nanosanchez (Public domain) · Wikimedia Commons",
-    "eidosTaxonId": 3615,
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    }
-  },
   "Cistus ladanifer": {
     "commonName": "Jara pringosa",
     "kingdom": "flora",
@@ -5388,7 +5358,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Cistus laurifolius": {
     "commonName": "Jara",
@@ -5437,7 +5408,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_libanotis.JPG?width=1280",
     "imageAttribution": "Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons",
-    "eidosTaxonId": 3623
+    "eidosTaxonId": 3623,
+    "rarityBasis": null
   },
   "Cistus monspeliensis": {
     "commonName": "Jara",
@@ -5461,7 +5433,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_monspeliensis_2.JPG?width=1280",
     "imageAttribution": "User:Xemenendura (CC BY-SA 2.1 es) · Wikimedia Commons",
-    "eidosTaxonId": 3624
+    "eidosTaxonId": 3624,
+    "rarityBasis": null
   },
   "Cistus populifolius": {
     "commonName": "Jara cervuna",
@@ -5605,7 +5578,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Clematis_flammula_(1).jpg?width=1280",
     "imageAttribution": "peganum from Henfield, England (CC BY-SA 2.0) · Wikimedia Commons",
-    "eidosTaxonId": 3637
+    "eidosTaxonId": 3637,
+    "rarityBasis": null
   },
   "Clinopodium acinos": {
     "commonName": "Albahaca silvestre",
@@ -5858,7 +5832,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": null,
     "imageAttribution": null,
-    "eidosTaxonId": 81790
+    "eidosTaxonId": 81790,
+    "rarityBasis": null
   },
   "Colutea brevialata": {
     "commonName": "Espantalobos",
@@ -5968,7 +5943,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Convolvulus lanuginosus": {
     "commonName": "campanilla lanuda",
@@ -5992,7 +5968,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Convolvulus_lanuginosus.JPG?width=1280",
     "imageAttribution": "User:Formater (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 3701
+    "eidosTaxonId": 3701,
+    "rarityBasis": null
   },
   "Convolvulus lineatus": {
     "commonName": "campanilla espigada",
@@ -6054,7 +6031,8 @@
       "categoria": "LESRPE (RD 139/2011)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Coris monspeliensis": {
     "commonName": "Bálsamo",
@@ -6078,7 +6056,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Coris_monspeliensis_subs.monspeliensis_1265.jpg?width=1280",
     "imageAttribution": "No machine-readable author provided. Alberto Salguero assumed (base… (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 3722
+    "eidosTaxonId": 3722,
+    "rarityBasis": null
   },
   "Cormus domestica": {
     "commonName": "Serbal común",
@@ -6223,7 +6202,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fabaceae_-_Coronilla_scorpioides_1-002.jpg?width=1280",
     "imageAttribution": "Fransje Willy (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 3739
+    "eidosTaxonId": 3739,
+    "rarityBasis": null
   },
   "Corvus corax": {
     "commonName": "Cuervo grande",
@@ -6427,7 +6407,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Crithmum maritimum": {
     "commonName": "Hinojo marino",
@@ -6578,7 +6559,8 @@
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Curruca conspicillata": {
     "commonName": "Curruca tomillera",
@@ -6807,7 +6789,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Asperula_aristata_RF.jpg?width=1280",
     "imageAttribution": "Robert Flogaus-Faust (CC BY 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 2406
+    "eidosTaxonId": 2406,
+    "rarityBasis": null
   },
   "Cynomorium coccineum": {
     "commonName": "Cinomorio",
@@ -7102,7 +7085,8 @@
       "categoria": "UICN España: VU (Vulnerable) (2010)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Dianthus pungens": {
     "commonName": "Dianthus pungens",
@@ -7126,7 +7110,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dianthus_pungens_Enfoque_2010-8-14_SierraMadrona.jpg?width=1280",
     "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
-    "eidosTaxonId": 4023
+    "eidosTaxonId": 4023,
+    "rarityBasis": null
   },
   "Digitalis obscura": {
     "commonName": "Vidriera",
@@ -7182,7 +7167,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dipcadi_serotinum555.jpg?width=1280",
     "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 4106
+    "eidosTaxonId": 4106,
+    "rarityBasis": null
   },
   "Diplotaxis erucoides": {
     "commonName": "Aliaria",
@@ -7231,7 +7217,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Diplotaxis_harra.JPG?width=1280",
     "imageAttribution": "איתן פרמן (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 4116
+    "eidosTaxonId": 4116,
+    "rarityBasis": null
   },
   "Dittrichia viscosa": {
     "commonName": "Olivarda",
@@ -7395,7 +7382,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Echinops_Ain_France_2005.jpg?width=1280",
     "imageAttribution": "User:Stephane8888 (Stephane8888 Wiktionnaire) (CC BY-SA 2.5) · Wikimedia Commons",
-    "eidosTaxonId": 4201
+    "eidosTaxonId": 4201,
+    "rarityBasis": null
   },
   "Echium creticum": {
     "commonName": "Rabo de gato",
@@ -7419,7 +7407,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Echium_creticum.JPG?width=1280",
     "imageAttribution": "User:Xemenendura (CC BY-SA 2.1 es) · Wikimedia Commons",
-    "eidosTaxonId": 4219
+    "eidosTaxonId": 4219,
+    "rarityBasis": null
   },
   "Echium sabulicola": {
     "commonName": "viborera marina",
@@ -7443,7 +7432,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Echium_sabulicola.jpg?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 4250
+    "eidosTaxonId": 4250,
+    "rarityBasis": null
   },
   "Egretta garzetta": {
     "commonName": "Garceta común",
@@ -7474,7 +7464,8 @@
       "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Eliomys quercinus": {
     "commonName": "Lirón careto",
@@ -7677,7 +7668,8 @@
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Enneapogon persicus": {
     "commonName": "Espartilla de Persia",
@@ -8312,7 +8304,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Erythropygia galactotes": {
     "commonName": "Alzacola",
@@ -8475,7 +8468,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Euphorbia_squamigera_kz12.jpg?width=1280",
     "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 4535
+    "eidosTaxonId": 4535,
+    "rarityBasis": null
   },
   "Fagonia cretica": {
     "commonName": "Fagonia",
@@ -8506,7 +8500,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Falco columbarius": {
     "commonName": "Esmerejón",
@@ -8566,7 +8561,8 @@
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Falco naumanni": {
     "commonName": "Cernícalo primilla",
@@ -8594,7 +8590,8 @@
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Falco peregrinus": {
     "commonName": "Halcón peregrino",
@@ -8746,7 +8743,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ferula_communis03.jpg?width=1280",
     "imageAttribution": "Tigerente (talk · contribs) (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 4578
+    "eidosTaxonId": 4578,
+    "rarityBasis": null
   },
   "Festuca capillifolia": {
     "commonName": "Festuca capillifolia",
@@ -8909,7 +8907,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/(ALB)_F._pyramidata-1.jpg?width=1280",
     "imageAttribution": "Philmarin (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 9581
+    "eidosTaxonId": 9581,
+    "rarityBasis": null
   },
   "Frankenia corymbosa": {
     "commonName": "Albardín brezo",
@@ -8999,7 +8998,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Fraxinus ornus": {
     "commonName": "Fresno de flor",
@@ -9090,7 +9090,8 @@
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Fritillaria lusitanica": {
     "commonName": "Tablero de damas",
@@ -9146,7 +9147,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bl%C3%A4sshuhn_Fulica_atra_2_Richard_Bartz.jpg?width=1280",
     "imageAttribution": "This picture was realized by Richard Bartz by using a Canon EF 70-3… (CC BY-SA 2.5) · Wikimedia Commons",
-    "eidosTaxonId": 10786
+    "eidosTaxonId": 10786,
+    "rarityBasis": null
   },
   "Fumana ericifolia": {
     "commonName": "Sillerilla",
@@ -9252,7 +9254,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": null,
     "imageAttribution": null,
-    "eidosTaxonId": 4658
+    "eidosTaxonId": 4658,
+    "rarityBasis": null
   },
   "Fumana thymifolia": {
     "commonName": "Brea",
@@ -9330,7 +9333,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gagea_durieui_kz01.jpg?width=1280",
     "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 4699
+    "eidosTaxonId": 4699,
+    "rarityBasis": null
   },
   "Galerida cristata": {
     "commonName": "Cogujada común",
@@ -9418,7 +9422,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Galium_glaucum_eF.jpg?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 4749
+    "eidosTaxonId": 4749,
+    "rarityBasis": null
   },
   "Galium lucidum": {
     "commonName": "aspereta",
@@ -9442,7 +9447,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Galium_mollugo0.jpg?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 4755
+    "eidosTaxonId": 4755,
+    "rarityBasis": null
   },
   "Galium murale": {
     "commonName": "Galium murale",
@@ -9466,7 +9472,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Galium_murale_sl9.jpg?width=1280",
     "imageAttribution": "Stefan.lefnaer (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 4766
+    "eidosTaxonId": 4766,
+    "rarityBasis": null
   },
   "Galium setaceum": {
     "commonName": "Galium setaceum",
@@ -9490,7 +9497,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Galium_setaceum_kz1.jpg?width=1280",
     "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 4784
+    "eidosTaxonId": 4784,
+    "rarityBasis": null
   },
   "Galium verrucosum": {
     "commonName": "Amor de hortelano",
@@ -9514,7 +9522,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Galium_verrucosum_Beta_macrocarpa_Sebkhat_Kelbia.jpg?width=1280",
     "imageAttribution": "Denis Barthel (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 4791
+    "eidosTaxonId": 4791,
+    "rarityBasis": null
   },
   "Gallinula chloropus": {
     "commonName": "Gallineta común",
@@ -9538,7 +9547,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Common_Moorhen_(Gallinella_d'Acqua)_(Gallinula_chloropus)_-_Cagliari%2C_Italy_2024-03-30.jpg?width=1280",
     "imageAttribution": "Ryan Hodnett (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 10887
+    "eidosTaxonId": 10887,
+    "rarityBasis": null
   },
   "Garrulus glandarius": {
     "commonName": "Arrendajo euroasiático",
@@ -9686,7 +9696,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": null,
     "imageAttribution": null,
-    "eidosTaxonId": 4907
+    "eidosTaxonId": 4907,
+    "rarityBasis": null
   },
   "Genista scorpius": {
     "commonName": "Espino",
@@ -9826,7 +9837,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Geranium_lucidum.jpg?width=1280",
     "imageAttribution": "Franz Xaver (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 4838
+    "eidosTaxonId": 4838,
+    "rarityBasis": null
   },
   "Geranium molle": {
     "commonName": "Agulleira",
@@ -9850,7 +9862,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Geranium_molle1.jpg?width=1280",
     "imageAttribution": "KENPEI (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 4840
+    "eidosTaxonId": 4840,
+    "rarityBasis": null
   },
   "Geranium purpureum": {
     "commonName": "Geranio silvestre",
@@ -9924,7 +9937,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gladiolus_communis.jpg?width=1280",
     "imageAttribution": "A. Barra (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 4981
+    "eidosTaxonId": 4981,
+    "rarityBasis": null
   },
   "Gladiolus italicus": {
     "commonName": "Lirio",
@@ -9948,7 +9962,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/0_Gladiolus_italicus_-_Samo%C3%ABns_(1).JPG?width=1280",
     "imageAttribution": "Jean-Pol GRANDMONT (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 4983
+    "eidosTaxonId": 4983,
+    "rarityBasis": null
   },
   "Glaucium corniculatum": {
     "commonName": "Ababol",
@@ -9972,7 +9987,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/96567_glaucium_corniculatum_PikiWiki_Israel.jpg?width=1280",
     "imageAttribution": "עוזי פז (CC BY 2.5) · Wikimedia Commons",
-    "eidosTaxonId": 4991
+    "eidosTaxonId": 4991,
+    "rarityBasis": null
   },
   "Glaucium flavum": {
     "commonName": "Amapola marina",
@@ -10152,7 +10168,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Haematopus ostralegus": {
     "commonName": "Ostrero euroasiático",
@@ -10245,7 +10262,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Hammada articulata": {
     "commonName": "Sosa articulada",
@@ -10300,7 +10318,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Haplophyllum_linifolium_M1.jpg?width=1280",
     "imageAttribution": "Adrian198cm (CC0) · Wikimedia Commons",
-    "eidosTaxonId": 5061
+    "eidosTaxonId": 5061,
+    "rarityBasis": null
   },
   "Haplophyllum rosmarinifolium": {
     "commonName": "Mata pestosa",
@@ -10356,7 +10375,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Helianthemum apenninum": {
     "commonName": "Tomillo",
@@ -10573,7 +10593,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Meraner_H%C3%B6henweg_II.jpg?width=1280",
     "imageAttribution": "NoRud (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 5098
+    "eidosTaxonId": 5098,
+    "rarityBasis": null
   },
   "Helianthemum squamatum": {
     "commonName": "flor del príncipe",
@@ -10797,7 +10818,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": null,
     "imageAttribution": null,
-    "eidosTaxonId": 80481
+    "eidosTaxonId": 80481,
+    "rarityBasis": null
   },
   "Helictotrichon filifolium": {
     "commonName": "Lastón",
@@ -10914,7 +10936,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Herniaria_fruticosa.jpg?width=1280",
     "imageAttribution": "Poseidon75 (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 5159
+    "eidosTaxonId": 5159,
+    "rarityBasis": null
   },
   "Hieraaetus pennatus": {
     "commonName": "Águila calzada",
@@ -10970,7 +10993,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Barlia_robertiana9937.jpg?width=1280",
     "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 32238
+    "eidosTaxonId": 32238,
+    "rarityBasis": null
   },
   "Himantopus himantopus": {
     "commonName": "Cigüeñuela",
@@ -11001,7 +11025,8 @@
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Hippocrepis ciliata": {
     "commonName": "herba de la herradura",
@@ -11025,7 +11050,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/3672-Hippocrepis_ciliata-5.06.JPG?width=1280",
     "imageAttribution": "Vojtěch Zavadil (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 5277
+    "eidosTaxonId": 5277,
+    "rarityBasis": null
   },
   "Hippolais polyglotta": {
     "commonName": "Zarcero común",
@@ -11195,7 +11221,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hyoscyamus_albus_1.jpg?width=1280",
     "imageAttribution": "Franz Xaver (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 5131
+    "eidosTaxonId": 5131,
+    "rarityBasis": null
   },
   "Hyparrhenia hirta": {
     "commonName": "Cerrillo",
@@ -11436,7 +11463,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Iduna_opaca_CDC_image.jpg?width=1280",
     "imageAttribution": "Ana M. Palomar, Aránzazu Portillo, Paula Santibáñez, David Mazuelas… (Public domain) · Wikimedia Commons",
-    "eidosTaxonId": 16398
+    "eidosTaxonId": 16398,
+    "rarityBasis": null
   },
   "Imperata cylindrica": {
     "commonName": "Cisca",
@@ -11676,7 +11704,8 @@
       "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Kickxia lanigera": {
     "commonName": "Lapa",
@@ -11813,7 +11842,9 @@
     "iucnGlobal": "NE",
     "spainStatus": "Pendiente de contrastar con la Lista Roja de la Flora Vascular Española 2008",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lafuentea_rotundifolia80857.jpg?width=1280",
-    "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons"
+    "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons",
+    "rarityBasis": null,
+    "descriptionSource": null
   },
   "Lamarckia aurea": {
     "commonName": "Balanguillo",
@@ -11837,7 +11868,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lamarckia_aurea_(plant).jpg?width=1280",
     "imageAttribution": "Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 10059
+    "eidosTaxonId": 10059,
+    "rarityBasis": null
   },
   "Lanius excubitor": {
     "commonName": "Alcaudón norteño",
@@ -11990,7 +12022,8 @@
       "categoria": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Larus fuscus": {
     "commonName": "Gaviota sombría",
@@ -12083,7 +12116,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Lathyrus cicera": {
     "commonName": "Alcaballares",
@@ -12132,7 +12166,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lathyrus_clymenum_2.JPG?width=1280",
     "imageAttribution": "Xemenendura (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 5696
+    "eidosTaxonId": 5696,
+    "rarityBasis": null
   },
   "Lathyrus setifolius": {
     "commonName": "Albujana silvestre",
@@ -12156,7 +12191,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lathyrus_setifolius_sl1.jpg?width=1280",
     "imageAttribution": "Stefan.lefnaer (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 5718
+    "eidosTaxonId": 5718,
+    "rarityBasis": null
   },
   "Launaea arborescens": {
     "commonName": "Aulaga",
@@ -12246,7 +12282,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Lavandula dentata": {
     "commonName": "Cantueso dentado",
@@ -12559,7 +12596,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Limonium insigne": {
     "commonName": "Siempreviva insigne",
@@ -12925,7 +12963,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/015.Lomelosia_Stellata_(14544073485).jpg?width=1280",
     "imageAttribution": "Por los caminos de Málaga (CC BY 2.0) · Wikimedia Commons",
-    "eidosTaxonId": 6032
+    "eidosTaxonId": 6032,
+    "rarityBasis": null
   },
   "Lonicera biflora": {
     "commonName": "Madreselva mediterránea",
@@ -13546,7 +13585,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lavatera_April_2010-1.jpg?width=1280",
     "imageAttribution": "Alvesgaspar (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 80875
+    "eidosTaxonId": 80875,
+    "rarityBasis": null
   },
   "Malva neglecta": {
     "commonName": "Cuquiellos blancos",
@@ -13570,7 +13610,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mauve_%C3%A0_feuilles_rondes.JPG?width=1280",
     "imageAttribution": "Jean.claude (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 6199
+    "eidosTaxonId": 6199,
+    "rarityBasis": null
   },
   "Malva subovata": {
     "commonName": "Malva subovata",
@@ -13594,7 +13635,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lavatera_maritima_bicolor_'Tree_mallow'_(Malvaceae)_flower.jpg?width=1280",
     "imageAttribution": "Magnus Manske (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 94816
+    "eidosTaxonId": 94816,
+    "rarityBasis": null
   },
   "Maresia nana": {
     "commonName": "Maresia",
@@ -13739,7 +13781,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Mauremys leprosa": {
     "commonName": "Galápago leproso",
@@ -13770,7 +13813,8 @@
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Maytenus senegalensis subsp. europaea": {
     "commonName": "Arto",
@@ -13851,7 +13895,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Medicago_minima_W.jpg?width=1280",
     "imageAttribution": "Fornax (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 6278
+    "eidosTaxonId": 6278,
+    "rarityBasis": null
   },
   "Medicago polyceratia": {
     "commonName": "Medicago polyceratia",
@@ -13989,7 +14034,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Melica_ciliata_010707.jpg?width=1280",
     "imageAttribution": "Bernd Haynold (CC BY 2.5) · Wikimedia Commons",
-    "eidosTaxonId": 9634
+    "eidosTaxonId": 9634,
+    "rarityBasis": null
   },
   "Melica minuta": {
     "commonName": "Melica menor",
@@ -14020,7 +14066,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Melilotus indicus": {
     "commonName": "Alfalfe borde",
@@ -14094,7 +14141,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercurialis_annua_2005.07.11_11.37.49-p7110221.jpg?width=1280",
     "imageAttribution": "Michael Becker (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 6161
+    "eidosTaxonId": 6161,
+    "rarityBasis": null
   },
   "Merops apiaster": {
     "commonName": "Abejaruco europeo",
@@ -14212,7 +14260,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Micromeria_graeca_1.jpg?width=1280",
     "imageAttribution": "Franz Xaver (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 6333
+    "eidosTaxonId": 6333,
+    "rarityBasis": null
   },
   "Microtus duodecimcostatus": {
     "commonName": "Topillo mediterráneo",
@@ -14298,7 +14347,8 @@
       "categoria": "CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Miniopterus schreibersii": {
     "commonName": "Murciélago de cueva",
@@ -14403,7 +14453,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": null,
     "imageAttribution": null,
-    "eidosTaxonId": 6369
+    "eidosTaxonId": 6369,
+    "rarityBasis": null
   },
   "Misopates orontium": {
     "commonName": "Drago",
@@ -14427,7 +14478,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Misopates_orontium.jpg?width=1280",
     "imageAttribution": "Luis Nunes Alberto (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 6370
+    "eidosTaxonId": 6370,
+    "rarityBasis": null
   },
   "Monticola saxatilis": {
     "commonName": "Roquero rojo",
@@ -14514,7 +14566,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gynandriris_sisyrinchium442.jpg?width=1280",
     "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 5017
+    "eidosTaxonId": 5017,
+    "rarityBasis": null
   },
   "Moricandia arvensis": {
     "commonName": "Collejón",
@@ -14571,7 +14624,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Morus bassanus": {
     "commonName": "Alcatraz atlántico",
@@ -14984,7 +15038,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Narcissus deficiens": {
     "commonName": "Narcissus deficiens",
@@ -15008,7 +15063,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": null,
     "imageAttribution": null,
-    "eidosTaxonId": 80510
+    "eidosTaxonId": 80510,
+    "rarityBasis": null
   },
   "Narcissus obsoletus": {
     "commonName": "Narcissus obsoletus",
@@ -15032,7 +15088,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alm10NarcissusObsoletus.jpg?width=1280",
     "imageAttribution": "Ziegler175 (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 6529
+    "eidosTaxonId": 6529,
+    "rarityBasis": null
   },
   "Narcissus serotinus": {
     "commonName": "Jarmín bravío",
@@ -15056,7 +15113,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Narcissus_serotinus5656.jpg?width=1280",
     "imageAttribution": "Nanosanchez (Public domain) · Wikimedia Commons",
-    "eidosTaxonId": 6541
+    "eidosTaxonId": 6541,
+    "rarityBasis": null
   },
   "Natrix maura": {
     "commonName": "Culebra viperina",
@@ -15134,7 +15192,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Neatostema_apulum_kz6.jpg?width=1280",
     "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 6504
+    "eidosTaxonId": 6504,
+    "rarityBasis": null
   },
   "Neophron percnopterus": {
     "commonName": "Alimoche común",
@@ -15162,7 +15221,8 @@
       "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Neotinea maculata": {
     "commonName": "Neotinea maculata",
@@ -15253,7 +15313,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Neslia paniculata": {
     "commonName": "Tamarillas",
@@ -15515,7 +15576,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Piptatherummiliaceum.jpg?width=1280",
     "imageAttribution": "Stickpen (Public domain) · Wikimedia Commons",
-    "eidosTaxonId": 82594
+    "eidosTaxonId": 82594,
+    "rarityBasis": null
   },
   "Onobrychis humilis": {
     "commonName": "Carretilla",
@@ -15539,7 +15601,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Onobrychis_humilis_Inflorescencias_2012-4-15_SierraMadrona.jpg?width=1280",
     "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
-    "eidosTaxonId": 6662
+    "eidosTaxonId": 6662,
+    "rarityBasis": null
   },
   "Ononis fruticosa": {
     "commonName": "Salado",
@@ -15595,7 +15658,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/ONONIS_MINUTISSIMA_-_B%C3%92FIA_-_IB-428_(Gav%C3%B3_menut).JPG?width=1280",
     "imageAttribution": "Isidre blanc (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 6693
+    "eidosTaxonId": 6693,
+    "rarityBasis": null
   },
   "Ononis natrix": {
     "commonName": "Ensalaíllo",
@@ -15619,7 +15683,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/ONONIS_NATRIX_-_SANT_HONORAT_-_IB-829_(Gav%C3%B3).jpg?width=1280",
     "imageAttribution": "Isidre blanc (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 6695
+    "eidosTaxonId": 6695,
+    "rarityBasis": null
   },
   "Ononis ornithopodioides": {
     "commonName": "Ononis ornithopodioides",
@@ -15650,7 +15715,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Ononis speciosa": {
     "commonName": "Rascavieja",
@@ -15681,7 +15747,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Ononis tridentata": {
     "commonName": "Arnacho",
@@ -15705,7 +15772,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/ONONIS_TRIDENTATA_-_BUSA_-_IB-906_(Ruac).JPG?width=1280",
     "imageAttribution": "Isidre blanc (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 6721
+    "eidosTaxonId": 6721,
+    "rarityBasis": null
   },
   "Onopordum macracanthum": {
     "commonName": "Cardo",
@@ -15729,7 +15797,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/O._macracanthum-4.jpg?width=1280",
     "imageAttribution": "Philmarin (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 6742
+    "eidosTaxonId": 6742,
+    "rarityBasis": null
   },
   "Ophrys apifera": {
     "commonName": "Abejera",
@@ -15753,7 +15822,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ophrys_apifera_flower2.jpg?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 6600
+    "eidosTaxonId": 6600,
+    "rarityBasis": null
   },
   "Ophrys fusca": {
     "commonName": "Avispilla",
@@ -15837,7 +15907,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ophrys_speculum_d.JPG?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 6749
+    "eidosTaxonId": 6749,
+    "rarityBasis": null
   },
   "Ophrys sphegodes": {
     "commonName": "Abejera",
@@ -15865,7 +15936,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Ophrys tenthredinifera": {
     "commonName": "Abejera",
@@ -15893,7 +15965,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Orchis anthropophora": {
     "commonName": "flor del hombre ahorcado",
@@ -15917,7 +15990,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aceras_anthropophorum_flowers.jpg?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 32244
+    "eidosTaxonId": 32244,
+    "rarityBasis": null
   },
   "Orchis mascula": {
     "commonName": "Clavellina",
@@ -15966,7 +16040,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Orchis_olbiensis_bi.jpg?width=1280",
     "imageAttribution": "Jose Angel Urquia Goitia (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 32245
+    "eidosTaxonId": 32245,
+    "rarityBasis": null
   },
   "Oriolus oriolus": {
     "commonName": "Oropéndola",
@@ -16136,7 +16211,9 @@
     "iucnGlobal": "LC (Preocupación menor)",
     "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Osyris_lanceolata.JPG?width=1280",
-    "imageAttribution": "Xemenendura (CC BY-SA 4.0) · Wikimedia Commons"
+    "imageAttribution": "Xemenendura (CC BY-SA 4.0) · Wikimedia Commons",
+    "rarityBasis": null,
+    "descriptionSource": null
   },
   "Osyris quadripartita": {
     "commonName": "Bayón",
@@ -16160,7 +16237,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Osyris_quadripartita_(6841103821).jpg?width=1280",
     "imageAttribution": "Dinesh Valke from Thane, India (CC BY-SA 2.0) · Wikimedia Commons",
-    "eidosTaxonId": 79167
+    "eidosTaxonId": 79167,
+    "rarityBasis": null
   },
   "Otus scops": {
     "commonName": "Autillo",
@@ -16216,7 +16294,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flock_of_sheep.jpg?width=1280",
     "imageAttribution": "Keith Weller (Public domain) · Wikimedia Commons",
-    "eidosTaxonId": 29619
+    "eidosTaxonId": 29619,
+    "rarityBasis": null
   },
   "Pallenis spinosa": {
     "commonName": "Castañuela",
@@ -16304,7 +16383,8 @@
       "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Papaver dubium": {
     "commonName": "Ababol",
@@ -16328,7 +16408,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Klaproos.jpg?width=1280",
     "imageAttribution": "Rob Hooft at Dutch Wikipedia Later versions were uploaded by Toubib… (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 6927
+    "eidosTaxonId": 6927,
+    "rarityBasis": null
   },
   "Papaver rhoeas": {
     "commonName": "Amapola",
@@ -16352,7 +16433,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2017-03-23_Common_Poppy_(Papaver_rhoeas)%2C_Cerro_Grande%2C_Albufeira.JPG?width=1280",
     "imageAttribution": "Kolforn (Kolforn) I'd appreciate if you could mail me (Kolforn@gmai… (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 6889
+    "eidosTaxonId": 6889,
+    "rarityBasis": null
   },
   "Pardoglossum cheirifolium": {
     "commonName": "Pardoglossum cheirifolium",
@@ -16401,7 +16483,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Parietaria_lusitanica_kz1.jpg?width=1280",
     "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 6941
+    "eidosTaxonId": 6941,
+    "rarityBasis": null
   },
   "Paronychia aretioides": {
     "commonName": "Asperilla",
@@ -16450,7 +16533,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Paronychia_argentea_Habitus_2010-4-02_SierraMadrona.jpg?width=1280",
     "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
-    "eidosTaxonId": 6951
+    "eidosTaxonId": 6951,
+    "rarityBasis": null
   },
   "Paronychia capitata": {
     "commonName": "Asperilla",
@@ -16586,7 +16670,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Peganum_harmala1.jpg?width=1280",
     "imageAttribution": "Kurt Stüber [1] (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 6974
+    "eidosTaxonId": 6974,
+    "rarityBasis": null
   },
   "Pelodytes punctatus": {
     "commonName": "Sapillo moteado común",
@@ -16726,7 +16811,8 @@
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Petronia petronia": {
     "commonName": "Gorrión chillón",
@@ -16846,7 +16932,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Phalacrocorax carbo": {
     "commonName": "Cormorán grande",
@@ -16870,7 +16957,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Phalacrocorax_carbo_Vic.jpg?width=1280",
     "imageAttribution": "JJ Harrison (https://www.jjharrison.com.au/) (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 10965
+    "eidosTaxonId": 10965,
+    "rarityBasis": null
   },
   "Phillyrea angustifolia": {
     "commonName": "Labiérnago",
@@ -16933,7 +17021,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Phlomis lychnitis": {
     "commonName": "Genciana",
@@ -17051,7 +17140,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Phragmites australis": {
     "commonName": "Carrizo",
@@ -17369,7 +17459,8 @@
     "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. Lista de especies forestales e híbiridos artificiales (Real Decreto 289/2003, de 7 de marzo)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_pinea_Wellington_Botanic_Gardens.jpg?width=1280",
     "imageAttribution": "Karora (Public domain) · Wikimedia Commons",
-    "eidosTaxonId": 7124
+    "eidosTaxonId": 7124,
+    "rarityBasis": null
   },
   "Pistacia lentiscus": {
     "commonName": "Lentisco",
@@ -17489,7 +17580,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Plantago_lagopus_2.jpg?width=1280",
     "imageAttribution": "Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 7159
+    "eidosTaxonId": 7159,
+    "rarityBasis": null
   },
   "Plantago sempervirens": {
     "commonName": "Bocheta",
@@ -17841,7 +17933,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Prunella collaris": {
     "commonName": "Acentor alpino",
@@ -17989,7 +18082,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Psammodromus_edwarsianus_521254282.jpg?width=1280",
     "imageAttribution": "Donald Davesne (CC BY 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 16216
+    "eidosTaxonId": 16216,
+    "rarityBasis": null
   },
   "Psammodromus hispanicus": {
     "commonName": "Lagartija cenicienta",
@@ -18102,7 +18196,8 @@
       "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Ptyonoprogne rupestris": {
     "commonName": "Avión roquero",
@@ -18459,7 +18554,8 @@
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Reichardia gaditana": {
     "commonName": "Cerraja gaditana",
@@ -18521,7 +18617,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Reseda lutea": {
     "commonName": "Gualda",
@@ -18886,7 +18983,8 @@
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Rosa canina": {
     "commonName": "Espino",
@@ -18992,7 +19090,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rumex_bucephalophorus02032001_fleurs2.JPG?width=1280",
     "imageAttribution": "Henry Brisse (upload by user:Abalg) (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 7840
+    "eidosTaxonId": 7840,
+    "rarityBasis": null
   },
   "Rumex intermedius": {
     "commonName": "Acedera",
@@ -19066,7 +19165,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ruta_angustifolia.jpg?width=1280",
     "imageAttribution": "Nanosanchez (Public domain) · Wikimedia Commons",
-    "eidosTaxonId": 7857
+    "eidosTaxonId": 7857,
+    "rarityBasis": null
   },
   "Saccharum ravennae": {
     "commonName": "Carrizo real",
@@ -19097,7 +19197,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Salix atrocinerea": {
     "commonName": "Bardaguera",
@@ -19328,7 +19429,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/S._valerandi.jpg?width=1280",
     "imageAttribution": "Ixitixel (CC BY 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 7954
+    "eidosTaxonId": 7954,
+    "rarityBasis": null
   },
   "Santolina viscosa": {
     "commonName": "Brochera pegajosa",
@@ -19356,7 +19458,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Sarcocapnos enneaphylla": {
     "commonName": "Zapatitos de la Virgen",
@@ -19686,7 +19789,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Scirpus_holoschoenus_1.JPG?width=1280",
     "imageAttribution": "Xemenendura (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 8128
+    "eidosTaxonId": 8128,
+    "rarityBasis": null
   },
   "Sciurus vulgaris": {
     "commonName": "Ardilla roja",
@@ -19748,6 +19852,31 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Scorzonera angustifolia": {
+    "commonName": "Arrucas",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": "Crece en pastizales algo nitrificados hasta 1500 m",
+    "seasonality": "Abril a julio",
+    "rarityScore": 2,
+    "description": "Planta hasta de 60 cm, con cabezuelas con cinco a siete brácteas hasta de 4 cm, y lígulas algo más pequeñas, de color morado; aquenios hasta de 4,5 cm.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Asterales",
+      "family": "Asteraceae",
+      "genus": "Scorzonera"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/SCORZONERA_ANGUSTIFOLIA_-_MORROCURT_-_IB-212_(Escur%C3%A7onera_de_fulla_estreta).JPG?width=1280",
+    "imageAttribution": "Isidre blanc (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 10427,
+    "rarityBasis": null
   },
   "Scrophularia canina": {
     "commonName": "Escrofularia de perro",
@@ -19991,7 +20120,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Selaginella_denticulata.JPG?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 8229
+    "eidosTaxonId": 8229,
+    "rarityBasis": null
   },
   "Senecio flavus": {
     "commonName": "Senecio flavus",
@@ -20017,7 +20147,9 @@
     "iucnGlobal": "NE",
     "spainStatus": "Pendiente de contrastar con la Lista Roja de la Flora Vascular Española 2008",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Senecio_flavus_1.jpg?width=1280",
-    "imageAttribution": "Gideon Pisanty (Gidip) גדעון פיזנטי (CC BY 3.0) · Wikimedia Commons"
+    "imageAttribution": "Gideon Pisanty (Gidip) גדעון פיזנטי (CC BY 3.0) · Wikimedia Commons",
+    "rarityBasis": null,
+    "descriptionSource": null
   },
   "Senecio malacitanus": {
     "commonName": "suzón de romero",
@@ -20041,7 +20173,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Senecio_malacitanus_Enfoque_15-10-2008_Illora.jpg?width=1280",
     "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
-    "eidosTaxonId": 32015
+    "eidosTaxonId": 32015,
+    "rarityBasis": null
   },
   "Serinus serinus": {
     "commonName": "Serín verdecillo",
@@ -20145,7 +20278,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/20150509Sherardia_arvensis1.jpg?width=1280",
     "imageAttribution": "AnRo0002 (CC0) · Wikimedia Commons",
-    "eidosTaxonId": 8253
+    "eidosTaxonId": 8253,
+    "rarityBasis": null
   },
   "Sideritis bourgaeana": {
     "commonName": "Rabo de gato",
@@ -20289,7 +20423,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/(MHNT)_Silene_latifolia_-_flower.jpg?width=1280",
     "imageAttribution": "Didier Descouens (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 8404
+    "eidosTaxonId": 8404,
+    "rarityBasis": null
   },
   "Silene mellifera": {
     "commonName": "Silene mellifera",
@@ -20376,7 +20511,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Silene_secundiflora_kz01.jpg?width=1280",
     "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 8364
+    "eidosTaxonId": 8364,
+    "rarityBasis": null
   },
   "Silene vulgaris": {
     "commonName": "Alcadicea",
@@ -20500,7 +20636,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Smilax_aspera.jpg?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 8297
+    "eidosTaxonId": 8297,
+    "rarityBasis": null
   },
   "Sonchus tenerrimus": {
     "commonName": "Cerraja fina",
@@ -20921,7 +21058,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Stipa lagascae": {
     "commonName": "Banderillas",
@@ -21299,7 +21437,8 @@
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Sylvia communis": {
     "commonName": "Curruca zarcera",
@@ -21417,7 +21556,8 @@
       "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Tachymarptis melba": {
     "commonName": "Vencejo real",
@@ -21474,7 +21614,8 @@
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Tamarix africana": {
     "commonName": "Taray",
@@ -21536,7 +21677,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Tamarix canariensis": {
     "commonName": "Taray canario",
@@ -21659,34 +21801,6 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
-  "Tetraclinis articulata": {
-    "commonName": "Sabina de Cartagena",
-    "kingdom": "flora",
-    "group": "Conífera",
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 2,
-    "description": null,
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Plantae",
-      "phylum": "Tracheophyta",
-      "class": "Pinopsida",
-      "order": "Pinales",
-      "family": "Cupressaceae",
-      "genus": "Tetraclinis"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2011)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · y 1 figura más en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sandarac_Tree_(Tetraclinis_articulata)_-_Cartagena%2C_Spain_2024-02-05_(01).jpg?width=1280",
-    "imageAttribution": "Ryan Hodnett (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 8758,
-    "rarityBasis": {
-      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    }
-  },
   "Teucrium buxifolium": {
     "commonName": "poliol real",
     "kingdom": "flora",
@@ -21713,7 +21827,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Teucrium capitatum": {
     "commonName": "Zamarrilla",
@@ -21769,7 +21884,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": null,
     "imageAttribution": null,
-    "eidosTaxonId": 8709
+    "eidosTaxonId": 8709,
+    "rarityBasis": null
   },
   "Teucrium chamaedrys": {
     "commonName": "Beltrónica",
@@ -22046,7 +22162,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": null,
     "imageAttribution": null,
-    "eidosTaxonId": 8826
+    "eidosTaxonId": 8826,
+    "rarityBasis": null
   },
   "Teucrium ronnigeri": {
     "commonName": "Teucrium ronnigeri",
@@ -22070,7 +22187,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": null,
     "imageAttribution": null,
-    "eidosTaxonId": 94578
+    "eidosTaxonId": 94578,
+    "rarityBasis": null
   },
   "Teucrium thymifolium": {
     "commonName": "poliol atomillado",
@@ -22157,7 +22275,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Distichoselinum_tenuifolium_5.JPG?width=1280",
     "imageAttribution": "Jardí Botànic de Barcelona (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 82639
+    "eidosTaxonId": 82639,
+    "rarityBasis": null
   },
   "Thapsia villosa": {
     "commonName": "Cañabeja",
@@ -22181,7 +22300,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Thapsia_villosa_Puertollano.jpg?width=1280",
     "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
-    "eidosTaxonId": 8873
+    "eidosTaxonId": 8873,
+    "rarityBasis": null
   },
   "Thesium humifusum": {
     "commonName": "Thesium humifusum",
@@ -22237,7 +22357,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Thymelaea tartonraira": {
     "commonName": "Cagalera",
@@ -22503,7 +22624,8 @@
       "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Timon lepidus": {
     "commonName": "Lagarto ocelado",
@@ -22559,7 +22681,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sierra_Nevada_Lizard_(Timon_nevadensis)_male_(found_by_Jean_NICOLAS)_(35778938553).jpg?width=1280",
     "imageAttribution": "Bernard DUPONT from FRANCE (CC BY-SA 2.0) · Wikimedia Commons",
-    "eidosTaxonId": 36626
+    "eidosTaxonId": 36626,
+    "rarityBasis": null
   },
   "Torilis arvensis": {
     "commonName": "bardanilla",
@@ -22608,7 +22731,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Trachelium_caeruleum_caeruleum.JPG?width=1280",
     "imageAttribution": "Xemenendura (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 9026
+    "eidosTaxonId": 9026,
+    "rarityBasis": null
   },
   "Trifolium campestre": {
     "commonName": "Es'i'rebo",
@@ -22632,7 +22756,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Trifolium_spp_Sturm33.jpg?width=1280",
     "imageAttribution": "Johann Georg Sturm (Painter: Jacob Sturm) (Public domain) · Wikimedia Commons",
-    "eidosTaxonId": 8983
+    "eidosTaxonId": 8983,
+    "rarityBasis": null
   },
   "Trifolium gemellum": {
     "commonName": "Trebillos",
@@ -22687,7 +22812,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Trifolium_scabrum1.jpg?width=1280",
     "imageAttribution": "No machine-readable author provided. Aroche assumed (based on copyr… (CC BY-SA 2.5) · Wikimedia Commons",
-    "eidosTaxonId": 9051
+    "eidosTaxonId": 9051,
+    "rarityBasis": null
   },
   "Tringa ochropus": {
     "commonName": "Andarríos grande",
@@ -22715,7 +22841,8 @@
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Tripodion tetraphyllum": {
     "commonName": "Garbancito",
@@ -22739,7 +22866,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anthyllis_tetraphylla.JPG?width=1280",
     "imageAttribution": "Xemenendura (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 9090
+    "eidosTaxonId": 9090,
+    "rarityBasis": null
   },
   "Troglodytes troglodytes": {
     "commonName": "Chochín",
@@ -22940,7 +23068,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Ulex europaeus": {
     "commonName": "Tojo",
@@ -23059,7 +23188,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tibeqbaqin_-_Umbilicus_horizontalis.jpg?width=1280",
     "imageAttribution": "Zidat (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 9149
+    "eidosTaxonId": 9149,
+    "rarityBasis": null
   },
   "Umbilicus rupestris": {
     "commonName": "Campanillas",
@@ -23083,7 +23213,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Umbilicus_rupestris.jpg?width=1280",
     "imageAttribution": "user:Carsten Niehaus (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 9151
+    "eidosTaxonId": 9151,
+    "rarityBasis": null
   },
   "Upupa epops": {
     "commonName": "Abubilla",
@@ -23139,7 +23270,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/U._picroides-1.JPG?width=1280",
     "imageAttribution": "Philmarin (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 9706
+    "eidosTaxonId": 9706,
+    "rarityBasis": null
   },
   "Valantia hispida": {
     "commonName": "Lapa",
@@ -23163,7 +23295,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Valantia_hispida_23-08-2003.jpg?width=1280",
     "imageAttribution": "No machine-readable author provided. BetacommandBot assumed (based … (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 9184
+    "eidosTaxonId": 9184,
+    "rarityBasis": null
   },
   "Valantia muralis": {
     "commonName": "crujía menuda",
@@ -23187,7 +23320,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Valantia_muralis_1.jpg?width=1280",
     "imageAttribution": "Aroche (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 9187
+    "eidosTaxonId": 9187,
+    "rarityBasis": null
   },
   "Verbascum sinuatum": {
     "commonName": "Rabo de gato",
@@ -23211,7 +23345,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Verbascum_sinuatum1.jpg?width=1280",
     "imageAttribution": "No machine-readable author provided. Aroche assumed (based on copyr… (CC BY-SA 2.5) · Wikimedia Commons",
-    "eidosTaxonId": 9299
+    "eidosTaxonId": 9299,
+    "rarityBasis": null
   },
   "Veronica praecox": {
     "commonName": "gallinerilla temprana",
@@ -23296,7 +23431,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kr_Vicia_Hybrida.jpg?width=1280",
     "imageAttribution": "Ziegler175 (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 9195
+    "eidosTaxonId": 9195,
+    "rarityBasis": null
   },
   "Vicia lutea": {
     "commonName": "Alberjana",
@@ -23320,7 +23456,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/(MHNT)_Vicia_lutea_-_plant_habit.jpg?width=1280",
     "imageAttribution": "Didier Descouens (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 9201
+    "eidosTaxonId": 9201,
+    "rarityBasis": null
   },
   "Vicia peregrina": {
     "commonName": "Arveana",
@@ -23369,7 +23506,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Viola_arborescens9.jpg?width=1280",
     "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 9385
+    "eidosTaxonId": 9385,
+    "rarityBasis": null
   },
   "Vulpes vulpes": {
     "commonName": "Zorro",
@@ -23432,7 +23570,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Zamenis scalaris": {
     "commonName": "Culebra de escalera",
@@ -23487,7 +23626,9 @@
     "iucnGlobal": "NE (no evaluada a nivel global)",
     "spainStatus": "Incluida en la Lista Roja de la Flora Vascular Española 2008 (categoría exacta pendiente de confirmar en listaroja.conservacionvegetal.org)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ziziphus_lotus_20200928_191923.jpg?width=1280",
-    "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons"
+    "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons",
+    "rarityBasis": null,
+    "descriptionSource": null
   },
   "Zygophyllum fabago": {
     "commonName": "Morsana",
@@ -23518,6 +23659,7 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   }
 }
