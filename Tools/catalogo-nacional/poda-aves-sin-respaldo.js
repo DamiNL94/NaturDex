@@ -40,8 +40,22 @@
  * `build-species-n2.js` al regenerar la Capa 3. Esta herramienta no redacta procedencia: si lo
  * hiciera, estaría inventando el texto de una fuente que no ha leído.
  *
+ * Y POR QUÉ HACE FALTA ADEMÁS EL SQL (`--sql`)
+ * --------------------------------------------
+ * `build-park-sql.js` solo hace UPSERT: `INSERT … ON DUPLICATE KEY UPDATE`. Eso vale para dar de
+ * alta y para corregir, y no vale para RETIRAR — no hay ninguna sentencia que borre lo que ya no
+ * está en el `park.json`. Así que regenerar el `-n2.sql` después de podar deja la base de datos
+ * exactamente igual que antes, con las 227 aves dentro.
+ *
+ * Y como `Frontend/Js/data.js` da prioridad a la API sobre el paquete, el resultado sería el peor de
+ * los dos mundos: el repositorio sin las aves, el usuario viéndolas. Es la cuarta de las «cinco cosas
+ * que fallan en verde» del CLAUDE.md, con el borrado en vez del alta.
+ *
+ * Por eso el borrado se escribe aparte y explícito, con los nombres uno a uno: es revisable antes de
+ * aplicarlo, que es lo que un DELETE necesita y un UPSERT no.
+ *
  * Uso:
- *   node Tools/catalogo-nacional/poda-aves-sin-respaldo.js --park <slug> [--write]
+ *   node Tools/catalogo-nacional/poda-aves-sin-respaldo.js --park <slug> [--write] [--sql <ruta>]
  *                                                          [--sitio <ruta>] [--informe <ruta.md>]
  *
  * Sin `--write` no escribe: enseña el recuento y deja el informe. Es idempotente: una segunda pasada
@@ -50,7 +64,8 @@
 const fs = require('fs');
 const path = require('path');
 const { arg, flag, requireArgs, die, sleep } = require('../lib/cli');
-const { FRONTEND, CATALOGO_DIR, OUT_DIR, readJson, rel, fromRoot } = require('../lib/io');
+const { FRONTEND, DATABASE, CATALOGO_DIR, OUT_DIR, readJson, rel, fromRoot } = require('../lib/io');
+const { sqlStr } = require('../lib/sql');
 const eidos = require('../lib/eidos');
 const respaldo = require('../lib/respaldo-sitio');
 const { binomio } = require('../lib/atlas');
@@ -62,6 +77,11 @@ requireArgs('Uso: --park <slug> [--write] [--sitio <ruta>] [--informe <ruta.md>]
 const RUTA_SITIO = fromRoot(arg('sitio', path.join(OUT_DIR, `${PARK}-rn2000-sitio.json`)));
 const RUTA_ANEXOS = fromRoot(arg('anexos', path.join(CATALOGO_DIR, 'data', 'anexos-normativos.json')));
 const RUTA_INFORME = fromRoot(arg('informe', path.join(OUT_DIR, `${PARK}-poda-aves.md`)));
+// El SQL va a `Database/` y no a `out/` porque no es un intermedio que se revisa y se tira: es un
+// fichero que hay que aplicar contra la base de datos y que tiene que quedar versionado, como el
+// resto de volcados del espacio.
+const RUTA_SQL = arg('sql') ? fromRoot(arg('sql')) : path.join(DATABASE, `poda-aves-${PARK}.sql`);
+const CON_SQL = flag('sql') || Boolean(arg('sql'));
 const CACHE = fromRoot(arg('cache', path.join(OUT_DIR, `${PARK}-eidos-respaldo-cache.json`)));
 
 const hoy = () => new Date().toISOString().slice(0, 10);
@@ -307,8 +327,80 @@ async function main() {
   });
   if (WRITE) { fs.mkdirSync(OUT_DIR, { recursive: true }); fs.writeFileSync(RUTA_INFORME, informe, 'utf8'); }
   console.log(`${WRITE ? '+' : '~'} ${rel(RUTA_INFORME)}`);
+
+  if (CON_SQL) {
+    const sql = redactaSql(entrada, sinRespaldo);
+    if (sinRespaldo.length) {
+      if (WRITE) fs.writeFileSync(RUTA_SQL, sql, 'utf8');
+      console.log(`${WRITE ? '+' : '~'} ${rel(RUTA_SQL)} (${sinRespaldo.length} borrado(s))`);
+    } else if (fs.existsSync(RUTA_SQL)) {
+      // Sin nada que retirar, el SQL de la pasada anterior es una orden de borrado que ya se aplicó y
+      // que volver a ejecutar no haría daño pero sí confunde: el fichero es el estado, no un histórico.
+      console.log(`= ${rel(RUTA_SQL)} (nada nuevo que retirar; se conserva el de la poda ya aplicada)`);
+    } else {
+      console.log('  (nada que retirar: no se escribe SQL)');
+    }
+  }
   if (!WRITE) console.log('\nSimulación: no se ha escrito nada. Añade --write para aplicarlo.');
   if (WRITE) require('../lib/io').writeJson(CACHE, cache);
+}
+
+/*
+ * El borrado, explícito y con los nombres uno a uno.
+ *
+ * Se borra por `scientific_name` dentro del parque, que es la clave única del esquema, y NO por id:
+ * los `id` de `species` son autoincrementales de la base de datos y no tienen por qué coincidir con
+ * los del `park.json` de este repositorio. Borrar por número sería borrar a ciegas.
+ *
+ * `species_habitats` cae solo (ON DELETE CASCADE). `user_occurrences` NO: el esquema deja a propósito
+ * esa tabla sin clave foránea para que regenerar el catálogo no se lleve por delante la observación
+ * de una persona, que es dato propio y no derivado, y que además lleva su taxonomía copiada.
+ */
+function redactaSql(entrada, retiradas) {
+  const l = [];
+  l.push(`-- ${entrada.name} (${PARK}) · retirada de las aves sin respaldo de sitio`);
+  l.push(`-- Generado el ${hoy()} por Tools/catalogo-nacional/poda-aves-sin-respaldo.js`);
+  l.push('--');
+  l.push('-- Estas aves estaban en el catálogo del espacio por sus ocurrencias de GBIF, que en un ave');
+  l.push('-- no miden pertenencia al espacio: vuela, y un registro en vuelo cae dentro de cualquier');
+  l.push('-- recinto. Ninguna fuente oficial de sitio —el Formulario Normalizado de Datos del sitio');
+  l.push('-- Red Natura 2000 ni el anexo normativo del plan de gestión— las sitúa aquí.');
+  l.push('--');
+  l.push('-- HACE FALTA porque build-park-sql.js solo hace UPSERT: regenerar el -n2.sql corrige y da de');
+  l.push('-- alta, pero no retira nada. Sin este fichero, la API sigue sirviendo las aves podadas.');
+  l.push('--');
+  l.push('-- ANTES DE APLICARLO, dos cosas:');
+  l.push('--   · Haz copia (npm run db:backup). Un DELETE no se deshace con otra pasada.');
+  l.push('--   · user_progress.payload indexa los descubrimientos por el species_id de cada parque, así');
+  l.push('--     que quien hubiera descubierto una de estas aves conserva una marca que ya no apunta a');
+  l.push('--     ninguna ficha. Después de aplicar esto hay que pasar');
+  l.push('--     Tools/recalculate-account-progress.php para que el progreso y los logros cuadren.');
+  l.push('--   · Las citas Darwin Core (user_occurrences) NO se tocan: no tienen clave foránea a');
+  l.push('--     species precisamente para esto, y llevan su taxonomía copiada.');
+  l.push('');
+  l.push('START TRANSACTION;');
+  l.push('');
+  l.push('DELETE sp FROM species sp');
+  l.push('JOIN parks pk ON pk.id = sp.park_id');
+  l.push(`WHERE pk.slug = ${sqlStr(PARK)}`);
+  l.push('  AND sp.scientific_name IN (');
+  const nombres = [...retiradas].sort((a, b) => a.scientificName.localeCompare(b.scientificName));
+  nombres.forEach((s, i) => {
+    l.push(`    ${sqlStr(s.scientificName)}${i < nombres.length - 1 ? ',' : ''}` +
+      `  -- ${s.commonName || '—'}`);
+  });
+  l.push('  );');
+  l.push('');
+  l.push('COMMIT;');
+  l.push('');
+  l.push('-- Comprobación: debe devolver 0 aves de las retiradas y el total esperado del espacio.');
+  l.push('SELECT');
+  l.push(`    (SELECT COUNT(*) FROM species s JOIN parks p ON p.id = s.park_id` +
+    ` WHERE p.slug = ${sqlStr(PARK)}) AS especies_del_espacio,`);
+  l.push(`    (SELECT COUNT(*) FROM species s JOIN parks p ON p.id = s.park_id` +
+    ` WHERE p.slug = ${sqlStr(PARK)} AND s.scientific_name IN (` +
+    nombres.map(s => sqlStr(s.scientificName)).join(', ') + ')) AS retiradas_que_siguen;');
+  return l.join('\n') + '\n';
 }
 
 function redactaInforme(d) {

@@ -2,7 +2,7 @@
 
 Generado el 2026-08-16 por `Tools/catalogo-nacional/poda-aves-sin-respaldo.js`.
 
-El espacio tenía **40 aves** de 167 fichas. Conservan su plaza **40**; se retiran **0**.
+El espacio tenía **118 aves** de 245 fichas. Conservan su plaza **40**; se retiran **78**.
 
 Una especie entra en el catálogo de un espacio por CONSTANCIA: que GBIF la haya registrado dentro de sus polígonos de hábitat. Para un ave esa prueba no mide lo que dice medir —vuela, y un registro en vuelo cae dentro de cualquier recinto—, así que su puerta es el **respaldo de sitio**: que una fuente oficial afirme por escrito que pertenece a ESTE sitio. Son dos, y cualquiera de las dos vale: el Formulario Normalizado de Datos del sitio Red Natura 2000 y el anexo normativo del plan de gestión del espacio.
 
@@ -29,8 +29,88 @@ La fuente y el catálogo escriben la misma especie con nombres de épocas distin
 
 ## Aves retiradas
 
-Ninguna: todas las aves del espacio tienen respaldo de sitio.
+Ninguna fuente oficial las sitúa en este espacio. **No se pierden**: están en este informe con su recuento de GBIF, y vuelven al catálogo en cuanto una fuente de sitio las nombre — el anexo del plan de gestión del espacio es la vía, no bajar la exigencia.
 
+| Especie | Nombre común | Occ. GBIF |
+|---|---|---:|
+| *Fringilla coelebs* | Pimientera | 2532 |
+| *Aegithalos caudatus* | Mito | 2092 |
+| *Curruca melanocephala* | Curruca cabecinegra | 2092 |
+| *Parus major* | Carbonero común | 1977 |
+| *Picus sharpei* | Pito ibérico | 1411 |
+| *Phylloscopus collybita* | Mosquitero común | 1245 |
+| *Alectoris rufa* | Perdiz roja | 1019 |
+| *Lophophanes cristatus* | Herrerillo capuchino | 959 |
+| *Erithacus rubecula* | Petirrojo europeo | 919 |
+| *Phoenicurus ochruros* | Colirrojo tizón | 697 |
+| *Apus apus* | Vencejo común | 610 |
+| *Motacilla alba* | Lavandera blanca | 600 |
+| *Athene noctua* | Mochuelo europeo | 492 |
+| *Hirundo rustica* | Golondrina común | 492 |
+| *Sylvia atricapilla* | Curruca capirotada | 461 |
+| *Oriolus oriolus* | Oropéndola | 426 |
+| *Cuculus canorus* | Cuco | 406 |
+| *Lanius senator* | Alcaudón común | 390 |
+| *Corvus corax* | Cuervo grande | 348 |
+| *Delichon urbicum* | Avión común | 336 |
+| *Ptyonoprogne rupestris* | Avión roquero | 309 |
+| *Emberiza cia* | Escribano montesino | 289 |
+| *Accipiter nisus* | Gavilán común | 273 |
+| *Certhia brachydactyla* | Agateador común | 255 |
+| *Monticola solitarius* | Roquero solitario | 182 |
+| *Emberiza cirlus* | Escribano soteño | 172 |
+| *Emberiza calandra* | Triguero | 156 |
+| *Anthus pratensis* | Bisbita común | 141 |
+| *Apus pallidus* | Vencejo pálido | 133 |
+| *Regulus ignicapilla* | Reyezuelo listado | 123 |
+| *Spinus spinus* | Lúgano | 101 |
+| *Tachymarptis melba* | Vencejo real | 94 |
+| *Columba oenas* | Paloma zurita | 78 |
+| *Larus michahellis* | Gaviota patiamarilla | 74 |
+| *Petronia petronia* | Gorrión chillón | 48 |
+| *Motacilla cinerea* | Lavandera cascadeña | 42 |
+| *Ficedula hypoleuca* | Papamoscas cerrojillo | 38 |
+| *Hippolais polyglotta* | Zarcero común | 38 |
+| *Strix aluco* | Cárabo | 34 |
+| *Cisticola juncidis* | Buitrón | 32 |
+| *Luscinia megarhynchos* | Ruiseñor común | 32 |
+| *Cyanistes caeruleus* | Herrerillo común | 28 |
+| *Caprimulgus europaeus* | Chotacabras europeo | 23 |
+| *Tyto alba* | Lechuza común | 22 |
+| *Pandion haliaetus* | Águila pescadora | 21 |
+| *Phylloscopus trochilus* | Mosquitero musical | 17 |
+| *Ardea cinerea* | Garza real | 16 |
+| *Falco eleonorae* | Halcón de Eleonora | 14 |
+| *Prunella collaris* | Acentor alpino | 14 |
+| *Bubulcus ibis* | Garcilla bueyera | 12 |
+| *Himantopus himantopus* | Cigüeñuela | 12 |
+| *Prunella modularis* | Acentor común | 11 |
+| *Saxicola rubetra* | Tarabilla norteña | 10 |
+| *Tachybaptus ruficollis* | Zampullín común | 10 |
+| *Clamator glandarius* | Críalo | 9 |
+| *Phoenicurus phoenicurus* | Colirrojo real | 9 |
+| *Egretta garzetta* | Garceta común | 8 |
+| *Phylloscopus bonelli* | Mosquitero papialbo | 7 |
+| *Sylvia borin* | Curruca mosquitera | 7 |
+| *Aythya nyroca* | Porrón pardo | 6 |
+| *Cettia cetti* | Cetia ruiseñor | 6 |
+| *Milvus milvus* | Milano real | 6 |
+| *Riparia riparia* | Avión zapador | 6 |
+| *Emberiza citrinella* | Escribano cerillo | 5 |
+| *Regulus regulus* | Reyezuelo sencillo | 5 |
+| *Falco columbarius* | Esmerejón | 4 |
+| *Tringa ochropus* | Andarríos grande | 4 |
+| *Ardeola ralloides* | Garcilla cangrejera | 3 |
+| *Cecropis daurica* | Golondrina dáurica | 3 |
+| *Falco naumanni* | Cernícalo primilla | 3 |
+| *Fringilla montifringilla* | Pinzón real | 3 |
+| *Neophron percnopterus* | Alimoche común | 3 |
+| *Tadorna tadorna* | Tarro blanco | 3 |
+| *Acrocephalus scirpaceus* | Carricero común | 2 |
+| *Charadrius dubius* | Chorlitejo chico | 2 |
+| *Melanocorypha calandra* | Calandria común | 2 |
+| *Pterocles orientalis* | Ganga ortega | 2 |
+| *Jynx torquilla* | Torcecuello euroasiático | 1 |
 
 ## Declaradas por el sitio y sin ficha
 
