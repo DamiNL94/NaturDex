@@ -70,6 +70,15 @@ dato; «Cómo» = la herramienta o el criterio; «Verifica» = quién lo comprue
 | `lista_oficial_sitio` | IEPNB · Red Natura 2000 | Lista oficial de especies del sitio (`site_code`): secciones 3.2 y 3.3 de su Formulario Normalizado de Datos, que trae `especies-sitio-rn2000.js`. Junto al anexo normativo, la única evidencia que afirma la pertenencia *a este sitio*, y por eso es la **puerta de entrada de las aves**. Sustituye al valor `zepa`, que nunca llegó a escribirse porque la fuente que lo iba a alimentar (EEA Discodata/BISE) no estaba cableada |
 | `anexo_normativo` | PORN/PRUG, decreto de declaración o SDF del sitio | La norma del espacio la **enumera por escrito** en un anexo. Es la evidencia más fuerte de las cuatro: la única que afirma la pertenencia *a este espacio* y no a un polígono o a un tipo de hábitat. La lista se transcribe a mano en `Tools/catalogo-nacional/data/anexos-normativos.json`, con su cita y la fecha en que se leyó |
 
+> **Un enlace se puede retirar después, y hay una herramienta que lo revisa.**
+> `npm run especies:habitats` (`auditoria-especie-habitat.js`) coteja cada enlace ya escrito contra
+> cuatro cosas que están en el repo —el **medio** que exige el código HIC frente al que declara la
+> ficha universal de la especie (`Tools/lib/medios.js`), el **vuelo** del taxón, las **ocurrencias**
+> del barrido versionado y el **Atlas**— y retira lo que ninguna de las cuatro sostiene. El estado de
+> hoy, enlace a enlace, está en [`Docs/auditoria-especie-habitat.md`](../auditoria-especie-habitat.md).
+> Lo que **no** hace es subir el listón: un enlace con una sola ocurrencia se conserva y se mide, y
+> son el 40 % (deuda nº 22).
+
 > **El anexo da evidencia, no entrada.** La constancia en GBIF sigue siendo la puerta del catálogo:
 > lo que la norma enumera y el barrido no confirma dentro de ningún polígono **no se aprueba**, pero
 > tampoco se pierde — sale en `anexo_sin_constancia` del informe de selección como hueco a contrastar

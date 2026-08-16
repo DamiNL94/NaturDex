@@ -62,6 +62,12 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
   generadas después la volvieron a partir en dos. Arregla **el dato y la entrada de `data/`**.
 - **`build-park-sql.js` solo hace UPSERT.** Quitar una ficha del `park.json` y regenerar el SQL deja
   la BD igual, y la API manda sobre el paquete: el usuario la sigue viendo. El borrado va aparte.
+- **Una ocurrencia dentro de un polígono no dice que la especie viva ahí.** Es la regla con la que se
+  derivan los 4.379 enlaces especie↔hábitat, y en un hábitat que es una cinta de metros —un
+  manantial, una charca, un cauce— cualquier registro tomado en el sendero de al lado cae dentro. En
+  Carrascoy había una ardilla roja y un algarrobo fichados en manantiales petrificantes. Se repasa
+  con `npm run especies:habitats`; el **40 % de los enlaces medibles se sostiene sobre un solo
+  registro** y eso sigue abierto (deuda nº 22).
 
 ---
 
@@ -73,6 +79,7 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 | Saber de dónde sale un campo | [`Docs/arquitectura/PROCEDENCIA-DE-CAMPOS.md`](Docs/arquitectura/PROCEDENCIA-DE-CAMPOS.md) — campo a campo, con las URLs de las fuentes |
 | Dar de alta o ampliar un espacio | [`Docs/runbook/ALTA-DE-ESPACIO.md`](Docs/runbook/ALTA-DE-ESPACIO.md) + [`Docs/runbook/TRAMPAS-CONOCIDAS.md`](Docs/runbook/TRAMPAS-CONOCIDAS.md) |
 | Tocar cualquier cosa de aves | [`Docs/runbook/AVES.md`](Docs/runbook/AVES.md) — **entran por otra puerta que el resto**, y el documento dice también qué NO cubre esa puerta |
+| Dudar de si una especie pertenece al hábitat del que cuelga | [`Docs/auditoria-especie-habitat.md`](Docs/auditoria-especie-habitat.md) — el estado de los 4.379 enlaces, enlace a enlace. Lo regenera `npm run especies:habitats`; el criterio vive en la cabecera de la herramienta y en `Tools/lib/medios.js` |
 | Saber en qué estado está un espacio | [`Docs/rollout/ESTADO.md`](Docs/rollout/ESTADO.md) — **la tabla**. Los informes de cierre están en `Docs/rollout/sesiones/`, uno por periodo: entra solo al que haga falta |
 | Tocar el frontend | [`Frontend/Js/CLAUDE.md`](Frontend/Js/CLAUDE.md) |
 | Tocar la API | [`Backend/CLAUDE.md`](Backend/CLAUDE.md) |
@@ -103,6 +110,7 @@ npm run validate            # BLOQUEA. Coherencia park.json ↔ manifest ↔ geo
 npm test                    # reglas de presencia y progreso (PHP, sin BD)
 npm run typecheck           # tsc --noEmit sobre AdminPanel
 npm run taxones:duplicados  # sale con código 1 mientras queden
+npm run especies:habitats   # repasa los enlaces especie↔hábitat; sin --write no toca nada
 npm run glossary:check      # editorial, no bloquea
 ```
 

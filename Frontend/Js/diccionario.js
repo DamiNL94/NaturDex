@@ -35,16 +35,15 @@
 import { reportGlossaryView } from './achievements.js';
 import { diccionarioPanel } from './dom.js';
 import { glosarioCargado, glosarioTerminos, loadGlossary } from './glossary.js';
-import { html, normalize } from './util.js';
+import { colador, html, normalize } from './util.js';
 
 // Estado propio de la vista: no vive en state.js porque no lo mira nadie más.
 let consulta = '';
 let materia = '';        // '' = todas
 let terminoDestacado = ''; // al llegar desde el popover, el que hay que abrir y señalar
 
-// Ordenación alfabética española: «ñ» va después de «n», y los acentos no separan palabras.
-const colador = new Intl.Collator('es-ES', { sensitivity: 'base' });
-
+// El colador («ñ» después de «n», acentos que no separan palabras) es el mismo que ordena el
+// catálogo: vive en util.js desde que hubo una segunda lista alfabética que ordenar.
 function ordenados() {
   return glosarioTerminos().slice().sort((a, b) => colador.compare(a.term, b.term));
 }

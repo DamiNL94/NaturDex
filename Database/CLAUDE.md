@@ -24,6 +24,7 @@ silencio.
 | `n3-pois-<slug>.sql` | — | `npm run pois:sql -- --park <slug>` (`build-poi-sql.js`) |
 | `<slug>-n2.sql` | — | `npm run park:sql -- --park <slug>` (`build-park-sql.js`). **Se aplica ANTES que el de POIs**: trae la fila de `parks`, y sin ella todo lo demás carga cero filas en silencio. **Solo hace UPSERT**, así que no retira nada: tras un renombrado deja la ficha vieja en la base con su `id` — ver `poda-renombrados-*.sql` |
 | `poda-aves-<slug>.sql` | — | `npm run aves:poda -- --park <slug> --sql <ruta>`. **Borrados**, que el UPSERT de `park:sql` no puede generar. Se aplican DESPUÉS del `-n2.sql` del espacio |
+| `enlaces-retirados-<slug>.sql` | — | `npm run especies:habitats:aplica -- --sql`. **Borrados de `species_habitats`** que la auditoría de enlaces retiró del `park.json`: el UPSERT de `park:sql` no los quita. No tocan ninguna ficha ni ninguna cita de usuario, solo el vínculo. Se aplican DESPUÉS del `-n2.sql` del espacio |
 | `poda-renombrados-<slug>.sql` | — | Escrito a mano, una vez, con la lista revisada delante. Retira las fichas que un renombrado dejó huérfanas en la base y el UPSERT no puede tocar |
 | `seed.sql` | 692 K | Volcado de datos de arranque |
 | `snapshot.sql` | 692 K | Volcado completo de la BD viva |

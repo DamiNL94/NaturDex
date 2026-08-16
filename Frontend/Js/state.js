@@ -8,7 +8,8 @@
 // salvo que a `state` se le cuelgan capas Leaflet creadas en otros módulos.
 // ================================================================================================
 
-import { normalize } from './util.js';
+import { pasaFiltroRareza } from './rareza.js';
+import { comparaEspecies, normalize } from './util.js';
 
 // --- Constantes de la aplicación ----------------------------------------------------------------
 export const API_BASE = '../Backend/Api';
@@ -24,6 +25,10 @@ export const ACHIEVEMENTS_CATALOG_PATH = 'Data/achievements.json';
 export const state = {
   data: null,
   filter: 'all',
+  // Filtro por tramo de rareza legal, como MÍNIMO ('all' | '2' | '3' | '4' | '5'). Es un eje
+  // distinto del de arriba —reino/vistas— y por eso son dos filtros y no uno: quien busca la flora
+  // amenazada de un hábitat necesita cruzarlos. Ver Js/rareza.js.
+  rarityFilter: 'all',
   query: '',
   selectedId: null,
   view: 'catalog',
@@ -77,6 +82,16 @@ export const state = {
 };
 
 // --- Selectores: catálogo -------------------------------------------------------------------------
+/*
+ * La lista del catálogo, filtrada y YA ORDENADA alfabéticamente.
+ *
+ * El orden se decide aquí, en el selector, y no en cada sitio que pinta una lista, porque el dato
+ * llega en dos órdenes distintos según de dónde venga: el `park.json` empaquetado guarda las fichas
+ * por `id` (el orden en que se dieron de alta) y la API las sirve con `ORDER BY is_featured DESC,
+ * common_name ASC` (`Backend/Lib/park_payload.php`). Como la API tiene prioridad sobre el paquete,
+ * el MISMO parque salía en un orden sin conexión y en otro con ella. Ordenando en el selector la
+ * app enseña siempre la misma lista, venga de donde venga, y el orden del dato deja de importar.
+ */
 export function getFilteredSpecies() {
   return state.data.species.filter(species => {
     const matchesFilter = state.filter === 'all'
@@ -84,8 +99,20 @@ export function getFilteredSpecies() {
       || species.kingdom === state.filter;
     const matchesHabitat = !state.habitatFocus || (species.habitatIds || []).includes(state.habitatFocus);
     const text = normalize([species.commonName, species.scientificName, species.group, species.habitat].join(' '));
-    return matchesFilter && matchesHabitat && text.includes(normalize(state.query));
-  });
+    return matchesFilter && matchesHabitat && pasaFiltroRareza(species, state.rarityFilter)
+      && text.includes(normalize(state.query));
+  }).sort(comparaEspecies);
+}
+
+/**
+ * Las fichas de un hábitat, en el mismo orden alfabético que el catálogo. `speciesIds` viene
+ * ordenado por `id` —que es el orden canónico del dato y así debe seguir— y las chips de la ficha
+ * de hábitat lo pintaban tal cual, con lo que las mismas especies salían en un orden en la lista y
+ * en otro dos pantallas más allá.
+ */
+export function speciesOfHabitat(habitat) {
+  const porId = new Map((state.data.species || []).map(s => [s.id, s]));
+  return ((habitat && habitat.speciesIds) || []).map(id => porId.get(id)).filter(Boolean).sort(comparaEspecies);
 }
 
 // --- Catálogo organizado por grupo y hábitat: se navega primero por grupo de hábitats (costa,

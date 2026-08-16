@@ -4,10 +4,28 @@
 // Trozo de render.js. El índice de la carpeta está en Frontend/Js/CLAUDE.md.
 // ================================================================================================
 
-import { backToHabitatsBtn, catalogCrumb, catalogCrumbLabel, catalogTitle, resultCount, searchInput, searchLabel, speciesFilterGroup, speciesList } from '../dom.js';
+import { backToHabitatsBtn, catalogCrumb, catalogCrumbLabel, catalogTitle, rarityFilterGroup, resultCount, searchInput, searchLabel, speciesFilterGroup, speciesList } from '../dom.js';
 import { groupSwatch, groupedHabitats, habitatGroup, habitatGroupById, habitatsOfGroup } from '../habitat-groups.js';
+import { TRAMOS, TRAMO_AMENAZA, estrellas, tramoDe } from '../rareza.js';
 import { getFilteredHabitats, getFilteredSpecies, habitatSpeciesSeenCount, isHabitatComplete, state } from '../state.js';
 import { html, icon, raw, speciesImageSrc } from '../util.js';
+
+/*
+ * El distintivo de rareza de la tarjeta. Existe por el filtro: sin él, filtrar por «amenazadas»
+ * devuelve una lista idéntica a la de antes y no hay forma de ver por qué está cada ficha ahí.
+ * Lleva las cinco estrellas —las vacías incluidas— y el nombre de la categoría, y solo se pinta a
+ * partir del tramo 2: en el 1 diría «sin figura de protección» en 478 tarjetas de 1.161, que es
+ * ruido, y una ficha SIN tramo calculado no puede fingir que tiene uno.
+ */
+function rarezaBadge(species) {
+  const tramo = tramoDe(species);
+  if (tramo === null || tramo < 2) return '';
+  const clase = tramo >= TRAMO_AMENAZA ? 'badge rareza amenazada' : 'badge rareza';
+  // El texto visible va entero en un solo nodo —estrellas y categoría— y el del lector de pantalla
+  // en otro: separarlos en dos nodos visibles dejaba las estrellas pegadas a la palabra, porque el
+  // espacio entre ellos caía junto a un `.sr-only` posicionado en absoluto y no se pintaba.
+  return html`<span class="${clase}" title="${TRAMOS[tramo].significado}"><span aria-hidden="true">${estrellas(tramo)} ${TRAMOS[tramo].corto}</span><span class="sr-only">Rareza ${tramo} de 5: ${TRAMOS[tramo].significado}.</span></span>`;
+}
 
 // --- Catálogo ---------------------------------------------------------------------------------------
 // Tres niveles: grupos de hábitats → hábitats del grupo → especies del hábitat. Ver state.catalogMode.
@@ -71,18 +89,33 @@ export function renderHabitatCatalog() {
 
 export function renderSpeciesList() {
   const species = getFilteredSpecies();
-  resultCount.textContent = species.length === 1 ? '1 resultado' : species.length + ' resultados';
+  // Con un filtro de rareza puesto, «12 resultados» a secas se lee como «este hábitat tiene 12
+  // especies». Se dice cuántas hay en total para que se vea que es un recorte y no el catálogo.
+  const total = state.habitatFocus
+    ? (state.data.species || []).filter(s => (s.habitatIds || []).includes(state.habitatFocus)).length
+    : (state.data.species || []).length;
+  const recorte = species.length < total ? ` de ${total}` : '';
+  resultCount.textContent = (species.length === 1 ? '1 resultado' : species.length + ' resultados') + recorte;
   const cards = species.map(item => {
     const seen = state.seenSpecies.has(item.id);
-    return html`<button class="species-card ${item.id === state.selectedId ? 'active' : ''}${seen ? ' seen' : ''}" type="button" data-id="${item.id}"${item.id === state.selectedId ? html` aria-current="true"` : ''}><span class="card-thumb"><img src="${speciesImageSrc(item)}" alt="" loading="lazy" onerror="window.__imgFallback(this,${item.id})">${seen ? html`<span class="seen-badge" aria-hidden="true">${icon('check', 12)}</span>` : ''}</span><span><span class="card-meta"><span class="badge ${item.kingdom}">${item.kingdom}</span>${item.zepaSiteCode ? html`<span class="badge migratoria">🕊️ migratoria</span>` : ''}${item.featured ? html`<span class="badge alert">prioritaria</span>` : ''}${item.reviewNote ? html`<span class="badge review">a revisar</span>` : ''}</span><h3>${item.commonName}</h3><em>${item.scientificName}</em>${seen ? html`<span class="sr-only">Especie vista.</span>` : ''}</span></button>`;
+    return html`<button class="species-card ${item.id === state.selectedId ? 'active' : ''}${seen ? ' seen' : ''}" type="button" data-id="${item.id}"${item.id === state.selectedId ? html` aria-current="true"` : ''}><span class="card-thumb"><img src="${speciesImageSrc(item)}" alt="" loading="lazy" onerror="window.__imgFallback(this,${item.id})">${seen ? html`<span class="seen-badge" aria-hidden="true">${icon('check', 12)}</span>` : ''}</span><span><span class="card-meta"><span class="badge ${item.kingdom}">${item.kingdom}</span>${item.zepaSiteCode ? html`<span class="badge migratoria">🕊️ migratoria</span>` : ''}${item.featured ? html`<span class="badge alert">prioritaria</span>` : ''}${rarezaBadge(item)}${item.reviewNote ? html`<span class="badge review">a revisar</span>` : ''}</span><h3>${item.commonName}</h3><em>${item.scientificName}</em>${seen ? html`<span class="sr-only">Especie vista.</span>` : ''}</span></button>`;
   });
-  speciesList.innerHTML = html`${cards}`;
+  // Una lista vacía sin explicación se lee como un fallo de la app. Con el filtro de rareza puesto
+  // es además el caso NORMAL: en un hábitat corriente no hay ninguna especie en peligro, y eso es
+  // una respuesta, no un error.
+  speciesList.innerHTML = cards.length
+    ? html`${cards}`
+    : html`<p class="catalog-empty">Ninguna especie de esta lista cumple los filtros puestos.${
+      state.rarityFilter !== 'all' ? ' Prueba a bajar el listón de rareza.' : ''}</p>`;
 }
 
 export function renderCatalogBody() {
   const mode = state.catalogMode;
   const inSpeciesMode = mode === 'species';
   speciesFilterGroup.hidden = !inSpeciesMode;
+  // El filtro de rareza es de especies: en los niveles de grupo y de hábitat no filtra nada y solo
+  // ocuparía sitio (en móvil, la pantalla entera del buscador).
+  if (rarityFilterGroup) rarityFilterGroup.hidden = !inSpeciesMode;
   searchLabel.textContent = inSpeciesMode ? 'Buscar especie' : 'Buscar hábitat';
   searchInput.placeholder = inSpeciesMode ? 'Nombre común o científico' : 'Nombre o código de hábitat';
   // La miga de pan solo existe a partir del segundo nivel: en los grupos no hay de dónde volver.

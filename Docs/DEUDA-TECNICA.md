@@ -178,3 +178,24 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     abrir el PDF para averiguar lo mismo. Un `encontrado: true` con `inventarioDeEspecies: false`
     ahorra esa búsqueda, y es la misma regla que ya aplica el anexo normativo: **un espacio sin
     entrada no es un espacio sin anexo, es un anexo no consultado**.
+22. **El 40 % de los enlaces especie↔hábitat se sostiene sobre UN registro, y el listón del enlace es
+    más bajo que el de la ficha.** Lo mide la auditoría del 2026-08-16 (`npm run especies:habitats`,
+    informe en [`auditoria-especie-habitat.md`](auditoria-especie-habitat.md)): de los 3.236 enlaces
+    que se pueden medir contra el barrido versionado, **1.297 tienen una sola ocurrencia** dentro del
+    polígono — el 65 % en Sierra de El Carche, el 29 % en Carrascoy. Para que una especie entre en el
+    catálogo de un espacio se le piden **dos** ocurrencias en dos hábitats
+    (`data/umbrales-seleccion.json`); para colgarla de un polígono concreto basta una, y un solo
+    registro no distingue «vive aquí» de «pasaba por aquí».
+    > **No se sube el listón en esta sesión y el motivo es medible**: con `--umbral 2` se retirarían
+    > 1.297 enlaces y **135 de las 242 especies de El Carche se quedarían sin ningún hábitat**, con lo
+    > que solo se encontrarían en «todas las especies» y sus hábitats dejarían de poder completarse.
+    > Eso es una decisión de producto, no de auditoría. Lo que sí es barato es medir antes: el
+    > `--umbral` está puesto y el informe trae el reparto por espacio.
+23. **Tres espacios no tienen su barrido de GBIF versionado, y por eso 1.113 enlaces no se pueden
+    revisar.** Son Cabo Cope, Cuatro Calas y Sierra Espuña: `out/<slug>-gbif.json` existe para los
+    cinco restantes y para estos no, así que la auditoría de enlaces los deja en «no evaluable» —el
+    estado honesto, pero un hueco—. Se cierra con una pasada de
+    `npm run gbif:habitats -- --park <slug> --json Tools/catalogo-nacional/out/<slug>-gbif.json` por
+    espacio, que **necesita red**. Sierra Espuña es además el caso interesante: 38 de sus fichas
+    tienen `gbifOccurrences: 0` y 197 enlaces, porque los suyos son documentales (fichas de flora de
+    la Región de Murcia) y no salen de ningún barrido.

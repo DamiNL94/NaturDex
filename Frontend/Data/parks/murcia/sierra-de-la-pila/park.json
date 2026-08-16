@@ -147,7 +147,6 @@
         106,
         107,
         108,
-        109,
         110,
         111,
         112,
@@ -333,7 +332,6 @@
         106,
         107,
         108,
-        109,
         110,
         111,
         112,
@@ -519,7 +517,6 @@
         106,
         107,
         108,
-        109,
         110,
         111,
         112,
@@ -775,7 +772,6 @@
         106,
         107,
         108,
-        109,
         110,
         111,
         112,
@@ -8367,7 +8363,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF confirma su presencia con 2 ocurrencias dentro del espacio (barrido de 2026-08-15); un taxón volador no se adscribe a hábitats por sus ocurrencias; PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -8383,12 +8379,7 @@
       "eidosTaxonId": 11264,
       "gbifSpeciesKey": 2432655,
       "zepaSiteCode": null,
-      "habitatIds": [
-        "bosques-endemicos-de-9560",
-        "matorrales-arborescentes-de-5210",
-        "matorrales-termomediterraneos-y-5330",
-        "zonas-subestepicas-de-6220"
-      ],
+      "habitatIds": [],
       "gbifOccurrences": 2,
       "visible": true
     },

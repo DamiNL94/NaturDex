@@ -10,7 +10,8 @@ import { explicaAsociacion, explicacionFitosociologia } from '../fitosociologia.
 import { highlightGlossary } from '../glossary.js';
 import { groupSwatch, habitatGroup, habitatsOfGroup } from '../habitat-groups.js';
 import { isMarkVerifiedLocally } from '../presence.js';
-import { habitatAreaLabel, habitatSpeciesSeenCount, isHabitatComplete, state } from '../state.js';
+import { TRAMOS, baseDe, cartelAdvertencia, estrellas, recordatorioAdvertencia, tramoDe } from '../rareza.js';
+import { habitatAreaLabel, habitatSpeciesSeenCount, isHabitatComplete, speciesOfHabitat, state } from '../state.js';
 import { atributosAmpliar, habitatImageSrc, html, kingdomEmoji, poiImageSrc, raw, speciesImageSrc } from '../util.js';
 import { renderInvasoraDetail } from './invasoras.js';
 
@@ -85,9 +86,8 @@ function renderHabitatDetail() {
   // mapa se sube a sus vecinos de tipo sin volver al principio del catálogo.
   const group = habitatGroup(habitat);
   const groupSize = habitatsOfGroup(group.id).length;
-  const chips = (habitat.speciesIds || []).map(id => {
-    const s = (state.data.species || []).find(item => item.id === id);
-    if (!s) return '';
+  // En orden alfabético, el mismo que la lista del catálogo (ver state.speciesOfHabitat).
+  const chips = speciesOfHabitat(habitat).map(s => {
     const wasSeen = state.seenSpecies.has(s.id);
     return html`<button type="button" class="habitat-species-chip${wasSeen ? ' seen' : ''}" data-species-chip="${s.id}"><span aria-hidden="true">${kingdomEmoji(s)}</span>${s.commonName}${wasSeen ? html` <span aria-hidden="true">✓</span><span class="sr-only">(vista)</span>` : ''}</button>`;
   });
@@ -167,8 +167,9 @@ function renderSpeciesDetail() {
   // Las estrellas cuentan lo excepcional que es la especie EN ESTE ESPACIO, así que mandan el tramo
   // local (la categoría legal más grave de las dos escalas, estatal y autonómica). `rarityScore` es
   // el estatal, universal, y solo se usa de reserva: en las fichas que aún no tienen tramo local.
-  const rareza = species.rarityLocal ?? species.rarityScore ?? 1;
-  const stars = '★'.repeat(rareza) + '☆'.repeat(5 - rareza);
+  // Una ficha sin ninguno de los dos NO cuenta como un 1: el criterio vive en Js/rareza.js.
+  const rareza = tramoDe(species);
+  const base = baseDe(species);
   detailPanel.innerHTML = html`<div class="detail-image-wrap">
     <img src="${speciesImageSrc(species)}" alt="${species.commonName}" onerror="window.__imgFallback(this,${species.id})"${atributosAmpliar(hayFotoPropia(species), species.commonName, creditoFoto(species))}>
     </div>
@@ -179,14 +180,20 @@ function renderSpeciesDetail() {
     ${species.reviewNote ? html`<span class="badge review">a revisar</span>` : ''}
     </span>
     <h2>${species.commonName}</h2><em>${species.scientificName}</em>
+    ${cartelAdvertencia(species)}
     <p class="detail-prose">${species.description}</p>
     <ul class="detail-list detail-prose">${species.tips.map(tip => html`<li>${tip}</li>`)}</ul>
     <div class="detail-facts">
     <div><span>Hábitat</span><strong>${species.habitat}</strong></div>
     <div><span>Temporada</span><strong>${species.seasonality}</strong></div>
     <div><span>Grupo</span><strong>${species.group}</strong></div>
-    <div><span>Rareza</span><strong><span role="img" aria-label="${rareza} de 5">${stars}</span></strong></div>
+    <div><span>Rareza</span><strong>${rareza === null
+      ? 'Sin calcular'
+      : html`<span role="img" aria-label="${rareza} de 5">${estrellas(rareza)}</span>`}</strong></div>
     </div>
+    ${rareza === null
+      ? html`<p class="detail-source">La rareza sale de la <strong>categoría legal de protección</strong>, no de lo difícil que sea encontrarla. Esta ficha todavía no la tiene calculada.</p>`
+      : html`<p class="detail-source">Rareza = <strong>${TRAMOS[rareza].significado}</strong>. Sale de la categoría legal vigente${base ? html`: ${base.categoria}${base.norma ? ' — ' + base.norma : ''}` : ', aunque esta ficha no guarda la norma que la justifica'}.</p>`}
     <h3 class="detail-subtitle">Taxonomía</h3>
     <div class="detail-facts detail-taxonomy">
     ${renderTaxonomyRow('Reino', tx.kingdom)}
@@ -205,6 +212,7 @@ function renderSpeciesDetail() {
     ${species.reviewNote ? html`<div class="review-note"><strong>Pendiente de revisión:</strong> ${species.reviewNote}</div>` : ''}
     ${species.image && species.imageAttribution ? html`<p class="detail-source">Foto: ${species.imageAttribution}</p>` : ''}
     ${species.source ? html`<p class="detail-source">Fuente: ${species.source}</p>` : ''}
+    ${recordatorioAdvertencia(species)}
     <button class="seen-toggle ${seen ? 'is-seen' : ''}" type="button" data-toggle-seen="${species.id}" aria-pressed="${seen ? 'true' : 'false'}">${seen ? '✓ Visto' : 'Marcar como visto'}</button>
     ${seen ? markVerificationNote('species', species.id) : ''}
     ${seen ? html`<p class="detail-source">${state.sightings.has(species.id)

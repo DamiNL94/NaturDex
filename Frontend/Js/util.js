@@ -105,6 +105,28 @@ export function normalize(value) {
   return String(value ?? '').toLocaleLowerCase('es-ES');
 }
 
+// Ordenación alfabética española: la «ñ» va después de la «n» y los acentos no separan palabras
+// («ámbito» antes que «arbusto»). Vive aquí, y no en cada vista, porque la usan el catálogo, las
+// chips de la ficha de hábitat y el diccionario: tres colatores con opciones distintas ordenan
+// distinto la misma lista y nadie sabría cuál de las tres es la buena.
+export const colador = new Intl.Collator('es-ES', { sensitivity: 'base' });
+
+/**
+ * Comparador alfabético de fichas de especie, para `Array.prototype.sort`.
+ *
+ * Ordena por el nombre común, que es el que se lee en la tarjeta; con el mismo nombre común decide
+ * el científico, y con los dos iguales el `id`. Los dos desempates no son adorno: sin ellos el
+ * orden de dos fichas homónimas depende del algoritmo de `sort` del navegador y la lista se
+ * reordena sola entre repintados. Una ficha sin nombre común se ordena por el científico, que es lo
+ * que la tarjeta enseña en su lugar.
+ */
+export function comparaEspecies(a, b) {
+  const nombre = (s) => String(s.commonName || s.scientificName || '');
+  return colador.compare(nombre(a), nombre(b))
+    || colador.compare(String(a.scientificName || ''), String(b.scientificName || ''))
+    || ((a.id || 0) - (b.id || 0));
+}
+
 // --- Especies: emoji e imagen-placeholder -------------------------------------------------------
 export function kingdomEmoji(species) {
   if (species.kingdom === 'flora') return '🌿';

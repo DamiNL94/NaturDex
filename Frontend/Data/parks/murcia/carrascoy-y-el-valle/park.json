@@ -1233,26 +1233,14 @@
       "audioTranscript": null,
       "reviewNote": null,
       "speciesIds": [
-        3,
-        11,
-        16,
-        31,
-        32,
-        46,
-        62,
         148,
-        149,
         150,
-        248,
         251,
         261,
-        273,
         285,
         317,
         342,
-        369,
-        370,
-        379
+        369
       ]
     },
     {
@@ -1278,20 +1266,12 @@
       "audioTranscript": null,
       "reviewNote": null,
       "speciesIds": [
-        16,
-        31,
-        32,
-        62,
         148,
-        149,
         150,
-        248,
         261,
-        273,
         285,
         317,
-        369,
-        370
+        369
       ]
     },
     {
@@ -1317,26 +1297,14 @@
       "audioTranscript": null,
       "reviewNote": null,
       "speciesIds": [
-        3,
-        11,
-        16,
-        31,
-        32,
-        46,
-        62,
         148,
-        149,
         150,
-        248,
         251,
         261,
-        273,
         285,
         317,
         342,
-        369,
-        370,
-        379
+        369
       ]
     },
     {
@@ -1442,25 +1410,12 @@
       "audioTranscript": null,
       "reviewNote": null,
       "speciesIds": [
-        3,
-        5,
-        8,
-        11,
-        12,
-        14,
-        33,
-        38,
-        46,
-        247,
-        248,
         251,
         252,
         256,
-        273,
         280,
         309,
-        342,
-        379
+        342
       ]
     },
     {
@@ -1571,10 +1526,6 @@
       "speciesIds": [
         1,
         2,
-        6,
-        13,
-        22,
-        52,
         267,
         268,
         270
@@ -2182,7 +2133,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 117 ocurrencias dentro de los polígonos de hábitat del espacio (11 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 117 ocurrencias dentro de los polígonos de hábitat del espacio (8 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2205,11 +2156,8 @@
         "matorrales-arborescentes-de-5210",
         "galerias-y-matorrales-92D0",
         "encinares-de-quercus-9340",
-        "manantiales-petrificantes-con-7220",
-        "aguas-oligomesotroficas-calcareas-3140",
         "pastizales-salinos-mediterraneos-1410",
-        "prados-calcareos-carsticos-6110",
-        "rios-mediterraneos-de-3280"
+        "prados-calcareos-carsticos-6110"
       ],
       "gbifOccurrences": 117,
       "visible": true
@@ -2348,7 +2296,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 65 ocurrencias dentro de los polígonos de hábitat del espacio (8 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 65 ocurrencias dentro de los polígonos de hábitat del espacio (7 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2371,7 +2319,6 @@
         "pendientes-rocosas-calcicolas-8210",
         "encinares-de-quercus-9340",
         "galerias-y-matorrales-92D0",
-        "manantiales-petrificantes-con-7220",
         "prados-calcareos-carsticos-6110"
       ],
       "gbifOccurrences": 65,
@@ -2405,7 +2352,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 59 ocurrencias dentro de los polígonos de hábitat del espacio (8 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 59 ocurrencias dentro de los polígonos de hábitat del espacio (7 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2428,8 +2375,7 @@
         "matorrales-arborescentes-de-5210",
         "galerias-y-matorrales-92D0",
         "encinares-de-quercus-9340",
-        "prados-calcareos-carsticos-6110",
-        "rios-mediterraneos-de-3250"
+        "prados-calcareos-carsticos-6110"
       ],
       "gbifOccurrences": 59,
       "visible": true
@@ -2561,7 +2507,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 42 ocurrencias dentro de los polígonos de hábitat del espacio (7 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 42 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2583,7 +2529,6 @@
         "pendientes-rocosas-calcicolas-8210",
         "encinares-de-quercus-9340",
         "galerias-y-matorrales-92D0",
-        "manantiales-petrificantes-con-7220",
         "prados-calcareos-carsticos-6110"
       ],
       "gbifOccurrences": 42,
@@ -2617,7 +2562,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 41 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 41 ocurrencias dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2638,8 +2583,7 @@
         "zonas-subestepicas-de-6220",
         "pendientes-rocosas-calcicolas-8210",
         "galerias-y-matorrales-92D0",
-        "encinares-de-quercus-9340",
-        "manantiales-petrificantes-con-7220"
+        "encinares-de-quercus-9340"
       ],
       "gbifOccurrences": 41,
       "visible": true
@@ -2672,7 +2616,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 40 ocurrencias dentro de los polígonos de hábitat del espacio (11 hábitats; barrido de 2026-08-16); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 40 ocurrencias dentro de los polígonos de hábitat del espacio (7 hábitats; barrido de 2026-08-16); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2694,12 +2638,8 @@
         "pendientes-rocosas-calcicolas-8210",
         "matorrales-arborescentes-de-5210",
         "galerias-y-matorrales-92D0",
-        "aguas-oligomesotroficas-calcareas-3140",
-        "estanques-temporales-mediterraneos-3170",
-        "manantiales-petrificantes-con-7220",
         "pastizales-salinos-mediterraneos-1410",
-        "prados-humedos-mediterraneos-6420",
-        "rios-mediterraneos-de-3280"
+        "prados-humedos-mediterraneos-6420"
       ],
       "gbifOccurrences": 40,
       "visible": true
@@ -2894,7 +2834,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 33 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 33 ocurrencias dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2915,8 +2855,7 @@
         "zonas-subestepicas-de-6220",
         "pendientes-rocosas-calcicolas-8210",
         "matorrales-arborescentes-de-5210",
-        "galerias-y-matorrales-92D0",
-        "rios-mediterraneos-de-3250"
+        "galerias-y-matorrales-92D0"
       ],
       "gbifOccurrences": 33,
       "visible": true
@@ -3056,7 +2995,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 27 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 27 ocurrencias dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -3077,7 +3016,6 @@
         "zonas-subestepicas-de-6220",
         "pendientes-rocosas-calcicolas-8210",
         "galerias-y-matorrales-92D0",
-        "manantiales-petrificantes-con-7220",
         "prados-calcareos-carsticos-6110"
       ],
       "gbifOccurrences": 27,
@@ -3111,7 +3049,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 27 ocurrencias dentro de los polígonos de hábitat del espacio (7 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 27 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -3133,8 +3071,7 @@
         "zonas-subestepicas-de-6220",
         "pendientes-rocosas-calcicolas-8210",
         "encinares-de-quercus-9340",
-        "galerias-y-matorrales-92D0",
-        "manantiales-petrificantes-con-7220"
+        "galerias-y-matorrales-92D0"
       ],
       "gbifOccurrences": 27,
       "visible": true
@@ -3437,7 +3374,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 24 ocurrencias dentro de los polígonos de hábitat del espacio (9 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 24 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -3457,12 +3394,9 @@
         "matorrales-termomediterraneos-y-5330",
         "pendientes-rocosas-calcicolas-8210",
         "zonas-subestepicas-de-6220",
-        "aguas-oligomesotroficas-calcareas-3140",
-        "estanques-temporales-mediterraneos-3170",
         "galerias-y-matorrales-92D0",
         "pastizales-salinos-mediterraneos-1410",
-        "prados-humedos-mediterraneos-6420",
-        "rios-mediterraneos-de-3280"
+        "prados-humedos-mediterraneos-6420"
       ],
       "gbifOccurrences": 24,
       "visible": true
@@ -3553,7 +3487,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": true,
-      "source": "GBIF: 23 ocurrencias dentro de los polígonos de hábitat del espacio (10 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 23 ocurrencias dentro de los polígonos de hábitat del espacio (7 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -3574,11 +3508,8 @@
         "zonas-subestepicas-de-6220",
         "pendientes-rocosas-calcicolas-8210",
         "galerias-y-matorrales-92D0",
-        "aguas-oligomesotroficas-calcareas-3140",
-        "estanques-temporales-mediterraneos-3170",
         "pastizales-salinos-mediterraneos-1410",
         "prados-humedos-mediterraneos-6420",
-        "rios-mediterraneos-de-3280",
         "matorrales-arborescentes-de-5210"
       ],
       "gbifOccurrences": 23,
@@ -3717,7 +3648,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 21 ocurrencias dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 21 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -3737,8 +3668,7 @@
         "matorrales-termomediterraneos-y-5330",
         "zonas-subestepicas-de-6220",
         "pendientes-rocosas-calcicolas-8210",
-        "encinares-de-quercus-9340",
-        "rios-mediterraneos-de-3250"
+        "encinares-de-quercus-9340"
       ],
       "gbifOccurrences": 21,
       "visible": true
@@ -5225,7 +5155,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 12 ocurrencias dentro de los polígonos de hábitat del espacio (10 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 12 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -5246,12 +5176,8 @@
         "zonas-subestepicas-de-6220",
         "pendientes-rocosas-calcicolas-8210",
         "galerias-y-matorrales-92D0",
-        "aguas-oligomesotroficas-calcareas-3140",
-        "estanques-temporales-mediterraneos-3170",
-        "manantiales-petrificantes-con-7220",
         "pastizales-salinos-mediterraneos-1410",
-        "prados-humedos-mediterraneos-6420",
-        "rios-mediterraneos-de-3280"
+        "prados-humedos-mediterraneos-6420"
       ],
       "gbifOccurrences": 12,
       "visible": true
@@ -5384,7 +5310,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 12 ocurrencias dentro de los polígonos de hábitat del espacio (11 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 12 ocurrencias dentro de los polígonos de hábitat del espacio (8 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -5405,13 +5331,10 @@
         "zonas-subestepicas-de-6220",
         "matorrales-arborescentes-de-5210",
         "pendientes-rocosas-calcicolas-8210",
-        "aguas-oligomesotroficas-calcareas-3140",
         "encinares-de-quercus-9340",
-        "estanques-temporales-mediterraneos-3170",
         "galerias-y-matorrales-92D0",
         "pastizales-salinos-mediterraneos-1410",
-        "prados-humedos-mediterraneos-6420",
-        "rios-mediterraneos-de-3280"
+        "prados-humedos-mediterraneos-6420"
       ],
       "gbifOccurrences": 12,
       "visible": true
@@ -5547,7 +5470,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 11 ocurrencias dentro de los polígonos de hábitat del espacio (9 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 11 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -5567,12 +5490,9 @@
         "matorrales-termomediterraneos-y-5330",
         "zonas-subestepicas-de-6220",
         "pendientes-rocosas-calcicolas-8210",
-        "aguas-oligomesotroficas-calcareas-3140",
-        "estanques-temporales-mediterraneos-3170",
         "galerias-y-matorrales-92D0",
         "pastizales-salinos-mediterraneos-1410",
-        "prados-humedos-mediterraneos-6420",
-        "rios-mediterraneos-de-3280"
+        "prados-humedos-mediterraneos-6420"
       ],
       "gbifOccurrences": 11,
       "visible": true
@@ -6010,7 +5930,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 10 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 10 ocurrencias dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -6031,8 +5951,7 @@
         "zonas-subestepicas-de-6220",
         "pendientes-rocosas-calcicolas-8210",
         "matorrales-arborescentes-de-5210",
-        "galerias-y-matorrales-92D0",
-        "manantiales-petrificantes-con-7220"
+        "galerias-y-matorrales-92D0"
       ],
       "gbifOccurrences": 10,
       "visible": true
@@ -6646,7 +6565,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 8 ocurrencias dentro de los polígonos de hábitat del espacio (7 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 8 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -6668,7 +6587,6 @@
         "pendientes-rocosas-calcicolas-8210",
         "matorrales-arborescentes-de-5210",
         "galerias-y-matorrales-92D0",
-        "manantiales-petrificantes-con-7220",
         "encinares-de-quercus-9340"
       ],
       "gbifOccurrences": 8,
@@ -8177,7 +8095,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 6 ocurrencias dentro de los polígonos de hábitat del espacio (9 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 6 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -8197,12 +8115,9 @@
         "matorrales-termomediterraneos-y-5330",
         "zonas-subestepicas-de-6220",
         "matorrales-arborescentes-de-5210",
-        "aguas-oligomesotroficas-calcareas-3140",
         "galerias-y-matorrales-92D0",
-        "manantiales-petrificantes-con-7220",
         "pastizales-salinos-mediterraneos-1410",
-        "pendientes-rocosas-calcicolas-8210",
-        "rios-mediterraneos-de-3280"
+        "pendientes-rocosas-calcicolas-8210"
       ],
       "gbifOccurrences": 6,
       "visible": true
@@ -9678,7 +9593,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 4 ocurrencias dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 4 ocurrencias dentro de los polígonos de hábitat del espacio (2 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -9696,7 +9611,6 @@
       "zepaSiteCode": null,
       "habitatIds": [
         "matorrales-termomediterraneos-y-5330",
-        "rios-mediterraneos-de-3250",
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 4,
@@ -10735,7 +10649,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 4 ocurrencias dentro de los polígonos de hábitat del espacio (9 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 4 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -10755,12 +10669,9 @@
         "matorrales-termomediterraneos-y-5330",
         "zonas-subestepicas-de-6220",
         "pendientes-rocosas-calcicolas-8210",
-        "aguas-oligomesotroficas-calcareas-3140",
         "galerias-y-matorrales-92D0",
-        "manantiales-petrificantes-con-7220",
         "pastizales-salinos-mediterraneos-1410",
-        "prados-calcareos-carsticos-6110",
-        "rios-mediterraneos-de-3280"
+        "prados-calcareos-carsticos-6110"
       ],
       "gbifOccurrences": 4,
       "visible": true
@@ -12551,7 +12462,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (9 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -12570,13 +12481,10 @@
       "habitatIds": [
         "matorrales-termomediterraneos-y-5330",
         "zonas-subestepicas-de-6220",
-        "aguas-oligomesotroficas-calcareas-3140",
-        "estanques-temporales-mediterraneos-3170",
         "galerias-y-matorrales-92D0",
         "pastizales-salinos-mediterraneos-1410",
         "pendientes-rocosas-calcicolas-8210",
-        "prados-humedos-mediterraneos-6420",
-        "rios-mediterraneos-de-3280"
+        "prados-humedos-mediterraneos-6420"
       ],
       "gbifOccurrences": 3,
       "visible": true
@@ -12897,7 +12805,7 @@
         "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
       },
       "featured": true,
-      "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (9 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -12917,12 +12825,9 @@
         "matorrales-termomediterraneos-y-5330",
         "pendientes-rocosas-calcicolas-8210",
         "zonas-subestepicas-de-6220",
-        "aguas-oligomesotroficas-calcareas-3140",
-        "estanques-temporales-mediterraneos-3170",
         "galerias-y-matorrales-92D0",
         "pastizales-salinos-mediterraneos-1410",
-        "prados-humedos-mediterraneos-6420",
-        "rios-mediterraneos-de-3280"
+        "prados-humedos-mediterraneos-6420"
       ],
       "gbifOccurrences": 3,
       "visible": true
@@ -13381,7 +13286,7 @@
         "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
       },
       "featured": false,
-      "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (7 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -13398,11 +13303,8 @@
       "gbifSpeciesKey": 3189912,
       "zepaSiteCode": null,
       "habitatIds": [
-        "aguas-oligomesotroficas-calcareas-3140",
         "galerias-y-matorrales-92D0",
-        "manantiales-petrificantes-con-7220",
         "pastizales-salinos-mediterraneos-1410",
-        "rios-mediterraneos-de-3280",
         "matorrales-termomediterraneos-y-5330",
         "zonas-subestepicas-de-6220"
       ],
