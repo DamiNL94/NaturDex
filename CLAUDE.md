@@ -54,7 +54,7 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    generaliza igual: «nadie lo ha mirado» no es «no está amenazada», y publicar de más no se puede
    deshacer. Ver [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md).
 
-## 2. Ocho cosas que fallan EN VERDE
+## 2. Diez cosas que fallan EN VERDE
 
 Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 [`Docs/runbook/ORDEN-DE-OPERACIONES.md`](Docs/runbook/ORDEN-DE-OPERACIONES.md).
@@ -63,7 +63,18 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 - Una entrada obsoleta en `data/contenido/*.json` **revierte** cualquier corrección en cada extracción.
 - **Renombrar un taxón** desengancha su entrada del catálogo universal y su texto de
   `data/contenido/`, que se indexan por nombre científico. Cambia la clave allí también y pasa
-  `npm run species:poda`.
+  `npm run species:poda`. Y deja **un tercer rastro que no se ve desde el repositorio**: en la BD, la
+  fila con el nombre viejo, porque `build-park-sql.js` solo hace UPSERT. El borrado va aparte
+  (`Database/poda-renombrados-*.sql`).
+- **Corregir un campo UNIVERSAL en el `park.json`** —`taxonomy`, `description`, `image`…— y no en
+  `data/especies-universal.json`: el siguiente `species:apply` lo revierte en silencio, porque es de
+  ahí de donde reparte. Pasó el 2026-08-17 con el género del romero, corregido en los ocho espacios y
+  devuelto a «Salvia» acto seguido. La prueba de que la corrección está en el sitio bueno es pasar
+  `species:extract` + `species:apply` detrás y ver «actualizadas 0».
+- **Un nombre científico que la autoridad ya da por sinónimo** no falla: el cruce contra el
+  formulario del sitio o el anexo de la norma se hace por nombre, así que la especie queda fuera con
+  un motivo escrito al lado que es mentira. `scan-taxones-duplicados` **no puede verlo** —busca un
+  taxón dado de alta dos veces y éste está una sola—; lo caza `taxones:nomenclatura`.
 - **La API tiene prioridad sobre el `park.json` empaquetado.** Con backend desplegado, tocar solo el
   frontend no cambia lo que ve el usuario: hay que generar y aplicar también el SQL.
 - **Un extractor de PDF distinto = cero resultados sin aviso.** Le pasó al Atlas de Hábitats, que solo
@@ -128,6 +139,7 @@ npm run validate            # BLOQUEA. Coherencia park.json ↔ manifest ↔ geo
 npm test                    # reglas de presencia y progreso (PHP, sin BD)
 npm run typecheck           # tsc --noEmit sobre AdminPanel
 npm run taxones:duplicados  # sale con código 1 mientras queden
+npm run taxones:nomenclatura # el nombre de la ficha contra EIDOS y GBIF; sin --online no gasta red
 npm run especies:habitats   # repasa los enlaces especie↔hábitat; sin --write no toca nada
 npm run glossary:check      # editorial, no bloquea
 ```

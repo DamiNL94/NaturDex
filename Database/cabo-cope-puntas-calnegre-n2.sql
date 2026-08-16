@@ -8,7 +8,7 @@
 -- Hace falta porque Frontend/Js/data.js da PRIORIDAD a la API sobre el park.json empaquetado:
 -- con backend desplegado, un espacio que no esté en la base de datos no existe para el usuario.
 --
--- Contenido: 1 espacio · 15 hábitats · 162 especies · 203 vínculos especie↔hábitat.
+-- Contenido: 1 espacio · 15 hábitats · 162 especies · 189 vínculos especie↔hábitat.
 -- Los puntos de interés van aparte, en `n3-pois-<slug>.sql` (build-poi-sql.js).
 --
 -- ORDEN: la fila de `parks` va PRIMERO y no es opcional. Sin ella los INSERT ... SELECT de
@@ -186,7 +186,7 @@ FROM parks pk JOIN (
     UNION ALL
     SELECT 'Coloquíntida', 'Citrullus colocynthis', 'flora', 'Hierba', 'Ramblas, arenales y suelos removidos de clima árido', 'No catalogada, citada por su rareza', 'Pariente silvestre de la sandía, de tallos rastreros y zarcillos, que extiende sus ramas por el suelo desnudo de ramblas y baldíos. Sus frutos son bolas del tamaño de una naranja, verdes jaspeadas al principio y amarillas al madurar, de pulpa amarguísima y tóxica.', NULL, 'Tallos tumbados por el suelo, con zarcillos; Frutos esféricos jaspeados que amarillean al madurar; Hojas profundamente lobuladas y ásperas', 'Verano y otoño', 'https://commons.wikimedia.org/wiki/Special:FilePath/Citrullus_colocynthis_(L.)_Schrad._(31794489158).jpg?width=1280', 'Dinesh Valke from Thane, India (CC BY-SA 2.0) · Wikimedia Commons', NULL, NULL, 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 1, NULL, 'Alcaraz Ariza, F.J. ''La Marina de Cope: ¿los últimos días de un paraíso botánico?'', Eubacteria nº5, Universidad de Murcia', 'Tracheophyta', 'Magnoliopsida', 'Cucurbitales', 'Cucurbitaceae', 'Citrullus', 'NE', 'No catalogada en la Lista Roja de la Flora Vascular Española 2008', 'No incluida en el Catálogo Regional de Flora Silvestre Protegida', 'No figura en ninguna de las tres categorías del Catálogo Regional (Decreto 50/2003); se incluye únicamente por citarse expresamente como notable/rara en la fuente de la Marina de Cope.', 1707, 2874622, NULL
     UNION ALL
-    SELECT 'Cormorán moñudo', 'Gulosus aristotelis', 'fauna', 'Ave marina', 'Costas rocosas, acantilados e islotes; pesca buceando cerca de la orilla', 'Protección especial', 'Cormorán marino de plumaje negro con reflejos verdosos, más esbelto que el grande y con la frente empinada. Bucea desde la superficie con un salto característico y persigue peces bajo el agua. Se seca con las alas abiertas sobre las rocas.', NULL, 'Salta hacia arriba antes de sumergirse; Frente muy empinada y pico fino; Se posa en roca con las alas abiertas al sol', 'Todo el año', 'https://commons.wikimedia.org/wiki/Special:FilePath/Shag_Phalacrocorax_aristotelis.jpg?width=1280', 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons', NULL, NULL, 4, '{"categoria":"Subespecie mediterránea (desmarestii) catalogada Vulnerable en el Catálogo Español de Especies Amenazadas","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 4, '{"categoria":"Subespecie mediterránea (desmarestii) catalogada Vulnerable en el Catálogo Español de Especies Amenazadas","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 1, NULL, 'Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre', 'Chordata', 'Aves', 'Suliformes', 'Phalacrocoracidae', 'Gulosus', 'LC', 'Subespecie mediterránea (desmarestii) catalogada Vulnerable en el Catálogo Español de Especies Amenazadas', 'Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial', 'Reclasificado taxonómicamente de Phalacrocorax aristotelis a Gulosus aristotelis; confirmar si la población litoral pertenece a la subespecie desmarestii.', 80933, 10943800, 'ES0000261'
+    SELECT 'Cormorán moñudo', 'Gulosus aristotelis', 'fauna', 'Ave marina', 'Costas rocosas, acantilados e islotes; pesca buceando cerca de la orilla', 'Protección especial', 'Cormorán marino de plumaje negro con reflejos verdosos, más esbelto que el grande y con la frente empinada. Bucea desde la superficie con un salto característico y persigue peces bajo el agua. Se seca con las alas abiertas sobre las rocas.', NULL, 'Salta hacia arriba antes de sumergirse; Frente muy empinada y pico fino; Se posa en roca con las alas abiertas al sol', 'Todo el año', 'https://commons.wikimedia.org/wiki/Special:FilePath/Shag_Phalacrocorax_aristotelis.jpg?width=1280', 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons', NULL, NULL, 4, '{"categoria":"Subespecie mediterránea (desmarestii) catalogada Vulnerable en el Catálogo Español de Especies Amenazadas","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 4, '{"categoria":"Subespecie mediterránea (desmarestii) catalogada Vulnerable en el Catálogo Español de Especies Amenazadas","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 1, NULL, 'Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre', 'Chordata', 'Aves', 'Suliformes', 'Phalacrocoracidae', 'Gulosus', 'LC', 'Subespecie mediterránea (desmarestii) catalogada Vulnerable en el Catálogo Español de Especies Amenazadas', 'Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial', 'Reclasificado taxonómicamente de Phalacrocorax aristotelis a Gulosus aristotelis; confirmar si la población litoral pertenece a la subespecie desmarestii.', 80933, 2481861, 'ES0000261'
     UNION ALL
     SELECT 'Cornical', 'Periploca angustifolia', 'flora', 'Arbusto', 'Matorral cálido, laderas soleadas y barrancos de clima muy seco', 'Vulnerable', 'Arbusto de hojas estrechas y coriáceas y flores pequeñas con cinco pétalos de un pardo verdoso y aspecto aterciopelado. Sus frutos son dos vainas largas y curvas dispuestas en forma de cuerno, de donde le viene el nombre popular de cornical. Suelta látex al romperse.', NULL, 'Frutos en dos vainas curvas enfrentadas, como cuernos; Látex blanco al partir una hoja o rama; Flores pardo verdosas con aspecto de terciopelo', 'Primavera y verano (floración)', 'https://inaturalist-open-data.s3.amazonaws.com/photos/609975159/original.jpg', 'Quentin Groom (CC0) · GBIF', NULL, NULL, 3, NULL, 4, '{"categoria":"Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable","ambito":"autonómico","origen":"murciaStatus del park.json"}', 0, 1, NULL, 'Región de Murcia Digital (CARM) - Flora de Cabo Cope y Puntas de Calnegre; Alcaraz Ariza, F.J. ''La Marina de Cope: ¿los últimos días de un paraíso botánico?'', Eubacteria nº5, Universidad de Murcia; Decreto 50/2003 (BORM), Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia; base científica: Sánchez Gómez et al. 2002, Libro Rojo de la Flora Silvestre Protegida de la Región de Murcia; Documento previo del PORN de Calnegre y Cabo Cope (CARM, 2021) - Catálogo Regional de Flora Silvestre Protegida (confirma categoría Vulnerable)', 'Tracheophyta', 'Magnoliopsida', 'Gentianales', 'Apocynaceae', 'Periploca', 'NE (no evaluada a nivel global)', 'Pendiente de confirmar presencia y categoría en la Lista Roja de la Flora Vascular Española 2008', 'Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable', NULL, 7034, 8222621, NULL
     UNION ALL
@@ -200,7 +200,7 @@ FROM parks pk JOIN (
     UNION ALL
     SELECT 'Culebrera europea', 'Circaetus gallicus', 'fauna', 'Ave rapaz', 'Sierras y llanos con matorral, ramblas y bosque abierto', 'LC', 'Águila grande y muy pálida por debajo, especializada en comer culebras y lagartos. Se ciñe en el aire durante largos ratos, con las patas colgando, escrutando el suelo antes de dejarse caer. La cabeza, ancha y con ojos amarillos muy frontales, le da un aire de lechuza.', NULL, 'Vientre y alas casi blancos vistos desde abajo; Se mantiene cerniéndose, algo raro en un águila tan grande; Cabeza ancha y ojos amarillos, aspecto de búho', 'Primavera y verano (estival)', 'https://commons.wikimedia.org/wiki/Special:FilePath/Aguila_culebrera_(Circaetus_gallicus).jpg?width=1280', 'Paco Gómez (CC BY-SA 4.0) · Wikimedia Commons', NULL, NULL, 2, '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 3, '{"categoria":"Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial","ambito":"autonómico","origen":"murciaStatus del park.json"}', 0, 1, NULL, 'EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List) para la presencia en la ZEPA ES0000261; IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25', 'Chordata', 'Aves', NULL, NULL, 'Circaetus', 'LC (Preocupación menor)', 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE; Ley 42/2007, Anexo IV', 'Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial', NULL, 11336, NULL, 'ES0000261'
     UNION ALL
-    SELECT 'Curruca rabilarga', 'Curruca undata', 'fauna', 'Ave', 'Matorral bajo y denso, jarales, brezales y tomillares', 'Interés especial', 'Curruca pequeña, oscura y de cola muy larga que suele llevar levantada. El macho tiene el vientre vinoso y el ojo rojo rodeado de un anillo del mismo color. Es muy inquieta y rara vez se deja ver más de unos segundos antes de volver a hundirse en la mata.', NULL, 'Cola larga y erguida, casi vertical al posarse; Ojo y anillo ocular rojos; Vientre de color vinoso, con motitas blancas en la garganta', 'Todo el año', 'https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_pitchou_Ichkeul_NP.jpg?width=1280', 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons', NULL, NULL, 2, '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 3, '{"categoria":"Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial","ambito":"autonómico","origen":"murciaStatus del park.json"}', 0, 1, NULL, 'Documento previo del PORN de Calnegre y Cabo Cope (CARM, Consejería de Agua, Agricultura, Ganadería, Pesca y Medio Ambiente, 2021); IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25', 'Chordata', 'Aves', 'Passeriformes', 'Sylviidae', 'Curruca', 'LC', 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I', 'Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial', 'El PORN cita la presencia de la especie en el parque sin detallar su categoría exacta de protección regional; pendiente de confirmar con el Catálogo Regional vigente.', 80931, 10355796, 'ES0000261'
+    SELECT 'Curruca rabilarga', 'Curruca undata', 'fauna', 'Ave', 'Matorral bajo y denso, jarales, brezales y tomillares', 'Interés especial', 'Curruca pequeña, oscura y de cola muy larga que suele llevar levantada. El macho tiene el vientre vinoso y el ojo rojo rodeado de un anillo del mismo color. Es muy inquieta y rara vez se deja ver más de unos segundos antes de volver a hundirse en la mata.', NULL, 'Cola larga y erguida, casi vertical al posarse; Ojo y anillo ocular rojos; Vientre de color vinoso, con motitas blancas en la garganta', 'Todo el año', 'https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_pitchou_Ichkeul_NP.jpg?width=1280', 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons', NULL, NULL, 2, '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 3, '{"categoria":"Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial","ambito":"autonómico","origen":"murciaStatus del park.json"}', 0, 1, NULL, 'Documento previo del PORN de Calnegre y Cabo Cope (CARM, Consejería de Agua, Agricultura, Ganadería, Pesca y Medio Ambiente, 2021); IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25', 'Chordata', 'Aves', 'Passeriformes', 'Sylviidae', 'Curruca', 'LC', 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I', 'Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial', 'El PORN cita la presencia de la especie en el parque sin detallar su categoría exacta de protección regional; pendiente de confirmar con el Catálogo Regional vigente.', 80931, 2492949, 'ES0000261'
     UNION ALL
     SELECT 'Curruca tomillera', 'Curruca conspicillata', 'fauna', 'Ave', 'Matorral bajo y abierto, tomillares y saladares con arbustos dispersos', 'LC', 'Curruca menuda de matorral raso, gris en la cabeza, parda en el dorso y con las plumas del ala ribeteadas de castaño encendido. El anillo blanco del ojo le da el aire de «gafas» que le da nombre. Es inquieta y suele delatarse por su reclamo antes de dejarse ver.', NULL, 'Anillo blanco alrededor del ojo bien marcado; Panel castaño vivo en el ala plegada; Vive en matorral muy bajo, no en arbolado', 'Todo el año en el sureste; parcialmente migradora', 'https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_%C3%A0_lunettes_Aqueduc_de_Zaghouan.jpg?width=1280', 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons', NULL, NULL, 2, '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 2, '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 1, NULL, 'EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List) para la presencia en la ZEPA ES0000261', 'Chordata', 'Aves', 'Passeriformes', 'Sylviidae', 'Curruca', 'LC (Preocupación menor)', 'Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)', 'Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)', NULL, 80923, NULL, 'ES0000261'
     UNION ALL
@@ -298,7 +298,7 @@ FROM parks pk JOIN (
     UNION ALL
     SELECT 'Romerina', 'Cistus clusii', 'flora', 'Mata', 'Tomillares y matorral seco sobre calizas y margas', 'No amenazada', 'Jara pequeña de hojas muy estrechas y enrolladas por los bordes, verdes arriba y blancas por debajo, que a distancia recuerdan al romero. Se distingue enseguida al florecer: da grupos de flores blancas de cinco pétalos, mucho mayores que las del romero.', NULL, 'Hojas estrechas enrolladas, blancas por el envés; Flores blancas de cinco pétalos, varias juntas; Sin el olor a romero, aunque se le parezca de lejos', 'Primavera', 'https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_clusii_(habitus).jpg?width=1280', 'Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons', NULL, NULL, 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 1, NULL, 'Especie característica de los matorrales y romerales del hábitat 5330 (matorral termomediterráneo semiárido) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y las fichas de la Red Natura 2000; frecuente en la Región de Murcia. Ficha básica (mínima), pendiente de ampliar.', 'Tracheophyta', 'Magnoliopsida', 'Malvales', 'Cistaceae', 'Cistus', 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)', 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE', 'No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en la Región', 'Ficha básica: especie característica del matorral semiárido, frecuente en la Región de Murcia. Presencia en el parque inferida del hábitat; pendiente de confirmación en campo y de ampliar la ficha.', 3610, 7331346, NULL
     UNION ALL
-    SELECT 'Romero', 'Rosmarinus officinalis', 'flora', 'Mata aromática', 'Matorral seco y soleado sobre suelos calizos y pedregosos', 'No amenazada', 'Arbusto aromático de hojas estrechas como agujas, verde oscuro por el haz y blanquecinas por el envés, con los bordes enrollados hacia abajo. Florece casi todo el año en azul pálido, y en pleno invierno es una de las pocas fuentes de néctar del matorral.', NULL, 'Hojas como agujas, blancas por debajo; Olor inconfundible al frotar entre los dedos; Flores azul claro repartidas por las ramas casi todo el año', 'Todo el año, con máximo de floración en invierno y primavera', 'https://commons.wikimedia.org/wiki/Special:FilePath/Rosemary_in_bloom.JPG?width=1280', 'Margalob (CC BY-SA 4.0) · Wikimedia Commons', NULL, NULL, 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 1, NULL, 'Especie característica del matorral termomediterráneo (hábitat 5330; romerales del Rosmarino-Ericion) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y las fichas de la Red Natura 2000; muy común en la Región de Murcia. Sinónimo: Rosmarinus officinalis. Ficha básica (mínima), pendiente de ampliar. Nombre aceptado en EIDOS; Salvia rosmarinus es sinónimo.', 'Tracheophyta', 'Magnoliopsida', 'Lamiales', 'Lamiaceae', 'Salvia', 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)', 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE', 'No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); muy común en la Región', 'Ficha básica: especie característica del matorral semiárido, muy común en la Región de Murcia. Presencia en el parque inferida del hábitat; pendiente de confirmación en campo y de ampliar la ficha.', 7647, 10902460, NULL
+    SELECT 'Romero', 'Rosmarinus officinalis', 'flora', 'Mata aromática', 'Matorral seco y soleado sobre suelos calizos y pedregosos', 'No amenazada', 'Arbusto aromático de hojas estrechas como agujas, verde oscuro por el haz y blanquecinas por el envés, con los bordes enrollados hacia abajo. Florece casi todo el año en azul pálido, y en pleno invierno es una de las pocas fuentes de néctar del matorral.', NULL, 'Hojas como agujas, blancas por debajo; Olor inconfundible al frotar entre los dedos; Flores azul claro repartidas por las ramas casi todo el año', 'Todo el año, con máximo de floración en invierno y primavera', 'https://commons.wikimedia.org/wiki/Special:FilePath/Rosemary_in_bloom.JPG?width=1280', 'Margalob (CC BY-SA 4.0) · Wikimedia Commons', NULL, NULL, 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 1, NULL, 'Especie característica del matorral termomediterráneo (hábitat 5330; romerales del Rosmarino-Ericion) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y las fichas de la Red Natura 2000; muy común en la Región de Murcia. Sinónimo: Rosmarinus officinalis. Ficha básica (mínima), pendiente de ampliar. Nombre aceptado en EIDOS; Salvia rosmarinus es sinónimo.', 'Tracheophyta', 'Magnoliopsida', 'Lamiales', 'Lamiaceae', 'Rosmarinus', 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)', 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE', 'No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); muy común en la Región', 'Ficha básica: especie característica del matorral semiárido, muy común en la Región de Murcia. Presencia en el parque inferida del hábitat; pendiente de confirmación en campo y de ampliar la ficha.', 7647, 10902460, NULL
     UNION ALL
     SELECT 'Rugueta de mar', 'Cakile maritima', 'flora', 'Hierba', 'Arena suelta de la primera línea de playa, sobre restos orgánicos del mar', 'No amenazada', 'Crucífera anual y carnosa que coloniza la arena batida donde el mar deposita algas. Sus hojas son gruesas y recortadas y sus flores, lilas o blancas, tienen los cuatro pétalos en cruz de la familia. El fruto se parte en dos: una mitad queda en la planta y la otra flota y viaja por mar.', NULL, 'Hojas carnosas y recortadas, algo azuladas; Flores lilas o blancas de cuatro pétalos en cruz; Frutos duros en dos piezas, como pequeños barrilitos', 'Primavera a otoño', 'https://commons.wikimedia.org/wiki/Special:FilePath/Cakile-maritima-(eurMeersenf)_1.jpg?width=1280', 'Jürgen Howaldt (CC BY-SA 2.0 de) · Wikimedia Commons', NULL, NULL, 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 1, NULL, 'Especie característica del hábitat de interés comunitario 1210 (Vegetación anual sobre desechos marinos acumulados) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y las fichas de la Red Natura 2000; presencia en las playas de la Región de Murcia confirmada en la flora regional. Ficha básica (mínima), pendiente de ampliar.', 'Tracheophyta', 'Magnoliopsida', 'Brassicales', 'Brassicaceae', 'Cakile', 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)', 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE', 'No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de las playas de la Región', 'Ficha básica: especie característica del hábitat 1210 documentada en las playas de la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado; pendiente de confirmación en campo y de ampliar la ficha.', 2937, 3048831, NULL
     UNION ALL
@@ -442,27 +442,19 @@ ON DUPLICATE KEY UPDATE
     zepa_site_code = VALUES(zepa_site_code);
 
 -- ------------------------------------------------------------------------------------------------
--- 4. Vínculos especie↔hábitat (203). `evidence` = lo que declara el `source` de cada ficha; ver cabecera.
+-- 4. Vínculos especie↔hábitat (189). `evidence` = lo que declara el `source` de cada ficha; ver cabecera.
 -- ------------------------------------------------------------------------------------------------
 INSERT INTO species_habitats (species_id, habitat_id, evidence)
 SELECT sp.id, hb.id, v.evidence
 FROM parks pk
 JOIN (
-    SELECT 'Aquila fasciata' scientific_name, 'acantilados' habitat_slug, NULL evidence
-    UNION ALL
-    SELECT 'Aquila fasciata', 'matorral-semiarido', NULL
-    UNION ALL
-    SELECT 'Allium melananthum', 'matorral-semiarido', NULL
+    SELECT 'Allium melananthum' scientific_name, 'matorral-semiarido' habitat_slug, NULL evidence
     UNION ALL
     SELECT 'Allium melananthum', 'matorral-halofilo', NULL
     UNION ALL
     SELECT 'Allium melananthum', 'subestepa-thero-brachypodietea', NULL
     UNION ALL
     SELECT 'Pancratium maritimum', 'dunas-embrionarias', NULL
-    UNION ALL
-    SELECT 'Bucanetes githagineus', 'matorral-semiarido', NULL
-    UNION ALL
-    SELECT 'Bucanetes githagineus', 'azufaifar', NULL
     UNION ALL
     SELECT 'Centaurium rigualii', 'matorral-halofilo', NULL
     UNION ALL
@@ -500,8 +492,6 @@ JOIN (
     UNION ALL
     SELECT 'Capparis sicula subsp. sicula', 'matorral-semiarido', NULL
     UNION ALL
-    SELECT 'Burhinus oedicnemus', 'matorral-semiarido', NULL
-    UNION ALL
     SELECT 'Lavandula multifida', 'matorral-semiarido', NULL
     UNION ALL
     SELECT 'Lavandula multifida', 'subestepa-thero-brachypodietea', NULL
@@ -534,8 +524,6 @@ JOIN (
     UNION ALL
     SELECT 'Osyris lanceolata', 'sabinar-juniperus', NULL
     UNION ALL
-    SELECT 'Bubo bubo', 'acantilados', NULL
-    UNION ALL
     SELECT 'Lycium intricatum', 'matorral-halonitrofilo', NULL
     UNION ALL
     SELECT 'Ephedra fragilis', 'matorral-semiarido', NULL
@@ -552,21 +540,11 @@ JOIN (
     UNION ALL
     SELECT 'Hyparrhenia hirta', 'subestepa-thero-brachypodietea', NULL
     UNION ALL
-    SELECT 'Charadrius alexandrinus', 'veg-anual-desechos-marinos', NULL
-    UNION ALL
     SELECT 'Cynomorium coccineum', 'matorral-halofilo', NULL
-    UNION ALL
-    SELECT 'Galerida cristata', 'matorral-semiarido', NULL
-    UNION ALL
-    SELECT 'Galerida theklae', 'matorral-semiarido', NULL
-    UNION ALL
-    SELECT 'Oenanthe leucura', 'matorral-semiarido', NULL
     UNION ALL
     SELECT 'Silene ramosissima', 'dunas-malcomietalia', NULL
     UNION ALL
     SELECT 'Citrullus colocynthis', 'galeria-ribera', NULL
-    UNION ALL
-    SELECT 'Gulosus aristotelis', 'acantilados', NULL
     UNION ALL
     SELECT 'Periploca angustifolia', 'matorral-semiarido', NULL
     UNION ALL
@@ -583,8 +561,6 @@ JOIN (
     SELECT 'Notoceras bicorne', 'subestepa-thero-brachypodietea', NULL
     UNION ALL
     SELECT 'Malpolon monspessulanus', 'matorral-semiarido', NULL
-    UNION ALL
-    SELECT 'Curruca undata', 'matorral-semiarido', NULL
     UNION ALL
     SELECT 'Eragrostis papposa', 'subestepa-thero-brachypodietea', NULL
     UNION ALL
@@ -619,8 +595,6 @@ JOIN (
     SELECT 'Genetta genetta', 'matorral-semiarido', NULL
     UNION ALL
     SELECT 'Elymus farctus', 'dunas-embrionarias', NULL
-    UNION ALL
-    SELECT 'Falco peregrinus', 'acantilados', NULL
     UNION ALL
     SELECT 'Crithmum maritimum', 'acantilados', NULL
     UNION ALL
@@ -745,8 +719,6 @@ JOIN (
     SELECT 'Tamarix africana', 'galeria-ribera', NULL
     UNION ALL
     SELECT 'Meles meles', 'matorral-semiarido', NULL
-    UNION ALL
-    SELECT 'Calandrella brachydactyla', 'matorral-halofilo', NULL
     UNION ALL
     SELECT 'Teucrium freynii', 'roquedos-casmofiticos', NULL
     UNION ALL

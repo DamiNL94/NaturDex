@@ -267,3 +267,26 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     > arreglo del parser. Conviene pagarla ANTES de regenerar los ocho espacios (paso 3 de la deuda
     > nº 24): regenerar con el cruce cojo escribiría «solo GBIF» sobre especies que el Atlas sí
     > respalda.
+27. **21 fichas se llaman con un nombre que EIDOS da por sinónimo, y 22 llevan un `eidosTaxonId` que
+    no es de rango especie.** Los enumera y clasifica
+    [`nomenclatura-autoridades.md`](nomenclatura-autoridades.md), que genera
+    `npm run taxones:nomenclatura --online`. Es el resto del trabajo del 2026-08-17, que aplicó los
+    nueve que se comprobaron uno a uno y dejó éstos porque **no son un cambio mecánico** y meterlos
+    en bloque sería exactamente el «dato inventado» de la regla nº 2:
+    > · **El aceptado es a veces de otro rango.** *Serratula mucronata* → EIDOS acepta *Klasea
+    > flavescens* **subsp. mucronata**; adoptar el binomio truncado afirmaría que la ficha es de la
+    > especie entera, que es un taxón más amplio. Igual con *Sedum sediforme* (→ *Petrosedum
+    > sediforme* subsp. *sediforme*, y además con **dos `eidosTaxonId` distintos** entre espacios) y
+    > *Teucrium homotrichum*. La herramienta ya **no propone nada** en estos casos, a propósito.
+    > · **Algunos son un cambio de identidad, no de combinación**: *Natrix natrix* → *Natrix
+    > helvetica* (la culebra de collar se partió en dos especies), *Centaurium rigualii* →
+    > *Centaurium barrelieri*, *Anabasis hispanica* → *Anabasis mucronata*. Ahí hay que mirar qué
+    > dice la ficha y qué protege la norma antes de tocar el nombre: *C. rigualii* es un endemismo
+    > con figura legal.
+    > · **De los 22 reanclajes, unos son inofensivos y otros no**: *Turdus merula* anclado a la
+    > subespecie canaria o *Capra pyrenaica* a *pyrenaica* —que es la subespecie **extinta**— no son
+    > lo mismo que *Lotus dorycnium* anclado a su subespecie nominal.
+    > Van con la fuente delante y de uno en uno; el cotejo ya dice cuál es cuál, que era el trabajo
+    > caro. **11 fichas más** apuntan a un sinónimo *heterotípico* de GBIF y ésas **no se tocan**:
+    > ahí las dos autoridades discrepan de circunscripción y cambiar la key traería ocurrencias de
+    > otro taxón.

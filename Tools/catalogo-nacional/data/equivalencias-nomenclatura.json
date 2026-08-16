@@ -23,6 +23,62 @@
       "verificadoCon": "EIDOS: «Saxicola torquata» (grafía femenina) figura como sinónimo y resuelve a taxonid 16387, «Saxicola rubicola (Linnaeus, 1766)», la tarabilla europea. Es la separación de la tarabilla africana/asiática (S. torquatus s.l.) de la europea, posterior a la redacción de los formularios.",
       "porQueNoLoCierraEidos": "Con la grafía masculina que usan los formularios, EIDOS devuelve la fila del sinónimo SIN `acceptednameid`, así que `resolveTaxon` la marca «sinonimo» y no puede dar el taxonid del nombre aceptado. Y la normalización del binomio no ayuda: «torquatus» y «rubicola» no se parecen en nada, así que ninguna heurística de epíteto lo encuentra — la que hay propone «Turdus torquatus», que es el mirlo capiblanco.",
       "consultado": "2026-08-16"
+    },
+    {
+      "nombreEnLaFuente": "Sylvia communis",
+      "nombreEnElCatalogo": "Curruca communis",
+      "verificadoCon": "EIDOS v_taxonomia, taxonid 80921: «Sylvia communis Latham, 1787» es Sinónimo y «Curruca communis (Latham, 1787)» Aceptado/válido.",
+      "porQueNoLoCierraEidos": "Lo cierra, y por eso esta entrada es para el cruce con fuentes de época anterior, no para el pipeline: las fuentes oficiales seguirán citando el nombre viejo durante años (el Formulario Normalizado de un sitio revisado en 2023 aún escribe «Sylvia undata») y el cruce por binomio contra el catálogo, que ya usa el nuevo, da cero coincidencias.",
+      "consultado": "2026-08-17"
+    },
+    {
+      "nombreEnLaFuente": "Sylvia hortensis",
+      "nombreEnElCatalogo": "Curruca hortensis",
+      "verificadoCon": "EIDOS v_taxonomia, taxonid 80927: «Sylvia hortensis (Gmelin, JF, 1789)» es Sinónimo y «Curruca hortensis (Gmelin, 1789)» Aceptado/válido.",
+      "porQueNoLoCierraEidos": "Lo cierra, y por eso esta entrada es para el cruce con fuentes de época anterior, no para el pipeline: las fuentes oficiales seguirán citando el nombre viejo durante años (el Formulario Normalizado de un sitio revisado en 2023 aún escribe «Sylvia undata») y el cruce por binomio contra el catálogo, que ya usa el nuevo, da cero coincidencias.",
+      "consultado": "2026-08-17"
+    },
+    {
+      "nombreEnLaFuente": "Pallenis spinosa",
+      "nombreEnElCatalogo": "Asteriscus spinosus",
+      "verificadoCon": "EIDOS v_taxonomia, taxonid 80443: «Pallenis spinosa (L.) Cass.» es Sinónimo y «Asteriscus spinosus (L.) Schulz Bip.» Aceptado/válido.",
+      "porQueNoLoCierraEidos": "Lo cierra, y por eso esta entrada es para el cruce con fuentes de época anterior, no para el pipeline: las fuentes oficiales seguirán citando el nombre viejo durante años (el Formulario Normalizado de un sitio revisado en 2023 aún escribe «Sylvia undata») y el cruce por binomio contra el catálogo, que ya usa el nuevo, da cero coincidencias.",
+      "consultado": "2026-08-17"
+    },
+    {
+      "nombreEnLaFuente": "Clinopodium acinos",
+      "nombreEnElCatalogo": "Ziziphora acinos",
+      "verificadoCon": "EIDOS v_taxonomia, taxonid 1795: «Clinopodium acinos (L.) Kuntze» es Sinónimo y «Ziziphora acinos (L.) Melnikov» Aceptado/válido.",
+      "porQueNoLoCierraEidos": "Lo cierra, y por eso esta entrada es para el cruce con fuentes de época anterior, no para el pipeline: las fuentes oficiales seguirán citando el nombre viejo durante años (el Formulario Normalizado de un sitio revisado en 2023 aún escribe «Sylvia undata») y el cruce por binomio contra el catálogo, que ya usa el nuevo, da cero coincidencias.",
+      "consultado": "2026-08-17"
+    },
+    {
+      "nombreEnLaFuente": "Anethum ridolfia",
+      "nombreEnElCatalogo": "Ridolfia segetum",
+      "verificadoCon": "EIDOS v_taxonomia, taxonid 7791: «Anethum ridolfia Spalik & Reduron» es Sinónimo y «Ridolfia segetum (L.) Moris» Aceptado/válido.",
+      "porQueNoLoCierraEidos": "Lo cierra, y por eso esta entrada es para el cruce con fuentes de época anterior, no para el pipeline: las fuentes oficiales seguirán citando el nombre viejo durante años (el Formulario Normalizado de un sitio revisado en 2023 aún escribe «Sylvia undata») y el cruce por binomio contra el catálogo, que ya usa el nuevo, da cero coincidencias.",
+      "consultado": "2026-08-17"
+    },
+    {
+      "nombreEnLaFuente": "Ornithogalum narbonense",
+      "nombreEnElCatalogo": "Loncomelos narbonense",
+      "verificadoCon": "EIDOS v_taxonomia, taxonid 6794: «Ornithogalum narbonense L.» es Sinónimo y «Loncomelos narbonense (L.) Raf.» Aceptado/válido.",
+      "porQueNoLoCierraEidos": "Lo cierra, y por eso esta entrada es para el cruce con fuentes de época anterior, no para el pipeline: las fuentes oficiales seguirán citando el nombre viejo durante años (el Formulario Normalizado de un sitio revisado en 2023 aún escribe «Sylvia undata») y el cruce por binomio contra el catálogo, que ya usa el nuevo, da cero coincidencias.",
+      "consultado": "2026-08-17"
+    },
+    {
+      "nombreEnLaFuente": "Leuzea conifera",
+      "nombreEnElCatalogo": "Rhaponticum coniferum",
+      "verificadoCon": "EIDOS v_taxonomia, taxonid 643 es «Rhaponticum coniferum (L.) Greuter subsp. coniferum», la SUBESPECIE; la especie es el taxonid 7755, «Rhaponticum coniferum (L.) Greuter», Aceptado/válido. «Leuzea conifera (L.) DC.» es Sinónimo.",
+      "porQueNoLoCierraEidos": "Lo cierra, y por eso esta entrada es para el cruce con fuentes de época anterior, no para el pipeline: las fuentes oficiales seguirán citando el nombre viejo durante años (el Formulario Normalizado de un sitio revisado en 2023 aún escribe «Sylvia undata») y el cruce por binomio contra el catálogo, que ya usa el nuevo, da cero coincidencias.",
+      "consultado": "2026-08-17"
+    },
+    {
+      "nombreEnLaFuente": "Coloeus monedula",
+      "nombreEnElCatalogo": "Corvus monedula",
+      "verificadoCon": "EIDOS v_taxonomia, taxonid 11769: «Coloeus monedula» es Sinónimo y «Corvus monedula Linnaeus, 1758» Aceptado/válido.",
+      "porQueNoLoCierraEidos": "Lo cierra, y por eso esta entrada es para el cruce con fuentes de época anterior, no para el pipeline: las fuentes oficiales seguirán citando el nombre viejo durante años (el Formulario Normalizado de un sitio revisado en 2023 aún escribe «Sylvia undata») y el cruce por binomio contra el catálogo, que ya usa el nuevo, da cero coincidencias.",
+      "consultado": "2026-08-17"
     }
   ]
 }

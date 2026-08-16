@@ -745,7 +745,9 @@
         },
         {
           "scientificName": "Ornithogalum narbonense",
-          "grupo": "Flora"
+          "grupo": "Flora",
+          "nombreCorregido": "Loncomelos narbonense",
+          "nota": "La norma la cita como «Ornithogalum narbonense»; EIDOS lo da por sinónimo y acepta «Loncomelos narbonense», con el que la ficha el catálogo (verificado 2026-08-17)."
         },
         {
           "scientificName": "Osyris alba",
@@ -754,7 +756,9 @@
         },
         {
           "scientificName": "Pallenis spinosa",
-          "grupo": "Flora"
+          "grupo": "Flora",
+          "nombreCorregido": "Asteriscus spinosus",
+          "nota": "La norma la cita como «Pallenis spinosa»; EIDOS lo da por sinónimo y acepta «Asteriscus spinosus», con el que la ficha el catálogo (verificado 2026-08-17)."
         },
         {
           "scientificName": "Paronychia aretioides",
@@ -1417,7 +1421,9 @@
         },
         {
           "scientificName": "Sylvia communis",
-          "grupo": "Aves"
+          "grupo": "Aves",
+          "nombreCorregido": "Curruca communis",
+          "nota": "La norma la cita como «Sylvia communis»; EIDOS lo da por sinónimo y acepta «Curruca communis», con el que la ficha el catálogo (verificado 2026-08-17)."
         },
         {
           "scientificName": "Sylvia conspicillata",
@@ -1425,7 +1431,9 @@
         },
         {
           "scientificName": "Sylvia hortensis",
-          "grupo": "Aves"
+          "grupo": "Aves",
+          "nombreCorregido": "Curruca hortensis",
+          "nota": "La norma la cita como «Sylvia hortensis»; EIDOS lo da por sinónimo y acepta «Curruca hortensis», con el que la ficha el catálogo (verificado 2026-08-17)."
         },
         {
           "scientificName": "Turdus torquatus",
@@ -1977,7 +1985,9 @@
         },
         {
           "scientificName": "Sylvia hortensis",
-          "grupo": "Aves"
+          "grupo": "Aves",
+          "nombreCorregido": "Curruca hortensis",
+          "nota": "La norma la cita como «Sylvia hortensis»; EIDOS lo da por sinónimo y acepta «Curruca hortensis», con el que la ficha el catálogo (verificado 2026-08-17)."
         },
         {
           "scientificName": "Turdus merula",
@@ -2899,12 +2909,16 @@
         {
           "scientificName": "Sylvia communis",
           "categoria": "Migradora de llegada regular (Directiva Aves)",
-          "grupo": "Aves"
+          "grupo": "Aves",
+          "nombreCorregido": "Curruca communis",
+          "nota": "La norma la cita como «Sylvia communis»; EIDOS lo da por sinónimo y acepta «Curruca communis», con el que la ficha el catálogo (verificado 2026-08-17)."
         },
         {
           "scientificName": "Sylvia hortensis",
           "categoria": "Migradora de llegada regular (Directiva Aves)",
-          "grupo": "Aves"
+          "grupo": "Aves",
+          "nombreCorregido": "Curruca hortensis",
+          "nota": "La norma la cita como «Sylvia hortensis»; EIDOS lo da por sinónimo y acepta «Curruca hortensis», con el que la ficha el catálogo (verificado 2026-08-17)."
         },
         {
           "scientificName": "Turdus merula",
@@ -3808,7 +3822,9 @@
         },
         {
           "scientificName": "Sylvia undata",
-          "grupo": "Aves"
+          "grupo": "Aves",
+          "nombreCorregido": "Curruca undata",
+          "nota": "La norma la cita como «Sylvia undata»; es la curruca rabilarga, que EIDOS acepta como «Curruca undata» (taxonid 80931) y con la que la ficha el catálogo (verificado 2026-08-16)."
         },
         {
           "scientificName": "Accipiter nisus",
@@ -3972,7 +3988,9 @@
         },
         {
           "scientificName": "Sylvia communis",
-          "grupo": "Aves"
+          "grupo": "Aves",
+          "nombreCorregido": "Curruca communis",
+          "nota": "La norma la cita como «Sylvia communis»; EIDOS lo da por sinónimo y acepta «Curruca communis», con el que la ficha el catálogo (verificado 2026-08-17)."
         },
         {
           "scientificName": "Sylvia conspicillata",
@@ -3980,7 +3998,9 @@
         },
         {
           "scientificName": "Sylvia hortensis",
-          "grupo": "Aves"
+          "grupo": "Aves",
+          "nombreCorregido": "Curruca hortensis",
+          "nota": "La norma la cita como «Sylvia hortensis»; EIDOS lo da por sinónimo y acepta «Curruca hortensis», con el que la ficha el catálogo (verificado 2026-08-17)."
         },
         {
           "scientificName": "Turdus iliacus",
