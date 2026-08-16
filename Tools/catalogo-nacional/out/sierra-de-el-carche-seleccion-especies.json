@@ -4,8 +4,8 @@
   "generado": "2026-08-15",
   "total": 340,
   "aves": 95,
-  "reutilizables": 216,
-  "nuevas": 124,
+  "reutilizables": 217,
+  "nuevas": 123,
   "excluidas": 163,
   "anexo": {
     "consultado": true,
@@ -570,7 +570,7 @@
       "anexoNormativo": {
         "citadaComo": "Arctostaphylos uva-ursi subsp. grossi",
         "categoria": null,
-        "nota": "La norma la cita con subespecie, «Arctostaphylos uva-ursi subsp. grossi»; el backbone de GBIF no reconoce ese trinomio y la resuelve a Arctostaphylos uva-ursi (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF no reconoce ese trinomio y la resuelve a Arctostaphylos uva-ursi (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -603,7 +603,7 @@
       "anexoNormativo": {
         "citadaComo": "Pinus nigra subsp. salzmanii",
         "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
-        "nota": "La norma la cita con subespecie, «Pinus nigra subsp. salzmanii»; el backbone de GBIF no reconoce ese trinomio y la resuelve a Pinus nigra (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF no reconoce ese trinomio y la resuelve a Pinus nigra (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -2077,7 +2077,7 @@
       "anexoNormativo": {
         "citadaComo": "Genista pumila",
         "categoria": null,
-        "nota": "La norma la cita como «Genista pumila»; el backbone de GBIF lo trata como sinónimo de Genista versicolor (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF lo trata como sinónimo de Genista versicolor (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -2535,7 +2535,7 @@
       "anexoNormativo": {
         "citadaComo": "Ceterach officinarum",
         "categoria": null,
-        "nota": "La norma la cita como «Ceterach officinarum»; el backbone de GBIF lo trata como sinónimo de Asplenium ceterach (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF lo trata como sinónimo de Asplenium ceterach (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -2763,7 +2763,7 @@
       "anexoNormativo": {
         "citadaComo": "Sanguisorba ancistroides",
         "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
-        "nota": "La norma la cita como «Sanguisorba ancistroides»; el backbone de GBIF lo trata como sinónimo de Poterium ancistroides (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF lo trata como sinónimo de Poterium ancistroides (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -3438,7 +3438,7 @@
       "anexoNormativo": {
         "citadaComo": "Piptatherum paradoxum",
         "categoria": null,
-        "nota": "La norma la cita como «Piptatherum paradoxum»; el backbone de GBIF lo trata como sinónimo de Achnatherum paradoxum (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF lo trata como sinónimo de Achnatherum paradoxum (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -3831,7 +3831,7 @@
       "anexoNormativo": {
         "citadaComo": "Arenaria valentina",
         "categoria": null,
-        "nota": "La norma la cita como «Arenaria valentina»; el backbone de GBIF lo trata como sinónimo de Arenaria grandiflora (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF lo trata como sinónimo de Arenaria grandiflora (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -4096,7 +4096,7 @@
       "anexoNormativo": {
         "citadaComo": "Sanguisorba rupicola",
         "categoria": null,
-        "nota": "La norma la cita como «Sanguisorba rupicola»; el backbone de GBIF lo trata como sinónimo de Poterium rupicolum (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF lo trata como sinónimo de Poterium rupicolum (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -5433,7 +5433,7 @@
       "anexoNormativo": {
         "citadaComo": "Acinos arvensis",
         "categoria": null,
-        "nota": "La norma la cita como «Acinos arvensis»; el backbone de GBIF lo trata como sinónimo de Clinopodium acinos (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF lo trata como sinónimo de Clinopodium acinos (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -6263,7 +6263,7 @@
       "anexoNormativo": {
         "citadaComo": "Sedum dasyphyllum var. gladuliferum",
         "categoria": null,
-        "nota": "La norma la cita con subespecie, «Sedum dasyphyllum var. gladuliferum»; el backbone de GBIF no reconoce ese trinomio y la resuelve a Sedum dasyphyllum (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF no reconoce ese trinomio y la resuelve a Sedum dasyphyllum (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -6378,7 +6378,7 @@
       "anexoNormativo": {
         "citadaComo": "Salsola genistoides",
         "categoria": null,
-        "nota": "La norma la cita como «Salsola genistoides»; el backbone de GBIF lo trata como sinónimo de Caroxylon genistoides (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF lo trata como sinónimo de Caroxylon genistoides (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -6457,7 +6457,7 @@
       "anexoNormativo": {
         "citadaComo": "Carduelis spinus",
         "categoria": null,
-        "nota": "La norma la cita como «Carduelis spinus»; el backbone de GBIF lo trata como sinónimo de Spinus spinus (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF lo trata como sinónimo de Spinus spinus (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -6480,7 +6480,7 @@
         "observada_gbif",
         "anexo_normativo"
       ],
-      "yaFichadaEn": null,
+      "yaFichadaEn": "sierra-de-la-pila",
       "normas": [],
       "rarityScore": 1,
       "rarityBasis": null,
@@ -6513,7 +6513,7 @@
         "observada_gbif",
         "anexo_normativo"
       ],
-      "yaFichadaEn": null,
+      "yaFichadaEn": "sierra-de-la-pila",
       "normas": [],
       "rarityScore": 1,
       "rarityBasis": null,
@@ -6759,7 +6759,7 @@
       "anexoNormativo": {
         "citadaComo": "Astragalus alopecuroides subsp. grosii",
         "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
-        "nota": "La norma la cita con subespecie, «Astragalus alopecuroides subsp. grosii»; el backbone de GBIF no reconoce ese trinomio y la resuelve a Astragalus alopecuroides (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF no reconoce ese trinomio y la resuelve a Astragalus alopecuroides (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -6909,7 +6909,7 @@
       "anexoNormativo": {
         "citadaComo": "Avenula bromoides subsp. pauneroi",
         "categoria": null,
-        "nota": "La norma la cita con subespecie, «Avenula bromoides subsp. pauneroi»; el backbone de GBIF no reconoce ese trinomio y la resuelve a Helictochloa bromoides (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF no reconoce ese trinomio y la resuelve a Helictochloa bromoides (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -7063,7 +7063,7 @@
       "anexoNormativo": {
         "citadaComo": "Cheilanthes acrostica",
         "categoria": null,
-        "nota": "La norma la cita como «Cheilanthes acrostica»; el backbone de GBIF lo trata como sinónimo de Oeosporangium pteridioides (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF lo trata como sinónimo de Oeosporangium pteridioides (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -7186,7 +7186,7 @@
         "observada_gbif",
         "anexo_normativo"
       ],
-      "yaFichadaEn": "sierra-de-la-pila",
+      "yaFichadaEn": null,
       "normas": [],
       "rarityScore": 1,
       "rarityBasis": null,
@@ -8186,7 +8186,7 @@
       "anexoNormativo": {
         "citadaComo": "Asterolinon linum-stellatum",
         "categoria": null,
-        "nota": "La norma la cita como «Asterolinon linum-stellatum»; el backbone de GBIF lo trata como sinónimo de Lysimachia linum-stellatum (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF lo trata como sinónimo de Lysimachia linum-stellatum (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -8495,7 +8495,7 @@
       "anexoNormativo": {
         "citadaComo": "Cardaria draba",
         "categoria": null,
-        "nota": "La norma la cita como «Cardaria draba»; el backbone de GBIF lo trata como sinónimo de Lepidium draba (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF lo trata como sinónimo de Lepidium draba (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -8693,7 +8693,7 @@
       "anexoNormativo": {
         "citadaComo": "Coronilla lotoides",
         "categoria": null,
-        "nota": "La norma la cita como «Coronilla lotoides»; el backbone de GBIF lo trata como sinónimo de Coronilla minima (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF lo trata como sinónimo de Coronilla minima (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -8759,7 +8759,7 @@
       "anexoNormativo": {
         "citadaComo": "Cynoglossum cheirifolium",
         "categoria": null,
-        "nota": "La norma la cita como «Cynoglossum cheirifolium»; el backbone de GBIF lo trata como sinónimo de Pardoglossum cheirifolium (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF lo trata como sinónimo de Pardoglossum cheirifolium (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -8957,7 +8957,7 @@
       "anexoNormativo": {
         "citadaComo": "Erophila verna",
         "categoria": null,
-        "nota": "La norma la cita como «Erophila verna»; el backbone de GBIF lo trata como sinónimo de Draba verna (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF lo trata como sinónimo de Draba verna (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -9254,7 +9254,7 @@
       "anexoNormativo": {
         "citadaComo": "Haplophyllum linifolium subsp. rosmarinifolium",
         "categoria": null,
-        "nota": "La norma la cita con subespecie, «Haplophyllum linifolium subsp. rosmarinifolium»; el backbone de GBIF no reconoce ese trinomio y la resuelve a Haplophyllum rosmarinifolium (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF no reconoce ese trinomio y la resuelve a Haplophyllum rosmarinifolium (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -10988,7 +10988,7 @@
       "anexoNormativo": {
         "citadaComo": "Trigonella polyceratia",
         "categoria": null,
-        "nota": "La norma la cita como «Trigonella polyceratia»; el backbone de GBIF lo trata como sinónimo de Medicago polyceratia (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF lo trata como sinónimo de Medicago polyceratia (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -11120,7 +11120,7 @@
       "anexoNormativo": {
         "citadaComo": "Scorzonera hispanica",
         "categoria": null,
-        "nota": "La norma la cita como «Scorzonera hispanica»; el backbone de GBIF lo trata como sinónimo de Pseudopodospermum hispanicum (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF lo trata como sinónimo de Pseudopodospermum hispanicum (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. Su artículo 5.1 aprueba el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Sierra del Carche», que es el volumen III del plan y hace de plan de gestión de la ZEC ES6200009.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -11955,7 +11955,7 @@
     {
       "scientificName": "Rhamnus hispanorum",
       "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
-      "nota": "La norma la cita como «Rhamnus hispanorum»; el backbone de GBIF lo trata como sinónimo de Rhamnus lycioides (consultado 2026-08-15)."
+      "nota": "El backbone de GBIF lo trata como sinónimo de Rhamnus lycioides (consultado 2026-08-15)."
     },
     {
       "scientificName": "Rhamnus pumilus",

@@ -1,0 +1,22 @@
+{
+  "_nota": "Especies que un espacio EXCLUYE a propósito, con el motivo por el que se excluyen. Son decisiones de curación: casos en que los cuatro filtros de build-species-seleccion.js aprueban una especie y una revisión con el dato delante concluye que no debe entrar. Este fichero existe porque esas decisiones se tomaban a mano sobre el `park.json` y vivían en el informe de cierre, de modo que la siguiente regeneración las deshacía en silencio — es lo que le pasó a Caretta caretta en Carrascoy y El Valle: se excluyó el 2026-08-10 con su motivo escrito, y el barrido del 2026-08-16 la volvió a aprobar como si nadie lo hubiera mirado. No es una lista de especies indeseadas: es el registro de qué se miró, qué se decidió y por qué, y por eso el motivo es obligatorio y la fecha también. Lo que se excluye aquí NO desaparece: sale en `excluidas_detalle` del informe con este mismo motivo, igual que lo que descartan los filtros automáticos.",
+  "_cuando_NO_usar_esto": "Si el motivo vale para cualquier espacio, no va aquí: va en un filtro del código. Una especie no nativa la quita el filtro de autoctonía, un insecto lo quita el de alcance taxonómico y una con dos registros lo quita el de presencia. Este fichero es para lo que solo se puede juzgar mirando ESTE espacio y ESTOS registros.",
+  "_esquema": {
+    "<slug del espacio>": [
+      {
+        "scientificName": "Nombre científico tal y como lo sirve GBIF, que es por donde entra",
+        "motivo": "Por qué no entra en el catálogo de este espacio. Obligatorio: una exclusión sin motivo no se distingue de un olvido",
+        "decidido": "AAAA-MM-DD y sesión en que se decidió"
+      }
+    ]
+  },
+  "espacios": {
+    "carrascoy-y-el-valle": [
+      {
+        "scientificName": "Caretta caretta",
+        "motivo": "La tortuga boba es marina y este parque es de interior. Sus ocurrencias dentro de los polígonos de hábitat son registros de telemetría por satélite (`MACHINE_OBSERVATION`) cuya trayectoria interpolada cruza tierra adentro: no son observaciones de la especie en el espacio, son puntos calculados de un animal que estaba en el mar. Aprobarla pondría en el catálogo de una sierra una especie que un visitante no puede encontrar allí.",
+        "decidido": "2026-08-10 (c)"
+      }
+    ]
+  }
+}

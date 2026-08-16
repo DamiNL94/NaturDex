@@ -1,3 +1,7 @@
+-- El juego de caracteres se fija SIEMPRE: el cliente mysql lo toma del entorno y en un
+-- contenedor sin locale eso es latin1, que convierte cada tilde en mojibake sin dar error.
+SET NAMES utf8mb4;
+
 -- Fotos de puntos de interés (poi-images.js)
 -- Cuatro Calas (4/4), Sierra Espuña (6/13) y Carrascoy y El Valle (8/21).
 -- Wikimedia Commons, licencias CC BY / CC BY-SA / CC0. Idempotente: UPDATE por slug + park_id.

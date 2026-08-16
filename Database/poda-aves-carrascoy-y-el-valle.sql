@@ -1,3 +1,7 @@
+-- El juego de caracteres se fija SIEMPRE: el cliente mysql lo toma del entorno y en un
+-- contenedor sin locale eso es latin1, que convierte cada tilde en mojibake sin dar error.
+SET NAMES utf8mb4;
+
 -- Carrascoy y El Valle (carrascoy-y-el-valle) · retirada de las aves sin respaldo de sitio
 -- Generado el 2026-08-16 por Tools/catalogo-nacional/poda-aves-sin-respaldo.js
 --
@@ -25,25 +29,22 @@ JOIN parks pk ON pk.id = sp.park_id
 WHERE pk.slug = 'carrascoy-y-el-valle'
   AND sp.scientific_name IN (
     'Accipiter nisus',  -- Gavilán común
-    'Acrocephalus scirpaceus',  -- Carricero común
     'Aegithalos caudatus',  -- Mito
     'Alectoris rufa',  -- Perdiz roja
     'Anthus pratensis',  -- Bisbita común
     'Apus apus',  -- Vencejo común
-    'Apus pallidus',  -- Vencejo pálido
-    'Ardea cinerea',  -- Garza real
-    'Ardeola ralloides',  -- Garcilla cangrejera
     'Athene noctua',  -- Mochuelo europeo
-    'Aythya nyroca',  -- Porrón pardo
-    'Bubulcus ibis',  -- Garcilla bueyera
     'Caprimulgus europaeus',  -- Chotacabras europeo
+    'Carduelis carduelis',  -- Jilguero europeo
     'Cecropis daurica',  -- Golondrina dáurica
     'Certhia brachydactyla',  -- Agateador común
     'Cettia cetti',  -- Cetia ruiseñor
-    'Charadrius dubius',  -- Chorlitejo chico
-    'Cisticola juncidis',  -- Buitrón
+    'Chloris chloris',  -- Verderón común
     'Clamator glandarius',  -- Críalo
+    'Coloeus monedula',  -- Grajilla occidental
+    'Columba livia',  -- Paloma bravía
     'Columba oenas',  -- Paloma zurita
+    'Columba palumbus',  -- Paloma torcaz
     'Corvus corax',  -- Cuervo grande
     'Cuculus canorus',  -- Cuco
     'Curruca melanocephala',  -- Curruca cabecinegra
@@ -53,30 +54,23 @@ WHERE pk.slug = 'carrascoy-y-el-valle'
     'Emberiza calandra',  -- Triguero
     'Emberiza cia',  -- Escribano montesino
     'Emberiza cirlus',  -- Escribano soteño
-    'Emberiza citrinella',  -- Escribano cerillo
     'Erithacus rubecula',  -- Petirrojo europeo
     'Falco columbarius',  -- Esmerejón
-    'Falco eleonorae',  -- Halcón de Eleonora
-    'Falco naumanni',  -- Cernícalo primilla
-    'Ficedula hypoleuca',  -- Papamoscas cerrojillo
     'Fringilla coelebs',  -- Pimientera
-    'Fringilla montifringilla',  -- Pinzón real
-    'Himantopus himantopus',  -- Cigüeñuela
+    'Garrulus glandarius',  -- Arrendajo euroasiático
     'Hippolais polyglotta',  -- Zarcero común
     'Hirundo rustica',  -- Golondrina común
     'Jynx torquilla',  -- Torcecuello euroasiático
     'Lanius senator',  -- Alcaudón común
+    'Larus audouinii',  -- Gaviota de Audouin
     'Larus michahellis',  -- Gaviota patiamarilla
+    'Linaria cannabina',  -- Pardillo común
     'Lophophanes cristatus',  -- Herrerillo capuchino
     'Luscinia megarhynchos',  -- Ruiseñor común
     'Melanocorypha calandra',  -- Calandria común
-    'Milvus milvus',  -- Milano real
     'Monticola solitarius',  -- Roquero solitario
     'Motacilla alba',  -- Lavandera blanca
-    'Motacilla cinerea',  -- Lavandera cascadeña
-    'Neophron percnopterus',  -- Alimoche común
     'Oriolus oriolus',  -- Oropéndola
-    'Pandion haliaetus',  -- Águila pescadora
     'Parus major',  -- Carbonero común
     'Petronia petronia',  -- Gorrión chillón
     'Phoenicurus ochruros',  -- Colirrojo tizón
@@ -84,24 +78,25 @@ WHERE pk.slug = 'carrascoy-y-el-valle'
     'Phylloscopus bonelli',  -- Mosquitero papialbo
     'Phylloscopus collybita',  -- Mosquitero común
     'Phylloscopus trochilus',  -- Mosquitero musical
+    'Pica pica',  -- Urraca común
     'Picus sharpei',  -- Pito ibérico
     'Prunella collaris',  -- Acentor alpino
     'Prunella modularis',  -- Acentor común
-    'Pterocles orientalis',  -- Ganga ortega
     'Ptyonoprogne rupestris',  -- Avión roquero
     'Regulus ignicapilla',  -- Reyezuelo listado
-    'Regulus regulus',  -- Reyezuelo sencillo
-    'Riparia riparia',  -- Avión zapador
     'Saxicola rubetra',  -- Tarabilla norteña
+    'Serinus serinus',  -- Serín verdecillo
     'Spinus spinus',  -- Lúgano
     'Strix aluco',  -- Cárabo
+    'Sturnus unicolor',  -- Estornino negro
     'Sylvia atricapilla',  -- Curruca capirotada
-    'Sylvia borin',  -- Curruca mosquitera
+    'Sylvia communis',  -- Curruca zarcera
+    'Sylvia hortensis',  -- Curruca mirlona
     'Tachybaptus ruficollis',  -- Zampullín común
     'Tachymarptis melba',  -- Vencejo real
-    'Tadorna tadorna',  -- Tarro blanco
-    'Tringa ochropus',  -- Andarríos grande
-    'Tyto alba'  -- Lechuza común
+    'Turdus merula',  -- Turdus merula
+    'Turdus philomelos',  -- Zorzal común
+    'Turdus viscivorus'  -- Zorzal charlo
   );
 
 COMMIT;
@@ -109,4 +104,4 @@ COMMIT;
 -- Comprobación: debe devolver 0 aves de las retiradas y el total esperado del espacio.
 SELECT
     (SELECT COUNT(*) FROM species s JOIN parks p ON p.id = s.park_id WHERE p.slug = 'carrascoy-y-el-valle') AS especies_del_espacio,
-    (SELECT COUNT(*) FROM species s JOIN parks p ON p.id = s.park_id WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name IN ('Accipiter nisus', 'Acrocephalus scirpaceus', 'Aegithalos caudatus', 'Alectoris rufa', 'Anthus pratensis', 'Apus apus', 'Apus pallidus', 'Ardea cinerea', 'Ardeola ralloides', 'Athene noctua', 'Aythya nyroca', 'Bubulcus ibis', 'Caprimulgus europaeus', 'Cecropis daurica', 'Certhia brachydactyla', 'Cettia cetti', 'Charadrius dubius', 'Cisticola juncidis', 'Clamator glandarius', 'Columba oenas', 'Corvus corax', 'Cuculus canorus', 'Curruca melanocephala', 'Cyanistes caeruleus', 'Delichon urbicum', 'Egretta garzetta', 'Emberiza calandra', 'Emberiza cia', 'Emberiza cirlus', 'Emberiza citrinella', 'Erithacus rubecula', 'Falco columbarius', 'Falco eleonorae', 'Falco naumanni', 'Ficedula hypoleuca', 'Fringilla coelebs', 'Fringilla montifringilla', 'Himantopus himantopus', 'Hippolais polyglotta', 'Hirundo rustica', 'Jynx torquilla', 'Lanius senator', 'Larus michahellis', 'Lophophanes cristatus', 'Luscinia megarhynchos', 'Melanocorypha calandra', 'Milvus milvus', 'Monticola solitarius', 'Motacilla alba', 'Motacilla cinerea', 'Neophron percnopterus', 'Oriolus oriolus', 'Pandion haliaetus', 'Parus major', 'Petronia petronia', 'Phoenicurus ochruros', 'Phoenicurus phoenicurus', 'Phylloscopus bonelli', 'Phylloscopus collybita', 'Phylloscopus trochilus', 'Picus sharpei', 'Prunella collaris', 'Prunella modularis', 'Pterocles orientalis', 'Ptyonoprogne rupestris', 'Regulus ignicapilla', 'Regulus regulus', 'Riparia riparia', 'Saxicola rubetra', 'Spinus spinus', 'Strix aluco', 'Sylvia atricapilla', 'Sylvia borin', 'Tachybaptus ruficollis', 'Tachymarptis melba', 'Tadorna tadorna', 'Tringa ochropus', 'Tyto alba')) AS retiradas_que_siguen;
+    (SELECT COUNT(*) FROM species s JOIN parks p ON p.id = s.park_id WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name IN ('Accipiter nisus', 'Aegithalos caudatus', 'Alectoris rufa', 'Anthus pratensis', 'Apus apus', 'Athene noctua', 'Caprimulgus europaeus', 'Carduelis carduelis', 'Cecropis daurica', 'Certhia brachydactyla', 'Cettia cetti', 'Chloris chloris', 'Clamator glandarius', 'Coloeus monedula', 'Columba livia', 'Columba oenas', 'Columba palumbus', 'Corvus corax', 'Cuculus canorus', 'Curruca melanocephala', 'Cyanistes caeruleus', 'Delichon urbicum', 'Egretta garzetta', 'Emberiza calandra', 'Emberiza cia', 'Emberiza cirlus', 'Erithacus rubecula', 'Falco columbarius', 'Fringilla coelebs', 'Garrulus glandarius', 'Hippolais polyglotta', 'Hirundo rustica', 'Jynx torquilla', 'Lanius senator', 'Larus audouinii', 'Larus michahellis', 'Linaria cannabina', 'Lophophanes cristatus', 'Luscinia megarhynchos', 'Melanocorypha calandra', 'Monticola solitarius', 'Motacilla alba', 'Oriolus oriolus', 'Parus major', 'Petronia petronia', 'Phoenicurus ochruros', 'Phoenicurus phoenicurus', 'Phylloscopus bonelli', 'Phylloscopus collybita', 'Phylloscopus trochilus', 'Pica pica', 'Picus sharpei', 'Prunella collaris', 'Prunella modularis', 'Ptyonoprogne rupestris', 'Regulus ignicapilla', 'Saxicola rubetra', 'Serinus serinus', 'Spinus spinus', 'Strix aluco', 'Sturnus unicolor', 'Sylvia atricapilla', 'Sylvia communis', 'Sylvia hortensis', 'Tachybaptus ruficollis', 'Tachymarptis melba', 'Turdus merula', 'Turdus philomelos', 'Turdus viscivorus')) AS retiradas_que_siguen;

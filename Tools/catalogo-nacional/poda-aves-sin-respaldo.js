@@ -358,6 +358,10 @@ async function main() {
  */
 function redactaSql(entrada, retiradas) {
   const l = [];
+  l.push('-- El juego de caracteres se fija SIEMPRE: el cliente `mysql` lo toma del entorno y en un');
+  l.push('-- contenedor sin locale eso es latin1, que convierte cada tilde en mojibake sin dar error.');
+  l.push('SET NAMES utf8mb4;');
+  l.push('');
   l.push(`-- ${entrada.name} (${PARK}) · retirada de las aves sin respaldo de sitio`);
   l.push(`-- Generado el ${hoy()} por Tools/catalogo-nacional/poda-aves-sin-respaldo.js`);
   l.push('--');

@@ -2031,7 +2031,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": true,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Sorbus aria» (el texto precisa que «apenas se han localizado una decena de ejemplares en los roquedos del Barranco del Lagrimal». La norma la cita como «Sorbus aria»; el backbone de GBIF lo trata como sinónimo de Aria edulis (consultado 2026-08-15)), con la categoría «En Peligro de Extinción (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Sorbus aria» (el texto precisa que «apenas se han localizado una decena de ejemplares en los roquedos del Barranco del Lagrimal»), con la categoría «En Peligro de Extinción (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2132,7 +2132,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Colutea hispanica» (la norma la cita como «Colutea hispanica»; el backbone de GBIF lo trata como sinónimo de Colutea arborescens (consultado 2026-08-15)), con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Colutea hispanica» (el backbone de GBIF lo trata como sinónimo de Colutea arborescens), con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2246,7 +2246,7 @@
         "ambito": "Región de Murcia"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Fritillaria hispanica» (la norma la cita como «Fritillaria hispanica»; el backbone de GBIF lo trata como sinónimo de Fritillaria lusitanica (consultado 2026-08-15)), con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Fritillaria hispanica» (el backbone de GBIF lo trata como sinónimo de Fritillaria lusitanica), con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -3378,7 +3378,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 12 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Sturnur unicolor» (errata de la tabla: se lee «Sturnur» por Sturnus unicolor. Figura también entre las especies cazables del §1.1.2.2.2); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 12 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Sturnur unicolor» (errata de la tabla: se lee «Sturnur» por Sturnus unicolor); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -4830,7 +4830,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Parus caeruleus» (la norma la cita como «Parus caeruleus»; el backbone de GBIF lo trata como sinónimo de Cyanistes caeruleus (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Parus caeruleus» (el backbone de GBIF lo trata como sinónimo de Cyanistes caeruleus); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",
@@ -4978,7 +4978,7 @@
         "ambito": "España"
       },
       "featured": false,
-      "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Carduelis spinus» (la norma la cita como «Carduelis spinus»; el backbone de GBIF lo trata como sinónimo de Spinus spinus (consultado 2026-08-15)); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
+      "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Carduelis spinus» (el backbone de GBIF lo trata como sinónimo de Spinus spinus); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",

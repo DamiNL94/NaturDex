@@ -1,3 +1,7 @@
+-- El juego de caracteres se fija SIEMPRE: el cliente mysql lo toma del entorno y en un
+-- contenedor sin locale eso es latin1, que convierte cada tilde en mojibake sin dar error.
+SET NAMES utf8mb4;
+
 -- invasoras-imagenes.sql — foto y atribución de cada especie exótica invasora.
 -- GENERADO por Tools/catalogo-nacional/invasoras-images.js --sql. No editar a mano.
 -- La BD es la fuente de verdad de las invasoras (Backend/Api/invasoras.php): sin aplicar esto,

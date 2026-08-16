@@ -237,6 +237,10 @@ function parecidos(genero, raiz) {
 
   if (OPT.sql && sentencias.length) {
     const cabecera = [
+    '-- El juego de caracteres se fija SIEMPRE: el cliente `mysql` lo toma del entorno y en un',
+    '-- contenedor sin locale eso es latin1, que convierte cada tilde en mojibake sin dar error.',
+    'SET NAMES utf8mb4;',
+    '',
       '-- habitats-imagenes.sql — portada, atribución y nota de cada hábitat.',
       '-- GENERADO por Tools/catalogo-nacional/habitat-images.js --sql. No editar a mano.',
       '-- Requiere las columnas habitats.image_attribution e image_note (Database/migrations.sql).',

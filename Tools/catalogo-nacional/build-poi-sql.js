@@ -67,7 +67,11 @@ const fila = (p, primera) => {
   return '    SELECT ' + v.map((x, i) => x + alias[i]).join(', ');
 };
 
-const cabecera = `-- ================================================================================================
+const cabecera = `-- El juego de caracteres se fija SIEMPRE: el cliente mysql lo toma del entorno y en un
+-- contenedor sin locale eso es latin1, que convierte cada tilde en mojibake sin dar error.
+SET NAMES utf8mb4;
+
+-- ================================================================================================
 -- ${park.park.name} · Fase 3 (N3): puntos de interés.
 --
 -- GENERADO por Tools/catalogo-nacional/build-poi-sql.js desde el bloque \`pointsOfInterest\` de

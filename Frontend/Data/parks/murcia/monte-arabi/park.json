@@ -931,7 +931,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, que la cita como «Anthillis cytisoides» (el §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. Errata del texto: se lee «Anthillis» por Anthyllis); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, que la cita como «Anthillis cytisoides» (el §3.2.4.2.2 la nombra en la descripción de la vegetación, no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. Errata del texto: se lee «Anthillis» por Anthyllis); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -1337,7 +1337,7 @@
         "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
       },
       "featured": false,
-      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, que la cita como «Thymelaea tantonraira» (el §3.2.4.2.2 la nombra en la descripción de la vegetación (romeral y tomillar de solana), no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. Errata del texto: se lee «tantonraira» por tartonraira); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, que la cita como «Thymelaea tantonraira» (el §3.2.4.2.2 la nombra en la descripción de la vegetación, no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. Errata del texto: se lee «tantonraira» por tartonraira); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2144,7 +2144,7 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "featured": false,
-      "source": "GBIF: 4 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, que la cita como «Carduelis chloris» (la norma la cita como «Carduelis chloris»; el backbone de GBIF lo trata como sinónimo de Chloris chloris (consultado 2026-08-15)), con la categoría «Migradora de llegada regular (Directiva Aves)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 4 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, que la cita como «Carduelis chloris» (el backbone de GBIF lo trata como sinónimo de Chloris chloris), con la categoría «Migradora de llegada regular (Directiva Aves)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Animalia",
         "phylum": "Chordata",

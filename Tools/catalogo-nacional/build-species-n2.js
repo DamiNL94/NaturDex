@@ -111,10 +111,30 @@ function cargarGbif() {
     'Se genera con `npm run gbif:habitats` (necesita red).');
   const doc = readJson(p);
   const porNombre = new Map();
+  /*
+   * El barrido indexa sus especies por CLAVE de GBIF, y GBIF llega a servir el MISMO nombre con dos
+   * claves distintas. En Carrascoy y El Valle son dos: *Osyris lanceolata* (7473922 y 3788959) y
+   * *Paronychia suffruticosa* (5529030 y 7499195). Cuando eso pasa, el mismo hábitat aparece dos
+   * veces en la lista del nombre, y concatenarlas sin más metía el enlace repetido en `habitatIds`.
+   *
+   * No era visible en el `park.json` —una lista con un slug dos veces no rompe nada al pintarla— y
+   * en cambio SÍ lo era en la base de datos, que tiene clave única en `(species_id, habitat_id)`:
+   * el fichero declaraba 1.310 vínculos, la carga insertaba 1.307 y ninguna de las dos cifras
+   * avisaba de la otra. El paquete y la API diciendo cosas distintas es la cuarta de las «cinco
+   * cosas que fallan en verde» del CLAUDE.md.
+   *
+   * Así que el hábitat se fusiona por `slug`, quedándose con el recuento MAYOR de las dos claves.
+   * Sumarlas sería peor: no se sabe si los dos conjuntos de registros son disjuntos o el mismo
+   * registro contado dos veces, y esta cifra es la que el `source` de la ficha publica.
+   */
   for (const h of doc.habitats || []) {
     for (const s of h.species || []) {
-      if (!porNombre.has(s.name)) porNombre.set(s.name, { speciesKey: s.speciesKey, clase: s.class, habitats: [] });
-      porNombre.get(s.name).habitats.push({ slug: h.slug, hic: h.hic, ocurrencias: s.occurrences });
+      if (!porNombre.has(s.name)) porNombre.set(s.name, { speciesKey: s.speciesKey, clase: s.class, habitats: [], claves: new Set() });
+      const e = porNombre.get(s.name);
+      e.claves.add(s.speciesKey);
+      const ya = e.habitats.find(x => x.slug === h.slug);
+      if (ya) ya.ocurrencias = Math.max(ya.ocurrencias, s.occurrences);
+      else e.habitats.push({ slug: h.slug, hic: h.hic, ocurrencias: s.occurrences });
     }
   }
   // Orden estable: el hábitat con más ocurrencias primero; a igualdad, por slug.
@@ -283,6 +303,18 @@ function etiquetaConservacion(normas, iucnGlobal) {
 // paréntesis, a media frase, la mayúscula inicial sobra. Solo la primera letra, y solo si es letra.
 const minuscula = (s) => String(s).replace(/^\p{Lu}/u, (c) => c.toLowerCase());
 
+// Primera oración de una nota, sin paréntesis y sin el punto final. Un punto seguido de espacio y
+// mayúscula cierra oración, salvo cuando el punto es el de una abreviatura: las notas están llenas
+// de «subsp.», «var.» y «n.º», y cortar ahí parte el nombre por la mitad.
+const ABREVIATURAS = /\b(subsp|ssp|var|subvar|f|cf|aff|n|art|núm|pág|s|Sr|Sra|Dr|ed|coord|vol)\.$/i;
+function primeraOracion(s) {
+  const sinParentesis = String(s).replace(/\s*\([^)]*\)/g, '').trim();
+  const trozos = sinParentesis.split(/(?<=\.)\s+(?=[A-ZÁÉÍÓÚ¿«])/);
+  let out = trozos[0];
+  for (let i = 1; i < trozos.length && ABREVIATURAS.test(out); i++) out += ' ' + trozos[i];
+  return out.replace(/\.$/, '').trim();
+}
+
 function fuenteDelAnexo(sel) {
   const a = sel.anexoNormativo;
   if (!a) return null;
@@ -296,7 +328,13 @@ function fuenteDelAnexo(sel) {
     partes.push(`, que la cita como «${a.citadaComo}»`);
     // La salvedad de la entrada del anexo. Sin ella, un nombre mal impreso en el boletín —«Falco
     // tunninculus», «Milaria calandra»— parece una errata de NaturDex y no de la norma.
-    if (a.nota) partes.push(` (${minuscula(a.nota).replace(/\.$/, '')})`);
+    //
+    // Solo la PRIMERA oración, y sin sus paréntesis: la nota del anexo puede llevar detrás la
+    // verificación contra GBIF y la fecha en que se hizo, que son para quien mantiene el dato y no
+    // para quien lee la ficha. Meterla entera producía un paréntesis dentro de otro y un `source`
+    // de treinta líneas.
+    const nota = a.nota ? primeraOracion(a.nota) : null;
+    if (nota) partes.push(` (${minuscula(nota)})`);
   }
   if (a.categoria) partes.push(`, con la categoría «${a.categoria}»`);
   return partes.join('');

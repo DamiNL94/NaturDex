@@ -2,7 +2,7 @@
 
 Generado el 2026-08-16 por `Tools/catalogo-nacional/poda-aves-sin-respaldo.js`.
 
-El espacio tenía **83 aves** de 245 fichas. Conservan su plaza **17**; se retiran **66**.
+El espacio tenía **56 aves** de 219 fichas. Conservan su plaza **56**; se retiran **0**.
 
 Una especie entra en el catálogo de un espacio por CONSTANCIA: que GBIF la haya registrado dentro de sus polígonos de hábitat. Para un ave esa prueba no mide lo que dice medir —vuela, y un registro en vuelo cae dentro de cualquier recinto—, así que su puerta es el **respaldo de sitio**: que una fuente oficial afirme por escrito que pertenece a ESTE sitio. Son dos, y cualquiera de las dos vale: el Formulario Normalizado de Datos del sitio Red Natura 2000 y el anexo normativo del plan de gestión del espacio.
 
@@ -13,7 +13,7 @@ Una especie entra en el catálogo de un espacio por CONSTANCIA: que GBIF la haya
 | ES0000174 Sierra de la Pila | ZEPA | 2023 | 29 |
 | ES6200003 Sierra de la Pila | LIC/ZEC | 2023 | 0 |
 
-· **Anexo normativo: no consultado.** Este espacio no tiene entrada en `data/anexos-normativos.json`. No es que carezca de norma con inventario: es que nadie la ha leído todavía, y hasta que se lea, sus aves solo pueden apoyarse en el formulario del sitio.
+· **Anexo normativo:** 243 especies enumeradas · PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018)
 
 
 ## Puentes de nomenclatura
@@ -26,6 +26,26 @@ La fuente y el catálogo escriben la misma especie con nombres de épocas distin
 | *Sylvia cantillans ([excluding subalpina])* | `curruca cantillans` | EIDOS |
 | *Sylvia conspicillata* | `curruca conspicillat` | EIDOS |
 | *Sylvia undata* | `curruca undat` | tabla |
+| *Anagallis tenella* | `lysimachia tenell` | EIDOS |
+| *Aster sedifolius* | `galatella sedifoli` | EIDOS |
+| *Campanula hispanica* | `campanula rotundifoli` | EIDOS |
+| *Campanula velutina* | `campanula moll` | EIDOS |
+| *Fritillaria hispanica* | `fritillaria lusitanic` | EIDOS |
+| *Halimium atriplicifolium* | `cistus atriplicifoli` | EIDOS |
+| *Lycocarpus fugax* | `sisymbrium fugax` | EIDOS |
+| *Rhamnus hispanorum* | `rhamnus lycioides` | EIDOS |
+| *Sarcocapnos enneaphylla subsp. saetabensis* | `sarcocapnos saetabens` | EIDOS |
+| *Eptesicus isabellinus* | `cnephaeus isabellin` | EIDOS |
+| *Bufo calamita* | `epidalea calamit` | EIDOS |
+| *Apus melba* | `tachymarptis melb` | EIDOS |
+| *Hirundo daurica* | `cecropis dauric` | EIDOS |
+| *Saxicola torquata* | `saxicola rubicol` | EIDOS |
+| *Sylvia cantillans* | `curruca cantillans` | EIDOS |
+| *Sylvia communis* | `curruca commun` | EIDOS |
+| *Sylvia hortensis* | `curruca hortens` | EIDOS |
+| *Picus viridis* | `picus sharpei` | EIDOS |
+| *Sylvia melanocephala* | `curruca melanocephal` | EIDOS |
+| *Rhinechis scalaris* | `zamenis scalar` | EIDOS |
 
 ## A verificar a mano (NO aplicado)
 
@@ -37,76 +57,8 @@ El sitio las declara, el catálogo no las ficha con ese nombre, y hay un ave del
 
 ## Aves retiradas
 
-Ninguna fuente oficial las sitúa en este espacio. **No se pierden**: están en este informe con su recuento de GBIF, y vuelven al catálogo en cuanto una fuente de sitio las nombre — el anexo del plan de gestión del espacio es la vía, no bajar la exigencia.
+Ninguna: todas las aves del espacio tienen respaldo de sitio.
 
-| Especie | Nombre común | Occ. GBIF |
-|---|---|---:|
-| *Passer domesticus* | Gorrión común | 1647 |
-| *Motacilla alba* | Lavandera blanca | 1277 |
-| *Sylvia atricapilla* | Curruca capirotada | 762 |
-| *Phoenicurus ochruros* | Colirrojo tizón | 532 |
-| *Serinus serinus* | Serín verdecillo | 370 |
-| *Phylloscopus collybita* | Mosquitero común | 356 |
-| *Curruca melanocephala* | Curruca cabecinegra | 254 |
-| *Chloris chloris* | Verderón común | 242 |
-| *Erithacus rubecula* | Petirrojo europeo | 225 |
-| *Hirundo rustica* | Golondrina común | 222 |
-| *Turdus merula* | Turdus merula | 201 |
-| *Turdus philomelos* | Zorzal común | 113 |
-| *Fringilla coelebs* | Pimientera | 111 |
-| *Oenanthe leucura* | Collalba negra | 101 |
-| *Parus major* | Carbonero común | 95 |
-| *Aegithalos caudatus* | Mito | 94 |
-| *Muscicapa striata* | Papamoscas gris | 73 |
-| *Cettia cetti* | Cetia ruiseñor | 70 |
-| *Athene noctua* | Mochuelo europeo | 69 |
-| *Turdus viscivorus* | Zorzal charlo | 64 |
-| *Lophophanes cristatus* | Herrerillo capuchino | 61 |
-| *Carduelis carduelis* | Jilguero europeo | 56 |
-| *Periparus ater* | Carbonero garrapinos | 42 |
-| *Emberiza cirlus* | Escribano soteño | 37 |
-| *Loxia curvirostra* | Piquituerto | 35 |
-| *Oriolus oriolus* | Oropéndola | 31 |
-| *Sturnus unicolor* | Estornino negro | 31 |
-| *Alectoris rufa* | Perdiz roja | 30 |
-| *Strix aluco* | Cárabo | 28 |
-| *Apus apus* | Vencejo común | 26 |
-| *Accipiter nisus* | Gavilán común | 25 |
-| *Streptopelia decaocto* | Tórtola turca | 25 |
-| *Columba palumbus* | Paloma torcaz | 24 |
-| *Garrulus glandarius* | Arrendajo euroasiático | 23 |
-| *Emberiza cia* | Escribano montesino | 22 |
-| *Anthus pratensis* | Bisbita común | 21 |
-| *Corvus corax* | Cuervo grande | 21 |
-| *Ptyonoprogne rupestris* | Avión roquero | 21 |
-| *Picus sharpei* | Pito ibérico | 19 |
-| *Linaria cannabina* | Pardillo común | 18 |
-| *Luscinia svecica* | Pechiazul | 15 |
-| *Spinus spinus* | Lúgano | 15 |
-| *Pica pica* | Urraca común | 14 |
-| *Cuculus canorus* | Cuco | 13 |
-| *Emberiza calandra* | Triguero | 13 |
-| *Monticola solitarius* | Roquero solitario | 13 |
-| *Petronia petronia* | Gorrión chillón | 13 |
-| *Coloeus monedula* | Grajilla occidental | 12 |
-| *Acrocephalus scirpaceus* | Carricero común | 10 |
-| *Motacilla cinerea* | Lavandera cascadeña | 10 |
-| *Otus scops* | Autillo | 9 |
-| *Cecropis daurica* | Golondrina dáurica | 8 |
-| *Charadrius dubius* | Chorlitejo chico | 8 |
-| *Columba livia* | Paloma bravía | 8 |
-| *Lanius excubitor* | Alcaudón norteño | 8 |
-| *Lanius senator* | Alcaudón común | 8 |
-| *Milvus migrans* | Milano negro | 8 |
-| *Streptopelia turtur* | Tórtola europea | 8 |
-| *Sylvia hortensis* | Curruca mirlona | 8 |
-| *Tachymarptis melba* | Vencejo real | 8 |
-| *Regulus ignicapilla* | Reyezuelo listado | 6 |
-| *Hippolais polyglotta* | Zarcero común | 5 |
-| *Luscinia megarhynchos* | Ruiseñor común | 5 |
-| *Upupa epops* | Abubilla | 5 |
-| *Hieraaetus pennatus* | Águila calzada | 3 |
-| *Sylvia communis* | Curruca zarcera | 3 |
 
 ## Declaradas por el sitio y sin ficha
 
@@ -131,20 +83,59 @@ El hueco por el otro lado, y el más útil de los dos: el formulario oficial afi
 
 | Especie | Nombre común | Respaldo |
 |---|---|---|
-| *Falco tinnunculus* | Cernícalo vulgar | formulario ES0000174 |
-| *Sylvia undata* | Sylvia undata | formulario ES0000174 |
-| *Pyrrhocorax pyrrhocorax* | Chova piquirroja | formulario ES0000174 |
-| *Galerida theklae* | Cogujada montesina | formulario ES0000174 |
-| *Falco peregrinus* | Halcón peregrino | formulario ES0000174 |
-| *Aquila chrysaetos* | Águila real | formulario ES0000174 |
-| *Galerida cristata* | Cogujada común | formulario ES0000174 |
-| *Certhia brachydactyla* | Agateador común | formulario ES0000174 |
-| *Circaetus gallicus* | Culebrera europea | formulario ES0000174 |
-| *Oenanthe hispanica* | Collalba rubia | formulario ES0000174 |
-| *Lullula arborea* | Alondra totovía | formulario ES0000174 |
-| *Lanius meridionalis* | Alcaudón real | formulario ES0000174 |
-| *Accipiter gentilis* | Azor común | formulario ES0000174 |
-| *Bubo bubo* | Búho real | formulario ES0000174 |
-| *Troglodytes troglodytes* | Chochín | formulario ES0000174 |
-| *Saxicola rubicola* | Tarabilla europea | formulario ES0000174 |
-| *Buteo buteo* | Busardo ratonero | formulario ES0000174 |
+| *Motacilla alba* | Lavandera blanca | anexo normativo |
+| *Phoenicurus ochruros* | Colirrojo tizón | anexo normativo |
+| *Phylloscopus collybita* | Mosquitero común | anexo normativo |
+| *Curruca melanocephala* | Curruca cabecinegra | anexo normativo |
+| *Erithacus rubecula* | Petirrojo europeo | anexo normativo |
+| *Hirundo rustica* | Golondrina común | anexo normativo |
+| *Parus major* | Carbonero común | anexo normativo |
+| *Turdus philomelos* | Zorzal común | anexo normativo |
+| *Aegithalos caudatus* | Mito | anexo normativo |
+| *Oenanthe leucura* | Collalba negra | anexo normativo |
+| *Lophophanes cristatus* | Herrerillo capuchino | anexo normativo |
+| *Athene noctua* | Mochuelo europeo | anexo normativo |
+| *Muscicapa striata* | Papamoscas gris | anexo normativo |
+| *Cettia cetti* | Cetia ruiseñor | anexo normativo |
+| *Periparus ater* | Carbonero garrapinos | anexo normativo |
+| *Falco tinnunculus* | Cernícalo vulgar | formulario ES0000174 · anexo normativo |
+| *Loxia curvirostra* | Piquituerto | anexo normativo |
+| *Sylvia undata* | Sylvia undata | formulario ES0000174 · anexo normativo |
+| *Emberiza cirlus* | Escribano soteño | anexo normativo |
+| *Accipiter nisus* | Gavilán común | anexo normativo |
+| *Oriolus oriolus* | Oropéndola | anexo normativo |
+| *Pyrrhocorax pyrrhocorax* | Chova piquirroja | formulario ES0000174 · anexo normativo |
+| *Strix aluco* | Cárabo | anexo normativo |
+| *Apus apus* | Vencejo común | anexo normativo |
+| *Aquila chrysaetos* | Águila real | formulario ES0000174 · anexo normativo |
+| *Certhia brachydactyla* | Agateador común | formulario ES0000174 · anexo normativo |
+| *Emberiza cia* | Escribano montesino | anexo normativo |
+| *Falco peregrinus* | Halcón peregrino | formulario ES0000174 · anexo normativo |
+| *Ptyonoprogne rupestris* | Avión roquero | anexo normativo |
+| *Anthus pratensis* | Bisbita común | anexo normativo |
+| *Galerida cristata* | Cogujada común | formulario ES0000174 · anexo normativo |
+| *Galerida theklae* | Cogujada montesina | formulario ES0000174 · anexo normativo |
+| *Picus sharpei* | Pito ibérico | anexo normativo |
+| *Circaetus gallicus* | Culebrera europea | formulario ES0000174 · anexo normativo |
+| *Cuculus canorus* | Cuco | anexo normativo |
+| *Lanius meridionalis* | Alcaudón real | formulario ES0000174 · anexo normativo |
+| *Lullula arborea* | Alondra totovía | formulario ES0000174 · anexo normativo |
+| *Monticola solitarius* | Roquero solitario | anexo normativo |
+| *Oenanthe hispanica* | Collalba rubia | formulario ES0000174 · anexo normativo |
+| *Petronia petronia* | Gorrión chillón | anexo normativo |
+| *Accipiter gentilis* | Azor común | formulario ES0000174 · anexo normativo |
+| *Bubo bubo* | Búho real | formulario ES0000174 · anexo normativo |
+| *Cecropis daurica* | Golondrina dáurica | anexo normativo |
+| *Lanius senator* | Alcaudón común | anexo normativo |
+| *Otus scops* | Autillo | anexo normativo |
+| *Regulus ignicapilla* | Reyezuelo listado | anexo normativo |
+| *Sylvia hortensis* | Curruca mirlona | anexo normativo |
+| *Tachymarptis melba* | Vencejo real | anexo normativo |
+| *Troglodytes troglodytes* | Chochín | formulario ES0000174 · anexo normativo |
+| *Buteo buteo* | Busardo ratonero | formulario ES0000174 · anexo normativo |
+| *Hieraaetus pennatus* | Águila calzada | anexo normativo |
+| *Hippolais polyglotta* | Zarcero común | anexo normativo |
+| *Luscinia megarhynchos* | Ruiseñor común | anexo normativo |
+| *Saxicola rubicola* | Tarabilla europea | formulario ES0000174 · anexo normativo |
+| *Sylvia communis* | Curruca zarcera | anexo normativo |
+| *Upupa epops* | Abubilla | anexo normativo |

@@ -376,6 +376,10 @@ function aplicar() {
   }
   if (sqlPath && sql.length) {
     const cabecera = [
+    '-- El juego de caracteres se fija SIEMPRE: el cliente `mysql` lo toma del entorno y en un',
+    '-- contenedor sin locale eso es latin1, que convierte cada tilde en mojibake sin dar error.',
+    'SET NAMES utf8mb4;',
+    '',
       '-- species-universal.sql — contenido universal de las fichas de especie.',
       '-- GENERADO por Tools/sync-species-catalog.js --apply --sql. No editar a mano:',
       '-- la fuente es Tools/catalogo-nacional/data/especies-universal.json.',

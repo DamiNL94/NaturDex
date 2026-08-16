@@ -1,3 +1,7 @@
+-- El juego de caracteres se fija SIEMPRE: el cliente mysql lo toma del entorno y en un
+-- contenedor sin locale eso es latin1, que convierte cada tilde en mojibake sin dar error.
+SET NAMES utf8mb4;
+
 -- invasoras-contenido.sql — texto de la ficha de cada especie exótica invasora.
 -- GENERADO por Tools/catalogo-nacional/invasoras-contenido.js --sql. No editar a mano.
 -- Requiere las columnas especies_invasoras.impact y .pathway (Database/migrations.sql).

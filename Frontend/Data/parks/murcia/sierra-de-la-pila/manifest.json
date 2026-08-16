@@ -2,7 +2,7 @@
   "slug": "sierra-de-la-pila",
   "name": "Sierra de la Pila",
   "apiSlug": "sierra-de-la-pila",
-  "version": 9,
+  "version": 14,
   "updatedAt": "2026-08-16",
   "data": "Data/parks/murcia/sierra-de-la-pila/park.json",
   "geo": {
@@ -15,7 +15,7 @@
   "images": [],
   "audio": [],
   "counts": {
-    "species": 179,
+    "species": 219,
     "habitats": 10,
     "pointsOfInterest": 15,
     "images": 0,

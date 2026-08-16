@@ -4,8 +4,8 @@
   "generado": "2026-08-15",
   "total": 119,
   "aves": 79,
-  "reutilizables": 108,
-  "nuevas": 11,
+  "reutilizables": 109,
+  "nuevas": 10,
   "excluidas": 177,
   "anexo": {
     "consultado": true,
@@ -2630,7 +2630,7 @@
       "anexoNormativo": {
         "citadaComo": "Carduelis spinus",
         "categoria": null,
-        "nota": "La norma la cita como «Carduelis spinus»; el backbone de GBIF lo trata como sinónimo de Spinus spinus (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF lo trata como sinónimo de Spinus spinus (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan es el que trae la información específica de cada espacio; su §1.1 corresponde a la ZEC ES6200008 «Sierra de Salinas», que es la Red Natura 2000 que solapa el Paisaje Protegido.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -2870,7 +2870,7 @@
       "anexoNormativo": {
         "citadaComo": "Parus caeruleus",
         "categoria": null,
-        "nota": "La norma la cita como «Parus caeruleus»; el backbone de GBIF lo trata como sinónimo de Cyanistes caeruleus (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF lo trata como sinónimo de Cyanistes caeruleus (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan es el que trae la información específica de cada espacio; su §1.1 corresponde a la ZEC ES6200008 «Sierra de Salinas», que es la Red Natura 2000 que solapa el Paisaje Protegido.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -3015,7 +3015,7 @@
       "evidence": [
         "observada_gbif"
       ],
-      "yaFichadaEn": null,
+      "yaFichadaEn": "sierra-de-el-carche",
       "normas": [],
       "rarityScore": 1,
       "rarityBasis": null,
@@ -3871,7 +3871,7 @@
       "anexoNormativo": {
         "citadaComo": "Colutea hispanica",
         "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
-        "nota": "La norma la cita como «Colutea hispanica»; el backbone de GBIF lo trata como sinónimo de Colutea arborescens (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF lo trata como sinónimo de Colutea arborescens (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan es el que trae la información específica de cada espacio; su §1.1 corresponde a la ZEC ES6200008 «Sierra de Salinas», que es la Red Natura 2000 que solapa el Paisaje Protegido.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -4122,7 +4122,7 @@
       "anexoNormativo": {
         "citadaComo": "Fritillaria hispanica",
         "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
-        "nota": "La norma la cita como «Fritillaria hispanica»; el backbone de GBIF lo trata como sinónimo de Fritillaria lusitanica (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF lo trata como sinónimo de Fritillaria lusitanica (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan es el que trae la información específica de cada espacio; su §1.1 corresponde a la ZEC ES6200008 «Sierra de Salinas», que es la Red Natura 2000 que solapa el Paisaje Protegido.",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -7546,7 +7546,7 @@
       "evidence": [
         "observada_gbif"
       ],
-      "yaFichadaEn": "sierra-de-el-carche",
+      "yaFichadaEn": null,
       "normas": [],
       "rarityScore": 1,
       "rarityBasis": null,
@@ -7762,7 +7762,7 @@
       "evidence": [
         "observada_gbif"
       ],
-      "yaFichadaEn": "sierra-de-la-pila",
+      "yaFichadaEn": "sierra-de-el-carche",
       "normas": [],
       "rarityScore": 1,
       "rarityBasis": null,

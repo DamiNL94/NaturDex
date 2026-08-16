@@ -9,9 +9,11 @@
  * Era el último paso de la Capa 3 sin herramienta. `gbif-habitats.js` da los candidatos y
  * `build-species-n2.js` sabe escribirlos, pero entre los dos había un fichero
  * —`out/<slug>-seleccion-especies.json`— que alguien tenía que producir a mano cruzando GBIF con
- * EIDOS especie por especie. En Carrascoy fueron 625 candidatos para 245 aprobadas; hacerlo a mano
- * otra vez en el espacio siguiente no es lento, es **irreproducible**: nadie puede comprobar después
- * por qué entró una y no otra.
+ * EIDOS especie por especie. En Sierra de la Pila fueron 625 candidatos para 249 aprobadas; hacerlo
+ * a mano otra vez en el espacio siguiente no es lento, es **irreproducible**: nadie puede comprobar
+ * después por qué entró una y no otra. (Aquí ponía «en Carrascoy fueron 625 candidatos»: los 625 son
+ * de Sierra de la Pila. Carrascoy tiene 1.456, y la cifra equivocada llegó a repetirse en un commit
+ * y en un informe antes de que alguien la cotejara.)
  *
  * Los filtros encadenados, que son los que fijó la selección de Carrascoy y aquí se aplican
  * igual para todos los espacios:
@@ -37,9 +39,11 @@
  *
  *   · No existe para todos. El Anexo I del PRUG de Sierra Espuña NO contiene inventario de valores:
  *     lo encarga como acción pendiente. El PORN de Carrascoy tiene tres inventarios y ninguno es de
- *     especies. El de Sierra de la Pila no se pudo ni abrir. Con el anexo de puerta, esos espacios
- *     entrarían con cero especies y el de al lado con doscientas: la misma incomparabilidad que el
- *     filtro de alcance taxonómico se escribió para evitar.
+ *     especies. Con el anexo de puerta, esos espacios entrarían con cero especies y el de al lado
+ *     con doscientas: la misma incomparabilidad que el filtro de alcance taxonómico se escribió para
+ *     evitar. (De Sierra de la Pila se decía aquí que «no se pudo ni abrir»; era falso, y el
+ *     2026-08-16 se transcribieron los 244 taxones del §2.2 de su PRUG. El documento llevaba meses
+ *     leído: lo que faltaba era mirar el apartado que no era de Fase 3.)
  *   · Enumera lo protegido, no lo presente. Un catálogo hecho solo de anexos deja fuera la encina y
  *     deja dentro el endemismo del que hay tres rodales.
  *
@@ -118,6 +122,19 @@ const UMBRALES = (() => {
 const MIN_OCURRENCIAS = num('min-occ', UMBRALES.minOcurrencias ?? 2);
 const MIN_HABITATS = num('min-habitats', UMBRALES.minHabitats ?? 2);
 
+// Las exclusiones curadas del espacio (filtro 0, más abajo). Se cargan aquí para poder decir cuántas
+// hay antes de empezar: una lista que no se aplica es peor que no tenerla.
+const EXCLUSIONES = (() => {
+  const ruta = path.join(CATALOGO_DIR, 'data', 'exclusiones-especies.json');
+  const m = new Map();
+  if (!fs.existsSync(ruta)) return m;
+  for (const e of (readJson(ruta).espacios || {})[PARK] || []) {
+    if (!e.motivo) die(`exclusiones-especies.json: «${e.scientificName}» no tiene motivo, y una exclusión sin motivo no se distingue de un olvido.`);
+    m.set(e.scientificName, e);
+  }
+  return m;
+})();
+
 /*
  * Filtro 4 — ALCANCE TAXONÓMICO. El que estaba aplicado y sin escribir.
  *
@@ -177,6 +194,13 @@ const AVES_SIN_RESPALDO = flag('aves-sin-respaldo');
 
 // Caché de EIDOS: un catálogo son ~1.300 peticiones a un servicio público. Sin ella, repetir la
 // selección tras ajustar un umbral vuelve a castigar al IEPNB durante diez minutos.
+//
+// **Se escribe también con `--dry`**, y esto no es un descuido sino la corrección de uno. `--dry`
+// significa «no escribas el RESULTADO», no «no guardes lo que ya has preguntado»: la caché no es un
+// resultado, es la cortesía con la fuente. Y el caso para el que se escribió es exactamente éste,
+// porque después de un `--dry` viene siempre la pasada de verdad. En Carrascoy y El Valle, con 1.456
+// candidatos, la simulación se llevó veinticinco minutos de EIDOS y los tiró: la pasada buena tuvo
+// que volver a preguntarlo todo.
 const CACHE = fromRoot(arg('cache', path.join(OUT_DIR, `${PARK}-eidos-seleccion-cache.json`)));
 
 const RUTA_GBIF = fromRoot(arg('gbif', path.join(OUT_DIR, `${PARK}-gbif.json`)));
@@ -693,6 +717,9 @@ async function main() {
   }
   // De dónde sale el umbral se dice SIEMPRE, aunque sea el general: es la decisión que más cambia el
   // tamaño del catálogo y la que dos veces se ha perdido por no estar a la vista.
+  console.log(EXCLUSIONES.size
+    ? `Exclusiones curadas de este espacio: ${EXCLUSIONES.size} (data/exclusiones-especies.json) — ${[...EXCLUSIONES.keys()].join(', ')}`
+    : 'Exclusiones curadas de este espacio: ninguna');
   console.log(`Umbral de presencia: ${MIN_OCURRENCIAS} ocurrencia(s) en ${MIN_HABITATS} hábitat(s) · ` +
     (arg('min-occ') || arg('min-habitats')
       ? 'dado en la línea de órdenes (manda sobre el fichero de umbrales)'
@@ -708,7 +735,7 @@ async function main() {
     if (++vistos % 50 === 0) process.stderr.write(`  … ${vistos}/${brutos.length}\n`);
     resueltas.set(c.scientificName, await resuelve(c.scientificName, ccaa));
   }
-  if (!DRY) writeJson(CACHE, cache);
+  writeJson(CACHE, cache);
 
   /*
    * El PUENTE de nomenclatura entre las fuentes de respaldo y el catálogo.
@@ -864,6 +891,29 @@ async function main() {
     }
     if (r.error) ficha.errorEidos = r.error;
 
+    /*
+     * Filtro 0 — la CURACIÓN del espacio, que hasta ahora no sobrevivía a una regeneración.
+     *
+     * Los cuatro filtros de abajo son automáticos y se aplican igual en todas partes. Pero hay casos
+     * que solo se pueden juzgar mirando ESTE espacio y ESTOS registros, y esos se decidían a mano
+     * sobre el `park.json` y se contaban en el informe de cierre. Un informe no lo lee la
+     * herramienta: la regeneración siguiente vuelve a aprobar lo que alguien ya había descartado, y
+     * lo hace **sin decir nada**, porque para el código nunca pasó nada.
+     *
+     * Le ocurrió a *Caretta caretta* en Carrascoy y El Valle. Se excluyó el 2026-08-10 con el motivo
+     * escrito —sus ocurrencias dentro de los polígonos son telemetría por satélite proyectada tierra
+     * adentro, no presencia— y el barrido del 2026-08-16 la volvió a meter en una sierra de interior.
+     *
+     * Va PRIMERO a propósito: si el espacio ya ha decidido que un taxón no entra, no hace falta
+     * discutir su autoctonía ni su número de registros. Y lo excluido sale en `excluidas_detalle`
+     * con su motivo, igual que lo que descartan los filtros automáticos: esto retira especies, no
+     * las esconde.
+     */
+    const curada = EXCLUSIONES.get(c.scientificName) || (binAcept && EXCLUSIONES.get(r.nombreAceptadoEidos)) || null;
+    if (curada) {
+      excluidas.push({ ...ficha, motivo: `excluida por decisión del espacio (${curada.decidido || 'sin fecha'}): ${curada.motivo}` });
+      continue;
+    }
     // Filtro 2 — autoctonía. Dos fuentes, y la segunda existe porque la primera tiene un punto ciego:
     // la Lista Patrón no marca como «no nativa» lo que ni siquiera es fauna silvestre. *Ovis aries*
     // —que en Monte Arabí es el muflón de Córcega introducido, y en cualquier sierra puede ser
@@ -916,7 +966,7 @@ async function main() {
     aprobadas.push(ficha);
   }
 
-  if (!DRY) writeJson(CACHE, cache);
+  writeJson(CACHE, cache);
 
   const aves = aprobadas.filter(e => e.class === 'Aves').length;
   const reutilizables = aprobadas.filter(e => e.yaFichadaEn).length;

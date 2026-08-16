@@ -1754,7 +1754,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 132,
@@ -2209,7 +2210,8 @@
         "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 16,
@@ -2255,7 +2257,9 @@
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
         "ambito": "autonómico",
         "origen": "murciaStatus del park.json"
-      }
+      },
+      "rarityBasis": null,
+      "descriptionSource": null
     },
     {
       "id": 142,
@@ -2306,7 +2310,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 138,
@@ -2358,7 +2363,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 135,
@@ -2457,7 +2463,9 @@
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
         "ambito": "autonómico",
         "origen": "murciaStatus del park.json"
-      }
+      },
+      "rarityBasis": null,
+      "descriptionSource": null
     },
     {
       "id": 7,
@@ -2658,7 +2666,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 99,
@@ -2750,7 +2759,9 @@
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
         "ambito": "autonómico",
         "origen": "murciaStatus del park.json"
-      }
+      },
+      "rarityBasis": null,
+      "descriptionSource": null
     },
     {
       "id": 204,
@@ -2799,7 +2810,8 @@
         "categoria": "LESRPE (RD 139/2011)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 143,
@@ -2850,7 +2862,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 206,
@@ -3806,7 +3819,8 @@
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 203,
@@ -4204,7 +4218,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 156,
@@ -4355,7 +4370,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 141,
@@ -4456,7 +4472,8 @@
         "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 69,
@@ -4609,7 +4626,8 @@
         "categoria": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 210,
@@ -5019,7 +5037,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 111,
@@ -5173,7 +5192,8 @@
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 5,
@@ -5485,7 +5505,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 116,
@@ -5587,7 +5608,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 114,
@@ -5741,7 +5763,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 164,
@@ -5793,7 +5816,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 169,
@@ -5844,7 +5868,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 124,
@@ -5895,7 +5920,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 65,
@@ -5941,7 +5967,9 @@
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
         "ambito": "autonómico",
         "origen": "murciaStatus del park.json"
-      }
+      },
+      "rarityBasis": null,
+      "descriptionSource": null
     },
     {
       "id": 129,
@@ -6045,7 +6073,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 127,
@@ -6559,7 +6588,8 @@
         "categoria": "LESRPE",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 119,
@@ -6658,7 +6688,9 @@
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
         "ambito": "autonómico",
         "origen": "murciaStatus del park.json"
-      }
+      },
+      "rarityBasis": null,
+      "descriptionSource": null
     },
     {
       "id": 106,
@@ -7408,7 +7440,8 @@
         "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 216,
@@ -7507,7 +7540,8 @@
         "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 117,
@@ -7712,7 +7746,8 @@
         "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 105,
@@ -7914,7 +7949,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 223,
@@ -8432,7 +8468,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 233,
@@ -8641,7 +8678,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 237,
@@ -8954,7 +8992,8 @@
         "categoria": "LESRPE (RD 139/2011)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 248,
@@ -9059,7 +9098,8 @@
         "categoria": "LESRPE (RD 139/2011)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 250,
@@ -9112,7 +9152,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     }
   ]
 }

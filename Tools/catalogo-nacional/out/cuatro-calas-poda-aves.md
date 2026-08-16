@@ -2,7 +2,7 @@
 
 Generado el 2026-08-16 por `Tools/catalogo-nacional/poda-aves-sin-respaldo.js`.
 
-El espacio tenía **27 aves** de 102 fichas. Conservan su plaza **18**; se retiran **9**.
+El espacio tenía **18 aves** de 93 fichas. Conservan su plaza **18**; se retiran **0**.
 
 Una especie entra en el catálogo de un espacio por CONSTANCIA: que GBIF la haya registrado dentro de sus polígonos de hábitat. Para un ave esa prueba no mide lo que dice medir —vuela, y un registro en vuelo cae dentro de cualquier recinto—, así que su puerta es el **respaldo de sitio**: que una fuente oficial afirme por escrito que pertenece a ESTE sitio. Son dos, y cualquiera de las dos vale: el Formulario Normalizado de Datos del sitio Red Natura 2000 y el anexo normativo del plan de gestión del espacio.
 
@@ -27,19 +27,8 @@ La fuente y el catálogo escriben la misma especie con nombres de épocas distin
 
 ## Aves retiradas
 
-Ninguna fuente oficial las sitúa en este espacio. **No se pierden**: están en este informe con su recuento de GBIF, y vuelven al catálogo en cuanto una fuente de sitio las nombre — el anexo del plan de gestión del espacio es la vía, no bajar la exigencia.
+Ninguna: todas las aves del espacio tienen respaldo de sitio.
 
-| Especie | Nombre común | Occ. GBIF |
-|---|---|---:|
-| *Oenanthe leucura* | Collalba negra | 306 |
-| *Egretta garzetta* | Garceta común | 70 |
-| *Alcedo atthis* | Martín pescador | 21 |
-| *Falco peregrinus* | Halcón peregrino | 18 |
-| *Streptopelia turtur* | Tórtola europea | 6 |
-| *Burhinus oedicnemus* | Alcaraván | 3 |
-| *Caprimulgus ruficollis* | Chotacabras cuellirrojo | 3 |
-| *Himantopus himantopus* | Cigüeñuela | 3 |
-| *Coracias garrulus* | Carraca europea | 0 |
 
 ## Declaradas por el sitio y sin ficha
 

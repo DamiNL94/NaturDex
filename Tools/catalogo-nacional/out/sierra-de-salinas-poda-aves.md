@@ -2,7 +2,7 @@
 
 Generado el 2026-08-16 por `Tools/catalogo-nacional/poda-aves-sin-respaldo.js`.
 
-El espacio tenía **79 aves** de 118 fichas. Conservan su plaza **66**; se retiran **13**.
+El espacio tenía **66 aves** de 105 fichas. Conservan su plaza **66**; se retiran **0**.
 
 Una especie entra en el catálogo de un espacio por CONSTANCIA: que GBIF la haya registrado dentro de sus polígonos de hábitat. Para un ave esa prueba no mide lo que dice medir —vuela, y un registro en vuelo cae dentro de cualquier recinto—, así que su puerta es el **respaldo de sitio**: que una fuente oficial afirme por escrito que pertenece a ESTE sitio. Son dos, y cualquiera de las dos vale: el Formulario Normalizado de Datos del sitio Red Natura 2000 y el anexo normativo del plan de gestión del espacio.
 
@@ -56,23 +56,8 @@ El sitio las declara, el catálogo no las ficha con ese nombre, y hay un ave del
 
 ## Aves retiradas
 
-Ninguna fuente oficial las sitúa en este espacio. **No se pierden**: están en este informe con su recuento de GBIF, y vuelven al catálogo en cuanto una fuente de sitio las nombre — el anexo del plan de gestión del espacio es la vía, no bajar la exigencia.
+Ninguna: todas las aves del espacio tienen respaldo de sitio.
 
-| Especie | Nombre común | Occ. GBIF |
-|---|---|---:|
-| *Serinus serinus* | Serín verdecillo | 19 |
-| *Carduelis carduelis* | Jilguero europeo | 13 |
-| *Streptopelia decaocto* | Tórtola turca | 13 |
-| *Turdus philomelos* | Zorzal común | 8 |
-| *Chloris chloris* | Verderón común | 7 |
-| *Phylloscopus collybita* | Mosquitero común | 7 |
-| *Passer domesticus* | Gorrión común | 4 |
-| *Apus pallidus* | Vencejo pálido | 3 |
-| *Linaria cannabina* | Pardillo común | 3 |
-| *Coccothraustes coccothraustes* | Picogordo | 1 |
-| *Ficedula hypoleuca* | Papamoscas cerrojillo | 1 |
-| *Hippolais polyglotta* | Zarcero común | 1 |
-| *Phoenicurus phoenicurus* | Colirrojo real | 1 |
 
 ## Declaradas por el sitio y sin ficha
 
@@ -140,7 +125,7 @@ El hueco por el otro lado, y el más útil de los dos: el formulario oficial afi
 | *Emberiza cirlus* | Escribano soteño | anexo normativo |
 | *Lanius senator* | Alcaudón común | anexo normativo |
 | *Spinus spinus* | Lúgano | anexo normativo |
-| *Sylvia undata* | Sylvia undata | formulario ES0000457 · anexo normativo |
+| *Curruca undata* | Curruca rabilarga | formulario ES0000457 · anexo normativo |
 | *Upupa epops* | Abubilla | anexo normativo |
 | *Anthus campestris* | Bisbita campestre | formulario ES0000457 · anexo normativo |
 | *Anthus pratensis* | Bisbita común | anexo normativo |

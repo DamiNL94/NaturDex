@@ -223,6 +223,10 @@ function needsPhoto(sp) {
 
   const filled = [], missing = [];
   const sql = [
+    '-- El juego de caracteres se fija SIEMPRE: el cliente `mysql` lo toma del entorno y en un',
+    '-- contenedor sin locale eso es latin1, que convierte cada tilde en mojibake sin dar error.',
+    'SET NAMES utf8mb4;',
+    '',
     '-- Fotos de especie (EIDOS multimedia + GBIF). Generado por Tools/catalogo-nacional/enrich-images.js',
     `-- Parque: ${SLUG} · modo: ${MODE} · NC ${ALLOW_NC ? 'permitido' : 'excluido'} · ${new Date().toISOString()}`,
     '-- Correr DESPUÉS del INSERT INTO species (igual que el bloque de fotos del seed).', ''

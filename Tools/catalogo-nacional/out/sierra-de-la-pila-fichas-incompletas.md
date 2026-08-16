@@ -12,7 +12,7 @@ Las dos columnas de la derecha son el material con el que curar **sin salirse de
 EIDOS» lista los nombres castellanos que la fuente conoce —el marcado como preferente no
 siempre es por el que se conoce a la especie: EIDOS prefiere «Aguilón» a «Alimoche común».
 
-Total: **4**.
+Total: **5**.
 
 | Especie | Campos vacíos | Otros nombres en EIDOS | Descripción en EIDOS |
 |---|---|---|---|
@@ -20,3 +20,4 @@ Total: **4**.
 | *Thapsia scabra* | EIDOS: taxón no encontrado | — | — |
 | *Pistacia saportae* | EIDOS: taxón no encontrado | — | — |
 | *Caroxylon genistoides* | EIDOS: taxón no encontrado | — | — |
+| *Linaria spartea* | group, habitat, description, tips | Baleo montesino (preferente) | — |

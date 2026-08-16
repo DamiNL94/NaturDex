@@ -2,7 +2,7 @@
 
 Generado el 2026-08-16 por `Tools/catalogo-nacional/poda-aves-sin-respaldo.js`.
 
-El espacio tenía **94 aves** de 336 fichas. Conservan su plaza **61**; se retiran **33**.
+El espacio tenía **61 aves** de 303 fichas. Conservan su plaza **61**; se retiran **0**.
 
 Una especie entra en el catálogo de un espacio por CONSTANCIA: que GBIF la haya registrado dentro de sus polígonos de hábitat. Para un ave esa prueba no mide lo que dice medir —vuela, y un registro en vuelo cae dentro de cualquier recinto—, así que su puerta es el **respaldo de sitio**: que una fuente oficial afirme por escrito que pertenece a ESTE sitio. Son dos, y cualquiera de las dos vale: el Formulario Normalizado de Datos del sitio Red Natura 2000 y el anexo normativo del plan de gestión del espacio.
 
@@ -64,43 +64,8 @@ La fuente y el catálogo escriben la misma especie con nombres de épocas distin
 
 ## Aves retiradas
 
-Ninguna fuente oficial las sitúa en este espacio. **No se pierden**: están en este informe con su recuento de GBIF, y vuelven al catálogo en cuanto una fuente de sitio las nombre — el anexo del plan de gestión del espacio es la vía, no bajar la exigencia.
+Ninguna: todas las aves del espacio tienen respaldo de sitio.
 
-| Especie | Nombre común | Occ. GBIF |
-|---|---|---:|
-| *Serinus serinus* | Serín verdecillo | 15 |
-| *Columba palumbus* | Paloma torcaz | 14 |
-| *Turdus merula* | Turdus merula | 14 |
-| *Alectoris rufa* | Perdiz roja | 11 |
-| *Carduelis carduelis* | Jilguero europeo | 9 |
-| *Buteo buteo* | Busardo ratonero | 6 |
-| *Columba livia* | Paloma bravía | 6 |
-| *Chloris chloris* | Verderón común | 5 |
-| *Linaria cannabina* | Pardillo común | 5 |
-| *Streptopelia turtur* | Tórtola europea | 4 |
-| *Corvus corone* | Corneja negra | 3 |
-| *Curruca iberiae* | Curruca iberiae | 3 |
-| *Emberiza calandra* | Triguero | 3 |
-| *Erythropygia galactotes* | Alzacola | 3 |
-| *Gyps fulvus* | Buitre común | 3 |
-| *Passer domesticus* | Gorrión común | 3 |
-| *Pica pica* | Urraca común | 3 |
-| *Saxicola rubicola* | Tarabilla europea | 3 |
-| *Turdus iliacus* | Zorzal alirrojo | 3 |
-| *Clamator glandarius* | Críalo | 2 |
-| *Coturnix coturnix* | Codorniz común | 2 |
-| *Falco subbuteo* | Alcotán | 2 |
-| *Lanius excubitor* | Alcaudón norteño | 2 |
-| *Melanocorypha calandra* | Calandria común | 2 |
-| *Streptopelia decaocto* | Tórtola turca | 2 |
-| *Sturnus unicolor* | Estornino negro | 2 |
-| *Turdus philomelos* | Zorzal común | 2 |
-| *Apus pallidus* | Vencejo pálido | 1 |
-| *Aquila fasciata* | Águila perdicera | 1 |
-| *Ciconia nigra* | Cigüeña negra | 1 |
-| *Circus pygargus* | Aguilucho cenizo | 1 |
-| *Columba oenas* | Paloma zurita | 1 |
-| *Saxicola rubetra* | Tarabilla norteña | 1 |
 
 ## Declaradas por el sitio y sin ficha
 
@@ -118,7 +83,7 @@ Ninguna: el catálogo ficha todas las aves que el sitio declara.
 | *Lophophanes cristatus* | Herrerillo capuchino | anexo normativo |
 | *Fringilla coelebs* | Pimientera | anexo normativo |
 | *Falco peregrinus* | Halcón peregrino | anexo normativo |
-| *Sylvia undata* | Sylvia undata | anexo normativo |
+| *Curruca undata* | Curruca rabilarga | anexo normativo |
 | *Aegithalos caudatus* | Mito | anexo normativo |
 | *Phoenicurus ochruros* | Colirrojo tizón | anexo normativo |
 | *Garrulus glandarius* | Arrendajo euroasiático | anexo normativo |

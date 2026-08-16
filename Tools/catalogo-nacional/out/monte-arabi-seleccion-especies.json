@@ -983,7 +983,7 @@
       "anexoNormativo": {
         "citadaComo": "Carduelis chloris",
         "categoria": "Migradora de llegada regular (Directiva Aves)",
-        "nota": "La norma la cita como «Carduelis chloris»; el backbone de GBIF lo trata como sinónimo de Chloris chloris (consultado 2026-08-15).",
+        "nota": "El backbone de GBIF lo trata como sinónimo de Chloris chloris (consultado 2026-08-15).",
         "fuente": {
           "norma": "Decreto n.º 28/2025, de 10 de abril, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Altiplano de la Región de Murcia. El volumen II del plan trae la información específica de cada espacio; su §3.2 es el del Monumento Natural «Monte Arabí» (EN0000020), declarado por el Decreto n.º 13/2016, de 2 de marzo (BORM n.º 53, de 4 de marzo de 2016).",
           "boletin": "BORM n.º 103, de 6 de mayo de 2025, anuncio 2033",
@@ -1609,7 +1609,7 @@
         "observada_gbif",
         "anexo_normativo"
       ],
-      "yaFichadaEn": "sierra-de-la-pila",
+      "yaFichadaEn": "sierra-de-el-carche",
       "normas": [],
       "rarityScore": 1,
       "rarityBasis": null,
@@ -4041,7 +4041,7 @@
       "evidence": [
         "observada_gbif"
       ],
-      "yaFichadaEn": "sierra-de-la-pila",
+      "yaFichadaEn": "sierra-de-el-carche",
       "normas": [],
       "rarityScore": 1,
       "rarityBasis": null,

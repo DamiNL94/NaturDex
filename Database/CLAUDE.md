@@ -22,7 +22,9 @@ silencio.
 | `invasoras-imagenes.sql` | 8 K | `Tools/catalogo-nacional/invasoras-images.js` |
 | `poi-imagenes.sql` | 8 K | `npm run images:pois` (`poi-images.js`). **Con `--park <slug>` reescribe el fichero SOLO con las sentencias de ese espacio**: las de los demás, ya aplicadas, hay que conservarlas |
 | `n3-pois-<slug>.sql` | — | `npm run pois:sql -- --park <slug>` (`build-poi-sql.js`) |
-| `<slug>-n2.sql` | — | `npm run park:sql -- --park <slug>` (`build-park-sql.js`). **Se aplica ANTES que el de POIs**: trae la fila de `parks`, y sin ella todo lo demás carga cero filas en silencio. Los de Cuatro Calas y Sierra Espuña son anteriores al generador y siguen en «cargas puntuales» |
+| `<slug>-n2.sql` | — | `npm run park:sql -- --park <slug>` (`build-park-sql.js`). **Se aplica ANTES que el de POIs**: trae la fila de `parks`, y sin ella todo lo demás carga cero filas en silencio. **Solo hace UPSERT**, así que no retira nada: tras un renombrado deja la ficha vieja en la base con su `id` — ver `poda-renombrados-*.sql` |
+| `poda-aves-<slug>.sql` | — | `npm run aves:poda -- --park <slug> --sql <ruta>`. **Borrados**, que el UPSERT de `park:sql` no puede generar. Se aplican DESPUÉS del `-n2.sql` del espacio |
+| `poda-renombrados-<slug>.sql` | — | Escrito a mano, una vez, con la lista revisada delante. Retira las fichas que un renombrado dejó huérfanas en la base y el UPSERT no puede tocar |
 | `seed.sql` | 692 K | Volcado de datos de arranque |
 | `snapshot.sql` | 692 K | Volcado completo de la BD viva |
 
@@ -43,6 +45,16 @@ sesión, no un script reejecutable en cualquier estado.
 
 ## Reglas
 
+0. **Todo `.sql` de aquí abre con `SET NAMES utf8mb4`, y no es decorativo.** El cliente `mysql` toma
+   su juego de caracteres del entorno, y en un contenedor sin locale eso es **latin1**: con el cliente
+   en latin1 y la columna en utf8mb4, «Jabalí» entra en la base como «JabalÃ­». **No falla nada** — el
+   INSERT va bien, los contadores cuadran y `validate` no mira dentro de la BD.
+   > Estaba escrito solo para `migrations.sql`, que es donde se descubrió el 2026-08-15, y **no se
+   > miró quién más tenía el mismo agujero**: eran **catorce ficheros**, entre ellos
+   > `species-universal.sql`, que actualiza el nombre común de las 1.501 fichas del catálogo. Se
+   > destapó el 2026-08-16 al cargarlo todo en un MySQL de verdad y comparar campo a campo — 143
+   > nombres comunes corruptos de los primeros 812 comparados. La línea la pone ahora
+   > `cabeceraSql()` de `Tools/lib/sql.js`, para que no dependa de que cada generador se acuerde.
 1. **La API tiene prioridad sobre el `park.json` empaquetado.** Con backend desplegado, tocar solo
    los ficheros de `Frontend/` no cambia lo que ve el usuario: hay que generar **y aplicar** el SQL.
    Es el punto 3 de [`Docs/runbook/ORDEN-DE-OPERACIONES.md`](../Docs/runbook/ORDEN-DE-OPERACIONES.md).

@@ -1,11 +1,4395 @@
 {
   "park": "sierra-de-la-pila",
   "generatedFrom": "GBIF + local point-in-polygon",
+  "especies": [
+    {
+      "speciesKey": 5231190,
+      "name": "Passer domesticus",
+      "class": "Aves",
+      "occurrences": 330,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 9687165,
+      "name": "Motacilla alba",
+      "class": "Aves",
+      "occurrences": 256,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 2492956,
+      "name": "Sylvia atricapilla",
+      "class": "Aves",
+      "occurrences": 153,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 7705930,
+      "name": "Sus scrofa",
+      "class": "Mammalia",
+      "occurrences": 146,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 5219243,
+      "name": "Vulpes vulpes",
+      "class": "Mammalia",
+      "occurrences": 114,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 5739315,
+      "name": "Phoenicurus ochruros",
+      "class": "Aves",
+      "occurrences": 107,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 5285604,
+      "name": "Pinus halepensis",
+      "class": "Pinopsida",
+      "occurrences": 95,
+      "habitats": 9
+    },
+    {
+      "speciesKey": 2494200,
+      "name": "Serinus serinus",
+      "class": "Aves",
+      "occurrences": 78,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2493091,
+      "name": "Phylloscopus collybita",
+      "class": "Aves",
+      "occurrences": 72,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 10902460,
+      "name": "Salvia rosmarinus",
+      "class": "Magnoliopsida",
+      "occurrences": 60,
+      "habitats": 9
+    },
+    {
+      "speciesKey": 7331435,
+      "name": "Cistus albidus",
+      "class": "Magnoliopsida",
+      "occurrences": 49,
+      "habitats": 9
+    },
+    {
+      "speciesKey": 5845582,
+      "name": "Chloris chloris",
+      "class": "Aves",
+      "occurrences": 49,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 2492462,
+      "name": "Erithacus rubecula",
+      "class": "Aves",
+      "occurrences": 47,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2492962,
+      "name": "Sylvia melanocephala",
+      "class": "Aves",
+      "occurrences": 46,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 9515886,
+      "name": "Hirundo rustica",
+      "class": "Aves",
+      "occurrences": 45,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 2490719,
+      "name": "Turdus merula",
+      "class": "Aves",
+      "occurrences": 44,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2879175,
+      "name": "Quercus coccifera",
+      "class": "Magnoliopsida",
+      "occurrences": 37,
+      "habitats": 9
+    },
+    {
+      "speciesKey": 2494422,
+      "name": "Fringilla coelebs",
+      "class": "Aves",
+      "occurrences": 27,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 5352466,
+      "name": "Anthyllis cytisoides",
+      "class": "Magnoliopsida",
+      "occurrences": 26,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 9705453,
+      "name": "Parus major",
+      "class": "Aves",
+      "occurrences": 23,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 7901064,
+      "name": "Turdus philomelos",
+      "class": "Aves",
+      "occurrences": 23,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2495000,
+      "name": "Aegithalos caudatus",
+      "class": "Aves",
+      "occurrences": 22,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 3190583,
+      "name": "Pistacia lentiscus",
+      "class": "Magnoliopsida",
+      "occurrences": 22,
+      "habitats": 8
+    },
+    {
+      "speciesKey": 2684451,
+      "name": "Juniperus oxycedrus",
+      "class": "Pinopsida",
+      "occurrences": 22,
+      "habitats": 8
+    },
+    {
+      "speciesKey": 7331346,
+      "name": "Cistus clusii",
+      "class": "Magnoliopsida",
+      "occurrences": 21,
+      "habitats": 8
+    },
+    {
+      "speciesKey": 5231236,
+      "name": "Oenanthe leucura",
+      "class": "Aves",
+      "occurrences": 21,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 1920258,
+      "name": "Pontia daplidice",
+      "class": "Insecta",
+      "occurrences": 17,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2487883,
+      "name": "Lophophanes cristatus",
+      "class": "Aves",
+      "occurrences": 17,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2497266,
+      "name": "Athene noctua",
+      "class": "Aves",
+      "occurrences": 15,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 2492576,
+      "name": "Muscicapa striata",
+      "class": "Aves",
+      "occurrences": 15,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2490774,
+      "name": "Turdus viscivorus",
+      "class": "Aves",
+      "occurrences": 14,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2494686,
+      "name": "Carduelis carduelis",
+      "class": "Aves",
+      "occurrences": 14,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2436940,
+      "name": "Oryctolagus cuniculus",
+      "class": "Mammalia",
+      "occurrences": 14,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2493012,
+      "name": "Cettia cetti",
+      "class": "Aves",
+      "occurrences": 14,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2874027,
+      "name": "Cistus salviifolius",
+      "class": "Magnoliopsida",
+      "occurrences": 13,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 1920496,
+      "name": "Pieris rapae",
+      "class": "Insecta",
+      "occurrences": 12,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2487871,
+      "name": "Periparus ater",
+      "class": "Aves",
+      "occurrences": 12,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 8404037,
+      "name": "Pyronia bathseba",
+      "class": "Insecta",
+      "occurrences": 12,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 4690079,
+      "name": "Iphiclides feisthamelii",
+      "class": "Insecta",
+      "occurrences": 12,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 2956457,
+      "name": "Colutea brevialata",
+      "class": "Magnoliopsida",
+      "occurrences": 12,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 8396242,
+      "name": "Coenonympha dorus",
+      "class": "Insecta",
+      "occurrences": 11,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 1845881,
+      "name": "Symmoca dodecatella",
+      "class": "Insecta",
+      "occurrences": 11,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1916352,
+      "name": "Melanargia ines",
+      "class": "Insecta",
+      "occurrences": 11,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 4535632,
+      "name": "Lasiommata megera",
+      "class": "Insecta",
+      "occurrences": 11,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2684640,
+      "name": "Juniperus phoenicea",
+      "class": "Pinopsida",
+      "occurrences": 11,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 4126879,
+      "name": "Festuca capillifolia",
+      "class": "Liliopsida",
+      "occurrences": 11,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 7331381,
+      "name": "Helianthemum cinereum",
+      "class": "Magnoliopsida",
+      "occurrences": 10,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 5134301,
+      "name": "Satyrus actaea",
+      "class": "Insecta",
+      "occurrences": 10,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 9629160,
+      "name": "Loxia curvirostra",
+      "class": "Aves",
+      "occurrences": 10,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 9616058,
+      "name": "Falco tinnunculus",
+      "class": "Aves",
+      "occurrences": 10,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 2977293,
+      "name": "Ononis fruticosa",
+      "class": "Magnoliopsida",
+      "occurrences": 10,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1924082,
+      "name": "Glaucopsyche melanops",
+      "class": "Insecta",
+      "occurrences": 10,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 7309064,
+      "name": "Nepeta nepetella",
+      "class": "Magnoliopsida",
+      "occurrences": 10,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 1931788,
+      "name": "Fixsenia esculi",
+      "class": "Insecta",
+      "occurrences": 10,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 2492526,
+      "name": "Saxicola torquatus",
+      "class": "Aves",
+      "occurrences": 10,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 8225376,
+      "name": "Papilio machaon",
+      "class": "Insecta",
+      "occurrences": 10,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 6363863,
+      "name": "Arenaria montana",
+      "class": "Magnoliopsida",
+      "occurrences": 10,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1918632,
+      "name": "Hipparchia fidia",
+      "class": "Insecta",
+      "occurrences": 9,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 2474051,
+      "name": "Alectoris rufa",
+      "class": "Aves",
+      "occurrences": 9,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2492949,
+      "name": "Sylvia undata",
+      "class": "Aves",
+      "occurrences": 9,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 2705308,
+      "name": "Dactylis glomerata",
+      "class": "Liliopsida",
+      "occurrences": 9,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5676053,
+      "name": "Brachypodium retusum",
+      "class": "Liliopsida",
+      "occurrences": 9,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7331286,
+      "name": "Halimium atriplicifolium",
+      "class": "Magnoliopsida",
+      "occurrences": 8,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 4201784,
+      "name": "Petrosedum sediforme",
+      "class": "Magnoliopsida",
+      "occurrences": 8,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2881550,
+      "name": "Quercus rotundifolia",
+      "class": "Magnoliopsida",
+      "occurrences": 8,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 1856663,
+      "name": "Nemapogon nevadella",
+      "class": "Insecta",
+      "occurrences": 8,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1737776,
+      "name": "Cydia fagiglandana",
+      "class": "Insecta",
+      "occurrences": 8,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 8176911,
+      "name": "Hipparchia semele",
+      "class": "Insecta",
+      "occurrences": 8,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 1737849,
+      "name": "Cydia vallesiaca",
+      "class": "Insecta",
+      "occurrences": 8,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 4931269,
+      "name": "Asphodelus cerasifer",
+      "class": "Liliopsida",
+      "occurrences": 8,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2723055,
+      "name": "Carex halleriana",
+      "class": "Liliopsida",
+      "occurrences": 8,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 3131494,
+      "name": "Helichrysum stoechas",
+      "class": "Magnoliopsida",
+      "occurrences": 8,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 7626513,
+      "name": "Emberiza cirlus",
+      "class": "Aves",
+      "occurrences": 8,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 6371380,
+      "name": "Rhamnus lycioides",
+      "class": "Magnoliopsida",
+      "occurrences": 8,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1933204,
+      "name": "Aricia cramera",
+      "class": "Insecta",
+      "occurrences": 7,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2495455,
+      "name": "Columba palumbus",
+      "class": "Aves",
+      "occurrences": 7,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 9990095,
+      "name": "Curruca melanocephala",
+      "class": "Aves",
+      "occurrences": 7,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2488949,
+      "name": "Oriolus oriolus",
+      "class": "Aves",
+      "occurrences": 7,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2433875,
+      "name": "Meles meles",
+      "class": "Mammalia",
+      "occurrences": 7,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 9282206,
+      "name": "Strix aluco",
+      "class": "Aves",
+      "occurrences": 7,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 2482552,
+      "name": "Pyrrhocorax pyrrhocorax",
+      "class": "Aves",
+      "occurrences": 7,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2480637,
+      "name": "Accipiter nisus",
+      "class": "Aves",
+      "occurrences": 7,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 5341442,
+      "name": "Thymus vulgaris",
+      "class": "Magnoliopsida",
+      "occurrences": 7,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 1736364,
+      "name": "Lozotaenia cupidinana",
+      "class": "Insecta",
+      "occurrences": 7,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5137612,
+      "name": "Colias croceus",
+      "class": "Insecta",
+      "occurrences": 7,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 8277078,
+      "name": "Carcharodus alceae",
+      "class": "Insecta",
+      "occurrences": 7,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2489104,
+      "name": "Sturnus unicolor",
+      "class": "Aves",
+      "occurrences": 7,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 2882803,
+      "name": "Arbutus unedo",
+      "class": "Magnoliopsida",
+      "occurrences": 6,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 7806848,
+      "name": "Certhia brachydactyla",
+      "class": "Aves",
+      "occurrences": 6,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2491498,
+      "name": "Emberiza cia",
+      "class": "Aves",
+      "occurrences": 6,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 5228676,
+      "name": "Apus apus",
+      "class": "Aves",
+      "occurrences": 6,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 5229493,
+      "name": "Garrulus glandarius",
+      "class": "Aves",
+      "occurrences": 6,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 7325947,
+      "name": "Phillyrea angustifolia",
+      "class": "Magnoliopsida",
+      "occurrences": 6,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2481047,
+      "name": "Falco peregrinus",
+      "class": "Aves",
+      "occurrences": 6,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2480506,
+      "name": "Aquila chrysaetos",
+      "class": "Aves",
+      "occurrences": 6,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5348647,
+      "name": "Coronilla minima",
+      "class": "Magnoliopsida",
+      "occurrences": 6,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1920506,
+      "name": "Pieris brassicae",
+      "class": "Insecta",
+      "occurrences": 6,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 4531279,
+      "name": "Pempelia albariella",
+      "class": "Insecta",
+      "occurrences": 6,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1932976,
+      "name": "Leptotes pirithous",
+      "class": "Insecta",
+      "occurrences": 6,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 1340503,
+      "name": "Bombus terrestris",
+      "class": "Insecta",
+      "occurrences": 6,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1919698,
+      "name": "Anthocharis euphenoides",
+      "class": "Insecta",
+      "occurrences": 6,
+      "habitats": 8
+    },
+    {
+      "speciesKey": 2482492,
+      "name": "Corvus corax",
+      "class": "Aves",
+      "occurrences": 6,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 4408796,
+      "name": "Ptyonoprogne rupestris",
+      "class": "Aves",
+      "occurrences": 6,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 8966338,
+      "name": "Thapsia scabra",
+      "class": "Magnoliopsida",
+      "occurrences": 6,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1916554,
+      "name": "Melanargia occitanica",
+      "class": "Insecta",
+      "occurrences": 6,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 5606217,
+      "name": "Thymus moroderi",
+      "class": "Magnoliopsida",
+      "occurrences": 6,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 3661880,
+      "name": "Pistacia saportae",
+      "class": "Magnoliopsida",
+      "occurrences": 6,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 6559940,
+      "name": "Helictochloa bromoides",
+      "class": "Liliopsida",
+      "occurrences": 6,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 4153003,
+      "name": "Helictotrichon filifolium",
+      "class": "Liliopsida",
+      "occurrences": 6,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4135939,
+      "name": "Stipa offneri",
+      "class": "Liliopsida",
+      "occurrences": 6,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4049728,
+      "name": "Polygala rupestris",
+      "class": "Magnoliopsida",
+      "occurrences": 5,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 3142203,
+      "name": "Leuzea conifera",
+      "class": "Magnoliopsida",
+      "occurrences": 5,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 8232802,
+      "name": "Fumana ericoides",
+      "class": "Magnoliopsida",
+      "occurrences": 5,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2422507,
+      "name": "Epidalea calamita",
+      "class": "Amphibia",
+      "occurrences": 5,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1685944,
+      "name": "Thyreonotus corsicus",
+      "class": "Insecta",
+      "occurrences": 5,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 9337804,
+      "name": "Clavigesta gerti",
+      "class": "Insecta",
+      "occurrences": 5,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 8186212,
+      "name": "Cydia amplana",
+      "class": "Insecta",
+      "occurrences": 5,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1739379,
+      "name": "Rhyacionia maritimana",
+      "class": "Insecta",
+      "occurrences": 5,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5632022,
+      "name": "Lotus dorycnium",
+      "class": "Magnoliopsida",
+      "occurrences": 5,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2888585,
+      "name": "Viburnum tinus",
+      "class": "Magnoliopsida",
+      "occurrences": 5,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2490266,
+      "name": "Anthus pratensis",
+      "class": "Aves",
+      "occurrences": 5,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 7981372,
+      "name": "Euchloe crameri",
+      "class": "Insecta",
+      "occurrences": 5,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2495696,
+      "name": "Streptopelia decaocto",
+      "class": "Aves",
+      "occurrences": 5,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 1924713,
+      "name": "Lampides boeticus",
+      "class": "Insecta",
+      "occurrences": 5,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 9330514,
+      "name": "Galerida theklae",
+      "class": "Aves",
+      "occurrences": 5,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2490669,
+      "name": "Galerida cristata",
+      "class": "Aves",
+      "occurrences": 5,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 7308501,
+      "name": "Teucrium gnaphalodes",
+      "class": "Magnoliopsida",
+      "occurrences": 5,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 7250436,
+      "name": "Placynthium nigrum",
+      "class": "Lecanoromycetes",
+      "occurrences": 5,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 7457479,
+      "name": "Teucrium franchetianum",
+      "class": "Magnoliopsida",
+      "occurrences": 5,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 8106135,
+      "name": "Linaria cavanillesii",
+      "class": "Magnoliopsida",
+      "occurrences": 5,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 1070779,
+      "name": "Jekelius punctatolineatus",
+      "class": "Insecta",
+      "occurrences": 5,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2671369,
+      "name": "Tortella tortuosa",
+      "class": "Bryopsida",
+      "occurrences": 5,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 7331265,
+      "name": "Helianthemum origanifolium",
+      "class": "Magnoliopsida",
+      "occurrences": 5,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7703240,
+      "name": "Globularia alypum",
+      "class": "Magnoliopsida",
+      "occurrences": 4,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1313121,
+      "name": "Camponotus sylvaticus",
+      "class": "Insecta",
+      "occurrences": 4,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 3150037,
+      "name": "Phagnalon rupestre",
+      "class": "Magnoliopsida",
+      "occurrences": 4,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2607590,
+      "name": "Cladonia foliacea",
+      "class": "Lecanoromycetes",
+      "occurrences": 4,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2860661,
+      "name": "Lapiedra martinezii",
+      "class": "Liliopsida",
+      "occurrences": 4,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2182959,
+      "name": "Hyalomma lusitanicum",
+      "class": "Arachnida",
+      "occurrences": 4,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 3894066,
+      "name": "Teucrium pseudochamaepitys",
+      "class": "Magnoliopsida",
+      "occurrences": 4,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4524541,
+      "name": "Eurranthis plummistaria",
+      "class": "Insecta",
+      "occurrences": 4,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1739833,
+      "name": "Acleris variegana",
+      "class": "Insecta",
+      "occurrences": 4,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1855452,
+      "name": "Perissomastix agenjoi",
+      "class": "Insecta",
+      "occurrences": 4,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5376035,
+      "name": "Moricandia arvensis",
+      "class": "Magnoliopsida",
+      "occurrences": 4,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5229490,
+      "name": "Pica pica",
+      "class": "Aves",
+      "occurrences": 4,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 1745781,
+      "name": "Epinotia thapsiana",
+      "class": "Insecta",
+      "occurrences": 4,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1874269,
+      "name": "Acrobasis obliqua",
+      "class": "Insecta",
+      "occurrences": 4,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 3789029,
+      "name": "Osyris alba",
+      "class": "Magnoliopsida",
+      "occurrences": 4,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 3740188,
+      "name": "Antirrhinum litigiosum",
+      "class": "Magnoliopsida",
+      "occurrences": 4,
+      "habitats": 8
+    },
+    {
+      "speciesKey": 2963689,
+      "name": "Argyrolobium zanonii",
+      "class": "Magnoliopsida",
+      "occurrences": 4,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1932411,
+      "name": "Callophrys rubi",
+      "class": "Insecta",
+      "occurrences": 4,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 1922584,
+      "name": "Pseudophilotes baton",
+      "class": "Insecta",
+      "occurrences": 4,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1945569,
+      "name": "Spialia sertorius",
+      "class": "Insecta",
+      "occurrences": 4,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 7988274,
+      "name": "Pyronia cecilia",
+      "class": "Insecta",
+      "occurrences": 4,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5171516,
+      "name": "Synema globosum",
+      "class": "Arachnida",
+      "occurrences": 4,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 9416124,
+      "name": "Zamenis scalaris",
+      "class": "Squamata",
+      "occurrences": 4,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2426658,
+      "name": "Pelophylax perezi",
+      "class": "Amphibia",
+      "occurrences": 4,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1896957,
+      "name": "Charaxes jasius",
+      "class": "Insecta",
+      "occurrences": 4,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 8104397,
+      "name": "Linaria cannabina",
+      "class": "Aves",
+      "occurrences": 4,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 7793938,
+      "name": "Thymus zygis",
+      "class": "Magnoliopsida",
+      "occurrences": 4,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 3190580,
+      "name": "Pistacia terebinthus",
+      "class": "Magnoliopsida",
+      "occurrences": 4,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1919333,
+      "name": "Euchloe belemia",
+      "class": "Insecta",
+      "occurrences": 4,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 1919317,
+      "name": "Euchloe tagis",
+      "class": "Insecta",
+      "occurrences": 4,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 1919966,
+      "name": "Zegris eupheme",
+      "class": "Insecta",
+      "occurrences": 4,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 1932551,
+      "name": "Plebicula escheri",
+      "class": "Insecta",
+      "occurrences": 4,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 8424834,
+      "name": "Plantago albicans",
+      "class": "Magnoliopsida",
+      "occurrences": 4,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1322537,
+      "name": "Pheidole pallidula",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 3070382,
+      "name": "Euphorbia serrata",
+      "class": "Magnoliopsida",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2171142,
+      "name": "Cyrba algerina",
+      "class": "Arachnida",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5415040,
+      "name": "Olea europaea",
+      "class": "Magnoliopsida",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7311306,
+      "name": "Daphne gnidium",
+      "class": "Magnoliopsida",
+      "occurrences": 3,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 5742390,
+      "name": "Scolopendra cingulata",
+      "class": "Chilopoda",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4299368,
+      "name": "Vanessa cardui",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 4430914,
+      "name": "Nyctophila reichii",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 2183411,
+      "name": "Dermacentor marginatus",
+      "class": "Arachnida",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2490604,
+      "name": "Lullula arborea",
+      "class": "Aves",
+      "occurrences": 3,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 1845952,
+      "name": "Stibaromacha ratella",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 10791900,
+      "name": "Leptoderis solieri",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4005183,
+      "name": "Lysimachia tenella",
+      "class": "Magnoliopsida",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 7272699,
+      "name": "Lonicera implexa",
+      "class": "Magnoliopsida",
+      "occurrences": 3,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 7964291,
+      "name": "Felis silvestris",
+      "class": "Mammalia",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 7341500,
+      "name": "Lanius meridionalis",
+      "class": "Aves",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5104557,
+      "name": "Paramesia alhamana",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 8878506,
+      "name": "Depressaria albarracinella",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1837383,
+      "name": "Depressaria radiosquamella",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1344457,
+      "name": "Anthophora crassipes",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1874278,
+      "name": "Acrobasis glaucella",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1873808,
+      "name": "Archiephestia adpiscinella",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1877345,
+      "name": "Dioryctria mendacella",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 6026935,
+      "name": "Bupleurum rigidum",
+      "class": "Magnoliopsida",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1355085,
+      "name": "Lasioglossum malachurum",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1354864,
+      "name": "Lasioglossum interruptum",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1878341,
+      "name": "Psorosa mediterranella",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5226733,
+      "name": "Acanthodactylus erythrurus",
+      "class": "Squamata",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5140214,
+      "name": "Polyommatus icarus",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 4532020,
+      "name": "Evergestis dumerlei",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1874168,
+      "name": "Acrobasis bithynella",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1862719,
+      "name": "Hyles euphorbiae",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1739438,
+      "name": "Selania leplastriana",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 4506149,
+      "name": "Ronisia barbarula",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 12264737,
+      "name": "Xerocomellus persicolor",
+      "class": "Agaricomycetes",
+      "occurrences": 3,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 5343178,
+      "name": "Astragalus alopecuroides",
+      "class": "Magnoliopsida",
+      "occurrences": 3,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 2793158,
+      "name": "Ophrys fusca",
+      "class": "Liliopsida",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7359803,
+      "name": "Trichodes leucopsideus",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 3735572,
+      "name": "Scrophularia tanacetifolia",
+      "class": "Magnoliopsida",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 4485800,
+      "name": "Carpocoris fuscispinus",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 8211070,
+      "name": "Sciurus vulgaris",
+      "class": "Mammalia",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2469763,
+      "name": "Psammodromus algirus",
+      "class": "Squamata",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2478523,
+      "name": "Picus viridis",
+      "class": "Aves",
+      "occurrences": 3,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 6092830,
+      "name": "Spinus spinus",
+      "class": "Aves",
+      "occurrences": 3,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 4408732,
+      "name": "Luscinia svecica",
+      "class": "Aves",
+      "occurrences": 3,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 6100954,
+      "name": "Coloeus monedula",
+      "class": "Aves",
+      "occurrences": 3,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 4535636,
+      "name": "Lasiommata maera",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 7934873,
+      "name": "Melitaea phoebe",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 1898286,
+      "name": "Vanessa atalanta",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 4531284,
+      "name": "Pempelia palumbella",
+      "class": "Insecta",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2480666,
+      "name": "Circaetus gallicus",
+      "class": "Aves",
+      "occurrences": 3,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 5231918,
+      "name": "Cuculus canorus",
+      "class": "Aves",
+      "occurrences": 3,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 7634625,
+      "name": "Emberiza calandra",
+      "class": "Aves",
+      "occurrences": 3,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2490955,
+      "name": "Monticola solitarius",
+      "class": "Aves",
+      "occurrences": 3,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 5231235,
+      "name": "Oenanthe hispanica",
+      "class": "Aves",
+      "occurrences": 3,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2492350,
+      "name": "Petronia petronia",
+      "class": "Aves",
+      "occurrences": 3,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2468542,
+      "name": "Timon lepidus",
+      "class": "Squamata",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 7306992,
+      "name": "Thymus membranaceus",
+      "class": "Magnoliopsida",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 3044695,
+      "name": "Guiraoa arvensis",
+      "class": "Magnoliopsida",
+      "occurrences": 3,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 3128001,
+      "name": "Centaurea boissieri",
+      "class": "Magnoliopsida",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 9783509,
+      "name": "Oeosporangium pteridioides",
+      "class": "Polypodiopsida",
+      "occurrences": 3,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 3759567,
+      "name": "Caroxylon genistoides",
+      "class": "Magnoliopsida",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2651816,
+      "name": "Adiantum capillus-veneris",
+      "class": "Polypodiopsida",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2704505,
+      "name": "Arrhenatherum elatius",
+      "class": "Liliopsida",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2650617,
+      "name": "Asplenium ceterach",
+      "class": "Polypodiopsida",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 3595600,
+      "name": "Helianthemum squamatum",
+      "class": "Magnoliopsida",
+      "occurrences": 3,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5312179,
+      "name": "Limodorum abortivum",
+      "class": "Liliopsida",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5398274,
+      "name": "Atractylis humilis",
+      "class": "Magnoliopsida",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7365597,
+      "name": "Fumana thymifolia",
+      "class": "Magnoliopsida",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2956364,
+      "name": "Calicotome villosa",
+      "class": "Magnoliopsida",
+      "occurrences": 3,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1314975,
+      "name": "Formica subrufa",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 3093352,
+      "name": "Picris hispanica",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1998936,
+      "name": "Phyllodromica subaptera",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4048802,
+      "name": "Linum narbonense",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 7902793,
+      "name": "Lycosa hispanica",
+      "class": "Arachnida",
+      "occurrences": 2,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 3595086,
+      "name": "Helianthemum hirtum",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5346583,
+      "name": "Astragalus monspessulanus",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5529030,
+      "name": "Paronychia suffruticosa",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4487508,
+      "name": "Brachycoleus pilicornis",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1428583,
+      "name": "Orthetrum coerulescens",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 8062758,
+      "name": "Monochamus galloprovincialis",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5231438,
+      "name": "Troglodytes troglodytes",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1856503,
+      "name": "Infurcitinea atrifasciella",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 4528888,
+      "name": "Symmoca hendrikseni",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 6093527,
+      "name": "Regulus ignicapilla",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 10544131,
+      "name": "Gryllomorpha longicauda",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5348659,
+      "name": "Coronilla juncea",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 9029556,
+      "name": "Picus sharpei",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 8102790,
+      "name": "Zygaena occitanica",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4480518,
+      "name": "Cicindela maroccana",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 5147043,
+      "name": "Idaea ostrinaria",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1856655,
+      "name": "Nemapogon agenjoi",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 8094357,
+      "name": "Cacoecimorpha pronubana",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1746165,
+      "name": "Phtheochroa cymatodana",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1739381,
+      "name": "Rhyacionia buoliana",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1741608,
+      "name": "Cochylis epilinana",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1855791,
+      "name": "Anomalotinea cubiculella",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1837412,
+      "name": "Depressaria pulcherimella",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1858328,
+      "name": "Ateliotum petrinella",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2497701,
+      "name": "Otus scops",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 5661164,
+      "name": "Lithodora fruticosa",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 3067353,
+      "name": "Euphorbia characias",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 7
+    },
+    {
+      "speciesKey": 1130067,
+      "name": "Phytoecia rufipes",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1877340,
+      "name": "Dioryctria pineae",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1536449,
+      "name": "Episyrphus balteatus",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1875896,
+      "name": "Phycitodes saxicola",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1874906,
+      "name": "Amphithrix sublineatella",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1874258,
+      "name": "Acrobasis centunculella",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5147354,
+      "name": "Idaea ochrata",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1871451,
+      "name": "Hypotia corticalis",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 8218441,
+      "name": "Udea numeralis",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1874280,
+      "name": "Acrobasis romanella",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 4531417,
+      "name": "Stemmatophora brunnealis",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 3101184,
+      "name": "Dittrichia viscosa",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1891386,
+      "name": "Evergestis frumentalis",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1874375,
+      "name": "Pima boisduvaliella",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 4531419,
+      "name": "Stemmatophora syriacalis",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1880907,
+      "name": "Ancylolomia tentaculella",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1884255,
+      "name": "Catoptria pinella",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 9491838,
+      "name": "Depressaria pseudobadiella",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 7332229,
+      "name": "Cistanche phelypaea",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1931179,
+      "name": "Tuttiola spini",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7750780,
+      "name": "Orobanche gracilis",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2495414,
+      "name": "Columba livia",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 8410451,
+      "name": "Hypericum ericoides",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 4457512,
+      "name": "Meloe cavensis",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2160943,
+      "name": "Agalenatea redii",
+      "class": "Arachnida",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5959645,
+      "name": "Coronella girondica",
+      "class": "Squamata",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 4520688,
+      "name": "Bibio hortulanus",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2098526,
+      "name": "Creoleon lugdunensis",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7307402,
+      "name": "Thymus funkii",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7172720,
+      "name": "Sedum dasyphyllum",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 1423259,
+      "name": "Ceriagrion tenellum",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 3595430,
+      "name": "Helianthemum syriacum",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1933095,
+      "name": "Aricia agestis",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 7331926,
+      "name": "Veronica praecox",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 7473187,
+      "name": "Draba verna",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2490310,
+      "name": "Motacilla cinerea",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 1798984,
+      "name": "Orthosia cerasi",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4534778,
+      "name": "Nola subchlamydula",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 8073674,
+      "name": "Thymelicus acteon",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 3390611,
+      "name": "Cladonia pocillum",
+      "class": "Lecanoromycetes",
+      "occurrences": 2,
+      "habitats": 6
+    },
+    {
+      "speciesKey": 7298105,
+      "name": "Armeria filicaulis",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 6026954,
+      "name": "Scandix stellata",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2493118,
+      "name": "Acrocephalus scirpaceus",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 4532283,
+      "name": "Odice jucunda",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1819699,
+      "name": "Ocneria rubea",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4533285,
+      "name": "Polymixis lichenea",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2480589,
+      "name": "Accipiter gentilis",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2477411,
+      "name": "Tachymarptis melba",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5959092,
+      "name": "Bubo bubo",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 9717283,
+      "name": "Cecropis daurica",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 9444556,
+      "name": "Lanius excubitor",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2492867,
+      "name": "Lanius senator",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5229167,
+      "name": "Milvus migrans",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2495708,
+      "name": "Streptopelia turtur",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2492944,
+      "name": "Sylvia hortensis",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2441005,
+      "name": "Ammotragus lervia",
+      "class": "Mammalia",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2437136,
+      "name": "Atelerix algirus",
+      "class": "Mammalia",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2435654,
+      "name": "Crocidura russula",
+      "class": "Mammalia",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5219616,
+      "name": "Erinaceus europaeus",
+      "class": "Mammalia",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5219362,
+      "name": "Genetta genetta",
+      "class": "Mammalia",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2436790,
+      "name": "Lepus granatensis",
+      "class": "Mammalia",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5218887,
+      "name": "Martes foina",
+      "class": "Mammalia",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2438619,
+      "name": "Microtus duodecimcostatus",
+      "class": "Mammalia",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2438793,
+      "name": "Mus spretus",
+      "class": "Mammalia",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5218987,
+      "name": "Mustela nivalis",
+      "class": "Mammalia",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2432655,
+      "name": "Rhinolophus ferrumequinum",
+      "class": "Mammalia",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 7937336,
+      "name": "Charadrius dubius",
+      "class": "Aves",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 8625614,
+      "name": "Lactuca viminea",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2459023,
+      "name": "Hemorrhois hippocrepis",
+      "class": "Squamata",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2455958,
+      "name": "Macroprotodon brevis",
+      "class": "Squamata",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 8796529,
+      "name": "Malpolon monspessulanus",
+      "class": "Squamata",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 6161340,
+      "name": "Natrix maura",
+      "class": "Squamata",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 7917188,
+      "name": "Psammodromus hispanicus",
+      "class": "Squamata",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2445034,
+      "name": "Tarentola mauritanica",
+      "class": "Squamata",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 6755116,
+      "name": "Circinaria contorta",
+      "class": "Lecanoromycetes",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2608911,
+      "name": "Physcia leptalea",
+      "class": "Lecanoromycetes",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2603300,
+      "name": "Clauzadea metzleri",
+      "class": "Lecanoromycetes",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 8049830,
+      "name": "Pararge aegeria",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5347718,
+      "name": "Genista cinerea",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5142338,
+      "name": "Gegenes nostrodamus",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2680105,
+      "name": "Rhynchostegium megapolitanum",
+      "class": "Bryopsida",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2680293,
+      "name": "Homalothecium aureum",
+      "class": "Bryopsida",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 8157254,
+      "name": "Armeria bourgaei",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5286317,
+      "name": "Porella platyphylla",
+      "class": "Jungermanniopsida",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 7602100,
+      "name": "Polygala monspeliaca",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 8270406,
+      "name": "Erynnis tages",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 8108066,
+      "name": "Asplenium trichomanes",
+      "class": "Polypodiopsida",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2650625,
+      "name": "Asplenium ruta-muraria",
+      "class": "Polypodiopsida",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2653414,
+      "name": "Ephedra fragilis",
+      "class": "Gnetopsida",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5285565,
+      "name": "Pinus pinaster",
+      "class": "Pinopsida",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 3895745,
+      "name": "Teucrium libanitis",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2687940,
+      "name": "Equisetum ramosissimum",
+      "class": "Polypodiopsida",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2778349,
+      "name": "Asphodelus ayardii",
+      "class": "Liliopsida",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2704651,
+      "name": "Lygeum spartum",
+      "class": "Liliopsida",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5385215,
+      "name": "Pallenis spinosa",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2770868,
+      "name": "Aphyllanthes monspeliensis",
+      "class": "Liliopsida",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5290144,
+      "name": "Brachypodium phoenicoides",
+      "class": "Liliopsida",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5290299,
+      "name": "Elymus repens",
+      "class": "Liliopsida",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 9151957,
+      "name": "Medicago sativa",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 8148601,
+      "name": "Helianthemum violaceum",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 6027094,
+      "name": "Bupleurum fruticescens",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7308670,
+      "name": "Teucrium capitatum",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 6371424,
+      "name": "Rhamnus alaternus",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2768695,
+      "name": "Asparagus horridus",
+      "class": "Liliopsida",
+      "occurrences": 2,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 8998684,
+      "name": "Epipactis helleborine",
+      "class": "Liliopsida",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 3091206,
+      "name": "Klasea flavescens",
+      "class": "Magnoliopsida",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1737413,
+      "name": "Clepsis siciliana",
+      "class": "Insecta",
+      "occurrences": 2,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2153377,
+      "name": "Ischnocolus valentinus",
+      "class": "Arachnida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5105929,
+      "name": "Zygaena lavandulae",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2202347,
+      "name": "Armadillo officinalis",
+      "class": "Malacostraca",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 11196536,
+      "name": "Buthus manchego",
+      "class": "Arachnida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7307627,
+      "name": "Sideritis leucantha",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4127897,
+      "name": "Macrochloa tenacissima",
+      "class": "Liliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1404864,
+      "name": "Sphodromantis viridis",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7307171,
+      "name": "Ajuga iva",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5361909,
+      "name": "Ficus carica",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4486330,
+      "name": "Spilostethus pandurus",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 3128091,
+      "name": "Centaurea melitensis",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1924097,
+      "name": "Glaucopsyche alexis",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 8348761,
+      "name": "Zygaena fausta",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7845377,
+      "name": "Lasioptera eryngii",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2888443,
+      "name": "Papaver rhoeas",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 3034426,
+      "name": "Eryngium campestre",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5772172,
+      "name": "Mythimna l-album",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5170978,
+      "name": "Argiope lobata",
+      "class": "Arachnida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4391703,
+      "name": "Dicranocephalus agilis",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2050224,
+      "name": "Liorhyssus hyalinus",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1736623,
+      "name": "Crocidosema plebejana",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1855799,
+      "name": "Anomalotinea liguriella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1845782,
+      "name": "Dysspastus fallax",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1428861,
+      "name": "Trithemis kirbyi",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 5559052,
+      "name": "Digitalis obscura",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2480685,
+      "name": "Hieraaetus pennatus",
+      "class": "Aves",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1857008,
+      "name": "Tenaga rhenania",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1406353,
+      "name": "Rivetina baetica",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1857944,
+      "name": "Monopis nigricantella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1734704,
+      "name": "Lasiocampa trifolii",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2977125,
+      "name": "Ononis minutissima",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 3105768,
+      "name": "Sonchus tenerrimus",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1840644,
+      "name": "Agonopterix nodiflorella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2480537,
+      "name": "Buteo buteo",
+      "class": "Aves",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4391874,
+      "name": "Corizus hyoscyami",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7673242,
+      "name": "Bostra obsoletalis",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5221528,
+      "name": "Hemidactylus turcicus",
+      "class": "Squamata",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 9484484,
+      "name": "Bidecoloratilla iberica",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 6258028,
+      "name": "Mantis religiosa",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 1404300,
+      "name": "Iris oratoria",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1737741,
+      "name": "Cydia ilipulana",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1856496,
+      "name": "Infurcitinea marcunella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 10872051,
+      "name": "Agonopterix olusatri",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1839271,
+      "name": "Exaeretia lutosella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1840306,
+      "name": "Agonopterix rutana",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1840528,
+      "name": "Agonopterix cnicella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4528878,
+      "name": "Apateona hispanicum",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1856641,
+      "name": "Cephimallota crassiflavella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1837390,
+      "name": "Depressaria albipunctella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 10641618,
+      "name": "Depressaria sarahae",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5156102,
+      "name": "Leptoglossus occidentalis",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1344353,
+      "name": "Anthophora dispar",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1341105,
+      "name": "Eucera tricincta",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1340000,
+      "name": "Amegilla quadrifasciata",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1873721,
+      "name": "Actenia rungsi",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1840456,
+      "name": "Agonopterix fruticosella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1873903,
+      "name": "Cadra figulilella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1846833,
+      "name": "Megacraspedus peyerimhoffi",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1536015,
+      "name": "Chrysotoxum vernale",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2769766,
+      "name": "Ruscus aculeatus",
+      "class": "Liliopsida",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 1875657,
+      "name": "Pempelia ardosiella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 7999870,
+      "name": "Paronychia capitata",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1739094,
+      "name": "Cnephasia fulturata",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1845982,
+      "name": "Symmocoides oxybiella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2176858,
+      "name": "Philaeus chrysops",
+      "class": "Arachnida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1878802,
+      "name": "Mecyna auralis",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 8160104,
+      "name": "Parasteropleurus martorellii",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1889833,
+      "name": "Palpita vitrealis",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1891198,
+      "name": "Euchromius ramburiellus",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1884280,
+      "name": "Catoptria fulgidella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 4531429,
+      "name": "Maradana fuscolimbalis",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 4529186,
+      "name": "Agonopterix alstromeriana",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1341976,
+      "name": "Apis mellifera",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4531286,
+      "name": "Pempelia brephiella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1877106,
+      "name": "Epischnia illotella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1832279,
+      "name": "Ceuthomadarus uniformella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1741147,
+      "name": "Cochylimorpha straminea",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1870250,
+      "name": "Aphomia sociella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5732924,
+      "name": "Phyllomorpha laciniata",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1311515,
+      "name": "Vespa sexmaculata",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1879765,
+      "name": "Eudonia mercurella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1875409,
+      "name": "Euzophera lunulella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1878500,
+      "name": "Ephestia welseriella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 4530900,
+      "name": "Valdovecaria hispanicella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1845866,
+      "name": "Symmoca signatella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1878845,
+      "name": "Agriphila cyrenaicellus",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1881393,
+      "name": "Metasia cuencalis",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 4531425,
+      "name": "Stemmatophora borgialis",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1881151,
+      "name": "Nomophila noctuella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1845962,
+      "name": "Oegoconia quadripuncta",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 7550095,
+      "name": "Colias croceus",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 4515552,
+      "name": "Eriopogon laniger",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1669053,
+      "name": "Cytherea obscura",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7627205,
+      "name": "Glebionis coronaria",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2928400,
+      "name": "Convolvulus althaeoides",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 4133867,
+      "name": "Cynosurus effusus",
+      "class": "Liliopsida",
+      "occurrences": 1,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 1698147,
+      "name": "Eumigus cucullatus",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1541116,
+      "name": "Eristalis pertinax",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 4535396,
+      "name": "Muschampia proto",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 5998027,
+      "name": "Cerambyx welensii",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 3041875,
+      "name": "Biscutella auriculata",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1311649,
+      "name": "Vespula germanica",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4455020,
+      "name": "Proctenius granatensis",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 2
+    },
+    {
+      "speciesKey": 8091998,
+      "name": "Gypsophila vaccaria",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 3033833,
+      "name": "Delphinium ajacis",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2608994,
+      "name": "Anaptychia ciliaris",
+      "class": "Lecanoromycetes",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2159061,
+      "name": "Mangora acalypha",
+      "class": "Arachnida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5170966,
+      "name": "Zilla diodia",
+      "class": "Arachnida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 8315646,
+      "name": "Stipellula capensis",
+      "class": "Liliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1428345,
+      "name": "Sympetrum striolatum",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7532470,
+      "name": "Convolvulus lanuginosus",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1940614,
+      "name": "Synanthedon codeti",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 4485824,
+      "name": "Dolycoris baccarum",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1172407,
+      "name": "Attelabus nitens",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4486965,
+      "name": "Sphedanolestes lividigaster",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1428715,
+      "name": "Orthetrum brunneum",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7437802,
+      "name": "Graphosoma italicum",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4460778,
+      "name": "Dicladispa testacea",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4485731,
+      "name": "Graphosoma semipunctatum",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5373368,
+      "name": "Rapistrum rugosum",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 5376179,
+      "name": "Hornungia petraea",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 3032833,
+      "name": "Saxifraga tridactylites",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7295152,
+      "name": "Pardoglossum cheirifolium",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5674620,
+      "name": "Echinaria capitata",
+      "class": "Liliopsida",
+      "occurrences": 1,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 5375313,
+      "name": "Clypeola jonthlaspi",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2793126,
+      "name": "Ophrys tenthredinifera",
+      "class": "Liliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2891031,
+      "name": "Geranium rotundifolium",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5358302,
+      "name": "Scorpiurus muricatus",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7294662,
+      "name": "Nonea micrantha",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1777289,
+      "name": "Autophila dilucida",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4534787,
+      "name": "Nola thymula",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4534245,
+      "name": "Caradrina clavipalpis",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1772255,
+      "name": "Recoropha canteneri",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5116698,
+      "name": "Eilema caniola",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4532150,
+      "name": "Dolicharthria bruguieralis",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1784359,
+      "name": "Polyphaenis sericata",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1795215,
+      "name": "Cryphia algae",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 8219037,
+      "name": "Pseudoleptogium diffractum",
+      "class": "Lecanoromycetes",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5772186,
+      "name": "Mythimna sicula",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7589756,
+      "name": "Myosotis ramosissima",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 4534275,
+      "name": "Caradrina flava",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 8152105,
+      "name": "Biscutella apula",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1783777,
+      "name": "Metopoceras felicina",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1789086,
+      "name": "Hecatera bicolorata",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1877092,
+      "name": "Epischnia prodromella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1760244,
+      "name": "Phytometra sanctiflorentis",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1789730,
+      "name": "Noctua comes",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7660710,
+      "name": "Luscinia megarhynchos",
+      "class": "Aves",
+      "occurrences": 1,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2493214,
+      "name": "Hippolais polyglotta",
+      "class": "Aves",
+      "occurrences": 1,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 5115854,
+      "name": "Arctia tigrina",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1876514,
+      "name": "Eurhodope cruentella",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1773495,
+      "name": "Euxoa powelli",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5125689,
+      "name": "Endotricha flammealis",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1771040,
+      "name": "Agrotis segetum",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1789350,
+      "name": "Dichagyris constanti",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1783090,
+      "name": "Ammopolia witzenmanni",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1760891,
+      "name": "Aporophyla nigra",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1768150,
+      "name": "Xylocampa areola",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4532024,
+      "name": "Evergestis isatidalis",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 3158802,
+      "name": "Legousia falcata",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5384805,
+      "name": "Silene latifolia",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2926903,
+      "name": "Teucrium botrys",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5217160,
+      "name": "Bufo bufo",
+      "class": "Amphibia",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 9019391,
+      "name": "Podarcis hispanicus",
+      "class": "Squamata",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1891416,
+      "name": "Evergestis dusmeti",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 1
+    },
+    {
+      "speciesKey": 7564087,
+      "name": "Linaria oblongifolia",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 8934912,
+      "name": "Circinaria calcarea",
+      "class": "Lecanoromycetes",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2609038,
+      "name": "Rinodina bischoffii",
+      "class": "Lecanoromycetes",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2601176,
+      "name": "Peltigera rufescens",
+      "class": "Lecanoromycetes",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 3128146,
+      "name": "Centaurea resupinata",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 4408759,
+      "name": "Saxicola rubicola",
+      "class": "Aves",
+      "occurrences": 1,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2498415,
+      "name": "Upupa epops",
+      "class": "Aves",
+      "occurrences": 1,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 7968502,
+      "name": "Riella cossoniana",
+      "class": "Marchantiopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 8211140,
+      "name": "Southbya nigrella",
+      "class": "Jungermanniopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 7639527,
+      "name": "Acaulon triquetrum",
+      "class": "Bryopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 4280646,
+      "name": "Streblotrichum convolutum",
+      "class": "Bryopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 8330248,
+      "name": "Dianthus pungens",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2492943,
+      "name": "Sylvia communis",
+      "class": "Aves",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 12260886,
+      "name": "Vinealobryum insulanum",
+      "class": "Bryopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2688740,
+      "name": "Frullania dilatata",
+      "class": "Jungermanniopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 10994463,
+      "name": "Geheebia tophacea",
+      "class": "Bryopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 10715410,
+      "name": "Muschampia baeticus",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 3048385,
+      "name": "Erysimum incanum",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 3741065,
+      "name": "Antirrhinum controversum",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5375285,
+      "name": "Carrichtera annua",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 3097063,
+      "name": "Cheirolophus intybaceus",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 3065910,
+      "name": "Euphorbia sulcata",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5347736,
+      "name": "Genista versicolor",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5274944,
+      "name": "Polypodium cambricum",
+      "class": "Polypodiopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5371879,
+      "name": "Apium graveolens",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 4218393,
+      "name": "Cirsium valdespinulosum",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 3131229,
+      "name": "Helichrysum luteoalbum",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2701970,
+      "name": "Juncus subulatus",
+      "class": "Liliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 3988701,
+      "name": "Lythrum junceum",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 3189739,
+      "name": "Plantago coronopus",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5289919,
+      "name": "Polypogon viridis",
+      "class": "Liliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5367273,
+      "name": "Potentilla reptans",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5383922,
+      "name": "Beta maritima",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2928390,
+      "name": "Convolvulus arvensis",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 3034922,
+      "name": "Foeniculum vulgare",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2965280,
+      "name": "Medicago truncatula",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 8208358,
+      "name": "Plantago lanceolata",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 8195144,
+      "name": "Rumex crispus",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 3034819,
+      "name": "Torilis nodosa",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5347181,
+      "name": "Astragalus incanus",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 12233963,
+      "name": "Achnatherum parviflorum",
+      "class": "Liliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7729324,
+      "name": "Taraxacum ochrocarpum",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7769858,
+      "name": "Herniaria fruticosa",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2892347,
+      "name": "Rubia peregrina",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 3040233,
+      "name": "Populus alba",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 3002154,
+      "name": "Rosa micrantha",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5361865,
+      "name": "Ulmus minor",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 3141571,
+      "name": "Mantisalca salmantica",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 12254070,
+      "name": "Cynanchica aristata",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5353714,
+      "name": "Hippocrepis squamata",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2927304,
+      "name": "Lavandula latifolia",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5528754,
+      "name": "Paronychia aretioides",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 3887383,
+      "name": "Phlomis lychnitis",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5579047,
+      "name": "Thesium humifusum",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5290149,
+      "name": "Phragmites australis",
+      "class": "Liliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2704720,
+      "name": "Puccinellia fasciculata",
+      "class": "Liliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 7570897,
+      "name": "Spergularia media",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 2965438,
+      "name": "Medicago rigidula",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 4138576,
+      "name": "Stipa lagascae",
+      "class": "Liliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5377256,
+      "name": "Iberis carnosa",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 3941138,
+      "name": "Cytinus ruber",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 4133858,
+      "name": "Cynosurus elegans",
+      "class": "Liliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5371743,
+      "name": "Anthriscus caucalis",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 3639903,
+      "name": "Bupleurum baldense",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5411656,
+      "name": "Campanula mollis",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2724954,
+      "name": "Carex distachya",
+      "class": "Liliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2703700,
+      "name": "Bromus squarrosus",
+      "class": "Liliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2749791,
+      "name": "Gladiolus italicus",
+      "class": "Liliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5415017,
+      "name": "Linaria spartea",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2849427,
+      "name": "Orchis mascula",
+      "class": "Liliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 7275953,
+      "name": "Reseda stricta",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 8061410,
+      "name": "Scabiosa turolensis",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5678843,
+      "name": "Wangenheimia lima",
+      "class": "Liliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 7685819,
+      "name": "Urtica membranacea",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 3896237,
+      "name": "Teucrium homotrichum",
+      "class": "Magnoliopsida",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5240136,
+      "name": "Coniophora arida",
+      "class": "Agaricomycetes",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 2553128,
+      "name": "Stereum hirsutum",
+      "class": "Agaricomycetes",
+      "occurrences": 1,
+      "habitats": 5
+    },
+    {
+      "speciesKey": 2097523,
+      "name": "Macronemurus appendiculatus",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 7622516,
+      "name": "Thiodia trochillana",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1737347,
+      "name": "Clepsis unicolorana",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1744789,
+      "name": "Pammene fasciana",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 5103957,
+      "name": "Eucosma gonzalezalvarezi",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 1746440,
+      "name": "Aleimma loeflingiana",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1742362,
+      "name": "Diceratura infantana",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 3
+    },
+    {
+      "speciesKey": 1746038,
+      "name": "Phtheochroa syrtana",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    },
+    {
+      "speciesKey": 5771255,
+      "name": "Ancylis sparulana",
+      "class": "Insecta",
+      "occurrences": 1,
+      "habitats": 4
+    }
+  ],
   "habitats": [
     {
       "slug": "matorrales-arborescentes-de-5210",
       "hic": "5210",
-      "occurrences": 3387,
+      "occurrences": 3388,
       "speciesCount": 602,
       "species": [
         {
@@ -753,6 +5137,12 @@
           "occurrences": 4
         },
         {
+          "speciesKey": 2860661,
+          "name": "Lapiedra martinezii",
+          "class": "Liliopsida",
+          "occurrences": 4
+        },
+        {
           "speciesKey": 3894066,
           "name": "Teucrium pseudochamaepitys",
           "class": "Magnoliopsida",
@@ -1206,12 +5596,6 @@
           "speciesKey": 3789029,
           "name": "Osyris alba",
           "class": "Magnoliopsida",
-          "occurrences": 3
-        },
-        {
-          "speciesKey": 2860661,
-          "name": "Lapiedra martinezii",
-          "class": "Liliopsida",
           "occurrences": 3
         },
         {
@@ -3625,7 +8009,7 @@
     {
       "slug": "matorrales-termomediterraneos-y-5330",
       "hic": "5330",
-      "occurrences": 3664,
+      "occurrences": 3665,
       "speciesCount": 610,
       "species": [
         {
@@ -4403,6 +8787,12 @@
           "occurrences": 4
         },
         {
+          "speciesKey": 2860661,
+          "name": "Lapiedra martinezii",
+          "class": "Liliopsida",
+          "occurrences": 4
+        },
+        {
           "speciesKey": 2182959,
           "name": "Hyalomma lusitanicum",
           "class": "Arachnida",
@@ -4862,12 +9252,6 @@
           "speciesKey": 3789029,
           "name": "Osyris alba",
           "class": "Magnoliopsida",
-          "occurrences": 3
-        },
-        {
-          "speciesKey": 2860661,
-          "name": "Lapiedra martinezii",
-          "class": "Liliopsida",
           "occurrences": 3
         },
         {
@@ -7293,7 +11677,7 @@
     {
       "slug": "zonas-subestepicas-de-6220",
       "hic": "6220",
-      "occurrences": 3572,
+      "occurrences": 3573,
       "speciesCount": 613,
       "species": [
         {
@@ -8071,6 +12455,12 @@
           "occurrences": 4
         },
         {
+          "speciesKey": 2860661,
+          "name": "Lapiedra martinezii",
+          "class": "Liliopsida",
+          "occurrences": 4
+        },
+        {
           "speciesKey": 3894066,
           "name": "Teucrium pseudochamaepitys",
           "class": "Magnoliopsida",
@@ -8554,12 +12944,6 @@
           "speciesKey": 3789029,
           "name": "Osyris alba",
           "class": "Magnoliopsida",
-          "occurrences": 3
-        },
-        {
-          "speciesKey": 2860661,
-          "name": "Lapiedra martinezii",
-          "class": "Liliopsida",
           "occurrences": 3
         },
         {
