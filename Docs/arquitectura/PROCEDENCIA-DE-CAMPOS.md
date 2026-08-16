@@ -57,7 +57,7 @@ dato; «Cómo» = la herramienta o el criterio; «Verifica» = quién lo comprue
 | `source` | local | proceso | La referencia concreta que respalda **la cita en este espacio** |
 | `review_note` | local | proceso | La duda, escrita y visible en la app («a revisar»). Es el mecanismo de «hueco documentado» |
 | `habitatIds` | local | derivado | Ver `species_habitats` abajo |
-| `zepa_site_code` | local | IEPNB · Red Natura 2000 | El sitio cuyo **formulario oficial declara** esta ave. Las aves **no se cuelgan de hábitats**: vuelan, y van a su apartado de espacio. Antes llevaba el código de la ZEPA con la que solapa el espacio —del `zepa.geojson`— a toda ave del catálogo, dijera lo que dijera cualquier lista oficial; con eso, la «colección de aves de la ZEPA» que el juego construye en `Frontend/Js/state.js` era «las aves que GBIF dejó pasar» |
+| `zepa_site_code` | local | IEPNB · Red Natura 2000 | (Procedimiento completo: [`Docs/runbook/AVES.md`](../runbook/AVES.md).) El sitio cuyo **formulario oficial declara** esta ave. Las aves **no se cuelgan de hábitats**: vuelan, y van a su apartado de espacio. Antes llevaba el código de la ZEPA con la que solapa el espacio —del `zepa.geojson`— a toda ave del catálogo, dijera lo que dijera cualquier lista oficial; con eso, la «colección de aves de la ZEPA» que el juego construye en `Frontend/Js/state.js` era «las aves que GBIF dejó pasar» |
 | `is_visible` | local | criterio | `false` oculta del catálogo público sin borrar (pocas ocurrencias GBIF **y** sin figura oficial) |
 | `coordinates` | local | representativa | La ubicación real la aporta el GPS al marcar la especie como vista |
 
