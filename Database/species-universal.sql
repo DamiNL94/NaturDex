@@ -3048,7 +3048,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.image_attribution = 'User:Xemenendura (CC BY-SA 2.1 es) · Wikimedia Commons',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Pallenis spinosa';
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Asteriscus spinosus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Bálsamo',
@@ -6940,17 +6940,19 @@ Presas empaladas en espinos cerca de su territorio',
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Lanius meridionalis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Sylvia undata',
-  s.primary_habitat = NULL,
-  s.description = NULL,
+  s.common_name = 'Curruca rabilarga',
+  s.primary_habitat = 'Matorral bajo y denso, jarales, brezales y tomillares',
+  s.description = 'Curruca pequeña, oscura y de cola muy larga que suele llevar levantada. El macho tiene el vientre vinoso y el ojo rojo rodeado de un anillo del mismo color. Es muy inquieta y rara vez se deja ver más de unos segundos antes de volver a hundirse en la mata.',
   s.description_source = NULL,
-  s.identification_tips = '',
+  s.identification_tips = 'Cola larga y erguida, casi vertical al posarse
+Ojo y anillo ocular rojos
+Vientre de color vinoso, con motitas blancas en la garganta',
   s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Dartford_Warbler_Provencegrasm%C3%BCcke_(Sylvia_undata)_by_J._Dietrich.jpg?width=1280',
-  s.image_attribution = 'J. Dietrich (CC BY-SA 3.0) · Wikimedia Commons',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Sylvia undata';
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_pitchou_Ichkeul_NP.jpg?width=1280',
+  s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Curruca undata';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Piquituerto',
@@ -10531,7 +10533,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.image_attribution = 'Bernd Gliwa (CC BY-SA 2.5) · Wikimedia Commons',
   s.rarity_score = 3,
   s.rarity_basis = NULL
-WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Clinopodium acinos';
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Ziziphora acinos';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Culebra lisa meridional',
@@ -11185,7 +11187,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.image_attribution = NULL,
   s.rarity_score = 4,
   s.rarity_basis = NULL
-WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Anethum ridolfia';
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Ridolfia segetum';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Probayernos',
@@ -12435,7 +12437,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.image_attribution = 'Iorsh at English Wikipedia (Public domain) · Wikimedia Commons',
   s.rarity_score = 3,
   s.rarity_basis = NULL
-WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Ornithogalum narbonense';
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Loncomelos narbonense';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Castañuela',
@@ -12448,7 +12450,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.image_attribution = 'User:Xemenendura (CC BY-SA 2.1 es) · Wikimedia Commons',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Pallenis spinosa';
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Asteriscus spinosus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Pardoglossum cheirifolium',
@@ -13902,7 +13904,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.image_attribution = 'Steve Garvie from Dunfermline, Fife, Scotland (CC BY-SA 2.0) · Wikimedia Commons',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Sylvia communis';
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Curruca communis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Jabalí',
@@ -14479,7 +14481,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Leuzea conifera';
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Rhaponticum coniferum';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Linaria cavanillesii',
@@ -15709,7 +15711,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.image_attribution = 'User:Xemenendura (CC BY-SA 2.1 es) · Wikimedia Commons',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Pallenis spinosa';
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Asteriscus spinosus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Hierba de la sangre fina',
@@ -16385,17 +16387,19 @@ Reclamo metálico «chip-chip» de los bandos en vuelo',
 WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Loxia curvirostra';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Sylvia undata',
-  s.primary_habitat = NULL,
-  s.description = NULL,
+  s.common_name = 'Curruca rabilarga',
+  s.primary_habitat = 'Matorral bajo y denso, jarales, brezales y tomillares',
+  s.description = 'Curruca pequeña, oscura y de cola muy larga que suele llevar levantada. El macho tiene el vientre vinoso y el ojo rojo rodeado de un anillo del mismo color. Es muy inquieta y rara vez se deja ver más de unos segundos antes de volver a hundirse en la mata.',
   s.description_source = NULL,
-  s.identification_tips = '',
+  s.identification_tips = 'Cola larga y erguida, casi vertical al posarse
+Ojo y anillo ocular rojos
+Vientre de color vinoso, con motitas blancas en la garganta',
   s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Dartford_Warbler_Provencegrasm%C3%BCcke_(Sylvia_undata)_by_J._Dietrich.jpg?width=1280',
-  s.image_attribution = 'J. Dietrich (CC BY-SA 3.0) · Wikimedia Commons',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Sylvia undata';
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_pitchou_Ichkeul_NP.jpg?width=1280',
+  s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Curruca undata';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Escribano soteño',
@@ -16804,7 +16808,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.image_attribution = 'Totodu74 (CC BY-SA 3.0) · Wikimedia Commons',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Sylvia hortensis';
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Curruca hortensis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Vencejo real',
@@ -16914,7 +16918,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.image_attribution = 'Steve Garvie from Dunfermline, Fife, Scotland (CC BY-SA 2.0) · Wikimedia Commons',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Sylvia communis';
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Curruca communis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Abubilla',
@@ -18273,7 +18277,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.image_attribution = 'Dion Art (CC BY-SA 4.0) · Wikimedia Commons',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Coloeus monedula';
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Corvus monedula';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Corneja negra',

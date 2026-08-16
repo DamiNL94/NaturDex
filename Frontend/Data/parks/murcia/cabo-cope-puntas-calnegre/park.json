@@ -3521,7 +3521,7 @@
       "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
       "reviewNote": "Reclasificado taxonómicamente de Phalacrocorax aristotelis a Gulosus aristotelis; confirmar si la población litoral pertenece a la subespecie desmarestii.",
       "eidosTaxonId": 80933,
-      "gbifSpeciesKey": 10943800,
+      "gbifSpeciesKey": 2481861,
       "zepaSiteCode": "ES0000261",
       "habitatIds": [],
       "imageAttribution": "Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons",
@@ -3871,7 +3871,7 @@
       "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
       "reviewNote": "El PORN cita la presencia de la especie en el parque sin detallar su categoría exacta de protección regional; pendiente de confirmar con el Catálogo Regional vigente.",
       "eidosTaxonId": 80931,
-      "gbifSpeciesKey": 10355796,
+      "gbifSpeciesKey": 2492949,
       "zepaSiteCode": "ES0000261",
       "habitatIds": [],
       "imageAttribution": "El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons",
@@ -6370,7 +6370,7 @@
         "class": "Magnoliopsida",
         "order": "Lamiales",
         "family": "Lamiaceae",
-        "genus": "Salvia"
+        "genus": "Rosmarinus"
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",

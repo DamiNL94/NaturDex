@@ -6,6 +6,7 @@
   "scripts": {
     "validate": "node Tools/validate-park-data.js",
     "taxones:duplicados": "node Tools/scan-taxones-duplicados.js",
+    "taxones:nomenclatura": "node Tools/catalogo-nacional/coteja-nomenclatura.js",
     "export:park": "php Tools/export-park.php",
     "export:glossary": "php Tools/export-glossary.php",
     "glossary:check": "node Tools/glossary-coverage.js",

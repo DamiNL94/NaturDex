@@ -51,20 +51,29 @@
 >
 > **Lo siguiente, por orden de rentabilidad.**
 >
-> 1. **La curruca rabilarga vive con dos nombres y dos identificadores**, y con ella *atricapilla*,
->    *hortensis*, *communis* y *borin*: `Curruca` en Cabo Cope y Sierra Espuña, `Sylvia` en los otros
->    seis. **`taxones:duplicados` no puede cazarlo** —busca un id con dos nombres y aquí los ids
->    también están partidos—, así que lo primero es que el escáner sepa mirarlo (por nombre común y
->    por epíteto, no solo por id) y lo segundo elegir un nombre y renombrar en los `park.json`, en
->    `data/contenido/` y en el catálogo universal. Ojo con la trampa del §2 del `CLAUDE.md`:
->    renombrar desengancha la ficha de su texto, que se indexa por nombre científico.
+> 1. ~~**La curruca rabilarga vive con dos nombres y dos identificadores**~~ — **hecho el
+>    2026-08-17**, y resultó ser mucho más ancho de lo que decía esta línea: no era un taxón partido
+>    sino que **nadie preguntaba a la autoridad si el nombre de una ficha sigue vigente**. Nueve
+>    renombrados aplicados (incluida la curruca), la regla escrita —nombre e ids a EIDOS,
+>    `gbifSpeciesKey` a la key **aceptada** de GBIF— y `npm run taxones:nomenclatura` para que no
+>    vuelva a pasar en silencio. Ojo: la sospecha de que *atricapilla* también estaba mal **era
+>    falsa**; EIDOS la acepta en *Sylvia*, y renombrar «todas las *Sylvia*» habría roto una ficha
+>    correcta. **Lo que queda de aquí** es lo que el cotejo destapó y no se ha tocado: **21
+>    renombrados y 22 reanclajes de identificador**, enumerados y clasificados en
+>    [`../nomenclatura-autoridades.md`](../nomenclatura-autoridades.md). No son un cambio mecánico
+>    —*Serratula mucronata* tiene por aceptado un trinomio y adoptar el binomio afirmaría un taxón
+>    más amplio; *Natrix natrix* → *Natrix helvetica* es un cambio de identidad—, así que van con la
+>    fuente delante y de uno en uno.
 > 2. **Aplicar los SQL en el despliegue.** Ya no es trabajo de investigación: el 2026-08-16 (b) se
 >    cargaron **todos** en un MySQL levantado en la sesión, en orden y desde cero, y cuadran campo a
 >    campo. Lo que falta es hacerlo contra la base de verdad, que es una operación de una tarde con
 >    la lista delante: `schema` → `migrations` → los ocho `-n2.sql` → `n3-pois-*` → universales e
->    imágenes → las siete `poda-aves-*` → `poda-renombrados-cabo-cope-puntas-calnegre.sql`, y después
+>    imágenes → las siete `poda-aves-*` → `poda-renombrados-cabo-cope-puntas-calnegre.sql` →
+>    **`poda-renombrados-nomenclatura-eidos.sql`** (nuevo el 2026-08-17: los nueve nombres viejos que
+>    el UPSERT deja huérfanos tras el realineado de nomenclatura), y después
 >    `Tools/recalculate-account-progress.php`. **Ojo**: la verificación fue sobre un MySQL 8.0.46 de
->    `apt`, no sobre el `mysql:8.4` del compose.
+>    `apt`, no sobre el `mysql:8.4` del compose, y los ocho `-n2.sql` y `species-universal.sql` se
+>    regeneraron el 2026-08-17, así que esa carga hay que repetirla entera.
 > 3. **El PORN de Carrascoy no tiene inventario de especies** —sus tres inventarios son de lugares
 >    geológicos, hitos paisajísticos y yacimientos—, y ese «no hay» conviene dejarlo escrito en
 >    `data/normativa-espacios.json` para que nadie vuelva a abrir el PDF a averiguarlo.
@@ -101,6 +110,12 @@ delimitación regional, así que conserva el límite del MITECO y no pasa por
 
 Cada línea es un informe de cierre. El título dice la conclusión; entra al fichero solo si te hace
 falta el detalle.
+
+### [`sesiones/2026-08-17.md`](sesiones/2026-08-17.md)
+
+| Sesión | Qué se cerró |
+|---|---|
+| 2026-08-17 | **Nueve fichas se llamaban con un nombre que EIDOS da por sinónimo, y nada podía verlo.** El trabajo nº 1 del ledger —la curruca rabilarga con dos nombres— era el caso visible de que **el catálogo no preguntaba a la autoridad si el nombre de una ficha sigue vigente**; al escribir la comprobación, la curruca pasó a ser uno de 29. Lo delataba la propia ficha: `scientificName: "Sylvia communis"` con `taxonomy.genus: "Curruca"` al lado, y cotejar los dos campos no cuesta una petición de red. **No era «unificar el género»**: EIDOS acepta *Sylvia atricapilla* igual que *Curruca undata*, y con el romero va al revés. Se fija la regla —nombre e ids a EIDOS, `gbifSpeciesKey` a la key **aceptada** de GBIF, que es la que lleva las ocurrencias: la del sinónimo perdía el 17 % de los registros en *undata* y el **54 %** en *communis*—. Nace `npm run taxones:nomenclatura` |
 
 ### [`sesiones/2026-08-16.md`](sesiones/2026-08-16.md)
 

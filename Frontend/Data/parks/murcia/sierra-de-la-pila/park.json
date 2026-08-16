@@ -1394,7 +1394,7 @@
         "class": "Magnoliopsida",
         "order": "Lamiales",
         "family": "Lamiaceae",
-        "genus": "Salvia"
+        "genus": "Rosmarinus"
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
@@ -3336,7 +3336,7 @@
     {
       "id": 42,
       "commonName": "Cuchara de pastor",
-      "scientificName": "Leuzea conifera",
+      "scientificName": "Rhaponticum coniferum",
       "kingdom": "flora",
       "group": null,
       "habitat": null,
@@ -3369,8 +3369,8 @@
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
-      "reviewNote": null,
-      "eidosTaxonId": 643,
+      "reviewNote": "Fichada hasta el 2026-08-17 como «Leuzea conifera», que EIDOS da por sinónimo. taxonid 643 es «Rhaponticum coniferum (L.) Greuter subsp. coniferum», la SUBESPECIE; la especie es el taxonid 7755, «Rhaponticum coniferum (L.) Greuter», Aceptado/válido. «Leuzea conifera (L.) DC.» es Sinónimo. Se adopta el nombre aceptado; la gbifSpeciesKey NO cambia porque el backbone de GBIF acepta el nombre anterior y es esa key la que lleva las ocurrencias.",
+      "eidosTaxonId": 7755,
       "gbifSpeciesKey": 3142203,
       "zepaSiteCode": null,
       "habitatIds": [
@@ -7975,7 +7975,7 @@
     {
       "id": 136,
       "commonName": "Castañuela",
-      "scientificName": "Pallenis spinosa",
+      "scientificName": "Asteriscus spinosus",
       "kingdom": "flora",
       "group": null,
       "habitat": null,
@@ -8008,7 +8008,7 @@
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
-      "reviewNote": null,
+      "reviewNote": "Fichada hasta el 2026-08-17 como «Pallenis spinosa», que EIDOS da por sinónimo. taxonid 80443: «Pallenis spinosa (L.) Cass.» es Sinónimo y «Asteriscus spinosus (L.) Schulz Bip.» Aceptado/válido. Se adopta el nombre aceptado; la gbifSpeciesKey NO cambia porque el backbone de GBIF acepta el nombre anterior y es esa key la que lleva las ocurrencias.",
       "eidosTaxonId": 80443,
       "gbifSpeciesKey": 5385215,
       "zepaSiteCode": null,
@@ -10509,27 +10509,34 @@
     },
     {
       "id": 189,
-      "commonName": "Sylvia undata",
-      "scientificName": "Sylvia undata",
+      "commonName": "Curruca rabilarga",
+      "scientificName": "Curruca undata",
       "kingdom": "fauna",
       "group": "Ave",
-      "habitat": null,
+      "habitat": "Matorral bajo y denso, jarales, brezales y tomillares",
       "conservationStatus": "No catalogada",
-      "description": null,
-      "descriptionSource": null,
-      "tips": [],
+      "description": "Curruca pequeña, oscura y de cola muy larga que suele llevar levantada. El macho tiene el vientre vinoso y el ojo rojo rodeado de un anillo del mismo color. Es muy inquieta y rara vez se deja ver más de unos segundos antes de volver a hundirse en la mata.",
+      "tips": [
+        "Cola larga y erguida, casi vertical al posarse",
+        "Ojo y anillo ocular rojos",
+        "Vientre de color vinoso, con motitas blancas en la garganta"
+      ],
       "seasonality": "Todo el año",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dartford_Warbler_Provencegrasm%C3%BCcke_(Sylvia_undata)_by_J._Dietrich.jpg?width=1280",
-      "imageAttribution": "J. Dietrich (CC BY-SA 3.0) · Wikimedia Commons",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_pitchou_Ichkeul_NP.jpg?width=1280",
+      "imageAttribution": "El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 1,
+      "rarityScore": 2,
       "rarityBasis": {
-        "categoria": "Sin figura de protección",
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 9 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000174 (Sierra de la Pila)",
       "taxonomy": {
@@ -10538,19 +10545,18 @@
         "class": "Aves",
         "order": "Passeriformes",
         "family": "Sylviidae",
-        "genus": "Sylvia"
+        "genus": "Curruca"
       },
-      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+      "iucnGlobal": "LC",
+      "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
       "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
-      "reviewNote": null,
-      "eidosTaxonId": 80230,
+      "reviewNote": "Fichada hasta el 2026-08-16 como «Sylvia undata» con eidosTaxonId 80230, que es *Sylvia undata undata*, la subespecie nominal. Es la misma curruca rabilarga que el resto del catálogo tiene como *Curruca undata* (EIDOS 80931); se unifica el nombre y los identificadores.",
+      "eidosTaxonId": 80931,
       "gbifSpeciesKey": 2492949,
       "zepaSiteCode": "ES0000174",
       "habitatIds": [],
       "gbifOccurrences": 9,
-      "visible": false,
-      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
+      "visible": true
     },
     {
       "id": 187,
@@ -11963,7 +11969,7 @@
     {
       "id": 236,
       "commonName": "Curruca mirlona",
-      "scientificName": "Sylvia hortensis",
+      "scientificName": "Curruca hortensis",
       "kingdom": "fauna",
       "group": "Ave",
       "habitat": "Gran variedad de medios: bosques abiertos de frondosas.Cría:encinares,alcornocales,pinares,sabinares",
@@ -12000,7 +12006,7 @@
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
-      "reviewNote": null,
+      "reviewNote": "Fichada hasta el 2026-08-17 como «Sylvia hortensis», que EIDOS da por sinónimo. taxonid 80927: «Sylvia hortensis (Gmelin, JF, 1789)» es Sinónimo y «Curruca hortensis (Gmelin, 1789)» Aceptado/válido. Se adopta el nombre aceptado; la gbifSpeciesKey NO cambia porque el backbone de GBIF acepta el nombre anterior y es esa key la que lleva las ocurrencias.",
       "eidosTaxonId": 80927,
       "gbifSpeciesKey": 2492944,
       "zepaSiteCode": null,
@@ -12359,7 +12365,7 @@
     {
       "id": 247,
       "commonName": "Curruca zarcera",
-      "scientificName": "Sylvia communis",
+      "scientificName": "Curruca communis",
       "kingdom": "fauna",
       "group": "Ave",
       "habitat": "Linderos con arbustos y malezas espesas,cultivos, bosquetes, praderas y claros con setos de matorral",
@@ -12396,7 +12402,7 @@
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
-      "reviewNote": null,
+      "reviewNote": "Fichada hasta el 2026-08-17 como «Sylvia communis», que EIDOS da por sinónimo. taxonid 80921: «Sylvia communis Latham, 1787» es Sinónimo y «Curruca communis (Latham, 1787)» Aceptado/válido. Se adopta el nombre aceptado; la gbifSpeciesKey NO cambia porque el backbone de GBIF acepta el nombre anterior y es esa key la que lleva las ocurrencias.",
       "eidosTaxonId": 80921,
       "gbifSpeciesKey": 2492943,
       "zepaSiteCode": null,

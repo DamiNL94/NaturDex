@@ -1422,7 +1422,7 @@
         "class": "Magnoliopsida",
         "order": "Lamiales",
         "family": "Lamiaceae",
-        "genus": "Salvia"
+        "genus": "Rosmarinus"
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
@@ -10979,7 +10979,7 @@
       "murciaStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "reviewNote": "Identificadores corregidos el 2026-08-09: tenía eidosTaxonId 80230, que es Sylvia undata undata (la subespecie), y la gbifSpeciesKey del sinónimo. La especie es Curruca undata (EIDOS 80931).",
       "eidosTaxonId": 80931,
-      "gbifSpeciesKey": 10355796,
+      "gbifSpeciesKey": 2492949,
       "zepaSiteCode": "ES0000173",
       "habitatIds": [],
       "imageAttribution": "El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons",

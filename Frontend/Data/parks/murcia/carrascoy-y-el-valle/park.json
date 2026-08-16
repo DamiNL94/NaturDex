@@ -2415,7 +2415,7 @@
         "class": "Magnoliopsida",
         "order": "Lamiales",
         "family": "Lamiaceae",
-        "genus": "Salvia"
+        "genus": "Rosmarinus"
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
@@ -4238,7 +4238,7 @@
     {
       "id": 262,
       "commonName": "Castañuela",
-      "scientificName": "Pallenis spinosa",
+      "scientificName": "Asteriscus spinosus",
       "kingdom": "flora",
       "group": null,
       "habitat": null,
@@ -4271,7 +4271,7 @@
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
-      "reviewNote": null,
+      "reviewNote": "Fichada hasta el 2026-08-17 como «Pallenis spinosa», que EIDOS da por sinónimo. taxonid 80443: «Pallenis spinosa (L.) Cass.» es Sinónimo y «Asteriscus spinosus (L.) Schulz Bip.» Aceptado/válido. Se adopta el nombre aceptado; la gbifSpeciesKey NO cambia porque el backbone de GBIF acepta el nombre anterior y es esa key la que lleva las ocurrencias.",
       "eidosTaxonId": 80443,
       "gbifSpeciesKey": 5385215,
       "zepaSiteCode": null,
@@ -18515,27 +18515,34 @@
     },
     {
       "id": 456,
-      "commonName": "Sylvia undata",
-      "scientificName": "Sylvia undata",
+      "commonName": "Curruca rabilarga",
+      "scientificName": "Curruca undata",
       "kingdom": "fauna",
       "group": "Ave",
-      "habitat": null,
+      "habitat": "Matorral bajo y denso, jarales, brezales y tomillares",
       "conservationStatus": "No catalogada",
-      "description": null,
-      "descriptionSource": null,
-      "tips": [],
+      "description": "Curruca pequeña, oscura y de cola muy larga que suele llevar levantada. El macho tiene el vientre vinoso y el ojo rojo rodeado de un anillo del mismo color. Es muy inquieta y rara vez se deja ver más de unos segundos antes de volver a hundirse en la mata.",
+      "tips": [
+        "Cola larga y erguida, casi vertical al posarse",
+        "Ojo y anillo ocular rojos",
+        "Vientre de color vinoso, con motitas blancas en la garganta"
+      ],
       "seasonality": "Todo el año",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dartford_Warbler_Provencegrasm%C3%BCcke_(Sylvia_undata)_by_J._Dietrich.jpg?width=1280",
-      "imageAttribution": "J. Dietrich (CC BY-SA 3.0) · Wikimedia Commons",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_pitchou_Ichkeul_NP.jpg?width=1280",
+      "imageAttribution": "El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 1,
+      "rarityScore": 2,
       "rarityBasis": {
-        "categoria": "Sin figura de protección",
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF confirma su presencia con 181 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio",
       "taxonomy": {
@@ -18544,19 +18551,18 @@
         "class": "Aves",
         "order": "Passeriformes",
         "family": "Sylviidae",
-        "genus": "Sylvia"
+        "genus": "Curruca"
       },
-      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+      "iucnGlobal": "LC",
+      "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
       "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
-      "reviewNote": null,
-      "eidosTaxonId": 80230,
+      "reviewNote": "Fichada hasta el 2026-08-16 como «Sylvia undata» con eidosTaxonId 80230, que es *Sylvia undata undata*, la subespecie nominal. Es la misma curruca rabilarga que el resto del catálogo tiene como *Curruca undata* (EIDOS 80931); se unifica el nombre y los identificadores.",
+      "eidosTaxonId": 80931,
       "gbifSpeciesKey": 2492949,
       "zepaSiteCode": "ES0000269",
       "habitatIds": [],
       "gbifOccurrences": 181,
-      "visible": false,
-      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
+      "visible": true
     },
     {
       "id": 103,

@@ -694,7 +694,7 @@
         "class": "Magnoliopsida",
         "order": "Lamiales",
         "family": "Lamiaceae",
-        "genus": "Salvia"
+        "genus": "Rosmarinus"
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
@@ -2601,7 +2601,7 @@
       "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "reviewNote": "Fichada hasta el 2026-08-16 como «Sylvia undata» con eidosTaxonId 80230, que es *Sylvia undata undata*, la subespecie nominal. Es la misma curruca rabilarga que el resto del catálogo tiene como *Curruca undata* (EIDOS 80931); se unifica el nombre y los identificadores.",
       "eidosTaxonId": 80931,
-      "gbifSpeciesKey": 10355796,
+      "gbifSpeciesKey": 2492949,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 4,

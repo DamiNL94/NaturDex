@@ -804,31 +804,6 @@
     },
     "descriptionSource": null
   },
-  "Anethum ridolfia": {
-    "commonName": "Anerdo",
-    "kingdom": "flora",
-    "group": null,
-    "habitat": null,
-    "seasonality": "Abril a julio",
-    "rarityScore": 4,
-    "description": null,
-    "descriptionSource": null,
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Plantae",
-      "phylum": "Tracheophyta",
-      "class": "Magnoliopsida",
-      "order": "Apiales",
-      "family": "Apiaceae",
-      "genus": "Ridolfia"
-    },
-    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": null,
-    "imageAttribution": null,
-    "eidosTaxonId": 7791,
-    "rarityBasis": null
-  },
   "Anthus campestris": {
     "commonName": "Bisbita campestre",
     "kingdom": "fauna",
@@ -2224,6 +2199,35 @@
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     }
+  },
+  "Asteriscus spinosus": {
+    "commonName": "Castañuela",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Octubre, noviembre, diciembre, febrero, marzo, abril, mayo, junio, julio",
+    "rarityScore": 1,
+    "description": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Asterales",
+      "family": "Asteraceae",
+      "genus": "Asteriscus"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pallenis_spinosa_3.JPG?width=1280",
+    "imageAttribution": "User:Xemenendura (CC BY-SA 2.1 es) · Wikimedia Commons",
+    "eidosTaxonId": 80443,
+    "rarityBasis": {
+      "categoria": "Sin figura de protección",
+      "ambito": "estatal",
+      "origen": "spainStatus del catálogo universal"
+    },
+    "descriptionSource": null
   },
   "Astragalus alopecuroides": {
     "commonName": "astrágalo de Narbona",
@@ -5175,31 +5179,6 @@
     "eidosTaxonId": 3637,
     "rarityBasis": null
   },
-  "Clinopodium acinos": {
-    "commonName": "Albahaca silvestre",
-    "kingdom": "flora",
-    "group": null,
-    "habitat": "Se encuentra en pedregales y pastos de zonas áridas, entre 500 y 1200 m",
-    "seasonality": "Mayo a agosto",
-    "rarityScore": 3,
-    "description": "Se diferencia por ser especie bienal, en general de menor talla, con hojas estrechas, no revolutas, y de flores más pequeñas, con cáliz hasta de 6 mm y corola como máximo de 8 mm.",
-    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Plantae",
-      "phylum": "Tracheophyta",
-      "class": "Magnoliopsida",
-      "order": "Lamiales",
-      "family": "Lamiaceae",
-      "genus": "Ziziphora"
-    },
-    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Acinos_arvensis_3.jpg?width=1280",
-    "imageAttribution": "Bernd Gliwa (CC BY-SA 2.5) · Wikimedia Commons",
-    "eidosTaxonId": 1795,
-    "rarityBasis": null
-  },
   "Colchicum triphyllum": {
     "commonName": "bulbocodio de primavera",
     "kingdom": "flora",
@@ -5230,35 +5209,6 @@
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     }
-  },
-  "Coloeus monedula": {
-    "commonName": "Grajilla occidental",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 1,
-    "description": "Ave de tamaño más modesto que grajas y cornejas, la grajilla luce un plumaje muy oscuro, que a cierta distancia parece negro. Vista de cerca, sin embargo, se aprecia una cierta tonalidad grisácea en algunas regiones del cuerpo, especialmente en el pecho y en la nuca, que es de un bello color ceniciento. El iris es muy claro, de un azul pálido, casi blanco. Es habitual que las grajillas se organicen en ruidosos bandos que sobrevuelan las rocas y los viejos edificios o que menudean por campos y pastizales en busca de alimento.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Corvidae",
-      "genus": "Corvus"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D0%B0%D0%BB%D0%BA%D0%B0_(Corvus_monedula)%2C_%D0%A6%D0%B0%D1%80%D0%B8%D1%86%D1%8B%D0%BD%D0%BE.jpg?width=1280",
-    "imageAttribution": "Dion Art (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 11769,
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
   },
   "Columba livia": {
     "commonName": "Paloma bravía",
@@ -5828,6 +5778,35 @@
     "eidosTaxonId": 11086,
     "rarityBasis": null
   },
+  "Corvus monedula": {
+    "commonName": "Grajilla occidental",
+    "kingdom": "fauna",
+    "group": "Ave",
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 1,
+    "description": "Ave de tamaño más modesto que grajas y cornejas, la grajilla luce un plumaje muy oscuro, que a cierta distancia parece negro. Vista de cerca, sin embargo, se aprecia una cierta tonalidad grisácea en algunas regiones del cuerpo, especialmente en el pecho y en la nuca, que es de un bello color ceniciento. El iris es muy claro, de un azul pálido, casi blanco. Es habitual que las grajillas se organicen en ruidosos bandos que sobrevuelan las rocas y los viejos edificios o que menudean por campos y pastizales en busca de alimento.",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Corvidae",
+      "genus": "Corvus"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D0%B0%D0%BB%D0%BA%D0%B0_(Corvus_monedula)%2C_%D0%A6%D0%B0%D1%80%D0%B8%D1%86%D1%8B%D0%BD%D0%BE.jpg?width=1280",
+    "imageAttribution": "Dion Art (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 11769,
+    "rarityBasis": {
+      "categoria": "Sin figura de protección",
+      "ambito": "estatal",
+      "origen": "spainStatus del catálogo universal"
+    },
+    "descriptionSource": null
+  },
   "Cosentinia vellea": {
     "commonName": "Cosentinia vellea",
     "kingdom": "flora",
@@ -6131,6 +6110,35 @@
     },
     "descriptionSource": null
   },
+  "Curruca communis": {
+    "commonName": "Curruca zarcera",
+    "kingdom": "fauna",
+    "group": "Ave",
+    "habitat": "Linderos con arbustos y malezas espesas,cultivos, bosquetes, praderas y claros con setos de matorral",
+    "seasonality": "Abril a octubre",
+    "rarityScore": 2,
+    "description": "Curruca de mediano tamaño, de cola relativamente larga y con rectrices externas blancas. El macho presenta el dorso de color pardo, con la cabeza gris en plumaje de cría y parda durante el resto del año, las alas pardo-rojizas, la garganta blanca, y las partes inferiores blanquecinas y con tonos rosados. La hembra muestra tonalidades más apagadas, con la cabeza y el dorso más pardos, la garganta blanquecina y más apagada, y la zona ventral también blanquecina y sin los tonos ligeramente asalmonados del macho. Ambos sexos tienen las patas claras. Los adultos lucen un iris rojizo, que contrasta con un tenue anillo orbital claro.",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Sylviidae",
+      "genus": "Curruca"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flickr_-_Rainbirder_-_Common_Whitethroat_(Sylvia_communis).jpg?width=1280",
+    "imageAttribution": "Steve Garvie from Dunfermline, Fife, Scotland (CC BY-SA 2.0) · Wikimedia Commons",
+    "eidosTaxonId": 80921,
+    "rarityBasis": {
+      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+      "ambito": "estatal",
+      "origen": "spainStatus del catálogo universal"
+    },
+    "descriptionSource": null
+  },
   "Curruca conspicillata": {
     "commonName": "Curruca tomillera",
     "kingdom": "fauna",
@@ -6158,6 +6166,35 @@
     "imageAttribution": "El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons",
     "rarityBasis": {
       "categoria": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)",
+      "ambito": "estatal",
+      "origen": "spainStatus del catálogo universal"
+    },
+    "descriptionSource": null
+  },
+  "Curruca hortensis": {
+    "commonName": "Curruca mirlona",
+    "kingdom": "fauna",
+    "group": "Ave",
+    "habitat": "Gran variedad de medios: bosques abiertos de frondosas.Cría:encinares,alcornocales,pinares,sabinares",
+    "seasonality": "Abril a septiembre",
+    "rarityScore": 2,
+    "description": "Es la mayor y la más corpulenta de nuestras currucas. Tiene las partes superiores grisáceas y las inferiores blanquecinas, con tintes rosados en el pecho y más grisáceos en la parte ventral. Posee pico robusto, iris de color amarillo pálido y garganta blanca. El macho exhibe una franja oscura, casi negra, a modo de antifaz, y presenta la frente y el capirote también muy oscuros; este encapuchado resulta más gris (menos oscuro) en las hembras y pardo en los jóvenes. La cola es oscura, con las rectrices externas de color blanco.",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Sylviidae",
+      "genus": "Curruca"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sylvia_hortensis_Museum_de_Gen%C3%A8ve.JPG?width=1280",
+    "imageAttribution": "Totodu74 (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 80927,
+    "rarityBasis": {
+      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     },
@@ -11625,35 +11662,6 @@
     },
     "descriptionSource": null
   },
-  "Leuzea conifera": {
-    "commonName": "Cuchara de pastor",
-    "kingdom": "flora",
-    "group": null,
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 1,
-    "description": null,
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Plantae",
-      "phylum": "Tracheophyta",
-      "class": "Magnoliopsida",
-      "order": "Asterales",
-      "family": "Asteraceae",
-      "genus": "Rhaponticum"
-    },
-    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Leuzea_conifera_Habito_2010-6-08_DehesaBoyalPuertollano.jpg?width=1280",
-    "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
-    "eidosTaxonId": 643,
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
   "Limodorum abortivum": {
     "commonName": "Mayos",
     "kingdom": "flora",
@@ -12171,6 +12179,31 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/015.Lomelosia_Stellata_(14544073485).jpg?width=1280",
     "imageAttribution": "Por los caminos de Málaga (CC BY 2.0) · Wikimedia Commons",
     "eidosTaxonId": 6032,
+    "rarityBasis": null
+  },
+  "Loncomelos narbonense": {
+    "commonName": "Ajo de lobo",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Abril a junio",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Asparagales",
+      "family": "Asparagaceae",
+      "genus": "Loncomelos"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ornithogalum_narbonense.jpg?width=1280",
+    "imageAttribution": "Iorsh at English Wikipedia (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 6794,
     "rarityBasis": null
   },
   "Lonicera biflora": {
@@ -15163,31 +15196,6 @@
     },
     "descriptionSource": null
   },
-  "Ornithogalum narbonense": {
-    "commonName": "Ajo de lobo",
-    "kingdom": "flora",
-    "group": null,
-    "habitat": null,
-    "seasonality": "Abril a junio",
-    "rarityScore": 3,
-    "description": null,
-    "descriptionSource": null,
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Plantae",
-      "phylum": "Tracheophyta",
-      "class": "Liliopsida",
-      "order": "Asparagales",
-      "family": "Asparagaceae",
-      "genus": "Loncomelos"
-    },
-    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ornithogalum_narbonense.jpg?width=1280",
-    "imageAttribution": "Iorsh at English Wikipedia (Public domain) · Wikimedia Commons",
-    "eidosTaxonId": 6794,
-    "rarityBasis": null
-  },
   "Orobanche gracilis": {
     "commonName": "Jopo",
     "kingdom": "flora",
@@ -15387,35 +15395,6 @@
     "imageAttribution": "Keith Weller (Public domain) · Wikimedia Commons",
     "eidosTaxonId": 29619,
     "rarityBasis": null
-  },
-  "Pallenis spinosa": {
-    "commonName": "Castañuela",
-    "kingdom": "flora",
-    "group": null,
-    "habitat": null,
-    "seasonality": "Octubre, noviembre, diciembre, febrero, marzo, abril, mayo, junio, julio",
-    "rarityScore": 1,
-    "description": null,
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Plantae",
-      "phylum": "Tracheophyta",
-      "class": "Magnoliopsida",
-      "order": "Asterales",
-      "family": "Asteraceae",
-      "genus": "Asteriscus"
-    },
-    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pallenis_spinosa_3.JPG?width=1280",
-    "imageAttribution": "User:Xemenendura (CC BY-SA 2.1 es) · Wikimedia Commons",
-    "eidosTaxonId": 80443,
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
   },
   "Pancratium maritimum": {
     "commonName": "Azucena de mar",
@@ -17757,6 +17736,35 @@
     "eidosTaxonId": 7737,
     "rarityBasis": null
   },
+  "Rhaponticum coniferum": {
+    "commonName": "Cuchara de pastor",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 1,
+    "description": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Asterales",
+      "family": "Asteraceae",
+      "genus": "Rhaponticum"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Leuzea_conifera_Habito_2010-6-08_DehesaBoyalPuertollano.jpg?width=1280",
+    "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 7755,
+    "rarityBasis": {
+      "categoria": "Sin figura de protección",
+      "ambito": "estatal",
+      "origen": "spainStatus del catálogo universal"
+    },
+    "descriptionSource": null
+  },
   "Rhinolophus euryale": {
     "commonName": "Murciélago de herradura mediterráneo",
     "kingdom": "fauna",
@@ -17907,6 +17915,31 @@
     "eidosTaxonId": 7766,
     "rarityBasis": null
   },
+  "Ridolfia segetum": {
+    "commonName": "Anerdo",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Abril a julio",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Apiales",
+      "family": "Apiaceae",
+      "genus": "Ridolfia"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": null,
+    "imageAttribution": null,
+    "eidosTaxonId": 7791,
+    "rarityBasis": null
+  },
   "Rosa canina": {
     "commonName": "Espino",
     "kingdom": "flora",
@@ -17951,7 +17984,7 @@
       "class": "Magnoliopsida",
       "order": "Lamiales",
       "family": "Lamiaceae",
-      "genus": "Salvia"
+      "genus": "Rosmarinus"
     },
     "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
@@ -20278,92 +20311,6 @@
     },
     "descriptionSource": null
   },
-  "Sylvia communis": {
-    "commonName": "Curruca zarcera",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": "Linderos con arbustos y malezas espesas,cultivos, bosquetes, praderas y claros con setos de matorral",
-    "seasonality": "Abril a octubre",
-    "rarityScore": 2,
-    "description": "Curruca de mediano tamaño, de cola relativamente larga y con rectrices externas blancas. El macho presenta el dorso de color pardo, con la cabeza gris en plumaje de cría y parda durante el resto del año, las alas pardo-rojizas, la garganta blanca, y las partes inferiores blanquecinas y con tonos rosados. La hembra muestra tonalidades más apagadas, con la cabeza y el dorso más pardos, la garganta blanquecina y más apagada, y la zona ventral también blanquecina y sin los tonos ligeramente asalmonados del macho. Ambos sexos tienen las patas claras. Los adultos lucen un iris rojizo, que contrasta con un tenue anillo orbital claro.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Sylviidae",
-      "genus": "Curruca"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flickr_-_Rainbirder_-_Common_Whitethroat_(Sylvia_communis).jpg?width=1280",
-    "imageAttribution": "Steve Garvie from Dunfermline, Fife, Scotland (CC BY-SA 2.0) · Wikimedia Commons",
-    "eidosTaxonId": 80921,
-    "rarityBasis": {
-      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
-  "Sylvia hortensis": {
-    "commonName": "Curruca mirlona",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": "Gran variedad de medios: bosques abiertos de frondosas.Cría:encinares,alcornocales,pinares,sabinares",
-    "seasonality": "Abril a septiembre",
-    "rarityScore": 2,
-    "description": "Es la mayor y la más corpulenta de nuestras currucas. Tiene las partes superiores grisáceas y las inferiores blanquecinas, con tintes rosados en el pecho y más grisáceos en la parte ventral. Posee pico robusto, iris de color amarillo pálido y garganta blanca. El macho exhibe una franja oscura, casi negra, a modo de antifaz, y presenta la frente y el capirote también muy oscuros; este encapuchado resulta más gris (menos oscuro) en las hembras y pardo en los jóvenes. La cola es oscura, con las rectrices externas de color blanco.",
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Sylviidae",
-      "genus": "Curruca"
-    },
-    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sylvia_hortensis_Museum_de_Gen%C3%A8ve.JPG?width=1280",
-    "imageAttribution": "Totodu74 (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 80927,
-    "rarityBasis": {
-      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "descriptionSource": null
-  },
-  "Sylvia undata": {
-    "commonName": "Sylvia undata",
-    "kingdom": "fauna",
-    "group": "Ave",
-    "habitat": null,
-    "seasonality": "Todo el año",
-    "rarityScore": 1,
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    },
-    "description": null,
-    "descriptionSource": null,
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Passeriformes",
-      "family": "Sylviidae",
-      "genus": "Sylvia"
-    },
-    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dartford_Warbler_Provencegrasm%C3%BCcke_(Sylvia_undata)_by_J._Dietrich.jpg?width=1280",
-    "imageAttribution": "J. Dietrich (CC BY-SA 3.0) · Wikimedia Commons"
-  },
   "Tachybaptus ruficollis": {
     "commonName": "Zampullín común",
     "kingdom": "fauna",
@@ -22326,6 +22273,31 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Ziziphora acinos": {
+    "commonName": "Albahaca silvestre",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": "Se encuentra en pedregales y pastos de zonas áridas, entre 500 y 1200 m",
+    "seasonality": "Mayo a agosto",
+    "rarityScore": 3,
+    "description": "Se diferencia por ser especie bienal, en general de menor talla, con hojas estrechas, no revolutas, y de flores más pequeñas, con cáliz hasta de 6 mm y corola como máximo de 8 mm.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Lamiales",
+      "family": "Lamiaceae",
+      "genus": "Ziziphora"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Acinos_arvensis_3.jpg?width=1280",
+    "imageAttribution": "Bernd Gliwa (CC BY-SA 2.5) · Wikimedia Commons",
+    "eidosTaxonId": 1795,
+    "rarityBasis": null
   },
   "Ziziphus lotus": {
     "commonName": "Azufaifo",
