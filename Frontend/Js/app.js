@@ -25,8 +25,9 @@ import {
   sidebar, speciesList, searchInput, catalogControls, catalogPanel,
   backToHabitatsBtn, catalogCrumb, catalogCrumbLabel, parkTitle, parkEyebrow, parkStats, parkProgressWrap,
   progressPanel, invasorasPanel, diccionarioPanel, basicNotice, detailPanel, sheetClose, sheetScrim,
-  saveOfflineBtn, connStatus, layersToggle, layersPanel, explorerToggle
+  saveOfflineBtn, connStatus, layersToggle, layersPanel, explorerToggle, rarityFilter
 } from './dom.js';
+import { FILTROS_RAREZA } from './rareza.js';
 import {
   renderHabitatGroups, renderHabitatCatalog, renderSpeciesList, renderCatalogBody,
   renderSummary, renderProgress, renderDetail, renderProgressTab, renderInvasoras,
@@ -650,6 +651,23 @@ document.querySelectorAll('.filter-button').forEach(button => {
     renderSpeciesList();
   });
 });
+
+// El desplegable de rareza se rellena aquí y no en el HTML para que las cinco opciones —y el orden
+// de la escalera— vivan en un solo sitio, `Js/rareza.js`, que es donde está el criterio.
+if (rarityFilter) {
+  rarityFilter.innerHTML = '';
+  for (const opcion of FILTROS_RAREZA) {
+    const nodo = document.createElement('option');
+    nodo.value = opcion.valor;
+    nodo.textContent = opcion.etiqueta;
+    rarityFilter.appendChild(nodo);
+  }
+  rarityFilter.value = state.rarityFilter;
+  rarityFilter.addEventListener('change', () => {
+    state.rarityFilter = rarityFilter.value;
+    renderSpeciesList();
+  });
+}
 
 document.querySelectorAll('.view-tab').forEach(button => {
   button.addEventListener('click', () => setView(button.dataset.view));

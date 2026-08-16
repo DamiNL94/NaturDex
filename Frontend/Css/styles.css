@@ -1350,3 +1350,53 @@ body.visor-open{overflow:hidden}
 .achievement-toast.rarity-poco-comun{border-bottom-color:var(--sea)}
 .achievement-toast.rarity-raro{border-bottom-color:var(--bark)}
 .achievement-toast.rarity-legendario{border-bottom-color:var(--brass)}
+
+/* ================================================================================================
+   Rareza legal: filtro del catálogo, distintivo de la tarjeta y cartel de advertencia
+   ------------------------------------------------------------------------------------------------
+   El cartel NO es un aviso más del montón: es lo único que se interpone entre una mecánica que
+   premia coleccionar rarezas y una persona con un taxón catalogado delante. Por eso va con el marco
+   completo y arriba de la ficha, antes de la descripción, y no en un pie de 12 px al final.
+   Los tres niveles y sus textos están en Js/rareza.js.
+   ================================================================================================ */
+.rareza-filtro{margin-top:12px}
+.rareza-filtro label{display:block;margin-bottom:6px;color:var(--muted);font-size:var(--fs-sm);font-weight:700}
+.rareza-filtro select{width:100%;height:42px;padding:0 10px;border:1px solid var(--line);border-radius:8px;color:inherit;background:var(--panel)}
+
+/* Distintivo de la tarjeta. El de una especie amenazada usa el rojo de `--danger`, el mismo que
+   «prioritaria», porque son la misma clase de aviso; el resto se queda en el gris de los metadatos
+   para no convertir la lista en un semáforo. */
+.badge.rareza{color:var(--muted);background:#eef1ea;letter-spacing:.04em}
+.badge.rareza.amenazada{color:var(--danger);background:#f7e8e3}
+
+.proteccion-aviso{margin:14px 0;padding:12px 14px;border:1px solid var(--line);border-left-width:5px;border-radius:8px;background:#fbf3de}
+.proteccion-aviso p{margin:0 0 8px}
+.proteccion-titulo{font-size:var(--fs-md);font-weight:800;line-height:1.35}
+.proteccion-entrada{font-size:var(--fs-sm);line-height:1.5}
+.proteccion-consejos{display:grid;gap:6px;margin:0 0 8px;padding-left:18px;font-size:var(--fs-sm);line-height:1.5}
+.proteccion-nota{margin:0;font-size:var(--fs-xs);line-height:1.45;opacity:.85}
+/* Tramo 5: el rojo de peligro. Tramo 4: el ámbar de los avisos. Sin tramo calculado: el azul de lo
+   informativo, que dice «esto no se ha comprobado» sin gritar lo que no consta. */
+.proteccion-aviso.critico{border-color:#e3b6ac;border-left-color:var(--danger);background:#f7e8e3;color:#7a2e1c}
+.proteccion-aviso.alto{border-color:#f0d38a;border-left-color:var(--sun);background:#fbf3de;color:#6b4a00}
+.proteccion-aviso.desconocido{border-color:#bcd7e3;border-left-color:var(--sea);background:#e8f2f6;color:#134655}
+
+/* El recordatorio junto al botón de marcar. La ficha es larga y el cartel de arriba queda a varias
+   pantallas de distancia justo cuando se va a pulsar el botón. */
+.proteccion-recordatorio{margin:14px 0 0;padding:8px 10px;border-radius:8px;font-size:var(--fs-xs);line-height:1.45;background:#eef1ea;color:var(--ink)}
+.proteccion-recordatorio.critico{background:#f7e8e3;color:#7a2e1c}
+.proteccion-recordatorio.alto{background:#fbf3de;color:#6b4a00}
+.proteccion-recordatorio.desconocido{background:#e8f2f6;color:#134655}
+
+/* El orden importa: el recordatorio genérico va ANTES que sus tres variantes, o al tener la misma
+   especificidad se las comería por venir después. */
+:root[data-theme="dark"] .rareza-filtro select{background:var(--panel);border-color:var(--line)}
+:root[data-theme="dark"] .badge.rareza{background:#22302a;color:var(--muted)}
+:root[data-theme="dark"] .proteccion-recordatorio{background:#22302a;color:var(--ink)}
+:root[data-theme="dark"] .badge.rareza.amenazada,
+:root[data-theme="dark"] .proteccion-aviso.critico,
+:root[data-theme="dark"] .proteccion-recordatorio.critico{background:#33201a;color:#f0b7a5}
+:root[data-theme="dark"] .proteccion-aviso.alto,
+:root[data-theme="dark"] .proteccion-recordatorio.alto{background:#2b2415;border-color:#5c4a1c;color:#e8d5a3}
+:root[data-theme="dark"] .proteccion-aviso.desconocido,
+:root[data-theme="dark"] .proteccion-recordatorio.desconocido{background:#152a33;border-color:#245061;color:#a9d8e6}

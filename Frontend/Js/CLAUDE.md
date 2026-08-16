@@ -23,7 +23,7 @@ usuario**: eso es de `app.js`.
 |---|---|---|
 | `render/catalogo.js` | 108 | Catálogo en tres niveles: grupos de hábitats → hábitats → especies |
 | `render/resumen.js` | 109 | Cabecera del parque, ficha base (`status: basic`) y barra de progreso |
-| `render/detalle.js` | 214 | Ficha de especie, de hábitat y de punto de interés |
+| `render/detalle.js` | 220 | Ficha de especie, de hábitat y de punto de interés. La de especie abre con el **cartel de advertencia** (`rareza.js`) cuando el taxón está amenazado o no tiene tramo calculado |
 | `render/invasoras.js` | 55 | Pestaña de invasoras y su ficha |
 | `render/progreso.js` | 286 | Progreso del parque, **medallero** de cuenta (rareza a la vista y techo del catálogo) e historial de salidas verificadas |
 | `render/fallbacks.js` | 64 | Sustitutos de imagen rota (`window.__*Fallback`, los invoca el `onerror` del HTML generado). Sin exports |
@@ -89,11 +89,12 @@ secciones cumple la misma función: abre solo el rango que necesites.
 
 | Módulo | Líneas | Qué resuelve |
 |---|---|---|
-| `state.js` | 177 | Única fuente de verdad del estado + selectores derivados y constantes |
+| `state.js` | 205 | Única fuente de verdad del estado + selectores derivados y constantes. **Los selectores del catálogo devuelven la lista ya ordenada alfabéticamente**: el dato llega en un orden desde el `park.json` (por `id`) y en otro desde la API (`is_featured DESC, common_name ASC`), y ordenar aquí es lo que hace que el mismo parque se vea igual con y sin cobertura |
 | `dom.js` | 75 | Referencias centralizadas a los nodos del DOM del parque |
 | `data.js` | 297 | Registro, manifiesto, datos y geo + progreso local-first. **Todo lo que habla con red o caché pasa por aquí.** La API tiene prioridad sobre el `park.json` |
 | `api.js` | 82 | **Único** punto de contacto con `Backend/Api/`: corte por tiempo, errores, `apiSignal()` |
-| `util.js` | 298 | Helpers puros: sin estado, sin DOM, sin Leaflet. Aquí vive la plantilla `` html`` `` |
+| `util.js` | 320 | Helpers puros: sin estado, sin DOM, sin Leaflet. Aquí viven la plantilla `` html`` `` y el **colador alfabético español**, que ordena el catálogo, las chips de hábitat y el diccionario |
+| `rareza.js` | 190 | La escalera de rareza **legal** en la app: el filtro del catálogo y el **cartel de advertencia** de las especies amenazadas. Misma escalera que `Tools/lib/rareza.js`, vista desde el otro lado. El cartel cita siempre la categoría y la norma, y una ficha **sin tramo calculado también avisa** (regla nº 9 del `CLAUDE.md` raíz) |
 | `layers.js` | 279 | Panel de capas propio (sustituye al control nativo de Leaflet) |
 | `habitat-groups.js` | 212 | **Los siete grupos de hábitat**, ordenados del mar hacia dentro. Trama y tinta idénticas en mapa, leyenda y catálogo. Criterio: código HIC |
 | `presence.js` | 469 | **Presencia verificada**: la prueba de que estás dentro del espacio. Es lo que hace que los logros signifiquen algo |

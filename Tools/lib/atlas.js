@@ -23,6 +23,23 @@
  * Vive en `lib/` porque lo necesitan dos herramientas: `atlas-hic-especies.js` (que cruza con el
  * catálogo ya escrito de un espacio) y `build-species-seleccion.js` (que lo cruza con los candidatos
  * de GBIF, antes de que el espacio tenga catálogo).
+ *
+ * CÓMO SE GENERA EL TEXTO, cuando no hay poppler
+ * ----------------------------------------------
+ * `fuentes/atlas.txt` no se versiona (es reproducible), y la receta escrita en todas partes es
+ * `pdftotext -layout`. Pero poppler no siempre está instalado y no siempre se puede instalar, y sin
+ * el texto el Atlas no existe — que desde el 2026-08-16 es peor que antes, porque el Atlas es el
+ * nivel 2 de la puerta de entrada al catálogo (regla nº 3 del CLAUDE.md). La alternativa que
+ * funciona sin instalar nada del sistema:
+ *
+ *     pip install --target=<dir> pypdf
+ *     python3 -c "import pypdf; r=pypdf.PdfReader('Docs/Atlas y Manual de los Habitat de Espana.pdf'); \
+ *       open('Tools/catalogo-nacional/fuentes/atlas.txt','w').write('\\n'.join(p.extract_text() or '' for p in r.pages))"
+ *
+ * Da 473 páginas y 344 bloques «Especies características», que es el formato SIN layout — el que
+ * este módulo aprendió a leer justo para esto. Si el `cryptography` del sistema está roto, pypdf
+ * revienta al importar: se rodea poniendo delante en `PYTHONPATH` un paquete `cryptography` de
+ * mentira cuyo `__init__.py` sea `raise ImportError`, que es lo que pypdf ya sabe manejar.
  */
 
 const fs = require('fs');

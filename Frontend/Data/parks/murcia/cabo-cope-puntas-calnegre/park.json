@@ -108,10 +108,6 @@
       "audio": null,
       "audioTranscript": null,
       "speciesIds": [
-        2,
-        4,
-        7,
-        8,
         15,
         20,
         30,
@@ -285,12 +281,8 @@
       "audioTranscript": null,
       "speciesIds": [
         1,
-        2,
-        3,
         5,
         6,
-        9,
-        11,
         13,
         15,
         17,
@@ -314,9 +306,6 @@
         68,
         69,
         70,
-        73,
-        74,
-        75,
         83,
         84,
         85,
@@ -406,7 +395,6 @@
       "audioTranscript": null,
       "speciesIds": [
         1,
-        3,
         14,
         16,
         17,
@@ -492,7 +480,6 @@
         26,
         27,
         32,
-        72,
         96,
         102,
         125,
@@ -626,7 +613,6 @@
       "audio": null,
       "audioTranscript": null,
       "speciesIds": [
-        78,
         134,
         135,
         136,
@@ -936,10 +922,7 @@
       "eidosTaxonId": 16302,
       "gbifSpeciesKey": 5844449,
       "zepaSiteCode": "ES0000261",
-      "habitatIds": [
-        "acantilados",
-        "matorral-semiarido"
-      ],
+      "habitatIds": [],
       "imageAttribution": "Paco Gómez from Castellón, Spain (CC BY-SA 2.0) · Wikimedia Commons",
       "rarityLocal": 5,
       "rarityLocalBasis": {
@@ -1088,10 +1071,7 @@
       "eidosTaxonId": 11363,
       "gbifSpeciesKey": 2494394,
       "zepaSiteCode": "ES0000261",
-      "habitatIds": [
-        "matorral-semiarido",
-        "azufaifar"
-      ],
+      "habitatIds": [],
       "imageAttribution": "Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons",
       "rarityLocal": 4,
       "rarityLocalBasis": {
@@ -1895,9 +1875,7 @@
       "eidosTaxonId": 11887,
       "gbifSpeciesKey": 2482100,
       "zepaSiteCode": "ES0000261",
-      "habitatIds": [
-        "matorral-semiarido"
-      ],
+      "habitatIds": [],
       "imageAttribution": "Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons",
       "rarityLocal": 3,
       "rarityLocalBasis": {
@@ -2502,9 +2480,7 @@
       "eidosTaxonId": 10917,
       "gbifSpeciesKey": 5959092,
       "zepaSiteCode": "ES0000261",
-      "habitatIds": [
-        "acantilados"
-      ],
+      "habitatIds": [],
       "imageAttribution": "Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons",
       "rarityLocal": 3,
       "rarityLocalBasis": {
@@ -3050,9 +3026,7 @@
       "eidosTaxonId": 10664,
       "gbifSpeciesKey": 2480311,
       "zepaSiteCode": "ES0000261",
-      "habitatIds": [
-        "veg-anual-desechos-marinos"
-      ],
+      "habitatIds": [],
       "imageAttribution": "Zeynel Cebeci (CC BY-SA 4.0) · Wikimedia Commons",
       "rarityLocal": 4,
       "rarityLocalBasis": {
@@ -3247,9 +3221,7 @@
       "eidosTaxonId": 11102,
       "gbifSpeciesKey": 2490669,
       "zepaSiteCode": "ES0000261",
-      "habitatIds": [
-        "matorral-semiarido"
-      ],
+      "habitatIds": [],
       "imageAttribution": "Ashraf Kotb (CC BY-SA 3.0) · Wikimedia Commons",
       "rarityLocal": 2,
       "rarityLocalBasis": {
@@ -3299,9 +3271,7 @@
       "eidosTaxonId": 12316,
       "gbifSpeciesKey": 9330514,
       "zepaSiteCode": "ES0000261",
-      "habitatIds": [
-        "matorral-semiarido"
-      ],
+      "habitatIds": [],
       "imageAttribution": "Adrian198cm (Public domain) · Wikimedia Commons",
       "rarityLocal": 3,
       "rarityLocalBasis": {
@@ -3351,9 +3321,7 @@
       "eidosTaxonId": 11592,
       "gbifSpeciesKey": 5231236,
       "zepaSiteCode": "ES0000261",
-      "habitatIds": [
-        "matorral-semiarido"
-      ],
+      "habitatIds": [],
       "imageAttribution": "Andrew Thomas from Shrewsbury, UK (CC BY-SA 2.0) · Wikimedia Commons",
       "rarityLocal": 3,
       "rarityLocalBasis": {
@@ -3555,9 +3523,7 @@
       "eidosTaxonId": 80933,
       "gbifSpeciesKey": 10943800,
       "zepaSiteCode": "ES0000261",
-      "habitatIds": [
-        "acantilados"
-      ],
+      "habitatIds": [],
       "imageAttribution": "Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons",
       "rarityLocal": 4,
       "rarityLocalBasis": {
@@ -3907,9 +3873,7 @@
       "eidosTaxonId": 80931,
       "gbifSpeciesKey": 10355796,
       "zepaSiteCode": "ES0000261",
-      "habitatIds": [
-        "matorral-semiarido"
-      ],
+      "habitatIds": [],
       "imageAttribution": "El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons",
       "rarityLocal": 3,
       "rarityLocalBasis": {
@@ -4816,9 +4780,7 @@
       "eidosTaxonId": 11963,
       "gbifSpeciesKey": 2481047,
       "zepaSiteCode": "ES0000261",
-      "habitatIds": [
-        "acantilados"
-      ],
+      "habitatIds": [],
       "imageAttribution": "Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons",
       "rarityLocal": 3,
       "rarityLocalBasis": {
@@ -7277,9 +7239,7 @@
       "eidosTaxonId": 10734,
       "gbifSpeciesKey": 2490681,
       "zepaSiteCode": "ES0000261",
-      "habitatIds": [
-        "matorral-halofilo"
-      ],
+      "habitatIds": [],
       "imageAttribution": "Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons",
       "rarityLocal": 3,
       "rarityLocalBasis": {

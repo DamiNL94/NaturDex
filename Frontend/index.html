@@ -225,6 +225,15 @@
                         <button class="filter-button" data-filter="flora" type="button" aria-pressed="false">Flora</button>
                         <button class="filter-button" data-filter="seen" type="button" aria-pressed="false">Vistas</button>
                     </div>
+                    <!-- Filtro por tramo de rareza legal. Va en un <select> y no en otra fila de
+                         botones a propósito: son cinco opciones con texto largo y la segmentada de
+                         arriba ya ocupa el ancho entero en móvil. El rótulo dice de dónde sale el
+                         tramo —de la categoría legal, no de una opinión— porque es lo que separa
+                         este filtro de un "nivel de dificultad" de videojuego. Ver Js/rareza.js. -->
+                    <div class="rareza-filtro" id="rarityFilterGroup">
+                        <label for="rarityFilter">Rareza (categoría legal de protección)</label>
+                        <select id="rarityFilter"></select>
+                    </div>
                     <!-- Puerta al diccionario en móvil, donde no hay pestañas: se pone aquí, junto
                          al buscador del catálogo, que es donde se está leyendo cuando aparece una
                          palabra que no se entiende. En escritorio lo oculta el CSS: allí ya hay

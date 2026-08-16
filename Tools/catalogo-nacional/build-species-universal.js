@@ -36,7 +36,7 @@
  *   habitat           EIDOS `v_atributos_pliniancore`, atributo «Hábitat», resumido a su primera
  *                     oración (el campo de la ficha es una etiqueta corta, no un párrafo). Se deja
  *                     VACÍO si esa oración nombra un territorio —sería un campo universal diciendo
- *                     algo local, regla nº 3— o si no cabe entera.
+ *                     algo local, regla nº 4— o si no cabe entera.
  *   iucnGlobal        EIDOS `v_estadoconservacion`, fila UICN vigente de ámbito Mundial.
  *   spainStatus       EIDOS `v_estadolegal`, SOLO las filas vigentes de ámbito Nacional.
  *   image             Wikidata P225 → P18 → Wikipedia → Commons, vía lib/wikimedia.js (la misma
@@ -262,7 +262,7 @@ function limpiar(texto) {
   return t || null;
 }
 
-// Territorios que convierten un texto en LOCAL. La regla nº 3 de CLAUDE.md es que lo universal no
+// Territorios que convierten un texto en LOCAL. La regla nº 4 de CLAUDE.md es que lo universal no
 // puede nombrar un sitio concreto: el atributo «Hábitat» de EIDOS a menudo lo hace («En Murcia, los
 // ejemplares naturales conocidos…»), y esa frase es falsa en cuanto la especie se sirve en otra
 // comunidad. El validador tiene su propia lista, pero solo caza nombres de espacios protegidos; esta

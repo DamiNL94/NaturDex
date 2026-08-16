@@ -44,7 +44,15 @@ node Tools/catalogo-nacional/adopt-habitats.js --park <SLUG>         # escribir
 lo lleva a `Frontend/`, sincroniza `park.json` y recalcula los contadores del manifiesto. Si aparecen
 códigos HIC nuevos, **amplía `data/hic-nombres.json` y `data/hic-prioritarios.json` antes** (ver [trampas](TRAMPAS-CONOCIDAS.md)).
 
-**Capa 3 · especies — el orden importa, de más sólido a más ruidoso**
+**Capa 3 · especies — el orden de prioridad de las fuentes**
+
+> **Legislación → EIDOS → GBIF, y GBIF solo corrobora** (regla nº 3 del `CLAUDE.md`). Ninguna especie
+> entra porque GBIF tenga avistamientos suyos dentro del límite: eso mete olivos de bancal y
+> ornamentales de una casa de campo. Manda lo que la norma del espacio y el formulario del sitio
+> **enumeran**; después la figura legal de EIDOS y el Atlas; y GBIF, al final, para confirmar que lo
+> anterior está aquí. Los pasos de abajo siguen ejecutándose en este orden por razones técnicas —el
+> barrido de GBIF hay que tenerlo antes de poder cruzar nada—, pero **quien decide quién entra es el
+> nivel de la fuente**, no quién se ejecutó primero.
 
 0. **El anexo normativo del espacio**, antes que nada. Mira primero
    [`data/normativa-espacios.json`](../../Tools/catalogo-nacional/data/normativa-espacios.json): si
@@ -65,13 +73,16 @@ códigos HIC nuevos, **amplía `data/hic-nombres.json` y `data/hic-prioritarios.
    se anota en `nota`, no se corrige en silencio. Lo que no case con GBIF saldrá en
    `anexo_sin_constancia`, que es exactamente donde tiene que verse.
    Es la evidencia más fuerte de las cuatro —la única que afirma la pertenencia *a este espacio*— y
-   la que salva del filtro de presencia a lo que la norma respalda. **Si no hay anexo con especies,
-   no inventes uno**: deja el espacio sin entrada y la herramienta lo dirá («NO consultado») en vez
-   de callarlo. No es puerta de entrada: lo que la norma enumere y GBIF no confirme sale en
-   `anexo_sin_constancia` como hueco a contrastar en campo, no como ficha.
-1. **GBIF ∩ polígonos** → `gbif-habitats.js` → evidencia `observada_gbif`. Es lo que trae las
-   **candidatas**, y por eso va primero: en un espacio que arranca con 0 especies, el Atlas no puede
-   ir antes porque cruza contra la flora *que el parque ya tiene* y devolvería 0 enlaces.
+   **es la puerta de entrada**: lo que la norma enumera entra en el catálogo aunque GBIF no lo
+   confirme, y sale además en `anexo_sin_constancia` para contrastarlo en campo. **Si no hay anexo
+   con especies, no inventes uno**: deja el espacio sin entrada y la herramienta lo dirá («NO
+   consultado») en vez de callarlo. Y ten presente lo que eso implica: **un espacio sin plan de
+   gestión transcrito tendrá un catálogo mucho más corto**, porque se queda solo con lo que respalden
+   el formulario del sitio, la figura legal y el Atlas. Transcribir el plan es lo que lo arregla.
+1. **GBIF ∩ polígonos** → `gbif-habitats.js` → evidencia `observada_gbif`. Va primero por orden de
+   ejecución, no de autoridad: es lo que hace falta tener descargado para poder **corroborar** con él
+   los niveles 1 y 2, y en un espacio que arranca con 0 especies el Atlas no puede ir antes porque
+   cruza contra la flora *que el parque ya tiene*. **Por sí solo no da de alta nada.**
    ⚠️ `--max-occ` vale 40.000 por defecto y trunca **por offset**, que no es una muestra al azar:
    súbelo por encima del total del bbox o te quedas con un catálogo hecho con la mitad de los datos.
 2. **Atlas de Hábitats** → `atlas-hic-especies.js` → evidencia `caracteristica`. Aquí es **filtro**,

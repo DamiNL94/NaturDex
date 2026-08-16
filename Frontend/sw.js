@@ -30,7 +30,11 @@
 // v59: Data/achievements.json sube a v3 (umbrales recalibrados, dos métricas nuevas y tres logros
 //      más) y la rejilla pasa a ser un medallero. El JSON ya estaba precacheado, pero un cliente con
 //      la v2 en caché seguiría evaluando con los umbrales viejos hasta que caducara el armazón.
-var VERSION = 'v60';
+// v61: entra Js/rareza.js (filtro del catálogo por tramo de rareza legal y cartel de advertencia de
+//      las especies amenazadas). Lo importan state.js, render/catalogo.js, render/detalle.js y
+//      app.js, así que sin precachearlo la app NO ARRANCA sin cobertura: los cuatro resolverían a
+//      un 404. Es exactamente el fallo del que avisa el comentario de arriba.
+var VERSION = 'v61';
 var RUNTIME_CACHE = 'naturdex-runtime-' + VERSION;
 
 // Armazón mínimo que se intenta precachear en la instalación (best-effort).
@@ -68,7 +72,7 @@ var SHELL_ASSETS = [
   'Js/util.js', 'Js/state.js', 'Js/api.js', 'Js/habitat-groups.js', 'Js/dom.js', 'Js/data.js',
   'Js/layers.js', 'Js/explorer.js', 'Js/audio.js', 'Js/glossary.js', 'Js/fitosociologia.js',
   'Js/tutorial.js', 'Js/presence.js', 'Js/notice.js', 'Js/profile.js', 'Js/visor.js',
-  'Js/diccionario.js', 'Js/app.js',
+  'Js/diccionario.js', 'Js/rareza.js', 'Js/app.js',
 
   // Barriles + sus trozos. El barril solo reexporta: SIN los trozos la app no arranca offline.
   'Js/render.js',

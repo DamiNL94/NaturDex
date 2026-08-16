@@ -21,6 +21,8 @@ export const catalogCrumbLabel = document.querySelector('#catalogCrumbLabel');
 export const backToHabitatsBtn = document.querySelector('#backToHabitats');
 export const catalogTitle = document.querySelector('#catalogTitle');
 export const speciesFilterGroup = document.querySelector('#speciesFilterGroup');
+export const rarityFilterGroup = document.querySelector('#rarityFilterGroup');
+export const rarityFilter = document.querySelector('#rarityFilter');
 export const searchLabel = document.querySelector('#searchLabel');
 
 // Cabecera del parque (resumen y progreso)
