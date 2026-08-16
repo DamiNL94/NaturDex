@@ -9,13 +9,14 @@
     "parque": "Data/parks/murcia/calblanque-monte-cenizas-pena-aguila/geo/parque.geojson",
     "lic": "Data/parks/murcia/calblanque-monte-cenizas-pena-aguila/geo/lic.geojson",
     "zepa": "Data/parks/murcia/calblanque-monte-cenizas-pena-aguila/geo/zepa.geojson",
-    "trails": "Data/parks/murcia/calblanque-monte-cenizas-pena-aguila/geo/trails.geojson"
+    "trails": "Data/parks/murcia/calblanque-monte-cenizas-pena-aguila/geo/trails.geojson",
+    "habitats": "Data/parks/murcia/calblanque-monte-cenizas-pena-aguila/geo/habitats.geojson"
   },
   "images": [],
   "audio": [],
   "counts": {
     "species": 0,
-    "habitats": 0,
+    "habitats": 18,
     "pointsOfInterest": 0,
     "images": 0,
     "assetBytes": 0
