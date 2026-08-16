@@ -21,7 +21,7 @@
 // punto de desaparecer» no lo sería, y es lo que haría un texto escrito a ojo.
 //
 // UNA FICHA SIN TRAMO TAMBIÉN AVISA
-// Es la regla nº 8 del CLAUDE.md llevada a la pantalla: «nadie lo ha mirado» no es «no está
+// Es la regla nº 9 del CLAUDE.md llevada a la pantalla: «nadie lo ha mirado» no es «no está
 // amenazada». Igual que la exportación Darwin Core generaliza la coordenada de un taxón sin tramo
 // calculado, aquí se enseña el aviso de precaución. Publicar de menos se corrige; acercarse de más,
 // no.

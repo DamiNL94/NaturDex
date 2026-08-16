@@ -15,41 +15,47 @@
  * de Sierra de la Pila. Carrascoy tiene 1.456, y la cifra equivocada llegó a repetirse en un commit
  * y en un informe antes de que alguien la cotejara.)
  *
- * Los filtros encadenados, que son los que fijó la selección de Carrascoy y aquí se aplican
- * igual para todos los espacios:
+ * EL ORDEN DE PRIORIDAD DE LAS FUENTES
+ * ------------------------------------
+ * Primero la LEGISLACIÓN, después EIDOS, y GBIF **solo para corroborar**. Ese orden es la decisión
+ * de producto que gobierna este fichero, y hasta el 2026-08-16 estaba invertido: GBIF era la puerta
+ * y el anexo normativo «daba evidencia, no entrada».
  *
- *   1. CONSTANCIA. Solo entra lo que GBIF ha registrado DENTRO de los polígonos de hábitat del
- *      espacio. Ninguna especie entra por figurar en EIDOS ni por estar fichada en otro parque.
- *   2. AUTOCTONÍA. Se excluye lo que la Lista Patrón del IEPNB marca como «Especie no nativa»
- *      (campo `origen` de v_taxonomia), que es lo que quita ornamentales y exotismos.
- *   3. PRESENCIA CONSIDERABLE, y solo para las que no tienen respaldo documental: al menos
- *      MIN_OCURRENCIAS registros repartidos en MIN_HABITATS hábitats. Las protegidas, las
- *      características del Atlas y las que enumera el anexo normativo o el formulario oficial del
- *      sitio conservan su plaza aunque tengan pocos registros, porque su respaldo no es el número
- *      de avistamientos.
- *   3 bis. RESPALDO DE SITIO PARA LAS AVES (más abajo, con su porqué).
- *   4. ALCANCE TAXONÓMICO (más abajo, con su lista de clases).
+ * El motivo del cambio: **GBIF no distingue lo característico de lo que pasaba por allí**. Sus
+ * registros son avistamientos subidos por gente, y dentro del límite de un parque caen olivos de un
+ * bancal abandonado, ornamentales de una casa de campo y bichos en tránsito. Se ve en el propio
+ * catálogo: *Olea europaea* subsp. *europaea* —el olivo CULTIVADO, no el acebuche— está fichado en
+ * seis espacios, en uno de ellos con un solo registro. La app existe para enseñar la riqueza de un
+ * espacio protegido y para que la gente lo valore; un catálogo con el olivo del bancal dentro dice
+ * lo contrario de lo que pretende.
  *
- * Por qué GBIF sigue siendo la puerta y el anexo no
- * -------------------------------------------------
- * El anexo de un PORN o un PRUG es mejor fuente que GBIF —es una afirmación oficial y por escrito de
- * que la especie forma parte de ESTE espacio, no un registro que alguien subió—, y por eso da la
- * evidencia más fuerte de las cuatro. Pero no puede ser la puerta de entrada, por dos motivos que el
- * propio rollout dejó documentados:
+ * Los tres niveles, y qué exige cada uno:
  *
- *   · No existe para todos. El Anexo I del PRUG de Sierra Espuña NO contiene inventario de valores:
- *     lo encarga como acción pendiente. El PORN de Carrascoy tiene tres inventarios y ninguno es de
- *     especies. Con el anexo de puerta, esos espacios entrarían con cero especies y el de al lado
- *     con doscientas: la misma incomparabilidad que el filtro de alcance taxonómico se escribió para
- *     evitar. (De Sierra de la Pila se decía aquí que «no se pudo ni abrir»; era falso, y el
- *     2026-08-16 se transcribieron los 244 taxones del §2.2 de su PRUG. El documento llevaba meses
- *     leído: lo que faltaba era mirar el apartado que no era de Fase 3.)
- *   · Enumera lo protegido, no lo presente. Un catálogo hecho solo de anexos deja fuera la encina y
- *     deja dentro el endemismo del que hay tres rodales.
+ *   NIVEL 1 · LEGISLACIÓN — el anexo normativo del PORN/PRUG o del decreto de declaración, y el
+ *      Formulario Normalizado de Datos del sitio Red Natura 2000. Son las únicas fuentes que
+ *      afirman por escrito que la especie forma parte de ESTE espacio. **Entran sin exigirles
+ *      constancia en GBIF**: que un barrido de ciencia ciudadana no haya visto un taxón no
+ *      desmiente a la norma que lo inventaría. GBIF, si lo confirma, lo corrobora y ya está.
+ *   NIVEL 2 · EIDOS Y ATLAS — la figura legal de protección (v_estadolegal, estatal o autonómica) y
+ *      las especies características del HIC según el «Atlas y Manual de los Hábitats». Estas dos
+ *      dicen qué ES el taxón y de qué hábitat es propio, pero no dicen que esté AQUÍ, así que
+ *      **necesitan que GBIF lo corrobore** dentro de los polígonos del espacio.
+ *   NIVEL 3 · SOLO GBIF — ninguna fuente lo respalda y solo hay avistamientos. **No entra.** Es la
+ *      regla nueva y la que quita los ornamentales. `--gbif-sin-respaldo` la levanta a propósito.
  *
- * Así que el anexo entra como SEÑAL, no como puerta: da evidencia, salva del filtro de presencia y
- * ordena la prioridad de curación. Y lo que el anexo enumera y GBIF no confirma no se aprueba, pero
- * tampoco se pierde: sale en el informe como hueco a contrastar en campo.
+ * Lo que esta regla cuesta, y hay que tenerlo delante
+ * --------------------------------------------------
+ * Los catálogos legales enumeran **lo protegido, no lo característico**, y lo común no está
+ * protegido precisamente por ser común. Medido sobre los ocho espacios publicados el 2026-08-16:
+ * **330 de 1.161 fichas visibles (28 %) se sostienen solo en GBIF**, y en Sierra de la Pila entre
+ * ellas están el romero, el pino carrasco, la jara blanca, el jabalí y el zorro. El PRUG de ese
+ * espacio inventaría 243 taxones y el romero no figura.
+ *
+ * La salida NO es relajar la puerta: es **subir de nivel esas especies**, y hay dos vías escritas.
+ * La primera, transcribir los planes de gestión que faltan —cuatro de los ocho espacios no tienen
+ * anexo en `data/anexos-normativos.json`, que es la deuda nº 1 del rollout—. La segunda, completar
+ * el índice del Atlas: es la fuente que dice «esta especie es característica de este hábitat», que
+ * es exactamente lo que le falta al romero, y hoy solo cubre 98 de sus 344 bloques.
  *
  * RAREZA
  * ------
@@ -157,6 +163,15 @@ const CLASES_POR_DEFECTO = [
   // Vertebrados
   'Aves', 'Mammalia', 'Reptilia', 'Squamata', 'Testudines', 'Amphibia', 'Actinopterygii',
 ];
+/*
+ * La escotilla del nivel 3: aprueba lo que solo respalda GBIF, con el umbral de presencia de
+ * siempre. Es el criterio que estuvo vigente hasta el 2026-08-16 y con el que se construyeron los
+ * ocho espacios publicados, así que hace falta para reproducir aquellos catálogos y para medir la
+ * diferencia. Está APAGADA por defecto a propósito: encenderla es volver a dejar que un avistamiento
+ * suelto meta un olivo de bancal en el catálogo de un parque.
+ */
+const GBIF_SIN_RESPALDO = flag('gbif-sin-respaldo');
+
 const TODAS_LAS_CLASES = flag('todas-las-clases');
 const CLASES = new Set(
   (arg('clases') ? arg('clases').split(',').map(s => s.trim()) : CLASES_POR_DEFECTO).filter(Boolean)
@@ -231,6 +246,44 @@ const hoy = () => new Date().toISOString().slice(0, 10);
 // distinta en cada espacio: en Sierra de Salinas hay un recinto con cuatro códigos, y 49 plantas con
 // UN registro cada una llegaban al filtro declarando «4 ocurrencias». El conjunto de hábitats sí
 // estaba bien contado (es un Set), y sigue igual.
+/*
+ * Los candidatos DOCUMENTALES: lo que la norma del espacio y el formulario oficial del sitio
+ * enumeran y el barrido de GBIF no ha encontrado.
+ *
+ * Antes esto era el apartado `anexo_sin_constancia` del informe: un hueco que se listaba y se
+ * perdía, porque la constancia en GBIF era la puerta. Con el orden de prioridad nuevo entran como
+ * candidatos de pleno derecho, con cero ocurrencias y sin hábitats — que es la verdad de lo que se
+ * sabe de ellos— y los aprueba el nivel 1.
+ *
+ * Se añaden por su nombre literal y sin intentar casarlos aquí con los de GBIF: de eso se encarga
+ * `reconcilia()` unas líneas más abajo, agrupando por `taxonid` de EIDOS, que es lo que resuelve que
+ * el formulario diga *Sylvia undata* y GBIF sirva *Curruca undata*. Casarlos a mano por el binomio
+ * sería la tercera implementación del mismo puente y la que divergiría.
+ */
+function candidatosDocumentales(anexo, sitio, yaEstan) {
+  const nuevos = new Map();
+  const añade = (nombre, clase) => {
+    if (!nombre || yaEstan.has(nombre) || nuevos.has(nombre)) return;
+    nuevos.set(nombre, {
+      scientificName: nombre, class: clase || null, gbifOccurrences: 0,
+      hics: new Set(), habitats: 0, soloDocumental: true,
+    });
+  };
+  // Del anexo se usa el `nombreCorregido` cuando lo hay, y no el verbatim de la norma. La
+  // transcripción conserva las erratas de imprenta a propósito («Anthillis cytisoides»), pero dar de
+  // alta un candidato con la errata dentro sería fichar una especie que no existe: EIDOS no la
+  // resuelve, se queda sin `taxonid`, la reconciliación no puede agruparla y acaba en el catálogo
+  // con el nombre mal escrito. El verbatim sigue guardado en la entrada, que es donde tiene que estar.
+  for (const e of anexo.mapa.values()) añade(e.nombreCorregido || e.scientificName, null);
+  // El formulario del sitio trae el grupo taxonómico en una letra (B = aves, M = mamíferos,
+  // A = anfibios y reptiles, F = peces, P = plantas, I = invertebrados). Solo se traduce la de las
+  // aves, que es la que necesita el filtro 3 bis; el resto lo resuelve EIDOS.
+  for (const lista of sitio.mapa.values()) {
+    for (const e of lista) añade(e.scientificName, e.grupoCodigo === 'B' ? 'Aves' : null);
+  }
+  return [...nuevos.values()];
+}
+
 function candidatos() {
   if (!fs.existsSync(RUTA_GBIF)) {
     die(`No existe ${rel(RUTA_GBIF)}. Genera antes los candidatos:\n` +
@@ -685,14 +738,20 @@ async function main() {
   const codigosHic = [...new Set((park.habitats || []).map(h => h.code).filter(Boolean))];
   if (!codigosHic.length) die(`${PARK} no tiene Capa 2: genera antes los hábitats (habitats:adopt).`);
 
-  const brutos = candidatos();
   const { porNombre: fichadas, porTaxonId } = yaFichadas();
   const atlas = caracteristicasPorEspecie(codigosHic);
+  // El anexo y el formulario del sitio se cargan ANTES que los candidatos: desde que la legislación
+  // es la puerta, lo que enumeran es parte del universo de candidatos y no solo una señal que se
+  // consulta después.
   const anexo = anexoNormativo();
   const sitio = listaOficialDelSitio();
+  const deGbif = candidatos();
+  const documentales = candidatosDocumentales(anexo, sitio, new Set(deGbif.map(c => c.scientificName)));
+  const brutos = [...deGbif, ...documentales];
 
   console.log(`Espacio: ${park.park.name} (${PARK}) · ${codigosHic.length} códigos HIC · catálogo regional: ${ccaa}`);
-  console.log(`Candidatos de GBIF ∩ polígonos: ${brutos.length}`);
+  console.log(`Candidatos de GBIF ∩ polígonos: ${deGbif.length}`);
+  console.log(`Candidatos que solo aporta la legislación (nivel 1, sin registro en GBIF): ${documentales.length}`);
   console.log(atlas.leido
     ? `Atlas 2005: ${atlas.mapa.size} especies características para estos HIC`
     : 'Atlas 2005: NO consultado (sin --atlas) — no habrá evidencia `caracteristica`');
@@ -832,7 +891,10 @@ async function main() {
     const enSitio = sitio.mapa.get(bin) || (binAcept && sitio.mapa.get(binAcept)) || null;
     if (enSitio) for (const e of enSitio) sitioCasado.add(e.scientificName);
 
-    const evidence = ['observada_gbif'];
+    // `observada_gbif` solo si GBIF la ha visto de verdad. Un candidato que aporta la legislación y
+    // el barrido no confirma entra con cero ocurrencias, y ponerle esa evidencia sería afirmar una
+    // observación que no existe.
+    const evidence = c.gbifOccurrences > 0 ? ['observada_gbif'] : [];
     if (caract.length) evidence.push('caracteristica');
     if (normas.length) evidence.push('protegida');
     if (enAnexo) evidence.push('anexo_normativo');
@@ -951,12 +1013,78 @@ async function main() {
       });
       continue;
     }
-    // Filtro 3 — presencia, solo para las que no traen respaldo documental.
-    // El anexo del espacio y el formulario oficial del sitio son respaldo documental de pleno
-    // derecho, y los más fuertes: son los únicos que afirman que la especie forma parte de ESTE
-    // espacio, en vez de que sea propia de un tipo de hábitat o que esté protegida en general.
-    const conRespaldo = normas.length > 0 || caract.length > 0 || respaldoDeSitio;
-    if (!conRespaldo && (c.gbifOccurrences < MIN_OCURRENCIAS || c.habitats < MIN_HABITATS)) {
+    /*
+     * Filtro 3 — EL ORDEN DE PRIORIDAD DE LAS FUENTES. Ver la cabecera del fichero.
+     *
+     * Nivel 1 · legislación: entra sin exigirle nada a GBIF. Es el cambio del 2026-08-16: antes, lo
+     * que la norma del espacio enumeraba y el barrido no confirmaba se quedaba fuera y salía como
+     * `anexo_sin_constancia`. Un inventario oficial no lo desmiente la ausencia de avistamientos en
+     * una base de ciencia ciudadana; a lo sumo dice que nadie lo ha subido.
+     */
+    ficha.nivelDeFuente = respaldoDeSitio ? 1 : (normas.length || caract.length ? 2 : 3);
+    if (respaldoDeSitio) {
+      /*
+       * Con una excepción, y la destapó la primera pasada del criterio nuevo: un candidato que SOLO
+       * aporta la fuente documental y que EIDOS **no sabe resolver** no entra.
+       *
+       * Sin `taxonid` no hay clave maestra, ni taxonomía, ni estado legal, ni forma de reutilizar la
+       * ficha entre espacios — pero sobre todo: cuando EIDOS no resuelve un nombre transcrito de una
+       * norma, casi siempre es porque el nombre está mal escrito en la norma o en la transcripción.
+       * En Sierra de la Pila eran 42 de 261, y son de leer: «Lanius senador» (senator), «Croccidura
+       * russula» (Crocidura), «Hemydactilus turcitus» (Hemidactylus turcicus), «Portetria dispar»
+       * (Porthetria). Aprobarlos metería en el catálogo cuarenta fichas con el nombre científico mal
+       * escrito, que es exactamente lo que la app no puede enseñar.
+       *
+       * No se corrige aquí: el `_esquema` de anexos-normativos.json manda transcribir tal cual y
+       * reparar el cruce con `nombreCorregido`, que es un campo que alguien rellena con la norma
+       * delante. Esta lista es la de los que están esperando ese campo, y sale con el motivo puesto.
+       */
+      if (c.soloDocumental && !r.taxonid) {
+        excluidas.push({
+          ...ficha,
+          motivo: 'nivel 1 sin resolver en EIDOS: el nombre que transcribe la fuente no existe en la ' +
+            'Lista Patrón. Suele ser una errata de la norma o de la transcripción; se repara añadiendo ' +
+            '`nombreCorregido` a su entrada de data/anexos-normativos.json, no cambiando el verbatim',
+        });
+        continue;
+      }
+      aprobadas.push(ficha);
+      continue;
+    }
+
+    /*
+     * Nivel 2 · EIDOS y Atlas: dicen qué es el taxón y de qué hábitat es propio, no que esté aquí.
+     * Se les exige que GBIF los corrobore dentro de los polígonos — al menos un registro—, pero NO
+     * el umbral de presencia considerable: su plaza la sostiene la figura legal o el Atlas, no el
+     * número de avistamientos, y exigirles el umbral dejaría fuera justo a las raras.
+     */
+    if (ficha.nivelDeFuente === 2) {
+      if (c.gbifOccurrences < 1) {
+        excluidas.push({
+          ...ficha,
+          motivo: 'nivel 2 (figura legal o Atlas) sin corroborar: GBIF no la sitúa dentro de ningún ' +
+            'polígono de hábitat del espacio',
+        });
+        continue;
+      }
+      aprobadas.push(ficha);
+      continue;
+    }
+
+    /*
+     * Nivel 3 · solo GBIF. NO entra: es la regla que quita los ornamentales y lo que pasaba por
+     * allí. `--gbif-sin-respaldo` la levanta, y entonces vuelve a mandar el umbral de presencia de
+     * siempre, que es lo único que discriminaba antes.
+     */
+    if (!GBIF_SIN_RESPALDO) {
+      excluidas.push({
+        ...ficha,
+        motivo: 'solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el ' +
+          'formulario del sitio, ni una figura legal, ni el Atlas de Hábitats)',
+      });
+      continue;
+    }
+    if (c.gbifOccurrences < MIN_OCURRENCIAS || c.habitats < MIN_HABITATS) {
       excluidas.push({
         ...ficha,
         motivo: `sólo GBIF y presencia escasa (<${MIN_OCURRENCIAS} occ o <${MIN_HABITATS} hábitats)`,
@@ -970,18 +1098,23 @@ async function main() {
 
   const aves = aprobadas.filter(e => e.class === 'Aves').length;
   const reutilizables = aprobadas.filter(e => e.yaFichadaEn).length;
-  // El hueco anexo↔GBIF. NO se aprueban (filtro 1: la constancia sigue siendo la puerta), pero
-  // desaparecer en silencio sería exactamente lo que prohíbe la regla nº 2: la norma del espacio
-  // afirma que están aquí y el barrido no las ha visto, y eso es un dato, no un vacío.
+  /*
+   * El hueco anexo↔GBIF. Desde el 2026-08-16 estas especies **SÍ se aprueban** —son nivel 1— y esta
+   * lista deja de ser «lo que se pierde» para ser otra cosa igual de útil: qué parte del inventario
+   * oficial entra en el catálogo sin que ningún avistamiento la confirme.
+   *
+   * Sigue haciendo falta y por el mismo motivo de siempre: es lo que hay que contrastar en campo, y
+   * lo que le pone su `reviewNote` a la ficha. Que la norma afirme que una especie está aquí es la
+   * mejor fuente que hay, pero un inventario de 2004 puede haber envejecido y conviene que se vea.
+   */
   const anexoSinConstancia = anexo.consultado
     ? [...new Set(anexo.mapa.values())]
         .filter(e => !anexoCasado.has(e))
         .map(e => ({ scientificName: e.scientificName, categoria: e.categoria || null, nota: e.nota || null }))
     : [];
-  // El mismo hueco por el lado de la lista oficial. Aquí importa todavía más que en el anexo: como
-  // las aves ya solo entran con respaldo de sitio, esta lista es exactamente el catálogo de aves que
-  // el sitio declara y NaturDex no puede fichar, con el motivo puesto — y por tanto la lista de por
-  // dónde ampliar el barrido, no un vacío.
+  // El mismo hueco por el lado de la lista oficial, y con la misma lectura nueva: son las aves que
+  // el formulario del sitio declara y entran en el catálogo sin que GBIF las haya visto dentro de
+  // ningún polígono. Antes eran las que el catálogo NO podía fichar.
   const sitioSinConstancia = sitio.consultado
     ? [...new Set([...sitio.mapa.values()].flat())]
         .filter(e => !sitioCasado.has(e.scientificName))
@@ -995,23 +1128,27 @@ async function main() {
   const doc = {
     _nota:
       `Selección de especies para la Capa 3 de ${park.park.name}. NO es park.json: es la lista aprobada y ` +
-      'su procedencia. Criterio, en tres filtros encadenados: (1) constancia en GBIF dentro de los polígonos ' +
-      'de hábitat del espacio —ninguna entra sólo por figurar en EIDOS o en otro parque—; (2) autoctonía: se ' +
-      'excluye todo lo que la Lista Patrón del IEPNB marca como «Especie no nativa»; (3) presencia considerable ' +
-      `para las que NO tienen respaldo documental: al menos ${MIN_OCURRENCIAS} ocurrencias en ${MIN_HABITATS} ` +
-      'hábitats. Las protegidas y las características del Atlas 2005 conservan su plaza aunque tengan pocos ' +
-      'registros, porque su respaldo no es el número de avistamientos. Se excluye el CEEEI (RD 630/2013): es el ' +
-      'catálogo de especies exóticas INVASORAS, no una figura de protección, y tampoco cuentan como respaldo ' +
-      'los anexos forestales (RD 159/2022, RD 289/2003) ni el anexo de explotación de la Ley 42/2007. ' +
+      'su procedencia. ORDEN DE PRIORIDAD DE LAS FUENTES: primero la LEGISLACIÓN, después EIDOS, y GBIF ' +
+      'solo para corroborar. Nivel 1 — el anexo normativo del espacio (PORN/PRUG/decreto de declaración, ' +
+      'evidencia `anexo_normativo`) y el Formulario Normalizado de Datos del sitio Red Natura 2000 ' +
+      '(secciones 3.2 y 3.3, evidencia `lista_oficial_sitio`): son las únicas fuentes que afirman que la ' +
+      'especie forma parte de ESTE espacio y entran SIN exigirles constancia en GBIF. Nivel 2 — figura legal ' +
+      'de EIDOS y especies características del HIC según el Atlas 2005 (`caracteristica`): dicen qué es el ' +
+      'taxón, no que esté aquí, así que necesitan al menos una ocurrencia de GBIF dentro de los polígonos que ' +
+      'lo corrobore. Nivel 3 — solo GBIF: NO ENTRA' +
+      (GBIF_SIN_RESPALDO
+        ? `, salvo que se levante con --gbif-sin-respaldo, que es lo que se ha hecho aquí: entran con al menos ${MIN_OCURRENCIAS} ocurrencias en ${MIN_HABITATS} hábitats. `
+        : '; un avistamiento suelto no distingue lo característico del olivo de un bancal abandonado. ') +
+      'Autoctonía: se excluye todo lo que la Lista Patrón del IEPNB marca como «Especie no nativa». Se excluye ' +
+      'el CEEEI (RD 630/2013): es el catálogo de especies exóticas INVASORAS, no una figura de protección, y ' +
+      'tampoco cuentan los anexos forestales (RD 159/2022, RD 289/2003) ni el anexo de explotación de la ' +
+      'Ley 42/2007. ' +
       (TODAS_LAS_CLASES
         ? 'Sin filtro de clase: entran todos los grupos taxonómicos.'
-        : '(4) alcance taxonómico: flora vascular y vertebrados, que es lo que cataloga NaturDex — clases ' +
+        : 'Alcance taxonómico: flora vascular y vertebrados, que es lo que cataloga NaturDex — clases ' +
           `admitidas: ${[...CLASES].join(', ')}.`) + ' ' +
-      'El ANEXO NORMATIVO del espacio (PORN/PRUG/decreto de declaración) da la evidencia ' +
-      '`anexo_normativo`, y la LISTA OFICIAL del sitio Red Natura 2000 —secciones 3.2 y 3.3 de su ' +
-      'Formulario Normalizado de Datos— da `lista_oficial_sitio`. Las dos cuentan como respaldo ' +
-      'documental, pero NO son puerta de entrada: lo que enumeran y GBIF no confirma dentro de los ' +
-      'polígonos queda en `anexo_sin_constancia` y `sitio_sin_constancia`, no aprobado y no perdido. ' +
+      'Lo que el nivel 1 enumera y GBIF no confirma se aprueba igual y queda listado en ' +
+      '`anexo_sin_constancia` y `sitio_sin_constancia`: entra en el catálogo y hay que contrastarlo en campo. ' +
       (AVES_SIN_RESPALDO
         ? '(3 bis) DESACTIVADO con --aves-sin-respaldo: las aves entran por presencia, como una planta. '
         : '(3 bis) Las AVES no entran por el filtro de presencia —vuelan, sus ocurrencias caen dentro de ' +
@@ -1064,16 +1201,15 @@ async function main() {
   if (sitio.consultado && sitio.sitios.length) {
     console.log(`\nLista oficial del sitio: ${sitioCasado.size}/${sitio.total} confirmadas por GBIF dentro de los polígonos.`);
     if (sitioSinConstancia.length) {
-      console.log(`⚠ ${sitioSinConstancia.length} del formulario oficial SIN constancia en GBIF: no se aprueban,`);
-      console.log('  quedan en `sitio_sin_constancia` (ver informe). Para las aves es la lista de lo que el');
-      console.log('  sitio declara y el barrido no ve: por ahí se amplía, no por bajar el umbral.');
+      console.log(`  ${sitioSinConstancia.length} del formulario oficial SIN constancia en GBIF: se aprueban igual`);
+      console.log('  (nivel 1) y quedan en `sitio_sin_constancia` como lo que hay que contrastar en campo.');
     }
   }
   if (anexo.consultado) {
     console.log(`\nAnexo normativo: ${anexoCasado.size}/${anexo.total} confirmadas por GBIF dentro de los polígonos.`);
     if (anexoSinConstancia.length) {
-      console.log(`⚠ ${anexoSinConstancia.length} enumeradas por la norma SIN constancia en GBIF: no se aprueban,`);
-      console.log('  quedan en `anexo_sin_constancia` como hueco a contrastar en campo (ver informe).');
+      console.log(`  ${anexoSinConstancia.length} enumeradas por la norma SIN constancia en GBIF: se aprueban igual`);
+      console.log('  (nivel 1) y quedan en `anexo_sin_constancia` como hueco a contrastar en campo (ver informe).');
     }
   }
   const conError = [...aprobadas, ...excluidas].filter(e => e.errorEidos);
@@ -1139,10 +1275,10 @@ function informe(doc, atlas, conError, categoriasDescartadas) {
 
   if (doc.sitio_sin_constancia && doc.sitio_sin_constancia.length) {
     l.push('', '### En el formulario oficial y sin constancia en GBIF', '',
-      'El sitio las declara y el barrido no las ha encontrado dentro de ningún polígono. **No se ' +
-      'aprueban** —la constancia sigue siendo la puerta (filtro 1)— y se listan aquí en vez de ' +
-      'desaparecer. En las aves, esta es la lista por la que se amplía el catálogo del espacio: por ' +
-      'contrastarla, no por bajar el umbral de ocurrencias.', '',
+      'El sitio las declara y el barrido no las ha encontrado dentro de ningún polígono. **Se aprueban ' +
+      'igual**: son nivel 1, y un formulario oficial no lo desmiente que nadie haya subido el ' +
+      'avistamiento a GBIF. Se listan aquí porque son justo lo que hay que contrastar en campo, y lo ' +
+      'que le pone su nota de revisión a la ficha.', '',
       '| Especie | Grupo | Sección | Sitio | Población |', '|---|---|---|---|---|');
     for (const e of doc.sitio_sin_constancia) {
       const pob = [e.tipoPoblacion, e.categoriaPoblacion].filter(Boolean).join(', ') || '—';
@@ -1153,9 +1289,9 @@ function informe(doc, atlas, conError, categoriasDescartadas) {
   if (doc.anexo_sin_constancia && doc.anexo_sin_constancia.length) {
     l.push('', '### Enumeradas por la norma y sin constancia en GBIF', '',
       'La norma del espacio dice que están aquí; el barrido de GBIF no las ha encontrado dentro de ningún ' +
-      'polígono de hábitat. **No se aprueban** —la constancia sigue siendo la puerta (filtro 1)— y se listan ' +
-      'aquí en vez de desaparecer: son el hueco a contrastar en campo, y la lista más útil que produce esta ' +
-      'herramienta para decidir dónde mirar.', '',
+      'polígono de hábitat. **Se aprueban igual**: son nivel 1 y la norma es la fuente más fuerte que hay. ' +
+      'Se listan aquí porque siguen siendo el hueco a contrastar en campo —un inventario de hace veinte años ' +
+      'puede haber envejecido— y la lista más útil que produce esta herramienta para decidir dónde mirar.', '',
       '| Especie | Categoría en la norma | Nota |', '|---|---|---|');
     for (const e of doc.anexo_sin_constancia) {
       l.push(`| *${e.scientificName}* | ${e.categoria || '—'} | ${e.nota || '—'} |`);

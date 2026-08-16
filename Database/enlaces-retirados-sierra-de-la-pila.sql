@@ -21,28 +21,28 @@ JOIN species sp ON sp.id = sh.species_id
 JOIN habitats hb ON hb.id = sh.habitat_id
 JOIN parks pk ON pk.id = sp.park_id AND pk.id = hb.park_id
 WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Rhinolophus ferrumequinum'
-  AND hb.slug = 'bosques-endemicos-de-9560';  -- vuelo: taxón volador cuyo enlace sale del barrido de ocurrencias: un registro en vuelo cae dentro de cualquier polígono (CLAUDE.md, regla nº 7)
+  AND hb.slug = 'bosques-endemicos-de-9560';  -- vuelo: taxón volador cuyo enlace sale del barrido de ocurrencias: un registro en vuelo cae dentro de cualquier polígono (CLAUDE.md, regla nº 8)
 
 DELETE sh FROM species_habitats sh
 JOIN species sp ON sp.id = sh.species_id
 JOIN habitats hb ON hb.id = sh.habitat_id
 JOIN parks pk ON pk.id = sp.park_id AND pk.id = hb.park_id
 WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Rhinolophus ferrumequinum'
-  AND hb.slug = 'matorrales-arborescentes-de-5210';  -- vuelo: taxón volador cuyo enlace sale del barrido de ocurrencias: un registro en vuelo cae dentro de cualquier polígono (CLAUDE.md, regla nº 7)
+  AND hb.slug = 'matorrales-arborescentes-de-5210';  -- vuelo: taxón volador cuyo enlace sale del barrido de ocurrencias: un registro en vuelo cae dentro de cualquier polígono (CLAUDE.md, regla nº 8)
 
 DELETE sh FROM species_habitats sh
 JOIN species sp ON sp.id = sh.species_id
 JOIN habitats hb ON hb.id = sh.habitat_id
 JOIN parks pk ON pk.id = sp.park_id AND pk.id = hb.park_id
 WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Rhinolophus ferrumequinum'
-  AND hb.slug = 'matorrales-termomediterraneos-y-5330';  -- vuelo: taxón volador cuyo enlace sale del barrido de ocurrencias: un registro en vuelo cae dentro de cualquier polígono (CLAUDE.md, regla nº 7)
+  AND hb.slug = 'matorrales-termomediterraneos-y-5330';  -- vuelo: taxón volador cuyo enlace sale del barrido de ocurrencias: un registro en vuelo cae dentro de cualquier polígono (CLAUDE.md, regla nº 8)
 
 DELETE sh FROM species_habitats sh
 JOIN species sp ON sp.id = sh.species_id
 JOIN habitats hb ON hb.id = sh.habitat_id
 JOIN parks pk ON pk.id = sp.park_id AND pk.id = hb.park_id
 WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Rhinolophus ferrumequinum'
-  AND hb.slug = 'zonas-subestepicas-de-6220';  -- vuelo: taxón volador cuyo enlace sale del barrido de ocurrencias: un registro en vuelo cae dentro de cualquier polígono (CLAUDE.md, regla nº 7)
+  AND hb.slug = 'zonas-subestepicas-de-6220';  -- vuelo: taxón volador cuyo enlace sale del barrido de ocurrencias: un registro en vuelo cae dentro de cualquier polígono (CLAUDE.md, regla nº 8)
 
 COMMIT;
 

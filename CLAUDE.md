@@ -16,22 +16,38 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    hábitats, taxonomía y estado de conservación **sí** son dato oficial directo.
 2. **Ante la duda, hueco documentado antes que dato inventado.** Un `reviewNote` visible en la app
    vale más que un campo relleno a ojo. **Nunca rellenes un campo de fuente con una suposición.**
-3. **Universal vs. local.** Especies y hábitats son nacionales. Lo universal (qué *es* la especie, qué
+3. **El orden de prioridad de las fuentes: legislación → EIDOS → GBIF, y GBIF solo corrobora.**
+   Ninguna especie entra en el catálogo de un espacio porque GBIF tenga avistamientos suyos ahí
+   dentro. Manda lo que la **norma del espacio** enumera (anexo del PORN/PRUG o del decreto de
+   declaración) y lo que declara el **formulario oficial del sitio Red Natura 2000**; después, la
+   figura legal de **EIDOS** y las especies características del HIC según el **Atlas**; y GBIF, al
+   final, solo para **confirmar que eso está aquí**. El motivo es que GBIF no distingue lo
+   característico de lo que pasaba por allí: dentro del límite de un parque caen olivos de bancal,
+   ornamentales de una casa de campo y bichos en tránsito, y la app existe para enseñar la riqueza de
+   un espacio protegido, no el jardín de al lado. Lo aplica `build-species-seleccion.js`, en tres
+   niveles y con `--gbif-sin-respaldo` como escotilla explícita.
+   > **Y lo que cuesta, que hay que tenerlo delante:** los catálogos legales enumeran *lo protegido*,
+   > no *lo característico*, y lo común no está protegido por ser común. Medido el 2026-08-16,
+   > **330 de 1.161 fichas (28 %) se sostienen solo en GBIF** — el romero y el pino carrasco de
+   > Sierra de la Pila entre ellas. La salida no es relajar la puerta: es **transcribir los planes de
+   > gestión que faltan** (deuda nº 1) y **completar el índice del Atlas**, que es la fuente que dice
+   > «esta especie es característica de este hábitat».
+4. **Universal vs. local.** Especies y hábitats son nacionales. Lo universal (qué *es* la especie, qué
    *es* el código HIC) vive en `Tools/catalogo-nacional/data/`; lo local (dónde y cómo aparece aquí)
    en cada `park.json`. **Un texto universal que nombre un espacio concreto es un error del
    validador, no un aviso.**
-4. **`npm run validate` tiene que salir en verde.** Bloquea el commit vía `.githooks/pre-commit`.
-5. **El huso UTM se lee del `.prj`, nunca se asume.** 28N Canarias, 29N/30N/31N península.
-6. **Idempotencia como prueba.** `build-n1-espacios`, `merge-habitats`, `adopt-habitats`,
+5. **`npm run validate` tiene que salir en verde.** Bloquea el commit vía `.githooks/pre-commit`.
+6. **El huso UTM se lee del `.prj`, nunca se asume.** 28N Canarias, 29N/30N/31N península.
+7. **Idempotencia como prueba.** `build-n1-espacios`, `merge-habitats`, `adopt-habitats`,
    `fix-estado-conservacion-iepnb`, `sync-species-catalog` y el volcado de ocurrencias de
    `migrations.sql` no deben cambiar un byte en un segundo pase. Si un segundo pase produce diff, hay
    un problema.
-7. **Un ave no entra por sus ocurrencias.** Vuela: un registro en vuelo cae dentro de cualquier
+8. **Un ave no entra por sus ocurrencias.** Vuela: un registro en vuelo cae dentro de cualquier
    polígono, así que la prueba de constancia que vale para una planta ahí no mide nada. La puerta de
    las aves es el **respaldo de sitio** —el formulario oficial del sitio Red Natura 2000 o el anexo
    normativo del espacio—, y GBIF queda como confirmación.
    [`Docs/runbook/AVES.md`](Docs/runbook/AVES.md).
-8. **La coordenada de una especie amenazada no se publica exacta.** Al exportar se generaliza a 1 o
+9. **La coordenada de una especie amenazada no se publica exacta.** Al exportar se generaliza a 1 o
    10 km según su tramo de rareza legal, y el registro lo dice. Un taxón **sin** tramo calculado se
    generaliza igual: «nadie lo ha mirado» no es «no está amenazada», y publicar de más no se puede
    deshacer. Ver [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md).

@@ -2,8 +2,19 @@
 
 Cada una se paga mejor ahora que en el espacio número treinta.
 
-1. **Cinco espacios no tienen localizado su plan de gestión, y eso es hoy lo que decide cuántas aves
-   tienen.** Desde que el ave entra por respaldo de sitio
+1. **Cinco espacios no tienen localizado su plan de gestión, y desde el 2026-08-16 eso decide el
+   catálogo entero, no solo las aves.**
+   > **Subió de precio el 2026-08-16.** Con el orden de prioridad nuevo —legislación → EIDOS → GBIF,
+   > regla nº 3 del `CLAUDE.md`— el plan de gestión pasó de ser «la evidencia más fuerte» a ser **la
+   > puerta de entrada del nivel 1**, y un espacio sin plan transcrito se queda solo con lo que
+   > respalden el formulario del sitio, la figura legal y el Atlas. Se ve en la medición: los cuatro
+   > espacios **con** anexo transcrito tienen entre el 8 % y el 33 % de fichas sostenidas solo por
+   > GBIF; los cuatro **sin** anexo, entre el 33 % y el 51 %. Cuatro Calas es el peor caso, con la
+   > mitad del catálogo colgando de avistamientos sueltos. Transcribir los planes que faltan
+   > —Carrascoy, Cabo Cope, Cuatro Calas y Sierra Espuña— es hoy el trabajo más rentable del rollout.
+
+   Lo que sigue es el diagnóstico anterior, que sigue valiendo para las aves. Desde que el ave entra
+   por respaldo de sitio
    ([`runbook/AVES.md`](runbook/AVES.md)), el anexo normativo dejó de ser «la evidencia más fuerte» y
    pasó a ser, en la práctica, **la única fuente que da un catálogo de aves completo**: el Formulario
    Normalizado de Datos de un sitio Red Natura 2000 solo declara las de interés comunitario —su
@@ -199,3 +210,36 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     espacio, que **necesita red**. Sierra Espuña es además el caso interesante: 38 de sus fichas
     tienen `gbifOccurrences: 0` y 197 enlaces, porque los suyos son documentales (fichas de flora de
     la Región de Murcia) y no salen de ningún barrido.
+24. **330 fichas del catálogo actual se sostienen solo en GBIF, y con la puerta nueva no habrían
+    entrado.** Es la deuda que abre el cambio de orden de prioridad del 2026-08-16: el pipeline ya no
+    deja que GBIF dé de alta nada, pero **los ocho espacios publicados se construyeron con el
+    criterio viejo** y nadie ha vuelto a pasarlos por el nuevo. Son **330 de 1.161 fichas visibles
+    (28 %)**, repartidas muy desigual —del 8 % en Sierra de El Carche al 51 % en Cuatro Calas—, y
+    entre ellas hay de todo: el olivo cultivado (*Olea europaea* subsp. *europaea*, fichado en seis
+    espacios) que es justo lo que la regla viene a quitar, y el romero, el pino carrasco y el jabalí
+    de Sierra de la Pila, que son exactamente lo que el catálogo debe enseñar.
+    > **Por eso no se han podado y por eso no se deben podar a ciegas.** El orden correcto es al
+    > revés: primero **transcribir los planes de gestión que faltan** (deuda nº 1) y **completar el
+    > índice del Atlas**, que es lo que sube de nivel al romero; y solo después regenerar y ver qué
+    > queda de verdad sin respaldo. Podar antes de eso confundiría «no está respaldada» con «no hemos
+    > mirado dónde está respaldada», que es la distinción que sostiene todo el modelo.
+    > **Y hay una razón práctica además de la de criterio**: regenerar un espacio no es pasar un
+    > comando. Con el criterio nuevo, Sierra de la Pila sale con **228 fichas frente a las 219
+    > publicadas** —pierde 175 que solo sostenían avistamientos y **gana 105 que su PRUG inventaría y
+    > que el criterio viejo tiraba**—, pero **79 de ellas no están en el catálogo universal** y
+    > necesitan taxonomía, nombre común, UICN y foto: cuatro fuentes externas por ficha, vía
+    > `build-species-universal.js`. Es una sesión de trabajo por espacio.
+    > La lista completa, espacio a espacio, sale de regenerar la selección de cada uno con
+    > `npm run species:seleccion` y mirar `excluidas_detalle`.
+25. **42 nombres mal transcritos en `anexos-normativos.json`, y hasta ahora eran invisibles.** Los
+    destapó la primera pasada del criterio nuevo (2026-08-16): al entrar por la puerta de nivel 1, las
+    especies que solo enumera la norma llegaron por fin al catálogo… con la errata dentro. Bastaba
+    leerlas: «Lanius **senador**» (senator), «**Croccidura** russula» (Crocidura), «**Hemydactilus
+    turcitus**» (Hemidactylus turcicus), «**Portetria** dispar» (Porthetria), «Verperus fuentei».
+    Solo en Sierra de la Pila quedan **24** después de descontar los invertebrados, que salen igual
+    por alcance taxonómico.
+    > **La herramienta ya no las deja pasar**: un candidato documental que EIDOS no resuelve se
+    > excluye y sale en `excluidas_detalle` con el motivo y el arreglo escritos. El arreglo es añadir
+    > `nombreCorregido` a su entrada —lo que manda el `_esquema` del fichero—, **nunca** corregir el
+    > verbatim, que es la transcripción literal de la norma. Hay que hacerlo con el documento delante,
+    > espacio por espacio, y los cuatro espacios con anexo lo necesitan.

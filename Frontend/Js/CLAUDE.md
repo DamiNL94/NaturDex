@@ -94,7 +94,7 @@ secciones cumple la misma función: abre solo el rango que necesites.
 | `data.js` | 297 | Registro, manifiesto, datos y geo + progreso local-first. **Todo lo que habla con red o caché pasa por aquí.** La API tiene prioridad sobre el `park.json` |
 | `api.js` | 82 | **Único** punto de contacto con `Backend/Api/`: corte por tiempo, errores, `apiSignal()` |
 | `util.js` | 320 | Helpers puros: sin estado, sin DOM, sin Leaflet. Aquí viven la plantilla `` html`` `` y el **colador alfabético español**, que ordena el catálogo, las chips de hábitat y el diccionario |
-| `rareza.js` | 190 | La escalera de rareza **legal** en la app: el filtro del catálogo y el **cartel de advertencia** de las especies amenazadas. Misma escalera que `Tools/lib/rareza.js`, vista desde el otro lado. El cartel cita siempre la categoría y la norma, y una ficha **sin tramo calculado también avisa** (regla nº 8 del `CLAUDE.md` raíz) |
+| `rareza.js` | 190 | La escalera de rareza **legal** en la app: el filtro del catálogo y el **cartel de advertencia** de las especies amenazadas. Misma escalera que `Tools/lib/rareza.js`, vista desde el otro lado. El cartel cita siempre la categoría y la norma, y una ficha **sin tramo calculado también avisa** (regla nº 9 del `CLAUDE.md` raíz) |
 | `layers.js` | 279 | Panel de capas propio (sustituye al control nativo de Leaflet) |
 | `habitat-groups.js` | 212 | **Los siete grupos de hábitat**, ordenados del mar hacia dentro. Trama y tinta idénticas en mapa, leyenda y catálogo. Criterio: código HIC |
 | `presence.js` | 469 | **Presencia verificada**: la prueba de que estás dentro del espacio. Es lo que hace que los logros signifiquen algo |

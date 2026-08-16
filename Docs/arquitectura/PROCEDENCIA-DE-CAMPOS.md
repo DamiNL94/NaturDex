@@ -79,12 +79,20 @@ dato; «Cómo» = la herramienta o el criterio; «Verifica» = quién lo comprue
 > Lo que **no** hace es subir el listón: un enlace con una sola ocurrencia se conserva y se mide, y
 > son el 40 % (deuda nº 22).
 
-> **El anexo da evidencia, no entrada.** La constancia en GBIF sigue siendo la puerta del catálogo:
-> lo que la norma enumera y el barrido no confirma dentro de ningún polígono **no se aprueba**, pero
-> tampoco se pierde — sale en `anexo_sin_constancia` del informe de selección como hueco a contrastar
-> en campo. El motivo es de cobertura: el Anexo I del PRUG de Sierra Espuña no inventaría especies,
-> el PORN de Carrascoy tampoco y el de Sierra de la Pila no se pudo abrir. Con el anexo de puerta,
-> esos espacios entrarían con cero especies y el de al lado con doscientas.
+> **El anexo ES la entrada, y GBIF solo corrobora** (desde el 2026-08-16; antes era al revés). El
+> orden de prioridad de las fuentes es **legislación → EIDOS → GBIF**, y es la regla nº 3 del
+> `CLAUDE.md`:
+>
+> | Nivel | Fuente | Qué se le exige |
+> |---|---|---|
+> | 1 | Anexo normativo del espacio · Formulario Normalizado de Datos del sitio | **Nada más.** Son las únicas que afirman que la especie forma parte de *este* espacio. Entran aunque GBIF no las haya visto, y eso se lista en `anexo_sin_constancia` / `sitio_sin_constancia` como lo que hay que contrastar en campo |
+> | 2 | Figura legal de EIDOS · especie característica del HIC (Atlas) | **Al menos una ocurrencia de GBIF** dentro de los polígonos: dicen qué *es* el taxón, no que esté aquí |
+> | 3 | Solo GBIF | **No entra.** Un avistamiento suelto no distingue lo característico del olivo de un bancal abandonado. `--gbif-sin-respaldo` lo levanta a propósito |
+>
+> El precio está medido y hay que tenerlo delante: los catálogos legales enumeran *lo protegido*, no
+> *lo característico*, así que **330 de las 1.161 fichas visibles (28 %) se sostienen solo en GBIF** —
+> el romero y el pino carrasco de Sierra de la Pila entre ellas—. La salida es transcribir los planes
+> de gestión que faltan (deuda nº 1) y completar el índice del Atlas, no relajar la puerta.
 
 ### Otras tablas
 

@@ -13,7 +13,7 @@
  *   · Un polígono pequeño no discrimina. El hábitat 7220 —manantiales petrificantes, cintas de
  *     metros dentro de una ladera seca— tenía fichadas en Carrascoy y El Valle la ardilla roja, el
  *     algarrobo y el tomillo blanco. Ninguna vive en un manantial: sus registros cayeron al lado.
- *   · Lo que vuela cae en cualquier polígono. Es la regla nº 7 del CLAUDE.md, ya aplicada a las aves
+ *   · Lo que vuela cae en cualquier polígono. Es la regla nº 8 del CLAUDE.md, ya aplicada a las aves
  *     al darlas de alta, pero **no** a lo que ya estaba escrito ni a los quirópteros.
  *
  * Qué coteja, y contra qué
@@ -23,7 +23,7 @@
  *   1. MEDIO (lib/medios.js) · el código HIC declara de qué medio es el hábitat y la ficha universal
  *      de la especie declara dónde vive. Si se contradicen, el enlace no lo afirma nadie: lo afirmó
  *      la coincidencia geográfica de un registro suelto.
- *   2. VUELO · un taxón volador (Aves, Chiroptera) colgado de un polígono. Es la regla nº 7 del
+ *   2. VUELO · un taxón volador (Aves, Chiroptera) colgado de un polígono. Es la regla nº 8 del
  *      CLAUDE.md, que el pipeline ya aplica al dar de alta un espacio y `validate` lleva avisando
  *      desde entonces sin que nadie pudiera limpiarlo sin regenerar la Capa 3 entera. Se aplica
  *      también a las doce aves del volcado del piloto de Cabo Cope, y conviene decir por qué: su
@@ -78,7 +78,7 @@ const INFORME_JSON = path.join(OUT_DIR, 'auditoria-especie-habitat.json');
 // base delante y la copia hecha.
 const SQL = flag('sql');
 
-// Clases y grupos que vuelan. La regla nº 7 se escribió para las aves; un quiróptero tiene el mismo
+// Clases y grupos que vuelan. La regla nº 8 se escribió para las aves; un quiróptero tiene el mismo
 // problema por el mismo motivo —se le mide el vuelo, no el sitio donde vive— y su ficha lo dice
 // sola: *Rhinolophus ferrumequinum* declara «cuevas, minas y desvanes» y colgaba de cuatro
 // polígonos de matorral por DOS registros.
@@ -187,7 +187,7 @@ function veredicto(especie, habitat, ctx) {
       veredicto: 'vuelo', ocurrencias: occ ?? null,
       motivo: porOcurrencias
         ? 'taxón volador cuyo enlace sale del barrido de ocurrencias: un registro en vuelo cae dentro ' +
-          'de cualquier polígono (CLAUDE.md, regla nº 7)'
+          'de cualquier polígono (CLAUDE.md, regla nº 8)'
         : 'taxón volador del volcado del piloto: la fuente que lo respalda es una lista de fauna DEL ' +
           'ESPACIO y no dice en qué hábitat vive, así que el reparto por polígonos lo puso una persona',
     };
