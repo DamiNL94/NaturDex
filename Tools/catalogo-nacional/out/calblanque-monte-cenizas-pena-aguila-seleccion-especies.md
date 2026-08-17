@@ -7,7 +7,7 @@ Atlas 2005 consultado: 711 especies características para los HIC de este espaci
 
 ## Anexo normativo del espacio
 
-Fuente: **Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.**, Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía. · BORM n.º 152, de 3 de julio de 1995, anuncio 10286 · consultado el 2026-08-17.
+Fuente: **Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.**, Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies, cada una con su nombre castellano al lado, que es lo que las desambigua). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a evaluación de impacto (I) y a autorización (II), límites del Parque Regional (III) y cartografía. · BORM n.º 152, de 3 de julio de 1995, anuncio 10286 · consultado el 2026-08-17.
 
 Enumera **34 especies**; GBIF confirma **33** dentro de los polígonos de hábitat. Esas llevan evidencia `anexo_normativo` y conservan su plaza aunque tengan pocos registros.
 
@@ -44,7 +44,7 @@ La norma del espacio dice que están aquí; el barrido de GBIF no las ha encontr
 
 | Especie | Categoría en la norma | Nota |
 |---|---|---|
-| *Larus ridiburtdus* | — | Gaviota reidora. El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma. El Artículo 13 da el nombre castellano al lado, que fija el taxón sin ambigüedad. GBIF da el nombre por sinónimo de Chroicocephalus ridibundus. |
+| *Larus ridibundus* | — | Gaviota reidora. GBIF lo da por sinónimo de Chroicocephalus ridibundus. |
 
 ## Rareza
 
@@ -879,8 +879,8 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Acinopus picipes* | Insecta | 1 | 5 | fuera del alcance del catálogo (clase Insecta) |
 | *Erodius carinatus* | Insecta | 1 | 5 | fuera del alcance del catálogo (clase Insecta) |
 | *Coptocephala scopolina* | Insecta | 1 | 5 | fuera del alcance del catálogo (clase Insecta) |
-| *Ephedra sppl* | — | 0 | 0 | nivel 1 sin resolver en EIDOS: el nombre que transcribe la fuente no existe en la Lista Patrón. Suele ser una errata de la norma o de la transcripción; se repara añadiendo `nombreCorregido` a su entrada de data/anexos-normativos.json, no cambiando el verbatim |
-| *Rhamnus sppl .* | — | 0 | 0 | nivel 1 sin resolver en EIDOS: el nombre que transcribe la fuente no existe en la Lista Patrón. Suele ser una errata de la norma o de la transcripción; se repara añadiendo `nombreCorregido` a su entrada de data/anexos-normativos.json, no cambiando el verbatim |
+| *Ephedra sppl.* | — | 0 | 0 | nivel 1 sin resolver en EIDOS: el nombre que transcribe la fuente no existe en la Lista Patrón. Suele ser una errata de la norma o de la transcripción; se repara añadiendo `nombreCorregido` a su entrada de data/anexos-normativos.json, no cambiando el verbatim |
+| *Rhamnus sppl.* | — | 0 | 0 | nivel 1 sin resolver en EIDOS: el nombre que transcribe la fuente no existe en la Lista Patrón. Suele ser una errata de la norma o de la transcripción; se repara añadiendo `nombreCorregido` a su entrada de data/anexos-normativos.json, no cambiando el verbatim |
 | *Curruca cantillans* | Aves | 0 | 0 | ave sin respaldo de sitio (no figura en el formulario oficial del sitio ni en el anexo normativo) |
 | *Crangon crangon* | — | 0 | 0 | fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase) |
 | *Jujubinus exasperatus* | — | 0 | 0 | fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase) |
