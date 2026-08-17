@@ -662,6 +662,58 @@ function origenLegible(r) {
 const esNoNativa = (origen) => /no nativa|alóctona|exótica|introducida/i.test(String(origen || ''));
 
 /*
+ * NATIVA PORQUE EL HÁBITAT SE LLAMA COMO ELLA.
+ *
+ * La Lista Patrón marca la autoctonía **a escala nacional**, y esa escala tiene un punto ciego
+ * simétrico al de `alóctonaPorNorma`: un taxón introducido en casi toda España puede ser relicto
+ * autóctono en un enclave, y el filtro no lo distingue porque solo lee una bandera del Estado.
+ *
+ * El caso que lo destapa es *Tetraclinis articulata* en Calblanque. EIDOS responde
+ * `origen: "Especie no nativa"` sin ningún matiz territorial, así que el filtro la tiraba — mientras
+ * el Atlas cartografía dentro del parque 148,7 ha del HIC **9570 «Bosques de Tetraclinis
+ * articulata»**, prioritario, cuyo nombre oficial ES el binomio. El resultado era un hábitat
+ * prioritario sin la especie que le da nombre, que es un fallo visible en la ficha.
+ *
+ * La regla: si el espacio tiene cartografiado un HIC cuyo **nombre oficial** nombra al taxón, eso es
+ * dato oficial directo sobre ESTE territorio —la Directiva lo protege AQUÍ, y la cartografía dice
+ * dónde— y manda sobre la bandera nacional, igual que la norma del espacio manda cuando declara
+ * alóctono a un taxón que la Lista Patrón no marca.
+ *
+ * Es deliberadamente estrecha: solo levanta el filtro de autoctonía, no da entrada por sí sola —la
+ * especie sigue teniendo que pasar los niveles de fuente— y solo dispara donde la cartografía puso
+ * el código. En el rollout de hoy eso es un único espacio: el 9570 no está cartografiado en ningún
+ * otro, así que NO reabre el caso de Carrascoy y El Valle, donde la revisión del 2026-08-16
+ * concluyó con el dato delante que sus ejemplares son repoblación.
+ *
+ * La comparación se hace por `binomio()` —la misma clave normalizada con la que se cruzan el Atlas y
+ * el catálogo— sobre cada pareja de palabras consecutivas del nombre oficial. No se intenta adivinar
+ * qué parejas son latín: las que no lo son («matorrales termomediterráneos») simplemente no casan
+ * con ningún taxón, así que no hacen falta heurísticas que puedan equivocarse en los dos sentidos.
+ * Un nombre que cita el género suelto —«Matorrales arborescentes de Ziziphus»— no identifica a una
+ * especie y por construcción no casa.
+ */
+// Se rellena en main(), cuando ya se ha leído el park.json con su Capa 2.
+let HABITAT_HOMONIMO = [];
+
+function taxonesQueNombranUnHabitat(habitats) {
+  return (habitats || []).map(h => {
+    const palabras = String(h.name || '').trim().split(/\s+/);
+    const pares = new Set();
+    for (let i = 0; i + 1 < palabras.length; i++) {
+      const b = binomio(`${palabras[i]} ${palabras[i + 1]}`);
+      if (b) pares.add(b);
+    }
+    return { code: h.code, nombre: h.name || '', pares };
+  });
+}
+
+/** El hábitat cartografiado cuyo nombre oficial nombra a este taxón, o null. */
+function habitatQueNombra(bin) {
+  if (!bin) return null;
+  return HABITAT_HOMONIMO.find(h => h.pares.has(bin)) || null;
+}
+
+/*
  * RAREZA — el tramo 1–5 de `rarityScore`, derivado SOLO de la categoría legal estatal.
  *
  * Hasta hoy `rarityScore` era «criterio propio 1–5» (Docs/arquitectura/PROCEDENCIA-DE-CAMPOS.md):
@@ -737,6 +789,7 @@ async function main() {
   const ccaa = arg('ccaa', park.park && park.park.region) || null;
   const codigosHic = [...new Set((park.habitats || []).map(h => h.code).filter(Boolean))];
   if (!codigosHic.length) die(`${PARK} no tiene Capa 2: genera antes los hábitats (habitats:adopt).`);
+  HABITAT_HOMONIMO = taxonesQueNombranUnHabitat(park.habitats);
 
   const { porNombre: fichadas, porTaxonId } = yaFichadas();
   const atlas = caracteristicasPorEspecie(codigosHic);
@@ -853,6 +906,10 @@ async function main() {
   }
 
   const aprobadas = [], excluidas = [];
+  // Taxones a los que la cartografía del espacio les ha levantado la bandera nacional de autoctonía.
+  // Se acumulan para decirlo por pantalla: una excepción que no se ve es una excepción que nadie
+  // revisa.
+  const autoctoniaRevisada = [];
   // Las categorías legales que se han visto y NO cuentan como protección. Se enseñan al final: es la
   // forma de enterarse de que una figura nueva se está descartando por no estar en la lista blanca.
   const categoriasDescartadas = new Map();
@@ -983,9 +1040,18 @@ async function main() {
     // enumera entre las alóctonas. Cuando la norma del espacio dice que un taxón es alóctono, eso es
     // dato oficial directo sobre ESTE territorio y manda sobre el silencio de la Lista Patrón.
     const alóctonaPorNorma = anexo.noNativas.get(bin) || (binAcept && anexo.noNativas.get(binAcept)) || null;
+    // La cartografía oficial del espacio puede desmentir la bandera nacional de autoctonía: ver
+    // `taxonesQueNombranUnHabitat`. Solo levanta este filtro; la especie sigue necesitando nivel.
+    const nombraUnHabitat = habitatQueNombra(bin) || (binAcept ? habitatQueNombra(binAcept) : null);
     if (esNoNativa(r.origen)) {
-      excluidas.push({ ...ficha, motivo: 'no nativa (Lista Patrón IEPNB)' });
-      continue;
+      if (!nombraUnHabitat) {
+        excluidas.push({ ...ficha, motivo: 'no nativa (Lista Patrón IEPNB)' });
+        continue;
+      }
+      ficha.autoctoniaRevisada = `la Lista Patrón la da como no nativa, pero este espacio tiene ` +
+        `cartografiado el HIC ${nombraUnHabitat.code} «${nombraUnHabitat.nombre}», cuyo nombre ` +
+        `oficial la nombra: la cartografía es dato oficial sobre este territorio y manda`;
+      autoctoniaRevisada.push(`${c.scientificName} (HIC ${nombraUnHabitat.code})`);
     }
     if (alóctonaPorNorma) {
       excluidas.push({
@@ -1187,6 +1253,12 @@ async function main() {
     excluidas_detalle: excluidas,
   };
 
+  if (autoctoniaRevisada.length) {
+    console.log(`\nAutoctonía revisada por la cartografía: ${autoctoniaRevisada.length} — ` +
+      `${autoctoniaRevisada.join(', ')}`);
+    console.log('  La Lista Patrón las da como no nativas y el espacio tiene cartografiado un HIC');
+    console.log('  cuyo nombre oficial las nombra. La cartografía es dato de ESTE territorio y manda.');
+  }
   console.log(`\nAprobadas: ${doc.total} (${aves} aves) · reutilizables: ${reutilizables} · nuevas: ${doc.nuevas}`);
   console.log(`Excluidas: ${excluidas.length}`);
   const porMotivo = {};
