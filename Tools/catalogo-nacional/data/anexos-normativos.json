@@ -4475,6 +4475,202 @@
           "nota": "Errata de la tabla: se lee «radhamanthus» por rhadamanthus."
         }
       ]
+    },
+    "calblanque-monte-cenizas-pena-aguila": {
+      "fuente": {
+        "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+        "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+        "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+        "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+        "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+        "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+        "consultado": "2026-08-17",
+        "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+      },
+      "especies": [
+        {
+          "scientificName": "Tetraclinis articulata",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Chamaerops humill,s",
+          "grupo": "Flora",
+          "nota": "El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma.",
+          "nombreCorregido": "Chamaerops humilis"
+        },
+        {
+          "scientificName": "Ulrnus minor",
+          "grupo": "Flora",
+          "nota": "El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma.",
+          "nombreCorregido": "Ulmus minor"
+        },
+        {
+          "scientificName": "Maytenus senegalensi .r",
+          "grupo": "Flora",
+          "nota": "El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma.",
+          "nombreCorregido": "Maytenus senegalensis"
+        },
+        {
+          "scientificName": "Caralluma europaea",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Erica arborea",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Limoniuni cartaginensi,s",
+          "grupo": "Flora",
+          "nota": "El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma.",
+          "nombreCorregido": "Limonium carthaginense"
+        },
+        {
+          "scientificName": "Phoenix dactyliphera",
+          "grupo": "Flora",
+          "nota": "El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma.",
+          "nombreCorregido": "Phoenix dactylifera"
+        },
+        {
+          "scientificName": "Pistacia lentiscus",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Juniperus oxycednts",
+          "grupo": "Flora",
+          "nota": "El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma.",
+          "nombreCorregido": "Juniperus oxycedrus"
+        },
+        {
+          "scientificName": "Juniperus phoenicia",
+          "grupo": "Flora",
+          "nota": "El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma.",
+          "nombreCorregido": "Juniperus phoenicea"
+        },
+        {
+          "scientificName": "Ephedra sppl",
+          "grupo": "Flora",
+          "nota": "La norma cita el GÉNERO, no una especie («Ephedra spp.»). No se da de alta ninguna especie por esta entrada: un género no identifica un taxón del catálogo."
+        },
+        {
+          "scientificName": "Quercus rotundifolia",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Quercus coccifera",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Arbutus aanedo",
+          "grupo": "Flora",
+          "nota": "El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma.",
+          "nombreCorregido": "Arbutus unedo"
+        },
+        {
+          "scientificName": "Rhamnus sppl .",
+          "grupo": "Flora",
+          "nota": "La norma cita el GÉNERO, no una especie («Rhamnus spp.»). No se da de alta ninguna especie por esta entrada."
+        },
+        {
+          "scientificName": "Olea europaea sylvestris",
+          "grupo": "Flora",
+          "nota": "La norma escribe el trinomio sin «subsp.». Es el acebuche, no el olivo cultivado.",
+          "nombreCorregido": "Olea europaea subsp. sylvestris"
+        },
+        {
+          "scientificName": "Periploca angustifolia",
+          "grupo": "Flora",
+          "nota": "GBIF la da por sinónimo de Periploca laevigata, que es el nombre aceptado hoy."
+        },
+        {
+          "scientificName": "Ziziphus lotu s",
+          "grupo": "Flora",
+          "nota": "El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma.",
+          "nombreCorregido": "Ziziphus lotus"
+        },
+        {
+          "scientificName": "Lycium intricatum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Whitania frutescen s",
+          "grupo": "Flora",
+          "nota": "El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma.",
+          "nombreCorregido": "Withania frutescens"
+        },
+        {
+          "scientificName": "Tringct totanus",
+          "grupo": "Fauna",
+          "nota": "Archibebe común. El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma. El Artículo 13 da el nombre castellano al lado, que fija el taxón sin ambigüedad.",
+          "nombreCorregido": "Tringa totanus"
+        },
+        {
+          "scientificName": "Scolopax rusticola",
+          "grupo": "Fauna",
+          "nota": "Chocha perdiz."
+        },
+        {
+          "scientificName": "Fulica an-a",
+          "grupo": "Fauna",
+          "nota": "Focha común. El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma. El Artículo 13 da el nombre castellano al lado, que fija el taxón sin ambigüedad.",
+          "nombreCorregido": "Fulica atra"
+        },
+        {
+          "scientificName": "Rallus aquaticus",
+          "grupo": "Fauna",
+          "nota": "Rascón."
+        },
+        {
+          "scientificName": "Gallinula chloropu .s",
+          "grupo": "Fauna",
+          "nota": "Polla de agua. El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma. El Artículo 13 da el nombre castellano al lado, que fija el taxón sin ambigüedad.",
+          "nombreCorregido": "Gallinula chloropus"
+        },
+        {
+          "scientificName": "Larus ridiburtdus",
+          "grupo": "Fauna",
+          "nota": "Gaviota reidora. El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma. El Artículo 13 da el nombre castellano al lado, que fija el taxón sin ambigüedad. GBIF da el nombre por sinónimo de Chroicocephalus ridibundus.",
+          "nombreCorregido": "Larus ridibundus"
+        },
+        {
+          "scientificName": "Corvus corax",
+          "grupo": "Fauna",
+          "nota": "Cuervo."
+        },
+        {
+          "scientificName": "Erinaceus europaeus",
+          "grupo": "Fauna",
+          "nota": "Erizo europeo."
+        },
+        {
+          "scientificName": "Aethecltintcs olgiru .r",
+          "grupo": "Fauna",
+          "nota": "Erizo moruno. El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma. El Artículo 13 da el nombre castellano al lado, que fija el taxón sin ambigüedad. La norma usa el género Aethechinus, que GBIF solo resuelve a rango de género y da por sinónimo; el nombre aceptado de la especie es Atelerix algirus, y es el que se escribe para que el cruce no la pierda.",
+          "nombreCorregido": "Atelerix algirus"
+        },
+        {
+          "scientificName": "Mustela rtivrdi .r",
+          "grupo": "Fauna",
+          "nota": "Comadreja. El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma. El Artículo 13 da el nombre castellano al lado, que fija el taxón sin ambigüedad.",
+          "nombreCorregido": "Mustela nivalis"
+        },
+        {
+          "scientificName": "Martes ji)in(i",
+          "grupo": "Fauna",
+          "nota": "Garduña. El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma. El Artículo 13 da el nombre castellano al lado, que fija el taxón sin ambigüedad.",
+          "nombreCorregido": "Martes foina"
+        },
+        {
+          "scientificName": "Meles rrteles",
+          "grupo": "Fauna",
+          "nota": "Tejón. El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma. El Artículo 13 da el nombre castellano al lado, que fija el taxón sin ambigüedad.",
+          "nombreCorregido": "Meles meles"
+        },
+        {
+          "scientificName": "Genetta genetta",
+          "grupo": "Fauna",
+          "nota": "Gineta."
+        }
+      ]
     }
   }
 }

@@ -2,13 +2,25 @@
   "_nota": "Selección de especies para la Capa 3 de Calblanque, Monte de las Cenizas y Peña del Águila. NO es park.json: es la lista aprobada y su procedencia. ORDEN DE PRIORIDAD DE LAS FUENTES: primero la LEGISLACIÓN, después EIDOS, y GBIF solo para corroborar. Nivel 1 — el anexo normativo del espacio (PORN/PRUG/decreto de declaración, evidencia `anexo_normativo`) y el Formulario Normalizado de Datos del sitio Red Natura 2000 (secciones 3.2 y 3.3, evidencia `lista_oficial_sitio`): son las únicas fuentes que afirman que la especie forma parte de ESTE espacio y entran SIN exigirles constancia en GBIF. Nivel 2 — figura legal de EIDOS y especies características del HIC según el Atlas 2005 (`caracteristica`): dicen qué es el taxón, no que esté aquí, así que necesitan al menos una ocurrencia de GBIF dentro de los polígonos que lo corrobore. Nivel 3 — solo GBIF: NO ENTRA; un avistamiento suelto no distingue lo característico del olivo de un bancal abandonado. Autoctonía: se excluye todo lo que la Lista Patrón del IEPNB marca como «Especie no nativa». Se excluye el CEEEI (RD 630/2013): es el catálogo de especies exóticas INVASORAS, no una figura de protección, y tampoco cuentan los anexos forestales (RD 159/2022, RD 289/2003) ni el anexo de explotación de la Ley 42/2007. Alcance taxonómico: flora vascular y vertebrados, que es lo que cataloga NaturDex — clases admitidas: Magnoliopsida, Liliopsida, Pinopsida, Gnetopsida, Polypodiopsida, Lycopodiopsida, Aves, Mammalia, Reptilia, Squamata, Testudines, Amphibia, Actinopterygii. Lo que el nivel 1 enumera y GBIF no confirma se aprueba igual y queda listado en `anexo_sin_constancia` y `sitio_sin_constancia`: entra en el catálogo y hay que contrastarlo en campo. (3 bis) Las AVES no entran por el filtro de presencia —vuelan, sus ocurrencias caen dentro de cualquier polígono y por eso su ficha se escribe sin `habitatIds`—: exigen respaldo de sitio (formulario oficial del sitio o anexo normativo), y GBIF queda como confirmación. `rarityScore` (1–5) se deriva únicamente de la categoría legal ESTATAL más grave, con la norma que la justifica en `rarityBasis`; no interviene ninguna señal de abundancia. Generada por Tools/catalogo-nacional/build-species-seleccion.js.",
   "park": "calblanque-monte-cenizas-pena-aguila",
   "generado": "2026-08-17",
-  "total": 188,
-  "aves": 108,
-  "reutilizables": 103,
-  "nuevas": 85,
-  "excluidas": 603,
+  "total": 205,
+  "aves": 109,
+  "reutilizables": 117,
+  "nuevas": 88,
+  "excluidas": 597,
   "anexo": {
-    "consultado": false
+    "consultado": true,
+    "fuente": {
+      "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+      "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+      "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+      "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+      "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+      "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+      "consultado": "2026-08-17",
+      "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+    },
+    "enumeradas": 34,
+    "casadas": 33
   },
   "lista_oficial_sitio": {
     "consultado": true,
@@ -29,22 +41,22 @@
       }
     ],
     "enumeradas": 132,
-    "casadas": 122
+    "casadas": 121
   },
   "aves_puerta": "respaldo de sitio",
   "rareza": {
-    "1": 90,
-    "2": 87,
+    "1": 106,
+    "2": 88,
     "3": 0,
     "4": 7,
     "5": 4
   },
   "rareza_local": {
-    "1": 61,
-    "2": 72,
-    "3": 22,
+    "1": 71,
+    "2": 73,
+    "3": 27,
     "4": 25,
-    "5": 8
+    "5": 9
   },
   "especies": [
     {
@@ -462,6 +474,7 @@
       "evidence": [
         "observada_gbif",
         "protegida",
+        "anexo_normativo",
         "lista_oficial_sitio"
       ],
       "yaFichadaEn": null,
@@ -495,6 +508,21 @@
           "categoriaPoblacion": null
         }
       ],
+      "anexoNormativo": {
+        "citadaComo": "Tringct totanus",
+        "categoria": null,
+        "nota": "Archibebe común. El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma. El Artículo 13 da el nombre castellano al lado, que fija el taxón sin ambigüedad.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
       "eidosTaxonId": 12329,
       "nivelDeFuente": 1
     },
@@ -587,13 +615,48 @@
       "nivelDeFuente": 1
     },
     {
+      "scientificName": "Pistacia lentiscus",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 46,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "cabo-cope-puntas-calnegre",
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Pistacia lentiscus",
+        "categoria": null,
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
+      "eidosTaxonId": 7129,
+      "nivelDeFuente": 1
+    },
+    {
       "scientificName": "Tetraclinis articulata",
       "class": "Pinopsida",
       "gbifOccurrences": 44,
       "habitats": 7,
       "evidence": [
         "observada_gbif",
-        "protegida"
+        "protegida",
+        "anexo_normativo"
       ],
       "yaFichadaEn": null,
       "normas": [
@@ -621,9 +684,24 @@
         "ambito": "Región de Murcia"
       },
       "origen": "Especie no nativa",
+      "anexoNormativo": {
+        "citadaComo": "Tetraclinis articulata",
+        "categoria": null,
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
       "eidosTaxonId": 8758,
       "autoctoniaRevisada": "la Lista Patrón la da como no nativa, pero este espacio tiene cartografiado el HIC 9570 «Bosques de Tetraclinis articulata», cuyo nombre oficial la nombra: la cartografía es dato oficial sobre este territorio y manda",
-      "nivelDeFuente": 2
+      "nivelDeFuente": 1
     },
     {
       "scientificName": "Fringilla coelebs",
@@ -836,6 +914,7 @@
       "evidence": [
         "observada_gbif",
         "protegida",
+        "anexo_normativo",
         "lista_oficial_sitio"
       ],
       "yaFichadaEn": "cabo-cope-puntas-calnegre",
@@ -865,6 +944,21 @@
           "categoriaPoblacion": null
         }
       ],
+      "anexoNormativo": {
+        "citadaComo": "Chamaerops humill,s",
+        "categoria": null,
+        "nota": "El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
       "eidosTaxonId": 3518,
       "sinonimosFusionados": [
         "Chamaerops humilis L."
@@ -906,13 +1000,14 @@
     },
     {
       "scientificName": "Periploca angustifolia",
-      "class": "Magnoliopsida",
+      "class": null,
       "gbifOccurrences": 23,
       "habitats": 10,
       "evidence": [
         "observada_gbif",
         "caracteristica",
-        "protegida"
+        "protegida",
+        "anexo_normativo"
       ],
       "yaFichadaEn": "cabo-cope-puntas-calnegre",
       "normas": [
@@ -930,13 +1025,27 @@
         "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
         "ambito": "Región de Murcia"
       },
-      "origen": "Especie nativa (verificado por el nombre aceptado: Periploca angustifolia Labill.)",
-      "nombreAceptadoEidos": "Periploca angustifolia Labill.",
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Periploca angustifolia",
+        "categoria": null,
+        "nota": "GBIF la da por sinónimo de Periploca laevigata, que es el nombre aceptado hoy.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
       "eidosTaxonId": 7034,
       "sinonimosFusionados": [
         "Periploca laevigata"
       ],
-      "nivelDeFuente": 2
+      "nivelDeFuente": 1
     },
     {
       "scientificName": "Calidris minuta",
@@ -1825,7 +1934,8 @@
       "habitats": 9,
       "evidence": [
         "observada_gbif",
-        "protegida"
+        "protegida",
+        "anexo_normativo"
       ],
       "yaFichadaEn": "cabo-cope-puntas-calnegre",
       "normas": [
@@ -1844,8 +1954,23 @@
         "ambito": "Región de Murcia"
       },
       "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Lycium intricatum",
+        "categoria": null,
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
       "eidosTaxonId": 5923,
-      "nivelDeFuente": 2
+      "nivelDeFuente": 1
     },
     {
       "scientificName": "Muscicapa striata",
@@ -1906,6 +2031,7 @@
       "habitats": 9,
       "evidence": [
         "observada_gbif",
+        "anexo_normativo",
         "lista_oficial_sitio"
       ],
       "yaFichadaEn": null,
@@ -1925,6 +2051,21 @@
           "categoriaPoblacion": null
         }
       ],
+      "anexoNormativo": {
+        "citadaComo": "Gallinula chloropu .s",
+        "categoria": null,
+        "nota": "Polla de agua. El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma. El Artículo 13 da el nombre castellano al lado, que fija el taxón sin ambigüedad.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
       "eidosTaxonId": 10887,
       "nivelDeFuente": 1
     },
@@ -2172,6 +2313,88 @@
         }
       ],
       "eidosTaxonId": 12240,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Olea europaea subsp. europaea",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 6,
+      "habitats": 9,
+      "evidence": [
+        "observada_gbif",
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "cabo-cope-puntas-calnegre",
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Olea europaea sylvestris",
+        "categoria": null,
+        "nota": "La norma escribe el trinomio sin «subsp.». Es el acebuche, no el olivo cultivado.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
+      "eidosTaxonId": 6644,
+      "sinonimosFusionados": [
+        "Olea europaea"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Corvus corax",
+      "class": "Aves",
+      "gbifOccurrences": 6,
+      "habitats": 9,
+      "evidence": [
+        "observada_gbif",
+        "protegida",
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "monte-arabi",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Corvus corax",
+        "categoria": null,
+        "nota": "Cuervo.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
+      "eidosTaxonId": 11075,
       "nivelDeFuente": 1
     },
     {
@@ -2482,6 +2705,7 @@
       "habitats": 5,
       "evidence": [
         "observada_gbif",
+        "anexo_normativo",
         "lista_oficial_sitio"
       ],
       "yaFichadaEn": null,
@@ -2501,6 +2725,21 @@
           "categoriaPoblacion": "presente"
         }
       ],
+      "anexoNormativo": {
+        "citadaComo": "Rallus aquaticus",
+        "categoria": null,
+        "nota": "Rascón.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
       "eidosTaxonId": 10745,
       "nivelDeFuente": 1
     },
@@ -2544,7 +2783,8 @@
       "habitats": 5,
       "evidence": [
         "observada_gbif",
-        "caracteristica"
+        "caracteristica",
+        "anexo_normativo"
       ],
       "yaFichadaEn": "cabo-cope-puntas-calnegre",
       "normas": [],
@@ -2553,8 +2793,23 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Quercus coccifera",
+        "categoria": null,
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
       "eidosTaxonId": 7478,
-      "nivelDeFuente": 2
+      "nivelDeFuente": 1
     },
     {
       "scientificName": "Frankenia corymbosa",
@@ -3366,7 +3621,8 @@
       "habitats": 4,
       "evidence": [
         "observada_gbif",
-        "caracteristica"
+        "caracteristica",
+        "anexo_normativo"
       ],
       "yaFichadaEn": "cabo-cope-puntas-calnegre",
       "normas": [],
@@ -3375,8 +3631,23 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Whitania frutescen s",
+        "categoria": null,
+        "nota": "El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
       "eidosTaxonId": 9438,
-      "nivelDeFuente": 2
+      "nivelDeFuente": 1
     },
     {
       "scientificName": "Calicotome spinosa",
@@ -3453,7 +3724,8 @@
       "habitats": 4,
       "evidence": [
         "observada_gbif",
-        "protegida"
+        "protegida",
+        "anexo_normativo"
       ],
       "yaFichadaEn": null,
       "normas": [
@@ -3472,8 +3744,23 @@
         "ambito": "Región de Murcia"
       },
       "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Erica arborea",
+        "categoria": null,
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
       "eidosTaxonId": 4364,
-      "nivelDeFuente": 2
+      "nivelDeFuente": 1
     },
     {
       "scientificName": "Limonium carthaginense",
@@ -3482,7 +3769,8 @@
       "habitats": 4,
       "evidence": [
         "observada_gbif",
-        "protegida"
+        "protegida",
+        "anexo_normativo"
       ],
       "yaFichadaEn": null,
       "normas": [
@@ -3501,8 +3789,23 @@
         "ambito": "Región de Murcia"
       },
       "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Limoniuni cartaginensi,s",
+        "categoria": null,
+        "nota": "El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
       "eidosTaxonId": 5868,
-      "nivelDeFuente": 2
+      "nivelDeFuente": 1
     },
     {
       "scientificName": "Sideritis pusilla",
@@ -4090,7 +4393,8 @@
       "habitats": 4,
       "evidence": [
         "observada_gbif",
-        "protegida"
+        "protegida",
+        "anexo_normativo"
       ],
       "yaFichadaEn": "carrascoy-y-el-valle",
       "normas": [
@@ -4109,8 +4413,23 @@
         "ambito": "Región de Murcia"
       },
       "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Arbutus aanedo",
+        "categoria": null,
+        "nota": "El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
       "eidosTaxonId": 2284,
-      "nivelDeFuente": 2
+      "nivelDeFuente": 1
     },
     {
       "scientificName": "Zamenis scalaris",
@@ -5439,6 +5758,613 @@
       "nivelDeFuente": 2
     },
     {
+      "scientificName": "Ulmus minor",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "carrascoy-y-el-valle",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Ulrnus minor",
+        "categoria": null,
+        "nota": "El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
+      "eidosTaxonId": 9147,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Caralluma europaea",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "cabo-cope-puntas-calnegre",
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": null,
+      "anexoNormativo": {
+        "citadaComo": "Caralluma europaea",
+        "categoria": null,
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
+      "eidosTaxonId": 80097,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Juniperus oxycedrus",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "carrascoy-y-el-valle",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "En Peligro de Extinción"
+        },
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 5,
+      "rarityLocalBasis": {
+        "categoria": "En Peligro de Extinción",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Juniperus oxycednts",
+        "categoria": null,
+        "nota": "El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
+      "eidosTaxonId": 5505,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Juniperus phoenicea",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "cabo-cope-puntas-calnegre",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Juniperus phoenicia",
+        "categoria": null,
+        "nota": "El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
+      "eidosTaxonId": 5509,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Quercus rotundifolia",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "carrascoy-y-el-valle",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Quercus rotundifolia",
+        "categoria": null,
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
+      "eidosTaxonId": 7379,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Olea europaea subsp. sylvestris",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": null,
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa (verificado por el nombre aceptado: Olea europaea L. subsp. europaea)",
+      "anexoNormativo": {
+        "citadaComo": "Olea europaea sylvestris",
+        "categoria": null,
+        "nota": "La norma escribe el trinomio sin «subsp.». Es el acebuche, no el olivo cultivado.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
+      "nombreAceptadoEidos": "Olea europaea L. subsp. europaea",
+      "eidosTaxonId": 6645,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Ziziphus lotus",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "anexo_normativo",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "cabo-cope-puntas-calnegre",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Vulnerable"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Ziziphus lotus (L.) Lam.",
+          "siteCode": "ES0000260",
+          "siteName": "Mar Menor",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": null
+        }
+      ],
+      "anexoNormativo": {
+        "citadaComo": "Ziziphus lotu s",
+        "categoria": null,
+        "nota": "El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
+      "eidosTaxonId": 9441,
+      "sinonimosFusionados": [
+        "Ziziphus lotus (L.) Lam."
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Scolopax rusticola",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": null,
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Scolopax rusticola",
+        "categoria": null,
+        "nota": "Chocha perdiz.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
+      "eidosTaxonId": 12136,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Fulica atra",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "anexo_normativo",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": null,
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Fulica atra",
+          "siteCode": "ES0000260",
+          "siteName": "Mar Menor",
+          "seccion": "3.2",
+          "tipoPoblacion": "reproductora",
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "anexoNormativo": {
+        "citadaComo": "Fulica an-a",
+        "categoria": null,
+        "nota": "Focha común. El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma. El Artículo 13 da el nombre castellano al lado, que fija el taxón sin ambigüedad.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
+      "eidosTaxonId": 10786,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Erinaceus europaeus",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "carrascoy-y-el-valle",
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Erinaceus europaeus",
+        "categoria": null,
+        "nota": "Erizo europeo.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
+      "eidosTaxonId": 11227,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Atelerix algirus",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "cabo-cope-puntas-calnegre",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Aethecltintcs olgiru .r",
+        "categoria": null,
+        "nota": "Erizo moruno. El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma. El Artículo 13 da el nombre castellano al lado, que fija el taxón sin ambigüedad. La norma usa el género Aethechinus, que GBIF solo resuelve a rango de género y da por sinónimo; el nombre aceptado de la especie es Atelerix algirus, y es el que se escribe para que el cruce no la pierda.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
+      "eidosTaxonId": 10669,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Mustela nivalis",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "sierra-de-el-carche",
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Mustela rtivrdi .r",
+        "categoria": null,
+        "nota": "Comadreja. El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma. El Artículo 13 da el nombre castellano al lado, que fija el taxón sin ambigüedad.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
+      "eidosTaxonId": 11857,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Martes foina",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "cabo-cope-puntas-calnegre",
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Martes ji)in(i",
+        "categoria": null,
+        "nota": "Garduña. El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma. El Artículo 13 da el nombre castellano al lado, que fija el taxón sin ambigüedad.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
+      "eidosTaxonId": 11289,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Meles meles",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "cabo-cope-puntas-calnegre",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Meles rrteles",
+        "categoria": null,
+        "nota": "Tejón. El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma. El Artículo 13 da el nombre castellano al lado, que fija el taxón sin ambigüedad.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
+      "eidosTaxonId": 11709,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Genetta genetta",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "cabo-cope-puntas-calnegre",
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Genetta genetta",
+        "categoria": null,
+        "nota": "Gineta.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
+      "eidosTaxonId": 11350,
+      "nivelDeFuente": 1
+    },
+    {
       "scientificName": "Acrocephalus melanopogon",
       "class": "Aves",
       "gbifOccurrences": 0,
@@ -5892,34 +6818,6 @@
       "nivelDeFuente": 1
     },
     {
-      "scientificName": "Fulica atra",
-      "class": "Aves",
-      "gbifOccurrences": 0,
-      "habitats": 0,
-      "evidence": [
-        "lista_oficial_sitio"
-      ],
-      "yaFichadaEn": null,
-      "normas": [],
-      "rarityScore": 1,
-      "rarityBasis": null,
-      "rarityLocal": 1,
-      "rarityLocalBasis": null,
-      "origen": "Especie nativa",
-      "listaOficialSitio": [
-        {
-          "citadaComo": "Fulica atra",
-          "siteCode": "ES0000260",
-          "siteName": "Mar Menor",
-          "seccion": "3.2",
-          "tipoPoblacion": "reproductora",
-          "categoriaPoblacion": "presente"
-        }
-      ],
-      "eidosTaxonId": 10786,
-      "nivelDeFuente": 1
-    },
-    {
       "scientificName": "Ixobrychus minutus",
       "class": "Aves",
       "gbifOccurrences": 0,
@@ -6112,6 +7010,34 @@
         }
       ],
       "eidosTaxonId": 10699,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Melanitta nigra",
+      "class": "Aves",
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": null,
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Melanitta nigra (sensu stricto [excluding americana])",
+          "siteCode": "ES0000260",
+          "siteName": "Mar Menor",
+          "seccion": "3.2",
+          "tipoPoblacion": "invernante",
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "eidosTaxonId": 13987,
       "nivelDeFuente": 1
     },
     {
@@ -6520,6 +7446,7 @@
       "evidence": [
         "caracteristica",
         "protegida",
+        "anexo_normativo",
         "lista_oficial_sitio"
       ],
       "yaFichadaEn": "cabo-cope-puntas-calnegre",
@@ -6549,6 +7476,21 @@
           "categoriaPoblacion": null
         }
       ],
+      "anexoNormativo": {
+        "citadaComo": "Maytenus senegalensi .r",
+        "categoria": null,
+        "nota": "El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
       "nombreAceptadoEidos": "Gymnosporia senegalensis subsp. europaea (Boiss.) Rivas Goday & Rivas Mart.",
       "eidosTaxonId": 6258,
       "sinonimosFusionados": [
@@ -6595,48 +7537,6 @@
       ],
       "nombreAceptadoEidos": "Colchicum filifolium (Cambess.) Stef.",
       "eidosTaxonId": 6169,
-      "nivelDeFuente": 1
-    },
-    {
-      "scientificName": "Ziziphus lotus",
-      "class": null,
-      "gbifOccurrences": 0,
-      "habitats": 0,
-      "evidence": [
-        "protegida",
-        "lista_oficial_sitio"
-      ],
-      "yaFichadaEn": "cabo-cope-puntas-calnegre",
-      "normas": [
-        {
-          "ambito": "Región de Murcia",
-          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-          "categoria": "Vulnerable"
-        }
-      ],
-      "rarityScore": 1,
-      "rarityBasis": null,
-      "rarityLocal": 4,
-      "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
-      },
-      "origen": "Especie nativa",
-      "listaOficialSitio": [
-        {
-          "citadaComo": "Ziziphus lotus (L.) Lam.",
-          "siteCode": "ES0000260",
-          "siteName": "Mar Menor",
-          "seccion": "3.3",
-          "tipoPoblacion": null,
-          "categoriaPoblacion": null
-        }
-      ],
-      "eidosTaxonId": 9441,
-      "sinonimosFusionados": [
-        "Ziziphus lotus (L.) Lam."
-      ],
       "nivelDeFuente": 1
     },
     {
@@ -6688,7 +7588,13 @@
       "nivelDeFuente": 1
     }
   ],
-  "anexo_sin_constancia": [],
+  "anexo_sin_constancia": [
+    {
+      "scientificName": "Larus ridiburtdus",
+      "categoria": null,
+      "nota": "Gaviota reidora. El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma. El Artículo 13 da el nombre castellano al lado, que fija el taxón sin ambigüedad. GBIF da el nombre por sinónimo de Chroicocephalus ridibundus."
+    }
+  ],
   "sitio_sin_constancia": [
     {
       "scientificName": "Cyanecula svecica",
@@ -6712,6 +7618,14 @@
       "seccion": "3.2",
       "siteCode": "ES0000260",
       "tipoPoblacion": "invernante",
+      "categoriaPoblacion": "presente"
+    },
+    {
+      "scientificName": "Sylvia cantillans ([excluding subalpina])",
+      "grupo": "Aves",
+      "seccion": "3.2",
+      "siteCode": "ES0000260",
+      "tipoPoblacion": "en concentración",
       "categoriaPoblacion": "presente"
     },
     {
@@ -7063,25 +7977,6 @@
       "origen": "Especie nativa",
       "eidosTaxonId": 11056,
       "motivo": "ave sin respaldo de sitio (no figura en el formulario oficial del sitio ni en el anexo normativo)"
-    },
-    {
-      "scientificName": "Pistacia lentiscus",
-      "class": "Magnoliopsida",
-      "gbifOccurrences": 46,
-      "habitats": 5,
-      "evidence": [
-        "observada_gbif"
-      ],
-      "yaFichadaEn": "cabo-cope-puntas-calnegre",
-      "normas": [],
-      "rarityScore": 1,
-      "rarityBasis": null,
-      "rarityLocal": 1,
-      "rarityLocalBasis": null,
-      "origen": "Especie nativa",
-      "eidosTaxonId": 7129,
-      "nivelDeFuente": 3,
-      "motivo": "solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats)"
     },
     {
       "scientificName": "Picus sharpei",
@@ -8594,6 +9489,9 @@
       "rarityLocalBasis": null,
       "origen": "Especie nativa",
       "eidosTaxonId": 6257,
+      "sinonimosFusionados": [
+        "Maytenus senegalensis"
+      ],
       "nivelDeFuente": 3,
       "motivo": "solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats)"
     },
@@ -8953,28 +9851,6 @@
       "motivo": "solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats)"
     },
     {
-      "scientificName": "Olea europaea subsp. europaea",
-      "class": "Magnoliopsida",
-      "gbifOccurrences": 6,
-      "habitats": 9,
-      "evidence": [
-        "observada_gbif"
-      ],
-      "yaFichadaEn": "cabo-cope-puntas-calnegre",
-      "normas": [],
-      "rarityScore": 1,
-      "rarityBasis": null,
-      "rarityLocal": 1,
-      "rarityLocalBasis": null,
-      "origen": "Especie nativa",
-      "eidosTaxonId": 6644,
-      "sinonimosFusionados": [
-        "Olea europaea"
-      ],
-      "nivelDeFuente": 3,
-      "motivo": "solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats)"
-    },
-    {
       "scientificName": "Euphorbia serrata",
       "class": "Magnoliopsida",
       "gbifOccurrences": 6,
@@ -8992,35 +9868,6 @@
       "eidosTaxonId": 4534,
       "nivelDeFuente": 3,
       "motivo": "solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats)"
-    },
-    {
-      "scientificName": "Corvus corax",
-      "class": "Aves",
-      "gbifOccurrences": 6,
-      "habitats": 9,
-      "evidence": [
-        "observada_gbif",
-        "protegida"
-      ],
-      "yaFichadaEn": "monte-arabi",
-      "normas": [
-        {
-          "ambito": "Región de Murcia",
-          "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
-          "categoria": "Especies de interés especial"
-        }
-      ],
-      "rarityScore": 1,
-      "rarityBasis": null,
-      "rarityLocal": 3,
-      "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
-        "ambito": "Región de Murcia"
-      },
-      "origen": "Especie nativa",
-      "eidosTaxonId": 11075,
-      "motivo": "ave sin respaldo de sitio (no figura en el formulario oficial del sitio ni en el anexo normativo)"
     },
     {
       "scientificName": "Atractylis humilis",
@@ -11087,7 +11934,8 @@
       "gbifOccurrences": 3,
       "habitats": 5,
       "evidence": [
-        "observada_gbif"
+        "observada_gbif",
+        "anexo_normativo"
       ],
       "yaFichadaEn": null,
       "normas": [],
@@ -11096,6 +11944,21 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "origen": "Especie no nativa",
+      "anexoNormativo": {
+        "citadaComo": "Phoenix dactyliphera",
+        "categoria": null,
+        "nota": "El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
+        }
+      },
       "eidosTaxonId": 7089,
       "motivo": "no nativa (Lista Patrón IEPNB)"
     },
@@ -18428,12 +19291,12 @@
       "motivo": "fuera del alcance del catálogo (clase Insecta)"
     },
     {
-      "scientificName": "Falco peregrinus ([including pelegrinoides])",
-      "class": "Aves",
+      "scientificName": "Ephedra sppl",
+      "class": null,
       "gbifOccurrences": 0,
       "habitats": 0,
       "evidence": [
-        "lista_oficial_sitio"
+        "anexo_normativo"
       ],
       "yaFichadaEn": null,
       "normas": [],
@@ -18442,26 +19305,31 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "origen": null,
-      "listaOficialSitio": [
-        {
-          "citadaComo": "Falco peregrinus ([including pelegrinoides])",
-          "siteCode": "ES0000260",
-          "siteName": "Mar Menor",
-          "seccion": "3.2",
-          "tipoPoblacion": "permanente",
-          "categoriaPoblacion": "presente"
+      "anexoNormativo": {
+        "citadaComo": "Ephedra sppl",
+        "categoria": null,
+        "nota": "La norma cita el GÉNERO, no una especie («Ephedra spp.»). No se da de alta ninguna especie por esta entrada: un género no identifica un taxón del catálogo.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
         }
-      ],
+      },
       "nivelDeFuente": 1,
       "motivo": "nivel 1 sin resolver en EIDOS: el nombre que transcribe la fuente no existe en la Lista Patrón. Suele ser una errata de la norma o de la transcripción; se repara añadiendo `nombreCorregido` a su entrada de data/anexos-normativos.json, no cambiando el verbatim"
     },
     {
-      "scientificName": "Lanius meridionalis ([excluding koenigi])",
-      "class": "Aves",
+      "scientificName": "Rhamnus sppl .",
+      "class": null,
       "gbifOccurrences": 0,
       "habitats": 0,
       "evidence": [
-        "lista_oficial_sitio"
+        "anexo_normativo"
       ],
       "yaFichadaEn": null,
       "normas": [],
@@ -18470,133 +19338,62 @@
       "rarityLocal": 1,
       "rarityLocalBasis": null,
       "origen": null,
-      "listaOficialSitio": [
-        {
-          "citadaComo": "Lanius meridionalis ([excluding koenigi])",
-          "siteCode": "ES0000260",
-          "siteName": "Mar Menor",
-          "seccion": "3.2",
-          "tipoPoblacion": "permanente",
-          "categoriaPoblacion": "común"
+      "anexoNormativo": {
+        "citadaComo": "Rhamnus sppl .",
+        "categoria": null,
+        "nota": "La norma cita el GÉNERO, no una especie («Rhamnus spp.»). No se da de alta ninguna especie por esta entrada.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "El texto está en el BOLETÍN COMPLETO, no en el servicio de anuncios: la numeración de anuncios de 1995 no va por fecha y cuatro barridos sobre el rango 9000-9800 (por contenido y por tamaño) salieron vacíos, porque el PORN es el anuncio 10286. Lo sirve entero `/services/boletin/ano/<año>/numero/<n>/pdf`, un endpoint que no estaba escrito en el repo. Es un ESCANEO con OCR de mala calidad («Meles rrteles», «Martes ji)in(i»), así que el verbatim de cada entrada es lo que se lee en el texto extraído y la reparación va en `nombreCorregido`, verificada una a una contra el backbone de GBIF. Dos entradas de flora citan un género («Ephedra spp.», «Rhamnus spp.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d, que es el que nombra especies. El Artículo 14 enumera HÁBITATS protegidos, no especies, y su lista es coherente con lo que el Atlas cartografía aquí: cita como prioritarios los bosques de Tetraclinis articulata, las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, y los pastizales mediterráneos xerofíticos."
         }
-      ],
+      },
       "nivelDeFuente": 1,
       "motivo": "nivel 1 sin resolver en EIDOS: el nombre que transcribe la fuente no existe en la Lista Patrón. Suele ser una errata de la norma o de la transcripción; se repara añadiendo `nombreCorregido` a su entrada de data/anexos-normativos.json, no cambiando el verbatim"
     },
     {
-      "scientificName": "Melanitta nigra (sensu stricto [excluding americana])",
+      "scientificName": "Curruca cantillans",
       "class": "Aves",
       "gbifOccurrences": 0,
       "habitats": 0,
       "evidence": [
-        "lista_oficial_sitio"
+        "protegida"
       ],
-      "yaFichadaEn": null,
-      "normas": [],
-      "rarityScore": 1,
-      "rarityBasis": null,
-      "rarityLocal": 1,
-      "rarityLocalBasis": null,
-      "origen": null,
-      "listaOficialSitio": [
+      "yaFichadaEn": "carrascoy-y-el-valle",
+      "normas": [
         {
-          "citadaComo": "Melanitta nigra (sensu stricto [excluding americana])",
-          "siteCode": "ES0000260",
-          "siteName": "Mar Menor",
-          "seccion": "3.2",
-          "tipoPoblacion": "invernante",
-          "categoriaPoblacion": "presente"
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
         }
       ],
-      "nivelDeFuente": 1,
-      "motivo": "nivel 1 sin resolver en EIDOS: el nombre que transcribe la fuente no existe en la Lista Patrón. Suele ser una errata de la norma o de la transcripción; se repara añadiendo `nombreCorregido` a su entrada de data/anexos-normativos.json, no cambiando el verbatim"
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa (verificado por el nombre aceptado: Curruca cantillans (Pallas, 1764))",
+      "nombreAceptadoEidos": "Curruca cantillans (Pallas, 1764)",
+      "eidosTaxonId": 80920,
+      "sinonimosFusionados": [
+        "Sylvia cantillans"
+      ],
+      "motivo": "ave sin respaldo de sitio (no figura en el formulario oficial del sitio ni en el anexo normativo)"
     },
     {
-      "scientificName": "Motacilla flava ([excluding tschutschensis])",
-      "class": "Aves",
-      "gbifOccurrences": 0,
-      "habitats": 0,
-      "evidence": [
-        "lista_oficial_sitio"
-      ],
-      "yaFichadaEn": null,
-      "normas": [],
-      "rarityScore": 1,
-      "rarityBasis": null,
-      "rarityLocal": 1,
-      "rarityLocalBasis": null,
-      "origen": null,
-      "listaOficialSitio": [
-        {
-          "citadaComo": "Motacilla flava ([excluding tschutschensis])",
-          "siteCode": "ES0000260",
-          "siteName": "Mar Menor",
-          "seccion": "3.2",
-          "tipoPoblacion": "reproductora",
-          "categoriaPoblacion": "presente"
-        }
-      ],
-      "nivelDeFuente": 1,
-      "motivo": "nivel 1 sin resolver en EIDOS: el nombre que transcribe la fuente no existe en la Lista Patrón. Suele ser una errata de la norma o de la transcripción; se repara añadiendo `nombreCorregido` a su entrada de data/anexos-normativos.json, no cambiando el verbatim"
-    },
-    {
-      "scientificName": "Oenanthe oenanthe ([excluding seebohmi])",
-      "class": "Aves",
-      "gbifOccurrences": 0,
-      "habitats": 0,
-      "evidence": [
-        "lista_oficial_sitio"
-      ],
-      "yaFichadaEn": null,
-      "normas": [],
-      "rarityScore": 1,
-      "rarityBasis": null,
-      "rarityLocal": 1,
-      "rarityLocalBasis": null,
-      "origen": null,
-      "listaOficialSitio": [
-        {
-          "citadaComo": "Oenanthe oenanthe ([excluding seebohmi])",
-          "siteCode": "ES0000260",
-          "siteName": "Mar Menor",
-          "seccion": "3.2",
-          "tipoPoblacion": "en concentración",
-          "categoriaPoblacion": "presente"
-        }
-      ],
-      "nivelDeFuente": 1,
-      "motivo": "nivel 1 sin resolver en EIDOS: el nombre que transcribe la fuente no existe en la Lista Patrón. Suele ser una errata de la norma o de la transcripción; se repara añadiendo `nombreCorregido` a su entrada de data/anexos-normativos.json, no cambiando el verbatim"
-    },
-    {
-      "scientificName": "Sylvia cantillans ([excluding subalpina])",
-      "class": "Aves",
-      "gbifOccurrences": 0,
-      "habitats": 0,
-      "evidence": [
-        "lista_oficial_sitio"
-      ],
-      "yaFichadaEn": null,
-      "normas": [],
-      "rarityScore": 1,
-      "rarityBasis": null,
-      "rarityLocal": 1,
-      "rarityLocalBasis": null,
-      "origen": null,
-      "listaOficialSitio": [
-        {
-          "citadaComo": "Sylvia cantillans ([excluding subalpina])",
-          "siteCode": "ES0000260",
-          "siteName": "Mar Menor",
-          "seccion": "3.2",
-          "tipoPoblacion": "en concentración",
-          "categoriaPoblacion": "presente"
-        }
-      ],
-      "nivelDeFuente": 1,
-      "motivo": "nivel 1 sin resolver en EIDOS: el nombre que transcribe la fuente no existe en la Lista Patrón. Suele ser una errata de la norma o de la transcripción; se repara añadiendo `nombreCorregido` a su entrada de data/anexos-normativos.json, no cambiando el verbatim"
-    },
-    {
-      "scientificName": "Crangon crangon (Linnaeus, 1758)",
+      "scientificName": "Crangon crangon",
       "class": null,
       "gbifOccurrences": 0,
       "habitats": 0,
@@ -18624,7 +19421,7 @@
       "motivo": "fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase)"
     },
     {
-      "scientificName": "Jujubinus exasperatus (Pennant, 1777)",
+      "scientificName": "Jujubinus exasperatus",
       "class": null,
       "gbifOccurrences": 0,
       "habitats": 0,
@@ -18652,7 +19449,7 @@
       "motivo": "fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase)"
     },
     {
-      "scientificName": "Jujubinus striatus (Linnaeus, 1758)",
+      "scientificName": "Jujubinus striatus",
       "class": null,
       "gbifOccurrences": 0,
       "habitats": 0,
@@ -18680,7 +19477,7 @@
       "motivo": "fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase)"
     },
     {
-      "scientificName": "Mytilaster minimus (Poli, 1795)",
+      "scientificName": "Mytilaster minimus",
       "class": null,
       "gbifOccurrences": 0,
       "habitats": 0,
@@ -18736,7 +19533,7 @@
       "motivo": "fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase)"
     },
     {
-      "scientificName": "Sphaeroma serratum (Fabricius, 1787)",
+      "scientificName": "Sphaeroma serratum",
       "class": null,
       "gbifOccurrences": 0,
       "habitats": 0,

@@ -298,6 +298,16 @@ const hoy = () => new Date().toISOString().slice(0, 10);
  * el formulario diga *Sylvia undata* y GBIF sirva *Curruca undata*. Casarlos a mano por el binomio
  * sería la tercera implementación del mismo puente y la que divergiría.
  */
+/**
+ * Quita las salvedades de alcance que el Formulario Normalizado de Datos escribe entre paréntesis
+ * detrás del nombre: «Falco peregrinus ([including pelegrinoides])», «Sylvia cantillans ([excluding
+ * subalpina])», «Melanitta nigra (sensu stricto [excluding americana])». Son notas sobre qué
+ * subespecies cubre la ficha del sitio, no parte del nombre científico.
+ */
+function sinSalvedades(nombre) {
+  return String(nombre || '').replace(/\s*\([^)]*\)\s*$/, '').trim();
+}
+
 function candidatosDocumentales(anexo, sitio, yaEstan) {
   const nuevos = new Map();
   const añade = (nombre, clase) => {
@@ -316,8 +326,16 @@ function candidatosDocumentales(anexo, sitio, yaEstan) {
   // El formulario del sitio trae el grupo taxonómico en una letra (B = aves, M = mamíferos,
   // A = anfibios y reptiles, F = peces, P = plantas, I = invertebrados). Solo se traduce la de las
   // aves, que es la que necesita el filtro 3 bis; el resto lo resuelve EIDOS.
+  //
+  // Y se le quitan las SALVEDADES entre paréntesis por el mismo motivo que al anexo se le quitan las
+  // erratas: «Falco peregrinus ([including pelegrinoides])» no es un nombre, es un nombre más una
+  // nota de alcance, y EIDOS no lo resuelve. El índice del formulario sí sabe cruzarlo —está hecho
+  // por binomio— así que el candidato ENTRABA, y se caía después en la resolución con un motivo que
+  // hacía pensar en una errata de la fuente. En Calblanque costaba seis aves de nivel 1, el halcón
+  // peregrino entre ellas, en un parque de acantilados. El verbatim del formulario no se pierde:
+  // sigue en `sitio.mapa`, que es de donde sale la cita de la ficha.
   for (const lista of sitio.mapa.values()) {
-    for (const e of lista) añade(e.scientificName, e.grupoCodigo === 'B' ? 'Aves' : null);
+    for (const e of lista) añade(sinSalvedades(e.scientificName), e.grupoCodigo === 'B' ? 'Aves' : null);
   }
   return [...nuevos.values()];
 }

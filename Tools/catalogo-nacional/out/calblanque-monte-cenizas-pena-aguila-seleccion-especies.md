@@ -1,13 +1,15 @@
 # calblanque-monte-cenizas-pena-aguila · selección de especies
 
-Generada el 2026-08-17. **188 aprobadas** (108 aves), 103 ya fichadas en otro espacio y 85 nuevas. 603 excluidas.
+Generada el 2026-08-17. **205 aprobadas** (109 aves), 117 ya fichadas en otro espacio y 88 nuevas. 597 excluidas.
 
 Atlas 2005 consultado: 711 especies características para los HIC de este espacio.
 
 
 ## Anexo normativo del espacio
 
-**NO consultado.** Este espacio no tiene entrada en `data/anexos-normativos.json`. No es que carezca de norma con anexo de especies: es que nadie la ha leído todavía, y hasta que se lea ninguna especie de este espacio tiene la evidencia más fuerte de las cuatro.
+Fuente: **Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.**, Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con su nombre castellano). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a autorización (I y II), límites del Parque Regional (III) y cartografía. · BORM n.º 152, de 3 de julio de 1995, anuncio 10286 · consultado el 2026-08-17.
+
+Enumera **34 especies**; GBIF confirma **33** dentro de los polígonos de hábitat. Esas llevan evidencia `anexo_normativo` y conservan su plaza aunque tengan pocos registros.
 
 
 ## Lista oficial del sitio Red Natura 2000
@@ -19,7 +21,7 @@ Fuente: **IEPNB · Servicio Web de la Red Natura 2000 (https://iepnb.gob.es/api/
 | ES0000260 Mar Menor | ZEPA | 2023 |
 | ES6200001 Calblanque, Monte de las Cenizas y Peña del Águila | LIC/ZEC | 2023 |
 
-Enumeran **132 entradas**; GBIF confirma **122** dentro de los polígonos de hábitat. Esas llevan evidencia `lista_oficial_sitio`, y en las aves es lo que las deja entrar: es la única fuente que afirma que el ave pertenece a ESTE sitio.
+Enumeran **132 entradas**; GBIF confirma **121** dentro de los polígonos de hábitat. Esas llevan evidencia `lista_oficial_sitio`, y en las aves es lo que las deja entrar: es la única fuente que afirma que el ave pertenece a ESTE sitio.
 
 
 ### En el formulario oficial y sin constancia en GBIF
@@ -31,9 +33,18 @@ El sitio las declara y el barrido no las ha encontrado dentro de ningún polígo
 | *Cyanecula svecica* | Aves | 3.2 | ES0000260 | invernante, presente |
 | *Larus genei* | Aves | 3.2 | ES0000260 | permanente, presente |
 | *Larus ridibundus* | Aves | 3.2 | ES0000260 | invernante, presente |
+| *Sylvia cantillans ([excluding subalpina])* | Aves | 3.2 | ES0000260 | en concentración, presente |
 | *Sylvia conspicillata* | Aves | 3.2 | ES0000260 | en concentración, presente |
 | *Scilla autumnalis L.* | Plantas | 3.3 | ES0000260 | — |
 | *Scilla obtusifolia Poir.* | Plantas | 3.3 | ES0000260 | — |
+
+### Enumeradas por la norma y sin constancia en GBIF
+
+La norma del espacio dice que están aquí; el barrido de GBIF no las ha encontrado dentro de ningún polígono de hábitat. **Se aprueban igual**: son nivel 1 y la norma es la fuente más fuerte que hay. Se listan aquí porque siguen siendo el hueco a contrastar en campo —un inventario de hace veinte años puede haber envejecido— y la lista más útil que produce esta herramienta para decidir dónde mirar.
+
+| Especie | Categoría en la norma | Nota |
+|---|---|---|
+| *Larus ridiburtdus* | — | Gaviota reidora. El verbatim es la lectura OCR del escaneo del BORM de 1995, no necesariamente la grafía impresa: el daño puede ser de la digitalización y no una errata de la norma. El Artículo 13 da el nombre castellano al lado, que fija el taxón sin ambigüedad. GBIF da el nombre por sinónimo de Chroicocephalus ridibundus. |
 
 ## Rareza
 
@@ -41,12 +52,12 @@ Tramo 1–5 derivado **solo** de la categoría legal vigente; no interviene ning
 
 | Tramo | Significado | Estatal | Local |
 |---:|---|---:|---:|
-| 5 | En peligro de extinción · Extinguida | 4 | 8 |
+| 5 | En peligro de extinción · Extinguida | 4 | 9 |
 | 4 | Vulnerable · Sensible a la alteración de su hábitat | 7 | 25 |
-| 3 | De interés especial | 0 | 22 |
-| 2 | En régimen de protección especial (LESRPE) | 87 | 72 |
-| 1 | Sin figura de protección | 90 | 61 |
-| **≥ 4** | **candidatas a destacadas** | **11** | **33** |
+| 3 | De interés especial | 0 | 27 |
+| 2 | En régimen de protección especial (LESRPE) | 88 | 73 |
+| 1 | Sin figura de protección | 106 | 71 |
+| **≥ 4** | **candidatas a destacadas** | **11** | **34** |
 
 ## Figuras legales que no cuentan como protección
 
@@ -55,16 +66,16 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | Categoría | Veces |
 |---|---:|
 | Anexo IV | 51 |
-| ANEXO I. 2) Lista de taxones forestales para conservación ex situ | 18 |
+| ANEXO I. 2) Lista de taxones forestales para conservación ex situ | 22 |
 | CEEEI: Incluido | 14 |
-| ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ | 4 |
-| ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) | 4 |
-| Anexo V | 4 |
+| ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ | 8 |
+| ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) | 7 |
+| Anexo V | 5 |
 | Anexo II | 3 |
+| Anexo VI | 2 |
+| Incluido | 2 |
 | ANEXO I. Lista de especies forestales e híbiridos artificiales | 1 |
-| Anexo VI | 1 |
 | Prioritaria | 1 |
-| Incluido | 1 |
 | En situación crítica (SC) | 1 |
 
 ## Aprobadas
@@ -80,18 +91,19 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Charadrius alexandrinus* | Aves | 70 | 9 | 4 | observada_gbif, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
 | *Galerida cristata* | Aves | 69 | 10 | 2 | observada_gbif, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
 | *Saxicola rubicola* | Aves | 68 | 14 | 2 | observada_gbif, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
-| *Tringa totanus* | Aves | 59 | 5 | 2 | observada_gbif, protegida, lista_oficial_sitio | — |
+| *Tringa totanus* | Aves | 59 | 5 | 2 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | — |
 | *Egretta garzetta* | Aves | 52 | 13 | 2 | observada_gbif, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
 | *Tringa nebularia* | Aves | 48 | 9 | 2 | observada_gbif, protegida, lista_oficial_sitio | — |
-| *Tetraclinis articulata* | Pinopsida | 44 | 7 | 2 | observada_gbif, protegida | — |
+| *Pistacia lentiscus* | Magnoliopsida | 46 | 5 | 1 | observada_gbif, anexo_normativo | cabo-cope-puntas-calnegre |
+| *Tetraclinis articulata* | Pinopsida | 44 | 7 | 2 | observada_gbif, protegida, anexo_normativo | — |
 | *Fringilla coelebs* | Aves | 39 | 11 | 2 | observada_gbif, protegida, lista_oficial_sitio | monte-arabi |
 | *Curruca undata* | Aves | 36 | 14 | 1 | observada_gbif, lista_oficial_sitio | cabo-cope-puntas-calnegre |
 | *Recurvirostra avosetta* | Aves | 34 | 5 | 2 | observada_gbif, protegida, lista_oficial_sitio | — |
 | *Ardea cinerea* | Aves | 33 | 9 | 2 | observada_gbif, protegida, lista_oficial_sitio | — |
 | *Burhinus oedicnemus* | Aves | 29 | 5 | 1 | observada_gbif, lista_oficial_sitio | cabo-cope-puntas-calnegre |
-| *Chamaerops humilis* | Liliopsida | 25 | 14 | 1 | observada_gbif, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
+| *Chamaerops humilis* | Liliopsida | 25 | 14 | 1 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | cabo-cope-puntas-calnegre |
 | *Chamaeleo chamaeleon* | Squamata | 24 | 7 | 2 | observada_gbif, protegida | carrascoy-y-el-valle |
-| *Periploca angustifolia* | Magnoliopsida | 23 | 10 | 1 | observada_gbif, caracteristica, protegida | cabo-cope-puntas-calnegre |
+| *Periploca angustifolia* | — | 23 | 10 | 1 | observada_gbif, caracteristica, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Calidris minuta* | Aves | 22 | 5 | 2 | observada_gbif, protegida, lista_oficial_sitio | — |
 | *Phalacrocorax carbo* | Aves | 21 | 14 | 1 | observada_gbif, lista_oficial_sitio | — |
 | *Thalasseus sandvicensis* | Aves | 20 | 14 | 2 | observada_gbif, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
@@ -115,9 +127,9 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Buteo buteo* | Aves | 10 | 10 | 2 | observada_gbif, protegida, lista_oficial_sitio | carrascoy-y-el-valle |
 | *Motacilla flava* | Aves | 10 | 5 | 2 | observada_gbif, protegida, lista_oficial_sitio | — |
 | *Pinus halepensis* | Pinopsida | 9 | 5 | 1 | observada_gbif, caracteristica | cabo-cope-puntas-calnegre |
-| *Lycium intricatum* | Magnoliopsida | 9 | 9 | 1 | observada_gbif, protegida | cabo-cope-puntas-calnegre |
+| *Lycium intricatum* | Magnoliopsida | 9 | 9 | 1 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Muscicapa striata* | Aves | 9 | 11 | 2 | observada_gbif, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
-| *Gallinula chloropus* | Aves | 9 | 9 | 1 | observada_gbif, lista_oficial_sitio | — |
+| *Gallinula chloropus* | Aves | 9 | 9 | 1 | observada_gbif, anexo_normativo, lista_oficial_sitio | — |
 | *Sedum sediforme* | Magnoliopsida | 8 | 5 | 1 | observada_gbif, caracteristica | cabo-cope-puntas-calnegre |
 | *Lathyrus clymenum* | Magnoliopsida | 8 | 10 | 1 | observada_gbif, caracteristica | carrascoy-y-el-valle |
 | *Calidris alba* | Aves | 8 | 9 | 2 | observada_gbif, protegida, lista_oficial_sitio | — |
@@ -125,6 +137,8 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Sterna hirundo* | Aves | 7 | 5 | 2 | observada_gbif, protegida, lista_oficial_sitio | cuatro-calas |
 | *Sternula albifrons* | Aves | 7 | 5 | 2 | observada_gbif, protegida, lista_oficial_sitio | cuatro-calas |
 | *Pluvialis squatarola* | Aves | 7 | 5 | 2 | observada_gbif, protegida, lista_oficial_sitio | — |
+| *Olea europaea subsp. europaea* | Magnoliopsida | 6 | 9 | 1 | observada_gbif, anexo_normativo | cabo-cope-puntas-calnegre |
+| *Corvus corax* | Aves | 6 | 9 | 1 | observada_gbif, protegida, anexo_normativo | monte-arabi |
 | *Tachybaptus ruficollis* | Aves | 6 | 9 | 2 | observada_gbif, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
 | *Hieraaetus pennatus* | Aves | 6 | 9 | 2 | observada_gbif, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
 | *Gallinago gallinago* | Aves | 6 | 5 | 1 | observada_gbif, lista_oficial_sitio | — |
@@ -134,9 +148,9 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Anas crecca* | Aves | 5 | 5 | 1 | observada_gbif, lista_oficial_sitio | — |
 | *Saxicola rubetra* | Aves | 5 | 5 | 2 | observada_gbif, protegida, lista_oficial_sitio | sierra-espuna |
 | *Limosa limosa* | Aves | 5 | 5 | 2 | observada_gbif, protegida, lista_oficial_sitio | — |
-| *Rallus aquaticus* | Aves | 5 | 5 | 1 | observada_gbif, lista_oficial_sitio | — |
+| *Rallus aquaticus* | Aves | 5 | 5 | 1 | observada_gbif, anexo_normativo, lista_oficial_sitio | — |
 | *Tarentola mauritanica* | Squamata | 4 | 4 | 2 | observada_gbif, protegida | cabo-cope-puntas-calnegre |
-| *Quercus coccifera* | Magnoliopsida | 4 | 5 | 1 | observada_gbif, caracteristica | cabo-cope-puntas-calnegre |
+| *Quercus coccifera* | Magnoliopsida | 4 | 5 | 1 | observada_gbif, caracteristica, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Frankenia corymbosa* | Magnoliopsida | 4 | 4 | 1 | observada_gbif, caracteristica | cabo-cope-puntas-calnegre |
 | *Lavandula multifida* | Magnoliopsida | 4 | 9 | 1 | observada_gbif, caracteristica | cabo-cope-puntas-calnegre |
 | *Hemorrhois hippocrepis* | Squamata | 4 | 9 | 2 | observada_gbif, protegida | cabo-cope-puntas-calnegre |
@@ -163,12 +177,12 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Lygeum spartum* | Liliopsida | 2 | 4 | 1 | observada_gbif, caracteristica | cabo-cope-puntas-calnegre |
 | *Phoenicurus phoenicurus* | Aves | 2 | 5 | 4 | observada_gbif, protegida, lista_oficial_sitio | sierra-espuna |
 | *Hemidactylus turcicus* | Squamata | 2 | 4 | 2 | observada_gbif, protegida | cabo-cope-puntas-calnegre |
-| *Withania frutescens* | Magnoliopsida | 2 | 4 | 1 | observada_gbif, caracteristica | cabo-cope-puntas-calnegre |
+| *Withania frutescens* | Magnoliopsida | 2 | 4 | 1 | observada_gbif, caracteristica, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Calicotome spinosa* | Magnoliopsida | 2 | 4 | 1 | observada_gbif, caracteristica | — |
 | *Haplophyllum linifolium* | Magnoliopsida | 2 | 4 | 1 | observada_gbif, caracteristica | carrascoy-y-el-valle |
 | *Salsola papillosa* | Magnoliopsida | 2 | 4 | 1 | observada_gbif, protegida | cabo-cope-puntas-calnegre |
-| *Erica arborea* | Magnoliopsida | 2 | 4 | 1 | observada_gbif, protegida | — |
-| *Limonium carthaginense* | Magnoliopsida | 2 | 4 | 1 | observada_gbif, protegida | — |
+| *Erica arborea* | Magnoliopsida | 2 | 4 | 1 | observada_gbif, protegida, anexo_normativo | — |
+| *Limonium carthaginense* | Magnoliopsida | 2 | 4 | 1 | observada_gbif, protegida, anexo_normativo | — |
 | *Sideritis pusilla* | Magnoliopsida | 2 | 4 | 1 | observada_gbif, caracteristica, protegida | — |
 | *Prospero obtusifolium* | Liliopsida | 2 | 4 | 1 | observada_gbif, protegida | — |
 | *Artemisia barrelieri* | Magnoliopsida | 2 | 9 | 1 | observada_gbif, caracteristica | cabo-cope-puntas-calnegre |
@@ -186,7 +200,7 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Vanellus vanellus* | Aves | 2 | 5 | 1 | observada_gbif, lista_oficial_sitio | — |
 | *Charadrius dubius* | Aves | 2 | 5 | 2 | observada_gbif, protegida, lista_oficial_sitio | — |
 | *Centaurea saxicola* | Magnoliopsida | 1 | 4 | 1 | observada_gbif, caracteristica, protegida | cabo-cope-puntas-calnegre |
-| *Arbutus unedo* | Magnoliopsida | 1 | 4 | 1 | observada_gbif, protegida | carrascoy-y-el-valle |
+| *Arbutus unedo* | Magnoliopsida | 1 | 4 | 1 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
 | *Zamenis scalaris* | Squamata | 1 | 3 | 2 | observada_gbif, protegida | carrascoy-y-el-valle |
 | *Prospero autumnale* | Liliopsida | 1 | 4 | 1 | observada_gbif, protegida | carrascoy-y-el-valle |
 | *Phonus arborescens* | Magnoliopsida | 1 | 2 | 1 | observada_gbif, caracteristica | carrascoy-y-el-valle |
@@ -228,6 +242,21 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Arthrocnemum macrostachyum* | Magnoliopsida | 1 | 5 | 1 | observada_gbif, caracteristica | cabo-cope-puntas-calnegre |
 | *Scorpiurus muricatus* | Magnoliopsida | 1 | 5 | 1 | observada_gbif, caracteristica | carrascoy-y-el-valle |
 | *Echium sabulicola* | Magnoliopsida | 1 | 5 | 1 | observada_gbif, caracteristica | carrascoy-y-el-valle |
+| *Ulmus minor* | — | 0 | 0 | 1 | protegida, anexo_normativo | carrascoy-y-el-valle |
+| *Caralluma europaea* | — | 0 | 0 | 1 | anexo_normativo | cabo-cope-puntas-calnegre |
+| *Juniperus oxycedrus* | — | 0 | 0 | 1 | protegida, anexo_normativo | carrascoy-y-el-valle |
+| *Juniperus phoenicea* | — | 0 | 0 | 1 | protegida, anexo_normativo | cabo-cope-puntas-calnegre |
+| *Quercus rotundifolia* | — | 0 | 0 | 1 | protegida, anexo_normativo | carrascoy-y-el-valle |
+| *Olea europaea subsp. sylvestris* | — | 0 | 0 | 1 | anexo_normativo | — |
+| *Ziziphus lotus* | — | 0 | 0 | 1 | protegida, anexo_normativo, lista_oficial_sitio | cabo-cope-puntas-calnegre |
+| *Scolopax rusticola* | — | 0 | 0 | 1 | anexo_normativo | — |
+| *Fulica atra* | — | 0 | 0 | 1 | anexo_normativo, lista_oficial_sitio | — |
+| *Erinaceus europaeus* | — | 0 | 0 | 1 | anexo_normativo | carrascoy-y-el-valle |
+| *Atelerix algirus* | — | 0 | 0 | 2 | protegida, anexo_normativo | cabo-cope-puntas-calnegre |
+| *Mustela nivalis* | — | 0 | 0 | 1 | anexo_normativo | sierra-de-el-carche |
+| *Martes foina* | — | 0 | 0 | 1 | anexo_normativo | cabo-cope-puntas-calnegre |
+| *Meles meles* | — | 0 | 0 | 1 | protegida, anexo_normativo | cabo-cope-puntas-calnegre |
+| *Genetta genetta* | — | 0 | 0 | 1 | anexo_normativo | cabo-cope-puntas-calnegre |
 | *Acrocephalus melanopogon* | Aves | 0 | 0 | 2 | protegida, lista_oficial_sitio | — |
 | *Ardeola ralloides* | Aves | 0 | 0 | 4 | protegida, lista_oficial_sitio | — |
 | *Aythya ferina* | Aves | 0 | 0 | 1 | lista_oficial_sitio | — |
@@ -239,12 +268,12 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Coracias garrulus* | Aves | 0 | 0 | 2 | protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
 | *Coturnix coturnix* | Aves | 0 | 0 | 1 | lista_oficial_sitio | carrascoy-y-el-valle |
 | *Falco columbarius* | Aves | 0 | 0 | 2 | protegida, lista_oficial_sitio | sierra-espuna |
-| *Fulica atra* | Aves | 0 | 0 | 1 | lista_oficial_sitio | — |
 | *Ixobrychus minutus* | Aves | 0 | 0 | 2 | protegida, lista_oficial_sitio | — |
 | *Locustella luscinioides* | Aves | 0 | 0 | 2 | protegida, lista_oficial_sitio | — |
 | *Lymnocryptes minimus* | Aves | 0 | 0 | 1 | lista_oficial_sitio | — |
 | *Mareca strepera* | Aves | 0 | 0 | 1 | lista_oficial_sitio | — |
 | *Marmaronetta angustirostris* | Aves | 0 | 0 | 5 | protegida, lista_oficial_sitio | — |
+| *Melanitta nigra* | Aves | 0 | 0 | 1 | lista_oficial_sitio | — |
 | *Melanocorypha calandra* | Aves | 0 | 0 | 2 | protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
 | *Mergus serrator* | Aves | 0 | 0 | 1 | lista_oficial_sitio | — |
 | *Otus scops* | Aves | 0 | 0 | 2 | protegida, lista_oficial_sitio | carrascoy-y-el-valle |
@@ -255,9 +284,8 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Remiz pendulinus* | Aves | 0 | 0 | 2 | protegida, lista_oficial_sitio | — |
 | *Tringa glareola* | Aves | 0 | 0 | 2 | protegida, lista_oficial_sitio | — |
 | *Halocnemum strobilaceum* | — | 0 | 0 | 1 | caracteristica, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
-| *Maytenus senegalensis subsp. europaea* | — | 0 | 0 | 1 | caracteristica, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
+| *Maytenus senegalensis subsp. europaea* | — | 0 | 0 | 1 | caracteristica, protegida, anexo_normativo, lista_oficial_sitio | cabo-cope-puntas-calnegre |
 | *Merendera filifolia Cambess.* | — | 0 | 0 | 1 | caracteristica, protegida, lista_oficial_sitio | — |
-| *Ziziphus lotus* | — | 0 | 0 | 1 | protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
 | *Aphanius iberus* | — | 0 | 0 | 5 | protegida, lista_oficial_sitio | — |
 
 ## Excluidas
@@ -277,7 +305,6 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Columba palumbus* | Aves | 49 | 11 | ave sin respaldo de sitio (no figura en el formulario oficial del sitio ni en el anexo normativo) |
 | *Carduelis carduelis* | Aves | 48 | 14 | ave sin respaldo de sitio (no figura en el formulario oficial del sitio ni en el anexo normativo) |
 | *Phylloscopus collybita* | Aves | 47 | 14 | ave sin respaldo de sitio (no figura en el formulario oficial del sitio ni en el anexo normativo) |
-| *Pistacia lentiscus* | Magnoliopsida | 46 | 5 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
 | *Picus sharpei* | Aves | 44 | 11 | ave sin respaldo de sitio (no figura en el formulario oficial del sitio ni en el anexo normativo) |
 | *Phoenicurus ochruros* | Aves | 42 | 14 | ave sin respaldo de sitio (no figura en el formulario oficial del sitio ni en el anexo normativo) |
 | *Chroicocephalus ridibundus* | Aves | 38 | 10 | ave sin respaldo de sitio (no figura en el formulario oficial del sitio ni en el anexo normativo) |
@@ -360,9 +387,7 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Lycoperdon perlatum* | Agaricomycetes | 6 | 4 | fuera del alcance del catálogo (clase Agaricomycetes) |
 | *Pieris rapae* | Insecta | 6 | 4 | fuera del alcance del catálogo (clase Insecta) |
 | *Bituminaria bituminosa* | Magnoliopsida | 6 | 10 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
-| *Olea europaea subsp. europaea* | Magnoliopsida | 6 | 9 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
 | *Euphorbia serrata* | Magnoliopsida | 6 | 10 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
-| *Corvus corax* | Aves | 6 | 9 | ave sin respaldo de sitio (no figura en el formulario oficial del sitio ni en el anexo normativo) |
 | *Atractylis humilis* | Magnoliopsida | 6 | 9 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
 | *Chrysolina americana* | Insecta | 6 | 10 | no nativa (Lista Patrón IEPNB) |
 | *Sympetrum fonscolombii* | Insecta | 6 | 6 | fuera del alcance del catálogo (clase Insecta) |
@@ -854,16 +879,13 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Acinopus picipes* | Insecta | 1 | 5 | fuera del alcance del catálogo (clase Insecta) |
 | *Erodius carinatus* | Insecta | 1 | 5 | fuera del alcance del catálogo (clase Insecta) |
 | *Coptocephala scopolina* | Insecta | 1 | 5 | fuera del alcance del catálogo (clase Insecta) |
-| *Falco peregrinus ([including pelegrinoides])* | Aves | 0 | 0 | nivel 1 sin resolver en EIDOS: el nombre que transcribe la fuente no existe en la Lista Patrón. Suele ser una errata de la norma o de la transcripción; se repara añadiendo `nombreCorregido` a su entrada de data/anexos-normativos.json, no cambiando el verbatim |
-| *Lanius meridionalis ([excluding koenigi])* | Aves | 0 | 0 | nivel 1 sin resolver en EIDOS: el nombre que transcribe la fuente no existe en la Lista Patrón. Suele ser una errata de la norma o de la transcripción; se repara añadiendo `nombreCorregido` a su entrada de data/anexos-normativos.json, no cambiando el verbatim |
-| *Melanitta nigra (sensu stricto [excluding americana])* | Aves | 0 | 0 | nivel 1 sin resolver en EIDOS: el nombre que transcribe la fuente no existe en la Lista Patrón. Suele ser una errata de la norma o de la transcripción; se repara añadiendo `nombreCorregido` a su entrada de data/anexos-normativos.json, no cambiando el verbatim |
-| *Motacilla flava ([excluding tschutschensis])* | Aves | 0 | 0 | nivel 1 sin resolver en EIDOS: el nombre que transcribe la fuente no existe en la Lista Patrón. Suele ser una errata de la norma o de la transcripción; se repara añadiendo `nombreCorregido` a su entrada de data/anexos-normativos.json, no cambiando el verbatim |
-| *Oenanthe oenanthe ([excluding seebohmi])* | Aves | 0 | 0 | nivel 1 sin resolver en EIDOS: el nombre que transcribe la fuente no existe en la Lista Patrón. Suele ser una errata de la norma o de la transcripción; se repara añadiendo `nombreCorregido` a su entrada de data/anexos-normativos.json, no cambiando el verbatim |
-| *Sylvia cantillans ([excluding subalpina])* | Aves | 0 | 0 | nivel 1 sin resolver en EIDOS: el nombre que transcribe la fuente no existe en la Lista Patrón. Suele ser una errata de la norma o de la transcripción; se repara añadiendo `nombreCorregido` a su entrada de data/anexos-normativos.json, no cambiando el verbatim |
-| *Crangon crangon (Linnaeus, 1758)* | — | 0 | 0 | fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase) |
-| *Jujubinus exasperatus (Pennant, 1777)* | — | 0 | 0 | fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase) |
-| *Jujubinus striatus (Linnaeus, 1758)* | — | 0 | 0 | fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase) |
-| *Mytilaster minimus (Poli, 1795)* | — | 0 | 0 | fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase) |
+| *Ephedra sppl* | — | 0 | 0 | nivel 1 sin resolver en EIDOS: el nombre que transcribe la fuente no existe en la Lista Patrón. Suele ser una errata de la norma o de la transcripción; se repara añadiendo `nombreCorregido` a su entrada de data/anexos-normativos.json, no cambiando el verbatim |
+| *Rhamnus sppl .* | — | 0 | 0 | nivel 1 sin resolver en EIDOS: el nombre que transcribe la fuente no existe en la Lista Patrón. Suele ser una errata de la norma o de la transcripción; se repara añadiendo `nombreCorregido` a su entrada de data/anexos-normativos.json, no cambiando el verbatim |
+| *Curruca cantillans* | Aves | 0 | 0 | ave sin respaldo de sitio (no figura en el formulario oficial del sitio ni en el anexo normativo) |
+| *Crangon crangon* | — | 0 | 0 | fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase) |
+| *Jujubinus exasperatus* | — | 0 | 0 | fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase) |
+| *Jujubinus striatus* | — | 0 | 0 | fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase) |
+| *Mytilaster minimus* | — | 0 | 0 | fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase) |
 | *Palaemon adspersus Rathke, 1837* | — | 0 | 0 | fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase) |
-| *Sphaeroma serratum (Fabricius, 1787)* | — | 0 | 0 | fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase) |
+| *Sphaeroma serratum* | — | 0 | 0 | fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase) |
 | *Tethya citrina Sarà y Melone, 1965* | — | 0 | 0 | fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase) |
