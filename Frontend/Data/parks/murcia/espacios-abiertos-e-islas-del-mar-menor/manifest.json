@@ -9,13 +9,14 @@
     "parque": "Data/parks/murcia/espacios-abiertos-e-islas-del-mar-menor/geo/parque.geojson",
     "lic": "Data/parks/murcia/espacios-abiertos-e-islas-del-mar-menor/geo/lic.geojson",
     "zepa": "Data/parks/murcia/espacios-abiertos-e-islas-del-mar-menor/geo/zepa.geojson",
-    "trails": "Data/parks/murcia/espacios-abiertos-e-islas-del-mar-menor/geo/trails.geojson"
+    "trails": "Data/parks/murcia/espacios-abiertos-e-islas-del-mar-menor/geo/trails.geojson",
+    "habitats": "Data/parks/murcia/espacios-abiertos-e-islas-del-mar-menor/geo/habitats.geojson"
   },
   "images": [],
   "audio": [],
   "counts": {
     "species": 0,
-    "habitats": 0,
+    "habitats": 19,
     "pointsOfInterest": 0,
     "images": 0,
     "assetBytes": 0

@@ -17,7 +17,476 @@
     "summary": "Las islas volcánicas del Mar Menor y los saladares libres de su orilla: humedales salinos que dan refugio a las aves entre tanta costa urbanizada.",
     "boundaryNote": "Límite oficial servido en geo/parque.geojson, descargado del geoportal del IMIDA/CARM (servicio PROYECTOS/OISMA, capa de Paisaje Protegido, registros con Caracter «Firme»), identificador interno ENP000008. Código ENP oficial ES620015, superficie oficial 1307,4 ha según el Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Geometría en WGS84, sin generalizar (3532 vértices, superficie resultante 1308,9 ha, desviación del 0,12 %). Sustituye a la delimitación de la capa ENP nacional del MITECO, que es un producto generalizado. El IMIDA publica este espacio en 2 piezas (80,1 ha + 1227,3 ha), cuya suma es la superficie oficial; se han unido todas. Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM. Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico» (código y superficie oficiales) e IMIDA/CARM (geometría)."
   },
-  "habitats": [],
+  "habitats": [
+    {
+      "id": "acantilados-con-vegetacion-1240",
+      "code": "1240",
+      "name": "Acantilados con vegetación de las costas mediterráneas con Limonium spp.",
+      "type": "Litoral",
+      "priority": false,
+      "hicSubtipos": [
+        "1240"
+      ],
+      "fitosociologia": [
+        "Limonio cossoniani-Lycietum intricati Esteve 1973 corr. Alcaraz, P. Sánchez, De la Torre, Ríos & J. Alvarez 1991"
+      ],
+      "description": "",
+      "coordinates": [
+        37.774627,
+        -0.742206
+      ],
+      "color": "#2e8b57",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "pastizales-salinos-mediterraneos-1410",
+      "code": "1410",
+      "name": "Pastizales salinos mediterráneos (Juncetalia maritimi)",
+      "type": "Salino",
+      "priority": false,
+      "hicSubtipos": [
+        "1410"
+      ],
+      "fitosociologia": [
+        "Elymo elongati-Juncetum maritimi Alcaraz, Garre, Peinado & Martínez-Parras 1986",
+        "Holoschoenetum vulgaris Br.-Bl. ex Tchou 1948",
+        "Schoeno nigricantis-Plantaginetum crassifoliae Br.-Bl. in Br.-Bl., Roussine & Nègre 1952"
+      ],
+      "description": "",
+      "coordinates": [
+        37.659951,
+        -0.809223
+      ],
+      "color": "#b8860b",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "matorrales-halofilos-mediterraneos-1420",
+      "code": "1420",
+      "name": "Matorrales halófilos mediterráneos y termoatlánticos (Sarcocornetea)",
+      "type": "Salino",
+      "priority": false,
+      "hicSubtipos": [
+        "1420"
+      ],
+      "fitosociologia": [
+        "Cistancho phelypaeae-Arthrocnemetum fruticosi Géhu ex Géhu & Géhu-Franck 1977",
+        "Frankenio corymbosae-Arthrocnemetum macrostachyi Rivas-Martínez, Alcaraz, Belmonte, Cantó & Sánchez-Mata 1984",
+        "Sarcocornietum alpini Br.-Bl. 1933 corr. Rivas-Martínez, Lousã, T.E. Díaz, Fernández-González & J.C. Costa 1990"
+      ],
+      "description": "",
+      "coordinates": [
+        37.702303,
+        -0.854163
+      ],
+      "color": "#2e8b57",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "estepas-salinas-mediterraneas-1510",
+      "code": "1510",
+      "name": "Estepas salinas mediterráneas (Limonietalia)",
+      "type": "Salino",
+      "priority": true,
+      "hicSubtipos": [
+        "1510"
+      ],
+      "fitosociologia": [
+        "Limonietum angustebracteato-delicatuli Rivas-Martínez & Alcaraz in Alcaraz 1984",
+        "Limonio caesii-Lygeetum sparti Rivas-Martínez & Alcaraz in Alcaraz 1984",
+        "Suaedetum spicato-splendentis Rivas-Martínez, Cantó & Sanchez-Mata in Rivas-Martínez, T.E.Díaz, Fernández-González, Izco, Loidi, Lousa & Penas 2002"
+      ],
+      "description": "",
+      "coordinates": [
+        37.702303,
+        -0.854163
+      ],
+      "color": "#2e8b57",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "dunas-con-vegetacion-2260",
+      "code": "2260",
+      "name": "Dunas con vegetación esclerófila del Cisto-Lavanduletalia",
+      "type": "Dunas",
+      "priority": false,
+      "hicSubtipos": [
+        "2260"
+      ],
+      "fitosociologia": [
+        "Helianthemo marminorensis-Teucrietum dunensis Peinado, Alcaraz & Martínez-Parras 1992"
+      ],
+      "description": "",
+      "coordinates": [
+        37.774627,
+        -0.742206
+      ],
+      "color": "#66cdaa",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "galerias-y-matorrales-92D0",
+      "code": "92D0",
+      "name": "Galerías y matorrales ribereños termomediterráneos (Nerio-Tamaricetea)",
+      "type": "Ribera",
+      "priority": false,
+      "hicSubtipos": [
+        "92D0"
+      ],
+      "fitosociologia": [
+        "Agrostio stoloniferae-Tamaricetum canariensis Cirujano 1981",
+        "Inulo crithmoidis-Tamaricetum boveanae Izco, Fernández-González & A. Molina 1984"
+      ],
+      "description": "",
+      "coordinates": [
+        37.702303,
+        -0.854163
+      ],
+      "color": "#2e8b57",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "matorrales-halonitrofilos-pegano-1430",
+      "code": "1430",
+      "name": "Matorrales halonitrófilos (Pegano-Salsoletea)",
+      "type": "Matorral",
+      "priority": false,
+      "hicSubtipos": [
+        "1430"
+      ],
+      "fitosociologia": [
+        "Atriplicetum glauco-halimi Rivas-Martínez & Alcaraz in Alcaraz 1984",
+        "Atriplici glaucae-Suaedetum pruinosae Rigual 1972",
+        "Withanio frutescentis-Lycietum intricati Alcaraz, P. Sánchez, De la Torre, Ríos & J. Alvarez 1991"
+      ],
+      "description": "",
+      "coordinates": [
+        37.634928,
+        -0.719876
+      ],
+      "color": "#9acd32",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "matorrales-termomediterraneos-y-5330",
+      "code": "5330",
+      "name": "Matorrales termomediterráneos y pre-estépicos",
+      "type": "Matorral",
+      "priority": false,
+      "hicSubtipos": [
+        "5330"
+      ],
+      "fitosociologia": [
+        "Chamaeropo humilis-Rhamnetum lycioidis O. Bolòs 1957",
+        "Saturejo canescentis-Thymetum hyemalis Esteve 1973 corr. Alcaraz, T.E. Díaz, Rivas-Martínez & P. Sánchez 1989"
+      ],
+      "description": "",
+      "coordinates": [
+        37.620864,
+        -0.801616
+      ],
+      "color": "#daa520",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "pendientes-rocosas-siliceas-8220",
+      "code": "8220",
+      "name": "Pendientes rocosas silíceas con vegetación casmofítica",
+      "type": "Roquedos",
+      "priority": false,
+      "hicSubtipos": [
+        "8220"
+      ],
+      "fitosociologia": [
+        "Cheilantho maderensis-Cosentinietum velleae Ladero ex F.J. Pérez, T.E. Díaz, P. Fernández & Salvo 1989"
+      ],
+      "description": "",
+      "coordinates": [
+        37.687392,
+        -0.843251
+      ],
+      "color": "#8b5e34",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "matorrales-arborescentes-de-5220",
+      "code": "5220",
+      "name": "Matorrales arborescentes de Ziziphus",
+      "type": "Matorral",
+      "priority": true,
+      "hicSubtipos": [
+        "5220"
+      ],
+      "fitosociologia": [
+        "Mayteno europaei-Periplocetum angustifoliae Rivas Goday & Esteve in Rivas Goday in Rivas Goday, Borja, Esteve, Galiano, Rigual & Rivas-Martínez 1960 corr. Rivas-Martínez 1975"
+      ],
+      "description": "",
+      "coordinates": [
+        37.635884,
+        -0.828597
+      ],
+      "color": "#cd853f",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "vegetacion-anual-sobre-1210",
+      "code": "1210",
+      "name": "Vegetación anual sobre desechos marinos acumulados",
+      "type": "Litoral",
+      "priority": false,
+      "hicSubtipos": [
+        "1210"
+      ],
+      "fitosociologia": [
+        "Salsolo kali-Cakiletum aegyptiacae Costa & Mansanet 1981"
+      ],
+      "description": "",
+      "coordinates": [
+        37.660511,
+        -0.808056
+      ],
+      "color": "#6b8e23",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "dunas-moviles-embrionarias-2110",
+      "code": "2110",
+      "name": "Dunas móviles embrionarias",
+      "type": "Dunas",
+      "priority": false,
+      "hicSubtipos": [
+        "2110"
+      ],
+      "fitosociologia": [
+        "Cypero mucronati-Agropyretum juncei Kühnholtz ex Br.-Bl. 1933"
+      ],
+      "description": "",
+      "coordinates": [
+        37.638329,
+        -0.709708
+      ],
+      "color": "#6b8e23",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "zonas-subestepicas-de-6220",
+      "code": "6220",
+      "name": "Zonas subestépicas de gramíneas y anuales del Thero-Brachypodietea",
+      "type": "Pastos",
+      "priority": true,
+      "hicSubtipos": [
+        "6220"
+      ],
+      "fitosociologia": [
+        "Bupleuro semicompositi-Filaginetum mareoticae Alcaraz, P. Sánchez, De la Torre, Ríos & J. Alvarez 1991",
+        "Teucrio pseudochamaepityos-Brachypodietum ramosi O. Bolòs 1957"
+      ],
+      "description": "",
+      "coordinates": [
+        37.620864,
+        -0.801616
+      ],
+      "color": "#66cdaa",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "prados-calcareos-carsticos-6110",
+      "code": "6110",
+      "name": "Prados calcáreos cársticos o basófilos del Alysso-Sedion albi",
+      "type": "Pastos",
+      "priority": true,
+      "hicSubtipos": [
+        "6110"
+      ],
+      "fitosociologia": [
+        "Sedetum micrantho-sediformis O. Bolòs & Masalles in O. Bolòs 1981"
+      ],
+      "description": "",
+      "coordinates": [
+        37.660178,
+        -0.737108
+      ],
+      "color": "#9acd32",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "pendientes-rocosas-calcicolas-8210",
+      "code": "8210",
+      "name": "Pendientes rocosas calcícolas con vegetación casmofítica",
+      "type": "Roquedos",
+      "priority": false,
+      "hicSubtipos": [
+        "8210"
+      ],
+      "fitosociologia": [
+        "Cosentinio bivalentis-Teucrietum freynii Rigual, Esteve & Rivas Goday 1962 corr. Alcaraz, T.E. Díaz, Rivas-Martínez & P. Sánchez 1989"
+      ],
+      "description": "",
+      "coordinates": [
+        37.635884,
+        -0.828597
+      ],
+      "color": "#daa520",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "bosques-de-tetraclinis-9570",
+      "code": "9570",
+      "name": "Bosques de Tetraclinis articulata",
+      "type": "Bosque",
+      "priority": true,
+      "hicSubtipos": [
+        "9570"
+      ],
+      "fitosociologia": [
+        "Arisaro simorrhini-Tetraclinidetum articulatae Rivas Goday & Rivas-Martínez in Rivas-Martínez 1975 (bosques de Tetraclinis)",
+        "Mayteno europaei-Periplocetum angustifoliae Rivas Goday & Esteve in Rivas Goday in Rivas Goday, Borja, Esteve, Galiano, Rigual & Rivas-Martínez 1960 corr. Rivas-Martínez 1975 (bosques de Tetraclinis)"
+      ],
+      "description": "",
+      "coordinates": [
+        37.619649,
+        -0.801191
+      ],
+      "color": "#cd853f",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "dunas-con-cespedes-2230",
+      "code": "2230",
+      "name": "Dunas con céspedes del Malcomietalia",
+      "type": "Dunas",
+      "priority": false,
+      "hicSubtipos": [
+        "2230"
+      ],
+      "fitosociologia": [
+        "Triplachno nitentis-Silenetum ramosissimae Peinado, Martínez-Parras, Alcaraz, Garre & Cruz 1985"
+      ],
+      "description": "",
+      "coordinates": [
+        37.638329,
+        -0.709708
+      ],
+      "color": "#2e8b57",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "dunas-moviles-de-2120",
+      "code": "2120",
+      "name": "Dunas móviles de litoral con Ammophila arenaria (dunas blancas)",
+      "type": "Dunas",
+      "priority": false,
+      "hicSubtipos": [
+        "2120"
+      ],
+      "fitosociologia": [
+        "Loto cretici-Ammophiletum australis Rivas-Martínez 1965 corr. Rivas-Martínez, T.E. Díaz, Fernández-González, Izco, Loidi, Lousa & Penas 2002"
+      ],
+      "description": "",
+      "coordinates": [
+        37.63833,
+        -0.709704
+      ],
+      "color": "#8fbc8f",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "dunas-fijas-de-2210",
+      "code": "2210",
+      "name": "Dunas fijas de litoral del Crucianellion maritimae",
+      "type": "Dunas",
+      "priority": false,
+      "hicSubtipos": [
+        "2210"
+      ],
+      "fitosociologia": [
+        "Loto cretici-Crucianelletum maritimae Alcaraz, T.E. Díaz, Rivas-Martínez & P. Sánchez 1989"
+      ],
+      "description": "",
+      "coordinates": [
+        37.63833,
+        -0.709704
+      ],
+      "color": "#8fbc8f",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    }
+  ],
   "pointsOfInterest": [],
   "species": []
 }

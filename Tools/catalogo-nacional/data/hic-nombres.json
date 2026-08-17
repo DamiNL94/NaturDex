@@ -39,6 +39,7 @@
     "7220": { "name": "Manantiales petrificantes con formación de tuf (Cratoneurion)", "type": "Acuático" },
     "8210": { "name": "Pendientes rocosas calcícolas con vegetación casmofítica", "type": "Roquedos" },
     "8211": { "name": "Pendientes rocosas calcícolas con vegetación casmofítica — subtipos calcícolas", "type": "Roquedos" },
+    "8220": { "name": "Pendientes rocosas silíceas con vegetación casmofítica", "type": "Roquedos" },
     "8230": { "name": "Roquedos silíceos con vegetación pionera del Sedo-Scleranthion", "type": "Roquedos" },
     "8310": { "name": "Cuevas no explotadas por el turismo", "type": "Roquedos" },
     "92A0": { "name": "Bosques galería de Salix alba y Populus alba", "type": "Ribera" },

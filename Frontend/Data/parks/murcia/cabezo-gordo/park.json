@@ -15,7 +15,104 @@
     "summary": "Un cerro calizo aislado sobre la llanura del Campo de Cartagena: un islote de roca y matorral entre cultivos, con simas y viejas canteras.",
     "boundaryNote": "Límite oficial servido en geo/parque.geojson, descargado del geoportal del IMIDA/CARM (servicio PROYECTOS/OISMA, capa de Paisaje Protegido, registros con Caracter «Firme»), identificador interno EN0000018. Código ENP oficial ES620022, superficie oficial 271,8 ha según el Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Geometría en WGS84, sin generalizar (365 vértices, superficie resultante 272,3 ha, desviación del 0,18 %). Sustituye a la delimitación de la capa ENP nacional del MITECO, que es un producto generalizado. Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM. Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico» (código y superficie oficiales) e IMIDA/CARM (geometría)."
   },
-  "habitats": [],
+  "habitats": [
+    {
+      "id": "matorrales-termomediterraneos-y-5330",
+      "code": "5330",
+      "name": "Matorrales termomediterráneos y pre-estépicos",
+      "type": "Matorral",
+      "priority": false,
+      "hicSubtipos": [
+        "5330"
+      ],
+      "fitosociologia": [
+        "Saturejo canescentis-Thymetum hyemalis Esteve 1973 corr. Alcaraz, T.E. Díaz, Rivas-Martínez & P. Sánchez 1989"
+      ],
+      "description": "",
+      "coordinates": [
+        37.801117,
+        -0.909093
+      ],
+      "color": "#daa520",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "matorrales-arborescentes-de-5220",
+      "code": "5220",
+      "name": "Matorrales arborescentes de Ziziphus",
+      "type": "Matorral",
+      "priority": true,
+      "hicSubtipos": [
+        "5220"
+      ],
+      "fitosociologia": [
+        "Mayteno europaei-Periplocetum angustifoliae Rivas Goday & Esteve in Rivas Goday in Rivas Goday, Borja, Esteve, Galiano, Rigual & Rivas-Martínez 1960 corr. Rivas-Martínez 1975"
+      ],
+      "description": "",
+      "coordinates": [
+        37.801226,
+        -0.90962
+      ],
+      "color": "#cd853f",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "pendientes-rocosas-calcicolas-8210",
+      "code": "8210",
+      "name": "Pendientes rocosas calcícolas con vegetación casmofítica",
+      "type": "Roquedos",
+      "priority": false,
+      "hicSubtipos": [
+        "8210"
+      ],
+      "fitosociologia": [
+        "Cosentinio bivalentis-Teucrietum freynii Rigual, Esteve & Rivas Goday 1962 corr. Alcaraz, T.E. Díaz, Rivas-Martínez & P. Sánchez 1989"
+      ],
+      "description": "",
+      "coordinates": [
+        37.801226,
+        -0.90962
+      ],
+      "color": "#daa520",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "zonas-subestepicas-de-6220",
+      "code": "6220",
+      "name": "Zonas subestépicas de gramíneas y anuales del Thero-Brachypodietea",
+      "type": "Pastos",
+      "priority": true,
+      "hicSubtipos": [
+        "6220"
+      ],
+      "fitosociologia": [
+        "Teucrio pseudochamaepityos-Brachypodietum ramosi O. Bolòs 1957"
+      ],
+      "description": "",
+      "coordinates": [
+        37.799582,
+        -0.901636
+      ],
+      "color": "#66cdaa",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    }
+  ],
   "pointsOfInterest": [],
   "species": []
 }
