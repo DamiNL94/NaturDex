@@ -279,6 +279,30 @@
     "eidosTaxonId": 11706,
     "rarityBasis": null
   },
+  "Acrocephalus scirpaceus": {
+    "commonName": "Carricero común",
+    "kingdom": "fauna",
+    "group": "Ave",
+    "habitat": "Marismas,estuarios costeros,lagunas interiores,riberas fluviales,humedales con plantas palustres...",
+    "seasonality": "Abril a octubre",
+    "rarityScore": 1,
+    "description": "Pequeño pájaro insectívoro de tonos ocres uniformes. Como otros carriceros y carricerines, posee una cabeza apuntada, con la frente aplanada y el pico relativamente largo y fino. Tiene el dorso de color marrón, con tintes oliváceos o grises dependiendo de la edad y el desgaste del plumaje. Las partes inferiores muestran tonos ocres pálidos. Carece de las listas y cejas cefálicas distintivas de otras especies del género Acrocephalus y, a diferencia de otros carriceros, presenta el obispillo de color marrón rojizo. Ambos sexos son similares.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Acrocephalidae",
+      "genus": "Acrocephalus"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Carricerocomun.jpg?width=1280",
+    "imageAttribution": "Carles Pastor (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 12171
+  },
   "Actitis hypoleucos": {
     "commonName": "Andarríos chico",
     "kingdom": "fauna",
@@ -361,6 +385,30 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Aetheorhiza bulbosa": {
+    "commonName": "Aetheorhiza bulbosa",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Diciembre, febrero, marzo, abril, mayo",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Asterales",
+      "family": "Asteraceae",
+      "genus": "Aetheorhiza"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aetheorhiza_bulbosa%2C_Torroella_de_Montgr%C3%AD.jpg?width=1280",
+    "imageAttribution": "Josep Gesti (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 24468
   },
   "Aizoanthemopsis hispanica": {
     "commonName": "Cosco",
@@ -624,6 +672,54 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
+  "Allium sphaerocephalon": {
+    "commonName": "Ajestrín",
+    "kingdom": "flora",
+    "group": "Planta bulbosa",
+    "habitat": "Vive en praderas, lugares incultos y dunas, hasta 2350 m",
+    "seasonality": "Mayo a agosto",
+    "rarityScore": 2,
+    "description": "Hierba perenne, con bulbo de 1-2,5 cm, ovoide o globoso, con algunos bulbillos, y con tallo de 20-70 cm, de sección circular, macizo; inflorescencia esférica, densa, de 1,3-5,3 cm de diámetro, con una espata de dos segmentos ovados, más cortos que las flores; estas con pedicelos hasta de 2,1 cm, con tépalos de 3,5-6 mm, de color rosado o púrpura; estambres seis, los internos con filamentos tricuspidados; cápsula de 3-4,5 mm.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Asparagales",
+      "family": "Amaryllidaceae",
+      "genus": "Allium"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alcal%C3%A1_de_Henares_(RPS_01-06-2024)_Allium_sphaerocephalon.png?width=1280",
+    "imageAttribution": "Raimundo Pastor (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 2028
+  },
+  "Allium subhirsutum": {
+    "commonName": "Ajillo",
+    "kingdom": "flora",
+    "group": "Planta bulbosa",
+    "habitat": "Vive en claros de bosque y matorral sobre sustratos pedregosos, entre 100-600 m",
+    "seasonality": "Diciembre a junio",
+    "rarityScore": 4,
+    "description": "Hierba perenne, con bulbo de 1,1-1,8 cm, ovoide, en general sin bulbillos, con tallo de 14-39 cm, de sección circular, macizo; inflorescencia semiesférica, laxa, de 2,7-4,9 cm, con una espata de un segmento ovado y acuminado, más corto que las flores, estas con pedicelos hasta de 38 mm, con tépalos de 5-7 mm, de color blanco; estambres seis, con filamentos simples; cápsula de 2,2-4,1 mm.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Asparagales",
+      "family": "Amaryllidaceae",
+      "genus": "Allium"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Allium_subhirsutum_-_%CE%86%CE%BB%CE%BB%CE%B9%CE%BF_%CF%84%CE%BF_%CF%85%CF%80%CF%8C%CE%B4%CE%B1%CF%83%CF%85.jpg?width=1280",
+    "imageAttribution": "Ανώνυμος Βικιπαιδιστής (CC BY 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 2030
+  },
   "Allium subvillosum": {
     "commonName": "Ajo porro",
     "kingdom": "flora",
@@ -792,6 +888,30 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
+  "Ammophila arenaria subsp. arundinacea": {
+    "commonName": "Barrón",
+    "kingdom": "flora",
+    "group": "Gramínea",
+    "habitat": null,
+    "seasonality": null,
+    "rarityScore": null,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Calamagrostis"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ammophila_arenaria.JPG?width=1280",
+    "imageAttribution": "No machine-readable author provided. Zapping assumed (based on copy… (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 126
+  },
   "Anabasis hispanica": {
     "commonName": "Anabasis",
     "kingdom": "flora",
@@ -823,6 +943,30 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Anacyclus clavatus": {
+    "commonName": "Magarza",
+    "kingdom": "flora",
+    "group": "Hierba",
+    "habitat": "Vive en lugares alterados, como bordes de caminos o de cultivos, formando herbazales más o menos densos, hasta 1600 m",
+    "seasonality": "Marzo a junio",
+    "rarityScore": 2,
+    "description": "Hierba hasta de 50 cm, con hojas divididas pinnatisectas con segmentos lineares. Capítulos que nacen en escapos, de 2-4 cm de diámetro, con varias filas de brácteas lanceoladas u ovadas, agudas con margen escarioso, con lígulas blancas y flores flosculadas del receptáculo amarillas. Receptáculo con escamas. Aquenios de 2-4 mm, comprimidos lateralmente, los de la periferia alados, los centrales sin alas, sin vilano.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Asterales",
+      "family": "Asteraceae",
+      "genus": "Anacyclus"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anacyclus_clavatus.jpg?width=1280",
+    "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 9896
   },
   "Anacyclus valentinus": {
     "commonName": "Manzanilla bastarda",
@@ -986,6 +1130,30 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Anguilla anguilla": {
+    "commonName": "Anguila común",
+    "kingdom": "fauna",
+    "group": null,
+    "habitat": "La anguila es una especie catádroma",
+    "seasonality": "Todo el año",
+    "rarityScore": 5,
+    "description": "Piel recubierta de mucosa con pequeñas escamas alargadas hendidas en la piel. Coloración variable, ya que el dorso puede ofrecer tonalidades negruzcas, verdosas o amarillentas, mientras que la zona ventral es blanquecina o amarillenta. Según se acerca la fase madura toma unas tonalidades plateadas. Presentan una mandíbula inferior prominente con respecto a la superior. Ambas mandíbulas, así como el vómer, están provistos de dientes finos. Poseen pequeñas aberturas branquiales, situadas bajo la aleta pectoral. Ojos pequeños y redondos que se hipertrofian al madurar sexualmente. Se diferencia de otros peces presentes en la Península Ibérica por presentar el cuerpo serpentiforme con ausencia de aletas pelvianas y aletas dorsal, anal y caudal de forma continua alrededor del cuerpo. Tamaño máximo de 1,5 metros de longitud y 6 Kg de peso. Holotipo no designado, un neotipo fue propuesto por Fricke (1999) pero luego retirado por el mismo autor.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Actinopterygii",
+      "order": "Anguilliformes",
+      "family": "Anguillidae",
+      "genus": "Anguilla"
+    },
+    "iucnGlobal": "CR — En peligro crítico (Lista Roja mundial de la UICN, 2020)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anguilla_anguilla.jpg?width=1280",
+    "imageAttribution": "GerardM (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 10709
   },
   "Anthus campestris": {
     "commonName": "Bisbita campestre",
@@ -1330,6 +1498,30 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Apus pallidus": {
+    "commonName": "Vencejo pálido",
+    "kingdom": "fauna",
+    "group": "Ave",
+    "habitat": "Nidos: roquedos,acantilados costeros, edificios, puentes de piedra, iglesias,árboles",
+    "seasonality": "Marzo a septiembre",
+    "rarityScore": 1,
+    "description": "Presenta silueta en forma de ballesta, cola corta y ahorquillada, y alas largas y estrechas. Posee pico corto, plano y con la boca muy ancha; patas emplumadas y extremadamente cortas, que le impiden posarse en el suelo; y pies pequeños y de fuertes garras, con los cuatro dedos dirigidos hacia delante. Luce una coloración uniforme de tono pardo grisáceo, excepto en la garganta, que es blanca; la parte inferior interna de las alas resulta más clara. Con plumaje poco desgastado muestra un aspecto general escamoso. Se confunde fácilmente con el vencejo común, y para diferenciarlos se necesitan buenas condiciones de luz y hay que situarse a corta distancia. El vencejo pálido tiene un tono general más claro y parduzco, y mayor extensión en el blanco de la garganta; además, a veces se aprecia un antifaz más marcado, mayor contraste en la parte inferior de las alas y aspecto más escamoso. Ambos sexos son iguales. Los jóvenes, muy similares a los adultos, presentan un tono un poco más oscuro y un aspecto escamoso más marcado por la presencia de plumas ribeteadas en blanco. Esta ave pasa la mayor parte de su vida en el aire, por lo que casi siempre se la ve volando y agrupada, tanto en núcleos urbanos como en acantilados costeros y de interior.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Apodiformes",
+      "family": "Apodidae",
+      "genus": "Apus"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Vencejo_p%C3%A1lido_20250901_03.jpg?width=1280",
+    "imageAttribution": "Ismael Olea (CC BY 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 11930
   },
   "Aquila chrysaetos": {
     "commonName": "Águila real",
@@ -1828,6 +2020,30 @@
     "eidosTaxonId": 9501,
     "rarityBasis": null
   },
+  "Aristolochia baetica": {
+    "commonName": "Víbora",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": "Suele hallarse en bosques esclerófilos, setos y terrenos rocosos de baja altitud, a menos de 800 m",
+    "seasonality": "Octubre a junio",
+    "rarityScore": 2,
+    "description": "Forma un rizoma fusiforme o esférico, y sus tallos volubles llegan a 2-4(6) m. Presenta hojas acorazonadas, algo coriáceas, y llamativas flores purpúreas largamente pedunculadas, con el tubo curvado.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Piperales",
+      "family": "Aristolochiaceae",
+      "genus": "Aristolochia"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Datei-Aristolochia_Art_Gibraltar_Affenfelsen_2.jpg?width=1280",
+    "imageAttribution": "Ralf Heete (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 2419
+  },
   "Armeria bourgaei": {
     "commonName": "Armeria bourgaei",
     "kingdom": "flora",
@@ -2110,6 +2326,30 @@
     "eidosTaxonId": 11273,
     "rarityBasis": null
   },
+  "Asio otus": {
+    "commonName": "Búho chico canario",
+    "kingdom": "fauna",
+    "group": "Ave rapaz nocturna",
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Strigiformes",
+      "family": "Strigidae",
+      "genus": "Asio"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Frightened_Long-eared_Owl_(28045676729).jpg?width=1280",
+    "imageAttribution": "Becky Matsubara from El Sobrante, California (CC BY 2.0) · Wikimedia Commons",
+    "eidosTaxonId": 11920
+  },
   "Asparagus acutifolius": {
     "commonName": "Esparraguera de monte",
     "kingdom": "flora",
@@ -2223,6 +2463,30 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Asparagus macrorrhizus": {
+    "commonName": "Esparraguera marítima",
+    "kingdom": "flora",
+    "group": "Hierba",
+    "habitat": null,
+    "seasonality": null,
+    "rarityScore": 5,
+    "description": "Tallos de hasta 100 cm, herbácea, erecta. Tallos y ramas longitudinalmente estriado-papilosas. Cladodios de (5)10-30(50) x 0,3-0,8 mm, en fascículos de (3)4-7(11), erecto-patentes. Pedicelos de (4,5)6-10(12) mm. Nudos con (1)2(4) flores, de normal, no mezclados con los cladodios. Segmentos del periantio de 4-6 mm. Fruto en baya de (5)6-12(13) mm, rojo, con 2-6 semillas. Se incluye taxonómicamente en el subgénero Asparagus, está especialmente relacionado con A. officinalis L.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Asparagales",
+      "family": "Asparagaceae",
+      "genus": "Asparagus"
+    },
+    "iucnGlobal": "CR — En peligro crítico (Lista Roja mundial de la UICN, 2018)",
+    "spainStatus": "CEEA: En peligro de extinción (Orden TED/339/2023, de 30 de marzo)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Asparagus_macrorrhizus60078.jpg?width=1280",
+    "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 33036
   },
   "Asphodelus albus": {
     "commonName": "Abozo",
@@ -2863,6 +3127,78 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
+  "Atriplex prostrata": {
+    "commonName": "Cenizo",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Abril a diciembre",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Caryophyllales",
+      "family": "Amaranthaceae",
+      "genus": "Atriplex"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Atriplex_prostrata_(s._lat.)_%2B_Crithmum_maritimum_sl1.jpg?width=1280",
+    "imageAttribution": "Stefan.lefnaer (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 2718
+  },
+  "Atriplex rosea": {
+    "commonName": "Hierba cenicera",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Junio a noviembre",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Caryophyllales",
+      "family": "Amaranthaceae",
+      "genus": "Atriplex"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Atriplex_rosea_Sturm30.jpg?width=1280",
+    "imageAttribution": "Johann Georg Sturm (Painter: Jacob Sturm) (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 2719
+  },
+  "Avena barbata": {
+    "commonName": "Avena",
+    "kingdom": "flora",
+    "group": "Gramínea",
+    "habitat": null,
+    "seasonality": "Marzo a junio",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Avena"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Avenabarbata.jpg?width=1280",
+    "imageAttribution": "Jose Hernandez (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 9935
+  },
   "Aythya ferina": {
     "commonName": "Porrón europeo",
     "kingdom": "fauna",
@@ -2919,6 +3255,30 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Bassia hyssopifolia": {
+    "commonName": "Bassia hyssopifolia",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Julio a noviembre",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Caryophyllales",
+      "family": "Amaranthaceae",
+      "genus": "Bassia"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bassia_hyssopifolia_kz01.jpg?width=1280",
+    "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 2746
   },
   "Bellardia trixago": {
     "commonName": "Conejicos",
@@ -3051,6 +3411,30 @@
     "eidosTaxonId": 2663,
     "rarityBasis": null
   },
+  "Blackstonia perfoliata": {
+    "commonName": "centaura amarilla",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Abril a agosto",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Gentianales",
+      "family": "Gentianaceae",
+      "genus": "Blackstonia"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Blackstonia_perfoliata1.jpg?width=1280",
+    "imageAttribution": "The original uploader was Jeffdelonge at French Wikipedia. (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 2779
+  },
   "Blanus cinereus": {
     "commonName": "Culebrilla ciega",
     "kingdom": "fauna",
@@ -3126,6 +3510,30 @@
     "eidosTaxonId": 81703,
     "rarityBasis": null
   },
+  "Brachypodium distachyon": {
+    "commonName": "Cerrilla",
+    "kingdom": "flora",
+    "group": "Gramínea",
+    "habitat": null,
+    "seasonality": "Marzo a julio",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Brachypodium"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brachypodium_distachyon_-_Oslo_botanical_garden_-_IMG_8874.jpg?width=1280",
+    "imageAttribution": "Daderot (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 9514
+  },
   "Brachypodium phoenicoides": {
     "commonName": "Vallico",
     "kingdom": "flora",
@@ -3186,6 +3594,102 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Brassica tournefortii": {
+    "commonName": "Jamargo",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Febrero a mayo",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Brassicales",
+      "family": "Brassicaceae",
+      "genus": "Brassica"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brassicatournefortii1.jpg?width=1280",
+    "imageAttribution": "Stickpen (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 2794
+  },
+  "Bromus diandrus": {
+    "commonName": "Colajaca",
+    "kingdom": "flora",
+    "group": "Gramínea",
+    "habitat": null,
+    "seasonality": "Marzo a junio",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Bromus"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bromusdiandrus.jpg?width=1280",
+    "imageAttribution": "Gordon Leppig & Andrea J. Pickart (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 9954
+  },
+  "Bromus madritensis": {
+    "commonName": "Ballisco",
+    "kingdom": "flora",
+    "group": "Gramínea",
+    "habitat": null,
+    "seasonality": "Marzo a junio",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Bromus"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bromus_madritensis_CloseupCampoCalatrava.jpg?width=1280",
+    "imageAttribution": "javier martin (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 9524
+  },
+  "Bromus rigidus": {
+    "commonName": "barba de macho",
+    "kingdom": "flora",
+    "group": "Gramínea",
+    "habitat": null,
+    "seasonality": "Marzo a julio",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Bromus"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bromus_rigidus_-_Copenhagen_Botanical_Garden_-_DSC08052.JPG?width=1280",
+    "imageAttribution": "Daderot (CC0) · Wikimedia Commons",
+    "eidosTaxonId": 9960
   },
   "Bromus rubens": {
     "commonName": "Espiguilla",
@@ -3972,6 +4476,30 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
+  "Calystegia soldanella": {
+    "commonName": "Berza marina",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Abril a octubre",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Solanales",
+      "family": "Convolvulaceae",
+      "genus": "Convolvulus"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Calystegia_soldanella_060524wb.jpg?width=1280",
+    "imageAttribution": "User:Strobilomyces (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 2982
+  },
   "Camelina microcarpa": {
     "commonName": "Camelina microcarpa",
     "kingdom": "flora",
@@ -4452,6 +4980,30 @@
     "eidosTaxonId": 3180,
     "rarityBasis": null
   },
+  "Catapodium hemipoa": {
+    "commonName": "Catapodium hemipoa",
+    "kingdom": "flora",
+    "group": "Gramínea",
+    "habitat": null,
+    "seasonality": "Marzo a agosto",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Catapodium"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": null,
+    "imageAttribution": null,
+    "eidosTaxonId": 80453
+  },
   "Cecropis daurica": {
     "commonName": "Golondrina dáurica",
     "kingdom": "fauna",
@@ -4691,6 +5243,30 @@
     "imageAttribution": "Denis Barthel (CC BY-SA 3.0 de) · Wikimedia Commons",
     "eidosTaxonId": 3336,
     "rarityBasis": null
+  },
+  "Centaurium erythraea subsp. majus": {
+    "commonName": "Hiel de la tierra",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": null,
+    "rarityScore": null,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Gentianales",
+      "family": "Gentianaceae",
+      "genus": "Centaurium"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Centaurium_menor._(C._erythraea_subsp._majus)_-_Flickr_-_gailhampshire.jpg?width=1280",
+    "imageAttribution": "gailhampshire from Cradley, Malvern, U.K (CC BY 2.0) · Wikimedia Commons",
+    "eidosTaxonId": 3354
   },
   "Centaurium rigualii": {
     "commonName": "Centaurio de Rigual",
@@ -4997,6 +5573,30 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Cercotrichas galactotes": {
+    "commonName": "Alzacola",
+    "kingdom": "fauna",
+    "group": "Ave",
+    "habitat": null,
+    "seasonality": "Mayo a septiembre",
+    "rarityScore": 4,
+    "description": "Esta especie suele observarse en el suelo o posada en arbustos bajos. Es fácilmente reconocible por su larga cola, de coloración rojiza y extremo terminal con manchas blancas y negras, que frecuentemente alza, despliega y sacude de manera ostensible. También resulta distintivo su diseño facial, ya que posee una lista ocular fina oscura, que contrasta con una banda superciliar de color blanco crema. El resto de su plumaje presenta un tono ocre claro.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Muscicapidae",
+      "genus": "Cercotrichas"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+    "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Agrobate_roux_au_Parc_National_de_l'Ichkeul_(Tunisia)%2C_crop.jpg?width=1280",
+    "imageAttribution": "El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 11327
   },
   "Certhia brachydactyla": {
     "commonName": "Agateador común",
@@ -5366,6 +5966,30 @@
     },
     "descriptionSource": null
   },
+  "Chenopodium murale": {
+    "commonName": "Cenizo",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": "Vive en lugares muy nitrificados, alrededor de establos o en cunetas, hasta 1200 m",
+    "seasonality": "Todo el año",
+    "rarityScore": 2,
+    "description": "Es muy ramificada, al final glabra, con hojas de triangulares a romboidales, verdes; las inferiores triangulares, tan anchas como largas, gruesamente dentadas. Inflorescencia corta y laxa. Semillas de 1,2- 1,4 mm, en disposición horizontal, rugosas, color negro mate.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Caryophyllales",
+      "family": "Amaranthaceae",
+      "genus": "Chenopodiastrum"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Starr_040125-0029_Chenopodium_murale.jpg?width=1280",
+    "imageAttribution": "Forest & Kim Starr (CC BY 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 3549
+  },
   "Chiliadenus glutinosus": {
     "commonName": "Acnica",
     "kingdom": "flora",
@@ -5476,6 +6100,30 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Chroicocephalus genei": {
+    "commonName": "Gaviota picofina",
+    "kingdom": "fauna",
+    "group": "Ave limícola",
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 1,
+    "description": "Se trata de una gaviota de mediano tamaño que, a pesar de estar encuadrada en el grupo de las gaviotas encapuchadas (como, por ejemplo, su pariente la reidora), carece del característico capirote oscuro. De aspecto parecido a la gaviota reidora —aunque ligeramente mayor y más estilizada—, la picofina es un lárido de largas alas y formas refinadas, que no presenta diferencias sexuales evidentes en lo que al tamaño y al plumaje se refiere. Los ejemplares adultos durante la estación reproductora exhiben una librea de color gris claro en el dorso y blanco —con sutiles matices rosados— en las regiones ventrales; el pico — largo y más apuntado que el de otras gaviotas— es de un intenso color rojizo oscuro que, a cierta distancia, da la impresión de ser negro. El iris es amarillo y aparece rodeado de un fino anillo ocular rojo. Los ejemplares juveniles, por su parte, lucen un plumaje algo diferente, con las regiones ventrales blancas (pero sin matices rosáceos), el dorso gris y una amplia banda alar más oscura, compuesta por las coberteras alares marrones y las rémiges terciarias negras; poseen el pico anaranjado y presentan una mancha auricular de color marrón. El plumaje de adulto se adquiere tras la muda del segundo verano.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Charadriiformes",
+      "family": "Laridae",
+      "genus": "Chroicocephalus"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Larus_genei.jpg?width=1280",
+    "imageAttribution": "GabrielBuissart (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 16358
   },
   "Chroicocephalus ridibundus": {
     "commonName": "Gaviota reidora",
@@ -5657,6 +6305,30 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Cisticola juncidis": {
+    "commonName": "Buitrón",
+    "kingdom": "fauna",
+    "group": "Ave",
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 1,
+    "description": "Se trata de una de las aves más pequeñas de Europa. Posee el dorso y el píleo de color pardo oscuro y fuertemente listados, el obispillo rojizo y las partes inferiores claras con los flancos y el pecho de color ocráceo. En vuelo ejecuta una trayectoria muy ondulante y presenta una silueta característica, con las alas redondeadas y la cola —que suele mantener parcialmente desplegada— con un perfil también redondeado y de longitud creciente de los extremos hacia el centro. En su parte distal, la cola muestra una banda de manchas negras y blancas muy visibles en vuelo. Cuando se posa entre la vegetación, suele aferrarse a los tallos manteniendo la verticalidad a la vez que agita continuamente la cola.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Cisticolidae",
+      "genus": "Cisticola"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Zitting_cisticola_2024_04_19_(cropped).jpg?width=1280",
+    "imageAttribution": "Alexis Lours (CC BY 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 11543
   },
   "Cistus albidus": {
     "commonName": "Jara blanca",
@@ -6656,6 +7328,30 @@
     },
     "descriptionSource": null
   },
+  "Corynephorus divaricatus": {
+    "commonName": "Corynephorus divaricatus",
+    "kingdom": "flora",
+    "group": "Gramínea",
+    "habitat": null,
+    "seasonality": "Abril a julio",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Corynephorus"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": null,
+    "imageAttribution": null,
+    "eidosTaxonId": 9970
+  },
   "Cosentinia vellea": {
     "commonName": "Cosentinia vellea",
     "kingdom": "flora",
@@ -7169,6 +7865,30 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
+  "Cutandia memphitica": {
+    "commonName": "Cutandia memphitica",
+    "kingdom": "flora",
+    "group": "Gramínea",
+    "habitat": null,
+    "seasonality": null,
+    "rarityScore": 5,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Cutandia"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cutandia_memphitica_kz01.jpg?width=1280",
+    "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 9982
+  },
   "Cyanistes caeruleus": {
     "commonName": "Herrerillo común",
     "kingdom": "fauna",
@@ -7198,6 +7918,30 @@
     },
     "descriptionSource": null
   },
+  "Cymodocea nodosa": {
+    "commonName": "Alga",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": "Cymodocea nodosa crece sobre fondo arenoso fotófilo con contenido de materia orgánica",
+    "seasonality": "Febrero, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Alismatales",
+      "family": "Cymodoceaceae",
+      "genus": "Cymodocea"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2010)",
+    "spainStatus": "CEEA: Vulnerable (Orden AAA/1351) · LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cymodocea.JPG?width=1280",
+    "imageAttribution": "Miguelverdu (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 3911
+  },
   "Cynanchica aristata": {
     "commonName": "Asperilla",
     "kingdom": "flora",
@@ -7222,6 +7966,54 @@
     "imageAttribution": "Robert Flogaus-Faust (CC BY 4.0) · Wikimedia Commons",
     "eidosTaxonId": 2406,
     "rarityBasis": null
+  },
+  "Cynanchum acutum": {
+    "commonName": "Corrotilla basta",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Abril a noviembre",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Gentianales",
+      "family": "Apocynaceae",
+      "genus": "Cynanchum"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2014)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/C._acutum-13.jpg?width=1280",
+    "imageAttribution": "Philmarin (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 3912
+  },
+  "Cynodon dactylon": {
+    "commonName": "Agramen",
+    "kingdom": "flora",
+    "group": "Gramínea",
+    "habitat": "Herbazales húmedos en lugares algo nitrificados, hasta 1700 m",
+    "seasonality": "Todo el año",
+    "rarityScore": 2,
+    "description": "Hierba perenne rizomatosa, con estolones hasta de 1,5 m, rastreros, ramificados, enraizantes en los nudos. Tallos fértiles aéreos de 10-40 cm, glabros. Hojas dísticas, vaina de la hoja algo ciliada, lígula de pelos muy cortos; limbo de 1,5-12 x 0,2-0,5 cm, ± patente, glabro o hirsuto. Inflorescencia apical con tres a seis espigas digitadas de 2-6 cm cada una; formadas por espiguillas comprimidas de 2-2,5 mm, dispuestas en dos filas en la parte inferior del raquis. Glumas desiguales, la superior más larga, de 1,8-2,3 mm; glumillas de 2-2,5 mm. Fruto en cariópside, de 0,8-1,5 mm, oblongo, de color pardo oscuro.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Cynodon"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Poaceae_spp_Sturm24.jpg?width=1280",
+    "imageAttribution": "Johann Georg Sturm (Painter: Jacob Sturm) (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 9972
   },
   "Cynomorium coccineum": {
     "commonName": "Cinomorio",
@@ -7430,6 +8222,30 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Dactylis glomerata subsp. hispanica": {
+    "commonName": "Avallico",
+    "kingdom": "flora",
+    "group": "Gramínea",
+    "habitat": "Vive en pastizales secos, bordes de camino y sotobosques",
+    "seasonality": null,
+    "rarityScore": null,
+    "description": "Hierba perenne, hasta de 1,5 m, con tallos erectos. Hojas con lígulas hasta de 12 mm, y limbo hasta de 30 cm, con un nervio central. Inflorescencia en panícula de 2-30 cm, ovoide, densa, a veces abierta, con pedúnculo largo. Espiguillas de 4-6 mm, con glumas hasta de 5 mm, ciliadas, y lemas muy parecidas. Pálea con quillas ciliadas y con una pequeña arista.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Dactylis"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dactylisglomerata_3862461102_07435a8173_b.jpg?width=1280",
+    "imageAttribution": "Matt Lavin from Bozeman, Montana, USA (CC BY-SA 2.0) · Wikimedia Commons",
+    "eidosTaxonId": 9983
   },
   "Daphne gnidium": {
     "commonName": "Altrobisca",
@@ -7685,6 +8501,30 @@
     },
     "descriptionSource": null
   },
+  "Dorycnium pentaphyllum": {
+    "commonName": "Dorycnium pentaphyllum",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Fabales",
+      "family": "Fabaceae",
+      "genus": "Dorycnium"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dorycnium_pentaphyllum_Habitat_2010-6-15_DehesaBoyaldePuertollano.jpg?width=1280",
+    "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 79836
+  },
   "Draba hispanica": {
     "commonName": "yerba-blanca",
     "kingdom": "flora",
@@ -7792,6 +8632,30 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Echinophora spinosa L.": {
+    "commonName": "zanahoria marina",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Apiales",
+      "family": "Apiaceae",
+      "genus": "Echinophora"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Echinophora_spinosa_002.JPG?width=1280",
+    "imageAttribution": "H. Zell (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 4199
   },
   "Echinops ritro": {
     "commonName": "Abadejo",
@@ -7924,6 +8788,30 @@
     "imageAttribution": "No machine-readable author provided. Asseus assumed (based on copyr… (CC BY-SA 3.0) · Wikimedia Commons",
     "eidosTaxonId": 12074,
     "rarityBasis": null
+  },
+  "Elymus elongatus": {
+    "commonName": "Vallico",
+    "kingdom": "flora",
+    "group": "Gramínea",
+    "habitat": "Se encuentra en sustratos salinos húmedos, en saladares interiores y litorales",
+    "seasonality": "Abril a octubre",
+    "rarityScore": 4,
+    "description": "Es cespitosa, sin rizoma, con tallos de 15-90 cm, hojas glaucas, espiguilla con cinco a 15 flores apretadas, y glumas de 5,5-9 mm, obtusas.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Thinopyrum"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Elymus_elongatus_80073528.jpg?width=1280",
+    "imageAttribution": "Valerii Darmostuk (CC BY 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 10013
   },
   "Elymus farctus": {
     "commonName": "Grama de mar",
@@ -8074,6 +8962,54 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Emberiza schoeniclus": {
+    "commonName": "Escribano palustre",
+    "kingdom": "fauna",
+    "group": "Ave",
+    "habitat": null,
+    "seasonality": "Octubre a marzo",
+    "rarityScore": 1,
+    "description": "El palustre es un escribano de mediano tamaño que presenta un plumaje dominado por los tonos pardos y acastañados en el dorso y blanquecinos con algunas listas en el vientre. El macho en plumaje nupcial luce la garganta y la cabeza de un intenso color negro, así como un collar y una bigotera blancos. En esa época, también la cabeza y el pecho de la hembra tienden a oscurecerse, aunque carecen del característico collar blanco. En invierno, resulta más complicado diferenciar por el plumaje tanto a los sexos como a los ejemplares inmaduros; estos poseen una coloración en general más clara y las partes inferiores más fuertemente listadas. Durante el periodo invernal, suelen moverse entre el carrizo en nutridos bandos que resultan fáciles de detectar gracias a sus penetrantes y melancólicos silbidos.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Emberizidae",
+      "genus": "Emberiza"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Emberiza_schoeniclus_(male)%2C_Gatchina%2C_Russia.jpg?width=1280",
+    "imageAttribution": "This photography was created by Artem Topchiy (user Art-top). Other… (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 12163
+  },
+  "Emex spinosa": {
+    "commonName": "Acelguilla",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Diciembre a mayo",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Caryophyllales",
+      "family": "Polygonaceae",
+      "genus": "Emex"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Emexspinosa.jpg?width=1280",
+    "imageAttribution": "Anthony Valois (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 4297
   },
   "Enneapogon persicus": {
     "commonName": "Espartilla de Persia",
@@ -8260,6 +9196,30 @@
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     }
+  },
+  "Eptesicus isabellinus": {
+    "commonName": "Murciélago hortelano",
+    "kingdom": "fauna",
+    "group": "Murciélago",
+    "habitat": null,
+    "seasonality": "Abril a octubre",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Mammalia",
+      "order": "Chiroptera",
+      "family": "Vespertilionidae",
+      "genus": "Cnephaeus"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eptesicus_isabellinus_sketch.jpg?width=1280",
+    "imageAttribution": "Coenrad Temmick (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 16225
   },
   "Equisetum ramosissimum": {
     "commonName": "Cola de zorro",
@@ -8596,6 +9556,78 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
+  "Erodium laciniatum": {
+    "commonName": "Alfilerejo",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Febrero a junio",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Geraniales",
+      "family": "Geraniaceae",
+      "genus": "Erodium"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Erodium_laciniatum_kz1.jpg?width=1280",
+    "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 9999
+  },
+  "Erodium malacoides": {
+    "commonName": "Abujoneras",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Octubre a junio",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Geraniales",
+      "family": "Geraniaceae",
+      "genus": "Erodium"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/ERODIUM_MALACOIDES_-_AGUDA_-_IB-046_(Agulles).JPG?width=1280",
+    "imageAttribution": "Isidre blanc (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 10002
+  },
+  "Erodium neuradifolium": {
+    "commonName": "Agujetas",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Diciembre a mayo",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Geraniales",
+      "family": "Geraniaceae",
+      "genus": "Erodium"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Erodium_neuradifolium_IMG_4784_tenerife_chio.JPG?width=1280",
+    "imageAttribution": "Bjoertvedt (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 10004
+  },
   "Erodium sanguis-christi": {
     "commonName": "Erodio",
     "kingdom": "flora",
@@ -8736,6 +9768,30 @@
     },
     "descriptionSource": null
   },
+  "Eryngium maritimum": {
+    "commonName": "Cardo marino",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Apiales",
+      "family": "Apiaceae",
+      "genus": "Eryngium"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eryngium_maritimum_2.jpg?width=1280",
+    "imageAttribution": "Júlio Reis (Tintazul) (CC BY-SA 2.5) · Wikimedia Commons",
+    "eidosTaxonId": 4408
+  },
   "Euphorbia characias": {
     "commonName": "Lletrera",
     "kingdom": "flora",
@@ -8874,6 +9930,30 @@
     "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
     "eidosTaxonId": 4535,
     "rarityBasis": null
+  },
+  "Euphorbia terracina": {
+    "commonName": "Lechetrezna",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Malpighiales",
+      "family": "Euphorbiaceae",
+      "genus": "Euphorbia"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Euphorbiaterracina.jpg?width=1280",
+    "imageAttribution": "Unknown authorUnknown author (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 4538
   },
   "Fagonia cretica": {
     "commonName": "Fagonia",
@@ -9170,6 +10250,30 @@
     "imageAttribution": "Stuarlittle (CC BY 3.0) · Wikimedia Commons",
     "eidosTaxonId": 288,
     "rarityBasis": null
+  },
+  "Ficedula hypoleuca": {
+    "commonName": "Papamoscas cerrojillo",
+    "kingdom": "fauna",
+    "group": "Ave",
+    "habitat": "Zonas boscosas,de caducifolios, robles,hayas,pinares de altura,sotos espesos.Migrac:muy repartido,",
+    "seasonality": "Abril, mayo, junio, agosto, septiembre, octubre",
+    "rarityScore": 1,
+    "description": "Es un paseriforme de pequeño tamaño, cuerpo compacto, cabeza ancha y pico fino. Fuera de la época de reproducción no hay diferencias entre los sexos en lo que al plumaje se refiere, ya que ambos lo poseen de color pardo claro por el dorso y blanco ocre en las partes inferiores. Los ojos, las patas y el pico son negros. En primavera, los machos adquieren un plumaje nupcial negro o marrón muy oscuro en las partes superiores, con una llamativa mancha blanca en la frente y un extenso panel blanco en las alas. Las partes inferiores se aclaran hasta adquirir un color blanco puro. A menudo queda algún resto de plumaje pardo en la cabeza o en las coberteras del hombro. Los jóvenes recién salidos del nido, por su parte, presentan un plumaje, en general, muy moteado de marrón claro y pardo, con aspecto escamoso.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Muscicapidae",
+      "genus": "Ficedula"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ficedula_hypoleuca_NRM.jpg?width=1280",
+    "imageAttribution": "Uploaded by Aelwyn with the permission of the Author, who works wit… (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 11483
   },
   "Filago fuscescens": {
     "commonName": "Filago fuscescens",
@@ -9520,6 +10624,30 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Fumana hispidula": {
+    "commonName": "hierba del Sillero",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Malvales",
+      "family": "Cistaceae",
+      "genus": "Fumana"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": null,
+    "imageAttribution": null,
+    "eidosTaxonId": 4654
   },
   "Fumana laevipes": {
     "commonName": "Fumana laevipes",
@@ -10898,6 +12026,30 @@
     "eidosTaxonId": 5080,
     "rarityBasis": null
   },
+  "Helianthemum marminorense": {
+    "commonName": "Helianthemum marminorense",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": null,
+    "rarityScore": 5,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Malvales",
+      "family": "Cistaceae",
+      "genus": "Helianthemum"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_marminorense_EnfoqueFlor_2010-7-03_ParqueNaturalLagunasdelaMata.jpg?width=1280",
+    "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 31763
+  },
   "Helianthemum motae": {
     "commonName": "Jarilla de Mota",
     "kingdom": "flora",
@@ -11520,6 +12672,54 @@
     },
     "descriptionSource": null
   },
+  "Hordeum marinum": {
+    "commonName": "Espiguilla",
+    "kingdom": "flora",
+    "group": "Gramínea",
+    "habitat": null,
+    "seasonality": "Abril a agosto",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Hordeum"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hordeum_marinum.jpg?width=1280",
+    "imageAttribution": "Júlio Reis (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 10054
+  },
+  "Hordeum murinum subsp. leporinum": {
+    "commonName": "Vallico",
+    "kingdom": "flora",
+    "group": "Gramínea",
+    "habitat": null,
+    "seasonality": null,
+    "rarityScore": null,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Hordeum"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hordeum_leporinum_(3877030365).jpg?width=1280",
+    "imageAttribution": "Matt Lavin from Bozeman, Montana, USA (CC BY-SA 2.0) · Wikimedia Commons",
+    "eidosTaxonId": 9603
+  },
   "Hornungia petraea": {
     "commonName": "Hornungia",
     "kingdom": "flora",
@@ -11583,6 +12783,30 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
+  "Hymenolobus procumbens": {
+    "commonName": "mastuerzo rastrero",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Marzo a junio",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Brassicales",
+      "family": "Brassicaceae",
+      "genus": "Hornungia"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hutchinsia_procumbens.jpg?width=1280",
+    "imageAttribution": "Andrey Zharkikh from Salt Lake City, USA (CC BY 2.0) · Wikimedia Commons",
+    "eidosTaxonId": 5124
+  },
   "Hyoscyamus albus": {
     "commonName": "Abeleño",
     "kingdom": "flora",
@@ -11639,6 +12863,30 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Hyparrhenia sinaica": {
+    "commonName": "Cerrillo",
+    "kingdom": "flora",
+    "group": "Gramínea",
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Hyparrhenia"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hyparrhenia_sinaica_Habitus_2010-7-06_LagunadelaMata.jpg?width=1280",
+    "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 10048
   },
   "Hypecoum procumbens": {
     "commonName": "zadorija",
@@ -11825,6 +13073,30 @@
     "eidosTaxonId": 5356,
     "rarityBasis": null
   },
+  "Ifloga spicata": {
+    "commonName": "Yesquerilla canaria",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Enero a mayo",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Asterales",
+      "family": "Asteraceae",
+      "genus": "Ifloga"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ifloga_spicata_kz01.jpg?width=1280",
+    "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 384
+  },
   "Imperata cylindrica": {
     "commonName": "Cisca",
     "kingdom": "flora",
@@ -11970,6 +13242,78 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
+  "Juncus acutus": {
+    "commonName": "Higos",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Juncaceae",
+      "genus": "Juncus"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2014)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Juncus_acutus2.jpg?width=1280",
+    "imageAttribution": "Esculapio (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 5461
+  },
+  "Juncus bufonius": {
+    "commonName": "Junco de Rana",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Marzo a agosto",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Juncaceae",
+      "genus": "Juncus"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Juncus_bufonius.jpeg?width=1280",
+    "imageAttribution": "Kristian Peters -- Fabelfroh 11:49, 16 June 2007 (UTC) (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 5400
+  },
+  "Juncus maritimus": {
+    "commonName": "Junco",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Febrero a noviembre",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Juncaceae",
+      "genus": "Juncus"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Meerstrand-Binse.JPG?width=1280",
+    "imageAttribution": "4028mdk09 (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 5478
+  },
   "Juniperus oxycedrus": {
     "commonName": "Enebro de la miera",
     "kingdom": "flora",
@@ -12033,6 +13377,30 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Juniperus turbinata": {
+    "commonName": "Sabina",
+    "kingdom": "flora",
+    "group": "Conífera",
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Pinopsida",
+      "order": "Pinales",
+      "family": "Cupressaceae",
+      "genus": "Juniperus"
+    },
+    "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2020)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fruit_of_Juniperus_phoenicea%2C_Akamas_Paninsula%2C_Cyprus.jpg?width=1280",
+    "imageAttribution": "Michal Klajban (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 5511
   },
   "Jurinea humilis": {
     "commonName": "Arzolla",
@@ -12229,6 +13597,30 @@
     "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons",
     "rarityBasis": null,
     "descriptionSource": null
+  },
+  "Lagurus ovatus": {
+    "commonName": "Jopo de ratón",
+    "kingdom": "flora",
+    "group": "Gramínea",
+    "habitat": null,
+    "seasonality": "Marzo a octubre",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Lagurus"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lagurus_ovatus.jpg?width=1280",
+    "imageAttribution": "User:Tigerente (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 10058
   },
   "Lamarckia aurea": {
     "commonName": "Balanguillo",
@@ -12582,6 +13974,30 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
+  "Launaea fragilis": {
+    "commonName": "Launaea fragilis",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Febrero a noviembre",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Asterales",
+      "family": "Asteraceae",
+      "genus": "Launaea"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Launaea_fragilis_kz1.jpg?width=1280",
+    "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 31806
+  },
   "Launaea lanifera": {
     "commonName": "Lechuguilla lanosa",
     "kingdom": "flora",
@@ -12838,6 +14254,54 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
+  "Limonium angustebracteatum": {
+    "commonName": "Limonium angustebracteatum",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Abril a diciembre",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Caryophyllales",
+      "family": "Plumbaginaceae",
+      "genus": "Limonium"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": null,
+    "imageAttribution": null,
+    "eidosTaxonId": 5817
+  },
+  "Limonium caesium": {
+    "commonName": "sopaenvino",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Febrero a agosto",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Caryophyllales",
+      "family": "Plumbaginaceae",
+      "genus": "Limonium"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_caesium653.jpg?width=1280",
+    "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 5863
+  },
   "Limonium carthaginense": {
     "commonName": "Siempreviva de Cartagena",
     "kingdom": "flora",
@@ -13011,6 +14475,54 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Limonium supinum": {
+    "commonName": "acelga lechuguera",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Mayo a noviembre",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Caryophyllales",
+      "family": "Plumbaginaceae",
+      "genus": "Limonium"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": null,
+    "imageAttribution": null,
+    "eidosTaxonId": 5894
+  },
+  "Limonium virgatum": {
+    "commonName": "canadillo real",
+    "kingdom": "flora",
+    "group": "Hierba",
+    "habitat": "Vive en playas arenosas y costas rocosas, hasta 50 m",
+    "seasonality": "Abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre, febrero",
+    "rarityScore": 3,
+    "description": "Hierba perenne, con hojas inferiores 3-8,5 x 0,4-0,8 cm, cuneiformes u oblanceoladas, con escapo 10-50 cm, con inflorescencia triangular o romboidal; flores 8,5-9,5 mm de diámetro, con cáliz 5,3-6,1 mm, y pétalos 9,5-10 mm, cuneiformes, de color rojizo.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Caryophyllales",
+      "family": "Plumbaginaceae",
+      "genus": "Limonium"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_virgatum_*Statice_virgata.jpg?width=1280",
+    "imageAttribution": "jacinta lluch valero (CC BY-SA 2.0) · Wikimedia Commons",
+    "eidosTaxonId": 5900
   },
   "Limosa lapponica": {
     "commonName": "Aguja colipinta",
@@ -13208,6 +14720,30 @@
     "eidosTaxonId": 5976,
     "rarityBasis": null
   },
+  "Linum maritimum": {
+    "commonName": "lino marítimo",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Mayo a noviembre",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Malpighiales",
+      "family": "Linaceae",
+      "genus": "Linum"
+    },
+    "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 2011)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Linum_maritimum_sl1.jpg?width=1280",
+    "imageAttribution": "Stefan.lefnaer (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 10064
+  },
   "Linum narbonense": {
     "commonName": "Lirio de monte",
     "kingdom": "flora",
@@ -13290,6 +14826,30 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Lobularia libyca": {
+    "commonName": "Palomilla",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Noviembre a mayo",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Brassicales",
+      "family": "Brassicaceae",
+      "genus": "Lobularia"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lobularia_libyca_kz01.jpg?width=1280",
+    "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 6013
   },
   "Lobularia maritima": {
     "commonName": "mastuerzo marítimo",
@@ -13723,6 +15283,30 @@
     },
     "descriptionSource": null
   },
+  "Luscinia svecica": {
+    "commonName": "Pechiazul",
+    "kingdom": "fauna",
+    "group": "Ave",
+    "habitat": null,
+    "seasonality": "Agosto a marzo",
+    "rarityScore": 1,
+    "description": "Pajarillo de figura rechoncha, cola larga y pico fino, con un plumaje en el que destaca su pechera manchada de azul, que en los machos adultos queda perfilada por una fina franja negra, rodeada a su vez por una más ancha banda anaranjada. Además, los machos poseen unas bigoteras teñidas de azul, que en algunas subespecies se funden con la garganta, igualmente azulada. Dependiendo también de la subespecie, el babero azul está adornado con una mancha, a modo de medalla, que puede ser blanca o naranja. La coloración de las hembras resulta menos llamativa. Suelen lucir poco azul en el pecho, a menudo tienen la garganta de color blanco crema, y la banda naranja del pecho está desdibujada. No obstante, las hembras de más edad pueden presentar una coloración similar a los machos. Ambos sexos poseen una distintiva línea blanca sobre el ojo y exhiben un dorso pardo-grisáceo. La cola, anaranjada en su mitad basal, está coloreada de negro o pardo muy oscuro en la parte exterior. Los volantones son pardos y moteados, como los juveniles de petirrojo y ruiseñor común. Sin embargo, los pechiazules juveniles se distinguen por tres detalles: la línea superciliar blanca, su garganta clara y la coloración naranja de la cola.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Muscicapidae",
+      "genus": "Luscinia"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Luscinia_svecica_volgae.jpg?width=1280",
+    "imageAttribution": "Bogomolov.PL (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 12282
+  },
   "Lycium intricatum": {
     "commonName": "Cambrón",
     "kingdom": "flora",
@@ -14067,6 +15651,30 @@
     "eidosTaxonId": 6199,
     "rarityBasis": null
   },
+  "Malva parviflora": {
+    "commonName": "Malva verdadera",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Diciembre a junio",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Malvales",
+      "family": "Malvaceae",
+      "genus": "Malva"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%D8%AE%D8%A8%D9%8A%D8%B2%D8%A9_%D9%80_%D9%86%D8%A8%D8%A7%D8%AA%D8%A7%D8%AA_%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86.jpg?width=1280",
+    "imageAttribution": "M sh شراونة محمد (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 6201
+  },
   "Malva subovata": {
     "commonName": "Malva subovata",
     "kingdom": "flora",
@@ -14372,6 +15980,30 @@
     "imageAttribution": "Eduardo Milla (CC BY-SA 4.0) · Wikimedia Commons",
     "rarityBasis": null,
     "descriptionSource": null
+  },
+  "Medicago littoralis": {
+    "commonName": "Medicago littoralis",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Noviembre a junio",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Fabales",
+      "family": "Fabaceae",
+      "genus": "Medicago"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Medicago_littoralis2.jpg?width=1280",
+    "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 6275
   },
   "Medicago marina": {
     "commonName": "Mielga marina",
@@ -15264,6 +16896,30 @@
     },
     "descriptionSource": null
   },
+  "Motacilla cinerea": {
+    "commonName": "Lavandera cascadeña",
+    "kingdom": "fauna",
+    "group": "Ave",
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 1,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Motacillidae",
+      "genus": "Motacilla"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Grey_Wagtail.jpg?width=1280",
+    "imageAttribution": "User:Kclama (CC SA 1.0) · Wikimedia Commons",
+    "eidosTaxonId": 10897
+  },
   "Motacilla flava": {
     "commonName": "Lavandera boyera",
     "kingdom": "fauna",
@@ -15916,6 +17572,30 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
+  "Numenius arquata": {
+    "commonName": "Zarapito real",
+    "kingdom": "fauna",
+    "group": "Ave limícola",
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 5,
+    "description": "La mayor de nuestras limícolas es una especie fácilmente identificable gracias a su enorme pico —más largo en las hembras—, con el que sondea profundamente las playas, los bancos de limo, las orillas fangosas y los prados húmedos en busca de los invertebrados de los que se nutre. Reproductor testimonial en nuestro territorio, el zarapito real resulta, sin embargo, relativamente común a lo largo del invierno, especialmente en las costas cántabro-atlánticas.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Charadriiformes",
+      "family": "Scolopacidae",
+      "genus": "Numenius"
+    },
+    "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2017)",
+    "spainStatus": "CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero) · LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eurasian_Curlew.jpg?width=1280",
+    "imageAttribution": "Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons",
+    "eidosTaxonId": 10763
+  },
   "Numenius phaeopus": {
     "commonName": "Zarapito trinador",
     "kingdom": "fauna",
@@ -16337,6 +18017,30 @@
     },
     "descriptionSource": null
   },
+  "Ononis ramosissima": {
+    "commonName": "Bolina",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Fabales",
+      "family": "Fabaceae",
+      "genus": "Ononis"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ononis_natrix_subsp._ramosissima%2C_Torroella_de_Montgr%C3%AD_01.jpg?width=1280",
+    "imageAttribution": "Josep Gesti (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 6704
+  },
   "Ononis speciosa": {
     "commonName": "Rascavieja",
     "kingdom": "flora",
@@ -16720,6 +18424,30 @@
     },
     "descriptionSource": null
   },
+  "Orobanche ramosa": {
+    "commonName": "hierba tora",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": null,
+    "rarityScore": 5,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Lamiales",
+      "family": "Orobanchaceae",
+      "genus": "Phelipanche"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Orobanche_ramosa.jpg?width=1280",
+    "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 6861
+  },
   "Oryctolagus cuniculus": {
     "commonName": "Conejo",
     "kingdom": "fauna",
@@ -16947,6 +18675,30 @@
     "eidosTaxonId": 11421,
     "rarityBasis": null
   },
+  "Panicum repens": {
+    "commonName": "Borona",
+    "kingdom": "flora",
+    "group": "Gramínea",
+    "habitat": null,
+    "seasonality": "Mayo a febrero",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Panicum"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2020)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Panicum_repens_fertile_floret1_(7185715019).jpg?width=1280",
+    "imageAttribution": "Harry Rose from South West Rocks, Australia (CC BY 2.0) · Wikimedia Commons",
+    "eidosTaxonId": 10089
+  },
   "Papaver dubium": {
     "commonName": "Ababol",
     "kingdom": "flora",
@@ -16996,6 +18748,54 @@
     "imageAttribution": "Kolforn (Kolforn) I'd appreciate if you could mail me (Kolforn@gmai… (CC BY-SA 4.0) · Wikimedia Commons",
     "eidosTaxonId": 6889,
     "rarityBasis": null
+  },
+  "Parapholis filiformis": {
+    "commonName": "Parapholis filiformis",
+    "kingdom": "flora",
+    "group": "Gramínea",
+    "habitat": null,
+    "seasonality": "Abril a agosto",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Parapholis"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Naturalis_Biodiversity_Center_-_L.2096551_-_Anoniem_-_Lepturus_filiformis_Trin_-_Artwork.jpeg?width=1280",
+    "imageAttribution": "Trin (CC0) · Wikimedia Commons",
+    "eidosTaxonId": 10090
+  },
+  "Parapholis incurva": {
+    "commonName": "balliquillo",
+    "kingdom": "flora",
+    "group": "Gramínea",
+    "habitat": null,
+    "seasonality": "Marzo a julio",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Parapholis"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Parapholis_incurva.jpg?width=1280",
+    "imageAttribution": "Macleay Grass Man (CC BY 2.0) · Wikimedia Commons",
+    "eidosTaxonId": 10091
   },
   "Pardoglossum cheirifolium": {
     "commonName": "Pardoglossum cheirifolium",
@@ -17179,6 +18979,30 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Passer domesticus": {
+    "commonName": "Gorrión común",
+    "kingdom": "fauna",
+    "group": "Ave",
+    "habitat": "Ocupa ambientes de influencia eminentemente antrópica como son zonas agrícolas y zonas urbanizadas",
+    "seasonality": "Todo el año",
+    "rarityScore": 1,
+    "description": "Paseriforme de aspecto robusto y voluminoso, el gorrión común posee un pico fuerte y un plumaje dominado por los tonos pardos en el dorso —adornado con marcadas listas negras— y grisáceos en el obispillo, el pecho y el vientre. Los machos en época reproductora presentan el pico negro y el dorso de una tonalidad bastante rojiza, en tanto que el píleo toma un color gris y el babero se hace más extenso y oscuro. Los caracteres sexuales ligados al plumaje son visibles todo el año, aunque se van haciendo más patentes debido al desgaste progresivo de las plumas, que deja a la vista los colores internos de estas. Las hembras tienen el píleo marrón y presentan una línea clara tras el ojo; no lucen babero y su pico es siempre grisáceo hacia el extremo y amarillento en la base. Los jóvenes machos, por su parte, son indistinguibles de las hembras hasta que realizan la muda de finales de verano, cuando adquieren los colores del adulto.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Passeridae",
+      "genus": "Passer"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Huismus%2C_man.jpg?width=1280",
+    "imageAttribution": "JrPol (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 11176
   },
   "Peganum harmala": {
     "commonName": "Aljamega",
@@ -17519,6 +19343,30 @@
     "eidosTaxonId": 32209,
     "rarityBasis": null
   },
+  "Phalaropus lobatus": {
+    "commonName": "Falaropo picofino",
+    "kingdom": "fauna",
+    "group": "Ave limícola",
+    "habitat": "En migración en ríos,marismas,aguazales,salinas,lagunas,arrozales,playas,mar abierto",
+    "seasonality": "Abril, mayo, julio, agosto, septiembre, octubre, enero",
+    "rarityScore": 3,
+    "description": "Esta limícola, al contrario que otros componentes de la familia, es una nadadora activa, que presenta la peculiaridad de que las hembras lucen un plumaje nupcial mucho más vistoso que el de los machos. La hembra en periodo reproductor presenta la cabeza y la cara de color gris oscuro, con una pequeña mancha blanca sobre el ojo, y la garganta blanca, bordeada de castaño rojizo por debajo y en los laterales del cuello; las partes superiores son de tono gris oscuro con dos franjas longitudinales color ante formadas por las escapulares y las plumas del manto. El macho en plumaje nupcial, sin embargo, es bastante menos vistoso, con el castaño del cuello más pálido. El individuo no reproductor muestra las partes superiores grises (también la cabeza), con los bordes blancos de las plumas superiores destacados, en tanto que las aves juveniles presentan un tinte anaranjado en el cuello y tonos marrones en las plumas de las partes superiores.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Charadriiformes",
+      "family": "Scolopacidae",
+      "genus": "Phalaropus"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hembra_de_phalaropus_lobatus.jpg?width=1280",
+    "imageAttribution": "Onioram (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 14039
+  },
   "Phillyrea angustifolia": {
     "commonName": "Labiérnago",
     "kingdom": "flora",
@@ -17816,6 +19664,30 @@
     },
     "descriptionSource": null
   },
+  "Phylloscopus trochiloides": {
+    "commonName": "Mosquitero verdoso",
+    "kingdom": "fauna",
+    "group": "Ave",
+    "habitat": null,
+    "seasonality": "Septiembre",
+    "rarityScore": 4,
+    "description": "Mosquitero del tamaño del común, de color gris verdoso en las partes superiores y blanco sucio en las inferiores, con una larga lista superciliar —bien delimitada y que tiende a unirse con la del lado opuesto por encima del pico— y con una franja alar blanquecina, corta y apenas marcada.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Phylloscopidae",
+      "genus": "Phylloscopus"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Greenish_Warbler_I_IMG_0565.jpg?width=1280",
+    "imageAttribution": "J.M.Garg (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 16409
+  },
   "Phylloscopus trochilus": {
     "commonName": "Mosquitero musical",
     "kingdom": "fauna",
@@ -18046,6 +19918,78 @@
     "eidosTaxonId": 7124,
     "rarityBasis": null
   },
+  "Pipistrellus kuhlii": {
+    "commonName": "Murciélago de borde claro",
+    "kingdom": "fauna",
+    "group": "Murciélago",
+    "habitat": "Es fisurícola, tanto litófila como fitófila, y altamente sinantrópica, refugiándose en fisuras o grietas en edificios, rocas y árboles, así como en cajas-nido",
+    "seasonality": "Abril a octubre",
+    "rarityScore": 3,
+    "description": "Es un murciélago pequeño. Las orejas son cortas, triangulares y con vértice superior redondeado, y poseen cinco pliegues transversales en la parte superior del borde externo. El trago es corto, redondeado en la punta y ligeramente curvado. El pelaje es de coloración general pardo castaño o rojizo en la parte dorsal, y más claro en la zona ventral. El hocico, las orejas y la membrana alar son de color negro parduzco. Las alas son relativamente estrechas. El plagiopatagio se inserta en la base de los dedos del pie; en su borde presentan generalmente una banda de color más claro. El espolón alcanza más de la mitad de la longitud del borde del uropatagio, con lóbulo postcalcáneo con cartílago conspicuo en forma de T. Los incisivos internos superiores (I1) son monocúspides, los externos (I2) menores que la mitad del I1, y el premolar superior anterior (P1) está desplazado hacia el interior y no es visible externamente. Los incisivos inferiores están fuertemente imbricados, y no presentan diastema entre I2 e I3. ANT: 31,0-37,0 mm; Ps: 4,5-10,0 g. Fórmula dentaria: 2.1.2.3/3.1.2.3. Número de cromosomas (2n) = 44. No existe dimorfismo sexual, aunque las hembras son algo mayores. Puede confundirse sobre todo con los otros representantes del género Pipistrellus y en menor medida con Hypsugo savii, de los que se diferencia sobre todo por los caracteres dentales. ULTRASONIDOS Emite pulsos de ecolocalización del tipo FM-CF, con frecuencia de máxima energía a 38-41 kHz, 8-12 ms de duración, e intervalo entre pulsos bimodal con valores máximos en torno a los 100 y 200 ms. Los cantos sociales son una serie de 2 pulsos FM muy rápidos, con máxima energía en torno a los 14-16 kHz, fácilmente audibles como un “chip” agudo, y que mediante sistemas de tiempo expandido permiten discriminar a la especie de P. nathusii. Mediante escucha directa pueden confundirse con sonidos de ecolocalización de Tadarida teniotis.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Mammalia",
+      "order": "Chiroptera",
+      "family": "Vespertilionidae",
+      "genus": "Pipistrellus"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pipistrellus_kuhlii.jpg?width=1280",
+    "imageAttribution": "Mnolf (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 11550
+  },
+  "Pipistrellus pipistrellus": {
+    "commonName": "Murciélago común",
+    "kingdom": "fauna",
+    "group": "Murciélago",
+    "habitat": "Quiróptero de hábitos fisurícolas",
+    "seasonality": "Abril a octubre",
+    "rarityScore": 1,
+    "description": "Es uno de los Quirópteros más pequeños de Europa (ANT: 28-35 mm, Ps: 3,5-8,5 g). Orejas cortas, triangulares; trago de punta redondeada, más largo que ancho. Coloración dorsal de marrón-rojizo a gris-verdoso, con individuos negruzcos. Pelaje ventral más claro. La segunda falange del 3er dedo es 2- 3 mm mayor que la tercera. La pigmentación de las partes desnudas de la cara es en general oscura, sin parches claros conspicuos. Los machos tienen el pene grisáceo con una marcada estría más pálida en el glande. Carecen de protuberancia entre los orificios nasales. Fórmula dentaria: 2.1.2.3/3.1.2.3. Incisivo superior interno bicúspide, casi igual que la mitad de la longitud del externo. PM1 muy pequeño y desplazado hacia el interior de la serie dental pero visible desde el exterior. Dotación cromosómica: 2n = 42 ó 2n = 44. Pueden ser confundidos con otros miembros del género Pipistrellus, aunque sus menores dimensiones y la morfología y disposición de los incisivos y premolares superiores permiten distinguirlos en mano con relativa facilidad. ULTRASONIDOS Las emisiones más habituales son pulsos de frecuencia modulada de banda ancha con una cola final casi frecuencia constante. Las frecuencias terminal y de máxima intensidad oscilan entre 42-51 y 41,6- 50,8 kHz, respectivamente. Las llamadas sociales difieren en frecuencia y número de componentes. Las señales son estructuralmente similares a las de otras especies cogenéricas, pero sus diferentes frecuencias permiten separarlas con facilidad.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Mammalia",
+      "order": "Chiroptera",
+      "family": "Vespertilionidae",
+      "genus": "Pipistrellus"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2020)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pipistrellus_pipistrellus_lateral.jpg?width=1280",
+    "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 11991
+  },
+  "Pipistrellus pygmaeus": {
+    "commonName": "Murciélago de Cabrera",
+    "kingdom": "fauna",
+    "group": "Murciélago",
+    "habitat": null,
+    "seasonality": "Abril, mayo, junio, julio, agosto, septiembre, octubre, enero",
+    "rarityScore": 2,
+    "description": "Es el murciélago más pequeño de Europa (ANT: 28,8-32,8 mm; Ps: 4,1-7,5 g) . Orejas cortas y triangulares. Trago de punta redondeada, más largo que ancho. Pelaje dorsal desde marrón-oliva a arenoso pálido. La región ventral es más clara. La razón entre la longitud de la 2ª y 3ª falange del 3er dedo es 1:1, aunque este carácter es bastante variable. Las orejas y el hocico son relativamente más cortos y el pelaje dorsal del uropatagio más denso y extendido que en el murciélago enano, cubriéndolo hasta su tercio proximal. La pigmentación de las partes desnudas de la cara presenta parches claros conspicuos. En los machos el pene es anaranjado y sin la estría distintiva del murciélago enano. Ambos sexos presentan una pequeña protuberancia entre los orificios nasales, ausente en su especie gemela . Fórmula dentaria: 2.1.2.3/3.1.2.3. Forma y disposición de los incisivos superiores y PM1 como en el murciélago enano. Se distingue con relativa facilidad de otros miembros del mismo género por su tamaño menor y su morfología dentaria. ULTRASONIDOS Las señales de ecolocación más habituales son pulsos de frecuencia modulada de banda ancha con una cola final casi de frecuencia constante. Los valores medios de la frecuencia de máxima intensidad oscilan entre 52 y 56 kHz . Las llamadas sociales están compuestas por 2 a 4 componentes (habitualmente tres) y se escuchan sobre todo en torno a 20 kHz . En situaciones de amenaza emiten llamadas de alarma compuestas por 4-5 elementos, con frecuencias de máxima intensidad entre 26 y 40 kHz.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Mammalia",
+      "order": "Chiroptera",
+      "family": "Vespertilionidae",
+      "genus": "Pipistrellus"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pipistrellus_pygmaeus01.jpg?width=1280",
+    "imageAttribution": "Evgeniy Yakhontov (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 12050
+  },
   "Pistacia lentiscus": {
     "commonName": "Lentisco",
     "kingdom": "flora",
@@ -18141,6 +20085,54 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Plantago coronopus": {
+    "commonName": "Aquinácea",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Lamiales",
+      "family": "Plantaginaceae",
+      "genus": "Plantago"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Plantago_coronopus_Sturm64.jpg?width=1280",
+    "imageAttribution": "Johann Georg Sturm (Painter: Jacob Sturm) (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 7155
+  },
+  "Plantago crassifolia": {
+    "commonName": "Plantago crassifolia",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Lamiales",
+      "family": "Plantaginaceae",
+      "genus": "Plantago"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fleshy_Plantain_(Plantago_crassifolia)_-_Muro%2C_Spain_2022-04-17_(02).jpg?width=1280",
+    "imageAttribution": "Ryan Hodnett (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 7156
   },
   "Plantago lagopus": {
     "commonName": "Cola de zorro",
@@ -18317,6 +20309,30 @@
     "eidosTaxonId": 10112,
     "rarityBasis": null
   },
+  "Podarcis hispanica": {
+    "commonName": "Podarcis hispanica",
+    "kingdom": "fauna",
+    "group": "Reptil",
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Reptilia",
+      "order": "Squamata",
+      "family": "Lacertidae",
+      "genus": "Podarcis"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Anexo V (Ley 42/2007, de 13 de diciembre)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eidechse.1024.jpg?width=1280",
+    "imageAttribution": "de:Benutzer:Janekpfeifer (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 24425
+  },
   "Podarcis hispanicus": {
     "commonName": "Lagartija ibérica",
     "kingdom": "fauna",
@@ -18471,6 +20487,30 @@
     },
     "descriptionSource": null
   },
+  "Polygonum maritimum": {
+    "commonName": "corregüela del mar",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Caryophyllales",
+      "family": "Polygonaceae",
+      "genus": "Polygonum"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Heliotropium_curassavicum02.jpg?width=1280",
+    "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 7265
+  },
   "Polypodium cambricum": {
     "commonName": "Polipodio",
     "kingdom": "flora",
@@ -18499,6 +20539,30 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Polypogon maritimus": {
+    "commonName": "Polypogon maritimus",
+    "kingdom": "flora",
+    "group": "Gramínea",
+    "habitat": null,
+    "seasonality": "Abril a agosto",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Polypogon"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Polypogon_maritimus_flower_(01).jpg?width=1280",
+    "imageAttribution": "Stéphane Barbier (CC BY-SA 2.0 fr) · Wikimedia Commons",
+    "eidosTaxonId": 623
   },
   "Populus alba": {
     "commonName": "Álamo blanco",
@@ -18581,6 +20645,54 @@
     "imageAttribution": "Didier Descouens (CC BY-SA 4.0) · Wikimedia Commons",
     "eidosTaxonId": 7295,
     "rarityBasis": null
+  },
+  "Porzana porzana": {
+    "commonName": "Polluela pintoja",
+    "kingdom": "fauna",
+    "group": "Ave acuática",
+    "habitat": null,
+    "seasonality": "Septiembre, octubre, febrero, marzo, abril",
+    "rarityScore": 3,
+    "description": "La polluela pintoja es un ave de modesto tamaño, si bien algo mayor que el resto de sus congéneres, y su plumaje, aunque también críptico, se caracteriza por el abundante punteado blanquecino dibujado sobre el pecho grisáceo, diseño al que hace referencia el nombre vulgar de la especie. En la coloración de las regiones dorsales domina el pardo con estrías blancuzcas, en tanto que los flancos aparecen barrados de pardo, blanco y negro. Otro rasgo que la distingue de las otras polluelas es la tonalidad clara —blanco-amarillenta— que lucen las infracoberteras caudales. El pico es amarillento con la base rojiza. Las hembras, aunque similares a los machos, resultan en conjunto más apagadas y con un moteado más profuso, al igual que los jóvenes, si bien estos se diferencian por el color pardo del pico.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Gruiformes",
+      "family": "Rallidae",
+      "genus": "Porzana"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Porzana_porzana_1_(Marek_Szczepanek).jpg?width=1280",
+    "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 12014
+  },
+  "Posidonia oceanica": {
+    "commonName": "Aceitunilla de mar",
+    "kingdom": "flora",
+    "group": "Hierba",
+    "habitat": "Vive en los fondos marinos arenosos, hasta 40 m de profundidad",
+    "seasonality": "Todo el año",
+    "rarityScore": 3,
+    "description": "Hierba perenne, hasta de 70 cm, rizomatosa, con rizomas pelosos, comprimidos lateralmente. Hojas de 40-70 x 1 cm, acintadas. Flores que nacen en el extremo de un pedúnculo, dispuestas en varias espigas, y formadas por un estambre con dos tecas y el conectivo ensanchado como un tépalo del que sobresale un apículo, y un ovario con estigma papiloso. Frutos en drupa de 3 cm, ovoides, carnosas.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Alismatales",
+      "family": "Posidoniaceae",
+      "genus": "Posidonia"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Posidonia_oceanica_(L).jpg?width=1280",
+    "imageAttribution": "Frédéric Ducarme (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 7303
   },
   "Potentilla caulescens": {
     "commonName": "Cincoenrama",
@@ -19339,6 +21451,30 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
+  "Reichardia picroides": {
+    "commonName": "Lechuguino",
+    "kingdom": "flora",
+    "group": "Hierba",
+    "habitat": "Vive en herbazales secos, eriales y suelos removidos, entre 100- 1100 m",
+    "seasonality": "Todo el año",
+    "rarityScore": 2,
+    "description": "Hierba perenne, de 15-60 cm, con raíz casi leñosa y tallos ramificados. Hojas dentadas o pinnatífidas, alternas, las superiores sentadas. Capítulos de 1 cm de diámetro, solitarios con largo pedúnculo algo engordado bajo el capítulo, este con brácteas agudas, más anchas las de abajo. Flores liguladas amarillas. Aquenios de 3 mm, los externos tuberculados, los internos lisos, con vilano de 8 mm.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Asterales",
+      "family": "Asteraceae",
+      "genus": "Reichardia"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Starr_050225-4551_Reichardia_picroides.jpg?width=1280",
+    "imageAttribution": "Forest & Kim Starr (CC BY 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 640
+  },
   "Reichardia tingitana": {
     "commonName": "Cerrajón",
     "kingdom": "flora",
@@ -19582,6 +21718,30 @@
     "imageAttribution": "User:Xemenendura (CC BY-SA 3.0) · Wikimedia Commons",
     "eidosTaxonId": 7737,
     "rarityBasis": null
+  },
+  "Rhamnus oleoides subsp. angustifolia": {
+    "commonName": "Rhamnus oleoides subsp. angustifolia",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": null,
+    "rarityScore": null,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Rosales",
+      "family": "Rhamnaceae",
+      "genus": "Rhamnus"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": null,
+    "imageAttribution": null,
+    "eidosTaxonId": 31965
   },
   "Rhaponticum coniferum": {
     "commonName": "Cuchara de pastor",
@@ -19869,6 +22029,30 @@
     },
     "descriptionSource": null
   },
+  "Rostraria salzmannii": {
+    "commonName": "Rostraria salzmannii",
+    "kingdom": "flora",
+    "group": "Gramínea",
+    "habitat": null,
+    "seasonality": null,
+    "rarityScore": 5,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Rostraria"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": null,
+    "imageAttribution": null,
+    "eidosTaxonId": 31973
+  },
   "Rubia peregrina": {
     "commonName": "Llengua de bou",
     "kingdom": "flora",
@@ -19943,6 +22127,54 @@
     "imageAttribution": "Henry Brisse (upload by user:Abalg) (CC BY-SA 3.0) · Wikimedia Commons",
     "eidosTaxonId": 7699,
     "rarityBasis": null
+  },
+  "Ruppia cirrhosa": {
+    "commonName": "broza de agua",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Abril a septiembre",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Alismatales",
+      "family": "Ruppiaceae",
+      "genus": "Ruppia"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2010)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ruppiacirrhosa.jpeg?width=1280",
+    "imageAttribution": "_Ruppia_cirrhosa.jpeg: Kristian Peters -- Fabelfroh 08:03, 6 Decemb… (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 7849
+  },
+  "Ruppia maritima": {
+    "commonName": "Broza fina",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Febrero a octubre",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Alismatales",
+      "family": "Ruppiaceae",
+      "genus": "Ruppia"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2010)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ruppiamaritima.jpg?width=1280",
+    "imageAttribution": "Gordon Leppig & Andrea J. Pickart (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 7852
   },
   "Ruscus aculeatus": {
     "commonName": "Albricias",
@@ -20025,6 +22257,78 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Sagina maritima": {
+    "commonName": "Sagina maritima",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Marzo a junio",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Caryophyllales",
+      "family": "Caryophyllaceae",
+      "genus": "Sagina"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sagina_maritima_inflorescence_(01).jpg?width=1280",
+    "imageAttribution": "Andrea Moro (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 7865
+  },
+  "Salicornia emerici": {
+    "commonName": "Salicornia emerici",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": null,
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Caryophyllales",
+      "family": "Amaranthaceae",
+      "genus": "Salicornia"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": null,
+    "imageAttribution": null,
+    "eidosTaxonId": 83458
+  },
+  "Salicornia patula": {
+    "commonName": "Salicornia patula",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": null,
+    "rarityScore": 5,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Caryophyllales",
+      "family": "Amaranthaceae",
+      "genus": "Salicornia"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Salicornia_patula%2C_Torroella_de_Montgr%C3%AD.jpg?width=1280",
+    "imageAttribution": "Josep Gesti (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 80172
   },
   "Salix atrocinerea": {
     "commonName": "Bardaguera",
@@ -20235,6 +22539,30 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
+  "Salvia verbenaca": {
+    "commonName": "Rabo de gato",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Octubre a junio",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Lamiales",
+      "family": "Lamiaceae",
+      "genus": "Salvia"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Salvia_verbenaca_b.JPG?width=1280",
+    "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 7942
+  },
   "Samolus valerandi": {
     "commonName": "Lechuguilla",
     "kingdom": "flora",
@@ -20371,6 +22699,30 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Sarcocornia perennis subsp. alpini": {
+    "commonName": "grosa",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": null,
+    "rarityScore": null,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Caryophyllales",
+      "family": "Amaranthaceae",
+      "genus": "Salicornia"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": null,
+    "imageAttribution": null,
+    "eidosTaxonId": 33124
   },
   "Satureja cuneifolia": {
     "commonName": "Tomillo",
@@ -20596,6 +22948,30 @@
     "eidosTaxonId": 10126,
     "rarityBasis": null
   },
+  "Schoenus nigricans": {
+    "commonName": "juncia bastarda",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Cyperaceae",
+      "genus": "Schoenus"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2013)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Schoenus_nigricans_kz2.jpg?width=1280",
+    "imageAttribution": "Kenraiz, Krzysztof Ziarnek (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 8115
+  },
   "Scirpoides holoschoenus": {
     "commonName": "Bolicas de junco",
     "kingdom": "flora",
@@ -20706,6 +23082,30 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Scorpiurus sulcatus": {
+    "commonName": "Oreja de Liebre",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Marzo a junio",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Fabales",
+      "family": "Fabaceae",
+      "genus": "Scorpiurus"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Scorpiurus_sulcatus_HojasyFlores_2009-5-01_CampodeCalatrava.jpg?width=1280",
+    "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 8144
   },
   "Scorzonera angustifolia": {
     "commonName": "Arrucas",
@@ -21005,6 +23405,30 @@
     "rarityBasis": null,
     "descriptionSource": null
   },
+  "Senecio glaucus": {
+    "commonName": "Capitana",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Noviembre a mayo",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Asterales",
+      "family": "Asteraceae",
+      "genus": "Senecio"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Senecio_glaucus0732.jpg?width=1280",
+    "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 10424
+  },
   "Senecio malacitanus": {
     "commonName": "suzón de romero",
     "kingdom": "flora",
@@ -21029,6 +23453,30 @@
     "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
     "eidosTaxonId": 32015,
     "rarityBasis": null
+  },
+  "Senecio vulgaris": {
+    "commonName": "Cenizo",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Octubre a junio",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Asterales",
+      "family": "Asteraceae",
+      "genus": "Senecio"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Senecio_vulgaris2.jpg?width=1280",
+    "imageAttribution": "© Jean Tosti (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 9674
   },
   "Serinus serinus": {
     "commonName": "Serín verdecillo",
@@ -21393,6 +23841,30 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
+  "Silene sclerocarpa": {
+    "commonName": "Silene sclerocarpa",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Noviembre, marzo, abril, mayo, junio",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Caryophyllales",
+      "family": "Caryophyllaceae",
+      "genus": "Silene"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": null,
+    "imageAttribution": null,
+    "eidosTaxonId": 8363
+  },
   "Silene secundiflora": {
     "commonName": "Novia",
     "kingdom": "flora",
@@ -21543,6 +24015,54 @@
     "eidosTaxonId": 8297,
     "rarityBasis": null
   },
+  "Solanum nigrum": {
+    "commonName": "Beninas",
+    "kingdom": "flora",
+    "group": "Hierba",
+    "habitat": "Vive en márgenes de cultivo y en lugares nitrificados, sobre cualquier tipo de sustrato, hasta 1200 m",
+    "seasonality": "Todo el año",
+    "rarityScore": 2,
+    "description": "Planta herbácea anual, con tallos hasta de 80 cm, ramificados, y hojas con limbo hasta de 7 x 4 cm, enteras, ovadas, agudas, enteras o dentadas, pecioladas, con pecíolo hasta de 4 cm. Flores que se disponen en racimos terminales, con cáliz campanulado pequeño y corola hasta de 1,5 cm de diámetro, con cinco lóbulos, blanca. Frutillos de 1 cm, globosos, negros, colgantes.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Solanales",
+      "family": "Solanaceae",
+      "genus": "Solanum"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/(ms)_Solanum_nigrum_1.jpg?width=1280",
+    "imageAttribution": "Hladac (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 8483
+  },
+  "Sonchus oleraceus": {
+    "commonName": "Lechuguilla",
+    "kingdom": "flora",
+    "group": "Hierba",
+    "habitat": "Vive en herbazales y bordes de caminos, hasta 2100 m",
+    "seasonality": "Todo el año",
+    "rarityScore": 2,
+    "description": "Hierba anual, de 30-60 cm, con tallos glabros abajo. Hojas pinnatifidas, con aurículas agudas, con espínulas en el margen. Capítulos en grupos terminales, con involucro de 1-1,5 cm, con frecuencia abultado abajo y cóncavo, brácteas alargadas y separadas arriba, con pelos glandulíferos dispersos. Flores con lígulas amarillas. Aquenios de 2,5- 3,5 mm, comprimidos, con costillas longitudinales y tubérculos espinulosos; vilano al menos tres veces más largo que el aquenio.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Asterales",
+      "family": "Asteraceae",
+      "genus": "Sonchus"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sonchus_oleraceus_PID1767-2.jpg?width=1280",
+    "imageAttribution": "Boris Gaberšček (CC BY 2.5 si) · Wikimedia Commons",
+    "eidosTaxonId": 9685
+  },
   "Sonchus tenerrimus": {
     "commonName": "Cerraja fina",
     "kingdom": "flora",
@@ -21599,6 +24119,54 @@
     "imageAttribution": "Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons",
     "eidosTaxonId": 33013,
     "rarityBasis": null
+  },
+  "Spergularia bocconei": {
+    "commonName": "Cascabelera",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Febrero a agosto",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Caryophyllales",
+      "family": "Caryophyllaceae",
+      "genus": "Spergularia"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2014)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Spergulariabocconi.jpg?width=1280",
+    "imageAttribution": "Anthony Valois and the National Park Service (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 8584
+  },
+  "Spergularia media": {
+    "commonName": "cominillos",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Caryophyllales",
+      "family": "Caryophyllaceae",
+      "genus": "Spergularia"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2014)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Greater_Sea-Spurry_(Spergularia_media)_-_Thunder_Bay%2C_Ontario_01.jpg?width=1280",
+    "imageAttribution": "Ryan Hodnett (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 8591
   },
   "Sphenopus divaricatus": {
     "commonName": "Grama salada",
@@ -22140,6 +24708,30 @@
     },
     "descriptionSource": null
   },
+  "Sturnus vulgaris": {
+    "commonName": "Estornino pinto",
+    "kingdom": "fauna",
+    "group": "Ave",
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 1,
+    "description": "Ave de mediano tamaño, compacta, con patas fuertes y cortas de color rosado, y pico puntiagudo. Exhibe un plumaje de color negro dominante, con reflejos violáceos y púrpuras, y con un moteado variable de pintas blanco-amarillentas. En invierno, el moteado resulta especialmente intenso, mientras que en verano es menos evidente. Tiene el pico de color amarillo en verano y negro en invierno. Los jóvenes presentan tonos pardo-grisáceos. Se trata de un pájaro similar al mirlo común, aunque se desplaza más erguido, andando y no a saltos. Posee un vuelo rápido y directo.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Sturnidae",
+      "genus": "Sturnus"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/European_Starling_2006.jpg?width=1280",
+    "imageAttribution": "http://www.naturespicsonline.com/ (CC BY-SA 2.5) · Wikimedia Commons",
+    "eidosTaxonId": 12415
+  },
   "Suaeda maritima": {
     "commonName": "Sosa blanca",
     "kingdom": "flora",
@@ -22170,6 +24762,54 @@
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     }
+  },
+  "Suaeda pruinosa": {
+    "commonName": "Almajo dulce",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Caryophyllales",
+      "family": "Amaranthaceae",
+      "genus": "Suaeda"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": null,
+    "imageAttribution": null,
+    "eidosTaxonId": 8515
+  },
+  "Suaeda spicata": {
+    "commonName": "Espinacas",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Marzo a noviembre",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Caryophyllales",
+      "family": "Amaranthaceae",
+      "genus": "Suaeda"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": null,
+    "imageAttribution": null,
+    "eidosTaxonId": 8516
   },
   "Suaeda vera": {
     "commonName": "Sosa fina",
@@ -22313,6 +24953,30 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Sylvia borin": {
+    "commonName": "Curruca mosquitera",
+    "kingdom": "fauna",
+    "group": "Ave",
+    "habitat": "Campiñas verdes,sotos,orlas de bosque,zonas de vegetación ribereña,masas arboladas con sotobosque..",
+    "seasonality": "Abril, mayo, agosto, septiembre, octubre",
+    "rarityScore": 1,
+    "description": "Pajarillo de fisonomía más compacta y robusta que la de otras currucas —aunque bastante similar a la de la curruca capirotada—, con cabeza más redondeada y pico más corto y grueso. Un fino anillo orbital rodea al ojo. De todas formas, se trata de un ave que no cuenta con rasgos distintivos realmente identificativos o llamativos, y su aspecto general resulta bastante uniforme. Presenta las partes ventrales de color ante pálido y el dorso pardo-grisáceo. En torno a su cuello destaca ligeramente un discreto collar más grisáceo. Ambos sexos son iguales.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Sylviidae",
+      "genus": "Sylvia"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sylvia_borin_(%C3%96rebro_County).jpg?width=1280",
+    "imageAttribution": "Biillyboy (CC BY 2.0) · Wikimedia Commons",
+    "eidosTaxonId": 10728
   },
   "Tachybaptus ruficollis": {
     "commonName": "Zampullín común",
@@ -22745,6 +25409,30 @@
     "eidosTaxonId": 8713,
     "rarityBasis": null
   },
+  "Teucrium dunense": {
+    "commonName": "polio",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Lamiales",
+      "family": "Lamiaceae",
+      "genus": "Teucrium"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_dunense_Habitus_2010-7-03_ParqueNaturalLagunasdelaMata.jpg?width=1280",
+    "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 8789
+  },
   "Teucrium franchetianum": {
     "commonName": "Teucrium franchetianum",
     "kingdom": "flora",
@@ -23162,6 +25850,30 @@
     "imageAttribution": "Michèle Van Panhuys-sigler (CC BY-SA 2.0 fr) · Wikimedia Commons",
     "eidosTaxonId": 8678,
     "rarityBasis": null
+  },
+  "Thesium humile": {
+    "commonName": "Romerillo",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Marzo a junio",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Santalales",
+      "family": "Santalaceae",
+      "genus": "Thesium"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Thesium_humile_kz1.jpg?width=1280",
+    "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 8679
   },
   "Thymelaea hirsuta": {
     "commonName": "Bolaga",
@@ -23800,6 +26512,30 @@
     "eidosTaxonId": 12329,
     "rarityBasis": null
   },
+  "Triplachne nitens": {
+    "commonName": "Triplachne nitens",
+    "kingdom": "flora",
+    "group": "Gramínea",
+    "habitat": null,
+    "seasonality": "Abril a julio",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Triplachne"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lachnagrostis_gussonis_-_Species_graminum_-_Volume_3.jpg?width=1280",
+    "imageAttribution": "Carl Bernhard von Trinius (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 10156
+  },
   "Tripodion tetraphyllum": {
     "commonName": "Garbancito",
     "kingdom": "flora",
@@ -23972,6 +26708,30 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Tyto alba": {
+    "commonName": "Lechuza común",
+    "kingdom": "fauna",
+    "group": "Ave rapaz nocturna",
+    "habitat": "Es una especie típica de paisajes humanizados con áreas agrícolas en mosaico",
+    "seasonality": "Todo el año",
+    "rarityScore": 1,
+    "description": "El único representante de la familia Tytonidae en territorio europeo es una rapaz de tamaño medio, aspecto esbelto, largas patas y voluminosa cabeza, que luce un contrastado plumaje en el que predominan los tonos leonados y dorados en el dorso y el blanco puro —incluso ligeramente plateado— en las zonas ventrales. Las plumas dorsales y la parte superior de las alas y la cola aparecen finamente vermiculadas por sutiles punteados de color negro, gris y blancuzco, en tanto que las regiones ventrales pueden mostrar un moteado variable. En el rostro —inconfundible por su forma de corazón— destacan los ojos intensamente negros y el prominente pico de color claro. Los jóvenes poseen un plumaje muy similar al de los adultos, de los que se diferencian por sutiles detalles, difíciles de distinguir en el campo. El vuelo de esta rapaz nocturna —de alas largas y relativamente anchas— es elegante, silencioso y ágil gracias al escaso peso del ave. No es raro ver a la lechuza cernirse hábilmente sobre un punto, mientras escudriña el terreno en busca de presas.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Strigiformes",
+      "family": "Tytonidae",
+      "genus": "Tyto"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tyto_alba_close_up.jpg?width=1280",
+    "imageAttribution": "Stevie B (CC BY 2.0) · Wikimedia Commons",
+    "eidosTaxonId": 10650
   },
   "Ulex europaeus": {
     "commonName": "Tojo",
@@ -24174,6 +26934,30 @@
     "imageAttribution": "Philmarin (CC BY-SA 3.0) · Wikimedia Commons",
     "eidosTaxonId": 9706,
     "rarityBasis": null
+  },
+  "Urtica urens": {
+    "commonName": "Ortiga",
+    "kingdom": "flora",
+    "group": "Hierba",
+    "habitat": "Vive en cultivos y lugares nitrificados, hasta 1500 m",
+    "seasonality": "Octubre a junio",
+    "rarityScore": 2,
+    "description": "Hierba anual, de 20-80 cm, erguida, con pelos urticantes poco abundantes. Hojas de 2-5 x 1-3 cm, ovadas o elípticas, agudas, dentadas. Inflorescencia en racimos axilares, espiciformes, hasta de 2,5 cm, con flores minúsculas masculinas con cuatro pétalos y cuatro estambres, y las femeninas con ovario ovoide y estigma capitado. Fruto en aquenio de 1 mm, ovoide, de color marrón.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Rosales",
+      "family": "Urticaceae",
+      "genus": "Urtica"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/(MHNT)_Urtica_urens_-_leaves.jpg?width=1280",
+    "imageAttribution": "Didier Descouens (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 9170
   },
   "Valantia hispida": {
     "commonName": "Lapa",
@@ -24468,6 +27252,30 @@
     },
     "descriptionSource": null
   },
+  "Vulpia membranacea": {
+    "commonName": "Cadillos",
+    "kingdom": "flora",
+    "group": "Gramínea",
+    "habitat": null,
+    "seasonality": "Abril a julio",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Poales",
+      "family": "Poaceae",
+      "genus": "Festuca"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": null,
+    "imageAttribution": null,
+    "eidosTaxonId": 10170
+  },
   "Withania frutescens": {
     "commonName": "Oroval",
     "kingdom": "flora",
@@ -24581,6 +27389,30 @@
     "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons",
     "rarityBasis": null,
     "descriptionSource": null
+  },
+  "Zostera marina": {
+    "commonName": "Seda de mar ancha",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Alismatales",
+      "family": "Zosteraceae",
+      "genus": "Zostera"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2010)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Zostera_marina_dis.png?width=1280",
+    "imageAttribution": "Assessors citation: Carruthers, T.J.B., Short, F.T., Waycott, M., K… (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 9444
   },
   "Zygophyllum fabago": {
     "commonName": "Morsana",
