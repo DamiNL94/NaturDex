@@ -4670,7 +4670,9 @@
         {
           "scientificName": "Aetheorrhiza bulbosa subsp. bulbosa",
           "grupo": "Flora",
-          "nombreComun": "puerro salvaje"
+          "nombreComun": "puerro salvaje",
+          "nombreCorregido": "Aetheorhiza bulbosa",
+          "nota": "Errata de imprenta de la norma. GBIF lo resuelve al nombre de abajo y EIDOS lo acepta; verificado el 2026-08-17. Doble errata: la norma dobla la erre y además nombra la subespecie tipo, que EIDOS ficha como subespecie aceptada."
         },
         {
           "scientificName": "Ajuga iva",
@@ -4680,7 +4682,9 @@
         {
           "scientificName": "Allium ampeloprassum",
           "grupo": "Flora",
-          "nombreComun": "ajo porro"
+          "nombreComun": "ajo porro",
+          "nombreCorregido": "Allium ampeloprasum",
+          "nota": "Errata de imprenta de la norma. GBIF lo resuelve al nombre de abajo y EIDOS lo acepta; verificado el 2026-08-17."
         },
         {
           "scientificName": "Allium sphaerocephalon",
@@ -4774,7 +4778,9 @@
         {
           "scientificName": "Bassia hyssipifolia",
           "grupo": "Flora",
-          "nombreComun": "morenita"
+          "nombreComun": "morenita",
+          "nombreCorregido": "Bassia hyssopifolia",
+          "nota": "Errata de imprenta de la norma. GBIF lo resuelve al nombre de abajo y EIDOS lo acepta; verificado el 2026-08-17."
         },
         {
           "scientificName": "Bassia scoparia",
@@ -4814,7 +4820,9 @@
         {
           "scientificName": "Bromus matritensis",
           "grupo": "Flora",
-          "nombreComun": "ballisco"
+          "nombreComun": "ballisco",
+          "nombreCorregido": "Bromus madritensis",
+          "nota": "Errata de imprenta de la norma. GBIF lo resuelve al nombre de abajo y EIDOS lo acepta; verificado el 2026-08-17. Ojo: GBIF NO resuelve el verbatim —se queda en el género Bromus—, así que la corrección se comprobó consultando «Bromus madritensis» directamente, que sale EXACT."
         },
         {
           "scientificName": "Bromus rigidus",
@@ -4849,7 +4857,9 @@
         {
           "scientificName": "Cardadria draba",
           "grupo": "Flora",
-          "nombreComun": "capellanes"
+          "nombreComun": "capellanes",
+          "nombreCorregido": "Lepidium draba",
+          "nota": "La norma usa el género en desuso. GBIF y EIDOS coinciden en el nombre aceptado de abajo; verificado el 2026-08-17. Doble salto: «Cardadria» es además errata de «Cardaria», el género en el que se describió."
         },
         {
           "scientificName": "Carrichtera annua",
@@ -5003,7 +5013,9 @@
         {
           "scientificName": "Eleagnus angustifolia",
           "grupo": "Flora",
-          "nombreComun": "alamillo / paraíso"
+          "nombreComun": "alamillo / paraíso",
+          "nombreCorregido": "Elaeagnus angustifolia",
+          "nota": "Errata de imprenta de la norma. GBIF lo resuelve al nombre de abajo y EIDOS lo acepta; verificado el 2026-08-17."
         },
         {
           "scientificName": "Elymus elongatus",
@@ -5037,7 +5049,9 @@
         {
           "scientificName": "Eruca vesicaria var. longirostris",
           "grupo": "Flora",
-          "nombreComun": "oruga"
+          "nombreComun": "oruga",
+          "nombreCorregido": "Eruca vesicaria",
+          "nota": "La norma nombra una variedad, y el catálogo ficha especies. Se ficha la especie, que afirma MENOS que la norma y no más: si el taxón infraespecífico está aquí, la especie está. Verificado contra GBIF y EIDOS el 2026-08-17."
         },
         {
           "scientificName": "Eryngium maritimum",
@@ -5047,7 +5061,9 @@
         {
           "scientificName": "Euphorbia terracina subsp. var. almeriensis",
           "grupo": "Flora",
-          "nombreComun": "lechera"
+          "nombreComun": "lechera",
+          "nombreCorregido": "Euphorbia terracina",
+          "nota": "La norma nombra una variedad, y el catálogo ficha especies. Se ficha la especie, que afirma MENOS que la norma y no más: si el taxón infraespecífico está aquí, la especie está. Verificado contra GBIF y EIDOS el 2026-08-17. El verbatim trae además «subsp. var.» seguidos, que no es una combinación válida y delata un error de composición de la tabla."
         },
         {
           "scientificName": "Fagonia cretica",
@@ -5113,7 +5129,9 @@
         {
           "scientificName": "Helichrysum stoechas subsp. caespitosum",
           "grupo": "Flora",
-          "nombreComun": "siempreviva / pespetua / yesquera"
+          "nombreComun": "siempreviva / pespetua / yesquera",
+          "nombreCorregido": "Helichrysum stoechas",
+          "nota": "La norma nombra una subespecie, y el catálogo ficha especies. Se ficha la especie, que afirma MENOS que la norma y no más: si el taxón infraespecífico está aquí, la especie está. Verificado contra GBIF y EIDOS el 2026-08-17."
         },
         {
           "scientificName": "Heliotropium curassavicum",
@@ -5165,7 +5183,9 @@
         {
           "scientificName": "Juncus bufonius bufonius",
           "grupo": "Flora",
-          "nombreComun": "hierba de sapo / junco de rana"
+          "nombreComun": "hierba de sapo / junco de rana",
+          "nombreCorregido": "Juncus bufonius",
+          "nota": "La norma nombra el taxón infraespecífico tipo, sin rango explícito, y el catálogo ficha especies. Se ficha la especie, que afirma MENOS que la norma y no más: si el taxón infraespecífico está aquí, la especie está. Verificado contra GBIF y EIDOS el 2026-08-17."
         },
         {
           "scientificName": "Juncus maritimus",
@@ -5242,16 +5262,22 @@
         {
           "scientificName": "Linun maritimum",
           "grupo": "Flora",
-          "nombreComun": "lino / lino marítimo"
+          "nombreComun": "lino / lino marítimo",
+          "nombreCorregido": "Linum maritimum",
+          "nota": "Errata de imprenta de la norma. GBIF lo resuelve al nombre de abajo y EIDOS lo acepta; verificado el 2026-08-17."
         },
         {
           "scientificName": "Linun strictum",
           "grupo": "Flora",
-          "nombreComun": "campanicas"
+          "nombreComun": "campanicas",
+          "nombreCorregido": "Linum strictum",
+          "nota": "Errata de imprenta de la norma. GBIF lo resuelve al nombre de abajo y EIDOS lo acepta; verificado el 2026-08-17."
         },
         {
           "scientificName": "Lobularia lybica",
-          "grupo": "Flora"
+          "grupo": "Flora",
+          "nombreCorregido": "Lobularia libyca",
+          "nota": "Errata de imprenta de la norma. GBIF lo resuelve al nombre de abajo y EIDOS lo acepta; verificado el 2026-08-17."
         },
         {
           "scientificName": "Lobularia maritima",
@@ -5271,7 +5297,9 @@
           "scientificName": "Lycium intrincatum",
           "grupo": "Flora",
           "nombreComun": "cambrón / cambronero",
-          "categoria": "De Interés Especial"
+          "categoria": "De Interés Especial",
+          "nombreCorregido": "Lycium intricatum",
+          "nota": "Errata de imprenta de la norma. GBIF lo resuelve al nombre de abajo y EIDOS lo acepta; verificado el 2026-08-17."
         },
         {
           "scientificName": "Lygeum spartum",
@@ -5324,7 +5352,9 @@
         {
           "scientificName": "Ononis natrix subsp. hispanica",
           "grupo": "Flora",
-          "nombreComun": "pegamoscas"
+          "nombreComun": "pegamoscas",
+          "nombreCorregido": "Ononis natrix",
+          "nota": "La norma nombra una subespecie, y el catálogo ficha especies. Se ficha la especie, que afirma MENOS que la norma y no más: si el taxón infraespecífico está aquí, la especie está. Verificado contra GBIF y EIDOS el 2026-08-17."
         },
         {
           "scientificName": "Ononis ramosissima",
@@ -5404,7 +5434,8 @@
         },
         {
           "scientificName": "Phoenix chevallierii",
-          "grupo": "Flora"
+          "grupo": "Flora",
+          "nota": "SIN CORREGIR a propósito. GBIF solo lo resuelve FUZZY, y a «Phoenix dactylifera», que no es una errata de este nombre sino OTRO epíteto: aceptarlo metería la palmera datilera en el catálogo por un acierto difuso. EIDOS no conoce ninguna de las dos grafías con «chevallier-». Queda fuera del catálogo con el hueco escrito, que es lo que manda la regla nº 2 del CLAUDE.md."
         },
         {
           "scientificName": "Phoenix dactylifera",
@@ -5467,7 +5498,9 @@
         {
           "scientificName": "Polypogon maritimus subsp. maritimum",
           "grupo": "Flora",
-          "nombreComun": "cola de zorra"
+          "nombreComun": "cola de zorra",
+          "nombreCorregido": "Polypogon maritimus",
+          "nota": "La norma nombra la subespecie tipo, y el catálogo ficha especies. Se ficha la especie, que afirma MENOS que la norma y no más: si el taxón infraespecífico está aquí, la especie está. Verificado contra GBIF y EIDOS el 2026-08-17. El epíteto de la subespecie va además sin concordar en género («maritimum» por «maritimus»)."
         },
         {
           "scientificName": "Posidonia oceanica",
@@ -5481,7 +5514,9 @@
         {
           "scientificName": "Rapistrum rugossum",
           "grupo": "Flora",
-          "nombreComun": "tamarilla / aramago"
+          "nombreComun": "tamarilla / aramago",
+          "nombreCorregido": "Rapistrum rugosum",
+          "nota": "Errata de imprenta de la norma. GBIF lo resuelve al nombre de abajo y EIDOS lo acepta; verificado el 2026-08-17."
         },
         {
           "scientificName": "Reichardia gaditana",
@@ -5539,7 +5574,9 @@
         },
         {
           "scientificName": "Salsola flavescens",
-          "grupo": "Flora"
+          "grupo": "Flora",
+          "nombreCorregido": "Caroxylon vermiculatum",
+          "nota": "Necesita DOS saltos y por eso se deja escrito el camino entero: GBIF resuelve el verbatim EXACT a «Nitrosalsola vermiculata», nombre que EIDOS no conoce; y GBIF resuelve «Caroxylon vermiculatum» —que EIDOS sí acepta— EXACT al MISMO nombre. Son el mismo taxón según GBIF y el catálogo lo ficha con el género que usa EIDOS. No es una equivalencia por parecido de epíteto: la cierran las dos autoridades. Verificado el 2026-08-17."
         },
         {
           "scientificName": "Salsola kali subsp. kali",
@@ -5549,7 +5586,9 @@
         {
           "scientificName": "Salvia verbenaca subsp. var. oblongifolia",
           "grupo": "Flora",
-          "nombreComun": "gallocresta / agallacrista"
+          "nombreComun": "gallocresta / agallacrista",
+          "nombreCorregido": "Salvia verbenaca",
+          "nota": "La norma nombra una variedad, y el catálogo ficha especies. Se ficha la especie, que afirma MENOS que la norma y no más: si el taxón infraespecífico está aquí, la especie está. Verificado contra GBIF y EIDOS el 2026-08-17. Mismo «subsp. var.» imposible que en Euphorbia terracina."
         },
         {
           "scientificName": "Sarcocornia fruticosa",
@@ -5573,7 +5612,9 @@
         },
         {
           "scientificName": "Scirpus holoschoenus subsp. romanus",
-          "grupo": "Flora"
+          "grupo": "Flora",
+          "nombreCorregido": "Scirpoides holoschoenus",
+          "nota": "La norma usa el género en desuso. GBIF y EIDOS coinciden en el nombre aceptado de abajo; verificado el 2026-08-17."
         },
         {
           "scientificName": "Scorpiurus sulcatus",
@@ -5617,7 +5658,9 @@
         {
           "scientificName": "Solanum linneanum",
           "grupo": "Flora",
-          "nombreComun": "tomatera del diablo / Manzana de callos"
+          "nombreComun": "tomatera del diablo / Manzana de callos",
+          "nombreCorregido": "Solanum linnaeanum",
+          "nota": "Errata de imprenta de la norma. GBIF lo resuelve al nombre de abajo y EIDOS lo acepta; verificado el 2026-08-17."
         },
         {
           "scientificName": "Solanum nigrum",
@@ -5696,7 +5739,9 @@
         {
           "scientificName": "Teucrium capitatum subsp. gracillium",
           "grupo": "Flora",
-          "nombreComun": "tomillo macho / zamarrilla"
+          "nombreComun": "tomillo macho / zamarrilla",
+          "nombreCorregido": "Teucrium capitatum",
+          "nota": "La norma nombra una subespecie, y el catálogo ficha especies. Se ficha la especie, que afirma MENOS que la norma y no más: si el taxón infraespecífico está aquí, la especie está. Verificado contra GBIF y EIDOS el 2026-08-17."
         },
         {
           "scientificName": "Teucrium dunense",
@@ -6535,7 +6580,9 @@
         {
           "scientificName": "Psammodromus edwardsianus",
           "grupo": "Reptiles",
-          "nombreComun": "lagartija cenicienta"
+          "nombreComun": "lagartija cenicienta",
+          "nombreCorregido": "Psammodromus edwarsianus",
+          "nota": "Errata de imprenta de la norma. GBIF lo resuelve al nombre de abajo y EIDOS lo acepta; verificado el 2026-08-17. La grafía aceptada lleva UNA sola «d»: Psammodromus edwarsianus (Duméril & Bibron)."
         },
         {
           "scientificName": "Rhinechis scalaris",
