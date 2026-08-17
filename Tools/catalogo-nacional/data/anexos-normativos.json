@@ -4654,6 +4654,2004 @@
           "nota": "Gineta."
         }
       ]
+    },
+    "salinas-arenales-san-pedro-pinatar": {
+      "fuente": {
+        "norma": "Decreto n.º 259/2019, de 10 de octubre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia. Su Volumen III ES el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Salinas y Arenales de San Pedro del Pinatar».",
+        "boletin": "BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450",
+        "url": "https://www.borm.es/services/anuncio/ano/2019/numero/6450/pdf",
+        "anexo": "Volumen III (PRUG), §2.3.1.2 «Inventario florístico» —Tabla 1, 226 taxones con nombre común y categoría del Catálogo Regional de Flora Silvestre Protegida— y §2.3.3.2 «Inventario faunístico» —Tabla 9, 167 entradas numeradas por grupo (aves, mamíferos, peces, anfibios, reptiles, invertebrados) con nombre común y su situación en las dos Directivas, el Listado de Protección Especial, el Catálogo regional y los tres libros rojos—. Las especies que la norma declara exóticas en su Tabla 3 (§2.3.1.3) y en su §2.3.3.3 están recogidas aparte, en `noNativas`.",
+        "cita": "Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019)",
+        "ambito": "el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG",
+        "consultado": "2026-08-17",
+        "nota": "Primer espacio del rollout cuyo inventario normativo es del PROPIO espacio y no de un sitio Red Natura 2000 que lo solapa sin coincidir, porque el volumen III de este plan es su PRUG. La transcripción cuadra con lo que declara el propio texto: «14 especies incluidas en el Catálogo Regional de Flora Silvestre Protegida: 1 En Peligro de Extinción; 5 Vulnerable; y 8 De Interés Especial», y salen exactamente 1 + 5 + 8. De las 167 entradas numeradas de fauna, DOS no dan de alta ninguna especie porque la norma solo cita el género («Nebrioporus sp», «Ochthebius sp», los nº 162 y 163). SEIS entradas de aves llevan paréntesis y son la trampa de este anexo: la norma escribe «Larus audouinii (=Ichthyaetus audouinii)» dando el sinónimo entre paréntesis, pero cuál de los dos acepta EIDOS hoy CAMBIA de caso a caso —tres veces el de fuera y dos el de dentro—, así que no hay regla mecánica y los seis se resolvieron uno a uno contra EIDOS. El séptimo, «Phoenicopterus (roseus) ruber», ni siquiera es un binomio y lo desambigua el nombre castellano que escribe la norma. Se lee del PDF con `pdftotext -layout`; OJO con la Tabla 3, cuya capa de texto viene con una codificación de fuente desplazada 29 posiciones en ASCII («$FDFLDUHWLQRLGHV» = «Acacia retinoides»), que no afecta a las Tablas 1 y 9. El PORN del espacio es ANTERIOR y distinto: Decreto n.º 44/1995, de 26 de mayo (BORM n.º 151, de 1 de julio de 1995), hermano del de Calblanque; sin transcribir."
+      },
+      "especies": [
+        {
+          "scientificName": "Aetheorrhiza bulbosa subsp. bulbosa",
+          "grupo": "Flora",
+          "nombreComun": "puerro salvaje"
+        },
+        {
+          "scientificName": "Ajuga iva",
+          "grupo": "Flora",
+          "nombreComun": "abiga"
+        },
+        {
+          "scientificName": "Allium ampeloprassum",
+          "grupo": "Flora",
+          "nombreComun": "ajo porro"
+        },
+        {
+          "scientificName": "Allium sphaerocephalon",
+          "grupo": "Flora",
+          "nombreComun": "ajestrino"
+        },
+        {
+          "scientificName": "Allium subhirsutum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Aloe maculata",
+          "grupo": "Flora",
+          "nombreComun": "pita real"
+        },
+        {
+          "scientificName": "Amaranthus muricatus",
+          "grupo": "Flora",
+          "nombreComun": "bleo"
+        },
+        {
+          "scientificName": "Ammophila arenaria subsp. arundinacea",
+          "grupo": "Flora",
+          "nombreComun": "barrón"
+        },
+        {
+          "scientificName": "Anacyclus clavatus",
+          "grupo": "Flora",
+          "nombreComun": "agamarza"
+        },
+        {
+          "scientificName": "Anagallis arvensis",
+          "grupo": "Flora",
+          "nombreComun": "albajaque silvestre"
+        },
+        {
+          "scientificName": "Arthrocnemum macrostachyum",
+          "grupo": "Flora",
+          "nombreComun": "sosa jabonera"
+        },
+        {
+          "scientificName": "Asparagus horridus",
+          "grupo": "Flora",
+          "nombreComun": "esparraguera borde"
+        },
+        {
+          "scientificName": "Asparagus maritimus",
+          "grupo": "Flora",
+          "nombreComun": "esparraguera marina",
+          "categoria": "De Interés Especial"
+        },
+        {
+          "scientificName": "Asphodelus fistulosus",
+          "grupo": "Flora",
+          "nombreComun": "gamoncillo"
+        },
+        {
+          "scientificName": "Aster squamatus",
+          "grupo": "Flora",
+          "nombreComun": "pinillos"
+        },
+        {
+          "scientificName": "Atriplex glauca",
+          "grupo": "Flora",
+          "nombreComun": "armuelle saladilla"
+        },
+        {
+          "scientificName": "Atriplex halimus",
+          "grupo": "Flora",
+          "nombreComun": "salao"
+        },
+        {
+          "scientificName": "Atriplex prostrata",
+          "grupo": "Flora",
+          "nombreComun": "acelga falsa"
+        },
+        {
+          "scientificName": "Atriplex semibaccata",
+          "grupo": "Flora",
+          "nombreComun": "salao"
+        },
+        {
+          "scientificName": "Atriplex suberecta",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Avena barbata",
+          "grupo": "Flora",
+          "nombreComun": "avena loca"
+        },
+        {
+          "scientificName": "Bassia hyssipifolia",
+          "grupo": "Flora",
+          "nombreComun": "morenita"
+        },
+        {
+          "scientificName": "Bassia scoparia",
+          "grupo": "Flora",
+          "nombreComun": "albahaca larga"
+        },
+        {
+          "scientificName": "Beta maritima",
+          "grupo": "Flora",
+          "nombreComun": "acelga marina"
+        },
+        {
+          "scientificName": "Blackstonia perfoliata",
+          "grupo": "Flora",
+          "nombreComun": "centaurea amarilla"
+        },
+        {
+          "scientificName": "Brachypodium distachyon",
+          "grupo": "Flora",
+          "nombreComun": "espiguilla de burro"
+        },
+        {
+          "scientificName": "Brachypodium phoenicoides",
+          "grupo": "Flora",
+          "nombreComun": "boteo"
+        },
+        {
+          "scientificName": "Brassica tournefortii",
+          "grupo": "Flora",
+          "nombreComun": "mostaza del Sáhara"
+        },
+        {
+          "scientificName": "Bromus diandrus",
+          "grupo": "Flora",
+          "nombreComun": "barba de macho"
+        },
+        {
+          "scientificName": "Bromus matritensis",
+          "grupo": "Flora",
+          "nombreComun": "ballisco"
+        },
+        {
+          "scientificName": "Bromus rigidus",
+          "grupo": "Flora",
+          "nombreComun": "barba de macho"
+        },
+        {
+          "scientificName": "Bromus rubens",
+          "grupo": "Flora",
+          "nombreComun": "colajaca"
+        },
+        {
+          "scientificName": "Bupleurum semicompositum",
+          "grupo": "Flora",
+          "nombreComun": "garrovereta"
+        },
+        {
+          "scientificName": "Cakile maritima",
+          "grupo": "Flora",
+          "nombreComun": "oruga de mar"
+        },
+        {
+          "scientificName": "Calendula arvensis",
+          "grupo": "Flora",
+          "nombreComun": "caléndula silvestre / Maravilla silvestre"
+        },
+        {
+          "scientificName": "Calystegia soldanella",
+          "grupo": "Flora",
+          "nombreComun": "berza amarga / marina"
+        },
+        {
+          "scientificName": "Cardadria draba",
+          "grupo": "Flora",
+          "nombreComun": "capellanes"
+        },
+        {
+          "scientificName": "Carrichtera annua",
+          "grupo": "Flora",
+          "nombreComun": "cuchareta"
+        },
+        {
+          "scientificName": "Catapodium hemipoa",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Centaurea aspera",
+          "grupo": "Flora",
+          "nombreComun": "rompepiedras"
+        },
+        {
+          "scientificName": "Centaurea melitensis",
+          "grupo": "Flora",
+          "nombreComun": "abrepuños"
+        },
+        {
+          "scientificName": "Centaurea seridis subsp. maritima",
+          "grupo": "Flora",
+          "nombreComun": "arzolla"
+        },
+        {
+          "scientificName": "Centaurium erythraea subsp. majus",
+          "grupo": "Flora",
+          "nombreComun": "aciano"
+        },
+        {
+          "scientificName": "Centaurium spicatum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Ceratonia siliqua",
+          "grupo": "Flora",
+          "nombreComun": "algarroba"
+        },
+        {
+          "scientificName": "Chenopodium murale",
+          "grupo": "Flora",
+          "nombreComun": "cenido"
+        },
+        {
+          "scientificName": "Cistanche phelypaea",
+          "grupo": "Flora",
+          "nombreComun": "jopo / pijo de lobo"
+        },
+        {
+          "scientificName": "Convolvulus althaeoides",
+          "grupo": "Flora",
+          "nombreComun": "campanilla / correhuela / corrigüela"
+        },
+        {
+          "scientificName": "Conyza bonariensis",
+          "grupo": "Flora",
+          "nombreComun": "hierba gallinera / pino de la huerta"
+        },
+        {
+          "scientificName": "Corynephorus divaricatus",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Crassula tillaea",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Crithmum maritimum",
+          "grupo": "Flora",
+          "nombreComun": "hinojo marino / perejil del mar"
+        },
+        {
+          "scientificName": "Crucianella maritima",
+          "grupo": "Flora",
+          "nombreComun": "espigadilla de mar"
+        },
+        {
+          "scientificName": "Cuscuta campestris",
+          "grupo": "Flora",
+          "nombreComun": "barba de capuchino"
+        },
+        {
+          "scientificName": "Cuscuta epithymum subsp. kotschyi",
+          "grupo": "Flora",
+          "nombreComun": "enrreaera"
+        },
+        {
+          "scientificName": "Cutandia maritima",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Cutandia memphitica",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Cymodocea nodosa",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Cynanchum acutum",
+          "grupo": "Flora",
+          "nombreComun": "corregüela lechosa / borde"
+        },
+        {
+          "scientificName": "Cynodon dactylon",
+          "grupo": "Flora",
+          "nombreComun": "agrama"
+        },
+        {
+          "scientificName": "Cynomorium coccineum",
+          "grupo": "Flora",
+          "nombreComun": "jopo de lobo / hongo de Malta",
+          "categoria": "De Interés Especial"
+        },
+        {
+          "scientificName": "Cyperus capitatus",
+          "grupo": "Flora",
+          "nombreComun": "chuzos"
+        },
+        {
+          "scientificName": "Dactylis glomerata subsp. hispanica",
+          "grupo": "Flora",
+          "nombreComun": "cervuno / trigueras"
+        },
+        {
+          "scientificName": "Daphne gnidium",
+          "grupo": "Flora",
+          "nombreComun": "azuqueca"
+        },
+        {
+          "scientificName": "Dipcadi serotinum",
+          "grupo": "Flora",
+          "nombreComun": "jacinto leonado"
+        },
+        {
+          "scientificName": "Dittrichia viscosa",
+          "grupo": "Flora",
+          "nombreComun": "hierba mosquera / pegamoscas / árnica"
+        },
+        {
+          "scientificName": "Dorycnium pentaphyllum",
+          "grupo": "Flora",
+          "nombreComun": "aceiteros / bocha"
+        },
+        {
+          "scientificName": "Echium sabulicola",
+          "grupo": "Flora",
+          "nombreComun": "viborera marina"
+        },
+        {
+          "scientificName": "Eleagnus angustifolia",
+          "grupo": "Flora",
+          "nombreComun": "alamillo / paraíso"
+        },
+        {
+          "scientificName": "Elymus elongatus",
+          "grupo": "Flora",
+          "nombreComun": "vallico"
+        },
+        {
+          "scientificName": "Elymus farctus",
+          "grupo": "Flora",
+          "nombreComun": "barba de abad"
+        },
+        {
+          "scientificName": "Emex spinosa",
+          "grupo": "Flora",
+          "nombreComun": "acedera espinosa"
+        },
+        {
+          "scientificName": "Erodium laciniatum",
+          "grupo": "Flora",
+          "nombreComun": "relojillos"
+        },
+        {
+          "scientificName": "Erodium malacoides",
+          "grupo": "Flora",
+          "nombreComun": "alfilerillos"
+        },
+        {
+          "scientificName": "Erodium neuradifolium",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Eruca vesicaria var. longirostris",
+          "grupo": "Flora",
+          "nombreComun": "oruga"
+        },
+        {
+          "scientificName": "Eryngium maritimum",
+          "grupo": "Flora",
+          "nombreComun": "cardo marítimo"
+        },
+        {
+          "scientificName": "Euphorbia terracina subsp. var. almeriensis",
+          "grupo": "Flora",
+          "nombreComun": "lechera"
+        },
+        {
+          "scientificName": "Fagonia cretica",
+          "grupo": "Flora",
+          "nombreComun": "abrojo de Creta"
+        },
+        {
+          "scientificName": "Ficus carica",
+          "grupo": "Flora",
+          "nombreComun": "higuera"
+        },
+        {
+          "scientificName": "Filago mareotica",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Filago pyramidata",
+          "grupo": "Flora",
+          "nombreComun": "alcaudonera"
+        },
+        {
+          "scientificName": "Frankenia corymbosa",
+          "grupo": "Flora",
+          "nombreComun": "tomillo sapero"
+        },
+        {
+          "scientificName": "Frankenia pulverulenta",
+          "grupo": "Flora",
+          "nombreComun": "albohol"
+        },
+        {
+          "scientificName": "Fumana hispidula",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Glaucium flavum",
+          "grupo": "Flora",
+          "nombreComun": "adormidera marina"
+        },
+        {
+          "scientificName": "Halimione portulacoides",
+          "grupo": "Flora",
+          "nombreComun": "verdolaga marina"
+        },
+        {
+          "scientificName": "Halocnemum strobilaceum",
+          "grupo": "Flora",
+          "nombreComun": "salado",
+          "categoria": "Vulnerable",
+          "nota": "El §2.3.1.2 advierte que en este espacio se corresponde con una REPOBLACIÓN, no con población silvestre, pese a figurar en el Catálogo Regional de Flora Silvestre Protegida."
+        },
+        {
+          "scientificName": "Helianthemum marminorense",
+          "grupo": "Flora",
+          "nombreComun": "tamarilla del Mar Menor",
+          "categoria": "Vulnerable"
+        },
+        {
+          "scientificName": "Helianthemum violaceum",
+          "grupo": "Flora",
+          "nombreComun": "hierba sana / romero blanco"
+        },
+        {
+          "scientificName": "Helichrysum stoechas subsp. caespitosum",
+          "grupo": "Flora",
+          "nombreComun": "siempreviva / pespetua / yesquera"
+        },
+        {
+          "scientificName": "Heliotropium curassavicum",
+          "grupo": "Flora",
+          "nombreComun": "heliotropo"
+        },
+        {
+          "scientificName": "Hordeum marinum",
+          "grupo": "Flora",
+          "nombreComun": "cebadilla"
+        },
+        {
+          "scientificName": "Hordeum murinum subsp. leporinum",
+          "grupo": "Flora",
+          "nombreComun": "espiguilla / cebadilla"
+        },
+        {
+          "scientificName": "Hymenolobus procumbens",
+          "grupo": "Flora",
+          "nombreComun": "mastuerzo rastrero"
+        },
+        {
+          "scientificName": "Hyparrhenia pubescens",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Hyparrhenia sinaica",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Ifloga spicata",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Imperata cylindrica",
+          "grupo": "Flora",
+          "nombreComun": "carrizo"
+        },
+        {
+          "scientificName": "Inula crithmoides",
+          "grupo": "Flora",
+          "nombreComun": "hierba del cólico"
+        },
+        {
+          "scientificName": "Juncus acutus",
+          "grupo": "Flora",
+          "nombreComun": "junco fino"
+        },
+        {
+          "scientificName": "Juncus bufonius bufonius",
+          "grupo": "Flora",
+          "nombreComun": "hierba de sapo / junco de rana"
+        },
+        {
+          "scientificName": "Juncus maritimus",
+          "grupo": "Flora",
+          "nombreComun": "Junco marítimo"
+        },
+        {
+          "scientificName": "Juniperus turbinata",
+          "grupo": "Flora",
+          "nombreComun": "sabina de dunas",
+          "categoria": "En Peligro de Extinción"
+        },
+        {
+          "scientificName": "Lagurus ovatus",
+          "grupo": "Flora",
+          "nombreComun": "cola de conejo / cola de liebre"
+        },
+        {
+          "scientificName": "Lantana camara",
+          "grupo": "Flora",
+          "nombreComun": "bandera española"
+        },
+        {
+          "scientificName": "Launaea arborescens",
+          "grupo": "Flora",
+          "nombreComun": "aulaga morisca"
+        },
+        {
+          "scientificName": "Launaea fragilis",
+          "grupo": "Flora",
+          "nombreComun": "escorzonera falsa"
+        },
+        {
+          "scientificName": "Lavatera cretica",
+          "grupo": "Flora",
+          "nombreComun": "flores de jabón / Malva"
+        },
+        {
+          "scientificName": "Limonium angustebracteatum",
+          "grupo": "Flora",
+          "nombreComun": "siempreviva"
+        },
+        {
+          "scientificName": "Limonium caesium",
+          "grupo": "Flora",
+          "nombreComun": "siempreviva / sopaenvino"
+        },
+        {
+          "scientificName": "Limonium cossonianum",
+          "grupo": "Flora",
+          "nombreComun": "siempreviva / lechuga de mar",
+          "categoria": "De Interés Especial"
+        },
+        {
+          "scientificName": "Limonium delicatulum",
+          "grupo": "Flora",
+          "nombreComun": "siempreviva"
+        },
+        {
+          "scientificName": "Limonium echioides",
+          "grupo": "Flora",
+          "nombreComun": "siempreviva"
+        },
+        {
+          "scientificName": "Limonium supinum",
+          "grupo": "Flora",
+          "nombreComun": "siempreviva"
+        },
+        {
+          "scientificName": "Limonium virgatum",
+          "grupo": "Flora",
+          "nombreComun": "siempreviva"
+        },
+        {
+          "scientificName": "Linun maritimum",
+          "grupo": "Flora",
+          "nombreComun": "lino / lino marítimo"
+        },
+        {
+          "scientificName": "Linun strictum",
+          "grupo": "Flora",
+          "nombreComun": "campanicas"
+        },
+        {
+          "scientificName": "Lobularia lybica",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Lobularia maritima",
+          "grupo": "Flora",
+          "nombreComun": "aliso de mar / Mastuerzo marítimo"
+        },
+        {
+          "scientificName": "Loeflingia hispanica",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Lotus creticus",
+          "grupo": "Flora",
+          "nombreComun": "cuernecillo de mar"
+        },
+        {
+          "scientificName": "Lycium intrincatum",
+          "grupo": "Flora",
+          "nombreComun": "cambrón / cambronero",
+          "categoria": "De Interés Especial"
+        },
+        {
+          "scientificName": "Lygeum spartum",
+          "grupo": "Flora",
+          "nombreComun": "albardín"
+        },
+        {
+          "scientificName": "Malva parviflora",
+          "grupo": "Flora",
+          "nombreComun": "malva"
+        },
+        {
+          "scientificName": "Maresia nana",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Medicago littoralis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Medicago marina",
+          "grupo": "Flora",
+          "nombreComun": "carretones"
+        },
+        {
+          "scientificName": "Mesembryanthemum nodiflorum",
+          "grupo": "Flora",
+          "nombreComun": "agazul / algazul"
+        },
+        {
+          "scientificName": "Moricandia arvensis",
+          "grupo": "Flora",
+          "nombreComun": "collejón"
+        },
+        {
+          "scientificName": "Morus alba",
+          "grupo": "Flora",
+          "nombreComun": "morera"
+        },
+        {
+          "scientificName": "Muscari neglectum",
+          "grupo": "Flora",
+          "nombreComun": "nazareno"
+        },
+        {
+          "scientificName": "Olea europaea",
+          "grupo": "Flora",
+          "nombreComun": "acebuche"
+        },
+        {
+          "scientificName": "Ononis natrix subsp. hispanica",
+          "grupo": "Flora",
+          "nombreComun": "pegamoscas"
+        },
+        {
+          "scientificName": "Ononis ramosissima",
+          "grupo": "Flora",
+          "nombreComun": "bolina"
+        },
+        {
+          "scientificName": "Ophrys speculum",
+          "grupo": "Flora",
+          "nombreComun": "orquídea de espejo de Venus"
+        },
+        {
+          "scientificName": "Opuntia maxima",
+          "grupo": "Flora",
+          "nombreComun": "chumbera"
+        },
+        {
+          "scientificName": "Orobanche ramosa",
+          "grupo": "Flora",
+          "nombreComun": "hierba tora"
+        },
+        {
+          "scientificName": "Otanthus maritimus",
+          "grupo": "Flora",
+          "nombreComun": "algodonosa",
+          "categoria": "De Interés Especial"
+        },
+        {
+          "scientificName": "Oxalis pes-caprae",
+          "grupo": "Flora",
+          "nombreComun": "vinagrillo"
+        },
+        {
+          "scientificName": "Pancratium maritimum",
+          "grupo": "Flora",
+          "nombreComun": "azucena de mar"
+        },
+        {
+          "scientificName": "Panicum repens",
+          "grupo": "Flora",
+          "nombreComun": "almurejo"
+        },
+        {
+          "scientificName": "Parapholis filiformis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Parapholis incurva",
+          "grupo": "Flora",
+          "nombreComun": "balliquillo"
+        },
+        {
+          "scientificName": "Paronychia capitata",
+          "grupo": "Flora",
+          "nombreComun": "hierba de la virgen / Cannaillo"
+        },
+        {
+          "scientificName": "Paronychia suffruticosa",
+          "grupo": "Flora",
+          "nombreComun": "hierba de la sangre"
+        },
+        {
+          "scientificName": "Phagnalon rupestre",
+          "grupo": "Flora",
+          "nombreComun": "hierba del riñón"
+        },
+        {
+          "scientificName": "Phagnalon saxatile",
+          "grupo": "Flora",
+          "nombreComun": "boja / Yesquera"
+        },
+        {
+          "scientificName": "Phillyrea angustifolia",
+          "grupo": "Flora",
+          "nombreComun": "olivardilla",
+          "categoria": "De Interés Especial"
+        },
+        {
+          "scientificName": "Phoenix chevallierii",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Phoenix dactylifera",
+          "grupo": "Flora",
+          "nombreComun": "palmera datilera"
+        },
+        {
+          "scientificName": "Phragmites australis",
+          "grupo": "Flora",
+          "nombreComun": "carrizo"
+        },
+        {
+          "scientificName": "Pinus halepensis",
+          "grupo": "Flora",
+          "nombreComun": "pino carrasco"
+        },
+        {
+          "scientificName": "Pinus pinea",
+          "grupo": "Flora",
+          "nombreComun": "pino piñonero"
+        },
+        {
+          "scientificName": "Piptatherum miliaceum",
+          "grupo": "Flora",
+          "nombreComun": "triguera / añosa"
+        },
+        {
+          "scientificName": "Pistacia lentiscus",
+          "grupo": "Flora",
+          "nombreComun": "lentisco"
+        },
+        {
+          "scientificName": "Plantago albicans",
+          "grupo": "Flora",
+          "nombreComun": "canilla"
+        },
+        {
+          "scientificName": "Plantago coronopus",
+          "grupo": "Flora",
+          "nombreComun": "estrellamar / hierba estrella"
+        },
+        {
+          "scientificName": "Plantago crassifolia",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Plantago lagopus",
+          "grupo": "Flora",
+          "nombreComun": "pie de liebre / alpiste"
+        },
+        {
+          "scientificName": "Polycarpon tetraphyllum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Polygonum maritimum",
+          "grupo": "Flora",
+          "nombreComun": "centinodia marítima"
+        },
+        {
+          "scientificName": "Polypogon maritimus subsp. maritimum",
+          "grupo": "Flora",
+          "nombreComun": "cola de zorra"
+        },
+        {
+          "scientificName": "Posidonia oceanica",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Pseudorlaya pumila",
+          "grupo": "Flora",
+          "nombreComun": "quijones marinos"
+        },
+        {
+          "scientificName": "Rapistrum rugossum",
+          "grupo": "Flora",
+          "nombreComun": "tamarilla / aramago"
+        },
+        {
+          "scientificName": "Reichardia gaditana",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Reichardia picroides",
+          "grupo": "Flora",
+          "nombreComun": "lechugilla dulce / cosconilla"
+        },
+        {
+          "scientificName": "Rhamnus oleoides subsp. angustifolia",
+          "grupo": "Flora",
+          "nombreComun": "espino negro"
+        },
+        {
+          "scientificName": "Rosmarinus officinalis",
+          "grupo": "Flora",
+          "nombreComun": "romero"
+        },
+        {
+          "scientificName": "Rostraria salzmannii",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Rubia peregrina",
+          "grupo": "Flora",
+          "nombreComun": "rubia"
+        },
+        {
+          "scientificName": "Ruppia cirrhosa",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Ruta angustifolia",
+          "grupo": "Flora",
+          "nombreComun": "ruda"
+        },
+        {
+          "scientificName": "Saccharum ravennae",
+          "grupo": "Flora",
+          "nombreComun": "carricera"
+        },
+        {
+          "scientificName": "Sagina maritima",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Salicornia emerici",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Salicornia patula",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Salsola flavescens",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Salsola kali subsp. kali",
+          "grupo": "Flora",
+          "nombreComun": "abrebujo / barrilla pinchosa"
+        },
+        {
+          "scientificName": "Salvia verbenaca subsp. var. oblongifolia",
+          "grupo": "Flora",
+          "nombreComun": "gallocresta / agallacrista"
+        },
+        {
+          "scientificName": "Sarcocornia fruticosa",
+          "grupo": "Flora",
+          "nombreComun": "sosa alacranera / alacranera"
+        },
+        {
+          "scientificName": "Sarcocornia perennis subsp. alpini",
+          "grupo": "Flora",
+          "nombreComun": "sosa jabonera",
+          "categoria": "De Interés Especial"
+        },
+        {
+          "scientificName": "Schismus barbatus",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Schoenus nigricans",
+          "grupo": "Flora",
+          "nombreComun": "juncia bastarda"
+        },
+        {
+          "scientificName": "Scirpus holoschoenus subsp. romanus",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Scorpiurus sulcatus",
+          "grupo": "Flora",
+          "nombreComun": "granillo"
+        },
+        {
+          "scientificName": "Sedum sediforme",
+          "grupo": "Flora",
+          "nombreComun": "uña de gato"
+        },
+        {
+          "scientificName": "Senecio glaucus subsp. glaucus",
+          "grupo": "Flora",
+          "nombreComun": "cachapedo",
+          "categoria": "Vulnerable"
+        },
+        {
+          "scientificName": "Senecio malacitanus",
+          "grupo": "Flora",
+          "nombreComun": "azuzón / azuzón real"
+        },
+        {
+          "scientificName": "Senecio vulgaris",
+          "grupo": "Flora",
+          "nombreComun": "hierba cana / amargaza"
+        },
+        {
+          "scientificName": "Silene ramosissima",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Silene sclerocarpa",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Sisymbrium irio",
+          "grupo": "Flora",
+          "nombreComun": "matacandil / amarillina"
+        },
+        {
+          "scientificName": "Solanum linneanum",
+          "grupo": "Flora",
+          "nombreComun": "tomatera del diablo / Manzana de callos"
+        },
+        {
+          "scientificName": "Solanum nigrum",
+          "grupo": "Flora",
+          "nombreComun": "hierba mora / beninas"
+        },
+        {
+          "scientificName": "Sonchus oleraceus",
+          "grupo": "Flora",
+          "nombreComun": "camarroja"
+        },
+        {
+          "scientificName": "Sonchus tenerrimus",
+          "grupo": "Flora",
+          "nombreComun": "cerraja menuda / Borde / Borrajas"
+        },
+        {
+          "scientificName": "Spergularia bocconei",
+          "grupo": "Flora",
+          "nombreComun": "esparcilla roja"
+        },
+        {
+          "scientificName": "Spergularia media",
+          "grupo": "Flora",
+          "nombreComun": "cominillos"
+        },
+        {
+          "scientificName": "Sporobolus pungens",
+          "grupo": "Flora",
+          "nombreComun": "cañota"
+        },
+        {
+          "scientificName": "Stipa capensis",
+          "grupo": "Flora",
+          "nombreComun": "cola de caballo"
+        },
+        {
+          "scientificName": "Stipa tenacissima",
+          "grupo": "Flora",
+          "nombreComun": "esparto"
+        },
+        {
+          "scientificName": "Suaeda pruinosa",
+          "grupo": "Flora",
+          "nombreComun": "almarjo dulce"
+        },
+        {
+          "scientificName": "Suaeda spicata",
+          "grupo": "Flora",
+          "nombreComun": "matilla / cañametas"
+        },
+        {
+          "scientificName": "Suaeda vera",
+          "grupo": "Flora",
+          "nombreComun": "almarjo dulce"
+        },
+        {
+          "scientificName": "Tamarix boveana",
+          "grupo": "Flora",
+          "nombreComun": "taray",
+          "categoria": "Vulnerable"
+        },
+        {
+          "scientificName": "Tamarix canariensis",
+          "grupo": "Flora",
+          "nombreComun": "taray",
+          "categoria": "De Interés Especial"
+        },
+        {
+          "scientificName": "Tetraclinis articulata",
+          "grupo": "Flora",
+          "nombreComun": "sabina de Cartagena / ciprés de Cartagena",
+          "categoria": "Vulnerable",
+          "nota": "El §2.3.1.2 advierte que en este espacio se corresponde con una REPOBLACIÓN, no con población silvestre, pese a figurar en el Catálogo Regional de Flora Silvestre Protegida."
+        },
+        {
+          "scientificName": "Teucrium capitatum subsp. gracillium",
+          "grupo": "Flora",
+          "nombreComun": "tomillo macho / zamarrilla"
+        },
+        {
+          "scientificName": "Teucrium dunense",
+          "grupo": "Flora",
+          "nombreComun": "zamarrilla de dunas"
+        },
+        {
+          "scientificName": "Thesium humile",
+          "grupo": "Flora",
+          "nombreComun": "lobillo"
+        },
+        {
+          "scientificName": "Thymelaea hirsuta",
+          "grupo": "Flora",
+          "nombreComun": "bufalaga"
+        },
+        {
+          "scientificName": "Triplachne nitens",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Urospermum picroides",
+          "grupo": "Flora",
+          "nombreComun": "barba de Jove"
+        },
+        {
+          "scientificName": "Urtica urens",
+          "grupo": "Flora",
+          "nombreComun": "ortiga"
+        },
+        {
+          "scientificName": "Vulpia membranacea",
+          "grupo": "Flora",
+          "nombreComun": "cadillos"
+        },
+        {
+          "scientificName": "Zygophyllum fabago",
+          "grupo": "Flora",
+          "nombreComun": "morsana / habicas bordes"
+        },
+        {
+          "scientificName": "Acrocephalus arundinaceus",
+          "grupo": "Aves",
+          "nombreComun": "carricero tordal"
+        },
+        {
+          "scientificName": "Acrocephalus scirpaceus",
+          "grupo": "Aves",
+          "nombreComun": "carricero común"
+        },
+        {
+          "scientificName": "Actitis hypoleucos",
+          "grupo": "Aves",
+          "nombreComun": "andarríos chico"
+        },
+        {
+          "scientificName": "Alcedo atthis",
+          "grupo": "Aves",
+          "nombreComun": "martín pescador"
+        },
+        {
+          "scientificName": "Alectoris rufa",
+          "grupo": "Aves",
+          "nombreComun": "perdiz roja"
+        },
+        {
+          "scientificName": "Anas clypeata",
+          "grupo": "Aves",
+          "nombreComun": "cuchara común"
+        },
+        {
+          "scientificName": "Anas crecca",
+          "grupo": "Aves",
+          "nombreComun": "cerceta común"
+        },
+        {
+          "scientificName": "Anas penelope",
+          "grupo": "Aves",
+          "nombreComun": "silbón europeo"
+        },
+        {
+          "scientificName": "Anthus pratensis",
+          "grupo": "Aves",
+          "nombreComun": "bisbita común"
+        },
+        {
+          "scientificName": "Apus apus",
+          "grupo": "Aves",
+          "nombreComun": "vencejo común",
+          "nota": "La Tabla 9 la marca con almohadilla: NO figura en el Formulario Normalizado de Datos Red Natura 2000 del sitio, y su respaldo aquí es solo el PRUG."
+        },
+        {
+          "scientificName": "Apus pallidus",
+          "grupo": "Aves",
+          "nombreComun": "vencejo pálido",
+          "nota": "La Tabla 9 la marca con almohadilla: NO figura en el Formulario Normalizado de Datos Red Natura 2000 del sitio, y su respaldo aquí es solo el PRUG."
+        },
+        {
+          "scientificName": "Ardea cinerea",
+          "grupo": "Aves",
+          "nombreComun": "garza real"
+        },
+        {
+          "scientificName": "Arenaria interpres",
+          "grupo": "Aves",
+          "nombreComun": "vuelvepiedras común"
+        },
+        {
+          "scientificName": "Asio flammeus",
+          "grupo": "Aves",
+          "nombreComun": "búho campestre"
+        },
+        {
+          "scientificName": "Asio otus",
+          "grupo": "Aves",
+          "nombreComun": "búho chico"
+        },
+        {
+          "scientificName": "Athene noctua",
+          "grupo": "Aves",
+          "nombreComun": "mochuelo común"
+        },
+        {
+          "scientificName": "Aythya ferina",
+          "grupo": "Aves",
+          "nombreComun": "porrón europeo"
+        },
+        {
+          "scientificName": "Burhinus oedicnemus",
+          "grupo": "Aves",
+          "nombreComun": "alcaraván común"
+        },
+        {
+          "scientificName": "Calandrella brachydactyla",
+          "grupo": "Aves",
+          "nombreComun": "terrera común"
+        },
+        {
+          "scientificName": "Calidris alba",
+          "grupo": "Aves",
+          "nombreComun": "correlimos tridáctilo"
+        },
+        {
+          "scientificName": "Calidris alpina",
+          "grupo": "Aves",
+          "nombreComun": "correlimos común"
+        },
+        {
+          "scientificName": "Calidris minuta",
+          "grupo": "Aves",
+          "nombreComun": "correlimos menudo"
+        },
+        {
+          "scientificName": "Carduelis cannabina",
+          "grupo": "Aves",
+          "nombreComun": "pardillo"
+        },
+        {
+          "scientificName": "Carduelis carduelis",
+          "grupo": "Aves",
+          "nombreComun": "jilguero"
+        },
+        {
+          "scientificName": "Cercotrichas galactotes",
+          "grupo": "Aves",
+          "nombreComun": "alzacola rojizo",
+          "nota": "La Tabla 9 la marca con almohadilla: NO figura en el Formulario Normalizado de Datos Red Natura 2000 del sitio, y su respaldo aquí es solo el PRUG."
+        },
+        {
+          "scientificName": "Cettia cetti",
+          "grupo": "Aves",
+          "nombreComun": "ruiseñor bastardo"
+        },
+        {
+          "scientificName": "Charadrius alexandrinus",
+          "grupo": "Aves",
+          "nombreComun": "chorlitejo patinegro"
+        },
+        {
+          "scientificName": "Charadrius dubius",
+          "grupo": "Aves",
+          "nombreComun": "chorlitejo chico"
+        },
+        {
+          "scientificName": "Charadrius hiaticula",
+          "grupo": "Aves",
+          "nombreComun": "chorlitejo grande"
+        },
+        {
+          "scientificName": "Chlidonias hybridus",
+          "grupo": "Aves",
+          "nombreComun": "fumarel cariblanco"
+        },
+        {
+          "scientificName": "Chlidonias niger",
+          "grupo": "Aves",
+          "nombreComun": "fumarel común"
+        },
+        {
+          "scientificName": "Circus aeruginosus",
+          "grupo": "Aves",
+          "nombreComun": "aguilucho lagunero"
+        },
+        {
+          "scientificName": "Cisticola juncidis",
+          "grupo": "Aves",
+          "nombreComun": "buitrón"
+        },
+        {
+          "scientificName": "Clamator glandarius",
+          "grupo": "Aves",
+          "nombreComun": "críalo"
+        },
+        {
+          "scientificName": "Columba palumbus",
+          "grupo": "Aves",
+          "nombreComun": "paloma torcaz"
+        },
+        {
+          "scientificName": "Corvus monedula",
+          "grupo": "Aves",
+          "nombreComun": "grajilla"
+        },
+        {
+          "scientificName": "Delichon urbicum",
+          "grupo": "Aves",
+          "nombreComun": "avión común"
+        },
+        {
+          "scientificName": "Egretta alba",
+          "grupo": "Aves",
+          "nombreComun": "garceta grande"
+        },
+        {
+          "scientificName": "Egretta garzetta",
+          "grupo": "Aves",
+          "nombreComun": "garceta común"
+        },
+        {
+          "scientificName": "Emberiza schoeniclus",
+          "grupo": "Aves",
+          "nombreComun": "escribano palustre"
+        },
+        {
+          "scientificName": "Erithacus rubecula",
+          "grupo": "Aves",
+          "nombreComun": "petirrojo"
+        },
+        {
+          "scientificName": "Falco peregrinus",
+          "grupo": "Aves",
+          "nombreComun": "halcón peregrino"
+        },
+        {
+          "scientificName": "Falco tinnunculus",
+          "grupo": "Aves",
+          "nombreComun": "cernícalo vulgar"
+        },
+        {
+          "scientificName": "Ficedula hypoleuca",
+          "grupo": "Aves",
+          "nombreComun": "papamoscas cerrojillo"
+        },
+        {
+          "scientificName": "Fringilla coelebs",
+          "grupo": "Aves",
+          "nombreComun": "pinzón vulgar"
+        },
+        {
+          "scientificName": "Galerida cristata",
+          "grupo": "Aves",
+          "nombreComun": "cogujada común"
+        },
+        {
+          "scientificName": "Gallinago gallinago",
+          "grupo": "Aves",
+          "nombreComun": "agachadiza común"
+        },
+        {
+          "scientificName": "Gallinula chloropus",
+          "grupo": "Aves",
+          "nombreComun": "Gallineta común",
+          "nota": "La Tabla 9 la marca con almohadilla: NO figura en el Formulario Normalizado de Datos Red Natura 2000 del sitio, y su respaldo aquí es solo el PRUG."
+        },
+        {
+          "scientificName": "Gelochelidon nilotica (=Sterna nilotica)",
+          "grupo": "Aves",
+          "nombreComun": "pagaza piconegra",
+          "nombreCorregido": "Gelochelidon nilotica",
+          "nota": "La norma da entre paréntesis el sinónimo. EIDOS acepta el nombre de FUERA del paréntesis y da «Sterna nilotica» por sinónimo."
+        },
+        {
+          "scientificName": "Glareola pratincola",
+          "grupo": "Aves",
+          "nombreComun": "canastera común"
+        },
+        {
+          "scientificName": "Haematopus ostralegus",
+          "grupo": "Aves",
+          "nombreComun": "ostrero común"
+        },
+        {
+          "scientificName": "Himantopus himantopus",
+          "grupo": "Aves",
+          "nombreComun": "cigüeñuela común"
+        },
+        {
+          "scientificName": "Hippolais polyglotta",
+          "grupo": "Aves",
+          "nombreComun": "zarcero común"
+        },
+        {
+          "scientificName": "Hirundo daurica",
+          "grupo": "Aves",
+          "nombreComun": "golondrina dáurica"
+        },
+        {
+          "scientificName": "Hirundo rustica",
+          "grupo": "Aves",
+          "nombreComun": "golondrina común"
+        },
+        {
+          "scientificName": "Ixobrychus minutus",
+          "grupo": "Aves",
+          "nombreComun": "avetorillo común"
+        },
+        {
+          "scientificName": "Jynx torquilla",
+          "grupo": "Aves",
+          "nombreComun": "torcecuello"
+        },
+        {
+          "scientificName": "Lanius meridionalis",
+          "grupo": "Aves",
+          "nombreComun": "alcaudón real meridional"
+        },
+        {
+          "scientificName": "Lanius senator",
+          "grupo": "Aves",
+          "nombreComun": "alcaudón común"
+        },
+        {
+          "scientificName": "Larus audouinii (=Ichthyaetus audouinii)",
+          "grupo": "Aves",
+          "nombreComun": "gaviota de audouin",
+          "nombreCorregido": "Larus audouinii",
+          "nota": "EIDOS acepta el nombre de FUERA del paréntesis y da «Ichthyaetus audouinii» por sinónimo, al revés de lo que sugiere la notación de la norma."
+        },
+        {
+          "scientificName": "Larus fuscus",
+          "grupo": "Aves",
+          "nombreComun": "gaviota sombría"
+        },
+        {
+          "scientificName": "Larus genei (=Chroicocephalus genei)",
+          "grupo": "Aves",
+          "nombreComun": "gaviota picofina",
+          "nombreCorregido": "Chroicocephalus genei",
+          "nota": "Aquí EIDOS acepta el nombre de DENTRO del paréntesis y da «Larus genei» por sinónimo. Es el caso que impide aplicar una regla mecánica al paréntesis."
+        },
+        {
+          "scientificName": "Larus melanocephalus (=Ichthyaetus melanocephalus)",
+          "grupo": "Aves",
+          "nombreComun": "gaviota cabecinegra",
+          "nombreCorregido": "Larus melanocephalus",
+          "nota": "EIDOS acepta el nombre de FUERA del paréntesis."
+        },
+        {
+          "scientificName": "Larus ridibundus (=Chroicocephalus ridibundus)",
+          "grupo": "Aves",
+          "nombreComun": "gaviota reidora",
+          "nombreCorregido": "Chroicocephalus ridibundus",
+          "nota": "EIDOS acepta el nombre de DENTRO del paréntesis, como en Larus genei y al contrario que en las otras tres gaviotas."
+        },
+        {
+          "scientificName": "Limosa lapponica",
+          "grupo": "Aves",
+          "nombreComun": "aguja colipinta"
+        },
+        {
+          "scientificName": "Limosa limosa",
+          "grupo": "Aves",
+          "nombreComun": "aguja colinegra"
+        },
+        {
+          "scientificName": "Locustella luscinioides",
+          "grupo": "Aves",
+          "nombreComun": "buscarla unicolor"
+        },
+        {
+          "scientificName": "Luscinia megarhynchos",
+          "grupo": "Aves",
+          "nombreComun": "ruiseñor común"
+        },
+        {
+          "scientificName": "Luscinia svecica",
+          "grupo": "Aves",
+          "nombreComun": "pechiazul"
+        },
+        {
+          "scientificName": "Marmaronetta angustirostris",
+          "grupo": "Aves",
+          "nombreComun": "cerceta pardilla"
+        },
+        {
+          "scientificName": "Melanocorypha calandra",
+          "grupo": "Aves",
+          "nombreComun": "calandria"
+        },
+        {
+          "scientificName": "Mergus serrator",
+          "grupo": "Aves",
+          "nombreComun": "serreta mediana"
+        },
+        {
+          "scientificName": "Merops apiaster",
+          "grupo": "Aves",
+          "nombreComun": "abejaruco común"
+        },
+        {
+          "scientificName": "Motacilla alba",
+          "grupo": "Aves",
+          "nombreComun": "lavandera blanca"
+        },
+        {
+          "scientificName": "Motacilla cinerea",
+          "grupo": "Aves",
+          "nombreComun": "lavandera cascadeña"
+        },
+        {
+          "scientificName": "Motacilla flava",
+          "grupo": "Aves",
+          "nombreComun": "lavandera boyera"
+        },
+        {
+          "scientificName": "Muscicapa striata",
+          "grupo": "Aves",
+          "nombreComun": "papamoscas gris"
+        },
+        {
+          "scientificName": "Numenius arquata",
+          "grupo": "Aves",
+          "nombreComun": "zarapito real"
+        },
+        {
+          "scientificName": "Numenius phaeopus",
+          "grupo": "Aves",
+          "nombreComun": "zarapito trinador"
+        },
+        {
+          "scientificName": "Oenanthe hispanica",
+          "grupo": "Aves",
+          "nombreComun": "collalba rubia"
+        },
+        {
+          "scientificName": "Oenanthe oenanthe",
+          "grupo": "Aves",
+          "nombreComun": "collalba gris"
+        },
+        {
+          "scientificName": "Pandion haliaetus",
+          "grupo": "Aves",
+          "nombreComun": "águila pescadora"
+        },
+        {
+          "scientificName": "Passer domesticus",
+          "grupo": "Aves",
+          "nombreComun": "gorrión común",
+          "nota": "La Tabla 9 la marca con almohadilla: NO figura en el Formulario Normalizado de Datos Red Natura 2000 del sitio, y su respaldo aquí es solo el PRUG."
+        },
+        {
+          "scientificName": "Phalacrocorax carbo",
+          "grupo": "Aves",
+          "nombreComun": "cormorán grande"
+        },
+        {
+          "scientificName": "Phalaropus lobatus",
+          "grupo": "Aves",
+          "nombreComun": "falaropo picofino"
+        },
+        {
+          "scientificName": "Philomachus pugnax",
+          "grupo": "Aves",
+          "nombreComun": "combatiente"
+        },
+        {
+          "scientificName": "Phoenicopterus (roseus) ruber",
+          "grupo": "Aves",
+          "nombreComun": "flamenco común",
+          "nombreCorregido": "Phoenicopterus roseus",
+          "nota": "La norma escribe el epíteto moderno entre paréntesis dentro del nombre antiguo, herencia de cuando el flamenco euroasiático era la subespecie «Phoenicopterus ruber roseus». EIDOS conoce los DOS binomios como especies distintas y válidas —«Phoenicopterus ruber» es el flamenco del Caribe—, así que el paréntesis no se puede resolver por autoridad: se resuelve por el nombre castellano que la propia norma escribe al lado, «flamenco común», que es Phoenicopterus roseus. Es además el ave por la que se designó esta ZEPA junto a cigüeñuela, avoceta y charrancito."
+        },
+        {
+          "scientificName": "Phoenicurus ochruros",
+          "grupo": "Aves",
+          "nombreComun": "colirrojo tizón",
+          "nota": "La Tabla 9 la marca con almohadilla: NO figura en el Formulario Normalizado de Datos Red Natura 2000 del sitio, y su respaldo aquí es solo el PRUG."
+        },
+        {
+          "scientificName": "Phoenicurus phoenicurus",
+          "grupo": "Aves",
+          "nombreComun": "colirrojo real"
+        },
+        {
+          "scientificName": "Phylloscopus collybita",
+          "grupo": "Aves",
+          "nombreComun": "mosquitero común"
+        },
+        {
+          "scientificName": "Phylloscopus trochiloides",
+          "grupo": "Aves",
+          "nombreComun": "mosquitero troquiloide"
+        },
+        {
+          "scientificName": "Phylloscopus trochilus",
+          "grupo": "Aves",
+          "nombreComun": "mosquitero musical"
+        },
+        {
+          "scientificName": "Picus viridis",
+          "grupo": "Aves",
+          "nombreComun": "pito real"
+        },
+        {
+          "scientificName": "Platalea leucorodia",
+          "grupo": "Aves",
+          "nombreComun": "espátula común"
+        },
+        {
+          "scientificName": "Pluvialis squatarola",
+          "grupo": "Aves",
+          "nombreComun": "chorlito gris"
+        },
+        {
+          "scientificName": "Podiceps cristatus",
+          "grupo": "Aves",
+          "nombreComun": "somormujo lavanco"
+        },
+        {
+          "scientificName": "Podiceps nigricollis",
+          "grupo": "Aves",
+          "nombreComun": "zampullín cuellinegro"
+        },
+        {
+          "scientificName": "Porzana porzana",
+          "grupo": "Aves",
+          "nombreComun": "polluela pintoja",
+          "nota": "La Tabla 9 la marca con almohadilla: NO figura en el Formulario Normalizado de Datos Red Natura 2000 del sitio, y su respaldo aquí es solo el PRUG."
+        },
+        {
+          "scientificName": "Ptyonoprogne rupestris",
+          "grupo": "Aves",
+          "nombreComun": "avión roquero"
+        },
+        {
+          "scientificName": "Rallus aquaticus",
+          "grupo": "Aves",
+          "nombreComun": "rascón europeo"
+        },
+        {
+          "scientificName": "Recurvirostra avosetta",
+          "grupo": "Aves",
+          "nombreComun": "avoceta común"
+        },
+        {
+          "scientificName": "Remiz pendulinus",
+          "grupo": "Aves",
+          "nombreComun": "pájaro moscón"
+        },
+        {
+          "scientificName": "Riparia riparia",
+          "grupo": "Aves",
+          "nombreComun": "avión zapador"
+        },
+        {
+          "scientificName": "Saxicola rubetra",
+          "grupo": "Aves",
+          "nombreComun": "tarabilla norteña"
+        },
+        {
+          "scientificName": "Saxicola torquatus",
+          "grupo": "Aves",
+          "nombreComun": "tarabilla común"
+        },
+        {
+          "scientificName": "Sterna albifrons",
+          "grupo": "Aves",
+          "nombreComun": "charrancito común"
+        },
+        {
+          "scientificName": "Sterna hirundo",
+          "grupo": "Aves",
+          "nombreComun": "charrán común"
+        },
+        {
+          "scientificName": "Sterna sandvicensis",
+          "grupo": "Aves",
+          "nombreComun": "charrán patinegro"
+        },
+        {
+          "scientificName": "Streptopelia turtur",
+          "grupo": "Aves",
+          "nombreComun": "tórtola europea"
+        },
+        {
+          "scientificName": "Sturnus unicolor",
+          "grupo": "Aves",
+          "nombreComun": "estornino negro",
+          "nota": "La Tabla 9 la marca con almohadilla: NO figura en el Formulario Normalizado de Datos Red Natura 2000 del sitio, y su respaldo aquí es solo el PRUG."
+        },
+        {
+          "scientificName": "Sturnus vulgaris",
+          "grupo": "Aves",
+          "nombreComun": "estornino pinto"
+        },
+        {
+          "scientificName": "Sylvia atricapilla",
+          "grupo": "Aves",
+          "nombreComun": "curruca capirotada"
+        },
+        {
+          "scientificName": "Sylvia borin",
+          "grupo": "Aves",
+          "nombreComun": "curruca mosquitera"
+        },
+        {
+          "scientificName": "Sylvia cantillans",
+          "grupo": "Aves",
+          "nombreComun": "curruca carrasqueña"
+        },
+        {
+          "scientificName": "Sylvia communis",
+          "grupo": "Aves",
+          "nombreComun": "curruca zarcera"
+        },
+        {
+          "scientificName": "Sylvia conspicillata",
+          "grupo": "Aves",
+          "nombreComun": "curruca tomillera"
+        },
+        {
+          "scientificName": "Sylvia melanocephala",
+          "grupo": "Aves",
+          "nombreComun": "curruca cabecinegra"
+        },
+        {
+          "scientificName": "Sylvia undata",
+          "grupo": "Aves",
+          "nombreComun": "curruca rabilarga"
+        },
+        {
+          "scientificName": "Tachybaptus ruficollis",
+          "grupo": "Aves",
+          "nombreComun": "zampullín común"
+        },
+        {
+          "scientificName": "Tadorna tadorna",
+          "grupo": "Aves",
+          "nombreComun": "tarro blanco"
+        },
+        {
+          "scientificName": "Tringa erythropus",
+          "grupo": "Aves",
+          "nombreComun": "archibebe oscuro"
+        },
+        {
+          "scientificName": "Tringa glareola",
+          "grupo": "Aves",
+          "nombreComun": "andarríos bastardo"
+        },
+        {
+          "scientificName": "Tringa nebularia",
+          "grupo": "Aves",
+          "nombreComun": "archibebe claro"
+        },
+        {
+          "scientificName": "Tringa ochropus",
+          "grupo": "Aves",
+          "nombreComun": "andarríos grande"
+        },
+        {
+          "scientificName": "Tringa totanus",
+          "grupo": "Aves",
+          "nombreComun": "archibebe común"
+        },
+        {
+          "scientificName": "Turdus merula",
+          "grupo": "Aves",
+          "nombreComun": "mirlo común"
+        },
+        {
+          "scientificName": "Turdus philomelos",
+          "grupo": "Aves",
+          "nombreComun": "zorzal común"
+        },
+        {
+          "scientificName": "Tyto alba",
+          "grupo": "Aves",
+          "nombreComun": "lechuza común"
+        },
+        {
+          "scientificName": "Upupa epops",
+          "grupo": "Aves",
+          "nombreComun": "abubilla"
+        },
+        {
+          "scientificName": "Atelerix algirus",
+          "grupo": "Mamíferos",
+          "nombreComun": "erizo moruno"
+        },
+        {
+          "scientificName": "Crocidura russula",
+          "grupo": "Mamíferos",
+          "nombreComun": "musaraña común gris"
+        },
+        {
+          "scientificName": "Eptesicus isabellinus",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago hortelano pálido"
+        },
+        {
+          "scientificName": "Miniopterus schreibersii",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago de cueva"
+        },
+        {
+          "scientificName": "Myotis capaccinii",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago ratonero patudo"
+        },
+        {
+          "scientificName": "Myotis myotis",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago ratonero grande"
+        },
+        {
+          "scientificName": "Pipistrellus kuhlii",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago de borde claro"
+        },
+        {
+          "scientificName": "Pipistrellus pipistrellus",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago enano"
+        },
+        {
+          "scientificName": "Pipistrellus pygmaeus",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago de Cabrera"
+        },
+        {
+          "scientificName": "Rhinolophus euryale",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago mediterráneo de herradura"
+        },
+        {
+          "scientificName": "Rhinolophus ferrumequinum",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago grande de herradura"
+        },
+        {
+          "scientificName": "Suncus etruscus",
+          "grupo": "Mamíferos",
+          "nombreComun": "musgaño enano"
+        },
+        {
+          "scientificName": "Anguilla anguilla",
+          "grupo": "Peces",
+          "nombreComun": "anguila"
+        },
+        {
+          "scientificName": "Aphanius iberus",
+          "grupo": "Peces",
+          "nombreComun": "fartet"
+        },
+        {
+          "scientificName": "Bufo calamita",
+          "grupo": "Anfibios",
+          "nombreComun": "sapo corredor"
+        },
+        {
+          "scientificName": "Rana perezi",
+          "grupo": "Anfibios",
+          "nombreComun": "rana común"
+        },
+        {
+          "scientificName": "Acanthodactylus erythrurus",
+          "grupo": "Reptiles",
+          "nombreComun": "lagartija colirroja"
+        },
+        {
+          "scientificName": "Blanus cinereus",
+          "grupo": "Reptiles",
+          "nombreComun": "culebrilla ciega"
+        },
+        {
+          "scientificName": "Chalcides bedriagai",
+          "grupo": "Reptiles",
+          "nombreComun": "eslizón ibérico"
+        },
+        {
+          "scientificName": "Chamaeleo chamaeleon",
+          "grupo": "Reptiles",
+          "nombreComun": "camaleón común"
+        },
+        {
+          "scientificName": "Hemidactylus turcicus",
+          "grupo": "Reptiles",
+          "nombreComun": "salamanquesa rosada"
+        },
+        {
+          "scientificName": "Hemorrhois hippocrepis",
+          "grupo": "Reptiles",
+          "nombreComun": "culebra de herradura"
+        },
+        {
+          "scientificName": "Malpolon monspessulanus",
+          "grupo": "Reptiles",
+          "nombreComun": "culebra bastarda"
+        },
+        {
+          "scientificName": "Natrix maura",
+          "grupo": "Reptiles",
+          "nombreComun": "culebra viperina"
+        },
+        {
+          "scientificName": "Podarcis hispanica",
+          "grupo": "Reptiles",
+          "nombreComun": "lagartija ibérica"
+        },
+        {
+          "scientificName": "Psammodromus algirus",
+          "grupo": "Reptiles",
+          "nombreComun": "lagartija colilarga"
+        },
+        {
+          "scientificName": "Psammodromus edwardsianus",
+          "grupo": "Reptiles",
+          "nombreComun": "lagartija cenicienta"
+        },
+        {
+          "scientificName": "Rhinechis scalaris",
+          "grupo": "Reptiles",
+          "nombreComun": "culebra de escalera"
+        },
+        {
+          "scientificName": "Tarentola mauritanica",
+          "grupo": "Reptiles",
+          "nombreComun": "salamanquesa común"
+        },
+        {
+          "scientificName": "Timon lepidus",
+          "grupo": "Reptiles",
+          "nombreComun": "lagarto ocelado"
+        },
+        {
+          "scientificName": "Artemia salina",
+          "grupo": "Invertebrados",
+          "nombreComun": "artemia"
+        },
+        {
+          "scientificName": "Pimelia modesta",
+          "grupo": "Invertebrados"
+        },
+        {
+          "scientificName": "Scarites procerus eurytus",
+          "grupo": "Invertebrados",
+          "nombreComun": "escarabajo de dunas"
+        },
+        {
+          "scientificName": "Tentyria elongata",
+          "grupo": "Invertebrados"
+        }
+      ],
+      "noNativas": [
+        {
+          "scientificName": "Agave americana",
+          "grupo": "Flora",
+          "nombreComun": "pitera común",
+          "nota": "La Tabla 3 del PRUG (§2.3.1.3) la declara exótica y del Catálogo español de especies exóticas invasoras, aunque la Tabla 1 la incluya en el inventario florístico."
+        },
+        {
+          "scientificName": "Avena wiestii",
+          "grupo": "Flora",
+          "nota": "La Tabla 3 del PRUG (§2.3.1.3) la declara exótica, aunque la Tabla 1 la incluya en el inventario florístico."
+        },
+        {
+          "scientificName": "Carpobrotus acinaciformis",
+          "grupo": "Flora",
+          "nombreComun": "uña de gato",
+          "nota": "La Tabla 3 del PRUG (§2.3.1.3) la declara exótica y del Catálogo español de especies exóticas invasoras, aunque la Tabla 1 la incluya en el inventario florístico."
+        },
+        {
+          "scientificName": "Eucalyptus camaldulensis",
+          "grupo": "Flora",
+          "nombreComun": "eucalipto",
+          "nota": "La Tabla 3 del PRUG (§2.3.1.3) la declara exótica, aunque la Tabla 1 la incluya en el inventario florístico."
+        },
+        {
+          "scientificName": "Eucalyptus globulus",
+          "grupo": "Flora",
+          "nombreComun": "eucalipto azul",
+          "nota": "La Tabla 3 del PRUG (§2.3.1.3) la declara exótica, aunque la Tabla 1 la incluya en el inventario florístico."
+        },
+        {
+          "scientificName": "Myoporum insulare",
+          "grupo": "Flora",
+          "nombreComun": "gandul",
+          "nota": "La Tabla 3 del PRUG (§2.3.1.3) la declara exótica, aunque la Tabla 1 la incluya en el inventario florístico."
+        },
+        {
+          "scientificName": "Nicotiana glauca",
+          "grupo": "Flora",
+          "nombreComun": "gandul",
+          "nota": "La Tabla 3 del PRUG (§2.3.1.3) la declara exótica, aunque la Tabla 1 la incluya en el inventario florístico."
+        },
+        {
+          "scientificName": "Pittosporum tobira",
+          "grupo": "Flora",
+          "nombreComun": "pitosporo",
+          "nota": "La Tabla 3 del PRUG (§2.3.1.3) la declara exótica, aunque la Tabla 1 la incluya en el inventario florístico."
+        },
+        {
+          "scientificName": "Acacia retinoides",
+          "grupo": "Flora",
+          "nota": "La Tabla 3 del PRUG (§2.3.1.3) la declara exótica. No figura en el inventario florístico de la Tabla 1."
+        },
+        {
+          "scientificName": "Arundo donax",
+          "grupo": "Flora",
+          "nota": "La Tabla 3 del PRUG (§2.3.1.3) la declara exótica y del Catálogo español de especies exóticas invasoras. No figura en el inventario florístico de la Tabla 1."
+        },
+        {
+          "scientificName": "Cortaderia selloana",
+          "grupo": "Flora",
+          "nota": "La Tabla 3 del PRUG (§2.3.1.3) la declara exótica y del Catálogo español de especies exóticas invasoras. No figura en el inventario florístico de la Tabla 1."
+        },
+        {
+          "scientificName": "Myoporum acuminatum",
+          "grupo": "Flora",
+          "nota": "La Tabla 3 del PRUG (§2.3.1.3) la declara exótica. No figura en el inventario florístico de la Tabla 1."
+        },
+        {
+          "scientificName": "Gambusia holbrooki",
+          "grupo": "Peces",
+          "nombreComun": "gambusia",
+          "nota": "El §2.3.3.3 del PRUG la declara exótica e incluida en el Catálogo español de especies exóticas invasoras, aunque la Tabla 9 la incluya en el inventario faunístico."
+        },
+        {
+          "scientificName": "Procambarus clarkii",
+          "grupo": "Invertebrados",
+          "nombreComun": "cangrejo rojo",
+          "nota": "El §2.3.3.3 del PRUG la declara exótica e incluida en el Catálogo español de especies exóticas invasoras, aunque la Tabla 9 la incluya en el inventario faunístico."
+        }
+      ]
     }
   }
 }

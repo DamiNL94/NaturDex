@@ -21,6 +21,7 @@
     "2120": { "name": "Dunas móviles de litoral con Ammophila arenaria (dunas blancas)", "type": "Dunas" },
     "2210": { "name": "Dunas fijas de litoral del Crucianellion maritimae", "type": "Dunas" },
     "2230": { "name": "Dunas con céspedes del Malcomietalia", "type": "Dunas" },
+    "2250": { "name": "Dunas litorales con Juniperus spp.", "type": "Dunas" },
     "2260": { "name": "Dunas con vegetación esclerófila del Cisto-Lavanduletalia", "type": "Dunas" },
     "3140": { "name": "Aguas oligomesotróficas calcáreas con vegetación béntica de Chara spp.", "type": "Acuático" },
     "3170": { "name": "Estanques temporales mediterráneos", "type": "Acuático" },
