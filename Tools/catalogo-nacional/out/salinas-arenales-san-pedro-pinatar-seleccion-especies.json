@@ -3,7 +3,7 @@
   "park": "salinas-arenales-san-pedro-pinatar",
   "generado": "2026-08-17",
   "total": 355,
-  "aves": 122,
+  "aves": 125,
   "reutilizables": 237,
   "nuevas": 118,
   "excluidas": 345,
@@ -718,7 +718,7 @@
     },
     {
       "scientificName": "Larus audouinii",
-      "class": null,
+      "class": "Aves",
       "gbifOccurrences": 926,
       "habitats": 10,
       "evidence": [
@@ -3008,7 +3008,7 @@
     },
     {
       "scientificName": "Larus melanocephalus",
-      "class": null,
+      "class": "Aves",
       "gbifOccurrences": 170,
       "habitats": 10,
       "evidence": [
@@ -3681,7 +3681,7 @@
     },
     {
       "scientificName": "Corvus monedula",
-      "class": null,
+      "class": "Aves",
       "gbifOccurrences": 99,
       "habitats": 3,
       "evidence": [
@@ -5255,7 +5255,7 @@
     },
     {
       "scientificName": "Sarcocornia fruticosa",
-      "class": null,
+      "class": "Magnoliopsida",
       "gbifOccurrences": 17,
       "habitats": 6,
       "evidence": [
@@ -6112,7 +6112,7 @@
     },
     {
       "scientificName": "Arthrocnemum macrostachyum",
-      "class": null,
+      "class": "Magnoliopsida",
       "gbifOccurrences": 8,
       "habitats": 10,
       "evidence": [
@@ -7622,7 +7622,7 @@
     },
     {
       "scientificName": "Pseudorlaya pumila",
-      "class": null,
+      "class": "Magnoliopsida",
       "gbifOccurrences": 2,
       "habitats": 5,
       "evidence": [
@@ -8614,7 +8614,7 @@
     },
     {
       "scientificName": "Stipa capensis",
-      "class": null,
+      "class": "Liliopsida",
       "gbifOccurrences": 1,
       "habitats": 5,
       "evidence": [

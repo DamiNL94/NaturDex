@@ -38,7 +38,7 @@
         -0.792524
       ],
       "color": "#daa520",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ullastre_vell.JPG?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
@@ -107,7 +107,9 @@
         75,
         189,
         190
-      ]
+      ],
+      "imageAttribution": "Antoni Salvà (CC BY-SA 4.0) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con Acebuche (Olea europaea subsp. europaea), la especie que da nombre al hábitat."
     },
     {
       "id": "zonas-subestepicas-de-6220",
@@ -127,7 +129,7 @@
         -0.79162
       ],
       "color": "#66cdaa",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_carthaginense88.jpg?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
@@ -196,7 +198,9 @@
         75,
         189,
         190
-      ]
+      ],
+      "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con zamarrilla de Cartagena (Teucrium carthaginense), la especie que da nombre al hábitat."
     },
     {
       "id": "pendientes-rocosas-calcicolas-8210",
@@ -217,7 +221,7 @@
         -0.784435
       ],
       "color": "#daa520",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_carthaginense88.jpg?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
@@ -282,7 +286,9 @@
         75,
         189,
         190
-      ]
+      ],
+      "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con zamarrilla de Cartagena (Teucrium carthaginense), la especie que da nombre al hábitat."
     },
     {
       "id": "acantilados-con-vegetacion-1240",
@@ -302,13 +308,15 @@
         -0.749428
       ],
       "color": "#2e8b57",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_cossonianum.jpg?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
       "speciesIds": [
         41
-      ]
+      ],
+      "imageAttribution": "Nanosanchez (CC0) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con Siempreviva de Cosson (Limonium cossonianum), la especie que da nombre al hábitat."
     },
     {
       "id": "bosques-de-tetraclinis-9570",
@@ -328,7 +336,7 @@
         -0.835455
       ],
       "color": "#cd853f",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sandarac_Tree_(Tetraclinis_articulata)_-_Cartagena%2C_Spain_2024-02-05_(01).jpg?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
@@ -344,7 +352,9 @@
         37,
         56,
         189
-      ]
+      ],
+      "imageAttribution": "Ryan Hodnett (CC BY-SA 4.0) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con Sabina de Cartagena (Tetraclinis articulata), la especie que da nombre al hábitat."
     },
     {
       "id": "matorrales-arborescentes-de-5220",
@@ -364,7 +374,7 @@
         -0.825131
       ],
       "color": "#cd853f",
-      "image": null,
+      "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/609975159/original.jpg",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
@@ -425,7 +435,9 @@
         73,
         189,
         190
-      ]
+      ],
+      "imageAttribution": "Quentin Groom (CC0) · GBIF",
+      "imageNote": "Portada ilustrada con Cornical (Periploca angustifolia), la especie que da nombre al hábitat."
     },
     {
       "id": "encinares-de-quercus-9340",
@@ -539,7 +551,7 @@
         -0.73643
       ],
       "color": "#b8860b",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Suaeda_vera.JPG?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
@@ -575,7 +587,9 @@
         72,
         74,
         190
-      ]
+      ],
+      "imageAttribution": "Xemenendura (CC BY-SA 4.0) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con Sosa fina (Suaeda vera), la especie que da nombre al hábitat."
     },
     {
       "id": "matorrales-halofilos-mediterraneos-1420",
@@ -644,7 +658,7 @@
         -0.737084
       ],
       "color": "#9acd32",
-      "image": null,
+      "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/611378691/original.jpg",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
@@ -673,7 +687,9 @@
         66,
         72,
         74
-      ]
+      ],
+      "imageAttribution": "Michael Bakker Paiva (CC BY 4.0) · GBIF",
+      "imageNote": "Portada ilustrada con Orgaza (Atriplex glauca), la especie que da nombre al hábitat."
     },
     {
       "id": "estepas-salinas-mediterraneas-1510",
@@ -693,7 +709,7 @@
         -0.737084
       ],
       "color": "#2e8b57",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_lobatum.jpg?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
@@ -722,7 +738,9 @@
         66,
         72,
         74
-      ]
+      ],
+      "imageAttribution": "Sf2000 (CC BY-SA 4.0) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con Saladilla anual (Limonium lobatum), la especie que da nombre al hábitat."
     },
     {
       "id": "dunas-moviles-embrionarias-2110",

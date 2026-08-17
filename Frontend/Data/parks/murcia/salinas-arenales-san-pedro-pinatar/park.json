@@ -30,19 +30,17 @@
         "Eryngio maritimi-Sporoboletum arenarii (Arènes ex Géhu & Biondi 1994) Rivas-Martínez & Cantó 2002",
         "Salsolo kali-Cakiletum aegyptiacae Costa & Mansanet 1981"
       ],
-      "description": "",
+      "description": "La primera línea de vegetación de una playa: plantas anuales que germinan sobre los restos que deja la marea, aprovechando el poco alimento y la humedad que guarda esa franja de algas y madera. Son hierbas carnosas de vida corta, como el rábano de mar (Cakile maritima) o la barrilla pinchosa (Salsola kali), que completan su ciclo en una sola temporada. Desaparece por completo donde se limpia la arena con maquinaria.",
       "coordinates": [
         37.814172,
         -0.758009
       ],
       "color": "#6b8e23",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cakile-maritima-(eurMeersenf)_1.jpg?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
       "speciesIds": [
-        1,
-        2,
         4,
         6,
         8,
@@ -61,7 +59,9 @@
         37,
         60,
         64
-      ]
+      ],
+      "imageAttribution": "Jürgen Howaldt (CC BY-SA 2.0 de) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con Rugueta de mar (Cakile maritima), la especie que da nombre al hábitat."
     },
     {
       "id": "dunas-con-cespedes-2230",
@@ -76,19 +76,17 @@
         "Erodio laciniati-Maresietum nanae Rivas Goday 1958 corr. Costa, Díez-Garretas, P. Soriano & Pérez-Badia in Pérez-Badia 1997",
         "Triplachno nitentis-Silenetum ramosissimae Peinado, Martínez-Parras, Alcaraz, Garre & Cruz 1985"
       ],
-      "description": "",
+      "description": "Claros de arena entre el matorral dunar en los que, tras las lluvias, germina un césped efímero de plantas diminutas que florecen y se secan en pocas semanas. Pasan el resto del año como semilla enterrada, de modo que durante casi todo el verano el sitio parece arena vacía. Es un hábitat que solo se ve entero unas semanas al año, y por eso se destruye sin que nadie note que había algo.",
       "coordinates": [
         37.829646,
         -0.762742
       ],
       "color": "#2e8b57",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Silene_ramosissima_2.jpg?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
       "speciesIds": [
-        1,
-        2,
         4,
         5,
         6,
@@ -137,7 +135,9 @@
         77,
         86,
         91
-      ]
+      ],
+      "imageAttribution": "bymamo (CC BY-SA 4.0) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con Colleja de arenal (Silene ramosissima), la especie que da nombre al hábitat."
     },
     {
       "id": "dunas-moviles-de-2120",
@@ -151,7 +151,7 @@
       "fitosociologia": [
         "Loto cretici-Ammophiletum australis Rivas-Martínez 1965 corr. Rivas-Martínez, T.E. Díaz, Fernández-González, Izco, Loidi, Lousa & Penas 2002"
       ],
-      "description": "",
+      "description": "El cordón dunar alto, de arena suelta y clara, que se levanta detrás de la playa. Lo sostiene el barrón (Ammophila arenaria), una gramínea de hojas enrolladas y punzantes que crece hacia arriba cuanta más arena la sepulta y teje bajo la superficie una red de rizomas que sujeta el montículo. Es la barrera natural que protege del temporal todo lo que queda tierra adentro.",
       "coordinates": [
         37.814172,
         -0.758009
@@ -162,8 +162,6 @@
       "audioTranscript": null,
       "reviewNote": null,
       "speciesIds": [
-        1,
-        2,
         4,
         6,
         8,
@@ -196,7 +194,7 @@
       "fitosociologia": [
         "Cypero mucronati-Agropyretum juncei Kühnholtz ex Br.-Bl. 1933"
       ],
-      "description": "",
+      "description": "El primer relieve de arena de la playa, de apenas unos decímetros, que se forma donde una planta rastrera frena el viento y la arena se deposita a su alrededor. La construyen la grama de mar (Elymus farctus) y la juncia marina, capaces de crecer hacia arriba a medida que quedan enterradas. Es la duna naciente: si se pisa o se allana, todo el cordón dunar que hay detrás se queda sin recambio.",
       "coordinates": [
         37.814172,
         -0.758009
@@ -207,8 +205,6 @@
       "audioTranscript": null,
       "reviewNote": null,
       "speciesIds": [
-        1,
-        2,
         4,
         6,
         8,
@@ -241,19 +237,17 @@
       "fitosociologia": [
         "Loto cretici-Crucianelletum maritimae Alcaraz, T.E. Díaz, Rivas-Martínez & P. Sánchez 1989"
       ],
-      "description": "",
+      "description": "Dunas ya estabilizadas, donde la arena apenas se mueve y aparecen matas leñosas bajas, líquenes y un tapiz gris azulado de hoja pequeña. Es el paso intermedio entre la duna viva y el matorral: se reconoce porque el suelo deja de ser arena limpia y empieza a tener costra y materia orgánica. Se recupera muy despacio, así que una pisada abre un claro que tarda años en cerrarse.",
       "coordinates": [
         37.814172,
         -0.758009
       ],
       "color": "#8fbc8f",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cakile-maritima-(eurMeersenf)_1.jpg?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
       "speciesIds": [
-        1,
-        2,
         4,
         6,
         8,
@@ -272,7 +266,9 @@
         37,
         60,
         64
-      ]
+      ],
+      "imageAttribution": "Jürgen Howaldt (CC BY-SA 2.0 de) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con Rugueta de mar (Cakile maritima), la especie que da nombre al hábitat."
     },
     {
       "id": "pastizales-salinos-mediterraneos-1410",
@@ -288,20 +284,17 @@
         "Holoschoenetum vulgaris Br.-Bl. ex Tchou 1948",
         "Schoeno nigricantis-Plantaginetum crassifoliae Br.-Bl. in Br.-Bl., Roussine & Nègre 1952"
       ],
-      "description": "",
+      "description": "Praderas de juncos y gramíneas sobre suelos salinos que se encharcan en invierno y se resecan en verano, tierra adentro de las marismas y en el borde de saladares y ramblas salobres. La sal se concentra en la superficie al evaporarse el agua, de modo que solo prosperan plantas capaces de bombear agua contra ella. Forman un tapiz denso y verde que contrasta con los suelos desnudos de alrededor.",
       "coordinates": [
         37.820121,
         -0.765292
       ],
       "color": "#b8860b",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Schoenus_nigricans_kz2.jpg?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
       "speciesIds": [
-        1,
-        2,
-        3,
         4,
         5,
         6,
@@ -391,7 +384,9 @@
         93,
         94,
         95
-      ]
+      ],
+      "imageAttribution": "Kenraiz, Krzysztof Ziarnek (CC BY-SA 4.0) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con juncia bastarda (Schoenus nigricans), la especie que da nombre al hábitat."
     },
     {
       "id": "matorrales-halofilos-mediterraneos-1420",
@@ -407,20 +402,17 @@
         "Frankenio corymbosae-Arthrocnemetum macrostachyi Rivas-Martínez, Alcaraz, Belmonte, Cantó & Sánchez-Mata 1984",
         "Sarcocornietum alpini Br.-Bl. 1933 corr. Rivas-Martínez, Lousã, T.E. Díaz, Fernández-González & J.C. Costa 1990"
       ],
-      "description": "",
+      "description": "Matorral bajo y carnoso de sosas y almajos (Sarcocornia, Arthrocnemum, Halocnemum) sobre suelos que se inundan de agua salada y luego se secan dejando costra de sal. Son matas de tallos gruesos y articulados, sin hojas aparentes, que almacenan agua y diluyen en ella la sal que absorben. En otoño viran a rojo, naranja y morado, y ese cambio de color es la señal más visible del saladar.",
       "coordinates": [
         37.816868,
         -0.764521
       ],
       "color": "#2e8b57",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sarcocornia_fruticosa.jpg?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
       "speciesIds": [
-        1,
-        2,
-        3,
         4,
         5,
         6,
@@ -511,7 +503,9 @@
         93,
         94,
         95
-      ]
+      ],
+      "imageAttribution": "Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con Sosa jabonera (Sarcocornia fruticosa), la especie que da nombre al hábitat."
     },
     {
       "id": "vegetacion-halonitrofila-anual-1310",
@@ -526,20 +520,17 @@
         "Salicornietum emerici O. Bolòs ex Brullo & Furnari 1976",
         "Suaedo spicatae-Salicornietum patulae Brullo & Furnari ex Géhu & Géhu-Franck 1984 corr. Alcaraz, Ríos, De la Torre, Delgado & Inocencio 1998"
       ],
-      "description": "",
+      "description": "Céspedes abiertos de plantas anuales y carnosas que colonizan el fango salino en cuanto el agua se retira, en los bordes de salinas, marismas y lagunas costeras. Dominan las salicornias y sosas anuales, tallos sin hojas visibles, articulados como pequeños cactus, que a final de verano se tiñen de rojo y anaranjado. Es una vegetación efímera: cada año se instala de nuevo sobre un suelo que ha vuelto a quedar desnudo.",
       "coordinates": [
         37.821033,
         -0.766607
       ],
       "color": "#8fbc8f",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Suaeda_vera.JPG?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
       "speciesIds": [
-        1,
-        2,
-        3,
         4,
         5,
         6,
@@ -608,7 +599,9 @@
         93,
         94,
         95
-      ]
+      ],
+      "imageAttribution": "Xemenendura (CC BY-SA 4.0) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con Sosa fina (Suaeda vera), la especie que da nombre al hábitat."
     },
     {
       "id": "dunas-litorales-con-2250",
@@ -622,19 +615,17 @@
       "fitosociologia": [
         "Rhamno angustifoliae-Juniperetum turbinatae Rivas-Martínez ex Freitag 1971 corr. Alcaraz, T.E. Díaz, Rivas-Martínez & P. Sánchez 1989"
       ],
-      "description": "",
+      "description": "Sabinar o enebral crecido directamente sobre las dunas ya fijas, con las sabinas y enebros achaparrados y peinados por el viento marino, a veces tumbados sobre la arena y con las raíces al aire donde ésta se ha movido. Crecen muy despacio, así que un ejemplar de porte mediano puede tener siglos y una duna arrasada no lo recupera en una vida humana. Es el matorral leñoso más maduro que llega a formarse sobre arena litoral, y de los más raros: hoy sobrevive en manchas sueltas entre urbanizaciones y playas.",
       "coordinates": [
         37.830721,
         -0.763398
       ],
       "color": "#cd853f",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_phoenicea1.jpg?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
       "speciesIds": [
-        1,
-        2,
         4,
         5,
         6,
@@ -678,7 +669,9 @@
         77,
         86,
         91
-      ]
+      ],
+      "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con Sabina negral (Juniperus phoenicea), la especie que da nombre al hábitat."
     },
     {
       "id": "dunas-con-vegetacion-2260",
@@ -692,19 +685,17 @@
       "fitosociologia": [
         "Helianthemo marminorensis-Teucrietum dunensis Peinado, Alcaraz & Martínez-Parras 1992"
       ],
-      "description": "",
+      "description": "Matorral mediterráneo instalado sobre arenas ya fijadas, normalmente algo tierra adentro: jaras, jaguarzos, romero, lavandas, tomillos y enebros sobre suelo arenoso. Las hojas son duras o están cubiertas de pelillos, la defensa habitual contra el sol y la falta de agua, y muchas desprenden aroma al rozarlas. Es la etapa más madura y estable del sistema dunar, la última antes del bosque.",
       "coordinates": [
         37.816168,
         -0.759591
       ],
       "color": "#66cdaa",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_marminorense_EnfoqueFlor_2010-7-03_ParqueNaturalLagunasdelaMata.jpg?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
       "speciesIds": [
-        1,
-        2,
         4,
         5,
         6,
@@ -759,7 +750,9 @@
         88,
         90,
         91
-      ]
+      ],
+      "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con Helianthemum marminorense (Helianthemum marminorense), la especie que da nombre al hábitat."
     },
     {
       "id": "lagunas-costeras-1150",
@@ -773,7 +766,7 @@
       "fitosociologia": [
         "Ruppion maritimae Br.-Bl. ex Westhoff in Bennema, Sissingh & Westhoff 1943 (lagunas y albuferas litorales)"
       ],
-      "description": "",
+      "description": "Láminas de agua salada o salobre separadas del mar por una barra de arena, con la que se comunican de forma permanente o solo en los temporales. La sal, la temperatura y el nivel cambian tanto con las lluvias y la evaporación que solo aguantan aquí unas pocas especies muy resistentes, pero las que aguantan se cuentan por miles de individuos. Es uno de los lugares donde más aves acuáticas se concentran a la vez.",
       "coordinates": [
         37.789613,
         -0.7581
@@ -797,7 +790,7 @@
       "fitosociologia": [
         "Limonio cossoniani-Lycietum intricati Esteve 1973 corr. Alcaraz, P. Sánchez, De la Torre, Ríos & J. Alvarez 1991"
       ],
-      "description": "",
+      "description": "Roquedos del borde del mar, batidos por el viento y salpicados constantemente de sal. Las plantas viven agarradas a las grietas, con hojas gruesas o cerosas para no perder agua, y las más características son las siemprevivas (Limonium) y el hinojo marino. Muchas de esas siemprevivas viven solo en un tramo corto de costa y en ningún otro sitio del mundo.",
       "coordinates": [
         37.778914,
         -0.744623
@@ -825,7 +818,7 @@
       "fitosociologia": [
         "Limonietum angustebracteato-delicatuli Rivas-Martínez & Alcaraz in Alcaraz 1984"
       ],
-      "description": "",
+      "description": "Estepas de suelos salinos pero secos, sin encharcamiento permanente, en depresiones y llanos interiores de clima duro. Dominan el albardín (Lygeum spartum), una gramínea de matas separadas y hojas punzantes, y las siemprevivas (Limonium), que en verano cubren el suelo desnudo de flores diminutas rosas y violetas. Es un paisaje de aspecto pobre que concentra un número altísimo de plantas que no crecen en ningún otro ambiente.",
       "coordinates": [
         37.778914,
         -0.744623
@@ -853,7 +846,7 @@
       "fitosociologia": [
         "Agrostio stoloniferae-Tamaricetum canariensis Cirujano 1981"
       ],
-      "description": "",
+      "description": "La vegetación leñosa de ramblas, arroyos y ríos de caudal irregular, que unos meses llevan agua y otros son un lecho de piedras: adelfares y tarayales. La adelfa (Nerium oleander), de hojas coriáceas y flores rosas, y los tarays (Tamarix), de ramillas finas y flores en espiga, resisten tanto las avenidas violentas como meses de sequía. Toda la adelfa es muy tóxica, incluidas hojas y ramas secas.",
       "coordinates": [
         37.778914,
         -0.744623
@@ -881,7 +874,7 @@
       "fitosociologia": [
         "Withanio frutescentis-Lycietum intricati Alcaraz, P. Sánchez, De la Torre, Ríos & J. Alvarez 1991"
       ],
-      "description": "",
+      "description": "Matorral de suelos salinos removidos y cargados de nitrógeno: bordes de camino y de cultivo, márgenes de rambla, corrales y escombreras viejas. Lo forman matas robustas de hoja gris o carnosa —orgazas, sosas, bojas y cambroneras— que rebrotan enseguida tras cualquier alteración. Aunque nace de terrenos trastocados, es vegetación propia de los ambientes áridos del sureste y a menudo el último refugio de plantas escasas.",
       "coordinates": [
         37.778914,
         -0.744623
@@ -900,180 +893,6 @@
   ],
   "pointsOfInterest": [],
   "species": [
-    {
-      "id": 1,
-      "commonName": "Gaviota de Audouin",
-      "scientificName": "Larus audouinii",
-      "kingdom": "fauna",
-      "group": "Ave marina",
-      "habitat": "Islotes y costas mediterráneas; pesca en mar abierto cerca de la orilla",
-      "conservationStatus": "Vulnerable",
-      "description": "Gaviota mediterránea de tamaño medio, elegante y de aspecto más «limpio» que la patiamarilla, con el pico rojo coral anillado de negro y las patas verdosas oscuras. Pesca al vuelo rozando el agua, sobre todo de noche y de madrugada. Cría en colonias muy concentradas en islotes y salinas.",
-      "descriptionSource": null,
-      "tips": [
-        "Pico rojo coral con una banda negra cerca de la punta",
-        "Patas verde oscuro, no amarillas",
-        "Ojo oscuro que le da expresión suave"
-      ],
-      "seasonality": "Todo el año, con concentraciones en verano",
-      "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/611415320/original.jpg",
-      "imageAttribution": "Michael Bakker Paiva (CC BY 4.0) · GBIF",
-      "coordinates": null,
-      "rarityScore": 4,
-      "rarityBasis": {
-        "categoria": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable",
-        "ambito": "estatal",
-        "origen": "spainStatus del catálogo universal"
-      },
-      "rarityLocal": 4,
-      "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
-      },
-      "featured": true,
-      "source": "GBIF: 926 ocurrencias dentro de los polígonos de hábitat del espacio (10 hábitats; barrido de 2026-08-17); Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000175 (Salinas y Arenales de San Pedro del Pinatar), sección 3.2: población reproductora; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000175 (Salinas y Arenales de San Pedro del Pinatar), sección 3.2: población permanente; Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, que la cita como «Larus audouinii (=Ichthyaetus audouinii)» (eIDOS acepta el nombre de FUERA del paréntesis y da «Ichthyaetus audouinii» por sinónimo, al revés de lo que sugiere la notación de la norma); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
-      "taxonomy": {
-        "kingdom": "Animalia",
-        "phylum": "Chordata",
-        "class": "Aves",
-        "order": null,
-        "family": null,
-        "genus": "Larus"
-      },
-      "iucnGlobal": "VU (Vulnerable)",
-      "spainStatus": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; Ley 42/2007, Anexo IV",
-      "murciaStatus": "Vulnerable (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
-      "reviewNote": null,
-      "eidosTaxonId": 14053,
-      "gbifSpeciesKey": 7406504,
-      "zepaSiteCode": null,
-      "habitatIds": [
-        "matorrales-halofilos-mediterraneos-1420",
-        "pastizales-salinos-mediterraneos-1410",
-        "vegetacion-halonitrofila-anual-1310",
-        "dunas-con-vegetacion-2260",
-        "dunas-con-cespedes-2230",
-        "dunas-litorales-con-2250",
-        "dunas-fijas-de-2210",
-        "dunas-moviles-de-2120",
-        "dunas-moviles-embrionarias-2110",
-        "vegetacion-anual-sobre-1210"
-      ],
-      "gbifOccurrences": 926,
-      "visible": true
-    },
-    {
-      "id": 2,
-      "commonName": "Gaviota cabecinegra",
-      "scientificName": "Larus melanocephalus",
-      "kingdom": "fauna",
-      "group": "Ave marina",
-      "habitat": "Costas, playas, salinas y lagunas litorales",
-      "conservationStatus": "Protegida (LESRPE)",
-      "description": "Gaviota mediana de alas blanquecinas sin puntas negras, pico rojo coral y capucha negra completa en primavera. En vuelo destaca por sus primarias sin marcas oscuras, un rasgo que la separa de la reidora aun de lejos.",
-      "descriptionSource": null,
-      "tips": [
-        "Alas blancas sin puntas negras, muy pálidas en vuelo",
-        "Pico rojo intenso y grueso, con anillo ocular blanco",
-        "Capucha negra completa en primavera; mancha en la oreja en invierno"
-      ],
-      "seasonality": "Otoño e invierno, con paso en primavera",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Larus_melanocephalus_aka_Mediterranean_Gull_rare_guest_in_Sweden2.jpg?width=1280",
-      "imageAttribution": "Martin Olsson (mnemo on en/sv wikipedia and commons, martin@minimum… (CC BY-SA 3.0) · Wikimedia Commons",
-      "coordinates": null,
-      "rarityScore": 2,
-      "rarityBasis": {
-        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
-        "ambito": "estatal",
-        "origen": "spainStatus del catálogo universal"
-      },
-      "rarityLocal": 2,
-      "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
-      },
-      "featured": false,
-      "source": "GBIF: 170 ocurrencias dentro de los polígonos de hábitat del espacio (10 hábitats; barrido de 2026-08-17); Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000175 (Salinas y Arenales de San Pedro del Pinatar), sección 3.2: población reproductora; Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, que la cita como «Larus melanocephalus (=Ichthyaetus melanocephalus)» (eIDOS acepta el nombre de FUERA del paréntesis); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
-      "taxonomy": {
-        "kingdom": "Animalia",
-        "phylum": "Chordata",
-        "class": "Aves",
-        "order": "Charadriiformes",
-        "family": "Laridae",
-        "genus": "Larus"
-      },
-      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011) · Anexo IV (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
-      "reviewNote": null,
-      "eidosTaxonId": 14050,
-      "gbifSpeciesKey": 8151548,
-      "zepaSiteCode": null,
-      "habitatIds": [
-        "matorrales-halofilos-mediterraneos-1420",
-        "pastizales-salinos-mediterraneos-1410",
-        "vegetacion-halonitrofila-anual-1310",
-        "dunas-con-vegetacion-2260",
-        "dunas-con-cespedes-2230",
-        "dunas-litorales-con-2250",
-        "dunas-fijas-de-2210",
-        "dunas-moviles-de-2120",
-        "dunas-moviles-embrionarias-2110",
-        "vegetacion-anual-sobre-1210"
-      ],
-      "gbifOccurrences": 170,
-      "visible": true
-    },
-    {
-      "id": 3,
-      "commonName": "Grajilla occidental",
-      "scientificName": "Corvus monedula",
-      "kingdom": "fauna",
-      "group": "Ave",
-      "habitat": null,
-      "conservationStatus": "LC",
-      "description": "Ave de tamaño más modesto que grajas y cornejas, la grajilla luce un plumaje muy oscuro, que a cierta distancia parece negro. Vista de cerca, sin embargo, se aprecia una cierta tonalidad grisácea en algunas regiones del cuerpo, especialmente en el pecho y en la nuca, que es de un bello color ceniciento. El iris es muy claro, de un azul pálido, casi blanco. Es habitual que las grajillas se organicen en ruidosos bandos que sobrevuelan las rocas y los viejos edificios o que menudean por campos y pastizales en busca de alimento.",
-      "descriptionSource": null,
-      "tips": [],
-      "seasonality": "Todo el año",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D0%B0%D0%BB%D0%BA%D0%B0_(Corvus_monedula)%2C_%D0%A6%D0%B0%D1%80%D0%B8%D1%86%D1%8B%D0%BD%D0%BE.jpg?width=1280",
-      "imageAttribution": "Dion Art (CC BY-SA 4.0) · Wikimedia Commons",
-      "coordinates": null,
-      "rarityScore": 1,
-      "rarityBasis": {
-        "categoria": "Sin figura de protección",
-        "ambito": "estatal",
-        "origen": "spainStatus del catálogo universal"
-      },
-      "rarityLocal": 1,
-      "rarityLocalBasis": null,
-      "featured": false,
-      "source": "GBIF: 99 ocurrencias dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
-      "taxonomy": {
-        "kingdom": "Animalia",
-        "phylum": "Chordata",
-        "class": "Aves",
-        "order": "Passeriformes",
-        "family": "Corvidae",
-        "genus": "Corvus"
-      },
-      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
-      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
-      "reviewNote": null,
-      "eidosTaxonId": 11769,
-      "gbifSpeciesKey": 6100954,
-      "zepaSiteCode": null,
-      "habitatIds": [
-        "matorrales-halofilos-mediterraneos-1420",
-        "pastizales-salinos-mediterraneos-1410",
-        "vegetacion-halonitrofila-anual-1310"
-      ],
-      "gbifOccurrences": 99,
-      "visible": true
-    },
     {
       "id": 4,
       "commonName": "Camaleón común",
@@ -1585,7 +1404,8 @@
         "dunas-litorales-con-2250"
       ],
       "gbifOccurrences": 14,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 13,
@@ -1748,7 +1568,8 @@
         "vegetacion-anual-sobre-1210"
       ],
       "gbifOccurrences": 12,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 16,
@@ -1973,7 +1794,8 @@
         "vegetacion-halonitrofila-anual-1310"
       ],
       "gbifOccurrences": 8,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 20,
@@ -2024,7 +1846,8 @@
         "vegetacion-anual-sobre-1210"
       ],
       "gbifOccurrences": 8,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 21,
@@ -2073,7 +1896,8 @@
         "vegetacion-halonitrofila-anual-1310"
       ],
       "gbifOccurrences": 8,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 22,
@@ -2236,7 +2060,8 @@
         "vegetacion-anual-sobre-1210"
       ],
       "gbifOccurrences": 8,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 25,
@@ -2285,7 +2110,8 @@
         "vegetacion-halonitrofila-anual-1310"
       ],
       "gbifOccurrences": 7,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 26,
@@ -2560,7 +2386,8 @@
         "dunas-litorales-con-2250"
       ],
       "gbifOccurrences": 6,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 31,
@@ -2612,7 +2439,8 @@
         "vegetacion-anual-sobre-1210"
       ],
       "gbifOccurrences": 6,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 32,
@@ -2944,7 +2772,8 @@
         "vegetacion-halonitrofila-anual-1310"
       ],
       "gbifOccurrences": 4,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 38,
@@ -3145,7 +2974,8 @@
         "vegetacion-halonitrofila-anual-1310"
       ],
       "gbifOccurrences": 3,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 42,
@@ -3194,7 +3024,8 @@
         "vegetacion-halonitrofila-anual-1310"
       ],
       "gbifOccurrences": 3,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 43,
@@ -3451,7 +3282,8 @@
         "vegetacion-halonitrofila-anual-1310"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 48,
@@ -3612,7 +3444,8 @@
         "pastizales-salinos-mediterraneos-1410"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 51,
@@ -3818,7 +3651,8 @@
         "vegetacion-halonitrofila-anual-1310"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 55,
@@ -3912,7 +3746,8 @@
         "vegetacion-halonitrofila-anual-1310"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 57,
@@ -4004,7 +3839,8 @@
         "pastizales-salinos-mediterraneos-1410"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 59,
@@ -4050,7 +3886,8 @@
         "vegetacion-halonitrofila-anual-1310"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 60,
@@ -4254,7 +4091,8 @@
         "vegetacion-halonitrofila-anual-1310"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 64,
@@ -4452,7 +4290,8 @@
         "vegetacion-halonitrofila-anual-1310"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 68,
@@ -4820,7 +4659,8 @@
         "vegetacion-halonitrofila-anual-1310"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 75,
@@ -4976,7 +4816,8 @@
         "pastizales-salinos-mediterraneos-1410"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 78,
@@ -5022,7 +4863,8 @@
         "pastizales-salinos-mediterraneos-1410"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 79,
@@ -5168,7 +5010,8 @@
         "vegetacion-halonitrofila-anual-1310"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 82,
@@ -5214,7 +5057,8 @@
         "vegetacion-halonitrofila-anual-1310"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 83,
@@ -5260,7 +5104,8 @@
         "vegetacion-halonitrofila-anual-1310"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 84,
@@ -5306,7 +5151,8 @@
         "vegetacion-halonitrofila-anual-1310"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 85,
@@ -5352,7 +5198,8 @@
         "vegetacion-halonitrofila-anual-1310"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 86,
@@ -5446,7 +5293,8 @@
         "vegetacion-halonitrofila-anual-1310"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 88,
@@ -5492,7 +5340,8 @@
         "pastizales-salinos-mediterraneos-1410"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 89,
@@ -5690,7 +5539,8 @@
         "vegetacion-halonitrofila-anual-1310"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 93,
@@ -5838,7 +5688,8 @@
         "vegetacion-halonitrofila-anual-1310"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 96,
@@ -5880,7 +5731,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 97,
@@ -6046,7 +5898,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 101,
@@ -6316,7 +6169,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 107,
@@ -6358,7 +6212,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 108,
@@ -6400,7 +6255,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 109,
@@ -6490,7 +6346,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 111,
@@ -6574,7 +6431,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 113,
@@ -6618,7 +6476,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 114,
@@ -6660,7 +6519,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 115,
@@ -6702,7 +6562,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 116,
@@ -6744,7 +6605,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 117,
@@ -6786,7 +6648,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 118,
@@ -6828,7 +6691,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 119,
@@ -6966,7 +6830,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 122,
@@ -7006,7 +6871,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 123,
@@ -7322,7 +7188,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 130,
@@ -7412,7 +7279,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 132,
@@ -7456,7 +7324,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 133,
@@ -7624,7 +7493,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 137,
@@ -7666,7 +7536,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 138,
@@ -7710,7 +7581,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 139,
@@ -7842,7 +7714,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 142,
@@ -7884,7 +7757,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 143,
@@ -7926,7 +7800,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 144,
@@ -7968,7 +7843,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 145,
@@ -8286,7 +8162,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 152,
@@ -8480,7 +8357,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 156,
@@ -8520,7 +8398,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 157,
@@ -8562,7 +8441,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 158,
@@ -8604,7 +8484,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 159,
@@ -8690,7 +8571,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 161,
@@ -8732,7 +8614,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 162,
@@ -8776,7 +8659,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 163,
@@ -8866,7 +8750,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 165,
@@ -8908,7 +8793,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 166,
@@ -8950,7 +8836,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 167,
@@ -9040,7 +8927,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 169,
@@ -9124,7 +9012,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 171,
@@ -9166,7 +9055,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 172,
@@ -9208,7 +9098,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 173,
@@ -9250,7 +9141,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 174,
@@ -9394,7 +9286,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 177,
@@ -9436,7 +9329,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 178,
@@ -9630,7 +9524,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 182,
@@ -9672,7 +9567,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 183,
@@ -9714,7 +9610,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 184,
@@ -9756,7 +9653,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 185,
@@ -9798,7 +9696,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 186,
@@ -9842,7 +9741,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 187,
@@ -10196,7 +10096,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 195,
@@ -10236,7 +10137,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 196,
@@ -10278,7 +10180,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 197,
@@ -10320,7 +10223,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 198,
@@ -10362,7 +10266,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 199,
@@ -10576,7 +10481,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 204,
@@ -10768,7 +10674,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 208,
@@ -10900,7 +10807,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 211,
@@ -10942,7 +10850,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 212,
@@ -10984,7 +10893,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 213,
@@ -11028,7 +10938,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 214,
@@ -11070,7 +10981,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 215,
@@ -11112,7 +11024,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 216,
@@ -11202,7 +11115,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 218,
@@ -11244,7 +11158,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 219,
@@ -11418,7 +11333,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 223,
@@ -11460,7 +11376,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 224,
@@ -11502,7 +11419,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 225,
@@ -11738,7 +11656,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 230,
@@ -11832,7 +11751,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 232,
@@ -11916,7 +11836,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 234,
@@ -12472,6 +12393,58 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 970,
+      "visible": true
+    },
+    {
+      "id": 1,
+      "commonName": "Gaviota de Audouin",
+      "scientificName": "Larus audouinii",
+      "kingdom": "fauna",
+      "group": "Ave marina",
+      "habitat": "Islotes y costas mediterráneas; pesca en mar abierto cerca de la orilla",
+      "conservationStatus": "Vulnerable",
+      "description": "Gaviota mediterránea de tamaño medio, elegante y de aspecto más «limpio» que la patiamarilla, con el pico rojo coral anillado de negro y las patas verdosas oscuras. Pesca al vuelo rozando el agua, sobre todo de noche y de madrugada. Cría en colonias muy concentradas en islotes y salinas.",
+      "descriptionSource": null,
+      "tips": [
+        "Pico rojo coral con una banda negra cerca de la punta",
+        "Patas verde oscuro, no amarillas",
+        "Ojo oscuro que le da expresión suave"
+      ],
+      "seasonality": "Todo el año, con concentraciones en verano",
+      "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/611415320/original.jpg",
+      "imageAttribution": "Michael Bakker Paiva (CC BY 4.0) · GBIF",
+      "coordinates": null,
+      "rarityScore": 4,
+      "rarityBasis": {
+        "categoria": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "featured": true,
+      "source": "GBIF confirma su presencia con 926 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000175 (Salinas y Arenales de San Pedro del Pinatar), sección 3.2: población reproductora; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000175 (Salinas y Arenales de San Pedro del Pinatar), sección 3.2: población permanente; Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, que la cita como «Larus audouinii (=Ichthyaetus audouinii)» (eIDOS acepta el nombre de FUERA del paréntesis y da «Ichthyaetus audouinii» por sinónimo, al revés de lo que sugiere la notación de la norma); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": null,
+        "family": null,
+        "genus": "Larus"
+      },
+      "iucnGlobal": "VU (Vulnerable)",
+      "spainStatus": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; Ley 42/2007, Anexo IV",
+      "murciaStatus": "Vulnerable (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "reviewNote": null,
+      "eidosTaxonId": 14053,
+      "gbifSpeciesKey": 7406504,
+      "zepaSiteCode": "ES0000175",
+      "habitatIds": [],
+      "gbifOccurrences": 926,
       "visible": true
     },
     {
@@ -13210,7 +13183,8 @@
       "zepaSiteCode": "ES0000175",
       "habitatIds": [],
       "gbifOccurrences": 615,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 262,
@@ -13354,7 +13328,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 554,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 265,
@@ -14373,6 +14348,58 @@
       "visible": true
     },
     {
+      "id": 2,
+      "commonName": "Gaviota cabecinegra",
+      "scientificName": "Larus melanocephalus",
+      "kingdom": "fauna",
+      "group": "Ave marina",
+      "habitat": "Costas, playas, salinas y lagunas litorales",
+      "conservationStatus": "Protegida (LESRPE)",
+      "description": "Gaviota mediana de alas blanquecinas sin puntas negras, pico rojo coral y capucha negra completa en primavera. En vuelo destaca por sus primarias sin marcas oscuras, un rasgo que la separa de la reidora aun de lejos.",
+      "descriptionSource": null,
+      "tips": [
+        "Alas blancas sin puntas negras, muy pálidas en vuelo",
+        "Pico rojo intenso y grueso, con anillo ocular blanco",
+        "Capucha negra completa en primavera; mancha en la oreja en invierno"
+      ],
+      "seasonality": "Otoño e invierno, con paso en primavera",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Larus_melanocephalus_aka_Mediterranean_Gull_rare_guest_in_Sweden2.jpg?width=1280",
+      "imageAttribution": "Martin Olsson (mnemo on en/sv wikipedia and commons, martin@minimum… (CC BY-SA 3.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "featured": false,
+      "source": "GBIF confirma su presencia con 170 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000175 (Salinas y Arenales de San Pedro del Pinatar), sección 3.2: población reproductora; Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, que la cita como «Larus melanocephalus (=Ichthyaetus melanocephalus)» (eIDOS acepta el nombre de FUERA del paréntesis); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Charadriiformes",
+        "family": "Laridae",
+        "genus": "Larus"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011) · Anexo IV (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007)",
+      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "reviewNote": null,
+      "eidosTaxonId": 14050,
+      "gbifSpeciesKey": 8151548,
+      "zepaSiteCode": "ES0000175",
+      "habitatIds": [],
+      "gbifOccurrences": 170,
+      "visible": true
+    },
+    {
       "id": 287,
       "commonName": "Petirrojo europeo",
       "scientificName": "Erithacus rubecula",
@@ -14806,7 +14833,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 122,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 296,
@@ -14952,6 +14980,50 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 112,
+      "visible": true
+    },
+    {
+      "id": 3,
+      "commonName": "Grajilla occidental",
+      "scientificName": "Corvus monedula",
+      "kingdom": "fauna",
+      "group": "Ave",
+      "habitat": null,
+      "conservationStatus": "LC",
+      "description": "Ave de tamaño más modesto que grajas y cornejas, la grajilla luce un plumaje muy oscuro, que a cierta distancia parece negro. Vista de cerca, sin embargo, se aprecia una cierta tonalidad grisácea en algunas regiones del cuerpo, especialmente en el pecho y en la nuca, que es de un bello color ceniciento. El iris es muy claro, de un azul pálido, casi blanco. Es habitual que las grajillas se organicen en ruidosos bandos que sobrevuelan las rocas y los viejos edificios o que menudean por campos y pastizales en busca de alimento.",
+      "descriptionSource": null,
+      "tips": [],
+      "seasonality": "Todo el año",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D0%B0%D0%BB%D0%BA%D0%B0_(Corvus_monedula)%2C_%D0%A6%D0%B0%D1%80%D0%B8%D1%86%D1%8B%D0%BD%D0%BE.jpg?width=1280",
+      "imageAttribution": "Dion Art (CC BY-SA 4.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "featured": false,
+      "source": "GBIF confirma su presencia con 99 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Passeriformes",
+        "family": "Corvidae",
+        "genus": "Corvus"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "reviewNote": null,
+      "eidosTaxonId": 11769,
+      "gbifSpeciesKey": 6100954,
+      "zepaSiteCode": null,
+      "habitatIds": [],
+      "gbifOccurrences": 99,
       "visible": true
     },
     {
@@ -17102,7 +17174,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 346,
@@ -17572,7 +17645,8 @@
       "zepaSiteCode": "ES0000175",
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     }
   ]
 }

@@ -258,6 +258,21 @@
         }
       ]
     },
+    "Elymo elongati-Juncetum maritimi": {
+      "nombre": "Juncal de suelo salino",
+      "lectura": "Juncal denso de tallos rígidos y punzantes sobre suelos salados que se encharcan en invierno y se agrietan en verano, en el contacto entre el saladar y la tierra firme. Acompañan gramíneas altas de hoja dura y azulada. Es la banda que primero se pierde cuando se drena o se rellena un saladar, porque necesita a la vez la sal y el agua estacional.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Juncus maritimus",
+          "comun": "junco marítimo"
+        },
+        {
+          "cientifico": "Elymus elongatus",
+          "comun": "vallico"
+        }
+      ]
+    },
     "Erico mediterraneae-Salicetum pedicellatae": {
       "nombre": "Sauceda con brezo de agua",
       "lectura": "Banda estrecha de sauces a lo largo de cursos con agua todo el año, acompañada del brezo de agua, un arbusto que solo vive donde el suelo nunca llega a secarse del todo.",
@@ -288,6 +303,20 @@
         }
       ]
     },
+    "Erodio laciniati-Maresietum nanae": {
+      "nombre": "Pastizal anual de arenas removidas",
+      "lectura": "Otro césped de anuales de los claros arenosos, reconocible por los relojillos —hierbas de hoja recortada cuyo fruto es una punta larga que se enrosca al secarse y se clava sola en la arena— y por crucíferas enanas de flor lila. Como todos los pastizales efímeros de duna, ocupa el hueco entre las matas y desaparece en cuanto el sustrato se compacta.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Erodium laciniatum",
+          "comun": "relojillos"
+        },
+        {
+          "cientifico": "Maresia nana"
+        }
+      ]
+    },
     "Eryngio ilicifolii-Plantaginetum ovatae": {
       "nombre": "Pastizal anual de suelos margosos secos",
       "lectura": "Césped ralo de hierbas anuales sobre margas y suelos compactos de clima semiárido: germina con las lluvias de otoño, florece en primavera y desaparece antes del verano, dejando de pie los cardos espinosos secos como única señal de que estuvo allí.",
@@ -300,6 +329,20 @@
         {
           "cientifico": "Plantago ovata",
           "comun": "zaragatona"
+        }
+      ]
+    },
+    "Eryngio maritimi-Sporoboletum arenarii": {
+      "nombre": "Herbazal de la arena con cardo marítimo",
+      "lectura": "Herbazal ralo de la parte llana y baja de la playa, sobre la arena que el mar remueve en los temporales y abona con lo que arroja. Lo reconoce el cardo marítimo, de hojas azuladas, rígidas y espinosas y flores en cabezuela, entre céspedes de gramíneas rastreras. Vive en la franja que el paseo y la limpieza mecánica de playas borran primero.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Eryngium maritimum",
+          "comun": "cardo marítimo"
+        },
+        {
+          "cientifico": "Sporobolus arenarius"
         }
       ]
     },
@@ -326,6 +369,21 @@
         {
           "cientifico": "Avenula filifolia",
           "comun": "avenula"
+        }
+      ]
+    },
+    "Frankenio corymbosae-Arthrocnemetum macrostachyi": {
+      "nombre": "Almarjal con tomillo sapero",
+      "lectura": "Matorral halófilo de las orlas del saladar, algo menos encharcadas que el almarjal cerrado: matas suculentas de tallos articulados mezcladas con el tomillo sapero, una mata leñosa y menuda de hojas diminutas que expulsa la sal por unas glándulas y a menudo aparece escarchada de cristales blancos. Entre ellas asoman las siemprevivas.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Arthrocnemum macrostachyum",
+          "comun": "sosa jabonera"
+        },
+        {
+          "cientifico": "Frankenia corymbosa",
+          "comun": "tomillo sapero"
         }
       ]
     },
@@ -367,6 +425,36 @@
         {
           "cientifico": "Genista valentina",
           "comun": "aulaga"
+        }
+      ]
+    },
+    "Hedero helicis-Ulmetum minoris": {
+      "nombre": "Olmeda con hiedra",
+      "lectura": "Arboleda de olmos en fondos de barranco y vegas donde el suelo guarda humedad todo el año, con la hiedra trepando por los troncos y cubriendo el suelo a la sombra. Es la formación de ribera de los cauces que no llevan agua permanente, y en las sierras del interior queda reducida a rodales pequeños.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Hedera helix",
+          "comun": "hiedra"
+        },
+        {
+          "cientifico": "Ulmus minor",
+          "comun": "olmo"
+        }
+      ]
+    },
+    "Helianthemo marminorensis-Teucrietum dunensis": {
+      "nombre": "Tomillar sobre arena",
+      "lectura": "Tomillar bajo y aromático instalado sobre arenas litorales ya estabilizadas, con la zamarrilla de dunas y jarillas de flor amarilla o blanca que se abre por la mañana y se deshace al mediodía. Es un matorral de hoja pequeña y suelo pobre, propio de un clima seco y caluroso, y una de las últimas etapas del sistema dunar antes del enebral.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Teucrium dunense",
+          "comun": "zamarrilla de dunas"
+        },
+        {
+          "cientifico": "Helianthemum marminorense",
+          "comun": "tamarilla del Mar Menor"
         }
       ]
     },
@@ -609,6 +697,38 @@
         }
       ]
     },
+    "Loto cretici-Ammophiletum australis": {
+      "nombre": "Barronal de duna móvil",
+      "lectura": "Matas altas de barrón, una gramínea de hoja enrollada y punzante, plantadas sobre la cresta de las dunas que aún se mueven. Es la planta que construye la duna: retiene la arena que el viento le echa encima y crece hacia arriba a través de ella, así que el montículo sube mientras ella siga viva. Pisarla la mata, y sin ella la duna se deshace.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Ammophila arenaria",
+          "comun": "barrón"
+        },
+        {
+          "cientifico": "Lotus creticus"
+        }
+      ]
+    },
+    "Loto cretici-Crucianelletum maritimae": {
+      "nombre": "Matorral bajo de duna fijada",
+      "lectura": "Matorral rastrero y muy abierto sobre arena que ya no se mueve, algo por detrás del barronal. Domina la espigadilla de mar, de tallos tendidos con las hojas en verticilos apretados, y con ella crecen la zamarrilla de dunas y otras matas de porte bajo. El suelo queda a la vista entre unas y otras, y la costra que lo cubre tarda años en rehacerse si se rompe.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Crucianella maritima",
+          "comun": "espigadilla de mar"
+        },
+        {
+          "cientifico": "Teucrium dunense",
+          "comun": "zamarrilla de dunas"
+        },
+        {
+          "cientifico": "Lotus creticus"
+        }
+      ]
+    },
     "Lysimachio ephemeri-Holoschoenetum": {
       "nombre": "Juncal churrero de montaña",
       "lectura": "Juncal de zonas frescas de interior, con lisimaquia de espigas blancas entre las macollas, sobre suelos que no se secan ni en pleno verano.",
@@ -721,6 +841,20 @@
         }
       ]
     },
+    "Rhamno angustifoliae-Juniperetum turbinatae": {
+      "nombre": "Sabinar de duna",
+      "lectura": "Sabinas achaparradas creciendo sobre la propia arena, peinadas y recortadas por el viento marino hasta quedar más anchas que altas, a veces con las raíces al aire donde la duna se ha movido. Entre ellas se enredan arbustos espinosos de hoja estrecha. Crecen muy despacio: un ejemplar de porte mediano puede tener siglos, y por eso es de las comunidades litorales que peor se recuperan.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Juniperus turbinata",
+          "comun": "sabina de dunas"
+        },
+        {
+          "cientifico": "Rhamnus angustifolia"
+        }
+      ]
+    },
     "Rhamno borgiae-Teucrietum rivasii": {
       "nombre": "Roquedo con espino y zamarrilla",
       "lectura": "Comunidad de paredes calizas en la que las dos plantas que le dan nombre viven solo en un puñado de sierras y en ningún otro sitio del mundo.",
@@ -826,6 +960,29 @@
         }
       ]
     },
+    "Ruppion maritimae": {
+      "nombre": "Praderas sumergidas de aguas salobres",
+      "lectura": "Praderas de plantas acuáticas enteramente sumergidas, de hojas finas como hilos, que enraízan en el fondo fangoso de lagunas, charcas y canales de agua salobre —más salada que la dulce y menos que la del mar—. Se ven solo desde la orilla, como manchas oscuras bajo el agua. Sostienen la vida de esas aguas: dan refugio a alevines e invertebrados y alimento a las aves acuáticas.",
+      "rango": "alianza",
+      "nombradaPor": [
+        {
+          "cientifico": "Ruppia maritima"
+        },
+        {
+          "cientifico": "Ruppia cirrhosa"
+        }
+      ]
+    },
+    "Salicornietum emerici": {
+      "nombre": "Pastizal anual de salicornias",
+      "lectura": "Alfombra de plantas anuales carnosas y sin hojas, de pocos centímetros, que colonizan cada año el fango salino desnudo de las orillas y las cubetas que se secan. Empiezan verdes y acaban el verano rojas o anaranjadas, tiñendo el suelo. Al ser anuales desaparecen por completo en invierno y vuelven de semilla, así que su superficie cambia mucho de un año a otro.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Salicornia emerici"
+        }
+      ]
+    },
     "Salsolo kali-Cakiletum aegyptiacae": {
       "nombre": "Vegetación de la línea de marea",
       "lectura": "La franja de plantas anuales que germina sobre los restos que el mar deja en la playa: el rábano de mar, de flores lilas y hojas carnosas, y la barrilla pinchosa.",
@@ -856,6 +1013,21 @@
         }
       ]
     },
+    "Sarcocornietum alpini": {
+      "nombre": "Almarjal de sosa jabonera",
+      "lectura": "Matorral bajo de plantas suculentas sin hojas visibles, formadas por tallos carnosos articulados que parecen sartas de cuentas y que enrojecen a final de verano. Cubre los suelos más salinos y encharcados del saladar, donde casi ninguna otra planta prospera. La sal la almacenan dentro de esos tallos, y por eso están hinchados.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Sarcocornia perennis subsp. alpini",
+          "comun": "sosa jabonera"
+        },
+        {
+          "cientifico": "Arthrocnemum macrostachyum",
+          "comun": "sosa jabonera"
+        }
+      ]
+    },
     "Saturejo canescentis-Cistetum albidi": {
       "nombre": "Jaral con ajedrea",
       "lectura": "Matorral de jara blanca, de hoja aterciopelada y grandes flores rosas que parecen de papel arrugado, con ajedreas aromáticas entre medias. Ocupa terrenos degradados por el fuego o el pastoreo.",
@@ -879,6 +1051,21 @@
         {
           "cientifico": "Saxifraga latepetiolata",
           "comun": "saxífraga"
+        }
+      ]
+    },
+    "Saxifrago tridactylitae-Hornungietum petraeae": {
+      "nombre": "Pastizal efímero de repisas calizas",
+      "lectura": "Pastizal diminuto y de vida corta que ocupa en invierno la tierra suelta acumulada en repisas y rellanos de roca caliza. Son plantas de pocos centímetros que germinan con las primeras lluvias, florecen antes de la primavera y se secan enteras en cuanto aprieta el calor, de modo que la mancha desaparece del paisaje media parte del año.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Saxifraga tridactylites",
+          "comun": "saxifraga anual"
+        },
+        {
+          "cientifico": "Hornungia petraea",
+          "comun": "hornungia de roca"
         }
       ]
     },
@@ -965,6 +1152,20 @@
         {
           "cientifico": "Suaeda splendens",
           "comun": "sosa anual"
+        }
+      ]
+    },
+    "Suaedo spicatae-Salicornietum patulae": {
+      "nombre": "Pastizal anual de fangos que se secan",
+      "lectura": "Comunidad de plantas anuales carnosas sobre fangos salinos que se inundan una parte del año y se secan y agrietan el resto. A las salicornias se suman matillas de tallos tiernos y hojas cilíndricas. Vive donde el agua va y viene, de modo que un cambio en el régimen de inundación —un drenaje, un aporte de agua dulce— la sustituye por otra cosa en pocos años.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Salicornia patula"
+        },
+        {
+          "cientifico": "Suaeda spicata",
+          "comun": "matilla"
         }
       ]
     },
@@ -1058,6 +1259,21 @@
         }
       ]
     },
+    "Thymo piperellae-Hypericetum ericoidis": {
+      "nombre": "Comunidad de grietas con pebrella",
+      "lectura": "Matas leñosas y bajas agarradas a las grietas y cornisas de los paredones calizos, donde no llega a formarse suelo. Dominan un pinillo de hoja menuda y de flor amarilla y la pebrella, un tomillo aromático propio de las sierras entre Alicante, Valencia y el nordeste murciano.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Thymus piperella",
+          "comun": "pebrella"
+        },
+        {
+          "cientifico": "Hypericum ericoides",
+          "comun": "pinillo de oro"
+        }
+      ]
+    },
     "Trachelio coerulei-Adiantetum capilli-veneris": {
       "nombre": "Culantrillos de rezumadero",
       "lectura": "Cortina colgante de culantrillos de hoja fina y plantas de flor azul sobre rocas por las que el agua escurre sin parar. La cal que lleva el agua se va depositando sobre los tallos y con el tiempo forma una roca porosa y muy ligera.",
@@ -1070,6 +1286,19 @@
         {
           "cientifico": "Adiantum capillus-veneris",
           "comun": "culantrillo de pozo"
+        }
+      ]
+    },
+    "Triplachno nitentis-Silenetum ramosissimae": {
+      "nombre": "Pastizal efímero de los claros de arena",
+      "lectura": "Césped de plantas anuales diminutas que germina en los claros de arena tras las lluvias, florece y se seca en pocas semanas, y pasa el resto del año enterrado en forma de semilla. Durante casi todo el verano el sitio parece arena vacía. Es un hábitat que solo se ve entero unas semanas al año y que por eso se arrasa sin que nadie note que había algo.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Triplachne nitens"
+        },
+        {
+          "cientifico": "Silene ramosissima"
         }
       ]
     },
@@ -1096,51 +1325,6 @@
         {
           "cientifico": "Ziziphus lotus",
           "comun": "azufaifo, arto"
-        }
-      ]
-    },
-    "Saxifrago tridactylitae-Hornungietum petraeae": {
-      "nombre": "Pastizal efímero de repisas calizas",
-      "lectura": "Pastizal diminuto y de vida corta que ocupa en invierno la tierra suelta acumulada en repisas y rellanos de roca caliza. Son plantas de pocos centímetros que germinan con las primeras lluvias, florecen antes de la primavera y se secan enteras en cuanto aprieta el calor, de modo que la mancha desaparece del paisaje media parte del año.",
-      "rango": "asociación",
-      "nombradaPor": [
-        {
-          "cientifico": "Saxifraga tridactylites",
-          "comun": "saxifraga anual"
-        },
-        {
-          "cientifico": "Hornungia petraea",
-          "comun": "hornungia de roca"
-        }
-      ]
-    },
-    "Thymo piperellae-Hypericetum ericoidis": {
-      "nombre": "Comunidad de grietas con pebrella",
-      "lectura": "Matas leñosas y bajas agarradas a las grietas y cornisas de los paredones calizos, donde no llega a formarse suelo. Dominan un pinillo de hoja menuda y de flor amarilla y la pebrella, un tomillo aromático propio de las sierras entre Alicante, Valencia y el nordeste murciano.",
-      "rango": "asociación",
-      "nombradaPor": [
-        {
-          "cientifico": "Thymus piperella",
-          "comun": "pebrella"
-        },
-        {
-          "cientifico": "Hypericum ericoides",
-          "comun": "pinillo de oro"
-        }
-      ]
-    },
-    "Hedero helicis-Ulmetum minoris": {
-      "nombre": "Olmeda con hiedra",
-      "lectura": "Arboleda de olmos en fondos de barranco y vegas donde el suelo guarda humedad todo el año, con la hiedra trepando por los troncos y cubriendo el suelo a la sombra. Es la formación de ribera de los cauces que no llevan agua permanente, y en las sierras del interior queda reducida a rodales pequeños.",
-      "rango": "asociación",
-      "nombradaPor": [
-        {
-          "cientifico": "Hedera helix",
-          "comun": "hiedra"
-        },
-        {
-          "cientifico": "Ulmus minor",
-          "comun": "olmo"
         }
       ]
     }

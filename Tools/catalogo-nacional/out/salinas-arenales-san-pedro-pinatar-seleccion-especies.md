@@ -1,6 +1,6 @@
 # salinas-arenales-san-pedro-pinatar · selección de especies
 
-Generada el 2026-08-17. **355 aprobadas** (122 aves), 237 ya fichadas en otro espacio y 118 nuevas. 345 excluidas.
+Generada el 2026-08-17. **355 aprobadas** (125 aves), 237 ya fichadas en otro espacio y 118 nuevas. 345 excluidas.
 
 Atlas 2005 consultado: 296 especies características para los HIC de este espacio.
 
@@ -116,7 +116,7 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Charadrius alexandrinus* | Aves | 1023 | 10 | 4 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | cabo-cope-puntas-calnegre |
 | *Calidris pugnax* | Aves | 999 | 10 | 2 | observada_gbif, protegida, lista_oficial_sitio | calblanque-monte-cenizas-pena-aguila |
 | *Passer domesticus* | Aves | 970 | 10 | 1 | observada_gbif, anexo_normativo | — |
-| *Larus audouinii* | — | 926 | 10 | 4 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | cabo-cope-puntas-calnegre |
+| *Larus audouinii* | Aves | 926 | 10 | 4 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | cabo-cope-puntas-calnegre |
 | *Calidris alba* | Aves | 921 | 10 | 2 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | calblanque-monte-cenizas-pena-aguila |
 | *Hirundo rustica* | Aves | 905 | 10 | 2 | observada_gbif, protegida, anexo_normativo | sierra-de-el-carche |
 | *Calidris alpina* | Aves | 884 | 10 | 2 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | calblanque-monte-cenizas-pena-aguila |
@@ -158,7 +158,7 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Riparia riparia* | Aves | 204 | 6 | 2 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | calblanque-monte-cenizas-pena-aguila |
 | *Cisticola juncidis* | Aves | 186 | 10 | 2 | observada_gbif, protegida, anexo_normativo | — |
 | *Platalea leucorodia* | Aves | 180 | 10 | 2 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | calblanque-monte-cenizas-pena-aguila |
-| *Larus melanocephalus* | — | 170 | 10 | 2 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | calblanque-monte-cenizas-pena-aguila |
+| *Larus melanocephalus* | Aves | 170 | 10 | 2 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | calblanque-monte-cenizas-pena-aguila |
 | *Erithacus rubecula* | Aves | 156 | 10 | 2 | observada_gbif, protegida, anexo_normativo | monte-arabi |
 | *Larus fuscus* | Aves | 147 | 10 | 1 | observada_gbif, anexo_normativo, lista_oficial_sitio | calblanque-monte-cenizas-pena-aguila |
 | *Podiceps cristatus* | Aves | 145 | 10 | 2 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | calblanque-monte-cenizas-pena-aguila |
@@ -171,7 +171,7 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Streptopelia turtur* | Aves | 118 | 10 | 1 | observada_gbif, anexo_normativo, lista_oficial_sitio | cabo-cope-puntas-calnegre |
 | *Limosa lapponica* | Aves | 117 | 10 | 2 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | calblanque-monte-cenizas-pena-aguila |
 | *Ptyonoprogne rupestris* | Aves | 112 | 10 | 2 | observada_gbif, protegida, anexo_normativo | monte-arabi |
-| *Corvus monedula* | — | 99 | 3 | 1 | observada_gbif, anexo_normativo | sierra-de-salinas |
+| *Corvus monedula* | Aves | 99 | 3 | 1 | observada_gbif, anexo_normativo | sierra-de-salinas |
 | *Gallinago gallinago* | Aves | 84 | 6 | 1 | observada_gbif, anexo_normativo, lista_oficial_sitio | calblanque-monte-cenizas-pena-aguila |
 | *Numenius arquata* | Aves | 83 | 4 | 5 | observada_gbif, protegida, anexo_normativo | — |
 | *Chamaeleo chamaeleon* | Squamata | 73 | 10 | 2 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | calblanque-monte-cenizas-pena-aguila |
@@ -202,7 +202,7 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Pandion haliaetus* | Aves | 19 | 3 | 4 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | calblanque-monte-cenizas-pena-aguila |
 | *Pancratium maritimum* | Liliopsida | 18 | 10 | 1 | observada_gbif, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Mareca penelope* | Aves | 18 | 3 | 1 | observada_gbif, lista_oficial_sitio | calblanque-monte-cenizas-pena-aguila |
-| *Sarcocornia fruticosa* | — | 17 | 6 | 1 | observada_gbif, caracteristica, anexo_normativo | cabo-cope-puntas-calnegre |
+| *Sarcocornia fruticosa* | Magnoliopsida | 17 | 6 | 1 | observada_gbif, caracteristica, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Thymelaea hirsuta* | Magnoliopsida | 16 | 10 | 1 | observada_gbif, anexo_normativo | carrascoy-y-el-valle |
 | *Anas crecca* | Aves | 16 | 6 | 1 | observada_gbif, anexo_normativo, lista_oficial_sitio | calblanque-monte-cenizas-pena-aguila |
 | *Pistacia lentiscus* | Magnoliopsida | 15 | 10 | 1 | observada_gbif, anexo_normativo | cabo-cope-puntas-calnegre |
@@ -221,7 +221,7 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Merops apiaster* | Aves | 12 | 6 | 2 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | calblanque-monte-cenizas-pena-aguila |
 | *Oenanthe hispanica* | Aves | 10 | 6 | 2 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | cabo-cope-puntas-calnegre |
 | *Tringa glareola* | Aves | 10 | 4 | 2 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | calblanque-monte-cenizas-pena-aguila |
-| *Arthrocnemum macrostachyum* | — | 8 | 10 | 1 | observada_gbif, caracteristica, anexo_normativo | cabo-cope-puntas-calnegre |
+| *Arthrocnemum macrostachyum* | Magnoliopsida | 8 | 10 | 1 | observada_gbif, caracteristica, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Teucrium dunense* | Magnoliopsida | 8 | 10 | 1 | observada_gbif, caracteristica, anexo_normativo | — |
 | *Eryngium maritimum* | Magnoliopsida | 8 | 8 | 1 | observada_gbif, anexo_normativo | — |
 | *Lotus creticus* | Magnoliopsida | 8 | 9 | 1 | observada_gbif, anexo_normativo | cabo-cope-puntas-calnegre |
@@ -258,7 +258,7 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Asio flammeus* | Aves | 3 | 3 | 2 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | calblanque-monte-cenizas-pena-aguila |
 | *Ifloga spicata* | Magnoliopsida | 3 | 3 | 1 | observada_gbif, anexo_normativo | — |
 | *Helianthemum violaceum* | Magnoliopsida | 3 | 3 | 1 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
-| *Pseudorlaya pumila* | — | 2 | 5 | 1 | observada_gbif, anexo_normativo | cabo-cope-puntas-calnegre |
+| *Pseudorlaya pumila* | Magnoliopsida | 2 | 5 | 1 | observada_gbif, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Ononis ramosissima* | Magnoliopsida | 2 | 5 | 1 | observada_gbif, anexo_normativo | — |
 | *Plantago albicans* | Magnoliopsida | 2 | 5 | 1 | observada_gbif, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Juniperus oxycedrus* | Pinopsida | 2 | 6 | 1 | observada_gbif, protegida | calblanque-monte-cenizas-pena-aguila |
@@ -283,7 +283,7 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Ononis natrix* | Magnoliopsida | 1 | 5 | 1 | observada_gbif, anexo_normativo | carrascoy-y-el-valle |
 | *Calystegia soldanella* | Magnoliopsida | 1 | 5 | 1 | observada_gbif, anexo_normativo | — |
 | *Scirpoides holoschoenus* | Liliopsida | 1 | 5 | 1 | observada_gbif, anexo_normativo | carrascoy-y-el-valle |
-| *Stipa capensis* | — | 1 | 5 | 1 | observada_gbif, anexo_normativo | cabo-cope-puntas-calnegre |
+| *Stipa capensis* | Liliopsida | 1 | 5 | 1 | observada_gbif, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Sonchus oleraceus* | Magnoliopsida | 1 | 3 | 1 | observada_gbif, anexo_normativo | — |
 | *Senecio glaucus* | Magnoliopsida | 1 | 3 | 1 | observada_gbif, anexo_normativo | — |
 | *Plantago coronopus* | Magnoliopsida | 1 | 3 | 1 | observada_gbif, anexo_normativo | — |
