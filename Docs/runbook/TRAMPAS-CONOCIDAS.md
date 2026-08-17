@@ -154,9 +154,26 @@ Cada una costó una sesión de depuración. Léelas antes de repetirlas.
   público no autoriza a evadir el control, y además no funcionaría —el host del desafío también está
   fuera de la política de egreso—. **La ruta buena es el canal de datos abiertos**: `datos.gob.es`
   tiene API (`/apidata/`) y ahí está indexado el fichero de la CARM «Monumentos en la Región de
-  Murcia» (publicador `A14002961`), servido en json, csv y rdf desde `nexo.carm.es`. **Sin verificar
-  todavía si trae el campo de declaración BIC**: `nexo.carm.es` está fuera de la lista blanca y hay
-  que abrirlo en los ajustes del entorno.
+  Murcia» (publicador `A14002961`), servido en json, csv y rdf desde `nexo.carm.es`. Ya no trae
+  incógnitas: **no tiene campo de declaración BIC** (ver el punto de las tres puertas, más abajo) y
+  `nexo.carm.es` está abierto desde el 2026-08-17.
+  > **Para encontrarlo hay que paginar.** El publicador tiene **más de 600 datasets** y la API sirve
+  > 200 por página: «Monumentos en la Región de Murcia» está en la **tercera**, y buscarlo por
+  > `dataset/title/monumentos` devuelve los homónimos de otras diez administraciones y no éste.
+  > La distribución json es
+  > `https://nexo.carm.es/nexo/archivos/recursos/opendata/json/Monumentos.json` — en **https**, que
+  > el `accessURL` publicado va en http y por ahí el proxy responde «Host not in allowlist».
+- **El catálogo de monumentos de la CARM mezcla DOS convenciones de coordenada en el mismo fichero,
+  y una de ellas tiene los campos cambiados.** Los campos se llaman `Latitud` y `Longitud`, y:
+  · en unas filas `Latitud` trae la **longitud** y `Longitud` trae la **latitud** —«Yacimiento Romano
+    La Raya» viene como `Latitud: -0.7759098, Longitud: 37.8260702`—;
+  · en otras los dos traen **UTM 30N** en metros —«Molinos de Quintín y Calcetera», `Latitud:
+    4188427, Longitud: 695859`, que es la Y y la X—.
+  Usarlos como se llaman deja el monumento en mitad del Atlántico o a 4.000 km al norte, y **ninguna
+  de las dos formas falla ruidosamente**. La regla para leerlo: un valor de seis o siete cifras sin
+  signo es UTM y hay que reproyectar (`utmToLonLat` de `lib/shapefile.js`); si los dos valores están
+  entre −10 y 45, el que tenga signo negativo es la longitud, mande lo que mande el nombre del campo.
+  Comprobado el 2026-08-17 con point-in-polygon contra el límite de San Pedro del Pinatar.
 - **La fuente primaria de un BIC es el boletín, no el registro.** Un bien lo es **porque una norma lo
   declara**, y esa norma se publica en el BORM o en el BOE; el registro es un índice secundario de lo
   que el boletín ya publicó. `www.borm.es` está abierto y su endpoint
