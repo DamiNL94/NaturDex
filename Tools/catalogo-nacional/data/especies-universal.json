@@ -4284,7 +4284,8 @@
       "categoria": "Lista Roja de la Flora Vascular Española 2008: EN (En Peligro), criterio B1ab(i,iii,iv,v)c(ii,iii,iv)+2ab(i,iii,iv,v)c(ii,iii,iv)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Carduelis carduelis": {
     "commonName": "Jilguero europeo",
@@ -14500,7 +14501,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Melanitta_nigra_by_Henry_E._Dresser.jpg?width=1280",
     "imageAttribution": "Henry Eeles Dresser (Public domain) · Wikimedia Commons",
-    "eidosTaxonId": 13987
+    "eidosTaxonId": 13987,
+    "rarityBasis": null
   },
   "Melanocorypha calandra": {
     "commonName": "Calandria común",
@@ -16168,7 +16170,8 @@
     "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Olea_europaea_var._sylvestris_kz02.jpg?width=1280",
     "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 6645
+    "eidosTaxonId": 6645,
+    "rarityBasis": null
   },
   "Oloptum miliaceum": {
     "commonName": "Lastón",
@@ -20672,7 +20675,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Woodcock_earthworm.jpg?width=1280",
     "imageAttribution": "Ronald Slabke (CC BY-SA 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 12136
+    "eidosTaxonId": 12136,
+    "rarityBasis": null
   },
   "Scorpiurus muricatus": {
     "commonName": "Oreja de Liebre",

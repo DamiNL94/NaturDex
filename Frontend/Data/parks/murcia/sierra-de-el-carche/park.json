@@ -14140,7 +14140,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 15,
-      "visible": true
+      "visible": true,
+      "descriptionSource": null
     },
     {
       "id": 233,

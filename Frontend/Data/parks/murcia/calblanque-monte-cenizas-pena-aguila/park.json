@@ -32,7 +32,7 @@
         "Salsolo papillosae-Limonietum carthaginensis (Alcaraz, T.E. Díaz, Rivas-Martínez, P. Sánchez 1989) Peinado, Alcaraz & Martínez-Parras 1992",
         "Saturejo canescentis-Thymetum hyemalis Esteve 1973 corr. Alcaraz, T.E. Díaz, Rivas-Martínez & P. Sánchez 1989"
       ],
-      "description": "",
+      "description": "El matorral de las zonas más cálidas y secas, allí donde prácticamente no hiela: palmito, espino negro, lentisco, cornicales, bojas, albaidas y esparto sobre laderas pedregosas y llanos soleados. Es un matorral abierto, con suelo desnudo a la vista entre mata y mata, y con muchas especies compartidas con el norte de África. Aguanta sequías de meses y rebrota en cuanto llueve.",
       "coordinates": [
         37.598996,
         -0.792524
@@ -121,7 +121,7 @@
       "fitosociologia": [
         "Teucrio pseudochamaepityos-Brachypodietum ramosi O. Bolòs 1957"
       ],
-      "description": "",
+      "description": "Pastizales secos en los que conviven gramíneas vivaces de mata dura, como el lastón (Brachypodium retusum) o el esparto, con una multitud de plantas anuales diminutas que nacen con las lluvias y se secan antes del verano. En agosto parecen un erial pardo; en abril pueden reunir cuarenta especies distintas en un metro cuadrado. Esa riqueza escondida es la razón de que sea un hábitat prioritario.",
       "coordinates": [
         37.59912,
         -0.79162
@@ -211,7 +211,7 @@
         "Cosentinio bivalentis-Teucrietum freynii Rigual, Esteve & Rivas Goday 1962 corr. Alcaraz, T.E. Díaz, Rivas-Martínez & P. Sánchez 1989",
         "Lafuenteo rotundifoliae-Centaureetum saxicolae Rigual, Esteve & Rivas Goday 1963"
       ],
-      "description": "",
+      "description": "Paredes y cortados de roca caliza en los que la vegetación no vive sobre el suelo, sino dentro de las fisuras. Son plantas de raíz larguísima y crecimiento lentísimo, agarradas a la grieta, que aprovechan el agua que escurre por la pared. Los roquedos han quedado a salvo del arado y del ganado durante milenios, y por eso concentran una proporción altísima de especies que no existen en ningún otro lugar.",
       "coordinates": [
         37.600276,
         -0.784435
@@ -296,7 +296,7 @@
       "fitosociologia": [
         "Limonio cossoniani-Lycietum intricati Esteve 1973 corr. Alcaraz, P. Sánchez, De la Torre, Ríos & J. Alvarez 1991"
       ],
-      "description": "",
+      "description": "Roquedos del borde del mar, batidos por el viento y salpicados constantemente de sal. Las plantas viven agarradas a las grietas, con hojas gruesas o cerosas para no perder agua, y las más características son las siemprevivas (Limonium) y el hinojo marino. Muchas de esas siemprevivas viven solo en un tramo corto de costa y en ningún otro sitio del mundo.",
       "coordinates": [
         37.598408,
         -0.749428
@@ -322,7 +322,7 @@
       "fitosociologia": [
         "Arisaro simorrhini-Tetraclinidetum articulatae Rivas Goday & Rivas-Martínez in Rivas-Martínez 1975 (bosques de Tetraclinis)"
       ],
-      "description": "",
+      "description": "Bosques de ciprés de Cartagena (Tetraclinis articulata), una conífera norteafricana cuyas únicas poblaciones europeas están en el sureste ibérico. Tiene ramillas articuladas y aplanadas y conos leñosos de cuatro valvas que se abren como una flor de madera, y rebrota de cepa después de un incendio, cosa rara entre las coníferas. Su rareza y su área diminuta explican que sea un hábitat prioritario.",
       "coordinates": [
         37.596748,
         -0.835455
@@ -358,7 +358,7 @@
       "fitosociologia": [
         "Mayteno europaei-Periplocetum angustifoliae Rivas Goday & Esteve in Rivas Goday in Rivas Goday, Borja, Esteve, Galiano, Rigual & Rivas-Martínez 1960 corr. Rivas-Martínez 1975"
       ],
-      "description": "",
+      "description": "Espinares de azufaifo (Ziziphus lotus), matas hemisféricas de ramas entrelazadas y espinas ganchudas que forman islas de sombra sobre llanos áridos. Cada mata levanta un pequeño montículo de arena y hojarasca y guarda debajo humedad, semillas y fauna que fuera no sobreviviría. Es el único hábitat de clima casi desértico de Europa occidental, y por eso figura como prioritario.",
       "coordinates": [
         37.595685,
         -0.825131
@@ -439,7 +439,7 @@
       "fitosociologia": [
         "Rubio longifoliae-Quercetum rotundifoliae Costa, Peris & Figuerola 1983 (encinares)"
       ],
-      "description": "",
+      "description": "El bosque mediterráneo por excelencia: encinares y carrascales de hoja dura, pequeña y perenne, que aguantan tanto el calor del verano como las heladas del interior. Bajo los árboles crece un sotobosque denso de coscoja, lentisco, madroño, enebros y aromáticas, y en el suelo la bellota sostiene en otoño a jabalíes, palomas y arrendajos. Aclarado por el ser humano durante siglos, ha dado lugar a las dehesas.",
       "coordinates": [
         37.607756,
         -0.76611
@@ -482,7 +482,7 @@
         "Inulo crithmoidis-Tamaricetum boveanae Izco, Fernández-González & A. Molina 1984",
         "Rubo ulmifolii-Nerietum oleandri O. Bolòs 1956"
       ],
-      "description": "",
+      "description": "La vegetación leñosa de ramblas, arroyos y ríos de caudal irregular, que unos meses llevan agua y otros son un lecho de piedras: adelfares y tarayales. La adelfa (Nerium oleander), de hojas coriáceas y flores rosas, y los tarays (Tamarix), de ramillas finas y flores en espiga, resisten tanto las avenidas violentas como meses de sequía. Toda la adelfa es muy tóxica, incluidas hojas y ramas secas.",
       "coordinates": [
         37.604937,
         -0.738845
@@ -533,7 +533,7 @@
         "Elymo elongati-Juncetum maritimi Alcaraz, Garre, Peinado & Martínez-Parras 1986",
         "Holoschoenetum vulgaris Br.-Bl. ex Tchou 1948"
       ],
-      "description": "",
+      "description": "Praderas de juncos y gramíneas sobre suelos salinos que se encharcan en invierno y se resecan en verano, tierra adentro de las marismas y en el borde de saladares y ramblas salobres. La sal se concentra en la superficie al evaporarse el agua, de modo que solo prosperan plantas capaces de bombear agua contra ella. Forman un tapiz denso y verde que contrasta con los suelos desnudos de alrededor.",
       "coordinates": [
         37.604828,
         -0.73643
@@ -589,7 +589,7 @@
       "fitosociologia": [
         "Frankenio corymbosae-Arthrocnemetum macrostachyi Rivas-Martínez, Alcaraz, Belmonte, Cantó & Sánchez-Mata 1984"
       ],
-      "description": "",
+      "description": "Matorral bajo y carnoso de sosas y almajos (Sarcocornia, Arthrocnemum, Halocnemum) sobre suelos que se inundan de agua salada y luego se secan dejando costra de sal. Son matas de tallos gruesos y articulados, sin hojas aparentes, que almacenan agua y diluyen en ella la sal que absorben. En otoño viran a rojo, naranja y morado, y ese cambio de color es la señal más visible del saladar.",
       "coordinates": [
         37.605214,
         -0.737084
@@ -638,7 +638,7 @@
       "fitosociologia": [
         "Atriplici glaucae-Suaedetum pruinosae Rigual 1972"
       ],
-      "description": "",
+      "description": "Matorral de suelos salinos removidos y cargados de nitrógeno: bordes de camino y de cultivo, márgenes de rambla, corrales y escombreras viejas. Lo forman matas robustas de hoja gris o carnosa —orgazas, sosas, bojas y cambroneras— que rebrotan enseguida tras cualquier alteración. Aunque nace de terrenos trastocados, es vegetación propia de los ambientes áridos del sureste y a menudo el último refugio de plantas escasas.",
       "coordinates": [
         37.605214,
         -0.737084
@@ -687,7 +687,7 @@
       "fitosociologia": [
         "Limonio caesii-Lygeetum sparti Rivas-Martínez & Alcaraz in Alcaraz 1984"
       ],
-      "description": "",
+      "description": "Estepas de suelos salinos pero secos, sin encharcamiento permanente, en depresiones y llanos interiores de clima duro. Dominan el albardín (Lygeum spartum), una gramínea de matas separadas y hojas punzantes, y las siemprevivas (Limonium), que en verano cubren el suelo desnudo de flores diminutas rosas y violetas. Es un paisaje de aspecto pobre que concentra un número altísimo de plantas que no crecen en ningún otro ambiente.",
       "coordinates": [
         37.605214,
         -0.737084
@@ -736,7 +736,7 @@
       "fitosociologia": [
         "Cypero mucronati-Agropyretum juncei Kühnholtz ex Br.-Bl. 1933"
       ],
-      "description": "",
+      "description": "El primer relieve de arena de la playa, de apenas unos decímetros, que se forma donde una planta rastrera frena el viento y la arena se deposita a su alrededor. La construyen la grama de mar (Elymus farctus) y la juncia marina, capaces de crecer hacia arriba a medida que quedan enterradas. Es la duna naciente: si se pisa o se allana, todo el cordón dunar que hay detrás se queda sin recambio.",
       "coordinates": [
         37.603868,
         -0.733081
@@ -773,7 +773,7 @@
       "fitosociologia": [
         "Loto cretici-Ammophiletum australis Rivas-Martínez 1965 corr. Rivas-Martínez, T.E. Díaz, Fernández-González, Izco, Loidi, Lousa & Penas 2002"
       ],
-      "description": "",
+      "description": "El cordón dunar alto, de arena suelta y clara, que se levanta detrás de la playa. Lo sostiene el barrón (Ammophila arenaria), una gramínea de hojas enrolladas y punzantes que crece hacia arriba cuanta más arena la sepulta y teje bajo la superficie una red de rizomas que sujeta el montículo. Es la barrera natural que protege del temporal todo lo que queda tierra adentro.",
       "coordinates": [
         37.603868,
         -0.733081
@@ -810,7 +810,7 @@
       "fitosociologia": [
         "Triplachno nitentis-Silenetum ramosissimae Peinado, Martínez-Parras, Alcaraz, Garre & Cruz 1985"
       ],
-      "description": "",
+      "description": "Claros de arena entre el matorral dunar en los que, tras las lluvias, germina un césped efímero de plantas diminutas que florecen y se secan en pocas semanas. Pasan el resto del año como semilla enterrada, de modo que durante casi todo el verano el sitio parece arena vacía. Es un hábitat que solo se ve entero unas semanas al año, y por eso se destruye sin que nadie note que había algo.",
       "coordinates": [
         37.604351,
         -0.728663
@@ -836,7 +836,7 @@
       "fitosociologia": [
         "Salsolo kali-Cakiletum aegyptiacae Costa & Mansanet 1981"
       ],
-      "description": "",
+      "description": "La primera línea de vegetación de una playa: plantas anuales que germinan sobre los restos que deja la marea, aprovechando el poco alimento y la humedad que guarda esa franja de algas y madera. Son hierbas carnosas de vida corta, como el rábano de mar (Cakile maritima) o la barrilla pinchosa (Salsola kali), que completan su ciclo en una sola temporada. Desaparece por completo donde se limpia la arena con maquinaria.",
       "coordinates": [
         37.603868,
         -0.733081
@@ -873,7 +873,7 @@
       "fitosociologia": [
         "Loto cretici-Crucianelletum maritimae Alcaraz, T.E. Díaz, Rivas-Martínez & P. Sánchez 1989"
       ],
-      "description": "",
+      "description": "Dunas ya estabilizadas, donde la arena apenas se mueve y aparecen matas leñosas bajas, líquenes y un tapiz gris azulado de hoja pequeña. Es el paso intermedio entre la duna viva y el matorral: se reconoce porque el suelo deja de ser arena limpia y empieza a tener costra y materia orgánica. Se recupera muy despacio, así que una pisada abre un claro que tarda años en cerrarse.",
       "coordinates": [
         37.603868,
         -0.733081
@@ -910,7 +910,7 @@
       "fitosociologia": [
         "Sedetum micrantho-sediformis O. Bolòs & Masalles in O. Bolòs 1981"
       ],
-      "description": "",
+      "description": "Pastos abiertos sobre repisas y lanchas de roca caliza con apenas un dedo de tierra encima. Ahí solo prosperan plantas crasas de hojas gordas, como las uñas de gato (Sedum), y hierbas anuales minúsculas que nacen, florecen y mueren entre febrero y mayo. Ocupa superficies muy pequeñas y depende de que el suelo siga siendo escaso: en cuanto se acumula tierra, otras plantas lo desplazan.",
       "coordinates": [
         37.58748,
         -0.825459
@@ -928,7 +928,98 @@
       ]
     }
   ],
-  "pointsOfInterest": [],
+  "pointsOfInterest": [
+    {
+      "id": "salinas-del-rasall",
+      "name": "Salinas del Rasall",
+      "type": "Natural",
+      "description": "Salinas de agua marina en explotación tras el cordón dunar, en el extremo suroriental del parque. El plan de ordenación las distingue como Reserva Ambiental y describe sus tres piezas: las lagunas de almacenaje, las charcas calentadoras y los estanques de cristalización, rodeados de sectores de carrizal y saladar. Es una zona que conserva a la vez valores naturales y una función productiva, y por eso el plan permite seguir sacando sal mientras prohíbe entrar al recinto salinero a quien no trabaja en él: se observa desde las sendas señalizadas de fuera.",
+      "coordinates": [
+        37.60442,
+        -0.738615
+      ],
+      "image": null,
+      "source": "Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila (Decreto n.º 45/1995, de 26 de mayo; BORM n.º 152, de 3 de julio de 1995), artículos 51 y 52 (Reserva Ambiental). El Inventario Español de Lugares de Interés Geológico (IELIG, IGME) las recoge además dentro del LIG BEs001 «Playas de Calblanque y Salinas del Rasell», de interés principal geomorfológico. Coordenada aproximada: es el centro del recinto salinero cartografiado en OpenStreetMap (way/1240177113), no un punto medido, porque el elemento es una superficie.",
+      "approx": true,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "duna-fosil-de-calblanque",
+      "name": "Duna fósil de Calblanque",
+      "type": "Geológico",
+      "description": "Conjunto de dunas fósiles cementadas al sur de las salinas, entre éstas y el mar. El plan de ordenación les reserva una figura propia —Reserva Geomorfológica, la única del parque— por su singularidad y por lo que permiten leer de la evolución reciente de esta costa, además de por los elementos florísticos y faunísticos que albergan. Es la zona con el régimen más estricto del parque: solo se puede circular por las sendas y pasos habilitados, precisamente para no disgregar el arenisco.",
+      "coordinates": [
+        37.601026,
+        -0.738425
+      ],
+      "image": null,
+      "source": "Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila (Decreto n.º 45/1995, de 26 de mayo; BORM n.º 152, de 3 de julio de 1995), artículos 55 y 56 (Reserva Geomorfológica). El artículo 56 sitúa la reserva «inmediatamente al Sur de las Salinas de Calblanque», que es donde cae el elemento cartografiado en OpenStreetMap del que se toma la coordenada (way/1243264170, «Duna Fósil de Calblanque»): el plan nombra el paraje y no lo sitúa, así que la posición viene de OSM y es la del centro de la superficie, no un punto medido sobre el afloramiento.",
+      "approx": true,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "playa-de-calblanque",
+      "name": "Playa de Calblanque",
+      "type": "Natural",
+      "description": "La playa que da nombre al parque, de arena dorada y pendiente suave entre dos salientes rocosos. El inventario geológico explica la forma: la costa está labrada aquí sobre areniscas recientes y poco deformadas, y de ahí que predominen las playas tendidas en vez de los acantilados que cierran el parque por el este. Detrás del arenal quedan el cordón dunar y las salinas, de modo que en unos cientos de metros se pasa del agua a la duna móvil, de la duna al saladar y del saladar a la sierra.",
+      "coordinates": [
+        37.603709,
+        -0.729777
+      ],
+      "image": null,
+      "source": "Inventario Español de Lugares de Interés Geológico (IELIG, IGME), LIG BEs001 «Playas de Calblanque y Salinas del Rasell», de interés principal geomorfológico e intereses secundarios estratigráfico, tectónico y sedimentológico, consultado de primera mano en el servicio de mapas del IGME. Coordenada tomada del arenal cartografiado en OpenStreetMap (way/130546890), más precisa que el punto único con el que el IELIG representa el LIG entero.",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "costa-acantilada-de-punta-barriga-y-cala-cocon",
+      "name": "Costa acantilada de Punta Barriga y Cala Cocón",
+      "type": "Geológico",
+      "description": "El extremo oriental del parque cambia de carácter: aquí el sustrato ya no son areniscas recientes sino rocas metamórficas fuertemente tectonizadas, y la costa responde con acantilados de una veintena de metros y calas encajadas en vez de playas tendidas. Es el mismo litoral leído dos veces, y el contraste con la playa de Calblanque, a tres kilómetros, es la lección que el inventario geológico destaca del lugar.",
+      "coordinates": [
+        37.612858,
+        -0.718408
+      ],
+      "image": null,
+      "source": "Inventario Español de Lugares de Interés Geológico (IELIG, IGME), LIG BEs002 «Costa acantilada de Punta Barriga y Cala Cocón», de interés principal geomorfológico e intereses secundarios estratigráfico, tectónico y petrológico-geoquímico, consultado de primera mano en el servicio de mapas del IGME. Coordenada aproximada: es el punto único con el que el IELIG representa el LIG, que describe un tramo de costa y no un afloramiento concreto.",
+      "approx": true,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "calzada-de-portman",
+      "name": "Calzada de Portmán",
+      "type": "Arqueológico",
+      "description": "Tramo de calzada empedrada que subía desde la ensenada de Portmán —el Portus Magnus romano, puerto de salida del plomo y la plata de la sierra minera— hacia el interior del macizo. Está catalogada en la Carta Arqueológica de la Región de Murcia y el plan de ordenación del parque la recoge entre los elementos que su Catálogo de Elementos de Interés Singular debe incluir obligatoriamente. Hoy la cruza uno de los senderos del parque, así que se ve sin salirse del camino.",
+      "coordinates": [
+        37.591185,
+        -0.831643
+      ],
+      "image": null,
+      "source": "Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila (Decreto n.º 45/1995, de 26 de mayo; BORM n.º 152, de 3 de julio de 1995), artículo 19.1.a, que la enumera como «Calzada de Portmán (expte. 4/84)» entre los yacimientos catalogados por la Carta Arqueológica de la Región de Murcia en el ámbito del plan. Coordenada de la traza cartografiada en OpenStreetMap (way/196203039).",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "villa-romana-del-paturro",
+      "name": "Villa romana del Paturro",
+      "type": "Arqueológico",
+      "description": "Villa marítima romana sobre la ladera que mira a Portmán, con termas y estancias pavimentadas, ocupada entre los siglos I y IV. Es el único elemento del entorno del parque que el plan de ordenación cita ya como Bien de Interés Cultural declarado, y no como expediente pendiente: la declaración es de 1980. Da la medida de lo que fue esta costa cuando el Portus Magnus embarcaba el metal de la sierra.",
+      "coordinates": [
+        37.588302,
+        -0.83943
+      ],
+      "image": null,
+      "source": "Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila (Decreto n.º 45/1995, de 26 de mayo; BORM n.º 152, de 3 de julio de 1995), artículo 19.1.a, que lo enumera como «Huerto del Paturro (expte. declarado Bien de Interés Cultural. Orden 30-9-80; expte. 364/79)». Coordenada del recinto cartografiado en OpenStreetMap (way/291325184). **Cae 34,6 m FUERA del límite oficial** (§4.3.3): entra a propósito, dentro del margen de ~50 m, porque el plan del parque lo cataloga como elemento de su ámbito —que son 2.453 ha e incluye una franja de conexión alrededor del Parque Regional— y porque es un bien declarado, con protección y vigilancia, que es lo que lo distingue de los yacimientos que el mismo artículo enumera y que no se señalan aquí (§4.3.6).",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    }
+  ],
   "species": [
     {
       "id": 189,
@@ -1034,7 +1125,8 @@
         "encinares-de-quercus-9340"
       ],
       "gbifOccurrences": 44,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 2,
@@ -1383,7 +1475,8 @@
         "prados-calcareos-carsticos-6110"
       ],
       "gbifOccurrences": 11,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 8,
@@ -1615,7 +1708,8 @@
         "pastizales-salinos-mediterraneos-1410"
       ],
       "gbifOccurrences": 8,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 12,
@@ -1720,7 +1814,8 @@
         "bosques-de-tetraclinis-9570"
       ],
       "gbifOccurrences": 7,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 190,
@@ -1834,7 +1929,8 @@
         "vegetacion-anual-sobre-1210"
       ],
       "gbifOccurrences": 5,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 15,
@@ -2608,7 +2704,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 3,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 29,
@@ -2713,7 +2810,8 @@
         "encinares-de-quercus-9340"
       ],
       "gbifOccurrences": 3,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 31,
@@ -2821,7 +2919,8 @@
         "encinares-de-quercus-9340"
       ],
       "gbifOccurrences": 3,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 33,
@@ -2926,7 +3025,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 35,
@@ -3135,7 +3235,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 39,
@@ -3509,7 +3610,8 @@
         "pendientes-rocosas-calcicolas-8210"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 46,
@@ -4086,7 +4188,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 57,
@@ -4284,7 +4387,8 @@
         "vegetacion-anual-sobre-1210"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 61,
@@ -4385,7 +4489,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 63,
@@ -4434,7 +4539,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 64,
@@ -4581,7 +4687,8 @@
         "pastizales-salinos-mediterraneos-1410"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 67,
@@ -4634,7 +4741,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 68,
@@ -4738,7 +4846,8 @@
         "vegetacion-anual-sobre-1210"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 70,
@@ -4834,7 +4943,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 72,
@@ -4997,7 +5107,8 @@
         "pastizales-salinos-mediterraneos-1410"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 75,
@@ -5761,7 +5872,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 201,
@@ -6867,7 +6979,8 @@
       "zepaSiteCode": "ES0000260",
       "habitatIds": [],
       "gbifOccurrences": 21,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 100,
@@ -10843,7 +10956,8 @@
       "zepaSiteCode": "ES0000260",
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 185,
@@ -10927,7 +11041,8 @@
       "zepaSiteCode": "ES0000260",
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 187,

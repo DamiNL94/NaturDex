@@ -2605,7 +2605,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 4,
-      "visible": true
+      "visible": true,
+      "descriptionSource": null
     },
     {
       "id": 51,
