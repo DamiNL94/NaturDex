@@ -163,6 +163,44 @@ const CLASES_POR_DEFECTO = [
   // Vertebrados
   'Aves', 'Mammalia', 'Reptilia', 'Squamata', 'Testudines', 'Amphibia', 'Actinopterygii',
 ];
+
+/*
+ * EL MISMO ALCANCE, DICHO EN EL VOCABULARIO DE EIDOS.
+ *
+ * La lista de arriba son clases de GBIF, y eso deja fuera del filtro justo a los candidatos que la
+ * legislación aporta y GBIF no conoce: sin registro no hay `class`, y `fueraDelAlcance` no podía
+ * juzgarlos. El guardián se abría en silencio —`if (c.class && …)`— así que el candidato pasaba.
+ *
+ * Lo destapó Calblanque, cuyo formulario de la ZEPA Mar Menor (ES0000260) aporta invertebrados
+ * lagunares: la esponja *Tethya citrina*, el isópodo *Sphaeroma serratum*, los gasterópodos
+ * *Jujubinus* y los camarones *Crangon* y *Palaemon* entraban en el catálogo de un parque de sierra
+ * y arenales. Siete fichas, todas de nivel 1, todas fuera del alcance declarado del catálogo.
+ *
+ * EIDOS sí clasifica a esos taxones: su `taxonomicgroup` los llama «Invertebrados», y llama «Peces»
+ * a *Aphanius iberus* —que es la ÚNICA especie del formulario del propio LIC de Calblanque y sí
+ * entra— y «Plantas vasculares» a las cuatro plantas del mismo bloque. Es el mismo criterio de
+ * siempre —flora vascular y vertebrados— leído en el único vocabulario disponible para esas fichas.
+ */
+const GRUPOS_EIDOS_EN_ALCANCE = new Set([
+  'Plantas vasculares',
+  'Aves', 'Mamíferos', 'Reptiles', 'Anfibios', 'Peces',
+]);
+
+/**
+ * ¿Está el candidato fuera del alcance taxonómico del catálogo? Devuelve el motivo, o null.
+ * Prefiere la clase de GBIF, que es la que se ha usado siempre; cae al grupo de EIDOS cuando el
+ * candidato no tiene registro en GBIF, que es el hueco por el que se colaban los invertebrados.
+ */
+function fueraDelAlcance(clase, grupoEidos) {
+  if (TODAS_LAS_CLASES) return null;
+  if (clase) return CLASES.has(clase) ? null : `fuera del alcance del catálogo (clase ${clase})`;
+  if (grupoEidos) {
+    return GRUPOS_EIDOS_EN_ALCANCE.has(grupoEidos)
+      ? null
+      : `fuera del alcance del catálogo (grupo EIDOS ${grupoEidos}; sin registro en GBIF, que es de donde sale la clase)`;
+  }
+  return null;   // Ni GBIF ni EIDOS lo clasifican: no hay con qué juzgarlo, y no se inventa.
+}
 /*
  * La escotilla del nivel 3: aprueba lo que solo respalda GBIF, con el umbral de presencia de
  * siempre. Es el criterio que estuvo vigente hasta el 2026-08-16 y con el que se construyeron los
@@ -597,14 +635,27 @@ const cache = fs.existsSync(CACHE) ? readJson(CACHE) : {};
 async function resuelve(nombre, ccaa) {
   // La pausa va aquí y no en el llamante: solo hay que ser cortés con el IEPNB cuando de verdad se
   // sale a la red. Con la caché caliente, repetir la selección es instantáneo.
-  if (cache[nombre]) return cache[nombre];
+  //
+  // Pero una caché escrita por una versión anterior tiene la FORMA anterior, y servirla tal cual es
+  // un fallo en verde de manual: cuando se añadió `grupoEidos`, las entradas viejas lo devolvían
+  // `undefined` y el filtro de alcance volvía a abrirse solo para los candidatos documentales, que
+  // son justo los que ese campo venía a juzgar. Así que una entrada a la que le falte una clave que
+  // el código de hoy lee se considera caducada y se vuelve a pedir.
+  const enCache = cache[nombre];
+  if (enCache && 'grupoEidos' in enCache) return enCache;
   await sleep(eidos.THROTTLE_MS);
-  const r = { origen: null, normasRaw: [], nombreAceptadoEidos: null, taxonid: null, error: null };
+  const r = {
+    origen: null, normasRaw: [], nombreAceptadoEidos: null, taxonid: null, error: null,
+    grupoEidos: null,
+  };
   try {
     const t = await eidos.resolveTaxon(nombre);
     if (t.status !== 'no-encontrada') {
       r.taxonid = t.taxonid;
       r.origen = (t.taxon && t.taxon.origen) || null;
+      // El grupo taxonómico de EIDOS es el ÚNICO dato de alcance que tiene un candidato que entra
+      // solo por la legislación: sin registro en GBIF no hay `class`. Ver `fueraDelAlcance`.
+      r.grupoEidos = (t.taxon && t.taxon.taxonomicgroup) || null;
       if (t.status === 'sinonimo' && t.acceptedName) r.nombreAceptadoEidos = t.acceptedName;
     }
     if (r.taxonid) {
@@ -1062,8 +1113,9 @@ async function main() {
     }
     // Filtro 4 — alcance taxonómico del catálogo. Va antes que el de presencia porque no depende de
     // cuántas veces se haya visto: un microlepidóptero con mil registros sigue estando fuera.
-    if (!TODAS_LAS_CLASES && c.class && !CLASES.has(c.class)) {
-      excluidas.push({ ...ficha, motivo: `fuera del alcance del catálogo (clase ${c.class})` });
+    const motivoAlcance = fueraDelAlcance(c.class, r.grupoEidos);
+    if (motivoAlcance) {
+      excluidas.push({ ...ficha, motivo: motivoAlcance });
       continue;
     }
     // Filtro 3 bis — respaldo de SITIO para las aves. Va antes del de presencia porque para un ave

@@ -1,6 +1,6 @@
 # calblanque-monte-cenizas-pena-aguila · selección de especies
 
-Generada el 2026-08-17. **195 aprobadas** (108 aves), 103 ya fichadas en otro espacio y 92 nuevas. 596 excluidas.
+Generada el 2026-08-17. **188 aprobadas** (108 aves), 103 ya fichadas en otro espacio y 85 nuevas. 603 excluidas.
 
 Atlas 2005 consultado: 711 especies características para los HIC de este espacio.
 
@@ -44,8 +44,8 @@ Tramo 1–5 derivado **solo** de la categoría legal vigente; no interviene ning
 | 5 | En peligro de extinción · Extinguida | 4 | 8 |
 | 4 | Vulnerable · Sensible a la alteración de su hábitat | 7 | 25 |
 | 3 | De interés especial | 0 | 22 |
-| 2 | En régimen de protección especial (LESRPE) | 88 | 73 |
-| 1 | Sin figura de protección | 96 | 67 |
+| 2 | En régimen de protección especial (LESRPE) | 87 | 72 |
+| 1 | Sin figura de protección | 90 | 61 |
 | **≥ 4** | **candidatas a destacadas** | **11** | **33** |
 
 ## Figuras legales que no cuentan como protección
@@ -254,16 +254,9 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Porphyrio porphyrio porphyrio* | Aves | 0 | 0 | 1 | lista_oficial_sitio | — |
 | *Remiz pendulinus* | Aves | 0 | 0 | 2 | protegida, lista_oficial_sitio | — |
 | *Tringa glareola* | Aves | 0 | 0 | 2 | protegida, lista_oficial_sitio | — |
-| *Crangon crangon (Linnaeus, 1758)* | — | 0 | 0 | 1 | lista_oficial_sitio | — |
 | *Halocnemum strobilaceum* | — | 0 | 0 | 1 | caracteristica, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
-| *Jujubinus exasperatus (Pennant, 1777)* | — | 0 | 0 | 1 | lista_oficial_sitio | — |
-| *Jujubinus striatus (Linnaeus, 1758)* | — | 0 | 0 | 1 | lista_oficial_sitio | — |
 | *Maytenus senegalensis subsp. europaea* | — | 0 | 0 | 1 | caracteristica, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
 | *Merendera filifolia Cambess.* | — | 0 | 0 | 1 | caracteristica, protegida, lista_oficial_sitio | — |
-| *Mytilaster minimus (Poli, 1795)* | — | 0 | 0 | 1 | lista_oficial_sitio | — |
-| *Palaemon adspersus Rathke, 1837* | — | 0 | 0 | 1 | lista_oficial_sitio | — |
-| *Sphaeroma serratum (Fabricius, 1787)* | — | 0 | 0 | 1 | lista_oficial_sitio | — |
-| *Tethya citrina Sarà y Melone, 1965* | — | 0 | 0 | 2 | protegida, lista_oficial_sitio | — |
 | *Ziziphus lotus* | — | 0 | 0 | 1 | protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
 | *Aphanius iberus* | — | 0 | 0 | 5 | protegida, lista_oficial_sitio | — |
 
@@ -867,3 +860,10 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Motacilla flava ([excluding tschutschensis])* | Aves | 0 | 0 | nivel 1 sin resolver en EIDOS: el nombre que transcribe la fuente no existe en la Lista Patrón. Suele ser una errata de la norma o de la transcripción; se repara añadiendo `nombreCorregido` a su entrada de data/anexos-normativos.json, no cambiando el verbatim |
 | *Oenanthe oenanthe ([excluding seebohmi])* | Aves | 0 | 0 | nivel 1 sin resolver en EIDOS: el nombre que transcribe la fuente no existe en la Lista Patrón. Suele ser una errata de la norma o de la transcripción; se repara añadiendo `nombreCorregido` a su entrada de data/anexos-normativos.json, no cambiando el verbatim |
 | *Sylvia cantillans ([excluding subalpina])* | Aves | 0 | 0 | nivel 1 sin resolver en EIDOS: el nombre que transcribe la fuente no existe en la Lista Patrón. Suele ser una errata de la norma o de la transcripción; se repara añadiendo `nombreCorregido` a su entrada de data/anexos-normativos.json, no cambiando el verbatim |
+| *Crangon crangon (Linnaeus, 1758)* | — | 0 | 0 | fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase) |
+| *Jujubinus exasperatus (Pennant, 1777)* | — | 0 | 0 | fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase) |
+| *Jujubinus striatus (Linnaeus, 1758)* | — | 0 | 0 | fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase) |
+| *Mytilaster minimus (Poli, 1795)* | — | 0 | 0 | fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase) |
+| *Palaemon adspersus Rathke, 1837* | — | 0 | 0 | fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase) |
+| *Sphaeroma serratum (Fabricius, 1787)* | — | 0 | 0 | fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase) |
+| *Tethya citrina Sarà y Melone, 1965* | — | 0 | 0 | fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase) |

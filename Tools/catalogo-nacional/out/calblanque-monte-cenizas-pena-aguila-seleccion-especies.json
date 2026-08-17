@@ -2,11 +2,11 @@
   "_nota": "Selección de especies para la Capa 3 de Calblanque, Monte de las Cenizas y Peña del Águila. NO es park.json: es la lista aprobada y su procedencia. ORDEN DE PRIORIDAD DE LAS FUENTES: primero la LEGISLACIÓN, después EIDOS, y GBIF solo para corroborar. Nivel 1 — el anexo normativo del espacio (PORN/PRUG/decreto de declaración, evidencia `anexo_normativo`) y el Formulario Normalizado de Datos del sitio Red Natura 2000 (secciones 3.2 y 3.3, evidencia `lista_oficial_sitio`): son las únicas fuentes que afirman que la especie forma parte de ESTE espacio y entran SIN exigirles constancia en GBIF. Nivel 2 — figura legal de EIDOS y especies características del HIC según el Atlas 2005 (`caracteristica`): dicen qué es el taxón, no que esté aquí, así que necesitan al menos una ocurrencia de GBIF dentro de los polígonos que lo corrobore. Nivel 3 — solo GBIF: NO ENTRA; un avistamiento suelto no distingue lo característico del olivo de un bancal abandonado. Autoctonía: se excluye todo lo que la Lista Patrón del IEPNB marca como «Especie no nativa». Se excluye el CEEEI (RD 630/2013): es el catálogo de especies exóticas INVASORAS, no una figura de protección, y tampoco cuentan los anexos forestales (RD 159/2022, RD 289/2003) ni el anexo de explotación de la Ley 42/2007. Alcance taxonómico: flora vascular y vertebrados, que es lo que cataloga NaturDex — clases admitidas: Magnoliopsida, Liliopsida, Pinopsida, Gnetopsida, Polypodiopsida, Lycopodiopsida, Aves, Mammalia, Reptilia, Squamata, Testudines, Amphibia, Actinopterygii. Lo que el nivel 1 enumera y GBIF no confirma se aprueba igual y queda listado en `anexo_sin_constancia` y `sitio_sin_constancia`: entra en el catálogo y hay que contrastarlo en campo. (3 bis) Las AVES no entran por el filtro de presencia —vuelan, sus ocurrencias caen dentro de cualquier polígono y por eso su ficha se escribe sin `habitatIds`—: exigen respaldo de sitio (formulario oficial del sitio o anexo normativo), y GBIF queda como confirmación. `rarityScore` (1–5) se deriva únicamente de la categoría legal ESTATAL más grave, con la norma que la justifica en `rarityBasis`; no interviene ninguna señal de abundancia. Generada por Tools/catalogo-nacional/build-species-seleccion.js.",
   "park": "calblanque-monte-cenizas-pena-aguila",
   "generado": "2026-08-17",
-  "total": 195,
+  "total": 188,
   "aves": 108,
   "reutilizables": 103,
-  "nuevas": 92,
-  "excluidas": 596,
+  "nuevas": 85,
+  "excluidas": 603,
   "anexo": {
     "consultado": false
   },
@@ -33,15 +33,15 @@
   },
   "aves_puerta": "respaldo de sitio",
   "rareza": {
-    "1": 96,
-    "2": 88,
+    "1": 90,
+    "2": 87,
     "3": 0,
     "4": 7,
     "5": 4
   },
   "rareza_local": {
-    "1": 67,
-    "2": 73,
+    "1": 61,
+    "2": 72,
     "3": 22,
     "4": 25,
     "5": 8
@@ -6470,34 +6470,6 @@
       "nivelDeFuente": 1
     },
     {
-      "scientificName": "Crangon crangon (Linnaeus, 1758)",
-      "class": null,
-      "gbifOccurrences": 0,
-      "habitats": 0,
-      "evidence": [
-        "lista_oficial_sitio"
-      ],
-      "yaFichadaEn": null,
-      "normas": [],
-      "rarityScore": 1,
-      "rarityBasis": null,
-      "rarityLocal": 1,
-      "rarityLocalBasis": null,
-      "origen": "Especie nativa",
-      "listaOficialSitio": [
-        {
-          "citadaComo": "Crangon crangon (Linnaeus, 1758)",
-          "siteCode": "ES0000260",
-          "siteName": "Mar Menor",
-          "seccion": "3.3",
-          "tipoPoblacion": null,
-          "categoriaPoblacion": "muy escasa"
-        }
-      ],
-      "eidosTaxonId": 18885,
-      "nivelDeFuente": 1
-    },
-    {
       "scientificName": "Halocnemum strobilaceum",
       "class": null,
       "gbifOccurrences": 0,
@@ -6538,62 +6510,6 @@
       "sinonimosFusionados": [
         "Halocnemum strobilaceum (Pall.) M. Bieb."
       ],
-      "nivelDeFuente": 1
-    },
-    {
-      "scientificName": "Jujubinus exasperatus (Pennant, 1777)",
-      "class": null,
-      "gbifOccurrences": 0,
-      "habitats": 0,
-      "evidence": [
-        "lista_oficial_sitio"
-      ],
-      "yaFichadaEn": null,
-      "normas": [],
-      "rarityScore": 1,
-      "rarityBasis": null,
-      "rarityLocal": 1,
-      "rarityLocalBasis": null,
-      "origen": "Especie nativa",
-      "listaOficialSitio": [
-        {
-          "citadaComo": "Jujubinus exasperatus (Pennant, 1777)",
-          "siteCode": "ES0000260",
-          "siteName": "Mar Menor",
-          "seccion": "3.3",
-          "tipoPoblacion": null,
-          "categoriaPoblacion": "muy escasa"
-        }
-      ],
-      "eidosTaxonId": 22324,
-      "nivelDeFuente": 1
-    },
-    {
-      "scientificName": "Jujubinus striatus (Linnaeus, 1758)",
-      "class": null,
-      "gbifOccurrences": 0,
-      "habitats": 0,
-      "evidence": [
-        "lista_oficial_sitio"
-      ],
-      "yaFichadaEn": null,
-      "normas": [],
-      "rarityScore": 1,
-      "rarityBasis": null,
-      "rarityLocal": 1,
-      "rarityLocalBasis": null,
-      "origen": "Especie nativa",
-      "listaOficialSitio": [
-        {
-          "citadaComo": "Jujubinus striatus (Linnaeus, 1758)",
-          "siteCode": "ES0000260",
-          "siteName": "Mar Menor",
-          "seccion": "3.3",
-          "tipoPoblacion": null,
-          "categoriaPoblacion": "muy escasa"
-        }
-      ],
-      "eidosTaxonId": 22333,
       "nivelDeFuente": 1
     },
     {
@@ -6679,133 +6595,6 @@
       ],
       "nombreAceptadoEidos": "Colchicum filifolium (Cambess.) Stef.",
       "eidosTaxonId": 6169,
-      "nivelDeFuente": 1
-    },
-    {
-      "scientificName": "Mytilaster minimus (Poli, 1795)",
-      "class": null,
-      "gbifOccurrences": 0,
-      "habitats": 0,
-      "evidence": [
-        "lista_oficial_sitio"
-      ],
-      "yaFichadaEn": null,
-      "normas": [],
-      "rarityScore": 1,
-      "rarityBasis": null,
-      "rarityLocal": 1,
-      "rarityLocalBasis": null,
-      "origen": "Especie nativa",
-      "listaOficialSitio": [
-        {
-          "citadaComo": "Mytilaster minimus (Poli, 1795)",
-          "siteCode": "ES0000260",
-          "siteName": "Mar Menor",
-          "seccion": "3.3",
-          "tipoPoblacion": null,
-          "categoriaPoblacion": "muy escasa"
-        }
-      ],
-      "eidosTaxonId": 21359,
-      "nivelDeFuente": 1
-    },
-    {
-      "scientificName": "Palaemon adspersus Rathke, 1837",
-      "class": null,
-      "gbifOccurrences": 0,
-      "habitats": 0,
-      "evidence": [
-        "lista_oficial_sitio"
-      ],
-      "yaFichadaEn": null,
-      "normas": [],
-      "rarityScore": 1,
-      "rarityBasis": null,
-      "rarityLocal": 1,
-      "rarityLocalBasis": null,
-      "origen": "Especie nativa",
-      "listaOficialSitio": [
-        {
-          "citadaComo": "Palaemon adspersus Rathke, 1837",
-          "siteCode": "ES0000260",
-          "siteName": "Mar Menor",
-          "seccion": "3.3",
-          "tipoPoblacion": null,
-          "categoriaPoblacion": "muy escasa"
-        }
-      ],
-      "eidosTaxonId": 19107,
-      "nivelDeFuente": 1
-    },
-    {
-      "scientificName": "Sphaeroma serratum (Fabricius, 1787)",
-      "class": null,
-      "gbifOccurrences": 0,
-      "habitats": 0,
-      "evidence": [
-        "lista_oficial_sitio"
-      ],
-      "yaFichadaEn": null,
-      "normas": [],
-      "rarityScore": 1,
-      "rarityBasis": null,
-      "rarityLocal": 1,
-      "rarityLocalBasis": null,
-      "origen": "Especie nativa",
-      "listaOficialSitio": [
-        {
-          "citadaComo": "Sphaeroma serratum (Fabricius, 1787)",
-          "siteCode": "ES0000260",
-          "siteName": "Mar Menor",
-          "seccion": "3.3",
-          "tipoPoblacion": null,
-          "categoriaPoblacion": "escasa"
-        }
-      ],
-      "eidosTaxonId": 19586,
-      "nivelDeFuente": 1
-    },
-    {
-      "scientificName": "Tethya citrina Sarà y Melone, 1965",
-      "class": null,
-      "gbifOccurrences": 0,
-      "habitats": 0,
-      "evidence": [
-        "protegida",
-        "lista_oficial_sitio"
-      ],
-      "yaFichadaEn": null,
-      "normas": [
-        {
-          "ambito": "España",
-          "norma": "Orden AAA/75/2012, de 12 de enero, por la que se incluyen distintas especies en el Listado de Especies Silvestres en Régimen de Protección Especial para su adaptación al Anexo II del Protocolo sobre zonas especialmente protegidas y la diversidad biológica en el Mediterráneo. BOE 18, de 21 de enero de 2012",
-          "categoria": "LESRPE: En régimen de protección especial"
-        }
-      ],
-      "rarityScore": 2,
-      "rarityBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Orden AAA/75/2012, de 12 de enero, por la que se incluyen distintas especies en el Listado de Especies Silvestres en Régimen de Protección Especial para su adaptación al Anexo II del Protocolo sobre zonas especialmente protegidas y la diversidad biológica en el Mediterráneo. BOE 18, de 21 de enero de 2012",
-        "ambito": "España"
-      },
-      "rarityLocal": 2,
-      "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Orden AAA/75/2012, de 12 de enero, por la que se incluyen distintas especies en el Listado de Especies Silvestres en Régimen de Protección Especial para su adaptación al Anexo II del Protocolo sobre zonas especialmente protegidas y la diversidad biológica en el Mediterráneo. BOE 18, de 21 de enero de 2012",
-        "ambito": "España"
-      },
-      "origen": "Especie nativa",
-      "listaOficialSitio": [
-        {
-          "citadaComo": "Tethya citrina Sarà y Melone, 1965",
-          "siteCode": "ES0000260",
-          "siteName": "Mar Menor",
-          "seccion": "3.3",
-          "tipoPoblacion": null,
-          "categoriaPoblacion": "presente"
-        }
-      ],
-      "eidosTaxonId": 34209,
       "nivelDeFuente": 1
     },
     {
@@ -18805,6 +18594,217 @@
       ],
       "nivelDeFuente": 1,
       "motivo": "nivel 1 sin resolver en EIDOS: el nombre que transcribe la fuente no existe en la Lista Patrón. Suele ser una errata de la norma o de la transcripción; se repara añadiendo `nombreCorregido` a su entrada de data/anexos-normativos.json, no cambiando el verbatim"
+    },
+    {
+      "scientificName": "Crangon crangon (Linnaeus, 1758)",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": null,
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Crangon crangon (Linnaeus, 1758)",
+          "siteCode": "ES0000260",
+          "siteName": "Mar Menor",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": "muy escasa"
+        }
+      ],
+      "eidosTaxonId": 18885,
+      "motivo": "fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase)"
+    },
+    {
+      "scientificName": "Jujubinus exasperatus (Pennant, 1777)",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": null,
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Jujubinus exasperatus (Pennant, 1777)",
+          "siteCode": "ES0000260",
+          "siteName": "Mar Menor",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": "muy escasa"
+        }
+      ],
+      "eidosTaxonId": 22324,
+      "motivo": "fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase)"
+    },
+    {
+      "scientificName": "Jujubinus striatus (Linnaeus, 1758)",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": null,
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Jujubinus striatus (Linnaeus, 1758)",
+          "siteCode": "ES0000260",
+          "siteName": "Mar Menor",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": "muy escasa"
+        }
+      ],
+      "eidosTaxonId": 22333,
+      "motivo": "fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase)"
+    },
+    {
+      "scientificName": "Mytilaster minimus (Poli, 1795)",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": null,
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Mytilaster minimus (Poli, 1795)",
+          "siteCode": "ES0000260",
+          "siteName": "Mar Menor",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": "muy escasa"
+        }
+      ],
+      "eidosTaxonId": 21359,
+      "motivo": "fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase)"
+    },
+    {
+      "scientificName": "Palaemon adspersus Rathke, 1837",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": null,
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Palaemon adspersus Rathke, 1837",
+          "siteCode": "ES0000260",
+          "siteName": "Mar Menor",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": "muy escasa"
+        }
+      ],
+      "eidosTaxonId": 19107,
+      "motivo": "fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase)"
+    },
+    {
+      "scientificName": "Sphaeroma serratum (Fabricius, 1787)",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": null,
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Sphaeroma serratum (Fabricius, 1787)",
+          "siteCode": "ES0000260",
+          "siteName": "Mar Menor",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": "escasa"
+        }
+      ],
+      "eidosTaxonId": 19586,
+      "motivo": "fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase)"
+    },
+    {
+      "scientificName": "Tethya citrina Sarà y Melone, 1965",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Orden AAA/75/2012, de 12 de enero, por la que se incluyen distintas especies en el Listado de Especies Silvestres en Régimen de Protección Especial para su adaptación al Anexo II del Protocolo sobre zonas especialmente protegidas y la diversidad biológica en el Mediterráneo. BOE 18, de 21 de enero de 2012",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Orden AAA/75/2012, de 12 de enero, por la que se incluyen distintas especies en el Listado de Especies Silvestres en Régimen de Protección Especial para su adaptación al Anexo II del Protocolo sobre zonas especialmente protegidas y la diversidad biológica en el Mediterráneo. BOE 18, de 21 de enero de 2012",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Orden AAA/75/2012, de 12 de enero, por la que se incluyen distintas especies en el Listado de Especies Silvestres en Régimen de Protección Especial para su adaptación al Anexo II del Protocolo sobre zonas especialmente protegidas y la diversidad biológica en el Mediterráneo. BOE 18, de 21 de enero de 2012",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Tethya citrina Sarà y Melone, 1965",
+          "siteCode": "ES0000260",
+          "siteName": "Mar Menor",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "eidosTaxonId": 34209,
+      "motivo": "fuera del alcance del catálogo (grupo EIDOS Invertebrados; sin registro en GBIF, que es de donde sale la clase)"
     }
   ]
 }
