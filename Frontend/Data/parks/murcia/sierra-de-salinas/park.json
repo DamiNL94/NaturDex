@@ -5047,7 +5047,8 @@
       "zepaSiteCode": "ES0000457",
       "habitatIds": [],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "descriptionSource": null
     },
     {
       "id": 99,

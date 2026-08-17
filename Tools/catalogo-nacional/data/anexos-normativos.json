@@ -4475,6 +4475,185 @@
           "nota": "Errata de la tabla: se lee «radhamanthus» por rhadamanthus."
         }
       ]
+    },
+    "calblanque-monte-cenizas-pena-aguila": {
+      "fuente": {
+        "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+        "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+        "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+        "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies, cada una con su nombre castellano al lado, que es lo que las desambigua). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a evaluación de impacto (I) y a autorización (II), límites del Parque Regional (III) y cartografía.",
+        "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+        "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+        "consultado": "2026-08-17",
+        "nota": "Transcrito de un ESCANEO LEGIBLE del boletín, que sustituye a la extracción OCR con la que se hizo la primera versión de esta entrada. Importa decirlo porque cambia lo que se le atribuye a la norma: la capa de texto del PDF que sirve `/services/boletin/…` está muy dañada («Meles rrteles», «Martes ji)in(i», «Whitania frutescen s») y la primera transcripción reparó 24 nombres, de los cuales 17 eran daño de la digitalización y no erratas del PORN — la norma imprime bien «Chamaerops humilis», «Ulmus minor», «Arbutus unedo», «Ziziphus lotus», «Tringa totanus» o «Meles meles». Hoy el verbatim es lo que imprime el boletín y solo CINCO entradas llevan `nombreCorregido`, comprobadas una a una contra el backbone de GBIF: tres erratas de imprenta («Phoenix dactyliphera», «Juniperus phoenicia», «Whitania frutescens»), una grafía sin la h moderna («Limonium cartaginensis») y un género en desuso («Aethechinus algirus»). El resto resuelve EXACT por sí solo, incluidos los que GBIF da por sinónimo, que el pipeline ya sabe seguir. Dos entradas de flora citan un género («Ephedra sppl.», «Rhamnus sppl.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d. El Artículo 14 enumera HÁBITATS protegidos, no especies, y cita como prioritarios las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, los pastizales mediterráneos xerofíticos anuales y vivaces y los bosques de Tetraclinis articulata: coherente con lo que el Atlas cartografía aquí. El Artículo 11 confirma la extensión del ámbito, 2.453 ha en Cartagena y La Unión."
+      },
+      "especies": [
+        {
+          "scientificName": "Tetraclinis articulata",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Chamaerops humilis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Ulmus minor",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Maytenus senegalensis",
+          "grupo": "Flora",
+          "nota": "GBIF la da por sinónimo de Gymnosporia senegalensis, que es el nombre aceptado hoy."
+        },
+        {
+          "scientificName": "Caralluma europaea",
+          "grupo": "Flora",
+          "nota": "GBIF la da por sinónimo de Ceropegia europaea."
+        },
+        {
+          "scientificName": "Erica arborea",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Limonium cartaginensis",
+          "grupo": "Flora",
+          "nota": "La norma escribe «cartaginensis», sin la h y con desinencia masculina; GBIF solo la resuelve por aproximación.",
+          "nombreCorregido": "Limonium carthaginense"
+        },
+        {
+          "scientificName": "Phoenix dactyliphera",
+          "grupo": "Flora",
+          "nota": "Errata de imprenta de la norma: «dactyliphera» por dactylifera.",
+          "nombreCorregido": "Phoenix dactylifera"
+        },
+        {
+          "scientificName": "Pistacia lentiscus",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Juniperus oxycedrus",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Juniperus phoenicia",
+          "grupo": "Flora",
+          "nota": "Errata de imprenta de la norma: «phoenicia» por phoenicea.",
+          "nombreCorregido": "Juniperus phoenicea"
+        },
+        {
+          "scientificName": "Ephedra sppl.",
+          "grupo": "Flora",
+          "nota": "La norma cita el GÉNERO, no una especie. No se da de alta ninguna especie por esta entrada: un género no identifica un taxón del catálogo."
+        },
+        {
+          "scientificName": "Quercus rotundifolia",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Quercus coccifera",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Arbutus unedo",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Rhamnus sppl.",
+          "grupo": "Flora",
+          "nota": "La norma cita el GÉNERO, no una especie. No se da de alta ninguna especie por esta entrada."
+        },
+        {
+          "scientificName": "Olea europaea sylvestris",
+          "grupo": "Flora",
+          "nota": "La norma escribe el trinomio sin «subsp.». Es el acebuche, no el olivo cultivado. EIDOS no conoce esa grafía —devuelve cero filas— y sí la que lleva «subsp.», así que la corrección es la que permite que el respaldo documental llegue a la ficha; GBIF sí resuelve las dos.",
+          "nombreCorregido": "Olea europaea subsp. sylvestris"
+        },
+        {
+          "scientificName": "Periploca angustifolia",
+          "grupo": "Flora",
+          "nota": "GBIF la da por sinónimo de Periploca laevigata, que es el nombre aceptado hoy."
+        },
+        {
+          "scientificName": "Ziziphus lotus",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Lycium intricatum",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Whitania frutescens",
+          "grupo": "Flora",
+          "nota": "Errata de imprenta de la norma: «Whitania» por Withania. GBIF no resuelve el nombre tal y como lo escribe la norma.",
+          "nombreCorregido": "Withania frutescens"
+        },
+        {
+          "scientificName": "Tringa totanus",
+          "grupo": "Fauna",
+          "nota": "Archibebe común."
+        },
+        {
+          "scientificName": "Scolopax rusticola",
+          "grupo": "Fauna",
+          "nota": "Chocha perdiz."
+        },
+        {
+          "scientificName": "Fulica atra",
+          "grupo": "Fauna",
+          "nota": "Focha común."
+        },
+        {
+          "scientificName": "Rallus aquaticus",
+          "grupo": "Fauna",
+          "nota": "Rascón."
+        },
+        {
+          "scientificName": "Gallinula chloropus",
+          "grupo": "Fauna",
+          "nota": "Polla de agua."
+        },
+        {
+          "scientificName": "Larus ridibundus",
+          "grupo": "Fauna",
+          "nota": "Gaviota reidora. GBIF lo da por sinónimo de Chroicocephalus ridibundus."
+        },
+        {
+          "scientificName": "Corvus corax",
+          "grupo": "Fauna",
+          "nota": "Cuervo."
+        },
+        {
+          "scientificName": "Erinaceus europaeus",
+          "grupo": "Fauna",
+          "nota": "Erizo europeo."
+        },
+        {
+          "scientificName": "Aethechinus algirus",
+          "grupo": "Fauna",
+          "nota": "Erizo moruno. La norma usa el género Aethechinus, que GBIF solo resuelve a rango de género y da por sinónimo; el nombre aceptado de la especie es Atelerix algirus.",
+          "nombreCorregido": "Atelerix algirus"
+        },
+        {
+          "scientificName": "Mustela nivalis",
+          "grupo": "Fauna",
+          "nota": "Comadreja."
+        },
+        {
+          "scientificName": "Martes foina",
+          "grupo": "Fauna",
+          "nota": "Garduña."
+        },
+        {
+          "scientificName": "Meles meles",
+          "grupo": "Fauna",
+          "nota": "Tejón."
+        },
+        {
+          "scientificName": "Genetta genetta",
+          "grupo": "Fauna",
+          "nota": "Gineta."
+        }
+      ]
     }
   }
 }

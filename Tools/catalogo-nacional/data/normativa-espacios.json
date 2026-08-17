@@ -69,6 +69,40 @@
           "inventarios": "§2.2 «Biodiversidad»: Tabla 7 (§2.2.1.2, 65 de flora), Tabla 11 (§2.2.2.1, 13 de los anexos II/IV de la Directiva Hábitats), Tabla 12 (§2.2.2.2, 14 aves del anexo I), Tabla 13 (§2.2.2.2, 48 aves migradoras) y Tabla 14 (§2.2.2.3, 104 «otras de interés»). 244 taxones, transcritos en data/anexos-normativos.json. Además §2.2.1.3 Tabla 8 con los 13 códigos HIC del ámbito, y los apartados de Fase 3 (§2.1.2 geología, §2.1.4/§2.1.5 relieve e hidrología, §2.3 patrimonio cultural y §7.3.2 Tabla 40 de uso público)."
         }
       ]
+    },
+    {
+      "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila",
+      "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+      "articulado": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+      "encontrado": true,
+      "consultado": "2026-08-17",
+      "cubre": [
+        "calblanque-monte-cenizas-pena-aguila"
+      ],
+      "inventarios": "Artículo 12 «Especies protegidas de flora» (21 entradas) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies con nombre castellano). Transcritos al anexo normativo el 2026-08-17. El Artículo 14 enumera hábitats protegidos, no especies. Los ANEXOS I a III son actividades y límites, no inventario biológico.",
+      "transcrito": [
+        "calblanque-monte-cenizas-pena-aguila"
+      ],
+      "nota": "Sigue vigente: la Orden de 25 de marzo de 2026 sobre acceso y tránsito al parque (BORM n.º 75, anuncio 1396) lo cita como su instrumento y menciona su artículo 120. Esa Orden es además donde se verificó de primera mano la cita del boletín, que las fuentes secundarias daban unas veces como n.º 151 de 1 de julio y otras como n.º 152 de 3 de julio: es la segunda. El PDF es un ESCANEO con OCR de mala calidad, así que los nombres científicos del anexo llevan su verbatim y su corrección verificada contra GBIF por separado. El PORN entero está también en urbanismo.cartagena.es/ExtDoc/bibliodoc/PORN_Calblanque.pdf, con mejor capa de texto, pero ese host NO está en la política de egreso (403 del proxy) y no se ha podido comprobar."
+    },
+    {
+      "norma": "Decreto n.º 259/2019, de 10 de octubre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia",
+      "boletin": "BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450",
+      "articulado": "https://www.borm.es/services/anuncio/ano/2019/numero/6450/pdf",
+      "encontrado": true,
+      "consultado": "2026-08-17",
+      "cubre": [
+        "salinas-arenales-san-pedro-pinatar",
+        "espacios-abiertos-e-islas-del-mar-menor",
+        "cabezo-gordo",
+        "Islas e Islotes del Litoral Mediterráneo (ES6200007, descartado en NaturDex)",
+        "Mar Menor (ES6200030, sin ficha en NaturDex)",
+        "Franja Litoral Sumergida (ES6200029, ZEC marina, sin ficha en NaturDex)"
+      ],
+      "inventarios": "Volumen I §4 «Descripción e interpretación de la biodiversidad»: §4.1 hábitats de interés comunitario, §4.2 biocenosis marinas, §4.3.1 especies del ámbito sumergido, §4.3.2 aves (§4.3.2.1 anexo I de la Directiva Aves, §4.3.2.2 migratorias de llegada regular, §4.3.2.3 otras de interés), §4.3.3 otras especies de fauna terrestre, §4.3.4 flora terrestre y §4.3.5 exóticas invasoras. El volumen II trae la información específica por espacio y el volumen III es el PRUG del Parque Regional de las Salinas y Arenales de San Pedro del Pinatar. SIN TRANSCRIBIR todavía.",
+      "transcrito": [],
+      "nota": "A DIFERENCIA del Plan del Altiplano, el BORM publica aquí el plan ENTERO —los cuatro volúmenes, 67.689 líneas de texto extraído, 132 MB de PDF— y no solo el articulado, así que no hace falta el Alfresco de murcianatural (cuyo endpoint de participación ya no lo sirve: la exposición pública se cerró y responde «Proyecto en exposición no encontrado»). OJO CON EL ÁMBITO PARA CALBLANQUE: este plan NO es su plan de gestión. Su artículo 1 declara seis ZEC y ES6200001 no está entre ellas, y la tabla del §2 mide 18,24 ha de Parque Regional de Calblanque dentro del ámbito — son las Salinas del Rasall, que pertenecen a la ZEC ES6200006, sobre 2.466,3 ha que tiene el espacio. Aplicar su inventario a Calblanque sería importar el catálogo de una laguna a un parque de sierra y arenales. Su valor está en los cuatro espacios de la lista `cubre`, todos hoy en N1."
     }
-  ]
+  ],
+  "_como_se_baja_un_boletin_viejo": "Para los boletines anteriores a la publicación por anuncio, el servicio de anuncios del BORM (`/services/anuncio/ano/<año>/numero/<n>/pdf`) es una trampa: en 1995 el número de anuncio NO va por orden de fecha —9370 es del 30 de junio, 9375 del 19 y 9380 del 8—, así que la bisección por la cabecera no converge y un barrido acotado se queda corto sin decirlo. El PORN de Calblanque está en el anuncio 10286 y cuatro barridos sobre 9000-9800 salieron vacíos. La vía buena es pedir el BOLETÍN ENTERO: `https://www.borm.es/services/boletin/ano/<año>/numero/<n>/pdf` (7,7 MB el de 1995 n.º 152). Ese endpoint no estaba escrito en ningún sitio del repo."
 }

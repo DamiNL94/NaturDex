@@ -10556,7 +10556,8 @@
       "zepaSiteCode": "ES0000174",
       "habitatIds": [],
       "gbifOccurrences": 9,
-      "visible": true
+      "visible": true,
+      "descriptionSource": null
     },
     {
       "id": 187,

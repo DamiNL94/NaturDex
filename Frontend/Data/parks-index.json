@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "updatedAt": null,
+  "version": 2,
+  "updatedAt": "2026-08-17",
   "_comment": "Registro de espacios naturales protegidos de NaturDex, organizado por comunidad autónoma y provincia. Tres niveles de dato en el campo `status`: 'basic' = ficha base (N1): límite oficial, códigos Natura 2000 y datos administrativos, SIN catálogo de especies ni hábitats; el espacio es seleccionable y el frontend avisa de que su catálogo está en preparación. 'available' = completo (N2): hábitats HIC recortados, catálogo de especies con evidencia, POIs, fotos y audioguías. 'planned' = anunciado pero sin datos ni carpeta; no es seleccionable. Todo espacio nace 'basic' y asciende a 'available' cuando se le hace el catálogo (ver Docs/prompts/e-rollout-nacional.md). Para añadir uno nuevo: crear Data/parks/<provincia>/<slug>/ con park.json, manifest.json y geo/, y añadir su entrada aquí.",
   "defaultPark": "cabo-cope-puntas-calnegre",
   "communities": [
@@ -88,7 +88,7 @@
               "slug": "calblanque-monte-cenizas-pena-aguila",
               "name": "Calblanque, Monte de las Cenizas y Peña del Águila",
               "category": "Parque Regional",
-              "status": "basic",
+              "status": "available",
               "center": [
                 37.60257,
                 -0.78109

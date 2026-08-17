@@ -163,6 +163,44 @@ const CLASES_POR_DEFECTO = [
   // Vertebrados
   'Aves', 'Mammalia', 'Reptilia', 'Squamata', 'Testudines', 'Amphibia', 'Actinopterygii',
 ];
+
+/*
+ * EL MISMO ALCANCE, DICHO EN EL VOCABULARIO DE EIDOS.
+ *
+ * La lista de arriba son clases de GBIF, y eso deja fuera del filtro justo a los candidatos que la
+ * legislación aporta y GBIF no conoce: sin registro no hay `class`, y `fueraDelAlcance` no podía
+ * juzgarlos. El guardián se abría en silencio —`if (c.class && …)`— así que el candidato pasaba.
+ *
+ * Lo destapó Calblanque, cuyo formulario de la ZEPA Mar Menor (ES0000260) aporta invertebrados
+ * lagunares: la esponja *Tethya citrina*, el isópodo *Sphaeroma serratum*, los gasterópodos
+ * *Jujubinus* y los camarones *Crangon* y *Palaemon* entraban en el catálogo de un parque de sierra
+ * y arenales. Siete fichas, todas de nivel 1, todas fuera del alcance declarado del catálogo.
+ *
+ * EIDOS sí clasifica a esos taxones: su `taxonomicgroup` los llama «Invertebrados», y llama «Peces»
+ * a *Aphanius iberus* —que es la ÚNICA especie del formulario del propio LIC de Calblanque y sí
+ * entra— y «Plantas vasculares» a las cuatro plantas del mismo bloque. Es el mismo criterio de
+ * siempre —flora vascular y vertebrados— leído en el único vocabulario disponible para esas fichas.
+ */
+const GRUPOS_EIDOS_EN_ALCANCE = new Set([
+  'Plantas vasculares',
+  'Aves', 'Mamíferos', 'Reptiles', 'Anfibios', 'Peces',
+]);
+
+/**
+ * ¿Está el candidato fuera del alcance taxonómico del catálogo? Devuelve el motivo, o null.
+ * Prefiere la clase de GBIF, que es la que se ha usado siempre; cae al grupo de EIDOS cuando el
+ * candidato no tiene registro en GBIF, que es el hueco por el que se colaban los invertebrados.
+ */
+function fueraDelAlcance(clase, grupoEidos) {
+  if (TODAS_LAS_CLASES) return null;
+  if (clase) return CLASES.has(clase) ? null : `fuera del alcance del catálogo (clase ${clase})`;
+  if (grupoEidos) {
+    return GRUPOS_EIDOS_EN_ALCANCE.has(grupoEidos)
+      ? null
+      : `fuera del alcance del catálogo (grupo EIDOS ${grupoEidos}; sin registro en GBIF, que es de donde sale la clase)`;
+  }
+  return null;   // Ni GBIF ni EIDOS lo clasifican: no hay con qué juzgarlo, y no se inventa.
+}
 /*
  * La escotilla del nivel 3: aprueba lo que solo respalda GBIF, con el umbral de presencia de
  * siempre. Es el criterio que estuvo vigente hasta el 2026-08-16 y con el que se construyeron los
@@ -260,6 +298,16 @@ const hoy = () => new Date().toISOString().slice(0, 10);
  * el formulario diga *Sylvia undata* y GBIF sirva *Curruca undata*. Casarlos a mano por el binomio
  * sería la tercera implementación del mismo puente y la que divergiría.
  */
+/**
+ * Quita las salvedades de alcance que el Formulario Normalizado de Datos escribe entre paréntesis
+ * detrás del nombre: «Falco peregrinus ([including pelegrinoides])», «Sylvia cantillans ([excluding
+ * subalpina])», «Melanitta nigra (sensu stricto [excluding americana])». Son notas sobre qué
+ * subespecies cubre la ficha del sitio, no parte del nombre científico.
+ */
+function sinSalvedades(nombre) {
+  return String(nombre || '').replace(/\s*\([^)]*\)\s*$/, '').trim();
+}
+
 function candidatosDocumentales(anexo, sitio, yaEstan) {
   const nuevos = new Map();
   const añade = (nombre, clase) => {
@@ -278,8 +326,16 @@ function candidatosDocumentales(anexo, sitio, yaEstan) {
   // El formulario del sitio trae el grupo taxonómico en una letra (B = aves, M = mamíferos,
   // A = anfibios y reptiles, F = peces, P = plantas, I = invertebrados). Solo se traduce la de las
   // aves, que es la que necesita el filtro 3 bis; el resto lo resuelve EIDOS.
+  //
+  // Y se le quitan las SALVEDADES entre paréntesis por el mismo motivo que al anexo se le quitan las
+  // erratas: «Falco peregrinus ([including pelegrinoides])» no es un nombre, es un nombre más una
+  // nota de alcance, y EIDOS no lo resuelve. El índice del formulario sí sabe cruzarlo —está hecho
+  // por binomio— así que el candidato ENTRABA, y se caía después en la resolución con un motivo que
+  // hacía pensar en una errata de la fuente. En Calblanque costaba seis aves de nivel 1, el halcón
+  // peregrino entre ellas, en un parque de acantilados. El verbatim del formulario no se pierde:
+  // sigue en `sitio.mapa`, que es de donde sale la cita de la ficha.
   for (const lista of sitio.mapa.values()) {
-    for (const e of lista) añade(e.scientificName, e.grupoCodigo === 'B' ? 'Aves' : null);
+    for (const e of lista) añade(sinSalvedades(e.scientificName), e.grupoCodigo === 'B' ? 'Aves' : null);
   }
   return [...nuevos.values()];
 }
@@ -597,14 +653,27 @@ const cache = fs.existsSync(CACHE) ? readJson(CACHE) : {};
 async function resuelve(nombre, ccaa) {
   // La pausa va aquí y no en el llamante: solo hay que ser cortés con el IEPNB cuando de verdad se
   // sale a la red. Con la caché caliente, repetir la selección es instantáneo.
-  if (cache[nombre]) return cache[nombre];
+  //
+  // Pero una caché escrita por una versión anterior tiene la FORMA anterior, y servirla tal cual es
+  // un fallo en verde de manual: cuando se añadió `grupoEidos`, las entradas viejas lo devolvían
+  // `undefined` y el filtro de alcance volvía a abrirse solo para los candidatos documentales, que
+  // son justo los que ese campo venía a juzgar. Así que una entrada a la que le falte una clave que
+  // el código de hoy lee se considera caducada y se vuelve a pedir.
+  const enCache = cache[nombre];
+  if (enCache && 'grupoEidos' in enCache) return enCache;
   await sleep(eidos.THROTTLE_MS);
-  const r = { origen: null, normasRaw: [], nombreAceptadoEidos: null, taxonid: null, error: null };
+  const r = {
+    origen: null, normasRaw: [], nombreAceptadoEidos: null, taxonid: null, error: null,
+    grupoEidos: null,
+  };
   try {
     const t = await eidos.resolveTaxon(nombre);
     if (t.status !== 'no-encontrada') {
       r.taxonid = t.taxonid;
       r.origen = (t.taxon && t.taxon.origen) || null;
+      // El grupo taxonómico de EIDOS es el ÚNICO dato de alcance que tiene un candidato que entra
+      // solo por la legislación: sin registro en GBIF no hay `class`. Ver `fueraDelAlcance`.
+      r.grupoEidos = (t.taxon && t.taxon.taxonomicgroup) || null;
       if (t.status === 'sinonimo' && t.acceptedName) r.nombreAceptadoEidos = t.acceptedName;
     }
     if (r.taxonid) {
@@ -660,6 +729,58 @@ function origenLegible(r) {
 }
 
 const esNoNativa = (origen) => /no nativa|alóctona|exótica|introducida/i.test(String(origen || ''));
+
+/*
+ * NATIVA PORQUE EL HÁBITAT SE LLAMA COMO ELLA.
+ *
+ * La Lista Patrón marca la autoctonía **a escala nacional**, y esa escala tiene un punto ciego
+ * simétrico al de `alóctonaPorNorma`: un taxón introducido en casi toda España puede ser relicto
+ * autóctono en un enclave, y el filtro no lo distingue porque solo lee una bandera del Estado.
+ *
+ * El caso que lo destapa es *Tetraclinis articulata* en Calblanque. EIDOS responde
+ * `origen: "Especie no nativa"` sin ningún matiz territorial, así que el filtro la tiraba — mientras
+ * el Atlas cartografía dentro del parque 148,7 ha del HIC **9570 «Bosques de Tetraclinis
+ * articulata»**, prioritario, cuyo nombre oficial ES el binomio. El resultado era un hábitat
+ * prioritario sin la especie que le da nombre, que es un fallo visible en la ficha.
+ *
+ * La regla: si el espacio tiene cartografiado un HIC cuyo **nombre oficial** nombra al taxón, eso es
+ * dato oficial directo sobre ESTE territorio —la Directiva lo protege AQUÍ, y la cartografía dice
+ * dónde— y manda sobre la bandera nacional, igual que la norma del espacio manda cuando declara
+ * alóctono a un taxón que la Lista Patrón no marca.
+ *
+ * Es deliberadamente estrecha: solo levanta el filtro de autoctonía, no da entrada por sí sola —la
+ * especie sigue teniendo que pasar los niveles de fuente— y solo dispara donde la cartografía puso
+ * el código. En el rollout de hoy eso es un único espacio: el 9570 no está cartografiado en ningún
+ * otro, así que NO reabre el caso de Carrascoy y El Valle, donde la revisión del 2026-08-16
+ * concluyó con el dato delante que sus ejemplares son repoblación.
+ *
+ * La comparación se hace por `binomio()` —la misma clave normalizada con la que se cruzan el Atlas y
+ * el catálogo— sobre cada pareja de palabras consecutivas del nombre oficial. No se intenta adivinar
+ * qué parejas son latín: las que no lo son («matorrales termomediterráneos») simplemente no casan
+ * con ningún taxón, así que no hacen falta heurísticas que puedan equivocarse en los dos sentidos.
+ * Un nombre que cita el género suelto —«Matorrales arborescentes de Ziziphus»— no identifica a una
+ * especie y por construcción no casa.
+ */
+// Se rellena en main(), cuando ya se ha leído el park.json con su Capa 2.
+let HABITAT_HOMONIMO = [];
+
+function taxonesQueNombranUnHabitat(habitats) {
+  return (habitats || []).map(h => {
+    const palabras = String(h.name || '').trim().split(/\s+/);
+    const pares = new Set();
+    for (let i = 0; i + 1 < palabras.length; i++) {
+      const b = binomio(`${palabras[i]} ${palabras[i + 1]}`);
+      if (b) pares.add(b);
+    }
+    return { code: h.code, nombre: h.name || '', pares };
+  });
+}
+
+/** El hábitat cartografiado cuyo nombre oficial nombra a este taxón, o null. */
+function habitatQueNombra(bin) {
+  if (!bin) return null;
+  return HABITAT_HOMONIMO.find(h => h.pares.has(bin)) || null;
+}
 
 /*
  * RAREZA — el tramo 1–5 de `rarityScore`, derivado SOLO de la categoría legal estatal.
@@ -737,6 +858,7 @@ async function main() {
   const ccaa = arg('ccaa', park.park && park.park.region) || null;
   const codigosHic = [...new Set((park.habitats || []).map(h => h.code).filter(Boolean))];
   if (!codigosHic.length) die(`${PARK} no tiene Capa 2: genera antes los hábitats (habitats:adopt).`);
+  HABITAT_HOMONIMO = taxonesQueNombranUnHabitat(park.habitats);
 
   const { porNombre: fichadas, porTaxonId } = yaFichadas();
   const atlas = caracteristicasPorEspecie(codigosHic);
@@ -853,6 +975,10 @@ async function main() {
   }
 
   const aprobadas = [], excluidas = [];
+  // Taxones a los que la cartografía del espacio les ha levantado la bandera nacional de autoctonía.
+  // Se acumulan para decirlo por pantalla: una excepción que no se ve es una excepción que nadie
+  // revisa.
+  const autoctoniaRevisada = [];
   // Las categorías legales que se han visto y NO cuentan como protección. Se enseñan al final: es la
   // forma de enterarse de que una figura nueva se está descartando por no estar en la lista blanca.
   const categoriasDescartadas = new Map();
@@ -983,9 +1109,18 @@ async function main() {
     // enumera entre las alóctonas. Cuando la norma del espacio dice que un taxón es alóctono, eso es
     // dato oficial directo sobre ESTE territorio y manda sobre el silencio de la Lista Patrón.
     const alóctonaPorNorma = anexo.noNativas.get(bin) || (binAcept && anexo.noNativas.get(binAcept)) || null;
+    // La cartografía oficial del espacio puede desmentir la bandera nacional de autoctonía: ver
+    // `taxonesQueNombranUnHabitat`. Solo levanta este filtro; la especie sigue necesitando nivel.
+    const nombraUnHabitat = habitatQueNombra(bin) || (binAcept ? habitatQueNombra(binAcept) : null);
     if (esNoNativa(r.origen)) {
-      excluidas.push({ ...ficha, motivo: 'no nativa (Lista Patrón IEPNB)' });
-      continue;
+      if (!nombraUnHabitat) {
+        excluidas.push({ ...ficha, motivo: 'no nativa (Lista Patrón IEPNB)' });
+        continue;
+      }
+      ficha.autoctoniaRevisada = `la Lista Patrón la da como no nativa, pero este espacio tiene ` +
+        `cartografiado el HIC ${nombraUnHabitat.code} «${nombraUnHabitat.nombre}», cuyo nombre ` +
+        `oficial la nombra: la cartografía es dato oficial sobre este territorio y manda`;
+      autoctoniaRevisada.push(`${c.scientificName} (HIC ${nombraUnHabitat.code})`);
     }
     if (alóctonaPorNorma) {
       excluidas.push({
@@ -996,8 +1131,9 @@ async function main() {
     }
     // Filtro 4 — alcance taxonómico del catálogo. Va antes que el de presencia porque no depende de
     // cuántas veces se haya visto: un microlepidóptero con mil registros sigue estando fuera.
-    if (!TODAS_LAS_CLASES && c.class && !CLASES.has(c.class)) {
-      excluidas.push({ ...ficha, motivo: `fuera del alcance del catálogo (clase ${c.class})` });
+    const motivoAlcance = fueraDelAlcance(c.class, r.grupoEidos);
+    if (motivoAlcance) {
+      excluidas.push({ ...ficha, motivo: motivoAlcance });
       continue;
     }
     // Filtro 3 bis — respaldo de SITIO para las aves. Va antes del de presencia porque para un ave
@@ -1187,6 +1323,12 @@ async function main() {
     excluidas_detalle: excluidas,
   };
 
+  if (autoctoniaRevisada.length) {
+    console.log(`\nAutoctonía revisada por la cartografía: ${autoctoniaRevisada.length} — ` +
+      `${autoctoniaRevisada.join(', ')}`);
+    console.log('  La Lista Patrón las da como no nativas y el espacio tiene cartografiado un HIC');
+    console.log('  cuyo nombre oficial las nombra. La cartografía es dato de ESTE territorio y manda.');
+  }
   console.log(`\nAprobadas: ${doc.total} (${aves} aves) · reutilizables: ${reutilizables} · nuevas: ${doc.nuevas}`);
   console.log(`Excluidas: ${excluidas.length}`);
   const porMotivo = {};

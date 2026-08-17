@@ -2,21 +2,22 @@
   "slug": "calblanque-monte-cenizas-pena-aguila",
   "name": "Calblanque, Monte de las Cenizas y Peña del Águila",
   "apiSlug": "calblanque-monte-cenizas-pena-aguila",
-  "version": 2,
-  "updatedAt": "2026-07-31",
+  "version": 6,
+  "updatedAt": "2026-08-17",
   "data": "Data/parks/murcia/calblanque-monte-cenizas-pena-aguila/park.json",
   "geo": {
     "parque": "Data/parks/murcia/calblanque-monte-cenizas-pena-aguila/geo/parque.geojson",
     "lic": "Data/parks/murcia/calblanque-monte-cenizas-pena-aguila/geo/lic.geojson",
     "zepa": "Data/parks/murcia/calblanque-monte-cenizas-pena-aguila/geo/zepa.geojson",
-    "trails": "Data/parks/murcia/calblanque-monte-cenizas-pena-aguila/geo/trails.geojson"
+    "trails": "Data/parks/murcia/calblanque-monte-cenizas-pena-aguila/geo/trails.geojson",
+    "habitats": "Data/parks/murcia/calblanque-monte-cenizas-pena-aguila/geo/habitats.geojson"
   },
   "images": [],
   "audio": [],
   "counts": {
-    "species": 0,
-    "habitats": 0,
-    "pointsOfInterest": 0,
+    "species": 205,
+    "habitats": 18,
+    "pointsOfInterest": 6,
     "images": 0,
     "assetBytes": 0
   },
