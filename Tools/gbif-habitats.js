@@ -28,8 +28,12 @@
  * con UN registro cada una aparecían con «4 ocurrencias» al sumar. Ver ESTADO.md, 2026-08-15 (c).
  *
  * Uso:   node Tools/gbif-habitats.js [--park <slug>] [--top N] [--max-uncertainty M]
- *                                    [--drop-unknown] [--refresh]
+ *                                    [--drop-unknown] [--refresh] [--pagina N]
  *                                    [--out informe.md] [--json datos.json] [--birds-out aves.json]
+ *
+ *   --pagina  registros por página (defecto 300, el máximo de GBIF). Bájalo si la descarga muere
+ *             una y otra vez con «conexión cortada a media respuesta»: no es la red, es un tope de
+ *             tamaño de cuerpo, y con 300 la página lo roza. Ver el comentario de PAGE.
  * ================================================================================================
  */
 'use strict';
@@ -43,7 +47,6 @@ const { inRing } = require('./lib/geo');
 const gbif = require('./lib/gbif');
 
 const REPO_ROOT = ROOT;
-const PAGE = gbif.PAGE;
 const THROTTLE_MS = 120;
 
 // --- Opciones ------------------------------------------------------------------------------------
@@ -57,6 +60,17 @@ const OUT_FILE = arg('out');
 const JSON_FILE = arg('json');
 const BIRDS_OUT = arg('birds-out');
 const MAX_OCC = num('max-occ', 40000);
+
+// Registros por página. El defecto es el máximo que admite GBIF (300), pero **una página de 300
+// pesa ~1,4 MB y hay salidas a Internet que cortan el cuerpo justo ahí**: en San Pedro del Pinatar
+// —68.021 ocurrencias, el barrido más grande del rollout— once intentos seguidos murieron con
+// «conexión cortada a media respuesta», siempre entre 1,35 y 1,43 MB recibidos. No es una red
+// inestable, que es lo que parece: es un tope de tamaño, y se reconoce en que el corte se repite
+// SIEMPRE en el mismo orden de magnitud de bytes y nunca al principio de la respuesta. Bajar la
+// página divide el cuerpo y lo esquiva, a costa de más peticiones (con 100, tres veces más).
+// La descarga es reanudable, así que un corte no pierde nada, pero avanzar 1.400 registros por
+// intento sobre 68.021 no termina nunca.
+const PAGE = Math.min(num('pagina', gbif.PAGE), gbif.PAGE);
 
 // --- Registro de parques / geojson --------------------------------------------------------------
 // La localización del parque en Frontend/Data/parks-index.json vive en Tools/lib/registry.js, que
