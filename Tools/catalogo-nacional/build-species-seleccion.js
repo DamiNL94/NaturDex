@@ -443,8 +443,23 @@ function reconcilia(lista, resueltas, porTaxonId) {
       .map(m => m.scientificName).filter(n => n !== elegido.scientificName);
 
     if (miembros.length > 1) {
+      // La CLASE se hereda del grupo, no del elegido, y esto no es un detalle: el grupo es UN solo
+      // taxón, así que la clase de cualquiera de sus nombres vale para todos, y el elegido puede
+      // perfectamente no tenerla —la clase sale del registro de GBIF, y un candidato que solo aporta
+      // la legislación no tiene registro—. Cuando el nombre que sobrevive es el documental y el que
+      // se absorbe es el que GBIF conoce, el fusionado se quedaba con `class: null`.
+      //
+      // El daño es silencioso y cae entero sobre las AVES, porque `build-species-n2.js` decide con
+      // `sel.class === 'Aves'` dos cosas a la vez: vaciar `habitatIds` —un ave vuela, y sus
+      // ocurrencias caen en cualquier polígono— y darle su `zepaSiteCode`. Un ave sin clase acaba
+      // colgada de diez hábitats y fuera del apartado de la ZEPA, con un `source` que dice lo
+      // contrario que su propia ficha. Lo destapó San Pedro del Pinatar con tres: la gaviota de
+      // Audouin y la cabecinegra, que el formulario del sitio cita como *Ichthyaetus*, y la grajilla,
+      // que el PRUG cita como *Coloeus* — en las tres, EIDOS acepta el otro género.
+      const claseDelGrupo = elegido.class || (miembros.find(m => m.class) || {}).class || null;
       const fusionado = {
         ...elegido,
+        class: claseDelGrupo,
         gbifOccurrences: miembros.reduce((s, m) => s + m.gbifOccurrences, 0),
         hics: new Set(miembros.flatMap(m => [...m.hics])),
       };

@@ -28,5 +28,11 @@
     "_comment": "Elegidas MIRANDO las cinco candidatas de Category:Monte Arabí que nombran un POI, el 2026-08-15. Es el único espacio en el que el criterio visual ha descartado a la primera por orden alfabético: CantosVisera1.jpg no retrata el abrigo sino un CALCO expuesto en un panel —lleva impresa la cartela «CANTOS DE LA VISERA II (YECLA, MURCIA)»—, igual que las dos «… Panel.jpg» de la categoría. CantosVisera2.jpg sí es la pared pintada. Ninguna de las dos elegidas lleva geoetiqueta, y eso aquí es lo que las salva: las OCHO fotos geoetiquetadas de esta categoría se agrupan a ~2 km al suroeste de todo y siete caen FUERA del límite, así que su coordenada las descarta como prueba de sitio (misma comprobación que en Sierra de Salinas, distinto desenlace).",
     "cantos-de-la-visera": "CantosVisera2.jpg",
     "petroglifos-del-arabilejo": "InsculturasArabilejo2.jpg"
+  },
+  "salinas-arenales-san-pedro-pinatar": {
+    "_comment": "Elegidas el 2026-08-17 tras revisar los 510 archivos utilizables de la categoría del espacio y buscar uno a uno los doce POIs que la cadena automática dejó sin foto. Las dos de aquí son las únicas que sobreviven: el resto de lo que Commons tiene del parque son vistas generales de las salinas y fotos de especies.",
+    "playa-de-la-torre-derribada": "Torrederribada.jpg",
+    "gola-de-la-torre": "ENCAÑIZADA001.jpg",
+    "_por_que_estas_dos": "A «Torrederribada.jpg» la sitúa su propia categoría de Commons, «Playa de la Torre Derribada», que es la de la playa concreta y no la de un macizo compartido —que es la trampa que destapó Sierra de Salinas—; su descripción, «Vista desde el puerto», encaja con la posición del POI. «ENCAÑIZADA001.jpg» está en las categorías «Las Encañizadas» y la del propio Parque Regional, y su descripción dice «Encañizadas en San Pedro Pinatar»: retrata el sistema de encañizadas, del que esta gola es una de las dos, pero NO se puede afirmar que sea ésta y no la del Ventorrillo. Ninguna de las dos lleva geoetiqueta."
   }
 }

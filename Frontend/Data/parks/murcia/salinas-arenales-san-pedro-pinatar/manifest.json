@@ -2,21 +2,22 @@
   "slug": "salinas-arenales-san-pedro-pinatar",
   "name": "Salinas y Arenales de San Pedro del Pinatar",
   "apiSlug": "salinas-arenales-san-pedro-pinatar",
-  "version": 2,
-  "updatedAt": "2026-07-31",
+  "version": 6,
+  "updatedAt": "2026-08-17",
   "data": "Data/parks/murcia/salinas-arenales-san-pedro-pinatar/park.json",
   "geo": {
     "parque": "Data/parks/murcia/salinas-arenales-san-pedro-pinatar/geo/parque.geojson",
     "lic": "Data/parks/murcia/salinas-arenales-san-pedro-pinatar/geo/lic.geojson",
     "zepa": "Data/parks/murcia/salinas-arenales-san-pedro-pinatar/geo/zepa.geojson",
-    "trails": "Data/parks/murcia/salinas-arenales-san-pedro-pinatar/geo/trails.geojson"
+    "trails": "Data/parks/murcia/salinas-arenales-san-pedro-pinatar/geo/trails.geojson",
+    "habitats": "Data/parks/murcia/salinas-arenales-san-pedro-pinatar/geo/habitats.geojson"
   },
   "images": [],
   "audio": [],
   "counts": {
-    "species": 0,
-    "habitats": 0,
-    "pointsOfInterest": 0,
+    "species": 355,
+    "habitats": 15,
+    "pointsOfInterest": 16,
     "images": 0,
     "assetBytes": 0
   },

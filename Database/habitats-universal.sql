@@ -238,6 +238,66 @@ UPDATE habitats h JOIN parks p ON p.id = h.park_id
 WHERE p.slug = 'monte-arabi' AND h.code = '8210';
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'La primera línea de vegetación de una playa: plantas anuales que germinan sobre los restos que deja la marea, aprovechando el poco alimento y la humedad que guarda esa franja de algas y madera. Son hierbas carnosas de vida corta, como el rábano de mar (Cakile maritima) o la barrilla pinchosa (Salsola kali), que completan su ciclo en una sola temporada. Desaparece por completo donde se limpia la arena con maquinaria.'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.code = '1210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Claros de arena entre el matorral dunar en los que, tras las lluvias, germina un césped efímero de plantas diminutas que florecen y se secan en pocas semanas. Pasan el resto del año como semilla enterrada, de modo que durante casi todo el verano el sitio parece arena vacía. Es un hábitat que solo se ve entero unas semanas al año, y por eso se destruye sin que nadie note que había algo.'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.code = '2230';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'El cordón dunar alto, de arena suelta y clara, que se levanta detrás de la playa. Lo sostiene el barrón (Ammophila arenaria), una gramínea de hojas enrolladas y punzantes que crece hacia arriba cuanta más arena la sepulta y teje bajo la superficie una red de rizomas que sujeta el montículo. Es la barrera natural que protege del temporal todo lo que queda tierra adentro.'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.code = '2120';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'El primer relieve de arena de la playa, de apenas unos decímetros, que se forma donde una planta rastrera frena el viento y la arena se deposita a su alrededor. La construyen la grama de mar (Elymus farctus) y la juncia marina, capaces de crecer hacia arriba a medida que quedan enterradas. Es la duna naciente: si se pisa o se allana, todo el cordón dunar que hay detrás se queda sin recambio.'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.code = '2110';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Dunas ya estabilizadas, donde la arena apenas se mueve y aparecen matas leñosas bajas, líquenes y un tapiz gris azulado de hoja pequeña. Es el paso intermedio entre la duna viva y el matorral: se reconoce porque el suelo deja de ser arena limpia y empieza a tener costra y materia orgánica. Se recupera muy despacio, así que una pisada abre un claro que tarda años en cerrarse.'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.code = '2210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Praderas de juncos y gramíneas sobre suelos salinos que se encharcan en invierno y se resecan en verano, tierra adentro de las marismas y en el borde de saladares y ramblas salobres. La sal se concentra en la superficie al evaporarse el agua, de modo que solo prosperan plantas capaces de bombear agua contra ella. Forman un tapiz denso y verde que contrasta con los suelos desnudos de alrededor.'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.code = '1410';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Matorral bajo y carnoso de sosas y almajos (Sarcocornia, Arthrocnemum, Halocnemum) sobre suelos que se inundan de agua salada y luego se secan dejando costra de sal. Son matas de tallos gruesos y articulados, sin hojas aparentes, que almacenan agua y diluyen en ella la sal que absorben. En otoño viran a rojo, naranja y morado, y ese cambio de color es la señal más visible del saladar.'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.code = '1420';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Céspedes abiertos de plantas anuales y carnosas que colonizan el fango salino en cuanto el agua se retira, en los bordes de salinas, marismas y lagunas costeras. Dominan las salicornias y sosas anuales, tallos sin hojas visibles, articulados como pequeños cactus, que a final de verano se tiñen de rojo y anaranjado. Es una vegetación efímera: cada año se instala de nuevo sobre un suelo que ha vuelto a quedar desnudo.'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.code = '1310';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Sabinar o enebral crecido directamente sobre las dunas ya fijas, con las sabinas y enebros achaparrados y peinados por el viento marino, a veces tumbados sobre la arena y con las raíces al aire donde ésta se ha movido. Crecen muy despacio, así que un ejemplar de porte mediano puede tener siglos y una duna arrasada no lo recupera en una vida humana. Es el matorral leñoso más maduro que llega a formarse sobre arena litoral, y de los más raros: hoy sobrevive en manchas sueltas entre urbanizaciones y playas.'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.code = '2250';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Matorral mediterráneo instalado sobre arenas ya fijadas, normalmente algo tierra adentro: jaras, jaguarzos, romero, lavandas, tomillos y enebros sobre suelo arenoso. Las hojas son duras o están cubiertas de pelillos, la defensa habitual contra el sol y la falta de agua, y muchas desprenden aroma al rozarlas. Es la etapa más madura y estable del sistema dunar, la última antes del bosque.'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.code = '2260';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Láminas de agua salada o salobre separadas del mar por una barra de arena, con la que se comunican de forma permanente o solo en los temporales. La sal, la temperatura y el nivel cambian tanto con las lluvias y la evaporación que solo aguantan aquí unas pocas especies muy resistentes, pero las que aguantan se cuentan por miles de individuos. Es uno de los lugares donde más aves acuáticas se concentran a la vez.'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.code = '1150';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Roquedos del borde del mar, batidos por el viento y salpicados constantemente de sal. Las plantas viven agarradas a las grietas, con hojas gruesas o cerosas para no perder agua, y las más características son las siemprevivas (Limonium) y el hinojo marino. Muchas de esas siemprevivas viven solo en un tramo corto de costa y en ningún otro sitio del mundo.'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.code = '1240';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Estepas de suelos salinos pero secos, sin encharcamiento permanente, en depresiones y llanos interiores de clima duro. Dominan el albardín (Lygeum spartum), una gramínea de matas separadas y hojas punzantes, y las siemprevivas (Limonium), que en verano cubren el suelo desnudo de flores diminutas rosas y violetas. Es un paisaje de aspecto pobre que concentra un número altísimo de plantas que no crecen en ningún otro ambiente.'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.code = '1510';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'La vegetación leñosa de ramblas, arroyos y ríos de caudal irregular, que unos meses llevan agua y otros son un lecho de piedras: adelfares y tarayales. La adelfa (Nerium oleander), de hojas coriáceas y flores rosas, y los tarays (Tamarix), de ramillas finas y flores en espiga, resisten tanto las avenidas violentas como meses de sequía. Toda la adelfa es muy tóxica, incluidas hojas y ramas secas.'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.code = '92D0';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Matorral de suelos salinos removidos y cargados de nitrógeno: bordes de camino y de cultivo, márgenes de rambla, corrales y escombreras viejas. Lo forman matas robustas de hoja gris o carnosa —orgazas, sosas, bojas y cambroneras— que rebrotan enseguida tras cualquier alteración. Aunque nace de terrenos trastocados, es vegetación propia de los ambientes áridos del sureste y a menudo el último refugio de plantas escasas.'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.code = '1430';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
   SET h.description = 'Matorral alto o bosquete abierto dominado por enebros y sabinas (Juniperus), arbustos de follaje escamoso o punzante y porte denso que aguantan sequía, viento y suelos casi inexistentes. Sus frutos carnosos y azulados —los gálbulos— alimentan en invierno a zorzales y otras aves, que se encargan de dispersar la semilla. Crecen tan despacio que un ejemplar de dos metros puede tener siglos.'
 WHERE p.slug = 'sierra-de-el-carche' AND h.code = '5210';
 

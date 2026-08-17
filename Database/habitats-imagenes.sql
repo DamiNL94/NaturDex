@@ -1,4 +1,4 @@
--- El juego de caracteres se fija SIEMPRE: el cliente mysql lo toma del entorno y en un
+-- El juego de caracteres se fija SIEMPRE: el cliente `mysql` lo toma del entorno y en un
 -- contenedor sin locale eso es latin1, que convierte cada tilde en mojibake sin dar error.
 SET NAMES utf8mb4;
 
@@ -95,6 +95,114 @@ UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
   h.image_attribution = 'No machine-readable author provided. Pere prlpz assumed (based on c… (CC BY-SA 2.5) · Wikimedia Commons',
   h.image_note = NULL
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND h.slug = 'subestepa-thero-brachypodietea';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ullastre_vell.JPG?width=1280',
+  h.image_attribution = 'Antoni Salvà (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Acebuche (Olea europaea subsp. europaea), la especie que da nombre al hábitat.'
+WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND h.slug = 'matorrales-termomediterraneos-y-5330';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_carthaginense88.jpg?width=1280',
+  h.image_attribution = 'Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con zamarrilla de Cartagena (Teucrium carthaginense), la especie que da nombre al hábitat.'
+WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND h.slug = 'zonas-subestepicas-de-6220';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_carthaginense88.jpg?width=1280',
+  h.image_attribution = 'Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con zamarrilla de Cartagena (Teucrium carthaginense), la especie que da nombre al hábitat.'
+WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND h.slug = 'pendientes-rocosas-calcicolas-8210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_cossonianum.jpg?width=1280',
+  h.image_attribution = 'Nanosanchez (CC0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Siempreviva de Cosson (Limonium cossonianum), la especie que da nombre al hábitat.'
+WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND h.slug = 'acantilados-con-vegetacion-1240';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sandarac_Tree_(Tetraclinis_articulata)_-_Cartagena%2C_Spain_2024-02-05_(01).jpg?width=1280',
+  h.image_attribution = 'Ryan Hodnett (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Sabina de Cartagena (Tetraclinis articulata), la especie que da nombre al hábitat.'
+WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND h.slug = 'bosques-de-tetraclinis-9570';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/609975159/original.jpg',
+  h.image_attribution = 'Quentin Groom (CC0) · GBIF',
+  h.image_note = 'Portada ilustrada con Cornical (Periploca angustifolia), la especie que da nombre al hábitat.'
+WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND h.slug = 'matorrales-arborescentes-de-5220';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND h.slug = 'encinares-de-quercus-9340';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND h.slug = 'galerias-y-matorrales-92D0';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Suaeda_vera.JPG?width=1280',
+  h.image_attribution = 'Xemenendura (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Sosa fina (Suaeda vera), la especie que da nombre al hábitat.'
+WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND h.slug = 'pastizales-salinos-mediterraneos-1410';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND h.slug = 'matorrales-halofilos-mediterraneos-1420';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/611378691/original.jpg',
+  h.image_attribution = 'Michael Bakker Paiva (CC BY 4.0) · GBIF',
+  h.image_note = 'Portada ilustrada con Orgaza (Atriplex glauca), la especie que da nombre al hábitat.'
+WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND h.slug = 'matorrales-halonitrofilos-pegano-1430';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_lobatum.jpg?width=1280',
+  h.image_attribution = 'Sf2000 (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Saladilla anual (Limonium lobatum), la especie que da nombre al hábitat.'
+WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND h.slug = 'estepas-salinas-mediterraneas-1510';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND h.slug = 'dunas-moviles-embrionarias-2110';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND h.slug = 'dunas-moviles-de-2120';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND h.slug = 'dunas-con-cespedes-2230';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND h.slug = 'vegetacion-anual-sobre-1210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND h.slug = 'dunas-fijas-de-2210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND h.slug = 'prados-calcareos-carsticos-6110';
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
   h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_albidus_flowers.jpg?width=1280',
@@ -239,6 +347,96 @@ UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
   h.image_attribution = NULL,
   h.image_note = NULL
 WHERE p.slug = 'monte-arabi' AND h.slug = 'pendientes-rocosas-calcicolas-8210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cakile-maritima-(eurMeersenf)_1.jpg?width=1280',
+  h.image_attribution = 'Jürgen Howaldt (CC BY-SA 2.0 de) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Rugueta de mar (Cakile maritima), la especie que da nombre al hábitat.'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.slug = 'vegetacion-anual-sobre-1210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Silene_ramosissima_2.jpg?width=1280',
+  h.image_attribution = 'bymamo (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Colleja de arenal (Silene ramosissima), la especie que da nombre al hábitat.'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.slug = 'dunas-con-cespedes-2230';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.slug = 'dunas-moviles-de-2120';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.slug = 'dunas-moviles-embrionarias-2110';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cakile-maritima-(eurMeersenf)_1.jpg?width=1280',
+  h.image_attribution = 'Jürgen Howaldt (CC BY-SA 2.0 de) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Rugueta de mar (Cakile maritima), la especie que da nombre al hábitat.'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.slug = 'dunas-fijas-de-2210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Schoenus_nigricans_kz2.jpg?width=1280',
+  h.image_attribution = 'Kenraiz, Krzysztof Ziarnek (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con juncia bastarda (Schoenus nigricans), la especie que da nombre al hábitat.'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.slug = 'pastizales-salinos-mediterraneos-1410';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sarcocornia_fruticosa.jpg?width=1280',
+  h.image_attribution = 'Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Sosa jabonera (Sarcocornia fruticosa), la especie que da nombre al hábitat.'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.slug = 'matorrales-halofilos-mediterraneos-1420';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Suaeda_vera.JPG?width=1280',
+  h.image_attribution = 'Xemenendura (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Sosa fina (Suaeda vera), la especie que da nombre al hábitat.'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.slug = 'vegetacion-halonitrofila-anual-1310';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_phoenicea1.jpg?width=1280',
+  h.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Sabina negral (Juniperus phoenicea), la especie que da nombre al hábitat.'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.slug = 'dunas-litorales-con-2250';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_marminorense_EnfoqueFlor_2010-7-03_ParqueNaturalLagunasdelaMata.jpg?width=1280',
+  h.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Helianthemum marminorense (Helianthemum marminorense), la especie que da nombre al hábitat.'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.slug = 'dunas-con-vegetacion-2260';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.slug = 'lagunas-costeras-1150';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.slug = 'acantilados-con-vegetacion-1240';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.slug = 'estepas-salinas-mediterraneas-1510';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.slug = 'galerias-y-matorrales-92D0';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.slug = 'matorrales-halonitrofilos-pegano-1430';
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
   h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eberswalde_Zoo_12-2017_img2.jpg?width=1280',
