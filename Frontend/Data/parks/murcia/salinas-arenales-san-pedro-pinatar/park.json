@@ -891,7 +891,248 @@
       ]
     }
   ],
-  "pointsOfInterest": [],
+  "pointsOfInterest": [
+    {
+      "id": "molino-de-quintin",
+      "name": "Molino de Quintín",
+      "type": "Cultural",
+      "description": "Molino de viento salinero de dos tímpanos, construido en el primer tercio del siglo XX para trasvasar agua desde los canales que vienen del Mar Menor hacia las balsas calentadoras de las salinas. Dejó de funcionar a principios de los años setenta, cuando unas bombas eléctricas lo sustituyeron. No es un molino harinero: no molía nada, elevaba agua, y por eso su maquinaria y su emplazamiento al borde de la mota son distintos de los de un molino de cereal. Tiene incoado expediente de declaración como Bien de Interés Cultural.",
+      "coordinates": [
+        37.820414,
+        -0.775995
+      ],
+      "source": "PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar», volumen III del Plan de gestión integral del Mar Menor (Decreto n.º 259/2019, BORM n.º 242 de 19.10.2019), §2.3.4 «Patrimonio cultural» (expediente de BIC incoado, tipología de molino salinero de dos tímpanos) y §7.3.4 Tabla 20, unidad 8 «La Mota»; catálogo «Monumentos en la Región de Murcia» de la CARM, ficha 364 «Molinos de Quintín y Calcetera» (Paseo de la Mota), consultado el 2026-08-17 vía datos.gob.es → nexo.carm.es, que aporta la fecha de construcción y el fin del uso. coordenada de OpenStreetMap (© OpenStreetMap contributors, ODbL), que es quien separa los dos molinos: la ficha de la CARM da UNA sola coordenada para los dos y están a 2,4 km. La traza del PR-MU 65 pasa a 32 m, pero lo que se señala es el molino, no el sendero; Wikimedia Commons (foto: amaianos from Galicia, CC BY 2.0)",
+      "approx": false,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Molino_de_Quint%C3%ADn%2C_Salinas_de_San_Pedro_del_Pinatar_(6065429806).jpg?width=1280",
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "molino-de-la-calcetera",
+      "name": "Molino de la Calcetera",
+      "type": "Cultural",
+      "description": "El segundo de los dos molinos salineros del parque, gemelo del de Quintín en tipología y función: elevar el agua del Mar Menor hacia las balsas donde se concentra la sal. Marca el extremo suroeste de la mota que separa las salinas de la laguna, y como su pareja tiene incoado expediente de Bien de Interés Cultural y está en desuso desde los años setenta.",
+      "coordinates": [
+        37.799074,
+        -0.761074
+      ],
+      "source": "PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar», volumen III del Plan de gestión integral del Mar Menor (Decreto n.º 259/2019, BORM n.º 242 de 19.10.2019), §2.3.4 «Patrimonio cultural» y §7.3.4 Tabla 20, unidad 8 «La Mota», que lo sitúa en el extremo suroeste de las salinas; catálogo «Monumentos en la Región de Murcia» de la CARM, ficha 364. coordenada de OpenStreetMap (© OpenStreetMap contributors, ODbL). La traza del PR-MU 65 pasa a 24 m, pero lo que se señala es el molino, no el sendero",
+      "approx": false,
+      "image": null,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "banos-de-lodo",
+      "name": "Baños de lodo",
+      "type": "Natural",
+      "description": "Charca somera de la orilla del Mar Menor cuyos fangos negros, ricos en sales y materia orgánica, se usan desde hace generaciones para embadurnarse y secarse al sol antes de enjuagarse en la laguna. El plan de gestión lo recoge como un uso etnológico del espacio, no como una instalación: no hay más equipamiento que la propia orilla. Está en la unidad de La Mota, junto al camino que une los dos molinos.",
+      "coordinates": [
+        37.818122,
+        -0.774038
+      ],
+      "source": "PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar», volumen III del Plan de gestión integral del Mar Menor (Decreto n.º 259/2019, BORM n.º 242 de 19.10.2019), §7.3.4 Tabla 20, unidad 8 «La Mota», que enumera entre sus contenidos «Etnológico: área de baños terapéuticos de lodo», y §7.3.2 Tabla 17, que sitúa un observatorio de aves en la «charca grande de baños de lodo junto a Molino de Quintín». coordenada de OpenStreetMap (© OpenStreetMap contributors, ODbL); Wikimedia Commons (foto: Anidae, CC BY-SA 4.0)",
+      "approx": false,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ba%C3%B1os_de_lodo_en_San_Pedro_del_Pinatar.jpg?width=1280",
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "gola-de-la-torre",
+      "name": "Gola de la Torre",
+      "type": "Natural",
+      "description": "Uno de los dos canales naturales por los que el Mar Menor se comunica con el Mediterráneo, y sobre el que se monta la encañizada de La Torre: un arte de pesca tradicional hecho de cañas clavadas en el fondo que encauza el pescado hacia unas cámaras a medida que entra o sale con las corrientes. El nivel del agua sube y baja aquí lo bastante como para crear una zona pseudomareal, algo poco frecuente en el Mediterráneo, y esa oscilación es justo lo que hace funcionar la encañizada.",
+      "coordinates": [
+        37.784633,
+        -0.759841
+      ],
+      "source": "PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar», volumen III del Plan de gestión integral del Mar Menor (Decreto n.º 259/2019, BORM n.º 242 de 19.10.2019), §2.1.4 «Relieve y geomorfología» (Las Encañizadas como «único punto del Mar Menor que de forma natural se abre a la entrada del Mediterráneo» y como zona pseudomareal), §2.3.4 «Patrimonio cultural», que cita el sistema de encañizadas de La Torre y El Ventorrillo entre los elementos de interés cultural recogidos por el PORN, y §7.3.4 Tabla 20, unidad 9. coordenada de OpenStreetMap (© OpenStreetMap contributors, ODbL); Wikimedia Commons (foto: Nioger, CC BY 2.5) — la foto retrata el sistema de encañizadas, del que esta gola es una de las dos, y no lleva geoetiqueta: no se puede afirmar que sea ésta y no la del Ventorrillo",
+      "approx": false,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/ENCA%C3%91IZADA001.jpg?width=1280",
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "gola-del-ventorrillo",
+      "name": "Gola del Ventorrillo",
+      "type": "Natural",
+      "description": "La segunda gola de Las Encañizadas, y la segunda de las dos encañizadas que el plan de ordenación reconoce como patrimonio del espacio. Alrededor de estos canales se levantan las edificaciones de madera que daban apoyo a los pescadores, y los escollos de calcoarenita que asoman frente a la costa han ido formando islas triangulares al abrigo del oleaje: una acumulación de arena a cada lado del escollo que acaba uniéndose por detrás.",
+      "coordinates": [
+        37.788748,
+        -0.760837
+      ],
+      "source": "PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar», volumen III del Plan de gestión integral del Mar Menor (Decreto n.º 259/2019, BORM n.º 242 de 19.10.2019), §2.3.4 «Patrimonio cultural» (sistema de encañizadas de La Torre y El Ventorrillo, y edificaciones asociadas), §2.1.4, que describe la formación tombólica triple entre escollos enfrentados, y §7.3.4 Tabla 20, unidad 9 «Las Encañizadas». coordenada de OpenStreetMap (© OpenStreetMap contributors, ODbL)",
+      "approx": false,
+      "image": null,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "punta-de-algas",
+      "name": "Punta de Algas",
+      "type": "Geológico",
+      "description": "Afloramiento de las calcoarenitas miocénicas que sirven de base a todo el sistema salinero, y punto desde el que arranca hacia el sur una restinga de piedras sumergidas y bajos de arena que los pescadores llaman los Punchosos. Es uno de los pocos resaltes de un parque que, por lo demás, es llano: aquí la costa deja de ser arena y pasa a ser roca baja.",
+      "coordinates": [
+        37.791064,
+        -0.748695
+      ],
+      "source": "PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar», volumen III del Plan de gestión integral del Mar Menor (Decreto n.º 259/2019, BORM n.º 242 de 19.10.2019), §2.1.4 «Relieve y geomorfología» («como afloramiento del sustrato miocénico, desde Punta de Algas, se extiende paralelamente a la costa una restinga de piedras ahogadas y bajos de arenas conocidos como Punchosos») y §7.3.3 Tabla 18, que la enumera entre los enclaves de costa baja rocosa. coordenada de OpenStreetMap (© OpenStreetMap contributors, ODbL); Wikimedia Commons (foto: Ryan Hodnett, CC BY-SA 4.0)",
+      "approx": false,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Playa_de_Punta_de_Algas_-_Salinas_y_Arenales_de_San_Pedro_del_Pinatar%2C_Spain_2024-02-06_(01).jpg?width=1280",
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "escull-de-las-cruces",
+      "name": "Escull de las Cruces",
+      "type": "Geológico",
+      "description": "Escollo de calcoarenita frente a la costa de Las Encañizadas, el más septentrional de los tres que se pueden situar. Los bloques fracturados que forman estos escollos se alargan en paralelo a la línea de costa, porque es el oleaje el que los ha ido recortando así, y al abrigo de cada uno se acumula arena por los dos lados.",
+      "coordinates": [
+        37.788606,
+        -0.747995
+      ],
+      "source": "PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar», volumen III del Plan de gestión integral del Mar Menor (Decreto n.º 259/2019, BORM n.º 242 de 19.10.2019), §7.3.3 Tabla 18, que enumera los enclaves de costa baja rocosa del parque —Escull de la Caleta, Escull del Algodón, Escull de los Valientes, Escull de las Cruces y Punta de Algas— como el único relieve destacable de un espacio llano, y §2.1.4, que describe cómo se forman. coordenada de OpenStreetMap (© OpenStreetMap contributors, ODbL)",
+      "approx": false,
+      "image": null,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "escull-de-los-valientes",
+      "name": "Escull de los Valientes",
+      "type": "Geológico",
+      "description": "El escollo central de los tres de Las Encañizadas. Entre el cordón de arena central, ya relicto, y los laterales que siguen funcionando quedan charcas someras, y ese mosaico de agua quieta y arena es lo que usan como comedero las aves limícolas que paran aquí.",
+      "coordinates": [
+        37.787368,
+        -0.747679
+      ],
+      "source": "PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar», volumen III del Plan de gestión integral del Mar Menor (Decreto n.º 259/2019, BORM n.º 242 de 19.10.2019), §7.3.3 Tabla 18 (enclaves de costa baja rocosa) y §2.1.4, que describe la formación tombólica triple y las charcas que quedan entre cordones. coordenada de OpenStreetMap (© OpenStreetMap contributors, ODbL)",
+      "approx": false,
+      "image": null,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "escull-del-algodon",
+      "name": "Escull del Algodón",
+      "type": "Geológico",
+      "description": "El más meridional de los escollos que se pueden situar, ya en el tramo donde las playas se cubren de arribazones: montones de restos de posidonia que el mar deja en la orilla y que, lejos de ser suciedad, sujetan la arena en los temporales y alimentan una comunidad de plantas anuales propia.",
+      "coordinates": [
+        37.786257,
+        -0.746874
+      ],
+      "source": "PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar», volumen III del Plan de gestión integral del Mar Menor (Decreto n.º 259/2019, BORM n.º 242 de 19.10.2019), §7.3.3 Tabla 18 (enclaves de costa baja rocosa) y §2.1.4, que describe las playas limosas y de restos de Posidonia oceanica que bordean Las Encañizadas. coordenada de OpenStreetMap (© OpenStreetMap contributors, ODbL)",
+      "approx": false,
+      "image": null,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "playa-de-la-torre-derribada",
+      "name": "Playa de la Torre Derribada",
+      "type": "Natural",
+      "description": "Playa de arena fina respaldada por el cordón dunar, con las dunas embrionarias en contacto directo con la orilla y, tras ellas, las dunas primarias, que aquí llegan a los cuatro metros de altura. Le da nombre una torre vigía de la que quedan restos. Es una de las unidades del parque en las que el plan de gestión admite uso turístico además del didáctico y el científico.",
+      "coordinates": [
+        37.82375,
+        -0.757787
+      ],
+      "source": "PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar», volumen III del Plan de gestión integral del Mar Menor (Decreto n.º 259/2019, BORM n.º 242 de 19.10.2019), §7.3.4 Tabla 20, unidad 4 «Playa de la Torre Derribada», que le reconoce contenido geomorfológico (playa), florístico (vegetación psammófila), faunístico (aves limícolas y marinas) e histórico (torre vigía), y §2.1.4, que da la altura de las dunas primarias al norte del puerto. coordenada de OpenStreetMap (© OpenStreetMap contributors, ODbL); Wikimedia Commons (foto: No machine-readable author provided. Nioger assumed (based on copyr…, CC BY 2.5) — la foto no lleva geoetiqueta; la sitúa su categoría de Commons, «Playa de la Torre Derribada», que es la de esta playa concreta",
+      "approx": false,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Torrederribada.jpg?width=1280",
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "playa-de-la-llana",
+      "name": "Playa de La Llana",
+      "type": "Natural",
+      "description": "La playa más larga del parque, y la que mejor enseña el perfil completo del sistema: la orilla, las dunas móviles con el barrón sujetándolas, y por detrás los arenales con el sabinar y el saladar. El plan la separa en dos unidades —la playa y los arenales— porque toleran usos distintos: la primera admite visita turística y la segunda es zona de conservación prioritaria.",
+      "coordinates": [
+        37.798489,
+        -0.752712
+      ],
+      "source": "PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar», volumen III del Plan de gestión integral del Mar Menor (Decreto n.º 259/2019, BORM n.º 242 de 19.10.2019), §7.3.4 Tabla 20, unidades 6 «Playas de La Llana» (uso didáctico, científico, divulgativo y turístico) y 7 «Arenales de La Llana» (Zona de Conservación Prioritaria), y §2.1.4 para el perfil de playa y duna. coordenada de OpenStreetMap (© OpenStreetMap contributors, ODbL); Wikimedia Commons (foto: Ryan Hodnett, CC BY-SA 4.0)",
+      "approx": false,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Playa_de_La_Llana_-_Salinas_y_Arenales_de_San_Pedro_del_Pinatar%2C_Spain_2024-02-06.jpg?width=1280",
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "pinar-del-coterillo",
+      "name": "Pinar del Coterillo",
+      "type": "Paisajístico",
+      "description": "Pinar de repoblación plantado a principios del siglo XX para fijar las dunas y frenar su avance sobre los estanques salineros. No es un bosque espontáneo: es una obra de ingeniería forestal que lleva un siglo funcionando, y bajo sus pinos se ha ido instalando el sabinar y la vegetación de arena. El plan lo clasifica como zona de conservación prioritaria y le da la fragilidad máxima.",
+      "coordinates": [
+        37.833115,
+        -0.762513
+      ],
+      "source": "PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar», volumen III del Plan de gestión integral del Mar Menor (Decreto n.º 259/2019, BORM n.º 242 de 19.10.2019), §7.3.4 Tabla 20, unidad 3 «Pinar del Coterillo», que registra como contenido etnológico el «pinar de repoblación efectuada a principios del siglo XX, para fijación de dunas» y le asigna fragilidad 5 sobre 5. La coordenada es el centro del polígono de bosque que OpenStreetMap rotula «Cotorrillo de las Salinas», con grafía distinta a la del plan: es una masa de pinar en la posición que el plan describe, pero la correspondencia no está confirmada por ninguna fuente, de ahí approx. coordenada de OpenStreetMap (© OpenStreetMap contributors, ODbL)",
+      "approx": true,
+      "image": null,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "observatorio-de-aves",
+      "name": "Observatorio de aves",
+      "type": "Paisajístico",
+      "description": "Caseta de observación desde la que mirar las charcas sin que las aves te vean: una pared con troneras a la altura de los ojos, orientada al agua. Es lo que hace posible ver de cerca a flamencos, cigüeñuelas y avocetas sin levantarlas del comedero, que es justo lo que las ahuyenta de un salinar.",
+      "coordinates": [
+        37.837156,
+        -0.765919
+      ],
+      "source": "PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar», volumen III del Plan de gestión integral del Mar Menor (Decreto n.º 259/2019, BORM n.º 242 de 19.10.2019), §7.3.2 Tabla 17, que enumera cuatro observatorios de aves entre los equipamientos interpretativos del parque —dos en la charca de El Coterillo, uno junto a la torre del pinar y otro en la charca grande de los baños de lodo—; la tabla no da coordenadas y no se afirma cuál de los cuatro es éste. coordenada de OpenStreetMap (© OpenStreetMap contributors, ODbL), que rotula un mirador con este nombre dentro del límite. El faro de San Pedro del Pinatar está a 16 m, por debajo del umbral del §4.3.7: es el mismo punto del mapa con dos elementos distintos, y se señala el observatorio porque es el que tiene fuente documental detrás",
+      "approx": false,
+      "image": null,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "puerto-de-san-pedro",
+      "name": "Puerto de San Pedro",
+      "type": "Acceso",
+      "description": "Puerto pesquero y deportivo encajado en mitad del parque, y la puerta de entrada por la que llega la mayoría de los visitantes. Tiene además un efecto que se ve en el mapa: la deriva litoral lleva la arena de norte a sur, y el dique la intercepta, de modo que al norte del puerto la playa es ancha y al sur está en retroceso.",
+      "coordinates": [
+        37.821792,
+        -0.75781
+      ],
+      "source": "PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar», volumen III del Plan de gestión integral del Mar Menor (Decreto n.º 259/2019, BORM n.º 242 de 19.10.2019), §7.3.4 Tabla 20, unidad 5 «Puerto de San Pedro» (Zona de Uso Intensivo General; uso pesquero, acuicultura y turístico-deportivo, accesibilidad 5 sobre 5), y §2.1.4, que atribuye al puerto el corte del transporte de sedimentos y la erosión de la costa al sur. coordenada de OpenStreetMap (© OpenStreetMap contributors, ODbL)",
+      "approx": false,
+      "image": null,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "centro-de-visitantes-las-salinas",
+      "name": "Centro de Visitantes «Las Salinas»",
+      "type": "Acceso",
+      "description": "El equipamiento de recepción del parque, alojado en el Centro de Investigación y Conservación de Humedales «Las Salinas», que hace a la vez de centro de visitantes y de centro científico. Tiene sala de interpretación y una torre-mirador sobre los estanques, y es donde se concentran las actividades de educación ambiental desde que en 2011 se trasladaron aquí las que se hacían en el aula de naturaleza del Molino de Quintín.",
+      "coordinates": [
+        37.834953,
+        -0.778428
+      ],
+      "source": "PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar», volumen III del Plan de gestión integral del Mar Menor (Decreto n.º 259/2019, BORM n.º 242 de 19.10.2019), §7.3.2 Tabla 17, que lo lista entre los equipamientos de titularidad regional del parque (información y atención al visitante, sala de interpretación, mirador paisajístico, área recreativa, aparcamiento y aseos). ENTRA POR DECISIÓN EXPLÍCITA a 72 m FUERA del límite oficial, por encima del margen de ~50 m del §4.3.3: el propio plan advierte en su §7.3.4 que la unidad de uso público «Las Palomas», donde está, queda fuera del Parque Regional y se evalúa igualmente por alojar sus equipamientos y estar «fuertemente ligada a la gestión del Parque». Mismo criterio que el yacimiento de Cañada Molina en Sierra de la Pila, admitido a 69 m. coordenada de OpenStreetMap (© OpenStreetMap contributors, ODbL)",
+      "approx": false,
+      "image": null,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "yacimiento-romano-la-raya",
+      "name": "Yacimiento romano de La Raya",
+      "type": "Arqueológico",
+      "description": "Villa romana excavada en campañas sucesivas desde 2002, de la que se ha delimitado el perímetro y sacado a la luz estructuras de muros, cerámica y estucos pintados. Lo que se ve corresponde probablemente a un borde exterior: el conjunto pudo alcanzar los 10.000 m² entre dependencias señoriales, de servicio, zonas de trabajo y cuadras. Se interpreta como villa de recreo y a la vez comercial, por su cercanía al fondeadero del Mediterráneo.",
+      "coordinates": [
+        37.8260702,
+        -0.7759098
+      ],
+      "source": "Catálogo «Monumentos en la Región de Murcia» de la CARM (Instituto de Turismo), ficha 5147 «Yacimiento Romano La Raya», consultado el 2026-08-17 vía datos.gob.es → nexo.carm.es; de ahí salen el hecho, la descripción y la coordenada. CAE A 39 m FUERA del límite oficial, dentro del margen de ~50 m del §4.3.3, y los metros constan aquí. OJO con la coordenada de esa fuente: sus campos «Latitud» y «Longitud» vienen intercambiados en esta ficha, y en otras traen UTM 30N; la de aquí se ha comprobado con point-in-polygon contra el límite del parque. No se identifica con la «villa romana de recreo de El Salar» que cita el §2.3.4 del PRUG: son dos topónimos distintos y ninguna fuente los equipara",
+      "approx": false,
+      "image": null,
+      "audio": null,
+      "audioTranscript": null
+    }
+  ],
   "species": [
     {
       "id": 4,

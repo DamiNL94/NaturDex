@@ -2,7 +2,7 @@
   "slug": "salinas-arenales-san-pedro-pinatar",
   "name": "Salinas y Arenales de San Pedro del Pinatar",
   "apiSlug": "salinas-arenales-san-pedro-pinatar",
-  "version": 5,
+  "version": 6,
   "updatedAt": "2026-08-17",
   "data": "Data/parks/murcia/salinas-arenales-san-pedro-pinatar/park.json",
   "geo": {
@@ -17,7 +17,7 @@
   "counts": {
     "species": 355,
     "habitats": 15,
-    "pointsOfInterest": 0,
+    "pointsOfInterest": 16,
     "images": 0,
     "assetBytes": 0
   },

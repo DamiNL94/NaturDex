@@ -372,8 +372,23 @@ async function procesaParque(entry, informe) {
     poi.image = c.url;
     poi.source = conCredito(poi.source, c);
     escritos++;
-    if (OPT.sql) {
-      sentencias.push(`UPDATE points_of_interest SET image_url = ${sqlStr(c.url)}, source = ${sqlStr(poi.source)} ` +
+  }
+
+  // El SQL se arma con lo que el `park.json` TIENE, no con lo que esta ejecución ha resuelto, y la
+  // diferencia es un borrado en silencio contra la base de datos. Un POI que ya trae foto se salta
+  // arriba (`tieneFoto && !OPT.all`), así que nunca llegaba a generar su UPDATE: la SEGUNDA vez que
+  // se lanza el mismo comando —cuando ya no queda nada nuevo que resolver, que es el caso normal— el
+  // fichero se reescribía entero con las poquísimas sentencias de esa pasada y perdía todas las
+  // demás. Le pasó a `Database/poi-imagenes.sql` el 2026-08-17: de 18 UPDATE a 1, con la consola
+  // diciendo «→ … (1 sentencia(s))» como si fuera lo esperado.
+  //
+  // El guardián de `--park` de más abajo no cubría esto, porque el caso no es narrar el fichero a un
+  // espacio: es una ejecución COMPLETA que no resuelve nada. Con las sentencias tomadas del dato, el
+  // fichero sale igual se resuelva algo o no, que es lo que hace falta de un volcado idempotente.
+  if (OPT.sql) {
+    for (const poi of pois) {
+      if (!poi.image) continue;
+      sentencias.push(`UPDATE points_of_interest SET image_url = ${sqlStr(poi.image)}, source = ${sqlStr(poi.source)} ` +
         `WHERE slug = ${sqlStr(poi.id)} AND park_id = (SELECT id FROM parks WHERE slug = ${sqlStr(entry.slug)});`);
     }
   }
