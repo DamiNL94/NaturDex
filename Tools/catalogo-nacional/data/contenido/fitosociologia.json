@@ -73,6 +73,21 @@
         }
       ]
     },
+    "Arisaro simorrhini-Tetraclinidetum articulatae": {
+      "nombre": "Sabinar de sabina de Cartagena",
+      "lectura": "Bosquete claro y bajo de un ciprés africano de ramillas articuladas que en Europa solo crece en unos pocos cerros del sureste ibérico y en Malta. Bajo su sombra ligera crece un candilico de hoja acorazonada que asoma en otoño y desaparece en verano. Es la única formación arbórea de origen norteafricano que llega al continente europeo, y por eso su hábitat es prioritario.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Arisarum simorrhinum",
+          "comun": "candilico"
+        },
+        {
+          "cientifico": "Tetraclinis articulata",
+          "comun": "sabina de Cartagena"
+        }
+      ]
+    },
     "Atriplicetum glauco-halimi": {
       "nombre": "Matorral de orgazas",
       "lectura": "Matas de hoja gris y harinosa que colonizan suelos salinos removidos y cargados de nitrógeno: bordes de camino y de cultivo, corrales y escombreras viejas.",
@@ -186,6 +201,19 @@
         {
           "cientifico": "Chara vulgaris",
           "comun": "ova"
+        }
+      ]
+    },
+    "Cheilantho maderensis-Cosentinietum velleae": {
+      "nombre": "Helechos de fisura de roca soleada",
+      "lectura": "Comunidad de helechos diminutos metidos en las grietas de paredes rocosas cálidas y muy expuestas al sol. Sus frondes, de pocos centímetros y cubiertas de escamas o de un fieltro pardo, se enrollan y parecen muertas durante la sequía y se despliegan otra vez con las primeras lluvias. Es de las poquísimas vegetaciones capaces de vivir en roca desnuda a pleno sol.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Cheilanthes maderensis"
+        },
+        {
+          "cientifico": "Cosentinia vellea"
         }
       ]
     },
@@ -654,6 +682,21 @@
         }
       ]
     },
+    "Limonio caesii-Lygeetum sparti": {
+      "nombre": "Albardinal de suelo salino",
+      "lectura": "Estepa de macollas de albardín —una gramínea de hoja enrollada y dura, pariente del esparto— sobre suelos salinos que se resquebrajan al secarse. Entre las macollas quedan calvas de sal donde solo prosperan siemprevivas de roseta aplastada. Ocupa la franja intermedia entre el saladar encharcable y el matorral de secano, y es de las pocas comunidades que aguanta a la vez sequía y sal.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Limonium caesium",
+          "comun": "sopaenvino"
+        },
+        {
+          "cientifico": "Lygeum spartum",
+          "comun": "albardín"
+        }
+      ]
+    },
     "Limonio cossoniani-Lycietum intricati": {
       "nombre": "Matorral de acantilado con cambronera",
       "lectura": "Matorral bajo y espinoso del borde del mar, resistente a la sal que trae el rociado, con cambroneras de ramas enmarañadas y siemprevivas instaladas en las grietas.",
@@ -1015,6 +1058,21 @@
         }
       ]
     },
+    "Salsolo papillosae-Limonietum carthaginensis": {
+      "nombre": "Matorral gipsícola de siemprevivas",
+      "lectura": "Matorral abierto de suelos con yeso o muy salinos, donde la costra del terreno deja calvas entre mata y mata. Lo forman arbustillos carnosos de hoja diminuta y rosetas de siemprevivas que levantan en verano un ramillete de flores secas y crujientes. Es vegetación de área muy reducida: cada tramo de costa tiene sus propias siemprevivas y no se repiten en el siguiente.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Salsola papillosa",
+          "comun": "patagusanos"
+        },
+        {
+          "cientifico": "Limonium carthaginense",
+          "comun": "siempreviva de Cartagena"
+        }
+      ]
+    },
     "Sarcocornietum alpini": {
       "nombre": "Almarjal de sosa jabonera",
       "lectura": "Matorral bajo de plantas suculentas sin hojas visibles, formadas por tallos carnosos articulados que parecen sartas de cuentas y que enrojecen a final de verano. Cubre los suelos más salinos y encharcados del saladar, donde casi ninguna otra planta prospera. La sal la almacenan dentro de esos tallos, y por eso están hinchados.",
@@ -1042,6 +1100,20 @@
         {
           "cientifico": "Cistus albidus",
           "comun": "jara blanca, estepa blanca"
+        }
+      ]
+    },
+    "Saturejo canescentis-Thymetum hyemalis": {
+      "nombre": "Tomillar de ajedrea y tomillo de invierno",
+      "lectura": "Tomillar bajo y muy aromático de las solanas secas del sureste ibérico, sobre suelos pedregosos y poco profundos. Lo dominan matas de menos de medio metro, grises de tanto pelo, entre las que asoma la piedra desnuda; florece en pleno invierno, que es cuando el resto del matorral está parado, y por eso sostiene a los insectos en la peor época del año.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Satureja canescens"
+        },
+        {
+          "cientifico": "Thymus hyemalis",
+          "comun": "tomillo de invierno"
         }
       ]
     },

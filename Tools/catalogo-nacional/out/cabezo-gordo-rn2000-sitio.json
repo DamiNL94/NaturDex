@@ -1,0 +1,95 @@
+{
+  "_nota": "GENERADO por Tools/catalogo-nacional/especies-sitio-rn2000.js. No editar a mano. Es la lista OFICIAL de especies de los sitios Red Natura 2000 con los que solapa el espacio: secciones 3.2 (especies de los anexos de las Directivas) y 3.3 (otras especies importantes) de su Formulario Normalizado de Datos. Es la fuente que afirma la pertenencia AL SITIO, y por eso es el respaldo documental de las aves, que no se pueden adscribir a un polígono de hábitat.",
+  "park": "cabezo-gordo",
+  "generado": "2026-08-17",
+  "fuente": "IEPNB · Servicio Web de la Red Natura 2000 (https://iepnb.gob.es/api/rn2000/): v_cntr_site, v_cntr_species (sección 3.2) y v_cntr_other_species (sección 3.3)",
+  "sitios": [
+    {
+      "code": "ES6200013",
+      "name": "Cabezo Gordo",
+      "figura": "LIC/ZEC",
+      "tipoSitio": "B",
+      "año": 2023,
+      "seccion32": 5,
+      "seccion33": 0,
+      "sinEspecies": false,
+      "porGrupo": {
+        "Mamíferos": 5
+      }
+    }
+  ],
+  "total": 5,
+  "taxonesDistintos": 5,
+  "especies": [
+    {
+      "scientificName": "Miniopterus schreibersii",
+      "binomio": "miniopterus schreibersii",
+      "grupo": "Mamíferos",
+      "grupoCodigo": "M",
+      "seccion": "3.2",
+      "codigoFnd": "1310",
+      "tipoPoblacion": "permanente",
+      "categoriaPoblacion": "presente",
+      "motivacion": null,
+      "siteCode": "ES6200013",
+      "siteName": "Cabezo Gordo",
+      "siteFigura": "LIC/ZEC"
+    },
+    {
+      "scientificName": "Myotis capaccinii",
+      "binomio": "myotis capaccinii",
+      "grupo": "Mamíferos",
+      "grupoCodigo": "M",
+      "seccion": "3.2",
+      "codigoFnd": "1316",
+      "tipoPoblacion": "permanente",
+      "categoriaPoblacion": "presente",
+      "motivacion": null,
+      "siteCode": "ES6200013",
+      "siteName": "Cabezo Gordo",
+      "siteFigura": "LIC/ZEC"
+    },
+    {
+      "scientificName": "Myotis myotis",
+      "binomio": "myotis myot",
+      "grupo": "Mamíferos",
+      "grupoCodigo": "M",
+      "seccion": "3.2",
+      "codigoFnd": "1324",
+      "tipoPoblacion": "permanente",
+      "categoriaPoblacion": "presente",
+      "motivacion": null,
+      "siteCode": "ES6200013",
+      "siteName": "Cabezo Gordo",
+      "siteFigura": "LIC/ZEC"
+    },
+    {
+      "scientificName": "Rhinolophus euryale",
+      "binomio": "rhinolophus euryal",
+      "grupo": "Mamíferos",
+      "grupoCodigo": "M",
+      "seccion": "3.2",
+      "codigoFnd": "1305",
+      "tipoPoblacion": "permanente",
+      "categoriaPoblacion": "presente",
+      "motivacion": null,
+      "siteCode": "ES6200013",
+      "siteName": "Cabezo Gordo",
+      "siteFigura": "LIC/ZEC"
+    },
+    {
+      "scientificName": "Rhinolophus ferrumequinum",
+      "binomio": "rhinolophus ferrumequin",
+      "grupo": "Mamíferos",
+      "grupoCodigo": "M",
+      "seccion": "3.2",
+      "codigoFnd": "1304",
+      "tipoPoblacion": "permanente",
+      "categoriaPoblacion": "presente",
+      "motivacion": null,
+      "siteCode": "ES6200013",
+      "siteName": "Cabezo Gordo",
+      "siteFigura": "LIC/ZEC"
+    }
+  ]
+}

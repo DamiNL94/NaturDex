@@ -6709,7 +6709,7 @@
         "cita": "Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §2.1.2 (Paisaje Protegido «Espacios Abiertos e Islas del Mar Menor») (BORM n.º 242, de 19 de octubre de 2019)",
         "ambito": "el Paisaje Protegido «Espacios Abiertos e Islas del Mar Menor», que es el propio espacio: el volumen II le dedica un apartado con inventario propio (§2.1), distinto del de su ZEC ES6200006 (§1.1.2), y la tabla del §2 del volumen I mide sus 1.307,85 ha dentro del ámbito del plan, el 100 %",
         "consultado": "2026-08-17",
-        "nota": "Segundo espacio del rollout cuyo inventario normativo es del PROPIO espacio y no de un sitio Red Natura 2000 que lo solapa sin coincidir. El volumen II trae DOS inventarios que se parecen pero no son el mismo: el de la ZEC ES6200006 (§1.1.2, 1.247,7 ha) y el del Paisaje Protegido (§2.1, 1.307,4 ha). Se transcribe el segundo, que es el que cubre el espacio entero. Las diez tablas leídas cuadran una a una con el número que declara el propio texto («se presentan 45 especies de aves del Anexo I», «94 especies de aves migratorias», «otras 15 especies más», «17 especies de fauna vertebrada»), que es la comprobación de que la extracción no ha perdido filas. TRES especies aparecen en dos tablas a la vez —Lanius meridionalis, Sylvia melanocephala y Upupa epops, marcadas «(+)» porque tienen estatus distinto según el espacio—, más Motacilla alba y Picus viridis: se dan de alta una sola vez, así que las 154 entradas de aves de las tres tablas son 149 especies. Los marcadores tipográficos de tabla —«(+)» y el «*» de Asparagus maritimus— NO se conservan en el `scientificName`: son llamadas al pie, no parte del nombre. `nombreCorregido` solo se pone donde el verbatim no puede casar por sí solo (seis paréntesis intercalados y cuatro erratas); los sinónimos que EIDOS resuelve —Sylvia communis, Bufo calamita, Saxicola torquata, Egretta alba, Philomachus pugnax…— se dejan tal cual y los tiende el puente de nomenclatura contra EIDOS. Se lee del PDF con `pdftotext -layout`; el boletín publica el plan ENTERO (955 páginas, 132 MB), a diferencia del Plan del Altiplano."
+        "nota": "Segundo espacio del rollout cuyo inventario normativo es del PROPIO espacio y no de un sitio Red Natura 2000 que lo solapa sin coincidir. El volumen II trae DOS inventarios que se parecen pero no son el mismo: el de la ZEC ES6200006 (§1.1.2, 1.247,7 ha) y el del Paisaje Protegido (§2.1, 1.307,4 ha). Se transcribe el segundo, que es el que cubre el espacio entero. Las diez tablas leídas cuadran una a una con el número que declara el propio texto («se presentan 45 especies de aves del Anexo I», «94 especies de aves migratorias», «otras 15 especies más», «17 especies de fauna vertebrada»), que es la comprobación de que la extracción no ha perdido filas. TRES especies aparecen en dos tablas a la vez —Lanius meridionalis, Sylvia melanocephala y Upupa epops, marcadas «(+)» porque tienen estatus distinto según el espacio—, más Motacilla alba y Picus viridis: se dan de alta una sola vez, así que las 154 entradas de aves de las tres tablas son 149 especies. Los marcadores tipográficos de tabla —«(+)» y el «*» de Asparagus maritimus— NO se conservan en el `scientificName`: son llamadas al pie, no parte del nombre. `nombreCorregido` solo se pone donde el verbatim no puede casar por sí solo, y son QUINCE: once paréntesis y cuatro erratas de imprenta. Los paréntesis fallan por dos motivos distintos y conviene no confundirlos — los seis INTERCALADOS («Larus (Ichthyaetus) audouinii») rompen el binomio con el que se indexa el anexo, y los cinco del FINAL («Timon lepidus (antes Lacerta lepida)») lo dejan bien pero no existen como cadena en ninguna Lista Patrón, así que la especie se cae al resolver el nivel 1 contra EIDOS. Cuál de los dos nombres del paréntesis acepta EIDOS cambia de caso a caso —tres veces el de fuera, tres el de dentro y una vez ninguno de los dos (Rhinechis/Elaphe → Zamenis)—, así que no hay regla mecánica y los once van resueltos uno a uno. Los sinónimos SIN paréntesis que EIDOS resuelve —Sylvia communis, Bufo calamita, Saxicola torquata, Egretta alba, Philomachus pugnax…— se dejan tal cual: los tiende el puente de nomenclatura contra EIDOS. Se lee del PDF con `pdftotext -layout`; el boletín publica el plan ENTERO (955 páginas, 132 MB), a diferencia del Plan del Altiplano."
       },
       "especies": [
         {
@@ -7049,7 +7049,9 @@
         {
           "scientificName": "Gelochelidon nilotica (= Sterna nilotica)",
           "grupo": "Aves",
-          "nombreComun": "pagaza piconegra"
+          "nombreComun": "pagaza piconegra",
+          "nombreCorregido": "Gelochelidon nilotica",
+          "nota": "La norma añade entre paréntesis el sinónimo. EIDOS acepta «Gelochelidon nilotica» y da «Sterna nilotica» por sinónimo. Verificado el 2026-08-17."
         },
         {
           "scientificName": "Glareola pratincola",
@@ -7359,7 +7361,9 @@
         {
           "scientificName": "Sterna albifrons (= Sternula albifrons)",
           "grupo": "Aves",
-          "nombreComun": "charrancito común"
+          "nombreComun": "charrancito común",
+          "nombreCorregido": "Sternula albifrons",
+          "nota": "La norma añade entre paréntesis el sinónimo, y aquí el aceptado es el de dentro: EIDOS da «Sterna albifrons» por sinónimo de «Sternula albifrons». Verificado el 2026-08-17."
         },
         {
           "scientificName": "Sterna hirundo",
@@ -7702,7 +7706,9 @@
         {
           "scientificName": "Hemorrhois hippocrepis (antes Coluber hippocrepis)",
           "grupo": "Reptiles",
-          "nombreComun": "culebra de herradura"
+          "nombreComun": "culebra de herradura",
+          "nombreCorregido": "Hemorrhois hippocrepis",
+          "nota": "La norma añade entre paréntesis el nombre antiguo. EIDOS acepta «Hemorrhois hippocrepis». Verificado el 2026-08-17."
         },
         {
           "scientificName": "Psammodromus algirus",
@@ -7719,7 +7725,9 @@
         {
           "scientificName": "Rhinechis scalaris (antes Elaphe scalaris)",
           "grupo": "Reptiles",
-          "nombreComun": "culebra de escalera"
+          "nombreComun": "culebra de escalera",
+          "nombreCorregido": "Zamenis scalaris",
+          "nota": "La norma añade entre paréntesis el nombre antiguo, y NINGUNO de los dos es el vigente: EIDOS da «Rhinechis scalaris» y «Elaphe scalaris» por sinónimos de «Zamenis scalaris». Verificado el 2026-08-17."
         },
         {
           "scientificName": "Tarentola mauritanica",
@@ -7729,7 +7737,9 @@
         {
           "scientificName": "Timon lepidus (antes Lacerta lepida)",
           "grupo": "Reptiles",
-          "nombreComun": "lagarto ocelado"
+          "nombreComun": "lagarto ocelado",
+          "nombreCorregido": "Timon lepidus",
+          "nota": "La norma añade entre paréntesis el nombre antiguo. EIDOS acepta «Timon lepidus». Verificado el 2026-08-17."
         }
       ],
       "noNativas": [
@@ -7764,7 +7774,8 @@
         {
           "scientificName": "Spartina patens (= S. versicolor)",
           "grupo": "Flora",
-          "nota": "Tabla 150 del §2.1.2.6: especie del Anexo del Real Decreto 630/2013 (Catálogo español de especies exóticas invasoras) presente en la ZEC ES6200006."
+          "nombreCorregido": "Spartina patens",
+          "nota": "Tabla 150 del §2.1.2.6: especie del Anexo del Real Decreto 630/2013 (Catálogo español de especies exóticas invasoras) presente en la ZEC ES6200006. La norma añade entre paréntesis el sinónimo; EIDOS acepta «Spartina patens». Verificado el 2026-08-17."
         },
         {
           "scientificName": "Myiopsitta monachus",
@@ -7945,7 +7956,7 @@
         "cita": "Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019)",
         "ambito": "la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio",
         "consultado": "2026-08-17",
-        "nota": "El único espacio de este plan cuyo apartado de Paisaje Protegido (§2.2) NO trae inventario propio: remite al de su ZEC. Las cinco tablas cuadran con lo que declara el texto («8 especies de aves del Anexo I», «13 especies de aves migratorias», «otras 9 especies más», «18 especies de fauna vertebrada terrestre», «9 especies catalogadas a escala regional»). TRES aves —Lanius meridionalis, Sylvia melanocephala y Upupa epops— salen en la Tabla 66 y en la 67 a la vez, marcadas «(+)» por tener estatus distinto según el espacio: la propia norma dice «30 especies de aves» sumando 8+13+9, pero las especies DISTINTAS son 27, y aquí se dan de alta una sola vez. Ninguna entrada necesita `nombreCorregido`: las nueve de flora y las dieciocho de fauna resuelven en EIDOS por sí solas o vía sinónimo (Bufo calamita → Epidalea calamita, Eptesicus isabellinus → Cnephaeus isabellinus, Rhinechis scalaris → Zamenis scalaris, Sylvia communis → Curruca communis…), que es lo que tiende el puente de nomenclatura. El valor de este anexo son los quirópteros: la Mina del Agua es una de las mayores colonias de la Región, con Miniopterus schreibersii y Myotis capaccinii criando, y 9 de las 18 entradas de fauna son murciélagos."
+        "nota": "El único espacio de este plan cuyo apartado de Paisaje Protegido (§2.2) NO trae inventario propio: remite al de su ZEC. Las cinco tablas cuadran con lo que declara el texto («8 especies de aves del Anexo I», «13 especies de aves migratorias», «otras 9 especies más», «18 especies de fauna vertebrada terrestre», «9 especies catalogadas a escala regional»). TRES aves —Lanius meridionalis, Sylvia melanocephala y Upupa epops— salen en la Tabla 66 y en la 67 a la vez, marcadas «(+)» por tener estatus distinto según el espacio: la propia norma dice «30 especies de aves» sumando 8+13+9, pero las especies DISTINTAS son 27, y aquí se dan de alta una sola vez. Solo DOS entradas llevan `nombreCorregido`, y las dos por el mismo motivo: «Rhinechis scalaris (antes Elaphe scalaris)» y «Timon lepidus (antes Lacerta lepida)» añaden entre paréntesis el nombre antiguo, y esa cadena entera no existe en ninguna Lista Patrón, así que el nivel 1 no la resuelve y la especie salía excluida con «el nombre que transcribe la fuente no existe en la Lista Patrón». En la primera, además, NINGUNO de los dos nombres es el vigente: EIDOS da los dos por sinónimos de Zamenis scalaris. El resto resuelve por sí solo o vía sinónimo (Bufo calamita → Epidalea calamita, Eptesicus isabellinus → Cnephaeus isabellinus, Sylvia communis → Curruca communis…), que es lo que tiende el puente de nomenclatura. El valor de este anexo son los quirópteros: la Mina del Agua es una de las mayores colonias de la Región, con Miniopterus schreibersii y Myotis capaccinii criando, y 9 de las 18 entradas de fauna son murciélagos."
       },
       "especies": [
         {
@@ -8212,12 +8223,16 @@
         {
           "scientificName": "Rhinechis scalaris (antes Elaphe scalaris)",
           "grupo": "Reptiles",
-          "nombreComun": "culebra de escalera"
+          "nombreComun": "culebra de escalera",
+          "nombreCorregido": "Zamenis scalaris",
+          "nota": "La norma añade entre paréntesis el nombre antiguo, y NINGUNO de los dos es el vigente: EIDOS da «Rhinechis scalaris» y «Elaphe scalaris» por sinónimos de «Zamenis scalaris». Verificado el 2026-08-17."
         },
         {
           "scientificName": "Timon lepidus (antes Lacerta lepida)",
           "grupo": "Reptiles",
-          "nombreComun": "lagarto ocelado"
+          "nombreComun": "lagarto ocelado",
+          "nombreCorregido": "Timon lepidus",
+          "nota": "La norma añade entre paréntesis el nombre antiguo. EIDOS acepta «Timon lepidus». Verificado el 2026-08-17."
         }
       ],
       "noNativas": [
