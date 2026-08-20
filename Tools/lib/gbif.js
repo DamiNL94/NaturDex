@@ -36,9 +36,20 @@ async function matchName(sci, opts = {}) {
   if (!m || m.matchType === 'NONE') {
     return { status: 'no-encontrada', speciesKey: null, acceptedName: null, rank: null, matchType: 'NONE' };
   }
-  const key = m.synonym && m.acceptedUsageKey ? m.acceptedUsageKey : m.usageKey;
+  /*
+   * La trampa nº 2 de la cabecera estaba ESCRITA y no se aplicaba, que es peor que no haberla visto.
+   * `/v1/species/match` ya no devuelve el booleano `synonym`: hoy manda la reclasificación en
+   * `status: "SYNONYM"`. Con `m.synonym` siempre `undefined`, el guardián se abría solo y esta
+   * función devolvía la clave del SINÓNIMO con un `status: 'ok'` al lado — el peor par posible,
+   * porque el llamante no tenía de qué desconfiar. *Periploca angustifolia* se resolvía a 8222621
+   * (el sinónimo) en vez de a 6022574 (*P. laevigata*, el aceptado), y una clave de sinónimo trae
+   * MENOS ocurrencias: el repo ya lo midió en −54 % con *Curruca communis*. Se leen las dos formas
+   * porque la vieja puede seguir viva en respuestas cacheadas.
+   */
+  const esSinonimo = m.synonym === true || m.status === 'SYNONYM';
+  const key = esSinonimo && m.acceptedUsageKey ? m.acceptedUsageKey : m.usageKey;
   return {
-    status: m.synonym ? 'sinonimo' : 'ok',
+    status: esSinonimo ? 'sinonimo' : 'ok',
     speciesKey: key || null,
     acceptedName: m.species || m.scientificName || null,
     rank: m.rank || null,

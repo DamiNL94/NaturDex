@@ -353,13 +353,23 @@ async function desdeGbifNacional(sci) {
     const m = await getJson('api.gbif.org', `/v1/species/match?name=${encodeURIComponent(sci)}`,
       { agent: 'build-species-universal' });
     if (!m || !m.usageKey || m.rank !== 'SPECIES') return { speciesKey: null, total: 0, meses: [] };
+    /*
+     * La clave que vale es la ACEPTADA, no la del nombre que se preguntó. Preguntando por un
+     * sinónimo, `usageKey` apunta a la ficha del sinónimo y trae MENOS ocurrencias que la aceptada
+     * —−54 % medido en *Curruca communis*—, y de ese recuento salen `rarityScore` y `seasonality`:
+     * la especie acaba pareciendo más rara de lo que es y con menos meses de los que tiene. GBIF ya
+     * no manda el booleano `synonym`; hoy lo dice en `status: "SYNONYM"`. Se leen las dos formas
+     * porque la vieja puede seguir viva en respuestas cacheadas.
+     */
+    const esSinonimo = m.synonym === true || m.status === 'SYNONYM';
+    const clave = (esSinonimo && m.acceptedUsageKey) || m.usageKey;
     await sleep(120);
     const facetas = await getJson('api.gbif.org',
-      `/v1/occurrence/search?taxonKey=${m.usageKey}&country=ES&limit=0&facet=month&facetLimit=12`,
+      `/v1/occurrence/search?taxonKey=${clave}&country=ES&limit=0&facet=month&facetLimit=12`,
       { agent: 'build-species-universal' });
     const meses = ((facetas.facets || []).find(f => f.field === 'MONTH') || {}).counts || [];
     return {
-      speciesKey: m.usageKey,
+      speciesKey: clave,
       total: facetas.count || 0,
       meses: meses.map(c => ({ mes: Number(c.name), n: c.count })),
     };
