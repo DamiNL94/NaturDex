@@ -955,11 +955,26 @@ async function main() {
     for (const nombre of nombresDeFuente) {
       if (!resueltas.has(nombre)) resueltas.set(nombre, await resuelve(nombre, ccaa));
     }
+    /*
+     * `respaldo-sitio.js` lee el nombre aceptado en `acceptedName` —es su contrato, y es lo que le
+     * pasa `poda-aves-sin-respaldo.js`—, pero el `resuelve()` de aquí lo guarda en
+     * `nombreAceptadoEidos`. Pasarle las entradas tal cual dejaba `r.acceptedName` en `undefined`
+     * SIEMPRE, así que la capa 2 del puente —la que resuelve el nombre de LA FUENTE, que es la razón
+     * de ser de todo esto— no tendía ni un puente y nadie se enteraba: los únicos que salían por
+     * pantalla eran los de la tabla de equivalencias, y el informe decía «puentes tendidos: 2» tan
+     * tranquilo. El coste se ve en Cabezo Gordo: el anexo enumera «Bufo calamita» y GBIF sirve
+     * «Epidalea calamita», así que el sapo corredor quedaba excluido con «ninguna fuente documental
+     * la respalda» escrito al lado, que es falso — la norma del espacio lo enumera. Igual con
+     * «Apus melba» → Tachymarptis y «Sylvia melanocephala» → Curruca.
+     */
+    const paraElPuente = new Map(
+      [...resueltas].map(([n, r]) => [n, { ...r, acceptedName: r.acceptedName || r.nombreAceptadoEidos || null }]),
+    );
     const idxSitio = respaldoSitio.indexa([...new Set([...sitio.mapa.values()].flat())], {
-      nombreDe: e => e.scientificName, resueltas, equivalencias: equivalencias.mapa,
+      nombreDe: e => e.scientificName, resueltas: paraElPuente, equivalencias: equivalencias.mapa,
     });
     const idxAnexo = respaldoSitio.indexa([...new Set([...anexo.mapa.values()])], {
-      nombreDe: e => e.scientificName, resueltas, equivalencias: equivalencias.mapa,
+      nombreDe: e => e.scientificName, resueltas: paraElPuente, equivalencias: equivalencias.mapa,
     });
     // Las claves nuevas se AÑADEN a los índices que ya había: el `nombreCorregido` del anexo y el
     // binomio verbatim siguen valiendo, y aquí solo se amplía por dónde se puede casar.
@@ -1025,12 +1040,21 @@ async function main() {
     const bin = binomio(c.scientificName) || '';
     const binAcept = binomio(r.nombreAceptadoEidos || '') || '';
     const enAnexo = anexo.mapa.get(bin) || (binAcept && anexo.mapa.get(binAcept)) || null;
-    if (enAnexo) anexoCasado.add(enAnexo);
+    /*
+     * «Casada» quiere decir CONFIRMADA POR GBIF, y por eso exige ocurrencias. Casarla a secas
+     * contaba también a los candidatos DOCUMENTALES —los que entran por la norma con cero
+     * ocurrencias, que son justo los que había que contrastar en campo—, así que cada entrada del
+     * anexo se confirmaba a sí misma: Cabezo Gordo salía con «54/54 confirmadas por GBIF» y
+     * `anexo_sin_constancia` vacío teniendo 31 fichas sin un solo registro dentro de un polígono.
+     * El hueco existe para que se vea y para que le ponga su `reviewNote` a la ficha; vaciarlo en
+     * silencio es afirmar una observación que no existe.
+     */
+    if (enAnexo && c.gbifOccurrences > 0) anexoCasado.add(enAnexo);
     // La lista oficial se cruza por los mismos dos nombres que el anexo: el formulario de 2023 sigue
     // citando *Sylvia* donde GBIF ya sirve *Curruca*, y buscar solo por uno deja al ave sin el
     // respaldo que su propio sitio le da — en silencio, que es lo que no puede pasar.
     const enSitio = sitio.mapa.get(bin) || (binAcept && sitio.mapa.get(binAcept)) || null;
-    if (enSitio) for (const e of enSitio) sitioCasado.add(e.scientificName);
+    if (enSitio && c.gbifOccurrences > 0) for (const e of enSitio) sitioCasado.add(e.scientificName);
 
     // `observada_gbif` solo si GBIF la ha visto de verdad. Un candidato que aporta la legislación y
     // el barrido no confirma entra con cero ocurrencias, y ponerle esa evidencia sería afirmar una

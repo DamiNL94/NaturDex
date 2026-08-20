@@ -1005,6 +1005,30 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
+  "Anagyris foetida": {
+    "commonName": "Altramuces",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Noviembre a julio",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Fabales",
+      "family": "Fabaceae",
+      "genus": "Anagyris"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anagyris_foetida.jpg?width=1280",
+    "imageAttribution": "A. Barra (CC BY 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 1849
+  },
   "Anas acuta": {
     "commonName": "Ánade rabudo",
     "kingdom": "fauna",
@@ -3826,6 +3850,30 @@
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     }
+  },
+  "Bufo bufo": {
+    "commonName": "Bufo bufo",
+    "kingdom": "fauna",
+    "group": "Anfibio",
+    "habitat": null,
+    "seasonality": "Febrero a noviembre",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Amphibia",
+      "order": "Anura",
+      "family": "Bufonidae",
+      "genus": "Bufo"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bufo_bufo_sitting-Iric2006.jpg?width=1280",
+    "imageAttribution": "Iric (CC BY-SA 2.5) · Wikimedia Commons",
+    "eidosTaxonId": 93827
   },
   "Bufo spinosus": {
     "commonName": "Sapo común ibérico",
@@ -20344,6 +20392,30 @@
     "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
     "eidosTaxonId": 7186,
     "rarityBasis": null
+  },
+  "Plecotus austriacus": {
+    "commonName": "Murciélago orejudo gris",
+    "kingdom": "fauna",
+    "group": "Murciélago",
+    "habitat": null,
+    "seasonality": "Marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, enero",
+    "rarityScore": 3,
+    "description": "Es un murciélago de tamaño medio. Orejas muy grandes que se unen por la base de sus bordes internos. El dorso es gris oscuro con los pelos negruzcos en casi toda su longitud, mientras que la zona ventral es blanquecina o gris muy pálida. Los jóvenes tienen una coloración grisácea más apagada. Las hembras son por lo general algo mayores que los machos. ANT: 37,0-45,0 mm; Ps: 6,5-15 g. Fórmula dentaria: 2.1.2.3/3.1.3.3. Número de cromosomas (2n) = 32. Por el tamaño de las orejas y su aspecto, en la Península Ibérica sólo se puede confundir con P. auritus y la semejanza entre ambas requiere que su determinación deba realizarse en mano, y aún así pueden surgir dificultades. Al contrario que en P. auritus, el trago es normalmente mayor de 5,5 mm y está pigmentado en toda su longitud con un color parecido al del pabellón de la oreja. La longitud del pulgar (sin la uña) generalmente es menor (inferior a 6 mm) y la uña es también más corta. Partes desnudas de color grisáceo oscuro (y no pardas o rojizas). Antifaz oscuro alrededor de los ojos más marcado. En los machos adultos, el pene es mazudo (y no cilíndrico). ULTRASONIDOS Emite pulsos de ecolocalización en FM desde 85 a 25 kHz. La intensidad de estos sonidos es muy débil y su alcance apenas supera los 5 m. Las señales son prácticamente indistinguibles de las de P. auritus.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Mammalia",
+      "order": "Chiroptera",
+      "family": "Vespertilionidae",
+      "genus": "Plecotus"
+    },
+    "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2023)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Plecotus_austriacus2.jpg?width=1280",
+    "imageAttribution": "Andrei Sakhno (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 10799
   },
   "Pluvialis apricaria": {
     "commonName": "Chorlito dorado",

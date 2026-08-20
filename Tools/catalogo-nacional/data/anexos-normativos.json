@@ -6699,6 +6699,1562 @@
           "nota": "El §2.3.3.3 del PRUG la declara exótica e incluida en el Catálogo español de especies exóticas invasoras, aunque la Tabla 9 la incluya en el inventario faunístico."
         }
       ]
+    },
+    "espacios-abiertos-e-islas-del-mar-menor": {
+      "fuente": {
+        "norma": "Decreto n.º 259/2019, de 10 de octubre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia. El Paisaje Protegido tiene apartado propio en su Volumen II, con inventario propio.",
+        "boletin": "BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450",
+        "url": "https://www.borm.es/services/anuncio/ano/2019/numero/6450/pdf",
+        "anexo": "Volumen II, §2.1.2 «Descripción de la biodiversidad» del Paisaje Protegido «Espacios Abiertos e Islas del Mar Menor»: §2.1.2.3 aves —Tabla 144, 45 del Anexo I de la Directiva Aves; Tabla 145, 94 migratorias de llegada regular; Tabla 146, 15 otras de interés—, §2.1.2.4 «Otras especies de fauna» —Tabla 147, 17 vertebrados no aves— y §2.1.2.5 «Flora terrestre» —Tabla 148, 35 taxones—. Las Tablas 150, 151 y 152 del §2.1.2.6 y el muflón de la Isla del Barón están recogidos aparte, en `noNativas`.",
+        "cita": "Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §2.1.2 (Paisaje Protegido «Espacios Abiertos e Islas del Mar Menor») (BORM n.º 242, de 19 de octubre de 2019)",
+        "ambito": "el Paisaje Protegido «Espacios Abiertos e Islas del Mar Menor», que es el propio espacio: el volumen II le dedica un apartado con inventario propio (§2.1), distinto del de su ZEC ES6200006 (§1.1.2), y la tabla del §2 del volumen I mide sus 1.307,85 ha dentro del ámbito del plan, el 100 %",
+        "consultado": "2026-08-17",
+        "nota": "Segundo espacio del rollout cuyo inventario normativo es del PROPIO espacio y no de un sitio Red Natura 2000 que lo solapa sin coincidir. El volumen II trae DOS inventarios que se parecen pero no son el mismo: el de la ZEC ES6200006 (§1.1.2, 1.247,7 ha) y el del Paisaje Protegido (§2.1, 1.307,4 ha). Se transcribe el segundo, que es el que cubre el espacio entero. Las diez tablas leídas cuadran una a una con el número que declara el propio texto («se presentan 45 especies de aves del Anexo I», «94 especies de aves migratorias», «otras 15 especies más», «17 especies de fauna vertebrada»), que es la comprobación de que la extracción no ha perdido filas. TRES especies aparecen en dos tablas a la vez —Lanius meridionalis, Sylvia melanocephala y Upupa epops, marcadas «(+)» porque tienen estatus distinto según el espacio—, más Motacilla alba y Picus viridis: se dan de alta una sola vez, así que las 154 entradas de aves de las tres tablas son 149 especies. Los marcadores tipográficos de tabla —«(+)» y el «*» de Asparagus maritimus— NO se conservan en el `scientificName`: son llamadas al pie, no parte del nombre. `nombreCorregido` solo se pone donde el verbatim no puede casar por sí solo, y son QUINCE: once paréntesis y cuatro erratas de imprenta. Los paréntesis fallan por dos motivos distintos y conviene no confundirlos — los seis INTERCALADOS («Larus (Ichthyaetus) audouinii») rompen el binomio con el que se indexa el anexo, y los cinco del FINAL («Timon lepidus (antes Lacerta lepida)») lo dejan bien pero no existen como cadena en ninguna Lista Patrón, así que la especie se cae al resolver el nivel 1 contra EIDOS. Cuál de los dos nombres del paréntesis acepta EIDOS cambia de caso a caso —tres veces el de fuera, tres el de dentro y una vez ninguno de los dos (Rhinechis/Elaphe → Zamenis)—, así que no hay regla mecánica y los once van resueltos uno a uno. Los sinónimos SIN paréntesis que EIDOS resuelve —Sylvia communis, Bufo calamita, Saxicola torquata, Egretta alba, Philomachus pugnax…— se dejan tal cual: los tiende el puente de nomenclatura contra EIDOS. Se lee del PDF con `pdftotext -layout`; el boletín publica el plan ENTERO (955 páginas, 132 MB), a diferencia del Plan del Altiplano."
+      },
+      "especies": [
+        {
+          "scientificName": "Bufo calamita",
+          "grupo": "Anfibios",
+          "nombreComun": "sapo corredor"
+        },
+        {
+          "scientificName": "Acrocephalus arundinaceus",
+          "grupo": "Aves",
+          "nombreComun": "carricero tordal"
+        },
+        {
+          "scientificName": "Acrocephalus melanopogon",
+          "grupo": "Aves",
+          "nombreComun": "carricerín real"
+        },
+        {
+          "scientificName": "Acrocephalus scirpaceus",
+          "grupo": "Aves",
+          "nombreComun": "carricero común"
+        },
+        {
+          "scientificName": "Actitis hypoleucos",
+          "grupo": "Aves",
+          "nombreComun": "andarríos chico"
+        },
+        {
+          "scientificName": "Alca torda",
+          "grupo": "Aves",
+          "nombreComun": "alca"
+        },
+        {
+          "scientificName": "Alcedo tais",
+          "grupo": "Aves",
+          "nombreComun": "martín pescador",
+          "nombreCorregido": "Alcedo atthis",
+          "nota": "Errata de imprenta de la norma. EIDOS no conoce «Alcedo tais» y GBIF solo lo resuelve al GÉNERO Alcedo; el nombre castellano que escribe la norma, «martín pescador», es Alcedo atthis, que EIDOS acepta. Verificado el 2026-08-17."
+        },
+        {
+          "scientificName": "Anas acuta",
+          "grupo": "Aves",
+          "nombreComun": "ánade rabudo"
+        },
+        {
+          "scientificName": "Anas clypeata",
+          "grupo": "Aves",
+          "nombreComun": "cuchara común"
+        },
+        {
+          "scientificName": "Anas crecca",
+          "grupo": "Aves",
+          "nombreComun": "cerceta común"
+        },
+        {
+          "scientificName": "Anas penélope",
+          "grupo": "Aves",
+          "nombreComun": "silbón europeo",
+          "nombreCorregido": "Mareca penelope",
+          "nota": "Errata de la norma: tilde castellana sobre un epíteto latino. Sin ella, EIDOS da «Anas penelope» por sinónimo de «Mareca penelope», que es el nombre aceptado. Verificado el 2026-08-17."
+        },
+        {
+          "scientificName": "Anas strepera",
+          "grupo": "Aves",
+          "nombreComun": "ánade friso"
+        },
+        {
+          "scientificName": "Anthus pratensis",
+          "grupo": "Aves",
+          "nombreComun": "bisbita común"
+        },
+        {
+          "scientificName": "Anthus spinoletta",
+          "grupo": "Aves",
+          "nombreComun": "bisbita ribereño"
+        },
+        {
+          "scientificName": "Apus apus",
+          "grupo": "Aves",
+          "nombreComun": "vencejo común"
+        },
+        {
+          "scientificName": "Apus melba",
+          "grupo": "Aves",
+          "nombreComun": "vencejo real"
+        },
+        {
+          "scientificName": "Ardea cinerea",
+          "grupo": "Aves",
+          "nombreComun": "garza real"
+        },
+        {
+          "scientificName": "Ardea purpurea",
+          "grupo": "Aves",
+          "nombreComun": "garza imperial"
+        },
+        {
+          "scientificName": "Ardeola ralloides",
+          "grupo": "Aves",
+          "nombreComun": "garcilla cangrejera"
+        },
+        {
+          "scientificName": "Arenaria interpres",
+          "grupo": "Aves",
+          "nombreComun": "vuelvepiedras común"
+        },
+        {
+          "scientificName": "Asio flammeus",
+          "grupo": "Aves",
+          "nombreComun": "búho campestre"
+        },
+        {
+          "scientificName": "Athene noctua",
+          "grupo": "Aves",
+          "nombreComun": "mochuelo común"
+        },
+        {
+          "scientificName": "Aythya ferina",
+          "grupo": "Aves",
+          "nombreComun": "porrón europeo"
+        },
+        {
+          "scientificName": "Botaurus stellaris",
+          "grupo": "Aves",
+          "nombreComun": "avetoro"
+        },
+        {
+          "scientificName": "Bubulcus ibis",
+          "grupo": "Aves",
+          "nombreComun": "garcilla bueyera"
+        },
+        {
+          "scientificName": "Burhinus oedicnemus",
+          "grupo": "Aves",
+          "nombreComun": "alcaraván común"
+        },
+        {
+          "scientificName": "Buteo buteo",
+          "grupo": "Aves",
+          "nombreComun": "ratonero común"
+        },
+        {
+          "scientificName": "Calandrella brachydactyla",
+          "grupo": "Aves",
+          "nombreComun": "terrera común"
+        },
+        {
+          "scientificName": "Calandrella rufescens",
+          "grupo": "Aves",
+          "nombreComun": "terrera marismeña"
+        },
+        {
+          "scientificName": "Calidris alba",
+          "grupo": "Aves",
+          "nombreComun": "correlimos tridáctilo"
+        },
+        {
+          "scientificName": "Calidris alpina",
+          "grupo": "Aves",
+          "nombreComun": "correlimos común"
+        },
+        {
+          "scientificName": "Calidris canutus",
+          "grupo": "Aves",
+          "nombreComun": "correlimos gordo"
+        },
+        {
+          "scientificName": "Calidris ferruginea",
+          "grupo": "Aves",
+          "nombreComun": "correlimos zarapitín"
+        },
+        {
+          "scientificName": "Calidris minuta",
+          "grupo": "Aves",
+          "nombreComun": "correlimos menudo"
+        },
+        {
+          "scientificName": "Calidris temminckii",
+          "grupo": "Aves",
+          "nombreComun": "correlimos de Temminck"
+        },
+        {
+          "scientificName": "Carduelis cannabina",
+          "grupo": "Aves",
+          "nombreComun": "pardillo"
+        },
+        {
+          "scientificName": "Carduelis spinus",
+          "grupo": "Aves",
+          "nombreComun": "lúgano"
+        },
+        {
+          "scientificName": "Cettia cetti",
+          "grupo": "Aves",
+          "nombreComun": "ruiseñor bastardo"
+        },
+        {
+          "scientificName": "Charadrius alexandrinus",
+          "grupo": "Aves",
+          "nombreComun": "chorlitejo patinegro"
+        },
+        {
+          "scientificName": "Charadrius dubius",
+          "grupo": "Aves",
+          "nombreComun": "chorlitejo chico"
+        },
+        {
+          "scientificName": "Charadrius hiaticula",
+          "grupo": "Aves",
+          "nombreComun": "chorlitejo grande"
+        },
+        {
+          "scientificName": "Chlidonias hybridus",
+          "grupo": "Aves",
+          "nombreComun": "fumarel cariblanco"
+        },
+        {
+          "scientificName": "Chlidonias niger",
+          "grupo": "Aves",
+          "nombreComun": "fumarel común"
+        },
+        {
+          "scientificName": "Circaetus gallicus",
+          "grupo": "Aves",
+          "nombreComun": "culebrera europea"
+        },
+        {
+          "scientificName": "Circus aeruginosus",
+          "grupo": "Aves",
+          "nombreComun": "aguilucho lagunero"
+        },
+        {
+          "scientificName": "Circus cyaneus",
+          "grupo": "Aves",
+          "nombreComun": "aguilucho pálido"
+        },
+        {
+          "scientificName": "Circus pygargus",
+          "grupo": "Aves",
+          "nombreComun": "aguilucho cenizo"
+        },
+        {
+          "scientificName": "Cisticola juncidis",
+          "grupo": "Aves",
+          "nombreComun": "buitrón"
+        },
+        {
+          "scientificName": "Clamator glandarius",
+          "grupo": "Aves",
+          "nombreComun": "críalo"
+        },
+        {
+          "scientificName": "Columba palumbus",
+          "grupo": "Aves",
+          "nombreComun": "paloma torcaz"
+        },
+        {
+          "scientificName": "Coracias garrulus",
+          "grupo": "Aves",
+          "nombreComun": "carraca"
+        },
+        {
+          "scientificName": "Corvus monedula",
+          "grupo": "Aves",
+          "nombreComun": "grajilla"
+        },
+        {
+          "scientificName": "Coturnix coturnix",
+          "grupo": "Aves",
+          "nombreComun": "codorniz común"
+        },
+        {
+          "scientificName": "Delichon urbica",
+          "grupo": "Aves",
+          "nombreComun": "avión común"
+        },
+        {
+          "scientificName": "Egretta alba",
+          "grupo": "Aves",
+          "nombreComun": "garceta grande"
+        },
+        {
+          "scientificName": "Egretta garzetta",
+          "grupo": "Aves",
+          "nombreComun": "garceta común"
+        },
+        {
+          "scientificName": "Emberiza schoeniclus",
+          "grupo": "Aves",
+          "nombreComun": "escribano palustre"
+        },
+        {
+          "scientificName": "Erithacus rubecula",
+          "grupo": "Aves",
+          "nombreComun": "petirrojo"
+        },
+        {
+          "scientificName": "Falco columbarius",
+          "grupo": "Aves",
+          "nombreComun": "esmerejón"
+        },
+        {
+          "scientificName": "Falco peregrinus",
+          "grupo": "Aves",
+          "nombreComun": "halcón peregrino"
+        },
+        {
+          "scientificName": "Falco tinnunculus",
+          "grupo": "Aves",
+          "nombreComun": "cernícalo vulgar"
+        },
+        {
+          "scientificName": "Ficedula hypoleuca",
+          "grupo": "Aves",
+          "nombreComun": "papamoscas cerrojillo"
+        },
+        {
+          "scientificName": "Fringilla coelebs",
+          "grupo": "Aves",
+          "nombreComun": "pinzón vulgar"
+        },
+        {
+          "scientificName": "Fulica atra",
+          "grupo": "Aves",
+          "nombreComun": "focha común"
+        },
+        {
+          "scientificName": "Galerida cristata",
+          "grupo": "Aves",
+          "nombreComun": "cogujada común"
+        },
+        {
+          "scientificName": "Gallinago gallinago",
+          "grupo": "Aves",
+          "nombreComun": "agachadiza común"
+        },
+        {
+          "scientificName": "Gelochelidon nilotica (= Sterna nilotica)",
+          "grupo": "Aves",
+          "nombreComun": "pagaza piconegra",
+          "nombreCorregido": "Gelochelidon nilotica",
+          "nota": "La norma añade entre paréntesis el sinónimo. EIDOS acepta «Gelochelidon nilotica» y da «Sterna nilotica» por sinónimo. Verificado el 2026-08-17."
+        },
+        {
+          "scientificName": "Glareola pratincola",
+          "grupo": "Aves",
+          "nombreComun": "canastera común"
+        },
+        {
+          "scientificName": "Haematopus ostralegus",
+          "grupo": "Aves",
+          "nombreComun": "ostrero común"
+        },
+        {
+          "scientificName": "Himantopus himantopus",
+          "grupo": "Aves",
+          "nombreComun": "cigüeñuela común"
+        },
+        {
+          "scientificName": "Hippolais polyglotta",
+          "grupo": "Aves",
+          "nombreComun": "zarcero común"
+        },
+        {
+          "scientificName": "Hirundo daurica",
+          "grupo": "Aves",
+          "nombreComun": "golondrina dáurica"
+        },
+        {
+          "scientificName": "Hirundo rustica",
+          "grupo": "Aves",
+          "nombreComun": "golondrina común"
+        },
+        {
+          "scientificName": "Ixobrychus minutus",
+          "grupo": "Aves",
+          "nombreComun": "avetorillo común"
+        },
+        {
+          "scientificName": "Jynx torquilla",
+          "grupo": "Aves",
+          "nombreComun": "torcecuello"
+        },
+        {
+          "scientificName": "Lanius meridionalis",
+          "grupo": "Aves",
+          "nombreComun": "alcaudón real meridional"
+        },
+        {
+          "scientificName": "Lanius senador",
+          "grupo": "Aves",
+          "nombreComun": "alcaudón común",
+          "nombreCorregido": "Lanius senator",
+          "nota": "Errata de imprenta de la norma. La misma tabla escribe bien «Lanius meridionalis»; EIDOS acepta «Lanius senator». Verificado el 2026-08-17."
+        },
+        {
+          "scientificName": "Larus (Chroicocephalus) genei",
+          "grupo": "Aves",
+          "nombreComun": "gaviota picofina",
+          "nombreCorregido": "Chroicocephalus genei",
+          "nota": "La norma intercala entre paréntesis el género alternativo. Aquí EIDOS acepta el de DENTRO del paréntesis y da «Larus genei» por sinónimo: no hay regla mecánica, cada uno se resuelve aparte. Verificado el 2026-08-17."
+        },
+        {
+          "scientificName": "Larus (Ichthyaetus) audouinii",
+          "grupo": "Aves",
+          "nombreComun": "gaviota de Audouin",
+          "nombreCorregido": "Larus audouinii",
+          "nota": "La norma intercala entre paréntesis el género alternativo. EIDOS acepta «Larus audouinii» y da «Ichthyaetus audouinii» por sinónimo; GBIF va al revés. Manda EIDOS, que es contra quien resuelve la selección. Verificado el 2026-08-17."
+        },
+        {
+          "scientificName": "Larus (Ichthyaetus) melanocephalus",
+          "grupo": "Aves",
+          "nombreComun": "gaviota cabecinegra",
+          "nombreCorregido": "Larus melanocephalus",
+          "nota": "La norma intercala entre paréntesis el género alternativo. EIDOS acepta «Larus melanocephalus» y da «Ichthyaetus melanocephalus» por sinónimo. Verificado el 2026-08-17."
+        },
+        {
+          "scientificName": "Larus fuscus",
+          "grupo": "Aves",
+          "nombreComun": "gaviota sombría"
+        },
+        {
+          "scientificName": "Larus ridibundus(=Chroicocephalus ridibundus)",
+          "grupo": "Aves",
+          "nombreComun": "gaviota reidora",
+          "nombreCorregido": "Chroicocephalus ridibundus",
+          "nota": "La norma escribe el sinónimo pegado al nombre, sin espacio, y eso rompe el binomio entero («larus ridibunduschroicocephal»). EIDOS acepta «Chroicocephalus ridibundus». Verificado el 2026-08-17."
+        },
+        {
+          "scientificName": "Limosa lapponica",
+          "grupo": "Aves",
+          "nombreComun": "aguja colipinta"
+        },
+        {
+          "scientificName": "Limosa limosa",
+          "grupo": "Aves",
+          "nombreComun": "aguja colinegra"
+        },
+        {
+          "scientificName": "Luscinia megarhynchos",
+          "grupo": "Aves",
+          "nombreComun": "ruiseñor común"
+        },
+        {
+          "scientificName": "Luscinia svecica",
+          "grupo": "Aves",
+          "nombreComun": "pechiazul"
+        },
+        {
+          "scientificName": "Lymnocryptes minimus",
+          "grupo": "Aves",
+          "nombreComun": "agachadiza chica"
+        },
+        {
+          "scientificName": "Marmaronetta angustirostris",
+          "grupo": "Aves",
+          "nombreComun": "cerceta pardilla"
+        },
+        {
+          "scientificName": "Melanitta nigra",
+          "grupo": "Aves",
+          "nombreComun": "negrón común"
+        },
+        {
+          "scientificName": "Melanocorypha calandra",
+          "grupo": "Aves",
+          "nombreComun": "calandria"
+        },
+        {
+          "scientificName": "Mergus serrator",
+          "grupo": "Aves",
+          "nombreComun": "serreta mediana"
+        },
+        {
+          "scientificName": "Merops apiaster",
+          "grupo": "Aves",
+          "nombreComun": "abejaruco común"
+        },
+        {
+          "scientificName": "Motacilla alba",
+          "grupo": "Aves",
+          "nombreComun": "lavandera blanca"
+        },
+        {
+          "scientificName": "Motacilla cinerea",
+          "grupo": "Aves",
+          "nombreComun": "lavandera cascadeña"
+        },
+        {
+          "scientificName": "Motacilla flava",
+          "grupo": "Aves",
+          "nombreComun": "lavandera boyera"
+        },
+        {
+          "scientificName": "Muscicapa striata",
+          "grupo": "Aves",
+          "nombreComun": "papamoscas gris"
+        },
+        {
+          "scientificName": "Numenius arquata",
+          "grupo": "Aves",
+          "nombreComun": "zarapito real"
+        },
+        {
+          "scientificName": "Numenius phaeopus",
+          "grupo": "Aves",
+          "nombreComun": "zarapito trinador"
+        },
+        {
+          "scientificName": "Nycticorax nycticorax",
+          "grupo": "Aves",
+          "nombreComun": "martinete común"
+        },
+        {
+          "scientificName": "Oenanthe hispanica",
+          "grupo": "Aves",
+          "nombreComun": "collalba rubia"
+        },
+        {
+          "scientificName": "Oenanthe leucura",
+          "grupo": "Aves",
+          "nombreComun": "collalba negra",
+          "nota": "La norma la marca con (*): «Especie presente pero no recogida en el Formulario normalizado de datos Natura 2000»."
+        },
+        {
+          "scientificName": "Oenanthe oenanthe",
+          "grupo": "Aves",
+          "nombreComun": "collalba gris"
+        },
+        {
+          "scientificName": "Pandion haliaetus",
+          "grupo": "Aves",
+          "nombreComun": "águila pescadora"
+        },
+        {
+          "scientificName": "Phalacrocorax carbo",
+          "grupo": "Aves",
+          "nombreComun": "cormorán grande"
+        },
+        {
+          "scientificName": "Philomachus pugnax",
+          "grupo": "Aves",
+          "nombreComun": "combatiente"
+        },
+        {
+          "scientificName": "Phoenicopterus (roseus) ruber",
+          "grupo": "Aves",
+          "nombreComun": "flamenco común",
+          "nombreCorregido": "Phoenicopterus roseus",
+          "nota": "No es un binomio: la norma pone entre paréntesis el epíteto alternativo. EIDOS acepta LOS DOS como especies distintas —P. ruber es el flamenco del Caribe—, así que lo desambigua el nombre castellano que escribe la propia norma, «flamenco común» = Phoenicopterus roseus. Mismo caso y misma resolución que en el volumen III (San Pedro del Pinatar). Verificado el 2026-08-17."
+        },
+        {
+          "scientificName": "Phoenicurus ochruros",
+          "grupo": "Aves",
+          "nombreComun": "colirrojo tizón"
+        },
+        {
+          "scientificName": "Phoenicurus phoenicurus",
+          "grupo": "Aves",
+          "nombreComun": "colirrojo real"
+        },
+        {
+          "scientificName": "Phylloscopus collybita",
+          "grupo": "Aves",
+          "nombreComun": "mosquitero común"
+        },
+        {
+          "scientificName": "Phylloscopus trochilus",
+          "grupo": "Aves",
+          "nombreComun": "mosquitero musical"
+        },
+        {
+          "scientificName": "Picus viridis",
+          "grupo": "Aves",
+          "nombreComun": "pito real"
+        },
+        {
+          "scientificName": "Platalea leucorodia",
+          "grupo": "Aves",
+          "nombreComun": "espátula común"
+        },
+        {
+          "scientificName": "Pluvialis apricaria",
+          "grupo": "Aves",
+          "nombreComun": "chorlito dorado"
+        },
+        {
+          "scientificName": "Pluvialis squatarola",
+          "grupo": "Aves",
+          "nombreComun": "chorlito gris"
+        },
+        {
+          "scientificName": "Podiceps cristatus",
+          "grupo": "Aves",
+          "nombreComun": "somormujo lavanco"
+        },
+        {
+          "scientificName": "Podiceps nigricollis",
+          "grupo": "Aves",
+          "nombreComun": "zampullín cuellinegro"
+        },
+        {
+          "scientificName": "Porphyrio porphyrio",
+          "grupo": "Aves",
+          "nombreComun": "calamón común"
+        },
+        {
+          "scientificName": "Ptyonoprogne rupestris",
+          "grupo": "Aves",
+          "nombreComun": "avión roquero"
+        },
+        {
+          "scientificName": "Rallus aquaticus",
+          "grupo": "Aves",
+          "nombreComun": "rascón europeo"
+        },
+        {
+          "scientificName": "Recurvirostra avosetta",
+          "grupo": "Aves",
+          "nombreComun": "avoceta común"
+        },
+        {
+          "scientificName": "Remiz pendulinus",
+          "grupo": "Aves",
+          "nombreComun": "pájaro moscón"
+        },
+        {
+          "scientificName": "Riparia riparia",
+          "grupo": "Aves",
+          "nombreComun": "avión zapador"
+        },
+        {
+          "scientificName": "Saxicola rubetra",
+          "grupo": "Aves",
+          "nombreComun": "tarabilla norteña"
+        },
+        {
+          "scientificName": "Saxicola torquata",
+          "grupo": "Aves",
+          "nombreComun": "tarabilla común"
+        },
+        {
+          "scientificName": "Sterna (Thalasseus) sandvicensis",
+          "grupo": "Aves",
+          "nombreComun": "charrán patinegro",
+          "nombreCorregido": "Thalasseus sandvicensis",
+          "nota": "La norma intercala entre paréntesis el género alternativo. EIDOS acepta el de dentro, «Thalasseus sandvicensis», y da «Sterna sandvicensis» por sinónimo. Verificado el 2026-08-17."
+        },
+        {
+          "scientificName": "Sterna albifrons (= Sternula albifrons)",
+          "grupo": "Aves",
+          "nombreComun": "charrancito común",
+          "nombreCorregido": "Sternula albifrons",
+          "nota": "La norma añade entre paréntesis el sinónimo, y aquí el aceptado es el de dentro: EIDOS da «Sterna albifrons» por sinónimo de «Sternula albifrons». Verificado el 2026-08-17."
+        },
+        {
+          "scientificName": "Sterna hirundo",
+          "grupo": "Aves",
+          "nombreComun": "charrán común"
+        },
+        {
+          "scientificName": "Streptopelia turtur",
+          "grupo": "Aves",
+          "nombreComun": "tórtola europea"
+        },
+        {
+          "scientificName": "Sturnus vulgaris",
+          "grupo": "Aves",
+          "nombreComun": "estornino pinto"
+        },
+        {
+          "scientificName": "Sylvia atricapilla",
+          "grupo": "Aves",
+          "nombreComun": "curruca capirotada"
+        },
+        {
+          "scientificName": "Sylvia borin",
+          "grupo": "Aves",
+          "nombreComun": "curruca mosquitera"
+        },
+        {
+          "scientificName": "Sylvia cantillans",
+          "grupo": "Aves",
+          "nombreComun": "curruca carrasqueña"
+        },
+        {
+          "scientificName": "Sylvia communis",
+          "grupo": "Aves",
+          "nombreComun": "curruca zarcera"
+        },
+        {
+          "scientificName": "Sylvia conspicillata",
+          "grupo": "Aves",
+          "nombreComun": "curruca tomillera"
+        },
+        {
+          "scientificName": "Sylvia melanocephala",
+          "grupo": "Aves",
+          "nombreComun": "curruca cabecinegra"
+        },
+        {
+          "scientificName": "Sylvia undata",
+          "grupo": "Aves",
+          "nombreComun": "curruca rabilarga"
+        },
+        {
+          "scientificName": "Tachybaptus ruficollis",
+          "grupo": "Aves",
+          "nombreComun": "zampullín común"
+        },
+        {
+          "scientificName": "Tadorna tadorna",
+          "grupo": "Aves",
+          "nombreComun": "tarro blanco"
+        },
+        {
+          "scientificName": "Tringa erythropus",
+          "grupo": "Aves",
+          "nombreComun": "archibebe oscuro"
+        },
+        {
+          "scientificName": "Tringa glareola",
+          "grupo": "Aves",
+          "nombreComun": "andarríos bastardo"
+        },
+        {
+          "scientificName": "Tringa nebularia",
+          "grupo": "Aves",
+          "nombreComun": "archibebe claro"
+        },
+        {
+          "scientificName": "Tringa ochropus",
+          "grupo": "Aves",
+          "nombreComun": "andarríos grande"
+        },
+        {
+          "scientificName": "Tringa totanus",
+          "grupo": "Aves",
+          "nombreComun": "archibebe común"
+        },
+        {
+          "scientificName": "Turdus merula",
+          "grupo": "Aves",
+          "nombreComun": "mirlo común"
+        },
+        {
+          "scientificName": "Turdus philomelos",
+          "grupo": "Aves",
+          "nombreComun": "zorzal común"
+        },
+        {
+          "scientificName": "Turdus pilaris",
+          "grupo": "Aves",
+          "nombreComun": "zorzal real"
+        },
+        {
+          "scientificName": "Turdus viscivorus",
+          "grupo": "Aves",
+          "nombreComun": "zorzal charlo"
+        },
+        {
+          "scientificName": "Tyto alba",
+          "grupo": "Aves",
+          "nombreComun": "lechuza común"
+        },
+        {
+          "scientificName": "Upupa epops",
+          "grupo": "Aves",
+          "nombreComun": "abubilla"
+        },
+        {
+          "scientificName": "Vanellus vanellus",
+          "grupo": "Aves",
+          "nombreComun": "avefría"
+        },
+        {
+          "scientificName": "Ammochloa palaestina",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Anabasis hispanica",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Artemisia gallica",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Asparagus maritimus",
+          "grupo": "Flora",
+          "nombreComun": "esparraguera de dunas",
+          "nota": "La propia norma lo anota al pie: «La especie Asparagus maritimus corresponde en la Región de Murcia a Asparagus macrorrhizus, endemismo exclusivo en la Región, y es el nombre que deberá adoptar este taxón en próximas revisiones de catálogos y listas rojas». No lleva `nombreCorregido` porque EIDOS ya da el verbatim por sinónimo de Asparagus macrorrhizus y el puente de nomenclatura lo tiende solo; verificado el 2026-08-17."
+        },
+        {
+          "scientificName": "Asplenium billotii",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Capparis zoharyi",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Caralluma europaea",
+          "grupo": "Flora",
+          "nombreComun": "chumberillo de lobo"
+        },
+        {
+          "scientificName": "Centaurea saxicola",
+          "grupo": "Flora",
+          "nombreComun": "cardo amarillo de roca"
+        },
+        {
+          "scientificName": "Chamaerops humilis",
+          "grupo": "Flora",
+          "nombreComun": "palmito"
+        },
+        {
+          "scientificName": "Cheilanthes maderensis",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Clematis cirrhosa",
+          "grupo": "Flora",
+          "nombreComun": "hierba muermera"
+        },
+        {
+          "scientificName": "Cynomorium coccineum",
+          "grupo": "Flora",
+          "nombreComun": "jopo de lobo, hongo de Malta"
+        },
+        {
+          "scientificName": "Echinophora spinosa",
+          "grupo": "Flora",
+          "nombreComun": "zanahoria marina"
+        },
+        {
+          "scientificName": "Juniperus turbinata",
+          "grupo": "Flora",
+          "nombreComun": "sabina de dunas"
+        },
+        {
+          "scientificName": "Lafuentea rotundifolia",
+          "grupo": "Flora",
+          "nombreComun": "orejilla de roca"
+        },
+        {
+          "scientificName": "Launaea lanifera",
+          "grupo": "Flora",
+          "nombreComun": "cardavieja borde"
+        },
+        {
+          "scientificName": "Limonium cossonianum",
+          "grupo": "Flora",
+          "nombreComun": "siempreviva, lechuga de mar"
+        },
+        {
+          "scientificName": "Lycium intricatum",
+          "grupo": "Flora",
+          "nombreComun": "cambrón"
+        },
+        {
+          "scientificName": "Maytenus senegalensis subsp. europaea",
+          "grupo": "Flora",
+          "nombreComun": "arto negro"
+        },
+        {
+          "scientificName": "Merendera filifolia",
+          "grupo": "Flora",
+          "nombreComun": "cástamo"
+        },
+        {
+          "scientificName": "Osyris lanceolata",
+          "grupo": "Flora",
+          "nombreComun": "bayón"
+        },
+        {
+          "scientificName": "Periploca angustifolia",
+          "grupo": "Flora",
+          "nombreComun": "cornical"
+        },
+        {
+          "scientificName": "Rhamnus alaternus",
+          "grupo": "Flora",
+          "nombreComun": "aladierno"
+        },
+        {
+          "scientificName": "Salsola papillosa",
+          "grupo": "Flora",
+          "nombreComun": "patagusanos"
+        },
+        {
+          "scientificName": "Sanguisorba ancistroides",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Scilla autumnalis",
+          "grupo": "Flora",
+          "nombreComun": "escila de otoño"
+        },
+        {
+          "scientificName": "Scilla obtusifolia",
+          "grupo": "Flora",
+          "nombreComun": "escila"
+        },
+        {
+          "scientificName": "Senecio glaucus subsp. glaucus",
+          "grupo": "Flora",
+          "nombreComun": "cachapedo"
+        },
+        {
+          "scientificName": "Sideritis pusilla subsp. carthaginensis",
+          "grupo": "Flora",
+          "nombreComun": "rabogato de Cartagena"
+        },
+        {
+          "scientificName": "Tamarix boveana",
+          "grupo": "Flora",
+          "nombreComun": "taray"
+        },
+        {
+          "scientificName": "Tamarix canariensis",
+          "grupo": "Flora",
+          "nombreComun": "taray"
+        },
+        {
+          "scientificName": "Tetraclinis articulata",
+          "grupo": "Flora",
+          "nombreComun": "sabina de Cartagena, ciprés de Cartagena"
+        },
+        {
+          "scientificName": "Teucrium carthaginense",
+          "grupo": "Flora",
+          "nombreComun": "zamarrilla de Cartagena"
+        },
+        {
+          "scientificName": "Teucrium freynii",
+          "grupo": "Flora"
+        },
+        {
+          "scientificName": "Ziziphus lotus",
+          "grupo": "Flora",
+          "nombreComun": "arto, artino"
+        },
+        {
+          "scientificName": "Atelerix algirus",
+          "grupo": "Mamíferos",
+          "nombreComun": "erizo moruno"
+        },
+        {
+          "scientificName": "Eptesicus isabellinus",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago hortelano"
+        },
+        {
+          "scientificName": "Miniopterus schreibersii",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago de cueva"
+        },
+        {
+          "scientificName": "Myotis capaccinii",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago ratonero patudo"
+        },
+        {
+          "scientificName": "Pipistrellus pipistrellus",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago enano"
+        },
+        {
+          "scientificName": "Pipistrellus pygmaeus",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago de Cabrera"
+        },
+        {
+          "scientificName": "Tadarida teniotis",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago rabudo"
+        },
+        {
+          "scientificName": "Aphanius iberus",
+          "grupo": "Peces",
+          "nombreComun": "fartet"
+        },
+        {
+          "scientificName": "Acanthodactylus erythrurus",
+          "grupo": "Reptiles",
+          "nombreComun": "lagartija colirroja"
+        },
+        {
+          "scientificName": "Chalcides bedriagai",
+          "grupo": "Reptiles",
+          "nombreComun": "eslizón ibérico"
+        },
+        {
+          "scientificName": "Hemorrhois hippocrepis (antes Coluber hippocrepis)",
+          "grupo": "Reptiles",
+          "nombreComun": "culebra de herradura",
+          "nombreCorregido": "Hemorrhois hippocrepis",
+          "nota": "La norma añade entre paréntesis el nombre antiguo. EIDOS acepta «Hemorrhois hippocrepis». Verificado el 2026-08-17."
+        },
+        {
+          "scientificName": "Psammodromus algirus",
+          "grupo": "Reptiles",
+          "nombreComun": "lagartija colilarga"
+        },
+        {
+          "scientificName": "Psammodromus edwardsianus",
+          "grupo": "Reptiles",
+          "nombreComun": "lagartija cenicienta",
+          "nombreCorregido": "Psammodromus edwarsianus",
+          "nota": "Errata de la norma: dobla la de. EIDOS y GBIF aceptan «Psammodromus edwarsianus», con una sola. Mismo caso que en el volumen III (San Pedro del Pinatar). Verificado el 2026-08-17."
+        },
+        {
+          "scientificName": "Rhinechis scalaris (antes Elaphe scalaris)",
+          "grupo": "Reptiles",
+          "nombreComun": "culebra de escalera",
+          "nombreCorregido": "Zamenis scalaris",
+          "nota": "La norma añade entre paréntesis el nombre antiguo, y NINGUNO de los dos es el vigente: EIDOS da «Rhinechis scalaris» y «Elaphe scalaris» por sinónimos de «Zamenis scalaris». Verificado el 2026-08-17."
+        },
+        {
+          "scientificName": "Tarentola mauritanica",
+          "grupo": "Reptiles",
+          "nombreComun": "salamanquesa común"
+        },
+        {
+          "scientificName": "Timon lepidus (antes Lacerta lepida)",
+          "grupo": "Reptiles",
+          "nombreComun": "lagarto ocelado",
+          "nombreCorregido": "Timon lepidus",
+          "nota": "La norma añade entre paréntesis el nombre antiguo. EIDOS acepta «Timon lepidus». Verificado el 2026-08-17."
+        }
+      ],
+      "noNativas": [
+        {
+          "scientificName": "Agave americana",
+          "grupo": "Flora",
+          "nombreComun": "pitera común, pita",
+          "nota": "Tabla 150 del §2.1.2.6: especie del Anexo del Real Decreto 630/2013 (Catálogo español de especies exóticas invasoras) presente en la ZEC ES6200006."
+        },
+        {
+          "scientificName": "Carpobrotus acinaciformis",
+          "grupo": "Flora",
+          "nombreComun": "hierba del cuchillo, uña de gato, uña de león",
+          "nota": "Tabla 150 del §2.1.2.6: especie del Anexo del Real Decreto 630/2013 (Catálogo español de especies exóticas invasoras) presente en la ZEC ES6200006."
+        },
+        {
+          "scientificName": "Cylindropuntia spp.",
+          "grupo": "Flora",
+          "nombreCorregido": "Austrocylindropuntia subulata",
+          "nota": "Tabla 150 del §2.1.2.6: especie del Anexo del Real Decreto 630/2013 (Catálogo español de especies exóticas invasoras) presente en la ZEC ES6200006. La norma cita el género; su llamada (1) precisa: «La especie presente es Austrocylindropuntia subulata (= Cylindropuntia cylindrica)»."
+        },
+        {
+          "scientificName": "Opuntia spp.",
+          "grupo": "Flora",
+          "nota": "Tabla 150 del §2.1.2.6: especie del Anexo del Real Decreto 630/2013 (Catálogo español de especies exóticas invasoras) presente en la ZEC ES6200006. La norma cita el género; su llamada (2) precisa que son «O. maxima y O. stricta». Sin `nombreCorregido`: son DOS especies y una entrada no puede llevar dos nombres."
+        },
+        {
+          "scientificName": "Oxalis pes-caprae",
+          "grupo": "Flora",
+          "nota": "Tabla 150 del §2.1.2.6: especie del Anexo del Real Decreto 630/2013 (Catálogo español de especies exóticas invasoras) presente en la ZEC ES6200006."
+        },
+        {
+          "scientificName": "Spartina patens (= S. versicolor)",
+          "grupo": "Flora",
+          "nombreCorregido": "Spartina patens",
+          "nota": "Tabla 150 del §2.1.2.6: especie del Anexo del Real Decreto 630/2013 (Catálogo español de especies exóticas invasoras) presente en la ZEC ES6200006. La norma añade entre paréntesis el sinónimo; EIDOS acepta «Spartina patens». Verificado el 2026-08-17."
+        },
+        {
+          "scientificName": "Myiopsitta monachus",
+          "grupo": "Aves",
+          "nombreComun": "cotorra argentina",
+          "nota": "Tabla 150 del §2.1.2.6: especie del Anexo del Real Decreto 630/2013 (Catálogo español de especies exóticas invasoras) presente en la ZEC ES6200006."
+        },
+        {
+          "scientificName": "Acacia saligna",
+          "grupo": "Flora",
+          "nota": "Tabla 151 del §2.1.2.6: exótica que afecta a la conservación de hábitats o presenta potencialidad invasora, fuera del Catálogo español."
+        },
+        {
+          "scientificName": "Arundo donax",
+          "grupo": "Flora",
+          "nota": "Tabla 151 del §2.1.2.6: exótica que afecta a la conservación de hábitats o presenta potencialidad invasora, fuera del Catálogo español."
+        },
+        {
+          "scientificName": "Eucaliptus camaldulensis",
+          "grupo": "Flora",
+          "nombreCorregido": "Eucalyptus camaldulensis",
+          "nota": "Tabla 151 del §2.1.2.6: exótica que afecta a la conservación de hábitats o presenta potencialidad invasora, fuera del Catálogo español. Errata de imprenta de la norma: el género es Eucalyptus, con y. Verificado contra EIDOS y GBIF el 2026-08-17."
+        },
+        {
+          "scientificName": "Myoporum laetum",
+          "grupo": "Flora",
+          "nota": "Tabla 151 del §2.1.2.6: exótica que afecta a la conservación de hábitats o presenta potencialidad invasora, fuera del Catálogo español."
+        },
+        {
+          "scientificName": "Pelargonium graveolens",
+          "grupo": "Flora",
+          "nota": "Tabla 151 del §2.1.2.6: exótica que afecta a la conservación de hábitats o presenta potencialidad invasora, fuera del Catálogo español."
+        },
+        {
+          "scientificName": "Stenotaphrum secundatum",
+          "grupo": "Flora",
+          "nota": "Tabla 151 del §2.1.2.6: exótica que afecta a la conservación de hábitats o presenta potencialidad invasora, fuera del Catálogo español. La norma la repite en la Tabla 152."
+        },
+        {
+          "scientificName": "Yucca aloifolia",
+          "grupo": "Flora",
+          "nota": "Tabla 151 del §2.1.2.6: exótica que afecta a la conservación de hábitats o presenta potencialidad invasora, fuera del Catálogo español."
+        },
+        {
+          "scientificName": "Acacia cyclops",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario."
+        },
+        {
+          "scientificName": "Acacia farnesiana",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario."
+        },
+        {
+          "scientificName": "Acacia neriifolia",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario."
+        },
+        {
+          "scientificName": "Aeonium arboreum",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario."
+        },
+        {
+          "scientificName": "Aloe maculata",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario."
+        },
+        {
+          "scientificName": "Aloe vera",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario."
+        },
+        {
+          "scientificName": "Casuarina cunninghamiana",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario."
+        },
+        {
+          "scientificName": "Conyza bonariensis",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario."
+        },
+        {
+          "scientificName": "Cupressus sempervirens",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario."
+        },
+        {
+          "scientificName": "Elaeagnus angustifolia",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario."
+        },
+        {
+          "scientificName": "Freesia refracta",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario."
+        },
+        {
+          "scientificName": "Hedera helix",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario. La norma la declara exótica AQUÍ, en el Campo de Cartagena, aunque la hiedra sea nativa en buena parte de España: es la fuente de sitio la que manda sobre el silencio de la Lista Patrón."
+        },
+        {
+          "scientificName": "Lantana camara",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario."
+        },
+        {
+          "scientificName": "Lonicera japonica",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario."
+        },
+        {
+          "scientificName": "Nicotiana glauca",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario."
+        },
+        {
+          "scientificName": "Opuntia huajuapensis",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario."
+        },
+        {
+          "scientificName": "Paraserianthes lophanta",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario."
+        },
+        {
+          "scientificName": "Parkinsonia aculeata",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario."
+        },
+        {
+          "scientificName": "Portulacaria afra",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario."
+        },
+        {
+          "scientificName": "Schinus molle",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario."
+        },
+        {
+          "scientificName": "Senecio angulatus",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario."
+        },
+        {
+          "scientificName": "Yucca gloriosa",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario."
+        },
+        {
+          "scientificName": "Ziziphus jujuba",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario."
+        },
+        {
+          "scientificName": "Zygophyllum fabago",
+          "grupo": "Flora",
+          "nota": "Tabla 152 del §2.1.2.6: otra exótica citada, con escasos ejemplares, sin indicios de regeneración o sin afectar a hábitats de interés comunitario."
+        },
+        {
+          "scientificName": "Ovis musimon",
+          "grupo": "Mamíferos",
+          "nombreComun": "muflón",
+          "nota": "Cierre del §2.1.2.6: «Además, en la Isla del Mayor o del Barón existe una población de Ovis musimon (muflón)». No va en tabla."
+        }
+      ]
+    },
+    "cabezo-gordo": {
+      "fuente": {
+        "norma": "Decreto n.º 259/2019, de 10 de octubre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia. Su Volumen II §2.2.2 remite al §1.1.5 para la biodiversidad del Paisaje Protegido: «En el apartado 1.1.5. del presente volumen figuran los principales valores para la conservación de la biodiversidad que presenta la ZEC “Cabezo Gordo” y, por tanto, el Paisaje Protegido “Cabezo Gordo”».",
+        "boletin": "BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450",
+        "url": "https://www.borm.es/services/anuncio/ano/2019/numero/6450/pdf",
+        "anexo": "Volumen II, §1.1.5.2 «Descripción de la biodiversidad» de la ZEC «Cabezo Gordo» (ES6200013): §1.1.5.2.3 aves —Tabla 65, 8 del Anexo I de la Directiva Aves; Tabla 66, 13 migratorias de llegada regular; Tabla 67, 9 otras de interés—, §1.1.5.2.4 «Otras especies de fauna terrestre» —Tabla 68, 18 vertebrados no aves— y §1.1.5.2.5 «Flora terrestre» —Tabla 69, 9 taxones—. El §1.1.5.2.6, que cita tres exóticas en prosa y sin tabla, está recogido aparte en `noNativas`.",
+        "cita": "Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019)",
+        "ambito": "la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio",
+        "consultado": "2026-08-17",
+        "nota": "El único espacio de este plan cuyo apartado de Paisaje Protegido (§2.2) NO trae inventario propio: remite al de su ZEC. Las cinco tablas cuadran con lo que declara el texto («8 especies de aves del Anexo I», «13 especies de aves migratorias», «otras 9 especies más», «18 especies de fauna vertebrada terrestre», «9 especies catalogadas a escala regional»). TRES aves —Lanius meridionalis, Sylvia melanocephala y Upupa epops— salen en la Tabla 66 y en la 67 a la vez, marcadas «(+)» por tener estatus distinto según el espacio: la propia norma dice «30 especies de aves» sumando 8+13+9, pero las especies DISTINTAS son 27, y aquí se dan de alta una sola vez. Solo DOS entradas llevan `nombreCorregido`, y las dos por el mismo motivo: «Rhinechis scalaris (antes Elaphe scalaris)» y «Timon lepidus (antes Lacerta lepida)» añaden entre paréntesis el nombre antiguo, y esa cadena entera no existe en ninguna Lista Patrón, así que el nivel 1 no la resuelve y la especie salía excluida con «el nombre que transcribe la fuente no existe en la Lista Patrón». En la primera, además, NINGUNO de los dos nombres es el vigente: EIDOS da los dos por sinónimos de Zamenis scalaris. El resto resuelve por sí solo o vía sinónimo (Bufo calamita → Epidalea calamita, Eptesicus isabellinus → Cnephaeus isabellinus, Sylvia communis → Curruca communis…), que es lo que tiende el puente de nomenclatura. El valor de este anexo son los quirópteros: la Mina del Agua es una de las mayores colonias de la Región, con Miniopterus schreibersii y Myotis capaccinii criando, y 9 de las 18 entradas de fauna son murciélagos."
+      },
+      "especies": [
+        {
+          "scientificName": "Bufo bufo",
+          "grupo": "Anfibios",
+          "nombreComun": "sapo común"
+        },
+        {
+          "scientificName": "Bufo calamita",
+          "grupo": "Anfibios",
+          "nombreComun": "sapo corredor"
+        },
+        {
+          "scientificName": "Apus apus",
+          "grupo": "Aves",
+          "nombreComun": "vencejo común"
+        },
+        {
+          "scientificName": "Apus melba",
+          "grupo": "Aves",
+          "nombreComun": "vencejo real"
+        },
+        {
+          "scientificName": "Athene noctua",
+          "grupo": "Aves",
+          "nombreComun": "mochuelo común"
+        },
+        {
+          "scientificName": "Bubo bubo",
+          "grupo": "Aves",
+          "nombreComun": "búho real"
+        },
+        {
+          "scientificName": "Burhinus oedicnemus",
+          "grupo": "Aves",
+          "nombreComun": "alcaraván común"
+        },
+        {
+          "scientificName": "Calandrella brachydactyla",
+          "grupo": "Aves",
+          "nombreComun": "terrera común"
+        },
+        {
+          "scientificName": "Corvus corax",
+          "grupo": "Aves",
+          "nombreComun": "cuervo"
+        },
+        {
+          "scientificName": "Egretta garzetta",
+          "grupo": "Aves",
+          "nombreComun": "garceta común"
+        },
+        {
+          "scientificName": "Erithacus rubecula",
+          "grupo": "Aves",
+          "nombreComun": "petirrojo"
+        },
+        {
+          "scientificName": "Galerida theklae",
+          "grupo": "Aves",
+          "nombreComun": "cogujada montesina"
+        },
+        {
+          "scientificName": "Hirundo rustica",
+          "grupo": "Aves",
+          "nombreComun": "golondrina común"
+        },
+        {
+          "scientificName": "Lanius meridionalis",
+          "grupo": "Aves",
+          "nombreComun": "alcaudón real meridional"
+        },
+        {
+          "scientificName": "Lanius senator",
+          "grupo": "Aves",
+          "nombreComun": "alcaudón común"
+        },
+        {
+          "scientificName": "Melanocorypha calandra",
+          "grupo": "Aves",
+          "nombreComun": "calandria"
+        },
+        {
+          "scientificName": "Monticola solitarius",
+          "grupo": "Aves",
+          "nombreComun": "roquero solitario"
+        },
+        {
+          "scientificName": "Oenanthe hispanica",
+          "grupo": "Aves",
+          "nombreComun": "collalba rubia"
+        },
+        {
+          "scientificName": "Oenanthe leucura",
+          "grupo": "Aves",
+          "nombreComun": "collalba negra",
+          "nota": "La norma la marca con (*): «Especie presente pero no recogida en el Formulario normalizado de datos Natura 2000»."
+        },
+        {
+          "scientificName": "Oenanthe oenanthe",
+          "grupo": "Aves",
+          "nombreComun": "collalba gris"
+        },
+        {
+          "scientificName": "Parus major",
+          "grupo": "Aves",
+          "nombreComun": "carbonero común"
+        },
+        {
+          "scientificName": "Petronia petronia",
+          "grupo": "Aves",
+          "nombreComun": "gorrión chillón"
+        },
+        {
+          "scientificName": "Ptyonoprogne rupestris",
+          "grupo": "Aves",
+          "nombreComun": "avión roquero"
+        },
+        {
+          "scientificName": "Sylvia atricapilla",
+          "grupo": "Aves",
+          "nombreComun": "curruca capirotada"
+        },
+        {
+          "scientificName": "Sylvia communis",
+          "grupo": "Aves",
+          "nombreComun": "curruca zarcera"
+        },
+        {
+          "scientificName": "Sylvia melanocephala",
+          "grupo": "Aves",
+          "nombreComun": "curruca cabecinegra"
+        },
+        {
+          "scientificName": "Sylvia undata",
+          "grupo": "Aves",
+          "nombreComun": "curruca rabilarga"
+        },
+        {
+          "scientificName": "Tyto alba",
+          "grupo": "Aves",
+          "nombreComun": "lechuza común"
+        },
+        {
+          "scientificName": "Upupa epops",
+          "grupo": "Aves",
+          "nombreComun": "abubilla"
+        },
+        {
+          "scientificName": "Anagyris foetida",
+          "grupo": "Flora",
+          "nombreComun": "altramuz del diablo"
+        },
+        {
+          "scientificName": "Caralluma europaea",
+          "grupo": "Flora",
+          "nombreComun": "chumberillo de lobo"
+        },
+        {
+          "scientificName": "Centaurea saxicola",
+          "grupo": "Flora",
+          "nombreComun": "cardo amarillo de roca"
+        },
+        {
+          "scientificName": "Chamaerops humilis",
+          "grupo": "Flora",
+          "nombreComun": "palmito"
+        },
+        {
+          "scientificName": "Osyris lanceolata",
+          "grupo": "Flora",
+          "nombreComun": "bayón"
+        },
+        {
+          "scientificName": "Periploca angustifolia",
+          "grupo": "Flora",
+          "nombreComun": "cornical"
+        },
+        {
+          "scientificName": "Sideritis pusilla subsp. carthaginensis",
+          "grupo": "Flora",
+          "nombreComun": "rabogato de Cartagena"
+        },
+        {
+          "scientificName": "Tamarix canariensis",
+          "grupo": "Flora",
+          "nombreComun": "taray"
+        },
+        {
+          "scientificName": "Ziziphus lotus",
+          "grupo": "Flora",
+          "nombreComun": "arto, artino"
+        },
+        {
+          "scientificName": "Atelerix algirus",
+          "grupo": "Mamíferos",
+          "nombreComun": "erizo moruno"
+        },
+        {
+          "scientificName": "Eliomys quercinus",
+          "grupo": "Mamíferos",
+          "nombreComun": "lirón careto"
+        },
+        {
+          "scientificName": "Eptesicus isabellinus",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago hortelano"
+        },
+        {
+          "scientificName": "Miniopterus schreibersii",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago de cueva"
+        },
+        {
+          "scientificName": "Mustela nivalis",
+          "grupo": "Mamíferos",
+          "nombreComun": "comadreja"
+        },
+        {
+          "scientificName": "Myotis capaccinii",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago ratonero patudo"
+        },
+        {
+          "scientificName": "Myotis myotis",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago ratonero grande"
+        },
+        {
+          "scientificName": "Pipistrellus pipistrellus",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago enano"
+        },
+        {
+          "scientificName": "Pipistrellus pygmaeus",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago de Cabrera"
+        },
+        {
+          "scientificName": "Plecotus austriacus",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago orejudo meridional"
+        },
+        {
+          "scientificName": "Rhinolophus euryale",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago mediterráneo de herradura"
+        },
+        {
+          "scientificName": "Rhinolophus ferrumequinum",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago grande de herradura"
+        },
+        {
+          "scientificName": "Blanus cinereus",
+          "grupo": "Reptiles",
+          "nombreComun": "culebrilla ciega"
+        },
+        {
+          "scientificName": "Psammodromus algirus",
+          "grupo": "Reptiles",
+          "nombreComun": "lagartija colilarga"
+        },
+        {
+          "scientificName": "Rhinechis scalaris (antes Elaphe scalaris)",
+          "grupo": "Reptiles",
+          "nombreComun": "culebra de escalera",
+          "nombreCorregido": "Zamenis scalaris",
+          "nota": "La norma añade entre paréntesis el nombre antiguo, y NINGUNO de los dos es el vigente: EIDOS da «Rhinechis scalaris» y «Elaphe scalaris» por sinónimos de «Zamenis scalaris». Verificado el 2026-08-17."
+        },
+        {
+          "scientificName": "Timon lepidus (antes Lacerta lepida)",
+          "grupo": "Reptiles",
+          "nombreComun": "lagarto ocelado",
+          "nombreCorregido": "Timon lepidus",
+          "nota": "La norma añade entre paréntesis el nombre antiguo. EIDOS acepta «Timon lepidus». Verificado el 2026-08-17."
+        }
+      ],
+      "noNativas": [
+        {
+          "scientificName": "Agave americana",
+          "grupo": "Flora",
+          "nombreComun": "pitera común, pita",
+          "nota": "§1.1.5.2.6: la norma la cita como una de las 2 especies de flora del Catálogo español de especies exóticas invasoras presentes en la ZEC."
+        },
+        {
+          "scientificName": "Opuntia spp.",
+          "grupo": "Flora",
+          "nombreComun": "chumberas",
+          "nota": "§1.1.5.2.6: la norma cita el género, sin precisar especie, como la segunda del Catálogo español de especies exóticas invasoras."
+        },
+        {
+          "scientificName": "Nicotiana glauca",
+          "grupo": "Flora",
+          "nombreComun": "tabaco moruno, gandul",
+          "nota": "§1.1.5.2.6: «otra especie exótica no incluida en dicho catálogo»."
+        }
+      ]
     }
   }
 }
