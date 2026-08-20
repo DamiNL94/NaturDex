@@ -12,6 +12,13 @@ Cada una se paga mejor ahora que en el espacio número treinta.
    > GBIF; los cuatro **sin** anexo, entre el 33 % y el 51 %. Cuatro Calas es el peor caso, con la
    > mitad del catálogo colgando de avistamientos sueltos. Transcribir los planes que faltan
    > —Carrascoy, Cabo Cope, Cuatro Calas y Sierra Espuña— es hoy el trabajo más rentable del rollout.
+   >
+   > **Y el 2026-08-20 se midió el caso extremo, que conviene tener a mano para justificar el
+   > gasto: Cabezo Gordo son 58 fichas con su plan transcrito y habrían sido 5 sin él.** El
+   > formulario oficial de su ZEC enumera **cinco mamíferos y cero aves**, así que ahí no hay nada
+   > más de donde tirar. No es una proporción representativa —es un espacio de 272 ha con un
+   > formulario pobrísimo—, pero sí es el suelo al que cae un espacio cuando el plan no está
+   > transcrito.
 
    Lo que sigue es el diagnóstico anterior, que sigue valiendo para las aves. Desde que el ave entra
    por respaldo de sitio
@@ -290,3 +297,23 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     > caro. **11 fichas más** apuntan a un sinónimo *heterotípico* de GBIF y ésas **no se tocan**:
     > ahí las dos autoridades discrepan de circunscripción y cambiar la key traería ocurrencias de
     > otro taxón.
+28. **Los diez espacios publicados se seleccionaron con el puente de nomenclatura desconectado, y hay
+    que regenerarlos.** El arreglo del 2026-08-20 (ver
+    [`rollout/sesiones/2026-08-20.md`](rollout/sesiones/2026-08-20.md)) destapó que
+    `build-species-seleccion.js` le pasaba a `respaldo-sitio.js` el nombre aceptado de EIDOS en un
+    campo que ése no lee —`nombreAceptadoEidos` contra `acceptedName`—, así que la capa 2 del puente
+    **no tendía ni un puente en ningún espacio** desde que se escribió. El efecto es siempre el
+    mismo y siempre en la misma dirección: una especie que la norma del espacio o el formulario del
+    sitio enumeran **con la nomenclatura de su época** se cae del nivel 1 y sale excluida con «no
+    figura en el formulario oficial del sitio ni en el anexo normativo» escrito al lado, que es una
+    afirmación falsa sobre una fuente oficial.
+    > **Está medido en dos espacios y no es pequeño.** Cabezo Gordo pasa de 53 a **58** aprobadas;
+    > Calblanque tiende **12 puentes** y pasa de 205 a **210**. Los casos son los de manual —*Bufo
+    > calamita* → *Epidalea*, *Apus melba* → *Tachymarptis*, *Sylvia melanocephala* → *Curruca*—, o
+    > sea que **el sesgo cae sobre los grupos que más han cambiado de género**: aves y anfibios.
+    >
+    > Va **después** de la deuda nº 26 y a la vez que ella: las dos son cruces por nombre que se
+    > abren solos, y regenerar dos veces cuesta el doble de barridos de GBIF. Antes de regenerar
+    > conviene tener también la nº 23 (los tres barridos sin versionar), o esos espacios no se pueden
+    > rehacer sin volver a descargar.
+
