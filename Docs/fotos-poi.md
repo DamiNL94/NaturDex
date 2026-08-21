@@ -8,6 +8,9 @@ antes de aceptarlas: el buscador no garantiza que la foto sea del sitio.
 
 | Espacio | Punto de interés | Estado | Detalle |
 |---|---|---|---|
+| cabezo-gordo | Cima del Cabezo Gordo | sin foto | ninguna candidata pasó licencia y carga |
+| cabezo-gordo | Mirador de la Sima de las Palomas | sin foto | ninguna candidata pasó licencia y carga |
+| cabezo-gordo | Aparcamiento y arranque de la Senda del Cabezo Gordo | sin foto | ninguna candidata pasó licencia y carga |
 | cabo-cope-puntas-calnegre | Cabo Cope | ya tenía foto | Img/poi/cabo-cope.jpg |
 | cabo-cope-puntas-calnegre | Cala Blanca | ya tenía foto | https://commons.wikimedia.org/wiki/Special:FilePath/Cala_blanca_2.JPG |
 | cabo-cope-puntas-calnegre | Calabardina | ya tenía foto | Img/poi/calabardina.jpg |
