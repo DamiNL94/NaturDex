@@ -148,7 +148,7 @@
               "slug": "espacios-abiertos-e-islas-del-mar-menor",
               "name": "Espacios Abiertos e Islas del Mar Menor",
               "category": "Paisaje Protegido",
-              "status": "basic",
+              "status": "available",
               "center": [
                 37.69623,
                 -0.84113
@@ -184,7 +184,7 @@
               "slug": "cabezo-gordo",
               "name": "Cabezo Gordo",
               "category": "Paisaje Protegido",
-              "status": "basic",
+              "status": "available",
               "center": [
                 37.80144,
                 -0.90788

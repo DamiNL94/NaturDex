@@ -971,7 +971,9 @@
         "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
         "origen": "murciaStatus del park.json"
-      }
+      },
+      "rarityBasis": null,
+      "descriptionSource": null
     },
     {
       "id": 9,
@@ -3942,7 +3944,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 64,

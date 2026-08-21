@@ -137,7 +137,7 @@
       "image": null,
       "audio": null,
       "audioTranscript": null,
-      "reviewNote": null,
+      "reviewNote": "Sin especies enlazadas, y el hueco es real, no una pérdida de enlaces. El Atlas cartografía este hábitat en el segundo recinto del espacio —10,8 ha, el 4 % de las 272 ha—, separado del recinto grande que lleva a la vez el 5330, el 5220 y el 8210. El barrido de GBIF solo encontró cuatro especies dentro de su polígono, y tres son aves, que no se adscriben a hábitats por la regla de vuelo; la cuarta, Coronilla juncea, tiene un único registro y no llega al umbral de presencia. Las 58 fichas del espacio entran por el anexo normativo del Plan del Mar Menor, que inventaría la ZEC entera sin decir en qué hábitat está cada especie, así que no hay de dónde sacar el enlace sin inventarlo. Lo que falta para cerrarlo es trabajo de campo o una fuente que adscriba las gramíneas anuales de este pastizal al recinto.",
       "speciesIds": []
     }
   ],
@@ -345,7 +345,8 @@
         "pendientes-rocosas-calcicolas-8210"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 5,
@@ -493,7 +494,8 @@
         "pendientes-rocosas-calcicolas-8210"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 8,
@@ -537,7 +539,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 9,
@@ -673,7 +676,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 12,
@@ -1105,7 +1109,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 21,

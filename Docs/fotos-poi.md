@@ -1,6 +1,6 @@
 # Fotos de puntos de interés — informe
 
-Generado por `Tools/catalogo-nacional/poi-images.js` el 2026-08-17.
+Generado por `Tools/catalogo-nacional/poi-images.js` el 2026-08-21.
 
 Solo se escriben las candidatas con licencia libre (CC0, dominio público, CC BY, CC BY-SA) y
 coincidencia segura. Las marcadas «a revisar» salen del buscador de Commons y hay que mirarlas
@@ -54,6 +54,15 @@ antes de aceptarlas: el buscador no garantiza que la foto sea del sitio.
 | cuatro-calas | Playa de los Cocedores | ya tenía foto | https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Cerrada_o_de_los_Cocederos%2C_en_el_Paraje_Protegido_Las_Cuatro_Calas.JPG?width=1280 |
 | cuatro-calas | Conglomerados de Cuatro Calas | ya tenía foto | https://commons.wikimedia.org/wiki/Special:FilePath/Cuatro_Calas_Murcia.jpg?width=1280 |
 | cuatro-calas | Playa de Calarreona | ya tenía foto | https://commons.wikimedia.org/wiki/Special:FilePath/Calarreona%2C_lado_sur%2C_en_Las_Cuatro_Calas.JPG?width=1280 |
+| espacios-abiertos-e-islas-del-mar-menor | Cabezo del Carmolí | sin foto | ninguna candidata pasó licencia y carga |
+| espacios-abiertos-e-islas-del-mar-menor | Cabezo de San Ginés | sin foto | ninguna candidata pasó licencia y carga |
+| espacios-abiertos-e-islas-del-mar-menor | Playa de la Hita | sin foto | ninguna candidata pasó licencia y carga |
+| espacios-abiertos-e-islas-del-mar-menor | Marina del Carmolí | sin foto | ninguna candidata pasó licencia y carga |
+| espacios-abiertos-e-islas-del-mar-menor | Saladar de Lo Poyo | sin foto | ninguna candidata pasó licencia y carga |
+| espacios-abiertos-e-islas-del-mar-menor | Salinas de Marchamalo | sin foto | ninguna candidata pasó licencia y carga |
+| espacios-abiertos-e-islas-del-mar-menor | Playa de las Amoladeras | sin foto | ninguna candidata pasó licencia y carga |
+| espacios-abiertos-e-islas-del-mar-menor | Isla Perdiguera | ya tenía foto | https://commons.wikimedia.org/wiki/Special:FilePath/La_Esparte%C3%B1a_(Isla_Perdiguera).jpg?width=1280 |
+| espacios-abiertos-e-islas-del-mar-menor | Isla del Ciervo | sin foto | ninguna candidata pasó licencia y carga |
 | monte-arabi | Pico del Arabí | sin foto | ninguna candidata pasó licencia y carga |
 | monte-arabi | El Arabilejo | sin foto | ninguna candidata pasó licencia y carga |
 | monte-arabi | Cantos de la Visera I y II | ya tenía foto | https://commons.wikimedia.org/wiki/Special:FilePath/CantosVisera2.jpg?width=1280 |
