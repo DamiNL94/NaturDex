@@ -1,0 +1,39 @@
+{
+ "park": "cabezo-gordo",
+ "generado": "Atlas y Manual de los Hábitats de España (MITECO) ∩ catálogo del parque",
+ "hic": {
+  "5220": {
+   "habitat": "matorrales-arborescentes-de-5220",
+   "especies": []
+  },
+  "5330": {
+   "habitat": "matorrales-termomediterraneos-y-5330",
+   "especies": []
+  },
+  "6220": {
+   "habitat": "zonas-subestepicas-de-6220",
+   "especies": []
+  },
+  "8210": {
+   "habitat": "pendientes-rocosas-calcicolas-8210",
+   "especies": [
+    "Centaurea saxicola",
+    "Cosentinia vellea"
+   ]
+  }
+ },
+ "links": [
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Centaurea saxicola",
+   "atlas_name": "Centaurea saxicola"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Cosentinia vellea",
+   "atlas_name": "Cosentinia vellea subsp. bivalens"
+  }
+ ]
+}

@@ -29,6 +29,17 @@
 // fronterizo ni siquiera son competencia de la FMRM. Un sendero sin la marca es un sendero sobre el
 // que no consta la homologación, no uno que no esté homologado.
 //
+// Cuando OSM no tiene la relación: «sin candidatos» NO es un hecho del terreno. La consulta de
+// arriba busca RELACIONES, que es como OSM identifica un sendero señalizado. Si nadie la ha creado,
+// el sendero desaparece del mapa aunque esté sobre el terreno con sus paneles puestos: en Cabezo
+// Gordo, el plan de gestión nombra el SL-MU 11 «Senda del Cabezo Gordo», la FMRM lo homologa y sus
+// dos pistas están en OSM — lo único que falta es la relación. Para eso está
+// `catalogo-nacional/data/senderos-sin-relacion-osm.json`: declara qué ways forman ese sendero y con
+// qué evidencia se afirma que son ése. No dibuja nada — trazar la línea a ojo sería inventar un dato
+// de fuente (regla nº 2 del CLAUDE.md)—: solo NOMBRA ways que ya están en OSM, y la identificación
+// viaja escrita en el `source` del sendero como lo que es, una derivación nuestra. Si algún día
+// aparece la relación, manda ella y la entrada del catálogo se descarta.
+//
 // Fuente de geometría: OpenStreetMap vía Overpass API (© OpenStreetMap contributors, ODbL).
 // ================================================================================================
 
@@ -40,6 +51,10 @@ const { ROOT, REGISTRY_FILE } = require('./lib/io');
 const FRONTEND = path.join(ROOT, 'Frontend');
 const REGISTRY = path.join(FRONTEND, 'Data', 'parks-index.json');
 const FMRM_CATALOG = path.join(__dirname, 'catalogo-nacional', 'data', 'senderos-fmrm-murcia.json');
+// Senderos homologados que OSM no agrupa en relación: sin este puente la consulta de arriba
+// devuelve "sin candidatos" y el sendero desaparece del mapa aunque esté señalizado sobre el
+// terreno. El fichero declara qué ways lo forman y con qué evidencia; ver su cabecera.
+const SIN_RELACION_CATALOG = path.join(__dirname, 'catalogo-nacional', 'data', 'senderos-sin-relacion-osm.json');
 // El endpoint principal es un servicio público compartido: cuando está saturado devuelve 504
 // ("the server is probably too busy"), no un fallo de la consulta. Se reintenta con espera y, si
 // sigue caído, se prueba el mirror francés antes de rendirse.
@@ -139,6 +154,19 @@ function loadFmrmCatalog() {
     ((cat.espacios[key] || {}).senderos || []).forEach(add);
   }
   return byCode;
+}
+
+// Los senderos que este espacio tiene declarados por ways sueltos, porque OSM no los agrupa en una
+// relación de senderismo. Devuelve [] cuando el espacio no tiene ninguno, que es el caso normal.
+//
+// Existe porque "sin candidatos en Overpass" se estaba leyendo como "aquí no hay senderos", y no es
+// lo mismo: en Cabezo Gordo el plan de gestión nombra el SL-MU 11, la FMRM lo homologa y sus dos
+// pistas están en OSM: lo único que falta es que alguien haya creado la relación. Un hueco de OSM no
+// es un hecho del terreno, y dejar el sendero fuera por eso es tan erróneo como dibujarlo a ojo.
+function loadDeclaredTrails(slug) {
+  if (!fs.existsSync(SIN_RELACION_CATALOG)) return [];
+  const cat = readJson(SIN_RELACION_CATALOG);
+  return ((cat.espacios || {})[slug] || {}).senderos || [];
 }
 
 // --- Geometría del límite oficial (misma lógica que build-park-tiles.js) --------------------------
@@ -407,6 +435,21 @@ async function fetchTrails(bbox) {
   return { relations, ways };
 }
 
+// La geometría de los ways declarados a mano, pedidos por id. Se consultan aparte y no por bbox
+// porque un id es una afirmación concreta: si OSM ya no lo sirve, el sendero declarado se quedaría
+// sin traza y hay que ENTERARSE, no dibujar el resto y callar. Por eso devuelve también los que
+// faltan y quien llama se queja.
+async function fetchWaysById(ids) {
+  if (!ids.length) return { ways: new Map(), faltan: ids };
+  const q = `[out:json][timeout:180];\n` +
+    `way(id:${ids.join(',')});\n` +
+    `out geom;`;
+  const data = await overpass(q);
+  const ways = new Map();
+  for (const el of data.elements || []) if (el.type === 'way' && el.geometry) ways.set(el.id, el);
+  return { ways, faltan: ids.filter(id => !ways.has(id)) };
+}
+
 // --- Construcción de un parque --------------------------------------------------------------------
 async function buildTrailsForPark(slug, registry, catalog) {
   const entry = findParkEntry(registry, slug);
@@ -425,9 +468,31 @@ async function buildTrailsForPark(slug, registry, catalog) {
 
   console.log('▶ ' + slug + ' · buscando senderos GR/PR/SL en Overpass…');
   const { relations, ways } = await fetchTrails(queryBbox);
-  if (!relations.length) { console.log(yellow('  sin candidatos en la zona')); return { slug, manifestPath, manifest, features: [] }; }
-  console.log('  candidatos: ' + relations.length + ' relación(es) — ' +
-    [...new Set(relations.map(r => normalizeCode(r.tags.ref)))].sort().join(', '));
+  const declarados = loadDeclaredTrails(slug);
+  if (!relations.length && !declarados.length) {
+    console.log(yellow('  sin candidatos en la zona'));
+    return { slug, manifestPath, manifest, features: [] };
+  }
+  if (relations.length) {
+    console.log('  candidatos: ' + relations.length + ' relación(es) — ' +
+      [...new Set(relations.map(r => normalizeCode(r.tags.ref)))].sort().join(', '));
+  }
+
+  // Los ways declarados se traen aparte y se vuelcan en el mismo mapa, para que de aquí en adelante
+  // el sendero declarado recorra exactamente el mismo camino que uno venido de relación: se cose, se
+  // recorta contra el polígono y se mide igual. Lo único que cambia es lo que se escribe de su
+  // procedencia, más abajo.
+  if (declarados.length) {
+    const ids = [...new Set(declarados.flatMap(d => d.ways || []))];
+    const { ways: declaredWays, faltan } = await fetchWaysById(ids);
+    // Un id declarado que OSM ya no sirve es una entrada del catálogo que ha caducado —el way se
+    // borró o se partió—, y seguir adelante dibujaría medio sendero sin decirlo.
+    if (faltan.length) fail('senderos-sin-relacion-osm.json declara ways que OSM no devuelve: ' +
+      faltan.join(', ') + '. Revisa la entrada de ' + slug + ' antes de regenerar.');
+    for (const [id, w] of declaredWays) ways.set(id, w);
+    console.log('  declarados sin relación en OSM: ' +
+      declarados.map(d => d.codigo).join(', ') + ' (' + ids.length + ' ways)');
+  }
 
   // Agrupa por código normalizado, no por relación: OSM parte algunos senderos en varias relaciones
   // (los tramos E21/E22 del GR-92) y son el mismo sendero sobre el terreno.
@@ -448,6 +513,23 @@ async function buildTrailsForPark(slug, registry, catalog) {
     if (osmName) bucket.osmNames.set(osmName, (bucket.osmNames.get(osmName) || 0) + 1);
   }
 
+  // Los declarados entran como un bucket más, pero marcados: su `declarado` lleva la evidencia con
+  // la que se afirma que esos ways son ese sendero, y de ahí sale su `source`. Si OSM llega a tener
+  // la relación, ésta manda y la entrada del catálogo sobra: se descarta en silencio y hay que
+  // borrarla del fichero.
+  for (const d of declarados) {
+    const code = normalizeCode(d.codigo);
+    if (!code) continue;
+    if (byCode.has(code)) {
+      console.log(yellow('  ' + code + ': OSM ya tiene la relación, se ignora la entrada declarada ' +
+        '(bórrala de senderos-sin-relacion-osm.json)'));
+      continue;
+    }
+    byCode.set(code, {
+      code, wayIds: new Set(d.ways || []), osmNames: new Map(), segments: [], declarado: d
+    });
+  }
+
   for (const bucket of byCode.values()) {
     const wayLines = [...bucket.wayIds].map(id => ways.get(id))
       .filter(Boolean) // miembro fuera del bbox consultado
@@ -466,7 +548,7 @@ async function buildTrailsForPark(slug, registry, catalog) {
     const segments = bucket.segments.map(roundCoords).filter(s => s.length > 1);
     if (!segments.length) continue;
     const km = segments.reduce((n, s) => n + lineLengthKm(s), 0);
-    const oficial = catalog.get(bucket.code) || '';
+    const oficial = (bucket.declarado && bucket.declarado.nombreOficial) || catalog.get(bucket.code) || '';
     // El nombre de OSM más repetido y, a igualdad, el más corto: cuando un código agrupa varias
     // relaciones (GR-92 con sus tramos E21 y E22) el corto es el del sendero y el largo el del
     // subtramo europeo. Empatar por longitud además hace la elección determinista.
@@ -494,9 +576,27 @@ async function buildTrailsForPark(slug, registry, catalog) {
         // como tal en el popup (map.js). Va como número, igual que las hectáreas de los límites.
         longitudKm: Math.round(km * 100) / 100,
         ...(homologado ? { homologado: true } : {}),
-        descripcion: 'Tramo del ' + bucket.code + ' a su paso por ' + parkName + '.' +
-          (homologado ? ' Sendero homologado por la Federación de Montañismo de la Región de Murcia.' : ''),
-        source: 'OpenStreetMap contributors (ODbL)' + (homologado ? ' · homologación: FMRM' : '')
+        descripcion: bucket.declarado
+          // Un sendero declarado no es "un tramo a su paso": es el sendero entero del espacio, y lo
+          // que le toca contar al visitante es de dónde a dónde va, que es lo que dice la norma.
+          ? 'Sendero señalizado que recorre ' + parkName + ', ' +
+            'entre ' + bucket.declarado.extremos.inicio +
+            ' y ' + bucket.declarado.extremos.fin + '.' +
+            (homologado ? ' Sendero homologado por la Federación de Montañismo de la Región de Murcia.' : '')
+          : 'Tramo del ' + bucket.code + ' a su paso por ' + parkName + '.' +
+            (homologado ? ' Sendero homologado por la Federación de Montañismo de la Región de Murcia.' : ''),
+        // La procedencia de un sendero declarado NO se puede escribir igual que la de uno venido de
+        // relación: allí OSM afirma qué sendero es, aquí solo pone los caminos y quien los identifica
+        // somos nosotros. Decir a secas "OpenStreetMap" atribuiría a OSM una afirmación que no hace.
+        source: bucket.declarado
+          ? 'Geometría: OpenStreetMap contributors (ODbL), ways ' + [...bucket.wayIds].join(' y ') +
+            ' · identificación DERIVADA: OSM no etiqueta estos caminos con el código del sendero. ' +
+            'Se afirma que son el ' + bucket.code + ' porque la norma lo describe entre esos dos ' +
+            'extremos, la FMRM lo homologa con ese código y la señalización interpretativa que la ' +
+            'norma menciona está cartografiada sobre esta traza. Detalle y verificación en ' +
+            'Tools/catalogo-nacional/data/senderos-sin-relacion-osm.json' +
+            (homologado ? ' · homologación: FMRM' : '')
+          : 'OpenStreetMap contributors (ODbL)' + (homologado ? ' · homologación: FMRM' : '')
       },
       geometry: { type: 'MultiLineString', coordinates: segments },
       // Solo para el informe en pantalla, no llega al fichero.

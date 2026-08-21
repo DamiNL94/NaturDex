@@ -1,6 +1,6 @@
 # Auditoría de los enlaces especie↔hábitat
 
-_Generado por `npm run especies:habitats` el 2026-08-16. No se edita a mano: se regenera._
+_Generado por `npm run especies:habitats` el 2026-08-21. No se edita a mano: se regenera._
 
 El vínculo especie↔hábitat es el único dato **derivado** del modelo, y hasta ahora se derivaba
 de una sola señal: una ocurrencia de GBIF dentro del polígono. Esta auditoría lo repasa enlace a
@@ -14,17 +14,21 @@ anota, está en la cabecera de `Tools/catalogo-nacional/auditoria-especie-habita
 
 | Espacio | Enlaces | Contradicción de medio | Taxón volador enlazado por sus ocurrencias | Sin ninguna ocurrencia en ese polígono | Constancia mínima (aviso) | No evaluable | Característica del HIC (Atlas) | Respaldado | Barrido GBIF |
 |---|---|---|---|---|---|---|---|---|---|
+| cabezo-gordo | 22 | — | — | — | — | — | 2 | 20 | sí |
 | cabo-cope-puntas-calnegre | 189 | — | — | — | — | 182 | 7 | — | no |
+| calblanque-monte-cenizas-pena-aguila | 454 | — | — | — | — | 5 | 8 | 441 | sí |
 | carrascoy-y-el-valle | 1258 | — | — | — | — | 3 | 15 | 1240 | sí |
 | cuatro-calas | 271 | — | — | — | — | 269 | 2 | — | no |
+| espacios-abiertos-e-islas-del-mar-menor | 318 | — | — | — | — | 3 | 3 | 312 | sí |
 | monte-arabi | 23 | — | — | — | — | — | — | 23 | sí |
+| salinas-arenales-san-pedro-pinatar | 476 | — | — | — | — | 6 | — | 470 | sí |
 | sierra-de-el-carche | 1094 | — | — | — | — | — | 12 | 1082 | sí |
 | sierra-de-la-pila | 677 | — | — | — | — | — | 16 | 661 | sí |
 | sierra-de-salinas | 178 | — | — | — | — | — | 1 | 177 | sí |
 | sierra-espuna | 689 | — | — | — | — | 659 | 30 | — | no |
-| **total** | **4379** | **0** | **0** | **0** | **0** | **1113** | **83** | **3183** | |
+| **total** | **5649** | **0** | **0** | **0** | **0** | **1127** | **96** | **4426** | |
 
-**Se retiran 0 enlaces de 4379.** Los 1113 no evaluables **no se tocan**:
+**Se retiran 0 enlaces de 5649.** Los 1127 no evaluables **no se tocan**:
 quedan aquí escritos como hueco a contrastar, que es lo que manda la regla nº 2 del `CLAUDE.md`.
 
 > Este informe es **el estado de hoy, no un histórico**: se regenera entero en cada pasada, igual
@@ -43,12 +47,16 @@ así se reparte hoy:
 
 | Espacio | Enlaces medibles | 1 occ. | 2 occ. | 3-4 occ. | 5-9 occ. | 10+ occ. | Sobre un solo registro |
 |---|---|---|---|---|---|---|---|
+| cabezo-gordo | 20 | 17 | 0 | 3 | 0 | 0 | 85 % |
+| calblanque-monte-cenizas-pena-aguila | 441 | 221 | 96 | 53 | 44 | 27 | 50 % |
 | carrascoy-y-el-valle | 1240 | 333 | 256 | 255 | 208 | 188 | 27 % |
+| espacios-abiertos-e-islas-del-mar-menor | 312 | 194 | 78 | 31 | 7 | 2 | 62 % |
 | monte-arabi | 23 | 10 | 5 | 5 | 1 | 2 | 43 % |
+| salinas-arenales-san-pedro-pinatar | 470 | 215 | 76 | 67 | 75 | 37 | 46 % |
 | sierra-de-el-carche | 1082 | 708 | 174 | 65 | 58 | 77 | 65 % |
 | sierra-de-la-pila | 661 | 146 | 238 | 128 | 91 | 58 | 22 % |
 | sierra-de-salinas | 177 | 60 | 64 | 24 | 24 | 5 | 34 % |
-| **total** | **3183** | **1257** | **737** | **477** | **382** | **330** | **39 %** |
+| **total** | **4426** | **1904** | **987** | **631** | **508** | **396** | **43 %** |
 
 Subir el listón a dos ocurrencias es una decisión de producto, no de auditoría: dejaría sin
 ningún hábitat del que colgar a más de la mitad del catálogo de El Carche, y una especie sin
@@ -64,6 +72,12 @@ Los 182, por el mismo motivo: el espacio no tiene barrido de GBIF versionado.
 Se arregla con `npm run gbif:habitats -- --park cabo-cope-puntas-calnegre --json Tools/catalogo-nacional/out/cabo-cope-puntas-calnegre-gbif.json` (necesita red) y
 volviendo a pasar la auditoría.
 
+## calblanque-monte-cenizas-pena-aguila
+
+### No evaluable — 5 (se conservan)
+
+Los 5, por el mismo motivo: el barrido no conoce este taxón por su clave ni por su nombre: es un desajuste de nomenclatura, no una ausencia.
+
 ## carrascoy-y-el-valle
 
 ### No evaluable — 3 (se conservan)
@@ -78,6 +92,18 @@ Los 269, por el mismo motivo: el espacio no tiene barrido de GBIF versionado.
 
 Se arregla con `npm run gbif:habitats -- --park cuatro-calas --json Tools/catalogo-nacional/out/cuatro-calas-gbif.json` (necesita red) y
 volviendo a pasar la auditoría.
+
+## espacios-abiertos-e-islas-del-mar-menor
+
+### No evaluable — 3 (se conservan)
+
+Los 3, por el mismo motivo: el barrido no conoce este taxón por su clave ni por su nombre: es un desajuste de nomenclatura, no una ausencia.
+
+## salinas-arenales-san-pedro-pinatar
+
+### No evaluable — 6 (se conservan)
+
+Los 6, por el mismo motivo: el barrido no conoce este taxón por su clave ni por su nombre: es un desajuste de nomenclatura, no una ausencia.
 
 ## sierra-espuna
 

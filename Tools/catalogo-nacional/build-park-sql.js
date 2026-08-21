@@ -37,6 +37,13 @@
  * `evidence = 'observada_gbif'`. Si en algún espacio NO coincidiera, esas especies salen con
  * `evidence` a NULL y avisando por consola, porque rellenarlas sería inventar la procedencia.
  *
+ * Hay una segunda procedencia, y no pasa por GBIF: los enlaces que afirma el **Atlas de Hábitats**
+ * («esta especie es característica de este HIC»), que se leen de `out/<slug>-hic-especies.json` y se
+ * escriben `evidence = 'caracteristica'`. Esos NO necesitan ocurrencia detrás —es la evidencia
+ * fuerte, no la débil— y se reconocen enlace a enlace, no por especie: una misma ficha puede tener
+ * unos de GBIF y otros del Atlas, y antes esa mezcla descuadraba la cuenta de arriba y mandaba la
+ * ficha ENTERA a NULL, perdiendo la procedencia de los enlaces que GBIF sí respaldaba.
+ *
  * `gbif_occurrences` se queda a NULL siempre: el `park.json` guarda el total de la especie sumando
  * todos sus polígonos, no el recuento de cada uno, y repartir ese total sería un dato falso.
  *
@@ -53,7 +60,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const { DATABASE, FRONTEND, readJson, readJsonIf, rel, parkFiles } = require('../lib/io');
+const { DATABASE, FRONTEND, OUT_DIR, readJson, readJsonIf, rel, parkFiles } = require('../lib/io');
 const { arg, die } = require('../lib/cli');
 const { sqlStr, sqlStrOrNull, sqlNum, sqlBool, sqlJson } = require('../lib/sql');
 
@@ -82,17 +89,43 @@ for (const f of (geo && geo.features) || []) {
 }
 
 // --- Evidencia del vínculo (ver cabecera) ---------------------------------------------------------
+// Los enlaces que afirma el Atlas se identifican uno a uno, y por eso van aparte: son `caracteristica`
+// y NO tienen por qué tener una ocurrencia detrás. Sin esta lectura, una especie con enlaces de las
+// dos procedencias descuadraba la cuenta de abajo y se iba ENTERA a NULL, perdiendo también la
+// evidencia de los enlaces que GBIF sí respaldaba.
+const atlasPorNombre = new Map();
+{
+  const f = path.join(OUT_DIR, `${slug}-hic-especies.json`);
+  const doc = readJsonIf(f);
+  for (const l of (doc && doc.links) || []) {
+    if (!atlasPorNombre.has(l.scientific_name)) atlasPorNombre.set(l.scientific_name, new Set());
+    atlasPorNombre.get(l.scientific_name).add(l.habitat_slug);
+  }
+}
+const esDelAtlas = (nombre, habitat) => (atlasPorNombre.get(nombre) || new Set()).has(habitat);
+
 const conEnlaces = species.filter(s => (s.habitatIds || []).length);
 const sinRespaldo = new Set();
 for (const s of conEnlaces) {
+  // La K del `source` cuenta los hábitats que vio GBIF, y los del Atlas PUEDEN solaparse con ellos o
+  // no: el Atlas da a *Cosentinia vellea* como característica del 8210 y GBIF además la registró
+  // allí, mientras que a *Centaurea saxicola* la afirma solo el Atlas. Por eso la cuenta no es una
+  // resta sino un intervalo: K tiene que caer entre «ningún enlace del Atlas lo vio GBIF» y «todos
+  // los vio». Fuera de ahí, la ficha declara un número de hábitats que sus enlaces no explican, y esa
+  // procedencia no se rellena a ojo.
+  const nAtlas = s.habitatIds.filter(h => esDelAtlas(s.scientificName, h)).length;
   const m = /\((\d+) hábitats?;/.exec(s.source || '');
-  if (!m || Number(m[1]) !== s.habitatIds.length) sinRespaldo.add(s.scientificName);
+  const k = m ? Number(m[1]) : null;
+  if (k === null || k > s.habitatIds.length || k < s.habitatIds.length - nAtlas) sinRespaldo.add(s.scientificName);
 }
 if (sinRespaldo.size) {
   console.log(`⚠ ${sinRespaldo.size} especie(s) cuyo \`source\` no respalda todos sus enlaces:`);
   for (const n of sinRespaldo) console.log(`   · ${n} → evidence NULL`);
 }
-const evidenciaDe = nombre => (sinRespaldo.has(nombre) ? 'NULL' : sqlStr('observada_gbif'));
+const evidenciaDe = (nombre, habitat) =>
+  esDelAtlas(nombre, habitat) ? sqlStr('caracteristica')
+    : sinRespaldo.has(nombre) ? 'NULL'
+      : sqlStr('observada_gbif');
 
 // --- Bloques ---------------------------------------------------------------------------------------
 const L = [];
@@ -208,7 +241,7 @@ L.push(COLS_S.filter(c => c !== 'scientific_name').map(c => `    ${c} = VALUES($
 
 // 4) Vínculos --------------------------------------------------------------------------------------
 const pares = [];
-for (const s of species) for (const h of s.habitatIds || []) pares.push([s.scientificName, h, evidenciaDe(s.scientificName)]);
+for (const s of species) for (const h of s.habitatIds || []) pares.push([s.scientificName, h, evidenciaDe(s.scientificName, h)]);
 seccion(`4. Vínculos especie↔hábitat (${pares.length}). \`evidence\` = lo que declara el \`source\` de cada ficha; ver cabecera.`);
 if (!pares.length) {
   L.push('-- (ninguno)');
