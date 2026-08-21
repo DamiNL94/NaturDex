@@ -66,7 +66,7 @@
         -0.90962
       ],
       "color": "#cd853f",
-      "image": null,
+      "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/609975159/original.jpg",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
@@ -78,7 +78,9 @@
         5,
         6,
         7
-      ]
+      ],
+      "imageAttribution": "Quentin Groom (CC0) · GBIF",
+      "imageNote": "Portada ilustrada con Cornical (Periploca angustifolia), la especie que da nombre al hábitat."
     },
     {
       "id": "pendientes-rocosas-calcicolas-8210",
@@ -98,7 +100,7 @@
         -0.90962
       ],
       "color": "#daa520",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cosentinia_vellea_kz02.jpg?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
@@ -110,7 +112,9 @@
         5,
         6,
         7
-      ]
+      ],
+      "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con Cosentinia vellea (Cosentinia vellea), la especie que da nombre al hábitat."
     },
     {
       "id": "zonas-subestepicas-de-6220",
@@ -133,11 +137,57 @@
       "image": null,
       "audio": null,
       "audioTranscript": null,
-      "reviewNote": null,
+      "reviewNote": "Sin especies enlazadas, y el hueco es real, no una pérdida de enlaces. El Atlas cartografía este hábitat en el segundo recinto del espacio —10,8 ha, el 4 % de las 272 ha—, separado del recinto grande que lleva a la vez el 5330, el 5220 y el 8210. El barrido de GBIF solo encontró cuatro especies dentro de su polígono, y tres son aves, que no se adscriben a hábitats por la regla de vuelo; la cuarta, Coronilla juncea, tiene un único registro y no llega al umbral de presencia. Las 58 fichas del espacio entran por el anexo normativo del Plan del Mar Menor, que inventaría la ZEC entera sin decir en qué hábitat está cada especie, así que no hay de dónde sacar el enlace sin inventarlo. Lo que falta para cerrarlo es trabajo de campo o una fuente que adscriba las gramíneas anuales de este pastizal al recinto.",
       "speciesIds": []
     }
   ],
-  "pointsOfInterest": [],
+  "pointsOfInterest": [
+    {
+      "id": "cima-del-cabezo-gordo",
+      "name": "Cima del Cabezo Gordo",
+      "type": "Paisajístico",
+      "description": "Los 308 m de un cerro que se levanta solo en mitad de la llanura del Campo de Cartagena, sin nada alrededor que le haga sombra. El plan lo describe como un hito montañoso de planta ovoidal y laderas orientadas al norte y al sur, escarpadas en la parte central y suavizándose hacia el llano, y lo considera un elemento estructural del paisaje comarcal por su calidad visual. Desde arriba se abarca de una vez el Campo de Cartagena entero y, al fondo, el Mar Menor.",
+      "coordinates": [
+        37.8016,
+        -0.908073
+      ],
+      "image": null,
+      "source": "Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia (Decreto n.º 259/2019, de 10 de octubre; BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7), volumen II, §2.2.3 «Descripción del paisaje» —«El Cabezo Gordo se considera un elemento estructural del paisaje del Campo de Cartagena con un interés muy relevante, destacando como enclave de gran calidad visual en la extensa llanura circundante… Constituye un hito montañoso de planta ovoidal que presenta mediana altitud (alcanza como cota máxima 308 msnm)»—. Coordenada exacta: nodo de la cima en OpenStreetMap (node/3982456195), con un mirador etiquetado en el mismo punto (node/3982456196). AVISO recogido del propio plan (§2.2.4): «cabe destacar la existencia de cavidades y antiguas galerías mineras no protegidas que pueden suponer un riesgo para la seguridad de los visitantes».",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "mirador-de-la-sima-de-las-palomas",
+      "name": "Mirador de la Sima de las Palomas",
+      "type": "Arqueológico",
+      "description": "El mirador que el plan de gestión señaliza sobre la Sima de las Palomas, el yacimiento que da fama al cerro: dentro se han encontrado restos de Homo sapiens neanderthalensis y de Homo sapiens arcaico datados entre 200.000 y 500.000 años. Se llega por la Senda del Cabezo Gordo (SL-MU 11), que sale del aparcamiento y termina aquí, con señalización interpretativa por el camino. En agosto, coincidiendo con los campos de trabajo de las excavaciones, se hacen jornadas de puertas abiertas; el resto del año lo que se visita es el mirador, no la cavidad.",
+      "coordinates": [
+        37.798414,
+        -0.896848
+      ],
+      "image": null,
+      "source": "Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia (Decreto n.º 259/2019, de 10 de octubre; BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7), volumen II, §2.2.4 «Uso Público», que enumera entre los equipamientos «el mirador Sima de las Palomas y el sendero natural “Senda del Cabezo Gordo (SL-MU11)”, cuyo trazado discurre entre el aparcamiento y la Sima de las Palomas», y §2.2.1 y §1.1.5.1, que describen el interés paleoantropológico del yacimiento. Coordenada exacta: nodo del mirador en OpenStreetMap (node/4075151748). SE SEÑALA EL MIRADOR Y NO LA BOCA DE LA CAVIDAD (§4.3.6, precedente Cueva C.6 de Cabo Cope): el punto que entra en el catálogo es el equipamiento que el propio plan señaliza para el visitante. AVISO recogido del propio plan (§2.2.4): «cabe destacar la existencia de cavidades y antiguas galerías mineras no protegidas que pueden suponer un riesgo para la seguridad de los visitantes».",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "aparcamiento-senda-del-cabezo-gordo",
+      "name": "Aparcamiento y arranque de la Senda del Cabezo Gordo",
+      "type": "Acceso",
+      "description": "El único acceso ordenado al espacio, al sur del cerro, que es donde el plan concentra el uso público. De aquí arranca la Senda del Cabezo Gordo (SL-MU 11), el sendero natural señalizado que sube hasta el mirador de la Sima de las Palomas, y aquí están los paneles informativos. En abril llega hasta este entorno la romería del Cabezo Gordo, que parte de Dolores de Pacheco.",
+      "coordinates": [
+        37.795639,
+        -0.900031
+      ],
+      "image": null,
+      "source": "Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia (Decreto n.º 259/2019, de 10 de octubre; BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7), volumen II, §2.2.4 «Uso Público»: «El uso público se concentra al sur del Paisaje Protegido… Entre los equipamientos e instalaciones cabe mencionar un aparcamiento, el mirador Sima de las Palomas y el sendero natural “Senda del Cabezo Gordo (SL-MU11)”… El sendero dispone de señalización informativa-interpretativa básica»; la romería de abril desde Dolores de Pacheco consta en el mismo apartado. Coordenada aproximada: centro del recinto de aparcamiento cartografiado en OpenStreetMap (way/386402813), con dos paneles informativos etiquetados junto a él (node/3897233058 y node/3897233079). AVISO recogido del propio plan (§2.2.4): «cabe destacar la existencia de cavidades y antiguas galerías mineras no protegidas que pueden suponer un riesgo para la seguridad de los visitantes».",
+      "approx": true,
+      "audio": null,
+      "audioTranscript": null
+    }
+  ],
   "species": [
     {
       "id": 1,
@@ -349,7 +399,8 @@
         "pendientes-rocosas-calcicolas-8210"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 5,
@@ -501,7 +552,8 @@
         "pendientes-rocosas-calcicolas-8210"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 8,
@@ -545,7 +597,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 9,
@@ -685,7 +738,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 12,
@@ -1121,7 +1175,8 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     },
     {
       "id": 21,

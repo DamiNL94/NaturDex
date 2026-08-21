@@ -79,11 +79,18 @@ async function loads(url) {
       const buf = await r.arrayBuffer();
       return buf.byteLength > 2000;   // los "placeholder" y errores HTML disfrazados son diminutos
     } catch (e) {
-      if (intento === 6) return false;
+      if (intento === 6) return null;
       await sleep(800 * intento);
     }
   }
-  return false;
+  // Seis 429 seguidos NO son «la foto no sirve»: son «no se ha podido saber». El comentario de
+  // arriba lo decía y esta salida devolvía `false` igualmente, que es la afirmación contraria.
+  // Se ve en cuanto se castiga a Wikimedia: tras el barrido del 2026-08-20, tres aves salieron
+  // como «el archivo de Commons ya no está disponible» y los tres ficheros estaban perfectamente
+  // —`curl` devolvía 429, no 404—. Nadie los tocó de milagro; por la rama del resolver sí se
+  // habrían descartado tres candidatas buenas, que es exactamente el fallo del jabalí.
+  // `null` = no se sabe. Quien llame tiene que distinguirlo de `false`.
+  return null;
 }
 
 // --- filtros de archivo --------------------------------------------------------------------------
@@ -299,7 +306,11 @@ async function resolver(scientificName, width = 1280) {
 
   for (const c of candidatos) {
     const url = filePathUrl(c.file, width);
-    if (!(await loads(url))) continue;
+    const viva = await loads(url);
+    // `null` es «no se ha podido comprobar» (Wikimedia nos está limitando), no «no sirve». Seguir
+    // bajando por la lista de candidatas con esa respuesta es como se elige la mala: se corta.
+    if (viva === null) return null;
+    if (!viva) continue;
     const meta = await metadatos(c.file);
     if (!meta) continue;
     return {

@@ -5392,7 +5392,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 37,
@@ -6882,7 +6883,9 @@
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
         "ambito": "autonómico",
         "origen": "murciaStatus del park.json"
-      }
+      },
+      "rarityBasis": null,
+      "descriptionSource": null
     },
     {
       "id": 130,
@@ -7192,7 +7195,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 70,
@@ -7344,7 +7348,8 @@
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "descriptionSource": null
     },
     {
       "id": 39,

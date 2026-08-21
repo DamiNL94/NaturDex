@@ -200,7 +200,7 @@
         -0.758009
       ],
       "color": "#6b8e23",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pistacia_lentiscus.jpg?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
@@ -223,7 +223,9 @@
         37,
         60,
         64
-      ]
+      ],
+      "imageAttribution": "Lumbar~commonswiki (CC BY-SA 3.0) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con Lentisco (Pistacia lentiscus), la especie que da nombre al hábitat."
     },
     {
       "id": "dunas-fijas-de-2210",
@@ -8105,7 +8107,7 @@
     {
       "id": 138,
       "commonName": "zanahoria marina",
-      "scientificName": "Echinophora spinosa L.",
+      "scientificName": "Echinophora spinosa",
       "kingdom": "flora",
       "group": null,
       "habitat": null,

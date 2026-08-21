@@ -109,7 +109,16 @@ const parquesDelCatalogo = () => parkFiles().filter(p => !OPT.park || p.slug ===
         if (file) {
           const meta = await metadatos(file);
           const url = filePathUrl(file, OPT.width);
-          if (meta && await loads(url)) {
+          const viva = await loads(url);
+          // `null` = Wikimedia nos está limitando y no se ha podido comprobar. Se deja la ficha
+          // como está y se dice por qué: lo que NO puede pasar es anunciar que el archivo ya no
+          // existe, que es lo que hacía y era mentira.
+          if (viva === null) {
+            console.log(`  · ${sp.commonName} — Wikimedia limita las peticiones (429); no se ha podido comprobar la foto, se deja como está`);
+            intactas++;
+            continue;
+          }
+          if (meta && viva) {
             const credito = atribucion(meta);
             if (sp.image !== url || sp.imageAttribution !== credito) {
               sp.image = url;
@@ -127,7 +136,17 @@ const parquesDelCatalogo = () => parkFiles().filter(p => !OPT.park || p.slug ===
 
       const sinFoto = !sp.image || !String(sp.image).trim();
       let rota = false;
-      if (!sinFoto && (OPT.check || OPT.mode === 'missing' || OPT.force)) rota = !(await loads(sp.image));
+      if (!sinFoto && (OPT.check || OPT.mode === 'missing' || OPT.force)) {
+        const viva = await loads(sp.image);
+        // Solo `false` es «rota». `null` es «no se ha podido saber», y tratarlo como rota manda a
+        // re-resolver una foto que está perfectamente.
+        if (viva === null) {
+          console.log(`  · ${sp.commonName} — Wikimedia limita las peticiones (429); no se ha podido comprobar la foto, se deja como está`);
+          intactas++;
+          continue;
+        }
+        rota = !viva;
+      }
 
       const hayQueTocar = OPT.mode === 'all' ? (OPT.force || sinFoto || rota) : (sinFoto || rota);
       if (!hayQueTocar) { intactas++; continue; }
