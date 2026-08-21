@@ -1,6 +1,6 @@
 # Fichas sin tramo de rareza: estado legal por contrastar
 
-2 fichas cuyo estado legal dice «pendiente de confirmar», «categoría exacta pendiente» o similar. **No tienen `rarityLocal`**: escribirles un 1 afirmaría que se comprobó que no tienen figura de protección, y lo que consta es que nadie lo comprobó.
+4 fichas cuyo estado legal dice «pendiente de confirmar», «categoría exacta pendiente» o similar. **No tienen `rarityLocal`**: escribirles un 1 afirmaría que se comprobó que no tienen figura de protección, y lo que consta es que nadie lo comprobó.
 
 Qué las resuelve, por este orden:
 
@@ -12,5 +12,7 @@ Qué las resuelve, por este orden:
 
 | Espacio | # | Especie | Estado estatal | Estado autonómico |
 |---|---:|---|---|---|
+| calblanque-monte-cenizas-pena-aguila | 20 | *Lavandula multifida* | No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar) | No incluida en el Catálogo Regional de especies protegidas (Región de Murcia) |
+| calblanque-monte-cenizas-pena-aguila | 21 | *Quercus coccifera* | No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar) | No incluida en el Catálogo Regional de especies protegidas (Región de Murcia) |
 | sierra-de-el-carche | 10 | *Quercus coccifera* | No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar) | No incluida en el Catálogo Regional de especies protegidas (Región de Murcia) |
 | sierra-de-el-carche | 153 | *Lavandula multifida* | No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar) | No incluida en el Catálogo Regional de especies protegidas (Región de Murcia) |

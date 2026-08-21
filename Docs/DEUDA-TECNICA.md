@@ -317,3 +317,30 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     > conviene tener también la nº 23 (los tres barridos sin versionar), o esos espacios no se pueden
     > rehacer sin volver a descargar.
 
+29. **511 de las 992 fichas del catálogo universal siguen con un `rarityScore` puesto a ojo, y hasta
+    el 2026-08-21 ese número se colaba en el tramo que ve el usuario.** Es la migración a medias de
+    `rareza-legal.js --catalogo`: el tramo estatal debía derivarse del `spainStatus` y dejar la
+    figura en `rarityBasis`, pero el catálogo ha crecido desde entonces y las fichas nuevas nacen sin
+    él. `npm run validate` los cuenta como aviso desde siempre.
+    > **Lo que los hacía caros era la fuga, y esa ya está tapada.** `build-species-n2.js` usaba el
+    > `rarityScore` universal de SUELO del `rarityLocal` —«el local incluye al estatal»— sin mirar si
+    > venía de una norma, así que un número a ojo ascendía al único campo de rareza que la app
+    > enseña, y de paso pisaba el `rarityLocalBasis` derivado con uno sin `categoria` ni `norma`: el
+    > cartel de la ficha se quedaba sin la figura legal que debía citar. En Calblanque eran **32 de
+    > 205 fichas**, con la siempreviva de Cartagena, la salsola y el ajo de flor oscura anunciadas
+    > como «En peligro» siendo **Vulnerable** en el Decreto 50/2003. Desde el 2026-08-21 el suelo
+    > exige `rarityBasis` y la reserva de `Frontend/Js/rareza.js` también.
+    >
+    > Queda el trabajo de fondo: pasar `npm run especies:rareza --catalogo` (425 fichas cambian de
+    > tramo), bajarlo con `npm run species:apply` y **recalcular después el `rarityLocal` de los
+    > dieciséis espacios** con `npm run especies:rareza`, porque la migración sube tramos (46 fichas
+    > de 1 a 2 por el LESRPE) y sin el recálculo `validate` daría error por `rarityLocal` menor que
+    > `rarityScore`. Es una sola operación y hay que hacerla entera; por eso no se hizo al arreglar
+    > la fuga.
+30. **Dos fichas de Calblanque y dos de Sierra de El Carche se quedan sin tramo de rareza porque su
+    `spainStatus` dice «pendiente de confirmar».** Son la coscoja y la alhucema, que la Lista Roja de
+    la Flora Vascular Española 2008 no puede listar —enumera taxones amenazados— pero que nadie ha
+    comprobado contra la fuente. Están en
+    [`Tools/catalogo-nacional/out/rareza-por-contrastar.md`](../Tools/catalogo-nacional/out/rareza-por-contrastar.md)
+    y la app las enseña con el aviso de precaución por defecto, que es la regla nº 9 del `CLAUDE.md`.
+    Las resuelve una consulta a EIDOS con red.

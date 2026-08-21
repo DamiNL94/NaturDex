@@ -459,6 +459,7 @@ function main() {
   const species = [];
   const avisos = [];
   const sinGbif = [], hiloPerdido = [], taxonIdDudoso = [], sinTaxonId = [], sinRarezaLocal = [], localPorEstatal = [];
+  const sinTramoLocal = [];
 
   for (const sel of conFicha) {
     const sci = sel.scientificName;
@@ -531,26 +532,49 @@ function main() {
      * estatal de 2 y la ficha se contradecía a sí misma. Le pasó en Sierra de Salinas a la perdiz
      * roja, la tórtola europea, la chova piquirroja y el triguero. Prevalece el estatal, y el
      * `rarityLocalBasis` dice de dónde sale para que no parezca calculado.
+     *
+     * PERO SOLO CUANDO EL ESTATAL ESTÁ DERIVADO DE LA NORMA, que es lo que dice `rarityBasis`. Un
+     * `rarityScore` SIN `rarityBasis` es uno de los valores heredados del criterio propio 1–5: un
+     * número puesto a ojo, el mismo que `validate` sigue avisando y que la migración de
+     * `rareza-legal.js --catalogo` todavía no ha recalculado. Usarlo de suelo no protege de una
+     * contradicción: la fabrica, porque lava una suposición dentro del ÚNICO campo de rareza que la
+     * app enseña, y de paso pisa el `rarityLocalBasis` derivado con uno que no lleva `categoria` ni
+     * `norma` —así que el cartel de la ficha se queda sin la figura legal que debía citar—.
+     *
+     * Medido en Calblanque el 2026-08-21: 32 de 205 fichas llevaban el tramo inflado por esta vía.
+     * La siempreviva de Cartagena, la salsola y el ajo de flor oscura salían «En peligro» (tramo 5)
+     * siendo VULNERABLE en el Decreto 50/2003, y el cinomorio, que ahí es «de interés especial»
+     * (tramo 3), salía también en 5. El estatal de las cuatro es un 5 heredado sin `rarityBasis`.
+     *
+     * Entre un tramo derivado de la norma y uno puesto a ojo, manda el derivado aunque sea más bajo.
+     * Y si es el heredado el que se queda sin respaldo, la ficha lo dice en vez de inventárselo.
      */
-    let rarityLocal = sel.rarityLocal != null ? sel.rarityLocal : (sinRarezaLocal.push(sci), (u.rarityScore || 1));
-    let rarityLocalBasis = sel.rarityLocalBasis || null;
-    if ((u.rarityScore || 1) > rarityLocal) {
+    const estatalDerivado = u.rarityBasis ? (u.rarityScore || 1) : null;
+    let rarityLocal = sel.rarityLocal != null ? sel.rarityLocal : (sinRarezaLocal.push(sci), estatalDerivado);
+    let rarityLocalBasis = sel.rarityLocal != null ? (sel.rarityLocalBasis || null) : (u.rarityBasis || null);
+    if (estatalDerivado != null && rarityLocal != null && estatalDerivado > rarityLocal) {
       localPorEstatal.push(sci);
-      rarityLocal = u.rarityScore;
+      rarityLocal = estatalDerivado;
       rarityLocalBasis = {
-        ...(u.rarityBasis || {}),
+        ...u.rarityBasis,
         origen: 'rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para ' +
                 'este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal',
       };
     }
+    // Sin selección y sin estatal derivado no hay de dónde sacar el tramo. Queda SIN él —la ficha lo
+    // omite— y la app enseña el aviso de «nadie lo ha mirado», que es la regla nº 9 del CLAUDE.md:
+    // publicar de menos se corrige, dar por comprobado lo que no lo está, no.
+    if (rarityLocal == null) sinTramoLocal.push(sci);
 
     const ficha = {
       id: antes ? antes.id : siguienteId++,
       scientificName: sci,
       conservationStatus: etiquetaConservacion(sel.normas, u.iucnGlobal),
       coordinates: null,
-      rarityLocal,
-      rarityLocalBasis,
+      // `undefined` y no `null`: ORDEN filtra los `undefined`, así que la ficha OMITE el campo en vez
+      // de escribir un hueco. Son dos cosas distintas y la app las distingue.
+      rarityLocal: rarityLocal == null ? undefined : rarityLocal,
+      rarityLocalBasis: rarityLocal == null ? undefined : rarityLocalBasis,
       featured: rarityLocal >= 4,
       source: fuenteDe(sel, g, fecha, zepa),
       murciaStatus: estadoAutonomico(sel.normas, comunidad),
@@ -651,9 +675,15 @@ function main() {
   }
   if (sinRarezaLocal.length)
     console.log(`\n⚠ ${sinRarezaLocal.length} ficha(s) sin \`rarityLocal\` en la selección: se ha usado el \`rarityScore\`\n` +
-      '  universal, que solo mira el ámbito estatal y deja casi todo en el mismo tramo. La selección es\n' +
+      '  universal cuando estaba derivado de una norma, que solo mira el ámbito estatal y deja casi todo\n' +
+      '  en el mismo tramo (y cuando no lo estaba, la ficha se ha quedado sin tramo). La selección es\n' +
       '  anterior al campo; vuelve a pasar `npm run species:seleccion` para que las destacadas de este\n' +
       '  espacio salgan del criterio de verdad y no del heredado.');
+  if (sinTramoLocal.length)
+    console.log(`\n⚠ ${sinTramoLocal.length} ficha(s) SIN \`rarityLocal\`: ni la selección lo trae ni el \`rarityScore\`\n` +
+      '  universal está derivado de una norma (le falta `rarityBasis`, así que es uno de los valores\n' +
+      '  heredados a ojo). No se les escribe un tramo inventado: la app las enseña con el aviso de\n' +
+      `  precaución por defecto. Las resuelve \`npm run especies:rareza --catalogo\`: ${sinTramoLocal.join(', ')}`);
   if (localPorEstatal.length)
     console.log(`\n⚠ ${localPorEstatal.length} ficha(s) con el \`rarityLocal\` de la selección POR DEBAJO del \`rarityScore\`\n` +
       '  estatal, que lo incluye: EIDOS no devolvió ninguna norma para ese taxón. Se ha escrito el estatal\n' +

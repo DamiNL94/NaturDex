@@ -201,14 +201,61 @@ function main() {
   if (indeterminadas.length) {
     console.log(`\n⚠ ${indeterminadas.length} ficha(s) SIN tramo: su estado legal dice «pendiente de confirmar».`);
     console.log('  No se les pone 1: eso afirmaría que se comprobó que no tienen figura.');
-    const ruta = path.join(OUT_DIR, 'rareza-por-contrastar.md');
-    if (!DRY) {
+  }
+  // El informe es GLOBAL y la ejecución puede no serlo. Con `--park` se reescribía entero a partir de
+  // lo mirado en ese espacio, así que revisar Calblanque borraba del informe las dos fichas
+  // pendientes de Sierra de El Carche: un hueco documentado desaparecido sin que nada avisara, que es
+  // justo lo que el informe existe para evitar. Se refunden las filas — se sustituyen solo las de los
+  // espacios recorridos — y así una pasada acotada no puede perder el trabajo de otra.
+  const ruta = path.join(OUT_DIR, 'rareza-por-contrastar.md');
+  const recorridos = new Set(objetivo.map(o => o.slug));
+  const filas = [...ajenas(ruta, recorridos), ...indeterminadas]
+    .sort((a, b) => a.slug.localeCompare(b.slug) || Number(a.id) - Number(b.id));
+  if (!DRY) {
+    if (filas.length) {
       fs.mkdirSync(OUT_DIR, { recursive: true });
-      fs.writeFileSync(ruta, informe(indeterminadas), 'utf8');
-      console.log(`  → ${rel(ruta)}`);
+      fs.writeFileSync(ruta, informe(filas), 'utf8');
+      console.log(`  → ${rel(ruta)}${filas.length > indeterminadas.length
+        ? ` (${filas.length - indeterminadas.length} fila(s) de otros espacios conservadas)` : ''}`);
+    } else if (fs.existsSync(ruta)) {
+      fs.unlinkSync(ruta);
+      console.log(`  - ${rel(ruta)} (ya no queda ninguna pendiente)`);
     }
   }
   if (DRY) console.log('\nSimulación: no se ha escrito nada.');
+}
+
+/*
+ * Las filas del informe anterior que NO son de los espacios recorridos en esta pasada. Se leen del
+ * propio markdown porque es el único sitio donde viven: el informe es el registro del hueco, no un
+ * subproducto, y nada más lo guarda.
+ *
+ * Releer un markdown es frágil y aquí lo frágil sería perder una fila sin enterarse, que es el
+ * mismo fallo en verde que esto viene a tapar. Por eso una línea que PARECE fila —empieza por «|» y
+ * trae un número en la segunda celda— y que aun así no se sabe partir no se descarta en silencio:
+ * se avisa por pantalla con la línea entera, para poder recuperarla a mano.
+ */
+function ajenas(ruta, recorridos) {
+  if (!fs.existsSync(ruta)) return [];
+  const filas = [];
+  for (const linea of fs.readFileSync(ruta, 'utf8').split('\n')) {
+    const celdas = linea.split('|').map(c => c.trim());
+    // `| slug | id | *sci* | estatal | autonómico |` deja siete trozos al partir por «|», con el
+    // primero y el último vacíos. La cabecera y el separador se caen solos: no traen id numérico.
+    if (!/^\s*\|/.test(linea) || !/^\d+$/.test(celdas[2] || '')) continue;
+    if (celdas.length !== 7) {
+      console.error(`⚠ fila del informe ilegible (¿un «|» dentro de un texto?), NO se ha conservado:\n  ${linea}`);
+      continue;
+    }
+    const slug = celdas[1];
+    if (recorridos.has(slug)) continue;
+    filas.push({
+      slug, id: celdas[2], sci: celdas[3].replace(/^\*|\*$/g, ''),
+      estatal: celdas[4] === '—' ? null : celdas[4],
+      autonomico: celdas[5] === '—' ? null : celdas[5],
+    });
+  }
+  return filas;
 }
 
 function informe(filas) {

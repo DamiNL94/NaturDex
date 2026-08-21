@@ -54,7 +54,7 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    generaliza igual: «nadie lo ha mirado» no es «no está amenazada», y publicar de más no se puede
    deshacer. Ver [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md).
 
-## 2. Diez cosas que fallan EN VERDE
+## 2. Doce cosas que fallan EN VERDE
 
 Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 [`Docs/runbook/ORDEN-DE-OPERACIONES.md`](Docs/runbook/ORDEN-DE-OPERACIONES.md).
@@ -91,6 +91,14 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
   generadas después la volvieron a partir en dos. Arregla **el dato y la entrada de `data/`**.
 - **`build-park-sql.js` solo hace UPSERT.** Quitar una ficha del `park.json` y regenerar el SQL deja
   la BD igual, y la API manda sobre el paquete: el usuario la sigue viendo. El borrado va aparte.
+- **Un `rarityScore` sin `rarityBasis` es un número puesto a ojo, y ascendía solo al campo que ve el
+  usuario.** `build-species-n2.js` lo usaba de suelo del `rarityLocal` —«el local incluye al
+  estatal»— sin comprobar que viniera de una norma, y de paso pisaba el `rarityLocalBasis` derivado
+  con uno sin `categoria` ni `norma`, así que el cartel de la ficha se quedaba sin la figura legal
+  que debía citar. Nada fallaba: el número estaba en el tramo 1–5 y `validate` solo lo avisaba. En
+  Calblanque eran 32 de 205 fichas, y la siempreviva de Cartagena salía «En peligro» siendo
+  **Vulnerable** en el Decreto 50/2003. Tapado el 2026-08-21 en las dos puntas —el pipeline y la
+  reserva de `Frontend/Js/rareza.js`—; la migración de fondo es la deuda nº 29.
 - **Una ocurrencia dentro de un polígono no dice que la especie viva ahí.** Es la regla con la que se
   derivan los 4.379 enlaces especie↔hábitat, y en un hábitat que es una cinta de metros —un
   manantial, una charca, un cauce— cualquier registro tomado en el sendero de al lado cae dentro. En
