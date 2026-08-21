@@ -523,7 +523,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 13 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -578,7 +582,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 10 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -633,7 +641,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 8 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -683,10 +695,6 @@
       "coordinates": null,
       "rarityScore": 2,
       "rarityBasis": null,
-      "rarityLocal": 2,
-      "rarityLocalBasis": {
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
-      },
       "featured": false,
       "source": "GBIF: 7 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -742,9 +750,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 7 ocurrencias dentro de los polígonos de hábitat del espacio (7 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -801,7 +809,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 6 ocurrencias dentro de los polígonos de hábitat del espacio (7 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -848,9 +860,11 @@
       "coordinates": null,
       "rarityScore": 3,
       "rarityBasis": null,
-      "rarityLocal": 3,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 5 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -898,9 +912,11 @@
       "coordinates": null,
       "rarityScore": 2,
       "rarityBasis": null,
-      "rarityLocal": 2,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 4 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -950,7 +966,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -995,9 +1015,11 @@
       "coordinates": null,
       "rarityScore": 3,
       "rarityBasis": null,
-      "rarityLocal": 3,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -1052,9 +1074,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1099,9 +1121,11 @@
       "coordinates": null,
       "rarityScore": 3,
       "rarityBasis": null,
-      "rarityLocal": 3,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -1159,9 +1183,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1206,9 +1230,11 @@
       "coordinates": null,
       "rarityScore": 2,
       "rarityBasis": null,
-      "rarityLocal": 2,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -1258,7 +1284,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-15); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -1313,7 +1343,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -1366,7 +1400,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -1410,9 +1448,11 @@
       "coordinates": null,
       "rarityScore": 3,
       "rarityBasis": null,
-      "rarityLocal": 3,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -1458,9 +1498,11 @@
       "coordinates": null,
       "rarityScore": 3,
       "rarityBasis": null,
-      "rarityLocal": 3,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -1505,9 +1547,11 @@
       "coordinates": null,
       "rarityScore": 3,
       "rarityBasis": null,
-      "rarityLocal": 3,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -1563,9 +1607,9 @@
       },
       "rarityLocal": 5,
       "rarityLocalBasis": {
-        "categoria": "En Peligro de Extinción",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "En Peligro de Extinción (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Juniperus oxycedrus subsp. oxycedrus», con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1611,9 +1655,11 @@
       "coordinates": null,
       "rarityScore": 2,
       "rarityBasis": null,
-      "rarityLocal": 2,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -1668,7 +1714,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -1723,9 +1773,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1770,9 +1820,11 @@
       "coordinates": null,
       "rarityScore": 3,
       "rarityBasis": null,
-      "rarityLocal": 3,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -1817,9 +1869,11 @@
       "coordinates": null,
       "rarityScore": 3,
       "rarityBasis": null,
-      "rarityLocal": 3,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -1865,9 +1919,11 @@
       "coordinates": null,
       "rarityScore": 3,
       "rarityBasis": null,
-      "rarityLocal": 3,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -1923,9 +1979,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1971,7 +2027,11 @@
       "rarityScore": 1,
       "rarityBasis": null,
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -2026,9 +2086,9 @@
       },
       "rarityLocal": 5,
       "rarityLocalBasis": {
-        "categoria": "En Peligro de Extinción",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "En Peligro de Extinción (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Sorbus aria» (el texto precisa que «apenas se han localizado una decena de ejemplares en los roquedos del Barranco del Lagrimal»), con la categoría «En Peligro de Extinción (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2073,9 +2133,11 @@
       "coordinates": null,
       "rarityScore": 3,
       "rarityBasis": null,
-      "rarityLocal": 3,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -2130,7 +2192,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Colutea hispanica» (el backbone de GBIF lo trata como sinónimo de Colutea arborescens), con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -2184,9 +2250,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2241,9 +2307,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Fritillaria hispanica» (el backbone de GBIF lo trata como sinónimo de Fritillaria lusitanica), con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2298,7 +2364,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-15); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -2345,9 +2415,9 @@
       "rarityBasis": null,
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2392,9 +2462,11 @@
       "coordinates": null,
       "rarityScore": 3,
       "rarityBasis": null,
-      "rarityLocal": 3,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Odontites viscosus subsp. australis», con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -2450,9 +2522,9 @@
       },
       "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Quercus faginea subsp. faginea», con la categoría «Vulnerable (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2507,9 +2579,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2564,9 +2636,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 31 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -2612,9 +2684,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 26 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -2659,7 +2731,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 26 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
@@ -2705,9 +2781,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 25 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Parus ater»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -2757,9 +2833,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 24 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -2804,7 +2880,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 22 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
@@ -2848,7 +2928,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 21 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
@@ -2897,9 +2981,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 19 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Falco tunninculus» (errata de la tabla: se lee «tunninculus» por tinnunculus); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -2945,9 +3029,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 19 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Parus cristatus»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -2997,9 +3081,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 19 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -3049,9 +3133,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 18 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Sylvia melanocephala»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -3096,7 +3180,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 17 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
@@ -3141,9 +3229,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 16 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -3189,9 +3277,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 16 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -3237,9 +3325,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 14 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Especies Amenazadas)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -3285,9 +3373,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 14 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Phoenicrus ochruros» (errata de la tabla: se lee «Phoenicrus» por Phoenicurus ochruros); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -3332,7 +3420,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 12 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
@@ -3376,7 +3468,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 12 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Sturnur unicolor» (errata de la tabla: se lee «Sturnur» por Sturnus unicolor); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
@@ -3425,9 +3521,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 10 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -3477,9 +3573,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 9 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -3525,9 +3621,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 8 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -3579,7 +3675,7 @@
       "rarityLocalBasis": {
         "categoria": "Directiva Aves 2009/147/CE, Anexos II y III (especie cinegética)",
         "ambito": "estatal",
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 8 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -3629,9 +3725,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 8 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -3681,9 +3777,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 8 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Especies Amenazadas)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -3733,9 +3829,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 8 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -3785,9 +3881,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 8 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Saxicola torquata»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -3833,9 +3929,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 7 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Emberizia cia» (errata de la tabla: se lee «Emberizia» por Emberiza cia); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -3885,9 +3981,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial, RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 7 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -3933,9 +4029,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 7 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -3981,9 +4077,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 7 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -4035,7 +4131,7 @@
       "rarityLocalBasis": {
         "categoria": "Directiva Aves 2009/147/CE, Anexo II (especie cinegética)",
         "ambito": "estatal",
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 7 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -4085,9 +4181,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 6 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -4133,9 +4229,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 6 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -4181,9 +4277,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 6 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -4229,9 +4325,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 5 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -4281,9 +4377,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 5 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Especies Amenazadas)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -4335,7 +4431,7 @@
       "rarityLocalBasis": {
         "categoria": "LESRPE (RD 139/2011)",
         "ambito": "estatal",
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 5 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Especies Amenazadas)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -4385,9 +4481,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 4 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -4433,9 +4529,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 4 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -4481,9 +4577,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 4 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -4529,9 +4625,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -4581,9 +4677,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Especies Amenazadas)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -4628,7 +4724,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
@@ -4679,7 +4779,7 @@
       "rarityLocalBasis": {
         "categoria": "protegida por la Directiva Aves 2009/147/CE",
         "ambito": "estatal",
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Milaria calandra» (errata de la tabla: se lee «Milaria» por Miliaria calandra); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -4725,9 +4825,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Regulus ignicapillus»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -4777,9 +4877,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -4825,9 +4925,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Parus caeruleus» (el backbone de GBIF lo trata como sinónimo de Cyanistes caeruleus); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -4873,9 +4973,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -4925,9 +5025,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -4973,9 +5073,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Carduelis spinus» (el backbone de GBIF lo trata como sinónimo de Spinus spinus); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -5077,9 +5177,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -5129,9 +5229,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -5177,9 +5277,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -5229,9 +5329,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, con la categoría «De Interés Especial (Catálogo Regional de Especies Amenazadas)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -5281,9 +5381,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -5328,7 +5428,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Corvus monedula» (especie cazable enumerada en el §1.1.2.2.2 «Fauna de interés cinegético»); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
@@ -5368,7 +5472,11 @@
       "rarityScore": 1,
       "rarityBasis": null,
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
@@ -5412,7 +5520,11 @@
       "rarityScore": 1,
       "rarityBasis": null,
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
       "taxonomy": {
@@ -5457,9 +5569,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Delichon urbica»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -5509,9 +5621,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -5561,9 +5673,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -5609,9 +5721,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -5661,9 +5773,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -5709,9 +5821,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",
@@ -5757,9 +5869,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §1.1.2.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de la ZEC ES6200008 (1.337,8 ha), que solapa este Paisaje Protegido (2.395,4 ha) sin coincidir con su límite, que la cita como «Troglodites troglodites» (errata de la tabla: se lee «Troglodites troglodites» por Troglodytes troglodytes); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000457 (Sierra de Salinas (ZEPA))",

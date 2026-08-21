@@ -286,7 +286,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 45 ocurrencias dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -336,7 +340,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 40 ocurrencias dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -387,9 +395,9 @@
       },
       "rarityLocal": 5,
       "rarityLocalBasis": {
-        "categoria": "En Peligro de Extinción",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "En Peligro de Extinción (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 8 ocurrencias dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, que la cita como «Juniperus oxycedrus subsp. oxycedrus», con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -436,7 +444,11 @@
       "rarityScore": 1,
       "rarityBasis": null,
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 4 ocurrencias dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -486,7 +498,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 4 ocurrencias dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -531,10 +547,6 @@
       "coordinates": null,
       "rarityScore": 2,
       "rarityBasis": null,
-      "rarityLocal": 2,
-      "rarityLocalBasis": {
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
-      },
       "featured": false,
       "source": "GBIF: 4 ocurrencias dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -584,7 +596,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -634,7 +650,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (2 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -685,7 +705,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -735,7 +759,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -786,9 +814,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -830,9 +858,11 @@
       "coordinates": null,
       "rarityScore": 3,
       "rarityBasis": null,
-      "rarityLocal": 3,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -875,9 +905,11 @@
       "coordinates": null,
       "rarityScore": 2,
       "rarityBasis": null,
-      "rarityLocal": 2,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, que la cita como «Sarcocapnos enneaphylla subsp. saetabensis», con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -929,7 +961,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, que la cita como «Anthillis cytisoides» (el §3.2.4.2.2 la nombra en la descripción de la vegetación, no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. Errata del texto: se lee «Anthillis» por Anthyllis); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -970,11 +1006,13 @@
       "coordinates": null,
       "rarityScore": 4,
       "rarityBasis": null,
-      "rarityLocal": 4,
+      "rarityLocal": 3,
       "rarityLocalBasis": {
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
-      "featured": true,
+      "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -1025,9 +1063,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1079,9 +1117,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1133,9 +1171,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1187,9 +1225,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1240,7 +1278,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -1287,9 +1329,9 @@
       },
       "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «Vulnerable (Catálogo Regional de Flora Silvestre Protegida)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1332,9 +1374,11 @@
       "coordinates": null,
       "rarityScore": 3,
       "rarityBasis": null,
-      "rarityLocal": 3,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, que la cita como «Thymelaea tantonraira» (el §3.2.4.2.2 la nombra en la descripción de la vegetación, no en la Tabla 56: la norma afirma su presencia en el espacio, no le asigna categoría de protección. Errata del texto: se lee «tantonraira» por tartonraira); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -1388,7 +1432,7 @@
       "rarityLocalBasis": {
         "categoria": "LESRPE (RD 139/2011)",
         "ambito": "estatal",
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 12 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «Anexo I de la Directiva Aves; De Interés Especial (Catálogo Regional de Especies Amenazadas)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -1438,9 +1482,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 8 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, que la cita como «Sylvia melanocephala» (nombre en desuso: hoy Curruca melanocephala); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1485,7 +1529,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 8 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «Parcialmente migradora (Directiva Aves)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -1529,7 +1577,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 8 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «Parcialmente migradora (Directiva Aves)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -1574,7 +1626,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 8 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «Parcialmente migradora (Directiva Aves)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -1618,7 +1674,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 7 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «Parcialmente migradora (Directiva Aves)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -1667,9 +1727,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 7 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «Parcialmente migradora (Directiva Aves)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1715,9 +1775,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 7 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, que la cita como «Parus cristatus» (nombre en desuso: hoy Lophophanes cristatus); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1762,7 +1822,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 6 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «Parcialmente migradora (Directiva Aves)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -1806,7 +1870,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 6 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -1855,9 +1923,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 6 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1903,9 +1971,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 6 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1950,7 +2018,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 5 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, que la cita como «Carduelis cannabia» (errata de la tabla: se lee «cannabia» por cannabina), con la categoría «Parcialmente migradora (Directiva Aves)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -1995,9 +2067,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 5 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, que la cita como «Phoenicrus ochruros» (errata de la tabla: se lee «Phoenicrus» por Phoenicurus), con la categoría «Parcialmente migradora (Directiva Aves)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2043,9 +2115,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 4 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2095,9 +2167,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 4 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2142,7 +2214,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 4 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, que la cita como «Carduelis chloris» (el backbone de GBIF lo trata como sinónimo de Chloris chloris), con la categoría «Migradora de llegada regular (Directiva Aves)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -2187,9 +2263,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 4 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «De Interés Especial (Catálogo Regional de Especies Amenazadas)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2235,9 +2311,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 4 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «Parcialmente migradora (Directiva Aves)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2287,9 +2363,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 4 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, que la cita como «Falco tunninculus» (errata de la tabla: se lee «tunninculus» por tinnunculus), con la categoría «Parcialmente migradora (Directiva Aves)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2335,9 +2411,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 4 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «Parcialmente migradora (Directiva Aves)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2383,9 +2459,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 4 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, que la cita como «Parus ater» (nombre en desuso: hoy Periparus ater); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2431,9 +2507,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 4 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2479,9 +2555,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 4 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, que la cita como «Regulus ignicapillus» (nombre en desuso: hoy Regulus ignicapilla), con la categoría «Parcialmente migradora (Directiva Aves)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2531,9 +2607,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 4 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, que la cita como «Saxicola torquata» (nombre en desuso: el taxón ibérico es hoy Saxicola rubicola), con la categoría «Parcialmente migradora (Directiva Aves)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2635,9 +2711,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «Anexo I de la Directiva Aves; De Interés Especial (Catálogo Regional de Especies Amenazadas)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2687,9 +2763,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2739,9 +2815,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «Anexo I de la Directiva Aves»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2791,9 +2867,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «Parcialmente migradora (Directiva Aves)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2838,7 +2914,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, que la cita como «Sturnur unicolor» (errata de la tabla: se lee «Sturnur» por Sturnus); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -2878,7 +2958,11 @@
       "rarityScore": 1,
       "rarityBasis": null,
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «Parcialmente migradora (Directiva Aves)»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -2927,9 +3011,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «Anexo I de la Directiva Aves; De Interés Especial (Catálogo Regional de Especies Amenazadas)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2981,7 +3065,7 @@
       "rarityLocalBasis": {
         "categoria": "LESRPE",
         "ambito": "estatal",
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «Anexo I de la Directiva Aves»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -3027,9 +3111,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, que la cita como «Emberizia cia» (errata de la tabla: se lee «Emberizia» por Emberiza); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3079,9 +3163,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3131,9 +3215,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «Anexo I de la Directiva Aves»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3183,9 +3267,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «Parcialmente migradora (Directiva Aves)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3231,9 +3315,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «Parcialmente migradora (Directiva Aves)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3283,9 +3367,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3331,9 +3415,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «Migradora de llegada regular (Directiva Aves)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3379,9 +3463,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "murciaStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «De Interés Especial (Catálogo Regional de Especies Amenazadas)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3431,9 +3515,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «Anexo I de la Directiva Aves»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3483,9 +3567,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial, RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3535,9 +3619,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, con la categoría «Migradora de llegada regular (Directiva Aves)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3583,9 +3667,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha, que la cita como «Troglodites troglodites» (errata de la tabla: se lee «Troglodites troglodites» por Troglodytes troglodytes); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",

@@ -317,3 +317,57 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     > conviene tener también la nº 23 (los tres barridos sin versionar), o esos espacios no se pueden
     > rehacer sin volver a descargar.
 
+29. **511 de las 992 fichas del catálogo universal siguen con un `rarityScore` puesto a ojo, y hasta
+    el 2026-08-21 ese número se colaba en el tramo que ve el usuario.** Es la migración a medias de
+    `rareza-legal.js --catalogo`: el tramo estatal debía derivarse del `spainStatus` y dejar la
+    figura en `rarityBasis`, pero el catálogo ha crecido desde entonces y las fichas nuevas nacen sin
+    él. `npm run validate` los cuenta como aviso desde siempre.
+    > **Lo que los hacía caros era la fuga, y esa ya está tapada.** `build-species-n2.js` usaba el
+    > `rarityScore` universal de SUELO del `rarityLocal` —«el local incluye al estatal»— sin mirar si
+    > venía de una norma, así que un número a ojo ascendía al único campo de rareza que la app
+    > enseña, y de paso pisaba el `rarityLocalBasis` derivado con uno sin `categoria` ni `norma`: el
+    > cartel de la ficha se quedaba sin la figura legal que debía citar. Eran **446 fichas en ocho
+    > de los once espacios con catálogo** —147 en Carrascoy, 126 en San Pedro del Pinatar, 110 en El
+    > Carche, 32 en Calblanque y el resto repartidas—, con la siempreviva de Cartagena, la salsola y
+    > el ajo de flor oscura anunciadas como «En peligro» siendo **Vulnerable** en el Decreto
+    > 50/2003. Desde el 2026-08-21 el suelo exige `rarityBasis` y la reserva de
+    > `Frontend/Js/rareza.js` también, y los ocho espacios están recalculados: la auditoría contra
+    > el texto legal de cada ficha da hoy **cero discrepancias y cero fichas con la firma de la
+    > fuga**.
+    >
+    > Queda el trabajo de fondo: pasar `npm run especies:rareza -- --catalogo` (425 fichas cambian
+    > de tramo), bajarlo con `npm run species:apply` y **recalcular después el `rarityLocal` de los
+    > espacios** con `npm run especies:rareza`, porque la migración sube tramos (46 fichas de 1 a 2
+    > por el LESRPE) y sin el recálculo `validate` daría error por `rarityLocal` menor que
+    > `rarityScore`. Es una sola operación y hay que hacerla entera; por eso no se hizo al arreglar
+    > la fuga. Ya no urge para lo que ve el usuario —el tramo mostrado sale del texto legal de cada
+    > ficha— pero sí para que `rarityScore` deje de ser un número que nadie puede discutir.
+30. **Once fichas se quedan sin tramo de rareza porque su `spainStatus` dice «pendiente de
+    confirmar».** Reparten entre ocho espacios y casi todas son el mismo puñado de taxones: la
+    coscoja (5 fichas), la alhucema (3), *Lavandula dentata* y *Centaurium rigualii*. La Lista Roja
+    de la Flora Vascular Española 2008 no puede listar a las comunes —enumera taxones amenazados—
+    pero nadie lo ha comprobado contra la fuente. Están en
+    [`Tools/catalogo-nacional/out/rareza-por-contrastar.md`](../Tools/catalogo-nacional/out/rareza-por-contrastar.md)
+    y la app las enseña con el aviso de precaución por defecto, que es la regla nº 9 del `CLAUDE.md`.
+    Las resuelve una consulta a EIDOS con red.
+31. **`featured` y el tramo de rareza no dicen lo mismo en cinco espacios, y son 104 fichas.**
+    `build-species-n2.js` escribe `featured: rarityLocal >= 4` al crear la ficha, pero después
+    `featured` es un campo CURADO —se conserva entre regeneraciones— así que el dato se separa del
+    criterio en cuanto alguien lo toca a mano o el tramo cambia. Medido el 2026-08-21, ya corregida
+    la fuga del tramo: 43 fichas destacadas que no llegan al tramo 4 y 61 en tramo 4 o 5 que no
+    están destacadas.
+    | Espacio | Destacada sin llegar a 4 | Tramo ≥ 4 sin destacar |
+    |---|---:|---:|
+    | Sierra Espuña | 13 | 29 |
+    | Sierra de la Pila | 13 | 7 |
+    | Carrascoy y El Valle | 8 | 12 |
+    | Cabo Cope y Puntas de Calnegre | 5 | 9 |
+    | Cuatro Calas | 4 | 4 |
+
+    Lo alinea `npm run especies:rareza -- --destacadas`, que **no** va por omisión justamente porque
+    cambia qué especies enseña la portada de cada espacio. Antes de pasarlo hay que decidir si
+    «destacada» significa «legalmente amenazada» —que es lo que dice el pipeline— o si es una
+    selección editorial con criterio propio; hoy es las dos cosas a la vez según el espacio, y eso
+    es lo que hay que resolver. Los ocho espacios recalculados el 2026-08-21 sí quedaron alineados
+    en las 49 destacadas que había fabricado la fuga del tramo, que era otra cosa: ahí `featured`
+    no era una decisión de nadie, era el efecto de un número inventado.

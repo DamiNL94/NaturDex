@@ -166,8 +166,10 @@ function renderSpeciesDetail() {
   const tx = species.taxonomy || {};
   // Las estrellas cuentan lo excepcional que es la especie EN ESTE ESPACIO, así que mandan el tramo
   // local (la categoría legal más grave de las dos escalas, estatal y autonómica). `rarityScore` es
-  // el estatal, universal, y solo se usa de reserva: en las fichas que aún no tienen tramo local.
-  // Una ficha sin ninguno de los dos NO cuenta como un 1: el criterio vive en Js/rareza.js.
+  // el estatal, universal, y solo se usa de reserva: en las fichas que aún no tienen tramo local Y
+  // que además traen `rarityBasis`, es decir, cuando ese tramo sale de una norma y no del criterio
+  // propio heredado. Una ficha sin ninguno de los dos NO cuenta como un 1: el criterio vive en
+  // Js/rareza.js.
   const rareza = tramoDe(species);
   const base = baseDe(species);
   detailPanel.innerHTML = html`<div class="detail-image-wrap">

@@ -52,10 +52,19 @@ export const TRAMO_AMENAZA = 4;
  * autonómica) y por tanto lo excepcional que es la especie en este espacio. `rarityScore` —el
  * estatal, universal— solo es reserva para las fichas que aún no lo tienen calculado. Devuelve
  * `null` cuando no consta ninguno de los dos, que es un estado distinto de «tramo 1».
+ *
+ * La reserva EXIGE `rarityBasis`, y no es un detalle: un `rarityScore` sin él es uno de los valores
+ * heredados del criterio propio 1–5, un número puesto a ojo antes de que el tramo se derivara de la
+ * norma (`Tools/validate-park-data.js` los sigue contando como aviso). Sin esta condición, la
+ * reserva enseñaba esa suposición con el mismo rótulo y las mismas cinco estrellas que un tramo
+ * derivado del BOE, y encima con el cartel de amenaza si llegaba a 4: la coscoja y la alhucema de
+ * Calblanque salían en «Interés especial» y «Protección especial» sin que ninguna norma las nombre.
+ * Un número a ojo no es mejor que ningún número: es peor, porque parece comprobado.
  */
 export function tramoDe(species) {
   if (!species) return null;
-  const tramo = species.rarityLocal ?? species.rarityScore ?? null;
+  const estatal = species.rarityBasis ? species.rarityScore : null;
+  const tramo = species.rarityLocal ?? estatal ?? null;
   return Number.isFinite(tramo) && tramo >= 1 && tramo <= 5 ? tramo : null;
 }
 
