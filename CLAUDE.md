@@ -54,7 +54,7 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    generaliza igual: «nadie lo ha mirado» no es «no está amenazada», y publicar de más no se puede
    deshacer. Ver [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md).
 
-## 2. Doce cosas que fallan EN VERDE
+## 2. Trece cosas que fallan EN VERDE
 
 Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 [`Docs/runbook/ORDEN-DE-OPERACIONES.md`](Docs/runbook/ORDEN-DE-OPERACIONES.md).
@@ -100,6 +100,21 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
   anunciada «En peligro» siendo **Vulnerable** en el Decreto 50/2003. Tapado el 2026-08-21 en las
   dos puntas —el pipeline y la reserva de `Frontend/Js/rareza.js`— y recalculados los ocho espacios;
   la migración de fondo del catálogo universal es la deuda nº 29.
+- **La evidencia del Atlas se escribía en el `source` y no tendía ningún enlace.** El vínculo
+  especie↔hábitat salía **solo** del barrido de GBIF, mientras la ficha afirmaba «Atlas y Manual de
+  los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados
+  aquí». Una especie con esa frase y **cero ocurrencias** dentro quedaba con `habitatIds: []`: el
+  texto decía lo contrario que el dato. El guardián que persigue justo esa contradicción
+  (`hiloPerdido`, en `build-species-n2.js`) **no puede verlo**, porque solo salta si la selección
+  cuenta hábitats y los cuenta con GBIF; con cero ocurrencias la ficha sale por `sinGbif`, que es un
+  aviso normal. Y la salida de `atlas-hic-especies.js` —«el backbone determinista de enlaces
+  especie↔hábitat», dice su propia cabecera— **no la cargaba ninguna herramienta**: la auditoría la
+  leía solo para *no retirar*, nunca para añadir. Se tiraba la señal **fuerte** —el Atlas afirma que
+  la especie es característica de ese tipo de hábitat— y se guardaba la floja —una ocurrencia solo
+  prueba que alguien la registró dentro del polígono—. Tapado el 2026-08-21 en el pipeline y aplicado
+  a Cabezo Gordo; quedan **110 enlaces en 106 fichas de nueve espacios** (deuda nº 32). Ojo con la
+  otra mitad: **un espacio sin su `out/<slug>-hic-especies.json` no tiene Atlas**, y hasta ese día
+  eso no lo decía nadie.
 - **Una ocurrencia dentro de un polígono no dice que la especie viva ahí.** Es la regla con la que se
   derivan los 4.379 enlaces especie↔hábitat, y en un hábitat que es una cinta de metros —un
   manantial, una charca, un cauce— cualquier registro tomado en el sendero de al lado cae dentro. En

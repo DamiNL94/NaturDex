@@ -371,3 +371,63 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     es lo que hay que resolver. Los ocho espacios recalculados el 2026-08-21 sí quedaron alineados
     en las 49 destacadas que había fabricado la fuga del tramo, que era otra cosa: ahí `featured`
     no era una decisión de nadie, era el efecto de un número inventado.
+32. **El Atlas no tendía ni un enlace: 110 vínculos especie↔hábitat perdidos en nueve espacios, y el
+    `source` de cada ficha afirmaba lo que sus `habitatIds` desmentían.** Salió el 2026-08-21 al
+    repasar los hábitats de Cabezo Gordo. `build-species-n2.js` derivaba `habitatIds` **solo** del
+    barrido de GBIF, mientras escribía en el `source` «Atlas y Manual de los Hábitats de España
+    (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí» — así que una
+    especie que el Atlas da como característica de un HIC del espacio, pero sin ninguna ocurrencia
+    dentro, se quedaba con `habitatIds: []` y un texto que decía lo contrario. La primera fue
+    *Centaurea saxicola*, característica del 8210 según el Atlas y colgando de ningún hábitat en un
+    espacio que tiene el 8210 cartografiado.
+
+    **No lo veía nadie, y por eso duró doce espacios.** El guardián de `hiloPerdido` que persigue
+    exactamente esta contradicción solo salta si la selección cuenta hábitats, y los cuenta con GBIF:
+    con cero ocurrencias no hay nada que descuadrar y la ficha salía por la rama `sinGbif`, que es un
+    aviso normal. `validate` tampoco lo mira. Y la salida de `atlas-hic-especies.js` —que su propia
+    cabecera llama «el backbone determinista de enlaces especie↔hábitat»— era un JSON «para
+    revisar/cargar» que **no cargaba ninguna herramienta**: la auditoría de enlaces lo leía solo para
+    NO retirar lo que ya estaba escrito, nunca para añadir.
+
+    Duele el doble porque el Atlas es la señal **fuerte** de las dos. Una ocurrencia prueba que
+    alguien registró la especie dentro del polígono —lo que en un hábitat que es una cinta de metros
+    no prueba gran cosa (§2 del `CLAUDE.md`, y la deuda nº 22)—; el Atlas afirma que la especie es
+    característica de ese tipo de hábitat. Se estaba tirando la buena y guardando la floja.
+
+    **Arreglado en el pipeline y aplicado SOLO a Cabezo Gordo** (21 → 22 enlaces), que es donde salió.
+    `build-species-n2.js` une ahora las dos señales y avisa cuando el espacio no tiene índice del
+    Atlas —ausente no es cero, y callarlo es lo que lo convirtió en un fallo en verde—, y
+    `build-park-sql.js` escribe la evidencia **por enlace**: `caracteristica` para los del Atlas,
+    `observada_gbif` para los de GBIF. Ese segundo arreglo hacía falta para no empeorar: la evidencia
+    se decidía por ficha comparando el número de hábitats del `source` con el de `habitatIds`, así que
+    una especie con enlaces de las dos procedencias descuadraba y se iba **entera** a `NULL`,
+    perdiendo también la procedencia de los que GBIF sí respaldaba.
+
+    Lo que queda: **regenerar los nueve espacios**, que no se ha hecho porque cada regeneración
+    arrastra además la migración de la deuda nº 29 y eso es una decisión de espacio, no de sesión.
+    Medido el 2026-08-21 con el índice del Atlas de cada uno:
+
+    | Espacio | Enlaces que faltan | Fichas |
+    |---|---:|---:|
+    | Espacios Abiertos e Islas del Mar Menor | 30 | 28 |
+    | Salinas y Arenales de San Pedro del Pinatar | 25 | 25 |
+    | Calblanque, Monte de las Cenizas y Peña del Águila | 20 | 19 |
+    | Sierra de El Carche | 13 | 12 |
+    | Sierra de la Pila | 10 | 10 |
+    | Cuatro Calas | 6 | 6 |
+    | Sierra Espuña | 4 | 4 |
+    | Monte Arabí | 1 | 1 |
+    | Sierra de Salinas | 1 | 1 |
+    | **Total** | **110** | **106** |
+
+    Y un aviso para quien lo haga: **solo cinco espacios tienen su `out/<slug>-hic-especies.json`
+    versionado**. Los otros cuatro se midieron generándolo al vuelo, y hay que generarlo de verdad
+    antes de regenerarlos o el pipeline volverá a derivar sin Atlas — esta vez diciéndolo, pero
+    derivando sin él igual. Se genera con `atlas-hic-especies.js --atlas <atlas.txt> --park <slug>`,
+    y el `atlas.txt` sale del PDF con `pdftotext -layout` o, si no hay poppler, con la receta de pypdf
+    que está en la cabecera de `Tools/lib/atlas.js`.
+
+    Regenerar también cambia el SQL de los espacios que ya lo tienen: Sierra de la Pila pasa 16 de sus
+    677 vínculos de `observada_gbif` a `caracteristica` sin tocar ningún enlace, solo por afinar la
+    procedencia. Eso es corrección, no cambio de catálogo, pero conviene aplicarlo junto con lo demás
+    y no suelto.

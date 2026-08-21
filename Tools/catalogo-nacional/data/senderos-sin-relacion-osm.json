@@ -1,0 +1,39 @@
+{
+  "_comment": "Senderos HOMOLOGADOS que existen sobre el terreno y que OpenStreetMap NO agrupa en una relación de senderismo. `build-park-trails.js` busca relaciones (`rel[route=hiking][ref~^(GR|PR|SL)]`), que es la forma en que OSM identifica un sendero señalizado; cuando nadie la ha creado, el sendero está en el mapa —sus ways existen y se pueden caminar— pero la herramienta devuelve «sin candidatos», y eso NO es un hecho del terreno sino un hueco de OSM. Este fichero es el puente: declara, espacio por espacio, qué ways de OSM forman ese sendero y CON QUÉ EVIDENCIA se afirma que son ese sendero y no otro camino.",
+  "porQueNoSeDibujaSinMas": "Trazar una línea por donde parece que sube el sendero sería inventar un dato de fuente, que es lo que prohíbe la regla nº 2 del CLAUDE.md. Por eso una entrada de este fichero no dibuja nada: solo NOMBRA ways que ya están en OpenStreetMap. La geometría sigue saliendo entera de OSM (© OpenStreetMap contributors, ODbL) y no se retoca ni un vértice; lo que aporta la entrada es la IDENTIFICACIÓN, y esa es derivada y se documenta aquí para que se pueda discutir.",
+  "criterioDeIdentificacion": "No basta con que un camino lleve donde el sendero lleva. Hacen falta las tres señales, y si falta una la entrada no se escribe: (1) que una NORMA o el organismo gestor nombre el sendero y describa su recorrido —de dónde a dónde—; (2) que la FMRM lo homologue, que es quien da fe del código y del nombre oficial; (3) que los ways de OSM unan de verdad esos dos extremos y que algo FÍSICO del sendero —los paneles interpretativos, las señales, el mirador— esté cartografiado sobre ellos. La tercera es la que separa «este camino va hacia allí» de «este camino es el sendero».",
+  "loQueSigueSinConstar": "Que los ways de OSM lleven `ref` o `name` del sendero. Si los llevaran, este fichero sobraría: `build-park-trails.js` los encontraría solo. La identificación de cada entrada es una DERIVACIÓN nuestra sobre tres señales que concuerdan, no una etiqueta que nadie haya puesto en OSM, y así se escribe en el `source` del sendero que llega a la app.",
+  "comoSeVerifica": "Cada entrada se comprueba volviendo a rutar sobre el grafo de caminos de OSM entre los dos extremos que cita la norma: si el camino más corto es exactamente la cadena de `ways` declarada, la entrada sigue en pie. Si OSM cambia y aparece otra ruta más corta, o si alguien crea por fin la relación, hay que revisarla —y en el segundo caso, borrarla: la relación manda.",
+  "extraido": "2026-08-21",
+  "espacios": {
+    "cabezo-gordo": {
+      "senderos": [
+        {
+          "codigo": "SL-MU 11",
+          "nombreOficial": "Senda del Cabezo Gordo",
+          "ways": [386402816, 386402815],
+          "extremos": {
+            "_nota": "`inicio` y `fin` son texto de PRESENTACIÓN: se cosen tal cual en la descripción que lee el visitante («…entre <inicio> y <fin>»), así que van en minúscula y sin incisos. Los `poi*` son la referencia interna.",
+            "inicio": "el aparcamiento del sur del cerro",
+            "fin": "el mirador de la Sima de las Palomas",
+            "poiInicio": "aparcamiento-senda-del-cabezo-gordo",
+            "poiFin": "mirador-de-la-sima-de-las-palomas (node/4075151748)"
+          },
+          "evidencia": {
+            "norma": "Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia (BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450), volumen II §2.2.4 «Uso Público»: enumera entre los equipamientos «el mirador Sima de las Palomas y el sendero natural “Senda del Cabezo Gordo (SL-MU11)”, cuyo trazado discurre entre el aparcamiento y la Sima de las Palomas», y añade que «el sendero dispone de señalización informativa-interpretativa básica».",
+            "homologacion": "Federación de Montañismo de la Región de Murcia, catálogo de senderos homologados: SL-MU 11 «Cabezo Gordo (Torre Pacheco)», tipo SL, confianza «alta» (el nombre cita expresamente el espacio). Consta en `senderos-fmrm-murcia.json`, espacio `cabezo-gordo`.",
+            "geometria": "OpenStreetMap: way/386402816 (`highway=track`, `tracktype=grade3`, 26 vértices) y way/386402815 (`highway=track`, 25 vértices), que se encadenan extremo con extremo en (-0.8994758, 37.7976794) y unen el aparcamiento con el mirador. Se toman los DOS ways ENTEROS, sin recortar: la cadena completa es exactamente la ruta más corta del aparcamiento al mirador sobre el grafo de los 143 caminos del entorno, así que no hay ningún tramo elegido a ojo.",
+            "corroboracionFisica": "Los tres paneles informativos que OSM cartografía en el cerro caen sobre esta traza, y son los que la norma describe como «señalización informativa-interpretativa básica»: node/3897233058 y node/3897233079 a 5,7 m y 12,7 m del arranque, en el aparcamiento, y node/3897212250 —rotulado «Yacimiento paleoantropológico \"Sima de las Palomas\"»— a 4,1 m del otro extremo. Un camino cualquiera del cerro no tiene los paneles del sendero encima."
+          },
+          "medido": {
+            "longitudKm": 0.59,
+            "nota": "0,59 km es la traza ya recortada al límite oficial, que es lo que escribe `build-park-trails.js`. El rutado en crudo sobre los dos ways enteros da 0,577 km; la diferencia es el redondeo de coordenadas a 5 decimales y el pequeño margen del recorte.",
+            "verticesDentroDelLimite": "49 de 49, comprobado por point-in-polygon contra geo/parque.geojson",
+            "rutadoEl": "2026-08-21"
+          },
+          "noConsta": "Ninguno de los dos ways lleva `ref`, `name` ni `sac_scale` en OSM: nada dentro de OpenStreetMap dice que sean el SL-MU 11. Esa identificación es la derivación que documenta este fichero."
+        }
+      ]
+    }
+  }
+}

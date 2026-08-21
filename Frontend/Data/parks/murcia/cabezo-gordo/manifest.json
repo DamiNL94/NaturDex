@@ -2,13 +2,14 @@
   "slug": "cabezo-gordo",
   "name": "Cabezo Gordo",
   "apiSlug": "cabezo-gordo",
-  "version": 3,
+  "version": 5,
   "updatedAt": "2026-08-21",
   "data": "Data/parks/murcia/cabezo-gordo/park.json",
   "geo": {
     "parque": "Data/parks/murcia/cabezo-gordo/geo/parque.geojson",
     "lic": "Data/parks/murcia/cabezo-gordo/geo/lic.geojson",
-    "habitats": "Data/parks/murcia/cabezo-gordo/geo/habitats.geojson"
+    "habitats": "Data/parks/murcia/cabezo-gordo/geo/habitats.geojson",
+    "trails": "Data/parks/murcia/cabezo-gordo/geo/trails.geojson"
   },
   "images": [],
   "audio": [],

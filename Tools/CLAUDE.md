@@ -41,7 +41,7 @@ errores de red que no explican nada, `npm run red:check` lo aclara en diez segun
 | `eidos-diff.js` | 191 | Coteja la BD viva contra EIDOS (solo lectura). Acepta `--ccaa` |
 | `gbif-habitats.js` | 325 | Ocurrencias GBIF ∩ polígonos de hábitat, con análisis de ruido |
 | `build-park-tiles.js` | 216 | Paquete de mapa base offline, recortado **al límite oficial** (no al bbox) |
-| `build-park-trails.js` | 621 | Senderos señalizados (GR, PR, SL) que pasan por el parque |
+| `build-park-trails.js` | 721 | Senderos señalizados (GR, PR, SL) que pasan por el parque. **«Sin candidatos» no es un hecho del terreno**: si OSM no tiene la relación, el puente es `data/senderos-sin-relacion-osm.json` |
 | `build-park-pois.js` | 537 | **Candidatos** a POI dentro del límite. No escribe `park.json`: solo dice dónde mirar |
 | `check-egress.js` | 142 | A qué fuentes externas llega esta sesión. **Si añades una fuente nueva, añádela aquí** |
 
@@ -117,6 +117,16 @@ Orden real de uso; el runbook completo está en
   distinto del general (2 ocurrencias en 2 hábitats). Con **motivo obligatorio**: un umbral sin motivo
   es un número a ojo. Existe porque la calibración de un espacio ya se perdió **dos veces** por vivir
   solo en su informe de cierre — la última le quitó diez fichas a Monte Arabí en silencio.
+- `data/senderos-sin-relacion-osm.json` — los senderos **homologados que OSM no agrupa en una
+  relación** de senderismo. `build-park-trails.js` busca relaciones, así que sin este puente devuelve
+  «sin candidatos» y el sendero desaparece del mapa aunque esté señalizado sobre el terreno — que es
+  un hueco de OSM, **no un hecho del terreno**. La entrada **no dibuja nada**: solo NOMBRA ways que ya
+  están en OSM, porque trazar la línea a ojo sería inventar un dato de fuente. Exige **tres señales**
+  y si falta una no se escribe: la **norma** o el gestor nombrando el sendero y su recorrido, la
+  **homologación** de la FMRM, y algo **físico** del sendero (paneles, señales, el mirador)
+  cartografiado sobre esos ways — la tercera es la que separa «este camino va hacia allí» de «este
+  camino **es** el sendero». La identificación es DERIVADA y viaja escrita como tal en el `source` del
+  sendero. Si aparece la relación en OSM, **manda ella** y hay que borrar la entrada.
 - `data/normativa-espacios.json` — de dónde se descarga cada uno de esos planes y **en qué apartado**
   está el inventario. Es el manifiesto que evita repetir la búsqueda documental; los PDF no se
   versionan. Está aquí y no en `fuentes/` porque `fuentes/` está vetado en `permissions.deny`.

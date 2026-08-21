@@ -102,6 +102,50 @@ function cargarSeleccion() {
 }
 
 /**
+ * Los enlaces especie↔hábitat que afirma el Atlas, por nombre científico.
+ *
+ * Por qué hace falta, y qué se estaba perdiendo
+ * ---------------------------------------------
+ * Hasta el 2026-08-21 `habitatIds` salía SOLO del barrido de GBIF, y la evidencia `caracteristica`
+ * del Atlas se escribía únicamente en el `source` («especie característica de alguno de los HIC
+ * cartografiados aquí»). Con eso, una especie que el Atlas da como característica de un HIC del
+ * espacio pero que no tiene ninguna ocurrencia dentro se quedaba con `habitatIds: []` y un `source`
+ * que afirmaba justo lo contrario. No es un aviso: es la misma contradicción que el guardián de
+ * `hiloPerdido` persigue unas líneas más abajo, pero entrando por la puerta del Atlas, que es
+ * exactamente por donde ese guardián no mira —solo salta si la selección contaba hábitats, y los
+ * cuenta con GBIF—. Salió al repasar los hábitats de Cabezo Gordo: *Centaurea saxicola*, que el
+ * Atlas da como característica del 8210 y que aquí no colgaba de ningún hábitat. Son 30 fichas en
+ * cuatro espacios.
+ *
+ * Y duele el doble porque el Atlas es la señal FUERTE de las dos: una ocurrencia prueba que alguien
+ * registró la especie dentro del polígono —lo que en un hábitat que es una cinta de metros no
+ * prueba gran cosa (§2 del CLAUDE.md)—, mientras que el Atlas afirma que la especie es
+ * característica de ese tipo de hábitat. Es el «backbone determinista» que anuncia la cabecera de
+ * `atlas-hic-especies.js`, y su salida no la cargaba nadie.
+ *
+ * Se usa SOLO en positivo, como el índice de la auditoría: que un nombre no esté no significa que el
+ * Atlas no lo dé. Y no se aplica a las aves, que entran por otra puerta (regla nº 8).
+ */
+function cargarAtlas() {
+  const p = fromRoot(arg('atlas-hic', path.join(OUT_DIR, `${PARK}-hic-especies.json`)));
+  // Ausente NO es cero, y la diferencia importa: el fichero es opcional porque hay espacios dados de
+  // alta antes de que existiera. Se avisa en vez de callar, que es lo que convirtió esto en un fallo
+  // en verde durante doce espacios.
+  if (!fs.existsSync(p)) {
+    console.log(`  · sin índice del Atlas (${rel(p)}): los enlaces saldrán solo de GBIF.\n` +
+      '    Se genera con `node Tools/catalogo-nacional/atlas-hic-especies.js --atlas <atlas.txt> --park ' + PARK + '`.');
+    return { porNombre: new Map(), presente: false };
+  }
+  const doc = readJson(p);
+  const porNombre = new Map();
+  for (const l of doc.links || []) {
+    if (!porNombre.has(l.scientific_name)) porNombre.set(l.scientific_name, new Set());
+    porNombre.get(l.scientific_name).add(l.habitat_slug);
+  }
+  return { porNombre, presente: true };
+}
+
+/**
  * Índice del barrido de GBIF por nombre científico: clave de especie, clase y en qué hábitats del
  * parque se ha observado, con cuántas ocurrencias en cada uno.
  */
@@ -409,6 +453,7 @@ function fuenteDe(sel, gbif, fecha, zepa) {
 function main() {
   const seleccion = cargarSeleccion();
   const gbif = cargarGbif();
+  const atlas = cargarAtlas();
   if (!fs.existsSync(CATALOGO)) die(`no existe el catálogo universal: ${rel(CATALOGO)}`);
   const universal = readJson(CATALOGO);
   const fichadas = cargarFichadas();
@@ -459,6 +504,9 @@ function main() {
   const species = [];
   const avisos = [];
   const sinGbif = [], hiloPerdido = [], taxonIdDudoso = [], sinTaxonId = [], sinRarezaLocal = [], localPorEstatal = [];
+  // Enlaces que solo sostiene el Atlas: no son un problema, son el backbone que antes se perdía.
+  // Se listan al final para que se vea cuánto aporta la señal que no es GBIF.
+  const porAtlas = [];
   const sinTramoLocal = [];
 
   for (const sel of conFicha) {
@@ -497,7 +545,18 @@ function main() {
         `${gbif.porNombre.get(n).habitats.reduce((s, h) => s + h.ocurrencias, 0)} ocurrencias)`);
 
     const esAve = sel.class === 'Aves';
-    const enlaces = esAve ? [] : (g ? g.habitats.filter(h => habitatsDelParque.has(h.slug)) : []);
+    const enlacesGbif = esAve ? [] : (g ? g.habitats.filter(h => habitatsDelParque.has(h.slug)) : []);
+    // Las dos señales se UNEN, no se eligen: son las dos formas distintas de afirmar el vínculo que
+    // describe la regla nº 1 del CLAUDE.md. GBIF dice «se ha registrado aquí dentro» y el Atlas «es
+    // característica de este tipo de hábitat»; que falte una no desmiente a la otra. El orden deja
+    // delante los enlaces con ocurrencias, para que la lista siga empezando por lo más medido.
+    const soloAtlas = esAve ? [] :
+      [...(atlas.porNombre.get(sci) || [])]
+        .filter(slug => habitatsDelParque.has(slug))
+        .filter(slug => !enlacesGbif.some(h => h.slug === slug))
+        .map(slug => ({ slug, ocurrencias: 0, porAtlas: true }));
+    if (soloAtlas.length) porAtlas.push(`${sci} · ${soloAtlas.map(h => h.slug).join(', ')}`);
+    const enlaces = [...enlacesGbif, ...soloAtlas];
 
     // Los identificadores externos se REUTILIZAN del parque donde la especie ya está fichada; no se
     // inventan y no se vuelven a deducir. Ver identificadorReutilizado().
@@ -660,6 +719,13 @@ function main() {
   console.log(`\n${species.length} especies escritas (${aves} aves en el apartado de ZEPA, ` +
     `${conEnlace} colgadas de al menos un hábitat) · ${conFoto} con foto`);
   console.log(`Enlaces especie↔hábitat: ${species.reduce((n, s) => n + (s.habitatIds || []).length, 0)}`);
+  if (porAtlas.length) {
+    console.log(`  · ${porAtlas.length} de ellos los sostiene SOLO el Atlas (especie característica del HIC,\n` +
+      '    sin ocurrencia dentro del polígono). Es evidencia de fuente, no un hueco:');
+    for (const l of porAtlas) console.log('      ' + l);
+  } else if (atlas.presente) {
+    console.log('  · el Atlas no añade ningún enlace que GBIF no tuviera ya.');
+  }
   console.log(`Destacadas (rarityLocal ≥ 4): ${species.filter(s => s.featured).length}`);
   const porTramo = [5, 4, 3, 2, 1].map(n => `${n}:${species.filter(s => s.rarityLocal === n).length}`);
   console.log(`Rareza local (tramo legal, estatal+autonómico): ${porTramo.join(' · ')}`);

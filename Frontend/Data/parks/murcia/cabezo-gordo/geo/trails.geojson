@@ -1,0 +1,25 @@
+{
+  "type": "FeatureCollection",
+  "name": "trails",
+  "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "codigo": "SL-MU 11",
+        "name": "Senda del Cabezo Gordo (SL-MU 11)",
+        "tipo": "Sendero Local",
+        "longitudKm": 0.59,
+        "homologado": true,
+        "descripcion": "Sendero señalizado que recorre Cabezo Gordo, entre el aparcamiento del sur del cerro y el mirador de la Sima de las Palomas. Sendero homologado por la Federación de Montañismo de la Región de Murcia.",
+        "source": "Geometría: OpenStreetMap contributors (ODbL), ways 386402816 y 386402815 · identificación DERIVADA: OSM no etiqueta estos caminos con el código del sendero. Se afirma que son el SL-MU 11 porque la norma lo describe entre esos dos extremos, la FMRM lo homologa con ese código y la señalización interpretativa que la norma menciona está cartografiada sobre esta traza. Detalle y verificación en Tools/catalogo-nacional/data/senderos-sin-relacion-osm.json · homologación: FMRM"
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+        [[-0.9,37.79541],[-0.90002,37.7955],[-0.90008,37.79578],[-0.90008,37.7958],[-0.90022,37.79628],[-0.90034,37.79667],[-0.90034,37.79677],[-0.9003,37.79682],[-0.89995,37.79713],[-0.89984,37.79719],[-0.89959,37.79726],[-0.89939,37.79733],[-0.89935,37.79735],[-0.89929,37.79738],[-0.89926,37.7974],[-0.89923,37.79744],[-0.89922,37.79747],[-0.89922,37.79749],[-0.89923,37.79751],[-0.89926,37.79753],[-0.89941,37.79759],[-0.89949,37.79762],[-0.8995,37.79763],[-0.89952,37.79766],[-0.89951,37.79768],[-0.89948,37.79768],[-0.89943,37.79768],[-0.89896,37.79765],[-0.89882,37.79765],[-0.89871,37.79767],[-0.89865,37.79767],[-0.89856,37.79769],[-0.89835,37.79773],[-0.89812,37.79777],[-0.89803,37.79779],[-0.89793,37.79781],[-0.89759,37.79791],[-0.89744,37.79798],[-0.89742,37.79799],[-0.8974,37.79802],[-0.89736,37.79806],[-0.89728,37.79813],[-0.89725,37.79814],[-0.89721,37.79815],[-0.89712,37.79815],[-0.8971,37.79816],[-0.89704,37.79821],[-0.89697,37.79831],[-0.89689,37.79837],[-0.89681,37.7984]]
+        ]
+      }
+    }
+  ]
+}
