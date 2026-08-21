@@ -1,15 +1,4 @@
 {
-  "Alaudala rufescens": {
-    "group": "Ave esteparia",
-    "habitat": "Saladares, estepas salinas, eriales y llanos áridos con vegetación rala",
-    "seasonality": "Todo el año",
-    "description": "La alondra más pequeña de Europa, de plumaje pardo grisáceo y con el pecho finamente rayado de arriba abajo, sin las manchas laterales de su parienta. Vive ligada a los llanos más áridos y salinos, un hábitat en retroceso, y se camufla tan bien que suele verse solo al levantar el vuelo.",
-    "tips": [
-      "Rayado fino y extendido por todo el pecho",
-      "Muy pequeña y compacta, de aspecto grisáceo",
-      "Prefiere los llanos salinos y las estepas más áridas"
-    ]
-  },
   "Alectoris rufa": {
     "group": "Ave",
     "habitat": "Mosaicos de cultivo, matorral bajo y laderas pedregosas",
@@ -74,6 +63,17 @@
       "Mancha oscura a cada lado del cuello, como un botón",
       "Pecho limpio, sin rayado extenso",
       "Ceja clara y pico corto y grueso de granívora"
+    ]
+  },
+  "Calandrella rufescens": {
+    "group": "Ave esteparia",
+    "habitat": "Saladares, estepas salinas, eriales y llanos áridos con vegetación rala",
+    "seasonality": "Todo el año",
+    "description": "La alondra más pequeña de Europa, de plumaje pardo grisáceo y con el pecho finamente rayado de arriba abajo, sin las manchas laterales de su parienta. Vive ligada a los llanos más áridos y salinos, un hábitat en retroceso, y se camufla tan bien que suele verse solo al levantar el vuelo.",
+    "tips": [
+      "Rayado fino y extendido por todo el pecho",
+      "Muy pequeña y compacta, de aspecto grisáceo",
+      "Prefiere los llanos salinos y las estepas más áridas"
     ]
   },
   "Calidris alba": {

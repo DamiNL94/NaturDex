@@ -7,6 +7,30 @@ SET NAMES utf8mb4;
 -- Requiere las columnas habitats.image_attribution e image_note (Database/migrations.sql).
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'cabezo-gordo' AND h.slug = 'matorrales-termomediterraneos-y-5330';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/609975159/original.jpg',
+  h.image_attribution = 'Quentin Groom (CC0) · GBIF',
+  h.image_note = 'Portada ilustrada con Cornical (Periploca angustifolia), la especie que da nombre al hábitat.'
+WHERE p.slug = 'cabezo-gordo' AND h.slug = 'matorrales-arborescentes-de-5220';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cosentinia_vellea_kz02.jpg?width=1280',
+  h.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Cosentinia vellea (Cosentinia vellea), la especie que da nombre al hábitat.'
+WHERE p.slug = 'cabezo-gordo' AND h.slug = 'pendientes-rocosas-calcicolas-8210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'cabezo-gordo' AND h.slug = 'zonas-subestepicas-de-6220';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
   h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_cossonianum_kz01.jpg?width=1280',
   h.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
   h.image_note = NULL
@@ -337,6 +361,120 @@ UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
 WHERE p.slug = 'cuatro-calas' AND h.slug = 'matorrales-arborescentes-de-5220';
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lycium_intrincatum_(flor).JPG?width=1280',
+  h.image_attribution = 'ANE (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Cambrón (Lycium intricatum), la especie que da nombre al hábitat.'
+WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND h.slug = 'acantilados-con-vegetacion-1240';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Suaeda_vera.JPG?width=1280',
+  h.image_attribution = 'Xemenendura (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Sosa fina (Suaeda vera), la especie que da nombre al hábitat.'
+WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND h.slug = 'pastizales-salinos-mediterraneos-1410';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Arthrocnemum_macrostachyum_2LaMata.jpg?width=1280',
+  h.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Sosa alacranera (Arthrocnemum macrostachyum), la especie que da nombre al hábitat.'
+WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND h.slug = 'matorrales-halofilos-mediterraneos-1420';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lygeum_spartum-1.jpg?width=1280',
+  h.image_attribution = 'Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Albardín (Lygeum spartum), la especie que da nombre al hábitat.'
+WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND h.slug = 'estepas-salinas-mediterraneas-1510';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND h.slug = 'dunas-con-vegetacion-2260';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tamarix_africana.jpg?width=1280',
+  h.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Taray (Tamarix africana), la especie que da nombre al hábitat.'
+WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND h.slug = 'galerias-y-matorrales-92D0';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lycium_intrincatum_(flor).JPG?width=1280',
+  h.image_attribution = 'ANE (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Cambrón (Lycium intricatum), la especie que da nombre al hábitat.'
+WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND h.slug = 'matorrales-halonitrofilos-pegano-1430';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Chamaerops_humilis_Torreblanca.jpg?width=1280',
+  h.image_attribution = 'Canaan (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Palmito (Chamaerops humilis), la especie que da nombre al hábitat.'
+WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND h.slug = 'matorrales-termomediterraneos-y-5330';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cosentinia_vellea_kz02.jpg?width=1280',
+  h.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Cosentinia vellea (Cosentinia vellea), la especie que da nombre al hábitat.'
+WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND h.slug = 'pendientes-rocosas-siliceas-8220';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND h.slug = 'matorrales-arborescentes-de-5220';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND h.slug = 'vegetacion-anual-sobre-1210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND h.slug = 'dunas-moviles-embrionarias-2110';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_dunense_Habitus_2010-7-03_ParqueNaturalLagunasdelaMata.jpg?width=1280',
+  h.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con polio (Teucrium dunense), la especie que da nombre al hábitat.'
+WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND h.slug = 'zonas-subestepicas-de-6220';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND h.slug = 'prados-calcareos-carsticos-6110';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_dunense_Habitus_2010-7-03_ParqueNaturalLagunasdelaMata.jpg?width=1280',
+  h.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con polio (Teucrium dunense), la especie que da nombre al hábitat.'
+WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND h.slug = 'pendientes-rocosas-calcicolas-8210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sandarac_Tree_(Tetraclinis_articulata)_-_Cartagena%2C_Spain_2024-02-05_(01).jpg?width=1280',
+  h.image_attribution = 'Ryan Hodnett (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Sabina de Cartagena (Tetraclinis articulata), la especie que da nombre al hábitat.'
+WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND h.slug = 'bosques-de-tetraclinis-9570';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Suaeda_vera.JPG?width=1280',
+  h.image_attribution = 'Xemenendura (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Sosa fina (Suaeda vera), la especie que da nombre al hábitat.'
+WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND h.slug = 'dunas-con-cespedes-2230';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND h.slug = 'dunas-moviles-de-2120';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cakile-maritima-(eurMeersenf)_1.jpg?width=1280',
+  h.image_attribution = 'Jürgen Howaldt (CC BY-SA 2.0 de) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Rugueta de mar (Cakile maritima), la especie que da nombre al hábitat.'
+WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND h.slug = 'dunas-fijas-de-2210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
   h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Anthyllis_cytisoides.JPG?width=1280',
   h.image_attribution = 'Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons',
   h.image_note = 'Portada ilustrada con Albaida (Anthyllis cytisoides), la especie que da nombre al hábitat.'
@@ -367,9 +505,9 @@ UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
 WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.slug = 'dunas-moviles-de-2120';
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
-  h.image_url = NULL,
-  h.image_attribution = NULL,
-  h.image_note = NULL
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pistacia_lentiscus.jpg?width=1280',
+  h.image_attribution = 'Lumbar~commonswiki (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Lentisco (Pistacia lentiscus), la especie que da nombre al hábitat.'
 WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND h.slug = 'dunas-moviles-embrionarias-2110';
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id SET

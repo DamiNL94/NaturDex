@@ -66,7 +66,7 @@
         -0.90962
       ],
       "color": "#cd853f",
-      "image": null,
+      "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/609975159/original.jpg",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
@@ -78,7 +78,9 @@
         5,
         6,
         7
-      ]
+      ],
+      "imageAttribution": "Quentin Groom (CC0) · GBIF",
+      "imageNote": "Portada ilustrada con Cornical (Periploca angustifolia), la especie que da nombre al hábitat."
     },
     {
       "id": "pendientes-rocosas-calcicolas-8210",
@@ -98,7 +100,7 @@
         -0.90962
       ],
       "color": "#daa520",
-      "image": null,
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cosentinia_vellea_kz02.jpg?width=1280",
       "audio": null,
       "audioTranscript": null,
       "reviewNote": null,
@@ -110,7 +112,9 @@
         5,
         6,
         7
-      ]
+      ],
+      "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
+      "imageNote": "Portada ilustrada con Cosentinia vellea (Cosentinia vellea), la especie que da nombre al hábitat."
     },
     {
       "id": "zonas-subestepicas-de-6220",

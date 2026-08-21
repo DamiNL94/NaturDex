@@ -859,7 +859,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Ammoides pusilla": {
     "commonName": "Ammoides",
@@ -1027,7 +1028,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anagyris_foetida.jpg?width=1280",
     "imageAttribution": "A. Barra (CC BY 3.0) · Wikimedia Commons",
-    "eidosTaxonId": 1849
+    "eidosTaxonId": 1849,
+    "rarityBasis": null
   },
   "Anas acuta": {
     "commonName": "Ánade rabudo",
@@ -1102,6 +1104,31 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9F%D0%B0%D1%80%D0%B0_%D1%83%D1%82%D0%BE%D0%BA_%D0%BA%D1%80%D1%8F%D0%BA%D0%B2_(Anas_platyrhynchos)%2C_%D0%9A%D0%BE%D0%BB%D0%BE%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5.jpg?width=1280",
     "imageAttribution": "Dion Art (CC BY-SA 4.0) · Wikimedia Commons",
     "eidosTaxonId": 12000,
+    "rarityBasis": null
+  },
+  "Anas strepera": {
+    "commonName": "Anas strepera",
+    "kingdom": "fauna",
+    "group": "Ave acuática",
+    "habitat": null,
+    "seasonality": "Julio, agosto, enero",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Anseriformes",
+      "family": "Anatidae",
+      "genus": "Anas"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anas_strepera_pair.jpg?width=1280",
+    "imageAttribution": "autor no indicado (CC BY-SA 2.0) · Wikimedia Commons",
+    "eidosTaxonId": 28187,
     "rarityBasis": null
   },
   "Andryala integrifolia": {
@@ -2246,6 +2273,31 @@
     "eidosTaxonId": 10343,
     "rarityBasis": null
   },
+  "Artemisia gallica": {
+    "commonName": "Tomillo blanco",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": null,
+    "rarityScore": null,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Asterales",
+      "family": "Asteraceae",
+      "genus": "Artemisia"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Artemisia_gallica%2C_Torroella_de_Montgr%C3%AD_01.jpg?width=1280",
+    "imageAttribution": "Josep Gesti (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 9914,
+    "rarityBasis": null
+  },
   "Artemisia herba-alba": {
     "commonName": "Abrótano hembra",
     "kingdom": "flora",
@@ -2663,6 +2715,31 @@
     "eidosTaxonId": 2524,
     "rarityBasis": null
   },
+  "Asplenium billotii": {
+    "commonName": "Jelecho",
+    "kingdom": "flora",
+    "group": "Helecho",
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Polypodiopsida",
+      "order": "Polypodiales",
+      "family": "Aspleniaceae",
+      "genus": "Asplenium"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Asplenium_billotii_002.jpg?width=1280",
+    "imageAttribution": "Johan N (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 2537,
+    "rarityBasis": null
+  },
   "Asplenium ceterach": {
     "commonName": "Falguera",
     "kingdom": "flora",
@@ -2691,6 +2768,31 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Asplenium obovatum": {
+    "commonName": "Asplenium obovatum",
+    "kingdom": "flora",
+    "group": "Helecho",
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Polypodiopsida",
+      "order": "Polypodiales",
+      "family": "Aspleniaceae",
+      "genus": "Asplenium"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Asplenium_obovatum_002.jpg?width=1280",
+    "imageAttribution": "Johan N (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 31500,
+    "rarityBasis": null
   },
   "Asplenium onopteris": {
     "commonName": "Helecha",
@@ -3873,7 +3975,8 @@
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bufo_bufo_sitting-Iric2006.jpg?width=1280",
     "imageAttribution": "Iric (CC BY-SA 2.5) · Wikimedia Commons",
-    "eidosTaxonId": 93827
+    "eidosTaxonId": 93827,
+    "rarityBasis": null
   },
   "Bufo spinosus": {
     "commonName": "Sapo común ibérico",
@@ -4225,6 +4328,35 @@
     },
     "descriptionSource": null
   },
+  "Calandrella rufescens": {
+    "commonName": "Calandrella rufescens",
+    "kingdom": "fauna",
+    "group": "Ave esteparia",
+    "habitat": "Saladares, estepas salinas, eriales y llanos áridos con vegetación rala",
+    "seasonality": "Todo el año",
+    "rarityScore": 1,
+    "description": "La alondra más pequeña de Europa, de plumaje pardo grisáceo y con el pecho finamente rayado de arriba abajo, sin las manchas laterales de su parienta. Vive ligada a los llanos más áridos y salinos, un hábitat en retroceso, y se camufla tan bien que suele verse solo al levantar el vuelo.",
+    "descriptionSource": null,
+    "tips": [
+      "Rayado fino y extendido por todo el pecho",
+      "Muy pequeña y compacta, de aspecto grisáceo",
+      "Prefiere los llanos salinos y las estepas más áridas"
+    ],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Alaudidae",
+      "genus": "Calandrella"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Calandrella_rufescens_Canarias.jpg?width=1280",
+    "imageAttribution": "Calandrella_rufescens_-Canary_Islands_-Spain-8.jpg: Tony Hisgett de… (CC BY 2.0) · Wikimedia Commons",
+    "eidosTaxonId": 12119,
+    "rarityBasis": null
+  },
   "Calendula arvensis": {
     "commonName": "Clavellina",
     "kingdom": "flora",
@@ -4484,6 +4616,31 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kampfl%C3%A4ufer_2007-06-08_118.jpg?width=1280",
     "imageAttribution": "BS Thurner Hof (CC BY-SA 3.0) · Wikimedia Commons",
     "eidosTaxonId": 33046,
+    "rarityBasis": null
+  },
+  "Calidris temminckii": {
+    "commonName": "Correlimos de Temminck",
+    "kingdom": "fauna",
+    "group": "Ave limícola",
+    "habitat": "En paso e invernada: aguas dulces, lagunas, marismas, vegas,etc.Areas marinas litorales resguardadas",
+    "seasonality": "Julio, agosto, septiembre, octubre, noviembre, enero, febrero, marzo, abril, mayo",
+    "rarityScore": 2,
+    "description": "Es una limícola de reducido tamaño y de cuerpo bastante alargado, con el pico más bien pequeño y las patas más cortas que la altura del cuerpo. En todos los plumajes, la garganta y el pecho —muy oscuros— definen una especie de babero. Tiene las patas verdosas y el pico de color negro. El adulto en plumaje nupcial suele presentar las partes dorsales con una mezcla de plumas nuevas (oscuras, con bordes castaño claro) y otras correspondientes al plumaje invernal (grises, con el raquis apenas marcado); los lados del cuello y el pecho son de color ante, con finas estrías más oscuras, y las partes inferiores, blancas. El individuo no reproductor luce un gris uniforme no muy claro, con el pecho más grisáceo que el nupcial y sin estrías, mientras que el joven tiene el pecho levemente estriado y presenta las plumas de las partes superiores grises, con el raquis y una banda subapical oscuros y los bordes cremosos.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Charadriiformes",
+      "family": "Scolopacidae",
+      "genus": "Calidris"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Calidris_temminckii_2_(Marek_Szczepanek).jpg?width=1280",
+    "imageAttribution": "Marek Szczepanek (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 16333,
     "rarityBasis": null
   },
   "Calonectris borealis": {
@@ -4762,6 +4919,31 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2.Capparis_spinosa.jpg?width=1280",
     "imageAttribution": "M sh شراونة محمد (CC BY-SA 4.0) · Wikimedia Commons",
     "eidosTaxonId": 3032,
+    "rarityBasis": null
+  },
+  "Capparis zoharyi": {
+    "commonName": "Alcaparra",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": null,
+    "rarityScore": 5,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Brassicales",
+      "family": "Capparaceae",
+      "genus": "Capparis"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2020)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Capparis_zoharyi0004.jpg?width=1280",
+    "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 3033,
     "rarityBasis": null
   },
   "Capra pyrenaica": {
@@ -7586,6 +7768,31 @@
     },
     "descriptionSource": null
   },
+  "Cressa cretica": {
+    "commonName": "Matojillo",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Mayo a octubre",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Solanales",
+      "family": "Convolvulaceae",
+      "genus": "Cressa"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2020)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cressa_cretica_(2134750159).jpg?width=1280",
+    "imageAttribution": "Dinesh Valke from Thane, India (CC BY-SA 2.0) · Wikimedia Commons",
+    "eidosTaxonId": 3825,
+    "rarityBasis": null
+  },
   "Crithmum maritimum": {
     "commonName": "Hinojo marino",
     "kingdom": "flora",
@@ -8726,7 +8933,7 @@
     },
     "descriptionSource": null
   },
-  "Echinophora spinosa L.": {
+  "Echinophora spinosa": {
     "commonName": "zanahoria marina",
     "kingdom": "flora",
     "group": null,
@@ -11736,6 +11943,31 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
+  "Gymnosporia senegalensis": {
+    "commonName": "Arto",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Celastrales",
+      "family": "Celastraceae",
+      "genus": "Gymnosporia"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Maytenus_senegalensis081831.jpg?width=1280",
+    "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 6257,
+    "rarityBasis": null
+  },
   "Gyps fulvus": {
     "commonName": "Buitre común",
     "kingdom": "fauna",
@@ -12673,6 +12905,31 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Himantopus_himantopus.jpg?width=1280",
     "imageAttribution": "(Hans Hillewaert) (CC BY-SA 3.0) · Wikimedia Commons",
     "eidosTaxonId": 11446,
+    "rarityBasis": null
+  },
+  "Hippocampus guttulatus": {
+    "commonName": "Caballito de mar",
+    "kingdom": "fauna",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Marzo a diciembre",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Actinopterygii",
+      "order": "Syngnathiformes",
+      "family": "Syngnathidae",
+      "genus": "Hippocampus"
+    },
+    "iucnGlobal": "DD — Datos insuficientes (Lista Roja mundial de la UICN, 2017)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hippocampus_guttulatus_(Hippocampe_%C3%A0_long_nez)_juv%C3%A9nile.jpg?width=1280",
+    "imageAttribution": "Simon Thevenin (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 15916,
     "rarityBasis": null
   },
   "Hippocrepis ciliata": {
@@ -14151,7 +14408,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Launaea pumila": {
     "commonName": "escorzonerilla falsa",
@@ -14569,7 +14827,9 @@
     "iucnGlobal": "NE (no evaluada a nivel global; género con numerosos microendemismos ibéricos)",
     "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 con este nombre (pendiente de confirmar sinonimia)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_insigne.jpg?width=1280",
-    "imageAttribution": "ANE (CC BY-SA 4.0) · Wikimedia Commons"
+    "imageAttribution": "ANE (CC BY-SA 4.0) · Wikimedia Commons",
+    "rarityBasis": null,
+    "descriptionSource": null
   },
   "Limonium lobatum": {
     "commonName": "Saladilla anual",
@@ -16470,7 +16730,7 @@
     "eidosTaxonId": 6161,
     "rarityBasis": null
   },
-  "Merendera filifolia Cambess.": {
+  "Merendera filifolia": {
     "commonName": "Cástamo",
     "kingdom": "flora",
     "group": null,
@@ -20393,6 +20653,31 @@
     "eidosTaxonId": 7186,
     "rarityBasis": null
   },
+  "Platycapnos tenuiloba": {
+    "commonName": "Platycapnos tenuiloba",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Febrero a mayo",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Ranunculales",
+      "family": "Papaveraceae",
+      "genus": "Platycapnos"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Platycapnos_tenuiloba_(flowers).jpg?width=1280",
+    "imageAttribution": "Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 7187,
+    "rarityBasis": null
+  },
   "Plecotus austriacus": {
     "commonName": "Murciélago orejudo gris",
     "kingdom": "fauna",
@@ -20415,7 +20700,8 @@
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Plecotus_austriacus2.jpg?width=1280",
     "imageAttribution": "Andrei Sakhno (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 10799
+    "eidosTaxonId": 10799,
+    "rarityBasis": null
   },
   "Pluvialis apricaria": {
     "commonName": "Chorlito dorado",
@@ -20781,6 +21067,31 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Porphyrio porphyrio": {
+    "commonName": "Calamón",
+    "kingdom": "fauna",
+    "group": "Ave acuática",
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 1,
+    "description": "El más grande de los rálidos europeos es un ave de buen tamaño y aspecto absolutamente inconfundible. Los ejemplares adultos lucen un plumaje de tonos azulados y violáceos con reflejos purpúreos, que se torna azul metálico en la cara, la parte anterior del cuello y la zona superior del pecho; las infracoberteras caudales, de color blanco puro, contrastan vivamente con el resto de la librea del ave, y son utilizadas por el calamón para expresar sus estados de ánimo y comunicarse con otros ejemplares. Las partes desprovistas de plumas se caracterizan también por su viva coloración, especialmente durante la época de celo, ya que tanto el pico —cónico y robusto— como el escudete frontal y las patas lucen un intenso color carmesí. Estas últimas, francamente singulares, reflejan su forma de vida; son considerablemente largas y aparecen rematadas por larguísimos dedos con gran capacidad prensil, que el ave emplea para manejar tallos, moverse entre las cañas y deambular por la vegetación flotante. Los calamones jóvenes no exhiben un plumaje tan espectacular como el de los adultos, ya que en ellos predominan los tonos azulados más bien grisáceos en el dorso y los blanquecinos en el vientre, en tanto que las zonas desnudas (patas, pico y escudete), aunque rojizas, no presentan la brillante coloración de las aves maduras. Este rálido —al igual que la generalidad de los componentes de la familia— es un volador bastante torpe; no obstante, se desplaza con soltura entre las cañas y prefiere escabullirse entre ellas en caso de alarma o peligro. Las escasas ocasiones en que vuela —por lo común no más de 15 o 20 metros— se desplaza con frecuentes aleteos de sus cortas alas, mientras mantiene colgando las patas.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Gruiformes",
+      "family": "Rallidae",
+      "genus": "Porphyrio"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Purpurhuhn.jpg?width=1280",
+    "imageAttribution": "Andreas Trepte (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 12013,
+    "rarityBasis": null
   },
   "Porphyrio porphyrio porphyrio": {
     "commonName": "Porphyrio porphyrio porphyrio",
@@ -21503,6 +21814,31 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Water_rail_2022_04_30_01.jpg?width=1280",
     "imageAttribution": "Alexis Lours (CC BY 4.0) · Wikimedia Commons",
     "eidosTaxonId": 10745,
+    "rarityBasis": null
+  },
+  "Ranunculus bullatus": {
+    "commonName": "Margarita",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Octubre a febrero",
+    "rarityScore": 3,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Ranunculales",
+      "family": "Ranunculaceae",
+      "genus": "Ranunculus"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ranunculus_bullatus.JPG?width=1280",
+    "imageAttribution": "Xemenendura (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 7509,
     "rarityBasis": null
   },
   "Ranunculus gramineus": {
@@ -23172,6 +23508,31 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Schoenus_nigricans_kz2.jpg?width=1280",
     "imageAttribution": "Kenraiz, Krzysztof Ziarnek (CC BY-SA 4.0) · Wikimedia Commons",
     "eidosTaxonId": 8115,
+    "rarityBasis": null
+  },
+  "Scilla autumnalis": {
+    "commonName": "Scilla autumnalis",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": null,
+    "rarityScore": 5,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Liliopsida",
+      "order": "Asparagales",
+      "family": "Asparagaceae",
+      "genus": "Scilla"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Scilla_autumnalis_0.jpg?width=1280",
+    "imageAttribution": "Zeynel Cebeci (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 31996,
     "rarityBasis": null
   },
   "Scirpoides holoschoenus": {
@@ -25255,6 +25616,31 @@
     },
     "descriptionSource": null
   },
+  "Tadarida teniotis": {
+    "commonName": "Murciélago rabudo",
+    "kingdom": "fauna",
+    "group": "Murciélago",
+    "habitat": "Los refugios se sitúan en farallones rocosos, acantilados marinos y estructuras artificiales como puentes y edificios",
+    "seasonality": "Abril a noviembre",
+    "rarityScore": 3,
+    "description": "Murciélago de gran tamaño, con alas largas y estrechas. Cabeza característica con orejas rígidas proyectadas hacia delante. La cola sobresale por fuera de la membrana caudal y se retrae en el uropatagio en vuelo. El color del pelo es muy variable, de pardo a gris claro. Algunos ejemplares presentan áreas canosas. No se ha descrito dimorfismo sexual en cuanto al color. Las hembras son ligeramente más grandes. ANT: 57,0-64,0 mm; Ps: 22,0-54,0 g. Fórmula dentaria: 1.1.2.3/3.1.2.3. Número de cromosomas (2n) = 48. No existen especies similares en Europa. ULTRASONIDOS Muestran una gran variedad de llamadas sociales emitidas desde los refugios y en vuelo. Exhibiciones sonoras de los machos dominantes y fuertes emisiones durante las persecuciones aéreas. Las señales de ecolocalización tienen una duración de entre 8 y 27 ms. (media 15 ms). El intervalo entre pulsos oscila entre 200 y 1.400 ms (media 740 ms). Emite entre 9-15 kHz con máxima intensidad en 11,4 kHz. El rango de todos los tipos de llamadas es audible para el oído humano. Con poca experiencia pueden confundirse las señales de ecolocalización del murciélago rabudo con emisiones sociales audibles de otras especies (Pipistrellus pipistrellus, Nyctalus noctula y N. leisleri).",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Mammalia",
+      "order": "Chiroptera",
+      "family": "Molossidae",
+      "genus": "Tadarida"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tadarida.teniotis.jpg?width=1280",
+    "imageAttribution": "Ramón Caballero García (GPL) · Wikimedia Commons",
+    "eidosTaxonId": 12305,
+    "rarityBasis": null
+  },
   "Tadorna tadorna": {
     "commonName": "Tarro blanco",
     "kingdom": "fauna",
@@ -25309,7 +25695,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Tamarix boveana": {
     "commonName": "Taray de saladar",
@@ -25709,7 +26096,8 @@
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Teucrium gnaphalodes": {
     "commonName": "Barbas de capuchino",
@@ -26867,6 +27255,31 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Turdus pilaris": {
+    "commonName": "Zorzal real",
+    "kingdom": "fauna",
+    "group": "Ave",
+    "habitat": null,
+    "seasonality": "Octubre a marzo",
+    "rarityScore": 2,
+    "description": "El real es un zorzal grande y bastante corpulento, que se reconoce fácilmente por presentar la cabeza y el obispillo de color gris azulado. El plumaje de la espalda y del dorso del ala es pardo-grisáceo, algo rojizo en ocasiones, mientras que las partes inferiores son blanquecinas con manchas ocres en los flancos y el pecho —más intensas en época reproductora— y profusamente moteadas de manchas oscuras en forma de cuña. El pico es amarillo con la punta oscura. Ambos sexos son muy parecidos, especialmente en invierno. Vistos de cerca, en el diseño de la cara se puede observar una brida negra delante del ojo y otra bajo la mejilla, así como la ceja blanquecina. En vuelo resalta su cola, larga y oscura, y los paneles blancos bajo el ala.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Passeriformes",
+      "family": "Turdidae",
+      "genus": "Turdus"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Turdus_pilaris2.jpg?width=1280",
+    "imageAttribution": "Adam Kumiszcza (CC BY 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 16393,
+    "rarityBasis": null
   },
   "Turdus torquatus": {
     "commonName": "Mirlo capiblanco",
