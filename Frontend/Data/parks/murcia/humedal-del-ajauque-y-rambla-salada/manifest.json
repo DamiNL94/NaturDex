@@ -8,13 +8,14 @@
   "geo": {
     "parque": "Data/parks/murcia/humedal-del-ajauque-y-rambla-salada/geo/parque.geojson",
     "lic": "Data/parks/murcia/humedal-del-ajauque-y-rambla-salada/geo/lic.geojson",
-    "zepa": "Data/parks/murcia/humedal-del-ajauque-y-rambla-salada/geo/zepa.geojson"
+    "zepa": "Data/parks/murcia/humedal-del-ajauque-y-rambla-salada/geo/zepa.geojson",
+    "habitats": "Data/parks/murcia/humedal-del-ajauque-y-rambla-salada/geo/habitats.geojson"
   },
   "images": [],
   "audio": [],
   "counts": {
     "species": 0,
-    "habitats": 0,
+    "habitats": 10,
     "pointsOfInterest": 0,
     "images": 0,
     "assetBytes": 0

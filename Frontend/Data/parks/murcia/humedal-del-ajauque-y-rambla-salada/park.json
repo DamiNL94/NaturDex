@@ -19,7 +19,252 @@
     "summary": "Un humedal salino de interior: ramblas de agua salobre, tarayales y saladares entre cerros áridos, con aves acuáticas insólitas tan lejos del mar.",
     "boundaryNote": "Límite oficial servido en geo/parque.geojson, descargado del geoportal del IMIDA/CARM (servicio PROYECTOS/OISMA, capa de Paisaje Protegido, registros con Caracter «Firme»), identificador interno ENP000006. Código ENP oficial ES620016, superficie oficial 1621,9 ha según el Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Geometría en WGS84, sin generalizar (3530 vértices, superficie resultante 1624,7 ha, desviación del 0,18 %). Sustituye a la delimitación de la capa ENP nacional del MITECO, que es un producto generalizado. Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM. Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico» (código y superficie oficiales) e IMIDA/CARM (geometría)."
   },
-  "habitats": [],
+  "habitats": [
+    {
+      "id": "pastizales-salinos-mediterraneos-1410",
+      "code": "1410",
+      "name": "Pastizales salinos mediterráneos (Juncetalia maritimi)",
+      "type": "Salino",
+      "priority": false,
+      "hicSubtipos": [
+        "1410"
+      ],
+      "fitosociologia": [
+        "Juncetum maritimo-subulati Alcaraz 1984 corr. Alcaraz, P. Sánchez, De la Torre, Ríos & J. Alvarez 1991"
+      ],
+      "description": "",
+      "coordinates": [
+        38.149012,
+        -1.095592
+      ],
+      "color": "#b8860b",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "matorrales-halofilos-mediterraneos-1420",
+      "code": "1420",
+      "name": "Matorrales halófilos mediterráneos y termoatlánticos (Sarcocornetea)",
+      "type": "Salino",
+      "priority": false,
+      "hicSubtipos": [
+        "1420"
+      ],
+      "fitosociologia": [
+        "Cistancho phelypaeae-Arthrocnemetum fruticosi Géhu ex Géhu & Géhu-Franck 1977",
+        "Frankenio corymbosae-Arthrocnemetum macrostachyi Rivas-Martínez, Alcaraz, Belmonte, Cantó & Sánchez-Mata 1984"
+      ],
+      "description": "",
+      "coordinates": [
+        38.149012,
+        -1.095592
+      ],
+      "color": "#2e8b57",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "estepas-salinas-mediterraneas-1510",
+      "code": "1510",
+      "name": "Estepas salinas mediterráneas (Limonietalia)",
+      "type": "Salino",
+      "priority": true,
+      "hicSubtipos": [
+        "1510"
+      ],
+      "fitosociologia": [
+        "Limonietum angustebracteato-delicatuli Rivas-Martínez & Alcaraz in Alcaraz 1984"
+      ],
+      "description": "",
+      "coordinates": [
+        38.187772,
+        -1.094446
+      ],
+      "color": "#2e8b57",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "rios-mediterraneos-de-3280",
+      "code": "3280",
+      "name": "Ríos mediterráneos de caudal permanente del Paspalo-Agrostidion",
+      "type": "Ribera",
+      "priority": false,
+      "hicSubtipos": [
+        "3280"
+      ],
+      "fitosociologia": [
+        "Cyperetum distachyi O. Bolòs & Molinier 1984"
+      ],
+      "description": "",
+      "coordinates": [
+        38.187772,
+        -1.094446
+      ],
+      "color": "#4f7942",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "galerias-y-matorrales-92D0",
+      "code": "92D0",
+      "name": "Galerías y matorrales ribereños termomediterráneos (Nerio-Tamaricetea)",
+      "type": "Ribera",
+      "priority": false,
+      "hicSubtipos": [
+        "92D0"
+      ],
+      "fitosociologia": [
+        "Agrostio stoloniferae-Tamaricetum canariensis Cirujano 1981",
+        "Inulo crithmoidis-Tamaricetum boveanae Izco, Fernández-González & A. Molina 1984"
+      ],
+      "description": "",
+      "coordinates": [
+        38.149012,
+        -1.095592
+      ],
+      "color": "#2e8b57",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "matorrales-termomediterraneos-y-5330",
+      "code": "5330",
+      "name": "Matorrales termomediterráneos y pre-estépicos",
+      "type": "Matorral",
+      "priority": false,
+      "hicSubtipos": [
+        "5330"
+      ],
+      "fitosociologia": [
+        "Chamaeropo humilis-Rhamnetum lycioidis O. Bolòs 1957",
+        "Saturejo canescentis-Cistetum albidi Rivas Goday 1954 corr. Alcaraz, T.E. Díaz, Rivas-Martínez & P. Sánchez 1989"
+      ],
+      "description": "",
+      "coordinates": [
+        38.1081,
+        -1.081096
+      ],
+      "color": "#daa520",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "matorrales-halonitrofilos-pegano-1430",
+      "code": "1430",
+      "name": "Matorrales halonitrófilos (Pegano-Salsoletea)",
+      "type": "Matorral",
+      "priority": false,
+      "hicSubtipos": [
+        "1430"
+      ],
+      "fitosociologia": [
+        "Atriplicetum glauco-halimi Rivas-Martínez & Alcaraz in Alcaraz 1984",
+        "Salsolo oppositifoliae-Suaedetum verae Rivas Goday & Rigual 1958 corr. Alcaraz, T.E. Díaz, Rivas-Martínez & Sánchez-Gómez"
+      ],
+      "description": "",
+      "coordinates": [
+        38.133951,
+        -1.096888
+      ],
+      "color": "#9acd32",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "vegetacion-gipsicola-iberica-1520",
+      "code": "1520",
+      "name": "Vegetación gipsícola ibérica (Gypsophiletalia)",
+      "type": "Matorral",
+      "priority": true,
+      "hicSubtipos": [
+        "1520"
+      ],
+      "fitosociologia": [
+        "Teucrio verticillati-Thymetum pallentis Bellot, Esteve & Rivas Goday in Rivas Goday & Esteve 1968"
+      ],
+      "description": "",
+      "coordinates": [
+        38.127554,
+        -1.133682
+      ],
+      "color": "#9acd32",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "prados-calcareos-carsticos-6110",
+      "code": "6110",
+      "name": "Prados calcáreos cársticos o basófilos del Alysso-Sedion albi",
+      "type": "Pastos",
+      "priority": true,
+      "hicSubtipos": [
+        "6110"
+      ],
+      "fitosociologia": [
+        "Sedetum micrantho-sediformis O. Bolòs & Masalles in O. Bolòs 1981"
+      ],
+      "description": "",
+      "coordinates": [
+        38.1081,
+        -1.081096
+      ],
+      "color": "#9acd32",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    },
+    {
+      "id": "pendientes-rocosas-calcicolas-8210",
+      "code": "8210",
+      "name": "Pendientes rocosas calcícolas con vegetación casmofítica",
+      "type": "Roquedos",
+      "priority": false,
+      "hicSubtipos": [
+        "8210"
+      ],
+      "fitosociologia": [
+        "Rhamno borgiae-Teucrietum rivasii Mateo & Figuerola 1987 corr. M.B. Crespo 1993"
+      ],
+      "description": "",
+      "coordinates": [
+        38.1081,
+        -1.081096
+      ],
+      "color": "#daa520",
+      "image": null,
+      "audio": null,
+      "audioTranscript": null,
+      "reviewNote": null,
+      "speciesIds": []
+    }
+  ],
   "pointsOfInterest": [],
   "species": []
 }

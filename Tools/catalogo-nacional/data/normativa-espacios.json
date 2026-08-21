@@ -119,6 +119,43 @@
       "inventarios": "SIN ABRIR. Localizado por su cita al pie del §1.1 del volumen III del Decreto n.º 259/2019, que se redacta «de conformidad con lo establecido» en él. Es el HERMANO del PORN de Calblanque —Decreto n.º 45/1995, de la misma fecha, boletín siguiente— y aquél sí traía inventario en sus artículos 12 y 13, así que es razonable esperar aquí la misma estructura. La vía de descarga es la misma que allí: el BOLETÍN ENTERO, porque el número de anuncio de 1995 no va por fecha y la bisección no converge.",
       "transcrito": [],
       "nota": "NO hace falta para la Fase 2 de este espacio: su inventario vigente está en el PRUG de 2019, que es posterior y del propio parque, y ya está transcrito. Queda anotado para no repetir la búsqueda si alguna vez se quiere contrastar qué protegía la norma de 1995."
+    },
+    {
+      "norma": "Decreto n.º 252/2022, de 22 de diciembre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos de los relieves y cuencas centro-orientales de la Región de Murcia",
+      "boletin": "BORM n.º 38, de 16 de febrero de 2023, suplemento n.º 6, anuncio 913",
+      "articulado": "https://www.borm.es/services/anuncio/ano/2023/numero/913/pdf?id=815831",
+      "encontrado": true,
+      "consultado": "2026-08-21",
+      "cubre": [
+        "humedal-del-ajauque-y-rambla-salada",
+        "sierra-de-la-pila",
+        "Sierra de Abanilla (ES6200027, sin ficha en NaturDex)",
+        "Río Chícamo (ES6200028, sin ficha en NaturDex)",
+        "Yesos de Ulea (ES6200042, sin ficha en NaturDex)",
+        "Lagunas de Campotéjar (ES0000537, ZEPA y RAMSAR, sin ficha en NaturDex)"
+      ],
+      "transcrito": [
+        "humedal-del-ajauque-y-rambla-salada"
+      ],
+      "volumenes": [
+        {
+          "titulo": "Volumen I · Síntesis, diagnóstico y medidas de conservación y gestión",
+          "inventarios": "Del ámbito entero del plan, no de un espacio concreto. §4 «Descripción e interpretación de la biodiversidad»"
+        },
+        {
+          "titulo": "Volumen II · Información específica de los espacios protegidos",
+          "inventarios": "§1 «Humedal del Ajauque y Rambla Salada» (Paisaje Protegido, ZEPA ES0000195 y ZEC ES6200005), pp. 204-223: §1.2.1 hábitats (Tablas 1-3), §1.2.2 especies (Tablas 4-11) y §1.2.3 alóctonas (Tabla 12). Los otros cuatro espacios del volumen —Sierra de Abanilla §2, Río Chícamo §3, Yesos de Ulea §4 y Lagunas de Campotéjar §5— no tienen ficha en NaturDex"
+        },
+        {
+          "titulo": "Volumen III · Plan Rector de Uso y Gestión (PRUG) del Parque Regional de la Sierra de la Pila",
+          "inventarios": "§2.2 «Biodiversidad». Es el mismo texto que murcianatural sirve suelto como `04PGI_CentroOriental_VOLUMEN3_PRUG` con fecha de junio de 2018, que es de donde se transcribió el anexo de Sierra de la Pila el 2026-08-16"
+        },
+        {
+          "titulo": "Volumen IV · Anexos",
+          "inventarios": "Anexo 2.2 (límites del Paisaje Protegido y la ZEPA del Humedal, p. 516), Anexo 2.3 (límites de la ZEC, p. 529) y Anexo 3 «Tipos de hábitats naturales y seminaturales» (p. 594)"
+        }
+      ],
+      "nota": "IGUAL QUE EL PLAN DEL MAR MENOR y a diferencia del Altiplano, el BORM publica el plan ENTERO —los cuatro volúmenes, 128 MB de PDF, 47.604 líneas de texto extraído—, así que no hace falta el gestor documental de murcianatural. LOCALIZARLO ES LO QUE CUESTA, y por dos motivos: el decreto NO sale en el sumario de ningún boletín ordinario (va en un SUPLEMENTO, y el barrido de los 308 sumarios de 2022-2023 lo pierde), y murcianatural devuelve 302 al antibot de Radware en cuanto se le piden varias URL seguidas. La vía que sí funciona: `murcianatural.carm.es/web/guest/pgrednatura` lista los planes de gestión con su enlace, y el de éste —`/-/decreto-n-252/2022-declaracion-zec-y-pgi`— da la cita del boletín y el enlace al PDF del BORM. Ojo con el ámbito para Sierra de la Pila: su anexo se transcribió desde la versión de 2018 del volumen III, anterior a esta aprobación; el texto es el mismo pero la cita del `anexos-normativos.json` sigue siendo la del PDF suelto."
     }
   ],
   "_como_se_baja_un_boletin_viejo": "Para los boletines anteriores a la publicación por anuncio, el servicio de anuncios del BORM (`/services/anuncio/ano/<año>/numero/<n>/pdf`) es una trampa: en 1995 el número de anuncio NO va por orden de fecha —9370 es del 30 de junio, 9375 del 19 y 9380 del 8—, así que la bisección por la cabecera no converge y un barrido acotado se queda corto sin decirlo. El PORN de Calblanque está en el anuncio 10286 y cuatro barridos sobre 9000-9800 salieron vacíos. La vía buena es pedir el BOLETÍN ENTERO: `https://www.borm.es/services/boletin/ano/<año>/numero/<n>/pdf` (7,7 MB el de 1995 n.º 152). Ese endpoint no estaba escrito en ningún sitio del repo."
