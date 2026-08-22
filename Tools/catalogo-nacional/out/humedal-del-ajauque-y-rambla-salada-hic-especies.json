@@ -1,0 +1,153 @@
+{
+ "park": "humedal-del-ajauque-y-rambla-salada",
+ "generado": "Atlas y Manual de los Hábitats de España (MITECO) ∩ catálogo del parque",
+ "hic": {
+  "1410": {
+   "habitat": "pastizales-salinos-mediterraneos-1410",
+   "especies": []
+  },
+  "1420": {
+   "habitat": "matorrales-halofilos-mediterraneos-1420",
+   "especies": [
+    "Sarcocornia fruticosa",
+    "Arthrocnemum macrostachyum",
+    "Frankenia corymbosa",
+    "Halocnemum strobilaceum",
+    "Suaeda vera"
+   ]
+  },
+  "1430": {
+   "habitat": "matorrales-halonitrofilos-pegano-1430",
+   "especies": [
+    "Artemisia barrelieri",
+    "Withania frutescens"
+   ]
+  },
+  "1510": {
+   "habitat": "estepas-salinas-mediterraneas-1510",
+   "especies": [
+    "Limonium caesium"
+   ]
+  },
+  "1520": {
+   "habitat": "vegetacion-gipsicola-iberica-1520",
+   "especies": []
+  },
+  "3280": {
+   "habitat": "rios-mediterraneos-de-3280",
+   "especies": []
+  },
+  "5330": {
+   "habitat": "matorrales-termomediterraneos-y-5330",
+   "especies": [
+    "Teucrium carolipaui",
+    "Pinus halepensis"
+   ]
+  },
+  "6110": {
+   "habitat": "prados-calcareos-carsticos-6110",
+   "especies": [
+    "Sedum sediforme"
+   ]
+  },
+  "8210": {
+   "habitat": "pendientes-rocosas-calcicolas-8210",
+   "especies": [
+    "Teucrium freynii"
+   ]
+  },
+  "92D0": {
+   "habitat": "galerias-y-matorrales-92D0",
+   "especies": [
+    "Tamarix boveana",
+    "Tamarix canariensis"
+   ]
+  }
+ },
+ "links": [
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Sarcocornia fruticosa",
+   "atlas_name": "Sarcocornia fruticosa"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Arthrocnemum macrostachyum",
+   "atlas_name": "Arthrocnemum macrostachyum"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Frankenia corymbosa",
+   "atlas_name": "Frankenia corymbosa"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Halocnemum strobilaceum",
+   "atlas_name": "Halocnemum strobilaceum"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Suaeda vera",
+   "atlas_name": "Suaeda vera"
+  },
+  {
+   "code": "1510",
+   "habitat_slug": "estepas-salinas-mediterraneas-1510",
+   "scientific_name": "Limonium caesium",
+   "atlas_name": "Limonium caesium"
+  },
+  {
+   "code": "92D0",
+   "habitat_slug": "galerias-y-matorrales-92D0",
+   "scientific_name": "Tamarix boveana",
+   "atlas_name": "Tamarix boveana"
+  },
+  {
+   "code": "92D0",
+   "habitat_slug": "galerias-y-matorrales-92D0",
+   "scientific_name": "Tamarix canariensis",
+   "atlas_name": "Tamarix canariensis"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Teucrium carolipaui",
+   "atlas_name": "Teucrium carolipaui subsp. carolipaui"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Pinus halepensis",
+   "atlas_name": "Pinus halepensis var. ceciliae"
+  },
+  {
+   "code": "1430",
+   "habitat_slug": "matorrales-halonitrofilos-pegano-1430",
+   "scientific_name": "Artemisia barrelieri",
+   "atlas_name": "Artemisia barrelieri"
+  },
+  {
+   "code": "1430",
+   "habitat_slug": "matorrales-halonitrofilos-pegano-1430",
+   "scientific_name": "Withania frutescens",
+   "atlas_name": "Withania frutescens"
+  },
+  {
+   "code": "6110",
+   "habitat_slug": "prados-calcareos-carsticos-6110",
+   "scientific_name": "Sedum sediforme",
+   "atlas_name": "Sedum sediforme subsp. dianium"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Teucrium freynii",
+   "atlas_name": "Teucrium freynii"
+  }
+ ]
+}

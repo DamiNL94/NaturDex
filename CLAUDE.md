@@ -28,12 +28,26 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    niveles y con `--gbif-sin-respaldo` como escotilla explícita.
    > **Y lo que cuesta, que hay que tenerlo delante:** los catálogos legales enumeran *lo protegido*,
    > no *lo característico*, y lo común no está protegido por ser común. Medido el 2026-08-16,
-   > **330 de 1.161 fichas (28 %) se sostienen solo en GBIF** — el romero y el pino carrasco de
+   > **330 de 1.161 fichas (28 %) se sostenían solo en GBIF** — el romero y el pino carrasco de
    > Sierra de la Pila entre ellas. La salida no es relajar la puerta. El **índice del Atlas** —la
    > fuente que dice «esta especie es característica de este hábitat»— se completó ese mismo día y
    > rescata 32 (el pino carrasco sí; el romero **no**: el Atlas enumera diagnósticas, no
    > dominantes), así que el grueso cuelga de **transcribir los planes de gestión que faltan**
    > (deuda nº 1).
+   >
+   > **Y transcribirlos funciona, que es lo que había que comprobar.** Vuelto a medir el 2026-08-22
+   > sobre catorce espacios: **331 de 2.094 (16 %)**. La cifra no ha bajado porque nadie relajara nada
+   > sino porque los seis espacios dados de alta desde entonces llegan con su plan transcrito —o con
+   > el «no hay plan» escrito en la norma, que es el caso de Sierra de las Moreras—, y ahí el suelo se
+   > hunde: San Pedro del Pinatar, Calblanque, Cabezo Gordo y Sierra de las Moreras se quedan en **0**
+   > fichas sostenidas solo por GBIF, y el Humedal del Ajauque en **2 de 175**. Arriba siguen los cuatro sin
+   > plan —Carrascoy 50 %, Cuatro Calas 47 %, Cabo Cope 34 %, Sierra Espuña 27 %— y, con ellos,
+   > **Sierra de la Pila con un 27 % teniendo el suyo transcrito**: ahí el anexo enumera 244 taxones
+   > pero el catálogo tiene 160 fichas, así que lo que falla no es la puerta sino que su plan
+   > inventaría el Parque Regional y buena parte de lo que GBIF ve dentro no está en esa lista. Se
+   > mide en un comando: `npm run especies:niveles` — y **hay que darle el `atlas.txt`** o la señal
+   > `caracteristica` no entra y el N3 sale inflado (en esta misma medición, 331 con Atlas frente a
+   > 476 sin él).
 4. **Universal vs. local.** Especies y hábitats son nacionales. Lo universal (qué *es* la especie, qué
    *es* el código HIC) vive en `Tools/catalogo-nacional/data/`; lo local (dónde y cómo aparece aquí)
    en cada `park.json`. **Un texto universal que nombre un espacio concreto es un error del
