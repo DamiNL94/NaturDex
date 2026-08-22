@@ -2,9 +2,19 @@
 
 Cada una se paga mejor ahora que en el espacio número treinta.
 
-1. **Cuatro espacios no tienen transcrito su plan de gestión, y desde el 2026-08-16 eso decide el
-   catálogo entero, no solo las aves.** Son **Carrascoy y El Valle, Cabo Cope, Cuatro Calas y Sierra
-   Espuña**.
+1. **Tres espacios no tienen transcrito su plan de gestión, y desde el 2026-08-16 eso decide el
+   catálogo entero, no solo las aves.** Son **Carrascoy y El Valle, Cabo Cope y Cuatro Calas**.
+   > **Sierra Espuña sale de la lista el 2026-08-22 (c), y no hizo falta ni el índice.** Su PORN es
+   > el **Decreto n.º 13/1995, de 31 de marzo** (BORM n.º 85, de 11 de abril de 1995), y es **el
+   > mismo de los Barrancos de Gebas** —el decreto aprueba el plan de los dos y declara el Paisaje
+   > Protegido—; está enlazado desde la ficha del espacio en murcianatural. Descargado, citado en
+   > `data/normativa-espacios.json` y **transcrito entero**: 188 especies en
+   > `data/anexos-normativos.json`, bajo la entrada de Gebas. Para Sierra Espuña queda solo abrirle
+   > su propia entrada y regenerar su Capa 3, y ahí el ámbito **no** desborda —el Parque Regional es
+   > el 90 % de las 19.679 ha del plan—, así que es el trabajo más rentable que queda en Murcia: sus
+   > 188 fichas se apoyan hoy en el formulario de la ZEPA ES0000173. Su 27 % de fichas sostenidas
+   > solo por GBIF, que se mide más abajo, es de antes de esto.
+
    > **Y desde el 2026-08-22 el paso 0 ya no es una búsqueda a ciegas.** Buscando el plan del Humedal
    > del Ajauque apareció el índice que faltaba:
    > **`murcianatural.carm.es/web/guest/pgrednatura`** lista **todos** los planes de gestión de la
@@ -73,11 +83,12 @@ Cada una se paga mejor ahora que en el espacio número treinta.
    españoles— y su perímetro no es el del espacio protegido. El resultado se mide sin ambigüedad: los
    tres espacios con el plan transcrito conservan **46, 61 y 66** aves; los cinco que solo tienen
    formulario, **17, 18, 34, 40 y 48**. Sierra de la Pila son 8.800 ha de sierra con 17 aves fichadas.
-   `Tools/catalogo-nacional/data/normativa-espacios.json` cubre hoy **seis documentos** —el Altiplano,
+   `Tools/catalogo-nacional/data/normativa-espacios.json` cubre hoy **siete documentos** —el Altiplano,
    el PORN de la Sierra de la Pila y su PRUG, los dos PORN de 1995 de Calblanque y San Pedro, el Plan
-   del Mar Menor y el Decreto 252/2022 de los relieves centro-orientales—, y **el documento de
-   Carrascoy, Cabo Cope, Cuatro Calas y Sierra Espuña sigue sin localizar**, que es el primer paso y
-   el barato — y desde el 2026-08-22 hay índice para hacerlo (arriba). Bajar el umbral NO es una
+   del Mar Menor, el Decreto 252/2022 de los relieves centro-orientales y el PORN de 1995 de Sierra
+   Espuña-Gebas—, y **el documento de Carrascoy, Cabo Cope y Cuatro Calas sigue sin localizar**, que
+   es el primer paso y el barato — y desde el 2026-08-22 hay índice para hacerlo (arriba). Bajar el
+   umbral NO es una
    alternativa: devolvería el ruido de vuelo que este cambio quitó.
 2. **`murcia_status` está atado a Murcia.** Es el bloqueo real del rollout nacional a nivel de campo:
    cada comunidad tiene su propio catálogo de especies amenazadas. Hay que renombrarlo a algo como

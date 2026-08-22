@@ -68,7 +68,7 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    generaliza igual: «nadie lo ha mirado» no es «no está amenazada», y publicar de más no se puede
    deshacer. Ver [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md).
 
-## 2. Trece cosas que fallan EN VERDE
+## 2. Catorce cosas que fallan EN VERDE
 
 Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 [`Docs/runbook/ORDEN-DE-OPERACIONES.md`](Docs/runbook/ORDEN-DE-OPERACIONES.md).
@@ -140,6 +140,19 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
   Carrascoy había una ardilla roja y un algarrobo fichados en manantiales petrificantes. Se repasa
   con `npm run especies:habitats`; el **40 % de los enlaces medibles se sostiene sobre un solo
   registro** y eso sigue abierto (deuda nº 22).
+- **Un anexo normativo cuyo ÁMBITO desborda el espacio metía en su catálogo las especies del espacio
+  grande.** El nivel 1 —entrar sin exigirle nada a GBIF— se apoya en que la norma afirme la
+  pertenencia a *este* espacio, y el `_esquema` de `anexos-normativos.json` ya avisaba de que el
+  ámbito «no siempre es el del espacio»… pero eso solo se escribía en el `source` de la ficha, sin
+  cambiar ninguna decisión. El PORN de 1995 es a la vez el de **Sierra Espuña** y el de los
+  **Barrancos de Gebas**: un inventario para 19.679 ha de las que el Paisaje Protegido son 1.875
+  (9,5 %). Con el nivel 1 a secas, Gebas salía con **183 fichas** —el acentor alpino, el
+  treparriscos, el mirlo capiblanco y el piquituerto en unas cárcavas semiáridas de 200 m—, casi las
+  188 de la sierra entera, y sin un solo aviso. Se tapó el 2026-08-22 con `fuente.exigeConstancia`:
+  puesto ese campo, el anexo deja de ser puerta y pasa a exigir que GBIF lo corrobore dentro de los
+  polígonos, como el nivel 2 (86 fichas). Es opcional y por defecto `false`, así que **ningún espacio
+  anterior cambia** — pero el del Mar Menor, que inventaría seis espacios más la franja marina, hay
+  que mirarlo con este campo en la mano.
 
 ---
 

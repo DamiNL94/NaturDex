@@ -9,6 +9,8 @@
         "anexo": "Qué anexo o apartado concreto contiene la lista",
         "cita": "La MISMA referencia, abreviada para caber en el `source` de una ficha de especie. `norma` es un párrafo entero y ahí no cabe; sin esto, el respaldo documental se queda en el informe de la selección y no llega a la ficha que ve el usuario",
         "ambito": "QUÉ PERÍMETRO inventaría la norma, redactado para encajar detrás de «la norma la enumera en …». No siempre es el del espacio: el Plan del Altiplano inventaría para Sierra de Salinas la ZEC ES6200008 (1.337,8 ha), que solapa el Paisaje Protegido (2.395,4 ha) sin coincidir con él, y decir «la enumera en este espacio» sería afirmar de más. Obligatorio cuando el anexo se consulta: sin él la ficha lo dice sin precisar, en vez de dar por hecho que coinciden",
+        "exigeConstancia": "true cuando el `ambito` de arriba EXCEDE al del espacio. Entonces el anexo deja de ser puerta de entrada —nivel 1, que entra sin exigirle nada a GBIF— y pasa a ser respaldo documental que GBIF tiene que corroborar dentro de los polígonos, igual que el nivel 2. Sin esto, un plan que inventaría un ámbito diez veces mayor mete en el catálogo del espacio pequeño todas las especies del grande, y lo hace en verde (opcional; por defecto false)",
+        "exigeConstanciaPorque": "Por qué el ámbito excede al espacio y qué costaba no decirlo. Obligatorio si `exigeConstancia` es true",
         "consultado": "AAAA-MM-DD en que se leyó el documento"
       },
       "especies": [
@@ -9411,6 +9413,1150 @@
         {
           "scientificName": "Pennisetum setaceum",
           "nota": "Flora incluida en el Catálogo Español de especies exóticas invasoras; la Tabla 12 del plan la cita en la ZEC."
+        }
+      ]
+    },
+    "barrancos-de-gebas": {
+      "fuente": {
+        "norma": "Decreto n.º 13/1995, de 31 de marzo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Sierra Espuña (incluido Barrancos de Gebas) y se declara como Paisaje Protegido los Barrancos de Gebas. Su artículo 2 es el que declara el espacio; el Plan que aprueba su artículo 1 es el instrumento de gestión de los dos espacios a la vez.",
+        "boletin": "BORM n.º 85, de 11 de abril de 1995",
+        "url": "https://murcianatural.carm.es/documents/33032/40393/PORN%20Sierra%20Espu%C3%B1a-Barrancos%20de%20Gebas/f1b47d66-0d89-889a-5274-57fe56b0b735",
+        "anexo": "Memoria de Ordenación, Título II, Capítulo I, Sección 2 «Catalogación de especies amenazadas»: artículo 13 «Especies vegetales protegidas» —13.1.a, 15 taxones de los anexos de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia, y 13.1.b, 12 más que añade el propio PORN—, artículo 14 «Especies vegetales catalogadas» —14.1.a, 4 árboles y arbustos raros a escala local y regional, categoría «De interés especial»— y artículo 16 «Especies de fauna catalogadas» —16.1.a, las del Catálogo Nacional de Especies Amenazadas presentes en el ámbito del Plan (5 anfibios, 13 reptiles, 94 aves y 16 mamíferos), y 16.1.b, las que el PORN añade por su cuenta (11 invertebrados, 1 anfibio, 2 reptiles, 7 aves y 8 mamíferos)—. El artículo 14.1.b y el artículo 13.1.a en su encabezamiento REMITEN a otros catálogos sin enumerar, así que no dan de alta nada. Los ANEXOS 1 a 4 del PORN no traen inventario biológico.",
+        "cita": "Decreto n.º 13/1995, de 31 de marzo, PORN de Sierra Espuña (incluido Barrancos de Gebas), artículos 13, 14 y 16 (BORM n.º 85, de 11 de abril de 1995)",
+        "ambito": "el ámbito ENTERO del PORN, 19.679 ha, del que el Paisaje Protegido de los Barrancos de Gebas son 1.875 (9,5 %) y el resto el Parque Regional de Sierra Espuña y su periferia. El artículo 16.1.a dice literalmente «aquellas presentes en el ámbito del Plan», y el Plan NO reparte las especies entre los dos espacios: solo separa los hábitats, en su artículo 17",
+        "exigeConstancia": true,
+        "exigeConstanciaPorque": "El ámbito del inventario son las 19.679 ha del plan y este espacio son 1.875 (9,5 %): la norma NO afirma que la especie esté en el Paisaje Protegido, dice que está en alguna parte del ámbito. Con el nivel 1 a secas entraban 183 fichas —el acentor alpino, el treparriscos, el mirlo capiblanco, el piquituerto y la ardilla de Sierra Espuña entre ellas—, casi las 188 del macizo entero, en unas cárcavas semiáridas de 200-400 m. Así que aquí el anexo no es puerta: respalda, y GBIF tiene que corroborar dentro de los polígonos, que es lo que se le exige al nivel 2. Lo que la norma enumera y el barrido no confirma sigue saliendo en `anexo_sin_constancia`.",
+        "consultado": "2026-08-22",
+        "nota": "La transcripción es verbatim, erratas incluidas, y 21 de las 188 entradas llevan `nombreCorregido` porque sin él no casan con ninguna autoridad: 17 son erratas de imprenta («Pistacea» por Pistacia, «Cyrcus» por Circus, «Rinolophus» por Rhinolophus, «Certhia bachydactyla», «Aeghitalos», «Alcedo athis», «Pseudocharaza», «Chortippus», «Falco columbaris», «Salix pedicelata», «Pyrrhocorax Pyrrhocorax»…), dos son subespecies que ninguna de las dos autoridades ficha —«Chersotis margaritacea ssp. espunensis» y «Euchorthippus pulvinatus ssp. gallicus»— y se llevan a la especie, una es una grafía en desuso («Felis sylvestris») y la última es el zarcero pálido, que necesita dos pasos y está explicado en su entrada. Cada corrección se comprobó contra EIDOS y GBIF el 2026-08-22, ninguna de memoria. LO QUE HAY QUE TENER DELANTE AL USAR ESTA LISTA: su ámbito es el de las 19.679 ha del plan, y el 90 % de esa superficie es Sierra Espuña —un macizo forestal que pasa de los 1.500 m—, mientras el Paisaje Protegido son 1.875 ha de cárcavas sobre margas yesíferas a 200-400 m. El acentor alpino, el treparriscos, el mirlo capiblanco, el piquituerto o la ardilla de Sierra Espuña están en esta lista y NO son de los barrancos: la norma nunca dijo que lo fueran. Por eso la selección de este espacio excluye a mano, en `exclusiones-especies.json`, las entradas de nivel 1 que el barrido de GBIF no sitúa dentro de sus polígonos y que son propias del macizo forestal; lo que GBIF sí confirma dentro se queda, corroborado. Los 11 invertebrados se transcriben porque la norma los enumera, aunque el alcance del catálogo (flora vascular y vertebrados) los deje fuera."
+      },
+      "especies": [
+        {
+          "scientificName": "Erica erigena",
+          "grupo": "Flora",
+          "articulo": "13.1.a"
+        },
+        {
+          "scientificName": "Erica arborea",
+          "grupo": "Flora",
+          "articulo": "13.1.a"
+        },
+        {
+          "scientificName": "Caralluma europaea",
+          "grupo": "Flora",
+          "articulo": "13.1.a"
+        },
+        {
+          "scientificName": "Pistacea lentiscus",
+          "grupo": "Flora",
+          "articulo": "13.1.a",
+          "nombreCorregido": "Pistacia lentiscus",
+          "nota": "errata de imprenta del género: la norma escribe «Pistacea». EIDOS y GBIF resuelven «Pistacia lentiscus» EXACT."
+        },
+        {
+          "scientificName": "Pistacea terebinthus",
+          "grupo": "Flora",
+          "articulo": "13.1.a",
+          "nombreCorregido": "Pistacia terebinthus",
+          "nota": "la misma errata del género que en la entrada anterior."
+        },
+        {
+          "scientificName": "Juniperus phoenicea",
+          "grupo": "Flora",
+          "articulo": "13.1.a"
+        },
+        {
+          "scientificName": "Juniperus oxycedrus",
+          "grupo": "Flora",
+          "articulo": "13.1.a"
+        },
+        {
+          "scientificName": "Ephedra nebrodensis",
+          "grupo": "Flora",
+          "articulo": "13.1.a"
+        },
+        {
+          "scientificName": "Ephedra fragilis",
+          "grupo": "Flora",
+          "articulo": "13.1.a"
+        },
+        {
+          "scientificName": "Cotoneaster granatensis",
+          "grupo": "Flora",
+          "articulo": "13.1.a"
+        },
+        {
+          "scientificName": "Quercus rotundifolia",
+          "grupo": "Flora",
+          "articulo": "13.1.a"
+        },
+        {
+          "scientificName": "Quercus coccifera",
+          "grupo": "Flora",
+          "articulo": "13.1.a"
+        },
+        {
+          "scientificName": "Rhamnus lycioides",
+          "grupo": "Flora",
+          "articulo": "13.1.a"
+        },
+        {
+          "scientificName": "Rhamnus alaternus",
+          "grupo": "Flora",
+          "articulo": "13.1.a"
+        },
+        {
+          "scientificName": "Olea europaea ssp. sylvestris",
+          "grupo": "Flora",
+          "articulo": "13.1.a",
+          "nombreCorregido": "Olea europaea subsp. sylvestris",
+          "nota": "la norma abrevia el rango «ssp.»; con «subsp.» EIDOS lo da por sinónimo de Olea europaea L. subsp. europaea (taxonid 6645) y GBIF lo resuelve EXACT."
+        },
+        {
+          "scientificName": "Arctostaphylos uva-ursi",
+          "grupo": "Flora",
+          "articulo": "13.1.b"
+        },
+        {
+          "scientificName": "Asplenium onopteris",
+          "grupo": "Flora",
+          "articulo": "13.1.b"
+        },
+        {
+          "scientificName": "Athamanta hispanica",
+          "grupo": "Flora",
+          "articulo": "13.1.b"
+        },
+        {
+          "scientificName": "Dictamnus hispanica",
+          "grupo": "Flora",
+          "articulo": "13.1.b",
+          "nombreCorregido": "Dictamnus hispanicus",
+          "nota": "el epíteto no concuerda con el género: EIDOS y GBIF solo conocen «Dictamnus hispanicus» Willk."
+        },
+        {
+          "scientificName": "Genista lobelii",
+          "grupo": "Flora",
+          "articulo": "13.1.b"
+        },
+        {
+          "scientificName": "Hypericum caprifolium",
+          "grupo": "Flora",
+          "articulo": "13.1.b"
+        },
+        {
+          "scientificName": "Iris lutescens",
+          "grupo": "Flora",
+          "articulo": "13.1.b"
+        },
+        {
+          "scientificName": "Lonicera splendida",
+          "grupo": "Flora",
+          "articulo": "13.1.b"
+        },
+        {
+          "scientificName": "Myrtus communis",
+          "grupo": "Flora",
+          "articulo": "13.1.b"
+        },
+        {
+          "scientificName": "Salix pedicelata",
+          "grupo": "Flora",
+          "articulo": "13.1.b",
+          "nombreCorregido": "Salix pedicellata",
+          "nota": "errata de imprenta: falta una l. «Salix pedicellata» Desf. resuelve EXACT en EIDOS y GBIF."
+        },
+        {
+          "scientificName": "Viburnum tinus",
+          "grupo": "Flora",
+          "articulo": "13.1.b"
+        },
+        {
+          "scientificName": "Fumana fontanesii",
+          "grupo": "Flora",
+          "articulo": "13.1.b"
+        },
+        {
+          "scientificName": "Quercus faginea",
+          "grupo": "Flora",
+          "articulo": "14.1.a"
+        },
+        {
+          "scientificName": "Arbutus unedo",
+          "grupo": "Flora",
+          "articulo": "14.1.a"
+        },
+        {
+          "scientificName": "Acer monspessulanum",
+          "grupo": "Flora",
+          "articulo": "14.1.a"
+        },
+        {
+          "scientificName": "Crataegus monogyna",
+          "grupo": "Flora",
+          "articulo": "14.1.a"
+        },
+        {
+          "scientificName": "Pleurodeles waltl",
+          "grupo": "Anfibios",
+          "nombreComun": "gallipato",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Alytes obstetricans",
+          "grupo": "Anfibios",
+          "nombreComun": "sapo partero",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Pelobates cultripes",
+          "grupo": "Anfibios",
+          "nombreComun": "sapo de espuelas",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Pelodytes punctatus",
+          "grupo": "Anfibios",
+          "nombreComun": "sapillo moteado",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Bufo calamita",
+          "grupo": "Anfibios",
+          "nombreComun": "sapo corredor",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Hemidactylus turcicus",
+          "grupo": "Reptiles",
+          "nombreComun": "salamanquesa rosada",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Tarentola mauritanica",
+          "grupo": "Reptiles",
+          "nombreComun": "salamanquesa común",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Blanus cinereus",
+          "grupo": "Reptiles",
+          "nombreComun": "culebrilla ciega",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Acanthodactylus erythrurus",
+          "grupo": "Reptiles",
+          "nombreComun": "lagartija colirroja",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Podarcis hispanica",
+          "grupo": "Reptiles",
+          "nombreComun": "lagartija ibérica",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Psammodromus algirus",
+          "grupo": "Reptiles",
+          "nombreComun": "lagartija colilarga",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Psammodromus hispanicus",
+          "grupo": "Reptiles",
+          "nombreComun": "lagartija cenicienta",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Chalcides bedriagai",
+          "grupo": "Reptiles",
+          "nombreComun": "eslizón ibérico",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Coluber hippocrepis",
+          "grupo": "Reptiles",
+          "nombreComun": "culebra de herradura",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Coronella girondica",
+          "grupo": "Reptiles",
+          "nombreComun": "culebra lisa meridional",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Elaphe scalaris",
+          "grupo": "Reptiles",
+          "nombreComun": "culebra de escalera",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Macroprotodon cucullatus",
+          "grupo": "Reptiles",
+          "nombreComun": "culebra de cogulla",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Natrix maura",
+          "grupo": "Reptiles",
+          "nombreComun": "culebra viperina",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Pernis apivorus",
+          "grupo": "Aves",
+          "nombreComun": "halcón abejero",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Milvus migrans",
+          "grupo": "Aves",
+          "nombreComun": "milano negro",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Accipiter gentilis",
+          "grupo": "Aves",
+          "nombreComun": "azor",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Accipiter nisus",
+          "grupo": "Aves",
+          "nombreComun": "gavilán",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Buteo rufinus",
+          "grupo": "Aves",
+          "nombreComun": "ratonero moro",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Buteo buteo",
+          "grupo": "Aves",
+          "nombreComun": "ratonero común",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Hieraaetus pennatus",
+          "grupo": "Aves",
+          "nombreComun": "águila calzada",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Hieraaetus fasciatus",
+          "grupo": "Aves",
+          "nombreComun": "águila perdicera",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Aquila chrysaetos",
+          "grupo": "Aves",
+          "nombreComun": "águila real",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Circaetus gallicus",
+          "grupo": "Aves",
+          "nombreComun": "águila culebrera",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Cyrcus cyaneus",
+          "grupo": "Aves",
+          "nombreComun": "aguilucho pálido",
+          "articulo": "16.1.a",
+          "nombreCorregido": "Circus cyaneus",
+          "nota": "errata de imprenta del género («Cyrcus» por «Circus»); el resto de la lista lo escribe bien en «Circus pygargus»."
+        },
+        {
+          "scientificName": "Circus pygargus",
+          "grupo": "Aves",
+          "nombreComun": "aguilucho cenizo",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Neophron percnopterus",
+          "grupo": "Aves",
+          "nombreComun": "alimoche",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Gyps fulvus",
+          "grupo": "Aves",
+          "nombreComun": "buitre leonado",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Falco peregrinus",
+          "grupo": "Aves",
+          "nombreComun": "halcón peregrino",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Falco subbuteo",
+          "grupo": "Aves",
+          "nombreComun": "alcotán",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Falco columbaris",
+          "grupo": "Aves",
+          "nombreComun": "esmerejón",
+          "articulo": "16.1.a",
+          "nombreCorregido": "Falco columbarius",
+          "nota": "errata de imprenta del epíteto del esmerejón."
+        },
+        {
+          "scientificName": "Falco tinnunculus",
+          "grupo": "Aves",
+          "nombreComun": "cernícalo real",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Charadrius dubius",
+          "grupo": "Aves",
+          "nombreComun": "chorlitejo chico",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Actitis hypoleucos",
+          "grupo": "Aves",
+          "nombreComun": "andarríos chico",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Burhinus oedicnemus",
+          "grupo": "Aves",
+          "nombreComun": "alcaraván",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Cuculus canorus",
+          "grupo": "Aves",
+          "nombreComun": "cuco",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Clamator glandarius",
+          "grupo": "Aves",
+          "nombreComun": "críalo",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Tyto alba",
+          "grupo": "Aves",
+          "nombreComun": "lechuza común",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Bubo bubo",
+          "grupo": "Aves",
+          "nombreComun": "buho real",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Otus scops",
+          "grupo": "Aves",
+          "nombreComun": "autillo",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Athene noctua",
+          "grupo": "Aves",
+          "nombreComun": "mochuelo",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Strix aluco",
+          "grupo": "Aves",
+          "nombreComun": "cárabo",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Caprimulgus ruficollis",
+          "grupo": "Aves",
+          "nombreComun": "chotacabras pardo",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Apus apus",
+          "grupo": "Aves",
+          "nombreComun": "vencejo común",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Apus pallidus",
+          "grupo": "Aves",
+          "nombreComun": "vencejo pálido",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Apus melba",
+          "grupo": "Aves",
+          "nombreComun": "vencejo real",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Alcedo athis",
+          "grupo": "Aves",
+          "nombreComun": "martín pescador",
+          "articulo": "16.1.a",
+          "nombreCorregido": "Alcedo atthis",
+          "nota": "errata de imprenta: falta una t."
+        },
+        {
+          "scientificName": "Merops apiaster",
+          "grupo": "Aves",
+          "nombreComun": "abejaruco",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Coracias garrulus",
+          "grupo": "Aves",
+          "nombreComun": "carraca",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Upupa epops",
+          "grupo": "Aves",
+          "nombreComun": "abubilla",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Picus viridis",
+          "grupo": "Aves",
+          "nombreComun": "pito real",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Galerida cristata",
+          "grupo": "Aves",
+          "nombreComun": "cogujada común",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Galerida theklae",
+          "grupo": "Aves",
+          "nombreComun": "cogujada montesina",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Lullula arborea",
+          "grupo": "Aves",
+          "nombreComun": "totovía",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Alauda arvensis",
+          "grupo": "Aves",
+          "nombreComun": "alondra",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Ptyonoprogne rupestris",
+          "grupo": "Aves",
+          "nombreComun": "avión roquero",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Hirundo rustica",
+          "grupo": "Aves",
+          "nombreComun": "golondrina común",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Delichon urbica",
+          "grupo": "Aves",
+          "nombreComun": "avión común",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Anthus pratensis",
+          "grupo": "Aves",
+          "nombreComun": "bisbita común",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Motacilla cinerea",
+          "grupo": "Aves",
+          "nombreComun": "lavandera cascadeña",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Motacilla alba",
+          "grupo": "Aves",
+          "nombreComun": "lavandera blanca",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Lanius senator",
+          "grupo": "Aves",
+          "nombreComun": "alcaudón común",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Lanius excubitor",
+          "grupo": "Aves",
+          "nombreComun": "alcaudón real",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Troglodytes troglodytes",
+          "grupo": "Aves",
+          "nombreComun": "chochín",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Prunella collaris",
+          "grupo": "Aves",
+          "nombreComun": "acentor alpino",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Prunella modularis",
+          "grupo": "Aves",
+          "nombreComun": "acentor común",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Hippollais pallida",
+          "grupo": "Aves",
+          "nombreComun": "zarcero pálido",
+          "articulo": "16.1.a",
+          "nombreCorregido": "Iduna opaca",
+          "nota": "dos cosas a la vez. La norma escribe «Hippollais» con dos eles, y ni siquiera corregida la errata resuelve: «Hippolais pallida» EIDOS la deja como sinónimo sin nombre aceptado y GBIF la lleva a Iduna pallida, el zarcero pálido ORIENTAL, que no está en la península. El ave a la que la norma pone «Zarcero pálido» es la ibérica, y EIDOS resuelve «Hippolais opaca» → Iduna opaca (taxonid 16398), que es como la sirven hoy las dos autoridades. Comprobado contra EIDOS y GBIF el 2026-08-22."
+        },
+        {
+          "scientificName": "Sylvia hortensis",
+          "grupo": "Aves",
+          "nombreComun": "curruca mirlona",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Sylvia borin",
+          "grupo": "Aves",
+          "nombreComun": "curruca mosquitera",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Sylvia atricapilla",
+          "grupo": "Aves",
+          "nombreComun": "curruca capirotada",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Sylvia communis",
+          "grupo": "Aves",
+          "nombreComun": "curruca zarcera",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Sylvia melanocephala",
+          "grupo": "Aves",
+          "nombreComun": "curruca cabecinegra",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Sylvia undata",
+          "grupo": "Aves",
+          "nombreComun": "curruca rabilarga",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Phylloscopus trochilus",
+          "grupo": "Aves",
+          "nombreComun": "mosquitero musical",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Phylloscopus collybita",
+          "grupo": "Aves",
+          "nombreComun": "mosquitero común",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Phylloscopus bonelli",
+          "grupo": "Aves",
+          "nombreComun": "mosquitero papialbo",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Regulus regulus",
+          "grupo": "Aves",
+          "nombreComun": "reyezuelo sencillo",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Regulus ignicapillus",
+          "grupo": "Aves",
+          "nombreComun": "reyezuelo listado",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Cisticola juncidis",
+          "grupo": "Aves",
+          "nombreComun": "buitrón",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Muscicapa striata",
+          "grupo": "Aves",
+          "nombreComun": "papamoscas gris",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Saxicola torquata",
+          "grupo": "Aves",
+          "nombreComun": "tarabilla común",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Oenanthe oenanthe",
+          "grupo": "Aves",
+          "nombreComun": "collalba gris",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Oenanthe hispanica",
+          "grupo": "Aves",
+          "nombreComun": "collalba rubia",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Oenanthe leucura",
+          "grupo": "Aves",
+          "nombreComun": "collaba negra",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Cercotrichas galactotes",
+          "grupo": "Aves",
+          "nombreComun": "alzacola",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Monticola saxatilis",
+          "grupo": "Aves",
+          "nombreComun": "roquero rojo",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Monticola solitarius",
+          "grupo": "Aves",
+          "nombreComun": "roquero solitario",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Phoenicurus ochruros",
+          "grupo": "Aves",
+          "nombreComun": "colirrojo tizón",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Phoenicurus phoenicurus",
+          "grupo": "Aves",
+          "nombreComun": "colirrojo real",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Erithacus rubecula",
+          "grupo": "Aves",
+          "nombreComun": "petirrojo",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Luscinia megarhynchos",
+          "grupo": "Aves",
+          "nombreComun": "ruiseñor común",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Turdus torquatus",
+          "grupo": "Aves",
+          "nombreComun": "mirlo capiblanco",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Aeghitalos caudatus",
+          "grupo": "Aves",
+          "nombreComun": "mito",
+          "articulo": "16.1.a",
+          "nombreCorregido": "Aegithalos caudatus",
+          "nota": "errata de imprenta del género del mito."
+        },
+        {
+          "scientificName": "Parus cristatus",
+          "grupo": "Aves",
+          "nombreComun": "herrerillo capuchino",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Parus ater",
+          "grupo": "Aves",
+          "nombreComun": "carbonero garrapinos",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Parus caeruleus",
+          "grupo": "Aves",
+          "nombreComun": "herrerillo común",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Parus major",
+          "grupo": "Aves",
+          "nombreComun": "carbonero común",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Tichodroma muraria",
+          "grupo": "Aves",
+          "nombreComun": "treparriscos",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Certhia bachydactyla",
+          "grupo": "Aves",
+          "nombreComun": "agateador común",
+          "articulo": "16.1.a",
+          "nombreCorregido": "Certhia brachydactyla",
+          "nota": "errata de imprenta: falta la r del epíteto."
+        },
+        {
+          "scientificName": "Miliaria calandra",
+          "grupo": "Aves",
+          "nombreComun": "triguero",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Emberiza cia",
+          "grupo": "Aves",
+          "nombreComun": "escribano montesino",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Emberiza cirlus",
+          "grupo": "Aves",
+          "nombreComun": "escribano soteño",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Fringilla coelebs",
+          "grupo": "Aves",
+          "nombreComun": "pinzón vulgar",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Loxia curvirostra",
+          "grupo": "Aves",
+          "nombreComun": "piquituerto",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Passer montanus",
+          "grupo": "Aves",
+          "nombreComun": "gorrión molinero",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Petronia petronia",
+          "grupo": "Aves",
+          "nombreComun": "gorrión chillón",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Oriolus oriolus",
+          "grupo": "Aves",
+          "nombreComun": "oropéndola",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Pyrrhocorax Pyrrhocorax",
+          "grupo": "Aves",
+          "nombreComun": "chova piquirroja",
+          "articulo": "16.1.a",
+          "nombreCorregido": "Pyrrhocorax pyrrhocorax",
+          "nota": "la norma repite el género con mayúscula en el epíteto; el binomio correcto lo lleva en minúscula."
+        },
+        {
+          "scientificName": "Aethechinus algirus",
+          "grupo": "Mamíferos",
+          "nombreComun": "erizo moruno",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Rhinolophus ferrumequinum",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago grande de herradura",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Rhinolophus hipposideros",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago pequeño de herradura",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Rhinolophus euryale",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago mediterráneo de herradura",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Rinolophus mehelyi",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago mediano de herradura",
+          "articulo": "16.1.a",
+          "nombreCorregido": "Rhinolophus mehelyi",
+          "nota": "errata de imprenta: falta la h del género, que las otras tres entradas de Rhinolophus sí escriben bien."
+        },
+        {
+          "scientificName": "Myotis myotis",
+          "grupo": "Mamíferos",
+          "nombreComun": "ratonero grande",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Myotis blythii",
+          "grupo": "Mamíferos",
+          "nombreComun": "ratonero mediano",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Myotis daubentonii",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago ribereño",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Myotis nattereri",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago de Natterer",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Myotis emarginatus",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago orejirroto",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Eptesicus serotinus",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago hortelano",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Pipistrellus pipistrellus",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago común",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Plecotus austriacus",
+          "grupo": "Mamíferos",
+          "nombreComun": "orejudo meridional",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Miniopterus schreibersii",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago troglodita",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Tadarida teniotis",
+          "grupo": "Mamíferos",
+          "nombreComun": "murciélago rabudo",
+          "articulo": "16.1.a"
+        },
+        {
+          "scientificName": "Felis sylvestris",
+          "grupo": "Mamíferos",
+          "nombreComun": "gato montés",
+          "articulo": "16.1.a",
+          "nombreCorregido": "Felis silvestris",
+          "nota": "grafía en desuso del epíteto: EIDOS y GBIF fichan «Felis silvestris» Schreber, 1777."
+        },
+        {
+          "scientificName": "Calliptamus wattenwylianus",
+          "grupo": "Invertebrados",
+          "articulo": "16.1.b"
+        },
+        {
+          "scientificName": "Chortippus apicalis",
+          "grupo": "Invertebrados",
+          "articulo": "16.1.b",
+          "nombreCorregido": "Chorthippus apicalis",
+          "nota": "errata de imprenta: falta la h del género."
+        },
+        {
+          "scientificName": "Chortippus binotatus",
+          "grupo": "Invertebrados",
+          "articulo": "16.1.b",
+          "nombreCorregido": "Chorthippus binotatus",
+          "nota": "la misma errata del género que en la entrada anterior."
+        },
+        {
+          "scientificName": "Chorthippus juncundus",
+          "grupo": "Invertebrados",
+          "articulo": "16.1.b",
+          "nombreCorregido": "Chorthippus jucundus",
+          "nota": "errata de imprenta: sobra una n en el epíteto."
+        },
+        {
+          "scientificName": "Euchorthippus pulvinatus ssp. gallicus",
+          "grupo": "Invertebrados",
+          "articulo": "16.1.b",
+          "nombreCorregido": "Euchorthippus pulvinatus",
+          "nota": "EIDOS no tiene la subespecie: la especie sí, con taxonid 64331. GBIF sí resuelve el trinomio."
+        },
+        {
+          "scientificName": "Omocestus femoralis",
+          "grupo": "Invertebrados",
+          "articulo": "16.1.b"
+        },
+        {
+          "scientificName": "Omocestus llorenteae",
+          "grupo": "Invertebrados",
+          "articulo": "16.1.b"
+        },
+        {
+          "scientificName": "Aricia morronensis",
+          "grupo": "Invertebrados",
+          "articulo": "16.1.b"
+        },
+        {
+          "scientificName": "Cupido carswelli",
+          "grupo": "Invertebrados",
+          "articulo": "16.1.b"
+        },
+        {
+          "scientificName": "Chersotis margaritacea ssp. espunensis",
+          "grupo": "Invertebrados",
+          "articulo": "16.1.b",
+          "nombreCorregido": "Chersotis margaritacea",
+          "nota": "la subespecie endémica de Sierra Espuña no figura en EIDOS ni en GBIF; la especie sí (EIDOS 50596, GBIF 1766721). La memoria descriptiva del PORN (§1.3.1.6) la presenta como «endémica de la Sierra», es decir, de Sierra Espuña."
+        },
+        {
+          "scientificName": "Pseudocharaza hippolyte",
+          "grupo": "Invertebrados",
+          "articulo": "16.1.b",
+          "nombreCorregido": "Pseudochazara hippolyte",
+          "nota": "errata de imprenta del género («Pseudocharaza» por «Pseudochazara»)."
+        },
+        {
+          "scientificName": "Salamandra salamandra",
+          "grupo": "Anfibios",
+          "nombreComun": "salamandra",
+          "articulo": "16.1.b"
+        },
+        {
+          "scientificName": "Mauremys caspica",
+          "grupo": "Reptiles",
+          "nombreComun": "galápago leproso",
+          "articulo": "16.1.b"
+        },
+        {
+          "scientificName": "Malpolon monspessulanus",
+          "grupo": "Reptiles",
+          "nombreComun": "culebra bastarda",
+          "articulo": "16.1.b"
+        },
+        {
+          "scientificName": "Vanellus vanellus",
+          "grupo": "Aves",
+          "nombreComun": "avefría",
+          "articulo": "16.1.b"
+        },
+        {
+          "scientificName": "Gallinago gallinago",
+          "grupo": "Aves",
+          "nombreComun": "agachadiza chica",
+          "articulo": "16.1.b"
+        },
+        {
+          "scientificName": "Scolopax rusticola",
+          "grupo": "Aves",
+          "nombreComun": "becada",
+          "articulo": "16.1.b"
+        },
+        {
+          "scientificName": "Columba oenas",
+          "grupo": "Aves",
+          "nombreComun": "paloma zurita",
+          "articulo": "16.1.b"
+        },
+        {
+          "scientificName": "Carduelis spinus",
+          "grupo": "Aves",
+          "nombreComun": "lúgano",
+          "articulo": "16.1.b"
+        },
+        {
+          "scientificName": "Garrulus glandarius",
+          "grupo": "Aves",
+          "nombreComun": "arrendajo",
+          "articulo": "16.1.b"
+        },
+        {
+          "scientificName": "Corvus corax",
+          "grupo": "Aves",
+          "nombreComun": "cuervo",
+          "articulo": "16.1.b"
+        },
+        {
+          "scientificName": "Erinaceus europaeus",
+          "grupo": "Mamíferos",
+          "nombreComun": "erizo común",
+          "articulo": "16.1.b"
+        },
+        {
+          "scientificName": "Sciurus vulgaris",
+          "grupo": "Mamíferos",
+          "nombreComun": "ardilla",
+          "articulo": "16.1.b"
+        },
+        {
+          "scientificName": "Sciurus vulgaris hoffmani",
+          "grupo": "Mamíferos",
+          "nombreComun": "ardilla de Sierra Espuña",
+          "articulo": "16.1.b",
+          "nombreCorregido": "Sciurus vulgaris hoffmanni",
+          "nota": "errata de imprenta: la subespecie que describió Valverde en 1968 es «hoffmanni», con dos enes. La ardilla de Sierra Espuña, subespecie endémica del macizo. La norma la enumera además de «Sciurus vulgaris», que ya está en esta misma lista."
+        },
+        {
+          "scientificName": "Meles meles",
+          "grupo": "Mamíferos",
+          "nombreComun": "tejón",
+          "articulo": "16.1.b"
+        },
+        {
+          "scientificName": "Mustela nivalis",
+          "grupo": "Mamíferos",
+          "nombreComun": "comadreja",
+          "articulo": "16.1.b"
+        },
+        {
+          "scientificName": "Putorius putorius",
+          "grupo": "Mamíferos",
+          "nombreComun": "turón",
+          "articulo": "16.1.b"
+        },
+        {
+          "scientificName": "Martes foina",
+          "grupo": "Mamíferos",
+          "nombreComun": "garduña",
+          "articulo": "16.1.b"
+        },
+        {
+          "scientificName": "Genetta genetta",
+          "grupo": "Mamíferos",
+          "nombreComun": "gineta",
+          "articulo": "16.1.b"
         }
       ]
     },

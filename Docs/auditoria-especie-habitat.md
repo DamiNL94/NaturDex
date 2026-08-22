@@ -14,8 +14,9 @@ anota, está en la cabecera de `Tools/catalogo-nacional/auditoria-especie-habita
 
 | Espacio | Enlaces | Contradicción de medio | Taxón volador enlazado por sus ocurrencias | Sin ninguna ocurrencia en ese polígono | Constancia mínima (aviso) | No evaluable | Característica del HIC (Atlas) | Respaldado | Barrido GBIF |
 |---|---|---|---|---|---|---|---|---|---|
+| barrancos-de-gebas | 30 | — | — | — | — | — | 4 | 26 | sí |
 | cabezo-gordo | 22 | — | — | — | — | — | 4 | 18 | sí |
-| cabo-cope-puntas-calnegre | 189 | — | — | — | — | 167 | 22 | — | no |
+| cabo-cope-puntas-calnegre | 189 | — | — | — | — | 166 | 23 | — | no |
 | calblanque-monte-cenizas-pena-aguila | 454 | — | — | — | — | 5 | 14 | 435 | sí |
 | carrascoy-y-el-valle | 1258 | — | — | — | — | 3 | 18 | 1237 | sí |
 | cuatro-calas | 271 | — | — | — | — | 259 | 12 | — | no |
@@ -26,12 +27,12 @@ anota, está en la cabecera de `Tools/catalogo-nacional/auditoria-especie-habita
 | sierra-de-el-carche | 1094 | — | — | — | — | — | 14 | 1080 | sí |
 | sierra-de-la-pila | 677 | — | — | — | — | — | 17 | 660 | sí |
 | sierra-de-las-moreras | 103 | — | — | — | — | — | 14 | 89 | sí |
-| sierra-de-salinas | 178 | — | — | — | — | — | 2 | 176 | sí |
+| sierra-de-salinas | 178 | — | — | — | — | — | 3 | 175 | sí |
 | sierra-espuna | 689 | — | — | — | — | 658 | 31 | — | no |
 | sotos-y-bosques-de-ribera-de-canaverosa | 49 | — | — | — | — | — | 20 | 29 | sí |
-| **total** | **5865** | **0** | **0** | **0** | **0** | **1103** | **197** | **4565** | |
+| **total** | **5895** | **0** | **0** | **0** | **0** | **1102** | **203** | **4590** | |
 
-**Se retiran 0 enlaces de 5865.** Los 1103 no evaluables **no se tocan**:
+**Se retiran 0 enlaces de 5895.** Los 1102 no evaluables **no se tocan**:
 quedan aquí escritos como hueco a contrastar, que es lo que manda la regla nº 2 del `CLAUDE.md`.
 
 > Este informe es **el estado de hoy, no un histórico**: se regenera entero en cada pasada, igual
@@ -50,6 +51,7 @@ así se reparte hoy:
 
 | Espacio | Enlaces medibles | 1 occ. | 2 occ. | 3-4 occ. | 5-9 occ. | 10+ occ. | Sobre un solo registro |
 |---|---|---|---|---|---|---|---|
+| barrancos-de-gebas | 26 | 19 | 3 | 4 | 0 | 0 | 73 % |
 | cabezo-gordo | 18 | 16 | 0 | 2 | 0 | 0 | 89 % |
 | calblanque-monte-cenizas-pena-aguila | 435 | 217 | 96 | 53 | 43 | 26 | 50 % |
 | carrascoy-y-el-valle | 1237 | 332 | 256 | 255 | 207 | 187 | 27 % |
@@ -60,9 +62,9 @@ así se reparte hoy:
 | sierra-de-el-carche | 1080 | 708 | 174 | 65 | 58 | 75 | 66 % |
 | sierra-de-la-pila | 660 | 146 | 238 | 128 | 91 | 57 | 22 % |
 | sierra-de-las-moreras | 89 | 55 | 14 | 16 | 4 | 0 | 62 % |
-| sierra-de-salinas | 176 | 60 | 64 | 24 | 23 | 5 | 34 % |
+| sierra-de-salinas | 175 | 59 | 64 | 24 | 23 | 5 | 34 % |
 | sotos-y-bosques-de-ribera-de-canaverosa | 29 | 20 | 6 | 2 | 1 | 0 | 69 % |
-| **total** | **4565** | **2005** | **1013** | **646** | **510** | **391** | **44 %** |
+| **total** | **4590** | **2023** | **1016** | **650** | **510** | **391** | **44 %** |
 
 Subir el listón a dos ocurrencias es una decisión de producto, no de auditoría: dejaría sin
 ningún hábitat del que colgar a más de la mitad del catálogo de El Carche, y una especie sin
@@ -71,9 +73,9 @@ con `--umbral 2`.
 
 ## cabo-cope-puntas-calnegre
 
-### No evaluable — 167 (se conservan)
+### No evaluable — 166 (se conservan)
 
-Los 167, por el mismo motivo: el espacio no tiene barrido de GBIF versionado.
+Los 166, por el mismo motivo: el espacio no tiene barrido de GBIF versionado.
 
 Se arregla con `npm run gbif:habitats -- --park cabo-cope-puntas-calnegre --json Tools/catalogo-nacional/out/cabo-cope-puntas-calnegre-gbif.json` (necesita red) y
 volviendo a pasar la auditoría.

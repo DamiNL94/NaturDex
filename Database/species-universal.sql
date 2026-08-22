@@ -10,6 +10,1218 @@ SET NAMES utf8mb4;
 -- empaquetado: sin aplicar esto, un despliegue con backend seguiría sirviendo los textos viejos.
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cambrón',
+  s.primary_habitat = 'Matorral costero y suelos salinos y nitrificados de clima cálido',
+  s.description = 'Arbusto de ramas enmarañadas y espinosas, con hojitas carnosas agrupadas en manojos. Sus flores son pequeñas, tubulares y de color violeta pálido, y da bayas rojas que comen muchas aves. Forma setos impenetrables que dan refugio a pájaros y reptiles.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ramas enredadas entre sí y terminadas en espina
+Hojas carnosas en manojitos a lo largo de la rama
+Bayas rojas pequeñas y flores tubulares violáceas',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lycium_intrincatum_(flor).JPG?width=1280',
+  s.image_attribution = 'ANE (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Lycium intricatum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Salamanquesa común',
+  s.primary_habitat = 'Pendientes rocosas calcícolas con vegetación casmofítica',
+  s.description = 'Gecko robusto de piel tuberculada, activo al anochecer sobre roquedos, muros y cortados, donde caza insectos atraídos por la luz.',
+  s.description_source = NULL,
+  s.identification_tips = 'Piel rugosa con tubérculos
+Activa al atardecer
+Trepa por rocas y muros',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/605672084/original.jpg',
+  s.image_attribution = 'jrodben (CC BY-NC 4.0) · GBIF',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Tarentola mauritanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra de herradura',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Culebra ágil y trepadora con dibujo dorsal en herradura, ligada a matorrales termófilos y roquedos soleados del sureste ibérico.',
+  s.description_source = NULL,
+  s.identification_tips = 'Manchas dorsales en herradura
+Ágil y trepadora
+Inofensiva para las personas',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hemorrhois_hippocrepis_121004.jpg?width=1280',
+  s.image_attribution = 'Accipiter (R. Altenkamp, Berlin) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Hemorrhois hippocrepis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pino carrasco',
+  s.primary_habitat = 'Laderas secas y soleadas sobre calizas y margas, en clima mediterráneo cálido',
+  s.description = 'Pino de copa clara e irregular y follaje de un verde pálido, el más resistente a la sequía y a los suelos pobres de los pinos ibéricos. Sus piñas, alargadas y asimétricas, quedan colgadas años en la rama y liberan las semillas tras los incendios, lo que le permite recolonizar rápido.',
+  s.description_source = NULL,
+  s.identification_tips = 'Copa irregular y poco densa, de verde claro
+Piñas asimétricas y persistentes, apuntando hacia atrás
+Corteza clara y agrietada, rojiza en las ramas jóvenes',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pino_secolare_-_Castelleone_di_Suasa.JPG?width=1280',
+  s.image_attribution = 'Accurimbono (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Pinus halepensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cinomorio',
+  s.primary_habitat = 'Saladares y matorrales halonitrófilos',
+  s.description = 'Planta parásita sin clorofila, de aspecto de maza rojiza, que crece sobre las raíces de quenopodiáceas halófilas de los saladares y estepas salinas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Inflorescencia carnosa rojo-oscura en maza
+Sin hojas verdes (parásita)
+Aparece sobre raíces de plantas halófilas',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cynomorium_coccineum_vMH375.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 5,
+  s.rarity_basis = NULL
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Cynomorium coccineum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Salamanquesa rosada',
+  s.primary_habitat = 'Pendientes rocosas calcícolas con vegetación casmofítica',
+  s.description = 'Gecko pequeño y translúcido de tonos rosados, de hábitos nocturnos, que se refugia en grietas de roquedos, muros de piedra y ruinas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Piel rosada casi translúcida
+Cola con anillos espinosos
+Nocturna y discreta',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hemidactylus_turcicus_on_a_wall_in_Greece.jpg?width=1280',
+  s.image_attribution = 'Koppi2 (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Hemidactylus turcicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cerrillo',
+  s.primary_habitat = 'Laderas secas, ribazos y pastizales sobre suelos pedregosos',
+  s.description = 'Gramínea perenne que forma matas y espiga en verano, cuando el resto del pastizal ya está agostado. Sus espiguillas van por parejas, cubiertas de pelos rojizos y con aristas retorcidas. Da al paisaje un tono dorado rojizo a final de verano.',
+  s.description_source = NULL,
+  s.identification_tips = 'Espiguillas peludas agrupadas por parejas
+Aristas retorcidas y acodadas
+Espiga en verano, cuando lo demás está seco',
+  s.seasonality = 'Verano y otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hyparrhenia_hirta_Habitus_ValledeAlcudia.jpg?width=1280',
+  s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Hyparrhenia hirta';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Siempreviva insigne',
+  s.primary_habitat = 'Suelos margosos y yesosos salinos, en estepas y taludes áridos',
+  s.description = 'Una de las siemprevivas más vistosas: sus inflorescencias forman un ramillete denso de un lila rosado intenso que destaca sobre el gris de las margas. Es un endemismo del sureste ibérico, ligado a suelos salinos y yesosos, y muy usado en seco como flor ornamental.',
+  s.description_source = NULL,
+  s.identification_tips = 'Floración densa y de lila rosado vivo, muy llamativa
+Hojas en roseta basal, gruesas y de borde ondulado
+Sobre margas y yesos claros, en terreno casi desnudo',
+  s.seasonality = 'Final de primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_insigne.jpg?width=1280',
+  s.image_attribution = 'ANE (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Limonium insigne';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Albardín',
+  s.primary_habitat = 'Estepas salinas, margas y suelos yesosos secos; forma albardinales',
+  s.description = 'Gramínea perenne de hojas duras y punzantes que forma matas separadas sobre suelos salinos y margosos donde poco más prospera. Su inflorescencia es inconfundible: una espata blanca y sedosa que envuelve las flores como un capuchón de papel.',
+  s.description_source = NULL,
+  s.identification_tips = 'Espata blanca y sedosa envolviendo la espiga
+Hojas rígidas terminadas en punta punzante
+Matas espaciadas sobre suelo desnudo y claro',
+  s.seasonality = 'Todo el año (espigado en primavera)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lygeum_spartum-1.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Lygeum spartum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra bastarda',
+  s.primary_habitat = 'Matorral litoral y laderas secas',
+  s.description = 'La culebra más grande de la península, de hasta dos metros y medio, con un aspecto inconfundible: ojos grandes de pupila redonda bajo unas escamas salientes que le dan «cejas» y expresión de enfado. Es diurna, muy rápida y venenosa, pero con los colmillos al fondo de la boca, por lo que no supone riesgo si no se la manipula.',
+  s.description_source = NULL,
+  s.identification_tips = 'Escamas prominentes sobre los ojos, como cejas
+Ojo grande con pupila redonda y iris amarillento
+Adultos de dorso pardo oliváceo uniforme; jóvenes muy manchados',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Culebra_bastarda_(Malpolon_monspessulanus)%2C_Nig%C3%BCella%2C_Zaragoza%2C_Espa%C3%B1a%2C_2017-05-24%2C_DD_07.jpg?width=1280',
+  s.image_attribution = 'Diego Delso (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Malpolon monspessulanus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Galápago leproso',
+  s.primary_habitat = 'Ríos, charcas, balsas y tramos remansados con vegetación y soleaderos',
+  s.description = 'Galápago de agua con el caparazón aplanado y de color verde oliva a pardo, a menudo cubierto de algas. Los ejemplares jóvenes muestran manchas anaranjadas en el cuello y en los lados de la cabeza que se van apagando con la edad. Toma el sol sobre piedras y troncos y se lanza al agua al menor ruido.',
+  s.description_source = NULL,
+  s.identification_tips = 'Manchas anaranjadas en el cuello, más vivas de joven
+Caparazón bajo y aplanado, a menudo con algas
+Se tira al agua en cuanto detecta movimiento en la orilla',
+  s.seasonality = 'Primavera a otoño (inactivo en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Mauremys_leprosa_03_by-dpc.jpg?width=1280',
+  s.image_attribution = 'David Perez (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Mauremys leprosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ononis ornithopodioides',
+  s.primary_habitat = 'Pastizales anuales y claros de matorral sobre suelos secos',
+  s.description = 'Pequeña leguminosa anual de tallos finos y glandulosos, con hojas de tres foliolos y flores amarillas diminutas. Sus legumbres, curvadas y dispuestas en grupo, recuerdan a los dedos de una pata de pájaro, lo que le da el nombre científico.',
+  s.description_source = NULL,
+  s.identification_tips = 'Legumbres curvas agrupadas, como una pata de ave
+Flores amarillas muy pequeñas
+Tallos pegajosos al tacto, con pelos glandulosos',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ononis_ornithopodioides_kz1.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Ononis ornithopodioides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lentisco',
+  s.primary_habitat = 'Matorral mediterráneo litoral',
+  s.description = 'Arbusto perennifolio de hojas compuestas sin foliolo terminal y con el raquis alado, un detalle que lo separa de la cornicabra. Al frotarlo huele intensamente a resina. Sus frutos, en racimo, pasan de rojo a negro y son alimento clave para aves en otoño.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hoja compuesta con número par de foliolos, sin uno terminal
+Raquis de la hoja con dos alas laterales
+Olor fuerte a resina al frotar las hojas',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pistacia_lentiscus.jpg?width=1280',
+  s.image_attribution = 'Lumbar~commonswiki (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Pistacia lentiscus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagartija colilarga',
+  s.primary_habitat = 'Matorral litoral y laderas secas',
+  s.description = 'Lagartija esbelta de escamas grandes, quilladas y brillantes, con dos líneas claras muy marcadas a cada lado del dorso. La cola puede medir el doble que el cuerpo. Los machos lucen en primavera manchas azules en el hombro y las mejillas anaranjadas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Dos líneas claras nítidas a lo largo de cada costado
+Escamas grandes y quilladas, de aspecto brillante
+Cola larguísima, hasta el doble que el cuerpo',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Psammodromus_algirus_-_01.jpg?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Psammodromus algirus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Espino negro',
+  s.primary_habitat = NULL,
+  s.description = 'Es un arbustillo de hasta 3 m de altura (López González, 2001), que frecuentemente tiene aspecto de mata alta o media, más o menos espinoso, de ramificación intricada y de perennifolio a semicaducifolio facultativo. Sus especímenes tienen espinas pero presentan una variabilidad: los de las regiones continentales y mediterráneas más áridas las llegan a tener en cantidad y longitud exagerada, pero otros son casi inermes. Presenta también unas ramillas laterales cortas terminadas en un fascículo de hojas. Éstas se disponen alternas, aunque a veces algunas se muestran casi opuestas; son simples, sin peciolo y con un limbo estrecho (tíìcamente menor de 0,5 cm), a veces muy corto, menor de 1,2 cm (subsp. borgiae), de trasovado-oblongo a espatulado-linear, lampiño o con un pelillo muy corto (subesp. velutina).',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhamnus_lycioides_fruits.JPG?width=1280',
+  s.image_attribution = 'איתן פרמן (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Rhamnus lycioides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca cabecinegra',
+  s.primary_habitat = 'Matorral mediterráneo denso, setos y bordes de arbolado',
+  s.description = 'La curruca más común del matorral mediterráneo. El macho tiene la cabeza negra hasta por debajo del ojo, la garganta blanca y un llamativo anillo ocular rojo. Es ruidosa y territorial: su reclamo de alarma es un traqueteo seco que delata su presencia constantemente.',
+  s.description_source = NULL,
+  s.identification_tips = 'Capucha negra que baja por debajo del ojo
+Anillo ocular rojo intenso
+Reclamo de alarma como una carraca seca',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sardinian_Warbler.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Curruca melanocephala';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cogujada montesina',
+  s.primary_habitat = 'Matorral bajo, laderas pedregosas y eriales con vegetación rala',
+  s.description = 'Cogujada de cresta puntiaguda, muy parecida a la común pero de pico más corto y grueso y con el pecho más nítidamente rayado. Prefiere el matorral y las laderas pedregosas, mientras que la común busca cultivos, caminos y bordes de pueblo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cresta alta y afilada, casi triangular
+Pico más corto y romo que el de la cogujada común
+Rayado del pecho bien definido, no difuminado',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Galerida_theklae_Madrid.jpg?width=1280',
+  s.image_attribution = 'Adrian198cm (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Galerida theklae';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cernícalo vulgar',
+  s.primary_habitat = 'Campos abiertos, matorral, cortados y también ciudades',
+  s.description = 'El halcón más común y fácil de ver, gracias a su costumbre de cernirse: se queda suspendido en el aire batiendo las alas con la cabeza inmóvil, buscando ratones y lagartijas. El macho tiene la cabeza gris y el dorso rojizo con puntos negros; la hembra es más parda y barrada.',
+  s.description_source = NULL,
+  s.identification_tips = 'Se queda «clavado» en el aire cerniéndose
+Dorso rojizo salpicado de puntos negros
+Cola larga con una banda negra ancha en la punta',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Common_kestrel_falco_tinnunculus.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Falco tinnunculus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gorrión chillón',
+  s.primary_habitat = NULL,
+  s.description = 'El chillón es un gorrión grande y corpulento, con la cabeza robusta y el pico muy fuerte. En su plumaje dominan los tonos marróngrisáceos con un profuso listado oscuro en el dorso. Las partes inferiores, por el contrario, son claras y están adornadas con amplias listas de color gris parduzco. En la cabeza destacan tres listas anchas: una clara; otra marrón-grisácea tras el ojo bajo aquella, y, por encima, una parda oscura. Otra lista de color marrón pálido recorre el píleo. Bajo la garganta presenta una mancha amarilla que a menudo permanece oculta o poco visible. En la cola aparecen unas manchas blancas hacia los extremos, que resultan bien visibles en vuelo. No hay diferencias de coloración entre machos y hembras. Los jóvenes son difíciles de distinguir de los adultos, incluso recién volados del nido. Se diferencian de estos por carecer de la mancha amarilla en la garganta. Asimismo, el dibujo de la cara presenta en ellos un aspecto poco definido y su coloración general es más suave.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Petronia_petronia_-Ariege%2C_Midi-Pyrenee%2C_France-8-4c.jpg?width=1280',
+  s.image_attribution = 'Petronia_petronia_-Ariege,_Midi-Pyrenee,_France-8.jpg: Sandra from … (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Petronia petronia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pimientera',
+  s.primary_habitat = 'Bosques, arboledas, huertos y jardines con arbolado',
+  s.description = 'Uno de los pájaros más abundantes de Europa. El macho luce el pecho vinoso y la nuca gris azulada; la hembra es parda. Ambos comparten dos barras alares blancas muy visibles en vuelo. Su canto es una frase descendente que acaba en un floreo, repetida sin descanso en primavera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Dos barras blancas bien marcadas en cada ala
+Bordes blancos en la cola, visibles al volar
+Canto en frase descendente que remata en un adorno',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fringilla_coelebs_(chaffinch)%2C_male.jpg?width=1280',
+  s.image_attribution = 'Self: Commons user MichaelMaggs (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Fringilla coelebs';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pito ibérico',
+  s.primary_habitat = NULL,
+  s.description = 'Es un pájaro carpintero grande y robusto, de aspecto inconfundible, en cuyo plumaje dominan claramente los tonos verdosos, más intensos en las regiones dorsales, ligeramente grisáceos en las ventrales y con matices amarillentos en el obispillo. Carece de moteados y listas —salvo, tenuemente, en la región anal—, pero luce un llamativo patrón de coloración en la cabeza, donde el píleo es rojo y los ojos, amarillentos, aparecen enmarcados por un antifaz negro. Los machos y los jóvenes presentan una bigotera negra y roja, que es exclusivamente negra en las hembras. El plumaje juvenil se caracteriza por ser fuertemente moteado, especialmente en las partes inferiores, aunque, en conjunto, su coloración es más apagada que la del adulto, no presentan antifaz y poseen un iris más oscuro. Su vuelo es muy característico, con una trayectoria ondulatoria en la que el ave combina tramos en los que bate las alas con otros en que las pliega.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Iberian_Green_Woodpecker_(Pito_Ib%C3%A9rico)_(Picus_sharpei)_-_Torrevieja%2C_Spain_2024-02-04.jpg?width=1280',
+  s.image_attribution = 'Ryan Hodnett (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Picus sharpei';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chova piquirroja',
+  s.primary_habitat = 'Cortados rocosos, cantiles y montañas, alimentándose en pastizales cercanos',
+  s.description = 'Córvido negro y brillante con el pico rojo, largo y curvo, y las patas del mismo color encendido. Vuela en grupos acrobáticos junto a los cantiles, plegando las alas y dejándose caer por puro juego. Busca larvas hurgando en el suelo de los pastos con ese pico de sonda.',
+  s.description_source = NULL,
+  s.identification_tips = 'Pico rojo, largo y curvado hacia abajo
+Reclamo agudo, un «chiaa» nasal muy característico
+Plumas de la punta del ala muy separadas, como dedos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pyrrhocorax_pyrrhocorax_-standing-8.jpg?width=1280',
+  s.image_attribution = 'File:Alpenkrähe.jpg: "Malte Uhl (User:Zzzip)" derivative work: Snow… (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Pyrrhocorax pyrrhocorax';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca rabilarga',
+  s.primary_habitat = 'Matorral bajo y denso, jarales, brezales y tomillares',
+  s.description = 'Curruca pequeña, oscura y de cola muy larga que suele llevar levantada. El macho tiene el vientre vinoso y el ojo rojo rodeado de un anillo del mismo color. Es muy inquieta y rara vez se deja ver más de unos segundos antes de volver a hundirse en la mata.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola larga y erguida, casi vertical al posarse
+Ojo y anillo ocular rojos
+Vientre de color vinoso, con motitas blancas en la garganta',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_pitchou_Ichkeul_NP.jpg?width=1280',
+  s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Curruca undata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collalba negra',
+  s.primary_habitat = 'Matorral litoral, laderas secas y roquedos',
+  s.description = 'La mayor de las collalbas, enteramente negra salvo el obispillo y la base de la cola, blancos. Vive en cortados y laderas rocosas, donde construye junto al nido una plataforma de piedrecitas que acarrea una a una. Su canto es potente y melodioso.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cuerpo negro con obispillo blanco muy contrastado
+«T» negra invertida en la cola blanca al volar
+Montoncitos de piedrecitas junto a la grieta del nido',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Black_Wheatear%2C_Isla_Plana_3.jpg?width=1280',
+  s.image_attribution = 'Andrew Thomas from Shrewsbury, UK (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Oenanthe leucura';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcaudón común',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Alcaudón estival de cabeza castaña que caza insectos desde posaderos en el matorral abierto, empalando presas en espinas a modo de despensa.',
+  s.description_source = NULL,
+  s.identification_tips = 'Capirote castaño rojizo
+Caza desde posaderos
+Estival de mayo a agosto',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lanius_senator01_new.jpg?width=1280',
+  s.image_attribution = 'Lanius_senator01.jpg: chausinho derivative work: Bogbumper (talk) (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Lanius senator';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Oropéndola',
+  s.primary_habitat = 'Bosques de ribera,hileras de olmos,chopos,sotos,generalmente fluviales,parques,jardines...Mar-1600m',
+  s.description = 'Ave de tamaño similar a un mirlo y llamativo color amarillento. El macho exhibe un intenso color amarillo limón en la cabeza — rayada con una línea ocular oscura— y en el cuerpo, que contrasta bastante con las anchas y redondeadas alas, totalmente negras, a excepción de dos parches amarillos a la altura de la articulación de la muñeca. La cola es igualmente amarilla, aunque presenta una ancha banda terminal negra. Posee patas de tono grisáceo y pico rojizo. La hembra, que recuerda a un pequeño pito real, muestra tonos más apagados que el macho, con partes superiores de color verde oliva e inferiores blanquecinas y rayadas en gris. Tiene las alas y la cola pardas, y el pico rojo sucio. Los jóvenes son casi iguales a las hembras, aunque con el pico pardo oscuro y el ojo negruzco. Se trata de un ave esquiva, por lo que la mayoría de las observaciones corresponden a individuos en vuelos breves entre la espesura. Su vuelo, directo y ondulado, alterna aleteos y alas plegadas, de modo similar al del pito real. Su carácter agresivo se evidencia en los frecuentes acosos a otras especies, incluso de mayor tamaño.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Oriole_2.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Oriolus oriolus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lavandera blanca',
+  s.primary_habitat = NULL,
+  s.description = 'Pájaro estilizado de aspecto muy distintivo, con larga cola y tonos blancos, negros y grises. Exhibe dorso gris ceniza, vientre blanco, y alas negras y con bandas blancas cuando están plegadas. Posee cola larga y negra, con plumas externas blancas, y patas y pico negros. El patrón de la cabeza resulta muy contrastado, con la cara blanca rodeada arriba y abajo de negro. Luce un plumaje invernal similar, aunque el color negro en la cabeza está más reducido, y muestra garganta blanca y banda pectoral negra. La lavandera enlutada (M. a. yarrelli), de origen británico, presenta tonos negros en dorso y flancos. Ambos sexos son parecidos, pero la hembra tiene la nuca gris. Los jóvenes resultan más uniformes, sin negro en la cabeza y con banda pectoral grisácea. Un hábito destacado de esta ave es el continuo balanceo de la cola. En invierno se vuelve muy gregaria y se reúne en dormideros.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/White-Wagtail.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Motacilla alba';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mito',
+  s.primary_habitat = NULL,
+  s.description = 'Es fácil de identificar por la notable longitud de su cola (7-9 centímetros), que contrasta con su pequeño cuerpecillo, de cortas y redondeadas alas. En un primer vistazo resulta un ave con una apariencia general oscura. Sin embargo, observada con atención se aprecia una banda clara que recorre toda la cabeza, así como una pechuga grisácea con tintes rojizos, que contrasta con los tonos negros y grises del dorso, la cola y las alas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Long-tailed_Tit_Aegithalos_caudatus.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Aegithalos caudatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carbonero común',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de una especie fácilmente reconocible por el color amarillo de su cuerpo, que contrasta con el azul de las alas y la cola. La cabeza es de color negro-azabache y con las mejillas muy blancas, salvo en los jóvenes del año, algo amarillenta. Los machos se distinguen de las hembras por poseer una conspicua banda negra que recorre su cuerpo desde la garganta hasta la base de la cola. Las hembras, en cambio, tienen muy poco marcada dicha banda, que se desdibuja en el vientre.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D0%B8%D0%BD%D0%B8%D1%86%D0%B0_(Parus_major%2C_fem)%2C_%D0%91%D0%B8%D1%82%D1%86%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BB%D0%B5%D1%81.jpg?width=1280',
+  s.image_attribution = 'Dion Art (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Parus major';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Colirrojo tizón',
+  s.primary_habitat = NULL,
+  s.description = 'Ave de pequeño tamaño y diseño peculiar, con obispillo y cola de característico color rojo. El macho presenta el pecho y la cara de color negro azabache, y el resto del cuerpo oscuro, con una mancha blanca en las alas. Las hembras y los jóvenes son pardogrisáceos. Muy terrestre, acostumbra a posarse con figura erguida mientras agita su cola roja. Tiene vuelo amariposado, con batido rápido de alas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hausrotschwanz_Brutpflege_2006-05-21-05.jpg?width=1280',
+  s.image_attribution = 'Stefan-Xp (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Phoenicurus ochruros';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Vencejo común',
+  s.primary_habitat = 'Nidos:edificios,acantilados rocosos,cuevas,cajas nido, en colonias.En todo tipo de habitats',
+  s.description = 'Presenta silueta en forma de ballesta, cola corta y ahorquillada, y alas estrechas y largas. Posee pico corto, plano y con la boca muy ancha; patas emplumadas y extremadamente cortas, que le impiden posarse en el suelo; y pies pequeños y de fuertes garras, con los cuatro dedos dirigidos hacia delante. Muestra coloración uniforme de tono pardo oscuro, casi negro, excepto en la garganta, que es blanca; la cara inferior de las alas resulta un poco más pálida. En otoño, con su plumaje desgastado, es algo más claro. Ambos sexos son iguales. Los jóvenes se parecen mucho a los adultos, aunque con un tono algo más oscuro y un aspecto escamoso, por los pequeños ribetes blancos que tienen en las plumas. Esta ave es observada casi siempre en vuelo y en grupo. Las condiciones de luz, el fondo y la distancia determinan su apariencia, pudiendo confundirse con frecuencia con el vencejo pálido. Se localiza habitualmente en núcleos urbanos, volando de forma incansable a gran velocidad. Pasa la mayor parte de su vida en el aire, y únicamente se la ve posada cuando entra o sale del nido. Duerme tanto en el nido como en vuelo.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Apus_apus_-Barcelona%2C_Spain-8_(1).jpg?width=1280',
+  s.image_attribution = 'pau.artigas (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Apus apus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Abejaruco europeo',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Ave colorida y gregaria que caza abejas y libélulas en vuelo sobre espacios abiertos y cría en galerías excavadas en taludes terrosos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Colorido inconfundible
+Reclamo ''prruip'' en vuelo
+Cría en taludes de rambla',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%C5%9Eahl%C3%BBr-33.jpg?width=1280',
+  s.image_attribution = 'Dûrzan cîrano (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Merops apiaster';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cuco',
+  s.primary_habitat = 'Zonas arboladas de todo tipo.Bosques,linderos,bosquetes,cultivos,huertos frutales,piornales',
+  s.description = 'Esta ave, de tamaño medio y aspecto estilizado, se caracteriza por poseer una larga cola y unas alas apuntadas, por lo que su silueta puede confundirse en vuelo con la de una pequeña rapaz, como el cernícalo vulgar o el gavilán. En la coloración del macho dominan los tonos grises, sobre todo en el dorso, la cabeza y el cuello. Por su parte, las regiones ventrales son blancas, pero finamente barreadas. La hembra puede lucir dos tipos de plumaje: uno grisáceo, muy parecido al del macho, y otro rojizo, bastante menos frecuente que el anterior. Los inmaduros se asemejan en parte a las hembras de fase rojiza, aunque tienen las plumas orladas de blanco y una característica mancha blanca en la nuca.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cuckoo_(51169010335).jpg?width=1280',
+  s.image_attribution = 'Andy Morffew from Itchen Abbas, Hampshire, UK (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Cuculus canorus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca mirlona',
+  s.primary_habitat = 'Gran variedad de medios: bosques abiertos de frondosas.Cría:encinares,alcornocales,pinares,sabinares',
+  s.description = 'Es la mayor y la más corpulenta de nuestras currucas. Tiene las partes superiores grisáceas y las inferiores blanquecinas, con tintes rosados en el pecho y más grisáceos en la parte ventral. Posee pico robusto, iris de color amarillo pálido y garganta blanca. El macho exhibe una franja oscura, casi negra, a modo de antifaz, y presenta la frente y el capirote también muy oscuros; este encapuchado resulta más gris (menos oscuro) en las hembras y pardo en los jóvenes. La cola es oscura, con las rectrices externas de color blanco.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sylvia_hortensis_Museum_de_Gen%C3%A8ve.JPG?width=1280',
+  s.image_attribution = 'Totodu74 (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Curruca hortensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mosquitero común',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de un pequeño pajarillo de pico fino y patas oscuras. Presenta tonos verdosos o pardo-grisáceos en el dorso y blanquecinos en las partes inferiores. Ambos sexos resultan similares, si bien los machos son ligeramente mayores que las hembras. Es una especie prácticamente idéntica en el campo al mosquitero ibérico, del que se distingue por su canto y por encontrarse presente en nuestro territorio durante todo el año o en invierno —según las regiones—, mientras que el ibérico es un ave únicamente estival. Es también muy similar al mosquitero musical, pero este posee las patas y el pico pálidos, así como la lista superciliar y otras finas marcas auriculares más definidas. Además, el musical solo está presente en paso.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a abril',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Chiffchaff_-_Phylloscopus_collybita.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Phylloscopus collybita';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Escribano montesino',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de un escribano bastante grande y voluminoso, con las alas relativamente cortas y la cola larga, que luce en la cabeza tres características listas oscuras. La cabeza, el cuello, la nuca y la parte superior del pecho son de color grisáceo, en tanto que el resto del cuerpo presenta tonos pardos o rojizos. Fuera de la estación reproductora, los machos se asemejan a las hembras y a los inmaduros, aunque en el periodo de cría su coloración se hace más brillante, con abundancia de tonos anaranjados en el pecho y en el vientre. El joven presenta un plumaje parduzco y fuertemente estriado en el pecho; la cabeza es marrón-ocre y no presenta bandas laterales.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Emberiza_cia.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Emberiza cia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Autillo',
+  s.primary_habitat = 'Arboledas, sotos, huertos y parques con árboles viejos',
+  s.description = 'El búho más pequeño de Europa, apenas mayor que un puño, con un plumaje jaspeado que lo hace invisible pegado a un tronco. Se detecta por el oído: un silbido monótono y flautado que repite cada dos o tres segundos durante toda la noche de primavera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Silbido corto y flautado repetido de forma monótona
+Diminuto, con dos penachos de plumas en la cabeza
+Plumaje veteado que imita la corteza',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Scops_Owl_(Otus_scops)%2C_Kalloni%2C_Lesvos%2C_Greece%2C_19.04.2015_(16773748434).jpg?width=1280',
+  s.image_attribution = 'Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Otus scops';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Búho real',
+  s.primary_habitat = 'Cortados rocosos, barrancos y laderas con matorral y zonas abiertas de caza',
+  s.description = 'El mayor búho de Europa, con casi dos metros de envergadura, penachos de plumas erguidos sobre la cabeza y ojos de un naranja encendido. Caza conejos, ratas e incluso otras rapaces. Su canto es un «bu-bo» profundo que se propaga kilómetros por los barrancos en las noches de invierno.',
+  s.description_source = NULL,
+  s.identification_tips = 'Penachos de plumas erguidos a los lados de la cabeza
+Ojos naranjas muy intensos
+Canto grave y profundo en las noches de invierno',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Bubo_bubo_sibiricus_-_01.JPG?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Bubo bubo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Paloma zurita',
+  s.primary_habitat = NULL,
+  s.description = 'Paloma similar a la bravía, pero de tamaño algo menor, y más ligera que la torcaz. En su plumaje, totalmente gris, destacan los tonos vinosos del cuello, el color gris pálido del obispillo y unas franjas más claras en las alas. Ambos sexos resultan similares. Tiene un vuelo más rápido y con mayor frecuencia de aleteo que la torcaz. Al volar se ve oscura la zona inferior de sus alas, que es pálida en las palomas bravía y torcaz.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/2019-03-17_Columba_oenas%2C_Jesmond_Dene_1.jpg?width=1280',
+  s.image_attribution = 'MPF (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Columba oenas';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mochuelo europeo',
+  s.primary_habitat = 'Matorral litoral y zonas abiertas con posaderos',
+  s.description = 'Búho pequeño y rechoncho, de cabeza plana y ojos amarillos con un ceño que le da expresión severa. Es el más diurno de nuestros búhos: se ve posado en postes y ruinas a plena luz. Vuela con un ondulado marcado, a golpes de aleteo y planeo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cabeza plana y ancha, sin penachos
+Cejas blancas marcadas que le dan aspecto ceñudo
+Vuelo ondulado, a rachas de aleteo y planeo',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Mochuelo_Com%C3%BAn_(_Athene_noctua_)(1).jpg?width=1280',
+  s.image_attribution = 'Arturo Nikolai from Galicia, Spain (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Athene noctua';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Golondrina común',
+  s.primary_habitat = NULL,
+  s.description = 'Ave delicada, grácil y aerodinámica, de color negro, con reflejos azules metálicos por arriba y blancos crema en las partes inferiores. Tiene la frente y la garganta rojas y un collar negro. Las alas, largas y apuntadas, muestran tonos blancos en la parte inferior delantera. Su cola, muy larga y ahorquillada, es de color negro, con pequeños óvalos blancos cuando la extiende. Posee patas cortas sin emplumar, boca muy ancha, y pico corto, plano y negro. Presenta variación latitudinal en el tamaño corporal y en la longitud de la cola, que son menores hacia el sur. Aunque ambos sexos se parecen, la hembra es menos brillante, más blanca por abajo y con la cola más corta. Los jóvenes lucen tonos negros mate, tienen la frente y la garganta naranjas y una cola mucho más corta. De vuelo ágil, rápido y acrobático, la golondrina común ocupa en el espacio aéreo las capas bajas, por debajo de aviones y vencejos.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Landsvale.jpg?width=1280',
+  s.image_attribution = 'Malene Thyssen (CC BY 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Hirundo rustica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Petirrojo europeo',
+  s.primary_habitat = NULL,
+  s.description = 'Pajarillo de constitución rechoncha, sobre todo en invierno, cuando ahueca sus plumas para generar una capa de aire caliente interior. Machos y hembras son idénticos en coloración. En su plumaje destaca la amplia mancha anaranjada que se extiende por la cara, la garganta y el pecho, la cual aparece bordeada por una irregular y sutil banda gris. El resto del plumaje resulta poco vistoso. Domina el color pardo verdoso en el dorso y las alas, y el blanco sucio en el vientre. Los jóvenes volantones, antes de la muda parcial a finales del verano, muestran un plumaje pardo, con casi todas sus plumas punteadas en su extremo con motas amarillentas. El petirrojo europeo se mueve habitualmente por el suelo en busca de insectos. Para cantar se posa en las ramas altas de los árboles, ya sea en invierno o durante la temporada de cría. Es muy agresivo, tanto con ejemplares de su misma especie como con el resto de las aves, no solo en la época reproductora, sino también durante la invernada. En este último periodo, las parejas se separan y defienden territorios individuales.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Erithacus_rubecula_with_cocked_head.jpg?width=1280',
+  s.image_attribution = 'Francis C. Franklin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Erithacus rubecula';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gavilán común',
+  s.primary_habitat = 'Bosques mixtos de coníferas y frondosas.Sotos, grandes arbustos',
+  s.description = 'Esta pequeña rapaz de hábitos forestales, larga cola y alas cortas y redondeadas presenta un acusado dimorfismo sexual invertido, por el cual las hembras resultan ostensiblemente más corpulentas que los machos; además, entre ambos sexos existen marcadas diferencias en cuanto al diseño del plumaje. El macho adulto tiene las partes superiores y el píleo de un color grisáceo bastante intenso, en tanto que las inferiores son pálidas con un fino barrado transversal y un tono rojizo que puede ser muy notorio, principalmente en las mejillas y los flancos; sobre el ojo luce una leve línea blanca a modo de ceja. Las patas son amarillas y con los largos tarsos sin emplumar. La hembra, mucho más pesada y robusta, posee un patrón de coloración dominado por los tonos pardogrisáceos en el dorso y el píleo, con las regiones inferiores blanquecinas, muy finamente barradas de pardo; la ceja es más grande y evidente que en su compañero. El plumaje de los jóvenes presenta las partes superiores parduzcas, con las plumas orladas de ante, y las inferiores blanquecinas y toscamente barradas de pardo rojizo. Sobre el ojo —que es amarillo— exhibe una marcada ceja. Visto en vuelo, el gavilán es un ave bastante pálida, en cuya silueta llama la atención una cola larga y de base estrecha. Normalmente, se lo observa volando velozmente a baja altura entre los árboles, aunque también puede elevarse y planear durante un tiempo sobre el dosel forestal.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eurasian_Sparrowhawk_by_Steve_Ward.jpg?width=1280',
+  s.image_attribution = 'Steve Ward (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Accipiter nisus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collalba rubia',
+  s.primary_habitat = 'Laderas secas y pedregosas con matorral bajo y suelo desnudo',
+  s.description = 'Collalba pequeña y contrastada: el macho es color arena claro con las alas negras y un antifaz o una garganta negros según la variedad. Como todas las collalbas, enseña al volar una cola blanca con una «T» negra invertida. Caza insectos lanzándose al suelo desde una piedra o una mata.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola blanca con una «T» negra al abrirse
+Alas negras que resaltan sobre el cuerpo color arena
+Se posa erguida en piedras y matas, muy visible',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Black-eared_Wheatear%2C_Punta_del_Sabinar%2C_Spain.jpg?width=1280',
+  s.image_attribution = 'Vince Smith from London, United Kingdom (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Oenanthe hispanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca capirotada',
+  s.primary_habitat = NULL,
+  s.description = 'Curruca de mediano tamaño, de aspecto más compacto y robusto que la mayor parte de sus congéneres, aunque muy similar en tamaño y silueta a la curruca mosquitera. Al igual que ésta, y a diferencia de la mayoría de las currucas, no presenta ni rectrices externas ni garganta blanquecinas. Luce una tonalidad general grisácea, aunque la hembra muestra en las alas y en las regiones ventrales tintes más pardo rojizos. Los machos poseen el capirote negro, mientras que las hembras y los jóvenes lo tienen de color castaño.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sylvia_atricapilla_-Lullington_Heath%2C_East_Sussex%2C_England_-male-8.jpg?width=1280',
+  s.image_attribution = 'Ron Knight from Seaford, East Sussex, United Kingdom (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Sylvia atricapilla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cuervo grande',
+  s.primary_habitat = NULL,
+  s.description = 'El rasgo más llamativo del cuervo es, sin duda, su colosal tamaño, que lo convierte en el representante más voluminoso del orden de los paseriformes. Dentro de su anatomía destaca sobre todo el pico, notablemente largo, robusto y grueso. Por lo demás, luce un plumaje homogéneamente negro, con algunos brillos metálicos. El vuelo de este enorme pájaro es lento y suele intercalar aleteos con largos planeos, que el ave ejecuta gracias a sus largas alas apuntadas y a su cola en forma de cuña.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Corvus_corax.001_-_Tower_of_London.JPG?width=1280',
+  s.image_attribution = 'Fernando Losada Rodríguez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Corvus corax';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chotacabras cuellirrojo',
+  s.primary_habitat = 'Matorral abierto, pinares aclarados, ramblas y caminos térreos',
+  s.description = 'Ave crepuscular de plumaje jaspeado que imita la hojarasca, tan mimético que de día resulta casi imposible verla posada en el suelo. Caza polillas en vuelo con la boca muy abierta. Su canto nocturno es un «cu-toc, cu-toc» repetido de forma monótona durante minutos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Collar rojizo en la nuca, más marcado que en su pariente europeo
+Se levanta del camino al anochecer y vuelve a posarse unos metros más allá
+Canto nocturno monótono, como un motor lejano',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Caprimulgus_ruficollis_-Portugal-8.jpg?width=1280',
+  s.image_attribution = 'Olivença (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Caprimulgus ruficollis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Águila real',
+  s.primary_habitat = 'Montañas y sierras con cortados rocosos y amplias zonas abiertas de caza',
+  s.description = 'La mayor de las águilas ibéricas, con casi dos metros y medio de envergadura y una nuca dorada que le da nombre. Cría en repisas de cantiles y usa territorios enormes, que una pareja defiende durante años. Planea con las alas en una «V» muy suave y bate poco, lo que la distingue de las rapaces menores.',
+  s.description_source = NULL,
+  s.identification_tips = 'Nuca y cogote de tono dorado, visibles a buena luz
+Planea con las alas en «V» muy abierta y bate poco
+Tamaño enorme: dobla al ratonero en el mismo cielo',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Maakotka_(Aquila_chrysaetos)_by_Jarkko_J%C3%A4rvinen.jpg?width=1280',
+  s.image_attribution = 'Jarkko Järvinen (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Aquila chrysaetos';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Busardo ratonero',
+  s.primary_habitat = 'Mosaicos de bosque y campo abierto, con arbolado para nidificar',
+  s.description = 'La rapaz mediana más frecuente y variable de plumaje: los hay casi blancos y casi negros. Pasa mucho tiempo posado en postes y en el suelo, y planea en círculos con las alas ligeramente levantadas. Su reclamo es un maullido lastimero muy reconocible.',
+  s.description_source = NULL,
+  s.identification_tips = 'Planea en círculos con las alas en «V» poco marcada
+Maullido agudo y quejumbroso al volar
+Muy variable: desde ejemplares claros a muy oscuros',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Buizerd-rh_20091021_002_(cropped).jpg?width=1280',
+  s.image_attribution = 'RonaldHuijssen (CC BY-SA 3.0 nl) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Buteo buteo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cogujada común',
+  s.primary_habitat = 'Cultivos, caminos, eriales y bordes de poblado con suelo desnudo',
+  s.description = 'Alondra parda de cresta alta y puntiaguda, muy ligada a caminos, cunetas y descampados junto a los pueblos. Camina en vez de saltar y, al volar, deja ver el forro rojizo de las alas y la cola con los bordes canela.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cresta larga y puntiaguda, casi siempre erguida
+Forro de las alas rojizo, visible al levantar el vuelo
+Camina por el suelo en vez de saltar',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Crested_Lark_-_Qatar.jpg?width=1280',
+  s.image_attribution = 'Ashraf Kotb (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Galerida cristata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bisbita común',
+  s.primary_habitat = NULL,
+  s.description = 'Ave de aspecto poco llamativo y sin caracteres muy distintivos, similar al resto de bisbitas. Exhibe dorso pardo, un tanto verdoso al principio del otoño, con muchas estrías oscuras; vientre blanco sucio muy rayado; y flancos anaranjados en otoño, que se aclaran según avanza el invierno. Posee alas redondeadas, cola larga y con plumas externas blancas, pico fino, y patas finas, con la uña posterior larga y recta. La garganta es blanca, con una fina bigotera negra. Ambos sexos son iguales. Los jóvenes, cuando llegan a España, no se distinguen de los adultos. Este pájaro se observa casi siempre en el suelo y en grupo. Para diferenciarlo de otros bisbitas hay que atender a las fechas, a su voz, a su pequeño tamaño, y a detalles del plumaje como flancos con estrías más gruesas y dorso menos contrastado.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a abril',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Anthus_pratensis.jpg?width=1280',
+  s.image_attribution = 'Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Anthus pratensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Papamoscas gris',
+  s.primary_habitat = 'Arbolado abierto, bordes de bosque, huertos y jardines con perchas altas',
+  s.description = 'Pájaro discreto de color pardo grisáceo, sin marcas llamativas, que se reconoce mejor por su conducta que por su aspecto: se posa muy erguido en una rama descubierta, sale disparado a cazar un insecto en el aire y vuelve exactamente a la misma percha. Repite la maniobra decenas de veces.',
+  s.description_source = NULL,
+  s.identification_tips = 'Vuelve siempre a la misma rama tras cada vuelo de caza
+Postura muy vertical, con las alas caídas
+Frente y pecho con un rayado fino y difuso',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/SpottedFlycatcheronfence.jpg?width=1280',
+  s.image_attribution = 'Andrew Easton (Attribution) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Muscicapa striata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Avión común',
+  s.primary_habitat = NULL,
+  s.description = 'Pequeña golondrina de aspecto compacto, negro azulada brillante por arriba y blanca por abajo, con límites netos entre colores. Posee alas largas y apuntadas y cola corta ahorquillada de color negro; pico corto, plano y negro; boca muy ancha, y patas cortas cubiertas de finas plumas blancas. Destaca su obispillo de color blanco, la única zona clara de las partes dorsales. Ambos sexos son iguales. Los jóvenes resultan menos contrastados, más parduzcos, sobre todo por abajo, con límites difusos entre partes negras y blancas, y con puntas blancas en las terciarias. Este pájaro suele observarse en vuelo y agrupado. Su vuelo es rápido y ágil, aunque menos que en la golondrina común, y a menudo se produce a mayor altura que en esta. Se posa con frecuencia, a veces en el suelo.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Delichon_urbicum_-Iceland_-flying-8_(1).jpg?width=1280',
+  s.image_attribution = 'Ómar Runólfsson (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Delichon urbicum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Herrerillo capuchino',
+  s.primary_habitat = NULL,
+  s.description = 'Pequeño pajarillo de apariencia inconfundible, gracias sobre todo a su característica cresta triangular y apuntada, de plumas blancas y negras y que despliega habitualmente. Su cara es también un juego de bandas negras y blancas: presenta una conspicua corbata negra que se prolonga a modo de collar; además tiene una línea ocular negra, y otra que recorre la mejilla, siempre sobre fondo claro o blanco. Por el contrario, el dorso, las alas y la cola son de color pardo oscuro, que contrasta con los flancos, el pecho y el vientre, de un tono gris-canela muy apagado. Al igual que los carboneros garrapinos u otros páridos, habita en bosques de coníferas (pinos, abetos, etc.). Pero también se localiza en formaciones de frondosas —caducifolias y perennes— y se observa en áreas ajardinadas. No es un ave especialmente gregaria, pero en otoño e invierno puede constituir pequeños grupos de 2-10 individuos, que exploran conjuntamente tanto el suelo como, sobre todo, la corteza, las ramas y las hojas de los árboles. Con frecuencia se mezcla con otros páridos, con agateadores y con reyezuelos, conformando ruidosos bandos mixtos.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/083_Wild_European_crested_tit_at_Parc_naturel_r%C3%A9gional_Jura_vaudois_Photo_by_Giles_Laurent.jpg?width=1280',
+  s.image_attribution = 'Giles Laurent (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Lophophanes cristatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcaraván',
+  s.primary_habitat = 'Llanos pedregosos, cultivos de secano, ramblas y eriales con poca cobertura',
+  s.description = 'Ave de aspecto extraño y ojos amarillos enormes, adaptados a la actividad nocturna. De día permanece agachada e inmóvil, confiada en su plumaje críptico, y solo al anochecer se activa y delata con un reclamo silbado y melancólico que recuerda al del zarapito.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ojos amarillos desproporcionadamente grandes
+Dos barras blancas y negras en el ala plegada
+Reclamo silbado y triste al anochecer',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Burhinus_oedicnemus_insularum_Lanzarote_1.jpg?width=1280',
+  s.image_attribution = 'Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Burhinus oedicnemus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tarabilla europea',
+  s.primary_habitat = 'Matorral bajo, herbazales, ribazos y bordes de cultivo con posaderos',
+  s.description = 'Pájaro pequeño y regordete que se posa en lo alto de las matas, muy erguido y a la vista, para lanzarse al suelo a por insectos. El macho tiene la cabeza negra, un collar blanco a los lados y el pecho naranja. Su reclamo suena como dos piedras golpeadas, de donde le viene el nombre.',
+  s.description_source = NULL,
+  s.identification_tips = 'Siempre en lo alto de una mata, bien visible
+Macho con capucha negra y medio collar blanco
+Reclamo como el chasquido de dos cantos rodados',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Malestonechatseaham_Cropped.jpg?width=1280',
+  s.image_attribution = 'derivative work: Myosotis Scorpioides (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Saxicola rubicola';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Triguero',
+  s.primary_habitat = 'Cultivos de secano, pastizales y llanos abiertos con posaderos',
+  s.description = 'Escribano grande y rechoncho, pardo y rayado, sin marcas llamativas. Canta desde un cable o una mata con una frase acelerada que suena como un manojo de llaves agitado, y vuela distancias cortas dejando las patas colgando.',
+  s.description_source = NULL,
+  s.identification_tips = 'Canto como un manojo de llaves agitándose
+Vuela con las patas colgando, sin recogerlas
+Aspecto pesado y pardo, sin marcas vistosas',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/606625336/original.jpg',
+  s.image_attribution = 'euqirneto (CC BY 4.0) · GBIF',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"protegida por la Directiva Aves 2009/147/CE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Emberiza calandra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Arrendajo euroasiático',
+  s.primary_habitat = NULL,
+  s.description = 'Esta ave, de aspecto inconfundible, se aleja bastante de la imagen sombría de otros componentes de la familia de los córvidos, pues presenta un plumaje dominado por los tonos ocres, con ciertos tintes rosados y grisáceos, los cuales se tornan blanquecinos en la zona anal. En la cabeza —algo voluminosa y dotada de un fuerte pico— resultan muy característicos el píleo —eréctil, grisáceo y listado de negro— y una visible bigotera negra. Las alas lucen un llamativo diseño, con un panel de plumas de color azul turquesa —franjeado de negro y blanco— en el hombro, y otro blanco, muy conspicuo, sobre todo en vuelo. El obispillo también es blanco y llamativo cuando el ave despliega las alas, lo que contrasta fuertemente con la negra cola. No hay diferencias significativas entre sexos en lo referente al plumaje. Los jóvenes son semejantes en patrón a los adultos, aunque algo más parduzcos y con colores menos vivos en general.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Garrulus_glandarius_1_Luc_Viatour.jpg?width=1280',
+  s.image_attribution = 'Luc Viatour (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Garrulus glandarius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Águila calzada',
+  s.primary_habitat = 'Bosques y sierras con arbolado, cazando sobre zonas abiertas cercanas',
+  s.description = 'Águila pequeña, del tamaño de un ratonero, con dos formas de plumaje muy distintas: una clara con el vientre blanco y otra oscura y uniforme. Nidifica en árboles dentro del bosque y caza en campo abierto lanzándose desde altura. Se identifica en vuelo por las «luces de posición»: dos manchas blancas en el arranque de las alas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Dos manchas blancas donde el ala se une al cuerpo
+Existen ejemplares claros y oscuros de la misma especie
+Cola larga y recta, sin la muesca del milano',
+  s.seasonality = 'Primavera y verano (estival); algunos ejemplares invernan',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Booted_eagle%2C_Hieraaetus_pennatus%2C_at_Kgalagadi_Transfrontier_Pa_(32334023348).jpg?width=1280',
+  s.image_attribution = 'Derek Keats from Johannesburg, South Africa (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Hieraaetus pennatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Piquituerto',
+  s.primary_habitat = 'Pinares y masas de coníferas con producción de piñas',
+  s.description = 'Fringílido de pico único: las dos mandíbulas se cruzan en la punta, una herramienta para abrir las escamas de las piñas y sacar el piñón. El macho es rojo ladrillo y la hembra verde oliva. Cría incluso en invierno si hay piñas, y se mueve en bandos ruidosos de copa en copa.',
+  s.description_source = NULL,
+  s.identification_tips = 'Puntas del pico cruzadas, visibles de cerca
+Macho rojizo, hembra verde amarillenta
+Reclamo metálico «chip-chip» de los bandos en vuelo',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Red_Crossbills_(Male).jpg?width=1280',
+  s.image_attribution = 'Elaine R. Wilson, www.naturespicsonline.com (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Loxia curvirostra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Roquero solitario',
+  s.primary_habitat = 'Acantilados mediterráneos con Limonium',
+  s.description = 'Pájaro rupícola de plumaje azul pizarra en el macho, ligado a acantilados marinos y roquedos, donde canta desde cornisas destacadas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Macho azul pizarra
+Canta desde cornisas y cumbres
+Acantilados y roquedos calcáreos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Blue_rock_thrush_(male)_at_Gamla_Nature_Reserve.jpg?width=1280',
+  s.image_attribution = 'Artemy Voikhansky (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial, RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Monticola solitarius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lavandera cascadeña',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Grey_Wagtail.jpg?width=1280',
+  s.image_attribution = 'User:Kclama (CC SA 1.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Motacilla cinerea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ruiseñor común',
+  s.primary_habitat = 'Pisos bioclimáticos termo,meso,supramediterráneos,matorrales,sotos densos,montes bajos, jardines...',
+  s.description = 'Ave estilizada, de pico fino y cola larga. Hembras y machos son iguales. Su manto y sus alas presentan un color pardo ocráceo uniforme, excepto en la cola, que posee un distintivo tono pardo rojizo. Las partes inferiores, mucho más claras, tienen color blanco crema. Este pájaro, muy escondidizo, rara vez abandona la protección de la espesura de la vegetación, pero resulta muy fácil de detectar por su inconfundible canto, muy sonoro, emitido incansablemente durante el día y la noche. Los jóvenes volantones, previamente a la muda parcial de su plumaje que tiene lugar antes de que comience la migración, exhiben un plumaje pardo que muestra plumas manchadas en su extremo con motas amarillentas. Los adultos se pueden confundir con carriceros comunes y ruiseñores bastardos, con los que a veces conviven en malezas ribereñas. Sin embargo, los carriceros presentan un tono ocre más pálido y amarillento, y carecen de la cola rojiza que luce el ruiseñor común. Lo mismo sucede con el ruiseñor bastardo, que además tiene una conspicua línea blanca sobre el ojo y posee unas alas y una cola cortas y redondeadas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Luscinia_megarhynchos_-_01.jpg?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Luscinia megarhynchos';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lúgano',
+  s.primary_habitat = 'Sus preferencias de hábitat van ligadas a sus requerimientos tróficos',
+  s.description = 'Se trata de un ave pequeña, de pico corto y fino, que muestra cola corta y escotada cuando está cerrada. Su coloración puede recordar a la de verdecillos, verderones comunes y verderones serranos. Pero los lúganos se distinguen bien por la combinación de los siguientes caracteres: pequeño tamaño, manchas amarillas en alas y cola, y franjas amarillas en los “hombros” de las alas. Además, los machos tienen el capirote y la garganta negros. Es una especie gregaria que se mezcla con otras, sobre todo fringílidos como pardillos, pinzones vulgares, verdecillos, verderones serranos, pinzones reales, etc. Pero, a diferencia de la mayoría de los fringílidos, el lúgano también busca alimento en las ramas de árboles de ribera, siendo común observarlo en alisos, olmos y abedules.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a abril',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carduelis_Spinus_(55339970).jpeg?width=1280',
+  s.image_attribution = 'Kobolt (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Spinus spinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Abubilla',
+  s.primary_habitat = 'Campos abiertos, dehesas, cultivos con arbolado y bordes de matorral',
+  s.description = 'Ave inconfundible de color canela con alas y cola a franjas blancas y negras, y una cresta eréctil que despliega en abanico al posarse. Sondea el suelo blando con el pico largo y curvo en busca de larvas e insectos. Su canto, un «up-up-up» sordo y repetido, se oye de lejos en primavera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Vuelo ondulante y torpe, como una mariposa grande
+Cresta que abre en abanico justo al aterrizar
+Camina por el suelo clavando el pico largo y curvo',
+  s.seasonality = 'Todo el año en el sur peninsular; estival en el resto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Wiedehopf_mit_Puppe_als_Futter.jpg?width=1280',
+  s.image_attribution = 'Sven Damerow (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Upupa epops';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebrera europea',
+  s.primary_habitat = 'Sierras y llanos con matorral, ramblas y bosque abierto',
+  s.description = 'Águila grande y muy pálida por debajo, especializada en comer culebras y lagartos. Se ciñe en el aire durante largos ratos, con las patas colgando, escrutando el suelo antes de dejarse caer. La cabeza, ancha y con ojos amarillos muy frontales, le da un aire de lechuza.',
+  s.description_source = NULL,
+  s.identification_tips = 'Vientre y alas casi blancos vistos desde abajo
+Se mantiene cerniéndose, algo raro en un águila tan grande
+Cabeza ancha y ojos amarillos, aspecto de búho',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aguila_culebrera_(Circaetus_gallicus).jpg?width=1280',
+  s.image_attribution = 'Paco Gómez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Circaetus gallicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carraca europea',
+  s.primary_habitat = 'Campos abiertos con arbolado disperso, ribazos y construcciones con huecos',
+  s.description = 'Del tamaño de una paloma y de un azul turquesa intenso que sorprende al levantar el vuelo. Caza al acecho desde cables y postes, dejándose caer sobre saltamontes y escarabajos. Cría en huecos de árboles viejos y de edificios, de ahí que dependa de que queden árboles añosos y ruinas en el campo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Azul turquesa que solo se aprecia bien cuando vuela
+Espalda de color canela que contrasta con el azul
+Posada quieta en cables, oteando el suelo',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/European_roller.jpg?width=1280',
+  s.image_attribution = 'Christian Svane (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Coracias garrulus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Halcón peregrino',
+  s.primary_habitat = 'Cortados y áreas abiertas',
+  s.description = 'Halcón robusto de alas puntiagudas y cola corta, capaz de superar los 300 km/h en el picado con que abate a otras aves en pleno vuelo. Se reconoce por la ancha bigotera negra que baja desde el ojo sobre un pecho claro y barrado.',
+  s.description_source = NULL,
+  s.identification_tips = 'Bigotera negra ancha bajo el ojo, como un casco
+Silueta de ancla: alas puntiagudas y cola corta
+Pecho claro con barrado fino en horizontal',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Falco_peregrinus_-_01.jpg?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Falco peregrinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Avión roquero',
+  s.primary_habitat = 'Acantilados mediterráneos con Limonium',
+  s.description = 'Hirundínido pardo y robusto que vuela pegado a las paredes rocosas de acantilados y barrancos, donde construye su nido de barro.',
+  s.description_source = NULL,
+  s.identification_tips = 'Vuelo pegado a las paredes
+Manchas claras en la cola
+Nido de barro en cortados',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ptyonoprogne_rupestris_in_flight.jpg?width=1280',
+  s.image_attribution = 'ferran pestaña (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Ptyonoprogne rupestris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chocha perdiz',
+  s.primary_habitat = NULL,
+  s.description = 'Es una limícola relativamente grande, de largo pico, patas bastante cortas y grandes ojos oscuros, muy desplazados hacia atrás y hacia arriba en la cabeza. Posee un plumaje extremadamente críptico, dominado por los tonos marrones y rojizos, que en el dorso adquieren una notable complejidad, con un diseño abigarrado de barrados, punteados y manchas de diferente tonalidad. Las regiones ventrales son de tonos cremosos, con abundantes estrías transversales de color más oscuro. Los adultos y los jóvenes son prácticamente idénticos. En vuelo resulta más pesada que otras especies cercanas y se caracteriza por sus alas redondeadas y su silueta masiva. Es un ave reacia a volar, pues confía plenamente en las virtudes de su mimética librea, pero, si siente una amenaza próxima, emprende un vuelo errático y zigzagueante a baja altura entre los árboles.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Noviembre a marzo',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Woodcock_earthworm.jpg?width=1280',
+  s.image_attribution = 'Ronald Slabke (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Scolopax rusticola';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Andarríos chico',
+  s.primary_habitat = NULL,
+  s.description = 'Es una limícola estilizada, de pequeño tamaño —el menor entre los andarríos— y patas bastante cortas, que balancea la cola y la cabeza de forma característica cuando está posada. Sus partes superiores son pardas y las inferiores, blancas, con un característico entrante pálido que sube desde los lados del pecho hasta el cuello, por delante del vértice del ala. El adulto en plumaje nupcial luce las plumas de las partes superiores de color pardo grisáceo, con barrados y punteaduras que le dan un aspecto poco uniforme. Fuera de la estación reproductora, las plumas presentan el raquis finamente destacado de oscuro y el borde ante, con una banda subapical negra, mientras que las coberteras muestran un doble barrado apical negro y ante. El juvenil es similar al adulto no reproductor, pero con los márgenes de las plumas más destacados. En vuelo, el andarríos chico exhibe un diseño alar característico, con una ancha franja blanca enmarcada por plumas más oscuras.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Actitis_hypoleucos_-_Laem_Pak_Bia.jpg?width=1280',
+  s.image_attribution = 'JJ Harrison (https://www.jjharrison.com.au/) (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Actitis hypoleucos';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Vencejo pálido',
+  s.primary_habitat = 'Nidos: roquedos,acantilados costeros, edificios, puentes de piedra, iglesias,árboles',
+  s.description = 'Presenta silueta en forma de ballesta, cola corta y ahorquillada, y alas largas y estrechas. Posee pico corto, plano y con la boca muy ancha; patas emplumadas y extremadamente cortas, que le impiden posarse en el suelo; y pies pequeños y de fuertes garras, con los cuatro dedos dirigidos hacia delante. Luce una coloración uniforme de tono pardo grisáceo, excepto en la garganta, que es blanca; la parte inferior interna de las alas resulta más clara. Con plumaje poco desgastado muestra un aspecto general escamoso. Se confunde fácilmente con el vencejo común, y para diferenciarlos se necesitan buenas condiciones de luz y hay que situarse a corta distancia. El vencejo pálido tiene un tono general más claro y parduzco, y mayor extensión en el blanco de la garganta; además, a veces se aprecia un antifaz más marcado, mayor contraste en la parte inferior de las alas y aspecto más escamoso. Ambos sexos son iguales. Los jóvenes, muy similares a los adultos, presentan un tono un poco más oscuro y un aspecto escamoso más marcado por la presencia de plumas ribeteadas en blanco. Esta ave pasa la mayor parte de su vida en el aire, por lo que casi siempre se la ve volando y agrupada, tanto en núcleos urbanos como en acantilados costeros y de interior.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Vencejo_p%C3%A1lido_20250901_03.jpg?width=1280',
+  s.image_attribution = 'Ismael Olea (CC BY 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Apus pallidus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca mosquitera',
+  s.primary_habitat = 'Campiñas verdes,sotos,orlas de bosque,zonas de vegetación ribereña,masas arboladas con sotobosque..',
+  s.description = 'Pajarillo de fisonomía más compacta y robusta que la de otras currucas —aunque bastante similar a la de la curruca capirotada—, con cabeza más redondeada y pico más corto y grueso. Un fino anillo orbital rodea al ojo. De todas formas, se trata de un ave que no cuenta con rasgos distintivos realmente identificativos o llamativos, y su aspecto general resulta bastante uniforme. Presenta las partes ventrales de color ante pálido y el dorso pardo-grisáceo. En torno a su cuello destaca ligeramente un discreto collar más grisáceo. Ambos sexos son iguales.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril, mayo, agosto, septiembre, octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sylvia_borin_(%C3%96rebro_County).jpg?width=1280',
+  s.image_attribution = 'Biillyboy (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Sylvia borin';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collalba gris',
+  s.primary_habitat = 'Pastizales pedregosos, canchales y zonas abiertas de montaña',
+  s.description = 'Collalba de dorso gris en el macho, con antifaz negro y alas oscuras. Como todas las collalbas, delata su identidad al volar: obispillo blanco y cola blanca con una «T» negra invertida. Se posa erguida en piedras y hace carreras cortas por el suelo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Obispillo blanco y «T» negra en la cola
+Macho con antifaz negro y dorso gris
+Carreras cortas por el suelo entre piedra y piedra',
+  s.seasonality = 'Paso migratorio y cría en montaña',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Oenanthe_oenanthe_Larvik.JPG?width=1280',
+  s.image_attribution = 'Arnstein Rønning (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Oenanthe oenanthe';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mosquitero musical',
+  s.primary_habitat = 'Bosques abiertos de frondosas, robledales, hayedos,castañares,arbustos,a media altura, media altura..',
+  s.description = 'Presenta gran parecido con otros congéneres, especialmente los mosquiteros común e ibérico, de los que se diferencia por poseer el pico y las patas pálidos, las listas faciales más marcadas —con una lista superciliar muy patente—, las partes inferiores más amarillas y el dorso de un tono verdoso más brillante.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo, abril, mayo, agosto, septiembre, octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Willow_Warbler_Phylloscopus_trochilus.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Phylloscopus trochilus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Críalo',
+  s.primary_habitat = 'Bosques,zonas con córvidos',
+  s.description = 'Es un ave de tamaño medio, morfológicamente muy semejante al cuco, del que se diferencia por su aspecto más esbelto, por tener una cola más larga y por el colorido del plumaje. Este es de tono marrón grisáceo en las regiones dorsales, que aparecen salpicadas de motas blancas, al igual que ocurre con las plumas del ala. La zona ventral es de color blanquecino, con la garganta teñida de ocre-amarillento. En la cabeza luce un capirote de color gris plateado —que remata en una pequeña cresta ligeramente eréctil— y un anillo ocular rojo. El joven presenta una coloración incluso más vistosa que los adultos, pues exhibe un intenso color achocolatado con abundantes motas blancas en el dorso y unas regiones ventrales blancas, que se tornan amarillo-ocráceas en pecho y cuello. Las plumas de vuelo poseen un vistoso color rojizo, en tanto que el capirote es negro y el anillo ocular más conspicuo que el de los adultos.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Clamator_glandarius.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Clamator glandarius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Escribano soteño',
+  s.primary_habitat = NULL,
+  s.description = 'De tamaño algo menor que el escribano cerillo, el soteño es ligeramente más colicorto y posee un pico más robusto. La coloración general se asemeja también a la del cerillo, sobre todo en jóvenes y hembras. Se diferencian, sin embargo, por el color del obispillo — gris oliváceo en el soteño—, por la posesión de marcadas bandas laterales en la cara y, en general, por presentar menos áreas amarillentas en el plumaje. El macho en época reproductora luce una amplia franja pectoral gris olivácea, un llamativo babero negro en la garganta y un antifaz del mismo color; además, conserva todo el año el píleo y la nuca extensamente coloreados de gris oliváceo, con finas listas oscuras.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Emberiza_cirlus.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Emberiza cirlus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carbonero garrapinos',
+  s.primary_habitat = NULL,
+  s.description = 'Ave pequeña, con plumaje de colores apagados. El dorso y las alas son de color azul grisáceo, mientras que el pecho y el vientre presentan una tonalidad ante. Su rasgo más distintivo es la mancha blanca en la nuca. Se muestra muy activo y explora minuciosamente las ramas, ramitas, hojas y piñas. En su exhaustiva búsqueda de alimento llega a realizar auténticas acrobacias, muchas veces quedando colgado o realizando cortos cernidos. Habita preferentemente en pinares, pero también se localiza en formaciones de frondosas y en áreas ajardinadas. Tras el periodo reproductor se mueve en pequeños grupos, que en numerosas ocasiones están integrados por varias especies, pues se mezcla con otros páridos, reyezuelos, mosquiteros, etc.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/005Large.jpg?width=1280',
+  s.image_attribution = 'John GB Garrett (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Periparus ater';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mosquitero papialbo',
+  s.primary_habitat = 'Forestal termófila,laderas de solana.Nidos:bosque planifolio,conífera.Zona montana,submediterránea',
+  s.description = 'El papialbo presenta la típica silueta de los mosquiteros: cuerpecillo rechoncho, patas frágiles y pico fino, pero se diferencia de los demás por su coloración general mucho más clara, especialmente en la cabeza y las partes ventrales. Las patas son negras y las alas, el dorso y las partes exteriores de la cola, verdosos, en contraste con el resto del cuerpo, de color blanquecino. La especie no manifiesta dimorfismo sexual.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Western_Bonelli''s_Warbler_-_Aosta_Valley_-_Italy_S4E5346_(19079885220).jpg?width=1280',
+  s.image_attribution = 'Francesco Veronesi from Italy (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Phylloscopus bonelli';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Martín pescador',
+  s.primary_habitat = 'Ríos, ramblas con pozas, canales y láminas de agua con posaderos y taludes terrosos',
+  s.description = 'Pájaro rechoncho de color azul turquesa iridiscente por encima y naranja por debajo, con un pico largo y recto desproporcionado. Pesca lanzándose en picado desde una rama sobre el agua y anida en un túnel que excava en taludes de tierra.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = 'Destello azul eléctrico volando bajo y recto sobre el agua
+Silbido agudo y penetrante, casi siempre antes de verlo
+Posado inmóvil en una rama sobre el agua, cabeza gacha',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Common_Kingfisher_Alcedo_atthis.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Alcedo atthis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Buitrón',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de una de las aves más pequeñas de Europa. Posee el dorso y el píleo de color pardo oscuro y fuertemente listados, el obispillo rojizo y las partes inferiores claras con los flancos y el pecho de color ocráceo. En vuelo ejecuta una trayectoria muy ondulante y presenta una silueta característica, con las alas redondeadas y la cola —que suele mantener parcialmente desplegada— con un perfil también redondeado y de longitud creciente de los extremos hacia el centro. En su parte distal, la cola muestra una banda de manchas negras y blancas muy visibles en vuelo. Cuando se posa entre la vegetación, suele aferrarse a los tallos manteniendo la verticalidad a la vez que agita continuamente la cola.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Zitting_cisticola_2024_04_19_(cropped).jpg?width=1280',
+  s.image_attribution = 'Alexis Lours (CC BY 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Cisticola juncidis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Buitre común',
+  s.primary_habitat = 'Sierras con cortados para criar; se alimenta en campo abierto',
+  s.description = 'Buitre grande y pardo, con la cabeza y el cuello cubiertos de plumón blanco y una gorguera de plumas en la base del cuello. Planea horas sin batir las alas aprovechando las térmicas, y localiza los cadáveres vigilando lo que hacen los demás buitres a kilómetros de distancia.',
+  s.description_source = NULL,
+  s.identification_tips = 'Alas enormes y rectangulares, con los «dedos» separados
+Cabeza pálida y pequeña en proporción al cuerpo
+Planea en círculos sin apenas batir las alas',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Vulture_beak_sideview_A.jpg?width=1280',
+  s.image_attribution = 'Thermos (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Gyps fulvus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Abejero europeo',
+  s.primary_habitat = 'Bosque con algunos claros, gran variedad de especies arbóreas.Desde el mar a 1600m, templado-húmedo',
+  s.description = 'La coloración de esta especie presenta considerables diferencias individuales, de tal manera que han llegado a distinguirse hasta 10 fases de plumaje diferentes. Como norma, las partes inferiores son claras y están provistas de un profuso barreado transversal marronáceo, en tanto que las dorsales, parduzcas, resultan bastante más oscuras que las ventrales; la cola, por su parte, muestra un característico franjeado. En la cabeza, que presenta una tonalidad grisácea, destaca el iris intensamente amarillo. Dentro de este patrón general, existen notables variaciones, y se pueden hallar desde individuos muy claros hasta otros extremadamente oscuros, casi melánicos; en todo caso, los ejemplares de coloración intermedia son los más frecuentes. Aparte de algunas diferencias en el diseño y coloración del plumaje, el rasgo más distintivo entre machos y hembras es el mayor tamaño de estas. Los jóvenes, por su parte, tienden a ser oscuros, con el iris marrón. En vuelo es llamativo el barreado ventral, así como las franjas de la cola, si bien lo más significativo y que permite diferenciar fácilmente al abejero de otras rapaces similares, como el busardo ratonero, es su silueta, con la cabeza apuntada, la cola larga —de ángulos algo redondeados— y las alas rectas y estrechas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Wespenbussard_European_honey_buzzard_Pernis_apivorus.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Pernis apivorus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Colirrojo real',
+  s.primary_habitat = 'Bosques abiertos, sotos y arboledas con huecos para criar',
+  s.description = 'Pájaro elegante con la cola de un naranja encendido que hace vibrar sin parar al posarse. El macho tiene la garganta negra, la frente blanca y el pecho anaranjado; la hembra es parda pero conserva la misma cola vibrante, que es la mejor pista para identificarlos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola naranja que tiembla constantemente
+Macho con frente blanca y garganta negra
+Se posa en ramas bajas y baja al suelo a por insectos',
+  s.seasonality = 'Paso migratorio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Common_Redstart_-_Segrate_-_Italy_S4E2518-1_(19357313382).jpg?width=1280',
+  s.image_attribution = 'Francesco Veronesi from Italy (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Phoenicurus phoenicurus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Reyezuelo listado',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de una de las aves más diminutas de la avifauna europea. En un primer vistazo, aparece como un pájaro de aspecto general rechoncho, con tonalidades verdosas y cabeza adornada por un característico diseño de listas. Presenta el dorso verde brillante, en contraste con las alas oscuras, surcadas por dos bandas blanquecinas. Las partes inferiores son pálidas, aunque muestran ligeros tonos anaranjados en el pecho del macho. La especie posee un diseño cefálico característico en el que destaca el píleo naranja en los machos, o amarillo en las hembras, flanqueado por una banda negra y una marcada ceja blanca. Asimismo, luce una lista ocular negra y un semianillo blanco que circunda la parte inferior del ojo.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Firecrest93.JPG?width=1280',
+  s.image_attribution = 'NAUMANN, NATURGESCHICHTE DER VÖGEL MITTELEUROPAS: Band II, Tafel 15… (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Regulus ignicapilla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Vencejo real',
+  s.primary_habitat = 'Nidos:Acantilados,cortados,marinos e interior.Hasta 1900m.Sustrato preferido calizo,...Edificaciones',
+  s.description = 'Se trata del más grande y vistoso de los vencejos españoles. Presenta una silueta típica en forma de ballesta, cola corta y levemente ahorquillada, y alas muy largas y estrechas, de aleteos lentos. Posee pico corto, plano y con la boca muy ancha; patas emplumadas y extremadamente cortas, que le impiden posarse en el suelo; y pies pequeños y de fuertes garras, con los cuatro dedos dirigidos hacia delante. Muestra coloración general pardo oliva, más oscura en las alas, con dos destacadas áreas blancas en el vientre y la garganta, separadas ambas por un collar parduzco. Ambos sexos son iguales. Los jóvenes resultan muy similares a los adultos, aunque un poco más oscuros y con plumas ribeteadas de blanco. Esta ave pasa la mayor parte de su vida en el aire, por lo que casi siempre se la ve volando y agrupada, tanto en núcleos urbanos como en acantilados costeros y de interior.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tachymarptis_melba_-Barcelona%2C_Spain_-flying-8.jpg?width=1280',
+  s.image_attribution = 'Birdwatching Barcelona (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Tachymarptis melba';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Cornical',
   s.primary_habitat = 'Matorral cálido, laderas soleadas y barrancos de clima muy seco',
   s.description = 'Arbusto de hojas estrechas y coriáceas y flores pequeñas con cinco pétalos de un pardo verdoso y aspecto aterciopelado. Sus frutos son dos vainas largas y curvas dispuestas en forma de cuerno, de donde le viene el nombre popular de cornical. Suelta látex al romperse.',
