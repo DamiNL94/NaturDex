@@ -484,11 +484,24 @@ function main() {
 
   // 1) Resolver el nombre de cada seleccionada y repartir entre lo que se puede escribir y lo que no.
   const conFicha = [], pendientes = [], renombradas = [];
+  const sinClaseEnLaSeleccion = [];
   for (const sel of seleccion.doc.especies || []) {
     const { nombre, renombrada } = resolverNombre(sel, fichadas, universal);
     if (renombrada) renombradas.push(renombrada);
-    const resuelta = { ...sel, scientificName: nombre, nombreEnLaSeleccion: sel.scientificName };
-    (universal[nombre] ? conFicha : pendientes).push(resuelta);
+    const u = universal[nombre];
+    // La CLASE de la selección la pone GBIF, así que una especie SIN un solo registro dentro de los
+    // polígonos llega aquí con `class: null` — y de `class === 'Aves'` cuelgan cuatro decisiones: el
+    // orden de los `id`, que no se le cuelguen hábitats, la frase del `source` y, la que se ve,
+    // el `zepaSiteCode`. Un ave que el formulario oficial del sitio SÍ declara pero que GBIF no ha
+    // registrado dentro se quedaba fuera del apartado de la ZEPA con su evidencia
+    // `lista_oficial_sitio` intacta al lado: el dato para ponerla estaba y no se miraba. Es el mismo
+    // fallo que el de Sierra de El Carche —contar hábitats en un ave— entrando por otra puerta: allí
+    // era «un ave sin ZEPA», aquí es «un ave sin ocurrencias». La clase se completa desde la ficha
+    // universal, que la trae de EIDOS y no depende de que GBIF haya visto al bicho.
+    const clase = sel.class || (u && u.taxonomy && u.taxonomy.class) || null;
+    if (!sel.class && clase) sinClaseEnLaSeleccion.push(`${nombre} → ${clase}`);
+    const resuelta = { ...sel, class: clase, scientificName: nombre, nombreEnLaSeleccion: sel.scientificName };
+    (u ? conFicha : pendientes).push(resuelta);
   }
 
   // 2) Orden estable: primero lo que se ancla a hábitats y luego las aves (que van a su apartado de
@@ -754,6 +767,11 @@ function main() {
     console.log(`\n⚠ ${localPorEstatal.length} ficha(s) con el \`rarityLocal\` de la selección POR DEBAJO del \`rarityScore\`\n` +
       '  estatal, que lo incluye: EIDOS no devolvió ninguna norma para ese taxón. Se ha escrito el estatal\n' +
       `  y su procedencia va en el \`rarityLocalBasis\`: ${localPorEstatal.join(', ')}`);
+  if (sinClaseEnLaSeleccion.length)
+    console.log(`\n· ${sinClaseEnLaSeleccion.length} ficha(s) sin clase en la selección —GBIF no las ha registrado dentro, y de ahí\n` +
+      '  sale ese campo—: se ha completado desde la ficha universal, que la trae de EIDOS. Importa porque\n' +
+      '  de la clase cuelgan el orden de los `id`, que no se le cuelguen hábitats a un ave, la frase del\n' +
+      `  \`source\` y el \`zepaSiteCode\`: ${sinClaseEnLaSeleccion.join(', ')}`);
   if (sinGbif.length) console.log(`\n⚠ ${sinGbif.length} sin entrada en el barrido de GBIF (quedan sin hábitat ni clave): ${sinGbif.join(', ')}`);
   if (hiloPerdido.length) {
     console.error(`\n✖ ${hiloPerdido.length} ficha(s) escritas SIN enlaces a hábitat aunque la selección se los cuenta.\n` +

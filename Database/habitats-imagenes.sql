@@ -475,6 +475,66 @@ UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
 WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND h.slug = 'dunas-fijas-de-2210';
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND h.slug = 'pastizales-salinos-mediterraneos-1410';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Arthrocnemum_macrostachyum_2LaMata.jpg?width=1280',
+  h.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Sosa alacranera (Arthrocnemum macrostachyum), la especie que da nombre al hábitat.'
+WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND h.slug = 'matorrales-halofilos-mediterraneos-1420';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_caesium653.jpg?width=1280',
+  h.image_attribution = 'Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con sopaenvino (Limonium caesium), la especie que da nombre al hábitat.'
+WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND h.slug = 'estepas-salinas-mediterraneas-1510';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND h.slug = 'rios-mediterraneos-de-3280';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/619019413/original.jpg',
+  h.image_attribution = 'Christoph Moning (CC BY 4.0) · GBIF',
+  h.image_note = 'Portada ilustrada con Taray canario (Tamarix canariensis), la especie que da nombre al hábitat.'
+WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND h.slug = 'galerias-y-matorrales-92D0';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND h.slug = 'matorrales-termomediterraneos-y-5330';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND h.slug = 'matorrales-halonitrofilos-pegano-1430';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND h.slug = 'vegetacion-gipsicola-iberica-1520';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND h.slug = 'prados-calcareos-carsticos-6110';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_freynii_kz01.jpg?width=1280',
+  h.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Teucrio de Freyn (Teucrium freynii), la especie que da nombre al hábitat.'
+WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND h.slug = 'pendientes-rocosas-calcicolas-8210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
   h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Anthyllis_cytisoides.JPG?width=1280',
   h.image_attribution = 'Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons',
   h.image_note = 'Portada ilustrada con Albaida (Anthyllis cytisoides), la especie que da nombre al hábitat.'
