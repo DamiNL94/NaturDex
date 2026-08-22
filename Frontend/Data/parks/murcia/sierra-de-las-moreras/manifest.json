@@ -2,7 +2,7 @@
   "slug": "sierra-de-las-moreras",
   "name": "Sierra de las Moreras",
   "apiSlug": "sierra-de-las-moreras",
-  "version": 5,
+  "version": 6,
   "updatedAt": "2026-08-22",
   "data": "Data/parks/murcia/sierra-de-las-moreras/park.json",
   "geo": {
@@ -17,7 +17,7 @@
   "counts": {
     "species": 64,
     "habitats": 9,
-    "pointsOfInterest": 0,
+    "pointsOfInterest": 2,
     "images": 0,
     "assetBytes": 0
   },

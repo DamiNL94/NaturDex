@@ -348,7 +348,38 @@
       ]
     }
   ],
-  "pointsOfInterest": [],
+  "pointsOfInterest": [
+    {
+      "id": "cabezo-del-plomo",
+      "name": "Cabezo del Plomo",
+      "type": "Arqueológico",
+      "description": "Poblado fortificado del Neolítico final y el Calcolítico, sobre un cerro amesetado en las estribaciones de la sierra. En la parte alta se conservan la muralla —levantada con dos hiladas de piedra rellenas de otras menores y jalonada de bastiones adosados— y las cabañas circulares con zócalo de piedra; al pie del poblado queda el tholos, cámara funeraria delimitada por ortostatos y único enterramiento conservado de su necrópolis. La Universidad de Murcia lo excavó entre 1979 y 1985 bajo la dirección de Ana María Muñoz Amilibia, y está declarado Bien de Interés Cultural con la categoría de Zona Arqueológica. La vida del poblado se sitúa entre el final del IV milenio y mediados del III a.C.",
+      "coordinates": [
+        37.576505,
+        -1.302119
+      ],
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cabezo_del_Plomo_-_Megalitismo._Sepulgro_tipo_Tholos.jpg?width=1280",
+      "source": "Catálogo de Monumentos de la Región de Murcia (datos abiertos de la CARM, nexo.carm.es, registro n.º 5611), consultado el 2026-08-22, de donde salen el hecho y la coordenada. Declaración BIC corroborada en Wikidata (Q43175856, P808 = RI-55-0000172, Zona Arqueológica), que aquí es SUSTITUTO del boletín: el catálogo no cita la norma de declaración y no se ha podido llegar a ella (el índice de anuncios del BORM da entrada por la ficha de la norma, y esta declaración es de patrimonio, no de medio ambiente). OpenStreetMap (way/669396011, ODbL) coincide en la posición dentro de 70 m y añade la fecha de inscripción, 2006-03-24; Wikimedia Commons (foto: Bertobarc90, CC BY-SA 4.0)",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    },
+    {
+      "id": "morron-blanco",
+      "name": "Morrón Blanco",
+      "type": "Paisajístico",
+      "description": "Vértice geodésico del Instituto Geográfico Nacional en lo alto de la sierra, a 489,4 m sobre el nivel del mar. Pertenece a la Red de Orden Inferior con el código 97654 y tiene reseña publicada, así que su altitud y su posición son dato oficial y no una estimación. Desde el pilar se domina de una vez la vertiente que cae al Mediterráneo y el interior del valle del Guadalentín. No es el punto más alto del espacio: dentro del límite hay una cota de 493 m, kilómetro y medio al oeste, que no tiene nombre en la cartografía consultada.",
+      "coordinates": [
+        37.572843,
+        -1.341536
+      ],
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Punto_Geodesico_Morron_Blanco.jpg?width=1280",
+      "source": "Vértice geodésico 97654 de la Red ROI del IGN. Los datos (código, altitud 489,4 m y coordenada) se han leído en Wikidata (Q115506724: P528, P2044, P625), que aquí es SUSTITUTO de la fuente primaria: los dos hosts del IGN que la sirven —api-features.ign.es y datos-geodesia.ign.es, este último con la reseña oficial en https://datos-geodesia.ign.es/Red_Geodesica/Hoja0976/097654.pdf— quedan fuera de la política de egreso de esta sesión (403 en el CONNECT, comprobado con npm run red:check). OpenStreetMap (node/948499834, ODbL) confirma posición y altitud citando la misma Red ROI. La cota sin nombre de 493 m es OpenStreetMap (node/11390346158); Wikimedia Commons (foto: MarkJessop1, CC BY-SA 4.0)",
+      "approx": false,
+      "audio": null,
+      "audioTranscript": null
+    }
+  ],
   "species": [
     {
       "id": 1,
