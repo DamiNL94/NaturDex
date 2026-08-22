@@ -65,6 +65,19 @@ códigos HIC nuevos, **amplía `data/hic-nombres.json` y `data/hic-prioritarios.
    > Para leerlos: `apt-get install poppler-utils` y `pdftotext -layout -enc UTF-8` — **con
    > `-layout`**, que sin él las columnas de la tabla se refluyen y el nombre científico de una fila
    > acaba pegado al de la siguiente.
+   >
+   > **Y la ficha del espacio en `murcianatural.carm.es/<slug>` suele llevar el enlace al plan**, que
+   > es la vía más corta y la que encontró el PORN de Sierra Espuña-Gebas. Dos avisos: el PDF vive en
+   > un gestor documental tras el Radware de la CARM —hay que pedir antes la ficha con `curl -c` y
+   > reutilizar el tarro de cookies—, y **un `HEAD` responde 200 aunque el `GET` vaya a dar 302**, así
+   > que comprobar el enlace con `-I` no basta ([trampas](TRAMPAS-CONOCIDAS.md)).
+   >
+   > **Antes de transcribir, mira QUÉ PERÍMETRO inventaría la norma.** Un plan puede cubrir varios
+   > espacios con un solo inventario: el de 1995 es a la vez el de Sierra Espuña y el de los
+   > Barrancos de Gebas, y el de 2019 cubre seis espacios del Mar Menor. Cuando el ámbito desborda
+   > al espacio, la entrada del anexo lleva **`exigeConstancia: true`** y entonces el anexo no es
+   > puerta de entrada: respalda, y GBIF tiene que corroborar dentro de los polígonos. Sin eso, el
+   > espacio pequeño hereda el catálogo del grande **en verde** (`CLAUDE.md` §2).
 
    Lee el PORN, el PRUG, el decreto de
    declaración o el SDF del sitio Natura 2000 y transcribe la lista de especies que enumeren a

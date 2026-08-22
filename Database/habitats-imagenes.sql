@@ -7,6 +7,24 @@ SET NAMES utf8mb4;
 -- Requiere las columnas habitats.image_attribution e image_note (Database/migrations.sql).
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhamnus_lycioides_fruits.JPG?width=1280',
+  h.image_attribution = 'איתן פרמן (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Espino negro (Rhamnus lycioides), la especie que da nombre al hábitat.'
+WHERE p.slug = 'barrancos-de-gebas' AND h.slug = 'matorrales-termomediterraneos-y-5330';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'barrancos-de-gebas' AND h.slug = 'zonas-subestepicas-de-6220';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'barrancos-de-gebas' AND h.slug = 'galerias-y-matorrales-92D0';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
   h.image_url = NULL,
   h.image_attribution = NULL,
   h.image_note = NULL
@@ -761,6 +779,60 @@ UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
   h.image_attribution = NULL,
   h.image_note = NULL
 WHERE p.slug = 'sierra-de-la-pila' AND h.slug = 'galerias-y-matorrales-92D0';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_insigne.jpg?width=1280',
+  h.image_attribution = 'ANE (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Siempreviva insigne (Limonium insigne), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-las-moreras' AND h.slug = 'matorrales-termomediterraneos-y-5330';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_lanigerum_kz01.jpg?width=1280',
+  h.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Zamarrilla lanuda (Teucrium lanigerum), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-las-moreras' AND h.slug = 'zonas-subestepicas-de-6220';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Chamaerops_humilis_Torreblanca.jpg?width=1280',
+  h.image_attribution = 'Canaan (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Palmito (Chamaerops humilis), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-las-moreras' AND h.slug = 'bosques-endemicos-de-9560';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/609975159/original.jpg',
+  h.image_attribution = 'Quentin Groom (CC0) · GBIF',
+  h.image_note = 'Portada ilustrada con Cornical (Periploca angustifolia), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-las-moreras' AND h.slug = 'matorrales-arborescentes-de-5220';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = NULL,
+  h.image_attribution = NULL,
+  h.image_note = NULL
+WHERE p.slug = 'sierra-de-las-moreras' AND h.slug = 'prados-calcareos-carsticos-6110';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_lanigerum_kz01.jpg?width=1280',
+  h.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Zamarrilla lanuda (Teucrium lanigerum), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-las-moreras' AND h.slug = 'pendientes-rocosas-calcicolas-8210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Withania_frutescens0176.jpg?width=1280',
+  h.image_attribution = 'Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Oroval (Withania frutescens), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-las-moreras' AND h.slug = 'matorrales-halonitrofilos-pegano-1430';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_insigne.jpg?width=1280',
+  h.image_attribution = 'ANE (CC BY-SA 4.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Siempreviva insigne (Limonium insigne), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-las-moreras' AND h.slug = 'acantilados-con-vegetacion-1240';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
+  h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lygeum_spartum-1.jpg?width=1280',
+  h.image_attribution = 'Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons',
+  h.image_note = 'Portada ilustrada con Albardín (Lygeum spartum), la especie que da nombre al hábitat.'
+WHERE p.slug = 'sierra-de-las-moreras' AND h.slug = 'estepas-salinas-mediterraneas-1510';
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id SET
   h.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_oxycedrus_g1.jpg?width=1280',
