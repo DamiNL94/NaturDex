@@ -73,6 +73,21 @@
         }
       ]
     },
+    "Anthyllido lagascanae-Thymetum antoninae": {
+      "nombre": "Tomillar de probayernos",
+      "lectura": "Tomillar bajo y muy abierto sobre margas y yesos que se resecan en cuanto aprieta el calor, con la roca desnuda a la vista entre mata y mata. Lo identifican una albaida de flor rosada y un tomillo de porte menudo; entre las dos dejan pasar tanta luz que el suelo apenas llega a cubrirse.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Anthyllis lagascana",
+          "comun": "probayernos"
+        },
+        {
+          "cientifico": "Thymus antoninae",
+          "comun": "tomillo"
+        }
+      ]
+    },
     "Arisaro simorrhini-Tetraclinidetum articulatae": {
       "nombre": "Sabinar de sabina de Cartagena",
       "lectura": "Bosquete claro y bajo de un ciprés africano de ramillas articuladas que en Europa solo crece en unos pocos cerros del sureste ibérico y en Malta. Bajo su sombra ligera crece un candilico de hoja acorazonada que asoma en otoño y desaparece en verano. Es la única formación arbórea de origen norteafricano que llega al continente europeo, y por eso su hábitat es prioritario.",
@@ -641,6 +656,21 @@
         }
       ]
     },
+    "Lavandulo dentatae-Genistetum retamoidis": {
+      "nombre": "Retamar con cantueso dentado",
+      "lectura": "Matorral alto y claro de arbustos de ramas verdes y casi sin hoja, que hacen la fotosíntesis con el propio tallo para gastar menos agua. Entre ellos crece un cantueso de hojas con el borde recortado en dientes. Ocupa laderas soleadas y pedregosas de clima cálido y seco.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Lavandula dentata",
+          "comun": "cantueso dentado"
+        },
+        {
+          "cientifico": "Genista spartioides subsp. retamoides",
+          "comun": "apalaín"
+        }
+      ]
+    },
     "Lavandulo-Genistion boissieri": {
       "nombre": "Matorrales de montaña con lavandas y aulagas",
       "lectura": "Reúne los matorrales aromáticos y espinosos de montaña caliza —lavandas, aulagas, tomillos y salvias— que se repiten con la misma estructura por buena parte de la mitad sur peninsular.",
@@ -975,6 +1005,21 @@
         }
       ]
     },
+    "Rubio tinctorum-Populetum albae": {
+      "nombre": "Alameda de ribera",
+      "lectura": "Bosque de galería de álamos blancos —tronco claro y hoja con el envés algodonoso, que vira a plata cuando se levanta el viento— sobre los suelos profundos y húmedos que deja el río. Por debajo se enreda la rubia, una trepadora de tallos ásperos y hojas en corona que se agarra a lo que encuentra y cierra el sotobosque.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Rubia tinctorum",
+          "comun": "rubia"
+        },
+        {
+          "cientifico": "Populus alba",
+          "comun": "álamo blanco"
+        }
+      ]
+    },
     "Rubo ulmifolii-Loniceretum biflorae": {
       "nombre": "Zarzal de ribera con madreselva",
       "lectura": "Maraña espinosa de zarzas trepada por madreselvas, en los bordes de cauces y acequias de clima cálido. Forma un seto casi impenetrable que da sombra al agua y sirve de refugio y despensa a los pájaros.",
@@ -1015,6 +1060,17 @@
         },
         {
           "cientifico": "Ruppia cirrhosa"
+        }
+      ]
+    },
+    "Salicetum neotrichae": {
+      "nombre": "Sauceda de sauce blanco",
+      "lectura": "Primera línea de la vegetación de ribera: una franja de sauces de hoja estrecha y plateada pegada al agua, la que recibe de lleno la corriente en cada crecida. Sus raíces sujetan la orilla y rebrotan del tocón cuando la avenida se lleva la parte aérea.",
+      "rango": "asociación",
+      "nombradaPor": [
+        {
+          "cientifico": "Salix neotricha",
+          "comun": "sauce blanco"
         }
       ]
     },

@@ -1885,9 +1885,9 @@
           "id": 32,
           "habitat": "galeria-ribera",
           "hic": "92D0",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 92D0",
+          "ocurrencias": null
         },
         {
           "especie": "Meles meles",
@@ -19027,9 +19027,9 @@
           "id": 175,
           "habitat": "zonas-subestepicas-de-6220",
           "hic": "6220",
-          "veredicto": "respaldado",
-          "ocurrencias": 1,
-          "motivo": "1 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 6220",
+          "ocurrencias": null
         },
         {
           "especie": "Cheirolophus intybaceus",
@@ -21903,9 +21903,9 @@
           "id": 62,
           "habitat": "galerias-y-matorrales-92D0",
           "hic": "92D0",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 92D0",
+          "ocurrencias": null
         },
         {
           "especie": "Ammochloa palaestina",
@@ -25379,9 +25379,9 @@
           "id": 57,
           "habitat": "galerias-y-matorrales-92D0",
           "hic": "92D0",
-          "veredicto": "respaldado",
-          "ocurrencias": 1,
-          "motivo": "1 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 92D0",
+          "ocurrencias": null
         },
         {
           "especie": "Tamarix africana",
@@ -58550,6 +58550,502 @@
           "veredicto": "no-evaluable",
           "ocurrencias": null,
           "motivo": "el espacio no tiene barrido de GBIF versionado"
+        }
+      ]
+    },
+    {
+      "slug": "sotos-y-bosques-de-ribera-de-canaverosa",
+      "conBarrido": true,
+      "enlaces": [
+        {
+          "especie": "Sciurus vulgaris",
+          "comun": "Ardilla roja",
+          "id": 1,
+          "habitat": "bosques-galeria-de-92A0",
+          "hic": "92A0",
+          "veredicto": "respaldado",
+          "ocurrencias": 5,
+          "motivo": "5 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Sciurus vulgaris",
+          "comun": "Ardilla roja",
+          "id": 1,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Sciurus vulgaris",
+          "comun": "Ardilla roja",
+          "id": 1,
+          "habitat": "matorrales-arborescentes-de-5210",
+          "hic": "5210",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Sciurus vulgaris",
+          "comun": "Ardilla roja",
+          "id": 1,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Psammodromus algirus",
+          "comun": "Lagartija colilarga",
+          "id": 2,
+          "habitat": "bosques-galeria-de-92A0",
+          "hic": "92A0",
+          "veredicto": "respaldado",
+          "ocurrencias": 3,
+          "motivo": "3 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Rhamnus alaternus",
+          "comun": "Aladierno",
+          "id": 3,
+          "habitat": "bosques-galeria-de-92A0",
+          "hic": "92A0",
+          "veredicto": "respaldado",
+          "ocurrencias": 3,
+          "motivo": "3 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Allium rouyi",
+          "comun": "Ajo Amarillo",
+          "id": 4,
+          "habitat": "bosques-galeria-de-92A0",
+          "hic": "92A0",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Cheirolophus intybaceus",
+          "comun": "achicoria falsa",
+          "id": 5,
+          "habitat": "bosques-galeria-de-92A0",
+          "hic": "92A0",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Pelophylax perezi",
+          "comun": "Rana común",
+          "id": 6,
+          "habitat": "bosques-galeria-de-92A0",
+          "hic": "92A0",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Pistacia terebinthus",
+          "comun": "Cornicabra",
+          "id": 7,
+          "habitat": "bosques-galeria-de-92A0",
+          "hic": "92A0",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Populus alba",
+          "comun": "Álamo blanco",
+          "id": 8,
+          "habitat": "bosques-galeria-de-92A0",
+          "hic": "92A0",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Thymus antoninae",
+          "comun": "Tomillo",
+          "id": 9,
+          "habitat": "bosques-galeria-de-92A0",
+          "hic": "92A0",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Thymus antoninae",
+          "comun": "Tomillo",
+          "id": 9,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Celtis australis",
+          "comun": "Almez",
+          "id": 10,
+          "habitat": "bosques-galeria-de-92A0",
+          "hic": "92A0",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 92A0",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Crataegus monogyna",
+          "comun": "Majuelo",
+          "id": 11,
+          "habitat": "bosques-galeria-de-92A0",
+          "hic": "92A0",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Cytisus scoparius",
+          "comun": "Retama de escobas",
+          "id": 12,
+          "habitat": "bosques-galeria-de-92A0",
+          "hic": "92A0",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Cytisus scoparius",
+          "comun": "Retama de escobas",
+          "id": 12,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Dianthus broteri",
+          "comun": "Clavellina",
+          "id": 13,
+          "habitat": "bosques-galeria-de-92A0",
+          "hic": "92A0",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Fraxinus angustifolia",
+          "comun": "Fresno",
+          "id": 14,
+          "habitat": "bosques-galeria-de-92A0",
+          "hic": "92A0",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Hemorrhois hippocrepis",
+          "comun": "Culebra de herradura",
+          "id": 15,
+          "habitat": "bosques-galeria-de-92A0",
+          "hic": "92A0",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Lutra lutra",
+          "comun": "Nutria",
+          "id": 16,
+          "habitat": "bosques-galeria-de-92A0",
+          "hic": "92A0",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Phlomis lychnitis",
+          "comun": "Genciana",
+          "id": 17,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Phlomis lychnitis",
+          "comun": "Genciana",
+          "id": 17,
+          "habitat": "matorrales-arborescentes-de-5210",
+          "hic": "5210",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Phlomis lychnitis",
+          "comun": "Genciana",
+          "id": 17,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Phlomis lychnitis",
+          "comun": "Genciana",
+          "id": 17,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 6220",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Pinus halepensis",
+          "comun": "Pino carrasco",
+          "id": 18,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Pinus halepensis",
+          "comun": "Pino carrasco",
+          "id": 18,
+          "habitat": "matorrales-arborescentes-de-5210",
+          "hic": "5210",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Pinus halepensis",
+          "comun": "Pino carrasco",
+          "id": 18,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Ruscus aculeatus",
+          "comun": "Albricias",
+          "id": 19,
+          "habitat": "bosques-galeria-de-92A0",
+          "hic": "92A0",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Sideritis tragoriganum",
+          "comun": "Rabo de gato",
+          "id": 20,
+          "habitat": "bosques-galeria-de-92A0",
+          "hic": "92A0",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Sideritis tragoriganum",
+          "comun": "Rabo de gato",
+          "id": 20,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Ulmus minor",
+          "comun": "Olmo común",
+          "id": 21,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Ulmus minor",
+          "comun": "Olmo común",
+          "id": 21,
+          "habitat": "matorrales-arborescentes-de-5210",
+          "hic": "5210",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Ulmus minor",
+          "comun": "Olmo común",
+          "id": 21,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Zamenis scalaris",
+          "comun": "Culebra de escalera",
+          "id": 22,
+          "habitat": "bosques-galeria-de-92A0",
+          "hic": "92A0",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Astragalus alopecuroides subsp. grosii",
+          "comun": "Astragalus alopecuroides subsp. grosii",
+          "id": 34,
+          "habitat": "vegetacion-gipsicola-iberica-1520",
+          "hic": "1520",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1520",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Campanula fastigiata",
+          "comun": "Campanula fastigiata",
+          "id": 40,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 6220",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Chaenorhinum rubrifolium",
+          "comun": "espuelilla pelosa",
+          "id": 45,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 6220",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Chaenorhinum rupestre",
+          "comun": "Espuelilla de yesos",
+          "id": 46,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 6220",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Gypsophila struthium",
+          "comun": "albada",
+          "id": 71,
+          "habitat": "vegetacion-gipsicola-iberica-1520",
+          "hic": "1520",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1520",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Helianthemum guerrae",
+          "comun": "Tamarilla de arenal",
+          "id": 72,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Helianthemum squamatum",
+          "comun": "flor del príncipe",
+          "id": 73,
+          "habitat": "vegetacion-gipsicola-iberica-1520",
+          "hic": "1520",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1520",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Ononis tridentata",
+          "comun": "Arnacho",
+          "id": 110,
+          "habitat": "vegetacion-gipsicola-iberica-1520",
+          "hic": "1520",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1520",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Salix eleagnos",
+          "comun": "Sarga",
+          "id": 136,
+          "habitat": "bosques-galeria-de-92A0",
+          "hic": "92A0",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 92A0",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Tamarix africana",
+          "comun": "Taray",
+          "id": 150,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 92D0",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Tamarix boveana",
+          "comun": "Taray de saladar",
+          "id": 151,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 92D0",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Tamarix canariensis",
+          "comun": "Taray canario",
+          "id": 152,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 92D0",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Tamarix gallica",
+          "comun": "Taraje",
+          "id": 153,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 92D0",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Teucrium franchetianum",
+          "comun": "Teucrium franchetianum",
+          "id": 156,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
         }
       ]
     }
