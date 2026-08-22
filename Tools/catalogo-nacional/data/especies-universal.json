@@ -1968,6 +1968,31 @@
     "eidosTaxonId": 2349,
     "rarityBasis": null
   },
+  "Argyrolobium uniflorum": {
+    "commonName": "Argyrolobium uniflorum",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": null,
+    "rarityScore": 5,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Fabales",
+      "family": "Fabaceae",
+      "genus": "Argyrolobium"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": null,
+    "imageAttribution": null,
+    "eidosTaxonId": 2412,
+    "rarityBasis": null
+  },
   "Argyrolobium zanonii": {
     "commonName": "Hierba de plata",
     "kingdom": "flora",
@@ -3363,6 +3388,56 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Male_pochard_reflection_in_evening.jpg?width=1280",
     "imageAttribution": "Neil Phillips (CC BY 2.0) · Wikimedia Commons",
     "eidosTaxonId": 11258,
+    "rarityBasis": null
+  },
+  "Aythya fuligula": {
+    "commonName": "Porrón moñudo",
+    "kingdom": "fauna",
+    "group": "Ave acuática",
+    "habitat": null,
+    "seasonality": "Octubre a mayo",
+    "rarityScore": 1,
+    "description": "Este pato buceador, de aspecto compacto y marcado dimorfismo sexual, presenta un característico moño colgante en la nuca. El macho adulto es mayoritariamente negro, excepto en los flancos y el vientre, que son blancos. La parte ventral de las alas es blanquecina, al igual que una franja alar bastante visible cuando el ave levanta el vuelo. En la cabeza —además del largo moño— resulta particularmente llamativo el iris amarillo de los ojos; el pico, por su parte, es azulado, pero con el extremo negro. En las hembras adultas predominan los tonos pardos, más oscuros en el dorso y ligeramente pálidos en los flancos; el iris es también amarillo, pero el moño resulta sustancialmente más corto que en los machos. A veces, las hembras lucen una mancha blanca alrededor de la base del pico, por lo que pueden confundirse con hembras de porrón bastardo. El joven es muy similar a la hembra, pero el moño es aún más corto, el plumaje presenta una coloración más apagada, y el pico es más oscuro, al igual que el iris.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Anseriformes",
+      "family": "Anatidae",
+      "genus": "Aythya"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tufted-Duck-male-female.jpg?width=1280",
+    "imageAttribution": "Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons",
+    "eidosTaxonId": 11312,
+    "rarityBasis": null
+  },
+  "Aythya nyroca": {
+    "commonName": "Porrón pardo",
+    "kingdom": "fauna",
+    "group": "Ave acuática",
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 5,
+    "description": "Este pato buceador de pequeño o mediano tamaño y cuerpo bastante corto presenta una cabeza con el característico perfil de porrón, es decir, frente alta y píleo apuntado. El macho adulto en plumaje nupcial exhibe una bella tonalidad herrumbre o castaño intenso, más oscuro en el dorso y más pálido en los flancos. El iris es de color blanco, por lo que destaca vivamente sobre el plumaje de la cabeza. La hembra adulta resulta más sombría y menos contrastada y tiene el iris de color pardo. Los jóvenes son similares a la hembra adulta, pero de color más apagado, en general. En vuelo se observan muy nítidamente unas anchas bandas de color blanco puro que llegan hasta los extremos alares, así como la coloración blanca del vientre y la popa.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Anseriformes",
+      "family": "Anatidae",
+      "genus": "Aythya"
+    },
+    "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2019)",
+    "spainStatus": "CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aythya_nyroca_at_Martin_Mere_1.jpg?width=1280",
+    "imageAttribution": "Francis Franklin (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 11871,
     "rarityBasis": null
   },
   "Ballota hirsuta": {
@@ -9064,6 +9139,31 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
+  },
+  "Elanus caeruleus": {
+    "commonName": "Elanio común",
+    "kingdom": "fauna",
+    "group": "Ave rapaz",
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 1,
+    "description": "Rapaz pequeña de cabeza voluminosa. El rojo coral de sus ojos destaca sobre el blanco níveo de las partes inferiores, y presenta extremos alares blancos. Las partes superiores son de color gris ceniza, con hombros negros. Los jóvenes tienen el dorso escamado y pecho y cabeza con tonos ocres que pierden rápidamente. El elanio azul es localizado frecuentemente posado en postes junto a caminos y carreteras; entonces parece muy pálido, cabezón y colicorto. Planea con alas levantadas y se cierne a menudo. En parada nupcial muestra un aleteo espasmódico con alas en forma de “v”.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "genus": "Elanus"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Elanus_caeruleus_1M2A4739_(45250487704).jpg?width=1280",
+    "imageAttribution": "Stephen Temple from Cape Town, South Africa (CC BY-SA 2.0) · Wikimedia Commons",
+    "eidosTaxonId": 10930,
+    "rarityBasis": null
   },
   "Eliomys quercinus": {
     "commonName": "Lirón careto",
@@ -17544,7 +17644,8 @@
       "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Myotis capaccinii": {
     "commonName": "Murciélago patudo",
@@ -17942,6 +18043,31 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Neslia_paniculata_eF.jpg?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
     "eidosTaxonId": 6564,
+    "rarityBasis": null
+  },
+  "Netta rufina": {
+    "commonName": "Pato colorado",
+    "kingdom": "fauna",
+    "group": "Ave acuática",
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 1,
+    "description": "Se trata del pato buceador más grande de los existentes en nuestra fauna. El macho adulto en plumaje nupcial es un ave prácticamente inconfundible, que luce un intenso color castaño rojizo en la cabeza y la parte anterior del cuello, así como un llamativo pico de color rojo coral. El pecho, la nuca, la parte posterior del cuello y una ancha banda en el centro del vientre, así como la popa y el obispillo, son negros, en tanto que las regiones dorsales son pardas y los flancos —al igual que el borde anterior de las alas—, blancos. En vuelo, las manchas ovales blancas bordeadas de negro, características de los flancos, resultan muy distintivas. La hembra adulta, por su parte, presenta un plumaje sumamente discreto, con la parte anterior de la cabeza y los lados del cuello blanquecinos, la frente, el píleo, la parte posterior del cuello y el manto marrones, y un pico de color gris oscuro con manchas rosáceas cerca del extremo. El joven resulta muy semejante a la hembra, pero con el pico completamente oscuro.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Anseriformes",
+      "family": "Anatidae",
+      "genus": "Netta"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Netta_rufina_m2.jpg?width=1280",
+    "imageAttribution": "autor no indicado (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 12124,
     "rarityBasis": null
   },
   "Notoceras bicorne": {
@@ -19025,6 +19151,31 @@
     "eidosTaxonId": 29619,
     "rarityBasis": null
   },
+  "Oxyura leucocephala": {
+    "commonName": "Malvasía",
+    "kingdom": "fauna",
+    "group": "Ave acuática",
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 5,
+    "description": "La malvasía cabeciblanca resulta absolutamente inconfundible por su cuerpo pequeño y rechoncho, su larga y afilada cola, que suele mantener erguida fuera del agua mientras nada, y su voluminosa cabeza rematada en un robusto pico. Durante el periodo reproductor, en el diseño del macho dominan los tonos marronáceos, algo rojizos hacia el pecho, mientras que el vientre muestra una tonalidad blanquecina; sobre esta discreta coloración resalta llamativamente la cabeza blanca, con el píleo y la nuca negros y el abombado pico de color azul brillante. La hembra, de tonalidad general pardo-grisácea, presenta la cabeza parduzca surcada por una franja oscura debajo del ojo, las mejillas blanquecinas y el pico gris. Los jóvenes son muy similares a las hembras.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Anseriformes",
+      "family": "Anatidae",
+      "genus": "Oxyura"
+    },
+    "iucnGlobal": "EN — En peligro (Lista Roja mundial de la UICN, 2017)",
+    "spainStatus": "CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Wei%C3%9Fkopfruderente_Oxyura_leucocephala_0505059_Wikiausschnit.jpg?width=1280",
+    "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 11589,
+    "rarityBasis": null
+  },
   "Pancratium maritimum": {
     "commonName": "Azucena de mar",
     "kingdom": "flora",
@@ -19438,6 +19589,31 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Peganum_harmala1.jpg?width=1280",
     "imageAttribution": "Kurt Stüber [1] (CC BY-SA 3.0) · Wikimedia Commons",
     "eidosTaxonId": 6974,
+    "rarityBasis": null
+  },
+  "Pelobates cultripes": {
+    "commonName": "Sapo de espuelas",
+    "kingdom": "fauna",
+    "group": "Anfibio",
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 4,
+    "description": "Sapo de apariencia robusta y de talla mediana. La longitud total máxima se sitúa en 125 mm, aunque por lo general presentan tallas menores, siendo las hembras más grandes que los machos. No presenta tímpanos externamente visibles, ni tampoco glándulas parotídeas aparentes. Los ojos presentan la pupila vertical con el iris de color plateado, amarillento o verde, con reflejos metálicos y un fino reticulado oscuro. Los tubérculos metatarsianos están muy desarrollados y endurecidos, formando una espuela de color negro. La piel es lisa y brillante. La coloración dorsal es variable: blanquecina, amarillenta, grisácea, verdosa o parda, a menudo con presencia de manchas pardas o verdosas más oscuras. Ventralmente presentan tonos blanquecinos, amarillentos o grisáceos, a veces con manchas oscuras.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Amphibia",
+      "order": "Anura",
+      "family": "Pelobatidae",
+      "genus": "Pelobates"
+    },
+    "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 2022)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pelobates_cultripes02.jpg?width=1280",
+    "imageAttribution": "Franco Andreone - see authorization (CC BY-SA 2.5) · Wikimedia Commons",
+    "eidosTaxonId": 11108,
     "rarityBasis": null
   },
   "Pelodytes punctatus": {
@@ -19895,6 +20071,31 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Phoenicopterus_roseus_(Walvis_bay).jpg?width=1280",
     "imageAttribution": "Yathin S Krishnappa (CC BY-SA 3.0) · Wikimedia Commons",
     "eidosTaxonId": 12107,
+    "rarityBasis": null
+  },
+  "Phoenicopterus ruber": {
+    "commonName": "Flamenco",
+    "kingdom": "fauna",
+    "group": "Ave",
+    "habitat": "Cria en Lagunas endorreicas,marismas y salinas.Deltas de aguas altamente salinas o alcalinas",
+    "seasonality": "Junio a agosto",
+    "rarityScore": 1,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Phoenicopteriformes",
+      "family": "Phoenicopteridae",
+      "genus": "Phoenicopterus"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
+    "spainStatus": "Anexo IV (Ley 42/2007, de 13 de diciembre)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Phoenicopterus_ruber_Bonaire_1.jpg?width=1280",
+    "imageAttribution": "Paul Asman and Jill Lenoble (CC BY 2.0) · Wikimedia Commons",
+    "eidosTaxonId": 23780,
     "rarityBasis": null
   },
   "Phoenicurus ochruros": {
@@ -20701,6 +20902,31 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Plecotus_austriacus2.jpg?width=1280",
     "imageAttribution": "Andrei Sakhno (CC BY-SA 4.0) · Wikimedia Commons",
     "eidosTaxonId": 10799,
+    "rarityBasis": null
+  },
+  "Plegadis falcinellus": {
+    "commonName": "Morito",
+    "kingdom": "fauna",
+    "group": "Ave acuática",
+    "habitat": null,
+    "seasonality": "Todo el año",
+    "rarityScore": 1,
+    "description": "Zancuda de pico largo y curvo, y tonos pardos y rojizos. El adulto reproductor es pardo, muy rojizo, con tonos irisados, verdosos y rosados, en las alas y el dorso. En la cara presenta unas líneas blancas muy llamativas que bordean la comisura del pico —este de color naranja grisáceo—, y sus patas son oscuras. El adulto no reproductor es mucho más apagado, con el pico más oscuro y sin las líneas blancas en su borde, y con numerosas pintas blancas alargadas en el cuello y la cabeza. Los jóvenes son aún más apagados que los adultos no reproductores. En vuelo muestra un aspecto muy alargado y estilizado, con la cabeza ligeramente caída. Cuando se alimenta, se localiza típicamente en aguas someras, mientras mueve el pico y la cabeza lateralmente en busca de presas.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Pelecaniformes",
+      "family": "Threskiornithidae",
+      "genus": "Plegadis"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Plegadis_falcinellus_Syracuse.jpg?width=1280",
+    "imageAttribution": "Egretta_garzetta_Plegadis_falcinellus_Syracuse.jpg: Gabriele Iuvara… (CC BY-SA 2.0) · Wikimedia Commons",
+    "eidosTaxonId": 11247,
     "rarityBasis": null
   },
   "Pluvialis apricaria": {
@@ -24688,6 +24914,31 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Northern_Shoveler_Anas_clypeata.jpg?width=1280",
     "imageAttribution": "Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons",
     "eidosTaxonId": 33013,
+    "rarityBasis": null
+  },
+  "Spatula querquedula": {
+    "commonName": "Cerceta carretona",
+    "kingdom": "fauna",
+    "group": "Ave acuática",
+    "habitat": null,
+    "seasonality": "Marzo, abril, mayo, agosto, septiembre",
+    "rarityScore": 2,
+    "description": "Pato nadador de pequeño tamaño y dimorfismo sexual acusado. El macho adulto presenta la popa moteada; los flancos gris ceniza, con una barra blanca vertical que los separa del pecho; la cabeza y el pecho pardos, con un estriado mínimo; y el dorso grisáceo, con largas plumas escapulares que cuelgan hacia los lados. En la cabeza destaca una ancha y larga lista ocular blanca, a modo de ceja. La hembra adulta es completamente parda jaspeada, con el pico gris perla, bastante largo. En su cabeza se dibujan zonas pálidas en la garganta y en la comisura del pico. Presenta una lista ocular discreta de color oscuro. Los jóvenes son muy parecidos a las hembras, pero con el vientre más oscuro y el borde terminal pálido de las secundarias más estrecho. En vuelo, el macho aparece con alas de color gris plateado y cabeza y cuello oscuros. En el espejuelo (secundarias y sus cobertoras) se dibujan dos barras pálidas longitudinales. La hembra y el joven son muy oscuros, con el espejuelo similar al macho adulto.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "order": "Anseriformes",
+      "family": "Anatidae",
+      "genus": "Spatula"
+    },
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Garganey_(Anas_querquedula)_RWD3.jpg?width=1280",
+    "imageAttribution": "Dick Daniels (https://theworldbirds.org/) (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 33012,
     "rarityBasis": null
   },
   "Spergularia bocconei": {
