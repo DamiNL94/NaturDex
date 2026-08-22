@@ -1,0 +1,177 @@
+{
+ "park": "sotos-y-bosques-de-ribera-de-canaverosa",
+ "generado": "Atlas y Manual de los Hábitats de España (MITECO) ∩ catálogo del parque",
+ "hic": {
+  "1520": {
+   "habitat": "vegetacion-gipsicola-iberica-1520",
+   "especies": [
+    "Astragalus alopecuroides subsp. grosii",
+    "Gypsophila struthium",
+    "Helianthemum squamatum",
+    "Ononis tridentata"
+   ]
+  },
+  "5210": {
+   "habitat": "matorrales-arborescentes-de-5210",
+   "especies": []
+  },
+  "5330": {
+   "habitat": "matorrales-termomediterraneos-y-5330",
+   "especies": [
+    "Sideritis tragoriganum",
+    "Helianthemum guerrae",
+    "Teucrium franchetianum",
+    "Thymus antoninae",
+    "Cytisus scoparius",
+    "Pinus halepensis"
+   ]
+  },
+  "6220": {
+   "habitat": "zonas-subestepicas-de-6220",
+   "especies": [
+    "Campanula fastigiata",
+    "Chaenorhinum rupestre",
+    "Chaenorhinum rubrifolium",
+    "Phlomis lychnitis"
+   ]
+  },
+  "92D0": {
+   "habitat": "galerias-y-matorrales-92D0",
+   "especies": [
+    "Tamarix africana",
+    "Tamarix gallica",
+    "Tamarix boveana",
+    "Tamarix canariensis"
+   ]
+  },
+  "92A0": {
+   "habitat": "bosques-galeria-de-92A0",
+   "especies": [
+    "Celtis australis",
+    "Salix eleagnos"
+   ]
+  }
+ },
+ "links": [
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Sideritis tragoriganum",
+   "atlas_name": "Sideritis tragoriganum mo serrae-Micromerietum microphyllae 176041"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Helianthemum guerrae",
+   "atlas_name": "Helianthemum guerrae"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Teucrium franchetianum",
+   "atlas_name": "Teucrium franchetianum"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Thymus antoninae",
+   "atlas_name": "Thymus antoninae"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Cytisus scoparius",
+   "atlas_name": "Cytisus scoparius subsp. bourgaei"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Pinus halepensis",
+   "atlas_name": "Pinus halepensis var. ceciliae"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Campanula fastigiata",
+   "atlas_name": "Campanula fastigiata"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Chaenorhinum rupestre",
+   "atlas_name": "Chaenorhinum rupestre"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Chaenorhinum rubrifolium",
+   "atlas_name": "Chaenorhinum rubrifolium subsp. raveyi"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Phlomis lychnitis",
+   "atlas_name": "Phlomis lychnitis"
+  },
+  {
+   "code": "1520",
+   "habitat_slug": "vegetacion-gipsicola-iberica-1520",
+   "scientific_name": "Astragalus alopecuroides subsp. grosii",
+   "atlas_name": "Astragalus alopecuroides subsp. grosii"
+  },
+  {
+   "code": "1520",
+   "habitat_slug": "vegetacion-gipsicola-iberica-1520",
+   "scientific_name": "Gypsophila struthium",
+   "atlas_name": "Gypsophila struthium"
+  },
+  {
+   "code": "1520",
+   "habitat_slug": "vegetacion-gipsicola-iberica-1520",
+   "scientific_name": "Helianthemum squamatum",
+   "atlas_name": "Helianthemum squamatum"
+  },
+  {
+   "code": "1520",
+   "habitat_slug": "vegetacion-gipsicola-iberica-1520",
+   "scientific_name": "Ononis tridentata",
+   "atlas_name": "Ononis tridentata subsp. crassifolia"
+  },
+  {
+   "code": "92D0",
+   "habitat_slug": "galerias-y-matorrales-92D0",
+   "scientific_name": "Tamarix africana",
+   "atlas_name": "Tamarix africana var. fluminensis"
+  },
+  {
+   "code": "92D0",
+   "habitat_slug": "galerias-y-matorrales-92D0",
+   "scientific_name": "Tamarix gallica",
+   "atlas_name": "Tamarix gallica var. arborea"
+  },
+  {
+   "code": "92D0",
+   "habitat_slug": "galerias-y-matorrales-92D0",
+   "scientific_name": "Tamarix boveana",
+   "atlas_name": "Tamarix boveana"
+  },
+  {
+   "code": "92D0",
+   "habitat_slug": "galerias-y-matorrales-92D0",
+   "scientific_name": "Tamarix canariensis",
+   "atlas_name": "Tamarix canariensis"
+  },
+  {
+   "code": "92A0",
+   "habitat_slug": "bosques-galeria-de-92A0",
+   "scientific_name": "Celtis australis",
+   "atlas_name": "Celtis australis"
+  },
+  {
+   "code": "92A0",
+   "habitat_slug": "bosques-galeria-de-92A0",
+   "scientific_name": "Salix eleagnos",
+   "atlas_name": "Salix eleagnos subsp. angustifolia"
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-17",
+  "updatedAt": "2026-08-22",
   "_comment": "Registro de espacios naturales protegidos de NaturDex, organizado por comunidad autónoma y provincia. Tres niveles de dato en el campo `status`: 'basic' = ficha base (N1): límite oficial, códigos Natura 2000 y datos administrativos, SIN catálogo de especies ni hábitats; el espacio es seleccionable y el frontend avisa de que su catálogo está en preparación. 'available' = completo (N2): hábitats HIC recortados, catálogo de especies con evidencia, POIs, fotos y audioguías. 'planned' = anunciado pero sin datos ni carpeta; no es seleccionable. Todo espacio nace 'basic' y asciende a 'available' cuando se le hace el catálogo (ver Docs/prompts/e-rollout-nacional.md). Para añadir uno nuevo: crear Data/parks/<provincia>/<slug>/ con park.json, manifest.json y geo/, y añadir su entrada aquí.",
   "defaultPark": "cabo-cope-puntas-calnegre",
   "communities": [
@@ -196,7 +196,7 @@
               "slug": "sotos-y-bosques-de-ribera-de-canaverosa",
               "name": "Sotos y bosques de ribera de Cañaverosa",
               "category": "Reserva Natural",
-              "status": "basic",
+              "status": "available",
               "center": [
                 38.28027,
                 -1.71834

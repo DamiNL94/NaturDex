@@ -34213,3 +34213,3378 @@ Prefiere matorral alto, no el raso',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Curruca cantillans';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ardilla roja',
+  s.primary_habitat = 'Pinares y bosques con arbolado maduro y producción de piñones o frutos',
+  s.description = 'Ardilla arborícola de cola larga y esponjosa y orejas con pinceles de pelo más marcados en invierno. En los pinares mediterráneos su rastro más evidente son las piñas roídas hasta dejar solo el eje, abandonadas en tocones y piedras.',
+  s.description_source = NULL,
+  s.identification_tips = 'Piñas roídas hasta el raspón, apiladas en un mismo posadero
+Cola larga y esponjosa que mantiene erguida al saltar
+Pinceles de pelo en las orejas, sobre todo en invierno',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eichh%C3%B6rnchen_D%C3%BCsseldorf_Hofgarten_edit.jpg?width=1280',
+  s.image_attribution = 'Ray eye (CC BY-SA 2.0 de) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Sciurus vulgaris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagartija colilarga',
+  s.primary_habitat = 'Matorral litoral y laderas secas',
+  s.description = 'Lagartija esbelta de escamas grandes, quilladas y brillantes, con dos líneas claras muy marcadas a cada lado del dorso. La cola puede medir el doble que el cuerpo. Los machos lucen en primavera manchas azules en el hombro y las mejillas anaranjadas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Dos líneas claras nítidas a lo largo de cada costado
+Escamas grandes y quilladas, de aspecto brillante
+Cola larguísima, hasta el doble que el cuerpo',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Psammodromus_algirus_-_01.jpg?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Psammodromus algirus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Aladierno',
+  s.primary_habitat = 'Matorral alto, encinares y barrancos sobre suelos pedregosos',
+  s.description = 'Arbusto perennifolio de hojas alternas, coriáceas y de borde finamente dentado, sin espinas. Sus frutos maduran de rojo a negro y son muy buscados por los pájaros. Se distingue del espino negro por carecer de espinas y tener hojas mayores.',
+  s.description_source = NULL,
+  s.identification_tips = 'Sin espinas, a diferencia de otros ramnos
+Hojas alternas, coriáceas y algo dentadas
+Frutos que pasan de rojo a negro al madurar',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhamnus_alaternus1627.JPG?width=1280',
+  s.image_attribution = 'tato grasso (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Rhamnus alaternus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ajo Amarillo',
+  s.primary_habitat = 'Edafoendemismo andaluz que habita suelos poco desarrollados, sobre rocas peridotíticas, de zonas termomediterráneas y con ombroclima subhúmedo- húmedo',
+  s.description = 'Planta herbácea, bulbosa. Escapo 20 a 27 cm, con 2-3 hojas basales, filiformes, glabras o con pelos reflejos en vainas y márgenes. Inflorescencia en umbela terminal, con espata de dos piezas más cortas que la inflorescencia; pedicelos más largos que los tépalos. Tépalos de 5-6 mm, amarillos con nervio medio verdoso, agudos, libres. Androceo con seis estambres incluidos; filamentos simples y anteras amarillas. Gineceo con un estilo ginobásico. Fruto cápsula de 3,5-4 mm, globosa.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Allium rouyi';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'achicoria falsa',
+  s.primary_habitat = 'Habita sobre acantilados y laderas de naturaleza margo-arenosa muy deleznables junto a la línea de costa, en el piso termomediterráneo de ombroclima seco',
+  s.description = 'Planta procumbente y multicaule, de base sufruticosa y hojas subcrasas, las inferiores liradopinnatipartidas y las superiores linear-lanceoladas. Tallos floríferos estriado-glandulosos, subáfilos y engrosados por debajo del capítulo. Brácteas del involucro oblongas, con apéndice semilunar y con 9-11 cilios. Aquenios de 4x2 mm, negruzcos, glabrescentes y con vilano de hasta 3 mm de longitud.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cheirolophus_intybaceus_kz01.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Cheirolophus intybaceus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Rana común',
+  s.primary_habitat = 'Charcas, balsas, acequias y tramos remansados con vegetación',
+  s.description = 'La rana verde ibérica, la más común y adaptable de nuestros anfibios: coloniza desde ramblas y balsas de riego hasta fuentes urbanas. Su canto es un cacareo entrecortado que forma coros al atardecer. Salta al agua al menor movimiento en la orilla.',
+  s.description_source = NULL,
+  s.identification_tips = 'Línea clara a lo largo del centro del lomo en muchos ejemplares
+Canto entrecortado, como una risa o un cacareo
+Salta al agua desde la orilla al notar movimiento',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pelophylax_perezi_by-dpc.jpg?width=1280',
+  s.image_attribution = 'David Perez (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Pelophylax perezi';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cornicabra',
+  s.primary_habitat = 'Barrancos, umbrías y matorral alto sobre suelos frescos',
+  s.description = 'Arbusto o arbolillo de hoja caduca, con hojas compuestas de foliolos grandes y brillantes y un raquis sin alas, lo que lo separa del lentisco. Suele presentar agallas rojizas y curvadas en forma de cuerno, provocadas por pulgones, que le dan el nombre.',
+  s.description_source = NULL,
+  s.identification_tips = 'Agallas rojizas curvadas como cuernos en las hojas
+Pierde la hoja en invierno, al contrario que el lentisco
+Hoja compuesta con foliolo terminal y raquis sin alas',
+  s.seasonality = 'Primavera a otoño (pierde la hoja en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pistachier2.JPG?width=1280',
+  s.image_attribution = 'greffer.net (CC BY 2.5) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Pistacia terebinthus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Álamo blanco',
+  s.primary_habitat = 'Riberas, sotos y suelos con capa freática cercana',
+  s.description = 'Árbol de ribera con el envés de las hojas cubierto de un fieltro blanco que hace que la copa parezca cambiar de color con el viento. La corteza es clara y con lenticelas romboidales oscuras. Rebrota de raíz con facilidad y forma bosquetes clonales.',
+  s.description_source = NULL,
+  s.identification_tips = 'Envés de la hoja blanco: la copa «platea» con el viento
+Corteza clara con marcas romboidales oscuras
+Retoños de raíz alrededor del pie principal',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Populus_alba_01.jpg?width=1280',
+  s.image_attribution = 'la la means I love you (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Populus alba';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tomillo',
+  s.primary_habitat = 'Tomillares y pastizales pedregosos de montaña sobre calizas',
+  s.description = 'Tomillo endémico del sureste ibérico, de área muy restringida, que forma matitas bajas y grisáceas con espigas de flores rosadas o blanquecinas. Su rareza y la fragmentación de su hábitat lo convierten en una de las plantas más vulnerables del grupo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Mata baja y grisácea, de hojas muy pequeñas
+Espigas cortas de flores rosadas o blancas
+Aroma a tomillo, más suave que el de sus parientes comunes',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/411356756/original.jpeg',
+  s.image_attribution = 'Maël Taupin (CC BY-NC 4.0) · GBIF/iNaturalist',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Thymus antoninae';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Almez',
+  s.primary_habitat = 'En vegas y riberas de ríos, sobre suelos húmedos y profundos de aluvión',
+  s.description = 'Árbol caducifolio hasta de 30 m y amplia copa, con corteza muy lisa de color gris plateado, parecida a la piel de los elefantes. Ramas con frecuencia colgantes. Hojas 5-15 x 1,5-6 cm, simples, alternas, pecioladas, asimétricas en la base, lanceoladas, largamente acuminadas, aserradas, más o menos pelosas, con el haz verde oscuro y envés verde claro. Flores masculinas o hermafroditas, pequeñas y solitarias, poco vistosas, verdosas, con una sola envoltura floral y con un largo pedúnculo de 2-8 cm. Fruto de 8-12 mm, en drupa redondeada y con largo pedúnculo, color negro azulado en la madurez.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a enero',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Celtis_australis_(2).JPG?width=1280',
+  s.image_attribution = 'Marija Gajić (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Celtis australis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Majuelo',
+  s.primary_habitat = 'En claros y orlas de bosques, como encinares, alcornocales, quejigares, melojares, robledales, o formando setos, en barrancos, zarzales y espinares',
+  s.description = 'Pequeño árbol de 5-6 (10) m, caducifolio, de corteza lisa y grisácea, de porte irregular y copa redondeada. Ramas jóvenes a veces con espinas hasta de 2-2,5 cm. Hojas 20-50 x 8-50 mm, con pecíolo de 1-3 cm, obovado-espatuladas, con 1-3 pares de lóbulos laterales, dentadas por arriba, cuneadas en la base, más o menos pelosas. Inflorescencias en ramilletes corimbiformes, pediceladas, con 5-10 (12) flores, de 1-1,5 cm diámetro. Cáliz con sépalos de 1,5-4,5 x 1,5-2,5 mm. Pétalos de 4-8 x 4-7 mm blancos o algo coloreados. Estambres 15-20, con las anteras de color púrpura. Fruto de 5,5-12 x 5-10 mm, en pomo, globoso, con un hueso o pireno.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Crataegus_monogyna_-_Common_hawthorn.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Crataegus monogyna';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Retama de escobas',
+  s.primary_habitat = 'Claros de bosque, laderas y taludes sobre suelos silíceos o descarbonatados',
+  s.description = 'Arbusto de ramas verdes, angulosas y flexibles, casi sin hojas, que en primavera se cubre de flores amarillas grandes. Sus legumbres, negras al madurar, se abren con un chasquido audible en los días secos y lanzan las semillas a varios metros.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ramas verdes de sección angulosa, flexibles
+Legumbres negras y peludas en los bordes
+Las vainas estallan con un chasquido en verano',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cytisus_scoparius_by_Danny_S._-_001.JPG?width=1280',
+  s.image_attribution = 'Danny S. (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Cytisus scoparius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Clavellina',
+  s.primary_habitat = 'Pastizales secos, arenales y claros de matorral sobre suelos pobres',
+  s.description = 'Clavellina silvestre de tallos finos y hojas muy estrechas, con flores rosadas de pétalos profundamente recortados en flecos. El cáliz es un tubo largo y estrecho del que asoman los pétalos. Desprende una fragancia suave, más perceptible al atardecer.',
+  s.description_source = NULL,
+  s.identification_tips = 'Pétalos rosados recortados en flecos finos
+Cáliz en tubo largo y delgado
+Hojas muy estrechas, casi como agujas',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Dianthus_broteri.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (Public domain) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"UICN España: VU (Vulnerable) (2010)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Dianthus broteri';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Fresno',
+  s.primary_habitat = 'Vive sobre sustratos frescos y en general profundos, hasta 1400 m',
+  s.description = 'Árbol hasta de 20 m, caducifolio, con corteza grisácea, agrietada. Hojas de 10-30 cm, compuestas imparipinnadas, con siete a 13 folíolos hasta de 9 cm, lanceolados o elípticos, levemente dentados, pecioladas. Flores dispuestas en racimos axilares, simplificadas, minúsculas, unisexuales o hermafroditas, con dos estambres casi sentados y un estilo con estigma bilobulado. Fruto en sámara hasta de 5 cm, alada por los bordes.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fresno_(Colmenar_Viejo).jpg?width=1280',
+  s.image_attribution = 'Wiki LIC (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Fraxinus angustifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra de herradura',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Culebra ágil y trepadora con dibujo dorsal en herradura, ligada a matorrales termófilos y roquedos soleados del sureste ibérico.',
+  s.description_source = NULL,
+  s.identification_tips = 'Manchas dorsales en herradura
+Ágil y trepadora
+Inofensiva para las personas',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hemorrhois_hippocrepis_121004.jpg?width=1280',
+  s.image_attribution = 'Accipiter (R. Altenkamp, Berlin) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Hemorrhois hippocrepis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Nutria',
+  s.primary_habitat = 'Vive en todo tipo de ambientes acuáticos continentales suficientemente bien conservados, y en el litoral atlántico',
+  s.description = 'Mustélido de cuerpo alargado y extremidades proporcionalmente cortas. La cabeza es ancha y aplanada, sin que se aprecie un cuello diferenciado. Ojos, oídos y orificios nasales se encuentran desplazados hacia la parte superior de la cabeza. La cola es ancha y aplanada en la base, y puntiaguda en el extremo. Posee cinco dedos unidos por una membrana interdigital bien desarrollada, tanto en las extremidades anteriores como en las posteriores. El pelaje es de color castaño o pardo con diversas tonalidades; en la garganta y parte superior del pecho destaca una mancha bien representada, de color más claro. Presenta vibrisas largas en hocico, boca, mentón, ojos y antebrazos. El dimorfismo sexual es acusado. Medidas corporales de ejemplares adultos, CC: 60,4-75,0 cm (machos), 59,0-71,0 cm (hembras); C: 39,0-49,0 cm (machos), 35,9-45,0 cm (hembras); Ps: 6,1-9,4 kg (machos), 4,4-6,5 kg (hembras). Fórmula dentaria: 3.1.4.1/3.1.3.2. Número de cromosomas (2n) = 38. Los adultos no pueden ser confundidos con ninguna otra especie, salvo con el visón europeo, Mustela lutreola, visón americano, Neovison vison y el turón, Mustela putorius, habitantes también de ríos y masas de agua, pero con un tamaño mucho menor.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fischotter%2C_Lutra_Lutra.JPG?width=1280',
+  s.image_attribution = 'Bernard Landgraf (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Lutra lutra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Genciana',
+  s.primary_habitat = 'Vive en tomillares y matorrales sobre sustratos pedregosos, a veces en lugares nitrificados',
+  s.description = 'Planta perenne, hasta de 60 cm, algo leñosa abajo, con tallos densamente pelosos, blanquecinos. Hojas de 3-14 cm, lanceoladas, pelosas. Flores en verticilastros de seis flores cada uno, que nacen entre dos amplias brácteas ovadas dispuestas a manera de copa. Cáliz de 1,3 cm, con cinco dientes alesnados de 4 mm, peloso. Corola de 2,5 cm, con labio superior en forma de casco, y el inferior con un gran lóbulo central redondeado, convexo, y dos laterales triangulares, pequeños, color amarillo. Núculas de 5 mm, ovoides, de color pardo.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Phlomis_lychnitis03.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Phlomis lychnitis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pino carrasco',
+  s.primary_habitat = 'Laderas secas y soleadas sobre calizas y margas, en clima mediterráneo cálido',
+  s.description = 'Pino de copa clara e irregular y follaje de un verde pálido, el más resistente a la sequía y a los suelos pobres de los pinos ibéricos. Sus piñas, alargadas y asimétricas, quedan colgadas años en la rama y liberan las semillas tras los incendios, lo que le permite recolonizar rápido.',
+  s.description_source = NULL,
+  s.identification_tips = 'Copa irregular y poco densa, de verde claro
+Piñas asimétricas y persistentes, apuntando hacia atrás
+Corteza clara y agrietada, rojiza en las ramas jóvenes',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pino_secolare_-_Castelleone_di_Suasa.JPG?width=1280',
+  s.image_attribution = 'Accurimbono (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Pinus halepensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Albricias',
+  s.primary_habitat = 'Vive en sotobosques de encinares y melojares, o en grietas de roquedos, hasta 1500 m',
+  s.description = 'Subarbusto de 20-80 cm, rizomatoso, glabro, con tallos erguidos de sección circular. Hojas reducidas y tallitos ensanchados en forma de hoja o cladodios perenifolios, de 2-4 x 1-3 cm, elípticos, terminados en espina, con tres nervios. Plantas dioicas, con flores masculinas y femeninas en ejemplares diferentes, que nacen en el tercio inferior del cladodio, con una bráctea de 2-3 mm, escariosa, con seis tépalos de 2-3 mm, tres elípticos y tres lanceolados, de color amarillo verdoso; las masculinas con tres estambres soldados, las femeninas con el ovario y estambres con anteras vestigiales. Fruto en baya de 1-1,5 cm, globosa, roja, con una o dos semillas de 6-8 mm.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ruscus_aculeatus2.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Ruscus aculeatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Rabo de gato',
+  s.primary_habitat = 'Vive en matorrales y claros de bosque o en bordes de camino en pedregales calizos o arcillosos, hasta 1300 m',
+  s.description = 'Sufrútice de 33-48 cm, con tallos ramificados desde abajo, con pelos blanquecinos. Hojas de 7-24 x 1,5-3 mm, lanceoladas, con algunos dientes rudimentarios, mucronadas o espinosas, las jóvenes en fascículos, tomentosas. Inflorescencia en verticilastros con 6 flores cada uno, brácteas de 6-7,5 x 9-12 mm, ovadas, acopadas, con 6-10 dientes a cada lado, pelosas. Cáliz de 6-7 mm, pelosos, con glándulas esferoidales, con 5 dientes de 2,5-3,5 mm. Corola de 6-8 mm, con labio superior erguido e inferior con tres lóbulos perpendiculares al anterior, de color amarillo o castaño claro.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sideritis_mugronensis_Borja.jpg?width=1280',
+  s.image_attribution = 'Guillermo García-Saúco (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Sideritis tragoriganum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Olmo común',
+  s.primary_habitat = 'Sotos, vegas y suelos profundos con humedad freática',
+  s.description = 'Árbol de hojas asimétricas en la base —un lado baja más que el otro— y borde doblemente aserrado. Florece antes de echar la hoja y fructifica en sámaras redondeadas y membranosas. La grafiosis ha diezmado sus poblaciones adultas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Base de la hoja claramente asimétrica
+Sámaras redondas y papiráceas antes que las hojas
+Rebrota de raíz formando setos y orlas',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Blismes_elm_2007.jpg?width=1280',
+  s.image_attribution = 'Eric Collin. Original uploader was Ptelea at en.wikipedia (GFDL) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Ulmus minor';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra de escalera',
+  s.primary_habitat = 'Ocupa todo tipo de suelos en ambientes mediterráneos de matorral y borde de bosque, pues precisa de cierta cobertura vegetal y de lugares relativamente húmedos',
+  s.description = 'Longitud hocico-cloaca media de 720 mm (rango 233-1.385 mm), cola relativamente corta. Cabeza algo pequeña, con hocico agudo, que sobrepasa netamente el extremo anterior de la mandíbula. 27 rangos de escamas dorsales. Color de fondo amarillento, con diseño de manchas dorsales en escalera en los ejemplares pequeños, y dos líneas dorsolaterales en los ejemplares de mayor tamaño. Longitud total máxima, 1.650 mm.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhinechis_scalaris_cropped.jpg?width=1280',
+  s.image_attribution = 'Benny_Trapp_Rhinechis_scalaris_Portugal.jpg: Benny Trapp derivative… (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Zamenis scalaris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagartija colirroja',
+  s.primary_habitat = 'Matorral litoral y laderas secas',
+  s.description = 'Lagartija de suelos arenosos, de cuerpo aplanado y dedos con escamas laterales en forma de peine que le sirven de raqueta sobre la arena suelta. Los jóvenes tienen la cola y las patas traseras de un rojo intenso que se apaga en los adultos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Dedos con flecos de escamas a los lados, como peines
+Jóvenes con cola y patas traseras rojo intenso
+Cuerpo aplanado, con rayas y ocelos claros en el dorso',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Benny_Trapp_Acanthodactylus_erythrurus.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Acanthodactylus erythrurus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Azor común',
+  s.primary_habitat = 'Bosques maduros y masas forestales densas con claros',
+  s.description = 'Rapaz forestal de alas cortas y anchas y cola larga, diseñada para perseguir presas entre los árboles a gran velocidad. Es esquiva y se ve casi siempre de refilón. La hembra llega a ser un tercio mayor que el macho, una diferencia poco habitual entre las aves.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ceja blanca marcada sobre el ojo, como un antifaz al revés
+Vuelo de varios aleteos rápidos seguidos de un planeo corto
+Pecho finamente rayado en horizontal en los adultos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Northern_Goshawk_ad_M2.jpg?width=1280',
+  s.image_attribution = 'Norbert Kenntner, Berlin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Accipiter gentilis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carricero tordal',
+  s.primary_habitat = 'Nidos:zonas palustres,carrizales espesos (Phragmites sp.),eneas (Typha sp.),espadañas.Masas de agua',
+  s.description = 'Se trata de la especie más robusta entre los carriceros y carricerines. De tonos pardos uniformes, es similar al carricero común, aunque notablemente mayor y con el pico más grande. Presenta el dorso marrón rojizo o grisáceo, según la edad y el desgaste de la pluma, y tiene las partes inferiores de tonos pardo-amarillentos. Ambos sexos son iguales.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carricero_tordal.jpg?width=1280',
+  s.image_attribution = 'Carles Pastor (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Acrocephalus arundinaceus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Andarríos chico',
+  s.primary_habitat = NULL,
+  s.description = 'Es una limícola estilizada, de pequeño tamaño —el menor entre los andarríos— y patas bastante cortas, que balancea la cola y la cabeza de forma característica cuando está posada. Sus partes superiores son pardas y las inferiores, blancas, con un característico entrante pálido que sube desde los lados del pecho hasta el cuello, por delante del vértice del ala. El adulto en plumaje nupcial luce las plumas de las partes superiores de color pardo grisáceo, con barrados y punteaduras que le dan un aspecto poco uniforme. Fuera de la estación reproductora, las plumas presentan el raquis finamente destacado de oscuro y el borde ante, con una banda subapical negra, mientras que las coberteras muestran un doble barrado apical negro y ante. El juvenil es similar al adulto no reproductor, pero con los márgenes de las plumas más destacados. En vuelo, el andarríos chico exhibe un diseño alar característico, con una ancha franja blanca enmarcada por plumas más oscuras.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Actitis_hypoleucos_-_Laem_Pak_Bia.jpg?width=1280',
+  s.image_attribution = 'JJ Harrison (https://www.jjharrison.com.au/) (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Actitis hypoleucos';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sapo partero bético',
+  s.primary_habitat = 'Especie característica de zonas de montaña, aunque casi se encuentra a nivel del mar en barrancos de la costa malagueña',
+  s.description = 'Sapo pequeño (32,8 - 56,5 mm), de aspecto robusto. Tubérculos glandulares en el dorso de color blanco. Falanges cortas y anchas, con el extremo de los dedos algo espatulado. Con tres tubérculos metacarpales. Dorso finamente granulado, de color blanquecino o grisáceo con manchas oscuras. Pupila vertical.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Benny_Trapp_Alytes_dickhilleni.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 5,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Alytes dickhilleni';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Anas strepera',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Julio, agosto, enero',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Anas_strepera_pair.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Anas strepera';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Anémona',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a mayo',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_palmata_FlowerCloseup_2009March15_DehesaBoyaldePuertollano.jpg?width=1280',
+  s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Anemone palmata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Probayernos',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero, marzo, abril, mayo, junio, julio, septiembre, octubre',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Anthyllis lagascana';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Anthyllis onobrychioides',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre, diciembre, enero, febrero, marzo, abril, mayo, junio, julio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Anthyllis onobrychioides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Madroño',
+  s.primary_habitat = 'Umbrías, barrancos y matorral alto sobre suelos frescos',
+  s.description = 'Arbusto o arbolillo de hojas lustrosas y dentadas y corteza rojiza que se desprende en tiras. En otoño coinciden en la misma rama las flores blancas en racimos colgantes y los frutos rojos y granulosos del año anterior.',
+  s.description_source = NULL,
+  s.identification_tips = 'Flores y frutos a la vez en la misma rama, en otoño
+Frutos rojos esféricos de superficie granulosa
+Corteza rojiza que se desprende en tiras finas',
+  s.seasonality = 'Otoño e invierno (flor y fruto a la vez)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Arbutus_unedo_Corsica.jpg?width=1280',
+  s.image_attribution = 'jxandreani (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Arbutus unedo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Garza',
+  s.primary_habitat = 'Zonas húmedas con vegetación palustre',
+  s.description = 'Los individuos adultos de garza imperial —muy similares en ambos sexos; la hembra, algo menor— lucen durante el periodo reproductor un vistoso diseño a base de tonos castaños, púrpuras y grisáceos. En el conjunto destacan las bandas longitudinales del cuello, negras y blancas, que se prolongan en unas largas plumas moteadas, y el capirote negruzco con irisaciones verdosas, del que parten un par de plumas oscuras. La parte inferior de las alas presenta una coloración muy oscura, en tanto que en los hombros dominan los tintes vinosos con reflejos purpúreos. Los jóvenes muestran una coloración menos contrastada, sin las líneas del cuello y con un aspecto general marronáceo. La garza imperial es un ave muy esbelta, con una silueta extraordinariamente estilizada, que en vuelo adopta la postura característica de las ardeidas: cuello recogido, alas curvadas y patas estiradas sobresaliendo por debajo del extremo de la cola. Aunque resulta bastante similar a la garza real, el menor tamaño y la tonalidad general más oscura de la imperial facilitan su identificación, tanto posada como en vuelo.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/2010-kabini-purple-heron.jpg?width=1280',
+  s.image_attribution = 'Yathin S Krishnappa (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Ardea purpurea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Astragalus alopecuroides subsp. grosii',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Astragalus alopecuroides subsp. grosii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Erizo moruno',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Erizo de orejas grandes y color claro, propio del matorral árido del sureste ibérico; nocturno e insectívoro, se refugia bajo la vegetación densa.',
+  s.description_source = NULL,
+  s.identification_tips = 'Orejas grandes y tono claro
+Nocturno e insectívoro
+Se ovilla ante el peligro',
+  s.seasonality = 'Primavera a otoño (hiberna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Erizo_moruno_(Atelerix_algirus).jpg?width=1280',
+  s.image_attribution = 'Galanthus (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Atelerix algirus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mochuelo europeo',
+  s.primary_habitat = 'Matorral litoral y zonas abiertas con posaderos',
+  s.description = 'Búho pequeño y rechoncho, de cabeza plana y ojos amarillos con un ceño que le da expresión severa. Es el más diurno de nuestros búhos: se ve posado en postes y ruinas a plena luz. Vuela con un ondulado marcado, a golpes de aleteo y planeo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cabeza plana y ancha, sin penachos
+Cejas blancas marcadas que le dan aspecto ceñudo
+Vuelo ondulado, a rachas de aleteo y planeo',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Mochuelo_Com%C3%BAn_(_Athene_noctua_)(1).jpg?width=1280',
+  s.image_attribution = 'Arturo Nikolai from Galicia, Spain (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Athene noctua';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Barbo del sur',
+  s.primary_habitat = 'El barbo gitano ocupa diferentes tramos de río en una misma área de distribución, pero desaparece en las aguas frías y rápidas',
+  s.description = 'La especie es tetraploide (2n=100). La coloración es muy constante y en los ejemplares adultos existe un fuerte contraste entre la parte ventral clara y el dorso oscuro. Su cuerpo es robusto y el pedúnculo caudal es más corto y alto que en otras especies del género Luciobarbus de la Península Ibérica. Los labios son gruesos, aunque a veces el inferior se encuentra retraído, dejando ver el dentario. Tienen unas barbillas largas, sobrepasando la primera el borde anterior del ojo y la segunda el posterior, aunque también puede haber individuos con barbillas más cortas. Tiene un menor número de escamas que otras especies del mismo género. En época de reproducción los machos desarrollan en la cabeza tubérculos nupciales grandes y llamativos, y se acentúa la diferencia de color entre el dorso y el vientre. El barbo gitano es una especie de gran tamaño que puede alcanzar alrededor de 40 cm de longitud total. Se diferencia de otras especies ibéricas del género Luciobarbus por tener el último radio sencillo de la aleta dorsal con denticulaciones de tamaño medio en casi toda su extensión, pero más pequeñas que en el barbo comizo (Luciobarbus comizo) y en el barbo cabecicorto (Luciobarbus microcephalus). La mayoría de las poblaciones tienen una coloración muy característica con el dorso muy oscuro y el vientre amarillo-anaranjado. Holotipo no descrito. Sintipos conservados en el British Museum of Natural History (BMNH 1861.11.20.9-13, 5), procedentes del río Guadalquivir en España.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Febrero, abril, mayo, junio, julio, septiembre, octubre, noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Barbo_gitano_(Barbus_sclateri).jpg?width=1280',
+  s.image_attribution = 'Javier Vázquez Rodríguez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Barbus sclateri';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Búho real',
+  s.primary_habitat = 'Cortados rocosos, barrancos y laderas con matorral y zonas abiertas de caza',
+  s.description = 'El mayor búho de Europa, con casi dos metros de envergadura, penachos de plumas erguidos sobre la cabeza y ojos de un naranja encendido. Caza conejos, ratas e incluso otras rapaces. Su canto es un «bu-bo» profundo que se propaga kilómetros por los barrancos en las noches de invierno.',
+  s.description_source = NULL,
+  s.identification_tips = 'Penachos de plumas erguidos a los lados de la cabeza
+Ojos naranjas muy intensos
+Canto grave y profundo en las noches de invierno',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Bubo_bubo_sibiricus_-_01.JPG?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Bubo bubo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bufo bufo',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Bufo_bufo_sitting-Iric2006.jpg?width=1280',
+  s.image_attribution = 'Iric (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Bufo bufo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Campanula fastigiata',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Campanula_fastigiata_(2).jpg?width=1280',
+  s.image_attribution = 'Faluke Paco (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Campanula fastigiata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cabra montés',
+  s.primary_habitat = 'Roquedos, canchales y laderas escarpadas con matorral',
+  s.description = 'Bóvido de montaña perfectamente adaptado a la roca: pezuñas con borde duro y almohadilla blanda que agarra en pendientes imposibles. Los machos lucen cuernos grandes, curvados hacia atrás y con abultamientos; las hembras los tienen cortos y rectos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Machos con cuernos grandes curvados hacia atrás
+Se mueve por cortados donde nada más puede subir
+Excrementos en montoncitos de bolitas cilíndricas',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Capra_pyrenaica_in_Sierra_de_Guadarrama.jpg?width=1280',
+  s.image_attribution = 'Thomas Holbach (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Capra pyrenaica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chumberillo de lobo',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Caralluma munbyana subsp. hispanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alzacola',
+  s.primary_habitat = NULL,
+  s.description = 'Esta especie suele observarse en el suelo o posada en arbustos bajos. Es fácilmente reconocible por su larga cola, de coloración rojiza y extremo terminal con manchas blancas y negras, que frecuentemente alza, despliega y sacude de manera ostensible. También resulta distintivo su diseño facial, ya que posee una lista ocular fina oscura, que contrasta con una banda superciliar de color blanco crema. El resto de su plumaje presenta un tono ocre claro.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Agrobate_roux_au_Parc_National_de_l''Ichkeul_(Tunisia)%2C_crop.jpg?width=1280',
+  s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Cercotrichas galactotes';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ciervo',
+  s.primary_habitat = NULL,
+  s.description = 'Pelaje con predominio del color castaño uniforme, zona ventral más clara y escudo anal casi blanco flanqueado por bandas oscuras en ocasiones casi negras, cola corta de color oscuro. Los cervatillos tienen un pelaje característico con fondo castaño y manchas o “pintas” blancas que mantienen durante aproximadamente los tres primeros meses de vida. Dimorfismo sexual acentuado. Medidas corporales, CC: 160-220 cm (machos), 160-195 cm (hembras); CR: 90-120 cm (machos), 90-110 cm (hembras); Ps: 80-160 kg (machos), 50-100 kg (hembras). Los machos desarrollan a partir del primer año unas astas que utilizan en las luchas durante el período de celo. Presentan un tronco central que se ramifica en puntas o candiles en número variable. Las hembras carecen de astas y poseen dos pares de mamas en posición inguinal. Fórmula dentaria: 0.1.3.3/3.1.3.3, con un canino inferior modificado hasta adoptar forma de incisivo. Número de cromosomas (2n) = 68.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cervus_elaphus_Luc_Viatour_3.jpg?width=1280',
+  s.image_attribution = 'Lviatour (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Cervus elaphus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'espuelilla pelosa',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Chaenorhinum rubrifolium';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Espuelilla de yesos',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a junio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Chaenorhinum rupestre';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mirlo acuático',
+  s.primary_habitat = NULL,
+  s.description = 'Este paseriforme de mediano tamaño, con la cola corta y las alas más bien pequeñas, posee un cuerpo rechoncho y compacto que le otorga un aspecto característico. En su plumaje dominan los tonos pardos muy oscuros —casi negros— en el dorso, que dan paso a otros achocolatados en la cabeza, el cuello y el vientre. Luce un llamativo babero blanco que se extiende hasta el pecho. Las patas son cortas y robustas y el pico es fino en forma de daga. El joven presenta colores grisáceos en el plumaje, de aspecto escamoso; a diferencia de los adultos, luce un anillo ocular blanco, mientras que su babero —mucho menos definido y extenso— es de color crema sucio. De carácter nervioso, esta ave vuela rápidamente sobre la superficie del agua y se mueve con soltura entre las piedras del río antes de lanzarse a bucear. Cuando está posada suele mostrarse inquieta; levanta la cola y realiza continuas flexiones con las patas.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cinclus_cinclus_R(ThKraft).jpg?width=1280',
+  s.image_attribution = 'Thomas Kraft (ThKraft) (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Cinclus cinclus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Aguilucho lagunero occidental',
+  s.primary_habitat = 'Masas de vegetación palustre,lagunas, ríos y pantanos.Nidos en vegetación a pocos cm del agua,suelo',
+  s.description = 'El aguilucho lagunero es una rapaz de tamaño medio y aspecto bastante estilizado, aunque ciertamente más robusto que los restantes aguiluchos presentes en nuestra fauna, a los que también supera en envergadura. La especie presenta, como es habitual en otros miembros del género Circus, un acusado dimorfismo sexual, ya que la hembra es bastante mayor y más pesada que el macho, y ambos sexos exhiben plumajes muy diferentes. En el macho adulto predominan los tonos marrones en el dorso, aunque la cabeza y la nuca son amarillentas o ligeramente grisáceas y surcadas por finas estrías oscuras. Las partes inferiores —especialmente a la altura de las patas y el bajo vientre— suelen adquirir un color rojizo, que va dando paso al crema o blanco sucio a medida que subimos hacia el pecho y la garganta, los cuales aparecen suavemente listados. Las rectrices y rémiges secundarias son grises; estas últimas describen una extensa banda alar, muy visible en vuelo . Ventralmente, las alas del macho son más bien claras —blancuzcas o de color gris pálido— y en ellas destacan fuertemente las negras rémiges primarias. Las hembras adultas, por su parte, resultan bastante más oscuras y menos contrastadas, en conjunto, que sus parejas, pues lucen un plumaje —tanto dorsal como ventralmente— dominado por los tonos pardoachocolatados, que en la cabeza, la garganta y los hombros son sustituidos por otros amarillentos o blanquecinos. Los ejemplares recién salidos del nido se parecen bastante a las hembras, aunque resultan más homogéneos y ligeramente más oscuros; además, solo presentan manchas más claras en la cabeza, la nuca y la garganta. Entre la librea juvenil y la de adulto existen varios plumajes de transición, que definen las diferentes edades del ave. Por otra parte, el aguilucho lagunero es una especie en la que no son infrecuentes los casos de melanismo y la aparición de diseños atípicos, lo que en ocasiones puede dificultar su identificación y propiciar las confusiones con especies de tamaño semejante.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Circus_aeruginosus_samiec2.jpg?width=1280',
+  s.image_attribution = 'Artur Mikołajewski (CC BY 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Circus aeruginosus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Críalo',
+  s.primary_habitat = 'Bosques,zonas con córvidos',
+  s.description = 'Es un ave de tamaño medio, morfológicamente muy semejante al cuco, del que se diferencia por su aspecto más esbelto, por tener una cola más larga y por el colorido del plumaje. Este es de tono marrón grisáceo en las regiones dorsales, que aparecen salpicadas de motas blancas, al igual que ocurre con las plumas del ala. La zona ventral es de color blanquecino, con la garganta teñida de ocre-amarillento. En la cabeza luce un capirote de color gris plateado —que remata en una pequeña cresta ligeramente eréctil— y un anillo ocular rojo. El joven presenta una coloración incluso más vistosa que los adultos, pues exhibe un intenso color achocolatado con abundantes motas blancas en el dorso y unas regiones ventrales blancas, que se tornan amarillo-ocráceas en pecho y cuello. Las plumas de vuelo poseen un vistoso color rojizo, en tanto que el capirote es negro y el anillo ocular más conspicuo que el de los adultos.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Clamator_glandarius.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Clamator glandarius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Paloma zurita',
+  s.primary_habitat = NULL,
+  s.description = 'Paloma similar a la bravía, pero de tamaño algo menor, y más ligera que la torcaz. En su plumaje, totalmente gris, destacan los tonos vinosos del cuello, el color gris pálido del obispillo y unas franjas más claras en las alas. Ambos sexos resultan similares. Tiene un vuelo más rápido y con mayor frecuencia de aleteo que la torcaz. Al volar se ve oscura la zona inferior de sus alas, que es pálida en las palomas bravía y torcaz.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/2019-03-17_Columba_oenas%2C_Jesmond_Dene_1.jpg?width=1280',
+  s.image_attribution = 'MPF (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Columba oenas';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chocho lobero',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Noviembre, febrero, marzo, abril, mayo, junio, julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Colutea_hispanica0479.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Colutea hispanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Emborrachacabras',
+  s.primary_habitat = 'Vive en lindes o bosques junto a ríos, sobre graveras fluviales, entre 100-1200 m',
+  s.description = 'Arbusto hasta de 3 m, con tallos con corteza gris, arqueados. Hojas hasta de 5 x 2 cm, opuestas, sin pecíolo, elípticas, agudas, enteras. Flores que nacen en racimos en los extremos de las ramas, pediceladas, minúsculas, de unos 2 mm. Fruto hasta de 4 mm, formado por cinco aquenios negros cubiertos en parte por los pétalos color morado, acrescentes o que crecen cuando la planta fructifica.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Roldor0032.JPG?width=1280',
+  s.image_attribution = 'No machine-readable author provided. Victor M. Vicente Selvas assum… (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Coriaria myrtifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cuervo grande',
+  s.primary_habitat = NULL,
+  s.description = 'El rasgo más llamativo del cuervo es, sin duda, su colosal tamaño, que lo convierte en el representante más voluminoso del orden de los paseriformes. Dentro de su anatomía destaca sobre todo el pico, notablemente largo, robusto y grueso. Por lo demás, luce un plumaje homogéneamente negro, con algunos brillos metálicos. El vuelo de este enorme pájaro es lento y suele intercalar aleteos con largos planeos, que el ave ejecuta gracias a sus largas alas apuntadas y a su cola en forma de cuña.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Corvus_corax.001_-_Tower_of_London.JPG?width=1280',
+  s.image_attribution = 'Fernando Losada Rodríguez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Corvus corax';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Codorniz común',
+  s.primary_habitat = 'Cereales, herbazales altos y pastizales densos',
+  s.description = 'La más pequeña de nuestras gallináceas y la única migradora. Es mucho más fácil de oír que de ver: su canto trisilábico —el clásico «pal-pa-lá»— se emite desde el interior del cereal. Solo levanta el vuelo cuando se la pisa casi encima, y lo hace en línea recta y rasante.',
+  s.description_source = NULL,
+  s.identification_tips = 'Canto trisilábico repetido desde dentro del herbazal
+Vuela raso y en línea recta al levantarse
+Del tamaño de un puño, mucho menor que una perdiz',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Quaglia.jpg?width=1280',
+  s.image_attribution = 'Raniero Massoli Novelli (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Coturnix coturnix';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Musaraña gris',
+  s.primary_habitat = NULL,
+  s.description = 'Es un crocidurino de talla mediana. Medidas corporales, CC: 62,0-84,0 mm; C: 34,0-47,0 mm; P: 11,0-14,0 mm; Ps: 7,0-14,0 g, y cola relativamente corta, recubierta por pelos cortos entre los que sobresalen otros más largos y dispersos. Los ojos son pequeños y los pabellones auditivos están bien desarrollados y son visibles externamente. El color del pelaje varía en función de la edad, la época del año y la localización geográfica. En general, la coloración es gris uniforme en los juveniles, parda o parda-grisácea en los ejemplares de verano y gris oscura en los de invierno. El vientre es gris claro, sin demarcación nítida respecto al dorso. Presenta tres pares de mamas inguinales. El cráneo es más largo y macizo que en los representantes del género Sorex. Las regiones rostral e interorbital son alargadas y el margen posterior del orificio nasal es cóncavo. La caja craneana es alta y los cóndilos occipitales están proyectados hacia atrás. La mandíbula es robusta, con el cóndilo articular bien desarrollado y la apófisis coronoides recta, de altura generalmente superior a 4,2 mm. Fórmula dentaria: 3.1.1.3/1.1.1.3, con tres unicúspides superiores. A diferencia de la musaraña de campo, Crocidura suaveolens, en visión lateral el segundo y tercer unicúspides son de talla similar y sobrepasan la altura del parastilo del cuarto molar. En visión oclusal, el protocono de este molar no está desplazado en dirección bucal y contribuye a formar el margen ántero-interno del diente. En la mandíbula, el segundo molar presenta una constricción bien marcada. Número de cromosomas (2n) = 42.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/WLMMH_(DerHexer)_022.jpg?width=1280',
+  s.image_attribution = 'DerHexer, Wikimedia Commons (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Crocidura russula';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cuco',
+  s.primary_habitat = 'Zonas arboladas de todo tipo.Bosques,linderos,bosquetes,cultivos,huertos frutales,piornales',
+  s.description = 'Esta ave, de tamaño medio y aspecto estilizado, se caracteriza por poseer una larga cola y unas alas apuntadas, por lo que su silueta puede confundirse en vuelo con la de una pequeña rapaz, como el cernícalo vulgar o el gavilán. En la coloración del macho dominan los tonos grises, sobre todo en el dorso, la cabeza y el cuello. Por su parte, las regiones ventrales son blancas, pero finamente barreadas. La hembra puede lucir dos tipos de plumaje: uno grisáceo, muy parecido al del macho, y otro rojizo, bastante menos frecuente que el anterior. Los inmaduros se asemejan en parte a las hembras de fase rojiza, aunque tienen las plumas orladas de blanco y una característica mancha blanca en la nuca.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cuckoo_(51169010335).jpg?width=1280',
+  s.image_attribution = 'Andy Morffew from Itchen Abbas, Hampshire, UK (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Cuculus canorus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mayos',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Dactylorhiza_elata_003.jpg?width=1280',
+  s.image_attribution = 'Johan N (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Dactylorhiza elata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lirón careto',
+  s.primary_habitat = 'Es una especie generalista, capaz de vivir en numerosos hábitats terrestres y arbóreos',
+  s.description = 'Debe su nombre a una franja de pelo negro que, como un antifaz, le enmarca los ojos y le cubre parte de la cara. Su aspecto es inconfundible, aunque sus hábitos trepadores y su color rojizo pueden asemejarle al lirón gris Glis glis, o a la ardilla roja Sciurus vulgaris. Los adultos presentan el dorso pardo- rojizo y el vientre blanco. La cola es larga y está cubierta de pelos, con un llamativo pincel de pelo largo blanco y negro en el extremo. Hocico alargado y orejas grandes. No presentan dimorfismo sexual. Las hembras presentan cuatro pares de mamas: uno pectoral, otro abdominal y dos pares inguinales. Medidas corporales, CC: 118,0-136,0 mm; C: 98,5-113,0 mm; P: 26,5-28,5 mm; Ps: 45,0-120,0 g. Se producen variaciones estacionales en el peso debido al carácter hibernante de la especie. El cráneo es de aspecto macizo y de perfil dorsal convexo. La caja craneana es cuadrada, el rostro largo, los huesos nasales muy estrechos en la parte posterior y los arcos zigomáticos amplios. Las bullas timpánicas presentan gran desarrollo, carácter típico de las especies de roedores de climas desérticos, con densidades de población escasas. Fórmula dentaria: 1.0.1.3/1.0.1.3. Es el único roedor español cuya mandíbula presenta un orificio natural en la apófisis angular, lo que facilita su identificación en los análisis de egagrópilas, excrementos, etc. Número de cromosomas (2n) = 46-52.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Gartenschlaefer_in_Natur.jpg?width=1280',
+  s.image_attribution = 'No machine-readable author provided. Asseus assumed (based on copyr… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Eliomys quercinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sapo corredor',
+  s.primary_habitat = 'Ramblas y zonas húmedas estacionales',
+  s.description = 'Sapo de patas cortas que corre en vez de saltar, con una línea amarilla nítida a lo largo del centro del lomo. Se reproduce en charcas efímeras que se llenan con las lluvias, y los machos forman coros de un canto vibrante y estridente que se oye a kilómetros.',
+  s.description_source = NULL,
+  s.identification_tips = 'Raya amarilla continua por el centro del lomo
+Corre a cuatro patas en vez de saltar
+Canto nocturno vibrante y muy sonoro tras las lluvias',
+  s.seasonality = 'Otoño e invierno lluviosos',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Epidalea_calamita_02_by-dpc.jpg?width=1280',
+  s.image_attribution = 'David Perez (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Epidalea calamita';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago hortelano',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eptesicus_isabellinus_sketch.jpg?width=1280',
+  s.image_attribution = 'Coenrad Temmick (Public domain) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Eptesicus isabellinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Candaillo',
+  s.primary_habitat = 'Suelos húmedos, en márgenes de ríos, riachuelos, arroyos, canales, incluso en zonas encharcadas',
+  s.description = 'Hasta de 60 cm, tallos con 6-10 surcos, de un solo tipo, verdes, siempre ramosos, estróbilos hasta de 3 cm, no mucronados.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Equisetum_palustre_detail.jpeg?width=1280',
+  s.image_attribution = 'Kristian Peters -- Fabelfroh 16:29, 12 August 2006 (UTC) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Equisetum palustre';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Erizo europeo',
+  s.primary_habitat = NULL,
+  s.description = 'El aspecto general de los erizos es fácilmente reconocible por su zona dorsal recubierta de espinas, a excepción del rostro. El pelaje ventral es cerdoso, de color pardo, más o menos oscuro, según los individuos, pero con el vientre blancuzco. Ambos sexos son parecidos, ya que los testículos son intraabdominales. La principal diferencia consiste en que el pene está bastante adelantado, mientras que la vagina se localiza cerca del ano. Las hembras presentan cinco pares de mamas, una pectoral, dos abdominales y dos inguinales. Fórmula dentaria: 3.1.3.3/2.1.2.3. Sólo puede confundirse con el erizo moruno, Atelerix algirus, menos robusto, más claro, con las orejas proporcionalmente mayores y con las púas cefálicas más retrasadas. Las principales diferencias dentarias consisten en que el I3 es generalmente monoradiculado en E. europaeus y biradiculado en A. Algirus. El PM2 tiene un paracónido destacado netamente, ligeramente menor que el protocónido, mientras que en A. algirus es mucho más pequeño. Medidas corporales, CC: 190,0-290,0 mm; C: 22,0-40,0 mm; P: 46,0-53,0 mm; O: 25,0- 29,0 mm ; Ps: 500,0-1.200,0 g. Número de cromosomas (2n) = 48.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/West_European_Hedgehog_(Erinaceus_europaeus)1.jpg?width=1280',
+  s.image_attribution = 'Hrald (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Erinaceus europaeus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Geranio de roca',
+  s.primary_habitat = 'Fisuras y repisas de roquedos calizos',
+  s.description = 'Geranio rupícola de rosetas compactas y hojas divididas y algo peludas, con flores rosadas o blanquecinas de venas marcadas. Vive encajado en las grietas de los cantiles, donde encuentra humedad y escapa de los herbívoros.',
+  s.description_source = NULL,
+  s.identification_tips = 'Rosetas apretadas metidas en la grieta de la roca
+Flores rosadas con venas más oscuras
+Frutos con pico largo que se enrolla al secarse',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/483580471/original.jpeg',
+  s.image_attribution = 'Olivier Argagnon (CC BY 4.0) · GBIF/iNaturalist',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Erodium saxatile';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Esmerejón',
+  s.primary_habitat = 'Llanos abiertos, marismas y pastizales durante la invernada',
+  s.description = 'El halcón más pequeño de Europa, poco mayor que un mirlo, con vuelo rápido y bajo pegado al terreno para sorprender a pequeñas aves. El macho es gris azulado por encima; la hembra, parda. No se ciñe como el cernícalo: siempre está en movimiento.',
+  s.description_source = NULL,
+  s.identification_tips = 'Muy pequeño y compacto, con aleteo rápido
+Vuela bajo y en línea recta, casi rozando el suelo
+Sin bigotera marcada, a diferencia del peregrino',
+  s.seasonality = 'Otoño e invierno',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Falco_columbarius_Male.jpg?width=1280',
+  s.image_attribution = 'Raj Boora from Edmonton, Canada (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Falco columbarius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcotán',
+  s.primary_habitat = 'Campo abierto con arbolado disperso, cerca de zonas húmedas',
+  s.description = 'Halcón esbelto con silueta de vencejo gigante: alas muy largas y afiladas y cola corta. Caza libélulas e incluso vencejos en pleno vuelo, con una agilidad extraordinaria. Los adultos tienen los «calzones» y la zona anal de un rojo ladrillo característico.',
+  s.description_source = NULL,
+  s.identification_tips = 'Silueta de hoz, como un vencejo enorme
+Calzones y bajo vientre rojizos en el adulto
+Bigotera negra ancha sobre garganta blanca',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hobby_-_Falco_subbuteo.jpg?width=1280',
+  s.image_attribution = 'Andy Morffew from Itchen Abbas, Hampshire, UK (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Falco subbuteo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gato montés',
+  s.primary_habitat = 'Bosque, matorral denso y roquedos con buena población de conejos y roedores',
+  s.description = 'Gato salvaje europeo, más robusto que un gato doméstico atigrado, con la cola gruesa, roma en la punta y anillada de negro. Es solitario, esquivo y sobre todo nocturno. Su mayor amenaza es la hibridación con gatos asilvestrados, que diluye la población silvestre.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola gruesa, de punta roma y con anillos negros nítidos
+Raya negra continua a lo largo del lomo
+Aspecto más recio y patilargo que un gato casero',
+  s.seasonality = 'Todo el año (actividad crepuscular y nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Felis_silvestris_Kocka_divok%C3%A1_zoo_cropped.jpg?width=1280',
+  s.image_attribution = 'Felis_silvestris_Kočka_divoká_ZOO_Děčín.jpg: Alena Houšková derivat… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Felis silvestris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gineta',
+  s.primary_habitat = 'Bosque, matorral denso, roquedos y sotos con cobertura y refugios',
+  s.description = 'Carnívoro esbelto de pelaje gris con manchas negras y una cola larguísima anillada en blanco y negro, tan larga como el resto del cuerpo. Es un trepador excelente y estrictamente nocturno. Deja sus excrementos en letrinas fijas sobre piedras y troncos, que usa durante años.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola muy larga con anillos blancos y negros bien marcados
+Pelaje gris con hileras de manchas negras
+Letrinas repetidas en el mismo punto elevado',
+  s.seasonality = 'Todo el año (actividad nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Genetta_genetta_felina_(Wroclaw_zoo).JPG?width=1280',
+  s.image_attribution = 'Guérin Nicolas (messages) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Genetta genetta';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Apalaín',
+  s.primary_habitat = 'Laderas secas, ramblas y matorral sobre suelos margosos y pedregosos',
+  s.description = 'Retama de ramas juncales, verdes y erguidas, prácticamente sin hojas, que florece en amarillo a final de verano, cuando casi todo el matorral está en reposo. Es un endemismo del sureste ibérico.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ramas verdes largas y juncales, sin hojas visibles
+Florece a final de verano y en otoño
+Porte erguido en escoba, no en cojín',
+  s.seasonality = 'Verano y otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Genista_spartioides_kz01.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Genista spartioides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gobio',
+  s.primary_habitat = NULL,
+  s.description = 'La especie es diploide (2n=50). Presenta una fila de 6-12 (7) grandes manchas oscuras, redondeadas, a lo largo de la mitad del cuerpo. Excepto en la parte ventral, las escamas están bordeadas en negro. La región dorsal cefálica profusamente pigmentada con pequeños puntos negros. Por debajo del ojo una línea oscura. Todas las aletas con filas de manchas oscuras, excepto las ventrales en algunos ejemplares. La región dorsal es gris o marrón y la ventral es marrón claro o casi blanco. La parte dorsal es convexa y más aplastada la ventral, la aleta anal está fuertemente escotada. Las aletas dorsal y anal tiene el perfil cóncavo o recto. No suele alcanzar los 15 cm de longitud total. Los ejemplares de mayores dimensiones aparecen en las cuencas del Adour y Bidasoa. Se diferencia de otros ciprínidos españoles por tener un par de barbillas bucales, último radio sencillo de la aleta dorsal sin denticulaciones, de 36 a 39 escamas en la línea lateral. De otras especies del género Gobio se caracteriza por tener 5-6 escamas entre el origen de la dorsal y la línea lateral y 3(4) entre la línea lateral y el origen de las pelvianas. Holotipo conservado en el Museo Nacional de Ciencias Naturales (MNCN 153557) procedente del río Eresma, Coca, Segovia, Cuenca del Duero. El primer registro válido de esta especie en España proviene de la cuenca del Duero en 1913 (Lozano Rey, 1919), por esa razón el holotipo fue asignado a la cuenca del Duero.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo, junio, julio, agosto, octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Gobio_gobio2_(cropped).jpg?width=1280',
+  s.image_attribution = 'Gilles San Martin (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Gobio gobio';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Guiraoa arvensis',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Guiraoa arvensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'albada',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a diciembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/GYPSOPHYLA_STRUTHIUM_-_EMPALOUS_-_IB-507_(Trincola).JPG?width=1280',
+  s.image_attribution = 'Isidre blanc (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Gypsophila struthium';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tamarilla de arenal',
+  s.primary_habitat = NULL,
+  s.description = 'Arbustillo de hasta 55 cm de altura. Tallos erectos, ascendentes. Hojas (6) 8-11 (13) x 1-3 mm, de linear a linear-lanceoladas, subagudas, setosas en el ápice, de margen revoluto, con indumento de pelos estrellados, fasciculados, a veces geminados, por haz y envés. Inflorescencia simple, laxa, de (1) 3-14 (20) flores. Sépalos externos 2- 3,3 x 1-1,5 mm, estrechos, setosos. Sépalos internos (6) 7-8 (9) x 3-4mm, ovados, con nervios pronunciados, híspidos, y espacios intercostales subglabros, con glándulas sentadas y ocasionalmente con pequeños pelos estrellados. Pétalos 6- 8 mm, amarillos. Cápsula 4-5 mm, serícea, con varias semillas. Semillas (1,2) 1,4-1,7 (2,1) mm, pardo rojizas, de angulosas a subglobosas.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 5,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Helianthemum guerrae';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'flor del príncipe',
+  s.primary_habitat = 'Vive en sustratos yesíferos secos, entre 40-900 m',
+  s.description = 'Perenne sufruticosa, de 10-40 cm; cubierta de escamas peltadas, plateadas, con tallo tetragonal. Hojas de 8-25 x 3-10 mm, de oblongo a lineares, pecioladas, opuestas, estipuladas. Pétalos de 3,5-5 mm, amarillos. Cápsula de 3-3,5 mm, tomentosa arriba.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre, noviembre, diciembre, marzo, abril, mayo, junio, julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_squamatum_1_(Espagne).jpg?width=1280',
+  s.image_attribution = 'Ghislain118 http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Helianthemum squamatum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Quebrantapiedras',
+  s.primary_habitat = 'Herniaria fruticosa vive en lugares secos sobre sustratos yesíferos o salinos, hasta 1200 m',
+  s.description = 'Perenne, hasta de 30 cm, en parte postrada, pelosa, con hojas de 3 x 1,5 mm, ovadas, carnosas, con flores en glomérulos terminales o laterales, con cuatro sépalos desiguales, ciliados y cuatro estambres; utrículo de 1 mm, elipsoidal.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Herniaria_fruticosa.jpg?width=1280',
+  s.image_attribution = 'Poseidon75 (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Herniaria fruticosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cigüeñuela',
+  s.primary_habitat = 'Salinas, marismas, charcas someras y humedales salobres',
+  s.description = 'Limícola blanca y negra de patas rosadas larguísimas, desproporcionadas para su tamaño, que le permiten caminar por aguas someras picoteando insectos en la superficie. Es ruidosa y muy territorial cerca del nido, y sobrevuela en círculos a quien se acerca.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = 'Patas rojizas extremadamente largas, que sobresalen en vuelo
+Contraste limpio de blanco y negro, con pico fino y recto
+Reclamo insistente y chillón al sobrevolar al intruso',
+  s.seasonality = 'Sobre todo de primavera a verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Himantopus_himantopus.jpg?width=1280',
+  s.image_attribution = '(Hans Hillewaert) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Himantopus himantopus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Avetorillo',
+  s.primary_habitat = NULL,
+  s.description = 'El pequeño y discreto avetorillo, inconfundible por su tamaño, es la garza más pequeña de la fauna europea. La especie presenta cierto dimorfismo sexual: el macho adulto luce los flancos de color crema, el dorso negro, las partes inferiores y el cuello de tonos rosados, las mejillas grisáceas y el píleo y la nuca también negros; la hembra adulta es similar, pero menos contrastada y de tonalidad, en conjunto, más parduzca. Los jóvenes, de un tono general pardo-grisáceo, poseen un diseño similar al de la hembra, aunque con los flancos y el píleo muy desdibujados.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, enero',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/47-090506-little-bittern-at-upper-ford-near-Sigri-.jpg?width=1280',
+  s.image_attribution = 'Mark S Jobling (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Ixobrychus minutus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Enebro de la miera',
+  s.primary_habitat = 'Matorral, pinares aclarados y laderas pedregosas',
+  s.description = 'Enebro de hojas aciculares y punzantes dispuestas de tres en tres, con dos bandas blancas en la cara superior que lo separan a simple vista de la sabina. Sus gálbulos son rojizos al madurar. De su madera se destilaba el aceite de miera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas punzantes en grupos de tres, no en escama
+Dos rayas blancas en la cara superior de cada hoja
+Gálbulos rojizos y brillantes al madurar',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_oxycedrus_g1.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Juniperus oxycedrus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sabina negral',
+  s.primary_habitat = 'Roquedos, arenales, acantilados y crestas ventosas sobre suelos pobres',
+  s.description = 'Sabina de hojas diminutas en forma de escama, pegadas a la ramilla, que dan a las ramas un aspecto de cordón redondeado. Aguanta viento, sequía y salinidad como pocas plantas leñosas. Sus gálbulos —los falsos frutos— maduran de verde a un rojo pardusco en dos años.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas en escama pegadas a la rama, no punzantes
+Ramillas cilíndricas, como cordones
+Gálbulos redondos que pasan de verde a pardo rojizo',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_phoenicea1.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Juniperus phoenicea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Orejilla de roca',
+  s.primary_habitat = 'Roquedos y fisuras calcáreas costeras',
+  s.description = 'Planta rupícola de hojas redondeadas, dentadas y algo carnosas, que forma matas colgantes en las paredes calizas. Sus flores, blanquecinas con toques amarillos, se agrupan en racimos erguidos. Es un endemismo iberoafricano restringido al sureste peninsular y al norte de África.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas redondas y dentadas, casi como monedas
+Racimos de flores blanquecinas erguidos sobre el follaje
+Forma matas colgantes en pared caliza',
+  s.seasonality = 'Floración primaveral',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lafuentea_rotundifolia80857.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Lafuentea rotundifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lathyrus pulcher',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Lathyrus pulcher';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Liebre ibérica',
+  s.primary_habitat = NULL,
+  s.description = 'Es la más pequeña de las liebres españolas. Al igual que sus congéneres presentan unas extremidades posteriores muy desarrolladas y unas orejas muy largas y con los extremos negros. El pelaje es pardo amarillento en su parte dorsal y blanco por la ventral, destacan las extremidades con una mancha blanca en su parte posterior. Medidas corporales, CC: 44,4-47,0 cm; C: 9,5-10,9 cm; O: 9,6-10,1 cm; P: 11,4-11,8 mm; Ps: 2,06-2,54 kg. Se ha citado un peso máximos de 2,95 kg para los machos y de 3,30 kg para las hembras.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/LiebreIberica.jpg?width=1280',
+  s.image_attribution = 'Luis Egido (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Lepus granatensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Siempreviva de Cosson',
+  s.primary_habitat = 'Saladares, acantilados costeros y suelos salinos margosos',
+  s.description = 'Siempreviva de roseta basal de hojas espatuladas y tallos ramificados que sostienen espiguillas de flores diminutas de color lila. Los cálices secos y papiráceos permanecen en la planta hasta el invierno siguiente, dando al saladar un tono pajizo persistente.',
+  s.description_source = NULL,
+  s.identification_tips = 'Roseta basal de hojas anchas y espatuladas
+Ramificación en zigzag, muy abierta
+Cálices secos que persisten meses tras florecer',
+  s.seasonality = 'Verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_cossonianum.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Limonium cossonianum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Linaria cavanillesii',
+  s.primary_habitat = 'Repisas y fisuras de cantiles calizos, generalmente en umbría',
+  s.description = 'Linaria rupícola de tallos colgantes y hojas algo carnosas y verticiladas, con flores amarillas provistas de un espolón largo y curvado. Es un endemismo ibérico de área muy reducida, restringido a un puñado de cantiles.',
+  s.description_source = NULL,
+  s.identification_tips = 'Tallos colgando de la pared rocosa
+Flores amarillas con espolón largo por detrás
+Hojas dispuestas en anillos alrededor del tallo',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/501474709/original.jpeg',
+  s.image_attribution = 'deutschle (CC BY-NC 4.0) · GBIF/iNaturalist',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Linaria cavanillesii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Linaria depauperata subsp. hegelmaieri',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Linaria depauperata subsp. hegelmaieri';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ajedrea',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril, mayo, junio, julio, agosto, octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Linum_tenue_Enfoque_2010-5-31_MestanzaValledeAlcudia.jpg?width=1280',
+  s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Linum tenue';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mariselva',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lonicera_periclymenum_hispanica_155315118.jpg?width=1280',
+  s.image_attribution = 'Duarte Frade (CC BY 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Lonicera periclymenum subsp. hispanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alondra totovía',
+  s.primary_habitat = 'Claros de bosque, dehesas y laderas con matorral y árboles dispersos',
+  s.description = 'Alondra pequeña de cola muy corta y cresta discreta, con una ceja blanca ancha que se une en la nuca. Canta en vuelo circular, sobre todo al amanecer y en noches claras, con una frase melancólica y descendente de una belleza reconocida.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola muy corta, silueta rechoncha en vuelo
+Cejas blancas que se juntan por detrás de la cabeza
+Marca blanca y negra en el borde delantero del ala',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lullula_arborea.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Lullula arborea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lycocarpus fugax',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a mayo',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Lycocarpus fugax';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'anagálide de pantano',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Anagalis_tenella_''Studland''_1.JPG?width=1280',
+  s.image_attribution = 'Ghislain118 https://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Lysimachia tenella';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra bastarda',
+  s.primary_habitat = 'Matorral litoral y laderas secas',
+  s.description = 'La culebra más grande de la península, de hasta dos metros y medio, con un aspecto inconfundible: ojos grandes de pupila redonda bajo unas escamas salientes que le dan «cejas» y expresión de enfado. Es diurna, muy rápida y venenosa, pero con los colmillos al fondo de la boca, por lo que no supone riesgo si no se la manipula.',
+  s.description_source = NULL,
+  s.identification_tips = 'Escamas prominentes sobre los ojos, como cejas
+Ojo grande con pupila redonda y iris amarillento
+Adultos de dorso pardo oliváceo uniforme; jóvenes muy manchados',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Culebra_bastarda_(Malpolon_monspessulanus)%2C_Nig%C3%BCella%2C_Zaragoza%2C_Espa%C3%B1a%2C_2017-05-24%2C_DD_07.jpg?width=1280',
+  s.image_attribution = 'Diego Delso (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Malpolon monspessulanus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Garduña',
+  s.primary_habitat = 'Roquedos, bosques, ruinas y construcciones rurales',
+  s.description = 'Mustélido nocturno de cuerpo alargado y cola espesa, con un babero blanco en la garganta que suele bifurcarse hacia las patas delanteras. Trepa con soltura y aprovecha desde roquedos hasta desvanes. Es omnívora: come frutos, insectos, huevos y pequeños vertebrados.',
+  s.description_source = NULL,
+  s.identification_tips = 'Babero blanco en la garganta, a menudo dividido en dos
+Excrementos retorcidos y con pelos o semillas, sobre piedras
+Rastro nocturno; muy rara vez se ve de día',
+  s.seasonality = 'Todo el año (actividad nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Steinmarder_01.jpg?width=1280',
+  s.image_attribution = 'Zefram (CC BY 2.0 de) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Martes foina';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Galápago leproso',
+  s.primary_habitat = 'Ríos, charcas, balsas y tramos remansados con vegetación y soleaderos',
+  s.description = 'Galápago de agua con el caparazón aplanado y de color verde oliva a pardo, a menudo cubierto de algas. Los ejemplares jóvenes muestran manchas anaranjadas en el cuello y en los lados de la cabeza que se van apagando con la edad. Toma el sol sobre piedras y troncos y se lanza al agua al menor ruido.',
+  s.description_source = NULL,
+  s.identification_tips = 'Manchas anaranjadas en el cuello, más vivas de joven
+Caparazón bajo y aplanado, a menudo con algas
+Se tira al agua en cuanto detecta movimiento en la orilla',
+  s.seasonality = 'Primavera a otoño (inactivo en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Mauremys_leprosa_03_by-dpc.jpg?width=1280',
+  s.image_attribution = 'David Perez (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Mauremys leprosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tejón',
+  s.primary_habitat = 'Bosque, matorral y ribazos con suelo blando para excavar tejoneras',
+  s.description = 'Mustélido corpulento y de patas cortas, con la cabeza blanca cruzada por dos bandas negras que pasan por los ojos. Excava madrigueras complejas —las tejoneras— que una misma familia amplía y usa durante generaciones. Es omnívoro y muy aficionado a las lombrices.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cabeza blanca con dos franjas negras longitudinales
+Tejoneras: varias bocas grandes con montones de tierra
+Letrinas en hoyos poco profundos cerca de la madriguera',
+  s.seasonality = 'Todo el año (actividad nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Badger-badger.jpg?width=1280',
+  s.image_attribution = 'BadgerHero (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Meles meles';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago de cueva',
+  s.primary_habitat = 'Cuevas y minas; caza en vuelo alto sobre bosque, campo y láminas de agua',
+  s.description = 'Murciélago de alas largas y estrechas y vuelo rápido y alto, casi como el de un vencejo. Tiene la frente muy abombada y el pelo corto y erizado en la cabeza. Recorre decenas de kilómetros entre las cuevas de cría, de tránsito y de invernada.',
+  s.description_source = NULL,
+  s.identification_tips = 'Frente muy abombada y pelo corto y de punta
+Alas largas y estrechas; vuelo veloz y alto
+Forma colonias enormes y muy apretadas en cueva',
+  s.seasonality = 'Todo el año, con desplazamientos estacionales entre cuevas',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Miniopterus_schreibersii_dasythrix.jpg?width=1280',
+  s.image_attribution = 'Andrew Smith (Public domain) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Miniopterus schreibersii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Roquero rojo',
+  s.primary_habitat = 'Pastos y roquedos de montaña por encima del bosque',
+  s.description = 'El macho en primavera es de los pájaros más vistosos de la montaña: cabeza azul, pecho naranja y una mancha blanca en la espalda. La hembra es parda y escamada. Ambos comparten la cola rojiza que destaca al volar. Es esquivo y suele verse a distancia sobre una roca.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola rojo anaranjado, llamativa en vuelo
+Macho con cabeza azul y pecho naranja
+Mancha blanca en la espalda del macho',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Monsax.jpg?width=1280',
+  s.image_attribution = 'Pierre Dalous (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Monticola saxatilis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lavandera boyera',
+  s.primary_habitat = 'Márgenes de masas de agua,terrenos húmedos,vegetación herbosa,terrenos agrícolas.Hasta 1700m',
+  s.description = 'Se trata de la más compacta, verdosa y colicorta de las lavanderas españolas. Exhibe dorso y obispillo de color verde oliva, alas plegadas con plumas negras orladas en blanco, y partes inferiores muy amarillas. Posee cola larga y negra, con plumas externas blancas, y patas y pico negros. La cabeza es gris azulada, con garganta y ceja blancas, y regiones ocular y auricular oscuras. Todo lo anterior se refiere al macho nupcial de la subespecie iberiae. Los machos de otras razas se diferencian por las siguientes características: flava tiene garganta amarilla y zona auricular más clara; flavissima luce ceja amarilla y cabeza verdosa; cinereocapilla presenta ceja muy reducida o ausente; thunbergi muestra garganta amarilla y cabeza gris pizarra sin ceja; y feldegg es como la anterior, pero con la cabeza negra. Ambos sexos son parecidos, pero la hembra está menos coloreada, con la cabeza gris verdosa y las partes inferiores de color amarillo tenue. Pese a que existen leves diferencias entre las hembras de cada subespecie, su separación resulta muy difícil. Los jóvenes son similares a las hembras, aunque más verdosos. En plumaje otoñal, los machos de todas las subespecies parecen hembras en plumaje nupcial, siendo difícil la identificación racial. A su vez, las hembras se vuelven parduzcas en otoño y exhiben un collar incompleto en el pecho. Un hábito destacado de esta ave es su asociación con el ganado, sobre todo vacuno.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Yellow_wagtail.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Motacilla flava';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Comadreja',
+  s.primary_habitat = NULL,
+  s.description = 'Es el mustélido más pequeño, de cuerpo y cabeza alargados y extremidades cortas. Cola corta, aproximadamente el 30% del cuerpo. Pelaje de color pardo canela a pardo chocolate en la parte dorsal, y blanco en la ventral, con el límite entre coloraciones recto o sinuoso según las formas descritas. Los pies, con 5 dedos, pueden ser blancos o con la coloración dorsal. En la cara presentan con frecuencia pecas rictales. Acusado dimorfismo sexual en la longitud corporal (los machos son un 10-20% más largos que las hembras). La longitud también varía a lo largo de su distribución. Medidas corporales de ejemplares adultos de la Península Ibérica, CC:175-250 mm (machos), 165-190 mm (hembras); C: 50-85 mm (machos), 40-55 mm (hembras); P: 27-37 mm (machos), 23-27 mm (hembras); Ps: 90-223 g (machos), 49-80 g (hembras). Fórmula dentaria 3.1.3.1/3.1.3.2. Número de cromosomas (2n) = 42. Las hembras presentan cuatro pares de mamas. Podría confundirse con el armiño en librea estival, aunque no posee el tercio apical negro en la cola, ni presenta en estas latitudes librea blanca invernal.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Mustela_nivalis_-British_Wildlife_Centre-4.jpg?width=1280',
+  s.image_attribution = 'Keven Law (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Mustela nivalis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Turón',
+  s.primary_habitat = NULL,
+  s.description = 'Mustélido de tamaño intermedio entre la marta, Martes martes y el armiño, Mustela erminea. El cuerpo es esbelto y alargado. Medidas corporales, CC: 385-425 mm; C: 150 mm; Ps: 800-1.300 g (machos), en hembras es un 60-90% inferior. La coloración general es bastante uniforme, normalmente tostado oscuro, pero se aclara en ambos flancos. Presenta un característico antifaz blanco alrededor del hocico y las regiones auriculares y oculares. El dimorfismo sexual es bastante marcado, aunque sin llegar al caso de la comadreja, Mustela nivalis, o el armiño, M. erminea. Fórmula dentaria: 3.1.3.1/3.1.3.2. Número de cromosomas (2n) = 40.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ilder.jpg?width=1280',
+  s.image_attribution = 'Malene Thyssen (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Mustela putorius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago ratonero mediano',
+  s.primary_habitat = 'Cuevas y desvanes; caza saltamontes en pastizales y herbazales',
+  s.description = 'Casi idéntico al ratonero grande, con el que a menudo comparte colonia, pero algo menor y con el hocico más estrecho y una mancha clara en la frente. Está especializado en cazar saltamontes en pastizales altos, lo que reparte el alimento entre ambas especies.',
+  s.description_source = NULL,
+  s.identification_tips = 'Muy parecido al ratonero grande, pero algo menor
+Mancha clara difusa entre los ojos
+Hocico más fino y estrecho',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Myotis-blythii-cropped.jpg?width=1280',
+  s.image_attribution = 'C. Robiller / www.naturlichter.de (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Myotis blythii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago patudo',
+  s.primary_habitat = 'Cuevas próximas a ríos y balsas; caza rozando la lámina de agua',
+  s.description = 'Murciélago ligado al agua: caza volando a pocos centímetros de la superficie de ríos y balsas y captura insectos —e incluso pececillos— con sus pies desproporcionadamente grandes y peludos. Esa dependencia del agua limpia lo hace muy vulnerable.',
+  s.description_source = NULL,
+  s.identification_tips = 'Pies muy grandes y peludos en proporción al cuerpo
+Vuela rozando la lámina de agua
+Membrana del ala insertada en el tobillo, no en el dedo',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Myotis_capaccinii_0105b_cropped.jpg?width=1280',
+  s.image_attribution = 'This image was improved or created by the Wikigraphists of the Grap… (FAL) · Wikimedia Commons',
+  s.rarity_score = 5,
+  s.rarity_basis = '{"categoria":"CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Myotis capaccinii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago de ribera o ribereño',
+  s.primary_habitat = NULL,
+  s.description = 'Murciélago de pequeño tamaño. El dorso es de color pardo rojizo a negruzco y el vientre blanco sucio. Pelo bicolor, con la base oscura, especialmente en la zona ventral. Las orejas, relativamente cortas, apenas llegan al extremo del hocico si se pliegan hacia delante. El plagiopatagio se inserta en la mitad del pie, que es bastante largo y ancho. Tibia sin pilosidad aparente. El espolón ocupa dos terceras partes del borde del uropatagio, que está desnudo o con escasos pelos. Existen numerosas citas de casos de albinismo. Juveniles gris oscuro y con una mancha negra en el labio inferior. ANT: 33,2-38,7 mm; Ps: 7,0-15,0 g. Puede encontrarse o no protocónulo en P4. Fórmula dentaria: 2.1.3.3/3.1.3.3. Número de cromosomas (2n) = 44. Es necesaria su identificación en mano al poder confundirse con otras especies pequeñas del género Myotis, como M. nattereri, M. emarginatus o M. mystacinus. ULTRASONIDOS Emite señales de ecolocalización en FM entre 69 y 25 kHz, con una intensidad máxima a 45 kHz. Las especies con las que pueden confundirse sus emisiones son: M. capaccinii, M. mystacinus, M. bechsteini y M. nattereri.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Myotis-P1040975.jpg?width=1280',
+  s.image_attribution = 'me (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Myotis daubentonii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago de Geoffroy o de oreja partida',
+  s.primary_habitat = 'Cuevas y desvanes; caza arañas e insectos en el follaje de bosques y sotos',
+  s.description = 'Murciélago de pelaje lanoso y rojizo, con una escotadura muy marcada en el borde de la oreja que le da nombre. Recoge sus presas directamente del follaje y de las paredes, cerniéndose frente a ellas, en vez de capturarlas en pleno vuelo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Muesca clara en el borde externo de la oreja
+Pelaje lanoso y de tono rojizo
+Se ciñe frente a hojas y muros para capturar arañas',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Myotis_emarginatus.jpg?width=1280',
+  s.image_attribution = 'Rémi Bigonneau (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Myotis emarginatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago de Natterer',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Escalera''s_mouse-eared_bat%2C_Valladolid%2C_Espa%C3%B1a_imported_from_iNaturalist_photo_580677792.jpg?width=1280',
+  s.image_attribution = '(c) Juan Cruzado Cortés, some rights reserved (CC BY) (CC BY 4.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Myotis escalerai';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago ratonero grande',
+  s.primary_habitat = 'Cuevas y desvanes; caza escarabajos en pastos, claros y bosque sin sotobosque',
+  s.description = 'Uno de los murciélagos más grandes de Europa, con orejas largas y anchas y hocico de aspecto perruno. Caza cerca del suelo, capturando escarabajos que localiza por el ruido que hacen al andar, no solo con el sonar. Cría en colonias numerosas en cuevas y bajo cubiertas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Talla grande y orejas largas y anchas
+Hocico ancho, de aspecto casi perruno
+Caza a ras de suelo, en zonas despejadas',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Myotis.jpg?width=1280',
+  s.image_attribution = 'Urheber: Manuel Werner, Germany, Wikipedia-Kontakt: http://de.wikip… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Myotis myotis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra viperina',
+  s.primary_habitat = 'Se trata de una culebra que frecuenta ríos, riachuelos, pantanos, balsas y marismas, siendo menos frecuente lejos de los puntos de agua',
+  s.description = 'Serpiente de tamaño medio, cola corta y cabeza ensanchada y bien delimitada respecto al resto del cuerpo. Generalmente hay dos escamas preoculares y dos postoculares, 7 escamas supralabiales y 9 escamas infralabiales. Dorsales claramente carenadas. El diseño es muy llamativo pues se trata de una amplia banda en forma de zig zag que recorre todo el cuerpo en posición dorsal. Existe un patrón alternativo que consiste en dos líneas longitudinales y paralelas, de colores claros, de recorrido también dorsal. El diseño rayado es más frecuente hacia el sur de la península y la costa mediterránea, aunque poblaciones muy cercanas pueden tener frecuencias muy dispares. La coloración corporal de fondo es variable aunque destacan los tonos verdosos, pardos y oliváceos. El vientre es generalmente gris amarillento con manchas oscuras en forma de diseño ajedrezado. Las hembras son mayores pero la longitud de cola y el número de subcaudales son mayores en machos. Longitud total máxima en la Península Ibérica, 910 mm.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Viperine_Snake_(Natrix_maura)_(14198769323).jpg?width=1280',
+  s.image_attribution = 'Bernard DUPONT from FRANCE (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Natrix maura';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra de collar',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Natrix_natrix_(Karl_L).jpg?width=1280',
+  s.image_attribution = 'Karl Larsaeus (CC BY 2.5) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Natrix natrix';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Martinete',
+  s.primary_habitat = NULL,
+  s.description = 'Es una garza de mediano tamaño, rechoncha, de pico robusto y vistoso plumaje, que se caracteriza por sus hábitos decididamente crepusculares y nocturnos. Los individuos adultos —que no presentan dimorfismo sexual en lo que al plumaje se refiere— exhiben un color blanco o blanco grisáceo en el cuello, que se torna azabache —con matices irisados— en el capirote, el dorso y parte de las alas. Uno de los rasgos distintivos de las aves reproductoras es la posesión de dos o tres plumas cefálicas blancas de hasta 24 centímetros de longitud, además de la mayor intensidad de las irisaciones del plumaje. El iris es de un llamativo rojo coral, el pico negro y las patas amarillas. En vuelo —que ejecuta de modo pausado y elegante— tiene un aspecto muy rechoncho, con las alas relativamente cortas y redondeadas. El joven, por su parte, luce un plumaje bastante más modesto que los adultos, pues en él dominan los tonos pardos y grisáceos, con un buen número de motas blancas concentradas, sobre todo, en las alas y el dorso. Las partes inferiores resultan algo más pálidas y se muestran intensamente estriadas longitudinalmente. El ojo es amarillo sucio, al igual que las patas y el pico. Existen diferentes plumajes de transición hasta llegar a alcanzar la librea de adulto.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Black_Crowned_Night_Heron_(5770945257).jpg?width=1280',
+  s.image_attribution = 'Mike''s Birds (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Nycticorax nycticorax';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collalba rubia',
+  s.primary_habitat = 'Laderas secas y pedregosas con matorral bajo y suelo desnudo',
+  s.description = 'Collalba pequeña y contrastada: el macho es color arena claro con las alas negras y un antifaz o una garganta negros según la variedad. Como todas las collalbas, enseña al volar una cola blanca con una «T» negra invertida. Caza insectos lanzándose al suelo desde una piedra o una mata.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola blanca con una «T» negra al abrirse
+Alas negras que resaltan sobre el cuerpo color arena
+Se posa erguida en piedras y matas, muy visible',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Black-eared_Wheatear%2C_Punta_del_Sabinar%2C_Spain.jpg?width=1280',
+  s.image_attribution = 'Vince Smith from London, United Kingdom (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Oenanthe hispanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collalba gris',
+  s.primary_habitat = 'Pastizales pedregosos, canchales y zonas abiertas de montaña',
+  s.description = 'Collalba de dorso gris en el macho, con antifaz negro y alas oscuras. Como todas las collalbas, delata su identidad al volar: obispillo blanco y cola blanca con una «T» negra invertida. Se posa erguida en piedras y hace carreras cortas por el suelo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Obispillo blanco y «T» negra en la cola
+Macho con antifaz negro y dorso gris
+Carreras cortas por el suelo entre piedra y piedra',
+  s.seasonality = 'Paso migratorio y cría en montaña',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Oenanthe_oenanthe_Larvik.JPG?width=1280',
+  s.image_attribution = 'Arnstein Rønning (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Oenanthe oenanthe';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Arnacho',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/ONONIS_TRIDENTATA_-_BUSA_-_IB-906_(Ruac).JPG?width=1280',
+  s.image_attribution = 'Isidre blanc (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Ononis tridentata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Conejo',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Lagomorfo excavador que vive en madrigueras coloniales; pieza clave del ecosistema mediterráneo como presa de águila perdicera, búho real y carnívoros.',
+  s.description_source = NULL,
+  s.identification_tips = 'Excava madrigueras coloniales
+Presa clave de rapaces
+Activo al amanecer y atardecer',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Oryctolagus_cuniculus_Tasmania_2.jpg?width=1280',
+  s.image_attribution = 'JJ Harrison (https://www.jjharrison.com.au/) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Oryctolagus cuniculus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bayón',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Osyris_alba_1.JPG?width=1280',
+  s.image_attribution = 'User:Xemenendura (CC BY-SA 2.1 es) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Osyris alba';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Águila pescadora',
+  s.primary_habitat = NULL,
+  s.description = 'Rapaz de mediano tamaño. Los adultos poseen partes inferiores blancas, con un moteado variable en el pecho; los individuos que tienen un collar de estrías más marcado en el pecho suelen ser hembras. Como contraste presentan partes superiores muy oscuras. El píleo es blanco, y tras el ojo aparece una lista ocular, a modo de antifaz, que recorre parte del cuello. En vuelo exhiben una silueta bastante característica, con cola corta y alas relativamente estrechas y “anguladas”. Vistos desde abajo, el cuerpo y las partes anteriores del ala, blancas, contrastan con las franjas oscuras que recorren las plumas de vuelo. La cola muestra una sucesión de barras oscuras. El joven es muy similar, pero sus partes superiores parecen como escamadas —debido al borde pálido en las plumas— y, en vuelo, las secundarias resultan algo más pálidas que en los adultos, con un barreado más patente. Cuando el águila pescadora vuela en busca de alimento, es capaz de cernirse con profundos aleteos antes de lanzarse al agua para capturar los peces con sus garras.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/2010-kabini-osprey.jpg?width=1280',
+  s.image_attribution = 'Yathin S Krishnappa (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Pandion haliaetus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gorrión molinero',
+  s.primary_habitat = NULL,
+  s.description = 'El más pequeño de los gorriones europeos presenta una coloración parecida a la del gorrión común, es decir: dorso marrón listado de negro y pecho gris muy claro. Se diferencia, no obstante, del común por su extensa capucha de color acastañado y por una llamativa mancha negra que destaca vivamente en la blanca mejilla. Además, luce un collar blanco, que se interrumpe en la nuca, del que carece el gorrión común. El pico es menos robusto que el de su cercano pariente y el babero, considerablemente más reducido. En esta especie no hay significativas diferencias de plumaje entre machos y hembras, por lo que resulta imposible diferenciarlos en el campo. Los jóvenes, hasta finales del verano, se diferencian de los adultos por sus mejillas de color blanco sucio, carentes de mancha negra. El molinero se comporta de manera más nerviosa que el gorrión común y permanece menos tiempo en el suelo.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Passer_montanus_saturatus_s2.JPG?width=1280',
+  s.image_attribution = 'Alpsdake (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Passer montanus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Labiérnago prieto',
+  s.primary_habitat = 'Encinares, matorral alto y umbrías sobre suelos pedregosos',
+  s.description = 'Arbusto o arbolillo de hojas opuestas, coriáceas y de borde dentado, más anchas que las de su pariente de hoja estrecha. Las hojas jóvenes son marcadamente dentadas y las adultas casi enteras, lo que despista con frecuencia.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas opuestas y anchas, dentadas en las ramas jóvenes
+Verde oscuro por las dos caras
+Frutos pequeños azul negruzcos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Phillyrea_latifolia.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Phillyrea latifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago de borde claro',
+  s.primary_habitat = 'Es fisurícola, tanto litófila como fitófila, y altamente sinantrópica, refugiándose en fisuras o grietas en edificios, rocas y árboles, así como en cajas-nido',
+  s.description = 'Es un murciélago pequeño. Las orejas son cortas, triangulares y con vértice superior redondeado, y poseen cinco pliegues transversales en la parte superior del borde externo. El trago es corto, redondeado en la punta y ligeramente curvado. El pelaje es de coloración general pardo castaño o rojizo en la parte dorsal, y más claro en la zona ventral. El hocico, las orejas y la membrana alar son de color negro parduzco. Las alas son relativamente estrechas. El plagiopatagio se inserta en la base de los dedos del pie; en su borde presentan generalmente una banda de color más claro. El espolón alcanza más de la mitad de la longitud del borde del uropatagio, con lóbulo postcalcáneo con cartílago conspicuo en forma de T. Los incisivos internos superiores (I1) son monocúspides, los externos (I2) menores que la mitad del I1, y el premolar superior anterior (P1) está desplazado hacia el interior y no es visible externamente. Los incisivos inferiores están fuertemente imbricados, y no presentan diastema entre I2 e I3. ANT: 31,0-37,0 mm; Ps: 4,5-10,0 g. Fórmula dentaria: 2.1.2.3/3.1.2.3. Número de cromosomas (2n) = 44. No existe dimorfismo sexual, aunque las hembras son algo mayores. Puede confundirse sobre todo con los otros representantes del género Pipistrellus y en menor medida con Hypsugo savii, de los que se diferencia sobre todo por los caracteres dentales. ULTRASONIDOS Emite pulsos de ecolocalización del tipo FM-CF, con frecuencia de máxima energía a 38-41 kHz, 8-12 ms de duración, e intervalo entre pulsos bimodal con valores máximos en torno a los 100 y 200 ms. Los cantos sociales son una serie de 2 pulsos FM muy rápidos, con máxima energía en torno a los 14-16 kHz, fácilmente audibles como un “chip” agudo, y que mediante sistemas de tiempo expandido permiten discriminar a la especie de P. nathusii. Mediante escucha directa pueden confundirse con sonidos de ecolocalización de Tadarida teniotis.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pipistrellus_kuhlii.jpg?width=1280',
+  s.image_attribution = 'Mnolf (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Pipistrellus kuhlii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago común',
+  s.primary_habitat = 'Quiróptero de hábitos fisurícolas',
+  s.description = 'Es uno de los Quirópteros más pequeños de Europa (ANT: 28-35 mm, Ps: 3,5-8,5 g). Orejas cortas, triangulares; trago de punta redondeada, más largo que ancho. Coloración dorsal de marrón-rojizo a gris-verdoso, con individuos negruzcos. Pelaje ventral más claro. La segunda falange del 3er dedo es 2- 3 mm mayor que la tercera. La pigmentación de las partes desnudas de la cara es en general oscura, sin parches claros conspicuos. Los machos tienen el pene grisáceo con una marcada estría más pálida en el glande. Carecen de protuberancia entre los orificios nasales. Fórmula dentaria: 2.1.2.3/3.1.2.3. Incisivo superior interno bicúspide, casi igual que la mitad de la longitud del externo. PM1 muy pequeño y desplazado hacia el interior de la serie dental pero visible desde el exterior. Dotación cromosómica: 2n = 42 ó 2n = 44. Pueden ser confundidos con otros miembros del género Pipistrellus, aunque sus menores dimensiones y la morfología y disposición de los incisivos y premolares superiores permiten distinguirlos en mano con relativa facilidad. ULTRASONIDOS Las emisiones más habituales son pulsos de frecuencia modulada de banda ancha con una cola final casi frecuencia constante. Las frecuencias terminal y de máxima intensidad oscilan entre 42-51 y 41,6- 50,8 kHz, respectivamente. Las llamadas sociales difieren en frecuencia y número de componentes. Las señales son estructuralmente similares a las de otras especies cogenéricas, pero sus diferentes frecuencias permiten separarlas con facilidad.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pipistrellus_pipistrellus_lateral.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Pipistrellus pipistrellus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago de Cabrera',
+  s.primary_habitat = NULL,
+  s.description = 'Es el murciélago más pequeño de Europa (ANT: 28,8-32,8 mm; Ps: 4,1-7,5 g) . Orejas cortas y triangulares. Trago de punta redondeada, más largo que ancho. Pelaje dorsal desde marrón-oliva a arenoso pálido. La región ventral es más clara. La razón entre la longitud de la 2ª y 3ª falange del 3er dedo es 1:1, aunque este carácter es bastante variable. Las orejas y el hocico son relativamente más cortos y el pelaje dorsal del uropatagio más denso y extendido que en el murciélago enano, cubriéndolo hasta su tercio proximal. La pigmentación de las partes desnudas de la cara presenta parches claros conspicuos. En los machos el pene es anaranjado y sin la estría distintiva del murciélago enano. Ambos sexos presentan una pequeña protuberancia entre los orificios nasales, ausente en su especie gemela . Fórmula dentaria: 2.1.2.3/3.1.2.3. Forma y disposición de los incisivos superiores y PM1 como en el murciélago enano. Se distingue con relativa facilidad de otros miembros del mismo género por su tamaño menor y su morfología dentaria. ULTRASONIDOS Las señales de ecolocación más habituales son pulsos de frecuencia modulada de banda ancha con una cola final casi de frecuencia constante. Los valores medios de la frecuencia de máxima intensidad oscilan entre 52 y 56 kHz . Las llamadas sociales están compuestas por 2 a 4 componentes (habitualmente tres) y se escuchan sobre todo en torno a 20 kHz . En situaciones de amenaza emiten llamadas de alarma compuestas por 4-5 elementos, con frecuencias de máxima intensidad entre 26 y 40 kHz.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril, mayo, junio, julio, agosto, septiembre, octubre, enero',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pipistrellus_pygmaeus01.jpg?width=1280',
+  s.image_attribution = 'Evgeniy Yakhontov (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Pipistrellus pygmaeus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago orejudo gris',
+  s.primary_habitat = NULL,
+  s.description = 'Es un murciélago de tamaño medio. Orejas muy grandes que se unen por la base de sus bordes internos. El dorso es gris oscuro con los pelos negruzcos en casi toda su longitud, mientras que la zona ventral es blanquecina o gris muy pálida. Los jóvenes tienen una coloración grisácea más apagada. Las hembras son por lo general algo mayores que los machos. ANT: 37,0-45,0 mm; Ps: 6,5-15 g. Fórmula dentaria: 2.1.2.3/3.1.3.3. Número de cromosomas (2n) = 32. Por el tamaño de las orejas y su aspecto, en la Península Ibérica sólo se puede confundir con P. auritus y la semejanza entre ambas requiere que su determinación deba realizarse en mano, y aún así pueden surgir dificultades. Al contrario que en P. auritus, el trago es normalmente mayor de 5,5 mm y está pigmentado en toda su longitud con un color parecido al del pabellón de la oreja. La longitud del pulgar (sin la uña) generalmente es menor (inferior a 6 mm) y la uña es también más corta. Partes desnudas de color grisáceo oscuro (y no pardas o rojizas). Antifaz oscuro alrededor de los ojos más marcado. En los machos adultos, el pene es mazudo (y no cilíndrico). ULTRASONIDOS Emite pulsos de ecolocalización en FM desde 85 a 25 kHz. La intensidad de estos sonidos es muy débil y su alcance apenas supera los 5 m. Las señales son prácticamente indistinguibles de las de P. auritus.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, enero',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Plecotus_austriacus2.jpg?width=1280',
+  s.image_attribution = 'Andrei Sakhno (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Plecotus austriacus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gallipato',
+  s.primary_habitat = NULL,
+  s.description = 'Urodelo grande, que puede alcanzar una longitud total de 312 mm. Cabeza aplastada, muy ancha en su parte posterior. Cuerpo cubierto con verrugas con punta negra. Posee en los costados una hilera de manchas amarillentas o anaranjadas. Sin cresta en el cuerpo. Cola lateralmente comprimida.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pleorodeles_waltl.jpg?width=1280',
+  s.image_attribution = 'No machine-readable author provided. Pengo assumed (based on copyri… (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Pleurodeles waltl';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagartija andaluza',
+  s.primary_habitat = 'En Doñana P. vaucheri ocupa las construcciones',
+  s.description = 'Alcanza 60 mm de longitud de cabeza y cuerpo. Cabeza algo deprimida. Parietales relativamente cortos. Serie completa de gránulos entre supraoculares y superciliares. Parietales en contacto con la postocular superior. Masetérica reducida y/o fragmentada . Escamas dorsales granulares y aquilladas, en número de 52 – 71 series en el centro del cuerpo. Posee 9 - 16 escamas del collar, 23 – 33 escamas ventrales, 12 – 22 poros femorales y 14 – 20 laminillas subdigitales. Dorso gris oliváceo o de color verde con pequeñas manchas negras o reticulado. Tiene una banda lateral oscura más o menos definida, bordeada por encima con una banda blanca o una serie de puntos blancos. Parte superior de la cabeza con manchas negras. Vientre blanco o naranja pálido, con algunas manchas negras en las ventrales externas. Garganta con pequeñas manchas negras.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Podarcis_vaucheri%2C_Lacertidae-Lagartija_andaluza-(Sevilla).JPG?width=1280',
+  s.image_attribution = 'MOGRERA (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Podarcis vaucheri';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Somormujo lavanco',
+  s.primary_habitat = NULL,
+  s.description = 'El mayor de los somormujos y zampullines que pueden verse en España, con el tamaño de un ánade grande. Se trata de un ave elegante, de cuello estilizado, pico largo y apuntado, y cuerpo alargado. En verano luce un plumaje vistoso, con la parte superior de la cabeza negra, en la que destacan dos grupos de plumas a modo de penachos. De las mejillas salen plumas llamativas, alargadas, de tonos rojizos y negros. La zona que rodea los ojos es blanca, al igual que el cuello, el pecho y el vientre, lo que contrasta con el dorso oscuro y los flancos rojizos. En plumaje invernal llama mucho menos la atención, con un tono general oscuro en el dorso y los laterales, aunque presenta el cuello, la cabeza (excepto el píleo oscuro) y las partes inferiores de color blanco. Con cualquier plumaje, el largo cuello constituye un buen rasgo diagnóstico. En vuelo se observa su esbelta complexión, con su largo cuello estirado, y su batir rápido de alas hace ver las zonas alares blancas a modo de destellos. No existen diferencias entre sexos. Los juveniles resultan similares a los adultos en invierno, aunque poseen en la cara un dibujo de líneas negras que los distingue.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/16.9.20_Ceske_Vrbne_12_(50353635587).jpg?width=1280',
+  s.image_attribution = 'Donald Judge (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Podiceps cristatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zampullín cuellinegro',
+  s.primary_habitat = 'El Zampullín Cuellinegro presenta una gran capacidad para seleccionar distintos humedales en función de las etapas del ciclo biológico',
+  s.description = 'Zampullín pequeño, aunque algo mayor y más esbelto que el zampullín común. Tiene el pico fino y puntiagudo, ligeramente curvado hacia arriba. Visto de cerca llaman la atención sus ojos rojos. En plumaje nupcial presenta una coloración general negra, salvo en el vientre y los flancos, que son anaranjados. En la cara destacan unas plumas amarillas que parten de la zona auricular como penachos en forma de abanico. En invierno resulta poco llamativo, con coloración general negruzca, excepto en la garganta, las mejillas y los laterales de la nuca, que son blancos. El pecho y el vientre muestran un color gris ceniza. No existen diferencias entre sexos. Los juveniles se parecen a los adultos en invierno, aunque tienen la cabeza más redondeada y las partes blancas de su cabeza y cuello son de tonos crema.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Podiceps_nigricollis_(Marek_Szczepanek)2.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Podiceps nigricollis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Álamo',
+  s.primary_habitat = 'Los chopos son especies de luz, de temperamento muy robusto, colonizadores de terrenos desnudos en las riberas de los ríos',
+  s.description = 'Populus nigra es un árbol caducifolio, de porte y copa muy variable, que puede alcanzar los 40 m de altura y 70-100 cm de diámetro. En poblaciones naturales las dimensiones y conformación general del árbol varía en función de la estructura y densidad de la población, así como del origen del rodal (sexual o asexual) y de la interacción con la dinámica fluvial. El fuste es erguido, con ramificación abundante e irregular. La corteza es clara, blanco-amarillenta, y lisa en árboles jóvenes, y oscura, rugosa y agrietada longitudinalmente, formando un entrecruzado característico, en individuos adultos. Es muy característico de esta especie la formación de protuberancias en el tronco y la proliferación de brotes epicórmicos, así como la presencia de contrafuertes en la base de los troncos de árboles longevos. Su sistema radical es fuerte, formado por un eje principal que se ramifica y alcanza capas profundas del terreno, mientras que las raíces secundarias se extienden horizontalmente de forma superficial. Algunos ejemplares pueden alcanzar los 300 años. Los brotes del año son claramente cilíndricos en la base, a veces subangulares en la zona apical, pero nunca acostillados. Este conjunto de caracteres tiene un gran valor de diagnóstico para la identificación de ejemplares adultos y han sido recopilados por el grupo de trabajo de P. nigra de EUFORGEN en una ficha técnica de identificación. Las hojas son glabras, de color verde en ambas caras, nervio principal amarillento muy destacado en el envés y con peciolo largo comprimido lateralmente. Presenta dimorfismo foliar: las hojas turionales son aovado-triangulares o aovado-rómbicas, acuminadas y con borde festoneado-aserrado; las hojas de los braquiblastos son más pequeñas y anchas, romboidales, anchamente cuneiformes en la base. Las yemas vegetativas son aovado-oblongas y agudas, aplicadas sobre el ramillo, cubiertas de escamas rojizas, viscosas y olorosas. Es una especie dioica, las yemas florales se presentan en posición axilar sobre los brotes de un año, a menudo agrupadas por debajo de la yema terminal. Las yemas florales femeninas están curvadas hacia fuera y son más pequeñas que las masculinas. Tanto las flores masculinas como las femeninas se disponen agrupadas en amentos colgantes. Los masculinos son gruesos, cilíndricos, de 3-9 cm de longitud, con flores de 10 a 20 estambres con anteras púrpuras que dan un color característico al amento en la fase de brotación y elongación. Los amentos femeninos son largamente pedunculados, laxos, verdosos, de 7-15 cm. Las flores femeninas se presentan sobre un pedicelo corto, con ovario aovado-cónico de color verde y dos estigmas lobulados de color verde-amarillento adosados al ovario. Los amentos fructíferos portan 40 a 45 frutos. Éstos son cápsulas bivalvas aovado- cónicas, con pedicelo corto, verdosas inicialmente y pardas en la madurez, cada una de las cuales contiene 10-14 semillas. Las semillas son de muy pequeño tamaño (2 mm), de color marfil a blanco-grisáceo, piriforme, con unos filamentos blancos adheridos al extremo proximal, de aspecto algodonoso y carácter hidrófobo, que facilitan su dispersión por el viento y el agua.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Zwarte_populier_(Populus_nigra)%2C_06-02-2026._(d.j.b.).jpg_04.jpg?width=1280',
+  s.image_attribution = 'Dominicus Johannes Bergsma. (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Populus nigra var. nigra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Acentor alpino',
+  s.primary_habitat = 'Roquedos y pedreras de alta montaña; en invierno baja a cortados',
+  s.description = 'Pájaro robusto de montaña, pardo y discreto salvo por dos detalles: los flancos con listas castañas y una garganta blanca finamente moteada de negro. Camina entre las rocas buscando insectos y semillas, y en invierno desciende a cortados y construcciones.',
+  s.description_source = NULL,
+  s.identification_tips = 'Flancos con anchas listas castañas
+Garganta blanca con motas negras, como un babero
+Base del pico amarilla',
+  s.seasonality = 'Otoño e invierno en cotas bajas',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Alpine_accentor_saganta.jpg?width=1280',
+  s.image_attribution = 'Paco Gómez from Castellón, Spain (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Prunella collaris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Boga del Tajo',
+  s.primary_habitat = 'Vive en los tramos medios de los ríos, en zonas de marcada corriente, pero también prolifera en las aguas de los embalses',
+  s.description = 'La especie es diploide (2n=50). Especie de talla media que no suele alcanzar los 50 cm de longitud total. Cuerpo alargado más que otras especies de ciprínidos. La abertura bucal es inferior y recta. El labio inferior es grueso y presenta una lámina córnea bien desarrollada. Las aletas dorsal y anal son largas, la primera de ellas tiene entre 8 y 9 radios ramificados y la segunda entre 8 y 9. Escamas pequeñas, en la línea lateral se cuentan entre 64 y 78. El número más frecuente de dientes faríngeos es de 6-5. No existe dimorfismo sexual marcado, aunque se han descrito algunas diferencias de tipo morfométrico relativas al tamaño de las aletas y longitud de la cabeza. La coloración es plateada o algo parda en el dorso con las aletas más oscuras y la línea lateral muy marcada. Se diferencia de otros ciprínidos por tener los ejemplares adultos un hocico puntiagudo con boca ínfera y lámina córnea recta, muy llamativa, en el labio inferior. De otras especies del género Pseudochondrostoma se diferencia por los siguientes caracteres: 6-5 dientes faríngeos, individuos adultos no moteados de negro, de 19 a 31 branquispinas, 8-9 radios en las aletas anal y dorsal y de 64 a 78 escamas en la línea lateral. Holotipo no descrito, Sintipos conservados en el Naturhistorisches Museum Wien, Viena, Austria (NMW 52589, 2) procedentes de Crato, Portugal.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Junio, agosto, septiembre, noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Boga_del_Tajo_-_Pseudochondrostoma_polylepis.jpg?width=1280',
+  s.image_attribution = 'JoseAntonioGarrido (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Pseudochondrostoma polylepis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Hierba piojera',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pulicaria_arabica_hispanica_Pulicaria_paludosa_(14733674175).jpg?width=1280',
+  s.image_attribution = 'jacilluch (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Pulicaria paludosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Quejigo',
+  s.primary_habitat = 'Umbrías y suelos frescos y profundos, en transición al bosque mediterráneo',
+  s.description = 'Roble mediterráneo de hojas dentadas, más grandes que las de la encina, verdes por el haz y algo blanquecinas por el envés. Es marcescente: las hojas secas quedan colgando del árbol todo el invierno y no caen hasta que brotan las nuevas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas secas que persisten en la rama todo el invierno
+Hoja dentada, mayor y más blanda que la de la encina
+Prefiere umbrías y vaguadas con suelo profundo',
+  s.seasonality = 'Primavera a otoño (marcescente en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_faginea_centenario.jpg?width=1280',
+  s.image_attribution = 'Carlosblh (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Quercus faginea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carrasca',
+  s.primary_habitat = 'Bosques y matorrales mediterráneos continentales, sobre suelos secos y pobres',
+  s.description = 'La encina de interior, más adaptada al frío y a la sequía continental, con hojas más redondeadas y bellotas dulces. A menudo crece en mata por el efecto del ramoneo y las cortas repetidas. Muchos autores la consideran una subespecie de la encina.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas más redondeadas y pequeñas que las de la encina litoral
+Bellotas de sabor dulce, no amargas
+Frecuente en porte de mata, con varios pies',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carrasca_de_la_Raboseras.JPG?width=1280',
+  s.image_attribution = 'Picamaderos (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Quercus rotundifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Regulus ignicapillus',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Firecrest93.JPG?width=1280',
+  s.image_attribution = 'NAUMANN, NATURGESCHICHTE DER VÖGEL MITTELEUROPAS: Band II, Tafel 15… (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Regulus ignicapillus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Reyezuelo sencillo',
+  s.primary_habitat = NULL,
+  s.description = 'Junto a su cercano pariente, el listado, el reyezuelo sencillo es una de las aves más pequeñas de Europa. Presenta el dorso verdoso, con alas más oscuras sobre las que destaca una franja blanquecina. Se diferencia de su pariente por carecer de la lista superciliar clara, así como de la lista ocular negra. Dos tiras negras —que no se unen en la frente— surcan su píleo, flanqueando una tercera banda frontal más ancha de color naranja en los machos y amarillo en las hembras. Los jóvenes carecen de todas estas listas.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%D0%96%D0%B5%D0%BB%D1%82%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D1%80%D0%BE%D0%BB%D1%91%D0%BA_(Regulus_regulus)%2C_%D0%91%D0%B8%D1%82%D1%86%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BB%D0%B5%D1%81.jpg?width=1280',
+  s.image_attribution = 'Dion Art (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Regulus regulus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago de herradura mediterráneo',
+  s.primary_habitat = 'Cuevas cálidas; caza en bosque mediterráneo y mosaicos arbolados',
+  s.description = 'Murciélago de herradura de tamaño medio, de costumbres muy cavernícolas, que forma colonias de cría densas junto a otras especies. Vuela muy pegado a la vegetación, capturando polillas entre las ramas. Sus colonias son muy vulnerables a la visita de cuevas en primavera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Talla intermedia entre el grande y el pequeño de herradura
+Apéndice superior de la nariz apuntado y algo curvado
+Forma colonias apretadas en cueva, con otras especies',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhinolophus_euryale-cropped.jpg?width=1280',
+  s.image_attribution = 'Carlosblh (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Rhinolophus euryale';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago grande de herradura',
+  s.primary_habitat = 'Cuevas, minas y desvanes para refugiarse; caza en mosaicos de bosque y pasto',
+  s.description = 'El mayor de los murciélagos de herradura ibéricos. Debe el nombre a la hoja nasal en forma de herradura con la que emite el sonar por la nariz, no por la boca. Al reposar se envuelve por completo en las alas, como en una capa, y cuelga libre del techo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Al dormir se envuelve entero en las alas
+Hoja nasal en forma de herradura alrededor de las fosas
+Cuelga separado del techo, no metido en una grieta',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Rhinolophe_2.jpg?width=1280',
+  s.image_attribution = 'Marie Jullion (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Rhinolophus ferrumequinum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago pequeño de herradura',
+  s.primary_habitat = 'Cuevas, minas y edificios; caza en bosque, sotos y setos',
+  s.description = 'El más pequeño de los murciélagos de herradura europeos: colgado y envuelto en sus alas no llega al tamaño de una ciruela. Vuela bajo y muy cerca de la vegetación, con revoloteo de mariposa. Es muy sensible a las molestias en sus refugios de cría e invernada.',
+  s.description_source = NULL,
+  s.identification_tips = 'Tamaño minúsculo, como una ciruela colgando
+Vuelo bajo y revoloteante junto a setos y muros
+Se envuelve en las alas al reposar, como sus parientes',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Kleine_Hufeisennase.jpg?width=1280',
+  s.image_attribution = 'F. C. Robiller / naturlichter.de (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Rhinolophus hipposideros';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago mediano de herradura',
+  s.primary_habitat = 'Cuevas cálidas del ámbito mediterráneo; caza en matorral y bosque abierto',
+  s.description = 'Murciélago de herradura mediterráneo, uno de los más escasos y amenazados de Europa. Se reconoce por un antifaz oscuro alrededor de los ojos y por el contraste neto entre el dorso pardo grisáceo y el vientre casi blanco. Depende por completo de un puñado de cuevas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Antifaz oscuro marcado alrededor de los ojos
+Contraste fuerte entre dorso gris pardo y vientre blanquecino
+Hoja nasal ancha en la base que se estrecha de golpe',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhinolophus_mehelyi-cropped.jpg?width=1280',
+  s.image_attribution = 'F. C. Robiller / naturlichter.de (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Rhinolophus mehelyi';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sarga',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Salix_elaeagnos1.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Salix eleagnos';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sarga',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, enero',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Salix_purpurea_Sturm25.jpg?width=1280',
+  s.image_attribution = 'Johann Georg Sturm (Painter: Jacob Sturm) (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Salix purpurea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sabuco',
+  s.primary_habitat = 'Se desarrolla entre los 600 y los 1000 m',
+  s.description = 'Árbol de 4-6 m. Hojas compuestas, imparipinnadas de hasta cuatro pares de foliolos y uno terminal de mayor tamaño. Foliolos oblongo-lanceolados, aserrados en los bordes, vellosos en el envés. Flores pequeñas, blancas, olorosas, dispuestas en umbelas corimbiformes densas de hasta 20 cm de diámetro. Frutos en drupa, subglobosos, de hasta 7 mm, negruzcos en la madurez.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sambucus_nigra_004.jpg?width=1280',
+  s.image_attribution = 'Willow (CC BY 2.5) · Wikimedia Commons',
+  s.rarity_score = 5,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Sambucus nigra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Hierba de Lucía',
+  s.primary_habitat = 'Habita en roquedos calizos o dolomíticos, frecuentemente en extraplomos, fisuras e incluso en la zona basal',
+  s.description = 'Casmófito sufruticoso, perenne, de hasta 10 cm. Planta glabra (raramente con indumento en hojas y tallos), tallos con pecíolos de las hojas viejas persistentes. Hojas con (1)2 6(8) folíolos carnosos, glaucos (raramente pelosos), frecuentemente cordados en la base u ovadoredondeados, generalmente obtusos o mucronados. Inflorescencias en racimos variables. Flores zigomorfas blancas de 5-6 mm, con espolón muy reducido. Sépalos petaloides, caducos. Pétalos 4, los externos espatulados. Estambres 2. Pedicelo fructífero acrescente, frecuentemente curvo, dirigido al sustrato. Fruto con 2 semillas, de 3-4 x 2 mm con pico terminal corto.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sarcocapnos_Baetica.jpg?width=1280',
+  s.image_attribution = 'Antonio Matea Martínez (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Sarcocapnos baetica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zapatitos de la Virgen',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sarcocapnos_enneaphylla_saetabensis.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Sarcocapnos enneaphylla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zapatito de la Virgen',
+  s.primary_habitat = 'Extraplomos y roquedos calcáreos',
+  s.description = 'Pequeña planta rupícola de extraplomos y oquedades de roquedos calcáreos, integrante de la asociación Resedo paui-Sarcocapnetum saetabensis del hábitat 8210.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cuelga de extraplomos y techos rocosos
+Flores blanco-rosadas con espolón
+Hojas divididas glaucas',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Orella_de_ratol%C3%AD_(Sarcocapnos_saetabensis)_al_castell_de_X%C3%A0tiva.jpg?width=1280',
+  s.image_attribution = 'Joanbanjo (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Sarcocapnos enneaphylla subsp. saetabensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Senecio auricula subsp. auricula',
+  s.primary_habitat = 'Vive sobre suelos yesosos en complejos lagunares, saladares y al pie de cerros o en bordes de cursos estacionales',
+  s.description = 'Hierba de tallo erecto, simple o ramificado en la inflorescencia. Roseta basal de hojas ovado-espatuladas, con 3-5 dientes en el ápice, glaucas, algo coriáceas, glabras o subglabras; las caulinares de 1- 3 cm, de oblongas a linear-lanceoladas. Corimbos con (1)2-8 capítulos, 25-35 mm de diámetro. Involucro 7-12 mm, subglabro. Flores liguladas 10-13, de 10-12 mm. Aquenios 4-5 mm, algo pelosos.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Senecio auricula subsp. auricula';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Silene andryalifolia',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Silene_andryalifolia_kz01.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Silene andryalifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cuchara común',
+  s.primary_habitat = NULL,
+  s.description = 'Esta anátida resulta ciertamente inconfundible por la forma aplanada de su largo y especializado pico, de cuya semejanza con una cuchara proviene el nombre vulgar de la especie. El macho en plumaje nupcial presenta un diseño muy vistoso, con la cabeza y el corto cuello de color verde brillante, tonalidad que destaca vivamente sobre el pecho blanco. Los flancos y el vientre son castaños, en tanto que en las regiones dorsales, de tonos marrones, resaltan unas largas escapulares blanquinegras. El espejuelo, verde brillante, resulta particularmente visible en vuelo. Las hembras son parduzcas, aunque fácilmente diferenciables de las de otras anátidas gracias a la forma del pico, y con el espejuelo de un verde más pálido que en los machos. Los jóvenes son muy parecidos a las hembras, si bien en ellos los flancos presentan tintes más rojizos y las regiones dorsales son más oscuras.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Agosto a mayo',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Northern_Shoveler_Anas_clypeata.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Spatula clypeata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cacho',
+  s.primary_habitat = 'Es una especie ubiquista que vive en medios sumamente variados',
+  s.description = 'El cacho es un ciprínido de tamaño medio que no alcanza los 30 cm de longitud total. La cabeza es grande con la boca situada en posición súpera. La anchura de la cabeza es menor que en la bagra y los huesos circumorbitarios anchos a diferencia del bordallo. Las aletas dorsal y anal tienen los perfiles convexos. La aleta dorsal ligeramente atrasada con respecto al origen de las ventrales. La base de las escamas está pigmentada de negro y presenta una serie de manchas en el borde distal. La línea lateral está muy marcada y el número de escamas que posee varía entre 38 y 44. La coloración es plateada o parda amarillenta en el dorso siendo más clara en el vientre. El peritoneo es plateado con pequeñas manchas negras. En la época de reproducción los machos tienen tubérculos nupciales desarrollados por el borde distal de las escamas corporales y por la cabeza. Se diferencia de otros ciprínidos del género Squalius por tener ocho radios ramificados en la aletas dorsal y anal y el pedúnculo caudal ancho. Cinco dientes faríngeos en la línea externa y dos en la interna en ambos lados. Número de escamas en la línea lateral x? =41,3 (38- 44). Número de escamas en la línea transversal superior x? =8,4 (8-9). Tercer infraorbital tan ancho como el cuarto. Maxilar con proceso anterior apuntado. Rama inferior del hueso faríngeo estrecha. Tamaño máximo conocido de 200 mm. Holotipo no conocido. Sintipos conservados en el British Museum of Natural History BMNH, (6) procedentes de Sintra y Mondego en Portugal.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo, mayo, junio, julio, octubre, noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Squalius_pyrenaicus_(castellano).png?width=1280',
+  s.image_attribution = 'Alfredo Rodríguez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Squalius pyrenaicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cárabo',
+  s.primary_habitat = NULL,
+  s.description = 'Lo primero que llama la atención en el aspecto del cárabo común es su voluminosa cabeza, en la que destacan unos enormes y globosos ojos negros, lo que, unido a la ausencia de penachos cefálicos (“orejas”) y a su aspecto rechoncho y robusto, permite diferenciarlo fácilmente del resto de nuestras rapaces nocturnas. Su plumaje resulta extraordinariamente mimético y presenta una gran variabilidad en cuanto a color, ya que existen ejemplares grisáceos, rojizos y marrones. En todos los casos, el diseño consiste en una compleja mezcla de punteados, barrados y vermiculados, que imitan a la perfección la corteza de los árboles. La cara es de color blancuzco, grisáceo o rojizo, y en ella destacan dos listas blanquecinas a modo de “cejas”.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D0%BE%D0%B2%D1%91%D0%BD%D0%BE%D0%BA_%D0%A4%D0%B8%D0%BB%D1%8F%2C_%D0%A1%D0%B5%D1%80%D0%B0%D1%8F_%D0%BD%D0%B5%D1%8F%D1%81%D1%8B%D1%82%D1%8C_(Strix_aluco%2C_juv)%2C_%D0%A4%D0%B8%D0%BB%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D0%B0%D1%80%D0%BA.jpg?width=1280',
+  s.image_attribution = 'Dion Art (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Strix aluco';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jabalí',
+  s.primary_habitat = 'Bosque, matorral denso y cultivos; necesita cobertura y puntos de agua',
+  s.description = 'Ungulado robusto y adaptable, con el cuerpo cubierto de cerdas ásperas y una cabeza en cuña rematada por un hocico potente con el que remueve el suelo. Los rayones —las crías— nacen con líneas claras a lo largo del lomo. Es omnívoro y ha ampliado mucho su área en las últimas décadas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hozaduras: zonas de suelo removido como si lo hubieran arado
+Huellas hendidas grandes con las pezuñas laterales marcadas
+Barros y árboles con el tronco embarrado a media altura',
+  s.seasonality = 'Todo el año (actividad sobre todo nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eberswalde_Zoo_12-2017_img2.jpg?width=1280',
+  s.image_attribution = 'A.Savin (FAL) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Sus scrofa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca mosquitera',
+  s.primary_habitat = 'Campiñas verdes,sotos,orlas de bosque,zonas de vegetación ribereña,masas arboladas con sotobosque..',
+  s.description = 'Pajarillo de fisonomía más compacta y robusta que la de otras currucas —aunque bastante similar a la de la curruca capirotada—, con cabeza más redondeada y pico más corto y grueso. Un fino anillo orbital rodea al ojo. De todas formas, se trata de un ave que no cuenta con rasgos distintivos realmente identificativos o llamativos, y su aspecto general resulta bastante uniforme. Presenta las partes ventrales de color ante pálido y el dorso pardo-grisáceo. En torno a su cuello destaca ligeramente un discreto collar más grisáceo. Ambos sexos son iguales.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril, mayo, agosto, septiembre, octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sylvia_borin_(%C3%96rebro_County).jpg?width=1280',
+  s.image_attribution = 'Biillyboy (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Sylvia borin';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago rabudo',
+  s.primary_habitat = 'Los refugios se sitúan en farallones rocosos, acantilados marinos y estructuras artificiales como puentes y edificios',
+  s.description = 'Murciélago de gran tamaño, con alas largas y estrechas. Cabeza característica con orejas rígidas proyectadas hacia delante. La cola sobresale por fuera de la membrana caudal y se retrae en el uropatagio en vuelo. El color del pelo es muy variable, de pardo a gris claro. Algunos ejemplares presentan áreas canosas. No se ha descrito dimorfismo sexual en cuanto al color. Las hembras son ligeramente más grandes. ANT: 57,0-64,0 mm; Ps: 22,0-54,0 g. Fórmula dentaria: 1.1.2.3/3.1.2.3. Número de cromosomas (2n) = 48. No existen especies similares en Europa. ULTRASONIDOS Muestran una gran variedad de llamadas sociales emitidas desde los refugios y en vuelo. Exhibiciones sonoras de los machos dominantes y fuertes emisiones durante las persecuciones aéreas. Las señales de ecolocalización tienen una duración de entre 8 y 27 ms. (media 15 ms). El intervalo entre pulsos oscila entre 200 y 1.400 ms (media 740 ms). Emite entre 9-15 kHz con máxima intensidad en 11,4 kHz. El rango de todos los tipos de llamadas es audible para el oído humano. Con poca experiencia pueden confundirse las señales de ecolocalización del murciélago rabudo con emisiones sociales audibles de otras especies (Pipistrellus pipistrellus, Nyctalus noctula y N. leisleri).',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tadarida.teniotis.jpg?width=1280',
+  s.image_attribution = 'Ramón Caballero García (GPL) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Tadarida teniotis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Taray',
+  s.primary_habitat = 'Saladar junto a la playa del Sombrerico',
+  s.description = 'Arbusto o arbolillo que forma los bosquetes de taray de mayor biomasa de la zona, como el rodal junto a la playa del Sombrerico.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ramas finas y flexibles
+Flores rosadas en espigas
+Forma bosquetes junto a saladares',
+  s.seasonality = 'Primavera-verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tamarix_africana.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Tamarix africana';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Taray de saladar',
+  s.primary_habitat = 'Galerías y matorrales ribereños termomediterráneos',
+  s.description = 'Taray de saladar de flores blanco-rosadas y porte arbustivo, propio de bordes de ramblas salinas y depresiones halófilas del litoral.',
+  s.description_source = NULL,
+  s.identification_tips = 'Flores en espigas densas
+Tolera suelos muy salinos
+Bordes de rambla y saladar',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/621745664/original.jpg',
+  s.image_attribution = 'melendrete (CC BY-NC 4.0) · GBIF',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Tamarix boveana';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Taray canario',
+  s.primary_habitat = 'Galerías y matorrales ribereños termomediterráneos',
+  s.description = 'Taray de floración prolongada y espigas rosadas que forma galerías y tarayales en cauces y ramblas del litoral árido.',
+  s.description_source = NULL,
+  s.identification_tips = 'Espigas rosadas abundantes
+Floración prolongada
+Forma tarayales en ramblas',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/619019413/original.jpg',
+  s.image_attribution = 'Christoph Moning (CC BY 4.0) · GBIF',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Tamarix canariensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Taraje',
+  s.primary_habitat = 'Ramblas, cauces salinos, márgenes de saladar y arenas húmedas',
+  s.description = 'Arbolillo de porte ligero y ramas colgantes cubiertas de hojas escamosas diminutas, con un follaje que de lejos parece humo verde. Tolera la sal como pocos árboles: la excreta por sus hojas, y sus espigas rosadas de flores minúsculas cubren la copa en primavera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas escamosas de un par de milímetros, pegadas a la ramilla
+Ramas finas y péndulas, de aspecto plumoso
+Espigas densas de florecillas rosadas o blanquecinas',
+  s.seasonality = 'Floración de primavera a verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tamarix_gallica_-_Villa_Taranto_(Verbania)_-_DSC03778.JPG?width=1280',
+  s.image_attribution = 'Daderot (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Tamarix gallica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zamarrilla de yesos',
+  s.primary_habitat = 'Habita en matorrales y tomillares sobre yesos y margas yesíferas, en los pisos termo y mesomediterráneo, con ombrotipo semiárido-seco',
+  s.description = 'Caméfito sufruticoso, con tallos de hasta 30 cm de longitud, pubescentes y blanquecinos. Hojas verticiladas, lineares, de haz glabrescente y envés blanquecino-tomentoso. Las flores, con cáliz tubuloso-campanulado y corola más larga que éste de color purpúreo a blanco, se agrupan en racimos compactos.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_balthazaris_kz01.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Teucrium balthazaris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'polio',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_dunense_Habitus_2010-7-03_ParqueNaturalLagunasdelaMata.jpg?width=1280',
+  s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Teucrium dunense';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Teucrium franchetianum',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Teucrium franchetianum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lucema',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Teucrium libanitis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Teucrium rivas-martinezii',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 5,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Teucrium rivas-martinezii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Treparriscos',
+  s.primary_habitat = 'Paredes rocosas, cantiles y barrancos; en invierno baja a roquedos y edificios',
+  s.description = 'Pájaro de alta montaña que trepa por paredes verticales agitando las alas como una mariposa gigante, mostrando unos vistosos paneles rojos. Extrae insectos de las grietas con un pico largo y fino. En invierno desciende y puede aparecer en cortados bajos, castillos y presas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Manchas rojo carmín en las alas al abrirlas
+Trepa por la roca a saltos, aleteando sin parar
+Pico largo, fino y algo curvado',
+  s.seasonality = 'Otoño e invierno fuera de la alta montaña',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tichodroma_muraria02_cropped.jpg?width=1280',
+  s.image_attribution = 'derivative work: Hämbörger (talk) Tichodroma_muraria02.jpg: User:Kulac (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Tichodroma muraria';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagarto ocelado',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'El lagarto más grande de Europa, de hasta 60 cm con la cola incluida. Su dorso es verde con un fino reticulado negro y, en los costados, hileras de ocelos de un azul intenso. Los machos viejos tienen una cabeza enorme y maciza. Es diurno y muy desconfiado.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ocelos azules alineados en los costados
+Dorso verde con retícula negra muy fina
+Tamaño grande y cabeza maciza en los machos adultos',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Jewelled_Lizard_(Timon_lepidus)_male_found_under_a_stone_by_Jean_NICOLAS_(14166347788).jpg?width=1280',
+  s.image_attribution = 'Bernard DUPONT from FRANCE (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Timon lepidus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tenca',
+  s.primary_habitat = NULL,
+  s.description = 'Es diploide con un número cromosómico 2n=48. Especie de talla media que puede alcanzar los 85 cm de longitud total y un peso máximo de 7,5 kg. El cuerpo es alargado con un pedúnculo caudal corto y alto. Presenta un par de barbillas en las comisuras labiales. Las escamas son pequeñas siendo su número de 90 a 120 en la línea lateral. Las aletas dorsal y anal tienen sus bordes dístales convexos. La dorsal con 8-9 radios ramificados, mientras que la anal tiene 7-8. La coloración es verdosa aunque puede variar dependiendo del medio donde viva. Existen diferentes formas y coloraciones ya que se utiliza como especie ornamental en acuariofilia. Se diferencia de otros ciprínidos ibéricos por tener un par de barbillas bucales, 90 a 120 escamas en la línea lateral. Holotipo no conocido. Terra typica lagos de Europa.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Junio a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tinca_tinca_Natural_History_Museum_University_of_Pisa.jpg?width=1280',
+  s.image_attribution = 'Mattia Nocciola (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Tinca tinca';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Andarríos grande',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de un ave limícola de tamaño entre pequeño y mediano, de aspecto estilizado, con patas de mediana longitud que apenas sobresalen de la cola en vuelo, y pico igual a la longitud de la cabeza. Como otros andarríos, cuando está posado suele realizar un continuo movimiento de balanceo. La coloración es bastante oscura en la región dorsal, en marcado contraste con la garganta y las zonas ventrales, de color blanco. Presenta un límite nítido entre el pecho oscuro y el vientre blanco. Las patas son de color grisáceo oscuro y muestra también una ceja blanca, que es corta y solo se extiende entre el pico y el ojo. El adulto en plumaje nupcial exhibe numerosas pintas blancas en las partes superiores, que destacan notablemente sobre el fondo marrón oscuro. El píleo, el cuello y el pecho aparecen listados de marrón y blanco. Los ejemplares no reproductores presentan motas menos destacadas, de color ante apagado, el píleo apenas estriado de claro y el pecho grisáceo, con un estriado más difuso. El juvenil, por su parte, es semejante al adulto no reproductor, pero con las pintas de las partes superiores más conspicuas y con un estriado menos definido en el pecho. El andarríos grande es un ave tímida y nerviosa, a la que, normalmente, no se descubre hasta que alza el vuelo. En ese momento resulta fácil de identificar debido a su color muy oscuro, en el que resalta el obispillo blanco y el barrado transversal de la cola',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Green_Sandpiper_(Tringa_ochropus)-_In_Breeding_plumage_at_Bharatpur_I_IMG_5533.jpg?width=1280',
+  s.image_attribution = 'J.M.Garg (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Tringa ochropus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zorzal alirrojo',
+  s.primary_habitat = NULL,
+  s.description = 'El alirrojo es un zorzal de pequeño tamaño, compacto y de cola relativamente corta, que no presenta un dimorfismo sexual muy evidente. Su plumaje es marrón-grisáceo en el dorso y blanco con listas oscuras hacia las regiones ventrales. Los flancos y la parte inferior de las alas lucen un tono rojizo bastante intenso, que es visible en vuelo y constituye un buen indicio para diferenciarlo de especies próximas. Otro rasgo llamativo en su diseño es la presencia de una marcada ceja y una bigotera blancas, distinguibles incluso a cierta distancia. Suele moverse en grupos numerosos durante el invierno, a menudo en compañía de otros zorzales.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a marzo',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cotoneaster_frigidus_Turdus_iliacus_1.jpg?width=1280',
+  s.image_attribution = 'MPF (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Turdus iliacus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zorzal real',
+  s.primary_habitat = NULL,
+  s.description = 'El real es un zorzal grande y bastante corpulento, que se reconoce fácilmente por presentar la cabeza y el obispillo de color gris azulado. El plumaje de la espalda y del dorso del ala es pardo-grisáceo, algo rojizo en ocasiones, mientras que las partes inferiores son blanquecinas con manchas ocres en los flancos y el pecho —más intensas en época reproductora— y profusamente moteadas de manchas oscuras en forma de cuña. El pico es amarillo con la punta oscura. Ambos sexos son muy parecidos, especialmente en invierno. Vistos de cerca, en el diseño de la cara se puede observar una brida negra delante del ojo y otra bajo la mejilla, así como la ceja blanquecina. En vuelo resalta su cola, larga y oscura, y los paneles blancos bajo el ala.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a marzo',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Turdus_pilaris2.jpg?width=1280',
+  s.image_attribution = 'Adam Kumiszcza (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Turdus pilaris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mirlo capiblanco',
+  s.primary_habitat = 'Montaña con matorral y pastos; en paso, sierras con enebros y bayas',
+  s.description = 'Mirlo de montaña que se distingue del común por una banda blanca en forma de media luna sobre el pecho y por las plumas del ala ribeteadas de claro, que dan un aspecto escamado. Es muy desconfiado y se aleja en cuanto detecta movimiento.',
+  s.description_source = NULL,
+  s.identification_tips = 'Media luna blanca en el pecho
+Alas con aspecto escamado y plateado
+Mucho más esquivo que el mirlo común',
+  s.seasonality = 'Paso migratorio e invernada en montaña',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/2015-04-20_Turdus_torquatus_torquatus_Cairngorm_3.jpg?width=1280',
+  s.image_attribution = 'MPF (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Turdus torquatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lechuza común',
+  s.primary_habitat = 'Es una especie típica de paisajes humanizados con áreas agrícolas en mosaico',
+  s.description = 'El único representante de la familia Tytonidae en territorio europeo es una rapaz de tamaño medio, aspecto esbelto, largas patas y voluminosa cabeza, que luce un contrastado plumaje en el que predominan los tonos leonados y dorados en el dorso y el blanco puro —incluso ligeramente plateado— en las zonas ventrales. Las plumas dorsales y la parte superior de las alas y la cola aparecen finamente vermiculadas por sutiles punteados de color negro, gris y blancuzco, en tanto que las regiones ventrales pueden mostrar un moteado variable. En el rostro —inconfundible por su forma de corazón— destacan los ojos intensamente negros y el prominente pico de color claro. Los jóvenes poseen un plumaje muy similar al de los adultos, de los que se diferencian por sutiles detalles, difíciles de distinguir en el campo. El vuelo de esta rapaz nocturna —de alas largas y relativamente anchas— es elegante, silencioso y ágil gracias al escaso peso del ave. No es raro ver a la lechuza cernirse hábilmente sobre un punto, mientras escudriña el terreno en busca de presas.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tyto_alba_close_up.jpg?width=1280',
+  s.image_attribution = 'Stevie B (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Tyto alba';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Víbora hocicuda',
+  s.primary_habitat = 'Habita suelos silíceos y calizos, tendiendo a ocupar medios psammófilos a baja altitud y en el occidente ibérico, y medios saxícolas en montaña',
+  s.description = 'Se caracteriza por su cuerpo grueso y corto, cola pequeña, tamaño variable pero inferior a 60 cm, cabeza de aspecto triangular y bien diferenciada del cuerpo con un apéndice nasal elevado hacia arriba, escamas cefálicas muy fragmentadas, pupila vertical, y patrón de coloración dorsal generalmente con una banda negra en zigzag sobre fondo ceniciento.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lataste''s_viper.jpg?width=1280',
+  s.image_attribution = 'Tim Vickers (Public domain) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Vipera latastei';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ziziphora hispanica',
+  s.primary_habitat = 'Vive en claros de matorral sobre sustratos básicos, de 300-1600 m',
+  s.description = 'Hierba hasta de 17 cm, efímera, con tallos ramificados de pilosidad densa. Hojas de 9-15 x 4-7 mm, elípticas, agudas, pecioladas y con nervio central engordado abajo. Inflorescencia en espiga hasta de 7 cm, con brácteas obovadas, diferentes de las hojas.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a junio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Ziziphora hispanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca cabecinegra',
+  s.primary_habitat = 'Matorral mediterráneo denso, setos y bordes de arbolado',
+  s.description = 'La curruca más común del matorral mediterráneo. El macho tiene la cabeza negra hasta por debajo del ojo, la garganta blanca y un llamativo anillo ocular rojo. Es ruidosa y territorial: su reclamo de alarma es un traqueteo seco que delata su presencia constantemente.',
+  s.description_source = NULL,
+  s.identification_tips = 'Capucha negra que baja por debajo del ojo
+Anillo ocular rojo intenso
+Reclamo de alarma como una carraca seca',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sardinian_Warbler.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Curruca melanocephala';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carbonero común',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de una especie fácilmente reconocible por el color amarillo de su cuerpo, que contrasta con el azul de las alas y la cola. La cabeza es de color negro-azabache y con las mejillas muy blancas, salvo en los jóvenes del año, algo amarillenta. Los machos se distinguen de las hembras por poseer una conspicua banda negra que recorre su cuerpo desde la garganta hasta la base de la cola. Las hembras, en cambio, tienen muy poco marcada dicha banda, que se desdibuja en el vientre.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D0%B8%D0%BD%D0%B8%D1%86%D0%B0_(Parus_major%2C_fem)%2C_%D0%91%D0%B8%D1%82%D1%86%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BB%D0%B5%D1%81.jpg?width=1280',
+  s.image_attribution = 'Dion Art (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Parus major';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mito',
+  s.primary_habitat = NULL,
+  s.description = 'Es fácil de identificar por la notable longitud de su cola (7-9 centímetros), que contrasta con su pequeño cuerpecillo, de cortas y redondeadas alas. En un primer vistazo resulta un ave con una apariencia general oscura. Sin embargo, observada con atención se aprecia una banda clara que recorre toda la cabeza, así como una pechuga grisácea con tintes rojizos, que contrasta con los tonos negros y grises del dorso, la cola y las alas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Long-tailed_Tit_Aegithalos_caudatus.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Aegithalos caudatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pimientera',
+  s.primary_habitat = 'Bosques, arboledas, huertos y jardines con arbolado',
+  s.description = 'Uno de los pájaros más abundantes de Europa. El macho luce el pecho vinoso y la nuca gris azulada; la hembra es parda. Ambos comparten dos barras alares blancas muy visibles en vuelo. Su canto es una frase descendente que acaba en un floreo, repetida sin descanso en primavera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Dos barras blancas bien marcadas en cada ala
+Bordes blancos en la cola, visibles al volar
+Canto en frase descendente que remata en un adorno',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fringilla_coelebs_(chaffinch)%2C_male.jpg?width=1280',
+  s.image_attribution = 'Self: Commons user MichaelMaggs (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Fringilla coelebs';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Paloma torcaz',
+  s.primary_habitat = NULL,
+  s.description = 'Esta robusta paloma posee cuerpo grisáceo, pecho robusto prominente y rosado, y cabeza proporcionalmente pequeña. Sus manchas blancas en el cuello y las alas resultan características y fácilmente reconocibles. Exhibe un vuelo poderoso, rápido, directo y con fuertes batidos de alas, en las que destacan las bandas transversales blancas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pigeon_ramier_2.JPG?width=1280',
+  s.image_attribution = 'LPLT (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Columba palumbus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ruiseñor común',
+  s.primary_habitat = 'Pisos bioclimáticos termo,meso,supramediterráneos,matorrales,sotos densos,montes bajos, jardines...',
+  s.description = 'Ave estilizada, de pico fino y cola larga. Hembras y machos son iguales. Su manto y sus alas presentan un color pardo ocráceo uniforme, excepto en la cola, que posee un distintivo tono pardo rojizo. Las partes inferiores, mucho más claras, tienen color blanco crema. Este pájaro, muy escondidizo, rara vez abandona la protección de la espesura de la vegetación, pero resulta muy fácil de detectar por su inconfundible canto, muy sonoro, emitido incansablemente durante el día y la noche. Los jóvenes volantones, previamente a la muda parcial de su plumaje que tiene lugar antes de que comience la migración, exhiben un plumaje pardo que muestra plumas manchadas en su extremo con motas amarillentas. Los adultos se pueden confundir con carriceros comunes y ruiseñores bastardos, con los que a veces conviven en malezas ribereñas. Sin embargo, los carriceros presentan un tono ocre más pálido y amarillento, y carecen de la cola rojiza que luce el ruiseñor común. Lo mismo sucede con el ruiseñor bastardo, que además tiene una conspicua línea blanca sobre el ojo y posee unas alas y una cola cortas y redondeadas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Luscinia_megarhynchos_-_01.jpg?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Luscinia megarhynchos';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cetia ruiseñor',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de un pájaro de pequeño tamaño, de diseño muy discreto y aspecto rechoncho, con alas y cola redondeadas. Presenta el dorso de color pardo-rojizo oscuro y las zonas inferiores grisáceas, con motas claras en las infracoberteras caudales. Posee una ceja pálida, así como una zona auricular grisácea y un pico muy fino. Ambos sexos son iguales en apariencia y solamente se diferencian por pequeñas variaciones de tamaño. De hábitos escondidizos, resulta difícil de observar, pero es, en cambio, muy fácil de detectar en las espesas marañas ribereñas que frecuenta por su inconfundible y sonoro canto. Cuando se desplaza entre la vegetación, levanta y despliega frecuentemente la cola.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/37-090505-cettis-warbler-at-Kalloni-east-river.jpg?width=1280',
+  s.image_attribution = 'Mark S Jobling (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Cettia cetti';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca capirotada',
+  s.primary_habitat = NULL,
+  s.description = 'Curruca de mediano tamaño, de aspecto más compacto y robusto que la mayor parte de sus congéneres, aunque muy similar en tamaño y silueta a la curruca mosquitera. Al igual que ésta, y a diferencia de la mayoría de las currucas, no presenta ni rectrices externas ni garganta blanquecinas. Luce una tonalidad general grisácea, aunque la hembra muestra en las alas y en las regiones ventrales tintes más pardo rojizos. Los machos poseen el capirote negro, mientras que las hembras y los jóvenes lo tienen de color castaño.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sylvia_atricapilla_-Lullington_Heath%2C_East_Sussex%2C_England_-male-8.jpg?width=1280',
+  s.image_attribution = 'Ron Knight from Seaford, East Sussex, United Kingdom (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Sylvia atricapilla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Petirrojo europeo',
+  s.primary_habitat = NULL,
+  s.description = 'Pajarillo de constitución rechoncha, sobre todo en invierno, cuando ahueca sus plumas para generar una capa de aire caliente interior. Machos y hembras son idénticos en coloración. En su plumaje destaca la amplia mancha anaranjada que se extiende por la cara, la garganta y el pecho, la cual aparece bordeada por una irregular y sutil banda gris. El resto del plumaje resulta poco vistoso. Domina el color pardo verdoso en el dorso y las alas, y el blanco sucio en el vientre. Los jóvenes volantones, antes de la muda parcial a finales del verano, muestran un plumaje pardo, con casi todas sus plumas punteadas en su extremo con motas amarillentas. El petirrojo europeo se mueve habitualmente por el suelo en busca de insectos. Para cantar se posa en las ramas altas de los árboles, ya sea en invierno o durante la temporada de cría. Es muy agresivo, tanto con ejemplares de su misma especie como con el resto de las aves, no solo en la época reproductora, sino también durante la invernada. En este último periodo, las parejas se separan y defienden territorios individuales.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Erithacus_rubecula_with_cocked_head.jpg?width=1280',
+  s.image_attribution = 'Francis C. Franklin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Erithacus rubecula';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Avión roquero',
+  s.primary_habitat = 'Acantilados mediterráneos con Limonium',
+  s.description = 'Hirundínido pardo y robusto que vuela pegado a las paredes rocosas de acantilados y barrancos, donde construye su nido de barro.',
+  s.description_source = NULL,
+  s.identification_tips = 'Vuelo pegado a las paredes
+Manchas claras en la cola
+Nido de barro en cortados',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ptyonoprogne_rupestris_in_flight.jpg?width=1280',
+  s.image_attribution = 'ferran pestaña (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Ptyonoprogne rupestris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Herrerillo común',
+  s.primary_habitat = NULL,
+  s.description = 'Sus alas, cola y cabeza exhiben un bello color azulado, que se completa con un collar azul cobalto. El dorso posee tintes verdosos, y las partes inferiores son amarillentas. Presenta mejillas de color blanco en los adultos y amarillo pálido en los volantones. La coloración general podría recordar a la de un carbonero común. Pero este es notablemente mayor, con la cabeza negra y una banda de igual color que divide en dos el amarillo del pecho.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eurasian_blue_tit_Lancashire.jpg?width=1280',
+  s.image_attribution = 'Francis Franklin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Cyanistes caeruleus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Oropéndola',
+  s.primary_habitat = 'Bosques de ribera,hileras de olmos,chopos,sotos,generalmente fluviales,parques,jardines...Mar-1600m',
+  s.description = 'Ave de tamaño similar a un mirlo y llamativo color amarillento. El macho exhibe un intenso color amarillo limón en la cabeza — rayada con una línea ocular oscura— y en el cuerpo, que contrasta bastante con las anchas y redondeadas alas, totalmente negras, a excepción de dos parches amarillos a la altura de la articulación de la muñeca. La cola es igualmente amarilla, aunque presenta una ancha banda terminal negra. Posee patas de tono grisáceo y pico rojizo. La hembra, que recuerda a un pequeño pito real, muestra tonos más apagados que el macho, con partes superiores de color verde oliva e inferiores blanquecinas y rayadas en gris. Tiene las alas y la cola pardas, y el pico rojo sucio. Los jóvenes son casi iguales a las hembras, aunque con el pico pardo oscuro y el ojo negruzco. Se trata de un ave esquiva, por lo que la mayoría de las observaciones corresponden a individuos en vuelos breves entre la espesura. Su vuelo, directo y ondulado, alterna aleteos y alas plegadas, de modo similar al del pito real. Su carácter agresivo se evidencia en los frecuentes acosos a otras especies, incluso de mayor tamaño.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Oriole_2.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Oriolus oriolus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lavandera blanca',
+  s.primary_habitat = NULL,
+  s.description = 'Pájaro estilizado de aspecto muy distintivo, con larga cola y tonos blancos, negros y grises. Exhibe dorso gris ceniza, vientre blanco, y alas negras y con bandas blancas cuando están plegadas. Posee cola larga y negra, con plumas externas blancas, y patas y pico negros. El patrón de la cabeza resulta muy contrastado, con la cara blanca rodeada arriba y abajo de negro. Luce un plumaje invernal similar, aunque el color negro en la cabeza está más reducido, y muestra garganta blanca y banda pectoral negra. La lavandera enlutada (M. a. yarrelli), de origen británico, presenta tonos negros en dorso y flancos. Ambos sexos son parecidos, pero la hembra tiene la nuca gris. Los jóvenes resultan más uniformes, sin negro en la cabeza y con banda pectoral grisácea. Un hábito destacado de esta ave es el continuo balanceo de la cola. En invierno se vuelve muy gregaria y se reúne en dormideros.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/White-Wagtail.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Motacilla alba';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Abejaruco europeo',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Ave colorida y gregaria que caza abejas y libélulas en vuelo sobre espacios abiertos y cría en galerías excavadas en taludes terrosos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Colorido inconfundible
+Reclamo ''prruip'' en vuelo
+Cría en taludes de rambla',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%C5%9Eahl%C3%BBr-33.jpg?width=1280',
+  s.image_attribution = 'Dûrzan cîrano (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Merops apiaster';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pito ibérico',
+  s.primary_habitat = NULL,
+  s.description = 'Es un pájaro carpintero grande y robusto, de aspecto inconfundible, en cuyo plumaje dominan claramente los tonos verdosos, más intensos en las regiones dorsales, ligeramente grisáceos en las ventrales y con matices amarillentos en el obispillo. Carece de moteados y listas —salvo, tenuemente, en la región anal—, pero luce un llamativo patrón de coloración en la cabeza, donde el píleo es rojo y los ojos, amarillentos, aparecen enmarcados por un antifaz negro. Los machos y los jóvenes presentan una bigotera negra y roja, que es exclusivamente negra en las hembras. El plumaje juvenil se caracteriza por ser fuertemente moteado, especialmente en las partes inferiores, aunque, en conjunto, su coloración es más apagada que la del adulto, no presentan antifaz y poseen un iris más oscuro. Su vuelo es muy característico, con una trayectoria ondulatoria en la que el ave combina tramos en los que bate las alas con otros en que las pliega.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Iberian_Green_Woodpecker_(Pito_Ib%C3%A9rico)_(Picus_sharpei)_-_Torrevieja%2C_Spain_2024-02-04.jpg?width=1280',
+  s.image_attribution = 'Ryan Hodnett (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Picus sharpei';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Papamoscas gris',
+  s.primary_habitat = 'Arbolado abierto, bordes de bosque, huertos y jardines con perchas altas',
+  s.description = 'Pájaro discreto de color pardo grisáceo, sin marcas llamativas, que se reconoce mejor por su conducta que por su aspecto: se posa muy erguido en una rama descubierta, sale disparado a cazar un insecto en el aire y vuelve exactamente a la misma percha. Repite la maniobra decenas de veces.',
+  s.description_source = NULL,
+  s.identification_tips = 'Vuelve siempre a la misma rama tras cada vuelo de caza
+Postura muy vertical, con las alas caídas
+Frente y pecho con un rayado fino y difuso',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/SpottedFlycatcheronfence.jpg?width=1280',
+  s.image_attribution = 'Andrew Easton (Attribution) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Muscicapa striata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zarcero común',
+  s.primary_habitat = 'Amplio espectro de hábitats,soleados,densa cobertura arbustiva,<2m altura.Zarzales,majuelos,jarales',
+  s.description = 'Se trata de un pájaro de tamaño pequeño y tonos generales amarillo-verdosos. Presenta el dorso de color verde grisáceo y la zona ventral amarillenta (más pálida en los jóvenes). Es muy similar al raro zarcero icterino, del que resulta difícil de distinguir en el campo. Algunos ejemplares muy pálidos o con el plumaje muy desgastado pueden generar también confusión con otras especies, como el zarcero pálido o la curruca mosquitera. Ambos sexos son similares.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Melodious_warbler_(Hippolais_polyglotta)%2C_Le_Petit_Loc''h%2C_Guidel%2C_Brittany%2C_France_(19765512360).jpg?width=1280',
+  s.image_attribution = 'Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Hippolais polyglotta';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Estornino negro',
+  s.primary_habitat = NULL,
+  s.description = 'Esta ave posee tamaño mediano, aspecto compacto, patas cortas y fuertes, y pico puntiagudo. Luce una coloración uniformemente negra, con ciertos brillos verdes y púrpuras, pero sin motas. Tiene el pico amarillo en verano y oscuro en invierno. Ambos sexos resultan similares, y los jóvenes son uniformemente pardos. Aunque se parece al mirlo común, el estornino se desplaza más erguido, andando y no a saltos. Presenta un vuelo rápido y directo.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Estornino_Negro._Casa_de_Campo._Madrid..jpg?width=1280',
+  s.image_attribution = 'Luis Egido (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Sturnus unicolor';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Agateador común',
+  s.primary_habitat = 'Bosques y arboledas con troncos gruesos y corteza resquebrajada',
+  s.description = 'Pájaro diminuto y críptico que sube por los troncos en espiral, apoyándose en la cola rígida, y baja volando a la base del árbol siguiente para empezar de nuevo. Extrae insectos de las grietas de la corteza con un pico fino y curvado.',
+  s.description_source = NULL,
+  s.identification_tips = 'Trepa siempre hacia arriba, nunca cabeza abajo
+Dorso jaspeado como corteza y vientre blanco
+Pico fino y curvo, como una aguja doblada',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Short-toed_Treecreeper_(Certhia_brachydactyla)_(cropped_version).jpg?width=1280',
+  s.image_attribution = 'Short-toed_Treecreeper_(Certhia_brachydactyla).jpg: א (Aleph) deriv… (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Certhia brachydactyla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Golondrina común',
+  s.primary_habitat = NULL,
+  s.description = 'Ave delicada, grácil y aerodinámica, de color negro, con reflejos azules metálicos por arriba y blancos crema en las partes inferiores. Tiene la frente y la garganta rojas y un collar negro. Las alas, largas y apuntadas, muestran tonos blancos en la parte inferior delantera. Su cola, muy larga y ahorquillada, es de color negro, con pequeños óvalos blancos cuando la extiende. Posee patas cortas sin emplumar, boca muy ancha, y pico corto, plano y negro. Presenta variación latitudinal en el tamaño corporal y en la longitud de la cola, que son menores hacia el sur. Aunque ambos sexos se parecen, la hembra es menos brillante, más blanca por abajo y con la cola más corta. Los jóvenes lucen tonos negros mate, tienen la frente y la garganta naranjas y una cola mucho más corta. De vuelo ágil, rápido y acrobático, la golondrina común ocupa en el espacio aéreo las capas bajas, por debajo de aviones y vencejos.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Landsvale.jpg?width=1280',
+  s.image_attribution = 'Malene Thyssen (CC BY 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Hirundo rustica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Herrerillo capuchino',
+  s.primary_habitat = NULL,
+  s.description = 'Pequeño pajarillo de apariencia inconfundible, gracias sobre todo a su característica cresta triangular y apuntada, de plumas blancas y negras y que despliega habitualmente. Su cara es también un juego de bandas negras y blancas: presenta una conspicua corbata negra que se prolonga a modo de collar; además tiene una línea ocular negra, y otra que recorre la mejilla, siempre sobre fondo claro o blanco. Por el contrario, el dorso, las alas y la cola son de color pardo oscuro, que contrasta con los flancos, el pecho y el vientre, de un tono gris-canela muy apagado. Al igual que los carboneros garrapinos u otros páridos, habita en bosques de coníferas (pinos, abetos, etc.). Pero también se localiza en formaciones de frondosas —caducifolias y perennes— y se observa en áreas ajardinadas. No es un ave especialmente gregaria, pero en otoño e invierno puede constituir pequeños grupos de 2-10 individuos, que exploran conjuntamente tanto el suelo como, sobre todo, la corteza, las ramas y las hojas de los árboles. Con frecuencia se mezcla con otros páridos, con agateadores y con reyezuelos, conformando ruidosos bandos mixtos.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/083_Wild_European_crested_tit_at_Parc_naturel_r%C3%A9gional_Jura_vaudois_Photo_by_Giles_Laurent.jpg?width=1280',
+  s.image_attribution = 'Giles Laurent (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Lophophanes cristatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Roquero solitario',
+  s.primary_habitat = 'Acantilados mediterráneos con Limonium',
+  s.description = 'Pájaro rupícola de plumaje azul pizarra en el macho, ligado a acantilados marinos y roquedos, donde canta desde cornisas destacadas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Macho azul pizarra
+Canta desde cornisas y cumbres
+Acantilados y roquedos calcáreos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Blue_rock_thrush_(male)_at_Gamla_Nature_Reserve.jpg?width=1280',
+  s.image_attribution = 'Artemy Voikhansky (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial, RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Monticola solitarius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tórtola europea',
+  s.primary_habitat = 'Sotos, arboledas y matorral alto junto a cultivos y ramblas',
+  s.description = 'La más pequeña y grácil de nuestras palomas, con el dorso escamado en negro y canela y un parche a rayas blancas y negras en el cuello. Su arrullo ronco y adormecedor es uno de los sonidos del verano. Sus poblaciones han caído mucho en Europa por la pérdida de barbechos y setos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Espalda escamada, como un mosaico canela y negro
+Parche rayado blanco y negro a los lados del cuello
+Arrullo ronco y vibrante, muy distinto al de la tórtola turca',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Streptopelia_turtur_Grlica0036.jpg?width=1280',
+  s.image_attribution = 'Zrno at Serbian Wikipedia (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE, Anexo II (especie cinegética)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Streptopelia turtur';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pico picapinos',
+  s.primary_habitat = NULL,
+  s.description = 'La especie comparte la coloración típica de los picos, con tonos muy intensos y definidos. La región dorsal es blanquinegra y presenta un característico patrón. Posee unas listas negras a ambos lados de la cara y el cuello, que enlazan con el pecho, el pico, los hombros y la nuca. Las regiones ventrales son blancas, sin listas ni punteaduras, y la zona anal luce una extensa y llamativa coloración rojiza. El dimorfismo sexual se aprecia sobre todo en la nuca: roja en los machos y negra en las hembras. El plumaje de los jóvenes resulta más difuso, con las partes ventrales de color blanco sucio y una menor intensidad de rojo en la zona anal; asimismo, se distinguen de los adultos por tener el píleo rojo.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Greater_Spotted_Woodpecker_(41554059345).jpg?width=1280',
+  s.image_attribution = 'Gerry Zambonini (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Dendrocopos major';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chochín',
+  s.primary_habitat = NULL,
+  s.description = 'El chochín común es un pajarillo de pequeño tamaño, aspecto compacto, cabeza voluminosa y cola corta, que se caracteriza por poseer un plumaje pardo-rojizo —algo más claro en las partes inferiores— finamente vermiculado de tonos más oscuros. Sobre el ojo presenta una marcada ceja de color crema. El pico es fino y algo curvado, con distinta longitud según la subespecie. Las diferencias entre edades y sexos son muy sutiles y resultan difíciles de reconocer en el campo. De carácter inquieto, el chochín —una de las especies más pequeñas de nuestra avifauna— cuando se excita suele sacudir y levantar su cola formando un ángulo de 90 grados, antes de desaparecer entre la densa vegetación.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carri%C3%A7a%2C_carricinha%2C_carruira%2C_no_seu_canto_possante_e_melodioso%2C_Winter_Wren%2C_with_a_melodious_and_powerful_singing_(53737498699)_(cropped).jpg?width=1280',
+  s.image_attribution = 'Luiz Lapa from Oeiras, Portugal (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Troglodytes troglodytes';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mosquitero común',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de un pequeño pajarillo de pico fino y patas oscuras. Presenta tonos verdosos o pardo-grisáceos en el dorso y blanquecinos en las partes inferiores. Ambos sexos resultan similares, si bien los machos son ligeramente mayores que las hembras. Es una especie prácticamente idéntica en el campo al mosquitero ibérico, del que se distingue por su canto y por encontrarse presente en nuestro territorio durante todo el año o en invierno —según las regiones—, mientras que el ibérico es un ave únicamente estival. Es también muy similar al mosquitero musical, pero este posee las patas y el pico pálidos, así como la lista superciliar y otras finas marcas auriculares más definidas. Además, el musical solo está presente en paso.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a abril',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Chiffchaff_-_Phylloscopus_collybita.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Phylloscopus collybita';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cernícalo vulgar',
+  s.primary_habitat = 'Campos abiertos, matorral, cortados y también ciudades',
+  s.description = 'El halcón más común y fácil de ver, gracias a su costumbre de cernirse: se queda suspendido en el aire batiendo las alas con la cabeza inmóvil, buscando ratones y lagartijas. El macho tiene la cabeza gris y el dorso rojizo con puntos negros; la hembra es más parda y barrada.',
+  s.description_source = NULL,
+  s.identification_tips = 'Se queda «clavado» en el aire cerniéndose
+Dorso rojizo salpicado de puntos negros
+Cola larga con una banda negra ancha en la punta',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Common_kestrel_falco_tinnunculus.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Falco tinnunculus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Urraca común',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de una de las más conocidas especies de la fauna española, circunstancia a la que contribuyen no solo su inconfundible aspecto, sino también unos hábitos poco recatados y su capacidad de instalarse en hábitats muy transformados, incluido el interior de las grandes ciudades. Especie de tamaño intermedio entre los córvidos, la urraca luce un llamativo y característico plumaje blanquinegro, que adquiere bellas irisaciones en diferentes zonas, sobre todo en las plumas caudales. Cuando se desplaza resulta también fácilmente identificable, además de por su diseño cromático, por poseer una silueta característica y un vuelo ondulante durante el cual bate espasmódicamente las alas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Urraca_(Pica_pica)%2C_Almuradiel%2C_Ciudad_Real%2C_Espa%C3%B1a%2C_2021-12-19%2C_DD_04.jpg?width=1280',
+  s.image_attribution = 'Diego Delso (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Pica pica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cormorán grande',
+  s.primary_habitat = 'Acuático,tanto en zonas marinas como interiores.Acantilados,ríos, embalses, lagunas..',
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Phalacrocorax_carbo_Vic.jpg?width=1280',
+  s.image_attribution = 'JJ Harrison (https://www.jjharrison.com.au/) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Phalacrocorax carbo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zorzal charlo',
+  s.primary_habitat = NULL,
+  s.description = 'Es un zorzal grande, bastante más corpulento que el zorzal común y más alargado y erguido cuando se posa. Las partes dorsales son de color pardo grisáceo y las inferiores, blanquecinas, con una mancha gris oscura a los lados del pecho e intensamente moteadas, desde la garganta hasta el vientre, por gruesas pintas oscuras dispuestas aleatoriamente. En la cara presenta un diseño irregular de manchas grises, blancas y negras. Los jóvenes aparecen intensamente moteados de marrón, ocre y blanco por todo el plumaje. Su vuelo es rápido y directo, y es en el aire cuando se hace especialmente visible su larga cola y la región axilar de color blanco, que permiten distinguirlo con facilidad de otros zorzales.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Mistle_thrush.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Turdus viscivorus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Vencejo común',
+  s.primary_habitat = 'Nidos:edificios,acantilados rocosos,cuevas,cajas nido, en colonias.En todo tipo de habitats',
+  s.description = 'Presenta silueta en forma de ballesta, cola corta y ahorquillada, y alas estrechas y largas. Posee pico corto, plano y con la boca muy ancha; patas emplumadas y extremadamente cortas, que le impiden posarse en el suelo; y pies pequeños y de fuertes garras, con los cuatro dedos dirigidos hacia delante. Muestra coloración uniforme de tono pardo oscuro, casi negro, excepto en la garganta, que es blanca; la cara inferior de las alas resulta un poco más pálida. En otoño, con su plumaje desgastado, es algo más claro. Ambos sexos son iguales. Los jóvenes se parecen mucho a los adultos, aunque con un tono algo más oscuro y un aspecto escamoso, por los pequeños ribetes blancos que tienen en las plumas. Esta ave es observada casi siempre en vuelo y en grupo. Las condiciones de luz, el fondo y la distancia determinan su apariencia, pudiendo confundirse con frecuencia con el vencejo pálido. Se localiza habitualmente en núcleos urbanos, volando de forma incansable a gran velocidad. Pasa la mayor parte de su vida en el aire, y únicamente se la ve posada cuando entra o sale del nido. Duerme tanto en el nido como en vuelo.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Apus_apus_-Barcelona%2C_Spain-8_(1).jpg?width=1280',
+  s.image_attribution = 'pau.artigas (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Apus apus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Garza real',
+  s.primary_habitat = 'Se distribuye en invierno por zonas de aguas remansadas y poco profundas, coincidiendo con su carácter eminentemente ictiófago',
+  s.description = 'La garza real es un ave de gran tamaño —la mayor de las ardeidas que frecuentan nuestro país—, de figura estilizada, largo cuello y coloración general grisácea, con un diseño variable según la edad y la época del año. Durante el periodo reproductor, la cabeza de los adultos luce una coloración blanca y aparece adornada por una línea negra y un par de largas plumas de este mismo color, en tanto que el cuello, blanco también, se halla surcado longitudinalmente por dos bandas paralelas negruzcas. El largo y afilado pico presenta un tono rojizo, y las regiones dorsales son mayoritariamente cenicientas, con una llamativa mancha negra en los hombros. Fuera de la época de cría, el diseño es menos contrastado, sin las plumas ornamentales de la cabeza y con el pico amarillento. En vuelo adopta la postura característica de las garzas, con el cuello encogido en forma de “S” y las patas estiradas sobresaliendo por detrás de la cola, si bien la garza real resulta fácilmente diferenciable del resto de sus parientes debido a su gran tamaño.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ardea_cinerea_-_Pak_Thale.jpg?width=1280',
+  s.image_attribution = 'JJ Harrison (https://www.jjharrison.com.au/) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Ardea cinerea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Grajilla occidental',
+  s.primary_habitat = NULL,
+  s.description = 'Ave de tamaño más modesto que grajas y cornejas, la grajilla luce un plumaje muy oscuro, que a cierta distancia parece negro. Vista de cerca, sin embargo, se aprecia una cierta tonalidad grisácea en algunas regiones del cuerpo, especialmente en el pecho y en la nuca, que es de un bello color ceniciento. El iris es muy claro, de un azul pálido, casi blanco. Es habitual que las grajillas se organicen en ruidosos bandos que sobrevuelan las rocas y los viejos edificios o que menudean por campos y pastizales en busca de alimento.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D0%B0%D0%BB%D0%BA%D0%B0_(Corvus_monedula)%2C_%D0%A6%D0%B0%D1%80%D0%B8%D1%86%D1%8B%D0%BD%D0%BE.jpg?width=1280',
+  s.image_attribution = 'Dion Art (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Corvus monedula';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cogujada común',
+  s.primary_habitat = 'Cultivos, caminos, eriales y bordes de poblado con suelo desnudo',
+  s.description = 'Alondra parda de cresta alta y puntiaguda, muy ligada a caminos, cunetas y descampados junto a los pueblos. Camina en vez de saltar y, al volar, deja ver el forro rojizo de las alas y la cola con los bordes canela.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cresta larga y puntiaguda, casi siempre erguida
+Forro de las alas rojizo, visible al levantar el vuelo
+Camina por el suelo en vez de saltar',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Crested_Lark_-_Qatar.jpg?width=1280',
+  s.image_attribution = 'Ashraf Kotb (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Galerida cristata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcaudón común',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Alcaudón estival de cabeza castaña que caza insectos desde posaderos en el matorral abierto, empalando presas en espinas a modo de despensa.',
+  s.description_source = NULL,
+  s.identification_tips = 'Capirote castaño rojizo
+Caza desde posaderos
+Estival de mayo a agosto',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lanius_senator01_new.jpg?width=1280',
+  s.image_attribution = 'Lanius_senator01.jpg: chausinho derivative work: Bogbumper (talk) (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Lanius senator';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Avión común',
+  s.primary_habitat = NULL,
+  s.description = 'Pequeña golondrina de aspecto compacto, negro azulada brillante por arriba y blanca por abajo, con límites netos entre colores. Posee alas largas y apuntadas y cola corta ahorquillada de color negro; pico corto, plano y negro; boca muy ancha, y patas cortas cubiertas de finas plumas blancas. Destaca su obispillo de color blanco, la única zona clara de las partes dorsales. Ambos sexos son iguales. Los jóvenes resultan menos contrastados, más parduzcos, sobre todo por abajo, con límites difusos entre partes negras y blancas, y con puntas blancas en las terciarias. Este pájaro suele observarse en vuelo y agrupado. Su vuelo es rápido y ágil, aunque menos que en la golondrina común, y a menudo se produce a mayor altura que en esta. Se posa con frecuencia, a veces en el suelo.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Delichon_urbicum_-Iceland_-flying-8_(1).jpg?width=1280',
+  s.image_attribution = 'Ómar Runólfsson (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Delichon urbicum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Papamoscas cerrojillo',
+  s.primary_habitat = 'Zonas boscosas,de caducifolios, robles,hayas,pinares de altura,sotos espesos.Migrac:muy repartido,',
+  s.description = 'Es un paseriforme de pequeño tamaño, cuerpo compacto, cabeza ancha y pico fino. Fuera de la época de reproducción no hay diferencias entre los sexos en lo que al plumaje se refiere, ya que ambos lo poseen de color pardo claro por el dorso y blanco ocre en las partes inferiores. Los ojos, las patas y el pico son negros. En primavera, los machos adquieren un plumaje nupcial negro o marrón muy oscuro en las partes superiores, con una llamativa mancha blanca en la frente y un extenso panel blanco en las alas. Las partes inferiores se aclaran hasta adquirir un color blanco puro. A menudo queda algún resto de plumaje pardo en la cabeza o en las coberteras del hombro. Los jóvenes recién salidos del nido, por su parte, presentan un plumaje, en general, muy moteado de marrón claro y pardo, con aspecto escamoso.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril, mayo, junio, agosto, septiembre, octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ficedula_hypoleuca_NRM.jpg?width=1280',
+  s.image_attribution = 'Uploaded by Aelwyn with the permission of the Author, who works wit… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Ficedula hypoleuca';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collalba negra',
+  s.primary_habitat = 'Matorral litoral, laderas secas y roquedos',
+  s.description = 'La mayor de las collalbas, enteramente negra salvo el obispillo y la base de la cola, blancos. Vive en cortados y laderas rocosas, donde construye junto al nido una plataforma de piedrecitas que acarrea una a una. Su canto es potente y melodioso.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cuerpo negro con obispillo blanco muy contrastado
+«T» negra invertida en la cola blanca al volar
+Montoncitos de piedrecitas junto a la grieta del nido',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Black_Wheatear%2C_Isla_Plana_3.jpg?width=1280',
+  s.image_attribution = 'Andrew Thomas from Shrewsbury, UK (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Oenanthe leucura';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Martín pescador',
+  s.primary_habitat = 'Ríos, ramblas con pozas, canales y láminas de agua con posaderos y taludes terrosos',
+  s.description = 'Pájaro rechoncho de color azul turquesa iridiscente por encima y naranja por debajo, con un pico largo y recto desproporcionado. Pesca lanzándose en picado desde una rama sobre el agua y anida en un túnel que excava en taludes de tierra.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = 'Destello azul eléctrico volando bajo y recto sobre el agua
+Silbido agudo y penetrante, casi siempre antes de verlo
+Posado inmóvil en una rama sobre el agua, cabeza gacha',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Common_Kingfisher_Alcedo_atthis.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Alcedo atthis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Perdiz roja',
+  s.primary_habitat = 'Mosaicos de cultivo, matorral bajo y laderas pedregosas',
+  s.description = 'Perdiz de patas y pico rojos, con un collar negro que se deshace en un salpicado de motas sobre el pecho y flancos barrados en blanco, negro y castaño. Prefiere correr a volar, y cuando por fin levanta lo hace de golpe y a ras de suelo, planeando ladera abajo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Flancos con barras nítidas blancas, negras y castañas
+Collar negro que se disgrega en motas sobre el pecho
+Corre agachada antes que volar; levanta de golpe y planea',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Perdiz_roja.jpg?width=1280',
+  s.image_attribution = 'Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE, Anexos II y III (especie cinegética)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Alectoris rufa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carbonero garrapinos',
+  s.primary_habitat = NULL,
+  s.description = 'Ave pequeña, con plumaje de colores apagados. El dorso y las alas son de color azul grisáceo, mientras que el pecho y el vientre presentan una tonalidad ante. Su rasgo más distintivo es la mancha blanca en la nuca. Se muestra muy activo y explora minuciosamente las ramas, ramitas, hojas y piñas. En su exhaustiva búsqueda de alimento llega a realizar auténticas acrobacias, muchas veces quedando colgado o realizando cortos cernidos. Habita preferentemente en pinares, pero también se localiza en formaciones de frondosas y en áreas ajardinadas. Tras el periodo reproductor se mueve en pequeños grupos, que en numerosas ocasiones están integrados por varias especies, pues se mezcla con otros páridos, reyezuelos, mosquiteros, etc.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/005Large.jpg?width=1280',
+  s.image_attribution = 'John GB Garrett (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Periparus ater';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zorzal común',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de un zorzal de tamaño medio, con las regiones dorsales de un color pardo algo más cálido que el del zorzal charlo. Las partes inferiores presentan tonos claros, blanquecinos en el vientre y de un color ocre amarillento en el pecho, y aparecen profusamente tachonadas por motas en forma de cuña que, en la zona del cuello, se ordenan para dar lugar a una fina bigotera. Suele desplazarse por el suelo, aunque se posa en la parte más alta de arbustos y árboles para cantar. Su vuelo, rápido y algo espasmódico, permite observar la característica coloración herrumbrosa de su zona axilar, que facilita su diferenciación de otros zorzales.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9F%D0%B5%D0%B2%D1%87%D0%B8%D0%B9_%D0%B4%D1%80%D0%BE%D0%B7%D0%B4_%D0%BD%D0%B0_%D0%BF%D0%B5%D0%BD%D1%8C%D0%BA%D0%B5_(Turdus_philomelos)%2C_%D0%91%D0%B8%D1%82%D1%86%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BB%D0%B5%D1%81.jpg?width=1280',
+  s.image_attribution = 'Dion Art (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Turdus philomelos';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cogujada montesina',
+  s.primary_habitat = 'Matorral bajo, laderas pedregosas y eriales con vegetación rala',
+  s.description = 'Cogujada de cresta puntiaguda, muy parecida a la común pero de pico más corto y grueso y con el pecho más nítidamente rayado. Prefiere el matorral y las laderas pedregosas, mientras que la común busca cultivos, caminos y bordes de pueblo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cresta alta y afilada, casi triangular
+Pico más corto y romo que el de la cogujada común
+Rayado del pecho bien definido, no difuminado',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Galerida_theklae_Madrid.jpg?width=1280',
+  s.image_attribution = 'Adrian198cm (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Galerida theklae';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tarabilla europea',
+  s.primary_habitat = 'Matorral bajo, herbazales, ribazos y bordes de cultivo con posaderos',
+  s.description = 'Pájaro pequeño y regordete que se posa en lo alto de las matas, muy erguido y a la vista, para lanzarse al suelo a por insectos. El macho tiene la cabeza negra, un collar blanco a los lados y el pecho naranja. Su reclamo suena como dos piedras golpeadas, de donde le viene el nombre.',
+  s.description_source = NULL,
+  s.identification_tips = 'Siempre en lo alto de una mata, bien visible
+Macho con capucha negra y medio collar blanco
+Reclamo como el chasquido de dos cantos rodados',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Malestonechatseaham_Cropped.jpg?width=1280',
+  s.image_attribution = 'derivative work: Myosotis Scorpioides (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Saxicola rubicola';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gavilán común',
+  s.primary_habitat = 'Bosques mixtos de coníferas y frondosas.Sotos, grandes arbustos',
+  s.description = 'Esta pequeña rapaz de hábitos forestales, larga cola y alas cortas y redondeadas presenta un acusado dimorfismo sexual invertido, por el cual las hembras resultan ostensiblemente más corpulentas que los machos; además, entre ambos sexos existen marcadas diferencias en cuanto al diseño del plumaje. El macho adulto tiene las partes superiores y el píleo de un color grisáceo bastante intenso, en tanto que las inferiores son pálidas con un fino barrado transversal y un tono rojizo que puede ser muy notorio, principalmente en las mejillas y los flancos; sobre el ojo luce una leve línea blanca a modo de ceja. Las patas son amarillas y con los largos tarsos sin emplumar. La hembra, mucho más pesada y robusta, posee un patrón de coloración dominado por los tonos pardogrisáceos en el dorso y el píleo, con las regiones inferiores blanquecinas, muy finamente barradas de pardo; la ceja es más grande y evidente que en su compañero. El plumaje de los jóvenes presenta las partes superiores parduzcas, con las plumas orladas de ante, y las inferiores blanquecinas y toscamente barradas de pardo rojizo. Sobre el ojo —que es amarillo— exhibe una marcada ceja. Visto en vuelo, el gavilán es un ave bastante pálida, en cuya silueta llama la atención una cola larga y de base estrecha. Normalmente, se lo observa volando velozmente a baja altura entre los árboles, aunque también puede elevarse y planear durante un tiempo sobre el dosel forestal.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eurasian_Sparrowhawk_by_Steve_Ward.jpg?width=1280',
+  s.image_attribution = 'Steve Ward (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Accipiter nisus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Paloma bravía',
+  s.primary_habitat = NULL,
+  s.description = 'Ave compacta, de mediano tamaño, redondeada y de cabeza pequeña. Muestra una coloración dominante grisácea, con el obispillo blanco y dos bandas alares negras. Dado que se trata del ancestro silvestre de las palomas domésticas —con las que puede hibridarse—, presenta un aspecto muy similar a la forma “típica” de estas. Debido a la frecuente hibridación entre ambas variedades y a la presencia de muchas poblaciones cimarronas, resulta muy difícil distinguir cuándo una población es realmente silvestre o pertenece a la forma semidoméstica. Tiene un vuelo muy rápido y directo, con batidos potentes.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Wild_rock_dove_at_Raikot%2C_Diamer%2C_Gilgit-Baltistan%2C_Pakistan.png?width=1280',
+  s.image_attribution = 'Birds of Gilgit-Baltistan from Aliabad, Hunza, Pakistan (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Columba livia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca zarcera',
+  s.primary_habitat = 'Linderos con arbustos y malezas espesas,cultivos, bosquetes, praderas y claros con setos de matorral',
+  s.description = 'Curruca de mediano tamaño, de cola relativamente larga y con rectrices externas blancas. El macho presenta el dorso de color pardo, con la cabeza gris en plumaje de cría y parda durante el resto del año, las alas pardo-rojizas, la garganta blanca, y las partes inferiores blanquecinas y con tonos rosados. La hembra muestra tonalidades más apagadas, con la cabeza y el dorso más pardos, la garganta blanquecina y más apagada, y la zona ventral también blanquecina y sin los tonos ligeramente asalmonados del macho. Ambos sexos tienen las patas claras. Los adultos lucen un iris rojizo, que contrasta con un tenue anillo orbital claro.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Flickr_-_Rainbirder_-_Common_Whitethroat_(Sylvia_communis).jpg?width=1280',
+  s.image_attribution = 'Steve Garvie from Dunfermline, Fife, Scotland (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Curruca communis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chotacabras cuellirrojo',
+  s.primary_habitat = 'Matorral abierto, pinares aclarados, ramblas y caminos térreos',
+  s.description = 'Ave crepuscular de plumaje jaspeado que imita la hojarasca, tan mimético que de día resulta casi imposible verla posada en el suelo. Caza polillas en vuelo con la boca muy abierta. Su canto nocturno es un «cu-toc, cu-toc» repetido de forma monótona durante minutos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Collar rojizo en la nuca, más marcado que en su pariente europeo
+Se levanta del camino al anochecer y vuelve a posarse unos metros más allá
+Canto nocturno monótono, como un motor lejano',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Caprimulgus_ruficollis_-Portugal-8.jpg?width=1280',
+  s.image_attribution = 'Olivença (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Caprimulgus ruficollis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcaudón real',
+  s.primary_habitat = 'Campo abierto con matorral disperso, cables y posaderos altos',
+  s.description = 'Alcaudón grande, gris por encima y con un antifaz negro que le cruza el ojo. Caza al acecho desde un posadero alto y tiene la costumbre de empalar sus presas —insectos, lagartijas, ratones— en espinas y alambres, formando pequeñas despensas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Antifaz negro sobre fondo gris claro
+Siempre en lo alto de un cable, poste o mata
+Presas empaladas en espinos cerca de su territorio',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/S%C3%BCdlicher-Raubw%C3%BCrger_2018-01-07_0003.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Lanius meridionalis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gorrión chillón',
+  s.primary_habitat = NULL,
+  s.description = 'El chillón es un gorrión grande y corpulento, con la cabeza robusta y el pico muy fuerte. En su plumaje dominan los tonos marróngrisáceos con un profuso listado oscuro en el dorso. Las partes inferiores, por el contrario, son claras y están adornadas con amplias listas de color gris parduzco. En la cabeza destacan tres listas anchas: una clara; otra marrón-grisácea tras el ojo bajo aquella, y, por encima, una parda oscura. Otra lista de color marrón pálido recorre el píleo. Bajo la garganta presenta una mancha amarilla que a menudo permanece oculta o poco visible. En la cola aparecen unas manchas blancas hacia los extremos, que resultan bien visibles en vuelo. No hay diferencias de coloración entre machos y hembras. Los jóvenes son difíciles de distinguir de los adultos, incluso recién volados del nido. Se diferencian de estos por carecer de la mancha amarilla en la garganta. Asimismo, el dibujo de la cara presenta en ellos un aspecto poco definido y su coloración general es más suave.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Petronia_petronia_-Ariege%2C_Midi-Pyrenee%2C_France-8-4c.jpg?width=1280',
+  s.image_attribution = 'Petronia_petronia_-Ariege,_Midi-Pyrenee,_France-8.jpg: Sandra from … (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Petronia petronia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lúgano',
+  s.primary_habitat = 'Sus preferencias de hábitat van ligadas a sus requerimientos tróficos',
+  s.description = 'Se trata de un ave pequeña, de pico corto y fino, que muestra cola corta y escotada cuando está cerrada. Su coloración puede recordar a la de verdecillos, verderones comunes y verderones serranos. Pero los lúganos se distinguen bien por la combinación de los siguientes caracteres: pequeño tamaño, manchas amarillas en alas y cola, y franjas amarillas en los “hombros” de las alas. Además, los machos tienen el capirote y la garganta negros. Es una especie gregaria que se mezcla con otras, sobre todo fringílidos como pardillos, pinzones vulgares, verdecillos, verderones serranos, pinzones reales, etc. Pero, a diferencia de la mayoría de los fringílidos, el lúgano también busca alimento en las ramas de árboles de ribera, siendo común observarlo en alisos, olmos y abedules.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a abril',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carduelis_Spinus_(55339970).jpeg?width=1280',
+  s.image_attribution = 'Kobolt (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Spinus spinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebrera europea',
+  s.primary_habitat = 'Sierras y llanos con matorral, ramblas y bosque abierto',
+  s.description = 'Águila grande y muy pálida por debajo, especializada en comer culebras y lagartos. Se ciñe en el aire durante largos ratos, con las patas colgando, escrutando el suelo antes de dejarse caer. La cabeza, ancha y con ojos amarillos muy frontales, le da un aire de lechuza.',
+  s.description_source = NULL,
+  s.identification_tips = 'Vientre y alas casi blancos vistos desde abajo
+Se mantiene cerniéndose, algo raro en un águila tan grande
+Cabeza ancha y ojos amarillos, aspecto de búho',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aguila_culebrera_(Circaetus_gallicus).jpg?width=1280',
+  s.image_attribution = 'Paco Gómez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Circaetus gallicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca mirlona',
+  s.primary_habitat = 'Gran variedad de medios: bosques abiertos de frondosas.Cría:encinares,alcornocales,pinares,sabinares',
+  s.description = 'Es la mayor y la más corpulenta de nuestras currucas. Tiene las partes superiores grisáceas y las inferiores blanquecinas, con tintes rosados en el pecho y más grisáceos en la parte ventral. Posee pico robusto, iris de color amarillo pálido y garganta blanca. El macho exhibe una franja oscura, casi negra, a modo de antifaz, y presenta la frente y el capirote también muy oscuros; este encapuchado resulta más gris (menos oscuro) en las hembras y pardo en los jóvenes. La cola es oscura, con las rectrices externas de color blanco.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sylvia_hortensis_Museum_de_Gen%C3%A8ve.JPG?width=1280',
+  s.image_attribution = 'Totodu74 (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Curruca hortensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Escribano montesino',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de un escribano bastante grande y voluminoso, con las alas relativamente cortas y la cola larga, que luce en la cabeza tres características listas oscuras. La cabeza, el cuello, la nuca y la parte superior del pecho son de color grisáceo, en tanto que el resto del cuerpo presenta tonos pardos o rojizos. Fuera de la estación reproductora, los machos se asemejan a las hembras y a los inmaduros, aunque en el periodo de cría su coloración se hace más brillante, con abundancia de tonos anaranjados en el pecho y en el vientre. El joven presenta un plumaje parduzco y fuertemente estriado en el pecho; la cabeza es marrón-ocre y no presenta bandas laterales.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Emberiza_cia.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Emberiza cia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Torcecuello euroasiático',
+  s.primary_habitat = 'Bosques abiertos, sotos, huertos y arboledas con madera muerta',
+  s.description = 'Pariente de los pájaros carpinteros que ni pica la madera ni trepa por los troncos: se posa de través en las ramas y come hormigas del suelo con una lengua larguísima. Su plumaje jaspeado en grises y pardos imita la corteza. Si se le molesta en el nido, retuerce el cuello como una culebra, de ahí su nombre.',
+  s.description_source = NULL,
+  s.identification_tips = 'Plumaje veteado como corteza, difícil de ver quieto
+Se posa a lo largo de la rama, no agarrado al tronco
+Franja oscura desde la nuca hasta la mitad de la espalda',
+  s.seasonality = 'Paso migratorio e invernada',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Jinxtorquilla.jpg?width=1280',
+  s.image_attribution = 'User:Aelwyn (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Jynx torquilla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mosquitero papialbo',
+  s.primary_habitat = 'Forestal termófila,laderas de solana.Nidos:bosque planifolio,conífera.Zona montana,submediterránea',
+  s.description = 'El papialbo presenta la típica silueta de los mosquiteros: cuerpecillo rechoncho, patas frágiles y pico fino, pero se diferencia de los demás por su coloración general mucho más clara, especialmente en la cabeza y las partes ventrales. Las patas son negras y las alas, el dorso y las partes exteriores de la cola, verdosos, en contraste con el resto del cuerpo, de color blanquecino. La especie no manifiesta dimorfismo sexual.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Western_Bonelli''s_Warbler_-_Aosta_Valley_-_Italy_S4E5346_(19079885220).jpg?width=1280',
+  s.image_attribution = 'Francesco Veronesi from Italy (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Phylloscopus bonelli';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mosquitero musical',
+  s.primary_habitat = 'Bosques abiertos de frondosas, robledales, hayedos,castañares,arbustos,a media altura, media altura..',
+  s.description = 'Presenta gran parecido con otros congéneres, especialmente los mosquiteros común e ibérico, de los que se diferencia por poseer el pico y las patas pálidos, las listas faciales más marcadas —con una lista superciliar muy patente—, las partes inferiores más amarillas y el dorso de un tono verdoso más brillante.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo, abril, mayo, agosto, septiembre, octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Willow_Warbler_Phylloscopus_trochilus.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Phylloscopus trochilus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chova piquirroja',
+  s.primary_habitat = 'Cortados rocosos, cantiles y montañas, alimentándose en pastizales cercanos',
+  s.description = 'Córvido negro y brillante con el pico rojo, largo y curvo, y las patas del mismo color encendido. Vuela en grupos acrobáticos junto a los cantiles, plegando las alas y dejándose caer por puro juego. Busca larvas hurgando en el suelo de los pastos con ese pico de sonda.',
+  s.description_source = NULL,
+  s.identification_tips = 'Pico rojo, largo y curvado hacia abajo
+Reclamo agudo, un «chiaa» nasal muy característico
+Plumas de la punta del ala muy separadas, como dedos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pyrrhocorax_pyrrhocorax_-standing-8.jpg?width=1280',
+  s.image_attribution = 'File:Alpenkrähe.jpg: "Malte Uhl (User:Zzzip)" derivative work: Snow… (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Pyrrhocorax pyrrhocorax';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pájaro-moscón europeo',
+  s.primary_habitat = NULL,
+  s.description = 'Este diminuto y discreto pajarillo se reconoce fácilmente por la llamativa máscara facial negra —algo menos patente en la hembra y grisácea en los juveniles—, que resalta vivamente sobre la coloración blanco-grisácea de la cabeza y se prolonga desde la zona baja de la frente hasta la región auricular. Las partes dorsales lucen una tonalidad castaña —más pálida en la hembra—, con rebordes negros; el vientre es oscuro con manchas pardo-rojizas difusas en el pecho.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Remiz_pendulinus_(Marek_Szczepanek).jpg?width=1280',
+  s.image_attribution = 'Marek Szczepanek (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Remiz pendulinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bisbita común',
+  s.primary_habitat = NULL,
+  s.description = 'Ave de aspecto poco llamativo y sin caracteres muy distintivos, similar al resto de bisbitas. Exhibe dorso pardo, un tanto verdoso al principio del otoño, con muchas estrías oscuras; vientre blanco sucio muy rayado; y flancos anaranjados en otoño, que se aclaran según avanza el invierno. Posee alas redondeadas, cola larga y con plumas externas blancas, pico fino, y patas finas, con la uña posterior larga y recta. La garganta es blanca, con una fina bigotera negra. Ambos sexos son iguales. Los jóvenes, cuando llegan a España, no se distinguen de los adultos. Este pájaro se observa casi siempre en el suelo y en grupo. Para diferenciarlo de otros bisbitas hay que atender a las fechas, a su voz, a su pequeño tamaño, y a detalles del plumaje como flancos con estrías más gruesas y dorso menos contrastado.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a abril',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Anthus_pratensis.jpg?width=1280',
+  s.image_attribution = 'Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Anthus pratensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Águila perdicera',
+  s.primary_habitat = 'Sierras con cortados rocosos y amplias zonas abiertas de matorral y cultivo para cazar',
+  s.description = 'Águila mediana de alas largas y cola larga, con el vientre blanco finamente rayado y una mancha blanca en la espalda que se ve bien en vuelo. Caza a gran velocidad y a poca altura, sorprendiendo a perdices, conejos y palomas. Las parejas ocupan el mismo cortado durante años.',
+  s.description_source = NULL,
+  s.identification_tips = 'Mancha blanca en el centro de la espalda, visible desde arriba
+Vientre claro y muy rayado, con una banda oscura en el borde del ala
+Vuelo bajo y rápido cuando caza, no en círculos altos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aguila_perdicera.jpg?width=1280',
+  s.image_attribution = 'Paco Gómez from Castellón, Spain (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas: Vulnerable","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Aquila fasciata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Buitrón',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de una de las aves más pequeñas de Europa. Posee el dorso y el píleo de color pardo oscuro y fuertemente listados, el obispillo rojizo y las partes inferiores claras con los flancos y el pecho de color ocráceo. En vuelo ejecuta una trayectoria muy ondulante y presenta una silueta característica, con las alas redondeadas y la cola —que suele mantener parcialmente desplegada— con un perfil también redondeado y de longitud creciente de los extremos hacia el centro. En su parte distal, la cola muestra una banda de manchas negras y blancas muy visibles en vuelo. Cuando se posa entre la vegetación, suele aferrarse a los tallos manteniendo la verticalidad a la vez que agita continuamente la cola.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Zitting_cisticola_2024_04_19_(cropped).jpg?width=1280',
+  s.image_attribution = 'Alexis Lours (CC BY 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Cisticola juncidis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Vencejo pálido',
+  s.primary_habitat = 'Nidos: roquedos,acantilados costeros, edificios, puentes de piedra, iglesias,árboles',
+  s.description = 'Presenta silueta en forma de ballesta, cola corta y ahorquillada, y alas largas y estrechas. Posee pico corto, plano y con la boca muy ancha; patas emplumadas y extremadamente cortas, que le impiden posarse en el suelo; y pies pequeños y de fuertes garras, con los cuatro dedos dirigidos hacia delante. Luce una coloración uniforme de tono pardo grisáceo, excepto en la garganta, que es blanca; la parte inferior interna de las alas resulta más clara. Con plumaje poco desgastado muestra un aspecto general escamoso. Se confunde fácilmente con el vencejo común, y para diferenciarlos se necesitan buenas condiciones de luz y hay que situarse a corta distancia. El vencejo pálido tiene un tono general más claro y parduzco, y mayor extensión en el blanco de la garganta; además, a veces se aprecia un antifaz más marcado, mayor contraste en la parte inferior de las alas y aspecto más escamoso. Ambos sexos son iguales. Los jóvenes, muy similares a los adultos, presentan un tono un poco más oscuro y un aspecto escamoso más marcado por la presencia de plumas ribeteadas en blanco. Esta ave pasa la mayor parte de su vida en el aire, por lo que casi siempre se la ve volando y agrupada, tanto en núcleos urbanos como en acantilados costeros y de interior.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Vencejo_p%C3%A1lido_20250901_03.jpg?width=1280',
+  s.image_attribution = 'Ismael Olea (CC BY 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Apus pallidus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca rabilarga',
+  s.primary_habitat = 'Matorral bajo y denso, jarales, brezales y tomillares',
+  s.description = 'Curruca pequeña, oscura y de cola muy larga que suele llevar levantada. El macho tiene el vientre vinoso y el ojo rojo rodeado de un anillo del mismo color. Es muy inquieta y rara vez se deja ver más de unos segundos antes de volver a hundirse en la mata.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola larga y erguida, casi vertical al posarse
+Ojo y anillo ocular rojos
+Vientre de color vinoso, con motitas blancas en la garganta',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_pitchou_Ichkeul_NP.jpg?width=1280',
+  s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Curruca undata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Garceta común',
+  s.primary_habitat = 'Marismas, salinas, ramblas con agua, arrozales y orillas costeras',
+  s.description = 'Garza blanca y esbelta, de tamaño medio, con el pico negro y las patas negras rematadas en unos pies amarillos llamativos. Pesca removiendo el fondo con esas patas para levantar peces y camarones. En época de cría luce dos plumas largas y finas en la nuca.',
+  s.description_source = NULL,
+  s.identification_tips = 'Pies amarillos al final de patas negras
+Pico negro y fino, no amarillo
+Remueve el fondo con una pata mientras acecha',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aigrette_garzette_au_lac_sud_de_Tunis_(site_RAMSAR).jpg?width=1280',
+  s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Egretta garzetta';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Colirrojo real',
+  s.primary_habitat = 'Bosques abiertos, sotos y arboledas con huecos para criar',
+  s.description = 'Pájaro elegante con la cola de un naranja encendido que hace vibrar sin parar al posarse. El macho tiene la garganta negra, la frente blanca y el pecho anaranjado; la hembra es parda pero conserva la misma cola vibrante, que es la mejor pista para identificarlos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola naranja que tiembla constantemente
+Macho con frente blanca y garganta negra
+Se posa en ramas bajas y baja al suelo a por insectos',
+  s.seasonality = 'Paso migratorio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Common_Redstart_-_Segrate_-_Italy_S4E2518-1_(19357313382).jpg?width=1280',
+  s.image_attribution = 'Francesco Veronesi from Italy (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Phoenicurus phoenicurus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Águila real',
+  s.primary_habitat = 'Montañas y sierras con cortados rocosos y amplias zonas abiertas de caza',
+  s.description = 'La mayor de las águilas ibéricas, con casi dos metros y medio de envergadura y una nuca dorada que le da nombre. Cría en repisas de cantiles y usa territorios enormes, que una pareja defiende durante años. Planea con las alas en una «V» muy suave y bate poco, lo que la distingue de las rapaces menores.',
+  s.description_source = NULL,
+  s.identification_tips = 'Nuca y cogote de tono dorado, visibles a buena luz
+Planea con las alas en «V» muy abierta y bate poco
+Tamaño enorme: dobla al ratonero en el mismo cielo',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Maakotka_(Aquila_chrysaetos)_by_Jarkko_J%C3%A4rvinen.jpg?width=1280',
+  s.image_attribution = 'Jarkko Järvinen (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Aquila chrysaetos';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carraca europea',
+  s.primary_habitat = 'Campos abiertos con arbolado disperso, ribazos y construcciones con huecos',
+  s.description = 'Del tamaño de una paloma y de un azul turquesa intenso que sorprende al levantar el vuelo. Caza al acecho desde cables y postes, dejándose caer sobre saltamontes y escarabajos. Cría en huecos de árboles viejos y de edificios, de ahí que dependa de que queden árboles añosos y ruinas en el campo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Azul turquesa que solo se aprecia bien cuando vuela
+Espalda de color canela que contrasta con el azul
+Posada quieta en cables, oteando el suelo',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/European_roller.jpg?width=1280',
+  s.image_attribution = 'Christian Svane (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Coracias garrulus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Escribano soteño',
+  s.primary_habitat = NULL,
+  s.description = 'De tamaño algo menor que el escribano cerillo, el soteño es ligeramente más colicorto y posee un pico más robusto. La coloración general se asemeja también a la del cerillo, sobre todo en jóvenes y hembras. Se diferencian, sin embargo, por el color del obispillo — gris oliváceo en el soteño—, por la posesión de marcadas bandas laterales en la cara y, en general, por presentar menos áreas amarillentas en el plumaje. El macho en época reproductora luce una amplia franja pectoral gris olivácea, un llamativo babero negro en la garganta y un antifaz del mismo color; además, conserva todo el año el píleo y la nuca extensamente coloreados de gris oliváceo, con finas listas oscuras.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Emberiza_cirlus.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Emberiza cirlus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Halcón peregrino',
+  s.primary_habitat = 'Cortados y áreas abiertas',
+  s.description = 'Halcón robusto de alas puntiagudas y cola corta, capaz de superar los 300 km/h en el picado con que abate a otras aves en pleno vuelo. Se reconoce por la ancha bigotera negra que baja desde el ojo sobre un pecho claro y barrado.',
+  s.description_source = NULL,
+  s.identification_tips = 'Bigotera negra ancha bajo el ojo, como un casco
+Silueta de ancla: alas puntiagudas y cola corta
+Pecho claro con barrado fino en horizontal',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Falco_peregrinus_-_01.jpg?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Falco peregrinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Agachadiza común',
+  s.primary_habitat = NULL,
+  s.description = 'Limícola de mediano tamaño, con pico muy largo y coloración general parduzca. Posee flancos con franjas ocres y vientre blanco liso. El dorso, delicadamente jaspeado, está listado longitudinalmente con franjas de color crema. La cabeza también presenta varias listas longitudinales que enmarcan el píleo oscuro. Tiene un vuelo rápido, con arrancada brusca y trayectoria zigzagueante. Cuando vuela muestra una apariencia general parda, con la cola de tonalidad ocre rojiza.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Agosto a abril',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Gallinago_gallinago_1_(Marek_Szczepanek).jpg?width=1280',
+  s.image_attribution = 'Marek Szczepanek (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Gallinago gallinago';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Piquituerto',
+  s.primary_habitat = 'Pinares y masas de coníferas con producción de piñas',
+  s.description = 'Fringílido de pico único: las dos mandíbulas se cruzan en la punta, una herramienta para abrir las escamas de las piñas y sacar el piñón. El macho es rojo ladrillo y la hembra verde oliva. Cría incluso en invierno si hay piñas, y se mueve en bandos ruidosos de copa en copa.',
+  s.description_source = NULL,
+  s.identification_tips = 'Puntas del pico cruzadas, visibles de cerca
+Macho rojizo, hembra verde amarillenta
+Reclamo metálico «chip-chip» de los bandos en vuelo',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Red_Crossbills_(Male).jpg?width=1280',
+  s.image_attribution = 'Elaine R. Wilson, www.naturespicsonline.com (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Loxia curvirostra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Autillo',
+  s.primary_habitat = 'Arboledas, sotos, huertos y parques con árboles viejos',
+  s.description = 'El búho más pequeño de Europa, apenas mayor que un puño, con un plumaje jaspeado que lo hace invisible pegado a un tronco. Se detecta por el oído: un silbido monótono y flautado que repite cada dos o tres segundos durante toda la noche de primavera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Silbido corto y flautado repetido de forma monótona
+Diminuto, con dos penachos de plumas en la cabeza
+Plumaje veteado que imita la corteza',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Scops_Owl_(Otus_scops)%2C_Kalloni%2C_Lesvos%2C_Greece%2C_19.04.2015_(16773748434).jpg?width=1280',
+  s.image_attribution = 'Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Otus scops';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Acentor común',
+  s.primary_habitat = NULL,
+  s.description = 'Pájaro del tamaño de un gorrión común, con el pico fino y puntiagudo, y las patas fuertes y rojizas. De comportamiento huidizo, le gusta moverse entre la vegetación baja y caminar por el suelo. Tiene las partes superiores del plumaje marrones y con escamado pardo oscuro, semejantes al dorso de un gorrión común. La cabeza, la garganta y el pecho son de un color gris plomizo, más intenso en los machos, con la zona auricular y el píleo marrones. Las partes posteriores del vientre poseen un tono gris más claro, con los flancos marrones. Los jóvenes exhiben cabeza y garganta de color castaño, en lugar de gris, y muestran todo el plumaje fuertemente listado de pardo oscuro. La base de su pico es naranja amarillenta, mientras que los adultos presentan todo el pico negro.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Acentor_com%C3%BAn23_by_Paco_G%C3%B3mez.jpg?width=1280',
+  s.image_attribution = 'Paco Gómez (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Prunella modularis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Reyezuelo listado',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de una de las aves más diminutas de la avifauna europea. En un primer vistazo, aparece como un pájaro de aspecto general rechoncho, con tonalidades verdosas y cabeza adornada por un característico diseño de listas. Presenta el dorso verde brillante, en contraste con las alas oscuras, surcadas por dos bandas blanquecinas. Las partes inferiores son pálidas, aunque muestran ligeros tonos anaranjados en el pecho del macho. La especie posee un diseño cefálico característico en el que destaca el píleo naranja en los machos, o amarillo en las hembras, flanqueado por una banda negra y una marcada ceja blanca. Asimismo, luce una lista ocular negra y un semianillo blanco que circunda la parte inferior del ojo.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Firecrest93.JPG?width=1280',
+  s.image_attribution = 'NAUMANN, NATURGESCHICHTE DER VÖGEL MITTELEUROPAS: Band II, Tafel 15… (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Regulus ignicapilla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zampullín común',
+  s.primary_habitat = 'Charcas, embalses, ramblas remansadas y canales con vegetación',
+  s.description = 'El más pequeño de los somormujos, rechoncho y sin cola aparente, que pasa más tiempo bajo el agua que sobre ella. En primavera luce las mejillas y el cuello de color castaño y una mancha amarilla en la comisura del pico. Su reclamo es un relincho agudo y vibrante muy característico.',
+  s.description_source = NULL,
+  s.identification_tips = 'Silueta redonda, sin cola visible, como un corcho
+Se sumerge sin salpicar y reaparece lejos
+Relincho agudo y tembloroso desde la vegetación',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Zwergtaucher_060319_3.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Tachybaptus ruficollis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Vencejo real',
+  s.primary_habitat = 'Nidos:Acantilados,cortados,marinos e interior.Hasta 1900m.Sustrato preferido calizo,...Edificaciones',
+  s.description = 'Se trata del más grande y vistoso de los vencejos españoles. Presenta una silueta típica en forma de ballesta, cola corta y levemente ahorquillada, y alas muy largas y estrechas, de aleteos lentos. Posee pico corto, plano y con la boca muy ancha; patas emplumadas y extremadamente cortas, que le impiden posarse en el suelo; y pies pequeños y de fuertes garras, con los cuatro dedos dirigidos hacia delante. Muestra coloración general pardo oliva, más oscura en las alas, con dos destacadas áreas blancas en el vientre y la garganta, separadas ambas por un collar parduzco. Ambos sexos son iguales. Los jóvenes resultan muy similares a los adultos, aunque un poco más oscuros y con plumas ribeteadas de blanco. Esta ave pasa la mayor parte de su vida en el aire, por lo que casi siempre se la ve volando y agrupada, tanto en núcleos urbanos como en acantilados costeros y de interior.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tachymarptis_melba_-Barcelona%2C_Spain_-flying-8.jpg?width=1280',
+  s.image_attribution = 'Birdwatching Barcelona (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Tachymarptis melba';
