@@ -549,6 +549,47 @@ function reconcilia(lista, resueltas, porTaxonId, porGbifKey = new Map()) {
  * hasta la siguiente regeneración. Esta pasada es lo que hace que la corrección viva en la
  * herramienta.
  */
+/*
+ * La QUINTA vía, y la que cierra el hueco que dejan las otras cuatro: la SUBESPECIE NOMINAL.
+ *
+ * El Formulario Normalizado de Datos de un sitio Red Natura 2000 cita algunas aves en trinomio
+ * —«Phalacrocorax carbo carbo», «Porphyrio porphyrio porphyrio»—, y el anexo de la norma cita la
+ * misma ave en binomio. EIDOS les da DOS taxonid distintos, porque especie y subespecie son dos
+ * entradas de su Lista Patrón, así que `reconcilia()` no puede agruparlas: no hay nada que agrupar.
+ * El resultado es una ficha duplicada del mismo bicho, y la segunda nace mal por construcción —sin
+ * clave de GBIF, sin ocurrencias, sin foto y sin descripción, porque el catálogo universal no tiene
+ * el trinomio—, así que acaba oculta por `especies:ocultar` y el usuario ve un hueco que no existe.
+ * Medido el 2026-08-22 sobre los doce espacios publicados: 5 pares en 4 espacios, todos aves y todos
+ * subespecie NOMINAL.
+ *
+ * Se funde SOLO la subespecie nominal —el tercer epíteto repite el segundo— y SOLO cuando el binomio
+ * está también entre los candidatos de este espacio. Las dos condiciones importan. La primera porque
+ * una subespecie NO nominal sí puede ser un taxón que el catálogo quiera aparte (*Maytenus
+ * senegalensis* subsp. *europaea*); la segunda porque un trinomio que llega solo es el único nombre
+ * que hay de ese taxón aquí y fundirlo no tendría con qué. Con las dos, la fusión es segura: la
+ * subespecie nominal es, por definición, el mismo animal que su especie, y ninguna de las dos fichas
+ * puede decir del espacio nada que la otra no diga.
+ */
+function fundeSubespeciesNominales(lista) {
+  const porNombre = new Map(lista.map(c => [c.scientificName.toLowerCase(), c]));
+  const fundidas = [];
+  const salida = [];
+  for (const c of lista) {
+    const partes = c.scientificName.split(/\s+/).filter(w => !/^(subsp\.|ssp\.|var\.)$/i.test(w));
+    if (partes.length < 3 || partes[1].toLowerCase() !== partes[2].toLowerCase()) { salida.push(c); continue; }
+    const binomial = porNombre.get(`${partes[0]} ${partes[1]}`.toLowerCase());
+    if (!binomial) { salida.push(c); continue; }
+    // La especie se queda con la evidencia y las ocurrencias de las dos: el trinomio suele traer el
+    // respaldo del formulario del sitio y el binomio, las ocurrencias de GBIF.
+    binomial.evidence = [...new Set([...(binomial.evidence || []), ...(c.evidence || [])])];
+    binomial.gbifOccurrences = (binomial.gbifOccurrences || 0) + (c.gbifOccurrences || 0);
+    binomial.class = binomial.class || c.class || null;
+    binomial.sinonimosFusionados = [...new Set([...(binomial.sinonimosFusionados || []), c.scientificName])];
+    fundidas.push({ trinomio: c.scientificName, binomio: binomial.scientificName });
+  }
+  return { lista: salida, fundidas };
+}
+
 function aplicaEquivalencias(lista, equivalencias) {
   if (!equivalencias || !equivalencias.size) return { lista, renombradas: [] };
   const porNombre = new Map();
@@ -1080,6 +1121,12 @@ async function main() {
   }
 
   let { lista, fusiones } = reconcilia(brutos, resueltas, porTaxonId, porGbifKey);
+  const nominales = fundeSubespeciesNominales(lista);
+  lista = nominales.lista;
+  if (nominales.fundidas.length) {
+    console.log(`\nSubespecies nominales fundidas en su especie: ${nominales.fundidas.length}`);
+    for (const f of nominales.fundidas) console.log(`   ${f.trinomio}  →  ${f.binomio}`);
+  }
   const equiv = aplicaEquivalencias(lista, equivalencias.mapa);
   lista = equiv.lista;
   if (equiv.renombradas.length) {

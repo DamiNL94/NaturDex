@@ -2,18 +2,29 @@
 
 Cada una se paga mejor ahora que en el espacio número treinta.
 
-1. **Cuatro espacios no tienen localizado su plan de gestión, y desde el 2026-08-16 eso decide el
-   catálogo entero, no solo las aves.**
-   > **Sierra Espuña sale de la lista el 2026-08-22 (b), y no hizo falta buscar en el BORM.** Su
-   > PORN es el **Decreto n.º 13/1995, de 31 de marzo** (BORM n.º 85, de 11 de abril de 1995), y es
-   > **el mismo de los Barrancos de Gebas** —el decreto aprueba el plan de los dos y declara el
-   > Paisaje Protegido—. Está descargado, citado en `data/normativa-espacios.json` y **transcrito
-   > entero**: 188 especies en `data/anexos-normativos.json`, bajo la entrada de Gebas. Para Sierra
-   > Espuña queda solo abrirle su propia entrada y regenerar su Capa 3, y ahí el ámbito **no**
-   > desborda —el Parque Regional es el 90 % de las 19.679 ha del plan—, así que es el trabajo más
-   > rentable que queda en Murcia: sus 188 fichas se apoyan hoy en el formulario de la ZEPA
-   > ES0000173.
+1. **Tres espacios no tienen transcrito su plan de gestión, y desde el 2026-08-16 eso decide el
+   catálogo entero, no solo las aves.** Son **Carrascoy y El Valle, Cabo Cope y Cuatro Calas**.
+   > **Sierra Espuña sale de la lista el 2026-08-22 (c), y no hizo falta ni el índice.** Su PORN es
+   > el **Decreto n.º 13/1995, de 31 de marzo** (BORM n.º 85, de 11 de abril de 1995), y es **el
+   > mismo de los Barrancos de Gebas** —el decreto aprueba el plan de los dos y declara el Paisaje
+   > Protegido—; está enlazado desde la ficha del espacio en murcianatural. Descargado, citado en
+   > `data/normativa-espacios.json` y **transcrito entero**: 188 especies en
+   > `data/anexos-normativos.json`, bajo la entrada de Gebas. Para Sierra Espuña queda solo abrirle
+   > su propia entrada y regenerar su Capa 3, y ahí el ámbito **no** desborda —el Parque Regional es
+   > el 90 % de las 19.679 ha del plan—, así que es el trabajo más rentable que queda en Murcia: sus
+   > 188 fichas se apoyan hoy en el formulario de la ZEPA ES0000173. Su 27 % de fichas sostenidas
+   > solo por GBIF, que se mide más abajo, es de antes de esto.
 
+   > **Y desde el 2026-08-22 el paso 0 ya no es una búsqueda a ciegas.** Buscando el plan del Humedal
+   > del Ajauque apareció el índice que faltaba:
+   > **`murcianatural.carm.es/web/guest/pgrednatura`** lista **todos** los planes de gestión de la
+   > región con su enlace, y de cada uno sale la cita del boletín y el PDF. Hacía falta porque al
+   > BORM no se llega sin índice **por partida doble**: su endpoint numera por anuncio y año, y
+   > encima estos planes van en **SUPLEMENTOS, que no aparecen en el sumario de ningún boletín
+   > ordinario** —barridos los 308 sumarios de 2022 y 2023 buscando el Decreto 252/2022 sin un solo
+   > resultado—. Ojo también con el antibot de Radware de ese host: con peticiones seguidas devuelve
+   > 302; espaciadas y con cabeceras de navegador, responde.
+   >
    > **Subió de precio el 2026-08-16.** Con el orden de prioridad nuevo —legislación → EIDOS → GBIF,
    > regla nº 3 del `CLAUDE.md`— el plan de gestión pasó de ser «la evidencia más fuerte» a ser **la
    > puerta de entrada del nivel 1**, y un espacio sin plan transcrito se queda solo con lo que
@@ -22,6 +33,18 @@ Cada una se paga mejor ahora que en el espacio número treinta.
    > GBIF; los cuatro **sin** anexo, entre el 33 % y el 51 %. Cuatro Calas es el peor caso, con la
    > mitad del catálogo colgando de avistamientos sueltos. Transcribir los planes que faltan
    > —Carrascoy, Cabo Cope, Cuatro Calas y Sierra Espuña— es hoy el trabajo más rentable del rollout.
+   >
+   > **Vuelto a medir el 2026-08-22 sobre catorce espacios: 331 de 2.094 (16 %).** La cifra baja porque
+   > los seis espacios dados de alta desde entonces llegan con su plan transcrito —o con el «no hay
+   > plan» escrito en la norma, que es Sierra de las Moreras— y ahí el suelo se hunde: San Pedro del
+   > Pinatar, Calblanque, Cabezo Gordo y Sierra de las Moreras se quedan en **0**, y el Humedal del
+   > Ajauque en **2 de 175**. Arriba siguen los cuatro sin plan (Carrascoy 50 %, Cuatro Calas 47 %,
+   > Cabo Cope 34 %, Sierra Espuña 27 %) y, con ellos, **Sierra de la Pila con un 27 % teniendo el
+   > suyo transcrito**: su anexo enumera 244 taxones y el catálogo tiene 160 fichas, así que lo que
+   > falla ahí no es la puerta sino que su plan inventaría el Parque Regional y buena parte de lo que
+   > GBIF ve dentro no está en esa lista. Se mide con `npm run especies:niveles`, y **hay que darle el
+   > `atlas.txt`**: sin él la señal `caracteristica` no entra y el N3 sale inflado (331 con Atlas,
+   > 476 sin él).
    >
    > **Y el 2026-08-20 se midió el caso extremo, que conviene tener a mano para justificar el
    > gasto: Cabezo Gordo son 58 fichas con su plan transcrito y habrían sido 5 sin él.** El
@@ -42,6 +65,14 @@ Cada una se paga mejor ahora que en el espacio número treinta.
    > exención los cubre igual, parte de esta deuda **no es transcribible** y hay que decirlo en vez
    > de dejarla contada como trabajo pendiente. (Espacios Abiertos ya tiene anexo transcrito por
    > otra vía: el Decreto n.º 259/2019 del Mar Menor.)
+   >
+   > **Y de esos tres, el Humedal del Ajauque ya está respondido, en la otra sesión de este mismo
+   > día: la exención NO lo deja sin inventario.** La Ley 4/1992 lo declaró sin exigirle PORN, pero
+   > el plan llegó después y por otra puerta —la de la ZEC—, en el **Decreto n.º 252/2022**, cuyo
+   > volumen II §1.2 enumera **210 taxones** y está transcrito. Lección para los otros dos: la
+   > exención del PORN **no** implica que no haya plan; hay que mirar además si su LIC llegó a
+   > declararse ZEC, porque el plan de gestión de la ZEC inventaría igual. Cuatro Calas es
+   > justamente el peor caso medido y su LIC es la **ES6200010**.
 
    Lo que sigue es el diagnóstico anterior, que sigue valiendo para las aves. Desde que el ave entra
    por respaldo de sitio
@@ -52,10 +83,12 @@ Cada una se paga mejor ahora que en el espacio número treinta.
    españoles— y su perímetro no es el del espacio protegido. El resultado se mide sin ambigüedad: los
    tres espacios con el plan transcrito conservan **46, 61 y 66** aves; los cinco que solo tienen
    formulario, **17, 18, 34, 40 y 48**. Sierra de la Pila son 8.800 ha de sierra con 17 aves fichadas.
-   `Tools/catalogo-nacional/data/normativa-espacios.json` solo cubre el Decreto 28/2025 del
-   Altiplano; **Carrascoy, Cabo Cope y Cuatro Calas no tienen ni
-   siquiera localizado el documento**, que es el primer paso y el barato. (Sierra de la Pila lo tiene
-   desde el 2026-08-16 y Sierra Espuña desde el 2026-08-22, ver el recuadro de arriba.) Bajar el umbral NO es una
+   `Tools/catalogo-nacional/data/normativa-espacios.json` cubre hoy **siete documentos** —el Altiplano,
+   el PORN de la Sierra de la Pila y su PRUG, los dos PORN de 1995 de Calblanque y San Pedro, el Plan
+   del Mar Menor, el Decreto 252/2022 de los relieves centro-orientales y el PORN de 1995 de Sierra
+   Espuña-Gebas—, y **el documento de Carrascoy, Cabo Cope y Cuatro Calas sigue sin localizar**, que
+   es el primer paso y el barato — y desde el 2026-08-22 hay índice para hacerlo (arriba). Bajar el
+   umbral NO es una
    alternativa: devolvería el ruido de vuelo que este cambio quitó.
 2. **`murcia_status` está atado a Murcia.** Es el bloqueo real del rollout nacional a nivel de campo:
    cada comunidad tiene su propio catálogo de especies amenazadas. Hay que renombrarlo a algo como
@@ -455,3 +488,47 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     677 vínculos de `observada_gbif` a `caracteristica` sin tocar ningún enlace, solo por afinar la
     procedencia. Eso es corrección, no cambio de catálogo, pero conviene aplicarlo junto con lo demás
     y no suelto.
+
+33. **El mismo taxón fichado dos veces por culpa de un trinomio: 4 pares en 3 espacios.** El
+    Formulario Normalizado de Datos de un sitio Red Natura 2000 cita algunas aves en trinomio
+    —«Phalacrocorax carbo carbo», «Porphyrio porphyrio porphyrio»— y el anexo de la norma cita la
+    misma ave en binomio. EIDOS les da **dos `taxonid`**, porque especie y subespecie son dos
+    entradas de su Lista Patrón, así que la reconciliación de `build-species-seleccion.js` no puede
+    agruparlas: no hay nada que agrupar. Salen **dos fichas del mismo bicho**, y la segunda nace mal
+    por construcción —sin `gbifSpeciesKey`, sin ocurrencias, sin foto y sin descripción, porque el
+    catálogo universal no tiene el trinomio—, así que acaba **oculta** por `especies:ocultar` y el
+    usuario ve un hueco que no existe.
+
+    **Arreglado en el pipeline el 2026-08-22**, al salir en el Humedal del Ajauque:
+    `build-species-seleccion.js` tiene ahora una **quinta vía de reconciliación** que funde la
+    subespecie nominal en su especie, con dos condiciones que hacen la fusión segura sin excepciones
+    —el tercer epíteto repite el segundo, y el binomio está también entre los candidatos de ESE
+    espacio—. Sin la primera se fundiría *Maytenus senegalensis* subsp. *europaea*, que sí es un
+    taxón que el catálogo quiere aparte; sin la segunda, un trinomio que llega solo no tendría con
+    qué fundirse.
+
+    Lo que queda son los pares **ya escritos**, que solo se van regenerando el espacio:
+
+    | Espacio | Par |
+    |---|---|
+    | Espacios Abiertos e Islas del Mar Menor | *Phalacrocorax carbo* + *Phalacrocorax carbo carbo* |
+    | Espacios Abiertos e Islas del Mar Menor | *Porphyrio porphyrio* + *Porphyrio porphyrio porphyrio* |
+    | Salinas y Arenales de San Pedro del Pinatar | *Phalacrocorax carbo* + *Phalacrocorax carbo carbo* |
+    | Calblanque, Monte de las Cenizas y Peña del Águila | *Phalacrocorax carbo* + *Phalacrocorax carbo carbo* |
+
+    Ojo al regenerar: el trinomio se queda **huérfano en la BD**, porque `build-park-sql.js` solo hace
+    UPSERT. El borrado va aparte, como en los renombrados.
+
+34. **Cuatro aves que su formulario oficial declara están fuera del apartado de la ZEPA.** La
+    **clase** de una especie la pone GBIF, así que una que la legislación aprueba y que GBIF no ha
+    registrado dentro de los polígonos llega a `build-species-n2.js` con `class: null` — y de
+    `class === 'Aves'` cuelga, entre otras tres cosas, el `zepaSiteCode`. El ave se quedaba fuera del
+    apartado de la ZEPA con su evidencia `lista_oficial_sitio` intacta al lado: el dato para ponerla
+    estaba y no se miraba. Es el mismo fallo que el de Sierra de El Carche —contar hábitats en un
+    ave— entrando por otra puerta: allí era «un ave sin ZEPA», aquí es «un ave sin ocurrencias».
+
+    **Arreglado el 2026-08-22** en el Humedal del Ajauque (67 → 74 aves en el apartado): la clase se
+    completa desde la ficha universal, que la trae de EIDOS y no depende de que GBIF haya visto al
+    bicho. Lo que queda son **4 fichas en 2 espacios** —Espacios Abiertos e Islas del Mar Menor (3) y
+    Calblanque (1)—, que se recuperan al regenerar. Es la deuda más barata de las que exigen
+    regeneración, y viaja con la nº 32 y la nº 33 en el mismo pase.

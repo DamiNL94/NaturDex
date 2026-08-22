@@ -8258,6 +8258,1164 @@
         }
       ]
     },
+    "humedal-del-ajauque-y-rambla-salada": {
+      "fuente": {
+        "norma": "Decreto n.º 252/2022, de 22 de diciembre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos de los relieves y cuencas centro-orientales de la Región de Murcia",
+        "boletin": "BORM n.º 38, de 16 de febrero de 2023, suplemento n.º 6, anuncio 913",
+        "url": "https://www.borm.es/services/anuncio/ano/2023/numero/913/pdf?id=815831",
+        "anexo": "Volumen II §1.2 «Descripción de la biodiversidad» del “Humedal del Ajauque y Rambla Salada”: Tabla 4 (§1.2.2.1, 30 aves del Anexo I de la Directiva Aves), Tabla 6 (82 aves migradoras de llegada regular no incluidas en el Anexo I), Tabla 7 (16 otras aves de interés para su conservación), Tabla 8 (14 taxones de los Anexos II y/o IV de la Directiva Hábitats: 10 mamíferos, 2 anfibios y 2 reptiles), Tabla 9 (12 otras especies de interés: 2 mamíferos, 9 reptiles y 1 anfibio), Tabla 10 (44 invertebrados de interés: 16 coleópteros acuáticos, 1 terrestre y 27 arácnidos) y Tabla 11 (§1.2.2.2, 12 especies de flora catalogada). 210 taxones en total. La Tabla 12 (§1.2.3, 12 especies del Catálogo Español de especies exóticas invasoras) va en `noNativas`.",
+        "cita": "Plan de gestión integral de los relieves y cuencas centro-orientales, volumen II §1.2 (Decreto n.º 252/2022, BORM n.º 38 de 16.02.2023, supl. 6)",
+        "ambito": "el inventario conjunto del Paisaje Protegido, la ZEPA ES0000195 y la ZEC ES6200005 «Humedal del Ajauque y Rambla Salada», que el volumen II trata como un solo espacio protegido; la ZEPA y el Paisaje Protegido comparten perímetro (1.621,9 ha) y la ZEC (895,6 ha) queda dentro",
+        "consultado": "2026-08-21",
+        "nota": "El BORM publica el plan ENTERO —los cuatro volúmenes, 128 MB de PDF—, así que no hace falta el gestor documental de murcianatural: el volumen III de este mismo plan es el PRUG de Sierra de la Pila, transcrito el 2026-08-16 desde la versión de junio de 2018 que sirve murcianatural, anterior a la aprobación. Las cifras de cada tabla cuadran con las que el propio texto declara —«se han citado 30 especies del Anexo I», «otras 82 migradoras», «otras 16 especies más de aves», «14 especies de fauna incluidas en el Anexo IV», «12 especies que figuran en el Catálogo Regional, 5 de ellas catalogadas como Vulnerable»—, que es la comprobación que se puede hacer sin salir del documento. `categoria` recoge solo las categorías de amenaza que la norma asigna (Catálogo Regional y Catálogo Español); la marca «RP» de la columna LCE es la pertenencia al Listado de Especies Silvestres en Régimen de Protección Especial y esa figura ya la trae EIDOS. Podarcis hispanica está en las Tablas 8 y 9 (la segunda vez con tilde): es un solo taxón. NO se transcriben dos arácnidos que el texto nombra solo en prosa —Xerolycosa morisca, clasificada aquí, y Nemesia nunezii, propuesta— por no figurar en la Tabla 10; ni los alóctonos citados también en prosa (los crustáceos Gammarus aequicauda y Sphaeroma serratum, y Sparus aurata, Dicentrarchus labrax, Diplodus sp. y Mugil sp., introducidos en el embalse de Santomera en un experimento de 2002-2003). El plan cartografía 13 tipos de HIC y el Atlas 2005 recortado al límite da 10: faltan 1310, 6220* y 9540, que es un desvío entre cartografías de fechas distintas y no una corrección de este trabajo. Lo que NO cuadra es el resumen de la Tabla 13 («elementos clave»), que agrega: dice «otras 35 especies catalogadas: 12 de flora y 23 de fauna» donde las Tablas 8 y 9 suman 26 entradas (25 taxones distintos), y reparte las 30 del Anexo I en categorías que tampoco suman 30. Se ha transcrito lo que enumeran las TABLAS, no lo que resume ese párrafo."
+      },
+      "especies": [
+        {
+          "scientificName": "Alcedo atthis",
+          "grupo": "Aves",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Aythya nyroca",
+          "grupo": "Aves",
+          "categoria": "En Peligro de Extinción (Catálogo Español de Especies Amenazadas)",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Bubo bubo",
+          "grupo": "Aves",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Burhinus oedicnemus",
+          "grupo": "Aves",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Calandrella brachydactyla",
+          "grupo": "Aves",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Charadrius alexandrinus",
+          "grupo": "Aves",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Chlidonias hybridus",
+          "grupo": "Aves",
+          "nombreCorregido": "Chlidonias hybrida",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4). La tabla escribe el epíteto en masculino; el nombre aceptado es Chlidonias hybrida."
+        },
+        {
+          "scientificName": "Circus aeruginosus",
+          "grupo": "Aves",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4). El Catálogo Regional de especies amenazadas le asigna en la tabla la abreviatura «EX», que la leyenda del propio documento no define."
+        },
+        {
+          "scientificName": "Circus cyaneus",
+          "grupo": "Aves",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Circus pygargus",
+          "grupo": "Aves",
+          "categoria": "Vulnerable (Catálogo Regional de especies amenazadas de la Región de Murcia) · Vulnerable (Catálogo Español de Especies Amenazadas)",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Coracias garrulus",
+          "grupo": "Aves",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Egretta garzetta",
+          "grupo": "Aves",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Elanus caerulens",
+          "grupo": "Aves",
+          "nombreCorregido": "Elanus caeruleus",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4). Errata de la Tabla 4: el nombre aceptado es Elanus caeruleus."
+        },
+        {
+          "scientificName": "Falco columbarius",
+          "grupo": "Aves",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Falco peregrinus",
+          "grupo": "Aves",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Gelochelidon nilotica",
+          "grupo": "Aves",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Himantopus himantopus",
+          "grupo": "Aves",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Ixobrychus minutus",
+          "grupo": "Aves",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Luscinia svecica",
+          "grupo": "Aves",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Marmaronetta angustirostris",
+          "grupo": "Aves",
+          "categoria": "En Peligro de Extinción (Catálogo Español de Especies Amenazadas)",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4). El Catálogo Regional de especies amenazadas le asigna en la tabla la abreviatura «EX», que la leyenda del propio documento no define."
+        },
+        {
+          "scientificName": "Oenanthe leucura",
+          "grupo": "Aves",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Oxyura leucocephala",
+          "grupo": "Aves",
+          "categoria": "En Peligro de Extinción (Catálogo Español de Especies Amenazadas)",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Pandion haliaetus",
+          "grupo": "Aves",
+          "categoria": "Vulnerable (Catálogo Español de Especies Amenazadas)",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4). El Catálogo Regional de especies amenazadas le asigna en la tabla la abreviatura «EX», que la leyenda del propio documento no define."
+        },
+        {
+          "scientificName": "Phoenicopterus ruber",
+          "grupo": "Aves",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Plegadis falcinellus",
+          "grupo": "Aves",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Recurvirostra avosetta",
+          "grupo": "Aves",
+          "categoria": "Vulnerable (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Sterna hirundo",
+          "grupo": "Aves",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Sternula albifrons",
+          "grupo": "Aves",
+          "categoria": "Vulnerable (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Sylvia undata",
+          "grupo": "Aves",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Tringa glareola",
+          "grupo": "Aves",
+          "nota": "Anexo I de la Directiva Aves (Tabla 4)."
+        },
+        {
+          "scientificName": "Accipiter nisus",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). La tabla la marca «PM», especie parcialmente migratoria; la marca no forma parte del nombre."
+        },
+        {
+          "scientificName": "Acrocephalus arundinaceus",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Acrocephalus scirpaceus",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Actitis hypoleucos",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Anas acuta",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Anas clypeata",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Anas crecca",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Anas penelope",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Anas querquedula",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Anthus pratensis",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Apus apus",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Apus melba",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Ardea cinerea",
+          "grupo": "Aves",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). La tabla la marca «PM», especie parcialmente migratoria; la marca no forma parte del nombre."
+        },
+        {
+          "scientificName": "Arenaria interpres",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Aythya ferina",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). La tabla la marca «PM», especie parcialmente migratoria; la marca no forma parte del nombre."
+        },
+        {
+          "scientificName": "Aythya fuligula",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Buteo buteo",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). La tabla la marca «PM», especie parcialmente migratoria; la marca no forma parte del nombre."
+        },
+        {
+          "scientificName": "Calidris alpina",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Calidris ferruginea",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Calidris minuta",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Carduelis cannabina",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). La tabla la marca «PM», especie parcialmente migratoria; la marca no forma parte del nombre."
+        },
+        {
+          "scientificName": "Carduelis spinus",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Cercotrichas galactotes",
+          "grupo": "Aves",
+          "categoria": "Vulnerable (Catálogo Español de Especies Amenazadas)",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Charadrius dubius",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Charadrius hiaticula",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Clamator glandarius",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Cuculus canorus",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Delichon urbicum",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Emberiza schoeniclus",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Erithacus rubecula",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). La tabla la marca «PM», especie parcialmente migratoria; la marca no forma parte del nombre."
+        },
+        {
+          "scientificName": "Falco tinnunculus",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). La tabla la marca «PM», especie parcialmente migratoria; la marca no forma parte del nombre."
+        },
+        {
+          "scientificName": "Ficedula hypoleuca",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Fringilla coelebs",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). La tabla la marca «PM», especie parcialmente migratoria; la marca no forma parte del nombre."
+        },
+        {
+          "scientificName": "Gallinago gallinago",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Hippolais polyglotta",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Hirundo daurica",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Hirundo rustica",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Jynx torquilla",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Lanius senator",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Larus fuscus",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Larus michahellis",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). La tabla la marca «PM», especie parcialmente migratoria; la marca no forma parte del nombre."
+        },
+        {
+          "scientificName": "Larus ridibundus",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). La tabla la marca «PM», especie parcialmente migratoria; la marca no forma parte del nombre."
+        },
+        {
+          "scientificName": "Locustella luscinioides",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Luscinia megarhynchos",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Merops apiaster",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Motacilla alba",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). La tabla la marca «PM», especie parcialmente migratoria; la marca no forma parte del nombre."
+        },
+        {
+          "scientificName": "Motacilla cinerea",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Motacilla flava",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Muscicapa striata",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Netta rufina",
+          "grupo": "Aves",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). La tabla la marca «PM», especie parcialmente migratoria; la marca no forma parte del nombre."
+        },
+        {
+          "scientificName": "Oenanthe hispanica",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Oenanthe oenanthe",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Phalacrocórax carbo",
+          "grupo": "Aves",
+          "nombreCorregido": "Phalacrocorax carbo",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). Errata de la Tabla 6: el género se escribe con tilde. El nombre aceptado es Phalacrocorax carbo."
+        },
+        {
+          "scientificName": "Phoenicurus ochruros",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). La tabla la marca «PM», especie parcialmente migratoria; la marca no forma parte del nombre."
+        },
+        {
+          "scientificName": "Phoenicurus phoenicurus",
+          "grupo": "Aves",
+          "categoria": "Vulnerable (Catálogo Español de Especies Amenazadas)",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Phylloscopus collybita",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Phylloscopus trochilus",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Pluvialis squatarola",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Podiceps cristatus",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). La tabla la marca «PM», especie parcialmente migratoria; la marca no forma parte del nombre."
+        },
+        {
+          "scientificName": "Podiceps nigricollis",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). La tabla la marca «PM», especie parcialmente migratoria; la marca no forma parte del nombre."
+        },
+        {
+          "scientificName": "Prunella modularis",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Ptyonoprogne rupestris",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). La tabla la marca «PM», especie parcialmente migratoria; la marca no forma parte del nombre."
+        },
+        {
+          "scientificName": "Remiz pendulinus",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). La tabla la marca «PM», especie parcialmente migratoria; la marca no forma parte del nombre."
+        },
+        {
+          "scientificName": "Riparia riparia",
+          "grupo": "Aves",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Saxicola rubetra",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Saxicola torquata",
+          "grupo": "Aves",
+          "nombreCorregido": "Saxicola torquatus",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). La tabla la marca «PM», especie parcialmente migratoria; la marca no forma parte del nombre. Nomenclatura en desuso: el nombre aceptado por GBIF es Saxicola torquatus."
+        },
+        {
+          "scientificName": "Streptopelia turtur",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Sturnus vulgaris",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Sylvia atricapilla",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Sylvia borin",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Sylvia cantillans",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Sylvia communis",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Sylvia conspicillata",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Tadorna tadorna",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). La tabla la marca «PM», especie parcialmente migratoria; la marca no forma parte del nombre."
+        },
+        {
+          "scientificName": "Tringa nebularia",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Tringa ochropus",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Tringa totanus",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). La tabla la marca «PM», especie parcialmente migratoria; la marca no forma parte del nombre."
+        },
+        {
+          "scientificName": "Turdus philomelos",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Turdus viscivorus",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). La tabla la marca «PM», especie parcialmente migratoria; la marca no forma parte del nombre."
+        },
+        {
+          "scientificName": "Tyto alba",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). La tabla la marca «PM», especie parcialmente migratoria; la marca no forma parte del nombre."
+        },
+        {
+          "scientificName": "Upupa epops",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). La tabla la marca «PM», especie parcialmente migratoria; la marca no forma parte del nombre."
+        },
+        {
+          "scientificName": "Vanellus vanellus",
+          "grupo": "Aves",
+          "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6)."
+        },
+        {
+          "scientificName": "Aegithalos caudatus",
+          "grupo": "Aves",
+          "nota": "Otras especies de aves de interés para su conservación (Tabla 7)."
+        },
+        {
+          "scientificName": "Athene noctua",
+          "grupo": "Aves",
+          "nota": "Otras especies de aves de interés para su conservación (Tabla 7)."
+        },
+        {
+          "scientificName": "Bubulcus ibis",
+          "grupo": "Aves",
+          "nota": "Otras especies de aves de interés para su conservación (Tabla 7)."
+        },
+        {
+          "scientificName": "Calandrella rufescens",
+          "grupo": "Aves",
+          "nota": "Otras especies de aves de interés para su conservación (Tabla 7)."
+        },
+        {
+          "scientificName": "Cettia cetti",
+          "grupo": "Aves",
+          "nota": "Otras especies de aves de interés para su conservación (Tabla 7)."
+        },
+        {
+          "scientificName": "Cisticola juncidis",
+          "grupo": "Aves",
+          "nota": "Otras especies de aves de interés para su conservación (Tabla 7)."
+        },
+        {
+          "scientificName": "Columba oenas",
+          "grupo": "Aves",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Otras especies de aves de interés para su conservación (Tabla 7)."
+        },
+        {
+          "scientificName": "Corvus corax",
+          "grupo": "Aves",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Otras especies de aves de interés para su conservación (Tabla 7)."
+        },
+        {
+          "scientificName": "Galerida cristata",
+          "grupo": "Aves",
+          "nota": "Otras especies de aves de interés para su conservación (Tabla 7)."
+        },
+        {
+          "scientificName": "Monticola solitarius",
+          "grupo": "Aves",
+          "nota": "Otras especies de aves de interés para su conservación (Tabla 7)."
+        },
+        {
+          "scientificName": "Parus major",
+          "grupo": "Aves",
+          "nota": "Otras especies de aves de interés para su conservación (Tabla 7)."
+        },
+        {
+          "scientificName": "Petronia petronia",
+          "grupo": "Aves",
+          "nota": "Otras especies de aves de interés para su conservación (Tabla 7)."
+        },
+        {
+          "scientificName": "Picus viridis",
+          "grupo": "Aves",
+          "nota": "Otras especies de aves de interés para su conservación (Tabla 7)."
+        },
+        {
+          "scientificName": "Rallus aquaticus",
+          "grupo": "Aves",
+          "nota": "Otras especies de aves de interés para su conservación (Tabla 7)."
+        },
+        {
+          "scientificName": "Sylvia melanocephala",
+          "grupo": "Aves",
+          "nota": "Otras especies de aves de interés para su conservación (Tabla 7)."
+        },
+        {
+          "scientificName": "Tachybaptus ruficollis",
+          "grupo": "Aves",
+          "nota": "Otras especies de aves de interés para su conservación (Tabla 7)."
+        },
+        {
+          "scientificName": "Atelerix algirus",
+          "grupo": "Mamíferos",
+          "nota": "Anexo IV de la Directiva Hábitats (Tabla 8)."
+        },
+        {
+          "scientificName": "Eptesicus isabellinus",
+          "grupo": "Mamíferos",
+          "nota": "Anexo IV de la Directiva Hábitats (Tabla 8)."
+        },
+        {
+          "scientificName": "Miniopterus schreibersii",
+          "grupo": "Mamíferos",
+          "categoria": "Vulnerable (Catálogo Español de Especies Amenazadas)",
+          "nota": "Anexo II, IV de la Directiva Hábitats (Tabla 8)."
+        },
+        {
+          "scientificName": "Myotis blythii",
+          "grupo": "Mamíferos",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia) · Vulnerable (Catálogo Español de Especies Amenazadas)",
+          "nota": "Anexo II, IV de la Directiva Hábitats (Tabla 8)."
+        },
+        {
+          "scientificName": "Myotis capaccinii",
+          "grupo": "Mamíferos",
+          "categoria": "Vulnerable (Catálogo Regional de especies amenazadas de la Región de Murcia) · En Peligro de Extinción (Catálogo Español de Especies Amenazadas)",
+          "nota": "Anexo II, IV de la Directiva Hábitats (Tabla 8)."
+        },
+        {
+          "scientificName": "Myotis myotis",
+          "grupo": "Mamíferos",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia) · Vulnerable (Catálogo Español de Especies Amenazadas)",
+          "nota": "Anexo II, IV de la Directiva Hábitats (Tabla 8)."
+        },
+        {
+          "scientificName": "Pipistrellus kuhlii",
+          "grupo": "Mamíferos",
+          "nota": "Anexo IV de la Directiva Hábitats (Tabla 8)."
+        },
+        {
+          "scientificName": "Pipistrellus pipistrellus",
+          "grupo": "Mamíferos",
+          "nota": "Anexo IV de la Directiva Hábitats (Tabla 8)."
+        },
+        {
+          "scientificName": "Pipistrellus pygmaeus",
+          "grupo": "Mamíferos",
+          "nota": "Anexo IV de la Directiva Hábitats (Tabla 8)."
+        },
+        {
+          "scientificName": "Tadarida teniotis",
+          "grupo": "Mamíferos",
+          "nota": "Anexo IV de la Directiva Hábitats (Tabla 8)."
+        },
+        {
+          "scientificName": "Epidalea calamita (=Bufo calamita)",
+          "grupo": "Anfibios",
+          "nombreCorregido": "Epidalea calamita",
+          "nota": "Anexo IV de la Directiva Hábitats (Tabla 8). La tabla da el sinónimo entre paréntesis; el nombre aceptado es Epidalea calamita."
+        },
+        {
+          "scientificName": "Pelobates cultripes",
+          "grupo": "Anfibios",
+          "nota": "Anexo IV de la Directiva Hábitats (Tabla 8)."
+        },
+        {
+          "scientificName": "Hemorrhois hippocrepis",
+          "grupo": "Reptiles",
+          "nota": "Anexo IV de la Directiva Hábitats (Tabla 8)."
+        },
+        {
+          "scientificName": "Podarcis hispanica",
+          "grupo": "Reptiles",
+          "nombreCorregido": "Podarcis hispanicus",
+          "nota": "Anexo IV de la Directiva Hábitats (Tabla 8). La tabla escribe el epíteto en femenino; el nombre aceptado es Podarcis hispanicus."
+        },
+        {
+          "scientificName": "Genetta genetta",
+          "grupo": "Mamíferos",
+          "nota": "Otras especies de interés para su conservación (Tabla 9)."
+        },
+        {
+          "scientificName": "Meles meles",
+          "grupo": "Mamíferos",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Otras especies de interés para su conservación (Tabla 9)."
+        },
+        {
+          "scientificName": "Acanthodactylus erythrurus",
+          "grupo": "Reptiles",
+          "nota": "Otras especies de interés para su conservación (Tabla 9)."
+        },
+        {
+          "scientificName": "Malpolon monspessulanus",
+          "grupo": "Reptiles",
+          "nota": "Otras especies de interés para su conservación (Tabla 9)."
+        },
+        {
+          "scientificName": "Natrix maura",
+          "grupo": "Reptiles",
+          "nota": "Otras especies de interés para su conservación (Tabla 9)."
+        },
+        {
+          "scientificName": "Podarcis hispánica",
+          "grupo": "Reptiles",
+          "nombreCorregido": "Podarcis hispanicus",
+          "nota": "Otras especies de interés para su conservación (Tabla 9). La Tabla 9 la escribe con tilde y en femenino; es el mismo taxón que la Tabla 8 (Podarcis hispanica → Podarcis hispanicus), repetido en las dos tablas."
+        },
+        {
+          "scientificName": "Psammodromus algirus",
+          "grupo": "Reptiles",
+          "nota": "Otras especies de interés para su conservación (Tabla 9)."
+        },
+        {
+          "scientificName": "Psammodromus hispanicus",
+          "grupo": "Reptiles",
+          "nota": "Otras especies de interés para su conservación (Tabla 9)."
+        },
+        {
+          "scientificName": "Rhinechis scalaris",
+          "grupo": "Reptiles",
+          "nota": "Otras especies de interés para su conservación (Tabla 9)."
+        },
+        {
+          "scientificName": "Tarentola mauritanica",
+          "grupo": "Reptiles",
+          "nota": "Otras especies de interés para su conservación (Tabla 9)."
+        },
+        {
+          "scientificName": "Timon lepidus",
+          "grupo": "Reptiles",
+          "nota": "Otras especies de interés para su conservación (Tabla 9)."
+        },
+        {
+          "scientificName": "Pelophylax perezi",
+          "grupo": "Anfibios",
+          "nota": "Otras especies de interés para su conservación (Tabla 9)."
+        },
+        {
+          "scientificName": "Enochrus falcarius",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Disyunción mediterránea (sur de Italia y sureste ibérico)"
+        },
+        {
+          "scientificName": "Herophydrus musicus",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Límite de distribución meridional es el sureste ibérico"
+        },
+        {
+          "scientificName": "Hydroglyphus signatellus",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10)."
+        },
+        {
+          "scientificName": "Laccobius gracilis intermitens",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Endemismo de distribución iberoafricana"
+        },
+        {
+          "scientificName": "Nebrioporus baeticus",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Endemismo exclusivo de la península ibérica"
+        },
+        {
+          "scientificName": "Ochthebius auropallens",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Endemismo de distribución iberoafricana"
+        },
+        {
+          "scientificName": "Ochthebius corrugatus",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10)."
+        },
+        {
+          "scientificName": "Ochthebius cuprescens",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10)."
+        },
+        {
+          "scientificName": "Ochthebius delgadoi",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Endemismo exclusivo de la península ibérica"
+        },
+        {
+          "scientificName": "Ochthebius dilatatus",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Endemismo de distribución iberoafricana"
+        },
+        {
+          "scientificName": "Ochthebius glaber",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Endemismo exclusivo del sur y sudeste. Catalogada como «Vulnerable» en el Libro Rojo de los invertebrados amenazados de España"
+        },
+        {
+          "scientificName": "Ochthebius grandipennis",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Endemismo de distribución iberoafricana"
+        },
+        {
+          "scientificName": "Ochthebius maculatus",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10)."
+        },
+        {
+          "scientificName": "Ochthebius montesi",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Endemismo exclusivo del sur y sudeste"
+        },
+        {
+          "scientificName": "Ochthebius tacapasensis baeticus",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Endemismo de distribución iberoafricana"
+        },
+        {
+          "scientificName": "Ochthebius tudmirensis",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Endemismo exclusivo de la península ibérica"
+        },
+        {
+          "scientificName": "Cephalota (Taenidia) deserticoloides",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Endémico de estepas y saladares del sudeste. Catalogada como «Vulnerable» en el Libro Rojo de los invertebrados amenazados de España"
+        },
+        {
+          "scientificName": "Aelurillus blandus",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Citado solo en las islas griegas"
+        },
+        {
+          "scientificName": "Ariadna isidiatrix",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Especie mediterránea rara de distribución circunlitoral"
+        },
+        {
+          "scientificName": "Cebrennus sp.",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Primera cita del género para Europa"
+        },
+        {
+          "scientificName": "Cirtauchenius walckenaeri",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Zonas áridas"
+        },
+        {
+          "scientificName": "Dorceus sp.",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Género norteafricano"
+        },
+        {
+          "scientificName": "Dysdera presai",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Endemismo del sureste ibérico"
+        },
+        {
+          "scientificName": "Eusimonia sp.",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Primera cita del género para Europa"
+        },
+        {
+          "scientificName": "Gluvia dorsalis",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Endemismo ibérico"
+        },
+        {
+          "scientificName": "Ichnocolus valentinus",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Endémico del sur y este peninsular"
+        },
+        {
+          "scientificName": "Latrodectus lilianae",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Endemismo ibérico de zonas áridas"
+        },
+        {
+          "scientificName": "Lycosa sp.",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Endemismo ibérico del sureste y levante"
+        },
+        {
+          "scientificName": "Micrommata sp.",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Endemismo ibérico"
+        },
+        {
+          "scientificName": "Nemesia dorthesi",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Presente en el sureste"
+        },
+        {
+          "scientificName": "Nemesia valenciae",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Presente en el levante"
+        },
+        {
+          "scientificName": "Oxiopes mediterraneus",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Presenta poblaciones disyuntas, citada sólo en Israel"
+        },
+        {
+          "scientificName": "Peucetia viridis",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Distribuida por el sureste ibérico"
+        },
+        {
+          "scientificName": "Prhita nana",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Península ibérica"
+        },
+        {
+          "scientificName": "Prodidomus amaranthinus",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Distribución africana"
+        },
+        {
+          "scientificName": "Pseudicius sp.",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Endemismo ibérico"
+        },
+        {
+          "scientificName": "Pterotrichia simoni",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10)."
+        },
+        {
+          "scientificName": "Segestria sp.",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10)."
+        },
+        {
+          "scientificName": "Ummidia aedificatoria",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Zonas áridas área meridional ibérica"
+        },
+        {
+          "scientificName": "Yllenus salsicola",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10)."
+        },
+        {
+          "scientificName": "Zelotes sp.",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10)."
+        },
+        {
+          "scientificName": "Zodarion affine",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Endemismo ibérico"
+        },
+        {
+          "scientificName": "Zodarion dictretum",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Endemismo de zonas áridas del sureste y levante"
+        },
+        {
+          "scientificName": "Zodarion isabelunum",
+          "grupo": "Invertebrados",
+          "nota": "Invertebrado de interés para su conservación (Tabla 10). Endemismo meridional de zonas áridas"
+        },
+        {
+          "scientificName": "Anabasis hispanica",
+          "grupo": "Flora",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Flora catalogada (Tabla 11)."
+        },
+        {
+          "scientificName": "Argyrolobium uniflorum",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Flora catalogada (Tabla 11)."
+        },
+        {
+          "scientificName": "Chamaerops humilis",
+          "grupo": "Flora",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Flora catalogada (Tabla 11)."
+        },
+        {
+          "scientificName": "Cynomorium coccineum",
+          "grupo": "Flora",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Flora catalogada (Tabla 11)."
+        },
+        {
+          "scientificName": "Halocnemum strobilaceum",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Flora catalogada (Tabla 11)."
+        },
+        {
+          "scientificName": "Limonium cossonianum",
+          "grupo": "Flora",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Flora catalogada (Tabla 11)."
+        },
+        {
+          "scientificName": "Lycium intricatum",
+          "grupo": "Flora",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Flora catalogada (Tabla 11)."
+        },
+        {
+          "scientificName": "Periploca angustifolia",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Flora catalogada (Tabla 11)."
+        },
+        {
+          "scientificName": "Tamarix boveana",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Flora catalogada (Tabla 11)."
+        },
+        {
+          "scientificName": "Tamarix canariensis",
+          "grupo": "Flora",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Flora catalogada (Tabla 11)."
+        },
+        {
+          "scientificName": "Teucrium freynii",
+          "grupo": "Flora",
+          "categoria": "De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Flora catalogada (Tabla 11)."
+        },
+        {
+          "scientificName": "Teucrium libanitis",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de especies amenazadas de la Región de Murcia)",
+          "nota": "Flora catalogada (Tabla 11)."
+        }
+      ],
+      "noNativas": [
+        {
+          "scientificName": "Cyprinus carpio",
+          "nota": "Fauna incluida en el Catálogo Español de especies exóticas invasoras; la Tabla 12 del plan la cita en la ZEC."
+        },
+        {
+          "scientificName": "Gambusia holbrooki",
+          "nota": "Fauna incluida en el Catálogo Español de especies exóticas invasoras; la Tabla 12 del plan la cita en la ZEC."
+        },
+        {
+          "scientificName": "Oxyura jamaicensis",
+          "nota": "Fauna incluida en el Catálogo Español de especies exóticas invasoras; la Tabla 12 del plan la cita en la ZEC."
+        },
+        {
+          "scientificName": "Trachemys scripta elegans",
+          "nota": "Fauna incluida en el Catálogo Español de especies exóticas invasoras; la Tabla 12 del plan la cita en la ZEC."
+        },
+        {
+          "scientificName": "Potamopyrgus antipodarum",
+          "nota": "Fauna incluida en el Catálogo Español de especies exóticas invasoras; la Tabla 12 del plan la cita en la ZEC."
+        },
+        {
+          "scientificName": "Procambarus clarkii",
+          "nota": "Fauna incluida en el Catálogo Español de especies exóticas invasoras; la Tabla 12 del plan la cita en la ZEC."
+        },
+        {
+          "scientificName": "Rhynchophorus ferrugineus",
+          "nota": "Fauna incluida en el Catálogo Español de especies exóticas invasoras; la Tabla 12 del plan la cita en la ZEC."
+        },
+        {
+          "scientificName": "Agave americana",
+          "nota": "Flora incluida en el Catálogo Español de especies exóticas invasoras; la Tabla 12 del plan la cita en la ZEC."
+        },
+        {
+          "scientificName": "Carpobrotus sp",
+          "nota": "Flora incluida en el Catálogo Español de especies exóticas invasoras; la Tabla 12 del plan la cita en la ZEC."
+        },
+        {
+          "scientificName": "Opuntia maxima",
+          "nota": "Flora incluida en el Catálogo Español de especies exóticas invasoras; la Tabla 12 del plan la cita en la ZEC."
+        },
+        {
+          "scientificName": "Oxalis pes-caprae",
+          "nota": "Flora incluida en el Catálogo Español de especies exóticas invasoras; la Tabla 12 del plan la cita en la ZEC."
+        },
+        {
+          "scientificName": "Pennisetum setaceum",
+          "nota": "Flora incluida en el Catálogo Español de especies exóticas invasoras; la Tabla 12 del plan la cita en la ZEC."
+        }
+      ]
+    },
     "barrancos-de-gebas": {
       "fuente": {
         "norma": "Decreto n.º 13/1995, de 31 de marzo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Sierra Espuña (incluido Barrancos de Gebas) y se declara como Paisaje Protegido los Barrancos de Gebas. Su artículo 2 es el que declara el espacio; el Plan que aprueba su artículo 1 es el instrumento de gestión de los dos espacios a la vez.",

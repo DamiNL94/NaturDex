@@ -1,7 +1,7 @@
 # Orden de operaciones
 
 Hay dependencias entre herramientas que no son evidentes y que, al saltárselas, deshacen trabajo en
-silencio. **Ninguna de estas cuatro se detecta con un error: todas fallan en verde.**
+silencio. **Ninguna de estas cinco se detecta con un error: todas fallan en verde.**
 
 1. **`image`/`imageAttribution` son campos UNIVERSALES.** Si escribes una foto en el `park.json` (con
    `enrich-images.js --write-park`) y después lanzas `species:apply` sin haber hecho antes
@@ -25,6 +25,17 @@ silencio. **Ninguna de estas cuatro se detecta con un error: todas fallan en ver
    desplegado, tocar solo los ficheros del frontend no cambia lo que ve el usuario: hay que generar y
    aplicar también el SQL. Y al revés — `adopt-habitats.js` escribe en `Frontend/` y **no pasa por la
    BD**: mientras el pipeline de hábitats siga así, un export desde la API borraría sus cambios.
+
+5. **La auditoría de enlaces va DESPUÉS de `species:build`, y cada regeneración la deshace.**
+   `auditoria-especie-habitat.js --write` retira los `habitatIds` que contradicen el medio de la
+   ficha —en Ajauque, cuatro plantas de saladar colgadas del 3280, que es un cauce, porque su recinto
+   del Atlas es un mosaico con el 1510—. Pero `build-species-n2.js` **deriva `habitatIds` entero**
+   desde el barrido de GBIF y el índice del Atlas: la lista de campos que conserva a mano
+   (`coordinates`, `featured`, `visible`, `reviewNote`, audio) **no la incluye**, así que la
+   siguiente regeneración los repone tal cual. No falla ni avisa: el informe
+   [`auditoria-especie-habitat.md`](../auditoria-especie-habitat.md) sigue diciendo «se retiran 4» y
+   los cuatro están otra vez ahí. La regla es sencilla: **la auditoría es el último paso de la Capa
+   3**, y si se regenera el espacio hay que volver a pasarla.
 
 **Idempotencia.** `build-n1-espacios`, `merge-habitats`, `adopt-habitats`,
 `fix-estado-conservacion-iepnb` y `sync-species-catalog` son idempotentes: reejecutarlos con la misma
