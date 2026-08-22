@@ -24,10 +24,11 @@ Cada una se paga mejor ahora que en el espacio número treinta.
    > mitad del catálogo colgando de avistamientos sueltos. Transcribir los planes que faltan
    > —Carrascoy, Cabo Cope, Cuatro Calas y Sierra Espuña— es hoy el trabajo más rentable del rollout.
    >
-   > **Vuelto a medir el 2026-08-22 sobre trece espacios: 331 de 2.035 (16 %).** La cifra baja porque
-   > los cinco espacios dados de alta desde entonces llegan con su plan transcrito y ahí el suelo se
-   > hunde —San Pedro del Pinatar, Calblanque y Cabezo Gordo se quedan en **0**, y el Humedal del
-   > Ajauque en **2 de 175**—. Arriba siguen los cuatro sin plan (Carrascoy 50 %, Cuatro Calas 47 %,
+   > **Vuelto a medir el 2026-08-22 sobre catorce espacios: 331 de 2.094 (16 %).** La cifra baja porque
+   > los seis espacios dados de alta desde entonces llegan con su plan transcrito —o con el «no hay
+   > plan» escrito en la norma, que es Sierra de las Moreras— y ahí el suelo se hunde: San Pedro del
+   > Pinatar, Calblanque, Cabezo Gordo y Sierra de las Moreras se quedan en **0**, y el Humedal del
+   > Ajauque en **2 de 175**. Arriba siguen los cuatro sin plan (Carrascoy 50 %, Cuatro Calas 47 %,
    > Cabo Cope 34 %, Sierra Espuña 27 %) y, con ellos, **Sierra de la Pila con un 27 % teniendo el
    > suyo transcrito**: su anexo enumera 244 taxones y el catálogo tiene 160 fichas, así que lo que
    > falla ahí no es la puerta sino que su plan inventaría el Parque Regional y buena parte de lo que
@@ -41,6 +42,27 @@ Cada una se paga mejor ahora que en el espacio número treinta.
    > más de donde tirar. No es una proporción representativa —es un espacio de 272 ha con un
    > formulario pobrísimo—, pero sí es el suelo al que cae un espacio cuando el plan no está
    > transcrito.
+
+   > **Y el 2026-08-22 apareció el caso contrario, que acota la deuda: hay espacios sin plan porque
+   > la ley los eximió de tenerlo.** Sierra de las Moreras se declaró por la **Ley 4/1992**
+   > «teniendo en cuenta que **no se precisa** previa elaboración de planes de ordenación de los
+   > recursos naturales», y el apartado que sí obliga a iniciar el PORN enumera ocho espacios sin
+   > incluirlo. Ahí no hay documento pendiente de localizar, y su catálogo de 64 fichas con **77
+   > candidatos caídos por sostenerse solo en GBIF** es el techo alcanzable mientras no se declare
+   > la ZEC del LIC ES6200011 con su plan. Conviene comprobar lo mismo en los otros tres paisajes
+   > protegidos del apartado DOS de esa ley —**Cuatro Calas**, que es el peor caso medido arriba,
+   > **Humedal del Ajauque y Rambla Salada** y **Espacios Abiertos e Islas del Mar Menor**—: si la
+   > exención los cubre igual, parte de esta deuda **no es transcribible** y hay que decirlo en vez
+   > de dejarla contada como trabajo pendiente. (Espacios Abiertos ya tiene anexo transcrito por
+   > otra vía: el Decreto n.º 259/2019 del Mar Menor.)
+   >
+   > **Y de esos tres, el Humedal del Ajauque ya está respondido, en la otra sesión de este mismo
+   > día: la exención NO lo deja sin inventario.** La Ley 4/1992 lo declaró sin exigirle PORN, pero
+   > el plan llegó después y por otra puerta —la de la ZEC—, en el **Decreto n.º 252/2022**, cuyo
+   > volumen II §1.2 enumera **210 taxones** y está transcrito. Lección para los otros dos: la
+   > exención del PORN **no** implica que no haya plan; hay que mirar además si su LIC llegó a
+   > declararse ZEC, porque el plan de gestión de la ZEC inventaría igual. Cuatro Calas es
+   > justamente el peor caso medido y su LIC es la **ES6200010**.
 
    Lo que sigue es el diagnóstico anterior, que sigue valiendo para las aves. Desde que el ave entra
    por respaldo de sitio

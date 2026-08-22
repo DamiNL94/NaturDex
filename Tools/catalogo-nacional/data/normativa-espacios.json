@@ -156,6 +156,23 @@
         }
       ],
       "nota": "IGUAL QUE EL PLAN DEL MAR MENOR y a diferencia del Altiplano, el BORM publica el plan ENTERO —los cuatro volúmenes, 128 MB de PDF, 47.604 líneas de texto extraído—, así que no hace falta el gestor documental de murcianatural. LOCALIZARLO ES LO QUE CUESTA, y por dos motivos: el decreto NO sale en el sumario de ningún boletín ordinario (va en un SUPLEMENTO, y el barrido de los 308 sumarios de 2022-2023 lo pierde), y murcianatural devuelve 302 al antibot de Radware en cuanto se le piden varias URL seguidas. La vía que sí funciona: `murcianatural.carm.es/web/guest/pgrednatura` lista los planes de gestión con su enlace, y el de éste —`/-/decreto-n-252/2022-declaracion-zec-y-pgi`— da la cita del boletín y el enlace al PDF del BORM. Ojo con el ámbito para Sierra de la Pila: su anexo se transcribió desde la versión de 2018 del volumen III, anterior a esta aprobación; el texto es el mismo pero la cita del `anexos-normativos.json` sigue siendo la del PDF suelto."
+    },
+    {
+      "norma": "Ley 4/1992, de 30 de julio, de Ordenación y Protección del Territorio de la Región de Murcia",
+      "boletin": "BORM n.º 189, de 14 de agosto de 1992",
+      "articulado": "https://www.borm.es/services/anuncio/494597/pdf",
+      "encontrado": true,
+      "consultado": "2026-08-22",
+      "cubre": [
+        "sierra-de-las-moreras",
+        "cuatro-calas",
+        "humedal-del-ajauque-y-rambla-salada",
+        "espacios-abiertos-e-islas-del-mar-menor"
+      ],
+      "inventarios": "NO HAY, y está LEÍDA ENTERA (13 páginas) para poder decirlo. Es la norma de DECLARACIÓN de los cuatro paisajes protegidos de su apartado DOS —Sierra de las Moreras es el n.º 4—, y su anexo es exclusivamente una descripción de LÍMITES por rumbos («Sur: Ribera del mar Mediterráneo desde la zona protegida del Calaleño… Norte: Carretera Mazarrón-Águilas desde el km. 1 hasta el km. 8»). Ni una especie, ni un hábitat, en toda la ley.",
+      "transcrito": [],
+      "nota": "Y el hueco es de la norma, no de la búsqueda: el apartado DOS declara estos cuatro paisajes «teniendo en cuenta que NO SE PRECISA previa elaboración de planes de ordenación de los recursos naturales, según lo dispuesto en su artículo 15.1 y sin perjuicio de su posterior elaboración si procede». El apartado CUATRO, el que sí obliga a iniciar el PORN en el plazo de un año, enumera ocho espacios y Sierra de las Moreras NO está entre ellos. Así que para este espacio no hay un PORN pendiente de localizar: la ley lo eximió expresamente. La ficha del organismo gestor (murcianatural.carm.es/sierra-de-las-moreras, consultada el 2026-08-22) lo corrobora desde el otro lado: su apartado «Normativas relacionadas» enlaza esta ley Y NINGUNA OTRA. Mientras no se declare la ZEC del LIC ES6200011 con su plan de gestión, el único respaldo documental de sitio que tiene este espacio es el formulario oficial de la Red Natura 2000, y de ahí sale su catálogo corto.",
+      "_como_se_llega_al_pdf": "Vía nueva, y resuelve el «hace falta un índice» que TRAMPAS-CONOCIDAS.md daba por hueco abierto: las fichas de norma de murcianatural (`/w/<slug-de-la-norma>`) llevan el enlace `borm.es/borm/documento?obj=anu&id=<id>`, y ese endpoint responde un 302 con el número de anuncio ya resuelto en el `location` (`/services/anuncio/494597/pdf`). No hay que biseccionar nada. Dos trampas: `curl -L` sigue el 302 del gestor antibot de Radware hacia `validate.perfdrive.com`, que NO está en la política de egreso y devuelve 403 en el CONNECT —hay que pedir la URL SIN seguir redirecciones y leer el `location` a mano—, y el `rdwr_response: allowed` de la cabecera es la señal de que Radware ha dejado pasar la petición."
     }
   ],
   "_como_se_baja_un_boletin_viejo": "Para los boletines anteriores a la publicación por anuncio, el servicio de anuncios del BORM (`/services/anuncio/ano/<año>/numero/<n>/pdf`) es una trampa: en 1995 el número de anuncio NO va por orden de fecha —9370 es del 30 de junio, 9375 del 19 y 9380 del 8—, así que la bisección por la cabecera no converge y un barrido acotado se queda corto sin decirlo. El PORN de Calblanque está en el anuncio 10286 y cuatro barridos sobre 9000-9800 salieron vacíos. La vía buena es pedir el BOLETÍN ENTERO: `https://www.borm.es/services/boletin/ano/<año>/numero/<n>/pdf` (7,7 MB el de 1995 n.º 152). Ese endpoint no estaba escrito en ningún sitio del repo."

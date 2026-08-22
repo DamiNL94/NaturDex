@@ -514,6 +514,42 @@ UPDATE habitats h JOIN parks p ON p.id = h.park_id
 WHERE p.slug = 'sierra-de-la-pila' AND h.code = '92D0';
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'El matorral de las zonas más cálidas y secas, allí donde prácticamente no hiela: palmito, espino negro, lentisco, cornicales, bojas, albaidas y esparto sobre laderas pedregosas y llanos soleados. Es un matorral abierto, con suelo desnudo a la vista entre mata y mata, y con muchas especies compartidas con el norte de África. Aguanta sequías de meses y rebrota en cuanto llueve.'
+WHERE p.slug = 'sierra-de-las-moreras' AND h.code = '5330';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Pastizales secos en los que conviven gramíneas vivaces de mata dura, como el lastón (Brachypodium retusum) o el esparto, con una multitud de plantas anuales diminutas que nacen con las lluvias y se secan antes del verano. En agosto parecen un erial pardo; en abril pueden reunir cuarenta especies distintas en un metro cuadrado. Esa riqueza escondida es la razón de que sea un hábitat prioritario.'
+WHERE p.slug = 'sierra-de-las-moreras' AND h.code = '6220';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Bosques abiertos y luminosos de sabinas y enebros arbóreos (Juniperus), con los árboles separados entre sí y un pasto o matorral bajo entre ellos. Se instalan donde el frío, el viento o la falta de suelo impiden que se cierre un bosque, desde páramos continentales hasta laderas costeras. Crecen extraordinariamente despacio y son muy longevos, así que un sabinar arrasado no vuelve en una vida humana.'
+WHERE p.slug = 'sierra-de-las-moreras' AND h.code = '9560';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Espinares de azufaifo (Ziziphus lotus), matas hemisféricas de ramas entrelazadas y espinas ganchudas que forman islas de sombra sobre llanos áridos. Cada mata levanta un pequeño montículo de arena y hojarasca y guarda debajo humedad, semillas y fauna que fuera no sobreviviría. Es el único hábitat de clima casi desértico de Europa occidental, y por eso figura como prioritario.'
+WHERE p.slug = 'sierra-de-las-moreras' AND h.code = '5220';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Pastos abiertos sobre repisas y lanchas de roca caliza con apenas un dedo de tierra encima. Ahí solo prosperan plantas crasas de hojas gordas, como las uñas de gato (Sedum), y hierbas anuales minúsculas que nacen, florecen y mueren entre febrero y mayo. Ocupa superficies muy pequeñas y depende de que el suelo siga siendo escaso: en cuanto se acumula tierra, otras plantas lo desplazan.'
+WHERE p.slug = 'sierra-de-las-moreras' AND h.code = '6110';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Paredes y cortados de roca caliza en los que la vegetación no vive sobre el suelo, sino dentro de las fisuras. Son plantas de raíz larguísima y crecimiento lentísimo, agarradas a la grieta, que aprovechan el agua que escurre por la pared. Los roquedos han quedado a salvo del arado y del ganado durante milenios, y por eso concentran una proporción altísima de especies que no existen en ningún otro lugar.'
+WHERE p.slug = 'sierra-de-las-moreras' AND h.code = '8210';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Matorral de suelos salinos removidos y cargados de nitrógeno: bordes de camino y de cultivo, márgenes de rambla, corrales y escombreras viejas. Lo forman matas robustas de hoja gris o carnosa —orgazas, sosas, bojas y cambroneras— que rebrotan enseguida tras cualquier alteración. Aunque nace de terrenos trastocados, es vegetación propia de los ambientes áridos del sureste y a menudo el último refugio de plantas escasas.'
+WHERE p.slug = 'sierra-de-las-moreras' AND h.code = '1430';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Roquedos del borde del mar, batidos por el viento y salpicados constantemente de sal. Las plantas viven agarradas a las grietas, con hojas gruesas o cerosas para no perder agua, y las más características son las siemprevivas (Limonium) y el hinojo marino. Muchas de esas siemprevivas viven solo en un tramo corto de costa y en ningún otro sitio del mundo.'
+WHERE p.slug = 'sierra-de-las-moreras' AND h.code = '1240';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Estepas de suelos salinos pero secos, sin encharcamiento permanente, en depresiones y llanos interiores de clima duro. Dominan el albardín (Lygeum spartum), una gramínea de matas separadas y hojas punzantes, y las siemprevivas (Limonium), que en verano cubren el suelo desnudo de flores diminutas rosas y violetas. Es un paisaje de aspecto pobre que concentra un número altísimo de plantas que no crecen en ningún otro ambiente.'
+WHERE p.slug = 'sierra-de-las-moreras' AND h.code = '1510';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
   SET h.description = 'Matorral alto o bosquete abierto dominado por enebros y sabinas (Juniperus), arbustos de follaje escamoso o punzante y porte denso que aguantan sequía, viento y suelos casi inexistentes. Sus frutos carnosos y azulados —los gálbulos— alimentan en invierno a zorzales y otras aves, que se encargan de dispersar la semilla. Crecen tan despacio que un ejemplar de dos metros puede tener siglos.'
 WHERE p.slug = 'sierra-de-salinas' AND h.code = '5210';
 

@@ -4531,8 +4531,8 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
   s.identification_tips = '',
   s.seasonality = 'Septiembre, octubre, noviembre, marzo',
-  s.image_url = NULL,
-  s.image_attribution = NULL,
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Merendera_filifolia.jpg?width=1280',
+  s.image_attribution = 'Rubenbiologo (CC BY-SA 4.0) · Wikimedia Commons',
   s.rarity_score = 4,
   s.rarity_basis = NULL
 WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND s.scientific_name = 'Merendera filifolia';
@@ -13699,8 +13699,8 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
   s.identification_tips = '',
   s.seasonality = 'Septiembre, octubre, noviembre, marzo',
-  s.image_url = NULL,
-  s.image_attribution = NULL,
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Merendera_filifolia.jpg?width=1280',
+  s.image_attribution = 'Rubenbiologo (CC BY-SA 4.0) · Wikimedia Commons',
   s.rarity_score = 4,
   s.rarity_basis = NULL
 WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND s.scientific_name = 'Merendera filifolia';
@@ -20331,8 +20331,8 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.description_source = NULL,
   s.identification_tips = '',
   s.seasonality = 'Abril a julio',
-  s.image_url = NULL,
-  s.image_attribution = NULL,
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Corynephorus_divaricatus_674723077.jpg?width=1280',
+  s.image_attribution = 'Josep Gesti (CC BY-SA 4.0) · Wikimedia Commons',
   s.rarity_score = 3,
   s.rarity_basis = NULL
 WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Corynephorus divaricatus';
@@ -31511,6 +31511,954 @@ Camina por el suelo clavando el pico largo y curvo',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Upupa epops';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Siempreviva insigne',
+  s.primary_habitat = 'Suelos margosos y yesosos salinos, en estepas y taludes áridos',
+  s.description = 'Una de las siemprevivas más vistosas: sus inflorescencias forman un ramillete denso de un lila rosado intenso que destaca sobre el gris de las margas. Es un endemismo del sureste ibérico, ligado a suelos salinos y yesosos, y muy usado en seco como flor ornamental.',
+  s.description_source = NULL,
+  s.identification_tips = 'Floración densa y de lila rosado vivo, muy llamativa
+Hojas en roseta basal, gruesas y de borde ondulado
+Sobre margas y yesos claros, en terreno casi desnudo',
+  s.seasonality = 'Final de primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_insigne.jpg?width=1280',
+  s.image_attribution = 'ANE (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Limonium insigne';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zamarrilla lanuda',
+  s.primary_habitat = 'Matorral y cerros sobre suelos calizos y margosos secos',
+  s.description = 'Mata cubierta por una lana blanca y espesa que la hace destacar en el matorral. Sus flores, rosadas o purpúreas, se agrupan en cabezuelas terminales y carecen de labio superior, con los estambres al descubierto. Es un endemismo del sureste ibérico.',
+  s.description_source = NULL,
+  s.identification_tips = 'Toda la planta cubierta de lana blanca y espesa
+Flores sin labio superior, con los estambres asomando
+Cabezuelas apretadas en el extremo de las ramas',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_lanigerum_kz01.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Teucrium lanigerum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Palmito',
+  s.primary_habitat = 'Matorral cálido, laderas soleadas y acantilados del piso termomediterráneo',
+  s.description = 'La única palmera silvestre de Europa continental. Suele crecer en mata, con varios troncos cortos, aunque con los años puede levantar un tronco único. Sus hojas son abanicos rígidos con pecíolos muy espinosos. Del cogollo se sacaba el «palmito», y de las hojas, cordelería y escobas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas en abanico, rígidas y divididas en segmentos
+Pecíolos con espinas fuertes en los bordes
+Porte en mata, con varios troncos desde la base',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Chamaerops_humilis_Torreblanca.jpg?width=1280',
+  s.image_attribution = 'Canaan (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Chamaerops humilis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Albardín',
+  s.primary_habitat = 'Estepas salinas, margas y suelos yesosos secos; forma albardinales',
+  s.description = 'Gramínea perenne de hojas duras y punzantes que forma matas separadas sobre suelos salinos y margosos donde poco más prospera. Su inflorescencia es inconfundible: una espata blanca y sedosa que envuelve las flores como un capuchón de papel.',
+  s.description_source = NULL,
+  s.identification_tips = 'Espata blanca y sedosa envolviendo la espiga
+Hojas rígidas terminadas en punta punzante
+Matas espaciadas sobre suelo desnudo y claro',
+  s.seasonality = 'Todo el año (espigado en primavera)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lygeum_spartum-1.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Lygeum spartum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagartija colirroja',
+  s.primary_habitat = 'Matorral litoral y laderas secas',
+  s.description = 'Lagartija de suelos arenosos, de cuerpo aplanado y dedos con escamas laterales en forma de peine que le sirven de raqueta sobre la arena suelta. Los jóvenes tienen la cola y las patas traseras de un rojo intenso que se apaga en los adultos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Dedos con flecos de escamas a los lados, como peines
+Jóvenes con cola y patas traseras rojo intenso
+Cuerpo aplanado, con rayas y ocelos claros en el dorso',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Benny_Trapp_Acanthodactylus_erythrurus.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Acanthodactylus erythrurus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Oroval',
+  s.primary_habitat = 'Matorral cálido, roquedos y ramblas de clima muy seco',
+  s.description = 'Arbusto de la familia del tomate y la belladona, con hojas ovaladas algo carnosas y flores verdosas discretas. Los frutos son bayas rojas y brillantes envueltas en el cáliz. Es una especie de raíz norteafricana que en la península solo vive en los rincones más cálidos del sureste.',
+  s.description_source = NULL,
+  s.identification_tips = 'Bayas rojas pequeñas asomando del cáliz
+Hojas ovales, algo carnosas y de verde apagado
+Flores verde amarillentas, poco vistosas',
+  s.seasonality = 'Primavera y otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Withania_frutescens0176.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Withania frutescens';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lechuguilla lanosa',
+  s.primary_habitat = 'Matorral árido y bordes de rambla',
+  s.description = 'Compuesta de aspecto blanquecino por la lana que cubre tallos y hojas, con una roseta basal y capítulos amarillos tipo diente de león. Suelta látex blanco al romperse. Es una planta iberoafricana ligada a los ambientes más áridos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Lana blanca cubriendo tallos y base de las hojas
+Capítulos amarillos tipo diente de león
+Látex blanco al partir un tallo',
+  s.seasonality = 'Primavera-verano',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/627205605/original.jpg',
+  s.image_attribution = 'Olivier Argagnon (CC BY 4.0) · GBIF/iNaturalist',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Launaea lanifera';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Saladilla anual',
+  s.primary_habitat = 'Saladares, arenas litorales y suelos salinos secos',
+  s.description = 'Saladilla anual —a diferencia de la mayoría de sus parientes, que son perennes— con una roseta de hojas lobuladas pegada al suelo y tallos alados que rematan en espigas de flores azuladas o violáceas. Sus flores conservan el color al secarse, un truco común en el género.',
+  s.description_source = NULL,
+  s.identification_tips = 'Roseta basal de hojas con lóbulos redondeados
+Tallos con alas o costillas, no cilíndricos
+Flores azuladas agrupadas en espiguillas de un solo lado',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_lobatum.jpg?width=1280',
+  s.image_attribution = 'Sf2000 (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Limonium lobatum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cambrón',
+  s.primary_habitat = 'Matorral costero y suelos salinos y nitrificados de clima cálido',
+  s.description = 'Arbusto de ramas enmarañadas y espinosas, con hojitas carnosas agrupadas en manojos. Sus flores son pequeñas, tubulares y de color violeta pálido, y da bayas rojas que comen muchas aves. Forma setos impenetrables que dan refugio a pájaros y reptiles.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ramas enredadas entre sí y terminadas en espina
+Hojas carnosas en manojitos a lo largo de la rama
+Bayas rojas pequeñas y flores tubulares violáceas',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lycium_intrincatum_(flor).JPG?width=1280',
+  s.image_attribution = 'ANE (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Lycium intricatum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cornical',
+  s.primary_habitat = 'Matorral cálido, laderas soleadas y barrancos de clima muy seco',
+  s.description = 'Arbusto de hojas estrechas y coriáceas y flores pequeñas con cinco pétalos de un pardo verdoso y aspecto aterciopelado. Sus frutos son dos vainas largas y curvas dispuestas en forma de cuerno, de donde le viene el nombre popular de cornical. Suelta látex al romperse.',
+  s.description_source = NULL,
+  s.identification_tips = 'Frutos en dos vainas curvas enfrentadas, como cuernos
+Látex blanco al partir una hoja o rama
+Flores pardo verdosas con aspecto de terciopelo',
+  s.seasonality = 'Primavera y verano (floración)',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/609975159/original.jpg',
+  s.image_attribution = 'Quentin Groom (CC0) · GBIF',
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Periploca angustifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagartija colilarga',
+  s.primary_habitat = 'Matorral litoral y laderas secas',
+  s.description = 'Lagartija esbelta de escamas grandes, quilladas y brillantes, con dos líneas claras muy marcadas a cada lado del dorso. La cola puede medir el doble que el cuerpo. Los machos lucen en primavera manchas azules en el hombro y las mejillas anaranjadas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Dos líneas claras nítidas a lo largo de cada costado
+Escamas grandes y quilladas, de aspecto brillante
+Cola larguísima, hasta el doble que el cuerpo',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Psammodromus_algirus_-_01.jpg?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Psammodromus algirus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Salsola',
+  s.primary_habitat = 'Estepas salinas y suelos margosos y yesosos con sal',
+  s.description = 'Mata baja y densa de hojas cortas y carnosas cubiertas de pequeñas papilas que le dan un tacto áspero. Es un endemismo ibérico ligado a suelos salinos y margosos, con una distribución muy fragmentada, lo que la hace especialmente sensible a la roturación.',
+  s.description_source = NULL,
+  s.identification_tips = 'Superficie de las hojas rugosa, con papilas visibles de cerca
+Mata compacta y grisácea, de porte bajo
+Frutos con alas membranosas al madurar',
+  s.seasonality = 'Verano y otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Salsola_papillosa1160031.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 5,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Salsola papillosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'poleo amargo',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Teucrium carolipaui';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Boja negra',
+  s.primary_habitat = 'Matorrales halo-nitrófilos',
+  s.description = 'Mata aromática grisácea de las bojas del sureste árido, colonizadora de suelos alterados, bordes de camino y matorrales nitrificados.',
+  s.description_source = NULL,
+  s.identification_tips = 'Olor aromático fuerte al frotar
+Follaje gris-plateado
+Indica suelos alterados',
+  s.seasonality = 'Otoño',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/173279674/original.jpeg',
+  s.image_attribution = 'Yamil J.R (CC0) · GBIF',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Artemisia barrelieri';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Orgaza',
+  s.primary_habitat = 'Matorrales halo-nitrófilos',
+  s.description = 'Mata baja y extendida, de hojas pequeñas, grisáceas y cubiertas de escamas harinosas que reflejan la luz. Marca los suelos con sal y exceso de nitrógeno, como los antiguos apriscos. Sus frutos van encerrados entre dos valvas endurecidas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas pequeñas, grises y harinosas al tacto
+Porte bajo y muy extendido, casi tendido
+Frutos entre dos valvas duras y dentadas',
+  s.seasonality = 'Verano',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/611378691/original.jpg',
+  s.image_attribution = 'Michael Bakker Paiva (CC BY 4.0) · GBIF',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Atriplex glauca';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Orejilla de roca',
+  s.primary_habitat = 'Roquedos y fisuras calcáreas costeras',
+  s.description = 'Planta rupícola de hojas redondeadas, dentadas y algo carnosas, que forma matas colgantes en las paredes calizas. Sus flores, blanquecinas con toques amarillos, se agrupan en racimos erguidos. Es un endemismo iberoafricano restringido al sureste peninsular y al norte de África.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas redondas y dentadas, casi como monedas
+Racimos de flores blanquecinas erguidos sobre el follaje
+Forma matas colgantes en pared caliza',
+  s.seasonality = 'Floración primaveral',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lafuentea_rotundifolia80857.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Lafuentea rotundifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Narciso',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lapiedra_martinezii_-_Flor_de_la_estrella.jpg?width=1280',
+  s.image_attribution = 'Formater (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Lapiedra martinezii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Plantago amplexicaulis',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Plantago_amplexicaulis_kz01.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Plantago amplexicaulis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Brochera pegajosa',
+  s.primary_habitat = 'Vive en tomillares sobre yesos, hasta 600 m',
+  s.description = 'Planta de 15-45 cm, cubierta de glandulas sésiles, por lo que resulta pegajosa, con tallos densamente foliosos, hojas de 8-25 mm, con largo pecíolo, pinnatisectas con cinco hileras de segmentos, las superiores lineares. Capítulos numerosos, solitarios en cada escapo, de 5-10 mm de diámetro, subglobosos, con varias filas de brácteas. Florecillas todas tubulares, glandulosas, amarillas. Aquenios 1,2-1,5 mm, angulosos, sin vilano.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Santolina_viscosa_kz01.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Santolina viscosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Senecio flavus',
+  s.primary_habitat = 'Ramblas, arenales y suelos removidos de clima árido',
+  s.description = 'Hierba anual de hojas carnosas y algo azuladas, con cabezuelas amarillas cuyas lígulas se enrollan hacia atrás al abrirse. Es una planta de estirpe sahariana que en Europa solo aparece en los rincones más áridos del sureste ibérico, tras las lluvias.',
+  s.description_source = NULL,
+  s.identification_tips = 'Lígulas amarillas enrolladas hacia atrás
+Hojas carnosas y de verde azulado
+Aparece en masa tras las lluvias y desaparece pronto',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Senecio_flavus_1.jpg?width=1280',
+  s.image_attribution = 'Gideon Pisanty (Gidip) גדעון פיזנטי (CC BY 3.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Senecio flavus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Espinacas',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a noviembre',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.rarity_score = 3,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Suaeda spicata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Salamanquesa común',
+  s.primary_habitat = 'Pendientes rocosas calcícolas con vegetación casmofítica',
+  s.description = 'Gecko robusto de piel tuberculada, activo al anochecer sobre roquedos, muros y cortados, donde caza insectos atraídos por la luz.',
+  s.description_source = NULL,
+  s.identification_tips = 'Piel rugosa con tubérculos
+Activa al atardecer
+Trepa por rocas y muros',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/605672084/original.jpg',
+  s.image_attribution = 'jrodben (CC BY-NC 4.0) · GBIF',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Tarentola mauritanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Teucrio de Freyn',
+  s.primary_habitat = 'Roquedos, pedregales y ramblas sobre suelos calizos secos',
+  s.description = 'Teucrio endémico del sureste ibérico, de porte bajo y aspecto blanquecino, con hojas pequeñas y enrolladas y flores rosadas o blanquecinas sin labio superior. Como todas las labiadas, tiene el tallo de sección cuadrada y desprende aroma al frotarlo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Flores sin labio superior, con los estambres asomando
+Tallo de sección cuadrada, típico de labiada
+Hojas pequeñas y enrolladas, de aspecto grisáceo',
+  s.seasonality = 'Primavera-verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_freynii_kz01.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Teucrium freynii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago de cueva',
+  s.primary_habitat = 'Cuevas y minas; caza en vuelo alto sobre bosque, campo y láminas de agua',
+  s.description = 'Murciélago de alas largas y estrechas y vuelo rápido y alto, casi como el de un vencejo. Tiene la frente muy abombada y el pelo corto y erizado en la cabeza. Recorre decenas de kilómetros entre las cuevas de cría, de tránsito y de invernada.',
+  s.description_source = NULL,
+  s.identification_tips = 'Frente muy abombada y pelo corto y de punta
+Alas largas y estrechas; vuelo veloz y alto
+Forma colonias enormes y muy apretadas en cueva',
+  s.seasonality = 'Todo el año, con desplazamientos estacionales entre cuevas',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Miniopterus_schreibersii_dasythrix.jpg?width=1280',
+  s.image_attribution = 'Andrew Smith (Public domain) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Miniopterus schreibersii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago ratonero mediano',
+  s.primary_habitat = 'Cuevas y desvanes; caza saltamontes en pastizales y herbazales',
+  s.description = 'Casi idéntico al ratonero grande, con el que a menudo comparte colonia, pero algo menor y con el hocico más estrecho y una mancha clara en la frente. Está especializado en cazar saltamontes en pastizales altos, lo que reparte el alimento entre ambas especies.',
+  s.description_source = NULL,
+  s.identification_tips = 'Muy parecido al ratonero grande, pero algo menor
+Mancha clara difusa entre los ojos
+Hocico más fino y estrecho',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Myotis-blythii-cropped.jpg?width=1280',
+  s.image_attribution = 'C. Robiller / www.naturlichter.de (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Myotis blythii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago ratonero grande',
+  s.primary_habitat = 'Cuevas y desvanes; caza escarabajos en pastos, claros y bosque sin sotobosque',
+  s.description = 'Uno de los murciélagos más grandes de Europa, con orejas largas y anchas y hocico de aspecto perruno. Caza cerca del suelo, capturando escarabajos que localiza por el ruido que hacen al andar, no solo con el sonar. Cría en colonias numerosas en cuevas y bajo cubiertas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Talla grande y orejas largas y anchas
+Hocico ancho, de aspecto casi perruno
+Caza a ras de suelo, en zonas despejadas',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Myotis.jpg?width=1280',
+  s.image_attribution = 'Urheber: Manuel Werner, Germany, Wikipedia-Kontakt: http://de.wikip… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Myotis myotis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago grande de herradura',
+  s.primary_habitat = 'Cuevas, minas y desvanes para refugiarse; caza en mosaicos de bosque y pasto',
+  s.description = 'El mayor de los murciélagos de herradura ibéricos. Debe el nombre a la hoja nasal en forma de herradura con la que emite el sonar por la nariz, no por la boca. Al reposar se envuelve por completo en las alas, como en una capa, y cuelga libre del techo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Al dormir se envuelve entero en las alas
+Hoja nasal en forma de herradura alrededor de las fosas
+Cuelga separado del techo, no metido en una grieta',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Rhinolophe_2.jpg?width=1280',
+  s.image_attribution = 'Marie Jullion (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Rhinolophus ferrumequinum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago pequeño de herradura',
+  s.primary_habitat = 'Cuevas, minas y edificios; caza en bosque, sotos y setos',
+  s.description = 'El más pequeño de los murciélagos de herradura europeos: colgado y envuelto en sus alas no llega al tamaño de una ciruela. Vuela bajo y muy cerca de la vegetación, con revoloteo de mariposa. Es muy sensible a las molestias en sus refugios de cría e invernada.',
+  s.description_source = NULL,
+  s.identification_tips = 'Tamaño minúsculo, como una ciruela colgando
+Vuelo bajo y revoloteante junto a setos y muros
+Se envuelve en las alas al reposar, como sus parientes',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Kleine_Hufeisennase.jpg?width=1280',
+  s.image_attribution = 'F. C. Robiller / naturlichter.de (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Rhinolophus hipposideros';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gusanera',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, diciembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sideritis_lasiantha32.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = NULL
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Sideritis lasiantha';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tortuga mora',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Tortuga terrestre de caparazón abombado con dibujo de placas amarillas y negras, la única silvestre del sureste peninsular. Se reconoce por un tubérculo córneo a cada lado de la cola —el «espolón»— y por no tener el peto articulado. Pasa el verano y el invierno inactiva, refugiada bajo matas y madrigueras.',
+  s.description_source = NULL,
+  s.identification_tips = 'Un tubérculo córneo a cada lado de la base de la cola
+Caparazón abombado con placas amarillas y negras
+Peto sin bisagra: no puede cerrarse del todo',
+  s.seasonality = 'Primavera y otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Nabeulensis_sarda.JPG?width=1280',
+  s.image_attribution = 'Gisella D. (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas / LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Testudo graeca';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collalba negra',
+  s.primary_habitat = 'Matorral litoral, laderas secas y roquedos',
+  s.description = 'La mayor de las collalbas, enteramente negra salvo el obispillo y la base de la cola, blancos. Vive en cortados y laderas rocosas, donde construye junto al nido una plataforma de piedrecitas que acarrea una a una. Su canto es potente y melodioso.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cuerpo negro con obispillo blanco muy contrastado
+«T» negra invertida en la cola blanca al volar
+Montoncitos de piedrecitas junto a la grieta del nido',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Black_Wheatear%2C_Isla_Plana_3.jpg?width=1280',
+  s.image_attribution = 'Andrew Thomas from Shrewsbury, UK (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Oenanthe leucura';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cogujada montesina',
+  s.primary_habitat = 'Matorral bajo, laderas pedregosas y eriales con vegetación rala',
+  s.description = 'Cogujada de cresta puntiaguda, muy parecida a la común pero de pico más corto y grueso y con el pecho más nítidamente rayado. Prefiere el matorral y las laderas pedregosas, mientras que la común busca cultivos, caminos y bordes de pueblo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cresta alta y afilada, casi triangular
+Pico más corto y romo que el de la cogujada común
+Rayado del pecho bien definido, no difuminado',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Galerida_theklae_Madrid.jpg?width=1280',
+  s.image_attribution = 'Adrian198cm (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Galerida theklae';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cogujada común',
+  s.primary_habitat = 'Cultivos, caminos, eriales y bordes de poblado con suelo desnudo',
+  s.description = 'Alondra parda de cresta alta y puntiaguda, muy ligada a caminos, cunetas y descampados junto a los pueblos. Camina en vez de saltar y, al volar, deja ver el forro rojizo de las alas y la cola con los bordes canela.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cresta larga y puntiaguda, casi siempre erguida
+Forro de las alas rojizo, visible al levantar el vuelo
+Camina por el suelo en vez de saltar',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Crested_Lark_-_Qatar.jpg?width=1280',
+  s.image_attribution = 'Ashraf Kotb (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Galerida cristata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Águila real',
+  s.primary_habitat = 'Montañas y sierras con cortados rocosos y amplias zonas abiertas de caza',
+  s.description = 'La mayor de las águilas ibéricas, con casi dos metros y medio de envergadura y una nuca dorada que le da nombre. Cría en repisas de cantiles y usa territorios enormes, que una pareja defiende durante años. Planea con las alas en una «V» muy suave y bate poco, lo que la distingue de las rapaces menores.',
+  s.description_source = NULL,
+  s.identification_tips = 'Nuca y cogote de tono dorado, visibles a buena luz
+Planea con las alas en «V» muy abierta y bate poco
+Tamaño enorme: dobla al ratonero en el mismo cielo',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Maakotka_(Aquila_chrysaetos)_by_Jarkko_J%C3%A4rvinen.jpg?width=1280',
+  s.image_attribution = 'Jarkko Järvinen (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Aquila chrysaetos';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca rabilarga',
+  s.primary_habitat = 'Matorral bajo y denso, jarales, brezales y tomillares',
+  s.description = 'Curruca pequeña, oscura y de cola muy larga que suele llevar levantada. El macho tiene el vientre vinoso y el ojo rojo rodeado de un anillo del mismo color. Es muy inquieta y rara vez se deja ver más de unos segundos antes de volver a hundirse en la mata.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola larga y erguida, casi vertical al posarse
+Ojo y anillo ocular rojos
+Vientre de color vinoso, con motitas blancas en la garganta',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_pitchou_Ichkeul_NP.jpg?width=1280',
+  s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Curruca undata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cernícalo vulgar',
+  s.primary_habitat = 'Campos abiertos, matorral, cortados y también ciudades',
+  s.description = 'El halcón más común y fácil de ver, gracias a su costumbre de cernirse: se queda suspendido en el aire batiendo las alas con la cabeza inmóvil, buscando ratones y lagartijas. El macho tiene la cabeza gris y el dorso rojizo con puntos negros; la hembra es más parda y barrada.',
+  s.description_source = NULL,
+  s.identification_tips = 'Se queda «clavado» en el aire cerniéndose
+Dorso rojizo salpicado de puntos negros
+Cola larga con una banda negra ancha en la punta',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Common_kestrel_falco_tinnunculus.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Falco tinnunculus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tarabilla europea',
+  s.primary_habitat = 'Matorral bajo, herbazales, ribazos y bordes de cultivo con posaderos',
+  s.description = 'Pájaro pequeño y regordete que se posa en lo alto de las matas, muy erguido y a la vista, para lanzarse al suelo a por insectos. El macho tiene la cabeza negra, un collar blanco a los lados y el pecho naranja. Su reclamo suena como dos piedras golpeadas, de donde le viene el nombre.',
+  s.description_source = NULL,
+  s.identification_tips = 'Siempre en lo alto de una mata, bien visible
+Macho con capucha negra y medio collar blanco
+Reclamo como el chasquido de dos cantos rodados',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Malestonechatseaham_Cropped.jpg?width=1280',
+  s.image_attribution = 'derivative work: Myosotis Scorpioides (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Saxicola rubicola';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tórtola europea',
+  s.primary_habitat = 'Sotos, arboledas y matorral alto junto a cultivos y ramblas',
+  s.description = 'La más pequeña y grácil de nuestras palomas, con el dorso escamado en negro y canela y un parche a rayas blancas y negras en el cuello. Su arrullo ronco y adormecedor es uno de los sonidos del verano. Sus poblaciones han caído mucho en Europa por la pérdida de barbechos y setos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Espalda escamada, como un mosaico canela y negro
+Parche rayado blanco y negro a los lados del cuello
+Arrullo ronco y vibrante, muy distinto al de la tórtola turca',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Streptopelia_turtur_Grlica0036.jpg?width=1280',
+  s.image_attribution = 'Zrno at Serbian Wikipedia (Public domain) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE, Anexo II (especie cinegética)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Streptopelia turtur';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Águila perdicera',
+  s.primary_habitat = 'Sierras con cortados rocosos y amplias zonas abiertas de matorral y cultivo para cazar',
+  s.description = 'Águila mediana de alas largas y cola larga, con el vientre blanco finamente rayado y una mancha blanca en la espalda que se ve bien en vuelo. Caza a gran velocidad y a poca altura, sorprendiendo a perdices, conejos y palomas. Las parejas ocupan el mismo cortado durante años.',
+  s.description_source = NULL,
+  s.identification_tips = 'Mancha blanca en el centro de la espalda, visible desde arriba
+Vientre claro y muy rayado, con una banda oscura en el borde del ala
+Vuelo bajo y rápido cuando caza, no en círculos altos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aguila_perdicera.jpg?width=1280',
+  s.image_attribution = 'Paco Gómez from Castellón, Spain (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas: Vulnerable","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Aquila fasciata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcaraván',
+  s.primary_habitat = 'Llanos pedregosos, cultivos de secano, ramblas y eriales con poca cobertura',
+  s.description = 'Ave de aspecto extraño y ojos amarillos enormes, adaptados a la actividad nocturna. De día permanece agachada e inmóvil, confiada en su plumaje críptico, y solo al anochecer se activa y delata con un reclamo silbado y melancólico que recuerda al del zarapito.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ojos amarillos desproporcionadamente grandes
+Dos barras blancas y negras en el ala plegada
+Reclamo silbado y triste al anochecer',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Burhinus_oedicnemus_insularum_Lanzarote_1.jpg?width=1280',
+  s.image_attribution = 'Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Burhinus oedicnemus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gaviota de Audouin',
+  s.primary_habitat = 'Islotes y costas mediterráneas; pesca en mar abierto cerca de la orilla',
+  s.description = 'Gaviota mediterránea de tamaño medio, elegante y de aspecto más «limpio» que la patiamarilla, con el pico rojo coral anillado de negro y las patas verdosas oscuras. Pesca al vuelo rozando el agua, sobre todo de noche y de madrugada. Cría en colonias muy concentradas en islotes y salinas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Pico rojo coral con una banda negra cerca de la punta
+Patas verde oscuro, no amarillas
+Ojo oscuro que le da expresión suave',
+  s.seasonality = 'Todo el año, con concentraciones en verano',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/611415320/original.jpg',
+  s.image_attribution = 'Michael Bakker Paiva (CC BY 4.0) · GBIF',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas (CEEA): Vulnerable","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Larus audouinii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chova piquirroja',
+  s.primary_habitat = 'Cortados rocosos, cantiles y montañas, alimentándose en pastizales cercanos',
+  s.description = 'Córvido negro y brillante con el pico rojo, largo y curvo, y las patas del mismo color encendido. Vuela en grupos acrobáticos junto a los cantiles, plegando las alas y dejándose caer por puro juego. Busca larvas hurgando en el suelo de los pastos con ese pico de sonda.',
+  s.description_source = NULL,
+  s.identification_tips = 'Pico rojo, largo y curvado hacia abajo
+Reclamo agudo, un «chiaa» nasal muy característico
+Plumas de la punta del ala muy separadas, como dedos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pyrrhocorax_pyrrhocorax_-standing-8.jpg?width=1280',
+  s.image_attribution = 'File:Alpenkrähe.jpg: "Malte Uhl (User:Zzzip)" derivative work: Snow… (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Pyrrhocorax pyrrhocorax';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Charrán patinegro',
+  s.primary_habitat = 'Costas, bahías y salinas; pesca sobre aguas someras',
+  s.description = 'Charrán grande y pálido, con un penacho negro despeinado en la nuca y un pico negro rematado en amarillo, como si lo hubiera mojado en mostaza. Pesca zambulléndose de golpe desde varios metros de altura. Fuera de la época de cría pierde el negro de la frente y queda con la coronilla blanca.',
+  s.description_source = NULL,
+  s.identification_tips = 'Punta amarilla en el pico negro
+Nuca con plumas negras erizadas, en penacho
+Se lanza al agua en picado, plegando las alas',
+  s.seasonality = 'Otoño e invierno principalmente',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/606127388/original.jpg',
+  s.image_attribution = 'Diego González Dopico (CC BY 4.0) · GBIF',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Thalasseus sandvicensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cormorán moñudo',
+  s.primary_habitat = 'Costas rocosas, acantilados e islotes; pesca buceando cerca de la orilla',
+  s.description = 'Cormorán marino de plumaje negro con reflejos verdosos, más esbelto que el grande y con la frente empinada. Bucea desde la superficie con un salto característico y persigue peces bajo el agua. Se seca con las alas abiertas sobre las rocas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Salta hacia arriba antes de sumergirse
+Frente muy empinada y pico fino
+Se posa en roca con las alas abiertas al sol',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Shag_Phalacrocorax_aristotelis.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"Subespecie mediterránea (desmarestii) catalogada Vulnerable en el Catálogo Español de Especies Amenazadas","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Gulosus aristotelis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Búho real',
+  s.primary_habitat = 'Cortados rocosos, barrancos y laderas con matorral y zonas abiertas de caza',
+  s.description = 'El mayor búho de Europa, con casi dos metros de envergadura, penachos de plumas erguidos sobre la cabeza y ojos de un naranja encendido. Caza conejos, ratas e incluso otras rapaces. Su canto es un «bu-bo» profundo que se propaga kilómetros por los barrancos en las noches de invierno.',
+  s.description_source = NULL,
+  s.identification_tips = 'Penachos de plumas erguidos a los lados de la cabeza
+Ojos naranjas muy intensos
+Canto grave y profundo en las noches de invierno',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Bubo_bubo_sibiricus_-_01.JPG?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Bubo bubo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Camachuelo trompetero',
+  s.primary_habitat = 'Ramblas, laderas peladas y llanos pedregosos de clima muy árido',
+  s.description = 'Pequeño fringílido de aspecto discreto y pardo arenoso, con un pico corto, muy grueso y de color rojo coral en primavera. El macho tiene además el pecho y el obispillo teñidos de rosa. Su reclamo es un zumbido nasal inconfundible, como una trompeta de juguete.',
+  s.description_source = NULL,
+  s.identification_tips = 'Pico corto y muy grueso, rojo coral en primavera
+Reclamo nasal y zumbante, como una corneta pequeña
+Tonos rosados en pecho y obispillo del macho',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Bucanetes_githagineus_-Salinas_de_Janubio%2C_Lanzarote%2C_Spain-8.jpg?width=1280',
+  s.image_attribution = 'Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"Catalogado como Vulnerable en el Libro Rojo de las Aves de España (población ibérica escasa y localizada)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Bucanetes githagineus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Abubilla',
+  s.primary_habitat = 'Campos abiertos, dehesas, cultivos con arbolado y bordes de matorral',
+  s.description = 'Ave inconfundible de color canela con alas y cola a franjas blancas y negras, y una cresta eréctil que despliega en abanico al posarse. Sondea el suelo blando con el pico largo y curvo en busca de larvas e insectos. Su canto, un «up-up-up» sordo y repetido, se oye de lejos en primavera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Vuelo ondulante y torpe, como una mariposa grande
+Cresta que abre en abanico justo al aterrizar
+Camina por el suelo clavando el pico largo y curvo',
+  s.seasonality = 'Todo el año en el sur peninsular; estival en el resto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Wiedehopf_mit_Puppe_als_Futter.jpg?width=1280',
+  s.image_attribution = 'Sven Damerow (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Upupa epops';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Garceta común',
+  s.primary_habitat = 'Marismas, salinas, ramblas con agua, arrozales y orillas costeras',
+  s.description = 'Garza blanca y esbelta, de tamaño medio, con el pico negro y las patas negras rematadas en unos pies amarillos llamativos. Pesca removiendo el fondo con esas patas para levantar peces y camarones. En época de cría luce dos plumas largas y finas en la nuca.',
+  s.description_source = NULL,
+  s.identification_tips = 'Pies amarillos al final de patas negras
+Pico negro y fino, no amarillo
+Remueve el fondo con una pata mientras acecha',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aigrette_garzette_au_lac_sud_de_Tunis_(site_RAMSAR).jpg?width=1280',
+  s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Egretta garzetta';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Papamoscas gris',
+  s.primary_habitat = 'Arbolado abierto, bordes de bosque, huertos y jardines con perchas altas',
+  s.description = 'Pájaro discreto de color pardo grisáceo, sin marcas llamativas, que se reconoce mejor por su conducta que por su aspecto: se posa muy erguido en una rama descubierta, sale disparado a cazar un insecto en el aire y vuelve exactamente a la misma percha. Repite la maniobra decenas de veces.',
+  s.description_source = NULL,
+  s.identification_tips = 'Vuelve siempre a la misma rama tras cada vuelo de caza
+Postura muy vertical, con las alas caídas
+Frente y pecho con un rayado fino y difuso',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/SpottedFlycatcheronfence.jpg?width=1280',
+  s.image_attribution = 'Andrew Easton (Attribution) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Muscicapa striata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chotacabras cuellirrojo',
+  s.primary_habitat = 'Matorral abierto, pinares aclarados, ramblas y caminos térreos',
+  s.description = 'Ave crepuscular de plumaje jaspeado que imita la hojarasca, tan mimético que de día resulta casi imposible verla posada en el suelo. Caza polillas en vuelo con la boca muy abierta. Su canto nocturno es un «cu-toc, cu-toc» repetido de forma monótona durante minutos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Collar rojizo en la nuca, más marcado que en su pariente europeo
+Se levanta del camino al anochecer y vuelve a posarse unos metros más allá
+Canto nocturno monótono, como un motor lejano',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Caprimulgus_ruficollis_-Portugal-8.jpg?width=1280',
+  s.image_attribution = 'Olivença (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Caprimulgus ruficollis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chorlitejo patinegro',
+  s.primary_habitat = 'Playas, salinas, marismas y llanos arenosos junto al mar',
+  s.description = 'Chorlitejo pequeño y pálido, de patas oscuras, que corretea por la arena en carreras cortas seguidas de paradas bruscas. Su nido es una simple depresión en la arena con los huevos perfectamente camuflados, por lo que las puestas se pierden con facilidad bajo el pisoteo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Collar oscuro interrumpido en el centro del pecho
+Corre a ratos y se para en seco, una y otra vez
+Plumaje muy pálido, del color de la arena seca',
+  s.seasonality = 'Todo el año, con máximos en primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Charadrius_alexandrinus_-_Kentish_Plover_03.jpg?width=1280',
+  s.image_attribution = 'Zeynel Cebeci (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas (CEEA): Vulnerable","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Charadrius alexandrinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gaviota reidora',
+  s.primary_habitat = 'Costas, salinas, embalses, ríos y campos de cultivo inundados',
+  s.description = 'Gaviota pequeña y ágil, muy común en invierno tierra adentro. En verano lleva la cabeza cubierta por una capucha de color chocolate; en invierno solo le queda una mancha oscura tras el ojo. En vuelo enseña una cuña blanca inconfundible en el borde delantero del ala.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cuña blanca en el filo delantero del ala, visible en vuelo
+En invierno, una mancha oscura como un auricular tras el ojo
+Pico y patas rojo oscuro',
+  s.seasonality = 'Otoño e invierno',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/605325270/original.jpg',
+  s.image_attribution = 'lalaia (CC BY 4.0) · GBIF',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Chroicocephalus ridibundus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebrera europea',
+  s.primary_habitat = 'Sierras y llanos con matorral, ramblas y bosque abierto',
+  s.description = 'Águila grande y muy pálida por debajo, especializada en comer culebras y lagartos. Se ciñe en el aire durante largos ratos, con las patas colgando, escrutando el suelo antes de dejarse caer. La cabeza, ancha y con ojos amarillos muy frontales, le da un aire de lechuza.',
+  s.description_source = NULL,
+  s.identification_tips = 'Vientre y alas casi blancos vistos desde abajo
+Se mantiene cerniéndose, algo raro en un águila tan grande
+Cabeza ancha y ojos amarillos, aspecto de búho',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aguila_culebrera_(Circaetus_gallicus).jpg?width=1280',
+  s.image_attribution = 'Paco Gómez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Circaetus gallicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca tomillera',
+  s.primary_habitat = 'Matorral bajo y abierto, tomillares y saladares con arbustos dispersos',
+  s.description = 'Curruca menuda de matorral raso, gris en la cabeza, parda en el dorso y con las plumas del ala ribeteadas de castaño encendido. El anillo blanco del ojo le da el aire de «gafas» que le da nombre. Es inquieta y suele delatarse por su reclamo antes de dejarse ver.',
+  s.description_source = NULL,
+  s.identification_tips = 'Anillo blanco alrededor del ojo bien marcado
+Panel castaño vivo en el ala plegada
+Vive en matorral muy bajo, no en arbolado',
+  s.seasonality = 'Todo el año en el sureste; parcialmente migradora',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_%C3%A0_lunettes_Aqueduc_de_Zaghouan.jpg?width=1280',
+  s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Curruca conspicillata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Azor común',
+  s.primary_habitat = 'Bosques maduros y masas forestales densas con claros',
+  s.description = 'Rapaz forestal de alas cortas y anchas y cola larga, diseñada para perseguir presas entre los árboles a gran velocidad. Es esquiva y se ve casi siempre de refilón. La hembra llega a ser un tercio mayor que el macho, una diferencia poco habitual entre las aves.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ceja blanca marcada sobre el ojo, como un antifaz al revés
+Vuelo de varios aleteos rápidos seguidos de un planeo corto
+Pecho finamente rayado en horizontal en los adultos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Northern_Goshawk_ad_M2.jpg?width=1280',
+  s.image_attribution = 'Norbert Kenntner, Berlin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Accipiter gentilis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Terrera común',
+  s.primary_habitat = 'Llanos de cultivo, eriales y pastizales rasos con suelo desnudo',
+  s.description = 'Alondra pequeña y pálida de aspecto muy limpio, con el pecho sin apenas rayado salvo una mancha oscura a cada lado del cuello. Anida en el suelo, en cultivos y baldíos. En migración se agrupa en bandos que se levantan del suelo todos a la vez.',
+  s.description_source = NULL,
+  s.identification_tips = 'Mancha oscura a cada lado del cuello, como un botón
+Pecho limpio, sin rayado extenso
+Ceja clara y pico corto y grueso de granívora',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Alondra.jpg?width=1280',
+  s.image_attribution = 'Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Calandrella brachydactyla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carraca europea',
+  s.primary_habitat = 'Campos abiertos con arbolado disperso, ribazos y construcciones con huecos',
+  s.description = 'Del tamaño de una paloma y de un azul turquesa intenso que sorprende al levantar el vuelo. Caza al acecho desde cables y postes, dejándose caer sobre saltamontes y escarabajos. Cría en huecos de árboles viejos y de edificios, de ahí que dependa de que queden árboles añosos y ruinas en el campo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Azul turquesa que solo se aprecia bien cuando vuela
+Espalda de color canela que contrasta con el azul
+Posada quieta en cables, oteando el suelo',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/European_roller.jpg?width=1280',
+  s.image_attribution = 'Christian Svane (CC BY-SA 2.5) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Coracias garrulus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Halcón peregrino',
+  s.primary_habitat = 'Cortados y áreas abiertas',
+  s.description = 'Halcón robusto de alas puntiagudas y cola corta, capaz de superar los 300 km/h en el picado con que abate a otras aves en pleno vuelo. Se reconoce por la ancha bigotera negra que baja desde el ojo sobre un pecho claro y barrado.',
+  s.description_source = NULL,
+  s.identification_tips = 'Bigotera negra ancha bajo el ojo, como un casco
+Silueta de ancla: alas puntiagudas y cola corta
+Pecho claro con barrado fino en horizontal',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Falco_peregrinus_-_01.jpg?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Falco peregrinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Águila calzada',
+  s.primary_habitat = 'Bosques y sierras con arbolado, cazando sobre zonas abiertas cercanas',
+  s.description = 'Águila pequeña, del tamaño de un ratonero, con dos formas de plumaje muy distintas: una clara con el vientre blanco y otra oscura y uniforme. Nidifica en árboles dentro del bosque y caza en campo abierto lanzándose desde altura. Se identifica en vuelo por las «luces de posición»: dos manchas blancas en el arranque de las alas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Dos manchas blancas donde el ala se une al cuerpo
+Existen ejemplares claros y oscuros de la misma especie
+Cola larga y recta, sin la muesca del milano',
+  s.seasonality = 'Primavera y verano (estival); algunos ejemplares invernan',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Booted_eagle%2C_Hieraaetus_pennatus%2C_at_Kgalagadi_Transfrontier_Pa_(32334023348).jpg?width=1280',
+  s.image_attribution = 'Derek Keats from Johannesburg, South Africa (CC BY 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Hieraaetus pennatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Torcecuello euroasiático',
+  s.primary_habitat = 'Bosques abiertos, sotos, huertos y arboledas con madera muerta',
+  s.description = 'Pariente de los pájaros carpinteros que ni pica la madera ni trepa por los troncos: se posa de través en las ramas y come hormigas del suelo con una lengua larguísima. Su plumaje jaspeado en grises y pardos imita la corteza. Si se le molesta en el nido, retuerce el cuello como una culebra, de ahí su nombre.',
+  s.description_source = NULL,
+  s.identification_tips = 'Plumaje veteado como corteza, difícil de ver quieto
+Se posa a lo largo de la rama, no agarrado al tronco
+Franja oscura desde la nuca hasta la mitad de la espalda',
+  s.seasonality = 'Paso migratorio e invernada',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Jinxtorquilla.jpg?width=1280',
+  s.image_attribution = 'User:Aelwyn (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Jynx torquilla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Calandria común',
+  s.primary_habitat = 'Llanos cerealistas, pastizales y estepas de suelo profundo',
+  s.description = 'La mayor de las alondras ibéricas, robusta y de pico grueso, con una mancha negra muy marcada a cada lado del cuello. Canta en vuelo, describiendo círculos altos con un torrente de notas en el que imita a otras aves. En invierno forma bandos numerosos en los llanos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Babero negro a cada lado del cuello
+Borde trasero del ala blanco y visible en vuelo
+Pico grueso y pálido, de granívora',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Melanocorypha_calandra.jpg?width=1280',
+  s.image_attribution = 'Bereşe.jpg: Dûrzan cîrano derivative work: Osado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Melanocorypha calandra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collalba rubia',
+  s.primary_habitat = 'Laderas secas y pedregosas con matorral bajo y suelo desnudo',
+  s.description = 'Collalba pequeña y contrastada: el macho es color arena claro con las alas negras y un antifaz o una garganta negros según la variedad. Como todas las collalbas, enseña al volar una cola blanca con una «T» negra invertida. Caza insectos lanzándose al suelo desde una piedra o una mata.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola blanca con una «T» negra al abrirse
+Alas negras que resaltan sobre el cuerpo color arena
+Se posa erguida en piedras y matas, muy visible',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Black-eared_Wheatear%2C_Punta_del_Sabinar%2C_Spain.jpg?width=1280',
+  s.image_attribution = 'Vince Smith from London, United Kingdom (CC BY-SA 2.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Oenanthe hispanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zampullín común',
+  s.primary_habitat = 'Charcas, embalses, ramblas remansadas y canales con vegetación',
+  s.description = 'El más pequeño de los somormujos, rechoncho y sin cola aparente, que pasa más tiempo bajo el agua que sobre ella. En primavera luce las mejillas y el cuello de color castaño y una mancha amarilla en la comisura del pico. Su reclamo es un relincho agudo y vibrante muy característico.',
+  s.description_source = NULL,
+  s.identification_tips = 'Silueta redonda, sin cola visible, como un corcho
+Se sumerge sin salpicar y reaparece lejos
+Relincho agudo y tembloroso desde la vegetación',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Zwergtaucher_060319_3.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Tachybaptus ruficollis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Treparriscos',
+  s.primary_habitat = 'Paredes rocosas, cantiles y barrancos; en invierno baja a roquedos y edificios',
+  s.description = 'Pájaro de alta montaña que trepa por paredes verticales agitando las alas como una mariposa gigante, mostrando unos vistosos paneles rojos. Extrae insectos de las grietas con un pico largo y fino. En invierno desciende y puede aparecer en cortados bajos, castillos y presas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Manchas rojo carmín en las alas al abrirlas
+Trepa por la roca a saltos, aleteando sin parar
+Pico largo, fino y algo curvado',
+  s.seasonality = 'Otoño e invierno fuera de la alta montaña',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tichodroma_muraria02_cropped.jpg?width=1280',
+  s.image_attribution = 'derivative work: Hämbörger (talk) Tichodroma_muraria02.jpg: User:Kulac (CC BY-SA 3.0) · Wikimedia Commons',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Tichodroma muraria';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Pino carrasco',

@@ -124,6 +124,8 @@ antes de aceptarlas: el buscador no garantiza que la foto sea del sitio.
 | sierra-de-la-pila | Mojón de las Cuatro Caras | sin foto | ninguna candidata pasó licencia y carga |
 | sierra-de-la-pila | Casa del Boticario | sin foto | ninguna candidata pasó licencia y carga |
 | sierra-de-la-pila | Yacimiento paleontológico de Cañada Molina | sin foto | ninguna candidata pasó licencia y carga |
+| sierra-de-las-moreras | Cabezo del Plomo | ya tenía foto | https://commons.wikimedia.org/wiki/Special:FilePath/Cabezo_del_Plomo_-_Megalitismo._Sepulgro_tipo_Tholos.jpg?width=1280 |
+| sierra-de-las-moreras | Morrón Blanco | ya tenía foto | https://commons.wikimedia.org/wiki/Special:FilePath/Punto_Geodesico_Morron_Blanco.jpg?width=1280 |
 | sierra-de-salinas | Alto de la Capilla del Fraile | ya tenía foto | https://commons.wikimedia.org/wiki/Special:FilePath/VG_n%C2%BA_87059_La_Capilla.jpg?width=1280 |
 | sierra-de-salinas | Peña del Águila | sin foto | ninguna candidata pasó licencia y carga |
 | sierra-de-salinas | Peña de los Machos | sin foto | ninguna candidata pasó licencia y carga |

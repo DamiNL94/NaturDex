@@ -36,10 +36,11 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    > (deuda nº 1).
    >
    > **Y transcribirlos funciona, que es lo que había que comprobar.** Vuelto a medir el 2026-08-22
-   > sobre trece espacios: **331 de 2.035 (16 %)**. La cifra no ha bajado porque nadie relajara nada
-   > sino porque los cinco espacios dados de alta desde entonces llegan con su plan transcrito, y ahí
-   > el suelo se hunde: San Pedro del Pinatar, Calblanque y Cabezo Gordo se quedan en **0** fichas
-   > sostenidas solo por GBIF, y el Humedal del Ajauque en **2 de 175**. Arriba siguen los cuatro sin
+   > sobre catorce espacios: **331 de 2.094 (16 %)**. La cifra no ha bajado porque nadie relajara nada
+   > sino porque los seis espacios dados de alta desde entonces llegan con su plan transcrito —o con
+   > el «no hay plan» escrito en la norma, que es el caso de Sierra de las Moreras—, y ahí el suelo se
+   > hunde: San Pedro del Pinatar, Calblanque, Cabezo Gordo y Sierra de las Moreras se quedan en **0**
+   > fichas sostenidas solo por GBIF, y el Humedal del Ajauque en **2 de 175**. Arriba siguen los cuatro sin
    > plan —Carrascoy 50 %, Cuatro Calas 47 %, Cabo Cope 34 %, Sierra Espuña 27 %— y, con ellos,
    > **Sierra de la Pila con un 27 % teniendo el suyo transcrito**: ahí el anexo enumera 244 taxones
    > pero el catálogo tiene 160 fichas, así que lo que falla no es la puerta sino que su plan
@@ -72,7 +73,12 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
 Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 [`Docs/runbook/ORDEN-DE-OPERACIONES.md`](Docs/runbook/ORDEN-DE-OPERACIONES.md).
 
-- `species:apply` sin `species:extract` antes **pisa** las fotos escritas en el `park.json`.
+- `species:apply` sin `species:extract` antes **pisa** las fotos escritas en el `park.json`. Y el
+  orden que lo dispara era **el del propio runbook**, que ponía el `extract` ANTES de `images:species`
+  y ninguno después: `wikimedia-images.js` escribe la foto solo en el `park.json`, así que las que
+  encontraba se revertían en el mismo comando, con las dos herramientas diciendo «resueltas N» y
+  «actualizadas M» en verde. Corregido el 2026-08-22 (lo pagó *Merendera filifolia*): hace falta un
+  **segundo `species:extract` detrás de las fotos**.
 - Una entrada obsoleta en `data/contenido/*.json` **revierte** cualquier corrección en cada extracción.
 - **Renombrar un taxón** desengancha su entrada del catálogo universal y su texto de
   `data/contenido/`, que se indexan por nombre científico. Cambia la clave allí también y pasa

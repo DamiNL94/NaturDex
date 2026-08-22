@@ -192,6 +192,7 @@ npm run species:extract      # vuelca a especies-universal.json lo nuevo de los 
 npm run images:species       # fotos de Wikimedia con atribución
 npm run images:habitats      # portadas de hábitat
 npm run images:pois          # fotos de POIs desde la categoría de Commons del espacio
+npm run species:extract      # OTRA VEZ, y no es un despiste: ver el recuadro de abajo
 npm run species:apply        # sincroniza los campos universales a TODOS los park.json + SQL
 npm run habitats:check       # hábitats sin descripción universal, textos con rastro de un parque
 npm run habitats:apply       # descripción por código HIC a TODOS los park.json + Data/fitosociologia.json + SQL
@@ -202,6 +203,21 @@ npm run validate             # hasta verde
 npm run glossary:check       # vocabulario nuevo sin definición
 npm run taxones:duplicados   # el mismo taxón con dos nombres
 ```
+
+> **El `species:extract` de después de las fotos es obligatorio, y sin él `species:apply` DESHACE
+> todo lo que acaban de encontrar.** `wikimedia-images.js` escribe la foto y su atribución **solo en
+> el `park.json`**, y `image`/`imageAttribution` son campos UNIVERSALES: `species:apply` los reparte
+> desde `especies-universal.json`, así que lo que no haya pasado por el catálogo se sobrescribe con
+> el `null` que sigue habiendo allí. Es la trampa nº 4 del `CLAUDE.md` —corregir un campo universal
+> en el `park.json` y no en el catálogo— pero disparada por una herramienta del propio runbook, no
+> por un despiste. Y **no falla**: `images:species` dice «resueltas N», `species:apply` dice
+> «actualizadas M», las dos en verde, y la foto ya no está. El `extract` de en medio es lo que la
+> sube al catálogo (rellena el campo vacío desde el `park.json`, `sync-species-catalog.js:219`) para
+> que `apply` la reparta en vez de pisarla. Pasó el 2026-08-22 con *Merendera filifolia*, resuelta
+> para Calblanque y Espacios Abiertos y revertida en el mismo comando.
+>
+> La prueba de que ha ido bien es la de siempre: `species:apply` en segundo pase → «actualizadas 0»,
+> y la foto sigue en el `park.json`.
 
 POIs **solo desde fuente documental** (PORN/PRUG, red de senderos oficial, cartografía del organismo
 gestor). Un POI sin fuente no entra. `pois:build` **no** salta esa regla: barre OpenStreetMap dentro
@@ -229,6 +245,7 @@ el informe de cierre lista los huecos conocidos.
 [ ] npm run taxones:duplicados          código 0, o los pendientes justificados
 [ ] npm run glossary:check              vocabulario nuevo redactado o anotado
 [ ] npm run species:extract             SEGUNDO pase → 0 cambios (idempotencia)
+[ ] npm run species:extract             y uno DESPUÉS de las fotos, o species:apply las revierte
 [ ] npm run species:apply               SEGUNDO pase → 0 fichas actualizadas
 [ ] npm run habitats:check              0 hábitats sin descripción y 0 asociaciones sin lectura llana
 [ ] npm run habitats:apply              SEGUNDO pase → 0 hábitats actualizados
