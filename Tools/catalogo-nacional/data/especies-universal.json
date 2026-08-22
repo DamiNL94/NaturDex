@@ -3951,7 +3951,8 @@
       "categoria": "Catalogado como Vulnerable en el Libro Rojo de las Aves de España (población ibérica escasa y localizada)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Bufo bufo": {
     "commonName": "Bufo bufo",
@@ -7611,8 +7612,8 @@
     },
     "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": null,
-    "imageAttribution": null,
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Corynephorus_divaricatus_674723077.jpg?width=1280",
+    "imageAttribution": "Josep Gesti (CC BY-SA 4.0) · Wikimedia Commons",
     "eidosTaxonId": 9970,
     "rarityBasis": null
   },
@@ -11941,7 +11942,8 @@
       "categoria": "Subespecie mediterránea (desmarestii) catalogada Vulnerable en el Catálogo Español de Especies Amenazadas",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Gymnosporia senegalensis": {
     "commonName": "Arto",
@@ -16750,8 +16752,8 @@
     },
     "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": null,
-    "imageAttribution": null,
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Merendera_filifolia.jpg?width=1280",
+    "imageAttribution": "Rubenbiologo (CC BY-SA 4.0) · Wikimedia Commons",
     "eidosTaxonId": 6169,
     "rarityBasis": null
   },
@@ -17544,7 +17546,8 @@
       "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Myotis capaccinii": {
     "commonName": "Murciélago patudo",
@@ -20503,6 +20506,31 @@
     },
     "descriptionSource": null
   },
+  "Plantago amplexicaulis": {
+    "commonName": "Plantago amplexicaulis",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Febrero a junio",
+    "rarityScore": 4,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Lamiales",
+      "family": "Plantaginaceae",
+      "genus": "Plantago"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Plantago_amplexicaulis_kz01.jpg?width=1280",
+    "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 7148,
+    "rarityBasis": null
+  },
   "Plantago coronopus": {
     "commonName": "Aquinácea",
     "kingdom": "flora",
@@ -22393,7 +22421,8 @@
       "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Rhinolophus mehelyi": {
     "commonName": "Murciélago mediano de herradura",
@@ -24237,6 +24266,31 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
+  "Sideritis lasiantha": {
+    "commonName": "Gusanera",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, diciembre",
+    "rarityScore": 2,
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Lamiales",
+      "family": "Lamiaceae",
+      "genus": "Sideritis"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sideritis_lasiantha32.jpg?width=1280",
+    "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
+    "eidosTaxonId": 8338,
+    "rarityBasis": null
+  },
   "Sideritis leucantha": {
     "commonName": "Rabo de gato",
     "kingdom": "flora",
@@ -25850,7 +25904,8 @@
       "categoria": "Catálogo Español de Especies Amenazadas / LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
-    }
+    },
+    "descriptionSource": null
   },
   "Tetraclinis articulata": {
     "commonName": "Sabina de Cartagena",

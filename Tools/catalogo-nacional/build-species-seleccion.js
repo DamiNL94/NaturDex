@@ -308,6 +308,44 @@ function sinSalvedades(nombre) {
   return String(nombre || '').replace(/\s*\([^)]*\)\s*$/, '').trim();
 }
 
+/**
+ * Quita la AUTORÍA que el formulario pega detrás del nombre —«Sideritis lasiantha Pers.»,
+ * «Anagallis tenella (L.) L.»—, que es la tercera forma de nombre torcido del FND y la única que
+ * seguía entrando entera. Y entraba SIN FALLAR: el cruce del formulario está hecho por `binomio`,
+ * que descarta el tercer token, así que EIDOS resolvía la especie y le daba su `taxonid`; lo que se
+ * torcía era la CLAVE, porque un candidato de nivel 1 se da de alta con su `scientificName` y ése
+ * es el nombre con el que la ficha entra en el catálogo universal. Resultado: la misma planta
+ * fichada como «Sideritis lasiantha Pers.» aquí y «Sideritis lasiantha» en el espacio siguiente,
+ * que son dos entradas y ningún aviso — `scan-taxones-duplicados` agrupa por identificador externo
+ * y las vería, pero solo DESPUÉS de haberlas escrito las dos.
+ *
+ * La regla distingue autoría de epíteto por la mayúscula, que es lo que las separa de verdad: en un
+ * trinomial la subespecie va en minúscula («Phalacrocorax aristotelis aristotelis») y una autoría
+ * empieza siempre por mayúscula o es un paréntesis. Del tercer token en adelante se corta en cuanto
+ * aparece uno así, salvo que venga detrás de un marcador de rango («subsp.», «var.», «f.»), donde
+ * lo que sigue es parte del nombre y no su autor.
+ *
+ * El verbatim NO se pierde: sigue en `sitio.mapa`, que es de donde sale la cita de la ficha.
+ */
+const RANGOS = new Set(['subsp.', 'ssp.', 'var.', 'subvar.', 'f.', 'subf.', 'nothosubsp.']);
+function sinAutoria(nombre) {
+  const tokens = String(nombre || '').trim().split(/\s+/);
+  if (tokens.length <= 2) return tokens.join(' ');
+  const limpio = tokens.slice(0, 2);
+  for (let i = 2; i < tokens.length; i++) {
+    const t = tokens[i];
+    if (RANGOS.has(t.toLowerCase())) {
+      // El marcador y el epíteto que lo sigue son nombre; lo que venga después ya es autoría.
+      limpio.push(t);
+      if (tokens[i + 1]) limpio.push(tokens[++i]);
+      continue;
+    }
+    if (/^[(A-ZÁÉÍÓÚÑ]/.test(t)) break;
+    limpio.push(t);
+  }
+  return limpio.join(' ');
+}
+
 function candidatosDocumentales(anexo, sitio, yaEstan) {
   const nuevos = new Map();
   const añade = (nombre, clase) => {
@@ -327,15 +365,17 @@ function candidatosDocumentales(anexo, sitio, yaEstan) {
   // A = anfibios y reptiles, F = peces, P = plantas, I = invertebrados). Solo se traduce la de las
   // aves, que es la que necesita el filtro 3 bis; el resto lo resuelve EIDOS.
   //
-  // Y se le quitan las SALVEDADES entre paréntesis por el mismo motivo que al anexo se le quitan las
-  // erratas: «Falco peregrinus ([including pelegrinoides])» no es un nombre, es un nombre más una
-  // nota de alcance, y EIDOS no lo resuelve. El índice del formulario sí sabe cruzarlo —está hecho
-  // por binomio— así que el candidato ENTRABA, y se caía después en la resolución con un motivo que
-  // hacía pensar en una errata de la fuente. En Calblanque costaba seis aves de nivel 1, el halcón
-  // peregrino entre ellas, en un parque de acantilados. El verbatim del formulario no se pierde:
-  // sigue en `sitio.mapa`, que es de donde sale la cita de la ficha.
+  // Y se le quitan las SALVEDADES entre paréntesis y la AUTORÍA por el mismo motivo que al anexo se
+  // le quitan las erratas. «Falco peregrinus ([including pelegrinoides])» no es un nombre, es un
+  // nombre más una nota de alcance, y EIDOS no lo resuelve: el índice del formulario sí sabe
+  // cruzarlo —está hecho por binomio— así que el candidato ENTRABA, y se caía después en la
+  // resolución con un motivo que hacía pensar en una errata de la fuente. En Calblanque costaba
+  // seis aves de nivel 1, el halcón peregrino entre ellas, en un parque de acantilados.
+  // «Sideritis lasiantha Pers.» es el caso simétrico y peor, porque no se cae: se resuelve, entra, y
+  // se lleva la autoría pegada a la clave del catálogo universal (ver `sinAutoria`).
+  // El verbatim del formulario no se pierde: sigue en `sitio.mapa`, que es de donde sale la cita.
   for (const lista of sitio.mapa.values()) {
-    for (const e of lista) añade(sinSalvedades(e.scientificName), e.grupoCodigo === 'B' ? 'Aves' : null);
+    for (const e of lista) añade(sinAutoria(sinSalvedades(e.scientificName)), e.grupoCodigo === 'B' ? 'Aves' : null);
   }
   return [...nuevos.values()];
 }
@@ -359,6 +399,9 @@ function candidatos() {
     }
   }
   const distintas = new Map((g.especies || []).map(s => [s.name, s.occurrences]));
+  // La clave de GBIF por nombre, que es el respaldo de `eidos_taxonid` como clave maestra
+  // (CLAUDE.md §0c). Hace falta en `reconcilia`: ver `gbifSpeciesKey` allí.
+  const clavesGbif = new Map((g.especies || []).map(s => [s.name, s.speciesKey]).filter(([, k]) => k != null));
   if (!distintas.size) {
     // Un `--json` viejo no trae la cuenta por especie. Se avisa en vez de volver a la suma en
     // silencio: la diferencia decide qué especies entran en el catálogo.
@@ -370,6 +413,7 @@ function candidatos() {
   for (const e of porEspecie.values()) {
     e.habitats = e.hics.size;
     e.gbifOccurrences = distintas.get(e.scientificName) ?? 0;
+    e.gbifSpeciesKey = clavesGbif.get(e.scientificName) ?? null;
   }
   return [...porEspecie.values()].sort((a, b) => b.gbifOccurrences - a.gbifOccurrences);
 }
@@ -405,7 +449,7 @@ function candidatos() {
  * ocurrencias en 9 de los 10 hábitats del espacio. Sin error y sin aviso en el fichero: el `source`
  * de la ficha seguía diciendo «9 hábitats» mientras `habitatIds` estaba vacío.
  */
-function reconcilia(lista, resueltas, porTaxonId) {
+function reconcilia(lista, resueltas, porTaxonId, porGbifKey = new Map()) {
   const grupos = new Map();
   const sueltas = [];
   for (const c of lista) {
@@ -419,7 +463,12 @@ function reconcilia(lista, resueltas, porTaxonId) {
   const salida = [...sueltas];
   const fusiones = [];
   for (const [taxonid, miembros] of grupos) {
-    const fichado = porTaxonId.get(String(taxonid));
+    // Primero por `taxonid`, la clave maestra. Y si ahí no hay nada, por `gbifSpeciesKey`, que es su
+    // respaldo declarado y cubre el punto ciego de EIDOS descrito en `yaFichadas()`: sinónimo y
+    // nombre aceptado conservados como dos fichas con taxonid distintos. Se prueba en este orden
+    // porque EIDOS es la fuente de taxonomía y GBIF solo corrobora (CLAUDE.md, regla nº 3).
+    const fichado = porTaxonId.get(String(taxonid))
+      || miembros.map(m => (m.gbifSpeciesKey != null ? porGbifKey.get(String(m.gbifSpeciesKey)) : null)).find(Boolean);
     let elegido;
     if (fichado && miembros.some(m => m.scientificName === fichado.scientificName)) {
       elegido = miembros.find(m => m.scientificName === fichado.scientificName);
@@ -540,6 +589,15 @@ function yaFichadas() {
   // reconocer que el candidato *Petrosedum sediforme* y la ficha *Sedum sediforme* de Cuatro Calas
   // son la misma especie, cosa que comparar nombres no dice.
   const porTaxonId = new Map();
+  // Y por `gbifSpeciesKey`, que es el RESPALDO de la clave maestra (CLAUDE.md §0c) y hace falta
+  // porque el índice por `taxonid` tiene un punto ciego: cuando EIDOS conserva el sinónimo como
+  // ficha propia además de la aceptada, los dos nombres del mismo taxón resuelven a taxonid
+  // DISTINTOS y el cruce no los ve. Es el caso del cormorán moñudo — «Phalacrocorax aristotelis»
+  // resuelve a 10759 (sinónimo, aceptado «Gulosus aristotelis aristotelis») y «Gulosus aristotelis»
+  // a 80933—, el mismo punto ciego que ya obligó a una entrada a mano para *Sylvia undata*. GBIF sí
+  // los da por uno: los dos son speciesKey 2481861. Sin esto, un espacio ficha el ave con el nombre
+  // viejo mientras otro la tiene con el aceptado, y son dos especies para la app.
+  const porGbifKey = new Map();
   for (const p of parkFiles()) {
     if (p.slug === PARK) continue;
     for (const s of (readJson(p.file).species || [])) {
@@ -547,9 +605,11 @@ function yaFichadas() {
       if (!porNombre.has(s.scientificName)) porNombre.set(s.scientificName, p.slug);
       const id = s.eidosTaxonId != null ? String(s.eidosTaxonId) : null;
       if (id && !porTaxonId.has(id)) porTaxonId.set(id, { scientificName: s.scientificName, slug: p.slug });
+      const gk = s.gbifSpeciesKey != null ? String(s.gbifSpeciesKey) : null;
+      if (gk && !porGbifKey.has(gk)) porGbifKey.set(gk, { scientificName: s.scientificName, slug: p.slug });
     }
   }
-  return { porNombre, porTaxonId };
+  return { porNombre, porTaxonId, porGbifKey };
 }
 
 // --- Atlas: especies características de los HIC de ESTE espacio -------------------------------------
@@ -875,7 +935,7 @@ async function main() {
   if (!codigosHic.length) die(`${PARK} no tiene Capa 2: genera antes los hábitats (habitats:adopt).`);
   HABITAT_HOMONIMO = taxonesQueNombranUnHabitat(park.habitats);
 
-  const { porNombre: fichadas, porTaxonId } = yaFichadas();
+  const { porNombre: fichadas, porTaxonId, porGbifKey } = yaFichadas();
   const atlas = caracteristicasPorEspecie(codigosHic);
   // El anexo y el formulario del sitio se cargan ANTES que los candidatos: desde que la legislación
   // es la puerta, lo que enumeran es parte del universo de candidatos y no solo una señal que se
@@ -988,7 +1048,7 @@ async function main() {
     }
   }
 
-  let { lista, fusiones } = reconcilia(brutos, resueltas, porTaxonId);
+  let { lista, fusiones } = reconcilia(brutos, resueltas, porTaxonId, porGbifKey);
   const equiv = aplicaEquivalencias(lista, equivalencias.mapa);
   lista = equiv.lista;
   if (equiv.renombradas.length) {
@@ -1039,7 +1099,20 @@ async function main() {
     // nomenclatura de su época (*Sylvia undata*, *Rosmarinus officinalis*) y GBIF sirve la actual.
     const bin = binomio(c.scientificName) || '';
     const binAcept = binomio(r.nombreAceptadoEidos || '') || '';
-    const enAnexo = anexo.mapa.get(bin) || (binAcept && anexo.mapa.get(binAcept)) || null;
+    /*
+     * Y también por los nombres de los que se VIENE. `reconcilia` puede haber renombrado el
+     * candidato, y el índice de la fuente está hecho con el nombre que escribe la FUENTE, no con el
+     * que acaba usando el catálogo: buscar solo por el nombre final le quita a la especie el
+     * respaldo que su propio sitio le da, en silencio y justo después de haberlo tenido. Lo destapó
+     * el cormorán moñudo, al que la reutilización por `gbifSpeciesKey` renombra a *Gulosus
+     * aristotelis* para no duplicar la ficha de Cabo Cope: el formulario lo cita como *Phalacrocorax
+     * aristotelis aristotelis*, EIDOS no resuelve ese trinomio, y el ave se caía por «sin respaldo
+     * de sitio» siendo una de las 34 que el formulario declara. Es el mismo hilo —y el mismo fallo
+     * en verde— que ya costó los enlaces a hábitat del romero en Sierra de la Pila.
+     */
+    const binsFusionados = (c.sinonimosFusionados || []).map(n => binomio(n)).filter(Boolean);
+    const claves = [...new Set([bin, binAcept, ...binsFusionados].filter(Boolean))];
+    const enAnexo = claves.map(k => anexo.mapa.get(k)).find(Boolean) || null;
     /*
      * «Casada» quiere decir CONFIRMADA POR GBIF, y por eso exige ocurrencias. Casarla a secas
      * contaba también a los candidatos DOCUMENTALES —los que entran por la norma con cero
@@ -1053,7 +1126,7 @@ async function main() {
     // La lista oficial se cruza por los mismos dos nombres que el anexo: el formulario de 2023 sigue
     // citando *Sylvia* donde GBIF ya sirve *Curruca*, y buscar solo por uno deja al ave sin el
     // respaldo que su propio sitio le da — en silencio, que es lo que no puede pasar.
-    const enSitio = sitio.mapa.get(bin) || (binAcept && sitio.mapa.get(binAcept)) || null;
+    const enSitio = claves.map(k => sitio.mapa.get(k)).find(Boolean) || null;
     if (enSitio && c.gbifOccurrences > 0) for (const e of enSitio) sitioCasado.add(e.scientificName);
 
     // `observada_gbif` solo si GBIF la ha visto de verdad. Un candidato que aporta la legislación y

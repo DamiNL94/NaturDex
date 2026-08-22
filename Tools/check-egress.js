@@ -59,6 +59,23 @@ const HOSTS = [
   ['mapas.igme.es',                'IELIG: el servicio con las fichas de LIG (cascada de POIs)'],
   ['murcianatural.carm.es',        'fichas y cartografía del organismo gestor'],
   ['www.borm.es',                  'PORN y PRUG publicados'],
+  // Portal de turismo de la CARM. Es la vía 5 de la cascada de POIs —contexto para redactar— y en
+  // la costa es la ÚNICA fuente que pone un hecho detrás de cada cala: OpenStreetMap las etiqueta
+  // con su página de aquí (`website=`) y su elemento de Wikidata, y sin ella una cala se queda en un
+  // topónimo suelto del §4.1. Registrado el 2026-08-22 al cerrar el N3 de Sierra de las Moreras,
+  // donde seis calas se quedaron fuera por esto: hoy responde **403 en el CONNECT**, así que está
+  // fuera de la política de egreso. No es el 302 antibot de Radware que dan `www.carm.es` y
+  // `murcianatural`: aquí el rechazo es del propio host, y por eso se anota como hueco y no como algo
+  // que se pueda reintentar.
+  ['www.turismoregiondemurcia.es', 'portal de turismo de la CARM: la ficha oficial de cada playa y cala (vía 5 de POIs)'],
+  // Redes geodésicas del IGN. Un vértice geodésico es de las pocas cosas que ponen un HECHO oficial
+  // detrás de una cumbre —nombre, altitud y reseña, publicados—, y sin eso un pico es un topónimo
+  // suelto del §4.1. Los dos hosts responden **403 en el CONNECT** (probado el 2026-08-22, cerrando
+  // el N3 de Sierra de las Moreras). Se salvó por Wikidata, que replica el código del vértice
+  // (P528), su altitud (P2044) y el enlace a la reseña (P973): es un SUSTITUTO y así consta en el
+  // `source` del POI, igual que se hace con el P808 de los BIC.
+  ['api-features.ign.es',         'IGN: redes geodésicas (Red ROI, REDNAP) por identificador'],
+  ['datos-geodesia.ign.es',       'IGN: la reseña en PDF de cada vértice geodésico'],
 
   // --- Vía 3 de la cascada de POIs: BIC y patrimonio ---------------------------------------------
   // Era la ÚNICA de las seis vías del §4.2 sin host registrado aquí, y se notaba: cuatro espacios

@@ -427,7 +427,26 @@ async function main() {
   let total = 0;
   for (const entry of parques) total += await procesaParque(entry, informe);
 
-  if (OPT.report) escribeInforme(informe, fromRoot(OPT.report));
+  // El informe tiene EXACTAMENTE el mismo problema que el SQL de abajo —se reescribe entero y con
+  // `--park` se lleva por delante las filas de los demás espacios—, y durante un tiempo solo el SQL
+  // estuvo protegido. Se notó el 2026-08-22 cerrando el N3 de Sierra de las Moreras: la guarda del
+  // SQL cortó la ejecución, pero el informe YA se había escrito unas líneas antes y `Docs/fotos-poi.md`
+  // pasó de 133 filas a 2. Aquí el daño no llega a la base de datos, así que en vez de abortar se
+  // avisa y se conserva lo que había: un informe a medias es peor que uno viejo.
+  if (OPT.report) {
+    const file = fromRoot(OPT.report);
+    const soloUno = OPT.park && fs.existsSync(file) &&
+      (fs.readFileSync(file, 'utf8').match(/^\| ([a-z0-9-]+) \|/gm) || [])
+        .map(m => m.slice(2, m.indexOf(' |', 2)))
+        .some(s => s !== OPT.park);
+    if (soloUno) {
+      console.error(red(`\n✖ ${rel(file)} cubre más espacios y esta ejecución es solo de «${OPT.park}»:\n` +
+        '  reescribirlo dejaría el informe con un solo espacio. NO se ha tocado.\n' +
+        '  Quita `--park` para regenerarlo entero, o `--report` para no escribirlo.'));
+    } else {
+      escribeInforme(informe, file);
+    }
+  }
   if (OPT.sql && sentencias.length && !OPT.dryRun) {
     const file = fromRoot(OPT.sql);
     // El fichero de SQL es de TODOS los espacios y esta ejecución puede ser de uno solo: se

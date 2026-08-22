@@ -20,6 +20,19 @@ Cada una se paga mejor ahora que en el espacio número treinta.
    > formulario pobrísimo—, pero sí es el suelo al que cae un espacio cuando el plan no está
    > transcrito.
 
+   > **Y el 2026-08-22 apareció el caso contrario, que acota la deuda: hay espacios sin plan porque
+   > la ley los eximió de tenerlo.** Sierra de las Moreras se declaró por la **Ley 4/1992**
+   > «teniendo en cuenta que **no se precisa** previa elaboración de planes de ordenación de los
+   > recursos naturales», y el apartado que sí obliga a iniciar el PORN enumera ocho espacios sin
+   > incluirlo. Ahí no hay documento pendiente de localizar, y su catálogo de 64 fichas con **77
+   > candidatos caídos por sostenerse solo en GBIF** es el techo alcanzable mientras no se declare
+   > la ZEC del LIC ES6200011 con su plan. Conviene comprobar lo mismo en los otros tres paisajes
+   > protegidos del apartado DOS de esa ley —**Cuatro Calas**, que es el peor caso medido arriba,
+   > **Humedal del Ajauque y Rambla Salada** y **Espacios Abiertos e Islas del Mar Menor**—: si la
+   > exención los cubre igual, parte de esta deuda **no es transcribible** y hay que decirlo en vez
+   > de dejarla contada como trabajo pendiente. (Espacios Abiertos ya tiene anexo transcrito por
+   > otra vía: el Decreto n.º 259/2019 del Mar Menor.)
+
    Lo que sigue es el diagnóstico anterior, que sigue valiendo para las aves. Desde que el ave entra
    por respaldo de sitio
    ([`runbook/AVES.md`](runbook/AVES.md)), el anexo normativo dejó de ser «la evidencia más fuerte» y
