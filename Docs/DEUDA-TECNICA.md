@@ -2,8 +2,18 @@
 
 Cada una se paga mejor ahora que en el espacio número treinta.
 
-1. **Cinco espacios no tienen localizado su plan de gestión, y desde el 2026-08-16 eso decide el
+1. **Cuatro espacios no tienen localizado su plan de gestión, y desde el 2026-08-16 eso decide el
    catálogo entero, no solo las aves.**
+   > **Sierra Espuña sale de la lista el 2026-08-22 (b), y no hizo falta buscar en el BORM.** Su
+   > PORN es el **Decreto n.º 13/1995, de 31 de marzo** (BORM n.º 85, de 11 de abril de 1995), y es
+   > **el mismo de los Barrancos de Gebas** —el decreto aprueba el plan de los dos y declara el
+   > Paisaje Protegido—. Está descargado, citado en `data/normativa-espacios.json` y **transcrito
+   > entero**: 188 especies en `data/anexos-normativos.json`, bajo la entrada de Gebas. Para Sierra
+   > Espuña queda solo abrirle su propia entrada y regenerar su Capa 3, y ahí el ámbito **no**
+   > desborda —el Parque Regional es el 90 % de las 19.679 ha del plan—, así que es el trabajo más
+   > rentable que queda en Murcia: sus 188 fichas se apoyan hoy en el formulario de la ZEPA
+   > ES0000173.
+
    > **Subió de precio el 2026-08-16.** Con el orden de prioridad nuevo —legislación → EIDOS → GBIF,
    > regla nº 3 del `CLAUDE.md`— el plan de gestión pasó de ser «la evidencia más fuerte» a ser **la
    > puerta de entrada del nivel 1**, y un espacio sin plan transcrito se queda solo con lo que
@@ -43,8 +53,9 @@ Cada una se paga mejor ahora que en el espacio número treinta.
    tres espacios con el plan transcrito conservan **46, 61 y 66** aves; los cinco que solo tienen
    formulario, **17, 18, 34, 40 y 48**. Sierra de la Pila son 8.800 ha de sierra con 17 aves fichadas.
    `Tools/catalogo-nacional/data/normativa-espacios.json` solo cubre el Decreto 28/2025 del
-   Altiplano; **Carrascoy, Sierra de la Pila, Cabo Cope, Cuatro Calas y Sierra Espuña no tienen ni
-   siquiera localizado el documento**, que es el primer paso y el barato. Bajar el umbral NO es una
+   Altiplano; **Carrascoy, Cabo Cope y Cuatro Calas no tienen ni
+   siquiera localizado el documento**, que es el primer paso y el barato. (Sierra de la Pila lo tiene
+   desde el 2026-08-16 y Sierra Espuña desde el 2026-08-22, ver el recuadro de arriba.) Bajar el umbral NO es una
    alternativa: devolvería el ruido de vuelo que este cambio quitó.
 2. **`murcia_status` está atado a Murcia.** Es el bloqueo real del rollout nacional a nivel de campo:
    cada comunidad tiene su propio catálogo de especies amenazadas. Hay que renombrarlo a algo como

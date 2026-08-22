@@ -11,6 +11,18 @@ SET NAMES utf8mb4;
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id
   SET h.description = 'El matorral de las zonas más cálidas y secas, allí donde prácticamente no hiela: palmito, espino negro, lentisco, cornicales, bojas, albaidas y esparto sobre laderas pedregosas y llanos soleados. Es un matorral abierto, con suelo desnudo a la vista entre mata y mata, y con muchas especies compartidas con el norte de África. Aguanta sequías de meses y rebrota en cuanto llueve.'
+WHERE p.slug = 'barrancos-de-gebas' AND h.code = '5330';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'Pastizales secos en los que conviven gramíneas vivaces de mata dura, como el lastón (Brachypodium retusum) o el esparto, con una multitud de plantas anuales diminutas que nacen con las lluvias y se secan antes del verano. En agosto parecen un erial pardo; en abril pueden reunir cuarenta especies distintas en un metro cuadrado. Esa riqueza escondida es la razón de que sea un hábitat prioritario.'
+WHERE p.slug = 'barrancos-de-gebas' AND h.code = '6220';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'La vegetación leñosa de ramblas, arroyos y ríos de caudal irregular, que unos meses llevan agua y otros son un lecho de piedras: adelfares y tarayales. La adelfa (Nerium oleander), de hojas coriáceas y flores rosas, y los tarays (Tamarix), de ramillas finas y flores en espiga, resisten tanto las avenidas violentas como meses de sequía. Toda la adelfa es muy tóxica, incluidas hojas y ramas secas.'
+WHERE p.slug = 'barrancos-de-gebas' AND h.code = '92D0';
+
+UPDATE habitats h JOIN parks p ON p.id = h.park_id
+  SET h.description = 'El matorral de las zonas más cálidas y secas, allí donde prácticamente no hiela: palmito, espino negro, lentisco, cornicales, bojas, albaidas y esparto sobre laderas pedregosas y llanos soleados. Es un matorral abierto, con suelo desnudo a la vista entre mata y mata, y con muchas especies compartidas con el norte de África. Aguanta sequías de meses y rebrota en cuanto llueve.'
 WHERE p.slug = 'cabezo-gordo' AND h.code = '5330';
 
 UPDATE habitats h JOIN parks p ON p.id = h.park_id

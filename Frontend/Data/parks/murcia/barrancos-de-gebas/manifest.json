@@ -2,18 +2,19 @@
   "slug": "barrancos-de-gebas",
   "name": "Barrancos de Gebas",
   "apiSlug": "barrancos-de-gebas",
-  "version": 2,
-  "updatedAt": "2026-07-31",
+  "version": 4,
+  "updatedAt": "2026-08-22",
   "data": "Data/parks/murcia/barrancos-de-gebas/park.json",
   "geo": {
     "parque": "Data/parks/murcia/barrancos-de-gebas/geo/parque.geojson",
-    "trails": "Data/parks/murcia/barrancos-de-gebas/geo/trails.geojson"
+    "trails": "Data/parks/murcia/barrancos-de-gebas/geo/trails.geojson",
+    "habitats": "Data/parks/murcia/barrancos-de-gebas/geo/habitats.geojson"
   },
   "images": [],
   "audio": [],
   "counts": {
-    "species": 0,
-    "habitats": 0,
+    "species": 86,
+    "habitats": 3,
     "pointsOfInterest": 0,
     "images": 0,
     "assetBytes": 0

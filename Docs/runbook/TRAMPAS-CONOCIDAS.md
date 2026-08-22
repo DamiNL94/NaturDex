@@ -193,6 +193,16 @@ Cada una costó una sesión de depuración. Léelas antes de repetirlas.
   casco urbano. Dos detalles que cuestan una sesión: `datos.gob.es` publica su `accessURL` en **http**
   y por ahí el proxy responde «Host not in allowlist» (hay que pedirlo en https), y el JSON trae
   **saltos de línea crudos dentro de las cadenas**, así que `JSON.parse` lo rechaza tal cual.
+- **Un `HEAD` que responde 200 no dice que el `GET` vaya a funcionar.** El gestor documental de
+  `murcianatural.carm.es` —de donde salen los planes de gestión— está detrás del mismo Radware que
+  `www.carm.es`, y su comportamiento es asimétrico: `curl -I` sobre el PDF del PORN devuelve **200
+  con `content-type: application/pdf` y su `content-length`** sin cookies ninguna, y el `GET` de la
+  misma URL devuelve **302** a `validate.perfdrive.com`, que está fuera de la política de egreso. Así
+  que comprobar un enlace con `-I` da por buena una descarga que después no ocurre, y el fallo llega
+  disfrazado de «el fichero es un HTML de 1,4 KB». Lo que sí funciona es **calentar la sesión**:
+  pedir antes la ficha del espacio con un tarro de cookies (`curl -c cj.txt`) y reutilizarlo
+  (`-b cj.txt`) en la descarga. Con eso el PDF llega entero. Verificado el 2026-08-22 con el PORN de
+  Sierra Espuña (403.116 bytes, 116 páginas).
 - **El número de anuncio del BORM no se deduce del número de boletín.** El endpoint
   `/services/anuncio/ano/AAAA/numero/NNNN/pdf` numera por **anuncio y año**, no por boletín: el
   anuncio 3 de 1999 sale en el boletín n.º 13. Por eso la bisección «por el número de boletín de la

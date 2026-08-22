@@ -1,0 +1,50 @@
+{
+ "park": "barrancos-de-gebas",
+ "generado": "Atlas y Manual de los Hábitats de España (MITECO) ∩ catálogo del parque",
+ "hic": {
+  "5330": {
+   "habitat": "matorrales-termomediterraneos-y-5330",
+   "especies": [
+    "Pinus halepensis"
+   ]
+  },
+  "6220": {
+   "habitat": "zonas-subestepicas-de-6220",
+   "especies": [
+    "Ononis ornithopodioides",
+    "Lygeum spartum",
+    "Hyparrhenia hirta"
+   ]
+  },
+  "92D0": {
+   "habitat": "galerias-y-matorrales-92D0",
+   "especies": []
+  }
+ },
+ "links": [
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Pinus halepensis",
+   "atlas_name": "Pinus halepensis var. ceciliae"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Ononis ornithopodioides",
+   "atlas_name": "Ononis ornithopodioides"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Lygeum spartum",
+   "atlas_name": "Lygeum spartum"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Hyparrhenia hirta",
+   "atlas_name": "Hyparrhenia hirta"
+  }
+ ]
+}

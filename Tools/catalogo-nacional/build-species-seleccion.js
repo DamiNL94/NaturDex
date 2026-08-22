@@ -360,7 +360,13 @@ function candidatosDocumentales(anexo, sitio, yaEstan) {
   // alta un candidato con la errata dentro sería fichar una especie que no existe: EIDOS no la
   // resuelve, se queda sin `taxonid`, la reconciliación no puede agruparla y acaba en el catálogo
   // con el nombre mal escrito. El verbatim sigue guardado en la entrada, que es donde tiene que estar.
-  for (const e of anexo.mapa.values()) añade(e.nombreCorregido || e.scientificName, null);
+  // Un anexo que exige constancia no da de alta candidatos por sí solo: los suyos sin un registro
+  // dentro no pasarían el filtro, y darlos de alta solo añade ~110 consultas a EIDOS para escribir
+  // ~110 exclusiones. Los que SÍ tienen registro ya vienen del barrido de GBIF, así que no se pierde
+  // ninguno; los demás siguen contándose en `anexo_sin_constancia`, que es su sitio.
+  if (!anexo.exigeConstancia) {
+    for (const e of anexo.mapa.values()) añade(e.nombreCorregido || e.scientificName, null);
+  }
   // El formulario del sitio trae el grupo taxonómico en una letra (B = aves, M = mamíferos,
   // A = anfibios y reptiles, F = peces, P = plantas, I = invertebrados). Solo se traduce la de las
   // aves, que es la que necesita el filtro 3 bis; el resto lo resuelve EIDOS.
@@ -675,11 +681,32 @@ function anexoNormativo() {
     const c = binomio(e.nombreCorregido);
     if (c && c !== b) noNativas.set(c, e);
   }
+  /*
+   * ¿El ámbito del anexo es ESTE espacio, o uno mayor que lo contiene?
+   *
+   * El `_esquema` del fichero ya avisaba de que «no siempre es el del espacio», y hasta ahora eso se
+   * quedaba en el `ambito`, que es texto para el `source` de la ficha. Pero el nivel 1 —entrar sin
+   * exigirle nada a GBIF— se apoya en que la norma afirme la pertenencia a ESTE espacio, y un plan
+   * cuyo ámbito lo desborda no la afirma: dice que la especie está en alguna parte del ámbito.
+   *
+   * El caso que lo destapó es el PORN de Sierra Espuña, que es también el de los Barrancos de Gebas:
+   * un solo inventario para 19.679 ha de las que el Paisaje Protegido son 1.875 (9,5 %), y las otras
+   * 17.800 un macizo forestal que pasa de los 1.500 m. Con el nivel 1 a secas, el acentor alpino, el
+   * treparriscos, el mirlo capiblanco y el piquituerto entraban en el catálogo de unas cárcavas
+   * semiáridas de 200 m, y el espacio salía con 183 fichas — casi las 188 de la sierra entera.
+   *
+   * Con `exigeConstancia`, el anexo deja de ser PUERTA y pasa a ser respaldo documental que GBIF
+   * tiene que corroborar dentro de los polígonos, que es exactamente lo que se le pide al nivel 2.
+   * No se relaja nada: lo que la norma enumera y el barrido confirma entra igual, y lo que no,
+   * sigue saliendo en `anexo_sin_constancia`, solo que ahora como hueco y no como ficha.
+   */
+  const exigeConstancia = Boolean(entrada.fuente && entrada.fuente.exigeConstancia);
   return {
     mapa,
     noNativas,
     fuente: entrada.fuente || null,
     consultado: true,
+    exigeConstancia,
     total: (entrada.especies || []).length,
   };
 }
@@ -953,7 +980,11 @@ async function main() {
     ? `Atlas 2005: ${atlas.mapa.size} especies características para estos HIC`
     : 'Atlas 2005: NO consultado (sin --atlas) — no habrá evidencia `caracteristica`');
   console.log(anexo.consultado
-    ? `Anexo normativo: ${anexo.total} especies enumeradas (${anexo.fuente ? anexo.fuente.norma : 'sin cita'})`
+    ? `Anexo normativo: ${anexo.total} especies enumeradas (${anexo.fuente ? anexo.fuente.norma : 'sin cita'})` +
+      (anexo.exigeConstancia
+        ? '\n  Su ÁMBITO excede el de este espacio, así que NO es puerta de entrada: sus especies necesitan\n' +
+          `  que GBIF las corrobore dentro de los polígonos. Ámbito declarado: ${anexo.fuente && anexo.fuente.ambito ? anexo.fuente.ambito : 'sin declarar'}`
+        : '')
     : `Anexo normativo: NO consultado — ${PARK} no tiene entrada en ${rel(RUTA_ANEXOS)}.\n` +
       '  No es lo mismo que «este espacio no tiene anexo»: es que nadie lo ha leído todavía.');
   // Los tres estados de la lista oficial, dichos por su nombre. «No consultada» y «el espacio no
@@ -1251,7 +1282,10 @@ async function main() {
     // Filtro 3 bis — respaldo de SITIO para las aves. Va antes del de presencia porque para un ave
     // el de presencia no mide presencia: mide cuántas veces alguien subió a GBIF un vuelo sobre el
     // espacio. El porqué completo, arriba, en la cabecera de AVES_SIN_RESPALDO.
-    const respaldoDeSitio = Boolean(enAnexo) || Boolean(enSitio);
+    // El anexo respalda de por sí, salvo que su ámbito exceda el espacio: entonces hace falta que
+    // GBIF lo corrobore dentro de los polígonos (ver `exigeConstancia` en `anexoNormativo`).
+    const anexoRespalda = Boolean(enAnexo) && (!anexo.exigeConstancia || c.gbifOccurrences > 0);
+    const respaldoDeSitio = anexoRespalda || Boolean(enSitio);
     if (!AVES_SIN_RESPALDO && c.class === 'Aves' && !respaldoDeSitio) {
       excluidas.push({
         ...ficha,
@@ -1397,6 +1431,12 @@ async function main() {
           `admitidas: ${[...CLASES].join(', ')}.`) + ' ' +
       'Lo que el nivel 1 enumera y GBIF no confirma se aprueba igual y queda listado en ' +
       '`anexo_sin_constancia` y `sitio_sin_constancia`: entra en el catálogo y hay que contrastarlo en campo. ' +
+      (anexo.exigeConstancia
+        ? 'CON UNA EXCEPCIÓN EN ESTE ESPACIO: el anexo normativo declara un ÁMBITO MAYOR que el espacio ' +
+          `(${anexo.fuente && anexo.fuente.ambito ? anexo.fuente.ambito : 'sin declarar'}), así que no afirma que la especie esté AQUÍ y ` +
+          'no da nivel 1 por sí solo: sus especies pasan a exigir corroboración de GBIF dentro de los polígonos, ' +
+          'igual que el nivel 2. Las que no la tienen salen en `anexo_sin_constancia` como hueco, no como ficha. '
+        : '') +
       (AVES_SIN_RESPALDO
         ? '(3 bis) DESACTIVADO con --aves-sin-respaldo: las aves entran por presencia, como una planta. '
         : '(3 bis) Las AVES no entran por el filtro de presencia —vuelan, sus ocurrencias caen dentro de ' +
@@ -1413,7 +1453,7 @@ async function main() {
     nuevas: aprobadas.length - reutilizables,
     excluidas: excluidas.length,
     anexo: anexo.consultado
-      ? { consultado: true, fuente: anexo.fuente, enumeradas: anexo.total, casadas: anexoCasado.size }
+      ? { consultado: true, fuente: anexo.fuente, enumeradas: anexo.total, casadas: anexoCasado.size, exigeConstancia: anexo.exigeConstancia }
       : { consultado: false },
     lista_oficial_sitio: sitio.consultado
       ? {
@@ -1462,8 +1502,14 @@ async function main() {
   if (anexo.consultado) {
     console.log(`\nAnexo normativo: ${anexoCasado.size}/${anexo.total} confirmadas por GBIF dentro de los polígonos.`);
     if (anexoSinConstancia.length) {
-      console.log(`  ${anexoSinConstancia.length} enumeradas por la norma SIN constancia en GBIF: se aprueban igual`);
-      console.log('  (nivel 1) y quedan en `anexo_sin_constancia` como hueco a contrastar en campo (ver informe).');
+      if (anexo.exigeConstancia) {
+        console.log(`  ${anexoSinConstancia.length} enumeradas por la norma SIN constancia en GBIF: NO entran, porque el`);
+        console.log('  ámbito del anexo excede el de este espacio. Quedan en `anexo_sin_constancia`, que aquí');
+        console.log('  se lee como «lo que la norma inventaría en su ámbito y aquí dentro no se ha visto».');
+      } else {
+        console.log(`  ${anexoSinConstancia.length} enumeradas por la norma SIN constancia en GBIF: se aprueban igual`);
+        console.log('  (nivel 1) y quedan en `anexo_sin_constancia` como hueco a contrastar en campo (ver informe).');
+      }
     }
   }
   const conError = [...aprobadas, ...excluidas].filter(e => e.errorEidos);

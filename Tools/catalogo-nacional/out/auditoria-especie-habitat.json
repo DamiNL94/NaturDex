@@ -1,8 +1,314 @@
 {
-  "generado": "2026-08-21",
+  "generado": "2026-08-22",
   "umbral": 1,
   "aplicado": false,
   "espacios": [
+    {
+      "slug": "barrancos-de-gebas",
+      "conBarrido": true,
+      "enlaces": [
+        {
+          "especie": "Lycium intricatum",
+          "comun": "Cambrón",
+          "id": 1,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 3,
+          "motivo": "3 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Lycium intricatum",
+          "comun": "Cambrón",
+          "id": 1,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "respaldado",
+          "ocurrencias": 3,
+          "motivo": "3 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Tarentola mauritanica",
+          "comun": "Salamanquesa común",
+          "id": 2,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 3,
+          "motivo": "3 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Tarentola mauritanica",
+          "comun": "Salamanquesa común",
+          "id": 2,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "respaldado",
+          "ocurrencias": 3,
+          "motivo": "3 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Hemorrhois hippocrepis",
+          "comun": "Culebra de herradura",
+          "id": 3,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Hemorrhois hippocrepis",
+          "comun": "Culebra de herradura",
+          "id": 3,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Pinus halepensis",
+          "comun": "Pino carrasco",
+          "id": 4,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Pinus halepensis",
+          "comun": "Pino carrasco",
+          "id": 4,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Cynomorium coccineum",
+          "comun": "Cinomorio",
+          "id": 5,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Cynomorium coccineum",
+          "comun": "Cinomorio",
+          "id": 5,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Hemidactylus turcicus",
+          "comun": "Salamanquesa rosada",
+          "id": 6,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Hemidactylus turcicus",
+          "comun": "Salamanquesa rosada",
+          "id": 6,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Hyparrhenia hirta",
+          "comun": "Cerrillo",
+          "id": 7,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Hyparrhenia hirta",
+          "comun": "Cerrillo",
+          "id": 7,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 6220",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Limonium insigne",
+          "comun": "Siempreviva insigne",
+          "id": 8,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limonium insigne",
+          "comun": "Siempreviva insigne",
+          "id": 8,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Lygeum spartum",
+          "comun": "Albardín",
+          "id": 9,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Lygeum spartum",
+          "comun": "Albardín",
+          "id": 9,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 6220",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Malpolon monspessulanus",
+          "comun": "Culebra bastarda",
+          "id": 10,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Malpolon monspessulanus",
+          "comun": "Culebra bastarda",
+          "id": 10,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Mauremys leprosa",
+          "comun": "Galápago leproso",
+          "id": 11,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Mauremys leprosa",
+          "comun": "Galápago leproso",
+          "id": 11,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Ononis ornithopodioides",
+          "comun": "Ononis ornithopodioides",
+          "id": 12,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Ononis ornithopodioides",
+          "comun": "Ononis ornithopodioides",
+          "id": 12,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 6220",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Pistacia lentiscus",
+          "comun": "Lentisco",
+          "id": 13,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Pistacia lentiscus",
+          "comun": "Lentisco",
+          "id": 13,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Psammodromus algirus",
+          "comun": "Lagartija colilarga",
+          "id": 14,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Psammodromus algirus",
+          "comun": "Lagartija colilarga",
+          "id": 14,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Rhamnus lycioides",
+          "comun": "Espino negro",
+          "id": 15,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Rhamnus lycioides",
+          "comun": "Espino negro",
+          "id": 15,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        }
+      ]
+    },
     {
       "slug": "cabezo-gordo",
       "conBarrido": true,
@@ -13,9 +319,9 @@
           "id": 1,
           "habitat": "matorrales-arborescentes-de-5220",
           "hic": "5220",
-          "veredicto": "respaldado",
-          "ocurrencias": 4,
-          "motivo": "4 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5220",
+          "ocurrencias": null
         },
         {
           "especie": "Periploca angustifolia",
@@ -203,9 +509,9 @@
           "id": 7,
           "habitat": "matorrales-termomediterraneos-y-5330",
           "hic": "5330",
-          "veredicto": "respaldado",
-          "ocurrencias": 1,
-          "motivo": "1 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
         },
         {
           "especie": "Teucrium carolipaui",
@@ -689,9 +995,9 @@
           "id": 139,
           "habitat": "subestepa-thero-brachypodietea",
           "hic": "6220",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 6220",
+          "ocurrencias": null
         },
         {
           "especie": "Cynomorium coccineum",
@@ -739,9 +1045,9 @@
           "id": 17,
           "habitat": "azufaifar",
           "hic": "5220",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5220",
+          "ocurrencias": null
         },
         {
           "especie": "Quercus coccifera",
@@ -1279,9 +1585,9 @@
           "id": 161,
           "habitat": "matorral-halonitrofilo",
           "hic": "1430",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1430",
+          "ocurrencias": null
         },
         {
           "especie": "Halimione portulacoides",
@@ -1319,9 +1625,9 @@
           "id": 38,
           "habitat": "matorral-semiarido",
           "hic": "5330",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
         },
         {
           "especie": "Pinus halepensis",
@@ -1509,9 +1815,9 @@
           "id": 30,
           "habitat": "estepas-salinas-albardinal",
           "hic": "1510",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1510",
+          "ocurrencias": null
         },
         {
           "especie": "Salsola vermiculata",
@@ -1869,9 +2175,9 @@
           "id": 232,
           "habitat": "matorral-halonitrofilo",
           "hic": "1430",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1430",
+          "ocurrencias": null
         },
         {
           "especie": "Atriplex glauca",
@@ -1879,9 +2185,9 @@
           "id": 233,
           "habitat": "matorral-halonitrofilo",
           "hic": "1430",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1430",
+          "ocurrencias": null
         },
         {
           "especie": "Atriplex glauca",
@@ -2495,9 +2801,9 @@
           "id": 4,
           "habitat": "matorrales-arborescentes-de-5220",
           "hic": "5220",
-          "veredicto": "respaldado",
-          "ocurrencias": 17,
-          "motivo": "17 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5220",
+          "ocurrencias": null
         },
         {
           "especie": "Periploca angustifolia",
@@ -3035,9 +3341,9 @@
           "id": 10,
           "habitat": "matorrales-termomediterraneos-y-5330",
           "hic": "5330",
-          "veredicto": "respaldado",
-          "ocurrencias": 9,
-          "motivo": "9 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
         },
         {
           "especie": "Pinus halepensis",
@@ -4685,9 +4991,9 @@
           "id": 33,
           "habitat": "matorrales-halonitrofilos-pegano-1430",
           "hic": "1430",
-          "veredicto": "respaldado",
-          "ocurrencias": 1,
-          "motivo": "1 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1430",
+          "ocurrencias": null
         },
         {
           "especie": "Artemisia barrelieri",
@@ -5245,9 +5551,9 @@
           "id": 42,
           "habitat": "zonas-subestepicas-de-6220",
           "hic": "6220",
-          "veredicto": "respaldado",
-          "ocurrencias": 1,
-          "motivo": "1 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 6220",
+          "ocurrencias": null
         },
         {
           "especie": "Lygeum spartum",
@@ -5785,9 +6091,9 @@
           "id": 54,
           "habitat": "matorrales-halonitrofilos-pegano-1430",
           "hic": "1430",
-          "veredicto": "respaldado",
-          "ocurrencias": 1,
-          "motivo": "1 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1430",
+          "ocurrencias": null
         },
         {
           "especie": "Atriplex glauca",
@@ -6841,9 +7147,9 @@
           "id": 4,
           "habitat": "matorrales-termomediterraneos-y-5330",
           "hic": "5330",
-          "veredicto": "respaldado",
-          "ocurrencias": 98,
-          "motivo": "98 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
         },
         {
           "especie": "Pinus halepensis",
@@ -11901,9 +12207,9 @@
           "id": 299,
           "habitat": "matorrales-termomediterraneos-y-5330",
           "hic": "5330",
-          "veredicto": "respaldado",
-          "ocurrencias": 7,
-          "motivo": "7 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
         },
         {
           "especie": "Teucrium carolipaui",
@@ -19497,9 +19803,9 @@
           "id": 5,
           "habitat": "matorrales-arborescentes-de-5220",
           "hic": "5220",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5220",
+          "ocurrencias": null
         },
         {
           "especie": "Suaeda vera",
@@ -19587,9 +19893,9 @@
           "id": 8,
           "habitat": "estepas-salinas-mediterraneas-1510",
           "hic": "1510",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1510",
+          "ocurrencias": null
         },
         {
           "especie": "Helianthemum motae",
@@ -21007,9 +21313,9 @@
           "id": 45,
           "habitat": "matorrales-halonitrofilos-pegano-1430",
           "hic": "1430",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1430",
+          "ocurrencias": null
         },
         {
           "especie": "Sonchus tenerrimus",
@@ -21377,9 +21683,9 @@
           "id": 56,
           "habitat": "matorrales-halonitrofilos-pegano-1430",
           "hic": "1430",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1430",
+          "ocurrencias": null
         },
         {
           "especie": "Limonium echioides",
@@ -21967,9 +22273,9 @@
           "id": 75,
           "habitat": "matorrales-halonitrofilos-pegano-1430",
           "hic": "1430",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1430",
+          "ocurrencias": null
         }
       ]
     },
@@ -22813,9 +23119,9 @@
           "id": 10,
           "habitat": "matorrales-halonitrofilos-pegano-1430",
           "hic": "1430",
-          "veredicto": "respaldado",
-          "ocurrencias": 2,
-          "motivo": "2 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1430",
+          "ocurrencias": null
         },
         {
           "especie": "Atriplex glauca",
@@ -23843,9 +24149,9 @@
           "id": 27,
           "habitat": "estepas-salinas-mediterraneas-1510",
           "hic": "1510",
-          "veredicto": "respaldado",
-          "ocurrencias": 2,
-          "motivo": "2 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1510",
+          "ocurrencias": null
         },
         {
           "especie": "Limonium insigne",
@@ -24033,9 +24339,9 @@
           "id": 31,
           "habitat": "estepas-salinas-mediterraneas-1510",
           "hic": "1510",
-          "veredicto": "respaldado",
-          "ocurrencias": 2,
-          "motivo": "2 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1510",
+          "ocurrencias": null
         },
         {
           "especie": "Suaeda spicata",
@@ -25229,9 +25535,9 @@
           "id": 7,
           "habitat": "matorrales-termomediterraneos-y-5330",
           "hic": "5330",
-          "veredicto": "respaldado",
-          "ocurrencias": 3,
-          "motivo": "3 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
         },
         {
           "especie": "Pistacia lentiscus",
@@ -30341,9 +30647,9 @@
           "id": 3,
           "habitat": "matorrales-termomediterraneos-y-5330",
           "hic": "5330",
-          "veredicto": "respaldado",
-          "ocurrencias": 33,
-          "motivo": "33 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
         },
         {
           "especie": "Pinus halepensis",
@@ -41217,9 +41523,9 @@
           "id": 2,
           "habitat": "matorrales-termomediterraneos-y-5330",
           "hic": "5330",
-          "veredicto": "respaldado",
-          "ocurrencias": 84,
-          "motivo": "84 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
         },
         {
           "especie": "Pinus halepensis",
@@ -47884,6 +48190,1042 @@
       ]
     },
     {
+      "slug": "sierra-de-las-moreras",
+      "conBarrido": true,
+      "enlaces": [
+        {
+          "especie": "Limonium insigne",
+          "comun": "Siempreviva insigne",
+          "id": 1,
+          "habitat": "matorrales-arborescentes-de-5220",
+          "hic": "5220",
+          "veredicto": "respaldado",
+          "ocurrencias": 5,
+          "motivo": "5 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limonium insigne",
+          "comun": "Siempreviva insigne",
+          "id": 1,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 5,
+          "motivo": "5 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limonium insigne",
+          "comun": "Siempreviva insigne",
+          "id": 1,
+          "habitat": "acantilados-con-vegetacion-1240",
+          "hic": "1240",
+          "veredicto": "respaldado",
+          "ocurrencias": 4,
+          "motivo": "4 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limonium insigne",
+          "comun": "Siempreviva insigne",
+          "id": 1,
+          "habitat": "estepas-salinas-mediterraneas-1510",
+          "hic": "1510",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1510",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Limonium insigne",
+          "comun": "Siempreviva insigne",
+          "id": 1,
+          "habitat": "matorrales-halonitrofilos-pegano-1430",
+          "hic": "1430",
+          "veredicto": "respaldado",
+          "ocurrencias": 4,
+          "motivo": "4 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limonium insigne",
+          "comun": "Siempreviva insigne",
+          "id": 1,
+          "habitat": "pendientes-rocosas-calcicolas-8210",
+          "hic": "8210",
+          "veredicto": "respaldado",
+          "ocurrencias": 3,
+          "motivo": "3 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Teucrium lanigerum",
+          "comun": "Zamarrilla lanuda",
+          "id": 2,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Teucrium lanigerum",
+          "comun": "Zamarrilla lanuda",
+          "id": 2,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "respaldado",
+          "ocurrencias": 5,
+          "motivo": "5 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Teucrium lanigerum",
+          "comun": "Zamarrilla lanuda",
+          "id": 2,
+          "habitat": "bosques-endemicos-de-9560",
+          "hic": "9560",
+          "veredicto": "respaldado",
+          "ocurrencias": 3,
+          "motivo": "3 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Teucrium lanigerum",
+          "comun": "Zamarrilla lanuda",
+          "id": 2,
+          "habitat": "matorrales-arborescentes-de-5220",
+          "hic": "5220",
+          "veredicto": "respaldado",
+          "ocurrencias": 3,
+          "motivo": "3 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Teucrium lanigerum",
+          "comun": "Zamarrilla lanuda",
+          "id": 2,
+          "habitat": "acantilados-con-vegetacion-1240",
+          "hic": "1240",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Teucrium lanigerum",
+          "comun": "Zamarrilla lanuda",
+          "id": 2,
+          "habitat": "estepas-salinas-mediterraneas-1510",
+          "hic": "1510",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Teucrium lanigerum",
+          "comun": "Zamarrilla lanuda",
+          "id": 2,
+          "habitat": "matorrales-halonitrofilos-pegano-1430",
+          "hic": "1430",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Teucrium lanigerum",
+          "comun": "Zamarrilla lanuda",
+          "id": 2,
+          "habitat": "pendientes-rocosas-calcicolas-8210",
+          "hic": "8210",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Chamaerops humilis",
+          "comun": "Palmito",
+          "id": 3,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 5,
+          "motivo": "5 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Chamaerops humilis",
+          "comun": "Palmito",
+          "id": 3,
+          "habitat": "matorrales-arborescentes-de-5220",
+          "hic": "5220",
+          "veredicto": "respaldado",
+          "ocurrencias": 4,
+          "motivo": "4 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Chamaerops humilis",
+          "comun": "Palmito",
+          "id": 3,
+          "habitat": "pendientes-rocosas-calcicolas-8210",
+          "hic": "8210",
+          "veredicto": "respaldado",
+          "ocurrencias": 3,
+          "motivo": "3 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Chamaerops humilis",
+          "comun": "Palmito",
+          "id": 3,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Chamaerops humilis",
+          "comun": "Palmito",
+          "id": 3,
+          "habitat": "bosques-endemicos-de-9560",
+          "hic": "9560",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Lygeum spartum",
+          "comun": "Albardín",
+          "id": 4,
+          "habitat": "matorrales-arborescentes-de-5220",
+          "hic": "5220",
+          "veredicto": "respaldado",
+          "ocurrencias": 4,
+          "motivo": "4 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Lygeum spartum",
+          "comun": "Albardín",
+          "id": 4,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 4,
+          "motivo": "4 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Lygeum spartum",
+          "comun": "Albardín",
+          "id": 4,
+          "habitat": "pendientes-rocosas-calcicolas-8210",
+          "hic": "8210",
+          "veredicto": "respaldado",
+          "ocurrencias": 3,
+          "motivo": "3 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Lygeum spartum",
+          "comun": "Albardín",
+          "id": 4,
+          "habitat": "acantilados-con-vegetacion-1240",
+          "hic": "1240",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Lygeum spartum",
+          "comun": "Albardín",
+          "id": 4,
+          "habitat": "estepas-salinas-mediterraneas-1510",
+          "hic": "1510",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Lygeum spartum",
+          "comun": "Albardín",
+          "id": 4,
+          "habitat": "matorrales-halonitrofilos-pegano-1430",
+          "hic": "1430",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Lygeum spartum",
+          "comun": "Albardín",
+          "id": 4,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 6220",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Acanthodactylus erythrurus",
+          "comun": "Lagartija colirroja",
+          "id": 5,
+          "habitat": "matorrales-arborescentes-de-5220",
+          "hic": "5220",
+          "veredicto": "respaldado",
+          "ocurrencias": 3,
+          "motivo": "3 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Acanthodactylus erythrurus",
+          "comun": "Lagartija colirroja",
+          "id": 5,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 3,
+          "motivo": "3 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Acanthodactylus erythrurus",
+          "comun": "Lagartija colirroja",
+          "id": 5,
+          "habitat": "pendientes-rocosas-calcicolas-8210",
+          "hic": "8210",
+          "veredicto": "respaldado",
+          "ocurrencias": 3,
+          "motivo": "3 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Acanthodactylus erythrurus",
+          "comun": "Lagartija colirroja",
+          "id": 5,
+          "habitat": "acantilados-con-vegetacion-1240",
+          "hic": "1240",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Acanthodactylus erythrurus",
+          "comun": "Lagartija colirroja",
+          "id": 5,
+          "habitat": "estepas-salinas-mediterraneas-1510",
+          "hic": "1510",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Acanthodactylus erythrurus",
+          "comun": "Lagartija colirroja",
+          "id": 5,
+          "habitat": "matorrales-halonitrofilos-pegano-1430",
+          "hic": "1430",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Withania frutescens",
+          "comun": "Oroval",
+          "id": 6,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 4,
+          "motivo": "4 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Withania frutescens",
+          "comun": "Oroval",
+          "id": 6,
+          "habitat": "matorrales-arborescentes-de-5220",
+          "hic": "5220",
+          "veredicto": "respaldado",
+          "ocurrencias": 3,
+          "motivo": "3 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Withania frutescens",
+          "comun": "Oroval",
+          "id": 6,
+          "habitat": "pendientes-rocosas-calcicolas-8210",
+          "hic": "8210",
+          "veredicto": "respaldado",
+          "ocurrencias": 3,
+          "motivo": "3 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Withania frutescens",
+          "comun": "Oroval",
+          "id": 6,
+          "habitat": "bosques-endemicos-de-9560",
+          "hic": "9560",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Withania frutescens",
+          "comun": "Oroval",
+          "id": 6,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Withania frutescens",
+          "comun": "Oroval",
+          "id": 6,
+          "habitat": "matorrales-halonitrofilos-pegano-1430",
+          "hic": "1430",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1430",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Launaea lanifera",
+          "comun": "Lechuguilla lanosa",
+          "id": 7,
+          "habitat": "acantilados-con-vegetacion-1240",
+          "hic": "1240",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Launaea lanifera",
+          "comun": "Lechuguilla lanosa",
+          "id": 7,
+          "habitat": "estepas-salinas-mediterraneas-1510",
+          "hic": "1510",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Launaea lanifera",
+          "comun": "Lechuguilla lanosa",
+          "id": 7,
+          "habitat": "matorrales-arborescentes-de-5220",
+          "hic": "5220",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Launaea lanifera",
+          "comun": "Lechuguilla lanosa",
+          "id": 7,
+          "habitat": "matorrales-halonitrofilos-pegano-1430",
+          "hic": "1430",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Launaea lanifera",
+          "comun": "Lechuguilla lanosa",
+          "id": 7,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Launaea lanifera",
+          "comun": "Lechuguilla lanosa",
+          "id": 7,
+          "habitat": "pendientes-rocosas-calcicolas-8210",
+          "hic": "8210",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limonium lobatum",
+          "comun": "Saladilla anual",
+          "id": 8,
+          "habitat": "matorrales-arborescentes-de-5220",
+          "hic": "5220",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limonium lobatum",
+          "comun": "Saladilla anual",
+          "id": 8,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limonium lobatum",
+          "comun": "Saladilla anual",
+          "id": 8,
+          "habitat": "pendientes-rocosas-calcicolas-8210",
+          "hic": "8210",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limonium lobatum",
+          "comun": "Saladilla anual",
+          "id": 8,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 6220",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Lycium intricatum",
+          "comun": "Cambrón",
+          "id": 9,
+          "habitat": "matorrales-arborescentes-de-5220",
+          "hic": "5220",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Lycium intricatum",
+          "comun": "Cambrón",
+          "id": 9,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Lycium intricatum",
+          "comun": "Cambrón",
+          "id": 9,
+          "habitat": "pendientes-rocosas-calcicolas-8210",
+          "hic": "8210",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Periploca angustifolia",
+          "comun": "Cornical",
+          "id": 10,
+          "habitat": "matorrales-arborescentes-de-5220",
+          "hic": "5220",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5220",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Periploca angustifolia",
+          "comun": "Cornical",
+          "id": 10,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Periploca angustifolia",
+          "comun": "Cornical",
+          "id": 10,
+          "habitat": "pendientes-rocosas-calcicolas-8210",
+          "hic": "8210",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Periploca angustifolia",
+          "comun": "Cornical",
+          "id": 10,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Psammodromus algirus",
+          "comun": "Lagartija colilarga",
+          "id": 11,
+          "habitat": "matorrales-arborescentes-de-5220",
+          "hic": "5220",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Psammodromus algirus",
+          "comun": "Lagartija colilarga",
+          "id": 11,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Psammodromus algirus",
+          "comun": "Lagartija colilarga",
+          "id": 11,
+          "habitat": "pendientes-rocosas-calcicolas-8210",
+          "hic": "8210",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Psammodromus algirus",
+          "comun": "Lagartija colilarga",
+          "id": 11,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Salsola papillosa",
+          "comun": "Salsola",
+          "id": 12,
+          "habitat": "matorrales-arborescentes-de-5220",
+          "hic": "5220",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Salsola papillosa",
+          "comun": "Salsola",
+          "id": 12,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Salsola papillosa",
+          "comun": "Salsola",
+          "id": 12,
+          "habitat": "acantilados-con-vegetacion-1240",
+          "hic": "1240",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Salsola papillosa",
+          "comun": "Salsola",
+          "id": 12,
+          "habitat": "estepas-salinas-mediterraneas-1510",
+          "hic": "1510",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Salsola papillosa",
+          "comun": "Salsola",
+          "id": 12,
+          "habitat": "matorrales-halonitrofilos-pegano-1430",
+          "hic": "1430",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Salsola papillosa",
+          "comun": "Salsola",
+          "id": 12,
+          "habitat": "pendientes-rocosas-calcicolas-8210",
+          "hic": "8210",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Teucrium carolipaui",
+          "comun": "poleo amargo",
+          "id": 13,
+          "habitat": "bosques-endemicos-de-9560",
+          "hic": "9560",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Teucrium carolipaui",
+          "comun": "poleo amargo",
+          "id": 13,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Teucrium carolipaui",
+          "comun": "poleo amargo",
+          "id": 13,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Artemisia barrelieri",
+          "comun": "Boja negra",
+          "id": 14,
+          "habitat": "matorrales-arborescentes-de-5220",
+          "hic": "5220",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Artemisia barrelieri",
+          "comun": "Boja negra",
+          "id": 14,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Artemisia barrelieri",
+          "comun": "Boja negra",
+          "id": 14,
+          "habitat": "pendientes-rocosas-calcicolas-8210",
+          "hic": "8210",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Artemisia barrelieri",
+          "comun": "Boja negra",
+          "id": 14,
+          "habitat": "matorrales-halonitrofilos-pegano-1430",
+          "hic": "1430",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1430",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Atriplex glauca",
+          "comun": "Orgaza",
+          "id": 15,
+          "habitat": "matorrales-arborescentes-de-5220",
+          "hic": "5220",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Atriplex glauca",
+          "comun": "Orgaza",
+          "id": 15,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Atriplex glauca",
+          "comun": "Orgaza",
+          "id": 15,
+          "habitat": "pendientes-rocosas-calcicolas-8210",
+          "hic": "8210",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Atriplex glauca",
+          "comun": "Orgaza",
+          "id": 15,
+          "habitat": "matorrales-halonitrofilos-pegano-1430",
+          "hic": "1430",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1430",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Lafuentea rotundifolia",
+          "comun": "Orejilla de roca",
+          "id": 16,
+          "habitat": "matorrales-arborescentes-de-5220",
+          "hic": "5220",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Lafuentea rotundifolia",
+          "comun": "Orejilla de roca",
+          "id": 16,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Lafuentea rotundifolia",
+          "comun": "Orejilla de roca",
+          "id": 16,
+          "habitat": "pendientes-rocosas-calcicolas-8210",
+          "hic": "8210",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 8210",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Lapiedra martinezii",
+          "comun": "Narciso",
+          "id": 17,
+          "habitat": "matorrales-arborescentes-de-5220",
+          "hic": "5220",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Lapiedra martinezii",
+          "comun": "Narciso",
+          "id": 17,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Lapiedra martinezii",
+          "comun": "Narciso",
+          "id": 17,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 6220",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Plantago amplexicaulis",
+          "comun": "Plantago amplexicaulis",
+          "id": 18,
+          "habitat": "matorrales-arborescentes-de-5220",
+          "hic": "5220",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Plantago amplexicaulis",
+          "comun": "Plantago amplexicaulis",
+          "id": 18,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Plantago amplexicaulis",
+          "comun": "Plantago amplexicaulis",
+          "id": 18,
+          "habitat": "pendientes-rocosas-calcicolas-8210",
+          "hic": "8210",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Plantago amplexicaulis",
+          "comun": "Plantago amplexicaulis",
+          "id": 18,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 6220",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Santolina viscosa",
+          "comun": "Brochera pegajosa",
+          "id": 19,
+          "habitat": "bosques-endemicos-de-9560",
+          "hic": "9560",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Santolina viscosa",
+          "comun": "Brochera pegajosa",
+          "id": 19,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Santolina viscosa",
+          "comun": "Brochera pegajosa",
+          "id": 19,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Senecio flavus",
+          "comun": "Senecio flavus",
+          "id": 20,
+          "habitat": "bosques-endemicos-de-9560",
+          "hic": "9560",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Senecio flavus",
+          "comun": "Senecio flavus",
+          "id": 20,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Senecio flavus",
+          "comun": "Senecio flavus",
+          "id": 20,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Suaeda spicata",
+          "comun": "Espinacas",
+          "id": 21,
+          "habitat": "bosques-endemicos-de-9560",
+          "hic": "9560",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Suaeda spicata",
+          "comun": "Espinacas",
+          "id": 21,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Suaeda spicata",
+          "comun": "Espinacas",
+          "id": 21,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Suaeda spicata",
+          "comun": "Espinacas",
+          "id": 21,
+          "habitat": "estepas-salinas-mediterraneas-1510",
+          "hic": "1510",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1510",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Tarentola mauritanica",
+          "comun": "Salamanquesa común",
+          "id": 22,
+          "habitat": "matorrales-arborescentes-de-5220",
+          "hic": "5220",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Tarentola mauritanica",
+          "comun": "Salamanquesa común",
+          "id": 22,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Tarentola mauritanica",
+          "comun": "Salamanquesa común",
+          "id": 22,
+          "habitat": "pendientes-rocosas-calcicolas-8210",
+          "hic": "8210",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Teucrium freynii",
+          "comun": "Teucrio de Freyn",
+          "id": 23,
+          "habitat": "matorrales-arborescentes-de-5220",
+          "hic": "5220",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Teucrium freynii",
+          "comun": "Teucrio de Freyn",
+          "id": 23,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Teucrium freynii",
+          "comun": "Teucrio de Freyn",
+          "id": 23,
+          "habitat": "zonas-subestepicas-de-6220",
+          "hic": "6220",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Teucrium freynii",
+          "comun": "Teucrio de Freyn",
+          "id": 23,
+          "habitat": "pendientes-rocosas-calcicolas-8210",
+          "hic": "8210",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 8210",
+          "ocurrencias": null
+        }
+      ]
+    },
+    {
       "slug": "sierra-de-salinas",
       "conBarrido": true,
       "enlaces": [
@@ -47943,9 +49285,9 @@
           "id": 1,
           "habitat": "matorrales-termomediterraneos-y-5330",
           "hic": "5330",
-          "veredicto": "respaldado",
-          "ocurrencias": 5,
-          "motivo": "5 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
         },
         {
           "especie": "Rosmarinus officinalis",
@@ -49503,9 +50845,9 @@
           "id": 34,
           "habitat": "zonas-subestepicas-de-6220",
           "hic": "6220",
-          "veredicto": "respaldado",
-          "ocurrencias": 1,
-          "motivo": "1 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 6220",
+          "ocurrencias": null
         },
         {
           "especie": "Lonicera etrusca",
@@ -49699,9 +51041,9 @@
           "id": 1,
           "habitat": "matorrales-termomediterraneos-y-5330",
           "hic": "5330",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
         },
         {
           "especie": "Pinus halepensis",
