@@ -1,6 +1,6 @@
 # Fotos de puntos de interés — informe
 
-Generado por `Tools/catalogo-nacional/poi-images.js` el 2026-08-21.
+Generado por `Tools/catalogo-nacional/poi-images.js` el 2026-08-22.
 
 Solo se escriben las candidatas con licencia libre (CC0, dominio público, CC BY, CC BY-SA) y
 coincidencia segura. Las marcadas «a revisar» salen del buscador de Commons y hay que mirarlas
@@ -66,6 +66,12 @@ antes de aceptarlas: el buscador no garantiza que la foto sea del sitio.
 | espacios-abiertos-e-islas-del-mar-menor | Playa de las Amoladeras | sin foto | ninguna candidata pasó licencia y carga |
 | espacios-abiertos-e-islas-del-mar-menor | Isla Perdiguera | ya tenía foto | https://commons.wikimedia.org/wiki/Special:FilePath/La_Esparte%C3%B1a_(Isla_Perdiguera).jpg?width=1280 |
 | espacios-abiertos-e-islas-del-mar-menor | Isla del Ciervo | sin foto | ninguna candidata pasó licencia y carga |
+| humedal-del-ajauque-y-rambla-salada | Salinas de Rambla Salada | sin foto | ninguna candidata pasó licencia y carga |
+| humedal-del-ajauque-y-rambla-salada | Aula de Naturaleza Salinas de Rambla Salada | sin foto | ninguna candidata pasó licencia y carga |
+| humedal-del-ajauque-y-rambla-salada | Cabecicos Negros de Fortuna | ya tenía foto | https://commons.wikimedia.org/wiki/Special:FilePath/Cabecicos_negros_1.JPG?width=1280 |
+| humedal-del-ajauque-y-rambla-salada | Dique de El Tale | sin foto | ninguna candidata pasó licencia y carga |
+| humedal-del-ajauque-y-rambla-salada | Dique volcánico de Derramadores | sin foto | ninguna candidata pasó licencia y carga |
+| humedal-del-ajauque-y-rambla-salada | Embalse de Santomera | ya tenía foto | https://commons.wikimedia.org/wiki/Special:FilePath/Embalse_de_Santomera.jpg?width=1280 |
 | monte-arabi | Pico del Arabí | sin foto | ninguna candidata pasó licencia y carga |
 | monte-arabi | El Arabilejo | sin foto | ninguna candidata pasó licencia y carga |
 | monte-arabi | Cantos de la Visera I y II | ya tenía foto | https://commons.wikimedia.org/wiki/Special:FilePath/CantosVisera2.jpg?width=1280 |

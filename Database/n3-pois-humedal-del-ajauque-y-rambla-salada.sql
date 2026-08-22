@@ -1,0 +1,54 @@
+-- El juego de caracteres se fija SIEMPRE: el cliente mysql lo toma del entorno y en un
+-- contenedor sin locale eso es latin1, que convierte cada tilde en mojibake sin dar error.
+SET NAMES utf8mb4;
+
+-- ================================================================================================
+-- Humedal del Ajauque y Rambla Salada · Fase 3 (N3): puntos de interés.
+--
+-- GENERADO por Tools/catalogo-nacional/build-poi-sql.js desde el bloque `pointsOfInterest` de
+-- Frontend/Data/parks/murcia/humedal-del-ajauque-y-rambla-salada/park.json. No editar a mano: regenerar con
+--   node Tools/catalogo-nacional/build-poi-sql.js --park humedal-del-ajauque-y-rambla-salada
+--
+-- Hace falta porque Frontend/Js/data.js da PRIORIDAD a la API sobre el park.json empaquetado: en un
+-- despliegue con backend, sin este SQL el espacio se seguiría sirviendo con 0 puntos de interés.
+--
+-- ANTES DE APLICAR, comprobar que el espacio tiene fila en `parks`. Si no la tiene, el
+-- INSERT ... SELECT de abajo no encuentra nada y **carga cero filas sin dar ningún error** (le pasó
+-- a Sierra Espuña el 2026-08-08):
+--   SELECT id, slug, name FROM parks WHERE slug = 'humedal-del-ajauque-y-rambla-salada';
+--
+-- Idempotente: ON DUPLICATE KEY UPDATE sobre la clave única (park_id, slug). Aplicar con:
+--   docker exec -i naturdex-db-1 sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" mysql --default-character-set=utf8mb4 naturadex' < Database/n3-pois-humedal-del-ajauque-y-rambla-salada.sql
+-- ================================================================================================
+
+-- 6 punto(s) de interés.
+INSERT INTO points_of_interest (park_id, slug, name, type, description, latitude, longitude, image_url, source, is_approx)
+SELECT p.id, poi.slug, poi.name, poi.type, poi.description, poi.latitude, poi.longitude, poi.image_url, poi.source, poi.is_approx
+FROM parks p
+JOIN (
+    SELECT 'salinas-de-rambla-salada' slug, 'Salinas de Rambla Salada' name, 'Cultural' type, 'Unas salinas de interior, alimentadas no por el mar sino por manantiales salinos, que ya funcionaban en el siglo XIX y hoy están abandonadas. El plan las describe con detalle: 25 órdenes con 1.028 eras articuladas por un camino central, y entre las líneas de eras los «sequeros», áreas empedradas donde se dejaba secar la sal antes de llevarla al alfolí. El alfolí —el almacén, de grandes sillares de arenisca acabados en almagra— conserva restaurado el molino de la sal. Del conjunto quedan también una gran balsa de cal y canto adosada a otras tres menores, el pozo de la antigua noria, un aljibe de medio cañón para agua dulce y dos hornos de cal, que hacían falta porque las eras se encalaban cada año.' description, 38.12541 latitude, -1.1184 longitude, NULL image_url, 'Bien de Interés Cultural con categoría de Lugar de Interés Etnográfico por el Decreto n.º 22/2016, de 23 de marzo (BORM n.º 71, de 29 de marzo de 2016), citado como tal en el Plan de gestión integral de los espacios protegidos de los relieves y cuencas centro-orientales de la Región de Murcia (Decreto n.º 252/2022, de 22 de diciembre; BORM n.º 38, de 16 de febrero de 2023, suplemento n.º 6, anuncio 913), volumen II §1.4 «Patrimonio cultural», que es de donde sale la descripción del conjunto salinero. Coordenada: centroide del recinto declarado BIC tal y como lo cartografía OpenStreetMap (way/1066527863, que cita el mismo anuncio del BORM en su etiqueta source). Es APROXIMADA porque el recinto mide unos 900 m de este a oeste y el punto es su centro, no una entrada ni un elemento concreto.' source, TRUE is_approx
+    UNION ALL
+    SELECT 'aula-de-naturaleza-salinas-de-rambla-salada', 'Aula de Naturaleza Salinas de Rambla Salada', 'Acceso', 'El equipamiento de uso público del paisaje protegido y el punto por el que se entra a visitarlo: una de las aulas de la Red de Aulas de la Naturaleza de la Región de Murcia, en funcionamiento desde 2004, dirigida a centros escolares, asociaciones y colectivos. Está junto a las salinas, que son lo que se interpreta desde aquí.', 38.126348, -1.119882, NULL, 'Red de Aulas de la Naturaleza de la Región de Murcia, listada por el organismo gestor en murcianatural.carm.es/w/aulas-de-la-naturaleza como «Aula de Naturaleza SALINAS DE RAMBLA SALADA (FORTUNA) · Paisaje Protegido del Humedal de Ajauque y Rambla Salada», consultado el 2026-08-22. Coordenada: el edificio cartografiado en OpenStreetMap (way/1066424056), dentro del límite oficial.', FALSE
+    UNION ALL
+    SELECT 'cabecicos-negros-de-fortuna', 'Cabecicos Negros de Fortuna', 'Geológico', 'El afloramiento donde se describió por primera vez la fortunita, una roca volcánica lamproítica que lleva el nombre de Fortuna: la describieron Adán de Yarza en 1893 y Osann en 1906. Su composición mineral principal son ortopiroxeno, flogopita, sanidina y algo de diópsido; las variedades vítreas que aparecen en algunas zonas del afloramiento resultaron ser, según trabajos posteriores, la misma roca con distinto grado de cristalización, no un tipo aparte. Es un edificio volcánico ultrapotásico del Mioceno, encajado en materiales del Tortoniense y el Messiniense.', 38.160049, -1.094259, 'https://commons.wikimedia.org/wiki/Special:FilePath/Cabecicos_negros_1.JPG?width=1280', 'IELIG · Inventario Español de Lugares de Interés Geológico (IGME), LIG `GR008` «Edificio volcánico ultrapotásico mioceno de los Cabecicos Negros de Fortuna», que además es el Geosite `VU003` y corresponde al MU001 del Inventario de LIG de la Región de Murcia: interés principal petrológico-geoquímico, contexto «Vulcanismo neógeno y cuaternario de la Península Ibérica», valor científico Alto. 16,5 ha, de las que 15,6 (el 95 %) caen dentro del límite oficial del espacio. La descripción es literal de la ficha del IELIG. Coordenada: nodo del LIG en OpenStreetMap (node/8150795134), dentro del límite. El plan de gestión (volumen II §1.5) recoge los Lugares de Interés Geológico entre los elementos clave del Paisaje Protegido; Wikimedia Commons (foto: Heriberto Arribas Abato, CC BY-SA 3.0)', FALSE
+    UNION ALL
+    SELECT 'dique-y-serie-evaporitica-de-el-tale', 'Dique de El Tale', 'Geológico', 'Un dique de rocas ultrapotásicas atravesando la serie evaporítica y detrítica del Mioceno: aquí se ve, en un mismo punto, el volcanismo de la Cuenca de Fortuna y los yesos y sales que dejó la crisis de salinidad del Mediterráneo, cuando el mar se evaporó casi por completo hace unos seis millones de años. El inventario le reconoce, además del interés petrológico, valor para la historia de la geología y para la estratigrafía y la sedimentología.', 38.17762, -1.0806, NULL, 'IELIG · Inventario Español de Lugares de Interés Geológico (IGME), LIG `MU026` «Dique de rocas ultrapotásicas y serie evaporítica y detrítica miocena de El Tale»: interés principal petrológico-geoquímico, secundarios historia de la geología, estratigráfico y sedimentológico; unidad geotectónica «Cuenca de Fortuna», contexto «Episodios evaporíticos messinienses (crisis de salinidad mediterránea)». 64,9 ha, de las que 59,1 (el 91 %) caen dentro del límite oficial del espacio. Coordenada APROXIMADA: centro del recorte del polígono del LIG contra el límite del espacio, porque el inventario da un recinto de 65 ha y no un punto.', TRUE
+    UNION ALL
+    SELECT 'dique-volcanico-de-derramadores', 'Dique volcánico de Derramadores', 'Geológico', 'Otro asomo del mismo volcanismo mioceno ultrapotásico de la Cuenca de Fortuna, este mucho más pequeño: medio hectárea de dique con interés petrológico-geoquímico y mineralógico, en el extremo norte del espacio, junto al saladar al que da nombre.', 38.175, -1.10082, NULL, 'IELIG · Inventario Español de Lugares de Interés Geológico (IGME), LIG `MU025` «Dique volcánico mioceno de rocas ultrapotásicas de Derramadores»: interés principal petrológico-geoquímico, secundario mineralógico; unidad geotectónica «Cuenca de Fortuna», contexto «Vulcanismo neógeno y cuaternario de la Península Ibérica». 0,47 ha, el 94 % de las 0,5 que mide el LIG, dentro del límite oficial del espacio. Coordenada: centro del polígono del LIG, que mide unos 70 m de lado, así que el centro ES el lugar.', FALSE
+    UNION ALL
+    SELECT 'embalse-de-santomera', 'Embalse de Santomera', 'Natural', 'El único gran espejo de agua permanente del espacio, y su zona de mayor interés para las aves acuáticas: aquí paran limícolas y larolimícolas —nidificantes y en paso— e invernan anátidas, fochas y zampullines. El plan advierte de que la avifauna depende del nivel del embalse: cuando está alto, las limícolas invernantes bajan drásticamente. Es también el área que el Plan de Recuperación de la malvasía cabeciblanca señala como zona potencial de reintroducción o expansión de la especie. Alrededor cambia el relieve y aparece el estrato arbóreo —tarayales de ribera y pinares de repoblación en las laderas de la margen izquierda—, que en el resto del espacio no existe.', 38.106161, -1.09029, 'https://commons.wikimedia.org/wiki/Special:FilePath/Embalse_de_Santomera.jpg?width=1280', 'Plan de gestión integral de los espacios protegidos de los relieves y cuencas centro-orientales de la Región de Murcia (Decreto n.º 252/2022, de 22 de diciembre; BORM n.º 38, de 16 de febrero de 2023, suplemento n.º 6, anuncio 913), volumen I §3.4.2 «Zonas Húmedas» —el embalse figura como humedal E10 del Inventario de Humedales de la Región de Murcia— y volumen II §1.2.2.1 «Especies de aves» y §1.3.2 «Paisaje interior». La zona potencial de reintroducción de la malvasía cabeciblanca la fija el Decreto n.º 70/2016, de 12 de julio (BORM n.º 163, de 15 de julio de 2016), citado por el propio plan. Coordenada APROXIMADA: centro de la lámina de agua tal y como la cartografía OpenStreetMap (relation/14197774), no un mirador ni un punto de acceso; la presa queda fuera del límite oficial del espacio; Wikimedia Commons (foto: Cloudsantomera, CC BY-SA 4.0)', TRUE
+) poi
+WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada'
+ON DUPLICATE KEY UPDATE
+    name = VALUES(name),
+    type = VALUES(type),
+    description = VALUES(description),
+    latitude = VALUES(latitude),
+    longitude = VALUES(longitude),
+    image_url = VALUES(image_url),
+    source = VALUES(source),
+    is_approx = VALUES(is_approx);
+
+-- Comprobación posterior: debe devolver 6.
+SELECT COUNT(*) AS pois_cargados FROM points_of_interest poi
+JOIN parks p ON p.id = poi.park_id WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada';

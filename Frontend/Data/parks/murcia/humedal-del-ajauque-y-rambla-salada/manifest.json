@@ -2,7 +2,7 @@
   "slug": "humedal-del-ajauque-y-rambla-salada",
   "name": "Humedal del Ajauque y Rambla Salada",
   "apiSlug": "humedal-del-ajauque-y-rambla-salada",
-  "version": 4,
+  "version": 7,
   "updatedAt": "2026-08-22",
   "data": "Data/parks/murcia/humedal-del-ajauque-y-rambla-salada/park.json",
   "geo": {
@@ -14,9 +14,9 @@
   "images": [],
   "audio": [],
   "counts": {
-    "species": 184,
+    "species": 183,
     "habitats": 10,
-    "pointsOfInterest": 0,
+    "pointsOfInterest": 6,
     "images": 0,
     "assetBytes": 0
   },

@@ -1,6 +1,6 @@
 # humedal-del-ajauque-y-rambla-salada · selección de especies
 
-Generada el 2026-08-22. **184 aprobadas** (118 aves), 174 ya fichadas en otro espacio y 10 nuevas. 243 excluidas.
+Generada el 2026-08-22. **183 aprobadas** (117 aves), 173 ya fichadas en otro espacio y 10 nuevas. 243 excluidas.
 
 Atlas 2005 consultado: 483 especies características para los HIC de este espacio.
 
@@ -153,7 +153,7 @@ Tramo 1–5 derivado **solo** de la categoría legal vigente; no interviene ning
 | 4 | Vulnerable · Sensible a la alteración de su hábitat | 8 | 14 |
 | 3 | De interés especial | 0 | 21 |
 | 2 | En régimen de protección especial (LESRPE) | 109 | 98 |
-| 1 | Sin figura de protección | 62 | 44 |
+| 1 | Sin figura de protección | 61 | 43 |
 | **≥ 4** | **candidatas a destacadas** | **13** | **21** |
 
 ## Figuras legales que no cuentan como protección
@@ -360,7 +360,6 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Limonium cossonianum* | — | 0 | 0 | 1 | protegida, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Tamarix canariensis* | — | 0 | 0 | 1 | caracteristica, protegida, anexo_normativo | cabezo-gordo |
 | *Teucrium libanitis* | — | 0 | 0 | 1 | protegida, anexo_normativo | carrascoy-y-el-valle |
-| *Phalacrocorax carbo carbo* | Aves | 0 | 0 | 1 | anexo_normativo, lista_oficial_sitio | calblanque-monte-cenizas-pena-aguila |
 | *Aphanius iberus* | — | 0 | 0 | 5 | protegida, lista_oficial_sitio | calblanque-monte-cenizas-pena-aguila |
 
 ## Excluidas

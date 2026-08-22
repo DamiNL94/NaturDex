@@ -2,9 +2,9 @@
   "_nota": "Selección de especies para la Capa 3 de Humedal del Ajauque y Rambla Salada. NO es park.json: es la lista aprobada y su procedencia. ORDEN DE PRIORIDAD DE LAS FUENTES: primero la LEGISLACIÓN, después EIDOS, y GBIF solo para corroborar. Nivel 1 — el anexo normativo del espacio (PORN/PRUG/decreto de declaración, evidencia `anexo_normativo`) y el Formulario Normalizado de Datos del sitio Red Natura 2000 (secciones 3.2 y 3.3, evidencia `lista_oficial_sitio`): son las únicas fuentes que afirman que la especie forma parte de ESTE espacio y entran SIN exigirles constancia en GBIF. Nivel 2 — figura legal de EIDOS y especies características del HIC según el Atlas 2005 (`caracteristica`): dicen qué es el taxón, no que esté aquí, así que necesitan al menos una ocurrencia de GBIF dentro de los polígonos que lo corrobore. Nivel 3 — solo GBIF: NO ENTRA; un avistamiento suelto no distingue lo característico del olivo de un bancal abandonado. Autoctonía: se excluye todo lo que la Lista Patrón del IEPNB marca como «Especie no nativa». Se excluye el CEEEI (RD 630/2013): es el catálogo de especies exóticas INVASORAS, no una figura de protección, y tampoco cuentan los anexos forestales (RD 159/2022, RD 289/2003) ni el anexo de explotación de la Ley 42/2007. Alcance taxonómico: flora vascular y vertebrados, que es lo que cataloga NaturDex — clases admitidas: Magnoliopsida, Liliopsida, Pinopsida, Gnetopsida, Polypodiopsida, Lycopodiopsida, Aves, Mammalia, Reptilia, Squamata, Testudines, Amphibia, Actinopterygii. Lo que el nivel 1 enumera y GBIF no confirma se aprueba igual y queda listado en `anexo_sin_constancia` y `sitio_sin_constancia`: entra en el catálogo y hay que contrastarlo en campo. (3 bis) Las AVES no entran por el filtro de presencia —vuelan, sus ocurrencias caen dentro de cualquier polígono y por eso su ficha se escribe sin `habitatIds`—: exigen respaldo de sitio (formulario oficial del sitio o anexo normativo), y GBIF queda como confirmación. `rarityScore` (1–5) se deriva únicamente de la categoría legal ESTATAL más grave, con la norma que la justifica en `rarityBasis`; no interviene ninguna señal de abundancia. Generada por Tools/catalogo-nacional/build-species-seleccion.js.",
   "park": "humedal-del-ajauque-y-rambla-salada",
   "generado": "2026-08-22",
-  "total": 184,
-  "aves": 118,
-  "reutilizables": 174,
+  "total": 183,
+  "aves": 117,
+  "reutilizables": 173,
   "nuevas": 10,
   "excluidas": 243,
   "anexo": {
@@ -45,14 +45,14 @@
   },
   "aves_puerta": "respaldo de sitio",
   "rareza": {
-    "1": 62,
+    "1": 61,
     "2": 109,
     "3": 0,
     "4": 8,
     "5": 5
   },
   "rareza_local": {
-    "1": 44,
+    "1": 43,
     "2": 98,
     "3": 21,
     "4": 14,
@@ -1118,6 +1118,9 @@
         }
       },
       "eidosTaxonId": 10965,
+      "sinonimosFusionados": [
+        "Phalacrocorax carbo carbo"
+      ],
       "nivelDeFuente": 1
     },
     {
@@ -9033,50 +9036,6 @@
         }
       },
       "eidosTaxonId": 8812,
-      "nivelDeFuente": 1
-    },
-    {
-      "scientificName": "Phalacrocorax carbo carbo",
-      "class": "Aves",
-      "gbifOccurrences": 0,
-      "habitats": 0,
-      "evidence": [
-        "anexo_normativo",
-        "lista_oficial_sitio"
-      ],
-      "yaFichadaEn": "calblanque-monte-cenizas-pena-aguila",
-      "normas": [],
-      "rarityScore": 1,
-      "rarityBasis": null,
-      "rarityLocal": 1,
-      "rarityLocalBasis": null,
-      "origen": null,
-      "listaOficialSitio": [
-        {
-          "citadaComo": "Phalacrocorax carbo carbo",
-          "siteCode": "ES0000195",
-          "siteName": "Humedal del Ajauque y Rambla Salada",
-          "seccion": "3.2",
-          "tipoPoblacion": "invernante",
-          "categoriaPoblacion": "presente"
-        }
-      ],
-      "anexoNormativo": {
-        "citadaComo": "Phalacrocórax carbo",
-        "categoria": null,
-        "nota": "Migradora de llegada regular no incluida en el Anexo I de la Directiva Aves (Tabla 6). Errata de la Tabla 6: el género se escribe con tilde. El nombre aceptado es Phalacrocorax carbo.",
-        "fuente": {
-          "norma": "Decreto n.º 252/2022, de 22 de diciembre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos de los relieves y cuencas centro-orientales de la Región de Murcia",
-          "boletin": "BORM n.º 38, de 16 de febrero de 2023, suplemento n.º 6, anuncio 913",
-          "url": "https://www.borm.es/services/anuncio/ano/2023/numero/913/pdf?id=815831",
-          "anexo": "Volumen II §1.2 «Descripción de la biodiversidad» del “Humedal del Ajauque y Rambla Salada”: Tabla 4 (§1.2.2.1, 30 aves del Anexo I de la Directiva Aves), Tabla 6 (82 aves migradoras de llegada regular no incluidas en el Anexo I), Tabla 7 (16 otras aves de interés para su conservación), Tabla 8 (14 taxones de los Anexos II y/o IV de la Directiva Hábitats: 10 mamíferos, 2 anfibios y 2 reptiles), Tabla 9 (12 otras especies de interés: 2 mamíferos, 9 reptiles y 1 anfibio), Tabla 10 (44 invertebrados de interés: 16 coleópteros acuáticos, 1 terrestre y 27 arácnidos) y Tabla 11 (§1.2.2.2, 12 especies de flora catalogada). 210 taxones en total. La Tabla 12 (§1.2.3, 12 especies del Catálogo Español de especies exóticas invasoras) va en `noNativas`.",
-          "cita": "Plan de gestión integral de los relieves y cuencas centro-orientales, volumen II §1.2 (Decreto n.º 252/2022, BORM n.º 38 de 16.02.2023, supl. 6)",
-          "ambito": "el inventario conjunto del Paisaje Protegido, la ZEPA ES0000195 y la ZEC ES6200005 «Humedal del Ajauque y Rambla Salada», que el volumen II trata como un solo espacio protegido; la ZEPA y el Paisaje Protegido comparten perímetro (1.621,9 ha) y la ZEC (895,6 ha) queda dentro",
-          "consultado": "2026-08-21",
-          "nota": "El BORM publica el plan ENTERO —los cuatro volúmenes, 128 MB de PDF—, así que no hace falta el gestor documental de murcianatural: el volumen III de este mismo plan es el PRUG de Sierra de la Pila, transcrito el 2026-08-16 desde la versión de junio de 2018 que sirve murcianatural, anterior a la aprobación. Las cifras de cada tabla cuadran con las que el propio texto declara —«se han citado 30 especies del Anexo I», «otras 82 migradoras», «otras 16 especies más de aves», «14 especies de fauna incluidas en el Anexo IV», «12 especies que figuran en el Catálogo Regional, 5 de ellas catalogadas como Vulnerable»—, que es la comprobación que se puede hacer sin salir del documento. `categoria` recoge solo las categorías de amenaza que la norma asigna (Catálogo Regional y Catálogo Español); la marca «RP» de la columna LCE es la pertenencia al Listado de Especies Silvestres en Régimen de Protección Especial y esa figura ya la trae EIDOS. Podarcis hispanica está en las Tablas 8 y 9 (la segunda vez con tilde): es un solo taxón. NO se transcriben dos arácnidos que el texto nombra solo en prosa —Xerolycosa morisca, clasificada aquí, y Nemesia nunezii, propuesta— por no figurar en la Tabla 10; ni los alóctonos citados también en prosa (los crustáceos Gammarus aequicauda y Sphaeroma serratum, y Sparus aurata, Dicentrarchus labrax, Diplodus sp. y Mugil sp., introducidos en el embalse de Santomera en un experimento de 2002-2003). El plan cartografía 13 tipos de HIC y el Atlas 2005 recortado al límite da 10: faltan 1310, 6220* y 9540, que es un desvío entre cartografías de fechas distintas y no una corrección de este trabajo. Lo que NO cuadra es el resumen de la Tabla 13 («elementos clave»), que agrega: dice «otras 35 especies catalogadas: 12 de flora y 23 de fauna» donde las Tablas 8 y 9 suman 26 entradas (25 taxones distintos), y reparte las 30 del Anexo I en categorías que tampoco suman 30. Se ha transcrito lo que enumeran las TABLAS, no lo que resume ese párrafo."
-        }
-      },
-      "eidosTaxonId": 32209,
       "nivelDeFuente": 1
     },
     {

@@ -18465,19 +18465,6 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
 WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND s.scientific_name = 'Petronia petronia';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Phalacrocorax carbo carbo',
-  s.primary_habitat = NULL,
-  s.description = NULL,
-  s.description_source = NULL,
-  s.identification_tips = '',
-  s.seasonality = NULL,
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/2021-05-05_Phalacrocorax_carbo_carbo%2C_Killingworth_Lake%2C_Northumberland_1-1.jpg?width=1280',
-  s.image_attribution = 'MPF (CC BY-SA 4.0) · Wikimedia Commons',
-  s.rarity_score = 1,
-  s.rarity_basis = NULL
-WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND s.scientific_name = 'Phalacrocorax carbo carbo';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Flamenco',
   s.primary_habitat = 'Cria en Lagunas endorreicas,marismas y salinas.Deltas de aguas altamente salinas o alcalinas',
   s.description = NULL,

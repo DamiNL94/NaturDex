@@ -40,6 +40,10 @@ Tools/catalogo-nacional/fuentes/atlas-2005/
 # Texto plano del Atlas y Manual de los Hábitats (pdftotext -layout sobre el PDF de Docs/), que es lo
 # que leen atlas:hic y species:seleccion. 2 MB reproducibles en un comando; el PDF sí se versiona.
 Tools/catalogo-nacional/fuentes/atlas.txt
+# Y en la RAÍZ, que es donde lo deja la orden que escribe el runbook (`pdftotext … atlas.txt`) y
+# donde acaba de verdad, porque `fuentes/` está en permissions.deny y un agente no puede escribir
+# ahí. Sin esta línea, un `git add -A` se lleva los 2 MB al repositorio sin que nadie lo note.
+/atlas.txt
 # PORN, PRUG y planes de gestión descargados del boletín o del gestor documental de la comunidad.
 # Las URL, los apartados con inventario y la fecha de consulta están en
 # Tools/catalogo-nacional/data/normativa-espacios.json, que SÍ se versiona.

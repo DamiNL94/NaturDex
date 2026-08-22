@@ -1,7 +1,7 @@
 {
-  "generado": "2026-08-21",
+  "generado": "2026-08-22",
   "umbral": 1,
-  "aplicado": false,
+  "aplicado": true,
   "espacios": [
     {
       "slug": "cabezo-gordo",
@@ -203,9 +203,9 @@
           "id": 7,
           "habitat": "matorrales-termomediterraneos-y-5330",
           "hic": "5330",
-          "veredicto": "respaldado",
-          "ocurrencias": 1,
-          "motivo": "1 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
         },
         {
           "especie": "Teucrium carolipaui",
@@ -429,9 +429,9 @@
           "id": 132,
           "habitat": "matorral-halofilo",
           "hic": "1420",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1420",
+          "ocurrencias": null
         },
         {
           "especie": "Frankenia corymbosa",
@@ -1279,9 +1279,9 @@
           "id": 161,
           "habitat": "matorral-halonitrofilo",
           "hic": "1430",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1430",
+          "ocurrencias": null
         },
         {
           "especie": "Halimione portulacoides",
@@ -1319,9 +1319,9 @@
           "id": 38,
           "habitat": "matorral-semiarido",
           "hic": "5330",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
         },
         {
           "especie": "Pinus halepensis",
@@ -1529,9 +1529,9 @@
           "id": 125,
           "habitat": "matorral-halofilo",
           "hic": "1420",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1420",
+          "ocurrencias": null
         },
         {
           "especie": "Suaeda vera",
@@ -1539,9 +1539,9 @@
           "id": 128,
           "habitat": "matorral-halofilo",
           "hic": "1420",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1420",
+          "ocurrencias": null
         },
         {
           "especie": "Suaeda vera",
@@ -1559,9 +1559,9 @@
           "id": 126,
           "habitat": "matorral-halofilo",
           "hic": "1420",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1420",
+          "ocurrencias": null
         },
         {
           "especie": "Tamarix africana",
@@ -1619,9 +1619,9 @@
           "id": 117,
           "habitat": "prados-alysso-sedion",
           "hic": "6110",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 6110",
+          "ocurrencias": null
         },
         {
           "especie": "Sedum album",
@@ -1679,9 +1679,9 @@
           "id": 222,
           "habitat": "matorral-halofilo",
           "hic": "1420",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1420",
+          "ocurrencias": null
         },
         {
           "especie": "Halocnemum strobilaceum",
@@ -1869,9 +1869,9 @@
           "id": 232,
           "habitat": "matorral-halonitrofilo",
           "hic": "1430",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1430",
+          "ocurrencias": null
         },
         {
           "especie": "Atriplex glauca",
@@ -1939,9 +1939,9 @@
           "id": 236,
           "habitat": "galeria-ribera",
           "hic": "92D0",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 92D0",
+          "ocurrencias": null
         },
         {
           "especie": "Tamarix boveana",
@@ -1959,9 +1959,9 @@
           "id": 237,
           "habitat": "galeria-ribera",
           "hic": "92D0",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 92D0",
+          "ocurrencias": null
         },
         {
           "especie": "Asparagus horridus",
@@ -3035,9 +3035,9 @@
           "id": 10,
           "habitat": "matorrales-termomediterraneos-y-5330",
           "hic": "5330",
-          "veredicto": "respaldado",
-          "ocurrencias": 9,
-          "motivo": "9 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
         },
         {
           "especie": "Pinus halepensis",
@@ -4685,9 +4685,9 @@
           "id": 33,
           "habitat": "matorrales-halonitrofilos-pegano-1430",
           "hic": "1430",
-          "veredicto": "respaldado",
-          "ocurrencias": 1,
-          "motivo": "1 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1430",
+          "ocurrencias": null
         },
         {
           "especie": "Artemisia barrelieri",
@@ -6515,9 +6515,9 @@
           "id": 72,
           "habitat": "galerias-y-matorrales-92D0",
           "hic": "92D0",
-          "veredicto": "respaldado",
-          "ocurrencias": 1,
-          "motivo": "1 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 92D0",
+          "ocurrencias": null
         },
         {
           "especie": "Tamarix boveana",
@@ -6841,9 +6841,9 @@
           "id": 4,
           "habitat": "matorrales-termomediterraneos-y-5330",
           "hic": "5330",
-          "veredicto": "respaldado",
-          "ocurrencias": 98,
-          "motivo": "98 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
         },
         {
           "especie": "Pinus halepensis",
@@ -11901,9 +11901,9 @@
           "id": 299,
           "habitat": "matorrales-termomediterraneos-y-5330",
           "hic": "5330",
-          "veredicto": "respaldado",
-          "ocurrencias": 7,
-          "motivo": "7 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
         },
         {
           "especie": "Teucrium carolipaui",
@@ -19507,9 +19507,9 @@
           "id": 6,
           "habitat": "matorrales-halofilos-mediterraneos-1420",
           "hic": "1420",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1420",
+          "ocurrencias": null
         },
         {
           "especie": "Lycium intricatum",
@@ -19967,9 +19967,9 @@
           "id": 16,
           "habitat": "matorrales-halofilos-mediterraneos-1420",
           "hic": "1420",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1420",
+          "ocurrencias": null
         },
         {
           "especie": "Macrochloa tenacissima",
@@ -20007,9 +20007,9 @@
           "id": 18,
           "habitat": "matorrales-halofilos-mediterraneos-1420",
           "hic": "1420",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1420",
+          "ocurrencias": null
         },
         {
           "especie": "Frankenia corymbosa",
@@ -20017,9 +20017,9 @@
           "id": 19,
           "habitat": "matorrales-halofilos-mediterraneos-1420",
           "hic": "1420",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1420",
+          "ocurrencias": null
         },
         {
           "especie": "Teucrium lanigerum",
@@ -21377,9 +21377,9 @@
           "id": 56,
           "habitat": "matorrales-halonitrofilos-pegano-1430",
           "hic": "1430",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1430",
+          "ocurrencias": null
         },
         {
           "especie": "Limonium echioides",
@@ -21967,9 +21967,9 @@
           "id": 75,
           "habitat": "matorrales-halonitrofilos-pegano-1430",
           "hic": "1430",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1430",
+          "ocurrencias": null
         }
       ]
     },
@@ -22383,9 +22383,9 @@
           "id": 5,
           "habitat": "matorrales-halofilos-mediterraneos-1420",
           "hic": "1420",
-          "veredicto": "respaldado",
-          "ocurrencias": 4,
-          "motivo": "4 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1420",
+          "ocurrencias": null
         },
         {
           "especie": "Arthrocnemum macrostachyum",
@@ -22713,9 +22713,9 @@
           "id": 9,
           "habitat": "matorrales-halofilos-mediterraneos-1420",
           "hic": "1420",
-          "veredicto": "respaldado",
-          "ocurrencias": 2,
-          "motivo": "2 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1420",
+          "ocurrencias": null
         },
         {
           "especie": "Suaeda vera",
@@ -22953,9 +22953,9 @@
           "id": 13,
           "habitat": "estepas-salinas-mediterraneas-1510",
           "hic": "1510",
-          "veredicto": "respaldado",
-          "ocurrencias": 3,
-          "motivo": "3 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1510",
+          "ocurrencias": null
         },
         {
           "especie": "Limonium caesium",
@@ -24983,9 +24983,9 @@
           "id": 54,
           "habitat": "matorrales-halofilos-mediterraneos-1420",
           "hic": "1420",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el barrido no conoce este taxón por su clave ni por su nombre: es un desajuste de nomenclatura, no una ausencia"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1420",
+          "ocurrencias": null
         },
         {
           "especie": "Sideritis pusilla",
@@ -25160,6 +25160,692 @@
       ]
     },
     {
+      "slug": "humedal-del-ajauque-y-rambla-salada",
+      "conBarrido": true,
+      "enlaces": [
+        {
+          "especie": "Sedum sediforme",
+          "comun": "Uña de gato",
+          "id": 1,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "respaldado",
+          "ocurrencias": 5,
+          "motivo": "5 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Sedum sediforme",
+          "comun": "Uña de gato",
+          "id": 1,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "respaldado",
+          "ocurrencias": 5,
+          "motivo": "5 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Sedum sediforme",
+          "comun": "Uña de gato",
+          "id": 1,
+          "habitat": "estepas-salinas-mediterraneas-1510",
+          "hic": "1510",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Sedum sediforme",
+          "comun": "Uña de gato",
+          "id": 1,
+          "habitat": "pastizales-salinos-mediterraneos-1410",
+          "hic": "1410",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Sedum sediforme",
+          "comun": "Uña de gato",
+          "id": 1,
+          "habitat": "rios-mediterraneos-de-3280",
+          "hic": "3280",
+          "veredicto": "medio-contradictorio",
+          "ocurrencias": 1,
+          "motivo": "el hábitat es de medio acuático y la ficha declara un medio de pastizal"
+        },
+        {
+          "especie": "Sedum sediforme",
+          "comun": "Uña de gato",
+          "id": 1,
+          "habitat": "prados-calcareos-carsticos-6110",
+          "hic": "6110",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 6110",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Arthrocnemum macrostachyum",
+          "comun": "Sosa alacranera",
+          "id": 2,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1420",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Arthrocnemum macrostachyum",
+          "comun": "Sosa alacranera",
+          "id": 2,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Arthrocnemum macrostachyum",
+          "comun": "Sosa alacranera",
+          "id": 2,
+          "habitat": "estepas-salinas-mediterraneas-1510",
+          "hic": "1510",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Arthrocnemum macrostachyum",
+          "comun": "Sosa alacranera",
+          "id": 2,
+          "habitat": "pastizales-salinos-mediterraneos-1410",
+          "hic": "1410",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Arthrocnemum macrostachyum",
+          "comun": "Sosa alacranera",
+          "id": 2,
+          "habitat": "rios-mediterraneos-de-3280",
+          "hic": "3280",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Pinus halepensis",
+          "comun": "Pino carrasco",
+          "id": 3,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Pinus halepensis",
+          "comun": "Pino carrasco",
+          "id": 3,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Pinus halepensis",
+          "comun": "Pino carrasco",
+          "id": 3,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Pinus halepensis",
+          "comun": "Pino carrasco",
+          "id": 3,
+          "habitat": "pendientes-rocosas-calcicolas-8210",
+          "hic": "8210",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Pinus halepensis",
+          "comun": "Pino carrasco",
+          "id": 3,
+          "habitat": "prados-calcareos-carsticos-6110",
+          "hic": "6110",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Sarcocornia fruticosa",
+          "comun": "Sosa jabonera",
+          "id": 4,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1420",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Sarcocornia fruticosa",
+          "comun": "Sosa jabonera",
+          "id": 4,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "no-evaluable",
+          "ocurrencias": null,
+          "motivo": "el barrido no conoce este taxón por su clave ni por su nombre: es un desajuste de nomenclatura, no una ausencia"
+        },
+        {
+          "especie": "Sarcocornia fruticosa",
+          "comun": "Sosa jabonera",
+          "id": 4,
+          "habitat": "estepas-salinas-mediterraneas-1510",
+          "hic": "1510",
+          "veredicto": "no-evaluable",
+          "ocurrencias": null,
+          "motivo": "el barrido no conoce este taxón por su clave ni por su nombre: es un desajuste de nomenclatura, no una ausencia"
+        },
+        {
+          "especie": "Sarcocornia fruticosa",
+          "comun": "Sosa jabonera",
+          "id": 4,
+          "habitat": "pastizales-salinos-mediterraneos-1410",
+          "hic": "1410",
+          "veredicto": "no-evaluable",
+          "ocurrencias": null,
+          "motivo": "el barrido no conoce este taxón por su clave ni por su nombre: es un desajuste de nomenclatura, no una ausencia"
+        },
+        {
+          "especie": "Sarcocornia fruticosa",
+          "comun": "Sosa jabonera",
+          "id": 4,
+          "habitat": "rios-mediterraneos-de-3280",
+          "hic": "3280",
+          "veredicto": "no-evaluable",
+          "ocurrencias": null,
+          "motivo": "el barrido no conoce este taxón por su clave ni por su nombre: es un desajuste de nomenclatura, no una ausencia"
+        },
+        {
+          "especie": "Suaeda vera",
+          "comun": "Sosa fina",
+          "id": 5,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1420",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Suaeda vera",
+          "comun": "Sosa fina",
+          "id": 5,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Suaeda vera",
+          "comun": "Sosa fina",
+          "id": 5,
+          "habitat": "estepas-salinas-mediterraneas-1510",
+          "hic": "1510",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Suaeda vera",
+          "comun": "Sosa fina",
+          "id": 5,
+          "habitat": "pastizales-salinos-mediterraneos-1410",
+          "hic": "1410",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Suaeda vera",
+          "comun": "Sosa fina",
+          "id": 5,
+          "habitat": "rios-mediterraneos-de-3280",
+          "hic": "3280",
+          "veredicto": "medio-contradictorio",
+          "ocurrencias": 1,
+          "motivo": "el hábitat es de medio acuático y la ficha declara un medio salino"
+        },
+        {
+          "especie": "Acanthodactylus erythrurus",
+          "comun": "Lagartija colirroja",
+          "id": 6,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "respaldado",
+          "ocurrencias": 3,
+          "motivo": "3 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Acanthodactylus erythrurus",
+          "comun": "Lagartija colirroja",
+          "id": 6,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Frankenia corymbosa",
+          "comun": "Albardín brezo",
+          "id": 7,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1420",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Frankenia corymbosa",
+          "comun": "Albardín brezo",
+          "id": 7,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Lycium intricatum",
+          "comun": "Cambrón",
+          "id": 8,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Lycium intricatum",
+          "comun": "Cambrón",
+          "id": 8,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Tamarix boveana",
+          "comun": "Taray de saladar",
+          "id": 9,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 92D0",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Tamarix boveana",
+          "comun": "Taray de saladar",
+          "id": 9,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Tamarix boveana",
+          "comun": "Taray de saladar",
+          "id": 9,
+          "habitat": "estepas-salinas-mediterraneas-1510",
+          "hic": "1510",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Tamarix boveana",
+          "comun": "Taray de saladar",
+          "id": 9,
+          "habitat": "pastizales-salinos-mediterraneos-1410",
+          "hic": "1410",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Tamarix boveana",
+          "comun": "Taray de saladar",
+          "id": 9,
+          "habitat": "rios-mediterraneos-de-3280",
+          "hic": "3280",
+          "veredicto": "medio-contradictorio",
+          "ocurrencias": 1,
+          "motivo": "el hábitat es de medio acuático y la ficha declara un medio de matorral"
+        },
+        {
+          "especie": "Anabasis hispanica",
+          "comun": "Anabasis",
+          "id": 10,
+          "habitat": "estepas-salinas-mediterraneas-1510",
+          "hic": "1510",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Anabasis hispanica",
+          "comun": "Anabasis",
+          "id": 10,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Anabasis hispanica",
+          "comun": "Anabasis",
+          "id": 10,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Anabasis hispanica",
+          "comun": "Anabasis",
+          "id": 10,
+          "habitat": "pastizales-salinos-mediterraneos-1410",
+          "hic": "1410",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Anabasis hispanica",
+          "comun": "Anabasis",
+          "id": 10,
+          "habitat": "rios-mediterraneos-de-3280",
+          "hic": "3280",
+          "veredicto": "medio-contradictorio",
+          "ocurrencias": 1,
+          "motivo": "el hábitat es de medio acuático y la ficha declara un medio salino"
+        },
+        {
+          "especie": "Artemisia barrelieri",
+          "comun": "Boja negra",
+          "id": 11,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Artemisia barrelieri",
+          "comun": "Boja negra",
+          "id": 11,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Artemisia barrelieri",
+          "comun": "Boja negra",
+          "id": 11,
+          "habitat": "matorrales-halonitrofilos-pegano-1430",
+          "hic": "1430",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1430",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Launaea lanifera",
+          "comun": "Lechuguilla lanosa",
+          "id": 12,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limonium caesium",
+          "comun": "sopaenvino",
+          "id": 13,
+          "habitat": "estepas-salinas-mediterraneas-1510",
+          "hic": "1510",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1510",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Limonium caesium",
+          "comun": "sopaenvino",
+          "id": 13,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limonium caesium",
+          "comun": "sopaenvino",
+          "id": 13,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limonium caesium",
+          "comun": "sopaenvino",
+          "id": 13,
+          "habitat": "pastizales-salinos-mediterraneos-1410",
+          "hic": "1410",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limonium caesium",
+          "comun": "sopaenvino",
+          "id": 13,
+          "habitat": "rios-mediterraneos-de-3280",
+          "hic": "3280",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Osyris lanceolata",
+          "comun": "Bayón",
+          "id": 14,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Periploca angustifolia",
+          "comun": "Cornical",
+          "id": 15,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Psammodromus algirus",
+          "comun": "Lagartija colilarga",
+          "id": 16,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Psammodromus algirus",
+          "comun": "Lagartija colilarga",
+          "id": 16,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Tarentola mauritanica",
+          "comun": "Salamanquesa común",
+          "id": 17,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Tarentola mauritanica",
+          "comun": "Salamanquesa común",
+          "id": 17,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Teucrium carolipaui",
+          "comun": "poleo amargo",
+          "id": 18,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Teucrium carolipaui",
+          "comun": "poleo amargo",
+          "id": 18,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Teucrium carolipaui",
+          "comun": "poleo amargo",
+          "id": 18,
+          "habitat": "matorrales-halonitrofilos-pegano-1430",
+          "hic": "1430",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Teucrium carolipaui",
+          "comun": "poleo amargo",
+          "id": 18,
+          "habitat": "pastizales-salinos-mediterraneos-1410",
+          "hic": "1410",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Teucrium carolipaui",
+          "comun": "poleo amargo",
+          "id": 18,
+          "habitat": "matorrales-termomediterraneos-y-5330",
+          "hic": "5330",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Teucrium freynii",
+          "comun": "Teucrio de Freyn",
+          "id": 19,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Teucrium freynii",
+          "comun": "Teucrio de Freyn",
+          "id": 19,
+          "habitat": "pendientes-rocosas-calcicolas-8210",
+          "hic": "8210",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 8210",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Withania frutescens",
+          "comun": "Oroval",
+          "id": 20,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Withania frutescens",
+          "comun": "Oroval",
+          "id": 20,
+          "habitat": "matorrales-halonitrofilos-pegano-1430",
+          "hic": "1430",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1430",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Halocnemum strobilaceum",
+          "comun": "Sosa jabonera",
+          "id": 35,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1420",
+          "ocurrencias": null
+        },
+        {
+          "especie": "Tamarix canariensis",
+          "comun": "Taray canario",
+          "id": 61,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 92D0",
+          "ocurrencias": null
+        }
+      ]
+    },
+    {
       "slug": "monte-arabi",
       "conBarrido": true,
       "enlaces": [
@@ -25229,9 +25915,9 @@
           "id": 7,
           "habitat": "matorrales-termomediterraneos-y-5330",
           "hic": "5330",
-          "veredicto": "respaldado",
-          "ocurrencias": 3,
-          "motivo": "3 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
         },
         {
           "especie": "Pistacia lentiscus",
@@ -25665,9 +26351,9 @@
           "id": 7,
           "habitat": "matorrales-halofilos-mediterraneos-1420",
           "hic": "1420",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el barrido no conoce este taxón por su clave ni por su nombre: es un desajuste de nomenclatura, no una ausencia"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1420",
+          "ocurrencias": null
         },
         {
           "especie": "Sarcocornia fruticosa",
@@ -26335,9 +27021,9 @@
           "id": 16,
           "habitat": "matorrales-halofilos-mediterraneos-1420",
           "hic": "1420",
-          "veredicto": "respaldado",
-          "ocurrencias": 5,
-          "motivo": "5 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1420",
+          "ocurrencias": null
         },
         {
           "especie": "Arthrocnemum macrostachyum",
@@ -27685,9 +28371,9 @@
           "id": 33,
           "habitat": "matorrales-halofilos-mediterraneos-1420",
           "hic": "1420",
-          "veredicto": "respaldado",
-          "ocurrencias": 6,
-          "motivo": "6 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 1420",
+          "ocurrencias": null
         },
         {
           "especie": "Suaeda vera",
@@ -30341,9 +31027,9 @@
           "id": 3,
           "habitat": "matorrales-termomediterraneos-y-5330",
           "hic": "5330",
-          "veredicto": "respaldado",
-          "ocurrencias": 33,
-          "motivo": "33 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
         },
         {
           "especie": "Pinus halepensis",
@@ -31301,9 +31987,9 @@
           "id": 11,
           "habitat": "prados-calcareos-carsticos-6110",
           "hic": "6110",
-          "veredicto": "respaldado",
-          "ocurrencias": 11,
-          "motivo": "11 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 6110",
+          "ocurrencias": null
         },
         {
           "especie": "Sedum sediforme",
@@ -41217,9 +41903,9 @@
           "id": 2,
           "habitat": "matorrales-termomediterraneos-y-5330",
           "hic": "5330",
-          "veredicto": "respaldado",
-          "ocurrencias": 84,
-          "motivo": "84 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
         },
         {
           "especie": "Pinus halepensis",
@@ -47943,9 +48629,9 @@
           "id": 1,
           "habitat": "matorrales-termomediterraneos-y-5330",
           "hic": "5330",
-          "veredicto": "respaldado",
-          "ocurrencias": 5,
-          "motivo": "5 ocurrencias en el polígono"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
         },
         {
           "especie": "Rosmarinus officinalis",
@@ -49699,9 +50385,9 @@
           "id": 1,
           "habitat": "matorrales-termomediterraneos-y-5330",
           "hic": "5330",
-          "veredicto": "no-evaluable",
-          "ocurrencias": null,
-          "motivo": "el espacio no tiene barrido de GBIF versionado"
+          "veredicto": "caracteristica",
+          "motivo": "el Atlas la da como característica del HIC 5330",
+          "ocurrencias": null
         },
         {
           "especie": "Pinus halepensis",
