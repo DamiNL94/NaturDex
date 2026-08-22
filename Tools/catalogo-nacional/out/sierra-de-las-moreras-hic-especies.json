@@ -1,0 +1,141 @@
+{
+ "park": "sierra-de-las-moreras",
+ "generado": "Atlas y Manual de los Hábitats de España (MITECO) ∩ catálogo del parque",
+ "hic": {
+  "1240": {
+   "habitat": "acantilados-con-vegetacion-1240",
+   "especies": []
+  },
+  "1430": {
+   "habitat": "matorrales-halonitrofilos-pegano-1430",
+   "especies": [
+    "Artemisia barrelieri",
+    "Atriplex glauca",
+    "Withania frutescens"
+   ]
+  },
+  "1510": {
+   "habitat": "estepas-salinas-mediterraneas-1510",
+   "especies": [
+    "Limonium insigne",
+    "Suaeda spicata"
+   ]
+  },
+  "5220": {
+   "habitat": "matorrales-arborescentes-de-5220",
+   "especies": [
+    "Periploca angustifolia"
+   ]
+  },
+  "5330": {
+   "habitat": "matorrales-termomediterraneos-y-5330",
+   "especies": [
+    "Teucrium carolipaui"
+   ]
+  },
+  "6110": {
+   "habitat": "prados-calcareos-carsticos-6110",
+   "especies": []
+  },
+  "6220": {
+   "habitat": "zonas-subestepicas-de-6220",
+   "especies": [
+    "Limonium lobatum",
+    "Plantago amplexicaulis",
+    "Lygeum spartum",
+    "Lapiedra martinezii"
+   ]
+  },
+  "8210": {
+   "habitat": "pendientes-rocosas-calcicolas-8210",
+   "especies": [
+    "Lafuentea rotundifolia",
+    "Teucrium freynii"
+   ]
+  },
+  "9560": {
+   "habitat": "bosques-endemicos-de-9560",
+   "especies": []
+  }
+ },
+ "links": [
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Teucrium carolipaui",
+   "atlas_name": "Teucrium carolipaui subsp. carolipaui"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Limonium lobatum",
+   "atlas_name": "Limonium lobatum"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Plantago amplexicaulis",
+   "atlas_name": "Plantago amplexicaulis"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Lygeum spartum",
+   "atlas_name": "Lygeum spartum"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Lapiedra martinezii",
+   "atlas_name": "Lapiedra martinezii"
+  },
+  {
+   "code": "5220",
+   "habitat_slug": "matorrales-arborescentes-de-5220",
+   "scientific_name": "Periploca angustifolia",
+   "atlas_name": "Periploca angustifolia"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Lafuentea rotundifolia",
+   "atlas_name": "Lafuentea rotundifolia"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Teucrium freynii",
+   "atlas_name": "Teucrium freynii"
+  },
+  {
+   "code": "1430",
+   "habitat_slug": "matorrales-halonitrofilos-pegano-1430",
+   "scientific_name": "Artemisia barrelieri",
+   "atlas_name": "Artemisia barrelieri"
+  },
+  {
+   "code": "1430",
+   "habitat_slug": "matorrales-halonitrofilos-pegano-1430",
+   "scientific_name": "Atriplex glauca",
+   "atlas_name": "Atriplex glauca subsp. glauca"
+  },
+  {
+   "code": "1430",
+   "habitat_slug": "matorrales-halonitrofilos-pegano-1430",
+   "scientific_name": "Withania frutescens",
+   "atlas_name": "Withania frutescens"
+  },
+  {
+   "code": "1510",
+   "habitat_slug": "estepas-salinas-mediterraneas-1510",
+   "scientific_name": "Limonium insigne",
+   "atlas_name": "Limonium insigne"
+  },
+  {
+   "code": "1510",
+   "habitat_slug": "estepas-salinas-mediterraneas-1510",
+   "scientific_name": "Suaeda spicata",
+   "atlas_name": "Suaeda spicata"
+  }
+ ]
+}

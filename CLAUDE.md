@@ -59,7 +59,12 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
 Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 [`Docs/runbook/ORDEN-DE-OPERACIONES.md`](Docs/runbook/ORDEN-DE-OPERACIONES.md).
 
-- `species:apply` sin `species:extract` antes **pisa** las fotos escritas en el `park.json`.
+- `species:apply` sin `species:extract` antes **pisa** las fotos escritas en el `park.json`. Y el
+  orden que lo dispara era **el del propio runbook**, que ponía el `extract` ANTES de `images:species`
+  y ninguno después: `wikimedia-images.js` escribe la foto solo en el `park.json`, así que las que
+  encontraba se revertían en el mismo comando, con las dos herramientas diciendo «resueltas N» y
+  «actualizadas M» en verde. Corregido el 2026-08-22 (lo pagó *Merendera filifolia*): hace falta un
+  **segundo `species:extract` detrás de las fotos**.
 - Una entrada obsoleta en `data/contenido/*.json` **revierte** cualquier corrección en cada extracción.
 - **Renombrar un taxón** desengancha su entrada del catálogo universal y su texto de
   `data/contenido/`, que se indexan por nombre científico. Cambia la clave allí también y pasa
