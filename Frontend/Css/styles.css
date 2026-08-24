@@ -26,7 +26,7 @@
    Slab vendorizadas en Vendor/fonts/). Aquí solo queda la reserva del sistema, por si alguna vez se
    quitara esa hoja: antes esta línea pedía `Inter`, que no se carga en ninguna parte de la app. */
 body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);font-size:var(--fs-md);line-height:1.5}button,input{font:inherit}.app-shell{height:100vh;overflow:hidden;display:grid;grid-template-columns:minmax(360px,420px) 1fr}.sidebar{height:100%;min-height:0;overflow:hidden;display:flex;flex-direction:column;border-right:1px solid var(--line);background:var(--panel)}.park-summary{padding:28px 28px 22px;border-bottom:1px solid var(--line)}.eyebrow{margin:0 0 8px;color:var(--sea);font-size:var(--fs-xs);font-weight:800;text-transform:uppercase}h1,h2,h3,p{margin-top:0}h1{margin-bottom:12px;font-size:clamp(2rem,4vw,3.4rem);line-height:.96}.park-summary p{margin-bottom:18px;color:var(--muted);line-height:1.5}.summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.summary-grid div{padding:12px;border:1px solid var(--line);border-radius:8px;background:#fbfcf8}.summary-grid strong{display:block;font-size:var(--fs-xl)}.summary-grid span{display:block;color:var(--muted);font-size:var(--fs-xs)}.controls{padding:18px 28px;border-bottom:1px solid var(--line)}.controls label{display:block;margin-bottom:8px;color:var(--muted);font-size:var(--fs-sm);font-weight:700}.controls input{width:100%;height:42px;padding:0 12px;border:1px solid var(--line);border-radius:8px}.progress-wrap{margin-top:14px}.progress-track{height:8px;border-radius:999px;background:#e4ece0;overflow:hidden}.progress-track.big{height:12px}.progress-fill{height:100%;width:0;background:var(--leaf);border-radius:999px;transition:width .3s ease}.progress-label,.progress-caption{display:block;margin-top:6px;color:var(--muted);font-size:var(--fs-xs)}.segmented{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:12px;padding:4px;border:1px solid var(--line);border-radius:8px;background:#eef4ec}
-.view-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:14px 28px 0}.view-tab{min-height:38px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--muted);font-weight:800;cursor:pointer}.view-tab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.view-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:14px 28px 0}.view-tab{min-height:38px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--muted);font-weight:800;cursor:pointer}.view-tab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
 .habitat-filter-chip{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:10px;padding:8px 10px;border-radius:8px;background:#eef4ec;color:var(--leaf);font-size:var(--fs-xs);font-weight:700}.habitat-filter-chip[hidden]{display:none}.habitat-filter-chip button{border:0;background:transparent;color:var(--leaf);font-weight:800;cursor:pointer}
 .progress-panel{flex:1;min-height:0;overflow:auto;padding:18px 18px 18px 28px;display:flex;flex-direction:column;gap:20px}.species-panel[hidden],.progress-panel[hidden],.controls[hidden]{display:none}.progress-section h3{margin:0 0 8px;font-size:var(--fs-md);color:var(--ink)}.progress-list{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}.progress-row{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;font-size:var(--fs-sm)}.progress-row.complete{border-color:var(--leaf);background:#eef6ef}.progress-row-label{display:flex;align-items:center;gap:8px}.progress-row .dot{display:inline-block;width:10px;height:10px;border-radius:999px}.progress-row-value{font-weight:800;color:var(--muted)}.progress-row.complete .progress-row-value{color:var(--leaf)}
 .achievement-card{display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:10px;border:1px solid var(--line);background:#fbfcf8}.achievement-card.locked{opacity:.6}.achievement-card.unlocked{border-color:var(--sun);background:#fff8e8}.achievement-card.just-unlocked{animation:achievement-pulse 1.2s ease}.achievement-icon{font-size:2rem;line-height:1}.achievement-card strong{display:block;margin-bottom:4px;font-size:var(--fs-md)}.achievement-card p{margin:0;color:var(--muted);font-size:var(--fs-xs);line-height:1.45}
@@ -412,8 +412,14 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFo
   #map{width:100%;height:100%}
 
   /* Nav inferior */
-  .mobile-nav{position:fixed;left:0;right:0;bottom:0;z-index:800;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:6px 10px calc(6px + env(safe-area-inset-bottom));background:var(--panel);border-top:1px solid var(--line)}
-  .mobile-nav-btn{display:flex;flex-direction:column;align-items:center;gap:2px;min-height:46px;border:0;border-radius:10px;background:transparent;color:var(--muted);font-size:var(--fs-xs);font-weight:800;cursor:pointer}
+  /* Cinco secciones desde la pestaña de migratorias. El texto baja un punto y el hueco se cierra:
+     con cinco columnas, «Migratorias» no cabía en 58px de alto sin partirse en dos líneas. */
+  /* `minmax(0,1fr)` y no `1fr`: `1fr` es `minmax(auto,1fr)`, así que una columna no baja de su
+     min-content. Con cinco botones «Migratorias» arrastraba su columna a 103px, los cinco sumaban
+     405px en una pantalla de 375 y la barra se salía por la derecha. Con `minmax(0,…)` reparte a
+     partes iguales y es el rótulo el que se ajusta. */
+  .mobile-nav{position:fixed;left:0;right:0;bottom:0;z-index:800;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;padding:6px 6px calc(6px + env(safe-area-inset-bottom));background:var(--panel);border-top:1px solid var(--line)}
+  .mobile-nav-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:46px;padding:0 2px;border:0;border-radius:10px;background:transparent;color:var(--muted);font-size:11px;line-height:1.1;font-weight:800;text-align:center;cursor:pointer}
   .mobile-nav-btn span{font-size:var(--fs-lg);line-height:1}
   .mobile-nav-btn.active{background:#eef4ec;color:var(--leaf)}
 
@@ -523,6 +529,13 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFo
 .habitat-goal-bar{flex:1;max-width:120px}
 .progress-row.habitat-goal.complete{border-color:#bcd6c4;background:#f2f8f3}
 
+/* Pestaña de aves migratorias. Las tarjetas son las MISMAS .species-card del catálogo a propósito:
+   una migratoria sigue siendo una ficha del catálogo (se marca vista y cuenta para el progreso),
+   solo que se lista aquí. Lo único propio es el párrafo de entrada, que dice de dónde sale la
+   clasificación, y la fila de distintivos, que puede llevar dos y necesita envolver. */
+.migratorias-intro{margin:0 0 14px;font-size:var(--fs-sm);line-height:1.55;color:var(--ink)}
+.migratoria-card .card-meta{flex-wrap:wrap}
+
 /* Pestaña de especies invasoras (apartado propio, aparte de flora/hábitats). */
 .invasoras-intro{margin:0 0 14px;font-size:var(--fs-sm);line-height:1.55;color:var(--ink)}
 .invasora-thumb{display:flex;align-items:center;justify-content:center;font-size:1.9rem;background:#f7e8e3}
@@ -616,9 +629,9 @@ body.tutorial-open .screen{pointer-events:none}
    hoja del navegador. Se apagan explícitamente para poder ocultar la pestaña de progreso y el modo
    explorador en los espacios de ficha base. */
 .view-tab[hidden],.mobile-nav-btn[hidden],.explorer-toggle[hidden]{display:none}
-/* Y las rejillas de pestañas se recolocan para no dejar el hueco de la pestaña que falta. */
-body[data-park-level="basic"] .view-tabs{grid-template-columns:repeat(2,1fr)}
-body[data-park-level="basic"] .mobile-nav{grid-template-columns:repeat(3,1fr)}
+/* Y la nav inferior se recoloca para no dejar el hueco de las pestañas que faltan. Las pestañas de
+   escritorio no lo necesitan: con tres columnas fijas, las tres que quedan visibles caben en su fila. */
+body[data-park-level="basic"] .mobile-nav{grid-template-columns:repeat(4,minmax(0,1fr))}
 
 /* ================================================================================================
    Progreso de CUENTA (ámbito estatal, "screen-account"): mismo patrón visual que el selector de
@@ -1116,7 +1129,7 @@ p.achievement-progress-label{margin:8px 0 0}
      entre sus hijos —la cabecera perdía aire y la miga de pan se quedaba en 23 de sus 38 px, con lo
      que los filtros pegajosos se le montaban encima—. Con el scroll, lo que sobra se desliza. */
   .sidebar>*{flex:0 0 auto}
-  .species-panel,.progress-panel,.invasoras-panel{min-height:auto;overflow:visible}
+  .species-panel,.progress-panel,.invasoras-panel,.migratorias-panel{min-height:auto;overflow:visible}
   .species-list{flex:none;min-height:0;overflow:visible;padding-right:0}
 
   /* Miga de pan y filtros, pegados arriba. Los dos son sticky y van uno debajo del otro, así que el
@@ -1212,7 +1225,7 @@ body.visor-open{overflow:hidden}
    habían acabado aplicando también a párrafos enteros.
    ================================================================================================ */
 .detail-prose,.detail-body p,.detail-list,.status-list li.detail-prose,
-.fito-item .fito-read,.fito-help p,.invasoras-intro,.review-note,.basic-notice p{
+.fito-item .fito-read,.fito-help p,.invasoras-intro,.migratorias-intro,.review-note,.basic-notice p{
   font-size:var(--fs-md);line-height:1.6}
 /* Las viñetas de "cómo reconocerla" son el texto más útil de la ficha de una especie. */
 .detail-list li{line-height:1.6}

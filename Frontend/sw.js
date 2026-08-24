@@ -34,7 +34,7 @@
 //      las especies amenazadas). Lo importan state.js, render/catalogo.js, render/detalle.js y
 //      app.js, así que sin precachearlo la app NO ARRANCA sin cobertura: los cuatro resolverían a
 //      un 404. Es exactamente el fallo del que avisa el comentario de arriba.
-var VERSION = 'v62';
+var VERSION = 'v63';
 var RUNTIME_CACHE = 'naturdex-runtime-' + VERSION;
 
 // Armazón mínimo que se intenta precachear en la instalación (best-effort).
@@ -77,7 +77,7 @@ var SHELL_ASSETS = [
   // Barriles + sus trozos. El barril solo reexporta: SIN los trozos la app no arranca offline.
   'Js/render.js',
   'Js/render/fallbacks.js', 'Js/render/catalogo.js', 'Js/render/resumen.js',
-  'Js/render/detalle.js', 'Js/render/invasoras.js', 'Js/render/progreso.js',
+  'Js/render/detalle.js', 'Js/render/invasoras.js', 'Js/render/migratorias.js', 'Js/render/progreso.js',
 
   'Js/map.js',
   'Js/map/core.js', 'Js/map/iconos.js', 'Js/map/tramas.js',

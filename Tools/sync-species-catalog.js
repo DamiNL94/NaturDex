@@ -109,7 +109,7 @@ const UNIVERSALES = [
 // Campos que describen la PRESENCIA en un parque concreto. No se tocan nunca.
 const LOCALES = [
   'id', 'habitatIds', 'coordinates', 'featured', 'visible', 'hiddenReason', 'source', 'reviewNote',
-  'zepaSiteCode', 'gbifOccurrences', 'gbifBboxSightings', 'gbifSpeciesKey', 'eidosTaxonId',
+  'zepaSiteCode', 'migratory', 'sitePresence', 'gbifOccurrences', 'gbifBboxSightings', 'gbifSpeciesKey', 'eidosTaxonId',
   'murciaStatus', 'conservationStatus', 'audio', 'audioTranscript',
 ];
 

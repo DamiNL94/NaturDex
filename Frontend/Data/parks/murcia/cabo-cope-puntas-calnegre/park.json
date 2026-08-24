@@ -922,6 +922,21 @@
       "eidosTaxonId": 16302,
       "gbifSpeciesKey": 5844449,
       "zepaSiteCode": "ES0000261",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Paco Gómez from Castellón, Spain (CC BY-SA 2.0) · Wikimedia Commons",
       "rarityLocal": 5,
@@ -1074,6 +1089,21 @@
       "eidosTaxonId": 11363,
       "gbifSpeciesKey": 2494394,
       "zepaSiteCode": "ES0000261",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons",
       "rarityLocal": 4,
@@ -1421,6 +1451,21 @@
       "eidosTaxonId": 11211,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000261",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Sven Damerow (CC BY-SA 4.0) · Wikimedia Commons",
       "rarityLocal": 2,
@@ -1575,6 +1620,21 @@
       "eidosTaxonId": 11959,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000261",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Derek Keats from Johannesburg, South Africa (CC BY 2.0) · Wikimedia Commons",
       "rarityLocal": 2,
@@ -1625,6 +1685,21 @@
       "eidosTaxonId": 10888,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000261",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Jarkko Järvinen (CC BY-SA 2.0) · Wikimedia Commons",
       "rarityLocal": 3,
@@ -1886,6 +1961,21 @@
       "eidosTaxonId": 11887,
       "gbifSpeciesKey": 2482100,
       "zepaSiteCode": "ES0000261",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons",
       "rarityLocal": 3,
@@ -2192,6 +2282,21 @@
       "eidosTaxonId": 11351,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000261",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Norbert Kenntner, Berlin (CC BY-SA 3.0) · Wikimedia Commons",
       "rarityLocal": 2,
@@ -2496,6 +2601,21 @@
       "eidosTaxonId": 10917,
       "gbifSpeciesKey": 5959092,
       "zepaSiteCode": "ES0000261",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons",
       "rarityLocal": 3,
@@ -2546,6 +2666,21 @@
       "eidosTaxonId": 10937,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000261",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Bereşe.jpg: Dûrzan cîrano derivative work: Osado (CC BY-SA 3.0) · Wikimedia Commons",
       "rarityLocal": 2,
@@ -2792,6 +2927,21 @@
       "eidosTaxonId": 11339,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000261",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Christian Svane (CC BY-SA 2.5) · Wikimedia Commons",
       "rarityLocal": 3,
@@ -2894,6 +3044,21 @@
       "eidosTaxonId": 12321,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000261",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons",
       "rarityLocal": 2,
@@ -2996,6 +3161,21 @@
       "eidosTaxonId": 12147,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000261",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Diego González Dopico (CC BY 4.0) · GBIF",
       "rarityLocal": 2,
@@ -3045,6 +3225,21 @@
       "eidosTaxonId": 10664,
       "gbifSpeciesKey": 2480311,
       "zepaSiteCode": "ES0000261",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Zeynel Cebeci (CC BY-SA 4.0) · Wikimedia Commons",
       "rarityLocal": 4,
@@ -3095,6 +3290,21 @@
       "eidosTaxonId": 12122,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000261",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Olivença (CC BY-SA 3.0) · Wikimedia Commons",
       "rarityLocal": 2,
@@ -3145,6 +3355,21 @@
       "eidosTaxonId": 12065,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000261",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "File:Alpenkrähe.jpg: \"Malte Uhl (User:Zzzip)\" derivative work: Snow… (CC BY-SA 2.5) · Wikimedia Commons",
       "rarityLocal": 3,
@@ -3243,6 +3468,21 @@
       "eidosTaxonId": 11102,
       "gbifSpeciesKey": 2490669,
       "zepaSiteCode": "ES0000261",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Ashraf Kotb (CC BY-SA 3.0) · Wikimedia Commons",
       "rarityLocal": 2,
@@ -3293,6 +3533,21 @@
       "eidosTaxonId": 12316,
       "gbifSpeciesKey": 9330514,
       "zepaSiteCode": "ES0000261",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Adrian198cm (Public domain) · Wikimedia Commons",
       "rarityLocal": 3,
@@ -3343,6 +3598,21 @@
       "eidosTaxonId": 11592,
       "gbifSpeciesKey": 5231236,
       "zepaSiteCode": "ES0000261",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Andrew Thomas from Shrewsbury, UK (CC BY-SA 2.0) · Wikimedia Commons",
       "rarityLocal": 3,
@@ -3393,6 +3663,21 @@
       "eidosTaxonId": 11453,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000261",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Vince Smith from London, United Kingdom (CC BY-SA 2.0) · Wikimedia Commons",
       "rarityLocal": 2,
@@ -3850,6 +4135,21 @@
       "eidosTaxonId": 11336,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000261",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Paco Gómez (CC BY-SA 4.0) · Wikimedia Commons",
       "rarityLocal": 3,
@@ -3900,6 +4200,21 @@
       "eidosTaxonId": 80931,
       "gbifSpeciesKey": 2492949,
       "zepaSiteCode": "ES0000261",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons",
       "rarityLocal": 3,
@@ -4453,6 +4768,21 @@
       "eidosTaxonId": 11340,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000261",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons",
       "rarityLocal": 2,
@@ -4607,6 +4937,21 @@
       "eidosTaxonId": 14053,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000261",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Michael Bakker Paiva (CC BY 4.0) · GBIF",
       "rarityLocal": 4,
@@ -4811,6 +5156,21 @@
       "eidosTaxonId": 11963,
       "gbifSpeciesKey": 2481047,
       "zepaSiteCode": "ES0000261",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons",
       "rarityLocal": 3,
@@ -6211,6 +6571,21 @@
       "eidosTaxonId": 12250,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000261",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Andrew Easton (Attribution) · Wikimedia Commons",
       "rarityLocal": 2,
@@ -7133,6 +7508,21 @@
       "eidosTaxonId": 16387,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000261",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "derivative work: Myosotis Scorpioides (CC BY-SA 3.0) · Wikimedia Commons",
       "rarityLocal": 2,
@@ -7287,6 +7677,21 @@
       "eidosTaxonId": 10734,
       "gbifSpeciesKey": 2490681,
       "zepaSiteCode": "ES0000261",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons",
       "rarityLocal": 3,
@@ -7437,6 +7842,21 @@
       "eidosTaxonId": 12326,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000261",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "User:Aelwyn (CC BY-SA 3.0) · Wikimedia Commons",
       "rarityLocal": 2,
@@ -7487,6 +7907,21 @@
       "eidosTaxonId": 12356,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000261",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Zrno at Serbian Wikipedia (Public domain) · Wikimedia Commons",
       "rarityLocal": 2,
@@ -7537,6 +7972,21 @@
       "eidosTaxonId": 11796,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000261",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "derivative work: Hämbörger (talk) Tichodroma_muraria02.jpg: User:Kulac (CC BY-SA 3.0) · Wikimedia Commons",
       "rarityLocal": 2,
@@ -7743,6 +8193,21 @@
       "eidosTaxonId": 12121,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000261",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
       "rarityLocal": 2,

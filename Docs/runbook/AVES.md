@@ -179,6 +179,25 @@ En este orden, y ninguno de los tres es «bajar el umbral»:
   decorativo — `Frontend/Js/state.js` construye con él la **colección de aves de la ZEPA**, un logro
   del juego, que con el criterio viejo era «las aves que el barrido dejó pasar» y ahora es una
   colección cerrada, oficial y comprobable.
+- **`migratory` / `sitePresence`** — la **fenología**, derivada del `species_type` del formulario
+  por `Tools/lib/fenologia.js`. Migratoria = el formulario la declara y **ninguna** de sus entradas
+  es de población permanente; basta una permanente para que no lo sea, porque significa que aquí hay
+  población todo el año. Gobierna la pestaña «Migratorias» de la app y su barra de progreso.
+
+  Los tres estados importan, y el tercero es el que no se puede aplanar: **campo ausente** = ningún
+  formulario nombra al ave. Eso no es «no es migratoria», es que no hay fuente, y esas fichas se
+  quedan en el catálogo general. Son **591 de las 1.150 fichas de ave** publicadas, incluidos los
+  cuatro espacios cuyo FND no lista ni un ave (Barrancos de Gebas, Monte Arabí, Cabezo Gordo y
+  Cañaverosa: allí la pestaña lo dice en vez de enseñar una lista vacía).
+
+  Antes de esto la app rotulaba «🕊️ Ave migratoria» por `zepaSiteCode`, que dice otra cosa: que el
+  formulario la nombra. **154 aves de población permanente** —el búho real y la perdiz roja de
+  Sierra de las Moreras entre ellas— salían anunciadas como migratorias en su ficha y contadas en una
+  barra de progreso del mismo nombre. No fallaba nada: salía en verde y decía algo falso.
+
+  En un espacio ya publicado se aplica con `npm run aves:fenologia -- --write`, que lee el volcado
+  del sitio que ya está en `out/` en vez de rehacer la Capa 3 entera. Idempotente, y lo que no casa
+  por nombre **sale listado** en vez de adivinarse.
 - **`habitatIds`** — vacío, siempre, en un ave. Un ave con `habitatIds` **se contradice a sí misma**
   y el validador lo avisa; se limpia regenerando la Capa 3.
 - **`source`** — trae la cita del formulario con su sitio, su sección y el **tipo de población
@@ -190,6 +209,14 @@ En este orden, y ninguno de los tres es «bajar el umbral»:
   de cada cuatro tarjetas no avisa de nada y tapaba las 131 fichas con una duda de verdad.
 
 ## 9. Historial
+
+- **2026-08-24** — se separa la fenología del hecho de estar declarado: nacen `migratory` y
+  `sitePresence` (`Tools/lib/fenologia.js`), la app gana una pestaña «Migratorias» propia y la
+  colección de aves se parte en dos, la del formulario entero y la de las que no viven aquí todo el
+  año. Reparto sobre los dieciséis espacios: **405 migratorias, 154 residentes declaradas y 591 aves
+  sin señal**. Quedan por cerrar ~50 entradas del formulario que no casan por nombre —*Sylvia
+  conspicillata*, *Larus ridibundus*, *Cyanecula svecica*…—: cada una es un ave que se queda sin
+  clasificar, y se cierran en `data/equivalencias-nomenclatura.json` (§5).
 
 - **2026-08-15** — se cablea `especies-sitio-rn2000.js` (la lista oficial nunca había estado
   conectada: `zepaSiteCode` salía del `zepa.geojson` del propio espacio) y se escribe el filtro 3 bis

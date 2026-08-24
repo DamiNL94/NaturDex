@@ -14,7 +14,7 @@
 
 import {
   DEFAULT_PARK_SLUG, PARK_INDEX_PATH,
-  state, computeProgress, speciesLatLng, relatedSpeciesIds
+  state, computeProgress, speciesLatLng, relatedSpeciesIds, migratorySpecies
 } from './state.js';
 import { iconMarkup, geoUnavailableReason, formatBytes } from './util.js';
 import {
@@ -24,13 +24,13 @@ import {
 import {
   sidebar, speciesList, searchInput, catalogControls, catalogPanel,
   backToHabitatsBtn, catalogCrumb, catalogCrumbLabel, parkTitle, parkEyebrow, parkStats, parkProgressWrap,
-  progressPanel, invasorasPanel, diccionarioPanel, basicNotice, detailPanel, sheetClose, sheetScrim,
+  progressPanel, migratoriasPanel, invasorasPanel, diccionarioPanel, basicNotice, detailPanel, sheetClose, sheetScrim,
   saveOfflineBtn, connStatus, layersToggle, layersPanel, explorerToggle, rarityFilter
 } from './dom.js';
 import { FILTROS_RAREZA } from './rareza.js';
 import {
   renderHabitatGroups, renderHabitatCatalog, renderSpeciesList, renderCatalogBody,
-  renderSummary, renderProgress, renderDetail, renderProgressTab, renderInvasoras,
+  renderSummary, renderProgress, renderDetail, renderProgressTab, renderInvasoras, renderMigratorias,
   renderBasicPark, renderAccountProgress
 } from './render.js';
 import {
@@ -137,6 +137,33 @@ function enterHabitat(habitatId) {
   renderCatalogBody();
   vistaArriba();
   navOpen('habitat', backFromHabitatRaw);
+}
+
+// Pestaña de aves migratorias: lista a la izquierda y la ficha de ESPECIE de siempre a la derecha.
+// A diferencia de las invasoras no hay ficha propia que pintar: una migratoria es una especie del
+// catálogo con su `id`, su botón de «marcar como vista» y su progreso — solo se lista en otro sitio.
+function showMigratorias() {
+  renderMigratorias();
+  // La ficha de la derecha (escritorio) sigue enseñando lo último que se abriera, que puede ser un
+  // hábitat de la pestaña anterior. Se le pone la primera migratoria de la lista, que es lo que el
+  // usuario está mirando; si la lista está vacía, se deja como esté.
+  const list = migratorySpecies();
+  if (list.length && !list.some(s => s.id === state.selectedId)) {
+    state.selectedId = list[0].id;
+    state.detailMode = 'species';
+    renderDetail();
+    estrenaFicha(false); // la ficha cambia sola: no se le roba el foco al usuario
+  }
+}
+
+// Abrir una migratoria desde su pestaña. No es `selectSpecies` a secas porque esa repinta la lista
+// del CATÁLOGO —donde las migratorias ya no están— y dejaría la tarjeta pulsada sin marcar.
+function selectMigratoria(id) {
+  state.selectedId = Number(id);
+  state.detailMode = 'species';
+  renderMigratorias();
+  renderDetail();
+  openDetailSheet();
 }
 
 // Pestaña de invasoras: lista a la izquierda + ficha en el panel de detalle de la derecha (como especies).
@@ -294,7 +321,11 @@ function selectPoi(id) {
 function afterSeenChange() {
   // El detalle de especie es independiente del modo del catálogo (hábitats o especies), así que
   // se refresca lo que corresponda en cada uno sin pisar una lista de hábitats con la de especies.
-  if (state.view === 'catalog') renderCatalogBody(); else renderProgressTab();
+  // Y la lista que hay que repintar es la de la vista ACTIVA: marcar vista un ave desde la pestaña
+  // de migratorias tiene que ponerle su ✓ ahí, no repintar una pestaña de progreso que no se ve.
+  if (state.view === 'catalog') renderCatalogBody();
+  else if (state.view === 'migratorias') renderMigratorias();
+  else renderProgressTab();
   renderDetail();
   renderMarkers();
   renderHabitatZones();
@@ -419,7 +450,8 @@ function applyParkLevel(level) {
   if (parkProgressWrap) parkProgressWrap.hidden = basic;
   // La pestaña de progreso mediría una colección que todavía no existe (y el modo explorador
   // descubriría especies y POIs que aún no están cargados): se ocultan mientras el espacio sea N1.
-  document.querySelectorAll('.view-tab[data-view="progress"], .mobile-nav-btn[data-mtab="progress"]')
+  document.querySelectorAll('.view-tab[data-view="progress"], .mobile-nav-btn[data-mtab="progress"], ' +
+    '.view-tab[data-view="migratorias"], .mobile-nav-btn[data-mtab="migratorias"]')
     .forEach(btn => { btn.hidden = basic; });
   if (explorerToggle) explorerToggle.hidden = basic;
 }
@@ -427,7 +459,7 @@ function applyParkLevel(level) {
 // --- Vistas (catálogo / progreso) ---------------------------------------------------------------------
 function setView(view) {
   const basic = state.parkLevel === 'basic';
-  if (basic && view === 'progress') view = 'catalog'; // la pestaña está oculta; por si acaso
+  if (basic && (view === 'progress' || view === 'migratorias')) view = 'catalog'; // pestañas ocultas; por si acaso
   state.view = view;
   document.querySelectorAll('.view-tab').forEach(btn => {
     const active = btn.dataset.view === view;
@@ -444,17 +476,19 @@ function setView(view) {
   if (catalogCrumb && view !== 'catalog') catalogCrumb.hidden = true;
   if (basicNotice) basicNotice.hidden = !basic || view !== 'catalog';
   progressPanel.hidden = view !== 'progress';
+  if (migratoriasPanel) migratoriasPanel.hidden = view !== 'migratorias';
   if (invasorasPanel) invasorasPanel.hidden = view !== 'invasoras';
   // El diccionario es nacional, no del parque: se ve igual en un espacio de ficha base, donde no
   // hay catálogo que consultar pero las palabras técnicas siguen saliendo en la ficha del espacio.
   if (diccionarioPanel) diccionarioPanel.hidden = view !== 'diccionario';
   if (view === 'progress') renderProgressTab();
+  else if (view === 'migratorias') showMigratorias();
   else if (view === 'invasoras') showInvasoras();
   else if (view === 'diccionario') abreDiccionario();
   else if (basic) renderBasicPark();
   else renderCatalogBody();
   vistaArriba(); // la pestaña entrante empieza por su encabezado, no por donde se quedó la anterior
-  syncMobileNav(view); // catálogo, invasoras y progreso también son pestañas de la nav inferior móvil
+  syncMobileNav(view); // catálogo, migratorias, invasoras y progreso son también la nav inferior móvil
 }
 
 // --- Vistas móviles: nav inferior + ficha como bottom-sheet -------------------------------------
@@ -482,7 +516,7 @@ function showMobileTab(tab) {
     vistaArriba(); // al volver del mapa, la pestaña de texto no puede seguir a media altura
     ensureMapSized(); // el mapa estaba oculto; Leaflet debe recalcular el tamaño del contenedor
   } else {
-    setView(tab); // 'catalog' | 'invasoras' | 'progress' — setView ya sincroniza la nav inferior
+    setView(tab); // 'catalog' | 'migratorias' | 'invasoras' | 'progress' — setView sincroniza la nav
   }
 }
 
@@ -585,6 +619,12 @@ speciesList.addEventListener('click', event => {
   const habitatCard = event.target.closest('.habitat-card');
   if (habitatCard) { enterHabitat(habitatCard.dataset.habitat); return; }
   if (event.target.closest('#viewAllSpeciesBtn')) enterHabitat(null);
+});
+
+// Tarjetas de migratorias: abren la ficha de especie, la misma que desde el catálogo.
+if (migratoriasPanel) migratoriasPanel.addEventListener('click', event => {
+  const card = event.target.closest('.species-card');
+  if (card) selectMigratoria(card.dataset.id);
 });
 
 // Tarjetas de invasoras: abren su ficha en el panel de detalle de la derecha.

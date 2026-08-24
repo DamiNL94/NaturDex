@@ -86,8 +86,13 @@ en dos y esa separación es la que hace que el catálogo escale:
   `imageAttribution`. Vive en `Tools/catalogo-nacional/data/especies-universal.json`, **indexado por
   nombre científico**, y se sincroniza a todos los `park.json` con `npm run species:apply`.
 - **Local** — dónde y cómo aparece *en este espacio*: `id`, `habitatIds`, `coordinates`, `featured`,
-  `visible`, `source`, `reviewNote`, `zepaSiteCode`, `gbifOccurrences`, `gbifSpeciesKey`,
-  `eidosTaxonId`, `murciaStatus`, `conservationStatus`, `audio`. Vive en cada `park.json`.
+  `visible`, `source`, `reviewNote`, `zepaSiteCode`, `migratory`, `sitePresence`, `gbifOccurrences`,
+  `gbifSpeciesKey`, `eidosTaxonId`, `murciaStatus`, `conservationStatus`, `audio`. Vive en cada
+  `park.json`.
+
+  > `migratory` es local **aunque suene universal**: una misma ave es migratoria en un espacio y
+  > residente en otro (el flamenco cría en el Mar Menor y solo inverna en otros humedales). Lo dice
+  > el formulario de CADA sitio, no una propiedad de la especie.
 
 Si un texto universal nombra un parque concreto, es falso en cuanto la especie aparece en otro sitio.
 `validate-park-data.js` lo trata como **error**, no como aviso: así acabaron 40 fichas de Sierra

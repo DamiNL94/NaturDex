@@ -157,6 +157,20 @@ CREATE TABLE IF NOT EXISTS species (
     -- ave de la ZEPA. Las aves no se asignan a hábitats concretos (vuelan): la app las muestra en un
     -- apartado propio de parque, no en el catálogo de hábitats.
     zepa_site_code VARCHAR(20),
+    -- Fenología declarada por el Formulario Normalizado de Datos (FND/SDF) del sitio Red Natura
+    -- 2000: TRUE = migratoria (el formulario la declara y NINGUNA de sus poblaciones es
+    -- permanente), FALSE = declarada con población permanente. NULL = ningún formulario la
+    -- nombra, que NO es lo mismo que «no es migratoria»: es que nadie lo ha mirado, y por eso la
+    -- app la deja en el catálogo general en vez de clasificarla. Ver Tools/lib/fenologia.js.
+    --
+    -- Existe porque la app llevaba desde el piloto llamando «Ave migratoria» a toda ave con
+    -- `zepa_site_code`, y ese campo dice otra cosa: que el formulario la declara. En Sierra de
+    -- las Moreras eso eran 22 aves permanentes anunciadas como migratorias en su ficha.
+    is_migratory BOOLEAN,
+    -- La cita que sostiene lo anterior: {tipos, etiqueta, sitios, fuente}. JSON y no columnas
+    -- sueltas por el mismo motivo que los dos `*_basis`: lo que hace falta es el round-trip
+    -- exacto con el park.json. Sin este campo, la ficha diría «migratoria» sin nada debajo.
+    site_presence JSON,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (park_id) REFERENCES parks(id) ON DELETE CASCADE,

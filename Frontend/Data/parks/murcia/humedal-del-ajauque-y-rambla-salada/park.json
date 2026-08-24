@@ -3050,6 +3050,22 @@
       "eidosTaxonId": 11446,
       "gbifSpeciesKey": 5229126,
       "zepaSiteCode": "ES0000195",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente",
+          "reproductora"
+        ],
+        "etiqueta": "Residente todo el año · Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 213,
       "visible": true
@@ -3094,6 +3110,21 @@
       "eidosTaxonId": 12286,
       "gbifSpeciesKey": 2498009,
       "zepaSiteCode": "ES0000195",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 178,
       "visible": true
@@ -3146,6 +3177,21 @@
       "eidosTaxonId": 11887,
       "gbifSpeciesKey": 2482100,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 171,
       "visible": true
@@ -3234,6 +3280,21 @@
       "eidosTaxonId": 12000,
       "gbifSpeciesKey": 9761484,
       "zepaSiteCode": "ES0000195",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 148,
       "visible": true
@@ -3286,6 +3347,21 @@
       "eidosTaxonId": 12321,
       "gbifSpeciesKey": 9616058,
       "zepaSiteCode": "ES0000195",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 140,
       "visible": true
@@ -3334,6 +3410,21 @@
       "eidosTaxonId": 11024,
       "gbifSpeciesKey": 2480482,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 137,
       "visible": true
@@ -3386,6 +3477,21 @@
       "eidosTaxonId": 16426,
       "gbifSpeciesKey": 7341500,
       "zepaSiteCode": "ES0000195",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 129,
       "visible": true
@@ -3430,6 +3536,21 @@
       "eidosTaxonId": 11885,
       "gbifSpeciesKey": 2481728,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 115,
       "visible": true
@@ -3482,6 +3603,21 @@
       "eidosTaxonId": 11102,
       "gbifSpeciesKey": 2490669,
       "zepaSiteCode": "ES0000195",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 113,
       "visible": true
@@ -3522,6 +3658,21 @@
       "eidosTaxonId": 10887,
       "gbifSpeciesKey": 5228199,
       "zepaSiteCode": "ES0000195",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 109,
       "visible": true
@@ -3718,6 +3869,21 @@
       "eidosTaxonId": 11340,
       "gbifSpeciesKey": 2480876,
       "zepaSiteCode": "ES0000195",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 93,
       "visible": true
@@ -3770,6 +3936,22 @@
       "eidosTaxonId": 16387,
       "gbifSpeciesKey": 4408759,
       "zepaSiteCode": "ES0000195",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente",
+          "reproductora"
+        ],
+        "etiqueta": "Residente todo el año · Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 93,
       "visible": true
@@ -3822,6 +4004,21 @@
       "eidosTaxonId": 10738,
       "gbifSpeciesKey": 2475443,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 86,
       "visible": true
@@ -3910,6 +4107,21 @@
       "eidosTaxonId": 10965,
       "gbifSpeciesKey": 2481890,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 83,
       "visible": false,
@@ -3955,6 +4167,21 @@
       "eidosTaxonId": 11496,
       "gbifSpeciesKey": 2480830,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 77,
       "visible": true
@@ -4043,6 +4270,21 @@
       "eidosTaxonId": 11825,
       "gbifSpeciesKey": 2481726,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 76,
       "visible": true
@@ -4135,6 +4377,21 @@
       "eidosTaxonId": 10896,
       "gbifSpeciesKey": 9797180,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 70,
       "visible": true
@@ -4375,6 +4632,21 @@
       "eidosTaxonId": 11484,
       "gbifSpeciesKey": 2481800,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 58,
       "visible": true
@@ -4427,6 +4699,21 @@
       "eidosTaxonId": 11211,
       "gbifSpeciesKey": 2498415,
       "zepaSiteCode": "ES0000195",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 58,
       "visible": true
@@ -4519,6 +4806,21 @@
       "eidosTaxonId": 12121,
       "gbifSpeciesKey": 2482048,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 54,
       "visible": true
@@ -4607,6 +4909,21 @@
       "eidosTaxonId": 10786,
       "gbifSpeciesKey": 2474377,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 50,
       "visible": true
@@ -4659,6 +4976,21 @@
       "eidosTaxonId": 11047,
       "gbifSpeciesKey": 2494422,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 48,
       "visible": true
@@ -4703,6 +5035,21 @@
       "eidosTaxonId": 14004,
       "gbifSpeciesKey": 2482065,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 47,
       "visible": true
@@ -4743,6 +5090,21 @@
       "eidosTaxonId": 11258,
       "gbifSpeciesKey": 2498255,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 44,
       "visible": true
@@ -4795,6 +5157,21 @@
       "eidosTaxonId": 80931,
       "gbifSpeciesKey": 2492949,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 44,
       "visible": true
@@ -4839,6 +5216,22 @@
       "eidosTaxonId": 11589,
       "gbifSpeciesKey": 2498302,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante",
+          "en concentración"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno · En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 40,
       "visible": true
@@ -4975,6 +5368,22 @@
       "eidosTaxonId": 10801,
       "gbifSpeciesKey": 2480259,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora",
+          "en concentración"
+        ],
+        "etiqueta": "Reproductora: cría aquí · En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 32,
       "visible": true
@@ -5063,6 +5472,21 @@
       "eidosTaxonId": 11097,
       "gbifSpeciesKey": 8214667,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 29,
       "visible": true
@@ -5167,6 +5591,21 @@
       "eidosTaxonId": 11339,
       "gbifSpeciesKey": 2475365,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 28,
       "visible": true
@@ -5295,6 +5734,21 @@
       "eidosTaxonId": 33013,
       "gbifSpeciesKey": 8332393,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 26,
       "visible": true
@@ -5343,6 +5797,21 @@
       "eidosTaxonId": 14061,
       "gbifSpeciesKey": 9413670,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 25,
       "visible": true
@@ -5439,6 +5908,21 @@
       "eidosTaxonId": 12107,
       "gbifSpeciesKey": 4352332,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 23,
       "visible": true
@@ -5483,6 +5967,21 @@
       "eidosTaxonId": 14001,
       "gbifSpeciesKey": 2482054,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 23,
       "visible": true
@@ -5535,6 +6034,22 @@
       "eidosTaxonId": 12356,
       "gbifSpeciesKey": 2495708,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora",
+          "en concentración"
+        ],
+        "etiqueta": "Reproductora: cría aquí · En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 23,
       "visible": true
@@ -5575,6 +6090,21 @@
       "eidosTaxonId": 11337,
       "gbifSpeciesKey": 2481819,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 22,
       "visible": true
@@ -5771,6 +6301,21 @@
       "eidosTaxonId": 10922,
       "gbifSpeciesKey": 2480537,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 18,
       "visible": true
@@ -5999,6 +6544,21 @@
       "eidosTaxonId": 10745,
       "gbifSpeciesKey": 2474831,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 15,
       "visible": true
@@ -6047,6 +6607,21 @@
       "eidosTaxonId": 10794,
       "gbifSpeciesKey": 2475532,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 14,
       "visible": true
@@ -6139,6 +6714,21 @@
       "eidosTaxonId": 11179,
       "gbifSpeciesKey": 7937336,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 13,
       "visible": true
@@ -6191,6 +6781,21 @@
       "eidosTaxonId": 12048,
       "gbifSpeciesKey": 2480495,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 12,
       "visible": true
@@ -6367,6 +6972,21 @@
       "eidosTaxonId": 14072,
       "gbifSpeciesKey": 2481263,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 10,
       "visible": true
@@ -6455,6 +7075,21 @@
       "eidosTaxonId": 10766,
       "gbifSpeciesKey": 2493128,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 9,
       "visible": true
@@ -6499,6 +7134,21 @@
       "eidosTaxonId": 11442,
       "gbifSpeciesKey": 9566659,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 9,
       "visible": true
@@ -6643,6 +7293,21 @@
       "eidosTaxonId": 12097,
       "gbifSpeciesKey": 2489160,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 7,
       "visible": true
@@ -6687,6 +7352,21 @@
       "eidosTaxonId": 12329,
       "gbifSpeciesKey": 2481714,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 7,
       "visible": true
@@ -6727,6 +7407,21 @@
       "eidosTaxonId": 12378,
       "gbifSpeciesKey": 2480242,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 7,
       "visible": true
@@ -6871,6 +7566,21 @@
       "eidosTaxonId": 10678,
       "gbifSpeciesKey": 2481759,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 5,
       "visible": true
@@ -7012,6 +7722,21 @@
       "eidosTaxonId": 11453,
       "gbifSpeciesKey": 5231235,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 5,
       "visible": true
@@ -7152,6 +7877,21 @@
       "eidosTaxonId": 10664,
       "gbifSpeciesKey": 2480311,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 4,
       "visible": true
@@ -7204,6 +7944,21 @@
       "eidosTaxonId": 11059,
       "gbifSpeciesKey": 9813242,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 4,
       "visible": true
@@ -7300,6 +8055,21 @@
       "eidosTaxonId": 11745,
       "gbifSpeciesKey": 2481749,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 3,
       "visible": true
@@ -7352,6 +8122,21 @@
       "eidosTaxonId": 12326,
       "gbifSpeciesKey": 8012314,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 3,
       "visible": true
@@ -7392,6 +8177,21 @@
       "eidosTaxonId": 33094,
       "gbifSpeciesKey": 8000602,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 3,
       "visible": true
@@ -7532,6 +8332,21 @@
       "eidosTaxonId": 14079,
       "gbifSpeciesKey": 9367409,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 3,
       "visible": true
@@ -7672,6 +8487,21 @@
       "eidosTaxonId": 10734,
       "gbifSpeciesKey": 2490681,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 2,
       "visible": true
@@ -7772,6 +8602,21 @@
       "eidosTaxonId": 11963,
       "gbifSpeciesKey": 2481047,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 2,
       "visible": true
@@ -7868,6 +8713,21 @@
       "eidosTaxonId": 11592,
       "gbifSpeciesKey": 5231236,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 2,
       "visible": true
@@ -8000,6 +8860,21 @@
       "eidosTaxonId": 11312,
       "gbifSpeciesKey": 2498261,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 1,
       "visible": true
@@ -8132,6 +9007,21 @@
       "eidosTaxonId": 11274,
       "gbifSpeciesKey": 9701857,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 1,
       "visible": true
@@ -8184,6 +9074,21 @@
       "eidosTaxonId": 12250,
       "gbifSpeciesKey": 2492576,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 1,
       "visible": true
@@ -8236,6 +9141,21 @@
       "eidosTaxonId": 11890,
       "gbifSpeciesKey": 5231240,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 1,
       "visible": true
@@ -8280,6 +9200,21 @@
       "eidosTaxonId": 11957,
       "gbifSpeciesKey": 2487385,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 1,
       "visible": true
@@ -8380,6 +9315,21 @@
       "eidosTaxonId": 14084,
       "gbifSpeciesKey": 5789279,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 1,
       "visible": true
@@ -8516,6 +9466,21 @@
       "eidosTaxonId": 11871,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": true
@@ -8608,6 +9573,21 @@
       "eidosTaxonId": 14085,
       "gbifSpeciesKey": 2481121,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": true
@@ -8752,6 +9732,21 @@
       "eidosTaxonId": 11750,
       "gbifSpeciesKey": 2480850,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": true
@@ -8888,6 +9883,21 @@
       "eidosTaxonId": 10699,
       "gbifSpeciesKey": 2498390,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": true
@@ -9029,6 +10039,21 @@
       "eidosTaxonId": 11977,
       "gbifSpeciesKey": 5739317,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": true
@@ -9073,6 +10098,21 @@
       "eidosTaxonId": 12240,
       "gbifSpeciesKey": 2480327,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": true
@@ -9117,6 +10157,21 @@
       "eidosTaxonId": 11370,
       "gbifSpeciesKey": 2481713,
       "zepaSiteCode": "ES0000195",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000195",
+            "name": "Humedal del Ajauque y Rambla Salada",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000195 (Humedal del Ajauque y Rambla Salada), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": true

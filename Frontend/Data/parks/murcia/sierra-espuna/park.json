@@ -8929,6 +8929,21 @@
       "eidosTaxonId": 11351,
       "gbifSpeciesKey": 2480589,
       "zepaSiteCode": "ES0000173",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Norbert Kenntner, Berlin (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 6,
@@ -8982,6 +8997,21 @@
       "eidosTaxonId": 10888,
       "gbifSpeciesKey": 2480506,
       "zepaSiteCode": "ES0000173",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Jarkko Järvinen (CC BY-SA 2.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
@@ -9035,6 +9065,21 @@
       "eidosTaxonId": 16302,
       "gbifSpeciesKey": 5844449,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Paco Gómez from Castellón, Spain (CC BY-SA 2.0) · Wikimedia Commons",
       "gbifOccurrences": 13,
@@ -9088,6 +9133,21 @@
       "eidosTaxonId": 10917,
       "gbifSpeciesKey": 5959092,
       "zepaSiteCode": "ES0000173",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 13,
       "visible": true,
@@ -9141,6 +9201,21 @@
       "eidosTaxonId": 11887,
       "gbifSpeciesKey": 2482100,
       "zepaSiteCode": "ES0000173",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": true,
@@ -9194,6 +9269,21 @@
       "eidosTaxonId": 12122,
       "gbifSpeciesKey": 9411857,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Olivença (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 17,
@@ -9247,6 +9337,21 @@
       "eidosTaxonId": 11336,
       "gbifSpeciesKey": 2480666,
       "zepaSiteCode": "ES0000173",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Paco Gómez (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 35,
@@ -9300,6 +9405,21 @@
       "eidosTaxonId": 11339,
       "gbifSpeciesKey": 2475365,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Christian Svane (CC BY-SA 2.5) · Wikimedia Commons",
       "gbifOccurrences": 0,
@@ -9353,6 +9473,21 @@
       "eidosTaxonId": 11963,
       "gbifSpeciesKey": 2481047,
       "zepaSiteCode": "ES0000173",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 65,
       "visible": true,
@@ -9406,6 +9541,21 @@
       "eidosTaxonId": 12321,
       "gbifSpeciesKey": 9616058,
       "zepaSiteCode": "ES0000173",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons",
       "gbifOccurrences": 127,
@@ -9459,6 +9609,21 @@
       "eidosTaxonId": 11102,
       "gbifSpeciesKey": 2490669,
       "zepaSiteCode": "ES0000173",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": true,
@@ -9512,6 +9677,21 @@
       "eidosTaxonId": 12316,
       "gbifSpeciesKey": 9330514,
       "zepaSiteCode": "ES0000173",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 55,
       "visible": true,
@@ -9565,6 +9745,21 @@
       "eidosTaxonId": 11959,
       "gbifSpeciesKey": 2480685,
       "zepaSiteCode": "ES0000173",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Derek Keats from Johannesburg, South Africa (CC BY 2.0) · Wikimedia Commons",
       "gbifOccurrences": 134,
@@ -9618,6 +9813,21 @@
       "eidosTaxonId": 12326,
       "gbifSpeciesKey": 8012314,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "User:Aelwyn (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
@@ -9671,6 +9881,21 @@
       "eidosTaxonId": 10738,
       "gbifSpeciesKey": 2475443,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Dûrzan cîrano (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 47,
@@ -9724,6 +9949,21 @@
       "eidosTaxonId": 12250,
       "gbifSpeciesKey": 2492576,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Andrew Easton (Attribution) · Wikimedia Commons",
       "gbifOccurrences": 0,
@@ -9777,6 +10017,21 @@
       "eidosTaxonId": 11453,
       "gbifSpeciesKey": 5231235,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Vince Smith from London, United Kingdom (CC BY-SA 2.0) · Wikimedia Commons",
       "gbifOccurrences": 45,
@@ -9830,6 +10085,21 @@
       "eidosTaxonId": 11592,
       "gbifSpeciesKey": 5231236,
       "zepaSiteCode": "ES0000173",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 59,
       "visible": true,
@@ -9883,6 +10153,21 @@
       "eidosTaxonId": 12065,
       "gbifSpeciesKey": 2482552,
       "zepaSiteCode": "ES0000173",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "File:Alpenkrähe.jpg: \"Malte Uhl (User:Zzzip)\" derivative work: Snow… (CC BY-SA 2.5) · Wikimedia Commons",
       "gbifOccurrences": 0,
@@ -9936,6 +10221,21 @@
       "eidosTaxonId": 12356,
       "gbifSpeciesKey": 2495708,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Zrno at Serbian Wikipedia (Public domain) · Wikimedia Commons",
       "gbifOccurrences": 48,
@@ -9989,6 +10289,21 @@
       "eidosTaxonId": 11211,
       "gbifSpeciesKey": 2498415,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Sven Damerow (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
@@ -10042,6 +10357,21 @@
       "eidosTaxonId": 10944,
       "gbifSpeciesKey": 2490274,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "AnthusCampestris.jpg: Lip Kee derivative work: Bogbumper (talk) (CC BY-SA 2.0) · Wikimedia Commons",
       "gbifOccurrences": 1,
@@ -10095,6 +10425,21 @@
       "eidosTaxonId": 12231,
       "gbifSpeciesKey": 2490255,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Original uploader was Marboline at pl.wikipedia (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 2,
@@ -10148,6 +10493,21 @@
       "eidosTaxonId": 10922,
       "gbifSpeciesKey": 2480537,
       "zepaSiteCode": "ES0000173",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "RonaldHuijssen (CC BY-SA 3.0 nl) · Wikimedia Commons",
       "gbifOccurrences": 0,
@@ -10201,6 +10561,21 @@
       "eidosTaxonId": 11229,
       "gbifSpeciesKey": 8109681,
       "zepaSiteCode": "ES0000173",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Bouke ten Cate (CC BY 4.0) · Wikimedia Commons",
       "gbifOccurrences": 6,
@@ -10254,6 +10629,21 @@
       "eidosTaxonId": 10733,
       "gbifSpeciesKey": 7806848,
       "zepaSiteCode": "ES0000173",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Short-toed_Treecreeper_(Certhia_brachydactyla).jpg: א (Aleph) deriv… (CC BY-SA 2.5) · Wikimedia Commons",
       "gbifOccurrences": 310,
@@ -10307,6 +10697,21 @@
       "eidosTaxonId": 12048,
       "gbifSpeciesKey": 2480495,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Donald Macauley (CC BY-SA 2.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
@@ -10360,6 +10765,21 @@
       "eidosTaxonId": 11094,
       "gbifSpeciesKey": 2474156,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Raniero Massoli Novelli (CC BY 2.0) · Wikimedia Commons",
       "gbifOccurrences": 3,
@@ -10409,6 +10829,21 @@
       "eidosTaxonId": 11059,
       "gbifSpeciesKey": 9813242,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Raj Boora from Edmonton, Canada (CC BY 2.0) · Wikimedia Commons",
       "gbifOccurrences": 1,
@@ -10462,6 +10897,21 @@
       "eidosTaxonId": 12262,
       "gbifSpeciesKey": 2481035,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Andy Morffew from Itchen Abbas, Hampshire, UK (CC BY 2.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
@@ -10515,6 +10965,21 @@
       "eidosTaxonId": 11047,
       "gbifSpeciesKey": 2494422,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Self: Commons user MichaelMaggs (CC BY-SA 2.5) · Wikimedia Commons",
       "gbifOccurrences": 628,
@@ -10568,6 +11033,21 @@
       "eidosTaxonId": 11313,
       "gbifSpeciesKey": 2480389,
       "zepaSiteCode": "ES0000173",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Thermos (CC BY-SA 2.5) · Wikimedia Commons",
       "gbifOccurrences": 160,
@@ -10621,6 +11101,21 @@
       "eidosTaxonId": 11116,
       "gbifSpeciesKey": 9629160,
       "zepaSiteCode": "ES0000173",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Elaine R. Wilson, www.naturespicsonline.com (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
@@ -10674,6 +11169,21 @@
       "eidosTaxonId": 10750,
       "gbifSpeciesKey": 2490604,
       "zepaSiteCode": "ES0000173",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "autor no indicado (Public domain) · Wikimedia Commons",
       "gbifOccurrences": 124,
@@ -10727,6 +11237,21 @@
       "eidosTaxonId": 12155,
       "gbifSpeciesKey": 2490956,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Pierre Dalous (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 5,
@@ -10780,6 +11305,21 @@
       "eidosTaxonId": 11890,
       "gbifSpeciesKey": 5231240,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Arnstein Rønning (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 8,
@@ -10833,6 +11373,21 @@
       "eidosTaxonId": 12175,
       "gbifSpeciesKey": 2497701,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons",
       "gbifOccurrences": 13,
@@ -10886,6 +11441,21 @@
       "eidosTaxonId": 11977,
       "gbifSpeciesKey": 5739317,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Francesco Veronesi from Italy (CC BY-SA 2.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
@@ -10939,6 +11509,21 @@
       "eidosTaxonId": 11054,
       "gbifSpeciesKey": 5231770,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Paco Gómez from Castellón, Spain (CC BY-SA 2.0) · Wikimedia Commons",
       "gbifOccurrences": 21,
@@ -10992,6 +11577,21 @@
       "eidosTaxonId": 80931,
       "gbifSpeciesKey": 2492949,
       "zepaSiteCode": "ES0000173",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
@@ -11045,6 +11645,21 @@
       "eidosTaxonId": 12324,
       "gbifSpeciesKey": 7865305,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "MPF (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 210,
@@ -11098,6 +11713,21 @@
       "eidosTaxonId": 16426,
       "gbifSpeciesKey": 7341500,
       "zepaSiteCode": "ES0000173",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Andreas Trepte (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 27,
@@ -11204,6 +11834,21 @@
       "eidosTaxonId": 16387,
       "gbifSpeciesKey": 4408759,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "derivative work: Myosotis Scorpioides (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 95,
@@ -11772,6 +12417,21 @@
       "eidosTaxonId": 10937,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000173",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Bereşe.jpg: Dûrzan cîrano derivative work: Osado (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifBboxSightings": 0,
@@ -11823,6 +12483,21 @@
       "eidosTaxonId": 11796,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "derivative work: Hämbörger (talk) Tichodroma_muraria02.jpg: User:Kulac (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifBboxSightings": 0,
@@ -11874,6 +12549,21 @@
       "eidosTaxonId": 12112,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Artur Mikołajewski (CC BY 2.5) · Wikimedia Commons",
       "gbifBboxSightings": 0,

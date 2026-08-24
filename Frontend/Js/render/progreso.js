@@ -8,7 +8,7 @@ import { loadAchievementsCatalog, loadRegistry, refreshAccountProgress } from '.
 import { accountProgressBody, progressPanel } from '../dom.js';
 import { groupSwatch, groupedHabitats } from '../habitat-groups.js';
 import { isMarkVerifiedLocally } from '../presence.js';
-import { ACHIEVEMENT_NAME, computeProgress, state } from '../state.js';
+import { ACHIEVEMENT_NAME, computeProgress, esMigratoria, state } from '../state.js';
 import { html, icon, raw } from '../util.js';
 
 // --- Pestaña de progreso ------------------------------------------------------------------------------
@@ -41,6 +41,7 @@ function verifiedParkProgress() {
     poisSeen: pois.length,
     habitatsCompleteCount,
     zepaSeen: species.filter(s => s.zepaSiteCode).length,
+    migratorySeen: species.filter(esMigratoria).length,
     parkComplete: habitats.length > 0 && habitatsCompleteCount === habitats.length
       && poisTotal > 0 && pois.length === poisTotal
   };
@@ -80,6 +81,7 @@ export function renderProgressTab() {
 
   const habitatsAllComplete = nHab > 0 && verified.habitatsCompleteCount === nHab;
   const zepaAllSeen = progress.zepaTotal > 0 && verified.zepaSeen === progress.zepaTotal;
+  const migratoryAllSeen = progress.migratoryTotal > 0 && verified.migratorySeen === progress.migratoryTotal;
   const pendiente = progress.speciesSeen > verified.speciesSeen || progress.poisSeen > verified.poisSeen
     ? html`<p class="account-note">De lo que llevas marcado en este parque, <strong>${verified.speciesSeen} de ${progress.speciesSeen}</strong> ${progress.speciesSeen === 1 ? 'especie está verificada' : 'especies están verificadas'} en campo. Solo eso cuenta para las medallas.</p>`
     : '';
@@ -87,19 +89,29 @@ export function renderProgressTab() {
     achievementCard('Explorador de hábitats', habitatsAllComplete,
       habitatsAllComplete ? 'Has completado todos los hábitats del parque, avistando sus especies allí mismo.' : `Completa los ${nHab} hábitats avistando todas sus especies dentro del parque (${verified.habitatsCompleteCount}/${nHab}).`, false),
     progress.zepaTotal > 0 ? achievementCard('Gran observador de aves', zepaAllSeen,
-      zepaAllSeen ? '¡Lista completa! Has avistado las ' + progress.zepaTotal + ' aves migratorias de este espacio protegido (ZEPA, Red Natura 2000).' : `Completa tu lista de avistamientos de las aves migratorias del parque (${verified.zepaSeen}/${progress.zepaTotal}).`, false) : '',
+      zepaAllSeen ? '¡Lista completa! Has avistado las ' + progress.zepaTotal + ' aves que el formulario oficial de este sitio Red Natura 2000 declara.' : `Completa tu lista de avistamientos de las aves que el formulario oficial del sitio declara aquí (${verified.zepaSeen}/${progress.zepaTotal}).`, false) : '',
+    progress.migratoryTotal > 0 ? achievementCard('Vigía de la migración', migratoryAllSeen,
+      migratoryAllSeen ? '¡Lista completa! Has avistado las ' + progress.migratoryTotal + ' aves migratorias de este espacio: las que crían aquí y se van, las que invernan y las que solo están de paso.' : `Avista las aves que no viven aquí todo el año — hay que venir en su temporada (${verified.migratorySeen}/${progress.migratoryTotal}).`, false) : '',
     achievementCard(ACHIEVEMENT_NAME, verified.parkComplete,
       verified.parkComplete ? 'Logro desbloqueado: has completado todos los hábitats y puntos de interés de este parque, sobre el terreno.'
         : 'Completa todos los hábitats y visita todos los puntos de interés, estando allí, para desbloquear el logro final.', justUnlocked),
     pendiente
   ];
 
+  // Dos barras y no una, porque son dos colecciones y la de dentro es la que tiene pestaña propia:
+  //   · las aves que el formulario oficial del sitio declara — la lista cerrada y comprobable;
+  //   · de ésas, las migratorias — un subconjunto, y el que obliga a venir en la temporada buena.
+  // Hasta hoy había UNA barra rotulada «Aves migratorias» que contaba la primera lista entera.
   const zepaPct = progress.zepaTotal ? Math.round((progress.zepaSeen / progress.zepaTotal) * 100) : 0;
   const zepaSection = progress.zepaTotal > 0
-    ? html`<div class="progress-section"><h3>🕊️ Aves migratorias</h3><div class="progress-track big" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${zepaPct}" aria-label="Aves migratorias avistadas"><div class="progress-fill" style="width:${zepaPct}%"></div></div><span class="progress-caption">${progress.zepaSeen} / ${progress.zepaTotal} aves migratorias avistadas · tu lista de la ZEPA (Red Natura 2000)</span></div>`
+    ? html`<div class="progress-section"><h3>🪶 Aves de la Red Natura 2000</h3><div class="progress-track big" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${zepaPct}" aria-label="Aves del sitio Red Natura 2000 avistadas"><div class="progress-fill" style="width:${zepaPct}%"></div></div><span class="progress-caption">${progress.zepaSeen} / ${progress.zepaTotal} avistadas · las que declara el Formulario Normalizado de Datos del sitio</span></div>`
+    : '';
+  const migratoryPct = progress.migratoryTotal ? Math.round((progress.migratorySeen / progress.migratoryTotal) * 100) : 0;
+  const migratorySection = progress.migratoryTotal > 0
+    ? html`<div class="progress-section"><h3>🕊️ Aves migratorias</h3><div class="progress-track big" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${migratoryPct}" aria-label="Aves migratorias avistadas"><div class="progress-fill" style="width:${migratoryPct}%"></div></div><span class="progress-caption">${progress.migratorySeen} / ${progress.migratoryTotal} avistadas · las que no viven aquí todo el año (pestaña «Migratorias»)</span></div>`
     : '';
 
-  progressPanel.innerHTML = html`<div class="progress-section"><h3>Especies</h3><div class="progress-track big" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${speciesPct}" aria-label="Especies vistas"><div class="progress-fill" style="width:${speciesPct}%"></div></div><span class="progress-caption">${progress.speciesSeen} / ${progress.speciesTotal} especies vistas</span></div><div class="progress-section"><h3>Hábitats</h3><span class="progress-caption">${progress.habitatsCompleteCount} / ${nHab} hábitats completados 🏅</span><ul class="progress-list">${habitatsHtml}</ul></div>${zepaSection}<div class="progress-section"><h3>Puntos de interés</h3><div class="progress-track big" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${poiPct}" aria-label="Puntos de interés visitados"><div class="progress-fill" style="width:${poiPct}%"></div></div><span class="progress-caption">${progress.poisSeen} / ${progress.poisTotal} puntos visitados</span><ul class="progress-list">${poisHtml}</ul></div><div class="progress-section"><h3>Logros</h3>${logros}</div>`;
+  progressPanel.innerHTML = html`<div class="progress-section"><h3>Especies</h3><div class="progress-track big" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${speciesPct}" aria-label="Especies vistas"><div class="progress-fill" style="width:${speciesPct}%"></div></div><span class="progress-caption">${progress.speciesSeen} / ${progress.speciesTotal} especies vistas</span></div><div class="progress-section"><h3>Hábitats</h3><span class="progress-caption">${progress.habitatsCompleteCount} / ${nHab} hábitats completados 🏅</span><ul class="progress-list">${habitatsHtml}</ul></div>${zepaSection}${migratorySection}<div class="progress-section"><h3>Puntos de interés</h3><div class="progress-track big" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${poiPct}" aria-label="Puntos de interés visitados"><div class="progress-fill" style="width:${poiPct}%"></div></div><span class="progress-caption">${progress.poisSeen} / ${progress.poisTotal} puntos visitados</span><ul class="progress-list">${poisHtml}</ul></div><div class="progress-section"><h3>Logros</h3>${logros}</div>`;
 }
 
 // --- Progreso de CUENTA (ámbito estatal, pantalla "screen-account", fuera de un parque concreto) ----

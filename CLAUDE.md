@@ -68,7 +68,7 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    generaliza igual: «nadie lo ha mirado» no es «no está amenazada», y publicar de más no se puede
    deshacer. Ver [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md).
 
-## 2. Catorce cosas que fallan EN VERDE
+## 2. Quince cosas que fallan EN VERDE
 
 Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 [`Docs/runbook/ORDEN-DE-OPERACIONES.md`](Docs/runbook/ORDEN-DE-OPERACIONES.md).
@@ -153,6 +153,17 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
   polígonos, como el nivel 2 (86 fichas). Es opcional y por defecto `false`, así que **ningún espacio
   anterior cambia** — pero el del Mar Menor, que inventaría seis espacios más la franja marina, hay
   que mirarlo con este campo en la mano.
+- **Un campo que responde a una pregunta parecida pero no a la misma.** `zepaSiteCode` dice «el
+  formulario oficial del sitio declara a esta ave»; la app lo leía como «esta ave es migratoria» y
+  pintaba con él el distintivo «🕊️ Ave migratoria» de la ficha, la barra de progreso del mismo
+  nombre y el logro «Gran observador de aves». Son dos cosas distintas y el propio formulario lo
+  dice, especie a especie, en su **tipo de población**: permanente, reproductora, invernante o en
+  concentración. Medido el 2026-08-24: **154 aves de población permanente** —el búho real, la
+  perdiz roja y el cuervo de Sierra de las Moreras entre ellos— anunciadas como migratorias. No
+  fallaba nada, no había aviso, y el dato bueno llevaba desde el principio en el repo: se escribía
+  en el `source` de la ficha, en prosa, donde ninguna herramienta podía leerlo. Tapado con
+  `migratory` + `sitePresence` (`Tools/lib/fenologia.js`); el criterio vive en un solo sitio porque
+  lo usan las dos puntas, el pipeline y `npm run aves:fenologia`.
 
 ---
 

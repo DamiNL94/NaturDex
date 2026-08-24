@@ -11,7 +11,7 @@ import { highlightGlossary } from '../glossary.js';
 import { groupSwatch, habitatGroup, habitatsOfGroup } from '../habitat-groups.js';
 import { isMarkVerifiedLocally } from '../presence.js';
 import { TRAMOS, baseDe, cartelAdvertencia, estrellas, recordatorioAdvertencia, tramoDe } from '../rareza.js';
-import { habitatAreaLabel, habitatSpeciesSeenCount, isHabitatComplete, speciesOfHabitat, state } from '../state.js';
+import { esMigratoria, habitatAreaLabel, habitatSpeciesSeenCount, isHabitatComplete, speciesOfHabitat, state } from '../state.js';
 import { atributosAmpliar, habitatImageSrc, html, kingdomEmoji, poiImageSrc, raw, speciesImageSrc } from '../util.js';
 import { renderInvasoraDetail } from './invasoras.js';
 
@@ -159,6 +159,29 @@ function markVerificationNote(type, id) {
     : html`<p class="mark-unverified">◌ Sin verificar: está en tu cuaderno, pero no cuenta para los logros. Solo suman las marcas hechas dentro del parque con la ubicación activada.</p>`;
 }
 
+/**
+ * Qué dice el formulario oficial del sitio sobre CUÁNDO está aquí esta ave, y quién lo dice.
+ *
+ * El bloque existe porque el distintivo «🕊️ Ave migratoria» no puede ser la única afirmación: una
+ * etiqueta sin fuente al lado es exactamente lo que la regla nº 2 del CLAUDE.md raíz prohíbe. El
+ * dato ya estaba —el tipo de población del FND— pero solo dentro del párrafo de `source`, entre
+ * otras cuatro citas y en mitad de una frase.
+ *
+ * Se pinta también cuando el ave NO es migratoria: «residente todo el año» es la misma afirmación
+ * oficial, y es la que explica por qué esa ficha está en el catálogo y no en la otra pestaña.
+ */
+function bloquePresenciaSitio(species) {
+  const p = species.sitePresence;
+  if (!p || !p.etiqueta) return '';
+  return html`<h3 class="detail-subtitle">Presencia en este espacio</h3>
+    <ul class="status-list">
+    <li class="detail-prose"><span>Población</span>${p.etiqueta}</li>
+    </ul>
+    <p class="detail-source">${esMigratoria(species)
+      ? 'No vive aquí todo el año: por eso aparece en la pestaña «Migratorias».'
+      : 'Aquí hay población todo el año, así que no cuenta como migratoria en este espacio.'} Fuente: ${p.fuente}</p>`;
+}
+
 function renderSpeciesDetail() {
   const species = state.data.species.find(item => item.id === state.selectedId) ?? state.data.species[0];
   if (!species) { detailPanel.innerHTML = ''; return; }
@@ -178,7 +201,7 @@ function renderSpeciesDetail() {
     <div class="detail-body">
     <span class="card-meta"><span class="badge ${species.kingdom}">${species.kingdom}</span>
     <span class="badge alert">${species.conservationStatus}</span>
-    ${species.zepaSiteCode ? html`<span class="badge migratoria">🕊️ Ave migratoria</span>` : ''}
+    ${esMigratoria(species) ? html`<span class="badge migratoria">🕊️ Ave migratoria</span>` : ''}
     ${species.reviewNote ? html`<span class="badge review">a revisar</span>` : ''}
     </span>
     <h2>${species.commonName}</h2><em>${species.scientificName}</em>
@@ -211,6 +234,7 @@ function renderSpeciesDetail() {
     <li class="detail-prose"><span>España</span>${species.spainStatus || 'Sin dato'}</li>
     <li class="detail-prose"><span>Región de Murcia</span>${species.murciaStatus || 'Sin dato'}</li>
     </ul>
+    ${bloquePresenciaSitio(species)}
     ${species.reviewNote ? html`<div class="review-note"><strong>Pendiente de revisión:</strong> ${species.reviewNote}</div>` : ''}
     ${species.image && species.imageAttribution ? html`<p class="detail-source">Foto: ${species.imageAttribution}</p>` : ''}
     ${species.source ? html`<p class="detail-source">Fuente: ${species.source}</p>` : ''}

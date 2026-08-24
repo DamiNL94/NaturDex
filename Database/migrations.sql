@@ -176,6 +176,22 @@ CALL naturdex_add_column('species', 'hidden_reason', 'TEXT NULL');
 CALL naturdex_add_column('species', 'description_source', 'TEXT NULL');
 
 -- ------------------------------------------------------------------------------------------------
+-- Fenología del ave (pestaña «Aves migratorias»).
+--
+-- `is_migratory` la deriva Tools/lib/fenologia.js del tipo de población que declara el Formulario
+-- Normalizado de Datos del sitio Red Natura 2000, y `site_presence` guarda la cita que lo sostiene.
+-- Antes de estas columnas la app clasificaba por `zepa_site_code`, que solo dice que el formulario
+-- nombra al ave: 154 aves de población PERMANENTE salían rotuladas «Ave migratoria» en su ficha y
+-- contadas en la barra de progreso del mismo nombre.
+--
+-- NULL es un estado con significado: ningún formulario nombra a esa ave (591 de las 1.150 fichas
+-- de ave del catálogo, incluidos los cuatro espacios cuyo FND no lista ni un ave). No es «no es
+-- migratoria»; es que no hay fuente. Aditivas: una instalación antigua sigue funcionando sin ellas.
+-- ------------------------------------------------------------------------------------------------
+CALL naturdex_add_column('species', 'is_migratory', 'BOOLEAN NULL');
+CALL naturdex_add_column('species', 'site_presence', 'JSON NULL');
+
+-- ------------------------------------------------------------------------------------------------
 -- Campos de cita/estado a TEXT: las atribuciones y los estados de conservación con referencia
 -- pueden superar los 500 caracteres. En MySQL con modo estricto (STRICT_TRANS_TABLES, por defecto
 -- en 8.0) un VARCHAR corto ABORTA la carga del seed en lugar de truncar en silencio como hace la

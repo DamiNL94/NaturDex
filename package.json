@@ -34,6 +34,7 @@
     "sitio:especies": "node Tools/catalogo-nacional/especies-sitio-rn2000.js",
     "species:seleccion": "node Tools/catalogo-nacional/build-species-seleccion.js",
     "aves:poda": "node Tools/catalogo-nacional/poda-aves-sin-respaldo.js",
+    "aves:fenologia": "node Tools/catalogo-nacional/aplica-fenologia-aves.js",
     "species:build": "node Tools/catalogo-nacional/build-species-n2.js",
     "taxones:reconcilia": "node Tools/catalogo-nacional/reconcile-taxa.js",
     "invasoras:eei": "node Tools/catalogo-nacional/invasoras-eei.js",

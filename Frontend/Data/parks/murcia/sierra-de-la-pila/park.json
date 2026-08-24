@@ -10921,6 +10921,21 @@
       "eidosTaxonId": 12321,
       "gbifSpeciesKey": 9616058,
       "zepaSiteCode": "ES0000174",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000174",
+            "name": "Sierra de la Pila",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000174 (Sierra de la Pila), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 10,
       "visible": true
@@ -11024,6 +11039,21 @@
       "eidosTaxonId": 80931,
       "gbifSpeciesKey": 2492949,
       "zepaSiteCode": "ES0000174",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000174",
+            "name": "Sierra de la Pila",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000174 (Sierra de la Pila), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 9,
       "visible": true,
@@ -11221,6 +11251,21 @@
       "eidosTaxonId": 12065,
       "gbifSpeciesKey": 2482552,
       "zepaSiteCode": "ES0000174",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000174",
+            "name": "Sierra de la Pila",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000174 (Sierra de la Pila), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 7,
       "visible": true
@@ -11369,6 +11414,21 @@
       "eidosTaxonId": 10888,
       "gbifSpeciesKey": 2480506,
       "zepaSiteCode": "ES0000174",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000174",
+            "name": "Sierra de la Pila",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000174 (Sierra de la Pila), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 6,
       "visible": true
@@ -11421,6 +11481,21 @@
       "eidosTaxonId": 10733,
       "gbifSpeciesKey": 7806848,
       "zepaSiteCode": "ES0000174",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000174",
+            "name": "Sierra de la Pila",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000174 (Sierra de la Pila), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 6,
       "visible": true
@@ -11521,6 +11596,21 @@
       "eidosTaxonId": 11963,
       "gbifSpeciesKey": 2481047,
       "zepaSiteCode": "ES0000174",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000174",
+            "name": "Sierra de la Pila",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000174 (Sierra de la Pila), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 6,
       "visible": true
@@ -11673,6 +11763,21 @@
       "eidosTaxonId": 11102,
       "gbifSpeciesKey": 2490669,
       "zepaSiteCode": "ES0000174",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000174",
+            "name": "Sierra de la Pila",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000174 (Sierra de la Pila), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 5,
       "visible": true
@@ -11725,6 +11830,21 @@
       "eidosTaxonId": 12316,
       "gbifSpeciesKey": 9330514,
       "zepaSiteCode": "ES0000174",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000174",
+            "name": "Sierra de la Pila",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000174 (Sierra de la Pila), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 5,
       "visible": true
@@ -11825,6 +11945,21 @@
       "eidosTaxonId": 11336,
       "gbifSpeciesKey": 2480666,
       "zepaSiteCode": "ES0000174",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000174",
+            "name": "Sierra de la Pila",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000174 (Sierra de la Pila), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 3,
       "visible": true
@@ -11925,6 +12060,21 @@
       "eidosTaxonId": 16426,
       "gbifSpeciesKey": 7341500,
       "zepaSiteCode": "ES0000174",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000174",
+            "name": "Sierra de la Pila",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000174 (Sierra de la Pila), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 3,
       "visible": true
@@ -11977,6 +12127,21 @@
       "eidosTaxonId": 10750,
       "gbifSpeciesKey": 2490604,
       "zepaSiteCode": "ES0000174",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000174",
+            "name": "Sierra de la Pila",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000174 (Sierra de la Pila), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 3,
       "visible": true
@@ -12081,6 +12246,21 @@
       "eidosTaxonId": 11453,
       "gbifSpeciesKey": 5231235,
       "zepaSiteCode": "ES0000174",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000174",
+            "name": "Sierra de la Pila",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000174 (Sierra de la Pila), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 3,
       "visible": true
@@ -12181,6 +12361,21 @@
       "eidosTaxonId": 11351,
       "gbifSpeciesKey": 2480589,
       "zepaSiteCode": "ES0000174",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000174",
+            "name": "Sierra de la Pila",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000174 (Sierra de la Pila), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 2,
       "visible": true
@@ -12233,6 +12428,21 @@
       "eidosTaxonId": 10917,
       "gbifSpeciesKey": 5959092,
       "zepaSiteCode": "ES0000174",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000174",
+            "name": "Sierra de la Pila",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000174 (Sierra de la Pila), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 2,
       "visible": true
@@ -12577,6 +12787,21 @@
       "eidosTaxonId": 12340,
       "gbifSpeciesKey": 5231438,
       "zepaSiteCode": "ES0000174",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000174",
+            "name": "Sierra de la Pila",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000174 (Sierra de la Pila), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 2,
       "visible": true
@@ -12629,6 +12854,21 @@
       "eidosTaxonId": 10922,
       "gbifSpeciesKey": 2480537,
       "zepaSiteCode": "ES0000174",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000174",
+            "name": "Sierra de la Pila",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000174 (Sierra de la Pila), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 1,
       "visible": true
@@ -12829,6 +13069,21 @@
       "eidosTaxonId": 16387,
       "gbifSpeciesKey": 4408759,
       "zepaSiteCode": "ES0000174",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000174",
+            "name": "Sierra de la Pila",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000174 (Sierra de la Pila), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 1,
       "visible": true

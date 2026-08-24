@@ -532,3 +532,29 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     bicho. Lo que queda son **4 fichas en 2 espacios** —Espacios Abiertos e Islas del Mar Menor (3) y
     Calblanque (1)—, que se recuperan al regenerar. Es la deuda más barata de las que exigen
     regeneración, y viaja con la nº 32 y la nº 33 en el mismo pase.
+
+35. **Veinticinco nombres del formulario oficial no casan con el catálogo, y ahora eso cuesta una
+    clasificación además de una ficha.** Son **53 entradas en 12 espacios** que
+    `npm run aves:fenologia` no puede cruzar: la fuente cita con la nomenclatura de su época
+    (*Sylvia conspicillata*, *Larus ridibundus*, *Cyanecula svecica*) y el catálogo con la de hoy
+    (*Curruca conspicillata*, *Chroicocephalus ridibundus*, *Luscinia svecica*). El efecto es un
+    **falso negativo silencioso**: el ave existe en el catálogo, el formulario la declara
+    migratoria, y se queda sin `migratory` —o sea, fuera de la pestaña «Migratorias»— con la
+    apariencia de «este espacio no tiene fuente para ella».
+
+    Once de las veinticinco traen un candidato del catálogo con el mismo epíteto, y la herramienta
+    los lista marcados **A VERIFICAR**: no se aplican, y con razón — entre los once están
+    *Calandrella brachydactyla* ↔ *Certhia brachydactyla* (terrera y agateador),
+    *Melanocorypha calandra* ↔ *Emberiza calandra* (calandria y triguero) y *Motacilla flava* ↔
+    *Senecio flavus*, que ni siquiera es un animal. Es exactamente el motivo por el que la
+    heurística de epíteto no se aplica sola (`Tools/lib/respaldo-sitio.js`).
+
+    Las otras catorce —*Alcedo atthis*, *Aquila fasciata*, *Burhinus oedicnemus*…— no tienen
+    candidato: ahí lo probable es que el formulario declare un ave que el barrido nunca vio dentro
+    de ese espacio, y entonces no hay nada que cerrar, solo que anotar.
+
+    **Cómo se paga:** resolviendo el nombre **de la fuente** contra EIDOS
+    (`npm run taxones:nomenclatura -- --online`, que es la capa 2 del puente y necesita red), dando
+    de alta lo que cierre en `Tools/catalogo-nacional/data/equivalencias-nomenclatura.json` con su
+    fuente y su fecha, y relanzando `npm run aves:fenologia -- --write`. Diez minutos por entrada, y
+    la lista sale sola cada vez que se ejecuta la herramienta.

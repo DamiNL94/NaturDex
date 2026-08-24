@@ -31,6 +31,7 @@ export const state = {
   rarityFilter: 'all',
   query: '',
   selectedId: null,
+  // 'catalog' | 'migratorias' | 'invasoras' | 'progress' | 'diccionario'.
   view: 'catalog',
   // Nivel del catálogo en el que está el usuario. Son tres, de fuera hacia dentro:
   //   'groups'   → los grupos de hábitats (habitat-groups.js): el nivel de entrada.
@@ -83,6 +84,38 @@ export const state = {
 
 // --- Selectores: catálogo -------------------------------------------------------------------------
 /*
+ * Aves migratorias: las que el Formulario Normalizado de Datos del sitio Red Natura 2000 declara
+ * SIN población permanente (cría aquí y se va, inverna, o solo está de paso). Lo decide el pipeline
+ * y llega en el campo `migratory`; el criterio vive en Tools/lib/fenologia.js y NO se recalcula
+ * aquí: la app no tiene el formulario, así que no puede opinar sobre fenología.
+ *
+ * `=== true` y no un booleano a secas porque el campo tiene TRES estados y el tercero importa: la
+ * API sirve `null` y el park.json omite el campo cuando ningún formulario nombra al ave (591 de las
+ * fichas de ave del catálogo). Eso no es «no es migratoria», es que no hay fuente, y esas fichas se
+ * quedan en el catálogo general en vez de repartirse a ojo.
+ */
+export function esMigratoria(species) {
+  return !!species && species.migratory === true;
+}
+
+/** Las migratorias del espacio, ya ordenadas como el resto del catálogo. */
+export function migratorySpecies() {
+  return (state.data.species || []).filter(esMigratoria).sort(comparaEspecies);
+}
+
+/**
+ * Las especies del CATÁLOGO: todas menos las migratorias, que tienen pestaña propia. Sin esta
+ * resta las 405 migratorias saldrían dos veces —en «Ver todas las especies» y en su pestaña—, que
+ * es justo lo que hace que separarlas no sirva de nada.
+ *
+ * Siguen siendo especies del parque a todos los demás efectos: cuentan en `speciesTotal`, se marcan
+ * como vistas, entran en el medallero y en los logros. Lo único que cambia es dónde se listan.
+ */
+export function catalogSpecies() {
+  return (state.data.species || []).filter(s => !esMigratoria(s));
+}
+
+/*
  * La lista del catálogo, filtrada y YA ORDENADA alfabéticamente.
  *
  * El orden se decide aquí, en el selector, y no en cada sitio que pinta una lista, porque el dato
@@ -93,7 +126,7 @@ export const state = {
  * app enseña siempre la misma lista, venga de donde venga, y el orden del dato deja de importar.
  */
 export function getFilteredSpecies() {
-  return state.data.species.filter(species => {
+  return catalogSpecies().filter(species => {
     const matchesFilter = state.filter === 'all'
       || (state.filter === 'seen' && state.seenSpecies.has(species.id))
       || species.kingdom === state.filter;
@@ -185,13 +218,18 @@ export function computeProgress() {
   const habitatsCompleteCount = habitatProgress.filter(h => h.complete).length;
   const poisComplete = poisTotal > 0 && poisSeen === poisTotal;
   const parkComplete = habitatsComplete && poisComplete;
-  // Colección de aves de la ZEPA (Red Natura 2000): logro propio, ya que no cuelgan de hábitats.
+  // Colección de aves del sitio Red Natura 2000: logro propio, ya que no cuelgan de hábitats.
   const zepaSpecies = species.filter(s => s.zepaSiteCode);
   const zepaTotal = zepaSpecies.length;
   const zepaSeen = zepaSpecies.filter(s => state.seenSpecies.has(s.id)).length;
+  // Y dentro de esa lista, la colección de migratorias: su propia pestaña merece su propia barra.
+  // Es un SUBCONJUNTO del anterior —toda migratoria la declara un formulario—, no otra cosa.
+  const migratorias = species.filter(esMigratoria);
+  const migratoryTotal = migratorias.length;
+  const migratorySeen = migratorias.filter(s => state.seenSpecies.has(s.id)).length;
   return {
     speciesTotal, speciesSeen, habitatProgress, habitatsCompleteCount, poisTotal, poisSeen,
-    poisComplete, zepaTotal, zepaSeen, parkComplete
+    poisComplete, zepaTotal, zepaSeen, migratoryTotal, migratorySeen, parkComplete
   };
 }
 

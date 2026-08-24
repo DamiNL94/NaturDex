@@ -9,6 +9,7 @@
 //   render/catalogo.js    catálogo en tres niveles: grupos → hábitats → especies
 //   render/resumen.js     cabecera del parque, ficha base y barra de progreso
 //   render/detalle.js     ficha de especie, de hábitat y de POI
+//   render/migratorias.js pestaña de aves migratorias
 //   render/invasoras.js   pestaña de invasoras
 //   render/progreso.js    progreso del parque, progreso de cuenta, historial de salidas
 //
@@ -24,5 +25,6 @@ import './render/fallbacks.js';
 export { renderCatalogBody, renderHabitatCatalog, renderHabitatGroups, renderSpeciesList } from './render/catalogo.js';
 export { renderBasicPark, renderProgress, renderSummary } from './render/resumen.js';
 export { renderDetail } from './render/detalle.js';
+export { renderMigratorias } from './render/migratorias.js';
 export { renderInvasoras } from './render/invasoras.js';
 export { renderAccountProgress, renderProgressTab } from './render/progreso.js';

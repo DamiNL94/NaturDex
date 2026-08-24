@@ -4151,6 +4151,21 @@
       "eidosTaxonId": 14089,
       "gbifSpeciesKey": 8277073,
       "zepaSiteCode": null,
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": true
@@ -4574,6 +4589,21 @@
       "eidosTaxonId": 12243,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": true
@@ -5104,6 +5134,21 @@
       "eidosTaxonId": 11750,
       "gbifSpeciesKey": 2480850,
       "zepaSiteCode": null,
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": true
@@ -6107,6 +6152,21 @@
       "eidosTaxonId": 14061,
       "gbifSpeciesKey": 9413670,
       "zepaSiteCode": "ES0000260",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 1382,
       "visible": true
@@ -6159,6 +6219,21 @@
       "eidosTaxonId": 11340,
       "gbifSpeciesKey": 2480876,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 1188,
       "visible": true
@@ -6203,6 +6278,21 @@
       "eidosTaxonId": 10896,
       "gbifSpeciesKey": 9797180,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 1065,
       "visible": true
@@ -6247,6 +6337,21 @@
       "eidosTaxonId": 12107,
       "gbifSpeciesKey": 4352332,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 1059,
       "visible": true
@@ -6339,6 +6444,21 @@
       "eidosTaxonId": 11446,
       "gbifSpeciesKey": 5229126,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 958,
       "visible": true
@@ -6383,6 +6503,21 @@
       "eidosTaxonId": 12286,
       "gbifSpeciesKey": 2498009,
       "zepaSiteCode": "ES0000260",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 897,
       "visible": true
@@ -6487,6 +6622,21 @@
       "eidosTaxonId": 11102,
       "gbifSpeciesKey": 2490669,
       "zepaSiteCode": "ES0000260",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 789,
       "visible": true
@@ -6531,6 +6681,21 @@
       "eidosTaxonId": 11442,
       "gbifSpeciesKey": 9566659,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 771,
       "visible": true
@@ -6627,6 +6792,21 @@
       "eidosTaxonId": 10664,
       "gbifSpeciesKey": 2480311,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 742,
       "visible": true
@@ -6679,6 +6859,21 @@
       "eidosTaxonId": 12321,
       "gbifSpeciesKey": 9616058,
       "zepaSiteCode": "ES0000260",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 739,
       "visible": true
@@ -6723,6 +6918,21 @@
       "eidosTaxonId": 11825,
       "gbifSpeciesKey": 2481726,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 684,
       "visible": true
@@ -6915,6 +7125,21 @@
       "eidosTaxonId": 11024,
       "gbifSpeciesKey": 2480482,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 601,
       "visible": true
@@ -7019,6 +7244,21 @@
       "eidosTaxonId": 12147,
       "gbifSpeciesKey": 2481240,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 574,
       "visible": true
@@ -7059,6 +7299,21 @@
       "eidosTaxonId": 10965,
       "gbifSpeciesKey": 2481890,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 567,
       "visible": false,
@@ -7104,6 +7359,21 @@
       "eidosTaxonId": 10801,
       "gbifSpeciesKey": 2480259,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 533,
       "visible": true
@@ -7152,6 +7422,21 @@
       "eidosTaxonId": 11519,
       "gbifSpeciesKey": 2481776,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 530,
       "visible": true
@@ -7196,6 +7481,21 @@
       "eidosTaxonId": 10678,
       "gbifSpeciesKey": 2481759,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 499,
       "visible": true
@@ -7281,6 +7581,21 @@
       "eidosTaxonId": 12000,
       "gbifSpeciesKey": 9761484,
       "zepaSiteCode": "ES0000260",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 493,
       "visible": true
@@ -7381,6 +7696,21 @@
       "eidosTaxonId": 14053,
       "gbifSpeciesKey": 7406504,
       "zepaSiteCode": "ES0000260",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 460,
       "visible": true
@@ -7425,6 +7755,21 @@
       "eidosTaxonId": 12329,
       "gbifSpeciesKey": 2481714,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 455,
       "visible": true
@@ -7469,6 +7814,21 @@
       "eidosTaxonId": 14001,
       "gbifSpeciesKey": 2482054,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 446,
       "visible": true
@@ -7561,6 +7921,21 @@
       "eidosTaxonId": 12240,
       "gbifSpeciesKey": 2480327,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 416,
       "visible": true
@@ -7613,6 +7988,21 @@
       "eidosTaxonId": 14084,
       "gbifSpeciesKey": 5789279,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 380,
       "visible": true
@@ -7657,6 +8047,21 @@
       "eidosTaxonId": 11496,
       "gbifSpeciesKey": 2480830,
       "zepaSiteCode": "ES0000260",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 374,
       "visible": true
@@ -7753,6 +8158,21 @@
       "eidosTaxonId": 16426,
       "gbifSpeciesKey": 7341500,
       "zepaSiteCode": "ES0000260",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 346,
       "visible": true
@@ -7853,6 +8273,21 @@
       "eidosTaxonId": 11887,
       "gbifSpeciesKey": 2482100,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 315,
       "visible": true
@@ -7897,6 +8332,21 @@
       "eidosTaxonId": 23748,
       "gbifSpeciesKey": 9752617,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 314,
       "visible": true
@@ -8037,6 +8487,21 @@
       "eidosTaxonId": 14004,
       "gbifSpeciesKey": 2482065,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 265,
       "visible": true
@@ -8129,6 +8594,21 @@
       "eidosTaxonId": 11745,
       "gbifSpeciesKey": 2481749,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 257,
       "visible": true
@@ -8173,6 +8653,21 @@
       "eidosTaxonId": 12021,
       "gbifSpeciesKey": 2480757,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 243,
       "visible": true
@@ -8269,6 +8764,21 @@
       "eidosTaxonId": 14079,
       "gbifSpeciesKey": 9367409,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 221,
       "visible": true
@@ -8313,6 +8823,22 @@
       "eidosTaxonId": 11484,
       "gbifSpeciesKey": 2481800,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante",
+          "en concentración"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno · En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 218,
       "visible": true
@@ -8401,6 +8927,21 @@
       "eidosTaxonId": 10887,
       "gbifSpeciesKey": 5228199,
       "zepaSiteCode": "ES0000260",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 211,
       "visible": true
@@ -8453,6 +8994,21 @@
       "eidosTaxonId": 11959,
       "gbifSpeciesKey": 2480685,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 208,
       "visible": true
@@ -8497,6 +9053,21 @@
       "eidosTaxonId": 11274,
       "gbifSpeciesKey": 9701857,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 179,
       "visible": true
@@ -8541,6 +9112,21 @@
       "eidosTaxonId": 11590,
       "gbifSpeciesKey": 2480801,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 179,
       "visible": true
@@ -8645,6 +9231,21 @@
       "eidosTaxonId": 11211,
       "gbifSpeciesKey": 2498415,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 155,
       "visible": true
@@ -8693,6 +9294,21 @@
       "eidosTaxonId": 10649,
       "gbifSpeciesKey": 2481748,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 152,
       "visible": true
@@ -8745,6 +9361,21 @@
       "eidosTaxonId": 12231,
       "gbifSpeciesKey": 2490255,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 146,
       "visible": true
@@ -8835,6 +9466,21 @@
       "eidosTaxonId": 11262,
       "gbifSpeciesKey": 2481741,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 143,
       "visible": true
@@ -8883,6 +9529,21 @@
       "eidosTaxonId": 10794,
       "gbifSpeciesKey": 2475532,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 133,
       "visible": true
@@ -8927,6 +9588,21 @@
       "eidosTaxonId": 11974,
       "gbifSpeciesKey": 2481784,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 130,
       "visible": true
@@ -8971,6 +9647,21 @@
       "eidosTaxonId": 10741,
       "gbifSpeciesKey": 2480332,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 118,
       "visible": true
@@ -9023,6 +9714,21 @@
       "eidosTaxonId": 12356,
       "gbifSpeciesKey": 2495708,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 118,
       "visible": true
@@ -9067,6 +9773,21 @@
       "eidosTaxonId": 11219,
       "gbifSpeciesKey": 2481725,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 118,
       "visible": true
@@ -9111,6 +9832,21 @@
       "eidosTaxonId": 14072,
       "gbifSpeciesKey": 2481263,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 108,
       "visible": true
@@ -9151,6 +9887,21 @@
       "eidosTaxonId": 11337,
       "gbifSpeciesKey": 2481819,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 106,
       "visible": true
@@ -9203,6 +9954,21 @@
       "eidosTaxonId": 12048,
       "gbifSpeciesKey": 2480495,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 104,
       "visible": true
@@ -9287,6 +10053,21 @@
       "eidosTaxonId": 11885,
       "gbifSpeciesKey": 2481728,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 93,
       "visible": true
@@ -9327,6 +10108,21 @@
       "eidosTaxonId": 10786,
       "gbifSpeciesKey": 2474377,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 89,
       "visible": true
@@ -9373,6 +10169,21 @@
       "eidosTaxonId": 11917,
       "gbifSpeciesKey": 7788295,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 86,
       "visible": true
@@ -9417,6 +10228,21 @@
       "eidosTaxonId": 11370,
       "gbifSpeciesKey": 2481713,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 82,
       "visible": true
@@ -9469,6 +10295,22 @@
       "eidosTaxonId": 12250,
       "gbifSpeciesKey": 2492576,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora",
+          "invernante"
+        ],
+        "etiqueta": "Reproductora: cría aquí · Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 80,
       "visible": true
@@ -9565,6 +10407,21 @@
       "eidosTaxonId": 10922,
       "gbifSpeciesKey": 2480537,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 75,
       "visible": true
@@ -9701,6 +10558,21 @@
       "eidosTaxonId": 33046,
       "gbifSpeciesKey": 8250742,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 72,
       "visible": true
@@ -9805,6 +10677,21 @@
       "eidosTaxonId": 14050,
       "gbifSpeciesKey": 8151548,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 67,
       "visible": true
@@ -9901,6 +10788,21 @@
       "eidosTaxonId": 10738,
       "gbifSpeciesKey": 2475443,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 66,
       "visible": true
@@ -9943,6 +10845,21 @@
       "eidosTaxonId": 11600,
       "gbifSpeciesKey": 2481685,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 63,
       "visible": true
@@ -9995,6 +10912,21 @@
       "eidosTaxonId": 12121,
       "gbifSpeciesKey": 2482048,
       "zepaSiteCode": "ES0000260",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 61,
       "visible": true
@@ -10047,6 +10979,21 @@
       "eidosTaxonId": 10734,
       "gbifSpeciesKey": 2490681,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 60,
       "visible": true
@@ -10131,6 +11078,21 @@
       "eidosTaxonId": 11870,
       "gbifSpeciesKey": 2480863,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 57,
       "visible": true
@@ -10175,6 +11137,22 @@
       "eidosTaxonId": 11421,
       "gbifSpeciesKey": 2480726,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante",
+          "en concentración"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno · En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 57,
       "visible": true
@@ -10227,6 +11205,21 @@
       "eidosTaxonId": 80931,
       "gbifSpeciesKey": 2492949,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 54,
       "visible": true
@@ -10269,6 +11262,21 @@
       "eidosTaxonId": 11564,
       "gbifSpeciesKey": 2481681,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 49,
       "visible": true
@@ -10321,6 +11329,21 @@
       "eidosTaxonId": 11047,
       "gbifSpeciesKey": 2494422,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 48,
       "visible": true
@@ -10361,6 +11384,21 @@
       "eidosTaxonId": 10745,
       "gbifSpeciesKey": 2474831,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 45,
       "visible": true
@@ -10413,6 +11451,21 @@
       "eidosTaxonId": 12112,
       "gbifSpeciesKey": 2492521,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 45,
       "visible": true
@@ -10465,6 +11518,21 @@
       "eidosTaxonId": 11890,
       "gbifSpeciesKey": 5231240,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 43,
       "visible": true
@@ -10517,6 +11585,21 @@
       "eidosTaxonId": 11977,
       "gbifSpeciesKey": 5739317,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 43,
       "visible": true
@@ -10557,6 +11640,21 @@
       "eidosTaxonId": 33013,
       "gbifSpeciesKey": 8332393,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 43,
       "visible": true
@@ -10709,6 +11807,21 @@
       "eidosTaxonId": 14086,
       "gbifSpeciesKey": 2481119,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 39,
       "visible": true
@@ -10757,6 +11870,21 @@
       "eidosTaxonId": 14057,
       "gbifSpeciesKey": 2481174,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 36,
       "visible": true
@@ -10845,6 +11973,21 @@
       "eidosTaxonId": 12041,
       "gbifSpeciesKey": 2480934,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 35,
       "visible": true
@@ -10937,6 +12080,21 @@
       "eidosTaxonId": 12097,
       "gbifSpeciesKey": 2489160,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 34,
       "visible": true
@@ -10981,6 +12139,21 @@
       "eidosTaxonId": 12081,
       "gbifSpeciesKey": 2480906,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 32,
       "visible": true
@@ -11167,6 +12340,21 @@
       "eidosTaxonId": 11738,
       "gbifSpeciesKey": 2481835,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 30,
       "visible": true
@@ -11255,6 +12443,21 @@
       "eidosTaxonId": 10766,
       "gbifSpeciesKey": 2493128,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 24,
       "visible": true
@@ -11297,6 +12500,21 @@
       "eidosTaxonId": 11258,
       "gbifSpeciesKey": 2498255,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 24,
       "visible": true
@@ -11339,6 +12557,21 @@
       "eidosTaxonId": 10957,
       "gbifSpeciesKey": 2481765,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 22,
       "visible": true
@@ -11391,6 +12624,21 @@
       "eidosTaxonId": 11339,
       "gbifSpeciesKey": 2475365,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 21,
       "visible": true
@@ -11443,6 +12691,21 @@
       "eidosTaxonId": 11963,
       "gbifSpeciesKey": 2481047,
       "zepaSiteCode": "ES0000260",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 21,
       "visible": true
@@ -11575,6 +12838,21 @@
       "eidosTaxonId": 12013,
       "gbifSpeciesKey": 2474416,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 19,
       "visible": true
@@ -11665,6 +12943,21 @@
       "eidosTaxonId": 13987,
       "gbifSpeciesKey": 2498247,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 17,
       "visible": true
@@ -11707,6 +13000,21 @@
       "eidosTaxonId": 12198,
       "gbifSpeciesKey": 2498375,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 17,
       "visible": true
@@ -11790,6 +13098,21 @@
       "eidosTaxonId": 12378,
       "gbifSpeciesKey": 2480242,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 17,
       "visible": true
@@ -11830,6 +13153,21 @@
       "eidosTaxonId": 11097,
       "gbifSpeciesKey": 8214667,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 16,
       "visible": true
@@ -11870,6 +13208,21 @@
       "eidosTaxonId": 11011,
       "gbifSpeciesKey": 2498112,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 15,
       "visible": true
@@ -11914,6 +13267,21 @@
       "eidosTaxonId": 11094,
       "gbifSpeciesKey": 2474156,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 15,
       "visible": true
@@ -11958,6 +13326,21 @@
       "eidosTaxonId": 14085,
       "gbifSpeciesKey": 2481121,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 14,
       "visible": true
@@ -12002,6 +13385,21 @@
       "eidosTaxonId": 11273,
       "gbifSpeciesKey": 2497295,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 12,
       "visible": true
@@ -12054,6 +13452,21 @@
       "eidosTaxonId": 11336,
       "gbifSpeciesKey": 2480666,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 12,
       "visible": true
@@ -12106,6 +13519,21 @@
       "eidosTaxonId": 11453,
       "gbifSpeciesKey": 5231235,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 12,
       "visible": true
@@ -12158,6 +13586,21 @@
       "eidosTaxonId": 11059,
       "gbifSpeciesKey": 9813242,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 10,
       "visible": true
@@ -12198,6 +13641,22 @@
       "eidosTaxonId": 33094,
       "gbifSpeciesKey": 8000602,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante",
+          "en concentración"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno · En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 10,
       "visible": true
@@ -12282,6 +13741,21 @@
       "eidosTaxonId": 11120,
       "gbifSpeciesKey": 2480487,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 7,
       "visible": true
@@ -12326,6 +13800,21 @@
       "eidosTaxonId": 11957,
       "gbifSpeciesKey": 2487385,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 7,
       "visible": true
@@ -12370,6 +13859,21 @@
       "eidosTaxonId": 10699,
       "gbifSpeciesKey": 2498390,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 6,
       "visible": true
@@ -12422,6 +13926,21 @@
       "eidosTaxonId": 10937,
       "gbifSpeciesKey": 2490613,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 6,
       "visible": true
@@ -12666,6 +14185,21 @@
       "eidosTaxonId": 12326,
       "gbifSpeciesKey": 8012314,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 3,
       "visible": true
@@ -12710,6 +14244,21 @@
       "eidosTaxonId": 11706,
       "gbifSpeciesKey": 2493124,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 2,
       "visible": true
@@ -12750,6 +14299,21 @@
       "eidosTaxonId": 33018,
       "gbifSpeciesKey": 9362027,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 2,
       "visible": true
@@ -12890,6 +14454,21 @@
       "eidosTaxonId": 11179,
       "gbifSpeciesKey": 7937336,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 1,
       "visible": true
@@ -12942,6 +14521,21 @@
       "eidosTaxonId": 12175,
       "gbifSpeciesKey": 2497701,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 1,
       "visible": true
@@ -13028,6 +14622,21 @@
       "eidosTaxonId": 11630,
       "gbifSpeciesKey": 2493551,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": true
@@ -13068,6 +14677,21 @@
       "eidosTaxonId": 32209,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": false,
@@ -13109,6 +14733,21 @@
       "eidosTaxonId": 29856,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": false,

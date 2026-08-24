@@ -7,7 +7,7 @@
 import { backToHabitatsBtn, catalogCrumb, catalogCrumbLabel, catalogTitle, rarityFilterGroup, resultCount, searchInput, searchLabel, speciesFilterGroup, speciesList } from '../dom.js';
 import { groupSwatch, groupedHabitats, habitatGroup, habitatGroupById, habitatsOfGroup } from '../habitat-groups.js';
 import { TRAMOS, TRAMO_AMENAZA, estrellas, tramoDe } from '../rareza.js';
-import { getFilteredHabitats, getFilteredSpecies, habitatSpeciesSeenCount, isHabitatComplete, state } from '../state.js';
+import { catalogSpecies, getFilteredHabitats, getFilteredSpecies, habitatSpeciesSeenCount, isHabitatComplete, state } from '../state.js';
 import { html, icon, raw, speciesImageSrc } from '../util.js';
 
 /*
@@ -70,7 +70,7 @@ export function renderHabitatGroups() {
       <span class="habitat-group-go" aria-hidden="true">${icon('chevronRight', 18)}</span>
       </button>`;
   });
-  speciesList.innerHTML = html`<button class="habitat-all-link" type="button" id="viewAllSpeciesBtn">Ver todas las especies (${state.data.species.length})</button>${cards}`;
+  speciesList.innerHTML = html`<button class="habitat-all-link" type="button" id="viewAllSpeciesBtn">Ver todas las especies (${catalogSpecies().length})</button>${cards}`;
 }
 
 /** Segundo nivel: los hábitats de un grupo (state.habitatGroupFocus). */
@@ -96,9 +96,12 @@ export function renderSpeciesList() {
     : (state.data.species || []).length;
   const recorte = species.length < total ? ` de ${total}` : '';
   resultCount.textContent = (species.length === 1 ? '1 resultado' : species.length + ' resultados') + recorte;
+  // Sin distintivo de «migratoria»: ésas tienen pestaña propia y `getFilteredSpecies` ya las quita
+  // de aquí. El que había iba por `zepaSiteCode`, que dice otra cosa (que el formulario oficial del
+  // sitio la nombra, población permanente incluida), así que sobre esta lista era falso siempre.
   const cards = species.map(item => {
     const seen = state.seenSpecies.has(item.id);
-    return html`<button class="species-card ${item.id === state.selectedId ? 'active' : ''}${seen ? ' seen' : ''}" type="button" data-id="${item.id}"${item.id === state.selectedId ? html` aria-current="true"` : ''}><span class="card-thumb"><img src="${speciesImageSrc(item)}" alt="" loading="lazy" onerror="window.__imgFallback(this,${item.id})">${seen ? html`<span class="seen-badge" aria-hidden="true">${icon('check', 12)}</span>` : ''}</span><span><span class="card-meta"><span class="badge ${item.kingdom}">${item.kingdom}</span>${item.zepaSiteCode ? html`<span class="badge migratoria">🕊️ migratoria</span>` : ''}${item.featured ? html`<span class="badge alert">prioritaria</span>` : ''}${rarezaBadge(item)}${item.reviewNote ? html`<span class="badge review">a revisar</span>` : ''}</span><h3>${item.commonName}</h3><em>${item.scientificName}</em>${seen ? html`<span class="sr-only">Especie vista.</span>` : ''}</span></button>`;
+    return html`<button class="species-card ${item.id === state.selectedId ? 'active' : ''}${seen ? ' seen' : ''}" type="button" data-id="${item.id}"${item.id === state.selectedId ? html` aria-current="true"` : ''}><span class="card-thumb"><img src="${speciesImageSrc(item)}" alt="" loading="lazy" onerror="window.__imgFallback(this,${item.id})">${seen ? html`<span class="seen-badge" aria-hidden="true">${icon('check', 12)}</span>` : ''}</span><span><span class="card-meta"><span class="badge ${item.kingdom}">${item.kingdom}</span>${item.featured ? html`<span class="badge alert">prioritaria</span>` : ''}${rarezaBadge(item)}${item.reviewNote ? html`<span class="badge review">a revisar</span>` : ''}</span><h3>${item.commonName}</h3><em>${item.scientificName}</em>${seen ? html`<span class="sr-only">Especie vista.</span>` : ''}</span></button>`;
   });
   // Una lista vacía sin explicación se lee como un fallo de la app. Con el filtro de rareza puesto
   // es además el caso NORMAL: en un hábitat corriente no hay ninguna especie en peligro, y eso es

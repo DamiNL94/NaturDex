@@ -4620,6 +4620,21 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 0,
       "zepaSiteCode": "ES0000507",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000507",
+            "name": "Espacio marino de los Islotes Litorales de Murcia y Almería",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000507 (Espacio marino de los Islotes Litorales de Murcia y Almería), sección 3.2"
+      },
       "habitatIds": [],
       "rarityLocal": 4,
       "rarityLocalBasis": {
@@ -4670,6 +4685,21 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 36,
       "zepaSiteCode": "ES0000507",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000507",
+            "name": "Espacio marino de los Islotes Litorales de Murcia y Almería",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000507 (Espacio marino de los Islotes Litorales de Murcia y Almería), sección 3.2"
+      },
       "habitatIds": [],
       "rarityLocal": 2,
       "rarityLocalBasis": {
@@ -4720,6 +4750,21 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 0,
       "zepaSiteCode": "ES0000507",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000507",
+            "name": "Espacio marino de los Islotes Litorales de Murcia y Almería",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000507 (Espacio marino de los Islotes Litorales de Murcia y Almería), sección 3.2"
+      },
       "habitatIds": [],
       "rarityLocal": 4,
       "rarityLocalBasis": {
@@ -4769,6 +4814,21 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 0,
       "zepaSiteCode": "ES0000507",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000507",
+            "name": "Espacio marino de los Islotes Litorales de Murcia y Almería",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000507 (Espacio marino de los Islotes Litorales de Murcia y Almería), sección 3.2"
+      },
       "habitatIds": [],
       "rarityLocal": 5,
       "rarityLocalBasis": {
@@ -4819,6 +4879,21 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 0,
       "zepaSiteCode": "ES0000507",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000507",
+            "name": "Espacio marino de los Islotes Litorales de Murcia y Almería",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000507 (Espacio marino de los Islotes Litorales de Murcia y Almería), sección 3.2"
+      },
       "habitatIds": [],
       "rarityLocal": 1,
       "rarityLocalBasis": {
@@ -4868,6 +4943,21 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 0,
       "zepaSiteCode": "ES0000507",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000507",
+            "name": "Espacio marino de los Islotes Litorales de Murcia y Almería",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000507 (Espacio marino de los Islotes Litorales de Murcia y Almería), sección 3.2"
+      },
       "habitatIds": [],
       "rarityLocal": 4,
       "rarityLocalBasis": {
@@ -4918,6 +5008,21 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 11,
       "zepaSiteCode": "ES0000507",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000507",
+            "name": "Espacio marino de los Islotes Litorales de Murcia y Almería",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000507 (Espacio marino de los Islotes Litorales de Murcia y Almería), sección 3.2"
+      },
       "habitatIds": [],
       "rarityLocal": 1,
       "rarityLocalBasis": {
@@ -4968,6 +5073,21 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 0,
       "zepaSiteCode": "ES0000507",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000507",
+            "name": "Espacio marino de los Islotes Litorales de Murcia y Almería",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000507 (Espacio marino de los Islotes Litorales de Murcia y Almería), sección 3.2"
+      },
       "habitatIds": [],
       "rarityLocal": 2,
       "rarityLocalBasis": {
@@ -5068,6 +5188,21 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 48,
       "zepaSiteCode": "ES0000507",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000507",
+            "name": "Espacio marino de los Islotes Litorales de Murcia y Almería",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000507 (Espacio marino de los Islotes Litorales de Murcia y Almería), sección 3.2"
+      },
       "habitatIds": [],
       "rarityLocal": 2,
       "rarityLocalBasis": {
@@ -5117,6 +5252,21 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 0,
       "zepaSiteCode": "ES0000507",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000507",
+            "name": "Espacio marino de los Islotes Litorales de Murcia y Almería",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000507 (Espacio marino de los Islotes Litorales de Murcia y Almería), sección 3.2"
+      },
       "habitatIds": [],
       "rarityLocal": 2,
       "rarityLocalBasis": {
@@ -5166,6 +5316,21 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 0,
       "zepaSiteCode": "ES0000507",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000507",
+            "name": "Espacio marino de los Islotes Litorales de Murcia y Almería",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000507 (Espacio marino de los Islotes Litorales de Murcia y Almería), sección 3.2"
+      },
       "habitatIds": [],
       "rarityLocal": 2,
       "rarityLocalBasis": {
@@ -5215,6 +5380,21 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 0,
       "zepaSiteCode": "ES0000507",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000507",
+            "name": "Espacio marino de los Islotes Litorales de Murcia y Almería",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000507 (Espacio marino de los Islotes Litorales de Murcia y Almería), sección 3.2"
+      },
       "habitatIds": [],
       "rarityLocal": 3,
       "rarityLocalBasis": {
@@ -5265,6 +5445,21 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 81,
       "zepaSiteCode": "ES0000507",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000507",
+            "name": "Espacio marino de los Islotes Litorales de Murcia y Almería",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000507 (Espacio marino de los Islotes Litorales de Murcia y Almería), sección 3.2"
+      },
       "habitatIds": [],
       "rarityLocal": 2,
       "rarityLocalBasis": {
@@ -5315,6 +5510,21 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 9,
       "zepaSiteCode": "ES0000507",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000507",
+            "name": "Espacio marino de los Islotes Litorales de Murcia y Almería",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000507 (Espacio marino de los Islotes Litorales de Murcia y Almería), sección 3.2"
+      },
       "habitatIds": [],
       "rarityLocal": 5,
       "rarityLocalBasis": {
@@ -5413,6 +5623,21 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 331,
       "zepaSiteCode": "ES0000507",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000507",
+            "name": "Espacio marino de los Islotes Litorales de Murcia y Almería",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000507 (Espacio marino de los Islotes Litorales de Murcia y Almería), sección 3.2"
+      },
       "habitatIds": [],
       "rarityLocal": 1,
       "rarityLocalBasis": {
@@ -5463,6 +5688,21 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 0,
       "zepaSiteCode": "ES0000507",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000507",
+            "name": "Espacio marino de los Islotes Litorales de Murcia y Almería",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000507 (Espacio marino de los Islotes Litorales de Murcia y Almería), sección 3.2"
+      },
       "habitatIds": [],
       "rarityLocal": 2,
       "rarityLocalBasis": {

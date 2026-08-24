@@ -51,6 +51,7 @@ const fs = require('fs');
 const path = require('path');
 const { arg, flag, requireArgs, die } = require('../lib/cli');
 const { ROOT, FRONTEND, CATALOGO_DIR, OUT_DIR, readJson, writeJson, rel, fromRoot, parkFiles } = require('../lib/io');
+const { clasificaPresenciaSitio } = require('../lib/fenologia');
 
 const DRY = flag('dry');
 const PODAR = flag('podar');
@@ -74,7 +75,7 @@ const CURADOS = ['coordinates', 'featured', 'visible', 'hiddenReason', 'reviewNo
 const ORDEN = ['id', 'commonName', 'scientificName', 'kingdom', 'group', 'habitat',
   'conservationStatus', 'description', 'descriptionSource', 'tips', 'seasonality', 'image', 'imageAttribution',
   'coordinates', 'rarityScore', 'rarityBasis', 'rarityLocal', 'rarityLocalBasis', 'featured', 'source', 'taxonomy', 'iucnGlobal', 'spainStatus',
-  'murciaStatus', 'reviewNote', 'eidosTaxonId', 'gbifSpeciesKey', 'zepaSiteCode', 'habitatIds',
+  'murciaStatus', 'reviewNote', 'eidosTaxonId', 'gbifSpeciesKey', 'zepaSiteCode', 'migratory', 'sitePresence', 'habitatIds',
   'gbifOccurrences', 'visible', 'hiddenReason', 'audio', 'audioTranscript'];
 
 // Gravedad de las categorías de los catálogos de especies amenazadas, para quedarse con la mayor
@@ -638,6 +639,11 @@ function main() {
     // publicar de menos se corrige, dar por comprobado lo que no lo está, no.
     if (rarityLocal == null) sinTramoLocal.push(sci);
 
+    // La fenología solo la afirma el formulario del sitio, y solo se le pregunta a las AVES: para
+    // una planta el tipo de población del FND no significa «migra», así que clasificarla sería
+    // inventar un dato que la fuente no da.
+    const fenologia = esAve ? clasificaPresenciaSitio(sel.listaOficialSitio) : null;
+
     const ficha = {
       id: antes ? antes.id : siguienteId++,
       scientificName: sci,
@@ -654,6 +660,11 @@ function main() {
       eidosTaxonId,
       gbifSpeciesKey: gbifKey.valor !== null ? gbifKey.valor : (g ? g.speciesKey : null),
       zepaSiteCode: esAve ? sitioQueLaDeclara(sel, zepa) : null,
+      // Fenología en el sitio: si el formulario oficial la declara migratoria y con qué tipo de
+      // población. Campo OMITIDO cuando ningún formulario la nombra (ver Tools/lib/fenologia.js):
+      // «nadie lo ha mirado» no puede escribirse como «comprobado que no».
+      migratory: fenologia ? fenologia.migratory : undefined,
+      sitePresence: fenologia ? fenologia.sitePresence : undefined,
       habitatIds: enlaces.map(h => h.slug),
       gbifOccurrences: sel.gbifOccurrences,
       visible: true,

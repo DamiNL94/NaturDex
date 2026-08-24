@@ -3102,6 +3102,21 @@
       "eidosTaxonId": 10750,
       "gbifSpeciesKey": 2490604,
       "zepaSiteCode": "ES0000457",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000457",
+            "name": "Sierra de Salinas (ZEPA)",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000457 (Sierra de Salinas (ZEPA)), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 19,
       "visible": true
@@ -3542,6 +3557,21 @@
       "eidosTaxonId": 12316,
       "gbifSpeciesKey": 9330514,
       "zepaSiteCode": "ES0000457",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000457",
+            "name": "Sierra de Salinas (ZEPA)",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000457 (Sierra de Salinas (ZEPA)), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 10,
       "visible": true
@@ -3798,6 +3828,21 @@
       "eidosTaxonId": 11336,
       "gbifSpeciesKey": 2480666,
       "zepaSiteCode": "ES0000457",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000457",
+            "name": "Sierra de Salinas (ZEPA)",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000457 (Sierra de Salinas (ZEPA)), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 8,
       "visible": true
@@ -4150,6 +4195,21 @@
       "eidosTaxonId": 12356,
       "gbifSpeciesKey": 2495708,
       "zepaSiteCode": "ES0000457",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000457",
+            "name": "Sierra de Salinas (ZEPA)",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000457 (Sierra de Salinas (ZEPA)), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 7,
       "visible": true
@@ -4398,6 +4458,21 @@
       "eidosTaxonId": 11963,
       "gbifSpeciesKey": 2481047,
       "zepaSiteCode": "ES0000457",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000457",
+            "name": "Sierra de Salinas (ZEPA)",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000457 (Sierra de Salinas (ZEPA)), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 5,
       "visible": true
@@ -4450,6 +4525,21 @@
       "eidosTaxonId": 12065,
       "gbifSpeciesKey": 2482552,
       "zepaSiteCode": "ES0000457",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000457",
+            "name": "Sierra de Salinas (ZEPA)",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000457 (Sierra de Salinas (ZEPA)), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 5,
       "visible": true
@@ -4698,6 +4788,21 @@
       "eidosTaxonId": 10888,
       "gbifSpeciesKey": 2480506,
       "zepaSiteCode": "ES0000457",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000457",
+            "name": "Sierra de Salinas (ZEPA)",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000457 (Sierra de Salinas (ZEPA)), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 3,
       "visible": true
@@ -5145,6 +5250,21 @@
       "eidosTaxonId": 80931,
       "gbifSpeciesKey": 2492949,
       "zepaSiteCode": "ES0000457",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000457",
+            "name": "Sierra de Salinas (ZEPA)",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000457 (Sierra de Salinas (ZEPA)), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 2,
       "visible": true,
@@ -5250,6 +5370,21 @@
       "eidosTaxonId": 10944,
       "gbifSpeciesKey": 2490274,
       "zepaSiteCode": "ES0000457",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000457",
+            "name": "Sierra de Salinas (ZEPA)",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000457 (Sierra de Salinas (ZEPA)), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 1,
       "visible": true
@@ -5350,6 +5485,21 @@
       "eidosTaxonId": 10917,
       "gbifSpeciesKey": 5959092,
       "zepaSiteCode": "ES0000457",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000457",
+            "name": "Sierra de Salinas (ZEPA)",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000457 (Sierra de Salinas (ZEPA)), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 1,
       "visible": true
@@ -5402,6 +5552,21 @@
       "eidosTaxonId": 10734,
       "gbifSpeciesKey": 2490681,
       "zepaSiteCode": "ES0000457",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000457",
+            "name": "Sierra de Salinas (ZEPA)",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000457 (Sierra de Salinas (ZEPA)), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 1,
       "visible": true

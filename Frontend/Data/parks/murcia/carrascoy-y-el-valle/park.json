@@ -18859,6 +18859,21 @@
       "eidosTaxonId": 16422,
       "gbifSpeciesKey": 2487871,
       "zepaSiteCode": "ES0000269",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 450,
       "visible": true
@@ -18911,6 +18926,21 @@
       "eidosTaxonId": 12321,
       "gbifSpeciesKey": 9616058,
       "zepaSiteCode": "ES0000269",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 399,
       "visible": true
@@ -18963,6 +18993,21 @@
       "eidosTaxonId": 10922,
       "gbifSpeciesKey": 2480537,
       "zepaSiteCode": "ES0000269",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 338,
       "visible": true
@@ -19015,6 +19060,21 @@
       "eidosTaxonId": 12356,
       "gbifSpeciesKey": 2495708,
       "zepaSiteCode": "ES0000269",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 309,
       "visible": true
@@ -19067,6 +19127,21 @@
       "eidosTaxonId": 12122,
       "gbifSpeciesKey": 9411857,
       "zepaSiteCode": "ES0000269",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 297,
       "visible": true
@@ -19119,6 +19194,21 @@
       "eidosTaxonId": 11102,
       "gbifSpeciesKey": 2490669,
       "zepaSiteCode": "ES0000269",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 289,
       "visible": true
@@ -19171,6 +19261,21 @@
       "eidosTaxonId": 11211,
       "gbifSpeciesKey": 2498415,
       "zepaSiteCode": "ES0000269",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 251,
       "visible": true
@@ -19223,6 +19328,21 @@
       "eidosTaxonId": 10738,
       "gbifSpeciesKey": 2475443,
       "zepaSiteCode": "ES0000269",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 214,
       "visible": true
@@ -19275,6 +19395,21 @@
       "eidosTaxonId": 16426,
       "gbifSpeciesKey": 7341500,
       "zepaSiteCode": "ES0000269",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 185,
       "visible": true
@@ -19326,6 +19461,21 @@
       "eidosTaxonId": 80931,
       "gbifSpeciesKey": 2492949,
       "zepaSiteCode": "ES0000269",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 181,
       "visible": true,
@@ -19379,6 +19529,21 @@
       "eidosTaxonId": 11116,
       "gbifSpeciesKey": 9629160,
       "zepaSiteCode": "ES0000269",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 180,
       "visible": true
@@ -19431,6 +19596,21 @@
       "eidosTaxonId": 11959,
       "gbifSpeciesKey": 2480685,
       "zepaSiteCode": "ES0000269",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 174,
       "visible": true
@@ -19483,6 +19663,21 @@
       "eidosTaxonId": 12250,
       "gbifSpeciesKey": 2492576,
       "zepaSiteCode": "ES0000269",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 154,
       "visible": true
@@ -19535,6 +19730,21 @@
       "eidosTaxonId": 11592,
       "gbifSpeciesKey": 5231236,
       "zepaSiteCode": "ES0000269",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 126,
       "visible": true
@@ -19587,6 +19797,21 @@
       "eidosTaxonId": 12065,
       "gbifSpeciesKey": 2482552,
       "zepaSiteCode": "ES0000269",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 102,
       "visible": true
@@ -19639,6 +19864,21 @@
       "eidosTaxonId": 11453,
       "gbifSpeciesKey": 5231235,
       "zepaSiteCode": "ES0000269",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 100,
       "visible": true
@@ -19691,6 +19931,21 @@
       "eidosTaxonId": 12316,
       "gbifSpeciesKey": 9330514,
       "zepaSiteCode": "ES0000269",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 96,
       "visible": true
@@ -19743,6 +19998,21 @@
       "eidosTaxonId": 11336,
       "gbifSpeciesKey": 2480666,
       "zepaSiteCode": "ES0000269",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 88,
       "visible": true
@@ -19795,6 +20065,21 @@
       "eidosTaxonId": 12175,
       "gbifSpeciesKey": 2497701,
       "zepaSiteCode": "ES0000269",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 86,
       "visible": true
@@ -19847,6 +20132,21 @@
       "eidosTaxonId": 11887,
       "gbifSpeciesKey": 2482100,
       "zepaSiteCode": "ES0000269",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 76,
       "visible": true
@@ -19899,6 +20199,21 @@
       "eidosTaxonId": 16387,
       "gbifSpeciesKey": 4408759,
       "zepaSiteCode": "ES0000269",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 69,
       "visible": true
@@ -19951,6 +20266,21 @@
       "eidosTaxonId": 11963,
       "gbifSpeciesKey": 2481047,
       "zepaSiteCode": "ES0000269",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 57,
       "visible": true
@@ -20003,6 +20333,21 @@
       "eidosTaxonId": 11339,
       "gbifSpeciesKey": 2475365,
       "zepaSiteCode": "ES0000269",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 49,
       "visible": true
@@ -20055,6 +20400,21 @@
       "eidosTaxonId": 10888,
       "gbifSpeciesKey": 2480506,
       "zepaSiteCode": "ES0000269",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 44,
       "visible": true
@@ -20103,6 +20463,21 @@
       "eidosTaxonId": 12340,
       "gbifSpeciesKey": 5231438,
       "zepaSiteCode": "ES0000269",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 27,
       "visible": true
@@ -20155,6 +20530,22 @@
       "eidosTaxonId": 16302,
       "gbifSpeciesKey": 5844449,
       "zepaSiteCode": "ES0000269",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente",
+          "en concentración"
+        ],
+        "etiqueta": "Residente todo el año · En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 25,
       "visible": true
@@ -20207,6 +20598,21 @@
       "eidosTaxonId": 10750,
       "gbifSpeciesKey": 2490604,
       "zepaSiteCode": "ES0000269",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 22,
       "visible": true
@@ -20255,6 +20661,21 @@
       "eidosTaxonId": 10739,
       "gbifSpeciesKey": 2480420,
       "zepaSiteCode": "ES0000269",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 22,
       "visible": true
@@ -20307,6 +20728,21 @@
       "eidosTaxonId": 10917,
       "gbifSpeciesKey": 5959092,
       "zepaSiteCode": "ES0000269",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 21,
       "visible": true
@@ -20359,6 +20795,21 @@
       "eidosTaxonId": 11890,
       "gbifSpeciesKey": 5231240,
       "zepaSiteCode": "ES0000269",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 19,
       "visible": true
@@ -20459,6 +20910,21 @@
       "eidosTaxonId": 11024,
       "gbifSpeciesKey": 2480482,
       "zepaSiteCode": "ES0000269",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 13,
       "visible": true
@@ -20507,6 +20973,21 @@
       "eidosTaxonId": 11735,
       "gbifSpeciesKey": 5229167,
       "zepaSiteCode": "ES0000269",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 12,
       "visible": true
@@ -20559,6 +21040,21 @@
       "eidosTaxonId": 12262,
       "gbifSpeciesKey": 2481035,
       "zepaSiteCode": "ES0000269",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 11,
       "visible": true
@@ -20611,6 +21107,21 @@
       "eidosTaxonId": 10734,
       "gbifSpeciesKey": 2490681,
       "zepaSiteCode": "ES0000269",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 9,
       "visible": true
@@ -20715,6 +21226,21 @@
       "eidosTaxonId": 12324,
       "gbifSpeciesKey": 7865305,
       "zepaSiteCode": "ES0000269",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 4,
       "visible": true
@@ -20767,6 +21293,21 @@
       "eidosTaxonId": 10944,
       "gbifSpeciesKey": 2490274,
       "zepaSiteCode": "ES0000269",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 3,
       "visible": true
@@ -20815,6 +21356,21 @@
       "eidosTaxonId": 11094,
       "gbifSpeciesKey": 2474156,
       "zepaSiteCode": "ES0000269",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 3,
       "visible": true
@@ -20867,6 +21423,21 @@
       "eidosTaxonId": 12048,
       "gbifSpeciesKey": 2480495,
       "zepaSiteCode": "ES0000269",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 2,
       "visible": true
@@ -20919,6 +21490,21 @@
       "eidosTaxonId": 11313,
       "gbifSpeciesKey": 2480389,
       "zepaSiteCode": "ES0000269",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 2,
       "visible": true
@@ -20971,6 +21557,21 @@
       "eidosTaxonId": 11796,
       "gbifSpeciesKey": 2484918,
       "zepaSiteCode": "ES0000269",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 2,
       "visible": true

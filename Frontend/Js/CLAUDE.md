@@ -24,6 +24,7 @@ usuario**: eso es de `app.js`.
 | `render/catalogo.js` | 108 | Catálogo en tres niveles: grupos de hábitats → hábitats → especies |
 | `render/resumen.js` | 109 | Cabecera del parque, ficha base (`status: basic`) y barra de progreso |
 | `render/detalle.js` | 220 | Ficha de especie, de hábitat y de punto de interés. La de especie abre con el **cartel de advertencia** (`rareza.js`) cuando el taxón está amenazado o no tiene tramo calculado |
+| `render/migratorias.js` | 55 | Pestaña de **aves migratorias**: las que el formulario del sitio Red Natura 2000 declara sin población permanente (`migratory`). La ficha que abren es la de especie de siempre — son catálogo del parque, no una colección aparte como las invasoras |
 | `render/invasoras.js` | 55 | Pestaña de invasoras y su ficha |
 | `render/progreso.js` | 286 | Progreso del parque, **medallero** de cuenta (rareza a la vista y techo del catálogo) e historial de salidas verificadas |
 | `render/fallbacks.js` | 64 | Sustitutos de imagen rota (`window.__*Fallback`, los invoca el `onerror` del HTML generado). Sin exports |
@@ -75,10 +76,10 @@ secciones cumple la misma función: abre solo el rango que necesites.
 |---|---|
 | 53–61 | Pila de navegación (`nav.js`) |
 | 62–95 | **Empezar por arriba**: `vistaArriba()` y `estrenaFicha()`. Toda vista o ficha que se abre arranca por su encabezado, no por donde se quedó la anterior |
-| 96–291 | Navegación del catálogo: entrar en grupo/hábitat/especie/POI/invasora, volver atrás |
+| 96–291 | Navegación del catálogo: entrar en grupo/hábitat/especie/POI/migratoria/invasora, volver atrás |
 | 292–397 | Marcar visto / visitado, captura de avistamiento, aviso de «sin verificar» |
 | 398–417 | Nivel de dato del espacio: ficha base vs. catálogo completo |
-| 418–450 | Vistas (catálogo / invasoras / progreso / diccionario) |
+| 418–450 | Vistas (catálogo / migratorias / invasoras / progreso / diccionario) |
 | 451–569 | Vistas móviles: nav inferior y ficha como *bottom-sheet* |
 | 570–670 | Delegación de eventos (**todos los clicks entran por aquí**), incluida la foto que abre el visor y las puertas del diccionario |
 | 671–696 | Modo explorador (`explorer.js`) |
@@ -89,7 +90,7 @@ secciones cumple la misma función: abre solo el rango que necesites.
 
 | Módulo | Líneas | Qué resuelve |
 |---|---|---|
-| `state.js` | 205 | Única fuente de verdad del estado + selectores derivados y constantes. **Los selectores del catálogo devuelven la lista ya ordenada alfabéticamente**: el dato llega en un orden desde el `park.json` (por `id`) y en otro desde la API (`is_featured DESC, common_name ASC`), y ordenar aquí es lo que hace que el mismo parque se vea igual con y sin cobertura |
+| `state.js` | 235 | Única fuente de verdad del estado + selectores derivados y constantes. **`catalogSpecies()` resta las migratorias** —tienen pestaña propia y saldrían dos veces— sin tocar `speciesTotal`: siguen contando para el progreso y los logros. **Los selectores del catálogo devuelven la lista ya ordenada alfabéticamente**: el dato llega en un orden desde el `park.json` (por `id`) y en otro desde la API (`is_featured DESC, common_name ASC`), y ordenar aquí es lo que hace que el mismo parque se vea igual con y sin cobertura |
 | `dom.js` | 75 | Referencias centralizadas a los nodos del DOM del parque |
 | `data.js` | 297 | Registro, manifiesto, datos y geo + progreso local-first. **Todo lo que habla con red o caché pasa por aquí.** La API tiene prioridad sobre el `park.json` |
 | `api.js` | 82 | **Único** punto de contacto con `Backend/Api/`: corte por tiempo, errores, `apiSignal()` |

@@ -86,7 +86,7 @@ function buildParkPayload($conn, $parkSlug) {
     }
 
     // --- Especies ---------------------------------------------------------------------------------
-    $speciesStmt = $conn->prepare("SELECT id, common_name, scientific_name, kingdom, family, primary_habitat, conservation_status, description, identification_tips, seasonality, image_url, image_attribution, description_source, latitude, longitude, rarity_score, rarity_basis, rarity_local, rarity_local_basis, is_featured, is_visible, hidden_reason, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, spain_status, murcia_status, review_note, eidos_taxonid, gbif_species_key, zepa_site_code FROM species WHERE park_id = ? ORDER BY is_featured DESC, common_name ASC");
+    $speciesStmt = $conn->prepare("SELECT id, common_name, scientific_name, kingdom, family, primary_habitat, conservation_status, description, identification_tips, seasonality, image_url, image_attribution, description_source, latitude, longitude, rarity_score, rarity_basis, rarity_local, rarity_local_basis, is_featured, is_visible, hidden_reason, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, spain_status, murcia_status, review_note, eidos_taxonid, gbif_species_key, zepa_site_code, is_migratory, site_presence FROM species WHERE park_id = ? ORDER BY is_featured DESC, common_name ASC");
     $speciesStmt->bind_param("i", $park["id"]);
     $speciesStmt->execute();
     $result = $speciesStmt->get_result();
@@ -146,6 +146,16 @@ function buildParkPayload($conn, $parkSlug) {
             "gbifSpeciesKey" => $row["gbif_species_key"] !== null ? (int) $row["gbif_species_key"] : null,
             // Código del espacio ZEPA si el ave figura en su lista oficial (EEA/BISE); null si no aplica.
             "zepaSiteCode" => $row["zepa_site_code"],
+            // Fenología del ave según el Formulario Normalizado de Datos del sitio Red Natura 2000:
+            // true = migratoria, false = declarada con población permanente, null = ningún formulario
+            // la nombra. Los TRES estados llegan al cliente: `null` es el que hace que la ficha se
+            // quede en el catálogo general en lugar de la pestaña de migratorias, y aplanarlo a false
+            // convertiría «nadie lo ha mirado» en «comprobado que no». Ver Tools/lib/fenologia.js.
+            "migratory" => $row["is_migratory"] !== null ? (bool) $row["is_migratory"] : null,
+            // La cita que sostiene lo anterior. Se decodifica aquí, igual que los dos `*_basis`: si la
+            // API lo mandara como cadena, la misma ficha tendría dos formas según viniera de la API o
+            // del park.json empaquetado, y Frontend/Js/data.js no puede resolver esa divergencia.
+            "sitePresence" => $row["site_presence"] !== null ? json_decode($row["site_presence"], true) : null,
             "habitatIds" => $speciesIdToHabitatSlugs[(int) $row["id"]] ?? []
         ];
     }

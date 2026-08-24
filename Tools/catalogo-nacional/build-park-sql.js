@@ -203,7 +203,7 @@ L.push('    image_note = VALUES(image_note);');
 
 // 3) Especies --------------------------------------------------------------------------------------
 seccion(`3. Especies (${species.length}). \`identification_tips\` va como texto separado por «; », que es como lo parte park_payload.php.`);
-const COLS_S = ['common_name', 'scientific_name', 'kingdom', 'family', 'primary_habitat', 'conservation_status', 'description', 'description_source', 'identification_tips', 'seasonality', 'image_url', 'image_attribution', 'latitude', 'longitude', 'rarity_score', 'rarity_basis', 'rarity_local', 'rarity_local_basis', 'is_featured', 'is_visible', 'hidden_reason', 'source', 'taxon_phylum', 'taxon_class', 'taxon_order', 'taxon_family', 'taxon_genus', 'iucn_global', 'spain_status', 'murcia_status', 'review_note', 'eidos_taxonid', 'gbif_species_key', 'zepa_site_code'];
+const COLS_S = ['common_name', 'scientific_name', 'kingdom', 'family', 'primary_habitat', 'conservation_status', 'description', 'description_source', 'identification_tips', 'seasonality', 'image_url', 'image_attribution', 'latitude', 'longitude', 'rarity_score', 'rarity_basis', 'rarity_local', 'rarity_local_basis', 'is_featured', 'is_visible', 'hidden_reason', 'source', 'taxon_phylum', 'taxon_class', 'taxon_order', 'taxon_family', 'taxon_genus', 'iucn_global', 'spain_status', 'murcia_status', 'review_note', 'eidos_taxonid', 'gbif_species_key', 'zepa_site_code', 'is_migratory', 'site_presence'];
 // Los dos `*_basis` son columnas JSON y se escriben con `sqlJson` de lib/sql (ya lo usan los
 // hábitats): así vuelven del viaje siendo el mismo objeto que hay en el park.json, en vez de una
 // cadena. `park_payload.php` los decodifica al otro lado.
@@ -231,6 +231,10 @@ species.forEach((s, i) => {
     sqlStrOrNull(t.phylum), sqlStrOrNull(t.class), sqlStrOrNull(t.order), sqlStrOrNull(t.family), sqlStrOrNull(t.genus),
     sqlStrOrNull(s.iucnGlobal), sqlStrOrNull(s.spainStatus), sqlStrOrNull(s.murciaStatus), sqlStrOrNull(s.reviewNote),
     sqlNum(s.eidosTaxonId), sqlNum(s.gbifSpeciesKey), sqlStrOrNull(s.zepaSiteCode),
+    // `is_migratory` va a NULL —y no a FALSE— cuando la ficha no trae el campo: son las aves que
+    // ningún formulario oficial nombra. Escribir FALSE afirmaría una comprobación que nadie ha
+    // hecho, y la app usa justo esa diferencia para dejarlas en el catálogo general.
+    sqlBool(s.migratory), sqlJson(s.sitePresence),
   ];
   L.push('    SELECT ' + alias(v, i === 0 ? COLS_S : null));
   if (i < species.length - 1) L.push('    UNION ALL');

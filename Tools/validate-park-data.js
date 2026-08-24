@@ -578,6 +578,43 @@ function validatePark(entry) {
     warn(scope, sinBase + ' especie(s) con `rarityScore` sin `rarityBasis`: el tramo viene del criterio ' +
       'propio anterior, no de una norma. Pendiente de recalcular contra EIDOS');
 
+  // 4 quater) Fenología del ave: `migratory` y `sitePresence` ------------------------------------
+  /*
+   * La pestaña de aves migratorias se construye con `migratory`, y ese campo solo puede decir lo que
+   * declara el Formulario Normalizado de Datos del sitio Red Natura 2000. Aquí se comprueba que el
+   * par no se separe nunca, porque separado no falla: la pestaña seguiría pintando la ficha y el
+   * usuario leería «Ave migratoria» sin ninguna cita debajo, que es exactamente el cartel sin fuente
+   * que la regla nº 2 prohíbe.
+   *
+   * Las tres cosas que se miran:
+   *   · `migratory` sin `sitePresence` (o al revés) — el dato se ha escrito a mano o a medias.
+   *   · `migratory` en algo que no es un ave — el FND da tipo de población a peces y mamíferos
+   *     también, pero ahí «permanente» no significa «no migra»: clasificarlos sería inventar.
+   *   · `migratory` que contradice a sus propios `tipos` — migratoria es, por definición, la que NO
+   *     tiene población permanente declarada (Tools/lib/fenologia.js).
+   *
+   * Una ficha SIN los dos campos no es un error: son las 591 aves que ningún formulario nombra, y
+   * omitir el campo es lo que distingue «nadie lo ha mirado» de «comprobado que no».
+   */
+  species.forEach(s => {
+    const tiene = s.migratory !== undefined;
+    const cita = s.sitePresence !== undefined;
+    if (tiene !== cita)
+      err(scope, 'especie #' + s.id + ' (' + s.commonName + '): tiene `' + (tiene ? 'migratory' : 'sitePresence') + '` sin el otro. Los dos los escribe Tools/lib/fenologia.js y viajan juntos: uno clasifica y el otro cita la fuente');
+    if (!tiene) return;
+    if ((s.taxonomy || {}).class !== 'Aves')
+      err(scope, 'especie #' + s.id + ' (' + s.commonName + '): lleva `migratory` y no es un ave (clase «' +
+        ((s.taxonomy || {}).class || 'sin dato') + '»). La fenología del formulario solo se interpreta para aves');
+    const tipos = (s.sitePresence && s.sitePresence.tipos) || [];
+    if (!tipos.length)
+      err(scope, 'especie #' + s.id + ' (' + s.commonName + '): `sitePresence.tipos` vacío. Sin tipo de población no hay nada que clasificar');
+    else if (s.migratory === tipos.includes('permanente'))
+      err(scope, 'especie #' + s.id + ' (' + s.commonName + '): `migratory` = ' + s.migratory + ' contradice sus tipos [' +
+        tipos.join(', ') + ']. Migratoria = ninguna población permanente declarada; ver Tools/lib/fenologia.js');
+    if (!(s.sitePresence && String(s.sitePresence.fuente || '').trim()))
+      err(scope, 'especie #' + s.id + ' (' + s.commonName + '): `sitePresence` sin `fuente`. El cartel de la ficha cita ese texto');
+  });
+
   // 5 bis) Contenido universal de la ficha de especie ----------------------------------------------
   // Una ficha de especie describe a la ESPECIE, no su presencia en este parque: la misma ficha se
   // sirve en todos los espacios donde vive. Si `description`, `habitat` o `tips` nombran un parque,

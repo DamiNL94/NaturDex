@@ -43,6 +43,7 @@ export const basicNotice = document.querySelector('#basicNotice');
 
 // Pestaña de progreso y panel de detalle
 export const progressPanel = document.querySelector('#progressPanel');
+export const migratoriasPanel = document.querySelector('#migratoriasPanel');
 export const invasorasPanel = document.querySelector('#invasorasPanel');
 export const diccionarioPanel = document.querySelector('#diccionarioPanel');
 export const detailPanel = document.querySelector('#detailPanel');
