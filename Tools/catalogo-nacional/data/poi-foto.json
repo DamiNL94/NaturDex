@@ -38,5 +38,9 @@
   "humedal-del-ajauque-y-rambla-salada": {
     "_comment": "La categoría del espacio en Commons (15 archivos) solo cubre el humedal de Ajauque y el embalse: nada de las salinas, el aula ni los dos diques. Los Cabecicos Negros tienen categoría PROPIA, que no cuelga de la del espacio, así que hay que nombrarla aquí. Comprobado el 2026-08-22 que es la de Fortuna y no la homónima de Vera (Almería): la descripción del archivo dice «foto tomada desde la carretera de Fortuna a la Matanza».",
     "cabecicos-negros-de-fortuna": "Cabecicos negros 1.JPG"
+  },
+  "barrancos-de-gebas": {
+    "_comment": "Elegida el 2026-08-22 mirando las tres fotos de la categoría una a una. Por orden alfabético salía «Barrancos de Gebas desde Sierra Espuña.jpg», que es un teleobjetivo brumoso tomado desde el macizo vecino, a varios kilómetros; la elegida está tomada a ras de las cárcavas, con la pista y el embalse al fondo, que es exactamente lo que el POI cuenta que se ve desde el mirador.",
+    "mirador-de-los-barrancos-de-gebas": "Barrancos de Gebas.jpg"
   }
 }

@@ -8,6 +8,10 @@ antes de aceptarlas: el buscador no garantiza que la foto sea del sitio.
 
 | Espacio | Punto de interés | Estado | Detalle |
 |---|---|---|---|
+| barrancos-de-gebas | Mirador de los Barrancos de Gebas | foto nueva | https://commons.wikimedia.org/wiki/Special:FilePath/Barrancos_de_Gebas.jpg?width=1280 (elegida a mano en data/poi-foto.json; alias en data/poi-alias.json) |
+| barrancos-de-gebas | Rambla de Librilla | sin foto | ninguna candidata pasó licencia y carga |
+| barrancos-de-gebas | Barranco del Infierno o de La Saladilla | sin foto | ninguna candidata pasó licencia y carga |
+| barrancos-de-gebas | Mirador del Embalse de Algeciras | sin foto | ninguna candidata pasó licencia y carga |
 | cabezo-gordo | Cima del Cabezo Gordo | sin foto | ninguna candidata pasó licencia y carga |
 | cabezo-gordo | Mirador de la Sima de las Palomas | sin foto | ninguna candidata pasó licencia y carga |
 | cabezo-gordo | Aparcamiento y arranque de la Senda del Cabezo Gordo | sin foto | ninguna candidata pasó licencia y carga |
@@ -146,3 +150,5 @@ antes de aceptarlas: el buscador no garantiza que la foto sea del sitio.
 | sierra-espuna | Torre del Azaraque | ya tenía foto | https://commons.wikimedia.org/wiki/Special:FilePath/Restos_de_la_Torre_del_Azaraque_(Alhama_de_Murcia).jpg?width=1280 |
 | sierra-espuna | Hornos de cal del Barranco de Argüelles | sin foto | ninguna candidata pasó licencia y carga |
 | sierra-espuna | Capilla de la Virgen del Rocío | sin foto | ninguna candidata pasó licencia y carga |
+| sotos-y-bosques-de-ribera-de-canaverosa | Santuario de la Virgen de la Esperanza | foto nueva | https://commons.wikimedia.org/wiki/Special:FilePath/Calasparra-santuario-Virgen-de-la-Esperanza.jpg?width=1280 (categoría «Santuario de la Esperanza, Calasparra», dominio público) |
+| sotos-y-bosques-de-ribera-de-canaverosa | Álamo del Santuario | sin foto | ninguna candidata pasó licencia y carga |

@@ -67,5 +67,12 @@
       "Capilla"
     ],
     "_sin_alias": "Los otros seis POIs se quedan SIN alias a propósito: ninguno de los 63 archivos utilizables de Commons los retrata, y el geosearch a 1.500 m de cada uno no devuelve nada geoetiquetado salvo el vértice de la cumbre."
+  },
+  "barrancos-de-gebas": {
+    "_comment": "El POI se llama «Mirador de los Barrancos de Gebas» —el nombre del nodo de OSM que lo sitúa— y los tres archivos de Commons se llaman solo «Barrancos de Gebas»: la palabra «mirador» no aparece en ninguno, así que mencionaSitio decía que no y el POI principal del espacio se quedaba sin foto. El alias apunta al paisaje que se ve desde el mirador, que es justo lo que el POI cuenta.",
+    "mirador-de-los-barrancos-de-gebas": [
+      "Barrancos de Gebas",
+      "Barrancos gebas"
+    ]
   }
 }
