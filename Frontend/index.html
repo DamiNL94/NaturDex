@@ -152,7 +152,7 @@
                     <!-- El progreso estatal (logros de cuenta, sumando todos los parques) también se
                          alcanza desde dentro de un parque: es de la cuenta, no del parque, y estando
                          aquí no había forma de llegar sin salir al selector. Vuelve al parque al cerrar. -->
-                    <div class="park-user"><span id="userName" class="user-name"></span><button id="accountProgressBtnPark" class="icon-btn" type="button" title="Tu progreso estatal" aria-label="Ver tu progreso estatal"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="6"/><polyline points="8.5 13.5 7 22 12 19 17 22 15.5 13.5"/></svg></button><button id="tutorialBtn" class="icon-btn" type="button" title="Ver el tutorial" aria-label="Ver el tutorial"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></button><button id="profileBtn" class="icon-btn primary" type="button" title="Perfil y ajustes" aria-label="Perfil y ajustes"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button></div>
+                    <div class="park-user"><span id="userName" class="user-name"></span><button id="accountProgressBtnPark" class="icon-btn" type="button" title="Tu progreso estatal" aria-label="Ver tu progreso estatal"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="6"/><polyline points="8.5 13.5 7 22 12 19 17 22 15.5 13.5"/></svg></button><button id="diccionarioBtn" class="icon-btn" type="button" title="Diccionario de términos" aria-label="Abrir el diccionario de términos" aria-pressed="false"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></button><button id="profileBtn" class="icon-btn primary" type="button" title="Perfil y ajustes" aria-label="Perfil y ajustes"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button></div>
                 </div>
                 <section class="park-summary">
                     <!-- Cartel del parque (rediseño "ranger"): el rótulo y su categoría van sobre la
@@ -198,15 +198,15 @@
                 </section>
                 <!-- Conmutador de vistas (botones con estado, no pestañas ARIA: los paneles se
                      muestran/ocultan enteros y no hay relación tab/tabpanel navegable) -->
-                <!-- El «Diccionario» es la cuarta pestaña SOLO aquí, en escritorio. En móvil la nav
-                     inferior se queda en cuatro botones a propósito (ver Js/diccionario.js) y se
-                     entra por el enlace de la cabecera del catálogo o por el popover del glosario. -->
+                <!-- El «Diccionario» NO es una pestaña: es nacional, no del espacio, y estaba ocupando un hueco
+                     en una fila donde el resto sí lo es. Vive como icono de la cabecera (#diccionarioBtn),
+                     junto al progreso estatal, que es lo otro que tampoco es del parque. Ver Js/diccionario.js.
+                     «Migratorias» se oculta sola donde el espacio no tiene ninguna (app.js). -->
                 <div class="view-tabs" role="group" aria-label="Vistas de NaturDex">
                     <button class="view-tab active" type="button" data-view="catalog" aria-pressed="true">Catálogo</button>
                     <button class="view-tab" type="button" data-view="migratorias" aria-pressed="false">Migratorias</button>
                     <button class="view-tab" type="button" data-view="invasoras" aria-pressed="false">Invasoras</button>
                     <button class="view-tab" type="button" data-view="progress" aria-pressed="false">Progreso</button>
-                    <button class="view-tab" type="button" data-view="diccionario" aria-pressed="false">Diccionario</button>
                 </div>
                 <!-- Ficha base (status "basic"): el espacio tiene límite oficial y Red Natura 2000,
                      pero todavía no catálogo de especies ni hábitats. En vez de dejar el catálogo

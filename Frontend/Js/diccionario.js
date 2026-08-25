@@ -8,14 +8,23 @@
 // escritas en llano estaban ahí y solo aparecían por casualidad.
 //
 // DÓNDE VIVE, Y POR QUÉ AHÍ
-// Hacía falta decidir entre poner un quinto botón en la nav inferior del móvil o buscarle otra
-// puerta. Manda el criterio de la Fase 1 de usabilidad: **la nav inferior no pasa de cuatro
-// botones** (Mapa · Catálogo · Invasoras · Progreso). El público al que va dirigida esta tanda
-// —personas mayores y niños— ya navega con esfuerzo entre cuatro iconos pequeños; con cinco, el
-// coste no lo paga el diccionario, lo pagan el mapa y el catálogo, que es lo que se usa a diario.
+// Hacía falta decidir entre poner un botón más en la nav inferior del móvil o buscarle otra puerta.
+// Manda el criterio de la Fase 1 de usabilidad: **la nav inferior no pasa de cuatro botones**. El
+// público al que va dirigida esta tanda —personas mayores y niños— ya navega con esfuerzo entre
+// cuatro iconos pequeños; con más, el coste no lo paga el diccionario, lo pagan el mapa y el
+// catálogo, que es lo que se usa a diario.
+//
+// Y **tampoco es pestaña en escritorio**, desde que la fila creció con «Migratorias». No por sitio:
+// por lo que la fila significa. Sus pestañas son las vistas DEL ESPACIO —su catálogo, sus aves
+// migratorias, sus invasoras, tu progreso en él— y el diccionario es nacional: se ve igual en los
+// dieciséis espacios y en uno de ficha base, donde no hay catálogo que consultar pero las palabras
+// técnicas siguen saliendo. Puesto entre las otras cuatro prometía ser una quinta sección del
+// parque, que es justo lo que no es.
 //
 // Así que el diccionario es una VISTA de la barra lateral, con tres puertas de entrada:
-//   · en escritorio, una cuarta pestaña en `.view-tabs`, donde ya está el resto;
+//   · el icono de libro de la cabecera (`#diccionarioBtn`), junto al progreso estatal, que es lo
+//     otro que tampoco es del parque. Ocupa el sitio donde estaba el botón del tutorial, que sigue
+//     estando en Perfil y ajustes → Ayuda («Ver el tutorial otra vez»);
 //   · en móvil, un enlace en la cabecera del catálogo (allí es donde se está leyendo);
 //   · desde el popover del glosario, «Ver en el diccionario →», que además abre ese mismo término.
 //

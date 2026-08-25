@@ -24,7 +24,7 @@ usuario**: eso es de `app.js`.
 | `render/catalogo.js` | 108 | Catálogo en tres niveles: grupos de hábitats → hábitats → especies |
 | `render/resumen.js` | 109 | Cabecera del parque, ficha base (`status: basic`) y barra de progreso |
 | `render/detalle.js` | 220 | Ficha de especie, de hábitat y de punto de interés. La de especie abre con el **cartel de advertencia** (`rareza.js`) cuando el taxón está amenazado o no tiene tramo calculado |
-| `render/migratorias.js` | 55 | Pestaña de **aves migratorias**: las que el formulario del sitio Red Natura 2000 declara sin población permanente (`migratory`). La ficha que abren es la de especie de siempre — son catálogo del parque, no una colección aparte como las invasoras |
+| `render/migratorias.js` | 55 | Pestaña de **aves migratorias**: las que el formulario del sitio Red Natura 2000 declara sin población permanente (`migratory`). La ficha que abren es la de especie de siempre — son catálogo del parque, no una colección aparte como las invasoras. La pestaña **se oculta sola** donde el espacio no tiene ninguna (`app.js · sincronizaPestanaMigratorias`) |
 | `render/invasoras.js` | 55 | Pestaña de invasoras y su ficha |
 | `render/progreso.js` | 286 | Progreso del parque, **medallero** de cuenta (rareza a la vista y techo del catálogo) e historial de salidas verificadas |
 | `render/fallbacks.js` | 64 | Sustitutos de imagen rota (`window.__*Fallback`, los invoca el `onerror` del HTML generado). Sin exports |
@@ -103,7 +103,7 @@ secciones cumple la misma función: abre solo el rango que necesites.
 | `profile.js` | 575 | Pantalla «Perfil y ajustes». Único sitio donde el usuario administra su cuenta |
 | `tutorial.js` | 433 | Onboarding por pasos (*spotlight*). Dos tramos: `select` y `park`. **Bloqueante**: el fondo es inerte y solo se sale confirmando |
 | `glossary.js` | 220 | Resalta tecnicismos en las descripciones y muestra su definición en llano. El popover **sigue** a su palabra al desplazarse, no se cierra |
-| `diccionario.js` | 208 | El glosario entero como vista propia: alfabético, buscable y filtrable. La cabecera explica por qué NO es un quinto botón de la nav móvil |
+| `diccionario.js` | 216 | El glosario entero como vista propia: alfabético, buscable y filtrable. **No tiene pestaña**: es nacional, no del espacio, y la fila de pestañas es la de las vistas del parque. Se entra por el icono de libro de la cabecera (`#diccionarioBtn`), por el enlace de los filtros en móvil y por el popover del glosario. La cabecera del módulo explica por qué |
 | `visor.js` | 309 | La foto de la ficha a pantalla completa, con pellizco, doble toque y rueda. Solo sobre fotos reales: sobre un sustituto generado no abre |
 | `fitosociologia.js` | 65 | Traduce la asociación fitosociológica a lenguaje llano **sin sustituir** la cita oficial |
 | `audio.js` | 50 | Audioguías de POIs, senderos y hábitats. La transcripción es obligatoria (WCAG 1.2.1) |

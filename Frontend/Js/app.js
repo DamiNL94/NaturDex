@@ -450,22 +450,61 @@ function applyParkLevel(level) {
   if (parkProgressWrap) parkProgressWrap.hidden = basic;
   // La pestaña de progreso mediría una colección que todavía no existe (y el modo explorador
   // descubriría especies y POIs que aún no están cargados): se ocultan mientras el espacio sea N1.
-  document.querySelectorAll('.view-tab[data-view="progress"], .mobile-nav-btn[data-mtab="progress"], ' +
-    '.view-tab[data-view="migratorias"], .mobile-nav-btn[data-mtab="migratorias"]')
+  document.querySelectorAll('.view-tab[data-view="progress"], .mobile-nav-btn[data-mtab="progress"]')
     .forEach(btn => { btn.hidden = basic; });
+  // La de migratorias la decide `sincronizaPestanaMigratorias()`, no esta función: depende de
+  // cuántas aves migratorias tenga el espacio y aquí el catálogo todavía no está cargado
+  // (`applyParkLevel` corre antes que `loadData`). Se apaga de salida y se vuelve a decidir allí.
+  ocultaPestana('migratorias', true);
   if (explorerToggle) explorerToggle.hidden = basic;
+}
+
+/** Apaga o enciende una pestaña en sus DOS sitios: la fila de escritorio y la nav inferior móvil. */
+function ocultaPestana(vista, oculta) {
+  document.querySelectorAll('.view-tab[data-view="' + vista + '"], .mobile-nav-btn[data-mtab="' + vista + '"]')
+    .forEach(btn => { btn.hidden = oculta; });
+}
+
+/*
+ * ¿Se enseña la pestaña «Migratorias»? Solo si este espacio tiene alguna.
+ *
+ * Una pestaña de primer nivel que en cuatro de los dieciséis espacios publicados solo puede decir
+ * «aquí no hay» es un destino que cobra sitio en la barra sin dar nada a cambio — y en la nav móvil
+ * ese sitio se lo quita al mapa y al catálogo, que es lo que se usa a diario
+ * (el criterio de los cuatro botones, en Js/diccionario.js).
+ *
+ * Se llama DESPUÉS de `loadData`, que es cuando `state.data.species` existe. Y no se lee del
+ * catálogo entero sino del mismo selector que pinta la pestaña: si un día se filtra algo más, la
+ * puerta y la lista no pueden discrepar.
+ */
+function sincronizaPestanaMigratorias() {
+  const hay = state.parkLevel !== 'basic' && migratorySpecies().length > 0;
+  ocultaPestana('migratorias', !hay);
+  // Si el usuario estaba en esa pestaña y cambia de parque a uno sin migratorias, se le devuelve al
+  // catálogo: quedarse en una vista cuya pestaña acaba de desaparecer no tiene vuelta atrás.
+  if (!hay && state.view === 'migratorias') setView('catalog');
 }
 
 // --- Vistas (catálogo / progreso) ---------------------------------------------------------------------
 function setView(view) {
   const basic = state.parkLevel === 'basic';
-  if (basic && (view === 'progress' || view === 'migratorias')) view = 'catalog'; // pestañas ocultas; por si acaso
+  if (basic && view === 'progress') view = 'catalog'; // la pestaña está oculta; por si acaso
+  // La de migratorias se apaga por dos motivos distintos (ficha base o espacio sin ninguna), así
+  // que la pregunta no es cuál de los dos: es si el botón está encendido.
+  if (view === 'migratorias' && document.querySelector('.view-tab[data-view="migratorias"]')?.hidden) view = 'catalog';
   state.view = view;
   document.querySelectorAll('.view-tab').forEach(btn => {
     const active = btn.dataset.view === view;
     btn.classList.toggle('active', active);
     btn.setAttribute('aria-pressed', active ? 'true' : 'false');
   });
+  // El diccionario ya no tiene pestaña, pero sigue siendo una vista: su icono de la cabecera hace
+  // de «estás aquí». Sin esto la vista se abría y nada en la barra decía de dónde había salido.
+  const diccBtn = document.querySelector('#diccionarioBtn');
+  if (diccBtn) {
+    diccBtn.classList.toggle('is-active', view === 'diccionario');
+    diccBtn.setAttribute('aria-pressed', view === 'diccionario' ? 'true' : 'false');
+  }
   // En un espacio de ficha base, el hueco del catálogo lo ocupa el aviso (nunca los dos a la vez).
   catalogControls.hidden = basic || view !== 'catalog';
   catalogPanel.hidden = basic || view !== 'catalog';
@@ -725,6 +764,10 @@ function vaAlDiccionario(termino) {
 
 const diccionarioLink = document.querySelector('#openDiccionario');
 if (diccionarioLink) diccionarioLink.addEventListener('click', () => vaAlDiccionario());
+// El icono de la cabecera, que sustituye a la pestaña: el diccionario es NACIONAL, no del espacio,
+// así que su sitio es la fila donde ya vive el progreso estatal y no la de las vistas del parque.
+const diccionarioBtn = document.querySelector('#diccionarioBtn');
+if (diccionarioBtn) diccionarioBtn.addEventListener('click', () => vaAlDiccionario());
 
 document.body.addEventListener('click', event => {
   const salto = event.target.closest('[data-abrir-diccionario]');
@@ -967,6 +1010,9 @@ async function startParkExperience(slug, user) {
   try {
     state.data.invasoras = (await NaturDexOffline.fetchJsonCached('Data/invasoras.json')).data;
   } catch (e) { /* sin invasoras: la pestaña muestra el aviso de "sin datos" */ }
+
+  // Ya hay catálogo: se decide si este espacio enseña la pestaña de migratorias.
+  sincronizaPestanaMigratorias();
 
   if (parkTitle && state.data.park && state.data.park.name) parkTitle.textContent = state.data.park.name;
   // El mismo nombre, en la barra superior del mapa (móvil): es la primera pantalla del parque y sin

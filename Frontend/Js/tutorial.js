@@ -424,6 +424,10 @@ function closeRaw() {
 
 // --- Cableado -----------------------------------------------------------------------------------
 export function initTutorial() {
+  // `#tutorialBtn` (cabecera del parque) YA NO EXISTE: su hueco lo ocupa el icono del diccionario,
+  // y desde dentro de un parque el tutorial se relanza en Perfil y ajustes → Ayuda («Ver el tutorial
+  // otra vez»), a un botón de distancia. La consulta se queda, guardada, para que volver a ponerlo
+  // en la cabecera sea añadir el elemento y nada más.
   const btnPark = document.querySelector('#tutorialBtn');
   const btnSelect = document.querySelector('#tutorialBtnSelect');
   if (btnPark) btnPark.addEventListener('click', () => startTutorial('park'));

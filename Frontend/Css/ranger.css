@@ -149,6 +149,8 @@ h1,h2{text-wrap:pretty}
 .icon-btn{width:var(--tap-min);height:var(--tap-min);border-color:var(--line-strong);
   background:var(--panel);color:var(--ink-soft)}
 .icon-btn:hover{color:#FBF7EE;background:var(--bark);border-color:var(--bark)}
+.icon-btn.is-active{color:var(--leaf);background:transparent;border-color:var(--brass);
+    box-shadow:inset 0 0 0 2px var(--brass)}
 .icon-btn.primary{border-color:var(--leaf);color:var(--leaf)}
 .icon-btn.primary:hover{background:var(--leaf-fill);border-color:var(--leaf-fill);color:#FBF7EE}
 
@@ -574,6 +576,8 @@ select{font-family:var(--font-ui);font-size:var(--fs-md)}
 :root[data-theme="dark"] .badge.review{background:transparent;color:var(--warn-ink)}
 
 /* Pestañas: subrayado de latón, no relleno */
+:root[data-theme="dark"] .icon-btn.is-active{color:var(--leaf);background:transparent;
+  border-color:var(--brass);box-shadow:inset 0 0 0 2px var(--brass)}
 :root[data-theme="dark"] .view-tab{background:transparent;color:var(--muted)}
 :root[data-theme="dark"] .view-tab.active{background:transparent;color:var(--leaf);
   border-color:transparent;border-bottom-color:var(--brass)}
