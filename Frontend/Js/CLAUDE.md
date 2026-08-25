@@ -21,12 +21,12 @@ usuario**: eso es de `app.js`.
 
 | Trozo | Líneas | Qué pinta |
 |---|---|---|
-| `render/catalogo.js` | 108 | Catálogo en tres niveles: grupos de hábitats → hábitats → especies |
+| `render/catalogo.js` | 145 | Catálogo en tres niveles: grupos de hábitats → hábitats → especies. El nivel de entrada lleva además la tarjeta **«Sin hábitat asignado»**, que es el tercer destino del nivel de especies junto a «un hábitat» y «todas»: las fichas que no cuelgan de ningún polígono. Existe porque son MAYORÍA en varios espacios —181 de 209 en Cañaverosa— y solo se llegaba a ellas por «Ver todas las especies», mezcladas y sin que nada dijera cuántas eran. Dice de qué están hechas, y son dos cosas distintas: las AVES no se adscriben a ningún polígono a propósito (regla nº 8 del `CLAUDE.md` raíz) y el resto es un hueco de evidencia |
 | `render/resumen.js` | 109 | Cabecera del parque, ficha base (`status: basic`) y barra de progreso |
 | `render/detalle.js` | 220 | Ficha de especie, de hábitat y de punto de interés. La de especie abre con el **cartel de advertencia** (`rareza.js`) cuando el taxón está amenazado o no tiene tramo calculado |
 | `render/migratorias.js` | 55 | Pestaña de **aves migratorias**: las que el formulario del sitio Red Natura 2000 declara sin población permanente (`migratory`). La ficha que abren es la de especie de siempre — son catálogo del parque, no una colección aparte como las invasoras. La pestaña **se oculta sola** donde el espacio no tiene ninguna (`app.js · sincronizaPestanaMigratorias`) |
 | `render/invasoras.js` | 55 | Pestaña de invasoras y su ficha |
-| `render/progreso.js` | 286 | Progreso del parque, **medallero** de cuenta (rareza a la vista y techo del catálogo) e historial de salidas verificadas |
+| `render/progreso.js` | 300 | Progreso del parque, **medallero** de cuenta (rareza a la vista y techo del catálogo) e historial de salidas verificadas. Bajo las filas de hábitat va la línea que **reconcilia las dos barras**: «Especies» cuenta todo el catálogo y las filas de hábitat solo lo que cuelga de un polígono (28 de 209 en Cañaverosa), y sin decirlo eso se lee como que la app ha perdido la cuenta |
 | `render/fallbacks.js` | 64 | Sustitutos de imagen rota (`window.__*Fallback`, los invoca el `onerror` del HTML generado). Sin exports |
 
 ### `map/` — todo lo que toca Leaflet
@@ -90,7 +90,7 @@ secciones cumple la misma función: abre solo el rango que necesites.
 
 | Módulo | Líneas | Qué resuelve |
 |---|---|---|
-| `state.js` | 235 | Única fuente de verdad del estado + selectores derivados y constantes. **`catalogSpecies()` resta las migratorias** —tienen pestaña propia y saldrían dos veces— sin tocar `speciesTotal`: siguen contando para el progreso y los logros. **Los selectores del catálogo devuelven la lista ya ordenada alfabéticamente**: el dato llega en un orden desde el `park.json` (por `id`) y en otro desde la API (`is_featured DESC, common_name ASC`), y ordenar aquí es lo que hace que el mismo parque se vea igual con y sin cobertura |
+| `state.js` | 255 | Única fuente de verdad del estado + selectores derivados y constantes. **`speciesSinHabitat()`** es lo que alimenta la tarjeta «Sin hábitat asignado» del catálogo, y `state.sinHabitatFocus` el nivel al que lleva. **`catalogSpecies()` resta las migratorias** —tienen pestaña propia y saldrían dos veces— sin tocar `speciesTotal`: siguen contando para el progreso y los logros. **Los selectores del catálogo devuelven la lista ya ordenada alfabéticamente**: el dato llega en un orden desde el `park.json` (por `id`) y en otro desde la API (`is_featured DESC, common_name ASC`), y ordenar aquí es lo que hace que el mismo parque se vea igual con y sin cobertura |
 | `dom.js` | 75 | Referencias centralizadas a los nodos del DOM del parque |
 | `data.js` | 297 | Registro, manifiesto, datos y geo + progreso local-first. **Todo lo que habla con red o caché pasa por aquí.** La API tiene prioridad sobre el `park.json` |
 | `api.js` | 82 | **Único** punto de contacto con `Backend/Api/`: corte por tiempo, errores, `apiSignal()` |

@@ -8,7 +8,7 @@
 -- Hace falta porque Frontend/Js/data.js da PRIORIDAD a la API sobre el park.json empaquetado:
 -- con backend desplegado, un espacio que no esté en la base de datos no existe para el usuario.
 --
--- Contenido: 1 espacio · 2 hábitats · 68 especies · 23 vínculos especie↔hábitat.
+-- Contenido: 1 espacio · 2 hábitats · 68 especies · 24 vínculos especie↔hábitat.
 -- Los puntos de interés van aparte, en `n3-pois-<slug>.sql` (build-poi-sql.js).
 --
 -- ORDEN: la fila de `parks` va PRIMERO y no es opcional. Sin ella los INSERT ... SELECT de
@@ -230,7 +230,7 @@ ON DUPLICATE KEY UPDATE
     site_presence = VALUES(site_presence);
 
 -- ------------------------------------------------------------------------------------------------
--- 4. Vínculos especie↔hábitat (23). `evidence` = lo que declara el `source` de cada ficha; ver cabecera.
+-- 4. Vínculos especie↔hábitat (24). `evidence` = lo que declara el `source` de cada ficha; ver cabecera.
 -- ------------------------------------------------------------------------------------------------
 INSERT INTO species_habitats (species_id, habitat_id, evidence)
 SELECT sp.id, hb.id, v.evidence
@@ -248,7 +248,7 @@ JOIN (
     UNION ALL
     SELECT 'Quercus coccifera', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
-    SELECT 'Pinus halepensis', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Pinus halepensis', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Pistacia lentiscus', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
@@ -260,7 +260,7 @@ JOIN (
     UNION ALL
     SELECT 'Quercus rotundifolia', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
-    SELECT 'Rhamnus oleoides', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Rhamnus oleoides', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Sarcocapnos enneaphylla', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
@@ -279,6 +279,8 @@ JOIN (
     SELECT 'Sedum dasyphyllum', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
     SELECT 'Teucrium franchetianum', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
+    UNION ALL
+    SELECT 'Teucrium franchetianum', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Thymelaea tartonraira', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
 ) v

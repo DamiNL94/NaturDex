@@ -358,6 +358,7 @@
         47,
         48,
         49,
+        50,
         51,
         52,
         53,
@@ -617,6 +618,7 @@
         16,
         18,
         21,
+        32,
         33,
         35,
         37,
@@ -857,7 +859,9 @@
       "audio": null,
       "audioTranscript": null,
       "reviewNote": "Sin especies en el catálogo. El barrido de GBIF ∩ polígonos da 46 ocurrencias y 29 especies dentro de sus 6,6 ha, pero **26 de las 29 son aves**, que en este catálogo van al apartado de la ZEPA y no cuelgan de ningún hábitat; las otras tres son plantas con UNA ocurrencia cada una (*Helianthemum cinereum*, *Viburnum tinus* y *Pistacia terebinthus*), y las dos últimas sí están fichadas en el espacio. No se enlazan aquí porque la Capa 3 de Sierra Espuña se montó antes de `build-species-n2.js` y sus `habitatIds` NO salen de este barrido: mezclarlos dejaría el espacio con dos métodos distintos y sin decirlo. Se cierra rehaciendo su Capa 3 con el pipeline actual.",
-      "speciesIds": []
+      "speciesIds": [
+        129
+      ]
     },
     {
       "id": "prados-calcareos-carsticos-6110",
@@ -961,7 +965,9 @@
         79,
         83,
         94,
+        97,
         117,
+        123,
         124
       ],
       "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
@@ -1009,7 +1015,8 @@
         79,
         83,
         94,
-        109
+        109,
+        115
       ],
       "imageAttribution": null
     },
@@ -1036,8 +1043,10 @@
       "audioTranscript": null,
       "reviewNote": null,
       "speciesIds": [
+        5,
         7,
-        73
+        73,
+        88
       ],
       "imageAttribution": "Fritz Geller-Grimm (CC BY-SA 2.5) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Arce (Acer monspessulanum), la especie que da nombre al hábitat."
@@ -1541,7 +1550,7 @@
       "coordinates": null,
       "rarityScore": 2,
       "featured": false,
-      "source": "IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
+      "source": "IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25; Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -1565,7 +1574,8 @@
         "matorrales-termomediterraneos-y-5330",
         "bosques-endemicos-de-9560",
         "pendientes-rocosas-calcicolas-8210",
-        "prados-calcareos-carsticos-6110"
+        "prados-calcareos-carsticos-6110",
+        "robledales-ibericos-de-9240"
       ],
       "gbifOccurrences": 142,
       "visible": true,
@@ -3107,7 +3117,7 @@
       "coordinates": null,
       "rarityScore": 1,
       "featured": false,
-      "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 4090, 5210, 5330; GBIF (90 ocurrencias en 7 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
+      "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 4090, 5210, 5330; Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; GBIF (90 ocurrencias en 7 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -3128,7 +3138,8 @@
         "matorrales-mediterraneos-y-4090",
         "encinares-de-quercus-9340",
         "matorrales-termomediterraneos-y-5330",
-        "matorrales-arborescentes-de-5210"
+        "matorrales-arborescentes-de-5210",
+        "bosques-endemicos-de-9560"
       ],
       "imageAttribution": "Victor M. Vicente Selvas (Public domain) · Wikimedia Commons",
       "gbifOccurrences": 43,
@@ -4160,7 +4171,7 @@
       "coordinates": null,
       "rarityScore": 1,
       "featured": false,
-      "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 6110; GBIF (9 ocurrencias en 7 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
+      "source": "Atlas y Manual de los Hábitats de España (MITECO), especies características del/de los HIC 6110; Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; GBIF (9 ocurrencias en 7 hábitats del parque, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -4179,7 +4190,8 @@
       "habitatIds": [
         "matorrales-mediterraneos-y-4090",
         "bosques-endemicos-de-9560",
-        "prados-calcareos-carsticos-6110"
+        "prados-calcareos-carsticos-6110",
+        "zonas-subestepicas-de-6220"
       ],
       "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 3,
@@ -6351,7 +6363,7 @@
       "coordinates": null,
       "rarityScore": 1,
       "featured": false,
-      "source": "GBIF (39 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
+      "source": "GBIF (39 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -6372,7 +6384,8 @@
         "zonas-subestepicas-de-6220",
         "encinares-de-quercus-9340",
         "matorrales-arborescentes-de-5210",
-        "matorrales-termomediterraneos-y-5330"
+        "matorrales-termomediterraneos-y-5330",
+        "robledales-ibericos-de-9240"
       ],
       "imageAttribution": "Carlosblh (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 10,
@@ -6825,7 +6838,7 @@
       "coordinates": null,
       "rarityScore": 1,
       "featured": false,
-      "source": "GBIF (35 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
+      "source": "GBIF (35 ocurrencias en 8 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -6847,7 +6860,8 @@
         "matorrales-arborescentes-de-5210",
         "matorrales-mediterraneos-y-4090",
         "zonas-subestepicas-de-6220",
-        "encinares-de-quercus-9340"
+        "encinares-de-quercus-9340",
+        "pendientes-rocosas-calcicolas-8210"
       ],
       "imageAttribution": "Finlay F. K. Thorpe (CC BY-NC 4.0) · GBIF/iNaturalist",
       "gbifOccurrences": 13,
@@ -7875,7 +7889,7 @@
       "coordinates": null,
       "rarityScore": 1,
       "featured": false,
-      "source": "GBIF (20 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
+      "source": "GBIF (20 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -7895,7 +7909,8 @@
         "matorrales-mediterraneos-y-4090",
         "zonas-subestepicas-de-6220",
         "encinares-de-quercus-9340",
-        "matorrales-arborescentes-de-5210"
+        "matorrales-arborescentes-de-5210",
+        "prados-alpinos-y-6170"
       ],
       "imageAttribution": "Javier martin (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 0,
@@ -8338,7 +8353,7 @@
       "coordinates": null,
       "rarityScore": 1,
       "featured": false,
-      "source": "GBIF (16 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
+      "source": "GBIF (16 ocurrencias en 5 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -8358,7 +8373,8 @@
         "zonas-subestepicas-de-6220",
         "matorrales-mediterraneos-y-4090",
         "encinares-de-quercus-9340",
-        "matorrales-termomediterraneos-y-5330"
+        "matorrales-termomediterraneos-y-5330",
+        "pendientes-rocosas-calcicolas-8210"
       ],
       "imageAttribution": "User:Tigerente (CC BY 2.5) · Wikimedia Commons",
       "gbifOccurrences": 6,
@@ -8682,7 +8698,7 @@
       "coordinates": null,
       "rarityScore": 1,
       "featured": false,
-      "source": "GBIF (15 ocurrencias en 6 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
+      "source": "GBIF (15 ocurrencias en 6 hábitats del parque, point-in-polygon local, https://api.gbif.org), consultado 2026-07-28; Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para taxonomía y estado de conservación, consultado 2026-07-28.",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -8702,7 +8718,8 @@
         "zonas-subestepicas-de-6220",
         "matorrales-mediterraneos-y-4090",
         "encinares-de-quercus-9340",
-        "matorrales-arborescentes-de-5210"
+        "matorrales-arborescentes-de-5210",
+        "prados-humedos-mediterraneos-6420"
       ],
       "imageAttribution": "Consultaplantas (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 14,
@@ -11781,6 +11798,21 @@
       "eidosTaxonId": 80923,
       "gbifSpeciesKey": 9868071,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifOccurrences": 8,
@@ -12615,6 +12647,21 @@
       "eidosTaxonId": 80920,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000173",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000173",
+            "name": "Sierra Espuña",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000173 (Sierra Espuña), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Antonios Tsaknakis (CC BY-SA 4.0) · Wikimedia Commons",
       "gbifBboxSightings": 0,

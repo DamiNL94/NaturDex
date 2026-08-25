@@ -21,26 +21,100 @@
  * -----------------------------------------------------------
  * El formulario cita con la nomenclatura de su época (*Sylvia undata*) y el catálogo con la de hoy
  * (*Curruca undata*). Cruzar a pelo no falla: deja el ave sin clasificar y sin decirlo. El puente es
- * el de `Tools/lib/respaldo-sitio.js` —binomio, más la tabla de equivalencias verificadas a mano—,
- * y lo que ninguna capa cierra **sale listado**, nunca adivinado. Lo que no se puede hacer aquí es
- * la capa de EIDOS (resolver el nombre de la fuente contra la autoridad), que es asíncrona y con
- * red: si quedan huecos, se cierran dando de alta la equivalencia o relanzando el pipeline.
+ * el de `Tools/lib/respaldo-sitio.js` —binomio, nombre aceptado en EIDOS, y la tabla de
+ * equivalencias verificadas a mano—, y lo que ninguna capa cierra **sale listado**, nunca adivinado.
+ *
+ * LA CAPA DE EIDOS, QUE FALTABA (`--online`, 2026-08-25)
+ * -----------------------------------------------------
+ * Hasta hoy esta herramienta se saltaba la capa 2 del puente —resolver contra EIDOS el nombre DE LA
+ * FUENTE— porque es asíncrona y con red, y se dejaba escrito que quien tuviera huecos los cerrara
+ * «dando de alta la equivalencia». Eso era una trampa: el propio
+ * `data/equivalencias-nomenclatura.json` dice, con nombres y apellidos, que **no** se den de alta
+ * equivalencias que EIDOS ya sabe —cita *Larus ridibundus* → *Chroicocephalus ridibundus*,
+ * *Catharacta skua* → *Stercorarius skua*, *Sylvia cantillans* → *Curruca cantillans* y
+ * *Phalacrocorax aristotelis* → *Gulosus aristotelis*— porque serían una segunda verdad que puede
+ * divergir de la primera. Así que la única salida honrada estaba cerrada por los dos lados y la
+ * deuda nº 35 no se podía pagar: eran **53 entradas en 12 espacios**, y cada una es un ave que su
+ * formulario declara migratoria y que se quedaba fuera de la pestaña «Migratorias».
+ *
+ * Con `--online` la capa 2 se hace aquí, igual que la hace el pipeline, y con caché en
+ * `out/fenologia-eidos-fuente-cache.json` para no repetir peticiones entre pases. Sin la bandera el
+ * comportamiento es el de antes: dos capas y los huecos listados.
  *
  * Idempotente: un segundo pase no cambia un byte. Sin `--write` no toca nada y solo informa.
  *
  * Uso:
- *     node Tools/catalogo-nacional/aplica-fenologia-aves.js [--park <slug>] [--write]
+ *     node Tools/catalogo-nacional/aplica-fenologia-aves.js [--park <slug>] [--write] [--online]
  */
 
 const fs = require('fs');
 const path = require('path');
-const { arg, flag } = require('../lib/cli');
+const { arg, flag, sleep } = require('../lib/cli');
 const { OUT_DIR, readJson, readJsonIf, writeJson, rel, parkFiles } = require('../lib/io');
 const { clasificaPresenciaSitio } = require('../lib/fenologia');
+const { resolveTaxon } = require('../lib/eidos');
 const { cargaEquivalencias, indexa, busca, probablesCambiosDeGenero } = require('../lib/respaldo-sitio');
 
 const PARK = arg('park', null);
 const WRITE = flag('write');
+const ONLINE = flag('online');
+
+// La caché de la capa 2, compartida por todos los espacios: el nombre de la fuente no depende de en
+// cuál salga, y los formularios repiten las mismas aves de sitio en sitio (*Larus ridibundus* está
+// en siete). Sin ella, cada pase gastaría las mismas peticiones otra vez.
+const CACHE_FILE = path.join(OUT_DIR, 'fenologia-eidos-fuente-cache.json');
+
+/**
+ * El nombre de la fuente reducido a «Género epíteto» para poder consultarlo.
+ *
+ * NO sirve el `binomio()` de `lib/atlas.js`, que es la clave de COTEJO —minúsculas y con la
+ * terminación de género recortada («larus ridibund»)— y no un nombre: EIDOS consulta por prefijo y
+ * con esa clave devuelve cero siempre. Aquí solo se quitan la salvedad entre paréntesis y el tercer
+ * epíteto, que es lo que el formulario añade y la lista patrón no lleva.
+ */
+function nombreConsultable(nombre) {
+  const limpio = String(nombre || '').replace(/[([].*$/, ' ').replace(/\s+/g, ' ').trim();
+  const p = limpio.split(' ');
+  if (p.length < 2) return null;
+  const dos = `${p[0]} ${p[1]}`;
+  return dos === String(nombre || '').trim() ? null : dos;
+}
+
+/**
+ * Resuelve contra EIDOS los nombres de la FUENTE que se piden, y devuelve el Map que espera
+ * `indexa()`. Un nombre que EIDOS no resuelve se cachea igual, como `null`: «no lo resuelve» es un
+ * resultado, y volver a preguntarlo en cada pase no lo cambia.
+ */
+async function resuelveNombresDeLaFuente(nombres) {
+  const cache = readJsonIf(CACHE_FILE, {}) || {};
+  const resueltas = new Map();
+  let pedidas = 0;
+  for (const n of nombres) {
+    if (!(n in cache)) {
+      // EIDOS se consulta por prefijo del nombre, así que el verbatim del formulario no vale tal
+      // cual: «Sylvia cantillans ([excluding subalpina])» y «Phalacrocorax aristotelis aristotelis»
+      // no empiezan por ningún nombre de su lista patrón y devuelven cero. Se prueba primero el
+      // verbatim —por si la subespecie SÍ está en EIDOS, que es información más fina— y se cae al
+      // «Género epíteto».
+      const intentos = [n];
+      const dos = nombreConsultable(n);
+      if (dos) intentos.push(dos);
+      cache[n] = null;
+      for (const q of intentos) {
+        try {
+          const r = await resolveTaxon(q);
+          if (r && r.acceptedName) { cache[n] = { acceptedName: r.acceptedName, taxonid: r.taxonid }; }
+        } catch (e) { /* se prueba el siguiente intento */ }
+        pedidas++;
+        await sleep(150);
+        if (cache[n]) break;
+      }
+    }
+    if (cache[n]) resueltas.set(n, cache[n]);
+  }
+  if (pedidas) { fs.mkdirSync(OUT_DIR, { recursive: true }); writeJson(CACHE_FILE, cache); }
+  return { resueltas, pedidas };
+}
 
 // Dónde entran los dos campos nuevos dentro de la ficha. El orden de claves del park.json lo fija
 // `ORDEN` en build-species-n2.js: escribirlos al final produciría un diff completo la próxima vez
@@ -69,7 +143,7 @@ function conFenologia(especie, valores) {
   return salida;
 }
 
-function main() {
+async function main() {
   const espacios = parkFiles().filter(p => !PARK || p.slug === PARK);
   if (!espacios.length) {
     console.error(PARK ? `No existe Frontend/Data/parks/**/${PARK}/park.json` : 'No hay espacios.');
@@ -78,6 +152,27 @@ function main() {
   const equivalencias = cargaEquivalencias();
   let totalMigratorias = 0, totalResidentes = 0, totalSinSenal = 0, totalCambios = 0;
   const huecos = [];
+
+  // Capa 2 del puente: se resuelven de una vez TODOS los nombres de ave que declaran los formularios
+  // de todos los espacios que se van a tocar. De una vez y no espacio a espacio porque las listas se
+  // solapan mucho y la caché es común.
+  let resueltas = new Map();
+  if (ONLINE) {
+    const nombres = new Set();
+    for (const espacio of espacios) {
+      const v = readJsonIf(path.join(OUT_DIR, `${espacio.slug}-rn2000-sitio.json`), null);
+      for (const e of (v && v.especies) || []) {
+        if (e.grupoCodigo === 'B' || e.grupo === 'Aves') if (e.scientificName) nombres.add(e.scientificName);
+      }
+    }
+    const r = await resuelveNombresDeLaFuente([...nombres].sort());
+    resueltas = r.resueltas;
+    console.log(`EIDOS: ${resueltas.size} de ${nombres.size} nombres del formulario resueltos ` +
+      `(${r.pedidas} petición(es) nueva(s); el resto, de ${rel(CACHE_FILE)}).`);
+  } else {
+    console.log('Sin --online: el puente se queda en el binomio y la tabla de equivalencias.\n' +
+      'La capa de EIDOS —la que cierra Larus ridibundus → Chroicocephalus ridibundus— necesita red.');
+  }
 
   for (const espacio of espacios) {
     const doc = readJson(espacio.file);
@@ -97,7 +192,7 @@ function main() {
 
     // Las entradas del formulario, indexadas por todas las claves con las que puede citarlas.
     const entradasFnd = (volcado.especies || []).filter(e => e.grupoCodigo === 'B' || e.grupo === 'Aves');
-    const { mapa } = indexa(entradasFnd, { nombreDe: e => e.scientificName, equivalencias: equivalencias.mapa });
+    const { mapa } = indexa(entradasFnd, { nombreDe: e => e.scientificName, resueltas, equivalencias: equivalencias.mapa });
 
     // El nombre aceptado que la selección ya resolvió contra EIDOS, para buscar por él también.
     const aceptado = new Map();
@@ -146,8 +241,22 @@ function main() {
     console.log(`\n${espacio.slug}: ${migratorias} migratorias · ${residentes} residentes declaradas · ` +
       `${sinSenal} aves sin señal del formulario`);
     if (nombresUnicos.length) console.log(`  ⚠ ${nombresUnicos.length} entradas del formulario sin casar con el catálogo`);
-    if (cambia && WRITE) { writeJson(espacio.file, doc); console.log(`  escrito ${rel(espacio.file)}`); }
-    else if (cambia) console.log(`  (cambiaría ${cambios} ficha(s); usa --write)`);
+    if (cambia && WRITE) {
+      writeJson(espacio.file, doc);
+      console.log(`  escrito ${rel(espacio.file)}`);
+      // El manifiesto decide si un dispositivo con el espacio guardado sin conexión vuelve a
+      // descargarlo: sin subir `version`, quien ya lo tenía se queda sin la pestaña «Migratorias»
+      // aunque el paquete del servidor ya la traiga. Los contadores no cambian: no entra ni sale
+      // ninguna ficha.
+      const manifestPath = path.join(espacio.dir, 'manifest.json');
+      const manifest = readJsonIf(manifestPath, null);
+      if (manifest) {
+        manifest.version = (Number(manifest.version) || 0) + 1;
+        manifest.updatedAt = new Date().toISOString().slice(0, 10);
+        writeJson(manifestPath, manifest);
+        console.log(`  escrito ${rel(manifestPath)} (version ${manifest.version})`);
+      }
+    } else if (cambia) console.log(`  (cambiaría ${cambios} ficha(s); usa --write)`);
     else console.log('  sin cambios');
 
     totalMigratorias += migratorias; totalResidentes += residentes;
@@ -173,4 +282,4 @@ function main() {
   if (!WRITE) console.log('\n(Simulación: nada escrito. Añade --write.)');
 }
 
-main();
+main().catch(e => { console.error(e && e.stack || e); process.exit(1); });

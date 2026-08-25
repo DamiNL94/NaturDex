@@ -185,6 +185,7 @@
         152,
         153,
         154,
+        155,
         156,
         157,
         158,
@@ -617,6 +618,7 @@
         133,
         161,
         248,
+        250,
         253
       ]
     },
@@ -660,6 +662,7 @@
         16,
         27,
         28,
+        35,
         38,
         48,
         50,
@@ -672,6 +675,8 @@
         93,
         133,
         148,
+        149,
+        153,
         161,
         248,
         253,
@@ -828,6 +833,8 @@
         6,
         9,
         10,
+        57,
+        67,
         75,
         126,
         143,
@@ -932,10 +939,15 @@
         35,
         42,
         50,
+        63,
+        65,
         76,
+        79,
         93,
+        116,
         120,
         140,
+        142,
         155,
         248
       ]
@@ -2781,7 +2793,8 @@
       "habitatIds": [
         "matorrales-arborescentes-de-5210",
         "matorrales-termomediterraneos-y-5330",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "prados-calcareos-carsticos-6110"
       ],
       "gbifOccurrences": 8,
       "visible": true
@@ -3558,7 +3571,8 @@
         "matorrales-termomediterraneos-y-5330",
         "encinares-de-quercus-9340",
         "bosques-endemicos-de-9560",
-        "matorrales-mediterraneos-y-4090"
+        "matorrales-mediterraneos-y-4090",
+        "pendientes-rocosas-calcicolas-8210"
       ],
       "gbifOccurrences": 5,
       "visible": true
@@ -4818,7 +4832,8 @@
         "matorrales-termomediterraneos-y-5330",
         "pendientes-rocosas-calcicolas-8210",
         "zonas-subestepicas-de-6220",
-        "prados-calcareos-carsticos-6110"
+        "prados-calcareos-carsticos-6110",
+        "vegetacion-gipsicola-iberica-1520"
       ],
       "gbifOccurrences": 3,
       "visible": false,
@@ -4978,7 +4993,8 @@
         "matorrales-arborescentes-de-5210",
         "matorrales-termomediterraneos-y-5330",
         "zonas-subestepicas-de-6220",
-        "bosques-endemicos-de-9560"
+        "bosques-endemicos-de-9560",
+        "matorrales-mediterraneos-y-4090"
       ],
       "gbifOccurrences": 3,
       "visible": false,
@@ -5360,7 +5376,8 @@
         "matorrales-arborescentes-de-5210",
         "matorrales-termomediterraneos-y-5330",
         "zonas-subestepicas-de-6220",
-        "bosques-endemicos-de-9560"
+        "bosques-endemicos-de-9560",
+        "vegetacion-gipsicola-iberica-1520"
       ],
       "gbifOccurrences": 3,
       "visible": true
@@ -5894,7 +5911,7 @@
         "origen": "spainStatus del park.json"
       },
       "featured": false,
-      "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -5914,7 +5931,8 @@
         "bosques-endemicos-de-9560",
         "matorrales-arborescentes-de-5210",
         "matorrales-termomediterraneos-y-5330",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "matorrales-mediterraneos-y-4090"
       ],
       "gbifOccurrences": 3,
       "visible": true
@@ -6131,7 +6149,8 @@
         "matorrales-arborescentes-de-5210",
         "matorrales-termomediterraneos-y-5330",
         "zonas-subestepicas-de-6220",
-        "pendientes-rocosas-calcicolas-8210"
+        "pendientes-rocosas-calcicolas-8210",
+        "matorrales-mediterraneos-y-4090"
       ],
       "gbifOccurrences": 2,
       "visible": false,
@@ -7328,7 +7347,8 @@
         "matorrales-arborescentes-de-5210",
         "matorrales-termomediterraneos-y-5330",
         "zonas-subestepicas-de-6220",
-        "bosques-endemicos-de-9560"
+        "bosques-endemicos-de-9560",
+        "matorrales-mediterraneos-y-4090"
       ],
       "gbifOccurrences": 2,
       "visible": true
@@ -9112,7 +9132,8 @@
       "habitatIds": [
         "matorrales-arborescentes-de-5210",
         "matorrales-termomediterraneos-y-5330",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "matorrales-mediterraneos-y-4090"
       ],
       "gbifOccurrences": 2,
       "visible": false,
@@ -9222,7 +9243,8 @@
         "bosques-endemicos-de-9560",
         "matorrales-arborescentes-de-5210",
         "matorrales-termomediterraneos-y-5330",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "pendientes-rocosas-calcicolas-8210"
       ],
       "gbifOccurrences": 1,
       "visible": false,
@@ -9385,7 +9407,8 @@
       "habitatIds": [
         "encinares-de-quercus-9340",
         "matorrales-mediterraneos-y-4090",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "matorrales-arborescentes-de-5210"
       ],
       "gbifOccurrences": 1,
       "visible": false,
@@ -9755,7 +9778,8 @@
         "bosques-endemicos-de-9560",
         "matorrales-arborescentes-de-5210",
         "matorrales-termomediterraneos-y-5330",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "pendientes-rocosas-calcicolas-8210"
       ],
       "gbifOccurrences": 1,
       "visible": true

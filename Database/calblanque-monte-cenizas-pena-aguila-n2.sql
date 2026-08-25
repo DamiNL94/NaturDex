@@ -8,7 +8,7 @@
 -- Hace falta porque Frontend/Js/data.js da PRIORIDAD a la API sobre el park.json empaquetado:
 -- con backend desplegado, un espacio que no esté en la base de datos no existe para el usuario.
 --
--- Contenido: 1 espacio · 18 hábitats · 205 especies · 454 vínculos especie↔hábitat.
+-- Contenido: 1 espacio · 18 hábitats · 204 especies · 470 vínculos especie↔hábitat.
 -- Los puntos de interés van aparte, en `n3-pois-<slug>.sql` (build-poi-sql.js).
 --
 -- ORDEN: la fila de `parks` va PRIMERO y no es opcional. Sin ella los INSERT ... SELECT de
@@ -83,7 +83,7 @@ ON DUPLICATE KEY UPDATE
     image_note = VALUES(image_note);
 
 -- ------------------------------------------------------------------------------------------------
--- 3. Especies (205). `identification_tips` va como texto separado por «; », que es como lo parte park_payload.php.
+-- 3. Especies (204). `identification_tips` va como texto separado por «; », que es como lo parte park_payload.php.
 -- ------------------------------------------------------------------------------------------------
 INSERT INTO species (park_id, common_name, scientific_name, kingdom, family, primary_habitat, conservation_status, description, description_source, identification_tips, seasonality, image_url, image_attribution, latitude, longitude, rarity_score, rarity_basis, rarity_local, rarity_local_basis, is_featured, is_visible, hidden_reason, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, spain_status, murcia_status, review_note, eidos_taxonid, gbif_species_key, zepa_site_code, is_migratory, site_presence)
 SELECT pk.id, s.common_name, s.scientific_name, s.kingdom, s.family, s.primary_habitat, s.conservation_status, s.description, s.description_source, s.identification_tips, s.seasonality, s.image_url, s.image_attribution, s.latitude, s.longitude, s.rarity_score, s.rarity_basis, s.rarity_local, s.rarity_local_basis, s.is_featured, s.is_visible, s.hidden_reason, s.source, s.taxon_phylum, s.taxon_class, s.taxon_order, s.taxon_family, s.taxon_genus, s.iucn_global, s.spain_status, s.murcia_status, s.review_note, s.eidos_taxonid, s.gbif_species_key, s.zepa_site_code, s.is_migratory, s.site_presence
@@ -488,11 +488,9 @@ FROM parks pk JOIN (
     UNION ALL
     SELECT 'Águila pescadora', 'Pandion haliaetus', 'fauna', 'Ave rapaz', NULL, 'Extinguida', 'Rapaz de mediano tamaño. Los adultos poseen partes inferiores blancas, con un moteado variable en el pecho; los individuos que tienen un collar de estrías más marcado en el pecho suelen ser hembras. Como contraste presentan partes superiores muy oscuras. El píleo es blanco, y tras el ojo aparece una lista ocular, a modo de antifaz, que recorre parte del cuello. En vuelo exhiben una silueta bastante característica, con cola corta y alas relativamente estrechas y “anguladas”. Vistos desde abajo, el cuerpo y las partes anteriores del ala, blancas, contrastan con las franjas oscuras que recorren las plumas de vuelo. La cola muestra una sucesión de barras oscuras. El joven es muy similar, pero sus partes superiores parecen como escamadas —debido al borde pálido en las plumas— y, en vuelo, las secundarias resultan algo más pálidas que en los adultos, con un barreado más patente. Cuando el águila pescadora vuela en busca de alimento, es capaz de cernirse con profundos aleteos antes de lanzarse al agua para capturar los peces con sus garras.', 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»', NULL, 'Todo el año', 'https://commons.wikimedia.org/wiki/Special:FilePath/2010-kabini-osprey.jpg?width=1280', 'Yathin S Krishnappa (CC BY-SA 3.0) · Wikimedia Commons', NULL, NULL, 4, NULL, 5, '{"categoria":"Extinguida (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)","ambito":"autonómico","origen":"murciaStatus del park.json"}', 1, 1, NULL, 'GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2: población invernante; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2: población en concentración, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal', 'Chordata', 'Aves', 'Accipitriformes', 'Pandionidae', 'Pandion', 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)', 'CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)', 'Extinguida (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)', NULL, 11421, NULL, 'ES0000260', 1, '{"tipos":["invernante","en concentración"],"etiqueta":"Invernante: pasa aquí el invierno · En paso migratorio","sitios":[{"code":"ES0000260","name":"Mar Menor","seccion":"3.2"}],"fuente":"Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"}'
     UNION ALL
-    SELECT 'Phalacrocorax carbo carbo', 'Phalacrocorax carbo carbo', 'fauna', 'Ave acuática', NULL, 'No catalogada', NULL, NULL, NULL, NULL, 'https://commons.wikimedia.org/wiki/Special:FilePath/2021-05-05_Phalacrocorax_carbo_carbo%2C_Killingworth_Lake%2C_Northumberland_1-1.jpg?width=1280', 'MPF (CC BY-SA 4.0) · Wikimedia Commons', NULL, NULL, 1, NULL, 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 0, 'Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla.', 'GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2: población invernante; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas', 'Chordata', 'Aves', 'Suliformes', 'Phalacrocoracidae', 'Phalacrocorax', 'No evaluada en la Lista Roja mundial de la UICN', 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)', 'No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)', NULL, 32209, NULL, 'ES0000260', 1, '{"tipos":["invernante"],"etiqueta":"Invernante: pasa aquí el invierno","sitios":[{"code":"ES0000260","name":"Mar Menor","seccion":"3.2"}],"fuente":"Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"}'
-    UNION ALL
     SELECT 'Somormujo lavanco', 'Podiceps cristatus', 'fauna', 'Ave acuática', NULL, 'Protegida (LESRPE)', 'El mayor de los somormujos y zampullines que pueden verse en España, con el tamaño de un ánade grande. Se trata de un ave elegante, de cuello estilizado, pico largo y apuntado, y cuerpo alargado. En verano luce un plumaje vistoso, con la parte superior de la cabeza negra, en la que destacan dos grupos de plumas a modo de penachos. De las mejillas salen plumas llamativas, alargadas, de tonos rojizos y negros. La zona que rodea los ojos es blanca, al igual que el cuello, el pecho y el vientre, lo que contrasta con el dorso oscuro y los flancos rojizos. En plumaje invernal llama mucho menos la atención, con un tono general oscuro en el dorso y los laterales, aunque presenta el cuello, la cabeza (excepto el píleo oscuro) y las partes inferiores de color blanco. Con cualquier plumaje, el largo cuello constituye un buen rasgo diagnóstico. En vuelo se observa su esbelta complexión, con su largo cuello estirado, y su batir rápido de alas hace ver las zonas alares blancas a modo de destellos. No existen diferencias entre sexos. Los juveniles resultan similares a los adultos en invierno, aunque poseen en la cara un dibujo de líneas negras que los distingue.', 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»', NULL, 'Todo el año', 'https://commons.wikimedia.org/wiki/Special:FilePath/16.9.20_Ceske_Vrbne_12_(50353635587).jpg?width=1280', 'Donald Judge (CC BY 2.0) · Wikimedia Commons', NULL, NULL, 1, NULL, 2, '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 1, NULL, 'GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2: población invernante; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal', 'Chordata', 'Aves', 'Podicipediformes', 'Podicipedidae', 'Podiceps', 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)', 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)', 'No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)', NULL, 14001, NULL, 'ES0000260', 1, '{"tipos":["invernante"],"etiqueta":"Invernante: pasa aquí el invierno","sitios":[{"code":"ES0000260","name":"Mar Menor","seccion":"3.2"}],"fuente":"Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"}'
     UNION ALL
-    SELECT 'Porphyrio porphyrio porphyrio', 'Porphyrio porphyrio porphyrio', 'fauna', 'Ave acuática', NULL, 'No catalogada', NULL, NULL, NULL, NULL, 'https://commons.wikimedia.org/wiki/Special:FilePath/Porphyrio_porphyrio_-Europe-8.jpg?width=1280', 'Martien Brand (CC BY 2.0) · Wikimedia Commons', NULL, NULL, 1, NULL, 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 0, 'Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla.', 'GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2: población reproductora; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas', 'Chordata', 'Aves', 'Gruiformes', 'Rallidae', 'Porphyrio', 'No evaluada en la Lista Roja mundial de la UICN', 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)', 'No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)', NULL, 29856, NULL, 'ES0000260', 1, '{"tipos":["reproductora"],"etiqueta":"Reproductora: cría aquí","sitios":[{"code":"ES0000260","name":"Mar Menor","seccion":"3.2"}],"fuente":"Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"}'
+    SELECT 'Calamón', 'Porphyrio porphyrio', 'fauna', 'Ave acuática', NULL, 'No catalogada', 'El más grande de los rálidos europeos es un ave de buen tamaño y aspecto absolutamente inconfundible. Los ejemplares adultos lucen un plumaje de tonos azulados y violáceos con reflejos purpúreos, que se torna azul metálico en la cara, la parte anterior del cuello y la zona superior del pecho; las infracoberteras caudales, de color blanco puro, contrastan vivamente con el resto de la librea del ave, y son utilizadas por el calamón para expresar sus estados de ánimo y comunicarse con otros ejemplares. Las partes desprovistas de plumas se caracterizan también por su viva coloración, especialmente durante la época de celo, ya que tanto el pico —cónico y robusto— como el escudete frontal y las patas lucen un intenso color carmesí. Estas últimas, francamente singulares, reflejan su forma de vida; son considerablemente largas y aparecen rematadas por larguísimos dedos con gran capacidad prensil, que el ave emplea para manejar tallos, moverse entre las cañas y deambular por la vegetación flotante. Los calamones jóvenes no exhiben un plumaje tan espectacular como el de los adultos, ya que en ellos predominan los tonos azulados más bien grisáceos en el dorso y los blanquecinos en el vientre, en tanto que las zonas desnudas (patas, pico y escudete), aunque rojizas, no presentan la brillante coloración de las aves maduras. Este rálido —al igual que la generalidad de los componentes de la familia— es un volador bastante torpe; no obstante, se desplaza con soltura entre las cañas y prefiere escabullirse entre ellas en caso de alarma o peligro. Las escasas ocasiones en que vuela —por lo común no más de 15 o 20 metros— se desplaza con frecuentes aleteos de sus cortas alas, mientras mantiene colgando las patas.', 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»', NULL, 'Todo el año', 'https://commons.wikimedia.org/wiki/Special:FilePath/Purpurhuhn.jpg?width=1280', 'Andreas Trepte (CC BY-SA 4.0) · Wikimedia Commons', NULL, NULL, 1, NULL, 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 1, NULL, 'GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2: población reproductora; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas', 'Chordata', 'Aves', 'Gruiformes', 'Rallidae', 'Porphyrio', 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)', 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)', 'No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)', NULL, 12013, 2474416, 'ES0000260', 1, '{"tipos":["reproductora"],"etiqueta":"Reproductora: cría aquí","sitios":[{"code":"ES0000260","name":"Mar Menor","seccion":"3.2"}],"fuente":"Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"}'
     UNION ALL
     SELECT 'Pájaro-moscón europeo', 'Remiz pendulinus', 'fauna', 'Ave', NULL, 'Protegida (LESRPE)', 'Este diminuto y discreto pajarillo se reconoce fácilmente por la llamativa máscara facial negra —algo menos patente en la hembra y grisácea en los juveniles—, que resalta vivamente sobre la coloración blanco-grisácea de la cabeza y se prolonga desde la zona baja de la frente hasta la región auricular. Las partes dorsales lucen una tonalidad castaña —más pálida en la hembra—, con rebordes negros; el vientre es oscuro con manchas pardo-rojizas difusas en el pecho.', 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»', NULL, 'Todo el año', 'https://commons.wikimedia.org/wiki/Special:FilePath/Remiz_pendulinus_(Marek_Szczepanek).jpg?width=1280', 'Marek Szczepanek (CC BY-SA 3.0) · Wikimedia Commons', NULL, NULL, 1, NULL, 2, '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 1, NULL, 'GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2: población invernante, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal', 'Chordata', 'Aves', 'Passeriformes', 'Remizidae', 'Remiz', 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)', 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)', 'No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)', NULL, 11957, NULL, 'ES0000260', 1, '{"tipos":["invernante"],"etiqueta":"Invernante: pasa aquí el invierno","sitios":[{"code":"ES0000260","name":"Mar Menor","seccion":"3.2"}],"fuente":"Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"}'
     UNION ALL
@@ -536,7 +534,7 @@ ON DUPLICATE KEY UPDATE
     site_presence = VALUES(site_presence);
 
 -- ------------------------------------------------------------------------------------------------
--- 4. Vínculos especie↔hábitat (454). `evidence` = lo que declara el `source` de cada ficha; ver cabecera.
+-- 4. Vínculos especie↔hábitat (470). `evidence` = lo que declara el `source` de cada ficha; ver cabecera.
 -- ------------------------------------------------------------------------------------------------
 INSERT INTO species_habitats (species_id, habitat_id, evidence)
 SELECT sp.id, hb.id, v.evidence
@@ -614,7 +612,7 @@ JOIN (
     UNION ALL
     SELECT 'Periploca angustifolia', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Periploca angustifolia', 'matorrales-arborescentes-de-5220', 'observada_gbif'
+    SELECT 'Periploca angustifolia', 'matorrales-arborescentes-de-5220', 'caracteristica'
     UNION ALL
     SELECT 'Periploca angustifolia', 'estepas-salinas-mediterraneas-1510', 'observada_gbif'
     UNION ALL
@@ -627,6 +625,8 @@ JOIN (
     SELECT 'Periploca angustifolia', 'pastizales-salinos-mediterraneos-1410', 'observada_gbif'
     UNION ALL
     SELECT 'Periploca angustifolia', 'encinares-de-quercus-9340', 'observada_gbif'
+    UNION ALL
+    SELECT 'Periploca angustifolia', 'bosques-de-tetraclinis-9570', 'caracteristica'
     UNION ALL
     SELECT 'Acanthodactylus erythrurus', 'pastizales-salinos-mediterraneos-1410', 'observada_gbif'
     UNION ALL
@@ -658,13 +658,13 @@ JOIN (
     UNION ALL
     SELECT 'Calicotome intermedia', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
-    SELECT 'Calicotome intermedia', 'matorrales-arborescentes-de-5220', 'observada_gbif'
+    SELECT 'Calicotome intermedia', 'matorrales-arborescentes-de-5220', 'caracteristica'
     UNION ALL
     SELECT 'Calicotome intermedia', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Calicotome intermedia', 'bosques-de-tetraclinis-9570', 'observada_gbif'
+    SELECT 'Calicotome intermedia', 'bosques-de-tetraclinis-9570', 'caracteristica'
     UNION ALL
-    SELECT 'Teucrium carthaginense', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Teucrium carthaginense', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Teucrium carthaginense', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
@@ -722,7 +722,7 @@ JOIN (
     UNION ALL
     SELECT 'Lycium intricatum', 'pastizales-salinos-mediterraneos-1410', 'observada_gbif'
     UNION ALL
-    SELECT 'Pinus halepensis', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Pinus halepensis', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Pinus halepensis', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
@@ -756,11 +756,13 @@ JOIN (
     UNION ALL
     SELECT 'Sedum sediforme', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Sedum sediforme', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Sedum sediforme', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Sedum sediforme', 'matorrales-arborescentes-de-5220', 'observada_gbif'
     UNION ALL
     SELECT 'Sedum sediforme', 'encinares-de-quercus-9340', 'observada_gbif'
+    UNION ALL
+    SELECT 'Sedum sediforme', 'prados-calcareos-carsticos-6110', 'caracteristica'
     UNION ALL
     SELECT 'Lapiedra martinezii', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
@@ -826,7 +828,7 @@ JOIN (
     UNION ALL
     SELECT 'Cheirolophus intybaceus', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
-    SELECT 'Helianthemum almeriense', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Helianthemum almeriense', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Helianthemum almeriense', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
@@ -854,6 +856,8 @@ JOIN (
     UNION ALL
     SELECT 'Cakile maritima', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
+    SELECT 'Cakile maritima', 'vegetacion-anual-sobre-1210', 'caracteristica'
+    UNION ALL
     SELECT 'Frankenia corymbosa', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
     SELECT 'Frankenia corymbosa', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
@@ -861,6 +865,8 @@ JOIN (
     SELECT 'Frankenia corymbosa', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
     SELECT 'Frankenia corymbosa', 'matorrales-arborescentes-de-5220', 'observada_gbif'
+    UNION ALL
+    SELECT 'Frankenia corymbosa', 'matorrales-halofilos-mediterraneos-1420', 'caracteristica'
     UNION ALL
     SELECT 'Hemorrhois hippocrepis', 'matorrales-arborescentes-de-5220', 'observada_gbif'
     UNION ALL
@@ -907,6 +913,8 @@ JOIN (
     SELECT 'Quercus coccifera', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
     SELECT 'Quercus coccifera', 'bosques-de-tetraclinis-9570', 'observada_gbif'
+    UNION ALL
+    SELECT 'Quercus coccifera', 'encinares-de-quercus-9340', 'caracteristica'
     UNION ALL
     SELECT 'Tarentola mauritanica', 'matorrales-arborescentes-de-5220', 'observada_gbif'
     UNION ALL
@@ -996,7 +1004,7 @@ JOIN (
     UNION ALL
     SELECT 'Ophrys tenthredinifera', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Ophrys tenthredinifera', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Ophrys tenthredinifera', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Rhamnus alaternus', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
@@ -1006,7 +1014,7 @@ JOIN (
     UNION ALL
     SELECT 'Rhamnus alaternus', 'matorrales-arborescentes-de-5220', 'observada_gbif'
     UNION ALL
-    SELECT 'Rhamnus oleoides', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Rhamnus oleoides', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Rhamnus oleoides', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
@@ -1033,6 +1041,8 @@ JOIN (
     SELECT 'Suaeda vera', 'pastizales-salinos-mediterraneos-1410', 'observada_gbif'
     UNION ALL
     SELECT 'Suaeda vera', 'vegetacion-anual-sobre-1210', 'observada_gbif'
+    UNION ALL
+    SELECT 'Suaeda vera', 'matorrales-halofilos-mediterraneos-1420', 'caracteristica'
     UNION ALL
     SELECT 'Thymus vulgaris', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
@@ -1064,7 +1074,7 @@ JOIN (
     UNION ALL
     SELECT 'Calicotome spinosa', 'matorrales-arborescentes-de-5220', 'observada_gbif'
     UNION ALL
-    SELECT 'Calicotome spinosa', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Calicotome spinosa', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Calicotome spinosa', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
@@ -1098,7 +1108,7 @@ JOIN (
     UNION ALL
     SELECT 'Genista cinerea', 'matorrales-halonitrofilos-pegano-1430', 'observada_gbif'
     UNION ALL
-    SELECT 'Genista cinerea', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Genista cinerea', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Genista cinerea', 'pastizales-salinos-mediterraneos-1410', 'observada_gbif'
     UNION ALL
@@ -1111,6 +1121,8 @@ JOIN (
     SELECT 'Haplophyllum linifolium', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
     SELECT 'Haplophyllum linifolium', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    UNION ALL
+    SELECT 'Haplophyllum linifolium', 'matorrales-halonitrofilos-pegano-1430', 'caracteristica'
     UNION ALL
     SELECT 'Hemidactylus turcicus', 'encinares-de-quercus-9340', 'observada_gbif'
     UNION ALL
@@ -1164,7 +1176,7 @@ JOIN (
     UNION ALL
     SELECT 'Limonium lobatum', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Limonium lobatum', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Limonium lobatum', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Lygeum spartum', 'matorrales-arborescentes-de-5220', 'observada_gbif'
     UNION ALL
@@ -1200,7 +1212,7 @@ JOIN (
     UNION ALL
     SELECT 'Sideritis pusilla', 'matorrales-arborescentes-de-5220', 'observada_gbif'
     UNION ALL
-    SELECT 'Sideritis pusilla', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Sideritis pusilla', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Sideritis pusilla', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
@@ -1218,11 +1230,13 @@ JOIN (
     UNION ALL
     SELECT 'Sonchus tenerrimus', 'pastizales-salinos-mediterraneos-1410', 'observada_gbif'
     UNION ALL
-    SELECT 'Sonchus tenerrimus', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
+    SELECT 'Sonchus tenerrimus', 'pendientes-rocosas-calcicolas-8210', 'caracteristica'
     UNION ALL
     SELECT 'Sonchus tenerrimus', 'vegetacion-anual-sobre-1210', 'observada_gbif'
     UNION ALL
     SELECT 'Sonchus tenerrimus', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    UNION ALL
+    SELECT 'Sonchus tenerrimus', 'acantilados-con-vegetacion-1240', 'caracteristica'
     UNION ALL
     SELECT 'Withania frutescens', 'matorrales-arborescentes-de-5220', 'observada_gbif'
     UNION ALL
@@ -1266,6 +1280,8 @@ JOIN (
     UNION ALL
     SELECT 'Arthrocnemum macrostachyum', 'vegetacion-anual-sobre-1210', 'observada_gbif'
     UNION ALL
+    SELECT 'Arthrocnemum macrostachyum', 'matorrales-halofilos-mediterraneos-1420', 'caracteristica'
+    UNION ALL
     SELECT 'Atriplex glauca', 'estepas-salinas-mediterraneas-1510', 'observada_gbif'
     UNION ALL
     SELECT 'Atriplex glauca', 'galerias-y-matorrales-92D0', 'observada_gbif'
@@ -1288,7 +1304,7 @@ JOIN (
     UNION ALL
     SELECT 'Calicotome infesta', 'bosques-de-tetraclinis-9570', 'observada_gbif'
     UNION ALL
-    SELECT 'Calicotome infesta', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Calicotome infesta', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Calicotome infesta', 'prados-calcareos-carsticos-6110', 'observada_gbif'
     UNION ALL
@@ -1306,7 +1322,7 @@ JOIN (
     UNION ALL
     SELECT 'Centaurea saxicola', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
-    SELECT 'Centaurea saxicola', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
+    SELECT 'Centaurea saxicola', 'pendientes-rocosas-calcicolas-8210', 'caracteristica'
     UNION ALL
     SELECT 'Centaurea saxicola', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
@@ -1318,9 +1334,9 @@ JOIN (
     UNION ALL
     SELECT 'Centaurium tenuiflorum', 'matorrales-halonitrofilos-pegano-1430', 'observada_gbif'
     UNION ALL
-    SELECT 'Centaurium tenuiflorum', 'pastizales-salinos-mediterraneos-1410', 'observada_gbif'
+    SELECT 'Centaurium tenuiflorum', 'pastizales-salinos-mediterraneos-1410', 'caracteristica'
     UNION ALL
-    SELECT 'Echium sabulicola', 'dunas-fijas-de-2210', 'observada_gbif'
+    SELECT 'Echium sabulicola', 'dunas-fijas-de-2210', 'caracteristica'
     UNION ALL
     SELECT 'Echium sabulicola', 'dunas-moviles-de-2120', 'observada_gbif'
     UNION ALL
@@ -1340,13 +1356,15 @@ JOIN (
     UNION ALL
     SELECT 'Eryngium ilicifolium', 'pastizales-salinos-mediterraneos-1410', 'observada_gbif'
     UNION ALL
+    SELECT 'Eryngium ilicifolium', 'zonas-subestepicas-de-6220', 'caracteristica'
+    UNION ALL
     SELECT 'Filago fuscescens', 'encinares-de-quercus-9340', 'observada_gbif'
     UNION ALL
     SELECT 'Filago fuscescens', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
     SELECT 'Filago fuscescens', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Filago fuscescens', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Filago fuscescens', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Helictotrichon filifolium', 'matorrales-arborescentes-de-5220', 'observada_gbif'
     UNION ALL
@@ -1390,6 +1408,8 @@ JOIN (
     UNION ALL
     SELECT 'Sarcocornia fruticosa', 'vegetacion-anual-sobre-1210', 'observada_gbif'
     UNION ALL
+    SELECT 'Sarcocornia fruticosa', 'matorrales-halofilos-mediterraneos-1420', 'caracteristica'
+    UNION ALL
     SELECT 'Scorpiurus muricatus', 'dunas-fijas-de-2210', 'observada_gbif'
     UNION ALL
     SELECT 'Scorpiurus muricatus', 'dunas-moviles-de-2120', 'observada_gbif'
@@ -1399,6 +1419,8 @@ JOIN (
     SELECT 'Scorpiurus muricatus', 'pastizales-salinos-mediterraneos-1410', 'observada_gbif'
     UNION ALL
     SELECT 'Scorpiurus muricatus', 'vegetacion-anual-sobre-1210', 'observada_gbif'
+    UNION ALL
+    SELECT 'Scorpiurus muricatus', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Sideritis hirsuta', 'matorrales-arborescentes-de-5220', 'observada_gbif'
     UNION ALL
@@ -1418,7 +1440,7 @@ JOIN (
     UNION ALL
     SELECT 'Tamarix boveana', 'estepas-salinas-mediterraneas-1510', 'observada_gbif'
     UNION ALL
-    SELECT 'Tamarix boveana', 'galerias-y-matorrales-92D0', 'observada_gbif'
+    SELECT 'Tamarix boveana', 'galerias-y-matorrales-92D0', 'caracteristica'
     UNION ALL
     SELECT 'Tamarix boveana', 'matorrales-halofilos-mediterraneos-1420', 'observada_gbif'
     UNION ALL
@@ -1444,11 +1466,19 @@ JOIN (
     UNION ALL
     SELECT 'Trifolium glomeratum', 'pastizales-salinos-mediterraneos-1410', 'observada_gbif'
     UNION ALL
+    SELECT 'Trifolium glomeratum', 'zonas-subestepicas-de-6220', 'caracteristica'
+    UNION ALL
     SELECT 'Zamenis scalaris', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
     SELECT 'Zamenis scalaris', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
     SELECT 'Zamenis scalaris', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    UNION ALL
+    SELECT 'Halocnemum strobilaceum', 'matorrales-halofilos-mediterraneos-1420', 'caracteristica'
+    UNION ALL
+    SELECT 'Maytenus senegalensis subsp. europaea', 'bosques-de-tetraclinis-9570', 'caracteristica'
+    UNION ALL
+    SELECT 'Maytenus senegalensis subsp. europaea', 'matorrales-arborescentes-de-5220', 'caracteristica'
 ) v
 JOIN species sp ON sp.park_id = pk.id AND sp.scientific_name = v.scientific_name
 JOIN habitats hb ON hb.park_id = pk.id AND hb.slug = v.habitat_slug

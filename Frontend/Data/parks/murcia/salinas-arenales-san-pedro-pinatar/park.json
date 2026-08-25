@@ -57,6 +57,7 @@
         31,
         32,
         37,
+        56,
         60,
         64
       ],
@@ -179,7 +180,9 @@
         32,
         37,
         60,
-        64
+        64,
+        100,
+        138
       ]
     },
     {
@@ -263,6 +266,7 @@
         24,
         28,
         29,
+        30,
         31,
         32,
         37,
@@ -385,7 +389,9 @@
         92,
         93,
         94,
-        95
+        95,
+        170,
+        194
       ],
       "imageAttribution": "Kenraiz, Krzysztof Ziarnek (CC BY-SA 4.0) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con juncia bastarda (Schoenus nigricans), la especie que da nombre al hábitat."
@@ -504,7 +510,9 @@
         92,
         93,
         94,
-        95
+        95,
+        149,
+        153
       ],
       "imageAttribution": "Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Sosa jabonera (Sarcocornia fruticosa), la especie que da nombre al hábitat."
@@ -600,7 +608,8 @@
         92,
         93,
         94,
-        95
+        95,
+        212
       ],
       "imageAttribution": "Xemenendura (CC BY-SA 4.0) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Sosa fina (Suaeda vera), la especie que da nombre al hábitat."
@@ -743,6 +752,7 @@
         58,
         61,
         65,
+        66,
         68,
         73,
         77,
@@ -778,7 +788,11 @@
       "audio": null,
       "audioTranscript": null,
       "reviewNote": "Este hábitat se queda con CERO especies, y el motivo no es que no haya vida en las salinas: es que su polígono aquí mide 0,005 ha. El Atlas de 2005 cartografía el 1150 en un recinto (186123) que queda casi entero FUERA del límite del parque —dentro de la laguna del Mar Menor, que es la ZEC ES6200030—, y al recortarlo contra el límite oficial sobreviven unos 50 m² de esquina. Ninguna ocurrencia de GBIF cae en esos 50 m², de ahí el cero. El hábitat NO se retira, y aquí está la diferencia con el HIC 1110 que se retiró de Cabo Cope el 2026-08-01: aquél no lo declaraba ninguna fuente oficial del espacio, y éste lo declara la Tabla 4 del §2.3.2.1 del PRUG del propio parque, que le asigna 201,64 ha de superficie de polígonos de inventariación y lo cuenta entre los tres prioritarios. Es decir: el código pertenece al espacio y lo que falla es la cartografía de la que disponemos, porque el Atlas mapea la laguna litoral natural y no los estanques de la explotación salinera, que son lo que ocupa el parque. Lo que hay que resolver en campo o con cartografía mejor es qué superficie de los estanques y encharcamientos marginales corresponde al 1150 y qué comunidades de Ruppia (Ruppion maritimae) los ocupan; el propio §2.3.1.1 del PRUG describe carrizales y praderas de Ruppia dentro de las salinas.",
-      "speciesIds": []
+      "speciesIds": [
+        54,
+        84,
+        95
+      ]
     },
     {
       "id": "acantilados-con-vegetacion-1240",
@@ -805,7 +819,8 @@
       "speciesIds": [
         26,
         34,
-        44
+        44,
+        221
       ]
     },
     {
@@ -833,7 +848,12 @@
       "speciesIds": [
         26,
         34,
-        44
+        44,
+        147,
+        157,
+        165,
+        166,
+        167
       ]
     },
     {
@@ -861,7 +881,9 @@
       "speciesIds": [
         26,
         34,
-        44
+        44,
+        226,
+        227
       ]
     },
     {
@@ -2694,7 +2716,8 @@
         "vegetacion-halonitrofila-anual-1310",
         "dunas-con-vegetacion-2260",
         "dunas-con-cespedes-2230",
-        "dunas-litorales-con-2250"
+        "dunas-litorales-con-2250",
+        "dunas-fijas-de-2210"
       ],
       "gbifOccurrences": 6,
       "visible": false,
@@ -4029,7 +4052,8 @@
       "habitatIds": [
         "matorrales-halofilos-mediterraneos-1420",
         "pastizales-salinos-mediterraneos-1410",
-        "vegetacion-halonitrofila-anual-1310"
+        "vegetacion-halonitrofila-anual-1310",
+        "lagunas-costeras-1150"
       ],
       "gbifOccurrences": 2,
       "visible": false,
@@ -4126,7 +4150,8 @@
       "habitatIds": [
         "matorrales-halofilos-mediterraneos-1420",
         "pastizales-salinos-mediterraneos-1410",
-        "vegetacion-halonitrofila-anual-1310"
+        "vegetacion-halonitrofila-anual-1310",
+        "vegetacion-anual-sobre-1210"
       ],
       "gbifOccurrences": 1,
       "visible": false,
@@ -4646,7 +4671,8 @@
       "habitatIds": [
         "matorrales-halofilos-mediterraneos-1420",
         "pastizales-salinos-mediterraneos-1410",
-        "vegetacion-halonitrofila-anual-1310"
+        "vegetacion-halonitrofila-anual-1310",
+        "dunas-con-vegetacion-2260"
       ],
       "gbifOccurrences": 1,
       "visible": true
@@ -5585,7 +5611,8 @@
       "habitatIds": [
         "matorrales-halofilos-mediterraneos-1420",
         "pastizales-salinos-mediterraneos-1410",
-        "vegetacion-halonitrofila-anual-1310"
+        "vegetacion-halonitrofila-anual-1310",
+        "lagunas-costeras-1150"
       ],
       "gbifOccurrences": 1,
       "visible": false,
@@ -6146,7 +6173,8 @@
       "habitatIds": [
         "matorrales-halofilos-mediterraneos-1420",
         "pastizales-salinos-mediterraneos-1410",
-        "vegetacion-halonitrofila-anual-1310"
+        "vegetacion-halonitrofila-anual-1310",
+        "lagunas-costeras-1150"
       ],
       "gbifOccurrences": 1,
       "visible": false,
@@ -6369,7 +6397,9 @@
       "eidosTaxonId": 126,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "dunas-moviles-de-2120"
+      ],
       "gbifOccurrences": 0,
       "visible": false,
       "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
@@ -8144,7 +8174,9 @@
       "eidosTaxonId": 4199,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "dunas-moviles-de-2120"
+      ],
       "gbifOccurrences": 0,
       "visible": false,
       "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
@@ -8569,7 +8601,9 @@
       "eidosTaxonId": 310,
       "gbifSpeciesKey": 3115813,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "estepas-salinas-mediterraneas-1510"
+      ],
       "gbifOccurrences": 0,
       "visible": true
     },
@@ -8665,7 +8699,9 @@
       "eidosTaxonId": 4615,
       "gbifSpeciesKey": 3873636,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "matorrales-halofilos-mediterraneos-1420"
+      ],
       "gbifOccurrences": 0,
       "visible": true
     },
@@ -8866,7 +8902,9 @@
       "eidosTaxonId": 5051,
       "gbifSpeciesKey": 3760350,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "matorrales-halofilos-mediterraneos-1420"
+      ],
       "gbifOccurrences": 0,
       "visible": true
     },
@@ -9052,7 +9090,9 @@
       "eidosTaxonId": 5124,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "estepas-salinas-mediterraneas-1510"
+      ],
       "gbifOccurrences": 0,
       "visible": false,
       "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
@@ -9422,7 +9462,9 @@
       "eidosTaxonId": 5817,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "estepas-salinas-mediterraneas-1510"
+      ],
       "gbifOccurrences": 0,
       "visible": false,
       "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
@@ -9467,7 +9509,9 @@
       "eidosTaxonId": 5863,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "estepas-salinas-mediterraneas-1510"
+      ],
       "gbifOccurrences": 0,
       "visible": false,
       "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
@@ -9520,7 +9564,9 @@
       "eidosTaxonId": 5764,
       "gbifSpeciesKey": 7298216,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "estepas-salinas-mediterraneas-1510"
+      ],
       "gbifOccurrences": 0,
       "visible": true
     },
@@ -9653,7 +9699,9 @@
       "eidosTaxonId": 10064,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "pastizales-salinos-mediterraneos-1410"
+      ],
       "gbifOccurrences": 0,
       "visible": false,
       "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
@@ -10785,7 +10833,9 @@
       "eidosTaxonId": 7156,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "pastizales-salinos-mediterraneos-1410"
+      ],
       "gbifOccurrences": 0,
       "visible": false,
       "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
@@ -11626,7 +11676,9 @@
       "eidosTaxonId": 80172,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "vegetacion-halonitrofila-anual-1310"
+      ],
       "gbifOccurrences": 0,
       "visible": false,
       "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
@@ -11812,7 +11864,7 @@
       "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "reviewNote": null,
       "eidosTaxonId": null,
-      "gbifSpeciesKey": null,
+      "gbifSpeciesKey": 4201784,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
@@ -12028,7 +12080,7 @@
         "origen": "spainStatus del park.json"
       },
       "featured": false,
-      "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -12044,7 +12096,9 @@
       "eidosTaxonId": 9686,
       "gbifSpeciesKey": 3105768,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "acantilados-con-vegetacion-1240"
+      ],
       "gbifOccurrences": 0,
       "visible": true
     },
@@ -12275,7 +12329,9 @@
       "eidosTaxonId": 8548,
       "gbifSpeciesKey": 3612910,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "galerias-y-matorrales-92D0"
+      ],
       "gbifOccurrences": 0,
       "visible": true
     },
@@ -12327,7 +12383,9 @@
       "eidosTaxonId": 8549,
       "gbifSpeciesKey": 2874701,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "galerias-y-matorrales-92D0"
+      ],
       "gbifOccurrences": 0,
       "visible": true
     },
@@ -12971,6 +13029,22 @@
       "eidosTaxonId": 16358,
       "gbifSpeciesKey": 6065810,
       "zepaSiteCode": null,
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente",
+          "reproductora"
+        ],
+        "etiqueta": "Residente todo el año · Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000175",
+            "name": "Salinas y Arenales de San Pedro del Pinatar",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000175 (Salinas y Arenales de San Pedro del Pinatar), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 1454,
       "visible": true
@@ -13141,6 +13215,22 @@
       "eidosTaxonId": 16356,
       "gbifSpeciesKey": 6065824,
       "zepaSiteCode": null,
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente",
+          "reproductora"
+        ],
+        "etiqueta": "Residente todo el año · Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000175",
+            "name": "Salinas y Arenales de San Pedro del Pinatar",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000175 (Salinas y Arenales de San Pedro del Pinatar), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 1101,
       "visible": true
@@ -17397,6 +17487,21 @@
       "eidosTaxonId": 12282,
       "gbifSpeciesKey": 4408732,
       "zepaSiteCode": null,
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000175",
+            "name": "Salinas y Arenales de San Pedro del Pinatar",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000175 (Salinas y Arenales de San Pedro del Pinatar), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 37,
       "visible": true
@@ -19672,66 +19777,6 @@
       "habitatIds": [],
       "gbifOccurrences": 1,
       "visible": true
-    },
-    {
-      "id": 355,
-      "commonName": "Phalacrocorax carbo carbo",
-      "scientificName": "Phalacrocorax carbo carbo",
-      "kingdom": "fauna",
-      "group": "Ave acuática",
-      "habitat": null,
-      "conservationStatus": "No catalogada",
-      "description": null,
-      "descriptionSource": null,
-      "tips": [],
-      "seasonality": null,
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2021-05-05_Phalacrocorax_carbo_carbo%2C_Killingworth_Lake%2C_Northumberland_1-1.jpg?width=1280",
-      "imageAttribution": "MPF (CC BY-SA 4.0) · Wikimedia Commons",
-      "coordinates": null,
-      "rarityScore": null,
-      "rarityBasis": null,
-      "rarityLocal": 1,
-      "rarityLocalBasis": {
-        "categoria": "Sin figura de protección",
-        "ambito": "estatal",
-        "origen": "spainStatus del park.json"
-      },
-      "featured": false,
-      "source": "GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000175 (Salinas y Arenales de San Pedro del Pinatar), sección 3.2: población invernante; Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, que la cita como «Phalacrocorax carbo»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
-      "taxonomy": {
-        "kingdom": "Animalia",
-        "phylum": "Chordata",
-        "class": "Aves",
-        "order": "Suliformes",
-        "family": "Phalacrocoracidae",
-        "genus": "Phalacrocorax"
-      },
-      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
-      "reviewNote": null,
-      "eidosTaxonId": 32209,
-      "gbifSpeciesKey": null,
-      "zepaSiteCode": "ES0000175",
-      "migratory": true,
-      "sitePresence": {
-        "tipos": [
-          "invernante"
-        ],
-        "etiqueta": "Invernante: pasa aquí el invierno",
-        "sitios": [
-          {
-            "code": "ES0000175",
-            "name": "Salinas y Arenales de San Pedro del Pinatar",
-            "seccion": "3.2"
-          }
-        ],
-        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000175 (Salinas y Arenales de San Pedro del Pinatar), sección 3.2"
-      },
-      "habitatIds": [],
-      "gbifOccurrences": 0,
-      "visible": false,
-      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     }
   ]
 }

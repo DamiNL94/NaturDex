@@ -8,7 +8,7 @@
 -- Hace falta porque Frontend/Js/data.js da PRIORIDAD a la API sobre el park.json empaquetado:
 -- con backend desplegado, un espacio que no esté en la base de datos no existe para el usuario.
 --
--- Contenido: 1 espacio · 11 hábitats · 303 especies · 1094 vínculos especie↔hábitat.
+-- Contenido: 1 espacio · 11 hábitats · 303 especies · 1105 vínculos especie↔hábitat.
 -- Los puntos de interés van aparte, en `n3-pois-<slug>.sql` (build-poi-sql.js).
 --
 -- ORDEN: la fila de `parks` va PRIMERO y no es opcional. Sin ella los INSERT ... SELECT de
@@ -718,7 +718,7 @@ ON DUPLICATE KEY UPDATE
     site_presence = VALUES(site_presence);
 
 -- ------------------------------------------------------------------------------------------------
--- 4. Vínculos especie↔hábitat (1094). `evidence` = lo que declara el `source` de cada ficha; ver cabecera.
+-- 4. Vínculos especie↔hábitat (1105). `evidence` = lo que declara el `source` de cada ficha; ver cabecera.
 -- ------------------------------------------------------------------------------------------------
 INSERT INTO species_habitats (species_id, habitat_id, evidence)
 SELECT sp.id, hb.id, v.evidence
@@ -758,7 +758,7 @@ JOIN (
     UNION ALL
     SELECT 'Pinus halepensis', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
-    SELECT 'Pinus halepensis', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Pinus halepensis', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Pinus halepensis', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
@@ -852,7 +852,7 @@ JOIN (
     UNION ALL
     SELECT 'Quercus coccifera', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Quercus coccifera', 'encinares-de-quercus-9340', 'observada_gbif'
+    SELECT 'Quercus coccifera', 'encinares-de-quercus-9340', 'caracteristica'
     UNION ALL
     SELECT 'Quercus coccifera', 'bosques-endemicos-de-9560', 'observada_gbif'
     UNION ALL
@@ -900,7 +900,7 @@ JOIN (
     UNION ALL
     SELECT 'Pinus nigra', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Pinus nigra', 'pinares-sub-mediterraneos-9530', 'observada_gbif'
+    SELECT 'Pinus nigra', 'pinares-sub-mediterraneos-9530', 'caracteristica'
     UNION ALL
     SELECT 'Cistus albidus', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
@@ -940,7 +940,7 @@ JOIN (
     UNION ALL
     SELECT 'Pinus pinaster', 'pinares-sub-mediterraneos-9530', 'observada_gbif'
     UNION ALL
-    SELECT 'Sedum sediforme', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Sedum sediforme', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Sedum sediforme', 'bosques-endemicos-de-9560', 'observada_gbif'
     UNION ALL
@@ -950,7 +950,7 @@ JOIN (
     UNION ALL
     SELECT 'Sedum sediforme', 'prados-alpinos-y-6170', 'observada_gbif'
     UNION ALL
-    SELECT 'Sedum sediforme', 'prados-calcareos-carsticos-6110', 'observada_gbif'
+    SELECT 'Sedum sediforme', 'prados-calcareos-carsticos-6110', 'caracteristica'
     UNION ALL
     SELECT 'Sedum sediforme', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
@@ -1088,7 +1088,7 @@ JOIN (
     UNION ALL
     SELECT 'Sedum gypsicola', 'encinares-de-quercus-9340', 'observada_gbif'
     UNION ALL
-    SELECT 'Sedum gypsicola', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Sedum gypsicola', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Sedum gypsicola', 'bosques-endemicos-de-9560', 'observada_gbif'
     UNION ALL
@@ -1096,7 +1096,7 @@ JOIN (
     UNION ALL
     SELECT 'Sedum gypsicola', 'prados-alpinos-y-6170', 'observada_gbif'
     UNION ALL
-    SELECT 'Sedum gypsicola', 'prados-calcareos-carsticos-6110', 'observada_gbif'
+    SELECT 'Sedum gypsicola', 'prados-calcareos-carsticos-6110', 'caracteristica'
     UNION ALL
     SELECT 'Sedum gypsicola', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
@@ -1263,6 +1263,8 @@ JOIN (
     SELECT 'Centaurea boissieri', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
     SELECT 'Centaurea boissieri', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    UNION ALL
+    SELECT 'Centaurea boissieri', 'matorrales-mediterraneos-y-4090', 'caracteristica'
     UNION ALL
     SELECT 'Conopodium thalictrifolium', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
@@ -1620,7 +1622,7 @@ JOIN (
     UNION ALL
     SELECT 'Odontites viscosus', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Odontites viscosus', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Odontites viscosus', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Pelodytes punctatus', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
@@ -1650,7 +1652,7 @@ JOIN (
     UNION ALL
     SELECT 'Plantago albicans', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Plantago albicans', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Plantago albicans', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Plantago sempervirens', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
@@ -1726,7 +1728,7 @@ JOIN (
     UNION ALL
     SELECT 'Sedum acre', 'prados-alpinos-y-6170', 'observada_gbif'
     UNION ALL
-    SELECT 'Sedum acre', 'prados-calcareos-carsticos-6110', 'observada_gbif'
+    SELECT 'Sedum acre', 'prados-calcareos-carsticos-6110', 'caracteristica'
     UNION ALL
     SELECT 'Sedum dasyphyllum', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
@@ -1802,7 +1804,7 @@ JOIN (
     UNION ALL
     SELECT 'Alyssum alyssoides', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Alyssum alyssoides', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Alyssum alyssoides', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Alytes obstetricans', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
@@ -1839,6 +1841,10 @@ JOIN (
     SELECT 'Anthyllis vulneraria', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
     SELECT 'Anthyllis vulneraria', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    UNION ALL
+    SELECT 'Anthyllis vulneraria', 'prados-alpinos-y-6170', 'caracteristica'
+    UNION ALL
+    SELECT 'Anthyllis vulneraria', 'matorrales-mediterraneos-y-4090', 'caracteristica'
     UNION ALL
     SELECT 'Arabis auriculata', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
@@ -1918,13 +1924,15 @@ JOIN (
     UNION ALL
     SELECT 'Astragalus alopecuroides', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
+    SELECT 'Astragalus alopecuroides', 'vegetacion-gipsicola-iberica-1520', 'caracteristica'
+    UNION ALL
     SELECT 'Astragalus sesameus', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
     SELECT 'Astragalus sesameus', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
     SELECT 'Astragalus sesameus', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Astragalus sesameus', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Astragalus sesameus', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Atractylis humilis', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
@@ -1948,7 +1956,7 @@ JOIN (
     UNION ALL
     SELECT 'Buglossoides arvensis', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Buglossoides arvensis', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Buglossoides arvensis', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Bupleurum fruticescens', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
@@ -2073,6 +2081,8 @@ JOIN (
     SELECT 'Cosentinia vellea', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
     SELECT 'Cosentinia vellea', 'vegetacion-gipsicola-iberica-1520', 'observada_gbif'
+    UNION ALL
+    SELECT 'Cosentinia vellea', 'pendientes-rocosas-calcicolas-8210', 'caracteristica'
     UNION ALL
     SELECT 'Cuscuta epithymum', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
@@ -2256,7 +2266,7 @@ JOIN (
     UNION ALL
     SELECT 'Helianthemum hirtum', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
-    SELECT 'Helianthemum hirtum', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Helianthemum hirtum', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Helianthemum hirtum', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
@@ -2269,6 +2279,8 @@ JOIN (
     SELECT 'Helianthemum squamatum', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
     SELECT 'Helianthemum squamatum', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    UNION ALL
+    SELECT 'Helianthemum squamatum', 'vegetacion-gipsicola-iberica-1520', 'caracteristica'
     UNION ALL
     SELECT 'Helianthemum syriacum', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
@@ -2324,7 +2336,7 @@ JOIN (
     UNION ALL
     SELECT 'Hornungia petraea', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Hornungia petraea', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Hornungia petraea', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Hypecoum procumbens', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
@@ -2402,7 +2414,7 @@ JOIN (
     UNION ALL
     SELECT 'Linaria cavanillesii', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
-    SELECT 'Linaria cavanillesii', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
+    SELECT 'Linaria cavanillesii', 'pendientes-rocosas-calcicolas-8210', 'caracteristica'
     UNION ALL
     SELECT 'Linaria cavanillesii', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
@@ -2500,7 +2512,7 @@ JOIN (
     UNION ALL
     SELECT 'Minuartia hamata', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Minuartia hamata', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Minuartia hamata', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Moricandia arvensis', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
@@ -2600,7 +2612,7 @@ JOIN (
     UNION ALL
     SELECT 'Phlomis lychnitis', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Phlomis lychnitis', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Phlomis lychnitis', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Platycapnos spicata', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
@@ -2644,7 +2656,7 @@ JOIN (
     UNION ALL
     SELECT 'Quercus ilex', 'bosques-endemicos-de-9560', 'observada_gbif'
     UNION ALL
-    SELECT 'Quercus ilex', 'encinares-de-quercus-9340', 'observada_gbif'
+    SELECT 'Quercus ilex', 'encinares-de-quercus-9340', 'caracteristica'
     UNION ALL
     SELECT 'Quercus ilex', 'matorrales-mediterraneos-y-4090', 'observada_gbif'
     UNION ALL
@@ -2653,6 +2665,8 @@ JOIN (
     SELECT 'Quercus ilex', 'prados-calcareos-carsticos-6110', 'observada_gbif'
     UNION ALL
     SELECT 'Quercus ilex', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    UNION ALL
+    SELECT 'Quercus ilex', 'matorrales-arborescentes-de-5210', 'caracteristica'
     UNION ALL
     SELECT 'Rapistrum rugosum', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
@@ -2756,9 +2770,11 @@ JOIN (
     UNION ALL
     SELECT 'Sedum album', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
+    SELECT 'Sedum album', 'prados-calcareos-carsticos-6110', 'caracteristica'
+    UNION ALL
     SELECT 'Sideritis bourgaeana', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
-    SELECT 'Sideritis bourgaeana', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Sideritis bourgaeana', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Sideritis bourgaeana', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
@@ -2844,7 +2860,7 @@ JOIN (
     UNION ALL
     SELECT 'Teucrium capitatum', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
-    SELECT 'Teucrium chamaedrys', 'matorrales-arborescentes-de-5210', 'observada_gbif'
+    SELECT 'Teucrium chamaedrys', 'matorrales-arborescentes-de-5210', 'caracteristica'
     UNION ALL
     SELECT 'Teucrium chamaedrys', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
@@ -2852,9 +2868,11 @@ JOIN (
     UNION ALL
     SELECT 'Teucrium chamaedrys', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
+    SELECT 'Teucrium chamaedrys', 'encinares-de-quercus-9340', 'caracteristica'
+    UNION ALL
     SELECT 'Teucrium franchetianum', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
-    SELECT 'Teucrium franchetianum', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Teucrium franchetianum', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Teucrium franchetianum', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
@@ -2866,11 +2884,13 @@ JOIN (
     UNION ALL
     SELECT 'Teucrium leonis', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
+    SELECT 'Teucrium leonis', 'matorrales-mediterraneos-y-4090', 'caracteristica'
+    UNION ALL
     SELECT 'Teucrium thymifolium', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
     SELECT 'Teucrium thymifolium', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
-    SELECT 'Teucrium thymifolium', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
+    SELECT 'Teucrium thymifolium', 'pendientes-rocosas-calcicolas-8210', 'caracteristica'
     UNION ALL
     SELECT 'Teucrium thymifolium', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
@@ -2903,6 +2923,8 @@ JOIN (
     SELECT 'Ulex europaeus', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
     SELECT 'Ulex europaeus', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    UNION ALL
+    SELECT 'Ulex europaeus', 'matorrales-mediterraneos-y-4090', 'caracteristica'
     UNION ALL
     SELECT 'Vicia peregrina', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL

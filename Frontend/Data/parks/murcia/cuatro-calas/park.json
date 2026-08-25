@@ -212,7 +212,8 @@
         52,
         59,
         60,
-        61
+        61,
+        73
       ],
       "imageAttribution": "ANE (CC BY-SA 4.0) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Siempreviva insigne (Limonium insigne), la especie que da nombre al hábitat."
@@ -252,6 +253,7 @@
         14,
         21,
         22,
+        27,
         29,
         30,
         31,
@@ -259,11 +261,13 @@
         33,
         34,
         35,
+        38,
         51,
         52,
         59,
         60,
-        61
+        61,
+        69
       ]
     },
     {
@@ -1975,7 +1979,7 @@
       "coordinates": null,
       "rarityScore": 1,
       "featured": false,
-      "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 4 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
+      "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 4 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).; Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -1994,7 +1998,8 @@
       "habitatIds": [
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
-        "matorrales-arborescentes-de-5220"
+        "matorrales-arborescentes-de-5220",
+        "zonas-subestepicas-de-6220"
       ],
       "rarityLocal": 1,
       "rarityLocalBasis": {
@@ -2585,7 +2590,7 @@
       "coordinates": null,
       "rarityScore": 1,
       "featured": false,
-      "source": "Presencia documentada por 3 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO). La cita de GBIF figura como Petrosedum sediforme.",
+      "source": "Presencia documentada por 3 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO). La cita de GBIF figura como Petrosedum sediforme.; Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2604,7 +2609,8 @@
       "habitatIds": [
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
-        "matorrales-arborescentes-de-5220"
+        "matorrales-arborescentes-de-5220",
+        "zonas-subestepicas-de-6220"
       ],
       "rarityLocal": 1,
       "rarityLocalBasis": {
@@ -4236,7 +4242,7 @@
       "coordinates": null,
       "rarityScore": 1,
       "featured": false,
-      "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 1 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).",
+      "source": "Especie incluida en catálogo o anexo oficial de protección (EIDOS, IEPNB), con presencia confirmada por 1 ocurrencia(s) de GBIF dentro de los polígonos de hábitat de este espacio (cartografía del Atlas de Hábitat 2005, MITECO).; Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -4255,7 +4261,8 @@
       "habitatIds": [
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
-        "matorrales-arborescentes-de-5220"
+        "matorrales-arborescentes-de-5220",
+        "zonas-subestepicas-de-6220"
       ],
       "rarityLocal": 1,
       "rarityLocalBasis": {
@@ -4445,7 +4452,7 @@
       "coordinates": null,
       "rarityScore": 1,
       "featured": false,
-      "source": "Especie característica del hábitat de interés comunitario  según el Atlas y Manual de los Hábitat de España (MITECO, 2005), con presencia confirmada por 1 ocurrencia(s) de GBIF dentro de ese hábitat en este espacio.",
+      "source": "Especie característica del hábitat de interés comunitario  según el Atlas y Manual de los Hábitat de España (MITECO, 2005), con presencia confirmada por 1 ocurrencia(s) de GBIF dentro de ese hábitat en este espacio.; Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -4464,7 +4471,8 @@
       "habitatIds": [
         "matorrales-halonitrofilos-pegano-1430",
         "matorrales-termomediterraneos-y-5330",
-        "matorrales-arborescentes-de-5220"
+        "matorrales-arborescentes-de-5220",
+        "estepas-salinas-mediterraneas-1510"
       ],
       "rarityLocal": 1,
       "rarityLocalBasis": {
@@ -5138,6 +5146,21 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 144,
       "zepaSiteCode": "ES0000507",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000507",
+            "name": "Espacio marino de los Islotes Litorales de Murcia y Almería",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000507 (Espacio marino de los Islotes Litorales de Murcia y Almería), sección 3.2"
+      },
       "habitatIds": [],
       "rarityLocal": 2,
       "rarityLocalBasis": {
@@ -5574,6 +5597,21 @@
       "gbifSpeciesKey": null,
       "gbifOccurrences": 0,
       "zepaSiteCode": "ES0000507",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000507",
+            "name": "Espacio marino de los Islotes Litorales de Murcia y Almería",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000507 (Espacio marino de los Islotes Litorales de Murcia y Almería), sección 3.2"
+      },
       "habitatIds": [],
       "rarityLocal": 2,
       "rarityLocalBasis": {

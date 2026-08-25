@@ -1,0 +1,346 @@
+{
+ "park": "calblanque-monte-cenizas-pena-aguila",
+ "generado": "Atlas y Manual de los Hábitats de España (MITECO) ∩ catálogo del parque",
+ "hic": {
+  "1210": {
+   "habitat": "vegetacion-anual-sobre-1210",
+   "especies": [
+    "Cakile maritima"
+   ]
+  },
+  "1240": {
+   "habitat": "acantilados-con-vegetacion-1240",
+   "especies": [
+    "Sonchus tenerrimus"
+   ]
+  },
+  "1410": {
+   "habitat": "pastizales-salinos-mediterraneos-1410",
+   "especies": [
+    "Centaurium tenuiflorum"
+   ]
+  },
+  "1420": {
+   "habitat": "matorrales-halofilos-mediterraneos-1420",
+   "especies": [
+    "Sarcocornia fruticosa",
+    "Arthrocnemum macrostachyum",
+    "Frankenia corymbosa",
+    "Halocnemum strobilaceum",
+    "Suaeda vera"
+   ]
+  },
+  "1430": {
+   "habitat": "matorrales-halonitrofilos-pegano-1430",
+   "especies": [
+    "Haplophyllum linifolium"
+   ]
+  },
+  "1510": {
+   "habitat": "estepas-salinas-mediterraneas-1510",
+   "especies": []
+  },
+  "2110": {
+   "habitat": "dunas-moviles-embrionarias-2110",
+   "especies": []
+  },
+  "2120": {
+   "habitat": "dunas-moviles-de-2120",
+   "especies": []
+  },
+  "2210": {
+   "habitat": "dunas-fijas-de-2210",
+   "especies": [
+    "Echium sabulicola"
+   ]
+  },
+  "2230": {
+   "habitat": "dunas-con-cespedes-2230",
+   "especies": []
+  },
+  "5220": {
+   "habitat": "matorrales-arborescentes-de-5220",
+   "especies": [
+    "Calicotome intermedia",
+    "Maytenus senegalensis subsp. europaea",
+    "Periploca angustifolia"
+   ]
+  },
+  "5330": {
+   "habitat": "matorrales-termomediterraneos-y-5330",
+   "especies": [
+    "Helianthemum almeriense",
+    "Sideritis pusilla",
+    "Teucrium carthaginense",
+    "Genista cinerea",
+    "Rhamnus oleoides",
+    "Calicotome infesta",
+    "Calicotome spinosa",
+    "Pinus halepensis"
+   ]
+  },
+  "6110": {
+   "habitat": "prados-calcareos-carsticos-6110",
+   "especies": [
+    "Sedum sediforme"
+   ]
+  },
+  "6220": {
+   "habitat": "zonas-subestepicas-de-6220",
+   "especies": [
+    "Eryngium ilicifolium",
+    "Filago fuscescens",
+    "Limonium lobatum",
+    "Scorpiurus muricatus",
+    "Trifolium glomeratum",
+    "Sedum sediforme",
+    "Ophrys tenthredinifera"
+   ]
+  },
+  "8210": {
+   "habitat": "pendientes-rocosas-calcicolas-8210",
+   "especies": [
+    "Sonchus tenerrimus",
+    "Centaurea saxicola"
+   ]
+  },
+  "9340": {
+   "habitat": "encinares-de-quercus-9340",
+   "especies": [
+    "Quercus coccifera"
+   ]
+  },
+  "9570": {
+   "habitat": "bosques-de-tetraclinis-9570",
+   "especies": [
+    "Calicotome intermedia",
+    "Maytenus senegalensis subsp. europaea",
+    "Periploca angustifolia"
+   ]
+  },
+  "92D0": {
+   "habitat": "galerias-y-matorrales-92D0",
+   "especies": [
+    "Tamarix boveana"
+   ]
+  }
+ },
+ "links": [
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Helianthemum almeriense",
+   "atlas_name": "Helianthemum almeriense subsp. almeriense"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Sideritis pusilla",
+   "atlas_name": "Sideritis pusilla subsp. granatensis"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Teucrium carthaginense",
+   "atlas_name": "Teucrium carthaginense"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Genista cinerea",
+   "atlas_name": "Genista cinerea subsp. murcica"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Rhamnus oleoides",
+   "atlas_name": "Rhamnus oleoides subsp. oleoides"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Calicotome infesta",
+   "atlas_name": "Calicotome infesta"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Calicotome spinosa",
+   "atlas_name": "Calicotome spinosa"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Pinus halepensis",
+   "atlas_name": "Pinus halepensis var. ceciliae"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Eryngium ilicifolium",
+   "atlas_name": "Eryngium ilicifolium"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Filago fuscescens",
+   "atlas_name": "Filago fuscescens"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Limonium lobatum",
+   "atlas_name": "Limonium lobatum"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Scorpiurus muricatus",
+   "atlas_name": "Scorpiurus muricatus"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Trifolium glomeratum",
+   "atlas_name": "Trifolium glomeratum"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Sedum sediforme",
+   "atlas_name": "Sedum sediforme subsp. dianium"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Ophrys tenthredinifera",
+   "atlas_name": "Ophrys tenthredinifera"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Sonchus tenerrimus",
+   "atlas_name": "Sonchus tenerrimus var. dianae"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Centaurea saxicola",
+   "atlas_name": "Centaurea saxicola"
+  },
+  {
+   "code": "1240",
+   "habitat_slug": "acantilados-con-vegetacion-1240",
+   "scientific_name": "Sonchus tenerrimus",
+   "atlas_name": "Sonchus tenerrimus var. pectinatus"
+  },
+  {
+   "code": "9570",
+   "habitat_slug": "bosques-de-tetraclinis-9570",
+   "scientific_name": "Calicotome intermedia",
+   "atlas_name": "Calicotome intermedia"
+  },
+  {
+   "code": "9570",
+   "habitat_slug": "bosques-de-tetraclinis-9570",
+   "scientific_name": "Maytenus senegalensis subsp. europaea",
+   "atlas_name": "Maytenus senegalensis subsp. europaeus"
+  },
+  {
+   "code": "9570",
+   "habitat_slug": "bosques-de-tetraclinis-9570",
+   "scientific_name": "Periploca angustifolia",
+   "atlas_name": "Periploca angustifolia"
+  },
+  {
+   "code": "5220",
+   "habitat_slug": "matorrales-arborescentes-de-5220",
+   "scientific_name": "Calicotome intermedia",
+   "atlas_name": "Calicotome intermedia"
+  },
+  {
+   "code": "5220",
+   "habitat_slug": "matorrales-arborescentes-de-5220",
+   "scientific_name": "Maytenus senegalensis subsp. europaea",
+   "atlas_name": "Maytenus senegalensis subsp. europaeus"
+  },
+  {
+   "code": "5220",
+   "habitat_slug": "matorrales-arborescentes-de-5220",
+   "scientific_name": "Periploca angustifolia",
+   "atlas_name": "Periploca angustifolia"
+  },
+  {
+   "code": "9340",
+   "habitat_slug": "encinares-de-quercus-9340",
+   "scientific_name": "Quercus coccifera",
+   "atlas_name": "Quercus coccifera subsp. rivasmartinezii"
+  },
+  {
+   "code": "92D0",
+   "habitat_slug": "galerias-y-matorrales-92D0",
+   "scientific_name": "Tamarix boveana",
+   "atlas_name": "Tamarix boveana"
+  },
+  {
+   "code": "1410",
+   "habitat_slug": "pastizales-salinos-mediterraneos-1410",
+   "scientific_name": "Centaurium tenuiflorum",
+   "atlas_name": "Centaurium tenuiflorum"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Sarcocornia fruticosa",
+   "atlas_name": "Sarcocornia fruticosa"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Arthrocnemum macrostachyum",
+   "atlas_name": "Arthrocnemum macrostachyum"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Frankenia corymbosa",
+   "atlas_name": "Frankenia corymbosa"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Halocnemum strobilaceum",
+   "atlas_name": "Halocnemum strobilaceum"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Suaeda vera",
+   "atlas_name": "Suaeda vera"
+  },
+  {
+   "code": "1430",
+   "habitat_slug": "matorrales-halonitrofilos-pegano-1430",
+   "scientific_name": "Haplophyllum linifolium",
+   "atlas_name": "Haplophyllum linifolium"
+  },
+  {
+   "code": "1210",
+   "habitat_slug": "vegetacion-anual-sobre-1210",
+   "scientific_name": "Cakile maritima",
+   "atlas_name": "Cakile maritima subsp. maritima"
+  },
+  {
+   "code": "2210",
+   "habitat_slug": "dunas-fijas-de-2210",
+   "scientific_name": "Echium sabulicola",
+   "atlas_name": "Echium sabulicola"
+  },
+  {
+   "code": "6110",
+   "habitat_slug": "prados-calcareos-carsticos-6110",
+   "scientific_name": "Sedum sediforme",
+   "atlas_name": "Sedum sediforme subsp. dianium"
+  }
+ ]
+}

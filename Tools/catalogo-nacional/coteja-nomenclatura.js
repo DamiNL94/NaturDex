@@ -291,6 +291,49 @@ function clasifica(fichas, cache) {
         propuesta: homotipico ? g.aceptadaKey : null, propuestaTaxonId: null,
       });
     }
+
+    /*
+     * D · la key que no identifica ninguna especie.
+     *
+     * `lib/gbif.js` lo dice en su cabecera —«una `usageKey` de género o familia no identifica ninguna
+     * especie»— y aun así había tres fichadas así, todas del volcado del piloto: *Salsola
+     * vermiculata* y *Arthrocnemum macrostachyum* con la **3064**, que es la FAMILIA Amaranthaceae;
+     * *Stipa capensis* con la **3073**, que es Poaceae; y *Sedum sediforme* con la **2406**, que es
+     * Crassulaceae. La comprobación C no las ve porque una familia es un taxón perfectamente
+     * `ACCEPTED`: lo que falla no es el estado, es el RANGO.
+     *
+     * Y no es cosmético. La key es con lo que se piden las ocurrencias, así que una key de familia
+     * trae las de toda la familia; y dos especies distintas con la misma key son un duplicado que
+     * `scan-taxones-duplicados` marca sin poder decir cuál de las dos está mal.
+     *
+     * Se corrige SOLO cuando otro espacio ficha ese mismo nombre con una key de rango especie: se
+     * reutiliza esa, que es lo mismo que hace `build-species-n2.js` con los identificadores. Si no
+     * hay de dónde copiarla, se dice y se deja — deducirla sería inventarla.
+     */
+    const RANGOS_DE_ESPECIE = new Set(['SPECIES', 'SUBSPECIES', 'VARIETY', 'FORM']);
+    const keyBuena = grupo
+      .map(x => x.sp.gbifSpeciesKey)
+      .filter(k => k != null && cache.gbif[k] && !cache.gbif[k].error &&
+        RANGOS_DE_ESPECIE.has(String(cache.gbif[k].rank || '').toUpperCase()))
+      .find(Boolean);
+    for (const f of grupo) {
+      const k = f.sp.gbifSpeciesKey;
+      const gk = k != null ? cache.gbif[k] : null;
+      if (!gk || gk.error || !gk.rank) continue;
+      if (RANGOS_DE_ESPECIE.has(String(gk.rank).toUpperCase())) continue;
+      hallazgos.push({
+        tipo: 'gbif_key_de_otro_rango',
+        corregible: keyBuena != null && keyBuena !== k,
+        sci, slugs: [f.slug],
+        detalle: `gbifSpeciesKey ${k} es de rango ${gk.rank} («${gk.nombre}»), que no identifica ` +
+          'ninguna especie: pedir ocurrencias con ella trae las de todo el grupo' +
+          (keyBuena != null && keyBuena !== k
+            ? `. Otro espacio la ficha con la key ${keyBuena} («${cache.gbif[keyBuena].nombre}», ` +
+              `${cache.gbif[keyBuena].rank}), que es la que se reutiliza`
+            : '. **Ningún espacio la ficha con una key de especie**, así que no hay de dónde copiarla'),
+        propuesta: keyBuena != null && keyBuena !== k ? keyBuena : null, propuestaTaxonId: null,
+      });
+    }
   }
   return hallazgos;
 }
@@ -333,6 +376,10 @@ function aplica(fichas, hallazgos) {
     const hs = porSci.get(f.sp.scientificName);
     if (!hs) continue;
     for (const h of hs) {
+      if (h.tipo === 'gbif_key_de_otro_rango' && h.propuesta != null && f.sp.gbifSpeciesKey !== h.propuesta) {
+        f.sp.gbifSpeciesKey = h.propuesta; cambios++;
+        docs.set(f.file, f.doc);
+      }
       if (h.tipo === 'gbif_key_sinonimo_homotipico' && f.sp.gbifSpeciesKey !== h.propuesta) {
         f.sp.gbifSpeciesKey = h.propuesta; cambios++;
         docs.set(f.file, f.doc);
@@ -357,6 +404,7 @@ const TITULOS = {
   gbif_key_sinonimo_homotipico: 'gbifSpeciesKey apunta a un sinónimo HOMOTÍPICO de GBIF (corregible: pierde ocurrencias)',
   gbif_key_sinonimo_heterotipico: 'gbifSpeciesKey apunta a un sinónimo HETEROTÍPICO (NO se toca: cambia el taxón)',
   gbif_key_dudosa: 'GBIF marca la key como DOUBTFUL y no da aceptado (no hay nada que corregir)',
+  gbif_key_de_otro_rango: 'gbifSpeciesKey de rango familia o género: no identifica ninguna especie',
 };
 const ORDEN = Object.keys(TITULOS);
 

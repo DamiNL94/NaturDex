@@ -40,6 +40,10 @@ export const state = {
   catalogMode: 'groups',
   habitatGroupFocus: null,
   habitatFocus: null,
+  // En 'species', enseña SOLO las fichas que no cuelgan de ningún hábitat. Es un tercer destino del
+  // mismo nivel, al lado de «un hábitat» y «todas»: son mayoría en varios espacios y sin él no
+  // tienen ninguna puerta propia. Ver `speciesSinHabitat()`.
+  sinHabitatFocus: false,
   detailMode: 'habitat',
   selectedHabitatId: null,
   // Punto de interés cuya ficha se muestra en el panel de detalle (detailMode='poi'). Los POIs
@@ -125,12 +129,34 @@ export function catalogSpecies() {
  * el MISMO parque salía en un orden sin conexión y en otro con ella. Ordenando en el selector la
  * app enseña siempre la misma lista, venga de donde venga, y el orden del dato deja de importar.
  */
+/*
+ * Las fichas del catálogo que NO cuelgan de ningún hábitat, y por qué hay tantas.
+ *
+ * Son dos cosas distintas metidas en el mismo cajón, y la app las cuenta juntas porque para navegar
+ * lo son —no hay hábitat por el que llegar a ellas— pero las EXPLICA por separado:
+ *
+ *   · las AVES, que el catálogo decide a propósito no adscribir a ningún polígono: vuelan, y un
+ *     registro en vuelo cae dentro de cualquier recinto (regla nº 8 del CLAUDE.md raíz). Son la
+ *     mayoría, y en un espacio sin pestaña de migratorias no tenían ninguna otra puerta;
+ *   · el RESTO, que la norma del espacio enumera y que GBIF no ha registrado dentro de sus
+ *     polígonos de hábitat. Ahí el hueco es real y está documentado: el vínculo especie↔hábitat es
+ *     derivado y sin señal no se inventa (regla nº 1).
+ *
+ * Antes se llegaba a ellas solo por «Ver todas las especies», mezcladas con las demás y sin que
+ * nada dijera cuántas eran: en Cañaverosa son 181 de 209.
+ */
+export function speciesSinHabitat() {
+  return catalogSpecies().filter(s => !(s.habitatIds || []).length).sort(comparaEspecies);
+}
+
 export function getFilteredSpecies() {
   return catalogSpecies().filter(species => {
     const matchesFilter = state.filter === 'all'
       || (state.filter === 'seen' && state.seenSpecies.has(species.id))
       || species.kingdom === state.filter;
-    const matchesHabitat = !state.habitatFocus || (species.habitatIds || []).includes(state.habitatFocus);
+    const matchesHabitat = state.sinHabitatFocus
+      ? !(species.habitatIds || []).length
+      : (!state.habitatFocus || (species.habitatIds || []).includes(state.habitatFocus));
     const text = normalize([species.commonName, species.scientificName, species.group, species.habitat].join(' '));
     return matchesFilter && matchesHabitat && pasaFiltroRareza(species, state.rarityFilter)
       && text.includes(normalize(state.query));

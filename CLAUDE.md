@@ -68,7 +68,7 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    generaliza igual: «nadie lo ha mirado» no es «no está amenazada», y publicar de más no se puede
    deshacer. Ver [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md).
 
-## 2. Quince cosas que fallan EN VERDE
+## 2. Diecisiete cosas que fallan EN VERDE
 
 Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 [`Docs/runbook/ORDEN-DE-OPERACIONES.md`](Docs/runbook/ORDEN-DE-OPERACIONES.md).
@@ -94,12 +94,33 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
   formulario del sitio o el anexo de la norma se hace por nombre, así que la especie queda fuera con
   un motivo escrito al lado que es mentira. `scan-taxones-duplicados` **no puede verlo** —busca un
   taxón dado de alta dos veces y éste está una sola—; lo caza `taxones:nomenclatura`.
+- **Regenerar un espacio ya publicado le devuelve las aves que `aves:poda` le quitó.**
+  `build-species-n2.js` reescribe el catálogo entero desde la **selección aprobada**, y la poda no
+  toca la selección: ocho de los dieciséis espacios de Murcia pasaron por ella DESPUÉS de escribirse.
+  Un `--dry` sobre Sierra de la Pila anuncia **243 fichas** donde hoy hay 219, y las 24 de diferencia
+  son aves resucitadas. No avisa nadie: la herramienta está haciendo su trabajo. En un espacio
+  publicado **no se regenera para cambiar un campo**; se escribe una herramienta que toque solo ese
+  campo (`aves:fenologia`, `atlas:aplica`, `taxones:trinomios`).
 - **La API tiene prioridad sobre el `park.json` empaquetado.** Con backend desplegado, tocar solo el
   frontend no cambia lo que ve el usuario: hay que generar y aplicar también el SQL.
 - **Un extractor de PDF distinto = cero resultados sin aviso.** Le pasó al Atlas de Hábitats, que solo
   se sabía leer en el formato de `pdftotext -layout`. Si una herramienta que lee texto extraído
   devuelve 0, sospecha del formato antes que del dato — y haz que se queje, como hace ya
-  `lib/atlas.js`.
+  `lib/atlas.js`. **Y el modo peor no es el cero, que se ve: es el resultado A MEDIAS, que no.**
+  Medido el 2026-08-25 sobre los dieciséis espacios de Murcia: el texto de Xpdf con `-layout`
+  recupera 34 enlaces del Atlas en Sierra de El Carche que el índice versionado no tenía **y a la
+  vez pierde quince** de Sierra Espuña que ese índice sí traía. Ninguno de los dos extractores cubre
+  al otro, así que elegir uno tira dato en las dos direcciones y las dos salidas parecen completas.
+  Por eso `atlas-hic-especies.js` admite **varios textos** y `--fusiona`: el Atlas se usa **solo en
+  positivo**, y retirar un enlace porque este parser no lo ha leído es borrar un dato por una
+  limitación de herramienta.
+- **Un `park.json` reescrito y un manifiesto sin subir de versión.** El manifiesto es lo que decide
+  si un dispositivo con el espacio guardado sin conexión vuelve a descargarlo, así que una
+  herramienta que escribe fichas y no toca `version` deja al usuario que ya lo tenía guardado con el
+  dato viejo — sin error, sin aviso, y sin que el repositorio se entere de nada, porque en el
+  repositorio el dato SÍ está bien. Lo suben `build-species-n2.js`, `poda-aves-sin-respaldo.js` y
+  `auditoria-especie-habitat.js`, cada uno con su copia de las mismas cuatro líneas;
+  `aplica-fenologia-aves.js` no lo hacía y se descubrió con trece espacios reescritos (deuda nº 37).
 - **Cruzar una fuente oficial con el catálogo por el nombre**: la fuente cita con la nomenclatura de
   su época (*Sylvia undata*) y el catálogo con la de hoy (*Curruca undata*). No falla: excluye la
   especie y escribe al lado un motivo que es mentira («no figura en el formulario oficial»). Resuelve

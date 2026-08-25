@@ -460,7 +460,32 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     una especie con enlaces de las dos procedencias descuadraba y se iba **entera** a `NULL`,
     perdiendo también la procedencia de los que GBIF sí respaldaba.
 
-    Lo que queda: **regenerar los nueve espacios**, que no se ha hecho porque cada regeneración
+    > **PAGADA el 2026-08-25.** No regenerando los nueve espacios —que era el plan y era la vía
+    > equivocada—, sino con una herramienta que hace **solo** esto sobre los `park.json` ya escritos:
+    > `npm run atlas:aplica` (`Tools/catalogo-nacional/aplica-atlas-habitats.js`). Regenerar la Capa 3
+    > de un espacio publicado la reescribe desde su selección, y **ocho de los dieciséis espacios de
+    > Murcia pasaron DESPUÉS por `poda-aves-sin-respaldo.js`**: su selección todavía trae las aves que
+    > la poda retiró, así que regenerar las habría devuelto —en Sierra de la Pila, 24 fichas—. Es el
+    > mismo patrón que `aplica-fenologia-aves.js`, y por el mismo motivo.
+    >
+    > Resultado: **114 enlaces nuevos en 108 fichas de once espacios**, cuatro más que los 110
+    > medidos, porque de paso se arregló la lectura del Atlas (ver abajo). Idempotente; `validate` en
+    > verde y tres avisos menos. Los `-n2.sql` de los once están regenerados y **pendientes de
+    > aplicar**: aquí solo se AÑADEN vínculos, así que el UPSERT de `build-park-sql.js` basta y no
+    > hace falta borrado.
+    >
+    > **Y el índice del Atlas estaba a medias en los nueve, no solo ausente en los siete.** De qué
+    > extractor salga el `atlas.txt` cambia qué enlaces se leen, y **ninguno cubre al otro**: el texto
+    > de Xpdf con `-layout` recupera 34 enlaces en Sierra de El Carche que el índice versionado no
+    > tenía, y a la vez pierde quince de Sierra Espuña que ese índice sí traía (*Genista longipes*,
+    > *Colchicum triphyllum*…). Elegir un extractor tira dato en las dos direcciones. Así que
+    > `atlas-hic-especies.js` admite ahora **varios textos** (`--atlas a.txt,b.txt`) y **`--fusiona`**,
+    > que conserva lo que ya hubiera en el índice: es la misma regla que aplica el resto del pipeline
+    > al Atlas —se usa **solo en positivo**—, porque retirar un enlace porque un parser de PDF no lo
+    > ha leído es borrar un dato por una limitación de herramienta. Los dieciséis índices están
+    > regenerados y versionados.
+
+    Lo que quedaba: **regenerar los nueve espacios**, que no se hizo porque cada regeneración
     arrastra además la migración de la deuda nº 29 y eso es una decisión de espacio, no de sesión.
     Medido el 2026-08-21 con el índice del Atlas de cada uno:
 
@@ -507,7 +532,25 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     taxón que el catálogo quiere aparte; sin la segunda, un trinomio que llega solo no tendría con
     qué fundirse.
 
-    Lo que queda son los pares **ya escritos**, que solo se van regenerando el espacio:
+    > **PAGADA el 2026-08-25**, y tampoco regenerando: `npm run taxones:trinomios`
+    > (`Tools/catalogo-nacional/funde-trinomios-nominales.js`), con las mismas dos condiciones de la
+    > selección más una tercera que aquí hace falta —**la ficha del trinomio no puede aportar nada que
+    > la del binomio no tenga**, y se comprueba campo a campo (`zepaSiteCode`, `migratory`,
+    > `sitePresence`, `habitatIds`, ocurrencias)—: retirarla sin eso sería tirar un dato para arreglar
+    > una duplicidad. Los cuatro pares aportaban cero, así que se fundieron los cuatro.
+    >
+    > **Y salió un quinto caso que la tabla no tenía**, peor de ver que un duplicado: el trinomio que
+    > llega **solo**, sin binomio con el que fundirse. En Calblanque era el **CALAMÓN**, fichado como
+    > «Porphyrio porphyrio porphyrio» —sin `gbifSpeciesKey`, sin ocurrencias, sin descripción, con el
+    > nombre científico de relleno en el `commonName` y **oculto**— mientras otros dos espacios lo
+    > fichan como *Porphyrio porphyrio* con su foto y su texto. Ahí no hay nada que fundir: hay un
+    > nombre que corregir, y lo hace `--renombra` reutilizando los identificadores de los espacios que
+    > ya lo fichan (nunca eligiendo entre dos). Calblanque gana un calamón visible.
+    >
+    > Los `-n2.sql` están regenerados y hay **borrado aparte** en `Database/poda-trinomios-*.sql`
+    > para los tres espacios: el trinomio se queda huérfano en la BD, y el renombrado también.
+
+    Lo que quedaba son los pares **ya escritos**, que solo se iban regenerando el espacio:
 
     | Espacio | Par |
     |---|---|
@@ -553,8 +596,62 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     candidato: ahí lo probable es que el formulario declare un ave que el barrido nunca vio dentro
     de ese espacio, y entonces no hay nada que cerrar, solo que anotar.
 
-    **Cómo se paga:** resolviendo el nombre **de la fuente** contra EIDOS
-    (`npm run taxones:nomenclatura -- --online`, que es la capa 2 del puente y necesita red), dando
-    de alta lo que cierre en `Tools/catalogo-nacional/data/equivalencias-nomenclatura.json` con su
-    fuente y su fecha, y relanzando `npm run aves:fenologia -- --write`. Diez minutos por entrada, y
-    la lista sale sola cada vez que se ejecuta la herramienta.
+    **Cómo se pagaba, y por qué no se podía:** el plan era resolver el nombre **de la fuente** contra
+    EIDOS y «dar de alta lo que cierre» en `equivalencias-nomenclatura.json`. Eso era una trampa: ese
+    mismo fichero dice, con nombres y apellidos, que **no** se den de alta equivalencias que EIDOS ya
+    sabe —cita *Larus ridibundus* → *Chroicocephalus ridibundus*, *Catharacta skua* → *Stercorarius
+    skua*, *Sylvia cantillans* → *Curruca cantillans* y *Phalacrocorax aristotelis* → *Gulosus
+    aristotelis*—, porque serían una segunda verdad que puede divergir de la primera. Así que la
+    salida estaba cerrada por los dos lados: la capa 2 del puente no la hacía nadie y la 3 no podía
+    hacerla.
+
+    > **PAGADA en su mayor parte el 2026-08-25**, poniendo la capa 2 donde faltaba:
+    > `npm run aves:fenologia -- --online --write`, con caché en
+    > `out/fenologia-eidos-fuente-cache.json`. **De 53 entradas quedan 29**, y las migratorias suben
+    > de **405 a 420**. Un detalle que costaba ocho de ellas: el verbatim del formulario **no se puede
+    > consultar tal cual** —«Sylvia cantillans ([excluding subalpina])», «Phalacrocorax aristotelis
+    > aristotelis» no empiezan por ningún nombre de la lista patrón de EIDOS—, y el `binomio()` de
+    > `lib/atlas.js` **tampoco sirve** para consultar, porque es la clave de COTEJO (minúsculas y con
+    > la terminación recortada: «larus ridibund»). Hace falta un «Género epíteto» de verdad.
+    >
+    > Las 29 que quedan **no son de nomenclatura**: son aves que el formulario del sitio declara y que
+    > el catálogo del espacio no tiene fichadas —doce de ellas en Sierra de la Pila—. Ahí no hay
+    > equivalencia que dar de alta; hay una ficha que falta.
+
+36. **Cuarenta y ocho fichas se llaman con un nombre que EIDOS da por sinónimo, y cuarenta y tres
+    llevan un `eidosTaxonId` que no es de rango especie.** Lo mide `npm run taxones:nomenclatura --
+    --online` desde que existe, y el informe entero está en
+    [`Docs/nomenclatura-autoridades.md`](nomenclatura-autoridades.md). Ninguna de las dos clases es
+    corregible sola y por eso la herramienta no las toca: renombrar cambia la clave con la que se
+    indexan el catálogo universal y `data/contenido/`, y reanclar un identificador de rango
+    subespecie a la especie **cambia el taxón**, no solo el número (`Klasea flavescens` subsp.
+    *mucronata* por *Serratula mucronata* es más taxón del que la fuente reconoce). Es trabajo de ir
+    una a una con EIDOS delante, y cada renombrado deja **cuatro rastros**: el `park.json`, el
+    catálogo universal, `data/contenido/` y la fila vieja de la BD (trampa nº 3 del `CLAUDE.md`).
+
+    Lo que sí se cerró el 2026-08-25 es una clase que **no veía nadie**: la `gbifSpeciesKey` que no
+    identifica ninguna especie. `lib/gbif.js` lo avisa en su cabecera —«una `usageKey` de género o
+    familia no identifica ninguna especie»— y aun así había **cinco fichas** así, todas del volcado
+    del piloto de Cabo Cope: *Salsola vermiculata* y *Arthrocnemum macrostachyum* con la **3064**,
+    que es la FAMILIA Amaranthaceae; *Stipa capensis* con la **3073** (Poaceae); *Sedum sediforme*
+    con la **2406** (Crassulaceae); y *Sideritis ibanyezii* con la **2926685**, que es el GÉNERO. La
+    comprobación que ya existía no podía verlas porque solo mira el ESTADO de la key, y una familia
+    es un taxón perfectamente `ACCEPTED`: lo que falla es el **rango**. No es cosmético — la key es
+    con lo que se piden las ocurrencias, así que una de familia trae las de toda la familia, y dos
+    especies distintas con la misma key son un duplicado que `taxones:duplicados` marca sin poder
+    decir cuál de las dos está mal.
+
+    Se corrigen **tres** —las que otro espacio ya ficha con una key de rango especie, que se
+    reutiliza igual que hace `build-species-n2.js` con los identificadores—; las otras dos no tienen
+    de dónde copiarla y se dicen. Con eso `taxones:duplicados` baja a **0 duplicados** y de 8 a 5
+    identificadores incoherentes.
+
+37. **La subida de `version` del manifiesto está copiada en cinco herramientas y la sexta se la
+    olvidó.** El manifiesto es lo que decide si un dispositivo con el espacio guardado sin conexión
+    vuelve a descargarlo: una herramienta que escribe en el `park.json` y no sube la versión deja al
+    usuario que ya lo tenía guardado con el dato viejo, **sin que nada falle ni avise, y con el dato
+    bien en el repositorio**, así que desde aquí no se ve nunca. `build-species-n2.js`,
+    `poda-aves-sin-respaldo.js` y `auditoria-especie-habitat.js` la suben, cada uno con su copia de
+    las mismas cuatro líneas; `aplica-fenologia-aves.js` **no la subía** —salió el 2026-08-25, con
+    trece espacios reescritos— y ahora sí, con una quinta copia. La sexta se la volverá a olvidar:
+    esas cuatro líneas deberían ser una función de `lib/io.js`.

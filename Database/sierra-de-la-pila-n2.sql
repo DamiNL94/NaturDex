@@ -8,7 +8,7 @@
 -- Hace falta porque Frontend/Js/data.js da PRIORIDAD a la API sobre el park.json empaquetado:
 -- con backend desplegado, un espacio que no esté en la base de datos no existe para el usuario.
 --
--- Contenido: 1 espacio · 10 hábitats · 219 especies · 677 vínculos especie↔hábitat.
+-- Contenido: 1 espacio · 10 hábitats · 219 especies · 689 vínculos especie↔hábitat.
 -- Los puntos de interés van aparte, en `n3-pois-<slug>.sql` (build-poi-sql.js).
 --
 -- ORDEN: la fila de `parks` va PRIMERO y no es opcional. Sin ella los INSERT ... SELECT de
@@ -240,7 +240,7 @@ FROM parks pk JOIN (
     UNION ALL
     SELECT 'Scrophularia tanacetifolia', 'Scrophularia tanacetifolia', 'flora', NULL, NULL, 'No catalogada', NULL, NULL, NULL, 'Octubre, noviembre, diciembre, febrero, marzo, abril, mayo, junio, julio', NULL, NULL, NULL, NULL, 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 0, 'Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla.', 'GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas', 'Tracheophyta', 'Magnoliopsida', 'Lamiales', 'Scrophulariaceae', 'Scrophularia', 'No evaluada en la Lista Roja mundial de la UICN', 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)', 'No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)', NULL, 8172, 3735572, NULL, NULL, NULL
     UNION ALL
-    SELECT 'Tomillo blanco', 'Thymus membranaceus', 'flora', 'Mata aromática', 'Tomillares y matorral raso sobre suelos calizos secos', 'No catalogada', 'Tomillo endémico del sureste ibérico, fácil de reconocer por unas brácteas grandes, blancas y membranosas que rodean la inflorescencia y parecen pétalos. Ese conjunto vistoso, más que las flores en sí, es lo que atrae a los insectos.', NULL, 'Brácteas blancas grandes y papiráceas rodeando la flor; Cabezuelas terminales muy vistosas y redondeadas; Aroma intenso a tomillo al frotar', 'Primavera', 'https://commons.wikimedia.org/wiki/Special:FilePath/Thymus_membranaceus_(3).jpg?width=1280', 'Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons', NULL, NULL, 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 1, NULL, 'GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas', 'Tracheophyta', 'Magnoliopsida', 'Lamiales', 'Lamiaceae', 'Thymus', 'No evaluada específicamente en la Lista Roja mundial de la UICN', 'Sin figura de protección nacional específica registrada en EIDOS', 'No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)', NULL, 8931, 7306992, NULL, NULL, NULL
+    SELECT 'Tomillo blanco', 'Thymus membranaceus', 'flora', 'Mata aromática', 'Tomillares y matorral raso sobre suelos calizos secos', 'No catalogada', 'Tomillo endémico del sureste ibérico, fácil de reconocer por unas brácteas grandes, blancas y membranosas que rodean la inflorescencia y parecen pétalos. Ese conjunto vistoso, más que las flores en sí, es lo que atrae a los insectos.', NULL, 'Brácteas blancas grandes y papiráceas rodeando la flor; Cabezuelas terminales muy vistosas y redondeadas; Aroma intenso a tomillo al frotar', 'Primavera', 'https://commons.wikimedia.org/wiki/Special:FilePath/Thymus_membranaceus_(3).jpg?width=1280', 'Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons', NULL, NULL, 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 1, NULL, 'GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas', 'Tracheophyta', 'Magnoliopsida', 'Lamiales', 'Lamiaceae', 'Thymus', 'No evaluada específicamente en la Lista Roja mundial de la UICN', 'Sin figura de protección nacional específica registrada en EIDOS', 'No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)', NULL, 8931, 7306992, NULL, NULL, NULL
     UNION ALL
     SELECT 'Lagarto ocelado', 'Timon lepidus', 'fauna', 'Reptil', 'Matorral termomediterráneo semiárido', 'Protegida (LESRPE)', 'El lagarto más grande de Europa, de hasta 60 cm con la cola incluida. Su dorso es verde con un fino reticulado negro y, en los costados, hileras de ocelos de un azul intenso. Los machos viejos tienen una cabeza enorme y maciza. Es diurno y muy desconfiado.', NULL, 'Ocelos azules alineados en los costados; Dorso verde con retícula negra muy fina; Tamaño grande y cabeza maciza en los machos adultos', 'Primavera a otoño', 'https://commons.wikimedia.org/wiki/Special:FilePath/Jewelled_Lizard_(Timon_lepidus)_male_found_under_a_stone_by_Jean_NICOLAS_(14166347788).jpg?width=1280', 'Bernard DUPONT from FRANCE (CC BY-SA 2.0) · Wikimedia Commons', NULL, NULL, 2, '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 2, '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 1, NULL, 'GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal', 'Chordata', 'Reptilia', 'Squamata', 'Lacertidae', 'Timon', 'NT (Casi Amenazado, evaluación de 2009 por declive poblacional en parte de su área)', 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)', 'No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)', NULL, 11582, 2468542, NULL, NULL, NULL
     UNION ALL
@@ -548,7 +548,7 @@ ON DUPLICATE KEY UPDATE
     site_presence = VALUES(site_presence);
 
 -- ------------------------------------------------------------------------------------------------
--- 4. Vínculos especie↔hábitat (677). `evidence` = lo que declara el `source` de cada ficha; ver cabecera.
+-- 4. Vínculos especie↔hábitat (689). `evidence` = lo que declara el `source` de cada ficha; ver cabecera.
 -- ------------------------------------------------------------------------------------------------
 INSERT INTO species_habitats (species_id, habitat_id, evidence)
 SELECT sp.id, hb.id, v.evidence
@@ -574,7 +574,7 @@ JOIN (
     UNION ALL
     SELECT 'Vulpes vulpes', 'bosques-endemicos-de-9560', 'observada_gbif'
     UNION ALL
-    SELECT 'Pinus halepensis', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Pinus halepensis', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Pinus halepensis', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
@@ -636,7 +636,7 @@ JOIN (
     UNION ALL
     SELECT 'Quercus coccifera', 'bosques-endemicos-de-9560', 'observada_gbif'
     UNION ALL
-    SELECT 'Quercus coccifera', 'encinares-de-quercus-9340', 'observada_gbif'
+    SELECT 'Quercus coccifera', 'encinares-de-quercus-9340', 'caracteristica'
     UNION ALL
     SELECT 'Quercus coccifera', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
@@ -868,7 +868,9 @@ JOIN (
     UNION ALL
     SELECT 'Sedum sediforme', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
-    SELECT 'Sedum sediforme', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Sedum sediforme', 'zonas-subestepicas-de-6220', 'caracteristica'
+    UNION ALL
+    SELECT 'Sedum sediforme', 'prados-calcareos-carsticos-6110', 'caracteristica'
     UNION ALL
     SELECT 'Meles meles', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
@@ -964,7 +966,7 @@ JOIN (
     UNION ALL
     SELECT 'Helianthemum origanifolium', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
-    SELECT 'Helianthemum origanifolium', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Helianthemum origanifolium', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Helianthemum origanifolium', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
@@ -989,6 +991,8 @@ JOIN (
     SELECT 'Linaria cavanillesii', 'bosques-endemicos-de-9560', 'observada_gbif'
     UNION ALL
     SELECT 'Linaria cavanillesii', 'matorrales-mediterraneos-y-4090', 'observada_gbif'
+    UNION ALL
+    SELECT 'Linaria cavanillesii', 'pendientes-rocosas-calcicolas-8210', 'caracteristica'
     UNION ALL
     SELECT 'Lotus dorycnium', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
@@ -1112,7 +1116,7 @@ JOIN (
     UNION ALL
     SELECT 'Plantago albicans', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
-    SELECT 'Plantago albicans', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Plantago albicans', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Teucrium pseudochamaepitys', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
@@ -1178,6 +1182,8 @@ JOIN (
     UNION ALL
     SELECT 'Astragalus alopecuroides', 'prados-calcareos-carsticos-6110', 'observada_gbif'
     UNION ALL
+    SELECT 'Astragalus alopecuroides', 'vegetacion-gipsicola-iberica-1520', 'caracteristica'
+    UNION ALL
     SELECT 'Atractylis humilis', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
     SELECT 'Atractylis humilis', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
@@ -1197,6 +1203,8 @@ JOIN (
     SELECT 'Centaurea boissieri', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
     SELECT 'Centaurea boissieri', 'bosques-endemicos-de-9560', 'observada_gbif'
+    UNION ALL
+    SELECT 'Centaurea boissieri', 'matorrales-mediterraneos-y-4090', 'caracteristica'
     UNION ALL
     SELECT 'Cytisus lanigerus', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
@@ -1251,6 +1259,8 @@ JOIN (
     SELECT 'Helianthemum squamatum', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
     SELECT 'Helianthemum squamatum', 'bosques-endemicos-de-9560', 'observada_gbif'
+    UNION ALL
+    SELECT 'Helianthemum squamatum', 'vegetacion-gipsicola-iberica-1520', 'caracteristica'
     UNION ALL
     SELECT 'Limodorum abortivum', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
@@ -1332,6 +1342,8 @@ JOIN (
     UNION ALL
     SELECT 'Thymus membranaceus', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
+    SELECT 'Thymus membranaceus', 'matorrales-mediterraneos-y-4090', 'caracteristica'
+    UNION ALL
     SELECT 'Timon lepidus', 'bosques-endemicos-de-9560', 'observada_gbif'
     UNION ALL
     SELECT 'Timon lepidus', 'matorrales-arborescentes-de-5210', 'observada_gbif'
@@ -1363,6 +1375,8 @@ JOIN (
     SELECT 'Armeria filicaulis', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
     SELECT 'Armeria filicaulis', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
+    UNION ALL
+    SELECT 'Armeria filicaulis', 'matorrales-mediterraneos-y-4090', 'caracteristica'
     UNION ALL
     SELECT 'Asparagus horridus', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
@@ -1530,7 +1544,9 @@ JOIN (
     UNION ALL
     SELECT 'Genista cinerea', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
-    SELECT 'Genista cinerea', 'bosques-endemicos-de-9560', 'observada_gbif'
+    SELECT 'Genista cinerea', 'bosques-endemicos-de-9560', 'caracteristica'
+    UNION ALL
+    SELECT 'Genista cinerea', 'matorrales-mediterraneos-y-4090', 'caracteristica'
     UNION ALL
     SELECT 'Helianthemum hirtum', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
@@ -1772,6 +1788,8 @@ JOIN (
     UNION ALL
     SELECT 'Thymus funkii', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
+    SELECT 'Thymus funkii', 'matorrales-mediterraneos-y-4090', 'caracteristica'
+    UNION ALL
     SELECT 'Veronica praecox', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
     SELECT 'Veronica praecox', 'bosques-endemicos-de-9560', 'observada_gbif'
@@ -1791,6 +1809,8 @@ JOIN (
     SELECT 'Campanula mollis', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
     SELECT 'Campanula mollis', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    UNION ALL
+    SELECT 'Campanula mollis', 'pendientes-rocosas-calcicolas-8210', 'caracteristica'
     UNION ALL
     SELECT 'Cheirolophus intybaceus', 'bosques-endemicos-de-9560', 'observada_gbif'
     UNION ALL
@@ -1813,6 +1833,8 @@ JOIN (
     SELECT 'Genista versicolor', 'matorrales-mediterraneos-y-4090', 'observada_gbif'
     UNION ALL
     SELECT 'Genista versicolor', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    UNION ALL
+    SELECT 'Genista versicolor', 'matorrales-arborescentes-de-5210', 'caracteristica'
     UNION ALL
     SELECT 'Hemidactylus turcicus', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
@@ -1867,6 +1889,8 @@ JOIN (
     SELECT 'Polypodium cambricum', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
     SELECT 'Polypodium cambricum', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    UNION ALL
+    SELECT 'Polypodium cambricum', 'pendientes-rocosas-calcicolas-8210', 'caracteristica'
     UNION ALL
     SELECT 'Populus alba', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL

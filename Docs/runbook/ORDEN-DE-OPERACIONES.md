@@ -1,7 +1,7 @@
 # Orden de operaciones
 
 Hay dependencias entre herramientas que no son evidentes y que, al saltárselas, deshacen trabajo en
-silencio. **Ninguna de estas cinco se detecta con un error: todas fallan en verde.**
+silencio. **Ninguna de estas seis se detecta con un error: todas fallan en verde.**
 
 1. **`image`/`imageAttribution` son campos UNIVERSALES.** Si escribes una foto en el `park.json` (con
    `enrich-images.js --write-park`) y después lanzas `species:apply` sin haber hecho antes
@@ -36,6 +36,16 @@ silencio. **Ninguna de estas cinco se detecta con un error: todas fallan en verd
    [`auditoria-especie-habitat.md`](../auditoria-especie-habitat.md) sigue diciendo «se retiran 4» y
    los cuatro están otra vez ahí. La regla es sencilla: **la auditoría es el último paso de la Capa
    3**, y si se regenera el espacio hay que volver a pasarla.
+
+6. **Regenerar un espacio ya publicado le devuelve las aves que `aves:poda` le quitó.**
+   `build-species-n2.js` reescribe el catálogo entero **desde la selección aprobada**, y ocho de los
+   dieciséis espacios de Murcia pasaron por `poda-aves-sin-respaldo.js` DESPUÉS de escribirse: su
+   selección todavía trae las aves que la poda retiró, porque la poda no la toca. Un `--dry` sobre
+   Sierra de la Pila anuncia **243 fichas escritas** donde hoy hay 219, y las 24 de diferencia son
+   aves resucitadas — sin aviso, porque desde el punto de vista de la herramienta está haciendo su
+   trabajo. **Regla: en un espacio publicado, no se regenera para cambiar UN campo.** Se escribe una
+   herramienta que toque solo ese campo sobre el `park.json` —`aves:fenologia`, `atlas:aplica`,
+   `taxones:trinomios`— o se vuelve a pasar `aves:poda` detrás de la regeneración.
 
 **Idempotencia.** `build-n1-espacios`, `merge-habitats`, `adopt-habitats`,
 `fix-estado-conservacion-iepnb` y `sync-species-catalog` son idempotentes: reejecutarlos con la misma

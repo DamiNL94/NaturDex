@@ -112,6 +112,7 @@
         72,
         73,
         74,
+        75,
         76,
         77,
         82,
@@ -822,7 +823,8 @@
         50,
         51,
         75,
-        82
+        82,
+        206
       ],
       "imageAttribution": "Picamaderos (CC BY-SA 3.0) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Carrasca (Quercus rotundifolia), la especie que da nombre al hábitat."
@@ -1039,6 +1041,7 @@
         210,
         211,
         212,
+        219,
         321,
         322,
         323,
@@ -1106,6 +1109,7 @@
         123,
         130,
         135,
+        140,
         145,
         161,
         163,
@@ -1115,6 +1119,7 @@
         183,
         203,
         204,
+        213,
         218,
         219,
         220,
@@ -1191,7 +1196,8 @@
         51,
         57,
         60,
-        75
+        75,
+        192
       ],
       "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Uña de gato (Sedum sediforme), la especie que da nombre al hábitat."
@@ -1315,7 +1321,8 @@
         51,
         57,
         60,
-        75
+        75,
+        87
       ]
     },
     {
@@ -1364,6 +1371,7 @@
         26,
         29,
         33,
+        34,
         35,
         39,
         42,
@@ -1373,7 +1381,10 @@
         47,
         49,
         51,
-        75
+        75,
+        87,
+        207,
+        217
       ],
       "imageAttribution": "Isidre blanc (CC BY-SA 3.0) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Aliaga (Erinacea anthyllis), la especie que da nombre al hábitat."
@@ -3596,7 +3607,8 @@
         "matorrales-arborescentes-de-5210",
         "matorrales-termomediterraneos-y-5330",
         "pendientes-rocosas-calcicolas-8210",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "matorrales-mediterraneos-y-4090"
       ],
       "gbifOccurrences": 3,
       "visible": false,
@@ -7290,7 +7302,9 @@
         "matorrales-arborescentes-de-5210",
         "matorrales-termomediterraneos-y-5330",
         "pendientes-rocosas-calcicolas-8210",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "prados-alpinos-y-6170",
+        "matorrales-mediterraneos-y-4090"
       ],
       "gbifOccurrences": 1,
       "visible": false,
@@ -7810,7 +7824,8 @@
       "habitatIds": [
         "matorrales-arborescentes-de-5210",
         "matorrales-termomediterraneos-y-5330",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "vegetacion-gipsicola-iberica-1520"
       ],
       "gbifOccurrences": 1,
       "visible": false,
@@ -8846,7 +8861,8 @@
       "zepaSiteCode": null,
       "habitatIds": [
         "matorrales-arborescentes-de-5210",
-        "vegetacion-gipsicola-iberica-1520"
+        "vegetacion-gipsicola-iberica-1520",
+        "pendientes-rocosas-calcicolas-8210"
       ],
       "gbifOccurrences": 1,
       "visible": true
@@ -10129,7 +10145,8 @@
         "matorrales-arborescentes-de-5210",
         "matorrales-termomediterraneos-y-5330",
         "pendientes-rocosas-calcicolas-8210",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "vegetacion-gipsicola-iberica-1520"
       ],
       "gbifOccurrences": 1,
       "visible": true
@@ -12645,7 +12662,8 @@
         "matorrales-mediterraneos-y-4090",
         "prados-alpinos-y-6170",
         "prados-calcareos-carsticos-6110",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "matorrales-arborescentes-de-5210"
       ],
       "gbifOccurrences": 1,
       "visible": true
@@ -13307,7 +13325,8 @@
         "matorrales-arborescentes-de-5210",
         "matorrales-termomediterraneos-y-5330",
         "pendientes-rocosas-calcicolas-8210",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "prados-calcareos-carsticos-6110"
       ],
       "gbifOccurrences": 1,
       "visible": true
@@ -13926,7 +13945,8 @@
         "matorrales-arborescentes-de-5210",
         "matorrales-termomediterraneos-y-5330",
         "pendientes-rocosas-calcicolas-8210",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "encinares-de-quercus-9340"
       ],
       "gbifOccurrences": 1,
       "visible": false,
@@ -14029,7 +14049,8 @@
         "matorrales-arborescentes-de-5210",
         "matorrales-termomediterraneos-y-5330",
         "pendientes-rocosas-calcicolas-8210",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "matorrales-mediterraneos-y-4090"
       ],
       "gbifOccurrences": 1,
       "visible": false,
@@ -14296,7 +14317,8 @@
       "habitatIds": [
         "matorrales-arborescentes-de-5210",
         "matorrales-termomediterraneos-y-5330",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "matorrales-mediterraneos-y-4090"
       ],
       "gbifOccurrences": 1,
       "visible": true

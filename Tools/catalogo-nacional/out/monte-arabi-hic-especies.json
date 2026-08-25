@@ -1,0 +1,38 @@
+{
+ "park": "monte-arabi",
+ "generado": "Atlas y Manual de los Hábitats de España (MITECO) ∩ catálogo del parque",
+ "hic": {
+  "5330": {
+   "habitat": "matorrales-termomediterraneos-y-5330",
+   "especies": [
+    "Teucrium franchetianum",
+    "Rhamnus oleoides",
+    "Pinus halepensis"
+   ]
+  },
+  "8210": {
+   "habitat": "pendientes-rocosas-calcicolas-8210",
+   "especies": []
+  }
+ },
+ "links": [
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Teucrium franchetianum",
+   "atlas_name": "Teucrium franchetianum"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Rhamnus oleoides",
+   "atlas_name": "Rhamnus oleoides subsp. oleoides"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Pinus halepensis",
+   "atlas_name": "Pinus halepensis var. ceciliae"
+  }
+ ]
+}

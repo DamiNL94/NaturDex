@@ -649,6 +649,8 @@
         97,
         98,
         100,
+        117,
+        120,
         137,
         138,
         139,
@@ -2445,7 +2447,7 @@
       "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en los pastizales de la Región",
       "reviewNote": "Ficha básica: especie característica del hábitat prioritario 6220* documentada en el sureste y la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 10149,
-      "gbifSpeciesKey": 3073,
+      "gbifSpeciesKey": 8315646,
       "zepaSiteCode": null,
       "habitatIds": [
         "matorral-semiarido",
@@ -3831,6 +3833,21 @@
       "eidosTaxonId": 80933,
       "gbifSpeciesKey": 2481861,
       "zepaSiteCode": "ES0000261",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons",
       "rarityLocal": 4,
@@ -4265,6 +4282,21 @@
       "eidosTaxonId": 80923,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000261",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons",
       "rarityLocal": 2,
@@ -5002,6 +5034,21 @@
       "eidosTaxonId": 16356,
       "gbifSpeciesKey": null,
       "zepaSiteCode": "ES0000261",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000261",
+            "name": "Almenara-Moreras-Cabo Cope",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2"
+      },
       "habitatIds": [],
       "imageAttribution": "lalaia (CC BY 4.0) · GBIF",
       "rarityLocal": 2,
@@ -5257,7 +5304,7 @@
       "coordinates": null,
       "rarityScore": 1,
       "featured": false,
-      "source": "Especie diagnóstica del hábitat prioritario de interés comunitario 6110* (Alysso-Sedion albi) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y la ficha del hábitat (Murcianatural, CARM); terófito calcícola presente en la Región de Murcia según la flora regional.",
+      "source": "Especie diagnóstica del hábitat prioritario de interés comunitario 6110* (Alysso-Sedion albi) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y la ficha del hábitat (Murcianatural, CARM); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; terófito calcícola presente en la Región de Murcia según la flora regional.",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -5274,7 +5321,8 @@
       "gbifSpeciesKey": 5376179,
       "zepaSiteCode": null,
       "habitatIds": [
-        "prados-alysso-sedion"
+        "prados-alysso-sedion",
+        "subestepa-thero-brachypodietea"
       ],
       "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
       "rarityLocal": 1,
@@ -7349,7 +7397,7 @@
       "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de los saladares de la Región",
       "reviewNote": "Ficha básica: especie característica del hábitat 1420 documentada en los saladares de la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 33034,
-      "gbifSpeciesKey": 3064,
+      "gbifSpeciesKey": 9417609,
       "zepaSiteCode": null,
       "habitatIds": [
         "matorral-halofilo"
@@ -8021,7 +8069,7 @@
       "coordinates": null,
       "rarityScore": 1,
       "featured": false,
-      "source": "Especie característica del hábitat prioritario de interés comunitario 6110* (Prados calcáreos cársticos o basófilos del Alysso-Sedion albi) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y la ficha del hábitat (Murcianatural, CARM); extendida por toda la Región de Murcia (Flora Silvestre de Murcia; regmurcia.com, flora de roquedos).",
+      "source": "Especie característica del hábitat prioritario de interés comunitario 6110* (Prados calcáreos cársticos o basófilos del Alysso-Sedion albi) según las Bases ecológicas preliminares (VVAA, MMARM, 2009) y la ficha del hábitat (Murcianatural, CARM); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; extendida por toda la Región de Murcia (Flora Silvestre de Murcia; regmurcia.com, flora de roquedos).",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -8035,10 +8083,11 @@
       "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); característica de este hábitat, extendida por la Región",
       "reviewNote": "Añadida como especie característica del hábitat prioritario 6110*, extendida por la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado, pendiente de confirmación en campo.",
       "eidosTaxonId": 95304,
-      "gbifSpeciesKey": 2406,
+      "gbifSpeciesKey": 4201784,
       "zepaSiteCode": null,
       "habitatIds": [
-        "prados-alysso-sedion"
+        "prados-alysso-sedion",
+        "subestepa-thero-brachypodietea"
       ],
       "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
       "rarityLocal": 1,

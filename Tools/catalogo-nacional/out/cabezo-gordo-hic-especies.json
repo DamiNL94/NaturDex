@@ -4,11 +4,16 @@
  "hic": {
   "5220": {
    "habitat": "matorrales-arborescentes-de-5220",
-   "especies": []
+   "especies": [
+    "Periploca angustifolia"
+   ]
   },
   "5330": {
    "habitat": "matorrales-termomediterraneos-y-5330",
-   "especies": []
+   "especies": [
+    "Sideritis pusilla",
+    "Teucrium carolipaui"
+   ]
   },
   "6220": {
    "habitat": "zonas-subestepicas-de-6220",
@@ -23,6 +28,24 @@
   }
  },
  "links": [
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Sideritis pusilla",
+   "atlas_name": "Sideritis pusilla subsp. granatensis"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Teucrium carolipaui",
+   "atlas_name": "Teucrium carolipaui subsp. carolipaui"
+  },
+  {
+   "code": "5220",
+   "habitat_slug": "matorrales-arborescentes-de-5220",
+   "scientific_name": "Periploca angustifolia",
+   "atlas_name": "Periploca angustifolia"
+  },
   {
    "code": "8210",
    "habitat_slug": "pendientes-rocosas-calcicolas-8210",

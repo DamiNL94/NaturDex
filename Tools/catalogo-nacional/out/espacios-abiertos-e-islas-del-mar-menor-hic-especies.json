@@ -1,0 +1,401 @@
+{
+ "park": "espacios-abiertos-e-islas-del-mar-menor",
+ "generado": "Atlas y Manual de los Hábitats de España (MITECO) ∩ catálogo del parque",
+ "hic": {
+  "1210": {
+   "habitat": "vegetacion-anual-sobre-1210",
+   "especies": [
+    "Cakile maritima"
+   ]
+  },
+  "1240": {
+   "habitat": "acantilados-con-vegetacion-1240",
+   "especies": [
+    "Sonchus tenerrimus"
+   ]
+  },
+  "1410": {
+   "habitat": "pastizales-salinos-mediterraneos-1410",
+   "especies": [
+    "Plantago crassifolia"
+   ]
+  },
+  "1420": {
+   "habitat": "matorrales-halofilos-mediterraneos-1420",
+   "especies": [
+    "Sarcocornia fruticosa",
+    "Arthrocnemum macrostachyum",
+    "Frankenia corymbosa",
+    "Halocnemum strobilaceum",
+    "Suaeda vera"
+   ]
+  },
+  "1430": {
+   "habitat": "matorrales-halonitrofilos-pegano-1430",
+   "especies": []
+  },
+  "1510": {
+   "habitat": "estepas-salinas-mediterraneas-1510",
+   "especies": [
+    "Hymenolobus procumbens",
+    "Artemisia gallica",
+    "Limonium caesium",
+    "Limonium insigne"
+   ]
+  },
+  "2110": {
+   "habitat": "dunas-moviles-embrionarias-2110",
+   "especies": []
+  },
+  "2120": {
+   "habitat": "dunas-moviles-de-2120",
+   "especies": [
+    "Echinophora spinosa"
+   ]
+  },
+  "2210": {
+   "habitat": "dunas-fijas-de-2210",
+   "especies": [
+    "Echium sabulicola",
+    "Launaea fragilis",
+    "Teucrium dunense"
+   ]
+  },
+  "2230": {
+   "habitat": "dunas-con-cespedes-2230",
+   "especies": []
+  },
+  "2260": {
+   "habitat": "dunas-con-vegetacion-2260",
+   "especies": [
+    "Helianthemum almeriense",
+    "Sideritis pusilla",
+    "Teucrium carthaginense",
+    "Thymus vulgaris"
+   ]
+  },
+  "5220": {
+   "habitat": "matorrales-arborescentes-de-5220",
+   "especies": [
+    "Maytenus senegalensis subsp. europaea",
+    "Periploca angustifolia"
+   ]
+  },
+  "5330": {
+   "habitat": "matorrales-termomediterraneos-y-5330",
+   "especies": [
+    "Helianthemum almeriense",
+    "Sideritis pusilla",
+    "Teucrium carthaginense",
+    "Rhamnus oleoides"
+   ]
+  },
+  "6110": {
+   "habitat": "prados-calcareos-carsticos-6110",
+   "especies": [
+    "Sedum sediforme"
+   ]
+  },
+  "6220": {
+   "habitat": "zonas-subestepicas-de-6220",
+   "especies": [
+    "Eryngium ilicifolium",
+    "Scorpiurus muricatus",
+    "Platycapnos tenuiloba",
+    "Sedum sediforme"
+   ]
+  },
+  "8210": {
+   "habitat": "pendientes-rocosas-calcicolas-8210",
+   "especies": [
+    "Sonchus tenerrimus",
+    "Centaurea saxicola",
+    "Cosentinia vellea",
+    "Lafuentea rotundifolia",
+    "Teucrium freynii"
+   ]
+  },
+  "8220": {
+   "habitat": "pendientes-rocosas-siliceas-8220",
+   "especies": [
+    "Asplenium obovatum",
+    "Polypodium cambricum"
+   ]
+  },
+  "9570": {
+   "habitat": "bosques-de-tetraclinis-9570",
+   "especies": [
+    "Maytenus senegalensis subsp. europaea",
+    "Periploca angustifolia"
+   ]
+  },
+  "92D0": {
+   "habitat": "galerias-y-matorrales-92D0",
+   "especies": [
+    "Tamarix africana",
+    "Tamarix boveana",
+    "Tamarix canariensis"
+   ]
+  }
+ },
+ "links": [
+  {
+   "code": "1240",
+   "habitat_slug": "acantilados-con-vegetacion-1240",
+   "scientific_name": "Sonchus tenerrimus",
+   "atlas_name": "Sonchus tenerrimus var. pectinatus"
+  },
+  {
+   "code": "1410",
+   "habitat_slug": "pastizales-salinos-mediterraneos-1410",
+   "scientific_name": "Plantago crassifolia",
+   "atlas_name": "Plantago crassifolia"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Sarcocornia fruticosa",
+   "atlas_name": "Sarcocornia fruticosa"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Arthrocnemum macrostachyum",
+   "atlas_name": "Arthrocnemum macrostachyum"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Frankenia corymbosa",
+   "atlas_name": "Frankenia corymbosa"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Halocnemum strobilaceum",
+   "atlas_name": "Halocnemum strobilaceum"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Suaeda vera",
+   "atlas_name": "Suaeda vera"
+  },
+  {
+   "code": "1510",
+   "habitat_slug": "estepas-salinas-mediterraneas-1510",
+   "scientific_name": "Hymenolobus procumbens",
+   "atlas_name": "Hymenolobus procumbens"
+  },
+  {
+   "code": "1510",
+   "habitat_slug": "estepas-salinas-mediterraneas-1510",
+   "scientific_name": "Artemisia gallica",
+   "atlas_name": "Artemisia gallica subsp. gargantae"
+  },
+  {
+   "code": "1510",
+   "habitat_slug": "estepas-salinas-mediterraneas-1510",
+   "scientific_name": "Limonium caesium",
+   "atlas_name": "Limonium caesium"
+  },
+  {
+   "code": "1510",
+   "habitat_slug": "estepas-salinas-mediterraneas-1510",
+   "scientific_name": "Limonium insigne",
+   "atlas_name": "Limonium insigne"
+  },
+  {
+   "code": "2260",
+   "habitat_slug": "dunas-con-vegetacion-2260",
+   "scientific_name": "Helianthemum almeriense",
+   "atlas_name": "Helianthemum almeriense subsp. almeriense"
+  },
+  {
+   "code": "2260",
+   "habitat_slug": "dunas-con-vegetacion-2260",
+   "scientific_name": "Sideritis pusilla",
+   "atlas_name": "Sideritis pusilla subsp. granatensis"
+  },
+  {
+   "code": "2260",
+   "habitat_slug": "dunas-con-vegetacion-2260",
+   "scientific_name": "Teucrium carthaginense",
+   "atlas_name": "Teucrium carthaginense"
+  },
+  {
+   "code": "2260",
+   "habitat_slug": "dunas-con-vegetacion-2260",
+   "scientific_name": "Thymus vulgaris",
+   "atlas_name": "Thymus vulgaris subsp. aestivus"
+  },
+  {
+   "code": "92D0",
+   "habitat_slug": "galerias-y-matorrales-92D0",
+   "scientific_name": "Tamarix africana",
+   "atlas_name": "Tamarix africana var. fluminensis"
+  },
+  {
+   "code": "92D0",
+   "habitat_slug": "galerias-y-matorrales-92D0",
+   "scientific_name": "Tamarix boveana",
+   "atlas_name": "Tamarix boveana"
+  },
+  {
+   "code": "92D0",
+   "habitat_slug": "galerias-y-matorrales-92D0",
+   "scientific_name": "Tamarix canariensis",
+   "atlas_name": "Tamarix canariensis"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Helianthemum almeriense",
+   "atlas_name": "Helianthemum almeriense subsp. almeriense"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Sideritis pusilla",
+   "atlas_name": "Sideritis pusilla subsp. granatensis"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Teucrium carthaginense",
+   "atlas_name": "Teucrium carthaginense"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Rhamnus oleoides",
+   "atlas_name": "Rhamnus oleoides subsp. oleoides"
+  },
+  {
+   "code": "8220",
+   "habitat_slug": "pendientes-rocosas-siliceas-8220",
+   "scientific_name": "Asplenium obovatum",
+   "atlas_name": "Asplenium obovatum"
+  },
+  {
+   "code": "8220",
+   "habitat_slug": "pendientes-rocosas-siliceas-8220",
+   "scientific_name": "Polypodium cambricum",
+   "atlas_name": "Polypodium cambricum"
+  },
+  {
+   "code": "5220",
+   "habitat_slug": "matorrales-arborescentes-de-5220",
+   "scientific_name": "Maytenus senegalensis subsp. europaea",
+   "atlas_name": "Maytenus senegalensis subsp. europaeus"
+  },
+  {
+   "code": "5220",
+   "habitat_slug": "matorrales-arborescentes-de-5220",
+   "scientific_name": "Periploca angustifolia",
+   "atlas_name": "Periploca angustifolia"
+  },
+  {
+   "code": "1210",
+   "habitat_slug": "vegetacion-anual-sobre-1210",
+   "scientific_name": "Cakile maritima",
+   "atlas_name": "Cakile maritima subsp. maritima"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Eryngium ilicifolium",
+   "atlas_name": "Eryngium ilicifolium"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Scorpiurus muricatus",
+   "atlas_name": "Scorpiurus muricatus"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Platycapnos tenuiloba",
+   "atlas_name": "Platycapnos tenuilobus subsp. paralelus"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Sedum sediforme",
+   "atlas_name": "Sedum sediforme subsp. dianium"
+  },
+  {
+   "code": "6110",
+   "habitat_slug": "prados-calcareos-carsticos-6110",
+   "scientific_name": "Sedum sediforme",
+   "atlas_name": "Sedum sediforme subsp. dianium"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Sonchus tenerrimus",
+   "atlas_name": "Sonchus tenerrimus var. dianae"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Centaurea saxicola",
+   "atlas_name": "Centaurea saxicola"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Cosentinia vellea",
+   "atlas_name": "Cosentinia vellea subsp. bivalens"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Lafuentea rotundifolia",
+   "atlas_name": "Lafuentea rotundifolia"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Teucrium freynii",
+   "atlas_name": "Teucrium freynii"
+  },
+  {
+   "code": "9570",
+   "habitat_slug": "bosques-de-tetraclinis-9570",
+   "scientific_name": "Maytenus senegalensis subsp. europaea",
+   "atlas_name": "Maytenus senegalensis subsp. europaeus"
+  },
+  {
+   "code": "9570",
+   "habitat_slug": "bosques-de-tetraclinis-9570",
+   "scientific_name": "Periploca angustifolia",
+   "atlas_name": "Periploca angustifolia"
+  },
+  {
+   "code": "2120",
+   "habitat_slug": "dunas-moviles-de-2120",
+   "scientific_name": "Echinophora spinosa",
+   "atlas_name": "Echinophora spinosa"
+  },
+  {
+   "code": "2210",
+   "habitat_slug": "dunas-fijas-de-2210",
+   "scientific_name": "Echium sabulicola",
+   "atlas_name": "Echium sabulicola"
+  },
+  {
+   "code": "2210",
+   "habitat_slug": "dunas-fijas-de-2210",
+   "scientific_name": "Launaea fragilis",
+   "atlas_name": "Launaea fragilis subsp. viminea"
+  },
+  {
+   "code": "2210",
+   "habitat_slug": "dunas-fijas-de-2210",
+   "scientific_name": "Teucrium dunense",
+   "atlas_name": "Teucrium dunense"
+  }
+ ]
+}

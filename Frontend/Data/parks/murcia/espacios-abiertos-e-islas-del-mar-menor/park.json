@@ -41,7 +41,8 @@
       "audioTranscript": null,
       "reviewNote": null,
       "speciesIds": [
-        1
+        1,
+        56
       ],
       "imageAttribution": "ANE (CC BY-SA 4.0) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Cambrón (Lycium intricatum), la especie que da nombre al hábitat."
@@ -141,10 +142,12 @@
         34,
         37,
         38,
+        40,
         41,
         46,
         47,
-        54
+        54,
+        78
       ],
       "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Sosa alacranera (Arthrocnemum macrostachyum), la especie que da nombre al hábitat."
@@ -200,12 +203,14 @@
         37,
         38,
         41,
+        43,
         44,
         45,
         46,
         47,
         54,
-        57
+        57,
+        66
       ],
       "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Albardín (Lygeum spartum), la especie que da nombre al hábitat."
@@ -233,7 +238,11 @@
       "audioTranscript": null,
       "reviewNote": null,
       "speciesIds": [
-        1
+        1,
+        23,
+        33,
+        55,
+        59
       ]
     },
     {
@@ -287,7 +296,9 @@
         45,
         46,
         54,
-        57
+        57,
+        58,
+        96
       ],
       "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Taray (Tamarix africana), la especie que da nombre al hábitat."
@@ -479,9 +490,11 @@
       "speciesIds": [
         2,
         3,
+        6,
         14,
         23,
-        58
+        58,
+        84
       ]
     },
     {
@@ -509,6 +522,7 @@
       "speciesIds": [
         9,
         16,
+        18,
         30
       ]
     },
@@ -586,6 +600,7 @@
         13,
         14,
         15,
+        16,
         17,
         18,
         22,
@@ -596,9 +611,11 @@
         30,
         32,
         34,
+        39,
         40,
         42,
         47,
+        48,
         50,
         52,
         58
@@ -636,6 +653,7 @@
         6,
         7,
         15,
+        16,
         17,
         22,
         25,
@@ -676,6 +694,7 @@
         5,
         6,
         7,
+        11,
         14,
         15,
         17,
@@ -688,7 +707,11 @@
         42,
         50,
         52,
-        58
+        56,
+        58,
+        73,
+        82,
+        98
       ],
       "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con polio (Teucrium dunense), la especie que da nombre al hábitat."
@@ -735,7 +758,8 @@
         40,
         42,
         50,
-        52
+        52,
+        84
       ],
       "imageAttribution": "Ryan Hodnett (CC BY-SA 4.0) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Sabina de Cartagena (Tetraclinis articulata), la especie que da nombre al hábitat."
@@ -841,7 +865,9 @@
         18,
         19,
         21,
+        22,
         32,
+        34,
         44,
         45,
         57
@@ -1332,7 +1358,8 @@
         "zonas-subestepicas-de-6220",
         "pendientes-rocosas-calcicolas-8210",
         "prados-calcareos-carsticos-6110",
-        "pendientes-rocosas-siliceas-8220"
+        "pendientes-rocosas-siliceas-8220",
+        "matorrales-arborescentes-de-5220"
       ],
       "gbifOccurrences": 5,
       "visible": true
@@ -1618,7 +1645,8 @@
         "matorrales-termomediterraneos-y-5330",
         "pendientes-rocosas-siliceas-8220",
         "bosques-de-tetraclinis-9570",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "pendientes-rocosas-calcicolas-8210"
       ],
       "gbifOccurrences": 3,
       "visible": true
@@ -1880,7 +1908,9 @@
         "matorrales-halofilos-mediterraneos-1420",
         "matorrales-termomediterraneos-y-5330",
         "pendientes-rocosas-siliceas-8220",
-        "vegetacion-anual-sobre-1210"
+        "vegetacion-anual-sobre-1210",
+        "zonas-subestepicas-de-6220",
+        "prados-calcareos-carsticos-6110"
       ],
       "gbifOccurrences": 3,
       "visible": true
@@ -1993,7 +2023,8 @@
         "dunas-moviles-embrionarias-2110",
         "galerias-y-matorrales-92D0",
         "matorrales-halofilos-mediterraneos-1420",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "vegetacion-anual-sobre-1210"
       ],
       "gbifOccurrences": 2,
       "visible": true
@@ -2197,7 +2228,8 @@
         "matorrales-termomediterraneos-y-5330",
         "pendientes-rocosas-calcicolas-8210",
         "prados-calcareos-carsticos-6110",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "dunas-fijas-de-2210"
       ],
       "gbifOccurrences": 2,
       "visible": false,
@@ -2251,7 +2283,8 @@
         "matorrales-termomediterraneos-y-5330",
         "matorrales-arborescentes-de-5220",
         "pendientes-rocosas-calcicolas-8210",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "dunas-con-vegetacion-2260"
       ],
       "gbifOccurrences": 2,
       "visible": true
@@ -2772,7 +2805,8 @@
       "gbifSpeciesKey": 3897884,
       "zepaSiteCode": null,
       "habitatIds": [
-        "matorrales-termomediterraneos-y-5330"
+        "matorrales-termomediterraneos-y-5330",
+        "dunas-con-vegetacion-2260"
       ],
       "gbifOccurrences": 2,
       "visible": false,
@@ -2825,7 +2859,8 @@
         "matorrales-termomediterraneos-y-5330",
         "pastizales-salinos-mediterraneos-1410",
         "pendientes-rocosas-calcicolas-8210",
-        "prados-calcareos-carsticos-6110"
+        "prados-calcareos-carsticos-6110",
+        "dunas-fijas-de-2210"
       ],
       "gbifOccurrences": 2,
       "visible": false,
@@ -3078,7 +3113,8 @@
       "zepaSiteCode": null,
       "habitatIds": [
         "matorrales-termomediterraneos-y-5330",
-        "pendientes-rocosas-siliceas-8220"
+        "pendientes-rocosas-siliceas-8220",
+        "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 1,
       "visible": true
@@ -3132,7 +3168,8 @@
         "matorrales-termomediterraneos-y-5330",
         "pendientes-rocosas-calcicolas-8210",
         "prados-calcareos-carsticos-6110",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "matorrales-halofilos-mediterraneos-1420"
       ],
       "gbifOccurrences": 1,
       "visible": true
@@ -3281,7 +3318,8 @@
       "gbifSpeciesKey": 5376158,
       "zepaSiteCode": null,
       "habitatIds": [
-        "matorrales-termomediterraneos-y-5330"
+        "matorrales-termomediterraneos-y-5330",
+        "estepas-salinas-mediterraneas-1510"
       ],
       "gbifOccurrences": 1,
       "visible": false,
@@ -3546,7 +3584,8 @@
       "gbifSpeciesKey": 7315275,
       "zepaSiteCode": null,
       "habitatIds": [
-        "matorrales-termomediterraneos-y-5330"
+        "matorrales-termomediterraneos-y-5330",
+        "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 1,
       "visible": false,
@@ -3886,7 +3925,8 @@
       "zepaSiteCode": null,
       "habitatIds": [
         "matorrales-termomediterraneos-y-5330",
-        "pendientes-rocosas-siliceas-8220"
+        "pendientes-rocosas-siliceas-8220",
+        "dunas-con-vegetacion-2260"
       ],
       "gbifOccurrences": 1,
       "visible": true
@@ -3936,7 +3976,9 @@
       "gbifSpeciesKey": 3105768,
       "zepaSiteCode": null,
       "habitatIds": [
-        "matorrales-termomediterraneos-y-5330"
+        "matorrales-termomediterraneos-y-5330",
+        "acantilados-con-vegetacion-1240",
+        "pendientes-rocosas-calcicolas-8210"
       ],
       "gbifOccurrences": 1,
       "visible": true
@@ -4050,7 +4092,8 @@
         "matorrales-arborescentes-de-5220",
         "matorrales-termomediterraneos-y-5330",
         "pendientes-rocosas-calcicolas-8210",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "galerias-y-matorrales-92D0"
       ],
       "gbifOccurrences": 1,
       "visible": true
@@ -4097,7 +4140,8 @@
       "zepaSiteCode": null,
       "habitatIds": [
         "matorrales-termomediterraneos-y-5330",
-        "pendientes-rocosas-siliceas-8220"
+        "pendientes-rocosas-siliceas-8220",
+        "dunas-con-vegetacion-2260"
       ],
       "gbifOccurrences": 1,
       "visible": false,
@@ -4447,7 +4491,9 @@
       "eidosTaxonId": 9914,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "estepas-salinas-mediterraneas-1510"
+      ],
       "gbifOccurrences": 0,
       "visible": false,
       "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
@@ -4795,7 +4841,9 @@
       "eidosTaxonId": 3332,
       "gbifSpeciesKey": 3128450,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "pendientes-rocosas-calcicolas-8210"
+      ],
       "gbifOccurrences": 0,
       "visible": true
     },
@@ -4943,6 +4991,21 @@
       "eidosTaxonId": 80920,
       "gbifSpeciesKey": 2492950,
       "zepaSiteCode": null,
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": true
@@ -5038,7 +5101,9 @@
       "eidosTaxonId": 5051,
       "gbifSpeciesKey": 3760350,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "matorrales-halofilos-mediterraneos-1420"
+      ],
       "gbifOccurrences": 0,
       "visible": true
     },
@@ -5242,7 +5307,9 @@
       "eidosTaxonId": 5616,
       "gbifSpeciesKey": 3739515,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "pendientes-rocosas-calcicolas-8210"
+      ],
       "gbifOccurrences": 0,
       "visible": true
     },
@@ -5342,7 +5409,10 @@
       "eidosTaxonId": 6258,
       "gbifSpeciesKey": 3793958,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "matorrales-arborescentes-de-5220",
+        "bosques-de-tetraclinis-9570"
+      ],
       "gbifOccurrences": 0,
       "visible": true
     },
@@ -5900,7 +5970,9 @@
       "eidosTaxonId": 8549,
       "gbifSpeciesKey": 2874701,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "galerias-y-matorrales-92D0"
+      ],
       "gbifOccurrences": 0,
       "visible": true
     },
@@ -6004,7 +6076,9 @@
       "eidosTaxonId": 8800,
       "gbifSpeciesKey": 3896744,
       "zepaSiteCode": null,
-      "habitatIds": [],
+      "habitatIds": [
+        "pendientes-rocosas-calcicolas-8210"
+      ],
       "gbifOccurrences": 0,
       "visible": true
     },
@@ -6396,6 +6470,21 @@
       "eidosTaxonId": 16358,
       "gbifSpeciesKey": 6065810,
       "zepaSiteCode": "ES0000260",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 994,
       "visible": true
@@ -7033,6 +7122,21 @@
       "eidosTaxonId": 16356,
       "gbifSpeciesKey": 6065824,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 638,
       "visible": true
@@ -10466,6 +10570,21 @@
       "eidosTaxonId": 12282,
       "gbifSpeciesKey": 4408732,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 75,
       "visible": true
@@ -14133,6 +14252,21 @@
       "eidosTaxonId": 80923,
       "gbifSpeciesKey": 9868071,
       "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 3,
       "visible": true
@@ -14640,118 +14774,6 @@
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": true
-    },
-    {
-      "id": 251,
-      "commonName": "Phalacrocorax carbo carbo",
-      "scientificName": "Phalacrocorax carbo carbo",
-      "kingdom": "fauna",
-      "group": "Ave acuática",
-      "habitat": null,
-      "conservationStatus": "No catalogada",
-      "description": null,
-      "descriptionSource": null,
-      "tips": [],
-      "seasonality": null,
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2021-05-05_Phalacrocorax_carbo_carbo%2C_Killingworth_Lake%2C_Northumberland_1-1.jpg?width=1280",
-      "imageAttribution": "MPF (CC BY-SA 4.0) · Wikimedia Commons",
-      "coordinates": null,
-      "rarityScore": null,
-      "rarityBasis": null,
-      "rarityLocal": 1,
-      "rarityLocalBasis": null,
-      "featured": false,
-      "source": "GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-08-21); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2: población invernante; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §2.1.2 (Paisaje Protegido «Espacios Abiertos e Islas del Mar Menor») (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Paisaje Protegido «Espacios Abiertos e Islas del Mar Menor», que es el propio espacio: el volumen II le dedica un apartado con inventario propio (§2.1), distinto del de su ZEC ES6200006 (§1.1.2), y la tabla del §2 del volumen I mide sus 1.307,85 ha dentro del ámbito del plan, el 100 %, que la cita como «Phalacrocorax carbo»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
-      "taxonomy": {
-        "kingdom": "Animalia",
-        "phylum": "Chordata",
-        "class": "Aves",
-        "order": "Suliformes",
-        "family": "Phalacrocoracidae",
-        "genus": "Phalacrocorax"
-      },
-      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
-      "reviewNote": null,
-      "eidosTaxonId": 32209,
-      "gbifSpeciesKey": null,
-      "zepaSiteCode": "ES0000260",
-      "migratory": true,
-      "sitePresence": {
-        "tipos": [
-          "invernante"
-        ],
-        "etiqueta": "Invernante: pasa aquí el invierno",
-        "sitios": [
-          {
-            "code": "ES0000260",
-            "name": "Mar Menor",
-            "seccion": "3.2"
-          }
-        ],
-        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
-      },
-      "habitatIds": [],
-      "gbifOccurrences": 0,
-      "visible": false,
-      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
-    },
-    {
-      "id": 252,
-      "commonName": "Porphyrio porphyrio porphyrio",
-      "scientificName": "Porphyrio porphyrio porphyrio",
-      "kingdom": "fauna",
-      "group": "Ave acuática",
-      "habitat": null,
-      "conservationStatus": "No catalogada",
-      "description": null,
-      "descriptionSource": null,
-      "tips": [],
-      "seasonality": null,
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Porphyrio_porphyrio_-Europe-8.jpg?width=1280",
-      "imageAttribution": "Martien Brand (CC BY 2.0) · Wikimedia Commons",
-      "coordinates": null,
-      "rarityScore": null,
-      "rarityBasis": null,
-      "rarityLocal": 1,
-      "rarityLocalBasis": null,
-      "featured": false,
-      "source": "GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-08-21); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2: población reproductora; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §2.1.2 (Paisaje Protegido «Espacios Abiertos e Islas del Mar Menor») (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Paisaje Protegido «Espacios Abiertos e Islas del Mar Menor», que es el propio espacio: el volumen II le dedica un apartado con inventario propio (§2.1), distinto del de su ZEC ES6200006 (§1.1.2), y la tabla del §2 del volumen I mide sus 1.307,85 ha dentro del ámbito del plan, el 100 %, que la cita como «Porphyrio porphyrio»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
-      "taxonomy": {
-        "kingdom": "Animalia",
-        "phylum": "Chordata",
-        "class": "Aves",
-        "order": "Gruiformes",
-        "family": "Rallidae",
-        "genus": "Porphyrio"
-      },
-      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
-      "reviewNote": null,
-      "eidosTaxonId": 29856,
-      "gbifSpeciesKey": null,
-      "zepaSiteCode": "ES0000260",
-      "migratory": true,
-      "sitePresence": {
-        "tipos": [
-          "reproductora"
-        ],
-        "etiqueta": "Reproductora: cría aquí",
-        "sitios": [
-          {
-            "code": "ES0000260",
-            "name": "Mar Menor",
-            "seccion": "3.2"
-          }
-        ],
-        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
-      },
-      "habitatIds": [],
-      "gbifOccurrences": 0,
-      "visible": false,
-      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     }
   ]
 }

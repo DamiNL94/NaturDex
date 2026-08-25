@@ -1,0 +1,89 @@
+{
+ "park": "sierra-de-salinas",
+ "generado": "Atlas y Manual de los Hábitats de España (MITECO) ∩ catálogo del parque",
+ "hic": {
+  "4090": {
+   "habitat": "matorrales-mediterraneos-y-4090",
+   "especies": [
+    "Anthyllis vulneraria",
+    "Centaurea boissieri",
+    "Helianthemum croceum"
+   ]
+  },
+  "5210": {
+   "habitat": "matorrales-arborescentes-de-5210",
+   "especies": []
+  },
+  "5330": {
+   "habitat": "matorrales-termomediterraneos-y-5330",
+   "especies": [
+    "Rhamnus oleoides",
+    "Pinus halepensis"
+   ]
+  },
+  "6220": {
+   "habitat": "zonas-subestepicas-de-6220",
+   "especies": [
+    "Odontites viscosus"
+   ]
+  },
+  "8210": {
+   "habitat": "pendientes-rocosas-calcicolas-8210",
+   "especies": []
+  },
+  "9340": {
+   "habitat": "encinares-de-quercus-9340",
+   "especies": [
+    "Quercus coccifera"
+   ]
+  },
+  "92A0": {
+   "habitat": "bosques-galeria-de-92A0",
+   "especies": []
+  }
+ },
+ "links": [
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Odontites viscosus",
+   "atlas_name": "Odontites viscosus subsp. oscensis"
+  },
+  {
+   "code": "9340",
+   "habitat_slug": "encinares-de-quercus-9340",
+   "scientific_name": "Quercus coccifera",
+   "atlas_name": "Quercus coccifera subsp. rivasmartinezii"
+  },
+  {
+   "code": "4090",
+   "habitat_slug": "matorrales-mediterraneos-y-4090",
+   "scientific_name": "Anthyllis vulneraria",
+   "atlas_name": "Anthyllis vulneraria subsp. balearica"
+  },
+  {
+   "code": "4090",
+   "habitat_slug": "matorrales-mediterraneos-y-4090",
+   "scientific_name": "Centaurea boissieri",
+   "atlas_name": "Centaurea boissieri subsp. boissieri"
+  },
+  {
+   "code": "4090",
+   "habitat_slug": "matorrales-mediterraneos-y-4090",
+   "scientific_name": "Helianthemum croceum",
+   "atlas_name": "Helianthemum croceum subsp. cantabricum"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Rhamnus oleoides",
+   "atlas_name": "Rhamnus oleoides subsp. oleoides"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Pinus halepensis",
+   "atlas_name": "Pinus halepensis var. ceciliae"
+  }
+ ]
+}

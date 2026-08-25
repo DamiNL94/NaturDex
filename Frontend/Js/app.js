@@ -116,11 +116,15 @@ function enterHabitatGroup(groupId) {
   navOpen('habitat-group', backToGroupsRaw);
 }
 
-function enterHabitat(habitatId) {
+// `sinHabitat` es el tercer destino de este mismo nivel, junto a «un hábitat» y «todas»: las fichas
+// que no cuelgan de ningún polígono. Va aquí y no en una función aparte porque la navegación —qué se
+// apila, qué se limpia, a dónde vuelve el «atrás»— es exactamente la de «Ver todas las especies».
+function enterHabitat(habitatId, sinHabitat = false) {
   // El grupo del hábitat se apila DEBAJO aunque se haya llegado de un salto (desde el mapa, desde
   // "cerca de ti" o desde un resultado del buscador): así «atrás» sube al grupo y solo el siguiente
   // «atrás» sale al principio del catálogo, sin caminos que se salten un nivel.
   const groupId = habitatId ? groupIdOfHabitat(habitatId) : '';
+  state.sinHabitatFocus = !!sinHabitat;
   if (groupId) {
     state.habitatGroupFocus = groupId;
     navOpen('habitat-group', backToGroupsRaw);
@@ -223,6 +227,7 @@ function selectHabitatFromMap(habitatId) {
 // "todas las especies", que no cuelga de ninguno).
 function backFromHabitatRaw() {
   state.habitatFocus = null;
+  state.sinHabitatFocus = false;
   state.catalogMode = state.habitatGroupFocus ? 'habitats' : 'groups';
   state.query = '';
   searchInput.value = '';
@@ -242,6 +247,7 @@ function backFromHabitatRaw() {
 function backToGroupsRaw() {
   state.habitatGroupFocus = null;
   state.habitatFocus = null;
+  state.sinHabitatFocus = false;
   state.catalogMode = 'groups';
   state.query = '';
   searchInput.value = '';
@@ -657,6 +663,7 @@ speciesList.addEventListener('click', event => {
   if (groupCard) { enterHabitatGroup(groupCard.dataset.habitatGroup); return; }
   const habitatCard = event.target.closest('.habitat-card');
   if (habitatCard) { enterHabitat(habitatCard.dataset.habitat); return; }
+  if (event.target.closest('[data-sin-habitat]')) { enterHabitat(null, true); return; }
   if (event.target.closest('#viewAllSpeciesBtn')) enterHabitat(null);
 });
 
@@ -1035,6 +1042,7 @@ async function startParkExperience(slug, user) {
   state.catalogMode = 'groups';
   state.habitatGroupFocus = null;
   state.habitatFocus = null;
+  state.sinHabitatFocus = false;
   setOpenLayersGroup(null);
   // Mapa base propio del parque (paquete .pmtiles). Si ya se entra sin cobertura se activa de
   // salida: OSM/PNOA no pintarían nada y el usuario vería la geometría flotando sobre el vacío.

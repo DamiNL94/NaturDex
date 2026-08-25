@@ -8,7 +8,7 @@
 -- Hace falta porque Frontend/Js/data.js da PRIORIDAD a la API sobre el park.json empaquetado:
 -- con backend desplegado, un espacio que no esté en la base de datos no existe para el usuario.
 --
--- Contenido: 1 espacio · 15 hábitats · 363 especies · 1258 vínculos especie↔hábitat.
+-- Contenido: 1 espacio · 15 hábitats · 363 especies · 1270 vínculos especie↔hábitat.
 -- Los puntos de interés van aparte, en `n3-pois-<slug>.sql` (build-poi-sql.js).
 --
 -- ORDEN: la fila de `parks` va PRIMERO y no es opcional. Sin ella los INSERT ... SELECT de
@@ -498,7 +498,7 @@ FROM parks pk JOIN (
     UNION ALL
     SELECT 'herba de la herradura', 'Hippocrepis ciliata', 'flora', NULL, NULL, 'No catalogada', NULL, NULL, NULL, 'Marzo a junio', 'https://commons.wikimedia.org/wiki/Special:FilePath/3672-Hippocrepis_ciliata-5.06.JPG?width=1280', 'Vojtěch Zavadil (CC BY-SA 3.0) · Wikimedia Commons', NULL, NULL, 2, NULL, 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 0, 'Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla.', 'GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas', 'Tracheophyta', 'Magnoliopsida', 'Fabales', 'Fabaceae', 'Hippocrepis', 'No evaluada en la Lista Roja mundial de la UICN', 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)', 'No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)', NULL, 5277, 5353690, NULL, NULL, NULL
     UNION ALL
-    SELECT 'escorzonerilla falsa', 'Launaea pumila', 'flora', 'Mata', NULL, 'No catalogada', NULL, NULL, NULL, 'Marzo a julio', NULL, NULL, NULL, NULL, 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 0, 'Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla.', 'GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas', 'Tracheophyta', 'Magnoliopsida', 'Asterales', 'Asteraceae', 'Launaea', 'No evaluada en la Lista Roja mundial de la UICN', 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)', 'No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)', NULL, 475, 3144735, NULL, NULL, NULL
+    SELECT 'escorzonerilla falsa', 'Launaea pumila', 'flora', 'Mata', NULL, 'No catalogada', NULL, NULL, NULL, 'Marzo a julio', NULL, NULL, NULL, NULL, 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 0, 'Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla.', 'GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (3 hábitats; Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas', 'Tracheophyta', 'Magnoliopsida', 'Asterales', 'Asteraceae', 'Launaea', 'No evaluada en la Lista Roja mundial de la UICN', 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)', 'No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)', NULL, 475, 3144735, NULL, NULL, NULL
     UNION ALL
     SELECT 'Cuquiellos blancos', 'Malva neglecta', 'flora', NULL, NULL, 'No catalogada', NULL, NULL, NULL, 'Marzo a noviembre', 'https://commons.wikimedia.org/wiki/Special:FilePath/Mauve_%C3%A0_feuilles_rondes.JPG?width=1280', 'Jean.claude (CC BY-SA 3.0) · Wikimedia Commons', NULL, NULL, 3, NULL, 1, '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 0, 'Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla.', 'GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas', 'Tracheophyta', 'Magnoliopsida', 'Malvales', 'Malvaceae', 'Malva', 'No evaluada en la Lista Roja mundial de la UICN', 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)', 'No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)', NULL, 6199, 3152373, NULL, NULL, NULL
     UNION ALL
@@ -784,7 +784,7 @@ FROM parks pk JOIN (
     UNION ALL
     SELECT 'Collalba gris', 'Oenanthe oenanthe', 'fauna', 'Ave', 'Pastizales pedregosos, canchales y zonas abiertas de montaña', 'Protegida (LESRPE)', 'Collalba de dorso gris en el macho, con antifaz negro y alas oscuras. Como todas las collalbas, delata su identidad al volar: obispillo blanco y cola blanca con una «T» negra invertida. Se posa erguida en piedras y hace carreras cortas por el suelo.', NULL, 'Obispillo blanco y «T» negra en la cola; Macho con antifaz negro y dorso gris; Carreras cortas por el suelo entre piedra y piedra', 'Paso migratorio y cría en montaña', 'https://commons.wikimedia.org/wiki/Special:FilePath/Oenanthe_oenanthe_Larvik.JPG?width=1280', 'Arnstein Rønning (CC BY-SA 4.0) · Wikimedia Commons', NULL, NULL, 2, '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 2, '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 1, NULL, 'GBIF confirma su presencia con 19 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio', 'Chordata', 'Aves', 'Passeriformes', 'Muscicapidae', 'Oenanthe', 'LC (Preocupación menor) (evaluación UICN 2018)', 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)', 'No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)', NULL, 11890, 5231240, 'ES0000269', 1, '{"tipos":["reproductora"],"etiqueta":"Reproductora: cría aquí","sitios":[{"code":"ES0000269","name":"Monte El Valle y Sierras de Altaona y Escalona","seccion":"3.2"}],"fuente":"Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"}'
     UNION ALL
-    SELECT 'Curruca tomillera', 'Curruca conspicillata', 'fauna', 'Ave', 'Matorral bajo y abierto, tomillares y saladares con arbustos dispersos', 'Protegida (LESRPE)', 'Curruca menuda de matorral raso, gris en la cabeza, parda en el dorso y con las plumas del ala ribeteadas de castaño encendido. El anillo blanco del ojo le da el aire de «gafas» que le da nombre. Es inquieta y suele delatarse por su reclamo antes de dejarse ver.', NULL, 'Anillo blanco alrededor del ojo bien marcado; Panel castaño vivo en el ala plegada; Vive en matorral muy bajo, no en arbolado', 'Todo el año en el sureste; parcialmente migradora', 'https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_%C3%A0_lunettes_Aqueduc_de_Zaghouan.jpg?width=1280', 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons', NULL, NULL, 2, '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 2, '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 1, NULL, 'GBIF confirma su presencia con 18 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio', 'Chordata', 'Aves', 'Passeriformes', 'Sylviidae', 'Curruca', 'LC (Preocupación menor)', 'Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)', 'No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)', NULL, 80923, 9868071, 'ES0000269', NULL, NULL
+    SELECT 'Curruca tomillera', 'Curruca conspicillata', 'fauna', 'Ave', 'Matorral bajo y abierto, tomillares y saladares con arbustos dispersos', 'Protegida (LESRPE)', 'Curruca menuda de matorral raso, gris en la cabeza, parda en el dorso y con las plumas del ala ribeteadas de castaño encendido. El anillo blanco del ojo le da el aire de «gafas» que le da nombre. Es inquieta y suele delatarse por su reclamo antes de dejarse ver.', NULL, 'Anillo blanco alrededor del ojo bien marcado; Panel castaño vivo en el ala plegada; Vive en matorral muy bajo, no en arbolado', 'Todo el año en el sureste; parcialmente migradora', 'https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_%C3%A0_lunettes_Aqueduc_de_Zaghouan.jpg?width=1280', 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons', NULL, NULL, 2, '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 2, '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 1, NULL, 'GBIF confirma su presencia con 18 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio', 'Chordata', 'Aves', 'Passeriformes', 'Sylviidae', 'Curruca', 'LC (Preocupación menor)', 'Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)', 'No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)', NULL, 80923, 9868071, 'ES0000269', 1, '{"tipos":["reproductora"],"etiqueta":"Reproductora: cría aquí","sitios":[{"code":"ES0000269","name":"Monte El Valle y Sierras de Altaona y Escalona","seccion":"3.2"}],"fuente":"Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"}'
     UNION ALL
     SELECT 'Aguilucho lagunero occidental', 'Circus aeruginosus', 'fauna', 'Ave rapaz', 'Masas de vegetación palustre,lagunas, ríos y pantanos.Nidos en vegetación a pocos cm del agua,suelo', 'Extinguida', 'El aguilucho lagunero es una rapaz de tamaño medio y aspecto bastante estilizado, aunque ciertamente más robusto que los restantes aguiluchos presentes en nuestra fauna, a los que también supera en envergadura. La especie presenta, como es habitual en otros miembros del género Circus, un acusado dimorfismo sexual, ya que la hembra es bastante mayor y más pesada que el macho, y ambos sexos exhiben plumajes muy diferentes. En el macho adulto predominan los tonos marrones en el dorso, aunque la cabeza y la nuca son amarillentas o ligeramente grisáceas y surcadas por finas estrías oscuras. Las partes inferiores —especialmente a la altura de las patas y el bajo vientre— suelen adquirir un color rojizo, que va dando paso al crema o blanco sucio a medida que subimos hacia el pecho y la garganta, los cuales aparecen suavemente listados. Las rectrices y rémiges secundarias son grises; estas últimas describen una extensa banda alar, muy visible en vuelo . Ventralmente, las alas del macho son más bien claras —blancuzcas o de color gris pálido— y en ellas destacan fuertemente las negras rémiges primarias. Las hembras adultas, por su parte, resultan bastante más oscuras y menos contrastadas, en conjunto, que sus parejas, pues lucen un plumaje —tanto dorsal como ventralmente— dominado por los tonos pardoachocolatados, que en la cabeza, la garganta y los hombros son sustituidos por otros amarillentos o blanquecinos. Los ejemplares recién salidos del nido se parecen bastante a las hembras, aunque resultan más homogéneos y ligeramente más oscuros; además, solo presentan manchas más claras en la cabeza, la nuca y la garganta. Entre la librea juvenil y la de adulto existen varios plumajes de transición, que definen las diferentes edades del ave. Por otra parte, el aguilucho lagunero es una especie en la que no son infrecuentes los casos de melanismo y la aparición de diseños atípicos, lo que en ocasiones puede dificultar su identificación y propiciar las confusiones con especies de tamaño semejante.', NULL, NULL, 'Todo el año', 'https://commons.wikimedia.org/wiki/Special:FilePath/Circus_aeruginosus_samiec2.jpg?width=1280', 'Artur Mikołajewski (CC BY 2.5) · Wikimedia Commons', NULL, NULL, 2, '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 5, '{"categoria":"Extinguida (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)","ambito":"autonómico","origen":"murciaStatus del park.json"}', 0, 1, NULL, 'GBIF confirma su presencia con 13 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio', 'Chordata', 'Aves', 'Accipitriformes', 'Accipitridae', 'Circus', 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)', 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)', 'Extinguida (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)', NULL, 11024, 2480482, 'ES0000269', 1, '{"tipos":["en concentración"],"etiqueta":"En paso migratorio","sitios":[{"code":"ES0000269","name":"Monte El Valle y Sierras de Altaona y Escalona","seccion":"3.2"}],"fuente":"Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"}'
     UNION ALL
@@ -794,7 +794,7 @@ FROM parks pk JOIN (
     UNION ALL
     SELECT 'Terrera común', 'Calandrella brachydactyla', 'fauna', 'Ave esteparia', 'Llanos de cultivo, eriales y pastizales rasos con suelo desnudo', 'Protegida (LESRPE)', 'Alondra pequeña y pálida de aspecto muy limpio, con el pecho sin apenas rayado salvo una mancha oscura a cada lado del cuello. Anida en el suelo, en cultivos y baldíos. En migración se agrupa en bandos que se levantan del suelo todos a la vez.', NULL, 'Mancha oscura a cada lado del cuello, como un botón; Pecho limpio, sin rayado extenso; Ceja clara y pico corto y grueso de granívora', 'Primavera y verano (estival)', 'https://commons.wikimedia.org/wiki/Special:FilePath/Alondra.jpg?width=1280', 'Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons', NULL, NULL, 2, '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 2, '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 1, NULL, 'GBIF confirma su presencia con 9 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio', 'Chordata', 'Aves', 'Passeriformes', 'Alaudidae', 'Calandrella', 'LC', 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I', 'No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)', NULL, 10734, 2490681, 'ES0000269', 0, '{"tipos":["permanente"],"etiqueta":"Residente todo el año","sitios":[{"code":"ES0000269","name":"Monte El Valle y Sierras de Altaona y Escalona","seccion":"3.2"}],"fuente":"Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"}'
     UNION ALL
-    SELECT 'Curruca carrasqueña', 'Curruca cantillans', 'fauna', 'Ave', 'Matorral alto, jarales, encinares aclarados y bordes de bosque', 'Protegida (LESRPE)', 'Curruca de tamaño medio, con el macho de dorso gris, garganta y pecho color teja y un bigote blanco muy nítido que separa ambos. El anillo ocular es rojo. Canta desde el interior del matorral y hace vuelos cortos de exhibición sobre las matas.', NULL, 'Bigote blanco que bordea la garganta rojiza; Anillo ocular rojo anaranjado; Prefiere matorral alto, no el raso', 'Primavera y verano (estival)', 'https://commons.wikimedia.org/wiki/Special:FilePath/%CE%9A%CE%BF%CE%BA%CE%BA%CE%B9%CE%BD%CE%BF%CF%84%CF%83%CE%B9%CF%81%CE%BF%CE%B2%CE%AC%CE%BA%CE%BF%CF%82.jpg?width=1280', 'Antonios Tsaknakis (CC BY-SA 4.0) · Wikimedia Commons', NULL, NULL, 2, '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 2, '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 1, NULL, 'GBIF confirma su presencia con 5 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio', 'Chordata', 'Aves', 'Passeriformes', 'Sylviidae', 'Curruca', 'LC (Preocupación menor) (evaluación UICN 2019)', 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)', 'No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)', NULL, 80920, 2492950, 'ES0000269', NULL, NULL
+    SELECT 'Curruca carrasqueña', 'Curruca cantillans', 'fauna', 'Ave', 'Matorral alto, jarales, encinares aclarados y bordes de bosque', 'Protegida (LESRPE)', 'Curruca de tamaño medio, con el macho de dorso gris, garganta y pecho color teja y un bigote blanco muy nítido que separa ambos. El anillo ocular es rojo. Canta desde el interior del matorral y hace vuelos cortos de exhibición sobre las matas.', NULL, 'Bigote blanco que bordea la garganta rojiza; Anillo ocular rojo anaranjado; Prefiere matorral alto, no el raso', 'Primavera y verano (estival)', 'https://commons.wikimedia.org/wiki/Special:FilePath/%CE%9A%CE%BF%CE%BA%CE%BA%CE%B9%CE%BD%CE%BF%CF%84%CF%83%CE%B9%CF%81%CE%BF%CE%B2%CE%AC%CE%BA%CE%BF%CF%82.jpg?width=1280', 'Antonios Tsaknakis (CC BY-SA 4.0) · Wikimedia Commons', NULL, NULL, 2, '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 2, '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 1, NULL, 'GBIF confirma su presencia con 5 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio', 'Chordata', 'Aves', 'Passeriformes', 'Sylviidae', 'Curruca', 'LC (Preocupación menor) (evaluación UICN 2019)', 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)', 'No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)', NULL, 80920, 2492950, 'ES0000269', 1, '{"tipos":["reproductora"],"etiqueta":"Reproductora: cría aquí","sitios":[{"code":"ES0000269","name":"Monte El Valle y Sierras de Altaona y Escalona","seccion":"3.2"}],"fuente":"Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"}'
     UNION ALL
     SELECT 'Mirlo capiblanco', 'Turdus torquatus', 'fauna', 'Ave', 'Montaña con matorral y pastos; en paso, sierras con enebros y bayas', 'Protegida (LESRPE)', 'Mirlo de montaña que se distingue del común por una banda blanca en forma de media luna sobre el pecho y por las plumas del ala ribeteadas de claro, que dan un aspecto escamado. Es muy desconfiado y se aleja en cuanto detecta movimiento.', NULL, 'Media luna blanca en el pecho; Alas con aspecto escamado y plateado; Mucho más esquivo que el mirlo común', 'Paso migratorio e invernada en montaña', 'https://commons.wikimedia.org/wiki/Special:FilePath/2015-04-20_Turdus_torquatus_torquatus_Cairngorm_3.jpg?width=1280', 'MPF (CC BY-SA 3.0) · Wikimedia Commons', NULL, NULL, 2, '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}', 2, '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}', 0, 1, NULL, 'GBIF confirma su presencia con 4 ocurrencias dentro del espacio (barrido de 2026-08-16); las aves no se adscriben a hábitats; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; sin respaldo documental de sitio: la selección se hizo con --aves-sin-respaldo, así que esta ave entró por sus ocurrencias de GBIF, que en un ave no miden pertenencia al espacio', 'Chordata', 'Aves', 'Passeriformes', 'Turdidae', 'Turdus', 'LC (Preocupación menor) (evaluación UICN 2019)', 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)', 'No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)', NULL, 12324, 7865305, 'ES0000269', 1, '{"tipos":["invernante"],"etiqueta":"Invernante: pasa aquí el invierno","sitios":[{"code":"ES0000269","name":"Monte El Valle y Sierras de Altaona y Escalona","seccion":"3.2"}],"fuente":"Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"}'
     UNION ALL
@@ -846,7 +846,7 @@ ON DUPLICATE KEY UPDATE
     site_presence = VALUES(site_presence);
 
 -- ------------------------------------------------------------------------------------------------
--- 4. Vínculos especie↔hábitat (1258). `evidence` = lo que declara el `source` de cada ficha; ver cabecera.
+-- 4. Vínculos especie↔hábitat (1270). `evidence` = lo que declara el `source` de cada ficha; ver cabecera.
 -- ------------------------------------------------------------------------------------------------
 INSERT INTO species_habitats (species_id, habitat_id, evidence)
 SELECT sp.id, hb.id, v.evidence
@@ -884,7 +884,7 @@ JOIN (
     UNION ALL
     SELECT 'Anthyllis cytisoides', 'prados-calcareos-carsticos-6110', 'observada_gbif'
     UNION ALL
-    SELECT 'Pinus halepensis', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Pinus halepensis', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Pinus halepensis', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
@@ -982,7 +982,7 @@ JOIN (
     UNION ALL
     SELECT 'Sedum sediforme', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
-    SELECT 'Sedum sediforme', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Sedum sediforme', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Sedum sediforme', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
@@ -993,6 +993,8 @@ JOIN (
     SELECT 'Sedum sediforme', 'pastizales-salinos-mediterraneos-1410', 'observada_gbif'
     UNION ALL
     SELECT 'Sedum sediforme', 'prados-humedos-mediterraneos-6420', 'observada_gbif'
+    UNION ALL
+    SELECT 'Sedum sediforme', 'prados-calcareos-carsticos-6110', 'caracteristica'
     UNION ALL
     SELECT 'Cistus monspeliensis', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
@@ -1012,7 +1014,7 @@ JOIN (
     UNION ALL
     SELECT 'Quercus coccifera', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Quercus coccifera', 'encinares-de-quercus-9340', 'observada_gbif'
+    SELECT 'Quercus coccifera', 'encinares-de-quercus-9340', 'caracteristica'
     UNION ALL
     SELECT 'Quercus coccifera', 'galerias-y-matorrales-92D0', 'observada_gbif'
     UNION ALL
@@ -1266,7 +1268,7 @@ JOIN (
     UNION ALL
     SELECT 'Phlomis lychnitis', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
-    SELECT 'Phlomis lychnitis', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Phlomis lychnitis', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Phlomis lychnitis', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
@@ -1422,7 +1424,7 @@ JOIN (
     UNION ALL
     SELECT 'Ophrys tenthredinifera', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
-    SELECT 'Ophrys tenthredinifera', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Ophrys tenthredinifera', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Ophrys tenthredinifera', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
@@ -1586,7 +1588,7 @@ JOIN (
     UNION ALL
     SELECT 'Lafuentea rotundifolia', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
-    SELECT 'Lafuentea rotundifolia', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
+    SELECT 'Lafuentea rotundifolia', 'pendientes-rocosas-calcicolas-8210', 'caracteristica'
     UNION ALL
     SELECT 'Lafuentea rotundifolia', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
@@ -1720,7 +1722,7 @@ JOIN (
     UNION ALL
     SELECT 'Sedum dasyphyllum', 'galerias-y-matorrales-92D0', 'observada_gbif'
     UNION ALL
-    SELECT 'Sideritis leucantha', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Sideritis leucantha', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Sideritis leucantha', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
@@ -1820,7 +1822,7 @@ JOIN (
     UNION ALL
     SELECT 'Chaenorhinum origanifolium', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
-    SELECT 'Chaenorhinum origanifolium', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
+    SELECT 'Chaenorhinum origanifolium', 'pendientes-rocosas-calcicolas-8210', 'caracteristica'
     UNION ALL
     SELECT 'Chaenorhinum origanifolium', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
@@ -1896,7 +1898,7 @@ JOIN (
     UNION ALL
     SELECT 'Phillyrea angustifolia', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Teucrium carolipaui', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Teucrium carolipaui', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Teucrium carolipaui', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
@@ -1922,7 +1924,7 @@ JOIN (
     UNION ALL
     SELECT 'Cosentinia vellea', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
-    SELECT 'Cosentinia vellea', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
+    SELECT 'Cosentinia vellea', 'pendientes-rocosas-calcicolas-8210', 'caracteristica'
     UNION ALL
     SELECT 'Cosentinia vellea', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
@@ -2022,7 +2024,7 @@ JOIN (
     UNION ALL
     SELECT 'Campanula erinus', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
-    SELECT 'Campanula erinus', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Campanula erinus', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Campanula erinus', 'galerias-y-matorrales-92D0', 'observada_gbif'
     UNION ALL
@@ -2088,7 +2090,7 @@ JOIN (
     UNION ALL
     SELECT 'Gladiolus communis', 'rios-mediterraneos-de-3280', 'observada_gbif'
     UNION ALL
-    SELECT 'Helianthemum almeriense', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Helianthemum almeriense', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Helianthemum almeriense', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
@@ -2126,6 +2128,8 @@ JOIN (
     UNION ALL
     SELECT 'Ononis tridentata', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
+    SELECT 'Ononis tridentata', 'vegetacion-gipsicola-iberica-1520', 'caracteristica'
+    UNION ALL
     SELECT 'Poterium ancistroides', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
     SELECT 'Poterium ancistroides', 'zonas-subestepicas-de-6220', 'observada_gbif'
@@ -2142,6 +2146,10 @@ JOIN (
     UNION ALL
     SELECT 'Quercus ilex', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
+    SELECT 'Quercus ilex', 'encinares-de-quercus-9340', 'caracteristica'
+    UNION ALL
+    SELECT 'Quercus ilex', 'matorrales-arborescentes-de-5210', 'caracteristica'
+    UNION ALL
     SELECT 'Santolina viscosa', 'encinares-de-quercus-9340', 'observada_gbif'
     UNION ALL
     SELECT 'Santolina viscosa', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
@@ -2154,7 +2162,7 @@ JOIN (
     UNION ALL
     SELECT 'Sonchus tenerrimus', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
-    SELECT 'Sonchus tenerrimus', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
+    SELECT 'Sonchus tenerrimus', 'pendientes-rocosas-calcicolas-8210', 'caracteristica'
     UNION ALL
     SELECT 'Sonchus tenerrimus', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
@@ -2204,7 +2212,7 @@ JOIN (
     UNION ALL
     SELECT 'Allium moschatum', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Allium moschatum', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Allium moschatum', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Asphodelus cerasifer', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
@@ -2344,7 +2352,7 @@ JOIN (
     UNION ALL
     SELECT 'Narcissus obsoletus', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
-    SELECT 'Ononis speciosa', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Ononis speciosa', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Ononis speciosa', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
@@ -2432,7 +2440,7 @@ JOIN (
     UNION ALL
     SELECT 'Sideritis bourgaeana', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
-    SELECT 'Sideritis bourgaeana', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Sideritis bourgaeana', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Sideritis bourgaeana', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
@@ -2576,11 +2584,11 @@ JOIN (
     UNION ALL
     SELECT 'Galium glaucum', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Genista cinerea', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Genista cinerea', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Genista cinerea', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
-    SELECT 'Genista cinerea', 'matorrales-arborescentes-de-5210', 'observada_gbif'
+    SELECT 'Genista cinerea', 'matorrales-arborescentes-de-5210', 'caracteristica'
     UNION ALL
     SELECT 'Genista cinerea', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
@@ -2660,6 +2668,8 @@ JOIN (
     UNION ALL
     SELECT 'Launaea pumila', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
+    SELECT 'Launaea pumila', 'vegetacion-gipsicola-iberica-1520', 'caracteristica'
+    UNION ALL
     SELECT 'Malva neglecta', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
     SELECT 'Malva neglecta', 'zonas-subestepicas-de-6220', 'observada_gbif'
@@ -2720,7 +2730,7 @@ JOIN (
     UNION ALL
     SELECT 'Onobrychis humilis', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
-    SELECT 'Onobrychis humilis', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Onobrychis humilis', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Onopordum macracanthum', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
@@ -2792,7 +2802,7 @@ JOIN (
     UNION ALL
     SELECT 'Rhamnus oleoides', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
-    SELECT 'Rhamnus oleoides', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Rhamnus oleoides', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Rhamnus oleoides', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
@@ -2900,6 +2910,8 @@ JOIN (
     UNION ALL
     SELECT 'Biscutella valentina', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
+    SELECT 'Biscutella valentina', 'rios-mediterraneos-de-3250', 'caracteristica'
+    UNION ALL
     SELECT 'Bromus rubens', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
     SELECT 'Bromus rubens', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
@@ -2942,7 +2954,7 @@ JOIN (
     UNION ALL
     SELECT 'Centaurea saxicola', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
-    SELECT 'Centaurea saxicola', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
+    SELECT 'Centaurea saxicola', 'pendientes-rocosas-calcicolas-8210', 'caracteristica'
     UNION ALL
     SELECT 'Centaurea seridis', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
@@ -3118,7 +3130,7 @@ JOIN (
     UNION ALL
     SELECT 'Ononis ornithopodioides', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Ononis ornithopodioides', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Ononis ornithopodioides', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Ophrys sphegodes', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
@@ -3184,7 +3196,7 @@ JOIN (
     UNION ALL
     SELECT 'Scorpiurus muricatus', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Scorpiurus muricatus', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Scorpiurus muricatus', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Scorzonera angustifolia', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
@@ -3220,7 +3232,7 @@ JOIN (
     UNION ALL
     SELECT 'Trifolium scabrum', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Trifolium scabrum', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Trifolium scabrum', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Ulmus minor', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
@@ -3256,11 +3268,13 @@ JOIN (
     UNION ALL
     SELECT 'Chaenorhinum grandiflorum', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
+    SELECT 'Chaenorhinum grandiflorum', 'zonas-subestepicas-de-6220', 'caracteristica'
+    UNION ALL
     SELECT 'Chaenorhinum rupestre', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
     SELECT 'Chaenorhinum rupestre', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Chaenorhinum rupestre', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Chaenorhinum rupestre', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Cheirolophus intybaceus', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
@@ -3272,7 +3286,7 @@ JOIN (
     UNION ALL
     SELECT 'Eryngium ilicifolium', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Eryngium ilicifolium', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Eryngium ilicifolium', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Galium murale', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
@@ -3290,6 +3304,8 @@ JOIN (
     UNION ALL
     SELECT 'Gypsophila struthium', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
+    SELECT 'Gypsophila struthium', 'vegetacion-gipsicola-iberica-1520', 'caracteristica'
+    UNION ALL
     SELECT 'Halocnemum strobilaceum', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
     SELECT 'Halocnemum strobilaceum', 'zonas-subestepicas-de-6220', 'observada_gbif'
@@ -3299,6 +3315,8 @@ JOIN (
     SELECT 'Helianthemum squamatum', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
     SELECT 'Helianthemum squamatum', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    UNION ALL
+    SELECT 'Helianthemum squamatum', 'vegetacion-gipsicola-iberica-1520', 'caracteristica'
     UNION ALL
     SELECT 'Hemidactylus turcicus', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
@@ -3342,9 +3360,11 @@ JOIN (
     UNION ALL
     SELECT 'Tamarix boveana', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
+    SELECT 'Tamarix boveana', 'galerias-y-matorrales-92D0', 'caracteristica'
+    UNION ALL
     SELECT 'Teucrium buxifolium', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL
-    SELECT 'Teucrium buxifolium', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
+    SELECT 'Teucrium buxifolium', 'pendientes-rocosas-calcicolas-8210', 'caracteristica'
     UNION ALL
     SELECT 'Teucrium buxifolium', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
@@ -3354,7 +3374,11 @@ JOIN (
     UNION ALL
     SELECT 'Teucrium pumilum', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
+    SELECT 'Teucrium pumilum', 'vegetacion-gipsicola-iberica-1520', 'caracteristica'
+    UNION ALL
     SELECT 'Teucrium thymifolium', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    UNION ALL
+    SELECT 'Teucrium thymifolium', 'pendientes-rocosas-calcicolas-8210', 'caracteristica'
     UNION ALL
     SELECT 'Timon lepidus', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
     UNION ALL

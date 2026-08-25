@@ -1,0 +1,300 @@
+{
+ "park": "sierra-de-el-carche",
+ "generado": "Atlas y Manual de los Hábitats de España (MITECO) ∩ catálogo del parque",
+ "hic": {
+  "1520": {
+   "habitat": "vegetacion-gipsicola-iberica-1520",
+   "especies": [
+    "Astragalus alopecuroides",
+    "Helianthemum squamatum"
+   ]
+  },
+  "4090": {
+   "habitat": "matorrales-mediterraneos-y-4090",
+   "especies": [
+    "Anthyllis vulneraria",
+    "Centaurea boissieri",
+    "Teucrium leonis",
+    "Ulex europaeus"
+   ]
+  },
+  "5210": {
+   "habitat": "matorrales-arborescentes-de-5210",
+   "especies": [
+    "Quercus ilex",
+    "Teucrium chamaedrys"
+   ]
+  },
+  "5330": {
+   "habitat": "matorrales-termomediterraneos-y-5330",
+   "especies": [
+    "Helianthemum hirtum",
+    "Sideritis bourgaeana",
+    "Teucrium franchetianum",
+    "Pinus halepensis"
+   ]
+  },
+  "6110": {
+   "habitat": "prados-calcareos-carsticos-6110",
+   "especies": [
+    "Sedum acre",
+    "Sedum album",
+    "Sedum gypsicola",
+    "Sedum sediforme"
+   ]
+  },
+  "6170": {
+   "habitat": "prados-alpinos-y-6170",
+   "especies": [
+    "Anthyllis vulneraria"
+   ]
+  },
+  "6220": {
+   "habitat": "zonas-subestepicas-de-6220",
+   "especies": [
+    "Buglossoides arvensis",
+    "Sedum gypsicola",
+    "Sedum sediforme",
+    "Phlomis lychnitis",
+    "Alyssum alyssoides",
+    "Hornungia petraea",
+    "Minuartia hamata",
+    "Odontites viscosus",
+    "Astragalus sesameus",
+    "Plantago albicans"
+   ]
+  },
+  "8210": {
+   "habitat": "pendientes-rocosas-calcicolas-8210",
+   "especies": [
+    "Linaria cavanillesii",
+    "Teucrium thymifolium",
+    "Cosentinia vellea"
+   ]
+  },
+  "9340": {
+   "habitat": "encinares-de-quercus-9340",
+   "especies": [
+    "Quercus ilex",
+    "Teucrium chamaedrys",
+    "Quercus coccifera"
+   ]
+  },
+  "9530": {
+   "habitat": "pinares-sub-mediterraneos-9530",
+   "especies": [
+    "Pinus nigra"
+   ]
+  },
+  "9560": {
+   "habitat": "bosques-endemicos-de-9560",
+   "especies": []
+  }
+ },
+ "links": [
+  {
+   "code": "5210",
+   "habitat_slug": "matorrales-arborescentes-de-5210",
+   "scientific_name": "Quercus ilex",
+   "atlas_name": "Quercus ilex subsp. ilex"
+  },
+  {
+   "code": "5210",
+   "habitat_slug": "matorrales-arborescentes-de-5210",
+   "scientific_name": "Teucrium chamaedrys",
+   "atlas_name": "Teucrium chamaedrys subsp. pinnatifidum"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Helianthemum hirtum",
+   "atlas_name": "Helianthemum hirtum subsp. bethuricum"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Sideritis bourgaeana",
+   "atlas_name": "Sideritis bourgaeana"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Teucrium franchetianum",
+   "atlas_name": "Teucrium franchetianum"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Pinus halepensis",
+   "atlas_name": "Pinus halepensis var. ceciliae"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Buglossoides arvensis",
+   "atlas_name": "Buglossoides arvensis subsp. gasparrinii"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Sedum gypsicola",
+   "atlas_name": "Sedum gypsicola"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Sedum sediforme",
+   "atlas_name": "Sedum sediforme subsp. dianium"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Phlomis lychnitis",
+   "atlas_name": "Phlomis lychnitis"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Alyssum alyssoides",
+   "atlas_name": "Alyssum alyssoides subsp. hispanicum"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Hornungia petraea",
+   "atlas_name": "Hornungia petraea"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Minuartia hamata",
+   "atlas_name": "Minuartia hamata"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Odontites viscosus",
+   "atlas_name": "Odontites viscosus subsp. oscensis"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Astragalus sesameus",
+   "atlas_name": "Astragalus sesameus"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Plantago albicans",
+   "atlas_name": "Plantago albicans"
+  },
+  {
+   "code": "9340",
+   "habitat_slug": "encinares-de-quercus-9340",
+   "scientific_name": "Quercus ilex",
+   "atlas_name": "Quercus ilex subsp. ilex"
+  },
+  {
+   "code": "9340",
+   "habitat_slug": "encinares-de-quercus-9340",
+   "scientific_name": "Teucrium chamaedrys",
+   "atlas_name": "Teucrium chamaedrys subsp. pinnatifidum"
+  },
+  {
+   "code": "9340",
+   "habitat_slug": "encinares-de-quercus-9340",
+   "scientific_name": "Quercus coccifera",
+   "atlas_name": "Quercus coccifera subsp. rivasmartinezii"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Linaria cavanillesii",
+   "atlas_name": "Linaria cavanillesii"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Teucrium thymifolium",
+   "atlas_name": "Teucrium thymifolium"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Cosentinia vellea",
+   "atlas_name": "Cosentinia vellea subsp. bivalens"
+  },
+  {
+   "code": "1520",
+   "habitat_slug": "vegetacion-gipsicola-iberica-1520",
+   "scientific_name": "Astragalus alopecuroides",
+   "atlas_name": "Astragalus alopecuroides subsp. grosii"
+  },
+  {
+   "code": "1520",
+   "habitat_slug": "vegetacion-gipsicola-iberica-1520",
+   "scientific_name": "Helianthemum squamatum",
+   "atlas_name": "Helianthemum squamatum"
+  },
+  {
+   "code": "6110",
+   "habitat_slug": "prados-calcareos-carsticos-6110",
+   "scientific_name": "Sedum acre",
+   "atlas_name": "Sedum acre"
+  },
+  {
+   "code": "6110",
+   "habitat_slug": "prados-calcareos-carsticos-6110",
+   "scientific_name": "Sedum album",
+   "atlas_name": "Sedum album"
+  },
+  {
+   "code": "6110",
+   "habitat_slug": "prados-calcareos-carsticos-6110",
+   "scientific_name": "Sedum gypsicola",
+   "atlas_name": "Sedum gypsicola"
+  },
+  {
+   "code": "6110",
+   "habitat_slug": "prados-calcareos-carsticos-6110",
+   "scientific_name": "Sedum sediforme",
+   "atlas_name": "Sedum sediforme subsp. dianium"
+  },
+  {
+   "code": "6170",
+   "habitat_slug": "prados-alpinos-y-6170",
+   "scientific_name": "Anthyllis vulneraria",
+   "atlas_name": "Anthyllis vulneraria subsp. alpestris"
+  },
+  {
+   "code": "4090",
+   "habitat_slug": "matorrales-mediterraneos-y-4090",
+   "scientific_name": "Anthyllis vulneraria",
+   "atlas_name": "Anthyllis vulneraria subsp. balearica"
+  },
+  {
+   "code": "4090",
+   "habitat_slug": "matorrales-mediterraneos-y-4090",
+   "scientific_name": "Centaurea boissieri",
+   "atlas_name": "Centaurea boissieri subsp. boissieri"
+  },
+  {
+   "code": "4090",
+   "habitat_slug": "matorrales-mediterraneos-y-4090",
+   "scientific_name": "Teucrium leonis",
+   "atlas_name": "Teucrium leonis"
+  },
+  {
+   "code": "4090",
+   "habitat_slug": "matorrales-mediterraneos-y-4090",
+   "scientific_name": "Ulex europaeus",
+   "atlas_name": "Ulex europaeus"
+  },
+  {
+   "code": "9530",
+   "habitat_slug": "pinares-sub-mediterraneos-9530",
+   "scientific_name": "Pinus nigra",
+   "atlas_name": "Pinus nigra subsp. mauretanica"
+  }
+ ]
+}

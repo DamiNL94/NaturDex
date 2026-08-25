@@ -667,7 +667,8 @@
         439,
         442,
         443,
-        444
+        444,
+        445
       ],
       "imageAttribution": "tato grasso (CC BY-SA 2.5) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Aladierno (Rhamnus alaternus), la especie que da nombre al hábitat."
@@ -807,6 +808,7 @@
         168,
         169,
         170,
+        171,
         173,
         175,
         176,
@@ -1118,6 +1120,7 @@
         68,
         71,
         89,
+        91,
         147,
         148,
         149,
@@ -1208,7 +1211,13 @@
       "audio": null,
       "audioTranscript": null,
       "reviewNote": "Sin especies en el catálogo, y el hueco es real: el barrido de GBIF ∩ polígonos no encuentra NINGUNA ocurrencia dentro de sus 1,2 ha, que es el recinto más pequeño del espacio. Sin constancia dentro del polígono no entra ninguna especie (filtro 1 de la selección), así que el hueco se cierra con trabajo de campo, no con más fuentes.",
-      "speciesIds": []
+      "speciesIds": [
+        160,
+        178,
+        182,
+        321,
+        444
+      ]
     },
     {
       "id": "aguas-oligomesotroficas-calcareas-3140",
@@ -1376,6 +1385,7 @@
         14,
         246,
         247,
+        248,
         251,
         261,
         266,
@@ -1461,6 +1471,7 @@
         51,
         57,
         58,
+        63,
         80,
         147,
         158,
@@ -1528,7 +1539,8 @@
         2,
         267,
         268,
-        270
+        270,
+        395
       ],
       "imageAttribution": "A.Savin (FAL) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Jabalí (Sus scrofa), la especie que da nombre al hábitat."
@@ -1594,6 +1606,7 @@
         56,
         58,
         59,
+        63,
         64,
         69,
         74,
@@ -2685,7 +2698,8 @@
         "matorrales-arborescentes-de-5210",
         "galerias-y-matorrales-92D0",
         "pastizales-salinos-mediterraneos-1410",
-        "prados-humedos-mediterraneos-6420"
+        "prados-humedos-mediterraneos-6420",
+        "prados-calcareos-carsticos-6110"
       ],
       "gbifOccurrences": 40,
       "visible": true
@@ -9319,7 +9333,8 @@
       "habitatIds": [
         "matorrales-termomediterraneos-y-5330",
         "zonas-subestepicas-de-6220",
-        "pendientes-rocosas-calcicolas-8210"
+        "pendientes-rocosas-calcicolas-8210",
+        "vegetacion-gipsicola-iberica-1520"
       ],
       "gbifOccurrences": 5,
       "visible": false,
@@ -9430,7 +9445,9 @@
         "matorrales-termomediterraneos-y-5330",
         "galerias-y-matorrales-92D0",
         "zonas-subestepicas-de-6220",
-        "pendientes-rocosas-calcicolas-8210"
+        "pendientes-rocosas-calcicolas-8210",
+        "encinares-de-quercus-9340",
+        "matorrales-arborescentes-de-5210"
       ],
       "gbifOccurrences": 5,
       "visible": true
@@ -13099,7 +13116,7 @@
         "origen": "spainStatus del park.json"
       },
       "featured": false,
-      "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (3 hábitats; Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; barrido de 2026-08-16); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -13118,7 +13135,8 @@
       "habitatIds": [
         "matorrales-arborescentes-de-5210",
         "matorrales-termomediterraneos-y-5330",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "vegetacion-gipsicola-iberica-1520"
       ],
       "gbifOccurrences": 3,
       "visible": false,
@@ -14831,7 +14849,8 @@
       "habitatIds": [
         "matorrales-termomediterraneos-y-5330",
         "pendientes-rocosas-calcicolas-8210",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "rios-mediterraneos-de-3250"
       ],
       "gbifOccurrences": 2,
       "visible": false,
@@ -17635,7 +17654,8 @@
         "encinares-de-quercus-9340",
         "matorrales-arborescentes-de-5210",
         "matorrales-termomediterraneos-y-5330",
-        "pendientes-rocosas-calcicolas-8210"
+        "pendientes-rocosas-calcicolas-8210",
+        "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 1,
       "visible": false,
@@ -17996,7 +18016,8 @@
       "zepaSiteCode": null,
       "habitatIds": [
         "matorrales-termomediterraneos-y-5330",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "vegetacion-gipsicola-iberica-1520"
       ],
       "gbifOccurrences": 1,
       "visible": false,
@@ -18104,7 +18125,8 @@
       "habitatIds": [
         "matorrales-termomediterraneos-y-5330",
         "pendientes-rocosas-calcicolas-8210",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "vegetacion-gipsicola-iberica-1520"
       ],
       "gbifOccurrences": 1,
       "visible": true
@@ -18542,7 +18564,8 @@
       "zepaSiteCode": null,
       "habitatIds": [
         "matorrales-termomediterraneos-y-5330",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "galerias-y-matorrales-92D0"
       ],
       "gbifOccurrences": 1,
       "visible": true
@@ -18643,7 +18666,8 @@
       "habitatIds": [
         "matorrales-termomediterraneos-y-5330",
         "pendientes-rocosas-calcicolas-8210",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "vegetacion-gipsicola-iberica-1520"
       ],
       "gbifOccurrences": 1,
       "visible": false,
@@ -18698,7 +18722,8 @@
       "gbifSpeciesKey": 3892761,
       "zepaSiteCode": null,
       "habitatIds": [
-        "matorrales-termomediterraneos-y-5330"
+        "matorrales-termomediterraneos-y-5330",
+        "pendientes-rocosas-calcicolas-8210"
       ],
       "gbifOccurrences": 1,
       "visible": true
@@ -20862,6 +20887,21 @@
       "eidosTaxonId": 80923,
       "gbifSpeciesKey": 9868071,
       "zepaSiteCode": "ES0000269",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 18,
       "visible": true
@@ -21174,6 +21214,21 @@
       "eidosTaxonId": 80920,
       "gbifSpeciesKey": 2492950,
       "zepaSiteCode": "ES0000269",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
       "habitatIds": [],
       "gbifOccurrences": 5,
       "visible": true

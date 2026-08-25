@@ -8,7 +8,7 @@
 -- Hace falta porque Frontend/Js/data.js da PRIORIDAD a la API sobre el park.json empaquetado:
 -- con backend desplegado, un espacio que no esté en la base de datos no existe para el usuario.
 --
--- Contenido: 1 espacio · 7 hábitats · 105 especies · 178 vínculos especie↔hábitat.
+-- Contenido: 1 espacio · 7 hábitats · 105 especies · 179 vínculos especie↔hábitat.
 -- Los puntos de interés van aparte, en `n3-pois-<slug>.sql` (build-poi-sql.js).
 --
 -- ORDEN: la fila de `parks` va PRIMERO y no es opcional. Sin ella los INSERT ... SELECT de
@@ -314,7 +314,7 @@ ON DUPLICATE KEY UPDATE
     site_presence = VALUES(site_presence);
 
 -- ------------------------------------------------------------------------------------------------
--- 4. Vínculos especie↔hábitat (178). `evidence` = lo que declara el `source` de cada ficha; ver cabecera.
+-- 4. Vínculos especie↔hábitat (179). `evidence` = lo que declara el `source` de cada ficha; ver cabecera.
 -- ------------------------------------------------------------------------------------------------
 INSERT INTO species_habitats (species_id, habitat_id, evidence)
 SELECT sp.id, hb.id, v.evidence
@@ -330,7 +330,7 @@ JOIN (
     UNION ALL
     SELECT 'Pinus halepensis', 'bosques-galeria-de-92A0', 'observada_gbif'
     UNION ALL
-    SELECT 'Pinus halepensis', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Pinus halepensis', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Rosmarinus officinalis', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
@@ -362,7 +362,7 @@ JOIN (
     UNION ALL
     SELECT 'Quercus coccifera', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
-    SELECT 'Quercus coccifera', 'encinares-de-quercus-9340', 'observada_gbif'
+    SELECT 'Quercus coccifera', 'encinares-de-quercus-9340', 'caracteristica'
     UNION ALL
     SELECT 'Quercus coccifera', 'bosques-galeria-de-92A0', 'observada_gbif'
     UNION ALL
@@ -404,7 +404,7 @@ JOIN (
     UNION ALL
     SELECT 'Rhamnus oleoides', 'bosques-galeria-de-92A0', 'observada_gbif'
     UNION ALL
-    SELECT 'Rhamnus oleoides', 'matorrales-termomediterraneos-y-5330', 'observada_gbif'
+    SELECT 'Rhamnus oleoides', 'matorrales-termomediterraneos-y-5330', 'caracteristica'
     UNION ALL
     SELECT 'Rhamnus oleoides', 'encinares-de-quercus-9340', 'observada_gbif'
     UNION ALL
@@ -474,7 +474,7 @@ JOIN (
     UNION ALL
     SELECT 'Centaurea boissieri', 'matorrales-arborescentes-de-5210', 'observada_gbif'
     UNION ALL
-    SELECT 'Centaurea boissieri', 'matorrales-mediterraneos-y-4090', 'observada_gbif'
+    SELECT 'Centaurea boissieri', 'matorrales-mediterraneos-y-4090', 'caracteristica'
     UNION ALL
     SELECT 'Centaurea boissieri', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
@@ -504,7 +504,7 @@ JOIN (
     UNION ALL
     SELECT 'Helianthemum croceum', 'encinares-de-quercus-9340', 'observada_gbif'
     UNION ALL
-    SELECT 'Helianthemum croceum', 'matorrales-mediterraneos-y-4090', 'observada_gbif'
+    SELECT 'Helianthemum croceum', 'matorrales-mediterraneos-y-4090', 'caracteristica'
     UNION ALL
     SELECT 'Helianthemum croceum', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
@@ -592,6 +592,8 @@ JOIN (
     UNION ALL
     SELECT 'Anthyllis vulneraria', 'zonas-subestepicas-de-6220', 'observada_gbif'
     UNION ALL
+    SELECT 'Anthyllis vulneraria', 'matorrales-mediterraneos-y-4090', 'caracteristica'
+    UNION ALL
     SELECT 'Aria edulis', 'encinares-de-quercus-9340', 'observada_gbif'
     UNION ALL
     SELECT 'Aria edulis', 'matorrales-arborescentes-de-5210', 'observada_gbif'
@@ -658,7 +660,7 @@ JOIN (
     UNION ALL
     SELECT 'Odontites viscosus', 'pendientes-rocosas-calcicolas-8210', 'observada_gbif'
     UNION ALL
-    SELECT 'Odontites viscosus', 'zonas-subestepicas-de-6220', 'observada_gbif'
+    SELECT 'Odontites viscosus', 'zonas-subestepicas-de-6220', 'caracteristica'
     UNION ALL
     SELECT 'Quercus faginea', 'encinares-de-quercus-9340', 'observada_gbif'
     UNION ALL

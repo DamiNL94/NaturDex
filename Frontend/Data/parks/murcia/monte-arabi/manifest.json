@@ -2,8 +2,8 @@
   "slug": "monte-arabi",
   "name": "Monte Arabí",
   "apiSlug": "monte-arabi",
-  "version": 5,
-  "updatedAt": "2026-08-15",
+  "version": 6,
+  "updatedAt": "2026-08-25",
   "data": "Data/parks/murcia/monte-arabi/park.json",
   "geo": {
     "parque": "Data/parks/murcia/monte-arabi/geo/parque.geojson",

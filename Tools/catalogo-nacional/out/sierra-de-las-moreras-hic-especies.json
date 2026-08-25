@@ -78,18 +78,6 @@
    "atlas_name": "Plantago amplexicaulis"
   },
   {
-   "code": "6220",
-   "habitat_slug": "zonas-subestepicas-de-6220",
-   "scientific_name": "Lygeum spartum",
-   "atlas_name": "Lygeum spartum"
-  },
-  {
-   "code": "6220",
-   "habitat_slug": "zonas-subestepicas-de-6220",
-   "scientific_name": "Lapiedra martinezii",
-   "atlas_name": "Lapiedra martinezii"
-  },
-  {
    "code": "5220",
    "habitat_slug": "matorrales-arborescentes-de-5220",
    "scientific_name": "Periploca angustifolia",
@@ -108,6 +96,24 @@
    "atlas_name": "Teucrium freynii"
   },
   {
+   "code": "1510",
+   "habitat_slug": "estepas-salinas-mediterraneas-1510",
+   "scientific_name": "Limonium insigne",
+   "atlas_name": "Limonium insigne"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Lygeum spartum",
+   "atlas_name": "Lygeum spartum"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Lapiedra martinezii",
+   "atlas_name": "Lapiedra martinezii"
+  },
+  {
    "code": "1430",
    "habitat_slug": "matorrales-halonitrofilos-pegano-1430",
    "scientific_name": "Artemisia barrelieri",
@@ -124,12 +130,6 @@
    "habitat_slug": "matorrales-halonitrofilos-pegano-1430",
    "scientific_name": "Withania frutescens",
    "atlas_name": "Withania frutescens"
-  },
-  {
-   "code": "1510",
-   "habitat_slug": "estepas-salinas-mediterraneas-1510",
-   "scientific_name": "Limonium insigne",
-   "atlas_name": "Limonium insigne"
   },
   {
    "code": "1510",

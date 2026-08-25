@@ -195,9 +195,23 @@ En este orden, y ninguno de los tres es «bajar el umbral»:
   Sierra de las Moreras entre ellas— salían anunciadas como migratorias en su ficha y contadas en una
   barra de progreso del mismo nombre. No fallaba nada: salía en verde y decía algo falso.
 
-  En un espacio ya publicado se aplica con `npm run aves:fenologia -- --write`, que lee el volcado
-  del sitio que ya está en `out/` en vez de rehacer la Capa 3 entera. Idempotente, y lo que no casa
-  por nombre **sale listado** en vez de adivinarse.
+  En un espacio ya publicado se aplica con `npm run aves:fenologia -- --online --write`, que lee el
+  volcado del sitio que ya está en `out/` en vez de rehacer la Capa 3 entera. Idempotente, y lo que no
+  casa por nombre **sale listado** en vez de adivinarse.
+
+  **`--online` no es opcional en la práctica**: sin él la herramienta se salta la capa 2 del puente
+  (§5) —resolver contra EIDOS el nombre de la FUENTE— y deja sin clasificar todas las aves que el
+  formulario cita con la nomenclatura de su época. Eran 53 entradas en 12 espacios, y **no se podían
+  cerrar con la capa 3**: dar de alta en la tabla lo que EIDOS ya sabe está prohibido por el propio
+  fichero de equivalencias, y con razón (sería una segunda verdad que puede divergir). Con la capa 2
+  puesta quedan 29, y ésas ya no son de nomenclatura: son aves que el formulario declara y que el
+  catálogo del espacio no tiene fichadas.
+
+  > Y un detalle que cuesta ocho de ellas si se pasa por alto: el verbatim del formulario **no se
+  > puede consultar tal cual** contra EIDOS —«Sylvia cantillans ([excluding subalpina])» no empieza
+  > por ningún nombre de la lista patrón—, y el `binomio()` de `lib/atlas.js` **tampoco sirve** para
+  > consultar, aunque parezca lo obvio: es la clave de COTEJO, en minúsculas y con la terminación de
+  > género recortada («larus ridibund»). Hace falta un «Género epíteto» de verdad.
 - **`habitatIds`** — vacío, siempre, en un ave. Un ave con `habitatIds` **se contradice a sí misma**
   y el validador lo avisa; se limpia regenerando la Capa 3.
 - **`source`** — trae la cita del formulario con su sitio, su sección y el **tipo de población
@@ -216,7 +230,15 @@ En este orden, y ninguno de los tres es «bajar el umbral»:
   año. Reparto sobre los dieciséis espacios: **405 migratorias, 154 residentes declaradas y 591 aves
   sin señal**. Quedan por cerrar ~50 entradas del formulario que no casan por nombre —*Sylvia
   conspicillata*, *Larus ridibundus*, *Cyanecula svecica*…—: cada una es un ave que se queda sin
-  clasificar, y se cierran en `data/equivalencias-nomenclatura.json` (§5).
+  clasificar.
+
+- **2026-08-25** — resulta que esas ~50 **no se cerraban en la tabla de equivalencias**, y decir que sí
+  era mandar a quien lo leyera contra una puerta cerrada: el propio fichero prohíbe dar de alta lo que
+  EIDOS ya sabe, y *Larus ridibundus* → *Chroicocephalus ridibundus* lo sabe. Lo que faltaba era la
+  **capa 2 del puente**, que `aplica-fenologia-aves.js` no hacía por ser asíncrona y con red. Puesta
+  (`--online`): **de 53 huecos quedan 29** y las migratorias suben de **405 a 420**. Las 29 restantes
+  son aves declaradas por el formulario y no fichadas en el catálogo del espacio —doce en Sierra de la
+  Pila—: ahí no falta una equivalencia, falta una ficha.
 
 - **2026-08-15** — se cablea `especies-sitio-rn2000.js` (la lista oficial nunca había estado
   conectada: `zepaSiteCode` salía del `zepa.geojson` del propio espacio) y se escribe el filtro 3 bis

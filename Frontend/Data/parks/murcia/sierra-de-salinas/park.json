@@ -307,7 +307,8 @@
         6,
         15,
         19,
-        21
+        21,
+        29
       ],
       "imageAttribution": null,
       "imageNote": null
@@ -2053,7 +2054,8 @@
         "encinares-de-quercus-9340",
         "matorrales-arborescentes-de-5210",
         "pendientes-rocosas-calcicolas-8210",
-        "zonas-subestepicas-de-6220"
+        "zonas-subestepicas-de-6220",
+        "matorrales-mediterraneos-y-4090"
       ],
       "gbifOccurrences": 1,
       "visible": false,

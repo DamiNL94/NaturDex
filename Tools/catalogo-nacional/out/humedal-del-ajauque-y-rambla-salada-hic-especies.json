@@ -126,18 +126,6 @@
    "atlas_name": "Pinus halepensis var. ceciliae"
   },
   {
-   "code": "1430",
-   "habitat_slug": "matorrales-halonitrofilos-pegano-1430",
-   "scientific_name": "Artemisia barrelieri",
-   "atlas_name": "Artemisia barrelieri"
-  },
-  {
-   "code": "1430",
-   "habitat_slug": "matorrales-halonitrofilos-pegano-1430",
-   "scientific_name": "Withania frutescens",
-   "atlas_name": "Withania frutescens"
-  },
-  {
    "code": "6110",
    "habitat_slug": "prados-calcareos-carsticos-6110",
    "scientific_name": "Sedum sediforme",
@@ -148,6 +136,18 @@
    "habitat_slug": "pendientes-rocosas-calcicolas-8210",
    "scientific_name": "Teucrium freynii",
    "atlas_name": "Teucrium freynii"
+  },
+  {
+   "code": "1430",
+   "habitat_slug": "matorrales-halonitrofilos-pegano-1430",
+   "scientific_name": "Artemisia barrelieri",
+   "atlas_name": "Artemisia barrelieri"
+  },
+  {
+   "code": "1430",
+   "habitat_slug": "matorrales-halonitrofilos-pegano-1430",
+   "scientific_name": "Withania frutescens",
+   "atlas_name": "Withania frutescens"
   }
  ]
 }

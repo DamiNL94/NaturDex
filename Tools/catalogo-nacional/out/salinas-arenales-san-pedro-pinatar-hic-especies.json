@@ -1,0 +1,297 @@
+{
+ "park": "salinas-arenales-san-pedro-pinatar",
+ "generado": "Atlas y Manual de los Hábitats de España (MITECO) ∩ catálogo del parque",
+ "hic": {
+  "1150": {
+   "habitat": "lagunas-costeras-1150",
+   "especies": [
+    "Ruppia cirrhosa",
+    "Ruppia maritima",
+    "Zostera marina"
+   ]
+  },
+  "1210": {
+   "habitat": "vegetacion-anual-sobre-1210",
+   "especies": [
+    "Atriplex rosea",
+    "Cakile maritima"
+   ]
+  },
+  "1240": {
+   "habitat": "acantilados-con-vegetacion-1240",
+   "especies": [
+    "Sonchus tenerrimus"
+   ]
+  },
+  "1310": {
+   "habitat": "vegetacion-halonitrofila-anual-1310",
+   "especies": [
+    "Salicornia patula"
+   ]
+  },
+  "1410": {
+   "habitat": "pastizales-salinos-mediterraneos-1410",
+   "especies": [
+    "Linum maritimum",
+    "Plantago crassifolia"
+   ]
+  },
+  "1420": {
+   "habitat": "matorrales-halofilos-mediterraneos-1420",
+   "especies": [
+    "Sarcocornia fruticosa",
+    "Arthrocnemum macrostachyum",
+    "Frankenia corymbosa",
+    "Halocnemum strobilaceum",
+    "Suaeda vera"
+   ]
+  },
+  "1430": {
+   "habitat": "matorrales-halonitrofilos-pegano-1430",
+   "especies": []
+  },
+  "1510": {
+   "habitat": "estepas-salinas-mediterraneas-1510",
+   "especies": [
+    "Filago mareotica",
+    "Hymenolobus procumbens",
+    "Limonium angustebracteatum",
+    "Limonium caesium",
+    "Limonium delicatulum"
+   ]
+  },
+  "2110": {
+   "habitat": "dunas-moviles-embrionarias-2110",
+   "especies": []
+  },
+  "2120": {
+   "habitat": "dunas-moviles-de-2120",
+   "especies": [
+    "Ammophila arenaria subsp. arundinacea",
+    "Echinophora spinosa"
+   ]
+  },
+  "2210": {
+   "habitat": "dunas-fijas-de-2210",
+   "especies": [
+    "Echium sabulicola",
+    "Launaea fragilis",
+    "Teucrium dunense"
+   ]
+  },
+  "2230": {
+   "habitat": "dunas-con-cespedes-2230",
+   "especies": [
+    "Maresia nana"
+   ]
+  },
+  "2250": {
+   "habitat": "dunas-litorales-con-2250",
+   "especies": []
+  },
+  "2260": {
+   "habitat": "dunas-con-vegetacion-2260",
+   "especies": [
+    "Helianthemum almeriense",
+    "Helianthemum marminorense",
+    "Pinus halepensis",
+    "Cytinus hypocistis"
+   ]
+  },
+  "92D0": {
+   "habitat": "galerias-y-matorrales-92D0",
+   "especies": [
+    "Tamarix boveana",
+    "Tamarix canariensis"
+   ]
+  }
+ },
+ "links": [
+  {
+   "code": "1210",
+   "habitat_slug": "vegetacion-anual-sobre-1210",
+   "scientific_name": "Atriplex rosea",
+   "atlas_name": "Atriplex rosea subsp. tarraconensis"
+  },
+  {
+   "code": "1210",
+   "habitat_slug": "vegetacion-anual-sobre-1210",
+   "scientific_name": "Cakile maritima",
+   "atlas_name": "Cakile maritima subsp. maritima"
+  },
+  {
+   "code": "2230",
+   "habitat_slug": "dunas-con-cespedes-2230",
+   "scientific_name": "Maresia nana",
+   "atlas_name": "Maresia nana"
+  },
+  {
+   "code": "2120",
+   "habitat_slug": "dunas-moviles-de-2120",
+   "scientific_name": "Ammophila arenaria subsp. arundinacea",
+   "atlas_name": "Ammophila arenaria subsp. australis"
+  },
+  {
+   "code": "2120",
+   "habitat_slug": "dunas-moviles-de-2120",
+   "scientific_name": "Echinophora spinosa",
+   "atlas_name": "Echinophora spinosa"
+  },
+  {
+   "code": "2210",
+   "habitat_slug": "dunas-fijas-de-2210",
+   "scientific_name": "Echium sabulicola",
+   "atlas_name": "Echium sabulicola"
+  },
+  {
+   "code": "2210",
+   "habitat_slug": "dunas-fijas-de-2210",
+   "scientific_name": "Launaea fragilis",
+   "atlas_name": "Launaea fragilis subsp. viminea"
+  },
+  {
+   "code": "2210",
+   "habitat_slug": "dunas-fijas-de-2210",
+   "scientific_name": "Teucrium dunense",
+   "atlas_name": "Teucrium dunense"
+  },
+  {
+   "code": "1410",
+   "habitat_slug": "pastizales-salinos-mediterraneos-1410",
+   "scientific_name": "Linum maritimum",
+   "atlas_name": "Linum maritimum"
+  },
+  {
+   "code": "1410",
+   "habitat_slug": "pastizales-salinos-mediterraneos-1410",
+   "scientific_name": "Plantago crassifolia",
+   "atlas_name": "Plantago crassifolia"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Sarcocornia fruticosa",
+   "atlas_name": "Sarcocornia fruticosa"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Arthrocnemum macrostachyum",
+   "atlas_name": "Arthrocnemum macrostachyum"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Frankenia corymbosa",
+   "atlas_name": "Frankenia corymbosa"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Halocnemum strobilaceum",
+   "atlas_name": "Halocnemum strobilaceum"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Suaeda vera",
+   "atlas_name": "Suaeda vera"
+  },
+  {
+   "code": "1310",
+   "habitat_slug": "vegetacion-halonitrofila-anual-1310",
+   "scientific_name": "Salicornia patula",
+   "atlas_name": "Salicornia patula"
+  },
+  {
+   "code": "2260",
+   "habitat_slug": "dunas-con-vegetacion-2260",
+   "scientific_name": "Helianthemum almeriense",
+   "atlas_name": "Helianthemum almeriense subsp. almeriense"
+  },
+  {
+   "code": "2260",
+   "habitat_slug": "dunas-con-vegetacion-2260",
+   "scientific_name": "Helianthemum marminorense",
+   "atlas_name": "Helianthemum marminorensis"
+  },
+  {
+   "code": "2260",
+   "habitat_slug": "dunas-con-vegetacion-2260",
+   "scientific_name": "Pinus halepensis",
+   "atlas_name": "Pinus halepensis var. ceciliae"
+  },
+  {
+   "code": "2260",
+   "habitat_slug": "dunas-con-vegetacion-2260",
+   "scientific_name": "Cytinus hypocistis",
+   "atlas_name": "Cytinus hypocistis subsp. pityusensis"
+  },
+  {
+   "code": "1150",
+   "habitat_slug": "lagunas-costeras-1150",
+   "scientific_name": "Ruppia cirrhosa",
+   "atlas_name": "Ruppia cirrhosa"
+  },
+  {
+   "code": "1150",
+   "habitat_slug": "lagunas-costeras-1150",
+   "scientific_name": "Ruppia maritima",
+   "atlas_name": "Ruppia maritima"
+  },
+  {
+   "code": "1150",
+   "habitat_slug": "lagunas-costeras-1150",
+   "scientific_name": "Zostera marina",
+   "atlas_name": "Zostera marina"
+  },
+  {
+   "code": "1240",
+   "habitat_slug": "acantilados-con-vegetacion-1240",
+   "scientific_name": "Sonchus tenerrimus",
+   "atlas_name": "Sonchus tenerrimus var. pectinatus"
+  },
+  {
+   "code": "1510",
+   "habitat_slug": "estepas-salinas-mediterraneas-1510",
+   "scientific_name": "Filago mareotica",
+   "atlas_name": "Filago mareotica"
+  },
+  {
+   "code": "1510",
+   "habitat_slug": "estepas-salinas-mediterraneas-1510",
+   "scientific_name": "Hymenolobus procumbens",
+   "atlas_name": "Hymenolobus procumbens"
+  },
+  {
+   "code": "1510",
+   "habitat_slug": "estepas-salinas-mediterraneas-1510",
+   "scientific_name": "Limonium angustebracteatum",
+   "atlas_name": "Limonium angustebracteatum"
+  },
+  {
+   "code": "1510",
+   "habitat_slug": "estepas-salinas-mediterraneas-1510",
+   "scientific_name": "Limonium caesium",
+   "atlas_name": "Limonium caesium"
+  },
+  {
+   "code": "1510",
+   "habitat_slug": "estepas-salinas-mediterraneas-1510",
+   "scientific_name": "Limonium delicatulum",
+   "atlas_name": "Limonium delicatulum"
+  },
+  {
+   "code": "92D0",
+   "habitat_slug": "galerias-y-matorrales-92D0",
+   "scientific_name": "Tamarix boveana",
+   "atlas_name": "Tamarix boveana"
+  },
+  {
+   "code": "92D0",
+   "habitat_slug": "galerias-y-matorrales-92D0",
+   "scientific_name": "Tamarix canariensis",
+   "atlas_name": "Tamarix canariensis"
+  }
+ ]
+}

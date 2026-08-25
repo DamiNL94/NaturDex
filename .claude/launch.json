@@ -6,6 +6,12 @@
       "runtimeExecutable": "php",
       "runtimeArgs": ["-S", "localhost:8000", "-t", "."],
       "port": 8000
+    },
+    {
+      "name": "naturdex-front",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["Tools/dev-server.js", "--puerto", "8001"],
+      "port": 8001
     }
   ]
 }

@@ -1,329 +1,281 @@
 {
-  "park": "cabo-cope-puntas-calnegre",
-  "metodo": "género de la especie ∈ asociación fitosociológica oficial (primer pase, pendiente Atlas)",
-  "hic": [
-    {
-      "hic": "1240",
-      "habitat": "acantilados",
-      "asociaciones": 1,
-      "caracteristicas": [
-        {
-          "id": 102,
-          "name": "Limonium cossonianum",
-          "common": "Siempreviva de Cosson",
-          "genus": "Limonium"
-        },
-        {
-          "id": 131,
-          "name": "Limonium delicatulum",
-          "common": "Siempreviva de saladar",
-          "genus": "Limonium"
-        },
-        {
-          "id": 30,
-          "name": "Limonium insigne",
-          "common": "Siempreviva insigne",
-          "genus": "Limonium"
-        }
-      ]
-    },
-    {
-      "hic": "2230",
-      "habitat": "dunas-malcomietalia",
-      "asociaciones": 0,
-      "caracteristicas": []
-    },
-    {
-      "hic": "2110",
-      "habitat": "dunas-embrionarias",
-      "asociaciones": 1,
-      "caracteristicas": [
-        {
-          "id": 111,
-          "name": "Cyperus capitatus",
-          "common": "Juncia marina",
-          "genus": "Cyperus"
-        }
-      ]
-    },
-    {
-      "hic": "1510",
-      "habitat": "estepas-salinas-albardinal",
-      "asociaciones": 0,
-      "caracteristicas": []
-    },
-    {
-      "hic": "92D0",
-      "habitat": "galeria-ribera",
-      "asociaciones": 1,
-      "caracteristicas": [
-        {
-          "id": 133,
-          "name": "Crithmum maritimum",
-          "common": "Hinojo marino",
-          "genus": "Crithmum"
-        },
-        {
-          "id": 32,
-          "name": "Tamarix africana",
-          "common": "Taray",
-          "genus": "Tamarix"
-        }
-      ]
-    },
-    {
-      "hic": "5330",
-      "habitat": "matorral-semiarido",
-      "asociaciones": 2,
-      "caracteristicas": [
-        {
-          "id": 34,
-          "name": "Teucrium lanigerum",
-          "common": "Zamarrilla lanuda",
-          "genus": "Teucrium"
-        },
-        {
-          "id": 26,
-          "name": "Anabasis hispanica",
-          "common": "Anabasis",
-          "genus": "Anabasis"
-        },
-        {
-          "id": 36,
-          "name": "Sideritis ibanyezii",
-          "common": "Rabogato",
-          "genus": "Sideritis"
-        },
-        {
-          "id": 102,
-          "name": "Limonium cossonianum",
-          "common": "Siempreviva de Cosson",
-          "genus": "Limonium"
-        },
-        {
-          "id": 131,
-          "name": "Limonium delicatulum",
-          "common": "Siempreviva de saladar",
-          "genus": "Limonium"
-        },
-        {
-          "id": 30,
-          "name": "Limonium insigne",
-          "common": "Siempreviva insigne",
-          "genus": "Limonium"
-        },
-        {
-          "id": 33,
-          "name": "Teucrium freynii",
-          "common": "Teucrio de Freyn",
-          "genus": "Teucrium"
-        },
-        {
-          "id": 165,
-          "name": "Teucrium capitatum",
-          "common": "Zamarrilla",
-          "genus": "Teucrium"
-        }
-      ]
-    },
-    {
-      "hic": "5210",
-      "habitat": "sabinar-juniperus",
-      "asociaciones": 0,
-      "caracteristicas": []
-    },
-    {
-      "hic": "5220",
-      "habitat": "azufaifar",
-      "asociaciones": 1,
-      "caracteristicas": [
-        {
-          "id": 35,
-          "name": "Maytenus senegalensis subsp. europaea",
-          "common": "Arto",
-          "genus": "Maytenus"
-        },
-        {
-          "id": 17,
-          "name": "Periploca angustifolia",
-          "common": "Cornical",
-          "genus": "Periploca"
-        }
-      ]
-    },
-    {
-      "hic": "1430",
-      "habitat": "matorral-halonitrofilo",
-      "asociaciones": 2,
-      "caracteristicas": [
-        {
-          "id": 121,
-          "name": "Glaucium flavum",
-          "common": "Amapola marina",
-          "genus": "Glaucium"
-        },
-        {
-          "id": 129,
-          "name": "Atriplex halimus",
-          "common": "Orgaza",
-          "genus": "Atriplex"
-        },
-        {
-          "id": 127,
-          "name": "Halimione portulacoides",
-          "common": "Orzaga marina",
-          "genus": "Halimione"
-        },
-        {
-          "id": 128,
-          "name": "Suaeda vera",
-          "common": "Sosa fina",
-          "genus": "Suaeda"
-        }
-      ]
-    },
-    {
-      "hic": "1420",
-      "habitat": "matorral-halofilo",
-      "asociaciones": 1,
-      "caracteristicas": [
-        {
-          "id": 125,
-          "name": "Arthrocnemum macrostachyum",
-          "common": "Sosa alacranera",
-          "genus": "Arthrocnemum"
-        }
-      ]
-    },
-    {
-      "hic": "8210",
-      "habitat": "roquedos-casmofiticos",
-      "asociaciones": 3,
-      "caracteristicas": [
-        {
-          "id": 34,
-          "name": "Teucrium lanigerum",
-          "common": "Zamarrilla lanuda",
-          "genus": "Teucrium"
-        },
-        {
-          "id": 126,
-          "name": "Sarcocornia fruticosa",
-          "common": "Sosa jabonera",
-          "genus": "Sarcocornia"
-        },
-        {
-          "id": 33,
-          "name": "Teucrium freynii",
-          "common": "Teucrio de Freyn",
-          "genus": "Teucrium"
-        },
-        {
-          "id": 165,
-          "name": "Teucrium capitatum",
-          "common": "Zamarrilla",
-          "genus": "Teucrium"
-        },
-        {
-          "id": 105,
-          "name": "Sarcocapnos enneaphylla subsp. saetabensis",
-          "common": "Zapatito de la Virgen",
-          "genus": "Sarcocapnos"
-        }
-      ]
-    },
-    {
-      "hic": "6110",
-      "habitat": "prados-alysso-sedion",
-      "asociaciones": 0,
-      "caracteristicas": []
-    },
-    {
-      "hic": "3250",
-      "habitat": "rios-glaucium",
-      "asociaciones": 0,
-      "caracteristicas": []
-    },
-    {
-      "hic": "1210",
-      "habitat": "veg-anual-desechos-marinos",
-      "asociaciones": 1,
-      "caracteristicas": [
-        {
-          "id": 27,
-          "name": "Salsola papillosa",
-          "common": "Salsola",
-          "genus": "Salsola"
-        },
-        {
-          "id": 135,
-          "name": "Salsola kali",
-          "common": "Barrilla pinchosa",
-          "genus": "Salsola"
-        },
-        {
-          "id": 134,
-          "name": "Cakile maritima",
-          "common": "Rugueta de mar",
-          "genus": "Cakile"
-        },
-        {
-          "id": 130,
-          "name": "Salsola vermiculata",
-          "common": "Sisallo",
-          "genus": "Salsola"
-        }
-      ]
-    },
-    {
-      "hic": "6220",
-      "habitat": "subestepa-thero-brachypodietea",
-      "asociaciones": 1,
-      "caracteristicas": [
-        {
-          "id": 34,
-          "name": "Teucrium lanigerum",
-          "common": "Zamarrilla lanuda",
-          "genus": "Teucrium"
-        },
-        {
-          "id": 137,
-          "name": "Brachypodium retusum",
-          "common": "Lastón",
-          "genus": "Brachypodium"
-        },
-        {
-          "id": 95,
-          "name": "Chamaerops humilis",
-          "common": "Palmito",
-          "genus": "Chamaerops"
-        },
-        {
-          "id": 33,
-          "name": "Teucrium freynii",
-          "common": "Teucrio de Freyn",
-          "genus": "Teucrium"
-        },
-        {
-          "id": 165,
-          "name": "Teucrium capitatum",
-          "common": "Zamarrilla",
-          "genus": "Teucrium"
-        }
-      ]
-    },
-    {
-      "hic": "1120",
-      "habitat": "praderas-posidonia",
-      "asociaciones": 1,
-      "caracteristicas": [
-        {
-          "id": 170,
-          "name": "Posidonia oceanica",
-          "common": "Posidonia",
-          "genus": "Posidonia"
-        }
-      ]
-    }
-  ]
+ "park": "cabo-cope-puntas-calnegre",
+ "generado": "Atlas y Manual de los Hábitats de España (MITECO) ∩ catálogo del parque",
+ "hic": {
+  "1210": {
+   "habitat": "veg-anual-desechos-marinos",
+   "especies": [
+    "Cakile maritima"
+   ]
+  },
+  "1240": {
+   "habitat": "acantilados",
+   "especies": []
+  },
+  "1420": {
+   "habitat": "matorral-halofilo",
+   "especies": [
+    "Sarcocornia fruticosa",
+    "Arthrocnemum macrostachyum",
+    "Frankenia corymbosa",
+    "Halocnemum strobilaceum",
+    "Suaeda vera",
+    "Limoniastrum monopetalum"
+   ]
+  },
+  "1430": {
+   "habitat": "matorral-halonitrofilo",
+   "especies": []
+  },
+  "1510": {
+   "habitat": "estepas-salinas-albardinal",
+   "especies": [
+    "Limonium delicatulum",
+    "Limonium insigne"
+   ]
+  },
+  "2110": {
+   "habitat": "dunas-embrionarias",
+   "especies": []
+  },
+  "2230": {
+   "habitat": "dunas-malcomietalia",
+   "especies": [
+    "Maresia nana"
+   ]
+  },
+  "3250": {
+   "habitat": "rios-glaucium",
+   "especies": []
+  },
+  "5210": {
+   "habitat": "sabinar-juniperus",
+   "especies": []
+  },
+  "5220": {
+   "habitat": "azufaifar",
+   "especies": [
+    "Calicotome intermedia",
+    "Maytenus senegalensis subsp. europaea",
+    "Periploca angustifolia"
+   ]
+  },
+  "5330": {
+   "habitat": "matorral-semiarido",
+   "especies": [
+    "Helianthemum almeriense",
+    "Sideritis ibanyezii",
+    "Pinus halepensis"
+   ]
+  },
+  "6110": {
+   "habitat": "prados-alysso-sedion",
+   "especies": [
+    "Sedum acre",
+    "Sedum album",
+    "Sedum sediforme"
+   ]
+  },
+  "6220": {
+   "habitat": "subestepa-thero-brachypodietea",
+   "especies": [
+    "Notoceras bicorne",
+    "Sedum sediforme",
+    "Hornungia petraea",
+    "Plantago albicans"
+   ]
+  },
+  "8210": {
+   "habitat": "roquedos-casmofiticos",
+   "especies": [
+    "Centaurea saxicola",
+    "Lafuentea rotundifolia",
+    "Teucrium freynii"
+   ]
+  },
+  "92D0": {
+   "habitat": "galeria-ribera",
+   "especies": [
+    "Tamarix africana",
+    "Tamarix boveana",
+    "Tamarix canariensis"
+   ]
+  }
+ },
+ "links": [
+  {
+   "code": "2230",
+   "habitat_slug": "dunas-malcomietalia",
+   "scientific_name": "Maresia nana",
+   "atlas_name": "Maresia nana"
+  },
+  {
+   "code": "1510",
+   "habitat_slug": "estepas-salinas-albardinal",
+   "scientific_name": "Limonium delicatulum",
+   "atlas_name": "Limonium delicatulum"
+  },
+  {
+   "code": "1510",
+   "habitat_slug": "estepas-salinas-albardinal",
+   "scientific_name": "Limonium insigne",
+   "atlas_name": "Limonium insigne"
+  },
+  {
+   "code": "92D0",
+   "habitat_slug": "galeria-ribera",
+   "scientific_name": "Tamarix africana",
+   "atlas_name": "Tamarix africana var. fluminensis"
+  },
+  {
+   "code": "92D0",
+   "habitat_slug": "galeria-ribera",
+   "scientific_name": "Tamarix boveana",
+   "atlas_name": "Tamarix boveana"
+  },
+  {
+   "code": "92D0",
+   "habitat_slug": "galeria-ribera",
+   "scientific_name": "Tamarix canariensis",
+   "atlas_name": "Tamarix canariensis"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorral-semiarido",
+   "scientific_name": "Helianthemum almeriense",
+   "atlas_name": "Helianthemum almeriense subsp. almeriense"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorral-semiarido",
+   "scientific_name": "Sideritis ibanyezii",
+   "atlas_name": "Sideritis ibanyezii"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorral-semiarido",
+   "scientific_name": "Pinus halepensis",
+   "atlas_name": "Pinus halepensis var. ceciliae"
+  },
+  {
+   "code": "5220",
+   "habitat_slug": "azufaifar",
+   "scientific_name": "Calicotome intermedia",
+   "atlas_name": "Calicotome intermedia"
+  },
+  {
+   "code": "5220",
+   "habitat_slug": "azufaifar",
+   "scientific_name": "Maytenus senegalensis subsp. europaea",
+   "atlas_name": "Maytenus senegalensis subsp. europaeus"
+  },
+  {
+   "code": "5220",
+   "habitat_slug": "azufaifar",
+   "scientific_name": "Periploca angustifolia",
+   "atlas_name": "Periploca angustifolia"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorral-halofilo",
+   "scientific_name": "Sarcocornia fruticosa",
+   "atlas_name": "Sarcocornia fruticosa"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorral-halofilo",
+   "scientific_name": "Arthrocnemum macrostachyum",
+   "atlas_name": "Arthrocnemum macrostachyum"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorral-halofilo",
+   "scientific_name": "Frankenia corymbosa",
+   "atlas_name": "Frankenia corymbosa"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorral-halofilo",
+   "scientific_name": "Halocnemum strobilaceum",
+   "atlas_name": "Halocnemum strobilaceum"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorral-halofilo",
+   "scientific_name": "Suaeda vera",
+   "atlas_name": "Suaeda vera"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorral-halofilo",
+   "scientific_name": "Limoniastrum monopetalum",
+   "atlas_name": "Limoniastrum monopetalum"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "roquedos-casmofiticos",
+   "scientific_name": "Centaurea saxicola",
+   "atlas_name": "Centaurea saxicola"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "roquedos-casmofiticos",
+   "scientific_name": "Lafuentea rotundifolia",
+   "atlas_name": "Lafuentea rotundifolia"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "roquedos-casmofiticos",
+   "scientific_name": "Teucrium freynii",
+   "atlas_name": "Teucrium freynii"
+  },
+  {
+   "code": "6110",
+   "habitat_slug": "prados-alysso-sedion",
+   "scientific_name": "Sedum acre",
+   "atlas_name": "Sedum acre"
+  },
+  {
+   "code": "6110",
+   "habitat_slug": "prados-alysso-sedion",
+   "scientific_name": "Sedum album",
+   "atlas_name": "Sedum album"
+  },
+  {
+   "code": "6110",
+   "habitat_slug": "prados-alysso-sedion",
+   "scientific_name": "Sedum sediforme",
+   "atlas_name": "Sedum sediforme subsp. dianium"
+  },
+  {
+   "code": "1210",
+   "habitat_slug": "veg-anual-desechos-marinos",
+   "scientific_name": "Cakile maritima",
+   "atlas_name": "Cakile maritima subsp. maritima"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "subestepa-thero-brachypodietea",
+   "scientific_name": "Notoceras bicorne",
+   "atlas_name": "Notoceras bicorne"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "subestepa-thero-brachypodietea",
+   "scientific_name": "Sedum sediforme",
+   "atlas_name": "Sedum sediforme subsp. dianium"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "subestepa-thero-brachypodietea",
+   "scientific_name": "Hornungia petraea",
+   "atlas_name": "Hornungia petraea"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "subestepa-thero-brachypodietea",
+   "scientific_name": "Plantago albicans",
+   "atlas_name": "Plantago albicans"
+  }
+ ]
 }

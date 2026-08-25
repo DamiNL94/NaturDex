@@ -1,0 +1,141 @@
+{
+ "park": "cuatro-calas",
+ "generado": "Atlas y Manual de los Hábitats de España (MITECO) ∩ catálogo del parque",
+ "hic": {
+  "1420": {
+   "habitat": "matorrales-halofilos-mediterraneos-1420",
+   "especies": [
+    "Arthrocnemum macrostachyum",
+    "Frankenia corymbosa",
+    "Halocnemum strobilaceum",
+    "Suaeda vera"
+   ]
+  },
+  "1430": {
+   "habitat": "matorrales-halonitrofilos-pegano-1430",
+   "especies": [
+    "Salsola oppositifolia"
+   ]
+  },
+  "1510": {
+   "habitat": "estepas-salinas-mediterraneas-1510",
+   "especies": [
+    "Filago mareotica",
+    "Sphenopus divaricatus",
+    "Limonium insigne"
+   ]
+  },
+  "5220": {
+   "habitat": "matorrales-arborescentes-de-5220",
+   "especies": [
+    "Periploca angustifolia"
+   ]
+  },
+  "5330": {
+   "habitat": "matorrales-termomediterraneos-y-5330",
+   "especies": [
+    "Helianthemum almeriense"
+   ]
+  },
+  "6220": {
+   "habitat": "zonas-subestepicas-de-6220",
+   "especies": [
+    "Eryngium ilicifolium",
+    "Limonium lobatum",
+    "Sedum sediforme"
+   ]
+  },
+  "92D0": {
+   "habitat": "galerias-y-matorrales-92D0",
+   "especies": [
+    "Tamarix gallica"
+   ]
+  }
+ },
+ "links": [
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Arthrocnemum macrostachyum",
+   "atlas_name": "Arthrocnemum macrostachyum"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Frankenia corymbosa",
+   "atlas_name": "Frankenia corymbosa"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Halocnemum strobilaceum",
+   "atlas_name": "Halocnemum strobilaceum"
+  },
+  {
+   "code": "1420",
+   "habitat_slug": "matorrales-halofilos-mediterraneos-1420",
+   "scientific_name": "Suaeda vera",
+   "atlas_name": "Suaeda vera"
+  },
+  {
+   "code": "1430",
+   "habitat_slug": "matorrales-halonitrofilos-pegano-1430",
+   "scientific_name": "Salsola oppositifolia",
+   "atlas_name": "Salsola oppositifolia"
+  },
+  {
+   "code": "1510",
+   "habitat_slug": "estepas-salinas-mediterraneas-1510",
+   "scientific_name": "Filago mareotica",
+   "atlas_name": "Filago mareotica"
+  },
+  {
+   "code": "1510",
+   "habitat_slug": "estepas-salinas-mediterraneas-1510",
+   "scientific_name": "Sphenopus divaricatus",
+   "atlas_name": "Sphenopus divaricatus"
+  },
+  {
+   "code": "1510",
+   "habitat_slug": "estepas-salinas-mediterraneas-1510",
+   "scientific_name": "Limonium insigne",
+   "atlas_name": "Limonium insigne"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Eryngium ilicifolium",
+   "atlas_name": "Eryngium ilicifolium"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Limonium lobatum",
+   "atlas_name": "Limonium lobatum"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Sedum sediforme",
+   "atlas_name": "Sedum sediforme subsp. dianium"
+  },
+  {
+   "code": "92D0",
+   "habitat_slug": "galerias-y-matorrales-92D0",
+   "scientific_name": "Tamarix gallica",
+   "atlas_name": "Tamarix gallica var. arborea"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Helianthemum almeriense",
+   "atlas_name": "Helianthemum almeriense subsp. almeriense"
+  },
+  {
+   "code": "5220",
+   "habitat_slug": "matorrales-arborescentes-de-5220",
+   "scientific_name": "Periploca angustifolia",
+   "atlas_name": "Periploca angustifolia"
+  }
+ ]
+}

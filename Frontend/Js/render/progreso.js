@@ -111,7 +111,22 @@ export function renderProgressTab() {
     ? html`<div class="progress-section"><h3>🕊️ Aves migratorias</h3><div class="progress-track big" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${migratoryPct}" aria-label="Aves migratorias avistadas"><div class="progress-fill" style="width:${migratoryPct}%"></div></div><span class="progress-caption">${progress.migratorySeen} / ${progress.migratoryTotal} avistadas · las que no viven aquí todo el año (pestaña «Migratorias»)</span></div>`
     : '';
 
-  progressPanel.innerHTML = html`<div class="progress-section"><h3>Especies</h3><div class="progress-track big" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${speciesPct}" aria-label="Especies vistas"><div class="progress-fill" style="width:${speciesPct}%"></div></div><span class="progress-caption">${progress.speciesSeen} / ${progress.speciesTotal} especies vistas</span></div><div class="progress-section"><h3>Hábitats</h3><span class="progress-caption">${progress.habitatsCompleteCount} / ${nHab} hábitats completados 🏅</span><ul class="progress-list">${habitatsHtml}</ul></div>${zepaSection}${migratorySection}<div class="progress-section"><h3>Puntos de interés</h3><div class="progress-track big" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${poiPct}" aria-label="Puntos de interés visitados"><div class="progress-fill" style="width:${poiPct}%"></div></div><span class="progress-caption">${progress.poisSeen} / ${progress.poisTotal} puntos visitados</span><ul class="progress-list">${poisHtml}</ul></div><div class="progress-section"><h3>Logros</h3>${logros}</div>`;
+  /*
+   * Las dos barras de arriba no suman lo mismo, y hasta ahora nada lo decía.
+   *
+   * «Especies» cuenta TODO el catálogo del espacio; las filas de «Hábitats» solo las fichas que
+   * cuelgan de algún polígono. En Cañaverosa son 209 contra 41: quien complete los seis hábitats
+   * seguirá viendo la primera barra por la cuarta parte, y sin una línea que lo explique eso se lee
+   * como que la app ha perdido la cuenta. El motivo está en el catálogo (las aves no se adscriben a
+   * hábitats y hay fichas sin registro dentro de ninguno) y se puede ver: es la misma lista que abre
+   * «Sin hábitat asignado» en el catálogo.
+   */
+  const sinHabitat = (state.data.species || []).filter(s => !(s.habitatIds || []).length).length;
+  const notaSinHabitat = sinHabitat
+    ? html`<p class="account-note">Estas filas cubren <strong>${progress.speciesTotal - sinHabitat} de ${progress.speciesTotal}</strong> fichas del espacio. Las otras ${sinHabitat} no cuelgan de ningún hábitat —las aves no se adscriben a ninguno, y del resto no hay registro dentro de sus polígonos—: están en el catálogo, en «Sin hábitat asignado».</p>`
+    : '';
+
+  progressPanel.innerHTML = html`<div class="progress-section"><h3>Especies</h3><div class="progress-track big" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${speciesPct}" aria-label="Especies vistas"><div class="progress-fill" style="width:${speciesPct}%"></div></div><span class="progress-caption">${progress.speciesSeen} / ${progress.speciesTotal} especies vistas</span></div><div class="progress-section"><h3>Hábitats</h3><span class="progress-caption">${progress.habitatsCompleteCount} / ${nHab} hábitats completados 🏅</span><ul class="progress-list">${habitatsHtml}</ul>${notaSinHabitat}</div>${zepaSection}${migratorySection}<div class="progress-section"><h3>Puntos de interés</h3><div class="progress-track big" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${poiPct}" aria-label="Puntos de interés visitados"><div class="progress-fill" style="width:${poiPct}%"></div></div><span class="progress-caption">${progress.poisSeen} / ${progress.poisTotal} puntos visitados</span><ul class="progress-list">${poisHtml}</ul></div><div class="progress-section"><h3>Logros</h3>${logros}</div>`;
 }
 
 // --- Progreso de CUENTA (ámbito estatal, pantalla "screen-account", fuera de un parque concreto) ----

@@ -100,6 +100,12 @@ códigos HIC nuevos, **amplía `data/hic-nombres.json` y `data/hic-prioritarios.
    súbelo por encima del total del bbox o te quedas con un catálogo hecho con la mitad de los datos.
 2. **Atlas de Hábitats** → `atlas-hic-especies.js` → evidencia `caracteristica`. Aquí es **filtro**,
    no fuente de candidatas: da el backbone determinista y la prueba de cordura del resto.
+   ⚠️ **Pásale todos los `atlas.txt` que tengas** (`--atlas a.txt,b.txt`) y, si el espacio ya tiene
+   índice, **`--fusiona`**. De qué extractor de PDF salga el texto cambia QUÉ enlaces se leen y
+   ninguno cubre al otro: medido sobre Murcia, el texto de Xpdf con `-layout` recupera 34 enlaces en
+   Sierra de El Carche que el índice anterior no tenía **y pierde quince** de Sierra Espuña que sí
+   traía. Las dos salidas parecen completas, así que el error no se ve. El Atlas se usa **solo en
+   positivo**: que un parser no lea un nombre no significa que el Atlas no lo dé.
 3. **EIDOS** para toda especie nueva: taxonomía, UICN por ámbito, estado legal, nombre común.
 4. **Lista oficial del sitio** → `npm run sitio:especies -- --park <slug>` → secciones 3.2 y 3.3 del
    Formulario Normalizado de Datos de cada sitio Red Natura 2000 del espacio, desde el servicio RN2000

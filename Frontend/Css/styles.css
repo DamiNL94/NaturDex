@@ -1081,6 +1081,11 @@ p.achievement-progress-label{margin:8px 0 0}
 .habitat-group-card:hover{transform:translateY(-1px);box-shadow:var(--shadow-sm);border-color:#c7d9c9}
 .habitat-group-card.complete{border-color:var(--sun);background:#fffaf0}
 .habitat-group-swatch{align-self:start;margin-top:2px}
+/* «Sin hábitat asignado» comparte la caja de la tarjeta de grupo pero NO es un grupo: va separada
+   por un filete y con el borde punteado para que se lea como lo que queda fuera de los siete, no
+   como un octavo. El icono no lleva trama de grupo, así que se le da la tinta apagada. */
+.habitat-group-card.sin-habitat{margin-top:14px;border-style:dashed}
+.habitat-group-card.sin-habitat .habitat-group-swatch{color:var(--muted)}
 .habitat-group-desc{color:var(--muted);font-size:var(--fs-xs);line-height:1.4}
 .habitat-group-go{color:var(--muted);display:flex;align-items:center;justify-content:center}
 /* Dentro de un grupo, su trama y su descripción encabezan la lista: recuerdan qué se está mirando

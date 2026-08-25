@@ -58,6 +58,7 @@
         18,
         19,
         20,
+        21,
         22
       ],
       "imageAttribution": "Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons",
@@ -1351,7 +1352,8 @@
       "gbifSpeciesKey": 7457479,
       "zepaSiteCode": null,
       "habitatIds": [
-        "pendientes-rocosas-calcicolas-8210"
+        "pendientes-rocosas-calcicolas-8210",
+        "matorrales-termomediterraneos-y-5330"
       ],
       "gbifOccurrences": 1,
       "visible": false,

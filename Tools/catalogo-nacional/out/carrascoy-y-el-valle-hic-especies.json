@@ -8,7 +8,13 @@
   },
   "1520": {
    "habitat": "vegetacion-gipsicola-iberica-1520",
-   "especies": []
+   "especies": [
+    "Gypsophila struthium",
+    "Helianthemum squamatum",
+    "Launaea pumila",
+    "Ononis tridentata",
+    "Teucrium pumilum"
+   ]
   },
   "3140": {
    "habitat": "aguas-oligomesotroficas-calcareas-3140",
@@ -20,7 +26,9 @@
   },
   "3250": {
    "habitat": "rios-mediterraneos-de-3250",
-   "especies": []
+   "especies": [
+    "Biscutella valentina"
+   ]
   },
   "3280": {
    "habitat": "rios-mediterraneos-de-3280",
@@ -28,19 +36,46 @@
   },
   "5210": {
    "habitat": "matorrales-arborescentes-de-5210",
-   "especies": []
+   "especies": [
+    "Quercus ilex",
+    "Genista cinerea"
+   ]
   },
   "5330": {
    "habitat": "matorrales-termomediterraneos-y-5330",
-   "especies": []
+   "especies": [
+    "Helianthemum almeriense",
+    "Sideritis leucantha",
+    "Teucrium carolipaui",
+    "Sideritis bourgaeana",
+    "Genista cinerea",
+    "Ononis speciosa",
+    "Rhamnus oleoides",
+    "Pinus halepensis"
+   ]
   },
   "6110": {
    "habitat": "prados-calcareos-carsticos-6110",
-   "especies": []
+   "especies": [
+    "Sedum sediforme"
+   ]
   },
   "6220": {
    "habitat": "zonas-subestepicas-de-6220",
-   "especies": []
+   "especies": [
+    "Eryngium ilicifolium",
+    "Ononis ornithopodioides",
+    "Scorpiurus muricatus",
+    "Chaenorhinum grandiflorum",
+    "Chaenorhinum rupestre",
+    "Campanula erinus",
+    "Onobrychis humilis",
+    "Sedum sediforme",
+    "Allium moschatum",
+    "Ophrys tenthredinifera",
+    "Phlomis lychnitis",
+    "Trifolium scabrum"
+   ]
   },
   "6420": {
    "habitat": "prados-humedos-mediterraneos-6420",
@@ -52,16 +87,264 @@
   },
   "8210": {
    "habitat": "pendientes-rocosas-calcicolas-8210",
-   "especies": []
+   "especies": [
+    "Chaenorhinum origanifolium",
+    "Sonchus tenerrimus",
+    "Teucrium buxifolium",
+    "Teucrium thymifolium",
+    "Centaurea saxicola",
+    "Cosentinia vellea",
+    "Lafuentea rotundifolia"
+   ]
   },
   "9340": {
    "habitat": "encinares-de-quercus-9340",
-   "especies": []
+   "especies": [
+    "Quercus ilex",
+    "Quercus coccifera"
+   ]
   },
   "92D0": {
    "habitat": "galerias-y-matorrales-92D0",
-   "especies": []
+   "especies": [
+    "Tamarix boveana"
+   ]
   }
  },
- "links": []
+ "links": [
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Helianthemum almeriense",
+   "atlas_name": "Helianthemum almeriense subsp. almeriense"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Sideritis leucantha",
+   "atlas_name": "Sideritis leucantha subsp. leucantha"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Teucrium carolipaui",
+   "atlas_name": "Teucrium carolipaui subsp. carolipaui"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Sideritis bourgaeana",
+   "atlas_name": "Sideritis bourgaeana"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Genista cinerea",
+   "atlas_name": "Genista cinerea subsp. murcica"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Ononis speciosa",
+   "atlas_name": "Ononis speciosa"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Rhamnus oleoides",
+   "atlas_name": "Rhamnus oleoides subsp. oleoides"
+  },
+  {
+   "code": "5330",
+   "habitat_slug": "matorrales-termomediterraneos-y-5330",
+   "scientific_name": "Pinus halepensis",
+   "atlas_name": "Pinus halepensis var. ceciliae"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Chaenorhinum origanifolium",
+   "atlas_name": "Chaenorhinum origanifolium subsp. cadevallii"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Sonchus tenerrimus",
+   "atlas_name": "Sonchus tenerrimus var. dianae"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Teucrium buxifolium",
+   "atlas_name": "Teucrium buxifolium subsp. buxifolium"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Teucrium thymifolium",
+   "atlas_name": "Teucrium thymifolium"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Centaurea saxicola",
+   "atlas_name": "Centaurea saxicola"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Cosentinia vellea",
+   "atlas_name": "Cosentinia vellea subsp. bivalens"
+  },
+  {
+   "code": "8210",
+   "habitat_slug": "pendientes-rocosas-calcicolas-8210",
+   "scientific_name": "Lafuentea rotundifolia",
+   "atlas_name": "Lafuentea rotundifolia"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Eryngium ilicifolium",
+   "atlas_name": "Eryngium ilicifolium"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Ononis ornithopodioides",
+   "atlas_name": "Ononis ornithopodioides"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Scorpiurus muricatus",
+   "atlas_name": "Scorpiurus muricatus"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Chaenorhinum grandiflorum",
+   "atlas_name": "Chaenorhinum grandiflorum subsp. grandiflorum"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Chaenorhinum rupestre",
+   "atlas_name": "Chaenorhinum rupestre"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Campanula erinus",
+   "atlas_name": "Campanula erinus"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Onobrychis humilis",
+   "atlas_name": "Onobrychis humilis"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Sedum sediforme",
+   "atlas_name": "Sedum sediforme subsp. dianium"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Allium moschatum",
+   "atlas_name": "Allium moschatum"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Ophrys tenthredinifera",
+   "atlas_name": "Ophrys tenthredinifera"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Phlomis lychnitis",
+   "atlas_name": "Phlomis lychnitis"
+  },
+  {
+   "code": "6220",
+   "habitat_slug": "zonas-subestepicas-de-6220",
+   "scientific_name": "Trifolium scabrum",
+   "atlas_name": "Trifolium scabrum"
+  },
+  {
+   "code": "92D0",
+   "habitat_slug": "galerias-y-matorrales-92D0",
+   "scientific_name": "Tamarix boveana",
+   "atlas_name": "Tamarix boveana"
+  },
+  {
+   "code": "1520",
+   "habitat_slug": "vegetacion-gipsicola-iberica-1520",
+   "scientific_name": "Gypsophila struthium",
+   "atlas_name": "Gypsophila struthium"
+  },
+  {
+   "code": "1520",
+   "habitat_slug": "vegetacion-gipsicola-iberica-1520",
+   "scientific_name": "Helianthemum squamatum",
+   "atlas_name": "Helianthemum squamatum"
+  },
+  {
+   "code": "1520",
+   "habitat_slug": "vegetacion-gipsicola-iberica-1520",
+   "scientific_name": "Launaea pumila",
+   "atlas_name": "Launaea pumila"
+  },
+  {
+   "code": "1520",
+   "habitat_slug": "vegetacion-gipsicola-iberica-1520",
+   "scientific_name": "Ononis tridentata",
+   "atlas_name": "Ononis tridentata subsp. crassifolia"
+  },
+  {
+   "code": "1520",
+   "habitat_slug": "vegetacion-gipsicola-iberica-1520",
+   "scientific_name": "Teucrium pumilum",
+   "atlas_name": "Teucrium pumilum subsp. pumilum"
+  },
+  {
+   "code": "6110",
+   "habitat_slug": "prados-calcareos-carsticos-6110",
+   "scientific_name": "Sedum sediforme",
+   "atlas_name": "Sedum sediforme subsp. dianium"
+  },
+  {
+   "code": "9340",
+   "habitat_slug": "encinares-de-quercus-9340",
+   "scientific_name": "Quercus ilex",
+   "atlas_name": "Quercus ilex subsp. ilex"
+  },
+  {
+   "code": "9340",
+   "habitat_slug": "encinares-de-quercus-9340",
+   "scientific_name": "Quercus coccifera",
+   "atlas_name": "Quercus coccifera subsp. rivasmartinezii"
+  },
+  {
+   "code": "3250",
+   "habitat_slug": "rios-mediterraneos-de-3250",
+   "scientific_name": "Biscutella valentina",
+   "atlas_name": "Biscutella valentina subsp. mediterranea"
+  },
+  {
+   "code": "5210",
+   "habitat_slug": "matorrales-arborescentes-de-5210",
+   "scientific_name": "Quercus ilex",
+   "atlas_name": "Quercus ilex subsp. ilex"
+  },
+  {
+   "code": "5210",
+   "habitat_slug": "matorrales-arborescentes-de-5210",
+   "scientific_name": "Genista cinerea",
+   "atlas_name": "Genista cinerea subsp. valentina"
+  }
+ ]
 }

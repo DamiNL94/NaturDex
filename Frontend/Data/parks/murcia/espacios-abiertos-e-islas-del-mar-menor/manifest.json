@@ -2,8 +2,8 @@
   "slug": "espacios-abiertos-e-islas-del-mar-menor",
   "name": "Espacios Abiertos e Islas del Mar Menor",
   "apiSlug": "espacios-abiertos-e-islas-del-mar-menor",
-  "version": 5,
-  "updatedAt": "2026-08-21",
+  "version": 7,
+  "updatedAt": "2026-08-25",
   "data": "Data/parks/murcia/espacios-abiertos-e-islas-del-mar-menor/park.json",
   "geo": {
     "parque": "Data/parks/murcia/espacios-abiertos-e-islas-del-mar-menor/geo/parque.geojson",
@@ -15,7 +15,7 @@
   "images": [],
   "audio": [],
   "counts": {
-    "species": 252,
+    "species": 250,
     "habitats": 19,
     "pointsOfInterest": 9,
     "images": 0,

@@ -37,9 +37,12 @@ gbif-cache-*.json
 # Las URLs de las 52 provincias están en fuentes/atlas-habitats-2005-provincias.json, que SÍ se
 # versiona: para rehacer la descarga basta ese fichero.
 Tools/catalogo-nacional/fuentes/atlas-2005/
-# Texto plano del Atlas y Manual de los Hábitats (pdftotext -layout sobre el PDF de Docs/), que es lo
-# que leen atlas:hic y species:seleccion. 2 MB reproducibles en un comando; el PDF sí se versiona.
+# Texto plano del Atlas y Manual de los Hábitats (pdftotext sobre el PDF de Docs/), que es lo que leen
+# atlas:hic y species:seleccion. 2 MB reproducibles en un comando; el PDF sí se versiona. Son VARIOS
+# porque de qué extractor salga el texto cambia qué enlaces se leen y ninguno cubre al otro, así que
+# atlas:hic admite pasarle todos los que haya (`--atlas a.txt,b.txt`).
 Tools/catalogo-nacional/fuentes/atlas.txt
+Tools/catalogo-nacional/fuentes/atlas-*.txt
 # Y en la RAÍZ, que es donde lo deja la orden que escribe el runbook (`pdftotext … atlas.txt`) y
 # donde acaba de verdad, porque `fuentes/` está en permissions.deny y un agente no puede escribir
 # ahí. Sin esta línea, un `git add -A` se lleva los 2 MB al repositorio sin que nadie lo note.

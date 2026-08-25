@@ -7,7 +7,7 @@
 import { backToHabitatsBtn, catalogCrumb, catalogCrumbLabel, catalogTitle, rarityFilterGroup, resultCount, searchInput, searchLabel, speciesFilterGroup, speciesList } from '../dom.js';
 import { groupSwatch, groupedHabitats, habitatGroup, habitatGroupById, habitatsOfGroup } from '../habitat-groups.js';
 import { TRAMOS, TRAMO_AMENAZA, estrellas, tramoDe } from '../rareza.js';
-import { catalogSpecies, getFilteredHabitats, getFilteredSpecies, habitatSpeciesSeenCount, isHabitatComplete, state } from '../state.js';
+import { catalogSpecies, getFilteredHabitats, getFilteredSpecies, habitatSpeciesSeenCount, isHabitatComplete, speciesSinHabitat, state } from '../state.js';
 import { html, icon, raw, speciesImageSrc } from '../util.js';
 
 /*
@@ -70,7 +70,44 @@ export function renderHabitatGroups() {
       <span class="habitat-group-go" aria-hidden="true">${icon('chevronRight', 18)}</span>
       </button>`;
   });
-  speciesList.innerHTML = html`<button class="habitat-all-link" type="button" id="viewAllSpeciesBtn">Ver todas las especies (${catalogSpecies().length})</button>${cards}`;
+  speciesList.innerHTML = html`<button class="habitat-all-link" type="button" id="viewAllSpeciesBtn">Ver todas las especies (${catalogSpecies().length})</button>${cards}${sinHabitatCard()}`;
+}
+
+/*
+ * La tarjeta de las fichas que no cuelgan de ningún hábitat.
+ *
+ * Va DESPUÉS de los grupos y no como uno más: no es un grupo de hábitats, es lo que queda fuera de
+ * ellos, y mezclarlo con los siete daría a entender que hay un ecosistema llamado «sin hábitat».
+ * Se pinta solo cuando hay alguna, y dice de qué están hechas esas fichas, porque el motivo no es
+ * uno solo: las aves no se adscriben a ningún polígono a propósito y el resto es un hueco real de
+ * evidencia. Sin esto, en Cañaverosa el catálogo enseña cuatro grupos con 41 fichas y esconde 181
+ * detrás de un enlace que no dice cuántas hay.
+ */
+function sinHabitatCard() {
+  const sin = speciesSinHabitat();
+  if (!sin.length) return '';
+  const aves = sin.filter(s => (s.taxonomy || {}).class === 'Aves').length;
+  const otras = sin.length - aves;
+  const seen = sin.filter(s => state.seenSpecies.has(s.id)).length;
+  const partes = [];
+  if (aves) partes.push(aves === 1 ? '1 ave, que no se adscribe a ningún polígono porque vuela'
+    : `${aves} aves, que no se adscriben a ningún polígono porque vuelan`);
+  // El texto NO dice de qué fuente vienen: son varias —el anexo de la norma, el formulario del
+  // sitio, el Atlas— y afirmar una sola sería rellenar el motivo a ojo. Dice lo que sí consta: que
+  // están en el catálogo del espacio y que no hay registro suyo dentro de ningún hábitat.
+  if (otras) partes.push(otras === 1
+    ? '1 ficha más del catálogo del espacio, sin ningún registro dentro de sus hábitats cartografiados'
+    : `${otras} fichas más del catálogo del espacio, sin ningún registro dentro de sus hábitats cartografiados`);
+  return html`<button class="habitat-group-card sin-habitat" type="button" data-sin-habitat="1">
+      <span class="habitat-group-swatch" aria-hidden="true">${icon('info', 26)}</span>
+      <span class="habitat-card-body">
+      <span class="habitat-card-meta"><span class="badge">fuera de los hábitats</span></span>
+      <strong>Sin hábitat asignado</strong>
+      <span class="habitat-group-desc">${partes.join('. ')}.</span>
+      <span class="habitat-card-count">${seen} / ${sin.length} especies vistas</span>
+      </span>
+      <span class="habitat-group-go" aria-hidden="true">${icon('chevronRight', 18)}</span>
+      </button>`;
 }
 
 /** Segundo nivel: los hábitats de un grupo (state.habitatGroupFocus). */
@@ -91,9 +128,11 @@ export function renderSpeciesList() {
   const species = getFilteredSpecies();
   // Con un filtro de rareza puesto, «12 resultados» a secas se lee como «este hábitat tiene 12
   // especies». Se dice cuántas hay en total para que se vea que es un recorte y no el catálogo.
-  const total = state.habitatFocus
-    ? (state.data.species || []).filter(s => (s.habitatIds || []).includes(state.habitatFocus)).length
-    : (state.data.species || []).length;
+  const total = state.sinHabitatFocus
+    ? speciesSinHabitat().length
+    : (state.habitatFocus
+      ? (state.data.species || []).filter(s => (s.habitatIds || []).includes(state.habitatFocus)).length
+      : (state.data.species || []).length);
   const recorte = species.length < total ? ` de ${total}` : '';
   resultCount.textContent = (species.length === 1 ? '1 resultado' : species.length + ' resultados') + recorte;
   // Sin distintivo de «migratoria»: ésas tienen pestaña propia y `getFilteredSpecies` ya las quita
@@ -106,9 +145,19 @@ export function renderSpeciesList() {
   // Una lista vacía sin explicación se lee como un fallo de la app. Con el filtro de rareza puesto
   // es además el caso NORMAL: en un hábitat corriente no hay ninguna especie en peligro, y eso es
   // una respuesta, no un error.
+  // En «Sin hábitat asignado» la lista necesita decir POR QUÉ está cada ficha ahí: si no, se lee
+  // como un catálogo a medio hacer. Son dos motivos distintos y el texto los separa (ver
+  // `speciesSinHabitat` en state.js).
+  const intro = state.sinHabitatFocus
+    ? html`<p class="catalog-group-intro"><span>Estas fichas no cuelgan de ningún hábitat cartografiado.
+        Las <strong>aves</strong> no se adscriben a ninguno a propósito: vuelan, y un registro en vuelo cae dentro de
+        cualquier recinto. Las <strong>demás</strong> están en el catálogo del espacio por una fuente oficial, pero no
+        hay ningún registro suyo dentro de sus polígonos de hábitat: el vínculo especie–hábitat es derivado y sin señal
+        no se da por hecho. Cada ficha dice en su apartado de fuentes de dónde sale.</span></p>`
+    : '';
   speciesList.innerHTML = cards.length
-    ? html`${cards}`
-    : html`<p class="catalog-empty">Ninguna especie de esta lista cumple los filtros puestos.${
+    ? html`${intro}${cards}`
+    : html`${intro}<p class="catalog-empty">Ninguna especie de esta lista cumple los filtros puestos.${
       state.rarityFilter !== 'all' ? ' Prueba a bajar el listón de rareza.' : ''}</p>`;
 }
 
@@ -126,7 +175,8 @@ export function renderCatalogBody() {
   const group = state.habitatGroupFocus ? habitatGroupById(state.habitatGroupFocus) : null;
   if (inSpeciesMode) {
     const habitat = state.habitatFocus ? state.data.habitats.find(h => h.id === state.habitatFocus) : null;
-    const label = habitat ? habitat.name : 'Todas las especies';
+    const label = habitat ? habitat.name
+      : (state.sinHabitatFocus ? 'Sin hábitat asignado' : 'Todas las especies');
     // El botón de volver dice a DÓNDE se vuelve, que dentro de un hábitat es su grupo y no la lista
     // entera: sin eso, el usuario que entró por "Costa y dunas" no sabe si va a salir a su grupo o
     // al principio del catálogo.

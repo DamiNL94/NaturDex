@@ -20611,31 +20611,6 @@
     "eidosTaxonId": 10965,
     "rarityBasis": null
   },
-  "Phalacrocorax carbo carbo": {
-    "commonName": "Phalacrocorax carbo carbo",
-    "kingdom": "fauna",
-    "group": "Ave acuática",
-    "habitat": null,
-    "seasonality": null,
-    "rarityScore": null,
-    "description": null,
-    "descriptionSource": null,
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Suliformes",
-      "family": "Phalacrocoracidae",
-      "genus": "Phalacrocorax"
-    },
-    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2021-05-05_Phalacrocorax_carbo_carbo%2C_Killingworth_Lake%2C_Northumberland_1-1.jpg?width=1280",
-    "imageAttribution": "MPF (CC BY-SA 4.0) · Wikimedia Commons",
-    "eidosTaxonId": 32209,
-    "rarityBasis": null
-  },
   "Phalaropus lobatus": {
     "commonName": "Falaropo picofino",
     "kingdom": "fauna",
@@ -22123,31 +22098,6 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Purpurhuhn.jpg?width=1280",
     "imageAttribution": "Andreas Trepte (CC BY-SA 4.0) · Wikimedia Commons",
     "eidosTaxonId": 12013,
-    "rarityBasis": null
-  },
-  "Porphyrio porphyrio porphyrio": {
-    "commonName": "Porphyrio porphyrio porphyrio",
-    "kingdom": "fauna",
-    "group": "Ave acuática",
-    "habitat": null,
-    "seasonality": null,
-    "rarityScore": null,
-    "description": null,
-    "descriptionSource": null,
-    "tips": [],
-    "taxonomy": {
-      "kingdom": "Animalia",
-      "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Gruiformes",
-      "family": "Rallidae",
-      "genus": "Porphyrio"
-    },
-    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Porphyrio_porphyrio_-Europe-8.jpg?width=1280",
-    "imageAttribution": "Martien Brand (CC BY 2.0) · Wikimedia Commons",
-    "eidosTaxonId": 29856,
     "rarityBasis": null
   },
   "Portulaca oleracea": {
