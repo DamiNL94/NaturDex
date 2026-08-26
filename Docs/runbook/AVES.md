@@ -207,6 +207,16 @@ En este orden, y ninguno de los tres es «bajar el umbral»:
   puesta quedan 29, y ésas ya no son de nomenclatura: son aves que el formulario declara y que el
   catálogo del espacio no tiene fichadas.
 
+  > **Y hasta el 2026-08-25 (b), olvidarse de `--online` no dejaba las aves sin clasificar: se las
+  > DESCLASIFICABA.** Un `npm run aves:fenologia -- --write` —que es el comando tal como está escrito
+  > en `package.json`, sin la bandera— retiraba `migratory` y `sitePresence` a las **53 fichas de ocho
+  > espacios** que el pase con red había clasificado el día antes, y bajaba las migratorias de 420 a
+  > 405. Nada fallaba y el diff parecía una limpieza. El fallo era tratar «no he sabido cruzar el
+  > nombre» como «el formulario no la declara»; hoy un ave que no casa **conserva** lo que tuviera y
+  > sale contada, y solo se retira el campo del ave que **sí** casa y cuya clasificación sale vacía,
+  > que es donde la fuente dice algo. Es la misma regla que el pipeline aplica al Atlas —usarlo solo
+  > en positivo— dicha por el otro lado: **una fuente que no se ha podido consultar no dice que no.**
+
   > Y un detalle que cuesta ocho de ellas si se pasa por alto: el verbatim del formulario **no se
   > puede consultar tal cual** contra EIDOS —«Sylvia cantillans ([excluding subalpina])» no empieza
   > por ningún nombre de la lista patrón—, y el `binomio()` de `lib/atlas.js` **tampoco sirve** para

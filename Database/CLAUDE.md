@@ -26,6 +26,7 @@ silencio.
 | `poda-aves-<slug>.sql` | — | `npm run aves:poda -- --park <slug> --sql <ruta>`. **Borrados**, que el UPSERT de `park:sql` no puede generar. Se aplican DESPUÉS del `-n2.sql` del espacio |
 | `enlaces-retirados-<slug>.sql` | — | `npm run especies:habitats:aplica -- --sql`. **Borrados de `species_habitats`** que la auditoría de enlaces retiró del `park.json`: el UPSERT de `park:sql` no los quita. No tocan ninguna ficha ni ninguna cita de usuario, solo el vínculo. Se aplican DESPUÉS del `-n2.sql` del espacio |
 | `poda-renombrados-<slug>.sql` | — | Escrito a mano, una vez, con la lista revisada delante. Retira las fichas que un renombrado dejó huérfanas en la base y el UPSERT no puede tocar |
+| `renombra-poi-playa-charco.sql` | 4 K | Escrito a mano el 2026-08-25 (b). `playa-Charco` → `playa-charco` en la fila viva (deuda nº 18). **Hace falta porque `build-poi-sql.js` hace UPSERT por `slug`**: aplicar el N3 con el slug nuevo no renombraría nada, daría de alta un SEGUNDO POI. Va ANTES de cualquier `n3-pois-cabo-cope-puntas-calnegre.sql` posterior. Idempotente |
 | `seed.sql` | 692 K | Volcado de datos de arranque |
 | `snapshot.sql` | 692 K | Volcado completo de la BD viva |
 

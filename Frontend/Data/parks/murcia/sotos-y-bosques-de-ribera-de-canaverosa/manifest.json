@@ -2,8 +2,8 @@
   "slug": "sotos-y-bosques-de-ribera-de-canaverosa",
   "name": "Sotos y bosques de ribera de Cañaverosa",
   "apiSlug": "sotos-y-bosques-de-ribera-de-canaverosa",
-  "version": 4,
-  "updatedAt": "2026-08-22",
+  "version": 6,
+  "updatedAt": "2026-08-25",
   "data": "Data/parks/murcia/sotos-y-bosques-de-ribera-de-canaverosa/park.json",
   "geo": {
     "parque": "Data/parks/murcia/sotos-y-bosques-de-ribera-de-canaverosa/geo/parque.geojson",

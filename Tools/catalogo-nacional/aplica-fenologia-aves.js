@@ -50,7 +50,7 @@
 const fs = require('fs');
 const path = require('path');
 const { arg, flag, sleep } = require('../lib/cli');
-const { OUT_DIR, readJson, readJsonIf, writeJson, rel, parkFiles } = require('../lib/io');
+const { OUT_DIR, readJson, readJsonIf, writeJson, rel, parkFiles, escribeEspacio } = require('../lib/io');
 const { clasificaPresenciaSitio } = require('../lib/fenologia');
 const { resolveTaxon } = require('../lib/eidos');
 const { cargaEquivalencias, indexa, busca, probablesCambiosDeGenero } = require('../lib/respaldo-sitio');
@@ -201,7 +201,7 @@ async function main() {
     }
 
     const casadas = new Set();
-    let migratorias = 0, residentes = 0, sinSenal = 0, cambios = 0;
+    let migratorias = 0, residentes = 0, sinSenal = 0, cambios = 0, conservadas = 0;
     const nuevas = species.map(s => {
       if (!esAve(s)) {
         // Una planta con estos campos es un error de un pase anterior: se retira.
@@ -214,7 +214,29 @@ async function main() {
         eidosTaxonId: s.eidosTaxonId,
       });
       if (hit) for (const e of hit) casadas.add(e.scientificName);
-      const fen = clasificaPresenciaSitio(hit || []);
+
+      // SIN CRUCE NO SE RETIRA NADA, y esto no es una cautela teórica: el puente que casa el nombre
+      // de la fuente con el del catálogo tiene tres capas y la segunda —resolver contra EIDOS el
+      // nombre DE LA FUENTE— solo corre con `--online`. Sin la bandera, un pase de este mismo
+      // comando le quitaba `migratory` y `sitePresence` a las aves que el pase con red había
+      // clasificado: son 53 fichas en ocho espacios, la deuda nº 35 pagada y deshecha por el atajo
+      // documentado (`npm run aves:fenologia` no lleva `--online`). No fallaba nada y el diff
+      // parecía una limpieza.
+      //
+      // «No he sabido cruzar el nombre» no es «el formulario no la declara». Para retirar el campo
+      // hace falta evidencia POSITIVA, y la evidencia positiva es haber cruzado: si el ave casa con
+      // el formulario y su clasificación sale vacía, entonces sí se retira, un poco más abajo.
+      if (!hit) {
+        if (CAMPOS.some(c => s[c] !== undefined)) {
+          conservadas++;
+          if (s.migratory) migratorias++; else residentes++;
+          return s;
+        }
+        sinSenal++;
+        return s;
+      }
+
+      const fen = clasificaPresenciaSitio(hit);
       if (!fen) sinSenal++; else if (fen.migratory) migratorias++; else residentes++;
 
       const valores = fen ? { migratory: fen.migratory, sitePresence: fen.sitePresence } : {};
@@ -234,30 +256,19 @@ async function main() {
     }
 
     doc.species = nuevas;
-    const antesTexto = fs.readFileSync(espacio.file, 'utf8');
-    const nuevoTexto = JSON.stringify(doc, null, 2) + '\n';
-    const cambia = antesTexto !== nuevoTexto;
 
     console.log(`\n${espacio.slug}: ${migratorias} migratorias · ${residentes} residentes declaradas · ` +
       `${sinSenal} aves sin señal del formulario`);
+    if (conservadas) console.log(`  ${conservadas} ficha(s) conservan la fenología de un pase anterior: ` +
+      'este pase no ha sabido cruzar su nombre y sin cruce no se retira nada' + (ONLINE ? '' : ' (¿falta --online?)'));
     if (nombresUnicos.length) console.log(`  ⚠ ${nombresUnicos.length} entradas del formulario sin casar con el catálogo`);
-    if (cambia && WRITE) {
-      writeJson(espacio.file, doc);
-      console.log(`  escrito ${rel(espacio.file)}`);
-      // El manifiesto decide si un dispositivo con el espacio guardado sin conexión vuelve a
-      // descargarlo: sin subir `version`, quien ya lo tenía se queda sin la pestaña «Migratorias»
-      // aunque el paquete del servidor ya la traiga. Los contadores no cambian: no entra ni sale
-      // ninguna ficha.
-      const manifestPath = path.join(espacio.dir, 'manifest.json');
-      const manifest = readJsonIf(manifestPath, null);
-      if (manifest) {
-        manifest.version = (Number(manifest.version) || 0) + 1;
-        manifest.updatedAt = new Date().toISOString().slice(0, 10);
-        writeJson(manifestPath, manifest);
-        console.log(`  escrito ${rel(manifestPath)} (version ${manifest.version})`);
-      }
-    } else if (cambia) console.log(`  (cambiaría ${cambios} ficha(s); usa --write)`);
-    else console.log('  sin cambios');
+    // `escribeEspacio` sube la `version` del manifiesto en el mismo paso que escribe el paquete: sin
+    // eso, quien ya tenía el espacio guardado se queda sin la pestaña «Migratorias» aunque el
+    // servidor ya la traiga — que es justo el olvido que esta herramienta cometió durante trece
+    // espacios. Los contadores no cambian: no entra ni sale ninguna ficha.
+    const { cambia, lineas } = escribeEspacio({ dir: espacio.dir, file: espacio.file, doc, write: WRITE });
+    for (const l of lineas) console.log('  ' + l);
+    if (cambia && !WRITE) console.log(`  (cambiaría ${cambios} ficha(s); usa --write)`);
 
     totalMigratorias += migratorias; totalResidentes += residentes;
     totalSinSenal += sinSenal; totalCambios += cambios;

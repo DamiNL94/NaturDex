@@ -85,9 +85,17 @@ const SIGNIFICADO = {
  *     *Pinus halepensis*, que no es una especie protegida: es madera.
  *   · Anexos IV y V de la Ley 42/2007 — régimen de explotación, no de protección.
  */
+// «RD 289/2003» y «Real Decreto 289/2003» son la MISMA norma, y la lista solo reconocía una de las
+// dos formas por norma: la abreviada para el 289/2003 y el 216/2019, la larga para el 159/2022. Como
+// EIDOS devuelve el título completo —«Real Decreto 289/2003, de 7 de marzo, sobre la
+// comercialización…»— y las fichas viejas lo citan abreviado, la mitad de las citas no casaba y su
+// ficha se quedaba SIN tramo: no como «comprobado que no protege» sino como «nadie lo ha mirado»,
+// que es el estado que esto existe para no fabricar. Lo pagaban el taray y el erizo europeo
+// (2026-08-25 (b)). Por eso el prefijo se escribe una vez y se reutiliza.
+const RD = '(?:RD|Real\\s+Decreto)\\s*';
 const NO_SON_PROTECCION = [
-  /RD\s*630\/2013|RD\s*216\/2019|exóticas?\s+invasoras|\bCEEEI\b/i,
-  /RD\s*159\/2022|Real\s+Decreto\s+159\/2022|RD\s*289\/2003|forestales?\s+para\s+conservaci[óo]n/i,
+  new RegExp(`${RD}630\\/2013|${RD}216\\/2019|exóticas?\\s+invasoras|\\bCEEEI\\b`, 'i'),
+  new RegExp(`${RD}159\\/2022|${RD}289\\/2003|forestales?\\s+para\\s+conservaci[óo]n`, 'i'),
   /anexo\s*[IV]+\s*\(ley\s*42\/2007|r[ée]gimen\s+de\s+explotaci[óo]n/i,
   // Decreto 50/2003 de Murcia: «aprovechamiento sujeto a autorización previa» regula la recolección
   // (tomillo, romero…), no protege al taxón. 16 fichas.

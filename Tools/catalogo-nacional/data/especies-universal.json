@@ -608,7 +608,7 @@
       "genus": "Allium"
     },
     "iucnGlobal": "NT (Casi amenazado)",
-    "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Allium_melananthum02.jpg?width=1280",
     "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
     "rarityBasis": null,
@@ -5720,7 +5720,7 @@
       "genus": "Centaurea"
     },
     "iucnGlobal": "NE",
-    "spainStatus": "Pendiente de contrastar con la Lista Roja de la Flora Vascular Española 2008",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Centaurea_saxicola674.jpg?width=1280",
     "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
     "rarityBasis": null,
@@ -6434,7 +6434,7 @@
       "genus": "Chamaerops"
     },
     "iucnGlobal": "LC (Preocupación menor)",
-    "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+    "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chamaerops_humilis_Torreblanca.jpg?width=1280",
     "imageAttribution": "Canaan (CC BY-SA 4.0) · Wikimedia Commons",
     "rarityBasis": null,
@@ -8735,7 +8735,7 @@
       "genus": "Cynomorium"
     },
     "iucnGlobal": "NE",
-    "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cynomorium_coccineum_vMH375.jpg?width=1280",
     "imageAttribution": "autor no indicado (Public domain) · Wikimedia Commons",
     "rarityBasis": null,
@@ -10080,7 +10080,7 @@
       "genus": "Eragrostis"
     },
     "iucnGlobal": "NE",
-    "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/591856810/original.jpg",
     "imageAttribution": "Alejandro Rodríguez Zapata (CC BY 4.0) · GBIF/iNaturalist"
   },
@@ -10461,7 +10461,7 @@
       "genus": "Erodium"
     },
     "iucnGlobal": "NE",
-    "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/642301345/original.jpg",
     "imageAttribution": "Laia Lahoz (CC BY-NC 4.0) · iNaturalist/GBIF"
   },
@@ -14524,7 +14524,7 @@
       "genus": "Lafuentea"
     },
     "iucnGlobal": "NE",
-    "spainStatus": "Pendiente de contrastar con la Lista Roja de la Flora Vascular Española 2008",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lafuentea_rotundifolia80857.jpg?width=1280",
     "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons",
     "rarityBasis": null,
@@ -15041,7 +15041,7 @@
       "genus": "Lavandula"
     },
     "iucnGlobal": "NE",
-    "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lavandula_dentata1.jpg?width=1280",
     "imageAttribution": "KENPEI (CC BY-SA 3.0) · Wikimedia Commons"
   },
@@ -15092,7 +15092,7 @@
       "genus": "Lavandula"
     },
     "iucnGlobal": "NE",
-    "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lavandula_multifida.jpg?width=1280",
     "imageAttribution": "Laitche (Public domain) · Wikimedia Commons",
     "rarityBasis": null,
@@ -15312,7 +15312,7 @@
       "genus": "Limonium"
     },
     "iucnGlobal": "NE",
-    "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_cossonianum.jpg?width=1280",
     "imageAttribution": "Nanosanchez (CC0) · Wikimedia Commons",
     "rarityBasis": null,
@@ -15404,7 +15404,7 @@
       "genus": "Limonium"
     },
     "iucnGlobal": "NE (no evaluada a nivel global; género con numerosos microendemismos ibéricos)",
-    "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 con este nombre (pendiente de confirmar sinonimia)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_insigne.jpg?width=1280",
     "imageAttribution": "ANE (CC BY-SA 4.0) · Wikimedia Commons",
     "rarityBasis": null,
@@ -16402,7 +16402,7 @@
       "genus": "Lycium"
     },
     "iucnGlobal": "NE (no evaluada a nivel global)",
-    "spainStatus": "No confirmada presencia en la Lista Roja de la Flora Vascular Española 2008",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lycium_intrincatum_(flor).JPG?width=1280",
     "imageAttribution": "ANE (CC BY-SA 4.0) · Wikimedia Commons",
     "rarityBasis": null,
@@ -17075,7 +17075,7 @@
       "genus": "Maytenus"
     },
     "iucnGlobal": "NE",
-    "spainStatus": "Presente en el listado nacional de la Lista Roja de la Flora Vascular Española 2008 (categoría exacta pendiente de confirmar)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Arto_Negro_01.jpg?width=1280",
     "imageAttribution": "Eduardo Milla (CC BY-SA 4.0) · Wikimedia Commons",
     "rarityBasis": null,
@@ -19744,7 +19744,7 @@
       "genus": "Osyris"
     },
     "iucnGlobal": "LC (Preocupación menor)",
-    "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+    "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Osyris_lanceolata.JPG?width=1280",
     "imageAttribution": "Xemenendura (CC BY-SA 4.0) · Wikimedia Commons",
     "rarityBasis": null,
@@ -20430,7 +20430,7 @@
       "genus": "Periploca"
     },
     "iucnGlobal": "NE (no evaluada a nivel global)",
-    "spainStatus": "Pendiente de confirmar presencia y categoría en la Lista Roja de la Flora Vascular Española 2008",
+    "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/609975159/original.jpg",
     "imageAttribution": "Quentin Groom (CC0) · GBIF",
     "rarityBasis": null,
@@ -22690,7 +22690,7 @@
       "genus": "Quercus"
     },
     "iucnGlobal": "LC (Preocupación menor)",
-    "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+    "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_coccifera_1.JPG?width=1280",
     "imageAttribution": "User:Xemenendura (CC BY-SA 3.0) · Wikimedia Commons",
     "rarityBasis": null,
@@ -23299,7 +23299,7 @@
       "genus": "Rhamnus"
     },
     "iucnGlobal": "NE (no evaluada a nivel global)",
-    "spainStatus": "No confirmada presencia en la Lista Roja de la Flora Vascular Española 2008",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/11702748/original.jpeg",
     "imageAttribution": "Rafael Medina (CC BY 4.0) · GBIF"
   },
@@ -24171,7 +24171,7 @@
       "genus": "Salsola"
     },
     "iucnGlobal": "LC (Preocupación menor)",
-    "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Salsola_papillosa1160031.jpg?width=1280",
     "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons",
     "rarityBasis": null,
@@ -24384,7 +24384,7 @@
       "genus": "Sarcocapnos"
     },
     "iucnGlobal": "NE",
-    "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Orella_de_ratol%C3%AD_(Sarcocapnos_saetabensis)_al_castell_de_X%C3%A0tiva.jpg?width=1280",
     "imageAttribution": "Joanbanjo (CC BY-SA 4.0) · Wikimedia Commons",
     "rarityBasis": null,
@@ -25174,7 +25174,7 @@
       "genus": "Senecio"
     },
     "iucnGlobal": "NE",
-    "spainStatus": "Pendiente de contrastar con la Lista Roja de la Flora Vascular Española 2008",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Senecio_flavus_1.jpg?width=1280",
     "imageAttribution": "Gideon Pisanty (Gidip) גדעון פיזנטי (CC BY 3.0) · Wikimedia Commons",
     "rarityBasis": null,
@@ -25306,7 +25306,7 @@
       "genus": "Serratula"
     },
     "iucnGlobal": "NE",
-    "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/411165247/original.jpeg",
     "imageAttribution": "Maël Taupin (CC BY-NC 4.0) · iNaturalist/GBIF, obs. Murcia"
   },
@@ -28010,7 +28010,7 @@
       "genus": "Thymus"
     },
     "iucnGlobal": "NE",
-    "spainStatus": "Una subespecie afín (Thymus hyemalis subsp. millefloris) figura en la Lista Roja de la Flora Vascular Española 2008; confirmar si aplica a la población del parque",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Thymus_hyemalis_re.jpg?width=1280",
     "imageAttribution": "Retama (CC BY-SA 3.0) · Wikimedia Commons",
     "rarityBasis": null,
@@ -29509,7 +29509,7 @@
       "genus": "Ziziphus"
     },
     "iucnGlobal": "NE (no evaluada a nivel global)",
-    "spainStatus": "Incluida en la Lista Roja de la Flora Vascular Española 2008 (categoría exacta pendiente de confirmar en listaroja.conservacionvegetal.org)",
+    "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ziziphus_lotus_20200928_191923.jpg?width=1280",
     "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons",
     "rarityBasis": null,

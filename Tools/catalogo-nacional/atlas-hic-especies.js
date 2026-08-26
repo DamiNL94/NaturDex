@@ -53,7 +53,7 @@ for (const p of atlasPaths) {
 }
 
 // Localiza el park.json del parque a partir del registro.
-const { FRONTEND, REGISTRY_FILE, readJson } = require('../lib/io');
+const { FRONTEND, REGISTRY_FILE, OUT_DIR, readJson } = require('../lib/io');
 const registry = readJson(REGISTRY_FILE);
 let entry = null;
 for (const c of (registry.communities || [])) for (const p of (c.provinces || [])) for (const pk of (p.parks || []))
@@ -88,6 +88,19 @@ if (bloques && !bloquesConEspecies) {
 }
 
 // --- 2) Cruzar con el catálogo del parque por binomio (género + raíz del epíteto) -----------------
+// El binomio normaliza la desinencia del epíteto pero NO el género, así que un cambio de género
+// —*Stipa* → *Macrochloa* tenacissima— no casa y la especie pierde su evidencia `caracteristica`
+// teniendo el respaldo del Atlas delante (deuda nº 26). El puente se LEE de la caché que deja
+// `atlas:puente`; aquí no se sale a la red. Solo cruza RECOMBINACIONES —mismo epíteto, otro
+// género—: un cambio de epíteto es un cambio de identidad y ésos van de uno en uno (ver lib/atlas.js).
+const { puenteDesdeCache } = require('../lib/atlas');
+const RUTA_PUENTE = path.join(OUT_DIR, 'atlas-eidos-nombres-cache.json');
+const puente = puenteDesdeCache(fs.existsSync(RUTA_PUENTE) ? readJson(RUTA_PUENTE) : {});
+if (!puente.size) {
+  process.stderr.write('⚠ sin caché del puente de nomenclatura del Atlas: los cambios de género no ' +
+    'casarán. La genera `node Tools/catalogo-nacional/atlas-puente-nomenclatura.js --write`.\n');
+}
+
 const catByBin = new Map();
 for (const s of park.species) { const b = binomial(s.scientificName); if (b) catByBin.set(b, s); }
 
@@ -95,7 +108,8 @@ const links = []; const perHic = {}; const seen = new Set();
 for (const code of HIC) {
   const slugH = codeToSlug[code]; const matched = [];
   for (const atlasName of atlasByHic[code]) {
-    const cat = catByBin.get(binomial(atlasName) || '');
+    const b = binomial(atlasName) || '';
+    const cat = catByBin.get(b) || catByBin.get(puente.get(b) || '');
     if (cat && cat.kingdom !== 'fauna') {
       matched.push(cat.scientificName);
       const k = slugH + '|' + cat.scientificName;

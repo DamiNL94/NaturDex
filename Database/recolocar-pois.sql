@@ -49,7 +49,7 @@ UPDATE points_of_interest x JOIN parks p ON p.id = x.park_id
    AND (x.latitude IS NULL OR x.longitude IS NULL);
 UPDATE points_of_interest x JOIN parks p ON p.id = x.park_id
    SET x.latitude = 37.449442, x.longitude = -1.482124
- WHERE p.slug = 'cabo-cope-puntas-calnegre' AND x.slug = 'playa-Charco'
+ WHERE p.slug = 'cabo-cope-puntas-calnegre' AND x.slug = 'playa-charco'
    AND (x.latitude IS NULL OR x.longitude IS NULL);
 UPDATE points_of_interest x JOIN parks p ON p.id = x.park_id
    SET x.latitude = 37.43294, x.longitude = -1.47693

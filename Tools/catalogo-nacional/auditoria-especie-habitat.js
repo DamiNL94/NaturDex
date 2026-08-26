@@ -61,7 +61,7 @@
 const fs = require('fs');
 const path = require('path');
 const { arg, num, flag } = require('../lib/cli');
-const { DATABASE, OUT_DIR, readJson, writeJson, rel, fromRoot, parkFiles } = require('../lib/io');
+const { DATABASE, OUT_DIR, readJson, writeJson, rel, fromRoot, parkFiles, escribeEspacio } = require('../lib/io');
 const { cotejaMedio, MEDIOS_EXIGENTES } = require('../lib/medios');
 const { sqlStr } = require('../lib/sql');
 
@@ -213,6 +213,23 @@ function veredicto(especie, habitat, ctx) {
           'nomenclatura, no una ausencia',
       };
     }
+    // Y aquí hace falta la MISMA distinción que en el vuelo, que a esta rama se le había olvidado:
+    // ¿de dónde sale el enlace? Si la ficha no tiene `gbifOccurrences`, el vínculo NO se derivó de
+    // ningún barrido — lo escribió una fuente documental, y en Cabo Cope son el artículo de Alcaraz
+    // Ariza sobre la flora de la Marina de Cope, el Anexo I del PORN y las «Bases ecológicas» del
+    // HIC. Retirarlo porque GBIF no tiene un registro dentro de ese polígono es juzgar una fuente
+    // con el criterio de otra, y en un polígono pequeño el silencio de GBIF no dice nada: son la
+    // azucena de mar en las dunas embrionarias, la adelfa en la galería ribereña y el palmito en el
+    // sabinar. Es la regla que el resto del pipeline aplica al Atlas —usarlo solo en positivo— y la
+    // que se escribió el 2026-08-25 (b) para la fenología: **para retirar hace falta evidencia
+    // positiva**, y aquí la evidencia positiva es que el enlace saliera del barrido.
+    if (typeof especie.gbifOccurrences !== 'number') {
+      return {
+        veredicto: 'no-evaluable', ocurrencias: 0,
+        motivo: 'el enlace no sale del barrido —la ficha no tiene ocurrencias de GBIF— sino de una ' +
+          'fuente documental, así que la ausencia de registros en el polígono no lo desmiente',
+      };
+    }
     return { veredicto: 'sin-constancia', ocurrencias: 0, motivo: 'el barrido la sitúa en el espacio pero NO en este polígono' };
   }
   if (occ < UMBRAL) {
@@ -306,30 +323,13 @@ function aplica(doc, enlaces) {
 
 /** Escribe park.json y su manifiesto si han cambiado. Devuelve las líneas de consola. */
 function escribe(entrada, doc) {
-  const lineas = [];
-  const previo = fs.readFileSync(entrada.file, 'utf8');
-  const nuevo = JSON.stringify(doc, null, 2) + '\n';
-  if (previo === nuevo) return [`= ${rel(entrada.file)}`];
-  if (WRITE) fs.writeFileSync(entrada.file, nuevo, 'utf8');
-  lineas.push(`${WRITE ? '+' : '~'} ${rel(entrada.file)}`);
-
-  // El manifiesto decide si un dispositivo con el espacio guardado sin conexión vuelve a bajarlo:
-  // si el contenido cambia y `version` no sube, el usuario se queda con los enlaces viejos.
-  const manifestPath = path.join(entrada.dir, 'manifest.json');
-  if (!fs.existsSync(manifestPath)) return lineas;
-  const manifest = readJson(manifestPath);
-  manifest.counts = manifest.counts || {};
-  manifest.counts.species = (doc.species || []).length;
-  manifest.counts.habitats = (doc.habitats || []).length;
-  manifest.version = (Number(manifest.version) || 0) + 1;
-  manifest.updatedAt = new Date().toISOString().slice(0, 10);
-  const previoM = fs.readFileSync(manifestPath, 'utf8');
-  const nuevoM = JSON.stringify(manifest, null, 2) + '\n';
-  if (previoM !== nuevoM) {
-    if (WRITE) fs.writeFileSync(manifestPath, nuevoM, 'utf8');
-    lineas.push(`${WRITE ? '+' : '~'} ${rel(manifestPath)}`);
-  }
-  return lineas;
+  // Las dos escrituras van juntas y viven en `lib/io.js`: el manifiesto decide si un dispositivo con
+  // el espacio guardado sin conexión vuelve a bajarlo, así que retirar enlaces y no subir la
+  // `version` deja al usuario con los enlaces que esta auditoría acaba de quitar.
+  return escribeEspacio({
+    dir: entrada.dir, file: entrada.file, doc, write: WRITE,
+    counts: { species: (doc.species || []).length, habitats: (doc.habitats || []).length },
+  }).lineas;
 }
 
 // --- Borrado para la base de datos ---------------------------------------------------------------

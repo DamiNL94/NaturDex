@@ -64,7 +64,7 @@
 const fs = require('fs');
 const path = require('path');
 const { arg, flag } = require('../lib/cli');
-const { CATALOGO_DIR, DATABASE, readJson, writeJson, rel, fromRoot, parkFiles } = require('../lib/io');
+const { CATALOGO_DIR, DATABASE, readJson, rel, fromRoot, parkFiles, escribeEspacio } = require('../lib/io');
 const { sqlStr } = require('../lib/sql');
 
 const PARK = arg('park', null);
@@ -276,21 +276,14 @@ function main() {
       h.speciesIds = (h.speciesIds || []).filter((id) => !fuera.has(id));
     }
 
-    const antesTexto = fs.readFileSync(espacio.file, 'utf8');
-    const nuevoTexto = JSON.stringify(doc, null, 2) + '\n';
-    if (antesTexto !== nuevoTexto && WRITE) {
-      writeJson(espacio.file, doc);
-      console.log(`  escrito ${rel(espacio.file)}`);
-      const manifestPath = path.join(espacio.dir, 'manifest.json');
-      if (fs.existsSync(manifestPath)) {
-        const manifest = readJson(manifestPath);
-        manifest.counts = manifest.counts || {};
-        manifest.counts.species = doc.species.length;
-        manifest.version = (Number(manifest.version) || 0) + 1;
-        manifest.updatedAt = hoy();
-        writeJson(manifestPath, manifest);
-        console.log(`  escrito ${rel(manifestPath)} (version ${manifest.version}, ${doc.species.length} especies)`);
-      }
+    // El paquete y la `version` del manifiesto van en el mismo paso: aquí se RETIRAN fichas, así que
+    // un dispositivo que no vuelva a descargarlo seguiría enseñando el trinomio fundido.
+    const { cambia, lineas } = escribeEspacio({
+      dir: espacio.dir, file: espacio.file, doc,
+      counts: { species: doc.species.length }, write: WRITE,
+    });
+    for (const l of lineas) console.log('  ' + l);
+    if (cambia && WRITE) {
       if (CON_SQL) {
         // Las dos operaciones dejan el MISMO rastro en la BD: una fila con el nombre viejo que el
         // UPSERT de build-park-sql.js no toca. Van juntas en el mismo borrado.
@@ -304,7 +297,7 @@ function main() {
         fs.writeFileSync(ruta, redactaSql(espacio.slug, borrar), 'utf8');
         console.log(`  escrito ${rel(ruta)}`);
       }
-    } else if (antesTexto !== nuevoTexto) {
+    } else if (cambia) {
       console.log('  (usa --write para escribirlo; añade --sql para el borrado de la BD)');
     }
 

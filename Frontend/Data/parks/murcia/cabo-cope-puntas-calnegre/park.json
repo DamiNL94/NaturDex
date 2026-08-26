@@ -783,7 +783,7 @@
       "audioTranscript": null
     },
     {
-      "id": "playa-Charco",
+      "id": "playa-charco",
       "name": "Playa del Charco",
       "type": "Natural",
       "description": "Playa con uno de los mejores tarayales (Tamarix) del litoral murciano; el PORN la cita por su bosque de tarais, representativo del hábitat de interés comunitario 92D0 (galerías y matorrales ribereños termomediterráneos).",
@@ -983,7 +983,7 @@
         "genus": "Allium"
       },
       "iucnGlobal": "NT (Casi amenazado)",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
       "reviewNote": "Foto localizada por búsqueda en Commons (no por el elemento de Wikidata del taxón): conviene confirmar que corresponde a esta especie.",
       "eidosTaxonId": 2011,
@@ -1293,7 +1293,7 @@
         "genus": "Salsola"
       },
       "iucnGlobal": "LC (Preocupación menor)",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
       "reviewNote": null,
       "eidosTaxonId": 7915,
@@ -2022,7 +2022,7 @@
         "genus": "Lavandula"
       },
       "iucnGlobal": "NE",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (Anexo II: aprovechamiento sujeto a autorización)",
       "reviewNote": "Especie añadida desde el Catálogo de Flora Silvestre Protegida del Anexo I del PORN; la asignación de hábitat es una inferencia ecológica (el Anexo no la vincula a una asociación concreta) y las coordenadas son representativas, no de una localización verificada. Confirmar en campo.",
       "eidosTaxonId": 5547,
@@ -2176,7 +2176,7 @@
         "genus": "Maytenus"
       },
       "iucnGlobal": "NE",
-      "spainStatus": "Presente en el listado nacional de la Lista Roja de la Flora Vascular Española 2008 (categoría exacta pendiente de confirmar)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
       "reviewNote": null,
       "eidosTaxonId": 6258,
@@ -2343,7 +2343,7 @@
         "genus": "Ziziphus"
       },
       "iucnGlobal": "NE (no evaluada a nivel global)",
-      "spainStatus": "Incluida en la Lista Roja de la Flora Vascular Española 2008 (categoría exacta pendiente de confirmar en listaroja.conservacionvegetal.org)",
+      "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
       "reviewNote": null,
       "eidosTaxonId": 9441,
@@ -2548,7 +2548,7 @@
         "genus": "Osyris"
       },
       "iucnGlobal": "LC (Preocupación menor)",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+      "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
       "reviewNote": "Especie añadida desde el Catálogo de Flora Silvestre Protegida del Anexo I del PORN; el hábitat se apoya en la asociación fitosociológica citada por las fuentes oficiales del parque. Coordenadas representativas, pendientes de precisar en campo.",
       "eidosTaxonId": 6882,
@@ -2727,7 +2727,7 @@
         "genus": "Lycium"
       },
       "iucnGlobal": "NE (no evaluada a nivel global)",
-      "spainStatus": "No confirmada presencia en la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
       "reviewNote": null,
       "eidosTaxonId": 5923,
@@ -2829,7 +2829,7 @@
         "genus": "Lavandula"
       },
       "iucnGlobal": "NE",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (Anexo II: aprovechamiento sujeto a autorización)",
       "reviewNote": "Especie añadida desde el Catálogo de Flora Silvestre Protegida del Anexo I del PORN; la asignación de hábitat es una inferencia ecológica (el Anexo no la vincula a una asociación concreta) y las coordenadas son representativas, no de una localización verificada. Confirmar en campo.",
       "eidosTaxonId": 5731,
@@ -2875,7 +2875,7 @@
         "genus": "Centaurea"
       },
       "iucnGlobal": "NE",
-      "spainStatus": "Pendiente de contrastar con la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
       "reviewNote": "Especie añadida a partir del PORN; falta contrastar su distribución exacta dentro del parque y su presencia en la Lista Roja de la Flora Vascular Española 2008.",
       "eidosTaxonId": 3332,
@@ -3416,7 +3416,7 @@
         "genus": "Cynomorium"
       },
       "iucnGlobal": "NE",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
       "reviewNote": "Especie añadida desde el Catálogo de Flora Silvestre Protegida del Anexo I del PORN; la asignación de hábitat es una inferencia ecológica (el Anexo no la vincula a una asociación concreta) y las coordenadas son representativas, no de una localización verificada. Confirmar en campo.",
       "eidosTaxonId": 3790,
@@ -3892,7 +3892,7 @@
         "genus": "Periploca"
       },
       "iucnGlobal": "NE (no evaluada a nivel global)",
-      "spainStatus": "Pendiente de confirmar presencia y categoría en la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
       "reviewNote": null,
       "eidosTaxonId": 7034,
@@ -3941,7 +3941,7 @@
         "genus": "Quercus"
       },
       "iucnGlobal": "LC (Preocupación menor)",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+      "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (Anexo II: aprovechamiento sujeto a autorización)",
       "reviewNote": "Especie añadida desde el Catálogo de Flora Silvestre Protegida del Anexo I del PORN; la asignación de hábitat es una inferencia ecológica (el Anexo no la vincula a una asociación concreta) y las coordenadas son representativas, no de una localización verificada. Confirmar en campo.",
       "eidosTaxonId": 7478,
@@ -4341,7 +4341,7 @@
         "genus": "Eragrostis"
       },
       "iucnGlobal": "NE",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
       "reviewNote": "Especie añadida desde el Catálogo de Flora Silvestre Protegida del Anexo I del PORN; la asignación de hábitat es una inferencia ecológica (el Anexo no la vincula a una asociación concreta) y las coordenadas son representativas, no de una localización verificada. Confirmar en campo.",
       "eidosTaxonId": 10023,
@@ -4387,7 +4387,7 @@
         "genus": "Erodium"
       },
       "iucnGlobal": "NE",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
       "reviewNote": null,
       "eidosTaxonId": 9835,
@@ -4642,7 +4642,7 @@
         "genus": "Rhamnus"
       },
       "iucnGlobal": "NE (no evaluada a nivel global)",
-      "spainStatus": "No confirmada presencia en la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (citada como Rhamnus hispanorum)",
       "reviewNote": null,
       "eidosTaxonId": 7732,
@@ -6358,7 +6358,7 @@
         "genus": "Lafuentea"
       },
       "iucnGlobal": "NE",
-      "spainStatus": "Pendiente de contrastar con la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
       "reviewNote": "Especie añadida a partir del PORN; falta contrastar su distribución exacta dentro del parque y su presencia en la Lista Roja de la Flora Vascular Española 2008.",
       "eidosTaxonId": 5616,
@@ -6564,7 +6564,7 @@
         "genus": "Chamaerops"
       },
       "iucnGlobal": "LC (Preocupación menor)",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+      "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
       "reviewNote": "Especie añadida desde el Catálogo de Flora Silvestre Protegida del Anexo I del PORN; el hábitat se apoya en la asociación fitosociológica citada por las fuentes oficiales del parque. Coordenadas representativas, pendientes de precisar en campo.",
       "eidosTaxonId": 3518,
@@ -7097,7 +7097,7 @@
         "genus": "Senecio"
       },
       "iucnGlobal": "NE",
-      "spainStatus": "Pendiente de contrastar con la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
       "reviewNote": "Sin hábitat, ubicación ni nombre común documentados en el PORN; falta confirmar en campo su localización exacta dentro del parque.",
       "eidosTaxonId": 687,
@@ -7145,7 +7145,7 @@
         "genus": "Serratula"
       },
       "iucnGlobal": "NE",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
       "reviewNote": "La foto está publicada como Klasea flavescens subsp. mucronata, la combinación que usan iNaturalist y parte de las floras para este taxón; GBIF y el IEPNB lo mantienen como Serratula mucronata Desf.",
       "eidosTaxonId": 5538,
@@ -7191,7 +7191,7 @@
         "genus": "Limonium"
       },
       "iucnGlobal": "NE",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (Anexo II: aprovechamiento sujeto a autorización)",
       "reviewNote": "Especie añadida desde el Catálogo de Flora Silvestre Protegida del Anexo I del PORN; el hábitat se apoya en la asociación fitosociológica citada por las fuentes oficiales del parque. Coordenadas representativas, pendientes de precisar en campo.",
       "eidosTaxonId": 5761,
@@ -7292,7 +7292,7 @@
         "genus": "Limonium"
       },
       "iucnGlobal": "NE (no evaluada a nivel global; género con numerosos microendemismos ibéricos)",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 con este nombre (pendiente de confirmar sinonimia)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial; aprovechamiento sujeto a autorización previa",
       "reviewNote": "El género Limonium tiene una taxonomía muy compleja con numerosos microendemismos; confirmar la identificación exacta de la población de Cabo Cope frente a especies afines (L. lobatum, L. cossonianum).",
       "eidosTaxonId": 5836,
@@ -7836,7 +7836,7 @@
         "genus": "Thymus"
       },
       "iucnGlobal": "NE",
-      "spainStatus": "Una subespecie afín (Thymus hyemalis subsp. millefloris) figura en la Lista Roja de la Flora Vascular Española 2008; confirmar si aplica a la población del parque",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): aprovechamiento sujeto a autorización previa",
       "reviewNote": "Existe una subespecie (millefloris) con presencia confirmada en la Lista Roja nacional; verificar a qué subespecie/población corresponden los ejemplares de Cabo Cope.",
       "eidosTaxonId": 8914,
@@ -8301,7 +8301,7 @@
         "genus": "Sarcocapnos"
       },
       "iucnGlobal": "NE",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
       "reviewNote": "Especie añadida desde el Catálogo de Flora Silvestre Protegida del Anexo I del PORN; el hábitat se apoya en la asociación fitosociológica citada por las fuentes oficiales del parque. Coordenadas representativas, pendientes de precisar en campo.",
       "eidosTaxonId": 31994,

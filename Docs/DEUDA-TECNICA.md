@@ -218,7 +218,23 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     `LATERAL` ni `CAST(… AS JSON)` para que valga en los dos motores, y en MariaDB pasa dos veces sin
     diff, pero **el primer pase contra el MySQL real hay que mirarlo**, con `npm run db:backup` hecho
     antes.
-18. **`playa-Charco`: un `slug` de POI con mayúscula, y es clave única en la BD.** Lo destapó la
+18. ~~**`playa-Charco`: un `slug` de POI con mayúscula, y es clave única en la BD.**~~ — **hecho en
+    el repositorio el 2026-08-25 (b); queda el `UPDATE` de la BD.** Renombrado a `playa-charco` en
+    los cuatro sitios del repo a la vez —`park.json` (por `escribeEspacio()`, así que el manifiesto
+    sube de versión), `seed.sql`, `snapshot.sql` y `recolocar-pois.sql`— y el quinto, la fila viva,
+    va en **`Database/renombra-poi-playa-charco.sql`**, escrito a mano y pendiente de aplicar. El
+    aviso de `validate` ya no sale.
+    > **El `UPDATE` hace falta y no lo genera nadie**: `build-poi-sql.js` hace UPSERT por `slug`, así
+    > que aplicar el N3 con el slug nuevo no renombraría nada — daría de alta un SEGUNDO POI y
+    > dejaría el viejo al lado, que es justo la duplicación que esta deuda quería evitar. Va **antes**
+    > de cualquier `n3-pois-cabo-cope-puntas-calnegre.sql` posterior, y acota por parque porque el
+    > `slug` es único POR PARQUE, no global.
+    >
+    > `recolocar-pois.sql` está en el histórico de «ya aplicadas», y aun así se corrige: cambiar el
+    > literal no altera lo que ese fichero ya hizo, y dejarlo con el slug viejo haría que un futuro
+    > relanzamiento se saltara ese POI en silencio.
+
+    El diagnóstico original, que sigue explicando por qué era aviso y no error: lo destapó la
     auditoría del N3 del 2026-08-15 (g). El §4.3.8 pide el id en slug estable —minúsculas, sin tildes,
     guiones— porque es `points_of_interest.slug`, único por parque, y este lleva una `C` mayúscula
     desde el piloto. **No se arregla editando el `park.json`**: el mismo literal está en
@@ -237,22 +253,42 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     > fichas**: el volcado truncado traía 1.460 especies dentro de los polígonos y el completo trae
     > 1.463. Lo que la truncadura falseaba es el número de **registros por especie**; el salto de
     > fichas lo produce la corrección de la métrica. Dos defectos reales, y se habían mezclado.
-20. **La curruca rabilarga sigue partida en dos, aunque el escáner ya la vea.** Es `Curruca undata`
-    (EIDOS **80931**, GBIF **10355796**) en unos espacios y `Sylvia undata` (**80230**, **2492949**)
-    en otros, y lo mismo con *atricapilla*, *hortensis*, *communis* y *borin*. **La mitad de detección
-    está hecha**: la tercera pasada por epíteto de `scan-taxones-duplicados.js` la propone desde el
-    2026-08-16, y las dos sesiones que la encontraron por separado —una mirando el escáner y otra
-    regenerando Carrascoy— llegaron al mismo diagnóstico. Lo que queda es **elegir un nombre y
-    renombrar** en los `park.json`, en `data/contenido/` y en el catálogo universal, con la trampa del
-    §2 del `CLAUDE.md` delante: renombrar desengancha la ficha de su texto, que se indexa por nombre
-    científico. Ver ESTADO.md, §"2026-08-16".
-21. **El PORN de Carrascoy y El Valle no tiene inventario de especies, y conviene que conste.** Sus
-    tres inventarios —§3.1.2.3 lugares de interés geológico, §3.3 hitos paisajísticos y §4.4 Tabla 8
-    de yacimientos— son los que desbloquearon su Fase 3, y ninguno enumera fauna ni flora. Mientras
-    no esté escrito en `data/normativa-espacios.json`, cada sesión que mire este espacio volverá a
-    abrir el PDF para averiguar lo mismo. Un `encontrado: true` con `inventarioDeEspecies: false`
-    ahorra esa búsqueda, y es la misma regla que ya aplica el anexo normativo: **un espacio sin
-    entrada no es un espacio sin anexo, es un anexo no consultado**.
+20. ~~**La curruca rabilarga sigue partida en dos, aunque el escáner ya la vea.**~~ — **YA ESTABA
+    PAGADA; comprobado el 2026-08-25 (b).** Era `Curruca undata` (EIDOS 80931, GBIF 10355796) en unos
+    espacios y `Sylvia undata` (80230, 2492949) en otros, y lo mismo con *atricapilla*, *hortensis*,
+    *communis* y *borin*. Lo arreglaron `fix-curruca-undata.js` y `fix-nomenclatura-eidos.js` el
+    2026-08-17 y **la entrada del ledger se quedó sin cerrar**.
+    > Comprobado de tres maneras: los ocho epítetos del grupo (*undata*, *atricapilla*, *hortensis*,
+    > *communis*, *borin*, *melanocephala*, *cantillans*, *conspicillata*) están fichados con **un
+    > solo género cada uno** en los dieciséis espacios; `npm run taxones:duplicados` no propone
+    > ninguna pareja *Sylvia*/*Curruca*; y en el catálogo universal quedan exactamente dos entradas
+    > *Sylvia* —*atricapilla* y *borin*—, que **son las correctas**: EIDOS mantiene esas dos en
+    > *Sylvia* y mueve las demás a *Curruca*. Que queden nombres del género viejo no es un resto: es
+    > lo que dice la autoridad.
+    >
+    > Vale la pena anotar por qué duró: una deuda cerrada por una corrección puntual **no se cierra
+    > sola en el ledger**, y esta llevaba desde el 2026-08-17 pidiendo un trabajo ya hecho.
+21. ~~**El PORN de Carrascoy y El Valle no tiene inventario de especies, y conviene que conste.**~~ —
+    **PAGADA el 2026-08-25 (b).** Sus tres inventarios —§3.1.2.3 lugares de interés geológico, §3.3
+    hitos paisajísticos y §4.4 Tabla 8 de yacimientos— son los que desbloquearon su Fase 3, y ninguno
+    enumera fauna ni flora. Mientras no estuviera escrito en `data/normativa-espacios.json`, cada
+    sesión que mirara este espacio volvía a abrir el PDF para averiguar lo mismo.
+    > Escrito como documento nº 9 del fichero, con `encontrado: true` e **`inventarioDeEspecies:
+    > false`**, campo nuevo que el `_regla` del propio fichero explica: sin él «encontrado» se lee
+    > como «hay de dónde sacar el catálogo». Es la misma regla que ya aplica el anexo normativo —**un
+    > espacio sin entrada no es un espacio sin anexo, es un anexo no consultado**— dicha para el
+    > documento.
+    >
+    > Consecuencia que conviene tener a mano: **la deuda nº 1 de Carrascoy no se salda transcribiendo
+    > este plan**, porque no hay nada que transcribir, y su 50 % de fichas sostenidas solo en GBIF no
+    > baja por ahí. Lo que sí hay es un sucesor en trámite: el 2026-05-29 el BORM publicó el anuncio
+    > 2467 abriendo la consulta pública previa de un PORN nuevo para Carrascoy, El Valle, Altaona y
+    > Escalona.
+    >
+    > **La URL directa del PDF no se escribe**, y es a propósito: la sesión que lo leyó (2026-08-10
+    > (d)) no la registró y el 2026-08-25 (b) la ficha del espacio en murcianatural ya no la
+    > enlazaba. Rellenar ese campo a ojo es justo lo que prohíbe la regla nº 2; en su lugar queda
+    > escrito cómo se llegó (portal del organismo gestor, no el BORM) y la trampa de Radware.
 22. **El 40 % de los enlaces especie↔hábitat se sostiene sobre UN registro, y el listón del enlace es
     más bajo que el de la ficha.** Lo mide la auditoría del 2026-08-16 (`npm run especies:habitats`,
     informe en [`auditoria-especie-habitat.md`](auditoria-especie-habitat.md)): de los 3.236 enlaces
@@ -266,14 +302,30 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     > que solo se encontrarían en «todas las especies» y sus hábitats dejarían de poder completarse.
     > Eso es una decisión de producto, no de auditoría. Lo que sí es barato es medir antes: el
     > `--umbral` está puesto y el informe trae el reparto por espacio.
-23. **Tres espacios no tienen su barrido de GBIF versionado, y por eso 1.113 enlaces no se pueden
-    revisar.** Son Cabo Cope, Cuatro Calas y Sierra Espuña: `out/<slug>-gbif.json` existe para los
-    cinco restantes y para estos no, así que la auditoría de enlaces los deja en «no evaluable» —el
-    estado honesto, pero un hueco—. Se cierra con una pasada de
-    `npm run gbif:habitats -- --park <slug> --json Tools/catalogo-nacional/out/<slug>-gbif.json` por
-    espacio, que **necesita red**. Sierra Espuña es además el caso interesante: 38 de sus fichas
-    tienen `gbifOccurrences: 0` y 197 enlaces, porque los suyos son documentales (fichas de flora de
-    la Región de Murcia) y no salen de ningún barrido.
+23. ~~**Tres espacios no tienen su barrido de GBIF versionado, y por eso 1.113 enlaces no se pueden
+    revisar.**~~ — **PAGADA el 2026-08-25 (b).** Eran Cabo Cope, Cuatro Calas y Sierra Espuña, y la
+    auditoría los dejaba en «no evaluable» —el estado honesto, pero un hueco—. Bajados con
+    `npm run gbif:habitats -- --park <slug> --json out/<slug>-gbif.json --out out/<slug>-gbif.md`:
+    15.325 ocurrencias en Cabo Cope, 25.688 en Sierra Espuña. Los dieciséis espacios tienen ya su
+    barrido versionado, y **los «no evaluable» pasan de 1.102 a 126** sobre 6.009 enlaces.
+    > **Y el resultado es que no sobraba ninguno: se retiran 0 enlaces de 6.009.** Cero
+    > contradicciones de medio, cero enlaces de vuelo, cero sin constancia. Los tres barridos
+    > confirman lo que ya estaba escrito.
+    >
+    > **Pero antes de llegar ahí, la auditoría quiso retirar 38 enlaces de Cabo Cope, y habría sido
+    > un error.** Eran *Pancratium maritimum* en las dunas embrionarias, *Nerium oleander* en la
+    > galería ribereña, *Chamaerops humilis* en el sabinar, *Limonium cossonianum* en el matorral
+    > halófilo: botánica de manual. El fallo es que la rama de constancia **no preguntaba de dónde
+    > sale el enlace**. La del vuelo sí lo hace —distingue `porOcurrencias` mirando si la ficha tiene
+    > `gbifOccurrences`—, y a ésta se le había olvidado la misma distinción. Las fichas de Cabo Cope
+    > **no tienen `gbifOccurrences`**: sus enlaces salen del artículo de Alcaraz Ariza sobre la flora
+    > de la Marina de Cope, del Anexo I de su PORN y de las «Bases ecológicas» del HIC. Retirarlos
+    > porque GBIF no registra nada dentro de ese polígono es juzgar una fuente con el criterio de
+    > otra, y en un polígono pequeño el silencio de GBIF no dice nada.
+    >
+    > Tapado con la regla del día: **para retirar hace falta evidencia positiva**, y aquí la
+    > evidencia positiva es que el enlace saliera del barrido. Un enlace documental sin ocurrencias
+    > pasa a «no evaluable» con el motivo escrito, no a retirado.
 24. **330 fichas del catálogo actual se sostienen solo en GBIF, y con la puerta nueva no habrían
     entrado.** Es la deuda que abre el cambio de orden de prioridad del 2026-08-16: el pipeline ya no
     deja que GBIF dé de alta nada, pero **los ocho espacios publicados se construyeron con el
@@ -311,8 +363,39 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     > **La herramienta ya no las deja pasar**: un candidato documental que EIDOS no resuelve se
     > excluye y sale en `excluidas_detalle` con el motivo y el arreglo escritos. El arreglo es añadir
     > `nombreCorregido` a su entrada —lo que manda el `_esquema` del fichero—, **nunca** corregir el
-    > verbatim, que es la transcripción literal de la norma. Hay que hacerlo con el documento delante,
-    > espacio por espacio, y los cuatro espacios con anexo lo necesitan.
+    > verbatim, que es la transcripción literal de la norma.
+
+    > **PAGADA en su mayor parte, y la mayor parte ya estaba hecha.** Barridas las **2.121 entradas**
+    > de los once espacios contra EIDOS y GBIF el 2026-08-25 (b) con
+    > **`npm run anexos:coteja`** (`coteja-anexos-normativos.js`): **229 ya tenían
+    > `nombreCorregido`** —los casos que esta deuda enumera, «Lanius senador» → *senator*,
+    > «Croccidura» → *Crocidura*, «Hemydactilus turcitus» → *Hemidactylus turcicus*, «Portetria
+    > dispar» → *Lymantria dispar*, «Verperus fuentei» → *Vesperus fuentei*, están todos escritos—,
+    > así que el grueso se corrigió en su día y **la entrada del ledger se quedó abierta**, como
+    > pasó con la nº 20.
+    >
+    > Salen **6 erratas nuevas** y se escriben: *Acacia retinoides* → *retinodes*, *Paraserianthes
+    > lophanta* → *lophantha*, y cuatro invertebrados del Humedal del Ajauque (*Oxiopes* → *Oxyopes
+    > mediterraneus*, *Pterotrichia* → *Pterotricha simoni*, *Zodarion dictretum* → *diatretum*,
+    > *Zodarion isabelunum* → *isabellinum*).
+    >
+    > **Y el circuito importa tanto como el resultado.** No se corrige de memoria: EIDOS sobre el
+    > verbatim; si no resuelve, GBIF —cuyo backbone tolera erratas—; y la propuesta de GBIF se
+    > vuelve a resolver **contra EIDOS**, que es la autoridad del modelo. Con **tres guardas**, y las
+    > dos últimas están ahí porque la primera sola dejó pasar dos casos reales en la primera pasada:
+    >
+    > · **«Iberis comosa subsp. hegelmaieri» → *Iberus cobosi*, que es un CARACOL.** *Iberis* →
+    > *Iberus* es una letra y *comosa* → *cobosi* son tres: pasa cualquier guarda de distancia y
+    > cambia de reino. Lo delata que GBIF respondiera `HIGHERRANK`, que significa «no he sabido casar
+    > tu nombre». Ahora **solo se acepta `FUZZY`**.
+    > · **«Chaenorrhinum origanifolium subsp. Crassifolium» → la ESPECIE entera**, sin la subespecie.
+    > Adoptarla afirmaría de la ficha un taxón más amplio del que enumera la norma, que es justo el
+    > error que documenta la deuda nº 27. Ahora se exige **la misma forma**: una subespecie no se
+    > convierte en especie.
+    >
+    > Quedan **40 enumeradas y sin tocar**, y casi todas son la misma clase: el anexo escribe
+    > «*Juniperus oxycedrus* subsp. *oxycedrus*» y GBIF devuelve la especie. Ésas van con el documento
+    > delante. Idempotente: un segundo pase no gasta una petición.
 26. **El cruce con el Atlas va por binomio, y el binomio no puentea cambios de género: el esparto se
     queda sin su respaldo.** El Atlas cita las especies con la nomenclatura de 2005 —*Stipa
     tenacissima*— y el catálogo ficha *Macrochloa tenacissima*; el cruce de
@@ -331,6 +414,34 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     > arreglo del parser. Conviene pagarla ANTES de regenerar los ocho espacios (paso 3 de la deuda
     > nº 24): regenerar con el cruce cojo escribiría «solo GBIF» sobre especies que el Atlas sí
     > respalda.
+
+    > **HERRAMIENTA HECHA el 2026-08-25 (b); falta pasarla con el PDF delante.** El puente vive en
+    > `Tools/lib/atlas.js` (`tiendePuente` / `puenteDesdeCache`), lo tiende
+    > **`npm run atlas:puente`** contra EIDOS con caché compartida en
+    > `out/atlas-eidos-nombres-cache.json`, y lo LEEN los **tres** sitios que cruzaban por binomio:
+    > `build-species-seleccion.js` (que además lo tiende solo si se le da `--atlas`),
+    > `atlas-hic-especies.js` —que es donde nacen los enlaces— y `mide-niveles-puerta.js`, que es
+    > offline y solo lee la caché. Los tres avisan cuando la caché no está, porque sin ella el N3
+    > sale inflado y eso es justo lo que no puede pasar en silencio.
+    >
+    > **Y el puente NO cruza cualquier cosa que EIDOS relacione, que es la parte que había que
+    > pensar.** Lo que esta deuda arregla es una **recombinación** —mismo epíteto, otro género:
+    > *Stipa* → *Macrochloa* tenacissima—, pero EIDOS devuelve por la misma vía y sin distinguirlas
+    > relaciones que son un **cambio de identidad**: *Ammophila arenaria* → *Calamagrostis
+    > arundinacea*, *Sarcocornia fruticosa* → *Salicornia lagascae*, *Ruppia cirrhosa* → *Ruppia
+    > spiralis*. Colgar el HIC del segundo taxón porque lo tenía el primero sería inventar un dato, y
+    > con el agravante de que este puente **se usa solo en positivo**: nadie lo desmentiría después.
+    > Así que la guarda es el epíteto, que es la misma distinción que la deuda nº 27 hace a mano. En
+    > la medición de hoy: **8 recombinaciones puenteadas y 14 cambios de identidad enumerados y no
+    > aplicados**.
+    >
+    > **Lo que falta es el `atlas.txt`, y el motivo es honesto:** el texto del PDF no se versiona, y
+    > sin él los únicos nombres disponibles son los de `out/<slug>-hic-especies.json`, que guarda los
+    > del Atlas **que YA casaron**. Por construcción no puede aparecer ahí un fallo de cruce — el
+    > esparto no está, precisamente porque no casó. `atlas:puente` lo dice al correr y acepta
+    > `--atlas` para la pasada completa. Hasta entonces la caché sirve para el puente **entre
+    > parques** (un espacio ficha con el género viejo y otro con el nuevo) y las **+4 fichas** del
+    > esparto siguen pendientes.
 27. **21 fichas se llaman con un nombre que EIDOS da por sinónimo, y 22 llevan un `eidosTaxonId` que
     no es de rango especie.** Los enumera y clasifica
     [`nomenclatura-autoridades.md`](nomenclatura-autoridades.md), que genera
@@ -399,14 +510,74 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     > `rarityScore`. Es una sola operación y hay que hacerla entera; por eso no se hizo al arreglar
     > la fuga. Ya no urge para lo que ve el usuario —el tramo mostrado sale del texto legal de cada
     > ficha— pero sí para que `rarityScore` deje de ser un número que nadie puede discutir.
-30. **Once fichas se quedan sin tramo de rareza porque su `spainStatus` dice «pendiente de
-    confirmar».** Reparten entre ocho espacios y casi todas son el mismo puñado de taxones: la
-    coscoja (5 fichas), la alhucema (3), *Lavandula dentata* y *Centaurium rigualii*. La Lista Roja
-    de la Flora Vascular Española 2008 no puede listar a las comunes —enumera taxones amenazados—
-    pero nadie lo ha comprobado contra la fuente. Están en
-    [`Tools/catalogo-nacional/out/rareza-por-contrastar.md`](../Tools/catalogo-nacional/out/rareza-por-contrastar.md)
-    y la app las enseña con el aviso de precaución por defecto, que es la regla nº 9 del `CLAUDE.md`.
-    Las resuelve una consulta a EIDOS con red.
+
+    > **BLOQUEADA el 2026-08-25 (b): no es una migración, es una decisión, y las dos herramientas que
+    > escriben este campo se contradicen POR ESCRITO.** Al ir a pasarla salió que
+    > `build-species-universal.js` dice en su cabecera lo contrario que esta deuda:
+    >
+    > > «Se comprobó que **NO se puede derivar de la figura legal**: en el catálogo actual las
+    > > especies con LESRPE reparten su rareza entre 1 y 4 (el petirrojo y el águila perdicera están
+    > > las dos en el LESRPE). La señal que sí ordena bien es cuántas veces se registra la especie en
+    > > España, que es dato de GBIF.»
+    >
+    > O sea que `rarityScore` tiene hoy **dos definiciones incompatibles**: la de abundancia, que
+    > escribe el generador de fichas nuevas, y la legal, que escribiría `rareza-legal --catalogo`. Y
+    > el campo no es descriptivo: alimenta `featured`, o sea **qué especies destaca la portada de
+    > cada espacio**.
+    >
+    > La medición actualizada, con el `--dry` del 2026-08-25 (b): **1.061 fichas migradas, 503
+    > cambian de tramo**, y el movimiento es sobre todo **hacia abajo** —174 de 2→1, 147 de 3→1, 77
+    > de 4→1, 16 de 5→1— contra 52 que suben de 1→2 por el LESRPE. No son las «425 que cambian de
+    > tramo, 46 hacia arriba» que decía esta deuda: el catálogo ha crecido y el saldo se ha invertido.
+    >
+    > Pasarla sin resolver la contradicción hace dos daños: deja el catálogo con una definición y el
+    > generador con otra —así que cada ficha nueva vuelve a nacer con la de abundancia y la deuda se
+    > reabre sola—, y baja de tramo 414 fichas que hoy la portada puede estar destacando. **Hace
+    > falta decidir primero qué mide `rarityScore`**, y esa decisión es la misma que pide la deuda
+    > nº 31 sobre `featured`: conviene tomarlas juntas.
+30. ~~**Once fichas se quedan sin tramo de rareza porque su `spainStatus` dice «pendiente de
+    confirmar».**~~ — **PAGADA el 2026-08-25 (b).** Eran **23 entradas del catálogo universal** y
+    **108 fichas**: la coscoja, la alhucema, el palmito, el azufaifo, las dos siemprevivas, el arto,
+    el cornical… El texto que llevaban no era una comprobación, era una conjetura sobre una fuente
+    que nadie había abierto —«No localizada en la Lista Roja de la Flora Vascular Española 2008
+    (pendiente de confirmar)»—, y además apuntaba a la fuente equivocada: `spainStatus` es el
+    **estado legal en España** y la Lista Roja es una **evaluación**, no una norma.
+    > **Y buscarlas por su frase deja seis fuera, que es la trampa de contar por el texto.** El
+    > primer barrido buscó «pendiente de confirmar» y encontró 17; las otras seis dicen lo mismo con
+    > otras palabras —«Pendiente de **contrastar**», «**No confirmada** presencia», «confirmar si
+    > aplica a la población del parque»— y solo aparecieron al mirar quién se quedaba sin tramo, que
+    > es la pregunta buena. La lista que vale es la de `tramoDeTexto()` sin veredicto, no la de un
+    > `grep`.
+    > Se resolvió por el camino documentado, el mismo con el que se pagó la nº 5:
+    > `build-species-universal.js --taxones "<los 17>" --refrescar --refrescar-campos spainStatus`,
+    > y después `npm run species:apply`. Hoy quedan **0** en el catálogo y **0** en las fichas.
+    > Doce dicen «Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)» y cinco
+    > citan la figura que EIDOS sí les da, que es forestal y no de amenaza (RD 159/2022 de recursos
+    > genéticos forestales, RD 289/2003 de materiales forestales de reproducción).
+    >
+    > **Comprobado que no infla ningún tramo**, que era el riesgo: `tramoDeTexto` de `lib/rareza.js`
+    > devuelve **tramo 1 y `reconocido: true`** para los cuatro textos nuevos, así que las 81 fichas
+    > pasan de «indeterminado» a «tramo 1 afirmado» sin que la coscoja ni el palmito suban de
+    > categoría por llevar un anexo forestal.
+    >
+    > De paso salió lo de la deuda nº 39: EIDOS **sí** sirve la Lista Roja española, en otra vista y
+    > con otro ámbito, y tres de estos veintitrés la tienen.
+    >
+    > **Quedan cinco fichas sin tramo, y las cinco por un motivo bueno, no por un hueco.** Cuatro
+    > llevan la evaluación española escrita en el campo legal —«UICN España: EN (En peligro)
+    > (2010)»— y son la prueba en el dato de la deuda nº 39: *Capra pyrenaica*, *Coturnix coturnix*,
+    > *Helianthemum violaceum* y *Poterium ancistroides*. **No se tocan**: hoy son el único sitio del
+    > repositorio donde vive esa evaluación, y refrescarlas contra EIDOS la borraría para escribir
+    > «sin figura estatal». La quinta es *Centaurium rigualii*, «excluida del CNEA desde el año 2000
+    > por dudas sobre su validez taxonómica», que es una frase informativa y honesta.
+    >
+    > **Y dos fichas más se quedaban sin tramo por un fallo del cotejo, no del dato**: la lista de
+    > figuras que NO protegen de `lib/rareza.js` reconocía «RD 289/2003» y «RD 216/2019» solo en su
+    > forma abreviada, y EIDOS las devuelve con el título completo («Real Decreto 289/2003, de 7 de
+    > marzo, sobre la comercialización…»). El taray y el erizo europeo quedaban en «nadie lo ha
+    > mirado» teniendo el dato delante. Arreglado escribiendo el prefijo una sola vez
+    > (`(?:RD|Real\s+Decreto)`); comprobado que la coscoja sigue en tramo 1 y que un LESRPE sigue
+    > subiendo a 2.
 31. **`featured` y el tramo de rareza no dicen lo mismo en cinco espacios, y son 104 fichas.**
     `build-species-n2.js` escribe `featured: rarityLocal >= 4` al crear la ficha, pero después
     `featured` es un campo CURADO —se conserva entre regeneraciones— así que el dato se separa del
@@ -572,9 +743,25 @@ Cada una se paga mejor ahora que en el espacio número treinta.
 
     **Arreglado el 2026-08-22** en el Humedal del Ajauque (67 → 74 aves en el apartado): la clase se
     completa desde la ficha universal, que la trae de EIDOS y no depende de que GBIF haya visto al
-    bicho. Lo que queda son **4 fichas en 2 espacios** —Espacios Abiertos e Islas del Mar Menor (3) y
-    Calblanque (1)—, que se recuperan al regenerar. Es la deuda más barata de las que exigen
-    regeneración, y viaja con la nº 32 y la nº 33 en el mismo pase.
+    bicho. Lo que quedaba eran **4 fichas en 2 espacios** —Espacios Abiertos e Islas del Mar Menor (3)
+    y Calblanque (1)—, que la deuda daba por recuperables «al regenerar».
+
+    > **PAGADA el 2026-08-25 (b), y sin regenerar: no hacía falta.** La clase ya estaba bien en las
+    > fichas —`species:apply` reparte `taxonomy` desde el catálogo universal—, así que lo único que
+    > faltaba era el `zepaSiteCode`, y eso lo escribe **`npm run aves:poda`**, que ya corrige ese
+    > campo por diseño («el sitio que de verdad declara al ave, o `null`»). Un `--dry` sobre los dos
+    > espacios da **0 aves retiradas** y solo correcciones de `zepaSiteCode`, así que aplicarlo es
+    > seguro: **5 nulls → `ES0000260`** (una más que las 4 medidas), todo altas, ninguna baja. Son
+    > *Fulica atra* en Calblanque y *Alca torda*, *Botaurus stellaris* e *Ixobrychus minutus* en
+    > Espacios Abiertos.
+    >
+    > La lección que se repite: **la herramienta que toca SOLO ese campo ya existía**. Regenerar la
+    > Capa 3 de dos espacios publicados para escribir cinco valores habría arrastrado todo lo demás,
+    > que es lo que ya avisaba la nº 32.
+    >
+    > Los dieciséis `-n2.sql` están regenerados de paso —traían el `spainStatus` viejo de antes de la
+    > nº 30— y **pendientes de aplicar**. El diff es simétrico (116 líneas por 116): ninguna ficha
+    > entra ni sale.
 
 35. **Veinticinco nombres del formulario oficial no casan con el catálogo, y ahora eso cuesta una
     clasificación además de una ficha.** Son **53 entradas en 12 espacios** que
@@ -646,12 +833,83 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     de dónde copiarla y se dicen. Con eso `taxones:duplicados` baja a **0 duplicados** y de 8 a 5
     identificadores incoherentes.
 
-37. **La subida de `version` del manifiesto está copiada en cinco herramientas y la sexta se la
-    olvidó.** El manifiesto es lo que decide si un dispositivo con el espacio guardado sin conexión
-    vuelve a descargarlo: una herramienta que escribe en el `park.json` y no sube la versión deja al
-    usuario que ya lo tenía guardado con el dato viejo, **sin que nada falle ni avise, y con el dato
-    bien en el repositorio**, así que desde aquí no se ve nunca. `build-species-n2.js`,
-    `poda-aves-sin-respaldo.js` y `auditoria-especie-habitat.js` la suben, cada uno con su copia de
-    las mismas cuatro líneas; `aplica-fenologia-aves.js` **no la subía** —salió el 2026-08-25, con
-    trece espacios reescritos— y ahora sí, con una quinta copia. La sexta se la volverá a olvidar:
-    esas cuatro líneas deberían ser una función de `lib/io.js`.
+37. ~~**La subida de `version` del manifiesto está copiada en cinco herramientas y la sexta se la
+    olvidó.**~~ — **PAGADA el 2026-08-25 (b).** El manifiesto es lo que decide si un dispositivo con
+    el espacio guardado sin conexión vuelve a descargarlo: una herramienta que escribe en el
+    `park.json` y no sube la versión deja al usuario que ya lo tenía guardado con el dato viejo,
+    **sin que nada falle ni avise, y con el dato bien en el repositorio**, así que desde aquí no se
+    ve nunca. `aplica-fenologia-aves.js` **no la subía** —salió el 2026-08-25, con trece espacios
+    reescritos—, y con el arreglo eran ya **seis copias de las mismas cuatro líneas**.
+    > Ahora es **`escribeEspacio()` en `Tools/lib/io.js`**, y las **siete** herramientas la llaman:
+    > `build-species-n2.js`, `poda-aves-sin-respaldo.js`, `auditoria-especie-habitat.js`,
+    > `aplica-atlas-habitats.js`, `aplica-fenologia-aves.js`, `funde-trinomios-nominales.js` y
+    > **`sync-species-catalog.js`**.
+    >
+    > **La séptima no estaba en la lista, y es la que más se ejecuta.** `npm run species:apply`
+    > reescribe fichas de los dieciséis espacios y **no tocaba ni un manifiesto**: apareció el mismo
+    > día, al bajar la corrección de la deuda nº 30 y ver que los 16 `park.json` cambiaban y los 16
+    > `manifest.json` no. Está en todos los runbooks detrás de cualquier corrección universal, así
+    > que era la vía por la que más veces se ha publicado un catálogo que el dispositivo con el
+    > espacio guardado sin conexión nunca volvió a descargar. Que apareciera **una** más justo
+    > después de contarlas todas es el argumento de que la función tenía que existir.
+    >
+    > **La forma importa tanto como el sitio.** No es un `subeVersion(manifest)` que haya que acordarse
+    > de llamar —eso es la misma trampa con una indirección más—: la función escribe **el `park.json` y
+    > el manifiesto juntos**, así que la única manera de publicar fichas es por una puerta que sube la
+    > versión sola. Sube la `version` solo si el paquete cambió (regla nº 7, idempotencia) pero aplica
+    > los `counts` siempre, que es la única diferencia real que había entre las seis copias.
+    >
+    > Comprobado que las seis son idempotentes después del cambio: `atlas:aplica --write`,
+    > `aves:fenologia --write` y `taxones:trinomios --write` sobre los dieciséis espacios dejan el
+    > árbol de trabajo limpio, y `validate` sigue en verde.
+
+38. **`npm run aves:fenologia` sin `--online` deshacía la deuda nº 35, y el comando documentado no
+    lleva la bandera.** Salió el 2026-08-25 (b) al comprobar la idempotencia de la nº 37: un
+    `--write` sin `--online` retiró `migratory` y `sitePresence` de **53 fichas en ocho espacios** y
+    bajó las migratorias de 420 a 405 — exactamente lo que la nº 35 había pagado el día anterior. El
+    diff parecía una limpieza y nada falló.
+    > El motivo es que el puente que casa el nombre del formulario con el del catálogo tiene tres
+    > capas y **la segunda solo corre con `--online`**. Sin ella el ave no cruza, y el código trataba
+    > «no he sabido cruzar el nombre» igual que «el formulario no la declara»: retiraba el campo.
+    >
+    > **Tapado en la misma sesión, y la regla es simétrica a la del Atlas:** para retirar el campo
+    > hace falta evidencia **positiva**, y la evidencia positiva es haber cruzado. Un ave que no casa
+    > conserva lo que tuviera y sale contada («N fichas conservan la fenología de un pase anterior»,
+    > con un «¿falta `--online`?» cuando la bandera no está); un ave que **sí** casa y cuya
+    > clasificación sale vacía se retira como antes, porque ahí la fuente sí dice algo. Hoy
+    > `aves:fenologia --write` sin red es un no-op: 0 fichas afectadas, 420 migratorias intactas.
+
+39. **EIDOS sirve la Lista Roja española y el modelo no tiene dónde ponerla.** Salió el 2026-08-25
+    (b) pagando la deuda nº 30. `conservationByScope()` devuelve la evaluación UICN **por ámbito**
+    —`Mundial`, `España`, `Península`, `Canarias`—, y el pipeline se queda **solo con `Mundial`**,
+    que es lo que escribe en `iucnGlobal`. La fila de ámbito **España** es la Lista Roja de la Flora
+    Vascular Española, justo la fuente que las diecisiete fichas de la nº 30 decían tener pendiente,
+    y de esas diecisiete la tienen **tres**, las tres como **NT (Casi amenazado), 2010**:
+    *Erodium sanguis-christi*, *Maytenus senegalensis* subsp. *europaea* y *Serratula mucronata*.
+    > No es un hueco de fuente: es un hueco de **campo**. La ficha no tiene dónde escribirlo
+    > —`species.iucn_global` es una columna sola— y meterlo ahí sería mezclar dos evaluaciones de
+    > ámbito distinto en el mismo sitio, que es exactamente el error que pagó la nº 5 con
+    > `spainStatus`. Abrirlo cuesta un campo nuevo en las cuatro puntas (`especies-universal.json`,
+    > `schema.sql` + migración, `park_payload.php` y la ficha del frontend), así que **no se hace de
+    > paso**.
+    >
+    > Mientras tanto el dato está localizado y se recupera en una consulta: es
+    > `conservationByScope(taxonid)['España']`. Y el barrido completo está sin hacer: solo se han
+    > mirado los diecisiete de la nº 30, no las 1.067 fichas del catálogo.
+
+40. ~~**`species:apply --sql` dejaba cinco campos universales fuera de la base de datos.**~~ —
+    **TAPADA el 2026-08-25 (b), en el mismo pase que la nº 30.** El `UPDATE` que genera
+    `sync-species-catalog.js --apply --sql` tocaba diez columnas y **no** `kingdom`, `family` (que es
+    donde vive el `group` de la ficha), `taxon_*`, `iucn_global` ni `spain_status`. Como la API tiene
+    prioridad sobre el `park.json` empaquetado, una corrección de cualquiera de esos cinco campos
+    quedaba **bien en el repositorio y mal en lo que ve el usuario** — y el runbook manda justamente
+    esa ruta detrás de una corrección universal. Se descubrió al comprobar que el arreglo de la nº 30
+    llegara al usuario: no llegaba.
+    > Añadidas las cinco al `UPDATE`, con dos cuidados: `family` lleva un comentario diciendo que es
+    > el nombre histórico de la columna del `group` —la familia taxonómica va en `taxon_family`, y
+    > confundirlas es fácil— y `kingdom` **solo se escribe si la ficha lo trae**, porque es un ENUM
+    > `NOT NULL` y un `NULL` abortaría el `UPDATE` entero con MySQL en modo estricto.
+    >
+    > `Database/species-universal.sql` está regenerado (2.945 `UPDATE`) y **pendiente de aplicar**.
+    > Traía además dos correcciones atrasadas del 2026-08-25 (a) que nadie había volcado: el calamón
+    > de Calblanque renombrado y los cuatro trinomios fundidos.

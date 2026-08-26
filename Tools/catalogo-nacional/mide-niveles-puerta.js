@@ -52,7 +52,7 @@ const fs = require('fs');
 const path = require('path');
 const { arg, flag } = require('../lib/cli');
 const { CATALOGO_DIR, readJson, writeJson, rel, fromRoot, parkFiles } = require('../lib/io');
-const { especiesCaracteristicas, binomio } = require('../lib/atlas');
+const { especiesCaracteristicas, binomio, puenteDesdeCache } = require('../lib/atlas');
 const { tramoDeTexto } = require('../lib/rareza');
 const respaldo = require('../lib/respaldo-sitio');
 
@@ -66,6 +66,18 @@ const hayAtlas = fs.existsSync(RUTA_ATLAS);
 if (!hayAtlas) {
   process.stderr.write(`⚠ sin texto del Atlas en ${rel(RUTA_ATLAS)}: la señal \`caracteristica\` ` +
     'queda fuera de la medición (la receta para generarlo está en la cabecera de Tools/lib/atlas.js).\n');
+}
+
+// El puente de nomenclatura del Atlas (deuda nº 26), LEÍDO de la caché que deja `species:seleccion`.
+// Aquí no se sale a la red: esta herramienta es offline por diseño y su valor es el delta con
+// criterio constante. Sin caché la medición sale igual, con el sesgo de antes — y dicho, que es la
+// diferencia entre un hueco conocido y uno que nadie ve.
+const RUTA_PUENTE = fromRoot(arg('cache-atlas', path.join(OUT_DIR, 'atlas-eidos-nombres-cache.json')));
+const puenteAtlas = puenteDesdeCache(fs.existsSync(RUTA_PUENTE) ? readJson(RUTA_PUENTE) : {});
+if (hayAtlas && !puenteAtlas.size) {
+  process.stderr.write(`⚠ sin caché del puente de nomenclatura del Atlas en ${rel(RUTA_PUENTE)}: ` +
+    'el esparto y los demás cambios de género no casarán y el N3 saldrá inflado. La genera ' +
+    '`npm run species:seleccion` con --atlas.\n');
 }
 
 const anexos = readJson(path.join(CATALOGO_DIR, 'data', 'anexos-normativos.json'));
@@ -97,12 +109,24 @@ for (const p of parkFiles()) {
   }
   const idx = respaldo.indexa(entradas, { nombreDe: (e) => e.scientificName, resueltas, equivalencias });
 
-  // Los binomios característicos de los HIC de ESTE espacio según el Atlas.
+  // Los binomios característicos de los HIC de ESTE espacio según el Atlas, con el puente de
+  // nomenclatura tendido (deuda nº 26): el Atlas cita *Stipa tenacissima* y el catálogo ficha
+  // *Macrochloa tenacissima*, y `binomio()` normaliza la desinencia pero no el género. El puente se
+  // LEE de la caché que deja `species:seleccion` y NO se sale a la red: esta herramienta es offline
+  // por diseño. Sin caché la medición sigue saliendo, con el mismo sesgo que tenía antes y dicho.
   const atlasBin = new Set();
   if (hayAtlas) {
     const hics = new Set((park.habitats || []).map((h) => h.code).filter(Boolean));
     const atlas = especiesCaracteristicas(RUTA_ATLAS, hics);
-    for (const [, set] of atlas.porHic) for (const n of set) { const b = binomio(n); if (b) atlasBin.add(b); }
+    for (const [, set] of atlas.porHic) {
+      for (const n of set) {
+        const b = binomio(n);
+        if (!b) continue;
+        atlasBin.add(b);
+        const hoy = puenteAtlas.get(b);
+        if (hoy) atlasBin.add(hoy);
+      }
+    }
   }
 
   const cuenta = { visibles: 0, n1: 0, n2: 0, n3: 0 };

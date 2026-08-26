@@ -373,4 +373,91 @@ function binomio(nombre) {
   return g + ' ' + ep;
 }
 
-module.exports = { especiesCaracteristicas, binomio };
+/*
+ * EL PUENTE DE NOMENCLATURA DEL ATLAS (deuda nº 26)
+ * ------------------------------------------------
+ * El Atlas cita con la nomenclatura de 2005 y el catálogo ficha con la de hoy, y el `binomio()` de
+ * arriba **no puentea un cambio de género**: normaliza la desinencia del epíteto, no el género. El
+ * esparto es el caso de manual —el Atlas dice *Stipa tenacissima* y el catálogo ficha *Macrochloa
+ * tenacissima*—, así que el cruce no los junta y la especie se queda sin su evidencia
+ * `caracteristica` en los espacios donde hoy es «solo GBIF».
+ *
+ * Es la trampa del §2 del CLAUDE.md —cruzar una fuente oficial con el catálogo por el nombre—
+ * aplicada al Atlas, la misma que ya pagaron las aves. Y la salida es la misma que enseña
+ * `runbook/AVES.md` §5: **resolver contra EIDOS el nombre que escribe la FUENTE**, no solo el del
+ * candidato. NO se da de alta nada en `equivalencias-nomenclatura.json`: ese fichero prohíbe
+ * expresamente registrar lo que EIDOS ya sabe, porque sería una segunda verdad que puede divergir.
+ *
+ * El resolvedor se INYECTA (`resolveTaxon`) en vez de importar `lib/eidos` aquí: este módulo lee un
+ * PDF y no debe arrastrar un cliente HTTP, y así la parte de red se puede dejar fuera —que es lo que
+ * necesita `mide-niveles-puerta.js`, que es offline por diseño y solo lee la caché—.
+ *
+ * La caché es OBLIGATORIA en la práctica: los nombres del Atlas son universales —una especie
+ * característica del 5330 lo es en Murcia y en Girona—, así que se comparte entre espacios y entre
+ * pases. Sin ella cada selección castigaría al IEPNB con cientos de peticiones repetidas.
+ */
+
+/*
+ * EL PUENTE SOLO CRUZA CAMBIOS DE GÉNERO, Y ESA GUARDA NO ES OPCIONAL.
+ *
+ * Lo que esta deuda viene a arreglar es una RECOMBINACIÓN: el mismo taxón que cambia de género y
+ * conserva su epíteto (*Stipa* → *Macrochloa* tenacissima, *Calicotome* → *Cytisus* spinosa,
+ * *Sedum* → *Petrosedum* sediforme). Pero EIDOS también devuelve, por la misma vía y sin
+ * distinguirlas, relaciones que son un **cambio de identidad**: *Ammophila arenaria* → *Calamagrostis
+ * arundinacea*, *Sarcocornia fruticosa* → *Salicornia lagascae*, *Ruppia cirrhosa* → *Ruppia
+ * spiralis*. Ahí las dos autoridades discrepan de circunscripción, y colgar el HIC del segundo taxón
+ * porque el primero lo tenía es exactamente el «dato inventado» de la regla nº 2 — con el agravante
+ * de que este puente se usa SOLO EN POSITIVO, así que un enlace falso no lo desmiente nadie después.
+ *
+ * Es la misma distinción que la deuda nº 27 hace a mano taxón a taxón, aplicada aquí como guarda: si
+ * el epíteto cambia, no se puentea y se dice. Lo caro de esos casos no es detectarlos, es decidirlos,
+ * y eso va con la fuente delante y de uno en uno.
+ */
+const epiteto = (b) => (b ? b.split(' ')[1] || '' : '');
+
+/**
+ * El puente leído de la caché, sin red. Devuelve Map(binomio del Atlas → binomio aceptado), y solo
+ * con los pares que comparten epíteto. `descartados` (opcional) recoge los que no lo comparten para
+ * poder enseñarlos.
+ */
+function puenteDesdeCache(cache, descartados = null) {
+  const mapa = new Map();
+  for (const [nombre, r] of Object.entries(cache || {})) {
+    if (!r || !r.acceptedName) continue;
+    const desde = binomio(nombre);
+    const hasta = binomio(r.acceptedName);
+    if (!desde || !hasta || desde === hasta) continue;
+    if (epiteto(desde) !== epiteto(hasta)) {
+      if (descartados) descartados.push({ nombre, acceptedName: r.acceptedName });
+      continue;
+    }
+    mapa.set(desde, hasta);
+  }
+  return mapa;
+}
+
+/**
+ * Resuelve contra EIDOS los nombres del Atlas que la caché no tenga y devuelve
+ * `{ mapa, cache, pedidas }`. Un nombre que EIDOS no resuelve se cachea como `null`: «no lo
+ * resuelve» es un resultado, y volver a preguntarlo en cada pase no lo cambia.
+ *
+ * `mapa` solo lleva los nombres que CAMBIAN de binomio. Los que no cambian ya los casaba el cruce
+ * directo, y meterlos sería ruido.
+ */
+async function tiendePuente(nombres, { resolveTaxon, cache = {}, sleep = null, throttleMs = 150 } = {}) {
+  if (typeof resolveTaxon !== 'function') return { mapa: puenteDesdeCache(cache), cache, pedidas: 0 };
+  let pedidas = 0;
+  for (const n of new Set(nombres)) {
+    if (n in cache) continue;
+    cache[n] = null;
+    try {
+      const r = await resolveTaxon(n);
+      if (r && r.acceptedName) cache[n] = { acceptedName: r.acceptedName, taxonid: r.taxonid || null };
+    } catch (e) { delete cache[n]; } // un fallo de RED no se cachea como «no existe»: se reintenta
+    pedidas++;
+    if (sleep) await sleep(throttleMs);
+  }
+  return { mapa: puenteDesdeCache(cache), cache, pedidas };
+}
+
+module.exports = { especiesCaracteristicas, binomio, tiendePuente, puenteDesdeCache };

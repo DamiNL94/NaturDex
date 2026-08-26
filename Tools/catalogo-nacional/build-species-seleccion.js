@@ -88,9 +88,9 @@
 const fs = require('fs');
 const path = require('path');
 const { arg, num, flag, requireArgs, die, sleep } = require('../lib/cli');
-const { CATALOGO_DIR, OUT_DIR, readJson, writeJson, rel, fromRoot, parkFiles } = require('../lib/io');
+const { CATALOGO_DIR, OUT_DIR, readJson, readJsonIf, writeJson, rel, fromRoot, parkFiles } = require('../lib/io');
 const eidos = require('../lib/eidos');
-const { especiesCaracteristicas, binomio } = require('../lib/atlas');
+const { especiesCaracteristicas, binomio, tiendePuente } = require('../lib/atlas');
 // La escalera 1–5 vive en lib/ porque `rareza-legal.js` aplica exactamente el mismo criterio sobre
 // el texto ya redactado del park.json. Dos copias se separarían en cuanto alguien tocara una.
 const { tramoDeCategoria, SIGNIFICADO } = require('../lib/rareza');
@@ -260,6 +260,10 @@ const RUTA_GBIF = fromRoot(arg('gbif', path.join(OUT_DIR, `${PARK}-gbif.json`)))
 const RUTA_OUT = fromRoot(arg('out', path.join(OUT_DIR, `${PARK}-seleccion-especies.json`)));
 const RUTA_INFORME = fromRoot(arg('informe', path.join(OUT_DIR, `${PARK}-seleccion-especies.md`)));
 const RUTA_ATLAS = arg('atlas') ? fromRoot(arg('atlas')) : null;
+// La caché del puente de nomenclatura del Atlas. NO lleva el slug del espacio a propósito: los
+// nombres del Atlas son universales —una especie característica del 5330 lo es en Murcia y en
+// Girona—, así que el puente se comparte entre espacios y entre pases. Ver lib/atlas.js.
+const CACHE_ATLAS = fromRoot(arg('cache-atlas', path.join(OUT_DIR, 'atlas-eidos-nombres-cache.json')));
 // El anexo normativo del espacio. Va por defecto porque su ausencia NO es una opción silenciosa: si
 // el espacio no tiene entrada, la herramienta lo dice igual que dice que falta el Atlas.
 const RUTA_ANEXOS = arg('anexos')
@@ -662,24 +666,54 @@ function yaFichadas() {
 // --- Atlas: especies características de los HIC de ESTE espacio -------------------------------------
 // Se cruza contra los candidatos de GBIF, no contra el park.json: en un espacio que todavía no tiene
 // Capa 3 el catálogo está vacío, y cruzarlo con él daría cero.
-function caracteristicasPorEspecie(codigos) {
-  if (!RUTA_ATLAS) return { mapa: new Map(), leido: false };
+async function caracteristicasPorEspecie(codigos) {
+  if (!RUTA_ATLAS) return { mapa: new Map(), leido: false, puenteados: 0 };
   if (!fs.existsSync(RUTA_ATLAS)) die(`No existe el texto del Atlas: ${RUTA_ATLAS}`);
   const { porHic, bloques, bloquesConEspecies } = especiesCaracteristicas(RUTA_ATLAS, codigos);
   if (bloques && !bloquesConEspecies) {
     die(`El Atlas tiene ${bloques} bloques de «Especies características» y no se ha leído ninguna ` +
         'especie. Revisa la extracción del PDF antes de seguir.');
   }
+
+  /*
+   * El puente de nomenclatura (deuda nº 26). El Atlas cita con la nomenclatura de 2005 y el catálogo
+   * ficha con la de hoy, y `binomio()` normaliza la desinencia del epíteto pero NO puentea un cambio
+   * de GÉNERO: *Stipa tenacissima* (Atlas) y *Macrochloa tenacissima* (catálogo) son el esparto y no
+   * se juntan. Sin esto, la especie pierde su evidencia `caracteristica` y se queda como «solo GBIF»
+   * teniendo el respaldo del Atlas delante — la trampa del §2 del CLAUDE.md, cruzar una fuente
+   * oficial con el catálogo por el nombre, aplicada al Atlas.
+   *
+   * Se resuelve contra EIDOS el nombre que escribe LA FUENTE, que es la lección de AVES.md §5, y se
+   * cachea en un fichero COMPARTIDO por todos los espacios: la especie característica de un HIC lo
+   * es en toda la Directiva, así que el puente no depende del espacio y repetir las peticiones por
+   * cada selección sería castigar al IEPNB sin motivo.
+   */
+  const nombres = [...new Set([...porHic.values()].flat())];
+  const cache = readJsonIf(CACHE_ATLAS, {}) || {};
+  const { mapa: puente, pedidas } = await tiendePuente(nombres, {
+    resolveTaxon: (n) => eidos.resolveTaxon(n), cache, sleep, throttleMs: eidos.THROTTLE_MS,
+  });
+  if (pedidas) { fs.mkdirSync(path.dirname(CACHE_ATLAS), { recursive: true }); writeJson(CACHE_ATLAS, cache); }
+
   const mapa = new Map();
+  let puenteados = 0;
+  const anade = (clave, codigo) => {
+    if (!clave) return;
+    if (!mapa.has(clave)) mapa.set(clave, []);
+    if (!mapa.get(clave).includes(codigo)) mapa.get(clave).push(codigo);
+  };
   for (const [codigo, especies] of porHic) {
     for (const nombre of especies) {
       const b = binomio(nombre);
       if (!b) continue;
-      if (!mapa.has(b)) mapa.set(b, []);
-      mapa.get(b).push(codigo);
+      anade(b, codigo);
+      // El alias es ADITIVO: la clave del Atlas se conserva. Retirarla porque EIDOS proponga otra
+      // sería usar el Atlas en negativo, que es justo lo que el resto del pipeline no hace.
+      const hoy = puente.get(b);
+      if (hoy && hoy !== b) { anade(hoy, codigo); puenteados++; }
     }
   }
-  return { mapa, leido: true, bloques };
+  return { mapa, leido: true, bloques, puenteados, pedidas };
 }
 
 // --- Anexo normativo del espacio ---------------------------------------------------------------------
@@ -1004,7 +1038,7 @@ async function main() {
   HABITAT_HOMONIMO = taxonesQueNombranUnHabitat(park.habitats);
 
   const { porNombre: fichadas, porTaxonId, porGbifKey } = yaFichadas();
-  const atlas = caracteristicasPorEspecie(codigosHic);
+  const atlas = await caracteristicasPorEspecie(codigosHic);
   // El anexo y el formulario del sitio se cargan ANTES que los candidatos: desde que la legislación
   // es la puerta, lo que enumeran es parte del universo de candidatos y no solo una señal que se
   // consulta después.

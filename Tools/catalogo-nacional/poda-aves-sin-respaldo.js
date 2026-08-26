@@ -64,7 +64,7 @@
 const fs = require('fs');
 const path = require('path');
 const { arg, flag, requireArgs, die, sleep } = require('../lib/cli');
-const { FRONTEND, DATABASE, CATALOGO_DIR, OUT_DIR, readJson, rel, fromRoot } = require('../lib/io');
+const { FRONTEND, DATABASE, CATALOGO_DIR, OUT_DIR, readJson, rel, fromRoot, escribeEspacio } = require('../lib/io');
 const { sqlStr } = require('../lib/sql');
 const eidos = require('../lib/eidos');
 const respaldo = require('../lib/respaldo-sitio');
@@ -166,7 +166,7 @@ function sitioQueLaDeclara(entradas, zepaDelEspacio) {
 }
 
 async function main() {
-  const { entrada, manifestPath, manifest, parkPath, doc } = localiza();
+  const { entrada, manifestPath, parkPath, doc } = localiza();
   const species = doc.species || [];
   const aves = species.filter(s => (s.taxonomy || {}).class === 'Aves');
 
@@ -299,26 +299,14 @@ async function main() {
   for (const sp of quedan) for (const hid of sp.habitatIds || []) if (porHabitat.has(hid)) porHabitat.get(hid).push(sp.id);
   for (const h of doc.habitats || []) h.speciesIds = (porHabitat.get(h.id) || []).sort((a, b) => a - b);
 
-  const antesTexto = fs.readFileSync(parkPath, 'utf8');
-  const nuevoTexto = JSON.stringify(doc, null, 2) + '\n';
-  const cambia = antesTexto !== nuevoTexto;
-  manifest.counts = manifest.counts || {};
-  manifest.counts.species = quedan.length;
-  const manifestAntes = fs.readFileSync(manifestPath, 'utf8');
-  if (cambia) {
-    manifest.version = (Number(manifest.version) || 0) + 1;
-    manifest.updatedAt = hoy();
-  }
-  const manifestNuevo = JSON.stringify(manifest, null, 2) + '\n';
-
   console.log(`\nreviewNote estructurales retiradas: ${notasLimpiadas} · zepaSiteCode corregidos: ${zepaCorregidos}`);
-  const escribir = (p, txt, previo) => {
-    if (previo === txt) return `= ${rel(p)}`;
-    if (WRITE) fs.writeFileSync(p, txt, 'utf8');
-    return `${WRITE ? '+' : '~'} ${rel(p)}`;
-  };
-  console.log(escribir(parkPath, nuevoTexto, antesTexto));
-  console.log(escribir(manifestPath, manifestNuevo, manifestAntes));
+  // Paquete y `version` del manifiesto, en el mismo paso y desde `lib/io.js`: aquí se RETIRAN fichas,
+  // así que un dispositivo que no vuelva a descargarlo seguiría enseñando las aves podadas.
+  const { lineas } = escribeEspacio({
+    file: parkPath, manifestFile: manifestPath, doc,
+    counts: { species: quedan.length }, write: WRITE,
+  });
+  console.log(lineas.join('\n'));
 
   const informe = redactaInforme({
     entrada, sitioDoc, sitios, anexo, equiv, conRespaldo, sinRespaldo,

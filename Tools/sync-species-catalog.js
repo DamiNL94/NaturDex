@@ -54,7 +54,7 @@ const fs = require('fs');
 const path = require('path');
 const { arg, flag } = require('./lib/cli');
 const { sqlStr } = require('./lib/sql');
-const { ROOT, CATALOGO_DIR, rel, fromRoot, parkFiles } = require('./lib/io');
+const { ROOT, CATALOGO_DIR, rel, fromRoot, parkFiles, escribeEspacio } = require('./lib/io');
 
 const CATALOGO = path.join(CATALOGO_DIR, 'data', 'especies-universal.json');
 const CONTENIDO_DIR = path.join(CATALOGO_DIR, 'data', 'contenido');
@@ -324,7 +324,7 @@ function aplicar() {
   const sql = [];
   let fichas = 0, cambiadas = 0, huerfanas = [];
 
-  for (const { slug, file } of parkFiles()) {
+  for (const { slug, dir, file } of parkFiles()) {
     const park = leer(file);
     if (!(park.species || []).length) continue;
     let tocado = false;
@@ -343,15 +343,32 @@ function aplicar() {
       if (cambia) { cambiadas++; tocado = true; }
     }
 
-    if (tocado) { escribir(file, park); console.log(`  → ${rel(file)}`); }
+    // El park.json y la `version` de su manifiesto van en el mismo paso (`lib/io.js`). Esta
+    // herramienta reescribe fichas de los dieciséis espacios y NO tocaba ningún manifiesto: el
+    // dispositivo que ya tenía el espacio guardado sin conexión no volvía a descargarlo y se quedaba
+    // con el campo universal viejo — sin error, sin aviso, y con el dato bien en el repositorio. Es
+    // la deuda nº 37, y ésta era la séptima copia del fallo, además de la que más se ejecuta:
+    // `species:apply` está en todos los runbooks.
+    if (tocado) {
+      const { lineas } = escribeEspacio({ dir, file, doc: park });
+      for (const l of lineas) console.log('  ' + l);
+    }
 
     if (sqlPath) {
       for (const sp of park.species) {
         const u = catalogo[sp.scientificName];
         if (!u) continue;
+        const t = u.taxonomy || {};
         sql.push(
           `UPDATE species s JOIN parks p ON p.id = s.park_id SET\n` +
           `  s.common_name = ${sqlStr(u.commonName)},\n` +
+          // `kingdom` es un ENUM NOT NULL: si la ficha universal no lo trae, la columna NO se toca.
+          // Escribir NULL abortaría el UPDATE entero con MySQL en modo estricto.
+          (u.kingdom ? `  s.kingdom = ${sqlStr(u.kingdom)},\n` : '') +
+          // `family` es el nombre HISTÓRICO de la columna que guarda el `group` de la ficha (el porte:
+          // «Arbusto», «Ave»…). La familia taxonómica va en `taxon_family`, más abajo. Ver
+          // park_payload.php:100, que sirve esta columna como «group».
+          `  s.family = ${sqlStr(u.group)},\n` +
           `  s.primary_habitat = ${sqlStr(u.habitat)},\n` +
           `  s.description = ${sqlStr(u.description)},\n` +
           `  s.description_source = ${sqlStr(u.descriptionSource)},\n` +
@@ -359,6 +376,13 @@ function aplicar() {
           `  s.seasonality = ${sqlStr(u.seasonality)},\n` +
           `  s.image_url = ${sqlStr(u.image)},\n` +
           `  s.image_attribution = ${sqlStr(u.imageAttribution)},\n` +
+          `  s.taxon_phylum = ${sqlStr(t.phylum)},\n` +
+          `  s.taxon_class = ${sqlStr(t.class)},\n` +
+          `  s.taxon_order = ${sqlStr(t.order)},\n` +
+          `  s.taxon_family = ${sqlStr(t.family)},\n` +
+          `  s.taxon_genus = ${sqlStr(t.genus)},\n` +
+          `  s.iucn_global = ${sqlStr(u.iucnGlobal)},\n` +
+          `  s.spain_status = ${sqlStr(u.spainStatus)},\n` +
           `  s.rarity_score = ${u.rarityScore ?? 1},\n` +
           // La base viaja con el tramo: un `rarity_score` sin su `rarity_basis` en la BD volvería a
           // ser el número sin procedencia que acabamos de quitar del catálogo.

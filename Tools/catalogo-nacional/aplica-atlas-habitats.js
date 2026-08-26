@@ -47,10 +47,9 @@
  *     node Tools/catalogo-nacional/aplica-atlas-habitats.js [--park <slug>] [--write]
  */
 
-const fs = require('fs');
 const path = require('path');
 const { arg, flag } = require('../lib/cli');
-const { OUT_DIR, readJson, readJsonIf, writeJson, rel, parkFiles } = require('../lib/io');
+const { OUT_DIR, readJson, readJsonIf, parkFiles, escribeEspacio } = require('../lib/io');
 
 const PARK = arg('park', null);
 const WRITE = flag('write');
@@ -129,9 +128,6 @@ function main() {
     }
 
     const fichas = new Set(anadidos.map((a) => a.split(' · ')[0])).size;
-    const antesTexto = fs.readFileSync(espacio.file, 'utf8');
-    const nuevoTexto = JSON.stringify(doc, null, 2) + '\n';
-    const cambia = antesTexto !== nuevoTexto;
 
     console.log(`\n${espacio.slug}: ${anadidos.length} enlace(s) del Atlas en ${fichas} ficha(s)` +
       ` · ${(indice.links || []).length} en el índice`);
@@ -140,22 +136,11 @@ function main() {
       console.log(`  ⚠ ${huerfanos.length} enlace(s) del índice sin destino en el catálogo de hoy:`);
       for (const h of huerfanos) console.log('    · ' + h);
     }
-    if (cambia && WRITE) {
-      writeJson(espacio.file, doc);
-      console.log(`  escrito ${rel(espacio.file)}`);
-      // El manifiesto es lo que decide si un dispositivo con el espacio guardado sin conexión vuelve
-      // a descargarlo: sin subir `version`, quien ya lo tenía se queda con los enlaces viejos. Los
-      // contadores no se tocan porque aquí no cambia el número de especies ni de hábitats.
-      const manifestPath = path.join(espacio.dir, 'manifest.json');
-      const manifest = readJsonIf(manifestPath, null);
-      if (manifest) {
-        manifest.version = (Number(manifest.version) || 0) + 1;
-        manifest.updatedAt = new Date().toISOString().slice(0, 10);
-        writeJson(manifestPath, manifest);
-        console.log(`  escrito ${rel(manifestPath)} (version ${manifest.version})`);
-      }
-    } else if (cambia) console.log('  (usa --write para escribirlo)');
-    else console.log('  sin cambios');
+    // `escribeEspacio` escribe el paquete y sube la `version` del manifiesto en el mismo paso: los
+    // contadores no se tocan porque aquí no cambia el número de especies ni de hábitats.
+    const { cambia, lineas } = escribeEspacio({ dir: espacio.dir, file: espacio.file, doc, write: WRITE });
+    for (const l of lineas) console.log('  ' + l);
+    if (cambia && !WRITE) console.log('  (usa --write para escribirlo)');
 
     totalEnlaces += anadidos.length;
     totalFichas += fichas;

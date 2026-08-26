@@ -50,7 +50,7 @@
 const fs = require('fs');
 const path = require('path');
 const { arg, flag, requireArgs, die } = require('../lib/cli');
-const { ROOT, FRONTEND, CATALOGO_DIR, OUT_DIR, readJson, writeJson, rel, fromRoot, parkFiles } = require('../lib/io');
+const { ROOT, FRONTEND, CATALOGO_DIR, OUT_DIR, readJson, rel, fromRoot, parkFiles, escribeEspacio } = require('../lib/io');
 const { clasificaPresenciaSitio } = require('../lib/fenologia');
 
 const DRY = flag('dry');
@@ -697,30 +697,18 @@ function main() {
   doc.species = species;
 
   // 5) Escribir -------------------------------------------------------------------------------------
-  const antesTexto = fs.readFileSync(parkPath, 'utf8');
-  const nuevoTexto = JSON.stringify(doc, null, 2) + '\n';
-  const cambiaPark = antesTexto !== nuevoTexto;
-
-  manifest.counts = manifest.counts || {};
-  manifest.counts.species = species.length;
-  manifest.counts.habitats = (doc.habitats || []).length;
-  manifest.counts.pointsOfInterest = (doc.pointsOfInterest || []).length;
-  // El manifiesto es lo que decide si un dispositivo con el espacio guardado sin conexión vuelve a
-  // descargarlo: si el contenido cambia y `version` no sube, el usuario se queda con lo viejo.
-  const manifestAntes = fs.readFileSync(manifestPath, 'utf8');
-  if (cambiaPark) {
-    manifest.version = (Number(manifest.version) || 0) + 1;
-    manifest.updatedAt = new Date().toISOString().slice(0, 10);
-  }
-  const manifestNuevo = JSON.stringify(manifest, null, 2) + '\n';
-
-  const escribir = (p, txt, previo) => {
-    if (previo === txt) return `= ${rel(p)}`;
-    if (!DRY) fs.writeFileSync(p, txt, 'utf8');
-    return `${DRY ? '~' : '+'} ${rel(p)}`;
-  };
-  console.log('\n' + escribir(parkPath, nuevoTexto, antesTexto));
-  console.log(escribir(manifestPath, manifestNuevo, manifestAntes));
+  // El paquete y la `version` del manifiesto los escribe `lib/io.js` en el mismo paso: separarlos deja
+  // al dispositivo que ya tenía el espacio guardado sin conexión con el catálogo viejo, sin error y
+  // sin aviso, y con el dato bien en el repositorio.
+  const { lineas } = escribeEspacio({
+    file: parkPath, manifestFile: manifestPath, doc, write: !DRY,
+    counts: {
+      species: species.length,
+      habitats: (doc.habitats || []).length,
+      pointsOfInterest: (doc.pointsOfInterest || []).length,
+    },
+  });
+  console.log('\n' + lineas.join('\n'));
 
   // 6) Informe de las que se quedan fuera ------------------------------------------------------------
   const pendientesPath = path.join(OUT_DIR, `${PARK}-especies-pendientes.md`);

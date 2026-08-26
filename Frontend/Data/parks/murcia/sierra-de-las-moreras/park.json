@@ -435,7 +435,7 @@
         "genus": "Limonium"
       },
       "iucnGlobal": "NE (no evaluada a nivel global; género con numerosos microendemismos ibéricos)",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 con este nombre (pendiente de confirmar sinonimia)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "reviewNote": null,
       "eidosTaxonId": 5836,
@@ -551,7 +551,7 @@
         "genus": "Chamaerops"
       },
       "iucnGlobal": "LC (Preocupación menor)",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+      "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
       "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "reviewNote": null,
       "eidosTaxonId": 3518,
@@ -887,7 +887,7 @@
         "genus": "Lycium"
       },
       "iucnGlobal": "NE (no evaluada a nivel global)",
-      "spainStatus": "No confirmada presencia en la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "reviewNote": null,
       "eidosTaxonId": 5923,
@@ -939,7 +939,7 @@
         "genus": "Periploca"
       },
       "iucnGlobal": "NE (no evaluada a nivel global)",
-      "spainStatus": "Pendiente de confirmar presencia y categoría en la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
       "murciaStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "reviewNote": null,
       "eidosTaxonId": 7034,
@@ -1049,7 +1049,7 @@
         "genus": "Salsola"
       },
       "iucnGlobal": "LC (Preocupación menor)",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 (pendiente de confirmar)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "reviewNote": null,
       "eidosTaxonId": 7915,
@@ -1255,7 +1255,7 @@
         "genus": "Lafuentea"
       },
       "iucnGlobal": "NE",
-      "spainStatus": "Pendiente de contrastar con la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "reviewNote": null,
       "eidosTaxonId": 5616,
@@ -1454,7 +1454,7 @@
         "genus": "Senecio"
       },
       "iucnGlobal": "NE",
-      "spainStatus": "Pendiente de contrastar con la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "murciaStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "reviewNote": null,
       "eidosTaxonId": 687,

@@ -61,7 +61,67 @@ function parkFiles() {
   return out;
 }
 
+/**
+ * Escribe el `park.json` de un espacio y, si su contenido ha cambiado, sube la `version` de su
+ * manifest.json en el mismo paso.
+ *
+ * Las dos cosas van juntas AQUÍ porque separarlas es un fallo que no se ve desde el repositorio: el
+ * manifiesto es lo que decide si un dispositivo con el espacio guardado sin conexión vuelve a
+ * descargarlo, así que una herramienta que reescribe fichas y no sube la versión deja al usuario que
+ * ya lo tenía guardado con el dato viejo — sin error, sin aviso, y con el dato BIEN en el repo. Estas
+ * cuatro líneas estaban copiadas en cinco herramientas y la sexta se las olvidó
+ * (`aplica-fenologia-aves.js`, con trece espacios reescritos antes de que nadie lo viera).
+ *
+ * `counts` son las claves de `manifest.counts` que la herramienta sepa recalcular (`species`,
+ * `habitats`, `pointsOfInterest`); se aplican aunque el `park.json` no cambie —corregir un contador
+ * desviado no publica nada nuevo—, pero la `version` sube SOLO si el paquete cambió, que es lo que
+ * exige la idempotencia de la regla nº 7 del `CLAUDE.md`.
+ *
+ * `write: false` es el modo en seco: calcula y no toca disco. Devuelve `{ cambia, version, lineas }`
+ * con una línea por fichero — `=` sin cambios, `+` escrito, `~` lo habría escrito.
+ *
+ * `manifestFile` solo hace falta cuando el manifiesto NO es hermano del `park.json`: las
+ * herramientas que localizan el espacio por el registro (`parks-index.json`) tienen las dos rutas y
+ * no deben dar por hecha la convención de carpeta.
+ */
+function escribeEspacio({ dir, file, manifestFile, doc, counts = null, write = true }) {
+  const parkPath = file || path.join(dir, 'park.json');
+  const parkDir = dir || path.dirname(parkPath);
+  const lineas = [];
+
+  const nuevoTexto = JSON.stringify(doc, null, 2) + '\n';
+  const previoTexto = fs.existsSync(parkPath) ? fs.readFileSync(parkPath, 'utf8') : null;
+  const cambia = previoTexto !== nuevoTexto;
+  if (!cambia) lineas.push(`= ${rel(parkPath)}`);
+  else {
+    if (write) writeJson(parkPath, doc);
+    lineas.push(`${write ? '+' : '~'} ${rel(parkPath)}`);
+  }
+
+  const manifestPath = manifestFile || path.join(parkDir, 'manifest.json');
+  if (!fs.existsSync(manifestPath)) return { cambia, version: null, lineas };
+  const manifest = readJson(manifestPath);
+  const previoManifiesto = fs.readFileSync(manifestPath, 'utf8');
+  if (counts) {
+    manifest.counts = manifest.counts || {};
+    for (const [clave, valor] of Object.entries(counts)) {
+      if (valor !== null && valor !== undefined) manifest.counts[clave] = valor;
+    }
+  }
+  if (cambia) {
+    manifest.version = (Number(manifest.version) || 0) + 1;
+    manifest.updatedAt = new Date().toISOString().slice(0, 10);
+  }
+  const nuevoManifiesto = JSON.stringify(manifest, null, 2) + '\n';
+  if (previoManifiesto === nuevoManifiesto) lineas.push(`= ${rel(manifestPath)}`);
+  else {
+    if (write) fs.writeFileSync(manifestPath, nuevoManifiesto, 'utf8');
+    lineas.push(`${write ? '+' : '~'} ${rel(manifestPath)} (version ${manifest.version})`);
+  }
+  return { cambia, version: manifest.version, lineas };
+}
+
 module.exports = {
   ROOT, FRONTEND, DATA, PARKS_DIR, REGISTRY_FILE, DATABASE, CATALOGO_DIR, OUT_DIR,
-  readJson, readJsonIf, writeJson, rel, fromRoot, parkFiles,
+  readJson, readJsonIf, writeJson, rel, fromRoot, parkFiles, escribeEspacio,
 };

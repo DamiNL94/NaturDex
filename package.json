@@ -31,6 +31,8 @@
     "habitats:merge": "node Tools/catalogo-nacional/merge-habitats.js",
     "habitats:adopt": "node Tools/catalogo-nacional/adopt-habitats.js",
     "atlas:hic": "node Tools/catalogo-nacional/atlas-hic-especies.js",
+    "atlas:puente": "node Tools/catalogo-nacional/atlas-puente-nomenclatura.js",
+    "anexos:coteja": "node Tools/catalogo-nacional/coteja-anexos-normativos.js",
     "atlas:aplica": "node Tools/catalogo-nacional/aplica-atlas-habitats.js",
     "taxones:trinomios": "node Tools/catalogo-nacional/funde-trinomios-nominales.js",
     "sitio:especies": "node Tools/catalogo-nacional/especies-sitio-rn2000.js",

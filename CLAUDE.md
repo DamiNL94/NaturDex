@@ -68,7 +68,7 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    generaliza igual: «nadie lo ha mirado» no es «no está amenazada», y publicar de más no se puede
    deshacer. Ver [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md).
 
-## 2. Diecisiete cosas que fallan EN VERDE
+## 2. Diecinueve cosas que fallan EN VERDE
 
 Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 [`Docs/runbook/ORDEN-DE-OPERACIONES.md`](Docs/runbook/ORDEN-DE-OPERACIONES.md).
@@ -118,9 +118,35 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
   si un dispositivo con el espacio guardado sin conexión vuelve a descargarlo, así que una
   herramienta que escribe fichas y no toca `version` deja al usuario que ya lo tenía guardado con el
   dato viejo — sin error, sin aviso, y sin que el repositorio se entere de nada, porque en el
-  repositorio el dato SÍ está bien. Lo suben `build-species-n2.js`, `poda-aves-sin-respaldo.js` y
-  `auditoria-especie-habitat.js`, cada uno con su copia de las mismas cuatro líneas;
-  `aplica-fenologia-aves.js` no lo hacía y se descubrió con trece espacios reescritos (deuda nº 37).
+  repositorio el dato SÍ está bien. Eran **siete** copias de las mismas cuatro líneas: dos las
+  habían olvidado —`aplica-fenologia-aves.js`, con trece espacios reescritos, y
+  **`sync-species-catalog.js`**, que es `npm run species:apply` y está en todos los runbooks detrás
+  de cualquier corrección universal—. **Tapado el 2026-08-25 (b)** (deuda nº 37): ahora es
+  `escribeEspacio()` en `Tools/lib/io.js`, y escribe **el `park.json` y el manifiesto juntos** — no
+  hay puerta para publicar fichas que no suba la versión sola. Una herramienta nueva que toque un
+  `park.json` **usa esa función**; no copia las cuatro líneas.
+- **`species:apply --sql` no volcaba a la BD cinco de los quince campos universales**: `kingdom`,
+  `group` (columna `family`), la `taxonomy` entera, `iucnGlobal` y `spainStatus`. Y la API manda
+  sobre el paquete, así que corregir cualquiera de esos cinco dejaba el dato **bien en el repo y mal
+  en lo que ve el usuario**, por la ruta que el propio runbook manda usar. Tapado el 2026-08-25 (b)
+  (deuda nº 40). La lección que se generaliza: **un campo que se sincroniza al `park.json` y no a la
+  BD no está sincronizado**, y el sitio donde se ve es el generador de SQL, no el del `park.json`.
+- **`npm run aves:fenologia` sin `--online` retiraba lo que el pase con red había escrito.** Del
+  puente que casa el nombre del formulario con el del catálogo, **la capa que consulta EIDOS solo
+  corre con `--online`**, y el comando documentado no lleva la bandera: un `--write` a secas trataba
+  «no he sabido cruzar el nombre» igual que «el formulario no la declara» y quitaba `migratory` y
+  `sitePresence` a **53 fichas de ocho espacios**, deshaciendo la deuda nº 35 con un diff que parecía
+  una limpieza. **Tapado el 2026-08-25 (b)** (deuda nº 38) con la regla simétrica a la del Atlas:
+  para RETIRAR un campo hace falta evidencia positiva, y aquí la evidencia positiva es haber
+  cruzado. La lección es general: **una fuente que no se ha podido consultar no dice que no.** Y la
+  misma trampa estaba en la auditoría de enlaces por otra puerta: `auditoria-especie-habitat.js`
+  retiraba el enlace «sin constancia» **sin preguntar de dónde salía**. La rama del vuelo sí lo
+  pregunta; a la de constancia se le había olvidado, y con los tres barridos nuevos del 2026-08-25
+  (b) habría borrado **38 enlaces documentales de Cabo Cope** —la azucena de mar en las dunas
+  embrionarias, la adelfa en la galería ribereña, el palmito en el sabinar— que salen del artículo de
+  Alcaraz Ariza, del Anexo I del PORN y de las «Bases ecológicas» del HIC, no de ningún barrido.
+  Tapado igual: un enlace cuya ficha **no tiene `gbifOccurrences`** no se retira por el silencio de
+  GBIF.
 - **Cruzar una fuente oficial con el catálogo por el nombre**: la fuente cita con la nomenclatura de
   su época (*Sylvia undata*) y el catálogo con la de hoy (*Curruca undata*). No falla: excluye la
   especie y escribe al lado un motivo que es mentira («no figura en el formulario oficial»). Resuelve
