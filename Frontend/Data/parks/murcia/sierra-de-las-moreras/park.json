@@ -416,13 +416,17 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_insigne.jpg?width=1280",
       "imageAttribution": "ANE (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 4,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 7 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-22); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -436,7 +440,8 @@
       },
       "iucnGlobal": "NE (no evaluada a nivel global; género con numerosos microendemismos ibéricos)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5836,
       "gbifSpeciesKey": 4088635,
@@ -479,9 +484,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 7 ocurrencias dentro de los polígonos de hábitat del espacio (8 hábitats; barrido de 2026-08-22); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -495,7 +500,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8809,
       "gbifSpeciesKey": 7308375,
@@ -532,13 +538,17 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chamaerops_humilis_Torreblanca.jpg?width=1280",
       "imageAttribution": "Canaan (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 3,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 5 ocurrencias dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-22); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -552,7 +562,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 3518,
       "gbifSpeciesKey": 2736625,
@@ -593,7 +604,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 5 ocurrencias dentro de los polígonos de hábitat del espacio (7 hábitats; barrido de 2026-08-22); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -606,7 +621,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10060,
       "gbifSpeciesKey": 2704651,
@@ -650,9 +666,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 4 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-22); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -666,7 +682,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11220,
       "gbifSpeciesKey": 5226733,
@@ -680,7 +697,8 @@
         "matorrales-halonitrofilos-pegano-1430"
       ],
       "gbifOccurrences": 4,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 6,
@@ -708,7 +726,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 4 ocurrencias dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-22); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -721,7 +743,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE; elemento iberoafricano de interés biogeográfico",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 9438,
       "gbifSpeciesKey": 3801152,
@@ -764,9 +787,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-22); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -780,7 +803,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 473,
       "gbifSpeciesKey": 3144842,
@@ -822,7 +846,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-22); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -835,7 +863,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5839,
       "gbifSpeciesKey": 8419208,
@@ -868,13 +897,17 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lycium_intrincatum_(flor).JPG?width=1280",
       "imageAttribution": "ANE (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 3,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-22); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -888,7 +921,8 @@
       },
       "iucnGlobal": "NE (no evaluada a nivel global)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5923,
       "gbifSpeciesKey": 3796884,
@@ -920,13 +954,17 @@
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/609975159/original.jpg",
       "imageAttribution": "Quentin Groom (CC0) · GBIF",
       "coordinates": null,
-      "rarityScore": 3,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-22); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -940,7 +978,8 @@
       },
       "iucnGlobal": "NE (no evaluada a nivel global)",
       "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
-      "murciaStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7034,
       "gbifSpeciesKey": 6022574,
@@ -981,9 +1020,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-22); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -997,7 +1036,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10670,
       "gbifSpeciesKey": 2469763,
@@ -1009,7 +1049,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 12,
@@ -1030,13 +1071,17 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Salsola_papillosa1160031.jpg?width=1280",
       "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 5,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-22); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1050,7 +1095,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7915,
       "gbifSpeciesKey": 3757043,
@@ -1081,10 +1127,18 @@
       "image": null,
       "imageAttribution": null,
       "coordinates": null,
-      "rarityScore": 3,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-22); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -1097,7 +1151,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8709,
       "gbifSpeciesKey": 7308668,
@@ -1137,7 +1192,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-22); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -1150,7 +1209,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "No incluida en el LESRPE; característica de matorrales halonitrófilos (HIC 1430)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 9913,
       "gbifSpeciesKey": 3120786,
@@ -1190,7 +1250,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-22); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -1203,7 +1267,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No incluida en el LESRPE; característica de matorrales halonitrófilos (HIC 1430)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 2639,
       "gbifSpeciesKey": 7501008,
@@ -1236,13 +1301,17 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lafuentea_rotundifolia80857.jpg?width=1280",
       "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 4,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-22); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1256,7 +1325,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5616,
       "gbifSpeciesKey": 3739515,
@@ -1291,7 +1361,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-22); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -1304,7 +1378,8 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5653,
       "gbifSpeciesKey": 2860661,
@@ -1333,10 +1408,18 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Plantago_amplexicaulis_kz01.jpg?width=1280",
       "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 4,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-22); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -1349,7 +1432,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7148,
       "gbifSpeciesKey": 7303042,
@@ -1387,9 +1471,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-22); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1403,7 +1487,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 665,
       "gbifSpeciesKey": 4252495,
@@ -1435,13 +1520,17 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Senecio_flavus_1.jpg?width=1280",
       "imageAttribution": "Gideon Pisanty (Gidip) גדעון פיזנטי (CC BY 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 4,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-22); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1455,7 +1544,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 687,
       "gbifSpeciesKey": 3107479,
@@ -1466,7 +1556,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2010)"
     },
     {
       "id": 21,
@@ -1483,10 +1574,18 @@
       "image": null,
       "imageAttribution": null,
       "coordinates": null,
-      "rarityScore": 3,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-22); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -1499,7 +1598,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8516,
       "gbifSpeciesKey": 3756223,
@@ -1541,9 +1641,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-22); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1557,7 +1657,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (RD 139/2011)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11692,
       "gbifSpeciesKey": 2445034,
@@ -1568,7 +1669,8 @@
         "pendientes-rocosas-calcicolas-8210"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 23,
@@ -1597,9 +1699,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-22); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1613,7 +1715,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8800,
       "gbifSpeciesKey": 3896744,
@@ -1654,9 +1757,9 @@
       },
       "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-22); Formulario Normalizado de Datos del sitio Red Natura 2000 ES6200011 (Sierra de las Moreras), sección 3.2: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1670,14 +1773,16 @@
       },
       "iucnGlobal": "VU (Vulnerable) (evaluación UICN 2023)",
       "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12169,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2007)"
     },
     {
       "id": 25,
@@ -1706,9 +1811,9 @@
       },
       "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-22); Formulario Normalizado de Datos del sitio Red Natura 2000 ES6200011 (Sierra de las Moreras), sección 3.2: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1722,14 +1827,16 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
       "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
-      "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10866,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2007)"
     },
     {
       "id": 26,
@@ -1758,9 +1865,9 @@
       },
       "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-22); Formulario Normalizado de Datos del sitio Red Natura 2000 ES6200011 (Sierra de las Moreras), sección 3.2: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1774,14 +1881,16 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
       "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
-      "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11803,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2007)"
     },
     {
       "id": 27,
@@ -1810,9 +1919,9 @@
       },
       "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-22); Formulario Normalizado de Datos del sitio Red Natura 2000 ES6200011 (Sierra de las Moreras), sección 3.2: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1826,14 +1935,16 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
       "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
-      "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11264,
       "gbifSpeciesKey": 2432655,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2007)"
     },
     {
       "id": 28,
@@ -1862,9 +1973,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-22); Formulario Normalizado de Datos del sitio Red Natura 2000 ES6200011 (Sierra de las Moreras), sección 3.2: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1878,14 +1989,16 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
-      "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11451,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2007)"
     },
     {
       "id": 29,
@@ -1902,13 +2015,17 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sideritis_lasiantha32.jpg?width=1280",
       "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-22); Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.3, que la cita como «Sideritis lasiantha Pers.»: escasa; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1922,7 +2039,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8338,
       "gbifSpeciesKey": null,
@@ -1930,7 +2048,8 @@
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": false,
-      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla.",
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2010)"
     },
     {
       "id": 30,
@@ -1959,9 +2078,9 @@
       },
       "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Vulnerable (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-22); Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.3: presente; Formulario Normalizado de Datos del sitio Red Natura 2000 ES6200011 (Sierra de las Moreras), sección 3.2: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1975,14 +2094,16 @@
       },
       "iucnGlobal": "VU A1cd (evaluación IUCN de 1996; pendiente de reevaluación global reciente)",
       "spainStatus": "Catálogo Español de Especies Amenazadas / LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexos II y IV; Reglamento CITES (CE) 338/97, Anexo A",
-      "murciaStatus": "Vulnerable (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Vulnerable (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11385,
       "gbifSpeciesKey": 2441461,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "EN — En peligro (Lista Roja española, 2002)"
     },
     {
       "id": 31,
@@ -2011,9 +2132,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 44 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2027,7 +2148,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11592,
       "gbifSpeciesKey": 5231236,
@@ -2049,7 +2171,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 44,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2004)"
     },
     {
       "id": 32,
@@ -2078,9 +2201,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 36 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2094,7 +2217,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12316,
       "gbifSpeciesKey": 9330514,
@@ -2116,7 +2240,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 36,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 33,
@@ -2145,9 +2270,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 19 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2161,7 +2286,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Aves 2009/147/CE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11102,
       "gbifSpeciesKey": 2490669,
@@ -2183,7 +2309,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 19,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 34,
@@ -2212,9 +2339,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 18 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población permanente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2228,7 +2355,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Aves 2009/147/CE; Ley 42/2007, Anexo IV",
-      "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10888,
       "gbifSpeciesKey": 2480506,
@@ -2250,7 +2378,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 18,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
     },
     {
       "id": 35,
@@ -2281,7 +2410,7 @@
       "rarityLocalBasis": {
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 17 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2, que la cita como «Sylvia undata»: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -2295,7 +2424,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 80931,
       "gbifSpeciesKey": 2492949,
@@ -2317,7 +2447,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 17,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 36,
@@ -2346,9 +2477,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 14 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población permanente, común; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2362,7 +2493,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12321,
       "gbifSpeciesKey": 9616058,
@@ -2384,7 +2516,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 14,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 37,
@@ -2413,9 +2546,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 14 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2, que la cita como «Saxicola torquatus»: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2429,7 +2562,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 16387,
       "gbifSpeciesKey": 4408759,
@@ -2482,7 +2616,7 @@
       "rarityLocalBasis": {
         "categoria": "Directiva Aves 2009/147/CE, Anexo II (especie cinegética)",
         "ambito": "estatal",
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 9 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población reproductora, presente; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -2496,7 +2630,8 @@
       },
       "iucnGlobal": "VU (Vulnerable)",
       "spainStatus": "No incluida en el LESRPE; Directiva Aves 2009/147/CE, Anexo II (especie cinegética); Reglamento CITES, Anexo A",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12356,
       "gbifSpeciesKey": 2495708,
@@ -2518,7 +2653,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 9,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2004)"
     },
     {
       "id": 39,
@@ -2547,9 +2683,9 @@
       },
       "rarityLocal": 5,
       "rarityLocalBasis": {
-        "categoria": "En Peligro de Extinción",
-        "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
-        "ambito": "Región de Murcia"
+        "categoria": "En Peligro de Extinción (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": true,
       "source": "GBIF confirma su presencia con 8 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población permanente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2563,7 +2699,8 @@
       },
       "iucnGlobal": "LC (población global amplia en Asia y África pese al declive europeo)",
       "spainStatus": "Catálogo Español de Especies Amenazadas: Vulnerable; Libro Rojo de las Aves de España (SEO/BirdLife, 2004/2021); Directiva Aves 2009/147/CE, Anexo I",
-      "murciaStatus": "En Peligro de Extinción (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "En Peligro de Extinción (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 16302,
       "gbifSpeciesKey": 5844449,
@@ -2585,7 +2722,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 8,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "EN — En peligro (Lista Roja española, 2004)"
     },
     {
       "id": 40,
@@ -2616,7 +2754,7 @@
       "rarityLocalBasis": {
         "categoria": "LESRPE",
         "ambito": "estatal",
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 6 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -2630,7 +2768,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE; Directiva Aves 2009/147/CE, Anexo I",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11887,
       "gbifSpeciesKey": 2482100,
@@ -2652,7 +2791,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 6,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
     },
     {
       "id": 41,
@@ -2681,9 +2821,9 @@
       },
       "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": true,
       "source": "GBIF confirma su presencia con 5 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población en concentración, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2697,7 +2837,8 @@
       },
       "iucnGlobal": "VU (Vulnerable)",
       "spainStatus": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; Ley 42/2007, Anexo IV",
-      "murciaStatus": "Vulnerable (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Vulnerable (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 14053,
       "gbifSpeciesKey": 7406504,
@@ -2719,7 +2860,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 5,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2004)"
     },
     {
       "id": 42,
@@ -2750,7 +2892,7 @@
       "rarityLocalBasis": {
         "categoria": "LESRPE (RD 139/2011)",
         "ambito": "estatal",
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 5 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población permanente; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -2764,7 +2906,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Aves 2009/147/CE, Anexo I; Ley 42/2007, Anexo IV",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12065,
       "gbifSpeciesKey": 2482552,
@@ -2786,7 +2929,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 5,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
     },
     {
       "id": 43,
@@ -2815,9 +2959,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 5 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población invernante, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2831,7 +2975,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12147,
       "gbifSpeciesKey": 2481240,
@@ -2853,7 +2998,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 5,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
     },
     {
       "id": 65,
@@ -2884,7 +3030,7 @@
       "rarityLocalBasis": {
         "categoria": "Subespecie mediterránea (desmarestii) catalogada Vulnerable en el Catálogo Español de Especies Amenazadas",
         "ambito": "estatal",
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "origen": "spainStatus del park.json"
       },
       "featured": true,
       "source": "GBIF confirma su presencia con 4 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2, que la cita como «Phalacrocorax aristotelis aristotelis»: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -2898,7 +3044,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "Subespecie mediterránea (desmarestii) catalogada Vulnerable en el Catálogo Español de Especies Amenazadas",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 80933,
       "gbifSpeciesKey": 2481861,
@@ -2949,9 +3096,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 3 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población permanente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2965,7 +3112,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE; Directiva Aves 2009/147/CE, Anexo I; Reglamento CITES (CE) 338/97, Anexo A",
-      "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10917,
       "gbifSpeciesKey": 5959092,
@@ -2987,7 +3135,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 3,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 46,
@@ -3018,7 +3167,7 @@
       "rarityLocalBasis": {
         "categoria": "Catalogado como Vulnerable en el Libro Rojo de las Aves de España (población ibérica escasa y localizada)",
         "ambito": "estatal",
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "origen": "spainStatus del park.json"
       },
       "featured": true,
       "source": "GBIF confirma su presencia con 3 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población permanente; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -3032,7 +3181,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "Catalogado como Vulnerable en el Libro Rojo de las Aves de España (población ibérica escasa y localizada)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11363,
       "gbifSpeciesKey": 2494394,
@@ -3054,7 +3204,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 3,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
     },
     {
       "id": 47,
@@ -3083,9 +3234,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 3 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3099,7 +3250,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11211,
       "gbifSpeciesKey": 2498415,
@@ -3121,7 +3273,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 3,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 48,
@@ -3150,9 +3303,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 2 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3166,7 +3319,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11340,
       "gbifSpeciesKey": 2480876,
@@ -3188,7 +3342,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 49,
@@ -3217,9 +3372,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 2 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población reproductora, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3233,7 +3388,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12250,
       "gbifSpeciesKey": 2492576,
@@ -3255,7 +3411,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 50,
@@ -3284,9 +3441,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 1 ocurrencia dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3300,7 +3457,8 @@
       },
       "iucnGlobal": "NT (Casi amenazado)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12122,
       "gbifSpeciesKey": 9411857,
@@ -3322,7 +3480,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 51,
@@ -3351,9 +3510,9 @@
       },
       "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": true,
       "source": "GBIF confirma su presencia con 1 ocurrencia dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3367,7 +3526,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; LESRPE (RD 139/2011); Ley 42/2007, Anexo IV",
-      "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10664,
       "gbifSpeciesKey": 2480311,
@@ -3389,7 +3549,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2004)"
     },
     {
       "id": 52,
@@ -3420,7 +3581,7 @@
       "rarityLocalBasis": {
         "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
         "ambito": "estatal",
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 1 ocurrencia dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2, que la cita como «Larus ridibundus»: población invernante, presente; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -3434,7 +3595,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 16356,
       "gbifSpeciesKey": 6065824,
@@ -3456,7 +3618,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 53,
@@ -3485,9 +3648,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 1 ocurrencia dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población permanente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3501,7 +3664,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Aves 2009/147/CE; Ley 42/2007, Anexo IV",
-      "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11336,
       "gbifSpeciesKey": 2480666,
@@ -3523,7 +3687,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2004)"
     },
     {
       "id": 54,
@@ -3552,9 +3717,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 1 ocurrencia dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2, que la cita como «Sylvia conspicillata»: población reproductora, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3568,7 +3733,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 80923,
       "gbifSpeciesKey": 9868071,
@@ -3590,7 +3756,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2004)"
     },
     {
       "id": 55,
@@ -3619,9 +3786,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población permanente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3635,7 +3802,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11351,
       "gbifSpeciesKey": 2480589,
@@ -3657,7 +3825,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 56,
@@ -3686,9 +3855,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población reproductora, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3702,7 +3871,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10734,
       "gbifSpeciesKey": 2490681,
@@ -3724,7 +3894,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2004)"
     },
     {
       "id": 57,
@@ -3753,9 +3924,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población reproductora, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3769,7 +3940,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Aves 2009/147/CE; Ley 42/2007, Anexo IV",
-      "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11339,
       "gbifSpeciesKey": 2475365,
@@ -3791,7 +3963,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2004)"
     },
     {
       "id": 58,
@@ -3820,9 +3993,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2, que la cita como «Falco peregrinus ([including pelegrinoides])»: población permanente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3836,7 +4009,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE; Directiva Aves 2009/147/CE, Anexo I; Reglamento CITES (CE) 338/97, Anexo A",
-      "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11963,
       "gbifSpeciesKey": 2481047,
@@ -3858,7 +4032,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "EN — En peligro (Lista Roja española, 2004)"
     },
     {
       "id": 59,
@@ -3887,9 +4062,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población permanente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3903,7 +4078,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11959,
       "gbifSpeciesKey": 2480685,
@@ -3925,7 +4101,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 60,
@@ -3954,9 +4131,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población en concentración, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3970,7 +4147,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12326,
       "gbifSpeciesKey": 8012314,
@@ -3992,7 +4170,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "DD — Datos insuficientes (Lista Roja española, 2004)"
     },
     {
       "id": 61,
@@ -4021,9 +4200,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -4037,7 +4216,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10937,
       "gbifSpeciesKey": 2490613,
@@ -4059,7 +4239,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 62,
@@ -4088,9 +4269,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población reproductora, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -4104,7 +4285,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11453,
       "gbifSpeciesKey": 5231235,
@@ -4126,7 +4308,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
     },
     {
       "id": 63,
@@ -4155,9 +4338,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población invernante, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -4171,7 +4354,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12121,
       "gbifSpeciesKey": 2482048,
@@ -4193,7 +4377,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 64,
@@ -4222,9 +4407,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-08-22); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población invernante, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -4238,7 +4423,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11796,
       "gbifSpeciesKey": 2484918,
@@ -4260,7 +4446,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     }
   ]
 }

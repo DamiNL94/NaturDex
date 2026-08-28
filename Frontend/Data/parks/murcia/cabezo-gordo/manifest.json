@@ -2,8 +2,8 @@
   "slug": "cabezo-gordo",
   "name": "Cabezo Gordo",
   "apiSlug": "cabezo-gordo",
-  "version": 7,
-  "updatedAt": "2026-08-25",
+  "version": 12,
+  "updatedAt": "2026-08-27",
   "data": "Data/parks/murcia/cabezo-gordo/park.json",
   "geo": {
     "parque": "Data/parks/murcia/cabezo-gordo/geo/parque.geojson",

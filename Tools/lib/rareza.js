@@ -9,7 +9,7 @@
  * el cálculo hace falta en dos sitios que trabajan con formatos distintos:
  *
  *   · `build-species-seleccion.js` tiene las normas ESTRUCTURADAS de EIDOS ({ambito, norma, categoria}).
- *   · `rareza-legal.js` solo tiene el TEXTO ya redactado del park.json (`spainStatus`, `murciaStatus`),
+ *   · `rareza-legal.js` solo tiene el TEXTO ya redactado del park.json (`spainStatus`, `regionalStatus`),
  *     porque los espacios antiguos no conservan la selección y volver a EIDOS pide red.
  *
  * Tener dos copias de la escalera es exactamente el fallo que este repo ya conoce con
@@ -172,7 +172,31 @@ function tramoDeTexto(texto) {
   return { tramo: mejor, motivo, reconocido, indeterminado: indeterminado && mejor === 1 };
 }
 
+/**
+ * La PROCEDENCIA del tramo, incluida la del tramo 1.
+ *
+ * Una especie sin figura de protección no tiene norma que citar, así que la primera versión le
+ * dejaba la base a `null`… y entonces era indistinguible de una ficha SIN MIGRAR, que también la
+ * tiene a null. El aviso de `validate` contaba 596 «pendientes» cuando solo 23 lo estaban: las otras
+ * 573 estaban comprobadas y el resultado era «no hay nada». «Comprobado que no tiene figura» y
+ * «nadie lo ha mirado» son dos estados distintos y solo el segundo hay que arrastrar; por eso el
+ * tramo 1 también deja constancia, con su ausencia dentro.
+ *
+ * Vive aquí desde el 2026-08-27, cuando `build-species-universal.js` pasó a derivar el `rarityScore`
+ * de la figura legal: si cada una de las dos puntas construye su propia base, el mismo taxón acaba
+ * con dos procedencias distintas según lo escribiera el generador o la migración.
+ *
+ * @param {object} r       lo que devuelve `tramoDeTexto()`
+ * @param {string} ambito  'estatal' | 'autonomico'
+ * @param {string} origen  qué campo se leyó, literal, para poder rehacerlo
+ */
+function baseDeTramo(r, ambito, origen) {
+  if (r.motivo) return { categoria: r.motivo, ambito, origen };
+  if (r.reconocido) return { categoria: 'Sin figura de protección', ambito, origen };
+  return null; // ni figura ni negación: el texto no dice nada, y eso sí queda pendiente
+}
+
 module.exports = {
   ESCALERA, EVALUACIONES, SIGNIFICADO, NEGACION, NO_SON_PROTECCION, INDETERMINADO,
-  tramoDeCategoria, tramoDeTexto,
+  tramoDeCategoria, tramoDeTexto, baseDeTramo,
 };

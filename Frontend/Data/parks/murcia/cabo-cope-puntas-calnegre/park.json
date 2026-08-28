@@ -919,7 +919,8 @@
       },
       "iucnGlobal": "LC (población global amplia en Asia y África pese al declive europeo)",
       "spainStatus": "Catálogo Español de Especies Amenazadas: Vulnerable; Libro Rojo de las Aves de España (SEO/BirdLife, 2004/2021); Directiva Aves 2009/147/CE, Anexo I",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: En peligro de extinción (población reproductora muy reducida)",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: En peligro de extinción (población reproductora muy reducida)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 16302,
       "gbifSpeciesKey": 5844449,
@@ -945,14 +946,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: En peligro de extinción (población reproductora muy reducida)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "Catálogo Español de Especies Amenazadas: Vulnerable",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "EN — En peligro (Lista Roja española, 2004)"
     },
     {
       "id": 25,
@@ -971,7 +973,7 @@
       "seasonality": "Primavera",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Allium_melananthum02.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 5,
+      "rarityScore": 1,
       "featured": true,
       "source": "Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia; Documento previo del PORN de Calnegre y Cabo Cope (CARM, 2021) - Catálogo Regional de Flora Silvestre Protegida (confirma categoría Vulnerable); nombre común alternativo \"ajo de flor negra\" según el PORN; IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
@@ -984,7 +986,8 @@
       },
       "iucnGlobal": "NT (Casi amenazado)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Foto localizada por búsqueda en Commons (no por el elemento de Wikidata del taxón): conviene confirmar que corresponde a esta especie.",
       "eidosTaxonId": 2011,
       "gbifSpeciesKey": 2856202,
@@ -999,9 +1002,13 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "descriptionSource": null
     },
     {
@@ -1022,7 +1029,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pancratium_maritimum2.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -1034,7 +1041,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008 (especie común pero sensible a la degradación de playas)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): aprovechamiento sujeto a autorización previa",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): aprovechamiento sujeto a autorización previa",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Reclasificada al hábitat oficial 2110 (dunas móviles embrionarias) por ser una especie característica de dunas costeras; esta asignación es una inferencia ecológica mía, ya que ni el Plan de Gestión del LIC Cabo Cope ni el Anexo I del PORN citan expresamente Pancratium maritimum entre las especies indicadoras de esa asociación (que mencionan Elymus farctus y Sporobolus pungens). Confirmar si procede.",
       "eidosTaxonId": 6924,
       "gbifSpeciesKey": 2853283,
@@ -1086,7 +1094,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "Catalogado como Vulnerable en el Libro Rojo de las Aves de España (población ibérica escasa y localizada)",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11363,
       "gbifSpeciesKey": 2494394,
@@ -1119,7 +1128,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
     },
     {
       "id": 24,
@@ -1151,7 +1161,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "Excluida del Catálogo Nacional de Especies Amenazadas (CNEA) desde el año 2000 por dudas sobre su validez taxonómica",
-      "murciaStatus": "Pendiente de confirmar en el Catálogo Regional vigente",
+      "regionalStatus": "Pendiente de confirmar en el Catálogo Regional vigente",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "REVISAR: fuentes recientes indican que Centaurium rigualii fue excluida del Catálogo Nacional de Especies Amenazadas en 2000 por problemas de validez taxonómica (posible sinónimo de otro Centaurium). No se ha podido confirmar su presencia documentada específicamente en Cabo Cope con una fuente primaria fiable dentro de esta sesión. Recomendable verificar con un botánico antes de mantenerla en el catálogo definitivo.",
       "eidosTaxonId": 3360,
       "gbifSpeciesKey": 5596459,
@@ -1191,7 +1202,8 @@
       },
       "iucnGlobal": "NE (no evaluada a nivel global; distribución principal fuera de Europa, en el norte de África)",
       "spainStatus": "Lista Roja de la Flora Vascular Española 2008: EN (En Peligro), criterio B1ab(i,iii,iv,v)c(ii,iii,iv)+2ab(i,iii,iv,v)c(ii,iii,iv)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 80097,
       "gbifSpeciesKey": 3578145,
@@ -1243,7 +1255,8 @@
       },
       "iucnGlobal": "NE (no evaluada a nivel global; especie de amplia distribución en Asia y África, rara en el extremo de su área ibérica)",
       "spainStatus": "Lista Roja de la Flora Vascular Española 2008: CR (En Peligro Crítico)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia: En peligro de extinción",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia: En peligro de extinción",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 906,
       "gbifSpeciesKey": 4152264,
@@ -1262,7 +1275,8 @@
         "categoria": "Lista Roja de la Flora Vascular Española 2008: CR (En Peligro Crítico)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
-      }
+      },
+      "iucnSpain": "CR — En peligro crítico (Lista Roja española, 2010)"
     },
     {
       "id": 27,
@@ -1281,7 +1295,7 @@
       "seasonality": "Verano y otoño",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Salsola_papillosa1160031.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 5,
+      "rarityScore": 1,
       "featured": true,
       "source": "Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia; Decreto 50/2003 (BORM), Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia; base científica: Sánchez Gómez et al. 2002, Libro Rojo de la Flora Silvestre Protegida de la Región de Murcia; Documento previo del PORN de Calnegre y Cabo Cope (CARM, 2021) - Catálogo Regional de Flora Silvestre Protegida (confirma categoría Vulnerable); IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
@@ -1294,7 +1308,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7915,
       "gbifSpeciesKey": 3757043,
@@ -1308,9 +1323,13 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "descriptionSource": null
     },
     {
@@ -1343,7 +1362,8 @@
       },
       "iucnGlobal": "VU A1cd (evaluación IUCN de 1996; pendiente de reevaluación global reciente)",
       "spainStatus": "Catálogo Español de Especies Amenazadas / LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexos II y IV; Reglamento CITES (CE) 338/97, Anexo A",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: En peligro de extinción",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: En peligro de extinción",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11385,
       "gbifSpeciesKey": 2441461,
@@ -1357,14 +1377,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: En peligro de extinción",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "Catálogo Español de Especies Amenazadas / LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "EN — En peligro (Lista Roja española, 2002)"
     },
     {
       "id": 34,
@@ -1384,7 +1405,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_lanigerum_kz01.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -1396,7 +1417,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8809,
       "gbifSpeciesKey": 7308375,
@@ -1409,7 +1431,7 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "Sin figura de protección",
@@ -1448,7 +1470,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "murciaStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11211,
       "gbifSpeciesKey": null,
@@ -1481,7 +1504,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 19,
@@ -1513,10 +1537,11 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): aprovechamiento sujeto a autorización previa (poblaciones silvestres)",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): aprovechamiento sujeto a autorización previa (poblaciones silvestres)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
-      "eidosTaxonId": 32803,
-      "gbifSpeciesKey": 8028262,
+      "eidosTaxonId": 6644,
+      "gbifSpeciesKey": 5415040,
       "zepaSiteCode": null,
       "habitatIds": [
         "matorral-semiarido"
@@ -1565,7 +1590,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica del litoral de la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica del litoral de la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica del hábitat 1210 documentada en el litoral de la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 2765,
       "gbifSpeciesKey": 5383922,
@@ -1585,7 +1611,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2010)"
     },
     {
       "id": 207,
@@ -1617,7 +1644,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "murciaStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11959,
       "gbifSpeciesKey": null,
@@ -1650,7 +1678,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 201,
@@ -1682,7 +1711,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Aves 2009/147/CE; Ley 42/2007, Anexo IV",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10888,
       "gbifSpeciesKey": null,
@@ -1708,14 +1738,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE (RD 139/2011)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
     },
     {
       "id": 157,
@@ -1747,7 +1778,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); muy extendida por la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); muy extendida por la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica del matorral semiárido, muy extendida por la Región de Murcia. Presencia en el parque inferida del hábitat; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 2186,
       "gbifSpeciesKey": 5352466,
@@ -1799,7 +1831,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10060,
       "gbifSpeciesKey": 2704651,
@@ -1854,7 +1887,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de suelos salinos áridos de la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de suelos salinos áridos de la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica del hábitat prioritario 1510* documentada en la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 4615,
       "gbifSpeciesKey": 3873636,
@@ -1907,7 +1941,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): aprovechamiento sujeto a autorización previa",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): aprovechamiento sujeto a autorización previa",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": null,
       "gbifSpeciesKey": 7273402,
@@ -1958,7 +1993,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE; Directiva Aves 2009/147/CE, Anexo I",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11887,
       "gbifSpeciesKey": 2482100,
@@ -1984,14 +2020,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
     },
     {
       "id": 100,
@@ -2010,7 +2047,7 @@
       "seasonality": "Casi todo el año, con máximo en primavera y otoño",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lavandula_multifida.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 1,
       "featured": false,
       "source": "Anexo I del proyecto de PORN del Parque Regional costero-litoral de Cabo Cope (ANSE / CARM) - Catálogo de Flora Silvestre Protegida (Decreto 50/2003)",
       "taxonomy": {
@@ -2023,7 +2060,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (Anexo II: aprovechamiento sujeto a autorización)",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (Anexo II: aprovechamiento sujeto a autorización)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Especie añadida desde el Catálogo de Flora Silvestre Protegida del Anexo I del PORN; la asignación de hábitat es una inferencia ecológica (el Anexo no la vincula a una asociación concreta) y las coordenadas son representativas, no de una localización verificada. Confirmar en campo.",
       "eidosTaxonId": 5547,
       "gbifSpeciesKey": 3891203,
@@ -2037,9 +2075,13 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (Anexo II: aprovechamiento sujeto a autorización)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "descriptionSource": null
     },
     {
@@ -2072,7 +2114,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); característica de gravas y cauces de la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); característica de gravas y cauces de la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Añadida como especie característica del hábitat 3250, documentada en la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado, pendiente de confirmación en campo.",
       "eidosTaxonId": 4992,
       "gbifSpeciesKey": 5334190,
@@ -2124,10 +2167,11 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Pliego de herbario, no fotografía de campo. De este taxón no existe ninguna imagen de campo con licencia libre: 0 observaciones con multimedia en iNaturalist, categoría vacía en Wikimedia Commons y, en GBIF, solo pliegos de herbario. Se descartó el del herbario MA (Real Jardín Botánico–CSIC), que sería de mejor procedencia, porque su servidor solo sirve el escaneo original de 24 MB, inasumible para una ficha. Se mantiene la copia local del pliego del Smithsonian (CC0, 800 kB).",
       "eidosTaxonId": 1838,
-      "gbifSpeciesKey": 8397718,
+      "gbifSpeciesKey": 5568629,
       "zepaSiteCode": null,
       "habitatIds": [
         "matorral-semiarido",
@@ -2138,7 +2182,7 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "Sin figura de protección",
@@ -2164,8 +2208,8 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Arto_Negro_01.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 3,
-      "featured": false,
+      "rarityScore": 1,
+      "featured": true,
       "source": "Región de Murcia Digital (CARM) - Flora de Cabo Cope y Puntas de Calnegre (mención por nombre común 'arto'); El Medio Natural en Cartagena (urbanismo.cartagena.es), ficha 'Arto - Maytenus senegalensis subsp. europaea'; Documento previo del PORN de Calnegre y Cabo Cope (CARM, 2021) - Catálogo Regional de Flora Silvestre Protegida (confirma categoría Vulnerable)",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -2177,7 +2221,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 6258,
       "gbifSpeciesKey": 3793958,
@@ -2191,9 +2236,13 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "descriptionSource": null
     },
     {
@@ -2226,7 +2275,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica del matorral semiárido, frecuente en la Región de Murcia. Presencia en el parque inferida del hábitat; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 9623,
       "gbifSpeciesKey": 3144854,
@@ -2279,7 +2329,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
-      "murciaStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11351,
       "gbifSpeciesKey": null,
@@ -2312,7 +2363,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 16,
@@ -2331,8 +2383,8 @@
       "seasonality": "Primavera a otoño",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ziziphus_lotus_20200928_191923.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 4,
-      "featured": false,
+      "rarityScore": 1,
+      "featured": true,
       "source": "Directiva Hábitats 92/43/CEE, hábitat prioritario 5220*; Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia; Decreto 50/2003 (BORM), Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia; base científica: Sánchez Gómez et al. 2002, Libro Rojo de la Flora Silvestre Protegida de la Región de Murcia; Documento previo del PORN de Calnegre y Cabo Cope (CARM, 2021) - Catálogo Regional de Flora Silvestre Protegida (confirma categoría Vulnerable)",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -2344,7 +2396,8 @@
       },
       "iucnGlobal": "NE (no evaluada a nivel global)",
       "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 9441,
       "gbifSpeciesKey": 3039418,
@@ -2357,9 +2410,13 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "descriptionSource": null
     },
     {
@@ -2392,7 +2449,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de las ramblas de la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de las ramblas de la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica del hábitat 92D0 documentada en las ramblas de la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 6561,
       "gbifSpeciesKey": 3169756,
@@ -2417,7 +2475,7 @@
     {
       "id": 138,
       "commonName": "Barba de chivo",
-      "scientificName": "Stipa capensis",
+      "scientificName": "Stipellula capensis",
       "kingdom": "flora",
       "group": "Gramínea",
       "habitat": "Pastizales anuales sobre suelos secos y pedregosos",
@@ -2440,11 +2498,12 @@
         "class": "Liliopsida",
         "order": "Poales",
         "family": "Poaceae",
-        "genus": "Stipa"
+        "genus": "Stipellula"
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en los pastizales de la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en los pastizales de la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica del hábitat prioritario 6220* documentada en el sureste y la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 10149,
       "gbifSpeciesKey": 8315646,
@@ -2497,7 +2556,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de las playas de la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de las playas de la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica del hábitat 1210 documentada en las playas de la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 7912,
       "gbifSpeciesKey": 3083957,
@@ -2536,7 +2596,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Osyris_lanceolata.JPG?width=1280",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 1,
       "featured": false,
       "source": "Anexo I del proyecto de PORN del Parque Regional costero-litoral de Cabo Cope (ANSE / CARM) - Catálogo de Flora Silvestre Protegida (Decreto 50/2003); IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
@@ -2549,7 +2609,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Especie añadida desde el Catálogo de Flora Silvestre Protegida del Anexo I del PORN; el hábitat se apoya en la asociación fitosociológica citada por las fuentes oficiales del parque. Coordenadas representativas, pendientes de precisar en campo.",
       "eidosTaxonId": 6882,
       "gbifSpeciesKey": 7473922,
@@ -2563,9 +2624,13 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "descriptionSource": null
     },
     {
@@ -2598,7 +2663,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE; Directiva Aves 2009/147/CE, Anexo I; Reglamento CITES (CE) 338/97, Anexo A",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10917,
       "gbifSpeciesKey": 5959092,
@@ -2624,14 +2690,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 211,
@@ -2663,7 +2730,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "murciaStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10937,
       "gbifSpeciesKey": null,
@@ -2696,7 +2764,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 22,
@@ -2715,7 +2784,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lycium_intrincatum_(flor).JPG?width=1280",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 1,
       "featured": false,
       "source": "Región de Murcia Digital (CARM) - Flora de Cabo Cope y Puntas de Calnegre; Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia; Decreto 50/2003 (BORM), Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia; base científica: Sánchez Gómez et al. 2002, Libro Rojo de la Flora Silvestre Protegida de la Región de Murcia",
       "taxonomy": {
@@ -2728,7 +2797,8 @@
       },
       "iucnGlobal": "NE (no evaluada a nivel global)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5923,
       "gbifSpeciesKey": 3796884,
@@ -2741,9 +2811,13 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "descriptionSource": null
     },
     {
@@ -2776,7 +2850,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica del matorral semiárido y roquedos, frecuente en la Región de Murcia. Presencia en el parque inferida del hábitat; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 4308,
       "gbifSpeciesKey": 2653414,
@@ -2817,7 +2892,7 @@
       "seasonality": "Primavera",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lavandula_dentata1.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 1,
       "featured": false,
       "source": "Anexo I del proyecto de PORN del Parque Regional costero-litoral de Cabo Cope (ANSE / CARM) - Catálogo de Flora Silvestre Protegida (Decreto 50/2003)",
       "taxonomy": {
@@ -2830,7 +2905,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (Anexo II: aprovechamiento sujeto a autorización)",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (Anexo II: aprovechamiento sujeto a autorización)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Especie añadida desde el Catálogo de Flora Silvestre Protegida del Anexo I del PORN; la asignación de hábitat es una inferencia ecológica (el Anexo no la vincula a una asociación concreta) y las coordenadas son representativas, no de una localización verificada. Confirmar en campo.",
       "eidosTaxonId": 5731,
       "gbifSpeciesKey": 7307829,
@@ -2843,7 +2919,12 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (Anexo II: aprovechamiento sujeto a autorización)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
       }
     },
     {
@@ -2863,8 +2944,8 @@
       "seasonality": "Floración primaveral",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Centaurea_saxicola674.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 4,
-      "featured": false,
+      "rarityScore": 1,
+      "featured": true,
       "source": "Documento previo del PORN de Calnegre y Cabo Cope (CARM, Consejería de Agua, Agricultura, Ganadería, Pesca y Medio Ambiente, 2021) - Catálogo Regional de Flora Silvestre Protegida",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -2876,7 +2957,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Especie añadida a partir del PORN; falta contrastar su distribución exacta dentro del parque y su presencia en la Lista Roja de la Flora Vascular Española 2008.",
       "eidosTaxonId": 3332,
       "gbifSpeciesKey": 3128450,
@@ -2889,9 +2971,13 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "descriptionSource": null
     },
     {
@@ -2924,7 +3010,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Aves 2009/147/CE; Ley 42/2007, Anexo IV",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11339,
       "gbifSpeciesKey": null,
@@ -2950,19 +3037,20 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE (RD 139/2011)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2004)"
     },
     {
       "id": 143,
       "commonName": "Carrizo real",
-      "scientificName": "Saccharum ravennae",
+      "scientificName": "Tripidium ravennae",
       "kingdom": "flora",
       "group": "Gramínea",
       "habitat": "Ramblas, cauces y suelos húmedos con capa freática cercana",
@@ -2985,11 +3073,12 @@
         "class": "Liliopsida",
         "order": "Poales",
         "family": "Poaceae",
-        "genus": "Saccharum"
+        "genus": "Tripidium"
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de las ramblas de la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de las ramblas de la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica del hábitat 92D0 documentada en las ramblas de la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 80560,
       "gbifSpeciesKey": 8414646,
@@ -3041,7 +3130,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
-      "murciaStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12321,
       "gbifSpeciesKey": null,
@@ -3074,7 +3164,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 139,
@@ -3106,7 +3197,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica del hábitat prioritario 6220* documentada en la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 10047,
       "gbifSpeciesKey": 2703243,
@@ -3158,7 +3250,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
-      "murciaStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12147,
       "gbifSpeciesKey": null,
@@ -3191,7 +3284,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
     },
     {
       "id": 78,
@@ -3211,7 +3305,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Charadrius_alexandrinus_-_Kentish_Plover_03.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 4,
-      "featured": false,
+      "featured": true,
       "source": "Documento previo del PORN de Calnegre y Cabo Cope (CARM, Consejería de Agua, Agricultura, Ganadería, Pesca y Medio Ambiente, 2021); IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -3223,7 +3317,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; LESRPE (RD 139/2011); Ley 42/2007, Anexo IV",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "eidosTaxonId": 10664,
       "gbifSpeciesKey": 2480311,
       "zepaSiteCode": "ES0000261",
@@ -3255,7 +3350,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2004)"
     },
     {
       "id": 202,
@@ -3287,7 +3383,8 @@
       },
       "iucnGlobal": "NT (Casi amenazado)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "murciaStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12122,
       "gbifSpeciesKey": null,
@@ -3320,7 +3417,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 214,
@@ -3352,7 +3450,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Aves 2009/147/CE, Anexo I; Ley 42/2007, Anexo IV",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12065,
       "gbifSpeciesKey": null,
@@ -3378,14 +3477,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE (RD 139/2011)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
     },
     {
       "id": 96,
@@ -3404,7 +3504,7 @@
       "seasonality": "Primavera",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cynomorium_coccineum_vMH375.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 5,
+      "rarityScore": 1,
       "featured": false,
       "source": "Anexo I del proyecto de PORN del Parque Regional costero-litoral de Cabo Cope (ANSE / CARM) - Catálogo de Flora Silvestre Protegida (Decreto 50/2003)",
       "taxonomy": {
@@ -3417,7 +3517,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Especie añadida desde el Catálogo de Flora Silvestre Protegida del Anexo I del PORN; la asignación de hábitat es una inferencia ecológica (el Anexo no la vincula a una asociación concreta) y las coordenadas son representativas, no de una localización verificada. Confirmar en campo.",
       "eidosTaxonId": 3790,
       "gbifSpeciesKey": 7445043,
@@ -3430,9 +3531,13 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "descriptionSource": null
     },
     {
@@ -3465,7 +3570,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Aves 2009/147/CE",
-      "murciaStatus": "No catalogada regionalmente",
+      "regionalStatus": "No catalogada regionalmente",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11102,
       "gbifSpeciesKey": 2490669,
@@ -3498,7 +3604,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 73,
@@ -3530,7 +3637,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "El PORN cita la presencia de la especie en el parque sin detallar su categoría exacta de protección regional; pendiente de confirmar con el Catálogo Regional vigente.",
       "eidosTaxonId": 12316,
       "gbifSpeciesKey": 9330514,
@@ -3556,14 +3664,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 75,
@@ -3595,7 +3704,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "El PORN cita la presencia de la especie en el parque sin detallar su categoría exacta de protección regional; pendiente de confirmar con el Catálogo Regional vigente.",
       "eidosTaxonId": 11592,
       "gbifSpeciesKey": 5231236,
@@ -3621,14 +3731,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2004)"
     },
     {
       "id": 213,
@@ -3660,7 +3771,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "murciaStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11453,
       "gbifSpeciesKey": null,
@@ -3693,7 +3805,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
     },
     {
       "id": 115,
@@ -3725,7 +3838,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); diagnóstica de este hábitat en el litoral murciano",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); diagnóstica de este hábitat en el litoral murciano",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Añadida como especie diagnóstica del hábitat 2230, documentada en el litoral de la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado, pendiente de confirmación en campo.",
       "eidosTaxonId": 8435,
       "gbifSpeciesKey": 5584675,
@@ -3777,7 +3891,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "No figura en ninguna de las tres categorías del Catálogo Regional (Decreto 50/2003); se incluye únicamente por citarse expresamente como notable/rara en la fuente de la Marina de Cope.",
       "eidosTaxonId": 1707,
       "gbifSpeciesKey": 2874622,
@@ -3816,7 +3931,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Shag_Phalacrocorax_aristotelis.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 4,
-      "featured": false,
+      "featured": true,
       "source": "Región de Murcia Digital (CARM) - Fauna de Cabo Cope y Puntas de Calnegre",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -3828,7 +3943,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "Subespecie mediterránea (desmarestii) catalogada Vulnerable en el Catálogo Español de Especies Amenazadas",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Reclasificado taxonómicamente de Phalacrocorax aristotelis a Gulosus aristotelis; confirmar si la población litoral pertenece a la subespecie desmarestii.",
       "eidosTaxonId": 80933,
       "gbifSpeciesKey": 2481861,
@@ -3880,8 +3996,8 @@
       "seasonality": "Primavera y verano (floración)",
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/609975159/original.jpg",
       "coordinates": null,
-      "rarityScore": 3,
-      "featured": false,
+      "rarityScore": 1,
+      "featured": true,
       "source": "Región de Murcia Digital (CARM) - Flora de Cabo Cope y Puntas de Calnegre; Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia; Decreto 50/2003 (BORM), Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia; base científica: Sánchez Gómez et al. 2002, Libro Rojo de la Flora Silvestre Protegida de la Región de Murcia; Documento previo del PORN de Calnegre y Cabo Cope (CARM, 2021) - Catálogo Regional de Flora Silvestre Protegida (confirma categoría Vulnerable)",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -3893,7 +4009,8 @@
       },
       "iucnGlobal": "NE (no evaluada a nivel global)",
       "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7034,
       "gbifSpeciesKey": 6022574,
@@ -3907,9 +4024,13 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "descriptionSource": null
     },
     {
@@ -3929,7 +4050,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_coccifera_1.JPG?width=1280",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Anexo I del proyecto de PORN del Parque Regional costero-litoral de Cabo Cope (ANSE / CARM) - Catálogo de Flora Silvestre Protegida (Decreto 50/2003); IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
@@ -3942,7 +4063,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (Anexo II: aprovechamiento sujeto a autorización)",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (Anexo II: aprovechamiento sujeto a autorización)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Especie añadida desde el Catálogo de Flora Silvestre Protegida del Anexo I del PORN; la asignación de hábitat es una inferencia ecológica (el Anexo no la vincula a una asociación concreta) y las coordenadas son representativas, no de una localización verificada. Confirmar en campo.",
       "eidosTaxonId": 7478,
       "gbifSpeciesKey": 2879175,
@@ -3956,9 +4078,13 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (Anexo II: aprovechamiento sujeto a autorización)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "descriptionSource": null
     },
     {
@@ -3991,7 +4117,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); característica de los arenales litorales murcianos",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); característica de los arenales litorales murcianos",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Añadida como especie característica de los arenales litorales (hábitat 2110), documentada en la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado, pendiente de confirmación en campo.",
       "eidosTaxonId": 6064,
       "gbifSpeciesKey": 5356939,
@@ -4043,7 +4170,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 6625,
       "gbifSpeciesKey": 5374288,
@@ -4057,7 +4185,7 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "Sin figura de protección",
@@ -4095,7 +4223,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "El PORN cita la presencia de la especie en el parque sin detallar su categoría exacta de protección regional; pendiente de confirmar con el Catálogo Regional vigente.",
       "eidosTaxonId": 11772,
       "gbifSpeciesKey": 8796529,
@@ -4108,14 +4237,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 203,
@@ -4147,7 +4277,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Aves 2009/147/CE; Ley 42/2007, Anexo IV",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11336,
       "gbifSpeciesKey": null,
@@ -4173,14 +4304,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE (RD 139/2011)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2004)"
     },
     {
       "id": 74,
@@ -4212,7 +4344,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "El PORN cita la presencia de la especie en el parque sin detallar su categoría exacta de protección regional; pendiente de confirmar con el Catálogo Regional vigente.",
       "eidosTaxonId": 80931,
       "gbifSpeciesKey": 2492949,
@@ -4238,14 +4371,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 217,
@@ -4277,7 +4411,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)",
-      "murciaStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 80923,
       "gbifSpeciesKey": null,
@@ -4310,7 +4445,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2004)"
     },
     {
       "id": 97,
@@ -4329,7 +4465,7 @@
       "seasonality": "Verano",
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/591856810/original.jpg",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 1,
       "featured": false,
       "source": "Anexo I del proyecto de PORN del Parque Regional costero-litoral de Cabo Cope (ANSE / CARM) - Catálogo de Flora Silvestre Protegida (Decreto 50/2003)",
       "taxonomy": {
@@ -4342,7 +4478,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Especie añadida desde el Catálogo de Flora Silvestre Protegida del Anexo I del PORN; la asignación de hábitat es una inferencia ecológica (el Anexo no la vincula a una asociación concreta) y las coordenadas son representativas, no de una localización verificada. Confirmar en campo.",
       "eidosTaxonId": 10023,
       "gbifSpeciesKey": 4143386,
@@ -4355,7 +4492,12 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
       }
     },
     {
@@ -4375,7 +4517,7 @@
       "seasonality": "Primavera",
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/642301345/original.jpg",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 1,
       "featured": false,
       "source": "Anexo I del proyecto de PORN del Parque Regional costero-litoral de Cabo Cope (ANSE / CARM) - Catálogo de Flora Silvestre Protegida (Decreto 50/2003)",
       "taxonomy": {
@@ -4388,7 +4530,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 9835,
       "gbifSpeciesKey": 7268491,
@@ -4401,7 +4544,13 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
+      },
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2010)",
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
       }
     },
     {
@@ -4434,7 +4583,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); característica de cauces de la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); característica de cauces de la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Añadida como especie característica del hábitat 3250, documentada en la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado, pendiente de confirmación en campo.",
       "eidosTaxonId": 8152,
       "gbifSpeciesKey": 3170873,
@@ -4485,7 +4635,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE; Directiva Hábitats 92/43/CEE, Anexo IV",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10827,
       "gbifSpeciesKey": 8974077,
@@ -4498,14 +4649,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2002)"
     },
     {
       "id": 162,
@@ -4537,7 +4689,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica del matorral térmico y azufaifares, frecuente en la Región de Murcia. Presencia en el parque inferida del hábitat; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 2378,
       "gbifSpeciesKey": 2769019,
@@ -4591,7 +4744,8 @@
       },
       "iucnGlobal": "VU (Vulnerable) (evaluación UICN 2018)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); muy frecuente en la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); muy frecuente en la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie estructural del matorral semiárido, muy frecuente en la Región de Murcia y en los espartales de la Marina de Cope. Presencia en el parque muy probable; pendiente de confirmación puntual y de ampliar la ficha.",
       "eidosTaxonId": 27376,
       "gbifSpeciesKey": 4127897,
@@ -4630,7 +4784,7 @@
       "seasonality": "Todo el año",
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/11702748/original.jpeg",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "featured": false,
       "source": "Región de Murcia Digital (CARM) - Flora de Cabo Cope y Puntas de Calnegre; Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia; Decreto 50/2003 (BORM), Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia; base científica: Sánchez Gómez et al. 2002, Libro Rojo de la Flora Silvestre Protegida de la Región de Murcia; World Flora Online - Rhamnus lycioides (confirma Rhamnus hispanorum como sinónimo)",
       "taxonomy": {
@@ -4643,7 +4797,8 @@
       },
       "iucnGlobal": "NE (no evaluada a nivel global)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (citada como Rhamnus hispanorum)",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (citada como Rhamnus hispanorum)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7732,
       "gbifSpeciesKey": 8190219,
@@ -4657,7 +4812,12 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (citada como Rhamnus hispanorum)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
       }
     },
     {
@@ -4690,7 +4850,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE; elemento iberoafricano de interés biogeográfico",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); elemento iberoafricano del sureste árido",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); elemento iberoafricano del sureste árido",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: iberoafricanismo característico de suelos áridos del sureste, documentado en la Región de Murcia. Presencia en el parque inferida del hábitat y del carácter iberoafricano de su flora; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 4561,
       "gbifSpeciesKey": 6384851,
@@ -4743,7 +4904,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); común en la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); común en la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie frecuente del hábitat prioritario 6220* documentada en la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 2521,
       "gbifSpeciesKey": 2778437,
@@ -4795,7 +4957,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
-      "murciaStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11340,
       "gbifSpeciesKey": null,
@@ -4828,7 +4991,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 69,
@@ -4860,7 +5024,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No incluida en el LESRPE ni en el Catálogo Español de Especies Amenazadas",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "El IEPNB no registra figura estatal ni regional para esta especie. La categoría regional que figuraba procede del PORN y no se ha podido confirmar en la Ley 7/1995.",
       "eidosTaxonId": 11289,
       "gbifSpeciesKey": 5218887,
@@ -4873,14 +5038,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 67,
@@ -4912,7 +5078,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo IV; Reglamento CITES (CE) 338/97, Anexo A",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "El PORN cita la presencia de la especie en el parque sin detallar su categoría exacta de protección regional; pendiente de confirmar con el Catálogo Regional vigente.",
       "eidosTaxonId": 12214,
       "gbifSpeciesKey": 7964291,
@@ -4925,14 +5092,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2007)"
     },
     {
       "id": 209,
@@ -4952,7 +5120,7 @@
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/611415320/original.jpg",
       "coordinates": null,
       "rarityScore": 4,
-      "featured": false,
+      "featured": true,
       "source": "EIDOS (IEPNB, MITECO) para taxonomía y estado; EEA/BISE (Site_Species_List) para la presencia en la ZEPA ES0000261; IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -4964,7 +5132,8 @@
       },
       "iucnGlobal": "VU (Vulnerable)",
       "spainStatus": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; Ley 42/2007, Anexo IV",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): Vulnerable",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): Vulnerable",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 14053,
       "gbifSpeciesKey": null,
@@ -4997,7 +5166,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2004)"
     },
     {
       "id": 210,
@@ -5029,7 +5199,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
-      "murciaStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 16356,
       "gbifSpeciesKey": null,
@@ -5062,7 +5233,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 68,
@@ -5094,7 +5266,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo V",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "El PORN cita la presencia de la especie en el parque sin detallar su categoría exacta de protección regional; pendiente de confirmar con el Catálogo Regional vigente.",
       "eidosTaxonId": 11350,
       "gbifSpeciesKey": 5219362,
@@ -5107,14 +5280,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 110,
@@ -5146,7 +5320,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); citada como especie característica de este hábitat en el litoral murciano",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); citada como especie característica de este hábitat en el litoral murciano",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Añadida como especie característica del hábitat 2110, documentada en el litoral de la Región de Murcia. Su presencia concreta en el parque se infiere del hábitat cartografiado y queda pendiente de confirmación en campo.",
       "eidosTaxonId": 9567,
       "gbifSpeciesKey": 5289901,
@@ -5198,7 +5373,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE; Directiva Aves 2009/147/CE, Anexo I; Reglamento CITES (CE) 338/97, Anexo A",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11963,
       "gbifSpeciesKey": 2481047,
@@ -5224,14 +5400,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "EN — En peligro (Lista Roja española, 2004)"
     },
     {
       "id": 133,
@@ -5263,7 +5440,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica del litoral rocoso de la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica del litoral rocoso de la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica del hábitat 1240 documentada en el litoral de la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 3828,
       "gbifSpeciesKey": 3632234,
@@ -5315,7 +5493,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); diagnóstica de este hábitat en la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); diagnóstica de este hábitat en la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Añadida como especie diagnóstica del hábitat prioritario 6110*, documentada en la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado, pendiente de confirmación en campo.",
       "eidosTaxonId": 5221,
       "gbifSpeciesKey": 5376179,
@@ -5368,7 +5547,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No catalogada (especie cinegética común)",
-      "murciaStatus": "No catalogada regionalmente",
+      "regionalStatus": "No catalogada regionalmente",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Foto localizada por búsqueda en Commons (no por el elemento de Wikidata del taxón): conviene confirmar que corresponde a esta especie.",
       "eidosTaxonId": 12178,
       "gbifSpeciesKey": 7705930,
@@ -5388,7 +5568,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 168,
@@ -5420,7 +5601,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); propia del sureste árido y la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); propia del sureste árido y la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica de los tomillares del sureste, propia de la Región de Murcia. Presencia en el parque inferida del hábitat; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 4958,
       "gbifSpeciesKey": 7331316,
@@ -5472,7 +5654,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); característica de este hábitat en el litoral murciano",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); característica de este hábitat en el litoral murciano",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Añadida como especie característica del hábitat 2110, documentada en el litoral de la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado, pendiente de confirmación en campo.",
       "eidosTaxonId": 3923,
       "gbifSpeciesKey": 2714938,
@@ -5524,7 +5707,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "El PORN cita la presencia de la especie en el parque sin detallar su categoría exacta de protección regional; pendiente de confirmar con el Catálogo Regional vigente.",
       "eidosTaxonId": 10670,
       "gbifSpeciesKey": 2469763,
@@ -5537,14 +5721,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 85,
@@ -5576,7 +5761,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "El PORN cita la presencia de la especie en el parque sin detallar su categoría exacta de protección regional; pendiente de confirmar con el Catálogo Regional vigente.",
       "eidosTaxonId": 11220,
       "gbifSpeciesKey": 5226733,
@@ -5589,14 +5775,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 5,
@@ -5628,7 +5815,8 @@
       },
       "iucnGlobal": "NT (Casi Amenazado, evaluación de 2009 por declive poblacional en parte de su área)",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11582,
       "gbifSpeciesKey": 2468542,
@@ -5641,14 +5829,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2002)"
     },
     {
       "id": 137,
@@ -5680,7 +5869,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); muy frecuente en la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); muy frecuente en la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie estructural del hábitat prioritario 6220*, frecuente en la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 9931,
       "gbifSpeciesKey": 5676053,
@@ -5733,7 +5923,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); característica de este hábitat en el litoral murciano",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); característica de este hábitat en el litoral murciano",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Añadida como especie característica del hábitat 2110, documentada en el litoral de la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado, pendiente de confirmación en campo.",
       "eidosTaxonId": 4519,
       "gbifSpeciesKey": 3069761,
@@ -5784,7 +5975,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 473,
       "gbifSpeciesKey": 3144842,
@@ -5797,7 +5989,7 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "Sin figura de protección",
@@ -5836,7 +6028,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No catalogada (especie común mediterránea)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): aprovechamiento sujeto a autorización previa",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): aprovechamiento sujeto a autorización previa",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7129,
       "gbifSpeciesKey": 3190583,
@@ -5889,7 +6082,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "La foto está publicada bajo el nombre Mauranthemum decipiens (Pomel) Vogt & Oberpr., que es el mismo taxón: varias floras lo segregan del género Leucanthemum. Es el único nombre bajo el que existen fotografías de campo.",
       "eidosTaxonId": 522,
       "gbifSpeciesKey": 3096523,
@@ -5903,14 +6097,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2010)"
     },
     {
       "id": 116,
@@ -5942,7 +6137,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); característica de este hábitat en el litoral murciano",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); característica de este hábitat en el litoral murciano",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Añadida como especie del cortejo diagnóstico del hábitat 2230, documentada en el litoral de la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado, pendiente de confirmación en campo.",
       "eidosTaxonId": 6018,
       "gbifSpeciesKey": 3808260,
@@ -5967,7 +6163,7 @@
     {
       "id": 163,
       "commonName": "Manrubio negro",
-      "scientificName": "Ballota hirsuta",
+      "scientificName": "Pseudodictamnus hirsutus",
       "kingdom": "flora",
       "group": "Mata aromática",
       "habitat": "Ribazos, taludes y matorral nitrificado en clima seco",
@@ -5990,11 +6186,12 @@
         "class": "Magnoliopsida",
         "order": "Lamiales",
         "family": "Lamiaceae",
-        "genus": "Ballota"
+        "genus": "Pseudodictamnus"
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica del matorral semiárido, frecuente en la Región de Murcia. Presencia en el parque inferida del hábitat; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 2631,
       "gbifSpeciesKey": 7306605,
@@ -6046,7 +6243,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); diagnóstica de este hábitat en el litoral murciano",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); diagnóstica de este hábitat en el litoral murciano",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Añadida como especie diagnóstica del hábitat 2230, documentada en el litoral de la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado, pendiente de confirmación en campo.",
       "eidosTaxonId": 6216,
       "gbifSpeciesKey": 5377766,
@@ -6098,10 +6296,11 @@
       },
       "iucnGlobal": "NE (no evaluada a nivel global)",
       "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 9925,
-      "gbifSpeciesKey": 5385231,
+      "gbifSpeciesKey": 5385225,
       "zepaSiteCode": null,
       "habitatIds": [
         "acantilados",
@@ -6150,7 +6349,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); extendida por la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); extendida por la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Añadida como especie característica del hábitat 3250, extendida por la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado, pendiente de confirmación en campo.",
       "eidosTaxonId": 9901,
       "gbifSpeciesKey": 3105533,
@@ -6202,7 +6402,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica de matorral y roquedos, frecuente en la Región de Murcia. Presencia en el parque inferida del hábitat; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 9655,
       "gbifSpeciesKey": 3150065,
@@ -6255,7 +6456,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica de los roquedos calcáreos, frecuente en la Región de Murcia. Presencia en el parque inferida del hábitat; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 10206,
       "gbifSpeciesKey": 4119222,
@@ -6307,7 +6509,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); muy común en la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); muy común en la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Añadida como especie pionera característica del hábitat 3250, muy común en la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado, pendiente de confirmación en campo.",
       "eidosTaxonId": 9558,
       "gbifSpeciesKey": 3101184,
@@ -6346,8 +6549,8 @@
       "seasonality": "Floración primaveral",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lafuentea_rotundifolia80857.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 4,
-      "featured": false,
+      "rarityScore": 1,
+      "featured": true,
       "source": "Documento previo del PORN de Calnegre y Cabo Cope (CARM, Consejería de Agua, Agricultura, Ganadería, Pesca y Medio Ambiente, 2021) - Catálogo Regional de Flora Silvestre Protegida",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6359,7 +6562,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Especie añadida a partir del PORN; falta contrastar su distribución exacta dentro del parque y su presencia en la Lista Roja de la Flora Vascular Española 2008.",
       "eidosTaxonId": 5616,
       "gbifSpeciesKey": 3739515,
@@ -6372,9 +6576,13 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "descriptionSource": null
     },
     {
@@ -6407,7 +6615,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de este hábitat en la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de este hábitat en la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica del hábitat 1430 documentada en la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 2712,
       "gbifSpeciesKey": 3083718,
@@ -6459,7 +6668,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE; elemento iberoafricano de interés biogeográfico",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); elemento iberoafricano característico del sureste árido",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); elemento iberoafricano característico del sureste árido",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: iberoafricanismo característico de los matorrales térmicos del sureste, documentado en la Región de Murcia. Presencia en el parque inferida del hábitat y del carácter iberoafricano de su flora; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 9438,
       "gbifSpeciesKey": 3801152,
@@ -6486,7 +6696,7 @@
     {
       "id": 127,
       "commonName": "Orzaga marina",
-      "scientificName": "Halimione portulacoides",
+      "scientificName": "Atriplex portulacoides",
       "kingdom": "flora",
       "group": "Mata",
       "habitat": "Saladares y marismas, en la franja que la marea o la escorrentía encharca",
@@ -6509,11 +6719,12 @@
         "class": "Magnoliopsida",
         "order": "Caryophyllales",
         "family": "Amaranthaceae",
-        "genus": "Halimione"
+        "genus": "Atriplex"
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de los saladares de la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de los saladares de la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica del hábitat 1420 documentada en los saladares de la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 5035,
       "gbifSpeciesKey": 3756031,
@@ -6552,7 +6763,7 @@
       "seasonality": "Todo el año",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chamaerops_humilis_Torreblanca.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 1,
       "featured": false,
       "source": "Anexo I del proyecto de PORN del Parque Regional costero-litoral de Cabo Cope (ANSE / CARM) - Catálogo de Flora Silvestre Protegida (Decreto 50/2003); IEPNB, Lista Patrón de las especies silvestres presentes en España (Resolución de 3 de diciembre de 2020), consultada 2026-07-25",
       "taxonomy": {
@@ -6565,7 +6776,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Especie añadida desde el Catálogo de Flora Silvestre Protegida del Anexo I del PORN; el hábitat se apoya en la asociación fitosociológica citada por las fuentes oficiales del parque. Coordenadas representativas, pendientes de precisar en campo.",
       "eidosTaxonId": 3518,
       "gbifSpeciesKey": 2736625,
@@ -6579,9 +6791,13 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "descriptionSource": null
     },
     {
@@ -6614,7 +6830,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "murciaStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12250,
       "gbifSpeciesKey": null,
@@ -6647,7 +6864,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 38,
@@ -6679,7 +6897,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No catalogada (especie forestal común)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): aprovechamiento sujeto a autorización previa",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): aprovechamiento sujeto a autorización previa",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7118,
       "gbifSpeciesKey": 5285604,
@@ -6732,10 +6951,11 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 con este nombre",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): aprovechamiento sujeto a autorización previa",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): aprovechamiento sujeto a autorización previa",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8332,
-      "gbifSpeciesKey": 2926685,
+      "gbifSpeciesKey": 8139235,
       "zepaSiteCode": null,
       "habitatIds": [
         "matorral-semiarido"
@@ -6783,7 +7003,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica del matorral semiárido, frecuente en la Región de Murcia. Presencia en el parque inferida del hábitat; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 3610,
       "gbifSpeciesKey": 7331346,
@@ -6835,7 +7056,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); muy común en la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); muy común en la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica del matorral semiárido, muy común en la Región de Murcia. Presencia en el parque inferida del hábitat; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 7647,
       "gbifSpeciesKey": 10902460,
@@ -6887,7 +7109,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de las playas de la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de las playas de la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica del hábitat 1210 documentada en las playas de la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 2937,
       "gbifSpeciesKey": 3048831,
@@ -6939,7 +7162,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida; población de Cabo Cope señalada por su interés biogeográfico (aislada del resto de su área)",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida; población de Cabo Cope señalada por su interés biogeográfico (aislada del resto de su área)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5509,
       "gbifSpeciesKey": 2684640,
@@ -6993,7 +7217,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE; Directiva Hábitats 92/43/CEE, Anexo IV",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 24327,
       "gbifSpeciesKey": 2422507,
@@ -7006,14 +7231,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 119,
@@ -7045,7 +7271,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); característica de roquedos y prados calcáreos de la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); característica de roquedos y prados calcáreos de la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Añadida como especie del cortejo característico del hábitat prioritario 6110*, documentada en la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado, pendiente de confirmación en campo.",
       "eidosTaxonId": 8203,
       "gbifSpeciesKey": 7172720,
@@ -7085,8 +7312,8 @@
       "seasonality": "Primavera",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Senecio_flavus_1.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 4,
-      "featured": false,
+      "rarityScore": 1,
+      "featured": true,
       "source": "Documento previo del PORN de Calnegre y Cabo Cope (CARM, Consejería de Agua, Agricultura, Ganadería, Pesca y Medio Ambiente, 2021) - Catálogo Regional de Flora Silvestre Protegida",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -7098,7 +7325,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Sin hábitat, ubicación ni nombre común documentados en el PORN; falta confirmar en campo su localización exacta dentro del parque.",
       "eidosTaxonId": 687,
       "gbifSpeciesKey": 3107479,
@@ -7111,10 +7339,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "rarityBasis": null,
-      "descriptionSource": null
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "descriptionSource": null,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2010)"
     },
     {
       "id": 106,
@@ -7133,7 +7366,7 @@
       "seasonality": "Verano y otoño",
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/411165247/original.jpeg",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 1,
       "featured": false,
       "source": "Anexo I del proyecto de PORN del Parque Regional costero-litoral de Cabo Cope (ANSE / CARM) - Catálogo de Flora Silvestre Protegida (Decreto 50/2003)",
       "taxonomy": {
@@ -7146,7 +7379,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "La foto está publicada como Klasea flavescens subsp. mucronata, la combinación que usan iNaturalist y parte de las floras para este taxón; GBIF y el IEPNB lo mantienen como Serratula mucronata Desf.",
       "eidosTaxonId": 5538,
       "gbifSpeciesKey": 5692462,
@@ -7159,7 +7393,12 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
+      },
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
       }
     },
     {
@@ -7179,7 +7418,7 @@
       "seasonality": "Verano",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_cossonianum.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 3,
+      "rarityScore": 1,
       "featured": false,
       "source": "Anexo I del proyecto de PORN del Parque Regional costero-litoral de Cabo Cope (ANSE / CARM) - Catálogo de Flora Silvestre Protegida (Decreto 50/2003)",
       "taxonomy": {
@@ -7192,7 +7431,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (Anexo II: aprovechamiento sujeto a autorización)",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (Anexo II: aprovechamiento sujeto a autorización)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Especie añadida desde el Catálogo de Flora Silvestre Protegida del Anexo I del PORN; el hábitat se apoya en la asociación fitosociológica citada por las fuentes oficiales del parque. Coordenadas representativas, pendientes de precisar en campo.",
       "eidosTaxonId": 5761,
       "gbifSpeciesKey": 7297983,
@@ -7206,9 +7446,13 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (Anexo II: aprovechamiento sujeto a autorización)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "descriptionSource": null
     },
     {
@@ -7241,7 +7485,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de este hábitat en la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de este hábitat en la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica del hábitat prioritario 1510* documentada en los saladares de la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 5764,
       "gbifSpeciesKey": 7298216,
@@ -7280,7 +7525,7 @@
       "seasonality": "Final de primavera y verano",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_insigne.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 1,
       "featured": false,
       "source": "Alcaraz Ariza, F.J. 'La Marina de Cope: ¿los últimos días de un paraíso botánico?', Eubacteria nº5, Universidad de Murcia",
       "taxonomy": {
@@ -7293,7 +7538,8 @@
       },
       "iucnGlobal": "NE (no evaluada a nivel global; género con numerosos microendemismos ibéricos)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial; aprovechamiento sujeto a autorización previa",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial; aprovechamiento sujeto a autorización previa",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "El género Limonium tiene una taxonomía muy compleja con numerosos microendemismos; confirmar la identificación exacta de la población de Cabo Cope frente a especies afines (L. lobatum, L. cossonianum).",
       "eidosTaxonId": 5836,
       "gbifSpeciesKey": 4088635,
@@ -7308,15 +7554,19 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "descriptionSource": null
     },
     {
       "id": 130,
       "commonName": "Sisallo",
-      "scientificName": "Salsola vermiculata",
+      "scientificName": "Caroxylon vermiculatum",
       "kingdom": "flora",
       "group": "Mata",
       "habitat": "Suelos salinos y nitrificados, ramblas, majadas y bordes de camino",
@@ -7339,14 +7589,15 @@
         "class": "Magnoliopsida",
         "order": "Caryophyllales",
         "family": "Amaranthaceae",
-        "genus": "Salsola"
+        "genus": "Caroxylon"
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de este hábitat en la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de este hábitat en la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica del hábitat 1430 documentada en la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 1341,
-      "gbifSpeciesKey": 3064,
+      "gbifSpeciesKey": 3083954,
       "zepaSiteCode": null,
       "habitatIds": [
         "matorral-halonitrofilo"
@@ -7367,7 +7618,7 @@
     {
       "id": 125,
       "commonName": "Sosa alacranera",
-      "scientificName": "Arthrocnemum macrostachyum",
+      "scientificName": "Arthrocaulon macrostachyum",
       "kingdom": "flora",
       "group": "Planta suculenta",
       "habitat": "Saladares y marismas con encharcamiento salino prolongado",
@@ -7390,11 +7641,12 @@
         "class": "Magnoliopsida",
         "order": "Caryophyllales",
         "family": "Amaranthaceae",
-        "genus": "Arthrocnemum"
+        "genus": "Arthrocaulon"
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de los saladares de la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de los saladares de la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica del hábitat 1420 documentada en los saladares de la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 33034,
       "gbifSpeciesKey": 9417609,
@@ -7446,7 +7698,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de los saladares de la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de los saladares de la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica de los hábitats 1420/1430 documentada en los saladares de la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 8507,
       "gbifSpeciesKey": 6035538,
@@ -7499,7 +7752,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de los saladares de la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de los saladares de la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica del hábitat 1420 documentada en los saladares de la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 33125,
       "gbifSpeciesKey": 3083613,
@@ -7551,7 +7805,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)",
-      "murciaStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 16387,
       "gbifSpeciesKey": null,
@@ -7616,7 +7871,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (citado como Tamarix sp. pl.)",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (citado como Tamarix sp. pl.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8547,
       "gbifSpeciesKey": 2874702,
@@ -7630,7 +7886,7 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (citado como Tamarix sp. pl.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "Sin figura de protección",
@@ -7669,7 +7925,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No incluida en el LESRPE ni en el Catálogo Español de Especies Amenazadas",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "eidosTaxonId": 11709,
       "gbifSpeciesKey": 2433875,
       "zepaSiteCode": null,
@@ -7681,14 +7938,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 72,
@@ -7720,7 +7978,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
-      "murciaStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "El PORN cita la presencia de la especie en el parque sin detallar su categoría exacta de protección regional; pendiente de confirmar con el Catálogo Regional vigente.",
       "eidosTaxonId": 10734,
       "gbifSpeciesKey": 2490681,
@@ -7746,14 +8005,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2004)"
     },
     {
       "id": 33,
@@ -7785,7 +8045,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8800,
       "gbifSpeciesKey": 3896744,
@@ -7798,7 +8059,7 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "Sin figura de protección",
@@ -7837,7 +8098,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): aprovechamiento sujeto a autorización previa",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): aprovechamiento sujeto a autorización previa",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Existe una subespecie (millefloris) con presencia confirmada en la Lista Roja nacional; verificar a qué subespecie/población corresponden los ejemplares de Cabo Cope.",
       "eidosTaxonId": 8914,
       "gbifSpeciesKey": 7307272,
@@ -7852,7 +8114,11 @@
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "descriptionSource": null
     },
     {
@@ -7885,7 +8151,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "murciaStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12326,
       "gbifSpeciesKey": null,
@@ -7918,7 +8185,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "DD — Datos insuficientes (Lista Roja española, 2004)"
     },
     {
       "id": 216,
@@ -7950,7 +8218,8 @@
       },
       "iucnGlobal": "VU (Vulnerable)",
       "spainStatus": "No incluida en el LESRPE; Directiva Aves 2009/147/CE, Anexo II (especie cinegética); Reglamento CITES, Anexo A",
-      "murciaStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12356,
       "gbifSpeciesKey": null,
@@ -7983,7 +8252,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2004)"
     },
     {
       "id": 220,
@@ -8015,7 +8285,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
-      "murciaStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11796,
       "gbifSpeciesKey": null,
@@ -8048,12 +8319,13 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 117,
       "commonName": "Uña de gato",
-      "scientificName": "Sedum sediforme",
+      "scientificName": "Petrosedum sediforme",
       "kingdom": "flora",
       "group": "Planta suculenta",
       "habitat": "Prados calcáreos del Alysso-Sedion albi",
@@ -8076,13 +8348,14 @@
         "class": "Magnoliopsida",
         "order": "Saxifragales",
         "family": "Crassulaceae",
-        "genus": "Sedum"
+        "genus": "Petrosedum"
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); característica de este hábitat, extendida por la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); característica de este hábitat, extendida por la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Añadida como especie característica del hábitat prioritario 6110*, extendida por la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado, pendiente de confirmación en campo.",
-      "eidosTaxonId": 95304,
+      "eidosTaxonId": 8225,
       "gbifSpeciesKey": 4201784,
       "zepaSiteCode": null,
       "habitatIds": [
@@ -8133,7 +8406,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); característica de este hábitat en la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia (Decreto 50/2003); característica de este hábitat en la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Añadida como especie característica del hábitat prioritario 6110*, documentada en la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado, pendiente de confirmación en campo.",
       "eidosTaxonId": 8190,
       "gbifSpeciesKey": 5362008,
@@ -8185,7 +8459,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica de los tomillares del matorral semiárido, frecuente en la Región de Murcia. Presencia en el parque inferida del hábitat; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 8784,
       "gbifSpeciesKey": 7308670,
@@ -8237,7 +8512,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "murciaStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12121,
       "gbifSpeciesKey": null,
@@ -8270,7 +8546,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 105,
@@ -8289,7 +8566,7 @@
       "seasonality": "Primavera",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Orella_de_ratol%C3%AD_(Sarcocapnos_saetabensis)_al_castell_de_X%C3%A0tiva.jpg?width=1280",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 1,
       "featured": false,
       "source": "Anexo I del proyecto de PORN del Parque Regional costero-litoral de Cabo Cope (ANSE / CARM) - Catálogo de Flora Silvestre Protegida (Decreto 50/2003)",
       "taxonomy": {
@@ -8302,7 +8579,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Especie añadida desde el Catálogo de Flora Silvestre Protegida del Anexo I del PORN; el hábitat se apoya en la asociación fitosociológica citada por las fuentes oficiales del parque. Coordenadas representativas, pendientes de precisar en campo.",
       "eidosTaxonId": 31994,
       "gbifSpeciesKey": 3601775,
@@ -8315,9 +8593,13 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "descriptionSource": null
     },
     {
@@ -8350,7 +8632,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en la Región",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en la Región",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Ficha básica: especie característica del hábitat prioritario 6220* documentada en la Región de Murcia. Presencia en el parque inferida del hábitat cartografiado; pendiente de confirmación en campo y de ampliar la ficha.",
       "eidosTaxonId": 7145,
       "gbifSpeciesKey": 8424834,
@@ -8402,7 +8685,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No catalogada (especie cinegética común)",
-      "murciaStatus": "No catalogada regionalmente",
+      "regionalStatus": "No catalogada regionalmente",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12419,
       "gbifSpeciesKey": 5219243,
@@ -8422,7 +8706,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 222,
@@ -8454,7 +8739,8 @@
       },
       "iucnGlobal": "LC (amplia distribución circunmediterránea y saharo-arábiga)",
       "spainStatus": "No incluida en el LESRPE (RD 139/2011); propia de saladares prioritarios UE (HIC 1420)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5051,
       "gbifSpeciesKey": 3760350,
@@ -8468,14 +8754,15 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "CR — En peligro crítico (Lista Roja española, 2010)"
     },
     {
       "id": 223,
@@ -8507,7 +8794,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No incluida en el LESRPE; característica de matorrales halófilos (HIC 1420)",
-      "murciaStatus": "No incluida en el Catálogo Regional (Decreto 50/2003); común en saladares de Murcia",
+      "regionalStatus": "No incluida en el Catálogo Regional (Decreto 50/2003); común en saladares de Murcia",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5813,
       "gbifSpeciesKey": 4088889,
@@ -8559,7 +8847,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No incluida en el LESRPE; fijadora de dunas embrionarias (HIC 2110)",
-      "murciaStatus": "No catalogada; frecuente en las dunas del parque",
+      "regionalStatus": "No catalogada; frecuente en las dunas del parque",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10144,
       "gbifSpeciesKey": 4147932,
@@ -8612,7 +8901,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No incluida en el LESRPE; amenazada solo en el límite norte de su área (Cantábrico)",
-      "murciaStatus": "No catalogada; propia de las dunas litorales de Murcia",
+      "regionalStatus": "No catalogada; propia de las dunas litorales de Murcia",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 6277,
       "gbifSpeciesKey": 2965395,
@@ -8665,7 +8955,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No incluida en el LESRPE; característica del Malcolmietalia (HIC 2230)",
-      "murciaStatus": "No catalogada; propia de los céspedes dunares del parque",
+      "regionalStatus": "No catalogada; propia de los céspedes dunares del parque",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Nombre recientemente reclasificado como Marcus-Kochia littorea (backbone GBIF); EIDOS mantiene Malcolmia littorea como aceptado.",
       "eidosTaxonId": 6181,
       "gbifSpeciesKey": 11046740,
@@ -8689,7 +8980,7 @@
     {
       "id": 227,
       "commonName": "Zanahoria de mar",
-      "scientificName": "Pseudorlaya pumila",
+      "scientificName": "Daucus pumilus",
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Dunas con céspedes del Malcomietalia",
@@ -8712,11 +9003,12 @@
         "class": "Magnoliopsida",
         "order": "Apiales",
         "family": "Apiaceae",
-        "genus": "Pseudorlaya"
+        "genus": "Daucus"
       },
       "iucnGlobal": "LC",
       "spainStatus": "No incluida en el LESRPE; anual característica del Malcolmietalia (HIC 2230)",
-      "murciaStatus": "No catalogada; propia de las dunas del parque",
+      "regionalStatus": "No catalogada; propia de las dunas del parque",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Nombre aceptado actual: Daucus pumilus (EIDOS y GBIF tratan Pseudorlaya pumila como sinónimo).",
       "eidosTaxonId": 7405,
       "gbifSpeciesKey": 8241209,
@@ -8769,7 +9061,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No incluida en el LESRPE; anual del Malcolmietalia (HIC 2230)",
-      "murciaStatus": "No catalogada; frecuente en las dunas del parque",
+      "regionalStatus": "No catalogada; frecuente en las dunas del parque",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 9981,
       "gbifSpeciesKey": 7541951,
@@ -8822,7 +9115,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No incluida en el LESRPE; característica de dunas litorales (HIC 2110)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10444,
       "gbifSpeciesKey": 3120356,
@@ -8836,7 +9130,7 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "Sin figura de protección",
@@ -8847,7 +9141,7 @@
     {
       "id": 230,
       "commonName": "Aliaga morisca",
-      "scientificName": "Calicotome intermedia",
+      "scientificName": "Cytisus intermedius",
       "kingdom": "flora",
       "group": "Arbusto",
       "habitat": "Matorrales arborescentes de Ziziphus",
@@ -8870,11 +9164,12 @@
         "class": "Magnoliopsida",
         "order": "Fabales",
         "family": "Fabaceae",
-        "genus": "Calicotome"
+        "genus": "Cytisus"
       },
       "iucnGlobal": "LC",
       "spainStatus": "No incluida en el LESRPE; acompañante de matorrales de Ziziphus (HIC 5220*, prioritario)",
-      "murciaStatus": "No catalogada; propia del matorral termófilo del sureste",
+      "regionalStatus": "No catalogada; propia del matorral termófilo del sureste",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "EIDOS trata Calicotome intermedia como sinónimo; GBIF la acepta a nivel de especie.",
       "eidosTaxonId": 2950,
       "gbifSpeciesKey": 10768891,
@@ -8927,7 +9222,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "No incluida en el LESRPE; endemismo ibérico del sureste árido",
-      "murciaStatus": "No catalogada; endemismo característico de los matorrales halonitrófilos de Murcia",
+      "regionalStatus": "No catalogada; endemismo característico de los matorrales halonitrófilos de Murcia",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "GBIF la sitúa en Caroxylon (Caroxylon genistoides); EIDOS mantiene Salsola genistoides.",
       "eidosTaxonId": 7911,
       "gbifSpeciesKey": 3759567,
@@ -8979,7 +9275,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "No incluida en el LESRPE; característica de matorrales halonitrófilos (HIC 1430)",
-      "murciaStatus": "No catalogada; muy común en ambientes ruderalizados del sureste",
+      "regionalStatus": "No catalogada; muy común en ambientes ruderalizados del sureste",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 9913,
       "gbifSpeciesKey": 3120786,
@@ -9031,7 +9328,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No incluida en el LESRPE; característica de matorrales halonitrófilos (HIC 1430)",
-      "murciaStatus": "No catalogada; frecuente en suelos salino-nitrificados de Murcia",
+      "regionalStatus": "No catalogada; frecuente en suelos salino-nitrificados de Murcia",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 2639,
       "gbifSpeciesKey": 7501008,
@@ -9084,7 +9382,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "No incluida en el LESRPE; característica de matorrales halonitrófilos (HIC 1430)",
-      "murciaStatus": "No catalogada; propia de suelos yesoso-salinos del sureste árido",
+      "regionalStatus": "No catalogada; propia de suelos yesoso-salinos del sureste árido",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Circunscripción discutida: GBIF lo agrupa bajo Haloxylon; EIDOS mantiene Hammada articulata (taxonid 5057).",
       "eidosTaxonId": 5057,
       "gbifSpeciesKey": 3758958,
@@ -9136,7 +9435,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No incluida en el LESRPE; característica de prados del Alysso-Sedion (HIC 6110*, prioritario)",
-      "murciaStatus": "No catalogada; propia de repisas y suelos esqueléticos calcáreos",
+      "regionalStatus": "No catalogada; propia de repisas y suelos esqueléticos calcáreos",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8188,
       "gbifSpeciesKey": 5362007,
@@ -9189,7 +9489,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No incluida en el LESRPE; formador de galerías termomediterráneas (HIC 92D0)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8548,
       "gbifSpeciesKey": 3612910,
@@ -9203,7 +9504,7 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "Sin figura de protección",
@@ -9242,7 +9543,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No incluida en el LESRPE; formador de galerías termomediterráneas (HIC 92D0)",
-      "murciaStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8549,
       "gbifSpeciesKey": 2874701,
@@ -9255,7 +9557,7 @@
       "rarityLocalBasis": {
         "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "Sin figura de protección",
@@ -9294,7 +9596,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No incluida en el LESRPE; acompañante de sabinares y matorrales termófilos (HIC 5210)",
-      "murciaStatus": "No catalogada; frecuente en el matorral termomediterráneo del sureste",
+      "regionalStatus": "No catalogada; frecuente en el matorral termomediterráneo del sureste",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 33035,
       "gbifSpeciesKey": 2768695,
@@ -9347,7 +9650,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No incluida en el LESRPE; helófito de cauces y ramblas (HIC 3250)",
-      "murciaStatus": "No catalogada; muy común en cauces y encharcamientos del parque",
+      "regionalStatus": "No catalogada; muy común en cauces y encharcamientos del parque",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 9651,
       "gbifSpeciesKey": 5290149,
@@ -9400,7 +9704,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (RD 139/2011)",
-      "murciaStatus": "Fauna protegida; gecko común en roquedos y muros",
+      "regionalStatus": "Fauna protegida; gecko común en roquedos y muros",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11692,
       "gbifSpeciesKey": 2445034,
@@ -9421,7 +9726,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 246,
@@ -9453,7 +9759,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (RD 139/2011)",
-      "murciaStatus": "Fauna protegida; gecko de roquedos y edificaciones",
+      "regionalStatus": "Fauna protegida; gecko de roquedos y edificaciones",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12351,
       "gbifSpeciesKey": 5221528,
@@ -9473,7 +9780,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 247,
@@ -9493,7 +9801,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hemorrhois_hippocrepis_121004.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO) — especie característica del HIC 5330; Inventario Español EIDOS (IEPNB, taxonid 11448); GBIF (speciesKey 2459023); Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE, RD 139/2011). Directiva Hábitats 92/43/CEE (Anexo IV).",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -9505,7 +9813,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV",
-      "murciaStatus": "Fauna protegida; ofidio termófilo del matorral y roquedos",
+      "regionalStatus": "Fauna protegida; ofidio termófilo del matorral y roquedos",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11448,
       "gbifSpeciesKey": 2459023,
@@ -9526,7 +9835,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 248,
@@ -9546,7 +9856,7 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Oryctolagus_cuniculus_Tasmania_2.jpg?width=1280",
       "coordinates": null,
       "rarityScore": 1,
-      "featured": true,
+      "featured": false,
       "source": "Atlas y Manual de los Hábitats de España (MITECO) — especie característica del HIC 5330; Inventario Español EIDOS (IEPNB, taxonid 11109); GBIF (speciesKey 2436940); Presa clave del ecosistema mediterráneo (base trófica de rapaces amenazadas).",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -9558,7 +9868,8 @@
       },
       "iucnGlobal": "EN (Lista Roja mundial UICN 2019: En Peligro por declive en su área nativa)",
       "spainStatus": "No incluida en el LESRPE; especie cinegética y presa clave del ecosistema mediterráneo",
-      "murciaStatus": "Especie cinegética; pieza clave en la dieta de rapaces y carnívoros del parque",
+      "regionalStatus": "Especie cinegética; pieza clave en la dieta de rapaces y carnívoros del parque",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11109,
       "gbifSpeciesKey": 2436940,
@@ -9579,7 +9890,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2007)"
     },
     {
       "id": 249,
@@ -9611,7 +9923,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV",
-      "murciaStatus": "Fauna protegida; insectívoro del matorral termófilo del sureste",
+      "regionalStatus": "Fauna protegida; insectívoro del matorral termófilo del sureste",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10669,
       "gbifSpeciesKey": 2437136,
@@ -9632,7 +9945,8 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 250,
@@ -9664,7 +9978,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección: no aparece en el Catálogo Español de Especies Amenazadas ni en el Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE). Comprobado en EIDOS (IEPNB), que no le registra ningún estado legal vigente.",
-      "murciaStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003) ni en el Listado de Especies Silvestres en Régimen de Protección Especial",
+      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003) ni en el Listado de Especies Silvestres en Régimen de Protección Especial",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 3607,
       "gbifSpeciesKey": 7332229,

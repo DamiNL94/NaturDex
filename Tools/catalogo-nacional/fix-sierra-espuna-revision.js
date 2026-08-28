@@ -11,7 +11,7 @@
  *          cuando ese catálogo las incluye con «Ámbito de aplicación: Canarias»;
  *        · normas de OTRAS comunidades autónomas (Castilla-La Mancha, Cataluña…) en un campo que
  *          describe el estado legal en España. El estado autonómico tiene su propio campo,
- *          murciaStatus, y ése no se toca.
+ *          regionalStatus, y ése no se toca.
  *   2. featured — 175 de 190 especies estaban destacadas, que es no destacar ninguna. Se deja en las
  *      de rarityScore >= 4, el mismo orden de magnitud que Cabo Cope (15) y Cuatro Calas (8).
  *   3. Las dos especies exóticas (arruí y tabaco moruno) salen del catálogo del parque y pasan al

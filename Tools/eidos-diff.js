@@ -10,7 +10,7 @@
  *
  * Qué hace:
  *   1) Lee las especies de la BD VIVA del contenedor Docker (scientific_name + los 3 campos de
- *      estado que hoy son texto libre: iucn_global, spain_status, murcia_status).
+ *      estado que hoy son texto libre: iucn_global, spain_status, regional_status).
  *   2) Por cada especie consulta EIDOS: v_taxonomia (para resolver el idtaxon del nombre aceptado),
  *      v_estadoconservacion (UICN por ámbito y año) y v_estadolegal (normas por ámbito/CCAA).
  *   3) Deriva el valor "vigente y más reciente" de cada eje y lo contrasta con lo que hay en la BD.
@@ -55,7 +55,7 @@ const IUCN_CODES = ['CR', 'EN', 'VU', 'NT', 'LC', 'DD', 'NE', 'RE', 'EW', 'EX'];
 function loadSpecies() {
   const rows = db.queryJson(
     "'sci', scientific_name, 'common', common_name, 'kingdom', kingdom, " +
-    "'iucn', iucn_global, 'spain', spain_status, 'murcia', murcia_status",
+    "'iucn', iucn_global, 'spain', spain_status, 'regional', regional_status",
     'FROM species ORDER BY kingdom, scientific_name',
   );
   // Dedup por nombre científico (una especie puede estar en varios parques).
@@ -78,7 +78,9 @@ const resolveTaxon = (sci) => eidos.resolveTaxon(sci);
 const conservationByScope = (idtaxon) => eidos.conservationByScope(idtaxon);
 const legalStatus = async (idtaxon) => {
   const { nacional, autonomico } = await eidos.legalStatus(idtaxon, CCAA);
-  return { nacional, murcia: autonomico };
+  // La clave se llamaba `murcia`, atada al piloto igual que el campo de la ficha (deuda nº 2). La
+  // comunidad la elige `--ccaa`, así que el nombre de la clave no puede ser el de una de ellas.
+  return { nacional, autonomico };
 };
 
 // --- Comparación --------------------------------------------------------------------------------
@@ -137,7 +139,7 @@ async function main() {
       line.mundialDiff = mundial && seedMundial && mundial.code !== seedMundial;
       if (line.mundialDiff) stats.uicnMundialDiff++;
 
-      line.eidos = { mundial, espana, peninsula, murcia: legal.murcia, nacional: legal.nacional };
+      line.eidos = { mundial, espana, peninsula, autonomico: legal.autonomico, nacional: legal.nacional };
       report.push(line);
     } catch (e) {
       line.estado = 'ERROR: ' + e.message;
@@ -180,10 +182,10 @@ function renderReport(report, stats, total) {
     const e = r.eidos;
     const seedM = iucnCodeIn(r.sp.iucn) || '?';
     const mundial = `${seedM} → ${fmtScope(e.mundial)}${r.mundialDiff ? ' ⚠️' : ''}`;
-    const murcia = e.murcia.length ? e.murcia.map(m => m.estadolegal).join('; ') : '—';
-    L.push(`| ${name} | ok | ${mundial} | ${fmtScope(e.espana)} | ${fmtScope(e.peninsula)} | ${murcia} |`);
+    const autonomico = e.autonomico.length ? e.autonomico.map(m => m.estadolegal).join('; ') : '—';
+    L.push(`| ${name} | ok | ${mundial} | ${fmtScope(e.espana)} | ${fmtScope(e.peninsula)} | ${autonomico} |`);
   }
-  L.push('\n> Nota: "BD→EIDOS" compara solo el código UICN; los campos `spain_status`/`murcia_status`');
+  L.push('\n> Nota: "BD→EIDOS" compara solo el código UICN; los campos `spain_status`/`regional_status`');
   L.push('> de la BD son texto libre y deben revisarse a mano frente a las columnas de EIDOS.');
   return L.join('\n');
 }

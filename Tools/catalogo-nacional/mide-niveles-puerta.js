@@ -24,7 +24,7 @@
  *        binomio + nombre aceptado en EIDOS del nombre DE LA FUENTE (leído de la caché
  *        `out/<slug>-eidos-respaldo-cache.json`, sin salir a la red) + tabla de equivalencias.
  *   N2 · FIGURA LEGAL O ATLAS — el texto ya escrito de la ficha declara una figura de protección
- *        (`lib/rareza`, tramo > 1 en `spainStatus` o `murciaStatus`), o la especie es
+ *        (`lib/rareza`, tramo > 1 en `spainStatus` o `regionalStatus`), o la especie es
  *        característica de algún HIC del espacio según el Atlas (`lib/atlas`, cruce por binomio).
  *   N3 · SOLO GBIF — nada de lo anterior.
  *
@@ -139,7 +139,7 @@ for (const p of parkFiles()) {
     if (respaldo.busca(idx.mapa, { scientificName: s.scientificName, eidosTaxonId: s.eidosTaxonId })) {
       nivel = 1;
     } else {
-      const legal = tramoDeTexto(s.spainStatus).tramo > 1 || tramoDeTexto(s.murciaStatus).tramo > 1;
+      const legal = tramoDeTexto(s.spainStatus).tramo > 1 || tramoDeTexto(s.regionalStatus).tramo > 1;
       const carac = atlasBin.has(binomio(s.scientificName));
       if (carac) conAtlas.push(s.scientificName);
       nivel = (legal || carac) ? 2 : 3;

@@ -6,6 +6,10 @@
   "scripts": {
     "validate": "node Tools/validate-park-data.js",
     "taxones:duplicados": "node Tools/scan-taxones-duplicados.js",
+    "taxones:identificadores": "node Tools/catalogo-nacional/fix-identificadores-incoherentes.js",
+    "especies:regional": "node Tools/catalogo-nacional/migra-estado-regional.js",
+    "ida-y-vuelta": "node Tools/catalogo-nacional/coteja-ida-y-vuelta.js",
+    "taxones:recombinaciones": "node Tools/catalogo-nacional/fix-recombinaciones-eidos.js",
     "taxones:nomenclatura": "node Tools/catalogo-nacional/coteja-nomenclatura.js",
     "export:park": "php Tools/export-park.php",
     "export:glossary": "php Tools/export-glossary.php",
@@ -50,6 +54,7 @@
     "species:apply": "node Tools/sync-species-catalog.js --apply --sql Database/species-universal.sql",
     "especies:ocultar": "node Tools/catalogo-nacional/ocultar-sin-descripcion.js",
     "especies:rareza": "node Tools/catalogo-nacional/rareza-legal.js",
+    "especies:listaroja": "node Tools/catalogo-nacional/lista-roja-espana.js",
     "especies:habitats": "node Tools/catalogo-nacional/auditoria-especie-habitat.js",
     "especies:habitats:aplica": "node Tools/catalogo-nacional/auditoria-especie-habitat.js --write",
     "especies:niveles": "node Tools/catalogo-nacional/mide-niveles-puerta.js",

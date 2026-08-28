@@ -42,8 +42,12 @@ export const FIELDS: Record<Resource, FieldDef[]> = {
     { k: 'taxon_family', label: 'Familia (taxonómica)' },
     { k: 'taxon_genus', label: 'Género' },
     { k: 'iucn_global', label: 'UICN (global)' },
-    { k: 'spain_status', label: 'Estado en España', wide: true },
-    { k: 'murcia_status', label: 'Estado en la Región de Murcia', wide: true },
+    // Otra evaluación de la UICN, la de ámbito España. No es el estado LEGAL de abajo.
+    { k: 'iucn_spain', label: 'UICN (España, Lista Roja española)' },
+    { k: 'spain_status', label: 'Estado legal en España', wide: true },
+    // Autonómico. El campo YA NO está atado a Murcia (deuda nº 2): la comunidad se dice al lado.
+    { k: 'regional_status', label: 'Estado legal en la comunidad autónoma', wide: true },
+    { k: 'regional_ccaa', label: 'Comunidad a la que se refiere ese estado' },
     { k: 'source', label: 'Fuente', wide: true },
     { k: 'review_note', label: 'Nota "pendiente de revisión" (vacío = ficha validada)', type: 'textarea', wide: true }
   ],

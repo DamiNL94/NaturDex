@@ -68,7 +68,7 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    generaliza igual: «nadie lo ha mirado» no es «no está amenazada», y publicar de más no se puede
    deshacer. Ver [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md).
 
-## 2. Diecinueve cosas que fallan EN VERDE
+## 2. Veinte cosas que fallan EN VERDE
 
 Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 [`Docs/runbook/ORDEN-DE-OPERACIONES.md`](Docs/runbook/ORDEN-DE-OPERACIONES.md).
@@ -211,6 +211,20 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
   en el `source` de la ficha, en prosa, donde ninguna herramienta podía leerlo. Tapado con
   `migratory` + `sitePresence` (`Tools/lib/fenologia.js`); el criterio vive en un solo sitio porque
   lo usan las dos puntas, el pipeline y `npm run aves:fenologia`.
+- **Una comprobación que da una clase por IRRECUPERABLE, y la frase que lo dice envejece peor que el
+  dato.** `coteja-nomenclatura.js` enumeraba dos `gbifSpeciesKey` de rango familia y género —la 3064
+  es Amaranthaceae, 5.039.294 ocurrencias— con el motivo «ningún espacio la ficha con una key de
+  especie, así que **no hay de dónde copiarla**». Nadie volvió a mirarlas: la herramienta ya había
+  dictaminado. Y era verdad *dentro del catálogo* y falso fuera: GBIF escribe *Sideritis **ibanezii***
+  sin la «y» de EIDOS, y a *Salsola vermiculata* no llegaba porque el backbone tiene **cuatro
+  homónimos** de ese binomio y ante la ambigüedad **sube a la familia** en vez de fallar. Un
+  `HIGHERRANK` significa «no he sabido desambiguar», **no** «ese taxón no está», y la salida es
+  preguntar por el nombre de la OTRA autoridad. Peor todavía: la misma cabecera daba *Anabasis
+  hispanica* por intocable porque «*A. articulata* es otra especie para EIDOS», y EIDOS mete los dos
+  nombres bajo el **mismo taxonid 1838**. Una afirmación falsa en un comentario **no se puede
+  comprobar con `validate`**: se queda ahí sosteniendo una decisión durante meses. Resuelto el
+  2026-08-27 (deuda nº 4). La regla: **la etiqueta de una autoridad dice lo que opina esa autoridad,
+  no si dos autoridades discrepan** — eso hay que ir a preguntárselo a la otra, taxón a taxón.
 
 ---
 

@@ -5,7 +5,6 @@
     "Se corrigen aquí: el nombre común es un campo universal y un nombre mal puesto convierte la",
     "ficha en desinformación."
   ],
-
   "Frankenia corymbosa": {
     "group": "Mata",
     "habitat": "Estepas salinas, saladares y suelos margosos con sal",
@@ -15,17 +14,6 @@
       "Costra blanca de sal cristalizada sobre las hojas",
       "Hojas minúsculas y enrolladas, casi como escamas",
       "Flores rosadas pequeñas agrupadas en el extremo"
-    ]
-  },
-  "Saccharum ravennae": {
-    "group": "Gramínea",
-    "habitat": "Ramblas, cauces y suelos húmedos con capa freática cercana",
-    "seasonality": "Verano y otoño",
-    "description": "Gramínea gigante que levanta cañas de dos y tres metros rematadas por penachos plumosos plateados, muy vistosos al contraluz de finales de verano. Forma matas grandes en cauces y bordes de rambla, donde sujeta el sustrato.",
-    "tips": [
-      "Penachos plumosos plateados en lo alto de cañas altas",
-      "Forma matas grandes y densas, no céspedes",
-      "Hojas largas de borde muy áspero, cortante al pasar la mano"
     ]
   },
   "Hyparrhenia hirta": {
@@ -592,6 +580,17 @@
       "Hojas opuestas soldadas alrededor del tallo",
       "Flores amarillas con muchos estambres en manojos",
       "Siempre junto a fuentes, acequias o rezumes"
+    ]
+  },
+  "Tripidium ravennae": {
+    "group": "Gramínea",
+    "habitat": "Ramblas, cauces y suelos húmedos con capa freática cercana",
+    "seasonality": "Verano y otoño",
+    "description": "Gramínea gigante que levanta cañas de dos y tres metros rematadas por penachos plumosos plateados, muy vistosos al contraluz de finales de verano. Forma matas grandes en cauces y bordes de rambla, donde sujeta el sustrato.",
+    "tips": [
+      "Penachos plumosos plateados en lo alto de cañas altas",
+      "Forma matas grandes y densas, no céspedes",
+      "Hojas largas de borde muy áspero, cortante al pasar la mano"
     ]
   }
 }

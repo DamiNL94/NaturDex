@@ -2,8 +2,8 @@
   "slug": "sierra-de-salinas",
   "name": "Sierra de Salinas",
   "apiSlug": "sierra-de-salinas",
-  "version": 12,
-  "updatedAt": "2026-08-25",
+  "version": 16,
+  "updatedAt": "2026-08-27",
   "data": "Data/parks/murcia/sierra-de-salinas/park.json",
   "geo": {
     "parque": "Data/parks/murcia/sierra-de-salinas/geo/parque.geojson",

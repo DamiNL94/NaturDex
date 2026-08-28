@@ -2,8 +2,8 @@
   "slug": "humedal-del-ajauque-y-rambla-salada",
   "name": "Humedal del Ajauque y Rambla Salada",
   "apiSlug": "humedal-del-ajauque-y-rambla-salada",
-  "version": 10,
-  "updatedAt": "2026-08-25",
+  "version": 16,
+  "updatedAt": "2026-08-27",
   "data": "Data/parks/murcia/humedal-del-ajauque-y-rambla-salada/park.json",
   "geo": {
     "parque": "Data/parks/murcia/humedal-del-ajauque-y-rambla-salada/geo/parque.geojson",

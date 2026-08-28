@@ -1248,7 +1248,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No catalogada (especie cinegética común)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12178,
       "gbifSpeciesKey": 7705930,
@@ -1261,7 +1262,8 @@
         "bosques-endemicos-de-9560"
       ],
       "gbifOccurrences": 146,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 3,
@@ -1306,7 +1308,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No catalogada (especie cinegética común)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12419,
       "gbifSpeciesKey": 5219243,
@@ -1319,7 +1322,8 @@
         "bosques-endemicos-de-9560"
       ],
       "gbifOccurrences": 114,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 2,
@@ -1364,7 +1368,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No catalogada (especie forestal común)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7118,
       "gbifSpeciesKey": 5285604,
@@ -1426,7 +1431,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7647,
       "gbifSpeciesKey": 10902460,
@@ -1488,7 +1494,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 3609,
       "gbifSpeciesKey": 7331435,
@@ -1526,8 +1533,12 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_coccifera_1.JPG?width=1280",
       "imageAttribution": "User:Xemenendura (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "featured": false,
       "source": "GBIF: 37 ocurrencias dentro de los polígonos de hábitat del espacio (9 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -1540,7 +1551,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7478,
       "gbifSpeciesKey": 2879175,
@@ -1557,7 +1569,13 @@
         "vegetacion-gipsicola-iberica-1520"
       ],
       "gbifOccurrences": 37,
-      "visible": true
+      "visible": true,
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      }
     },
     {
       "id": 7,
@@ -1602,7 +1620,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 2186,
       "gbifSpeciesKey": 5352466,
@@ -1648,9 +1667,9 @@
       "rarityLocalBasis": {
         "categoria": "En Peligro de Extinción (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "featured": false,
+      "featured": true,
       "source": "GBIF: 22 ocurrencias dentro de los polígonos de hábitat del espacio (8 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, que la cita como «Juniperus oxycedrus subsp. oxycedrus», con la categoría «De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -1662,7 +1681,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2013)",
       "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo, sobre la comercialización de los materiales forestal…)",
-      "murciaStatus": "En Peligro de Extinción (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "En Peligro de Extinción (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5505,
       "gbifSpeciesKey": 2684451,
@@ -1723,7 +1743,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No catalogada (especie común mediterránea)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7129,
       "gbifSpeciesKey": 3190583,
@@ -1784,7 +1805,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 3610,
       "gbifSpeciesKey": 7331346,
@@ -1845,7 +1867,8 @@
       },
       "iucnGlobal": "EN (Lista Roja mundial UICN 2019: En Peligro por declive en su área nativa)",
       "spainStatus": "No incluida en el LESRPE; especie cinegética y presa clave del ecosistema mediterráneo",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11109,
       "gbifSpeciesKey": 2436940,
@@ -1857,7 +1880,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 14,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2007)"
     },
     {
       "id": 12,
@@ -1898,7 +1922,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 3629,
       "gbifSpeciesKey": 2874027,
@@ -1938,9 +1963,9 @@
       "rarityLocalBasis": {
         "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "featured": true,
+      "featured": false,
       "source": "GBIF: 12 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -1952,7 +1977,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 3497,
       "gbifSpeciesKey": 2956457,
@@ -2006,7 +2032,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10027,
       "gbifSpeciesKey": 4126879,
@@ -2051,9 +2078,9 @@
       "rarityLocalBasis": {
         "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "featured": true,
+      "featured": false,
       "source": "GBIF: 11 ocurrencias dentro de los polígonos de hábitat del espacio (7 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, que la cita como «Juniperus phoenicea subsp. phoenicea», con la categoría «De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -2065,7 +2092,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5509,
       "gbifSpeciesKey": 2684640,
@@ -2121,7 +2149,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 2334,
       "gbifSpeciesKey": 6363863,
@@ -2174,7 +2203,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 4971,
       "gbifSpeciesKey": 7331381,
@@ -2230,7 +2260,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 6554,
       "gbifSpeciesKey": 7309064,
@@ -2288,7 +2319,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 6687,
       "gbifSpeciesKey": 2977293,
@@ -2344,7 +2376,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 9931,
       "gbifSpeciesKey": 5676053,
@@ -2396,7 +2429,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 213,
       "gbifSpeciesKey": 2705308,
@@ -2449,7 +2483,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 2520,
       "gbifSpeciesKey": 4931269,
@@ -2503,7 +2538,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 3094,
       "gbifSpeciesKey": 2723055,
@@ -2560,7 +2596,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5037,
       "gbifSpeciesKey": 7331286,
@@ -2614,7 +2651,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 352,
       "gbifSpeciesKey": 3131494,
@@ -2660,7 +2698,7 @@
       "rarityLocalBasis": {
         "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 8 ocurrencias dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2674,7 +2712,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
       "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7379,
       "gbifSpeciesKey": 2881550,
@@ -2728,7 +2767,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7730,
       "gbifSpeciesKey": 6371380,
@@ -2745,7 +2785,7 @@
     {
       "id": 250,
       "commonName": "Uña de gato",
-      "scientificName": "Sedum sediforme",
+      "scientificName": "Petrosedum sediforme",
       "kingdom": "flora",
       "group": "Planta suculenta",
       "habitat": "Prados calcáreos del Alysso-Sedion albi",
@@ -2781,11 +2821,12 @@
         "class": "Magnoliopsida",
         "order": "Saxifragales",
         "family": "Crassulaceae",
-        "genus": "Sedum"
+        "genus": "Petrosedum"
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": null,
       "gbifSpeciesKey": 4201784,
@@ -2828,9 +2869,9 @@
       "rarityLocalBasis": {
         "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "featured": true,
+      "featured": false,
       "source": "GBIF: 7 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -2842,7 +2883,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No incluida en el LESRPE ni en el Catálogo Español de Especies Amenazadas",
-      "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11709,
       "gbifSpeciesKey": 2433875,
@@ -2854,7 +2896,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 7,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 28,
@@ -2895,7 +2938,8 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2014)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8951,
       "gbifSpeciesKey": 5341442,
@@ -2940,7 +2984,7 @@
       "rarityLocalBasis": {
         "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 6 ocurrencias dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2954,7 +2998,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2017)",
       "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto) · y 1 figura más en EIDOS (IEPNB)",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 2284,
       "gbifSpeciesKey": 2882803,
@@ -3008,7 +3053,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 3733,
       "gbifSpeciesKey": 5348647,
@@ -3062,7 +3108,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 80661,
       "gbifSpeciesKey": 6559940,
@@ -3116,7 +3163,8 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10044,
       "gbifSpeciesKey": 4153003,
@@ -3159,7 +3207,7 @@
       "rarityLocalBasis": {
         "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 6 ocurrencias dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3173,7 +3221,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7077,
       "gbifSpeciesKey": 7325947,
@@ -3227,7 +3276,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10135,
       "gbifSpeciesKey": 4135939,
@@ -3266,9 +3316,9 @@
       "rarityLocalBasis": {
         "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "featured": false,
+      "featured": true,
       "source": "GBIF: 6 ocurrencias dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «Vulnerable (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -3280,7 +3330,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8932,
       "gbifSpeciesKey": 5606217,
@@ -3293,7 +3344,8 @@
         "encinares-de-quercus-9340"
       ],
       "gbifOccurrences": 6,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2010)"
     },
     {
       "id": 39,
@@ -3338,7 +3390,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE; Directiva Hábitats 92/43/CEE, Anexo IV",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 24327,
       "gbifSpeciesKey": 2422507,
@@ -3350,7 +3403,8 @@
         "bosques-endemicos-de-9560"
       ],
       "gbifOccurrences": 5,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 40,
@@ -3395,7 +3449,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 4652,
       "gbifSpeciesKey": 8232802,
@@ -3448,7 +3503,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 82960,
       "gbifSpeciesKey": 7331265,
@@ -3501,7 +3557,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Fichada hasta el 2026-08-17 como «Leuzea conifera», que EIDOS da por sinónimo. taxonid 643 es «Rhaponticum coniferum (L.) Greuter subsp. coniferum», la SUBESPECIE; la especie es el taxonid 7755, «Rhaponticum coniferum (L.) Greuter», Aceptado/válido. «Leuzea conifera (L.) DC.» es Sinónimo. Se adopta el nombre aceptado; la gbifSpeciesKey NO cambia porque el backbone de GBIF acepta el nombre anterior y es esa key la que lleva las ocurrencias.",
       "eidosTaxonId": 7755,
       "gbifSpeciesKey": 3142203,
@@ -3546,7 +3603,7 @@
       "rarityLocalBasis": {
         "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 5 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-15); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3560,7 +3617,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5785,
       "gbifSpeciesKey": 8106135,
@@ -3620,7 +3678,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 4138,
       "gbifSpeciesKey": 5632022,
@@ -3672,7 +3731,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7206,
       "gbifSpeciesKey": 4049728,
@@ -3711,7 +3771,7 @@
       "rarityLocalBasis": {
         "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 5 ocurrencias dentro de los polígonos de hábitat del espacio (7 hábitats; barrido de 2026-08-15); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «Vulnerable (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3725,7 +3785,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8799,
       "gbifSpeciesKey": 7457479,
@@ -3741,7 +3802,8 @@
       ],
       "gbifOccurrences": 5,
       "visible": false,
-      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla.",
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2010)"
     },
     {
       "id": 54,
@@ -3782,7 +3844,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8802,
       "gbifSpeciesKey": 7308501,
@@ -3826,7 +3889,7 @@
       "rarityLocalBasis": {
         "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 5 ocurrencias dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3840,7 +3903,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
       "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 9370,
       "gbifSpeciesKey": 2888585,
@@ -3892,7 +3956,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 2204,
       "gbifSpeciesKey": 3740188,
@@ -3950,7 +4015,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 2413,
       "gbifSpeciesKey": 2963689,
@@ -4002,7 +4068,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 4852,
       "gbifSpeciesKey": 7703240,
@@ -4056,7 +4123,8 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5653,
       "gbifSpeciesKey": 2860661,
@@ -4110,7 +4178,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 6399,
       "gbifSpeciesKey": 5376035,
@@ -4150,7 +4219,7 @@
       "rarityLocalBasis": {
         "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 4 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -4164,7 +4233,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 6880,
       "gbifSpeciesKey": 3789029,
@@ -4224,7 +4294,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2022)",
       "spainStatus": "Anexo VI (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); UICN España: LC (Preocupación menor) (2002)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11964,
       "gbifSpeciesKey": 2426658,
@@ -4236,7 +4307,8 @@
         "bosques-endemicos-de-9560"
       ],
       "gbifOccurrences": 4,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 59,
@@ -4277,7 +4349,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 601,
       "gbifSpeciesKey": 3150037,
@@ -4320,7 +4393,7 @@
       "rarityLocalBasis": {
         "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 4 ocurrencias dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -4334,7 +4407,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
       "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7130,
       "gbifSpeciesKey": 3190580,
@@ -4390,7 +4464,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7145,
       "gbifSpeciesKey": 8424834,
@@ -4442,7 +4517,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8823,
       "gbifSpeciesKey": 3894066,
@@ -4499,7 +4575,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8956,
       "gbifSpeciesKey": 7793938,
@@ -4552,7 +4629,8 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 33095,
       "gbifSpeciesKey": 9416124,
@@ -4564,7 +4642,8 @@
         "bosques-endemicos-de-9560"
       ],
       "gbifOccurrences": 4,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 55,
@@ -4609,7 +4688,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11220,
       "gbifSpeciesKey": 5226733,
@@ -4621,7 +4701,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 3,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 78,
@@ -4662,7 +4743,8 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 1721,
       "gbifSpeciesKey": 2651816,
@@ -4714,7 +4796,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 9906,
       "gbifSpeciesKey": 2704505,
@@ -4768,7 +4851,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 80438,
       "gbifSpeciesKey": 2650617,
@@ -4821,7 +4905,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 2565,
       "gbifSpeciesKey": 5343178,
@@ -4878,7 +4963,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 2627,
       "gbifSpeciesKey": 5398274,
@@ -4931,7 +5017,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 2848,
       "gbifSpeciesKey": 6026935,
@@ -4984,7 +5071,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 3224,
       "gbifSpeciesKey": 3128001,
@@ -5043,7 +5131,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 2953,
       "gbifSpeciesKey": 2956364,
@@ -5095,7 +5184,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 3964,
       "gbifSpeciesKey": 7311306,
@@ -5149,7 +5239,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 4534,
       "gbifSpeciesKey": 3070382,
@@ -5192,9 +5283,9 @@
       "rarityLocalBasis": {
         "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "featured": true,
+      "featured": false,
       "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -5206,7 +5297,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo IV; Reglamento CITES (CE) 338/97, Anexo A",
-      "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12214,
       "gbifSpeciesKey": 7964291,
@@ -5218,7 +5310,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 3,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2007)"
     },
     {
       "id": 84,
@@ -5259,7 +5352,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 4662,
       "gbifSpeciesKey": 7365597,
@@ -5298,7 +5392,7 @@
       "rarityLocalBasis": {
         "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «Vulnerable (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -5312,7 +5406,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5007,
       "gbifSpeciesKey": 3044695,
@@ -5367,7 +5462,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5100,
       "gbifSpeciesKey": 3595600,
@@ -5425,7 +5521,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5809,
       "gbifSpeciesKey": 5312179,
@@ -5477,7 +5574,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 6038,
       "gbifSpeciesKey": 7272699,
@@ -5517,9 +5615,9 @@
       "rarityLocalBasis": {
         "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "featured": false,
+      "featured": true,
       "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -5531,7 +5629,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 1848,
       "gbifSpeciesKey": 4005183,
@@ -5571,7 +5670,7 @@
       "rarityLocalBasis": {
         "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (6 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -5585,7 +5684,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 80519,
       "gbifSpeciesKey": 9783509,
@@ -5645,7 +5745,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": null,
       "gbifSpeciesKey": 5415040,
@@ -5697,7 +5798,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 6607,
       "gbifSpeciesKey": 2793158,
@@ -5754,7 +5856,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10670,
       "gbifSpeciesKey": 2469763,
@@ -5766,7 +5869,8 @@
         "bosques-endemicos-de-9560"
       ],
       "gbifOccurrences": 3,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 71,
@@ -5811,7 +5915,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2023)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12414,
       "gbifSpeciesKey": 8211070,
@@ -5823,7 +5928,8 @@
         "bosques-endemicos-de-9560"
       ],
       "gbifOccurrences": 3,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 77,
@@ -5864,7 +5970,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8172,
       "gbifSpeciesKey": 3735572,
@@ -5922,7 +6029,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8931,
       "gbifSpeciesKey": 7306992,
@@ -5980,7 +6088,8 @@
       },
       "iucnGlobal": "NT (Casi Amenazado, evaluación de 2009 por declive poblacional en parte de su área)",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11582,
       "gbifSpeciesKey": 2468542,
@@ -5992,7 +6101,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 3,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2002)"
     },
     {
       "id": 121,
@@ -6033,7 +6143,8 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 2228,
       "gbifSpeciesKey": 2770868,
@@ -6073,7 +6184,7 @@
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
-      "featured": true,
+      "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6085,7 +6196,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 2445,
       "gbifSpeciesKey": 8157254,
@@ -6127,7 +6239,7 @@
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
-      "featured": true,
+      "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-15); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -6139,7 +6251,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 995,
       "gbifSpeciesKey": 7298105,
@@ -6154,7 +6267,8 @@
       ],
       "gbifOccurrences": 2,
       "visible": false,
-      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla.",
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2010)"
     },
     {
       "id": 122,
@@ -6199,7 +6313,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No incluida en el LESRPE; acompañante de sabinares y matorrales termófilos (HIC 5210)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 33035,
       "gbifSpeciesKey": 2768695,
@@ -6251,7 +6366,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 31495,
       "gbifSpeciesKey": 2778349,
@@ -6303,7 +6419,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 2549,
       "gbifSpeciesKey": 2650625,
@@ -6356,7 +6473,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 2555,
       "gbifSpeciesKey": 8108066,
@@ -6409,7 +6527,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 2596,
       "gbifSpeciesKey": 5346583,
@@ -6467,7 +6586,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10669,
       "gbifSpeciesKey": 2437136,
@@ -6479,7 +6599,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 124,
@@ -6520,7 +6641,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 9934,
       "gbifSpeciesKey": 5290144,
@@ -6573,7 +6695,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 2838,
       "gbifSpeciesKey": 6027094,
@@ -6630,7 +6753,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección: no aparece en el Catálogo Español de Especies Amenazadas ni en el Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE). Comprobado en EIDOS (IEPNB), que no le registra ningún estado legal vigente.",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 3607,
       "gbifSpeciesKey": 7332229,
@@ -6682,7 +6806,8 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11362,
       "gbifSpeciesKey": 5959645,
@@ -6694,7 +6819,8 @@
         "vegetacion-gipsicola-iberica-1520"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 253,
@@ -6739,7 +6865,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 3731,
       "gbifSpeciesKey": 5348659,
@@ -6792,7 +6919,8 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12133,
       "gbifSpeciesKey": 2435654,
@@ -6804,7 +6932,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 127,
@@ -6849,7 +6978,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 9558,
       "gbifSpeciesKey": 3101184,
@@ -6901,7 +7031,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 82557,
       "gbifSpeciesKey": 7473187,
@@ -6956,7 +7087,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 9570,
       "gbifSpeciesKey": 5290299,
@@ -7012,7 +7144,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 4308,
       "gbifSpeciesKey": 2653414,
@@ -7065,7 +7198,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 4339,
       "gbifSpeciesKey": 8998684,
@@ -7119,7 +7253,8 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 4359,
       "gbifSpeciesKey": 2687940,
@@ -7148,7 +7283,11 @@
       "imageAttribution": "Hrald (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
       "rarityScore": 1,
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 1,
       "rarityLocalBasis": {
         "categoria": "Sin figura de protección",
@@ -7167,7 +7306,8 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "Incluido (Real Decreto 216/2019, de 29 de marzo)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11227,
       "gbifSpeciesKey": 5219616,
@@ -7179,7 +7319,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 93,
@@ -7220,7 +7361,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 4466,
       "gbifSpeciesKey": 3067353,
@@ -7269,7 +7411,7 @@
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
-      "featured": true,
+      "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -7281,7 +7423,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo V",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11350,
       "gbifSpeciesKey": 5219362,
@@ -7293,7 +7436,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 116,
@@ -7324,9 +7468,9 @@
       "rarityLocalBasis": {
         "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "featured": false,
+      "featured": true,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -7338,7 +7482,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
-      "murciaStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 4883,
       "gbifSpeciesKey": 5347718,
@@ -7392,7 +7537,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5078,
       "gbifSpeciesKey": 3595086,
@@ -7444,7 +7590,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5101,
       "gbifSpeciesKey": 3595430,
@@ -7482,9 +7629,9 @@
       "rarityLocalBasis": {
         "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "featured": false,
+      "featured": true,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -7496,7 +7643,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "UICN España: EN (En peligro) (2010)",
-      "murciaStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5102,
       "gbifSpeciesKey": 8148601,
@@ -7507,7 +7655,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "EN — En peligro (Lista Roja española, 2010)"
     },
     {
       "id": 95,
@@ -7552,7 +7701,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11448,
       "gbifSpeciesKey": 2459023,
@@ -7564,7 +7714,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 96,
@@ -7605,7 +7756,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5303,
       "gbifSpeciesKey": 8410451,
@@ -7663,7 +7815,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5535,
       "gbifSpeciesKey": 3091206,
@@ -7716,7 +7869,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 456,
       "gbifSpeciesKey": 8625614,
@@ -7770,7 +7924,8 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11390,
       "gbifSpeciesKey": 2436790,
@@ -7782,7 +7937,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 117,
@@ -7823,7 +7979,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10065,
       "gbifSpeciesKey": 4048802,
@@ -7876,7 +8033,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5933,
       "gbifSpeciesKey": 5661164,
@@ -7935,7 +8093,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10060,
       "gbifSpeciesKey": 2704651,
@@ -7987,7 +8146,8 @@
       },
       "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2009)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10913,
       "gbifSpeciesKey": 2455958,
@@ -7999,7 +8159,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2002)"
     },
     {
       "id": 101,
@@ -8044,7 +8205,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11772,
       "gbifSpeciesKey": 8796529,
@@ -8056,7 +8218,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 102,
@@ -8089,7 +8252,7 @@
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
-      "featured": true,
+      "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8101,7 +8264,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No incluida en el LESRPE ni en el Catálogo Español de Especies Amenazadas",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11289,
       "gbifSpeciesKey": 5218887,
@@ -8113,7 +8277,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 103,
@@ -8154,7 +8319,8 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11180,
       "gbifSpeciesKey": 2438619,
@@ -8166,7 +8332,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 104,
@@ -8207,7 +8374,8 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12238,
       "gbifSpeciesKey": 2438793,
@@ -8219,7 +8387,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 105,
@@ -8260,7 +8429,8 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11857,
       "gbifSpeciesKey": 5218987,
@@ -8272,7 +8442,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 106,
@@ -8313,7 +8484,8 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11688,
       "gbifSpeciesKey": 6161340,
@@ -8325,7 +8497,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 135,
@@ -8366,7 +8539,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 6851,
       "gbifSpeciesKey": 7750780,
@@ -8419,7 +8593,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Fichada hasta el 2026-08-17 como «Pallenis spinosa», que EIDOS da por sinónimo. taxonid 80443: «Pallenis spinosa (L.) Cass.» es Sinónimo y «Asteriscus spinosus (L.) Schulz Bip.» Aceptado/válido. Se adopta el nombre aceptado; la gbifSpeciesKey NO cambia porque el backbone de GBIF acepta el nombre anterior y es esa key la que lleva las ocurrencias.",
       "eidosTaxonId": 80443,
       "gbifSpeciesKey": 5385215,
@@ -8472,7 +8647,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 6774,
       "gbifSpeciesKey": 5529030,
@@ -8524,7 +8700,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 583,
       "gbifSpeciesKey": 3093352,
@@ -8536,7 +8713,8 @@
       ],
       "gbifOccurrences": 2,
       "visible": false,
-      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla.",
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2010)"
     },
     {
       "id": 107,
@@ -8567,7 +8745,7 @@
       "rarityLocalBasis": {
         "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -8581,7 +8759,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2013)",
       "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. Lista de especies forestales e híbiridos artificiales (Real Decreto 289/2003, de 7 de marzo, sobre la comercialización de los materiales forestal…)",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7123,
       "gbifSpeciesKey": 5285565,
@@ -8610,8 +8789,12 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dettaglio_-_Poligalee_Polygala_monspeliaca_Lin._Erbario_Frizzi_Perugia_n._2888.jpg?width=1280",
       "imageAttribution": "Giuseppe Frizzi (Public domain) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 3,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 1,
       "rarityLocalBasis": {
         "categoria": "Sin figura de protección",
@@ -8630,7 +8813,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7204,
       "gbifSpeciesKey": 7602100,
@@ -8683,7 +8867,8 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11461,
       "gbifSpeciesKey": 7917188,
@@ -8695,7 +8880,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 139,
@@ -8726,7 +8912,7 @@
       "rarityLocalBasis": {
         "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -8740,7 +8926,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
       "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7684,
       "gbifSpeciesKey": 6371424,
@@ -8784,7 +8971,7 @@
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
-      "featured": false,
+      "featured": true,
       "source": "GBIF confirma su presencia con 2 ocurrencias dentro del espacio (barrido de 2026-08-15); un taxón volador no se adscribe a hábitats por sus ocurrencias; PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -8796,14 +8983,16 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
       "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
-      "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11264,
       "gbifSpeciesKey": 2432655,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2007)"
     },
     {
       "id": 87,
@@ -8832,7 +9021,7 @@
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
-      "featured": true,
+      "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -8844,7 +9033,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8083,
       "gbifSpeciesKey": 6026954,
@@ -8903,7 +9093,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8203,
       "gbifSpeciesKey": 7172720,
@@ -8961,7 +9152,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (RD 139/2011)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11692,
       "gbifSpeciesKey": 2445034,
@@ -8973,7 +9165,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 141,
@@ -9018,7 +9211,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8784,
       "gbifSpeciesKey": 7308670,
@@ -9056,7 +9250,7 @@
       "rarityLocalBasis": {
         "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «Vulnerable (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -9070,7 +9264,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8812,
       "gbifSpeciesKey": 3895745,
@@ -9112,7 +9307,7 @@
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
-      "featured": true,
+      "featured": false,
       "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-15); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -9124,7 +9319,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8905,
       "gbifSpeciesKey": 7307402,
@@ -9178,7 +9374,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 9349,
       "gbifSpeciesKey": 7331926,
@@ -9220,7 +9417,7 @@
       "rarityLocalBasis": {
         "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -9234,7 +9431,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 3005,
       "gbifSpeciesKey": 5411656,
@@ -9275,9 +9473,9 @@
       "rarityLocalBasis": {
         "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "featured": false,
+      "featured": true,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -9289,7 +9487,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 3544,
       "gbifSpeciesKey": 3097063,
@@ -9301,7 +9500,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "CR — En peligro crítico (Lista Roja española, 2010)"
     },
     {
       "id": 151,
@@ -9332,7 +9532,7 @@
       "rarityLocalBasis": {
         "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -9346,7 +9546,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 3809,
       "gbifSpeciesKey": 3941138,
@@ -9399,7 +9600,8 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 4930,
       "gbifSpeciesKey": 5347736,
@@ -9457,7 +9659,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (RD 139/2011)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12351,
       "gbifSpeciesKey": 5221528,
@@ -9468,7 +9671,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 152,
@@ -9509,7 +9713,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5951,
       "gbifSpeciesKey": 7564087,
@@ -9539,8 +9744,12 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Linaria_spartea_20120526a.jpg?width=1280",
       "imageAttribution": "Luis Fernández García (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 3,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 1,
       "rarityLocalBasis": {
         "categoria": "Sin figura de protección",
@@ -9559,7 +9768,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5976,
       "gbifSpeciesKey": 5415017,
@@ -9613,7 +9823,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 6465,
       "gbifSpeciesKey": 7589756,
@@ -9668,7 +9879,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7086,
       "gbifSpeciesKey": 3887383,
@@ -9696,8 +9908,12 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eidechse.1024.jpg?width=1280",
       "imageAttribution": "de:Benutzer:Janekpfeifer (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 1,
       "rarityLocalBasis": {
         "categoria": "Sin figura de protección",
@@ -9716,7 +9932,8 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11456,
       "gbifSpeciesKey": 9019391,
@@ -9728,7 +9945,8 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 153,
@@ -9769,7 +9987,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7279,
       "gbifSpeciesKey": 5274944,
@@ -9813,7 +10032,7 @@
       "rarityLocalBasis": {
         "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -9827,7 +10046,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
       "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. Lista de especies forestales e híbiridos artificiales (Real Decreto 289/2003, de 7 de marzo, sobre la comercialización de los materiales forestal…)",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7290,
       "gbifSpeciesKey": 3040233,
@@ -9856,7 +10076,11 @@
       "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
       "rarityScore": 1,
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 1,
       "rarityLocalBasis": {
         "categoria": "Sin figura de protección",
@@ -9875,7 +10099,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Anexo VI (Ley 42/2007, de 13 de diciembre)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7854,
       "gbifSpeciesKey": 2769766,
@@ -9925,7 +10150,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8142,
       "gbifSpeciesKey": 5358302,
@@ -9982,7 +10208,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2014)",
       "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8340,
       "gbifSpeciesKey": 7307627,
@@ -10038,7 +10265,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 9686,
       "gbifSpeciesKey": 3105768,
@@ -10090,7 +10318,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10134,
       "gbifSpeciesKey": 4138576,
@@ -10134,7 +10363,7 @@
       "rarityLocalBasis": {
         "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-15); PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -10148,7 +10377,8 @@
       },
       "iucnGlobal": "DD (Datos insuficientes) (evaluación UICN 2017)",
       "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo, sobre la comercialización de los materiales forestal…)",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 9147,
       "gbifSpeciesKey": 5361865,
@@ -10200,14 +10430,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10648,
       "gbifSpeciesKey": 9687165,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 256,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 166,
@@ -10248,14 +10480,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11886,
       "gbifSpeciesKey": 5739315,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 107,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 168,
@@ -10296,14 +10530,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11056,
       "gbifSpeciesKey": 2493091,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 72,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 198,
@@ -10348,14 +10584,16 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (RD 139/2011)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 80929,
       "gbifSpeciesKey": 9990095,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 53,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "DD — Datos insuficientes (Lista Roja española, 2004)"
     },
     {
       "id": 171,
@@ -10396,14 +10634,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12111,
       "gbifSpeciesKey": 2492462,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 47,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "DD — Datos insuficientes (Lista Roja española, 2004)"
     },
     {
       "id": 172,
@@ -10444,14 +10684,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12134,
       "gbifSpeciesKey": 9515886,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 45,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 177,
@@ -10492,14 +10734,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11650,
       "gbifSpeciesKey": 9705453,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 23,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 174,
@@ -10540,14 +10784,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11976,
       "gbifSpeciesKey": 7901064,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 23,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 178,
@@ -10588,14 +10834,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10993,
       "gbifSpeciesKey": 2495000,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 22,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 176,
@@ -10640,14 +10888,16 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11592,
       "gbifSpeciesKey": 5231236,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 21,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2004)"
     },
     {
       "id": 183,
@@ -10688,14 +10938,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 16421,
       "gbifSpeciesKey": 2487883,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 17,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 181,
@@ -10740,14 +10992,16 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Reglamento CITES (CE) 338/97, Anexo A",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11861,
       "gbifSpeciesKey": 2497266,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 15,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 179,
@@ -10792,14 +11046,16 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12250,
       "gbifSpeciesKey": 2492576,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 15,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 180,
@@ -10840,14 +11096,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11003,
       "gbifSpeciesKey": 2493012,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 14,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 185,
@@ -10888,14 +11146,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 16422,
       "gbifSpeciesKey": 2487871,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 12,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 186,
@@ -10940,7 +11200,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12321,
       "gbifSpeciesKey": 9616058,
@@ -10962,7 +11223,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 10,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 188,
@@ -11007,14 +11269,16 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2017)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11116,
       "gbifSpeciesKey": 9629160,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 10,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 189,
@@ -11058,7 +11322,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Fichada hasta el 2026-08-16 como «Sylvia undata» con eidosTaxonId 80230, que es *Sylvia undata undata*, la subespecie nominal. Es la misma curruca rabilarga que el resto del catálogo tiene como *Curruca undata* (EIDOS 80931); se unifica el nombre y los identificadores.",
       "eidosTaxonId": 80931,
       "gbifSpeciesKey": 2492949,
@@ -11081,7 +11346,8 @@
       "habitatIds": [],
       "gbifOccurrences": 9,
       "visible": true,
-      "descriptionSource": null
+      "descriptionSource": null,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 187,
@@ -11122,14 +11388,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10907,
       "gbifSpeciesKey": 7626513,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 8,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 195,
@@ -11170,14 +11438,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11849,
       "gbifSpeciesKey": 2480637,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 7,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2004)"
     },
     {
       "id": 190,
@@ -11218,14 +11488,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11911,
       "gbifSpeciesKey": 2488949,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 7,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 199,
@@ -11270,7 +11542,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Aves 2009/147/CE, Anexo I; Ley 42/2007, Anexo IV",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12065,
       "gbifSpeciesKey": 2482552,
@@ -11292,7 +11565,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 7,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
     },
     {
       "id": 193,
@@ -11333,14 +11607,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10698,
       "gbifSpeciesKey": 9282206,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 7,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 194,
@@ -11381,14 +11657,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10743,
       "gbifSpeciesKey": 5228676,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 6,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 207,
@@ -11419,7 +11697,7 @@
       "rarityLocalBasis": {
         "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 6 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000174 (Sierra de la Pila)",
@@ -11433,7 +11711,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Aves 2009/147/CE; Ley 42/2007, Anexo IV",
-      "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10888,
       "gbifSpeciesKey": 2480506,
@@ -11455,7 +11734,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 6,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
     },
     {
       "id": 209,
@@ -11500,7 +11780,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10733,
       "gbifSpeciesKey": 7806848,
@@ -11522,7 +11803,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 6,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 202,
@@ -11563,14 +11845,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10890,
       "gbifSpeciesKey": 2491498,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 6,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 205,
@@ -11601,9 +11885,9 @@
       "rarityLocalBasis": {
         "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "featured": true,
+      "featured": false,
       "source": "GBIF: 6 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000174 (Sierra de la Pila)",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -11615,7 +11899,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE; Directiva Aves 2009/147/CE, Anexo I; Reglamento CITES (CE) 338/97, Anexo A",
-      "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11963,
       "gbifSpeciesKey": 2481047,
@@ -11637,7 +11922,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 6,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "EN — En peligro (Lista Roja española, 2004)"
     },
     {
       "id": 206,
@@ -11682,14 +11968,16 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (RD 139/2011)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12131,
       "gbifSpeciesKey": 4408796,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 6,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 203,
@@ -11730,14 +12018,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12019,
       "gbifSpeciesKey": 2490266,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 5,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 208,
@@ -11782,7 +12072,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Aves 2009/147/CE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11102,
       "gbifSpeciesKey": 2490669,
@@ -11804,7 +12095,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 5,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 200,
@@ -11849,7 +12141,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12316,
       "gbifSpeciesKey": 9330514,
@@ -11871,7 +12164,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 5,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 238,
@@ -11912,14 +12206,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2020)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 33014,
       "gbifSpeciesKey": 9029556,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 5,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 214,
@@ -11950,7 +12246,7 @@
       "rarityLocalBasis": {
         "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000174 (Sierra de la Pila)",
@@ -11964,7 +12260,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Aves 2009/147/CE; Ley 42/2007, Anexo IV",
-      "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11336,
       "gbifSpeciesKey": 2480666,
@@ -11986,7 +12283,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 3,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2004)"
     },
     {
       "id": 215,
@@ -12027,14 +12325,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10952,
       "gbifSpeciesKey": 5231918,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 3,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 224,
@@ -12067,7 +12367,7 @@
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
-      "featured": true,
+      "featured": false,
       "source": "GBIF: 3 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000174 (Sierra de la Pila)",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -12079,7 +12379,8 @@
       },
       "iucnGlobal": "VU (Vulnerable) (evaluación UICN 2017)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); UICN España: NT (Casi amenazado) (2004)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 16426,
       "gbifSpeciesKey": 7341500,
@@ -12101,7 +12402,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 3,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
     },
     {
       "id": 222,
@@ -12146,7 +12448,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2019)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10750,
       "gbifSpeciesKey": 2490604,
@@ -12168,7 +12471,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 3,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 217,
@@ -12213,14 +12517,16 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial, RD 139/2011)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12226,
       "gbifSpeciesKey": 2490955,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 3,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 218,
@@ -12265,7 +12571,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11453,
       "gbifSpeciesKey": 5231235,
@@ -12287,7 +12594,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 3,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
     },
     {
       "id": 219,
@@ -12328,14 +12636,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11973,
       "gbifSpeciesKey": 2492350,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 3,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 227,
@@ -12380,7 +12690,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11351,
       "gbifSpeciesKey": 2480589,
@@ -12402,7 +12713,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 228,
@@ -12433,9 +12745,9 @@
       "rarityLocalBasis": {
         "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
         "ambito": "autonómico",
-        "origen": "murciaStatus del park.json"
+        "origen": "regionalStatus del park.json"
       },
-      "featured": true,
+      "featured": false,
       "source": "GBIF: 2 ocurrencias dentro del espacio (barrido de 2026-08-15); las aves no se adscriben a hábitats; PRUG del Parque Regional «Sierra de la Pila», volumen III §2.2 del Plan de Gestión Integral de los relieves y cuencas centro-orientales (Dirección General de Medio Natural, junio de 2018): la norma la enumera en el inventario de especies del propio Parque Regional, que es el ámbito del PRUG y el espacio de esta ficha, con la categoría «De Interés Especial (Catálogo Regional de especies amenazadas de la Región de Murcia)»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal; ave del apartado de la ZEPA ES0000174 (Sierra de la Pila)",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -12447,7 +12759,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE; Directiva Aves 2009/147/CE, Anexo I; Reglamento CITES (CE) 338/97, Anexo A",
-      "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10917,
       "gbifSpeciesKey": 5959092,
@@ -12469,7 +12782,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 229,
@@ -12510,14 +12824,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11132,
       "gbifSpeciesKey": 9717283,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 233,
@@ -12562,14 +12878,16 @@
       },
       "iucnGlobal": "LC (SPEC, en declive en Europa)",
       "spainStatus": "LESRPE (RD 139/2011)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12190,
       "gbifSpeciesKey": 2492867,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
     },
     {
       "id": 226,
@@ -12614,14 +12932,16 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2021)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12175,
       "gbifSpeciesKey": 2497701,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 239,
@@ -12662,14 +12982,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11499,
       "gbifSpeciesKey": 6093527,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 236,
@@ -12710,14 +13032,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Fichada hasta el 2026-08-17 como «Sylvia hortensis», que EIDOS da por sinónimo. taxonid 80927: «Sylvia hortensis (Gmelin, JF, 1789)» es Sinónimo y «Curruca hortensis (Gmelin, 1789)» Aceptado/válido. Se adopta el nombre aceptado; la gbifSpeciesKey NO cambia porque el backbone de GBIF acepta el nombre anterior y es esa key la que lleva las ocurrencias.",
       "eidosTaxonId": 80927,
       "gbifSpeciesKey": 2492944,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2004)"
     },
     {
       "id": 237,
@@ -12758,14 +13082,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 24459,
       "gbifSpeciesKey": 2477411,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 240,
@@ -12806,7 +13132,8 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12340,
       "gbifSpeciesKey": 5231438,
@@ -12828,7 +13155,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 245,
@@ -12873,7 +13201,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2021)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10922,
       "gbifSpeciesKey": 2480537,
@@ -12895,7 +13224,8 @@
       },
       "habitatIds": [],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 246,
@@ -12940,14 +13270,16 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11959,
       "gbifSpeciesKey": 2480685,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 241,
@@ -12988,14 +13320,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12009,
       "gbifSpeciesKey": 2493214,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 242,
@@ -13036,14 +13370,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11701,
       "gbifSpeciesKey": 7660710,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 243,
@@ -13088,7 +13424,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 16387,
       "gbifSpeciesKey": 4408759,
@@ -13151,14 +13488,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": "Fichada hasta el 2026-08-17 como «Sylvia communis», que EIDOS da por sinónimo. taxonid 80921: «Sylvia communis Latham, 1787» es Sinónimo y «Curruca communis (Latham, 1787)» Aceptado/válido. Se adopta el nombre aceptado; la gbifSpeciesKey NO cambia porque el backbone de GBIF acepta el nombre anterior y es esa key la que lleva las ocurrencias.",
       "eidosTaxonId": 80921,
       "gbifSpeciesKey": 2492943,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 244,
@@ -13203,14 +13542,16 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11211,
       "gbifSpeciesKey": 2498415,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     }
   ]
 }

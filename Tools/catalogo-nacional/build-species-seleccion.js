@@ -63,7 +63,7 @@
  * EIDOS devuelve para el taxón. No mezcla señales de abundancia —ni ocurrencias de GBIF, ni en
  * cuántos espacios aparece—, que serían un dato derivado más al que habría que buscarle respaldo;
  * el estado legal es dato oficial directo (CLAUDE.md, regla nº 1). Es un tramo estatal, y por eso
- * puede vivir en el catálogo universal: el catálogo autonómico es territorial y va en `murciaStatus`.
+ * puede vivir en el catálogo universal: el catálogo autonómico es territorial y va en `regionalStatus`.
  *
  * El CEEEI (RD 630/2013) NO cuenta como respaldo: es el catálogo de especies exóticas INVASORAS, no
  * una figura de protección. Va por su propio camino (`invasoras-eei.js`).
@@ -977,7 +977,7 @@ function habitatQueNombra(bin) {
  *
  * Solo el ámbito ESTATAL. El catálogo autonómico es territorial —la misma especie es Vulnerable en
  * una comunidad y no figura en la de al lado— y un campo universal no puede depender de dónde se
- * mire: eso ya vive en `murciaStatus`, que es local. Y se guarda al lado la norma que justifica el
+ * mire: eso ya vive en `regionalStatus`, que es local. Y se guarda al lado la norma que justifica el
  * tramo, para que la cifra no vuelva a ser un número sin procedencia.
  */
 function tramo(normas, filtro) {
@@ -1011,7 +1011,7 @@ function tramo(normas, filtro) {
  *   · `rarityScore`  — solo estatal. Es el que puede ir al catálogo universal, porque no depende de
  *                      dónde se mire.
  *   · `rarityLocal`  — el más grave de los dos ámbitos. Es el que describe lo excepcional que es
- *                      encontrarla EN ESTE ESPACIO, y por eso es un campo local, como `murciaStatus`.
+ *                      encontrarla EN ESTE ESPACIO, y por eso es un campo local, como `regionalStatus`.
  *
  * Ninguno de los dos usa abundancia: los dos son categoría legal vigente, dato oficial directo.
  */

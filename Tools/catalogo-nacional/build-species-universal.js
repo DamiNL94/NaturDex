@@ -38,15 +38,21 @@
  *                     VACÍO si esa oración nombra un territorio —sería un campo universal diciendo
  *                     algo local, regla nº 4— o si no cabe entera.
  *   iucnGlobal        EIDOS `v_estadoconservacion`, fila UICN vigente de ámbito Mundial.
+ *   iucnSpain         EIDOS `v_estadoconservacion`, fila UICN vigente de ámbito **España** — la
+ *                     Lista Roja española, que es OTRA evaluación y no un matiz de la mundial: el
+ *                     arto y la centaurea de Cartagena son `LC` en el mundo y `NT` en España. Se
+ *                     omite cuando la fuente no la trae, para que un hueco no se lea como un «no
+ *                     evaluada» comprobado. Los ámbitos `Península` y `Canarias` NO se guardan: son
+ *                     subestatales y no hay campo con ese significado (`Tools/lib/uicn.js`).
  *   spainStatus       EIDOS `v_estadolegal`, SOLO las filas vigentes de ámbito Nacional.
  *   image             Wikidata P225 → P18 → Wikipedia → Commons, vía lib/wikimedia.js (la misma
  *                     cadena que `images:species`), con su atribución de licencia.
  *   kingdom, group    DERIVADOS de la taxonomía de EIDOS por la tabla `GRUPO_POR_TAXON`; en plantas,
  *                     cuando la taxonomía no da el porte, se lee de la primera palabra de la
  *                     descripción morfológica de EIDOS («Arbusto 80-120 cm, muy ramoso…»).
- *   rarityScore       DERIVADO del nº de registros de GBIF en España (`country=ES`) por la tabla
- *                     `BANDAS_RAREZA`, y subido un punto si la especie está catalogada como
- *                     amenazada. Ver la nota larga sobre este campo más abajo.
+ *   rarityScore       DERIVADO de la FIGURA LEGAL del propio `spainStatus`, con la escalera de
+ *   + rarityBasis     `lib/rareza.js`, y la figura que lo justifica al lado en `rarityBasis`. NO
+ *                     sale de la abundancia: ver la nota larga sobre este campo más abajo.
  *   seasonality       DERIVADO del histograma mensual de registros de GBIF en España: el tramo del
  *                     año en que la especie CONSTA PRESENTE (no en el que es más fácil verla, que es
  *                     otra cosa y lleva a escribir falsedades). Ver `estacionalidad()`.
@@ -64,13 +70,29 @@
  * taxonomía —dos especies del mismo género pueden ser una mata y un arbusto—, y el nombre común
  * cuando el preferente de EIDOS no es el usual.
  *
- * Sobre `rarityScore`, que es el único campo de producto
- * ------------------------------------------------------
- * No mide una propiedad de la especie sino lo llamativo que es encontrarla, y por eso alimenta
- * `featured`. Se comprobó que NO se puede derivar de la figura legal: en el catálogo actual las
- * especies con LESRPE reparten su rareza entre 1 y 4 (el petirrojo y el águila perdicera están las
- * dos en el LESRPE). La señal que sí ordena bien es cuántas veces se registra la especie en España,
- * que es dato de GBIF, reproducible y del mismo ámbito NACIONAL que el campo.
+ * Sobre `rarityScore`
+ * -------------------
+ * **Mide la RAREZA LEGAL, no la abundancia.** Decidido el 2026-08-27, y hasta ese día este fichero
+ * decía lo contrario que el resto del repositorio: derivaba el tramo del nº de registros de GBIF en
+ * España mientras `rareza-legal.js --catalogo` lo derivaba del `spainStatus`. Dos definiciones
+ * incompatibles del mismo campo, y el campo no es descriptivo: alimenta `featured`, o sea **qué
+ * especies destaca la portada de cada espacio**. Mientras durase, cada ficha nueva volvía a nacer
+ * con la de abundancia y la migración se deshacía sola (era la deuda nº 29).
+ *
+ * El argumento que sostenía la versión de abundancia sigue siendo cierto y aun así no decide: es
+ * verdad que el LESRPE mete en el mismo cajón al petirrojo y al águila perdicera. Pero el recuento
+ * de GBIF **mide esfuerzo de observación tanto como abundancia** —lo dice el comentario de
+ * la constante retirada más abajo: el alimoche tiene 85.000 registros en España porque está bien
+ * vigilado— y sobre todo **no se puede citar**: un tramo derivado de un recuento es otro dato
+ * derivado al que hay que buscarle respaldo, y la regla nº 1 del CLAUDE.md pide de dónde sale cada
+ * cosa. La categoría legal es dato oficial directo y se cita sola, en `rarityBasis`.
+ *
+ * Así que el tramo sale de `lib/rareza.js` sobre el `spainStatus` de la propia ficha —la misma
+ * escalera que usan la migración y `build-species-seleccion.js`, no una copia— y viaja con su
+ * `rarityBasis`. Un `spainStatus` que dice «pendiente de confirmar» deja la ficha **sin tramo**: no
+ * es «sin figura de protección», es que nadie lo ha comprobado.
+ *
+ * Lo que sí sigue saliendo de GBIF es `seasonality`, que es otra pregunta.
  *
  * Uso
  * ---
@@ -99,8 +121,10 @@ const path = require('path');
 const { arg, flag, die, sleep } = require('../lib/cli');
 const { getJson } = require('../lib/http');
 const { CATALOGO_DIR, OUT_DIR, readJson, writeJson, rel, fromRoot, parkFiles } = require('../lib/io');
+const { tramoDeTexto, baseDeTramo } = require('../lib/rareza');
 const eidos = require('../lib/eidos');
 const wikimedia = require('../lib/wikimedia');
+const { etiquetaUicn } = require('../lib/uicn');
 
 const DRY = flag('dry');
 const REFRESCAR = flag('refrescar');
@@ -120,7 +144,12 @@ if (!PARK && !TAXONES) die('Uso: --park <slug> | --taxones "Nombre uno,Nombre do
 // Campos que el fichero de curación puede fijar. Es la lista blanca a propósito: lo que sale de una
 // fuente (taxonomía, UICN, estado legal, foto) NO se cura a mano, se corrige en la fuente o se
 // arregla el lector. Lo que se cura es lo que ninguna fuente sirve en el formato que pide la ficha.
-const CURABLES = ['commonName', 'group', 'habitat', 'seasonality', 'tips', 'rarityScore', 'description',
+// `rarityScore` SALIÓ de esta lista el 2026-08-27, con la decisión de que mide rareza legal: desde
+// que se deriva de la figura del `spainStatus` y viaja con su `rarityBasis`, curarlo a mano sería
+// volver a poner el número a ojo que costó la deuda nº 29 —y encima con una base al lado citando una
+// norma que diría otra cosa—. Un tramo que no cuadre se arregla en el `spainStatus`, que es su
+// fuente. La herramienta avisa si alguien lo intenta; no lo ignora en silencio.
+const CURABLES = ['commonName', 'group', 'habitat', 'seasonality', 'tips', 'description',
   // Si se cura la descripción hay que poder curar su cita: una descripción escrita a mano que
   // conserve el `descriptionSource` de EIDOS estaría atribuyendo a la fuente un texto que no es suyo.
   'descriptionSource'];
@@ -186,28 +215,18 @@ const PORTE_VENTANA = 140;
 // Cuando tampoco la descripción lo dice, el grupo se queda vacío y la especie sale en el informe.
 const GRUPO_SIN_RESOLVER = null;
 
-// Bandas de rareza por nº de registros de GBIF en España. Los cortes salen de ordenar el catálogo
-// actual: las especies con rareza 1-2 son las que se cuentan por decenas de miles de registros
-// (petirrojo, carrasca) y las de 4-5 las que no llegan al millar (garcilla cangrejera, sabina mora).
-const BANDAS_RAREZA = [
-  { desde: 20000, valor: 1 },
-  { desde: 5000, valor: 2 },
-  { desde: 1000, valor: 3 },
-  { desde: 100, valor: 4 },
-  { desde: 0, valor: 5 },
-];
-
-// SUELO de rareza por grado de amenaza. No es un incremento sobre la banda de GBIF sino un mínimo,
-// y la diferencia importa: el alimoche tiene 85.000 registros en España —está bien vigilado— pero
-// es «En peligro» mundial, y encontrárselo es un hecho señalado. Con un +1 sobre la banda se
-// quedaba en 2, por debajo de cualquier matorral; con suelo sale 5, que es lo que corresponde.
-// El recuento de GBIF mide esfuerzo de observación tanto como abundancia, y en aves lo mide sobre
-// todo a él: la amenaza es la señal que lo corrige.
-const SUELO_AMENAZA = [
-  { re: /En peligro de extinción|En peligro crítico|^(CR|EN)\b/i, valor: 5 },
-  { re: /Vulnerable|Sensible a la alteración|^VU\b/i, valor: 4 },
-  { re: /Casi amenazad|^NT\b/i, valor: 3 },
-];
+/*
+ * Aquí vivían `BANDAS_RAREZA` —los cortes de nº de registros de GBIF que daban el tramo— y
+ * `SUELO_AMENAZA`, el mínimo por grado de amenaza que corregía esos cortes. Se retiran el 2026-08-27
+ * con la decisión de que `rarityScore` mide rareza LEGAL: el tramo sale ya de `lib/rareza.js` sobre
+ * el `spainStatus` de la propia ficha.
+ *
+ * Se dejan dichas las dos cosas que enseñaron, porque siguen siendo ciertas del recuento de GBIF y
+ * quien vuelva a tentarse con él tiene que saberlas: el recuento **mide esfuerzo de observación
+ * tanto como abundancia** —el alimoche tiene 85.000 registros en España porque está bien vigilado,
+ * no porque sea común— y en aves lo mide sobre todo a él. Con las bandas a secas el alimoche salía
+ * en tramo 2, por debajo de cualquier matorral.
+ */
 
 const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
   'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
@@ -346,7 +365,8 @@ async function desdeEidos(sci) {
 
 /**
  * Señal NACIONAL de frecuencia: cuántas veces se ha registrado la especie en España y en qué meses.
- * Es lo que sostiene `rarityScore` y `seasonality`, y es del mismo ámbito (España) que el campo.
+ * Es lo que sostiene `seasonality`. Sostenía también `rarityScore` hasta el 2026-08-27, cuando ese
+ * campo pasó a medir rareza LEGAL; el recuento sigue haciendo falta, pero ya no decide ningún tramo.
  */
 async function desdeGbifNacional(sci) {
   return cacheado(`gbif-es:${sci}`, async () => {
@@ -356,8 +376,8 @@ async function desdeGbifNacional(sci) {
     /*
      * La clave que vale es la ACEPTADA, no la del nombre que se preguntó. Preguntando por un
      * sinónimo, `usageKey` apunta a la ficha del sinónimo y trae MENOS ocurrencias que la aceptada
-     * —−54 % medido en *Curruca communis*—, y de ese recuento salen `rarityScore` y `seasonality`:
-     * la especie acaba pareciendo más rara de lo que es y con menos meses de los que tiene. GBIF ya
+     * —−54 % medido en *Curruca communis*—, y de ese recuento sale `seasonality`: la especie acaba
+     * con menos meses de los que tiene. GBIF ya
      * no manda el booleano `synonym`; hoy lo dice en `status: "SYNONYM"`. Se leen las dos formas
      * porque la vieja puede seguir viva en respuestas cacheadas.
      */
@@ -433,23 +453,15 @@ function atributo(atributos, nombre) {
   return limpiar(pref.valor);
 }
 
-const CATEGORIA_UICN = {
-  EX: 'Extinta', EW: 'Extinta en estado silvestre', CR: 'En peligro crítico', EN: 'En peligro',
-  VU: 'Vulnerable', NT: 'Casi amenazada', LC: 'Preocupación menor', DD: 'Datos insuficientes',
-  NE: 'No evaluada',
-};
-
-function iucnDe(conservacion) {
-  const mundial = (conservacion || {}).Mundial;
-  if (!mundial || !mundial.categoriaconservacion) return 'No evaluada en la Lista Roja mundial de la UICN';
-  const cruda = String(mundial.categoriaconservacion).trim();
-  const cod = (cruda.match(/^[A-Z]{2}/) || [])[0];
-  const nombre = CATEGORIA_UICN[cod];
-  const anio = mundial.anio ? `, ${mundial.anio}` : '';
-  return nombre
-    ? `${cod} — ${nombre} (Lista Roja mundial de la UICN${anio})`
-    : `${cruda} (Lista Roja mundial de la UICN${anio})`;
-}
+/*
+ * El formateo de una categoría de la UICN vive en `lib/uicn.js` desde el 2026-08-27, cuando hubo que
+ * barrer las 1.067 fichas ya escritas para rellenarles el ámbito España: la alternativa era una
+ * segunda copia de la misma tabla y del mismo texto, y dos copias divergen a la primera corrección
+ * (regla nº 1 de `Tools/CLAUDE.md`). Ahí está también el motivo de que el ámbito viaje DENTRO de la
+ * frase y de que `Península` y `Canarias` no se guarden.
+ */
+const iucnDe = (conservacion) => etiquetaUicn(conservacion, 'Mundial');
+const iucnEspanaDe = (conservacion) => etiquetaUicn(conservacion, 'España');
 
 /**
  * `spainStatus`: SOLO las normas estatales vigentes, que ya llegan filtradas por `legalStatus`.
@@ -458,7 +470,7 @@ function iucnDe(conservacion) {
  * `spainStatus` cita la Ley 9/1999 de Castilla-La Mancha —una norma autonómica de otra comunidad—
  * porque EIDOS la sirve con `ambito: "Nacional"` y solo la delata su campo `ccaa`
  * (Docs/rollout/ESTADO.md §"2026-08-10"; la nota larga está en lib/eidos.js). Lo autonómico va en
- * `murciaStatus`, y lo pone build-species-n2.js desde la selección del espacio.
+ * `regionalStatus`, y lo pone build-species-n2.js desde la selección del espacio.
  */
 // Peso de cada figura estatal, para que la ficha empiece por la que de verdad describe el estado de
 // protección. Sin esto, la sabina mora abría con dos anexos de material forestal de reproducción y
@@ -494,17 +506,46 @@ function espanaDe(nacionales) {
   return partes.slice(0, 3).join(' · ') + (sobran > 0 ? ` · y ${sobran} figura${sobran === 1 ? '' : 's'} más en EIDOS (IEPNB)` : '');
 }
 
-function rarezaDe(gbifEs, legal, iucn) {
-  if (!gbifEs || !gbifEs.total) return null;
-  const banda = BANDAS_RAREZA.find(b => gbifEs.total >= b.desde);
-  const base = banda ? banda.valor : 3;
-  // El grado de amenaza se lee en las dos escalas que tiene la ficha: la categoría legal estatal
-  // (CEEA) y la evaluación mundial de la UICN. Manda la más grave de las dos.
-  const textos = (legal || []).map(r => r.estadolegal || '').concat([iucn || '']);
-  const suelo = Math.max(0, ...SUELO_AMENAZA
-    .filter(s => textos.some(t => s.re.test(t)))
-    .map(s => s.valor));
-  return Math.max(base, suelo);
+/**
+ * El tramo 1–5 y su procedencia, derivados de la figura legal ESTATAL que la ficha acaba de escribir
+ * en su `spainStatus`.
+ *
+ * Se lee del texto ya redactado y no de las filas de EIDOS a propósito: es lo que garantiza que el
+ * generador y `rareza-legal.js --catalogo` den lo MISMO sobre la misma ficha, que es la condición
+ * para que la migración de la deuda nº 29 no se deshaga sola con cada especie nueva. La escalera
+ * —y la construcción de la base— viven en `lib/rareza.js`.
+ *
+ * Devuelve las dos cosas juntas porque separarlas es lo que produjo la avería que documenta el §2
+ * del CLAUDE.md: un `rarityScore` sin `rarityBasis` es un número puesto a ojo, y
+ * `build-species-n2.js` lo usaba de suelo del tramo que ve el usuario.
+ */
+/*
+ * Los campos que NO se pueden refrescar sueltos, porque uno se deriva del otro.
+ *
+ * `--refrescar-campos spainStatus` es el ejemplo que la propia cabecera de esta herramienta pone, y
+ * desde que el tramo sale de la figura legal es también una trampa: refrescar el texto sin recalcular
+ * el tramo deja el número viejo citando una norma nueva, y nada falla. Igual al revés — un
+ * `rarityScore` refrescado con su `rarityBasis` de antes es otra vez un número sin procedencia, que
+ * es de lo que veníamos (deuda nº 29 y §2 del CLAUDE.md).
+ *
+ * Así que los tres viajan juntos: pedir uno arrastra los otros dos.
+ */
+const ARRASTRA = [['spainStatus', 'rarityScore', 'rarityBasis']];
+
+function camposArrastrados(campos) {
+  const set = new Set(campos);
+  for (const grupo of ARRASTRA) if (grupo.some(c => set.has(c))) for (const c of grupo) set.add(c);
+  return [...set];
+}
+
+function rarezaDe(spainStatus) {
+  const r = tramoDeTexto(spainStatus);
+  // «Pendiente de confirmar» no es «sin figura de protección»: sin tramo, y a la lista.
+  if (r.tramo === 1 && r.indeterminado) return { rarityScore: null, rarityBasis: null };
+  return {
+    rarityScore: r.tramo,
+    rarityBasis: baseDeTramo(r, 'estatal', 'spainStatus del catálogo universal'),
+  };
 }
 
 /**
@@ -644,9 +685,15 @@ async function main() {
 
     const tax = taxonomiaDe(e.taxon);
     const iucn = iucnDe(e.conservacion);
+    const iucnEs = iucnEspanaDe(e.conservacion);
     const castellanos = e.nombres || [];
     const preferente = castellanos.find(n => n.preferente) || castellanos[0] || null;
     const descripcion = atributo(e.atributos, 'Descripción de la especie');
+    // El estatal se calcula ANTES de armar la ficha porque el tramo de rareza sale de ÉL, no de las
+    // filas crudas de EIDOS: leer el mismo texto que va a quedar escrito es lo que hace que este
+    // generador y  no puedan discrepar sobre la misma ficha.
+    const estatal = espanaDe(e.legal);
+    const rareza = rarezaDe(estatal);
     const ficha = {
       // Sin nombre castellano en EIDOS se usa el científico, NO se deja vacío: el catálogo y la
       // ficha lo pintan tal cual (`<h3>${commonName}</h3>` en Frontend/Js/render/), así que un nulo
@@ -658,7 +705,8 @@ async function main() {
       group: grupoDe(tax, descripcion),
       habitat: etiquetaHabitat(atributo(e.atributos, 'Hábitat')),
       seasonality: estacionalidad(g),
-      rarityScore: rarezaDe(g, e.legal, iucn),
+      rarityScore: rareza.rarityScore,
+      rarityBasis: rareza.rarityBasis,
       description: descripcion,
       // De dónde sale el texto. Va al lado del texto y no en un registro aparte porque el problema
       // que resuelve es que la ficha se sirve sin decir si lo que se lee es la fuente o una
@@ -671,7 +719,11 @@ async function main() {
       tips: [],
       taxonomy: tax,
       iucnGlobal: iucn,
-      spainStatus: espanaDe(e.legal),
+      // Se OMITE cuando EIDOS no trae la fila de ámbito España. Un campo ausente dice «nadie lo ha
+      // mirado»; escribir «No evaluada» diría «comprobado que no la hay», que es otra afirmación y
+      // ninguna fuente la respalda. Misma regla que la fenología de las aves (`lib/fenologia.js`).
+      ...(iucnEs ? { iucnSpain: iucnEs } : {}),
+      spainStatus: estatal,
       image: foto ? foto.url : null,
       imageAttribution: foto ? foto.attribution : null,
       // La clave maestra del modelo (lib/eidos.js): identifica al taxón y es la misma en todos los
@@ -712,7 +764,7 @@ async function main() {
     if (SOLO_CAMPOS && universal[sci]) {
       // Solo los campos pedidos; todo lo demás de la ficha existente se queda como está.
       const parche = {};
-      for (const campo of SOLO_CAMPOS) if (f[campo] !== undefined) parche[campo] = f[campo];
+      for (const campo of camposArrastrados(SOLO_CAMPOS)) if (f[campo] !== undefined) parche[campo] = f[campo];
       fusion[sci] = { ...universal[sci], ...parche };
     } else {
       fusion[sci] = REFRESCAR && universal[sci] ? { ...universal[sci], ...f } : f;

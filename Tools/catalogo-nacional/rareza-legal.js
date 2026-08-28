@@ -11,7 +11,7 @@
  * son anteriores a que la selección fuera un fichero del repo, y volver a EIDOS pide red.
  *
  * Sin embargo el dato ya está escrito en cada ficha: `spainStatus` (universal, ámbito estatal) y
- * `murciaStatus` (local, catálogo autonómico) guardan la figura legal CON su norma. Esta herramienta
+ * `regionalStatus` (local, catálogo autonómico) guardan la figura legal CON su norma. Esta herramienta
  * los lee y aplica la misma escalera de `lib/rareza.js` —la misma, no una copia— sobre el texto.
  *
  * Qué NO hace
@@ -21,43 +21,42 @@
  *     afirmar una comprobación que nadie ha hecho (CLAUDE.md, regla nº 2).
  *   · No toca `featured` salvo que se lo pidas con `--destacadas`. Cambiar qué especies destaca la
  *     app es una decisión de producto, no un efecto secundario de recalcular un campo.
- *   · No escribe en la base de datos. Con backend desplegado hace falta además el SQL del espacio.
+ *   · No escribe en la base de datos. Lo que sí hace desde el 2026-08-27 es REDACTARLO: `--sql
+ *     <ruta>` escribe los UPDATE de las tres columnas locales que toca (`rarity_local`,
+ *     `rarity_local_basis` e `is_featured`), que NO viajan en el `species-universal.sql` de
+ *     `species:apply` porque ése solo lleva los universales. Antes el único camino era regenerar el
+ *     `-n2.sql` entero del espacio, que es la trampa nº 6 del CLAUDE.md.
  *
  * Es idempotente: un segundo pase no cambia un byte.
  *
  * Uso:
  *     node Tools/catalogo-nacional/rareza-legal.js [--park <slug>] [--dry] [--destacadas]
+ *       [--sql <ruta>]
+ *     node Tools/catalogo-nacional/rareza-legal.js --catalogo [--dry]
  */
 
 const fs = require('fs');
 const path = require('path');
 const { arg, flag } = require('../lib/cli');
-const { CATALOGO_DIR, OUT_DIR, readJson, writeJson, rel, parkFiles } = require('../lib/io');
-const { SIGNIFICADO, tramoDeTexto } = require('../lib/rareza');
+const { CATALOGO_DIR, OUT_DIR, DATABASE, readJson, writeJson, rel, parkFiles, escribeEspacio } = require('../lib/io');
+const { sqlStr, sqlNum, sqlJson, cabeceraSql } = require('../lib/sql');
+const { SIGNIFICADO, tramoDeTexto, baseDeTramo } = require('../lib/rareza');
 
 const PARK = arg('park');
 const DRY = flag('dry');
 const DESTACADAS = flag('destacadas');
 const CATALOGO = flag('catalogo');
+const SQL = arg('sql', null);
 
 const RUTA_CATALOGO = path.join(CATALOGO_DIR, 'data', 'especies-universal.json');
 
 /*
- * La procedencia del tramo, incluida la del tramo 1.
- *
- * Una especie sin figura de protección no tiene norma que citar, así que la primera versión le
- * dejaba la base a `null`… y entonces era indistinguible de una ficha SIN MIGRAR, que también la
- * tiene a null. El aviso de `validate` contaba 596 «pendientes» cuando solo 23 lo estaban: las otras
- * 573 estaban comprobadas y el resultado era «no hay nada».
- *
- * «Comprobado que no tiene figura» y «nadie lo ha mirado» son dos estados distintos y el segundo es
- * el único que hay que arrastrar. Por eso el tramo 1 también deja constancia, con su ausencia dentro.
+ * La procedencia del tramo vive en `lib/rareza.js` desde el 2026-08-27, junto a la escalera que la
+ * produce: `build-species-universal.js` pasó ese día a derivar el `rarityScore` de la figura legal,
+ * y con una copia aquí el mismo taxón acabaría con dos procedencias distintas según lo escribiera el
+ * generador de fichas nuevas o esta migración.
  */
-function base(r, ambito, origen) {
-  if (r.motivo) return { categoria: r.motivo, ambito, origen };
-  if (r.reconocido) return { categoria: 'Sin figura de protección', ambito, origen };
-  return null; // ni figura ni negación: el texto no dice nada, y eso sí queda pendiente
-}
+const base = baseDeTramo;
 
 /*
  * --catalogo: migra el `rarityScore` del CATÁLOGO UNIVERSAL.
@@ -120,6 +119,73 @@ function migrarCatalogo() {
   if (DRY) console.log('\nSimulación: no se ha escrito nada.');
 }
 
+/*
+ * `--sql`: los tres campos LOCALES que esta herramienta escribe y que no llegaban a la base.
+ *
+ * `rarityScore` y `rarityBasis` son universales y viajan en el `species-universal.sql` que genera
+ * `species:apply`. Pero `rarityLocal`, `rarityLocalBasis` y `featured` son **locales**: no están en
+ * ese volcado, y hasta el 2026-08-27 la única forma de bajarlos era regenerar el `-n2.sql` entero
+ * del espacio, que es la trampa nº 6 del CLAUDE.md —reescribe la ficha desde la selección aprobada y
+ * a un espacio que haya pasado por `aves:poda` le devuelve las aves podadas—.
+ *
+ * O sea que el consejo que esta misma cabecera daba («hace falta además el SQL del espacio») pedía
+ * hacer algo peligroso para publicar un recálculo, y con la API por delante del paquete lo más
+ * probable era no hacerlo: el tramo quedaba bien en el repositorio y viejo en lo que ve el usuario.
+ * Esto escribe solo esas tres columnas, fila a fila, casando por espacio y nombre científico.
+ *
+ * `featured` solo se incluye si se pasó `--destacadas`: si no, esta pasada no lo ha tocado y
+ * escribirlo sería publicar como decisión de hoy un valor que viene de antes.
+ */
+function escribeSql(filas, ruta) {
+  const l = [];
+  l.push(cabeceraSql(null).trimEnd(), '');
+  l.push('-- ' + '='.repeat(96));
+  l.push('-- NaturDex · tramo de rareza LOCAL por espacio' + (DESTACADAS ? ' y destacadas' : ''));
+  l.push('-- ' + '-'.repeat(96));
+  l.push('-- Generado por `npm run especies:rareza -- --sql <ruta>`' + (DESTACADAS ? ' --destacadas' : '') + '.');
+  l.push('--');
+  l.push('-- QUÉ ES ESTO. `rarity_local`, `rarity_local_basis` y `is_featured` son campos LOCALES: no');
+  l.push('-- viajan en `species-universal.sql`, que solo lleva los universales. Sin este fichero, un');
+  l.push('-- recálculo del tramo queda bien en el repositorio y viejo en la base — y la API tiene');
+  l.push('-- prioridad sobre el `park.json` empaquetado, así que es la base la que ve el usuario.');
+  l.push('--');
+  l.push('-- Se tocan SOLO esas columnas. NO se regenera el `-n2.sql` del espacio, que reescribiría');
+  l.push('-- la ficha entera desde la selección aprobada (trampa nº 6 del CLAUDE.md).');
+  l.push('--');
+  l.push('-- Una ficha SIN tramo —su estado legal dice «pendiente de confirmar»— se pone a NULL a');
+  l.push('-- propósito: dejar el número viejo sería peor que no tener ninguno, porque parecería');
+  l.push('-- comprobado. Es la misma regla que aplica el `park.json`.');
+  l.push('--');
+  l.push('-- Idempotente: aplicado dos veces, la segunda actualiza las mismas filas al mismo valor.');
+  l.push('-- ' + '='.repeat(96), '');
+  l.push('START TRANSACTION;', '');
+
+  const porEspacio = new Map();
+  for (const f of filas) {
+    if (!porEspacio.has(f.slug)) porEspacio.set(f.slug, []);
+    porEspacio.get(f.slug).push(f);
+  }
+  for (const [slug, lista] of porEspacio) {
+    l.push(`-- ── ${slug} ${'─'.repeat(Math.max(0, 60 - slug.length))}  ${lista.length} ficha(s)`);
+    for (const f of lista) {
+      const sets = [
+        `sp.rarity_local = ${sqlNum(f.tramo)}`,
+        `sp.rarity_local_basis = ${sqlJson(f.basis)}`,
+      ];
+      if (DESTACADAS) sets.push(`sp.is_featured = ${f.featured ? 1 : 0}`);
+      l.push('UPDATE species sp JOIN parks pk ON pk.id = sp.park_id');
+      l.push(`   SET ${sets.join(', ')}`);
+      l.push(` WHERE pk.slug = ${sqlStr(slug)} AND sp.scientific_name = ${sqlStr(f.sci)};`);
+    }
+    l.push('');
+  }
+  l.push('COMMIT;', '');
+
+  const destino = path.isAbsolute(ruta) ? ruta : path.join(DATABASE, path.basename(ruta));
+  if (!DRY) fs.writeFileSync(destino, l.join('\n') + '\n', 'utf8');
+  console.log(`\n${DRY ? '~' : '+'} ${rel(destino)} (${filas.length} UPDATE)`);
+}
+
 function main() {
   if (CATALOGO) return migrarCatalogo();
   const objetivo = parkFiles().filter(p => !PARK || p.slug === PARK);
@@ -128,6 +194,7 @@ function main() {
   const dist = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
   const indeterminadas = [];
   const cambiaDestacada = [];
+  const filasSql = [];
   let escritas = 0, ficheros = 0;
 
   for (const { slug, file } of objetivo) {
@@ -137,7 +204,7 @@ function main() {
 
     for (const sp of species) {
       const estatal = tramoDeTexto(sp.spainStatus);
-      const autonomico = tramoDeTexto(sp.murciaStatus);
+      const autonomico = tramoDeTexto(sp.regionalStatus);
 
       // El tramo local toma la figura MÁS GRAVE de los dos ámbitos: una figura no anula a la otra, y
       // la autonómica es la que discrimina de verdad (el Estado manda casi todo al mismo cajón).
@@ -147,12 +214,13 @@ function main() {
       if (tramo === 1 && (estatal.indeterminado || autonomico.indeterminado)) {
         indeterminadas.push({
           slug, id: sp.id, sci: sp.scientificName,
-          estatal: sp.spainStatus || null, autonomico: sp.murciaStatus || null,
+          estatal: sp.spainStatus || null, autonomico: sp.regionalStatus || null,
         });
         // Se BORRA un tramo previo si lo hubiera: dejar el viejo sería peor que no tener ninguno,
-        // porque parecería comprobado.
+        // porque parecería comprobado. En la base es lo mismo: a NULL, no el número de antes.
         delete sp.rarityLocal;
         delete sp.rarityLocalBasis;
+        filasSql.push({ slug, sci: sp.scientificName, tramo: null, basis: null, featured: !!sp.featured });
         continue;
       }
 
@@ -164,10 +232,11 @@ function main() {
         // está vacío, la constancia es la del estatal.
         gana.motivo ? gana : (estatal.reconocido ? estatal : autonomico),
         gana === autonomico ? 'autonómico' : 'estatal',
-        gana === autonomico ? 'murciaStatus del park.json' : 'spainStatus del park.json',
+        gana === autonomico ? 'regionalStatus del park.json' : 'spainStatus del park.json',
       );
       dist[tramo]++;
       escritas++;
+      filasSql.push({ slug, sci: sp.scientificName, tramo, basis: sp.rarityLocalBasis, featured: false });
 
       if (DESTACADAS) {
         const debe = tramo >= 4;
@@ -176,12 +245,23 @@ function main() {
           sp.featured = debe;
         }
       }
+      // El valor que va al SQL es el que la ficha tiene DESPUÉS de decidir, no el de antes.
+      const ultima = filasSql[filasSql.length - 1];
+      if (ultima && ultima.sci === sp.scientificName) ultima.featured = !!sp.featured;
     }
 
-    const texto = JSON.stringify(doc, null, 2) + '\n';
-    if (fs.readFileSync(file, 'utf8') === texto) continue;
-    if (!DRY) fs.writeFileSync(file, texto, 'utf8');
-    console.log(`${DRY ? '~' : '+'} ${rel(file)}  (${slug})`);
+    /*
+     * Por `escribeEspacio()` y no con un `writeFileSync`, que es lo que había aquí hasta el
+     * 2026-08-27: esta herramienta era la OCTAVA copia del fallo de la deuda nº 37 —reescribir
+     * fichas sin subir la `version` del manifiesto—, y la única que quedaba viva después de taparlo
+     * en las otras siete. No se veía porque en la práctica siempre se pasaba detrás de
+     * `species:apply`, que sí sube la versión; pero un `--destacadas` suelto publica un cambio
+     * VISIBLE en la portada del espacio, y el dispositivo que ya lo tuviera guardado sin conexión no
+     * se habría enterado.
+     */
+    const { cambia, lineas } = escribeEspacio({ dir: path.dirname(file), file, doc, write: !DRY });
+    if (!cambia) continue;
+    for (const l of lineas) console.log(`  ${l}`);
     ficheros++;
   }
 
@@ -222,6 +302,7 @@ function main() {
       console.log(`  - ${rel(ruta)} (ya no queda ninguna pendiente)`);
     }
   }
+  if (SQL) escribeSql(filasSql, SQL);
   if (DRY) console.log('\nSimulación: no se ha escrito nada.');
 }
 

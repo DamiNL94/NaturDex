@@ -905,7 +905,8 @@
           "scientificName": "Rhamnus pumilus",
           "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
           "grupo": "Flora",
-          "nota": "El backbone de GBIF no resuelve este nombre a rango específico: devuelve la familia Rhamnaceae, y tampoco reconoce Rhamnus pumila (consultado 2026-08-15). Sin nombre verificado no se escribe corrección, así que la entrada queda sin cruzar con GBIF."
+          "nota": "RESUELTO el 2026-08-28 con el Plan del Altiplano delante (Suplemento n.º 2 del BORM n.º 102, de 6 de mayo de 2025). El plan escribe el mismo taxón de DOS formas —«Rhamnus pumilus» en un volumen y «Rhamnus pumilis» en otro—, y ninguna de las dos existe: *Rhamnus* es femenino y el nombre es *Rhamnus pumila* Turra, que EIDOS sí conoce (lo da por sinónimo de *Atadinus alpinus* subsp. *legionensis*). Lo escribe a mano y no `anexos:coteja` porque su guarda exige que GBIF responda FUZZY, y aquí GBIF responde HIGHERRANK: el backbone tiene varios homónimos del binomio y ante la ambigüedad sube a la familia, igual que con *Salsola vermiculata* (deuda nº 4). Un HIGHERRANK no dice «ese taxón no está»: dice «no he sabido desambiguar». El verbatim NO se toca; `nombreCorregido` solo arregla la concordancia de género para que el cruce encuentre el taxón, y quién sea ese taxón lo decide EIDOS, no esta nota. || El texto de este PDF solo se lee DESCIFRÁNDOLO: su ToUnicode está roto y `pdftotext` devuelve las letras desplazadas tres posiciones («2HAMNUS PUMILUS»), además de perder las minúsculas. Se recupera restando 3 a cada código; sin eso, cualquier búsqueda en él devuelve cero y parece que el nombre no está.",
+          "nombreCorregido": "Rhamnus pumila"
         },
         {
           "scientificName": "Rhodalsine geniculata",
@@ -2446,7 +2447,8 @@
           "scientificName": "Rhamnus pumilis",
           "categoria": "De Interés Especial (Catálogo Regional de Flora Silvestre Protegida)",
           "grupo": "Flora",
-          "nota": "La tabla escribe «Rhamnus pumilis» y le da como nombre común «chopera»; el nombre al uso es Rhamnus pumila. El backbone de GBIF no resuelve este nombre a rango específico: devuelve la familia Rhamnaceae, y tampoco reconoce Rhamnus pumila (consultado 2026-08-15). Sin nombre verificado no se escribe corrección."
+          "nota": "RESUELTO el 2026-08-28 con el Plan del Altiplano delante (Suplemento n.º 2 del BORM n.º 102, de 6 de mayo de 2025). El plan escribe el mismo taxón de DOS formas —«Rhamnus pumilus» en un volumen y «Rhamnus pumilis» en otro—, y ninguna de las dos existe: *Rhamnus* es femenino y el nombre es *Rhamnus pumila* Turra, que EIDOS sí conoce (lo da por sinónimo de *Atadinus alpinus* subsp. *legionensis*). Lo escribe a mano y no `anexos:coteja` porque su guarda exige que GBIF responda FUZZY, y aquí GBIF responde HIGHERRANK: el backbone tiene varios homónimos del binomio y ante la ambigüedad sube a la familia, igual que con *Salsola vermiculata* (deuda nº 4). Un HIGHERRANK no dice «ese taxón no está»: dice «no he sabido desambiguar». El verbatim NO se toca; `nombreCorregido` solo arregla la concordancia de género para que el cruce encuentre el taxón, y quién sea ese taxón lo decide EIDOS, no esta nota. || El texto de este PDF solo se lee DESCIFRÁNDOLO: su ToUnicode está roto y `pdftotext` devuelve las letras desplazadas tres posiciones («2HAMNUS PUMILUS»), además de perder las minúsculas. Se recupera restando 3 a cada código; sin eso, cualquier búsqueda en él devuelve cero y parece que el nombre no está.",
+          "nombreCorregido": "Rhamnus pumila"
         },
         {
           "scientificName": "Sanguisorba ancistroides",
@@ -4298,7 +4300,7 @@
         {
           "scientificName": "Nacerdes baebare",
           "grupo": "Invertebrados",
-          "nota": "El backbone de GBIF no resuelve este nombre a rango específico: devuelve el género Nacerdes (consultado 2026-08-16)."
+          "nota": "Comprobado el 2026-08-28 con el Plan de gestión de los relieves y cuencas centro-orientales delante (Suplemento n.º 6 del BORM n.º 38, de 16 de febrero de 2023, anuncio 913): el plan escribe EXACTAMENTE eso, así que la transcripción del repositorio es fiel y la errata es de la NORMA, no nuestra. Por eso el verbatim no se toca. NO se corrige, y queda dicho para no volver a mirarlo desde cero: el candidato evidente es *Nacerdes barbara*, pero **ninguna de las dos autoridades lo confirma** — GBIF responde HIGHERRANK a nivel de GÉNERO (*Nacerdes* Dejean, 1834 existe; la especie no resuelve) y EIDOS no conoce el nombre. Un HIGHERRANK significa «no he sabido desambiguar», así que esto no prueba que la especie no exista; prueba que con estas dos fuentes no se puede afirmar cuál es. Haría falta una fuente entomológica, no una taxonómica general."
         },
         {
           "scientificName": "Netocia morio",
@@ -4377,7 +4379,7 @@
         {
           "scientificName": "Dipluriella loti",
           "grupo": "Invertebrados",
-          "nota": "El backbone de GBIF no resuelve este nombre a rango específico: devuelve el género Dipluriella (consultado 2026-08-16)."
+          "nota": "Comprobado el 2026-08-28 con el Plan de gestión de los relieves y cuencas centro-orientales delante (Suplemento n.º 6 del BORM n.º 38, de 16 de febrero de 2023, anuncio 913): el plan escribe EXACTAMENTE eso, así que la transcripción del repositorio es fiel y la errata es de la NORMA, no nuestra. Por eso el verbatim no se toca. NO se corrige. *Dipluriella* Strand, 1910 SÍ existe como género en GBIF, pero la especie no resuelve; y el otro candidato, *Diplura loti*, sale en GBIF como *Psilogaster loti*, que es OTRO género y no una errata del verbatim. Corregirlo exigiría decidir entre dos taxones distintos con la única pista de un nombre mal escrito, que es exactamente lo que la guarda de `anexos:coteja` existe para impedir (el caso *Iberus cobosi*)."
         },
         {
           "scientificName": "Euchloe tagis",
@@ -4402,7 +4404,8 @@
         {
           "scientificName": "Macrotilacea rubi",
           "grupo": "Invertebrados",
-          "nota": "El backbone de GBIF no conoce este nombre ni en su forma verbatim (consultado 2026-08-16)."
+          "nota": "Comprobado el 2026-08-28 con el Plan de gestión de los relieves y cuencas centro-orientales delante (Suplemento n.º 6 del BORM n.º 38, de 16 de febrero de 2023, anuncio 913): el plan escribe EXACTAMENTE eso, así que la transcripción del repositorio es fiel y la errata es de la NORMA, no nuestra. Por eso el verbatim no se toca. La lagarta de la zarza es *Macrothylacia rubi* (Linnaeus, 1758): GBIF responde EXACT y EIDOS la da por aceptada. Falta una «h» en la transcripción de la norma.",
+          "nombreCorregido": "Macrothylacia rubi"
         },
         {
           "scientificName": "Melanargia ines",
@@ -4545,7 +4548,7 @@
         {
           "scientificName": "Ephedra sppl.",
           "grupo": "Flora",
-          "nota": "La norma cita el GÉNERO, no una especie. No se da de alta ninguna especie por esta entrada: un género no identifica un taxón del catálogo."
+          "nota": "RESUELTO el 2026-08-28 con el boletín delante (BORM n.º 152, de 3 de julio de 1995, anuncio 10286, páginas del PORN). El original dice «sppl», y no es un nombre mal transcrito por nosotros: es el OCR de un texto mecanografiado de 1995, donde toda esa columna está dañada —«Chamaerops humill,s», «Ulrnus minor», «Arbutus aanedo», «Juniperus oxycednts», «Whitania frutescen s»—. Lo que la norma enumera es el GÉNERO entero («spp.»), así que NO le corresponde ningún `nombreCorregido`: no hay especie que corregir. Queda fuera del catálogo por lo mismo que «Opuntia spp.» o «Lycosa sp.», y eso es correcto."
         },
         {
           "scientificName": "Quercus rotundifolia",
@@ -4562,7 +4565,7 @@
         {
           "scientificName": "Rhamnus sppl.",
           "grupo": "Flora",
-          "nota": "La norma cita el GÉNERO, no una especie. No se da de alta ninguna especie por esta entrada."
+          "nota": "RESUELTO el 2026-08-28 con el boletín delante (BORM n.º 152, de 3 de julio de 1995, anuncio 10286, páginas del PORN). El original dice «sppl», y no es un nombre mal transcrito por nosotros: es el OCR de un texto mecanografiado de 1995, donde toda esa columna está dañada —«Chamaerops humill,s», «Ulrnus minor», «Arbutus aanedo», «Juniperus oxycednts», «Whitania frutescen s»—. Lo que la norma enumera es el GÉNERO entero («spp.»), así que NO le corresponde ningún `nombreCorregido`: no hay especie que corregir. Queda fuera del catálogo por lo mismo que «Opuntia spp.» o «Lycosa sp.», y eso es correcto."
         },
         {
           "scientificName": "Olea europaea sylvestris",
@@ -9167,7 +9170,8 @@
         {
           "scientificName": "Ariadna isidiatrix",
           "grupo": "Invertebrados",
-          "nota": "Invertebrado de interés para su conservación (Tabla 10). Especie mediterránea rara de distribución circunlitoral"
+          "nota": "Comprobado el 2026-08-28 con el Plan de gestión de los relieves y cuencas centro-orientales delante (Suplemento n.º 6 del BORM n.º 38, de 16 de febrero de 2023, anuncio 913): el plan escribe EXACTAMENTE eso, así que la transcripción del repositorio es fiel y la errata es de la NORMA, no nuestra. Por eso el verbatim no se toca. *Ariadna insidiatrix* Audouin, 1826: GBIF EXACT y EIDOS aceptada. Falta la «n».",
+          "nombreCorregido": "Ariadna insidiatrix"
         },
         {
           "scientificName": "Cebrennus sp.",
@@ -9177,7 +9181,8 @@
         {
           "scientificName": "Cirtauchenius walckenaeri",
           "grupo": "Invertebrados",
-          "nota": "Invertebrado de interés para su conservación (Tabla 10). Zonas áridas"
+          "nota": "Comprobado el 2026-08-28 con el Plan de gestión de los relieves y cuencas centro-orientales delante (Suplemento n.º 6 del BORM n.º 38, de 16 de febrero de 2023, anuncio 913): el plan escribe EXACTAMENTE eso, así que la transcripción del repositorio es fiel y la errata es de la NORMA, no nuestra. Por eso el verbatim no se toca. La errata es «Cirtauchenius» por *Cyrtauchenius*, y ahí acaba la corrección: EIDOS acepta *Cyrtauchenius walckenaeri* (Lucas, 1846). Que GBIF lo hunda en *Amblyocarenum walckenaeri* es OTRA cosa —una opinión de circunscripción de GBIF, no un problema de transcripción— y por eso `nombreCorregido` se queda en el nombre que acepta EIDOS. Es también el motivo por el que `anexos:coteja` no podía escribirlo solo: proponía el nombre de GBIF y su propia guarda lo rechazaba con un «no tiene forma de errata del verbatim», que era cierto.",
+          "nombreCorregido": "Cyrtauchenius walckenaeri"
         },
         {
           "scientificName": "Dorceus sp.",
@@ -9202,7 +9207,8 @@
         {
           "scientificName": "Ichnocolus valentinus",
           "grupo": "Invertebrados",
-          "nota": "Invertebrado de interés para su conservación (Tabla 10). Endémico del sur y este peninsular"
+          "nota": "Comprobado el 2026-08-28 con el Plan de gestión de los relieves y cuencas centro-orientales delante (Suplemento n.º 6 del BORM n.º 38, de 16 de febrero de 2023, anuncio 913): el plan escribe EXACTAMENTE eso, así que la transcripción del repositorio es fiel y la errata es de la NORMA, no nuestra. Por eso el verbatim no se toca. *Ischnocolus valentinus* (Dufour, 1820): GBIF EXACT y EIDOS aceptada. La norma escribe «Ichno-» por «Ischno-».",
+          "nombreCorregido": "Ischnocolus valentinus"
         },
         {
           "scientificName": "Latrodectus lilianae",
@@ -9243,7 +9249,8 @@
         {
           "scientificName": "Prhita nana",
           "grupo": "Invertebrados",
-          "nota": "Invertebrado de interés para su conservación (Tabla 10). Península ibérica"
+          "nota": "Comprobado el 2026-08-28 con el Plan de gestión de los relieves y cuencas centro-orientales delante (Suplemento n.º 6 del BORM n.º 38, de 16 de febrero de 2023, anuncio 913): el plan escribe EXACTAMENTE eso, así que la transcripción del repositorio es fiel y la errata es de la NORMA, no nuestra. Por eso el verbatim no se toca. *Pritha nana* (Simon, 1868): GBIF EXACT y EIDOS aceptada. La norma metatiza la «h» («Prhita» por «Pritha»).",
+          "nombreCorregido": "Pritha nana"
         },
         {
           "scientificName": "Prodidomus amaranthinus",
@@ -11974,6 +11981,958 @@
           "grupo": "Peces",
           "nombreComun": "lucioperca",
           "nota": "Tabla 13.1.3.1 «Especies de peces exóticos presentes en la ZEC»."
+        }
+      ]
+    },
+    "cabo-cope-puntas-calnegre": {
+      "fuente": {
+        "norma": "Decreto n.º 299/2010, de 26 de noviembre, por el que se aprueba el Plan de gestión y conservación de la Zona de Especial Protección para las Aves (ZEPA) de Almenara, Moreras y Cabo Cope",
+        "boletin": "BORM, diciembre de 2010. El número y la fecha exactos NO se han comprobado: el texto se leyó de una recopilación de legislación ambiental, no del boletín (ver `nota`)",
+        "url": "https://www.aranzadilaley.es/ordenanzas-municipales/documento.php?d=LE0000438982_20101222.HTML",
+        "anexo": "§7.3 «Catalogación de la fauna silvestre» —cuatro tablas, una por grupo: anfibios, reptiles, aves y mamíferos— y §8.3.3 «Especies protegidas a escala regional», que es la tabla del Catálogo Regional de Flora Silvestre Protegida (Decreto n.º 50/2003) con su figura. NO se transcriben §8.3.4 (orquídeas CITES, citadas en prosa) ni §8.3.5 (árboles monumentales, que son ejemplares concretos y no un inventario de especies del espacio).",
+        "cita": "Decreto n.º 299/2010, Plan de gestión y conservación de la ZEPA Almenara, Moreras y Cabo Cope, §7.3 (fauna catalogada) y §8.3.3 (flora del Catálogo Regional)",
+        "consultado": "2026-08-28",
+        "ambito": "la ZEPA «Sierra de la Almenara, Moreras y Cabo Cope» y su zona de estudio, que el propio plan cifra en unos 510 km² repartidos en cuatro unidades —Almenara 415 km², Carrasquilla 94, Sierra de las Moreras 16 y Cabo Cope 1—. Las tablas dicen «presentes en la ZEPA» y «en la zona de estudio», nunca «en este espacio»",
+        "exigeConstancia": true,
+        "exigeConstanciaPorque": "El ámbito del plan es DIEZ veces mayor que cualquiera de los dos espacios que lo usan, y en el caso de Cabo Cope la desproporción es extrema: el propio plan le asigna 1 km² de los ~510 que inventaría. Sin `exigeConstancia`, el nivel 1 metería en el catálogo de un macizo costero de 1 km² toda la fauna y la flora de la Sierra de la Almenara, que es otra sierra a 20 km. Es exactamente lo que pasó con el PORN de 1995 cuando los Barrancos de Gebas heredaron el inventario de Sierra Espuña: 183 fichas con el acentor alpino y el treparriscos en unas cárcavas semiáridas. El propio plan da la medida por escrito, subunidad a subunidad, así que aquí no hay que estimarla.",
+        "nota": "DE DÓNDE SALE ESTE TEXTO, que importa para saber qué vale. El PDF oficial NO se ha podido descargar: el antibot de Radware de murcianatural.carm.es y del BORM sirve un CAPTCHA para toda la IP desde el 2026-08-28. El texto transcrito procede de una recopilación de legislación ambiental que publica el articulado y los bloques del plan íntegros, y por eso `boletin` dice que el número y la fecha no están comprobados: lo que se afirma es lo que se leyó. Cotejarlo contra el BORM cuando se pueda es trabajo de una sesión, no un rehacer. || QUÉ NO TRAE EL PLAN, y conviene saberlo antes de buscarlo: su §8.3.1 y §8.3.2 dicen literalmente que en la zona de estudio NO se ha citado ninguna especie de flora de los anexos de la Directiva Hábitats ni protegida por la legislación nacional. O sea que toda la flora catalogada de este plan es regional. || LA CATEGORÍA SOLO VA EN LA FLORA. La tabla de flora del §8.3.3 es la del Catálogo Regional y da una figura limpia (EN/VU/IE). Las cuatro de fauna del §7.3 cruzan a la vez cuatro regímenes distintos en columnas —Directiva, Libro Rojo, Catálogo Nacional, Ley 7/95—, así que asignarles UNA categoría exigiría elegir cuál, y eso no lo dice la norma: se dan de alta sin `categoria` y el estado legal de cada una lo pone EIDOS, como en el resto del catálogo. || UNA ENTRADA QUE EL PROPIO PLAN MARCA COMO NO CONFIRMADA: *Enneapogon persicus* lleva en la columna de amenazas «Es posible su existencia en el ámbito de la ZEPA pues existen poblaciones muy próximas, Lomo de Bas». Se transcribe porque está en la tabla, pero con `exigeConstancia` activo no entra sin que GBIF la corrobore dentro de los polígonos, que es justo lo que corresponde a una presencia que la fuente da por posible y no por comprobada. || ERRATAS DE LA FUENTE que el cotejo tendrá que resolver con `nombreCorregido`: la norma escribe «Mauremis leprosa» (*Mauremys*), «Cheirolopus mansanetianus» (*Cheirolophus*), «Osyris lanceolada» (*lanceolata*), «Miniopterus schreibersi» y «Myotis capacinii». El verbatim NO se toca: es la cita de la norma."
+      },
+      "especies": [
+        {
+          "scientificName": "Bufo bufo",
+          "grupo": "Anfibios",
+          "apartado": "7.3 catalogación de la fauna (anfibios)"
+        },
+        {
+          "scientificName": "Bufo calamita",
+          "grupo": "Anfibios",
+          "apartado": "7.3 catalogación de la fauna (anfibios)"
+        },
+        {
+          "scientificName": "Pleurodeles waltl",
+          "grupo": "Anfibios",
+          "apartado": "7.3 catalogación de la fauna (anfibios)"
+        },
+        {
+          "scientificName": "Pelodytes punctatus",
+          "grupo": "Anfibios",
+          "apartado": "7.3 catalogación de la fauna (anfibios)"
+        },
+        {
+          "scientificName": "Testudo graeca",
+          "grupo": "Anfibios",
+          "apartado": "7.3 catalogación de la fauna (anfibios)"
+        },
+        {
+          "scientificName": "Mauremis leprosa",
+          "grupo": "Anfibios",
+          "apartado": "7.3 catalogación de la fauna (anfibios)",
+          "nombreCorregido": "Mauremys leprosa"
+        },
+        {
+          "scientificName": "Chalcides bedriagai",
+          "grupo": "Anfibios",
+          "apartado": "7.3 catalogación de la fauna (anfibios)"
+        },
+        {
+          "scientificName": "Hieraaetus fasciatus",
+          "grupo": "Reptiles",
+          "apartado": "7.3 catalogación de la fauna (reptiles)"
+        },
+        {
+          "scientificName": "Phalacrocorax aristotelis",
+          "grupo": "Reptiles",
+          "apartado": "7.3 catalogación de la fauna (reptiles)"
+        },
+        {
+          "scientificName": "Circaetus gallicus",
+          "grupo": "Reptiles",
+          "apartado": "7.3 catalogación de la fauna (reptiles)"
+        },
+        {
+          "scientificName": "Aquila chrysaetos",
+          "grupo": "Reptiles",
+          "apartado": "7.3 catalogación de la fauna (reptiles)"
+        },
+        {
+          "scientificName": "Falco peregrinus",
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
+        },
+        {
+          "scientificName": "Bubo bubo",
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
+        },
+        {
+          "scientificName": "Coracias garrulus",
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
+        },
+        {
+          "scientificName": "Corvus corax",
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
+        },
+        {
+          "scientificName": "Pyrrhocorax pyrrhocorax",
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
+        },
+        {
+          "scientificName": "Galerida theklae",
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
+        },
+        {
+          "scientificName": "Oenanthe leucura",
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
+        },
+        {
+          "scientificName": "Sylvia undata",
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
+        },
+        {
+          "scientificName": "Burhinus oedicnemus",
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
+        },
+        {
+          "scientificName": "Hieraaetus pennatus",
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
+        },
+        {
+          "scientificName": "Rhinolophus ferrumequinum",
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
+        },
+        {
+          "scientificName": "Rhinolophus hipposideros",
+          "grupo": "Mamíferos",
+          "apartado": "7.3 catalogación de la fauna (mamíferos)"
+        },
+        {
+          "scientificName": "Miniopterus schreibersi",
+          "grupo": "Mamíferos",
+          "apartado": "7.3 catalogación de la fauna (mamíferos)"
+        },
+        {
+          "scientificName": "Myotis myotis",
+          "grupo": "Mamíferos",
+          "apartado": "7.3 catalogación de la fauna (mamíferos)"
+        },
+        {
+          "scientificName": "Myotis capacinii",
+          "grupo": "Mamíferos",
+          "apartado": "7.3 catalogación de la fauna (mamíferos)",
+          "nombreCorregido": "Myotis capaccinii"
+        },
+        {
+          "scientificName": "Atelerix algirus",
+          "grupo": "Mamíferos",
+          "apartado": "7.3 catalogación de la fauna (mamíferos)"
+        },
+        {
+          "scientificName": "Genetta genetta",
+          "grupo": "Mamíferos",
+          "apartado": "7.3 catalogación de la fauna (mamíferos)"
+        },
+        {
+          "scientificName": "Meles meles",
+          "grupo": "Mamíferos",
+          "apartado": "7.3 catalogación de la fauna (mamíferos)"
+        },
+        {
+          "scientificName": "Martes foina",
+          "grupo": "Mamíferos",
+          "apartado": "7.3 catalogación de la fauna (mamíferos)"
+        },
+        {
+          "scientificName": "Felis sylvestris",
+          "grupo": "Mamíferos",
+          "apartado": "7.3 catalogación de la fauna (mamíferos)",
+          "nombreCorregido": "Felis silvestris"
+        },
+        {
+          "scientificName": "Enneapogon persicus",
+          "grupo": "Flora",
+          "categoria": "En Peligro de Extinción (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Allium melananthum",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Caralluma europaea",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Centaurea saxicola",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Chaenorhinum grandiflorum subsp. Carthaginense",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Cheirolopus mansanetianus",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Dianthus charidemi",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Lafuentea rotundifolia",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Periploca angustifolia",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Salsola papillosa",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Senecio flavus",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Sideritis lasiantha",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Ziziphus lotus",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Achillea santolinoides",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Anabasis hispanica",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Celtis australis",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Chamaerops humilis",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Cheilanthes maderensis",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Cistus ladanifer subsp. ladanifer",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Clematis cirrosa",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional",
+          "nombreCorregido": "Clematis cirrhosa"
+        },
+        {
+          "scientificName": "Coriaria myrtifolia",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Erodium sanguis-christi",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Juniperus oxycedrus subsp. Oxycedrus",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Juniperus phoenicea subsp. Phoenicea",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Launaea lanifera",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Limonium cossonianum",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Limonium insigne",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Lycium intricatum",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Lycocarpus fugax",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Myrtus communis",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Notoceras bicorne",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Ononis speciosa",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Osyris lanceolada",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional",
+          "nombreCorregido": "Osyris lanceolata"
+        },
+        {
+          "scientificName": "Phillyrea angustifolia",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Phlomis purpurea",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Plantago notata",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Populus alba",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Populus nigra",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Quercus rotundifolia",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Rhamnus alaternus",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Rhamnus hispanorum",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Salsola webbii",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Sanguisorba ancistroides",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Santolina viscosa",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Sarcocapnos enneaphylla subsp. Saetabensis",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Serratula mucronata",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Tamarix africana",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Tamarix canariensis",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Teucrium freynii",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Teucrium lanigerum",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        }
+      ]
+    },
+    "sierra-de-las-moreras": {
+      "fuente": {
+        "norma": "Decreto n.º 299/2010, de 26 de noviembre, por el que se aprueba el Plan de gestión y conservación de la Zona de Especial Protección para las Aves (ZEPA) de Almenara, Moreras y Cabo Cope",
+        "boletin": "BORM, diciembre de 2010. El número y la fecha exactos NO se han comprobado: el texto se leyó de una recopilación de legislación ambiental, no del boletín (ver `nota`)",
+        "url": "https://www.aranzadilaley.es/ordenanzas-municipales/documento.php?d=LE0000438982_20101222.HTML",
+        "anexo": "§7.3 «Catalogación de la fauna silvestre» —cuatro tablas, una por grupo: anfibios, reptiles, aves y mamíferos— y §8.3.3 «Especies protegidas a escala regional», que es la tabla del Catálogo Regional de Flora Silvestre Protegida (Decreto n.º 50/2003) con su figura. NO se transcriben §8.3.4 (orquídeas CITES, citadas en prosa) ni §8.3.5 (árboles monumentales, que son ejemplares concretos y no un inventario de especies del espacio).",
+        "cita": "Decreto n.º 299/2010, Plan de gestión y conservación de la ZEPA Almenara, Moreras y Cabo Cope, §7.3 (fauna catalogada) y §8.3.3 (flora del Catálogo Regional)",
+        "consultado": "2026-08-28",
+        "ambito": "la ZEPA «Sierra de la Almenara, Moreras y Cabo Cope» y su zona de estudio, que el propio plan cifra en unos 510 km² repartidos en cuatro unidades —Almenara 415 km², Carrasquilla 94, Sierra de las Moreras 16 y Cabo Cope 1—. Las tablas dicen «presentes en la ZEPA» y «en la zona de estudio», nunca «en este espacio»",
+        "exigeConstancia": true,
+        "exigeConstanciaPorque": "El ámbito del plan es DIEZ veces mayor que cualquiera de los dos espacios que lo usan, y en el caso de Cabo Cope la desproporción es extrema: el propio plan le asigna 1 km² de los ~510 que inventaría. Sin `exigeConstancia`, el nivel 1 metería en el catálogo de un macizo costero de 1 km² toda la fauna y la flora de la Sierra de la Almenara, que es otra sierra a 20 km. Es exactamente lo que pasó con el PORN de 1995 cuando los Barrancos de Gebas heredaron el inventario de Sierra Espuña: 183 fichas con el acentor alpino y el treparriscos en unas cárcavas semiáridas. El propio plan da la medida por escrito, subunidad a subunidad, así que aquí no hay que estimarla.",
+        "nota": "DE DÓNDE SALE ESTE TEXTO, que importa para saber qué vale. El PDF oficial NO se ha podido descargar: el antibot de Radware de murcianatural.carm.es y del BORM sirve un CAPTCHA para toda la IP desde el 2026-08-28. El texto transcrito procede de una recopilación de legislación ambiental que publica el articulado y los bloques del plan íntegros, y por eso `boletin` dice que el número y la fecha no están comprobados: lo que se afirma es lo que se leyó. Cotejarlo contra el BORM cuando se pueda es trabajo de una sesión, no un rehacer. || QUÉ NO TRAE EL PLAN, y conviene saberlo antes de buscarlo: su §8.3.1 y §8.3.2 dicen literalmente que en la zona de estudio NO se ha citado ninguna especie de flora de los anexos de la Directiva Hábitats ni protegida por la legislación nacional. O sea que toda la flora catalogada de este plan es regional. || LA CATEGORÍA SOLO VA EN LA FLORA. La tabla de flora del §8.3.3 es la del Catálogo Regional y da una figura limpia (EN/VU/IE). Las cuatro de fauna del §7.3 cruzan a la vez cuatro regímenes distintos en columnas —Directiva, Libro Rojo, Catálogo Nacional, Ley 7/95—, así que asignarles UNA categoría exigiría elegir cuál, y eso no lo dice la norma: se dan de alta sin `categoria` y el estado legal de cada una lo pone EIDOS, como en el resto del catálogo. || UNA ENTRADA QUE EL PROPIO PLAN MARCA COMO NO CONFIRMADA: *Enneapogon persicus* lleva en la columna de amenazas «Es posible su existencia en el ámbito de la ZEPA pues existen poblaciones muy próximas, Lomo de Bas». Se transcribe porque está en la tabla, pero con `exigeConstancia` activo no entra sin que GBIF la corrobore dentro de los polígonos, que es justo lo que corresponde a una presencia que la fuente da por posible y no por comprobada. || ERRATAS DE LA FUENTE que el cotejo tendrá que resolver con `nombreCorregido`: la norma escribe «Mauremis leprosa» (*Mauremys*), «Cheirolopus mansanetianus» (*Cheirolophus*), «Osyris lanceolada» (*lanceolata*), «Miniopterus schreibersi» y «Myotis capacinii». El verbatim NO se toca: es la cita de la norma."
+      },
+      "especies": [
+        {
+          "scientificName": "Bufo bufo",
+          "grupo": "Anfibios",
+          "apartado": "7.3 catalogación de la fauna (anfibios)"
+        },
+        {
+          "scientificName": "Bufo calamita",
+          "grupo": "Anfibios",
+          "apartado": "7.3 catalogación de la fauna (anfibios)"
+        },
+        {
+          "scientificName": "Pleurodeles waltl",
+          "grupo": "Anfibios",
+          "apartado": "7.3 catalogación de la fauna (anfibios)"
+        },
+        {
+          "scientificName": "Pelodytes punctatus",
+          "grupo": "Anfibios",
+          "apartado": "7.3 catalogación de la fauna (anfibios)"
+        },
+        {
+          "scientificName": "Testudo graeca",
+          "grupo": "Anfibios",
+          "apartado": "7.3 catalogación de la fauna (anfibios)"
+        },
+        {
+          "scientificName": "Mauremis leprosa",
+          "grupo": "Anfibios",
+          "apartado": "7.3 catalogación de la fauna (anfibios)",
+          "nombreCorregido": "Mauremys leprosa"
+        },
+        {
+          "scientificName": "Chalcides bedriagai",
+          "grupo": "Anfibios",
+          "apartado": "7.3 catalogación de la fauna (anfibios)"
+        },
+        {
+          "scientificName": "Hieraaetus fasciatus",
+          "grupo": "Reptiles",
+          "apartado": "7.3 catalogación de la fauna (reptiles)"
+        },
+        {
+          "scientificName": "Phalacrocorax aristotelis",
+          "grupo": "Reptiles",
+          "apartado": "7.3 catalogación de la fauna (reptiles)"
+        },
+        {
+          "scientificName": "Circaetus gallicus",
+          "grupo": "Reptiles",
+          "apartado": "7.3 catalogación de la fauna (reptiles)"
+        },
+        {
+          "scientificName": "Aquila chrysaetos",
+          "grupo": "Reptiles",
+          "apartado": "7.3 catalogación de la fauna (reptiles)"
+        },
+        {
+          "scientificName": "Falco peregrinus",
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
+        },
+        {
+          "scientificName": "Bubo bubo",
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
+        },
+        {
+          "scientificName": "Coracias garrulus",
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
+        },
+        {
+          "scientificName": "Corvus corax",
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
+        },
+        {
+          "scientificName": "Pyrrhocorax pyrrhocorax",
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
+        },
+        {
+          "scientificName": "Galerida theklae",
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
+        },
+        {
+          "scientificName": "Oenanthe leucura",
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
+        },
+        {
+          "scientificName": "Sylvia undata",
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
+        },
+        {
+          "scientificName": "Burhinus oedicnemus",
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
+        },
+        {
+          "scientificName": "Hieraaetus pennatus",
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
+        },
+        {
+          "scientificName": "Rhinolophus ferrumequinum",
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
+        },
+        {
+          "scientificName": "Rhinolophus hipposideros",
+          "grupo": "Mamíferos",
+          "apartado": "7.3 catalogación de la fauna (mamíferos)"
+        },
+        {
+          "scientificName": "Miniopterus schreibersi",
+          "grupo": "Mamíferos",
+          "apartado": "7.3 catalogación de la fauna (mamíferos)"
+        },
+        {
+          "scientificName": "Myotis myotis",
+          "grupo": "Mamíferos",
+          "apartado": "7.3 catalogación de la fauna (mamíferos)"
+        },
+        {
+          "scientificName": "Myotis capacinii",
+          "grupo": "Mamíferos",
+          "apartado": "7.3 catalogación de la fauna (mamíferos)",
+          "nombreCorregido": "Myotis capaccinii"
+        },
+        {
+          "scientificName": "Atelerix algirus",
+          "grupo": "Mamíferos",
+          "apartado": "7.3 catalogación de la fauna (mamíferos)"
+        },
+        {
+          "scientificName": "Genetta genetta",
+          "grupo": "Mamíferos",
+          "apartado": "7.3 catalogación de la fauna (mamíferos)"
+        },
+        {
+          "scientificName": "Meles meles",
+          "grupo": "Mamíferos",
+          "apartado": "7.3 catalogación de la fauna (mamíferos)"
+        },
+        {
+          "scientificName": "Martes foina",
+          "grupo": "Mamíferos",
+          "apartado": "7.3 catalogación de la fauna (mamíferos)"
+        },
+        {
+          "scientificName": "Felis sylvestris",
+          "grupo": "Mamíferos",
+          "apartado": "7.3 catalogación de la fauna (mamíferos)",
+          "nombreCorregido": "Felis silvestris"
+        },
+        {
+          "scientificName": "Enneapogon persicus",
+          "grupo": "Flora",
+          "categoria": "En Peligro de Extinción (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Allium melananthum",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Caralluma europaea",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Centaurea saxicola",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Chaenorhinum grandiflorum subsp. Carthaginense",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Cheirolopus mansanetianus",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Dianthus charidemi",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Lafuentea rotundifolia",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Periploca angustifolia",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Salsola papillosa",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Senecio flavus",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Sideritis lasiantha",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Ziziphus lotus",
+          "grupo": "Flora",
+          "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Achillea santolinoides",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Anabasis hispanica",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Celtis australis",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Chamaerops humilis",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Cheilanthes maderensis",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Cistus ladanifer subsp. ladanifer",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Clematis cirrosa",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional",
+          "nombreCorregido": "Clematis cirrhosa"
+        },
+        {
+          "scientificName": "Coriaria myrtifolia",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Erodium sanguis-christi",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Juniperus oxycedrus subsp. Oxycedrus",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Juniperus phoenicea subsp. Phoenicea",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Launaea lanifera",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Limonium cossonianum",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Limonium insigne",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Lycium intricatum",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Lycocarpus fugax",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Myrtus communis",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Notoceras bicorne",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Ononis speciosa",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Osyris lanceolada",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional",
+          "nombreCorregido": "Osyris lanceolata"
+        },
+        {
+          "scientificName": "Phillyrea angustifolia",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Phlomis purpurea",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Plantago notata",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Populus alba",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Populus nigra",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Quercus rotundifolia",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Rhamnus alaternus",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Rhamnus hispanorum",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Salsola webbii",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Sanguisorba ancistroides",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Santolina viscosa",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Sarcocapnos enneaphylla subsp. Saetabensis",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Serratula mucronata",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Tamarix africana",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Tamarix canariensis",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Teucrium freynii",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
+        },
+        {
+          "scientificName": "Teucrium lanigerum",
+          "grupo": "Flora",
+          "categoria": "De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
+          "apartado": "8.3.3 especies protegidas a escala regional"
         }
       ]
     }

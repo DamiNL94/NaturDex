@@ -44,8 +44,14 @@
  * unos de GBIF y otros del Atlas, y antes esa mezcla descuadraba la cuenta de arriba y mandaba la
  * ficha ENTERA a NULL, perdiendo la procedencia de los enlaces que GBIF sí respaldaba.
  *
- * `gbif_occurrences` se queda a NULL siempre: el `park.json` guarda el total de la especie sumando
- * todos sus polígonos, no el recuento de cada uno, y repartir ese total sería un dato falso.
+ * `species_habitats.gbif_occurrences` —el recuento de UN polígono— se queda a NULL siempre: el
+ * `park.json` guarda el total de la especie sumando todos sus polígonos, no el recuento de cada uno,
+ * y repartir ese total sería un dato falso.
+ *
+ * Distinto es `species.gbif_occurrences`, que SÍ se vuelca desde el 2026-08-27: es ese total, la
+ * huella del filtro de presencia, y no tenía columna — por eso la ida y vuelta por la API lo borraba
+ * en silencio de 767 fichas (deuda nº 3). Igual que `habitats.origen`, el campo de procedencia de
+ * cada recinto, que vive en el geojson y tampoco tenía dónde caer.
  *
  * Uso
  * ---
@@ -83,9 +89,17 @@ const salida = arg('out', path.join(DATABASE, `${slug}-n2.sql`));
 const geoRel = manifest.geo && manifest.geo.habitats;
 const geo = geoRel ? readJsonIf(path.join(FRONTEND, geoRel)) : null;
 const geometriaPorSlug = new Map();
+// La PROCEDENCIA de cada recinto (regla nº 1 del CLAUDE.md). Viaja en el geojson y hasta el
+// 2026-08-27 no tenía columna, así que la ida y vuelta por la API la borraba (deuda nº 3).
+const origenPorSlug = new Map();
+// Y las propiedades enteras del recinto, para las otras dos que tampoco tenían columna: `fuentes`
+// (las DOS citas de un recinto fundido) y `solo_curada` (el que no tiene equivalente oficial).
+const propsPorSlug = new Map();
 for (const f of (geo && geo.features) || []) {
   const s = f.properties && f.properties.slug;
   if (s && f.geometry) geometriaPorSlug.set(s, f.geometry);
+  if (s && f.properties.origen) origenPorSlug.set(s, f.properties.origen);
+  if (s) propsPorSlug.set(s, f.properties);
 }
 
 // --- Evidencia del vínculo (ver cabecera) ---------------------------------------------------------
@@ -172,11 +186,11 @@ L.push('    longitude = VALUES(longitude), status = VALUES(status);');
 
 // 2) Hábitats --------------------------------------------------------------------------------------
 seccion(`2. Hábitats (${habitats.length}). \`geometry\` sale del geojson; sin ella el mapa dibuja un círculo.`);
-L.push('INSERT INTO habitats (park_id, slug, code, name, habitat_type, description, is_priority, latitude, longitude, color, geometry, review_note, hic_subtipos, fitosociologia, audio_url, audio_transcript, image_url, image_attribution, image_note)');
-L.push('SELECT pk.id, h.slug, h.code, h.name, h.habitat_type, h.description, h.is_priority, h.latitude, h.longitude, h.color, h.geometry, h.review_note, h.hic_subtipos, h.fitosociologia, h.audio_url, h.audio_transcript, h.image_url, h.image_attribution, h.image_note');
+L.push('INSERT INTO habitats (park_id, slug, code, name, habitat_type, description, is_priority, latitude, longitude, color, geometry, review_note, hic_subtipos, fitosociologia, origen, fuentes, solo_curada, audio_url, audio_transcript, image_url, image_attribution, image_note)');
+L.push('SELECT pk.id, h.slug, h.code, h.name, h.habitat_type, h.description, h.is_priority, h.latitude, h.longitude, h.color, h.geometry, h.review_note, h.hic_subtipos, h.fitosociologia, h.origen, h.fuentes, h.solo_curada, h.audio_url, h.audio_transcript, h.image_url, h.image_attribution, h.image_note');
 L.push('FROM parks pk JOIN (');
 const alias = (arr, primera) => arr.map((v, i) => v + (primera ? ' ' + primera[i] : '')).join(', ');
-const COLS_H = ['slug', 'code', 'name', 'habitat_type', 'description', 'is_priority', 'latitude', 'longitude', 'color', 'geometry', 'review_note', 'hic_subtipos', 'fitosociologia', 'audio_url', 'audio_transcript', 'image_url', 'image_attribution', 'image_note'];
+const COLS_H = ['slug', 'code', 'name', 'habitat_type', 'description', 'is_priority', 'latitude', 'longitude', 'color', 'geometry', 'review_note', 'hic_subtipos', 'fitosociologia', 'origen', 'fuentes', 'solo_curada', 'audio_url', 'audio_transcript', 'image_url', 'image_attribution', 'image_note'];
 habitats.forEach((h, i) => {
   const v = [
     sqlStr(h.id), sqlStrOrNull(h.code), sqlStr(h.name), sqlStrOrNull(h.type), sqlStrOrNull(h.description),
@@ -185,6 +199,10 @@ habitats.forEach((h, i) => {
     sqlStrOrNull(h.color),
     geometriaPorSlug.has(h.id) ? sqlJson(geometriaPorSlug.get(h.id)) : 'NULL',
     sqlStrOrNull(h.reviewNote), sqlJson(h.hicSubtipos), sqlJson(h.fitosociologia),
+    // El origen vive en el geojson, como la geometría: es una propiedad del RECINTO, no de la ficha.
+    sqlStrOrNull(origenPorSlug.get(h.id)),
+    sqlJson(propsPorSlug.get(h.id) && propsPorSlug.get(h.id).fuentes),
+    sqlBool(propsPorSlug.get(h.id) && propsPorSlug.get(h.id).solo_curada),
     sqlStrOrNull(h.audio), sqlStrOrNull(h.audioTranscript),
     sqlStrOrNull(h.image), sqlStrOrNull(h.imageAttribution), sqlStrOrNull(h.imageNote),
   ];
@@ -197,13 +215,14 @@ L.push('    name = VALUES(name), habitat_type = VALUES(habitat_type), descriptio
 L.push('    is_priority = VALUES(is_priority), latitude = VALUES(latitude), longitude = VALUES(longitude),');
 L.push('    color = VALUES(color), geometry = VALUES(geometry), review_note = VALUES(review_note),');
 L.push('    hic_subtipos = VALUES(hic_subtipos), fitosociologia = VALUES(fitosociologia),');
+L.push('    origen = VALUES(origen), fuentes = VALUES(fuentes), solo_curada = VALUES(solo_curada),');
 L.push('    audio_url = VALUES(audio_url), audio_transcript = VALUES(audio_transcript),');
 L.push('    image_url = VALUES(image_url), image_attribution = VALUES(image_attribution),');
 L.push('    image_note = VALUES(image_note);');
 
 // 3) Especies --------------------------------------------------------------------------------------
 seccion(`3. Especies (${species.length}). \`identification_tips\` va como texto separado por «; », que es como lo parte park_payload.php.`);
-const COLS_S = ['common_name', 'scientific_name', 'kingdom', 'family', 'primary_habitat', 'conservation_status', 'description', 'description_source', 'identification_tips', 'seasonality', 'image_url', 'image_attribution', 'latitude', 'longitude', 'rarity_score', 'rarity_basis', 'rarity_local', 'rarity_local_basis', 'is_featured', 'is_visible', 'hidden_reason', 'source', 'taxon_phylum', 'taxon_class', 'taxon_order', 'taxon_family', 'taxon_genus', 'iucn_global', 'spain_status', 'murcia_status', 'review_note', 'eidos_taxonid', 'gbif_species_key', 'zepa_site_code', 'is_migratory', 'site_presence'];
+const COLS_S = ['common_name', 'scientific_name', 'kingdom', 'family', 'primary_habitat', 'conservation_status', 'description', 'description_source', 'identification_tips', 'seasonality', 'image_url', 'image_attribution', 'latitude', 'longitude', 'rarity_score', 'rarity_basis', 'rarity_local', 'rarity_local_basis', 'is_featured', 'is_visible', 'hidden_reason', 'source', 'taxon_phylum', 'taxon_class', 'taxon_order', 'taxon_family', 'taxon_genus', 'iucn_global', 'iucn_spain', 'spain_status', 'regional_status', 'regional_ccaa', 'review_note', 'eidos_taxonid', 'gbif_species_key', 'gbif_occurrences', 'zepa_site_code', 'is_migratory', 'site_presence'];
 // Los dos `*_basis` son columnas JSON y se escriben con `sqlJson` de lib/sql (ya lo usan los
 // hábitats): así vuelven del viaje siendo el mismo objeto que hay en el park.json, en vez de una
 // cadena. `park_payload.php` los decodifica al otro lado.
@@ -229,8 +248,13 @@ species.forEach((s, i) => {
     sqlStrOrNull(s.hiddenReason),
     sqlStrOrNull(s.source),
     sqlStrOrNull(t.phylum), sqlStrOrNull(t.class), sqlStrOrNull(t.order), sqlStrOrNull(t.family), sqlStrOrNull(t.genus),
-    sqlStrOrNull(s.iucnGlobal), sqlStrOrNull(s.spainStatus), sqlStrOrNull(s.murciaStatus), sqlStrOrNull(s.reviewNote),
-    sqlNum(s.eidosTaxonId), sqlNum(s.gbifSpeciesKey), sqlStrOrNull(s.zepaSiteCode),
+    sqlStrOrNull(s.iucnGlobal), sqlStrOrNull(s.iucnSpain), sqlStrOrNull(s.spainStatus), sqlStrOrNull(s.regionalStatus), sqlStrOrNull(s.regionalCcaa), sqlStrOrNull(s.reviewNote),
+    sqlNum(s.eidosTaxonId), sqlNum(s.gbifSpeciesKey),
+    // `sqlNum` deja NULL lo que no es número, y aquí eso es lo correcto: NULL («nadie barrió») y 0
+    // («se barrió y no cayó ninguna») dicen cosas distintas, y la auditoría de enlaces las trata
+    // distinto (a una ficha sin este dato NO le retira ningún enlace por el silencio de GBIF).
+    sqlNum(s.gbifOccurrences),
+    sqlStrOrNull(s.zepaSiteCode),
     // `is_migratory` va a NULL —y no a FALSE— cuando la ficha no trae el campo: son las aves que
     // ningún formulario oficial nombra. Escribir FALSE afirmaría una comprobación que nadie ha
     // hecho, y la app usa justo esa diferencia para dejarlas en el catálogo general.

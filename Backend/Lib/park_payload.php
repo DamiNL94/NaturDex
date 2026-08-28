@@ -86,7 +86,7 @@ function buildParkPayload($conn, $parkSlug) {
     }
 
     // --- Especies ---------------------------------------------------------------------------------
-    $speciesStmt = $conn->prepare("SELECT id, common_name, scientific_name, kingdom, family, primary_habitat, conservation_status, description, identification_tips, seasonality, image_url, image_attribution, description_source, latitude, longitude, rarity_score, rarity_basis, rarity_local, rarity_local_basis, is_featured, is_visible, hidden_reason, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, spain_status, murcia_status, review_note, eidos_taxonid, gbif_species_key, zepa_site_code, is_migratory, site_presence FROM species WHERE park_id = ? ORDER BY is_featured DESC, common_name ASC");
+    $speciesStmt = $conn->prepare("SELECT id, common_name, scientific_name, kingdom, family, primary_habitat, conservation_status, description, identification_tips, seasonality, image_url, image_attribution, description_source, latitude, longitude, rarity_score, rarity_basis, rarity_local, rarity_local_basis, is_featured, is_visible, hidden_reason, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, iucn_spain, spain_status, regional_status, regional_ccaa, review_note, eidos_taxonid, gbif_species_key, gbif_occurrences, zepa_site_code, is_migratory, site_presence FROM species WHERE park_id = ? ORDER BY is_featured DESC, common_name ASC");
     $speciesStmt->bind_param("i", $park["id"]);
     $speciesStmt->execute();
     $result = $speciesStmt->get_result();
@@ -137,13 +137,24 @@ function buildParkPayload($conn, $parkSlug) {
                 "genus" => $row["taxon_genus"]
             ],
             "iucnGlobal" => $row["iucn_global"],
+            // Lista Roja ESPAÑOLA: otra evaluación de la UICN, con su propia autoridad y su propio año.
+            // Va aparte de la mundial a propósito; null = EIDOS no la trae, que no es «no evaluada».
+            "iucnSpain" => $row["iucn_spain"],
             "spainStatus" => $row["spain_status"],
-            "murciaStatus" => $row["murcia_status"],
+            // Estado legal AUTONÓMICO y la comunidad a la que se refiere. Se llamaba murciaStatus
+            // y estaba atado a Murcia (deuda nº 2): la comunidad viaja ahora en el dato, no escrita a
+            // mano en la plantilla del frontend. null = no se ha dicho, no «de ninguna».
+            "regionalStatus" => $row["regional_status"],
+            "regionalCcaa" => $row["regional_ccaa"],
             "reviewNote" => $row["review_note"],
             // Claves maestras de reconciliación taxonómica (trazabilidad, también en la copia offline):
             // EIDOS (IEPNB) canónica; GBIF speciesKey liga las ocurrencias. null si la fuente no cubre.
             "eidosTaxonId" => $row["eidos_taxonid"] !== null ? (int) $row["eidos_taxonid"] : null,
             "gbifSpeciesKey" => $row["gbif_species_key"] !== null ? (int) $row["gbif_species_key"] : null,
+            // Ocurrencias de GBIF dentro de los polígonos de este espacio. No tenía columna, así que
+            // la ida y vuelta por la API lo borraba en silencio de 767 fichas (deuda nº 3). Se
+            // distingue null de 0: «nadie barrió» no es «se barrió y no cayó ninguna».
+            "gbifOccurrences" => $row["gbif_occurrences"] !== null ? (int) $row["gbif_occurrences"] : null,
             // Código del espacio ZEPA si el ave figura en su lista oficial (EEA/BISE); null si no aplica.
             "zepaSiteCode" => $row["zepa_site_code"],
             // Fenología del ave según el Formulario Normalizado de Datos del sitio Red Natura 2000:

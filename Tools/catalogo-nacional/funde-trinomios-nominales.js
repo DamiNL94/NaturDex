@@ -76,7 +76,7 @@ const CON_SQL = flag('sql') || Boolean(arg('sql'));
 // son los mismos que reparte `Tools/sync-species-catalog.js`, así que dejarlos con los del trinomio
 // haría que el siguiente `species:apply` los cambiara por su cuenta.
 const UNIVERSALES = ['commonName', 'kingdom', 'group', 'habitat', 'seasonality', 'rarityScore', 'rarityBasis',
-  'description', 'descriptionSource', 'tips', 'taxonomy', 'iucnGlobal', 'spainStatus', 'image', 'imageAttribution'];
+  'description', 'descriptionSource', 'tips', 'taxonomy', 'iucnGlobal', 'iucnSpain', 'spainStatus', 'image', 'imageAttribution'];
 
 const hoy = () => new Date().toISOString().slice(0, 10);
 

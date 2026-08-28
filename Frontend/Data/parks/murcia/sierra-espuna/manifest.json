@@ -2,8 +2,8 @@
   "slug": "sierra-espuna",
   "name": "Sierra Espuña",
   "apiSlug": "sierra-espuna",
-  "version": 8,
-  "updatedAt": "2026-08-25",
+  "version": 13,
+  "updatedAt": "2026-08-27",
   "data": "Data/parks/murcia/sierra-espuna/park.json",
   "geo": {
     "parque": "Data/parks/murcia/sierra-espuna/geo/parque.geojson",

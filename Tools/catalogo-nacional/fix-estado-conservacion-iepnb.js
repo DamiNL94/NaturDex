@@ -165,7 +165,7 @@ function aplicarPark(cambios) {
     if (c.eidos) sp.eidosTaxonId = c.eidos;
     if (c.spain) sp.spainStatus = c.spain;
     if (c.spainAppend) sp.spainStatus = anexar(sp.spainStatus, c.spainAppend);
-    if (c.murcia) sp.murciaStatus = c.murcia;
+    if (c.murcia) sp.regionalStatus = c.murcia;   // campo renombrado el 2026-08-27 (deuda nº 2)
     if (c.cs) sp.conservationStatus = c.cs;
     if (c.iucn) sp.iucnGlobal = c.iucn;
     if ('review' in c) { if (c.review === null) delete sp.reviewNote; else sp.reviewNote = c.review; }
@@ -213,7 +213,7 @@ function aplicarSeed(cambios) {
         const act = (l.match(/'((?:[^']|'')*)' spain_status\b/) || [])[1];
         if (act !== undefined) l = sustituirCampo(l, 'spain_status', anexar(act.replace(/''/g, "'"), c.spainAppend));
       }
-      if (c.murcia) l = sustituirCampo(l, 'murcia_status', c.murcia);
+      if (c.murcia) l = sustituirCampo(l, 'regional_status', c.murcia);
       if (c.cs) l = sustituirCampo(l, 'conservation_status', c.cs);
       if (c.iucn) l = sustituirCampo(l, 'iucn_global', c.iucn);
       if ('review' in c) l = sustituirCampo(l, 'review_note', c.review);

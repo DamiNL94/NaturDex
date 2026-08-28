@@ -1,0 +1,35 @@
+{
+  "_esquema": "Los catálogos autonómicos de especies protegidas, comunidad a comunidad. Existe porque el campo de estado autonómico de la ficha (`regionalStatus`) era texto libre y estaba atado a Murcia: sin esta tabla, cada espacio nuevo de una comunidad nueva se inventaría el nombre de su catálogo y la frase de «no incluida», y dos espacios de la misma comunidad podrían escribirlo distinto. Aquí está la lista de normas que SON el catálogo regional de cada comunidad, y de ella sale tanto la frase que ve el usuario como la comprobación de que la norma que devuelve EIDOS es de verdad la del catálogo y no otra cosa.",
+  "_por_que_una_lista_y_no_una_norma": "Porque una comunidad puede tener MÁS DE UN catálogo, y Murcia lo demuestra: la flora va por el Decreto n.º 50/2003 y la fauna por la Ley 7/1995, que son dos normas distintas con dos escaleras de categorías distintas. Una tabla `comunidad → norma` se habría quedado corta a la primera. Por eso cada comunidad lleva una lista de catálogos y cada catálogo dice a qué `reino` se aplica (`flora`, `fauna` o `ambos`).",
+  "_como_se_da_de_alta_una_comunidad": "Con el boletín delante, NUNCA de memoria. Se copia el título de la norma tal y como lo devuelve EIDOS en `v_estadolegal` (que es con lo que hay que cotejarlo después, carácter a carácter, y por eso no se abrevia ni se corrige la puntuación), se anota en `verificado` cómo se comprobó y en qué fecha, y se deja `url` a null si no se ha localizado el enlace permanente: un enlace inventado es peor que ninguno. Mientras una comunidad NO esté aquí, `build-species-n2.js` deja el campo VACÍO en vez de escribir una frase genérica: afirmar «no incluida en el Catálogo Regional» de una comunidad cuyo catálogo nadie ha mirado es exactamente el dato inventado que prohíbe la regla nº 2 del CLAUDE.md.",
+  "_ojo_con_la_frase_de_negacion": "«No incluida en X» es una AFIRMACIÓN sobre X, no un hueco. Solo se escribe cuando la comunidad está aquí dada de alta y EIDOS ha respondido para ese taxón; si EIDOS no ha podido consultarse, el campo se queda sin escribir. Es la misma regla que la fenología de las aves: una fuente que no se ha podido consultar no dice que no.",
+
+  "Región de Murcia": {
+    "codigo": "MC",
+    "verificado": "2026-08-27. Los dos títulos están copiados literalmente de los textos que EIDOS (IEPNB) devuelve en `v_estadolegal` para taxones de la Región de Murcia, que son los que el catálogo lleva escritos en 2.945 fichas desde el piloto.",
+    "url": null,
+    "catalogos": [
+      {
+        "reino": "flora",
+        "nombre": "Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "categorias": ["En Peligro de Extinción", "Vulnerable", "De interés especial"],
+        "nota": "Su Anexo II no es una categoría de amenaza: es «aprovechamiento sujeto a autorización previa», que regula la recolección (tomillo, romero…) y NO protege al taxón. `Tools/lib/rareza.js` lo descarta a propósito."
+      },
+      {
+        "reino": "fauna",
+        "nombre": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia",
+        "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
+        "categorias": ["Extinguida", "En Peligro de Extinción", "Vulnerable", "De interés especial"],
+        "nota": "Añade la categoría «Extinguida», que el catálogo de flora no tiene."
+      },
+      {
+        "reino": "fauna",
+        "nombre": "Catalogación de la malvasía cabeciblanca",
+        "norma": "Decreto n.º 70/2016, de 12 de julio, de catalogación de la malvasía cabeciblanca como especie en peligro de extinción y aprobación de su plan de recuperación.",
+        "categorias": ["En Peligro de Extinción"],
+        "nota": "Norma de UN solo taxón (Oxyura leucocephala). Está aquí porque EIDOS la devuelve como estado legal autonómico y sin la entrada no se distinguiría de una norma que no es de catálogo."
+      }
+    ]
+  }
+}

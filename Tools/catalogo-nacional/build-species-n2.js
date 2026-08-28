@@ -59,11 +59,15 @@ const PARK = arg('park');
 requireArgs('Uso: --park <slug> [--dry] [--podar] [--seleccion <ruta>] [--gbif <ruta>]', { park: PARK });
 
 const CATALOGO = path.join(CATALOGO_DIR, 'data', 'especies-universal.json');
+// Los catálogos autonómicos de especies protegidas, comunidad a comunidad. Sin la entrada de una
+// comunidad, el estado autonómico de sus fichas se queda VACÍO en vez de afirmar una negación sobre
+// un catálogo que nadie ha mirado (deuda nº 2).
+const CATALOGOS_REGIONALES = path.join(CATALOGO_DIR, 'data', 'catalogos-regionales.json');
 
 // Campos que describen a la ESPECIE. Se copian literalmente del catálogo universal; son los mismos
 // que sincroniza Tools/sync-species-catalog.js, y por eso `npm run species:apply` no los mueve.
 const UNIVERSALES = ['commonName', 'kingdom', 'group', 'habitat', 'seasonality', 'rarityScore', 'rarityBasis',
-  'description', 'descriptionSource', 'tips', 'taxonomy', 'iucnGlobal', 'spainStatus', 'image', 'imageAttribution'];
+  'description', 'descriptionSource', 'tips', 'taxonomy', 'iucnGlobal', 'iucnSpain', 'spainStatus', 'image', 'imageAttribution'];
 
 // Campos LOCALES que, si la ficha ya existía en este park.json, se conservan tal cual: o los ha
 // puesto una persona (coordinates, audio, la nota de revisión) o son una decisión editorial de este
@@ -74,8 +78,8 @@ const CURADOS = ['coordinates', 'featured', 'visible', 'hiddenReason', 'reviewNo
 // datos generan diffs distintos según el orden en que se hayan ido asignando las propiedades.
 const ORDEN = ['id', 'commonName', 'scientificName', 'kingdom', 'group', 'habitat',
   'conservationStatus', 'description', 'descriptionSource', 'tips', 'seasonality', 'image', 'imageAttribution',
-  'coordinates', 'rarityScore', 'rarityBasis', 'rarityLocal', 'rarityLocalBasis', 'featured', 'source', 'taxonomy', 'iucnGlobal', 'spainStatus',
-  'murciaStatus', 'reviewNote', 'eidosTaxonId', 'gbifSpeciesKey', 'zepaSiteCode', 'migratory', 'sitePresence', 'habitatIds',
+  'coordinates', 'rarityScore', 'rarityBasis', 'rarityLocal', 'rarityLocalBasis', 'featured', 'source', 'taxonomy', 'iucnGlobal', 'iucnSpain', 'spainStatus',
+  'regionalStatus', 'regionalCcaa', 'reviewNote', 'eidosTaxonId', 'gbifSpeciesKey', 'zepaSiteCode', 'migratory', 'sitePresence', 'habitatIds',
   'gbifOccurrences', 'visible', 'hiddenReason', 'audio', 'audioTranscript'];
 
 // Gravedad de las categorías de los catálogos de especies amenazadas, para quedarse con la mayor
@@ -297,15 +301,32 @@ function categoriaDe(normas, esNacional) {
 }
 
 /**
- * `murciaStatus`: el estado legal en el ámbito autonómico, con la norma que lo dice.
- * ⚠️ El nombre del campo está atado a Murcia — es la deuda nº 1 del rollout (Docs/DEUDA-TECNICA.md).
+ * `regionalStatus`: el estado legal en el ámbito autonómico, con la norma que lo dice.
+ *
+ * Se llamaba `murciaStatus` hasta el 2026-08-27 y era el bloqueo real del rollout nacional a nivel
+ * de campo (deuda nº 2). Aquí lo que cambia no es solo el nombre: **la frase de negación deja de
+ * escribirse a ciegas**.
+ *
+ * «No incluida en el Catálogo Regional de especies protegidas (X)» es una AFIRMACIÓN sobre el
+ * catálogo de X, y hasta hoy se escribía para cualquier comunidad sin haber mirado nunca si esa
+ * comunidad tiene catálogo, cómo se llama ni cuántos son. Con Murcia colaba porque el piloto era
+ * Murcia; en la comunidad número dos habría sido un dato inventado de los del §2 del CLAUDE.md,
+ * escrito en cientos de fichas y sin que fallara nada.
+ *
+ * Así que la negación exige que la comunidad esté dada de alta en `data/catalogos-regionales.json`,
+ * con su norma copiada del boletín. Si no lo está, el campo se queda **vacío** y la ficha lo dice
+ * por omisión: no hay dato, que es distinto de «no está protegida». Lo mismo que hace
+ * `lib/fenologia.js` con las aves que su formulario no clasifica.
  */
-function estadoAutonomico(normas, comunidad) {
+function estadoAutonomico(normas, comunidad, catalogos) {
   const auto = categoriaDe(normas, false);
+  if (auto) return `${auto.categoria} (${auto.norma})`;
+  const ficha = catalogos[comunidad];
+  if (!ficha || !Array.isArray(ficha.catalogos) || !ficha.catalogos.length) return null;
   // Sin artículo delante del nombre de la comunidad: «de la Región de Murcia» se lee bien pero
   // «de la Andalucía» no, y este texto tiene que servir para las diecisiete.
-  if (!auto) return `No incluida en el Catálogo Regional de especies protegidas (${comunidad})`;
-  return `${auto.categoria} (${auto.norma})`;
+  const nombres = [...new Set(ficha.catalogos.map(c => c.nombre))];
+  return `No incluida en ${nombres.length === 1 ? 'el ' + nombres[0] : nombres.join(' ni en ')} (${comunidad})`;
 }
 
 /** Etiqueta corta de la tarjeta: estado legal si lo hay, y si no la evaluación UICN. */
@@ -472,7 +493,13 @@ function main() {
   const doc = readJson(parkPath);
   const geoDir = path.join(path.dirname(parkPath), 'geo');
   const zepa = leerZepa(geoDir);
-  const comunidad = (doc.park && doc.park.region) || 'la comunidad autónoma';
+  const comunidad = (doc.park && doc.park.region) || null;
+  const catalogosRegionales = fs.existsSync(CATALOGOS_REGIONALES) ? readJson(CATALOGOS_REGIONALES) : {};
+  if (comunidad && !catalogosRegionales[comunidad]) {
+    console.warn(`  ! «${comunidad}» no está en ${rel(CATALOGOS_REGIONALES)}: las fichas sin figura`);
+    console.warn('    autonómica se quedarán SIN estado regional, en vez de afirmar una negación');
+    console.warn('    sobre un catálogo que nadie ha mirado. Dale de alta la comunidad ahí.');
+  }
   const fecha = seleccion.doc.generado || 'sin fecha';
 
   const habitatsDelParque = new Set((doc.habitats || []).map(h => h.id));
@@ -655,7 +682,11 @@ function main() {
       rarityLocalBasis: rarityLocal == null ? undefined : rarityLocalBasis,
       featured: rarityLocal >= 4,
       source: fuenteDe(sel, g, fecha, zepa),
-      murciaStatus: estadoAutonomico(sel.normas, comunidad),
+      regionalStatus: estadoAutonomico(sel.normas, comunidad, catalogosRegionales),
+      // A qué comunidad se refiere ese estado. Va en la ficha y no solo en el espacio porque la
+      // misma especie puede estar catalogada distinto en dos comunidades, y el rótulo que ve el
+      // usuario tiene que decir de cuál habla.
+      regionalCcaa: comunidad,
       reviewNote: notaDeRevision(sel, duplicadoGbif),
       eidosTaxonId,
       gbifSpeciesKey: gbifKey.valor !== null ? gbifKey.valor : (g ? g.speciesKey : null),

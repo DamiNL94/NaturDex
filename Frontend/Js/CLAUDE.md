@@ -124,8 +124,11 @@ motivo**: cada uno tiene una razón para no serlo.
 
 ## Deuda conocida en esta carpeta
 
-- `render/detalle.js` trae la etiqueta «Región de Murcia» escrita a mano (`murcia_status`). Es la
-  deuda nº 1 del rollout nacional: ver [`Docs/DEUDA-TECNICA.md`](../../Docs/DEUDA-TECNICA.md).
+- ~~`render/detalle.js` trae la etiqueta «Región de Murcia» escrita a mano.~~ — **resuelto el
+  2026-08-27** (deuda nº 2). El rótulo de esa fila sale ahora de `species.regionalCcaa`, que viaja en
+  el dato ficha a ficha: la misma especie puede estar catalogada distinto en dos comunidades y el
+  rótulo tiene que decir de cuál habla. Sin ese campo se rotula «Comunidad autónoma» a secas, que es
+  lo único cierto cuando el dato no lo aclara — **no** se pone una comunidad por defecto.
 
 Contexto de producto —por qué la cabecera es así, por qué los grupos son siete, por qué el offline
 tiene tres capas— en [`Docs/arquitectura/APLICACION.md`](../../Docs/arquitectura/APLICACION.md).

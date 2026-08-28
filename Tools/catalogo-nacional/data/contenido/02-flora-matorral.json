@@ -43,17 +43,6 @@
       "Frutos en vaina larga que se abre soltando semillas con vilano"
     ]
   },
-  "Stipa capensis": {
-    "group": "Gramínea",
-    "habitat": "Pastizales anuales sobre suelos secos y pedregosos",
-    "seasonality": "Primavera",
-    "description": "Gramínea anual que agosta pronto y cubre los claros de matorral de un rubio pajizo. Cada semilla lleva una arista larga y retorcida que gira con los cambios de humedad y va enroscándose hasta clavarla en el suelo. Es la responsable de las «agujas» que se enganchan en los calcetines.",
-    "tips": [
-      "Aristas largas y retorcidas, en espiral al secarse",
-      "Planta anual: en verano queda seca y pajiza",
-      "Las semillas se clavan en la ropa y el pelaje"
-    ]
-  },
   "Salsola kali": {
     "group": "Hierba",
     "habitat": "Arenas y gravas del primer cordón de playa y suelos removidos salinos",
@@ -131,17 +120,6 @@
       "Pétalos arrugados, como de papel de seda"
     ]
   },
-  "Ballota hirsuta": {
-    "group": "Mata aromática",
-    "habitat": "Ribazos, taludes y matorral nitrificado en clima seco",
-    "seasonality": "Primavera y verano",
-    "description": "Mata de la familia de la menta, cubierta por completo de una pelusa blanca y áspera que le da aspecto grisáceo. Las flores, rosadas y agrupadas en verticilos alrededor del tallo, salen de un cáliz en forma de embudo con dientes. Al frotarla desprende un olor fuerte y poco agradable.",
-    "tips": [
-      "Toda la planta cubierta de pelusa blanca y áspera",
-      "Flores en anillos alrededor del tallo cuadrado",
-      "Olor fuerte y desagradable al frotar las hojas"
-    ]
-  },
   "Phagnalon saxatile": {
     "group": "Mata",
     "habitat": "Roquedos, muros, taludes y grietas soleadas",
@@ -186,17 +164,6 @@
       "Flores verde amarillentas, poco vistosas"
     ]
   },
-  "Halimione portulacoides": {
-    "group": "Mata",
-    "habitat": "Saladares y marismas, en la franja que la marea o la escorrentía encharca",
-    "seasonality": "Verano",
-    "description": "Mata tendida de hojas opuestas, carnosas y de un gris azulado inconfundible, que forma alfombras en el borde de los saladares. Marca con bastante precisión la zona que se encharca con agua salada. Sus flores son diminutas y de color pardo dorado.",
-    "tips": [
-      "Hojas opuestas, carnosas y de gris azulado",
-      "Porte tendido, formando manchas continuas",
-      "Siempre en el borde encharcable del saladar"
-    ]
-  },
   "Cistus clusii": {
     "group": "Mata",
     "habitat": "Tomillares y matorral seco sobre calizas y margas",
@@ -228,28 +195,6 @@
       "Hojas carnosas y recortadas, algo azuladas",
       "Flores lilas o blancas de cuatro pétalos en cruz",
       "Frutos duros en dos piezas, como pequeños barrilitos"
-    ]
-  },
-  "Salsola vermiculata": {
-    "group": "Mata",
-    "habitat": "Suelos salinos y nitrificados, ramblas, majadas y bordes de camino",
-    "seasonality": "Verano y otoño",
-    "description": "Mata muy ramificada de hojas cortas, gruesas y algo peludas que en verano se vuelven grisáceas. Es de las mejores indicadoras de suelos con sal y con exceso de nitrógeno, como los antiguos apriscos de ganado. Al fructificar, cada semilla se rodea de alas membranosas.",
-    "tips": [
-      "Hojitas cortas, gruesas y con pelusa",
-      "Frutos con alas membranosas rosadas o pajizas",
-      "Aparece donde ha habido ganado o remoción del suelo"
-    ]
-  },
-  "Arthrocnemum macrostachyum": {
-    "group": "Planta suculenta",
-    "habitat": "Saladares y marismas con encharcamiento salino prolongado",
-    "seasonality": "Verano y otoño",
-    "description": "Planta sin hojas aparentes: sus tallos son cilíndricos, carnosos y divididos en segmentos que parecen articulaciones. Vive donde la sal se acumula y en otoño se tiñe de tonos rojizos y anaranjados que cambian el color de todo el saladar.",
-    "tips": [
-      "Tallos carnosos articulados, como collares de cuentas",
-      "Sin hojas visibles",
-      "Vira a rojo y naranja en otoño"
     ]
   },
   "Suaeda vera": {
@@ -316,6 +261,61 @@
       "Hojas pegajosas y aromáticas al tacto",
       "Florece amarillo en pleno final de verano y otoño",
       "Abundante en cunetas y terrenos alterados"
+    ]
+  },
+  "Stipellula capensis": {
+    "group": "Gramínea",
+    "habitat": "Pastizales anuales sobre suelos secos y pedregosos",
+    "seasonality": "Primavera",
+    "description": "Gramínea anual que agosta pronto y cubre los claros de matorral de un rubio pajizo. Cada semilla lleva una arista larga y retorcida que gira con los cambios de humedad y va enroscándose hasta clavarla en el suelo. Es la responsable de las «agujas» que se enganchan en los calcetines.",
+    "tips": [
+      "Aristas largas y retorcidas, en espiral al secarse",
+      "Planta anual: en verano queda seca y pajiza",
+      "Las semillas se clavan en la ropa y el pelaje"
+    ]
+  },
+  "Pseudodictamnus hirsutus": {
+    "group": "Mata aromática",
+    "habitat": "Ribazos, taludes y matorral nitrificado en clima seco",
+    "seasonality": "Primavera y verano",
+    "description": "Mata de la familia de la menta, cubierta por completo de una pelusa blanca y áspera que le da aspecto grisáceo. Las flores, rosadas y agrupadas en verticilos alrededor del tallo, salen de un cáliz en forma de embudo con dientes. Al frotarla desprende un olor fuerte y poco agradable.",
+    "tips": [
+      "Toda la planta cubierta de pelusa blanca y áspera",
+      "Flores en anillos alrededor del tallo cuadrado",
+      "Olor fuerte y desagradable al frotar las hojas"
+    ]
+  },
+  "Atriplex portulacoides": {
+    "group": "Mata",
+    "habitat": "Saladares y marismas, en la franja que la marea o la escorrentía encharca",
+    "seasonality": "Verano",
+    "description": "Mata tendida de hojas opuestas, carnosas y de un gris azulado inconfundible, que forma alfombras en el borde de los saladares. Marca con bastante precisión la zona que se encharca con agua salada. Sus flores son diminutas y de color pardo dorado.",
+    "tips": [
+      "Hojas opuestas, carnosas y de gris azulado",
+      "Porte tendido, formando manchas continuas",
+      "Siempre en el borde encharcable del saladar"
+    ]
+  },
+  "Caroxylon vermiculatum": {
+    "group": "Mata",
+    "habitat": "Suelos salinos y nitrificados, ramblas, majadas y bordes de camino",
+    "seasonality": "Verano y otoño",
+    "description": "Mata muy ramificada de hojas cortas, gruesas y algo peludas que en verano se vuelven grisáceas. Es de las mejores indicadoras de suelos con sal y con exceso de nitrógeno, como los antiguos apriscos de ganado. Al fructificar, cada semilla se rodea de alas membranosas.",
+    "tips": [
+      "Hojitas cortas, gruesas y con pelusa",
+      "Frutos con alas membranosas rosadas o pajizas",
+      "Aparece donde ha habido ganado o remoción del suelo"
+    ]
+  },
+  "Arthrocaulon macrostachyum": {
+    "group": "Planta suculenta",
+    "habitat": "Saladares y marismas con encharcamiento salino prolongado",
+    "seasonality": "Verano y otoño",
+    "description": "Planta sin hojas aparentes: sus tallos son cilíndricos, carnosos y divididos en segmentos que parecen articulaciones. Vive donde la sal se acumula y en otoño se tiñe de tonos rojizos y anaranjados que cambian el color de todo el saladar.",
+    "tips": [
+      "Tallos carnosos articulados, como collares de cuentas",
+      "Sin hojas visibles",
+      "Vira a rojo y naranja en otoño"
     ]
   }
 }

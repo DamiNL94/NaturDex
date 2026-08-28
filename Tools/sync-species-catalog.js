@@ -102,7 +102,7 @@ const GRUPO_NORMALIZADO = {
 // Campos que describen a la ESPECIE. Se sincronizan a todos los parques.
 const UNIVERSALES = [
   'commonName', 'kingdom', 'group', 'habitat', 'seasonality', 'rarityScore', 'rarityBasis',
-  'description', 'descriptionSource', 'tips', 'taxonomy', 'iucnGlobal', 'spainStatus',
+  'description', 'descriptionSource', 'tips', 'taxonomy', 'iucnGlobal', 'iucnSpain', 'spainStatus',
   'image', 'imageAttribution',
 ];
 
@@ -110,7 +110,7 @@ const UNIVERSALES = [
 const LOCALES = [
   'id', 'habitatIds', 'coordinates', 'featured', 'visible', 'hiddenReason', 'source', 'reviewNote',
   'zepaSiteCode', 'migratory', 'sitePresence', 'gbifOccurrences', 'gbifBboxSightings', 'gbifSpeciesKey', 'eidosTaxonId',
-  'murciaStatus', 'conservationStatus', 'audio', 'audioTranscript',
+  'regionalStatus', 'regionalCcaa', 'conservationStatus', 'audio', 'audioTranscript',
 ];
 
 // Texto que delata que un campo universal se escribió pensando en un parque concreto.
@@ -382,6 +382,8 @@ function aplicar() {
           `  s.taxon_family = ${sqlStr(t.family)},\n` +
           `  s.taxon_genus = ${sqlStr(t.genus)},\n` +
           `  s.iucn_global = ${sqlStr(u.iucnGlobal)},\n` +
+          // La Lista Roja ESPAÑOLA es otra evaluación, no un matiz de la mundial: columna propia.
+          `  s.iucn_spain = ${sqlStr(u.iucnSpain)},\n` +
           `  s.spain_status = ${sqlStr(u.spainStatus)},\n` +
           `  s.rarity_score = ${u.rarityScore ?? 1},\n` +
           // La base viaja con el tramo: un `rarity_score` sin su `rarity_basis` en la BD volvería a

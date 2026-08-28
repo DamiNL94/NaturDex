@@ -27,8 +27,39 @@ USE naturadex;
 -- ------------------------------------------------------------------------------------------------
 DROP PROCEDURE IF EXISTS naturdex_add_column;
 DROP PROCEDURE IF EXISTS naturdex_add_index;
+DROP PROCEDURE IF EXISTS naturdex_rename_column;
 
 DELIMITER $$
+
+-- Renombra una columna solo si sigue existiendo con el nombre viejo Y no existe ya con el nuevo.
+--
+-- Las dos condiciones hacen falta, y la segunda es la que hace esto idempotente: `RENAME COLUMN` no
+-- admite `IF EXISTS` en Oracle MySQL, así que reejecutar la migración sobre una base ya renombrada
+-- abortaría con ERROR 1054 (Unknown column) y dejaría a medias todo lo que viniera detrás. Con la
+-- comprobación previa, la segunda pasada no hace nada y no da error.
+--
+-- Se comprueba también que NO exista ya la columna nueva porque el caso de la base a medio migrar
+-- —las dos columnas a la vez— no se puede resolver aquí sin decidir cuál de las dos manda, y eso lo
+-- tiene que mirar una persona: mejor no tocar nada que fundir dos columnas a ciegas.
+CREATE PROCEDURE naturdex_rename_column(
+    IN p_table VARCHAR(64),
+    IN p_old VARCHAR(64),
+    IN p_new VARCHAR(64)
+)
+BEGIN
+    IF EXISTS (
+        SELECT 1 FROM information_schema.columns
+        WHERE table_schema = DATABASE() AND table_name = p_table AND column_name = p_old
+    ) AND NOT EXISTS (
+        SELECT 1 FROM information_schema.columns
+        WHERE table_schema = DATABASE() AND table_name = p_table AND column_name = p_new
+    ) THEN
+        SET @ddl = CONCAT('ALTER TABLE `', p_table, '` RENAME COLUMN `', p_old, '` TO `', p_new, '`');
+        PREPARE stmt FROM @ddl;
+        EXECUTE stmt;
+        DEALLOCATE PREPARE stmt;
+    END IF;
+END$$
 
 -- Añade una columna solo si no existe ya en la tabla (dentro de la BD actual, DATABASE()).
 --   p_table:      nombre de la tabla
@@ -192,16 +223,74 @@ CALL naturdex_add_column('species', 'is_migratory', 'BOOLEAN NULL');
 CALL naturdex_add_column('species', 'site_presence', 'JSON NULL');
 
 -- ------------------------------------------------------------------------------------------------
+-- Lista Roja ESPAÑOLA (deuda nº 39). EIDOS sirve la evaluación de la UICN por ámbito —Mundial,
+-- España, Península, Canarias— y el pipeline se quedaba solo con la mundial: el dato de España se
+-- perdía en la respuesta, sin que ninguna ficha tuviera dónde escribirlo. No se puede meter en
+-- `iucn_global` porque son dos evaluaciones distintas del mismo taxón, con autoridad y año propios
+-- (el arto es LC en el mundo y NT en España, 2010): mezclarlas es el error que ya pagó
+-- `spain_status` con las normas de otras comunidades. NULL = la fuente no la trae, que NO es «no
+-- evaluada».
+-- ------------------------------------------------------------------------------------------------
+CALL naturdex_add_column('species', 'iucn_spain', 'TEXT NULL');
+
+-- ------------------------------------------------------------------------------------------------
+-- El estado autonómico deja de estar atado a Murcia (deuda nº 2).
+--
+-- `murcia_status` era el bloqueo real del rollout nacional a nivel de campo: cada comunidad tiene su
+-- propio catálogo de especies amenazadas, y un campo que lleva el nombre de una de ellas no puede
+-- guardar el de las otras dieciséis. Pasa a `regional_status`, y se le añade al lado `regional_ccaa`
+-- —la comunidad a la que se refiere ese estado—, sin la cual la ficha no se puede leer fuera de
+-- contexto: la app rotulaba la fila con «Región de Murcia» escrito a mano.
+--
+-- La norma NO tiene columna propia: ya viaja DENTRO del texto («Vulnerable (Decreto n.º 50/2003…)»)
+-- y en `rarity_local_basis`. Una tercera copia sería una más que puede divergir. Qué norma ES el
+-- catálogo de cada comunidad está en `Tools/catalogo-nacional/data/catalogos-regionales.json`.
+--
+-- El renombrado conserva los datos: `RENAME COLUMN` no los toca. Las filas existentes quedan con
+-- `regional_ccaa` a NULL hasta que se aplique `Database/regional-ccaa.sql`, que es quien lo rellena
+-- espacio a espacio; NULL significa «no se ha dicho de qué comunidad», no «de ninguna».
+-- ------------------------------------------------------------------------------------------------
+CALL naturdex_rename_column('species', 'murcia_status', 'regional_status');
+CALL naturdex_add_column('species', 'regional_ccaa', 'VARCHAR(120) NULL');
+
+-- ------------------------------------------------------------------------------------------------
+-- Los dos campos que la ida y vuelta por la API borraba en silencio (deuda nº 3).
+--
+-- Medido el 2026-08-11: cargada la base desde cero y regenerado el paquete con `export-park.php`,
+-- desaparecían `gbifOccurrences` de cada especie (767 fichas) y `origen` de cada recinto del
+-- `habitats.geojson`. Ninguno de los dos tenía columna, así que no era un fallo del exportador: era
+-- que el dato no estaba en la base. Los contadores cuadraban y no saltaba ningún error.
+--
+-- `species.gbif_occurrences` es el total de la especie EN EL ESPACIO, y no tiene nada que ver con
+-- `species_habitats.gbif_occurrences`, que es el recuento de un solo polígono y ya existía.
+-- `habitats.origen` es el campo de procedencia del recinto, el que exige la regla nº 1.
+--
+-- Los dos quedan a NULL hasta que se aplique `Database/ida-y-vuelta.sql`, que los rellena desde los
+-- `park.json` y los `geojson` del repositorio. NULL = no se ha dicho; en `gbif_occurrences`, además,
+-- NULL y 0 significan cosas distintas (nadie barrió / se barrió y no cayó ninguna).
+-- ------------------------------------------------------------------------------------------------
+CALL naturdex_add_column('species', 'gbif_occurrences', 'INT NULL');
+CALL naturdex_add_column('habitats', 'origen', 'VARCHAR(60) NULL');
+-- Y las dos que salieron al escribir la comprobación, que la medición a mano de 2026-08-11 no vio:
+-- `fuentes` (las DOS citas de un recinto fundido, que `source` no puede guardar; 24 recintos) y
+-- `solo_curada` (el recinto sin equivalente oficial; 4 recintos).
+CALL naturdex_add_column('habitats', 'fuentes', 'JSON NULL');
+CALL naturdex_add_column('habitats', 'solo_curada', 'BOOLEAN NULL');
+
+-- ------------------------------------------------------------------------------------------------
 -- Campos de cita/estado a TEXT: las atribuciones y los estados de conservación con referencia
 -- pueden superar los 500 caracteres. En MySQL con modo estricto (STRICT_TRANS_TABLES, por defecto
 -- en 8.0) un VARCHAR corto ABORTA la carga del seed en lugar de truncar en silencio como hace la
 -- configuración laxa de XAMPP. MODIFY es idempotente (se puede reejecutar sin efecto).
 -- ------------------------------------------------------------------------------------------------
+-- La columna autonómica se nombra ya `regional_status`: el renombrado de más arriba va DELANTE de
+-- este bloque a propósito, porque un `MODIFY COLUMN murcia_status` ejecutado después de renombrarla
+-- abortaría con ERROR 1054 y se llevaría por delante todo lo que viene detrás.
 ALTER TABLE species
     MODIFY COLUMN source TEXT,
     MODIFY COLUMN iucn_global TEXT,
     MODIFY COLUMN spain_status TEXT,
-    MODIFY COLUMN murcia_status TEXT;
+    MODIFY COLUMN regional_status TEXT;
 ALTER TABLE points_of_interest
     MODIFY COLUMN source TEXT;
 
@@ -285,6 +374,7 @@ CALL naturdex_add_column('users', 'prefs', 'JSON NULL');
 -- Limpieza de los procedimientos auxiliares.
 DROP PROCEDURE IF EXISTS naturdex_add_column;
 DROP PROCEDURE IF EXISTS naturdex_add_index;
+DROP PROCEDURE IF EXISTS naturdex_rename_column;
 
 -- Limpieza de coordenadas de especies: la localización la aporta el usuario (GPS).
 UPDATE species SET latitude = NULL, longitude = NULL;

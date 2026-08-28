@@ -74,7 +74,7 @@ function regenerateHabitatsGeojson($conn, $frontendDir, $manifest, $parkSlug) {
     if (!$parkRow) return true;
     $parkId = (int) $parkRow["id"];
 
-    $stmt = $conn->prepare("SELECT slug, code, name, habitat_type, is_priority, hic_subtipos, fitosociologia, geometry FROM habitats WHERE park_id = ? AND geometry IS NOT NULL ORDER BY name");
+    $stmt = $conn->prepare("SELECT slug, code, name, habitat_type, is_priority, hic_subtipos, fitosociologia, origen, fuentes, solo_curada, geometry FROM habitats WHERE park_id = ? AND geometry IS NOT NULL ORDER BY name");
     $stmt->bind_param("i", $parkId);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -100,7 +100,21 @@ function regenerateHabitatsGeojson($conn, $frontendDir, $manifest, $parkSlug) {
         ];
         if ($row["hic_subtipos"] !== null) $props["hic_subtipos"] = json_decode($row["hic_subtipos"], true);
         if ($row["fitosociologia"] !== null) $props["fitosociologia"] = json_decode($row["fitosociologia"], true);
+        // El ORIGEN sale de la base, no del fichero que hubiera. Es el campo de procedencia que exige
+        // la regla nº 1 del CLAUDE.md y hasta el 2026-08-27 no tenía columna: se "conservaba" leyendo
+        // el geojson anterior, así que en una máquina sin ese fichero delante —o en el primer export
+        // de un espacio— se perdía sin que nada avisara (deuda nº 3). Se sigue mirando lo que hubiera
+        // como RESERVA, para no borrar el dato de una base que aún no se ha migrado.
+        if ($row["origen"] !== null && $row["origen"] !== "") $props["origen"] = $row["origen"];
+        // Las DOS citas de un recinto fundido (`source` solo puede con una) y la marca del recinto sin
+        // equivalente oficial. Salieron al escribir la comprobación de la ida y vuelta: la medición a
+        // mano de 2026-08-11 no las había visto.
+        if ($row["fuentes"] !== null) $props["fuentes"] = json_decode($row["fuentes"], true);
+        if ($row["solo_curada"] !== null) $props["solo_curada"] = (bool) $row["solo_curada"];
         $old = $preserved[$slug] ?? [];
+        if (!isset($props["origen"]) && isset($old["origen"])) $props["origen"] = $old["origen"];
+        if (!isset($props["fuentes"]) && isset($old["fuentes"])) $props["fuentes"] = $old["fuentes"];
+        if (!isset($props["solo_curada"]) && isset($old["solo_curada"])) $props["solo_curada"] = $old["solo_curada"];
         if (isset($old["source"])) $props["source"] = $old["source"];
         if (array_key_exists("review", $old)) $props["review"] = $old["review"];
 

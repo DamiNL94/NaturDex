@@ -231,8 +231,25 @@ function renderSpeciesDetail() {
     <h3 class="detail-subtitle">Estado de conservación</h3>
     <ul class="status-list">
     <li class="detail-prose"><span>UICN (global)</span>${species.iucnGlobal || 'No evaluada'}</li>
+    ${/*
+      * La Lista Roja ESPAÑOLA es otra evaluación de la UICN, no un matiz de la mundial: una especie
+      * puede ser LC en el mundo y NT en España. Solo se pinta si el dato existe — a diferencia de la
+      * mundial, que se enseña siempre con su «No evaluada»—, porque aquí un hueco significa «EIDOS
+      * no trae esa fila» y no «comprobado que no está evaluada», y son cosas distintas.
+      */''}
+    ${species.iucnSpain ? html`<li class="detail-prose"><span>UICN (España)</span>${species.iucnSpain}</li>` : ''}
     <li class="detail-prose"><span>España</span>${species.spainStatus || 'Sin dato'}</li>
-    <li class="detail-prose"><span>Región de Murcia</span>${species.murciaStatus || 'Sin dato'}</li>
+    ${/*
+      * El rótulo de esta fila decía «Región de Murcia» ESCRITO A MANO, y era el último sitio donde
+      * el rollout nacional seguía atado al parque piloto (deuda nº 2): la ficha de una especie de
+      * Doñana habría anunciado su estado legal bajo un rótulo murciano. Ahora la comunidad viaja en
+      * el dato, ficha a ficha, porque la misma especie puede estar catalogada distinto en dos
+      * comunidades y el rótulo tiene que decir de cuál habla.
+      *
+      * Sin `regionalCcaa` NO se pone un rótulo genérico: se dice «comunidad autónoma» a secas, que
+      * es lo único cierto cuando el dato no lo aclara.
+      */''}
+    <li class="detail-prose"><span>${species.regionalCcaa || 'Comunidad autónoma'}</span>${species.regionalStatus || 'Sin dato'}</li>
     </ul>
     ${bloquePresenciaSitio(species)}
     ${species.reviewNote ? html`<div class="review-note"><strong>Pendiente de revisión:</strong> ${species.reviewNote}</div>` : ''}

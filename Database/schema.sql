@@ -62,6 +62,21 @@ CREATE TABLE IF NOT EXISTS habitats (
     -- MITECO/BDN + planes de gestión). JSON (array de strings) para migrar limpio a jsonb en Postgres.
     hic_subtipos JSON,
     fitosociologia JSON,
+    -- De dónde sale ESTE recinto: `oficial` (venía en la cartografía del MITECO/BDN),
+    -- `anadido_desde_oficial` (recorte o adopción del pipeline), `curado`… Es el campo de
+    -- PROCEDENCIA que exige la regla nº 1 del CLAUDE.md, y no tenía columna: la ida y vuelta por la
+    -- API lo borraba en silencio de cada recinto del `habitats.geojson` (deuda nº 3). El export lo
+    -- conservaba «del fichero que ya estuviera ahí», que no es lo mismo que tenerlo: en una máquina
+    -- sin el geojson delante se perdía igual.
+    origen VARCHAR(60),
+    -- TODAS las fuentes del recinto, no solo la principal: cuando `merge-habitats.js` funde el recinto
+    -- curado con el oficial, la procedencia pasa a ser dos citas y `source` (una sola) no puede
+    -- guardarlas. Array JSON de cadenas. 24 recintos lo llevan.
+    fuentes JSON,
+    -- El recinto NO tiene equivalente en la cartografía oficial: viene solo de la curación (típicamente
+    -- aportado por la comunidad autónoma). Lo marca `merge-habitats.js`, y es lo que distingue «esto
+    -- lo añadimos nosotros» de «esto lo dice el MITECO». 4 recintos.
+    solo_curada BOOLEAN,
     -- Audioguía explicativa del hábitat: URL/ruta del fichero de audio y su transcripción
     -- (alternativa textual obligatoria por accesibilidad, WCAG 1.2.1).
     audio_url VARCHAR(500),
@@ -143,8 +158,25 @@ CREATE TABLE IF NOT EXISTS species (
     taxon_family VARCHAR(120),
     taxon_genus VARCHAR(120),
     iucn_global TEXT,
+    -- Evaluación de la UICN de ámbito ESPAÑA (la Lista Roja española), que es OTRA evaluación y no
+    -- un matiz de la mundial: EIDOS las sirve como filas distintas, con autoridad y año propios, y
+    -- una especie puede ser LC en el mundo y NT en España sin que ninguna esté equivocada. Columna
+    -- aparte por lo que costó `spain_status` cuando mezcló ámbitos (ver el ledger, deuda nº 5).
+    -- NULL = EIDOS no trae esa fila, que NO es lo mismo que «no evaluada».
+    iucn_spain TEXT,
     spain_status TEXT,
-    murcia_status TEXT,
+    -- Estado legal en el ámbito AUTONÓMICO, con la norma que lo dice dentro del texto. Se llamó
+    -- `murcia_status` hasta el 2026-08-27, y ése era el bloqueo real del rollout nacional a nivel de
+    -- campo: cada comunidad tiene su propio catálogo de especies amenazadas —Murcia tiene DOS, uno
+    -- de flora y otro de fauna— y un campo con el nombre de una comunidad dentro no puede guardar el
+    -- de las otras dieciséis.
+    regional_status TEXT,
+    -- A QUÉ comunidad se refiere ese estado. Sin esto la ficha no se puede leer fuera de contexto: la
+    -- app rotulaba la fila con «Región de Murcia» escrito a mano en el propio HTML. NULL = no se ha
+    -- dicho, que NO es lo mismo que «de ninguna». Qué norma es el catálogo de cada comunidad está en
+    -- `Tools/catalogo-nacional/data/catalogos-regionales.json`; aquí no se repite, porque ya viaja
+    -- dentro del texto de `regional_status` y una tercera copia es una más que puede divergir.
+    regional_ccaa VARCHAR(120),
     review_note TEXT,
     -- Claves maestras de reconciliación taxonómica (las 3 fuentes reclasifican y usan nomenclaturas
     -- distintas). EIDOS (IEPNB) es la nomenclatura CANÓNICA: `eidos_taxonid` es su clave estable; el
@@ -152,6 +184,19 @@ CREATE TABLE IF NOT EXISTS species (
     -- son UNIQUE: a escala nacional la misma especie se repite por parque (una fila por parque).
     eidos_taxonid INT,
     gbif_species_key BIGINT,
+    -- Cuántas ocurrencias de GBIF cayeron dentro de los polígonos de hábitat de ESTE espacio en el
+    -- barrido con el que se aprobó la selección. Es la huella del filtro de presencia y la señal con
+    -- la que se revisa después un vínculo especie↔hábitat («¿de dónde sale este enlace?»), así que su
+    -- ausencia cambia decisiones: `auditoria-especie-habitat.js` NO retira un enlace de una ficha que
+    -- no lo tenga, porque el silencio de GBIF ahí no dice nada.
+    --
+    -- No tenía columna, y por eso la ida y vuelta por la API lo borraba en silencio en 767 fichas
+    -- (deuda nº 3, medida el 2026-08-11). NULL = el barrido no se hizo o la ficha no entró por él;
+    -- 0 = se barrió y no cayó ninguna, que es otra cosa.
+    --
+    -- OJO, no confundir con `species_habitats.gbif_occurrences`, que es el recuento de UN polígono.
+    -- Éste es el total de la especie en el espacio, y repartirlo entre sus polígonos sería inventar.
+    gbif_occurrences INT,
     -- Aves de la Red Natura 2000: código del espacio ZEPA (Zona de Especial Protección para las Aves,
     -- p. ej. 'ES0000261') en cuya lista oficial de especies (EEA/BISE) figura esta ave. NULL = no es un
     -- ave de la ZEPA. Las aves no se asignan a hábitats concretos (vuelan): la app las muestra en un

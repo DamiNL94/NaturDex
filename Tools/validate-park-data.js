@@ -736,7 +736,7 @@ function validatePark(entry) {
 // que alguien editó una copia. La fuente de verdad es el catálogo universal y quien las vuelve a
 // alinear es `node Tools/sync-species-catalog.js --apply`.
 const CAMPOS_UNIVERSALES = ['commonName', 'kingdom', 'group', 'habitat', 'seasonality', 'rarityScore', 'rarityBasis',
-  'description', 'descriptionSource', 'tips', 'taxonomy', 'iucnGlobal', 'spainStatus', 'image', 'imageAttribution'];
+  'description', 'descriptionSource', 'tips', 'taxonomy', 'iucnGlobal', 'iucnSpain', 'spainStatus', 'image', 'imageAttribution'];
 
 // Lo mismo, pero para los hábitats: la clave no es el nombre científico sino el CÓDIGO HIC, y el
 // único campo universal de momento es la descripción. Quien las vuelve a alinear es

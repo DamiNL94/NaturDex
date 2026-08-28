@@ -70,9 +70,17 @@
  * con el nombre bueno. Eso va en un `fix-*.js` con la decisión escrita, como se hizo con
  * `fix-curruca-undata.js` y `fix-nomenclatura-eidos.js`.
  *
- * Un sinónimo HETEROTÍPICO de GBIF tampoco se toca nunca: ahí las dos autoridades discrepan de
- * CIRCUNSCRIPCIÓN —GBIF hunde *Anabasis hispanica* en *A. articulata*, que es otra especie para
- * EIDOS—, y cambiar la key traería ocurrencias de un taxón distinto. Se enumera y se queda.
+ * Un sinónimo HETEROTÍPICO de GBIF tampoco se toca **automáticamente**: ahí las dos autoridades
+ * pueden estar discrepando de CIRCUNSCRIPCIÓN, y cambiar la key traería ocurrencias de un taxón
+ * distinto. Se enumera y se queda para mirarlo con las dos autoridades delante.
+ *
+ * El ejemplo que traía esta cabecera era *Anabasis hispanica*, «que GBIF hunde en *A. articulata*,
+ * otra especie para EIDOS», y **era falso**: EIDOS mete los dos nombres bajo el MISMO taxonid 1838,
+ * cuyo aceptado es *Anabasis mucronata* (Lag.) C. Vic. Se comprobó el 2026-08-27 al realinear las
+ * claves incoherentes (`fix-identificadores-incoherentes.js`), y la lección es la de siempre en este
+ * fichero: la etiqueta de GBIF dice lo que opina GBIF, no si las dos autoridades discrepan. Eso hay
+ * que ir a preguntárselo a EIDOS, taxón a taxón — que es justo por lo que esta clase NO se escribe
+ * sola.
  *
  * Idempotente: un segundo pase no cambia un byte. No toca la base de datos (regla nº 2 de
  * `Tools/CLAUDE.md`); tras un `--write` hay que regenerar el SQL de los espacios tocados.
@@ -87,7 +95,7 @@
 const fs = require('fs');
 const path = require('path');
 const { arg, flag, sleep } = require('../lib/cli');
-const { OUT_DIR, readJson, writeJson, rel, fromRoot, parkFiles } = require('../lib/io');
+const { OUT_DIR, readJson, writeJson, rel, fromRoot, parkFiles, escribeEspacio } = require('../lib/io');
 const { rows } = require('../lib/eidos');
 const { getJson } = require('../lib/http');
 
@@ -390,7 +398,19 @@ function aplica(fichas, hallazgos) {
       }
     }
   }
-  for (const [file, doc] of docs) writeJson(file, doc);
+  /*
+   * Por `escribeEspacio()` y no con un `writeJson`, que es lo que había aquí hasta el 2026-08-28.
+   *
+   * Era la NOVENA copia del fallo de la deuda nº 37 —reescribir fichas sin subir la `version` del
+   * manifiesto— y apareció por el mismo camino que la octava (`rareza-legal.js`, el 2026-08-27): al
+   * ir a usar la herramienta. Aquí importa especialmente poco que el cambio sea pequeño: lo que
+   * escribe es la `gbifSpeciesKey` y el género de la taxonomía, o sea el apartado de taxonomía que
+   * la ficha pinta, y un dispositivo con el espacio guardado sin conexión no se habría enterado.
+   */
+  for (const [file, doc] of docs) {
+    const { lineas } = escribeEspacio({ dir: path.dirname(file), file, doc, write: true });
+    for (const l of lineas) console.log('  ' + l);
+  }
   return { cambios, ficheros: docs.size };
 }
 

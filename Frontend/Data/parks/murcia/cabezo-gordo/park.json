@@ -209,13 +209,17 @@
       "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/609975159/original.jpg",
       "imageAttribution": "Quentin Groom (CC0) · GBIF",
       "coordinates": null,
-      "rarityScore": 3,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 4 ocurrencias dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-17); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -229,7 +233,8 @@
       },
       "iucnGlobal": "NE (no evaluada a nivel global)",
       "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
-      "murciaStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7034,
       "gbifSpeciesKey": 6022574,
@@ -268,7 +273,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-17); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -281,7 +290,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 3758,
       "gbifSpeciesKey": 7335582,
@@ -317,9 +327,9 @@
       "rarityBasis": null,
       "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-17); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -333,7 +343,8 @@
       },
       "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
       "spainStatus": "UICN España: EN (En peligro) (2010)",
-      "murciaStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 5102,
       "gbifSpeciesKey": 8148601,
@@ -344,7 +355,8 @@
         "pendientes-rocosas-calcicolas-8210"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "EN — En peligro (Lista Roja española, 2010)"
     },
     {
       "id": 4,
@@ -368,7 +380,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-17); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -381,7 +397,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7206,
       "gbifSpeciesKey": 4049728,
@@ -422,9 +439,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -438,7 +455,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10670,
       "gbifSpeciesKey": 2469763,
@@ -449,7 +467,8 @@
         "pendientes-rocosas-calcicolas-8210"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 6,
@@ -466,13 +485,17 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sideritis_pusilla0592.jpg?width=1280",
       "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 4,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-17); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio, que la cita como «Sideritis pusilla subsp. carthaginensis»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -486,7 +509,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8348,
       "gbifSpeciesKey": 7307458,
@@ -497,7 +521,8 @@
         "pendientes-rocosas-calcicolas-8210"
       ],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2000)"
     },
     {
       "id": 7,
@@ -514,10 +539,18 @@
       "image": null,
       "imageAttribution": null,
       "coordinates": null,
-      "rarityScore": 3,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-08-17); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -530,7 +563,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8709,
       "gbifSpeciesKey": 7308668,
@@ -559,13 +593,17 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anagyris_foetida.jpg?width=1280",
       "imageAttribution": "A. Barra (CC BY 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 3,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -579,7 +617,8 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 1849,
       "gbifSpeciesKey": null,
@@ -616,9 +655,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -632,14 +671,16 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10669,
       "gbifSpeciesKey": 2437136,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 10,
@@ -656,13 +697,17 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Amphisbaenia.JPG?width=1280",
       "imageAttribution": "Mario modesto (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 3,
-      "rarityBasis": null,
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -676,14 +721,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10901,
       "gbifSpeciesKey": 2473222,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 11,
@@ -700,10 +747,18 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bufo_bufo_sitting-Iric2006.jpg?width=1280",
       "imageAttribution": "Iric (CC BY-SA 2.5) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -716,7 +771,8 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 93827,
       "gbifSpeciesKey": null,
@@ -724,7 +780,8 @@
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": false,
-      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla.",
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 12,
@@ -755,7 +812,7 @@
       "rarityLocalBasis": {
         "categoria": "Lista Roja de la Flora Vascular Española 2008: EN (En Peligro), criterio B1ab(i,iii,iv,v)c(ii,iii,iv)+2ab(i,iii,iv,v)c(ii,iii,iv)",
         "ambito": "estatal",
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "origen": "spainStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -769,7 +826,8 @@
       },
       "iucnGlobal": "NE (no evaluada a nivel global; distribución principal fuera de Europa, en el norte de África)",
       "spainStatus": "Lista Roja de la Flora Vascular Española 2008: EN (En Peligro), criterio B1ab(i,iii,iv,v)c(ii,iii,iv)+2ab(i,iii,iv,v)c(ii,iii,iv)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 80097,
       "gbifSpeciesKey": 3578145,
@@ -797,13 +855,17 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Centaurea_saxicola674.jpg?width=1280",
       "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 4,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Atlas y Manual de los Hábitats de España (MITECO, 2005): especie característica de alguno de los HIC cartografiados aquí; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -817,7 +879,8 @@
       },
       "iucnGlobal": "NE",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 3332,
       "gbifSpeciesKey": 3128450,
@@ -847,13 +910,17 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chamaerops_humilis_Torreblanca.jpg?width=1280",
       "imageAttribution": "Canaan (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 3,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -867,7 +934,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 3518,
       "gbifSpeciesKey": 2736625,
@@ -899,9 +967,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -915,14 +983,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11075,
       "gbifSpeciesKey": 2482492,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 16,
@@ -947,9 +1017,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio, que la cita como «Sylvia communis»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -963,14 +1033,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 80921,
       "gbifSpeciesKey": 2492943,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 17,
@@ -999,9 +1071,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1015,14 +1087,16 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11340,
       "gbifSpeciesKey": 2480876,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 18,
@@ -1039,10 +1113,18 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gartenschlaefer_in_Natur.jpg?width=1280",
       "imageAttribution": "No machine-readable author provided. Asseus assumed (based on copyr… (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 3,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -1055,14 +1137,16 @@
       },
       "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2008)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12074,
       "gbifSpeciesKey": 2439683,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 19,
@@ -1091,9 +1175,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio, que la cita como «Bufo calamita»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1107,19 +1191,21 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE; Directiva Hábitats 92/43/CEE, Anexo IV",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 24327,
       "gbifSpeciesKey": 2422507,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 20,
       "commonName": "Murciélago hortelano",
-      "scientificName": "Eptesicus isabellinus",
+      "scientificName": "Cnephaeus isabellinus",
       "kingdom": "fauna",
       "group": "Murciélago",
       "habitat": null,
@@ -1131,13 +1217,17 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eptesicus_isabellinus_sketch.jpg?width=1280",
       "imageAttribution": "Coenrad Temmick (Public domain) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 4,
-      "rarityBasis": null,
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1151,7 +1241,8 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 16225,
       "gbifSpeciesKey": null,
@@ -1188,9 +1279,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1204,14 +1295,16 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10937,
       "gbifSpeciesKey": 2490613,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 22,
@@ -1240,9 +1333,9 @@
       },
       "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Formulario Normalizado de Datos del sitio Red Natura 2000 ES6200013 (Cabezo Gordo), sección 3.2: población permanente, presente; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1256,14 +1349,16 @@
       },
       "iucnGlobal": "VU (Vulnerable) (evaluación UICN 2023)",
       "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12169,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2007)"
     },
     {
       "id": 23,
@@ -1287,7 +1382,11 @@
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -1300,14 +1399,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11857,
       "gbifSpeciesKey": 5218987,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 24,
@@ -1336,9 +1437,9 @@
       },
       "rarityLocal": 5,
       "rarityLocalBasis": {
-        "categoria": "En peligro de extinción",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Formulario Normalizado de Datos del sitio Red Natura 2000 ES6200013 (Cabezo Gordo), sección 3.2: población permanente, presente; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1352,14 +1453,16 @@
       },
       "iucnGlobal": "VU (Vulnerable) (evaluación UICN 2016)",
       "spainStatus": "Anexo II (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); Anexo V (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); UICN España: EN (En peligro) (2007)",
-      "murciaStatus": "Vulnerable (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Vulnerable (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10958,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "EN — En peligro (Lista Roja española, 2007)"
     },
     {
       "id": 25,
@@ -1388,9 +1491,9 @@
       },
       "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Formulario Normalizado de Datos del sitio Red Natura 2000 ES6200013 (Cabezo Gordo), sección 3.2: población permanente, presente; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1404,14 +1507,16 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
       "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
-      "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11803,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2007)"
     },
     {
       "id": 26,
@@ -1440,9 +1545,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1456,14 +1561,16 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11453,
       "gbifSpeciesKey": 5231235,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
     },
     {
       "id": 27,
@@ -1484,13 +1591,17 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Osyris_lanceolata.JPG?width=1280",
       "imageAttribution": "Xemenendura (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 3,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1504,7 +1615,8 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 6882,
       "gbifSpeciesKey": 7473922,
@@ -1536,9 +1648,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1552,14 +1664,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11650,
       "gbifSpeciesKey": 9705453,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 29,
@@ -1576,13 +1690,17 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pipistrellus_pipistrellus_lateral.jpg?width=1280",
       "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 1,
-      "rarityBasis": null,
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1596,14 +1714,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2020)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11991,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 30,
@@ -1621,12 +1741,16 @@
       "imageAttribution": "Evgeniy Yakhontov (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
       "rarityScore": 2,
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1640,14 +1764,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12050,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)"
     },
     {
       "id": 31,
@@ -1664,13 +1790,17 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Plecotus_austriacus2.jpg?width=1280",
       "imageAttribution": "Andrei Sakhno (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 3,
-      "rarityBasis": null,
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1684,14 +1814,16 @@
       },
       "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2023)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10799,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2007)"
     },
     {
       "id": 32,
@@ -1720,9 +1852,9 @@
       },
       "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Formulario Normalizado de Datos del sitio Red Natura 2000 ES6200013 (Cabezo Gordo), sección 3.2: población permanente, presente; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1736,14 +1868,16 @@
       },
       "iucnGlobal": "NT (Casi amenazado) (evaluación UICN 2016)",
       "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
-      "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11230,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2007)"
     },
     {
       "id": 33,
@@ -1772,9 +1906,9 @@
       },
       "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Formulario Normalizado de Datos del sitio Red Natura 2000 ES6200013 (Cabezo Gordo), sección 3.2: población permanente, presente; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1788,14 +1922,16 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
       "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
-      "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11264,
       "gbifSpeciesKey": 2432655,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2007)"
     },
     {
       "id": 34,
@@ -1824,9 +1960,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1840,7 +1976,8 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "No incluida en el LESRPE; formador de galerías termomediterráneas (HIC 92D0)",
-      "murciaStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8549,
       "gbifSpeciesKey": 2874701,
@@ -1876,9 +2013,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio, que la cita como «Timon lepidus (antes Lacerta lepida)» (la norma añade entre paréntesis el nombre antiguo); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1892,14 +2029,16 @@
       },
       "iucnGlobal": "NT (Casi Amenazado, evaluación de 2009 por declive poblacional en parte de su área)",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11582,
       "gbifSpeciesKey": 2468542,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2002)"
     },
     {
       "id": 36,
@@ -1917,9 +2056,17 @@
       "imageAttribution": "Stevie B (CC BY 2.0) · Wikimedia Commons",
       "coordinates": null,
       "rarityScore": 1,
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 1,
-      "rarityLocalBasis": null,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
@@ -1932,14 +2079,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10650,
       "gbifSpeciesKey": 2497921,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "EN — En peligro (Lista Roja española, 2004)"
     },
     {
       "id": 37,
@@ -1964,9 +2113,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio, que la cita como «Rhinechis scalaris (antes Elaphe scalaris)» (la norma añade entre paréntesis el nombre antiguo, y NINGUNO de los dos es el vigente: EIDOS da «Rhinechis scalaris» y «Elaphe scalaris» por sinónimos de «Zamenis scalaris»); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -1980,14 +2129,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 33095,
       "gbifSpeciesKey": 9416124,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
     },
     {
       "id": 38,
@@ -2008,13 +2159,17 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ziziphus_lotus_20200928_191923.jpg?width=1280",
       "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 4,
-      "rarityBasis": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Vulnerable",
-        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
-        "ambito": "Región de Murcia"
+        "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2028,7 +2183,8 @@
       },
       "iucnGlobal": "NE (no evaluada a nivel global)",
       "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
-      "murciaStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 9441,
       "gbifSpeciesKey": 3039418,
@@ -2064,9 +2220,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 13 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2080,14 +2236,16 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (RD 139/2011)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12131,
       "gbifSpeciesKey": 4408796,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 13,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 40,
@@ -2116,9 +2274,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 12 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio, que la cita como «Sylvia melanocephala»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2132,14 +2290,16 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (RD 139/2011)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 80929,
       "gbifSpeciesKey": 9990095,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 12,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "DD — Datos insuficientes (Lista Roja española, 2004)"
     },
     {
       "id": 41,
@@ -2168,9 +2328,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 11 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2184,14 +2344,16 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11592,
       "gbifSpeciesKey": 5231236,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 11,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2004)"
     },
     {
       "id": 42,
@@ -2220,9 +2382,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 10 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2236,14 +2398,16 @@
       },
       "iucnGlobal": "VU (Vulnerable) (evaluación UICN 2017)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); UICN España: NT (Casi amenazado) (2004)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 16426,
       "gbifSpeciesKey": 7341500,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 10,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
     },
     {
       "id": 43,
@@ -2272,9 +2436,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 10 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2288,14 +2452,16 @@
       },
       "iucnGlobal": "LC (Preocupación menor)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11211,
       "gbifSpeciesKey": 2498415,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 10,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 44,
@@ -2324,9 +2490,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 8 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2340,14 +2506,16 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12316,
       "gbifSpeciesKey": 9330514,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 8,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 45,
@@ -2376,9 +2544,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 7 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2392,14 +2560,16 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Reglamento CITES (CE) 338/97, Anexo A",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11861,
       "gbifSpeciesKey": 2497266,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 7,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 46,
@@ -2430,7 +2600,7 @@
       "rarityLocalBasis": {
         "categoria": "LESRPE",
         "ambito": "estatal",
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 7 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -2444,14 +2614,16 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE; Directiva Aves 2009/147/CE, Anexo I",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11887,
       "gbifSpeciesKey": 2482100,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 7,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
     },
     {
       "id": 47,
@@ -2476,9 +2648,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 7 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2492,14 +2664,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12134,
       "gbifSpeciesKey": 9515886,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 7,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 48,
@@ -2528,9 +2702,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial, RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 6 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2544,14 +2718,16 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial, RD 139/2011)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12226,
       "gbifSpeciesKey": 2490955,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 6,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 49,
@@ -2576,9 +2752,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 4 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2592,14 +2768,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10743,
       "gbifSpeciesKey": 5228676,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 4,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 50,
@@ -2624,9 +2802,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 3 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2640,14 +2818,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12111,
       "gbifSpeciesKey": 2492462,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 3,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "DD — Datos insuficientes (Lista Roja española, 2004)"
     },
     {
       "id": 51,
@@ -2676,9 +2856,9 @@
       },
       "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Especies de interés especial",
-        "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
-        "ambito": "Región de Murcia"
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 2 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2692,14 +2872,16 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE; Directiva Aves 2009/147/CE, Anexo I; Reglamento CITES (CE) 338/97, Anexo A",
-      "murciaStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10917,
       "gbifSpeciesKey": 5959092,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 52,
@@ -2730,7 +2912,7 @@
       "rarityLocalBasis": {
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
         "ambito": "estatal",
-        "origen": "rarityScore estatal del catálogo universal: EIDOS no devolvió ninguna norma para este taxón al hacer la selección, y el tramo local no puede quedar por debajo del estatal"
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 2 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio, que la cita como «Sylvia undata»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -2744,14 +2926,16 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 80931,
       "gbifSpeciesKey": 2492949,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 53,
@@ -2780,9 +2964,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 2 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2796,14 +2980,16 @@
       },
       "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11890,
       "gbifSpeciesKey": 5231240,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 54,
@@ -2828,9 +3014,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 2 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2844,14 +3030,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11973,
       "gbifSpeciesKey": 2492350,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 2,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 55,
@@ -2880,9 +3068,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 1 ocurrencia dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2896,14 +3084,16 @@
       },
       "iucnGlobal": "LC",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10734,
       "gbifSpeciesKey": 2490681,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2004)"
     },
     {
       "id": 56,
@@ -2932,9 +3122,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 1 ocurrencia dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2948,14 +3138,16 @@
       },
       "iucnGlobal": "LC (SPEC, en declive en Europa)",
       "spainStatus": "LESRPE (RD 139/2011)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12190,
       "gbifSpeciesKey": 2492867,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
     },
     {
       "id": 57,
@@ -2980,9 +3172,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 1 ocurrencia dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2996,14 +3188,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10791,
       "gbifSpeciesKey": 2492956,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 58,
@@ -3028,9 +3222,9 @@
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": false,
       "source": "GBIF confirma su presencia con 1 ocurrencia dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §1.1.5.2 (ZEC «Cabezo Gordo», ES6200013) (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en la ZEC «Cabezo Gordo» (ES6200013), 229,46 ha, sobre las 271,8 ha del Paisaje Protegido. El propio plan hace suyo ese inventario para el Paisaje Protegido —su §2.2.2 remite al §1.1.5 «y, por tanto, el Paisaje Protegido “Cabezo Gordo”»—, pero el perímetro inventariado es el de la ZEC, no el del espacio, que la cita como «Apus melba»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -3044,14 +3238,16 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "murciaStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 24459,
       "gbifSpeciesKey": 2477411,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 1,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     }
   ]
 }

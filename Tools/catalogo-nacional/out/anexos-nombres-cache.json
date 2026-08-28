@@ -4102,5 +4102,159 @@
   "eidos:Sander lucioperca": {
     "acceptedName": "Sander lucioperca (Linnaeus, 1758)",
     "taxonid": 10602
+  },
+  "eidos:Testudo graeca": {
+    "acceptedName": "Testudo graeca Linnaeus, 1758",
+    "taxonid": 11385
+  },
+  "eidos:Mauremis leprosa": null,
+  "gbif:Mauremis leprosa": {
+    "acceptedName": "Mauremys leprosa",
+    "rank": "SPECIES",
+    "matchType": "FUZZY"
+  },
+  "eidos:Phalacrocorax aristotelis": {
+    "acceptedName": "Gulosus aristotelis aristotelis (Linnaeus, 1761)",
+    "taxonid": 10759
+  },
+  "eidos:Myotis capacinii": null,
+  "gbif:Myotis capacinii": {
+    "acceptedName": "Myotis capaccinii",
+    "rank": "SPECIES",
+    "matchType": "FUZZY"
+  },
+  "eidos:Felis sylvestris": null,
+  "gbif:Felis sylvestris": {
+    "acceptedName": "Felis silvestris",
+    "rank": "SPECIES",
+    "matchType": "FUZZY"
+  },
+  "eidos:Enneapogon persicus": {
+    "acceptedName": "Enneapogon persicus Boiss.",
+    "taxonid": 906
+  },
+  "eidos:Allium melananthum": {
+    "acceptedName": "Allium melananthum Coincy",
+    "taxonid": 2011
+  },
+  "eidos:Chaenorhinum grandiflorum subsp. Carthaginense": null,
+  "gbif:Chaenorhinum grandiflorum subsp. Carthaginense": {
+    "acceptedName": "Chaenorhinum grandiflorum",
+    "rank": "SPECIES",
+    "matchType": "EXACT"
+  },
+  "eidos:Chaenorhinum grandiflorum": {
+    "acceptedName": "Chaenorhinum grandiflorum (Coss.) Willk.",
+    "taxonid": 3447
+  },
+  "eidos:Cheirolopus mansanetianus": null,
+  "gbif:Cheirolopus mansanetianus": {
+    "acceptedName": "Cheirolophus intybaceus",
+    "rank": "SPECIES",
+    "matchType": "FUZZY"
+  },
+  "eidos:Cheirolophus intybaceus": {
+    "acceptedName": "Cheirolophus intybaceus (Lam.) Dostál",
+    "taxonid": 3544
+  },
+  "eidos:Dianthus charidemi": {
+    "acceptedName": "Dianthus charidemi Pau",
+    "taxonid": 4075
+  },
+  "eidos:Senecio flavus": {
+    "acceptedName": "Senecio flavus (Decne.) Sch. Bip.",
+    "taxonid": 687
+  },
+  "eidos:Sideritis lasiantha": {
+    "acceptedName": "Sideritis lasiantha Pers.",
+    "taxonid": 8338
+  },
+  "eidos:Achillea santolinoides": {
+    "acceptedName": "Achillea santolinoides Lag.",
+    "taxonid": 9888
+  },
+  "eidos:Cistus ladanifer subsp. ladanifer": null,
+  "gbif:Cistus ladanifer subsp. ladanifer": {
+    "acceptedName": "Cistus ladanifer",
+    "rank": "SUBSPECIES",
+    "matchType": "EXACT"
+  },
+  "eidos:Cistus ladanifer": {
+    "acceptedName": "Cistus ladanifer L.",
+    "taxonid": 3618
+  },
+  "eidos:Clematis cirrosa": null,
+  "gbif:Clematis cirrosa": {
+    "acceptedName": "Clematis cirrhosa",
+    "rank": "SPECIES",
+    "matchType": "FUZZY"
+  },
+  "eidos:Erodium sanguis-christi": {
+    "acceptedName": "Erodium sanguis-christi Sennen",
+    "taxonid": 9835
+  },
+  "eidos:Juniperus oxycedrus subsp. Oxycedrus": null,
+  "gbif:Juniperus oxycedrus subsp. Oxycedrus": {
+    "acceptedName": "Juniperus oxycedrus",
+    "rank": "SPECIES",
+    "matchType": "EXACT"
+  },
+  "eidos:Juniperus phoenicea subsp. Phoenicea": null,
+  "gbif:Juniperus phoenicea subsp. Phoenicea": {
+    "acceptedName": "Juniperus phoenicea",
+    "rank": "SPECIES",
+    "matchType": "HIGHERRANK"
+  },
+  "eidos:Limonium insigne": {
+    "acceptedName": "Limonium insigne (Coss.) Kuntze",
+    "taxonid": 5836
+  },
+  "eidos:Notoceras bicorne": {
+    "acceptedName": "Notoceras bicorne (Aiton) Amo",
+    "taxonid": 6625
+  },
+  "eidos:Ononis speciosa": {
+    "acceptedName": "Ononis speciosa Lag.",
+    "taxonid": 6712
+  },
+  "eidos:Osyris lanceolada": null,
+  "gbif:Osyris lanceolada": {
+    "acceptedName": "Osyris lanceolata",
+    "rank": "SPECIES",
+    "matchType": "FUZZY"
+  },
+  "eidos:Phlomis purpurea": {
+    "acceptedName": "Phlomis purpurea L.",
+    "taxonid": 7087
+  },
+  "eidos:Plantago notata": {
+    "acceptedName": "Plantago notata Lag.",
+    "taxonid": 7172
+  },
+  "eidos:Salsola webbii": {
+    "acceptedName": "Salsola webbii Moq.",
+    "taxonid": 7918
+  },
+  "eidos:Santolina viscosa": {
+    "acceptedName": "Santolina viscosa Lag.",
+    "taxonid": 665
+  },
+  "eidos:Sarcocapnos enneaphylla subsp. Saetabensis": null,
+  "gbif:Sarcocapnos enneaphylla subsp. Saetabensis": {
+    "acceptedName": "Sarcocapnos enneaphylla",
+    "rank": "SPECIES",
+    "matchType": "EXACT"
+  },
+  "eidos:Sarcocapnos enneaphylla": {
+    "acceptedName": "Sarcocapnos enneaphylla (L.) DC.",
+    "taxonid": 7982
+  },
+  "eidos:Serratula mucronata": {
+    "acceptedName": "Klasea flavescens subsp. mucronata (Desf.) Cantó & Rivas Mart.",
+    "taxonid": 5538
+  },
+  "eidos:Teucrium lanigerum": {
+    "acceptedName": "Teucrium lanigerum Lag.",
+    "taxonid": 8809
   }
 }
